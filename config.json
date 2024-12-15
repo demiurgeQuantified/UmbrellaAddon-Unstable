@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
+  "name": "Umbrella Unstable",
+  "settings": {
+    "Lua.runtime.version": "Lua 5.1",
+    "Lua.runtime.path": [
+        "shared/?.lua",
+        "client/?.lua",
+        "server/?.lua"
+    ],
+    "Lua.completion.requireSeparator": "/",
+    "Lua.workspace.preloadFileSize": 800,
+    "Lua.runtime.builtin": {
+      "debug": "disable",
+      "io": "disable",
+      "package": "disable"
+    }
+  }
+}
