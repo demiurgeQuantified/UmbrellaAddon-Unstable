@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ArrayList: AbstractList
 --- @field public class any
@@ -6,7 +6,7 @@
 --- @implement RandomAccess
 --- @implement Cloneable
 --- @implement Serializable
-ArrayList = {};
+ArrayList = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,52 +22,51 @@ function ArrayList.copyOf(arg0) end
 --- @static
 --- @return List
 --- @overload fun(arg0: Object[]): List
---- @overload fun(arg0: Object): List
---- @overload fun(arg0: Object, arg1: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object): List
+--- @overload fun(arg0: any): List
+--- @overload fun(arg0: any, arg1: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function ArrayList.of() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: ArrayList, arg0: Object): boolean
---- @overload fun(self: ArrayList, arg0: int, arg1: Object): void
---- @overload fun(self: ArrayList, arg0: int, arg1: Object): void
+--- @overload fun(self: ArrayList, arg0: any): boolean
+--- @overload fun(self: ArrayList, arg0: integer, arg1: any): nil
+--- @overload fun(self: ArrayList, arg0: integer, arg1: any): nil
 function ArrayList:add(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
 --- @overload fun(self: ArrayList, arg0: Collection): boolean
---- @overload fun(self: ArrayList, arg0: int, arg1: Collection): boolean
---- @overload fun(self: ArrayList, arg0: int, arg1: Collection): boolean
+--- @overload fun(self: ArrayList, arg0: integer, arg1: Collection): boolean
+--- @overload fun(self: ArrayList, arg0: integer, arg1: Collection): boolean
 function ArrayList:addAll(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: ArrayList): void
+--- @return nil
+--- @overload fun(self: ArrayList): nil
 function ArrayList:clear() end
 
 --- @public
---- @return Object
+--- @return any
 function ArrayList:clone() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: ArrayList, arg0: Object): boolean
+--- @overload fun(self: ArrayList, arg0: any): boolean
 function ArrayList:contains(arg0) end
 
 --- @public
@@ -76,36 +75,36 @@ function ArrayList:contains(arg0) end
 function ArrayList:containsAll(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ArrayList:ensureCapacity(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: ArrayList, arg0: Object): boolean
+--- @overload fun(self: ArrayList, arg0: any): boolean
 function ArrayList:equals(arg0) end
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function ArrayList:forEach(arg0) end
 
 --- @public
---- @param arg0 int
---- @return Object
---- @overload fun(self: ArrayList, arg0: int): Object
+--- @param arg0 integer
+--- @return any
+--- @overload fun(self: ArrayList, arg0: integer): any
 function ArrayList:get(arg0) end
 
 --- @public
---- @return int
---- @overload fun(self: ArrayList): int
+--- @return integer
+--- @overload fun(self: ArrayList): integer
 function ArrayList:hashCode() end
 
 --- @public
---- @param arg0 Object
---- @return int
---- @overload fun(self: ArrayList, arg0: Object): int
+--- @param arg0 any
+--- @return integer
+--- @overload fun(self: ArrayList, arg0: any): integer
 function ArrayList:indexOf(arg0) end
 
 --- @public
@@ -119,24 +118,24 @@ function ArrayList:isEmpty() end
 function ArrayList:iterator() end
 
 --- @public
---- @param arg0 Object
---- @return int
---- @overload fun(self: ArrayList, arg0: Object): int
+--- @param arg0 any
+--- @return integer
+--- @overload fun(self: ArrayList, arg0: any): integer
 function ArrayList:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
 --- @overload fun(self: ArrayList): ListIterator
---- @overload fun(self: ArrayList, arg0: int): ListIterator
---- @overload fun(self: ArrayList, arg0: int): ListIterator
+--- @overload fun(self: ArrayList, arg0: integer): ListIterator
+--- @overload fun(self: ArrayList, arg0: integer): ListIterator
 function ArrayList:listIterator() end
 
 --- @public
---- @param arg0 int
---- @return Object
---- @overload fun(self: ArrayList, arg0: int): Object
---- @overload fun(self: ArrayList, arg0: Object): boolean
---- @overload fun(self: ArrayList, arg0: Object): boolean
+--- @param arg0 integer
+--- @return any
+--- @overload fun(self: ArrayList, arg0: integer): any
+--- @overload fun(self: ArrayList, arg0: any): boolean
+--- @overload fun(self: ArrayList, arg0: any): boolean
 function ArrayList:remove(arg0) end
 
 --- @public
@@ -152,8 +151,8 @@ function ArrayList:removeIf(arg0) end
 
 --- @public
 --- @param arg0 UnaryOperator
---- @return void
---- @overload fun(self: ArrayList, arg0: UnaryOperator): void
+--- @return nil
+--- @overload fun(self: ArrayList, arg0: UnaryOperator): nil
 function ArrayList:replaceAll(arg0) end
 
 --- @public
@@ -163,21 +162,21 @@ function ArrayList:replaceAll(arg0) end
 function ArrayList:retainAll(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 Object
---- @return Object
---- @overload fun(self: ArrayList, arg0: int, arg1: Object): Object
+--- @param arg0 integer
+--- @param arg1 any
+--- @return any
+--- @overload fun(self: ArrayList, arg0: integer, arg1: any): any
 function ArrayList:set(arg0, arg1) end
 
 --- @public
---- @return int
---- @overload fun(self: ArrayList): int
+--- @return integer
+--- @overload fun(self: ArrayList): integer
 function ArrayList:size() end
 
 --- @public
 --- @param arg0 Comparator
---- @return void
---- @overload fun(self: ArrayList, arg0: Comparator): void
+--- @return nil
+--- @overload fun(self: ArrayList, arg0: Comparator): nil
 function ArrayList:sort(arg0) end
 
 --- @public
@@ -186,10 +185,10 @@ function ArrayList:sort(arg0) end
 function ArrayList:spliterator() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return List
---- @overload fun(self: ArrayList, arg0: int, arg1: int): List
+--- @overload fun(self: ArrayList, arg0: integer, arg1: integer): List
 function ArrayList:subList(arg0, arg1) end
 
 --- @public
@@ -200,9 +199,8 @@ function ArrayList:subList(arg0, arg1) end
 function ArrayList:toArray() end
 
 --- @public
---- @return void
+--- @return nil
 function ArrayList:trimToSize() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -210,6 +208,6 @@ function ArrayList:trimToSize() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(arg0: int): ArrayList
+--- @overload fun(arg0: integer): ArrayList
 --- @overload fun(arg0: Collection): ArrayList
 function ArrayList.new() end

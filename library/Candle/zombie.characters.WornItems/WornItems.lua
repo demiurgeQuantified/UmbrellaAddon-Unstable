@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class WornItems
 --- @field public class any
-WornItems = {};
+WornItems = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,11 +10,11 @@ WornItems = {};
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function WornItems:addItemsToItemContainer(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function WornItems:clear() end
 
 --- @public
@@ -24,16 +24,16 @@ function WornItems:contains(arg0) end
 
 --- @public
 --- @param arg0 WornItems
---- @return void
+--- @return nil
 function WornItems:copyFrom(arg0) end
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function WornItems:forEach(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return WornItem
 function WornItems:get(arg0) end
 
@@ -42,23 +42,23 @@ function WornItems:get(arg0) end
 function WornItems:getBodyLocationGroup() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return InventoryItem
 function WornItems:getItem(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return InventoryItem
 function WornItems:getItemByIndex(arg0) end
 
 --- @public
 --- @param arg0 ItemVisuals
---- @return void
+--- @return nil
 function WornItems:getItemVisuals(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return String
+--- @return string
 function WornItems:getLocation(arg0) end
 
 --- @public
@@ -67,35 +67,34 @@ function WornItems:isEmpty() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function WornItems:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function WornItems:remove(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function WornItems:save(arg0) end
 
 --- @public
 --- @param arg0 ItemVisuals
---- @return void
+--- @return nil
 function WornItems:setFromItemVisuals(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function WornItems:setItem(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function WornItems:size() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

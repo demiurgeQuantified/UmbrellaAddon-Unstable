@@ -6,7 +6,6 @@
 ---@field [any] any
 ISToggleStoveAction = ISBaseTimedAction:derive("ISToggleStoveAction")
 
-
 ---@return any
 function ISToggleStoveAction:complete() end
 
@@ -27,7 +26,6 @@ function ISToggleStoveAction:stop() end
 
 ---@return any
 function ISToggleStoveAction:update() end
-
 
 ---@return ISToggleStoveAction
 function ISToggleStoveAction:new(character, object) end

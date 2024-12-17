@@ -12,7 +12,6 @@
 ---@field [any] any
 ISButcheringDebugUI = ISCollapsableWindow:derive("ISButcheringDebugUI")
 
-
 ---@return any
 function ISButcheringDebugUI:butcher() end
 
@@ -27,7 +26,6 @@ function ISButcheringDebugUI:prerender() end
 
 ---@return any
 function ISButcheringDebugUI:render() end
-
 
 ---@return ISButcheringDebugUI
 function ISButcheringDebugUI:new(x, y, width, height, carcass, player) end

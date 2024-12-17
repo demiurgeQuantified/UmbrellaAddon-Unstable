@@ -24,13 +24,11 @@
 ---@field [any] any
 ISHandcraftAction = ISBaseTimedAction:derive("ISHandcraftAction")
 
-
 ---@return any
 function ISHandcraftAction.FromLogic(handcraftLogic) end
 
 ---@return any
 function ISHandcraftAction.FromLogicMultiple(handcraftLogic) end
-
 
 ---@return any
 function ISHandcraftAction:getDuration() end
@@ -61,7 +59,6 @@ function ISHandcraftAction:stop() end
 
 ---@return any
 function ISHandcraftAction:update() end
-
 
 ---@return ISHandcraftAction
 function ISHandcraftAction:new(character, craftRecipe, containers, isoObject, craftBench, manualInputs, items) end

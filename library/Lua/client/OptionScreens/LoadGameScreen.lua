@@ -35,13 +35,11 @@
 ---@field [any] any
 LoadGameScreen = ISPanelJoypad:derive("LoadGameScreen")
 
-
 ---@return any
 function LoadGameScreen.onClickWorld() end
 
 ---@return any
 function LoadGameScreen.OnKeyPressed(key) end
-
 
 ---@return any
 function LoadGameScreen:checkChallenge(item) end
@@ -138,7 +136,6 @@ function LoadGameScreen:setSaveGamesList() end
 
 ---@return any
 function LoadGameScreen:showConfigPanel() end
-
 
 ---@return LoadGameScreen
 function LoadGameScreen:new(x, y, width, height) end

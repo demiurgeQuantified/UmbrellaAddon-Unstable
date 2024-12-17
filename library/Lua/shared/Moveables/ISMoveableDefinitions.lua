@@ -11,10 +11,8 @@
 ISMoveableDefinitions = {}
 ISMoveableDefinitions.cheat = false
 
-
 ---@return any
 function ISMoveableDefinitions.load() end
-
 
 ---@return any
 function ISMoveableDefinitions:getInstance() end

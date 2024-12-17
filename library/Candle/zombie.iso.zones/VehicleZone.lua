@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class VehicleZone: Zone
 --- @field public class any
 --- @field public VZF_FaceDirection short
-VehicleZone = {};
+VehicleZone = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,19 +13,18 @@ VehicleZone = {};
 --- @return boolean
 function VehicleZone:isFaceDirection() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
 --- @param arg7 KahluaTable
 --- @return VehicleZone
 function VehicleZone.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end

@@ -14,7 +14,6 @@
 ---@field [any] any
 ISSpinBox = ISPanel:derive("ISSpinBox")
 
-
 ---@return any
 function ISSpinBox:addOption(option) end
 
@@ -29,7 +28,6 @@ function ISSpinBox:prerender() end
 
 ---@return any
 function ISSpinBox:render() end
-
 
 ---@return ISSpinBox
 function ISSpinBox:new(x, y, width, height, target, targetFunc) end

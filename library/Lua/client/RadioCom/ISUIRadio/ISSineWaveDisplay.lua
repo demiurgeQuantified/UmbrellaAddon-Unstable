@@ -29,7 +29,6 @@
 ---@field [any] any
 ISSineWaveDisplay = ISPanel:derive("ISSineWaveDisplay")
 
-
 ---@return any
 function ISSineWaveDisplay:createChildren() end
 
@@ -46,14 +45,23 @@ function ISSineWaveDisplay:prerender() end
 function ISSineWaveDisplay:render() end
 
 ---@return any
-function ISSineWaveDisplay:setWaveParameters(_minLen, _maxLen, _minHeight, _maxHeight, _minUpdFreq, _maxUpdFreq, _minScrollSpeed, _maxScrollSpeed) end
+function ISSineWaveDisplay:setWaveParameters(
+	_minLen,
+	_maxLen,
+	_minHeight,
+	_maxHeight,
+	_minUpdFreq,
+	_maxUpdFreq,
+	_minScrollSpeed,
+	_maxScrollSpeed
+)
+end
 
 ---@return any
 function ISSineWaveDisplay:toggleOn(_b) end
 
 ---@return any
 function ISSineWaveDisplay:update() end
-
 
 ---@return ISSineWaveDisplay
 function ISSineWaveDisplay:new(x, y, width, height) end

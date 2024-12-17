@@ -1,45 +1,45 @@
---- @meta
+--- @meta _
 
 --- @class UiConfigScript: ComponentScript
 --- @field public class any
-UiConfigScript = {};
+UiConfigScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UiConfigScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function UiConfigScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function UiConfigScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function UiConfigScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function UiConfigScript:PreReload() end
 
 --- @public
---- @return String
+--- @return string
 function UiConfigScript:getDisplayNameDebug() end
 
 --- @public
---- @return String
+--- @return string
 function UiConfigScript:getEntityStyle() end
 
 --- @public
---- @return String
+--- @return string
 function UiConfigScript:getXuiSkinName() end
 
 --- @public
@@ -51,7 +51,5 @@ function UiConfigScript:isUiEnabled() end
 function UiConfigScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function UiConfigScript:reset() end
-
-

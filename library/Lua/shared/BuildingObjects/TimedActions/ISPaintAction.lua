@@ -12,7 +12,6 @@
 ---@field [any] any
 ISPaintAction = ISBaseTimedAction:derive("ISPaintAction")
 
-
 ---@return any
 function ISPaintAction:complete() end
 
@@ -36,7 +35,6 @@ function ISPaintAction:update() end
 
 ---@return any
 function ISPaintAction:waitToStart() end
-
 
 ---@return ISPaintAction
 function ISPaintAction:new(character, thumpable, paintPot, painting) end

@@ -15,7 +15,6 @@
 ---@field [any] any
 ISDrinkFluidAction = ISBaseTimedAction:derive("ISDrinkFluidAction")
 
-
 ---@return any
 function ISDrinkFluidAction:complete() end
 
@@ -48,7 +47,6 @@ function ISDrinkFluidAction:update() end
 
 ---@return any
 function ISDrinkFluidAction:waitToStart() end
-
 
 ---@return ISDrinkFluidAction
 function ISDrinkFluidAction:new(character, item, percentage) end

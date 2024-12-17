@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class GameEntity
 --- @field public class any
---- @field public DEFAULT_ENTITY_DISPLAY_NAME String
-GameEntity = {};
+--- @field public DEFAULT_ENTITY_DISPLAY_NAME string
+GameEntity = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,16 +11,15 @@ GameEntity = {};
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function GameEntity.getDefaultEntityDisplayName() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function GameEntity:addToWorld() end
 
 --- @public
@@ -28,7 +27,7 @@ function GameEntity:addToWorld() end
 function GameEntity:attrib() end
 
 --- @public
---- @return int
+--- @return integer
 function GameEntity:componentSize() end
 
 --- @public
@@ -46,7 +45,7 @@ function GameEntity:getAttributes() end
 function GameEntity:getComponent(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Component
 function GameEntity:getComponentForIndex(arg0) end
 
@@ -56,19 +55,19 @@ function GameEntity:getComponentForIndex(arg0) end
 function GameEntity:getComponentFromID(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function GameEntity:getEntityDisplayName() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntity:getEntityFullTypeDebug() end
 
 --- @public
---- @return long
+--- @return integer
 function GameEntity:getEntityNetID() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntity:getExceptionCompatibleString() end
 
 --- @public
@@ -92,15 +91,15 @@ function GameEntity:getSquare() end
 function GameEntity:getUsingPlayer() end
 
 --- @public
---- @return float
+--- @return number
 function GameEntity:getX() end
 
 --- @public
---- @return float
+--- @return number
 function GameEntity:getY() end
 
 --- @public
---- @return float
+--- @return number
 function GameEntity:getZ() end
 
 --- @public
@@ -151,30 +150,30 @@ function GameEntity:isValidEngineEntity() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function GameEntity:loadEntity(arg0, arg1) end
 
 --- @public
---- @return void
---- @overload fun(self: GameEntity, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: GameEntity, arg0: boolean): nil
 function GameEntity:onEquip() end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntity:onUnEquip() end
 
 --- @public
---- @return void
---- @overload fun(self: GameEntity, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: GameEntity, arg0: boolean): nil
 function GameEntity:removeFromWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntity:renderlast() end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntity:renderlastComponents() end
 
 --- @public
@@ -182,24 +181,23 @@ function GameEntity:renderlastComponents() end
 function GameEntity:requiresEntitySave() end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntity:reset() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function GameEntity:saveEntity(arg0) end
 
 --- @public
 --- @param arg0 UdpConnection
---- @return void
+--- @return nil
 function GameEntity:sendSyncEntity(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function GameEntity:setUsingPlayer(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

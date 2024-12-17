@@ -6,7 +6,6 @@
 ---@field [any] any
 ISBBQExtinguish = ISBaseTimedAction:derive("ISBBQExtinguish")
 
-
 ---@return any
 function ISBBQExtinguish:complete() end
 
@@ -30,7 +29,6 @@ function ISBBQExtinguish:update() end
 
 ---@return any
 function ISBBQExtinguish:waitToStart() end
-
 
 ---@return ISBBQExtinguish
 function ISBBQExtinguish:new(character, bbq) end

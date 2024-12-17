@@ -8,7 +8,5 @@
 ---@field [any] any
 ISSodaVendingLayout = ISBaseVendingLayout:derive("ISSodaVendingLayout")
 
-
-
 ---@return ISSodaVendingLayout
 function ISSodaVendingLayout:new(x, y, _parentPanel, _blueprintLogic) end

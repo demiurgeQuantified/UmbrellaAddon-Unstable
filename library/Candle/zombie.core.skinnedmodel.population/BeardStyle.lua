@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class BeardStyle
 --- @field public class any
-BeardStyle = {};
+BeardStyle = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function BeardStyle:getLevel() end
 
 --- @public
---- @return String
+--- @return string
 function BeardStyle:getName() end
 
 --- @public
@@ -23,7 +23,6 @@ function BeardStyle:getTrimChoices() end
 --- @public
 --- @return boolean
 function BeardStyle:isValid() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -9,7 +9,6 @@
 ---@field [any] any
 LuaDebugger = ISCollapsableWindow:derive("LuaDebugger")
 
-
 ---@return any
 function LuaDebugger:createChildren() end
 
@@ -21,7 +20,6 @@ function LuaDebugger:onResolutionChange(oldw, oldh, neww, newh) end
 
 ---@return any
 function LuaDebugger:prerender() end
-
 
 ---@return LuaDebugger
 function LuaDebugger:new(x, y, width, height) end

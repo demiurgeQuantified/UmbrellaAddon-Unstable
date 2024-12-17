@@ -14,7 +14,6 @@
 ISTradingUIHistorical = ISPanel:derive("ISTradingUIHistorical")
 ISTradingUIHistorical.messages = {}
 
-
 ---@return any
 function ISTradingUIHistorical:drawList(y, item, alt) end
 
@@ -32,7 +31,6 @@ function ISTradingUIHistorical:prerender() end
 
 ---@return any
 function ISTradingUIHistorical:render() end
-
 
 ---@return ISTradingUIHistorical
 function ISTradingUIHistorical:new(x, y, width, height, list, otherPlayer) end

@@ -11,7 +11,6 @@
 ---@field [any] any
 ISOpenVehicleDoor = ISBaseTimedAction:derive("ISOpenVehicleDoor")
 
-
 ---@return any
 function ISOpenVehicleDoor:complete() end
 
@@ -35,7 +34,6 @@ function ISOpenVehicleDoor:update() end
 
 ---@return any
 function ISOpenVehicleDoor:waitToStart() end
-
 
 ---@return ISOpenVehicleDoor
 function ISOpenVehicleDoor:new(character, vehicle, part) end

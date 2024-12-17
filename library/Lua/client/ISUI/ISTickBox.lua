@@ -44,7 +44,6 @@
 ---@field [any] any
 ISTickBox = ISPanel:derive("ISTickBox")
 
-
 ---@return any
 function ISTickBox:addOption(name, data, texture) end
 
@@ -111,6 +110,16 @@ function ISTickBox:setSelected(index, selected) end
 ---@return any
 function ISTickBox:setWidthToFit() end
 
-
 ---@return ISTickBox
-function ISTickBox:new(x, y, width, height, name, changeOptionTarget, changeOptionMethod, changeOptionArg1, changeOptionArg2) end
+function ISTickBox:new(
+	x,
+	y,
+	width,
+	height,
+	name,
+	changeOptionTarget,
+	changeOptionMethod,
+	changeOptionArg1,
+	changeOptionArg2
+)
+end

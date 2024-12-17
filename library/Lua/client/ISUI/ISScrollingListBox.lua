@@ -41,10 +41,8 @@ ISScrollingListBox.joypadListIndex = 1
 ISScrollingListBox.stopPrerender = false
 ISScrollingListBox.nextVisibleIndex = ISScrollingListBox.nextVisibleItem
 
-
 ---@return any
 function ISScrollingListBox.sortByName(a, b) end
-
 
 ---@return any
 function ISScrollingListBox:addColumn(columnName, size) end
@@ -165,7 +163,6 @@ function ISScrollingListBox:updateSmoothScrolling() end
 
 ---@return any
 function ISScrollingListBox:updateTooltip() end
-
 
 ---@return ISScrollingListBox
 function ISScrollingListBox:new(x, y, width, height) end

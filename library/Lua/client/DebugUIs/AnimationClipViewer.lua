@@ -22,7 +22,6 @@
 ---@field [any] any
 AnimationClipViewer = ISPanel:derive("AnimationClipViewer")
 
-
 ---@return any
 function AnimationClipViewer:createChildren() end
 
@@ -110,7 +109,6 @@ function AnimationClipViewer:showUI() end
 ---@return any
 function AnimationClipViewer:update() end
 
-
 ---@return AnimationClipViewer
 function AnimationClipViewer:new(x, y, width, height) end
 
@@ -118,7 +116,6 @@ function AnimationClipViewer:new(x, y, width, height) end
 ---@field selectedClipName any
 ---@field [any] any
 AnimationClipViewer_ListBox = ISScrollingListBox:derive("AnimationClipViewer_ListBox")
-
 
 ---@return any
 function AnimationClipViewer_ListBox:doDrawItem(y, item, alt) end
@@ -132,7 +129,6 @@ function AnimationClipViewer_ListBox:onMouseDown(x, y) end
 ---@return any
 function AnimationClipViewer_ListBox:prerender() end
 
-
 ---@return AnimationClipViewer_ListBox
 function AnimationClipViewer_ListBox:new(x, y, width, height) end
 
@@ -143,7 +139,6 @@ function AnimationClipViewer_ListBox:new(x, y, width, height) end
 ---@field soundList any
 ---@field [any] any
 AnimationClipViewer_SoundBar = ISPanel:derive("AnimationClipViewer_SoundBar")
-
 
 ---@return any
 function AnimationClipViewer_SoundBar:getSoundBounds(sound) end
@@ -181,7 +176,6 @@ function AnimationClipViewer_SoundBar:renderSound(index, sound) end
 ---@return any
 function AnimationClipViewer_SoundBar:stopSound(index) end
 
-
 ---@return AnimationClipViewer_SoundBar
 function AnimationClipViewer_SoundBar:new(x, y, width, height) end
 
@@ -191,7 +185,6 @@ function AnimationClipViewer_SoundBar:new(x, y, width, height) end
 ---@field soundTickBoxes any
 ---@field [any] any
 AnimationClipViewer_SoundPanel = ISPanel:derive("AnimationClipViewer_SoundPanel")
-
 
 ---@return any
 function AnimationClipViewer_SoundPanel:createChildren() end
@@ -208,7 +201,6 @@ function AnimationClipViewer_SoundPanel:onSoundComboSelected(combo) end
 ---@return any
 function AnimationClipViewer_SoundPanel:onTickBox(index, selected, soundIndex) end
 
-
 ---@return AnimationClipViewer_SoundPanel
 function AnimationClipViewer_SoundPanel:new(x, y, width, height) end
 
@@ -216,7 +208,6 @@ function AnimationClipViewer_SoundPanel:new(x, y, width, height) end
 ---@field tickBox any
 ---@field [any] any
 AnimationClipViewer_OptionsPanel = ISPanel:derive("AnimationClipViewer_OptionsPanel")
-
 
 ---@return any
 function AnimationClipViewer_OptionsPanel:createChildren() end
@@ -227,7 +218,6 @@ function AnimationClipViewer_OptionsPanel:onMouseDownOutside(x, y) end
 ---@return any
 function AnimationClipViewer_OptionsPanel:onTickBox(index, selected) end
 
-
 ---@return AnimationClipViewer_OptionsPanel
 function AnimationClipViewer_OptionsPanel:new(x, y, width, height) end
 
@@ -236,7 +226,6 @@ function AnimationClipViewer_OptionsPanel:new(x, y, width, height) end
 ---@field zeroVector any
 ---@field [any] any
 AnimationClipViewer_Scene = ISUI3DScene:derive("AnimationClipViewer_Scene")
-
 
 ---@return any
 function AnimationClipViewer_Scene:onMouseDown(x, y) end
@@ -259,7 +248,6 @@ function AnimationClipViewer_Scene:prerender() end
 ---@return any
 function AnimationClipViewer_Scene:prerenderEditor() end
 
-
 ---@return AnimationClipViewer_Scene
 function AnimationClipViewer_Scene:new(x, y, width, height) end
 
@@ -269,7 +257,6 @@ function AnimationClipViewer_Scene:new(x, y, width, height) end
 ---@field selectedClipName any
 ---@field [any] any
 AnimationClipViewer_Timeline = ISPanel:derive("AnimationClipViewer_Timeline")
-
 
 ---@return any
 function AnimationClipViewer_Timeline:onMouseDown(x, y) end
@@ -288,7 +275,6 @@ function AnimationClipViewer_Timeline:onMouseUpOutside(x, y) end
 
 ---@return any
 function AnimationClipViewer_Timeline:render() end
-
 
 ---@return AnimationClipViewer_Timeline
 function AnimationClipViewer_Timeline:new(x, y, width, height) end

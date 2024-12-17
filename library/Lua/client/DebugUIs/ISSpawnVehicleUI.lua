@@ -28,7 +28,6 @@
 ---@field [any] any
 ISSpawnVehicleUI = ISPanelJoypad:derive("ISSpawnVehicleUI")
 
-
 ---@return any
 function ISSpawnVehicleUI:destroy() end
 
@@ -73,7 +72,6 @@ function ISSpawnVehicleUI:titleBarHeight() end
 
 ---@return any
 function ISSpawnVehicleUI:update() end
-
 
 ---@return ISSpawnVehicleUI
 function ISSpawnVehicleUI:new(x, y, width, height, player) end

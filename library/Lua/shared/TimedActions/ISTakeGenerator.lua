@@ -6,7 +6,6 @@
 ---@field [any] any
 ISTakeGenerator = ISBaseTimedAction:derive("ISTakeGenerator")
 
-
 ---@return any
 function ISTakeGenerator:complete() end
 
@@ -30,7 +29,6 @@ function ISTakeGenerator:update() end
 
 ---@return any
 function ISTakeGenerator:waitToStart() end
-
 
 ---@return ISTakeGenerator
 function ISTakeGenerator:new(character, generator) end

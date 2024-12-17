@@ -6,7 +6,6 @@
 ---@field [any] any
 ISClimbSheetRopeAction = ISBaseTimedAction:derive("ISClimbSheetRopeAction")
 
-
 ---@return any
 function ISClimbSheetRopeAction:isValid() end
 
@@ -21,7 +20,6 @@ function ISClimbSheetRopeAction:stop() end
 
 ---@return any
 function ISClimbSheetRopeAction:update() end
-
 
 ---@return ISClimbSheetRopeAction
 function ISClimbSheetRopeAction:new(character, down) end

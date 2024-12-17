@@ -1,42 +1,41 @@
---- @meta
+--- @meta _
 
 --- @class MusicIntensityEvent
 --- @field public class any
-MusicIntensityEvent = {};
+MusicIntensityEvent = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return long
+--- @return integer
 function MusicIntensityEvent:getDuration() end
 
 --- @public
---- @return long
+--- @return integer
 function MusicIntensityEvent:getElapsedTime() end
 
 --- @public
---- @return String
+--- @return string
 function MusicIntensityEvent:getId() end
 
 --- @public
---- @return float
+--- @return number
 function MusicIntensityEvent:getIntensity() end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function MusicIntensityEvent:setElapsedTime(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 long
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 integer
 --- @return MusicIntensityEvent
 function MusicIntensityEvent.new(arg0, arg1, arg2) end

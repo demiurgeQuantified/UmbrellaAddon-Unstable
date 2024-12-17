@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StartMode: Enum
 --- @field public class any
@@ -6,7 +6,7 @@
 --- @field public Automatic StartMode
 --- @field public Manual StartMode
 --- @field public Passive StartMode
-StartMode = {};
+StartMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,13 +14,13 @@ StartMode = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return StartMode
 function StartMode.fromByteId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return StartMode
 function StartMode.valueOf(arg0) end
 
@@ -29,19 +29,16 @@ function StartMode.valueOf(arg0) end
 --- @return StartMode[]
 function StartMode.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
---- @overload fun(self: StartMode): int
+--- @return integer
+--- @overload fun(self: StartMode): integer
 function StartMode:getBits() end
 
 --- @public
---- @return byte
---- @overload fun(self: StartMode): byte
+--- @return integer
+--- @overload fun(self: StartMode): integer
 function StartMode:getByteId() end
-
-

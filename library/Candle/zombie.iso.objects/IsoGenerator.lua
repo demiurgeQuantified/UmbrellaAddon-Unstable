@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoGenerator: IsoObject
 --- @field public class any
-IsoGenerator = {};
+IsoGenerator = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,56 +10,55 @@ IsoGenerator = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoGenerator.Reset() end
 
 --- @public
 --- @static
 --- @param arg0 IsoChunk
---- @return void
+--- @return nil
 function IsoGenerator.chunkLoaded(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
 --- @return boolean
 function IsoGenerator.isPoweringSquare(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function IsoGenerator.updateGenerator(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoGenerator.updateSurroundingNow() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoGenerator:addToWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGenerator:failToStart() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGenerator:getCondition() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGenerator:getFuel() end
 
 --- @public
@@ -67,11 +66,11 @@ function IsoGenerator:getFuel() end
 function IsoGenerator:getItemsPowered() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGenerator:getObjectName() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGenerator:getTotalPowerUsing() end
 
 --- @public
@@ -84,73 +83,72 @@ function IsoGenerator:isConnected() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoGenerator:load(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGenerator:remove() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGenerator:removeFromWorld() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoGenerator:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoGenerator:setActivated(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoGenerator:setCondition(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoGenerator:setConnected(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoGenerator:setFuel(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoGenerator:setInfoFromItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGenerator:setSurroundingElectricity() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoGenerator:setTotalPowerUsing(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function IsoGenerator:syncIsoObjectReceive(arg0) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function IsoGenerator:syncIsoObjectSend(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGenerator:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

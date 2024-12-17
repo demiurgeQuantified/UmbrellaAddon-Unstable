@@ -9,7 +9,6 @@
 ---@field [any] any
 WorldMapEditorMode = ISPanel:derive("WorldMapEditorMode")
 
-
 ---@return any
 function WorldMapEditorMode:display() end
 
@@ -42,7 +41,6 @@ function WorldMapEditorMode:onMouseWheel(del) end
 
 ---@return any
 function WorldMapEditorMode:undisplay() end
-
 
 ---@return WorldMapEditorMode
 function WorldMapEditorMode:new(editor) end

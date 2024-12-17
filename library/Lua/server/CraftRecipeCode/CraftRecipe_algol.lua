@@ -14,7 +14,6 @@ CraftRecipeCode.GenericFixing = {}
 CraftRecipeCode.GenericBetterFixing = {}
 CraftRecipeCode.GenericEvenBetterFixing = {}
 
-
 ---@return any
 function CraftRecipeCode.FLAG_TEST(_craftProcessor, thing2, thing3) end
 

@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class IsoCarBatteryCharger: IsoObject
 --- @field public class any
-IsoCarBatteryCharger = {};
+IsoCarBatteryCharger = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:addToWorld() end
 
 --- @public
@@ -17,7 +17,7 @@ function IsoCarBatteryCharger:addToWorld() end
 function IsoCarBatteryCharger:getBattery() end
 
 --- @public
---- @return float
+--- @return number
 function IsoCarBatteryCharger:getChargeRate() end
 
 --- @public
@@ -25,7 +25,7 @@ function IsoCarBatteryCharger:getChargeRate() end
 function IsoCarBatteryCharger:getItem() end
 
 --- @public
---- @return String
+--- @return string
 function IsoCarBatteryCharger:getObjectName() end
 
 --- @public
@@ -34,69 +34,68 @@ function IsoCarBatteryCharger:isActivated() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:load(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:renderObjectPicker(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:setActivated(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:setBattery(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoCarBatteryCharger:setChargeRate(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:syncIsoObjectReceive(arg0) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:syncIsoObjectSend(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCarBatteryCharger:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

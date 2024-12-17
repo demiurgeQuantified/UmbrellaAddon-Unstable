@@ -23,7 +23,6 @@
 ---@field [any] any
 ISBatteryStatusDisplay = ISPanel:derive("ISBatteryStatusDisplay")
 
-
 ---@return any
 function ISBatteryStatusDisplay:createChildren() end
 
@@ -44,7 +43,6 @@ function ISBatteryStatusDisplay:setPower(_power) end
 
 ---@return any
 function ISBatteryStatusDisplay:update() end
-
 
 ---@return ISBatteryStatusDisplay
 function ISBatteryStatusDisplay:new(x, y, width, height, addAlertLed) end

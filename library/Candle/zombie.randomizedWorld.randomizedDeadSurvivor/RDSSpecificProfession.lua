@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSSpecificProfession: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSSpecificProfession = {};
+RDSSpecificProfession = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSSpecificProfession = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSSpecificProfession:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

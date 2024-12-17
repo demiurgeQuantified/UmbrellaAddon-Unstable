@@ -10,13 +10,11 @@
 ---@field [any] any
 ISWashYourself = ISBaseTimedAction:derive("ISWashYourself")
 
-
 ---@return any
 function ISWashYourself.GetRequiredSoap(character) end
 
 ---@return any
 function ISWashYourself.GetRequiredWater(character) end
-
 
 ---@return any
 function ISWashYourself:complete() end
@@ -50,7 +48,6 @@ function ISWashYourself:update() end
 
 ---@return any
 function ISWashYourself:washPart(visual, part) end
-
 
 ---@return ISWashYourself
 function ISWashYourself:new(character, sink, soaps) end

@@ -3,7 +3,6 @@
 ---@class forageServer
 forageServer = {}
 
-
 ---@return any
 function forageServer.addZone(_zoneData) end
 

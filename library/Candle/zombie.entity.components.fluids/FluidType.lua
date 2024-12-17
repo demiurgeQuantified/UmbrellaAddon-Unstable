@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class FluidType: Enum
 --- @field public class any
@@ -34,7 +34,7 @@
 --- @field public Water FluidType
 --- @field public Whiskey FluidType
 --- @field public Wine FluidType
-FluidType = {};
+FluidType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -42,19 +42,19 @@ FluidType = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return FluidType
 function FluidType.FromId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return FluidType
 function FluidType.FromNameLower(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function FluidType.containsNameLowercase(arg0) end
 
@@ -65,7 +65,7 @@ function FluidType.getAllFluidName() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return FluidType
 function FluidType.valueOf(arg0) end
 
@@ -74,17 +74,14 @@ function FluidType.valueOf(arg0) end
 --- @return FluidType[]
 function FluidType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return byte
+--- @return integer
 function FluidType:getId() end
 
 --- @public
---- @return String
+--- @return string
 function FluidType:toStringLower() end
-
-

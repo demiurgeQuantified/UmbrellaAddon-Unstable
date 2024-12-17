@@ -15,7 +15,6 @@
 ---@field [any] any
 ISWalkToTimedAction = ISBaseTimedAction:derive("ISWalkToTimedAction")
 
-
 ---@return any
 function ISWalkToTimedAction:isValid() end
 
@@ -33,7 +32,6 @@ function ISWalkToTimedAction:stop() end
 
 ---@return any
 function ISWalkToTimedAction:update() end
-
 
 ---@return ISWalkToTimedAction
 function ISWalkToTimedAction:new(character, location, additionalTest, additionalContext) end

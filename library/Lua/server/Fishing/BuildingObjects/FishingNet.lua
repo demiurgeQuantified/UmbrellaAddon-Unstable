@@ -9,7 +9,6 @@
 ---@field [any] any
 fishingNet = ISBuildingObject:derive("fishingNet")
 
-
 ---@return any
 function fishingNet.checkTrap(player, trap, hours) end
 
@@ -25,7 +24,6 @@ function fishingNet.setBait(net, baitForce) end
 ---@return any
 function fishingNet.updateBait(net) end
 
-
 ---@return any
 function fishingNet:create(x, y, z, north, sprite) end
 
@@ -34,7 +32,6 @@ function fishingNet:isValid(square, north) end
 
 ---@return any
 function fishingNet:render(x, y, z, square) end
-
 
 ---@return fishingNet
 function fishingNet:new(character, item) end

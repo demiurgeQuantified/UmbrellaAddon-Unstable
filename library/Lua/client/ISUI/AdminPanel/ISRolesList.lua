@@ -15,7 +15,6 @@
 ---@field [any] any
 ISRolesList = ISPanel:derive("ISRolesList")
 
-
 ---@return any
 function ISRolesList:closeModal() end
 
@@ -51,7 +50,6 @@ function ISRolesList:populateList() end
 
 ---@return any
 function ISRolesList:prerender() end
-
 
 ---@return ISRolesList
 function ISRolesList:new(x, y, width, height, player) end

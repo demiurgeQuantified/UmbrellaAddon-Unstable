@@ -3,7 +3,6 @@
 ---@class ISVehiclePartMenu
 ISVehiclePartMenu = {}
 
-
 ---@return any
 function ISVehiclePartMenu.doAddFuelMenu(playerObj, part, context) end
 

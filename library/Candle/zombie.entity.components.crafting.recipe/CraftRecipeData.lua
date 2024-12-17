@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CraftRecipeData
 --- @field public class any
-CraftRecipeData = {};
+CraftRecipeData = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,7 +17,6 @@ CraftRecipeData = {};
 --- @param arg4 boolean
 --- @return CraftRecipeData
 function CraftRecipeData.Alloc(arg0, arg1, arg2, arg3, arg4) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,7 +100,7 @@ function CraftRecipeData:getAllCreatedItems() end
 function CraftRecipeData:getAllInputItems() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function CraftRecipeData:getAllInputItemsWithFlag(arg0) end
 
@@ -128,12 +127,12 @@ function CraftRecipeData:getDataForInputScript(arg0) end
 function CraftRecipeData:getFirstCreatedItem() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return InventoryItem
 function CraftRecipeData:getFirstInputItemWithFlag(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return InventoryItem
 function CraftRecipeData:getFirstInputItemWithTag(arg0) end
 
@@ -143,7 +142,7 @@ function CraftRecipeData:getFirstInputItemWithTag(arg0) end
 function CraftRecipeData:getFirstManualInputFor(arg0) end
 
 --- @public
---- @param arg0 Integer
+--- @param arg0 integer
 --- @return ArrayList
 function CraftRecipeData:getInputItems(arg0) end
 
@@ -152,11 +151,11 @@ function CraftRecipeData:getInputItems(arg0) end
 function CraftRecipeData:getModData() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipeData:getModelHandOne() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipeData:getModelHandTwo() end
 
 --- @public
@@ -164,7 +163,7 @@ function CraftRecipeData:getModelHandTwo() end
 --- @param arg1 List
 --- @param arg2 List
 --- @param arg3 List
---- @return int
+--- @return integer
 function CraftRecipeData:getPossibleCraftCount(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -176,12 +175,12 @@ function CraftRecipeData:getRecipe() end
 function CraftRecipeData:getToOutputItems() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return InventoryItem
 function CraftRecipeData:getViableItem(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Resource
 function CraftRecipeData:getViableResource(arg0) end
 
@@ -203,24 +202,24 @@ function CraftRecipeData:isAllowOutputResources() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 CraftRecipe
 --- @param arg3 boolean
 --- @return boolean
 function CraftRecipeData:load(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @return void
---- @overload fun(self: CraftRecipeData, arg0: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: CraftRecipeData, arg0: IsoGameCharacter): nil
 function CraftRecipeData:luaCallOnCreate() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeData:luaCallOnFailed() end
 
 --- @public
---- @return void
---- @overload fun(self: CraftRecipeData, arg0: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: CraftRecipeData, arg0: IsoGameCharacter): nil
 function CraftRecipeData:luaCallOnStart() end
 
 --- @public
@@ -228,7 +227,7 @@ function CraftRecipeData:luaCallOnStart() end
 function CraftRecipeData:luaCallOnTest() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeData:luaCallOnUpdate() end
 
 --- @public
@@ -251,24 +250,23 @@ function CraftRecipeData:perform(arg0, arg1, arg2) end
 function CraftRecipeData:removeInputItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeData:reset() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function CraftRecipeData:save(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipeMonitor
---- @return void
+--- @return nil
 function CraftRecipeData:setMonitor(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
---- @return void
+--- @return nil
 function CraftRecipeData:setRecipe(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

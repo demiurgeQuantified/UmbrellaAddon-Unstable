@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class ColorSet: Enum
 --- @field public class any
 --- @field public ColorBlind ColorSet
 --- @field public Game ColorSet
 --- @field public Standard ColorSet
-ColorSet = {};
+ColorSet = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ ColorSet = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ColorSet
 function ColorSet.valueOf(arg0) end
 
@@ -22,13 +22,10 @@ function ColorSet.valueOf(arg0) end
 --- @return ColorSet[]
 function ColorSet.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function ColorSet:getIndex() end
-
-

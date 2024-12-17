@@ -42,7 +42,6 @@
 ---@field [any] any
 ISPlayerStatsUI = ISPanel:derive("ISPlayerStatsUI")
 
-
 ---@return any
 function ISPlayerStatsUI.loadPerks(self) end
 
@@ -60,7 +59,6 @@ function ISPlayerStatsUI.OnOpenPanel() end
 
 ---@return any
 function ISPlayerStatsUI.receiveUserLog(username, logs) end
-
 
 ---@return any
 function ISPlayerStatsUI:canModifyThis() end
@@ -127,7 +125,6 @@ function ISPlayerStatsUI:updateColumns() end
 
 ---@return any
 function ISPlayerStatsUI:updateWeight() end
-
 
 ---@return ISPlayerStatsUI
 function ISPlayerStatsUI:new(x, y, width, height, playerChecked, admin) end

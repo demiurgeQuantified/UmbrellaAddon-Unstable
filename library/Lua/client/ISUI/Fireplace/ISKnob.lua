@@ -21,7 +21,6 @@
 ISKnob = ISUIElement:derive("ISKnob")
 ISKnob.messages = {}
 
-
 ---@return any
 function ISKnob:addValue(angle, value) end
 
@@ -69,7 +68,6 @@ function ISKnob:setJoypadFocused(focused) end
 
 ---@return any
 function ISKnob:setKnobPosition(value) end
-
 
 ---@return ISKnob
 function ISKnob:new(x, y, tex, valuesBg, title, player) end

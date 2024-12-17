@@ -17,7 +17,6 @@
 ---@field [any] any
 ISWidgetComponentHeader = ISPanel:derive("ISWidgetComponentHeader")
 
-
 ---@return any
 function ISWidgetComponentHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -39,6 +38,17 @@ function ISWidgetComponentHeader:render() end
 ---@return any
 function ISWidgetComponentHeader:update() end
 
-
 ---@return ISWidgetComponentHeader
-function ISWidgetComponentHeader:new(x, y, width, height, player, entity, component, componentUiStyle, _styleIcon, _styleLabel) end
+function ISWidgetComponentHeader:new(
+	x,
+	y,
+	width,
+	height,
+	player,
+	entity,
+	component,
+	componentUiStyle,
+	_styleIcon,
+	_styleLabel
+)
+end

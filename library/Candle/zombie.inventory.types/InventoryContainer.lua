@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class InventoryContainer: InventoryItem
 --- @field public class any
-InventoryContainer = {};
+InventoryContainer = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,8 +10,8 @@ InventoryContainer = {};
 
 --- @public
 --- @param arg0 ObjectTooltip
---- @return void
---- @overload fun(self: InventoryContainer, arg0: ObjectTooltip, arg1: Layout): void
+--- @return nil
+--- @overload fun(self: InventoryContainer, arg0: ObjectTooltip, arg1: Layout): nil
 function InventoryContainer:DoTooltip(arg0) end
 
 --- @public
@@ -19,36 +19,36 @@ function InventoryContainer:DoTooltip(arg0) end
 function InventoryContainer:IsInventoryContainer() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryContainer:canBeEquipped() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryContainer:getBloodLevel() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryContainer:getCapacity() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryContainer:getCategory() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryContainer:getClothingExtraSubmenu() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryContainer:getContentsWeight() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return int
+--- @return integer
 function InventoryContainer:getEffectiveCapacity(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function InventoryContainer:getEquippedWeight() end
 
 --- @public
@@ -56,7 +56,7 @@ function InventoryContainer:getEquippedWeight() end
 function InventoryContainer:getInventory() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryContainer:getInventoryWeight() end
 
 --- @public
@@ -64,15 +64,15 @@ function InventoryContainer:getInventoryWeight() end
 function InventoryContainer:getItemContainer() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryContainer:getMaxItemSize() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryContainer:getSaveType() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryContainer:getWeightReduction() end
 
 --- @public
@@ -81,58 +81,57 @@ function InventoryContainer:isEmpty() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function InventoryContainer:load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryContainer:reset() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function InventoryContainer:save(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryContainer:setBloodLevel(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryContainer:setCanBeEquipped(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryContainer:setCapacity(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function InventoryContainer:setItemContainer(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryContainer:setWeightReduction(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryContainer:updateAge() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @return InventoryContainer
 function InventoryContainer.new(arg0, arg1, arg2, arg3) end

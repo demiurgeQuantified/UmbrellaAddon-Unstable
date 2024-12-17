@@ -1,20 +1,18 @@
---- @meta
+--- @meta _
 
 --- @class XuiTranslateString: XuiVar
 --- @field public class any
-XuiTranslateString = {};
+XuiTranslateString = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function XuiTranslateString:getValueString() end
 
 --- @public
---- @return Object
---- @overload fun(self: XuiTranslateString): String
+--- @return any
+--- @overload fun(self: XuiTranslateString): string
 function XuiTranslateString:value() end
-
-

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class ContainerID
 --- @field public class any
 --- @implement INetworkPacketField
-ContainerID = {};
+ContainerID = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,11 +11,11 @@ ContainerID = {};
 
 --- @public
 --- @param arg0 ContainerID
---- @return void
+--- @return nil
 function ContainerID:copy(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function ContainerID:equals(arg0) end
 
@@ -32,7 +32,7 @@ function ContainerID:getContainerType() end
 function ContainerID:getObject() end
 
 --- @public
---- @return int
+--- @return integer
 function ContainerID:getPacketSizeBytes() end
 
 --- @public
@@ -40,7 +40,7 @@ function ContainerID:getPacketSizeBytes() end
 function ContainerID:getPart() end
 
 --- @public
---- @return int
+--- @return integer
 function ContainerID:hashCode() end
 
 --- @public
@@ -49,7 +49,7 @@ function ContainerID:hashCode() end
 function ContainerID:isConsistent(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 ItemContainer
 --- @return boolean
 function ContainerID:isContainerTheSame(arg0, arg1) end
@@ -57,46 +57,45 @@ function ContainerID:isContainerTheSame(arg0, arg1) end
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
---- @return void
---- @overload fun(self: ContainerID, arg0: ByteBuffer, arg1: UdpConnection): void
+--- @return nil
+--- @overload fun(self: ContainerID, arg0: ByteBuffer, arg1: UdpConnection): nil
 function ContainerID:parse(arg0, arg1) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
---- @overload fun(self: ContainerID, arg0: ItemContainer, arg1: IsoObject): void
+--- @return nil
+--- @overload fun(self: ContainerID, arg0: ItemContainer, arg1: IsoObject): nil
 function ContainerID:set(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
 --- @param arg1 IsoGridSquare
---- @return void
+--- @return nil
 function ContainerID:setFloor(arg0, arg1) end
 
 --- @public
 --- @param arg0 ItemContainer
 --- @param arg1 IsoPlayer
---- @return void
+--- @return nil
 function ContainerID:setInventoryContainer(arg0, arg1) end
 
 --- @public
 --- @param arg0 ItemContainer
 --- @param arg1 IsoObject
 --- @param arg2 IsoGridSquare
---- @return void
+--- @return nil
 function ContainerID:setObject(arg0, arg1, arg2) end
 
 --- @public
---- @return String
+--- @return string
 function ContainerID:toString() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
---- @overload fun(self: ContainerID, arg0: ByteBufferWriter): void
---- @overload fun(self: ContainerID, arg0: ByteBufferWriter): void
+--- @return nil
+--- @overload fun(self: ContainerID, arg0: ByteBufferWriter): nil
+--- @overload fun(self: ContainerID, arg0: ByteBufferWriter): nil
 function ContainerID:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

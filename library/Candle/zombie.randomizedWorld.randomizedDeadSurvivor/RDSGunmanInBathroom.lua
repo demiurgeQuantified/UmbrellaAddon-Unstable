@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSGunmanInBathroom: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSGunmanInBathroom = {};
+RDSGunmanInBathroom = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSGunmanInBathroom = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSGunmanInBathroom:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

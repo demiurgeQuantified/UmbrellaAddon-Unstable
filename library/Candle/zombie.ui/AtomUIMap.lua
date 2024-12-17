@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AtomUIMap: AtomUI
 --- @field public class any
-AtomUIMap = {};
+AtomUIMap = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,17 +13,16 @@ AtomUIMap = {};
 function AtomUIMap:getMapUI() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUIMap:init() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUIMap:render() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUIMap:revealOnMap() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

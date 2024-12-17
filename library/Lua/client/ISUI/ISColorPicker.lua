@@ -13,7 +13,6 @@
 ---@field [any] any
 ISColorPicker = ISPanelJoypad:derive("ISColorPicker")
 
-
 ---@return any
 function ISColorPicker:onJoypadDirDown(joypadData) end
 
@@ -64,7 +63,6 @@ function ISColorPicker:setInitialColor(initial) end
 
 ---@return any
 function ISColorPicker:setPickedFunc(func, arg1, arg2, arg3, arg4) end
-
 
 ---@return ISColorPicker
 function ISColorPicker:new(x, y, HSBFactor) end

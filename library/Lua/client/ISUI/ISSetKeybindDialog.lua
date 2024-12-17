@@ -9,7 +9,6 @@
 ---@field [any] any
 ISSetKeybindDialog = ISPanel:derive("ISSetKeybindDialog")
 
-
 ---@return any
 function ISSetKeybindDialog:createChildren() end
 
@@ -33,7 +32,6 @@ function ISSetKeybindDialog:onKeyRelease(key) end
 
 ---@return any
 function ISSetKeybindDialog:onMouseButtonDown(btn) end
-
 
 ---@return ISSetKeybindDialog
 function ISSetKeybindDialog:new(keybindName, isModBind) end

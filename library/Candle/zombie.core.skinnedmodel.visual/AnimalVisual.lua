@@ -1,34 +1,34 @@
---- @meta
+--- @meta _
 
 --- @class AnimalVisual: BaseVisual
 --- @field public class any
-AnimalVisual = {};
+AnimalVisual = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function AnimalVisual:clear() end
 
 --- @public
 --- @param arg0 BaseVisual
---- @return void
+--- @return nil
 function AnimalVisual:copyFrom(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ItemVisuals
---- @return void
+--- @return nil
 function AnimalVisual:dressInNamedOutfit(arg0, arg1) end
 
 --- @public
---- @return float
+--- @return number
 function AnimalVisual:getAnimalSize() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalVisual:getAnimalType() end
 
 --- @public
@@ -49,7 +49,7 @@ function AnimalVisual:getModelScript() end
 function AnimalVisual:getModelTest(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function AnimalVisual:getSkinTexture() end
 
 --- @public
@@ -58,20 +58,19 @@ function AnimalVisual:isSkeleton() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function AnimalVisual:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function AnimalVisual:save(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimalVisual:setSkinTextureName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

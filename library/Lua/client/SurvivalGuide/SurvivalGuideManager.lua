@@ -6,7 +6,6 @@
 ---@field [any] any
 SurvivalGuideManager = ISBaseObject:derive("SurvivalGuideManager")
 
-
 ---@return any
 function SurvivalGuideManager.OnCreatePlayer() end
 
@@ -19,7 +18,6 @@ function SurvivalGuideManager.onKeyPressed(key) end
 ---@return any
 function SurvivalGuideManager.OnNewGame() end
 
-
 ---@return any
 function SurvivalGuideManager:RestoreLayout(name, layout) end
 
@@ -28,7 +26,6 @@ function SurvivalGuideManager:SaveLayout(name, layout) end
 
 ---@return any
 function SurvivalGuideManager:update() end
-
 
 ---@return SurvivalGuideManager
 function SurvivalGuideManager:new() end

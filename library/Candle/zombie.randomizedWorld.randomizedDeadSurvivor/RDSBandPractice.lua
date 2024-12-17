@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSBandPractice: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSBandPractice = {};
+RDSBandPractice = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RDSBandPractice:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSBandPractice:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

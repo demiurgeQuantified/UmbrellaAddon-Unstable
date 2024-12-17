@@ -10,7 +10,6 @@
 ---@field [any] any
 LuaDebugOutput = ISPanel:derive("LuaDebugOutput")
 
-
 ---@return any
 function LuaDebugOutput:clear() end
 
@@ -25,7 +24,6 @@ function LuaDebugOutput:doDrawItem(y, item, alt) end
 
 ---@return any
 function LuaDebugOutput:error(text) end
-
 
 ---@return LuaDebugOutput
 function LuaDebugOutput:new(x, y, width, height) end

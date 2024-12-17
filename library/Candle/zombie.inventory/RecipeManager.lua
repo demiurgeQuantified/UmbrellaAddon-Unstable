@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RecipeManager
 --- @field public class any
-RecipeManager = {};
+RecipeManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,15 +10,15 @@ RecipeManager = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 Recipe
 --- @return boolean
 function RecipeManager.DoesUseItemUp(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return boolean
 function RecipeManager.DoesWipeUseDelta(arg0, arg1) end
 
@@ -43,7 +43,7 @@ function RecipeManager.HasAllRequiredItems(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 Recipe
 --- @return boolean
 function RecipeManager.IsItemDestroyed(arg0, arg1) end
@@ -59,7 +59,7 @@ function RecipeManager.IsRecipeValid(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeManager.LoadedAfterLua() end
 
 --- @public
@@ -73,15 +73,15 @@ function RecipeManager.PerformMakeItem(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeManager.ScriptsLoaded() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 Recipe
 --- @param arg2 IsoGameCharacter
---- @return float
+--- @return number
 function RecipeManager.UseAmount(arg0, arg1, arg2) end
 
 --- @public
@@ -111,7 +111,7 @@ function RecipeManager.getAvailableItemsNeeded(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Recipe
 function RecipeManager.getDismantleRecipeFor(arg0) end
 
@@ -127,7 +127,7 @@ function RecipeManager.getEvolvedRecipe(arg0, arg1, arg2, arg3) end
 --- @public
 --- @static
 --- @param arg0 IsoGameCharacter
---- @return int
+--- @return integer
 function RecipeManager.getKnownRecipesNumber(arg0) end
 
 --- @public
@@ -136,13 +136,13 @@ function RecipeManager.getKnownRecipesNumber(arg0) end
 --- @param arg1 IsoGameCharacter
 --- @param arg2 ArrayList
 --- @param arg3 InventoryItem
---- @return int
+--- @return integer
 function RecipeManager.getNumberOfTimesRecipeCanBeDone(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
 --- @param arg0 Recipe
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 IsoGameCharacter
 --- @param arg3 ArrayList
 --- @param arg4 InventoryItem
@@ -153,7 +153,7 @@ function RecipeManager.getSourceItemsAll(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @public
 --- @static
 --- @param arg0 Recipe
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 IsoGameCharacter
 --- @param arg3 ArrayList
 --- @param arg4 InventoryItem
@@ -193,7 +193,7 @@ function RecipeManager.isAllItemsUsableRotten(arg0, arg1, arg2, arg3) end
 --- @param arg1 IsoGameCharacter
 --- @param arg2 InventoryItem
 --- @param arg3 ArrayList
---- @return void
+--- @return nil
 function RecipeManager.printDebugRecipeValid(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -211,7 +211,6 @@ function RecipeManager.validateHasHeat(arg0, arg1, arg2, arg3) end
 --- @param arg1 InventoryItem
 --- @return boolean
 function RecipeManager.validateRecipeContainsSourceItem(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -64,7 +64,6 @@ ISCraftingUI.rightCategory = Keyboard.KEY_RIGHT
 ISCraftingUI.upArrow = Keyboard.KEY_UP
 ISCraftingUI.downArrow = Keyboard.KEY_DOWN
 
-
 ---@return any
 function ISCraftingUI.addIngredientTooltip(option, items) end
 
@@ -79,7 +78,6 @@ function ISCraftingUI.sortByName(a, b) end
 
 ---@return any
 function ISCraftingUI.toggleCraftingUI() end
-
 
 ---@return any
 function ISCraftingUI:addItemInEvolvedRecipe(button) end
@@ -213,7 +211,6 @@ function ISCraftingUI:transferItems() end
 ---@return any
 function ISCraftingUI:update() end
 
-
 ---@return ISCraftingUI
 function ISCraftingUI:new(x, y, width, height, character) end
 
@@ -223,7 +220,6 @@ function ISCraftingUI:new(x, y, width, height, character) end
 ---@field tooltipUI any
 ---@field [any] any
 ISCraftingIngredientIconPanel = ISPanel:derive("ISCraftingIngredientIconPanel")
-
 
 ---@return any
 function ISCraftingIngredientIconPanel:getExtraItem(index) end
@@ -239,7 +235,6 @@ function ISCraftingIngredientIconPanel:shouldBeVisible() end
 
 ---@return any
 function ISCraftingIngredientIconPanel:updateTooltip() end
-
 
 ---@return ISCraftingIngredientIconPanel
 function ISCraftingIngredientIconPanel:new(craftingUI) end

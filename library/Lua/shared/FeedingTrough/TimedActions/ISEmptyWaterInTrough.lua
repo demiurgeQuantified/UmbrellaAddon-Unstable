@@ -9,7 +9,6 @@
 ---@field [any] any
 ISEmptyWaterInTrough = ISBaseTimedAction:derive("ISEmptyWaterInTrough")
 
-
 ---@return any
 function ISEmptyWaterInTrough:complete() end
 
@@ -36,7 +35,6 @@ function ISEmptyWaterInTrough:update() end
 
 ---@return any
 function ISEmptyWaterInTrough:waitToStart() end
-
 
 ---@return ISEmptyWaterInTrough
 function ISEmptyWaterInTrough:new(character, objectTo) end

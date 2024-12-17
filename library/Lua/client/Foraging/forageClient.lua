@@ -3,7 +3,6 @@
 ---@class forageClient
 forageClient = {}
 
-
 ---@return any
 function forageClient.addZone(_zoneData) end
 

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class EnumServerOption: EnumConfigOption
 --- @field public class any
 --- @implement ServerOption
-EnumServerOption = {};
+EnumServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,15 +15,14 @@ EnumServerOption = {};
 function EnumServerOption:asConfigOption() end
 
 --- @public
---- @return String
---- @overload fun(self: EnumServerOption): String
+--- @return string
+--- @overload fun(self: EnumServerOption): string
 function EnumServerOption:getTooltip() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function EnumServerOption:getValueTranslationByIndex(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -31,8 +30,8 @@ function EnumServerOption:getValueTranslationByIndex(arg0) end
 
 --- @public
 --- @param arg0 ServerOptions
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return EnumServerOption
 function EnumServerOption.new(arg0, arg1, arg2, arg3) end

@@ -7,7 +7,6 @@
 ---@field [any] any
 HitReactionSettingsPanel = ISDebugSubPanelBase:derive("HitReactionSettingsPanel")
 
-
 ---@return any
 function HitReactionSettingsPanel:addBoolOption(_id, _bool, _x, _y, _w) end
 
@@ -37,7 +36,6 @@ function HitReactionSettingsPanel:prerender() end
 
 ---@return any
 function HitReactionSettingsPanel:update() end
-
 
 ---@return HitReactionSettingsPanel
 function HitReactionSettingsPanel:new(x, y, width, height, doStencil) end

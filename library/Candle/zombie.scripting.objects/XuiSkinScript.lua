@@ -1,39 +1,39 @@
---- @meta
+--- @meta _
 
 --- @class XuiSkinScript: BaseScriptObject
 --- @field public class any
-XuiSkinScript = {};
+XuiSkinScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function XuiSkinScript:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function XuiSkinScript:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function XuiSkinScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function XuiSkinScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function XuiSkinScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function XuiSkinScript:PreReload() end
 
 --- @public
@@ -57,9 +57,8 @@ function XuiSkinScript:getImports() end
 function XuiSkinScript:getStyleInfoMap() end
 
 --- @public
---- @return void
+--- @return nil
 function XuiSkinScript:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

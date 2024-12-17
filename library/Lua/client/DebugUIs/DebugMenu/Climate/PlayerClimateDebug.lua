@@ -45,13 +45,11 @@ PlayerClimateDebug.instance = nil
 PlayerClimateDebug.shiftDown = 0
 PlayerClimateDebug.eventsAdded = false
 
-
 ---@return any
 function PlayerClimateDebug.onClimateTickDebug() end
 
 ---@return any
 function PlayerClimateDebug.OnOpenPanel() end
-
 
 ---@return any
 function PlayerClimateDebug:addLabel(_curY, _labelID, _title) end
@@ -87,7 +85,16 @@ function PlayerClimateDebug:onResize() end
 function PlayerClimateDebug:prerender() end
 
 ---@return any
-function PlayerClimateDebug:registerVariable(_variable, _title, _isValue, _javaInstance, _defaultVal, _color, _postfix) end
+function PlayerClimateDebug:registerVariable(
+	_variable,
+	_title,
+	_isValue,
+	_javaInstance,
+	_defaultVal,
+	_color,
+	_postfix
+)
+end
 
 ---@return any
 function PlayerClimateDebug:render() end
@@ -100,7 +107,6 @@ function PlayerClimateDebug:update() end
 
 ---@return any
 function PlayerClimateDebug:updateOLD() end
-
 
 ---@return PlayerClimateDebug
 function PlayerClimateDebug:new(x, y, width, height, player) end

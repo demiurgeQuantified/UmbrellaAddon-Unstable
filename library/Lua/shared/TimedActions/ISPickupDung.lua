@@ -10,7 +10,6 @@
 ---@field [any] any
 ISPickupDung = ISBaseTimedAction:derive("ISPickupDung")
 
-
 ---@return any
 function ISPickupDung:complete() end
 
@@ -34,7 +33,6 @@ function ISPickupDung:stop() end
 
 ---@return any
 function ISPickupDung:update() end
-
 
 ---@return ISPickupDung
 function ISPickupDung:new(character, item, sq, radius) end

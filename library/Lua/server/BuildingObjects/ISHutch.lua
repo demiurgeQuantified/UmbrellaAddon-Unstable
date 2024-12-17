@@ -7,7 +7,6 @@
 ---@field [any] any
 ISHutch = ISBuildingObject:derive("ISHutch")
 
-
 ---@return any
 function ISHutch:create(x, y, z, north, sprite) end
 
@@ -31,7 +30,6 @@ function ISHutch:render(x, y, z, square) end
 
 ---@return any
 function ISHutch:walkTo(x, y, z) end
-
 
 ---@return ISHutch
 function ISHutch:new(character, def) end

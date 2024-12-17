@@ -13,7 +13,6 @@
 ---@field [any] any
 ISUnloadBulletsFromFirearm = ISBaseTimedAction:derive("ISUnloadBulletsFromFirearm")
 
-
 ---@return any
 function ISUnloadBulletsFromFirearm:animEvent(event, parameter) end
 
@@ -43,7 +42,6 @@ function ISUnloadBulletsFromFirearm:stop() end
 
 ---@return any
 function ISUnloadBulletsFromFirearm:update() end
-
 
 ---@return ISUnloadBulletsFromFirearm
 function ISUnloadBulletsFromFirearm:new(character, gun) end

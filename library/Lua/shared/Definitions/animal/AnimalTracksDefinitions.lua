@@ -7,14 +7,14 @@ AnimalTracksDefinitions.trackType["footstep"] = {}
 AnimalTracksDefinitions.trackType["footstep"].name = "footstep"
 AnimalTracksDefinitions.trackType["footstep"].needDir = true
 AnimalTracksDefinitions.trackType["footstep"].sprites = {
-    NE = "animaltracks_large_01_16",
-    SW = "animaltracks_large_01_17",
-    NW = "animaltracks_large_01_18",
-    SE = "animaltracks_large_01_19",
-    S = "animaltracks_large_01_20",
-    N = "animaltracks_large_01_21",
-    E = "animaltracks_large_01_22",
-    W = "animaltracks_large_01_23",
+	NE = "animaltracks_large_01_16",
+	SW = "animaltracks_large_01_17",
+	NW = "animaltracks_large_01_18",
+	SE = "animaltracks_large_01_19",
+	S = "animaltracks_large_01_20",
+	N = "animaltracks_large_01_21",
+	E = "animaltracks_large_01_22",
+	W = "animaltracks_large_01_23",
 }
 AnimalTracksDefinitions.trackType["footstep"].actionType = "walk"
 AnimalTracksDefinitions.trackType["footstep"].chanceToFindTrack = 100
@@ -57,10 +57,13 @@ AnimalTracksDefinitions.animallist["deer"].tracks = {}
 AnimalTracksDefinitions.animallist["deer"].tracks["footstep"] = copyTable(AnimalTracksDefinitions.trackType["footstep"])
 AnimalTracksDefinitions.animallist["deer"].tracks["poop"] = copyTable(AnimalTracksDefinitions.trackType["poop"])
 AnimalTracksDefinitions.animallist["deer"].tracks["poop"].item = "Base.Dung_Deer"
-AnimalTracksDefinitions.animallist["deer"].tracks["brokentwigs"] = copyTable(AnimalTracksDefinitions.trackType["brokentwigs"])
+AnimalTracksDefinitions.animallist["deer"].tracks["brokentwigs"] =
+	copyTable(AnimalTracksDefinitions.trackType["brokentwigs"])
 AnimalTracksDefinitions.animallist["deer"].tracks["brokentwigs"].item = "Base.Twigs"
-AnimalTracksDefinitions.animallist["deer"].tracks["herbgraze"] = copyTable(AnimalTracksDefinitions.trackType["herbgraze"])
-AnimalTracksDefinitions.animallist["deer"].tracks["flattenedherb"] = copyTable(AnimalTracksDefinitions.trackType["flattenedherb"])
+AnimalTracksDefinitions.animallist["deer"].tracks["herbgraze"] =
+	copyTable(AnimalTracksDefinitions.trackType["herbgraze"])
+AnimalTracksDefinitions.animallist["deer"].tracks["flattenedherb"] =
+	copyTable(AnimalTracksDefinitions.trackType["flattenedherb"])
 AnimalTracksDefinitions.animallist["deer"].tracks["fur"] = copyTable(AnimalTracksDefinitions.trackType["fur"])
 AnimalTracksDefinitions.animallist["deer"].tracks["fur"].item = "Base.FurTuft_Brownlight"
 AnimalTracksDefinitions.animallist["deer"].skillToIdentify = 4
@@ -72,13 +75,17 @@ AnimalTracksDefinitions.animallist["deer"].trackChance["sleep"] = 100
 AnimalTracksDefinitions.animallist["deer"].chanceToFindTrack = 100
 AnimalTracksDefinitions.animallist["rabbit"] = {}
 AnimalTracksDefinitions.animallist["rabbit"].tracks = {}
-AnimalTracksDefinitions.animallist["rabbit"].tracks["footstep"] = copyTable(AnimalTracksDefinitions.trackType["footstep"])
+AnimalTracksDefinitions.animallist["rabbit"].tracks["footstep"] =
+	copyTable(AnimalTracksDefinitions.trackType["footstep"])
 AnimalTracksDefinitions.animallist["rabbit"].tracks["poop"] = copyTable(AnimalTracksDefinitions.trackType["poop"])
 AnimalTracksDefinitions.animallist["rabbit"].tracks["poop"].item = "Base.Dung_Rabbit"
-AnimalTracksDefinitions.animallist["rabbit"].tracks["brokentwigs"] = copyTable(AnimalTracksDefinitions.trackType["brokentwigs"])
+AnimalTracksDefinitions.animallist["rabbit"].tracks["brokentwigs"] =
+	copyTable(AnimalTracksDefinitions.trackType["brokentwigs"])
 AnimalTracksDefinitions.animallist["rabbit"].tracks["brokentwigs"].item = "Base.Twigs"
-AnimalTracksDefinitions.animallist["rabbit"].tracks["herbgraze"] = copyTable(AnimalTracksDefinitions.trackType["herbgraze"])
-AnimalTracksDefinitions.animallist["rabbit"].tracks["flattenedherb"] = copyTable(AnimalTracksDefinitions.trackType["flattenedherb"])
+AnimalTracksDefinitions.animallist["rabbit"].tracks["herbgraze"] =
+	copyTable(AnimalTracksDefinitions.trackType["herbgraze"])
+AnimalTracksDefinitions.animallist["rabbit"].tracks["flattenedherb"] =
+	copyTable(AnimalTracksDefinitions.trackType["flattenedherb"])
 AnimalTracksDefinitions.animallist["rabbit"].tracks["fur"] = copyTable(AnimalTracksDefinitions.trackType["fur"])
 AnimalTracksDefinitions.animallist["rabbit"].tracks["fur"].item = "Base.FurTuft_Grey"
 AnimalTracksDefinitions.animallist["rabbit"].skillToIdentify = 1

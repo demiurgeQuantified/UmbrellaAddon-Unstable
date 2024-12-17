@@ -16,7 +16,6 @@ EightMonthsLater.y = (31 * 300) + 111
 EightMonthsLater.z = 0
 EightMonthsLater.hourOfDay = 7
 
-
 ---@return any
 function EightMonthsLater.AddPlayer(playerNum, playerObj) end
 

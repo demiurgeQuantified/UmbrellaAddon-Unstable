@@ -1,22 +1,21 @@
---- @meta
+--- @meta _
 
 --- @class ServerChatMessage: ChatMessage
 --- @field public class any
-ServerChatMessage = {};
+ServerChatMessage = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ServerChatMessage:getAuthor() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ServerChatMessage:setAuthor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -24,6 +23,6 @@ function ServerChatMessage:setAuthor(arg0) end
 
 --- @public
 --- @param arg0 ChatBase
---- @param arg1 String
+--- @param arg1 string
 --- @return ServerChatMessage
 function ServerChatMessage.new(arg0, arg1) end

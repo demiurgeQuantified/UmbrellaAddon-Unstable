@@ -1,38 +1,38 @@
---- @meta
+--- @meta _
 
 --- @class Part
 --- @field public class any
-Part = {};
+Part = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Anim
 function Part:getAnimById(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function Part:getDurability() end
 
 --- @public
---- @return String
+--- @return string
 function Part:getId() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Model
 function Part:getModel(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Model
 function Part:getModelById(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Part:getModelCount() end
 
 --- @public
@@ -45,14 +45,13 @@ function Part:isRepairMechanic() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Part:setMechanicRequireKey(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Part:setRepairMechanic(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

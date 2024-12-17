@@ -17,7 +17,6 @@
 ISCreateFactionUI = ISPanel:derive("ISCreateFactionUI")
 ISCreateFactionUI.messages = {}
 
-
 ---@return any
 function ISCreateFactionUI:close() end
 
@@ -35,7 +34,6 @@ function ISCreateFactionUI:render() end
 
 ---@return any
 function ISCreateFactionUI:updateButtons() end
-
 
 ---@return ISCreateFactionUI
 function ISCreateFactionUI:new(x, y, width, height, player) end

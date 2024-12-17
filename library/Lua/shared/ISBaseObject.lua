@@ -6,7 +6,6 @@
 ISBaseObject = {}
 ISBaseObject.Type = "ISBaseObject"
 
-
 ---@return any
 function ISBaseObject:addEventListener(_event, _callback, _target) end
 
@@ -24,7 +23,6 @@ function ISBaseObject:removeEventListener(_event, _callback) end
 
 ---@return any
 function ISBaseObject:triggerEvent(_event, ...) end
-
 
 ---@return ISBaseObject
 function ISBaseObject:new() end

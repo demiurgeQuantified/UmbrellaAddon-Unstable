@@ -10,7 +10,6 @@
 ---@field [any] any
 ISSeedActionNew = ISBaseTimedAction:derive("ISSeedActionNew")
 
-
 ---@return any
 function ISSeedActionNew:complete() end
 
@@ -34,7 +33,6 @@ function ISSeedActionNew:update() end
 
 ---@return any
 function ISSeedActionNew:waitToStart() end
-
 
 ---@return ISSeedActionNew
 function ISSeedActionNew:new(character, seed, typeOfSeed, plant) end

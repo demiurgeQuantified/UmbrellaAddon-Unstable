@@ -9,7 +9,6 @@
 ---@field [any] any
 ISPadlockByCodeAction = ISBaseTimedAction:derive("ISPadlockByCodeAction")
 
-
 ---@return any
 function ISPadlockByCodeAction:complete() end
 
@@ -30,7 +29,6 @@ function ISPadlockByCodeAction:stop() end
 
 ---@return any
 function ISPadlockByCodeAction:update() end
-
 
 ---@return ISPadlockByCodeAction
 function ISPadlockByCodeAction:new(character, thump, padlock, lock, code) end

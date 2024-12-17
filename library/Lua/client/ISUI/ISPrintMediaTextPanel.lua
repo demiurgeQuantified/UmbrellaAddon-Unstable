@@ -52,7 +52,6 @@
 ISPrintMediaTextPanel = ISPanel:derive("ISPrintMediaTextPanel")
 ISPrintMediaTextPanel.drawMargins = false
 
-
 ---@return any
 function ISPrintMediaTextPanel:initialise() end
 
@@ -89,7 +88,6 @@ function ISPrintMediaTextPanel:setMargins(left, top, right, bottom) end
 ---@return any
 function ISPrintMediaTextPanel:setText(text) end
 
-
 ---@return ISPrintMediaTextPanel
 function ISPrintMediaTextPanel:new(x, y, width, height) end
 
@@ -99,10 +97,8 @@ function ISPrintMediaTextPanel:new(x, y, width, height) end
 ---@field [any] any
 ISPrintMediaMap = ISUIElement:derive("ISPrintMediaMap")
 
-
 ---@return any
 function ISPrintMediaMap:instantiate() end
-
 
 ---@return ISPrintMediaMap
 function ISPrintMediaMap:new(x, y, width, height) end

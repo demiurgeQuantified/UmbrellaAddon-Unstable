@@ -21,7 +21,6 @@
 ---@field [any] any
 ISTextEntryBox = ISPanelJoypad:derive("ISTextEntryBox")
 
-
 ---@return any
 function ISTextEntryBox:clear() end
 
@@ -150,7 +149,6 @@ function ISTextEntryBox:setValid(valid) end
 
 ---@return any
 function ISTextEntryBox:unfocus() end
-
 
 ---@return ISTextEntryBox
 function ISTextEntryBox:new(title, x, y, width, height) end

@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class IsoCombinationWasherDryer: IsoObject
 --- @field public class any
-IsoCombinationWasherDryer = {};
+IsoCombinationWasherDryer = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:addToWorld() end
 
 --- @public
---- @return String
+--- @return string
 function IsoCombinationWasherDryer:getObjectName() end
 
 --- @public
@@ -42,51 +42,50 @@ function IsoCombinationWasherDryer:isRemoveItemAllowedFromContainer(arg0, arg1) 
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:loadChange(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:removeFromWorld() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @param arg2 ByteBuffer
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:saveChange(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:setActivated(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:setModeDryer() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:setModeWasher() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCombinationWasherDryer:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

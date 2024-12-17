@@ -20,7 +20,6 @@
 ---@field [any] any
 ISBuildRecipePanel = ISPanel:derive("ISBuildRecipePanel")
 
-
 ---@return any
 function ISBuildRecipePanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -56,7 +55,6 @@ function ISBuildRecipePanel:setOverlayVisible(_b) end
 
 ---@return any
 function ISBuildRecipePanel:update() end
-
 
 ---@return ISBuildRecipePanel
 function ISBuildRecipePanel:new(x, y, width, height, player, logic, recipeData, craftBench, isoObject) end

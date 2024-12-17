@@ -16,7 +16,6 @@
 ---@field [any] any
 ISDisinfect = ISBaseTimedAction:derive("ISDisinfect")
 
-
 ---@return any
 function ISDisinfect:complete() end
 
@@ -43,7 +42,6 @@ function ISDisinfect:update() end
 
 ---@return any
 function ISDisinfect:waitToStart() end
-
 
 ---@return ISDisinfect
 function ISDisinfect:new(character, otherPlayer, alcohol, bodyPart) end

@@ -3,7 +3,6 @@
 ---@class SpawnRegionMgr
 SpawnRegionMgr = {}
 
-
 ---@return any
 function SpawnRegionMgr.getSpawnRegions() end
 

@@ -33,10 +33,8 @@
 ---@field [any] any
 ISCollapsableWindowJoypad = ISPanelJoypad:derive("ISCollapsableWindowJoypad")
 
-
 ---@return any
 function ISCollapsableWindowJoypad:initialise() end
-
 
 ---@return ISCollapsableWindowJoypad
 function ISCollapsableWindowJoypad:new(x, y, width, height) end

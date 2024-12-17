@@ -17,10 +17,8 @@
 ---@field [any] any
 ISGameSounds = ISPanelJoypad:derive("ISGameSounds")
 
-
 ---@return any
 function ISGameSounds.onPlaySound(args) end
-
 
 ---@return any
 function ISGameSounds:addCombo(x, y, w, h, name, options, selected, target, onchange) end
@@ -57,7 +55,6 @@ function ISGameSounds:onStopSound() end
 
 ---@return any
 function ISGameSounds:onVolumeChanged(control, volume) end
-
 
 ---@return ISGameSounds
 function ISGameSounds:new(x, y, width, height) end

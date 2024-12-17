@@ -35,10 +35,8 @@
 ISRecipeMonitor = ISCollapsableWindow:derive("ISRecipeMonitor")
 ISRecipeMonitor.instance = nil
 
-
 ---@return any
 function ISRecipeMonitor.OnOpenPanel() end
-
 
 ---@return any
 function ISRecipeMonitor:close() end
@@ -75,7 +73,6 @@ function ISRecipeMonitor:render() end
 
 ---@return any
 function ISRecipeMonitor:update() end
-
 
 ---@return ISRecipeMonitor
 function ISRecipeMonitor:new(x, y, width, height, title) end

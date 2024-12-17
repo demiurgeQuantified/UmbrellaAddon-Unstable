@@ -8,10 +8,8 @@
 ---@field [any] any
 SFarmingSystem = SGlobalObjectSystem:derive("SFarmingSystem")
 
-
 ---@return any
 function SFarmingSystem.destroyPlant(square) end
-
 
 ---@return any
 function SFarmingSystem:changeHealth() end
@@ -99,7 +97,6 @@ function SFarmingSystem:removePlant(luaObject) end
 
 ---@return any
 function SFarmingSystem:removeTallGrass(sq) end
-
 
 ---@return SFarmingSystem
 function SFarmingSystem:new() end

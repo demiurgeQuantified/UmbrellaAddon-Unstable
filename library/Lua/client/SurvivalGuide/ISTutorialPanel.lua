@@ -19,7 +19,6 @@
 ---@field [any] any
 ISTutorialPanel = ISCollapsableWindowJoypad:derive("ISTutorialPanel")
 
-
 ---@return any
 function ISTutorialPanel:close() end
 
@@ -62,13 +61,11 @@ function ISTutorialPanel:setUseJoypad(useJoypad) end
 ---@return any
 function ISTutorialPanel:update() end
 
-
 ---@return ISTutorialPanel
 function ISTutorialPanel:new(x, y, width, height) end
 
 ---@class ISSurvivalGuideListBox : ISScrollingListBox
 ISSurvivalGuideListBox = ISScrollingListBox:derive("ISSurvivalGuideListBox")
-
 
 ---@return any
 function ISSurvivalGuideListBox:doDrawItem(y, item, alt) end
@@ -85,7 +82,6 @@ function ISSurvivalGuideListBox:onJoypadDown(button, joypadData) end
 ---@return any
 function ISSurvivalGuideListBox:onLoseJoypadFocus(joypadData) end
 
-
 ---@return ISSurvivalGuideListBox
 function ISSurvivalGuideListBox:new(x, y, width, height) end
 
@@ -96,7 +92,6 @@ function ISSurvivalGuideListBox:new(x, y, width, height) end
 ---@field [any] any
 ISSurvivalGuideRichText = ISRichTextPanel:derive("ISSurvivalGuideRichText")
 ISSurvivalGuideRichText.doRightJoystickScrolling = ISPanelJoypad.doRightJoystickScrolling
-
 
 ---@return any
 function ISSurvivalGuideRichText:onJoypadDirDown(joypadData) end
@@ -122,7 +117,6 @@ function ISSurvivalGuideRichText:prerender() end
 ---@return any
 function ISSurvivalGuideRichText:updateSmoothScrolling() end
 
-
 ---@return ISSurvivalGuideRichText
 function ISSurvivalGuideRichText:new(x, y, width, height) end
 
@@ -133,7 +127,6 @@ function ISSurvivalGuideRichText:new(x, y, width, height) end
 ---@field tickBox any
 ---@field [any] any
 ISSurvivalGuideRightPanel = ISPanelJoypad:derive("ISSurvivalGuideRightPanel")
-
 
 ---@return any
 function ISSurvivalGuideRightPanel:createChildren() end
@@ -161,7 +154,6 @@ function ISSurvivalGuideRightPanel:onTickBox(index, selected) end
 
 ---@return any
 function ISSurvivalGuideRightPanel:prerender() end
-
 
 ---@return ISSurvivalGuideRightPanel
 function ISSurvivalGuideRightPanel:new(x, y, width, height) end

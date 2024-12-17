@@ -5,7 +5,6 @@
 ---@field [any] any
 ISPaintMenu = {}
 
-
 ---@return any
 function ISPaintMenu.addSignOption(subMenuPaint, name, wall, painting, r, g, b) end
 

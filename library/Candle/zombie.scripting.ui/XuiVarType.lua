@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class XuiVarType: Enum
 --- @field public class any
@@ -17,7 +17,7 @@
 --- @field public Unit XuiVarType
 --- @field public Vector XuiVarType
 --- @field public VectorPosAlign XuiVarType
-XuiVarType = {};
+XuiVarType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -25,7 +25,7 @@ XuiVarType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiVarType
 function XuiVarType.valueOf(arg0) end
 
@@ -33,5 +33,3 @@ function XuiVarType.valueOf(arg0) end
 --- @static
 --- @return XuiVarType[]
 function XuiVarType.values() end
-
-

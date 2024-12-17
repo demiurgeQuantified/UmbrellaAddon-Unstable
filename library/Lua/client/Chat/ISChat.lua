@@ -55,45 +55,45 @@ ISChat.maxLine = 50
 ISChat.focused = false
 ISChat.allChatStreams = {}
 ISChat.allChatStreams[1] = {
-    name = "say",
-    command = "/say ",
-    shortCommand = "/s ",
-    tabID = 1,
+	name = "say",
+	command = "/say ",
+	shortCommand = "/s ",
+	tabID = 1,
 }
 ISChat.allChatStreams[2] = {
-    name = "yell",
-    command = "/yell ",
-    shortCommand = "/y ",
-    tabID = 1,
+	name = "yell",
+	command = "/yell ",
+	shortCommand = "/y ",
+	tabID = 1,
 }
 ISChat.allChatStreams[3] = {
-    name = "whisper",
-    command = "/whisper ",
-    shortCommand = "/w ",
-    tabID = 1,
+	name = "whisper",
+	command = "/whisper ",
+	shortCommand = "/w ",
+	tabID = 1,
 }
 ISChat.allChatStreams[4] = {
-    name = "faction",
-    command = "/faction ",
-    shortCommand = "/f ",
-    tabID = 1,
+	name = "faction",
+	command = "/faction ",
+	shortCommand = "/f ",
+	tabID = 1,
 }
 ISChat.allChatStreams[5] = {
-    name = "safehouse",
-    command = "/safehouse ",
-    shortCommand = "/sh ",
-    tabID = 1,
+	name = "safehouse",
+	command = "/safehouse ",
+	shortCommand = "/sh ",
+	tabID = 1,
 }
 ISChat.allChatStreams[6] = {
-    name = "general",
-    command = "/all ",
-    tabID = 1,
+	name = "general",
+	command = "/all ",
+	tabID = 1,
 }
 ISChat.allChatStreams[7] = {
-    name = "admin",
-    command = "/admin ",
-    shortCommand = "/a ",
-    tabID = 2,
+	name = "admin",
+	command = "/admin ",
+	shortCommand = "/a ",
+	tabID = 2,
 }
 ISChat.defaultTabStream = {}
 ISChat.defaultTabStream[1] = ISChat.allChatStreams[1]
@@ -113,7 +113,6 @@ ISChat.lockButtonName = "chat lock button"
 ISChat.gearButtonName = "chat gear button"
 ISChat.textPanelName = "chat text element"
 ISChat.windowName = "chat window"
-
 
 ---@return any
 function ISChat.addLineInChat(message, tabID) end
@@ -180,7 +179,6 @@ function ISChat.onToggleTimestampPrefix() end
 
 ---@return any
 function ISChat.unfocusEvent() end
-
 
 ---@return any
 function ISChat:calcAlpha(defaultMin, defaultMax, fraction) end
@@ -280,7 +278,6 @@ function ISChat:unfocus() end
 
 ---@return any
 function ISChat:updateChatPrefixSettings() end
-
 
 ---@return ISChat
 function ISChat:new(x, y, width, height) end

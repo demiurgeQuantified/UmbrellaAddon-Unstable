@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IsoTree: IsoObject
 --- @field public class any
---- @field public MAX_SIZE int
-IsoTree = {};
+--- @field public MAX_SIZE integer
+IsoTree = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,8 +11,8 @@ IsoTree = {};
 
 --- @public
 --- @static
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoTree.checkChopTreeIndicators(arg0) end
 
 --- @public
@@ -22,60 +22,59 @@ function IsoTree.getNew() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoTree.renderChopTreeIndicators() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return nil
 function IsoTree.setChopTreeCursorLocation(arg0, arg1, arg2, arg3) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoTree:Damage(arg0) end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function IsoTree:HitByVehicle(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 HandWeapon
---- @return void
+--- @return nil
 function IsoTree:WeaponHit(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 HandWeapon
---- @return void
+--- @return nil
 function IsoTree:WeaponHitEffects(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTree:checkChopTreeIndicator() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoTree:getHealth() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoTree:getMaxHealth() end
 
 --- @public
---- @return String
+--- @return string
 function IsoTree:getObjectName() end
 
 --- @public
@@ -83,63 +82,62 @@ function IsoTree:getObjectName() end
 function IsoTree:getRenderSquare() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoTree:getSize() end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @return float
+--- @return number
 function IsoTree:getSlowFactor(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTree:initTree() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 boolean
 --- @return boolean
 function IsoTree:isMaskClicked(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoTree:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoTree:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTree:reset() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoTree:save(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoTree:setHealth(arg0) end
 
 --- @public
 --- @param arg0 IsoSprite
---- @return void
+--- @return nil
 function IsoTree:setSprite(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -148,6 +146,6 @@ function IsoTree:setSprite(arg0) end
 --- @public
 --- @return IsoTree
 --- @overload fun(arg0: IsoCell): IsoTree
---- @overload fun(arg0: IsoGridSquare, arg1: String): IsoTree
+--- @overload fun(arg0: IsoGridSquare, arg1: string): IsoTree
 --- @overload fun(arg0: IsoGridSquare, arg1: IsoSprite): IsoTree
 function IsoTree.new() end

@@ -15,10 +15,8 @@
 ---@field [any] any
 StashDebug = ISPanel:derive("StashDebug")
 
-
 ---@return any
 function StashDebug.OnOpenPanel() end
-
 
 ---@return any
 function StashDebug:drawDatas(y, item, alt) end
@@ -34,7 +32,6 @@ function StashDebug:populateList() end
 
 ---@return any
 function StashDebug:prerender() end
-
 
 ---@return StashDebug
 function StashDebug:new(x, y, width, height) end

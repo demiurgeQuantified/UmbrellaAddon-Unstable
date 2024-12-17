@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class BodyLocations
 --- @field public class any
-BodyLocations = {};
+BodyLocations = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,15 +10,14 @@ BodyLocations = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function BodyLocations.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BodyLocationGroup
 function BodyLocations.getGroup(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

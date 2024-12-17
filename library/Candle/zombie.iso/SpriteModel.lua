@@ -1,29 +1,29 @@
---- @meta
+--- @meta _
 
 --- @class SpriteModel: BaseScriptObject
 --- @field public class any
-SpriteModel = {};
+SpriteModel = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function SpriteModel:Load(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function SpriteModel:getAnimationName() end
 
 --- @public
---- @return float
+--- @return number
 function SpriteModel:getAnimationTime() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteModel:getModelScriptName() end
 
 --- @public
@@ -31,15 +31,15 @@ function SpriteModel:getModelScriptName() end
 function SpriteModel:getRotate() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteModel:getRuntimeString() end
 
 --- @public
---- @return float
+--- @return number
 function SpriteModel:getScale() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteModel:getTextureName() end
 
 --- @public
@@ -47,11 +47,11 @@ function SpriteModel:getTextureName() end
 function SpriteModel:getTranslate() end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 String
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 string
+--- @return nil
 function SpriteModel:parseRuntimeString(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -60,35 +60,34 @@ function SpriteModel:parseRuntimeString(arg0, arg1, arg2, arg3) end
 function SpriteModel:set(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SpriteModel:setAnimationName(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function SpriteModel:setAnimationTime(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SpriteModel:setModelScriptName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SpriteModel:setRuntimeString(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function SpriteModel:setScale(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SpriteModel:setTextureName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

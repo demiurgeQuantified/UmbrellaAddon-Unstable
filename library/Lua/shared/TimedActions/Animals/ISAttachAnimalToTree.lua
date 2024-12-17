@@ -9,7 +9,6 @@
 ---@field [any] any
 ISAttachAnimalToTree = ISBaseTimedAction:derive("ISAttachAnimalToTree")
 
-
 ---@return any
 function ISAttachAnimalToTree:complete() end
 
@@ -33,7 +32,6 @@ function ISAttachAnimalToTree:update() end
 
 ---@return any
 function ISAttachAnimalToTree:waitToStart() end
-
 
 ---@return ISAttachAnimalToTree
 function ISAttachAnimalToTree:new(character, animal, tree, remove) end

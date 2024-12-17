@@ -14,7 +14,6 @@
 ---@field [any] any
 ISRemoveGlass = ISBaseTimedAction:derive("ISRemoveGlass")
 
-
 ---@return any
 function ISRemoveGlass:complete() end
 
@@ -41,7 +40,6 @@ function ISRemoveGlass:update() end
 
 ---@return any
 function ISRemoveGlass:waitToStart() end
-
 
 ---@return ISRemoveGlass
 function ISRemoveGlass:new(character, otherPlayer, bodyPart, hands) end

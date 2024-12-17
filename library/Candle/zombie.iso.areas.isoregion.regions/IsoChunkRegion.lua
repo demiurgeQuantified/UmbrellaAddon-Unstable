@@ -1,34 +1,34 @@
---- @meta
+--- @meta _
 
 --- @class IsoChunkRegion
 --- @field public class any
 --- @implement IChunkRegion
-IsoChunkRegion = {};
+IsoChunkRegion = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoChunkRegion:addChunkBorderSquaresCnt() end
 
 --- @public
 --- @param arg0 IsoChunkRegion
---- @return void
+--- @return nil
 function IsoChunkRegion:addConnectedNeighbor(arg0) end
 
 --- @public
 --- @param arg0 IsoChunkRegion
---- @return void
+--- @return nil
 function IsoChunkRegion:addNeighbor(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoChunkRegion:addRoof() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoChunkRegion:addSquareCount() end
 
 --- @public
@@ -37,12 +37,12 @@ function IsoChunkRegion:addSquareCount() end
 function IsoChunkRegion:containsConnectedNeighbor(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function IsoChunkRegion:containsConnectedNeighborID(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoChunkRegion:getChunkBorderSquaresCnt() end
 
 --- @public
@@ -62,7 +62,7 @@ function IsoChunkRegion:getConnectedNeighbors() end
 function IsoChunkRegion:getDebugConnectedNeighborCopy() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoChunkRegion:getID() end
 
 --- @public
@@ -74,38 +74,36 @@ function IsoChunkRegion:getIsEnclosed() end
 function IsoChunkRegion:getIsoWorldRegion() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoChunkRegion:getNeighborCount() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoChunkRegion:getRoofCnt() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoChunkRegion:getSquareSize() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoChunkRegion:getzLayer() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoChunkRegion:resetRoofCnt() end
 
 --- @public
---- @param arg0 byte
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoChunkRegion:setEnclosed(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoWorldRegion
---- @return void
+--- @return nil
 function IsoChunkRegion:setIsoWorldRegion(arg0) end
 
 --- @public
 --- @return IsoWorldRegion
 function IsoChunkRegion:unlinkFromIsoWorldRegion() end
-
-

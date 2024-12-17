@@ -1,22 +1,21 @@
---- @meta
+--- @meta _
 
 --- @class XRow
 --- @field public class any
-XRow = {};
+XRow = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return TileScript
 function XRow:getTile(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function XRow:getWidth() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

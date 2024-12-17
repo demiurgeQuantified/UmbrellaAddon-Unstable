@@ -40,7 +40,6 @@ ISVehicleMechanics.cheat = getDebug()
 ISVehicleMechanics.ghs = "<GHC>"
 ISVehicleMechanics.bhs = "<BHC>"
 
-
 ---@return any
 function ISVehicleMechanics.onCheatGetKey(playerObj, vehicle) end
 
@@ -94,7 +93,6 @@ function ISVehicleMechanics.onRepairLightbar(playerObj, part) end
 
 ---@return any
 function ISVehicleMechanics.onTakeEngineParts(playerObj, part) end
-
 
 ---@return any
 function ISVehicleMechanics:checkEngineFull() end
@@ -209,7 +207,6 @@ function ISVehicleMechanics:update() end
 
 ---@return any
 function ISVehicleMechanics:updateLayout() end
-
 
 ---@return ISVehicleMechanics
 function ISVehicleMechanics:new(x, y, character, vehicle) end

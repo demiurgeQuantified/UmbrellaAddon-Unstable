@@ -22,7 +22,6 @@
 ---@field [any] any
 TileGeometryEditor = ISPanel:derive("TileGeometryEditor")
 
-
 ---@return any
 function TileGeometryEditor:configGizmo() end
 
@@ -89,7 +88,6 @@ function TileGeometryEditor:updateGeometryFile() end
 ---@return any
 function TileGeometryEditor:updateGeometryFile2(selectedTile) end
 
-
 ---@return TileGeometryEditor
 function TileGeometryEditor:new(x, y, width, height) end
 
@@ -97,7 +95,6 @@ function TileGeometryEditor:new(x, y, width, height) end
 ---@field editor any
 ---@field [any] any
 TileGeometryEditor_SwitchView = ISUI3DScene:derive("TileGeometryEditor_SwitchView")
-
 
 ---@return any
 function TileGeometryEditor_SwitchView:onMouseDown(x, y) end
@@ -114,7 +111,6 @@ function TileGeometryEditor_SwitchView:onMouseWheel(del) end
 ---@return any
 function TileGeometryEditor_SwitchView:prerender() end
 
-
 ---@return TileGeometryEditor_SwitchView
 function TileGeometryEditor_SwitchView:new(editor, x, y, width, height) end
 
@@ -122,7 +118,6 @@ function TileGeometryEditor_SwitchView:new(editor, x, y, width, height) end
 ---@field tickBox any
 ---@field [any] any
 TileGeometryEditor_OptionsPanel = ISPanel:derive("TileGeometryEditor_OptionsPanel")
-
 
 ---@return any
 function TileGeometryEditor_OptionsPanel:createChildren() end
@@ -132,7 +127,6 @@ function TileGeometryEditor_OptionsPanel:onMouseDownOutside(x, y) end
 
 ---@return any
 function TileGeometryEditor_OptionsPanel:onTickBox(index, selected) end
-
 
 ---@return TileGeometryEditor_OptionsPanel
 function TileGeometryEditor_OptionsPanel:new(x, y, width, height) end
@@ -152,7 +146,6 @@ function TileGeometryEditor_OptionsPanel:new(x, y, width, height) end
 ---@field zeroVector any
 ---@field [any] any
 TileGeometryEditor_Scene = ISUI3DScene:derive("TileGeometryEditor_Scene")
-
 
 ---@return any
 function TileGeometryEditor_Scene:getSelectedTile() end
@@ -245,7 +238,25 @@ function TileGeometryEditor_Scene:renderPixelGrid2(sx, sy, sx2, sy2, pixelSize) 
 function TileGeometryEditor_Scene:renderSelectedTile(tileName, texture) end
 
 ---@return any
-function TileGeometryEditor_Scene:renderSolidBox3D(tx, ty, tz, rx, ry, rz, minX, minY, minZ, maxX, maxY, maxZ, r, g, b, a) end
+function TileGeometryEditor_Scene:renderSolidBox3D(
+	tx,
+	ty,
+	tz,
+	rx,
+	ry,
+	rz,
+	minX,
+	minY,
+	minZ,
+	maxX,
+	maxY,
+	maxZ,
+	r,
+	g,
+	b,
+	a
+)
+end
 
 ---@return any
 function TileGeometryEditor_Scene:renderSolidSquareBox() end
@@ -286,7 +297,6 @@ function TileGeometryEditor_Scene:snapToTilePixel(x, y) end
 ---@return any
 function TileGeometryEditor_Scene:uiToPixel(x, y) end
 
-
 ---@return TileGeometryEditor_Scene
 function TileGeometryEditor_Scene:new(x, y, width, height, editor) end
 
@@ -297,7 +307,6 @@ function TileGeometryEditor_Scene:new(x, y, width, height, editor) end
 ---@field [any] any
 TileGeometryEditor_TilePicker = ISPanel:derive("TileGeometryEditor_TilePicker")
 
-
 ---@return any
 function TileGeometryEditor_TilePicker:createChildren() end
 
@@ -306,7 +315,6 @@ function TileGeometryEditor_TilePicker:onMouseWheel(del) end
 
 ---@return any
 function TileGeometryEditor_TilePicker:onSelectTileset() end
-
 
 ---@return TileGeometryEditor_TilePicker
 function TileGeometryEditor_TilePicker:new(x, y, width, height, editor) end
@@ -318,7 +326,6 @@ function TileGeometryEditor_TilePicker:new(x, y, width, height, editor) end
 ---@field [any] any
 TileGeometryEditor_TilePicker2 = ISPanel:derive("TileGeometryEditor_TilePicker2")
 
-
 ---@return any
 function TileGeometryEditor_TilePicker2:createChildren() end
 
@@ -327,7 +334,6 @@ function TileGeometryEditor_TilePicker2:onMouseWheel(del) end
 
 ---@return any
 function TileGeometryEditor_TilePicker2:onSelectTileset() end
-
 
 ---@return TileGeometryEditor_TilePicker2
 function TileGeometryEditor_TilePicker2:new(x, y, width, height, editor) end

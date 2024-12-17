@@ -8,7 +8,6 @@
 ---@field [any] any
 ISPetAnimal = ISBaseTimedAction:derive("ISPetAnimal")
 
-
 ---@return any
 function ISPetAnimal:animEvent(event, parameter) end
 
@@ -41,7 +40,6 @@ function ISPetAnimal:update() end
 
 ---@return any
 function ISPetAnimal:waitToStart() end
-
 
 ---@return ISPetAnimal
 function ISPetAnimal:new(character, animal) end

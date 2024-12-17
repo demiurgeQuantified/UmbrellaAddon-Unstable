@@ -26,7 +26,6 @@
 ISHealthPanel = ISPanelJoypad:derive("ISHealthPanel")
 ISHealthPanel.cheat = false or getDebug()
 
-
 ---@return any
 function ISHealthPanel.DidPatientMove(doctor, patient, patientX, patientY) end
 
@@ -53,7 +52,6 @@ function ISHealthPanel.onCheatOtherPlayer(bodyPart, action, player, otherPlayer)
 
 ---@return any
 function ISHealthPanel.setBodyPartActionForPlayer(playerObj, bodyPart, action, jobType, args) end
-
 
 ---@return any
 function ISHealthPanel:checkContainerItems(container, childContainers, handlers) end
@@ -124,7 +122,6 @@ function ISHealthPanel:update() end
 ---@return any
 function ISHealthPanel:updateBodyPartList() end
 
-
 ---@return ISHealthPanel
 function ISHealthPanel:new(player, x, y, width, height) end
 
@@ -134,13 +131,11 @@ function ISHealthPanel:new(player, x, y, width, height) end
 ---@field [any] any
 ISNewHealthPanel = ISUIElement:derive("ISNewHealthPanel")
 
-
 ---@return any
 function ISNewHealthPanel:instantiate() end
 
 ---@return any
 function ISNewHealthPanel:onClick(button) end
-
 
 ---@return ISNewHealthPanel
 function ISNewHealthPanel:new(x, y, character) end
@@ -152,7 +147,6 @@ function ISNewHealthPanel:new(x, y, character) end
 ---@field [any] any
 ISHealthBodyPartPanel = ISBodyPartPanel:derive("ISHealthBodyPartPanel")
 
-
 ---@return any
 function ISHealthBodyPartPanel:cbSetSelected(bp) end
 
@@ -162,7 +156,6 @@ function ISHealthBodyPartPanel:onMouseUp(x, y) end
 ---@return any
 function ISHealthBodyPartPanel:prerender() end
 
-
 ---@return ISHealthBodyPartPanel
 function ISHealthBodyPartPanel:new(character, x, y) end
 
@@ -170,7 +163,6 @@ function ISHealthBodyPartPanel:new(character, x, y) end
 ---@field selected any
 ---@field [any] any
 ISHealthBodyPartListBox = ISScrollingListBox:derive("ISHealthBodyPartListBox")
-
 
 ---@return any
 function ISHealthBodyPartListBox:doDrawItem(y, item, alt) end
@@ -180,7 +172,6 @@ function ISHealthBodyPartListBox:onMouseUp(x, y) end
 
 ---@return any
 function ISHealthBodyPartListBox:onRightMouseUp(x, y) end
-
 
 ---@return ISHealthBodyPartListBox
 function ISHealthBodyPartListBox:new(x, y, width, height) end
@@ -193,7 +184,6 @@ function ISHealthBodyPartListBox:new(x, y, width, height) end
 ---@field stopOnWalk any
 ---@field [any] any
 HealthPanelAction = ISBaseTimedAction:derive("HealthPanelAction")
-
 
 ---@return any
 function HealthPanelAction:isValid() end
@@ -209,7 +199,6 @@ function HealthPanelAction:stop() end
 
 ---@return any
 function HealthPanelAction:update() end
-
 
 ---@return HealthPanelAction
 function HealthPanelAction:new(character, handler, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FluidConsume: SealedFluidProperties
 --- @field public class any
-FluidConsume = {};
+FluidConsume = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,29 +16,28 @@ function FluidConsume.Alloc() end
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @return FluidConsume
---- @overload fun(arg0: FluidConsume, arg1: ByteBuffer, arg2: int): FluidConsume
+--- @overload fun(arg0: FluidConsume, arg1: ByteBuffer, arg2: integer): FluidConsume
 function FluidConsume.Load(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 FluidConsume
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function FluidConsume.Save(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function FluidConsume:clear() end
 
 --- @public
---- @return float
+--- @return number
 function FluidConsume:getAmount() end
 
 --- @public
@@ -46,7 +45,5 @@ function FluidConsume:getAmount() end
 function FluidConsume:getPoisonEffect() end
 
 --- @public
---- @return void
+--- @return nil
 function FluidConsume:release() end
-
-

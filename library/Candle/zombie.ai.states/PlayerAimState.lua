@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class PlayerAimState: State
 --- @field public class any
-PlayerAimState = {};
+PlayerAimState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ PlayerAimState = {};
 --- @return PlayerAimState
 function PlayerAimState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,24 +20,23 @@ function PlayerAimState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function PlayerAimState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerAimState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerAimState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerAimState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -10,7 +10,6 @@
 ---@field [any] any
 ISFillGrave = ISBaseTimedAction:derive("ISFillGrave")
 
-
 ---@return any
 function ISFillGrave:changeSprite(square) end
 
@@ -37,7 +36,6 @@ function ISFillGrave:update() end
 
 ---@return any
 function ISFillGrave:waitToStart() end
-
 
 ---@return ISFillGrave
 function ISFillGrave:new(character, graves, shovel) end

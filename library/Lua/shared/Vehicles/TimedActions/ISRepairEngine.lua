@@ -9,7 +9,6 @@
 ---@field [any] any
 ISRepairEngine = ISBaseTimedAction:derive("ISRepairEngine")
 
-
 ---@return any
 function ISRepairEngine:complete() end
 
@@ -33,7 +32,6 @@ function ISRepairEngine:update() end
 
 ---@return any
 function ISRepairEngine:waitToStart() end
-
 
 ---@return ISRepairEngine
 function ISRepairEngine:new(character, part, item, maxTime) end

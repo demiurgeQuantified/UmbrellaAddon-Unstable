@@ -6,7 +6,6 @@
 ---@field [any] any
 ISVehicleMenu = {}
 
-
 ---@return any
 function ISVehicleMenu.addSetScriptMenu(context, playerObj, vehicle) end
 

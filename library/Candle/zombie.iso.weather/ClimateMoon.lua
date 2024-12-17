@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ClimateMoon
 --- @field public class any
-ClimateMoon = {};
+ClimateMoon = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,34 +13,32 @@ ClimateMoon = {};
 --- @return ClimateMoon
 function ClimateMoon.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function ClimateMoon:Reset() end
 
 --- @public
---- @return int
+--- @return integer
 function ClimateMoon:getCurrentMoonPhase() end
 
 --- @public
---- @return float
+--- @return number
 function ClimateMoon:getMoonFloat() end
 
 --- @public
---- @return String
+--- @return string
 function ClimateMoon:getPhaseName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function ClimateMoon:updatePhase(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

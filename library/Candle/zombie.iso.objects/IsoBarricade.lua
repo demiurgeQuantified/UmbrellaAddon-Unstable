@@ -1,14 +1,14 @@
---- @meta
+--- @meta _
 
 --- @class IsoBarricade: IsoObject
 --- @field public class any
 --- @implement Thumpable
---- @field public MAX_PLANKS int
---- @field public METAL_BAR_HEALTH int
---- @field public METAL_HEALTH int
---- @field public METAL_HEALTH_DAMAGED int
---- @field public PLANK_HEALTH int
-IsoBarricade = {};
+--- @field public MAX_PLANKS integer
+--- @field public METAL_BAR_HEALTH integer
+--- @field public METAL_HEALTH integer
+--- @field public METAL_HEALTH_DAMAGED integer
+--- @field public PLANK_HEALTH integer
+IsoBarricade = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -43,19 +43,18 @@ function IsoBarricade.GetBarricadeOnSquare(arg0, arg1) end
 --- @return IsoBarricade
 function IsoBarricade.GetBarricadeOppositeCharacter(arg0, arg1) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoBarricade:Damage(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoBarricade:DamageBarricade(arg0) end
 
 --- @public
@@ -73,33 +72,33 @@ function IsoBarricade:TestVision(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @return void
---- @overload fun(self: IsoBarricade, arg0: IsoMovingObject): void
+--- @return nil
+--- @overload fun(self: IsoBarricade, arg0: IsoMovingObject): nil
 function IsoBarricade:Thump(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 HandWeapon
---- @return void
---- @overload fun(self: IsoBarricade, arg0: IsoGameCharacter, arg1: HandWeapon): void
+--- @return nil
+--- @overload fun(self: IsoBarricade, arg0: IsoGameCharacter, arg1: HandWeapon): nil
 function IsoBarricade:WeaponHit(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function IsoBarricade:addMetal(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function IsoBarricade:addMetalBar(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function IsoBarricade:addPlank(arg0, arg1) end
 
 --- @public
@@ -116,24 +115,24 @@ function IsoBarricade:getBarricadedObject() end
 function IsoBarricade:getFacingPosition(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoBarricade:getHealth() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoBarricade:getMaxHealth() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoBarricade:getNumPlanks() end
 
 --- @public
---- @return String
+--- @return string
 function IsoBarricade:getObjectName() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoBarricade): float
+--- @return number
+--- @overload fun(self: IsoBarricade): number
 function IsoBarricade:getThumpCondition() end
 
 --- @public
@@ -161,15 +160,15 @@ function IsoBarricade:isMetalBar() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoBarricade:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function IsoBarricade:loadChange(arg0, arg1) end
 
 --- @public
@@ -188,39 +187,38 @@ function IsoBarricade:removeMetalBar(arg0) end
 function IsoBarricade:removePlank(arg0) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoBarricade:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoBarricade:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @param arg2 ByteBuffer
---- @return void
+--- @return nil
 function IsoBarricade:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoBarricade:setHealth(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoBarricade:setMaxHealth(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

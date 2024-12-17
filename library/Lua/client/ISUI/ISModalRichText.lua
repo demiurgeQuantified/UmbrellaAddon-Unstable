@@ -27,7 +27,6 @@
 ---@field [any] any
 ISModalRichText = ISPanelJoypad:derive("ISModalRichText")
 
-
 ---@return any
 function ISModalRichText:destroy() end
 
@@ -60,7 +59,6 @@ function ISModalRichText:update() end
 
 ---@return any
 function ISModalRichText:updateButtons() end
-
 
 ---@return ISModalRichText
 function ISModalRichText:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

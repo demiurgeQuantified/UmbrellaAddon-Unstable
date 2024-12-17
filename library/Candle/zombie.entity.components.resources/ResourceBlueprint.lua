@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class ResourceBlueprint
 --- @field public class any
---- @field public serialElementSeparator String
---- @field public serialSubSeparator String
-ResourceBlueprint = {};
+--- @field public serialElementSeparator string
+--- @field public serialSubSeparator string
+ResourceBlueprint = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,32 +12,32 @@ ResourceBlueprint = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ResourceBlueprint
---- @overload fun(arg0: ResourceBlueprint, arg1: String): ResourceBlueprint
---- @overload fun(arg0: ResourceBlueprint, arg1: String, arg2: boolean): ResourceBlueprint
+--- @overload fun(arg0: ResourceBlueprint, arg1: string): ResourceBlueprint
+--- @overload fun(arg0: ResourceBlueprint, arg1: string, arg2: boolean): ResourceBlueprint
 function ResourceBlueprint.Deserialize(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ResourceBlueprint
 function ResourceBlueprint.DeserializeFromScript(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 ResourceBlueprint
---- @return String
---- @overload fun(arg0: String, arg1: ResourceType, arg2: ResourceIO, arg3: float, arg4: String, arg5: ResourceChannel, arg6: EnumBitStore): String
+--- @return string
+--- @overload fun(arg0: string, arg1: ResourceType, arg2: ResourceIO, arg3: number, arg4: string, arg5: ResourceChannel, arg6: EnumBitStore): string
 function ResourceBlueprint.Serialize(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ResourceType
 --- @param arg2 ResourceIO
---- @param arg3 float
---- @param arg4 String
+--- @param arg3 number
+--- @param arg4 string
 --- @param arg5 ResourceChannel
 --- @param arg6 EnumBitStore
 --- @return ResourceBlueprint
@@ -46,16 +46,15 @@ function ResourceBlueprint.alloc(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @public
 --- @static
 --- @param arg0 ResourceBlueprint
---- @return void
+--- @return nil
 function ResourceBlueprint.release(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function ResourceBlueprint:getCapacity() end
 
 --- @public
@@ -63,11 +62,11 @@ function ResourceBlueprint:getCapacity() end
 function ResourceBlueprint:getChannel() end
 
 --- @public
---- @return String
+--- @return string
 function ResourceBlueprint:getFilter() end
 
 --- @public
---- @return int
+--- @return integer
 function ResourceBlueprint:getFlagBits() end
 
 --- @public
@@ -75,7 +74,7 @@ function ResourceBlueprint:getFlagBits() end
 function ResourceBlueprint:getIO() end
 
 --- @public
---- @return String
+--- @return string
 function ResourceBlueprint:getId() end
 
 --- @public
@@ -86,5 +85,3 @@ function ResourceBlueprint:getType() end
 --- @param arg0 ResourceFlag
 --- @return boolean
 function ResourceBlueprint:hasFlag(arg0) end
-
-

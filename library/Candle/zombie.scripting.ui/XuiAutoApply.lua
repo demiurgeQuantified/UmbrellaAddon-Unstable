@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class XuiAutoApply: Enum
 --- @field public class any
@@ -7,7 +7,7 @@
 --- @field public IfSet XuiAutoApply
 --- @field public IfSetAndKeyExists XuiAutoApply
 --- @field public No XuiAutoApply
-XuiAutoApply = {};
+XuiAutoApply = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,7 +15,7 @@ XuiAutoApply = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiAutoApply
 function XuiAutoApply.valueOf(arg0) end
 
@@ -23,5 +23,3 @@ function XuiAutoApply.valueOf(arg0) end
 --- @static
 --- @return XuiAutoApply[]
 function XuiAutoApply.values() end
-
-

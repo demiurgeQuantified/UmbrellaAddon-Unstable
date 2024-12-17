@@ -6,7 +6,6 @@
 ---@field [any] any
 ISPutAnimalInHutch = ISBaseTimedAction:derive("ISPutAnimalInHutch")
 
-
 ---@return any
 function ISPutAnimalInHutch:complete() end
 
@@ -30,7 +29,6 @@ function ISPutAnimalInHutch:update() end
 
 ---@return any
 function ISPutAnimalInHutch:waitToStart() end
-
 
 ---@return ISPutAnimalInHutch
 function ISPutAnimalInHutch:new(character, hutch) end

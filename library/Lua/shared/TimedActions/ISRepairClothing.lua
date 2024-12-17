@@ -13,7 +13,6 @@
 ---@field [any] any
 ISRepairClothing = ISBaseTimedAction:derive("ISRepairClothing")
 
-
 ---@return any
 function ISRepairClothing:complete() end
 
@@ -34,7 +33,6 @@ function ISRepairClothing:stop() end
 
 ---@return any
 function ISRepairClothing:update() end
-
 
 ---@return ISRepairClothing
 function ISRepairClothing:new(character, clothing, part, fabric, thread, needle) end

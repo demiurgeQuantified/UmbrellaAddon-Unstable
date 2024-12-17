@@ -16,7 +16,6 @@
 ---@field [any] any
 WorldMapEditorListBox = ISPanel:derive("WorldMapEditorListBox")
 
-
 ---@return any
 function WorldMapEditorListBox:addItem(text, data) end
 
@@ -64,7 +63,6 @@ function WorldMapEditorListBox:setSelectedIndex(index) end
 
 ---@return any
 function WorldMapEditorListBox:size() end
-
 
 ---@return WorldMapEditorListBox
 function WorldMapEditorListBox:new(x, y, width, height, callback, target, arg1, arg2, arg3, arg4) end

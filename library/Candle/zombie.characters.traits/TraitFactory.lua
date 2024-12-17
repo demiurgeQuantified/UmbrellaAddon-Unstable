@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class TraitFactory
 --- @field public class any
 --- @field public TraitMap LinkedHashMap
-TraitFactory = {};
+TraitFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,23 +11,23 @@ TraitFactory = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function TraitFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 string
 --- @param arg4 boolean
 --- @return Trait
---- @overload fun(arg0: String, arg1: String, arg2: int, arg3: String, arg4: boolean, arg5: boolean): Trait
+--- @overload fun(arg0: string, arg1: string, arg2: integer, arg3: string, arg4: boolean, arg5: boolean): Trait
 function TraitFactory.addTrait(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Trait
 function TraitFactory.getTrait(arg0) end
 
@@ -38,21 +38,20 @@ function TraitFactory.getTraits() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function TraitFactory.init() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function TraitFactory.setMutualExclusive(arg0, arg1) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function TraitFactory.sortList() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

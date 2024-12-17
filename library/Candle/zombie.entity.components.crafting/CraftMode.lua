@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class CraftMode: Enum
 --- @field public class any
 --- @field public Automation CraftMode
 --- @field public Handcraft CraftMode
-CraftMode = {};
+CraftMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ CraftMode = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return CraftMode
 function CraftMode.valueOf(arg0) end
 
@@ -20,5 +20,3 @@ function CraftMode.valueOf(arg0) end
 --- @static
 --- @return CraftMode[]
 function CraftMode.values() end
-
-

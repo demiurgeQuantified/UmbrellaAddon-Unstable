@@ -14,7 +14,6 @@
 ---@field [any] any
 ISWallpaperAction = ISBaseTimedAction:derive("ISWallpaperAction")
 
-
 ---@return any
 function ISWallpaperAction:complete() end
 
@@ -41,7 +40,6 @@ function ISWallpaperAction:update() end
 
 ---@return any
 function ISWallpaperAction:waitToStart() end
-
 
 ---@return ISWallpaperAction
 function ISWallpaperAction:new(character, thumpable, wallpaper, papering) end

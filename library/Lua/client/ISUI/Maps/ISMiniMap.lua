@@ -22,7 +22,6 @@
 ---@field [any] any
 ISMiniMapOuter = ISPanelJoypad:derive("ISMiniMapOuter")
 
-
 ---@return any
 function ISMiniMapOuter:createChildren() end
 
@@ -77,7 +76,6 @@ function ISMiniMapOuter:setAdornmentsVisible(visible) end
 ---@return any
 function ISMiniMapOuter:setPosition() end
 
-
 ---@return ISMiniMapOuter
 function ISMiniMapOuter:new(x, y, width, height, playerNum) end
 
@@ -97,7 +95,6 @@ function ISMiniMapOuter:new(x, y, width, height, playerNum) end
 ---@field rightMouseDown any
 ---@field [any] any
 ISMiniMapInner = ISUIElement:derive("ISMiniMapInner")
-
 
 ---@return any
 function ISMiniMapInner:instantiate() end
@@ -135,7 +132,6 @@ function ISMiniMapInner:onTeleport(worldX, worldY) end
 ---@return any
 function ISMiniMapInner:prerenderHack() end
 
-
 ---@return ISMiniMapInner
 function ISMiniMapInner:new(x, y, width, height, playerNum) end
 
@@ -148,10 +144,8 @@ function ISMiniMapInner:new(x, y, width, height, playerNum) end
 ---@field [any] any
 ISMiniMapTitleBar = ISPanel:derive("ISMiniMapTitleBar")
 
-
 ---@return any
 function ISMiniMapTitleBar.TitleBarHeight() end
-
 
 ---@return any
 function ISMiniMapTitleBar:onMouseDown(x, y) end
@@ -174,13 +168,11 @@ function ISMiniMapTitleBar:prerender() end
 ---@return any
 function ISMiniMapTitleBar:titleBarHeight() end
 
-
 ---@return ISMiniMapTitleBar
 function ISMiniMapTitleBar:new(miniMap) end
 
 ---@class ISMiniMap
 ISMiniMap = {}
-
 
 ---@return any
 function ISMiniMap.FocusMiniMap(playerNum) end

@@ -7,7 +7,6 @@
 ---@field [any] any
 ISLockDoor = ISBaseTimedAction:derive("ISLockDoor")
 
-
 ---@return any
 function ISLockDoor:complete() end
 
@@ -31,7 +30,6 @@ function ISLockDoor:stop() end
 
 ---@return any
 function ISLockDoor:update() end
-
 
 ---@return ISLockDoor
 function ISLockDoor:new(character, door, lock) end

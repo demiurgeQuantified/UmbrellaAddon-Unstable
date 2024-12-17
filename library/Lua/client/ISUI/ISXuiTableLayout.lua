@@ -13,8 +13,6 @@
 ---@field [any] any
 ISXuiTableLayoutColumn = ISBaseObject:derive("ISXuiTableLayoutColumn")
 
-
-
 ---@return ISXuiTableLayoutColumn
 function ISXuiTableLayoutColumn:new(_columnIndex, _width, _isPercent) end
 
@@ -30,8 +28,6 @@ function ISXuiTableLayoutColumn:new(_columnIndex, _width, _isPercent) end
 ---@field y any
 ---@field [any] any
 ISXuiTableLayoutRow = ISBaseObject:derive("ISXuiTableLayoutRow")
-
-
 
 ---@return ISXuiTableLayoutRow
 function ISXuiTableLayoutRow:new(_rowIndex, _height, _isPercent) end
@@ -51,7 +47,6 @@ function ISXuiTableLayoutRow:new(_rowIndex, _height, _isPercent) end
 ---@field y any
 ---@field [any] any
 ISXuiTableLayoutCell = ISBaseObject:derive("ISXuiTableLayoutCell")
-
 
 ---@return any
 function ISXuiTableLayoutCell:addChild(_child) end
@@ -77,7 +72,6 @@ function ISXuiTableLayoutCell:getY() end
 ---@return any
 function ISXuiTableLayoutCell:setRectangle(_x, _y, _w, _h) end
 
-
 ---@return ISXuiTableLayoutCell
 function ISXuiTableLayoutCell:new(_columnIndex, _rowIndex, _parent) end
 
@@ -102,7 +96,6 @@ function ISXuiTableLayoutCell:new(_columnIndex, _rowIndex, _parent) end
 ---@field y any
 ---@field [any] any
 ISXuiTableLayout = ISUIElement:derive("ISXuiTableLayout")
-
 
 ---@return any
 function ISXuiTableLayout:addElement(_column, _row, _element) end
@@ -151,7 +144,6 @@ function ISXuiTableLayout:row(_index) end
 
 ---@return any
 function ISXuiTableLayout:rowCount() end
-
 
 ---@return ISXuiTableLayout
 function ISXuiTableLayout:new(x, y, width, height, columns, rows) end

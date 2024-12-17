@@ -7,7 +7,6 @@
 ---@field [any] any
 CreateChumFromGroundSandAction = ISBaseTimedAction:derive("CreateChumFromGroundSandAction")
 
-
 ---@return any
 function CreateChumFromGroundSandAction:complete() end
 
@@ -28,7 +27,6 @@ function CreateChumFromGroundSandAction:stop() end
 
 ---@return any
 function CreateChumFromGroundSandAction:update() end
-
 
 ---@return CreateChumFromGroundSandAction
 function CreateChumFromGroundSandAction:new(character, square) end

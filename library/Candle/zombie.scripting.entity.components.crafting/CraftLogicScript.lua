@@ -1,33 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class CraftLogicScript: ComponentScript
 --- @field public class any
-CraftLogicScript = {};
+CraftLogicScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftLogicScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftLogicScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftLogicScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function CraftLogicScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftLogicScript:PreReload() end
 
 --- @public
@@ -35,15 +35,15 @@ function CraftLogicScript:PreReload() end
 function CraftLogicScript:getCraftProcessorScripts() end
 
 --- @public
---- @return String
+--- @return string
 function CraftLogicScript:getInputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function CraftLogicScript:getOutputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function CraftLogicScript:getRecipeTagQuery() end
 
 --- @public
@@ -55,7 +55,5 @@ function CraftLogicScript:getStartMode() end
 function CraftLogicScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftLogicScript:reset() end
-
-

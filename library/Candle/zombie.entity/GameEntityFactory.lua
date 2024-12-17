@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class GameEntityFactory
 --- @field public class any
-GameEntityFactory = {};
+GameEntityFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,16 +12,16 @@ GameEntityFactory = {};
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 Component
---- @return void
---- @overload fun(arg0: GameEntity, arg1: boolean, arg2: Component): void
+--- @return nil
+--- @overload fun(arg0: GameEntity, arg1: boolean, arg2: Component): nil
 function GameEntityFactory.AddComponent(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 Component[]
---- @return void
---- @overload fun(arg0: GameEntity, arg1: boolean, arg2: Component[]): void
+--- @return nil
+--- @overload fun(arg0: GameEntity, arg1: boolean, arg2: Component[]): nil
 function GameEntityFactory.AddComponents(arg0, arg1) end
 
 --- @public
@@ -29,7 +29,7 @@ function GameEntityFactory.AddComponents(arg0, arg1) end
 --- @param arg0 GameEntity
 --- @param arg1 GameEntityScript
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function GameEntityFactory.CreateEntityDebugReload(arg0, arg1, arg2) end
 
 --- @public
@@ -37,13 +37,13 @@ function GameEntityFactory.CreateEntityDebugReload(arg0, arg1, arg2) end
 --- @param arg0 InventoryItem
 --- @param arg1 Item
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function GameEntityFactory.CreateInventoryItemEntity(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function GameEntityFactory.CreateIsoEntityFromCellLoading(arg0) end
 
 --- @public
@@ -51,44 +51,43 @@ function GameEntityFactory.CreateIsoEntityFromCellLoading(arg0) end
 --- @param arg0 IsoObject
 --- @param arg1 GameEntityScript
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function GameEntityFactory.CreateIsoObjectEntity(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 Component
---- @return void
+--- @return nil
 function GameEntityFactory.RemoveComponent(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 ComponentType
---- @return void
+--- @return nil
 function GameEntityFactory.RemoveComponentType(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 EnumSet
---- @return void
+--- @return nil
 function GameEntityFactory.RemoveComponentTypes(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 Component[]
---- @return void
+--- @return nil
 function GameEntityFactory.RemoveComponents(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 GameEntity
---- @return void
+--- @return nil
 function GameEntityFactory.TransferComponents(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

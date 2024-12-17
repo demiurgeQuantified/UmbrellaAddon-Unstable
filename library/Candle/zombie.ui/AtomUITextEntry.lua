@@ -1,26 +1,26 @@
---- @meta
+--- @meta _
 
 --- @class AtomUITextEntry: AtomUI
 --- @field public class any
 --- @implement UITextEntryInterface
-AtomUITextEntry = {};
+AtomUITextEntry = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:copyToClipboard() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:cutToClipboard() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUITextEntry:focus() end
 
 --- @public
@@ -33,7 +33,7 @@ function AtomUITextEntry:getForceUpperCase() end
 function AtomUITextEntry:getFrame() end
 
 --- @public
---- @return int
+--- @return integer
 function AtomUITextEntry:getMaxTextLength() end
 
 --- @public
@@ -42,15 +42,15 @@ function AtomUITextEntry:getMaxTextLength() end
 function AtomUITextEntry:getStandardFrameColour() end
 
 --- @public
---- @return String
+--- @return string
 function AtomUITextEntry:getText() end
 
 --- @public
---- @return String
+--- @return string
 function AtomUITextEntry:getUIName() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUITextEntry:init() end
 
 --- @public
@@ -92,183 +92,182 @@ function AtomUITextEntry:isOnlyText() end
 function AtomUITextEntry:isTextLimit() end
 
 --- @public
---- @param arg0 int
---- @param arg1 double
---- @param arg2 double
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
 --- @return boolean
 function AtomUITextEntry:onConsumeMouseButtonDown(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 double
---- @param arg2 double
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
 --- @return boolean
 function AtomUITextEntry:onConsumeMouseButtonUp(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 double
---- @param arg3 double
---- @return Boolean
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return boolean
 function AtomUITextEntry:onConsumeMouseMove(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 double
---- @param arg3 double
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function AtomUITextEntry:onExtendMouseMoveOutside(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyBack() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyDelete() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyDown() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyEnd() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyEnter() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyHome() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyLeft() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyRight() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:onKeyUp() end
 
 --- @public
---- @param arg0 int
---- @param arg1 double
---- @param arg2 double
---- @return void
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function AtomUITextEntry:onMouseButtonUpOutside(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
---- @overload fun(self: AtomUITextEntry, arg0: int): void
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: AtomUITextEntry, arg0: integer): nil
 function AtomUITextEntry:onOtherKey(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:pasteFromClipboard() end
 
 --- @public
---- @param arg0 char
---- @return void
---- @overload fun(self: AtomUITextEntry, arg0: char): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: AtomUITextEntry, arg0: string): nil
 function AtomUITextEntry:putCharacter(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUITextEntry:render() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUITextEntry:resetBlink() end
 
 --- @public
---- @return void
---- @overload fun(self: AtomUITextEntry): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry): nil
 function AtomUITextEntry:selectAll() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
---- @overload fun(self: AtomUITextEntry, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry, arg0: boolean): nil
 function AtomUITextEntry:setDoingTextEntry(arg0) end
 
 --- @public
 --- @param arg0 UIFont
---- @return void
+--- @return nil
 function AtomUITextEntry:setFont(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AtomUITextEntry:setForceUpperCase(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
---- @overload fun(self: AtomUITextEntry, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry, arg0: boolean): nil
 function AtomUITextEntry:setIgnoreFirst(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AtomUITextEntry:setMask(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AtomUITextEntry:setMaxTextLength(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AtomUITextEntry:setMultiline(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AtomUITextEntry:setOnlyNumbers(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AtomUITextEntry:setOnlyText(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
---- @overload fun(self: AtomUITextEntry, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: AtomUITextEntry, arg0: boolean): nil
 function AtomUITextEntry:setSelectingRange(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AtomUITextEntry:setText(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUITextEntry:unfocus() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUITextEntry:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

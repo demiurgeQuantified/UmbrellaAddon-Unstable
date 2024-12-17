@@ -42,7 +42,6 @@ ISTradingUI.States.UnSealOffer = 2
 ISTradingUI.States.FinalizeDeal = 3
 ISTradingUI.MaxItems = 20
 
-
 ---@return any
 function ISTradingUI.AcceptedTrade(accepted) end
 
@@ -57,7 +56,6 @@ function ISTradingUI.RemoveItem(player, itemId) end
 
 ---@return any
 function ISTradingUI.UpdateState(player, state) end
-
 
 ---@return any
 function ISTradingUI:addItemToYourOffer(item) end
@@ -109,7 +107,6 @@ function ISTradingUI:updateTooltip() end
 
 ---@return any
 function ISTradingUI:yourOfferMouseUp(x, y) end
-
 
 ---@return ISTradingUI
 function ISTradingUI:new(x, y, width, height, player, otherPlayer) end

@@ -9,7 +9,6 @@
 ---@field [any] any
 ISClimbOverFence = ISBaseTimedAction:derive("ISClimbOverFence")
 
-
 ---@return any
 function ISClimbOverFence:getDeltaModifiers(deltas) end
 
@@ -33,7 +32,6 @@ function ISClimbOverFence:update() end
 
 ---@return any
 function ISClimbOverFence:waitToStart() end
-
 
 ---@return ISClimbOverFence
 function ISClimbOverFence:new(character, item) end

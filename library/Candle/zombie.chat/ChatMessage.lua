@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class ChatMessage
 --- @field public class any
 --- @implement Cloneable
-ChatMessage = {};
+ChatMessage = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,11 +11,11 @@ ChatMessage = {};
 
 --- @public
 --- @return ChatMessage
---- @overload fun(self: ChatMessage): Object
+--- @overload fun(self: ChatMessage): any
 function ChatMessage:clone() end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:getAuthor() end
 
 --- @public
@@ -23,11 +23,11 @@ function ChatMessage:getAuthor() end
 function ChatMessage:getChat() end
 
 --- @public
---- @return int
+--- @return integer
 function ChatMessage:getChatID() end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:getCustomTag() end
 
 --- @public
@@ -35,15 +35,15 @@ function ChatMessage:getCustomTag() end
 function ChatMessage:getDatetime() end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:getDatetimeStr() end
 
 --- @public
---- @return int
+--- @return integer
 function ChatMessage:getRadioChannel() end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:getText() end
 
 --- @public
@@ -51,11 +51,11 @@ function ChatMessage:getText() end
 function ChatMessage:getTextColor() end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:getTextWithPrefix() end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:getTextWithReplacedParentheses() end
 
 --- @public
@@ -99,83 +99,82 @@ function ChatMessage:isShowAuthor() end
 function ChatMessage:isShowInChat() end
 
 --- @public
---- @return void
+--- @return nil
 function ChatMessage:makeFromDiscord() end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function ChatMessage:pack(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ChatMessage:setAuthor(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ChatMessage:setCustomTag(arg0) end
 
 --- @public
 --- @param arg0 LocalDateTime
---- @return void
+--- @return nil
 function ChatMessage:setDatetime(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatMessage:setLocal(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatMessage:setOverHeadSpeech(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ChatMessage:setRadioChannel(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ChatMessage:setScrambledText(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatMessage:setServerAlert(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatMessage:setServerAuthor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatMessage:setShouldAttractZombies(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatMessage:setShowInChat(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ChatMessage:setText(arg0) end
 
 --- @public
 --- @param arg0 Color
---- @return void
+--- @return nil
 function ChatMessage:setTextColor(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function ChatMessage:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -183,7 +182,7 @@ function ChatMessage:toString() end
 
 --- @public
 --- @param arg0 ChatBase
---- @param arg1 String
+--- @param arg1 string
 --- @return ChatMessage
---- @overload fun(arg0: ChatBase, arg1: LocalDateTime, arg2: String): ChatMessage
+--- @overload fun(arg0: ChatBase, arg1: LocalDateTime, arg2: string): ChatMessage
 function ChatMessage.new(arg0, arg1) end

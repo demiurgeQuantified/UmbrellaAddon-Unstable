@@ -1,35 +1,35 @@
---- @meta
+--- @meta _
 
 --- @class RagdollSetting
 --- @field public class any
-RagdollSetting = {};
+RagdollSetting = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function RagdollSetting:getAdminValue() end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSetting:getMax() end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSetting:getMin() end
 
 --- @public
---- @return String
+--- @return string
 function RagdollSetting:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param arg0 integer
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
 --- @return RagdollSetting
 function RagdollSetting:init(arg0, arg1, arg2, arg3, arg4) end
 
@@ -38,19 +38,18 @@ function RagdollSetting:init(arg0, arg1, arg2, arg3, arg4) end
 function RagdollSetting:isEnableAdmin() end
 
 --- @public
---- @return void
+--- @return nil
 function RagdollSetting:reset() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function RagdollSetting:setAdminValue(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function RagdollSetting:setEnableAdmin(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

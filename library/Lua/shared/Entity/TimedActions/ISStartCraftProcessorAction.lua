@@ -11,7 +11,6 @@
 ---@field [any] any
 ISStartCraftProcessorAction = ISBaseTimedAction:derive("ISStartCraftProcessorAction")
 
-
 ---@return any
 function ISStartCraftProcessorAction:getDuration() end
 
@@ -29,7 +28,6 @@ function ISStartCraftProcessorAction:stop() end
 
 ---@return any
 function ISStartCraftProcessorAction:update() end
-
 
 ---@return ISStartCraftProcessorAction
 function ISStartCraftProcessorAction:new(character, entity, component, craftProcessor) end

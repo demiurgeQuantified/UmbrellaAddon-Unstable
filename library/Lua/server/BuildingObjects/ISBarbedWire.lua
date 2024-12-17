@@ -10,7 +10,6 @@
 ---@field [any] any
 ISBarbedWire = ISBuildingObject:derive("ISBarbedWire")
 
-
 ---@return any
 function ISBarbedWire:create(x, y, z, north, sprite) end
 
@@ -31,7 +30,6 @@ function ISBarbedWire:onTimedActionStart(action) end
 
 ---@return any
 function ISBarbedWire:render(x, y, z, square) end
-
 
 ---@return ISBarbedWire
 function ISBarbedWire:new(sprite, northSprite) end

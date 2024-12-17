@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RadioAPI
 --- @field public class any
-RadioAPI = {};
+RadioAPI = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,38 +20,35 @@ function RadioAPI.hasInstance() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function RadioAPI.timeStampToDays(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function RadioAPI.timeStampToHours(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function RadioAPI.timeStampToMinutes(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
 function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function RadioAPI:getChannels(arg0) end
-
-

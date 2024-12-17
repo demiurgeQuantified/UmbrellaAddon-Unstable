@@ -24,10 +24,8 @@
 ---@field [any] any
 ISServerSandboxOptionsUI = ISPanelJoypad:derive("ISServerSandboxOptionsUI")
 
-
 ---@return any
 function ISServerSandboxOptionsUI.searchPrerender(self) end
-
 
 ---@return any
 function ISServerSandboxOptionsUI:createChildren() end
@@ -61,7 +59,6 @@ function ISServerSandboxOptionsUI:settingsFromUI(options) end
 
 ---@return any
 function ISServerSandboxOptionsUI:settingsToUI(options) end
-
 
 ---@return ISServerSandboxOptionsUI
 function ISServerSandboxOptionsUI:new(x, y, width, height) end

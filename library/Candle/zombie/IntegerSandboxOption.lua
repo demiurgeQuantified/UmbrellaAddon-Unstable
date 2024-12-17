@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IntegerSandboxOption: IntegerConfigOption
 --- @field public class any
 --- @implement SandboxOption
-IntegerSandboxOption = {};
+IntegerSandboxOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,33 +16,33 @@ function IntegerSandboxOption:asConfigOption() end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
---- @overload fun(self: IntegerSandboxOption, arg0: KahluaTable): void
+--- @return nil
+--- @overload fun(self: IntegerSandboxOption, arg0: KahluaTable): nil
 function IntegerSandboxOption:fromTable(arg0) end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerSandboxOption): String
+--- @return string
+--- @overload fun(self: IntegerSandboxOption): string
 function IntegerSandboxOption:getPageName() end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerSandboxOption): String
+--- @return string
+--- @overload fun(self: IntegerSandboxOption): string
 function IntegerSandboxOption:getShortName() end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerSandboxOption): String
+--- @return string
+--- @overload fun(self: IntegerSandboxOption): string
 function IntegerSandboxOption:getTableName() end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerSandboxOption): String
+--- @return string
+--- @overload fun(self: IntegerSandboxOption): string
 function IntegerSandboxOption:getTooltip() end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerSandboxOption): String
+--- @return string
+--- @overload fun(self: IntegerSandboxOption): string
 function IntegerSandboxOption:getTranslatedName() end
 
 --- @public
@@ -51,28 +51,27 @@ function IntegerSandboxOption:getTranslatedName() end
 function IntegerSandboxOption:isCustom() end
 
 --- @public
---- @return void
---- @overload fun(self: IntegerSandboxOption): void
+--- @return nil
+--- @overload fun(self: IntegerSandboxOption): nil
 function IntegerSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return SandboxOption
---- @overload fun(self: IntegerSandboxOption, arg0: String): SandboxOption
+--- @overload fun(self: IntegerSandboxOption, arg0: string): SandboxOption
 function IntegerSandboxOption:setPageName(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return SandboxOption
---- @overload fun(self: IntegerSandboxOption, arg0: String): SandboxOption
+--- @overload fun(self: IntegerSandboxOption, arg0: string): SandboxOption
 function IntegerSandboxOption:setTranslation(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
---- @overload fun(self: IntegerSandboxOption, arg0: KahluaTable): void
+--- @return nil
+--- @overload fun(self: IntegerSandboxOption, arg0: KahluaTable): nil
 function IntegerSandboxOption:toTable(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -80,9 +79,9 @@ function IntegerSandboxOption:toTable(arg0) end
 
 --- @public
 --- @param arg0 SandboxOptions
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
 --- @return IntegerSandboxOption
 function IntegerSandboxOption.new(arg0, arg1, arg2, arg3, arg4) end

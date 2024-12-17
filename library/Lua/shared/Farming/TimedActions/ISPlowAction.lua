@@ -10,7 +10,6 @@
 ---@field [any] any
 ISPlowAction = ISBaseTimedAction:derive("ISPlowAction")
 
-
 ---@return any
 function ISPlowAction:complete() end
 
@@ -34,7 +33,6 @@ function ISPlowAction:update() end
 
 ---@return any
 function ISPlowAction:waitToStart() end
-
 
 ---@return ISPlowAction
 function ISPlowAction:new(character, gridSquare, item) end

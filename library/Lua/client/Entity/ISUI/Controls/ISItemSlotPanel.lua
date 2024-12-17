@@ -9,7 +9,6 @@
 ---@field [any] any
 ISItemSlotPanel = ISGroupBox:derive("ISItemSlotPanel")
 
-
 ---@return any
 function ISItemSlotPanel:addResource(_resourceItem, _styleItemSlot) end
 
@@ -42,7 +41,6 @@ function ISItemSlotPanel:render() end
 
 ---@return any
 function ISItemSlotPanel:update() end
-
 
 ---@return ISItemSlotPanel
 function ISItemSlotPanel:new(x, y, width, height, player, entity, _styleLabel, _styleCell) end

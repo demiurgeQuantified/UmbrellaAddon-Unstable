@@ -1,31 +1,31 @@
---- @meta
+--- @meta _
 
 --- @class Profession
 --- @field public class any
 --- @implement IListBoxItem
-Profession = {};
+Profession = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Profession:addFreeTrait(arg0) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function Profession:addXPBoost(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function Profession:getCost() end
 
 --- @public
---- @return String
+--- @return string
 function Profession:getDescription() end
 
 --- @public
@@ -41,26 +41,26 @@ function Profession:getFreeTraitStack() end
 function Profession:getFreeTraits() end
 
 --- @public
---- @return String
+--- @return string
 function Profession:getIconPath() end
 
 --- @public
---- @return String
---- @overload fun(self: Profession): String
+--- @return string
+--- @overload fun(self: Profession): string
 function Profession:getLabel() end
 
 --- @public
---- @return String
---- @overload fun(self: Profession): String
+--- @return string
+--- @overload fun(self: Profession): string
 function Profession:getLeftLabel() end
 
 --- @public
---- @return String
+--- @return string
 function Profession:getName() end
 
 --- @public
---- @return String
---- @overload fun(self: Profession): String
+--- @return string
+--- @overload fun(self: Profession): string
 function Profession:getRightLabel() end
 
 --- @public
@@ -68,7 +68,7 @@ function Profession:getRightLabel() end
 function Profession:getTexture() end
 
 --- @public
---- @return String
+--- @return string
 function Profession:getType() end
 
 --- @public
@@ -76,50 +76,49 @@ function Profession:getType() end
 function Profession:getXPBoostMap() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Profession:setCost(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Profession:setDescription(arg0) end
 
 --- @public
 --- @param arg0 List
---- @return void
+--- @return nil
 function Profession:setFreeRecipes(arg0) end
 
 --- @public
 --- @param arg0 Stack
---- @return void
+--- @return nil
 function Profession:setFreeTraitStack(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Profession:setIconPath(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Profession:setName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Profession:setType(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 int
---- @param arg4 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 integer
+--- @param arg4 string
 --- @return Profession
 function Profession.new(arg0, arg1, arg2, arg3, arg4) end

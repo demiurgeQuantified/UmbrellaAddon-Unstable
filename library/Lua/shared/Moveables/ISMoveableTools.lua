@@ -3,7 +3,6 @@
 ---@class ISMoveableTools
 ISMoveableTools = {}
 
-
 ---@return any
 function ISMoveableTools.canPlayerPickUpMoveable(_char, _square, _object, _moveProps) end
 

@@ -1,64 +1,63 @@
---- @meta
+--- @meta _
 
 --- @class TileDepthTextures
 --- @field public class any
-TileDepthTextures = {};
+TileDepthTextures = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextures:Reset() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return TilesetDepthTexture
 function TileDepthTextures:getExistingTileset(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return TileDepthTexture
 function TileDepthTextures:getTexture(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return TileDepthTexture
 function TileDepthTextures:getTextureFromTileName(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: TileDepthTextures, arg0: String): void
+--- @return nil
+--- @overload fun(self: TileDepthTextures, arg0: string): nil
 function TileDepthTextures:initSprites() end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextures:loadDepthTextureImages() end
 
 --- @public
 --- @param arg0 TilesetDepthTexture
---- @return void
+--- @return nil
 function TileDepthTextures:mergeTileset(arg0) end
 
 --- @public
 --- @param arg0 TileDepthTextures
---- @return void
+--- @return nil
 function TileDepthTextures:mergeTilesets(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function TileDepthTextures:saveTileset(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return TileDepthTextures
 function TileDepthTextures.new(arg0, arg1) end

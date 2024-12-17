@@ -12,10 +12,8 @@
 ---@field [any] any
 ISFarmingCursorMouse = ISBuildingObject:derive("ISFarmingCursorMouse")
 
-
 ---@return any
 function ISFarmingCursorMouse.IsVisible() end
-
 
 ---@return any
 function ISFarmingCursorMouse:create(x, y, z, north, sprite) end
@@ -31,7 +29,6 @@ function ISFarmingCursorMouse:render(x, y, z, square) end
 
 ---@return any
 function ISFarmingCursorMouse:renderTooltip() end
-
 
 ---@return ISFarmingCursorMouse
 function ISFarmingCursorMouse:new(character, onSquareSelected, isValid) end

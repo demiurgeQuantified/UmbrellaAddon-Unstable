@@ -8,7 +8,6 @@
 ---@field [any] any
 ISWringClothing = ISBaseTimedAction:derive("ISWringClothing")
 
-
 ---@return any
 function ISWringClothing:complete() end
 
@@ -32,7 +31,6 @@ function ISWringClothing:stopSound() end
 
 ---@return any
 function ISWringClothing:update() end
-
 
 ---@return ISWringClothing
 function ISWringClothing:new(character, item) end

@@ -6,7 +6,6 @@
 ---@field [any] any
 ISFireplaceExtinguish = ISBaseTimedAction:derive("ISFireplaceExtinguish")
 
-
 ---@return any
 function ISFireplaceExtinguish:complete() end
 
@@ -30,7 +29,6 @@ function ISFireplaceExtinguish:update() end
 
 ---@return any
 function ISFireplaceExtinguish:waitToStart() end
-
 
 ---@return ISFireplaceExtinguish
 function ISFireplaceExtinguish:new(character, fireplace) end

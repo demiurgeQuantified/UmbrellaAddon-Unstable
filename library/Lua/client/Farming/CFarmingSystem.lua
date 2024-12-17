@@ -5,7 +5,6 @@
 ---@field [any] any
 CFarmingSystem = CGlobalObjectSystem:derive("CFarmingSystem")
 
-
 ---@return any
 function CFarmingSystem:changePlayer(player) end
 
@@ -20,7 +19,6 @@ function CFarmingSystem:newLuaObject(globalObject) end
 
 ---@return any
 function CFarmingSystem:OnServerCommand(command, args) end
-
 
 ---@return CFarmingSystem
 function CFarmingSystem:new() end

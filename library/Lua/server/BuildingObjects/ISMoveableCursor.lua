@@ -45,21 +45,20 @@ ISMoveableCursor.cursors = {}
 ISMoveableCursor.mode = {}
 ISMoveableCursor.cacheMode = {}
 ISMoveableCursor.normalColor = {
-    r = 0.5,
-    g = 0.5,
-    b = 0.5,
+	r = 0.5,
+	g = 0.5,
+	b = 0.5,
 }
 ISMoveableCursor.validColor = {
-    r = 0.5,
-    g = 1,
-    b = 0.5,
+	r = 0.5,
+	g = 1,
+	b = 0.5,
 }
 ISMoveableCursor.invalidColor = {
-    r = 1,
-    g = 0,
-    b = 0,
+	r = 1,
+	g = 0,
+	b = 0,
 }
-
 
 ---@return any
 function ISMoveableCursor.changeModeKey(_key, _playerNum, _joyPadTriggered) end
@@ -69,7 +68,6 @@ function ISMoveableCursor.clearCacheForAllPlayers() end
 
 ---@return any
 function ISMoveableCursor.exitCursorKey(_key) end
-
 
 ---@return any
 function ISMoveableCursor:clearCache() end
@@ -157,7 +155,6 @@ function ISMoveableCursor:shouldAddObject(_obj, moveProps) end
 
 ---@return any
 function ISMoveableCursor:tryInitialItem(_item) end
-
 
 ---@return ISMoveableCursor
 function ISMoveableCursor:new(_character) end

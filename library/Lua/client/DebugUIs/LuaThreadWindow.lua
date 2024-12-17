@@ -14,7 +14,6 @@
 ---@field [any] any
 LuaThreadWindow = ISPanel:derive("LuaThreadWindow")
 
-
 ---@return any
 function LuaThreadWindow:createChildren() end
 
@@ -47,7 +46,6 @@ function LuaThreadWindow:prerender() end
 
 ---@return any
 function LuaThreadWindow:render() end
-
 
 ---@return LuaThreadWindow
 function LuaThreadWindow:new(x, y, width, height) end

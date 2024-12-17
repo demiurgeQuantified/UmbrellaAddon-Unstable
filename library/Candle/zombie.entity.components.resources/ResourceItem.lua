@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ResourceItem: Resource
 --- @field public class any
-ResourceItem = {};
+ResourceItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,8 +10,8 @@ ResourceItem = {};
 
 --- @public
 --- @param arg0 ObjectTooltip
---- @return void
---- @overload fun(self: ResourceItem, arg0: ObjectTooltip, arg1: Layout): void
+--- @return nil
+--- @overload fun(self: ResourceItem, arg0: ObjectTooltip, arg1: Layout): nil
 function ResourceItem:DoTooltip(arg0) end
 
 --- @public
@@ -27,7 +27,7 @@ function ResourceItem:acceptsItem(arg0, arg1) end
 function ResourceItem:canStackItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ResourceItem:clear() end
 
 --- @public
@@ -36,43 +36,43 @@ function ResourceItem:clear() end
 function ResourceItem:containsItem(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getEnergyAmount() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getEnergyCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getFluidAmount() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getFluidCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getFreeEnergyCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getFreeFluidCapacity() end
 
 --- @public
---- @return int
+--- @return integer
 function ResourceItem:getFreeItemCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getFreeItemUsesCapacity() end
 
 --- @public
---- @return int
+--- @return integer
 function ResourceItem:getItemAmount() end
 
 --- @public
---- @return int
+--- @return integer
 function ResourceItem:getItemCapacity() end
 
 --- @public
@@ -80,11 +80,11 @@ function ResourceItem:getItemCapacity() end
 function ResourceItem:getItemFilter() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getItemUsesAmount() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceItem:getItemUsesCapacity() end
 
 --- @public
@@ -101,14 +101,14 @@ function ResourceItem:isFull() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceItem:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceItem:loadSync(arg0, arg1) end
 
 --- @public
@@ -126,7 +126,7 @@ function ResourceItem:offerItems(arg0) end
 
 --- @public
 --- @return InventoryItem
---- @overload fun(self: ResourceItem, arg0: int): InventoryItem
+--- @overload fun(self: ResourceItem, arg0: integer): InventoryItem
 function ResourceItem:peekItem() end
 
 --- @public
@@ -141,37 +141,35 @@ function ResourceItem:removeAllItems(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ResourceItem:save(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ResourceItem:saveSync(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function ResourceItem:storedSize() end
 
 --- @public
 --- @param arg0 ResourceItem
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceItem:transferTo(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 int
---- @param arg3 String
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 string
 --- @param arg4 boolean
 --- @return boolean
 function ResourceItem:tryLoadSyncItems(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 Resource
---- @return void
---- @overload fun(self: ResourceItem, arg0: Resource, arg1: float): void
+--- @return nil
+--- @overload fun(self: ResourceItem, arg0: Resource, arg1: number): nil
 function ResourceItem:tryTransferTo(arg0) end
-
-

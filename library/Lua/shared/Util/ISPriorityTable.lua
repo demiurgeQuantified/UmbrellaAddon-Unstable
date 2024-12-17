@@ -3,14 +3,11 @@
 ---@class ISPriorityTable
 ISPriorityTable = {}
 
-
-
 ---@return ISPriorityTable_Instance
 function ISPriorityTable.new() end
 
 ---@class ISPriorityTable_Instance
 local ISPriorityTable_Instance = {}
-
 
 ---@return any
 function ISPriorityTable_Instance.add(_k, _v, _z) end

@@ -22,7 +22,6 @@
 ---@field [any] any
 ISResizeWidget = ISPanel:derive("ISResizeWidget")
 
-
 ---@return any
 function ISResizeWidget:initialise() end
 
@@ -49,7 +48,6 @@ function ISResizeWidget:render() end
 
 ---@return any
 function ISResizeWidget:resize(dx, dy) end
-
 
 ---@return ISResizeWidget
 function ISResizeWidget:new(x, y, width, height, resizeTarget, yonly) end

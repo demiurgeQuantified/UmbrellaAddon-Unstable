@@ -7,7 +7,6 @@
 ---@field [any] any
 ForceHitReactionPanel = ISDebugSubPanelBase:derive("ForceHitReactionPanel")
 
-
 ---@return any
 function ForceHitReactionPanel:addBoolOption(_id, _bool, _x, _y, _w) end
 
@@ -34,7 +33,6 @@ function ForceHitReactionPanel:prerender() end
 
 ---@return any
 function ForceHitReactionPanel:update() end
-
 
 ---@return ForceHitReactionPanel
 function ForceHitReactionPanel:new(x, y, width, height, doStencil) end

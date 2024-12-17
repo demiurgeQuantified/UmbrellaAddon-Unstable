@@ -1,39 +1,39 @@
---- @meta
+--- @meta _
 
 --- @class TileInfo
 --- @field public class any
-TileInfo = {};
+TileInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function TileInfo:getMasterOffsetX() end
 
 --- @public
---- @return int
+--- @return integer
 function TileInfo:getMasterOffsetY() end
 
 --- @public
---- @return int
+--- @return integer
 function TileInfo:getMasterOffsetZ() end
 
 --- @public
---- @return String
+--- @return string
 function TileInfo:getSpriteName() end
 
 --- @public
---- @return int
+--- @return integer
 function TileInfo:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function TileInfo:getY() end
 
 --- @public
---- @return int
+--- @return integer
 function TileInfo:getZ() end
 
 --- @public
@@ -52,5 +52,3 @@ function TileInfo:isMaster() end
 --- @param arg0 IsoObject
 --- @return boolean
 function TileInfo:verifyObject(arg0) end
-
-

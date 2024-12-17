@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Role
 --- @field public class any
-Role = {};
+Role = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,7 +20,6 @@ function Role.haveCapability(arg0, arg1) end
 --- @return boolean
 function Role.isUsingDebugMode() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -31,7 +30,7 @@ function Role.isUsingDebugMode() end
 function Role:addCapability(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Role:cleanCapability() end
 
 --- @public
@@ -43,11 +42,11 @@ function Role:getColor() end
 function Role:getDefaults() end
 
 --- @public
---- @return String
+--- @return string
 function Role:getDescription() end
 
 --- @public
---- @return String
+--- @return string
 function Role:getName() end
 
 --- @public
@@ -61,13 +60,13 @@ function Role:isReadOnly() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function Role:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Role:parse(arg0) end
 
 --- @public
@@ -81,34 +80,33 @@ function Role:rightLevel() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Role:save(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Role:send(arg0) end
 
 --- @public
 --- @param arg0 Color
---- @return void
+--- @return nil
 function Role:setColor(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Role:setDescription(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Role:setReadOnly() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Role
 function Role.new(arg0) end

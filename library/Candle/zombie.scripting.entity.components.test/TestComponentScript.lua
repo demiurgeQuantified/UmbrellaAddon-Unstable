@@ -1,33 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class TestComponentScript: ComponentScript
 --- @field public class any
-TestComponentScript = {};
+TestComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function TestComponentScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function TestComponentScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function TestComponentScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function TestComponentScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function TestComponentScript:PreReload() end
 
 --- @public
@@ -35,7 +35,5 @@ function TestComponentScript:PreReload() end
 function TestComponentScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function TestComponentScript:reset() end
-
-

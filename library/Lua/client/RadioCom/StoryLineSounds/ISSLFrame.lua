@@ -27,7 +27,6 @@
 ---@field [any] any
 ISSLFrame = ISPanel:derive("ISSLFrame")
 
-
 ---@return any
 function ISSLFrame:addGridData(_name, _col, _t) end
 
@@ -87,7 +86,6 @@ function ISSLFrame:updateGridRectangle() end
 
 ---@return any
 function ISSLFrame:updateVisualGrid() end
-
 
 ---@return ISSLFrame
 function ISSLFrame:new(x, y, width, height) end

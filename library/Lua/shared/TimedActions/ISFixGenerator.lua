@@ -8,7 +8,6 @@
 ---@field [any] any
 ISFixGenerator = ISBaseTimedAction:derive("ISFixGenerator")
 
-
 ---@return any
 function ISFixGenerator:complete() end
 
@@ -35,7 +34,6 @@ function ISFixGenerator:update() end
 
 ---@return any
 function ISFixGenerator:waitToStart() end
-
 
 ---@return ISFixGenerator
 function ISFixGenerator:new(character, generator) end

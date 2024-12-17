@@ -11,7 +11,6 @@
 ---@field [any] any
 ISDigStairsAction = ISBaseTimedAction:derive("ISDigStairsAction")
 
-
 ---@return any
 function ISDigStairsAction:isValid() end
 
@@ -26,7 +25,6 @@ function ISDigStairsAction:stop() end
 
 ---@return any
 function ISDigStairsAction:update() end
-
 
 ---@return ISDigStairsAction
 function ISDigStairsAction:new(character, item, sq, dir, time) end

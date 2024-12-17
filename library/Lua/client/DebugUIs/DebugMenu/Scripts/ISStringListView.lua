@@ -23,10 +23,8 @@
 ---@field [any] any
 ISStringListView = ISPanel:derive("ISStringListView")
 
-
 ---@return any
 function ISStringListView.onTextChange(box) end
-
 
 ---@return any
 function ISStringListView:buildList() end
@@ -70,7 +68,6 @@ function ISStringListView:setExpandedAll() end
 ---@return any
 function ISStringListView:update() end
 
-
 ---@return ISStringListView
 function ISStringListView:new(x, y, width, height) end
 
@@ -94,7 +91,6 @@ function ISStringListView:new(x, y, width, height) end
 ---@field width any
 ---@field [any] any
 ISStringListViewNode = {}
-
 
 ---@return any
 function ISStringListViewNode:build(_list) end
@@ -128,7 +124,6 @@ function ISStringListViewNode:setHighlight(_col) end
 
 ---@return any
 function ISStringListViewNode:toggleExpand() end
-
 
 ---@return ISStringListViewNode
 function ISStringListViewNode:new(_parent, _text, _isRoot) end

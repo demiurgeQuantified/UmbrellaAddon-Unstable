@@ -3,7 +3,6 @@
 ---@class ISHutchMenu
 ISHutchMenu = {}
 
-
 ---@return any
 function ISHutchMenu.OnFillWorldObjectContextMenu(player, context, worldobjects, test) end
 

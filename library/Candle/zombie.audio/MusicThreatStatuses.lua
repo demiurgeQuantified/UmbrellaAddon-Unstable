@@ -1,45 +1,44 @@
---- @meta
+--- @meta _
 
 --- @class MusicThreatStatuses
 --- @field public class any
-MusicThreatStatuses = {};
+MusicThreatStatuses = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function MusicThreatStatuses:clear() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return MusicThreatStatus
 function MusicThreatStatuses:findStatusById(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function MusicThreatStatuses:getIntensity() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return MusicThreatStatus
 function MusicThreatStatuses:getStatusByIndex(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function MusicThreatStatuses:getStatusCount() end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param arg0 string
+--- @param arg1 number
 --- @return MusicThreatStatus
 function MusicThreatStatuses:setStatus(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function MusicThreatStatuses:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

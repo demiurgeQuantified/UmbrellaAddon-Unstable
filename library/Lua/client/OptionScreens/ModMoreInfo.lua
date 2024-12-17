@@ -15,10 +15,8 @@
 ---@field [any] any
 ModMoreInfo = ISPanel:derive("ModMoreInfo")
 
-
 ---@return any
 function ModMoreInfo.onOptionMouseDown(button, x, y) end
-
 
 ---@return any
 function ModMoreInfo:create(desc) end
@@ -31,7 +29,6 @@ function ModMoreInfo:instantiate() end
 
 ---@return any
 function ModMoreInfo:prerender() end
-
 
 ---@return ModMoreInfo
 function ModMoreInfo:new(x, y, width, height) end

@@ -18,7 +18,6 @@
 ---@field [any] any
 ISWidgetEntityDebug = ISPanel:derive("ISWidgetEntityDebug")
 
-
 ---@return any
 function ISWidgetEntityDebug:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -42,7 +41,6 @@ function ISWidgetEntityDebug:render() end
 
 ---@return any
 function ISWidgetEntityDebug:update() end
-
 
 ---@return ISWidgetEntityDebug
 function ISWidgetEntityDebug:new(x, y, width, height, player, entity, _styleButton) end

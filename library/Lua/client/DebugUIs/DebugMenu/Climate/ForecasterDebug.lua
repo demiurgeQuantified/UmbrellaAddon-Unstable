@@ -18,10 +18,8 @@
 ForecasterDebug = ISPanel:derive("ForecasterDebug")
 ForecasterDebug.instance = nil
 
-
 ---@return any
 function ForecasterDebug.OnOpenPanel() end
-
 
 ---@return any
 function ForecasterDebug:close() end
@@ -64,7 +62,6 @@ function ForecasterDebug:printForecastValue(_name, _value, _func, _func2) end
 
 ---@return any
 function ForecasterDebug:update() end
-
 
 ---@return ForecasterDebug
 function ForecasterDebug:new(x, y, width, height, title) end

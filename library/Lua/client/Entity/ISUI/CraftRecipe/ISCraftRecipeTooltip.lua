@@ -25,13 +25,20 @@
 ---@field [any] any
 ISCraftRecipeTooltip = ISPanel:derive("ISCraftRecipeTooltip")
 
-
 ---@return any
-function ISCraftRecipeTooltip.activateToolTipFor(_parent, _player, _recipe, _logic, _followMouse, _titleOnly, _debugMode) end
+function ISCraftRecipeTooltip.activateToolTipFor(
+	_parent,
+	_player,
+	_recipe,
+	_logic,
+	_followMouse,
+	_titleOnly,
+	_debugMode
+)
+end
 
 ---@return any
 function ISCraftRecipeTooltip.deactivateToolTipFor(_parent) end
-
 
 ---@return any
 function ISCraftRecipeTooltip:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -68,7 +75,6 @@ function ISCraftRecipeTooltip:update() end
 
 ---@return any
 function ISCraftRecipeTooltip:xuiRecalculateLayout() end
-
 
 ---@return ISCraftRecipeTooltip
 function ISCraftRecipeTooltip:new(x, y, width, height, player, recipe, logic, followMouse, debugMode) end

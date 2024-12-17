@@ -16,7 +16,6 @@
 ---@field [any] any
 ISPlayerStatsChooseProfessionUI = ISPanel:derive("ISPlayerStatsChooseProfessionUI")
 
-
 ---@return any
 function ISPlayerStatsChooseProfessionUI:create() end
 
@@ -34,7 +33,6 @@ function ISPlayerStatsChooseProfessionUI:render() end
 
 ---@return any
 function ISPlayerStatsChooseProfessionUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsChooseProfessionUI
 function ISPlayerStatsChooseProfessionUI:new(x, y, width, height, target, onclick, player) end

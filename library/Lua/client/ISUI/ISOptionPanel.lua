@@ -23,7 +23,6 @@
 ---@field [any] any
 ISOptionPanel = ISPanel:derive("ISOptionPanel")
 
-
 ---@return any
 function ISOptionPanel:addCombo(name, options, selected, target, onchange) end
 
@@ -32,7 +31,6 @@ function ISOptionPanel:initialise() end
 
 ---@return any
 function ISOptionPanel:prerender() end
-
 
 ---@return ISOptionPanel
 function ISOptionPanel:new(x, y, width, height) end

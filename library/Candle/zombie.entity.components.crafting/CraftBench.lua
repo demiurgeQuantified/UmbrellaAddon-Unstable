@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CraftBench: Component
 --- @field public class any
-CraftBench = {};
+CraftBench = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,7 @@ CraftBench = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function CraftBench:DoTooltip(arg0, arg1) end
 
 --- @public
@@ -23,7 +23,7 @@ function CraftBench:getEnergyInputChannels() end
 function CraftBench:getFluidInputChannels() end
 
 --- @public
---- @return String
+--- @return string
 function CraftBench:getRecipeTagQuery() end
 
 --- @public
@@ -39,8 +39,6 @@ function CraftBench:getResources() end
 function CraftBench:isValid() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftBench:setRecipeTagQuery(arg0) end
-
-

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class BooleanDebugOption: BooleanConfigOption
 --- @field public class any
 --- @implement IDebugOption
-BooleanDebugOption = {};
+BooleanDebugOption = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ BooleanDebugOption = {};
 --- @public
 --- @static
 --- @param arg0 IDebugOptionGroup
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 boolean
 --- @return BooleanDebugOption
 function BooleanDebugOption.newDebugOnlyOption(arg0, arg1, arg2) end
@@ -20,19 +20,18 @@ function BooleanDebugOption.newDebugOnlyOption(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 IDebugOptionGroup
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 boolean
 --- @return BooleanDebugOption
 function BooleanDebugOption.newOption(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
---- @overload fun(self: BooleanDebugOption): String
+--- @return string
+--- @overload fun(self: BooleanDebugOption): string
 function BooleanDebugOption:getName() end
 
 --- @public
@@ -49,23 +48,22 @@ function BooleanDebugOption:getValue() end
 function BooleanDebugOption:isDebugOnly() end
 
 --- @public
---- @return void
---- @overload fun(self: BooleanDebugOption): void
+--- @return nil
+--- @overload fun(self: BooleanDebugOption): nil
 function BooleanDebugOption:onFullPathChanged() end
 
 --- @public
 --- @param arg0 IDebugOptionGroup
---- @return void
---- @overload fun(self: BooleanDebugOption, arg0: IDebugOptionGroup): void
+--- @return nil
+--- @overload fun(self: BooleanDebugOption, arg0: IDebugOptionGroup): nil
 function BooleanDebugOption:setParent(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 boolean
 --- @return BooleanDebugOption

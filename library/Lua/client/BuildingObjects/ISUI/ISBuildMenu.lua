@@ -9,7 +9,6 @@ ISBuildMenu.woodWorkXp = 0
 ISBuildMenu.ghs = "<GHC>"
 ISBuildMenu.bhs = "<BHC>"
 
-
 ---@return any
 function ISBuildMenu.buildRampsMenu(subMenu, option, playerNum) end
 

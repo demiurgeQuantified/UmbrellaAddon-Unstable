@@ -46,10 +46,8 @@
 ---@field [any] any
 ISCollapsableWindow = ISPanel:derive("ISCollapsableWindow")
 
-
 ---@return any
 function ISCollapsableWindow.TitleBarHeight() end
-
 
 ---@return any
 function ISCollapsableWindow:addView(view) end
@@ -125,7 +123,6 @@ function ISCollapsableWindow:titleBarHeight() end
 
 ---@return any
 function ISCollapsableWindow:uncollapse() end
-
 
 ---@return ISCollapsableWindow
 function ISCollapsableWindow:new(x, y, width, height) end

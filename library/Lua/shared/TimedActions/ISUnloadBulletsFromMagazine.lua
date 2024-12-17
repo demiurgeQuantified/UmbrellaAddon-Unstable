@@ -11,7 +11,6 @@
 ---@field [any] any
 ISUnloadBulletsFromMagazine = ISBaseTimedAction:derive("ISUnloadBulletsFromMagazine")
 
-
 ---@return any
 function ISUnloadBulletsFromMagazine:animEvent(event, parameter) end
 
@@ -44,7 +43,6 @@ function ISUnloadBulletsFromMagazine:stop() end
 
 ---@return any
 function ISUnloadBulletsFromMagazine:update() end
-
 
 ---@return ISUnloadBulletsFromMagazine
 function ISUnloadBulletsFromMagazine:new(character, magazine) end

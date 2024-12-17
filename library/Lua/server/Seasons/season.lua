@@ -24,7 +24,6 @@ season.moonAmbient = 0.0
 season.rainToday = 0
 season.wantNoise = getDebug()
 
-
 ---@return any
 function season.EveryTenMinutes() end
 

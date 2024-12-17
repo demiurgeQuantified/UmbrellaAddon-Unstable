@@ -8,7 +8,6 @@
 ---@field [any] any
 ISCraftRecipeTagsDebugPanel = ISPanel:derive("ISCraftRecipeTagsDebugPanel")
 
-
 ---@return any
 function ISCraftRecipeTagsDebugPanel:close() end
 
@@ -29,7 +28,6 @@ function ISCraftRecipeTagsDebugPanel:prerender() end
 
 ---@return any
 function ISCraftRecipeTagsDebugPanel:render() end
-
 
 ---@return ISCraftRecipeTagsDebugPanel
 function ISCraftRecipeTagsDebugPanel:new(x, y, width, height, player) end

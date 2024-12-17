@@ -10,7 +10,6 @@
 ---@field [any] any
 ISRemovePlantCursor = ISBuildingObject:derive("ISRemovePlantCursor")
 
-
 ---@return any
 function ISRemovePlantCursor:create(x, y, z, north, sprite) end
 
@@ -31,7 +30,6 @@ function ISRemovePlantCursor:isValid(square) end
 
 ---@return any
 function ISRemovePlantCursor:render(x, y, z, square) end
-
 
 ---@return ISRemovePlantCursor
 function ISRemovePlantCursor:new(character, removeType) end

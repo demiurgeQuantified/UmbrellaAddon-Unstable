@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class WalkTowardState: State
 --- @field public class any
-WalkTowardState = {};
+WalkTowardState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ WalkTowardState = {};
 --- @return WalkTowardState
 function WalkTowardState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,7 +20,7 @@ function WalkTowardState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function WalkTowardState:animEvent(arg0, arg1) end
 
 --- @public
@@ -32,24 +31,23 @@ function WalkTowardState:calculateTargetLocation(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function WalkTowardState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function WalkTowardState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function WalkTowardState:exit(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function WalkTowardState:isMoving(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

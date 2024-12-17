@@ -8,7 +8,6 @@
 ---@field [any] any
 ISPickupBrokenGlass = ISBaseTimedAction:derive("ISPickupBrokenGlass")
 
-
 ---@return any
 function ISPickupBrokenGlass:complete() end
 
@@ -32,7 +31,6 @@ function ISPickupBrokenGlass:update() end
 
 ---@return any
 function ISPickupBrokenGlass:waitToStart() end
-
 
 ---@return ISPickupBrokenGlass
 function ISPickupBrokenGlass:new(character, glass) end

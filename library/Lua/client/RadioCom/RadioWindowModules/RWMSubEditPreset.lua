@@ -26,7 +26,6 @@
 ---@field [any] any
 RWMSubEditPreset = ISPanel:derive("RWMSubEditPreset")
 
-
 ---@return any
 function RWMSubEditPreset:addLinePair(_text, _UIelement) end
 
@@ -71,7 +70,6 @@ function RWMSubEditPreset:render() end
 
 ---@return any
 function RWMSubEditPreset:setValues(name, freq, min, max, step, shift) end
-
 
 ---@return RWMSubEditPreset
 function RWMSubEditPreset:new(x, y, width, height, target, onSave) end

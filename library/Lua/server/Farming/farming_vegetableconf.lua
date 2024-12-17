@@ -9,7 +9,6 @@ farming_vegetableconf.dyingSprite = {}
 farming_vegetableconf.deadSprite = {}
 farming_vegetableconf.trampledSprite = {}
 
-
 ---@return any
 function farming_vegetableconf.calcDisease(diseaseLvl) end
 

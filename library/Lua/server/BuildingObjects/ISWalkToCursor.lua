@@ -8,7 +8,6 @@
 ---@field [any] any
 ISWalkToCursor = ISBuildingObject:derive("ISWalkToCursor")
 
-
 ---@return any
 function ISWalkToCursor:create(x, y, z, north, sprite) end
 
@@ -17,7 +16,6 @@ function ISWalkToCursor:isValid(square) end
 
 ---@return any
 function ISWalkToCursor:render(x, y, z, square) end
-
 
 ---@return ISWalkToCursor
 function ISWalkToCursor:new(sprite, northSprite, character) end

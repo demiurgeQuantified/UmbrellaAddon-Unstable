@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSRatKing: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSRatKing = {};
+RDSRatKing = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RDSRatKing:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSRatKing:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -10,7 +10,6 @@
 ---@field [any] any
 ServerToolbox = ISPanelJoypad:derive("ServerToolbox")
 
-
 ---@return any
 function ServerToolbox:clickAllow() end
 
@@ -46,7 +45,6 @@ function ServerToolbox:render() end
 
 ---@return any
 function ServerToolbox:useDefaultSpawnRegion() end
-
 
 ---@return ServerToolbox
 function ServerToolbox:new(x, y, width, height) end

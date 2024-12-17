@@ -9,7 +9,6 @@
 ---@field [any] any
 ISBBQLightFromPetrol = ISBaseTimedAction:derive("ISBBQLightFromPetrol")
 
-
 ---@return any
 function ISBBQLightFromPetrol:complete() end
 
@@ -33,7 +32,6 @@ function ISBBQLightFromPetrol:update() end
 
 ---@return any
 function ISBBQLightFromPetrol:waitToStart() end
-
 
 ---@return ISBBQLightFromPetrol
 function ISBBQLightFromPetrol:new(character, bbq, lighter, petrol) end

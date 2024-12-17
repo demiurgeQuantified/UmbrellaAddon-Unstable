@@ -16,7 +16,6 @@
 ---@field [any] any
 ISMoveablesAction = ISBaseTimedAction:derive("ISMoveablesAction")
 
-
 ---@return any
 function ISMoveablesAction:complete() end
 
@@ -49,7 +48,6 @@ function ISMoveablesAction:update() end
 
 ---@return any
 function ISMoveablesAction:waitToStart() end
-
 
 ---@return ISMoveablesAction
 function ISMoveablesAction:new(character, square, mode, origSpriteName, object, direction, item, moveCursor) end

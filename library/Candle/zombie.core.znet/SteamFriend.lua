@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class SteamFriend
 --- @field public class any
-SteamFriend = {};
+SteamFriend = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,17 +13,16 @@ SteamFriend = {};
 function SteamFriend:getAvatar() end
 
 --- @public
---- @return String
+--- @return string
 function SteamFriend:getName() end
 
 --- @public
---- @return String
+--- @return string
 function SteamFriend:getState() end
 
 --- @public
---- @return String
+--- @return string
 function SteamFriend:getSteamID() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -31,5 +30,5 @@ function SteamFriend:getSteamID() end
 
 --- @public
 --- @return SteamFriend
---- @overload fun(arg0: String, arg1: long): SteamFriend
+--- @overload fun(arg0: string, arg1: integer): SteamFriend
 function SteamFriend.new() end

@@ -37,7 +37,6 @@
 ---@field [any] any
 ISComboBox = ISPanel:derive("ISComboBox")
 
-
 ---@return any
 function ISComboBox:addOption(option) end
 
@@ -155,7 +154,6 @@ function ISComboBox:setWidthToOptions(minWidth) end
 ---@return any
 function ISComboBox:showPopup() end
 
-
 ---@return ISComboBox
 function ISComboBox:new(x, y, width, height, target, onChange, onChangeArg1, onChangeArg2) end
 
@@ -164,13 +162,11 @@ function ISComboBox:new(x, y, width, height, target, onChange, onChangeArg1, onC
 ---@field [any] any
 ISComboBoxEditor = ISTextEntryBox:derive("ISComboBoxEditor")
 
-
 ---@return any
 function ISComboBoxEditor:onOtherKey(key) end
 
 ---@return any
 function ISComboBoxEditor:onTextChange() end
-
 
 ---@return ISComboBoxEditor
 function ISComboBoxEditor:new(x, y, width, height, comboBox) end
@@ -184,7 +180,6 @@ function ISComboBoxEditor:new(x, y, width, height, comboBox) end
 ---@field tooWideY any
 ---@field [any] any
 ISComboBoxPopup = ISScrollingListBox:derive("ISComboBoxPopup")
-
 
 ---@return any
 function ISComboBoxPopup:doDrawItem(y, item, alt) end
@@ -203,7 +198,6 @@ function ISComboBoxPopup:render() end
 
 ---@return any
 function ISComboBoxPopup:setComboBox(comboBox) end
-
 
 ---@return ISComboBoxPopup
 function ISComboBoxPopup:new(x, y, width, height) end

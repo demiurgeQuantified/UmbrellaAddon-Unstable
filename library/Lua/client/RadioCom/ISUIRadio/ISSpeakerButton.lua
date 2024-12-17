@@ -22,7 +22,6 @@
 ---@field [any] any
 ISSpeakerButton = ISPanel:derive("ISSpeakerButton")
 
-
 ---@return any
 function ISSpeakerButton:createChildren() end
 
@@ -49,7 +48,6 @@ function ISSpeakerButton:render() end
 
 ---@return any
 function ISSpeakerButton:setEnableControls(_b) end
-
 
 ---@return ISSpeakerButton
 function ISSpeakerButton:new(x, y, width, height, onclick, onclickTarget) end

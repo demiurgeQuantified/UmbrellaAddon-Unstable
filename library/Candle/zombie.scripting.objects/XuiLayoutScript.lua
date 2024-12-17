@@ -1,21 +1,21 @@
---- @meta
+--- @meta _
 
 --- @class XuiLayoutScript: BaseScriptObject
 --- @field public class any
-XuiLayoutScript = {};
+XuiLayoutScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function XuiLayoutScript:Load(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function XuiLayoutScript:getName() end
 
 --- @public
@@ -27,13 +27,12 @@ function XuiLayoutScript:getScriptType() end
 function XuiLayoutScript:getXuiScript() end
 
 --- @public
---- @return void
+--- @return nil
 function XuiLayoutScript:parseScript() end
 
 --- @public
---- @return void
+--- @return nil
 function XuiLayoutScript:preParse() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

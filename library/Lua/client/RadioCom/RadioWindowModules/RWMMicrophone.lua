@@ -18,7 +18,6 @@
 ---@field [any] any
 RWMMicrophone = RWMPanel:derive("RWMMicrophone")
 
-
 ---@return any
 function RWMMicrophone:createChildren() end
 
@@ -57,7 +56,6 @@ function RWMMicrophone:setMuteButtonText() end
 
 ---@return any
 function RWMMicrophone:update() end
-
 
 ---@return RWMMicrophone
 function RWMMicrophone:new(x, y, width, height) end

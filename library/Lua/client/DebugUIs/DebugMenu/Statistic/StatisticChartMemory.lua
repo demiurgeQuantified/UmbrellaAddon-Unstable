@@ -8,7 +8,6 @@ StatisticChartMemory.instance = nil
 StatisticChartMemory.shiftDown = 0
 StatisticChartMemory.eventsAdded = false
 
-
 ---@return any
 function StatisticChartMemory.doInstance() end
 
@@ -17,7 +16,6 @@ function StatisticChartMemory.OnOpenPanel() end
 
 ---@return any
 function StatisticChartMemory.OnServerStatisticReceived() end
-
 
 ---@return any
 function StatisticChartMemory:createChildren() end

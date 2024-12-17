@@ -29,7 +29,6 @@
 ---@field [any] any
 ISEntityViewPanel = ISPanel:derive("ISEntityViewPanel")
 
-
 ---@return any
 function ISEntityViewPanel:createChildren() end
 
@@ -68,7 +67,6 @@ function ISEntityViewPanel:setEntity(_entity) end
 
 ---@return any
 function ISEntityViewPanel:update() end
-
 
 ---@return ISEntityViewPanel
 function ISEntityViewPanel:new(x, y, width, height, entity) end

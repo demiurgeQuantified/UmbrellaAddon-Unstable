@@ -9,10 +9,8 @@
 ---@field [any] any
 ISTutorialPageInfo = ISBaseObject:derive("ISTutorialPageInfo")
 
-
 ---@return any
 function ISTutorialPageInfo:initialise() end
-
 
 ---@return ISTutorialPageInfo
 function ISTutorialPageInfo:new(title, text, moreTextInfo, nextcondition) end
@@ -23,7 +21,6 @@ function ISTutorialPageInfo:new(title, text, moreTextInfo, nextcondition) end
 ---@field pages any
 ---@field [any] any
 ISTutorialSetInfo = ISBaseObject:derive("ISTutorialSetInfo")
-
 
 ---@return any
 function ISTutorialSetInfo:addPage(pagetitle, pagetext, moreTextInfo, pagenextcondition) end
@@ -45,7 +42,6 @@ function ISTutorialSetInfo:initialise() end
 
 ---@return any
 function ISTutorialSetInfo:update(tutorialPanel) end
-
 
 ---@return ISTutorialSetInfo
 function ISTutorialSetInfo:new() end

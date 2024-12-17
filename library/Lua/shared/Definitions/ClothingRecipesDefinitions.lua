@@ -3,7 +3,7 @@
 ---@class ClothingRecipesDefinitions
 ClothingRecipesDefinitions = {}
 ClothingRecipesDefinitions["Sheet"] = {
-    materials = "Base.RippedSheets:4",
+	materials = "Base.RippedSheets:4",
 }
 ClothingRecipesDefinitions["FabricType"] = {}
 ClothingRecipesDefinitions["FabricType"]["Cotton"] = {}

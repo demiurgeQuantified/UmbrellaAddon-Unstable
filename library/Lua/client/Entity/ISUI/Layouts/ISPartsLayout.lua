@@ -40,7 +40,6 @@
 ISPartsLayout = ISPanel:derive("ISPartsLayout")
 ISPartsLayout.defaultJoypadMoveInterval = 20
 
-
 ---@return any
 function ISPartsLayout:createChildren() end
 
@@ -61,7 +60,6 @@ function ISPartsLayout:setEfficiency(_efficiency) end
 
 ---@return any
 function ISPartsLayout:update() end
-
 
 ---@return ISPartsLayout
 function ISPartsLayout:new(x, y, _parentPanel, _blueprintLogic) end

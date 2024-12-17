@@ -7,7 +7,6 @@ UnitTestsTimedActionsPanelTestResults = {}
 ---@field [any] any
 UnitTestsTimedActionsPanel = ISDebugSubPanelBase:derive("UnitTestsTimedActionsPanel")
 
-
 ---@return any
 function UnitTestsTimedActionsPanel.onFail() end
 
@@ -16,7 +15,6 @@ function UnitTestsTimedActionsPanel.onStartTest(name) end
 
 ---@return any
 function UnitTestsTimedActionsPanel.onSuccess() end
-
 
 ---@return any
 function UnitTestsTimedActionsPanel:createChildren() end
@@ -41,7 +39,6 @@ function UnitTestsTimedActionsPanel:prerender() end
 
 ---@return any
 function UnitTestsTimedActionsPanel:update() end
-
 
 ---@return UnitTestsTimedActionsPanel
 function UnitTestsTimedActionsPanel:new(x, y, width, height, doStencil) end

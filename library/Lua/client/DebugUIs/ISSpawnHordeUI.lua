@@ -40,7 +40,6 @@
 ---@field [any] any
 ISSpawnHordeUI = ISCollapsableWindow:derive("ISSpawnHordeUI")
 
-
 ---@return any
 function ISSpawnHordeUI:addMarker(square, radius) end
 
@@ -88,7 +87,6 @@ function ISSpawnHordeUI:removeMarker() end
 
 ---@return any
 function ISSpawnHordeUI:render() end
-
 
 ---@return ISSpawnHordeUI
 function ISSpawnHordeUI:new(x, y, character, square) end

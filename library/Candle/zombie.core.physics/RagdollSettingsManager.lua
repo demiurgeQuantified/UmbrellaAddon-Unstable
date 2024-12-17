@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class RagdollSettingsManager
 --- @field public class any
---- @field public GlobalChanceID int
-RagdollSettingsManager = {};
+--- @field public GlobalChanceID integer
+RagdollSettingsManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,9 +17,8 @@ function RagdollSettingsManager.getInstance() end
 --- @public
 --- @static
 --- @param arg0 RagdollSettingsManager
---- @return void
+--- @return nil
 function RagdollSettingsManager.setInstance(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,7 +26,7 @@ function RagdollSettingsManager.setInstance(arg0) end
 
 --- @public
 --- @param arg0 RagdollBodyPart
---- @return float
+--- @return number
 function RagdollSettingsManager:getChanceSetting(arg0) end
 
 --- @public
@@ -37,63 +36,63 @@ function RagdollSettingsManager:getEnabledSetting(arg0) end
 
 --- @public
 --- @return ForceHitReactionLocation
---- @overload fun(self: RagdollSettingsManager, arg0: int): ForceHitReactionLocation
+--- @overload fun(self: RagdollSettingsManager, arg0: integer): ForceHitReactionLocation
 function RagdollSettingsManager:getForceHitReactionLocation() end
 
 --- @public
---- @return String
+--- @return string
 function RagdollSettingsManager:getForcedHitReactionLocationAsShotLocation() end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSettingsManager:getGlobalImpulseSetting() end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSettingsManager:getGlobalUpImpulseSetting() end
 
 --- @public
---- @return int
+--- @return integer
 function RagdollSettingsManager:getHitReactionLocationsCount() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return HitReactionSetting
 function RagdollSettingsManager:getHitReactionSetting(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function RagdollSettingsManager:getHitReactionSettingsCount() end
 
 --- @public
 --- @param arg0 RagdollBodyPart
---- @return float
+--- @return number
 function RagdollSettingsManager:getImpulseSetting(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSettingsManager:getSandboxHitReactionFrequency() end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSettingsManager:getSandboxHitReactionImpulseStrength() end
 
 --- @public
---- @return float
+--- @return number
 function RagdollSettingsManager:getSandboxHitReactionUpImpulseStrength() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return RagdollSetting
 function RagdollSettingsManager:getSetting(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function RagdollSettingsManager:getSettingsCount() end
 
 --- @public
 --- @param arg0 RagdollBodyPart
---- @return float
+--- @return number
 function RagdollSettingsManager:getUpImpulseSetting(arg0) end
 
 --- @public
@@ -101,18 +100,17 @@ function RagdollSettingsManager:getUpImpulseSetting(arg0) end
 function RagdollSettingsManager:isForcedHitReaction() end
 
 --- @public
---- @return void
+--- @return nil
 function RagdollSettingsManager:resetToDefaults() end
 
 --- @public
---- @return void
+--- @return nil
 function RagdollSettingsManager:update() end
 
 --- @public
 --- @param arg0 IsoZombie
 --- @return boolean
 function RagdollSettingsManager:usePhysicHitReaction(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

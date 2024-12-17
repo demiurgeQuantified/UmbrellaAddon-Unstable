@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ScriptType: Enum
 --- @field public class any
@@ -36,7 +36,7 @@
 --- @field public XuiLayout ScriptType
 --- @field public XuiSkin ScriptType
 --- @field public XuiStyle ScriptType
-ScriptType = {};
+ScriptType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -49,7 +49,7 @@ function ScriptType.GetEnumListLua() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ScriptType
 function ScriptType.valueOf(arg0) end
 
@@ -58,13 +58,12 @@ function ScriptType.valueOf(arg0) end
 --- @return ScriptType[]
 function ScriptType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ScriptType:getScriptTag() end
 
 --- @public
@@ -91,7 +90,5 @@ function ScriptType:isVerbose() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ScriptType:setVerbose(arg0) end
-
-

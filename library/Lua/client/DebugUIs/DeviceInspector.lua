@@ -31,10 +31,8 @@
 DeviceInspector = ISCollapsableWindow:derive("DeviceInspector")
 DeviceInspector.instance = nil
 
-
 ---@return any
 function DeviceInspector.onMouseButtonUp(_object, _x, _y) end
-
 
 ---@return any
 function DeviceInspector:addLine(_prefix, _line) end
@@ -77,7 +75,6 @@ function DeviceInspector:stayOnSplitScreen() end
 
 ---@return any
 function DeviceInspector:update() end
-
 
 ---@return DeviceInspector
 function DeviceInspector:new(x, y, width, height, player) end

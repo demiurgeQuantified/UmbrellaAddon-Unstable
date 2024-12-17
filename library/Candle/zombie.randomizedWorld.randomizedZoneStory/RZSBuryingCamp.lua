@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSBuryingCamp: RandomizedZoneStoryBase
 --- @field public class any
-RZSBuryingCamp = {};
+RZSBuryingCamp = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSBuryingCamp = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSBuryingCamp:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

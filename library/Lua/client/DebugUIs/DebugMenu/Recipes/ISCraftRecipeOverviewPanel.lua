@@ -12,10 +12,8 @@
 ---@field [any] any
 ISCraftRecipeOverviewPanel = ISPanel:derive("ISCraftRecipeOverviewPanel")
 
-
 ---@return any
 function ISCraftRecipeOverviewPanel.onTextChange(box) end
-
 
 ---@return any
 function ISCraftRecipeOverviewPanel:close() end
@@ -49,7 +47,6 @@ function ISCraftRecipeOverviewPanel:prerender() end
 
 ---@return any
 function ISCraftRecipeOverviewPanel:render() end
-
 
 ---@return ISCraftRecipeOverviewPanel
 function ISCraftRecipeOverviewPanel:new(x, y, width, height, player) end

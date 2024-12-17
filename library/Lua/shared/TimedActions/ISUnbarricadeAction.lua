@@ -7,7 +7,6 @@
 ---@field [any] any
 ISUnbarricadeAction = ISBaseTimedAction:derive("ISUnbarricadeAction")
 
-
 ---@return any
 function ISUnbarricadeAction:complete() end
 
@@ -31,7 +30,6 @@ function ISUnbarricadeAction:update() end
 
 ---@return any
 function ISUnbarricadeAction:waitToStart() end
-
 
 ---@return ISUnbarricadeAction
 function ISUnbarricadeAction:new(character, item) end

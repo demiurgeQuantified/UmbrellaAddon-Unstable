@@ -9,7 +9,6 @@
 ---@field [any] any
 MultiplayerZoneEditorMode = ISPanel:derive("MultiplayerZoneEditorMode")
 
-
 ---@return any
 function MultiplayerZoneEditorMode:display() end
 
@@ -36,7 +35,6 @@ function MultiplayerZoneEditorMode:onMouseWheel(del) end
 
 ---@return any
 function MultiplayerZoneEditorMode:undisplay() end
-
 
 ---@return MultiplayerZoneEditorMode
 function MultiplayerZoneEditorMode:new(editor) end

@@ -10,7 +10,6 @@
 ---@field [any] any
 ISClothingExtraAction = ISBaseTimedAction:derive("ISClothingExtraAction")
 
-
 ---@return any
 function ISClothingExtraAction:createItem(item, itemType) end
 
@@ -40,7 +39,6 @@ function ISClothingExtraAction:update() end
 
 ---@return any
 function ISClothingExtraAction:waitToStart() end
-
 
 ---@return ISClothingExtraAction
 function ISClothingExtraAction:new(character, item, extra) end

@@ -1,57 +1,57 @@
---- @meta
+--- @meta _
 
 --- @class PuddlesFloat
 --- @field public class any
-PuddlesFloat = {};
+PuddlesFloat = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function PuddlesFloat:addFinalValue(arg0) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
 function PuddlesFloat:addFinalValueForMax(arg0, arg1) end
 
 --- @public
---- @return float
+--- @return number
 function PuddlesFloat:getAdminValue() end
 
 --- @public
---- @return float
+--- @return number
 function PuddlesFloat:getFinalValue() end
 
 --- @public
---- @return int
+--- @return integer
 function PuddlesFloat:getID() end
 
 --- @public
---- @return float
+--- @return number
 function PuddlesFloat:getMax() end
 
 --- @public
---- @return float
+--- @return number
 function PuddlesFloat:getMin() end
 
 --- @public
---- @return String
+--- @return string
 function PuddlesFloat:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param arg0 integer
+--- @param arg1 string
 --- @return PuddlesFloat
 function PuddlesFloat:init(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function PuddlesFloat:interpolateFinalValue(arg0) end
 
 --- @public
@@ -59,20 +59,19 @@ function PuddlesFloat:interpolateFinalValue(arg0) end
 function PuddlesFloat:isEnableAdmin() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function PuddlesFloat:setAdminValue(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function PuddlesFloat:setEnableAdmin(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function PuddlesFloat:setFinalValue(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

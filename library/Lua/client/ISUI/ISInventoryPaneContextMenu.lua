@@ -10,9 +10,15 @@ ISInventoryPaneContextMenu.tooltipsUsed = {}
 ISInventoryPaneContextMenu.ghs = "<GHC>"
 ISInventoryPaneContextMenu.bhs = "<BHC>"
 
-
 ---@return any
-function ISInventoryPaneContextMenu.addDynamicalContextMenu(selectedItem, context, recipeList, player, containerList) end
+function ISInventoryPaneContextMenu.addDynamicalContextMenu(
+	selectedItem,
+	context,
+	recipeList,
+	player,
+	containerList
+)
+end
 
 ---@return any
 function ISInventoryPaneContextMenu.addEatTooltip(option, items, percent) end
@@ -21,16 +27,41 @@ function ISInventoryPaneContextMenu.addEatTooltip(option, items, percent) end
 function ISInventoryPaneContextMenu.addFishRodOptions(fishingRod, haveLure, context, player) end
 
 ---@return any
-function ISInventoryPaneContextMenu.addFixerSubOption(brokenObject, player, fixing, fixingNum, fixer, fixerNum, subMenuFix, vehiclePart) end
+function ISInventoryPaneContextMenu.addFixerSubOption(
+	brokenObject,
+	player,
+	fixing,
+	fixingNum,
+	fixer,
+	fixerNum,
+	subMenuFix,
+	vehiclePart
+)
+end
 
 ---@return any
-function ISInventoryPaneContextMenu.addItemInEvoRecipe(subMenuRecipe, baseItem, evoItem, extraInfo, evorecipe2, player) end
+function ISInventoryPaneContextMenu.addItemInEvoRecipe(
+	subMenuRecipe,
+	baseItem,
+	evoItem,
+	extraInfo,
+	evorecipe2,
+	player
+)
+end
 
 ---@return any
 function ISInventoryPaneContextMenu.addLure(player, fishingRod, lure) end
 
 ---@return any
-function ISInventoryPaneContextMenu.addNewCraftingDynamicalContextMenu(selectedItem, context, recipeList, player, containerList) end
+function ISInventoryPaneContextMenu.addNewCraftingDynamicalContextMenu(
+	selectedItem,
+	context,
+	recipeList,
+	player,
+	containerList
+)
+end
 
 ---@return any
 function ISInventoryPaneContextMenu.addToolTip() end
@@ -45,7 +76,16 @@ function ISInventoryPaneContextMenu.AutoDrinkOff(waterContainer) end
 function ISInventoryPaneContextMenu.AutoDrinkOn(waterContainer) end
 
 ---@return any
-function ISInventoryPaneContextMenu.buildFixingMenu(brokenObject, player, fixing, fixingNum, fixOption, subMenuFix, vehiclePart) end
+function ISInventoryPaneContextMenu.buildFixingMenu(
+	brokenObject,
+	player,
+	fixing,
+	fixingNum,
+	fixOption,
+	subMenuFix,
+	vehiclePart
+)
+end
 
 ---@return any
 function ISInventoryPaneContextMenu.canAddManyItems(recipe, selectedItem, playerObj) end
@@ -231,7 +271,16 @@ function ISInventoryPaneContextMenu.onConsolidateAll(drainable, consolidateList,
 function ISInventoryPaneContextMenu.OnCraft(selectedItem, recipe, player, all) end
 
 ---@return any
-function ISInventoryPaneContextMenu.OnCraftComplete(completedAction, recipe, playerObj, container, containers, selectedItemType, selectedItemContainer) end
+function ISInventoryPaneContextMenu.OnCraftComplete(
+	completedAction,
+	recipe,
+	playerObj,
+	container,
+	containers,
+	selectedItemType,
+	selectedItemContainer
+)
+end
 
 ---@return any
 function ISInventoryPaneContextMenu.onDrink(items, waterContainer, percentage, player) end
@@ -445,7 +494,6 @@ function ISInventoryPaneContextMenu.unequipItem(item, player) end
 
 ---@return any
 function ISInventoryPaneContextMenu.wearItem(item, player) end
-
 
 ---@return any
 function ISInventoryPaneContextMenu:onRenameBagClick(button, player, item) end

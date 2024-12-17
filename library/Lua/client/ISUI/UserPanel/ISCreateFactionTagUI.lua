@@ -18,7 +18,6 @@
 ISCreateFactionTagUI = ISPanel:derive("ISCreateFactionTagUI")
 ISCreateFactionTagUI.messages = {}
 
-
 ---@return any
 function ISCreateFactionTagUI:initialise() end
 
@@ -33,7 +32,6 @@ function ISCreateFactionTagUI:render() end
 
 ---@return any
 function ISCreateFactionTagUI:updateButtons() end
-
 
 ---@return ISCreateFactionTagUI
 function ISCreateFactionTagUI:new(x, y, width, height, player, faction) end

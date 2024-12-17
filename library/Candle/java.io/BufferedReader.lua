@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class BufferedReader: Reader
 --- @field public class any
-BufferedReader = {};
+BufferedReader = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function BufferedReader:close() end
 
 --- @public
@@ -17,8 +17,8 @@ function BufferedReader:close() end
 function BufferedReader:lines() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function BufferedReader:mark(arg0) end
 
 --- @public
@@ -26,12 +26,12 @@ function BufferedReader:mark(arg0) end
 function BufferedReader:markSupported() end
 
 --- @public
---- @return int
---- @overload fun(self: BufferedReader, arg0: char[], arg1: int, arg2: int): int
+--- @return integer
+--- @overload fun(self: BufferedReader, arg0: char[], arg1: integer, arg2: integer): integer
 function BufferedReader:read() end
 
 --- @public
---- @return String
+--- @return string
 function BufferedReader:readLine() end
 
 --- @public
@@ -39,14 +39,13 @@ function BufferedReader:readLine() end
 function BufferedReader:ready() end
 
 --- @public
---- @return void
+--- @return nil
 function BufferedReader:reset() end
 
 --- @public
---- @param arg0 long
---- @return long
+--- @param arg0 integer
+--- @return integer
 function BufferedReader:skip(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -55,5 +54,5 @@ function BufferedReader:skip(arg0) end
 --- @public
 --- @param arg0 Reader
 --- @return BufferedReader
---- @overload fun(arg0: Reader, arg1: int): BufferedReader
+--- @overload fun(arg0: Reader, arg1: integer): BufferedReader
 function BufferedReader.new(arg0) end

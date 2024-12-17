@@ -14,7 +14,6 @@ CraftRecipeCode.COLUMN_BLOOD = 5
 CraftRecipeCode.COLUMN_GREASE = 6
 CraftRecipeCode.DUMMY_ITEM = "Base.Animal_Item_Dummy"
 
-
 ---@return any
 function CraftRecipeCode.getAnimalBody(_craftRecipeData) end
 

@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class Fixer
 --- @field public class any
-Fixer = {};
+Fixer = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Fixer:getFixerName() end
 
 --- @public
@@ -17,17 +17,16 @@ function Fixer:getFixerName() end
 function Fixer:getFixerSkills() end
 
 --- @public
---- @return int
+--- @return integer
 function Fixer:getNumberOfUse() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 LinkedList
---- @param arg2 int
+--- @param arg2 integer
 --- @return Fixer
 function Fixer.new(arg0, arg1, arg2) end

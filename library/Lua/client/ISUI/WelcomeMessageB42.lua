@@ -3,7 +3,6 @@
 ---@class WelcomeMessageB42
 WelcomeMessageB42 = {}
 
-
 ---@return any
 function WelcomeMessageB42.doMsg() end
 
@@ -18,7 +17,6 @@ function WelcomeMessageB42.doMsg() end
 ---@field [any] any
 WelcomeMessageUI = ISCollapsableWindow:derive("WelcomeMessageUI")
 
-
 ---@return any
 function WelcomeMessageUI:create() end
 
@@ -27,7 +25,6 @@ function WelcomeMessageUI:initialise() end
 
 ---@return any
 function WelcomeMessageUI:render() end
-
 
 ---@return WelcomeMessageUI
 function WelcomeMessageUI:new(x, y, width, height) end

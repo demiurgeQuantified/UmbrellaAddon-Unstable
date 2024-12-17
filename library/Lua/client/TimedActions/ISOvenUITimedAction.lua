@@ -7,7 +7,6 @@
 ---@field [any] any
 ISOvenUITimedAction = ISBaseTimedAction:derive("ISOvenUITimedAction")
 
-
 ---@return any
 function ISOvenUITimedAction:isValid() end
 
@@ -22,7 +21,6 @@ function ISOvenUITimedAction:stop() end
 
 ---@return any
 function ISOvenUITimedAction:update() end
-
 
 ---@return ISOvenUITimedAction
 function ISOvenUITimedAction:new(character, stove, mcwave) end

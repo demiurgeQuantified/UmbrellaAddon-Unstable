@@ -25,7 +25,6 @@
 ISOvenUI = ISPanelJoypad:derive("ISOvenUI")
 ISOvenUI.messages = {}
 
-
 ---@return any
 function ISOvenUI:addKnobValues() end
 
@@ -61,7 +60,6 @@ function ISOvenUI:update() end
 
 ---@return any
 function ISOvenUI:updateButtons() end
-
 
 ---@return ISOvenUI
 function ISOvenUI:new(x, y, width, height, oven, character) end

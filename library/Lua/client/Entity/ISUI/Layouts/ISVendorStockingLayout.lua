@@ -7,7 +7,5 @@
 ---@field [any] any
 ISVendorStockingLayout = ISBaseStockingLayout:derive("ISVendorStockingLayout")
 
-
-
 ---@return ISVendorStockingLayout
 function ISVendorStockingLayout:new(x, y, _parentPanel, _blueprintLogic) end

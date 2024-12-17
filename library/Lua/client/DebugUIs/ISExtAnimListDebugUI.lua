@@ -21,7 +21,6 @@
 ---@field [any] any
 ISExtAnimListDebugUI = ISCollapsableWindow:derive("ISExtAnimListDebugUI")
 
-
 ---@return any
 function ISExtAnimListDebugUI:closeUI() end
 
@@ -39,7 +38,6 @@ function ISExtAnimListDebugUI:render() end
 
 ---@return any
 function ISExtAnimListDebugUI:update() end
-
 
 ---@return ISExtAnimListDebugUI
 function ISExtAnimListDebugUI:new(x, y, character) end

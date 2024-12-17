@@ -6,7 +6,6 @@ ISEntityUI.drawDebugLines = false
 ISEntityUI.players = {}
 ISEntityUI.isoPanelWalkToDist = 3
 
-
 ---@return any
 function ISEntityUI.CanOpenWindowFor(_player, _entity) end
 

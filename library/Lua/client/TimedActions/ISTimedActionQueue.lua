@@ -10,7 +10,6 @@ ISTimedActionQueue = ISBaseObject:derive("ISTimedActionQueue")
 ISTimedActionQueue.IDMax = 1
 ISTimedActionQueue.queues = {}
 
-
 ---@return any
 function ISTimedActionQueue.add(action) end
 
@@ -39,8 +38,21 @@ function ISTimedActionQueue.isPlayerDoingAction(playerObj) end
 function ISTimedActionQueue.onTick() end
 
 ---@return any
-function ISTimedActionQueue.queueActions(character, addActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
-
+function ISTimedActionQueue.queueActions(
+	character,
+	addActionsFunction,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10
+)
+end
 
 ---@return any
 function ISTimedActionQueue:addToQueue(action) end
@@ -71,7 +83,6 @@ function ISTimedActionQueue:resetQueue() end
 
 ---@return any
 function ISTimedActionQueue:tick() end
-
 
 ---@return ISTimedActionQueue
 function ISTimedActionQueue:new(character) end

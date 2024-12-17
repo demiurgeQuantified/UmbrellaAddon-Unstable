@@ -46,13 +46,11 @@
 ISButcherHookUI = ISCollapsableWindow:derive("ISButcherHookUI")
 ISButcherHookUI.ui = nil
 
-
 ---@return any
 function ISButcherHookUI.onReattachAnimal(hook, animal) end
 
 ---@return any
 function ISButcherHookUI.onStopBleedingAnimal(self) end
-
 
 ---@return any
 function ISButcherHookUI:addCorpseAction(corpse) end
@@ -140,7 +138,6 @@ function ISButcherHookUI:updatePositions(test, button, label, infoLabel, yoffset
 
 ---@return any
 function ISButcherHookUI:updateProgressBar(progress) end
-
 
 ---@return ISButcherHookUI
 function ISButcherHookUI:new(x, y, width, height, hook, player) end

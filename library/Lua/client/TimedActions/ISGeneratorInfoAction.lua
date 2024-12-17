@@ -7,13 +7,11 @@
 ---@field [any] any
 ISGeneratorInfoAction = ISBaseTimedAction:derive("ISGeneratorInfoAction")
 
-
 ---@return any
 function ISGeneratorInfoAction:isValid() end
 
 ---@return any
 function ISGeneratorInfoAction:perform() end
-
 
 ---@return ISGeneratorInfoAction
 function ISGeneratorInfoAction:new(character, object) end

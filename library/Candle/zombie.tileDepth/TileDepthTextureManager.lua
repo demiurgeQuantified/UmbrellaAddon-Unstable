@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class TileDepthTextureManager
 --- @field public class any
 --- @field public DELAYED_LOADING boolean
-TileDepthTextureManager = {};
+TileDepthTextureManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,21 +14,20 @@ TileDepthTextureManager = {};
 --- @return TileDepthTextureManager
 function TileDepthTextureManager.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureManager:Reset() end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureManager:addedLoadTask() end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureManager:finishedLoadTask() end
 
 --- @public
@@ -36,8 +35,8 @@ function TileDepthTextureManager:finishedLoadTask() end
 function TileDepthTextureManager:getDefaultDepthTexture() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return TileDepthTexture
 function TileDepthTextureManager:getPresetDepthTexture(arg0, arg1) end
 
@@ -46,34 +45,34 @@ function TileDepthTextureManager:getPresetDepthTexture(arg0, arg1) end
 function TileDepthTextureManager:getPresetTilesetDepthTexture() end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return TileDepthTexture
---- @overload fun(self: TileDepthTextureManager, arg0: String, arg1: String, arg2: int): TileDepthTexture
+--- @overload fun(self: TileDepthTextureManager, arg0: string, arg1: string, arg2: integer): TileDepthTexture
 function TileDepthTextureManager:getTexture(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return TileDepthTexture
---- @overload fun(self: TileDepthTextureManager, arg0: String, arg1: String): TileDepthTexture
+--- @overload fun(self: TileDepthTextureManager, arg0: string, arg1: string): TileDepthTexture
 function TileDepthTextureManager:getTextureFromTileName(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureManager:init() end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureManager:initGameData() end
 
 --- @public
 --- @param arg0 Mod
---- @return void
+--- @return nil
 function TileDepthTextureManager:initModData(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: TileDepthTextureManager, arg0: String): void
+--- @return nil
+--- @overload fun(self: TileDepthTextureManager, arg0: string): nil
 function TileDepthTextureManager:initSprites() end
 
 --- @public
@@ -81,30 +80,28 @@ function TileDepthTextureManager:initSprites() end
 function TileDepthTextureManager:isLoadingFinished() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function TileDepthTextureManager:loadTilesetPixelsIfNeeded(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureManager:loadedTileDefinitions() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function TileDepthTextureManager:mergeAfterEditing(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function TileDepthTextureManager:reloadTileset(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function TileDepthTextureManager:saveTileset(arg0, arg1) end
-
-

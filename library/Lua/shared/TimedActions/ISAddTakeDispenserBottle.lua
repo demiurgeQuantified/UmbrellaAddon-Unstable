@@ -9,7 +9,6 @@
 ---@field [any] any
 ISAddTakeDispenserBottle = ISBaseTimedAction:derive("ISAddTakeDispenserBottle")
 
-
 ---@return any
 function ISAddTakeDispenserBottle:complete() end
 
@@ -33,7 +32,6 @@ function ISAddTakeDispenserBottle:update() end
 
 ---@return any
 function ISAddTakeDispenserBottle:waitToStart() end
-
 
 ---@return ISAddTakeDispenserBottle
 function ISAddTakeDispenserBottle:new(character, waterdispenser, bottle) end

@@ -18,7 +18,6 @@
 ---@field [any] any
 CharacterCreationHeader = ISPanel:derive("CharacterCreationHeader")
 
-
 ---@return any
 function CharacterCreationHeader:create() end
 
@@ -60,7 +59,6 @@ function CharacterCreationHeader:render() end
 
 ---@return any
 function CharacterCreationHeader:setAvatarFromUI() end
-
 
 ---@return CharacterCreationHeader
 function CharacterCreationHeader:new(x, y, width, height) end

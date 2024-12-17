@@ -15,7 +15,6 @@ ISFarmingMenu.GardeningSprayCigarettes = nil
 ISFarmingMenu.SlugRepellent = nil
 ISFarmingMenu.cheat = false
 
-
 ---@return any
 function ISFarmingMenu.canDigHere(worldObjects) end
 
@@ -105,7 +104,6 @@ function ISFarmingMenu.plantInfo(prop) end
 
 ---@return any
 function ISFarmingMenu.walkToPlant(playerObj, square) end
-
 
 ---@return any
 function ISFarmingMenu:doSeedMenu(context, plant, sq, playerObj) end

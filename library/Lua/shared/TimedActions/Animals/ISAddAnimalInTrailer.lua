@@ -8,7 +8,6 @@
 ---@field [any] any
 ISAddAnimalInTrailer = ISBaseTimedAction:derive("ISAddAnimalInTrailer")
 
-
 ---@return any
 function ISAddAnimalInTrailer:complete() end
 
@@ -32,7 +31,6 @@ function ISAddAnimalInTrailer:update() end
 
 ---@return any
 function ISAddAnimalInTrailer:waitToStart() end
-
 
 ---@return ISAddAnimalInTrailer
 function ISAddAnimalInTrailer:new(character, vehicle, animal, fromHand) end

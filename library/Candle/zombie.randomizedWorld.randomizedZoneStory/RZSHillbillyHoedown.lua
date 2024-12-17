@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSHillbillyHoedown: RandomizedZoneStoryBase
 --- @field public class any
-RZSHillbillyHoedown = {};
+RZSHillbillyHoedown = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,16 +13,14 @@ RZSHillbillyHoedown = {};
 --- @return ArrayList
 function RZSHillbillyHoedown.getBagClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSHillbillyHoedown:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

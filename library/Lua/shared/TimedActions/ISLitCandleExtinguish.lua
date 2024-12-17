@@ -9,7 +9,6 @@
 ---@field [any] any
 ISLitCandleExtinguish = ISBaseTimedAction:derive("ISLitCandleExtinguish")
 
-
 ---@return any
 function ISLitCandleExtinguish:complete() end
 
@@ -30,7 +29,6 @@ function ISLitCandleExtinguish:stop() end
 
 ---@return any
 function ISLitCandleExtinguish:update() end
-
 
 ---@return ISLitCandleExtinguish
 function ISLitCandleExtinguish:new(character, item) end

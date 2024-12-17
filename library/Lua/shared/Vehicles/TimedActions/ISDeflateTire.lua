@@ -13,7 +13,6 @@
 ---@field [any] any
 ISDeflateTire = ISBaseTimedAction:derive("ISDeflateTire")
 
-
 ---@return any
 function ISDeflateTire:complete() end
 
@@ -37,7 +36,6 @@ function ISDeflateTire:stop() end
 
 ---@return any
 function ISDeflateTire:update() end
-
 
 ---@return ISDeflateTire
 function ISDeflateTire:new(character, part, psiTarget) end

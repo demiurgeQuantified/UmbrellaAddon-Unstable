@@ -1,51 +1,51 @@
---- @meta
+--- @meta _
 
 --- @class CircleIsoMarker
 --- @field public class any
-CircleIsoMarker = {};
+CircleIsoMarker = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getA() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getAlpha() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getAlphaMax() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getAlphaMin() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getB() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getFadeSpeed() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getG() end
 
 --- @public
---- @return int
+--- @return integer
 function CircleIsoMarker:getID() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getR() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getSize() end
 
 --- @public
@@ -53,23 +53,23 @@ function CircleIsoMarker:getSize() end
 function CircleIsoMarker:getSquare() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getX() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getY() end
 
 --- @public
---- @return float
+--- @return number
 function CircleIsoMarker:getZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 IsoGridSquare
---- @return void
+--- @return nil
 function CircleIsoMarker:init(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -85,76 +85,75 @@ function CircleIsoMarker:isDoAlpha() end
 function CircleIsoMarker:isRemoved() end
 
 --- @public
---- @return void
+--- @return nil
 function CircleIsoMarker:remove() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setA(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function CircleIsoMarker:setActive(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setAlpha(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setAlphaMax(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setAlphaMin(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setB(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function CircleIsoMarker:setDoAlpha(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setFadeSpeed(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setG(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function CircleIsoMarker:setPos(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setR(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function CircleIsoMarker:setSize(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function CircleIsoMarker:setSquare(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

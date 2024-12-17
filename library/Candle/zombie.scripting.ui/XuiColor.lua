@@ -1,31 +1,29 @@
---- @meta
+--- @meta _
 
 --- @class XuiColor: XuiVar
 --- @field public class any
-XuiColor = {};
+XuiColor = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function XuiColor:getA() end
 
 --- @public
---- @return float
+--- @return number
 function XuiColor:getB() end
 
 --- @public
---- @return float
+--- @return number
 function XuiColor:getG() end
 
 --- @public
---- @return float
+--- @return number
 function XuiColor:getR() end
 
 --- @public
---- @return String
+--- @return string
 function XuiColor:getValueString() end
-
-

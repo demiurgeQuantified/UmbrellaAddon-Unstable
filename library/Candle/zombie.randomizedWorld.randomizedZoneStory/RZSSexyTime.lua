@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSSexyTime: RandomizedZoneStoryBase
 --- @field public class any
-RZSSexyTime = {};
+RZSSexyTime = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSSexyTime = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSSexyTime:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class CharacterActionAnims: Enum
 --- @field public class any
@@ -25,7 +25,7 @@
 --- @field public RemoveBullets CharacterActionAnims
 --- @field public Shave CharacterActionAnims
 --- @field public TakePills CharacterActionAnims
-CharacterActionAnims = {};
+CharacterActionAnims = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -33,7 +33,7 @@ CharacterActionAnims = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return CharacterActionAnims
 function CharacterActionAnims.valueOf(arg0) end
 
@@ -41,5 +41,3 @@ function CharacterActionAnims.valueOf(arg0) end
 --- @static
 --- @return CharacterActionAnims[]
 function CharacterActionAnims.values() end
-
-

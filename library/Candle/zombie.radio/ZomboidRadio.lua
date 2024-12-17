@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ZomboidRadio
 --- @field public class any
@@ -8,8 +8,8 @@
 --- @field public DISABLE_BROADCASTING boolean
 --- @field public LOUISVILLE_OBFUSCATION boolean
 --- @field public POST_RADIO_SILENCE boolean
---- @field public SAVE_FILE String
-ZomboidRadio = {};
+--- @field public SAVE_FILE string
+ZomboidRadio = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,7 @@ ZomboidRadio = {};
 --- @public
 --- @static
 --- @param arg0 RadioChannel
---- @return void
+--- @return nil
 function ZomboidRadio.ObfuscateChannelCheck(arg0) end
 
 --- @public
@@ -33,23 +33,22 @@ function ZomboidRadio.hasInstance() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ZomboidRadio.isStaticSound(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Map
 function ZomboidRadio:GetChannelList(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ZomboidRadio:Init(arg0) end
 
 --- @public
@@ -57,81 +56,81 @@ function ZomboidRadio:Init(arg0) end
 function ZomboidRadio:Load() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function ZomboidRadio:PlayerListensChannel(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 String
---- @param arg4 String
---- @param arg5 String
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 string
+--- @param arg4 string
+--- @param arg5 string
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 integer
 --- @param arg10 boolean
---- @return void
+--- @return nil
 function ZomboidRadio:ReceiveTransmission(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
 
 --- @public
 --- @param arg0 WaveSignalDevice
---- @return void
+--- @return nil
 function ZomboidRadio:RegisterDevice(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ZomboidRadio:Reset() end
 
 --- @public
---- @return void
+--- @return nil
 function ZomboidRadio:Save() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 ChatMessage
---- @param arg3 int
---- @return void
---- @overload fun(self: ZomboidRadio, arg0: int, arg1: int, arg2: int, arg3: String, arg4: String, arg5: String, arg6: float, arg7: float, arg8: float, arg9: int, arg10: boolean): void
---- @overload fun(self: ZomboidRadio, arg0: long, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: String, arg7: float, arg8: float, arg9: float, arg10: int, arg11: boolean): void
+--- @param arg3 integer
+--- @return nil
+--- @overload fun(self: ZomboidRadio, arg0: integer, arg1: integer, arg2: integer, arg3: string, arg4: string, arg5: string, arg6: number, arg7: number, arg8: number, arg9: integer, arg10: boolean): nil
+--- @overload fun(self: ZomboidRadio, arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string, arg6: string, arg7: number, arg8: number, arg9: number, arg10: integer, arg11: boolean): nil
 function ZomboidRadio:SendTransmission(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 WaveSignalDevice
---- @return void
+--- @return nil
 function ZomboidRadio:UnRegisterDevice(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function ZomboidRadio:UpdateScripts(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function ZomboidRadio:WriteRadioServerDataPacket(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 String
---- @return void
---- @overload fun(self: ZomboidRadio, arg0: String, arg1: int, arg2: String, arg3: boolean): void
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 string
+--- @return nil
+--- @overload fun(self: ZomboidRadio, arg0: string, arg1: integer, arg2: string, arg3: boolean): nil
 function ZomboidRadio:addChannelName(arg0, arg1, arg2) end
 
 --- @public
---- @return Object
+--- @return any
 function ZomboidRadio:clone() end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function ZomboidRadio:computerize(arg0) end
 
 --- @public
@@ -139,12 +138,12 @@ function ZomboidRadio:computerize(arg0) end
 function ZomboidRadio:getBroadcastDevices() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function ZomboidRadio:getChannelName(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function ZomboidRadio:getDaysSinceStart() end
 
 --- @public
@@ -168,12 +167,12 @@ function ZomboidRadio:getFullChannelList() end
 function ZomboidRadio:getGameMode() end
 
 --- @public
---- @return String
+--- @return string
 function ZomboidRadio:getRandomBzztFzzt() end
 
 --- @public
---- @return int
---- @overload fun(self: ZomboidRadio, arg0: int, arg1: int): int
+--- @return integer
+--- @overload fun(self: ZomboidRadio, arg0: integer, arg1: integer): integer
 function ZomboidRadio:getRandomFrequency() end
 
 --- @public
@@ -185,39 +184,37 @@ function ZomboidRadio:getRecordedMedia() end
 function ZomboidRadio:getScriptManager() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ZomboidRadio:removeChannelName(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ZomboidRadio:render() end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @param arg2 boolean
---- @param arg3 String
---- @return String
+--- @param arg3 string
+--- @return string
 function ZomboidRadio:scrambleString(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ZomboidRadio:setDisableBroadcasting(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ZomboidRadio:setDisableMediaLineLearning(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ZomboidRadio:setHasRecievedServerData(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ZomboidRadio:update() end
-
-

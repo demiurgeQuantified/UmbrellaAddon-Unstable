@@ -11,7 +11,6 @@
 ---@field [any] any
 ISExtinguishCursor = ISBuildingObject:derive("ISExtinguishCursor")
 
-
 ---@return any
 function ISExtinguishCursor:create(x, y, z, north, sprite) end
 
@@ -53,7 +52,6 @@ function ISExtinguishCursor:render(x, y, z, square) end
 
 ---@return any
 function ISExtinguishCursor:walkTo(x, y, z) end
-
 
 ---@return ISExtinguishCursor
 function ISExtinguishCursor:new(character, extinguisher) end

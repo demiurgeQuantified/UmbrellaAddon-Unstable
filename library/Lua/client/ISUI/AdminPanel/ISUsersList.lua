@@ -14,10 +14,8 @@
 ---@field [any] any
 ISUsersList = ISPanel:derive("ISUsersList")
 
-
 ---@return any
 function ISUsersList.onAddWarningPoint(username, button, reason, amount) end
-
 
 ---@return any
 function ISUsersList:closeModal() end
@@ -60,7 +58,6 @@ function ISUsersList:populateList() end
 
 ---@return any
 function ISUsersList:prerender() end
-
 
 ---@return ISUsersList
 function ISUsersList:new(x, y, width, height, player) end

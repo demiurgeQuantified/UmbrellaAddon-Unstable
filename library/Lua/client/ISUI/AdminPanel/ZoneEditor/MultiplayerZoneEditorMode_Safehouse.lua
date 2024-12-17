@@ -14,7 +14,6 @@
 ---@field [any] any
 MultiplayerZoneEditorMode_Safehouse = MultiplayerZoneEditorMode:derive("MultiplayerZoneEditorMode_Safehouse")
 
-
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse:cancelResize() end
 
@@ -81,7 +80,6 @@ function MultiplayerZoneEditorMode_Safehouse:setZoneBounds(x1, y1, x2, y2) end
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse:undisplay() end
 
-
 ---@return MultiplayerZoneEditorMode_Safehouse
 function MultiplayerZoneEditorMode_Safehouse:new(editor) end
 
@@ -107,7 +105,6 @@ function MultiplayerZoneEditorMode_Safehouse:new(editor) end
 ---@field yes any
 ---@field [any] any
 MultiplayerZoneEditorMode_Safehouse_Confirm = ISPanelJoypad:derive("MultiplayerZoneEditorMode_Safehouse_Confirm")
-
 
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:close() end
@@ -151,7 +148,6 @@ function MultiplayerZoneEditorMode_Safehouse_Confirm:titleBarHeight() end
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:updateButtons() end
 
-
 ---@return MultiplayerZoneEditorMode_Safehouse_Confirm
 function MultiplayerZoneEditorMode_Safehouse_Confirm:new(x, y, width, height, target, onclick, player) end
 
@@ -182,10 +178,8 @@ function MultiplayerZoneEditorMode_Safehouse_Confirm:new(x, y, width, height, ta
 ---@field [any] any
 MultiplayerZoneEditorMode_Safehouse_Details = ISPanel:derive("MultiplayerZoneEditorMode_Safehouse_Details")
 
-
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse_Details.OnSafehousesChanged() end
-
 
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:createChildren() end
@@ -240,7 +234,6 @@ function MultiplayerZoneEditorMode_Safehouse_Details:updateButtons() end
 
 ---@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:updatePlayerList() end
-
 
 ---@return MultiplayerZoneEditorMode_Safehouse_Details
 function MultiplayerZoneEditorMode_Safehouse_Details:new(x, y, width, height, player) end

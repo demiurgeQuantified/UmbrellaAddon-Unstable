@@ -20,7 +20,6 @@
 ---@field [any] any
 ISPaintCursor = ISBuildingObject:derive("ISPaintCursor")
 
-
 ---@return any
 function ISPaintCursor:_isDoorFrame(object) end
 
@@ -62,7 +61,6 @@ function ISPaintCursor:rotateKey(key) end
 
 ---@return any
 function ISPaintCursor:walkTo(x, y, z) end
-
 
 ---@return ISPaintCursor
 function ISPaintCursor:new(character, action, args) end

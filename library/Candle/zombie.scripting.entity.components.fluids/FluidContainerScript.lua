@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FluidContainerScript: ComponentScript
 --- @field public class any
-FluidContainerScript = {};
+FluidContainerScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,11 +10,11 @@ FluidContainerScript = {};
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function FluidContainerScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FluidContainerScript:PreReload() end
 
 --- @public
@@ -26,19 +26,19 @@ function FluidContainerScript:getBlacklistCopy() end
 function FluidContainerScript:getCanEmpty() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainerScript:getCapacity() end
 
 --- @public
---- @return String
+--- @return string
 function FluidContainerScript:getContainerName() end
 
 --- @public
---- @return String
+--- @return string
 function FluidContainerScript:getCustomDrinkSound() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainerScript:getInitialAmount() end
 
 --- @public
@@ -50,7 +50,7 @@ function FluidContainerScript:getInitialFluids() end
 function FluidContainerScript:getInputLocked() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainerScript:getRainCatcher() end
 
 --- @public
@@ -64,5 +64,3 @@ function FluidContainerScript:isHiddenAmount() end
 --- @public
 --- @return boolean
 function FluidContainerScript:isInitialFluidsIsRandom() end
-
-

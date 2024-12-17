@@ -8,7 +8,6 @@
 ---@field [any] any
 TextureWindow = ISCollapsableWindow:derive("TextureWindow")
 
-
 ---@return any
 function TextureWindow:createChildren() end
 
@@ -17,7 +16,6 @@ function TextureWindow:initialise() end
 
 ---@return any
 function TextureWindow:renderTex() end
-
 
 ---@return TextureWindow
 function TextureWindow:new(x, y, width, height, tex) end

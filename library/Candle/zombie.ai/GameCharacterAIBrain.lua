@@ -1,27 +1,27 @@
---- @meta
+--- @meta _
 
 --- @class GameCharacterAIBrain
 --- @field public class any
-GameCharacterAIBrain = {};
+GameCharacterAIBrain = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function GameCharacterAIBrain:AddBlockedMemory(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
 --- @return boolean
 function GameCharacterAIBrain:HasBlockedMemory(arg0, arg1, arg2, arg3, arg4, arg5) end
 
@@ -30,7 +30,7 @@ function GameCharacterAIBrain:HasBlockedMemory(arg0, arg1, arg2, arg3, arg4, arg
 function GameCharacterAIBrain:getCharacter() end
 
 --- @public
---- @return int
+--- @return integer
 function GameCharacterAIBrain:getCloseZombieCount() end
 
 --- @public
@@ -39,7 +39,7 @@ function GameCharacterAIBrain:getCloseZombieCount() end
 function GameCharacterAIBrain:getClosestChasingZombie() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ArrayList
 function GameCharacterAIBrain:getClosestChasingZombies(arg0) end
 
@@ -48,27 +48,26 @@ function GameCharacterAIBrain:getClosestChasingZombies(arg0) end
 function GameCharacterAIBrain:getGroup() end
 
 --- @public
---- @return String
+--- @return string
 function GameCharacterAIBrain:getOrder() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function GameCharacterAIBrain:postUpdateHuman(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function GameCharacterAIBrain:renderlast() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function GameCharacterAIBrain:setOrder(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function GameCharacterAIBrain:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

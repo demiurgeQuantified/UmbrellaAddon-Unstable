@@ -30,7 +30,6 @@ ISSearchWindow = ISCollapsableWindow:derive("ISSearchWindow")
 ISSearchWindow.players = {}
 ISSearchWindow.showDebug = false
 
-
 ---@return any
 function ISSearchWindow.createUI(_player) end
 
@@ -48,7 +47,6 @@ function ISSearchWindow.showWindow(_character) end
 
 ---@return any
 function ISSearchWindow.toggleWindow(_character) end
-
 
 ---@return any
 function ISSearchWindow:checkShowFirstTimeSearchTutorial() end
@@ -121,7 +119,6 @@ function ISSearchWindow:update() end
 
 ---@return any
 function ISSearchWindow:updateSearchFocusCategories() end
-
 
 ---@return ISSearchWindow
 function ISSearchWindow:new(_manager) end

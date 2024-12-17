@@ -11,7 +11,6 @@
 ---@field [any] any
 ISWaitWhileGettingUp = ISBaseTimedAction:derive("ISWaitWhileGettingUp")
 
-
 ---@return any
 function ISWaitWhileGettingUp:complete() end
 
@@ -38,7 +37,6 @@ function ISWaitWhileGettingUp:update() end
 
 ---@return any
 function ISWaitWhileGettingUp:waitToStart() end
-
 
 ---@return ISWaitWhileGettingUp
 function ISWaitWhileGettingUp:new(character) end

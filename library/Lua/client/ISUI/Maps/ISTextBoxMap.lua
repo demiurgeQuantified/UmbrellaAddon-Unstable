@@ -44,7 +44,6 @@
 ---@field [any] any
 ISTextBoxMap = ISCollapsableWindowJoypad:derive("ISTextBoxMap")
 
-
 ---@return any
 function ISTextBoxMap:close() end
 
@@ -102,6 +101,20 @@ function ISTextBoxMap:showTranslationTickBox(isTranslation) end
 ---@return any
 function ISTextBoxMap:updateButtons() end
 
-
 ---@return ISTextBoxMap
-function ISTextBoxMap:new(x, y, width, height, text, defaultEntryText, target, onclick, player, param1, param2, param3, param4) end
+function ISTextBoxMap:new(
+	x,
+	y,
+	width,
+	height,
+	text,
+	defaultEntryText,
+	target,
+	onclick,
+	player,
+	param1,
+	param2,
+	param3,
+	param4
+)
+end

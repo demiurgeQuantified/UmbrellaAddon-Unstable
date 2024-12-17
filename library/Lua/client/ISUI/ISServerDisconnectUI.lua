@@ -7,7 +7,6 @@
 ---@field [any] any
 ISServerDisconnectUI = ISPanelJoypad:derive("ISServerDisconnectUI")
 
-
 ---@return any
 function ISServerDisconnectUI:configButton(button) end
 
@@ -28,7 +27,6 @@ function ISServerDisconnectUI:onToDesktop() end
 
 ---@return any
 function ISServerDisconnectUI:onToMainMenu() end
-
 
 ---@return ISServerDisconnectUI
 function ISServerDisconnectUI:new(reason) end

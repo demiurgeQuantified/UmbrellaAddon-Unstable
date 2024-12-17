@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class MetaObject
 --- @field public class any
-MetaObject = {};
+MetaObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,7 +13,7 @@ MetaObject = {};
 function MetaObject:getRoom() end
 
 --- @public
---- @return int
+--- @return integer
 function MetaObject:getType() end
 
 --- @public
@@ -21,27 +21,26 @@ function MetaObject:getType() end
 function MetaObject:getUsed() end
 
 --- @public
---- @return int
+--- @return integer
 function MetaObject:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function MetaObject:getY() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function MetaObject:setUsed(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 RoomDef
 --- @return MetaObject
 function MetaObject.new(arg0, arg1, arg2, arg3) end

@@ -11,7 +11,6 @@
 ---@field [any] any
 ISDryMyself = ISBaseTimedAction:derive("ISDryMyself")
 
-
 ---@return any
 function ISDryMyself:complete() end
 
@@ -41,7 +40,6 @@ function ISDryMyself:syncItemUses() end
 
 ---@return any
 function ISDryMyself:update() end
-
 
 ---@return ISDryMyself
 function ISDryMyself:new(character, item) end

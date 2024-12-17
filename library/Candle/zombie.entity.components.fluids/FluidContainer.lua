@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class FluidContainer: Component
 --- @field public class any
---- @field public DEF_CONTAINER_NAME String
---- @field public MAX_FLUIDS int
-FluidContainer = {};
+--- @field public DEF_CONTAINER_NAME string
+--- @field public MAX_FLUIDS integer
+FluidContainer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -25,26 +25,25 @@ function FluidContainer.CreateContainer() end
 --- @public
 --- @static
 --- @param arg0 FluidContainer
---- @return void
+--- @return nil
 function FluidContainer.DisposeContainer(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 FluidContainer
 --- @param arg1 FluidContainer
---- @return String
---- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: boolean): String
+--- @return string
+--- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: boolean): string
 function FluidContainer.GetTransferReason(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 FluidContainer
 --- @param arg1 FluidContainer
---- @return void
---- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: float): void
---- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: float, arg3: boolean): void
+--- @return nil
+--- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: number): nil
+--- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: number, arg3: boolean): nil
 function FluidContainer.Transfer(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -52,32 +51,32 @@ function FluidContainer.Transfer(arg0, arg1) end
 
 --- @public
 --- @param arg0 ObjectTooltip
---- @return void
---- @overload fun(self: FluidContainer, arg0: ObjectTooltip, arg1: Layout): void
+--- @return nil
+--- @overload fun(self: FluidContainer, arg0: ObjectTooltip, arg1: Layout): nil
 function FluidContainer:DoTooltip(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: FluidContainer, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: FluidContainer, arg0: boolean): nil
 function FluidContainer:Empty() end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @return void
---- @overload fun(self: FluidContainer, arg0: Fluid, arg1: float): void
---- @overload fun(self: FluidContainer, arg0: FluidType, arg1: float): void
+--- @param arg0 string
+--- @param arg1 number
+--- @return nil
+--- @overload fun(self: FluidContainer, arg0: Fluid, arg1: number): nil
+--- @overload fun(self: FluidContainer, arg0: FluidType, arg1: number): nil
 function FluidContainer:addFluid(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function FluidContainer:adjustAmount(arg0) end
 
 --- @public
 --- @param arg0 Fluid
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function FluidContainer:adjustSpecificFluidAmount(arg0, arg1) end
 
 --- @public
@@ -100,17 +99,17 @@ function FluidContainer:copy() end
 
 --- @public
 --- @param arg0 FluidContainer
---- @return void
+--- @return nil
 function FluidContainer:copyFluidsFrom(arg0) end
 
 --- @public
 --- @return FluidSample
---- @overload fun(self: FluidContainer, arg0: float): FluidSample
---- @overload fun(self: FluidContainer, arg0: FluidSample, arg1: float): FluidSample
+--- @overload fun(self: FluidContainer, arg0: number): FluidSample
+--- @overload fun(self: FluidContainer, arg0: FluidSample, arg1: number): FluidSample
 function FluidContainer:createFluidSample() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getAmount() end
 
 --- @public
@@ -118,7 +117,7 @@ function FluidContainer:getAmount() end
 function FluidContainer:getBlacklist() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getCapacity() end
 
 --- @public
@@ -126,19 +125,19 @@ function FluidContainer:getCapacity() end
 function FluidContainer:getColor() end
 
 --- @public
---- @return String
+--- @return string
 function FluidContainer:getContainerName() end
 
 --- @public
---- @return String
+--- @return string
 function FluidContainer:getCustomDrinkSound() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getFilledRatio() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getFreeCapacity() end
 
 --- @public
@@ -146,7 +145,7 @@ function FluidContainer:getFreeCapacity() end
 function FluidContainer:getPoisonEffect() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getPoisonRatio() end
 
 --- @public
@@ -154,7 +153,7 @@ function FluidContainer:getPoisonRatio() end
 function FluidContainer:getPrimaryFluid() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getPrimaryFluidAmount() end
 
 --- @public
@@ -162,25 +161,25 @@ function FluidContainer:getPrimaryFluidAmount() end
 function FluidContainer:getProperties() end
 
 --- @public
---- @return float
+--- @return number
 function FluidContainer:getRainCatcher() end
 
 --- @public
 --- @param arg0 Fluid
---- @return float
+--- @return number
 function FluidContainer:getRatioForFluid(arg0) end
 
 --- @public
 --- @param arg0 Fluid
---- @return float
+--- @return number
 function FluidContainer:getSpecificFluidAmount(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function FluidContainer:getTranslatedContainerName() end
 
 --- @public
---- @return String
+--- @return string
 function FluidContainer:getUiName() end
 
 --- @public
@@ -234,53 +233,51 @@ function FluidContainer:isPureFluid(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function FluidContainer:load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 --- @overload fun(self: FluidContainer, arg0: boolean): FluidConsume
---- @overload fun(self: FluidContainer, arg0: float): void
---- @overload fun(self: FluidContainer, arg0: float, arg1: boolean): FluidConsume
---- @overload fun(self: FluidContainer, arg0: float, arg1: boolean, arg2: FluidConsume): FluidConsume
+--- @overload fun(self: FluidContainer, arg0: number): nil
+--- @overload fun(self: FluidContainer, arg0: number, arg1: boolean): FluidConsume
+--- @overload fun(self: FluidContainer, arg0: number, arg1: boolean, arg2: FluidConsume): FluidConsume
 function FluidContainer:removeFluid() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function FluidContainer:save(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function FluidContainer:setCanPlayerEmpty(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function FluidContainer:setCapacity(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FluidContainer:setContainerName(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function FluidContainer:setInputLocked(arg0) end
 
 --- @public
 --- @param arg0 FluidContainer
---- @return void
---- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: float): void
+--- @return nil
+--- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: number): nil
 function FluidContainer:transferFrom(arg0) end
 
 --- @public
 --- @param arg0 FluidContainer
---- @return void
---- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: float): void
+--- @return nil
+--- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: number): nil
 function FluidContainer:transferTo(arg0) end
-
-

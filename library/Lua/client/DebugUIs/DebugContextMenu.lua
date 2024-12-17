@@ -11,7 +11,6 @@ DebugContextMenu.staggerBacking = false
 DebugContextMenu.stagTime = 0
 DebugContextMenu.ticked = false
 
-
 ---@return any
 function DebugContextMenu.AddAnimal(type, breed, square, skeleton) end
 

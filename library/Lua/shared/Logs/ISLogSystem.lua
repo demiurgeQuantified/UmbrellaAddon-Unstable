@@ -5,7 +5,6 @@
 ---@field [any] any
 ISLogSystem = {}
 
-
 ---@return any
 function ISLogSystem.getGenericLogText(_character, _actionType) end
 

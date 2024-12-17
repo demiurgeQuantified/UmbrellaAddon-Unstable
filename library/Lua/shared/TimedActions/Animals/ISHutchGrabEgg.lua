@@ -10,7 +10,6 @@
 ---@field [any] any
 ISHutchGrabEgg = ISBaseTimedAction:derive("ISHutchGrabEgg")
 
-
 ---@return any
 function ISHutchGrabEgg:animEvent(event, parameter) end
 
@@ -40,7 +39,6 @@ function ISHutchGrabEgg:update() end
 
 ---@return any
 function ISHutchGrabEgg:waitToStart() end
-
 
 ---@return ISHutchGrabEgg
 function ISHutchGrabEgg:new(character, nestbox, hutch) end

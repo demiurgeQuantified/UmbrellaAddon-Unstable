@@ -1,44 +1,43 @@
---- @meta
+--- @meta _
 
 --- @class AtomUIText: AtomUI
 --- @field public class any
-AtomUIText = {};
+AtomUIText = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Double
+--- @return number
 function AtomUIText:getTextHeight() end
 
 --- @public
---- @return Double
+--- @return number
 function AtomUIText:getTextWidth() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUIText:init() end
 
 --- @public
---- @return void
+--- @return nil
 function AtomUIText:render() end
 
 --- @public
---- @param arg0 Double
---- @return void
+--- @param arg0 number
+--- @return nil
 function AtomUIText:setAutoWidth(arg0) end
 
 --- @public
 --- @param arg0 UIFont
---- @return void
+--- @return nil
 function AtomUIText:setFont(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AtomUIText:setText(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

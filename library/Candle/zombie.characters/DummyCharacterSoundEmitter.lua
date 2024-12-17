@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class DummyCharacterSoundEmitter: BaseCharacterSoundEmitter
 --- @field public class any
-DummyCharacterSoundEmitter = {};
+DummyCharacterSoundEmitter = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,7 +13,7 @@ DummyCharacterSoundEmitter = {};
 function DummyCharacterSoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 long
+--- @param arg0 integer
 --- @return boolean
 function DummyCharacterSoundEmitter:hasSustainPoints(arg0) end
 
@@ -22,113 +22,112 @@ function DummyCharacterSoundEmitter:hasSustainPoints(arg0) end
 function DummyCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
---- @overload fun(self: DummyCharacterSoundEmitter, arg0: long): boolean
+--- @overload fun(self: DummyCharacterSoundEmitter, arg0: integer): boolean
 function DummyCharacterSoundEmitter:isPlaying(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @return void
+--- @param arg0 string
+--- @param arg1 number
+--- @return nil
 function DummyCharacterSoundEmitter:playFootsteps(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return long
---- @overload fun(self: DummyCharacterSoundEmitter, arg0: String, arg1: IsoObject): long
+--- @param arg0 string
+--- @return integer
+--- @overload fun(self: DummyCharacterSoundEmitter, arg0: string, arg1: IsoObject): integer
 function DummyCharacterSoundEmitter:playSound(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 IsoObject
---- @return long
+--- @return integer
 function DummyCharacterSoundEmitter:playSoundImpl(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return long
+--- @param arg0 string
+--- @return integer
 function DummyCharacterSoundEmitter:playVocals(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function DummyCharacterSoundEmitter:register() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function DummyCharacterSoundEmitter:set(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
+--- @param arg0 integer
 --- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 float
---- @return void
+--- @param arg2 number
+--- @return nil
 function DummyCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
---- @param arg1 String
---- @param arg2 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 string
+--- @param arg2 number
+--- @return nil
 function DummyCharacterSoundEmitter:setParameterValueByName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 number
+--- @return nil
 function DummyCharacterSoundEmitter:setPitch(arg0, arg1) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 number
+--- @return nil
 function DummyCharacterSoundEmitter:setVolume(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function DummyCharacterSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DummyCharacterSoundEmitter:stopOrTriggerSound(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DummyCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DummyCharacterSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
---- @param arg0 long
---- @return int
+--- @param arg0 integer
+--- @return integer
 function DummyCharacterSoundEmitter:stopSound(arg0) end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function DummyCharacterSoundEmitter:stopSoundByName(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DummyCharacterSoundEmitter:stopSoundLocal(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function DummyCharacterSoundEmitter:tick() end
 
 --- @public
---- @return void
+--- @return nil
 function DummyCharacterSoundEmitter:unregister() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

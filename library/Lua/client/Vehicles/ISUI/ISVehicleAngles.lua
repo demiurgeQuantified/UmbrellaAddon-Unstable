@@ -12,7 +12,6 @@
 ---@field [any] any
 ISVehicleAngles = ISCollapsableWindow:derive("ISVehicleAngles")
 
-
 ---@return any
 function ISVehicleAngles:addLabel(_x, _y, _title, _font, _bLeft) end
 
@@ -57,7 +56,6 @@ function ISVehicleAngles:prerender() end
 
 ---@return any
 function ISVehicleAngles:setVehicle(vehicle) end
-
 
 ---@return ISVehicleAngles
 function ISVehicleAngles:new() end

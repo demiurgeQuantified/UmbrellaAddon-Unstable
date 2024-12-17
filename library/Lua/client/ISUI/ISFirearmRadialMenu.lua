@@ -6,7 +6,6 @@
 ---@field [any] any
 ISFirearmRadialMenu = ISBaseObject:derive("ISFirearmRadialMenu")
 
-
 ---@return any
 function ISFirearmRadialMenu.checkKey(key) end
 
@@ -34,7 +33,6 @@ function ISFirearmRadialMenu.onKeyRepeat(key) end
 ---@return any
 function ISFirearmRadialMenu.onRepeatRBumper(buttonPrompt) end
 
-
 ---@return any
 function ISFirearmRadialMenu:center() end
 
@@ -46,7 +44,6 @@ function ISFirearmRadialMenu:fillMenu() end
 
 ---@return any
 function ISFirearmRadialMenu:getWeapon() end
-
 
 ---@return ISFirearmRadialMenu
 function ISFirearmRadialMenu:new(character) end

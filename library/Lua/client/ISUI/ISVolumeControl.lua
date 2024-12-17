@@ -14,7 +14,6 @@
 ---@field [any] any
 ISVolumeControl = ISPanel:derive("ISVolumeControl")
 
-
 ---@return any
 function ISVolumeControl:getVolume() end
 
@@ -50,7 +49,6 @@ function ISVolumeControl:setJoypadFocused(focused) end
 
 ---@return any
 function ISVolumeControl:setVolume(volume) end
-
 
 ---@return ISVolumeControl
 function ISVolumeControl:new(x, y, width, height, target, targetFunc) end

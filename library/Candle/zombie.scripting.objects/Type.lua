@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Type: Enum
 --- @field public class any
@@ -18,7 +18,7 @@
 --- @field public Radio Type
 --- @field public Weapon Type
 --- @field public WeaponPart Type
-Type = {};
+Type = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,7 +26,7 @@ Type = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Type
 function Type.valueOf(arg0) end
 
@@ -34,5 +34,3 @@ function Type.valueOf(arg0) end
 --- @static
 --- @return Type[]
 function Type.values() end
-
-

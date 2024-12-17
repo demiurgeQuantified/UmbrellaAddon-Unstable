@@ -17,13 +17,11 @@
 ---@field [any] any
 ISPlayerStatsSuspicionActivityUI = ISPanel:derive("ISPlayerStatsSuspicionActivityUI")
 
-
 ---@return any
 function ISPlayerStatsSuspicionActivityUI.populate(self) end
 
 ---@return any
 function ISPlayerStatsSuspicionActivityUI.receiveSuspicionActivity(username, userLog, suspiciousActivity) end
-
 
 ---@return any
 function ISPlayerStatsSuspicionActivityUI:create() end
@@ -42,7 +40,6 @@ function ISPlayerStatsSuspicionActivityUI:render() end
 
 ---@return any
 function ISPlayerStatsSuspicionActivityUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsSuspicionActivityUI
 function ISPlayerStatsSuspicionActivityUI:new(x, y, width, height, target, onclick, username, suspicionActivity) end

@@ -17,10 +17,8 @@
 ---@field [any] any
 ModSelector = ISPanelJoypad:derive("ModSelector")
 
-
 ---@return any
 function ModSelector.showNagPanel() end
-
 
 ---@return any
 function ModSelector:acceptChanges(button) end
@@ -72,7 +70,6 @@ function ModSelector:setServerSettingsMods(data, finishFunc) end
 
 ---@return any
 function ModSelector:updateView() end
-
 
 ---@return ModSelector
 function ModSelector:new(x, y, width, height) end

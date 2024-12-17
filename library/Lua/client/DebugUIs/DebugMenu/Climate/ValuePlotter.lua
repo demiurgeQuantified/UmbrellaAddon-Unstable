@@ -26,7 +26,6 @@
 ---@field [any] any
 ValuePlotter = ISPanel:derive("ValuePlotter")
 
-
 ---@return any
 function ValuePlotter:addPlotPoint(dataset, vertbarCol) end
 
@@ -74,7 +73,6 @@ function ValuePlotter:unsetHorzLine(idx) end
 
 ---@return any
 function ValuePlotter:update() end
-
 
 ---@return ValuePlotter
 function ValuePlotter:new(x, y, width, height, maxPlotPoints) end

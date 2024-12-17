@@ -18,7 +18,6 @@
 ---@field [any] any
 ISCharacterProtection = ISPanelJoypad:derive("ISCharacterProtection")
 
-
 ---@return any
 function ISCharacterProtection:create() end
 
@@ -42,7 +41,6 @@ function ISCharacterProtection:render() end
 
 ---@return any
 function ISCharacterProtection:setVisible(visible) end
-
 
 ---@return ISCharacterProtection
 function ISCharacterProtection:new(x, y, width, height, playerNum) end

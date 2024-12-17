@@ -56,13 +56,11 @@ WeatherPeriodDebug.instance = nil
 WeatherPeriodDebug.shiftDown = 0
 WeatherPeriodDebug.eventsAdded = false
 
-
 ---@return any
 function WeatherPeriodDebug.OnClimateTickDebug(mgr) end
 
 ---@return any
 function WeatherPeriodDebug.OnOpenPanel() end
-
 
 ---@return any
 function WeatherPeriodDebug:addColor(_r, _g, _b) end
@@ -108,7 +106,6 @@ function WeatherPeriodDebug:update() end
 
 ---@return any
 function WeatherPeriodDebug:updateValues(_mgr) end
-
 
 ---@return WeatherPeriodDebug
 function WeatherPeriodDebug:new(x, y, width, height, player) end

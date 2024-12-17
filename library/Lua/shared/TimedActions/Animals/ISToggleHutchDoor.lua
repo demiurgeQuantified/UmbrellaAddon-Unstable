@@ -9,7 +9,6 @@
 ---@field [any] any
 ISToggleHutchDoor = ISBaseTimedAction:derive("ISToggleHutchDoor")
 
-
 ---@return any
 function ISToggleHutchDoor:complete() end
 
@@ -30,7 +29,6 @@ function ISToggleHutchDoor:stop() end
 
 ---@return any
 function ISToggleHutchDoor:update() end
-
 
 ---@return ISToggleHutchDoor
 function ISToggleHutchDoor:new(character, hutch) end

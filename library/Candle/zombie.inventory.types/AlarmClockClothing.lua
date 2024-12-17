@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class AlarmClockClothing: Clothing
 --- @field public class any
 --- @implement IAlarmClock
 --- @field public PacketPlayer short
 --- @field public PacketWorld short
-AlarmClockClothing = {};
+AlarmClockClothing = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -14,7 +14,7 @@ AlarmClockClothing = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function AlarmClockClothing:DoTooltip(arg0, arg1) end
 
 --- @public
@@ -22,7 +22,7 @@ function AlarmClockClothing:DoTooltip(arg0, arg1) end
 function AlarmClockClothing:finishupdate() end
 
 --- @public
---- @return String
+--- @return string
 function AlarmClockClothing:getAlarmSound() end
 
 --- @public
@@ -30,25 +30,25 @@ function AlarmClockClothing:getAlarmSound() end
 function AlarmClockClothing:getAlarmSquare() end
 
 --- @public
---- @return String
+--- @return string
 function AlarmClockClothing:getCategory() end
 
 --- @public
---- @return int
---- @overload fun(self: AlarmClockClothing): int
+--- @return integer
+--- @overload fun(self: AlarmClockClothing): integer
 function AlarmClockClothing:getHour() end
 
 --- @public
---- @return int
---- @overload fun(self: AlarmClockClothing): int
+--- @return integer
+--- @overload fun(self: AlarmClockClothing): integer
 function AlarmClockClothing:getMinute() end
 
 --- @public
---- @return int
+--- @return integer
 function AlarmClockClothing:getSaveType() end
 
 --- @public
---- @return int
+--- @return integer
 function AlarmClockClothing:getSoundRadius() end
 
 --- @public
@@ -66,48 +66,48 @@ function AlarmClockClothing:isRinging() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function AlarmClockClothing:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AlarmClockClothing:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
---- @overload fun(self: AlarmClockClothing, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: AlarmClockClothing, arg0: boolean): nil
 function AlarmClockClothing:setAlarmSet(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AlarmClockClothing:setAlarmSound(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
---- @overload fun(self: AlarmClockClothing, arg0: int): void
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: AlarmClockClothing, arg0: integer): nil
 function AlarmClockClothing:setForceDontRing(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
---- @overload fun(self: AlarmClockClothing, arg0: int): void
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: AlarmClockClothing, arg0: integer): nil
 function AlarmClockClothing:setHour(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
---- @overload fun(self: AlarmClockClothing, arg0: int): void
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: AlarmClockClothing, arg0: integer): nil
 function AlarmClockClothing:setMinute(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AlarmClockClothing:setSoundRadius(arg0) end
 
 --- @public
@@ -115,48 +115,47 @@ function AlarmClockClothing:setSoundRadius(arg0) end
 function AlarmClockClothing:shouldUpdateInWorld() end
 
 --- @public
---- @return void
---- @overload fun(self: AlarmClockClothing): void
+--- @return nil
+--- @overload fun(self: AlarmClockClothing): nil
 function AlarmClockClothing:stopRinging() end
 
 --- @public
---- @return void
+--- @return nil
 function AlarmClockClothing:syncAlarmClock() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function AlarmClockClothing:syncAlarmClock_Player(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AlarmClockClothing:syncAlarmClock_World() end
 
 --- @public
---- @return void
+--- @return nil
 function AlarmClockClothing:syncStopRinging() end
 
 --- @public
---- @return void
+--- @return nil
 function AlarmClockClothing:update() end
 
 --- @public
 --- @param arg0 BaseSoundEmitter
---- @return void
+--- @return nil
 function AlarmClockClothing:updateSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
---- @param arg5 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 string
+--- @param arg5 string
 --- @return AlarmClockClothing
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: Item, arg4: String, arg5: String): AlarmClockClothing
+--- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item, arg4: string, arg5: string): AlarmClockClothing
 function AlarmClockClothing.new(arg0, arg1, arg2, arg3, arg4, arg5) end

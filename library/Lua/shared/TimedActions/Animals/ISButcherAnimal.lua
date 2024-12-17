@@ -7,7 +7,6 @@
 ---@field [any] any
 ISButcherAnimal = ISBaseTimedAction:derive("ISButcherAnimal")
 
-
 ---@return any
 function ISButcherAnimal:complete() end
 
@@ -31,7 +30,6 @@ function ISButcherAnimal:update() end
 
 ---@return any
 function ISButcherAnimal:waitToStart() end
-
 
 ---@return ISButcherAnimal
 function ISButcherAnimal:new(character, body) end

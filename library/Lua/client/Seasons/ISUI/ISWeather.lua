@@ -16,7 +16,6 @@
 ---@field [any] any
 ISWeather = ISPanel:derive("ISWeather")
 
-
 ---@return any
 function ISWeather:addImage(image) end
 
@@ -34,7 +33,6 @@ function ISWeather:removeImages() end
 
 ---@return any
 function ISWeather:removeMoon() end
-
 
 ---@return ISWeather
 function ISWeather:new(x, y, width, height) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Family
 --- @field public class any
-Family = {};
+Family = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,27 +26,24 @@ function Family.exclude(arg0) end
 --- @return Builder
 function Family.one(arg0) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function Family:equals(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Family:getIndex() end
 
 --- @public
---- @return int
+--- @return integer
 function Family:hashCode() end
 
 --- @public
 --- @param arg0 GameEntity
 --- @return boolean
 function Family:matches(arg0) end
-
-

@@ -13,7 +13,6 @@
 ---@field [any] any
 ISChallenge2WeaponRepairWindow = ISPanelJoypad:derive("ISChallenge2WeaponRepairWindow")
 
-
 ---@return any
 function ISChallenge2WeaponRepairWindow:create() end
 
@@ -34,7 +33,6 @@ function ISChallenge2WeaponRepairWindow:reloadButtons() end
 
 ---@return any
 function ISChallenge2WeaponRepairWindow:render() end
-
 
 ---@return ISChallenge2WeaponRepairWindow
 function ISChallenge2WeaponRepairWindow:new(x, y, width, height, player) end

@@ -1,17 +1,16 @@
---- @meta
+--- @meta _
 
 --- @class IsoRadio: IsoWaveSignal
 --- @field public class any
-IsoRadio = {};
+IsoRadio = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function IsoRadio:getObjectName() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

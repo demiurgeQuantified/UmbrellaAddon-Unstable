@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AttributesScript: ComponentScript
 --- @field public class any
-AttributesScript = {};
+AttributesScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,15 +10,13 @@ AttributesScript = {};
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function AttributesScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AttributesScript:PreReload() end
 
 --- @public
 --- @return AttributeContainer
 function AttributesScript:getTemplateContainer() end
-
-

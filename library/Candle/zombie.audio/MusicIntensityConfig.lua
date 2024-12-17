@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class MusicIntensityConfig
 --- @field public class any
-MusicIntensityConfig = {};
+MusicIntensityConfig = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,32 +13,30 @@ MusicIntensityConfig = {};
 --- @return MusicIntensityConfig
 function MusicIntensityConfig.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function MusicIntensityConfig:checkHealthPanelVisible(arg0) end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function MusicIntensityConfig:initEvents(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function MusicIntensityConfig:restoreToFullHealth(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 MusicIntensityEvents
 --- @return MusicIntensityEvent
 function MusicIntensityConfig:triggerEvent(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

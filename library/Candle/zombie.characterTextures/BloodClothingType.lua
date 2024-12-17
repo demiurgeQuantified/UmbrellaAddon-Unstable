@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BloodClothingType: Enum
 --- @field public class any
@@ -37,7 +37,7 @@
 --- @field public UpperLeg_L BloodClothingType
 --- @field public UpperLeg_R BloodClothingType
 --- @field public UpperLegs BloodClothingType
-BloodClothingType = {};
+BloodClothingType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -48,18 +48,18 @@ BloodClothingType = {};
 --- @param arg0 BloodBodyPartType
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
---- @return void
+--- @return nil
 function BloodClothingType.addBasicPatch(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
 --- @param arg3 boolean
---- @return void
---- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean): void
---- @overload fun(arg0: BloodBodyPartType, arg1: float, arg2: HumanVisual, arg3: ArrayList, arg4: boolean): void
+--- @return nil
+--- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean): nil
+--- @overload fun(arg0: BloodBodyPartType, arg1: number, arg2: HumanVisual, arg3: ArrayList, arg4: boolean): nil
 function BloodClothingType.addBlood(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -68,8 +68,8 @@ function BloodClothingType.addBlood(arg0, arg1, arg2, arg3) end
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
 --- @param arg3 boolean
---- @return void
---- @overload fun(arg0: BloodBodyPartType, arg1: float, arg2: HumanVisual, arg3: ArrayList, arg4: boolean): void
+--- @return nil
+--- @overload fun(arg0: BloodBodyPartType, arg1: number, arg2: HumanVisual, arg3: ArrayList, arg4: boolean): nil
 function BloodClothingType.addDirt(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -77,32 +77,32 @@ function BloodClothingType.addDirt(arg0, arg1, arg2, arg3) end
 --- @param arg0 BloodBodyPartType
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
---- @return void
+--- @return nil
 --- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean): boolean
 function BloodClothingType.addHole(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 Clothing
---- @return void
+--- @return nil
 function BloodClothingType.calcTotalBloodLevel(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 Clothing
---- @return void
+--- @return nil
 function BloodClothingType.calcTotalDirtLevel(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BloodClothingType
 function BloodClothingType.fromString(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 ArrayList
---- @return int
+--- @return integer
 function BloodClothingType.getCoveredPartCount(arg0) end
 
 --- @public
@@ -114,7 +114,7 @@ function BloodClothingType.getCoveredParts(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BloodClothingType
 function BloodClothingType.valueOf(arg0) end
 
@@ -122,5 +122,3 @@ function BloodClothingType.valueOf(arg0) end
 --- @static
 --- @return BloodClothingType[]
 function BloodClothingType.values() end
-
-

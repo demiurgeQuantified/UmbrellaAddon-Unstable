@@ -26,7 +26,6 @@
 ---@field [any] any
 ISVehicleRoadtripDebug = ISCollapsableWindow:derive("ISVehicleRoadtripDebug")
 
-
 ---@return any
 function ISVehicleRoadtripDebug:createChildren() end
 
@@ -44,7 +43,6 @@ function ISVehicleRoadtripDebug:update() end
 
 ---@return any
 function ISVehicleRoadtripDebug:updateXY(x, y, startingListY) end
-
 
 ---@return ISVehicleRoadtripDebug
 function ISVehicleRoadtripDebug:new(x, y, character) end

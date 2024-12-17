@@ -7,7 +7,6 @@
 ---@field [any] any
 ISGetHutchInfo = ISBaseTimedAction:derive("ISGetHutchInfo")
 
-
 ---@return any
 function ISGetHutchInfo:isValid() end
 
@@ -22,7 +21,6 @@ function ISGetHutchInfo:stop() end
 
 ---@return any
 function ISGetHutchInfo:update() end
-
 
 ---@return ISGetHutchInfo
 function ISGetHutchInfo:new(character, hutch) end

@@ -8,7 +8,6 @@
 ---@field [any] any
 ISUI3DModel = ISUIElement:derive("ISUI3DModel")
 
-
 ---@return any
 function ISUI3DModel:clearVariable(key) end
 
@@ -89,7 +88,6 @@ function ISUI3DModel:setYOffset(yoffset) end
 
 ---@return any
 function ISUI3DModel:setZoom(zoom) end
-
 
 ---@return ISUI3DModel
 function ISUI3DModel:new(x, y, width, height) end

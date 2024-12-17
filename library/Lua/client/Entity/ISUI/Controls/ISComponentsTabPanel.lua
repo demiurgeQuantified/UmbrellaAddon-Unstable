@@ -28,7 +28,6 @@
 ---@field [any] any
 ISComponentsTabPanel = ISPanel:derive("ISComponentsTabPanel")
 
-
 ---@return any
 function ISComponentsTabPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -55,7 +54,6 @@ function ISComponentsTabPanel:selectPanel(_index, _recalc) end
 
 ---@return any
 function ISComponentsTabPanel:update() end
-
 
 ---@return ISComponentsTabPanel
 function ISComponentsTabPanel:new(x, y, width, height, player, entity, entityConfig) end

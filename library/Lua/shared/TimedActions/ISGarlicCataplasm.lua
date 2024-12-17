@@ -12,7 +12,6 @@
 ---@field [any] any
 ISGarlicCataplasm = ISBaseTimedAction:derive("ISGarlicCataplasm")
 
-
 ---@return any
 function ISGarlicCataplasm:complete() end
 
@@ -36,7 +35,6 @@ function ISGarlicCataplasm:update() end
 
 ---@return any
 function ISGarlicCataplasm:waitToStart() end
-
 
 ---@return ISGarlicCataplasm
 function ISGarlicCataplasm:new(character, otherPlayer, item, bodyPart) end

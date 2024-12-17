@@ -22,7 +22,6 @@
 ---@field [any] any
 ISCollapsableModalRichText = ISCollapsableWindow:derive("ISCollapsableModalRichText")
 
-
 ---@return any
 function ISCollapsableModalRichText:close() end
 
@@ -58,7 +57,6 @@ function ISCollapsableModalRichText:update() end
 
 ---@return any
 function ISCollapsableModalRichText:updateButtons() end
-
 
 ---@return ISCollapsableModalRichText
 function ISCollapsableModalRichText:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

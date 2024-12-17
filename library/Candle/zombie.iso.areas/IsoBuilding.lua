@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class IsoBuilding: IsoArea
 --- @field public class any
---- @field public GoodBuildingScore float
---- @field public IDMax int
---- @field public PoorBuildingScore float
-IsoBuilding = {};
+--- @field public GoodBuildingScore number
+--- @field public IDMax integer
+--- @field public PoorBuildingScore number
+IsoBuilding = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,15 +13,15 @@ IsoBuilding = {};
 
 --- @public
 --- @param arg0 IsoRoom
---- @return void
+--- @return nil
 function IsoBuilding:AddRoom(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBuilding:CalculateExits() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBuilding:CalculateWindows() end
 
 --- @public
@@ -32,44 +32,44 @@ function IsoBuilding:ContainsAllItems(arg0) end
 --- @public
 --- @param arg0 BuildingDef
 --- @param arg1 LotHeader
---- @return void
+--- @return nil
 function IsoBuilding:CreateFrom(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBuilding:FillContainers() end
 
 --- @public
 --- @param arg0 SurvivorDesc
 --- @param arg1 boolean
---- @return float
+--- @return number
 function IsoBuilding:ScoreBuildingPersonSpecific(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBuilding:TriggerAlarm() end
 
 --- @public
 --- @param arg0 IsoDoor
 --- @param arg1 boolean
---- @return void
---- @overload fun(self: IsoBuilding, arg0: IsoDoor, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding): void
+--- @return nil
+--- @overload fun(self: IsoBuilding, arg0: IsoDoor, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding): nil
 function IsoBuilding:addDoor(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoWindow
 --- @param arg1 boolean
---- @return void
---- @overload fun(self: IsoBuilding, arg0: IsoWindow, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding): void
+--- @return nil
+--- @overload fun(self: IsoBuilding, arg0: IsoWindow, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding): nil
 function IsoBuilding:addWindow(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function IsoBuilding:containsRoom(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBuilding:forceAwake() end
 
 --- @public
@@ -86,16 +86,16 @@ function IsoBuilding:getDef() end
 function IsoBuilding:getFreeTile() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoBuilding:getID() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ItemContainer
 function IsoBuilding:getRandomContainer(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ItemContainer
 function IsoBuilding:getRandomContainerSingle(arg0) end
 
@@ -105,11 +105,11 @@ function IsoBuilding:getRandomFirstFloorWindow() end
 
 --- @public
 --- @return IsoRoom
---- @overload fun(self: IsoBuilding, arg0: String): IsoRoom
+--- @overload fun(self: IsoBuilding, arg0: string): IsoRoom
 function IsoBuilding:getRandomRoom() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoBuilding:getRoomsNumber() end
 
 --- @public
@@ -117,7 +117,7 @@ function IsoBuilding:getRoomsNumber() end
 function IsoBuilding:hasBasement() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function IsoBuilding:hasRoom(arg0) end
 
@@ -143,18 +143,17 @@ function IsoBuilding:isToxic() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoBuilding:setAllExplored(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoBuilding:setToxic(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBuilding:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

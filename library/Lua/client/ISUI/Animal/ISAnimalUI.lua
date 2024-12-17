@@ -27,7 +27,6 @@ ISAnimalUI = ISCollapsableWindow:derive("ISAnimalUI")
 ISAnimalUI.maxDist = 5
 ISAnimalUI.btnOffset = 210
 
-
 ---@return any
 function ISAnimalUI:attachAnimal() end
 
@@ -78,7 +77,6 @@ function ISAnimalUI:render() end
 
 ---@return any
 function ISAnimalUI:updateAvatar() end
-
 
 ---@return ISAnimalUI
 function ISAnimalUI:new(x, y, width, height, animal, player) end

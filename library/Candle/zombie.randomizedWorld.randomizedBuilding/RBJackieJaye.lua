@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBJackieJaye: RandomizedBuildingBase
 --- @field public class any
-RBJackieJaye = {};
+RBJackieJaye = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,14 +16,13 @@ function RBJackieJaye:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBJackieJaye:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBJackieJaye:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

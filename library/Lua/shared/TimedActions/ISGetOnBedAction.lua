@@ -9,7 +9,6 @@
 ---@field [any] any
 ISGetOnBedAction = ISBaseTimedAction:derive("ISGetOnBedAction")
 
-
 ---@return any
 function ISGetOnBedAction:isValid() end
 
@@ -33,7 +32,6 @@ function ISGetOnBedAction:update() end
 
 ---@return any
 function ISGetOnBedAction:waitToStart() end
-
 
 ---@return ISGetOnBedAction
 function ISGetOnBedAction:new(character, bed) end

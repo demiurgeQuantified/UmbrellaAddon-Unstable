@@ -9,7 +9,6 @@
 ---@field [any] any
 ISFluidContainer = ISBaseObject:derive("ISFluidContainer")
 
-
 ---@return any
 function ISFluidContainer:copy() end
 
@@ -45,7 +44,6 @@ function ISFluidContainer:resetObject() end
 
 ---@return any
 function ISFluidContainer:sync() end
-
 
 ---@return ISFluidContainer
 function ISFluidContainer:new(_fluidObject) end

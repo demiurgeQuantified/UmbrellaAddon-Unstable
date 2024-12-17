@@ -24,7 +24,6 @@
 ISPlayerStatsManageInvUI = ISPanel:derive("ISPlayerStatsManageInvUI")
 ISPlayerStatsManageInvUI.messages = {}
 
-
 ---@return any
 function ISPlayerStatsManageInvUI.Close() end
 
@@ -33,7 +32,6 @@ function ISPlayerStatsManageInvUI.OnOpenPanel() end
 
 ---@return any
 function ISPlayerStatsManageInvUI.ReceiveItems(itemtable) end
-
 
 ---@return any
 function ISPlayerStatsManageInvUI:drawDatas(y, item, alt) end
@@ -61,7 +59,6 @@ function ISPlayerStatsManageInvUI:render() end
 
 ---@return any
 function ISPlayerStatsManageInvUI:requestDatas() end
-
 
 ---@return ISPlayerStatsManageInvUI
 function ISPlayerStatsManageInvUI:new(x, y, width, height, playerID, playerUsername) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ObjectDebuggerLua
 --- @field public class any
-ObjectDebuggerLua = {};
+ObjectDebuggerLua = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,27 +15,26 @@ function ObjectDebuggerLua.AllocList() end
 
 --- @public
 --- @static
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 ArrayList
---- @return void
---- @overload fun(arg0: Object, arg1: ArrayList, arg2: int): void
---- @overload fun(arg0: Object, arg1: ArrayList, arg2: int, arg3: int): void
+--- @return nil
+--- @overload fun(arg0: any, arg1: ArrayList, arg2: integer): nil
+--- @overload fun(arg0: any, arg1: ArrayList, arg2: integer, arg3: integer): nil
 function ObjectDebuggerLua.GetLines(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 Object
---- @return void
---- @overload fun(arg0: Object, arg1: int): void
---- @overload fun(arg0: Object, arg1: int, arg2: int): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(arg0: any, arg1: integer): nil
+--- @overload fun(arg0: any, arg1: integer, arg2: integer): nil
 function ObjectDebuggerLua.Log(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function ObjectDebuggerLua.ReleaseList(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

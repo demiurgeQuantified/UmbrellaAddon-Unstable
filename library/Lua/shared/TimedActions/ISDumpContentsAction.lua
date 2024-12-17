@@ -9,7 +9,6 @@
 ---@field [any] any
 ISDumpContentsAction = ISBaseTimedAction:derive("ISDumpContentsAction")
 
-
 ---@return any
 function ISDumpContentsAction:complete() end
 
@@ -36,7 +35,6 @@ function ISDumpContentsAction:stopSound() end
 
 ---@return any
 function ISDumpContentsAction:update() end
-
 
 ---@return ISDumpContentsAction
 function ISDumpContentsAction:new(character, item) end

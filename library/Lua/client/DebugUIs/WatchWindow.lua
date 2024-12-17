@@ -15,13 +15,11 @@
 ---@field [any] any
 WatchWindow = ISCollapsableWindow:derive("WatchWindow")
 
-
 ---@return any
 function WatchWindow.onDataRead(data) end
 
 ---@return any
 function WatchWindow.onDataWrite(data) end
-
 
 ---@return any
 function WatchWindow:addWatch(obj) end
@@ -52,7 +50,6 @@ function WatchWindow:restorePos() end
 
 ---@return any
 function WatchWindow:storePos() end
-
 
 ---@return WatchWindow
 function WatchWindow:new(x, y, width, height) end

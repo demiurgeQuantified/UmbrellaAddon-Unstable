@@ -18,7 +18,6 @@
 ---@field [any] any
 ISServerOptions = ISPanel:derive("ISServerOptions")
 
-
 ---@return any
 function ISServerOptions:create() end
 
@@ -51,7 +50,6 @@ function ISServerOptions:render() end
 
 ---@return any
 function ISServerOptions:setVisible(visible) end
-
 
 ---@return ISServerOptions
 function ISServerOptions:new(x, y, width, height, player) end

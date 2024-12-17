@@ -15,7 +15,6 @@
 ---@field [any] any
 ISInflateTire = ISBaseTimedAction:derive("ISInflateTire")
 
-
 ---@return any
 function ISInflateTire:complete() end
 
@@ -39,7 +38,6 @@ function ISInflateTire:stop() end
 
 ---@return any
 function ISInflateTire:update() end
-
 
 ---@return ISInflateTire
 function ISInflateTire:new(character, part, item, psiTarget) end

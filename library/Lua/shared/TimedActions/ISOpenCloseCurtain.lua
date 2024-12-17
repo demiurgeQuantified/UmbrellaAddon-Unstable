@@ -7,7 +7,6 @@
 ---@field [any] any
 ISOpenCloseCurtain = ISBaseTimedAction:derive("ISOpenCloseCurtain")
 
-
 ---@return any
 function ISOpenCloseCurtain:complete() end
 
@@ -31,7 +30,6 @@ function ISOpenCloseCurtain:update() end
 
 ---@return any
 function ISOpenCloseCurtain:waitToStart() end
-
 
 ---@return ISOpenCloseCurtain
 function ISOpenCloseCurtain:new(character, item) end

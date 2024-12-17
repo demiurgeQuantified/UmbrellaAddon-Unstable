@@ -51,7 +51,6 @@ ISFishingUI = ISPanelJoypad:derive("ISFishingUI")
 ISFishingUI.instance = {}
 ISFishingUI.messages = {}
 
-
 ---@return any
 function ISFishingUI:checkInventory() end
 
@@ -129,7 +128,6 @@ function ISFishingUI:updateSize() end
 
 ---@return any
 function ISFishingUI:updateZoneProgress(zoneClicked) end
-
 
 ---@return ISFishingUI
 function ISFishingUI:new(x, y, width, height, player, clickedSquare) end

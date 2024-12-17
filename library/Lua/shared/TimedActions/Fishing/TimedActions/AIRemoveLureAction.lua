@@ -7,7 +7,6 @@
 ---@field [any] any
 AIRemoveLureAction = ISBaseTimedAction:derive("AIRemoveLureAction")
 
-
 ---@return any
 function AIRemoveLureAction:complete() end
 
@@ -28,7 +27,6 @@ function AIRemoveLureAction:stop() end
 
 ---@return any
 function AIRemoveLureAction:update() end
-
 
 ---@return AIRemoveLureAction
 function AIRemoveLureAction:new(character, rod) end

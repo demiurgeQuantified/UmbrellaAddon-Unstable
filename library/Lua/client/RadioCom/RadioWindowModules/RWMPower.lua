@@ -21,7 +21,6 @@
 ---@field [any] any
 RWMPower = RWMPanel:derive("RWMPower")
 
-
 ---@return any
 function RWMPower:addBattery(_items) end
 
@@ -72,7 +71,6 @@ function RWMPower:update() end
 
 ---@return any
 function RWMPower:verifyItem(_item) end
-
 
 ---@return RWMPower
 function RWMPower:new(x, y, width, height) end

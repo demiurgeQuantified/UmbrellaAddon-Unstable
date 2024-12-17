@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSBanditRaid: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSBanditRaid = {};
+RDSBanditRaid = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RDSBanditRaid:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSBanditRaid:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -8,7 +8,6 @@
 ---@field [any] any
 LastStandPlayerFile = {}
 
-
 ---@return any
 function LastStandPlayerFile:load(fileName) end
 
@@ -32,7 +31,6 @@ function LastStandPlayerFile:readSkills() end
 
 ---@return any
 function LastStandPlayerFile:readTraits() end
-
 
 ---@return LastStandPlayerFile
 function LastStandPlayerFile:new() end

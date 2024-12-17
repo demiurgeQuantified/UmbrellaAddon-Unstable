@@ -24,7 +24,6 @@
 ---@field [any] any
 ISColorPickerHSB = ISPanelJoypad:derive("ISColorPickerHSB")
 
-
 ---@return any
 function ISColorPickerHSB:createChildren() end
 
@@ -90,7 +89,6 @@ function ISColorPickerHSB:setPickedFunc(func, arg1, arg2, arg3, arg4) end
 
 ---@return any
 function ISColorPickerHSB:toHSB(Color) end
-
 
 ---@return ISColorPickerHSB
 function ISColorPickerHSB:new(x, y, initial) end

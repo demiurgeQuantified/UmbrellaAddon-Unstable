@@ -13,7 +13,6 @@
 ---@field [any] any
 ISVehicleHSV = ISCollapsableWindow:derive("ISVehicleHSV")
 
-
 ---@return any
 function ISVehicleHSV:addLabel(_x, _y, _title, _font, _bLeft) end
 
@@ -61,7 +60,6 @@ function ISVehicleHSV:prerender() end
 
 ---@return any
 function ISVehicleHSV:setVehicle(vehicle) end
-
 
 ---@return ISVehicleHSV
 function ISVehicleHSV:new(playerObj) end

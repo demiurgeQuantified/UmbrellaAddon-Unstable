@@ -52,7 +52,6 @@
 ---@field [any] any
 ISWidgetInput = ISPanel:derive("ISWidgetInput")
 
-
 ---@return any
 function ISWidgetInput:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -88,7 +87,6 @@ function ISWidgetInput:updateScriptValues(_table) end
 
 ---@return any
 function ISWidgetInput:updateValues() end
-
 
 ---@return ISWidgetInput
 function ISWidgetInput:new(x, y, width, height, player, logic, inputScript) end

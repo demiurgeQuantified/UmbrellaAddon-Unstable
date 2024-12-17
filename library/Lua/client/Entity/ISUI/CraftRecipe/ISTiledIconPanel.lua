@@ -25,10 +25,8 @@
 ---@field [any] any
 ISTiledIconPanel = ISPanel:derive("ISTiledIconPanel")
 
-
 ---@return any
 function ISTiledIconPanel.onTextChange(box) end
-
 
 ---@return any
 function ISTiledIconPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -83,7 +81,6 @@ function ISTiledIconPanel:setSelectedData(_data) end
 
 ---@return any
 function ISTiledIconPanel:update() end
-
 
 ---@return ISTiledIconPanel
 function ISTiledIconPanel:new(x, y, width, height, player, dataList, callbackTarget) end

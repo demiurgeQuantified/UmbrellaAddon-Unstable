@@ -15,10 +15,8 @@
 ---@field [any] any
 ISCraftRecipeTagsPanel = ISPanel:derive("ISCraftRecipeTagsPanel")
 
-
 ---@return any
 function ISCraftRecipeTagsPanel.onTextChange(box) end
-
 
 ---@return any
 function ISCraftRecipeTagsPanel:close() end
@@ -70,7 +68,6 @@ function ISCraftRecipeTagsPanel:update() end
 
 ---@return any
 function ISCraftRecipeTagsPanel:updateTooltip() end
-
 
 ---@return ISCraftRecipeTagsPanel
 function ISCraftRecipeTagsPanel:new(x, y, width, height, player) end

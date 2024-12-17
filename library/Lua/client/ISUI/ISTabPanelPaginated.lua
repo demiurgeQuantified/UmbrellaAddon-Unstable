@@ -22,10 +22,8 @@ ISTabPanelPaginated.backwardIndex = -1
 ISTabPanelPaginated.tabSelected = getTexture("media/ui/XpSystemUI/tab_selected.png")
 ISTabPanelPaginated.tabUnSelected = getTexture("media/ui/XpSystemUI/tab_unselected.png")
 
-
 ---@return any
 function ISTabPanelPaginated.redoTab(self) end
-
 
 ---@return any
 function ISTabPanelPaginated:addForwardBackwardViews() end
@@ -56,7 +54,6 @@ function ISTabPanelPaginated:renderView(viewObject, tabDragSelected, _x, tabWidt
 
 ---@return any
 function ISTabPanelPaginated:setPagesCount(pagesCount) end
-
 
 ---@return ISTabPanelPaginated
 function ISTabPanelPaginated:new(x, y, width, height, pagesCount) end

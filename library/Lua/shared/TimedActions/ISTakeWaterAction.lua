@@ -13,7 +13,6 @@
 ---@field [any] any
 ISTakeWaterAction = ISBaseTimedAction:derive("ISTakeWaterAction")
 
-
 ---@return any
 function ISTakeWaterAction:complete() end
 
@@ -46,7 +45,6 @@ function ISTakeWaterAction:update() end
 
 ---@return any
 function ISTakeWaterAction:waitToStart() end
-
 
 ---@return ISTakeWaterAction
 function ISTakeWaterAction:new(character, item, waterObject, waterTaintedCL) end

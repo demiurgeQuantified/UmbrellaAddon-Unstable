@@ -10,7 +10,6 @@
 ---@field [any] any
 ISEjectMagazine = ISBaseTimedAction:derive("ISEjectMagazine")
 
-
 ---@return any
 function ISEjectMagazine:animEvent(event, parameter) end
 
@@ -43,7 +42,6 @@ function ISEjectMagazine:unloadAmmo() end
 
 ---@return any
 function ISEjectMagazine:update() end
-
 
 ---@return ISEjectMagazine
 function ISEjectMagazine:new(character, gun) end

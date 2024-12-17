@@ -7,7 +7,6 @@
 ---@field [any] any
 ISShutOffVehicleEngine = ISBaseTimedAction:derive("ISShutOffVehicleEngine")
 
-
 ---@return any
 function ISShutOffVehicleEngine:complete() end
 
@@ -28,7 +27,6 @@ function ISShutOffVehicleEngine:stop() end
 
 ---@return any
 function ISShutOffVehicleEngine:update() end
-
 
 ---@return ISShutOffVehicleEngine
 function ISShutOffVehicleEngine:new(character) end

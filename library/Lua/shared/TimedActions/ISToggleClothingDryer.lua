@@ -6,7 +6,6 @@
 ---@field [any] any
 ISToggleClothingDryer = ISBaseTimedAction:derive("ISToggleClothingDryer")
 
-
 ---@return any
 function ISToggleClothingDryer:complete() end
 
@@ -27,7 +26,6 @@ function ISToggleClothingDryer:stop() end
 
 ---@return any
 function ISToggleClothingDryer:update() end
-
 
 ---@return ISToggleClothingDryer
 function ISToggleClothingDryer:new(character, object) end

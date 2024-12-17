@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class WornItem
 --- @field public class any
-WornItem = {};
+WornItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,16 +13,15 @@ WornItem = {};
 function WornItem:getItem() end
 
 --- @public
---- @return String
+--- @return string
 function WornItem:getLocation() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 InventoryItem
 --- @return WornItem
 function WornItem.new(arg0, arg1) end

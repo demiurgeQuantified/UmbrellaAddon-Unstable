@@ -3,7 +3,6 @@
 ---@class ISAnimalTracksMenu
 ISAnimalTracksMenu = {}
 
-
 ---@return any
 function ISAnimalTracksMenu.doContextMenu(context, trackItem, chr) end
 

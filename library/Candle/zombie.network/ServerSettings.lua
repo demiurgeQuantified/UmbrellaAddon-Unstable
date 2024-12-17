@@ -1,21 +1,21 @@
---- @meta
+--- @meta _
 
 --- @class ServerSettings
 --- @field public class any
-ServerSettings = {};
+ServerSettings = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function ServerSettings:addSpawnRegion(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function ServerSettings:clearSpawnRegions() end
 
 --- @public
@@ -23,20 +23,20 @@ function ServerSettings:clearSpawnRegions() end
 function ServerSettings:deleteFiles() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ServerSettings:duplicateFiles(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function ServerSettings:getErrorMsg() end
 
 --- @public
---- @return String
+--- @return string
 function ServerSettings:getName() end
 
 --- @public
---- @return int
+--- @return integer
 function ServerSettings:getNumSpawnRegions() end
 
 --- @public
@@ -48,13 +48,13 @@ function ServerSettings:getSandboxOptions() end
 function ServerSettings:getServerOptions() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function ServerSettings:getSpawnRegionFile(arg0) end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function ServerSettings:getSpawnRegionName(arg0) end
 
 --- @public
@@ -66,22 +66,22 @@ function ServerSettings:isValid() end
 function ServerSettings:loadFiles() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function ServerSettings:loadSpawnPointsFile(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ServerSettings:removeSpawnRegion(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ServerSettings:rename(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ServerSettings:resetToDefault() end
 
 --- @public
@@ -89,17 +89,16 @@ function ServerSettings:resetToDefault() end
 function ServerSettings:saveFiles() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @return boolean
 function ServerSettings:saveSpawnPointsFile(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ServerSettings
 function ServerSettings.new(arg0) end

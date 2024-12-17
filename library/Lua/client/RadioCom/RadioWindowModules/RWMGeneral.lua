@@ -21,7 +21,6 @@
 ---@field [any] any
 RWMGeneral = RWMPanel:derive("RWMGeneral")
 
-
 ---@return any
 function RWMGeneral:addInfoLine(_prefix, _line) end
 
@@ -51,7 +50,6 @@ function RWMGeneral:setInfoLines() end
 
 ---@return any
 function RWMGeneral:update() end
-
 
 ---@return RWMGeneral
 function RWMGeneral:new(x, y, width, height) end

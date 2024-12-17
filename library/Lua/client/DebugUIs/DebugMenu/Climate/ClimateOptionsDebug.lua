@@ -9,7 +9,6 @@
 ---@field [any] any
 ClimateOptionsDebug = ISDebugSubPanelBase:derive("ClimateOptionsDebug")
 
-
 ---@return any
 function ClimateOptionsDebug:addBoolOption(_id, _bool, _x, _y, _w) end
 
@@ -39,7 +38,6 @@ function ClimateOptionsDebug:prerender() end
 
 ---@return any
 function ClimateOptionsDebug:update() end
-
 
 ---@return ClimateOptionsDebug
 function ClimateOptionsDebug:new(x, y, width, height, doStencil) end

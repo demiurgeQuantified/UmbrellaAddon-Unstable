@@ -14,7 +14,6 @@
 ---@field [any] any
 ISAddWaterToTrough = ISBaseTimedAction:derive("ISAddWaterToTrough")
 
-
 ---@return any
 function ISAddWaterToTrough:animEvent(event, parameter) end
 
@@ -53,7 +52,6 @@ function ISAddWaterToTrough:updateAddingWater() end
 
 ---@return any
 function ISAddWaterToTrough:waitToStart() end
-
 
 ---@return ISAddWaterToTrough
 function ISAddWaterToTrough:new(character, objectTo, itemFrom, all) end

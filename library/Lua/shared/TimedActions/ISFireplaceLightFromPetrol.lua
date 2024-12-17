@@ -9,7 +9,6 @@
 ---@field [any] any
 ISFireplaceLightFromPetrol = ISBaseTimedAction:derive("ISFireplaceLightFromPetrol")
 
-
 ---@return any
 function ISFireplaceLightFromPetrol:complete() end
 
@@ -33,7 +32,6 @@ function ISFireplaceLightFromPetrol:update() end
 
 ---@return any
 function ISFireplaceLightFromPetrol:waitToStart() end
-
 
 ---@return ISFireplaceLightFromPetrol
 function ISFireplaceLightFromPetrol:new(character, fireplace, lighter, petrol) end

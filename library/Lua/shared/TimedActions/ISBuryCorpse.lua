@@ -8,7 +8,6 @@
 ---@field [any] any
 ISBuryCorpse = ISBaseTimedAction:derive("ISBuryCorpse")
 
-
 ---@return any
 function ISBuryCorpse:complete() end
 
@@ -38,7 +37,6 @@ function ISBuryCorpse:update() end
 
 ---@return any
 function ISBuryCorpse:waitToStart() end
-
 
 ---@return ISBuryCorpse
 function ISBuryCorpse:new(character, graves, shovel) end

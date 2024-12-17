@@ -19,7 +19,6 @@
 ---@field [any] any
 ISDestroyCursor = ISBuildingObject:derive("ISDestroyCursor")
 
-
 ---@return any
 function ISDestroyCursor:_isDoorFrame(object) end
 
@@ -76,7 +75,6 @@ function ISDestroyCursor:rotateKey(key) end
 
 ---@return any
 function ISDestroyCursor:walkTo(x, y, z) end
-
 
 ---@return ISDestroyCursor
 function ISDestroyCursor:new(character, dismantle, sledgehammer) end

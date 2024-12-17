@@ -13,7 +13,6 @@
 ---@field [any] any
 ISScytheGrassCursor = ISBuildingObject:derive("ISScytheGrassCursor")
 
-
 ---@return any
 function ISScytheGrassCursor:create(x, y, z, north, sprite) end
 
@@ -58,7 +57,6 @@ function ISScytheGrassCursor:rotateKey(key) end
 
 ---@return any
 function ISScytheGrassCursor:walkTo(x, y, z) end
-
 
 ---@return ISScytheGrassCursor
 function ISScytheGrassCursor:new(character, scythe) end

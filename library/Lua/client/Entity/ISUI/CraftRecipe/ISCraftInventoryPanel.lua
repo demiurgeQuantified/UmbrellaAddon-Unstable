@@ -21,7 +21,6 @@
 ---@field [any] any
 ISCraftInventoryPanel = ISPanel:derive("ISCraftInventoryPanel")
 
-
 ---@return any
 function ISCraftInventoryPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -72,7 +71,6 @@ function ISCraftInventoryPanel:update() end
 
 ---@return any
 function ISCraftInventoryPanel:updateContainers(_containers) end
-
 
 ---@return ISCraftInventoryPanel
 function ISCraftInventoryPanel:new(x, y, width, height, player, logic) end

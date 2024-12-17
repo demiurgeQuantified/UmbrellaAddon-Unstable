@@ -1,40 +1,40 @@
---- @meta
+--- @meta _
 
 --- @class RoomDef
 --- @field public class any
-RoomDef = {};
+RoomDef = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function RoomDef:CalculateBounds() end
 
 --- @public
---- @return void
+--- @return nil
 function RoomDef:Dispose() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return long
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function RoomDef:calculateMetaID(arg0, arg1) end
 
 --- @public
 --- @param arg0 BiConsumer
---- @return void
+--- @return nil
 function RoomDef:forEachChunk(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getArea() end
 
 --- @public
 --- @param arg0 IsoChunk
---- @return float
---- @overload fun(self: RoomDef, arg0: int, arg1: int, arg2: int, arg3: int): float
+--- @return number
+--- @overload fun(self: RoomDef, arg0: integer, arg1: integer, arg2: integer, arg3: integer): number
 function RoomDef:getAreaOverlapping(arg0) end
 
 --- @public
@@ -42,10 +42,10 @@ function RoomDef:getAreaOverlapping(arg0) end
 function RoomDef:getBuilding() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param arg0 number
+--- @param arg1 number
 --- @param arg2 Vector2f
---- @return float
+--- @return number
 function RoomDef:getClosestPoint(arg0, arg1, arg2) end
 
 --- @public
@@ -61,11 +61,11 @@ function RoomDef:getFreeSquare() end
 function RoomDef:getFreeUnoccupiedSquare() end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getH() end
 
 --- @public
---- @return long
+--- @return integer
 function RoomDef:getID() end
 
 --- @public
@@ -77,7 +77,7 @@ function RoomDef:getIsoRoom() end
 function RoomDef:getMetaObjects() end
 
 --- @public
---- @return String
+--- @return string
 function RoomDef:getName() end
 
 --- @public
@@ -98,41 +98,41 @@ function RoomDef:getRandomSquare(arg0) end
 function RoomDef:getRects() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return RoomRect
 function RoomDef:getRoomRect(arg0, arg1, arg2) end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getW() end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getX2() end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getY() end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getY2() end
 
 --- @public
---- @return int
+--- @return integer
 function RoomDef:getZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return boolean
 function RoomDef:intersects(arg0, arg1, arg2, arg3) end
 
@@ -150,9 +150,9 @@ function RoomDef:isEmptyOutside() end
 function RoomDef:isExplored() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return boolean
 function RoomDef:isInside(arg0, arg1, arg2) end
 
@@ -165,37 +165,36 @@ function RoomDef:isKidsRoom() end
 function RoomDef:isRoofFixed() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function RoomDef:offset(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function RoomDef:refreshSquares() end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RoomDef:setBuilding(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function RoomDef:setExplored(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function RoomDef:setRoofFixed(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 long
---- @param arg1 String
+--- @param arg0 integer
+--- @param arg1 string
 --- @return RoomDef
 function RoomDef.new(arg0, arg1) end

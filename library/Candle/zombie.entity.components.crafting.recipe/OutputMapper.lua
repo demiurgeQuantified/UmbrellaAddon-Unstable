@@ -1,22 +1,22 @@
---- @meta
+--- @meta _
 
 --- @class OutputMapper
 --- @field public class any
-OutputMapper = {};
+OutputMapper = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function OutputMapper:OnPostWorldDictionaryInit() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 String[]
---- @return void
---- @overload fun(self: OutputMapper, arg0: String, arg1: ArrayList): void
+--- @return nil
+--- @overload fun(self: OutputMapper, arg0: string, arg1: ArrayList): nil
 function OutputMapper:addOutputEntree(arg0, arg1) end
 
 --- @public
@@ -44,20 +44,19 @@ function OutputMapper:isEmpty() end
 
 --- @public
 --- @param arg0 InputScript
---- @return void
+--- @return nil
 function OutputMapper:registerInputScript(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function OutputMapper:setDefaultOutputEntree(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return OutputMapper
 function OutputMapper.new(arg0) end

@@ -11,7 +11,6 @@
 ---@field [any] any
 ISPickAxeGroundCoverItem = ISBaseTimedAction:derive("ISPickAxeGroundCoverItem")
 
-
 ---@return any
 function ISPickAxeGroundCoverItem:animEvent(event, parameter) end
 
@@ -32,7 +31,6 @@ function ISPickAxeGroundCoverItem:update() end
 
 ---@return any
 function ISPickAxeGroundCoverItem:waitToStart() end
-
 
 ---@return ISPickAxeGroundCoverItem
 function ISPickAxeGroundCoverItem:new(character, item) end

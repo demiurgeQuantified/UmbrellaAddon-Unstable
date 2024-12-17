@@ -7,7 +7,6 @@ ISUIHandler = {}
 ISUIHandler.allUIVisible = true
 ISUIHandler.visibleUI = {}
 
-
 ---@return any
 function ISUIHandler.onKeyPressed(key) end
 

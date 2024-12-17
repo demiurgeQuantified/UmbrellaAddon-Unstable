@@ -37,7 +37,6 @@
 ---@field [any] any
 MultiplayerScreen = ISPanel:derive("MultiplayerScreen")
 
-
 ---@return any
 function MultiplayerScreen.OnServerCustomizationDataReceived() end
 
@@ -46,7 +45,6 @@ function MultiplayerScreen.OnSteamServerResponded(serverIndex) end
 
 ---@return any
 function MultiplayerScreen.serverIconRender(self) end
-
 
 ---@return any
 function MultiplayerScreen:addServerToList(server) end
@@ -119,7 +117,6 @@ function MultiplayerScreen:setServerDescription(item) end
 
 ---@return any
 function MultiplayerScreen:setServerMods(item) end
-
 
 ---@return MultiplayerScreen
 function MultiplayerScreen:new(x, y, width, height) end

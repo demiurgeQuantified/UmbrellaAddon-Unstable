@@ -18,7 +18,6 @@
 ---@field [any] any
 ISEquipWeaponAction = ISBaseTimedAction:derive("ISEquipWeaponAction")
 
-
 ---@return any
 function ISEquipWeaponAction:animEvent(event, parameter) end
 
@@ -45,7 +44,6 @@ function ISEquipWeaponAction:stop() end
 
 ---@return any
 function ISEquipWeaponAction:update() end
-
 
 ---@return ISEquipWeaponAction
 function ISEquipWeaponAction:new(character, item, maxTime, primary, twoHands) end

@@ -26,7 +26,6 @@
 ---@field [any] any
 ISWidgetRecipeTools = ISPanel:derive("ISWidgetRecipeTools")
 
-
 ---@return any
 function ISWidgetRecipeTools:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -53,7 +52,6 @@ function ISWidgetRecipeTools:update() end
 
 ---@return any
 function ISWidgetRecipeTools:updateToolValues(_table) end
-
 
 ---@return ISWidgetRecipeTools
 function ISWidgetRecipeTools:new(x, y, width, height, player, logic) end

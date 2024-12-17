@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ItemType: Enum
 --- @field public class any
@@ -14,7 +14,7 @@
 --- @field public Moveable ItemType
 --- @field public None ItemType
 --- @field public Weapon ItemType
-ItemType = {};
+ItemType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,13 +22,13 @@ ItemType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return ItemType
 function ItemType.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ItemType
 function ItemType.valueOf(arg0) end
 
@@ -37,13 +37,10 @@ function ItemType.valueOf(arg0) end
 --- @return ItemType[]
 function ItemType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function ItemType:index() end
-
-

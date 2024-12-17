@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Capability: Enum
 --- @field public class any
@@ -102,7 +102,7 @@
 --- @field public UseTimedActionInstantCheat Capability
 --- @field public UseZombieDontAttackCheat Capability
 --- @field public WorkWithUserlog Capability
-Capability = {};
+Capability = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -110,7 +110,7 @@ Capability = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Capability
 function Capability.valueOf(arg0) end
 
@@ -118,5 +118,3 @@ function Capability.valueOf(arg0) end
 --- @static
 --- @return Capability[]
 function Capability.values() end
-
-

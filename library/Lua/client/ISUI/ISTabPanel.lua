@@ -46,10 +46,8 @@ ISTabPanel.viewDragging = nil
 ISTabPanel.tabSelected = getTexture("media/ui/XpSystemUI/tab_selected.png")
 ISTabPanel.tabUnSelected = getTexture("media/ui/XpSystemUI/tab_unselected.png")
 
-
 ---@return any
 function ISTabPanel.redoTab(self) end
-
 
 ---@return any
 function ISTabPanel:activateView(viewName) end
@@ -128,7 +126,6 @@ function ISTabPanel:setTextTransparency(alpha) end
 
 ---@return any
 function ISTabPanel:updateSmoothScrolling() end
-
 
 ---@return ISTabPanel
 function ISTabPanel:new(x, y, width, height) end

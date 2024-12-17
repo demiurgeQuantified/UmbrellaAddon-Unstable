@@ -15,7 +15,6 @@
 ISFactionsList = ISPanel:derive("ISFactionsList")
 ISFactionsList.messages = {}
 
-
 ---@return any
 function ISFactionsList:drawDatas(y, item, alt) end
 
@@ -30,7 +29,6 @@ function ISFactionsList:populateList() end
 
 ---@return any
 function ISFactionsList:prerender() end
-
 
 ---@return ISFactionsList
 function ISFactionsList:new(x, y, width, height, player) end

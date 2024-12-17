@@ -4,7 +4,6 @@
 STrapSystem = SGlobalObjectSystem:derive("STrapSystem")
 STrapSystem.removedCache = nil
 
-
 ---@return any
 function STrapSystem.addSound() end
 
@@ -16,7 +15,6 @@ function STrapSystem.EveryDays() end
 
 ---@return any
 function STrapSystem.isValidModData(modData) end
-
 
 ---@return any
 function STrapSystem:convertOldModData() end
@@ -38,7 +36,6 @@ function STrapSystem:OnDestroyIsoThumpable(isoObject, playerObj) end
 
 ---@return any
 function STrapSystem:OnObjectAboutToBeRemoved(isoObject) end
-
 
 ---@return STrapSystem
 function STrapSystem:new() end

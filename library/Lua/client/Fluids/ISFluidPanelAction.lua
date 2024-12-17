@@ -8,7 +8,6 @@
 ---@field [any] any
 ISFluidPanelAction = ISBaseTimedAction:derive("ISFluidPanelAction")
 
-
 ---@return any
 function ISFluidPanelAction:isValid() end
 
@@ -23,7 +22,6 @@ function ISFluidPanelAction:stop() end
 
 ---@return any
 function ISFluidPanelAction:update() end
-
 
 ---@return ISFluidPanelAction
 function ISFluidPanelAction:new(character, _container, _panelClass, isSource) end

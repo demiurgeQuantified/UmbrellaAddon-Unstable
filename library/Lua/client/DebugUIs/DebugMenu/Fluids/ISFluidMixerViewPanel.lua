@@ -21,10 +21,8 @@
 ---@field [any] any
 ISFluidMixerViewPanel = ISPanel:derive("ISFluidMixerViewPanel")
 
-
 ---@return any
 function ISFluidMixerViewPanel.onTextChange(box) end
-
 
 ---@return any
 function ISFluidMixerViewPanel:addItem(item) end
@@ -64,7 +62,6 @@ function ISFluidMixerViewPanel:prerender() end
 
 ---@return any
 function ISFluidMixerViewPanel:render() end
-
 
 ---@return ISFluidMixerViewPanel
 function ISFluidMixerViewPanel:new(x, y, width, height, player) end

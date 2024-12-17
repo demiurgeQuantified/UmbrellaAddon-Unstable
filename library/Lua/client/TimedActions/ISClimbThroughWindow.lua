@@ -6,7 +6,6 @@
 ---@field [any] any
 ISClimbThroughWindow = ISBaseTimedAction:derive("ISClimbThroughWindow")
 
-
 ---@return any
 function ISClimbThroughWindow:getDeltaModifiers(deltas) end
 
@@ -33,7 +32,6 @@ function ISClimbThroughWindow:update() end
 
 ---@return any
 function ISClimbThroughWindow:waitToStart() end
-
 
 ---@return ISClimbThroughWindow
 function ISClimbThroughWindow:new(character, item, time) end

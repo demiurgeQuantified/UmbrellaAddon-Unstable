@@ -20,7 +20,6 @@
 ---@field [any] any
 ISWidgetCraftControl = ISPanel:derive("ISWidgetCraftControl")
 
-
 ---@return any
 function ISWidgetCraftControl:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -50,7 +49,6 @@ function ISWidgetCraftControl:render() end
 
 ---@return any
 function ISWidgetCraftControl:update() end
-
 
 ---@return ISWidgetCraftControl
 function ISWidgetCraftControl:new(x, y, width, height, player, entity, component, callbackTarget, _styleButton) end

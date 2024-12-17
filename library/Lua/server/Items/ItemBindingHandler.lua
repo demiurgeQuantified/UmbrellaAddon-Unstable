@@ -3,7 +3,6 @@
 ---@class ItemBindingHandler
 ItemBindingHandler = {}
 
-
 ---@return any
 function ItemBindingHandler.onKeyPressed(key) end
 

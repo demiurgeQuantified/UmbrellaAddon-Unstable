@@ -13,7 +13,6 @@
 ---@field [any] any
 ISPaintSignAction = ISBaseTimedAction:derive("ISPaintSignAction")
 
-
 ---@return any
 function ISPaintSignAction:complete() end
 
@@ -34,7 +33,6 @@ function ISPaintSignAction:stop() end
 
 ---@return any
 function ISPaintSignAction:update() end
-
 
 ---@return ISPaintSignAction
 function ISPaintSignAction:new(character, wall, paintPot, sign, r, g, b) end

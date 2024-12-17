@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class ClothingPatchFabricType: Enum
 --- @field public class any
 --- @field public Cotton ClothingPatchFabricType
 --- @field public Denim ClothingPatchFabricType
 --- @field public Leather ClothingPatchFabricType
-ClothingPatchFabricType = {};
+ClothingPatchFabricType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,19 +13,19 @@ ClothingPatchFabricType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return ClothingPatchFabricType
 function ClothingPatchFabricType.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ClothingPatchFabricType
 function ClothingPatchFabricType.fromType(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ClothingPatchFabricType
 function ClothingPatchFabricType.valueOf(arg0) end
 
@@ -34,13 +34,10 @@ function ClothingPatchFabricType.valueOf(arg0) end
 --- @return ClothingPatchFabricType[]
 function ClothingPatchFabricType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ClothingPatchFabricType:getType() end
-
-

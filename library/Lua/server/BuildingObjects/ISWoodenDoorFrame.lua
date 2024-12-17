@@ -12,7 +12,6 @@
 ---@field [any] any
 ISWoodenDoorFrame = ISBuildingObject:derive("ISWoodenDoorFrame")
 
-
 ---@return any
 function ISWoodenDoorFrame:create(x, y, z, north, sprite) end
 
@@ -24,7 +23,6 @@ function ISWoodenDoorFrame:isValid(square) end
 
 ---@return any
 function ISWoodenDoorFrame:render(x, y, z, square) end
-
 
 ---@return ISWoodenDoorFrame
 function ISWoodenDoorFrame:new(sprite, northSprite, corner) end

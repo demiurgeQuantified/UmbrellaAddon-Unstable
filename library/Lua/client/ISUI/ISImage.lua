@@ -23,7 +23,6 @@
 ---@field [any] any
 ISImage = ISPanel:derive("ISImage")
 
-
 ---@return any
 function ISImage:getTexture() end
 
@@ -50,7 +49,6 @@ function ISImage:setMouseOverText(text) end
 
 ---@return any
 function ISImage:updateTooltip() end
-
 
 ---@return ISImage
 function ISImage:new(x, y, width, height, texture) end

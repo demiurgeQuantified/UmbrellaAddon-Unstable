@@ -9,7 +9,6 @@
 ---@field [any] any
 ISUI3DScene = ISUIElement:derive("ISUI3DScene")
 
-
 ---@return any
 function ISUI3DScene:getView() end
 
@@ -36,7 +35,6 @@ function ISUI3DScene:prerender() end
 
 ---@return any
 function ISUI3DScene:setView(name) end
-
 
 ---@return ISUI3DScene
 function ISUI3DScene:new(x, y, width, height) end

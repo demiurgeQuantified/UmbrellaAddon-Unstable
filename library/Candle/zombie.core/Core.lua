@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Core
 --- @field public class any
@@ -9,45 +9,45 @@
 --- @field public bExiting boolean
 --- @field public bImGui boolean
 --- @field public bLastStand boolean
---- @field public blinkAlpha float
+--- @field public blinkAlpha number
 --- @field public blinkAlphaIncrease boolean
 --- @field public bTutorial boolean
 --- @field public bUseGameViewport boolean
 --- @field public bUseViewports boolean
---- @field public ChallengeID String
---- @field public characterHeight float
+--- @field public ChallengeID string
+--- @field public characterHeight number
 --- @field public CurrentTextEntryBox UITextEntryInterface
---- @field public dirtyGlobalLightsCount int
---- @field public GameMap String
---- @field public GameMode String
---- @field public GameSaveWorld String
---- @field public height int
---- @field public initialHeight float
---- @field public initialWidth float
---- @field public iPerfPuddles_All int
---- @field public iPerfPuddles_GroundOnly int
---- @field public iPerfPuddles_GroundWithRuts int
---- @field public iPerfPuddles_None int
---- @field public iPerfSkybox_High int
---- @field public iPerfSkybox_Medium int
---- @field public iPerfSkybox_Static int
---- @field public MaxJukeBoxesActive int
---- @field public ModelScale float
---- @field public NumJukeBoxesActive int
+--- @field public dirtyGlobalLightsCount integer
+--- @field public GameMap string
+--- @field public GameMode string
+--- @field public GameSaveWorld string
+--- @field public height integer
+--- @field public initialHeight number
+--- @field public initialWidth number
+--- @field public iPerfPuddles_All integer
+--- @field public iPerfPuddles_GroundOnly integer
+--- @field public iPerfPuddles_GroundWithRuts integer
+--- @field public iPerfPuddles_None integer
+--- @field public iPerfSkybox_High integer
+--- @field public iPerfSkybox_Medium integer
+--- @field public iPerfSkybox_Static integer
+--- @field public MaxJukeBoxesActive integer
+--- @field public ModelScale number
+--- @field public NumJukeBoxesActive integer
 --- @field public OptionModsEnabled boolean
---- @field public Preset String
---- @field public PZWorldToBulletZScale float
+--- @field public Preset string
+--- @field public PZWorldToBulletZScale number
 --- @field public SafeMode boolean
 --- @field public SafeModeForced boolean
---- @field public scale float
+--- @field public scale number
 --- @field public SoundDisabled boolean
---- @field public TileScale int
+--- @field public TileScale integer
 --- @field public UnitVector3f Vector3f
---- @field public width int
---- @field public xx int
---- @field public yy int
---- @field public zz int
-Core = {};
+--- @field public width integer
+--- @field public xx integer
+--- @field public yy integer
+--- @field public zz integer
+Core = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -55,30 +55,30 @@ Core = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Core.UnfocusActiveTextEntryBox() end
 
 --- @public
 --- @static
 --- @param arg0 int[]
---- @param arg1 int
---- @param arg2 int
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return int[]
 function Core.flipPixels(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function Core.getDifficulty() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function Core.getGLMajorVersion() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function Core.getGLVersion() end
 
 --- @public
@@ -88,22 +88,22 @@ function Core.getInstance() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function Core.getMyDocumentFolder() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Core.getOpenGLVersions() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function Core.getSVNRevisionString() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function Core.getTileScale() end
 
 --- @public
@@ -128,27 +128,27 @@ function Core.isUseViewports() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core.setDifficulty(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function Core.setDisplayMode(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core.setFullScreen(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Core.setInitialSize() end
 
 --- @public
@@ -161,146 +161,145 @@ function Core.supportCompressedTextures() end
 --- @return boolean
 function Core.supportNPTTexture() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function Core:ChangeWorldViewport(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:CheckDelayResetLua() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function Core:DelayResetLua(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Core:DoEndFrameStuff(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function Core:DoEndFrameStuffFx(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:DoFrameReady() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:DoPopIsoStuff() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function Core:DoPushIsoParticleStuff(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function Core:DoPushIsoStuff(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function Core:DoPushIsoStuff2D(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @param arg3 integer
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 boolean
---- @return void
+--- @return nil
 function Core:DoStartFrameNoZoom(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 int
---- @return void
---- @overload fun(self: Core, arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean): void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @param arg3 integer
+--- @return nil
+--- @overload fun(self: Core, arg0: integer, arg1: integer, arg2: number, arg3: integer, arg4: boolean): nil
 function Core:DoStartFrameStuff(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function Core:DoStartFrameStuffSmartTextureFx(arg0, arg1, arg2) end
 
 --- @public
---- @return void
---- @overload fun(self: Core, arg0: int): void
+--- @return nil
+--- @overload fun(self: Core, arg0: integer): nil
 function Core:EndFrame() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:EndFrameText(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:EndFrameUI() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:MoveMethodToggle() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:RenderOffScreenBuffer() end
 
 --- @public
 --- @param arg0 boolean
---- @param arg1 String
---- @return void
---- @overload fun(self: Core, arg0: String, arg1: String): void
+--- @param arg1 string
+--- @return nil
+--- @overload fun(self: Core, arg0: string, arg1: string): nil
 function Core:ResetLua(arg0, arg1) end
 
 --- @public
---- @return void
---- @overload fun(self: Core, arg0: int, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: Core, arg0: integer, arg1: boolean): nil
 function Core:StartFrame() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @param arg3 integer
+--- @return nil
 function Core:StartFrameFlipY(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:StartFrameText(arg0) end
 
 --- @public
@@ -308,59 +307,59 @@ function Core:StartFrameText(arg0) end
 function Core:StartFrameUI() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:TakeFullScreenshot(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: Core, arg0: int, arg1: int, arg2: int): void
---- @overload fun(self: Core, arg0: int, arg1: int, arg2: int, arg3: int, arg4: int): void
+--- @return nil
+--- @overload fun(self: Core, arg0: integer, arg1: integer, arg2: integer): nil
+--- @overload fun(self: Core, arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: integer): nil
 function Core:TakeScreenshot() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Integer
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function Core:addAltKeyBinding(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Integer
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function Core:addKeyBinding(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:countMissing3DItems() end
 
 --- @public
---- @return String
+--- @return string
 function Core:debugOutputMissingCLothingSpawn() end
 
 --- @public
---- @return String
+--- @return string
 function Core:debugOutputMissingItemSpawn() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return String
+--- @param arg0 string
+--- @param arg1 string
+--- @return string
 function Core:debugOutputMissingSpawn(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Core:doZoomScroll(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:exitToMenu() end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function Core:getAltKey(arg0) end
 
 --- @public
@@ -368,7 +367,7 @@ function Core:getAltKey(arg0) end
 function Core:getAltKeyMaps() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function Core:getAutoZoom(arg0) end
 
@@ -377,12 +376,12 @@ function Core:getAutoZoom(arg0) end
 function Core:getBadHighlitedColor() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function Core:getBindForKey(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function Core:getBlinkingMoodle() end
 
 --- @public
@@ -390,7 +389,7 @@ function Core:getBlinkingMoodle() end
 function Core:getBreakModGameVersion() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getChallengeID() end
 
 --- @public
@@ -398,7 +397,7 @@ function Core:getChallengeID() end
 function Core:getContentTranslationsEnabled() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getCurrentPlayerZoom() end
 
 --- @public
@@ -410,7 +409,7 @@ function Core:getDebug() end
 function Core:getDefaultZoomLevels() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getGameMode() end
 
 --- @public
@@ -422,20 +421,20 @@ function Core:getGameVersion() end
 function Core:getGoodHighlitedColor() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getIgnoreProneZombieRange() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getIsoCursorAlpha() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getIsoCursorVisibility() end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function Core:getKey(arg0) end
 
 --- @public
@@ -443,25 +442,25 @@ function Core:getKey(arg0) end
 function Core:getKeyMaps() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getMaxTextureSize() end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function Core:getMaxTextureSizeFromFlags(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function Core:getMaxTextureSizeFromOption(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getMaxVehicleTextureSize() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getMaxZoom() end
 
 --- @public
@@ -469,11 +468,11 @@ function Core:getMaxZoom() end
 function Core:getMicVolumeError() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getMicVolumeIndicator() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getMinZoom() end
 
 --- @public
@@ -481,9 +480,9 @@ function Core:getMinZoom() end
 function Core:getMpTextColor() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return float
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return number
 function Core:getNextZoom(arg0, arg1) end
 
 --- @public
@@ -496,42 +495,42 @@ function Core:getObjectHighlitedColor() end
 
 --- @public
 --- @return TextureFBO
---- @overload fun(self: Core, arg0: int): TextureFBO
+--- @overload fun(self: Core, arg0: integer): TextureFBO
 function Core:getOffscreenBuffer() end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function Core:getOffscreenHeight(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOffscreenTrueHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOffscreenTrueWidth() end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function Core:getOffscreenWidth(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionActionProgressBarSize() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function Core:getOptionActiveController(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionAimTextureIndex() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionAmbientVolume() end
 
 --- @public
@@ -543,7 +542,7 @@ function Core:getOptionAutoDrink() end
 function Core:getOptionAutoWalkContainer() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionBloodDecals() end
 
 --- @public
@@ -551,16 +550,16 @@ function Core:getOptionBloodDecals() end
 function Core:getOptionBorderlessWindow() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ConfigOption
 function Core:getOptionByIndex(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function Core:getOptionChatFadeTime() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionChatFontSize() end
 
 --- @public
@@ -572,11 +571,11 @@ function Core:getOptionChatOpaqueOnFocus() end
 function Core:getOptionClock24Hour() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionClockFormat() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionClockSize() end
 
 --- @public
@@ -584,11 +583,11 @@ function Core:getOptionClockSize() end
 function Core:getOptionColorblindPatterns() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionContextMenuFont() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionControllerButtonStyle() end
 
 --- @public
@@ -596,15 +595,15 @@ function Core:getOptionControllerButtonStyle() end
 function Core:getOptionCorpseShadows() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionCount() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionCrosshairTextureIndex() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionCycleContainerKey() end
 
 --- @public
@@ -644,11 +643,11 @@ function Core:getOptionEnableLeftJoystickRadialMenu() end
 function Core:getOptionFocusloss() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionFontSize() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionFontSizeReal() end
 
 --- @public
@@ -656,23 +655,23 @@ function Core:getOptionFontSizeReal() end
 function Core:getOptionHighResPlacedItems() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionIgnoreProneZombieRange() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionInventoryContainerSize() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionInventoryFont() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionJumpScareVolume() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionLanguageName() end
 
 --- @public
@@ -688,23 +687,23 @@ function Core:getOptionLightSensitivity() end
 function Core:getOptionLockCursorToWindow() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getOptionMaxChatOpaque() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMaxCrosshairOffset() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMaxTextureSize() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMaxVehicleTextureSize() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionMeasurementFormat() end
 
 --- @public
@@ -712,7 +711,7 @@ function Core:getOptionMeasurementFormat() end
 function Core:getOptionMeleeOutline() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getOptionMinChatOpaque() end
 
 --- @public
@@ -724,24 +723,24 @@ function Core:getOptionModelTextureMipmaps() end
 function Core:getOptionModsEnabled() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMoodleSize() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMusicActionStyle() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMusicLibrary() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionMusicVolume() end
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function Core:getOptionOnStartup(arg0) end
 
 --- @public
@@ -753,7 +752,7 @@ function Core:getOptionPanCameraWhileAiming() end
 function Core:getOptionPanCameraWhileDriving() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getOptionPrecipitationSpeedMultiplier() end
 
 --- @public
@@ -765,7 +764,7 @@ function Core:getOptionRackProgress() end
 function Core:getOptionRadialMenuKeyToggle() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionReloadDifficulty() end
 
 --- @public
@@ -773,7 +772,7 @@ function Core:getOptionReloadDifficulty() end
 function Core:getOptionReloadRadialInstant() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionRenderPrecipitation() end
 
 --- @public
@@ -781,19 +780,19 @@ function Core:getOptionRenderPrecipitation() end
 function Core:getOptionReticleCameraZoom() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionReticleMode() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionReticleTextureIndex() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionSearchModeOverlayEffect() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionShoulderButtonContainerSwitch() end
 
 --- @public
@@ -825,7 +824,7 @@ function Core:getOptionShowSurvivalGuide() end
 function Core:getOptionShowValidTargetReticleTexture() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionSimpleClothingTextures() end
 
 --- @public
@@ -833,12 +832,12 @@ function Core:getOptionSimpleClothingTextures() end
 function Core:getOptionSimpleWeaponTextures() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function Core:getOptionSingleContextMenu(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionSoundVolume() end
 
 --- @public
@@ -866,7 +865,7 @@ function Core:getOptionTieredZombieUpdates() end
 function Core:getOptionTimedActionGameSpeedReset() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionTooltipFont() end
 
 --- @public
@@ -874,7 +873,7 @@ function Core:getOptionTooltipFont() end
 function Core:getOptionUIFBO() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionUIRenderFPS() end
 
 --- @public
@@ -886,15 +885,15 @@ function Core:getOptionUpdateSneakButton() end
 function Core:getOptionVSync() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionValidTargetReticleTextureIndex() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVehicleEngineVolume() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVoiceAGCMode() end
 
 --- @public
@@ -902,27 +901,27 @@ function Core:getOptionVoiceAGCMode() end
 function Core:getOptionVoiceEnable() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVoiceMode() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVoiceRecordDevice() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionVoiceRecordDeviceName() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVoiceVADMode() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVoiceVolumeMic() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getOptionVoiceVolumePlayers() end
 
 --- @public
@@ -930,19 +929,19 @@ function Core:getOptionVoiceVolumePlayers() end
 function Core:getOptionZoom() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionZoomLevels1x() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getOptionZoomLevels2x() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getPerfPuddles() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getPerfPuddlesOnLoad() end
 
 --- @public
@@ -954,31 +953,31 @@ function Core:getPerfReflections() end
 function Core:getPerfReflectionsOnLoad() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getPerfSkybox() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getPerfSkyboxOnLoad() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getPoisonousBerry() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getPoisonousMushroom() end
 
 --- @public
---- @return float
+--- @return number
 function Core:getRealOptionSoundVolume() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getSaveFolder() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getScreenHeight() end
 
 --- @public
@@ -986,15 +985,15 @@ function Core:getScreenHeight() end
 function Core:getScreenModes() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getScreenWidth() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getSeenUpdateText() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getSelectedMap() end
 
 --- @public
@@ -1002,7 +1001,7 @@ function Core:getSelectedMap() end
 function Core:getServerVOIPEnable() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getSteamServerVersion() end
 
 --- @public
@@ -1010,7 +1009,7 @@ function Core:getSteamServerVersion() end
 function Core:getTargetColor() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getTermsOfServiceVersion() end
 
 --- @public
@@ -1018,15 +1017,15 @@ function Core:getTermsOfServiceVersion() end
 function Core:getUseShaders() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getVersion() end
 
 --- @public
---- @return String
+--- @return string
 function Core:getVersionNumber() end
 
 --- @public
---- @return int
+--- @return integer
 function Core:getVidMem() end
 
 --- @public
@@ -1034,20 +1033,20 @@ function Core:getVidMem() end
 function Core:getWorkstationHighlitedColor() end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
---- @return int
+--- @param arg0 integer
+--- @param arg1 number
+--- @return integer
 function Core:getXAngle(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
---- @return int
+--- @param arg0 integer
+--- @param arg1 number
+--- @return integer
 function Core:getYAngle(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function Core:getZoom(arg0) end
 
 --- @public
@@ -1055,29 +1054,29 @@ function Core:getZoom(arg0) end
 function Core:gotNewBelt() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Core:init(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:initFBOs() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:initGlobalShader() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:initPoisonousBerry() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:initPoisonousMushroom() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:initShaders() end
 
 --- @public
@@ -1141,8 +1140,8 @@ function Core:isFullScreen() end
 function Core:isInDebug() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Integer
+--- @param arg0 string
+--- @param arg1 integer
 --- @return boolean
 function Core:isKey(arg0, arg1) end
 
@@ -1264,870 +1263,870 @@ function Core:loadOptions_OLD() end
 function Core:loadedShader() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:quit() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:quitToDesktop() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:reinitKeyMaps() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:saveOptions() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:saveOptions_OLD() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setAnimPopupDone(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setAnimalCheat(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function Core:setAutoZoom(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setAzerty(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setBadHighlitedColor(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setBlinkingMoodle(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setCelsius(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setChallenge(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setCollideZombies(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setContentTranslationsEnabled(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setDisplayCursor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setDisplayPlayerModel(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setDoneNewSaveFolder(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setFlashIsoCursor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setForceSnow(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setFramerate(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setGoodHighlitedColor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setGotNewBelt(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setIsSelectingAll(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setIsoCursorVisibility(arg0) end
 
 --- @public
 --- @param arg0 Map
---- @return void
+--- @return nil
 function Core:setKeyMaps(arg0) end
 
 --- @public
 --- @param arg0 TextureFBO
---- @return void
+--- @return nil
 function Core:setLastRenderedFBO(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setModsPopupDone(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setMpTextColor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setMultiThread(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setNoSave(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setNoTargetColor(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setObjectHighlitedColor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOption3DGroundItem(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionActionProgressBarSize(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function Core:setOptionActiveController(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionAimTextureIndex(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionAmbientVolume(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionAutoDrink(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionAutoProneAtk(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionAutoWalkContainer(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionBloodDecals(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionBorderlessWindow(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Core:setOptionChatFadeTime(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionChatFontSize(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionChatOpaqueOnFocus(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionClock24Hour(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionClockFormat(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionClockSize(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionColorblindPatterns(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionContextMenuFont(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionControllerButtonStyle(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionCorpseShadows(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionCrosshairTextureIndex(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionCycleContainerKey(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionDisplayAsCelsius(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionDoContainerOutline(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionDoDoorSpriteEffects(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionDoVideoEffects(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionDoWindSpriteEffects(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionDropItemsOnSquareCenter(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionEnableDyslexicFont(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionEnableLeftJoystickRadialMenu(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionFocusloss(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionFontSize(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionHighResPlacedItems(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionIgnoreProneZombieRange(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionInventoryContainerSize(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionInventoryFont(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionJumpScareVolume(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionLanguageName(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionLeaveKeyInIgnition(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionLightSensitivity(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionLockCursorToWindow(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Core:setOptionMaxChatOpaque(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMaxCrosshairOffset(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMaxTextureSize(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMaxVehicleTextureSize(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionMeasurementFormat(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionMeleeOutline(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Core:setOptionMinChatOpaque(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionModelTextureMipmaps(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionModsEnabled(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMoodleSize(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMusicActionStyle(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMusicLibrary(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionMusicVolume(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
 function Core:setOptionOnStartup(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionPanCameraWhileAiming(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionPanCameraWhileDriving(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Core:setOptionPrecipitationSpeedMultiplier(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionProgressBar(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionRackProgress(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionRadialMenuKeyToggle(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionReloadDifficulty(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionReloadRadialInstant(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionRenderPrecipitation(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionReticleCameraZoom(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionReticleMode(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionReticleTextureIndex(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionSearchModeOverlayEffect(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionShoulderButtonContainerSwitch(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowAimTexture(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowChatTimestamp(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowChatTitle(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowCursorWhileAiming(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowFirstAnimalZoneInfo(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowItemModInfo(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowReticleTexture(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowSurvivalGuide(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionShowValidTargetReticleTexture(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionSimpleClothingTextures(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionSimpleWeaponTextures(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function Core:setOptionSingleContextMenu(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionSoundVolume(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionStreamerMode(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionTexture2x(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionTextureCompression(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionTieredZombieUpdates(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionTimedActionGameSpeedReset(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionTooltipFont(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionUIFBO(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionUIRenderFPS(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionUpdateSneakButton(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionVSync(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionValidTargetReticleTextureIndex(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVehicleEngineVolume(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVoiceAGCMode(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
---- @overload fun(self: Core, arg0: boolean, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: Core, arg0: boolean, arg1: boolean): nil
 function Core:setOptionVoiceEnable(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVoiceMode(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVoiceRecordDevice(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionVoiceRecordDeviceName(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVoiceVADMode(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVoiceVolumeMic(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setOptionVoiceVolumePlayers(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptionZoom(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionZoomLevels1x(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setOptionZoomLevels2x(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setOptiondblTapJogToSprint(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setPerfPuddles(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setPerfReflections(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setPerfSkybox(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setPoisonousBerry(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setPoisonousMushroom(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setRenderPrecipIndoors(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setResolution(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function Core:setResolutionAndFullScreen(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setRiversideDone(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Core:setScreenSize(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setSeenUpdateText(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Core:setSelectedMap(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setShowFirstTimeSearchTutorial(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setShowFirstTimeSneakTutorial(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setShowFirstTimeVehicleTutorial(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setShowFirstTimeWeatherTutorial(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setShowPing(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setShowYourUsername(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setTargetColor(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setTermsOfServiceVersion(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setTestingMicrophone(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setToggleToAim(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setToggleToRun(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setToggleToSprint(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setTutorialDone(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setUseShaders(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setVehiclesWarningShow(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Core:setVidMem(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setWindowed(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function Core:setWorkstationHighlitedColor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setZombieGroupSound(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:setZoomEnalbed(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Core:shadersOptionChanged() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return boolean
 function Core:supportRes(arg0, arg1) end
 
@@ -2136,18 +2135,17 @@ function Core:supportRes(arg0, arg1) end
 function Core:supportsFBO() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:updateKeyboard() end
 
 --- @public
---- @return void
+--- @return nil
 function Core:zoomLevelsChanged() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Core:zoomOptionChanged(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

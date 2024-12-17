@@ -9,7 +9,6 @@
 ---@field [any] any
 ISBBQAddFuel = ISBaseTimedAction:derive("ISBBQAddFuel")
 
-
 ---@return any
 function ISBBQAddFuel:complete() end
 
@@ -33,7 +32,6 @@ function ISBBQAddFuel:update() end
 
 ---@return any
 function ISBBQAddFuel:waitToStart() end
-
 
 ---@return ISBBQAddFuel
 function ISBBQAddFuel:new(character, fireplace, item, fuelAmt) end

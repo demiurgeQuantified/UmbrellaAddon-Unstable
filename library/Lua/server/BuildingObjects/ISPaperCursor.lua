@@ -20,7 +20,6 @@
 ---@field [any] any
 ISPaperCursor = ISBuildingObject:derive("ISPaperCursor")
 
-
 ---@return any
 function ISPaperCursor:_isDoorFrame(object) end
 
@@ -62,7 +61,6 @@ function ISPaperCursor:rotateKey(key) end
 
 ---@return any
 function ISPaperCursor:walkTo(x, y, z) end
-
 
 ---@return ISPaperCursor
 function ISPaperCursor:new(character, paperType, newSprite) end

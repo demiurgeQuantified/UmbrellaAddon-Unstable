@@ -1,23 +1,22 @@
---- @meta
+--- @meta _
 
 --- @class GameSoundScript: BaseScriptObject
 --- @field public class any
-GameSoundScript = {};
+GameSoundScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function GameSoundScript:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function GameSoundScript:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

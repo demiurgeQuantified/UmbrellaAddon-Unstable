@@ -29,7 +29,6 @@ ISInventoryTransferAction.putSoundDelay = 2
 ISInventoryTransferAction.putSoundTime = 0
 ISInventoryTransferAction.putSound = nil
 
-
 ---@return any
 function ISInventoryTransferAction:canDropOnFloor(square) end
 
@@ -101,7 +100,6 @@ function ISInventoryTransferAction:transferItem(item) end
 
 ---@return any
 function ISInventoryTransferAction:update() end
-
 
 ---@return ISInventoryTransferAction
 function ISInventoryTransferAction:new(character, item, srcContainer, destContainer, time) end

@@ -9,10 +9,8 @@
 ---@field [any] any
 ISPickUpGroundCoverItem = ISBaseTimedAction:derive("ISPickUpGroundCoverItem")
 
-
 ---@return any
 function ISPickUpGroundCoverItem.grabItemTime2(playerObj, trashItemWeight) end
-
 
 ---@return any
 function ISPickUpGroundCoverItem:animEvent(event, parameter) end
@@ -40,7 +38,6 @@ function ISPickUpGroundCoverItem:update() end
 
 ---@return any
 function ISPickUpGroundCoverItem:waitToStart() end
-
 
 ---@return ISPickUpGroundCoverItem
 function ISPickUpGroundCoverItem:new(character, square, object) end

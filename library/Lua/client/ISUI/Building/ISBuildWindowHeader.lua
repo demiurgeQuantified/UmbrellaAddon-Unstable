@@ -23,7 +23,6 @@
 ---@field [any] any
 ISBuildWindowHeader = ISPanel:derive("ISBuildWindowHeader")
 
-
 ---@return any
 function ISBuildWindowHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -47,7 +46,6 @@ function ISBuildWindowHeader:render() end
 
 ---@return any
 function ISBuildWindowHeader:update() end
-
 
 ---@return ISBuildWindowHeader
 function ISBuildWindowHeader:new(x, y, width, height, player, _styleIcon, _styleLabel, _styleButton) end

@@ -25,10 +25,8 @@
 ---@field [any] any
 ISTermsOfServiceUI = ISPanelJoypad:derive("ISTermsOfServiceUI")
 
-
 ---@return any
 function ISTermsOfServiceUI.OnGameStateEnter(javaStateObj) end
-
 
 ---@return any
 function ISTermsOfServiceUI:createChildren() end
@@ -65,7 +63,6 @@ function ISTermsOfServiceUI:prerender() end
 
 ---@return any
 function ISTermsOfServiceUI:update() end
-
 
 ---@return ISTermsOfServiceUI
 function ISTermsOfServiceUI:new(x, y, width, height) end

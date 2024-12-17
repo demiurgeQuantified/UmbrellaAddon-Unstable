@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBSafehouse: RandomizedBuildingBase
 --- @field public class any
-RBSafehouse = {};
+RBSafehouse = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RBSafehouse:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBSafehouse:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

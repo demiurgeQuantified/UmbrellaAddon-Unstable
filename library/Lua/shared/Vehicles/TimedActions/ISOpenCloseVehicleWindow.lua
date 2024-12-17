@@ -12,7 +12,6 @@
 ---@field [any] any
 ISOpenCloseVehicleWindow = ISBaseTimedAction:derive("ISOpenCloseVehicleWindow")
 
-
 ---@return any
 function ISOpenCloseVehicleWindow:complete() end
 
@@ -33,7 +32,6 @@ function ISOpenCloseVehicleWindow:stop() end
 
 ---@return any
 function ISOpenCloseVehicleWindow:update() end
-
 
 ---@return ISOpenCloseVehicleWindow
 function ISOpenCloseVehicleWindow:new(character, part, open) end

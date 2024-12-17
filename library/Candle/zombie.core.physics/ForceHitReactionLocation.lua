@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ForceHitReactionLocation
 --- @field public class any
-ForceHitReactionLocation = {};
+ForceHitReactionLocation = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,16 +13,16 @@ ForceHitReactionLocation = {};
 function ForceHitReactionLocation:getAdminValue() end
 
 --- @public
---- @return int
+--- @return integer
 function ForceHitReactionLocation:getID() end
 
 --- @public
---- @return String
+--- @return string
 function ForceHitReactionLocation:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param arg0 integer
+--- @param arg1 string
 --- @return ForceHitReactionLocation
 function ForceHitReactionLocation:init(arg0, arg1) end
 
@@ -32,14 +32,13 @@ function ForceHitReactionLocation:isEnableAdmin() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ForceHitReactionLocation:setAdminValue(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ForceHitReactionLocation:setEnableAdmin(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

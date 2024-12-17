@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ContainerType: Enum
 --- @field public class any
@@ -11,7 +11,7 @@
 --- @field public Undefined ContainerType
 --- @field public Vehicle ContainerType
 --- @field public WorldObject ContainerType
-ContainerType = {};
+ContainerType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,7 +19,7 @@ ContainerType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ContainerType
 function ContainerType.valueOf(arg0) end
 
@@ -27,5 +27,3 @@ function ContainerType.valueOf(arg0) end
 --- @static
 --- @return ContainerType[]
 function ContainerType.values() end
-
-

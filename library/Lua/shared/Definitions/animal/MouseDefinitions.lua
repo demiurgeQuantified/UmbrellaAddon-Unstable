@@ -1,52 +1,52 @@
 ---@meta
 
 local mouse_sounds = {
-    idle = {
-        name = "AnimalVoiceMouseIdle",
-        slot = "voice",
-        intervalMin = 10,
-        intervalMax = 20,
-    },
-    pain = {
-        name = "AnimalVoiceRatPain",
-        slot = "voice",
-        priority = 50,
-    },
-    death = {
-        name = "AnimalVoiceMouseDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    pick_up = {
-        name = "PickUpAnimalMouse",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadMouse",
-    },
-    put_down = {
-        name = "PutDownAnimalMouse",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadMouse",
-    },
-    runloop = {
-        name = "AnimalFootstepsMouseRun",
-        slot = "runloop",
-    },
-    stressed = {
-        name = "AnimalVoiceRatStressed",
-        intervalMin = 5,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    walkloop = {
-        name = "AnimalFootstepsMouseWalk",
-        slot = "walkloop",
-    },
+	idle = {
+		name = "AnimalVoiceMouseIdle",
+		slot = "voice",
+		intervalMin = 10,
+		intervalMax = 20,
+	},
+	pain = {
+		name = "AnimalVoiceRatPain",
+		slot = "voice",
+		priority = 50,
+	},
+	death = {
+		name = "AnimalVoiceMouseDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	pick_up = {
+		name = "PickUpAnimalMouse",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadMouse",
+	},
+	put_down = {
+		name = "PutDownAnimalMouse",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadMouse",
+	},
+	runloop = {
+		name = "AnimalFootstepsMouseRun",
+		slot = "runloop",
+	},
+	stressed = {
+		name = "AnimalVoiceRatStressed",
+		intervalMin = 5,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	walkloop = {
+		name = "AnimalFootstepsMouseWalk",
+		slot = "walkloop",
+	},
 }
 
 ---@class AnimalDefinitions

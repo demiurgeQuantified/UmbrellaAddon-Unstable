@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBTwiggy: RandomizedBuildingBase
 --- @field public class any
-RBTwiggy = {};
+RBTwiggy = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,14 +16,13 @@ function RBTwiggy:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBTwiggy:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBTwiggy:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

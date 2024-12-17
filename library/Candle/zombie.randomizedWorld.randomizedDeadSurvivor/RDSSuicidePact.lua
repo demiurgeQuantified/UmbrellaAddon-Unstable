@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSSuicidePact: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSSuicidePact = {};
+RDSSuicidePact = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSSuicidePact = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSSuicidePact:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

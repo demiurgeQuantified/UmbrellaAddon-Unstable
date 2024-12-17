@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RadialProgressBar: UIElement
 --- @field public class any
-RadialProgressBar = {};
+RadialProgressBar = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,27 +13,26 @@ RadialProgressBar = {};
 function RadialProgressBar:getTexture() end
 
 --- @public
---- @return float
+--- @return number
 function RadialProgressBar:getValue() end
 
 --- @public
---- @return void
+--- @return nil
 function RadialProgressBar:render() end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function RadialProgressBar:setTexture(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function RadialProgressBar:setValue(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function RadialProgressBar:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

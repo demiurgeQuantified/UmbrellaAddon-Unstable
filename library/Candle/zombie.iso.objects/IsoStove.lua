@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IsoStove: IsoObject
 --- @field public class any
 --- @implement Activatable
-IsoStove = {};
+IsoStove = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,37 +15,37 @@ IsoStove = {};
 function IsoStove:Activated() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStove:PlayToggleSound() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoStove): void
+--- @return nil
+--- @overload fun(self: IsoStove): nil
 function IsoStove:Toggle() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStove:addToWorld() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoStove): String
+--- @return string
+--- @overload fun(self: IsoStove): string
 function IsoStove:getActivatableType() end
 
 --- @public
---- @return float
+--- @return number
 function IsoStove:getCurrentTemperature() end
 
 --- @public
---- @return float
+--- @return number
 function IsoStove:getMaxTemperature() end
 
 --- @public
---- @return String
+--- @return string
 function IsoStove:getObjectName() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoStove:getTimer() end
 
 --- @public
@@ -57,7 +57,7 @@ function IsoStove:isBroken() end
 function IsoStove:isMicrowave() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoStove:isRunningFor() end
 
 --- @public
@@ -66,35 +66,35 @@ function IsoStove:isTemperatureChanging() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoStove:load(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoStove:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoStove:setActivated(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoStove:setBroken(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoStove:setMaxTemperature(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoStove:setTimer(arg0) end
 
 --- @public
@@ -102,32 +102,31 @@ function IsoStove:setTimer(arg0) end
 function IsoStove:shouldShowOnOverlay() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStove:sync() end
 
 --- @public
 --- @param arg0 boolean
---- @param arg1 byte
+--- @param arg1 integer
 --- @param arg2 UdpConnection
 --- @param arg3 ByteBuffer
---- @return void
+--- @return nil
 function IsoStove:syncIsoObject(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function IsoStove:syncIsoObjectSend(arg0) end
 
 --- @public
 --- @param arg0 boolean
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoStove:syncSpriteGridObjects(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStove:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

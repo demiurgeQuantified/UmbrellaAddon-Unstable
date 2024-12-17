@@ -6,10 +6,8 @@
 ---@field [any] any
 ISGameLoadingUI = ISPanelJoypad:derive("ISGameLoadingUI")
 
-
 ---@return any
 function ISGameLoadingUI.OnJoypadActivateUI(id) end
-
 
 ---@return any
 function ISGameLoadingUI:configButton(button) end
@@ -28,7 +26,6 @@ function ISGameLoadingUI:onGainJoypadFocus(joypadData) end
 
 ---@return any
 function ISGameLoadingUI:onJoypadDown(button) end
-
 
 ---@return ISGameLoadingUI
 function ISGameLoadingUI:new(status) end

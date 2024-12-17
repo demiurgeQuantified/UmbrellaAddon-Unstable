@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class EntityScriptInfo: Component
 --- @field public class any
-EntityScriptInfo = {};
+EntityScriptInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function EntityScriptInfo:getOriginalScript() end
 
 --- @public
@@ -22,7 +22,5 @@ function EntityScriptInfo:isOriginalIsItem() end
 
 --- @public
 --- @param arg0 GameEntityScript
---- @return void
+--- @return nil
 function EntityScriptInfo:setOriginalScript(arg0) end
-
-

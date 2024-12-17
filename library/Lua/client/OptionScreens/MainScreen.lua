@@ -84,7 +84,6 @@
 ---@field [any] any
 MainScreen = ISPanelJoypad:derive("MainScreen")
 
-
 ---@return any
 function MainScreen.checkMapsAvailable(mapName, activeMods, mapAvailable) end
 
@@ -135,7 +134,6 @@ function MainScreen.resetLuaIfNeeded() end
 
 ---@return any
 function MainScreen.startTutorial() end
-
 
 ---@return any
 function MainScreen:addCredit(title, name) end
@@ -271,7 +269,6 @@ function MainScreen:update() end
 
 ---@return any
 function MainScreen:updateBottomPanelButtons() end
-
 
 ---@return MainScreen
 function MainScreen:new(inGame) end

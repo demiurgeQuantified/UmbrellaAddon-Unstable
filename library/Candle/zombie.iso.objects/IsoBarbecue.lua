@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoBarbecue: IsoObject
 --- @field public class any
-IsoBarbecue = {};
+IsoBarbecue = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,34 +20,33 @@ function IsoBarbecue.isSpriteWithPropaneTank(arg0) end
 --- @return boolean
 function IsoBarbecue.isSpriteWithoutPropaneTank(arg0) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoBarbecue:addFuel(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:addToWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:extinguish() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoBarbecue:getFuelAmount() end
 
 --- @public
---- @return String
+--- @return string
 function IsoBarbecue:getObjectName() end
 
 --- @public
---- @return float
+--- @return number
 function IsoBarbecue:getTemperature() end
 
 --- @public
@@ -76,19 +75,19 @@ function IsoBarbecue:isSmouldering() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoBarbecue:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function IsoBarbecue:loadChange(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:removeFromWorld() end
 
 --- @public
@@ -96,78 +95,77 @@ function IsoBarbecue:removeFromWorld() end
 function IsoBarbecue:removePropaneTank() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoBarbecue:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
---- @return void
+--- @return nil
 function IsoBarbecue:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoBarbecue:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @param arg2 ByteBuffer
---- @return void
+--- @return nil
 function IsoBarbecue:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoBarbecue:setFuelAmount(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoBarbecue:setLit(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoBarbecue:setPropaneTank(arg0) end
 
 --- @public
 --- @param arg0 IsoSprite
---- @return void
+--- @return nil
 function IsoBarbecue:setSprite(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:toggle() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:turnOff() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:turnOn() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoBarbecue:update() end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function IsoBarbecue:useFuel(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

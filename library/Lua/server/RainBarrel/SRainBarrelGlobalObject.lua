@@ -8,7 +8,6 @@
 ---@field [any] any
 SRainBarrelGlobalObject = SGlobalObject:derive("SRainBarrelGlobalObject")
 
-
 ---@return any
 function SRainBarrelGlobalObject:changeSprite() end
 
@@ -20,7 +19,6 @@ function SRainBarrelGlobalObject:stateFromIsoObject(isoObject) end
 
 ---@return any
 function SRainBarrelGlobalObject:stateToIsoObject(isoObject) end
-
 
 ---@return SRainBarrelGlobalObject
 function SRainBarrelGlobalObject:new(luaSystem, globalObject) end

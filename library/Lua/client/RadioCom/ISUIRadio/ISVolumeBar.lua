@@ -34,7 +34,6 @@
 ---@field [any] any
 ISVolumeBar = ISPanel:derive("ISVolumeBar")
 
-
 ---@return any
 function ISVolumeBar:createChildren() end
 
@@ -109,7 +108,6 @@ function ISVolumeBar:setY(y) end
 
 ---@return any
 function ISVolumeBar:update() end
-
 
 ---@return ISVolumeBar
 function ISVolumeBar:new(x, y, width, height, onVolumeChange, onVolumeChangeTarget) end

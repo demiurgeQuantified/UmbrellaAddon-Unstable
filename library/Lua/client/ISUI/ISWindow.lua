@@ -21,7 +21,6 @@ ISWindow.TitleBarHeight = 19
 ISWindow.SideMargin = 12
 ISWindow.BottomMargin = 12
 
-
 ---@return any
 function ISWindow:addToolbar(toolbar, height) end
 
@@ -69,7 +68,6 @@ function ISWindow:removeToolbar(toolbar) end
 
 ---@return any
 function ISWindow:render() end
-
 
 ---@return ISWindow
 function ISWindow:new(title, x, y, width, height) end

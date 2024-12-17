@@ -6,7 +6,6 @@
 CFarming_Interact = {}
 CFarming_Interact.SawOnContextKeyEvent = false
 
-
 ---@return any
 function CFarming_Interact.ChangeClimbDirection(key) end
 

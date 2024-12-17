@@ -4,7 +4,6 @@
 buildUtil = {}
 buildUtil.cheat = false or getDebug()
 
-
 ---@return any
 function buildUtil.addCorner(x, y, z, thumpable, item) end
 

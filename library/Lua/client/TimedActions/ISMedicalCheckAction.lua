@@ -10,10 +10,8 @@
 ISMedicalCheckAction = ISBaseTimedAction:derive("ISMedicalCheckAction")
 ISMedicalCheckAction.HealthWindows = {}
 
-
 ---@return any
 function ISMedicalCheckAction.getHealthWindowForPlayer(playerObj) end
-
 
 ---@return any
 function ISMedicalCheckAction:isValid() end
@@ -32,7 +30,6 @@ function ISMedicalCheckAction:update() end
 
 ---@return any
 function ISMedicalCheckAction:waitToStart() end
-
 
 ---@return ISMedicalCheckAction
 function ISMedicalCheckAction:new(character, otherPlayer) end

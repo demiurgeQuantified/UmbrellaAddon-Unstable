@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBTrashed: RandomizedBuildingBase
 --- @field public class any
-RBTrashed = {};
+RBTrashed = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,14 +24,13 @@ function RBTrashed:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBTrashed:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBTrashed:trashHouse(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

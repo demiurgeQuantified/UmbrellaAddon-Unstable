@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class ResourceFlag: Enum
 --- @field public class any
 --- @implement IOEnum
 --- @field public AutoDecay ResourceFlag
-ResourceFlag = {};
+ResourceFlag = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,13 +12,13 @@ ResourceFlag = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return ResourceFlag
 function ResourceFlag.fromByteId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ResourceFlag
 function ResourceFlag.valueOf(arg0) end
 
@@ -27,19 +27,16 @@ function ResourceFlag.valueOf(arg0) end
 --- @return ResourceFlag[]
 function ResourceFlag.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
---- @overload fun(self: ResourceFlag): int
+--- @return integer
+--- @overload fun(self: ResourceFlag): integer
 function ResourceFlag:getBits() end
 
 --- @public
---- @return byte
---- @overload fun(self: ResourceFlag): byte
+--- @return integer
+--- @overload fun(self: ResourceFlag): integer
 function ResourceFlag:getByteId() end
-
-

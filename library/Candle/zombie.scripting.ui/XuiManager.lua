@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class XuiManager
 --- @field public class any
 --- @field public XuiScriptTypes EnumSet
-XuiManager = {};
+XuiManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -36,62 +36,61 @@ function XuiManager.GetDefaultSkin() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScript
 function XuiManager.GetDefaultStyle(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiLayoutScript
 function XuiManager.GetDefaultStyleScript(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScript
 function XuiManager.GetLayout(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiLayoutScript
 function XuiManager.GetLayoutScript(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiSkin
 function XuiManager.GetSkin(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScript
 function XuiManager.GetStyle(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiLayoutScript
 function XuiManager.GetStyleScript(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function XuiManager.ParseScripts() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function XuiManager.getDefaultSkinName() end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function XuiManager.setParseOnce(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

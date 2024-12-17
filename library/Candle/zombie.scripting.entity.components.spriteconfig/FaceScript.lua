@@ -1,34 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class FaceScript
 --- @field public class any
-FaceScript = {};
+FaceScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function FaceScript:getFaceName() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ZLayer
 function FaceScript:getLayer(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function FaceScript:getTotalHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceScript:getTotalWidth() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceScript:getZLayers() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

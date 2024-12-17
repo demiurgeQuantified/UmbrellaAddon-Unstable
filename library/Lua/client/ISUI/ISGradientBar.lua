@@ -21,7 +21,6 @@
 ---@field [any] any
 ISGradientBar = ISPanel:derive("ISGradientBar")
 
-
 ---@return any
 function ISGradientBar:createChildren() end
 
@@ -54,7 +53,6 @@ function ISGradientBar:setHighlightRadius(_rad) end
 
 ---@return any
 function ISGradientBar:setValue(_v) end
-
 
 ---@return ISGradientBar
 function ISGradientBar:new(x, y, width, height) end

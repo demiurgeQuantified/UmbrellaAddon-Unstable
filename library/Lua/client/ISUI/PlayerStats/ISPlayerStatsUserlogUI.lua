@@ -19,13 +19,11 @@
 ---@field [any] any
 ISPlayerStatsUserlogUI = ISPanel:derive("ISPlayerStatsUserlogUI")
 
-
 ---@return any
 function ISPlayerStatsUserlogUI.populateLogList(self) end
 
 ---@return any
 function ISPlayerStatsUserlogUI.receiveUserLog(username, logs) end
-
 
 ---@return any
 function ISPlayerStatsUserlogUI:create() end
@@ -50,7 +48,6 @@ function ISPlayerStatsUserlogUI:render() end
 
 ---@return any
 function ISPlayerStatsUserlogUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsUserlogUI
 function ISPlayerStatsUserlogUI:new(x, y, width, height, target, onclick, username, userlogs) end

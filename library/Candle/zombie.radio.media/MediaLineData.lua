@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class MediaLineData
 --- @field public class any
-MediaLineData = {};
+MediaLineData = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function MediaLineData:getB() end
 
 --- @public
---- @return String
+--- @return string
 function MediaLineData:getCodes() end
 
 --- @public
@@ -21,31 +21,30 @@ function MediaLineData:getCodes() end
 function MediaLineData:getColor() end
 
 --- @public
---- @return float
+--- @return number
 function MediaLineData:getG() end
 
 --- @public
---- @return float
+--- @return number
 function MediaLineData:getR() end
 
 --- @public
---- @return String
+--- @return string
 function MediaLineData:getTextGuid() end
 
 --- @public
---- @return String
+--- @return string
 function MediaLineData:getTranslatedText() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 string
 --- @return MediaLineData
 function MediaLineData.new(arg0, arg1, arg2, arg3, arg4) end

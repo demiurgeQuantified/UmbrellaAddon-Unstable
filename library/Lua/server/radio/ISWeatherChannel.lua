@@ -5,7 +5,6 @@ WeatherChannel = {}
 WeatherChannel.channelUUID = "EMRG-711984"
 WeatherChannel.debugTestAll = false
 
-
 ---@return any
 function WeatherChannel.AddExtremesForecasting(_c, _bc, offset, _len) end
 
@@ -50,7 +49,6 @@ function WeatherChannel.TestAll(_gametime, _bc) end
 
 ---@class ISDebugUtils
 ISDebugUtils = ISDebugUtils or {}
-
 
 ---@return any
 function ISDebugUtils.roundNum(num, numDecimalPlaces) end

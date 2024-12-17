@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSPoliceAtHouse: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSPoliceAtHouse = {};
+RDSPoliceAtHouse = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSPoliceAtHouse = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSPoliceAtHouse:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

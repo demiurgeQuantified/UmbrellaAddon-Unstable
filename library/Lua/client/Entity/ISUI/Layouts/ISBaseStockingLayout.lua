@@ -44,7 +44,6 @@
 ISBaseStockingLayout = ISPanel:derive("ISBaseStockingLayout")
 ISBaseStockingLayout.defaultJoypadMoveInterval = 20
 
-
 ---@return any
 function ISBaseStockingLayout:addVendingOption(_index, _x, _y, _resource) end
 
@@ -80,7 +79,6 @@ function ISBaseStockingLayout:render() end
 
 ---@return any
 function ISBaseStockingLayout:update() end
-
 
 ---@return ISBaseStockingLayout
 function ISBaseStockingLayout:new(x, y, _parentPanel, _blueprintLogic) end

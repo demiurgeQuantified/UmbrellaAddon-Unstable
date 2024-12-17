@@ -10,7 +10,6 @@
 ---@field [any] any
 SFeedingTroughGlobalObject = SGlobalObject:derive("SFeedingTroughGlobalObject")
 
-
 ---@return any
 function SFeedingTroughGlobalObject:addFeed(type, feedAmount) end
 
@@ -43,7 +42,6 @@ function SFeedingTroughGlobalObject:stateFromIsoObject(isoObject) end
 
 ---@return any
 function SFeedingTroughGlobalObject:stateToIsoObject(isoObject) end
-
 
 ---@return SFeedingTroughGlobalObject
 function SFeedingTroughGlobalObject:new(luaSystem, globalObject) end

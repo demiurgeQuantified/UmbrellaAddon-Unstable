@@ -1,57 +1,57 @@
---- @meta
+--- @meta _
 
 --- @class FurnaceLogicScript: ComponentScript
 --- @field public class any
-FurnaceLogicScript = {};
+FurnaceLogicScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FurnaceLogicScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FurnaceLogicScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function FurnaceLogicScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function FurnaceLogicScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FurnaceLogicScript:PreReload() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogicScript:getFuelInputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogicScript:getFuelOutputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogicScript:getFuelRecipeTagQuery() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogicScript:getFurnaceRecipeTagQuery() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogicScript:getInputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogicScript:getOutputsGroupName() end
 
 --- @public
@@ -63,7 +63,5 @@ function FurnaceLogicScript:getStartMode() end
 function FurnaceLogicScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function FurnaceLogicScript:reset() end
-
-

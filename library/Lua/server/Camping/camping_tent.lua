@@ -3,20 +3,19 @@
 ---@class camping
 camping = {}
 camping.tentSprites = {
-    sheet = {
-        frontLeft = "TileIndieStoneTentFrontLeft",
-        backLeft = "TileIndieStoneTentBackLeft",
-        frontRight = "TileIndieStoneTentFrontRight",
-        backRight = "TileIndieStoneTentBackRight",
-    },
-    tarp = {
-        frontLeft = "camping_01_3",
-        backLeft = "camping_01_2",
-        frontRight = "camping_01_0",
-        backRight = "camping_01_1",
-    },
+	sheet = {
+		frontLeft = "TileIndieStoneTentFrontLeft",
+		backLeft = "TileIndieStoneTentBackLeft",
+		frontRight = "TileIndieStoneTentFrontRight",
+		backRight = "TileIndieStoneTentBackRight",
+	},
+	tarp = {
+		frontLeft = "camping_01_3",
+		backLeft = "camping_01_2",
+		frontRight = "camping_01_0",
+		backRight = "camping_01_1",
+	},
 }
-
 
 ---@return any
 function camping.addTent(grid, sprite) end

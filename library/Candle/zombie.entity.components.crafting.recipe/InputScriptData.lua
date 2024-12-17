@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class InputScriptData: CacheData
 --- @field public class any
-InputScriptData = {};
+InputScriptData = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,15 +23,15 @@ function InputScriptData:addInputItem(arg0) end
 function InputScriptData:getFirstInputItem() end
 
 --- @public
---- @return int
+--- @return integer
 function InputScriptData:getInputItemCount() end
 
 --- @public
---- @return float
+--- @return number
 function InputScriptData:getInputItemFluidUses() end
 
 --- @public
---- @return int
+--- @return integer
 function InputScriptData:getInputItemUses() end
 
 --- @public
@@ -44,7 +44,7 @@ function InputScriptData:getLastInputItem() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InputScriptData:getManualInputItems(arg0) end
 
 --- @public
@@ -62,9 +62,8 @@ function InputScriptData:removeInputItem(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InputScriptData:verifyInputItems(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

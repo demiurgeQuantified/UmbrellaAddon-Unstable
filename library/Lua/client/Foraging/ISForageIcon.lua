@@ -27,7 +27,6 @@
 ---@field [any] any
 ISForageIcon = ISBaseIcon:derive("ISForageIcon")
 
-
 ---@return any
 function ISForageIcon:checkIsForageable() end
 
@@ -57,7 +56,6 @@ function ISForageIcon:onRightMouseUp() end
 
 ---@return any
 function ISForageIcon:updatePinIconPosition() end
-
 
 ---@return ISForageIcon
 function ISForageIcon:new(_manager, _forageIcon, _zoneData) end

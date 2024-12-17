@@ -13,7 +13,6 @@
 ---@field [any] any
 ISFixVehiclePartAction = ISBaseTimedAction:derive("ISFixVehiclePartAction")
 
-
 ---@return any
 function ISFixVehiclePartAction:complete() end
 
@@ -34,7 +33,6 @@ function ISFixVehiclePartAction:stop() end
 
 ---@return any
 function ISFixVehiclePartAction:update() end
-
 
 ---@return ISFixVehiclePartAction
 function ISFixVehiclePartAction:new(character, vehiclePart, fixingNum, fixerNum) end

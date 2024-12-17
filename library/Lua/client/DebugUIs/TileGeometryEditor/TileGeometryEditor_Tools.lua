@@ -7,7 +7,6 @@
 ---@field [any] any
 TileGeometryEditor_Tool = ISBaseObject:derive("TileGeometryEditor_Tool")
 
-
 ---@return any
 function TileGeometryEditor_Tool:getMouseX() end
 
@@ -56,7 +55,6 @@ function TileGeometryEditor_Tool:onRightMouseDown(x, y) end
 ---@return any
 function TileGeometryEditor_Tool:renderScene() end
 
-
 ---@return TileGeometryEditor_Tool
 function TileGeometryEditor_Tool:new(editor) end
 
@@ -65,7 +63,6 @@ function TileGeometryEditor_Tool:new(editor) end
 ---@field gizmoStartScenePos any
 ---@field [any] any
 TileGeometryEditor_GizmoTool = TileGeometryEditor_Tool:derive("TileGeometryEditor_GizmoTool")
-
 
 ---@return any
 function TileGeometryEditor_GizmoTool:onGizmoAccept() end
@@ -91,7 +88,6 @@ function TileGeometryEditor_GizmoTool:onMouseUp(x, y) end
 ---@return any
 function TileGeometryEditor_GizmoTool:onRightMouseDown(x, y) end
 
-
 ---@return TileGeometryEditor_GizmoTool
 function TileGeometryEditor_GizmoTool:new(editor) end
 
@@ -99,7 +95,6 @@ function TileGeometryEditor_GizmoTool:new(editor) end
 ---@field originalOffset any
 ---@field [any] any
 TileGeometryEditor_GizmoTool_Translate = TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_Translate")
-
 
 ---@return any
 function TileGeometryEditor_GizmoTool_Translate:onGizmoAccept() end
@@ -113,7 +108,6 @@ function TileGeometryEditor_GizmoTool_Translate:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_Translate:onGizmoStart() end
 
-
 ---@return TileGeometryEditor_GizmoTool_Translate
 function TileGeometryEditor_GizmoTool_Translate:new(editor) end
 
@@ -121,7 +115,6 @@ function TileGeometryEditor_GizmoTool_Translate:new(editor) end
 ---@field originalRotate any
 ---@field [any] any
 TileGeometryEditor_GizmoTool_Rotate = TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_Rotate")
-
 
 ---@return any
 function TileGeometryEditor_GizmoTool_Rotate:clampAngle(degrees) end
@@ -138,7 +131,6 @@ function TileGeometryEditor_GizmoTool_Rotate:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_Rotate:onGizmoStart() end
 
-
 ---@return TileGeometryEditor_GizmoTool_Rotate
 function TileGeometryEditor_GizmoTool_Rotate:new(editor) end
 
@@ -146,7 +138,6 @@ function TileGeometryEditor_GizmoTool_Rotate:new(editor) end
 ---@field originalScale any
 ---@field [any] any
 TileGeometryEditor_GizmoTool_Scale = TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_Scale")
-
 
 ---@return any
 function TileGeometryEditor_GizmoTool_Scale:onGizmoAccept() end
@@ -160,7 +151,6 @@ function TileGeometryEditor_GizmoTool_Scale:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_Scale:onGizmoStart() end
 
-
 ---@return TileGeometryEditor_GizmoTool_Scale
 function TileGeometryEditor_GizmoTool_Scale:new(editor) end
 
@@ -169,7 +159,6 @@ function TileGeometryEditor_GizmoTool_Scale:new(editor) end
 ---@field originalMin any
 ---@field [any] any
 TileGeometryEditor_GizmoTool_ResizeBox = TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_ResizeBox")
-
 
 ---@return any
 function TileGeometryEditor_GizmoTool_ResizeBox:onGizmoAccept() end
@@ -183,7 +172,6 @@ function TileGeometryEditor_GizmoTool_ResizeBox:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_ResizeBox:onGizmoStart() end
 
-
 ---@return TileGeometryEditor_GizmoTool_ResizeBox
 function TileGeometryEditor_GizmoTool_ResizeBox:new(editor) end
 
@@ -192,8 +180,8 @@ function TileGeometryEditor_GizmoTool_ResizeBox:new(editor) end
 ---@field originalRadius any
 ---@field originalTranslation any
 ---@field [any] any
-TileGeometryEditor_GizmoTool_ResizeCylinder = TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_ResizeCylinder")
-
+TileGeometryEditor_GizmoTool_ResizeCylinder =
+	TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_ResizeCylinder")
 
 ---@return any
 function TileGeometryEditor_GizmoTool_ResizeCylinder:onGizmoAccept() end
@@ -207,7 +195,6 @@ function TileGeometryEditor_GizmoTool_ResizeCylinder:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_ResizeCylinder:onGizmoStart() end
 
-
 ---@return TileGeometryEditor_GizmoTool_ResizeCylinder
 function TileGeometryEditor_GizmoTool_ResizeCylinder:new(editor) end
 
@@ -215,7 +202,6 @@ function TileGeometryEditor_GizmoTool_ResizeCylinder:new(editor) end
 ---@field selection any
 ---@field [any] any
 TileGeometryEditor_GizmoTool_SetSurface = TileGeometryEditor_GizmoTool:derive("TileGeometryEditor_GizmoTool_SetSurface")
-
 
 ---@return any
 function TileGeometryEditor_GizmoTool_SetSurface:onGizmoAccept() end
@@ -229,7 +215,6 @@ function TileGeometryEditor_GizmoTool_SetSurface:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_SetSurface:onGizmoStart() end
 
-
 ---@return TileGeometryEditor_GizmoTool_SetSurface
 function TileGeometryEditor_GizmoTool_SetSurface:new(editor) end
 
@@ -239,7 +224,6 @@ function TileGeometryEditor_GizmoTool_SetSurface:new(editor) end
 ---@field polygonPoint2D any
 ---@field [any] any
 TileGeometryEditor_EditPolygonTool = TileGeometryEditor_Tool:derive("TileGeometryEditor_EditPolygonTool")
-
 
 ---@return any
 function TileGeometryEditor_EditPolygonTool:onMouseDown(x, y) end
@@ -253,7 +237,6 @@ function TileGeometryEditor_EditPolygonTool:onMouseUp(x, y) end
 ---@return any
 function TileGeometryEditor_EditPolygonTool:onRightMouseDown(x, y) end
 
-
 ---@return TileGeometryEditor_EditPolygonTool
 function TileGeometryEditor_EditPolygonTool:new(editor) end
 
@@ -263,10 +246,8 @@ function TileGeometryEditor_EditPolygonTool:new(editor) end
 ---@field [any] any
 TileGeometryEditor_DepthRectTool = TileGeometryEditor_Tool:derive("TileGeometryEditor_DepthRectTool")
 
-
 ---@return any
 function TileGeometryEditor_DepthRectTool.RasterizePolygonCallback(args, x, y) end
-
 
 ---@return any
 function TileGeometryEditor_DepthRectTool:addDefaultFloorPlane() end
@@ -292,7 +273,6 @@ function TileGeometryEditor_DepthRectTool:removeDefaultFloorPlane() end
 ---@return any
 function TileGeometryEditor_DepthRectTool:renderScene() end
 
-
 ---@return TileGeometryEditor_DepthRectTool
 function TileGeometryEditor_DepthRectTool:new(editor) end
 
@@ -304,7 +284,6 @@ function TileGeometryEditor_DepthRectTool:new(editor) end
 ---@field vector3f_1 any
 ---@field [any] any
 TileGeometryEditor_AddTileTool = TileGeometryEditor_Tool:derive("TileGeometryEditor_AddTileTool")
-
 
 ---@return any
 function TileGeometryEditor_AddTileTool:getFirstSelectedTile() end
@@ -319,7 +298,24 @@ function TileGeometryEditor_AddTileTool:onMouseDown(x, y) end
 function TileGeometryEditor_AddTileTool:onMouseUp(x, y) end
 
 ---@return any
-function TileGeometryEditor_AddTileTool:renderBox3D(tx, ty, tz, rx, ry, rz, minX, minY, minZ, maxX, maxY, maxZ, r, g, b) end
+function TileGeometryEditor_AddTileTool:renderBox3D(
+	tx,
+	ty,
+	tz,
+	rx,
+	ry,
+	rz,
+	minX,
+	minY,
+	minZ,
+	maxX,
+	maxY,
+	maxZ,
+	r,
+	g,
+	b
+)
+end
 
 ---@return any
 function TileGeometryEditor_AddTileTool:renderScene() end
@@ -329,7 +325,6 @@ function TileGeometryEditor_AddTileTool:renderSceneTiles() end
 
 ---@return any
 function TileGeometryEditor_AddTileTool:uiToTileLocation(x, y) end
-
 
 ---@return TileGeometryEditor_AddTileTool
 function TileGeometryEditor_AddTileTool:new(editor) end
@@ -342,7 +337,6 @@ function TileGeometryEditor_AddTileTool:new(editor) end
 ---@field [any] any
 TileGeometryEditor_MoveTileTool = TileGeometryEditor_Tool:derive("TileGeometryEditor_MoveTileTool")
 
-
 ---@return any
 function TileGeometryEditor_MoveTileTool:mouseToTileLocation() end
 
@@ -353,7 +347,24 @@ function TileGeometryEditor_MoveTileTool:onMouseDown(x, y) end
 function TileGeometryEditor_MoveTileTool:onMouseUp(x, y) end
 
 ---@return any
-function TileGeometryEditor_MoveTileTool:renderBox3D(tx, ty, tz, rx, ry, rz, minX, minY, minZ, maxX, maxY, maxZ, r, g, b) end
+function TileGeometryEditor_MoveTileTool:renderBox3D(
+	tx,
+	ty,
+	tz,
+	rx,
+	ry,
+	rz,
+	minX,
+	minY,
+	minZ,
+	maxX,
+	maxY,
+	maxZ,
+	r,
+	g,
+	b
+)
+end
 
 ---@return any
 function TileGeometryEditor_MoveTileTool:renderScene() end
@@ -363,7 +374,6 @@ function TileGeometryEditor_MoveTileTool:renderSceneTiles() end
 
 ---@return any
 function TileGeometryEditor_MoveTileTool:uiToTileLocation(x, y) end
-
 
 ---@return TileGeometryEditor_MoveTileTool
 function TileGeometryEditor_MoveTileTool:new(editor) end

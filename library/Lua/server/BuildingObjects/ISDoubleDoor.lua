@@ -19,7 +19,6 @@
 ---@field [any] any
 ISDoubleDoor = ISBuildingObject:derive("ISDoubleDoor")
 
-
 ---@return any
 function ISDoubleDoor:addDoorPart(x, y, z, north, sprite, index) end
 
@@ -49,7 +48,6 @@ function ISDoubleDoor:partExists(square, index) end
 
 ---@return any
 function ISDoubleDoor:render(x, y, z, square) end
-
 
 ---@return ISDoubleDoor
 function ISDoubleDoor:new(spriteOriginal, spriteIndex) end

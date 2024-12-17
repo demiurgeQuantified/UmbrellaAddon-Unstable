@@ -15,7 +15,6 @@
 ISWashVehicle = ISBaseTimedAction:derive("ISWashVehicle")
 ISWashVehicle.BLOOD_PER_WATER = 5
 
-
 ---@return any
 function ISWashVehicle.chooseArea(character, vehicle) end
 
@@ -27,7 +26,6 @@ function ISWashVehicle.getWaterAmountForPlayer(character) end
 
 ---@return any
 function ISWashVehicle.hasBlood(vehicle) end
-
 
 ---@return any
 function ISWashVehicle:animEvent(event, parameter) end
@@ -67,7 +65,6 @@ function ISWashVehicle:useWater(units) end
 
 ---@return any
 function ISWashVehicle:waitToStart() end
-
 
 ---@return ISWashVehicle
 function ISWashVehicle:new(character, vehicle, id, area) end

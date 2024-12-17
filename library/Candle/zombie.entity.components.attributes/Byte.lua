@@ -1,20 +1,20 @@
---- @meta
+--- @meta _
 
 --- @class Byte: Numeric
 --- @field public class any
-Byte = {};
+Byte = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Byte
+--- @return integer
 --- @overload fun(self: Byte): Number
 function Byte:getMax() end
 
 --- @public
---- @return Byte
+--- @return integer
 --- @overload fun(self: Byte): Number
 function Byte:getMin() end
 
@@ -23,9 +23,7 @@ function Byte:getMin() end
 function Byte:getValueType() end
 
 --- @public
---- @param arg0 Byte
---- @return Byte
+--- @param arg0 integer
+--- @return integer
 --- @overload fun(self: Byte, arg0: Number): Number
 function Byte:validate(arg0) end
-
-

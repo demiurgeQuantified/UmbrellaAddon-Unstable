@@ -12,10 +12,8 @@ BrushToolManager = ISCollapsableWindow:derive("BrushToolManager")
 BrushToolManager.cheat = false
 BrushToolManager.instance = nil
 
-
 ---@return any
 function BrushToolManager.openPanel(playerObj) end
-
 
 ---@return any
 function BrushToolManager:close() end
@@ -25,7 +23,6 @@ function BrushToolManager:createChildren() end
 
 ---@return any
 function BrushToolManager:onClick(button) end
-
 
 ---@return BrushToolManager
 function BrushToolManager:new(x, y, width, height, character) end

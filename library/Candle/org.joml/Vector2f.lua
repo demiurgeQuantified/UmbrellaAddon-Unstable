@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class Vector2f
 --- @field public class any
 --- @implement Externalizable
 --- @implement Vector2fc
-Vector2f = {};
+Vector2f = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,36 +12,35 @@ Vector2f = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function Vector2f.distance(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function Vector2f.distanceSquared(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function Vector2f.length(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function Vector2f.lengthSquared(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -56,17 +55,17 @@ function Vector2f:absolute() end
 --- @public
 --- @param arg0 Vector2fc
 --- @return Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2f:add(arg0) end
 
 --- @public
 --- @param arg0 Vector2fc
---- @return float
---- @overload fun(self: Vector2f, arg0: Vector2fc): float
+--- @return number
+--- @overload fun(self: Vector2f, arg0: Vector2fc): number
 function Vector2f:angle(arg0) end
 
 --- @public
@@ -77,46 +76,46 @@ function Vector2f:ceil() end
 
 --- @public
 --- @param arg0 Vector2fc
---- @return float
---- @overload fun(self: Vector2f, arg0: Vector2fc): float
---- @overload fun(self: Vector2f, arg0: float, arg1: float): float
---- @overload fun(self: Vector2f, arg0: float, arg1: float): float
+--- @return number
+--- @overload fun(self: Vector2f, arg0: Vector2fc): number
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): number
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): number
 function Vector2f:distance(arg0) end
 
 --- @public
 --- @param arg0 Vector2fc
---- @return float
---- @overload fun(self: Vector2f, arg0: Vector2fc): float
---- @overload fun(self: Vector2f, arg0: float, arg1: float): float
---- @overload fun(self: Vector2f, arg0: float, arg1: float): float
+--- @return number
+--- @overload fun(self: Vector2f, arg0: Vector2fc): number
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): number
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): number
 function Vector2f:distanceSquared(arg0) end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2f:div(arg0) end
 
 --- @public
 --- @param arg0 Vector2fc
---- @return float
---- @overload fun(self: Vector2f, arg0: Vector2fc): float
+--- @return number
+--- @overload fun(self: Vector2f, arg0: Vector2fc): number
 function Vector2f:dot(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: Vector2f, arg0: float, arg1: float): boolean
---- @overload fun(self: Vector2f, arg0: float, arg1: float): boolean
---- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: float): boolean
---- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: float): boolean
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): boolean
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): boolean
+--- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: number): boolean
+--- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: number): boolean
 function Vector2f:equals(arg0) end
 
 --- @public
@@ -126,20 +125,20 @@ function Vector2f:equals(arg0) end
 function Vector2f:floor() end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 Vector2fc
 --- @return Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2fc): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2fc, arg2: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2fc, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2fc, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2fc, arg2: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2fc, arg2: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2fc, arg2: Vector2f): Vector2f
 function Vector2f:fma(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return float
---- @overload fun(self: Vector2f, arg0: int): float
+--- @param arg0 integer
+--- @return number
+--- @overload fun(self: Vector2f, arg0: integer): number
 --- @overload fun(self: Vector2f, arg0: ByteBuffer): ByteBuffer
 --- @overload fun(self: Vector2f, arg0: ByteBuffer): ByteBuffer
 --- @overload fun(self: Vector2f, arg0: FloatBuffer): FloatBuffer
@@ -148,22 +147,22 @@ function Vector2f:fma(arg0, arg1) end
 --- @overload fun(self: Vector2f, arg0: Vector2d): Vector2d
 --- @overload fun(self: Vector2f, arg0: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: int, arg1: ByteBuffer): ByteBuffer
---- @overload fun(self: Vector2f, arg0: int, arg1: ByteBuffer): ByteBuffer
---- @overload fun(self: Vector2f, arg0: int, arg1: FloatBuffer): FloatBuffer
---- @overload fun(self: Vector2f, arg0: int, arg1: FloatBuffer): FloatBuffer
---- @overload fun(self: Vector2f, arg0: int, arg1: Vector2i): Vector2i
---- @overload fun(self: Vector2f, arg0: int, arg1: Vector2i): Vector2i
+--- @overload fun(self: Vector2f, arg0: integer, arg1: ByteBuffer): ByteBuffer
+--- @overload fun(self: Vector2f, arg0: integer, arg1: ByteBuffer): ByteBuffer
+--- @overload fun(self: Vector2f, arg0: integer, arg1: FloatBuffer): FloatBuffer
+--- @overload fun(self: Vector2f, arg0: integer, arg1: FloatBuffer): FloatBuffer
+--- @overload fun(self: Vector2f, arg0: integer, arg1: Vector2i): Vector2i
+--- @overload fun(self: Vector2f, arg0: integer, arg1: Vector2i): Vector2i
 function Vector2f:get(arg0) end
 
 --- @public
---- @param arg0 long
+--- @param arg0 integer
 --- @return Vector2fc
---- @overload fun(self: Vector2f, arg0: long): Vector2fc
+--- @overload fun(self: Vector2f, arg0: integer): Vector2fc
 function Vector2f:getToAddress(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Vector2f:hashCode() end
 
 --- @public
@@ -172,21 +171,21 @@ function Vector2f:hashCode() end
 function Vector2f:isFinite() end
 
 --- @public
---- @return float
---- @overload fun(self: Vector2f): float
+--- @return number
+--- @overload fun(self: Vector2f): number
 function Vector2f:length() end
 
 --- @public
---- @return float
---- @overload fun(self: Vector2f): float
+--- @return number
+--- @overload fun(self: Vector2f): number
 function Vector2f:lengthSquared() end
 
 --- @public
 --- @param arg0 Vector2fc
---- @param arg1 float
+--- @param arg1 number
 --- @return Vector2f
---- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: float, arg2: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: float, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: number, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: number, arg2: Vector2f): Vector2f
 function Vector2f:lerp(arg0, arg1) end
 
 --- @public
@@ -197,8 +196,8 @@ function Vector2f:lerp(arg0, arg1) end
 function Vector2f:max(arg0) end
 
 --- @public
---- @return int
---- @overload fun(self: Vector2f): int
+--- @return integer
+--- @overload fun(self: Vector2f): integer
 function Vector2f:maxComponent() end
 
 --- @public
@@ -209,27 +208,27 @@ function Vector2f:maxComponent() end
 function Vector2f:min(arg0) end
 
 --- @public
---- @return int
---- @overload fun(self: Vector2f): int
+--- @return integer
+--- @overload fun(self: Vector2f): integer
 function Vector2f:minComponent() end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return Vector2f
 --- @overload fun(self: Vector2f, arg0: Matrix2dc): Vector2f
 --- @overload fun(self: Vector2f, arg0: Matrix2fc): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Matrix2dc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Matrix2dc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Matrix2fc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Matrix2fc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2f:mul(arg0) end
 
 --- @public
@@ -261,11 +260,11 @@ function Vector2f:negate() end
 
 --- @public
 --- @return Vector2f
---- @overload fun(self: Vector2f, arg0: float): Vector2f
+--- @overload fun(self: Vector2f, arg0: number): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: Vector2f): Vector2f
 function Vector2f:normalize() end
 
 --- @public
@@ -274,8 +273,8 @@ function Vector2f:perpendicular() end
 
 --- @public
 --- @param arg0 ObjectInput
---- @return void
---- @overload fun(self: Vector2f, arg0: ObjectInput): void
+--- @return nil
+--- @overload fun(self: Vector2f, arg0: ObjectInput): nil
 function Vector2f:readExternal(arg0) end
 
 --- @public
@@ -287,65 +286,64 @@ function Vector2f:round() end
 --- @public
 --- @param arg0 float[]
 --- @return Vector2f
---- @overload fun(self: Vector2f, arg0: double): Vector2f
---- @overload fun(self: Vector2f, arg0: float): Vector2f
+--- @overload fun(self: Vector2f, arg0: number): Vector2f
+--- @overload fun(self: Vector2f, arg0: number): Vector2f
 --- @overload fun(self: Vector2f, arg0: ByteBuffer): Vector2f
 --- @overload fun(self: Vector2f, arg0: FloatBuffer): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2dc): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2ic): Vector2f
---- @overload fun(self: Vector2f, arg0: double, arg1: double): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float): Vector2f
---- @overload fun(self: Vector2f, arg0: int, arg1: ByteBuffer): Vector2f
---- @overload fun(self: Vector2f, arg0: int, arg1: FloatBuffer): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): Vector2f
+--- @overload fun(self: Vector2f, arg0: integer, arg1: ByteBuffer): Vector2f
+--- @overload fun(self: Vector2f, arg0: integer, arg1: FloatBuffer): Vector2f
 function Vector2f:set(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
+--- @param arg0 integer
+--- @param arg1 number
 --- @return Vector2f
 function Vector2f:setComponent(arg0, arg1) end
 
 --- @public
---- @param arg0 long
+--- @param arg0 integer
 --- @return Vector2f
 function Vector2f:setFromAddress(arg0) end
 
 --- @public
 --- @param arg0 Vector2fc
 --- @return Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
 --- @overload fun(self: Vector2f, arg0: Vector2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
---- @overload fun(self: Vector2f, arg0: float, arg1: float, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
+--- @overload fun(self: Vector2f, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2f:sub(arg0) end
 
 --- @public
---- @return String
---- @overload fun(self: Vector2f, arg0: NumberFormat): String
+--- @return string
+--- @overload fun(self: Vector2f, arg0: NumberFormat): string
 function Vector2f:toString() end
 
 --- @public
 --- @param arg0 ObjectOutput
---- @return void
---- @overload fun(self: Vector2f, arg0: ObjectOutput): void
+--- @return nil
+--- @overload fun(self: Vector2f, arg0: ObjectOutput): nil
 function Vector2f:writeExternal(arg0) end
 
 --- @public
---- @return float
---- @overload fun(self: Vector2f): float
+--- @return number
+--- @overload fun(self: Vector2f): number
 function Vector2f:x() end
 
 --- @public
---- @return float
---- @overload fun(self: Vector2f): float
+--- @return number
+--- @overload fun(self: Vector2f): number
 function Vector2f:y() end
 
 --- @public
 --- @return Vector2f
 function Vector2f:zero() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -354,12 +352,12 @@ function Vector2f:zero() end
 --- @public
 --- @return Vector2f
 --- @overload fun(arg0: float[]): Vector2f
---- @overload fun(arg0: float): Vector2f
+--- @overload fun(arg0: number): Vector2f
 --- @overload fun(arg0: ByteBuffer): Vector2f
 --- @overload fun(arg0: FloatBuffer): Vector2f
 --- @overload fun(arg0: Vector2fc): Vector2f
 --- @overload fun(arg0: Vector2ic): Vector2f
---- @overload fun(arg0: float, arg1: float): Vector2f
---- @overload fun(arg0: int, arg1: ByteBuffer): Vector2f
---- @overload fun(arg0: int, arg1: FloatBuffer): Vector2f
+--- @overload fun(arg0: number, arg1: number): Vector2f
+--- @overload fun(arg0: integer, arg1: ByteBuffer): Vector2f
+--- @overload fun(arg0: integer, arg1: FloatBuffer): Vector2f
 function Vector2f.new() end

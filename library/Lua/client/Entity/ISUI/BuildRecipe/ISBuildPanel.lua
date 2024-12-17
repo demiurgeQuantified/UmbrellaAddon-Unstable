@@ -26,10 +26,8 @@
 ---@field [any] any
 ISBuildPanel = ISPanel:derive("ISBuildPanel")
 
-
 ---@return any
 function ISBuildPanel.SetDragItem(item, playerNum) end
-
 
 ---@return any
 function ISBuildPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -117,7 +115,6 @@ function ISBuildPanel:update() end
 
 ---@return any
 function ISBuildPanel:updateContainers() end
-
 
 ---@return ISBuildPanel
 function ISBuildPanel:new(x, y, width, height, player, craftBench, isoObject, recipeQuery) end

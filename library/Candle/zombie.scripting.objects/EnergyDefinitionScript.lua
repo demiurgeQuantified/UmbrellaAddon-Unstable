@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class EnergyDefinitionScript: BaseScriptObject
 --- @field public class any
-EnergyDefinitionScript = {};
+EnergyDefinitionScript = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,37 +23,36 @@ function EnergyDefinitionScript.getDefaultIconTexture() end
 --- @return Texture
 function EnergyDefinitionScript.getDefaultVerticalBarTexture() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function EnergyDefinitionScript:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function EnergyDefinitionScript:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function EnergyDefinitionScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function EnergyDefinitionScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function EnergyDefinitionScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function EnergyDefinitionScript:PreReload() end
 
 --- @public
@@ -61,7 +60,7 @@ function EnergyDefinitionScript:PreReload() end
 function EnergyDefinitionScript:getColor() end
 
 --- @public
---- @return String
+--- @return string
 function EnergyDefinitionScript:getDisplayName() end
 
 --- @public
@@ -69,7 +68,7 @@ function EnergyDefinitionScript:getDisplayName() end
 function EnergyDefinitionScript:getEnergyType() end
 
 --- @public
---- @return String
+--- @return string
 function EnergyDefinitionScript:getEnergyTypeString() end
 
 --- @public
@@ -85,7 +84,7 @@ function EnergyDefinitionScript:getHorizontalBarTexture() end
 function EnergyDefinitionScript:getIconTexture() end
 
 --- @public
---- @return String
+--- @return string
 function EnergyDefinitionScript:getModID() end
 
 --- @public
@@ -97,7 +96,5 @@ function EnergyDefinitionScript:getVerticalBarTexture() end
 function EnergyDefinitionScript:isVanilla() end
 
 --- @public
---- @return void
+--- @return nil
 function EnergyDefinitionScript:reset() end
-
-

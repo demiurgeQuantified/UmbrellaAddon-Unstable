@@ -1,35 +1,35 @@
---- @meta
+--- @meta _
 
 --- @class RadioLine
 --- @field public class any
-RadioLine = {};
+RadioLine = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function RadioLine:getAirTime() end
 
 --- @public
---- @return float
+--- @return number
 function RadioLine:getB() end
 
 --- @public
---- @return String
+--- @return string
 function RadioLine:getEffectsString() end
 
 --- @public
---- @return float
+--- @return number
 function RadioLine:getG() end
 
 --- @public
---- @return float
+--- @return number
 function RadioLine:getR() end
 
 --- @public
---- @return String
+--- @return string
 function RadioLine:getText() end
 
 --- @public
@@ -37,25 +37,24 @@ function RadioLine:getText() end
 function RadioLine:isCustomAirTime() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function RadioLine:setAirTime(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function RadioLine:setText(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
 --- @return RadioLine
---- @overload fun(arg0: String, arg1: float, arg2: float, arg3: float, arg4: String): RadioLine
+--- @overload fun(arg0: string, arg1: number, arg2: number, arg3: number, arg4: string): RadioLine
 function RadioLine.new(arg0, arg1, arg2, arg3) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ClimbThroughWindowState: State
 --- @field public class any
-ClimbThroughWindowState = {};
+ClimbThroughWindowState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ ClimbThroughWindowState = {};
 --- @param arg0 IsoGameCharacter
 --- @param arg1 IsoObject
 --- @param arg2 ClimbThroughWindowPositioningParams
---- @return void
+--- @return nil
 function ClimbThroughWindowState.getClimbThroughWindowPositioningParams(arg0, arg1, arg2) end
 
 --- @public
@@ -44,23 +44,22 @@ function ClimbThroughWindowState.isObstacleSquare(arg0) end
 --- @static
 --- @param arg0 IsoGameCharacter
 --- @param arg1 ClimbThroughWindowPositioningParams
---- @return void
+--- @return nil
 function ClimbThroughWindowState.slideCharacterToWindowOpening(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoGameCharacter
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function ClimbThroughWindowState.slideX(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoGameCharacter
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function ClimbThroughWindowState.slideY(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,28 +68,28 @@ function ClimbThroughWindowState.slideY(arg0, arg1) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function ClimbThroughWindowState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbThroughWindowState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbThroughWindowState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbThroughWindowState:exit(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 MoveDeltaModifiers
---- @return void
+--- @return nil
 function ClimbThroughWindowState:getDeltaModifiers(arg0, arg1) end
 
 --- @public
@@ -105,27 +104,27 @@ function ClimbThroughWindowState:getWindow(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
 --- @return boolean
 function ClimbThroughWindowState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 IsoDirections
 --- @return boolean
 function ClimbThroughWindowState:isPastInnerEdgeOfSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 IsoDirections
 --- @return boolean
 function ClimbThroughWindowState:isPastOuterEdgeOfSquare(arg0, arg1, arg2, arg3) end
@@ -138,9 +137,8 @@ function ClimbThroughWindowState:isWindowClosing(arg0) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 IsoObject
---- @return void
+--- @return nil
 function ClimbThroughWindowState:setParams(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

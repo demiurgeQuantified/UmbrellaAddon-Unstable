@@ -1,54 +1,53 @@
---- @meta
+--- @meta _
 
 --- @class AnimalBreed
 --- @field public class any
-AnimalBreed = {};
+AnimalBreed = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function AnimalBreed:getFeatherItem() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalBreed:getMilkType() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalBreed:getName() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Sound
 function AnimalBreed:getSound(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function AnimalBreed:getWoolType() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function AnimalBreed:isSoundDefined(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function AnimalBreed:isSoundUndefined(arg0) end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function AnimalBreed:loadForcedGenes(arg0) end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function AnimalBreed:loadSounds(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

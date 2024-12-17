@@ -15,7 +15,6 @@
 ---@field [any] any
 ISUnequipAction = ISBaseTimedAction:derive("ISUnequipAction")
 
-
 ---@return any
 function ISUnequipAction:animEvent(event, parameter) end
 
@@ -39,7 +38,6 @@ function ISUnequipAction:stop() end
 
 ---@return any
 function ISUnequipAction:update() end
-
 
 ---@return ISUnequipAction
 function ISUnequipAction:new(character, item, maxTime) end

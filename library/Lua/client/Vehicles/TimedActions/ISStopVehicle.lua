@@ -6,7 +6,6 @@
 ---@field [any] any
 ISStopVehicle = ISBaseTimedAction:derive("ISStopVehicle")
 
-
 ---@return any
 function ISStopVehicle:isValid() end
 
@@ -21,7 +20,6 @@ function ISStopVehicle:stop() end
 
 ---@return any
 function ISStopVehicle:update() end
-
 
 ---@return ISStopVehicle
 function ISStopVehicle:new(character) end

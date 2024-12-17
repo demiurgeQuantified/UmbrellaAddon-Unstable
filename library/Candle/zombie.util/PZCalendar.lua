@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class PZCalendar
 --- @field public class any
-PZCalendar = {};
+PZCalendar = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,14 +13,13 @@ PZCalendar = {};
 --- @return PZCalendar
 function PZCalendar.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function PZCalendar:get(arg0) end
 
 --- @public
@@ -28,28 +27,27 @@ function PZCalendar:get(arg0) end
 function PZCalendar:getTime() end
 
 --- @public
---- @return long
+--- @return integer
 function PZCalendar:getTimeInMillis() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function PZCalendar:isLeapYear(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return nil
 function PZCalendar:set(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function PZCalendar:setTimeInMillis(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

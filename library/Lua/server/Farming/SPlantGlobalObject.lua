@@ -30,10 +30,8 @@
 ---@field [any] any
 SPlantGlobalObject = SGlobalObject:derive("SPlantGlobalObject")
 
-
 ---@return any
 function SPlantGlobalObject.initModData(modData) end
-
 
 ---@return any
 function SPlantGlobalObject:addIcon() end
@@ -175,7 +173,6 @@ function SPlantGlobalObject:upDisease() end
 
 ---@return any
 function SPlantGlobalObject:water(waterSource, uses) end
-
 
 ---@return SPlantGlobalObject
 function SPlantGlobalObject:new(luaSystem, globalObject) end

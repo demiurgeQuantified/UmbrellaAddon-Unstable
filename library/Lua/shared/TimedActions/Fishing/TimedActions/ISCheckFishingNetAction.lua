@@ -7,7 +7,6 @@
 ---@field [any] any
 ISCheckFishingNetAction = ISBaseTimedAction:derive("ISCheckFishingNetAction")
 
-
 ---@return any
 function ISCheckFishingNetAction:complete() end
 
@@ -28,7 +27,6 @@ function ISCheckFishingNetAction:stop() end
 
 ---@return any
 function ISCheckFishingNetAction:update() end
-
 
 ---@return ISCheckFishingNetAction
 function ISCheckFishingNetAction:new(character, trap, hours) end

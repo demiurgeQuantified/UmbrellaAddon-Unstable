@@ -11,7 +11,6 @@
 ---@field [any] any
 ISShearAnimal = ISBaseTimedAction:derive("ISShearAnimal")
 
-
 ---@return any
 function ISShearAnimal:animEvent(event, parameter) end
 
@@ -47,7 +46,6 @@ function ISShearAnimal:update() end
 
 ---@return any
 function ISShearAnimal:waitToStart() end
-
 
 ---@return ISShearAnimal
 function ISShearAnimal:new(character, animal, shear) end

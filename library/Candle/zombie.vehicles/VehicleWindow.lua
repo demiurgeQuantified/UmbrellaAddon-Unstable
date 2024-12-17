@@ -1,24 +1,24 @@
---- @meta
+--- @meta _
 
 --- @class VehicleWindow
 --- @field public class any
-VehicleWindow = {};
+VehicleWindow = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function VehicleWindow:damage(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function VehicleWindow:getHealth() end
 
 --- @public
---- @return float
+--- @return number
 function VehicleWindow:getOpenDelta() end
 
 --- @public
@@ -27,12 +27,12 @@ function VehicleWindow:getPart() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function VehicleWindow:hit(arg0) end
 
 --- @public
 --- @param arg0 Window
---- @return void
+--- @return nil
 function VehicleWindow:init(arg0) end
 
 --- @public
@@ -53,28 +53,26 @@ function VehicleWindow:isOpenable() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function VehicleWindow:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function VehicleWindow:save(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function VehicleWindow:setHealth(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehicleWindow:setOpen(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehicleWindow:setOpenDelta(arg0) end
-
-

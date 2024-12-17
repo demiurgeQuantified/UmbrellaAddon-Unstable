@@ -7,7 +7,6 @@
 ---@field [any] any
 ISMusicThreatStatusPanel = ISDebugSubPanelBase:derive("ISMusicThreatStatusPanel")
 
-
 ---@return any
 function ISMusicThreatStatusPanel:addFloatOption(_label, _id, _x, _y, _w) end
 
@@ -28,7 +27,6 @@ function ISMusicThreatStatusPanel:render() end
 
 ---@return any
 function ISMusicThreatStatusPanel:setSliders() end
-
 
 ---@return ISMusicThreatStatusPanel
 function ISMusicThreatStatusPanel:new(x, y, width, height, doStencil) end

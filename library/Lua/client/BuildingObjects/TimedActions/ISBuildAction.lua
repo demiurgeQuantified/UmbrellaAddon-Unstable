@@ -27,7 +27,6 @@
 ISBuildAction = ISBaseTimedAction:derive("ISBuildAction")
 ISBuildAction.soundDelay = 6
 
-
 ---@return any
 function ISBuildAction:faceLocation() end
 
@@ -66,7 +65,6 @@ function ISBuildAction:update() end
 
 ---@return any
 function ISBuildAction:waitToStart() end
-
 
 ---@return ISBuildAction
 function ISBuildAction:new(character, item, x, y, z, north, spriteName, time) end

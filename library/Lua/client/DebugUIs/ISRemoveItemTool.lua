@@ -36,13 +36,11 @@
 ---@field [any] any
 ISRemoveItemTool = ISPanelJoypad:derive("ISRemoveItemTool")
 
-
 ---@return any
 function ISRemoveItemTool.removeItem(item, player) end
 
 ---@return any
 function ISRemoveItemTool.removeItems(items, player) end
-
 
 ---@return any
 function ISRemoveItemTool:destroy() end
@@ -82,7 +80,6 @@ function ISRemoveItemTool:render() end
 
 ---@return any
 function ISRemoveItemTool:titleBarHeight() end
-
 
 ---@return ISRemoveItemTool
 function ISRemoveItemTool:new(x, y, player) end

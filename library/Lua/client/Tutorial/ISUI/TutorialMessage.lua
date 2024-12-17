@@ -21,13 +21,11 @@
 ---@field [any] any
 TutorialMessage = ISPanelJoypad:derive("TutorialMessage")
 
-
 ---@return any
 function TutorialMessage.getInstance(x, y, w, h, message, clickToSkip, target, test) end
 
 ---@return any
 function TutorialMessage.onKeyPressed(key) end
-
 
 ---@return any
 function TutorialMessage:createChildren() end
@@ -55,7 +53,6 @@ function TutorialMessage:update() end
 
 ---@return any
 function TutorialMessage:updateSize() end
-
 
 ---@return TutorialMessage
 function TutorialMessage:new(x, y, width, height, clickToSkip, message) end

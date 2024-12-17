@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Layout
 --- @field public class any
-Layout = {};
+Layout = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,26 +13,25 @@ Layout = {};
 function Layout:addItem() end
 
 --- @public
---- @return void
+--- @return nil
 function Layout:free() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 ObjectTooltip
---- @return int
+--- @return integer
 function Layout:render(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Layout:setMinLabelWidth(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Layout:setMinValueWidth(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

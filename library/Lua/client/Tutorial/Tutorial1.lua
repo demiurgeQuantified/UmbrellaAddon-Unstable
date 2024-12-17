@@ -10,13 +10,13 @@
 ---@field [any] any
 Tutorial1 = {}
 Tutorial1.cratePositions = {
-    {
-        "lootingStuff",
-        "counter",
-        157,
-        152,
-        0,
-    },
+	{
+		"lootingStuff",
+		"counter",
+		157,
+		152,
+		0,
+	},
 }
 Tutorial1.name = "Tutorial1"
 Tutorial1.image = "media/lua/LastStand/Challenge1.png"
@@ -24,7 +24,6 @@ Tutorial1.world = "challengemaps/Tutorial"
 Tutorial1.x = 157
 Tutorial1.y = 157
 Tutorial1.hourOfDay = 20
-
 
 ---@return any
 function Tutorial1.Add() end

@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class Nutrition
 --- @field public class any
-Nutrition = {};
+Nutrition = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function Nutrition:applyTraitFromWeight() end
 
 --- @public
---- @return void
+--- @return nil
 function Nutrition:applyWeightFromTraits() end
 
 --- @public
@@ -25,23 +25,23 @@ function Nutrition:canAddFitnessXp() end
 function Nutrition:characterHaveWeightTrouble() end
 
 --- @public
---- @return float
+--- @return number
 function Nutrition:getCalories() end
 
 --- @public
---- @return float
+--- @return number
 function Nutrition:getCarbohydrates() end
 
 --- @public
---- @return float
+--- @return number
 function Nutrition:getLipids() end
 
 --- @public
---- @return float
+--- @return number
 function Nutrition:getProteins() end
 
 --- @public
---- @return double
+--- @return number
 function Nutrition:getWeight() end
 
 --- @public
@@ -58,62 +58,61 @@ function Nutrition:isIncWeightLot() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Nutrition:load(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Nutrition:save(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Nutrition:setCalories(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Nutrition:setCarbohydrates(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Nutrition:setDecWeight(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Nutrition:setIncWeight(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Nutrition:setIncWeightLot(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Nutrition:setLipids(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Nutrition:setProteins(arg0) end
 
 --- @public
---- @param arg0 double
---- @return void
+--- @param arg0 number
+--- @return nil
 function Nutrition:setWeight(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Nutrition:syncWeight() end
 
 --- @public
---- @return void
+--- @return nil
 function Nutrition:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

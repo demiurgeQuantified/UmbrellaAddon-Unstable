@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class FluidUtil
 --- @field public class any
---- @field public MIN_CONTAINER_CAPACITY float
---- @field public MIN_TRANSFER_ACTION_TIME float
---- @field public MIN_UNIT float
---- @field public TRANSFER_ACTION_TIME_PER_LITER float
---- @field public UNIT_cL float
---- @field public UNIT_cmL float
---- @field public UNIT_dL float
---- @field public UNIT_dmL float
---- @field public UNIT_L float
---- @field public UNIT_mL float
---- @field public UNIT_uL float
-FluidUtil = {};
+--- @field public MIN_CONTAINER_CAPACITY number
+--- @field public MIN_TRANSFER_ACTION_TIME number
+--- @field public MIN_UNIT number
+--- @field public TRANSFER_ACTION_TIME_PER_LITER number
+--- @field public UNIT_cL number
+--- @field public UNIT_cmL number
+--- @field public UNIT_dL number
+--- @field public UNIT_dmL number
+--- @field public UNIT_L number
+--- @field public UNIT_mL number
+--- @field public UNIT_uL number
+FluidUtil = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,95 +21,94 @@ FluidUtil = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @return String
+--- @param arg0 number
+--- @return string
 function FluidUtil.getAmountFormatted(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @return String
+--- @param arg0 number
+--- @return string
 function FluidUtil.getAmountLiter(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @return String
+--- @param arg0 number
+--- @return string
 function FluidUtil.getAmountLiter10(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @return String
+--- @param arg0 number
+--- @return string
 function FluidUtil.getAmountLiter1000(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @return String
+--- @param arg0 number
+--- @return string
 function FluidUtil.getAmountMilli(arg0) end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getMinContainerCapacity() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getMinTransferActionTime() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getMinUnit() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getTransferActionTimePerLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitCentiLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitCentiMilliLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitDeciLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitDeciMilliLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitMicroLiter() end
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function FluidUtil.getUnitMilliLiter() end
 
 --- @public
 --- @static
---- @param arg0 float
---- @return float
+--- @param arg0 number
+--- @return number
 function FluidUtil.roundTransfer(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ClimateColor
 --- @field public class any
-ClimateColor = {};
+ClimateColor = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,7 @@ function ClimateColor:getAdminValue() end
 function ClimateColor:getFinalValue() end
 
 --- @public
---- @return int
+--- @return integer
 function ClimateColor:getID() end
 
 --- @public
@@ -29,7 +29,7 @@ function ClimateColor:getInternalValue() end
 function ClimateColor:getModdedValue() end
 
 --- @public
---- @return String
+--- @return string
 function ClimateColor:getName() end
 
 --- @public
@@ -37,12 +37,12 @@ function ClimateColor:getName() end
 function ClimateColor:getOverride() end
 
 --- @public
---- @return float
+--- @return number
 function ClimateColor:getOverrideInterpolate() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param arg0 integer
+--- @param arg1 string
 --- @return ClimateColor
 function ClimateColor:init(arg0, arg1) end
 
@@ -56,63 +56,62 @@ function ClimateColor:isEnableOverride() end
 
 --- @public
 --- @param arg0 ClimateColorInfo
---- @return void
---- @overload fun(self: ClimateColor, arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float): void
+--- @return nil
+--- @overload fun(self: ClimateColor, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number): nil
 function ClimateColor:setAdminValue(arg0) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function ClimateColor:setAdminValueExterior(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function ClimateColor:setAdminValueInterior(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ClimateColor:setEnableAdmin(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ClimateColor:setEnableModded(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ClimateColor:setEnableOverride(arg0) end
 
 --- @public
 --- @param arg0 ClimateColorInfo
---- @return void
+--- @return nil
 function ClimateColor:setFinalValue(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function ClimateColor:setModdedInterpolate(arg0) end
 
 --- @public
 --- @param arg0 ClimateColorInfo
---- @return void
+--- @return nil
 function ClimateColor:setModdedValue(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 float
---- @return void
---- @overload fun(self: ClimateColor, arg0: ClimateColorInfo, arg1: float): void
+--- @param arg1 number
+--- @return nil
+--- @overload fun(self: ClimateColor, arg0: ClimateColorInfo, arg1: number): nil
 function ClimateColor:setOverride(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

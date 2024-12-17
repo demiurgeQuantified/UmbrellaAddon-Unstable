@@ -8,7 +8,6 @@
 ---@field [any] any
 ISAttachAnimalToPlayer = ISBaseTimedAction:derive("ISAttachAnimalToPlayer")
 
-
 ---@return any
 function ISAttachAnimalToPlayer:complete() end
 
@@ -32,7 +31,6 @@ function ISAttachAnimalToPlayer:update() end
 
 ---@return any
 function ISAttachAnimalToPlayer:waitToStart() end
-
 
 ---@return ISAttachAnimalToPlayer
 function ISAttachAnimalToPlayer:new(character, animal, remove) end

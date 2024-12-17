@@ -25,7 +25,6 @@
 ---@field [any] any
 RWMSignal = RWMPanel:derive("RWMSignal")
 
-
 ---@return any
 function RWMSignal:clear() end
 
@@ -52,7 +51,6 @@ function RWMSignal:setDefaultWave() end
 
 ---@return any
 function RWMSignal:update() end
-
 
 ---@return RWMSignal
 function RWMSignal:new(x, y, width, height) end

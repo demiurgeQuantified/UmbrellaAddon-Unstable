@@ -17,7 +17,6 @@
 ---@field [any] any
 ISAttachItemHotbar = ISBaseTimedAction:derive("ISAttachItemHotbar")
 
-
 ---@return any
 function ISAttachItemHotbar:animEvent(event, parameter) end
 
@@ -41,7 +40,6 @@ function ISAttachItemHotbar:stop() end
 
 ---@return any
 function ISAttachItemHotbar:update() end
-
 
 ---@return ISAttachItemHotbar
 function ISAttachItemHotbar:new(character, item, slot, slotIndex, slotDef) end

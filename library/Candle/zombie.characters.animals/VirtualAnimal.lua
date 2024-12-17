@@ -1,48 +1,48 @@
---- @meta
+--- @meta _
 
 --- @class VirtualAnimal
 --- @field public class any
-VirtualAnimal = {};
+VirtualAnimal = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoAnimal
 function VirtualAnimal:findAnimalById(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function VirtualAnimal:forceEat() end
 
 --- @public
---- @return void
+--- @return nil
 function VirtualAnimal:forceRest() end
 
 --- @public
---- @return void
+--- @return nil
 function VirtualAnimal:forceStopEat() end
 
 --- @public
---- @return void
+--- @return nil
 function VirtualAnimal:forceWakeUp() end
 
 --- @public
---- @return String
+--- @return string
 function VirtualAnimal:getEndEatPeriod() end
 
 --- @public
---- @return String
+--- @return string
 function VirtualAnimal:getEndSleepPeriod() end
 
 --- @public
---- @return String
+--- @return string
 function VirtualAnimal:getNextEatPeriod() end
 
 --- @public
---- @return String
+--- @return string
 function VirtualAnimal:getNextSleepPeriod() end
 
 --- @public
@@ -50,15 +50,15 @@ function VirtualAnimal:getNextSleepPeriod() end
 function VirtualAnimal:getState() end
 
 --- @public
---- @return float
+--- @return number
 function VirtualAnimal:getX() end
 
 --- @public
---- @return float
+--- @return number
 function VirtualAnimal:getY() end
 
 --- @public
---- @return float
+--- @return number
 function VirtualAnimal:getZ() end
 
 --- @public
@@ -83,29 +83,28 @@ function VirtualAnimal:isTimeToSleep() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VirtualAnimal:setRemoved(arg0) end
 
 --- @public
 --- @param arg0 VirtualAnimalState
---- @return void
+--- @return nil
 function VirtualAnimal:setState(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VirtualAnimal:setX(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VirtualAnimal:setY(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VirtualAnimal:setZ(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

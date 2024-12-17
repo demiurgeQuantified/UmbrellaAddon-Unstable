@@ -24,7 +24,6 @@
 ---@field [any] any
 RWMPanel = ISPanelJoypad:derive("RWMPanel")
 
-
 ---@return any
 function RWMPanel:clear() end
 
@@ -72,7 +71,6 @@ function RWMPanel:setFocus(_playerNum, _radioParent, _parent) end
 
 ---@return any
 function RWMPanel:update() end
-
 
 ---@return RWMPanel
 function RWMPanel:new(x, y, width, height) end

@@ -3,7 +3,6 @@
 ---@class TimedActionTests
 TimedActionTests = {}
 
-
 ---@return any
 function TimedActionTests.getTests() end
 

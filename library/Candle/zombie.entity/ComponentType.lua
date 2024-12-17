@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ComponentType: Enum
 --- @field public class any
@@ -11,7 +11,7 @@
 --- @field public FurnaceLogic ComponentType
 --- @field public Lua ComponentType
 --- @field public MashingLogic ComponentType
---- @field public MAX_ID_INDEX int
+--- @field public MAX_ID_INDEX integer
 --- @field public MetaTag ComponentType
 --- @field public Parts ComponentType
 --- @field public Resources ComponentType
@@ -21,7 +21,7 @@
 --- @field public TestComponent ComponentType
 --- @field public UiConfig ComponentType
 --- @field public Undefined ComponentType
-ComponentType = {};
+ComponentType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -47,7 +47,7 @@ function ComponentType.GetList() end
 --- @public
 --- @static
 --- @param arg0 Component
---- @return void
+--- @return nil
 function ComponentType.ReleaseComponent(arg0) end
 
 --- @public
@@ -58,7 +58,7 @@ function ComponentType.getBitsFor(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ComponentType
 function ComponentType.valueOf(arg0) end
 
@@ -66,7 +66,6 @@ function ComponentType.valueOf(arg0) end
 --- @static
 --- @return ComponentType[]
 function ComponentType.values() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -109,5 +108,3 @@ function ComponentType:isRunInMeta() end
 --- @param arg0 GameEntityType
 --- @return boolean
 function ComponentType:isValidGameEntityType(arg0) end
-
-

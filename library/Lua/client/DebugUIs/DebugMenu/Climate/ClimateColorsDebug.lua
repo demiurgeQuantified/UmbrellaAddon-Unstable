@@ -7,7 +7,6 @@
 ---@field [any] any
 ClimateColorsDebug = ISDebugSubPanelBase:derive("ClimateColorsDebug")
 
-
 ---@return any
 function ClimateColorsDebug:addColorInfo(_x, _y, _w, _col, _name, _daySegment, _temp, _season) end
 
@@ -34,7 +33,6 @@ function ClimateColorsDebug:prerender() end
 
 ---@return any
 function ClimateColorsDebug:update() end
-
 
 ---@return ClimateColorsDebug
 function ClimateColorsDebug:new(x, y, width, height, doStencil) end

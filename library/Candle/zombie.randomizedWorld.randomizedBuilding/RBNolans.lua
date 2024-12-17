@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBNolans: RandomizedBuildingBase
 --- @field public class any
-RBNolans = {};
+RBNolans = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,14 +16,13 @@ function RBNolans:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBNolans:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBNolans:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

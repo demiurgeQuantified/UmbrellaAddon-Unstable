@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RadioScriptManager
 --- @field public class any
-RadioScriptManager = {};
+RadioScriptManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,6 @@ function RadioScriptManager.getInstance() end
 --- @return boolean
 function RadioScriptManager.hasInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -26,36 +25,36 @@ function RadioScriptManager.hasInstance() end
 --- @public
 --- @param arg0 RadioChannel
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function RadioScriptManager:AddChannel(arg0, arg1) end
 
 --- @public
 --- @param arg0 List
---- @return void
+--- @return nil
 function RadioScriptManager:Load(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function RadioScriptManager:PlayerListensChannel(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RadioScriptManager:RemoveChannel(arg0) end
 
 --- @public
 --- @param arg0 Writer
---- @return void
+--- @return nil
 function RadioScriptManager:Save(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function RadioScriptManager:UpdateScripts(arg0, arg1, arg2) end
 
 --- @public
@@ -67,38 +66,36 @@ function RadioScriptManager:getChannels() end
 function RadioScriptManager:getChannelsList() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioScriptManager:getCurrentTimeStamp() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return RadioChannel
 function RadioScriptManager:getRadioChannel(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RadioScriptManager:init(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function RadioScriptManager:reset() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function RadioScriptManager:simulateChannelUntil(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function RadioScriptManager:simulateScriptsUntil(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function RadioScriptManager:update() end
-
-

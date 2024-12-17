@@ -33,7 +33,6 @@
 ---@field [any] any
 ISPlace3DItemCursor = ISBuildingObject:derive("ISPlace3DItemCursor")
 
-
 ---@return any
 function ISPlace3DItemCursor:checkPositionJoypad() end
 
@@ -114,7 +113,6 @@ function ISPlace3DItemCursor:rotateDelta() end
 
 ---@return any
 function ISPlace3DItemCursor:walkTo(x, y, z) end
-
 
 ---@return ISPlace3DItemCursor
 function ISPlace3DItemCursor:new(character, items) end

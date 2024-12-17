@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FishingState: State
 --- @field public class any
-FishingState = {};
+FishingState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,26 +13,24 @@ FishingState = {};
 --- @return FishingState
 function FishingState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FishingState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FishingState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FishingState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

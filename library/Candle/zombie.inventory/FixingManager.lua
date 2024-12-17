@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FixingManager
 --- @field public class any
-FixingManager = {};
+FixingManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,7 +23,7 @@ function FixingManager.fixItem(arg0, arg1, arg2, arg3) end
 --- @param arg1 IsoGameCharacter
 --- @param arg2 Fixing
 --- @param arg3 Fixer
---- @return double
+--- @return number
 function FixingManager.getChanceOfFail(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -32,7 +32,7 @@ function FixingManager.getChanceOfFail(arg0, arg1, arg2, arg3) end
 --- @param arg1 IsoGameCharacter
 --- @param arg2 Fixing
 --- @param arg3 Fixer
---- @return double
+--- @return number
 function FixingManager.getCondRepaired(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -46,9 +46,8 @@ function FixingManager.getFixes(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @param arg1 Fixer
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function FixingManager.useFixer(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

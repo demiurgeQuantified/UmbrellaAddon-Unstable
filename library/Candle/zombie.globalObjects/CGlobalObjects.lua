@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CGlobalObjects
 --- @field public class any
-CGlobalObjects = {};
+CGlobalObjects = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,63 +10,62 @@ CGlobalObjects = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CGlobalObjects.Reset() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return CGlobalObjectSystem
 function CGlobalObjects.getSystemByIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return CGlobalObjectSystem
 function CGlobalObjects.getSystemByName(arg0) end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function CGlobalObjects.getSystemCount() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CGlobalObjects.initSystems() end
 
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function CGlobalObjects.loadInitialState(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return CGlobalObjectSystem
 function CGlobalObjects.newSystem(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CGlobalObjects.noise(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 KahluaTable
 --- @return boolean
 function CGlobalObjects.receiveServerCommand(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return CGlobalObjectSystem
 function CGlobalObjects.registerSystem(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

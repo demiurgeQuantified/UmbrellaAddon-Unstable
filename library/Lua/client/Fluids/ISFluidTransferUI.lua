@@ -41,10 +41,8 @@ ISFluidTransferUI.players = {}
 ISFluidTransferUI.cheatSkill = false
 ISFluidTransferUI.cheatTransfer = false
 
-
 ---@return any
 function ISFluidTransferUI.OpenPanel(_player, _container, _source) end
-
 
 ---@return any
 function ISFluidTransferUI:close() end
@@ -96,7 +94,6 @@ function ISFluidTransferUI:update() end
 
 ---@return any
 function ISFluidTransferUI:validatePanel(_forceUpdate) end
-
 
 ---@return ISFluidTransferUI
 function ISFluidTransferUI:new(x, y, width, height, _player, _container, source) end

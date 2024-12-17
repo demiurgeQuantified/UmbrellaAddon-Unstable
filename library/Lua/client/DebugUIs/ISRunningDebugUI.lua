@@ -27,7 +27,6 @@
 ---@field [any] any
 ISRunningDebugUI = ISCollapsableWindow:derive("ISRunningDebugUI")
 
-
 ---@return any
 function ISRunningDebugUI:createChildren() end
 
@@ -42,7 +41,6 @@ function ISRunningDebugUI:startTrip() end
 
 ---@return any
 function ISRunningDebugUI:update() end
-
 
 ---@return ISRunningDebugUI
 function ISRunningDebugUI:new(x, y, character) end

@@ -1,69 +1,68 @@
---- @meta
+--- @meta _
 
 --- @class LayoutItem
 --- @field public class any
-LayoutItem = {};
+LayoutItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function LayoutItem:calcSizes() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 ObjectTooltip
---- @return void
+--- @return nil
 function LayoutItem:render(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @return void
+--- @return nil
 function LayoutItem:reset() end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @return void
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
 function LayoutItem:setLabel(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
 function LayoutItem:setProgress(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @return void
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
 function LayoutItem:setValue(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function LayoutItem:setValueRight(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
---- @overload fun(self: LayoutItem, arg0: int): void
+--- @param arg0 number
+--- @return nil
+--- @overload fun(self: LayoutItem, arg0: integer): nil
 function LayoutItem:setValueRightNoPlus(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

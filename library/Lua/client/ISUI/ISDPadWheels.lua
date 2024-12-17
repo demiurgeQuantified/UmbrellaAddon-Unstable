@@ -3,7 +3,6 @@
 ---@class ISDPadWheels
 ISDPadWheels = {}
 
-
 ---@return any
 function ISDPadWheels.onDisplayDown(joypadData) end
 

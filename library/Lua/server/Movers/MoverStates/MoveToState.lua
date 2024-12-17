@@ -8,7 +8,6 @@
 ---@field [any] any
 MoveToState = ISBaseState:derive("MoveToState")
 
-
 ---@return any
 function MoveToState:during() end
 
@@ -23,7 +22,6 @@ function MoveToState:isFinished() end
 
 ---@return any
 function MoveToState:setTarget(x, y, z) end
-
 
 ---@return MoveToState
 function MoveToState:new(mover, x, y, z) end

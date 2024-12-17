@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class PathFindState: State
 --- @field public class any
-PathFindState = {};
+PathFindState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PathFindState = {};
 --- @static
 --- @return PathFindState2
 function PathFindState.instance() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

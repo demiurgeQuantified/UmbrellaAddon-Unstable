@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class XuiScript
 --- @field public class any
-XuiScript = {};
+XuiScript = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,8 +10,8 @@ XuiScript = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 boolean
 --- @param arg3 XuiScriptType
 --- @return XuiScript
@@ -20,9 +20,8 @@ function XuiScript.CreateScriptForClass(arg0, arg1, arg2, arg3) end
 --- @public
 --- @static
 --- @param arg0 Block
---- @return String
+--- @return string
 function XuiScript.ReadLuaClassValue(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,12 +29,12 @@ function XuiScript.ReadLuaClassValue(arg0) end
 
 --- @public
 --- @param arg0 Block
---- @return void
+--- @return nil
 function XuiScript:Load(arg0) end
 
 --- @public
 --- @param arg0 XuiScript
---- @return void
+--- @return nil
 function XuiScript:addChild(arg0) end
 
 --- @public
@@ -311,7 +310,7 @@ function XuiScript:getToolTipTextLocked() end
 function XuiScript:getTooltip() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiVar
 function XuiScript:getVar(arg0) end
 
@@ -324,27 +323,27 @@ function XuiScript:getVars() end
 function XuiScript:getVector() end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:getXuiCustomDebug() end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:getXuiKey() end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:getXuiLayoutName() end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:getXuiLuaClass() end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:getXuiStyle() end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:getXuiUUID() end
 
 --- @public
@@ -364,50 +363,49 @@ function XuiScript:isLayout() end
 function XuiScript:isStyle() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return boolean
---- @overload fun(self: XuiScript, arg0: String, arg1: String, arg2: boolean): boolean
+--- @overload fun(self: XuiScript, arg0: string, arg1: string, arg2: boolean): boolean
 function XuiScript:loadVar(arg0, arg1) end
 
 --- @public
 --- @param arg0 XuiScript
---- @return void
+--- @return nil
 function XuiScript:setDefaultStyle(arg0) end
 
 --- @public
 --- @param arg0 XuiScript
---- @return void
+--- @return nil
 function XuiScript:setStyle(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScript
 function XuiScript:setXuiKey(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScript
 function XuiScript:setXuiLuaClass(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScript
 function XuiScript:setXuiStyle(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function XuiScript:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @param arg2 String
+--- @param arg2 string
 --- @return XuiScript
---- @overload fun(arg0: String, arg1: boolean, arg2: String, arg3: XuiScriptType): XuiScript
+--- @overload fun(arg0: string, arg1: boolean, arg2: string, arg3: XuiScriptType): XuiScript
 function XuiScript.new(arg0, arg1, arg2) end

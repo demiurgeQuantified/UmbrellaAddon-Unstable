@@ -16,10 +16,8 @@
 PopupColorEdit = ISPanel:derive("PopupColorEdit")
 PopupColorEdit.instance = nil
 
-
 ---@return any
 function PopupColorEdit.OnOpenPanel(_colorInfo, _parent, _ambient, _desat) end
-
 
 ---@return any
 function PopupColorEdit:addColorOption(_id, _color, _x, _y, _w) end
@@ -53,7 +51,6 @@ function PopupColorEdit:prerender() end
 
 ---@return any
 function PopupColorEdit:update() end
-
 
 ---@return PopupColorEdit
 function PopupColorEdit:new(x, y, width, height, title) end

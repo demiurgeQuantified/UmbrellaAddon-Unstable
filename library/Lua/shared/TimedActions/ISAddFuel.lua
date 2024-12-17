@@ -9,7 +9,6 @@
 ---@field [any] any
 ISAddFuel = ISBaseTimedAction:derive("ISAddFuel")
 
-
 ---@return any
 function ISAddFuel:complete() end
 
@@ -33,7 +32,6 @@ function ISAddFuel:update() end
 
 ---@return any
 function ISAddFuel:waitToStart() end
-
 
 ---@return ISAddFuel
 function ISAddFuel:new(character, generator, petrol, maxTime) end

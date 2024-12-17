@@ -19,7 +19,6 @@
 ---@field [any] any
 FishingDebugWindow = ISPanelJoypad:derive("FishingDebugWindow")
 
-
 ---@return any
 function FishingDebugWindow:destroy() end
 
@@ -55,7 +54,6 @@ function FishingDebugWindow:render() end
 
 ---@return any
 function FishingDebugWindow:titleBarHeight() end
-
 
 ---@return FishingDebugWindow
 function FishingDebugWindow:new(player) end

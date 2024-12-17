@@ -51,10 +51,8 @@ IsoRegionDebug = ISCollapsableWindow:derive("IsoRegionDebug")
 IsoRegionDebug.instance = nil
 IsoRegionDebug.shiftDown = 0
 
-
 ---@return any
 function IsoRegionDebug.OnOpenPanel() end
-
 
 ---@return any
 function IsoRegionDebug:clear() end
@@ -91,7 +89,6 @@ function IsoRegionDebug:stayOnSplitScreen() end
 
 ---@return any
 function IsoRegionDebug:update() end
-
 
 ---@return IsoRegionDebug
 function IsoRegionDebug:new(x, y, width, height, player) end

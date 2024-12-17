@@ -48,7 +48,6 @@
 ---@field [any] any
 ISSliderPanel = ISPanel:derive("ISSliderPanel")
 
-
 ---@return any
 function ISSliderPanel:activateToolTip() end
 
@@ -114,7 +113,6 @@ function ISSliderPanel:setValues(_min, _max, _step, _shift, _ignoreCurVal) end
 
 ---@return any
 function ISSliderPanel:update() end
-
 
 ---@return ISSliderPanel
 function ISSliderPanel:new(x, y, width, height, target, onValueChange, customPaginate) end

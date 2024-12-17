@@ -1,35 +1,35 @@
---- @meta
+--- @meta _
 
 --- @class HitReactionSetting
 --- @field public class any
-HitReactionSetting = {};
+HitReactionSetting = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function HitReactionSetting:getAdminValue() end
 
 --- @public
---- @return float
+--- @return number
 function HitReactionSetting:getMax() end
 
 --- @public
---- @return float
+--- @return number
 function HitReactionSetting:getMin() end
 
 --- @public
---- @return String
+--- @return string
 function HitReactionSetting:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param arg0 integer
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
 --- @return HitReactionSetting
 function HitReactionSetting:init(arg0, arg1, arg2, arg3, arg4) end
 
@@ -38,19 +38,18 @@ function HitReactionSetting:init(arg0, arg1, arg2, arg3, arg4) end
 function HitReactionSetting:isEnableAdmin() end
 
 --- @public
---- @return void
+--- @return nil
 function HitReactionSetting:reset() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function HitReactionSetting:setAdminValue(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function HitReactionSetting:setEnableAdmin(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

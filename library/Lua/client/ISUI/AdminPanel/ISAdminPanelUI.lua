@@ -29,7 +29,6 @@
 ---@field [any] any
 ISAdminPanelUI = ISPanel:derive("ISAdminPanelUI")
 
-
 ---@return any
 function ISAdminPanelUI.OnNetworkUsersReceived() end
 
@@ -38,7 +37,6 @@ function ISAdminPanelUI.OnRolesReceived() end
 
 ---@return any
 function ISAdminPanelUI.OnSafehousesChanged() end
-
 
 ---@return any
 function ISAdminPanelUI:close() end
@@ -60,7 +58,6 @@ function ISAdminPanelUI:setVisible(visible) end
 
 ---@return any
 function ISAdminPanelUI:updateButtons() end
-
 
 ---@return ISAdminPanelUI
 function ISAdminPanelUI:new(x, y, width, height) end

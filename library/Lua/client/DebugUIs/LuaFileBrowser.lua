@@ -11,7 +11,6 @@
 ---@field [any] any
 LuaFileBrowser = ISCollapsableWindow:derive("LuaFileBrowser")
 
-
 ---@return any
 function LuaFileBrowser:createChildren() end
 
@@ -33,13 +32,11 @@ function LuaFileBrowser:update() end
 ---@return any
 function LuaFileBrowser:updateReloadButton() end
 
-
 ---@return LuaFileBrowser
 function LuaFileBrowser:new(x, y, width, height) end
 
 ---@class LuaFileBrowserList : ISScrollingListBox
 LuaFileBrowserList = ISScrollingListBox:derive("LuaFileBrowserList")
-
 
 ---@return any
 function LuaFileBrowserList:doDrawItem(y, item, alt) end

@@ -27,7 +27,6 @@
 ---@field [any] any
 DebugChunkStateUI = ISPanel:derive("DebugChunkStateUI")
 
-
 ---@return any
 function DebugChunkStateUI:createChildren() end
 
@@ -94,7 +93,6 @@ function DebugChunkStateUI:updateObjectList() end
 ---@return any
 function DebugChunkStateUI:updateObjectProps() end
 
-
 ---@return DebugChunkStateUI
 function DebugChunkStateUI:new(x, y, width, height, gameState) end
 
@@ -103,7 +101,6 @@ function DebugChunkStateUI:new(x, y, width, height, gameState) end
 ---@field tickBox any
 ---@field [any] any
 DebugChunkStateUI_OptionsPanel = ISPanel:derive("DebugChunkStateUI_OptionsPanel")
-
 
 ---@return any
 function DebugChunkStateUI_OptionsPanel:createChildren() end
@@ -114,7 +111,6 @@ function DebugChunkStateUI_OptionsPanel:onMouseDownOutside(x, y) end
 ---@return any
 function DebugChunkStateUI_OptionsPanel:onTickBox(index, selected) end
 
-
 ---@return DebugChunkStateUI_OptionsPanel
 function DebugChunkStateUI_OptionsPanel:new(x, y, width, height, gameState) end
 
@@ -124,10 +120,8 @@ function DebugChunkStateUI_OptionsPanel:new(x, y, width, height, gameState) end
 ---@field [any] any
 DebugChunkStateUI_SpritePopupPanel = ISPanel:derive("DebugChunkStateUI_SpritePopupPanel")
 
-
 ---@return any
 function DebugChunkStateUI_SpritePopupPanel:render() end
-
 
 ---@return DebugChunkStateUI_SpritePopupPanel
 function DebugChunkStateUI_SpritePopupPanel:new(x, y, w, h) end

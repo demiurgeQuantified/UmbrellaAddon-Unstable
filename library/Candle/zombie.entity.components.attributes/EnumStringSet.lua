@@ -1,20 +1,20 @@
---- @meta
+--- @meta _
 
 --- @class EnumStringSet: AttributeType
 --- @field public class any
-EnumStringSet = {};
+EnumStringSet = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 byte
+--- @param arg0 integer
 --- @return Enum
 function EnumStringSet:enumValueFromByteID(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Enum
 function EnumStringSet:enumValueFromString(arg0) end
 
@@ -25,5 +25,3 @@ function EnumStringSet:getInitialValue() end
 --- @public
 --- @return AttributeValueType
 function EnumStringSet:getValueType() end
-
-

@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class DesignationZone
 --- @field public class any
 --- @field public allZones ArrayList
---- @field public lastUpdate long
-DesignationZone = {};
+--- @field public lastUpdate integer
+DesignationZone = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,100 +12,99 @@ DesignationZone = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DesignationZone.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
 --- @return DesignationZone
 function DesignationZone.addZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function DesignationZone.getAllZonesByType(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return DesignationZone
 function DesignationZone.getZone(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return DesignationZone
 function DesignationZone.getZoneByName(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return DesignationZone
 function DesignationZone.getZoneByNameAndType(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return DesignationZone
 function DesignationZone.getZoneByType(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function DesignationZone.load(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 DesignationZone
---- @return void
---- @overload fun(arg0: String, arg1: String): void
+--- @return nil
+--- @overload fun(arg0: string, arg1: string): nil
 function DesignationZone.removeZone(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DesignationZone.update() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function DesignationZone:check() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DesignationZone:doMeta(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function DesignationZone:getH() end
 
 --- @public
---- @return Double
+--- @return number
 function DesignationZone:getId() end
 
 --- @public
---- @return String
+--- @return string
 function DesignationZone:getName() end
 
 --- @public
@@ -117,11 +116,11 @@ function DesignationZone:getRandomFreeSquare() end
 function DesignationZone:getRandomSquare() end
 
 --- @public
---- @return int
+--- @return integer
 function DesignationZone:getW() end
 
 --- @public
---- @param arg0 Double
+--- @param arg0 number
 --- @return DesignationZone
 function DesignationZone:getZoneById(arg0) end
 
@@ -134,23 +133,22 @@ function DesignationZone:isFullyStreamed() end
 function DesignationZone:isStillStreamed() end
 
 --- @public
---- @return void
+--- @return nil
 function DesignationZone:loading() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function DesignationZone:save(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DesignationZone:setName(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function DesignationZone:unloading() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -158,5 +156,5 @@ function DesignationZone:unloading() end
 
 --- @public
 --- @return DesignationZone
---- @overload fun(arg0: String, arg1: String, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int): DesignationZone
+--- @overload fun(arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer): DesignationZone
 function DesignationZone.new() end

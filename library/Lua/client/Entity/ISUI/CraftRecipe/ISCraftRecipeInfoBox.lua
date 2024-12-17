@@ -16,7 +16,6 @@
 ---@field [any] any
 ISCraftRecipeInfoBox = ISPanel:derive("ISCraftRecipeInfoBox")
 
-
 ---@return any
 function ISCraftRecipeInfoBox:addInfo(_key, fullColor) end
 
@@ -49,7 +48,6 @@ function ISCraftRecipeInfoBox:setRecipe(_recipe) end
 
 ---@return any
 function ISCraftRecipeInfoBox:update() end
-
 
 ---@return ISCraftRecipeInfoBox
 function ISCraftRecipeInfoBox:new(x, y, width, height, player, recipe) end

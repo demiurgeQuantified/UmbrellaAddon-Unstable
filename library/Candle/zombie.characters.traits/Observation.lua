@@ -1,64 +1,63 @@
---- @meta
+--- @meta _
 
 --- @class Observation
 --- @field public class any
 --- @implement IListBoxItem
-Observation = {};
+Observation = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Observation:getDescription() end
 
 --- @public
---- @return String
---- @overload fun(self: Observation): String
+--- @return string
+--- @overload fun(self: Observation): string
 function Observation:getLabel() end
 
 --- @public
---- @return String
---- @overload fun(self: Observation): String
+--- @return string
+--- @overload fun(self: Observation): string
 function Observation:getLeftLabel() end
 
 --- @public
---- @return String
+--- @return string
 function Observation:getName() end
 
 --- @public
---- @return String
---- @overload fun(self: Observation): String
+--- @return string
+--- @overload fun(self: Observation): string
 function Observation:getRightLabel() end
 
 --- @public
---- @return String
+--- @return string
 function Observation:getTraitID() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Observation:setDescription(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Observation:setName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Observation:setTraitID(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
 --- @return Observation
 function Observation.new(arg0, arg1, arg2) end

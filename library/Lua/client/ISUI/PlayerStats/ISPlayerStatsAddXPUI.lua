@@ -17,7 +17,6 @@
 ---@field [any] any
 ISPlayerStatsAddXPUI = ISPanel:derive("ISPlayerStatsAddXPUI")
 
-
 ---@return any
 function ISPlayerStatsAddXPUI:create() end
 
@@ -35,7 +34,6 @@ function ISPlayerStatsAddXPUI:render() end
 
 ---@return any
 function ISPlayerStatsAddXPUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsAddXPUI
 function ISPlayerStatsAddXPUI:new(x, y, width, height, target, onclick) end

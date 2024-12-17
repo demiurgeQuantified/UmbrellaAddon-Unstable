@@ -12,7 +12,6 @@
 ---@field [any] any
 ISTakeFuel = ISBaseTimedAction:derive("ISTakeFuel")
 
-
 ---@return any
 function ISTakeFuel:complete() end
 
@@ -42,7 +41,6 @@ function ISTakeFuel:update() end
 
 ---@return any
 function ISTakeFuel:waitToStart() end
-
 
 ---@return ISTakeFuel
 function ISTakeFuel:new(character, fuelStation, petrolCan) end

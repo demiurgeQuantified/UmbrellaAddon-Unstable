@@ -56,7 +56,6 @@
 ---@field [any] any
 ISButton = ISPanel:derive("ISButton")
 
-
 ---@return any
 function ISButton:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -173,7 +172,6 @@ function ISButton:update() end
 
 ---@return any
 function ISButton:updateTooltip() end
-
 
 ---@return ISButton
 function ISButton:new(x, y, width, height, title, clicktarget, onclick, onmousedown, allowMouseUpProcessing) end

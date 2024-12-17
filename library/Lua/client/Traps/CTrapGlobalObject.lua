@@ -6,13 +6,11 @@
 ---@field [any] any
 CTrapGlobalObject = CGlobalObject:derive("CTrapGlobalObject")
 
-
 ---@return any
 function CTrapGlobalObject:checkForWallExploit(square) end
 
 ---@return any
 function CTrapGlobalObject:fromModData(modData) end
-
 
 ---@return CTrapGlobalObject
 function CTrapGlobalObject:new(luaSystem, globalObject) end

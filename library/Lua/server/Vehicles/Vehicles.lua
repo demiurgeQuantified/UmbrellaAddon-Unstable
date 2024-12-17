@@ -18,13 +18,11 @@ Vehicles.elaspedMinutesForEngine = {}
 Vehicles.JerryCanLitres = 10
 Vehicles.newSystemConditionLowerMult = 4
 
-
 ---@return any
 function Vehicles.LowerCondition(vehicle, part, elapsedMinutes) end
 
 ---@class VehicleUtils
 VehicleUtils = {}
-
 
 ---@return any
 function VehicleUtils.anyWorkingHeadlights(vehicle) end

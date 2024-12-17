@@ -10,7 +10,6 @@
 ---@field [any] any
 ISBBQLightFromKindle = ISBaseTimedAction:derive("ISBBQLightFromKindle")
 
-
 ---@return any
 function ISBBQLightFromKindle:animEvent(event, parameter) end
 
@@ -40,7 +39,6 @@ function ISBBQLightFromKindle:update() end
 
 ---@return any
 function ISBBQLightFromKindle:waitToStart() end
-
 
 ---@return ISBBQLightFromKindle
 function ISBBQLightFromKindle:new(character, plank, item, bbq) end

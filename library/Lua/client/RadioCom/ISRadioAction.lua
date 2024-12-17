@@ -13,7 +13,6 @@
 ---@field [any] any
 ISRadioAction = ISBaseTimedAction:derive("ISRadioAction")
 
-
 ---@return any
 function ISRadioAction:isValid() end
 
@@ -106,7 +105,6 @@ function ISRadioAction:startSetChannel() end
 
 ---@return any
 function ISRadioAction:update() end
-
 
 ---@return ISRadioAction
 function ISRadioAction:new(mode, character, device, secondaryItem) end

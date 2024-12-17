@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class BehaviorResult: Enum
 --- @field public class any
 --- @field public Failed BehaviorResult
 --- @field public Succeeded BehaviorResult
 --- @field public Working BehaviorResult
-BehaviorResult = {};
+BehaviorResult = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ BehaviorResult = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BehaviorResult
 function BehaviorResult.valueOf(arg0) end
 
@@ -21,5 +21,3 @@ function BehaviorResult.valueOf(arg0) end
 --- @static
 --- @return BehaviorResult[]
 function BehaviorResult.values() end
-
-

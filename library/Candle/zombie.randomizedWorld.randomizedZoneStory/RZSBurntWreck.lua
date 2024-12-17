@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSBurntWreck: RandomizedZoneStoryBase
 --- @field public class any
-RZSBurntWreck = {};
+RZSBurntWreck = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,16 +13,14 @@ RZSBurntWreck = {};
 --- @return ArrayList
 function RZSBurntWreck.getForestClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSBurntWreck:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBReverend: RandomizedBuildingBase
 --- @field public class any
-RBReverend = {};
+RBReverend = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,14 +16,13 @@ function RBReverend:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBReverend:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBReverend:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class LuaEventManager
 --- @field public class any
 --- @implement JavaFunction
 --- @field public OnTickCallbacks ArrayList
-LuaEventManager = {};
+LuaEventManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,89 +12,88 @@ LuaEventManager = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Event
 function LuaEventManager.AddEvent(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function LuaEventManager.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function LuaEventManager.ResetCallbacks() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function LuaEventManager.RunQueuedEvents() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function LuaEventManager.clear() end
 
 --- @public
 --- @static
 --- @param arg0 ArrayList
 --- @param arg1 HashMap
---- @return void
+--- @return nil
 function LuaEventManager.getEvents(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 Platform
 --- @param arg1 KahluaTable
---- @return void
+--- @return nil
 function LuaEventManager.register(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 Prototype
---- @param arg1 LuaClosure
---- @return void
+--- @param arg1 function
+--- @return nil
 function LuaEventManager.reroute(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 ArrayList
 --- @param arg1 HashMap
---- @return void
+--- @return nil
 function LuaEventManager.setEvents(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
---- @overload fun(arg0: String, arg1: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(arg0: string, arg1: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): nil
 function LuaEventManager.triggerEvent(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 Object
---- @return void
---- @overload fun(arg0: String, arg1: Object, arg2: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
+--- @overload fun(arg0: string, arg1: any, arg2: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
 function LuaEventManager.triggerEventGarbage(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 Object
---- @return void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
 function LuaEventManager.triggerEventUnique(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -102,11 +101,10 @@ function LuaEventManager.triggerEventUnique(arg0, arg1) end
 
 --- @public
 --- @param arg0 LuaCallFrame
---- @param arg1 int
---- @return int
---- @overload fun(self: LuaEventManager, arg0: LuaCallFrame, arg1: int): int
+--- @param arg1 integer
+--- @return integer
+--- @overload fun(self: LuaEventManager, arg0: LuaCallFrame, arg1: integer): integer
 function LuaEventManager:call(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

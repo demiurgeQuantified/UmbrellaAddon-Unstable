@@ -5,7 +5,6 @@
 ---@field [any] any
 ISConfirmMonitorSettingsDialog = ISModalDialog:derive("ISConfirmMonitorSettingsDialog")
 
-
 ---@return any
 function ISConfirmMonitorSettingsDialog:initialise() end
 
@@ -14,7 +13,6 @@ function ISConfirmMonitorSettingsDialog:render() end
 
 ---@return any
 function ISConfirmMonitorSettingsDialog:update() end
-
 
 ---@return ISConfirmMonitorSettingsDialog
 function ISConfirmMonitorSettingsDialog:new(x, y, width, height, callback, param1, param2) end

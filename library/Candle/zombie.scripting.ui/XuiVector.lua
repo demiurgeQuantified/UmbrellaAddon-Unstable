@@ -1,39 +1,39 @@
---- @meta
+--- @meta _
 
 --- @class XuiVector: XuiVar
 --- @field public class any
-XuiVector = {};
+XuiVector = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function XuiVector:getH() end
 
 --- @public
---- @return float
+--- @return number
 function XuiVector:getHeight() end
 
 --- @public
---- @return String
+--- @return string
 function XuiVector:getValueString() end
 
 --- @public
---- @return float
+--- @return number
 function XuiVector:getW() end
 
 --- @public
---- @return float
+--- @return number
 function XuiVector:getWidth() end
 
 --- @public
---- @return float
+--- @return number
 function XuiVector:getX() end
 
 --- @public
---- @return float
+--- @return number
 function XuiVector:getY() end
 
 --- @public
@@ -56,14 +56,13 @@ function XuiVector:isxPercent() end
 --- @return boolean
 function XuiVector:isyPercent() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
 --- @param arg0 XuiScript
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 XuiUnit
 --- @param arg3 XuiUnit
 --- @param arg4 XuiUnit

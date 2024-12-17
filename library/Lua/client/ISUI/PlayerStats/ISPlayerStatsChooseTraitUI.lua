@@ -20,7 +20,6 @@
 ---@field [any] any
 ISPlayerStatsChooseTraitUI = ISPanel:derive("ISPlayerStatsChooseTraitUI")
 
-
 ---@return any
 function ISPlayerStatsChooseTraitUI:create() end
 
@@ -41,7 +40,6 @@ function ISPlayerStatsChooseTraitUI:render() end
 
 ---@return any
 function ISPlayerStatsChooseTraitUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsChooseTraitUI
 function ISPlayerStatsChooseTraitUI:new(x, y, width, height, target, onclick, player) end

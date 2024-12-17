@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AnimalTracks
 --- @field public class any
-AnimalTracks = {};
+AnimalTracks = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,10 +18,10 @@ function AnimalTracks.addAnimalTrack(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 VirtualAnimal
---- @param arg1 int
---- @param arg2 int
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 AnimalTracksType
---- @param arg4 long
+--- @param arg4 integer
 --- @return AnimalTracks
 function AnimalTracks.addAnimalTrackAtPos(arg0, arg1, arg2, arg3, arg4) end
 
@@ -33,18 +33,17 @@ function AnimalTracks.getAndFindNearestTracks(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return ArrayList
 function AnimalTracks.getNearestTracks(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function AnimalTracks.getTrackStr(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -61,7 +60,7 @@ function AnimalTracks:addToWorld() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimalTracks:addTrackingExp(arg0, arg1) end
 
 --- @public
@@ -74,7 +73,7 @@ function AnimalTracks:canFindTrack(arg0) end
 function AnimalTracks:getAllIsoTracks() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalTracks:getAnimalType() end
 
 --- @public
@@ -82,8 +81,8 @@ function AnimalTracks:getAnimalType() end
 function AnimalTracks:getDir() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function AnimalTracks:getFreshnessString(arg0) end
 
 --- @public
@@ -91,7 +90,7 @@ function AnimalTracks:getFreshnessString(arg0) end
 function AnimalTracks:getIsoAnimalTrack() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalTracks:getMinSkill() end
 
 --- @public
@@ -99,32 +98,32 @@ function AnimalTracks:getMinSkill() end
 function AnimalTracks:getSquare() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalTracks:getTimestamp() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return String
+--- @return string
 function AnimalTracks:getTrackAge(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalTracks:getTrackAgeDays() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalTracks:getTrackHours() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalTracks:getTrackItem() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalTracks:getTrackSprite() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalTracks:getTrackType() end
 
 --- @public
@@ -141,25 +140,24 @@ function AnimalTracks:isItem() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function AnimalTracks:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function AnimalTracks:save(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalTracks:setAddedToWorld(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalTracks:setDiscovered(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

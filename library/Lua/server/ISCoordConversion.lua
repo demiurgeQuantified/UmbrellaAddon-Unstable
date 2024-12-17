@@ -3,7 +3,6 @@
 ---@class ISCoordConversion
 ISCoordConversion = {}
 
-
 ---@return any
 function ISCoordConversion.ToScreen(x, y, z, cz) end
 

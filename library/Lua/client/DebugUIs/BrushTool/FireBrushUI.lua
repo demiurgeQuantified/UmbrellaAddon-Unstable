@@ -26,10 +26,8 @@
 FireBrushUI = ISPanelJoypad:derive("FireBrushUI")
 FireBrushUI.instance = nil
 
-
 ---@return any
 function FireBrushUI.openPanel(x, y, playerObj) end
-
 
 ---@return any
 function FireBrushUI:addExplosion(square) end
@@ -81,7 +79,6 @@ function FireBrushUI:removeSmoke(square) end
 
 ---@return any
 function FireBrushUI:render() end
-
 
 ---@return FireBrushUI
 function FireBrushUI:new(x, y, width, height, player) end

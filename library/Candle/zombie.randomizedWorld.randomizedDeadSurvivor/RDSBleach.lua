@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSBleach: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSBleach = {};
+RDSBleach = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSBleach = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSBleach:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

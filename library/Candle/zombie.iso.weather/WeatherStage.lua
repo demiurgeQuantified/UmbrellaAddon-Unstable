@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class WeatherStage
 --- @field public class any
-WeatherStage = {};
+WeatherStage = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,69 +13,68 @@ WeatherStage = {};
 function WeatherStage:getHasStartedCloud() end
 
 --- @public
---- @return float
+--- @return number
 function WeatherStage:getLinearT() end
 
 --- @public
---- @return String
+--- @return string
 function WeatherStage:getModID() end
 
 --- @public
---- @return float
+--- @return number
 function WeatherStage:getParabolicT() end
 
 --- @public
---- @return float
+--- @return number
 function WeatherStage:getStageCurrentStrength() end
 
 --- @public
---- @return double
+--- @return number
 function WeatherStage:getStageDuration() end
 
 --- @public
---- @return double
+--- @return number
 function WeatherStage:getStageEnd() end
 
 --- @public
---- @return int
+--- @return integer
 function WeatherStage:getStageID() end
 
 --- @public
---- @return double
+--- @return number
 function WeatherStage:getStageStart() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function WeatherStage:lerpEntryTo(arg0, arg1) end
 
 --- @public
 --- @param arg0 DataInputStream
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function WeatherStage:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 DataOutputStream
---- @return void
+--- @return nil
 function WeatherStage:save(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function WeatherStage:setHasStartedCloud(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function WeatherStage:setStageID(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function WeatherStage:setTargetStrength(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -83,5 +82,5 @@ function WeatherStage:setTargetStrength(arg0) end
 
 --- @public
 --- @return WeatherStage
---- @overload fun(arg0: int): WeatherStage
+--- @overload fun(arg0: integer): WeatherStage
 function WeatherStage.new() end

@@ -9,7 +9,6 @@
 ---@field [any] any
 ISConfigHeadlight = ISBaseTimedAction:derive("ISConfigHeadlight")
 
-
 ---@return any
 function ISConfigHeadlight:isValid() end
 
@@ -24,7 +23,6 @@ function ISConfigHeadlight:stop() end
 
 ---@return any
 function ISConfigHeadlight:update() end
-
 
 ---@return ISConfigHeadlight
 function ISConfigHeadlight:new(character, part, dir, time) end

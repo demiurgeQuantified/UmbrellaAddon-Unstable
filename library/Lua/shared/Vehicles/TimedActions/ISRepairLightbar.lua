@@ -9,7 +9,6 @@
 ---@field [any] any
 ISRepairLightbar = ISBaseTimedAction:derive("ISRepairLightbar")
 
-
 ---@return any
 function ISRepairLightbar:complete() end
 
@@ -33,7 +32,6 @@ function ISRepairLightbar:update() end
 
 ---@return any
 function ISRepairLightbar:waitToStart() end
-
 
 ---@return ISRepairLightbar
 function ISRepairLightbar:new(character, part, item, maxTime) end

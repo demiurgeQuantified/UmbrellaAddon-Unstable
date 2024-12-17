@@ -20,10 +20,8 @@
 ---@field [any] any
 ISCraftRecipeQueriesPanel = ISPanel:derive("ISCraftRecipeQueriesPanel")
 
-
 ---@return any
 function ISCraftRecipeQueriesPanel.onTextChange(box) end
-
 
 ---@return any
 function ISCraftRecipeQueriesPanel:close() end
@@ -72,7 +70,6 @@ function ISCraftRecipeQueriesPanel:update() end
 
 ---@return any
 function ISCraftRecipeQueriesPanel:updateTooltip() end
-
 
 ---@return ISCraftRecipeQueriesPanel
 function ISCraftRecipeQueriesPanel:new(x, y, width, height, player) end

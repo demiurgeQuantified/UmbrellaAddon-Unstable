@@ -1,69 +1,69 @@
---- @meta
+--- @meta _
 
 --- @class AngelCodeFont
 --- @field public class any
 --- @implement Font
 --- @implement AssetStateObserver
---- @field public curA float
---- @field public curB float
+--- @field public curA number
+--- @field public curB number
 --- @field public curCol Color
---- @field public curG float
---- @field public curR float
---- @field public xoff int
---- @field public yoff int
-AngelCodeFont = {};
+--- @field public curG number
+--- @field public curR number
+--- @field public xoff integer
+--- @field public yoff integer
+AngelCodeFont = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function AngelCodeFont:destroy() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 String
---- @return void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String, arg3: Color): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String, arg3: Color): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String, arg3: Color, arg4: int, arg5: int): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String, arg3: Color, arg4: int, arg5: int): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String, arg3: float, arg4: float, arg5: float, arg6: float): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: float, arg3: String, arg4: float, arg5: float, arg6: float, arg7: float): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: String, arg3: float, arg4: float, arg5: float, arg6: float, arg7: int, arg8: int): void
---- @overload fun(self: AngelCodeFont, arg0: float, arg1: float, arg2: float, arg3: String, arg4: float, arg5: float, arg6: float, arg7: float, arg8: int, arg9: int): void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 string
+--- @return nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string, arg3: Color): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string, arg3: Color): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string, arg3: Color, arg4: integer, arg5: integer): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string, arg3: Color, arg4: integer, arg5: integer): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string, arg3: number, arg4: number, arg5: number, arg6: number): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: number, arg3: string, arg4: number, arg5: number, arg6: number, arg7: number): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: string, arg3: number, arg4: number, arg5: number, arg6: number, arg7: integer, arg8: integer): nil
+--- @overload fun(self: AngelCodeFont, arg0: number, arg1: number, arg2: number, arg3: string, arg4: number, arg5: number, arg6: number, arg7: number, arg8: integer, arg9: integer): nil
 function AngelCodeFont:drawString(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @return int
---- @overload fun(self: AngelCodeFont, arg0: String): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: boolean, arg2: boolean): int
+--- @param arg0 string
+--- @return integer
+--- @overload fun(self: AngelCodeFont, arg0: string): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: boolean, arg2: boolean): integer
 function AngelCodeFont:getHeight(arg0) end
 
 --- @public
---- @return int
---- @overload fun(self: AngelCodeFont): int
+--- @return integer
+--- @overload fun(self: AngelCodeFont): integer
 function AngelCodeFont:getLineHeight() end
 
 --- @public
---- @param arg0 String
---- @return int
---- @overload fun(self: AngelCodeFont, arg0: String): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: boolean): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: boolean): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: int, arg2: int): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: int, arg2: int): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: int, arg2: int, arg3: boolean): int
---- @overload fun(self: AngelCodeFont, arg0: String, arg1: int, arg2: int, arg3: boolean): int
+--- @param arg0 string
+--- @return integer
+--- @overload fun(self: AngelCodeFont, arg0: string): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: boolean): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: boolean): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: integer, arg2: integer): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: integer, arg2: integer): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: integer, arg2: integer, arg3: boolean): integer
+--- @overload fun(self: AngelCodeFont, arg0: string, arg1: integer, arg2: integer, arg3: boolean): integer
 function AngelCodeFont:getWidth(arg0) end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function AngelCodeFont:getYOffset(arg0) end
 
 --- @public
@@ -74,18 +74,17 @@ function AngelCodeFont:isEmpty() end
 --- @param arg0 State
 --- @param arg1 State
 --- @param arg2 Asset
---- @return void
---- @overload fun(self: AngelCodeFont, arg0: State, arg1: State, arg2: Asset): void
+--- @return nil
+--- @overload fun(self: AngelCodeFont, arg0: State, arg1: State, arg2: Asset): nil
 function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return AngelCodeFont
---- @overload fun(arg0: String, arg1: Texture): AngelCodeFont
+--- @overload fun(arg0: string, arg1: Texture): AngelCodeFont
 function AngelCodeFont.new(arg0, arg1) end

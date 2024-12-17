@@ -20,10 +20,8 @@
 ZomboidRadioDebug = ISPanel:derive("ZomboidRadioDebug")
 ZomboidRadioDebug.instance = nil
 
-
 ---@return any
 function ZomboidRadioDebug.OnOpenPanel() end
-
 
 ---@return any
 function ZomboidRadioDebug:close() end
@@ -69,7 +67,6 @@ function ZomboidRadioDebug:prerender() end
 
 ---@return any
 function ZomboidRadioDebug:update() end
-
 
 ---@return ZomboidRadioDebug
 function ZomboidRadioDebug:new(x, y, width, height, title) end

@@ -10,7 +10,6 @@
 ---@field [any] any
 ISStashIcon = ISBaseIcon:derive("ISStashIcon")
 
-
 ---@return any
 function ISStashIcon:checkIsForageable() end
 
@@ -22,7 +21,6 @@ function ISStashIcon:isValid() end
 
 ---@return any
 function ISStashIcon:setWorldMarkerPosition() end
-
 
 ---@return ISStashIcon
 function ISStashIcon:new(_manager, _icon) end

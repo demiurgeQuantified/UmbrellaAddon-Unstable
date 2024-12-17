@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSMurderScene: RandomizedZoneStoryBase
 --- @field public class any
-RZSMurderScene = {};
+RZSMurderScene = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,16 +13,14 @@ RZSMurderScene = {};
 --- @return ArrayList
 function RZSMurderScene.getMurderClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSMurderScene:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

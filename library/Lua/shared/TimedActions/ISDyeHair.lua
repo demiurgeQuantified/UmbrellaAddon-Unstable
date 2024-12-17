@@ -7,7 +7,6 @@
 ---@field [any] any
 ISDyeHair = ISBaseTimedAction:derive("ISDyeHair")
 
-
 ---@return any
 function ISDyeHair:complete() end
 
@@ -28,7 +27,6 @@ function ISDyeHair:stop() end
 
 ---@return any
 function ISDyeHair:update() end
-
 
 ---@return ISDyeHair
 function ISDyeHair:new(character, hairDye, beard) end

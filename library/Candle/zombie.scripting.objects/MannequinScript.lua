@@ -1,45 +1,45 @@
---- @meta
+--- @meta _
 
 --- @class MannequinScript: BaseScriptObject
 --- @field public class any
-MannequinScript = {};
+MannequinScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function MannequinScript:Load(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getAnimSet() end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getAnimState() end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getModelScriptName() end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getName() end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getOutfit() end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getPose() end
 
 --- @public
---- @return String
+--- @return string
 function MannequinScript:getTexture() end
 
 --- @public
@@ -47,44 +47,43 @@ function MannequinScript:getTexture() end
 function MannequinScript:isFemale() end
 
 --- @public
---- @return void
+--- @return nil
 function MannequinScript:reset() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MannequinScript:setAnimSet(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MannequinScript:setAnimState(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function MannequinScript:setFemale(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MannequinScript:setModelScriptName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MannequinScript:setOutfit(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MannequinScript:setPose(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MannequinScript:setTexture(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

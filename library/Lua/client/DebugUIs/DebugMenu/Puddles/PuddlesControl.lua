@@ -16,7 +16,6 @@
 ---@field [any] any
 PuddlesControl = ISDebugSubPanelBase:derive("PuddlesControl")
 
-
 ---@return any
 function PuddlesControl:addButton(_id, _x, _y, _w, _h, _title) end
 
@@ -58,7 +57,6 @@ function PuddlesControl:prerender() end
 
 ---@return any
 function PuddlesControl:update() end
-
 
 ---@return PuddlesControl
 function PuddlesControl:new(x, y, width, height) end

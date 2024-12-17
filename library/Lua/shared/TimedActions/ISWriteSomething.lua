@@ -8,7 +8,6 @@
 ---@field [any] any
 ISWriteSomething = ISBaseTimedAction:derive("ISWriteSomething")
 
-
 ---@return any
 function ISWriteSomething:animEvent(event, parameter) end
 
@@ -41,7 +40,6 @@ function ISWriteSomething:stop() end
 
 ---@return any
 function ISWriteSomething:update() end
-
 
 ---@return ISWriteSomething
 function ISWriteSomething:new(character, item) end

@@ -13,7 +13,6 @@
 ---@field [any] any
 ISFarmingCursor = ISBuildingObject:derive("ISFarmingCursor")
 
-
 ---@return any
 function ISFarmingCursor:create(x, y, z, north, sprite) end
 
@@ -40,7 +39,6 @@ function ISFarmingCursor:render(x, y, z, square) end
 
 ---@return any
 function ISFarmingCursor:rotateKey(key) end
-
 
 ---@return ISFarmingCursor
 function ISFarmingCursor:new(character) end

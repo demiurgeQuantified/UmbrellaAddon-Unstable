@@ -8,7 +8,6 @@
 ---@field [any] any
 ISEnergySlotPanel = ISGroupBox:derive("ISEnergySlotPanel")
 
-
 ---@return any
 function ISEnergySlotPanel:addResource(_resourceEnergy, _styleEnergySlot, _styleIcon, _styleBar) end
 
@@ -32,7 +31,6 @@ function ISEnergySlotPanel:render() end
 
 ---@return any
 function ISEnergySlotPanel:update() end
-
 
 ---@return ISEnergySlotPanel
 function ISEnergySlotPanel:new(x, y, width, height, player, entity, _styleLabel) end

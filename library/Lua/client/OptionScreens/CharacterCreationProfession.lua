@@ -54,13 +54,11 @@
 ---@field [any] any
 CharacterCreationProfession = ISPanelJoypad:derive("CharacterCreationProfession")
 
-
 ---@return any
 function CharacterCreationProfession.initWorld() end
 
 ---@return any
 function CharacterCreationProfession.loadBuild(self, box) end
-
 
 ---@return any
 function CharacterCreationProfession:addTrait(bad) end
@@ -200,14 +198,12 @@ function CharacterCreationProfession:setVisible(visible, joypadData) end
 ---@return any
 function CharacterCreationProfession:update() end
 
-
 ---@return CharacterCreationProfession
 function CharacterCreationProfession:new(x, y, width, height) end
 
 ---@class BCRC
 BCRC = {}
 BCRC.savefile = "saved_builds.txt"
-
 
 ---@return any
 function BCRC.dump(o, lvl) end

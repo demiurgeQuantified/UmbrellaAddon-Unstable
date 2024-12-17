@@ -1,16 +1,16 @@
---- @meta
+--- @meta _
 
 --- @class ColorRGB
 --- @field public class any
-ColorRGB = {};
+ColorRGB = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return ColorRGB
 function ColorRGB.new(arg0, arg1, arg2) end

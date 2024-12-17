@@ -3,7 +3,6 @@
 ---@class AdjacentFreeTileFinder
 AdjacentFreeTileFinder = {}
 
-
 ---@return any
 function AdjacentFreeTileFinder.Find(gridSquare, playerObj, excludeList) end
 

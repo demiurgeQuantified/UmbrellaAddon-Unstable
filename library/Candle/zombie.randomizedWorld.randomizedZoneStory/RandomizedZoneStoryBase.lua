@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class RandomizedZoneStoryBase: RandomizedWorldBase
 --- @field public class any
---- @field public baseChance int
---- @field public totalChance int
---- @field public zoneStory String
-RandomizedZoneStoryBase = {};
+--- @field public baseChance integer
+--- @field public totalChance integer
+--- @field public zoneStory string
+RandomizedZoneStoryBase = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,7 +14,7 @@ RandomizedZoneStoryBase = {};
 --- @public
 --- @static
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function RandomizedZoneStoryBase.cleanSquareForStory(arg0) end
 
 --- @public
@@ -34,7 +34,7 @@ function RandomizedZoneStoryBase.getRandomFreeUnoccupiedSquare(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RandomizedZoneStoryBase.initAllRZSMapChance(arg0) end
 
 --- @public
@@ -44,7 +44,6 @@ function RandomizedZoneStoryBase.initAllRZSMapChance(arg0) end
 --- @return boolean
 function RandomizedZoneStoryBase.isValidForStory(arg0, arg1) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -52,15 +51,15 @@ function RandomizedZoneStoryBase.isValidForStory(arg0, arg1) end
 --- @public
 --- @param arg0 RandomizedZoneStoryBase
 --- @param arg1 Zone
---- @return void
+--- @return nil
 function RandomizedZoneStoryBase:cleanAreaForStory(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedZoneStoryBase:getMinimumHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedZoneStoryBase:getMinimumWidth() end
 
 --- @public
@@ -89,9 +88,8 @@ function RandomizedZoneStoryBase:isValid() end
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RandomizedZoneStoryBase:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

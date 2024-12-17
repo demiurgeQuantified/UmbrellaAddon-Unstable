@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSOrphanedFawn: RandomizedZoneStoryBase
 --- @field public class any
-RZSOrphanedFawn = {};
+RZSOrphanedFawn = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSOrphanedFawn = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSOrphanedFawn:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -22,10 +22,8 @@
 ISFluidDebugWindow = ISCollapsableWindow:derive("ISFluidDebugWindow")
 ISFluidDebugWindow.coords = false
 
-
 ---@return any
 function ISFluidDebugWindow.OnOpenPanel(_player) end
-
 
 ---@return any
 function ISFluidDebugWindow:close() end
@@ -47,7 +45,6 @@ function ISFluidDebugWindow:prerender() end
 
 ---@return any
 function ISFluidDebugWindow:render() end
-
 
 ---@return ISFluidDebugWindow
 function ISFluidDebugWindow:new(x, y, width, height, player) end

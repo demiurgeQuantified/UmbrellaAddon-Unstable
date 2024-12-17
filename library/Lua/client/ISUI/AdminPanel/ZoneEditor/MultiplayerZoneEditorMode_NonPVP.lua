@@ -14,7 +14,6 @@
 ---@field [any] any
 MultiplayerZoneEditorMode_NonPVP = MultiplayerZoneEditorMode:derive("MultiplayerZoneEditorMode_NonPVP")
 
-
 ---@return any
 function MultiplayerZoneEditorMode_NonPVP:cancelResize() end
 
@@ -92,7 +91,6 @@ function MultiplayerZoneEditorMode_NonPVP:setZoneBounds(x1, y1, x2, y2) end
 
 ---@return any
 function MultiplayerZoneEditorMode_NonPVP:undisplay() end
-
 
 ---@return MultiplayerZoneEditorMode_NonPVP
 function MultiplayerZoneEditorMode_NonPVP:new(editor) end

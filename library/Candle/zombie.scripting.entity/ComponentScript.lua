@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ComponentScript: BaseScriptObject
 --- @field public class any
-ComponentScript = {};
+ComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,15 +10,13 @@ ComponentScript = {};
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function ComponentScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function ComponentScript:getName() end
 
 --- @public
 --- @return boolean
 function ComponentScript:isoMasterOnly() end
-
-

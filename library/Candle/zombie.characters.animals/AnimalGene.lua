@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AnimalGene
 --- @field public class any
-AnimalGene = {};
+AnimalGene = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,13 +11,13 @@ AnimalGene = {};
 --- @public
 --- @static
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function AnimalGene.checkGeneticDisorder(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 AnimalAllele
---- @return void
+--- @return nil
 function AnimalGene.doMutation(arg0) end
 
 --- @public
@@ -25,7 +25,7 @@ function AnimalGene.doMutation(arg0) end
 --- @param arg0 AnimalGenomeDefinitions
 --- @param arg1 HashMap
 --- @param arg2 AnimalAllele
---- @return void
+--- @return nil
 function AnimalGene.doRatio(arg0, arg1, arg2) end
 
 --- @public
@@ -38,9 +38,8 @@ function AnimalGene.initGenesFromParents(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function AnimalGene.initGenome(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -55,7 +54,7 @@ function AnimalGene:getAllele1() end
 function AnimalGene:getAllele2() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalGene:getName() end
 
 --- @public
@@ -63,22 +62,21 @@ function AnimalGene:getName() end
 function AnimalGene:getUsedGene() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalGene:initUsedGene() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function AnimalGene:load(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimalGene:save(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -7,7 +7,6 @@
 ---@field [any] any
 AddChumToWaterAction = ISBaseTimedAction:derive("AddChumToWaterAction")
 
-
 ---@return any
 function AddChumToWaterAction:complete() end
 
@@ -28,7 +27,6 @@ function AddChumToWaterAction:stop() end
 
 ---@return any
 function AddChumToWaterAction:update() end
-
 
 ---@return AddChumToWaterAction
 function AddChumToWaterAction:new(character, chum, square) end

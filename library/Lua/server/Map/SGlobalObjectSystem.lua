@@ -7,10 +7,8 @@
 ---@field [any] any
 SGlobalObjectSystem = ISBaseObject:derive("SGlobalObjectSystem")
 
-
 ---@return any
 function SGlobalObjectSystem.RegisterSystemClass(luaClass) end
-
 
 ---@return any
 function SGlobalObjectSystem:getInitialStateForClient() end
@@ -98,7 +96,6 @@ function SGlobalObjectSystem:sendCommand(command, args) end
 
 ---@return any
 function SGlobalObjectSystem:updateLuaObjectOnClient(luaObject) end
-
 
 ---@return SGlobalObjectSystem
 function SGlobalObjectSystem:new(name) end

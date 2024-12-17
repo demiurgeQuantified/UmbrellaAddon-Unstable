@@ -7,7 +7,6 @@
 ---@field [any] any
 ISJoypadDisconnectedUI = ISUIElement:derive("ISJoypadDisconnectedUI")
 
-
 ---@return any
 function ISJoypadDisconnectedUI:createChildren() end
 
@@ -22,7 +21,6 @@ function ISJoypadDisconnectedUI:update() end
 
 ---@return any
 function ISJoypadDisconnectedUI:useKeyboardMouse() end
-
 
 ---@return ISJoypadDisconnectedUI
 function ISJoypadDisconnectedUI:new(playerNum) end

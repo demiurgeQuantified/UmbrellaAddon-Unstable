@@ -14,7 +14,6 @@
 ISBaseTimedAction = ISBaseObject:derive("ISBaseTimedAction")
 ISBaseTimedAction.IDMax = 1
 
-
 ---@return any
 function ISBaseTimedAction:addAfter(action) end
 
@@ -104,7 +103,6 @@ function ISBaseTimedAction:update() end
 
 ---@return any
 function ISBaseTimedAction:waitToStart() end
-
 
 ---@return ISBaseTimedAction
 function ISBaseTimedAction:new(character) end

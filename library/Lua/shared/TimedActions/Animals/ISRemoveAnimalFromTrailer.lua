@@ -8,7 +8,6 @@
 ---@field [any] any
 ISRemoveAnimalFromTrailer = ISBaseTimedAction:derive("ISRemoveAnimalFromTrailer")
 
-
 ---@return any
 function ISRemoveAnimalFromTrailer:complete() end
 
@@ -32,7 +31,6 @@ function ISRemoveAnimalFromTrailer:update() end
 
 ---@return any
 function ISRemoveAnimalFromTrailer:waitToStart() end
-
 
 ---@return ISRemoveAnimalFromTrailer
 function ISRemoveAnimalFromTrailer:new(character, vehicle, animal, grab) end

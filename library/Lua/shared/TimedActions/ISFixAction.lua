@@ -12,7 +12,6 @@
 ---@field [any] any
 ISFixAction = ISBaseTimedAction:derive("ISFixAction")
 
-
 ---@return any
 function ISFixAction:complete() end
 
@@ -33,7 +32,6 @@ function ISFixAction:stop() end
 
 ---@return any
 function ISFixAction:update() end
-
 
 ---@return ISFixAction
 function ISFixAction:new(character, item, fixingNum, fixerNum) end

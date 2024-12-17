@@ -14,7 +14,6 @@
 ISCampingInfoWindow = ISCollapsableWindow:derive("ISCampingInfoWindow")
 ISCampingInfoWindow.windows = {}
 
-
 ---@return any
 function ISCampingInfoWindow:close() end
 
@@ -32,7 +31,6 @@ function ISCampingInfoWindow:setObject(campfireObject) end
 
 ---@return any
 function ISCampingInfoWindow:update() end
-
 
 ---@return ISCampingInfoWindow
 function ISCampingInfoWindow:new(x, y, character, campfireObject, campfireTable) end

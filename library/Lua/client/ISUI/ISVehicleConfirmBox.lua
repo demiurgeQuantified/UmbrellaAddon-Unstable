@@ -8,7 +8,6 @@
 ---@field [any] any
 ISVehicleConfirmBox = ISPanelJoypad:derive("ISVehicleConfirmBox")
 
-
 ---@return any
 function ISVehicleConfirmBox:createChildren() end
 
@@ -29,7 +28,6 @@ function ISVehicleConfirmBox:onOptionMouseDown(button, x, y) end
 
 ---@return any
 function ISVehicleConfirmBox:prerender() end
-
 
 ---@return ISVehicleConfirmBox
 function ISVehicleConfirmBox:new() end

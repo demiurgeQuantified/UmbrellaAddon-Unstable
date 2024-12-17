@@ -11,7 +11,6 @@
 ---@field [any] any
 ISAddWaterFromItemAction = ISBaseTimedAction:derive("ISAddWaterFromItemAction")
 
-
 ---@return any
 function ISAddWaterFromItemAction:complete() end
 
@@ -41,7 +40,6 @@ function ISAddWaterFromItemAction:update() end
 
 ---@return any
 function ISAddWaterFromItemAction:waitToStart() end
-
 
 ---@return ISAddWaterFromItemAction
 function ISAddWaterFromItemAction:new(character, itemFrom, objectTo) end

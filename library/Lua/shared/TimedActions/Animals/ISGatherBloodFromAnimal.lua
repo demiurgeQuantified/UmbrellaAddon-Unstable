@@ -16,7 +16,6 @@
 ---@field [any] any
 ISGatherBloodFromAnimal = ISBaseTimedAction:derive("ISGatherBloodFromAnimal")
 
-
 ---@return any
 function ISGatherBloodFromAnimal:complete() end
 
@@ -43,7 +42,6 @@ function ISGatherBloodFromAnimal:update() end
 
 ---@return any
 function ISGatherBloodFromAnimal:waitToStart() end
-
 
 ---@return ISGatherBloodFromAnimal
 function ISGatherBloodFromAnimal:new(character, body, hook, luaHook, bucket) end

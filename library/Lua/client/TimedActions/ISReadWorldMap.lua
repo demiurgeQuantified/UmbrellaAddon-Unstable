@@ -9,7 +9,6 @@
 ---@field [any] any
 ISReadWorldMap = ISBaseTimedAction:derive("ISReadWorldMap")
 
-
 ---@return any
 function ISReadWorldMap:isValid() end
 
@@ -24,7 +23,6 @@ function ISReadWorldMap:stop() end
 
 ---@return any
 function ISReadWorldMap:update() end
-
 
 ---@return ISReadWorldMap
 function ISReadWorldMap:new(character, centerX, centerY, zoom) end

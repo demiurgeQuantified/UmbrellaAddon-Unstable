@@ -18,7 +18,6 @@
 ---@field [any] any
 RWM = ISPanel:derive("RWM")
 
-
 ---@return any
 function RWM:createChildren() end
 
@@ -33,7 +32,6 @@ function RWM:readFromObject(_player, _deviceObject) end
 
 ---@return any
 function RWM:render() end
-
 
 ---@return RWM
 function RWM:new(x, y, width, height) end

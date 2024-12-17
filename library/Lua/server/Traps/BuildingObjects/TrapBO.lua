@@ -15,7 +15,6 @@
 ---@field [any] any
 TrapBO = ISBuildingObject:derive("TrapBO")
 
-
 ---@return any
 function TrapBO:create(x, y, z, north, sprite) end
 
@@ -30,7 +29,6 @@ function TrapBO:onTimedActionStart(action) end
 
 ---@return any
 function TrapBO:render(x, y, z, square) end
-
 
 ---@return TrapBO
 function TrapBO:new(player, trap) end

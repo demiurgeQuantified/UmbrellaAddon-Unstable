@@ -11,7 +11,6 @@
 ---@field [any] any
 ISModsNagPanel = ISPanelJoypad:derive("ISModsNagPanel")
 
-
 ---@return any
 function ISModsNagPanel:createChildren() end
 
@@ -23,7 +22,6 @@ function ISModsNagPanel:onOK(button, x, y) end
 
 ---@return any
 function ISModsNagPanel:render() end
-
 
 ---@return ISModsNagPanel
 function ISModsNagPanel:new(x, y, width, height) end

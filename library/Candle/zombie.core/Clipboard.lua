@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Clipboard
 --- @field public class any
-Clipboard = {};
+Clipboard = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,30 +10,29 @@ Clipboard = {};
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function Clipboard.getClipboard() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Clipboard.initMainThread() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Clipboard.rememberCurrentValue() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Clipboard.setClipboard(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Clipboard.updateMainThread() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

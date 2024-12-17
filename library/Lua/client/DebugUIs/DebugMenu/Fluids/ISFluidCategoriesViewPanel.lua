@@ -12,10 +12,8 @@
 ---@field [any] any
 ISFluidCategoriesViewPanel = ISPanel:derive("ISFluidCategoriesViewPanel")
 
-
 ---@return any
 function ISFluidCategoriesViewPanel.onTextChange(box) end
-
 
 ---@return any
 function ISFluidCategoriesViewPanel:close() end
@@ -55,7 +53,6 @@ function ISFluidCategoriesViewPanel:prerender() end
 
 ---@return any
 function ISFluidCategoriesViewPanel:render() end
-
 
 ---@return ISFluidCategoriesViewPanel
 function ISFluidCategoriesViewPanel:new(x, y, width, height, player) end

@@ -13,7 +13,6 @@
 ---@field [any] any
 ISRemoveBullet = ISBaseTimedAction:derive("ISRemoveBullet")
 
-
 ---@return any
 function ISRemoveBullet:complete() end
 
@@ -40,7 +39,6 @@ function ISRemoveBullet:update() end
 
 ---@return any
 function ISRemoveBullet:waitToStart() end
-
 
 ---@return ISRemoveBullet
 function ISRemoveBullet:new(character, otherPlayer, bodyPart) end

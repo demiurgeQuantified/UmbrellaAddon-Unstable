@@ -3,7 +3,6 @@
 ---@class ButcheringUtil
 ButcheringUtil = {}
 
-
 ---@return any
 function ButcheringUtil.addAnimalPart(part, player, carcass, fromGround) end
 

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class BooleanConfigOption: ConfigOption
 --- @field public class any
-BooleanConfigOption = {};
+BooleanConfigOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,11 +13,11 @@ BooleanConfigOption = {};
 function BooleanConfigOption:getDefaultValue() end
 
 --- @public
---- @return String
+--- @return string
 function BooleanConfigOption:getTooltip() end
 
 --- @public
---- @return String
+--- @return string
 function BooleanConfigOption:getType() end
 
 --- @public
@@ -25,15 +25,15 @@ function BooleanConfigOption:getType() end
 function BooleanConfigOption:getValue() end
 
 --- @public
---- @return Object
+--- @return any
 function BooleanConfigOption:getValueAsObject() end
 
 --- @public
---- @return String
+--- @return string
 function BooleanConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function BooleanConfigOption:isValidString(arg0) end
 
@@ -42,35 +42,34 @@ function BooleanConfigOption:isValidString(arg0) end
 function BooleanConfigOption:makeCopy() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function BooleanConfigOption:parse(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function BooleanConfigOption:resetToDefault() end
 
 --- @public
---- @return void
+--- @return nil
 function BooleanConfigOption:setDefaultToCurrentValue() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function BooleanConfigOption:setValue(arg0) end
 
 --- @public
---- @param arg0 Object
---- @return void
+--- @param arg0 any
+--- @return nil
 function BooleanConfigOption:setValueFromObject(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @return BooleanConfigOption
 function BooleanConfigOption.new(arg0, arg1) end

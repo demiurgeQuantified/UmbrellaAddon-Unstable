@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CraftLogic: Component
 --- @field public class any
-CraftLogic = {};
+CraftLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,7 @@ function CraftLogic:debugCanStart(arg0) end
 function CraftLogic:getCurrentRecipe() end
 
 --- @public
---- @return int
+--- @return integer
 function CraftLogic:getElapsedTime() end
 
 --- @public
@@ -31,7 +31,7 @@ function CraftLogic:getElapsedTime() end
 function CraftLogic:getInputResources() end
 
 --- @public
---- @return String
+--- @return string
 function CraftLogic:getInputsGroupName() end
 
 --- @public
@@ -39,7 +39,7 @@ function CraftLogic:getInputsGroupName() end
 function CraftLogic:getOutputResources() end
 
 --- @public
---- @return String
+--- @return string
 function CraftLogic:getOutputsGroupName() end
 
 --- @public
@@ -47,11 +47,11 @@ function CraftLogic:getOutputsGroupName() end
 function CraftLogic:getPossibleRecipe() end
 
 --- @public
---- @return double
+--- @return number
 function CraftLogic:getProgress() end
 
 --- @public
---- @return String
+--- @return string
 function CraftLogic:getRecipeTagQuery() end
 
 --- @public
@@ -93,33 +93,31 @@ function CraftLogic:isValid() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function CraftLogic:sendStartRequest(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function CraftLogic:sendStopRequest(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
---- @return void
+--- @return nil
 function CraftLogic:setRecipe(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftLogic:setRecipeTagQuery(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function CraftLogic:start(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
---- @overload fun(self: CraftLogic, arg0: IsoPlayer, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: CraftLogic, arg0: IsoPlayer, arg1: boolean): nil
 function CraftLogic:stop(arg0) end
-
-

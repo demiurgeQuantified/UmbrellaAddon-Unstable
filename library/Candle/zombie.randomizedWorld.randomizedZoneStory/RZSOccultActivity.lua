@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSOccultActivity: RandomizedZoneStoryBase
 --- @field public class any
-RZSOccultActivity = {};
+RZSOccultActivity = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSOccultActivity = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSOccultActivity:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

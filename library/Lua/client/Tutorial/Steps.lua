@@ -12,7 +12,6 @@ TutorialTests.klight_y = 156
 TutorialTests.llight_x = 151
 TutorialTests.llight_y = 151
 
-
 ---@return any
 function TutorialTests.addHoming(sq, yoffset, xoffset, color) end
 
@@ -52,7 +51,6 @@ function TutorialTests.ZoomedOut() end
 ---@class WelcomeStep : TutorialStep
 WelcomeStep = TutorialStep:derive("WelcomeStep")
 
-
 ---@return any
 function WelcomeStep:begin() end
 
@@ -61,7 +59,6 @@ function WelcomeStep:finish() end
 
 ---@return any
 function WelcomeStep:isComplete() end
-
 
 ---@return WelcomeStep
 function WelcomeStep:new() end
@@ -85,7 +82,6 @@ WalkToAdjacent.sneaked = false
 WalkToAdjacent.appleContainer = nil
 WalkToAdjacent.z = 0
 
-
 ---@return any
 function WalkToAdjacent:begin() end
 
@@ -104,14 +100,12 @@ function WalkToAdjacent:isComplete() end
 ---@return any
 function WalkToAdjacent:strafed() end
 
-
 ---@return WalkToAdjacent
 function WalkToAdjacent:new() end
 
 ---@class InventoryLootingStep : TutorialStep
 InventoryLootingStep = TutorialStep:derive("InventoryLootingStep")
 InventoryLootingStep.itemToEat = "DeadMouse"
-
 
 ---@return any
 function InventoryLootingStep:begin() end
@@ -137,7 +131,6 @@ function InventoryLootingStep:isComplete() end
 ---@return any
 function InventoryLootingStep:openInventoryJoypad() end
 
-
 ---@return InventoryLootingStep
 function InventoryLootingStep:new() end
 
@@ -150,10 +143,8 @@ InventoryUseStep.lastInventory = nil
 InventoryUseStep.clickedOnInventory = false
 InventoryUseStep.panContainer = nil
 
-
 ---@return any
 function InventoryUseStep.spawnPan() end
-
 
 ---@return any
 function InventoryUseStep:begin() end
@@ -185,7 +176,6 @@ function InventoryUseStep:seeWeapon() end
 ---@return any
 function InventoryUseStep:selectInventory() end
 
-
 ---@return InventoryUseStep
 function InventoryUseStep:new() end
 
@@ -201,7 +191,6 @@ FightStep.momzombie = nil
 FightStep.zombieSawYou = false
 FightStep.highlightFloor = nil
 FightStep.wasOpen = true
-
 
 ---@return any
 function FightStep:begin() end
@@ -239,7 +228,6 @@ function FightStep:spawnMom() end
 ---@return any
 function FightStep:WalkToWindow() end
 
-
 ---@return FightStep
 function FightStep:new() end
 
@@ -249,7 +237,6 @@ function FightStep:new() end
 SneakStep = TutorialStep:derive("SneakStep")
 SneakStep.zombieDadSpawnX = 166
 SneakStep.zombieDadSpawnY = 147
-
 
 ---@return any
 function SneakStep.OnSwingAtDad(owner, weapon, zed, dmg) end
@@ -262,7 +249,6 @@ function SneakStep.Sneak() end
 
 ---@return any
 function SneakStep.spawnShotgun() end
-
 
 ---@return any
 function SneakStep:begin() end
@@ -300,7 +286,6 @@ function SneakStep:SneakingGate() end
 ---@return any
 function SneakStep:spawnDad() end
 
-
 ---@return SneakStep
 function SneakStep:new() end
 
@@ -323,7 +308,6 @@ function SneakStep:new() end
 BandageStep = TutorialStep:derive("BandageStep")
 BandageStep.brotherX = 182
 BandageStep.brotherY = 147
-
 
 ---@return any
 function BandageStep.BandageYourself() end
@@ -349,7 +333,6 @@ function BandageStep.ThroughWindow() end
 ---@return any
 function BandageStep.Vault() end
 
-
 ---@return any
 function BandageStep:begin() end
 
@@ -361,7 +344,6 @@ function BandageStep:isComplete() end
 
 ---@return any
 function BandageStep:OnBrothersDead() end
-
 
 ---@return BandageStep
 function BandageStep:new() end
@@ -381,7 +363,6 @@ ShotgunStep = TutorialStep:derive("ShotgunStep")
 ShotgunStep.tickBeforeHordeSpawn = 0
 ShotgunStep.hassprintedTimer = 0
 ShotgunStep.soundTimer = 0
-
 
 ---@return any
 function ShotgunStep.BackOverFence() end
@@ -407,7 +388,6 @@ function ShotgunStep.SurvivalGuideOpen() end
 ---@return any
 function ShotgunStep.TheEnd() end
 
-
 ---@return any
 function ShotgunStep:Aiming() end
 
@@ -428,7 +408,6 @@ function ShotgunStep:isPlayedDeadJoypad() end
 
 ---@return any
 function ShotgunStep:Shout() end
-
 
 ---@return ShotgunStep
 function ShotgunStep:new() end

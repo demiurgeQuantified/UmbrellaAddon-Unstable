@@ -6,7 +6,6 @@
 ---@field [any] any
 ISBuildRampCursor = ISBuildingObject:derive("ISBuildRampCursor")
 
-
 ---@return any
 function ISBuildRampCursor:addRampObject(x, y, z, spriteName) end
 
@@ -21,7 +20,6 @@ function ISBuildRampCursor:removeRampObjects(x, y, z) end
 
 ---@return any
 function ISBuildRampCursor:render(x, y, z, square) end
-
 
 ---@return ISBuildRampCursor
 function ISBuildRampCursor:new(character, which) end

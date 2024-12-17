@@ -8,7 +8,6 @@
 ---@field [any] any
 SeamEditorUI_TileList = ISPanel:derive("SeamEditorUI_TileList")
 
-
 ---@return any
 function SeamEditorUI_TileList:calculateSelectionBounds() end
 
@@ -74,7 +73,6 @@ function SeamEditorUI_TileList:selectionToggle(col, row) end
 
 ---@return any
 function SeamEditorUI_TileList:setTileset(tilesetName) end
-
 
 ---@return SeamEditorUI_TileList
 function SeamEditorUI_TileList:new(x, y, width, height, picker) end

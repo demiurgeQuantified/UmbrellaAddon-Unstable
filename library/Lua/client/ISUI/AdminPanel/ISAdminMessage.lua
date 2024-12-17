@@ -24,13 +24,11 @@
 ISAdminMessage = ISPanel:derive("ISAdminMessage")
 ISAdminMessage.messages = {}
 
-
 ---@return any
 function ISAdminMessage.AddAdminMessage(message, x, y, z) end
 
 ---@return any
 function ISAdminMessage.RecalculPositions() end
-
 
 ---@return any
 function ISAdminMessage:destroy() end
@@ -52,7 +50,6 @@ function ISAdminMessage:update() end
 
 ---@return any
 function ISAdminMessage:updateButtons() end
-
 
 ---@return ISAdminMessage
 function ISAdminMessage:new(x, y, width, height, text, px, py, pz) end

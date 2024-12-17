@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class DBResult
 --- @field public class any
-DBResult = {};
+DBResult = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,11 +13,11 @@ DBResult = {};
 function DBResult:getColumns() end
 
 --- @public
---- @return String
+--- @return string
 function DBResult:getTableName() end
 
 --- @public
---- @return String
+--- @return string
 function DBResult:getType() end
 
 --- @public
@@ -26,19 +26,18 @@ function DBResult:getValues() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function DBResult:setColumns(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DBResult:setTableName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DBResult:setType(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

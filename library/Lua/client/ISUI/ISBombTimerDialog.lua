@@ -38,7 +38,6 @@
 ---@field [any] any
 ISBombTimerDialog = ISPanelJoypad:derive("ISBombTimerDialog")
 
-
 ---@return any
 function ISBombTimerDialog:addTime(seconds) end
 
@@ -66,6 +65,20 @@ function ISBombTimerDialog:prerender() end
 ---@return any
 function ISBombTimerDialog:render() end
 
-
 ---@return ISBombTimerDialog
-function ISBombTimerDialog:new(x, y, width, height, prompt, time, player, target, targetFunc, param1, param2, param3, param4) end
+function ISBombTimerDialog:new(
+	x,
+	y,
+	width,
+	height,
+	prompt,
+	time,
+	player,
+	target,
+	targetFunc,
+	param1,
+	param2,
+	param3,
+	param4
+)
+end

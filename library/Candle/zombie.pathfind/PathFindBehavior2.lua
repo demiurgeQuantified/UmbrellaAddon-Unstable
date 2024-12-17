@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class PathFindBehavior2
 --- @field public class any
 --- @implement IPathfinder
-PathFindBehavior2 = {};
+PathFindBehavior2 = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,15 +11,14 @@ PathFindBehavior2 = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 IsoMovingObject
 --- @param arg4 Path
 --- @param arg5 PointOnPath
---- @return void
+--- @return nil
 function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,15 +26,15 @@ function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5
 
 --- @public
 --- @param arg0 Mover
---- @return void
---- @overload fun(self: PathFindBehavior2, arg0: Mover): void
+--- @return nil
+--- @overload fun(self: PathFindBehavior2, arg0: Mover): nil
 function PathFindBehavior2:Failed(arg0) end
 
 --- @public
 --- @param arg0 Path
 --- @param arg1 Mover
---- @return void
---- @overload fun(self: PathFindBehavior2, arg0: Path, arg1: Mover): void
+--- @return nil
+--- @overload fun(self: PathFindBehavior2, arg0: Path, arg1: Mover): nil
 function PathFindBehavior2:Succeeded(arg0, arg1) end
 
 --- @public
@@ -43,7 +42,7 @@ function PathFindBehavior2:Succeeded(arg0, arg1) end
 function PathFindBehavior2:allowTurnAnimation() end
 
 --- @public
---- @return void
+--- @return nil
 function PathFindBehavior2:cancel() end
 
 --- @public
@@ -55,7 +54,7 @@ function PathFindBehavior2:getGoalSitOnFurnitureObject() end
 function PathFindBehavior2:getIsCancelled() end
 
 --- @public
---- @return float
+--- @return number
 function PathFindBehavior2:getPathLength() end
 
 --- @public
@@ -63,15 +62,15 @@ function PathFindBehavior2:getPathLength() end
 function PathFindBehavior2:getTargetChar() end
 
 --- @public
---- @return float
+--- @return number
 function PathFindBehavior2:getTargetX() end
 
 --- @public
---- @return float
+--- @return number
 function PathFindBehavior2:getTargetY() end
 
 --- @public
---- @return float
+--- @return number
 function PathFindBehavior2:getTargetZ() end
 
 --- @public
@@ -119,9 +118,9 @@ function PathFindBehavior2:isMovingUsingPathFind() end
 function PathFindBehavior2:isStrafing() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @return boolean
 function PathFindBehavior2:isTargetLocation(arg0, arg1, arg2) end
 
@@ -131,89 +130,89 @@ function PathFindBehavior2:isTurningToObstacle() end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function PathFindBehavior2:moveToDir(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function PathFindBehavior2:moveToPoint(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PathFindBehavior2:pathToCharacter(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function PathFindBehavior2:pathToLocation(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function PathFindBehavior2:pathToLocationF(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 TFloatArrayList
---- @return void
+--- @return nil
 function PathFindBehavior2:pathToNearest(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function PathFindBehavior2:pathToNearestTable(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function PathFindBehavior2:pathToSitOnFurniture(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function PathFindBehavior2:pathToSound(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @return void
+--- @return nil
 function PathFindBehavior2:pathToVehicleAdjacent(arg0) end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function PathFindBehavior2:pathToVehicleArea(arg0, arg1) end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function PathFindBehavior2:pathToVehicleSeat(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function PathFindBehavior2:render() end
 
 --- @public
---- @return void
+--- @return nil
 function PathFindBehavior2:reset() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function PathFindBehavior2:setData(arg0, arg1, arg2) end
 
 --- @public
@@ -232,7 +231,6 @@ function PathFindBehavior2:shouldIgnoreCollisionWithSquare(arg0) end
 --- @public
 --- @return BehaviorResult
 function PathFindBehavior2:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

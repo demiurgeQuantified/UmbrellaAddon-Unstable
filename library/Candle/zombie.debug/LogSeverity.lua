@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class LogSeverity: Enum
 --- @field public class any
@@ -10,7 +10,7 @@
 --- @field public Off LogSeverity
 --- @field public Trace LogSeverity
 --- @field public Warning LogSeverity
-LogSeverity = {};
+LogSeverity = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,7 +23,7 @@ function LogSeverity.getValueList() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return LogSeverity
 function LogSeverity.valueOf(arg0) end
 
@@ -31,5 +31,3 @@ function LogSeverity.valueOf(arg0) end
 --- @static
 --- @return LogSeverity[]
 function LogSeverity.values() end
-
-

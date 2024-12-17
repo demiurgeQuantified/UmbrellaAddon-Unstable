@@ -10,13 +10,11 @@
 ---@field [any] any
 ISAddItemInRecipe = ISBaseTimedAction:derive("ISAddItemInRecipe")
 
-
 ---@return any
 function ISAddItemInRecipe.checkName(baseItem, recipe) end
 
 ---@return any
 function ISAddItemInRecipe.checkTemperature(baseItem, usedItem, recipe) end
-
 
 ---@return any
 function ISAddItemInRecipe:complete() end
@@ -38,7 +36,6 @@ function ISAddItemInRecipe:stop() end
 
 ---@return any
 function ISAddItemInRecipe:update() end
-
 
 ---@return ISAddItemInRecipe
 function ISAddItemInRecipe:new(character, recipe, baseItem, usedItem) end

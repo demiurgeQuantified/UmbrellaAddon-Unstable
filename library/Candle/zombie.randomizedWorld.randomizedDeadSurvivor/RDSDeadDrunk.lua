@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSDeadDrunk: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSDeadDrunk = {};
+RDSDeadDrunk = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSDeadDrunk = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSDeadDrunk:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

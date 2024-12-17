@@ -12,7 +12,6 @@
 ---@field [any] any
 WorldMapEditorLocationControl = ISBaseObject:derive("WorldMapEditorLocationControl")
 
-
 ---@return any
 function WorldMapEditorLocationControl:cancelDrag() end
 
@@ -33,7 +32,6 @@ function WorldMapEditorLocationControl:snap(xy) end
 
 ---@return any
 function WorldMapEditorLocationControl:startDrag() end
-
 
 ---@return WorldMapEditorLocationControl
 function WorldMapEditorLocationControl:new(editor) end

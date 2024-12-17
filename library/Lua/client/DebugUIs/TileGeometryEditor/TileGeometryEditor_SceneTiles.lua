@@ -13,7 +13,6 @@
 ---@field [any] any
 TileGeometryEditor_SceneTiles = ISBaseObject:derive("TileGeometryEditor_SceneTiles")
 
-
 ---@return any
 function TileGeometryEditor_SceneTiles:addTile(dx, dy, tileName) end
 
@@ -30,14 +29,30 @@ function TileGeometryEditor_SceneTiles:removeTile(dx, dy) end
 function TileGeometryEditor_SceneTiles:render() end
 
 ---@return any
-function TileGeometryEditor_SceneTiles:renderBox3D(tx, ty, tz, rx, ry, rz, minX, minY, minZ, maxX, maxY, maxZ, r, g, b) end
+function TileGeometryEditor_SceneTiles:renderBox3D(
+	tx,
+	ty,
+	tz,
+	rx,
+	ry,
+	rz,
+	minX,
+	minY,
+	minZ,
+	maxX,
+	maxY,
+	maxZ,
+	r,
+	g,
+	b
+)
+end
 
 ---@return any
 function TileGeometryEditor_SceneTiles:renderTile(dx, dy, tileName) end
 
 ---@return any
 function TileGeometryEditor_SceneTiles:uiToTileLocation(x, y) end
-
 
 ---@return TileGeometryEditor_SceneTiles
 function TileGeometryEditor_SceneTiles:new(editor) end

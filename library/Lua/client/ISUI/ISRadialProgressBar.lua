@@ -6,7 +6,6 @@
 ---@field [any] any
 ISRadialProgressBar = ISUIElement:derive("ISRadialProgressBar")
 
-
 ---@return any
 function ISRadialProgressBar:getTexture() end
 
@@ -27,7 +26,6 @@ function ISRadialProgressBar:setTexture(_tex) end
 
 ---@return any
 function ISRadialProgressBar:setValue(_val) end
-
 
 ---@return ISRadialProgressBar
 function ISRadialProgressBar:new(x, y, width, height, texturePath) end

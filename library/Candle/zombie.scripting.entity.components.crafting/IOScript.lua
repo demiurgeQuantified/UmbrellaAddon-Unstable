@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IOScript
 --- @field public class any
-IOScript = {};
+IOScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,7 +13,5 @@ IOScript = {};
 function IOScript:getParentRecipe() end
 
 --- @public
---- @return int
+--- @return integer
 function IOScript:getRecipeLineIndex() end
-
-

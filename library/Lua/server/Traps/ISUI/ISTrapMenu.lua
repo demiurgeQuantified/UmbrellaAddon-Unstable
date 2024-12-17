@@ -3,7 +3,6 @@
 ---@class ISTrapMenu
 ISTrapMenu = {}
 
-
 ---@return any
 function ISTrapMenu.addAnimalDebug(trap, player, animal) end
 

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FitnessState: State
 --- @field public class any
-FitnessState = {};
+FitnessState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ FitnessState = {};
 --- @return FitnessState
 function FitnessState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,24 +20,23 @@ function FitnessState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function FitnessState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FitnessState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FitnessState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FitnessState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

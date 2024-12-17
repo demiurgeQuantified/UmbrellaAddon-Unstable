@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class FaceInfo
 --- @field public class any
-FaceInfo = {};
+FaceInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function FaceInfo:getFaceName() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceInfo:getHeight() end
 
 --- @public
@@ -21,35 +21,35 @@ function FaceInfo:getHeight() end
 function FaceInfo:getMasterTileInfo() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceInfo:getMasterX() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceInfo:getMasterY() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceInfo:getMasterZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return TileInfo
 function FaceInfo:getTileInfo(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return TileInfo
 function FaceInfo:getTileInfoForSprite(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function FaceInfo:getWidth() end
 
 --- @public
---- @return int
+--- @return integer
 function FaceInfo:getzLayers() end
 
 --- @public
@@ -61,11 +61,9 @@ function FaceInfo:isMasterSet() end
 function FaceInfo:isMultiSquare() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 IsoObject
 --- @return boolean
 function FaceInfo:verifyObject(arg0, arg1, arg2, arg3) end
-
-

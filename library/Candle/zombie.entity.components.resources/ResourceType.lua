@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ResourceType: Enum
 --- @field public class any
@@ -6,7 +6,7 @@
 --- @field public Energy ResourceType
 --- @field public Fluid ResourceType
 --- @field public Item ResourceType
-ResourceType = {};
+ResourceType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,13 +14,13 @@ ResourceType = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return ResourceType
 function ResourceType.fromId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ResourceType
 function ResourceType.valueOf(arg0) end
 
@@ -29,13 +29,10 @@ function ResourceType.valueOf(arg0) end
 --- @return ResourceType[]
 function ResourceType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return byte
+--- @return integer
 function ResourceType:getId() end
-
-

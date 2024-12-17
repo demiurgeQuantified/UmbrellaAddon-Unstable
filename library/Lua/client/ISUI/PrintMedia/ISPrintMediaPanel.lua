@@ -16,7 +16,6 @@
 ---@field [any] any
 ISPrintMediaPanel = ISCollapsableWindowJoypad:derive("ISPrintMediaPanel")
 
-
 ---@return any
 function ISPrintMediaPanel:close() end
 
@@ -59,13 +58,11 @@ function ISPrintMediaPanel:setUseJoypad(useJoypad) end
 ---@return any
 function ISPrintMediaPanel:update() end
 
-
 ---@return ISPrintMediaPanel
 function ISPrintMediaPanel:new(x, y, width, height) end
 
 ---@class ISPrintMediaListBox : ISScrollingListBox
 ISPrintMediaListBox = ISScrollingListBox:derive("ISPrintMediaListBox")
-
 
 ---@return any
 function ISPrintMediaListBox:doDrawItem(y, item, alt) end
@@ -81,7 +78,6 @@ function ISPrintMediaListBox:onJoypadDown(button, joypadData) end
 
 ---@return any
 function ISPrintMediaListBox:onLoseJoypadFocus(joypadData) end
-
 
 ---@return ISPrintMediaListBox
 function ISPrintMediaListBox:new(x, y, width, height) end

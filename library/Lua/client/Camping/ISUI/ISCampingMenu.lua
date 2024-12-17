@@ -8,7 +8,6 @@ ISCampingMenu = {}
 ISCampingMenu.currentSquare = nil
 ISCampingMenu.campfire = nil
 
-
 ---@return any
 function ISCampingMenu.doCampingMenu(player, context, worldobjects, test) end
 

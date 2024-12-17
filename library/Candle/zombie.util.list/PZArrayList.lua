@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class PZArrayList: AbstractList
 --- @field public class any
 --- @implement List
 --- @implement RandomAccess
-PZArrayList = {};
+PZArrayList = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -25,46 +25,45 @@ function PZArrayList.emptyList() end
 --- @static
 --- @return List
 --- @overload fun(arg0: Object[]): List
---- @overload fun(arg0: Object): List
---- @overload fun(arg0: Object, arg1: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object): List
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object): List
+--- @overload fun(arg0: any): List
+--- @overload fun(arg0: any, arg1: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
+--- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function PZArrayList.of() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZArrayList, arg0: Object): boolean
---- @overload fun(self: PZArrayList, arg0: int, arg1: Object): void
---- @overload fun(self: PZArrayList, arg0: int, arg1: Object): void
+--- @overload fun(self: PZArrayList, arg0: any): boolean
+--- @overload fun(self: PZArrayList, arg0: integer, arg1: any): nil
+--- @overload fun(self: PZArrayList, arg0: integer, arg1: any): nil
 function PZArrayList:add(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(self: PZArrayList, arg0: int, arg1: Collection): boolean
+--- @overload fun(self: PZArrayList, arg0: integer, arg1: Collection): boolean
 function PZArrayList:addAll(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: PZArrayList): void
+--- @return nil
+--- @overload fun(self: PZArrayList): nil
 function PZArrayList:clear() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZArrayList, arg0: Object): boolean
+--- @overload fun(self: PZArrayList, arg0: any): boolean
 function PZArrayList:contains(arg0) end
 
 --- @public
@@ -73,14 +72,14 @@ function PZArrayList:contains(arg0) end
 function PZArrayList:containsAll(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function PZArrayList:equals(arg0) end
 
 --- @public
---- @param arg0 int
---- @return Object
---- @overload fun(self: PZArrayList, arg0: int): Object
+--- @param arg0 integer
+--- @return any
+--- @overload fun(self: PZArrayList, arg0: integer): any
 function PZArrayList:get(arg0) end
 
 --- @public
@@ -88,13 +87,13 @@ function PZArrayList:get(arg0) end
 function PZArrayList:getElements() end
 
 --- @public
---- @return int
+--- @return integer
 function PZArrayList:hashCode() end
 
 --- @public
---- @param arg0 Object
---- @return int
---- @overload fun(self: PZArrayList, arg0: Object): int
+--- @param arg0 any
+--- @return integer
+--- @overload fun(self: PZArrayList, arg0: any): integer
 function PZArrayList:indexOf(arg0) end
 
 --- @public
@@ -108,23 +107,23 @@ function PZArrayList:isEmpty() end
 function PZArrayList:iterator() end
 
 --- @public
---- @param arg0 Object
---- @return int
+--- @param arg0 any
+--- @return integer
 function PZArrayList:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
 --- @overload fun(self: PZArrayList): ListIterator
---- @overload fun(self: PZArrayList, arg0: int): ListIterator
---- @overload fun(self: PZArrayList, arg0: int): ListIterator
+--- @overload fun(self: PZArrayList, arg0: integer): ListIterator
+--- @overload fun(self: PZArrayList, arg0: integer): ListIterator
 function PZArrayList:listIterator() end
 
 --- @public
---- @param arg0 int
---- @return Object
---- @overload fun(self: PZArrayList, arg0: int): Object
---- @overload fun(self: PZArrayList, arg0: Object): boolean
---- @overload fun(self: PZArrayList, arg0: Object): boolean
+--- @param arg0 integer
+--- @return any
+--- @overload fun(self: PZArrayList, arg0: integer): any
+--- @overload fun(self: PZArrayList, arg0: any): boolean
+--- @overload fun(self: PZArrayList, arg0: any): boolean
 function PZArrayList:remove(arg0) end
 
 --- @public
@@ -134,7 +133,7 @@ function PZArrayList:removeAll(arg0) end
 
 --- @public
 --- @param arg0 UnaryOperator
---- @return void
+--- @return nil
 function PZArrayList:replaceAll(arg0) end
 
 --- @public
@@ -143,20 +142,20 @@ function PZArrayList:replaceAll(arg0) end
 function PZArrayList:retainAll(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 Object
---- @return Object
---- @overload fun(self: PZArrayList, arg0: int, arg1: Object): Object
+--- @param arg0 integer
+--- @param arg1 any
+--- @return any
+--- @overload fun(self: PZArrayList, arg0: integer, arg1: any): any
 function PZArrayList:set(arg0, arg1) end
 
 --- @public
---- @return int
---- @overload fun(self: PZArrayList): int
+--- @return integer
+--- @overload fun(self: PZArrayList): integer
 function PZArrayList:size() end
 
 --- @public
 --- @param arg0 Comparator
---- @return void
+--- @return nil
 function PZArrayList:sort(arg0) end
 
 --- @public
@@ -164,8 +163,8 @@ function PZArrayList:sort(arg0) end
 function PZArrayList:spliterator() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return List
 function PZArrayList:subList(arg0, arg1) end
 
@@ -175,9 +174,8 @@ function PZArrayList:subList(arg0, arg1) end
 function PZArrayList:toArray() end
 
 --- @public
---- @return String
+--- @return string
 function PZArrayList:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -185,6 +183,6 @@ function PZArrayList:toString() end
 
 --- @public
 --- @param arg0 Class
---- @param arg1 int
+--- @param arg1 integer
 --- @return PZArrayList
 function PZArrayList.new(arg0, arg1) end

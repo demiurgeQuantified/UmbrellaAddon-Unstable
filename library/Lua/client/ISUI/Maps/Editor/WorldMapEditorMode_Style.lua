@@ -10,7 +10,6 @@
 ---@field [any] any
 WorldMapEditorMode_Style = WorldMapEditorMode:derive("WorldMapEditorMode_Style")
 
-
 ---@return any
 function WorldMapEditorMode_Style:createChildren() end
 
@@ -86,7 +85,6 @@ function WorldMapEditorMode_Style:setCurrentEditor(layer) end
 ---@return any
 function WorldMapEditorMode_Style:undisplay() end
 
-
 ---@return WorldMapEditorMode_Style
 function WorldMapEditorMode_Style:new(editor) end
 
@@ -98,7 +96,6 @@ function WorldMapEditorMode_Style:new(editor) end
 ---@field styleAPI any
 ---@field [any] any
 WorldMapStyleEditor = ISPanel:derive("WorldMapStyleEditor")
-
 
 ---@return any
 function WorldMapStyleEditor:display(layer) end
@@ -112,7 +109,6 @@ function WorldMapStyleEditor:shrinkWrap() end
 ---@return any
 function WorldMapStyleEditor:undisplay() end
 
-
 ---@return WorldMapStyleEditor
 function WorldMapStyleEditor:new(editorMode) end
 
@@ -124,7 +120,6 @@ function WorldMapStyleEditor:new(editorMode) end
 ---@field styleAPI any
 ---@field [any] any
 WorldMapStyleEditor_TabPanel = ISPanel:derive("WorldMapStyleEditor_TabPanel")
-
 
 ---@return any
 function WorldMapStyleEditor_TabPanel:getEntryClamped(entry, min, max) end
@@ -153,7 +148,6 @@ function WorldMapStyleEditor_TabPanel:populateList(layer) end
 ---@return any
 function WorldMapStyleEditor_TabPanel:undisplay() end
 
-
 ---@return WorldMapStyleEditor_TabPanel
 function WorldMapStyleEditor_TabPanel:new(width, editorMode) end
 
@@ -162,7 +156,6 @@ function WorldMapStyleEditor_TabPanel:new(width, editorMode) end
 ---@field valueEntry any
 ---@field [any] any
 WorldMapStyleEditor_FilterPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_FilterPanel")
-
 
 ---@return any
 function WorldMapStyleEditor_FilterPanel:createChildren() end
@@ -176,7 +169,6 @@ function WorldMapStyleEditor_FilterPanel:onValueEntered() end
 ---@return any
 function WorldMapStyleEditor_FilterPanel:populateList(layer) end
 
-
 ---@return WorldMapStyleEditor_FilterPanel
 function WorldMapStyleEditor_FilterPanel:new(width, editorMode) end
 
@@ -189,7 +181,6 @@ function WorldMapStyleEditor_FilterPanel:new(width, editorMode) end
 ---@field zoomEntry any
 ---@field [any] any
 WorldMapStyleEditor_ColorStopsPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_ColorStopsPanel")
-
 
 ---@return any
 function WorldMapStyleEditor_ColorStopsPanel:createChildren() end
@@ -251,7 +242,6 @@ function WorldMapStyleEditor_ColorStopsPanel:populateList(layer) end
 ---@return any
 function WorldMapStyleEditor_ColorStopsPanel:setRGBA(r, g, b, a) end
 
-
 ---@return WorldMapStyleEditor_ColorStopsPanel
 function WorldMapStyleEditor_ColorStopsPanel:new(width, editorMode) end
 
@@ -261,7 +251,6 @@ function WorldMapStyleEditor_ColorStopsPanel:new(width, editorMode) end
 ---@field zoomEntry any
 ---@field [any] any
 WorldMapStyleEditor_TextureStopsPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_TextureStopsPanel")
-
 
 ---@return any
 function WorldMapStyleEditor_TextureStopsPanel:createChildren() end
@@ -320,7 +309,6 @@ function WorldMapStyleEditor_TextureStopsPanel:populateList(layer) end
 ---@return any
 function WorldMapStyleEditor_TextureStopsPanel:render() end
 
-
 ---@return WorldMapStyleEditor_TextureStopsPanel
 function WorldMapStyleEditor_TextureStopsPanel:new(width, editorMode) end
 
@@ -337,7 +325,6 @@ function WorldMapStyleEditor_TextureStopsPanel:new(width, editorMode) end
 ---@field useWorldBounds any
 ---@field [any] any
 WorldMapStyleEditor_TexturePanel = WorldMapStyleEditor_TextureStopsPanel:derive("WorldMapStyleEditor_TexturePanel")
-
 
 ---@return any
 function WorldMapStyleEditor_TexturePanel:cancelResize() end
@@ -399,7 +386,6 @@ function WorldMapStyleEditor_TexturePanel:render() end
 ---@return any
 function WorldMapStyleEditor_TexturePanel:undisplay() end
 
-
 ---@return WorldMapStyleEditor_TexturePanel
 function WorldMapStyleEditor_TexturePanel:new(width, editorMode) end
 
@@ -410,7 +396,6 @@ function WorldMapStyleEditor_TexturePanel:new(width, editorMode) end
 ---@field texturePanel any
 ---@field [any] any
 WorldMapStyleEditor_PolygonLayerPanel = WorldMapStyleEditor:derive("WorldMapStyleEditor_PolygonLayerPanel")
-
 
 ---@return any
 function WorldMapStyleEditor_PolygonLayerPanel:createChildren() end
@@ -439,7 +424,6 @@ function WorldMapStyleEditor_PolygonLayerPanel:render() end
 ---@return any
 function WorldMapStyleEditor_PolygonLayerPanel:undisplay() end
 
-
 ---@return WorldMapStyleEditor_PolygonLayerPanel
 function WorldMapStyleEditor_PolygonLayerPanel:new(editorMode) end
 
@@ -449,7 +433,6 @@ function WorldMapStyleEditor_PolygonLayerPanel:new(editorMode) end
 ---@field texturePanel any
 ---@field [any] any
 WorldMapStyleEditor_TextureLayerPanel = WorldMapStyleEditor:derive("WorldMapStyleEditor_TextureLayerPanel")
-
 
 ---@return any
 function WorldMapStyleEditor_TextureLayerPanel:createChildren() end
@@ -480,7 +463,6 @@ function WorldMapStyleEditor_TextureLayerPanel:render() end
 
 ---@return any
 function WorldMapStyleEditor_TextureLayerPanel:undisplay() end
-
 
 ---@return WorldMapStyleEditor_TextureLayerPanel
 function WorldMapStyleEditor_TextureLayerPanel:new(editorMode) end

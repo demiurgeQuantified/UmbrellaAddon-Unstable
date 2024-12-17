@@ -1,45 +1,45 @@
---- @meta
+--- @meta _
 
 --- @class MashingLogicScript: ComponentScript
 --- @field public class any
-MashingLogicScript = {};
+MashingLogicScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MashingLogicScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function MashingLogicScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function MashingLogicScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function MashingLogicScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function MashingLogicScript:PreReload() end
 
 --- @public
---- @return String
+--- @return string
 function MashingLogicScript:getInputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function MashingLogicScript:getRecipeTagQuery() end
 
 --- @public
---- @return String
+--- @return string
 function MashingLogicScript:getResourceFluidID() end
 
 --- @public
@@ -47,7 +47,5 @@ function MashingLogicScript:getResourceFluidID() end
 function MashingLogicScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function MashingLogicScript:reset() end
-
-

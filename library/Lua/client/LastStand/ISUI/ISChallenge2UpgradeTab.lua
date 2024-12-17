@@ -11,7 +11,6 @@
 ISChallenge2UpgradeTab = ISCollapsableWindow:derive("ISChallenge2UpgradeTab")
 ISChallenge2UpgradeTab.instance = {}
 
-
 ---@return any
 function ISChallenge2UpgradeTab:close() end
 
@@ -32,7 +31,6 @@ function ISChallenge2UpgradeTab:reloadButtons() end
 
 ---@return any
 function ISChallenge2UpgradeTab:render() end
-
 
 ---@return ISChallenge2UpgradeTab
 function ISChallenge2UpgradeTab:new(x, y, width, height, player) end

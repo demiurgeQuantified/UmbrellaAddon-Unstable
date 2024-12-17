@@ -17,10 +17,8 @@ ISAdminPowerUI.messages = {}
 ISAdminPowerUI.cheatTooltips = {}
 ISAdminPowerUI.cheatTooltips["Fast Move"] = "Fast move:\nMove - arrow keys\nFloor Up/Down - PageUp/PageDown keys"
 
-
 ---@return any
 function ISAdminPowerUI.onGameStart() end
-
 
 ---@return any
 function ISAdminPowerUI:addAdminPowerOptions() end
@@ -42,7 +40,6 @@ function ISAdminPowerUI:prerender() end
 
 ---@return any
 function ISAdminPowerUI:render() end
-
 
 ---@return ISAdminPowerUI
 function ISAdminPowerUI:new(x, y, width, height, player) end

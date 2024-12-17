@@ -6,7 +6,6 @@
 ---@field [any] any
 ISAnimalPickMateCursor = ISPickCharacterCursor:derive("ISAnimalPickMateCursor")
 
-
 ---@return any
 function ISAnimalPickMateCursor:getAPrompt() end
 
@@ -15,7 +14,6 @@ function ISAnimalPickMateCursor:isValidCharacter(chr) end
 
 ---@return any
 function ISAnimalPickMateCursor:onPickCharacter(chr) end
-
 
 ---@return ISAnimalPickMateCursor
 function ISAnimalPickMateCursor:new(character, femaleAnimal) end

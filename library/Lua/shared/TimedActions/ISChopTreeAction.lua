@@ -10,7 +10,6 @@
 ---@field [any] any
 ISChopTreeAction = ISBaseTimedAction:derive("ISChopTreeAction")
 
-
 ---@return any
 function ISChopTreeAction:animEvent(event, parameter) end
 
@@ -43,7 +42,6 @@ function ISChopTreeAction:useEndurance() end
 
 ---@return any
 function ISChopTreeAction:waitToStart() end
-
 
 ---@return ISChopTreeAction
 function ISChopTreeAction:new(character, tree) end

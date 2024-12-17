@@ -60,10 +60,8 @@
 ---@field [any] any
 ISAnimDebugMonitor = ISCollapsableWindow:derive("ISAnimDebugMonitor")
 
-
 ---@return any
 function ISAnimDebugMonitor.OnOpenPanel() end
-
 
 ---@return any
 function ISAnimDebugMonitor:clear() end
@@ -109,7 +107,6 @@ function ISAnimDebugMonitor:toggleEditEnabled(_b) end
 
 ---@return any
 function ISAnimDebugMonitor:update() end
-
 
 ---@return ISAnimDebugMonitor
 function ISAnimDebugMonitor:new(x, y, width, height, player) end

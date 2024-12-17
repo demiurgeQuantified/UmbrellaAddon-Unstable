@@ -14,7 +14,6 @@
 ---@field [any] any
 ModListPresets = ISUIElement:derive("ModListPresets")
 
-
 ---@return any
 function ModListPresets:addChild(child) end
 
@@ -56,7 +55,6 @@ function ModListPresets:onValidateSavePreset(text) end
 
 ---@return any
 function ModListPresets:updateView() end
-
 
 ---@return ModListPresets
 function ModListPresets:new(x, y, width, height, model) end

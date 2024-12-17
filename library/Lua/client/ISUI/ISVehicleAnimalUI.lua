@@ -20,10 +20,8 @@
 ISVehicleAnimalUI = ISCollapsableWindow:derive("ISVehicleAnimalUI")
 ISVehicleAnimalUI.ui = nil
 
-
 ---@return any
 function ISVehicleAnimalUI.onKillAnimalDebug(animal, player) end
-
 
 ---@return any
 function ISVehicleAnimalUI:checkCanAddAnimal() end
@@ -76,13 +74,11 @@ function ISVehicleAnimalUI:reset(panel) end
 ---@return any
 function ISVehicleAnimalUI:update() end
 
-
 ---@return ISVehicleAnimalUI
 function ISVehicleAnimalUI:new(vehicle, player) end
 
 ---@class ISVehicleAnimal3DModel : ISUI3DModel
 ISVehicleAnimal3DModel = ISUI3DModel:derive("ISVehicleAnimal3DModel")
-
 
 ---@return any
 function ISVehicleAnimal3DModel:instantiate() end
@@ -104,7 +100,6 @@ function ISVehicleAnimal3DModel:onMouseUpOutside(x, y) end
 
 ---@return any
 function ISVehicleAnimal3DModel:onRightMouseUp(x, y) end
-
 
 ---@return ISVehicleAnimal3DModel
 function ISVehicleAnimal3DModel:new(x, y, width, height) end

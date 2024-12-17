@@ -17,7 +17,6 @@
 ---@field [any] any
 ISPlayerStatsChooseAccessLevelUI = ISPanel:derive("ISPlayerStatsChooseAccessLevelUI")
 
-
 ---@return any
 function ISPlayerStatsChooseAccessLevelUI:create() end
 
@@ -35,7 +34,6 @@ function ISPlayerStatsChooseAccessLevelUI:render() end
 
 ---@return any
 function ISPlayerStatsChooseAccessLevelUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsChooseAccessLevelUI
 function ISPlayerStatsChooseAccessLevelUI:new(x, y, width, height, target, onclick, player, admin) end

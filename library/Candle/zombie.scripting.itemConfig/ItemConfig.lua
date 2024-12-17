@@ -1,56 +1,55 @@
---- @meta
+--- @meta _
 
 --- @class ItemConfig: BaseScriptObject
 --- @field public class any
---- @field public error_bucket String
---- @field public error_item_config String
---- @field public error_line String
---- @field public error_root String
---- @field public VARIABLE_PREFIX String
-ItemConfig = {};
+--- @field public error_bucket string
+--- @field public error_item_config string
+--- @field public error_line string
+--- @field public error_root string
+--- @field public VARIABLE_PREFIX string
+ItemConfig = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function ItemConfig:BuildBuckets() end
 
 --- @public
 --- @param arg0 GameEntity
---- @return void
+--- @return nil
 function ItemConfig:ConfigureEntityOnCreate(arg0) end
 
 --- @public
 --- @param arg0 GameEntity
 --- @param arg1 ItemPickInfo
---- @return void
+--- @return nil
 function ItemConfig:ConfigureEntitySpawned(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function ItemConfig:Load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function ItemConfig:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ItemConfig:PreReload() end
 
 --- @public
---- @return String
+--- @return string
 function ItemConfig:getName() end
 
 --- @public
 --- @return boolean
 function ItemConfig:isValid() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

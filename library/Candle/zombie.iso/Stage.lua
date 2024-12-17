@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class Stage
 --- @field public class any
-Stage = {};
+Stage = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 String[]
---- @return void
+--- @return nil
 function Stage:Load(arg0, arg1) end
 
 --- @public
@@ -25,15 +25,15 @@ function Stage:canBeDone(arg0, arg1, arg2) end
 --- @param arg0 IsoGameCharacter
 --- @param arg1 IsoThumpable
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function Stage:doStage(arg0, arg1, arg2) end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getCraftingSound() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getDisplayName() end
 
 --- @public
@@ -45,15 +45,15 @@ function Stage:getItemsLua() end
 function Stage:getItemsToKeep() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getKnownRecipe() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getName() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getNorthSprite() end
 
 --- @public
@@ -65,27 +65,26 @@ function Stage:getPerksLua() end
 function Stage:getPreviousStages() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getRecipeName() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getSprite() end
 
 --- @public
---- @return String
+--- @return string
 function Stage:getThumpSound() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return int
+--- @return integer
 function Stage:getTimeNeeded(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function Stage:playCompletionSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

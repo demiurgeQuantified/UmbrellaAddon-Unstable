@@ -7,7 +7,6 @@
 ---@field [any] any
 ISRemoveGrass = ISBaseTimedAction:derive("ISRemoveGrass")
 
-
 ---@return any
 function ISRemoveGrass:complete() end
 
@@ -31,7 +30,6 @@ function ISRemoveGrass:update() end
 
 ---@return any
 function ISRemoveGrass:waitToStart() end
-
 
 ---@return ISRemoveGrass
 function ISRemoveGrass:new(character, square) end

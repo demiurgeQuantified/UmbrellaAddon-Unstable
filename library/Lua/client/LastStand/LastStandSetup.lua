@@ -6,7 +6,6 @@
 LastStandData = {}
 LastStandData.chosenChallenge = nil
 
-
 ---@return any
 function LastStandData.getSpawnRegion() end
 

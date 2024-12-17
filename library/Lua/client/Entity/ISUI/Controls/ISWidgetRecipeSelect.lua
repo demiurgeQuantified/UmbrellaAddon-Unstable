@@ -20,7 +20,6 @@
 ---@field [any] any
 ISWidgetRecipeSelect = ISPanel:derive("ISWidgetRecipeSelect")
 
-
 ---@return any
 function ISWidgetRecipeSelect:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -44,7 +43,6 @@ function ISWidgetRecipeSelect:render() end
 
 ---@return any
 function ISWidgetRecipeSelect:update() end
-
 
 ---@return ISWidgetRecipeSelect
 function ISWidgetRecipeSelect:new(x, y, width, height, player, entity, component, craftProcessor, _styleComboBox) end

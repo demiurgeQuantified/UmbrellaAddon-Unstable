@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSStudentNight: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSStudentNight = {};
+RDSStudentNight = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSStudentNight = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSStudentNight:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

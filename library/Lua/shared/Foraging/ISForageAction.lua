@@ -17,7 +17,6 @@
 ---@field [any] any
 ISForageAction = ISBaseTimedAction:derive("ISForageAction")
 
-
 ---@return any
 function ISForageAction:complete() end
 
@@ -44,7 +43,6 @@ function ISForageAction:update() end
 
 ---@return any
 function ISForageAction:waitToStart() end
-
 
 ---@return ISForageAction
 function ISForageAction:new(character, iconID, targetContainer, discardItems, itemType) end

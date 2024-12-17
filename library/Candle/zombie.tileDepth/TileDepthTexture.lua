@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class TileDepthTexture
 --- @field public class any
-TileDepthTexture = {};
+TileDepthTexture = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTexture:Reset() end
 
 --- @public
@@ -17,25 +17,25 @@ function TileDepthTexture:Reset() end
 function TileDepthTexture:fileExists() end
 
 --- @public
---- @return int
+--- @return integer
 function TileDepthTexture:getColumn() end
 
 --- @public
---- @return int
+--- @return integer
 function TileDepthTexture:getHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function TileDepthTexture:getIndex() end
 
 --- @public
---- @return String
+--- @return string
 function TileDepthTexture:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return float
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return number
 function TileDepthTexture:getPixel(arg0, arg1) end
 
 --- @public
@@ -43,7 +43,7 @@ function TileDepthTexture:getPixel(arg0, arg1) end
 function TileDepthTexture:getPixels() end
 
 --- @public
---- @return int
+--- @return integer
 function TileDepthTexture:getRow() end
 
 --- @public
@@ -55,13 +55,13 @@ function TileDepthTexture:getTexture() end
 function TileDepthTexture:getTileset() end
 
 --- @public
---- @return int
+--- @return integer
 function TileDepthTexture:getWidth() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function TileDepthTexture:index(arg0, arg1) end
 
 --- @public
@@ -69,50 +69,49 @@ function TileDepthTexture:index(arg0, arg1) end
 function TileDepthTexture:isEmpty() end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTexture:reload() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
---- @param arg5 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
 function TileDepthTexture:replacePixels(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTexture:save() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @return nil
 function TileDepthTexture:setMinPixel(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @return nil
 function TileDepthTexture:setPixel(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 number
+--- @return nil
 function TileDepthTexture:setPixels(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTexture:updateGPUTexture() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -120,6 +119,6 @@ function TileDepthTexture:updateGPUTexture() end
 
 --- @public
 --- @param arg0 TilesetDepthTexture
---- @param arg1 int
+--- @param arg1 integer
 --- @return TileDepthTexture
 function TileDepthTexture.new(arg0, arg1) end

@@ -22,7 +22,6 @@
 ---@field [any] any
 MapSpawnSelect = ISPanelJoypad:derive("MapSpawnSelect")
 
-
 ---@return any
 function MapSpawnSelect:checkSorted(item) end
 
@@ -101,7 +100,6 @@ function MapSpawnSelect:useDefaultSpawnRegion() end
 ---@return any
 function MapSpawnSelect:zoomMap(x, y, scale) end
 
-
 ---@return MapSpawnSelect
 function MapSpawnSelect:new(x, y, width, height) end
 
@@ -122,7 +120,6 @@ function MapSpawnSelect:new(x, y, width, height) end
 ---@field shownInitialLocation any
 ---@field [any] any
 MapSpawnSelectImage = ISUIElement:derive("MapSpawnSelectImage")
-
 
 ---@return any
 function MapSpawnSelectImage:clear() end
@@ -163,13 +160,11 @@ function MapSpawnSelectImage:prerender() end
 ---@return any
 function MapSpawnSelectImage:setImagePyramid(fileName) end
 
-
 ---@return MapSpawnSelectImage
 function MapSpawnSelectImage:new(x, y, width, height) end
 
 ---@class MapSpawnSelectListBox : ISScrollingListBox
 MapSpawnSelectListBox = ISScrollingListBox:derive("MapSpawnSelectListBox")
-
 
 ---@return any
 function MapSpawnSelectListBox:onJoypadBeforeDeactivate(joypadData) end
@@ -189,7 +184,6 @@ function MapSpawnSelectListBox:render() end
 ---@class MapSpawnSelectInfoPanel : ISRichTextPanel
 MapSpawnSelectInfoPanel = ISRichTextPanel:derive("MapSpawnSelectInfoPanel")
 MapSpawnSelectInfoPanel.doRightJoystickScrolling = ISPanelJoypad.doRightJoystickScrolling
-
 
 ---@return any
 function MapSpawnSelectInfoPanel:onJoypadBeforeDeactivate(joypadData) end

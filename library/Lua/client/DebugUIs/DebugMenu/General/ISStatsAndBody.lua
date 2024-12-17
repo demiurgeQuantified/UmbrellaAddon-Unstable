@@ -6,7 +6,6 @@
 ---@field [any] any
 ISStatsAndBody = ISDebugSubPanelBase:derive("ISStatsAndBody")
 
-
 ---@return any
 function ISStatsAndBody:addBoolOption(_java, _var, _get, _set) end
 
@@ -30,7 +29,6 @@ function ISStatsAndBody:prerender() end
 
 ---@return any
 function ISStatsAndBody:update() end
-
 
 ---@return ISStatsAndBody
 function ISStatsAndBody:new(x, y, width, height, doStencil) end

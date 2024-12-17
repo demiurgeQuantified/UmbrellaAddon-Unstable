@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class UIFont: Enum
 --- @field public class any
@@ -33,7 +33,7 @@
 --- @field public SdfRobertoSans UIFont
 --- @field public Small UIFont
 --- @field public Title UIFont
-UIFont = {};
+UIFont = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,13 +41,13 @@ UIFont = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return UIFont
 function UIFont.FromString(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return UIFont
 function UIFont.valueOf(arg0) end
 
@@ -55,5 +55,3 @@ function UIFont.valueOf(arg0) end
 --- @static
 --- @return UIFont[]
 function UIFont.values() end
-
-

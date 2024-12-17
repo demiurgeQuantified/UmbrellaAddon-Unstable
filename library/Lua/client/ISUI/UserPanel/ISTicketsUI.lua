@@ -17,10 +17,8 @@
 ISTicketsUI = ISPanel:derive("ISTicketsUI")
 ISTicketsUI.messages = {}
 
-
 ---@return any
 function ISTicketsUI.gotTickets(tickets) end
-
 
 ---@return any
 function ISTicketsUI:close() end
@@ -48,7 +46,6 @@ function ISTicketsUI:prerender() end
 
 ---@return any
 function ISTicketsUI:render() end
-
 
 ---@return ISTicketsUI
 function ISTicketsUI:new(x, y, width, height, player) end

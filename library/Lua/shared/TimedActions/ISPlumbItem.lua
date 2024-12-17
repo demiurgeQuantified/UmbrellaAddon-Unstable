@@ -9,7 +9,6 @@
 ---@field [any] any
 ISPlumbItem = ISBaseTimedAction:derive("ISPlumbItem")
 
-
 ---@return any
 function ISPlumbItem:complete() end
 
@@ -30,7 +29,6 @@ function ISPlumbItem:stop() end
 
 ---@return any
 function ISPlumbItem:update() end
-
 
 ---@return ISPlumbItem
 function ISPlumbItem:new(character, itemToPipe, wrench) end

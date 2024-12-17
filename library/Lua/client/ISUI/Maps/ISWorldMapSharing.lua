@@ -11,7 +11,6 @@
 ---@field [any] any
 ISWorldMapSharing = ISPanelJoypad:derive("ISWorldMapSharing")
 
-
 ---@return any
 function ISWorldMapSharing:applyChanges() end
 
@@ -36,7 +35,6 @@ function ISWorldMapSharing:setCurrentPanel(panel) end
 ---@return any
 function ISWorldMapSharing:setCurrentSymbol(symbol) end
 
-
 ---@return ISWorldMapSharing
 function ISWorldMapSharing:new(mapUI) end
 
@@ -51,13 +49,11 @@ function ISWorldMapSharing:new(mapUI) end
 ---@field [any] any
 ISWorldMapSharing_PanelPlayers = ISPanelJoypad:derive("ISWorldMapSharing_PanelPlayers")
 
-
 ---@return any
 function ISWorldMapSharing_PanelPlayers.onMiniScoreboardUpdate() end
 
 ---@return any
 function ISWorldMapSharing_PanelPlayers.onScoreboardUpdate(usernames, displayNames, steamIDs) end
-
 
 ---@return any
 function ISWorldMapSharing_PanelPlayers:becomeCurrent(joypadData) end
@@ -88,7 +84,6 @@ function ISWorldMapSharing_PanelPlayers:prerender() end
 
 ---@return any
 function ISWorldMapSharing_PanelPlayers:setCurrentSymbol(symbol) end
-
 
 ---@return ISWorldMapSharing_PanelPlayers
 function ISWorldMapSharing_PanelPlayers:new(x, y, width, height) end

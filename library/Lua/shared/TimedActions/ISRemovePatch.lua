@@ -10,10 +10,8 @@
 ---@field [any] any
 ISRemovePatch = ISBaseTimedAction:derive("ISRemovePatch")
 
-
 ---@return any
 function ISRemovePatch.chanceToGetPatchBack(character) end
-
 
 ---@return any
 function ISRemovePatch:complete() end
@@ -35,7 +33,6 @@ function ISRemovePatch:stop() end
 
 ---@return any
 function ISRemovePatch:update() end
-
 
 ---@return ISRemovePatch
 function ISRemovePatch:new(character, clothing, part, needle) end

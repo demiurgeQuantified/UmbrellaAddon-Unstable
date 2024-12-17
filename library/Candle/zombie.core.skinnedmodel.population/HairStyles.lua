@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class HairStyles
 --- @field public class any
 --- @field public instance HairStyles
-HairStyles = {};
+HairStyles = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,38 +11,37 @@ HairStyles = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return HairStyles
 function HairStyles.Parse(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function HairStyles.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function HairStyles.init() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return HairStyles
 function HairStyles.parse(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return HairStyle
 function HairStyles:FindFemaleStyle(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return HairStyle
 function HairStyles:FindMaleStyle(arg0) end
 
@@ -56,20 +55,19 @@ function HairStyles:getAllMaleStyles() end
 
 --- @public
 --- @param arg0 HairStyle
---- @param arg1 String
+--- @param arg1 string
 --- @return HairStyle
 function HairStyles:getAlternateForHat(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function HairStyles:getRandomFemaleStyle(arg0) end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function HairStyles:getRandomMaleStyle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

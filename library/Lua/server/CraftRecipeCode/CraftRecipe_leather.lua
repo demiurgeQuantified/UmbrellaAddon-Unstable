@@ -9,7 +9,6 @@ CraftRecipeCode.tanLeatherFur = {}
 CraftRecipeCode.dryLeatherCrude = {}
 CraftRecipeCode.dryLeatherFur = {}
 
-
 ---@return any
 function CraftRecipeCode.getInputLeather(_craftProcessor) end
 

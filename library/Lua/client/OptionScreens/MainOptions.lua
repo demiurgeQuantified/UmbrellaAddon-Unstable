@@ -62,7 +62,6 @@ MainOptions.keyBindingLength = 0
 MainOptions.KEYS_VERSION1 = 1
 MainOptions.KEYS_VERSION = MainOptions.KEYS_VERSION1
 
-
 ---@return any
 function MainOptions.doLanguageToolTip(languages) end
 
@@ -92,7 +91,6 @@ function MainOptions.sortModes(a, b) end
 
 ---@return any
 function MainOptions.upgradeKeysIni(name, key, defaultKey, version) end
-
 
 ---@return any
 function MainOptions:addAccessibilityPanel() end
@@ -333,7 +331,6 @@ function MainOptions:tableContains(tbl, x) end
 
 ---@return any
 function MainOptions:toUI() end
-
 
 ---@return MainOptions
 function MainOptions:new(x, y, width, height) end

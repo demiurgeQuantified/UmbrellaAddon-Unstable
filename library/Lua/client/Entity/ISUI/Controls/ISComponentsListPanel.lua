@@ -17,7 +17,6 @@
 ---@field [any] any
 ISComponentsListPanel = ISPanel:derive("ISComponentsListPanel")
 
-
 ---@return any
 function ISComponentsListPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -38,7 +37,6 @@ function ISComponentsListPanel:render() end
 
 ---@return any
 function ISComponentsListPanel:update() end
-
 
 ---@return ISComponentsListPanel
 function ISComponentsListPanel:new(x, y, width, height, player, entity, entityConfig) end

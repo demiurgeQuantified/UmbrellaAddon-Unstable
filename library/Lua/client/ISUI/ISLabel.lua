@@ -30,7 +30,6 @@
 ---@field [any] any
 ISLabel = ISUIElement:derive("ISLabel")
 
-
 ---@return any
 function ISLabel:getFontHeight() end
 
@@ -75,7 +74,6 @@ function ISLabel:setWidthToName(minWidth) end
 
 ---@return any
 function ISLabel:updateTooltip() end
-
 
 ---@return ISLabel
 function ISLabel:new(x, y, height, name, r, g, b, a, font, bLeft) end

@@ -11,7 +11,6 @@
 ---@field [any] any
 ISFeedingTrough = ISBuildingObject:derive("ISFeedingTrough")
 
-
 ---@return any
 function ISFeedingTrough:create(x, y, z, north, sprite) end
 
@@ -38,7 +37,6 @@ function ISFeedingTrough:render(x, y, z, square) end
 
 ---@return any
 function ISFeedingTrough:walkTo(x, y, z) end
-
 
 ---@return ISFeedingTrough
 function ISFeedingTrough:new(character, def) end

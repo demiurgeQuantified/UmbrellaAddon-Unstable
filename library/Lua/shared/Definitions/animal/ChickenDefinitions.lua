@@ -1,122 +1,122 @@
 ---@meta
 
 local chicken_sounds = {
-    death = {
-        name = "AnimalVoiceChickenDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fight = {
-        name = "AnimalVoiceChickenFight",
-        slot = "voice",
-    },
-    idle_fly = {
-        name = "AnimalVoiceChickenIdleFly",
-        slot = "voice",
-    },
-    idle_peck = {
-        name = "AnimalVoiceChickenIdlePeck",
-        slot = "voice",
-    },
-    idle = {
-        name = "AnimalVoiceChickenIdleWalk",
-        intervalMin = 20,
-        intervalMax = 30,
-        slot = "voice",
-    },
-    idle_walk = {
-        name = "AnimalVoiceChickenIdleWalk",
-        intervalMin = 7,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceChickenPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalChicken",
-    },
-    pick_up = {
-        name = "PickUpAnimalChicken",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadChicken",
-    },
-    put_down = {
-        name = "PutDownAnimalChicken",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadChicken",
-    },
-    scratching = {
-        name = "AnimalFoleyTurkeyScratching",
-        slot = "voice",
-    },
-    grooming = {
-        name = "AnimalFoleyTurkeyGrooming",
-        slot = "voice",
-    },
-    run = {
-        name = "AnimalFootstepsChickenWalk",
-    },
-    stressed = {
-        name = "AnimalVoiceChickenStressed",
-        intervalMin = 2,
-        intervalMax = 30,
-        slot = "voice",
-    },
-    walk = {
-        name = "AnimalFootstepsChickenWalk",
-    },
+	death = {
+		name = "AnimalVoiceChickenDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fight = {
+		name = "AnimalVoiceChickenFight",
+		slot = "voice",
+	},
+	idle_fly = {
+		name = "AnimalVoiceChickenIdleFly",
+		slot = "voice",
+	},
+	idle_peck = {
+		name = "AnimalVoiceChickenIdlePeck",
+		slot = "voice",
+	},
+	idle = {
+		name = "AnimalVoiceChickenIdleWalk",
+		intervalMin = 20,
+		intervalMax = 30,
+		slot = "voice",
+	},
+	idle_walk = {
+		name = "AnimalVoiceChickenIdleWalk",
+		intervalMin = 7,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceChickenPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalChicken",
+	},
+	pick_up = {
+		name = "PickUpAnimalChicken",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadChicken",
+	},
+	put_down = {
+		name = "PutDownAnimalChicken",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadChicken",
+	},
+	scratching = {
+		name = "AnimalFoleyTurkeyScratching",
+		slot = "voice",
+	},
+	grooming = {
+		name = "AnimalFoleyTurkeyGrooming",
+		slot = "voice",
+	},
+	run = {
+		name = "AnimalFootstepsChickenWalk",
+	},
+	stressed = {
+		name = "AnimalVoiceChickenStressed",
+		intervalMin = 2,
+		intervalMax = 30,
+		slot = "voice",
+	},
+	walk = {
+		name = "AnimalFootstepsChickenWalk",
+	},
 }
 local chick_sounds = {
-    death = {
-        name = "AnimalVoiceChickDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    idle = {
-        name = "AnimalVoiceChickIdle",
-        intervalMin = 15,
-        intervalMax = 30,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceChickPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalChick",
-    },
-    pick_up = {
-        name = "PickUpAnimalChick",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadChick",
-    },
-    put_down = {
-        name = "PutDownAnimalChick",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadChick",
-    },
-    stressed = {
-        name = "AnimalVoiceChickStressed",
-        intervalMin = 2,
-        intervalMax = 30,
-        slot = "voice",
-    },
+	death = {
+		name = "AnimalVoiceChickDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	idle = {
+		name = "AnimalVoiceChickIdle",
+		intervalMin = 15,
+		intervalMax = 30,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceChickPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalChick",
+	},
+	pick_up = {
+		name = "PickUpAnimalChick",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadChick",
+	},
+	put_down = {
+		name = "PutDownAnimalChick",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadChick",
+	},
+	stressed = {
+		name = "AnimalVoiceChickStressed",
+		intervalMin = 2,
+		intervalMax = 30,
+		slot = "voice",
+	},
 }
 
 ---@class AnimalDefinitions

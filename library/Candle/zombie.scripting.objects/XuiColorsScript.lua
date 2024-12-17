@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class XuiColorsScript: BaseScriptObject
 --- @field public class any
-XuiColorsScript = {};
+XuiColorsScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function XuiColorsScript:Load(arg0, arg1) end
 
 --- @public
@@ -19,9 +19,8 @@ function XuiColorsScript:Load(arg0, arg1) end
 function XuiColorsScript:getColorMap() end
 
 --- @public
---- @return String
+--- @return string
 function XuiColorsScript:getName() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

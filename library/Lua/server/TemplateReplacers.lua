@@ -4,13 +4,12 @@
 TemplateReplacers = {}
 TemplateReplacers.keys = {}
 TemplateReplacers.keys.fruit = {
-    "Apple",
-    "Orange",
-    "Banana",
-    "Peach",
-    "Grape",
+	"Apple",
+	"Orange",
+	"Banana",
+	"Peach",
+	"Grape",
 }
-
 
 ---@return any
 function TemplateReplacers.init() end

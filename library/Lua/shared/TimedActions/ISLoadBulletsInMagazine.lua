@@ -14,7 +14,6 @@
 ---@field [any] any
 ISLoadBulletsInMagazine = ISBaseTimedAction:derive("ISLoadBulletsInMagazine")
 
-
 ---@return any
 function ISLoadBulletsInMagazine:animEvent(event, parameter) end
 
@@ -47,7 +46,6 @@ function ISLoadBulletsInMagazine:stop() end
 
 ---@return any
 function ISLoadBulletsInMagazine:update() end
-
 
 ---@return ISLoadBulletsInMagazine
 function ISLoadBulletsInMagazine:new(character, magazine, ammoCount) end

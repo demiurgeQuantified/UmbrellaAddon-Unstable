@@ -18,7 +18,6 @@
 ---@field [any] any
 ISUserPanelUI = ISPanel:derive("ISUserPanelUI")
 
-
 ---@return any
 function ISUserPanelUI:close() end
 
@@ -45,7 +44,6 @@ function ISUserPanelUI:setVisible(visible) end
 
 ---@return any
 function ISUserPanelUI:updateButtons() end
-
 
 ---@return ISUserPanelUI
 function ISUserPanelUI:new(x, y, width, height, player) end

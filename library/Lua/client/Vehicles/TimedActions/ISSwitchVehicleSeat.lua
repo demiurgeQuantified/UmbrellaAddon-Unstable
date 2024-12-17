@@ -8,7 +8,6 @@
 ---@field [any] any
 ISSwitchVehicleSeat = ISBaseTimedAction:derive("ISSwitchVehicleSeat")
 
-
 ---@return any
 function ISSwitchVehicleSeat:isValid() end
 
@@ -23,7 +22,6 @@ function ISSwitchVehicleSeat:stop() end
 
 ---@return any
 function ISSwitchVehicleSeat:update() end
-
 
 ---@return ISSwitchVehicleSeat
 function ISSwitchVehicleSeat:new(character, seatTo, seatFrom) end

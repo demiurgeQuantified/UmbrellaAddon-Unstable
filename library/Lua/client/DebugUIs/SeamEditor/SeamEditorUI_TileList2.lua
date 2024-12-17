@@ -10,7 +10,6 @@
 ---@field [any] any
 SeamEditorUI_TileList2 = ISPanel:derive("SeamEditorUI_TileList2")
 
-
 ---@return any
 function SeamEditorUI_TileList2:assignMasterSprites(col, row) end
 
@@ -97,7 +96,6 @@ function SeamEditorUI_TileList2:selectionToggle(col, row) end
 
 ---@return any
 function SeamEditorUI_TileList2:setTileset(tilesetName) end
-
 
 ---@return SeamEditorUI_TileList2
 function SeamEditorUI_TileList2:new(x, y, width, height, picker) end

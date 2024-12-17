@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ZombieOnGroundState: State
 --- @field public class any
-ZombieOnGroundState = {};
+ZombieOnGroundState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,26 +20,24 @@ function ZombieOnGroundState.instance() end
 --- @return boolean
 function ZombieOnGroundState.isCharacterStandingOnOther(arg0, arg1) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieOnGroundState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieOnGroundState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieOnGroundState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

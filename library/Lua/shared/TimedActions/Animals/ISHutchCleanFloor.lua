@@ -14,7 +14,6 @@
 ---@field [any] any
 ISHutchCleanFloor = ISBaseTimedAction:derive("ISHutchCleanFloor")
 
-
 ---@return any
 function ISHutchCleanFloor:animEvent(event, parameter) end
 
@@ -47,7 +46,6 @@ function ISHutchCleanFloor:update() end
 
 ---@return any
 function ISHutchCleanFloor:waitToStart() end
-
 
 ---@return ISHutchCleanFloor
 function ISHutchCleanFloor:new(character, hutch, water, mop, bleach) end

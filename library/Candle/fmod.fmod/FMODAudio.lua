@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class FMODAudio
 --- @field public class any
 --- @implement Audio
-FMODAudio = {};
+FMODAudio = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
---- @overload fun(self: FMODAudio): String
+--- @return string
+--- @overload fun(self: FMODAudio): string
 function FMODAudio:getName() end
 
 --- @public
@@ -20,32 +20,31 @@ function FMODAudio:getName() end
 function FMODAudio:isPlaying() end
 
 --- @public
---- @return void
---- @overload fun(self: FMODAudio): void
+--- @return nil
+--- @overload fun(self: FMODAudio): nil
 function FMODAudio:pause() end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: FMODAudio, arg0: String): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: FMODAudio, arg0: string): nil
 function FMODAudio:setName(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
---- @overload fun(self: FMODAudio, arg0: float): void
+--- @param arg0 number
+--- @return nil
+--- @overload fun(self: FMODAudio, arg0: number): nil
 function FMODAudio:setVolume(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: FMODAudio): void
+--- @return nil
+--- @overload fun(self: FMODAudio): nil
 function FMODAudio:start() end
 
 --- @public
---- @return void
---- @overload fun(self: FMODAudio): void
+--- @return nil
+--- @overload fun(self: FMODAudio): nil
 function FMODAudio:stop() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

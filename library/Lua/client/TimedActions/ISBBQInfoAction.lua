@@ -7,7 +7,6 @@
 ---@field [any] any
 ISBBQInfoAction = ISBaseTimedAction:derive("ISBBQInfoAction")
 
-
 ---@return any
 function ISBBQInfoAction:isValid() end
 
@@ -16,7 +15,6 @@ function ISBBQInfoAction:perform() end
 
 ---@return any
 function ISBBQInfoAction:waitToStart() end
-
 
 ---@return ISBBQInfoAction
 function ISBBQInfoAction:new(character, bbq) end

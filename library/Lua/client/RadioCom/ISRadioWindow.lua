@@ -33,7 +33,6 @@ ISRadioWindow = ISCollapsableWindow:derive("ISRadioWindow")
 ISRadioWindow.instances = {}
 ISRadioWindow.instancesIso = {}
 
-
 ---@return any
 function ISRadioWindow.activate(_player, _deviceObject) end
 
@@ -45,7 +44,6 @@ function ISRadioWindow.isActive(_player, _deviceObject) end
 
 ---@return any
 function ISRadioWindow.onEquip(_player, _item) end
-
 
 ---@return any
 function ISRadioWindow:addModule(_modulePanel, _moduleName, _enable) end
@@ -133,7 +131,6 @@ function ISRadioWindow:unfocusSelf() end
 
 ---@return any
 function ISRadioWindow:update() end
-
 
 ---@return ISRadioWindow
 function ISRadioWindow:new(x, y, width, height, player) end

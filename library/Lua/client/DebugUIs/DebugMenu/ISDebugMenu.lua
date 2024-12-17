@@ -21,7 +21,6 @@ ISDebugMenu.shiftDown = 0
 ISDebugMenu.tab = "MAIN"
 ISDebugMenu.classes = {}
 
-
 ---@return any
 function ISDebugMenu.OnOpenPanel() end
 
@@ -30,7 +29,6 @@ function ISDebugMenu.OnPlayerDeath(playerObj) end
 
 ---@return any
 function ISDebugMenu.RegisterClass(_class) end
-
 
 ---@return any
 function ISDebugMenu:addButtonInfo(_title, _func, _tab, _marginTop) end
@@ -61,7 +59,6 @@ function ISDebugMenu:onClickSandboxSettings() end
 
 ---@return any
 function ISDebugMenu:setupButtons() end
-
 
 ---@return ISDebugMenu
 function ISDebugMenu:new(x, y, width, height) end

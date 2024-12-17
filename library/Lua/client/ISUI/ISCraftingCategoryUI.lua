@@ -21,7 +21,6 @@ ISCraftingCategoryUI.instance = nil
 ISCraftingCategoryUI.SMALL_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Small):getLineHeight()
 ISCraftingCategoryUI.MEDIUM_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Medium):getLineHeight()
 
-
 ---@return any
 function ISCraftingCategoryUI:addToFavorite(fromKeyboard) end
 
@@ -60,7 +59,6 @@ function ISCraftingCategoryUI:syncAllFilters() end
 
 ---@return any
 function ISCraftingCategoryUI:update() end
-
 
 ---@return ISCraftingCategoryUI
 function ISCraftingCategoryUI:new(x, y, width, height, craftingUI) end

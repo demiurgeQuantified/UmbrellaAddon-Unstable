@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class FluidCategory: Enum
 --- @field public class any
@@ -14,7 +14,7 @@
 --- @field public Paint FluidCategory
 --- @field public Poisons FluidCategory
 --- @field public Water FluidCategory
-FluidCategory = {};
+FluidCategory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,7 +22,7 @@ FluidCategory = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return FluidCategory
 function FluidCategory.FromId(arg0) end
 
@@ -33,7 +33,7 @@ function FluidCategory.getList() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return FluidCategory
 function FluidCategory.valueOf(arg0) end
 
@@ -42,13 +42,10 @@ function FluidCategory.valueOf(arg0) end
 --- @return FluidCategory[]
 function FluidCategory.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return byte
+--- @return integer
 function FluidCategory:getId() end
-
-

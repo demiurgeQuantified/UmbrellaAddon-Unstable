@@ -1,36 +1,36 @@
---- @meta
+--- @meta _
 
 --- @class MediaData
 --- @field public class any
-MediaData = {};
+MediaData = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
---- @return void
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 string
+--- @return nil
 function MediaData:addLine(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getAuthorEN() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getCategory() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getExtraEN() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getId() end
 
 --- @public
@@ -38,48 +38,48 @@ function MediaData:getId() end
 function MediaData:getIndex() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return MediaLineData
 function MediaData:getLine(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function MediaData:getLineCount() end
 
 --- @public
---- @return byte
+--- @return integer
 function MediaData:getMediaType() end
 
 --- @public
---- @return int
+--- @return integer
 function MediaData:getSpawning() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getSubtitleEN() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getTitleEN() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getTranslatedAuthor() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getTranslatedExtra() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getTranslatedItemDisplayName() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getTranslatedSubTitle() end
 
 --- @public
---- @return String
+--- @return string
 function MediaData:getTranslatedTitle() end
 
 --- @public
@@ -99,33 +99,32 @@ function MediaData:hasSubTitle() end
 function MediaData:hasTitle() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MediaData:setAuthor(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MediaData:setExtra(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MediaData:setSubtitle(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MediaData:setTitle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
 --- @return MediaData
 function MediaData.new(arg0, arg1, arg2) end

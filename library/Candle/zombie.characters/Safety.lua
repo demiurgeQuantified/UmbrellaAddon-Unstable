@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Safety
 --- @field public class any
-Safety = {};
+Safety = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,23 +10,23 @@ Safety = {};
 
 --- @public
 --- @param arg0 Safety
---- @return void
+--- @return nil
 function Safety:copyFrom(arg0) end
 
 --- @public
---- @return Object
+--- @return any
 function Safety:getCharacter() end
 
 --- @public
---- @return float
+--- @return number
 function Safety:getCooldown() end
 
 --- @public
---- @return String
+--- @return string
 function Safety:getDescription() end
 
 --- @public
---- @return float
+--- @return number
 function Safety:getToggle() end
 
 --- @public
@@ -43,39 +43,38 @@ function Safety:isToggleAllowed() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function Safety:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Safety:save(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Safety:setCooldown(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Safety:setEnabled(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Safety:setLast(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Safety:setToggle(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Safety:toggleSafety() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

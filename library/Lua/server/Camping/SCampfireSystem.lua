@@ -3,10 +3,8 @@
 ---@class SCampfireSystem : SGlobalObjectSystem
 SCampfireSystem = SGlobalObjectSystem:derive("SCampfireSystem")
 
-
 ---@return any
 function SCampfireSystem.putOut(square) end
-
 
 ---@return any
 function SCampfireSystem:addCampfire(grid) end
@@ -46,7 +44,6 @@ function SCampfireSystem:putOut(luaObject) end
 
 ---@return any
 function SCampfireSystem:removeCampfire(luaObject) end
-
 
 ---@return SCampfireSystem
 function SCampfireSystem:new() end

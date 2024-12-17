@@ -5,7 +5,6 @@
 ---@field [any] any
 WorldMapEditorMode_Maps = WorldMapEditorMode:derive("WorldMapEditorMode_Maps")
 
-
 ---@return any
 function WorldMapEditorMode_Maps:createChildren() end
 
@@ -47,7 +46,6 @@ function WorldMapEditorMode_Maps:render() end
 
 ---@return any
 function WorldMapEditorMode_Maps:undisplay() end
-
 
 ---@return WorldMapEditorMode_Maps
 function WorldMapEditorMode_Maps:new(editor) end

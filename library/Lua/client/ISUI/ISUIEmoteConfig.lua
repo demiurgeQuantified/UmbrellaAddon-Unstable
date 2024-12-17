@@ -23,7 +23,6 @@
 ---@field [any] any
 ISUIEmoteConfig = ISCollapsableWindow:derive("ISUIEmoteConfig")
 
-
 ---@return any
 function ISUIEmoteConfig:close() end
 
@@ -44,7 +43,6 @@ function ISUIEmoteConfig:selectCategory(combo) end
 
 ---@return any
 function ISUIEmoteConfig:writeToFile() end
-
 
 ---@return ISUIEmoteConfig
 function ISUIEmoteConfig:new(x, y, character) end

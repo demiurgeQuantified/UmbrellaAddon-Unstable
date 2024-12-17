@@ -8,7 +8,6 @@
 ---@field [any] any
 ISStopAlarmClockAction = ISBaseTimedAction:derive("ISStopAlarmClockAction")
 
-
 ---@return any
 function ISStopAlarmClockAction:complete() end
 
@@ -29,7 +28,6 @@ function ISStopAlarmClockAction:stop() end
 
 ---@return any
 function ISStopAlarmClockAction:update() end
-
 
 ---@return ISStopAlarmClockAction
 function ISStopAlarmClockAction:new(character, alarm) end

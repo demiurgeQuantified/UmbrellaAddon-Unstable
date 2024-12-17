@@ -19,7 +19,6 @@
 ---@field [any] any
 ISWidgetCraftProgress = ISPanel:derive("ISWidgetCraftProgress")
 
-
 ---@return any
 function ISWidgetCraftProgress:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -43,7 +42,6 @@ function ISWidgetCraftProgress:render() end
 
 ---@return any
 function ISWidgetCraftProgress:update() end
-
 
 ---@return ISWidgetCraftProgress
 function ISWidgetCraftProgress:new(x, y, width, height, player, entity, callbackTarget, _styleBar) end

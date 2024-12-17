@@ -3,10 +3,8 @@
 ---@class ISTransferAction : ISBaseObject
 ISTransferAction = ISBaseObject:derive("ISTransferAction")
 
-
 ---@return any
 function ISTransferAction.GetDropItemOffset(character, square, item) end
-
 
 ---@return any
 function ISTransferAction:canDropOnFloor(square, character) end

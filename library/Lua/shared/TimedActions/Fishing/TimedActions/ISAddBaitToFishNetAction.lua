@@ -7,7 +7,6 @@
 ---@field [any] any
 ISAddBaitToFishNetAction = ISBaseTimedAction:derive("ISAddBaitToFishNetAction")
 
-
 ---@return any
 function ISAddBaitToFishNetAction:complete() end
 
@@ -28,7 +27,6 @@ function ISAddBaitToFishNetAction:stop() end
 
 ---@return any
 function ISAddBaitToFishNetAction:update() end
-
 
 ---@return ISAddBaitToFishNetAction
 function ISAddBaitToFishNetAction:new(character, fishNet, bait) end

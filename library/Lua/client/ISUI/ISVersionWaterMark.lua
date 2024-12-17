@@ -3,7 +3,6 @@
 ---@class ISVersionWaterMark
 ISVersionWaterMark = {}
 
-
 ---@return any
 function ISVersionWaterMark.doMsg() end
 
@@ -14,13 +13,11 @@ function ISVersionWaterMark.doMsg() end
 ---@field [any] any
 WaterMarkUI = ISPanel:derive("WaterMarkUI")
 
-
 ---@return any
 function WaterMarkUI:initialise() end
 
 ---@return any
 function WaterMarkUI:render() end
-
 
 ---@return WaterMarkUI
 function WaterMarkUI:new(x, y, width, height) end

@@ -12,7 +12,6 @@
 ---@field [any] any
 ISPickupFishAction = ISBaseTimedAction:derive("ISPickupFishAction")
 
-
 ---@return any
 function ISPickupFishAction:animEvent(event, parameter) end
 
@@ -42,7 +41,6 @@ function ISPickupFishAction:stop() end
 
 ---@return any
 function ISPickupFishAction:update() end
-
 
 ---@return ISPickupFishAction
 function ISPickupFishAction:new(character, rod, fish) end

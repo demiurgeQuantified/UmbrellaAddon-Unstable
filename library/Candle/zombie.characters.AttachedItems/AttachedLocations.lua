@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AttachedLocations
 --- @field public class any
-AttachedLocations = {};
+AttachedLocations = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,15 +10,14 @@ AttachedLocations = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function AttachedLocations.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return AttachedLocationGroup
 function AttachedLocations.getGroup(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

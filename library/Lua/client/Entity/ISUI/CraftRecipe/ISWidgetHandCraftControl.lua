@@ -26,10 +26,8 @@
 ---@field [any] any
 ISWidgetHandCraftControl = ISPanel:derive("ISWidgetHandCraftControl")
 
-
 ---@return any
 function ISWidgetHandCraftControl.onTextChange(box) end
-
 
 ---@return any
 function ISWidgetHandCraftControl:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -75,7 +73,6 @@ function ISWidgetHandCraftControl:startHandcraft(force) end
 
 ---@return any
 function ISWidgetHandCraftControl:update() end
-
 
 ---@return ISWidgetHandCraftControl
 function ISWidgetHandCraftControl:new(x, y, width, height, player, logic) end

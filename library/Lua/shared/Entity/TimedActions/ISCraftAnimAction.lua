@@ -8,7 +8,6 @@
 ---@field [any] any
 ISCraftAnimAction = ISBaseTimedAction:derive("ISCraftAnimAction")
 
-
 ---@return any
 function ISCraftAnimAction:getCustomDelta() end
 
@@ -29,7 +28,6 @@ function ISCraftAnimAction:stop() end
 
 ---@return any
 function ISCraftAnimAction:update() end
-
 
 ---@return ISCraftAnimAction
 function ISCraftAnimAction:new(character, entity, component, craftProcessor, recipe) end

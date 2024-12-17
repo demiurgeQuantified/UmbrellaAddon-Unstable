@@ -7,10 +7,8 @@
 ---@field [any] any
 ISSleepingUI = ISPanel:derive("ISSleepingUI")
 
-
 ---@return any
 function ISSleepingUI.OnSleepingTick(playerIndex, hourOfDay) end
-
 
 ---@return any
 function ISSleepingUI:createChildren() end
@@ -41,7 +39,6 @@ function ISSleepingUI:render() end
 
 ---@return any
 function ISSleepingUI:update() end
-
 
 ---@return ISSleepingUI
 function ISSleepingUI:new(playerIndex) end

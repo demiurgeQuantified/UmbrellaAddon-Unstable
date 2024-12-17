@@ -9,10 +9,8 @@
 ---@field [any] any
 ISPrintMediaInfo = ISBaseObject:derive("ISPrintMediaInfo")
 
-
 ---@return any
 function ISPrintMediaInfo:initialise() end
-
 
 ---@return ISPrintMediaInfo
 function ISPrintMediaInfo:new(title, text, moreTextInfo, nextcondition) end
@@ -23,7 +21,6 @@ function ISPrintMediaInfo:new(title, text, moreTextInfo, nextcondition) end
 ---@field pages any
 ---@field [any] any
 ISPrintMediaSetInfo = ISBaseObject:derive("ISPrintMediaSetInfo")
-
 
 ---@return any
 function ISPrintMediaSetInfo:addPage(pagetitle, pagetext, moreTextInfo, pagenextcondition) end
@@ -45,7 +42,6 @@ function ISPrintMediaSetInfo:initialise() end
 
 ---@return any
 function ISPrintMediaSetInfo:update(tutorialPanel) end
-
 
 ---@return ISPrintMediaSetInfo
 function ISPrintMediaSetInfo:new() end

@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class TilesetDepthTexture
 --- @field public class any
-TilesetDepthTexture = {};
+TilesetDepthTexture = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:Reset() end
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:clearTiles() end
 
 --- @public
@@ -21,33 +21,33 @@ function TilesetDepthTexture:clearTiles() end
 function TilesetDepthTexture:fileExists() end
 
 --- @public
---- @return String
+--- @return string
 function TilesetDepthTexture:getAbsoluteFileName() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getColumns() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getHeight() end
 
 --- @public
---- @return String
+--- @return string
 function TilesetDepthTexture:getName() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return TileDepthTexture
---- @overload fun(self: TilesetDepthTexture, arg0: int, arg1: int): TileDepthTexture
+--- @overload fun(self: TilesetDepthTexture, arg0: integer, arg1: integer): TileDepthTexture
 function TilesetDepthTexture:getOrCreateTile(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function TilesetDepthTexture:getRelativeFileName() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getRows() end
 
 --- @public
@@ -55,23 +55,23 @@ function TilesetDepthTexture:getRows() end
 function TilesetDepthTexture:getTexture() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getTileCount() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getTileHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getTileWidth() end
 
 --- @public
---- @return int
+--- @return integer
 function TilesetDepthTexture:getWidth() end
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:initSprites() end
 
 --- @public
@@ -83,31 +83,30 @@ function TilesetDepthTexture:is2x() end
 function TilesetDepthTexture:isKeepPixels() end
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:load() end
 
 --- @public
 --- @param arg0 TilesetDepthTexture
---- @return void
+--- @return nil
 function TilesetDepthTexture:mergeTileset(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:reload() end
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:removeFile() end
 
 --- @public
---- @return void
+--- @return nil
 function TilesetDepthTexture:save() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function TilesetDepthTexture:setKeepPixels(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -115,9 +114,9 @@ function TilesetDepthTexture:setKeepPixels(arg0) end
 
 --- @public
 --- @param arg0 TileDepthTextures
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 boolean
 --- @return TilesetDepthTexture
 function TilesetDepthTexture.new(arg0, arg1, arg2, arg3, arg4) end

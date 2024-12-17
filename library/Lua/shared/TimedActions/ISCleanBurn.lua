@@ -13,7 +13,6 @@
 ---@field [any] any
 ISCleanBurn = ISBaseTimedAction:derive("ISCleanBurn")
 
-
 ---@return any
 function ISCleanBurn:complete() end
 
@@ -40,7 +39,6 @@ function ISCleanBurn:update() end
 
 ---@return any
 function ISCleanBurn:waitToStart() end
-
 
 ---@return ISCleanBurn
 function ISCleanBurn:new(character, otherPlayer, bandage, bodyPart) end

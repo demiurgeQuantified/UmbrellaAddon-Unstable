@@ -3,8 +3,6 @@
 ---@class ISMenuContextWorld
 ISMenuContextWorld = {}
 
-
-
 ---@return ISMenuContextWorld_Instance
 function ISMenuContextWorld.new() end
 
@@ -13,7 +11,6 @@ function ISMenuContextWorld.new() end
 ---@field debug any
 ---@field [any] any
 local ISMenuContextWorld_Instance = {}
-
 
 ---@return any
 function ISMenuContextWorld_Instance.createMenu(_playerNum, _object, _objects, _x, _y, _test) end

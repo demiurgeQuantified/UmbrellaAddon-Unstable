@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoFire: IsoObject
 --- @field public class any
-IsoFire = {};
+IsoFire = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,7 +29,6 @@ function IsoFire.CanAddSmoke(arg0, arg1) end
 --- @return boolean
 function IsoFire.Fire_IsSquareFlamable(arg0) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -39,7 +38,7 @@ function IsoFire.Fire_IsSquareFlamable(arg0) end
 function IsoFire:HasTooltip() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFire:Spread() end
 
 --- @public
@@ -55,31 +54,31 @@ function IsoFire:TestCollide(arg0, arg1) end
 function IsoFire:TestVision(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFire:addToWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFire:extinctFire() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFire:getEnergy() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFire:getLife() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFire:getLightRadius() end
 
 --- @public
---- @return String
+--- @return string
 function IsoFire:getObjectName() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFire:getSpreadDelay() end
 
 --- @public
@@ -96,77 +95,76 @@ function IsoFire:isPermanent() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoFire:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function IsoFire:loadChange(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFire:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoFire:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
---- @return void
+--- @return nil
 function IsoFire:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoFire:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @param arg2 ByteBuffer
---- @return void
+--- @return nil
 function IsoFire:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFire:setLife(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFire:setLifeStage(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFire:setLightRadius(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFire:setSpreadDelay(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFire:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -176,7 +174,7 @@ function IsoFire:update() end
 --- @param arg0 IsoCell
 --- @return IsoFire
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare): IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int): IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int): IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int, arg5: boolean): IsoFire
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer): IsoFire
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer, arg4: integer): IsoFire
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer, arg4: integer, arg5: boolean): IsoFire
 function IsoFire.new(arg0) end

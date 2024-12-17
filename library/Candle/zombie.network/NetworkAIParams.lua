@@ -1,37 +1,37 @@
---- @meta
+--- @meta _
 
 --- @class NetworkAIParams
 --- @field public class any
---- @field public ANIMAL_PREDICT_INTERVAL int
---- @field public ANIMAL_PREDICT_UPDATE_LIMIT float
---- @field public CHARACTER_EXTRAPOLATION_UPDATE_INTERVAL_MS int
---- @field public CHARACTER_PREDICTION_INTERVAL_MS int
---- @field public CHARACTER_UPDATE_RATE_MS int
---- @field public MAX_CONNECTIONS int
---- @field public MAX_RECONNECT_DISTANCE_SQ float
---- @field public MAX_TOWING_CAR_DISTANCE_SQ float
---- @field public MAX_TOWING_TRAILER_DISTANCE_SQ float
---- @field public TOWING_DISTANCE float
---- @field public VEHICLE_BUFFER_DELAY_MS int
---- @field public VEHICLE_BUFFER_HISTORY_MS int
---- @field public VEHICLE_DELAY_HIGH_PING_MULTIPLIXER float
---- @field public VEHICLE_DELAY_NORMALISE_PER_SEC float
---- @field public VEHICLE_DELAY_SLOWING_DOWN_DELAY_MULTIPLIXER float
---- @field public VEHICLE_DELAY_TUNE_MULTIPLIXER float
---- @field public VEHICLE_DELAY_TUNE_PER_SEC float
---- @field public VEHICLE_HIGH_PING_COUNT int
---- @field public VEHICLE_MOVING_MP_PHYSIC_UPDATE_RATE int
---- @field public VEHICLE_MP_PHYSIC_UPDATE_RATE int
---- @field public VEHICLE_SPEED_CAP int
---- @field public ZOMBIE_ANTICIPATORY_UPDATE_MULTIPLIER float
---- @field public ZOMBIE_MAX_UPDATE_INTERVAL_MS int
---- @field public ZOMBIE_MIN_UPDATE_INTERVAL_MS int
---- @field public ZOMBIE_OWNERSHIP_INTERVAL int
---- @field public ZOMBIE_REMOVE_INTERVAL_MS int
---- @field public ZOMBIE_TELEPORT_DISTANCE_SQ int
---- @field public ZOMBIE_TELEPORT_PLAYER int
---- @field public ZOMBIE_UPDATE_INFO_BUNCH_RATE_MS int
-NetworkAIParams = {};
+--- @field public ANIMAL_PREDICT_INTERVAL integer
+--- @field public ANIMAL_PREDICT_UPDATE_LIMIT number
+--- @field public CHARACTER_EXTRAPOLATION_UPDATE_INTERVAL_MS integer
+--- @field public CHARACTER_PREDICTION_INTERVAL_MS integer
+--- @field public CHARACTER_UPDATE_RATE_MS integer
+--- @field public MAX_CONNECTIONS integer
+--- @field public MAX_RECONNECT_DISTANCE_SQ number
+--- @field public MAX_TOWING_CAR_DISTANCE_SQ number
+--- @field public MAX_TOWING_TRAILER_DISTANCE_SQ number
+--- @field public TOWING_DISTANCE number
+--- @field public VEHICLE_BUFFER_DELAY_MS integer
+--- @field public VEHICLE_BUFFER_HISTORY_MS integer
+--- @field public VEHICLE_DELAY_HIGH_PING_MULTIPLIXER number
+--- @field public VEHICLE_DELAY_NORMALISE_PER_SEC number
+--- @field public VEHICLE_DELAY_SLOWING_DOWN_DELAY_MULTIPLIXER number
+--- @field public VEHICLE_DELAY_TUNE_MULTIPLIXER number
+--- @field public VEHICLE_DELAY_TUNE_PER_SEC number
+--- @field public VEHICLE_HIGH_PING_COUNT integer
+--- @field public VEHICLE_MOVING_MP_PHYSIC_UPDATE_RATE integer
+--- @field public VEHICLE_MP_PHYSIC_UPDATE_RATE integer
+--- @field public VEHICLE_SPEED_CAP integer
+--- @field public ZOMBIE_ANTICIPATORY_UPDATE_MULTIPLIER number
+--- @field public ZOMBIE_MAX_UPDATE_INTERVAL_MS integer
+--- @field public ZOMBIE_MIN_UPDATE_INTERVAL_MS integer
+--- @field public ZOMBIE_OWNERSHIP_INTERVAL integer
+--- @field public ZOMBIE_REMOVE_INTERVAL_MS integer
+--- @field public ZOMBIE_TELEPORT_DISTANCE_SQ integer
+--- @field public ZOMBIE_TELEPORT_PLAYER integer
+--- @field public ZOMBIE_UPDATE_INFO_BUNCH_RATE_MS integer
+NetworkAIParams = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,7 +39,7 @@ NetworkAIParams = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function NetworkAIParams.Init() end
 
 --- @public
@@ -55,15 +55,14 @@ function NetworkAIParams.isShowServerInfo() end
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function NetworkAIParams.setShowConnectionInfo(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function NetworkAIParams.setShowServerInfo(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

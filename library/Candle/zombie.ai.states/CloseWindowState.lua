@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CloseWindowState: State
 --- @field public class any
-CloseWindowState = {};
+CloseWindowState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ CloseWindowState = {};
 --- @return CloseWindowState
 function CloseWindowState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,22 +20,22 @@ function CloseWindowState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function CloseWindowState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function CloseWindowState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function CloseWindowState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function CloseWindowState:exit(arg0) end
 
 --- @public
@@ -47,7 +46,6 @@ function CloseWindowState:getWindow(arg0) end
 --- @public
 --- @return boolean
 function CloseWindowState:isDoingActionThatCanBeCancelled() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

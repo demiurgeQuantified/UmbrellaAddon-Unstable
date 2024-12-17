@@ -7,7 +7,6 @@
 ---@field [any] any
 ISRemoveBrokenGlass = ISBaseTimedAction:derive("ISRemoveBrokenGlass")
 
-
 ---@return any
 function ISRemoveBrokenGlass:complete() end
 
@@ -31,7 +30,6 @@ function ISRemoveBrokenGlass:update() end
 
 ---@return any
 function ISRemoveBrokenGlass:waitToStart() end
-
 
 ---@return ISRemoveBrokenGlass
 function ISRemoveBrokenGlass:new(character, window) end

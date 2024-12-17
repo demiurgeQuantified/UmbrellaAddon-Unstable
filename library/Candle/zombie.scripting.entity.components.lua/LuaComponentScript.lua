@@ -1,33 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class LuaComponentScript: ComponentScript
 --- @field public class any
-LuaComponentScript = {};
+LuaComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function LuaComponentScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function LuaComponentScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaComponentScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function LuaComponentScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function LuaComponentScript:PreReload() end
 
 --- @public
@@ -35,7 +35,5 @@ function LuaComponentScript:PreReload() end
 function LuaComponentScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaComponentScript:reset() end
-
-

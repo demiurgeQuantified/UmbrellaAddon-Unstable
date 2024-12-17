@@ -1,27 +1,27 @@
---- @meta
+--- @meta _
 
 --- @class Model
 --- @field public class any
-Model = {};
+Model = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Model:getAttachmentNameParent() end
 
 --- @public
---- @return String
+--- @return string
 function Model:getAttachmentNameSelf() end
 
 --- @public
---- @return String
+--- @return string
 function Model:getFile() end
 
 --- @public
---- @return String
+--- @return string
 function Model:getId() end
 
 --- @public
@@ -33,9 +33,8 @@ function Model:getOffset() end
 function Model:getRotate() end
 
 --- @public
---- @return float
+--- @return number
 function Model:getScale() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -15,10 +15,8 @@
 ---@field [any] any
 CharacterInfoPage = ISPanel:derive("CharacterInfoPage")
 
-
 ---@return any
 function CharacterInfoPage.doInfo(desc) end
-
 
 ---@return any
 function CharacterInfoPage:createAvatar() end
@@ -34,7 +32,6 @@ function CharacterInfoPage:initialise() end
 
 ---@return any
 function CharacterInfoPage:prerender() end
-
 
 ---@return CharacterInfoPage
 function CharacterInfoPage:new(x, y, width, height, desc) end

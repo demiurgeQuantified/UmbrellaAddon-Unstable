@@ -12,7 +12,6 @@
 ---@field [any] any
 ISQueueActionsAction = ISBaseTimedAction:derive("ISQueueActionsAction")
 
-
 ---@return any
 function ISQueueActionsAction:isValid() end
 
@@ -31,6 +30,19 @@ function ISQueueActionsAction:update() end
 ---@return any
 function ISQueueActionsAction:waitToStart() end
 
-
 ---@return ISQueueActionsAction
-function ISQueueActionsAction:new(character, addActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
+function ISQueueActionsAction:new(
+	character,
+	addActionsFunction,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10
+)
+end

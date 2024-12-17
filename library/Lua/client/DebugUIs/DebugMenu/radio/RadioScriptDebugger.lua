@@ -18,10 +18,8 @@
 RadioScriptDebugger = ISPanel:derive("RadioScriptDebugger")
 RadioScriptDebugger.instance = nil
 
-
 ---@return any
 function RadioScriptDebugger.OnOpenPanel(_radioChannel) end
-
 
 ---@return any
 function RadioScriptDebugger:close() end
@@ -61,7 +59,6 @@ function RadioScriptDebugger:prerender() end
 
 ---@return any
 function RadioScriptDebugger:update() end
-
 
 ---@return RadioScriptDebugger
 function RadioScriptDebugger:new(x, y, width, height, title) end

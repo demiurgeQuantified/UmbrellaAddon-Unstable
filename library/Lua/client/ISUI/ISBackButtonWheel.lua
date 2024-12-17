@@ -6,7 +6,6 @@
 ---@field [any] any
 ISBackButtonWheel = ISRadialMenu:derive("ISBackButtonWheel")
 
-
 ---@return any
 function ISBackButtonWheel:addCommands() end
 
@@ -24,7 +23,6 @@ function ISBackButtonWheel:onJoypadDown(button, joypadData) end
 
 ---@return any
 function ISBackButtonWheel:onLoseJoypadFocus(joypadData) end
-
 
 ---@return ISBackButtonWheel
 function ISBackButtonWheel:new(playerNum) end

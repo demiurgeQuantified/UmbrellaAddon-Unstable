@@ -1,17 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class PhysicsShapeScript: BaseScriptObject
 --- @field public class any
-PhysicsShapeScript = {};
+PhysicsShapeScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function PhysicsShapeScript:Load(arg0, arg1) end
-
-

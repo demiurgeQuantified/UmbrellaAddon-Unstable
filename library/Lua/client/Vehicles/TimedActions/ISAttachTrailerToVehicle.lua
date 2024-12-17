@@ -11,7 +11,6 @@
 ---@field [any] any
 ISAttachTrailerToVehicle = ISBaseTimedAction:derive("ISAttachTrailerToVehicle")
 
-
 ---@return any
 function ISAttachTrailerToVehicle:isValid() end
 
@@ -32,7 +31,6 @@ function ISAttachTrailerToVehicle:update() end
 
 ---@return any
 function ISAttachTrailerToVehicle:waitToStart() end
-
 
 ---@return ISAttachTrailerToVehicle
 function ISAttachTrailerToVehicle:new(character, vehicleA, vehicleB, attachmentA, attachmentB) end

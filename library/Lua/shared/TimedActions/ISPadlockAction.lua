@@ -8,7 +8,6 @@
 ---@field [any] any
 ISPadlockAction = ISBaseTimedAction:derive("ISPadlockAction")
 
-
 ---@return any
 function ISPadlockAction:complete() end
 
@@ -29,7 +28,6 @@ function ISPadlockAction:stop() end
 
 ---@return any
 function ISPadlockAction:update() end
-
 
 ---@return ISPadlockAction
 function ISPadlockAction:new(character, thump, padlock, lock) end

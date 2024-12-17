@@ -1,23 +1,23 @@
---- @meta
+--- @meta _
 
 --- @class IsoStackedWasherDryer: IsoObject
 --- @field public class any
-IsoStackedWasherDryer = {};
+IsoStackedWasherDryer = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:addToWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:createContainersFromSpriteProperties() end
 
 --- @public
---- @return String
+--- @return string
 function IsoStackedWasherDryer:getObjectName() end
 
 --- @public
@@ -42,48 +42,47 @@ function IsoStackedWasherDryer:isWasherActivated() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:loadChange(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:removeFromWorld() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @param arg2 ByteBuffer
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:saveChange(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:setDryerActivated(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:setWasherActivated(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoStackedWasherDryer:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

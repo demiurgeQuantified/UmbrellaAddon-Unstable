@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class WeaponType: Enum
 --- @field public class any
@@ -12,7 +12,7 @@
 --- @field public spear WeaponType
 --- @field public throwing WeaponType
 --- @field public twohanded WeaponType
-WeaponType = {};
+WeaponType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,7 +28,7 @@ function WeaponType.getWeaponType(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return WeaponType
 function WeaponType.valueOf(arg0) end
 
@@ -37,13 +37,10 @@ function WeaponType.valueOf(arg0) end
 --- @return WeaponType[]
 function WeaponType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function WeaponType:getType() end
-
-

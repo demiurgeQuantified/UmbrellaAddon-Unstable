@@ -12,7 +12,6 @@ JoypadState.players = {}
 JoypadState.joypads = {}
 JoypadState.forceActivate = nil
 
-
 ---@return any
 function JoypadState.getMainMenuJoypad() end
 
@@ -98,7 +97,6 @@ joypad.wantNoise = getDebug()
 ---@field [any] any
 JoypadControllerData = ISBaseObject:derive("JoypadControllerData")
 
-
 ---@return any
 function JoypadControllerData:clearJoypad() end
 
@@ -144,7 +142,6 @@ function JoypadControllerData:setJoypad(joypadData) end
 ---@return any
 function JoypadControllerData:update(time) end
 
-
 ---@return JoypadControllerData
 function JoypadControllerData:new(id) end
 
@@ -162,7 +159,6 @@ function JoypadControllerData:new(id) end
 ---@field [any] any
 JoypadData = ISBaseObject:derive("JoypadData")
 
-
 ---@return any
 function JoypadData:clearController() end
 
@@ -174,7 +170,6 @@ function JoypadData:setActive(isActive) end
 
 ---@return any
 function JoypadData:setController(controller) end
-
 
 ---@return JoypadData
 function JoypadData:new() end

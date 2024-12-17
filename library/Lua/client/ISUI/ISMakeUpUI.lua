@@ -33,10 +33,8 @@
 ISMakeUpUI = ISCollapsableWindowJoypad:derive("ISMakeUpUI")
 ISMakeUpUI.windows = {}
 
-
 ---@return any
 function ISMakeUpUI.OnPlayerDeath(playerObj) end
-
 
 ---@return any
 function ISMakeUpUI:close() end
@@ -94,7 +92,6 @@ function ISMakeUpUI:updateAvatar() end
 
 ---@return any
 function ISMakeUpUI:updateLayout() end
-
 
 ---@return ISMakeUpUI
 function ISMakeUpUI:new(x, y, item, character) end

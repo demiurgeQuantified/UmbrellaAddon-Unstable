@@ -1,160 +1,160 @@
 ---@meta
 
 local buck_sounds = {
-    death = {
-        name = "AnimalVoiceBuckDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyBuckBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceBuckIdle",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceBuckPain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalDeer",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadDeer",
-    },
-    put_down = {
-        name = "PutDownAnimalDeer",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadDeer",
-    },
-    run = {
-        name = "AnimalFootstepsBuckRun",
-    },
-    stressed = {
-        name = "AnimalVoiceBuckStressed",
-        intervalMin = 5,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsBuckWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsBuckWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceBuckDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyBuckBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceBuckIdle",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceBuckPain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalDeer",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadDeer",
+	},
+	put_down = {
+		name = "PutDownAnimalDeer",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadDeer",
+	},
+	run = {
+		name = "AnimalFootstepsBuckRun",
+	},
+	stressed = {
+		name = "AnimalVoiceBuckStressed",
+		intervalMin = 5,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsBuckWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsBuckWalkFront",
+	},
 }
 local doe_sounds = {
-    death = {
-        name = "AnimalVoiceDoeDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyDoeBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceDoeIdle",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceDoePain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalDeer",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadDeer",
-    },
-    put_down = {
-        name = "PutDownAnimalDeer",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadDeer",
-    },
-    run = {
-        name = "AnimalFootstepsDoeRun",
-    },
-    stressed = {
-        name = "AnimalVoiceDoeStressed",
-        intervalMin = 5,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsDoeWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsDoeWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceDoeDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyDoeBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceDoeIdle",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceDoePain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalDeer",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadDeer",
+	},
+	put_down = {
+		name = "PutDownAnimalDeer",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadDeer",
+	},
+	run = {
+		name = "AnimalFootstepsDoeRun",
+	},
+	stressed = {
+		name = "AnimalVoiceDoeStressed",
+		intervalMin = 5,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsDoeWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsDoeWalkFront",
+	},
 }
 local fawn_sounds = {
-    death = {
-        name = "AnimalVoiceFawnDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyFawnBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceFawnIdle",
-        intervalMin = 6,
-        intervalMax = 12,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceFawnPain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalFawn",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadFawn",
-    },
-    put_down = {
-        name = "PutDownAnimalFawn",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadFawn",
-    },
-    run = {
-        name = "AnimalFootstepsFawnRun",
-    },
-    stressed = {
-        name = "AnimalVoiceFawnStressed",
-        intervalMin = 3,
-        intervalMax = 8,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsFawnWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsFawnWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceFawnDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyFawnBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceFawnIdle",
+		intervalMin = 6,
+		intervalMax = 12,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceFawnPain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalFawn",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadFawn",
+	},
+	put_down = {
+		name = "PutDownAnimalFawn",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadFawn",
+	},
+	run = {
+		name = "AnimalFootstepsFawnRun",
+	},
+	stressed = {
+		name = "AnimalVoiceFawnStressed",
+		intervalMin = 3,
+		intervalMax = 8,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsFawnWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsFawnWalkFront",
+	},
 }
 
 ---@class AnimalDefinitions

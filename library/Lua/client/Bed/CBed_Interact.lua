@@ -3,7 +3,6 @@
 ---@class CBed_Interact
 CBed_Interact = {}
 
-
 ---@return any
 function CBed_Interact.LookForBed(sq) end
 

@@ -8,7 +8,6 @@
 ---@field [any] any
 ISRainPanel = ISPanel:derive("ISRainPanel")
 
-
 ---@return any
 function ISRainPanel:changeIntensity() end
 

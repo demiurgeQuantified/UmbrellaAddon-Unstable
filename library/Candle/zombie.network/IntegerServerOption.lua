@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IntegerServerOption: IntegerConfigOption
 --- @field public class any
 --- @implement ServerOption
-IntegerServerOption = {};
+IntegerServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,10 +15,9 @@ IntegerServerOption = {};
 function IntegerServerOption:asConfigOption() end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerServerOption): String
+--- @return string
+--- @overload fun(self: IntegerServerOption): string
 function IntegerServerOption:getTooltip() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -26,9 +25,9 @@ function IntegerServerOption:getTooltip() end
 
 --- @public
 --- @param arg0 ServerOptions
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
 --- @return IntegerServerOption
 function IntegerServerOption.new(arg0, arg1, arg2, arg3, arg4) end

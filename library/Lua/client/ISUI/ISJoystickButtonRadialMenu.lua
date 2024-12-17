@@ -3,7 +3,6 @@
 ---@class ISJoystickButtonRadialMenu
 ISJoystickButtonRadialMenu = {}
 
-
 ---@return any
 function ISJoystickButtonRadialMenu.displayLeft(joypadData) end
 

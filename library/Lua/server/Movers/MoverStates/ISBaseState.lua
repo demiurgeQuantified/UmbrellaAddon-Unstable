@@ -3,7 +3,6 @@
 ---@class ISBaseState : ISBaseObject
 ISBaseState = ISBaseObject:derive("ISBaseState")
 
-
 ---@return any
 function ISBaseState:during() end
 
@@ -15,7 +14,6 @@ function ISBaseState:exit() end
 
 ---@return any
 function ISBaseState:isFinished() end
-
 
 ---@return ISBaseState
 function ISBaseState:new() end

@@ -10,7 +10,6 @@ xpUpdate.characterInfo = nil
 xpUpdate.lastX = 0
 xpUpdate.lastY = 0
 
-
 ---@return any
 function xpUpdate.addXp(owner, type, amount) end
 

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class WorldMarkers
 --- @field public class any
 --- @field public instance WorldMarkers
-WorldMarkers = {};
+WorldMarkers = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,134 +17,131 @@ WorldMarkers = {};
 --- @return boolean
 function WorldMarkers.intersectLineSegments(arg0, arg1, arg2) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 String
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
 --- @return DirectionArrow
 function WorldMarkers:addDirectionArrow(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
 --- @param arg4 boolean
---- @param arg5 float
+--- @param arg5 number
 --- @return GridSquareMarker
---- @overload fun(self: WorldMarkers, arg0: String, arg1: String, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean, arg7: float): GridSquareMarker
---- @overload fun(self: WorldMarkers, arg0: String, arg1: String, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean, arg7: float, arg8: float, arg9: float, arg10: float): GridSquareMarker
+--- @overload fun(self: WorldMarkers, arg0: string, arg1: string, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: number): GridSquareMarker
+--- @overload fun(self: WorldMarkers, arg0: string, arg1: string, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: number, arg8: number, arg9: number, arg10: number): GridSquareMarker
 function WorldMarkers:addGridSquareMarker(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 int
---- @param arg2 int
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return PlayerHomingPoint
---- @overload fun(self: WorldMarkers, arg0: IsoPlayer, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: float): PlayerHomingPoint
---- @overload fun(self: WorldMarkers, arg0: IsoPlayer, arg1: int, arg2: int, arg3: String, arg4: float, arg5: float, arg6: float, arg7: float, arg8: boolean, arg9: int): PlayerHomingPoint
+--- @overload fun(self: WorldMarkers, arg0: IsoPlayer, arg1: integer, arg2: integer, arg3: number, arg4: number, arg5: number, arg6: number): PlayerHomingPoint
+--- @overload fun(self: WorldMarkers, arg0: IsoPlayer, arg1: integer, arg2: integer, arg3: string, arg4: number, arg5: number, arg6: number, arg7: number, arg8: boolean, arg9: integer): PlayerHomingPoint
 function WorldMarkers:addPlayerHomingPoint(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function WorldMarkers:debugRender() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return DirectionArrow
 function WorldMarkers:getDirectionArrow(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return GridSquareMarker
 function WorldMarkers:getGridSquareMarker(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return PlayerHomingPoint
 function WorldMarkers:getHomingPoint(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function WorldMarkers:init() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function WorldMarkers:removeAllDirectionArrows(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function WorldMarkers:removeAllHomingPoints(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 --- @overload fun(self: WorldMarkers, arg0: DirectionArrow): boolean
 function WorldMarkers:removeDirectionArrow(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 --- @overload fun(self: WorldMarkers, arg0: GridSquareMarker): boolean
 function WorldMarkers:removeGridSquareMarker(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 --- @overload fun(self: WorldMarkers, arg0: PlayerHomingPoint): boolean
 function WorldMarkers:removeHomingPoint(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 int
+--- @param arg1 integer
 --- @return boolean
 --- @overload fun(self: WorldMarkers, arg0: IsoPlayer, arg1: DirectionArrow): boolean
 function WorldMarkers:removePlayerDirectionArrow(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 int
+--- @param arg1 integer
 --- @return boolean
 --- @overload fun(self: WorldMarkers, arg0: IsoPlayer, arg1: PlayerHomingPoint): boolean
 function WorldMarkers:removePlayerHomingPoint(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function WorldMarkers:render() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function WorldMarkers:renderDirectionArrow(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: WorldMarkers, arg0: PerPlayerRender, arg1: int, arg2: int): void
+--- @return nil
+--- @overload fun(self: WorldMarkers, arg0: PerPlayerRender, arg1: integer, arg2: integer): nil
 function WorldMarkers:renderGridSquareMarkers() end
 
 --- @public
---- @return void
+--- @return nil
 function WorldMarkers:renderHomingPoint() end
 
 --- @public
---- @return void
+--- @return nil
 function WorldMarkers:reset() end
 
 --- @public
---- @return void
+--- @return nil
 function WorldMarkers:update() end
-
-

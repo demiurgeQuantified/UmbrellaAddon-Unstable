@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZJackieJaye: RandomizedZoneStoryBase
 --- @field public class any
-RZJackieJaye = {};
+RZJackieJaye = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZJackieJaye = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZJackieJaye:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

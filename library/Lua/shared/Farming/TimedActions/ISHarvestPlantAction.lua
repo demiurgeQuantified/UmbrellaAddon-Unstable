@@ -9,7 +9,6 @@
 ---@field [any] any
 ISHarvestPlantAction = ISBaseTimedAction:derive("ISHarvestPlantAction")
 
-
 ---@return any
 function ISHarvestPlantAction:complete() end
 
@@ -33,7 +32,6 @@ function ISHarvestPlantAction:update() end
 
 ---@return any
 function ISHarvestPlantAction:waitToStart() end
-
 
 ---@return ISHarvestPlantAction
 function ISHarvestPlantAction:new(character, plant, maxTime) end

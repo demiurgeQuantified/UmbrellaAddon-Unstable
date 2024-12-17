@@ -14,7 +14,6 @@
 ---@field [any] any
 AttachmentEditorUI = ISPanel:derive("AttachmentEditorUI")
 
-
 ---@return any
 function AttachmentEditorUI:createChildren() end
 
@@ -57,7 +56,6 @@ function AttachmentEditorUI:update() end
 ---@return any
 function AttachmentEditorUI:wroteScript(fileName) end
 
-
 ---@return AttachmentEditorUI
 function AttachmentEditorUI:new(x, y, width, height) end
 
@@ -68,7 +66,6 @@ function AttachmentEditorUI:new(x, y, width, height) end
 ---@field zeroVector any
 ---@field [any] any
 AttachmentEditorUI_Scene = ISUI3DScene:derive("AttachmentEditorUI_Scene")
-
 
 ---@return any
 function AttachmentEditorUI_Scene:onGizmoAccept() end
@@ -103,7 +100,6 @@ function AttachmentEditorUI_Scene:prerender() end
 ---@return any
 function AttachmentEditorUI_Scene:prerenderEditor() end
 
-
 ---@return AttachmentEditorUI_Scene
 function AttachmentEditorUI_Scene:new(x, y, width, height) end
 
@@ -111,7 +107,6 @@ function AttachmentEditorUI_Scene:new(x, y, width, height) end
 ---@field editor any
 ---@field [any] any
 AttachmentEditorUI_SwitchView = ISUI3DScene:derive("AttachmentEditorUI_SwitchView")
-
 
 ---@return any
 function AttachmentEditorUI_SwitchView:onMouseDown(x, y) end
@@ -128,7 +123,6 @@ function AttachmentEditorUI_SwitchView:onMouseWheel(del) end
 ---@return any
 function AttachmentEditorUI_SwitchView:prerender() end
 
-
 ---@return AttachmentEditorUI_SwitchView
 function AttachmentEditorUI_SwitchView:new(editor, x, y, width, height) end
 
@@ -139,7 +133,6 @@ function AttachmentEditorUI_SwitchView:new(editor, x, y, width, height) end
 ---@field [any] any
 AttachmentEditorUI_WorldAttachmentPanel = ISPanel:derive("AttachmentEditorUI_WorldAttachmentPanel")
 
-
 ---@return any
 function AttachmentEditorUI_WorldAttachmentPanel:createChildren() end
 
@@ -149,7 +142,6 @@ function AttachmentEditorUI_WorldAttachmentPanel:onTickBox(index, selected) end
 ---@return any
 function AttachmentEditorUI_WorldAttachmentPanel:setModelScriptName(scriptName) end
 
-
 ---@return AttachmentEditorUI_WorldAttachmentPanel
 function AttachmentEditorUI_WorldAttachmentPanel:new(x, y, width, height, editor) end
 
@@ -157,7 +149,6 @@ function AttachmentEditorUI_WorldAttachmentPanel:new(x, y, width, height, editor
 ---@field selectionMode any
 ---@field [any] any
 AttachmentEditorUI_ListBox = ISScrollingListBox:derive("AttachmentEditorUI_ListBox")
-
 
 ---@return any
 function AttachmentEditorUI_ListBox:clearSelection() end
@@ -186,13 +177,11 @@ function AttachmentEditorUI_ListBox:setSelectedRow(row) end
 ---@return any
 function AttachmentEditorUI_ListBox:setSelectedRows(rows) end
 
-
 ---@return AttachmentEditorUI_ListBox
 function AttachmentEditorUI_ListBox:new(x, y, width, height) end
 
 ---@class AttachmentEditorUI_EditPanel : ISPanel
 AttachmentEditorUI_EditPanel = ISPanel:derive("AttachmentEditorUI_EditPanel")
-
 
 ---@return any
 function AttachmentEditorUI_EditPanel:createList(x, y, w, h) end
@@ -245,7 +234,6 @@ function AttachmentEditorUI_EditPanel:toUI() end
 ---@return any
 function AttachmentEditorUI_EditPanel:updateEditor() end
 
-
 ---@return AttachmentEditorUI_EditPanel
 function AttachmentEditorUI_EditPanel:new(x, y, width, height) end
 
@@ -281,7 +269,6 @@ function AttachmentEditorUI_EditPanel:new(x, y, width, height) end
 ---@field transformMode any
 ---@field [any] any
 AttachmentEditorUI_EditAttachment = AttachmentEditorUI_EditPanel:derive("AttachmentEditorUI_EditAttachment")
-
 
 ---@return any
 function AttachmentEditorUI_EditAttachment:addVehiclePartParentMenus(context, vehicleScript, child, parentMenu) end
@@ -392,7 +379,13 @@ function AttachmentEditorUI_EditAttachment:onSetObjectAutoRotate(child) end
 function AttachmentEditorUI_EditAttachment:onSetObjectParent(child, childAttachment, parent, parentAttachment) end
 
 ---@return any
-function AttachmentEditorUI_EditAttachment:onSetObjectParentToVehiclePart(child, scriptPart, scriptModel, attachment) end
+function AttachmentEditorUI_EditAttachment:onSetObjectParentToVehiclePart(
+	child,
+	scriptPart,
+	scriptModel,
+	attachment
+)
+end
 
 ---@return any
 function AttachmentEditorUI_EditAttachment:onSetObjectVisible(child) end
@@ -423,7 +416,6 @@ function AttachmentEditorUI_EditAttachment:setSelectedModel(modelScript) end
 
 ---@return any
 function AttachmentEditorUI_EditAttachment:toUI() end
-
 
 ---@return AttachmentEditorUI_EditAttachment
 function AttachmentEditorUI_EditAttachment:new(x, y, width, height, editor) end

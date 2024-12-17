@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Season
 --- @field public class any
-Season = {};
+Season = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

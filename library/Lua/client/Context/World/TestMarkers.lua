@@ -8,7 +8,6 @@ TestMarkers.loc = {}
 TestMarkers.index = 1
 TestMarkers.enabled = false
 
-
 ---@return any
 function TestMarkers.add(_circle, _pointer) end
 

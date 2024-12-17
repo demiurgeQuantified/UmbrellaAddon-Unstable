@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSPokerNight: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSPokerNight = {};
+RDSPokerNight = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RDSPokerNight:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSPokerNight:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -24,7 +24,6 @@
 ---@field [any] any
 ISBuildWidgetIngredientsInputs = ISPanel:derive("ISBuildWidgetIngredientsInputs")
 
-
 ---@return any
 function ISBuildWidgetIngredientsInputs:addInput(_inputScript) end
 
@@ -54,7 +53,6 @@ function ISBuildWidgetIngredientsInputs:render() end
 
 ---@return any
 function ISBuildWidgetIngredientsInputs:update() end
-
 
 ---@return ISBuildWidgetIngredientsInputs
 function ISBuildWidgetIngredientsInputs:new(x, y, width, height, player, logic) end

@@ -11,7 +11,6 @@
 ---@field [any] any
 ISRemoveLeatherFromAnimal = ISBaseTimedAction:derive("ISRemoveLeatherFromAnimal")
 
-
 ---@return any
 function ISRemoveLeatherFromAnimal:complete() end
 
@@ -35,7 +34,6 @@ function ISRemoveLeatherFromAnimal:update() end
 
 ---@return any
 function ISRemoveLeatherFromAnimal:waitToStart() end
-
 
 ---@return ISRemoveLeatherFromAnimal
 function ISRemoveLeatherFromAnimal:new(character, body, hook, luaHook) end

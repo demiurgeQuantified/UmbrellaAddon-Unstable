@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class EntityDebugTest
 --- @field public class any
-EntityDebugTest = {};
+EntityDebugTest = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,19 +12,18 @@ EntityDebugTest = {};
 --- @static
 --- @param arg0 EntityDebugTestType
 --- @param arg1 IsoGridSquare
---- @return void
+--- @return nil
 function EntityDebugTest.CreateTest(arg0, arg1) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function EntityDebugTest.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function EntityDebugTest.Update() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,13 +31,12 @@ function EntityDebugTest.Update() end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function EntityDebugTest:create(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function EntityDebugTest:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

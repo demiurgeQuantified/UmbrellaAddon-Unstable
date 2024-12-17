@@ -8,7 +8,6 @@
 ---@field [any] any
 ISOpenContainerTimedAction = ISBaseTimedAction:derive("ISOpenContainerTimedAction")
 
-
 ---@return any
 function ISOpenContainerTimedAction:isValid() end
 
@@ -23,7 +22,6 @@ function ISOpenContainerTimedAction:stop() end
 
 ---@return any
 function ISOpenContainerTimedAction:update() end
-
 
 ---@return ISOpenContainerTimedAction
 function ISOpenContainerTimedAction:new(character, container, time, x, y) end

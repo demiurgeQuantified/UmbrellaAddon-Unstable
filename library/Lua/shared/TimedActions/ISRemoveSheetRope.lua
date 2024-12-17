@@ -6,7 +6,6 @@
 ---@field [any] any
 ISRemoveSheetRope = ISBaseTimedAction:derive("ISRemoveSheetRope")
 
-
 ---@return any
 function ISRemoveSheetRope:complete() end
 
@@ -30,7 +29,6 @@ function ISRemoveSheetRope:update() end
 
 ---@return any
 function ISRemoveSheetRope:waitToStart() end
-
 
 ---@return ISRemoveSheetRope
 function ISRemoveSheetRope:new(character, window) end

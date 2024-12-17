@@ -9,7 +9,6 @@
 ---@field [any] any
 ISRemoveMeatFromAnimal = ISBaseTimedAction:derive("ISRemoveMeatFromAnimal")
 
-
 ---@return any
 function ISRemoveMeatFromAnimal:complete() end
 
@@ -33,7 +32,6 @@ function ISRemoveMeatFromAnimal:update() end
 
 ---@return any
 function ISRemoveMeatFromAnimal:waitToStart() end
-
 
 ---@return ISRemoveMeatFromAnimal
 function ISRemoveMeatFromAnimal:new(character, body, hook, luaHook) end

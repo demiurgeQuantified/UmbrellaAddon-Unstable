@@ -16,10 +16,8 @@
 ISSafehousesList = ISPanel:derive("ISSafehousesList")
 ISSafehousesList.messages = {}
 
-
 ---@return any
 function ISSafehousesList.OnSafehousesChanged() end
-
 
 ---@return any
 function ISSafehousesList:close() end
@@ -38,7 +36,6 @@ function ISSafehousesList:populateList() end
 
 ---@return any
 function ISSafehousesList:prerender() end
-
 
 ---@return ISSafehousesList
 function ISSafehousesList:new(x, y, width, height, player) end

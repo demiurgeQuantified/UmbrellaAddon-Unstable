@@ -25,7 +25,6 @@
 ---@field [any] any
 WorldSelect = ISPanelJoypad:derive("WorldSelect")
 
-
 ---@return any
 function WorldSelect:checkSeed() end
 
@@ -94,7 +93,6 @@ function WorldSelect:render() end
 
 ---@return any
 function WorldSelect:saveGenParams() end
-
 
 ---@return WorldSelect
 function WorldSelect:new(x, y, width, height) end

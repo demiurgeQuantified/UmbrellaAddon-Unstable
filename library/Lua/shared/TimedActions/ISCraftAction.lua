@@ -17,7 +17,6 @@
 ---@field [any] any
 ISCraftAction = ISBaseTimedAction:derive("ISCraftAction")
 
-
 ---@return any
 function ISCraftAction:complete() end
 
@@ -44,7 +43,6 @@ function ISCraftAction:stop() end
 
 ---@return any
 function ISCraftAction:update() end
-
 
 ---@return ISCraftAction
 function ISCraftAction:new(character, item, recipe, container, containersIn) end

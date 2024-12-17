@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Trigger
 --- @field public class any
-Trigger = {};
+Trigger = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,15 +12,14 @@ Trigger = {};
 --- @return KahluaTable
 function Trigger:getModData() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
 --- @param arg0 BuildingDef
---- @param arg1 int
---- @param arg2 int
---- @param arg3 String
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 string
 --- @return Trigger
 function Trigger.new(arg0, arg1, arg2, arg3) end

@@ -10,7 +10,6 @@
 ---@field [any] any
 ISLightFromLiterature = ISBaseTimedAction:derive("ISLightFromLiterature")
 
-
 ---@return any
 function ISLightFromLiterature:complete() end
 
@@ -34,7 +33,6 @@ function ISLightFromLiterature:update() end
 
 ---@return any
 function ISLightFromLiterature:waitToStart() end
-
 
 ---@return ISLightFromLiterature
 function ISLightFromLiterature:new(character, item, lighter, campfire, fuelAmt) end

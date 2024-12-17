@@ -5,7 +5,6 @@ ISDebugUtils = {}
 ISDebugUtils.FONT_HGT_MED = getTextManager():getFontHeight(UIFont.Medium)
 ISDebugUtils.FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.Small)
 
-
 ---@return any
 function ISDebugUtils.addButton(_self, _data, _x, _y, _w, _h, _title, _func) end
 

@@ -14,7 +14,6 @@
 ---@field [any] any
 ISAnimalGenomeUI = ISCollapsableWindow:derive("ISAnimalGenomeUI")
 
-
 ---@return any
 function ISAnimalGenomeUI:changeValue(button) end
 
@@ -50,7 +49,6 @@ function ISAnimalGenomeUI:subPanelPreRender() end
 
 ---@return any
 function ISAnimalGenomeUI:subPanelRender() end
-
 
 ---@return ISAnimalGenomeUI
 function ISAnimalGenomeUI:new(x, y, width, height, animal, player) end

@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class TimeMode: Enum
 --- @field public class any
 --- @implement IOEnum
 --- @field public GameMinutes TimeMode
 --- @field public Seconds TimeMode
-TimeMode = {};
+TimeMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,13 +13,13 @@ TimeMode = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return TimeMode
 function TimeMode.fromByteId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return TimeMode
 function TimeMode.valueOf(arg0) end
 
@@ -28,19 +28,16 @@ function TimeMode.valueOf(arg0) end
 --- @return TimeMode[]
 function TimeMode.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
---- @overload fun(self: TimeMode): int
+--- @return integer
+--- @overload fun(self: TimeMode): integer
 function TimeMode:getBits() end
 
 --- @public
---- @return byte
---- @overload fun(self: TimeMode): byte
+--- @return integer
+--- @overload fun(self: TimeMode): integer
 function TimeMode:getByteId() end
-
-

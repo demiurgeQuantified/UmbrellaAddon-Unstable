@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FluidSample
 --- @field public class any
-FluidSample = {};
+FluidSample = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,25 +16,24 @@ function FluidSample.Alloc() end
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @return FluidSample
---- @overload fun(arg0: FluidSample, arg1: ByteBuffer, arg2: int): FluidSample
+--- @overload fun(arg0: FluidSample, arg1: ByteBuffer, arg2: integer): FluidSample
 function FluidSample.Load(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 FluidSample
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function FluidSample.Save(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function FluidSample:clear() end
 
 --- @public
@@ -42,23 +41,23 @@ function FluidSample:clear() end
 function FluidSample:copy() end
 
 --- @public
---- @return float
+--- @return number
 function FluidSample:getAmount() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Fluid
 function FluidSample:getFluid(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return FluidInstance
 --- @overload fun(self: FluidSample, arg0: Fluid): FluidInstance
 function FluidSample:getFluidInstance(arg0) end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function FluidSample:getPercentage(arg0) end
 
 --- @public
@@ -74,16 +73,14 @@ function FluidSample:isEmpty() end
 function FluidSample:isPureFluid() end
 
 --- @public
---- @return void
+--- @return nil
 function FluidSample:release() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function FluidSample:scaleToAmount(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function FluidSample:size() end
-
-

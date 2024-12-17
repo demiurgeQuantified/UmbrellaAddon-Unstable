@@ -40,25 +40,23 @@
 XuiDebugWindow = ISCollapsableWindow:derive("XuiDebugWindow")
 XuiDebugWindow.instance = false
 XuiDebugWindow.customTestWindow = {
-    instance = false,
-    x = false,
-    y = false,
+	instance = false,
+	x = false,
+	y = false,
 }
 XuiDebugWindow.testWindow = {
-    instance = false,
-    x = false,
-    y = false,
+	instance = false,
+	x = false,
+	y = false,
 }
 XuiDebugWindow.viewScriptWindow = {
-    instance = false,
-    x = false,
-    y = false,
+	instance = false,
+	x = false,
+	y = false,
 }
-
 
 ---@return any
 function XuiDebugWindow.OnOpenPanel(_player) end
-
 
 ---@return any
 function XuiDebugWindow:addScriptElements(_script, _depth, _color) end
@@ -128,7 +126,6 @@ function XuiDebugWindow:prerender() end
 
 ---@return any
 function XuiDebugWindow:render() end
-
 
 ---@return XuiDebugWindow
 function XuiDebugWindow:new(x, y, width, height, player) end

@@ -31,7 +31,6 @@
 ISUIElement = ISBaseObject:derive("ISUIElement")
 ISUIElement.IDMax = 1
 
-
 ---@return any
 function ISUIElement:addChild(otherElement) end
 
@@ -499,7 +498,6 @@ function ISUIElement:updateScrollbars() end
 
 ---@return any
 function ISUIElement:wrapInCollapsableWindow(title, resizable, subClass) end
-
 
 ---@return ISUIElement
 function ISUIElement:new(x, y, width, height) end

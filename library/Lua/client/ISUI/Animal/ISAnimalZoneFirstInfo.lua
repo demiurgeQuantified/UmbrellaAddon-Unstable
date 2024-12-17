@@ -10,10 +10,8 @@
 ---@field [any] any
 ISAnimalZoneFirstInfo = ISPanel:derive("ISAnimalZoneFirstInfo")
 
-
 ---@return any
 function ISAnimalZoneFirstInfo.showUI(force) end
-
 
 ---@return any
 function ISAnimalZoneFirstInfo:initialise() end
@@ -26,7 +24,6 @@ function ISAnimalZoneFirstInfo:prerender() end
 
 ---@return any
 function ISAnimalZoneFirstInfo:render() end
-
 
 ---@return ISAnimalZoneFirstInfo
 function ISAnimalZoneFirstInfo:new(x, y) end

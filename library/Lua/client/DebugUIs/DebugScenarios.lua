@@ -13,13 +13,11 @@ debugScenarios = debugScenarios or {}
 ---@field [any] any
 DebugScenarios = ISPanel:derive("DebugScenarios")
 
-
 ---@return any
 function DebugScenarios.ongamestart() end
 
 ---@return any
 function DebugScenarios.onloadgs(sq) end
-
 
 ---@return any
 function DebugScenarios:createChildren() end
@@ -44,7 +42,6 @@ function DebugScenarios:onResolutionChange(oldw, oldh, neww, newh) end
 
 ---@return any
 function DebugScenarios:prerender() end
-
 
 ---@return DebugScenarios
 function DebugScenarios:new(x, y, width, height) end

@@ -5,7 +5,6 @@ ISVehicleRegulator = {}
 ISVehicleRegulator.xPressed = {}
 ISVehicleRegulator.changedSpeed = {}
 
-
 ---@return any
 function ISVehicleRegulator.onJoypadPressDown(joypadData) end
 

@@ -17,10 +17,8 @@
 ISPostDeathUI = ISPanelJoypad:derive("ISPostDeathUI")
 ISPostDeathUI.instance = {}
 
-
 ---@return any
 function ISPostDeathUI.OnPlayerDeath(playerObj) end
-
 
 ---@return any
 function ISPostDeathUI:configButton(button) end
@@ -66,7 +64,6 @@ function ISPostDeathUI:prerender() end
 
 ---@return any
 function ISPostDeathUI:render() end
-
 
 ---@return ISPostDeathUI
 function ISPostDeathUI:new(playerIndex) end

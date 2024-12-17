@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class ColNfo
 --- @field public class any
-ColNfo = {};
+ColNfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function ColNfo:getB() end
 
 --- @public
---- @return int
+--- @return integer
 function ColNfo:getBInt() end
 
 --- @public
@@ -25,40 +25,39 @@ function ColNfo:getColor() end
 function ColNfo:getColorSet() end
 
 --- @public
---- @return int
+--- @return integer
 function ColNfo:getColorSetIndex() end
 
 --- @public
---- @return float
+--- @return number
 function ColNfo:getG() end
 
 --- @public
---- @return int
+--- @return integer
 function ColNfo:getGInt() end
 
 --- @public
---- @return String
+--- @return string
 function ColNfo:getHex() end
 
 --- @public
---- @return String
+--- @return string
 function ColNfo:getName() end
 
 --- @public
---- @return float
+--- @return number
 function ColNfo:getR() end
 
 --- @public
---- @return int
+--- @return integer
 function ColNfo:getRInt() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 Color
 --- @param arg2 ColorSet
 --- @return ColNfo

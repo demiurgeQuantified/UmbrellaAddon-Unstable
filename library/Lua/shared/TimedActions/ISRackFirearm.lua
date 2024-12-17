@@ -11,7 +11,6 @@
 ---@field [any] any
 ISRackFirearm = ISBaseTimedAction:derive("ISRackFirearm")
 
-
 ---@return any
 function ISRackFirearm:animEvent(event, parameter) end
 
@@ -50,7 +49,6 @@ function ISRackFirearm:stop() end
 
 ---@return any
 function ISRackFirearm:update() end
-
 
 ---@return ISRackFirearm
 function ISRackFirearm:new(character, gun) end

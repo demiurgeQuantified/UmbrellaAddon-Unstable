@@ -12,7 +12,6 @@
 SadisticMusicDirector = ISBaseObject:derive("SadisticMusicDirector")
 SadisticMusicDirector.instance = SadisticMusicDirector:new()
 
-
 ---@return any
 function SadisticMusicDirector:changeTrack() end
 
@@ -24,7 +23,6 @@ function SadisticMusicDirector:shouldChangeTrack() end
 
 ---@return any
 function SadisticMusicDirector:tick() end
-
 
 ---@return SadisticMusicDirector
 function SadisticMusicDirector:new() end

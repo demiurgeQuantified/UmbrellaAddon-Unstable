@@ -26,7 +26,6 @@
 ---@field [any] any
 ISEnergyBar = ISUIElement:derive("ISEnergyBar")
 
-
 ---@return any
 function ISEnergyBar:activateToolTip() end
 
@@ -53,7 +52,6 @@ function ISEnergyBar:prerender() end
 
 ---@return any
 function ISEnergyBar:renderTexture(_x, _y, _w, _h, _vertical) end
-
 
 ---@return ISEnergyBar
 function ISEnergyBar:new(x, y, width, height, player, resource) end

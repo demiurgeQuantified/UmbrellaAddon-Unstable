@@ -6,7 +6,6 @@
 ---@field [any] any
 ISEquipHeavyItem = ISBaseTimedAction:derive("ISEquipHeavyItem")
 
-
 ---@return any
 function ISEquipHeavyItem:complete() end
 
@@ -33,7 +32,6 @@ function ISEquipHeavyItem:update() end
 
 ---@return any
 function ISEquipHeavyItem:waitToStart() end
-
 
 ---@return ISEquipHeavyItem
 function ISEquipHeavyItem:new(character, item) end

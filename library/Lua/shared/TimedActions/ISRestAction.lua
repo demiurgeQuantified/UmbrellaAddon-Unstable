@@ -12,7 +12,6 @@
 ---@field [any] any
 ISRestAction = ISBaseTimedAction:derive("ISRestAction")
 
-
 ---@return any
 function ISRestAction:calculateSitOnFurnitureDirection(character, bed) end
 
@@ -48,7 +47,6 @@ function ISRestAction:update() end
 
 ---@return any
 function ISRestAction:waitToStart() end
-
 
 ---@return ISRestAction
 function ISRestAction:new(character, bed, useAnimations) end

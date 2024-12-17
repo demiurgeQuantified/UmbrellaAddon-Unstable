@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class StorySound
 --- @field public class any
-StorySound = {};
+StorySound = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function StorySound:getBaseVolume() end
 
 --- @public
@@ -17,33 +17,32 @@ function StorySound:getBaseVolume() end
 function StorySound:getClone() end
 
 --- @public
---- @return String
+--- @return string
 function StorySound:getName() end
 
 --- @public
---- @return long
---- @overload fun(self: StorySound, arg0: float): long
---- @overload fun(self: StorySound, arg0: float, arg1: float, arg2: float, arg3: float, arg4: float): long
---- @overload fun(self: StorySound, arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float): long
+--- @return integer
+--- @overload fun(self: StorySound, arg0: number): integer
+--- @overload fun(self: StorySound, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number): integer
+--- @overload fun(self: StorySound, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number): integer
 function StorySound:playSound() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function StorySound:setBaseVolume(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function StorySound:setName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param arg0 string
+--- @param arg1 number
 --- @return StorySound
 function StorySound.new(arg0, arg1) end

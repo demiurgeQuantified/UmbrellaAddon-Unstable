@@ -23,7 +23,6 @@
 ---@field [any] any
 WorldMapEditor = ISUIElement:derive("WorldMapEditor")
 
-
 ---@return any
 function WorldMapEditor:close() end
 
@@ -86,7 +85,6 @@ function WorldMapEditor:showUI() end
 
 ---@return any
 function WorldMapEditor:update() end
-
 
 ---@return WorldMapEditor
 function WorldMapEditor:new(x, y, width, height, javaObject) end

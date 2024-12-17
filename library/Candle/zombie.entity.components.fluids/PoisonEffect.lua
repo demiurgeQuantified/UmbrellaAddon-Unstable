@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PoisonEffect: Enum
 --- @field public class any
@@ -8,7 +8,7 @@
 --- @field public Mild PoisonEffect
 --- @field public None PoisonEffect
 --- @field public Severe PoisonEffect
-PoisonEffect = {};
+PoisonEffect = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,25 +16,25 @@ PoisonEffect = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return PoisonEffect
 function PoisonEffect.FromLevel(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return PoisonEffect
 function PoisonEffect.FromNameLower(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function PoisonEffect.containsNameLowercase(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return PoisonEffect
 function PoisonEffect.valueOf(arg0) end
 
@@ -43,21 +43,18 @@ function PoisonEffect.valueOf(arg0) end
 --- @return PoisonEffect[]
 function PoisonEffect.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function PoisonEffect:getLevel() end
 
 --- @public
---- @return int
+--- @return integer
 function PoisonEffect:getPlayerEffect() end
 
 --- @public
---- @return String
+--- @return string
 function PoisonEffect:toStringLower() end
-
-

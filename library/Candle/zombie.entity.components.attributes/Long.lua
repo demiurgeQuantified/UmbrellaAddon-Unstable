@@ -1,20 +1,20 @@
---- @meta
+--- @meta _
 
 --- @class Long: Numeric
 --- @field public class any
-Long = {};
+Long = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Long
+--- @return integer
 --- @overload fun(self: Long): Number
 function Long:getMax() end
 
 --- @public
---- @return Long
+--- @return integer
 --- @overload fun(self: Long): Number
 function Long:getMin() end
 
@@ -23,9 +23,7 @@ function Long:getMin() end
 function Long:getValueType() end
 
 --- @public
---- @param arg0 Long
---- @return Long
+--- @param arg0 integer
+--- @return integer
 --- @overload fun(self: Long, arg0: Number): Number
 function Long:validate(arg0) end
-
-

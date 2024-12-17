@@ -10,7 +10,6 @@
 ---@field [any] any
 TileGeometryEditor_TileList2 = ISPanel:derive("TileGeometryEditor_TileList2")
 
-
 ---@return any
 function TileGeometryEditor_TileList2:assignDepthTextures(col, row) end
 
@@ -94,7 +93,6 @@ function TileGeometryEditor_TileList2:selectionToggle(col, row) end
 
 ---@return any
 function TileGeometryEditor_TileList2:setTileset(tilesetName) end
-
 
 ---@return TileGeometryEditor_TileList2
 function TileGeometryEditor_TileList2:new(x, y, width, height, picker) end

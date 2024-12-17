@@ -10,7 +10,6 @@
 ---@field [any] any
 ISRemoveBush = ISBaseTimedAction:derive("ISRemoveBush")
 
-
 ---@return any
 function ISRemoveBush:animEvent(event, parameter) end
 
@@ -49,7 +48,6 @@ function ISRemoveBush:useEndurance() end
 
 ---@return any
 function ISRemoveBush:waitToStart() end
-
 
 ---@return ISRemoveBush
 function ISRemoveBush:new(character, square, wallVine) end

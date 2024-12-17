@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RVSPoliceBlockadeShooting: RandomizedVehicleStoryBase
 --- @field public class any
-RVSPoliceBlockadeShooting = {};
+RVSPoliceBlockadeShooting = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,15 +25,14 @@ function RVSPoliceBlockadeShooting:isValid(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RVSPoliceBlockadeShooting:randomizeVehicleStory(arg0, arg1) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner
 --- @param arg1 Element
---- @return void
+--- @return nil
 function RVSPoliceBlockadeShooting:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

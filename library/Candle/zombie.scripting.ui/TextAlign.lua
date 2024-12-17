@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class TextAlign: Enum
 --- @field public class any
 --- @field public Center TextAlign
 --- @field public Left TextAlign
 --- @field public Right TextAlign
-TextAlign = {};
+TextAlign = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ TextAlign = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return TextAlign
 function TextAlign.valueOf(arg0) end
 
@@ -21,5 +21,3 @@ function TextAlign.valueOf(arg0) end
 --- @static
 --- @return TextAlign[]
 function TextAlign.values() end
-
-

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ClimateHistory
 --- @field public class any
-ClimateHistory = {};
+ClimateHistory = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,14 +10,13 @@ ClimateHistory = {};
 
 --- @public
 --- @param arg0 ClimateManager
---- @return void
+--- @return nil
 function ClimateHistory:init(arg0) end
 
 --- @public
 --- @param arg0 ClimateManager
---- @return void
+--- @return nil
 function ClimateHistory:updateDayChange(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

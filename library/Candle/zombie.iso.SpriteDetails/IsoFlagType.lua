@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoFlagType: Enum
 --- @field public class any
@@ -109,7 +109,7 @@
 --- @field public waterPiped IsoFlagType
 --- @field public windowN IsoFlagType
 --- @field public windowW IsoFlagType
-IsoFlagType = {};
+IsoFlagType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -117,19 +117,19 @@ IsoFlagType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoFlagType
 function IsoFlagType.FromString(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoFlagType
 function IsoFlagType.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoFlagType
 function IsoFlagType.valueOf(arg0) end
 
@@ -138,13 +138,10 @@ function IsoFlagType.valueOf(arg0) end
 --- @return IsoFlagType[]
 function IsoFlagType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function IsoFlagType:index() end
-
-

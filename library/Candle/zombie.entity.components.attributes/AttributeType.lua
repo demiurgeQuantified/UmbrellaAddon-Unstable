@@ -1,23 +1,23 @@
---- @meta
+--- @meta _
 
 --- @class AttributeType
 --- @field public class any
-AttributeType = {};
+AttributeType = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function AttributeType:getName() end
 
 --- @public
---- @return String
+--- @return string
 function AttributeType:getNameUI() end
 
 --- @public
---- @return String
+--- @return string
 function AttributeType:getTranslateKey() end
 
 --- @public
@@ -45,7 +45,5 @@ function AttributeType:isNumeric() end
 function AttributeType:isReadOnly() end
 
 --- @public
---- @return String
+--- @return string
 function AttributeType:toString() end
-
-

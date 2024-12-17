@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FakeDeadAttackState: State
 --- @field public class any
-FakeDeadAttackState = {};
+FakeDeadAttackState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ FakeDeadAttackState = {};
 --- @return FakeDeadAttackState
 function FakeDeadAttackState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,24 +20,23 @@ function FakeDeadAttackState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function FakeDeadAttackState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FakeDeadAttackState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FakeDeadAttackState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FakeDeadAttackState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

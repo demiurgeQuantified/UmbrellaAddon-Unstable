@@ -7,7 +7,6 @@
 ---@field [any] any
 ISBBQRemovePropaneTank = ISBaseTimedAction:derive("ISBBQRemovePropaneTank")
 
-
 ---@return any
 function ISBBQRemovePropaneTank:complete() end
 
@@ -31,7 +30,6 @@ function ISBBQRemovePropaneTank:update() end
 
 ---@return any
 function ISBBQRemovePropaneTank:waitToStart() end
-
 
 ---@return ISBBQRemovePropaneTank
 function ISBBQRemovePropaneTank:new(character, bbq) end

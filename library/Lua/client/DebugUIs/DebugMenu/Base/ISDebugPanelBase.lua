@@ -13,10 +13,8 @@
 ---@field [any] any
 ISDebugPanelBase = ISPanel:derive("ISDebugPanelBase")
 
-
 ---@return any
 function ISDebugPanelBase.OnOpenPanel(_class, _x, _y, _w, _h, _title) end
-
 
 ---@return any
 function ISDebugPanelBase:close() end
@@ -38,7 +36,6 @@ function ISDebugPanelBase:registerPanel(_buttonTitle, _panelClass, _ignoreSortin
 
 ---@return any
 function ISDebugPanelBase:update() end
-
 
 ---@return ISDebugPanelBase
 function ISDebugPanelBase:new(x, y, width, height, title) end

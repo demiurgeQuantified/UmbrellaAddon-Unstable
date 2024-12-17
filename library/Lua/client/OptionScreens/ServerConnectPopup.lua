@@ -31,7 +31,6 @@
 ---@field [any] any
 ServerConnectPopup = ISPanelJoypad:derive("ServerConnectPopup")
 
-
 ---@return any
 function ServerConnectPopup:checkFields() end
 
@@ -64,7 +63,6 @@ function ServerConnectPopup:prerender() end
 
 ---@return any
 function ServerConnectPopup:setServer(ip, port, passwordStr) end
-
 
 ---@return ServerConnectPopup
 function ServerConnectPopup:new(x, y, width, height) end

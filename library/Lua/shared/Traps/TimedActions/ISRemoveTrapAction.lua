@@ -8,7 +8,6 @@
 ---@field [any] any
 ISRemoveTrapAction = ISBaseTimedAction:derive("ISRemoveTrapAction")
 
-
 ---@return any
 function ISRemoveTrapAction:complete() end
 
@@ -32,7 +31,6 @@ function ISRemoveTrapAction:update() end
 
 ---@return any
 function ISRemoveTrapAction:waitToStart() end
-
 
 ---@return ISRemoveTrapAction
 function ISRemoveTrapAction:new(character, trap) end

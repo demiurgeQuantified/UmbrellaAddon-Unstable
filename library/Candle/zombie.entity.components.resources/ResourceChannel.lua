@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ResourceChannel: Enum
 --- @field public class any
@@ -13,7 +13,7 @@
 --- @field public Channel_Red ResourceChannel
 --- @field public Channel_Yellow ResourceChannel
 --- @field public NO_CHANNEL ResourceChannel
-ResourceChannel = {};
+ResourceChannel = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,13 +21,13 @@ ResourceChannel = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return ResourceChannel
 function ResourceChannel.fromId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ResourceChannel
 function ResourceChannel.valueOf(arg0) end
 
@@ -36,23 +36,20 @@ function ResourceChannel.valueOf(arg0) end
 --- @return ResourceChannel[]
 function ResourceChannel.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
---- @overload fun(self: ResourceChannel): int
+--- @return integer
+--- @overload fun(self: ResourceChannel): integer
 function ResourceChannel:getBits() end
 
 --- @public
---- @return byte
---- @overload fun(self: ResourceChannel): byte
+--- @return integer
+--- @overload fun(self: ResourceChannel): integer
 function ResourceChannel:getByteId() end
 
 --- @public
 --- @return Color
 function ResourceChannel:getColor() end
-
-

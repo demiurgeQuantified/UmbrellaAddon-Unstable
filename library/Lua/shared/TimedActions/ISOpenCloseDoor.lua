@@ -10,7 +10,6 @@
 ---@field [any] any
 ISOpenCloseDoor = ISBaseTimedAction:derive("ISOpenCloseDoor")
 
-
 ---@return any
 function ISOpenCloseDoor:complete() end
 
@@ -31,7 +30,6 @@ function ISOpenCloseDoor:stop() end
 
 ---@return any
 function ISOpenCloseDoor:update() end
-
 
 ---@return ISOpenCloseDoor
 function ISOpenCloseDoor:new(character, item) end

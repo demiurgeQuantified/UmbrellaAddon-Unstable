@@ -9,7 +9,6 @@
 ---@field [any] any
 ISRemoveCampfireAction = ISBaseTimedAction:derive("ISRemoveCampfireAction")
 
-
 ---@return any
 function ISRemoveCampfireAction:complete() end
 
@@ -33,7 +32,6 @@ function ISRemoveCampfireAction:update() end
 
 ---@return any
 function ISRemoveCampfireAction:waitToStart() end
-
 
 ---@return ISRemoveCampfireAction
 function ISRemoveCampfireAction:new(character, campfire, maxTime) end

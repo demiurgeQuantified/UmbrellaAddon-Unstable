@@ -1,27 +1,27 @@
---- @meta
+--- @meta _
 
 --- @class PVPEvent
 --- @field public class any
-PVPEvent = {};
+PVPEvent = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function PVPEvent:getText() end
 
 --- @public
---- @return float
+--- @return number
 function PVPEvent:getX() end
 
 --- @public
---- @return float
+--- @return number
 function PVPEvent:getY() end
 
 --- @public
---- @return float
+--- @return number
 function PVPEvent:getZ() end
 
 --- @public
@@ -29,25 +29,24 @@ function PVPEvent:getZ() end
 function PVPEvent:isSet() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @return void
---- @overload fun(self: PVPEvent, arg0: String, arg1: String, arg2: String, arg3: float, arg4: float, arg5: float): void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
+--- @overload fun(self: PVPEvent, arg0: string, arg1: string, arg2: string, arg3: number, arg4: number, arg5: number): nil
 function PVPEvent:reset(arg0, arg1, arg2, arg3, arg4) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
 --- @return PVPEvent
 function PVPEvent.new(arg0, arg1, arg2, arg3, arg4) end

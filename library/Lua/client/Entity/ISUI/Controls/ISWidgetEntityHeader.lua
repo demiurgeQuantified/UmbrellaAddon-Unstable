@@ -24,7 +24,6 @@
 ---@field [any] any
 ISWidgetEntityHeader = ISPanel:derive("ISWidgetEntityHeader")
 
-
 ---@return any
 function ISWidgetEntityHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -49,6 +48,17 @@ function ISWidgetEntityHeader:render() end
 ---@return any
 function ISWidgetEntityHeader:update() end
 
-
 ---@return ISWidgetEntityHeader
-function ISWidgetEntityHeader:new(x, y, width, height, player, entity, entityStyle, _styleIcon, _styleLabel, _styleButton) end
+function ISWidgetEntityHeader:new(
+	x,
+	y,
+	width,
+	height,
+	player,
+	entity,
+	entityStyle,
+	_styleIcon,
+	_styleLabel,
+	_styleButton
+)
+end

@@ -25,7 +25,6 @@
 ---@field [any] any
 ISNewsUpdate = ISPanelJoypad:derive("ISNewsUpdate")
 
-
 ---@return any
 function ISNewsUpdate:destroy() end
 
@@ -64,7 +63,6 @@ function ISNewsUpdate:update() end
 
 ---@return any
 function ISNewsUpdate:updateButtons() end
-
 
 ---@return ISNewsUpdate
 function ISNewsUpdate:new(x, y, width, height, yesno, target, onclick, player, param1, param2) end

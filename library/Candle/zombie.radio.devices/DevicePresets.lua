@@ -1,36 +1,36 @@
---- @meta
+--- @meta _
 
 --- @class DevicePresets
 --- @field public class any
 --- @implement Cloneable
-DevicePresets = {};
+DevicePresets = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function DevicePresets:addPreset(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function DevicePresets:clearPresets() end
 
 --- @public
---- @return int
+--- @return integer
 function DevicePresets:getMaxPresets() end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function DevicePresets:getPresetFreq(arg0) end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function DevicePresets:getPresetName(arg0) end
 
 --- @public
@@ -43,51 +43,50 @@ function DevicePresets:getPresetsLua() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function DevicePresets:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DevicePresets:removePreset(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function DevicePresets:save(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DevicePresets:setMaxPresets(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 string
+--- @param arg2 integer
+--- @return nil
 function DevicePresets:setPreset(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function DevicePresets:setPresetFreq(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @return void
+--- @param arg0 integer
+--- @param arg1 string
+--- @return nil
 function DevicePresets:setPresetName(arg0, arg1) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function DevicePresets:setPresets(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

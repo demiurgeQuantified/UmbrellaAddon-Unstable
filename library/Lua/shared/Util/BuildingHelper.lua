@@ -3,7 +3,6 @@
 ---@class BuildingHelper
 BuildingHelper = {}
 
-
 ---@return any
 function BuildingHelper.getFreeTileFromBuilding(building) end
 

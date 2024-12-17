@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class AnimatorDebugMonitor
 --- @field public class any
 --- @field public instance AnimatorDebugMonitor
-AnimatorDebugMonitor = {};
+AnimatorDebugMonitor = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,10 +21,9 @@ function AnimatorDebugMonitor.isKnownVarsDirty() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimatorDebugMonitor.registerVariable(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,12 +38,12 @@ function AnimatorDebugMonitor:IsDirty() end
 function AnimatorDebugMonitor:IsDirtyFloatList() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimatorDebugMonitor:addCustomVariable(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function AnimatorDebugMonitor:getFilter(arg0) end
 
@@ -53,7 +52,7 @@ function AnimatorDebugMonitor:getFilter(arg0) end
 function AnimatorDebugMonitor:getFloatNames() end
 
 --- @public
---- @return String
+--- @return string
 function AnimatorDebugMonitor:getLogString() end
 
 --- @public
@@ -61,19 +60,19 @@ function AnimatorDebugMonitor:getLogString() end
 function AnimatorDebugMonitor:getSelectedVarFloatList() end
 
 --- @public
---- @return String
+--- @return string
 function AnimatorDebugMonitor:getSelectedVarMaxFloat() end
 
 --- @public
---- @return String
+--- @return string
 function AnimatorDebugMonitor:getSelectedVarMinFloat() end
 
 --- @public
---- @return String
+--- @return string
 function AnimatorDebugMonitor:getSelectedVariable() end
 
 --- @public
---- @return float
+--- @return number
 function AnimatorDebugMonitor:getSelectedVariableFloat() end
 
 --- @public
@@ -85,37 +84,36 @@ function AnimatorDebugMonitor:getTarget() end
 function AnimatorDebugMonitor:isDoTickStamps() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimatorDebugMonitor:removeCustomVariable(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimatorDebugMonitor:setDoTickStamps(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimatorDebugMonitor:setFilter(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimatorDebugMonitor:setSelectedVariable(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function AnimatorDebugMonitor:setTarget(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimLayer[]
---- @return void
+--- @return nil
 function AnimatorDebugMonitor:update(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

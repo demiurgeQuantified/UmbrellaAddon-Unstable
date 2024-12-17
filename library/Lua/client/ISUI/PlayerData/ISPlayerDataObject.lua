@@ -30,10 +30,8 @@
 ---@field [any] any
 ISPlayerDataObject = ISBaseObject:derive("ISPlayerDataObject")
 
-
 ---@return any
 function ISPlayerDataObject.onKeyPressed(key) end
-
 
 ---@return any
 function ISPlayerDataObject:createInventoryInterface() end
@@ -46,7 +44,6 @@ function ISPlayerDataObject:placeInventoryScreens(playerID, totalPlayers, mouse)
 
 ---@return any
 function ISPlayerDataObject:revertToKeyboardAndMouse() end
-
 
 ---@return ISPlayerDataObject
 function ISPlayerDataObject:new(id) end

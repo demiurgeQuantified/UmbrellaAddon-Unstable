@@ -8,7 +8,6 @@
 ---@field [any] any
 ISChangeFishingRodEquip = ISBaseTimedAction:derive("ISChangeFishingRodEquip")
 
-
 ---@return any
 function ISChangeFishingRodEquip:complete() end
 
@@ -29,7 +28,6 @@ function ISChangeFishingRodEquip:stop() end
 
 ---@return any
 function ISChangeFishingRodEquip:update() end
-
 
 ---@return ISChangeFishingRodEquip
 function ISChangeFishingRodEquip:new(character, rod, item) end

@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class VehiclePart: GameEntity
 --- @field public class any
 --- @implement ChatElementOwner
 --- @implement WaveSignalDevice
-VehiclePart = {};
+VehiclePart = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,28 +12,27 @@ VehiclePart = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
 function VehiclePart.getNumberByCondition(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
---- @param arg5 String
---- @param arg6 int
---- @return void
---- @overload fun(self: VehiclePart, arg0: String, arg1: float, arg2: float, arg3: float, arg4: String, arg5: String, arg6: int): void
---- @overload fun(self: VehiclePart, arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 string
+--- @param arg5 string
+--- @param arg6 integer
+--- @return nil
+--- @overload fun(self: VehiclePart, arg0: string, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
+--- @overload fun(self: VehiclePart, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
 function VehiclePart:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -43,7 +42,7 @@ function VehiclePart:HasPlayerInRange() end
 
 --- @public
 --- @param arg0 VehiclePart
---- @return void
+--- @return nil
 function VehiclePart:addChild(arg0) end
 
 --- @public
@@ -51,24 +50,24 @@ function VehiclePart:addChild(arg0) end
 function VehiclePart:createSignalDevice() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 int
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 integer
+--- @return nil
 function VehiclePart:createSpotLight(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function VehiclePart:damage(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function VehiclePart:doInventoryItemStats(arg0, arg1) end
 
 --- @public
@@ -76,16 +75,16 @@ function VehiclePart:doInventoryItemStats(arg0, arg1) end
 function VehiclePart:findWindow() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Anim
 function VehiclePart:getAnimById(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function VehiclePart:getArea() end
 
 --- @public
---- @return String
+--- @return string
 function VehiclePart:getCategory() end
 
 --- @public
@@ -93,12 +92,12 @@ function VehiclePart:getCategory() end
 function VehiclePart:getChatElement() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return VehiclePart
 function VehiclePart:getChild(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function VehiclePart:getChildCount() end
 
 --- @public
@@ -106,29 +105,29 @@ function VehiclePart:getChildCount() end
 function VehiclePart:getChildWindow() end
 
 --- @public
---- @return int
+--- @return integer
 function VehiclePart:getCondition() end
 
 --- @public
---- @return int
---- @overload fun(self: VehiclePart, arg0: IsoGameCharacter): int
+--- @return integer
+--- @overload fun(self: VehiclePart, arg0: IsoGameCharacter): integer
 function VehiclePart:getContainerCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getContainerContentAmount() end
 
 --- @public
---- @return String
+--- @return string
 function VehiclePart:getContainerContentType() end
 
 --- @public
---- @return int
+--- @return integer
 function VehiclePart:getContainerSeatNumber() end
 
 --- @public
---- @return float
---- @overload fun(self: VehiclePart): float
+--- @return number
+--- @overload fun(self: VehiclePart): number
 function VehiclePart:getDelta() end
 
 --- @public
@@ -141,15 +140,15 @@ function VehiclePart:getDeviceData() end
 function VehiclePart:getDoor() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getDurability() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getEngineLoudness() end
 
 --- @public
---- @return long
+--- @return integer
 function VehiclePart:getEntityNetID() end
 
 --- @public
@@ -157,11 +156,11 @@ function VehiclePart:getEntityNetID() end
 function VehiclePart:getGameEntityType() end
 
 --- @public
---- @return String
+--- @return string
 function VehiclePart:getId() end
 
 --- @public
---- @return int
+--- @return integer
 function VehiclePart:getIndex() end
 
 --- @public
@@ -177,7 +176,7 @@ function VehiclePart:getItemContainer() end
 function VehiclePart:getItemType() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getLastUpdated() end
 
 --- @public
@@ -185,24 +184,24 @@ function VehiclePart:getLastUpdated() end
 function VehiclePart:getLight() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getLightDistance() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getLightFocusing() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getLightIntensity() end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function VehiclePart:getLuaFunction(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function VehiclePart:getMechanicSkillInstaller() end
 
 --- @public
@@ -224,15 +223,15 @@ function VehiclePart:getScriptPart() end
 function VehiclePart:getSquare() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getSuspensionCompression() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getSuspensionDamping() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function VehiclePart:getTable(arg0) end
 
@@ -241,11 +240,11 @@ function VehiclePart:getTable(arg0) end
 function VehiclePart:getVehicle() end
 
 --- @public
---- @return float
+--- @return number
 function VehiclePart:getWheelFriction() end
 
 --- @public
---- @return int
+--- @return integer
 function VehiclePart:getWheelIndex() end
 
 --- @public
@@ -253,21 +252,21 @@ function VehiclePart:getWheelIndex() end
 function VehiclePart:getWindow() end
 
 --- @public
---- @return float
---- @overload fun(self: VehiclePart): float
---- @overload fun(self: VehiclePart): float
+--- @return number
+--- @overload fun(self: VehiclePart): number
+--- @overload fun(self: VehiclePart): number
 function VehiclePart:getX() end
 
 --- @public
---- @return float
---- @overload fun(self: VehiclePart): float
---- @overload fun(self: VehiclePart): float
+--- @return number
+--- @overload fun(self: VehiclePart): number
+--- @overload fun(self: VehiclePart): number
 function VehiclePart:getY() end
 
 --- @public
---- @return float
---- @overload fun(self: VehiclePart): float
---- @overload fun(self: VehiclePart): float
+--- @return number
+--- @overload fun(self: VehiclePart): number
+--- @overload fun(self: VehiclePart): number
 function VehiclePart:getZ() end
 
 --- @public
@@ -300,140 +299,139 @@ function VehiclePart:isSpecificItem() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function VehiclePart:load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function VehiclePart:repair() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function VehiclePart:save(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehiclePart:setAllModelsVisible(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function VehiclePart:setCategory(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function VehiclePart:setCondition(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function VehiclePart:setContainerCapacity(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
---- @overload fun(self: VehiclePart, arg0: float, arg1: boolean, arg2: boolean): void
+--- @param arg0 number
+--- @return nil
+--- @overload fun(self: VehiclePart, arg0: number, arg1: boolean, arg2: boolean): nil
 function VehiclePart:setContainerContentAmount(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
---- @overload fun(self: VehiclePart, arg0: float): void
+--- @param arg0 number
+--- @return nil
+--- @overload fun(self: VehiclePart, arg0: number): nil
 function VehiclePart:setDelta(arg0) end
 
 --- @public
 --- @param arg0 DeviceData
---- @return void
---- @overload fun(self: VehiclePart, arg0: DeviceData): void
+--- @return nil
+--- @overload fun(self: VehiclePart, arg0: DeviceData): nil
 function VehiclePart:setDeviceData(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehiclePart:setDurability(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehiclePart:setEngineLoudness(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function VehiclePart:setGeneralCondition(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
---- @overload fun(self: VehiclePart, arg0: InventoryItem, arg1: int): void
+--- @return nil
+--- @overload fun(self: VehiclePart, arg0: InventoryItem, arg1: integer): nil
 function VehiclePart:setInventoryItem(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function VehiclePart:setItemContainer(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehiclePart:setLastUpdated(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehiclePart:setLightActive(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function VehiclePart:setMechanicSkillInstaller(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function VehiclePart:setModelVisible(arg0, arg1) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function VehiclePart:setRandomCondition(arg0) end
 
 --- @public
 --- @param arg0 Part
---- @return void
+--- @return nil
 function VehiclePart:setScriptPart(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehiclePart:setSpecificItem(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehiclePart:setSuspensionCompression(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehiclePart:setSuspensionDamping(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function VehiclePart:setWheelFriction(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function VehiclePart:updateSignalDevice() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

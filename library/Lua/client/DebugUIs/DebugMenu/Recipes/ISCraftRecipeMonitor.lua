@@ -35,10 +35,8 @@
 ISCraftRecipeMonitor = ISCollapsableWindow:derive("ISCraftRecipeMonitor")
 ISCraftRecipeMonitor.instance = nil
 
-
 ---@return any
 function ISCraftRecipeMonitor.OnOpenPanel(_monitor) end
-
 
 ---@return any
 function ISCraftRecipeMonitor:close() end
@@ -66,7 +64,6 @@ function ISCraftRecipeMonitor:setMonitor(_monitor) end
 
 ---@return any
 function ISCraftRecipeMonitor:update() end
-
 
 ---@return ISCraftRecipeMonitor
 function ISCraftRecipeMonitor:new(x, y, width, height, title) end

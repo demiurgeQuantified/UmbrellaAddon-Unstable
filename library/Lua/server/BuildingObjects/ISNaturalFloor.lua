@@ -14,10 +14,8 @@
 ---@field [any] any
 ISNaturalFloor = ISBuildingObject:derive("ISNaturalFloor")
 
-
 ---@return any
 function ISNaturalFloor.getFloorSpriteNames(square) end
-
 
 ---@return any
 function ISNaturalFloor:create(x, y, z, north, sprite) end
@@ -33,7 +31,6 @@ function ISNaturalFloor:render(x, y, z, square) end
 
 ---@return any
 function ISNaturalFloor:walkTo(x, y, z) end
-
 
 ---@return ISNaturalFloor
 function ISNaturalFloor:new(sprite, northSprite, item, character) end

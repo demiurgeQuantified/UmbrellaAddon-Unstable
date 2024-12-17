@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoJukebox: IsoObject
 --- @field public class any
-IsoJukebox = {};
+IsoJukebox = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,27 +10,26 @@ IsoJukebox = {};
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoJukebox:SetPlaying(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoJukebox:addToWorld() end
 
 --- @public
---- @return String
+--- @return string
 function IsoJukebox:getObjectName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return boolean
 function IsoJukebox:onMouseLeftClick(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoJukebox:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -39,6 +38,6 @@ function IsoJukebox:update() end
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoJukebox
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String): IsoJukebox
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string): IsoJukebox
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoJukebox
 function IsoJukebox.new(arg0) end

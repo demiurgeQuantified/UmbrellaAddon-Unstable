@@ -21,7 +21,6 @@
 ---@field [any] any
 ISWidgetAutoToggle = ISPanel:derive("ISWidgetAutoToggle")
 
-
 ---@return any
 function ISWidgetAutoToggle:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -54,7 +53,6 @@ function ISWidgetAutoToggle:render() end
 
 ---@return any
 function ISWidgetAutoToggle:update() end
-
 
 ---@return ISWidgetAutoToggle
 function ISWidgetAutoToggle:new(x, y, width, height, doSmall, target, onToggled) end

@@ -6,7 +6,6 @@
 ---@field [any] any
 ISEmoteRadialMenu = ISBaseObject:derive("ISEmoteRadialMenu")
 
-
 ---@return any
 function ISEmoteRadialMenu.checkKey(key) end
 
@@ -18,7 +17,6 @@ function ISEmoteRadialMenu.onKeyReleased(key) end
 
 ---@return any
 function ISEmoteRadialMenu.onKeyRepeat(key) end
-
 
 ---@return any
 function ISEmoteRadialMenu:center() end
@@ -37,7 +35,6 @@ function ISEmoteRadialMenu:fillMenu(submenu) end
 
 ---@return any
 function ISEmoteRadialMenu:init() end
-
 
 ---@return ISEmoteRadialMenu
 function ISEmoteRadialMenu:new(character) end

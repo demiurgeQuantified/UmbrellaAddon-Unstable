@@ -7,7 +7,6 @@
 ---@field [any] any
 ISExitVehicle = ISBaseTimedAction:derive("ISExitVehicle")
 
-
 ---@return any
 function ISExitVehicle:getExtraLogData() end
 
@@ -25,7 +24,6 @@ function ISExitVehicle:stop() end
 
 ---@return any
 function ISExitVehicle:update() end
-
 
 ---@return ISExitVehicle
 function ISExitVehicle:new(character) end

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class Resources: Component
 --- @field public class any
---- @field public defaultGroup String
-Resources = {};
+--- @field public defaultGroup string
+Resources = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,39 +12,39 @@ Resources = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function Resources:DoTooltip(arg0, arg1) end
 
 --- @public
 --- @param arg0 ResourceBlueprint
---- @return void
---- @overload fun(self: Resources, arg0: String, arg1: ResourceBlueprint): void
+--- @return nil
+--- @overload fun(self: Resources, arg0: string, arg1: ResourceBlueprint): nil
 function Resources:createResource(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: Resources, arg0: String, arg1: String): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: Resources, arg0: string, arg1: string): nil
 function Resources:createResourceFromSerial(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Resource
---- @overload fun(self: Resources, arg0: String): Resource
+--- @overload fun(self: Resources, arg0: string): Resource
 function Resources:getResource(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Resources:getResourceCount() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ResourceGroup
 function Resources:getResourceGroup(arg0) end
 
 --- @public
 --- @param arg0 Resource
---- @return int
+--- @return integer
 function Resources:getResourceIndex(arg0) end
 
 --- @public
@@ -57,19 +57,19 @@ function Resources:getResourceIndex(arg0) end
 function Resources:getResources() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return List
 function Resources:getResourcesForGroup(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 List
 --- @param arg2 ResourceChannel
 --- @return List
---- @overload fun(self: Resources, arg0: String, arg1: List, arg2: ResourceIO): List
---- @overload fun(self: Resources, arg0: String, arg1: List, arg2: ResourceType): List
---- @overload fun(self: Resources, arg0: String, arg1: List, arg2: ResourceIO, arg3: ResourceChannel): List
---- @overload fun(self: Resources, arg0: String, arg1: List, arg2: ResourceIO, arg3: ResourceType): List
+--- @overload fun(self: Resources, arg0: string, arg1: List, arg2: ResourceIO): List
+--- @overload fun(self: Resources, arg0: string, arg1: List, arg2: ResourceType): List
+--- @overload fun(self: Resources, arg0: string, arg1: List, arg2: ResourceIO, arg3: ResourceChannel): List
+--- @overload fun(self: Resources, arg0: string, arg1: List, arg2: ResourceIO, arg3: ResourceType): List
 function Resources:getResourcesFromGroup(arg0, arg1, arg2) end
 
 --- @public
@@ -77,15 +77,13 @@ function Resources:getResourcesFromGroup(arg0, arg1, arg2) end
 function Resources:isValid() end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: Resources, arg0: Resource): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: Resources, arg0: Resource): nil
 function Resources:removeResource(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: Resources, arg0: ResourceGroup): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: Resources, arg0: ResourceGroup): nil
 function Resources:removeResourceGroup(arg0) end
-
-

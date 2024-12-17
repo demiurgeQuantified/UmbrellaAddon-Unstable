@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class Perk
 --- @field public class any
-Perk = {};
+Perk = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Perk:getId() end
 
 --- @public
---- @return String
+--- @return string
 function Perk:getName() end
 
 --- @public
@@ -21,8 +21,8 @@ function Perk:getName() end
 function Perk:getParent() end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function Perk:getTotalXpForLevel(arg0) end
 
 --- @public
@@ -30,52 +30,52 @@ function Perk:getTotalXpForLevel(arg0) end
 function Perk:getType() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp1() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp10() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp2() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp3() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp4() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp5() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp6() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp7() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp8() end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:getXp9() end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function Perk:getXpForLevel(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Perk:index() end
 
 --- @public
@@ -87,20 +87,19 @@ function Perk:isCustom() end
 function Perk:isPassiv() end
 
 --- @public
---- @return void
+--- @return nil
 function Perk:setCustom() end
 
 --- @public
---- @return String
+--- @return string
 function Perk:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Perk
---- @overload fun(arg0: String, arg1: Perk): Perk
+--- @overload fun(arg0: string, arg1: Perk): Perk
 function Perk.new(arg0) end

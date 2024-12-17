@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class VehiclePartModel
 --- @field public class any
-VehiclePartModel = {};
+VehiclePartModel = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

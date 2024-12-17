@@ -3,7 +3,6 @@
 ---@class SRainBarrelSystem : SGlobalObjectSystem
 SRainBarrelSystem = SGlobalObjectSystem:derive("SRainBarrelSystem")
 
-
 ---@return any
 function SRainBarrelSystem:checkRain() end
 
@@ -18,7 +17,6 @@ function SRainBarrelSystem:isValidIsoObject(isoObject) end
 
 ---@return any
 function SRainBarrelSystem:newLuaObject(globalObject) end
-
 
 ---@return SRainBarrelSystem
 function SRainBarrelSystem:new() end

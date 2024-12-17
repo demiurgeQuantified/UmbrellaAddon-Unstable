@@ -1,50 +1,50 @@
---- @meta
+--- @meta _
 
 --- @class GameEntityScript: BaseScriptObject
 --- @field public class any
-GameEntityScript = {};
+GameEntityScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function GameEntityScript:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function GameEntityScript:Load(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return boolean
 function GameEntityScript:LoadAttribute(arg0, arg1) end
 
 --- @public
 --- @param arg0 Block
---- @return void
+--- @return nil
 function GameEntityScript:LoadComponentBlock(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntityScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntityScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function GameEntityScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function GameEntityScript:PreReload() end
 
 --- @public
@@ -54,7 +54,7 @@ function GameEntityScript:containsComponent(arg0) end
 
 --- @public
 --- @param arg0 GameEntityScript
---- @return void
+--- @return nil
 function GameEntityScript:copyFrom(arg0) end
 
 --- @public
@@ -67,7 +67,7 @@ function GameEntityScript:getComponentScriptFor(arg0) end
 function GameEntityScript:getComponentScripts() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntityScript:getDisplayNameDebug() end
 
 --- @public
@@ -75,23 +75,23 @@ function GameEntityScript:getDisplayNameDebug() end
 function GameEntityScript:getExistsAsVanilla() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntityScript:getFileAbsPath() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntityScript:getFullName() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntityScript:getModID() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntityScript:getModuleName() end
 
 --- @public
---- @return String
+--- @return string
 function GameEntityScript:getName() end
 
 --- @public
@@ -107,15 +107,14 @@ function GameEntityScript:getRegistry_id() end
 function GameEntityScript:hasComponents() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function GameEntityScript:setModID(arg0) end
 
 --- @public
 --- @param arg0 short
---- @return void
+--- @return nil
 function GameEntityScript:setRegistry_id(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DebugLog
 --- @field public class any
@@ -50,15 +50,15 @@
 --- @field public Translation DebugLogStream
 --- @field public UnitTests DebugLogStream
 --- @field public Vehicle DebugLogStream
---- @field public VERSION int
---- @field public VERSION1 int
---- @field public VERSION2 int
+--- @field public VERSION integer
+--- @field public VERSION1 integer
+--- @field public VERSION2 integer
 --- @field public Voice DebugLogStream
 --- @field public WorldGen DebugLogStream
 --- @field public Xml DebugLogStream
 --- @field public Zombie DebugLogStream
 --- @field public Zone DebugLogStream
-DebugLog = {};
+DebugLog = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -66,41 +66,41 @@ DebugLog = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DebugLog.enableDebugLogs() end
 
 --- @public
 --- @static
 --- @param arg0 DebugType
 --- @param arg1 LogSeverity
---- @return void
+--- @return nil
 function DebugLog.enableLog(arg0, arg1) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DebugLog.enableServerLogs() end
 
 --- @public
 --- @static
 --- @param arg0 DebugType
 --- @param arg1 LogSeverity
---- @param arg2 Object
+--- @param arg2 any
 --- @param arg3 boolean
---- @param arg4 String
---- @return String
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: Object, arg3: boolean, arg4: String, arg5: Object[]): String
+--- @param arg4 string
+--- @return string
+--- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: any, arg3: boolean, arg4: string, arg5: Object[]): string
 function DebugLog.formatString(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
 --- @param arg0 DebugType
 --- @param arg1 LogSeverity
---- @param arg2 Object
+--- @param arg2 any
 --- @param arg3 boolean
---- @param arg4 String
+--- @param arg4 string
 --- @param arg5 Object[]
---- @return String
+--- @return string
 function DebugLog.formatStringVarArgs(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -138,7 +138,7 @@ function DebugLog.getOrCreateDebugLogStream(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DebugLog.init() end
 
 --- @public
@@ -161,66 +161,65 @@ function DebugLog.isLogTraceFileLocationEnabled() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DebugLog.load() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DebugLog.loadDebugConfig(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
---- @overload fun(arg0: DebugType, arg1: String): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(arg0: DebugType, arg1: string): nil
 function DebugLog.log(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
 function DebugLog.nativeLog(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DebugLog.printLogLevels() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DebugLog.save() end
 
 --- @public
 --- @static
 --- @param arg0 DebugType
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function DebugLog.setLogEnabled(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 DebugType
 --- @param arg1 LogSeverity
---- @return void
+--- @return nil
 function DebugLog.setLogSeverity(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 OutputStream
---- @return void
+--- @return nil
 function DebugLog.setStdErr(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 OutputStream
---- @return void
+--- @return nil
 function DebugLog.setStdOut(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -50,7 +50,6 @@
 ---@field [any] any
 ISFluidContainerPanel = ISPanel:derive("ISFluidContainerPanel")
 
-
 ---@return any
 function ISFluidContainerPanel:addItem(_items) end
 
@@ -116,7 +115,6 @@ function ISFluidContainerPanel:setTitle(_title) end
 
 ---@return any
 function ISFluidContainerPanel:verifyItem(_item) end
-
 
 ---@return ISFluidContainerPanel
 function ISFluidContainerPanel:new(x, y, _player, _container, _doTitle, _isLeft, _isoHeight) end

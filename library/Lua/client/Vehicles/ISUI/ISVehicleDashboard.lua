@@ -56,7 +56,6 @@ ISVehicleDashboard = ISPanel:derive("ISVehicleDashboard")
 ISVehicleDashboard.lastVehicleDamage = nil
 ISVehicleDashboard.lastVehicleDamageTimer = 0
 
-
 ---@return any
 function ISVehicleDashboard.damageChecker() end
 
@@ -80,7 +79,6 @@ function ISVehicleDashboard.OnGameStart() end
 
 ---@return any
 function ISVehicleDashboard.onSwitchVehicleSeat(character) end
-
 
 ---@return any
 function ISVehicleDashboard:checkEngineFull() end
@@ -123,7 +121,6 @@ function ISVehicleDashboard:render() end
 
 ---@return any
 function ISVehicleDashboard:setVehicle(vehicle) end
-
 
 ---@return ISVehicleDashboard
 function ISVehicleDashboard:new(playerNum, chr) end

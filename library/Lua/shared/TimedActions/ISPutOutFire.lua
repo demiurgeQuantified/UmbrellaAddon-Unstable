@@ -8,7 +8,6 @@
 ---@field [any] any
 ISPutOutFire = ISBaseTimedAction:derive("ISPutOutFire")
 
-
 ---@return any
 function ISPutOutFire:complete() end
 
@@ -32,7 +31,6 @@ function ISPutOutFire:update() end
 
 ---@return any
 function ISPutOutFire:useItem() end
-
 
 ---@return ISPutOutFire
 function ISPutOutFire:new(character, squares, item, usesPerSquare) end

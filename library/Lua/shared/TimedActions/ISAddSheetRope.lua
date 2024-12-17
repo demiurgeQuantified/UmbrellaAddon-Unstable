@@ -7,7 +7,6 @@
 ---@field [any] any
 ISAddSheetRope = ISBaseTimedAction:derive("ISAddSheetRope")
 
-
 ---@return any
 function ISAddSheetRope:complete() end
 
@@ -31,7 +30,6 @@ function ISAddSheetRope:update() end
 
 ---@return any
 function ISAddSheetRope:waitToStart() end
-
 
 ---@return ISAddSheetRope
 function ISAddSheetRope:new(character, window, sheetRope) end

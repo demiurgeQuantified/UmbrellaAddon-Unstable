@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSPrisonEscapeWithPolice: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSPrisonEscapeWithPolice = {};
+RDSPrisonEscapeWithPolice = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSPrisonEscapeWithPolice = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSPrisonEscapeWithPolice:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

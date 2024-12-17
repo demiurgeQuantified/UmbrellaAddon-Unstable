@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class EntityUiStyle
 --- @field public class any
-EntityUiStyle = {};
+EntityUiStyle = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function EntityUiStyle:getBuildDescription() end
 
 --- @public
@@ -18,11 +18,11 @@ function EntityUiStyle:getBuildDescription() end
 function EntityUiStyle:getComponentUiStyle(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function EntityUiStyle:getDescription() end
 
 --- @public
---- @return String
+--- @return string
 function EntityUiStyle:getDisplayName() end
 
 --- @public
@@ -30,26 +30,25 @@ function EntityUiStyle:getDisplayName() end
 function EntityUiStyle:getIcon() end
 
 --- @public
---- @return Object
+--- @return any
 function EntityUiStyle:getLuaCanOpenWindow() end
 
 --- @public
---- @return Object
+--- @return any
 function EntityUiStyle:getLuaOpenWindow() end
 
 --- @public
---- @return String
+--- @return string
 function EntityUiStyle:getLuaWindowClass() end
 
 --- @public
---- @return String
+--- @return string
 function EntityUiStyle:getXuiStyle() end
 
 --- @public
 --- @param arg0 ComponentType
 --- @return boolean
 function EntityUiStyle:isComponentEnabled(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

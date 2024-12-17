@@ -51,7 +51,6 @@
 ---@field [any] any
 ISTextBox = ISPanelJoypad:derive("ISTextBox")
 
-
 ---@return any
 function ISTextBox:close() end
 
@@ -136,6 +135,20 @@ function ISTextBox:titleBarHeight() end
 ---@return any
 function ISTextBox:updateButtons() end
 
-
 ---@return ISTextBox
-function ISTextBox:new(x, y, width, height, text, defaultEntryText, target, onclick, player, param1, param2, param3, param4) end
+function ISTextBox:new(
+	x,
+	y,
+	width,
+	height,
+	text,
+	defaultEntryText,
+	target,
+	onclick,
+	player,
+	param1,
+	param2,
+	param3,
+	param4
+)
+end

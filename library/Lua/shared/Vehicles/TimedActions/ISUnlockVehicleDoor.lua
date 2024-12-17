@@ -10,7 +10,6 @@
 ---@field [any] any
 ISUnlockVehicleDoor = ISBaseTimedAction:derive("ISUnlockVehicleDoor")
 
-
 ---@return any
 function ISUnlockVehicleDoor:complete() end
 
@@ -31,7 +30,6 @@ function ISUnlockVehicleDoor:stop() end
 
 ---@return any
 function ISUnlockVehicleDoor:update() end
-
 
 ---@return ISUnlockVehicleDoor
 function ISUnlockVehicleDoor:new(character, part) end

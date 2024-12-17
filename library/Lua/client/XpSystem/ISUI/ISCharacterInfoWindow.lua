@@ -14,10 +14,8 @@
 ISCharacterInfoWindow = ISCollapsableWindow:derive("ISCharacterInfoWindow")
 ISCharacterInfoWindow.view = {}
 
-
 ---@return any
 function ISCharacterInfoWindow.OnClothingUpdated(chr) end
-
 
 ---@return any
 function ISCharacterInfoWindow:close() end
@@ -48,7 +46,6 @@ function ISCharacterInfoWindow:SaveLayout(name, layout) end
 
 ---@return any
 function ISCharacterInfoWindow:toggleView(viewName) end
-
 
 ---@return ISCharacterInfoWindow
 function ISCharacterInfoWindow:new(x, y, width, height, playerNum) end

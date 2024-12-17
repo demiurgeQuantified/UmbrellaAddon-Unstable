@@ -8,7 +8,6 @@
 ---@field [any] any
 ISPlugGenerator = ISBaseTimedAction:derive("ISPlugGenerator")
 
-
 ---@return any
 function ISPlugGenerator:complete() end
 
@@ -32,7 +31,6 @@ function ISPlugGenerator:update() end
 
 ---@return any
 function ISPlugGenerator:waitToStart() end
-
 
 ---@return ISPlugGenerator
 function ISPlugGenerator:new(character, generator, plug) end

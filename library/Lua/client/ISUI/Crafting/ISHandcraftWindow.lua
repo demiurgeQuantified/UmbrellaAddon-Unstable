@@ -40,7 +40,6 @@
 ---@field [any] any
 ISHandcraftWindow = ISCollapsableWindow:derive("ISHandcraftWindow")
 
-
 ---@return any
 function ISHandcraftWindow:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -76,7 +75,6 @@ function ISHandcraftWindow:validateSizeBounds() end
 
 ---@return any
 function ISHandcraftWindow:xuiRecalculateLayout(_preferredWidth, _preferredHeight, _force, _anchorRight) end
-
 
 ---@return ISHandcraftWindow
 function ISHandcraftWindow:new(x, y, width, height, player, isoObject, queryOverride) end

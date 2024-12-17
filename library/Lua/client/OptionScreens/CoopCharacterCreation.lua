@@ -14,7 +14,6 @@
 CoopCharacterCreation = ISPanelJoypad:derive("CoopCharacterCreation")
 CoopCharacterCreation.visibleUI = {}
 
-
 ---@return any
 function CoopCharacterCreation.getJoypad() end
 
@@ -23,7 +22,6 @@ function CoopCharacterCreation.newPlayer(joypadIndex, joypadData) end
 
 ---@return any
 function CoopCharacterCreation.setVisibleAllUI(visible) end
-
 
 ---@return any
 function CoopCharacterCreation:accept() end
@@ -45,7 +43,6 @@ function CoopCharacterCreation:newPlayerMouse() end
 
 ---@return any
 function CoopCharacterCreation:OnJoypadBeforeDeactivate(index) end
-
 
 ---@return CoopCharacterCreation
 function CoopCharacterCreation:new(joypadIndex, joypadData, playerIndex) end

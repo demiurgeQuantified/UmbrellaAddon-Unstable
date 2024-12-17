@@ -1,288 +1,288 @@
---- @meta
+--- @meta _
 
 --- @param arg0 IsoGridSquare
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function AddNoiseToken(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function AddWorldSound(arg0, arg1, arg2) end
 
---- @param arg0 long
---- @param arg1 String
---- @param arg2 int
---- @param arg3 String
---- @return void
+--- @param arg0 integer
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 string
+--- @return nil
 function InvMngGetItem(arg0, arg1, arg2, arg3) end
 
---- @param arg0 long
---- @param arg1 int
---- @param arg2 String
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 string
+--- @return nil
 function InvMngRemoveItem(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function NewMapBinaryFile(arg0) end
 
 --- @param arg0 InventoryItem
 --- @param arg1 IsoGridSquare
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @return void
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
 function Render3DItem(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SendCommandToServer(arg0) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function SyncXp(arg0) end
 
---- @param arg0 double
---- @return double
---- @overload fun(arg0: double, arg1: double): double
+--- @param arg0 number
+--- @return number
+--- @overload fun(arg0: number, arg1: number): number
 function ZombRand(arg0) end
 
---- @param arg0 double
---- @param arg1 double
---- @return double
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function ZombRandBetween(arg0, arg1) end
 
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function ZombRandFloat(arg0, arg1) end
 
 --- @param arg0 Faction
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function acceptFactionInvite(arg0, arg1) end
 
 --- @param arg0 SafeHouse
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 IsoPlayer
---- @return void
+--- @return nil
 function acceptSafehouseInvite(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 IsoPlayer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function acceptTrading(arg0, arg1, arg2) end
 
---- @return void
+--- @return nil
 function activateJoypadOnSteamDeck() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function activateSteamOverlayToWebPage(arg0) end
 
---- @return void
+--- @return nil
 function activateSteamOverlayToWorkshop() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function activateSteamOverlayToWorkshopItem(arg0) end
 
---- @return void
+--- @return nil
 function activateSteamOverlayToWorkshopUser() end
 
---- @return void
+--- @return nil
 function addAllBurntVehicles() end
 
---- @return void
+--- @return nil
 function addAllSmashedVehicles() end
 
---- @return void
---- @overload fun(arg0: Predicate): void
+--- @return nil
+--- @overload fun(arg0: Predicate): nil
 function addAllVehicles() end
 
 --- @param arg0 IsoCell
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 String
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
 --- @param arg5 AnimalBreed
 --- @return IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: String, arg5: AnimalBreed, arg6: boolean): IsoAnimal
+--- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: AnimalBreed, arg6: boolean): IsoAnimal
 function addAnimal(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @return nil
 function addAreaHighlight(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @param arg0 IsoGridSquare
---- @param arg1 int
---- @return void
---- @overload fun(self:  arg0: IsoGridSquare, arg1: int, arg2: float, arg3: float): void
+--- @param arg1 integer
+--- @return nil
+--- @overload fun(self:  arg0: IsoGridSquare, arg1: integer, arg2: number, arg3: number): nil
 function addBloodSplat(arg0, arg1) end
 
---- @return void
+--- @return nil
 function addCarCrash() end
 
 --- @return BaseVehicle
 function addPhysicsObject() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function addRole(arg0) end
 
 --- @param arg0 IsoObject
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @return void
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @return nil
 function addSound(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @return nil
 function addTicket(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
 function addUserlog(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function addVariableToSyncList(arg0) end
 
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return BaseVehicle
 function addVehicle(arg0, arg1, arg2, arg3) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 IsoDirections
---- @param arg2 Integer
+--- @param arg2 integer
 --- @param arg3 IsoGridSquare
 --- @return BaseVehicle
 function addVehicleDebug(arg0, arg1, arg2, arg3) end
 
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function addVirtualZombie(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @return nil
 function addWarningPoint(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 Perk
---- @param arg2 float
---- @return void
+--- @param arg2 number
+--- @return nil
 function addXp(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 Perk
---- @param arg2 float
---- @param arg3 int
---- @param arg4 int
---- @return void
+--- @param arg2 number
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return nil
 function addXpMultiplier(arg0, arg1, arg2, arg3, arg4) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 Perk
---- @param arg2 float
---- @return void
+--- @param arg2 number
+--- @return nil
 function addXpNoMultiplier(arg0, arg1, arg2) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function addZombieSitting(arg0, arg1, arg2) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function addZombiesEating(arg0, arg1, arg2, arg3, arg4) end
 
 --- @param arg0 BuildingDef
---- @param arg1 int
---- @param arg2 String
+--- @param arg1 integer
+--- @param arg2 string
 --- @param arg3 RoomDef
---- @param arg4 Integer
+--- @param arg4 integer
 --- @return ArrayList
 function addZombiesInBuilding(arg0, arg1, arg2, arg3, arg4) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 String
---- @param arg5 Integer
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 integer
 --- @return ArrayList
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: Integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: boolean, arg11: boolean, arg12: float): ArrayList
+--- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: boolean, arg11: boolean, arg12: number): ArrayList
 function addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 String
---- @param arg7 Integer
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 string
+--- @param arg7 integer
 --- @return ArrayList
 function addZombiesInOutfitArea(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
---- @return void
+--- @return nil
 function assaultPlayer() end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function attachTrailerToPlayerVehicle(arg0) end
 
---- @return void
+--- @return nil
 function backToSinglePlayer() end
 
---- @return void
+--- @return nil
 function breakpoint() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function cacheFileExists(arg0) end
 
---- @param arg0 String
---- @param arg1 Object
---- @return void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
 function callLua(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 Object
---- @return Boolean
+--- @param arg0 string
+--- @param arg1 any
+--- @return boolean
 function callLuaBool(arg0, arg1) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ArrayList
 --- @return ArrayList
 function callLuaReturn(arg0, arg1) end
@@ -301,12 +301,12 @@ function canSeePlayerStats() end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
---- @param arg2 String
---- @return byte
+--- @param arg2 string
+--- @return integer
 function changeItemTypeTransaction(arg0, arg1, arg2) end
 
 --- @param arg0 UdpConnection
---- @return void
+--- @return nil
 function checkModsNeedUpdate(arg0) end
 
 --- @param arg0 IsoPlayer
@@ -314,54 +314,54 @@ function checkModsNeedUpdate(arg0) end
 --- @return boolean
 function checkPermissions(arg0, arg1) end
 
---- @param arg0 String
---- @return Boolean
+--- @param arg0 string
+--- @return boolean
 function checkPlayerCanUseChat(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
 --- @return boolean
 function checkPlayerExistsInDatabase(arg0, arg1, arg2) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function checkSaveFileExists(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function checkSaveFolderExists(arg0) end
 
 --- @return boolean
 function checkSavePlayerExists() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function checkServerName(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function checkStringPattern(arg0) end
 
---- @return void
+--- @return nil
 function clearPVPEvents() end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return Item
 function cloneItemType(arg0, arg1) end
 
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function configureLighting(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function connectToServerStateCallback(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function connectionManagerLog(arg0, arg1) end
 
 --- @param arg0 KahluaTable
@@ -374,227 +374,227 @@ function convertToPZNetTable(arg0) end
 function copyTable(arg0) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
 --- @param arg4 boolean
---- @param arg5 String
+--- @param arg5 string
 --- @param arg6 KahluaTable
---- @return byte
+--- @return integer
 function createBuildAction(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 integer
+--- @return nil
 function createHordeFromTo(arg0, arg1, arg2, arg3, arg4) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @return nil
 function createHordeInAreaTo(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
 --- @param arg2 ItemContainer
 --- @param arg3 ItemContainer
---- @return byte
+--- @return integer
 function createItemTransaction(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
 --- @param arg2 ItemContainer
 --- @param arg3 ItemContainer
---- @param arg4 String
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @return byte
+--- @param arg4 string
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return integer
 function createItemTransactionWithPosData(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 string
 --- @return Item
 function createNewScriptItem(arg0, arg1, arg2, arg3, arg4) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return Texture
 function createQRCodeTex(arg0, arg1) end
 
 --- @param arg0 IsoGridSquare
---- @param arg1 int
+--- @param arg1 integer
 --- @return IsoDeadBody
 function createRandomDeadBody(arg0, arg1) end
 
 --- @return KahluaTable
 function createRegionFile() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function createStory(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 IsoGridSquare
---- @return void
+--- @return nil
 function createTile(arg0, arg1) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function createWorld(arg0) end
 
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 SurvivorDesc
---- @param arg4 int
+--- @param arg4 integer
 --- @param arg5 IsoDirections
 --- @return IsoZombie
 function createZombie(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function debugFullyStreamedIn(arg0, arg1) end
 
---- @param arg0 Object
---- @return void
---- @overload fun(arg0: Object, arg1: int): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(arg0: any, arg1: integer): nil
 function debugLuaTable(arg0) end
 
---- @param arg0 Double
---- @return void
+--- @param arg0 number
+--- @return nil
 function debugSetRoomType(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function deleteAllGameModeSaves(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
 function deletePlayerFromDatabase(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function deletePlayerSave(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function deleteRole(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function deleteSandboxPreset(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function deleteSave(arg0) end
 
---- @return void
+--- @return nil
 function disconnect() end
 
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function doChallenge(arg0) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function doKeyPress(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function doLuaDebuggerAction(arg0) end
 
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function doTutorial(arg0) end
 
 --- @param arg0 UIElement
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @return void
+--- @param arg1 integer
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
 function drawOverheadMap(arg0, arg1, arg2, arg3, arg4) end
 
 --- @param arg0 NetTimedAction
---- @param arg1 long
---- @param arg2 String
---- @param arg3 String
---- @return void
+--- @param arg1 integer
+--- @param arg2 string
+--- @param arg3 string
+--- @return nil
 function emulateAnimEvent(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 NetTimedAction
---- @param arg1 long
---- @param arg2 String
---- @param arg3 String
---- @return void
+--- @param arg1 integer
+--- @param arg2 string
+--- @param arg3 string
+--- @return nil
 function emulateAnimEventOnce(arg0, arg1, arg2, arg3) end
 
---- @return void
+--- @return nil
 function endFileInput() end
 
---- @return void
+--- @return nil
 function endFileOutput() end
 
---- @return void
+--- @return nil
 function endHelicopter() end
 
---- @return void
+--- @return nil
 function endTextFileInput() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
---- @return void
+--- @return nil
 function executeQuery(arg0, arg1) end
 
---- @param arg0 float
---- @return float
+--- @param arg0 number
+--- @return number
 function fastfloor(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function fileExists(arg0) end
 
 --- @param arg0 Short
---- @return void
+--- @return nil
 function focusOnTab(arg0) end
 
 --- @param arg0 GameState
---- @return void
+--- @return nil
 function forceChangeState(arg0) end
 
---- @return void
+--- @return nil
 function forceDisconnect() end
 
---- @return void
+--- @return nil
 function forceSnowCheck() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function generateSecretKey(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getAbsoluteSaveFolderName(arg0) end
 
---- @return String
+--- @return string
 function getAccessLevel() end
 
---- @param arg0 byte
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getActionDuration(arg0) end
 
 --- @return ArrayList
@@ -617,7 +617,7 @@ function getAllHairStyles(arg0) end
 --- @return ArrayList
 function getAllItems() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function getAllItemsForBodyLocation(arg0) end
 
@@ -644,12 +644,12 @@ function getAmbientStreamManager() end
 --- @return ArrayList
 function getAndFindNearestTracks(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoAnimal
 function getAnimal(arg0) end
 
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return AnimalChunk
 function getAnimalChunk(arg0, arg1) end
 
@@ -659,7 +659,7 @@ function getAnimationViewerState() end
 --- @return AttachmentEditorState
 function getAttachmentEditorState() end
 
---- @return Double
+--- @return number
 function getAverageFPS() end
 
 --- @return BaseSoundBank
@@ -674,24 +674,24 @@ function getBehaviourDebugPlayer() end
 --- @return GameVersion
 function getBreakModGameVersion() end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getButtonCount(arg0) end
 
---- @return long
+--- @return integer
 function getCPUTime() end
 
---- @return long
+--- @return integer
 function getCPUWait() end
 
 --- @param arg0 Coroutine
---- @return int
+--- @return integer
 function getCallframeTop(arg0) end
 
---- @return float
+--- @return number
 function getCameraOffX() end
 
---- @return float
+--- @return number
 function getCameraOffY() end
 
 --- @return ArrayList
@@ -700,47 +700,47 @@ function getCapabilities() end
 --- @return IsoCell
 function getCell() end
 
---- @return int
+--- @return integer
 function getCellMaxX() end
 
---- @return int
+--- @return integer
 function getCellMaxY() end
 
---- @return int
+--- @return integer
 function getCellMinX() end
 
---- @return int
+--- @return integer
 function getCellMinY() end
 
---- @return Double
+--- @return number
 function getCellSizeInChunks() end
 
---- @return Double
+--- @return number
 function getCellSizeInSquares() end
 
---- @return Double
+--- @return number
 function getChunkSizeInSquares() end
 
---- @param arg0 Object
---- @param arg1 int
+--- @param arg0 any
+--- @param arg1 integer
 --- @return Field
 function getClassField(arg0, arg1) end
 
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 Field
---- @return Object
+--- @return any
 function getClassFieldVal(arg0, arg1) end
 
---- @param arg0 Object
---- @param arg1 int
+--- @param arg0 any
+--- @param arg1 integer
 --- @return Method
 function getClassFunction(arg0, arg1) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return Texture
 function getClientLoadingScreen(arg0) end
 
---- @return String
+--- @return string
 function getClientUsername() end
 
 --- @return ClimateManager
@@ -755,88 +755,88 @@ function getConnectedPlayers() end
 --- @return ContainerOverlays
 function getContainerOverlays() end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getControllerAxisCount(arg0) end
 
---- @param arg0 int
---- @param arg1 int
---- @return float
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return number
 function getControllerAxisValue(arg0, arg1) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getControllerButtonCount(arg0) end
 
---- @return int
+--- @return integer
 function getControllerCount() end
 
---- @param arg0 int
---- @param arg1 int
---- @return float
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return number
 function getControllerDeadZone(arg0, arg1) end
 
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function getControllerGUID(arg0) end
 
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function getControllerName(arg0) end
 
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function getControllerPovX(arg0) end
 
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function getControllerPovY(arg0) end
 
 --- @return Core
 function getCore() end
 
 --- @param arg0 Coroutine
---- @param arg1 int
+--- @param arg1 integer
 --- @return LuaCallFrame
 function getCoroutineCallframeStack(arg0, arg1) end
 
 --- @param arg0 Coroutine
---- @param arg1 int
---- @return Object
+--- @param arg1 integer
+--- @return any
 function getCoroutineObjStack(arg0, arg1) end
 
 --- @param arg0 Coroutine
---- @param arg1 int
---- @return Object
+--- @param arg1 integer
+--- @return any
 function getCoroutineObjStackWithBase(arg0, arg1) end
 
 --- @param arg0 Coroutine
---- @return int
+--- @return integer
 function getCoroutineTop(arg0) end
 
 --- @return Coroutine
 function getCurrentCoroutine() end
 
---- @return String
+--- @return string
 function getCurrentSaveName() end
 
---- @return String
+--- @return string
 function getCurrentUserProfileName() end
 
---- @return String
+--- @return string
 function getCurrentUserSteamID() end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
---- @param arg5 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 string
+--- @param arg5 string
 --- @param arg6 boolean
---- @return void
+--- @return nil
 function getCustomizationData(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
---- @return void
+--- @return nil
 function getDBSchema() end
 
 --- @return boolean
@@ -868,38 +868,38 @@ function getFMODSoundBank() end
 --- @return IsoGameCharacter
 function getFakeAttacker() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return DataInputStream
 function getFileInput(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return DataOutputStream
 function getFileOutput(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @return BufferedReader
 function getFileReader(arg0, arg1) end
 
---- @return String
+--- @return string
 function getFileSeparator() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 boolean
 --- @return LuaFileWriter
 function getFileWriter(arg0, arg1, arg2) end
 
 --- @param arg0 LuaCallFrame
---- @return String
+--- @return string
 function getFilenameOfCallframe(arg0) end
 
---- @param arg0 LuaClosure
---- @return String
+--- @param arg0 function
+--- @return string
 function getFilenameOfClosure(arg0) end
 
---- @param arg0 LuaClosure
---- @return int
+--- @param arg0 function
+--- @return integer
 function getFirstLineOfClosure(arg0) end
 
 --- @return KahluaTable
@@ -908,44 +908,44 @@ function getFriendsList() end
 --- @return KahluaTable
 function getFullSaveDirectoryTable() end
 
---- @return long
+--- @return integer
 function getGPUTime() end
 
---- @return long
+--- @return integer
 function getGPUWait() end
 
 --- @return GameClient
 function getGameClient() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return DataInputStream
 function getGameFilesInput(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return BufferedReader
 function getGameFilesTextInput(arg0) end
 
---- @return int
+--- @return integer
 function getGameSpeed() end
 
 --- @return GameTime
 function getGameTime() end
 
---- @return String
+--- @return string
 function getGameVersion() end
 
---- @return long
+--- @return integer
 function getGametimeTimestamp() end
 
 --- @return HairStyles
 function getHairStylesInstance() end
 
---- @return String
+--- @return string
 function getHourMinute() end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return IsoHutch
 function getHutch(arg0, arg1, arg2) end
 
@@ -955,179 +955,179 @@ function getIsoEntitiesDebug() end
 --- @return IsoMarkers
 function getIsoMarkers() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Item
 function getItem(arg0) end
 
---- @param arg0 String
---- @return float
+--- @param arg0 string
+--- @return number
 function getItemActualWeight(arg0) end
 
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function getItemConditionMax(arg0) end
 
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function getItemCount(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemDisplayName(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemEvolvedRecipeName(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemFoodType(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemName(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemNameFromFullType(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemStaticModel(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Texture
 function getItemTex(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemText(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getItemTextureName(arg0) end
 
---- @param arg0 byte
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getItemTransactionDuration(arg0) end
 
---- @param arg0 String
---- @return float
+--- @param arg0 string
+--- @return number
 function getItemWeight(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadAButton(arg0) end
 
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function getJoypadAimingAxisX(arg0) end
 
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function getJoypadAimingAxisY(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadBButton(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadBackButton(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadLBumper(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadLeftStickButton(arg0) end
 
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function getJoypadMovementAxisX(arg0) end
 
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function getJoypadMovementAxisY(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadRBumper(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadRightStickButton(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadStartButton(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadXButton(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getJoypadYButton(arg0) end
 
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function getKeyCode(arg0) end
 
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function getKeyName(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getLastPlayedDate(arg0) end
 
 --- @return List
 function getLastStandPlayerFileNames() end
 
---- @return String
+--- @return string
 function getLastStandPlayersDirectory() end
 
 --- @return KahluaTable
 function getLatestSave() end
 
 --- @param arg0 LuaCallFrame
---- @return int
+--- @return integer
 function getLineNumber(arg0) end
 
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function getLoadedLua(arg0) end
 
---- @return int
+--- @return integer
 function getLoadedLuaCount() end
 
 --- @param arg0 Coroutine
---- @return int
---- @overload fun(arg0: LuaCallFrame): int
+--- @return integer
+--- @overload fun(arg0: LuaCallFrame): integer
 function getLocalVarCount(arg0) end
 
 --- @param arg0 Coroutine
---- @param arg1 int
---- @return String
---- @overload fun(arg0: LuaCallFrame, arg1: int): String
+--- @param arg1 integer
+--- @return string
+--- @overload fun(arg0: LuaCallFrame, arg1: integer): string
 function getLocalVarName(arg0, arg1) end
 
 --- @param arg0 Coroutine
---- @param arg1 int
---- @return int
+--- @param arg1 integer
+--- @return integer
 function getLocalVarStack(arg0, arg1) end
 
 --- @param arg0 LuaCallFrame
---- @param arg1 int
---- @return int
+--- @param arg1 integer
+--- @return integer
 function getLocalVarStackIndex(arg0, arg1) end
 
 --- @return ArrayList
 function getLotDirectories() end
 
---- @return int
+--- @return integer
 function getLuaDebuggerErrorCount() end
 
 --- @return ArrayList
@@ -1145,95 +1145,95 @@ function getMPStatus() end
 --- @return KahluaTable
 function getMapDirectoryTable() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function getMapFoldersForMod(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function getMapInfo(arg0) end
 
---- @return int
+--- @return integer
 function getMaxActivePlayers() end
 
---- @return Double
+--- @return number
 function getMaxPlayers() end
 
---- @return Double
+--- @return number
 function getMaximumWorldLevel() end
 
 --- @param arg0 Method
---- @param arg1 int
---- @return String
+--- @param arg1 integer
+--- @return string
 function getMethodParameter(arg0, arg1) end
 
 --- @param arg0 Method
---- @return int
+--- @return integer
 function getMethodParameterCount(arg0) end
 
---- @return Double
+--- @return number
 function getMinimumWorldLevel() end
 
 --- @return KahluaTable
 function getModDirectoryTable() end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 boolean
 --- @return BufferedReader
 function getModFileReader(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 boolean
 --- @param arg3 boolean
 --- @return LuaFileWriter
 function getModFileWriter(arg0, arg1, arg2, arg3) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Mod
 function getModInfo(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Mod
 function getModInfoByID(arg0) end
 
 --- @return List
 function getMods() end
 
---- @return int
+--- @return integer
 function getMouseX() end
 
---- @return int
+--- @return integer
 function getMouseXScaled() end
 
---- @return int
+--- @return integer
 function getMouseY() end
 
---- @return int
+--- @return integer
 function getMouseYScaled() end
 
---- @return String
+--- @return string
 function getMyDocumentFolder() end
 
---- @return int
+--- @return integer
 function getNumActivePlayers() end
 
---- @param arg0 Object
---- @return int
+--- @param arg0 any
+--- @return integer
 function getNumClassFields(arg0) end
 
---- @param arg0 Object
---- @return int
+--- @param arg0 any
+--- @return integer
 function getNumClassFunctions(arg0) end
 
 --- @return ArrayList
 function getOnlinePlayers() end
 
---- @return String
+--- @return string
 function getOnlineUsername() end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return KahluaTable
 function getPacketCounts(arg0) end
 
@@ -1247,11 +1247,11 @@ function getPickedUpFish(arg0) end
 --- @return IsoPlayer
 function getPlayer() end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoPlayer
 function getPlayerByOnlineID(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoPlayer
 function getPlayerFromUsername(arg0) end
 
@@ -1259,20 +1259,20 @@ function getPlayerFromUsername(arg0) end
 --- @return KahluaTable
 function getPlayerInfo(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getPlayerScreenHeight(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getPlayerScreenLeft(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getPlayerScreenTop(arg0) end
 
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function getPlayerScreenWidth(arg0) end
 
 --- @return KahluaTable
@@ -1284,8 +1284,8 @@ function getPuddlesManager() end
 --- @return RadioAPI
 function getRadioAPI() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getRadioText(arg0) end
 
 --- @param arg0 Language
@@ -1295,17 +1295,17 @@ function getRadioTranslators(arg0) end
 --- @return RagdollSettingsManager
 function getRagdollSettingsManager() end
 
---- @return String
+--- @return string
 function getRandomUUID() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getRecipeDisplayName(arg0) end
 
---- @return String
+--- @return string
 function getReconnectCountdownTimer() end
 
---- @return Boolean
+--- @return boolean
 function getRemotePlayModeActive() end
 
 --- @return SpriteRenderer
@@ -1317,7 +1317,7 @@ function getRoles() end
 --- @return SLSoundManager
 function getSLSoundManager() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 boolean
 --- @return LuaFileWriter
@@ -1329,19 +1329,19 @@ function getSandboxOptions() end
 --- @return List
 function getSandboxPresets() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function getSaveDirectory(arg0) end
 
 --- @return KahluaTable
 function getSaveDirectoryTable() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function getSaveInfo(arg0) end
 
 --- @param arg0 File
---- @return String
+--- @return string
 function getSaveName(arg0) end
 
 --- @return ScriptManager
@@ -1353,38 +1353,38 @@ function getSeamEditorState() end
 --- @return SearchMode
 function getSearchMode() end
 
---- @return String
+--- @return string
 function getServerAddressFromArgs() end
 
---- @return int
+--- @return integer
 function getServerFPS() end
 
---- @return String
+--- @return string
 function getServerIP() end
 
 --- @return KahluaTable
 function getServerList() end
 
---- @return String
+--- @return string
 function getServerListFile() end
 
---- @return void
+--- @return nil
 function getServerModData() end
 
---- @return String
+--- @return string
 function getServerName() end
 
 --- @return ServerOptions
 function getServerOptions() end
 
---- @return String
+--- @return string
 function getServerPasswordFromArgs() end
 
---- @return String
+--- @return string
 function getServerPort() end
 
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function getServerSavedWorldVersion(arg0) end
 
 --- @return ServerSettingsManager
@@ -1399,8 +1399,8 @@ function getServerStatistic() end
 --- @return boolean
 function getServerStatisticEnable() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getShortenedFilename(arg0) end
 
 --- @return SleepingEvent
@@ -1409,48 +1409,48 @@ function getSleepingEvent() end
 --- @return BaseSoundManager
 function getSoundManager() end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoPlayer
 function getSpecificPlayer(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoSprite
 function getSprite(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoSpriteManager
 function getSpriteManager(arg0) end
 
 --- @return SpriteModelEditorState
 function getSpriteModelEditorState() end
 
---- @param arg0 double
---- @param arg1 double
---- @param arg2 double
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @return IsoGridSquare
 function getSquare(arg0, arg1, arg2) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Texture
 function getSteamAvatarFromSteamID(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Texture
 function getSteamAvatarFromUsername(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getSteamIDFromUsername(arg0) end
 
---- @return Boolean
+--- @return boolean
 function getSteamModeActive() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getSteamProfileNameFromSteamID(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getSteamProfileNameFromUsername(arg0) end
 
 --- @return boolean
@@ -1459,55 +1459,55 @@ function getSteamScoreboard() end
 --- @return ArrayList
 function getSteamWorkshopItemIDs() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function getSteamWorkshopItemMods(arg0) end
 
 --- @return ArrayList
 function getSteamWorkshopStagedItems() end
 
---- @return Boolean
+--- @return boolean
 function getStreamModeActive() end
 
---- @param arg0 String
---- @param arg1 int
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function getTableResult(arg0, arg1) end
 
---- @param arg0 String
---- @return String
---- @overload fun(arg0: String, arg1: Object): String
---- @overload fun(arg0: String, arg1: Object, arg2: Object): String
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object): String
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): String
+--- @param arg0 string
+--- @return string
+--- @overload fun(arg0: string, arg1: any): string
+--- @overload fun(arg0: string, arg1: any, arg2: any): string
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): string
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): string
 function getText(arg0) end
 
 --- @return TextManager
 function getTextManager() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function getTextMediaEN(arg0) end
 
---- @param arg0 String
---- @return String
---- @overload fun(arg0: String, arg1: Object): String
---- @overload fun(arg0: String, arg1: Object, arg2: Object): String
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object): String
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): String
+--- @param arg0 string
+--- @return string
+--- @overload fun(arg0: string, arg1: any): string
+--- @overload fun(arg0: string, arg1: any, arg2: any): string
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): string
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): string
 function getTextOrNull(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Texture
 function getTexture(arg0) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return Texture
 function getTextureFromSaveDir(arg0, arg1) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function getTickets(arg0) end
 
 --- @return TileGeometryState
@@ -1516,13 +1516,13 @@ function getTileGeometryState() end
 --- @return TileOverlays
 function getTileOverlays() end
 
---- @return long
+--- @return integer
 function getTimeInMillis() end
 
---- @return long
+--- @return integer
 function getTimestamp() end
 
---- @return long
+--- @return integer
 function getTimestampMs() end
 
 --- @param arg0 Language
@@ -1532,7 +1532,7 @@ function getTranslatorCredits(arg0) end
 --- @return ArrayList
 function getUsers() end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return BaseVehicle
 function getVehicleById(arg0) end
 
@@ -1540,15 +1540,15 @@ function getVehicleById(arg0) end
 --- @return KahluaTable
 function getVehicleInfo(arg0) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return VehicleZone
 function getVehicleZoneAt(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return VideoTexture
 function getVideo(arg0, arg1, arg2) end
 
@@ -1577,75 +1577,75 @@ function getZombieInfo(arg0) end
 --- @return ZomboidRadio
 function getZomboidRadio() end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return Zone
 function getZone(arg0, arg1, arg2) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return ArrayList
 function getZones(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return boolean
 function hasBreakpoint(arg0, arg1) end
 
 --- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param arg1 any
 --- @return boolean
 function hasDataBreakpoint(arg0, arg1) end
 
 --- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param arg1 any
 --- @return boolean
 function hasDataReadBreakpoint(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return boolean
 function hasItemTag(arg0, arg1) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function haveAccess(arg0) end
 
---- @return void
+--- @return nil
 function initUISystem() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return InventoryItem
 --- @overload fun(arg0: Item): InventoryItem
---- @overload fun(arg0: String, arg1: float): InventoryItem
+--- @overload fun(arg0: string, arg1: number): InventoryItem
 function instanceItem(arg0) end
 
---- @param arg0 Object
---- @param arg1 String
+--- @param arg0 any
+--- @param arg1 string
 --- @return boolean
 function instanceof(arg0, arg1) end
 
---- @return void
+--- @return nil
 function invalidateLighting() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function inviteFriend(arg0) end
 
 --- @return boolean
 function is64bit() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function isAccessLevel(arg0) end
 
---- @param arg0 byte
+--- @param arg0 integer
 --- @return boolean
 function isActionDone(arg0) end
 
---- @param arg0 byte
+--- @param arg0 integer
 --- @return boolean
 function isActionRejected(arg0) end
 
@@ -1658,7 +1658,7 @@ function isAltKeyDown() end
 --- @return boolean
 function isClient() end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isControllerConnected(arg0) end
 
@@ -1668,8 +1668,8 @@ function isCoopHost() end
 --- @return boolean
 function isCtrlKeyDown() end
 
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return boolean
 function isCurrentExecutionPoint(arg0, arg1) end
 
@@ -1691,105 +1691,105 @@ function isGamePaused() end
 --- @return boolean
 function isIngameState() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function isItemFood(arg0) end
 
---- @param arg0 String
---- @param arg1 float
+--- @param arg0 string
+--- @param arg1 number
 --- @return boolean
 function isItemFresh(arg0, arg1) end
 
 --- @param arg0 InventoryItem
 --- @param arg1 ItemContainer
 --- @param arg2 ItemContainer
---- @param arg3 String
+--- @param arg3 string
 --- @return boolean
 function isItemTransactionConsistent(arg0, arg1, arg2, arg3) end
 
---- @param arg0 byte
+--- @param arg0 integer
 --- @return boolean
 function isItemTransactionDone(arg0) end
 
---- @param arg0 byte
+--- @param arg0 integer
 --- @return boolean
 function isItemTransactionRejected(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadConnected(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadDown(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadLBPressed(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadLTPressed(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadLeft(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadLeftStickButtonPressed(arg0) end
 
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return boolean
 function isJoypadPressed(arg0, arg1) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadRBPressed(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadRTPressed(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadRight(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadRightStickButtonPressed(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isJoypadUp(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
---- @overload fun(arg0: String): boolean
+--- @overload fun(arg0: string): boolean
 function isKeyDown(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
---- @overload fun(arg0: String): boolean
+--- @overload fun(arg0: string): boolean
 function isKeyPressed(arg0) end
 
 --- @param arg0 Mod
 --- @return boolean
 function isModActive(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isMouseButtonDown(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isMouseButtonPressed(arg0) end
 
 --- @return boolean
 function isMultiplayer() end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function isPlaystationController(arg0) end
 
@@ -1814,7 +1814,7 @@ function isShowConnectionInfo() end
 --- @return boolean
 function isShowServerInfo() end
 
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function isSoundPlaying(arg0) end
 
@@ -1833,11 +1833,11 @@ function isSystemMacOS() end
 --- @return boolean
 function isSystemWindows() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function isValidSteamID(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function isValidUserName(arg0) end
 
@@ -1847,903 +1847,903 @@ function isXBOXController() end
 --- @return IsoRegionsRenderer
 function isoRegionsRenderer() end
 
---- @param arg0 int
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function isoToScreenX(arg0, arg1, arg2, arg3) end
 
---- @param arg0 int
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function isoToScreenY(arg0, arg1, arg2, arg3) end
 
---- @param arg0 Object
---- @param arg1 String
+--- @param arg0 any
+--- @param arg1 string
 --- @return boolean
 function istype(arg0, arg1) end
 
 --- @param arg0 List
---- @param arg1 int
---- @return Object
+--- @param arg1 integer
+--- @return any
 function javaListRemoveAt(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
 --- @return Model
 function loadSkinnedZomboidModel(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
 --- @return Model
 function loadStaticZomboidModel(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
 --- @return Model
 function loadVehicleModel(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @param arg4 boolean
 --- @return Model
 function loadZomboidModel(arg0, arg1, arg2, arg3, arg4) end
 
 --- @param arg0 Coroutine
---- @param arg1 int
---- @return String
+--- @param arg1 integer
+--- @return string
 function localVarName(arg0, arg1) end
 
 --- @param arg0 DebugType
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function log(arg0, arg1) end
 
---- @return void
+--- @return nil
 function luaDebug() end
 
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function manipulateSavefile(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 String
---- @return String
+--- @param arg0 string
+--- @param arg1 string
+--- @return string
 function moduleDotType(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
 function networkUserAction(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function openUrl(arg0) end
 
---- @return void
+--- @return nil
 function pauseSoundAndMusic() end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function ping(arg0, arg1, arg2, arg3, arg4) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 IsoGridSquare
---- @return void
+--- @return nil
 function playServerSound(arg0, arg1) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function proceedFactionMessage(arg0) end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function proceedPM(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function processAdminChatMessage(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function processGeneralMessage(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function processSafehouseMessage(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function processSayMessage(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function processShoutMessage(arg0) end
 
 --- @param arg0 ArrayList
---- @param arg1 LuaClosure
---- @param arg2 Object
---- @return void
+--- @param arg1 function
+--- @param arg2 any
+--- @return nil
 function querySteamWorkshopItemDetails(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function queueCharEvent(arg0) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function queueKeyEvent(arg0) end
 
---- @param arg0 String
---- @param arg1 int
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function rainConfig(arg0, arg1) end
 
 --- @return boolean
 function reactivateJoypadAfterResetLua() end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function refreshAnimSets(arg0) end
 
---- @return void
+--- @return nil
 function reloadActionGroups() end
 
---- @return void
+--- @return nil
 function reloadControllerConfigFiles() end
 
---- @return void
+--- @return nil
 function reloadEngineRPM() end
 
---- @return void
+--- @return nil
 function reloadEntitiesDebug() end
 
 --- @param arg0 GameEntity
---- @return void
+--- @return nil
 function reloadEntityDebug(arg0) end
 
 --- @param arg0 GameEntity
---- @return void
+--- @return nil
 function reloadEntityFromScriptDebug(arg0) end
 
---- @return void
+--- @return nil
 function reloadEntityScripts() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function reloadLuaFile(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function reloadModelsMatching(arg0) end
 
 --- @param arg0 ScriptType
---- @return void
+--- @return nil
 function reloadScripts(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function reloadServerLuaFile(arg0) end
 
---- @return void
+--- @return nil
 function reloadSoundFiles() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function reloadVehicleTextures(arg0) end
 
---- @return void
+--- @return nil
 function reloadVehicles() end
 
---- @return void
+--- @return nil
 function reloadXui() end
 
---- @param arg0 byte
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function removeAction(arg0, arg1) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function removeAnimal(arg0) end
 
---- @param arg0 byte
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function removeItemTransaction(arg0, arg1) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function removeTicket(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
 function removeUserlog(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
 --- @return boolean
 function renameSavefile(arg0, arg1, arg2) end
 
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 int
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 integer
+--- @return nil
 function renderIsoCircle(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 int
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 integer
+--- @return nil
 function renderIsoRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
 function renderLine(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @param arg0 ItemContainer
 --- @param arg1 InventoryItem
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function replaceItemInContainer(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return string
 function replaceWith(arg0, arg1, arg2) end
 
---- @return void
+--- @return nil
 function requestPVPEvents() end
 
---- @return void
+--- @return nil
 function requestPacketCounts() end
 
---- @return void
+--- @return nil
 function requestRoles() end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 IsoPlayer
---- @return void
+--- @return nil
 function requestTrading(arg0, arg1) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function requestUserlog(arg0) end
 
---- @return void
+--- @return nil
 function requestUsers() end
 
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function require(arg0) end
 
---- @return void
+--- @return nil
 function resetRegionFile() end
 
---- @return void
+--- @return nil
 function resumeSoundAndMusic() end
 
---- @return void
+--- @return nil
 function revertToKeyboardAndMouse() end
 
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function sanitizeWorldName(arg0) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function save(arg0) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function saveControllerSettings(arg0) end
 
---- @return void
+--- @return nil
 function saveGame() end
 
---- @return void
+--- @return nil
 function saveModsFile() end
 
---- @return void
+--- @return nil
 function scoreboardUpdate() end
 
---- @param arg0 int
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function screenToIsoX(arg0, arg1, arg2, arg3) end
 
---- @param arg0 int
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function screenToIsoY(arg0, arg1, arg2, arg3) end
 
---- @return void
+--- @return nil
 function screenZoomIn() end
 
---- @return void
+--- @return nil
 function screenZoomOut() end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 BaseVehicle
---- @return void
---- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle): void
+--- @return nil
+--- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle): nil
 function sendAddAnimalFromHandsInTrailer(arg0, arg1, arg2) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 BaseVehicle
---- @return void
---- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle): void
+--- @return nil
+--- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle): nil
 function sendAddAnimalInTrailer(arg0, arg1, arg2) end
 
 --- @param arg0 ItemContainer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function sendAddItemToContainer(arg0, arg1) end
 
 --- @param arg0 ItemContainer
 --- @param arg1 ArrayList
---- @return void
+--- @return nil
 function sendAddItemsToContainer(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 Perk
---- @param arg2 float
+--- @param arg2 number
 --- @param arg3 boolean
---- @return void
+--- @return nil
 function sendAddXp(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function sendAnimalGenome(arg0) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 IsoObject
 --- @param arg3 boolean
---- @return void
+--- @return nil
 function sendAttachAnimalToPlayer(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 IsoObject
 --- @param arg3 boolean
---- @return void
+--- @return nil
 function sendAttachAnimalToTree(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoDeadBody
 --- @param arg1 IsoPlayer
---- @return void
+--- @return nil
 function sendButcherAnimal(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 KahluaTable
---- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable): void
+--- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: KahluaTable): nil
 function sendClientCommand(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @param arg2 String
+--- @param arg1 string
+--- @param arg2 string
 --- @param arg3 Object[]
---- @return void
+--- @return nil
 function sendClientCommandV(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function sendClothing(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendDamage(arg0) end
 
 --- @param arg0 IsoGridSquare
---- @param arg1 int
---- @param arg2 String
---- @return void
+--- @param arg1 integer
+--- @param arg2 string
+--- @return nil
 function sendDebugStory(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendEquip(arg0) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function sendEvent(arg0, arg1) end
 
 --- @param arg0 Faction
 --- @param arg1 IsoPlayer
---- @param arg2 String
---- @return void
+--- @param arg2 string
+--- @return nil
 function sendFactionInvite(arg0, arg1, arg2) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function sendFeedAnimalFromHand(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function sendGoogleAuth(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 boolean
 --- @param arg7 boolean
---- @return void
+--- @return nil
 function sendHitPlayer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @param arg0 IsoGameCharacter
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 boolean
---- @param arg3 String
---- @param arg4 String
+--- @param arg3 string
+--- @param arg4 string
 --- @param arg5 boolean
---- @return void
+--- @return nil
 function sendHitVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendHumanVisual(arg0) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 IsoObject
 --- @param arg3 InventoryItem
---- @return void
+--- @return nil
 function sendHutchGrabAnimal(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 IsoObject
 --- @param arg3 InventoryItem
---- @return void
+--- @return nil
 function sendHutchGrabCorpseAction(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 IsoObject
---- @return void
+--- @return nil
 function sendHutchRemoveAnimalAction(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @param arg2 float
---- @return void
+--- @param arg1 string
+--- @param arg2 number
+--- @return nil
 function sendIconFound(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 ArrayList
 --- @param arg2 IsoPlayer
---- @param arg3 String
---- @param arg4 String
+--- @param arg3 string
+--- @param arg4 string
 --- @return boolean
 function sendItemListNet(arg0, arg1, arg2, arg3, arg4) end
 
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function sendItemStats(arg0) end
 
 --- @param arg0 IsoObject
 --- @param arg1 ItemContainer
---- @return void
+--- @return nil
 function sendItemsInContainer(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendPersonalColor(arg0) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 AnimalInventoryItem
---- @return void
+--- @return nil
 function sendPickupAnimal(arg0, arg1, arg2) end
 
---- @return void
+--- @return nil
 function sendPing() end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 IsoMovingObject
---- @return void
+--- @return nil
 function sendPlaySound(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendPlayerEffects(arg0) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendPlayerExtraInfo(arg0) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendPlayerStatsChange(arg0) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 BaseVehicle
 --- @param arg3 AnimalInventoryItem
---- @return void
---- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle, arg3: AnimalInventoryItem): void
+--- @return nil
+--- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle, arg3: AnimalInventoryItem): nil
 function sendRemoveAndGrabAnimalFromTrailer(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 BaseVehicle
---- @return void
+--- @return nil
 function sendRemoveAnimalFromTrailer(arg0, arg1, arg2) end
 
 --- @param arg0 ItemContainer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function sendRemoveItemFromContainer(arg0, arg1) end
 
 --- @param arg0 ItemContainer
 --- @param arg1 ArrayList
---- @return void
+--- @return nil
 function sendRemoveItemsFromContainer(arg0, arg1) end
 
 --- @param arg0 ItemContainer
 --- @param arg1 InventoryItem
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function sendReplaceItemInContainer(arg0, arg1, arg2) end
 
---- @param arg0 int
---- @param arg1 String
---- @return void
+--- @param arg0 integer
+--- @param arg1 string
+--- @return nil
 function sendRequestInventory(arg0, arg1) end
 
 --- @param arg0 SafeHouse
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function sendSafehouseChangeMember(arg0, arg1) end
 
 --- @param arg0 SafeHouse
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function sendSafehouseChangeOwner(arg0, arg1) end
 
 --- @param arg0 SafeHouse
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function sendSafehouseChangeRespawn(arg0, arg1, arg2) end
 
 --- @param arg0 SafeHouse
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function sendSafehouseChangeTitle(arg0, arg1) end
 
 --- @param arg0 IsoGridSquare
 --- @param arg1 IsoPlayer
---- @param arg2 String
---- @return void
+--- @param arg2 string
+--- @return nil
 function sendSafehouseClaim(arg0, arg1, arg2) end
 
 --- @param arg0 SafeHouse
 --- @param arg1 IsoPlayer
---- @param arg2 String
---- @return void
+--- @param arg2 string
+--- @return nil
 function sendSafehouseInvite(arg0, arg1, arg2) end
 
 --- @param arg0 SafeHouse
---- @return void
+--- @return nil
 function sendSafehouseRelease(arg0) end
 
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 String
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 string
+--- @return nil
 function sendSafezoneClaim(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @param arg4 boolean
---- @param arg5 int
---- @param arg6 String
---- @return void
+--- @param arg5 integer
+--- @param arg6 string
+--- @return nil
 function sendSecretKey(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 KahluaTable
---- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable): void
+--- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: KahluaTable): nil
 function sendServerCommand(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 Object[]
---- @return void
+--- @return nil
 function sendServerCommandV(arg0, arg1, arg2) end
 
 --- @param arg0 BaseVehicle
 --- @param arg1 IsoGameCharacter
---- @param arg2 int
---- @param arg3 int
---- @return void
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return nil
 function sendSwitchSeat(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 byte
---- @return void
+--- @param arg1 integer
+--- @return nil
 function sendSyncPlayerFields(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function sendVisual(arg0) end
 
---- @param arg0 int
---- @param arg1 String
+--- @param arg0 integer
+--- @param arg1 string
 --- @param arg2 State
---- @return void
+--- @return nil
 function sendWarManagerUpdate(arg0, arg1, arg2) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
---- @param arg5 String
---- @param arg6 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 string
+--- @param arg5 string
+--- @param arg6 string
 --- @param arg7 boolean
 --- @param arg8 boolean
---- @param arg9 int
---- @param arg10 String
---- @return void
+--- @param arg9 integer
+--- @param arg10 string
+--- @return nil
 function serverConnect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function serverConnectCoop(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function serverFileExists(arg0) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function setActivePlayer(arg0) end
 
---- @return void
+--- @return nil
 function setAdmin() end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function setAggroTarget(arg0, arg1, arg2) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function setBehaviorStep(arg0) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @return nil
 function setControllerDeadZone(arg0, arg1, arg2) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function setDebugToggleControllerPluggedIn(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function setDefaultRoleFor(arg0, arg1) end
 
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function setGameSpeed(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function setModelMetaData(arg0, arg1, arg2, arg3, arg4) end
 
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function setMouseXY(arg0, arg1) end
 
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 IsoPlayer
---- @param arg3 String
---- @return void
+--- @param arg3 string
+--- @return nil
 function setPlayerJoypad(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function setPlayerMouse(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function setPlayerMovementActive(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function setProgressBarValue(arg0, arg1) end
 
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function setPuddles(arg0) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @return nil
 function setSavefilePlayer1(arg0, arg1, arg2) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function setServerStatisticEnable(arg0) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function setShowConnectionInfo(arg0) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function setShowPausedMessage(arg0) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function setShowServerInfo(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function setSpawnRegion(arg0) end
 
 --- @param arg0 Double[]
---- @return void
+--- @return nil
 function setZoomLevels(arg0) end
 
 --- @param arg0 Role
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 Color
 --- @param arg3 KahluaTable
---- @return void
+--- @return nil
 function setupRole(arg0, arg1, arg2, arg3) end
 
---- @return void
+--- @return nil
 function showAnimationViewer() end
 
---- @return void
+--- @return nil
 function showAttachmentEditor() end
 
---- @return void
+--- @return nil
 function showChunkDebugger() end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function showDebugInfoInChat(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function showFolderInDesktop(arg0) end
 
---- @return void
+--- @return nil
 function showebugger() end
 
---- @return void
+--- @return nil
 function showSeamEditor() end
 
---- @return void
+--- @return nil
 function showSpriteModelEditor() end
 
 --- @param arg0 boolean
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
 --- @return boolean
 function showSteamFloatingGamepadTextInput(arg0, arg1, arg2, arg3, arg4) end
 
 --- @param arg0 boolean
 --- @param arg1 boolean
---- @param arg2 String
---- @param arg3 int
---- @param arg4 String
+--- @param arg2 string
+--- @param arg3 integer
+--- @param arg4 string
 --- @return boolean
 function showSteamGamepadTextInput(arg0, arg1, arg2, arg3, arg4) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function showVehicleEditor(arg0) end
 
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function showWorldMapEditor(arg0) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 String
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 string
+--- @return nil
 function showWrongChatTabMessage(arg0, arg1, arg2) end
 
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function sledgeDestroy(arg0) end
 
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 int
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 integer
+--- @return nil
 function spawnHorde(arg0, arg1, arg2, arg3, arg4, arg5) end
 
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return boolean
 function spawnpointsExistsForMod(arg0, arg1) end
 
@@ -2751,242 +2751,242 @@ function spawnpointsExistsForMod(arg0, arg1) end
 --- @param arg1 InventoryItem
 --- @param arg2 IsoGridSquare
 --- @param arg3 KahluaTable
---- @return byte
+--- @return integer
 function startFishingAction(arg0, arg1, arg2, arg3) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return Server
 function steamGetInternetServerDetails(arg0) end
 
---- @return int
+--- @return integer
 function steamGetInternetServersCount() end
 
---- @return void
+--- @return nil
 function steamReleaseInternetServersRequest() end
 
---- @return void
+--- @return nil
 function steamRequestInternetServersList() end
 
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return boolean
 function steamRequestServerDetails(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return boolean
 function steamRequestServerRules(arg0, arg1) end
 
---- @return void
+--- @return nil
 function stepForward() end
 
---- @param arg0 Object
---- @return void
+--- @param arg0 any
+--- @return nil
 function stopFire(arg0) end
 
---- @return void
+--- @return nil
 function stopPing() end
 
---- @return void
+--- @return nil
 function stopSendSecretKey() end
 
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function stopSound(arg0) end
 
 --- @param arg0 BodyPart
---- @param arg1 long
---- @return void
+--- @param arg1 integer
+--- @return nil
 function syncBodyPart(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 HandWeapon
---- @return void
+--- @return nil
 function syncHandWeaponFields(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function syncInventory(arg0) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function syncItemFields(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function syncItemModData(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function syncPlayerStats(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function syncVisuals(arg0) end
 
---- @param arg0 String
---- @param arg1 int
---- @return String
+--- @param arg0 string
+--- @param arg1 integer
+--- @return string
 function tabToX(arg0, arg1) end
 
---- @return void
---- @overload fun(arg0: String): void
+--- @return nil
+--- @overload fun(arg0: string): nil
 function takeScreenshot() end
 
---- @return void
+--- @return nil
 function testHelicopter() end
 
---- @return void
+--- @return nil
 function testSound() end
 
 --- @param arg0 KahluaTable
---- @param arg1 Object
---- @return void
+--- @param arg1 any
+--- @return nil
 function timSort(arg0, arg1) end
 
---- @param arg0 double
---- @return int
+--- @param arg0 number
+--- @return integer
 function toInt(arg0) end
 
 --- @param arg0 KahluaTable
---- @param arg1 Object
---- @return void
+--- @param arg1 any
+--- @return nil
 function toggleBreakOnChange(arg0, arg1) end
 
 --- @param arg0 KahluaTable
---- @param arg1 Object
---- @return void
+--- @param arg1 any
+--- @return nil
 function toggleBreakOnRead(arg0, arg1) end
 
---- @param arg0 String
---- @param arg1 int
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function toggleBreakpoint(arg0, arg1) end
 
 --- @param arg0 Mod
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function toggleModActive(arg0, arg1) end
 
---- @return void
+--- @return nil
 function toggleVehicleRenderToTexture() end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 IsoPlayer
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function tradingUISendAddItem(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 IsoPlayer
 --- @param arg2 InventoryItem
---- @return void
+--- @return nil
 function tradingUISendRemoveItem(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 IsoPlayer
---- @param arg2 int
---- @return void
+--- @param arg2 integer
+--- @return nil
 function tradingUISendUpdateState(arg0, arg1, arg2) end
 
 --- @param arg0 HashMap
 --- @return KahluaTable
 function transformIntoKahluaTable(arg0) end
 
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 UIElement
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function translatePointXInOverheadMapToWindow(arg0, arg1, arg2, arg3) end
 
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 UIElement
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function translatePointXInOverheadMapToWorld(arg0, arg1, arg2, arg3) end
 
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 UIElement
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function translatePointYInOverheadMapToWindow(arg0, arg1, arg2, arg3) end
 
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 UIElement
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function translatePointYInOverheadMapToWorld(arg0, arg1, arg2, arg3) end
 
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function transmitBigWaterSplash(arg0, arg1, arg2, arg3) end
 
---- @param arg0 String
---- @return void
---- @overload fun(arg0: String, arg1: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object): void
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(arg0: string, arg1: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
 function triggerEvent(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @return Texture
 function tryGetTexture(arg0) end
 
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function updateChatSettings(arg0, arg1, arg2) end
 
---- @return void
+--- @return nil
 function updateFire() end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function useStaticErosionRand(arg0) end
 
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function useTextureFiltering(arg0) end
 
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
---- @overload fun(arg0: String): boolean
+--- @overload fun(arg0: string): boolean
 function wasKeyDown(arg0) end
 
 --- @return boolean
 function wasMouseActiveMoreRecentlyThanJoypad() end
 
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function writeLog(arg0, arg1) end
 
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function zpopClearZombies(arg0, arg1) end
 
 --- @return ZombiePopulationRenderer
 function zpopNewRenderer() end
 
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function zpopSpawnNow(arg0, arg1) end
 
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function zpopSpawnTimeToZero(arg0, arg1) end

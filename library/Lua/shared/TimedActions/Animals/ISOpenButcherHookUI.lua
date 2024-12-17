@@ -8,7 +8,6 @@
 ---@field [any] any
 ISOpenButcherHookUI = ISBaseTimedAction:derive("ISOpenButcherHookUI")
 
-
 ---@return any
 function ISOpenButcherHookUI:animEvent(event, parameter) end
 
@@ -41,7 +40,6 @@ function ISOpenButcherHookUI:update() end
 
 ---@return any
 function ISOpenButcherHookUI:waitToStart() end
-
 
 ---@return ISOpenButcherHookUI
 function ISOpenButcherHookUI:new(character, hook) end

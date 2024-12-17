@@ -1,32 +1,31 @@
---- @meta
+--- @meta _
 
 --- @class SoundTimelineScript: BaseScriptObject
 --- @field public class any
-SoundTimelineScript = {};
+SoundTimelineScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function SoundTimelineScript:Load(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function SoundTimelineScript:getEventName() end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function SoundTimelineScript:getPosition(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SoundTimelineScript:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

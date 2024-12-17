@@ -22,7 +22,6 @@
 ---@field [any] any
 ISScriptViewPanel = ISPanel:derive("ISScriptViewPanel")
 
-
 ---@return any
 function ISScriptViewPanel:createChildren() end
 
@@ -49,7 +48,6 @@ function ISScriptViewPanel:setScript(_script) end
 
 ---@return any
 function ISScriptViewPanel:update() end
-
 
 ---@return ISScriptViewPanel
 function ISScriptViewPanel:new(x, y, width, height, script) end

@@ -8,7 +8,6 @@ ISEntityBuildMenu = {}
 ISEntityBuildMenu.buildables = false
 ISEntityBuildMenu.items = {}
 
-
 ---@return any
 function ISEntityBuildMenu.addToolTip() end
 

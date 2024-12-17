@@ -34,7 +34,6 @@ ISSafehouseUI = ISPanel:derive("ISSafehouseUI")
 ISSafehouseUI.messages = {}
 ISSafehouseUI.inviteDialogs = {}
 
-
 ---@return any
 function ISSafehouseUI.AcceptedSafehouseInvite(safehouseName, host) end
 
@@ -43,7 +42,6 @@ function ISSafehouseUI.OnSafehousesChanged() end
 
 ---@return any
 function ISSafehouseUI.ReceiveSafehouseInvite(safehouse, host) end
-
 
 ---@return any
 function ISSafehouseUI:close() end
@@ -95,7 +93,6 @@ function ISSafehouseUI:updateButtons() end
 
 ---@return any
 function ISSafehouseUI:updatePlayerList() end
-
 
 ---@return ISSafehouseUI
 function ISSafehouseUI:new(x, y, width, height, safehouse, player) end

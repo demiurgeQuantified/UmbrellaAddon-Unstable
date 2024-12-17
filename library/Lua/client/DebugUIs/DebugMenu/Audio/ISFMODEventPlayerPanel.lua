@@ -14,7 +14,6 @@
 ---@field [any] any
 ISFMODEventPlayerPanel = ISDebugSubPanelBase:derive("ISFMODEventPlayerPanel")
 
-
 ---@return any
 function ISFMODEventPlayerPanel:createChildren() end
 
@@ -51,7 +50,6 @@ function ISFMODEventPlayerPanel:prerender() end
 ---@return any
 function ISFMODEventPlayerPanel:render() end
 
-
 ---@return ISFMODEventPlayerPanel
 function ISFMODEventPlayerPanel:new(x, y, width, height, doStencil) end
 
@@ -65,7 +63,6 @@ function ISFMODEventPlayerPanel:new(x, y, width, height, doStencil) end
 ---@field ui any
 ---@field [any] any
 ISFMODEventPlayerParameterEditor = ISBaseObject:derive("ISFMODEventPlayerParameterEditor")
-
 
 ---@return any
 function ISFMODEventPlayerParameterEditor:getEntryText(value) end
@@ -84,7 +81,6 @@ function ISFMODEventPlayerParameterEditor:setUI(ui) end
 
 ---@return any
 function ISFMODEventPlayerParameterEditor:update() end
-
 
 ---@return ISFMODEventPlayerParameterEditor
 function ISFMODEventPlayerParameterEditor:new(eventPlayer, eventPath, parameterIndex) end

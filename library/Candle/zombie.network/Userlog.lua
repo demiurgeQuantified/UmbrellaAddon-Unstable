@@ -1,47 +1,46 @@
---- @meta
+--- @meta _
 
 --- @class Userlog
 --- @field public class any
-Userlog = {};
+Userlog = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function Userlog:getAmount() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getIssuedBy() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getLastUpdate() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getText() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getType() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getUsername() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Userlog:setAmount(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function Userlog:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -50,5 +49,5 @@ function Userlog:write(arg0) end
 --- @public
 --- @param arg0 ByteBuffer
 --- @return Userlog
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: String, arg4: int, arg5: String): Userlog
+--- @overload fun(arg0: string, arg1: string, arg2: string, arg3: string, arg4: integer, arg5: string): Userlog
 function Userlog.new(arg0) end

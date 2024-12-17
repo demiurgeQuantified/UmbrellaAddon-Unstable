@@ -17,7 +17,6 @@
 ---@field [any] any
 ISFitnessAction = ISBaseTimedAction:derive("ISFitnessAction")
 
-
 ---@return any
 function ISFitnessAction:animEvent(event, parameter) end
 
@@ -62,7 +61,6 @@ function ISFitnessAction:update() end
 
 ---@return any
 function ISFitnessAction:waitToStart() end
-
 
 ---@return ISFitnessAction
 function ISFitnessAction:new(character, exercise, timeToExe, exeData, exeDataType) end

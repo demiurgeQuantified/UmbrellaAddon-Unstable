@@ -13,7 +13,6 @@
 ---@field [any] any
 ISFluidTransferAction = ISBaseTimedAction:derive("ISFluidTransferAction")
 
-
 ---@return any
 function ISFluidTransferAction:complete() end
 
@@ -32,6 +31,13 @@ function ISFluidTransferAction:stop() end
 ---@return any
 function ISFluidTransferAction:update() end
 
-
 ---@return ISFluidTransferAction
-function ISFluidTransferAction:new(character, sourceContainer, sourceFluidObject, targetContainer, targetFluidObject, amount) end
+function ISFluidTransferAction:new(
+	character,
+	sourceContainer,
+	sourceFluidObject,
+	targetContainer,
+	targetFluidObject,
+	amount
+)
+end

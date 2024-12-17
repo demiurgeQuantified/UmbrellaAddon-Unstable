@@ -3,7 +3,6 @@
 ---@class ISFireplaceMenu
 ISFireplaceMenu = {}
 
-
 ---@return any
 function ISFireplaceMenu.onAddAllFuel(playerObj, fireplace) end
 

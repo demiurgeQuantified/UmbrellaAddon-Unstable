@@ -6,7 +6,6 @@
 ---@field [any] any
 ISWakeOtherPlayer = ISBaseTimedAction:derive("ISWakeOtherPlayer")
 
-
 ---@return any
 function ISWakeOtherPlayer:complete() end
 
@@ -27,7 +26,6 @@ function ISWakeOtherPlayer:stop() end
 
 ---@return any
 function ISWakeOtherPlayer:update() end
-
 
 ---@return ISWakeOtherPlayer
 function ISWakeOtherPlayer:new(character, otherPlayer) end

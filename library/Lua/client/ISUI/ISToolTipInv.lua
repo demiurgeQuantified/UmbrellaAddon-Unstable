@@ -20,7 +20,6 @@
 ---@field [any] any
 ISToolTipInv = ISPanel:derive("ISToolTipInv")
 
-
 ---@return any
 function ISToolTipInv:adjustPositionToAvoidOverlap(avoidRect) end
 
@@ -68,7 +67,6 @@ function ISToolTipInv:setItem(item) end
 
 ---@return any
 function ISToolTipInv:setOwner(ui) end
-
 
 ---@return ISToolTipInv
 function ISToolTipInv:new(item) end

@@ -5,7 +5,6 @@ LootZedTool = {}
 LootZedTool.SpawnItemCheckerList = {}
 LootZedTool.SpawnItemChecker = {}
 
-
 ---@return any
 function LootZedTool.doRollItem_CalcChances(containerDist, _, _, character, _, isJunk, _) end
 

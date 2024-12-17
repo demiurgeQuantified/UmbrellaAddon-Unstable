@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class EvolvedRecipe: BaseScriptObject
 --- @field public class any
-EvolvedRecipe = {};
+EvolvedRecipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function EvolvedRecipe:Load(arg0, arg1) end
 
 --- @public
@@ -22,15 +22,15 @@ function EvolvedRecipe:Load(arg0, arg1) end
 function EvolvedRecipe:addItem(arg0, arg1, arg2) end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getAddIngredientSound() end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getBaseItem() end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getFullResultItem() end
 
 --- @public
@@ -50,19 +50,19 @@ function EvolvedRecipe:getItemsCanBeUse(arg0, arg1, arg2) end
 function EvolvedRecipe:getItemsList() end
 
 --- @public
---- @return int
+--- @return integer
 function EvolvedRecipe:getMaxItems() end
 
 --- @public
---- @return float
+--- @return number
 function EvolvedRecipe:getMinimumWater() end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getName() end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getOriginalname() end
 
 --- @public
@@ -70,11 +70,11 @@ function EvolvedRecipe:getOriginalname() end
 function EvolvedRecipe:getPossibleItems() end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getResultItem() end
 
 --- @public
---- @return String
+--- @return string
 function EvolvedRecipe:getUntranslatedName() end
 
 --- @public
@@ -112,20 +112,19 @@ function EvolvedRecipe:needToBeCooked(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function EvolvedRecipe:setAllowFrozenItem(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function EvolvedRecipe:setIsHidden(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return EvolvedRecipe
 function EvolvedRecipe.new(arg0) end

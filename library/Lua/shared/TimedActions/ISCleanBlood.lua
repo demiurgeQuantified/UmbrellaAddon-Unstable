@@ -9,7 +9,6 @@
 ---@field [any] any
 ISCleanBlood = ISBaseTimedAction:derive("ISCleanBlood")
 
-
 ---@return any
 function ISCleanBlood:complete() end
 
@@ -33,7 +32,6 @@ function ISCleanBlood:update() end
 
 ---@return any
 function ISCleanBlood:waitToStart() end
-
 
 ---@return ISCleanBlood
 function ISCleanBlood:new(character, square, cleaner) end

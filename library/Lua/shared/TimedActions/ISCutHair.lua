@@ -8,7 +8,6 @@
 ---@field [any] any
 ISCutHair = ISBaseTimedAction:derive("ISCutHair")
 
-
 ---@return any
 function ISCutHair:complete() end
 
@@ -32,7 +31,6 @@ function ISCutHair:stopSound() end
 
 ---@return any
 function ISCutHair:update() end
-
 
 ---@return ISCutHair
 function ISCutHair:new(character, hairStyle, item, maxTime) end

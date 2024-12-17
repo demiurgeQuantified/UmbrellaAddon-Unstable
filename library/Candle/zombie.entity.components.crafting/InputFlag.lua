@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class InputFlag: Enum
 --- @field public class any
@@ -47,7 +47,7 @@
 --- @field public SharpnessCheck InputFlag
 --- @field public ToolLeft InputFlag
 --- @field public ToolRight InputFlag
-InputFlag = {};
+InputFlag = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -55,7 +55,7 @@ InputFlag = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return InputFlag
 function InputFlag.valueOf(arg0) end
 
@@ -63,5 +63,3 @@ function InputFlag.valueOf(arg0) end
 --- @static
 --- @return InputFlag[]
 function InputFlag.values() end
-
-

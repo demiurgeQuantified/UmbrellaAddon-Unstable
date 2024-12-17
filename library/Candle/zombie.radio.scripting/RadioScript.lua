@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RadioScript
 --- @field public class any
-RadioScript = {};
+RadioScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,36 +10,36 @@ RadioScript = {};
 
 --- @public
 --- @param arg0 RadioBroadCast
---- @return void
---- @overload fun(self: RadioScript, arg0: RadioBroadCast, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: RadioScript, arg0: RadioBroadCast, arg1: boolean): nil
 function RadioScript:AddBroadcast(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function RadioScript:AddExitOption(arg0, arg1, arg2) end
 
 --- @public
---- @return String
+--- @return string
 function RadioScript:GetGUID() end
 
 --- @public
---- @return String
+--- @return string
 function RadioScript:GetName() end
 
 --- @public
---- @return void
+--- @return nil
 function RadioScript:Reset() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function RadioScript:UpdateScript(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function RadioScript:clearExitOptions() end
 
 --- @public
@@ -47,7 +47,7 @@ function RadioScript:clearExitOptions() end
 function RadioScript:getBroadcastList() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return RadioBroadCast
 function RadioScript:getBroadcastWithID(arg0) end
 
@@ -60,11 +60,11 @@ function RadioScript:getCurrentBroadcast() end
 function RadioScript:getExitOptions() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioScript:getLoopMax() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioScript:getLoopMin() end
 
 --- @public
@@ -72,11 +72,11 @@ function RadioScript:getLoopMin() end
 function RadioScript:getNextScript() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioScript:getStartDay() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioScript:getStartDayStamp() end
 
 --- @public
@@ -88,19 +88,18 @@ function RadioScript:getValidAirBroadcast() end
 function RadioScript:getValidAirBroadcastDebug() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RadioScript:setStartDayStamp(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return RadioScript
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: String): RadioScript
+--- @overload fun(arg0: string, arg1: integer, arg2: integer, arg3: string): RadioScript
 function RadioScript.new(arg0, arg1, arg2) end

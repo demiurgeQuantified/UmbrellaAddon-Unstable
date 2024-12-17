@@ -8,7 +8,6 @@
 ---@field [any] any
 ISHotwireVehicle = ISBaseTimedAction:derive("ISHotwireVehicle")
 
-
 ---@return any
 function ISHotwireVehicle:complete() end
 
@@ -32,7 +31,6 @@ function ISHotwireVehicle:stopSound() end
 
 ---@return any
 function ISHotwireVehicle:update() end
-
 
 ---@return ISHotwireVehicle
 function ISHotwireVehicle:new(character) end

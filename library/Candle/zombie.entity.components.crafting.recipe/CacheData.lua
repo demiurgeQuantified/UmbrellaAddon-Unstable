@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CacheData
 --- @field public class any
-CacheData = {};
+CacheData = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,16 +10,16 @@ CacheData = {};
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function CacheData:addAppliedItemsToList(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return InventoryItem
 function CacheData:getAppliedItem(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function CacheData:getAppliedItemsCount() end
 
 --- @public
@@ -36,9 +36,8 @@ function CacheData:isMoveToOutputs() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function CacheData:setMoveToOutputs(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

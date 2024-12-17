@@ -19,7 +19,6 @@
 ---@field [any] any
 ISVendorSpiral = ISPanel:derive("ISVendorSpiral")
 
-
 ---@return any
 function ISVendorSpiral:initialise() end
 
@@ -34,7 +33,6 @@ function ISVendorSpiral:renderToTarget(_target) end
 
 ---@return any
 function ISVendorSpiral:setRotation(_rot) end
-
 
 ---@return ISVendorSpiral
 function ISVendorSpiral:new(x, y, width, height, texture) end

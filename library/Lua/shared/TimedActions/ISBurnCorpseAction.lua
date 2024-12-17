@@ -8,7 +8,6 @@
 ---@field [any] any
 ISBurnCorpseAction = ISBaseTimedAction:derive("ISBurnCorpseAction")
 
-
 ---@return any
 function ISBurnCorpseAction:complete() end
 
@@ -29,7 +28,6 @@ function ISBurnCorpseAction:stop() end
 
 ---@return any
 function ISBurnCorpseAction:update() end
-
 
 ---@return ISBurnCorpseAction
 function ISBurnCorpseAction:new(character, corpse) end

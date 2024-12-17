@@ -1,12 +1,12 @@
---- @meta
+--- @meta _
 
 --- @class AnimalData
 --- @field public class any
---- @field public FEATHER_CHANCE_PER_HOUR int
---- @field public ONE_DAY_MILLISECONDS long
---- @field public ONE_HOUR_MILLISECONDS long
---- @field public ONE_WEEK_MILLISECONDS long
-AnimalData = {};
+--- @field public FEATHER_CHANCE_PER_HOUR integer
+--- @field public ONE_DAY_MILLISECONDS integer
+--- @field public ONE_HOUR_MILLISECONDS integer
+--- @field public ONE_WEEK_MILLISECONDS integer
+AnimalData = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,9 +15,8 @@ AnimalData = {};
 --- @public
 --- @static
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function AnimalData.shuffleList(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,7 +24,7 @@ function AnimalData.shuffleList(arg0) end
 
 --- @public
 --- @param arg0 IsoFeedingTrough
---- @return void
+--- @return nil
 function AnimalData:callToTrough(arg0) end
 
 --- @public
@@ -43,11 +42,11 @@ function AnimalData:canHaveMilk() end
 --- @public
 --- @param arg0 PZCalendar
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimalData:checkEggs(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:checkFertilizedTime() end
 
 --- @public
@@ -56,15 +55,15 @@ function AnimalData:checkFertilizedTime() end
 function AnimalData:checkPoop(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:checkStages() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:drink() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:drinkFromGround() end
 
 --- @public
@@ -73,36 +72,36 @@ function AnimalData:drinkFromGround() end
 function AnimalData:dropFeather(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:eat() end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function AnimalData:eatFood(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimalData:eatItem(arg0, arg1) end
 
 --- @public
 --- @param arg0 PZCalendar
---- @return void
+--- @return nil
 function AnimalData:findFemaleToInseminate(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getAge() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getAgeGrowModifier() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return String
+--- @return string
 function AnimalData:getAgeString(arg0) end
 
 --- @public
@@ -118,23 +117,23 @@ function AnimalData:getAttachedTree() end
 function AnimalData:getBreed() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getClutchSize() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getDaysSurvived() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalData:getDebugBehaviorString() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getFertilizedTime() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getGeriatricPercentage() end
 
 --- @public
@@ -142,81 +141,81 @@ function AnimalData:getGeriatricPercentage() end
 function AnimalData:getGrowStage() end
 
 --- @public
---- @param arg0 Float
---- @return float
+--- @param arg0 number
+--- @return number
 function AnimalData:getHealthLoss(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getHutchPosition() end
 
 --- @public
 --- @param arg0 PZCalendar
---- @return int
+--- @return integer
 function AnimalData:getLastImpregnatePeriod(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function AnimalData:getLastPregnancyPeriod() end
 
 --- @public
---- @return Float
+--- @return number
 function AnimalData:getLastTimeMilkedInHour() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMaxAgeGeriatric() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMaxMilk() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMaxMilkActual() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMaxSize() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMaxWeight() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMaxWool() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMilkInc() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMilkQuantity() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMinMilk() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMinSize() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getMinWeight() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getPreferredHutchPosition() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getPregnancyTime() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getPregnantPeriod() end
 
 --- @public
@@ -228,33 +227,33 @@ function AnimalData:getRandomTroughList() end
 function AnimalData:getRegionHutch() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getSize() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalData:getTimeBeforeNextPregnancy() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getWeight() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getWoolInc() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalData:getWoolQuantity() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimalData:grow(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalData:growUp(arg0) end
 
 --- @public
@@ -263,23 +262,23 @@ function AnimalData:haveLayingEggPeriod() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalData:hourGrow(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:init() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:initSize() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:initStage() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:initWeight() end
 
 --- @public
@@ -304,126 +303,125 @@ function AnimalData:isPregnant() end
 function AnimalData:reduceHealthDueToMilk() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:resetEatingCheck() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AnimalData:setAge(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function AnimalData:setAttachedPlayer(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function AnimalData:setAttachedTree(arg0) end
 
 --- @public
 --- @param arg0 AnimalBreed
---- @return void
+--- @return nil
 function AnimalData:setBreed(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalData:setCanHaveMilk(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalData:setFertilized(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function AnimalData:setFertilizedTime(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AnimalData:setHutchPosition(arg0) end
 
 --- @public
 --- @param arg0 HashMap
---- @return void
+--- @return nil
 function AnimalData:setMaleGenome(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalData:setMaxMilkActual(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalData:setMilkQuantity(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AnimalData:setPreferredHutchPosition(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AnimalData:setPregnancyTime(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalData:setPregnant(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalData:setSize(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalData:setSizeForced(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalData:setWeight(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
---- @overload fun(self: AnimalData, arg0: float, arg1: boolean): void
+--- @param arg0 number
+--- @return nil
+--- @overload fun(self: AnimalData, arg0: number, arg1: boolean): nil
 function AnimalData:setWoolQuantity(arg0) end
 
 --- @public
 --- @param arg0 PZCalendar
---- @return void
+--- @return nil
 function AnimalData:tryInseminateInMeta(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:update() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:updateHealth() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalData:updateHungerAndThirst(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:updateLastPregnancyTime() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalData:updateLastTimeMilked() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

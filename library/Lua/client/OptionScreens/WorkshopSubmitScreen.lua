@@ -17,7 +17,6 @@ local TEST = false
 WorkshopSubmitScreen = ISPanelJoypad:derive("WorkshopSubmitScreen")
 WorkshopSubmitScreen.TEST = TEST
 
-
 ---@return any
 function WorkshopSubmitScreen.OnSteamWorkshopItemCreated(itemID, bUserNeedsToAcceptWorkshopLegalAgreement) end
 
@@ -29,7 +28,6 @@ function WorkshopSubmitScreen.OnSteamWorkshopItemNotUpdated(result) end
 
 ---@return any
 function WorkshopSubmitScreen.OnSteamWorkshopItemUpdated(bUserNeedsToAcceptWorkshopLegalAgreement) end
-
 
 ---@return any
 function WorkshopSubmitScreen:create() end
@@ -45,7 +43,6 @@ function WorkshopSubmitScreen:onGainJoypadFocus(joypadData) end
 
 ---@return any
 function WorkshopSubmitScreen:render() end
-
 
 ---@return WorkshopSubmitScreen
 function WorkshopSubmitScreen:new(x, y, width, height) end

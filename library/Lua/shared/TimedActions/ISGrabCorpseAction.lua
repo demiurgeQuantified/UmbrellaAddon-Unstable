@@ -9,7 +9,6 @@
 ---@field [any] any
 ISGrabCorpseAction = ISBaseTimedAction:derive("ISGrabCorpseAction")
 
-
 ---@return any
 function ISGrabCorpseAction:complete() end
 
@@ -36,7 +35,6 @@ function ISGrabCorpseAction:update() end
 
 ---@return any
 function ISGrabCorpseAction:waitToStart() end
-
 
 ---@return ISGrabCorpseAction
 function ISGrabCorpseAction:new(character, corpseBody) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class XuiTableCellScript: XuiScript
 --- @field public class any
-XuiTableCellScript = {};
+XuiTableCellScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,13 +12,12 @@ XuiTableCellScript = {};
 --- @return boolean
 function XuiTableCellScript:isCellHasLoaded() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 XuiScript
 --- @return XuiTableCellScript

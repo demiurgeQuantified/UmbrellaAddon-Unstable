@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FluidScript
 --- @field public class any
-FluidScript = {};
+FluidScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,11 +17,9 @@ function FluidScript:getCustomColor() end
 function FluidScript:getFluid() end
 
 --- @public
---- @return String
+--- @return string
 function FluidScript:getFluidType() end
 
 --- @public
---- @return float
+--- @return number
 function FluidScript:getPercentage() end
-
-

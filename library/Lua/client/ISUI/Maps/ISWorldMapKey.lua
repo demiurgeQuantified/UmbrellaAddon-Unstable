@@ -19,7 +19,6 @@
 ---@field [any] any
 ISWorldMapKey = ISPanel:derive("ISWorldMapKey")
 
-
 ---@return any
 function ISWorldMapKey:createChildren() end
 
@@ -52,7 +51,6 @@ function ISWorldMapKey:setIso(bool) end
 
 ---@return any
 function ISWorldMapKey:undisplay() end
-
 
 ---@return ISWorldMapKey
 function ISWorldMapKey:new(x, y, width, height, mapUI) end

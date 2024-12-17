@@ -1,32 +1,31 @@
---- @meta
+--- @meta _
 
 --- @class BufferedWriter: Writer
 --- @field public class any
-BufferedWriter = {};
+BufferedWriter = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function BufferedWriter:close() end
 
 --- @public
---- @return void
+--- @return nil
 function BufferedWriter:flush() end
 
 --- @public
---- @return void
+--- @return nil
 function BufferedWriter:newLine() end
 
 --- @public
---- @param arg0 int
---- @return void
---- @overload fun(self: BufferedWriter, arg0: char[], arg1: int, arg2: int): void
---- @overload fun(self: BufferedWriter, arg0: String, arg1: int, arg2: int): void
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: BufferedWriter, arg0: char[], arg1: integer, arg2: integer): nil
+--- @overload fun(self: BufferedWriter, arg0: string, arg1: integer, arg2: integer): nil
 function BufferedWriter:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -35,5 +34,5 @@ function BufferedWriter:write(arg0) end
 --- @public
 --- @param arg0 Writer
 --- @return BufferedWriter
---- @overload fun(arg0: Writer, arg1: int): BufferedWriter
+--- @overload fun(arg0: Writer, arg1: integer): BufferedWriter
 function BufferedWriter.new(arg0) end

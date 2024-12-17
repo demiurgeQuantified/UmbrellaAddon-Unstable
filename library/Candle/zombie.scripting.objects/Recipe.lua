@@ -1,75 +1,75 @@
---- @meta
+--- @meta _
 
 --- @class Recipe: BaseScriptObject
 --- @field public class any
-Recipe = {};
+Recipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Recipe:DoResult(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Recipe:DoSource(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function Recipe:Load(arg0, arg1) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function Recipe:addRequiredSkill(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function Recipe:clearRequiredSkills() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Source
 function Recipe:findSource(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function Recipe:getFullType() end
 
 --- @public
---- @return float
+--- @return number
 function Recipe:getHeat() end
 
 --- @public
---- @return String
+--- @return string
 function Recipe:getName() end
 
 --- @public
---- @return String
+--- @return string
 function Recipe:getNearItem() end
 
 --- @public
---- @return int
+--- @return integer
 function Recipe:getNumberOfNeededItem() end
 
 --- @public
---- @return String
+--- @return string
 function Recipe:getOriginalname() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return RequiredSkill
 function Recipe:getRequiredSkill(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Recipe:getRequiredSkillCount() end
 
 --- @public
@@ -89,7 +89,7 @@ function Recipe:getResults() end
 function Recipe:getSource() end
 
 --- @public
---- @return float
+--- @return number
 function Recipe:getStationMultiplier() end
 
 --- @public
@@ -97,15 +97,14 @@ function Recipe:getStationMultiplier() end
 function Recipe:isRequiresWorkstation() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Recipe:setNearItem(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Recipe:setOriginalname(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

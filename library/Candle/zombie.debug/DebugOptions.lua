@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class DebugOptions
 --- @field public class any
 --- @implement IDebugOptionGroup
 --- @field public instance DebugOptions
---- @field public VERSION int
-DebugOptions = {};
+--- @field public VERSION integer
+DebugOptions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,10 +13,9 @@ DebugOptions = {};
 
 --- @public
 --- @static
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DebugOptions.testThreadCrash(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,12 +23,12 @@ function DebugOptions.testThreadCrash(arg0) end
 
 --- @public
 --- @param arg0 IDebugOption
---- @return void
---- @overload fun(self: DebugOptions, arg0: IDebugOption): void
+--- @return nil
+--- @overload fun(self: DebugOptions, arg0: IDebugOption): nil
 function DebugOptions:addChild(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function DebugOptions:getBoolean(arg0) end
 
@@ -39,27 +38,27 @@ function DebugOptions:getBoolean(arg0) end
 function DebugOptions:getChildren() end
 
 --- @public
---- @param arg0 String
---- @return String
---- @overload fun(self: DebugOptions, arg0: String): String
+--- @param arg0 string
+--- @return string
+--- @overload fun(self: DebugOptions, arg0: string): string
 function DebugOptions:getCombinedName(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function DebugOptions:getName() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return BooleanDebugOption
 function DebugOptions:getOptionByIndex(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return BooleanDebugOption
 function DebugOptions:getOptionByName(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function DebugOptions:getOptionCount() end
 
 --- @public
@@ -67,21 +66,21 @@ function DebugOptions:getOptionCount() end
 function DebugOptions:getParent() end
 
 --- @public
---- @return void
+--- @return nil
 function DebugOptions:init() end
 
 --- @public
---- @return void
+--- @return nil
 function DebugOptions:load() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @return BooleanDebugOption
 function DebugOptions:newDebugOnlyOption(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @return BooleanDebugOption
 function DebugOptions:newOption(arg0, arg1) end
@@ -93,41 +92,40 @@ function DebugOptions:newOptionGroup(arg0) end
 
 --- @public
 --- @param arg0 IDebugOption
---- @return void
---- @overload fun(self: DebugOptions, arg0: IDebugOption): void
+--- @return nil
+--- @overload fun(self: DebugOptions, arg0: IDebugOption): nil
 function DebugOptions:onChildAdded(arg0) end
 
 --- @public
 --- @param arg0 IDebugOption
---- @return void
---- @overload fun(self: DebugOptions, arg0: IDebugOption): void
+--- @return nil
+--- @overload fun(self: DebugOptions, arg0: IDebugOption): nil
 function DebugOptions:onDescendantAdded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function DebugOptions:onFullPathChanged() end
 
 --- @public
 --- @param arg0 IDebugOption
---- @return void
---- @overload fun(self: DebugOptions, arg0: IDebugOption): void
+--- @return nil
+--- @overload fun(self: DebugOptions, arg0: IDebugOption): nil
 function DebugOptions:removeChild(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function DebugOptions:save() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function DebugOptions:setBoolean(arg0, arg1) end
 
 --- @public
 --- @param arg0 IDebugOptionGroup
---- @return void
+--- @return nil
 function DebugOptions:setParent(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

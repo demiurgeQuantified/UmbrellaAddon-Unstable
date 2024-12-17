@@ -9,6 +9,5 @@ ISFPS.frame = 0
 ISFPS.start = false
 ISFPS.init = false
 
-
 ---@return any
 function ISFPS.onKeyPressed(key) end

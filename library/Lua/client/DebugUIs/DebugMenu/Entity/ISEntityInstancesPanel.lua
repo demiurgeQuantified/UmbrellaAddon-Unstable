@@ -14,10 +14,8 @@
 ---@field [any] any
 ISEntityInstancesPanel = ISPanel:derive("ISEntityInstancesPanel")
 
-
 ---@return any
 function ISEntityInstancesPanel.onTextChange(box) end
-
 
 ---@return any
 function ISEntityInstancesPanel:close() end
@@ -57,7 +55,6 @@ function ISEntityInstancesPanel:prerender() end
 
 ---@return any
 function ISEntityInstancesPanel:render() end
-
 
 ---@return ISEntityInstancesPanel
 function ISEntityInstancesPanel:new(x, y, width, height, player) end

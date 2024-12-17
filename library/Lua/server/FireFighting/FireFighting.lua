@@ -3,7 +3,6 @@
 ---@class FireFighting
 FireFighting = {}
 
-
 ---@return any
 function FireFighting.getExtinguisher(playerObj) end
 

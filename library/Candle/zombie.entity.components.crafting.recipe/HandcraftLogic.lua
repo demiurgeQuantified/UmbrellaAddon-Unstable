@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class HandcraftLogic: BaseCraftingLogic
 --- @field public class any
-HandcraftLogic = {};
+HandcraftLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,7 +13,7 @@ HandcraftLogic = {};
 function HandcraftLogic:areAllInputItemsSatisfied() end
 
 --- @public
---- @return void
+--- @return nil
 function HandcraftLogic:autoPopulateInputs() end
 
 --- @public
@@ -30,15 +30,15 @@ function HandcraftLogic:canCharacterPerformRecipe(arg0) end
 function HandcraftLogic:canPerformCurrentRecipe() end
 
 --- @public
---- @return void
+--- @return nil
 function HandcraftLogic:checkValidRecipeSelected() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 boolean
 --- @param arg3 IsoPlayer
---- @return void
+--- @return nil
 function HandcraftLogic:filterRecipeList(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -58,7 +58,7 @@ function HandcraftLogic:getAllViableInputResources() end
 function HandcraftLogic:getContainers() end
 
 --- @public
---- @return KahluaTableImpl
+--- @return table
 function HandcraftLogic:getCraftActionTable() end
 
 --- @public
@@ -67,12 +67,12 @@ function HandcraftLogic:getCraftBench() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function HandcraftLogic:getCreatedOutputItems(arg0) end
 
 --- @public
 --- @param arg0 InputScript
---- @return int
+--- @return integer
 function HandcraftLogic:getInputCount(arg0) end
 
 --- @public
@@ -86,7 +86,7 @@ function HandcraftLogic:getInputItemNodesForInput(arg0) end
 
 --- @public
 --- @param arg0 InputScript
---- @return int
+--- @return integer
 function HandcraftLogic:getInputUses(arg0) end
 
 --- @public
@@ -104,11 +104,11 @@ function HandcraftLogic:getManualInputsFor(arg0, arg1) end
 function HandcraftLogic:getManualSelectInputScriptFilter() end
 
 --- @public
---- @return String
+--- @return string
 function HandcraftLogic:getModelHandOne() end
 
 --- @public
---- @return String
+--- @return string
 function HandcraftLogic:getModelHandTwo() end
 
 --- @public
@@ -131,7 +131,7 @@ function HandcraftLogic:getPlayer() end
 
 --- @public
 --- @param arg0 boolean
---- @return int
+--- @return integer
 function HandcraftLogic:getPossibleCraftCount(arg0) end
 
 --- @public
@@ -148,7 +148,7 @@ function HandcraftLogic:getRecipeList() end
 
 --- @public
 --- @param arg0 InputScript
---- @return float
+--- @return number
 function HandcraftLogic:getResidualFluidFromInput(arg0) end
 
 --- @public
@@ -213,11 +213,11 @@ function HandcraftLogic:performCurrentRecipe() end
 --- @param arg0 List
 --- @param arg1 List
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function HandcraftLogic:populateInputs(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function HandcraftLogic:refresh() end
 
 --- @public
@@ -226,22 +226,22 @@ function HandcraftLogic:refresh() end
 function HandcraftLogic:removeInputItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function HandcraftLogic:selectionSpam() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function HandcraftLogic:selectionSpamWithout(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function HandcraftLogic:setContainers(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function HandcraftLogic:setIsoObject(arg0) end
 
 --- @public
@@ -252,27 +252,27 @@ function HandcraftLogic:setManualInputsFor(arg0, arg1) end
 
 --- @public
 --- @param arg0 InputScript
---- @return void
+--- @return nil
 function HandcraftLogic:setManualSelectInputScriptFilter(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function HandcraftLogic:setManualSelectInputs(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
---- @return void
+--- @return nil
 function HandcraftLogic:setRecipe(arg0) end
 
 --- @public
 --- @param arg0 List
---- @return void
+--- @return nil
 function HandcraftLogic:setRecipes(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function HandcraftLogic:setShowManualSelectInputs(arg0) end
 
 --- @public
@@ -280,14 +280,13 @@ function HandcraftLogic:setShowManualSelectInputs(arg0) end
 function HandcraftLogic:shouldShowManualSelectInputs() end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function HandcraftLogic:startCraftAction(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function HandcraftLogic:stopCraftAction() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

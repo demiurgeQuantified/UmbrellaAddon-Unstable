@@ -15,7 +15,6 @@
 ObjectViewer = ISCollapsableWindow:derive("ObjectViewer")
 ObjectViewer.map = {}
 
-
 ---@return any
 function ObjectViewer.onDataRead(data) end
 
@@ -24,7 +23,6 @@ function ObjectViewer.onDataWrite(data) end
 
 ---@return any
 function ObjectViewer.onWatch(item) end
-
 
 ---@return any
 function ObjectViewer:createChildren() end
@@ -52,7 +50,6 @@ function ObjectViewer:restorePos() end
 
 ---@return any
 function ObjectViewer:storePos() end
-
 
 ---@return ObjectViewer
 function ObjectViewer:new(x, y, width, height, obj) end

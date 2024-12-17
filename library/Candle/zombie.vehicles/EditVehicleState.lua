@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class EditVehicleState: GameState
 --- @field public class any
 --- @field public instance EditVehicleState
-EditVehicleState = {};
+EditVehicleState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,46 +14,45 @@ EditVehicleState = {};
 --- @return EditVehicleState
 function EditVehicleState.checkInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:exit() end
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function EditVehicleState:fromLua0(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @return any
 function EditVehicleState:fromLua1(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:reenter() end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:render() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function EditVehicleState:setScript(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function EditVehicleState:setTable(arg0) end
 
 --- @public
@@ -61,9 +60,8 @@ function EditVehicleState:setTable(arg0) end
 function EditVehicleState:update() end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

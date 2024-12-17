@@ -11,7 +11,6 @@
 ---@field [any] any
 ISControllerTestPanel = ISPanel:derive("ISControllerTestPanel")
 
-
 ---@return any
 function ISControllerTestPanel:createChildren() end
 
@@ -38,7 +37,6 @@ function ISControllerTestPanel:render() end
 
 ---@return any
 function ISControllerTestPanel:setControllerCombo() end
-
 
 ---@return ISControllerTestPanel
 function ISControllerTestPanel:new(x, y, width, height) end

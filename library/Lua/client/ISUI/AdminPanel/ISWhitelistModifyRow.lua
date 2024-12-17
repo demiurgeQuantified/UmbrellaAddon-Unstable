@@ -21,7 +21,6 @@
 ---@field [any] any
 ISWhitelistModifyRow = ISPanel:derive("ISWhitelistModifyRow")
 
-
 ---@return any
 function ISWhitelistModifyRow:createChildren() end
 
@@ -36,7 +35,6 @@ function ISWhitelistModifyRow:onOptionMouseDown(button, x, y) end
 
 ---@return any
 function ISWhitelistModifyRow:render() end
-
 
 ---@return ISWhitelistModifyRow
 function ISWhitelistModifyRow:new(x, y, width, height, view) end

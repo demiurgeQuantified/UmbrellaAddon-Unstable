@@ -10,7 +10,6 @@
 ---@field [any] any
 ISFeedingTroughUI = ISCollapsableWindow:derive("ISFeedingTroughUI")
 
-
 ---@return any
 function ISFeedingTroughUI:create() end
 
@@ -22,7 +21,6 @@ function ISFeedingTroughUI:prerender() end
 
 ---@return any
 function ISFeedingTroughUI:render() end
-
 
 ---@return ISFeedingTroughUI
 function ISFeedingTroughUI:new(x, y, width, height, trough, player) end

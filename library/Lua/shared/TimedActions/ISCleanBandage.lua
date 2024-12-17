@@ -10,7 +10,6 @@
 ---@field [any] any
 ISCleanBandage = ISBaseTimedAction:derive("ISCleanBandage")
 
-
 ---@return any
 function ISCleanBandage:complete() end
 
@@ -37,7 +36,6 @@ function ISCleanBandage:update() end
 
 ---@return any
 function ISCleanBandage:waitToStart() end
-
 
 ---@return ISCleanBandage
 function ISCleanBandage:new(character, item, waterObject, recipe) end

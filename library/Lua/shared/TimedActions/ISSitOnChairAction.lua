@@ -9,7 +9,6 @@
 ---@field [any] any
 ISSitOnChairAction = ISBaseTimedAction:derive("ISSitOnChairAction")
 
-
 ---@return any
 function ISSitOnChairAction:isValid() end
 
@@ -24,7 +23,6 @@ function ISSitOnChairAction:stop() end
 
 ---@return any
 function ISSitOnChairAction:update() end
-
 
 ---@return ISSitOnChairAction
 function ISSitOnChairAction:new(character, item) end

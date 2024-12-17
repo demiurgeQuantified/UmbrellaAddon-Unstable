@@ -8,7 +8,6 @@
 ---@field [any] any
 ISFarmingInfo = ISPanelJoypad:derive("ISFarmingInfo")
 
-
 ---@return any
 function ISFarmingInfo.getCurrentGrowingPhase(info, farmingLevel) end
 
@@ -59,7 +58,6 @@ function ISFarmingInfo.hasDisease(plant) end
 
 ---@return any
 function ISFarmingInfo.RequiredWidth() end
-
 
 ---@return any
 function ISFarmingInfo:getBlueBar(list) end
@@ -115,50 +113,49 @@ function ISFarmingInfo:setPlant(plant) end
 ---@return any
 function ISFarmingInfo:update() end
 
-
 ---@return ISFarmingInfo
 function ISFarmingInfo:new(x, y, width, height, character, plant) end
 
 water_rgb = {
-    ["r"] = 255.0,
-    ["g"] = 255.0,
-    ["b"] = 255.0,
+	["r"] = 255.0,
+	["g"] = 255.0,
+	["b"] = 255.0,
 }
 
 waterbar_rgb = {
-    ["r"] = 0.15,
-    ["g"] = 0.3,
-    ["b"] = 0.63,
+	["r"] = 0.15,
+	["g"] = 0.3,
+	["b"] = 0.63,
 }
 
 fertilizer_rgb = {
-    ["r"] = 0.0,
-    ["g"] = 0.0,
-    ["b"] = 0.0,
+	["r"] = 0.0,
+	["g"] = 0.0,
+	["b"] = 0.0,
 }
 
 compost_rgb = {
-    ["r"] = 0.0,
-    ["g"] = 0.0,
-    ["b"] = 0.0,
+	["r"] = 0.0,
+	["g"] = 0.0,
+	["b"] = 0.0,
 }
 
 health_rgb = {
-    ["r"] = 0.0,
-    ["g"] = 0.0,
-    ["b"] = 0.0,
+	["r"] = 0.0,
+	["g"] = 0.0,
+	["b"] = 0.0,
 }
 
 nowateredsince_rgb = {
-    ["r"] = 255.0,
-    ["g"] = 255.0,
-    ["b"] = 255.0,
+	["r"] = 255.0,
+	["g"] = 255.0,
+	["b"] = 255.0,
 }
 
 disease_rgb = {
-    ["0r"] = 255.0,
-    ["0g"] = 255.0,
-    ["0b"] = 255.0,
+	["0r"] = 255.0,
+	["0g"] = 255.0,
+	["0b"] = 255.0,
 }
 
 ---@class disease
@@ -167,7 +164,7 @@ disease_rgb = {
 disease = {}
 
 title_rgb = {
-    ["r"] = 1.0,
-    ["g"] = 1.0,
-    ["b"] = 1.0,
+	["r"] = 1.0,
+	["g"] = 1.0,
+	["b"] = 1.0,
 }

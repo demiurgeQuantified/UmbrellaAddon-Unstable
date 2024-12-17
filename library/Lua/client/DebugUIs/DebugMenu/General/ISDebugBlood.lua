@@ -7,7 +7,6 @@
 ---@field [any] any
 ISDebugBlood = ISDebugSubPanelBase:derive("ISDebugBlood")
 
-
 ---@return any
 function ISDebugBlood:createChildren() end
 
@@ -28,7 +27,6 @@ function ISDebugBlood:prerender() end
 
 ---@return any
 function ISDebugBlood:setSliderValues() end
-
 
 ---@return ISDebugBlood
 function ISDebugBlood:new(x, y, width, height, doStencil) end

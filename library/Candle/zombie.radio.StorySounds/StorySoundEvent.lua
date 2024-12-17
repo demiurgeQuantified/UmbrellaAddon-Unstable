@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class StorySoundEvent
 --- @field public class any
-StorySoundEvent = {};
+StorySoundEvent = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,19 +13,18 @@ StorySoundEvent = {};
 function StorySoundEvent:getEventSounds() end
 
 --- @public
---- @return String
+--- @return string
 function StorySoundEvent:getName() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function StorySoundEvent:setEventSounds(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function StorySoundEvent:setName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -33,5 +32,5 @@ function StorySoundEvent:setName(arg0) end
 
 --- @public
 --- @return StorySoundEvent
---- @overload fun(arg0: String): StorySoundEvent
+--- @overload fun(arg0: string): StorySoundEvent
 function StorySoundEvent.new() end

@@ -28,13 +28,11 @@
 ISScriptsDebugWindow = ISCollapsableWindow:derive("ISScriptsDebugWindow")
 ISScriptsDebugWindow.coords = false
 
-
 ---@return any
 function ISScriptsDebugWindow.OnOpenPanel(_player) end
 
 ---@return any
 function ISScriptsDebugWindow.onTextChange(box) end
-
 
 ---@return any
 function ISScriptsDebugWindow:close() end
@@ -71,7 +69,6 @@ function ISScriptsDebugWindow:prerender() end
 
 ---@return any
 function ISScriptsDebugWindow:render() end
-
 
 ---@return ISScriptsDebugWindow
 function ISScriptsDebugWindow:new(x, y, width, height, player) end

@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class WorldFlares
 --- @field public class any
 --- @field public DEBUG_DRAW boolean
 --- @field public ENABLED boolean
---- @field public NEXT_ID int
-WorldFlares = {};
+--- @field public NEXT_ID integer
+WorldFlares = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,20 +13,20 @@ WorldFlares = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function WorldFlares.Clear() end
 
 --- @public
 --- @static
 --- @param arg0 PlayerRenderSettings
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 IsoPlayer
---- @return void
+--- @return nil
 function WorldFlares.applyFlaresForPlayer(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function WorldFlares.debugRender() end
 
 --- @public
@@ -36,48 +36,47 @@ function WorldFlares.getDebugDraw() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Flare
 function WorldFlares.getFlare(arg0) end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function WorldFlares.getFlareCount() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Flare
 function WorldFlares.getFlareID(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 float
---- @param arg10 float
---- @return void
+--- @param arg0 number
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @param arg10 number
+--- @return nil
 function WorldFlares.launchFlare(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function WorldFlares.setDebugDraw(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function WorldFlares.update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

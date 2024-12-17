@@ -57,7 +57,6 @@
 ISVendorVendingLayout = ISPanel:derive("ISVendorVendingLayout")
 ISVendorVendingLayout.defaultJoypadMoveInterval = 20
 
-
 ---@return any
 function ISVendorVendingLayout:addVendingOption(_index, _x, _y, _resource) end
 
@@ -99,7 +98,6 @@ function ISVendorVendingLayout:render() end
 
 ---@return any
 function ISVendorVendingLayout:update() end
-
 
 ---@return ISVendorVendingLayout
 function ISVendorVendingLayout:new(x, y, _parentPanel, _blueprintLogic) end

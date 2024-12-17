@@ -4,7 +4,6 @@
 ISXuiBuilder = {}
 ISXuiBuilder.constructors = {}
 
-
 ---@return any
 function ISXuiBuilder.applySizing(_xuiScript, _o, _parent) end
 
@@ -49,7 +48,6 @@ function ISXuiBuilder.texture(_texName) end
 
 ---@class ISXuiFunctions
 ISXuiFunctions = {}
-
 
 ---@return any
 function ISXuiFunctions.xuiFind(_self, _xuiKey) end

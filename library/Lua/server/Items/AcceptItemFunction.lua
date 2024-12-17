@@ -3,7 +3,6 @@
 ---@class AcceptItemFunction
 AcceptItemFunction = {}
 
-
 ---@return any
 function AcceptItemFunction.AmmoStrap_Bullets(container, item) end
 

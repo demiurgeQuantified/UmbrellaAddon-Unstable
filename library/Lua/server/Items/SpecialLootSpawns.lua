@@ -4,7 +4,6 @@
 SpecialLootSpawns = SpecialLootSpawns or {}
 SpecialLootSpawns.OnCreateRegion = {}
 
-
 ---@return any
 function SpecialLootSpawns.CreateSchematic(item, list, multipleChance) end
 

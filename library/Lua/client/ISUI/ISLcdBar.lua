@@ -34,20 +34,19 @@ ISLcdBar.charW = (getCore():getOptionFontSizeReal() >= 4) and 21 or 14
 ISLcdBar.charH = (getCore():getOptionFontSizeReal() >= 4) and 27 or 18
 ISLcdBar.indexes = " !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_"
 ISLcdBar.unsupported = {
-    "CH",
-    "CN",
-    "JP",
-    "KO",
-    "RU",
-    "TH",
-    "UA",
+	"CH",
+	"CN",
+	"JP",
+	"KO",
+	"RU",
+	"TH",
+	"UA",
 }
 ISLcdBar.special = {
-    "[",
-    "%",
-    "(",
+	"[",
+	"%",
+	"(",
 }
-
 
 ---@return any
 function ISLcdBar:createChildren() end
@@ -87,7 +86,6 @@ function ISLcdBar:toggleOn(_b) end
 
 ---@return any
 function ISLcdBar:update() end
-
 
 ---@return ISLcdBar
 function ISLcdBar:new(x, y, charWidth) end

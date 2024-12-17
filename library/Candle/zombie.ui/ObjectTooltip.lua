@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class ObjectTooltip: UIElement
 --- @field public class any
---- @field public alphaStep float
-ObjectTooltip = {};
+--- @field public alphaStep number
+ObjectTooltip = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,106 +11,105 @@ ObjectTooltip = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ObjectTooltip.checkFont() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @param arg8 double
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @return nil
 function ObjectTooltip:DrawProgressBar(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @return void
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return nil
 function ObjectTooltip:DrawText(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @return void
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return nil
 function ObjectTooltip:DrawTextCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @return void
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return nil
 function ObjectTooltip:DrawTextRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @param arg0 Texture
---- @param arg1 double
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
 function ObjectTooltip:DrawTextureScaled(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @param arg0 Texture
---- @param arg1 double
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @param arg8 double
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @return nil
 function ObjectTooltip:DrawTextureScaledAspect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 boolean
---- @return void
+--- @return nil
 function ObjectTooltip:DrawValueRight(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @param arg1 int
---- @param arg2 int
---- @return void
---- @overload fun(self: ObjectTooltip, arg0: int, arg1: int, arg2: int): void
+--- @param arg0 number
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+--- @overload fun(self: ObjectTooltip, arg0: integer, arg1: integer, arg2: integer): nil
 function ObjectTooltip:DrawValueRightNoPlus(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @return void
+--- @param arg0 integer
+--- @param arg1 string
+--- @return nil
 function ObjectTooltip:adjustWidth(arg0, arg1) end
 
 --- @public
@@ -119,7 +118,7 @@ function ObjectTooltip:beginLayout() end
 
 --- @public
 --- @param arg0 Layout
---- @return void
+--- @return nil
 function ObjectTooltip:endLayout(arg0) end
 
 --- @public
@@ -131,7 +130,7 @@ function ObjectTooltip:getCharacter() end
 function ObjectTooltip:getFont() end
 
 --- @public
---- @return int
+--- @return integer
 function ObjectTooltip:getLineSpacing() end
 
 --- @public
@@ -139,11 +138,11 @@ function ObjectTooltip:getLineSpacing() end
 function ObjectTooltip:getTexture() end
 
 --- @public
---- @return float
+--- @return number
 function ObjectTooltip:getWeightOfStack() end
 
 --- @public
---- @return void
+--- @return nil
 function ObjectTooltip:hide() end
 
 --- @public
@@ -151,47 +150,46 @@ function ObjectTooltip:hide() end
 function ObjectTooltip:isMeasureOnly() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @return Boolean
+--- @param arg0 number
+--- @param arg1 number
+--- @return boolean
 function ObjectTooltip:onMouseMove(arg0, arg1) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
 function ObjectTooltip:onMouseMoveOutside(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function ObjectTooltip:render() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ObjectTooltip:setCharacter(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ObjectTooltip:setMeasureOnly(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function ObjectTooltip:setWeightOfStack(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
---- @param arg1 double
---- @param arg2 double
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function ObjectTooltip:show(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function ObjectTooltip:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

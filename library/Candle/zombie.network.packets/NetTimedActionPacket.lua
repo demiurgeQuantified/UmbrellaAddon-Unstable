@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class NetTimedActionPacket: NetTimedAction
 --- @field public class any
 --- @implement INetworkPacket
-NetTimedActionPacket = {};
+NetTimedActionPacket = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,17 +21,17 @@ function NetTimedActionPacket.createPacket(arg0, arg1) end
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
---- @return void
+--- @return nil
 function NetTimedActionPacket.processPacketOnServer(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 PacketType
 --- @param arg1 Object[]
---- @return void
---- @overload fun(arg0: IsoPlayer, arg1: PacketType, arg2: Object[]): void
---- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): void
---- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): void
+--- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: PacketType, arg2: Object[]): nil
+--- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): nil
+--- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): nil
 function NetTimedActionPacket.send(arg0, arg1) end
 
 --- @public
@@ -39,28 +39,27 @@ function NetTimedActionPacket.send(arg0, arg1) end
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
---- @return void
+--- @return nil
 function NetTimedActionPacket.sendToAll(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 PacketType
---- @param arg1 float
---- @param arg2 float
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 Object[]
---- @return void
---- @overload fun(arg0: PacketType, arg1: UdpConnection, arg2: float, arg3: float, arg4: Object[]): void
+--- @return nil
+--- @overload fun(arg0: PacketType, arg1: UdpConnection, arg2: number, arg3: number, arg4: Object[]): nil
 function NetTimedActionPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
 --- @param arg0 PacketType
---- @param arg1 int
---- @param arg2 int
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 Object[]
---- @return void
+--- @return nil
 function NetTimedActionPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,91 +68,90 @@ function NetTimedActionPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) e
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
---- @return void
---- @overload fun(self: NetTimedActionPacket, arg0: ByteBuffer, arg1: UdpConnection): void
+--- @return nil
+--- @overload fun(self: NetTimedActionPacket, arg0: ByteBuffer, arg1: UdpConnection): nil
 function NetTimedActionPacket:parse(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:parseClient(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:parseClientLoading(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:parseServer(arg0, arg1) end
 
 --- @public
 --- @param arg0 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:processClient(arg0) end
 
 --- @public
 --- @param arg0 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:processClientLoading(arg0) end
 
 --- @public
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:processServer(arg0, arg1) end
 
 --- @public
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:sendToClient(arg0, arg1) end
 
 --- @public
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:sendToClients(arg0, arg1) end
 
 --- @public
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:sendToConnection(arg0, arg1) end
 
 --- @public
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
---- @param arg2 float
---- @param arg3 float
---- @return void
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function NetTimedActionPacket:sendToRelativeClients(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 PacketType
---- @return void
+--- @return nil
 function NetTimedActionPacket:sendToServer(arg0) end
 
 --- @public
 --- @param arg0 Object[]
---- @return void
+--- @return nil
 function NetTimedActionPacket:setData(arg0) end
 
 --- @public
 --- @param arg0 PacketType
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedActionPacket:sync(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function NetTimedActionPacket:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

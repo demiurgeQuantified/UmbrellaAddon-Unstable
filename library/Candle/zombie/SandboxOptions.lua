@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class SandboxOptions
 --- @field public class any
 --- @field public instance SandboxOptions
-SandboxOptions = {};
+SandboxOptions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,7 +11,7 @@ SandboxOptions = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function SandboxOptions.Reset() end
 
 --- @public
@@ -21,22 +21,21 @@ function SandboxOptions.getInstance() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions.isValidPresetName(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:applySettings() end
 
 --- @public
 --- @param arg0 SandboxOptions
---- @return void
+--- @return nil
 function SandboxOptions:copyValuesFrom(arg0) end
 
 --- @public
@@ -44,100 +43,100 @@ function SandboxOptions:copyValuesFrom(arg0) end
 function SandboxOptions:getAllClothesUnlocked() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getCompostHours() end
 
 --- @public
---- @return int
---- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): int
+--- @return integer
+--- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): integer
 function SandboxOptions:getCurrentDiminishedLootPercentage() end
 
 --- @public
---- @return float
---- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): float
+--- @return number
+--- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): number
 function SandboxOptions:getCurrentLootMultiplier() end
 
 --- @public
---- @return int
---- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): int
+--- @return integer
+--- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): integer
 function SandboxOptions:getCurrentLootedChance() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getCurrentRatIndex() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getDayLengthMinutes() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getDayLengthMinutesDefault() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getElecShutModifier() end
 
 --- @public
---- @return double
+--- @return number
 function SandboxOptions:getEnduranceRegenMultiplier() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getErosionSpeed() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getFirstYear() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getNumOptions() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return SandboxOption
 function SandboxOptions:getOptionByIndex(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return SandboxOption
 function SandboxOptions:getOptionByName(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getRainModifier() end
 
 --- @public
---- @return double
+--- @return number
 function SandboxOptions:getStatsDecreaseMultiplier() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getTemperatureModifier() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getTimeSinceApo() end
 
 --- @public
---- @return int
+--- @return integer
 function SandboxOptions:getWaterShutModifier() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:handleOldServerZombiesFile() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:handleOldZombiesFile1() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:handleOldZombiesFile2() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:initSandboxVars() end
 
 --- @public
@@ -145,36 +144,36 @@ function SandboxOptions:initSandboxVars() end
 function SandboxOptions:isUnstableScriptNameSpam() end
 
 --- @public
---- @return void
---- @overload fun(self: SandboxOptions, arg0: ByteBuffer): void
+--- @return nil
+--- @overload fun(self: SandboxOptions, arg0: ByteBuffer): nil
 function SandboxOptions:load() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:loadCurrentGameBinFile() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:loadGameFile(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:loadPresetFile(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:loadServerLuaFile(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:loadServerTextFile(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:loadServerZombiesFile(arg0) end
 
@@ -184,70 +183,69 @@ function SandboxOptions:newCopy() end
 
 --- @public
 --- @param arg0 CustomSandboxOption
---- @return void
+--- @return nil
 function SandboxOptions:newCustomOption(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function SandboxOptions:randomAlarmDecay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function SandboxOptions:randomElectricityShut(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function SandboxOptions:randomWaterShut(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:resetToDefault() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function SandboxOptions:save(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:saveGameFile(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:savePresetFile(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function SandboxOptions:saveServerLuaFile(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:sendToServer() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
 function SandboxOptions:set(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:setDefaultsToCurrentValues() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:toLua() end
 
 --- @public
---- @return void
+--- @return nil
 function SandboxOptions:updateFromLua() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

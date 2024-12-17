@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBWoodcraft: RandomizedBuildingBase
 --- @field public class any
-RBWoodcraft = {};
+RBWoodcraft = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,14 +16,13 @@ function RBWoodcraft:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBWoodcraft:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBWoodcraft:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

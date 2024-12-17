@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class BaseAnimalBehavior
 --- @field public class any
-BaseAnimalBehavior = {};
+BaseAnimalBehavior = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,9 +11,8 @@ BaseAnimalBehavior = {};
 --- @public
 --- @static
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function BaseAnimalBehavior.shuffleList(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,7 +45,7 @@ function BaseAnimalBehavior:canEatThis(arg0) end
 function BaseAnimalBehavior:canGoToHutch(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:checkBehavior() end
 
 --- @public
@@ -54,11 +53,11 @@ function BaseAnimalBehavior:checkBehavior() end
 function BaseAnimalBehavior:checkEatBehavior() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:checkSit() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:doBehaviorAction() end
 
 --- @public
@@ -66,16 +65,16 @@ function BaseAnimalBehavior:doBehaviorAction() end
 function BaseAnimalBehavior:eatFromVehicle() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:fightAnimal() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:forceEatFromMom() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function BaseAnimalBehavior:forceFleeFromChr(arg0) end
 
 --- @public
@@ -84,50 +83,49 @@ function BaseAnimalBehavior:getRandomTroughList() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function BaseAnimalBehavior:goAttack(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function BaseAnimalBehavior:pickRandomWanderInterval() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:resetBehaviorAction() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function BaseAnimalBehavior:setBlockMovement(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function BaseAnimalBehavior:setHourBeforeLeavingHutch(arg0) end
 
 --- @public
 --- @param arg0 IsoMovingObject
 --- @param arg1 boolean
---- @param arg2 float
---- @return void
+--- @param arg2 number
+--- @return nil
 function BaseAnimalBehavior:spotted(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:update() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:updateAttackTimer() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:walkedOnSpot() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseAnimalBehavior:wanderIdle() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

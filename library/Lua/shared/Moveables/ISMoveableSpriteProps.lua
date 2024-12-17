@@ -64,7 +64,6 @@ ISMoveableSpriteProps.multiSpriteFloorRadius = 3
 ISMoveableSpriteProps.ghc = getCore():getGoodHighlitedColor()
 ISMoveableSpriteProps.bhc = getCore():getBadHighlitedColor()
 
-
 ---@return any
 function ISMoveableSpriteProps.addLineToInfoTable(_table, _lineA, _rA, _gA, _bA, _lineB, _rB, _gB, _bB) end
 
@@ -77,10 +76,8 @@ function ISMoveableSpriteProps.fromObjectForRepair(_object) end
 ---@return any
 function ISMoveableSpriteProps.OnDynamicMovableRecipe(_sprite, _recipe, _item, _player) end
 
-
 ---@return ISMoveableSpriteProps
 function ISMoveableSpriteProps.new(_sprite) end
-
 
 ---@return any
 function ISMoveableSpriteProps:addAllScrapItemsToInventory(_character, _list) end
@@ -305,7 +302,16 @@ function ISMoveableSpriteProps:objectNoContainerOrEmpty(_object) end
 function ISMoveableSpriteProps:pickUpMoveable(_character, _square, _createItem, _forceAllow) end
 
 ---@return any
-function ISMoveableSpriteProps:pickUpMoveableInternal(_character, _square, _object, _sprInstance, _spriteName, _createItem, _rotating) end
+function ISMoveableSpriteProps:pickUpMoveableInternal(
+	_character,
+	_square,
+	_object,
+	_sprInstance,
+	_spriteName,
+	_createItem,
+	_rotating
+)
+end
 
 ---@return any
 function ISMoveableSpriteProps:pickUpMoveableViaCursor(_character, _square, _origSpriteName, _moveCursor) end
@@ -353,7 +359,16 @@ function ISMoveableSpriteProps:scrapHaloNoteCheck(_character, _itemsAdded) end
 function ISMoveableSpriteProps:scrapObject(_character) end
 
 ---@return any
-function ISMoveableSpriteProps:scrapObjectInternal(_character, _scrapDef, _square, _object, _scrapResult, _chance, _perkName) end
+function ISMoveableSpriteProps:scrapObjectInternal(
+	_character,
+	_scrapDef,
+	_square,
+	_object,
+	_scrapResult,
+	_chance,
+	_perkName
+)
+end
 
 ---@return any
 function ISMoveableSpriteProps:scrapObjectViaCursor(_character, _square, _origSpriteName, _moveCursor) end
@@ -389,11 +404,8 @@ function ISMoveableSpriteProps:walkToAndEquip(_character, _square, _mode) end
 ---@field [any] any
 ISThumpableSpriteProps = {}
 
-
-
 ---@return ISThumpableSpriteProps
 function ISThumpableSpriteProps.new(object) end
-
 
 ---@return any
 function ISThumpableSpriteProps:addToolString(infoTable, tag, hasTool) end

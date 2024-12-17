@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RVSConstructionSite: RandomizedVehicleStoryBase
 --- @field public class any
-RVSConstructionSite = {};
+RVSConstructionSite = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,15 +18,14 @@ function RVSConstructionSite:initVehicleStorySpawner(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RVSConstructionSite:randomizeVehicleStory(arg0, arg1) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner
 --- @param arg1 Element
---- @return void
+--- @return nil
 function RVSConstructionSite:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

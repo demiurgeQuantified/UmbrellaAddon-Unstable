@@ -8,7 +8,6 @@
 ---@field [any] any
 ISOpenMechanicsUIAction = ISBaseTimedAction:derive("ISOpenMechanicsUIAction")
 
-
 ---@return any
 function ISOpenMechanicsUIAction:isValid() end
 
@@ -26,7 +25,6 @@ function ISOpenMechanicsUIAction:update() end
 
 ---@return any
 function ISOpenMechanicsUIAction:waitToStart() end
-
 
 ---@return ISOpenMechanicsUIAction
 function ISOpenMechanicsUIAction:new(character, vehicle, usedHood) end

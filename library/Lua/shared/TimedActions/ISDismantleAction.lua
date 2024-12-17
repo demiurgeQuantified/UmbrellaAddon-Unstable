@@ -7,7 +7,6 @@
 ---@field [any] any
 ISDismantleAction = ISBaseTimedAction:derive("ISDismantleAction")
 
-
 ---@return any
 function ISDismantleAction:complete() end
 
@@ -31,7 +30,6 @@ function ISDismantleAction:update() end
 
 ---@return any
 function ISDismantleAction:waitToStart() end
-
 
 ---@return ISDismantleAction
 function ISDismantleAction:new(character, thumpable) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class LoadingQueueState: GameState
 --- @field public class any
-LoadingQueueState = {};
+LoadingQueueState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,23 +10,22 @@ LoadingQueueState = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function LoadingQueueState.onConnectionImmediate() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 HashMap
---- @return void
+--- @return nil
 function LoadingQueueState.onPlaceInQueue(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function LoadingQueueState:enter() end
 
 --- @public
@@ -34,13 +33,12 @@ function LoadingQueueState:enter() end
 function LoadingQueueState:redirectState() end
 
 --- @public
---- @return void
+--- @return nil
 function LoadingQueueState:render() end
 
 --- @public
 --- @return StateAction
 function LoadingQueueState:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

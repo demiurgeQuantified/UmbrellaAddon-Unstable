@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ComponentEventType: Enum
 --- @field public class any
-ComponentEventType = {};
+ComponentEventType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,7 +10,7 @@ ComponentEventType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ComponentEventType
 function ComponentEventType.valueOf(arg0) end
 
@@ -18,5 +18,3 @@ function ComponentEventType.valueOf(arg0) end
 --- @static
 --- @return ComponentEventType[]
 function ComponentEventType.values() end
-
-

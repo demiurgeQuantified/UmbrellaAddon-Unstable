@@ -15,7 +15,6 @@
 ---@field [any] any
 ISSLManager = ISPanel:derive("ISSLManager")
 
-
 ---@return any
 function ISSLManager:createChildren() end
 
@@ -30,7 +29,6 @@ function ISSLManager:render() end
 
 ---@return any
 function ISSLManager:update() end
-
 
 ---@return ISSLManager
 function ISSLManager:new(x, y, width, height) end

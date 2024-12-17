@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class StaggerBackState: State
 --- @field public class any
-StaggerBackState = {};
+StaggerBackState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ StaggerBackState = {};
 --- @return StaggerBackState
 function StaggerBackState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,24 +20,23 @@ function StaggerBackState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function StaggerBackState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function StaggerBackState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function StaggerBackState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function StaggerBackState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -23,10 +23,8 @@
 ISCraftRecipeDbgWindow = ISCollapsableWindow:derive("ISCraftRecipeDbgWindow")
 ISCraftRecipeDbgWindow.coords = false
 
-
 ---@return any
 function ISCraftRecipeDbgWindow.OnOpenPanel(_player) end
-
 
 ---@return any
 function ISCraftRecipeDbgWindow:close() end
@@ -48,7 +46,6 @@ function ISCraftRecipeDbgWindow:prerender() end
 
 ---@return any
 function ISCraftRecipeDbgWindow:render() end
-
 
 ---@return ISCraftRecipeDbgWindow
 function ISCraftRecipeDbgWindow:new(x, y, width, height, player) end

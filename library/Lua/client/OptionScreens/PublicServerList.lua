@@ -91,7 +91,6 @@ PublicServerList.pingedList = {}
 PublicServerList.refreshTime = 0
 PublicServerList.refreshInterval = getSteamModeActive() and 5 or 60
 
-
 ---@return any
 function PublicServerList.OnSteamRefreshInternetServers() end
 
@@ -100,7 +99,6 @@ function PublicServerList.OnSteamRulesRefreshComplete(host, port, rules) end
 
 ---@return any
 function PublicServerList.OnSteamServerResponded(serverIndex) end
-
 
 ---@return any
 function PublicServerList:addServer() end
@@ -236,7 +234,6 @@ function PublicServerList:trimFields(item) end
 
 ---@return any
 function PublicServerList:writeServerOnFile(server, append) end
-
 
 ---@return PublicServerList
 function PublicServerList:new(x, y, width, height) end

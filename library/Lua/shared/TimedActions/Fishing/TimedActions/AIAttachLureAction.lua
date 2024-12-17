@@ -8,7 +8,6 @@
 ---@field [any] any
 AIAttachLureAction = ISBaseTimedAction:derive("AIAttachLureAction")
 
-
 ---@return any
 function AIAttachLureAction:complete() end
 
@@ -32,7 +31,6 @@ function AIAttachLureAction:stopSound() end
 
 ---@return any
 function AIAttachLureAction:update() end
-
 
 ---@return AIAttachLureAction
 function AIAttachLureAction:new(character, rod, lure) end

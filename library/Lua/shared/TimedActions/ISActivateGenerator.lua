@@ -7,7 +7,6 @@
 ---@field [any] any
 ISActivateGenerator = ISBaseTimedAction:derive("ISActivateGenerator")
 
-
 ---@return any
 function ISActivateGenerator:complete() end
 
@@ -31,7 +30,6 @@ function ISActivateGenerator:update() end
 
 ---@return any
 function ISActivateGenerator:waitToStart() end
-
 
 ---@return ISActivateGenerator
 function ISActivateGenerator:new(character, generator, activate) end

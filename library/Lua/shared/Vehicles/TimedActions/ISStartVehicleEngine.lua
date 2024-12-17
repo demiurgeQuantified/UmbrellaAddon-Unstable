@@ -7,7 +7,6 @@
 ---@field [any] any
 ISStartVehicleEngine = ISBaseTimedAction:derive("ISStartVehicleEngine")
 
-
 ---@return any
 function ISStartVehicleEngine:complete() end
 
@@ -28,7 +27,6 @@ function ISStartVehicleEngine:stop() end
 
 ---@return any
 function ISStartVehicleEngine:update() end
-
 
 ---@return ISStartVehicleEngine
 function ISStartVehicleEngine:new(character) end

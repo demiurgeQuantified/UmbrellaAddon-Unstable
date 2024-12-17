@@ -6,7 +6,6 @@
 ---@field [any] any
 ISGetAnimalBones = ISBaseTimedAction:derive("ISGetAnimalBones")
 
-
 ---@return any
 function ISGetAnimalBones:complete() end
 
@@ -30,7 +29,6 @@ function ISGetAnimalBones:update() end
 
 ---@return any
 function ISGetAnimalBones:waitToStart() end
-
 
 ---@return ISGetAnimalBones
 function ISGetAnimalBones:new(character, body) end

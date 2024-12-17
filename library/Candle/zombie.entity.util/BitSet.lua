@@ -1,26 +1,26 @@
---- @meta
+--- @meta _
 
 --- @class BitSet
 --- @field public class any
-BitSet = {};
+BitSet = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
---- @public
---- @param arg0 BitSet
---- @return void
-function BitSet:and(arg0) end
+-- --- @public
+-- --- @param arg0 BitSet
+-- --- @return nil
+-- function BitSet:and(arg0) end
 
 --- @public
 --- @param arg0 BitSet
---- @return void
+--- @return nil
 function BitSet:andNot(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: BitSet, arg0: int): void
+--- @return nil
+--- @overload fun(self: BitSet, arg0: integer): nil
 function BitSet:clear() end
 
 --- @public
@@ -29,32 +29,32 @@ function BitSet:clear() end
 function BitSet:containsAll(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function BitSet:equals(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function BitSet:flip(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function BitSet:get(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function BitSet:getAndClear(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function BitSet:getAndSet(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function BitSet:hashCode() end
 
 --- @public
@@ -67,17 +67,17 @@ function BitSet:intersects(arg0) end
 function BitSet:isEmpty() end
 
 --- @public
---- @return int
+--- @return integer
 function BitSet:length() end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function BitSet:nextClearBit(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function BitSet:nextSetBit(arg0) end
 
 --- @public
@@ -85,24 +85,23 @@ function BitSet:nextSetBit(arg0) end
 function BitSet:notEmpty() end
 
 --- @public
---- @return int
+--- @return integer
 function BitSet:numBits() end
 
---- @public
---- @param arg0 BitSet
---- @return void
-function BitSet:or(arg0) end
+-- --- @public
+-- --- @param arg0 BitSet
+-- --- @return nil
+-- function BitSet:or(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function BitSet:set(arg0) end
 
 --- @public
 --- @param arg0 BitSet
---- @return void
+--- @return nil
 function BitSet:xor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -110,6 +109,6 @@ function BitSet:xor(arg0) end
 
 --- @public
 --- @return BitSet
---- @overload fun(arg0: int): BitSet
+--- @overload fun(arg0: integer): BitSet
 --- @overload fun(arg0: BitSet): BitSet
 function BitSet.new() end

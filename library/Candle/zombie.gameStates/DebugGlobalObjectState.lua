@@ -1,55 +1,55 @@
---- @meta
+--- @meta _
 
 --- @class DebugGlobalObjectState: GameState
 --- @field public class any
 --- @field public instance DebugGlobalObjectState
-DebugGlobalObjectState = {};
+DebugGlobalObjectState = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function DebugGlobalObjectState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function DebugGlobalObjectState:exit() end
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function DebugGlobalObjectState:fromLua0(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @return any
 function DebugGlobalObjectState:fromLua1(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @return any
 function DebugGlobalObjectState:fromLua2(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function DebugGlobalObjectState:reenter() end
 
 --- @public
---- @return void
+--- @return nil
 function DebugGlobalObjectState:render() end
 
 --- @public
---- @return void
+--- @return nil
 function DebugGlobalObjectState:renderScene() end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function DebugGlobalObjectState:setTable(arg0) end
 
 --- @public
@@ -61,9 +61,8 @@ function DebugGlobalObjectState:update() end
 function DebugGlobalObjectState:updateScene() end
 
 --- @public
---- @return void
+--- @return nil
 function DebugGlobalObjectState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -26,7 +26,6 @@
 ---@field [any] any
 ISHotbar = ISPanelJoypad:derive("ISHotbar")
 
-
 ---@return any
 function ISHotbar.doMenuFromInventory(playerNum, item, context) end
 
@@ -41,7 +40,6 @@ function ISHotbar.onKeyPressed(key) end
 
 ---@return any
 function ISHotbar.onKeyStartPressed(key) end
-
 
 ---@return any
 function ISHotbar:activateSlot(slotIndex) end
@@ -129,7 +127,6 @@ function ISHotbar:setSizeAndPosition() end
 
 ---@return any
 function ISHotbar:update() end
-
 
 ---@return ISHotbar
 function ISHotbar:new(character) end

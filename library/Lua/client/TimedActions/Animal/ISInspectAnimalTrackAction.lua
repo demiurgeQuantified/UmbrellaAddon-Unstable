@@ -6,7 +6,6 @@
 ---@field [any] any
 ISInspectAnimalTrackAction = ISBaseTimedAction:derive("ISInspectAnimalTrackAction")
 
-
 ---@return any
 function ISInspectAnimalTrackAction:getDuration() end
 
@@ -27,7 +26,6 @@ function ISInspectAnimalTrackAction:update() end
 
 ---@return any
 function ISInspectAnimalTrackAction:waitToStart() end
-
 
 ---@return ISInspectAnimalTrackAction
 function ISInspectAnimalTrackAction:new(character, track) end

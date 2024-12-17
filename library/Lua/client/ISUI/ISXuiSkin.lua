@@ -3,7 +3,6 @@
 ---@class ISXuiSkinFunctions
 ISXuiSkinFunctions = {}
 
-
 ---@return any
 function ISXuiSkinFunctions.xuiRecalculateLayout(_self, _preferredWidth, _preferredHeight, _force, _anchorRight) end
 
@@ -13,7 +12,6 @@ function ISXuiSkinFunctions.xuiRootElement(_self) end
 ---@class ISXuiSkin
 ISXuiSkin = {}
 ISXuiSkin.constructors = {}
-
 
 ---@return any
 function ISXuiSkin.autoApplyTableKeys(_xuiScript, _o, _autoApplyOverride) end

@@ -25,10 +25,8 @@
 ---@field [any] any
 ISToolTip = ISPanel:derive("ISToolTip")
 
-
 ---@return any
 function ISToolTip.GetFont() end
-
 
 ---@return any
 function ISToolTip:adjustPositionToAvoidOverlap(avoidRect) end
@@ -98,7 +96,6 @@ function ISToolTip:setTexture(textureName) end
 
 ---@return any
 function ISToolTip:setTextureDirectly(texture) end
-
 
 ---@return ISToolTip
 function ISToolTip:new() end

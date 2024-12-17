@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IsoMannequin: IsoObject
 --- @field public class any
 --- @implement IHumanVisual
-IsoMannequin = {};
+IsoMannequin = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ IsoMannequin = {};
 --- @public
 --- @static
 --- @param arg0 Moveable
---- @param arg1 int
+--- @param arg1 integer
 --- @return IsoDirections
 function IsoMannequin.getDirectionFromItem(arg0, arg1) end
 
@@ -25,53 +25,52 @@ function IsoMannequin.isMannequinSprite(arg0) end
 --- @public
 --- @static
 --- @param arg0 Moveable
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 IsoDirections
---- @return void
+--- @return nil
 function IsoMannequin.renderMoveableItem(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
 --- @param arg0 IsoMannequin
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 IsoDirections
---- @return void
+--- @return nil
 function IsoMannequin.renderMoveableObject(arg0, arg1, arg2, arg3, arg4) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoMannequin:addToWorld() end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoMannequin:checkClothing(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoMannequin:checkRenderDirection(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function IsoMannequin:getAnimSetName() end
 
 --- @public
---- @return String
+--- @return string
 function IsoMannequin:getAnimStateName() end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoMannequin:getCustomSettingsFromItem(arg0) end
 
 --- @public
@@ -81,25 +80,25 @@ function IsoMannequin:getHumanVisual() end
 
 --- @public
 --- @param arg0 ItemVisuals
---- @return void
---- @overload fun(self: IsoMannequin, arg0: ItemVisuals): void
+--- @return nil
+--- @overload fun(self: IsoMannequin, arg0: ItemVisuals): nil
 function IsoMannequin:getItemVisuals(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function IsoMannequin:getMannequinScriptName() end
 
 --- @public
---- @return String
+--- @return string
 function IsoMannequin:getObjectName() end
 
 --- @public
---- @return String
+--- @return string
 function IsoMannequin:getPose() end
 
 --- @public
 --- @param arg0 Map
---- @return void
+--- @return nil
 function IsoMannequin:getVariables(arg0) end
 
 --- @public
@@ -125,88 +124,88 @@ function IsoMannequin:isZombie() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoMannequin:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function IsoMannequin:loadChange(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function IsoMannequin:loadState(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoMannequin:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoMannequin:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 boolean
---- @return void
+--- @return nil
 function IsoMannequin:renderFxMask(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function IsoMannequin:renderShadow(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function IsoMannequin:rotate(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoMannequin:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
 --- @param arg2 ByteBuffer
---- @return void
+--- @return nil
 function IsoMannequin:saveChange(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function IsoMannequin:saveState(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoMannequin:setCustomSettingsToItem(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoMannequin:setMannequinScriptName(arg0) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function IsoMannequin:setRenderDirection(arg0) end
 
 --- @public
@@ -216,9 +215,8 @@ function IsoMannequin:shouldRenderEachFrame() end
 --- @public
 --- @param arg0 InventoryItem
 --- @param arg1 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoMannequin:wearItem(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

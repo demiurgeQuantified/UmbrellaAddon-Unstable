@@ -15,10 +15,8 @@
 ISItemsListViewer = ISPanel:derive("ISItemsListViewer")
 ISItemsListViewer.messages = {}
 
-
 ---@return any
 function ISItemsListViewer.OnOpenPanel() end
-
 
 ---@return any
 function ISItemsListViewer:close() end
@@ -40,7 +38,6 @@ function ISItemsListViewer:prerender() end
 
 ---@return any
 function ISItemsListViewer:setKeyboardFocus() end
-
 
 ---@return ISItemsListViewer
 function ISItemsListViewer:new(x, y, width, height) end

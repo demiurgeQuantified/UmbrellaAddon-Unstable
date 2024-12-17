@@ -11,7 +11,6 @@
 ---@field [any] any
 ISRadialMenu = ISPanelJoypad:derive("ISRadialMenu")
 
-
 ---@return any
 function ISRadialMenu:addSlice(text, texture, command, arg1, arg2, arg3, arg4, arg5, arg6) end
 
@@ -56,7 +55,6 @@ function ISRadialMenu:setSliceTexture(sliceIndex, texture) end
 
 ---@return any
 function ISRadialMenu:undisplay() end
-
 
 ---@return ISRadialMenu
 function ISRadialMenu:new(x, y, innerRadius, outerRadius, playerNum) end

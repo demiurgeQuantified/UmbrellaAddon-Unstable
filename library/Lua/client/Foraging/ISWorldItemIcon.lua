@@ -13,7 +13,6 @@
 ---@field [any] any
 ISWorldItemIcon = ISBaseIcon:derive("ISWorldItemIcon")
 
-
 ---@return any
 function ISWorldItemIcon:checkIsForageable() end
 
@@ -37,7 +36,6 @@ function ISWorldItemIcon:onRightMouseUp() end
 
 ---@return any
 function ISWorldItemIcon:setWorldMarkerPosition() end
-
 
 ---@return ISWorldItemIcon
 function ISWorldItemIcon:new(_manager, _icon) end

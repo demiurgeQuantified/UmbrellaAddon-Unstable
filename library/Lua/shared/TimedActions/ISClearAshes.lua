@@ -8,7 +8,6 @@
 ---@field [any] any
 ISClearAshes = ISBaseTimedAction:derive("ISClearAshes")
 
-
 ---@return any
 function ISClearAshes:complete() end
 
@@ -32,7 +31,6 @@ function ISClearAshes:update() end
 
 ---@return any
 function ISClearAshes:waitToStart() end
-
 
 ---@return ISClearAshes
 function ISClearAshes:new(character, ashes) end

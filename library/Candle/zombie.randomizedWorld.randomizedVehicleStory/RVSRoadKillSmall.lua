@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RVSRoadKillSmall: RandomizedVehicleStoryBase
 --- @field public class any
-RVSRoadKillSmall = {};
+RVSRoadKillSmall = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ RVSRoadKillSmall = {};
 --- @static
 --- @return ArrayList
 function RVSRoadKillSmall.getBreeds() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,15 +27,14 @@ function RVSRoadKillSmall:initVehicleStorySpawner(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RVSRoadKillSmall:randomizeVehicleStory(arg0, arg1) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner
 --- @param arg1 Element
---- @return void
+--- @return nil
 function RVSRoadKillSmall:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

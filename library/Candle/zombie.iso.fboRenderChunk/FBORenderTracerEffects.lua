@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FBORenderTracerEffects
 --- @field public class any
-FBORenderTracerEffects = {};
+FBORenderTracerEffects = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,52 +13,49 @@ FBORenderTracerEffects = {};
 --- @return FBORenderTracerEffects
 function FBORenderTracerEffects.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function FBORenderTracerEffects:addEffect(arg0, arg1) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ConfigOption
 function FBORenderTracerEffects:getOptionByIndex(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ConfigOption
 function FBORenderTracerEffects:getOptionByName(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function FBORenderTracerEffects:getOptionCount() end
 
 --- @public
---- @return void
+--- @return nil
 function FBORenderTracerEffects:load() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function FBORenderTracerEffects:releaseWeaponTransform(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FBORenderTracerEffects:render() end
 
 --- @public
---- @return void
+--- @return nil
 function FBORenderTracerEffects:save() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 Matrix4f
---- @return void
+--- @return nil
 function FBORenderTracerEffects:storeWeaponTransform(arg0, arg1) end
-
-

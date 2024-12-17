@@ -14,7 +14,6 @@
 ---@field [any] any
 WorldMapEditorResizer = ISBaseObject:derive("WorldMapEditorResizer")
 
-
 ---@return any
 function WorldMapEditorResizer:cancelResize() end
 
@@ -38,7 +37,6 @@ function WorldMapEditorResizer:snap(xy) end
 
 ---@return any
 function WorldMapEditorResizer:startResizing() end
-
 
 ---@return WorldMapEditorResizer
 function WorldMapEditorResizer:new(editor) end

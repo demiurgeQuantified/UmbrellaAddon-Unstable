@@ -8,7 +8,6 @@
 ---@field [any] any
 ISAnimLoggerOutput = ISDebugSubPanelBase:derive("ISAnimLoggerOutput")
 
-
 ---@return any
 function ISAnimLoggerOutput:clear() end
 
@@ -29,7 +28,6 @@ function ISAnimLoggerOutput:setMonitor(_mon) end
 
 ---@return any
 function ISAnimLoggerOutput:update() end
-
 
 ---@return ISAnimLoggerOutput
 function ISAnimLoggerOutput:new(x, y, width, height, doStencil) end

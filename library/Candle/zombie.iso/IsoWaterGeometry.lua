@@ -1,16 +1,16 @@
---- @meta
+--- @meta _
 
 --- @class IsoWaterGeometry
 --- @field public class any
 --- @field public pool ObjectPool
-IsoWaterGeometry = {};
+IsoWaterGeometry = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function IsoWaterGeometry:getFlow() end
 
 --- @public
@@ -37,7 +37,6 @@ function IsoWaterGeometry:isValid() end
 --- @public
 --- @return boolean
 function IsoWaterGeometry:isbShore() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

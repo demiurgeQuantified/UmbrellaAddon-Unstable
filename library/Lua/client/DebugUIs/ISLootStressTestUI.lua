@@ -31,7 +31,6 @@
 ---@field [any] any
 ISLootStreetTestUI = ISCollapsableWindow:derive("ISLootStreetTestUI")
 
-
 ---@return any
 function ISLootStreetTestUI:close() end
 
@@ -67,7 +66,6 @@ function ISLootStreetTestUI:startGenerate() end
 
 ---@return any
 function ISLootStreetTestUI:update() end
-
 
 ---@return ISLootStreetTestUI
 function ISLootStreetTestUI:new(x, y, character) end

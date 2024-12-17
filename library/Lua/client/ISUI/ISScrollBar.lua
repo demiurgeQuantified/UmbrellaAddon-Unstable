@@ -29,7 +29,6 @@
 ---@field [any] any
 ISScrollBar = ISUIElement:derive("ISScrollBar")
 
-
 ---@return any
 function ISScrollBar:hitTest(x, y) end
 
@@ -92,7 +91,6 @@ function ISScrollBar:render() end
 
 ---@return any
 function ISScrollBar:updatePos() end
-
 
 ---@return ISScrollBar
 function ISScrollBar:new(parent, vertical) end

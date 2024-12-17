@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class GameVersion
 --- @field public class any
-GameVersion = {};
+GameVersion = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,34 +10,33 @@ GameVersion = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return GameVersion
 function GameVersion.parse(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function GameVersion:equals(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function GameVersion:getInt() end
 
 --- @public
---- @return int
+--- @return integer
 function GameVersion:getMajor() end
 
 --- @public
---- @return int
+--- @return integer
 function GameVersion:getMinor() end
 
 --- @public
---- @return String
+--- @return string
 function GameVersion:getSuffix() end
 
 --- @public
@@ -61,17 +60,16 @@ function GameVersion:isLessThan(arg0) end
 function GameVersion:isLessThanOrEqualTo(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function GameVersion:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 String
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 string
 --- @return GameVersion
 function GameVersion.new(arg0, arg1, arg2) end

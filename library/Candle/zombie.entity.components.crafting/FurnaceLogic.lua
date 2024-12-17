@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FurnaceLogic: Component
 --- @field public class any
-FurnaceLogic = {};
+FurnaceLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,7 @@ function FurnaceLogic:debugCanStart(arg0) end
 function FurnaceLogic:getCurrentRecipe() end
 
 --- @public
---- @return int
+--- @return integer
 function FurnaceLogic:getElapsedTime() end
 
 --- @public
@@ -31,7 +31,7 @@ function FurnaceLogic:getElapsedTime() end
 function FurnaceLogic:getFuelInputResources() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogic:getFuelInputsGroupName() end
 
 --- @public
@@ -39,11 +39,11 @@ function FurnaceLogic:getFuelInputsGroupName() end
 function FurnaceLogic:getFuelOutputResources() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogic:getFuelOutputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogic:getFuelRecipeTagQuery() end
 
 --- @public
@@ -56,7 +56,7 @@ function FurnaceLogic:getFuelRecipes(arg0) end
 function FurnaceLogic:getFurnaceInputResources() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogic:getFurnaceInputsGroupName() end
 
 --- @public
@@ -64,11 +64,11 @@ function FurnaceLogic:getFurnaceInputsGroupName() end
 function FurnaceLogic:getFurnaceOutputResources() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogic:getFurnaceOutputsGroupName() end
 
 --- @public
---- @return String
+--- @return string
 function FurnaceLogic:getFurnaceRecipeTagQuery() end
 
 --- @public
@@ -77,12 +77,12 @@ function FurnaceLogic:getFurnaceRecipeTagQuery() end
 function FurnaceLogic:getFurnaceRecipes(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ResourceItem
 function FurnaceLogic:getInputSlotResource(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ResourceItem
 function FurnaceLogic:getOutputSlotResource(arg0) end
 
@@ -91,7 +91,7 @@ function FurnaceLogic:getOutputSlotResource(arg0) end
 function FurnaceLogic:getPossibleRecipe() end
 
 --- @public
---- @return double
+--- @return number
 function FurnaceLogic:getProgress() end
 
 --- @public
@@ -99,12 +99,12 @@ function FurnaceLogic:getProgress() end
 function FurnaceLogic:getRequestingPlayer() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return FurnaceSlot
 function FurnaceLogic:getSlot(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function FurnaceLogic:getSlotSize() end
 
 --- @public
@@ -137,33 +137,31 @@ function FurnaceLogic:isValid() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function FurnaceLogic:sendStartRequest(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function FurnaceLogic:sendStopRequest(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FurnaceLogic:setFuelRecipeTagQuery(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FurnaceLogic:setFurnaceRecipeTagQuery(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function FurnaceLogic:start(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
---- @overload fun(self: FurnaceLogic, arg0: IsoPlayer, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: FurnaceLogic, arg0: IsoPlayer, arg1: boolean): nil
 function FurnaceLogic:stop(arg0) end
-
-

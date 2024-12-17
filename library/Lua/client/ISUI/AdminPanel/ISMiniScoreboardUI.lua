@@ -17,13 +17,11 @@
 ISMiniScoreboardUI = ISPanel:derive("ISMiniScoreboardUI")
 ISMiniScoreboardUI.messages = {}
 
-
 ---@return any
 function ISMiniScoreboardUI.OnMiniScoreboardUpdate() end
 
 ---@return any
 function ISMiniScoreboardUI.onScoreboardUpdate(usernames, displayNames, steamIDs) end
-
 
 ---@return any
 function ISMiniScoreboardUI:close() end
@@ -51,7 +49,6 @@ function ISMiniScoreboardUI:populateList() end
 
 ---@return any
 function ISMiniScoreboardUI:prerender() end
-
 
 ---@return ISMiniScoreboardUI
 function ISMiniScoreboardUI:new(x, y, width, height, admin) end

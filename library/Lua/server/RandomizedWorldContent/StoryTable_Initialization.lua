@@ -3,7 +3,6 @@
 ---@class StoryTables
 StoryTables = StoryTables or {}
 
-
 ---@return any
 function StoryTables.addClutterTableToArray(arrayList, table) end
 

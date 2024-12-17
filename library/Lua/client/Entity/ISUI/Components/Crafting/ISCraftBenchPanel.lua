@@ -5,10 +5,8 @@
 ---@field [any] any
 ISCraftBenchPanel = ISBaseComponentPanel:derive("ISCraftBenchPanel")
 
-
 ---@return any
 function ISCraftBenchPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
-
 
 ---@return any
 function ISCraftBenchPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -30,7 +28,6 @@ function ISCraftBenchPanel:render() end
 
 ---@return any
 function ISCraftBenchPanel:update() end
-
 
 ---@return ISCraftBenchPanel
 function ISCraftBenchPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

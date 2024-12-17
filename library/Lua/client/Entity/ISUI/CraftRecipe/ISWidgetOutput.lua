@@ -38,7 +38,6 @@
 ---@field [any] any
 ISWidgetOutput = ISPanel:derive("ISWidgetOutput")
 
-
 ---@return any
 function ISWidgetOutput:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -68,7 +67,6 @@ function ISWidgetOutput:updateScriptValues(_table) end
 
 ---@return any
 function ISWidgetOutput:updateValues() end
-
 
 ---@return ISWidgetOutput
 function ISWidgetOutput:new(x, y, width, height, player, logic, outputScript) end

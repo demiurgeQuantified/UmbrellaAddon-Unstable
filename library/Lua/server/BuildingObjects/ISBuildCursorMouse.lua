@@ -14,10 +14,8 @@
 ---@field [any] any
 ISBuildCursorMouse = ISBuildingObject:derive("ISBuildCursorMouse")
 
-
 ---@return any
 function ISBuildCursorMouse.IsVisible() end
-
 
 ---@return any
 function ISBuildCursorMouse:create(x, y, z, north, sprite) end
@@ -33,7 +31,6 @@ function ISBuildCursorMouse:render(x, y, z, square) end
 
 ---@return any
 function ISBuildCursorMouse:renderTooltip() end
-
 
 ---@return ISBuildCursorMouse
 function ISBuildCursorMouse:new(character, onSquareSelected, isValid) end

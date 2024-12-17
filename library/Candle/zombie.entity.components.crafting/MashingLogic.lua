@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class MashingLogic: Component
 --- @field public class any
-MashingLogic = {};
+MashingLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,7 @@ MashingLogic = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function MashingLogic:DoTooltip(arg0, arg1) end
 
 --- @public
@@ -25,7 +25,7 @@ function MashingLogic:canStart(arg0) end
 function MashingLogic:debugCanStart(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function MashingLogic:getBarrelConsumedAmount() end
 
 --- @public
@@ -33,7 +33,7 @@ function MashingLogic:getBarrelConsumedAmount() end
 function MashingLogic:getCurrentRecipe() end
 
 --- @public
---- @return double
+--- @return number
 function MashingLogic:getElapsedTime() end
 
 --- @public
@@ -46,11 +46,11 @@ function MashingLogic:getFluidBarrel() end
 function MashingLogic:getInputResources(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function MashingLogic:getInputsGroupName() end
 
 --- @public
---- @return double
+--- @return number
 function MashingLogic:getLastWorldAge() end
 
 --- @public
@@ -58,11 +58,11 @@ function MashingLogic:getLastWorldAge() end
 function MashingLogic:getPossibleRecipe() end
 
 --- @public
---- @return double
+--- @return number
 function MashingLogic:getProgress() end
 
 --- @public
---- @return String
+--- @return string
 function MashingLogic:getRecipeTagQuery() end
 
 --- @public
@@ -75,7 +75,7 @@ function MashingLogic:getRecipes(arg0) end
 function MashingLogic:getRequestingPlayer() end
 
 --- @public
---- @return String
+--- @return string
 function MashingLogic:getResourceFluidID() end
 
 --- @public
@@ -100,38 +100,36 @@ function MashingLogic:isValid() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function MashingLogic:sendStartRequest(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function MashingLogic:sendStopRequest(arg0) end
 
 --- @public
---- @param arg0 double
---- @return void
+--- @param arg0 number
+--- @return nil
 function MashingLogic:setElapsedTime(arg0) end
 
 --- @public
---- @param arg0 double
---- @return void
+--- @param arg0 number
+--- @return nil
 function MashingLogic:setLastWorldAge(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MashingLogic:setRecipeTagQuery(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function MashingLogic:start(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
---- @overload fun(self: MashingLogic, arg0: IsoPlayer, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: MashingLogic, arg0: IsoPlayer, arg1: boolean): nil
 function MashingLogic:stop(arg0) end
-
-

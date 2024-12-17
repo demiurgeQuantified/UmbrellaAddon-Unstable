@@ -9,7 +9,6 @@
 ---@field [any] any
 ISDetachTrailerFromVehicle = ISBaseTimedAction:derive("ISDetachTrailerFromVehicle")
 
-
 ---@return any
 function ISDetachTrailerFromVehicle:isValid() end
 
@@ -30,7 +29,6 @@ function ISDetachTrailerFromVehicle:update() end
 
 ---@return any
 function ISDetachTrailerFromVehicle:waitToStart() end
-
 
 ---@return ISDetachTrailerFromVehicle
 function ISDetachTrailerFromVehicle:new(character, vehicle, attachment) end

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoDirections: Enum
 --- @field public class any
@@ -11,7 +11,7 @@
 --- @field public SE IsoDirections
 --- @field public SW IsoDirections
 --- @field public W IsoDirections
-IsoDirections = {};
+IsoDirections = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -37,10 +37,10 @@ function IsoDirections.cardinalFromAngle(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param arg0 number
 --- @return IsoDirections
 --- @overload fun(arg0: Vector2): IsoDirections
---- @overload fun(arg0: float, arg1: float): IsoDirections
+--- @overload fun(arg0: number, arg1: number): IsoDirections
 function IsoDirections.fromAngle(arg0) end
 
 --- @public
@@ -51,19 +51,19 @@ function IsoDirections.fromAngleActual(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoDirections
 function IsoDirections.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoDirections
 function IsoDirections.fromString(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoDirections.generateTables() end
 
 --- @public
@@ -79,7 +79,7 @@ function IsoDirections.reverse(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoDirections
 function IsoDirections.valueOf(arg0) end
 
@@ -87,7 +87,6 @@ function IsoDirections.valueOf(arg0) end
 --- @static
 --- @return IsoDirections[]
 function IsoDirections.values() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -99,12 +98,12 @@ function IsoDirections:Rot180() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, arg0: int): IsoDirections
+--- @overload fun(self: IsoDirections, arg0: integer): IsoDirections
 function IsoDirections:RotLeft() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, arg0: int): IsoDirections
+--- @overload fun(self: IsoDirections, arg0: integer): IsoDirections
 function IsoDirections:RotRight() end
 
 --- @public
@@ -112,27 +111,25 @@ function IsoDirections:RotRight() end
 function IsoDirections:ToVector() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDirections:dx() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDirections:dy() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDirections:index() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDirections:indexUnmodified() end
 
 --- @public
---- @return float
+--- @return number
 function IsoDirections:toAngle() end
 
 --- @public
---- @return String
+--- @return string
 function IsoDirections:toCompassString() end
-
-

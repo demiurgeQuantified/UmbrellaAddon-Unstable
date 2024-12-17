@@ -12,7 +12,6 @@
 ---@field [any] any
 ISSimpleFurniture = ISBuildingObject:derive("ISSimpleFurniture")
 
-
 ---@return any
 function ISSimpleFurniture:create(x, y, z, north, sprite) end
 
@@ -27,7 +26,6 @@ function ISSimpleFurniture:removeFromGround(square) end
 
 ---@return any
 function ISSimpleFurniture:render(x, y, z, square) end
-
 
 ---@return ISSimpleFurniture
 function ISSimpleFurniture:new(name, sprite, northSprite) end

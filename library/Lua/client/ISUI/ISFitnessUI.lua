@@ -38,7 +38,6 @@ ISFitnessUI = ISPanelJoypad:derive("ISFitnessUI")
 ISFitnessUI.instance = {}
 ISFitnessUI.enduranceLevelTreshold = 2
 
-
 ---@return any
 function ISFitnessUI:addExerciseToList(type, data) end
 
@@ -83,7 +82,6 @@ function ISFitnessUI:updateButtons(currentAction) end
 
 ---@return any
 function ISFitnessUI:updateExercises() end
-
 
 ---@return ISFitnessUI
 function ISFitnessUI:new(x, y, width, height, player, clickedSquare) end

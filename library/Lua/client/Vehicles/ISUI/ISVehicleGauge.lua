@@ -10,7 +10,6 @@
 ---@field [any] any
 ISVehicleGauge = ISUIElement:derive("ISVehicleGauge")
 
-
 ---@return any
 function ISVehicleGauge:instantiate() end
 
@@ -22,7 +21,6 @@ function ISVehicleGauge:setTexture(texture) end
 
 ---@return any
 function ISVehicleGauge:setValue(value) end
-
 
 ---@return ISVehicleGauge
 function ISVehicleGauge:new(x, y, texture, needleX, needleY, minAngle, maxAngle) end

@@ -3,7 +3,6 @@
 ---@class ISPerkLog
 ISPerkLog = {}
 
-
 ---@return any
 function ISPerkLog.init() end
 

@@ -24,7 +24,6 @@
 ---@field [any] any
 ISVehicleACUI = ISPanelJoypad:derive("ISVehicleACUI")
 
-
 ---@return any
 function ISVehicleACUI:addKnobValues() end
 
@@ -63,7 +62,6 @@ function ISVehicleACUI:update() end
 
 ---@return any
 function ISVehicleACUI:updateButtons() end
-
 
 ---@return ISVehicleACUI
 function ISVehicleACUI:new(x, y, character) end

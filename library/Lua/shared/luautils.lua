@@ -3,7 +3,6 @@
 ---@class luautils
 luautils = {}
 
-
 ---@return any
 function luautils.countItemsRecursive(_containerList, _itemsNum) end
 

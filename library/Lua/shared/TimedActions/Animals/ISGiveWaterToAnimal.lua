@@ -11,7 +11,6 @@
 ---@field [any] any
 ISGiveWaterToAnimal = ISBaseTimedAction:derive("ISGiveWaterToAnimal")
 
-
 ---@return any
 function ISGiveWaterToAnimal:animEvent(event, parameter) end
 
@@ -47,7 +46,6 @@ function ISGiveWaterToAnimal:update() end
 
 ---@return any
 function ISGiveWaterToAnimal:waitToStart() end
-
 
 ---@return ISGiveWaterToAnimal
 function ISGiveWaterToAnimal:new(character, animal, item) end

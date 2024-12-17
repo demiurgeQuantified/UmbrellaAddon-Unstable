@@ -13,7 +13,6 @@
 ISBBQInfoWindow = ISCollapsableWindow:derive("ISBBQInfoWindow")
 ISBBQInfoWindow.windows = {}
 
-
 ---@return any
 function ISBBQInfoWindow:close() end
 
@@ -31,7 +30,6 @@ function ISBBQInfoWindow:setObject(bbq) end
 
 ---@return any
 function ISBBQInfoWindow:update() end
-
 
 ---@return ISBBQInfoWindow
 function ISBBQInfoWindow:new(x, y, character, bbq) end

@@ -6,7 +6,6 @@
 ---@field [any] any
 ISDropCorpseAction = ISBaseTimedAction:derive("ISDropCorpseAction")
 
-
 ---@return any
 function ISDropCorpseAction:complete() end
 
@@ -33,7 +32,6 @@ function ISDropCorpseAction:update() end
 
 ---@return any
 function ISDropCorpseAction:waitToStart() end
-
 
 ---@return ISDropCorpseAction
 function ISDropCorpseAction:new(character, targetSquare) end

@@ -30,7 +30,6 @@
 ISAddSafeZoneUI = ISPanel:derive("ISAddSafeZoneUI")
 ISAddSafeZoneUI.instance = nil
 
-
 ---@return any
 function ISAddSafeZoneUI:checkIfIntersectingAnotherZone() end
 
@@ -54,7 +53,6 @@ function ISAddSafeZoneUI:redefineStartingPoint() end
 
 ---@return any
 function ISAddSafeZoneUI:updateButtons() end
-
 
 ---@return ISAddSafeZoneUI
 function ISAddSafeZoneUI:new(x, y, width, height, character) end

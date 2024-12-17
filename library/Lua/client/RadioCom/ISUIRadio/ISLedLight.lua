@@ -24,7 +24,6 @@
 ---@field [any] any
 ISLedLight = ISPanel:derive("ISLedLight")
 
-
 ---@return any
 function ISLedLight:createChildren() end
 
@@ -57,7 +56,6 @@ function ISLedLight:setLedIsOn(_b) end
 
 ---@return any
 function ISLedLight:update() end
-
 
 ---@return ISLedLight
 function ISLedLight:new(x, y, width, height) end

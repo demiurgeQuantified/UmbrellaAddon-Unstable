@@ -75,10 +75,8 @@ WeatherFXDebug.instance = nil
 WeatherFXDebug.shiftDown = 0
 WeatherFXDebug.eventAdded = false
 
-
 ---@return any
 function WeatherFXDebug.OnOpenPanel() end
-
 
 ---@return any
 function WeatherFXDebug:clear() end
@@ -169,7 +167,6 @@ function WeatherFXDebug:tickBoxIsSnowChange(_optionIndex, _value) end
 
 ---@return any
 function WeatherFXDebug:update() end
-
 
 ---@return WeatherFXDebug
 function WeatherFXDebug:new(x, y, width, height, player) end

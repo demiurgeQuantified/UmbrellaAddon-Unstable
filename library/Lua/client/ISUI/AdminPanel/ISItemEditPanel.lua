@@ -25,7 +25,6 @@
 ---@field [any] any
 ISItemEditPanel = ISPanel:derive("ISItemEditPanel")
 
-
 ---@return any
 function ISItemEditPanel:create() end
 
@@ -109,7 +108,6 @@ function ISItemEditPanel:validateMinRangeRanged() end
 
 ---@return any
 function ISItemEditPanel:validateWeapon() end
-
 
 ---@return ISItemEditPanel
 function ISItemEditPanel:new(x, y, width, height, admin, item) end

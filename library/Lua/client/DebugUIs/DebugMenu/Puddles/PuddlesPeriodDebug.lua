@@ -56,13 +56,11 @@ PuddlesPeriodDebug.instance = nil
 PuddlesPeriodDebug.shiftDown = 0
 PuddlesPeriodDebug.eventsAdded = false
 
-
 ---@return any
 function PuddlesPeriodDebug.OnClimateTickDebug(mgr) end
 
 ---@return any
 function PuddlesPeriodDebug.OnOpenPanel() end
-
 
 ---@return any
 function PuddlesPeriodDebug:addColor(_r, _g, _b) end
@@ -108,7 +106,6 @@ function PuddlesPeriodDebug:update() end
 
 ---@return any
 function PuddlesPeriodDebug:updateValues(_mgr) end
-
 
 ---@return PuddlesPeriodDebug
 function PuddlesPeriodDebug:new(x, y, width, height, player) end

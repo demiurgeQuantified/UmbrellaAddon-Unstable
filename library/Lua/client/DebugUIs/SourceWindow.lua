@@ -11,7 +11,6 @@
 SourceWindow = ISCollapsableWindow:derive("SourceWindow")
 SourceWindow.map = {}
 
-
 ---@return any
 function SourceWindow:createChildren() end
 
@@ -35,7 +34,6 @@ function SourceWindow:reloadFile() end
 
 ---@return any
 function SourceWindow:renderSrc() end
-
 
 ---@return SourceWindow
 function SourceWindow:new(x, y, width, height, filename) end

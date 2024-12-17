@@ -18,7 +18,6 @@
 ---@field [any] any
 ISLightbarUI = ISPanelJoypad:derive("ISLightbarUI")
 
-
 ---@return any
 function ISLightbarUI:addKnobValues() end
 
@@ -48,7 +47,6 @@ function ISLightbarUI:setLightbarSirenMode(mode) end
 
 ---@return any
 function ISLightbarUI:setVehicle(vehicle) end
-
 
 ---@return ISLightbarUI
 function ISLightbarUI:new(x, y, width, height, playerObj) end

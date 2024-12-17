@@ -16,7 +16,6 @@
 ---@field [any] any
 ISSplint = ISBaseTimedAction:derive("ISSplint")
 
-
 ---@return any
 function ISSplint:complete() end
 
@@ -43,7 +42,6 @@ function ISSplint:update() end
 
 ---@return any
 function ISSplint:waitToStart() end
-
 
 ---@return ISSplint
 function ISSplint:new(character, otherPlayer, rippedSheet, plank, bodyPart, doIt) end

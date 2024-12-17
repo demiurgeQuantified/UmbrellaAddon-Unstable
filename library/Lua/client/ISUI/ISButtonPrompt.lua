@@ -58,7 +58,6 @@
 ---@field [any] any
 ISButtonPrompt = ISUIElement:derive("ISButtonPrompt")
 
-
 ---@return any
 function ISButtonPrompt:climbFence() end
 
@@ -211,7 +210,6 @@ function ISButtonPrompt:testBButtonAction(dir) end
 
 ---@return any
 function ISButtonPrompt:update() end
-
 
 ---@return ISButtonPrompt
 function ISButtonPrompt:new(player) end

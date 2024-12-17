@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class ComponentUiStyle
 --- @field public class any
-ComponentUiStyle = {};
+ComponentUiStyle = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ComponentUiStyle:getDisplayName() end
 
 --- @public
@@ -17,21 +17,20 @@ function ComponentUiStyle:getDisplayName() end
 function ComponentUiStyle:getIcon() end
 
 --- @public
---- @return int
+--- @return integer
 function ComponentUiStyle:getListOrderZ() end
 
 --- @public
---- @return String
+--- @return string
 function ComponentUiStyle:getLuaPanelClass() end
 
 --- @public
---- @return String
+--- @return string
 function ComponentUiStyle:getXuiStyle() end
 
 --- @public
 --- @return boolean
 function ComponentUiStyle:isEnabled() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -28,10 +28,8 @@
 ---@field [any] any
 SandboxOptionsScreen = ISPanelJoypad:derive("SandboxOptionsScreen")
 
-
 ---@return any
 function SandboxOptionsScreen.searchPrerender(self) end
-
 
 ---@return any
 function SandboxOptionsScreen:addPresetToList(fileName, text, userDefined) end
@@ -146,7 +144,6 @@ function SandboxOptionsScreen:setVisible(visible, joypadData) end
 
 ---@return any
 function SandboxOptionsScreen:syncStartDay() end
-
 
 ---@return SandboxOptionsScreen
 function SandboxOptionsScreen:new(x, y, width, height) end

@@ -11,7 +11,6 @@
 ---@field [any] any
 NewFogDebug = ISDebugSubPanelBase:derive("NewFogDebug")
 
-
 ---@return any
 function NewFogDebug:addBoolOption(_id, _x, _y, _w) end
 
@@ -41,7 +40,6 @@ function NewFogDebug:prerender() end
 
 ---@return any
 function NewFogDebug:update() end
-
 
 ---@return NewFogDebug
 function NewFogDebug:new(x, y, width, height, doStencil) end

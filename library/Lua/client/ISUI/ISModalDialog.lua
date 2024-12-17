@@ -29,10 +29,8 @@
 ---@field [any] any
 ISModalDialog = ISPanelJoypad:derive("ISModalDialog")
 
-
 ---@return any
 function ISModalDialog.CalcSize(width, height, text) end
-
 
 ---@return any
 function ISModalDialog:destroy() end
@@ -75,7 +73,6 @@ function ISModalDialog:prerender() end
 
 ---@return any
 function ISModalDialog:render() end
-
 
 ---@return ISModalDialog
 function ISModalDialog:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

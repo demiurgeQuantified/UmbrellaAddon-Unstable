@@ -39,7 +39,6 @@
 ---@field [any] any
 ISBuildWindow = ISCollapsableWindow:derive("ISBuildWindow")
 
-
 ---@return any
 function ISBuildWindow:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -75,7 +74,6 @@ function ISBuildWindow:validateSizeBounds() end
 
 ---@return any
 function ISBuildWindow:xuiRecalculateLayout(_preferredWidth, _preferredHeight, _force, _anchorRight) end
-
 
 ---@return ISBuildWindow
 function ISBuildWindow:new(x, y, width, height, player, isoObject, queryOverride) end

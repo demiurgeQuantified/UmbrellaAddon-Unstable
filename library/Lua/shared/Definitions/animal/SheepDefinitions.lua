@@ -1,114 +1,114 @@
 ---@meta
 
 local ewe_sounds = {
-    death = {
-        name = "AnimalVoiceSheepDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleySheepBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceSheepIdle",
-        intervalMin = 20,
-        intervalMax = 60,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceSheepPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalSheep",
-    },
-    pick_up = {
-        name = "PickUpAnimalSheep",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadSheep",
-    },
-    put_down = {
-        name = "PutDownAnimalSheep",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadSheep",
-    },
-    run = {
-        name = "AnimalFootstepsSheepRun",
-    },
-    stressed = {
-        name = "AnimalVoiceSheepStressed",
-        intervalMin = 15,
-        intervalMax = 40,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsSheepWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsSheepWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceSheepDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleySheepBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceSheepIdle",
+		intervalMin = 20,
+		intervalMax = 60,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceSheepPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalSheep",
+	},
+	pick_up = {
+		name = "PickUpAnimalSheep",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadSheep",
+	},
+	put_down = {
+		name = "PutDownAnimalSheep",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadSheep",
+	},
+	run = {
+		name = "AnimalFootstepsSheepRun",
+	},
+	stressed = {
+		name = "AnimalVoiceSheepStressed",
+		intervalMin = 15,
+		intervalMax = 40,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsSheepWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsSheepWalkFront",
+	},
 }
 local lamb_sounds = {
-    death = {
-        name = "AnimalVoiceLambDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyLambBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceLambIdle",
-        intervalMin = 20,
-        intervalMax = 60,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceLambPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalLamb",
-    },
-    pick_up = {
-        name = "PickUpAnimalLamb",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadLamb",
-    },
-    put_down = {
-        name = "PutDownAnimalLamb",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadLamb",
-    },
-    run = {
-        name = "AnimalFootstepsLambRun",
-    },
-    stressed = {
-        name = "AnimalVoiceLambStressed",
-        intervalMin = 15,
-        intervalMax = 40,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsLambWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsLambWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceLambDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyLambBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceLambIdle",
+		intervalMin = 20,
+		intervalMax = 60,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceLambPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalLamb",
+	},
+	pick_up = {
+		name = "PickUpAnimalLamb",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadLamb",
+	},
+	put_down = {
+		name = "PutDownAnimalLamb",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadLamb",
+	},
+	run = {
+		name = "AnimalFootstepsLambRun",
+	},
+	stressed = {
+		name = "AnimalVoiceLambStressed",
+		intervalMin = 15,
+		intervalMax = 40,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsLambWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsLambWalkFront",
+	},
 }
 
 ---@class AnimalDefinitions
@@ -266,14 +266,14 @@ AnimalDefinitions.animals["lamb"].feedByHandType = "SheepMilk"
 AnimalDefinitions.animals["lamb"].canBePicked = true
 AnimalDefinitions.animals["lamb"].baseEncumbrance = 30
 AnimalDefinitions.animals["lamb"].luredPossibleItems = {
-    {
-        name = "Base.HayTuft",
-        chance = 30,
-    },
-    {
-        name = "Base.GrassTuft",
-        chance = 50,
-    },
+	{
+		name = "Base.HayTuft",
+		chance = 30,
+	},
+	{
+		name = "Base.GrassTuft",
+		chance = 50,
+	},
 }
 AnimalDefinitions.animals["lamb"].trailerBaseSize = 60
 AnimalDefinitions.animals["lamb"].canBePet = true

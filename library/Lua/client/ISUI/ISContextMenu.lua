@@ -48,22 +48,64 @@
 ISContextMenu = ISPanel:derive("ISContextMenu")
 ISContextMenu.wantNoise = false
 
-
 ---@return any
 function ISContextMenu.get(player, x, y) end
 
 ---@return any
 function ISContextMenu.noise(msg) end
 
+---@return any
+function ISContextMenu:addActionsOption(
+	text,
+	getActionsFunction,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10
+)
+end
 
 ---@return any
-function ISContextMenu:addActionsOption(text, getActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
+function ISContextMenu:addColorBoxOption(
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
-function ISContextMenu:addColorBoxOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
-
----@return any
-function ISContextMenu:addDebugOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
+function ISContextMenu:addDebugOption(
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
 function ISContextMenu:addDefaultOptions() end
@@ -72,16 +114,61 @@ function ISContextMenu:addDefaultOptions() end
 function ISContextMenu:addGetUpOption(text, target, onSelect, p2, p3, p4, p5, p6, p7, p8, p9, p10, ...) end
 
 ---@return any
-function ISContextMenu:addOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
+function ISContextMenu:addOption(
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
-function ISContextMenu:addOptionOnTop(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
+function ISContextMenu:addOptionOnTop(
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
 function ISContextMenu:addSubMenu(option, menu) end
 
 ---@return any
-function ISContextMenu:allocOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
+function ISContextMenu:allocOption(
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
 function ISContextMenu:calcHeight() end
@@ -153,10 +240,42 @@ function ISContextMenu:hideToolTip() end
 function ISContextMenu:initialise() end
 
 ---@return any
-function ISContextMenu:insertOptionAfter(prevOptionName, name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
+function ISContextMenu:insertOptionAfter(
+	prevOptionName,
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
-function ISContextMenu:insertOptionBefore(nextOptionName, name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10) end
+function ISContextMenu:insertOptionBefore(
+	nextOptionName,
+	name,
+	target,
+	onSelect,
+	param1,
+	param2,
+	param3,
+	param4,
+	param5,
+	param6,
+	param7,
+	param8,
+	param9,
+	param10
+)
+end
 
 ---@return any
 function ISContextMenu:isAnyVisible() end
@@ -247,7 +366,6 @@ function ISContextMenu:updateSlideGoalX() end
 
 ---@return any
 function ISContextMenu:updateSlideGoalY() end
-
 
 ---@return ISContextMenu
 function ISContextMenu:new(x, y, width, height, zoom) end

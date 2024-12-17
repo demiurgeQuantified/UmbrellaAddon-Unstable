@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class UiConfig: Component
 --- @field public class any
-UiConfig = {};
+UiConfig = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function UiConfig:getEntityDisplayName() end
 
 --- @public
---- @return String
+--- @return string
 function UiConfig:getEntityStyleName() end
 
 --- @public
@@ -32,5 +32,3 @@ function UiConfig:getSkinOrDefault() end
 --- @public
 --- @return boolean
 function UiConfig:isUiEnabled() end
-
-

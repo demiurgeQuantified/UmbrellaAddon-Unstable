@@ -20,7 +20,6 @@
 ---@field [any] any
 ISPanel = ISUIElement:derive("ISPanel")
 
-
 ---@return any
 function ISPanel:close() end
 
@@ -47,7 +46,6 @@ function ISPanel:onMouseUpOutside(x, y) end
 
 ---@return any
 function ISPanel:prerender() end
-
 
 ---@return ISPanel
 function ISPanel:new(x, y, width, height) end

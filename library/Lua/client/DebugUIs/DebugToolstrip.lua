@@ -20,7 +20,6 @@
 ---@field [any] any
 DebugToolstrip = ISPanel:derive("DebugToolstrip")
 
-
 ---@return any
 function DebugToolstrip:createChildren() end
 
@@ -50,7 +49,6 @@ function DebugToolstrip:onToggleBreak(index, selected) end
 
 ---@return any
 function DebugToolstrip:prerender() end
-
 
 ---@return DebugToolstrip
 function DebugToolstrip:new(x, y, width, height) end

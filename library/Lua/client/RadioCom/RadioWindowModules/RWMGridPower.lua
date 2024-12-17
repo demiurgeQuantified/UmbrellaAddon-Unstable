@@ -17,7 +17,6 @@
 ---@field [any] any
 RWMGridPower = RWMPanel:derive("RWMGridPower")
 
-
 ---@return any
 function RWMGridPower:clear() end
 
@@ -56,7 +55,6 @@ function RWMGridPower:toggleOnOff() end
 
 ---@return any
 function RWMGridPower:update() end
-
 
 ---@return RWMGridPower
 function RWMGridPower:new(x, y, width, height) end

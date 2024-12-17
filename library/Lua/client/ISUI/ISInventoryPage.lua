@@ -85,7 +85,6 @@ ISInventoryPage = ISPanel:derive("ISInventoryPage")
 ISInventoryPage.bagSoundDelay = 2
 ISInventoryPage.bagSoundTime = 0
 
-
 ---@return any
 function ISInventoryPage.ContainerSizeChanged() end
 
@@ -112,7 +111,6 @@ function ISInventoryPage.onKeyPressed(key) end
 
 ---@return any
 function ISInventoryPage.toggleInventory() end
-
 
 ---@return any
 function ISInventoryPage:addContainerButton(container, texture, name, tooltip) end
@@ -305,7 +303,6 @@ function ISInventoryPage:transferAll() end
 
 ---@return any
 function ISInventoryPage:update() end
-
 
 ---@return ISInventoryPage
 function ISInventoryPage:new(x, y, width, height, inventory, onCharacter, zoom) end

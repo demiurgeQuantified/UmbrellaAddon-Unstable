@@ -1,23 +1,23 @@
---- @meta
+--- @meta _
 
 --- @class War
 --- @field public class any
-War = {};
+War = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function War:getAttacker() end
 
 --- @public
---- @return String
+--- @return string
 function War:getDefender() end
 
 --- @public
---- @return int
+--- @return integer
 function War:getOnlineID() end
 
 --- @public
@@ -25,11 +25,11 @@ function War:getOnlineID() end
 function War:getState() end
 
 --- @public
---- @return String
+--- @return string
 function War:getTime() end
 
 --- @public
---- @return long
+--- @return integer
 function War:getTimestamp() end
 
 --- @public
@@ -39,23 +39,22 @@ function War:isValidState(arg0) end
 
 --- @public
 --- @param arg0 State
---- @return void
+--- @return nil
 function War:setState(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function War:setTimestamp(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param arg0 integer
+--- @param arg1 string
 --- @param arg2 State
---- @param arg3 long
+--- @param arg3 integer
 --- @return War
 function War.new(arg0, arg1, arg2, arg3) end

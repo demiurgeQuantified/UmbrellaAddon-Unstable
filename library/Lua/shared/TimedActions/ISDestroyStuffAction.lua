@@ -10,7 +10,6 @@
 ---@field [any] any
 ISDestroyStuffAction = ISBaseTimedAction:derive("ISDestroyStuffAction")
 
-
 ---@return any
 function ISDestroyStuffAction:animEvent(event, parameter) end
 
@@ -40,7 +39,6 @@ function ISDestroyStuffAction:update() end
 
 ---@return any
 function ISDestroyStuffAction:waitToStart() end
-
 
 ---@return ISDestroyStuffAction
 function ISDestroyStuffAction:new(character, item, cornerCounter) end

@@ -7,7 +7,6 @@
 ---@field [any] any
 ISInsertLightSourceFuelAction = ISBaseTimedAction:derive("ISInsertLightSourceFuelAction")
 
-
 ---@return any
 function ISInsertLightSourceFuelAction:complete() end
 
@@ -31,7 +30,6 @@ function ISInsertLightSourceFuelAction:stop() end
 
 ---@return any
 function ISInsertLightSourceFuelAction:update() end
-
 
 ---@return ISInsertLightSourceFuelAction
 function ISInsertLightSourceFuelAction:new(character, lightSource, fuel) end

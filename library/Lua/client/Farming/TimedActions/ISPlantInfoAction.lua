@@ -7,7 +7,6 @@
 ---@field [any] any
 ISPlantInfoAction = ISBaseTimedAction:derive("ISPlantInfoAction")
 
-
 ---@return any
 function ISPlantInfoAction:isValid() end
 
@@ -25,7 +24,6 @@ function ISPlantInfoAction:update() end
 
 ---@return any
 function ISPlantInfoAction:waitToStart() end
-
 
 ---@return ISPlantInfoAction
 function ISPlantInfoAction:new(character, plant) end

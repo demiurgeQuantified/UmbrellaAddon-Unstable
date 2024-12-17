@@ -16,13 +16,11 @@
 ---@field [any] any
 ISReadABook = ISBaseTimedAction:derive("ISReadABook")
 
-
 ---@return any
 function ISReadABook.checkLevel(character, item) end
 
 ---@return any
 function ISReadABook.checkMultiplier(self) end
-
 
 ---@return any
 function ISReadABook:animEvent(event, parameter) end
@@ -56,7 +54,6 @@ function ISReadABook:stop() end
 
 ---@return any
 function ISReadABook:update() end
-
 
 ---@return ISReadABook
 function ISReadABook:new(character, item) end

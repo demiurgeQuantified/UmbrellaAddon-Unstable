@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AnimalPartsDefinitions
 --- @field public class any
-AnimalPartsDefinitions = {};
+AnimalPartsDefinitions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,35 +10,34 @@ AnimalPartsDefinitions = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function AnimalPartsDefinitions.getAllBonesDef(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function AnimalPartsDefinitions.getAllPartsDef(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return KahluaTableImpl
+--- @param arg0 string
+--- @return table
 function AnimalPartsDefinitions.getAnimalDef(arg0) end
 
 --- @public
 --- @static
---- @param arg0 KahluaTableImpl
---- @param arg1 String
+--- @param arg0 table
+--- @param arg1 string
 --- @return ArrayList
 function AnimalPartsDefinitions.getDef(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function AnimalPartsDefinitions.getLeather(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

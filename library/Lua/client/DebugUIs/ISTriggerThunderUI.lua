@@ -10,7 +10,6 @@
 ---@field [any] any
 ISTriggerThunderUI = ISCollapsableWindow:derive("ISTriggerThunderUI")
 
-
 ---@return any
 function ISTriggerThunderUI:close() end
 
@@ -19,7 +18,6 @@ function ISTriggerThunderUI:createChildren() end
 
 ---@return any
 function ISTriggerThunderUI:onClick(button) end
-
 
 ---@return ISTriggerThunderUI
 function ISTriggerThunderUI:new(x, y, width, height, character) end

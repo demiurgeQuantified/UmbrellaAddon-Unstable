@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoButcherHook: IsoObject
 --- @field public class any
-IsoButcherHook = {};
+IsoButcherHook = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,11 +13,11 @@ IsoButcherHook = {};
 function IsoButcherHook:getAnimal() end
 
 --- @public
---- @return String
+--- @return string
 function IsoButcherHook:getObjectName() end
 
 --- @public
---- @return float
+--- @return number
 function IsoButcherHook:getRemovingBloodProgress() end
 
 --- @public
@@ -26,48 +26,47 @@ function IsoButcherHook:isRemovingBlood() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoButcherHook:load(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoButcherHook:reattachAnimal(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoButcherHook:removeFromWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoButcherHook:removeHook() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoButcherHook:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoButcherHook:setAnimal(arg0) end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function IsoButcherHook:startRemovingBlood(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoButcherHook:stopRemovingBlood() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoButcherHook:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

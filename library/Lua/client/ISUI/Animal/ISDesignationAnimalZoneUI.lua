@@ -20,7 +20,6 @@
 ---@field [any] any
 ISDesignationZoneAnimalZoneUI = ISPanel:derive("ISDesignationZoneAnimalZoneUI")
 
-
 ---@return any
 function ISDesignationZoneAnimalZoneUI:calcFood() end
 
@@ -44,7 +43,6 @@ function ISDesignationZoneAnimalZoneUI:reload() end
 
 ---@return any
 function ISDesignationZoneAnimalZoneUI:updateAnimals() end
-
 
 ---@return ISDesignationZoneAnimalZoneUI
 function ISDesignationZoneAnimalZoneUI:new(x, y, width, height, player, zone) end

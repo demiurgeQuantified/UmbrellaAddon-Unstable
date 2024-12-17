@@ -16,13 +16,11 @@
 ---@field [any] any
 IsoRegionsWindow = ISCollapsableWindow:derive("IsoRegionsWindow")
 
-
 ---@return any
 function IsoRegionsWindow.onKeyStartPressed(_key) end
 
 ---@return any
 function IsoRegionsWindow.OnOpenPanel() end
-
 
 ---@return any
 function IsoRegionsWindow:close() end
@@ -86,7 +84,6 @@ function IsoRegionsWindow:renderTex() end
 
 ---@return any
 function IsoRegionsWindow:rotate() end
-
 
 ---@return IsoRegionsWindow
 function IsoRegionsWindow:new(x, y, width, height) end

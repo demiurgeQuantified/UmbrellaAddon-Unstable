@@ -12,10 +12,8 @@
 ---@field [any] any
 ISFluidOverviewPanel = ISPanel:derive("ISFluidOverviewPanel")
 
-
 ---@return any
 function ISFluidOverviewPanel.onTextChange(box) end
-
 
 ---@return any
 function ISFluidOverviewPanel:close() end
@@ -49,7 +47,6 @@ function ISFluidOverviewPanel:prerender() end
 
 ---@return any
 function ISFluidOverviewPanel:render() end
-
 
 ---@return ISFluidOverviewPanel
 function ISFluidOverviewPanel:new(x, y, width, height, player) end

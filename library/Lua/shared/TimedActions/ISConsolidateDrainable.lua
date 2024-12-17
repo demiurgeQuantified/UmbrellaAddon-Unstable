@@ -12,7 +12,6 @@
 ---@field [any] any
 ISConsolidateDrainable = ISBaseTimedAction:derive("ISConsolidateDrainable")
 
-
 ---@return any
 function ISConsolidateDrainable:complete() end
 
@@ -42,7 +41,6 @@ function ISConsolidateDrainable:stop() end
 
 ---@return any
 function ISConsolidateDrainable:update() end
-
 
 ---@return ISConsolidateDrainable
 function ISConsolidateDrainable:new(character, drainable, intoItem, otherItems) end

@@ -8,7 +8,6 @@ StatisticChartPackets.instance = nil
 StatisticChartPackets.shiftDown = 0
 StatisticChartPackets.eventsAdded = false
 
-
 ---@return any
 function StatisticChartPackets.doInstance() end
 
@@ -17,7 +16,6 @@ function StatisticChartPackets.OnOpenPanel() end
 
 ---@return any
 function StatisticChartPackets.OnServerStatisticReceived() end
-
 
 ---@return any
 function StatisticChartPackets:createChildren() end

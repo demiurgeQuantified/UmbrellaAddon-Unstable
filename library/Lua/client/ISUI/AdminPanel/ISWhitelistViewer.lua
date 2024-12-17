@@ -16,10 +16,8 @@
 ISWhitelistViewer = ISPanel:derive("ISWhitelistViewer")
 ISWhitelistViewer.bottomInfoHeight = 40
 
-
 ---@return any
 function ISWhitelistViewer.receiveDBSchema(schema) end
-
 
 ---@return any
 function ISWhitelistViewer:closeSelf() end
@@ -47,7 +45,6 @@ function ISWhitelistViewer:refreshButtons() end
 
 ---@return any
 function ISWhitelistViewer:render() end
-
 
 ---@return ISWhitelistViewer
 function ISWhitelistViewer:new(x, y, width, height) end

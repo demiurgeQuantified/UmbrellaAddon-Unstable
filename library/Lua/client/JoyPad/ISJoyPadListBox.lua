@@ -6,10 +6,8 @@
 ---@field [any] any
 ISJoypadListBox = ISScrollingListBox:derive("ISJoypadListBox")
 
-
 ---@return any
 function ISJoypadListBox.Create(playerNum, joypadData) end
-
 
 ---@return any
 function ISJoypadListBox:cmdAddNew() end
@@ -34,7 +32,6 @@ function ISJoypadListBox:invoke() end
 
 ---@return any
 function ISJoypadListBox:onJoypadDown(button, joypadData) end
-
 
 ---@return ISJoypadListBox
 function ISJoypadListBox:new(x, y, w, h, playerNum, joypadData) end

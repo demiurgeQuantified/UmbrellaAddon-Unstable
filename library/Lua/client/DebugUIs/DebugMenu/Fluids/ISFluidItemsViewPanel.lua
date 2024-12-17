@@ -13,10 +13,8 @@
 ---@field [any] any
 ISFluidItemsViewPanel = ISPanel:derive("ISFluidItemsViewPanel")
 
-
 ---@return any
 function ISFluidItemsViewPanel.onTextChange(box) end
-
 
 ---@return any
 function ISFluidItemsViewPanel:addItem(item) end
@@ -53,7 +51,6 @@ function ISFluidItemsViewPanel:prerender() end
 
 ---@return any
 function ISFluidItemsViewPanel:render() end
-
 
 ---@return ISFluidItemsViewPanel
 function ISFluidItemsViewPanel:new(x, y, width, height, player) end

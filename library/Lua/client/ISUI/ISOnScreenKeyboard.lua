@@ -17,7 +17,6 @@
 ---@field [any] any
 ISOnScreenKeyboard = ISPanelJoypad:derive("ISOnScreenKeyboard")
 
-
 ---@return any
 function ISOnScreenKeyboard:accept() end
 
@@ -78,7 +77,6 @@ function ISOnScreenKeyboard:shrinkWrap(panel) end
 ---@return any
 function ISOnScreenKeyboard:update() end
 
-
 ---@return ISOnScreenKeyboard
 function ISOnScreenKeyboard:new(x, y, width, height) end
 
@@ -88,7 +86,6 @@ function ISOnScreenKeyboard:new(x, y, width, height) end
 ---@field javaObject any
 ---@field [any] any
 OnScreenKeyboardEntry = ISPanelJoypad:derive("OnScreenKeyboardEntry")
-
 
 ---@return any
 function OnScreenKeyboardEntry:focus() end
@@ -159,7 +156,6 @@ function OnScreenKeyboardEntry:unfocus() end
 ---@return any
 function OnScreenKeyboardEntry:update() end
 
-
 ---@return OnScreenKeyboardEntry
 function OnScreenKeyboardEntry:new(x, y, width, height) end
 
@@ -178,7 +174,6 @@ function OnScreenKeyboardEntry:new(x, y, width, height) end
 ---@field rowOfButtons any
 ---@field [any] any
 OnScreenKeyboardPanel = ISPanelJoypad:derive("OnScreenKeyboardPanel")
-
 
 ---@return any
 function OnScreenKeyboardPanel:createButton(textLower, textUpper, keyFunction, arg1, arg2) end
@@ -210,7 +205,6 @@ function OnScreenKeyboardPanel:render() end
 ---@return any
 function OnScreenKeyboardPanel:renderButton() end
 
-
 ---@return OnScreenKeyboardPanel
 function OnScreenKeyboardPanel:new(x, y, parent) end
 
@@ -218,7 +212,6 @@ function OnScreenKeyboardPanel:new(x, y, parent) end
 ---@field instance any
 ---@field [any] any
 OnScreenKeyboard = {}
-
 
 ---@return any
 function OnScreenKeyboard.GetCurrentText() end

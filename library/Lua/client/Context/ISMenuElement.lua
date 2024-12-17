@@ -3,8 +3,6 @@
 ---@class ISMenuElement
 ISMenuElement = {}
 
-
-
 ---@return ISMenuElement_Instance
 function ISMenuElement.new() end
 
@@ -14,7 +12,6 @@ function ISMenuElement.new() end
 ---@field zIndex any
 ---@field [any] any
 local ISMenuElement_Instance = {}
-
 
 ---@return any
 function ISMenuElement_Instance.createMenu() end

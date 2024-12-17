@@ -6,7 +6,6 @@
 ---@field [any] any
 ISRemoveLightSourceFuelAction = ISBaseTimedAction:derive("ISRemoveLightSourceFuelAction")
 
-
 ---@return any
 function ISRemoveLightSourceFuelAction:complete() end
 
@@ -27,7 +26,6 @@ function ISRemoveLightSourceFuelAction:stop() end
 
 ---@return any
 function ISRemoveLightSourceFuelAction:update() end
-
 
 ---@return ISRemoveLightSourceFuelAction
 function ISRemoveLightSourceFuelAction:new(character, lightSource) end

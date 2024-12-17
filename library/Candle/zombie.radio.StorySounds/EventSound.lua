@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class EventSound
 --- @field public class any
-EventSound = {};
+EventSound = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,7 @@ function EventSound:getColor() end
 function EventSound:getDataPoints() end
 
 --- @public
---- @return String
+--- @return string
 function EventSound:getName() end
 
 --- @public
@@ -26,24 +26,23 @@ function EventSound:getStorySounds() end
 
 --- @public
 --- @param arg0 Color
---- @return void
+--- @return nil
 function EventSound:setColor(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function EventSound:setDataPoints(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function EventSound:setName(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function EventSound:setStorySounds(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -51,5 +50,5 @@ function EventSound:setStorySounds(arg0) end
 
 --- @public
 --- @return EventSound
---- @overload fun(arg0: String): EventSound
+--- @overload fun(arg0: string): EventSound
 function EventSound.new() end

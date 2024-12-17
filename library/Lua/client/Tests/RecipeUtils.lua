@@ -3,7 +3,6 @@
 ---@class RecipeUtils
 RecipeUtils = {}
 
-
 ---@return any
 function RecipeUtils.CreateSourceItem(recipe, source, sourceFullType, options, result) end
 

@@ -8,7 +8,6 @@
 ---@field [any] any
 campingCampfire = ISBuildingObject:derive("campingCampfire")
 
-
 ---@return any
 function campingCampfire:create(x, y, z, north, sprite) end
 
@@ -32,7 +31,6 @@ function campingCampfire:onTimedActionStart(action) end
 
 ---@return any
 function campingCampfire:render(x, y, z, square) end
-
 
 ---@return campingCampfire
 function campingCampfire:new(character) end

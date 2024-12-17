@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AnimalChunk
 --- @field public class any
-AnimalChunk = {};
+AnimalChunk = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,21 +11,21 @@ AnimalChunk = {};
 --- @public
 --- @param arg0 VirtualAnimal
 --- @param arg1 AnimalTracksType
---- @return void
+--- @return nil
 function AnimalChunk:addTracks(arg0, arg1) end
 
 --- @public
 --- @param arg0 VirtualAnimal
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function AnimalChunk:addTracksStr(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalChunk:deleteTracks() end
 
 --- @public
---- @param arg0 double
+--- @param arg0 number
 --- @return VirtualAnimal
 function AnimalChunk:findAnimalByID(arg0) end
 
@@ -38,9 +38,8 @@ function AnimalChunk:getAnimalsTracks() end
 function AnimalChunk:getVirtualAnimals() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalChunk:updateTracks() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

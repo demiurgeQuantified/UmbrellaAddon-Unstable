@@ -13,7 +13,6 @@
 ---@field [any] any
 ISMilkAnimal = ISBaseTimedAction:derive("ISMilkAnimal")
 
-
 ---@return any
 function ISMilkAnimal:animEvent(event, parameter) end
 
@@ -52,7 +51,6 @@ function ISMilkAnimal:update() end
 
 ---@return any
 function ISMilkAnimal:waitToStart() end
-
 
 ---@return ISMilkAnimal
 function ISMilkAnimal:new(character, animal, bucket, right, all) end

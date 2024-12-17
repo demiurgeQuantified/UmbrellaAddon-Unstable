@@ -6,7 +6,6 @@
 ---@field [any] any
 LuaList = ISBaseObject:derive("LuaList")
 
-
 ---@return any
 function LuaList:add(item) end
 
@@ -48,7 +47,6 @@ function LuaList:size() end
 
 ---@return any
 function LuaList:sort(f) end
-
 
 ---@return LuaList
 function LuaList:new() end

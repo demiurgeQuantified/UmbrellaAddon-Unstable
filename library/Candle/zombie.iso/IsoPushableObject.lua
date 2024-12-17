@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class IsoPushableObject: IsoMovingObject
 --- @field public class any
-IsoPushableObject = {};
+IsoPushableObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoPushableObject:DoCollideNorS() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPushableObject:DoCollideWorE() end
 
 --- @public
@@ -21,32 +21,31 @@ function IsoPushableObject:DoCollideWorE() end
 function IsoPushableObject:Serialize() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPushableObject:getObjectName() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function IsoPushableObject:getWeight(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoPushableObject:load(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoPushableObject:save(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPushableObject:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -56,5 +55,5 @@ function IsoPushableObject:update() end
 --- @param arg0 IsoCell
 --- @return IsoPushableObject
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoPushableObject
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int): IsoPushableObject
+--- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer): IsoPushableObject
 function IsoPushableObject.new(arg0) end

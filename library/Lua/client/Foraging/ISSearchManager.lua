@@ -104,47 +104,46 @@ ISSearchManager.showDebugExtended = false
 ISSearchManager.showDebugVision = false
 ISSearchManager.showDebugVisionRadius = false
 ISSearchManager.updateEvents = {
-    {
-        method = "updateCurrentZone",
-        tick = 10,
-        breakTick = false,
-    },
-    {
-        method = "checkActiveZones",
-        tick = 30,
-        breakTick = false,
-    },
-    {
-        method = "updateForceFindSystem",
-        tick = 10,
-        breakTick = false,
-    },
-    {
-        method = "checkIcons",
-        tick = 5,
-        breakTick = false,
-    },
-    {
-        method = "checkSquares",
-        tick = 5,
-        breakTick = false,
-    },
-    {
-        method = "checkWorldIcons",
-        tick = 5,
-        breakTick = false,
-    },
+	{
+		method = "updateCurrentZone",
+		tick = 10,
+		breakTick = false,
+	},
+	{
+		method = "checkActiveZones",
+		tick = 30,
+		breakTick = false,
+	},
+	{
+		method = "updateForceFindSystem",
+		tick = 10,
+		breakTick = false,
+	},
+	{
+		method = "checkIcons",
+		tick = 5,
+		breakTick = false,
+	},
+	{
+		method = "checkSquares",
+		tick = 5,
+		breakTick = false,
+	},
+	{
+		method = "checkWorldIcons",
+		tick = 5,
+		breakTick = false,
+	},
 }
 ISSearchManager.stashTypes = {
-    ["ShotgunBox"] = true,
-    ["GunBox"] = true,
-    ["ToolsBox"] = true,
+	["ShotgunBox"] = true,
+	["GunBox"] = true,
+	["ToolsBox"] = true,
 }
 ISSearchManager.ignoredItemTypes = {
-    ["Base.UnusableWood"] = true,
-    ["Base.UnusableMetal"] = true,
+	["Base.UnusableWood"] = true,
+	["Base.UnusableMetal"] = true,
 }
-
 
 ---@return any
 function ISSearchManager.createUI(_player) end
@@ -175,7 +174,6 @@ function ISSearchManager.onUpdateIcon(_zoneData, _iconID, _icon) end
 
 ---@return any
 function ISSearchManager.setManager(_character, _manager) end
-
 
 ---@return any
 function ISSearchManager:addHaloNote(_text) end
@@ -392,7 +390,6 @@ function ISSearchManager:updateZoom() end
 
 ---@return any
 function ISSearchManager:worldItemTest(_itemObj) end
-
 
 ---@return ISSearchManager
 function ISSearchManager:new(_character) end

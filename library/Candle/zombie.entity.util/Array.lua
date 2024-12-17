@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class Array
 --- @field public class any
 --- @implement Iterable
-Array = {};
+Array = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ Array = {};
 --- @static
 --- @param arg0 Class
 --- @return Array
---- @overload fun(arg0: boolean, arg1: int, arg2: Class): Array
+--- @overload fun(arg0: boolean, arg1: integer, arg2: Class): Array
 function Array.of(arg0) end
 
 --- @public
@@ -22,33 +22,32 @@ function Array.of(arg0) end
 --- @return Array
 function Array.with(arg0) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: Array, arg0: Object, arg1: Object): void
---- @overload fun(self: Array, arg0: Object, arg1: Object, arg2: Object): void
---- @overload fun(self: Array, arg0: Object, arg1: Object, arg2: Object, arg3: Object): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: Array, arg0: any, arg1: any): nil
+--- @overload fun(self: Array, arg0: any, arg1: any, arg2: any): nil
+--- @overload fun(self: Array, arg0: any, arg1: any, arg2: any, arg3: any): nil
 function Array:add(arg0) end
 
 --- @public
 --- @param arg0 Object[]
---- @return void
---- @overload fun(self: Array, arg0: Array): void
---- @overload fun(self: Array, arg0: Object[], arg1: int, arg2: int): void
---- @overload fun(self: Array, arg0: Array, arg1: int, arg2: int): void
+--- @return nil
+--- @overload fun(self: Array, arg0: Array): nil
+--- @overload fun(self: Array, arg0: Object[], arg1: integer, arg2: integer): nil
+--- @overload fun(self: Array, arg0: Array, arg1: integer, arg2: integer): nil
 function Array:addAll(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function Array:clear() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
 --- @return boolean
 function Array:contains(arg0, arg1) end
@@ -66,54 +65,54 @@ function Array:containsAll(arg0, arg1) end
 function Array:containsAny(arg0, arg1) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Object[]
 function Array:ensureCapacity(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function Array:equals(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function Array:equalsIdentity(arg0) end
 
 --- @public
---- @return Object
+--- @return any
 function Array:first() end
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function Array:forEach(arg0) end
 
 --- @public
---- @param arg0 int
---- @return Object
+--- @param arg0 integer
+--- @return any
 function Array:get(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Array:hashCode() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
---- @return int
+--- @return integer
 function Array:indexOf(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 Object
---- @return void
+--- @param arg0 integer
+--- @param arg1 any
+--- @return nil
 function Array:insert(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Array:insertRange(arg0, arg1) end
 
 --- @public
@@ -127,9 +126,9 @@ function Array:isEmpty() end
 function Array:iterator() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
---- @return int
+--- @return integer
 function Array:lastIndexOf(arg0, arg1) end
 
 --- @public
@@ -137,15 +136,15 @@ function Array:lastIndexOf(arg0, arg1) end
 function Array:notEmpty() end
 
 --- @public
---- @return Object
+--- @return any
 function Array:peek() end
 
 --- @public
---- @return Object
+--- @return any
 function Array:pop() end
 
 --- @public
---- @return Object
+--- @return any
 function Array:random() end
 
 --- @public
@@ -155,24 +154,24 @@ function Array:random() end
 function Array:removeAll(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return Object
+--- @param arg0 integer
+--- @return any
 function Array:removeIndex(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Array:removeRange(arg0, arg1) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
 --- @return boolean
 function Array:removeValue(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function Array:reverse() end
 
 --- @public
@@ -182,24 +181,24 @@ function Array:select(arg0) end
 
 --- @public
 --- @param arg0 Comparator
---- @param arg1 int
---- @return Object
+--- @param arg1 integer
+--- @return any
 function Array:selectRanked(arg0, arg1) end
 
 --- @public
 --- @param arg0 Comparator
---- @param arg1 int
---- @return int
+--- @param arg1 integer
+--- @return integer
 function Array:selectRankedIndex(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 Object
---- @return void
+--- @param arg0 integer
+--- @param arg1 any
+--- @return nil
 function Array:set(arg0, arg1) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Object[]
 function Array:setSize(arg0) end
 
@@ -208,12 +207,12 @@ function Array:setSize(arg0) end
 function Array:shrink() end
 
 --- @public
---- @return void
+--- @return nil
 function Array:shuffle() end
 
 --- @public
---- @return void
---- @overload fun(self: Array, arg0: Comparator): void
+--- @return nil
+--- @overload fun(self: Array, arg0: Comparator): nil
 function Array:sort() end
 
 --- @public
@@ -221,9 +220,9 @@ function Array:sort() end
 function Array:spliterator() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function Array:swap(arg0, arg1) end
 
 --- @public
@@ -232,15 +231,14 @@ function Array:swap(arg0, arg1) end
 function Array:toArray() end
 
 --- @public
---- @return String
---- @overload fun(self: Array, arg0: String): String
+--- @return string
+--- @overload fun(self: Array, arg0: string): string
 function Array:toString() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Array:truncate(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -249,10 +247,10 @@ function Array:truncate(arg0) end
 --- @public
 --- @return Array
 --- @overload fun(arg0: Object[]): Array
---- @overload fun(arg0: int): Array
+--- @overload fun(arg0: integer): Array
 --- @overload fun(arg0: Class): Array
 --- @overload fun(arg0: Array): Array
---- @overload fun(arg0: boolean, arg1: int): Array
---- @overload fun(arg0: boolean, arg1: int, arg2: Class): Array
---- @overload fun(arg0: boolean, arg1: Object[], arg2: int, arg3: int): Array
+--- @overload fun(arg0: boolean, arg1: integer): Array
+--- @overload fun(arg0: boolean, arg1: integer, arg2: Class): Array
+--- @overload fun(arg0: boolean, arg1: Object[], arg2: integer, arg3: integer): Array
 function Array.new() end

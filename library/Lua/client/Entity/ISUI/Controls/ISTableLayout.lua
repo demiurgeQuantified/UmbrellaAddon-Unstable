@@ -18,7 +18,6 @@
 ---@field [any] any
 ISTableLayout = ISPanel:derive("ISTableLayout")
 
-
 ---@return any
 function ISTableLayout:addChild(_element) end
 
@@ -94,7 +93,6 @@ function ISTableLayout:setElement(_column, _row, _element) end
 ---@return any
 function ISTableLayout:update() end
 
-
 ---@return ISTableLayout
 function ISTableLayout:new(x, y, width, height, _styleColumn, _styleRow, _styleCell) end
 
@@ -112,13 +110,11 @@ function ISTableLayout:new(x, y, width, height, _styleColumn, _styleRow, _styleC
 ---@field [any] any
 ISTableLayoutColumn = ISBaseObject:derive("ISTableLayoutColumn")
 
-
 ---@return any
 function ISTableLayoutColumn:index() end
 
 ---@return any
 function ISTableLayoutColumn:setVisible(_b, _silent) end
-
 
 ---@return ISTableLayoutColumn
 function ISTableLayoutColumn:new(_parentTable, _columnIndex, _isAutoFill) end
@@ -137,13 +133,11 @@ function ISTableLayoutColumn:new(_parentTable, _columnIndex, _isAutoFill) end
 ---@field [any] any
 ISTableLayoutRow = ISBaseObject:derive("ISTableLayoutRow")
 
-
 ---@return any
 function ISTableLayoutRow:index() end
 
 ---@return any
 function ISTableLayoutRow:setVisible(_b, _silent) end
-
 
 ---@return ISTableLayoutRow
 function ISTableLayoutRow:new(_parentTable, _rowIndex, _isAutoFill) end
@@ -167,7 +161,6 @@ function ISTableLayoutRow:new(_parentTable, _rowIndex, _isAutoFill) end
 ---@field y any
 ---@field [any] any
 ISTableLayoutCell = ISBaseObject:derive("ISTableLayoutCell")
-
 
 ---@return any
 function ISTableLayoutCell:addChild(_child) end
@@ -201,7 +194,6 @@ function ISTableLayoutCell:setX(_x) end
 
 ---@return any
 function ISTableLayoutCell:setY(_y) end
-
 
 ---@return ISTableLayoutCell
 function ISTableLayoutCell:new(_columnIndex, _rowIndex, _parent) end

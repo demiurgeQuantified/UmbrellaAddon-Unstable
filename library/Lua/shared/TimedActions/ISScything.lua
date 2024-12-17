@@ -8,7 +8,6 @@
 ---@field [any] any
 ISScything = ISBaseTimedAction:derive("ISScything")
 
-
 ---@return any
 function ISScything:complete() end
 
@@ -32,7 +31,6 @@ function ISScything:stop() end
 
 ---@return any
 function ISScything:update() end
-
 
 ---@return ISScything
 function ISScything:new(character, item, sq, radius) end

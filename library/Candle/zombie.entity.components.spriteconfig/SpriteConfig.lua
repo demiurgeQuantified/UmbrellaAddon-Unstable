@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class SpriteConfig: Component
 --- @field public class any
-SpriteConfig = {};
+SpriteConfig = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,15 +18,15 @@ function SpriteConfig:getAllMultiSquareObjects(arg0) end
 function SpriteConfig:getFaceInfo() end
 
 --- @public
---- @return int
+--- @return integer
 function SpriteConfig:getMasterOffsetX() end
 
 --- @public
---- @return int
+--- @return integer
 function SpriteConfig:getMasterOffsetY() end
 
 --- @public
---- @return int
+--- @return integer
 function SpriteConfig:getMasterOffsetZ() end
 
 --- @public
@@ -68,5 +68,3 @@ function SpriteConfig:isValidMultiSquare() end
 --- @public
 --- @return boolean
 function SpriteConfig:isWasLoadedAsMaster() end
-
-

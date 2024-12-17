@@ -7,10 +7,8 @@
 ---@field [any] any
 CGlobalObjectSystem = ISBaseObject:derive("CGlobalObjectSystem")
 
-
 ---@return any
 function CGlobalObjectSystem.RegisterSystemClass(luaClass) end
-
 
 ---@return any
 function CGlobalObjectSystem:getIsoObjectAt(x, y, z) end
@@ -62,7 +60,6 @@ function CGlobalObjectSystem:removeLuaObjectAt(x, y, z) end
 
 ---@return any
 function CGlobalObjectSystem:sendCommand(playerObj, command, args) end
-
 
 ---@return CGlobalObjectSystem
 function CGlobalObjectSystem:new(name) end

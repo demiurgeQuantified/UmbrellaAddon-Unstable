@@ -10,7 +10,6 @@
 ---@field [any] any
 ISBBQLightFromLiterature = ISBaseTimedAction:derive("ISBBQLightFromLiterature")
 
-
 ---@return any
 function ISBBQLightFromLiterature:complete() end
 
@@ -34,7 +33,6 @@ function ISBBQLightFromLiterature:update() end
 
 ---@return any
 function ISBBQLightFromLiterature:waitToStart() end
-
 
 ---@return ISBBQLightFromLiterature
 function ISBBQLightFromLiterature:new(character, item, lighter, bbq) end

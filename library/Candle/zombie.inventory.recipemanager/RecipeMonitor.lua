@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RecipeMonitor
 --- @field public class any
@@ -6,7 +6,7 @@
 --- @field public colHeader Color
 --- @field public colNeg Color
 --- @field public colPos Color
-RecipeMonitor = {};
+RecipeMonitor = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,18 +14,18 @@ RecipeMonitor = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.DecTab() end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function RecipeMonitor.Enable(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Color
 function RecipeMonitor.GetColorForLine(arg0) end
 
@@ -41,12 +41,12 @@ function RecipeMonitor.GetLines() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function RecipeMonitor.GetSaveDir() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.IncTab() end
 
 --- @public
@@ -56,14 +56,14 @@ function RecipeMonitor.IsEnabled() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
---- @overload fun(arg0: String, arg1: Color): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(arg0: string, arg1: Color): nil
 function RecipeMonitor.Log(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.LogBlanc() end
 
 --- @public
@@ -74,48 +74,48 @@ function RecipeMonitor.LogBlanc() end
 --- @param arg3 InventoryItem
 --- @param arg4 ArrayList
 --- @param arg5 boolean
---- @return void
+--- @return nil
 function RecipeMonitor.LogInit(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function RecipeMonitor.LogItem(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ArrayList
---- @return void
+--- @return nil
 function RecipeMonitor.LogList(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 List
---- @return void
+--- @return nil
 function RecipeMonitor.LogSources(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.ResetTabs() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.SaveToFile() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RecipeMonitor.SetTab(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.StartMonitor() end
 
 --- @public
@@ -136,12 +136,12 @@ function RecipeMonitor.getColGray() end
 --- @public
 --- @static
 --- @param arg0 ItemContainer
---- @return String
+--- @return string
 function RecipeMonitor.getContainerString(arg0) end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function RecipeMonitor.getMonitorID() end
 
 --- @public
@@ -156,31 +156,30 @@ function RecipeMonitor.getRecipeLines() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function RecipeMonitor.getRecipeName() end
 
 --- @public
 --- @static
 --- @param arg0 Result
---- @return String
+--- @return string
 function RecipeMonitor.getResultString(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.resume() end
 
 --- @public
 --- @static
 --- @param arg0 Recipe
---- @return void
+--- @return nil
 function RecipeMonitor.setRecipe(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RecipeMonitor.suspend() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

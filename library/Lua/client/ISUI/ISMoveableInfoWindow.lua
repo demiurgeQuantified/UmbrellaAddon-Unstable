@@ -34,13 +34,11 @@ ISMoveableInfoWindow = ISPanel:derive("ISMoveableInfoWindow")
 ISMoveableInfoWindow.infoPanels = {}
 ISMoveableInfoWindow.displayPosition = "cursor"
 
-
 ---@return any
 function ISMoveableInfoWindow.moveablePanelModeKey(_key) end
 
 ---@return any
 function ISMoveableInfoWindow.setDisplayPosition(_position) end
-
 
 ---@return any
 function ISMoveableInfoWindow:calculateDimensions() end
@@ -101,7 +99,6 @@ function ISMoveableInfoWindow:setTexture(_textureName, _allow, _square, _yoffset
 
 ---@return any
 function ISMoveableInfoWindow:stayOnSplitScreen() end
-
 
 ---@return ISMoveableInfoWindow
 function ISMoveableInfoWindow:new(x, y, character, drag) end

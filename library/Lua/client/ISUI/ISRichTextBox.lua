@@ -34,7 +34,6 @@
 ---@field [any] any
 ISRichTextBox = ISPanelJoypad:derive("ISRichTextBox")
 
-
 ---@return any
 function ISRichTextBox:destroy() end
 
@@ -68,6 +67,20 @@ function ISRichTextBox:setValidateTooltipText(text) end
 ---@return any
 function ISRichTextBox:update() end
 
-
 ---@return ISRichTextBox
-function ISRichTextBox:new(x, y, width, height, text, defaultEntryText, target, onclick, player, param1, param2, param3, param4) end
+function ISRichTextBox:new(
+	x,
+	y,
+	width,
+	height,
+	text,
+	defaultEntryText,
+	target,
+	onclick,
+	player,
+	param1,
+	param2,
+	param3,
+	param4
+)
+end

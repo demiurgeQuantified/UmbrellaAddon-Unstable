@@ -9,7 +9,6 @@
 ---@field [any] any
 SGlobalObject = ISBaseObject:derive("SGlobalObject")
 
-
 ---@return any
 function SGlobalObject:aboutToRemoveFromSystem() end
 
@@ -42,7 +41,6 @@ function SGlobalObject:stateToIsoObject(isoObject) end
 
 ---@return any
 function SGlobalObject:updateOnClient() end
-
 
 ---@return SGlobalObject
 function SGlobalObject:new(luaSystem, globalObject) end

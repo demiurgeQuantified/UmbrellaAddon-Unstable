@@ -20,7 +20,6 @@
 ---@field [any] any
 RWMTestPane = RWMPanel:derive("RWMTestPane")
 
-
 ---@return any
 function RWMTestPane:clear() end
 
@@ -41,7 +40,6 @@ function RWMTestPane:render() end
 
 ---@return any
 function RWMTestPane:verifyItem(_item) end
-
 
 ---@return RWMTestPane
 function RWMTestPane:new(x, y, width, height) end

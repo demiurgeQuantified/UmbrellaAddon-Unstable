@@ -15,7 +15,6 @@
 ---@field [any] any
 ISDetachItemHotbar = ISBaseTimedAction:derive("ISDetachItemHotbar")
 
-
 ---@return any
 function ISDetachItemHotbar:animEvent(event, parameter) end
 
@@ -33,7 +32,6 @@ function ISDetachItemHotbar:stop() end
 
 ---@return any
 function ISDetachItemHotbar:update() end
-
 
 ---@return ISDetachItemHotbar
 function ISDetachItemHotbar:new(character, item) end

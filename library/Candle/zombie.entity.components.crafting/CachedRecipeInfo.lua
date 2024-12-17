@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CachedRecipeInfo
 --- @field public class any
-CachedRecipeInfo = {};
+CachedRecipeInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,9 +26,8 @@ function CachedRecipeInfo:isValid() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function CachedRecipeInfo:overrideCanPerform(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class InputStream
 --- @field public class any
 --- @implement Closeable
-InputStream = {};
+InputStream = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,23 +14,22 @@ InputStream = {};
 --- @return InputStream
 function InputStream.nullInputStream() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function InputStream:available() end
 
 --- @public
---- @return void
---- @overload fun(self: InputStream): void
+--- @return nil
+--- @overload fun(self: InputStream): nil
 function InputStream:close() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InputStream:mark(arg0) end
 
 --- @public
@@ -38,9 +37,9 @@ function InputStream:mark(arg0) end
 function InputStream:markSupported() end
 
 --- @public
---- @return int
---- @overload fun(self: InputStream, arg0: byte[]): int
---- @overload fun(self: InputStream, arg0: byte[], arg1: int, arg2: int): int
+--- @return integer
+--- @overload fun(self: InputStream, arg0: byte[]): integer
+--- @overload fun(self: InputStream, arg0: byte[], arg1: integer, arg2: integer): integer
 function InputStream:read() end
 
 --- @public
@@ -48,30 +47,29 @@ function InputStream:read() end
 function InputStream:readAllBytes() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return byte[]
---- @overload fun(self: InputStream, arg0: byte[], arg1: int, arg2: int): int
+--- @overload fun(self: InputStream, arg0: byte[], arg1: integer, arg2: integer): integer
 function InputStream:readNBytes(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InputStream:reset() end
 
 --- @public
---- @param arg0 long
---- @return long
+--- @param arg0 integer
+--- @return integer
 function InputStream:skip(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InputStream:skipNBytes(arg0) end
 
 --- @public
 --- @param arg0 OutputStream
---- @return long
+--- @return integer
 function InputStream:transferTo(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

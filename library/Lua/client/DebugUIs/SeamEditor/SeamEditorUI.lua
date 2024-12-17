@@ -16,7 +16,6 @@
 ---@field [any] any
 SeamEditorUI = ISPanel:derive("SeamEditorUI")
 
-
 ---@return any
 function SeamEditorUI:assignBelowEastTile(tileName) end
 
@@ -68,7 +67,6 @@ function SeamEditorUI:showUI() end
 ---@return any
 function SeamEditorUI:update() end
 
-
 ---@return SeamEditorUI
 function SeamEditorUI:new(x, y, width, height) end
 
@@ -76,7 +74,6 @@ function SeamEditorUI:new(x, y, width, height) end
 ---@field tickBox any
 ---@field [any] any
 SeamEditorUI_OptionsPanel = ISPanel:derive("SeamEditorUI_OptionsPanel")
-
 
 ---@return any
 function SeamEditorUI_OptionsPanel:createChildren() end
@@ -87,7 +84,6 @@ function SeamEditorUI_OptionsPanel:onMouseDownOutside(x, y) end
 ---@return any
 function SeamEditorUI_OptionsPanel:onTickBox(index, selected) end
 
-
 ---@return SeamEditorUI_OptionsPanel
 function SeamEditorUI_OptionsPanel:new(x, y, width, height) end
 
@@ -97,7 +93,6 @@ function SeamEditorUI_OptionsPanel:new(x, y, width, height) end
 ---@field selectedTileName any
 ---@field [any] any
 SeamEditorUI_Scene = ISPanel:derive("SeamEditorUI_Scene")
-
 
 ---@return any
 function SeamEditorUI_Scene:getSelectedTile() end
@@ -174,7 +169,6 @@ function SeamEditorUI_Scene:uiToPixel(x, y) end
 ---@return any
 function SeamEditorUI_Scene:uiToWorld(screenX, screenY, z) end
 
-
 ---@return SeamEditorUI_Scene
 function SeamEditorUI_Scene:new(x, y, width, height, editor) end
 
@@ -184,7 +178,6 @@ function SeamEditorUI_Scene:new(x, y, width, height, editor) end
 ---@field listBox any
 ---@field [any] any
 SeamEditorUI_TilePicker = ISPanel:derive("SeamEditorUI_TilePicker")
-
 
 ---@return any
 function SeamEditorUI_TilePicker:createChildren() end
@@ -201,7 +194,6 @@ function SeamEditorUI_TilePicker:parseTileName(tileName) end
 ---@return any
 function SeamEditorUI_TilePicker:selectTileByName(tileName) end
 
-
 ---@return SeamEditorUI_TilePicker
 function SeamEditorUI_TilePicker:new(x, y, width, height, editor) end
 
@@ -211,7 +203,6 @@ function SeamEditorUI_TilePicker:new(x, y, width, height, editor) end
 ---@field listBox any
 ---@field [any] any
 SeamEditorUI_TilePicker2 = ISPanel:derive("SeamEditorUI_TilePicker2")
-
 
 ---@return any
 function SeamEditorUI_TilePicker2:createChildren() end
@@ -227,7 +218,6 @@ function SeamEditorUI_TilePicker2:parseTileName(tileName) end
 
 ---@return any
 function SeamEditorUI_TilePicker2:selectTileByName(tileName) end
-
 
 ---@return SeamEditorUI_TilePicker2
 function SeamEditorUI_TilePicker2:new(x, y, width, height, editor) end

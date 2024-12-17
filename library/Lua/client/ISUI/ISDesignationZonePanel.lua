@@ -19,10 +19,8 @@
 ---@field [any] any
 ISDesignationZonePanel = ISCollapsableWindow:derive("ISDesignationZonePanel")
 
-
 ---@return any
 function ISDesignationZonePanel.toggleZoneUI() end
-
 
 ---@return any
 function ISDesignationZonePanel:close() end
@@ -53,7 +51,6 @@ function ISDesignationZonePanel:render() end
 
 ---@return any
 function ISDesignationZonePanel:updateButtons() end
-
 
 ---@return ISDesignationZonePanel
 function ISDesignationZonePanel:new(x, y, width, height, player) end

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoObjectType: Enum
 --- @field public class any
@@ -32,7 +32,7 @@
 --- @field public WestRoofT IsoObjectType
 --- @field public windowFN IsoObjectType
 --- @field public windowFW IsoObjectType
-IsoObjectType = {};
+IsoObjectType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -40,19 +40,19 @@ IsoObjectType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoObjectType
 function IsoObjectType.FromString(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoObjectType
 function IsoObjectType.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoObjectType
 function IsoObjectType.valueOf(arg0) end
 
@@ -61,13 +61,10 @@ function IsoObjectType.valueOf(arg0) end
 --- @return IsoObjectType[]
 function IsoObjectType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function IsoObjectType:index() end
-
-

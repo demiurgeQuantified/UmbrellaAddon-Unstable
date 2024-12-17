@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class ObjectRenderEffects
 --- @field public class any
 --- @field public ENABLED boolean
-ObjectRenderEffects = {};
+ObjectRenderEffects = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -25,27 +25,26 @@ function ObjectRenderEffects.getNew(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
 --- @return ObjectRenderEffects
 function ObjectRenderEffects.getNextWindEffect(arg0, arg1) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ObjectRenderEffects.init() end
 
 --- @public
 --- @static
 --- @param arg0 ObjectRenderEffects
---- @return void
+--- @return nil
 function ObjectRenderEffects.release(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ObjectRenderEffects.updateStatic() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,16 +52,14 @@ function ObjectRenderEffects.updateStatic() end
 
 --- @public
 --- @param arg0 ObjectRenderEffects
---- @return void
+--- @return nil
 function ObjectRenderEffects:add(arg0) end
 
 --- @public
 --- @param arg0 ObjectRenderEffects
---- @return void
+--- @return nil
 function ObjectRenderEffects:copyMainFromOther(arg0) end
 
 --- @public
 --- @return boolean
 function ObjectRenderEffects:update() end
-
-

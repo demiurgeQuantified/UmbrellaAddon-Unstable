@@ -5,7 +5,6 @@
 ---@field [any] any
 CoopMapSpawnSelect = MapSpawnSelect:derive("CoopMapSpawnSelect")
 
-
 ---@return any
 function CoopMapSpawnSelect:canRespawnWithOther() end
 
@@ -23,7 +22,6 @@ function CoopMapSpawnSelect:fillList() end
 
 ---@return any
 function CoopMapSpawnSelect:hasChoices() end
-
 
 ---@return CoopMapSpawnSelect
 function CoopMapSpawnSelect:new(x, y, width, height) end

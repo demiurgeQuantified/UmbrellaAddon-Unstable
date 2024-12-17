@@ -7,7 +7,6 @@
 ---@field [any] any
 ISSetComboWasherDryerMode = ISBaseTimedAction:derive("ISSetComboWasherDryerMode")
 
-
 ---@return any
 function ISSetComboWasherDryerMode:complete() end
 
@@ -28,7 +27,6 @@ function ISSetComboWasherDryerMode:stop() end
 
 ---@return any
 function ISSetComboWasherDryerMode:update() end
-
 
 ---@return ISSetComboWasherDryerMode
 function ISSetComboWasherDryerMode:new(character, object, mode) end

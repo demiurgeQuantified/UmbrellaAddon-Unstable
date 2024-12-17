@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBClinic: RandomizedBuildingBase
 --- @field public class any
-RBClinic = {};
+RBClinic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,14 +16,13 @@ function RBClinic:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBClinic:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBClinic:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

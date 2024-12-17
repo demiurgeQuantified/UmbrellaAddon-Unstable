@@ -1,31 +1,30 @@
---- @meta
+--- @meta _
 
 --- @class PresetEntry
 --- @field public class any
-PresetEntry = {};
+PresetEntry = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function PresetEntry:getFrequency() end
 
 --- @public
---- @return String
+--- @return string
 function PresetEntry:getName() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function PresetEntry:setFrequency(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function PresetEntry:setName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -33,5 +32,5 @@ function PresetEntry:setName(arg0) end
 
 --- @public
 --- @return PresetEntry
---- @overload fun(arg0: String, arg1: int): PresetEntry
+--- @overload fun(arg0: string, arg1: integer): PresetEntry
 function PresetEntry.new() end

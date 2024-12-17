@@ -23,7 +23,6 @@
 ---@field [any] any
 RWMChannelTV = RWMPanel:derive("RWMChannelTV")
 
-
 ---@return any
 function RWMChannelTV:addComboOption(_freq, _name) end
 
@@ -83,7 +82,6 @@ function RWMChannelTV:setParent(_parent) end
 
 ---@return any
 function RWMChannelTV:update() end
-
 
 ---@return RWMChannelTV
 function RWMChannelTV:new(x, y, width, height) end

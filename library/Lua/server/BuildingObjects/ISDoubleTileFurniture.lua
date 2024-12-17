@@ -14,7 +14,6 @@
 ---@field [any] any
 ISDoubleTileFurniture = ISBuildingObject:derive("ISDoubleTileFurniture")
 
-
 ---@return any
 function ISDoubleTileFurniture:create(x, y, z, north, sprite) end
 
@@ -41,7 +40,6 @@ function ISDoubleTileFurniture:setInfo(square, north, sprite) end
 
 ---@return any
 function ISDoubleTileFurniture:walkTo(x, y, z) end
-
 
 ---@return ISDoubleTileFurniture
 function ISDoubleTileFurniture:new(name, sprite, sprite2, northSprite, northSprite2) end

@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class TileScript
 --- @field public class any
-TileScript = {};
+TileScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function TileScript:getTileName() end
 
 --- @public
@@ -19,7 +19,6 @@ function TileScript:isBlocksSquare() end
 --- @public
 --- @return boolean
 function TileScript:isEmptySpace() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

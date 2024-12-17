@@ -8,7 +8,6 @@
 ---@field [any] any
 TileGeometryEditor_TileList = ISPanel:derive("TileGeometryEditor_TileList")
 
-
 ---@return any
 function TileGeometryEditor_TileList:calculateSelectionBounds() end
 
@@ -92,7 +91,6 @@ function TileGeometryEditor_TileList:selectionToggle(col, row) end
 
 ---@return any
 function TileGeometryEditor_TileList:setTileset(tilesetName) end
-
 
 ---@return TileGeometryEditor_TileList
 function TileGeometryEditor_TileList:new(x, y, width, height, picker) end

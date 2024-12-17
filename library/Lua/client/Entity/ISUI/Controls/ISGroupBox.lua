@@ -19,7 +19,6 @@
 ---@field [any] any
 ISGroupBox = ISPanel:derive("ISGroupBox")
 
-
 ---@return any
 function ISGroupBox:addChild(_element) end
 
@@ -46,7 +45,6 @@ function ISGroupBox:setElement(_element) end
 
 ---@return any
 function ISGroupBox:update() end
-
 
 ---@return ISGroupBox
 function ISGroupBox:new(x, y, width, height, _styleLabel) end

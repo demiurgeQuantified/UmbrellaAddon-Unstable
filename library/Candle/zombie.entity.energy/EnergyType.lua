@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class EnergyType: Enum
 --- @field public class any
@@ -9,7 +9,7 @@
 --- @field public Steam EnergyType
 --- @field public Thermal EnergyType
 --- @field public VoidEnergy EnergyType
-EnergyType = {};
+EnergyType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,25 +17,25 @@ EnergyType = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param arg0 integer
 --- @return EnergyType
 function EnergyType.FromId(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return EnergyType
 function EnergyType.FromNameLower(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function EnergyType.containsNameLowercase(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return EnergyType
 function EnergyType.valueOf(arg0) end
 
@@ -44,17 +44,14 @@ function EnergyType.valueOf(arg0) end
 --- @return EnergyType[]
 function EnergyType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return byte
+--- @return integer
 function EnergyType:getId() end
 
 --- @public
---- @return String
+--- @return string
 function EnergyType:toStringLower() end
-
-

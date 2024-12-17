@@ -1,17 +1,16 @@
---- @meta
+--- @meta _
 
 --- @class BooleanDebugOption: BooleanConfigOption
 --- @field public class any
-BooleanDebugOption = {};
+BooleanDebugOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function BooleanDebugOption:getIndex() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -19,8 +18,8 @@ function BooleanDebugOption:getIndex() end
 
 --- @public
 --- @param arg0 ArrayList
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 boolean
 --- @return BooleanDebugOption
---- @overload fun(arg0: ArrayList, arg1: String, arg2: boolean, arg3: int): BooleanDebugOption
+--- @overload fun(arg0: ArrayList, arg1: string, arg2: boolean, arg3: integer): BooleanDebugOption
 function BooleanDebugOption.new(arg0, arg1, arg2) end

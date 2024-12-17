@@ -10,7 +10,6 @@
 ---@field [any] any
 ISRemoveBurntVehicle = ISBaseTimedAction:derive("ISRemoveBurntVehicle")
 
-
 ---@return any
 function ISRemoveBurntVehicle:checkAddItem(item, baseChance) end
 
@@ -37,7 +36,6 @@ function ISRemoveBurntVehicle:stop() end
 
 ---@return any
 function ISRemoveBurntVehicle:update() end
-
 
 ---@return ISRemoveBurntVehicle
 function ISRemoveBurntVehicle:new(character, vehicle) end

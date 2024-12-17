@@ -1,20 +1,20 @@
---- @meta
+--- @meta _
 
 --- @class Float: Numeric
 --- @field public class any
-Float = {};
+Float = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Float
+--- @return number
 --- @overload fun(self: Float): Number
 function Float:getMax() end
 
 --- @public
---- @return Float
+--- @return number
 --- @overload fun(self: Float): Number
 function Float:getMin() end
 
@@ -23,9 +23,7 @@ function Float:getMin() end
 function Float:getValueType() end
 
 --- @public
---- @param arg0 Float
---- @return Float
+--- @param arg0 number
+--- @return number
 --- @overload fun(self: Float, arg0: Number): Number
 function Float:validate(arg0) end
-
-

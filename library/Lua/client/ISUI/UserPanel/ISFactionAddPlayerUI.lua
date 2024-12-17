@@ -18,13 +18,11 @@
 ISFactionAddPlayerUI = ISPanel:derive("ISFactionAddPlayerUI")
 ISFactionAddPlayerUI.messages = {}
 
-
 ---@return any
 function ISFactionAddPlayerUI.OnMiniScoreboardUpdate() end
 
 ---@return any
 function ISFactionAddPlayerUI.OnScoreboardUpdate(usernames, displayNames, steamIDs) end
-
 
 ---@return any
 function ISFactionAddPlayerUI:drawPlayers(y, item, alt) end
@@ -40,7 +38,6 @@ function ISFactionAddPlayerUI:populateList() end
 
 ---@return any
 function ISFactionAddPlayerUI:prerender() end
-
 
 ---@return ISFactionAddPlayerUI
 function ISFactionAddPlayerUI:new(x, y, width, height, faction, player) end

@@ -9,7 +9,6 @@
 ---@field [any] any
 ISUIVehicleModel = ISUIElement:derive("ISUIVehicleModel")
 
-
 ---@return any
 function ISUIVehicleModel:getView() end
 
@@ -39,7 +38,6 @@ function ISUIVehicleModel:setVehicle(vehicle) end
 
 ---@return any
 function ISUIVehicleModel:setView(name) end
-
 
 ---@return ISUIVehicleModel
 function ISUIVehicleModel:new(x, y, width, height) end

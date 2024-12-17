@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class SwipeStatePlayer: State
 --- @field public class any
-SwipeStatePlayer = {};
+SwipeStatePlayer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ SwipeStatePlayer = {};
 --- @static
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function SwipeStatePlayer.dbgOnGlobalAnimEvent(arg0, arg1) end
 
 --- @public
@@ -20,26 +20,24 @@ function SwipeStatePlayer.dbgOnGlobalAnimEvent(arg0, arg1) end
 --- @return SwipeStatePlayer
 function SwipeStatePlayer.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function SwipeStatePlayer:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function SwipeStatePlayer:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function SwipeStatePlayer:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -12,7 +12,6 @@
 ---@field [any] any
 DebugChunkStateUI_SquarePropsHandler = ISPanel:derive("DebugChunkStateUI_SquarePropsHandler")
 
-
 ---@return any
 function DebugChunkStateUI_SquarePropsHandler:addLine(text, arg0, arg1, arg2, arg3, arg4) end
 
@@ -34,7 +33,6 @@ function DebugChunkStateUI_SquarePropsHandler:render1() end
 ---@return any
 function DebugChunkStateUI_SquarePropsHandler:setSquare(square, x, y, z) end
 
-
 ---@return DebugChunkStateUI_SquarePropsHandler
 function DebugChunkStateUI_SquarePropsHandler:new(x, y, width, height, gameState) end
 
@@ -49,13 +47,11 @@ function DebugChunkStateUI_SquarePropsHandler:new(x, y, width, height, gameState
 ---@field [any] any
 DebugChunkStateUI_SquarePanel = ISSectionedPanel:derive("DebugChunkStateUI_SquarePanel")
 
-
 ---@return any
 function DebugChunkStateUI_SquarePanel:createSections() end
 
 ---@return any
 function DebugChunkStateUI_SquarePanel:setSquare(square, x, y, z) end
-
 
 ---@return DebugChunkStateUI_SquarePanel
 function DebugChunkStateUI_SquarePanel:new(x, y, width, height, debugChunkState) end

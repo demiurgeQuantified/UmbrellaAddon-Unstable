@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSWasteDump: RandomizedZoneStoryBase
 --- @field public class any
-RZSWasteDump = {};
+RZSWasteDump = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSWasteDump = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSWasteDump:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

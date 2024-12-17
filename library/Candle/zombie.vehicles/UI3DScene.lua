@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class UI3DScene: UIElement
 --- @field public class any
---- @field public Z_SCALE float
-UI3DScene = {};
+--- @field public Z_SCALE number
+UI3DScene = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,147 +19,145 @@ function UI3DScene.allocRay() end
 --- @param arg0 Plane
 --- @param arg1 Ray
 --- @param arg2 Vector3f
---- @return int
+--- @return integer
 function UI3DScene.intersect_ray_plane(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 Ray
---- @return void
+--- @return nil
 function UI3DScene.releaseRay(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function UI3DScene:fromLua0(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @return any
 function UI3DScene:fromLua1(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @return any
 function UI3DScene:fromLua2(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @param arg3 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return any
 function UI3DScene:fromLua3(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @param arg3 Object
---- @param arg4 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return any
 function UI3DScene:fromLua4(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @param arg3 Object
---- @param arg4 Object
---- @param arg5 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @return any
 function UI3DScene:fromLua5(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @param arg3 Object
---- @param arg4 Object
---- @param arg5 Object
---- @param arg6 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @return any
 function UI3DScene:fromLua6(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @param arg3 Object
---- @param arg4 Object
---- @param arg5 Object
---- @param arg6 Object
---- @param arg7 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @return any
 function UI3DScene:fromLua7(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @param arg2 Object
---- @param arg3 Object
---- @param arg4 Object
---- @param arg5 Object
---- @param arg6 Object
---- @param arg7 Object
---- @param arg8 Object
---- @param arg9 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @return any
 function UI3DScene:fromLua9(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
---- @return void
+--- @return nil
 function UI3DScene:render() end
 
 --- @public
 --- @param arg0 Vector3f
---- @return float
---- @overload fun(self: UI3DScene, arg0: float, arg1: float, arg2: float): float
+--- @return number
+--- @overload fun(self: UI3DScene, arg0: number, arg1: number, arg2: number): number
 function UI3DScene:sceneToUIX(arg0) end
 
 --- @public
 --- @param arg0 Vector3f
---- @return float
---- @overload fun(self: UI3DScene, arg0: float, arg1: float, arg2: float): float
+--- @return number
+--- @overload fun(self: UI3DScene, arg0: number, arg1: number, arg2: number): number
 function UI3DScene:sceneToUIY(arg0) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param arg0 number
+--- @param arg1 number
 --- @param arg2 GridPlane
 --- @param arg3 Vector3f
 --- @return boolean
 function UI3DScene:uiToGrid(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 Vector3f
 --- @return Vector3f
---- @overload fun(self: UI3DScene, arg0: Matrix4f, arg1: float, arg2: float, arg3: float, arg4: Vector3f): Vector3f
+--- @overload fun(self: UI3DScene, arg0: Matrix4f, arg1: number, arg2: number, arg3: number, arg4: Vector3f): Vector3f
 function UI3DScene:uiToScene(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function UI3DScene:uiToSceneX(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function UI3DScene:uiToSceneY(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

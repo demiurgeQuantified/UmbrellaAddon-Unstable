@@ -11,7 +11,6 @@
 ---@field [any] any
 ISWoodenStairs = ISBuildingObject:derive("ISWoodenStairs")
 
-
 ---@return any
 function ISWoodenStairs:create(x, y, z, north, sprite) end
 
@@ -35,7 +34,6 @@ function ISWoodenStairs:render(x, y, z, square) end
 
 ---@return any
 function ISWoodenStairs:setInfo(square, level, north, sprite, luaobject) end
-
 
 ---@return ISWoodenStairs
 function ISWoodenStairs:new(sprite, sprite2, sprite3, northSprite, northSprite2, northSprite3, pillar, pillarNorth) end

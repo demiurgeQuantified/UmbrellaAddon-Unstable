@@ -44,10 +44,8 @@ StatisticChart.instance = nil
 StatisticChart.shiftDown = 0
 StatisticChart.eventsAdded = false
 
-
 ---@return any
 function StatisticChart.OnServerStatisticReceived() end
-
 
 ---@return any
 function StatisticChart:addColor(_r, _g, _b) end
@@ -105,7 +103,6 @@ function StatisticChart:update() end
 
 ---@return any
 function StatisticChart:updateValues() end
-
 
 ---@return StatisticChart
 function StatisticChart:new(x, y, width, height, player) end

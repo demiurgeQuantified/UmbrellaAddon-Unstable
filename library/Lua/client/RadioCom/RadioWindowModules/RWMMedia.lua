@@ -30,7 +30,6 @@
 ---@field [any] any
 RWMMedia = RWMPanel:derive("RWMMedia")
 
-
 ---@return any
 function RWMMedia:addMedia(_items) end
 
@@ -84,7 +83,6 @@ function RWMMedia:update() end
 
 ---@return any
 function RWMMedia:verifyItem(_item) end
-
 
 ---@return RWMMedia
 function RWMMedia:new(x, y, width, height) end

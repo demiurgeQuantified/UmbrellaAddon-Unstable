@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RVSRegionalProfessionVehicle: RandomizedVehicleStoryBase
 --- @field public class any
-RVSRegionalProfessionVehicle = {};
+RVSRegionalProfessionVehicle = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,15 +18,14 @@ function RVSRegionalProfessionVehicle:initVehicleStorySpawner(arg0, arg1, arg2) 
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RVSRegionalProfessionVehicle:randomizeVehicleStory(arg0, arg1) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner
 --- @param arg1 Element
---- @return void
+--- @return nil
 function RVSRegionalProfessionVehicle:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

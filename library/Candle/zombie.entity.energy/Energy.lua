@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Energy
 --- @field public class any
@@ -7,7 +7,7 @@
 --- @field public Steam Energy
 --- @field public Thermal Energy
 --- @field public VoidEnergy Energy
-Energy = {};
+Energy = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,7 +15,7 @@ Energy = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Energy
 --- @overload fun(arg0: EnergyType): Energy
 function Energy.Get(arg0) end
@@ -23,17 +23,17 @@ function Energy.Get(arg0) end
 --- @public
 --- @static
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function Energy.Init(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Energy.PreReloadScripts() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Energy.Reset() end
 
 --- @public
@@ -44,7 +44,7 @@ function Energy.getAllEnergies() end
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @return Energy
 function Energy.loadEnergy(arg0, arg1) end
 
@@ -52,9 +52,8 @@ function Energy.loadEnergy(arg0, arg1) end
 --- @static
 --- @param arg0 Energy
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function Energy.saveEnergy(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -65,11 +64,11 @@ function Energy.saveEnergy(arg0, arg1) end
 function Energy:getColor() end
 
 --- @public
---- @return String
+--- @return string
 function Energy:getDisplayName() end
 
 --- @public
---- @return String
+--- @return string
 function Energy:getEnergyTypeString() end
 
 --- @public
@@ -87,5 +86,3 @@ function Energy:getVerticalBarTexture() end
 --- @public
 --- @return boolean
 function Energy:isVanilla() end
-
-

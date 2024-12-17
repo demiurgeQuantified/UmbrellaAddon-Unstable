@@ -1,18 +1,18 @@
---- @meta
+--- @meta _
 
 --- @class PZUnmodifiableCollection
 --- @field public class any
 --- @implement Collection
-PZUnmodifiableCollection = {};
+PZUnmodifiableCollection = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZUnmodifiableCollection, arg0: Object): boolean
+--- @overload fun(self: PZUnmodifiableCollection, arg0: any): boolean
 function PZUnmodifiableCollection:add(arg0) end
 
 --- @public
@@ -22,14 +22,14 @@ function PZUnmodifiableCollection:add(arg0) end
 function PZUnmodifiableCollection:addAll(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: PZUnmodifiableCollection): void
+--- @return nil
+--- @overload fun(self: PZUnmodifiableCollection): nil
 function PZUnmodifiableCollection:clear() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZUnmodifiableCollection, arg0: Object): boolean
+--- @overload fun(self: PZUnmodifiableCollection, arg0: any): boolean
 function PZUnmodifiableCollection:contains(arg0) end
 
 --- @public
@@ -39,17 +39,17 @@ function PZUnmodifiableCollection:contains(arg0) end
 function PZUnmodifiableCollection:containsAll(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function PZUnmodifiableCollection:equals(arg0) end
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function PZUnmodifiableCollection:forEach(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function PZUnmodifiableCollection:hashCode() end
 
 --- @public
@@ -68,9 +68,9 @@ function PZUnmodifiableCollection:iterator() end
 function PZUnmodifiableCollection:parallelStream() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZUnmodifiableCollection, arg0: Object): boolean
+--- @overload fun(self: PZUnmodifiableCollection, arg0: any): boolean
 function PZUnmodifiableCollection:remove(arg0) end
 
 --- @public
@@ -92,8 +92,8 @@ function PZUnmodifiableCollection:removeIf(arg0) end
 function PZUnmodifiableCollection:retainAll(arg0) end
 
 --- @public
---- @return int
---- @overload fun(self: PZUnmodifiableCollection): int
+--- @return integer
+--- @overload fun(self: PZUnmodifiableCollection): integer
 function PZUnmodifiableCollection:size() end
 
 --- @public
@@ -116,7 +116,5 @@ function PZUnmodifiableCollection:stream() end
 function PZUnmodifiableCollection:toArray() end
 
 --- @public
---- @return String
+--- @return string
 function PZUnmodifiableCollection:toString() end
-
-

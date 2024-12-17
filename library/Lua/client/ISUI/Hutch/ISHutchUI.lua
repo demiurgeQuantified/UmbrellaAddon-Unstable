@@ -3,7 +3,6 @@
 ---@class ISHutch3DModel : ISUI3DModel
 ISHutch3DModel = ISUI3DModel:derive("ISHutch3DModel")
 
-
 ---@return any
 function ISHutch3DModel:instantiate() end
 
@@ -25,7 +24,6 @@ function ISHutch3DModel:onMouseUpOutside(x, y) end
 ---@return any
 function ISHutch3DModel:onRightMouseUp(x, y) end
 
-
 ---@return ISHutch3DModel
 function ISHutch3DModel:new(x, y, width, height) end
 
@@ -40,7 +38,6 @@ function ISHutch3DModel:new(x, y, width, height) end
 ---@field possibleEggPosition any
 ---@field [any] any
 ISHutchNestBox = ISPanel:derive("ISHutchNestBox")
-
 
 ---@return any
 function ISHutchNestBox:checkGrabBtn(btn) end
@@ -81,7 +78,6 @@ function ISHutchNestBox:onRightMouseUp(x, y) end
 ---@return any
 function ISHutchNestBox:render() end
 
-
 ---@return ISHutchNestBox
 function ISHutchNestBox:new(x, y, width, height, hutchUI, index) end
 
@@ -95,7 +91,6 @@ function ISHutchNestBox:new(x, y, width, height, hutchUI, index) end
 ---@field playerObj any
 ---@field [any] any
 ISHutchRoost = ISPanel:derive("ISHutchRoost")
-
 
 ---@return any
 function ISHutchRoost:checkGrabBtn(btn) end
@@ -130,7 +125,6 @@ function ISHutchRoost:onRightMouseUp(x, y) end
 ---@return any
 function ISHutchRoost:render() end
 
-
 ---@return ISHutchRoost
 function ISHutchRoost:new(x, y, width, height, hutchUI, index) end
 
@@ -163,7 +157,6 @@ function ISHutchRoost:new(x, y, width, height, hutchUI, index) end
 ---@field [any] any
 ISHutchUI = ISCollapsableWindow:derive("ISHutchUI")
 ISHutchUI.instance = nil
-
 
 ---@return any
 function ISHutchUI:add3DAnimal(panel, animal, chickenX, chickenY) end
@@ -212,7 +205,6 @@ function ISHutchUI:prerender() end
 
 ---@return any
 function ISHutchUI:render() end
-
 
 ---@return ISHutchUI
 function ISHutchUI:new(x, y, width, height, hutch, player) end

@@ -1,110 +1,110 @@
 ---@meta
 
 local raccoon_kit_sounds = {
-    death = {
-        name = "AnimalVoiceBabyRaccoonDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyBabyRaccoonBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceBabyRaccoonIdle",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceBabyRaccoonPain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalBabyRaccoon",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadBabyRaccoon",
-    },
-    put_down = {
-        name = "PutDownAnimalBabyRacoon",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadBabyRaccoon",
-    },
-    runloop = {
-        name = "AnimalFootstepsBabyRaccoonRun",
-        slot = "runloop",
-    },
-    stressed = {
-        name = "AnimalVoiceBabyRaccoonStressed",
-        intervalMin = 5,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsBabyRaccoonWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsBabyRaccoonWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceBabyRaccoonDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyBabyRaccoonBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceBabyRaccoonIdle",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceBabyRaccoonPain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalBabyRaccoon",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadBabyRaccoon",
+	},
+	put_down = {
+		name = "PutDownAnimalBabyRacoon",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadBabyRaccoon",
+	},
+	runloop = {
+		name = "AnimalFootstepsBabyRaccoonRun",
+		slot = "runloop",
+	},
+	stressed = {
+		name = "AnimalVoiceBabyRaccoonStressed",
+		intervalMin = 5,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsBabyRaccoonWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsBabyRaccoonWalkFront",
+	},
 }
 local raccoon_sounds = {
-    death = {
-        name = "AnimalVoiceRaccoonDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyRaccoonBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceRaccoonIdle",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceRaccoonPain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalRaccoon",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadRaccoon",
-    },
-    put_down = {
-        name = "PutDownAnimalRaccoon",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadRaccoon",
-    },
-    runloop = {
-        name = "AnimalFootstepsRaccoonRun",
-        slot = "runloop",
-    },
-    stressed = {
-        name = "AnimalVoiceRaccoonStressed",
-        intervalMin = 5,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsRaccoonWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsRaccoonWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceRaccoonDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyRaccoonBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceRaccoonIdle",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceRaccoonPain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalRaccoon",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadRaccoon",
+	},
+	put_down = {
+		name = "PutDownAnimalRaccoon",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadRaccoon",
+	},
+	runloop = {
+		name = "AnimalFootstepsRaccoonRun",
+		slot = "runloop",
+	},
+	stressed = {
+		name = "AnimalVoiceRaccoonStressed",
+		intervalMin = 5,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsRaccoonWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsRaccoonWalkFront",
+	},
 }
 
 ---@class AnimalDefinitions

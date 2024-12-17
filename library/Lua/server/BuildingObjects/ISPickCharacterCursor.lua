@@ -13,7 +13,6 @@
 ---@field [any] any
 ISPickCharacterCursor = ISBuildingObject:derive("ISPickCharacterCursor")
 
-
 ---@return any
 function ISPickCharacterCursor:create(x, y, z, north, sprite) end
 
@@ -46,7 +45,6 @@ function ISPickCharacterCursor:render(x, y, z, square) end
 
 ---@return any
 function ISPickCharacterCursor:rotateKey(key) end
-
 
 ---@return ISPickCharacterCursor
 function ISPickCharacterCursor:new(character) end

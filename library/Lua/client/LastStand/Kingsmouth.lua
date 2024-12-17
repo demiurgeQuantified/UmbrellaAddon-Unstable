@@ -10,7 +10,6 @@ Kingsmouth.x = (100 * 300) + 265
 Kingsmouth.y = (101 * 300) + 248
 Kingsmouth.z = 0
 
-
 ---@return any
 function Kingsmouth.Add() end
 

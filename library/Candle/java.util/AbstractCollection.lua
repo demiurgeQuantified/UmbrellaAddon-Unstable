@@ -1,18 +1,18 @@
---- @meta
+--- @meta _
 
 --- @class AbstractCollection
 --- @field public class any
 --- @implement Collection
-AbstractCollection = {};
+AbstractCollection = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: AbstractCollection, arg0: Object): boolean
+--- @overload fun(self: AbstractCollection, arg0: any): boolean
 function AbstractCollection:add(arg0) end
 
 --- @public
@@ -22,14 +22,14 @@ function AbstractCollection:add(arg0) end
 function AbstractCollection:addAll(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: AbstractCollection): void
+--- @return nil
+--- @overload fun(self: AbstractCollection): nil
 function AbstractCollection:clear() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: AbstractCollection, arg0: Object): boolean
+--- @overload fun(self: AbstractCollection, arg0: any): boolean
 function AbstractCollection:contains(arg0) end
 
 --- @public
@@ -39,12 +39,12 @@ function AbstractCollection:contains(arg0) end
 function AbstractCollection:containsAll(arg0) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function AbstractCollection:equals(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function AbstractCollection:hashCode() end
 
 --- @public
@@ -62,9 +62,9 @@ function AbstractCollection:iterator() end
 function AbstractCollection:parallelStream() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
---- @overload fun(self: AbstractCollection, arg0: Object): boolean
+--- @overload fun(self: AbstractCollection, arg0: any): boolean
 function AbstractCollection:remove(arg0) end
 
 --- @public
@@ -85,8 +85,8 @@ function AbstractCollection:removeIf(arg0) end
 function AbstractCollection:retainAll(arg0) end
 
 --- @public
---- @return int
---- @overload fun(self: AbstractCollection): int
+--- @return integer
+--- @overload fun(self: AbstractCollection): integer
 function AbstractCollection:size() end
 
 --- @public
@@ -106,7 +106,5 @@ function AbstractCollection:stream() end
 function AbstractCollection:toArray() end
 
 --- @public
---- @return String
+--- @return string
 function AbstractCollection:toString() end
-
-

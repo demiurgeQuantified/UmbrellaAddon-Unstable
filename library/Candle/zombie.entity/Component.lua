@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Component
 --- @field public class any
-Component = {};
+Component = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,8 +10,8 @@ Component = {};
 
 --- @public
 --- @param arg0 ObjectTooltip
---- @return void
---- @overload fun(self: Component, arg0: ObjectTooltip, arg1: Layout): void
+--- @return nil
+--- @overload fun(self: Component, arg0: ObjectTooltip, arg1: Layout): nil
 function Component:DoTooltip(arg0) end
 
 --- @public
@@ -32,7 +32,7 @@ function Component:getGameEntity() end
 function Component:getOwner() end
 
 --- @public
---- @return int
+--- @return integer
 function Component:getRenderLastPriority() end
 
 --- @public
@@ -72,11 +72,9 @@ function Component:isValidOwnerType(arg0) end
 --- @public
 --- @param arg0 IsoPlayer
 --- @param arg1 EntityPacketData
---- @return void
+--- @return nil
 function Component:sendServerPacketTo(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function Component:toString() end
-
-

@@ -8,7 +8,6 @@
 ---@field [any] any
 ISObjectClickHandler = {}
 
-
 ---@return any
 function ISObjectClickHandler.doClick(object, x, y) end
 

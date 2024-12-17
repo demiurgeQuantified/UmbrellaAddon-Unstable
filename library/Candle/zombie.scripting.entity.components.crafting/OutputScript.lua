@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class OutputScript: IOScript
 --- @field public class any
-OutputScript = {};
+OutputScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,7 +10,7 @@ OutputScript = {};
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function OutputScript:OnScriptsLoaded(arg0) end
 
 --- @public
@@ -29,11 +29,11 @@ function OutputScript:containsFluid(arg0) end
 function OutputScript:containsItem(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function OutputScript:getAmount() end
 
 --- @public
---- @return float
+--- @return number
 function OutputScript:getChance() end
 
 --- @public
@@ -53,7 +53,7 @@ function OutputScript:getFluid() end
 function OutputScript:getFluidMatchMode() end
 
 --- @public
---- @return int
+--- @return integer
 function OutputScript:getIntAmount() end
 
 --- @public
@@ -66,7 +66,7 @@ function OutputScript:getItem(arg0) end
 function OutputScript:getItemApplyMode() end
 
 --- @public
---- @return String
+--- @return string
 function OutputScript:getOriginalLine() end
 
 --- @public
@@ -90,7 +90,7 @@ function OutputScript:getPossibleResultItems() end
 function OutputScript:getResourceType() end
 
 --- @public
---- @return int
+--- @return integer
 function OutputScript:getShapedIndex() end
 
 --- @public
@@ -144,5 +144,3 @@ function OutputScript:isHandcraftOnly() end
 --- @public
 --- @return boolean
 function OutputScript:isReplaceInput() end
-
-

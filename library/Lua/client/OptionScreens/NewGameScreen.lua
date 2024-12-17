@@ -37,7 +37,6 @@
 ---@field [any] any
 NewGameScreen = ISPanelJoypad:derive("NewGameScreen")
 
-
 ---@return any
 function NewGameScreen.dblClickChallenge(item, x, y) end
 
@@ -58,7 +57,6 @@ function NewGameScreen.onChooseDifficulty(item, x, y) end
 
 ---@return any
 function NewGameScreen.onMenuItemMouseDown(item, x, y) end
-
 
 ---@return any
 function NewGameScreen:clickPlay() end
@@ -113,7 +111,6 @@ function NewGameScreen:update() end
 
 ---@return any
 function NewGameScreen:updateBottomPanelButtons() end
-
 
 ---@return NewGameScreen
 function NewGameScreen:new(x, y, width, height) end

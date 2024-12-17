@@ -7,7 +7,6 @@
 ---@field [any] any
 ISHorn = ISBaseTimedAction:derive("ISHorn")
 
-
 ---@return any
 function ISHorn:isValid() end
 
@@ -22,7 +21,6 @@ function ISHorn:stop() end
 
 ---@return any
 function ISHorn:update() end
-
 
 ---@return ISHorn
 function ISHorn:new(character) end

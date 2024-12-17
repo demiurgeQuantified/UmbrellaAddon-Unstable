@@ -37,10 +37,8 @@ ISScriptViewWindow = ISCollapsableWindow:derive("ISScriptViewWindow")
 ISScriptViewWindow.instance = nil
 ISScriptViewWindow.coords = false
 
-
 ---@return any
 function ISScriptViewWindow.OnOpenPanel(_script) end
-
 
 ---@return any
 function ISScriptViewWindow:close() end
@@ -68,7 +66,6 @@ function ISScriptViewWindow:setTitle(_title) end
 
 ---@return any
 function ISScriptViewWindow:update() end
-
 
 ---@return ISScriptViewWindow
 function ISScriptViewWindow:new(x, y, width, height) end

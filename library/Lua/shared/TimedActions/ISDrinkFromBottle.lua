@@ -14,7 +14,6 @@
 ---@field [any] any
 ISDrinkFromBottle = ISBaseTimedAction:derive("ISDrinkFromBottle")
 
-
 ---@return any
 function ISDrinkFromBottle:complete() end
 
@@ -38,7 +37,6 @@ function ISDrinkFromBottle:stop() end
 
 ---@return any
 function ISDrinkFromBottle:update() end
-
 
 ---@return ISDrinkFromBottle
 function ISDrinkFromBottle:new(character, item, uses) end

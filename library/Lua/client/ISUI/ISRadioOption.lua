@@ -24,7 +24,6 @@
 ---@field [any] any
 ISRadioOption = ISPanel:derive("ISRadioOption")
 
-
 ---@return any
 function ISRadioOption:addOption(name) end
 
@@ -48,7 +47,6 @@ function ISRadioOption:prerender() end
 
 ---@return any
 function ISRadioOption:render() end
-
 
 ---@return ISRadioOption
 function ISRadioOption:new(x, y, width, height, name, changeOptionTarget, changeOptionMethod) end

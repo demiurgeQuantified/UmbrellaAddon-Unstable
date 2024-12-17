@@ -18,7 +18,6 @@
 ---@field [any] any
 ISPvpZonePanel = ISPanel:derive("ISPvpZonePanel")
 
-
 ---@return any
 function ISPvpZonePanel:drawList(y, item, alt) end
 
@@ -45,7 +44,6 @@ function ISPvpZonePanel:render() end
 
 ---@return any
 function ISPvpZonePanel:updateButtons() end
-
 
 ---@return ISPvpZonePanel
 function ISPvpZonePanel:new(x, y, width, height, player) end

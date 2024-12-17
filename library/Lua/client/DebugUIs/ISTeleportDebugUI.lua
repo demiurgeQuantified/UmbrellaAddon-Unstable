@@ -31,7 +31,6 @@
 ---@field [any] any
 ISTeleportDebugUI = ISPanelJoypad:derive("ISTeleportDebugUI")
 
-
 ---@return any
 function ISTeleportDebugUI:destroy() end
 
@@ -67,7 +66,6 @@ function ISTeleportDebugUI:titleBarHeight() end
 
 ---@return any
 function ISTeleportDebugUI:updateButtons() end
-
 
 ---@return ISTeleportDebugUI
 function ISTeleportDebugUI:new(x, y, width, height, player, target, onclick) end

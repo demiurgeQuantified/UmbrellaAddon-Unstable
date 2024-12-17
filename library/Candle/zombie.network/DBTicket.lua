@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class DBTicket
 --- @field public class any
-DBTicket = {};
+DBTicket = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,15 +13,15 @@ DBTicket = {};
 function DBTicket:getAnswer() end
 
 --- @public
---- @return String
+--- @return string
 function DBTicket:getAuthor() end
 
 --- @public
---- @return String
+--- @return string
 function DBTicket:getMessage() end
 
 --- @public
---- @return int
+--- @return integer
 function DBTicket:getTicketID() end
 
 --- @public
@@ -34,42 +34,41 @@ function DBTicket:isViewed() end
 
 --- @public
 --- @param arg0 DBTicket
---- @return void
+--- @return nil
 function DBTicket:setAnswer(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DBTicket:setAuthor(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function DBTicket:setIsAnswer(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DBTicket:setMessage(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DBTicket:setTicketID(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function DBTicket:setViewed(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
 --- @return DBTicket
 function DBTicket.new(arg0, arg1, arg2) end

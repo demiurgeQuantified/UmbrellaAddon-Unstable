@@ -17,13 +17,11 @@ PauseBuggedModList = {}
 ---@field [any] any
 ISPauseModListUI = ISPanelJoypad:derive("ISPauseModListUI")
 
-
 ---@return any
 function ISPauseModListUI:destroy() end
 
 ---@return any
 function ISPauseModListUI:initialise() end
-
 
 ---@return ISPauseModListUI
 function ISPauseModListUI:new(x, y, width, height) end

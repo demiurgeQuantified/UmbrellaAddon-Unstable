@@ -13,7 +13,6 @@
 ---@field [any] any
 ISShovelGround = ISBaseTimedAction:derive("ISShovelGround")
 
-
 ---@return any
 function ISShovelGround:complete() end
 
@@ -40,7 +39,6 @@ function ISShovelGround:update() end
 
 ---@return any
 function ISShovelGround:waitToStart() end
-
 
 ---@return ISShovelGround
 function ISShovelGround:new(character, emptyBag, sandTile, newSprite, newBag) end

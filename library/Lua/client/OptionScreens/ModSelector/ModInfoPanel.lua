@@ -13,7 +13,6 @@
 ---@field [any] any
 ModInfoPanel = ISPanelJoypad:derive("ModInfoPanel")
 
-
 ---@return any
 function ModInfoPanel:createChildren() end
 
@@ -40,7 +39,6 @@ function ModInfoPanel:setJoypadFocused(val, joypadData) end
 
 ---@return any
 function ModInfoPanel:updateView(modInfo) end
-
 
 ---@return ModInfoPanel
 function ModInfoPanel:new(x, y, width, height) end

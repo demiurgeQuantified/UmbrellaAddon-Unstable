@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class NestBox
 --- @field public class any
---- @field public maxEggs int
-NestBox = {};
+--- @field public maxEggs integer
+NestBox = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,27 +11,26 @@ NestBox = {};
 
 --- @public
 --- @param arg0 Food
---- @return void
+--- @return nil
 function NestBox:addEgg(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Food
 function NestBox:getEgg(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function NestBox:getEggsNb() end
 
 --- @public
---- @return int
+--- @return integer
 function NestBox:getIndex() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Food
 function NestBox:removeEgg(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -39,6 +38,6 @@ function NestBox:removeEgg(arg0) end
 
 --- @public
 --- @param arg0 IsoHutch
---- @param arg1 int
+--- @param arg1 integer
 --- @return NestBox
 function NestBox.new(arg0, arg1) end

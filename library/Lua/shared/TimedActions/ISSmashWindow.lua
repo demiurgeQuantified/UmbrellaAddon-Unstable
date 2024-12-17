@@ -8,7 +8,6 @@
 ---@field [any] any
 ISSmashWindow = ISBaseTimedAction:derive("ISSmashWindow")
 
-
 ---@return any
 function ISSmashWindow:complete() end
 
@@ -35,7 +34,6 @@ function ISSmashWindow:update() end
 
 ---@return any
 function ISSmashWindow:waitToStart() end
-
 
 ---@return ISSmashWindow
 function ISSmashWindow:new(character, window, vehiclePart) end

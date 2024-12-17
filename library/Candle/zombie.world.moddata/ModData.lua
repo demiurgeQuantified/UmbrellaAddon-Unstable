@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ModData
 --- @field public class any
-ModData = {};
+ModData = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,32 +10,32 @@ ModData = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 KahluaTable
---- @return void
+--- @return nil
 function ModData.add(arg0, arg1) end
 
 --- @public
 --- @static
---- @return String
---- @overload fun(arg0: String): KahluaTable
+--- @return string
+--- @overload fun(arg0: string): KahluaTable
 function ModData.create() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ModData.exists(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function ModData.get(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function ModData.getOrCreate(arg0) end
 
@@ -46,22 +46,21 @@ function ModData.getTableNames() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return KahluaTable
 function ModData.remove(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ModData.request(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ModData.transmit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

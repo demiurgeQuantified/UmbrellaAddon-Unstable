@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ItemDataList
 --- @field public class any
-ItemDataList = {};
+ItemDataList = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,30 +10,30 @@ ItemDataList = {};
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
---- @overload fun(self: ItemDataList, arg0: Item): void
---- @overload fun(self: ItemDataList, arg0: InventoryItem, arg1: boolean): void
---- @overload fun(self: ItemDataList, arg0: Item, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: ItemDataList, arg0: Item): nil
+--- @overload fun(self: ItemDataList, arg0: InventoryItem, arg1: boolean): nil
+--- @overload fun(self: ItemDataList, arg0: Item, arg1: boolean): nil
 function ItemDataList:addItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ItemDataList:clear() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return InventoryItem
 function ItemDataList:getInventoryItem(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return Item
 function ItemDataList:getItem(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
---- @overload fun(self: ItemDataList, arg0: ArrayList, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: ItemDataList, arg0: ArrayList, arg1: boolean): nil
 function ItemDataList:getUnprocessed(arg0) end
 
 --- @public
@@ -41,29 +41,28 @@ function ItemDataList:getUnprocessed(arg0) end
 function ItemDataList:hasUnprocessed() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function ItemDataList:isProcessed(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ItemDataList:reset() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ItemDataList:setProcessed(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function ItemDataList:size() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ItemDataList
 function ItemDataList.new(arg0) end

@@ -3,7 +3,6 @@
 ---@class AdminContextMenu
 AdminContextMenu = {}
 
-
 ---@return any
 function AdminContextMenu.doMenu(player, context, worldobjects, test) end
 

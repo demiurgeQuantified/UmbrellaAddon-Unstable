@@ -10,7 +10,6 @@
 ---@field [any] any
 WorldMapEditorMode_Bounds = WorldMapEditorMode:derive("WorldMapEditorMode_Bounds")
 
-
 ---@return any
 function WorldMapEditorMode_Bounds:cancelResize() end
 
@@ -64,7 +63,6 @@ function WorldMapEditorMode_Bounds:snap(xy) end
 
 ---@return any
 function WorldMapEditorMode_Bounds:undisplay() end
-
 
 ---@return WorldMapEditorMode_Bounds
 function WorldMapEditorMode_Bounds:new(editor) end

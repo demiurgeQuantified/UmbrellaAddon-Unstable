@@ -11,7 +11,6 @@
 ---@field [any] any
 ISDumpWaterAction = ISBaseTimedAction:derive("ISDumpWaterAction")
 
-
 ---@return any
 function ISDumpWaterAction:animEvent(event, parameter) end
 
@@ -44,7 +43,6 @@ function ISDumpWaterAction:update() end
 
 ---@return any
 function ISDumpWaterAction:updateDumpingWater() end
-
 
 ---@return ISDumpWaterAction
 function ISDumpWaterAction:new(character, item) end

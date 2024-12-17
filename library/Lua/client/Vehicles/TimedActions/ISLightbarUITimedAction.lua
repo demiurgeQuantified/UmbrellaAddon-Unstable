@@ -6,7 +6,6 @@
 ---@field [any] any
 ISLightbarUITimedAction = ISBaseTimedAction:derive("ISLightbarUITimedAction")
 
-
 ---@return any
 function ISLightbarUITimedAction:isValid() end
 
@@ -21,7 +20,6 @@ function ISLightbarUITimedAction:stop() end
 
 ---@return any
 function ISLightbarUITimedAction:update() end
-
 
 ---@return ISLightbarUITimedAction
 function ISLightbarUITimedAction:new(character) end

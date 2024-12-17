@@ -1,31 +1,31 @@
---- @meta
+--- @meta _
 
 --- @class XuiSpacing: XuiVar
 --- @field public class any
-XuiSpacing = {};
+XuiSpacing = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function XuiSpacing:getBottom() end
 
 --- @public
---- @return float
+--- @return number
 function XuiSpacing:getLeft() end
 
 --- @public
---- @return float
+--- @return number
 function XuiSpacing:getRight() end
 
 --- @public
---- @return float
+--- @return number
 function XuiSpacing:getTop() end
 
 --- @public
---- @return String
+--- @return string
 function XuiSpacing:getValueString() end
 
 --- @public
@@ -48,14 +48,13 @@ function XuiSpacing:isTopPercent() end
 --- @return boolean
 function XuiSpacing:isValueSet() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
 --- @param arg0 XuiScript
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 XuiUnit
 --- @param arg3 XuiUnit
 --- @param arg4 XuiUnit

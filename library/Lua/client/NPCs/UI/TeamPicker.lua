@@ -22,7 +22,6 @@
 ---@field [any] any
 TeamPicker = ISPanel:derive("TeamPicker")
 
-
 ---@return any
 function TeamPicker:changeOption(option) end
 
@@ -43,7 +42,6 @@ function TeamPicker:onOptionMouseDown(button, x, y) end
 
 ---@return any
 function TeamPicker:prerender() end
-
 
 ---@return TeamPicker
 function TeamPicker:new(x, y, width, height, headerText, except, scriptOnOk, leaderInstance) end

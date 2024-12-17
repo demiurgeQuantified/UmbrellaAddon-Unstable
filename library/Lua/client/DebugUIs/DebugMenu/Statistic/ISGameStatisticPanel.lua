@@ -55,13 +55,11 @@
 ISGameStatisticPanel = ISPanel:derive("ISGameStatisticPanel")
 ISGameStatisticPanel.instance = nil
 
-
 ---@return any
 function ISGameStatisticPanel.OnOpenPanel() end
 
 ---@return any
 function ISGameStatisticPanel.OnServerStatisticReceived() end
-
 
 ---@return any
 function ISGameStatisticPanel:close() end
@@ -107,7 +105,6 @@ function ISGameStatisticPanel:prerender() end
 
 ---@return any
 function ISGameStatisticPanel:updateValues() end
-
 
 ---@return ISGameStatisticPanel
 function ISGameStatisticPanel:new(x, y, width, height, title) end

@@ -3,7 +3,6 @@
 ---@class ISEntityUtilUI
 ISEntityUtilUI = {}
 
-
 ---@return any
 function ISEntityUtilUI.GetVendingAlphabeticalButtonTexture(_index) end
 

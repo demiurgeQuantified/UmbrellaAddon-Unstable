@@ -11,7 +11,6 @@
 ---@field [any] any
 ISTransferWaterAction = ISBaseTimedAction:derive("ISTransferWaterAction")
 
-
 ---@return any
 function ISTransferWaterAction:complete() end
 
@@ -38,7 +37,6 @@ function ISTransferWaterAction:stop() end
 
 ---@return any
 function ISTransferWaterAction:update() end
-
 
 ---@return ISTransferWaterAction
 function ISTransferWaterAction:new(character, itemFrom, itemTo, itemFromEndingDelta, itemToEndingDelta) end

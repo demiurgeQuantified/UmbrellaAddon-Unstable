@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class KeyNamer
 --- @field public class any
@@ -8,7 +8,7 @@
 --- @field public RestaurantSubstrings ArrayList
 --- @field public Rooms ArrayList
 --- @field public RoomSubstrings ArrayList
-KeyNamer = {};
+KeyNamer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,22 +16,21 @@ KeyNamer = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function KeyNamer.clear() end
 
 --- @public
 --- @static
 --- @param arg0 IsoGridSquare
---- @return String
+--- @return string
 function KeyNamer.getName(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 InventoryItem
 --- @param arg1 IsoGridSquare
---- @return void
+--- @return nil
 function KeyNamer.nameKey(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

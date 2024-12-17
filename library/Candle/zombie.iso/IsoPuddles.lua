@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class IsoPuddles
 --- @field public class any
---- @field public BOOL_MAX int
---- @field public FLOAT_MAX int
---- @field public FLOAT_MUDDYPUDDLES int
---- @field public FLOAT_PUDDLESSIZE int
---- @field public FLOAT_RAIN int
---- @field public FLOAT_RAININTENSITY int
---- @field public FLOAT_WETGROUND int
+--- @field public BOOL_MAX integer
+--- @field public FLOAT_MAX integer
+--- @field public FLOAT_MUDDYPUDDLES integer
+--- @field public FLOAT_PUDDLESSIZE integer
+--- @field public FLOAT_RAIN integer
+--- @field public FLOAT_RAININTENSITY integer
+--- @field public FLOAT_WETGROUND integer
 --- @field public leakingPuddlesInTheRoom boolean
 --- @field public VBOs SharedVertexBufferObjects
-IsoPuddles = {};
+IsoPuddles = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,25 +22,24 @@ IsoPuddles = {};
 --- @return IsoPuddles
 function IsoPuddles.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoPuddles:applyPuddlesQuality() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPuddles:clearThreadData() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPuddles:getBoolMax() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPuddles:getFloatMax() end
 
 --- @public
@@ -48,25 +47,25 @@ function IsoPuddles:getFloatMax() end
 function IsoPuddles:getHMTexture() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return PuddlesFloat
 function IsoPuddles:getPuddlesFloat(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return FloatBuffer
 function IsoPuddles:getPuddlesParams(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoPuddles:getPuddlesSize() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPuddles:getPuddlesSizeFinalValue() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPuddles:getRainIntensity() end
 
 --- @public
@@ -82,34 +81,34 @@ function IsoPuddles:getShaderOffset() end
 function IsoPuddles:getShaderOffsetMain() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPuddles:getShaderTime() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPuddles:getWetGroundFinalValue() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function IsoPuddles:puddlesGeometry(arg0, arg1) end
 
 --- @public
 --- @param arg0 Matrix4f
---- @return void
+--- @return nil
 function IsoPuddles:puddlesProjection(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function IsoPuddles:render(arg0, arg1) end
 
 --- @public
 --- @param arg0 ArrayList
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function IsoPuddles:renderToChunkTexture(arg0, arg1) end
 
 --- @public
@@ -118,9 +117,8 @@ function IsoPuddles:shouldRenderPuddles() end
 
 --- @public
 --- @param arg0 ClimateManager
---- @return void
+--- @return nil
 function IsoPuddles:update(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

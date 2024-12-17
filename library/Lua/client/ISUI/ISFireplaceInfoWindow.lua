@@ -13,7 +13,6 @@
 ISFireplaceInfoWindow = ISCollapsableWindow:derive("ISFireplaceInfoWindow")
 ISFireplaceInfoWindow.windows = {}
 
-
 ---@return any
 function ISFireplaceInfoWindow:close() end
 
@@ -31,7 +30,6 @@ function ISFireplaceInfoWindow:setObject(fireplace) end
 
 ---@return any
 function ISFireplaceInfoWindow:update() end
-
 
 ---@return ISFireplaceInfoWindow
 function ISFireplaceInfoWindow:new(x, y, character, fireplace) end

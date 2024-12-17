@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class OutputFlag: Enum
 --- @field public class any
@@ -8,7 +8,7 @@
 --- @field public HandcraftOnly OutputFlag
 --- @field public IsEmpty OutputFlag
 --- @field public RespectCapacity OutputFlag
-OutputFlag = {};
+OutputFlag = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,7 @@ OutputFlag = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return OutputFlag
 function OutputFlag.valueOf(arg0) end
 
@@ -24,5 +24,3 @@ function OutputFlag.valueOf(arg0) end
 --- @static
 --- @return OutputFlag[]
 function OutputFlag.values() end
-
-

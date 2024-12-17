@@ -7,7 +7,6 @@
 ---@field [any] any
 DebugLogSettings = ISCollapsableWindow:derive("DebugLogSettings")
 
-
 ---@return any
 function DebugLogSettings:createChildren() end
 
@@ -25,7 +24,6 @@ function DebugLogSettings:setVisible(bVisible) end
 
 ---@return any
 function DebugLogSettings:syncCombos() end
-
 
 ---@return DebugLogSettings
 function DebugLogSettings:new(x, y, width, height) end

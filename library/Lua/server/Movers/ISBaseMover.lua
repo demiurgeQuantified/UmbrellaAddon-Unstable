@@ -8,7 +8,6 @@
 ISBaseMover = ISBaseObject:derive("ISBaseMover")
 ISBaseMover.IDMax = 1
 
-
 ---@return any
 function ISBaseMover:changeState(state) end
 
@@ -32,7 +31,6 @@ function ISBaseMover:removeFromWorld() end
 
 ---@return any
 function ISBaseMover:update() end
-
 
 ---@return ISBaseMover
 function ISBaseMover:new() end

@@ -31,7 +31,6 @@
 ---@field [any] any
 ISAlarmClockDialog = ISPanelJoypad:derive("ISAlarmClockDialog")
 
-
 ---@return any
 function ISAlarmClockDialog:decrementHour(number) end
 
@@ -70,7 +69,6 @@ function ISAlarmClockDialog:render() end
 
 ---@return any
 function ISAlarmClockDialog:update() end
-
 
 ---@return ISAlarmClockDialog
 function ISAlarmClockDialog:new(x, y, width, height, player, alarm) end

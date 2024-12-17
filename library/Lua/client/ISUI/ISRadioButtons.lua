@@ -33,7 +33,6 @@
 ---@field [any] any
 ISRadioButtons = ISPanel:derive("ISRadioButtons")
 
-
 ---@return any
 function ISRadioButtons:addOption(text, data, texture, enabled) end
 
@@ -114,7 +113,6 @@ function ISRadioButtons:setSelected(index) end
 
 ---@return any
 function ISRadioButtons:setWidthToFit() end
-
 
 ---@return ISRadioButtons
 function ISRadioButtons:new(x, y, width, height, target, changeOptionFunc, arg1, arg2, arg3, arg4) end

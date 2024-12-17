@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSSirTwiggy: RandomizedZoneStoryBase
 --- @field public class any
-RZSSirTwiggy = {};
+RZSSirTwiggy = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSSirTwiggy = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSSirTwiggy:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

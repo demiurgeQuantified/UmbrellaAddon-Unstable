@@ -3,7 +3,6 @@
 ---@class ContextualActionHandlers
 ContextualActionHandlers = ContextualActionHandlers or {}
 
-
 ---@return any
 function ContextualActionHandlers.ClimbOverFence(action, playerObj, arg1, arg2, arg3, arg4) end
 

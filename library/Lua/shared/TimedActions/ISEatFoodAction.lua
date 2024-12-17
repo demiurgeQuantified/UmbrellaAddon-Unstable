@@ -19,7 +19,6 @@
 ---@field [any] any
 ISEatFoodAction = ISBaseTimedAction:derive("ISEatFoodAction")
 
-
 ---@return any
 function ISEatFoodAction:complete() end
 
@@ -58,7 +57,6 @@ function ISEatFoodAction:update() end
 
 ---@return any
 function ISEatFoodAction:waitToStart() end
-
 
 ---@return ISEatFoodAction
 function ISEatFoodAction:new(character, item, percentage) end

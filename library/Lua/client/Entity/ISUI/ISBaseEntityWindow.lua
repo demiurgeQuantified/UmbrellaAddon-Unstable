@@ -38,7 +38,6 @@
 ---@field [any] any
 ISBaseEntityWindow = ISCollapsableWindow:derive("ISBaseEntityWindow")
 
-
 ---@return any
 function ISBaseEntityWindow:close() end
 
@@ -74,7 +73,6 @@ function ISBaseEntityWindow:validateSizeBounds() end
 
 ---@return any
 function ISBaseEntityWindow:xuiRecalculateLayout(_preferredWidth, _preferredHeight, _force, _anchorRight) end
-
 
 ---@return ISBaseEntityWindow
 function ISBaseEntityWindow:new(x, y, width, height, player, entity, entityUiStyle) end

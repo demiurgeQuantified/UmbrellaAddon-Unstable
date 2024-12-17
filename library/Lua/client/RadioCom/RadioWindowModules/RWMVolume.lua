@@ -23,7 +23,6 @@
 ---@field [any] any
 RWMVolume = RWMPanel:derive("RWMVolume")
 
-
 ---@return any
 function RWMVolume:addHeadphone(_items) end
 
@@ -80,7 +79,6 @@ function RWMVolume:update() end
 
 ---@return any
 function RWMVolume:verifyItem(_item) end
-
 
 ---@return RWMVolume
 function RWMVolume:new(x, y, width, height) end

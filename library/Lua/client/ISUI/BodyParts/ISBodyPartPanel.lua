@@ -41,7 +41,6 @@
 ---@field [any] any
 ISBodyPartPanel = ISPanelJoypad:derive("ISBodyPartPanel")
 
-
 ---@return any
 function ISBodyPartPanel:activateToolTip() end
 
@@ -122,7 +121,6 @@ function ISBodyPartPanel:setToolTip(_b, _text) end
 
 ---@return any
 function ISBodyPartPanel:setValue(_bodyPartType, _value, _force) end
-
 
 ---@return ISBodyPartPanel
 function ISBodyPartPanel:new(player, x, y, target, onPartSelected) end

@@ -34,21 +34,21 @@ Challenge2.y = 158
 Challenge2.z = 0
 Challenge2.gameMode = "LastStand"
 Challenge2.spawnCount = {
-    3,
-    6,
-    10,
-    16,
-    24,
-    32,
-    38,
-    40,
-    45,
-    47,
-    50,
-    54,
-    56,
-    58,
-    64,
+	3,
+	6,
+	10,
+	16,
+	24,
+	32,
+	38,
+	40,
+	45,
+	47,
+	50,
+	54,
+	56,
+	58,
+	64,
 }
 Challenge2.wave = 0
 Challenge2.hourOfDay = 3
@@ -56,12 +56,11 @@ Challenge2.alphaTxt = 0
 Challenge2.waveTime = 0
 Challenge2.lastWaveTime = 0
 Challenge2.zombieSpawnsRect = {
-    x = 114,
-    y = 119,
-    x2 = 192,
-    y2 = 200,
+	x = 114,
+	y = 119,
+	x2 = 192,
+	y2 = 200,
 }
-
 
 ---@return any
 function Challenge2.Add() end

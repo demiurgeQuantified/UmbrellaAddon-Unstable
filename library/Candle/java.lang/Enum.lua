@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class Enum
 --- @field public class any
 --- @implement Constable
 --- @implement Comparable
 --- @implement Serializable
-Enum = {};
+Enum = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,10 +14,9 @@ Enum = {};
 --- @public
 --- @static
 --- @param arg0 Class
---- @param arg1 String
+--- @param arg1 string
 --- @return Enum
 function Enum.valueOf(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,9 +24,9 @@ function Enum.valueOf(arg0, arg1) end
 
 --- @public
 --- @param arg0 Enum
---- @return int
---- @overload fun(self: Enum, arg0: Object): int
---- @overload fun(self: Enum, arg0: Object): int
+--- @return integer
+--- @overload fun(self: Enum, arg0: any): integer
+--- @overload fun(self: Enum, arg0: any): integer
 function Enum:compareTo(arg0) end
 
 --- @public
@@ -36,7 +35,7 @@ function Enum:compareTo(arg0) end
 function Enum:describeConstable() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function Enum:equals(arg0) end
 
@@ -45,19 +44,17 @@ function Enum:equals(arg0) end
 function Enum:getDeclaringClass() end
 
 --- @public
---- @return int
+--- @return integer
 function Enum:hashCode() end
 
 --- @public
---- @return String
+--- @return string
 function Enum:name() end
 
 --- @public
---- @return int
+--- @return integer
 function Enum:ordinal() end
 
 --- @public
---- @return String
+--- @return string
 function Enum:toString() end
-
-

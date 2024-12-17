@@ -26,7 +26,6 @@
 ---@field [any] any
 FloatArrayPlotter = ISPanel:derive("FloatArrayPlotter")
 
-
 ---@return any
 function FloatArrayPlotter:createChildren() end
 
@@ -47,7 +46,6 @@ function FloatArrayPlotter:setHorzLine(value, col) end
 
 ---@return any
 function FloatArrayPlotter:update() end
-
 
 ---@return FloatArrayPlotter
 function FloatArrayPlotter:new(x, y, width, height, maxPlotPoints) end

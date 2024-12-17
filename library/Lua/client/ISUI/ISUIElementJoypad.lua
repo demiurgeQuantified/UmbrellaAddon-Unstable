@@ -7,13 +7,11 @@
 ISUIElementJoypad = ISPanel:derive("ISUIElementJoypad")
 ISUIElementJoypad.defaultJoypadMoveInterval = 20
 
-
 ---@return any
 function ISUIElementJoypad.Inject(_NewClass, _Class, ...) end
 
 ---@return any
 function ISUIElementJoypad.Wrap(_Class, ...) end
-
 
 ---@return any
 function ISUIElementJoypad:addChild(otherElement) end
@@ -113,7 +111,6 @@ function ISUIElementJoypad:unfocusJoypadSelf() end
 
 ---@return any
 function ISUIElementJoypad:unfocusRecursive(_focus, _playerNum) end
-
 
 ---@return ISUIElementJoypad
 function ISUIElementJoypad:new(x, y, width, height) end

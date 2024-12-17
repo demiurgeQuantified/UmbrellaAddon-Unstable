@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class XuiReference: XuiScript
 --- @field public class any
-XuiReference = {};
+XuiReference = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,12 +10,12 @@ XuiReference = {};
 
 --- @public
 --- @param arg0 Block
---- @return void
+--- @return nil
 function XuiReference:Load(arg0) end
 
 --- @public
 --- @param arg0 XuiScript
---- @return void
+--- @return nil
 function XuiReference:addChild(arg0) end
 
 --- @public
@@ -32,21 +32,20 @@ function XuiReference:getReferenceLayout() end
 
 --- @public
 --- @param arg0 XuiScript
---- @return void
+--- @return nil
 function XuiReference:setDefaultStyle(arg0) end
 
 --- @public
 --- @param arg0 XuiScript
---- @return void
+--- @return nil
 function XuiReference:setStyle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @return XuiReference
 function XuiReference.new(arg0, arg1) end

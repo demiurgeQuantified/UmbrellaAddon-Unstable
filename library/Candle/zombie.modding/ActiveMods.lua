@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ActiveMods
 --- @field public class any
-ActiveMods = {};
+ActiveMods = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,30 +10,30 @@ ActiveMods = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ActiveMods.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ActiveMods
 function ActiveMods.getById(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return ActiveMods
 function ActiveMods.getByIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function ActiveMods.indexOf(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ActiveMods.renderUI() end
 
 --- @public
@@ -45,29 +45,28 @@ function ActiveMods.requiresResetLua(arg0) end
 --- @public
 --- @static
 --- @param arg0 ActiveMods
---- @return void
+--- @return nil
 function ActiveMods.setLoadedMods(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function ActiveMods:checkMissingMaps() end
 
 --- @public
---- @return void
+--- @return nil
 function ActiveMods:checkMissingMods() end
 
 --- @public
---- @return void
+--- @return nil
 function ActiveMods:clear() end
 
 --- @public
 --- @param arg0 ActiveMods
---- @return void
+--- @return nil
 function ActiveMods:copyFrom(arg0) end
 
 --- @public
@@ -79,32 +78,31 @@ function ActiveMods:getMapOrder() end
 function ActiveMods:getMods() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ActiveMods:isModActive(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ActiveMods:removeMapOrder(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ActiveMods:removeMod(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function ActiveMods:setModActive(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ActiveMods
 function ActiveMods.new(arg0) end

@@ -5,7 +5,6 @@
 ---@field [any] any
 ISGeneralCheats = ISDebugSubPanelBase:derive("ISGeneralCheats")
 
-
 ---@return any
 function ISGeneralCheats:addBoolOption(_title, _lua) end
 
@@ -23,7 +22,6 @@ function ISGeneralCheats:prerender() end
 
 ---@return any
 function ISGeneralCheats:update() end
-
 
 ---@return ISGeneralCheats
 function ISGeneralCheats:new(x, y, width, height, doStencil) end

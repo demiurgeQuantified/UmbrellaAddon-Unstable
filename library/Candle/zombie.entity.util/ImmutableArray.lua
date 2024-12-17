@@ -1,47 +1,47 @@
---- @meta
+--- @meta _
 
 --- @class ImmutableArray
 --- @field public class any
 --- @implement Iterable
-ImmutableArray = {};
+ImmutableArray = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
 --- @return boolean
 function ImmutableArray:contains(arg0, arg1) end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function ImmutableArray:equals(arg0) end
 
 --- @public
---- @return Object
+--- @return any
 function ImmutableArray:first() end
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function ImmutableArray:forEach(arg0) end
 
 --- @public
---- @param arg0 int
---- @return Object
+--- @param arg0 integer
+--- @return any
 function ImmutableArray:get(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableArray:hashCode() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
---- @return int
+--- @return integer
 function ImmutableArray:indexOf(arg0, arg1) end
 
 --- @public
@@ -50,21 +50,21 @@ function ImmutableArray:indexOf(arg0, arg1) end
 function ImmutableArray:iterator() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @param arg1 boolean
---- @return int
+--- @return integer
 function ImmutableArray:lastIndexOf(arg0, arg1) end
 
 --- @public
---- @return Object
+--- @return any
 function ImmutableArray:peek() end
 
 --- @public
---- @return Object
+--- @return any
 function ImmutableArray:random() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableArray:size() end
 
 --- @public
@@ -77,10 +77,9 @@ function ImmutableArray:spliterator() end
 function ImmutableArray:toArray() end
 
 --- @public
---- @return String
---- @overload fun(self: ImmutableArray, arg0: String): String
+--- @return string
+--- @overload fun(self: ImmutableArray, arg0: string): string
 function ImmutableArray:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

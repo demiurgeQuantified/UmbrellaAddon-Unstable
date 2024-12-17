@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class LuaTimedActionNew: BaseAction
 --- @field public class any
 --- @implement IPathfinder
-LuaTimedActionNew = {};
+LuaTimedActionNew = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,87 +11,87 @@ LuaTimedActionNew = {};
 
 --- @public
 --- @param arg0 Mover
---- @return void
---- @overload fun(self: LuaTimedActionNew, arg0: Mover): void
+--- @return nil
+--- @overload fun(self: LuaTimedActionNew, arg0: Mover): nil
 function LuaTimedActionNew:Failed(arg0) end
 
 --- @public
 --- @param arg0 AnimEvent
---- @return void
+--- @return nil
 function LuaTimedActionNew:OnAnimEvent(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @return void
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return nil
 function LuaTimedActionNew:Pathfind(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 Path
 --- @param arg1 Mover
---- @return void
---- @overload fun(self: LuaTimedActionNew, arg0: Path, arg1: Mover): void
+--- @return nil
+--- @overload fun(self: LuaTimedActionNew, arg0: Path, arg1: Mover): nil
 function LuaTimedActionNew:Succeeded(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedActionNew:complete() end
 
 --- @public
 --- @param arg0 MoveDeltaModifiers
---- @return void
+--- @return nil
 function LuaTimedActionNew:getDeltaModifiers(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function LuaTimedActionNew:getMetaType() end
 
 --- @public
---- @return String
---- @overload fun(self: LuaTimedActionNew): String
+--- @return string
+--- @overload fun(self: LuaTimedActionNew): string
 function LuaTimedActionNew:getName() end
 
 --- @public
---- @return int
+--- @return integer
 function LuaTimedActionNew:getTime() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedActionNew:perform() end
 
 --- @public
---- @param arg0 Object
---- @param arg1 Object
---- @return void
+--- @param arg0 any
+--- @param arg1 any
+--- @return nil
 function LuaTimedActionNew:replaceObjectInTable(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function LuaTimedActionNew:setCurrentTime(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function LuaTimedActionNew:setCustomRemoteTimedActionSync(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function LuaTimedActionNew:setTime(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedActionNew:start() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedActionNew:stop() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedActionNew:update() end
 
 --- @public
@@ -99,9 +99,8 @@ function LuaTimedActionNew:update() end
 function LuaTimedActionNew:valid() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedActionNew:waitToStart() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

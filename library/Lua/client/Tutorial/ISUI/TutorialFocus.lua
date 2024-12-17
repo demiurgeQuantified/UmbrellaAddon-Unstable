@@ -22,13 +22,11 @@
 ---@field [any] any
 TutorialFocus = ISPanel:derive("TutorialFocus")
 
-
 ---@return any
 function TutorialFocus.set(x, y, w, h) end
 
 ---@return any
 function TutorialFocus.unset() end
-
 
 ---@return any
 function TutorialFocus:initialise() end
@@ -50,7 +48,6 @@ function TutorialFocus:onRightMouseUp(x, y) end
 
 ---@return any
 function TutorialFocus:prerender() end
-
 
 ---@return TutorialFocus
 function TutorialFocus:new(focusx, focusy, focuswidth, focusheight) end

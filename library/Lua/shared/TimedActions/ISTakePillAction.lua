@@ -9,7 +9,6 @@
 ---@field [any] any
 ISTakePillAction = ISBaseTimedAction:derive("ISTakePillAction")
 
-
 ---@return any
 function ISTakePillAction:complete() end
 
@@ -30,7 +29,6 @@ function ISTakePillAction:stop() end
 
 ---@return any
 function ISTakePillAction:update() end
-
 
 ---@return ISTakePillAction
 function ISTakePillAction:new(character, item) end

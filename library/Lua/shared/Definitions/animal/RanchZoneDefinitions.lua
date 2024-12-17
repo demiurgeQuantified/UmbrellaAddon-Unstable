@@ -207,26 +207,26 @@ RanchZoneDefinitions.type["rabbitsmall"].chanceForBaby = 0
 RanchZoneDefinitions.type["notchicken"] = {}
 RanchZoneDefinitions.type["notchicken"].type = "notchicken"
 RanchZoneDefinitions.type["notchicken"].possibleDef = {
-    "sheep",
-    "cow",
-    "pig",
+	"sheep",
+	"cow",
+	"pig",
 }
 RanchZoneDefinitions.type["notchickenlarge"] = {}
 RanchZoneDefinitions.type["notchickenlarge"].type = "notchickenlarge"
 RanchZoneDefinitions.type["notchickenlarge"].possibleDef = {
-    "sheeplarge",
-    "cowlarge",
-    "piglarge",
+	"sheeplarge",
+	"cowlarge",
+	"piglarge",
 }
 RanchZoneDefinitions.type["poultry"] = {}
 RanchZoneDefinitions.type["poultry"].type = "poultry"
 RanchZoneDefinitions.type["poultry"].possibleDef = {
-    "chicken",
-    "turkey",
+	"chicken",
+	"turkey",
 }
 RanchZoneDefinitions.type["poultrylarge"] = {}
 RanchZoneDefinitions.type["poultrylarge"].type = "poultrylarge"
 RanchZoneDefinitions.type["poultrylarge"].possibleDef = {
-    "chickenbig",
-    "turkeylarge",
+	"chickenbig",
+	"turkeylarge",
 }

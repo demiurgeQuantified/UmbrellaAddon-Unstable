@@ -36,10 +36,8 @@ IsoRegionDetails.shiftDown = 0
 IsoRegionDetails.lastX = false
 IsoRegionDetails.lastY = false
 
-
 ---@return any
 function IsoRegionDetails.OnOpenPanel() end
-
 
 ---@return any
 function IsoRegionDetails:addLine(_prefix, _line) end
@@ -82,7 +80,6 @@ function IsoRegionDetails:stayOnSplitScreen() end
 
 ---@return any
 function IsoRegionDetails:update() end
-
 
 ---@return IsoRegionDetails
 function IsoRegionDetails:new(x, y, width, height, player) end

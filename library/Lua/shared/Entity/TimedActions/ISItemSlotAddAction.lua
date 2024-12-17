@@ -9,7 +9,6 @@
 ---@field [any] any
 ISItemSlotAddAction = ISBaseTimedAction:derive("ISItemSlotAddAction")
 
-
 ---@return any
 function ISItemSlotAddAction:complete() end
 
@@ -30,7 +29,6 @@ function ISItemSlotAddAction:stop() end
 
 ---@return any
 function ISItemSlotAddAction:update() end
-
 
 ---@return ISItemSlotAddAction
 function ISItemSlotAddAction:new(character, entity, item, resource) end

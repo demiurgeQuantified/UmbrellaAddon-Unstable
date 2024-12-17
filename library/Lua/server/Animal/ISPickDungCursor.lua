@@ -13,7 +13,6 @@
 ---@field [any] any
 ISPickDungCursor = ISBuildingObject:derive("ISPickDungCursor")
 
-
 ---@return any
 function ISPickDungCursor:create(x, y, z, north, sprite) end
 
@@ -58,7 +57,6 @@ function ISPickDungCursor:rotateKey(key) end
 
 ---@return any
 function ISPickDungCursor:walkTo(x, y, z) end
-
 
 ---@return ISPickDungCursor
 function ISPickDungCursor:new(character, rake) end

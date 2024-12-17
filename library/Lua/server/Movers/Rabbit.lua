@@ -6,7 +6,6 @@
 ---@field [any] any
 Rabbit = ISBaseMover:derive("Rabbit")
 
-
 ---@return any
 function Rabbit:init() end
 
@@ -15,7 +14,6 @@ function Rabbit:postrender(col, bDoAttached) end
 
 ---@return any
 function Rabbit:update() end
-
 
 ---@return Rabbit
 function Rabbit:new() end

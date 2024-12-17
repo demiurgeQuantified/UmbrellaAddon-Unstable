@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBBurntFireman: RandomizedBuildingBase
 --- @field public class any
-RBBurntFireman = {};
+RBBurntFireman = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RBBurntFireman:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBBurntFireman:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

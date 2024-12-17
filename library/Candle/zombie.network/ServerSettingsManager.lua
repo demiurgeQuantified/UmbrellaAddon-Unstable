@@ -1,30 +1,30 @@
---- @meta
+--- @meta _
 
 --- @class ServerSettingsManager
 --- @field public class any
 --- @field public instance ServerSettingsManager
-ServerSettingsManager = {};
+ServerSettingsManager = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function ServerSettingsManager:getNameInSettingsFolder(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ServerSettings
 function ServerSettingsManager:getSettingsByIndex(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function ServerSettingsManager:getSettingsCount() end
 
 --- @public
---- @return String
+--- @return string
 function ServerSettingsManager:getSettingsFolder() end
 
 --- @public
@@ -32,19 +32,18 @@ function ServerSettingsManager:getSettingsFolder() end
 function ServerSettingsManager:getSuffixes() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ServerSettingsManager:isValidName(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function ServerSettingsManager:isValidNewName(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ServerSettingsManager:readAllSettings() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

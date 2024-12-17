@@ -46,7 +46,6 @@
 ---@field [any] any
 ISUIWriteJournal = ISCollapsableWindowJoypad:derive("ISUIWriteJournal")
 
-
 ---@return any
 function ISUIWriteJournal:close() end
 
@@ -80,6 +79,20 @@ function ISUIWriteJournal:render() end
 ---@return any
 function ISUIWriteJournal:setJoypadButtons(joypadData) end
 
-
 ---@return ISUIWriteJournal
-function ISUIWriteJournal:new(x, y, width, height, target, onclick, character, notebook, defaultEntryText, title, lineNumber, editable, numberOfPages) end
+function ISUIWriteJournal:new(
+	x,
+	y,
+	width,
+	height,
+	target,
+	onclick,
+	character,
+	notebook,
+	defaultEntryText,
+	title,
+	lineNumber,
+	editable,
+	numberOfPages
+)
+end

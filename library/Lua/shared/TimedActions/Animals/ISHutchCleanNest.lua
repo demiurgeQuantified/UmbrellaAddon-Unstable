@@ -10,7 +10,6 @@
 ---@field [any] any
 ISHutchCleanNest = ISBaseTimedAction:derive("ISHutchCleanNest")
 
-
 ---@return any
 function ISHutchCleanNest:animEvent(event, parameter) end
 
@@ -40,7 +39,6 @@ function ISHutchCleanNest:update() end
 
 ---@return any
 function ISHutchCleanNest:waitToStart() end
-
 
 ---@return ISHutchCleanNest
 function ISHutchCleanNest:new(character, hutch, bleach) end

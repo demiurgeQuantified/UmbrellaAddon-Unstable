@@ -25,7 +25,6 @@
 ---@field [any] any
 ISFluidViewPanel = ISPanel:derive("ISFluidViewPanel")
 
-
 ---@return any
 function ISFluidViewPanel:createChildren() end
 
@@ -55,7 +54,6 @@ function ISFluidViewPanel:setFluid(_fluid) end
 
 ---@return any
 function ISFluidViewPanel:update() end
-
 
 ---@return ISFluidViewPanel
 function ISFluidViewPanel:new(x, y, width, height, fluid) end

@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class AttachedItems
 --- @field public class any
-AttachedItems = {};
+AttachedItems = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function AttachedItems:clear() end
 
 --- @public
@@ -19,16 +19,16 @@ function AttachedItems:contains(arg0) end
 
 --- @public
 --- @param arg0 AttachedItems
---- @return void
+--- @return nil
 function AttachedItems:copyFrom(arg0) end
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function AttachedItems:forEach(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return AttachedItem
 function AttachedItems:get(arg0) end
 
@@ -37,18 +37,18 @@ function AttachedItems:get(arg0) end
 function AttachedItems:getGroup() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return InventoryItem
 function AttachedItems:getItem(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return InventoryItem
 function AttachedItems:getItemByIndex(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return String
+--- @return string
 function AttachedItems:getLocation(arg0) end
 
 --- @public
@@ -57,19 +57,18 @@ function AttachedItems:isEmpty() end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function AttachedItems:remove(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function AttachedItems:setItem(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function AttachedItems:size() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

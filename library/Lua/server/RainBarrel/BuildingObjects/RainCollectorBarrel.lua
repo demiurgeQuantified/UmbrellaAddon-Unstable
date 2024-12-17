@@ -15,7 +15,6 @@ RainCollectorBarrel.waterScale = 4
 RainCollectorBarrel.smallWaterMax = 40 * RainCollectorBarrel.waterScale
 RainCollectorBarrel.largeWaterMax = 100 * RainCollectorBarrel.waterScale
 
-
 ---@return any
 function RainCollectorBarrel:create(x, y, z, north, sprite) end
 
@@ -27,7 +26,6 @@ function RainCollectorBarrel:isValid(square) end
 
 ---@return any
 function RainCollectorBarrel:render(x, y, z, square) end
-
 
 ---@return RainCollectorBarrel
 function RainCollectorBarrel:new(player, sprite, waterMax) end

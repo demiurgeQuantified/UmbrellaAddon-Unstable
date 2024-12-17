@@ -4,7 +4,6 @@
 DamageModelDefinitions = DamageModelDefinitions or {}
 DamageModelDefinitions.list = DamageModelDefinitions.list or {}
 
-
 ---@return any
 function DamageModelDefinitions.addDefinition(texture, bodyPart, damageCategories, criticalHit) end
 

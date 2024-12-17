@@ -1,37 +1,37 @@
---- @meta
+--- @meta _
 
 --- @class CraftRecipeComponentScript: ComponentScript
 --- @field public class any
-CraftRecipeComponentScript = {};
+CraftRecipeComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipeComponentScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeComponentScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeComponentScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function CraftRecipeComponentScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeComponentScript:PreReload() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipeComponentScript:getBuildCategory() end
 
 --- @public
@@ -43,7 +43,5 @@ function CraftRecipeComponentScript:getCraftRecipe() end
 function CraftRecipeComponentScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeComponentScript:reset() end
-
-

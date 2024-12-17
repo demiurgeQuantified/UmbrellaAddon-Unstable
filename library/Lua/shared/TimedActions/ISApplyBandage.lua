@@ -17,7 +17,6 @@
 ---@field [any] any
 ISApplyBandage = ISBaseTimedAction:derive("ISApplyBandage")
 
-
 ---@return any
 function ISApplyBandage:complete() end
 
@@ -44,7 +43,6 @@ function ISApplyBandage:update() end
 
 ---@return any
 function ISApplyBandage:waitToStart() end
-
 
 ---@return ISApplyBandage
 function ISApplyBandage:new(character, otherPlayer, item, bodyPart, doIt) end

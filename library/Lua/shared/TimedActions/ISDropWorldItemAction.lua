@@ -16,7 +16,6 @@
 ---@field [any] any
 ISDropWorldItemAction = ISBaseTimedAction:derive("ISDropWorldItemAction")
 
-
 ---@return any
 function ISDropWorldItemAction:complete() end
 
@@ -37,7 +36,6 @@ function ISDropWorldItemAction:stop() end
 
 ---@return any
 function ISDropWorldItemAction:update() end
-
 
 ---@return ISDropWorldItemAction
 function ISDropWorldItemAction:new(character, item, sq, xoffset, yoffset, zoffset, rotation, isMultiple) end

@@ -25,10 +25,8 @@
 ---@field [any] any
 ISWidgetRecipeFilterPanel = ISPanel:derive("ISWidgetRecipeFilterPanel")
 
-
 ---@return any
 function ISWidgetRecipeFilterPanel.onTextChange(box) end
-
 
 ---@return any
 function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -62,7 +60,6 @@ function ISWidgetRecipeFilterPanel:render() end
 
 ---@return any
 function ISWidgetRecipeFilterPanel:update() end
-
 
 ---@return ISWidgetRecipeFilterPanel
 function ISWidgetRecipeFilterPanel:new(x, y, width, height, callbackTarget) end

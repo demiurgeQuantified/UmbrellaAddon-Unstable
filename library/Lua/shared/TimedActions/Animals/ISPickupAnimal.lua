@@ -8,7 +8,6 @@
 ---@field [any] any
 ISPickupAnimal = ISBaseTimedAction:derive("ISPickupAnimal")
 
-
 ---@return any
 function ISPickupAnimal:complete() end
 
@@ -32,7 +31,6 @@ function ISPickupAnimal:update() end
 
 ---@return any
 function ISPickupAnimal:waitToStart() end
-
 
 ---@return ISPickupAnimal
 function ISPickupAnimal:new(character, animal, remove) end

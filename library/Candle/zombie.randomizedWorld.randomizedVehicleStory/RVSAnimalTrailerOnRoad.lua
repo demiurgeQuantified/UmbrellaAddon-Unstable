@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RVSAnimalTrailerOnRoad: RandomizedVehicleStoryBase
 --- @field public class any
-RVSAnimalTrailerOnRoad = {};
+RVSAnimalTrailerOnRoad = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,15 +18,14 @@ function RVSAnimalTrailerOnRoad:initVehicleStorySpawner(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RVSAnimalTrailerOnRoad:randomizeVehicleStory(arg0, arg1) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner
 --- @param arg1 Element
---- @return void
+--- @return nil
 function RVSAnimalTrailerOnRoad:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

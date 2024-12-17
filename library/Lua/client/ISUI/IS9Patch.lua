@@ -22,7 +22,6 @@
 ---@field [any] any
 IS9Patch = ISUIElement:derive("IS9Patch")
 
-
 ---@return any
 function IS9Patch:initialise() end
 
@@ -34,7 +33,6 @@ function IS9Patch:render() end
 
 ---@return any
 function IS9Patch:renderInternal() end
-
 
 ---@return IS9Patch
 function IS9Patch:new(x, y, width, height, _images) end

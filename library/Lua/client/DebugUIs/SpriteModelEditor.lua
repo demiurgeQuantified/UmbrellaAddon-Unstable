@@ -27,7 +27,6 @@
 ---@field [any] any
 SpriteModelEditor = ISPanel:derive("SpriteModelEditor")
 
-
 ---@return any
 function SpriteModelEditor:createChildren() end
 
@@ -106,13 +105,11 @@ function SpriteModelEditor:syncRuntimeEntry() end
 ---@return any
 function SpriteModelEditor:update() end
 
-
 ---@return SpriteModelEditor
 function SpriteModelEditor:new(x, y, width, height) end
 
 ---@class SpriteModelEditor_ListBox : ISScrollingListBox
 SpriteModelEditor_ListBox = ISScrollingListBox:derive("SpriteModelEditor_ListBox")
-
 
 ---@return any
 function SpriteModelEditor_ListBox:doDrawItem(y, item, alt) end
@@ -126,7 +123,6 @@ function SpriteModelEditor_ListBox:onMouseDown(x, y) end
 ---@return any
 function SpriteModelEditor_ListBox:prerender() end
 
-
 ---@return SpriteModelEditor_ListBox
 function SpriteModelEditor_ListBox:new(x, y, width, height) end
 
@@ -134,7 +130,6 @@ function SpriteModelEditor_ListBox:new(x, y, width, height) end
 ---@field tickBox any
 ---@field [any] any
 SpriteModelEditor_OptionsPanel = ISPanel:derive("SpriteModelEditor_OptionsPanel")
-
 
 ---@return any
 function SpriteModelEditor_OptionsPanel:createChildren() end
@@ -144,7 +139,6 @@ function SpriteModelEditor_OptionsPanel:onMouseDownOutside(x, y) end
 
 ---@return any
 function SpriteModelEditor_OptionsPanel:onTickBox(index, selected) end
-
 
 ---@return SpriteModelEditor_OptionsPanel
 function SpriteModelEditor_OptionsPanel:new(x, y, width, height) end
@@ -169,7 +163,6 @@ function SpriteModelEditor_OptionsPanel:new(x, y, width, height) end
 ---@field zeroVector any
 ---@field [any] any
 SpriteModelEditor_Scene = ISUI3DScene:derive("SpriteModelEditor_Scene")
-
 
 ---@return any
 function SpriteModelEditor_Scene:java0(func) end
@@ -249,7 +242,6 @@ function SpriteModelEditor_Scene:renderWestWall() end
 ---@return any
 function SpriteModelEditor_Scene:snapToFurniturePixel(x, y) end
 
-
 ---@return SpriteModelEditor_Scene
 function SpriteModelEditor_Scene:new(x, y, width, height, editor) end
 
@@ -260,7 +252,6 @@ function SpriteModelEditor_Scene:new(x, y, width, height, editor) end
 ---@field tileset any
 ---@field [any] any
 SpriteModelEditor_TileList = ISPanel:derive("SpriteModelEditor_TileList")
-
 
 ---@return any
 function SpriteModelEditor_TileList:getColRowAt(x, y) end
@@ -286,7 +277,6 @@ function SpriteModelEditor_TileList:render() end
 ---@return any
 function SpriteModelEditor_TileList:setTileset(tilesetName) end
 
-
 ---@return SpriteModelEditor_TileList
 function SpriteModelEditor_TileList:new(x, y, width, height, picker) end
 
@@ -297,7 +287,6 @@ function SpriteModelEditor_TileList:new(x, y, width, height, picker) end
 ---@field [any] any
 SpriteModelEditor_TilePicker = ISPanel:derive("SpriteModelEditor_TilePicker")
 
-
 ---@return any
 function SpriteModelEditor_TilePicker:createChildren() end
 
@@ -306,7 +295,6 @@ function SpriteModelEditor_TilePicker:onMouseWheel(del) end
 
 ---@return any
 function SpriteModelEditor_TilePicker:onSelectTileset() end
-
 
 ---@return SpriteModelEditor_TilePicker
 function SpriteModelEditor_TilePicker:new(x, y, width, height, editor) end

@@ -10,7 +10,6 @@
 ISLightActions = ISBaseTimedAction:derive("ISLightActions")
 ISLightActions.perkLevel = 5
 
-
 ---@return any
 function ISLightActions:complete() end
 
@@ -52,7 +51,6 @@ function ISLightActions:isValidRemoveLightBulb() end
 
 ---@return any
 function ISLightActions:perform() end
-
 
 ---@return ISLightActions
 function ISLightActions:new(mode, character, lightswitch, item) end

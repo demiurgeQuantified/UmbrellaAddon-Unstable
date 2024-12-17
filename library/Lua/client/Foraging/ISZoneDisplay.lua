@@ -50,110 +50,109 @@
 ---@field [any] any
 ISZoneDisplay = ISPanel:derive("ISZoneDisplay")
 ISZoneDisplay.tips = {
-    {
-        level = 0,
-        title = getText("IGUI_SearchMode_Tip_Tips_Title"),
-        text = getText("IGUI_SearchMode_Tip_Tips_Text"),
-        shown = false,
-    },
-    {
-        level = 0,
-        title = getText("IGUI_SearchMode_Tip_Skill_Title"),
-        text = getText("IGUI_SearchMode_Tip_Skill_Text"),
-        shown = false,
-    },
-    {
-        level = 0,
-        title = getText("IGUI_SearchMode_Tip_SearchFocus_Title"),
-        text = getText("IGUI_SearchMode_Tip_SearchFocus_Text"),
-        shown = false,
-    },
-    {
-        level = 1,
-        title = getText("IGUI_SearchMode_Tip_Situational_Title"),
-        text = getText("IGUI_SearchMode_Tip_Situational_Text"),
-        shown = false,
-    },
-    {
-        level = 1,
-        title = getText("IGUI_SearchMode_Tip_FirewoodStones_Title"),
-        text = getText("IGUI_SearchMode_Tip_FirewoodStones_Text"),
-        shown = false,
-    },
-    {
-        level = 2,
-        title = getText("IGUI_SearchMode_Tip_Finding_Title"),
-        text = getText("IGUI_SearchMode_Tip_Finding_Text"),
-        shown = false,
-    },
-    {
-        level = 3,
-        title = getText("IGUI_SearchMode_Tip_Visibility_Title"),
-        text = getText("IGUI_SearchMode_Tip_Visibility_Text"),
-        shown = false,
-    },
-    {
-        level = 3,
-        title = getText("IGUI_SearchMode_Tip_Berries_Title"),
-        text = getText("IGUI_SearchMode_Tip_Berries_Text"),
-        shown = false,
-    },
-    {
-        level = 4,
-        title = getText("IGUI_SearchMode_Tip_Darkness_Title"),
-        text = getText("IGUI_SearchMode_Tip_Darkness_Text"),
-        shown = false,
-    },
-    {
-        level = 4,
-        title = getText("IGUI_SearchMode_Tip_Mushrooms_Title"),
-        text = getText("IGUI_SearchMode_Tip_Mushrooms_Text"),
-        shown = false,
-    },
-    {
-        level = 5,
-        title = getText("IGUI_SearchMode_Tip_Weather_Title"),
-        text = getText("IGUI_SearchMode_Tip_Weather_Text"),
-        shown = false,
-    },
-    {
-        level = 5,
-        title = getText("IGUI_SearchMode_Tip_Insects_Title"),
-        text = getText("IGUI_SearchMode_Tip_Insects_Text"),
-        shown = false,
-    },
-    {
-        level = 6,
-        title = getText("IGUI_SearchMode_Tip_Herbs_Title"),
-        text = getText("IGUI_SearchMode_Tip_Herbs_Text"),
-        shown = false,
-    },
-    {
-        level = 7,
-        title = getText("IGUI_SearchMode_Tip_Categories_Title"),
-        text = getText("IGUI_SearchMode_Tip_Categories_Text"),
-        shown = false,
-    },
-    {
-        level = 8,
-        title = getText("IGUI_SearchMode_Tip_Crops_Title"),
-        text = getText("IGUI_SearchMode_Tip_Crops_Text"),
-        shown = false,
-    },
-    {
-        level = 9,
-        title = getText("IGUI_SearchMode_Tip_Seasons_Title"),
-        text = getText("IGUI_SearchMode_Tip_Seasons_Text"),
-        shown = false,
-    },
-    {
-        level = 10,
-        title = getText("IGUI_SearchMode_Tip_WildPlants_Title"),
-        text = getText("IGUI_SearchMode_Tip_WildPlants_Text"),
-        shown = false,
-    },
+	{
+		level = 0,
+		title = getText("IGUI_SearchMode_Tip_Tips_Title"),
+		text = getText("IGUI_SearchMode_Tip_Tips_Text"),
+		shown = false,
+	},
+	{
+		level = 0,
+		title = getText("IGUI_SearchMode_Tip_Skill_Title"),
+		text = getText("IGUI_SearchMode_Tip_Skill_Text"),
+		shown = false,
+	},
+	{
+		level = 0,
+		title = getText("IGUI_SearchMode_Tip_SearchFocus_Title"),
+		text = getText("IGUI_SearchMode_Tip_SearchFocus_Text"),
+		shown = false,
+	},
+	{
+		level = 1,
+		title = getText("IGUI_SearchMode_Tip_Situational_Title"),
+		text = getText("IGUI_SearchMode_Tip_Situational_Text"),
+		shown = false,
+	},
+	{
+		level = 1,
+		title = getText("IGUI_SearchMode_Tip_FirewoodStones_Title"),
+		text = getText("IGUI_SearchMode_Tip_FirewoodStones_Text"),
+		shown = false,
+	},
+	{
+		level = 2,
+		title = getText("IGUI_SearchMode_Tip_Finding_Title"),
+		text = getText("IGUI_SearchMode_Tip_Finding_Text"),
+		shown = false,
+	},
+	{
+		level = 3,
+		title = getText("IGUI_SearchMode_Tip_Visibility_Title"),
+		text = getText("IGUI_SearchMode_Tip_Visibility_Text"),
+		shown = false,
+	},
+	{
+		level = 3,
+		title = getText("IGUI_SearchMode_Tip_Berries_Title"),
+		text = getText("IGUI_SearchMode_Tip_Berries_Text"),
+		shown = false,
+	},
+	{
+		level = 4,
+		title = getText("IGUI_SearchMode_Tip_Darkness_Title"),
+		text = getText("IGUI_SearchMode_Tip_Darkness_Text"),
+		shown = false,
+	},
+	{
+		level = 4,
+		title = getText("IGUI_SearchMode_Tip_Mushrooms_Title"),
+		text = getText("IGUI_SearchMode_Tip_Mushrooms_Text"),
+		shown = false,
+	},
+	{
+		level = 5,
+		title = getText("IGUI_SearchMode_Tip_Weather_Title"),
+		text = getText("IGUI_SearchMode_Tip_Weather_Text"),
+		shown = false,
+	},
+	{
+		level = 5,
+		title = getText("IGUI_SearchMode_Tip_Insects_Title"),
+		text = getText("IGUI_SearchMode_Tip_Insects_Text"),
+		shown = false,
+	},
+	{
+		level = 6,
+		title = getText("IGUI_SearchMode_Tip_Herbs_Title"),
+		text = getText("IGUI_SearchMode_Tip_Herbs_Text"),
+		shown = false,
+	},
+	{
+		level = 7,
+		title = getText("IGUI_SearchMode_Tip_Categories_Title"),
+		text = getText("IGUI_SearchMode_Tip_Categories_Text"),
+		shown = false,
+	},
+	{
+		level = 8,
+		title = getText("IGUI_SearchMode_Tip_Crops_Title"),
+		text = getText("IGUI_SearchMode_Tip_Crops_Text"),
+		shown = false,
+	},
+	{
+		level = 9,
+		title = getText("IGUI_SearchMode_Tip_Seasons_Title"),
+		text = getText("IGUI_SearchMode_Tip_Seasons_Text"),
+		shown = false,
+	},
+	{
+		level = 10,
+		title = getText("IGUI_SearchMode_Tip_WildPlants_Title"),
+		text = getText("IGUI_SearchMode_Tip_WildPlants_Text"),
+		shown = false,
+	},
 }
-
 
 ---@return any
 function ISZoneDisplay:canSeeOutside() end
@@ -217,7 +216,6 @@ function ISZoneDisplay:updateTips() end
 
 ---@return any
 function ISZoneDisplay:updateTooltip() end
-
 
 ---@return ISZoneDisplay
 function ISZoneDisplay:new(_parent) end

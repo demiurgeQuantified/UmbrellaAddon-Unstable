@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class ClothingItem: Asset
 --- @field public class any
 --- @field public ASSET_TYPE AssetType
---- @field public s_masksFolderDefault String
-ClothingItem = {};
+--- @field public s_masksFolderDefault string
+ClothingItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,17 +14,16 @@ ClothingItem = {};
 --- @static
 --- @param arg0 ClothingItem
 --- @param arg1 CharacterMask
---- @return void
---- @overload fun(arg0: ClothingItemReference, arg1: CharacterMask): void
+--- @return nil
+--- @overload fun(arg0: ClothingItemReference, arg1: CharacterMask): nil
 function ClothingItem.tryGetCombinedMask(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:GetATexture() end
 
 --- @public
@@ -36,16 +35,16 @@ function ClothingItem:getAllowRandomHue() end
 function ClothingItem:getAllowRandomTint() end
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:getAltFemaleModel() end
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:getAltMaleModel() end
 
 --- @public
 --- @param arg0 boolean
---- @return String
+--- @return string
 function ClothingItem:getAltModel(arg0) end
 
 --- @public
@@ -54,24 +53,24 @@ function ClothingItem:getBaseTextures() end
 
 --- @public
 --- @param arg0 CharacterMask
---- @return void
+--- @return nil
 function ClothingItem:getCombinedMask(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:getDecalGroup() end
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:getFemaleModel() end
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:getMaleModel() end
 
 --- @public
 --- @param arg0 boolean
---- @return String
+--- @return string
 function ClothingItem:getModel(arg0) end
 
 --- @public
@@ -99,9 +98,8 @@ function ClothingItem:isHat() end
 function ClothingItem:isMask() end
 
 --- @public
---- @return String
+--- @return string
 function ClothingItem:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

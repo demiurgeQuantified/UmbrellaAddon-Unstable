@@ -1,33 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class CraftBenchScript: ComponentScript
 --- @field public class any
-CraftBenchScript = {};
+CraftBenchScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftBenchScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftBenchScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftBenchScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function CraftBenchScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftBenchScript:PreReload() end
 
 --- @public
@@ -39,7 +39,7 @@ function CraftBenchScript:getEnergyInputChannels() end
 function CraftBenchScript:getFluidInputChannels() end
 
 --- @public
---- @return String
+--- @return string
 function CraftBenchScript:getRecipeTagQuery() end
 
 --- @public
@@ -47,7 +47,5 @@ function CraftBenchScript:getRecipeTagQuery() end
 function CraftBenchScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftBenchScript:reset() end
-
-

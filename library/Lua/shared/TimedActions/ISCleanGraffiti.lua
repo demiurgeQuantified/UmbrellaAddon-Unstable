@@ -10,7 +10,6 @@
 ---@field [any] any
 ISCleanGraffiti = ISBaseTimedAction:derive("ISCleanGraffiti")
 
-
 ---@return any
 function ISCleanGraffiti:complete() end
 
@@ -34,7 +33,6 @@ function ISCleanGraffiti:update() end
 
 ---@return any
 function ISCleanGraffiti:waitToStart() end
-
 
 ---@return ISCleanGraffiti
 function ISCleanGraffiti:new(character, square, cleaner) end

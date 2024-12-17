@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class PlayerSearchMode
 --- @field public class any
-PlayerSearchMode = {};
+PlayerSearchMode = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -29,36 +29,35 @@ function PlayerSearchMode:getGradientWidth() end
 function PlayerSearchMode:getRadius() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerSearchMode:getShaderBlur() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerSearchMode:getShaderDarkness() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerSearchMode:getShaderDesat() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerSearchMode:getShaderGradientWidth() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerSearchMode:getShaderRadius() end
 
 --- @public
 --- @return boolean
 function PlayerSearchMode:isShaderEnabled() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 SearchMode
 --- @return PlayerSearchMode
 function PlayerSearchMode.new(arg0, arg1) end

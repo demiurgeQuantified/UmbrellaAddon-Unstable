@@ -8,7 +8,6 @@
 ---@field [any] any
 ISSearchMode = ISDebugSubPanelBase:derive("ISSearchMode")
 
-
 ---@return any
 function ISSearchMode:addBoolOption(_id, _x, _y, _w, _tag) end
 
@@ -41,7 +40,6 @@ function ISSearchMode:prerender() end
 
 ---@return any
 function ISSearchMode:update() end
-
 
 ---@return ISSearchMode
 function ISSearchMode:new(x, y, width, height, doStencil) end

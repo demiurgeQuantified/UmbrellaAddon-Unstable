@@ -82,7 +82,6 @@
 CharacterCreationMain = ISPanelJoypad:derive("CharacterCreationMain")
 CharacterCreationMain.savefile = "saved_outfits.txt"
 
-
 ---@return any
 function CharacterCreationMain.loadOutfit(self, box) end
 
@@ -91,7 +90,6 @@ function CharacterCreationMain.readSavedOutfitFile() end
 
 ---@return any
 function CharacterCreationMain.writeSaveFile(options) end
-
 
 ---@return any
 function CharacterCreationMain:arrangeClothingUI() end
@@ -282,7 +280,6 @@ function CharacterCreationMain:updateColorButton(bodyLocation, clothing) end
 ---@return any
 function CharacterCreationMain:updateSelectedClothingCombo() end
 
-
 ---@return CharacterCreationMain
 function CharacterCreationMain:new(x, y, width, height) end
 
@@ -294,7 +291,6 @@ function CharacterCreationMain:new(x, y, width, height) end
 ---@field prevJoypadIndexY any
 ---@field [any] any
 CharacterCreationMainCharacterPanel = ISPanelJoypad:derive("CharacterCreationMainCharacterPanel")
-
 
 ---@return any
 function CharacterCreationMainCharacterPanel:loadJoypadButtons(joypadData) end
@@ -320,13 +316,11 @@ function CharacterCreationMainCharacterPanel:prerender() end
 ---@return any
 function CharacterCreationMainCharacterPanel:render() end
 
-
 ---@return CharacterCreationMainCharacterPanel
 function CharacterCreationMainCharacterPanel:new(x, y, width, height) end
 
 ---@class CharacterCreationMainPresetPanel : ISPanelJoypad
 CharacterCreationMainPresetPanel = ISPanelJoypad:derive("CharacterCreationMainPresetPanel")
-
 
 ---@return any
 function CharacterCreationMainPresetPanel:onGainJoypadFocus(joypadData) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class SteamWorkshopItem
 --- @field public class any
-SteamWorkshopItem = {};
+SteamWorkshopItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ SteamWorkshopItem = {};
 --- @return ArrayList
 function SteamWorkshopItem.getAllowedTags() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -23,36 +22,36 @@ function SteamWorkshopItem.getAllowedTags() end
 function SteamWorkshopItem:create() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getChangeNote() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getContentFolder() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getDescription() end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function SteamWorkshopItem:getExtendedErrorInfo(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getFolderName() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getID() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getPreviewImage() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getSubmitDescription() end
 
 --- @public
@@ -64,7 +63,7 @@ function SteamWorkshopItem:getSubmitTags() end
 function SteamWorkshopItem:getTags() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getTitle() end
 
 --- @public
@@ -73,15 +72,15 @@ function SteamWorkshopItem:getTitle() end
 function SteamWorkshopItem:getUpdateProgress(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function SteamWorkshopItem:getUpdateProgressTotal() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:getVisibility() end
 
 --- @public
---- @return int
+--- @return integer
 function SteamWorkshopItem:getVisibilityInteger() end
 
 --- @public
@@ -89,38 +88,38 @@ function SteamWorkshopItem:getVisibilityInteger() end
 function SteamWorkshopItem:readWorkshopTxt() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SteamWorkshopItem:setChangeNote(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SteamWorkshopItem:setDescription(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SteamWorkshopItem:setID(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function SteamWorkshopItem:setTags(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SteamWorkshopItem:setTitle(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SteamWorkshopItem:setVisibility(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function SteamWorkshopItem:setVisibilityInteger(arg0) end
 
 --- @public
@@ -128,24 +127,23 @@ function SteamWorkshopItem:setVisibilityInteger(arg0) end
 function SteamWorkshopItem:submitUpdate() end
 
 --- @public
---- @return String
+--- @return string
 function SteamWorkshopItem:validateContents() end
 
 --- @public
 --- @param arg0 Path
---- @return String
+--- @return string
 function SteamWorkshopItem:validatePreviewImage(arg0) end
 
 --- @public
 --- @return boolean
 function SteamWorkshopItem:writeWorkshopTxt() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return SteamWorkshopItem
 function SteamWorkshopItem.new(arg0) end

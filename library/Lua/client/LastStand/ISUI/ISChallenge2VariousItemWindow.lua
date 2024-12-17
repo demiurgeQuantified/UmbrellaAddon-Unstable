@@ -13,7 +13,6 @@
 ---@field [any] any
 ISChallenge2VariousItemWindow = ISPanelJoypad:derive("ISChallenge2VariousItemWindow")
 
-
 ---@return any
 function ISChallenge2VariousItemWindow:create() end
 
@@ -37,7 +36,6 @@ function ISChallenge2VariousItemWindow:reloadButtons() end
 
 ---@return any
 function ISChallenge2VariousItemWindow:render() end
-
 
 ---@return ISChallenge2VariousItemWindow
 function ISChallenge2VariousItemWindow:new(x, y, width, height, player) end

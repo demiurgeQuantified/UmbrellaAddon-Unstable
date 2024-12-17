@@ -28,7 +28,6 @@
 ---@field [any] any
 ISPanelJoypad = ISUIElement:derive("ISPanelJoypad")
 
-
 ---@return any
 function ISPanelJoypad:clearJoypadFocus(joypadData) end
 
@@ -54,7 +53,19 @@ function ISPanelJoypad:getVisibleChildren(joypadIndexY) end
 function ISPanelJoypad:initialise() end
 
 ---@return any
-function ISPanelJoypad:insertNewLineOfButtons(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10) end
+function ISPanelJoypad:insertNewLineOfButtons(
+	button1,
+	button2,
+	button3,
+	button4,
+	button5,
+	button6,
+	button7,
+	button8,
+	button9,
+	button10
+)
+end
 
 ---@return any
 function ISPanelJoypad:insertNewListOfButtons(list) end
@@ -121,7 +132,6 @@ function ISPanelJoypad:setJoypadFocus(child, joypadData) end
 
 ---@return any
 function ISPanelJoypad:setVisible(visible, joypadData) end
-
 
 ---@return ISPanelJoypad
 function ISPanelJoypad:new(x, y, width, height) end

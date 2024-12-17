@@ -7,7 +7,6 @@
 ---@field [any] any
 ISFluidSlotPanel = ISGroupBox:derive("ISFluidSlotPanel")
 
-
 ---@return any
 function ISFluidSlotPanel:addResource(_resourceFluid, _styleFluidSlot, _styleBtnTransfer, _styleBtnClear, _styleBar) end
 
@@ -31,7 +30,6 @@ function ISFluidSlotPanel:render() end
 
 ---@return any
 function ISFluidSlotPanel:update() end
-
 
 ---@return ISFluidSlotPanel
 function ISFluidSlotPanel:new(x, y, width, height, player, entity, _styleLabel) end

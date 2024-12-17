@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ChatBase
 --- @field public class any
-ChatBase = {};
+ChatBase = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,20 +10,20 @@ ChatBase = {};
 
 --- @public
 --- @param arg0 short
---- @return void
+--- @return nil
 function ChatBase:addMember(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ChatBase:close() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ChatMessage
 function ChatBase:createMessage(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ServerChatMessage
 function ChatBase:createServerMessage(arg0) end
 
@@ -32,7 +32,7 @@ function ChatBase:createServerMessage(arg0) end
 function ChatBase:getColor() end
 
 --- @public
---- @return int
+--- @return integer
 function ChatBase:getID() end
 
 --- @public
@@ -45,12 +45,12 @@ function ChatBase:getJustRemovedMembers() end
 
 --- @public
 --- @param arg0 ChatMessage
---- @return String
+--- @return string
 function ChatBase:getMessagePrefix(arg0) end
 
 --- @public
 --- @param arg0 ChatMessage
---- @return String
+--- @return string
 function ChatBase:getMessageTextWithPrefix(arg0) end
 
 --- @public
@@ -58,7 +58,7 @@ function ChatBase:getMessageTextWithPrefix(arg0) end
 function ChatBase:getMode() end
 
 --- @public
---- @return float
+--- @return number
 function ChatBase:getRange() end
 
 --- @public
@@ -66,7 +66,7 @@ function ChatBase:getRange() end
 function ChatBase:getTabID() end
 
 --- @public
---- @return String
+--- @return string
 function ChatBase:getTitleID() end
 
 --- @public
@@ -74,7 +74,7 @@ function ChatBase:getTitleID() end
 function ChatBase:getType() end
 
 --- @public
---- @return float
+--- @return number
 function ChatBase:getZombieAttractionRange() end
 
 --- @public
@@ -87,79 +87,79 @@ function ChatBase:isSendingToRadio() end
 
 --- @public
 --- @param arg0 Short
---- @return void
+--- @return nil
 function ChatBase:leaveMember(arg0) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
 --- @param arg1 ChatMessage
---- @return void
+--- @return nil
 function ChatBase:packMessage(arg0, arg1) end
 
 --- @public
 --- @param arg0 Short
---- @return void
+--- @return nil
 function ChatBase:removeMember(arg0) end
 
 --- @public
 --- @param arg0 ChatMessage
---- @return void
---- @overload fun(self: ChatBase, arg0: ServerChatMessage): void
+--- @return nil
+--- @overload fun(self: ChatBase, arg0: ServerChatMessage): nil
 function ChatBase:sendMessageToChatMembers(arg0) end
 
 --- @public
 --- @param arg0 short
 --- @param arg1 ChatMessage
---- @return void
---- @overload fun(self: ChatBase, arg0: UdpConnection, arg1: ChatMessage): void
+--- @return nil
+--- @overload fun(self: ChatBase, arg0: UdpConnection, arg1: ChatMessage): nil
 function ChatBase:sendMessageToPlayer(arg0, arg1) end
 
 --- @public
 --- @param arg0 UdpConnection
---- @return void
+--- @return nil
 function ChatBase:sendPlayerJoinChatPacket(arg0) end
 
 --- @public
 --- @param arg0 short
---- @return void
---- @overload fun(self: ChatBase, arg0: UdpConnection): void
+--- @return nil
+--- @overload fun(self: ChatBase, arg0: UdpConnection): nil
 function ChatBase:sendPlayerLeaveChatPacket(arg0) end
 
 --- @public
 --- @param arg0 ChatMessage
 --- @param arg1 DeviceData
---- @return void
+--- @return nil
 function ChatBase:sendToServer(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function ChatBase:setFontSize(arg0) end
 
 --- @public
 --- @param arg0 ChatSettings
---- @return void
+--- @return nil
 function ChatBase:setSettings(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatBase:setShowTimestamp(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function ChatBase:setShowTitle(arg0) end
 
 --- @public
 --- @param arg0 ChatMessage
---- @return void
---- @overload fun(self: ChatBase, arg0: String, arg1: String): void
+--- @return nil
+--- @overload fun(self: ChatBase, arg0: string, arg1: string): nil
 function ChatBase:showMessage(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function ChatBase:syncMembersByUsernames(arg0) end
 
 --- @public
@@ -167,13 +167,12 @@ function ChatBase:syncMembersByUsernames(arg0) end
 --- @return ChatMessage
 function ChatBase:unpackMessage(arg0) end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 ChatType
 --- @param arg2 ChatTab
 --- @return ChatBase

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class RandomizedVehicleStoryBase: RandomizedWorldBase
 --- @field public class any
---- @field public baseChance int
-RandomizedVehicleStoryBase = {};
+--- @field public baseChance integer
+RandomizedVehicleStoryBase = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,9 +29,8 @@ function RandomizedVehicleStoryBase.getRandomFreeUnoccupiedSquare(arg0, arg1, ar
 --- @static
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RandomizedVehicleStoryBase.initAllRVSMapChance(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -40,8 +39,8 @@ function RandomizedVehicleStoryBase.initAllRVSMapChance(arg0, arg1) end
 --- @public
 --- @param arg0 BaseVehicle
 --- @param arg1 BaseVehicle
---- @param arg2 int
---- @param arg3 int
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @return BaseVehicle[]
@@ -50,7 +49,7 @@ function RandomizedVehicleStoryBase:addSmashedOverlay(arg0, arg1, arg2, arg3, ar
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @param arg2 float
+--- @param arg2 number
 --- @return boolean
 function RandomizedVehicleStoryBase:callVehicleStorySpawner(arg0, arg1, arg2) end
 
@@ -61,31 +60,31 @@ function RandomizedVehicleStoryBase:callVehicleStorySpawner(arg0, arg1, arg2) en
 function RandomizedVehicleStoryBase:getCenterOfChunk(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedVehicleStoryBase:getChance() end
 
 --- @public
---- @return String
+--- @return string
 function RandomizedVehicleStoryBase:getDebugLine() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedVehicleStoryBase:getMaximumDays() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedVehicleStoryBase:getMinZoneHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedVehicleStoryBase:getMinZoneWidth() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedVehicleStoryBase:getMinimumDays() end
 
 --- @public
---- @return String
+--- @return string
 function RandomizedVehicleStoryBase:getName() end
 
 --- @public
@@ -123,16 +122,16 @@ function RandomizedVehicleStoryBase:initSpawnDataForChunk(arg0, arg1) end
 function RandomizedVehicleStoryBase:initVehicleStorySpawner(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return boolean
 function RandomizedVehicleStoryBase:isChunkLoaded(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return boolean
 function RandomizedVehicleStoryBase:isFullyStreamedIn(arg0, arg1, arg2, arg3) end
 
@@ -146,34 +145,33 @@ function RandomizedVehicleStoryBase:isValid(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 Zone
 --- @param arg1 IsoChunk
---- @return void
+--- @return nil
 function RandomizedVehicleStoryBase:randomizeVehicleStory(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function RandomizedVehicleStoryBase:registerCustomOutfits() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RandomizedVehicleStoryBase:setChance(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RandomizedVehicleStoryBase:setMaximumDays(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RandomizedVehicleStoryBase:setMinimumDays(arg0) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner
 --- @param arg1 Element
---- @return void
+--- @return nil
 function RandomizedVehicleStoryBase:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

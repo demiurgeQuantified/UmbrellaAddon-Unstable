@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class BaseCraftingLogic
 --- @field public class any
-BaseCraftingLogic = {};
+BaseCraftingLogic = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,22 +10,22 @@ BaseCraftingLogic = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 Object
---- @return void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
 function BaseCraftingLogic.callLua(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 Object
+--- @param arg0 string
+--- @param arg1 any
 --- @return boolean
 function BaseCraftingLogic.callLuaBool(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 List
 --- @param arg3 List
 --- @param arg4 IsoPlayer
@@ -35,27 +35,26 @@ function BaseCraftingLogic.filterRecipeList(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @static
 --- @param arg0 CraftRecipe
---- @return String
+--- @return string
 function BaseCraftingLogic.getFavouriteModDataString(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return void
---- @overload fun(self: BaseCraftingLogic, arg0: String, arg1: Object, arg2: Object): void
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
+--- @overload fun(self: BaseCraftingLogic, arg0: string, arg1: any, arg2: any): nil
 function BaseCraftingLogic:addEventListener(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
---- @overload fun(self: BaseCraftingLogic, arg0: String, arg1: String, arg2: boolean): void
---- @overload fun(self: BaseCraftingLogic, arg0: String, arg1: String, arg2: boolean, arg3: IsoPlayer): void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
+--- @overload fun(self: BaseCraftingLogic, arg0: string, arg1: string, arg2: boolean): nil
+--- @overload fun(self: BaseCraftingLogic, arg0: string, arg1: string, arg2: boolean, arg3: IsoPlayer): nil
 function BaseCraftingLogic:filterRecipeList(arg0, arg1) end
 
 --- @public
@@ -68,9 +67,9 @@ function BaseCraftingLogic:getCachedRecipeInfo(arg0) end
 function BaseCraftingLogic:getCategoryList() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 IsoPlayer
---- @return String
+--- @return string
 function BaseCraftingLogic:getSelectedRecipeStyle(arg0, arg1) end
 
 --- @public
@@ -79,20 +78,19 @@ function BaseCraftingLogic:isCraftCheat() end
 
 --- @public
 --- @param arg0 List
---- @return void
+--- @return nil
 function BaseCraftingLogic:setRecipes(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 IsoPlayer
---- @return void
+--- @return nil
 function BaseCraftingLogic:setSelectedRecipeStyle(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function BaseCraftingLogic:sortRecipeList() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

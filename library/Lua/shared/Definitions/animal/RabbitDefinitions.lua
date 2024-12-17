@@ -1,106 +1,106 @@
 ---@meta
 
 local rabbit_sounds = {
-    death = {
-        name = "AnimalVoiceRabbitDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyRabbitBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceRabbitIdle",
-        intervalMin = 20,
-        intervalMax = 40,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceRabbitPain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalRabbit",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadRabbit",
-    },
-    put_down = {
-        name = "PutDownAnimalRabbit",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadRabbit",
-    },
-    runloop = {
-        name = "AnimalFootstepsRabbitRun",
-        slot = "runloop",
-    },
-    stressed = {
-        name = "AnimalVoiceRabbitStressed",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    walkloop = {
-        name = "AnimalFootstepsRabbitWalk",
-        slot = "walkloop",
-    },
+	death = {
+		name = "AnimalVoiceRabbitDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyRabbitBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceRabbitIdle",
+		intervalMin = 20,
+		intervalMax = 40,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceRabbitPain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalRabbit",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadRabbit",
+	},
+	put_down = {
+		name = "PutDownAnimalRabbit",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadRabbit",
+	},
+	runloop = {
+		name = "AnimalFootstepsRabbitRun",
+		slot = "runloop",
+	},
+	stressed = {
+		name = "AnimalVoiceRabbitStressed",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	walkloop = {
+		name = "AnimalFootstepsRabbitWalk",
+		slot = "walkloop",
+	},
 }
 local rabkitten_sounds = {
-    death = {
-        name = "AnimalVoiceBabyRabbitDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyBabyRabbitBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceRabbitIdle",
-        intervalMin = 20,
-        intervalMax = 35,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceBabyRabbitPain",
-        slot = "voice",
-        priority = 50,
-    },
-    pick_up = {
-        name = "PickUpAnimalBabyRabbit",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadBabyRabbit",
-    },
-    put_down = {
-        name = "PutDownAnimalBabyRabbit",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadBabyRabbit",
-    },
-    runloop = {
-        name = "AnimalFootstepsBabyRabbitRun",
-        slot = "runloop",
-    },
-    stressed = {
-        name = "AnimalVoiceBabyRabbitStressed",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    walkloop = {
-        name = "AnimalFootstepsBabyRabbitWalk",
-        slot = "walkloop",
-    },
+	death = {
+		name = "AnimalVoiceBabyRabbitDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyBabyRabbitBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceRabbitIdle",
+		intervalMin = 20,
+		intervalMax = 35,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceBabyRabbitPain",
+		slot = "voice",
+		priority = 50,
+	},
+	pick_up = {
+		name = "PickUpAnimalBabyRabbit",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadBabyRabbit",
+	},
+	put_down = {
+		name = "PutDownAnimalBabyRabbit",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadBabyRabbit",
+	},
+	runloop = {
+		name = "AnimalFootstepsBabyRabbitRun",
+		slot = "runloop",
+	},
+	stressed = {
+		name = "AnimalVoiceBabyRabbitStressed",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	walkloop = {
+		name = "AnimalFootstepsBabyRabbitWalk",
+		slot = "walkloop",
+	},
 }
 
 ---@class AnimalDefinitions
@@ -224,18 +224,18 @@ AnimalDefinitions.animals["rabkitten"].minWeight = 1
 AnimalDefinitions.animals["rabkitten"].maxWeight = 2
 AnimalDefinitions.animals["rabkitten"].canThump = false
 AnimalDefinitions.animals["rabkitten"].luredPossibleItems = {
-    {
-        name = "Base.HayTuft",
-        chance = 30,
-    },
-    {
-        name = "Base.GrassTuft",
-        chance = 50,
-    },
-    {
-        name = "Base.Carrots",
-        chance = 70,
-    },
+	{
+		name = "Base.HayTuft",
+		chance = 30,
+	},
+	{
+		name = "Base.GrassTuft",
+		chance = 50,
+	},
+	{
+		name = "Base.Carrots",
+		chance = 70,
+	},
 }
 AnimalDefinitions.animals["rabkitten"].group = "rabbit"
 AnimalDefinitions.animals["rabkitten"].stressAboveGround = true

@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class MetaEntity: GameEntity
 --- @field public class any
-MetaEntity = {};
+MetaEntity = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return long
+--- @return integer
 function MetaEntity:getEntityNetID() end
 
 --- @public
@@ -29,15 +29,15 @@ function MetaEntity:getSquare() end
 function MetaEntity:getUsingPlayer() end
 
 --- @public
---- @return float
+--- @return number
 function MetaEntity:getX() end
 
 --- @public
---- @return float
+--- @return number
 function MetaEntity:getY() end
 
 --- @public
---- @return float
+--- @return number
 function MetaEntity:getZ() end
 
 --- @public
@@ -55,22 +55,20 @@ function MetaEntity:isUsingPlayer(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function MetaEntity:loadMetaEntity(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function MetaEntity:reset() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function MetaEntity:saveMetaEntity(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function MetaEntity:setUsingPlayer(arg0) end
-
-

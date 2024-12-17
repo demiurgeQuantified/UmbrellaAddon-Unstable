@@ -1,48 +1,48 @@
---- @meta
+--- @meta _
 
 --- @class FMODDebugEventPlayer
 --- @field public class any
-FMODDebugEventPlayer = {};
+FMODDebugEventPlayer = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function FMODDebugEventPlayer:clearParameterValue(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @return float
+--- @param arg0 string
+--- @param arg1 integer
+--- @return number
 function FMODDebugEventPlayer:getGlobalParameterValue(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function FMODDebugEventPlayer:getParameterCount(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @return String
+--- @param arg0 string
+--- @param arg1 integer
+--- @return string
 function FMODDebugEventPlayer:getParameterName(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function FMODDebugEventPlayer:getParameterValue(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FMODDebugEventPlayer:initParameterValues(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @return boolean
 function FMODDebugEventPlayer:isGlobalParameter(arg0, arg1) end
 
@@ -51,50 +51,49 @@ function FMODDebugEventPlayer:isGlobalParameter(arg0, arg1) end
 function FMODDebugEventPlayer:isPlaying() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FMODDebugEventPlayer:play(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function FMODDebugEventPlayer:setDurationMillis(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function FMODDebugEventPlayer:setFollowPlayer(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function FMODDebugEventPlayer:setLoop(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
---- @return void
+--- @param arg0 integer
+--- @param arg1 number
+--- @return nil
 function FMODDebugEventPlayer:setParameterValue(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function FMODDebugEventPlayer:setTimelinePosition(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function FMODDebugEventPlayer:setVolume(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: FMODDebugEventPlayer, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: FMODDebugEventPlayer, arg0: boolean): nil
 function FMODDebugEventPlayer:stop() end
 
 --- @public
---- @return void
+--- @return nil
 function FMODDebugEventPlayer:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

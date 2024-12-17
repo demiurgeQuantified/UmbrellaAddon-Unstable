@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RDSCorpsePsycho: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSCorpsePsycho = {};
+RDSCorpsePsycho = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RDSCorpsePsycho = {};
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RDSCorpsePsycho:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

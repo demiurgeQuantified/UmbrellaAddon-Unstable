@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class VectorPosAlign: Enum
 --- @field public class any
@@ -12,7 +12,7 @@
 --- @field public TopLeft VectorPosAlign
 --- @field public TopMiddle VectorPosAlign
 --- @field public TopRight VectorPosAlign
-VectorPosAlign = {};
+VectorPosAlign = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,7 +20,7 @@ VectorPosAlign = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return VectorPosAlign
 function VectorPosAlign.valueOf(arg0) end
 
@@ -29,27 +29,24 @@ function VectorPosAlign.valueOf(arg0) end
 --- @return VectorPosAlign[]
 function VectorPosAlign.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 XuiVector
---- @return float
+--- @return number
 function VectorPosAlign:getX(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function VectorPosAlign:getXmod() end
 
 --- @public
 --- @param arg0 XuiVector
---- @return float
+--- @return number
 function VectorPosAlign:getY(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function VectorPosAlign:getYmod() end
-
-

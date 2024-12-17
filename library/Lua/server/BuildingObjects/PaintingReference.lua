@@ -138,307 +138,307 @@ Painting["windowsframe"]["plasterTileNorth"] = "walls_interior_house_02_57"
 OtherPainting = {}
 OtherPainting["chair"] = {}
 OtherPainting["chair"]["PaintBlack"] = {
-    r = 0.20,
-    g = 0.20,
-    b = 0.20,
+	r = 0.20,
+	g = 0.20,
+	b = 0.20,
 }
 OtherPainting["chair"]["PaintBlue"] = {
-    r = 0.35,
-    g = 0.35,
-    b = 0.80,
+	r = 0.35,
+	g = 0.35,
+	b = 0.80,
 }
 OtherPainting["chair"]["PaintBrown"] = {
-    r = 0.45,
-    g = 0.23,
-    b = 0.11,
+	r = 0.45,
+	g = 0.23,
+	b = 0.11,
 }
 OtherPainting["chair"]["PaintCyan"] = {
-    r = 0.50,
-    g = 0.80,
-    b = 0.80,
+	r = 0.50,
+	g = 0.80,
+	b = 0.80,
 }
 OtherPainting["chair"]["PaintGreen"] = {
-    r = 0.41,
-    g = 0.80,
-    b = 0.41,
+	r = 0.41,
+	g = 0.80,
+	b = 0.41,
 }
 OtherPainting["chair"]["PaintGrey"] = {
-    r = 0.50,
-    g = 0.50,
-    b = 0.50,
+	r = 0.50,
+	g = 0.50,
+	b = 0.50,
 }
 OtherPainting["chair"]["PaintLightBlue"] = {
-    r = 0.55,
-    g = 0.55,
-    b = 0.87,
+	r = 0.55,
+	g = 0.55,
+	b = 0.87,
 }
 OtherPainting["chair"]["PaintLightBrown"] = {
-    r = 0.59,
-    g = 0.44,
-    b = 0.21,
+	r = 0.59,
+	g = 0.44,
+	b = 0.21,
 }
 OtherPainting["chair"]["PaintOrange"] = {
-    r = 0.79,
-    g = 0.44,
-    b = 0.19,
+	r = 0.79,
+	g = 0.44,
+	b = 0.19,
 }
 OtherPainting["chair"]["PaintPink"] = {
-    r = 0.81,
-    g = 0.60,
-    b = 0.60,
+	r = 0.81,
+	g = 0.60,
+	b = 0.60,
 }
 OtherPainting["chair"]["PaintPurple"] = {
-    r = 0.61,
-    g = 0.40,
-    b = 0.63,
+	r = 0.61,
+	g = 0.40,
+	b = 0.63,
 }
 OtherPainting["chair"]["PaintRed"] = {
-    r = 0.63,
-    g = 0.10,
-    b = 0.10,
+	r = 0.63,
+	g = 0.10,
+	b = 0.10,
 }
 OtherPainting["chair"]["PaintTurquoise"] = {
-    r = 0.49,
-    g = 0.70,
-    b = 0.80,
+	r = 0.49,
+	g = 0.70,
+	b = 0.80,
 }
 OtherPainting["chair"]["PaintWhite"] = {
-    r = 0.92,
-    g = 0.92,
-    b = 0.92,
+	r = 0.92,
+	g = 0.92,
+	b = 0.92,
 }
 OtherPainting["chair"]["PaintYellow"] = {
-    r = 0.84,
-    g = 0.78,
-    b = 0.30,
+	r = 0.84,
+	g = 0.78,
+	b = 0.30,
 }
 OtherPainting["crates"] = {}
 OtherPainting["crates"]["PaintBlack"] = {
-    r = 0.20,
-    g = 0.20,
-    b = 0.20,
+	r = 0.20,
+	g = 0.20,
+	b = 0.20,
 }
 OtherPainting["crates"]["PaintBlue"] = {
-    r = 0.35,
-    g = 0.35,
-    b = 0.80,
+	r = 0.35,
+	g = 0.35,
+	b = 0.80,
 }
 OtherPainting["crates"]["PaintBrown"] = {
-    r = 0.45,
-    g = 0.23,
-    b = 0.11,
+	r = 0.45,
+	g = 0.23,
+	b = 0.11,
 }
 OtherPainting["crates"]["PaintCyan"] = {
-    r = 0.50,
-    g = 0.80,
-    b = 0.80,
+	r = 0.50,
+	g = 0.80,
+	b = 0.80,
 }
 OtherPainting["crates"]["PaintGreen"] = {
-    r = 0.41,
-    g = 0.80,
-    b = 0.41,
+	r = 0.41,
+	g = 0.80,
+	b = 0.41,
 }
 OtherPainting["crates"]["PaintGrey"] = {
-    r = 0.50,
-    g = 0.50,
-    b = 0.50,
+	r = 0.50,
+	g = 0.50,
+	b = 0.50,
 }
 OtherPainting["crates"]["PaintLightBlue"] = {
-    r = 0.55,
-    g = 0.55,
-    b = 0.87,
+	r = 0.55,
+	g = 0.55,
+	b = 0.87,
 }
 OtherPainting["crates"]["PaintLightBrown"] = {
-    r = 0.59,
-    g = 0.44,
-    b = 0.21,
+	r = 0.59,
+	g = 0.44,
+	b = 0.21,
 }
 OtherPainting["crates"]["PaintOrange"] = {
-    r = 0.79,
-    g = 0.44,
-    b = 0.19,
+	r = 0.79,
+	g = 0.44,
+	b = 0.19,
 }
 OtherPainting["crates"]["PaintPink"] = {
-    r = 0.81,
-    g = 0.60,
-    b = 0.60,
+	r = 0.81,
+	g = 0.60,
+	b = 0.60,
 }
 OtherPainting["crates"]["PaintPurple"] = {
-    r = 0.61,
-    g = 0.40,
-    b = 0.63,
+	r = 0.61,
+	g = 0.40,
+	b = 0.63,
 }
 OtherPainting["crates"]["PaintRed"] = {
-    r = 0.63,
-    g = 0.10,
-    b = 0.10,
+	r = 0.63,
+	g = 0.10,
+	b = 0.10,
 }
 OtherPainting["crates"]["PaintTurquoise"] = {
-    r = 0.49,
-    g = 0.70,
-    b = 0.80,
+	r = 0.49,
+	g = 0.70,
+	b = 0.80,
 }
 OtherPainting["crates"]["PaintWhite"] = {
-    r = 0.92,
-    g = 0.92,
-    b = 0.92,
+	r = 0.92,
+	g = 0.92,
+	b = 0.92,
 }
 OtherPainting["crates"]["PaintYellow"] = {
-    r = 0.84,
-    g = 0.78,
-    b = 0.30,
+	r = 0.84,
+	g = 0.78,
+	b = 0.30,
 }
 OtherPainting["door"] = {}
 OtherPainting["door"]["PaintBlack"] = {
-    r = 0.20,
-    g = 0.20,
-    b = 0.20,
+	r = 0.20,
+	g = 0.20,
+	b = 0.20,
 }
 OtherPainting["door"]["PaintBlue"] = {
-    r = 0.35,
-    g = 0.35,
-    b = 0.80,
+	r = 0.35,
+	g = 0.35,
+	b = 0.80,
 }
 OtherPainting["door"]["PaintBrown"] = {
-    r = 0.45,
-    g = 0.23,
-    b = 0.11,
+	r = 0.45,
+	g = 0.23,
+	b = 0.11,
 }
 OtherPainting["door"]["PaintCyan"] = {
-    r = 0.50,
-    g = 0.80,
-    b = 0.80,
+	r = 0.50,
+	g = 0.80,
+	b = 0.80,
 }
 OtherPainting["door"]["PaintGreen"] = {
-    r = 0.41,
-    g = 0.80,
-    b = 0.41,
+	r = 0.41,
+	g = 0.80,
+	b = 0.41,
 }
 OtherPainting["door"]["PaintGrey"] = {
-    r = 0.50,
-    g = 0.50,
-    b = 0.50,
+	r = 0.50,
+	g = 0.50,
+	b = 0.50,
 }
 OtherPainting["door"]["PaintLightBlue"] = {
-    r = 0.55,
-    g = 0.55,
-    b = 0.87,
+	r = 0.55,
+	g = 0.55,
+	b = 0.87,
 }
 OtherPainting["door"]["PaintLightBrown"] = {
-    r = 0.59,
-    g = 0.44,
-    b = 0.21,
+	r = 0.59,
+	g = 0.44,
+	b = 0.21,
 }
 OtherPainting["door"]["PaintOrange"] = {
-    r = 0.79,
-    g = 0.44,
-    b = 0.19,
+	r = 0.79,
+	g = 0.44,
+	b = 0.19,
 }
 OtherPainting["door"]["PaintPink"] = {
-    r = 0.81,
-    g = 0.60,
-    b = 0.60,
+	r = 0.81,
+	g = 0.60,
+	b = 0.60,
 }
 OtherPainting["door"]["PaintPurple"] = {
-    r = 0.61,
-    g = 0.40,
-    b = 0.63,
+	r = 0.61,
+	g = 0.40,
+	b = 0.63,
 }
 OtherPainting["door"]["PaintRed"] = {
-    r = 0.63,
-    g = 0.10,
-    b = 0.10,
+	r = 0.63,
+	g = 0.10,
+	b = 0.10,
 }
 OtherPainting["door"]["PaintTurquoise"] = {
-    r = 0.49,
-    g = 0.70,
-    b = 0.80,
+	r = 0.49,
+	g = 0.70,
+	b = 0.80,
 }
 OtherPainting["door"]["PaintWhite"] = {
-    r = 0.92,
-    g = 0.92,
-    b = 0.92,
+	r = 0.92,
+	g = 0.92,
+	b = 0.92,
 }
 OtherPainting["door"]["PaintYellow"] = {
-    r = 0.84,
-    g = 0.78,
-    b = 0.30,
+	r = 0.84,
+	g = 0.78,
+	b = 0.30,
 }
 OtherPainting["table"] = {}
 OtherPainting["table"]["PaintBlack"] = {
-    r = 0.20,
-    g = 0.20,
-    b = 0.20,
+	r = 0.20,
+	g = 0.20,
+	b = 0.20,
 }
 OtherPainting["table"]["PaintBlue"] = {
-    r = 0.35,
-    g = 0.35,
-    b = 0.80,
+	r = 0.35,
+	g = 0.35,
+	b = 0.80,
 }
 OtherPainting["table"]["PaintBrown"] = {
-    r = 0.45,
-    g = 0.23,
-    b = 0.11,
+	r = 0.45,
+	g = 0.23,
+	b = 0.11,
 }
 OtherPainting["table"]["PaintCyan"] = {
-    r = 0.50,
-    g = 0.80,
-    b = 0.80,
+	r = 0.50,
+	g = 0.80,
+	b = 0.80,
 }
 OtherPainting["table"]["PaintGreen"] = {
-    r = 0.41,
-    g = 0.80,
-    b = 0.41,
+	r = 0.41,
+	g = 0.80,
+	b = 0.41,
 }
 OtherPainting["table"]["PaintGrey"] = {
-    r = 0.50,
-    g = 0.50,
-    b = 0.50,
+	r = 0.50,
+	g = 0.50,
+	b = 0.50,
 }
 OtherPainting["table"]["PaintLightBlue"] = {
-    r = 0.55,
-    g = 0.55,
-    b = 0.87,
+	r = 0.55,
+	g = 0.55,
+	b = 0.87,
 }
 OtherPainting["table"]["PaintLightBrown"] = {
-    r = 0.59,
-    g = 0.44,
-    b = 0.21,
+	r = 0.59,
+	g = 0.44,
+	b = 0.21,
 }
 OtherPainting["table"]["PaintOrange"] = {
-    r = 0.79,
-    g = 0.44,
-    b = 0.19,
+	r = 0.79,
+	g = 0.44,
+	b = 0.19,
 }
 OtherPainting["table"]["PaintPink"] = {
-    r = 0.81,
-    g = 0.60,
-    b = 0.60,
+	r = 0.81,
+	g = 0.60,
+	b = 0.60,
 }
 OtherPainting["table"]["PaintPurple"] = {
-    r = 0.61,
-    g = 0.40,
-    b = 0.63,
+	r = 0.61,
+	g = 0.40,
+	b = 0.63,
 }
 OtherPainting["table"]["PaintRed"] = {
-    r = 0.63,
-    g = 0.10,
-    b = 0.10,
+	r = 0.63,
+	g = 0.10,
+	b = 0.10,
 }
 OtherPainting["table"]["PaintTurquoise"] = {
-    r = 0.49,
-    g = 0.70,
-    b = 0.80,
+	r = 0.49,
+	g = 0.70,
+	b = 0.80,
 }
 OtherPainting["table"]["PaintWhite"] = {
-    r = 0.92,
-    g = 0.92,
-    b = 0.92,
+	r = 0.92,
+	g = 0.92,
+	b = 0.92,
 }
 OtherPainting["table"]["PaintYellow"] = {
-    r = 0.84,
-    g = 0.78,
-    b = 0.30,
+	r = 0.84,
+	g = 0.78,
+	b = 0.30,
 }
 
 ---@class WallPaper

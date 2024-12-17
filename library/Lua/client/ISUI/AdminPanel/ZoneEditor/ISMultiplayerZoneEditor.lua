@@ -34,13 +34,11 @@
 ---@field [any] any
 ISMultiplayerZoneEditor = ISPanelJoypad:derive("ISMultiplayerZoneEditor")
 
-
 ---@return any
 function ISMultiplayerZoneEditor.ShowEditor() end
 
 ---@return any
 function ISMultiplayerZoneEditor.ToggleEditor() end
-
 
 ---@return any
 function ISMultiplayerZoneEditor:close() end
@@ -141,7 +139,6 @@ function ISMultiplayerZoneEditor:setShowRemotePlayers(show) end
 ---@return any
 function ISMultiplayerZoneEditor:setShowTileGrid(show) end
 
-
 ---@return ISMultiplayerZoneEditor
 function ISMultiplayerZoneEditor:new(x, y, width, height) end
 
@@ -155,7 +152,6 @@ function ISMultiplayerZoneEditor:new(x, y, width, height) end
 ---@field zoomOutButton any
 ---@field [any] any
 ISMultiplayerZoneEditor_ButtonPanel = ISPanelJoypad:derive("ISMultiplayerZoneEditor_ButtonPanel")
-
 
 ---@return any
 function ISMultiplayerZoneEditor_ButtonPanel:createChildren() end
@@ -171,7 +167,6 @@ function ISMultiplayerZoneEditor_ButtonPanel:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISMultiplayerZoneEditor_ButtonPanel:render() end
-
 
 ---@return ISMultiplayerZoneEditor_ButtonPanel
 function ISMultiplayerZoneEditor_ButtonPanel:new(x, y, width, height, editor) end

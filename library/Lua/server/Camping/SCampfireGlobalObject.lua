@@ -14,7 +14,6 @@
 ---@field [any] any
 SCampfireGlobalObject = SGlobalObject:derive("SCampfireGlobalObject")
 
-
 ---@return any
 function SCampfireGlobalObject:addContainer() end
 
@@ -104,7 +103,6 @@ function SCampfireGlobalObject:toModData(modData) end
 
 ---@return any
 function SCampfireGlobalObject:transferItemsToGround() end
-
 
 ---@return SCampfireGlobalObject
 function SCampfireGlobalObject:new(luaSystem, globalObject) end

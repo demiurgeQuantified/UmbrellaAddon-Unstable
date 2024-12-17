@@ -7,7 +7,6 @@
 ---@field [any] any
 ISUpgradeWeapon = ISBaseTimedAction:derive("ISUpgradeWeapon")
 
-
 ---@return any
 function ISUpgradeWeapon:complete() end
 
@@ -28,7 +27,6 @@ function ISUpgradeWeapon:stop() end
 
 ---@return any
 function ISUpgradeWeapon:update() end
-
 
 ---@return ISUpgradeWeapon
 function ISUpgradeWeapon:new(character, weapon, part) end

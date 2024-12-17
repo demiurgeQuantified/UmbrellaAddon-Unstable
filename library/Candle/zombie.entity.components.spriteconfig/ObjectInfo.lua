@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ObjectInfo
 --- @field public class any
-ObjectInfo = {};
+ObjectInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,13 +13,13 @@ ObjectInfo = {};
 function ObjectInfo:canRotate() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return FaceInfo
---- @overload fun(self: ObjectInfo, arg0: String): FaceInfo
+--- @overload fun(self: ObjectInfo, arg0: string): FaceInfo
 function ObjectInfo:getFace(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return FaceInfo
 function ObjectInfo:getFaceForSprite(arg0) end
 
@@ -28,11 +28,11 @@ function ObjectInfo:getFaceForSprite(arg0) end
 function ObjectInfo:getIconTexture() end
 
 --- @public
---- @return String
+--- @return string
 function ObjectInfo:getMainSpriteNameUI() end
 
 --- @public
---- @return String
+--- @return string
 function ObjectInfo:getName() end
 
 --- @public
@@ -40,7 +40,7 @@ function ObjectInfo:getName() end
 function ObjectInfo:getRecipe() end
 
 --- @public
---- @return int
+--- @return integer
 function ObjectInfo:getRequiredSkillCount() end
 
 --- @public
@@ -52,11 +52,11 @@ function ObjectInfo:getScript() end
 function ObjectInfo:getTags() end
 
 --- @public
---- @return int
+--- @return integer
 function ObjectInfo:getTime() end
 
 --- @public
---- @return long
+--- @return integer
 function ObjectInfo:getVersion() end
 
 --- @public
@@ -70,5 +70,3 @@ function ObjectInfo:isSingleFace() end
 --- @public
 --- @return boolean
 function ObjectInfo:needToBeLearn() end
-
-

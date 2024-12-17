@@ -8,7 +8,6 @@
 ---@field [any] any
 ISOpenCloseWindow = ISBaseTimedAction:derive("ISOpenCloseWindow")
 
-
 ---@return any
 function ISOpenCloseWindow:complete() end
 
@@ -32,7 +31,6 @@ function ISOpenCloseWindow:update() end
 
 ---@return any
 function ISOpenCloseWindow:waitToStart() end
-
 
 ---@return ISOpenCloseWindow
 function ISOpenCloseWindow:new(character, object) end

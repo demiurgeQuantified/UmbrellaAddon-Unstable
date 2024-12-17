@@ -22,10 +22,8 @@ ISFluidInfoUI.players = {}
 ISFluidInfoUI.cheatSkill = false
 ISFluidInfoUI.cheatTransfer = false
 
-
 ---@return any
 function ISFluidInfoUI.OpenPanel(_player, _container) end
-
 
 ---@return any
 function ISFluidInfoUI:close() end
@@ -47,7 +45,6 @@ function ISFluidInfoUI:render() end
 
 ---@return any
 function ISFluidInfoUI:update() end
-
 
 ---@return ISFluidInfoUI
 function ISFluidInfoUI:new(x, y, width, height, _player, _container) end

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class NewHealthPanel: NewWindow
 --- @field public class any
 --- @field public instance NewHealthPanel
-NewHealthPanel = {};
+NewHealthPanel = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,29 +11,28 @@ NewHealthPanel = {};
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function NewHealthPanel:SetCharacter(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function NewHealthPanel:getDamageStatusString() end
 
 --- @public
---- @return void
+--- @return nil
 function NewHealthPanel:render() end
 
 --- @public
---- @return void
+--- @return nil
 function NewHealthPanel:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 IsoGameCharacter
 --- @return NewHealthPanel
 function NewHealthPanel.new(arg0, arg1, arg2) end

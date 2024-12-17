@@ -18,10 +18,8 @@
 ---@field [any] any
 ISWarManagerUI = ISPanel:derive("ISWarManagerUI")
 
-
 ---@return any
 function ISWarManagerUI.OnWarUpdate() end
-
 
 ---@return any
 function ISWarManagerUI:closeModal() end
@@ -43,7 +41,6 @@ function ISWarManagerUI:populateList() end
 
 ---@return any
 function ISWarManagerUI:prerender() end
-
 
 ---@return ISWarManagerUI
 function ISWarManagerUI:new(x, y, width, height, player) end

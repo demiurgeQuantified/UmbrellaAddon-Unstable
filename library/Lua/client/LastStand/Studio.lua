@@ -10,7 +10,6 @@ Studio.x = (1 * 300) + 183
 Studio.y = (1 * 300) + 118
 Studio.z = 0
 
-
 ---@return any
 function Studio.Add() end
 

@@ -7,7 +7,6 @@
 ---@field [any] any
 ISKillAnimal = ISBaseTimedAction:derive("ISKillAnimal")
 
-
 ---@return any
 function ISKillAnimal:complete() end
 
@@ -34,7 +33,6 @@ function ISKillAnimal:update() end
 
 ---@return any
 function ISKillAnimal:waitToStart() end
-
 
 ---@return ISKillAnimal
 function ISKillAnimal:new(character, animal) end

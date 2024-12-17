@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class TemplateText
 --- @field public class any
-TemplateText = {};
+TemplateText = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,10 +10,10 @@ TemplateText = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @return String
---- @overload fun(arg0: String, arg1: KahluaTableImpl): String
---- @overload fun(arg0: String, arg1: IReplaceProvider): String
+--- @param arg0 string
+--- @return string
+--- @overload fun(arg0: string, arg1: table): string
+--- @overload fun(arg0: string, arg1: IReplaceProvider): string
 function TemplateText.Build(arg0) end
 
 --- @public
@@ -28,31 +28,30 @@ function TemplateText.CreateCopy() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function TemplateText.Initialize() end
 
 --- @public
 --- @static
---- @param arg0 float
---- @return float
---- @overload fun(arg0: int): int
---- @overload fun(arg0: float, arg1: float): float
---- @overload fun(arg0: int, arg1: int): int
+--- @param arg0 number
+--- @return number
+--- @overload fun(arg0: integer): integer
+--- @overload fun(arg0: number, arg1: number): number
+--- @overload fun(arg0: integer, arg1: integer): integer
 function TemplateText.RandNext(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 KahluaTableImpl
---- @return void
---- @overload fun(arg0: String, arg1: IReplace): void
+--- @param arg0 string
+--- @param arg1 table
+--- @return nil
+--- @overload fun(arg0: string, arg1: IReplace): nil
 function TemplateText.RegisterKey(arg0, arg1) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function TemplateText.Reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

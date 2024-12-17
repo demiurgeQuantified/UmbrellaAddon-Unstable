@@ -1,20 +1,20 @@
---- @meta
+--- @meta _
 
 --- @class Double: Numeric
 --- @field public class any
-Double = {};
+Double = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Double
+--- @return number
 --- @overload fun(self: Double): Number
 function Double:getMax() end
 
 --- @public
---- @return Double
+--- @return number
 --- @overload fun(self: Double): Number
 function Double:getMin() end
 
@@ -23,9 +23,7 @@ function Double:getMin() end
 function Double:getValueType() end
 
 --- @public
---- @param arg0 Double
---- @return Double
+--- @param arg0 number
+--- @return number
 --- @overload fun(self: Double, arg0: Number): Number
 function Double:validate(arg0) end
-
-

@@ -16,13 +16,11 @@ ISCheatPanelUI = ISPanel:derive("ISCheatPanelUI")
 ISCheatPanelUI.instance = nil
 ISCheatPanelUI.cheatTooltips = {}
 
-
 ---@return any
 function ISCheatPanelUI.EnableCheats() end
 
 ---@return any
 function ISCheatPanelUI.OnOpenPanel() end
-
 
 ---@return any
 function ISCheatPanelUI:addAdminPowerOptions() end
@@ -44,7 +42,6 @@ function ISCheatPanelUI:prerender() end
 
 ---@return any
 function ISCheatPanelUI:render() end
-
 
 ---@return ISCheatPanelUI
 function ISCheatPanelUI:new(x, y, width, height, player) end

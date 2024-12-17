@@ -1,20 +1,20 @@
---- @meta
+--- @meta _
 
 --- @class Int: Numeric
 --- @field public class any
-Int = {};
+Int = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Integer
+--- @return integer
 --- @overload fun(self: Int): Number
 function Int:getMax() end
 
 --- @public
---- @return Integer
+--- @return integer
 --- @overload fun(self: Int): Number
 function Int:getMin() end
 
@@ -23,9 +23,7 @@ function Int:getMin() end
 function Int:getValueType() end
 
 --- @public
---- @param arg0 Integer
---- @return Integer
+--- @param arg0 integer
+--- @return integer
 --- @overload fun(self: Int, arg0: Number): Number
 function Int:validate(arg0) end
-
-

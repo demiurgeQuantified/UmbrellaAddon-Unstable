@@ -14,10 +14,8 @@
 ---@field [any] any
 ISLiteratureUI = ISCollapsableWindowJoypad:derive("ISLiteratureUI")
 
-
 ---@return any
 function ISLiteratureUI.SetItemHidden(fullType, hidden) end
-
 
 ---@return any
 function ISLiteratureUI:close() end
@@ -49,7 +47,6 @@ function ISLiteratureUI:setLists() end
 ---@return any
 function ISLiteratureUI:setMediaLists(scriptItems) end
 
-
 ---@return ISLiteratureUI
 function ISLiteratureUI:new(x, y, width, height, character, owner) end
 
@@ -58,10 +55,8 @@ function ISLiteratureUI:new(x, y, width, height, character, owner) end
 ---@field [any] any
 ISLiteratureList = ISScrollingListBox:derive("ISLiteratureList")
 
-
 ---@return any
 function ISLiteratureList:doDrawItem(y, item, alt) end
-
 
 ---@return ISLiteratureList
 function ISLiteratureList:new(x, y, width, height, character) end
@@ -72,10 +67,8 @@ function ISLiteratureList:new(x, y, width, height, character) end
 ---@field [any] any
 ISLiteratureMediaList = ISScrollingListBox:derive("ISLiteratureMediaList")
 
-
 ---@return any
 function ISLiteratureMediaList:doDrawItem(y, item, alt) end
-
 
 ---@return ISLiteratureMediaList
 function ISLiteratureMediaList:new(x, y, width, height, character) end
@@ -85,10 +78,8 @@ function ISLiteratureMediaList:new(x, y, width, height, character) end
 ---@field [any] any
 ISLiteratureGrowingList = ISScrollingListBox:derive("ISLiteratureGrowingList")
 
-
 ---@return any
 function ISLiteratureGrowingList:doDrawItem(y, item, alt) end
-
 
 ---@return ISLiteratureGrowingList
 function ISLiteratureGrowingList:new(x, y, width, height, character) end

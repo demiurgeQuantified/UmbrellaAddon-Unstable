@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ResourceEnergy: Resource
 --- @field public class any
-ResourceEnergy = {};
+ResourceEnergy = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,7 @@ ResourceEnergy = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function ResourceEnergy:DoTooltip(arg0, arg1) end
 
 --- @public
@@ -25,7 +25,7 @@ function ResourceEnergy:canDrainFromItem(arg0) end
 function ResourceEnergy:canDrainToItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ResourceEnergy:clear() end
 
 --- @public
@@ -43,19 +43,19 @@ function ResourceEnergy:drainToItem(arg0) end
 function ResourceEnergy:getEnergy() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceEnergy:getEnergyAmount() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceEnergy:getEnergyCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceEnergy:getEnergyRatio() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceEnergy:getFreeEnergyCapacity() end
 
 --- @public
@@ -68,41 +68,39 @@ function ResourceEnergy:isFull() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceEnergy:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceEnergy:loadSync(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ResourceEnergy:save(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ResourceEnergy:saveSync(arg0) end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return boolean
 function ResourceEnergy:setEnergyAmount(arg0) end
 
 --- @public
 --- @param arg0 ResourceEnergy
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function ResourceEnergy:transferTo(arg0, arg1) end
 
 --- @public
 --- @param arg0 Resource
---- @return void
---- @overload fun(self: ResourceEnergy, arg0: Resource, arg1: float): void
+--- @return nil
+--- @overload fun(self: ResourceEnergy, arg0: Resource, arg1: number): nil
 function ResourceEnergy:tryTransferTo(arg0) end
-
-

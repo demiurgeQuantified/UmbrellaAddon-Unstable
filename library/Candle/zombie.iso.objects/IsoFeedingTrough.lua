@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoFeedingTrough: IsoObject
 --- @field public class any
-IsoFeedingTrough = {};
+IsoFeedingTrough = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,32 +10,32 @@ IsoFeedingTrough = {};
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoFeedingTrough:addLinkedAnimal(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:addToWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:checkIsoRegion() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:checkOverlayAfterAnimalEat() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:checkOverlayFull() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:checkZone() end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function IsoFeedingTrough:doDef(arg0) end
 
 --- @public
@@ -43,12 +43,12 @@ function IsoFeedingTrough:doDef(arg0) end
 function IsoFeedingTrough:getAllFeedingTypes() end
 
 --- @public
---- @return float
+--- @return number
 function IsoFeedingTrough:getCurrentFeedAmount() end
 
 --- @public
---- @param arg0 String
---- @return float
+--- @param arg0 string
+--- @return number
 function IsoFeedingTrough:getFeedAmount(arg0) end
 
 --- @public
@@ -56,31 +56,31 @@ function IsoFeedingTrough:getFeedAmount(arg0) end
 function IsoFeedingTrough:getLinkedAnimals() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFeedingTrough:getLinkedX() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFeedingTrough:getLinkedY() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFeedingTrough:getMaxFeed() end
 
 --- @public
---- @return float
+--- @return number
 function IsoFeedingTrough:getMaxWater() end
 
 --- @public
---- @return String
+--- @return string
 function IsoFeedingTrough:getObjectName() end
 
 --- @public
---- @return float
+--- @return number
 function IsoFeedingTrough:getWater() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:initWithDef() end
 
 --- @public
@@ -95,82 +95,81 @@ function IsoFeedingTrough:isItemAllowedInContainer(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoFeedingTrough:load(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:onFoodAdded() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:onRemoveFood() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:removeFromWorld() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoFeedingTrough:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function IsoFeedingTrough:setContainer(arg0) end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function IsoFeedingTrough:setDef(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function IsoFeedingTrough:setLinkedAnimals(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFeedingTrough:setLinkedX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFeedingTrough:setLinkedY(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoFeedingTrough:setMaxFeed(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoFeedingTrough:setMaxWater(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoFeedingTrough:setNorth(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoFeedingTrough:setWater(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:update() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFeedingTrough:updateLuaObject() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -179,5 +178,5 @@ function IsoFeedingTrough:updateLuaObject() end
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoFeedingTrough
---- @overload fun(arg0: IsoGridSquare, arg1: String, arg2: IsoGridSquare): IsoFeedingTrough
+--- @overload fun(arg0: IsoGridSquare, arg1: string, arg2: IsoGridSquare): IsoFeedingTrough
 function IsoFeedingTrough.new(arg0) end

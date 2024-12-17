@@ -25,7 +25,6 @@
 ---@field [any] any
 ISSleepDialog = ISPanelJoypad:derive("ISSleepDialog")
 
-
 ---@return any
 function ISSleepDialog:destroy() end
 
@@ -46,7 +45,6 @@ function ISSleepDialog:prerender() end
 
 ---@return any
 function ISSleepDialog:update() end
-
 
 ---@return ISSleepDialog
 function ISSleepDialog:new(x, y, width, height, text, player) end

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IsoWorldRegion
 --- @field public class any
 --- @implement IWorldRegion
-IsoWorldRegion = {};
+IsoWorldRegion = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,7 @@ IsoWorldRegion = {};
 
 --- @public
 --- @param arg0 IsoChunkRegion
---- @return void
+--- @return nil
 function IsoWorldRegion:addIsoChunkRegion(arg0) end
 
 --- @public
@@ -34,7 +34,7 @@ function IsoWorldRegion:getDebugConnectedNeighborCopy() end
 function IsoWorldRegion:getDebugIsoChunkRegionCopy() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoWorldRegion:getID() end
 
 --- @public
@@ -43,17 +43,17 @@ function IsoWorldRegion:getID() end
 function IsoWorldRegion:getNeighbors() end
 
 --- @public
---- @return int
---- @overload fun(self: IsoWorldRegion): int
+--- @return integer
+--- @overload fun(self: IsoWorldRegion): integer
 function IsoWorldRegion:getRoofCnt() end
 
 --- @public
---- @return float
+--- @return number
 function IsoWorldRegion:getRoofedPercentage() end
 
 --- @public
---- @return int
---- @overload fun(self: IsoWorldRegion): int
+--- @return integer
+--- @overload fun(self: IsoWorldRegion): integer
 function IsoWorldRegion:getSquareSize() end
 
 --- @public
@@ -76,16 +76,16 @@ function IsoWorldRegion:isFullyRoofed() end
 function IsoWorldRegion:isPlayerRoom() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoWorldRegion:linkNeighbors() end
 
 --- @public
 --- @param arg0 IsoWorldRegion
---- @return void
+--- @return nil
 function IsoWorldRegion:merge(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoWorldRegion:size() end
 
 --- @public
@@ -94,7 +94,5 @@ function IsoWorldRegion:size() end
 function IsoWorldRegion:swapIsoChunkRegions(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoWorldRegion:unlinkNeighbors() end
-
-

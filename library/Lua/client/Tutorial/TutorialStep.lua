@@ -5,7 +5,6 @@
 ---@field [any] any
 TutorialStep = ISBaseObject:derive("TutorialStep")
 
-
 ---@return any
 function TutorialStep:addMessage(text, x, y) end
 
@@ -29,7 +28,6 @@ function TutorialStep:isComplete() end
 
 ---@return any
 function TutorialStep:onClose(message) end
-
 
 ---@return TutorialStep
 function TutorialStep:new(type) end

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IsoWindowFrame: IsoObject
 --- @field public class any
 --- @implement BarricadeAble
-IsoWindowFrame = {};
+IsoWindowFrame = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,14 +13,14 @@ IsoWindowFrame = {};
 --- @static
 --- @param arg0 IsoObject
 --- @param arg1 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoWindowFrame.addSheet(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoObject
 --- @param arg1 IsoPlayer
---- @param arg2 String
+--- @param arg2 string
 --- @return boolean
 function IsoWindowFrame.addSheetRope(arg0, arg1, arg2) end
 
@@ -40,7 +40,7 @@ function IsoWindowFrame.canClimbThrough(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 IsoObject
---- @return int
+--- @return integer
 function IsoWindowFrame.countAddSheetRope(arg0) end
 
 --- @public
@@ -88,7 +88,6 @@ function IsoWindowFrame.isWindowFrame(arg0) end
 --- @return boolean
 function IsoWindowFrame.removeSheetRope(arg0, arg1) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -99,12 +98,12 @@ function IsoWindowFrame:HasCurtains() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoWindowFrame:addSheet(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param arg1 string
 --- @return boolean
 function IsoWindowFrame:addSheetRope(arg0, arg1) end
 
@@ -118,7 +117,7 @@ function IsoWindowFrame:canAddSheetRope() end
 function IsoWindowFrame:canClimbThrough(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoWindowFrame:countAddSheetRope() end
 
 --- @public
@@ -158,7 +157,7 @@ function IsoWindowFrame:getCurtain() end
 function IsoWindowFrame:getNorth() end
 
 --- @public
---- @return String
+--- @return string
 function IsoWindowFrame:getObjectName() end
 
 --- @public
@@ -199,9 +198,9 @@ function IsoWindowFrame:isBarricaded() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoWindowFrame:load(arg0, arg1, arg2) end
 
 --- @public
@@ -212,9 +211,8 @@ function IsoWindowFrame:removeSheetRope(arg0) end
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoWindowFrame:save(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

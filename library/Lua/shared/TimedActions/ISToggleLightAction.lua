@@ -9,7 +9,6 @@
 ---@field [any] any
 ISToggleLightAction = ISBaseTimedAction:derive("ISToggleLightAction")
 
-
 ---@return any
 function ISToggleLightAction:complete() end
 
@@ -30,7 +29,6 @@ function ISToggleLightAction:stop() end
 
 ---@return any
 function ISToggleLightAction:update() end
-
 
 ---@return ISToggleLightAction
 function ISToggleLightAction:new(character, object) end

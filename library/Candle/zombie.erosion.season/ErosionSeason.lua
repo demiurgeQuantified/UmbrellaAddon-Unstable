@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class ErosionSeason
 --- @field public class any
---- @field public NUM_SEASONS int
---- @field public SEASON_AUTUMN int
---- @field public SEASON_DEFAULT int
---- @field public SEASON_SPRING int
---- @field public SEASON_SUMMER int
---- @field public SEASON_SUMMER2 int
---- @field public SEASON_WINTER int
-ErosionSeason = {};
+--- @field public NUM_SEASONS integer
+--- @field public SEASON_AUTUMN integer
+--- @field public SEASON_DEFAULT integer
+--- @field public SEASON_SPRING integer
+--- @field public SEASON_SUMMER integer
+--- @field public SEASON_SUMMER2 integer
+--- @field public SEASON_WINTER integer
+ErosionSeason = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,149 +17,148 @@ ErosionSeason = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ErosionSeason.Reset() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Object
+--- @return any
 --- @overload fun(self: ErosionSeason): ErosionSeason
 function ErosionSeason:clone() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getCurDayPercent() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDawn() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDayHighNoon() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDayMeanTemperature() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDayNoiseVal() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDayTemperature() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDaylight() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getDusk() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getHighNoon() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getLat() end
 
 --- @public
---- @return double
+--- @return number
 function ErosionSeason:getMaxDaylightSummer() end
 
 --- @public
---- @return double
+--- @return number
 function ErosionSeason:getMaxDaylightWinter() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getRainDayStrength() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getRainYearAverage() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getSeason() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getSeasonDay() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getSeasonDays() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getSeasonLag() end
 
 --- @public
---- @return String
+--- @return string
 function ErosionSeason:getSeasonName() end
 
 --- @public
---- @return String
+--- @return string
 function ErosionSeason:getSeasonNameTranslated() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getSeasonProgression() end
 
 --- @public
---- @return float
+--- @return number
 function ErosionSeason:getSeasonStrength() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getSeedA() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getSeedB() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getSeedC() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getTempDiff() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getTempMax() end
 
 --- @public
---- @return int
+--- @return integer
 function ErosionSeason:getTempMin() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return GregorianCalendar
 function ErosionSeason:getWinterStartDay(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 int
---- @param arg7 int
---- @param arg8 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 number
+--- @param arg6 integer
+--- @param arg7 integer
+--- @param arg8 integer
+--- @return nil
 function ErosionSeason:init(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
@@ -167,7 +166,7 @@ function ErosionSeason:init(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8
 function ErosionSeason:isRainDay() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function ErosionSeason:isSeason(arg0) end
 
@@ -180,33 +179,32 @@ function ErosionSeason:isSunnyDay() end
 function ErosionSeason:isThunderDay() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function ErosionSeason:setCurSeason(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function ErosionSeason:setDay(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 float
---- @param arg10 float
---- @param arg11 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @param arg10 number
+--- @param arg11 number
+--- @return nil
 function ErosionSeason:setRain(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

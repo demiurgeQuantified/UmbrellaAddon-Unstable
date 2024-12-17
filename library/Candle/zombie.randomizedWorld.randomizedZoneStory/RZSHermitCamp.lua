@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSHermitCamp: RandomizedZoneStoryBase
 --- @field public class any
-RZSHermitCamp = {};
+RZSHermitCamp = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,16 +23,14 @@ function RZSHermitCamp.getFireClutter() end
 --- @return ArrayList
 function RZSHermitCamp.getForestClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSHermitCamp:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

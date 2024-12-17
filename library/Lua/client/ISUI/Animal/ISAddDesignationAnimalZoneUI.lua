@@ -25,7 +25,6 @@
 ---@field [any] any
 ISAddDesignationAnimalZoneUI = ISPanel:derive("ISAddDesignationAnimalZoneUI")
 
-
 ---@return any
 function ISAddDesignationAnimalZoneUI:addZone() end
 
@@ -58,7 +57,6 @@ function ISAddDesignationAnimalZoneUI:reset() end
 
 ---@return any
 function ISAddDesignationAnimalZoneUI:updateButtons() end
-
 
 ---@return ISAddDesignationAnimalZoneUI
 function ISAddDesignationAnimalZoneUI:new(x, y, width, height, player) end

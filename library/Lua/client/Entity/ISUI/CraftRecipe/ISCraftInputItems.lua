@@ -11,7 +11,6 @@
 ---@field [any] any
 ISCraftInputItems = ISBaseObject:derive("ISCraftInputItems")
 
-
 ---@return any
 function ISCraftInputItems:getAllItems() end
 
@@ -23,7 +22,6 @@ function ISCraftInputItems:rebuildItemNodes() end
 
 ---@return any
 function ISCraftInputItems:updateContainers() end
-
 
 ---@return ISCraftInputItems
 function ISCraftInputItems:new(_player, _recipeData) end
@@ -39,10 +37,8 @@ function ISCraftInputItems:new(_player, _recipeData) end
 ---@field [any] any
 ISCraftInputItemNode = ISBaseObject:derive("ISCraftInputItemNode")
 
-
 ---@return any
 function ISCraftInputItemNode:reset() end
-
 
 ---@return ISCraftInputItemNode
 function ISCraftInputItemNode:new(_recipe, _scriptItem) end

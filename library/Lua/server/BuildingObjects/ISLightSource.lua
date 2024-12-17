@@ -14,7 +14,6 @@
 ---@field [any] any
 ISLightSource = ISBuildingObject:derive("ISLightSource")
 
-
 ---@return any
 function ISLightSource:create(x, y, z, north, sprite) end
 
@@ -26,7 +25,6 @@ function ISLightSource:isValid(square) end
 
 ---@return any
 function ISLightSource:render(x, y, z, square) end
-
 
 ---@return ISLightSource
 function ISLightSource:new(sprite, northSprite, character) end

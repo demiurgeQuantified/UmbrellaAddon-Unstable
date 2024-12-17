@@ -41,7 +41,6 @@
 ISMap = ISPanelJoypad:derive("ISMap")
 ISMap.SCALE = 0.666
 
-
 ---@return any
 function ISMap:canErase() end
 
@@ -111,14 +110,12 @@ function ISMap:updateButtons() end
 ---@return any
 function ISMap:updateJoypad() end
 
-
 ---@return ISMap
 function ISMap:new(x, y, width, height, map, player) end
 
 ---@class ISMapWrapper : ISCollapsableWindow
 ISMapWrapper = ISCollapsableWindow:derive("ISMapWrapper")
 ISMapWrapper.__index = ISMapWrapper
-
 
 ---@return any
 function ISMapWrapper:close() end
@@ -140,7 +137,6 @@ function ISMapWrapper:render() end
 
 ---@return any
 function ISMapWrapper:setVisible(bVisible) end
-
 
 ---@return ISMapWrapper
 function ISMapWrapper:new(x, y, width, height) end

@@ -1,39 +1,39 @@
---- @meta
+--- @meta _
 
 --- @class StringListScript: BaseScriptObject
 --- @field public class any
-StringListScript = {};
+StringListScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function StringListScript:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function StringListScript:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function StringListScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function StringListScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function StringListScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function StringListScript:PreReload() end
 
 --- @public
@@ -45,7 +45,5 @@ function StringListScript:getObsolete() end
 function StringListScript:getValues() end
 
 --- @public
---- @return void
+--- @return nil
 function StringListScript:reset() end
-
-

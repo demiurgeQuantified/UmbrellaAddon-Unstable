@@ -9,7 +9,6 @@
 ---@field [any] any
 ISUninstallVehiclePart = ISBaseTimedAction:derive("ISUninstallVehiclePart")
 
-
 ---@return any
 function ISUninstallVehiclePart:complete() end
 
@@ -33,7 +32,6 @@ function ISUninstallVehiclePart:update() end
 
 ---@return any
 function ISUninstallVehiclePart:waitToStart() end
-
 
 ---@return ISUninstallVehiclePart
 function ISUninstallVehiclePart:new(character, part, workTime) end

@@ -1,23 +1,23 @@
---- @meta
+--- @meta _
 
 --- @class GameSound
 --- @field public class any
-GameSound = {};
+GameSound = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function GameSound:getCategory() end
 
 --- @public
---- @return String
+--- @return string
 function GameSound:getMasterName() end
 
 --- @public
---- @return String
+--- @return string
 function GameSound:getName() end
 
 --- @public
@@ -25,7 +25,7 @@ function GameSound:getName() end
 function GameSound:getRandomClip() end
 
 --- @public
---- @return float
+--- @return number
 function GameSound:getUserVolume() end
 
 --- @public
@@ -33,19 +33,18 @@ function GameSound:getUserVolume() end
 function GameSound:isLooped() end
 
 --- @public
---- @param arg0 String
---- @return int
+--- @param arg0 string
+--- @return integer
 function GameSound:numClipsUsingParameter(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function GameSound:reset() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameSound:setUserVolume(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

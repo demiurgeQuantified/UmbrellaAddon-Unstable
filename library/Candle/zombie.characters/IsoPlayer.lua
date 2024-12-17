@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class IsoPlayer: IsoLivingCharacter
 --- @field public class any
 --- @implement IAnimalVisual
 --- @implement IHumanVisual
---- @field public assumedPlayer int
---- @field public DEATH_MUSIC_NAME String
+--- @field public assumedPlayer integer
+--- @field public DEATH_MUSIC_NAME string
 --- @field public isTestAIMode boolean
 --- @field public MAX short
 --- @field public NoSound boolean
---- @field public numPlayers int
+--- @field public numPlayers integer
 --- @field public players IsoPlayer[]
-IsoPlayer = {};
+IsoPlayer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,12 +19,12 @@ IsoPlayer = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoPlayer.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoPlayer.UpdateRemovedEmitters() end
 
 --- @public
@@ -54,7 +54,7 @@ function IsoPlayer.getCoopPVP() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function IsoPlayer.getFollowDeadCount() end
 
 --- @public
@@ -70,7 +70,7 @@ function IsoPlayer.getLocalPlayerByOnlineID(arg0) end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function IsoPlayer.getPlayerIndex() end
 
 --- @public
@@ -85,7 +85,7 @@ function IsoPlayer.getStaticTraits() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function IsoPlayer.getUniqueFileName() end
 
 --- @public
@@ -96,47 +96,46 @@ function IsoPlayer.hasInstance() end
 --- @public
 --- @static
 --- @param arg0 Runnable
---- @return void
+--- @return nil
 function IsoPlayer.invokeOnPlayerInstance(arg0) end
 
 --- @public
 --- @static
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 --- @overload fun(arg0: IsoGameCharacter): boolean
 function IsoPlayer.isLocalPlayer(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function IsoPlayer.isServerPlayerIDValid(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer.setCoopPVP(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer.setFollowDeadCount(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function IsoPlayer.setInstance(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 IsoPlayer
---- @return void
+--- @return nil
 function IsoPlayer.setLocalPlayer(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -147,31 +146,31 @@ function IsoPlayer.setLocalPlayer(arg0, arg1) end
 function IsoPlayer:AttemptAttack() end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return boolean
---- @overload fun(self: IsoPlayer, arg0: float, arg1: boolean, arg2: String): boolean
+--- @overload fun(self: IsoPlayer, arg0: number, arg1: boolean, arg2: string): boolean
 function IsoPlayer:DoAttack(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:DoFootstepSound(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:GetAnimSetName() end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @param arg1 float
+--- @param arg1 number
 --- @param arg2 boolean
---- @param arg3 float
---- @param arg4 float
---- @return float
+--- @param arg3 number
+--- @param arg4 number
+--- @return number
 function IsoPlayer:Hit(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:InitSpriteParts() end
 
 --- @public
@@ -188,61 +187,61 @@ function IsoPlayer:IsUsingAimWeapon() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoPlayer:Kill(arg0) end
 
 --- @public
 --- @param arg0 Vector2
---- @return void
+--- @return nil
 function IsoPlayer:MoveUnmodded(arg0) end
 
 --- @public
 --- @param arg0 AnimLayer
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function IsoPlayer:OnAnimEvent(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:OnDeath() end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoPlayer:TestAnimalSpotPlayer(arg0) end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @return void
+--- @return nil
 function IsoPlayer:TestZombieSpotPlayer(arg0) end
 
 --- @public
 --- @param arg0 ActionContext
---- @return void
+--- @return nil
 function IsoPlayer:actionStateChanged(arg0) end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoPlayer:addAttachedAnimal(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 VehiclePart
---- @param arg2 Long
---- @return void
+--- @param arg2 integer
+--- @return nil
 function IsoPlayer:addMechanicsItem(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 Double
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:addSelectedZoneForHighlight(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoPlayer:addWorldSoundUnlessInvisible(arg0, arg1, arg2) end
 
 --- @public
@@ -250,16 +249,16 @@ function IsoPlayer:addWorldSoundUnlessInvisible(arg0, arg1, arg2) end
 function IsoPlayer:allowsTwist() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:becomeCorpse() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:calculateContext() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return int
+--- @return integer
 function IsoPlayer:calculateCritChance(arg0) end
 
 --- @public
@@ -272,7 +271,7 @@ function IsoPlayer:canClimbOverWall(arg0) end
 function IsoPlayer:canPerformHandToHandCombat() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:checkActionGroup() end
 
 --- @public
@@ -286,11 +285,11 @@ function IsoPlayer:checkCanSeeClient(arg0) end
 function IsoPlayer:checkWalkTo() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:clearHandToHandAttack() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:clearNetworkEvents() end
 
 --- @public
@@ -300,13 +299,13 @@ function IsoPlayer:climbOverWall(arg0) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @param arg1 String
+--- @param arg1 string
 --- @return ByteBufferWriter
 function IsoPlayer:createPlayerStats(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return float
+--- @param arg0 number
+--- @return number
 function IsoPlayer:doBeatenVehicle(arg0) end
 
 --- @public
@@ -315,17 +314,17 @@ function IsoPlayer:doBeatenVehicle(arg0) end
 function IsoPlayer:doContext(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:dressInClothingItem(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:dressInNamedOutfit(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getAccessLevel() end
 
 --- @public
@@ -338,11 +337,11 @@ function IsoPlayer:getActiveLightItem() end
 function IsoPlayer:getAimVector(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getAimingMod() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getAimingRangeMod() end
 
 --- @public
@@ -350,13 +349,13 @@ function IsoPlayer:getAimingRangeMod() end
 function IsoPlayer:getAlreadyReadBook() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoPlayer): float
+--- @return number
+--- @overload fun(self: IsoPlayer): number
 function IsoPlayer:getAnimalSize() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoPlayer): String
+--- @return string
+--- @overload fun(self: IsoPlayer): string
 function IsoPlayer:getAnimalType() end
 
 --- @public
@@ -365,7 +364,7 @@ function IsoPlayer:getAnimalType() end
 function IsoPlayer:getAnimalVisual() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getAsleepTime() end
 
 --- @public
@@ -373,7 +372,7 @@ function IsoPlayer:getAsleepTime() end
 function IsoPlayer:getAttachedAnimals() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getAttackType() end
 
 --- @public
@@ -381,7 +380,7 @@ function IsoPlayer:getAttackType() end
 function IsoPlayer:getCell() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getClearSpottedTimer() end
 
 --- @public
@@ -394,7 +393,7 @@ function IsoPlayer:getClosestZombieDist() end
 function IsoPlayer:getClosestZombieToOtherZombie(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getCombatSpeed() end
 
 --- @public
@@ -408,21 +407,21 @@ function IsoPlayer:getContextDoorOrWindowOrWindowFrame(arg0) end
 function IsoPlayer:getControllerAimDir(arg0) end
 
 --- @public
---- @param arg0 float
---- @return float
+--- @param arg0 number
+--- @return number
 function IsoPlayer:getDamageFromHitByACar(arg0) end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function IsoPlayer:getDescription(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getDialogMood() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getDisplayName() end
 
 --- @public
@@ -434,7 +433,7 @@ function IsoPlayer:getDragCharacter() end
 function IsoPlayer:getDragObject() end
 
 --- @public
---- @return byte
+--- @return integer
 function IsoPlayer:getExtraInfoFlags() end
 
 --- @public
@@ -442,24 +441,24 @@ function IsoPlayer:getExtraInfoFlags() end
 function IsoPlayer:getFitness() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getFollowID() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getForname() end
 
 --- @public
 --- @param arg0 boolean
---- @return float
+--- @return number
 function IsoPlayer:getGlobalMovementMod(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getHeartDelay() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getHeartDelayMax() end
 
 --- @public
@@ -467,7 +466,7 @@ function IsoPlayer:getHeartDelayMax() end
 function IsoPlayer:getHitReactionNetworkAI() end
 
 --- @public
---- @return double
+--- @return number
 function IsoPlayer:getHoursSurvived() end
 
 --- @public
@@ -476,25 +475,25 @@ function IsoPlayer:getHoursSurvived() end
 function IsoPlayer:getHumanVisual() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getIndex() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getInvAimingMod() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getInvAimingRangeMod() end
 
 --- @public
 --- @return ItemVisuals
---- @overload fun(self: IsoPlayer, arg0: ItemVisuals): void
---- @overload fun(self: IsoPlayer, arg0: ItemVisuals): void
+--- @overload fun(self: IsoPlayer, arg0: ItemVisuals): nil
+--- @overload fun(self: IsoPlayer, arg0: ItemVisuals): nil
 function IsoPlayer:getItemVisuals() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getJoypadBind() end
 
 --- @public
@@ -502,7 +501,7 @@ function IsoPlayer:getJoypadBind() end
 function IsoPlayer:getLastAngle() end
 
 --- @public
---- @return double
+--- @return number
 function IsoPlayer:getLastSeenZomboidTime() end
 
 --- @public
@@ -510,7 +509,7 @@ function IsoPlayer:getLastSeenZomboidTime() end
 function IsoPlayer:getLastSpotted() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getLightDistance() end
 
 --- @public
@@ -518,17 +517,17 @@ function IsoPlayer:getLightDistance() end
 function IsoPlayer:getLuredAnimals() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getMaxWeightDelta() end
 
 --- @public
---- @param arg0 String
---- @return Long
+--- @param arg0 string
+--- @return integer
 function IsoPlayer:getMechanicsItem(arg0) end
 
 --- @public
 --- @param arg0 MoodleType
---- @return int
+--- @return integer
 function IsoPlayer:getMoodleLevel(arg0) end
 
 --- @public
@@ -537,7 +536,7 @@ function IsoPlayer:getMoodleLevel(arg0) end
 function IsoPlayer:getMouseAimVector(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getMoveSpeed() end
 
 --- @public
@@ -561,15 +560,15 @@ function IsoPlayer:getNetworkCharacterAI() end
 function IsoPlayer:getNutrition() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getObjectName() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getOffSetXUI() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getOffSetYUI() end
 
 --- @public
@@ -581,19 +580,19 @@ function IsoPlayer:getOnlineID() end
 function IsoPlayer:getParameterCharacterMovementSpeed() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getPathSpeed() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getPing() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getPlayerClothingInsulation() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getPlayerClothingTemperature() end
 
 --- @public
@@ -601,18 +600,18 @@ function IsoPlayer:getPlayerClothingTemperature() end
 function IsoPlayer:getPlayerMoveDir() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getPlayerNum() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
 function IsoPlayer:getRelevantAndDistance(arg0, arg1, arg2) end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getReloadingMod() end
 
 --- @public
@@ -620,11 +619,11 @@ function IsoPlayer:getReloadingMod() end
 function IsoPlayer:getRole() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getSeeNearbyCharacterDistance() end
 
 --- @public
---- @return Double
+--- @return number
 function IsoPlayer:getSelectedZoneForHighlight() end
 
 --- @public
@@ -632,7 +631,7 @@ function IsoPlayer:getSelectedZoneForHighlight() end
 function IsoPlayer:getSelectedZonesForHighlight() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getSleepingPillsTaken() end
 
 --- @public
@@ -640,11 +639,11 @@ function IsoPlayer:getSleepingPillsTaken() end
 function IsoPlayer:getSpottedList() end
 
 --- @public
---- @return long
+--- @return integer
 function IsoPlayer:getSteamID() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getSurname() end
 
 --- @public
@@ -652,35 +651,35 @@ function IsoPlayer:getSurname() end
 function IsoPlayer:getTagColor() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getTagPrefix() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getTicksSinceSeenZombie() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getTimeSinceLastStab() end
 
 --- @public
---- @return String
+--- @return string
 function IsoPlayer:getTimeSurvived() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getTimedActionTimeModifier() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getTorchDot() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getTorchStrength() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getTurnDelta() end
 
 --- @public
@@ -692,9 +691,9 @@ function IsoPlayer:getUseableAnimal() end
 function IsoPlayer:getUseableVehicle() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoPlayer, arg0: Boolean): String
---- @overload fun(self: IsoPlayer, arg0: Boolean, arg1: Boolean): String
+--- @return string
+--- @overload fun(self: IsoPlayer, arg0: boolean): string
+--- @overload fun(self: IsoPlayer, arg0: boolean, arg1: boolean): string
 function IsoPlayer:getUsername() end
 
 --- @public
@@ -702,25 +701,25 @@ function IsoPlayer:getUsername() end
 function IsoPlayer:getVisual() end
 
 --- @public
---- @return float
+--- @return number
 function IsoPlayer:getVoicePitch() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoPlayer:getVoiceType() end
 
 --- @public
 --- @param arg0 IsoZombie
---- @return float
+--- @return number
 function IsoPlayer:getZombieRelevenceScore(arg0) end
 
 --- @public
 --- @param arg0 HandWeapon
 --- @param arg1 IsoGameCharacter
 --- @param arg2 boolean
---- @param arg3 float
+--- @param arg3 number
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function IsoPlayer:hitConsequences(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
@@ -730,7 +729,7 @@ function IsoPlayer:hitConsequences(arg0, arg1, arg2, arg3, arg4) end
 function IsoPlayer:hopFence(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function IsoPlayer:isAccessLevel(arg0) end
 
@@ -831,7 +830,7 @@ function IsoPlayer:isDeaf() end
 function IsoPlayer:isDoingActionThatCanBeCancelled() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function IsoPlayer:isDraggingCorpseStateName(arg0) end
 
@@ -913,8 +912,8 @@ function IsoPlayer:isLocalPlayer() end
 function IsoPlayer:isLookingWhileInVehicle() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @param arg2 boolean
 --- @return boolean
 function IsoPlayer:isMaskClicked(arg0, arg1, arg2) end
@@ -924,7 +923,7 @@ function IsoPlayer:isMaskClicked(arg0, arg1, arg2) end
 function IsoPlayer:isMeleePressed() end
 
 --- @public
---- @return Boolean
+--- @return boolean
 function IsoPlayer:isNearVehicle() end
 
 --- @public
@@ -1068,45 +1067,45 @@ function IsoPlayer:isbCouldBeSeenThisFrame() end
 function IsoPlayer:isbSeenThisFrame() end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: IsoPlayer, arg0: ByteBuffer, arg1: int, arg2: boolean): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: IsoPlayer, arg0: ByteBuffer, arg1: integer, arg2: boolean): nil
 function IsoPlayer:load(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function IsoPlayer:lureAnimal(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:nullifyAiming() end
 
 --- @public
 --- @param arg0 ModelManager
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoPlayer:onCullStateChanged(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:onWornItemsChanged() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:petAnimal() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:playBloodSplatterSound() end
 
 --- @public
---- @param arg0 String
---- @return long
+--- @param arg0 string
+--- @return integer
 function IsoPlayer:playerVoiceSound(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:postupdate() end
 
 --- @public
@@ -1114,7 +1113,7 @@ function IsoPlayer:postupdate() end
 function IsoPlayer:pressedAim() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:pressedAttack() end
 
 --- @public
@@ -1127,509 +1126,509 @@ function IsoPlayer:pressedCancelAction() end
 function IsoPlayer:pressedMovement(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:preupdate() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:removeAllAttachedAnimals() end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoPlayer:removeAttachedAnimal(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:removeFromWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:removeSaveFile() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoPlayer:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:renderlast() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:resetSelectedZonesForHighlight() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:resetSleepingPillsTaken() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoPlayer, arg0: String): void
---- @overload fun(self: IsoPlayer, arg0: ByteBuffer, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: IsoPlayer, arg0: string): nil
+--- @overload fun(self: IsoPlayer, arg0: ByteBuffer, arg1: boolean): nil
 function IsoPlayer:save() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAllChatMuted(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAllowRun(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAllowSprint(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:setAngleFromAim() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setAsleepTime(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setAttackAnimThrowTimer(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAttackFromBehind(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAttackStarted(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setAttackType(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setAttackVariationX(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setAttackVariationY(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAuthorizeMeleeAction(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAuthorizeShoveStomp(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAuthorizedHandToHand(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setAuthorizedHandToHandAction(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setBannedAttacking(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setBlockMovement(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setCanHearAll(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setCanSeeAll(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setClearSpottedTimer(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setClimbOverWallStruggle(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setClimbOverWallSuccess(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setCombatSpeed(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setDialogMood(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setDisplayName(arg0) end
 
 --- @public
 --- @param arg0 IsoSurvivor
---- @return void
+--- @return nil
 function IsoPlayer:setDragCharacter(arg0) end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @return void
+--- @return nil
 function IsoPlayer:setDragObject(arg0) end
 
 --- @public
---- @param arg0 byte
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setExtraInfoFlags(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setFactionPvp(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setFishingStage(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:setFitnessSpeed() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setFollowID(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setForceAim(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setForceOverrideAnim(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setForceRun(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setForceSprint(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setForname(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setGhostMode(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setHasObstacleOnPath(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setHeartDelay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setHeartDelayMax(arg0) end
 
 --- @public
---- @param arg0 double
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setHoursSurvived(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setIgnoreAutoVault(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setIgnoreContextKey(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setIgnoreInputsForDirection(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setInitiateAttack(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setInvPageDirty(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setIsFarming(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setIsLuringAnimals(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setJoypadIgnoreAimUntilCentered(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setJustMoved(arg0) end
 
 --- @public
 --- @param arg0 Vector2
---- @return void
+--- @return nil
 function IsoPlayer:setLastAngle(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setLastAttackWasHandToHand(arg0) end
 
 --- @public
 --- @param arg0 Stack
---- @return void
+--- @return nil
 function IsoPlayer:setLastSpotted(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setMaxWeightDelta(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: IsoPlayer, arg0: Material): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: IsoPlayer, arg0: Material): nil
 function IsoPlayer:setMeleeHitSurface(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setMoodleCantSprint(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setMoveSpeed(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setNetworkTeleportEnabled(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setNoClip(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setOffSetXUI(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setOffSetYUI(arg0) end
 
 --- @public
 --- @param arg0 short
---- @return void
+--- @return nil
 function IsoPlayer:setOnlineID(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setPathfindRunning(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setPerformingAnAction(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setPing(arg0) end
 
 --- @public
 --- @param arg0 Vector2
---- @return void
+--- @return nil
 function IsoPlayer:setPlayerMoveDir(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 String
---- @return String
+--- @param arg1 string
+--- @return string
 function IsoPlayer:setPlayerStats(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: IsoPlayer, arg0: Role): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: IsoPlayer, arg0: Role): nil
 function IsoPlayer:setRole(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setSeeDesignationZone(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setSeeNonPvpZone(arg0) end
 
 --- @public
---- @param arg0 Double
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setSelectedZoneForHighlight(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setShowMPInfos(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setShowTag(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setSleepingPillsTaken(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setSteamID(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setSurname(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo
---- @return void
+--- @return nil
 function IsoPlayer:setTagColor(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setTagPrefix(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setTicksSinceSeenZombie(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setTimeSinceLastStab(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:setUsername(arg0) end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @return void
+--- @return nil
 function IsoPlayer:setVehicle4TestCollision(arg0) end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @return void
+--- @return nil
 function IsoPlayer:setVehicleHitLocation(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoPlayer:setVoicePitch(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoPlayer:setVoiceType(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setWaiting(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setWearingNightVisionGoggles(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setbChangeCharacterDebounce(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setbCouldBeSeenThisFrame(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:setbSeenThisFrame(arg0) end
 
 --- @public
@@ -1642,22 +1641,22 @@ function IsoPlayer:shouldDoInventory() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function IsoPlayer:startReceivingBodyDamageUpdates(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoPlayer:stopLuringAnimals(arg0) end
 
 --- @public
---- @param arg0 String
---- @return long
+--- @param arg0 string
+--- @return integer
 function IsoPlayer:stopPlayerVoiceSound(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function IsoPlayer:stopReceivingBodyDamageUpdates(arg0) end
 
 --- @public
@@ -1677,32 +1676,32 @@ function IsoPlayer:toggleForceSprint() end
 function IsoPlayer:tooDarkToRead() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoPlayer:triggerMusicIntensityEvent(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:update() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:updateEnduranceWhileSitting() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:updateLOS() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:updateMovementRates() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:updateUsername() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoPlayer:updateVocalProperties() end
 
 --- @public
@@ -1713,7 +1712,6 @@ function IsoPlayer:wasLastAttackHandToHand() end
 --- @return boolean
 function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
@@ -1721,6 +1719,6 @@ function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoPlayer
---- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: int, arg3: int, arg4: int): IsoPlayer
---- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: int, arg3: int, arg4: int, arg5: boolean): IsoPlayer
+--- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: integer, arg3: integer, arg4: integer): IsoPlayer
+--- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: integer, arg3: integer, arg4: integer, arg5: boolean): IsoPlayer
 function IsoPlayer.new(arg0) end

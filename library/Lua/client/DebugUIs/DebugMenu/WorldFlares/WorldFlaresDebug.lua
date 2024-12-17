@@ -27,10 +27,8 @@
 WorldFlaresDebug = ISPanel:derive("WorldFlaresDebug")
 WorldFlaresDebug.instance = nil
 
-
 ---@return any
 function WorldFlaresDebug.OnOpenPanel() end
-
 
 ---@return any
 function WorldFlaresDebug:close() end
@@ -70,7 +68,6 @@ function WorldFlaresDebug:prerender() end
 
 ---@return any
 function WorldFlaresDebug:update() end
-
 
 ---@return WorldFlaresDebug
 function WorldFlaresDebug:new(x, y, width, height, title) end

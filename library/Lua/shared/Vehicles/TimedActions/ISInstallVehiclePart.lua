@@ -9,7 +9,6 @@
 ---@field [any] any
 ISInstallVehiclePart = ISBaseTimedAction:derive("ISInstallVehiclePart")
 
-
 ---@return any
 function ISInstallVehiclePart:complete() end
 
@@ -33,7 +32,6 @@ function ISInstallVehiclePart:update() end
 
 ---@return any
 function ISInstallVehiclePart:waitToStart() end
-
 
 ---@return ISInstallVehiclePart
 function ISInstallVehiclePart:new(character, part, item, maxTime) end

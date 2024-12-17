@@ -52,13 +52,11 @@ ClimateDebug.instance = nil
 ClimateDebug.shiftDown = 0
 ClimateDebug.eventsAdded = false
 
-
 ---@return any
 function ClimateDebug.OnClimateTickDebug(mgr) end
 
 ---@return any
 function ClimateDebug.OnOpenPanel() end
-
 
 ---@return any
 function ClimateDebug:addColor(_r, _g, _b) end
@@ -104,7 +102,6 @@ function ClimateDebug:update() end
 
 ---@return any
 function ClimateDebug:updateValues(_mgr) end
-
 
 ---@return ClimateDebug
 function ClimateDebug:new(x, y, width, height, player) end

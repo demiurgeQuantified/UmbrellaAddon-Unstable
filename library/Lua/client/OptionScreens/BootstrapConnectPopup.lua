@@ -10,7 +10,6 @@
 ---@field [any] any
 BootstrapConnectPopup = ISPanelJoypad:derive("BootstrapConnectPopup")
 
-
 ---@return any
 function BootstrapConnectPopup:connect(host, port, serverPassword) end
 

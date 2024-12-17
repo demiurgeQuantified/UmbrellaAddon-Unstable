@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class PlayerGetUpState: State
 --- @field public class any
-PlayerGetUpState = {};
+PlayerGetUpState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,26 +13,24 @@ PlayerGetUpState = {};
 --- @return PlayerGetUpState
 function PlayerGetUpState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerGetUpState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerGetUpState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerGetUpState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

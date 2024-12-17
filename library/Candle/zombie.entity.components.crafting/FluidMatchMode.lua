@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class FluidMatchMode: Enum
 --- @field public class any
 --- @field public Anything FluidMatchMode
 --- @field public Exact FluidMatchMode
 --- @field public Primary FluidMatchMode
-FluidMatchMode = {};
+FluidMatchMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ FluidMatchMode = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return FluidMatchMode
 function FluidMatchMode.valueOf(arg0) end
 
@@ -21,5 +21,3 @@ function FluidMatchMode.valueOf(arg0) end
 --- @static
 --- @return FluidMatchMode[]
 function FluidMatchMode.values() end
-
-

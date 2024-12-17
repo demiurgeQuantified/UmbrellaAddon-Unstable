@@ -9,7 +9,6 @@
 ---@field [any] any
 ISFertilizeAction = ISBaseTimedAction:derive("ISFertilizeAction")
 
-
 ---@return any
 function ISFertilizeAction:complete() end
 
@@ -33,7 +32,6 @@ function ISFertilizeAction:update() end
 
 ---@return any
 function ISFertilizeAction:waitToStart() end
-
 
 ---@return ISFertilizeAction
 function ISFertilizeAction:new(character, item, plant, maxTime) end

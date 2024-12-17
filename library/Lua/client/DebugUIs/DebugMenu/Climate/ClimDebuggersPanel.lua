@@ -5,13 +5,11 @@
 ---@field [any] any
 ClimDebuggersPanel = ISDebugSubPanelBase:derive("ClimDebuggersPanel")
 
-
 ---@return any
 function ClimDebuggersPanel.OnSimulationButton() end
 
 ---@return any
 function ClimDebuggersPanel.OnSimulationButtonOverride(_rainModOverride) end
-
 
 ---@return any
 function ClimDebuggersPanel:addButtonInfo(_title, _func, _marginBot, _arg) end
@@ -39,7 +37,6 @@ function ClimDebuggersPanel:prerender() end
 
 ---@return any
 function ClimDebuggersPanel:update() end
-
 
 ---@return ClimDebuggersPanel
 function ClimDebuggersPanel:new(x, y, width, height, doStencil) end

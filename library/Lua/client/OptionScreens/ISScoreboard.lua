@@ -24,13 +24,11 @@
 ISScoreboard = ISPanelJoypad:derive("ISScoreboard")
 ISScoreboard.buttonsList = {}
 
-
 ---@return any
 function ISScoreboard.onScoreboardUpdate(usernames, displayNames, steamIDs) end
 
 ---@return any
 function ISScoreboard.recreate() end
-
 
 ---@return any
 function ISScoreboard:create() end
@@ -67,7 +65,6 @@ function ISScoreboard:render() end
 
 ---@return any
 function ISScoreboard:update() end
-
 
 ---@return ISScoreboard
 function ISScoreboard:new(x, y, width, height) end

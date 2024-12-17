@@ -9,7 +9,6 @@
 ---@field [any] any
 ISPutAnimalOnHook = ISBaseTimedAction:derive("ISPutAnimalOnHook")
 
-
 ---@return any
 function ISPutAnimalOnHook:complete() end
 
@@ -33,7 +32,6 @@ function ISPutAnimalOnHook:update() end
 
 ---@return any
 function ISPutAnimalOnHook:waitToStart() end
-
 
 ---@return ISPutAnimalOnHook
 function ISPutAnimalOnHook:new(character, body, hook, luaHook) end

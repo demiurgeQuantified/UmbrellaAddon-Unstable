@@ -9,7 +9,6 @@
 ---@field [any] any
 WorldMapEditorMode_Annotations = WorldMapEditorMode:derive("WorldMapEditorMode_Annotations")
 
-
 ---@return any
 function WorldMapEditorMode_Annotations:createChildren() end
 
@@ -48,7 +47,6 @@ function WorldMapEditorMode_Annotations:render() end
 
 ---@return any
 function WorldMapEditorMode_Annotations:undisplay() end
-
 
 ---@return WorldMapEditorMode_Annotations
 function WorldMapEditorMode_Annotations:new(editor) end

@@ -15,7 +15,6 @@
 ISPVPLogToolUI = ISPanel:derive("ISPVPLogToolUI")
 ISPVPLogToolUI.instance = nil
 
-
 ---@return any
 function ISPVPLogToolUI:closeModal() end
 
@@ -36,7 +35,6 @@ function ISPVPLogToolUI:onTicked(index, selected) end
 
 ---@return any
 function ISPVPLogToolUI:prerender() end
-
 
 ---@return ISPVPLogToolUI
 function ISPVPLogToolUI:new(x, y, width, height) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class InputItemNode
 --- @field public class any
-InputItemNode = {};
+InputItemNode = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,7 @@ function InputItemNode:getFirstMatchedInputScript() end
 function InputItemNode:getItems() end
 
 --- @public
---- @return String
+--- @return string
 function InputItemNode:getName() end
 
 --- @public
@@ -54,13 +54,12 @@ function InputItemNode:isUse() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InputItemNode:setExpanded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InputItemNode:toggleExpanded() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

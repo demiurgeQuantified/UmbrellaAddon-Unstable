@@ -1,28 +1,28 @@
---- @meta
+--- @meta _
 
 --- @class Radio: Moveable
 --- @field public class any
 --- @implement Talker
 --- @implement IUpdater
 --- @implement WaveSignalDevice
-Radio = {};
+Radio = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
---- @param arg5 String
---- @param arg6 int
---- @return void
---- @overload fun(self: Radio, arg0: String, arg1: float, arg2: float, arg3: float, arg4: String, arg5: String, arg6: int): void
---- @overload fun(self: Radio, arg0: ChatMessage, arg1: float, arg2: float, arg3: float, arg4: String, arg5: String, arg6: int): void
---- @overload fun(self: Radio, arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 string
+--- @param arg5 string
+--- @param arg6 integer
+--- @return nil
+--- @overload fun(self: Radio, arg0: string, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
+--- @overload fun(self: Radio, arg0: ChatMessage, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
+--- @overload fun(self: Radio, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
 function Radio:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -36,32 +36,32 @@ function Radio:HasPlayerInRange() end
 function Radio:IsSpeaking() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function Radio:ReadFromWorldSprite(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: Radio, arg0: String): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: Radio, arg0: string): nil
 function Radio:Say(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function Radio:canBeEquipped() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Radio:doReceiveSignal(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function Radio:getClothingExtraSubmenu() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getDelta() end
 
 --- @public
@@ -74,12 +74,12 @@ function Radio:getDeviceData() end
 function Radio:getPlayer() end
 
 --- @public
---- @return int
+--- @return integer
 function Radio:getSaveType() end
 
 --- @public
---- @return String
---- @overload fun(self: Radio): String
+--- @return string
+--- @overload fun(self: Radio): string
 function Radio:getSayLine() end
 
 --- @public
@@ -88,78 +88,77 @@ function Radio:getSayLine() end
 function Radio:getSquare() end
 
 --- @public
---- @return String
---- @overload fun(self: Radio): String
+--- @return string
+--- @overload fun(self: Radio): string
 function Radio:getTalkerType() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getX() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getY() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getZ() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function Radio:load(arg0, arg1) end
 
 --- @public
---- @return void
---- @overload fun(self: Radio): void
+--- @return nil
+--- @overload fun(self: Radio): nil
 function Radio:render() end
 
 --- @public
---- @return void
---- @overload fun(self: Radio): void
+--- @return nil
+--- @overload fun(self: Radio): nil
 function Radio:renderlast() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function Radio:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Radio:setCanBeEquipped(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
---- @overload fun(self: Radio, arg0: float): void
+--- @param arg0 number
+--- @return nil
+--- @overload fun(self: Radio, arg0: number): nil
 function Radio:setDelta(arg0) end
 
 --- @public
 --- @param arg0 DeviceData
---- @return void
---- @overload fun(self: Radio, arg0: DeviceData): void
+--- @return nil
+--- @overload fun(self: Radio, arg0: DeviceData): nil
 function Radio:setDeviceData(arg0) end
 
 --- @public
---- @return void
---- @overload fun(self: Radio): void
+--- @return nil
+--- @overload fun(self: Radio): nil
 function Radio:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @return Radio
 function Radio.new(arg0, arg1, arg2, arg3) end

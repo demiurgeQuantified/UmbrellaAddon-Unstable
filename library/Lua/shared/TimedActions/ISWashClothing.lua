@@ -13,7 +13,6 @@
 ---@field [any] any
 ISWashClothing = ISBaseTimedAction:derive("ISWashClothing")
 
-
 ---@return any
 function ISWashClothing.GetRequiredSoap(item) end
 
@@ -22,7 +21,6 @@ function ISWashClothing.GetRequiredWater(item) end
 
 ---@return any
 function ISWashClothing.GetSoapRemaining(soaps) end
-
 
 ---@return any
 function ISWashClothing:complete() end
@@ -50,7 +48,6 @@ function ISWashClothing:update() end
 
 ---@return any
 function ISWashClothing:useSoap(item, part) end
-
 
 ---@return ISWashClothing
 function ISWashClothing:new(character, sink, soaps, item, bloodAmount, dirtAmount, noSoap) end

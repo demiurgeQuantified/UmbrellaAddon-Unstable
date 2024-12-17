@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class DesignationZoneAnimal: DesignationZone
 --- @field public class any
 --- @field public designationAnimalZoneList ArrayList
---- @field public FENCE_NORTH String
---- @field public FENCE_NORTHCORNER String
---- @field public FENCE_WEST String
---- @field public ZONE_TYPE String
---- @field public ZONECOLORB float
---- @field public ZONECOLORG float
---- @field public ZONECOLORR float
---- @field public ZONESELECTEDCOLORB float
---- @field public ZONESELECTEDCOLORG float
---- @field public ZONESELECTEDCOLORR float
-DesignationZoneAnimal = {};
+--- @field public FENCE_NORTH string
+--- @field public FENCE_NORTHCORNER string
+--- @field public FENCE_WEST string
+--- @field public ZONE_TYPE string
+--- @field public ZONECOLORB number
+--- @field public ZONECOLORG number
+--- @field public ZONECOLORR number
+--- @field public ZONESELECTEDCOLORB number
+--- @field public ZONESELECTEDCOLORG number
+--- @field public ZONESELECTEDCOLORR number
+DesignationZoneAnimal = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,22 +21,22 @@ DesignationZoneAnimal = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function DesignationZoneAnimal.Reset() end
 
 --- @public
 --- @static
 --- @param arg0 IsoWorldInventoryObject
 --- @param arg1 IsoGridSquare
---- @return void
+--- @return nil
 function DesignationZoneAnimal.addFoodOnGround(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function DesignationZoneAnimal.addNewRoof(arg0, arg1, arg2) end
 
 --- @public
@@ -54,45 +54,44 @@ function DesignationZoneAnimal.getAllZones() end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function DesignationZoneAnimal.getType() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return DesignationZoneAnimal
---- @overload fun(arg0: int, arg1: int, arg2: int): DesignationZoneAnimal
+--- @overload fun(arg0: integer, arg1: integer, arg2: integer): DesignationZoneAnimal
 function DesignationZoneAnimal.getZone(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoWorldInventoryObject
---- @return void
+--- @return nil
 function DesignationZoneAnimal.removeFoodFromGround(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 DesignationZoneAnimal
---- @return void
+--- @return nil
 function DesignationZoneAnimal.removeZone(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function DesignationZoneAnimal:check() end
 
 --- @public
---- @return void
+--- @return nil
 function DesignationZoneAnimal:createSurroundingFence() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DesignationZoneAnimal:doMeta(arg0) end
 
 --- @public
@@ -112,7 +111,7 @@ function DesignationZoneAnimal:getFoodOnGround() end
 function DesignationZoneAnimal:getFoodOnGroundConnected() end
 
 --- @public
---- @return int
+--- @return integer
 function DesignationZoneAnimal:getFullZoneSize() end
 
 --- @public
@@ -141,20 +140,19 @@ function DesignationZoneAnimal:getTroughsConnected() end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function DesignationZoneAnimal:removeAnimal(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
 --- @return DesignationZoneAnimal
 function DesignationZoneAnimal.new(arg0, arg1, arg2, arg3, arg4, arg5) end

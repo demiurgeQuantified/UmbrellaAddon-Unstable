@@ -18,7 +18,6 @@
 ---@field [any] any
 ISButcherHookProcessorPanel = ISPanel:derive("ISButcherHookProcessorPanel")
 
-
 ---@return any
 function ISButcherHookProcessorPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -48,7 +47,6 @@ function ISButcherHookProcessorPanel:render() end
 
 ---@return any
 function ISButcherHookProcessorPanel:update() end
-
 
 ---@return ISButcherHookProcessorPanel
 function ISButcherHookProcessorPanel:new(x, y, width, height, player, entity, component, craftProcessor) end

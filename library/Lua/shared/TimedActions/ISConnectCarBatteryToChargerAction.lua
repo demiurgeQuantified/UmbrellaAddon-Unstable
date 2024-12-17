@@ -7,7 +7,6 @@
 ---@field [any] any
 ISConnectCarBatteryToChargerAction = ISBaseTimedAction:derive("ISConnectCarBatteryToChargerAction")
 
-
 ---@return any
 function ISConnectCarBatteryToChargerAction:complete() end
 
@@ -31,7 +30,6 @@ function ISConnectCarBatteryToChargerAction:update() end
 
 ---@return any
 function ISConnectCarBatteryToChargerAction:waitToStart() end
-
 
 ---@return ISConnectCarBatteryToChargerAction
 function ISConnectCarBatteryToChargerAction:new(character, charger, battery) end

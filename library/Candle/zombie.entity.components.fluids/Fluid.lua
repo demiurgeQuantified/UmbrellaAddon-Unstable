@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Fluid
 --- @field public class any
@@ -28,7 +28,7 @@
 --- @field public Water Fluid
 --- @field public Whiskey Fluid
 --- @field public Wine Fluid
-Fluid = {};
+Fluid = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,7 @@ function Fluid.FluidsInitialized() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Fluid
 --- @overload fun(arg0: FluidType): Fluid
 function Fluid.Get(arg0) end
@@ -49,17 +49,17 @@ function Fluid.Get(arg0) end
 --- @public
 --- @static
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function Fluid.Init(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Fluid.PreReloadScripts() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function Fluid.Reset() end
 
 --- @public
@@ -75,7 +75,7 @@ function Fluid.getAllFluids() end
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @return Fluid
 function Fluid.loadFluid(arg0, arg1) end
 
@@ -83,9 +83,8 @@ function Fluid.loadFluid(arg0, arg1) end
 --- @static
 --- @param arg0 Fluid
 --- @param arg1 ByteBuffer
---- @return void
+--- @return nil
 function Fluid.saveFluid(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -105,7 +104,7 @@ function Fluid:getCategories() end
 function Fluid:getColor() end
 
 --- @public
---- @return String
+--- @return string
 function Fluid:getDisplayName() end
 
 --- @public
@@ -113,7 +112,7 @@ function Fluid:getDisplayName() end
 function Fluid:getFluidType() end
 
 --- @public
---- @return String
+--- @return string
 function Fluid:getFluidTypeString() end
 
 --- @public
@@ -133,11 +132,11 @@ function Fluid:getProperties() end
 function Fluid:getScript() end
 
 --- @public
---- @return String
+--- @return string
 function Fluid:getTranslatedName() end
 
 --- @public
---- @return String
+--- @return string
 function Fluid:getTranslatedNameLower() end
 
 --- @public
@@ -154,7 +153,5 @@ function Fluid:isPoisonous() end
 function Fluid:isVanilla() end
 
 --- @public
---- @return String
+--- @return string
 function Fluid:toString() end
-
-

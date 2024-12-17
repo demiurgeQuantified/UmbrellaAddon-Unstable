@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class PerkFactory
 --- @field public class any
 --- @field public PerkList ArrayList
-PerkFactory = {};
+PerkFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,26 +12,26 @@ PerkFactory = {};
 --- @public
 --- @static
 --- @param arg0 Perk
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
---- @param arg8 int
---- @param arg9 int
---- @param arg10 int
---- @param arg11 int
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @param arg7 integer
+--- @param arg8 integer
+--- @param arg9 integer
+--- @param arg10 integer
+--- @param arg11 integer
 --- @return Perk
---- @overload fun(arg0: Perk, arg1: String, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int, arg9: int, arg10: int, arg11: int, arg12: boolean): Perk
---- @overload fun(arg0: Perk, arg1: String, arg2: Perk, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int, arg9: int, arg10: int, arg11: int, arg12: int): Perk
---- @overload fun(arg0: Perk, arg1: String, arg2: Perk, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int, arg9: int, arg10: int, arg11: int, arg12: int, arg13: boolean): Perk
+--- @overload fun(arg0: Perk, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: integer, arg8: integer, arg9: integer, arg10: integer, arg11: integer, arg12: boolean): Perk
+--- @overload fun(arg0: Perk, arg1: string, arg2: Perk, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: integer, arg8: integer, arg9: integer, arg10: integer, arg11: integer, arg12: integer): Perk
+--- @overload fun(arg0: Perk, arg1: string, arg2: Perk, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: integer, arg8: integer, arg9: integer, arg10: integer, arg11: integer, arg12: integer, arg13: boolean): Perk
 function PerkFactory.AddPerk(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function PerkFactory.Reset() end
 
 --- @public
@@ -42,26 +42,25 @@ function PerkFactory.getPerk(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Perk
 function PerkFactory.getPerkFromName(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 Perk
---- @return String
+--- @return string
 function PerkFactory.getPerkName(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function PerkFactory.init() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function PerkFactory.initTranslations() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

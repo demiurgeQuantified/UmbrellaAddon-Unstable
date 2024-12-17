@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class FluidFilterScript: BaseScriptObject
 --- @field public class any
-FluidFilterScript = {};
+FluidFilterScript = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,42 +14,41 @@ FluidFilterScript = {};
 --- @overload fun(arg0: boolean): FluidFilterScript
 function FluidFilterScript.GetAnonymous() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function FluidFilterScript:Load(arg0, arg1) end
 
 --- @public
 --- @param arg0 Block
---- @return void
+--- @return nil
 function FluidFilterScript:LoadAnonymousFromBlock(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FluidFilterScript:LoadAnonymousSingleFluid(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FluidFilterScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function FluidFilterScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function FluidFilterScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FluidFilterScript:PreReload() end
 
 --- @public
@@ -66,13 +65,12 @@ function FluidFilterScript:getFilter() end
 
 --- @public
 --- @param arg0 IVersionHash
---- @return void
+--- @return nil
 function FluidFilterScript:getVersion(arg0) end
 
 --- @public
 --- @return boolean
 function FluidFilterScript:isSingleFluid() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

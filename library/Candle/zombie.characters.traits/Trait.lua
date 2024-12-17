@@ -1,31 +1,31 @@
---- @meta
+--- @meta _
 
 --- @class Trait
 --- @field public class any
 --- @implement IListBoxItem
-Trait = {};
+Trait = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Trait:addFreeTrait(arg0) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function Trait:addXPBoost(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function Trait:getCost() end
 
 --- @public
---- @return String
+--- @return string
 function Trait:getDescription() end
 
 --- @public
@@ -37,13 +37,13 @@ function Trait:getFreeRecipes() end
 function Trait:getFreeTraits() end
 
 --- @public
---- @return String
---- @overload fun(self: Trait): String
+--- @return string
+--- @overload fun(self: Trait): string
 function Trait:getLabel() end
 
 --- @public
---- @return String
---- @overload fun(self: Trait): String
+--- @return string
+--- @overload fun(self: Trait): string
 function Trait:getLeftLabel() end
 
 --- @public
@@ -51,8 +51,8 @@ function Trait:getLeftLabel() end
 function Trait:getMutuallyExclusiveTraits() end
 
 --- @public
---- @return String
---- @overload fun(self: Trait): String
+--- @return string
+--- @overload fun(self: Trait): string
 function Trait:getRightLabel() end
 
 --- @public
@@ -60,7 +60,7 @@ function Trait:getRightLabel() end
 function Trait:getTexture() end
 
 --- @public
---- @return String
+--- @return string
 function Trait:getType() end
 
 --- @public
@@ -76,30 +76,29 @@ function Trait:isFree() end
 function Trait:isRemoveInMP() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function Trait:setDescription(arg0) end
 
 --- @public
 --- @param arg0 List
---- @return void
+--- @return nil
 function Trait:setFreeRecipes(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Trait:setRemoveInMP(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 string
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @return Trait

@@ -9,7 +9,6 @@
 ---@field [any] any
 ISDebugSubPanelBase = ISPanel:derive("ISDebugSubPanelBase")
 
-
 ---@return any
 function ISDebugSubPanelBase:close() end
 
@@ -21,7 +20,6 @@ function ISDebugSubPanelBase:prerender() end
 
 ---@return any
 function ISDebugSubPanelBase:render() end
-
 
 ---@return ISDebugSubPanelBase
 function ISDebugSubPanelBase:new(x, y, width, height, doStencil) end

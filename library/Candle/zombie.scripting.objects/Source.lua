@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class Source
 --- @field public class any
-Source = {};
+Source = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function Source:getCount() end
 
 --- @public
@@ -17,7 +17,7 @@ function Source:getCount() end
 function Source:getItems() end
 
 --- @public
---- @return String
+--- @return string
 function Source:getOnlyItem() end
 
 --- @public
@@ -25,7 +25,7 @@ function Source:getOnlyItem() end
 function Source:getOriginalItems() end
 
 --- @public
---- @return float
+--- @return number
 function Source:getUse() end
 
 --- @public
@@ -37,25 +37,24 @@ function Source:isDestroy() end
 function Source:isKeep() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Source:setCount(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Source:setDestroy(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function Source:setKeep(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function Source:setUse(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

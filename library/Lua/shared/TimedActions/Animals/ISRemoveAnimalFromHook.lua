@@ -11,7 +11,6 @@
 ---@field [any] any
 ISRemoveAnimalFromHook = ISBaseTimedAction:derive("ISRemoveAnimalFromHook")
 
-
 ---@return any
 function ISRemoveAnimalFromHook:complete() end
 
@@ -35,7 +34,6 @@ function ISRemoveAnimalFromHook:update() end
 
 ---@return any
 function ISRemoveAnimalFromHook:waitToStart() end
-
 
 ---@return ISRemoveAnimalFromHook
 function ISRemoveAnimalFromHook:new(character, body, hook, luaHook) end

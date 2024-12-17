@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class XuiVar
 --- @field public class any
-XuiVar = {};
+XuiVar = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,7 @@ function XuiVar:getAutoApplyMode() end
 function XuiVar:getDefaultStyle() end
 
 --- @public
---- @return String
+--- @return string
 function XuiVar:getLuaTableKey() end
 
 --- @public
@@ -29,11 +29,11 @@ function XuiVar:getStyle() end
 function XuiVar:getType() end
 
 --- @public
---- @return int
+--- @return integer
 function XuiVar:getUiOrder() end
 
 --- @public
---- @return String
+--- @return string
 function XuiVar:getValueString() end
 
 --- @public
@@ -58,26 +58,24 @@ function XuiVar:isValueSet() end
 
 --- @public
 --- @param arg0 XuiAutoApply
---- @return void
+--- @return nil
 function XuiVar:setAutoApplyMode(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function XuiVar:setScriptLoadEnabled(arg0) end
 
 --- @public
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function XuiVar:setUiOrder(arg0) end
 
 --- @public
---- @param arg0 Object
---- @return void
+--- @param arg0 any
+--- @return nil
 function XuiVar:setValue(arg0) end
 
 --- @public
---- @return Object
+--- @return any
 function XuiVar:value() end
-
-

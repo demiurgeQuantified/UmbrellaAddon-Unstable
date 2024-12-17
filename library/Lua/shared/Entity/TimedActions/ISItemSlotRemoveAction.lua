@@ -9,7 +9,6 @@
 ---@field [any] any
 ISItemSlotRemoveAction = ISBaseTimedAction:derive("ISItemSlotRemoveAction")
 
-
 ---@return any
 function ISItemSlotRemoveAction:complete() end
 
@@ -30,7 +29,6 @@ function ISItemSlotRemoveAction:stop() end
 
 ---@return any
 function ISItemSlotRemoveAction:update() end
-
 
 ---@return ISItemSlotRemoveAction
 function ISItemSlotRemoveAction:new(character, entity, resource) end

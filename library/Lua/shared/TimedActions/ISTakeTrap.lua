@@ -6,7 +6,6 @@
 ---@field [any] any
 ISTakeTrap = ISBaseTimedAction:derive("ISTakeTrap")
 
-
 ---@return any
 function ISTakeTrap:complete() end
 
@@ -30,7 +29,6 @@ function ISTakeTrap:update() end
 
 ---@return any
 function ISTakeTrap:waitToStart() end
-
 
 ---@return ISTakeTrap
 function ISTakeTrap:new(character, trap, time) end

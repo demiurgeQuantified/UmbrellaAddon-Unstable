@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class SystemDisabler
 --- @field public class any
@@ -15,7 +15,7 @@
 --- @field public useNetworkCharacter boolean
 --- @field public zombiesDontAttack boolean
 --- @field public zombiesSwitchOwnershipEachUpdate boolean
-SystemDisabler = {};
+SystemDisabler = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,7 +23,7 @@ SystemDisabler = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function SystemDisabler.Reset() end
 
 --- @public
@@ -69,57 +69,56 @@ function SystemDisabler.printDetailedInfo() end
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setDoCharacterStats(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setDoPlayerCreation(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setDoSurvivorCreation(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setDoZombieCreation(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setEnableAdvancedSoundOptions(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setOverridePOVCharacters(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setUncappedFPS(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setVehiclesEverywhere(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function SystemDisabler.setWorldSyncEnable(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

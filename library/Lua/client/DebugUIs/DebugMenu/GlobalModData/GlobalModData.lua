@@ -16,10 +16,8 @@
 GlobalModDataDebug = ISPanel:derive("GlobalModDataDebug")
 GlobalModDataDebug.instance = nil
 
-
 ---@return any
 function GlobalModDataDebug.OnOpenPanel() end
-
 
 ---@return any
 function GlobalModDataDebug:close() end
@@ -62,7 +60,6 @@ function GlobalModDataDebug:prerender() end
 
 ---@return any
 function GlobalModDataDebug:update() end
-
 
 ---@return GlobalModDataDebug
 function GlobalModDataDebug:new(x, y, width, height, title) end

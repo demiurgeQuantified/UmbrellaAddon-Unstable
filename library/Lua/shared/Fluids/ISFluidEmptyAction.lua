@@ -9,7 +9,6 @@
 ---@field [any] any
 ISFluidEmptyAction = ISBaseTimedAction:derive("ISFluidEmptyAction")
 
-
 ---@return any
 function ISFluidEmptyAction:complete() end
 
@@ -27,7 +26,6 @@ function ISFluidEmptyAction:stop() end
 
 ---@return any
 function ISFluidEmptyAction:update() end
-
 
 ---@return ISFluidEmptyAction
 function ISFluidEmptyAction:new(character, containerObject) end

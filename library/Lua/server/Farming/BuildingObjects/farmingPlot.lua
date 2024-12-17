@@ -8,7 +8,6 @@
 ---@field [any] any
 farmingPlot = ISBuildingObject:derive("farmingPlot")
 
-
 ---@return any
 function farmingPlot:create(x, y, z, north, sprite) end
 
@@ -26,7 +25,6 @@ function farmingPlot:isValid(square) end
 
 ---@return any
 function farmingPlot:render(x, y, z, square) end
-
 
 ---@return farmingPlot
 function farmingPlot:new(handItem, character) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSOldFirepit: RandomizedZoneStoryBase
 --- @field public class any
-RZSOldFirepit = {};
+RZSOldFirepit = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSOldFirepit = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSOldFirepit:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

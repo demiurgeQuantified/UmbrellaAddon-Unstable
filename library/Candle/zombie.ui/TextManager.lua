@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class TextManager
 --- @field public class any
 --- @field public instance TextManager
 --- @field public sdfShader SDFShader
-TextManager = {};
+TextManager = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,138 +12,138 @@ TextManager = {};
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @return int
+--- @param arg1 string
+--- @return integer
 function TextManager:CentreStringYOffset(arg0, arg1) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 String
---- @return void
---- @overload fun(self: TextManager, arg0: double, arg1: double, arg2: String, arg3: double, arg4: double, arg5: double, arg6: double): void
---- @overload fun(self: TextManager, arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double): void
---- @overload fun(self: TextManager, arg0: UIFont, arg1: double, arg2: double, arg3: double, arg4: String, arg5: double, arg6: double, arg7: double, arg8: double): void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 string
+--- @return nil
+--- @overload fun(self: TextManager, arg0: number, arg1: number, arg2: string, arg3: number, arg4: number, arg5: number, arg6: number): nil
+--- @overload fun(self: TextManager, arg0: UIFont, arg1: number, arg2: number, arg3: string, arg4: number, arg5: number, arg6: number, arg7: number): nil
+--- @overload fun(self: TextManager, arg0: UIFont, arg1: number, arg2: number, arg3: number, arg4: string, arg5: number, arg6: number, arg7: number, arg8: number): nil
 function TextManager:DrawString(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 double
---- @param arg2 double
---- @param arg3 String
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 string
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return nil
 function TextManager:DrawStringBBcode(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 String
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @return void
---- @overload fun(self: TextManager, arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double): void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 string
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @return nil
+--- @overload fun(self: TextManager, arg0: UIFont, arg1: number, arg2: number, arg3: string, arg4: number, arg5: number, arg6: number, arg7: number): nil
 function TextManager:DrawStringCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 double
---- @param arg2 double
---- @param arg3 String
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 string
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return nil
 function TextManager:DrawStringCentreDefered(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 String
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @return void
---- @overload fun(self: TextManager, arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double): void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 string
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @return nil
+--- @overload fun(self: TextManager, arg0: UIFont, arg1: number, arg2: number, arg3: string, arg4: number, arg5: number, arg6: number, arg7: number): nil
 function TextManager:DrawStringRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 double
---- @param arg2 double
---- @param arg3 String
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 string
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @return nil
 function TextManager:DrawStringUntrimmed(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @return void
+--- @return nil
 function TextManager:DrawTextFromGameWorld() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param arg0 number
+--- @param arg1 number
 --- @param arg2 TextDrawObject
---- @return void
+--- @return nil
 function TextManager:DrawTextObject(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param arg0 string
+--- @param arg1 integer
 --- @param arg2 boolean
 --- @return TextDrawObject
 function TextManager:GetDrawTextObject(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function TextManager:Init() end
 
 --- @public
 --- @param arg0 UIFont
---- @return int
+--- @return integer
 function TextManager:MeasureFont(arg0) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @return int
+--- @param arg1 string
+--- @return integer
 function TextManager:MeasureStringX(arg0, arg1) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @return int
---- @overload fun(self: TextManager, arg0: UIFont, arg1: String, arg2: boolean, arg3: boolean): int
+--- @param arg1 string
+--- @return integer
+--- @overload fun(self: TextManager, arg0: UIFont, arg1: string, arg2: boolean, arg3: boolean): integer
 function TextManager:MeasureStringY(arg0, arg1) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @return int
+--- @param arg1 string
+--- @return integer
 function TextManager:MeasureStringYOffset(arg0, arg1) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @return int
+--- @param arg1 string
+--- @return integer
 function TextManager:MeasureStringYReal(arg0, arg1) end
 
 --- @public
 --- @param arg0 UIFont
---- @param arg1 String
---- @param arg2 int
---- @return String
---- @overload fun(self: TextManager, arg0: UIFont, arg1: String, arg2: int, arg3: int, arg4: String): String
+--- @param arg1 string
+--- @param arg2 integer
+--- @return string
+--- @overload fun(self: TextManager, arg0: UIFont, arg1: string, arg2: integer, arg3: integer, arg4: string): string
 function TextManager:WrapText(arg0, arg1, arg2) end
 
 --- @public
@@ -153,14 +153,13 @@ function TextManager:getFontFromEnum(arg0) end
 
 --- @public
 --- @param arg0 UIFont
---- @return int
+--- @return integer
 function TextManager:getFontHeight(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return AngelCodeFont
 function TextManager:getNormalFromFontSize(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

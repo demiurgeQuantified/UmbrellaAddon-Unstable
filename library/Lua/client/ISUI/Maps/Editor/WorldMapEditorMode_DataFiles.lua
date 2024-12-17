@@ -7,7 +7,6 @@
 ---@field [any] any
 WorldMapEditorMode_DataFiles = WorldMapEditorMode:derive("WorldMapEditorMode_DataFiles")
 
-
 ---@return any
 function WorldMapEditorMode_DataFiles:createChildren() end
 
@@ -43,7 +42,6 @@ function WorldMapEditorMode_DataFiles:update() end
 
 ---@return any
 function WorldMapEditorMode_DataFiles:updateData() end
-
 
 ---@return WorldMapEditorMode_DataFiles
 function WorldMapEditorMode_DataFiles:new(editor) end

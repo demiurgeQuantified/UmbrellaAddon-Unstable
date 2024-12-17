@@ -45,7 +45,6 @@
 ---@field [any] any
 ISItemDropBox = ISPanel:derive("ISItemDropBox")
 
-
 ---@return any
 function ISItemDropBox:activateToolTip() end
 
@@ -118,6 +117,17 @@ function ISItemDropBox:setToolTip(_b, _text) end
 ---@return any
 function ISItemDropBox:setValidHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
-
 ---@return ISItemDropBox
-function ISItemDropBox:new(x, y, width, height, storeItem, target, onItemDropped, onItemRemove, onVerifyItem, onDragSelf) end
+function ISItemDropBox:new(
+	x,
+	y,
+	width,
+	height,
+	storeItem,
+	target,
+	onItemDropped,
+	onItemRemove,
+	onVerifyItem,
+	onDragSelf
+)
+end

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class AnimalDefinitions
 --- @field public class any
 --- @field public animalDefs HashMap
-AnimalDefinitions = {};
+AnimalDefinitions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,7 +11,7 @@ AnimalDefinitions = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function AnimalDefinitions.Reset() end
 
 --- @public
@@ -26,16 +26,15 @@ function AnimalDefinitions.getAnimalDefsArray() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return AnimalDefinitions
 --- @overload fun(arg0: IsoAnimal): AnimalDefinitions
 function AnimalDefinitions.getDef(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function AnimalDefinitions.loadAnimalDefinitions() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,19 +45,19 @@ function AnimalDefinitions.loadAnimalDefinitions() end
 function AnimalDefinitions:canBeSkeleton() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalDefinitions:getAnimalType() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalDefinitions:getBabyType() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalDefinitions:getBodyModelStr() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return AnimalBreed
 function AnimalDefinitions:getBreedByName(arg0) end
 
@@ -67,15 +66,15 @@ function AnimalDefinitions:getBreedByName(arg0) end
 function AnimalDefinitions:getBreeds() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalDefinitions:getGroup() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalDefinitions:getMaxBaby() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalDefinitions:getMinBaby() end
 
 --- @public
@@ -83,14 +82,13 @@ function AnimalDefinitions:getMinBaby() end
 function AnimalDefinitions:getRandomBreed() end
 
 --- @public
---- @param arg0 Integer
+--- @param arg0 integer
 --- @return boolean
 function AnimalDefinitions:isInsideHutchTime(arg0) end
 
 --- @public
 --- @return boolean
 function AnimalDefinitions:isOutsideHutchTime() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

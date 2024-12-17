@@ -37,7 +37,6 @@
 ---@field [any] any
 ISDigitalCode = ISPanelJoypad:derive("ISDigitalCode")
 
-
 ---@return any
 function ISDigitalCode:decrement(number) end
 
@@ -70,7 +69,6 @@ function ISDigitalCode:render() end
 
 ---@return any
 function ISDigitalCode:update() end
-
 
 ---@return ISDigitalCode
 function ISDigitalCode:new(x, y, width, height, target, onclick, player, padlock, thumpable, new) end

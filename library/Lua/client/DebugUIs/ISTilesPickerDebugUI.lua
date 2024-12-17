@@ -24,7 +24,6 @@
 ---@field [any] any
 ISTilesPickerDebugUI = ISCollapsableWindow:derive("ISTilesPickerDebugUI")
 
-
 ---@return any
 function ISTilesPickerDebugUI:addMarker(square, radius) end
 
@@ -55,7 +54,6 @@ function ISTilesPickerDebugUI:removeMarker() end
 ---@return any
 function ISTilesPickerDebugUI:render() end
 
-
 ---@return ISTilesPickerDebugUI
 function ISTilesPickerDebugUI:new(x, y, character, square) end
 
@@ -64,13 +62,11 @@ function ISTilesPickerDebugUI:new(x, y, character, square) end
 ---@field [any] any
 ISTilesPickerTilesList = ISPanel:derive("ISTilesPickerTilesList")
 
-
 ---@return any
 function ISTilesPickerTilesList:onMouseWheel(del) end
 
 ---@return any
 function ISTilesPickerTilesList:render() end
-
 
 ---@return ISTilesPickerTilesList
 function ISTilesPickerTilesList:new(x, y, w, h) end

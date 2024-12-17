@@ -30,13 +30,11 @@
 ISCharacterInfo = ISPanelJoypad:derive("ISCharacterInfo")
 ISCharacterInfo.timerMultiplierAnim = 0
 
-
 ---@return any
 function ISCharacterInfo.loadPerk(self) end
 
 ---@return any
 function ISCharacterInfo.onResolutionChange(oldw, oldh, neww, newh) end
-
 
 ---@return any
 function ISCharacterInfo:collapseSection(button) end
@@ -85,7 +83,6 @@ function ISCharacterInfo:setVisible(visible) end
 
 ---@return any
 function ISCharacterInfo:updateTooltipForJoypad() end
-
 
 ---@return ISCharacterInfo
 function ISCharacterInfo:new(x, y, width, height, playerNum) end

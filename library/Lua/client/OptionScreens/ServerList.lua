@@ -66,7 +66,6 @@ ServerList.refreshTime = 0
 ServerList.refreshInterval = 5
 ServerList.pingIndex = 1
 
-
 ---@return any
 function ServerList.onResetLua(reason) end
 
@@ -81,7 +80,6 @@ function ServerList.OnSteamServerResponded2(host, port, server2) end
 
 ---@return any
 function ServerList.ServerPinged(ip, users) end
-
 
 ---@return any
 function ServerList:addServerToList(server) end
@@ -199,7 +197,6 @@ function ServerList:trimFields(item) end
 
 ---@return any
 function ServerList:writeServerOnFile(server, append) end
-
 
 ---@return ServerList
 function ServerList:new(x, y, width, height) end

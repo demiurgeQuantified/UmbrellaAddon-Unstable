@@ -75,7 +75,6 @@ SeatOffsetY["Base.OffRoad"] = 30
 ---@field [any] any
 ISVehicleSeatUI = ISPanelJoypad:derive("ISVehicleSeatUI")
 
-
 ---@return any
 function ISVehicleSeatUI:centerOnScreen() end
 
@@ -138,7 +137,6 @@ function ISVehicleSeatUI:update() end
 
 ---@return any
 function ISVehicleSeatUI:useSeat(seat) end
-
 
 ---@return ISVehicleSeatUI
 function ISVehicleSeatUI:new(x, y, character) end

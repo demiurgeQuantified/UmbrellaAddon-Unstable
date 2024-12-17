@@ -7,7 +7,6 @@
 ---@field [any] any
 SeamEditorUI_SeamTileList = ISPanel:derive("SeamEditorUI_SeamTileList")
 
-
 ---@return any
 function SeamEditorUI_SeamTileList:getRowAt(x, y) end
 
@@ -28,7 +27,6 @@ function SeamEditorUI_SeamTileList:render() end
 
 ---@return any
 function SeamEditorUI_SeamTileList:renderMouseOverTile() end
-
 
 ---@return SeamEditorUI_SeamTileList
 function SeamEditorUI_SeamTileList:new(x, y, width, height, editor, seamTile) end

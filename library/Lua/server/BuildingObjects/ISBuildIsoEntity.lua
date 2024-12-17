@@ -41,7 +41,6 @@
 ---@field [any] any
 ISBuildIsoEntity = ISBuildingObject:derive("ISBuildIsoEntity")
 
-
 ---@return any
 function ISBuildIsoEntity.ConsumeBuildEntityItems(_info, _player) end
 
@@ -56,7 +55,6 @@ function ISBuildIsoEntity.GetBuildableEntities(_player) end
 
 ---@return any
 function ISBuildIsoEntity.predicateMaterial(item) end
-
 
 ---@return any
 function ISBuildIsoEntity:cacheSprites(_face) end
@@ -99,7 +97,6 @@ function ISBuildIsoEntity:setInfo(square, north, sprite, openSprite) end
 
 ---@return any
 function ISBuildIsoEntity:walkTo(x, y, z) end
-
 
 ---@return ISBuildIsoEntity
 function ISBuildIsoEntity:new(character, objectInfo, buildPanelLogic) end

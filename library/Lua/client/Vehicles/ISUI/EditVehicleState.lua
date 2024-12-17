@@ -12,7 +12,6 @@
 ---@field [any] any
 EditVehicleUI = ISPanel:derive("EditVehicleUI")
 
-
 ---@return any
 function EditVehicleUI:alignEverythingToGrid() end
 
@@ -58,7 +57,6 @@ function EditVehicleUI:update() end
 ---@return any
 function EditVehicleUI:wroteScript(fileName) end
 
-
 ---@return EditVehicleUI
 function EditVehicleUI:new(x, y, width, height) end
 
@@ -69,7 +67,6 @@ function EditVehicleUI:new(x, y, width, height) end
 ---@field mouseDown any
 ---@field [any] any
 EditVehicleUI_Scene = ISUI3DScene:derive("EditVehicleUI_Scene")
-
 
 ---@return any
 function EditVehicleUI_Scene:onGizmoAccept() end
@@ -104,7 +101,6 @@ function EditVehicleUI_Scene:prerender() end
 ---@return any
 function EditVehicleUI_Scene:prerenderEditor() end
 
-
 ---@return EditVehicleUI_Scene
 function EditVehicleUI_Scene:new(x, y, width, height) end
 
@@ -112,7 +108,6 @@ function EditVehicleUI_Scene:new(x, y, width, height) end
 ---@field editor any
 ---@field [any] any
 EditVehicleUI_SwitchView = ISUI3DScene:derive("EditVehicleUI_SwitchView")
-
 
 ---@return any
 function EditVehicleUI_SwitchView:onMouseDown(x, y) end
@@ -129,7 +124,6 @@ function EditVehicleUI_SwitchView:onMouseWheel(del) end
 ---@return any
 function EditVehicleUI_SwitchView:prerender() end
 
-
 ---@return EditVehicleUI_SwitchView
 function EditVehicleUI_SwitchView:new(editor, x, y, width, height) end
 
@@ -137,7 +131,6 @@ function EditVehicleUI_SwitchView:new(editor, x, y, width, height) end
 ---@field selectionMode any
 ---@field [any] any
 EditVehicleUI_ListBox = ISScrollingListBox:derive("EditVehicleUI_ListBox")
-
 
 ---@return any
 function EditVehicleUI_ListBox:clearSelection() end
@@ -166,7 +159,6 @@ function EditVehicleUI_ListBox:setSelectedRow(row) end
 ---@return any
 function EditVehicleUI_ListBox:setSelectedRows(rows) end
 
-
 ---@return EditVehicleUI_ListBox
 function EditVehicleUI_ListBox:new(x, y, width, height) end
 
@@ -174,7 +166,6 @@ function EditVehicleUI_ListBox:new(x, y, width, height) end
 ---@field script any
 ---@field [any] any
 EditVehicleUI_EditPanel = ISPanel:derive("EditVehicleUI_EditPanel")
-
 
 ---@return any
 function EditVehicleUI_EditPanel:createList(x, y, w, h) end
@@ -239,7 +230,6 @@ function EditVehicleUI_EditPanel:undisplay() end
 ---@return any
 function EditVehicleUI_EditPanel:updateEditor() end
 
-
 ---@return EditVehicleUI_EditPanel
 function EditVehicleUI_EditPanel:new(x, y, width, height) end
 
@@ -251,7 +241,6 @@ function EditVehicleUI_EditPanel:new(x, y, width, height) end
 ---@field originalXYWH any
 ---@field [any] any
 EditVehicleUI_EditArea = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditArea")
-
 
 ---@return any
 function EditVehicleUI_EditArea:createChildren() end
@@ -283,7 +272,6 @@ function EditVehicleUI_EditArea:prerenderEditor() end
 ---@return any
 function EditVehicleUI_EditArea:toUI() end
 
-
 ---@return EditVehicleUI_EditArea
 function EditVehicleUI_EditArea:new(x, y, width, height) end
 
@@ -305,7 +293,6 @@ function EditVehicleUI_EditArea:new(x, y, width, height) end
 ---@field transformMode any
 ---@field [any] any
 EditVehicleUI_EditAttachment = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditAttachment")
-
 
 ---@return any
 function EditVehicleUI_EditAttachment:createChildren() end
@@ -394,7 +381,6 @@ function EditVehicleUI_EditAttachment:setSelectedAttachment(attach) end
 ---@return any
 function EditVehicleUI_EditAttachment:toUI() end
 
-
 ---@return EditVehicleUI_EditAttachment
 function EditVehicleUI_EditAttachment:new(x, y, width, height) end
 
@@ -411,7 +397,6 @@ function EditVehicleUI_EditAttachment:new(x, y, width, height) end
 ---@field tempVector3f_2 any
 ---@field [any] any
 EditVehicleUI_EditChassis = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditChassis")
-
 
 ---@return any
 function EditVehicleUI_EditChassis:addAABB(box, offset, r, g, b) end
@@ -440,7 +425,6 @@ function EditVehicleUI_EditChassis:prerenderEditor() end
 ---@return any
 function EditVehicleUI_EditChassis:toUI() end
 
-
 ---@return EditVehicleUI_EditChassis
 function EditVehicleUI_EditChassis:new(x, y, width, height) end
 
@@ -455,7 +439,6 @@ function EditVehicleUI_EditChassis:new(x, y, width, height) end
 ---@field transformMode any
 ---@field [any] any
 EditVehicleUI_EditPart = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditPart")
-
 
 ---@return any
 function EditVehicleUI_EditPart:addAABB(extents, offset, r, g, b) end
@@ -502,7 +485,6 @@ function EditVehicleUI_EditPart:setSelectedPart(part) end
 ---@return any
 function EditVehicleUI_EditPart:toUI() end
 
-
 ---@return EditVehicleUI_EditPart
 function EditVehicleUI_EditPart:new(x, y, width, height) end
 
@@ -513,7 +495,6 @@ function EditVehicleUI_EditPart:new(x, y, width, height) end
 ---@field selectedPassenger any
 ---@field [any] any
 EditVehicleUI_EditPassenger = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditPassenger")
-
 
 ---@return any
 function EditVehicleUI_EditPassenger:createChildren() end
@@ -551,7 +532,6 @@ function EditVehicleUI_EditPassenger:setSelectedPassenger(pngr) end
 ---@return any
 function EditVehicleUI_EditPassenger:toUI() end
 
-
 ---@return EditVehicleUI_EditPassenger
 function EditVehicleUI_EditPassenger:new(x, y, width, height) end
 
@@ -570,7 +550,6 @@ function EditVehicleUI_EditPassenger:new(x, y, width, height) end
 ---@field transformMode any
 ---@field [any] any
 EditVehicleUI_EditPhysics = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditPhysics")
-
 
 ---@return any
 function EditVehicleUI_EditPhysics:addAABB(extents, offset, r, g, b) end
@@ -635,7 +614,6 @@ function EditVehicleUI_EditPhysics:toUI() end
 ---@return any
 function EditVehicleUI_EditPhysics:undisplay() end
 
-
 ---@return EditVehicleUI_EditPhysics
 function EditVehicleUI_EditPhysics:new(x, y, width, height, editor) end
 
@@ -644,7 +622,6 @@ function EditVehicleUI_EditPhysics:new(x, y, width, height, editor) end
 ---@field originalOffset any
 ---@field [any] any
 EditVehicleUI_EditWheel = EditVehicleUI_EditPanel:derive("EditVehicleUI_EditWheel")
-
 
 ---@return any
 function EditVehicleUI_EditWheel:createChildren() end
@@ -670,7 +647,6 @@ function EditVehicleUI_EditWheel:prerenderEditor() end
 ---@return any
 function EditVehicleUI_EditWheel:toUI() end
 
-
 ---@return EditVehicleUI_EditWheel
 function EditVehicleUI_EditWheel:new(x, y, width, height) end
 
@@ -680,7 +656,6 @@ function EditVehicleUI_EditWheel:new(x, y, width, height) end
 ---@field [any] any
 EditVehicleState_EditPhysics_PhysicsMeshPanel = ISPanel:derive("EditVehicleState_EditPhysics_PhysicsMeshPanel")
 
-
 ---@return any
 function EditVehicleState_EditPhysics_PhysicsMeshPanel:createChildren() end
 
@@ -689,7 +664,6 @@ function EditVehicleState_EditPhysics_PhysicsMeshPanel:fillCombo() end
 
 ---@return any
 function EditVehicleState_EditPhysics_PhysicsMeshPanel:onSelectPhysicsShapeScript() end
-
 
 ---@return EditVehicleState_EditPhysics_PhysicsMeshPanel
 function EditVehicleState_EditPhysics_PhysicsMeshPanel:new(x, y, width, height, editPhysics) end

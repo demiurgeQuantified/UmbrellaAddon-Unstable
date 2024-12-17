@@ -9,7 +9,6 @@
 ---@field [any] any
 ISAddBaitAction = ISBaseTimedAction:derive("ISAddBaitAction")
 
-
 ---@return any
 function ISAddBaitAction:complete() end
 
@@ -33,7 +32,6 @@ function ISAddBaitAction:update() end
 
 ---@return any
 function ISAddBaitAction:waitToStart() end
-
 
 ---@return ISAddBaitAction
 function ISAddBaitAction:new(character, bait, trap) end

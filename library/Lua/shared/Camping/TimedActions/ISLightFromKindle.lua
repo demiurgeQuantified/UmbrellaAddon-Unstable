@@ -13,7 +13,6 @@
 ---@field [any] any
 ISLightFromKindle = ISBaseTimedAction:derive("ISLightFromKindle")
 
-
 ---@return any
 function ISLightFromKindle:animEvent(event, parameter) end
 
@@ -46,7 +45,6 @@ function ISLightFromKindle:updateKindling() end
 
 ---@return any
 function ISLightFromKindle:waitToStart() end
-
 
 ---@return ISLightFromKindle
 function ISLightFromKindle:new(character, plank, item, campfire) end

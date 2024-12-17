@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBGunstoreSiege: RandomizedBuildingBase
 --- @field public class any
-RBGunstoreSiege = {};
+RBGunstoreSiege = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RBGunstoreSiege:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBGunstoreSiege:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

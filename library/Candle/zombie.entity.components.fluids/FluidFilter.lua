@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class FluidFilter
 --- @field public class any
-FluidFilter = {};
+FluidFilter = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return FluidFilter
 --- @overload fun(self: FluidFilter, arg0: Fluid): FluidFilter
 --- @overload fun(self: FluidFilter, arg0: FluidCategory): FluidFilter
@@ -17,14 +17,14 @@ FluidFilter = {};
 function FluidFilter:add(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 --- @overload fun(self: FluidFilter, arg0: Fluid): boolean
 --- @overload fun(self: FluidFilter, arg0: FluidType): boolean
 function FluidFilter:allows(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 --- @overload fun(self: FluidFilter, arg0: Fluid): boolean
 --- @overload fun(self: FluidFilter, arg0: FluidCategory): boolean
@@ -41,12 +41,12 @@ function FluidFilter:getFilterType() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function FluidFilter:load(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return FluidFilter
 --- @overload fun(self: FluidFilter, arg0: Fluid): FluidFilter
 --- @overload fun(self: FluidFilter, arg0: FluidCategory): FluidFilter
@@ -55,12 +55,12 @@ function FluidFilter:remove(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function FluidFilter:save(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FluidFilter:setFilterScript(arg0) end
 
 --- @public
@@ -69,9 +69,8 @@ function FluidFilter:setFilterScript(arg0) end
 function FluidFilter:setFilterType(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function FluidFilter:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

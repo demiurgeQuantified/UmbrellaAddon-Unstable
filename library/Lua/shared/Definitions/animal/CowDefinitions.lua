@@ -1,174 +1,174 @@
 ---@meta
 
 local bull_sounds = {
-    attack = {
-        name = "AnimalVoiceBullAttack",
-        slot = "voice",
-        priority = 50,
-    },
-    death = {
-        name = "AnimalVoiceBullDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyBullBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceBullIdle",
-        intervalMin = 15,
-        intervalMax = 30,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceBullPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalBull",
-    },
-    pick_up = {
-        name = "PickUpAnimalCow",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadCow",
-    },
-    put_down = {
-        name = "PutDownAnimalCow",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadCow",
-    },
-    run = {
-        name = "AnimalFootstepsBullRun",
-    },
-    stressed = {
-        name = "AnimalVoiceBullStressed",
-        intervalMin = 5,
-        intervalMax = 10,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsBullWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsBullWalkFront",
-    },
+	attack = {
+		name = "AnimalVoiceBullAttack",
+		slot = "voice",
+		priority = 50,
+	},
+	death = {
+		name = "AnimalVoiceBullDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyBullBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceBullIdle",
+		intervalMin = 15,
+		intervalMax = 30,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceBullPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalBull",
+	},
+	pick_up = {
+		name = "PickUpAnimalCow",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadCow",
+	},
+	put_down = {
+		name = "PutDownAnimalCow",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadCow",
+	},
+	run = {
+		name = "AnimalFootstepsBullRun",
+	},
+	stressed = {
+		name = "AnimalVoiceBullStressed",
+		intervalMin = 5,
+		intervalMax = 10,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsBullWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsBullWalkFront",
+	},
 }
 local cowcalf_sounds = {
-    death = {
-        name = "AnimalVoiceCalfDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyCalfBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceCalfIdle",
-        intervalMin = 20,
-        intervalMax = 50,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceCalfPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalCalf",
-    },
-    pick_up = {
-        name = "PickUpAnimalCalf",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadCalf",
-    },
-    put_down = {
-        name = "PutDownAnimalCalf",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadCalf",
-    },
-    run = {
-        name = "AnimalFootstepsCalfRun",
-    },
-    stressed = {
-        name = "AnimalVoiceCalfStressed",
-        intervalMin = 15,
-        intervalMax = 30,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsCalfWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsCalfWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceCalfDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyCalfBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceCalfIdle",
+		intervalMin = 20,
+		intervalMax = 50,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceCalfPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalCalf",
+	},
+	pick_up = {
+		name = "PickUpAnimalCalf",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadCalf",
+	},
+	put_down = {
+		name = "PutDownAnimalCalf",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadCalf",
+	},
+	run = {
+		name = "AnimalFootstepsCalfRun",
+	},
+	stressed = {
+		name = "AnimalVoiceCalfStressed",
+		intervalMin = 15,
+		intervalMax = 30,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsCalfWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsCalfWalkFront",
+	},
 }
 local cow_sounds = {
-    death = {
-        name = "AnimalVoiceCowDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    fallover = {
-        name = "AnimalFoleyCowBodyfall",
-    },
-    idle = {
-        name = "AnimalVoiceCowIdle",
-        intervalMin = 30,
-        intervalMax = 60,
-        slot = "voice",
-    },
-    pain = {
-        name = "AnimalVoiceCowPain",
-        slot = "voice",
-        priority = 50,
-    },
-    petting = {
-        name = "PetAnimalCow",
-    },
-    pick_up = {
-        name = "PickUpAnimalCow",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadCow",
-    },
-    put_down = {
-        name = "PutDownAnimalCow",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadCow",
-    },
-    run = {
-        name = "AnimalFootstepsCowRun",
-    },
-    stressed = {
-        name = "AnimalVoiceCowStressed",
-        intervalMin = 20,
-        intervalMax = 35,
-        slot = "voice",
-    },
-    walkBack = {
-        name = "AnimalFootstepsCowWalkBack",
-    },
-    walkFront = {
-        name = "AnimalFootstepsCowWalkFront",
-    },
+	death = {
+		name = "AnimalVoiceCowDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	fallover = {
+		name = "AnimalFoleyCowBodyfall",
+	},
+	idle = {
+		name = "AnimalVoiceCowIdle",
+		intervalMin = 30,
+		intervalMax = 60,
+		slot = "voice",
+	},
+	pain = {
+		name = "AnimalVoiceCowPain",
+		slot = "voice",
+		priority = 50,
+	},
+	petting = {
+		name = "PetAnimalCow",
+	},
+	pick_up = {
+		name = "PickUpAnimalCow",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadCow",
+	},
+	put_down = {
+		name = "PutDownAnimalCow",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadCow",
+	},
+	run = {
+		name = "AnimalFootstepsCowRun",
+	},
+	stressed = {
+		name = "AnimalVoiceCowStressed",
+		intervalMin = 20,
+		intervalMax = 35,
+		slot = "voice",
+	},
+	walkBack = {
+		name = "AnimalFootstepsCowWalkBack",
+	},
+	walkFront = {
+		name = "AnimalFootstepsCowWalkFront",
+	},
 }
 
 ---@class AnimalDefinitions
@@ -307,14 +307,14 @@ AnimalDefinitions.animals["cowcalf"].canBePet = true
 AnimalDefinitions.animals["cowcalf"].canBePicked = true
 AnimalDefinitions.animals["cowcalf"].baseEncumbrance = 80
 AnimalDefinitions.animals["cowcalf"].luredPossibleItems = {
-    {
-        name = "Base.HayTuft",
-        chance = 30,
-    },
-    {
-        name = "Base.GrassTuft",
-        chance = 50,
-    },
+	{
+		name = "Base.HayTuft",
+		chance = 30,
+	},
+	{
+		name = "Base.GrassTuft",
+		chance = 50,
+	},
 }
 AnimalDefinitions.animals["cowcalf"].collisionSize = 0.3
 AnimalDefinitions.animals["cowcalf"].canThump = false

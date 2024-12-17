@@ -11,7 +11,6 @@
 ---@field [any] any
 ISAddFuelAction = ISBaseTimedAction:derive("ISAddFuelAction")
 
-
 ---@return any
 function ISAddFuelAction:complete() end
 
@@ -35,7 +34,6 @@ function ISAddFuelAction:update() end
 
 ---@return any
 function ISAddFuelAction:waitToStart() end
-
 
 ---@return ISAddFuelAction
 function ISAddFuelAction:new(character, campfire, item, fuelAmt) end

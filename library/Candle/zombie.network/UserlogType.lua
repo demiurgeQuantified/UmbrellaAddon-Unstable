@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class UserlogType: Enum
 --- @field public class any
@@ -10,7 +10,7 @@
 --- @field public SuspiciousActivity UserlogType
 --- @field public UnauthorizedPacket UserlogType
 --- @field public WarningPoint UserlogType
-UserlogType = {};
+UserlogType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,19 +18,19 @@ UserlogType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return UserlogType
 function UserlogType.FromString(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return UserlogType
 function UserlogType.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return UserlogType
 function UserlogType.valueOf(arg0) end
 
@@ -39,13 +39,10 @@ function UserlogType.valueOf(arg0) end
 --- @return UserlogType[]
 function UserlogType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function UserlogType:index() end
-
-

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RBOther: RandomizedBuildingBase
 --- @field public class any
-RBOther = {};
+RBOther = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,9 +16,8 @@ function RBOther:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RBOther:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

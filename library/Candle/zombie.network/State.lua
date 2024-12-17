@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class State: Enum
 --- @field public class any
@@ -9,7 +9,7 @@
 --- @field public Ended State
 --- @field public Refused State
 --- @field public Started State
-State = {};
+State = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,14 +17,12 @@ State = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return State
---- @overload fun(arg0: String): State
+--- @overload fun(arg0: string): State
 function State.valueOf(arg0) end
 
 --- @public
 --- @static
 --- @return State[]
 function State.values() end
-
-

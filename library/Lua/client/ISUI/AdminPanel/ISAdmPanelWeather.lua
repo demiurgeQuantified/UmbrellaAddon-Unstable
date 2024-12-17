@@ -17,7 +17,6 @@
 ---@field [any] any
 ISAdmPanelWeather = ISDebugSubPanelBase:derive("ISAdmPanelWeather")
 
-
 ---@return any
 function ISAdmPanelWeather:close() end
 
@@ -35,7 +34,6 @@ function ISAdmPanelWeather:onTicked(_index, _selected, _arg1, _arg2, _tickbox) e
 
 ---@return any
 function ISAdmPanelWeather:prerender() end
-
 
 ---@return ISAdmPanelWeather
 function ISAdmPanelWeather:new(x, y, width, height, player) end

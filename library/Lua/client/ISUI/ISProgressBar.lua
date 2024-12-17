@@ -33,7 +33,6 @@
 ---@field [any] any
 ISProgressBar = ISUIElement:derive("ISProgressBar")
 
-
 ---@return any
 function ISProgressBar:getRenderTexture() end
 
@@ -54,7 +53,6 @@ function ISProgressBar:setProgress(_p) end
 
 ---@return any
 function ISProgressBar:setText(_text) end
-
 
 ---@return ISProgressBar
 function ISProgressBar:new(x, y, width, height, text, font) end

@@ -17,13 +17,11 @@
 ---@field [any] any
 ISItemEditorUI = ISPanel:derive("ISItemEditorUI")
 
-
 ---@return any
 function ISItemEditorUI.onMouseWheel(self, del) end
 
 ---@return any
 function ISItemEditorUI.OpenPanel(_player, _item) end
-
 
 ---@return any
 function ISItemEditorUI:createChildren() end
@@ -42,7 +40,6 @@ function ISItemEditorUI:render() end
 
 ---@return any
 function ISItemEditorUI:setVisible(visible) end
-
 
 ---@return ISItemEditorUI
 function ISItemEditorUI:new(x, y, width, height, admin, item) end

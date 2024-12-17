@@ -13,7 +13,6 @@
 ---@field [any] any
 ISChallenge2PlayerUpWindow = ISPanelJoypad:derive("ISChallenge2PlayerUpWindow")
 
-
 ---@return any
 function ISChallenge2PlayerUpWindow:create() end
 
@@ -37,7 +36,6 @@ function ISChallenge2PlayerUpWindow:render() end
 
 ---@return any
 function ISChallenge2PlayerUpWindow:updateButtonLevel() end
-
 
 ---@return ISChallenge2PlayerUpWindow
 function ISChallenge2PlayerUpWindow:new(x, y, width, height, player) end

@@ -39,7 +39,6 @@
 ---@field [any] any
 ISFluidBar = ISPanel:derive("ISFluidBar")
 
-
 ---@return any
 function ISFluidBar:activateToolTip() end
 
@@ -93,7 +92,6 @@ function ISFluidBar:setContainerMixed(_fluidContainer, _showMixed) end
 
 ---@return any
 function ISFluidBar:setRatioNew(_ratio) end
-
 
 ---@return ISFluidBar
 function ISFluidBar:new(x, y, width, height, _player, _resource) end

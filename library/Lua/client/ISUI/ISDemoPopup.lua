@@ -17,13 +17,11 @@
 ---@field [any] any
 ISDemoPopup = ISPanel:derive("ISDemoPopup")
 
-
 ---@return any
 function ISDemoPopup.getInstance() end
 
 ---@return any
 function ISDemoPopup.OnJoypadActivate(id) end
-
 
 ---@return any
 function ISDemoPopup:createChildren() end
@@ -45,7 +43,6 @@ function ISDemoPopup:removeSelf() end
 
 ---@return any
 function ISDemoPopup:setInfo(item) end
-
 
 ---@return ISDemoPopup
 function ISDemoPopup:new(x, y, width, height) end

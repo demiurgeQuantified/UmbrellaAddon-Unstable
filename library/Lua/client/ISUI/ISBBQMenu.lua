@@ -3,7 +3,6 @@
 ---@class ISBBQMenu
 ISBBQMenu = {}
 
-
 ---@return any
 function ISBBQMenu.FindPropaneTank(player, bbq) end
 

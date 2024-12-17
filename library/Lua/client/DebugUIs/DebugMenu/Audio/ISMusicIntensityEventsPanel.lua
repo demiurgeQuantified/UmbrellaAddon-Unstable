@@ -7,7 +7,6 @@
 ---@field [any] any
 ISMusicIntensityEventsPanel = ISDebugSubPanelBase:derive("ISMusicIntensityEventsPanel")
 
-
 ---@return any
 function ISMusicIntensityEventsPanel:createChildren() end
 
@@ -25,7 +24,6 @@ function ISMusicIntensityEventsPanel:populateEventList() end
 
 ---@return any
 function ISMusicIntensityEventsPanel:render() end
-
 
 ---@return ISMusicIntensityEventsPanel
 function ISMusicIntensityEventsPanel:new(x, y, width, height, doStencil) end

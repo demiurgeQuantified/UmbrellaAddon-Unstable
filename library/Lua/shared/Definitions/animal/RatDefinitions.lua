@@ -1,64 +1,64 @@
 ---@meta
 
 local rat_sounds = {
-    pain = {
-        name = "AnimalVoiceRatPain",
-        slot = "voice",
-        priority = 50,
-    },
-    death = {
-        name = "AnimalVoiceRatDeath",
-        slot = "voice",
-        priority = 100,
-    },
-    runloop = {
-        name = "AnimalFootstepsRatRun",
-        slot = "runloop",
-    },
-    idle_walk = {
-        name = "AnimalFootstepsRatWalk",
-        slot = "voice",
-    },
-    idle = {
-        name = "AnimalVoiceRatIdle",
-        intervalMin = 10,
-        intervalMax = 20,
-        slot = "voice",
-    },
-    pick_up = {
-        name = "PickUpAnimalRat",
-        slot = "voice",
-        priority = 1,
-    },
-    pick_up_corpse = {
-        name = "PickUpAnimalDeadRat",
-    },
-    put_down = {
-        name = "PutDownAnimalRat",
-        slot = "voice",
-        priority = 1,
-    },
-    put_down_corpse = {
-        name = "PutDownAnimalDeadRat",
-    },
-    stressed = {
-        name = "AnimalVoiceRatStressed",
-        intervalMin = 5,
-        intervalMax = 15,
-        slot = "voice",
-    },
-    scuttle_ceiling = {
-        name = "AnimalRatScuttleCeiling",
-        slot = "voice",
-    },
-    scuttle_cupboard = {
-        name = "AnimalRatScuttleCupboard",
-        slot = "voice",
-    },
-    scuttle_wall = {
-        name = "AnimalRatScuttleWall",
-        slot = "voice",
-    },
+	pain = {
+		name = "AnimalVoiceRatPain",
+		slot = "voice",
+		priority = 50,
+	},
+	death = {
+		name = "AnimalVoiceRatDeath",
+		slot = "voice",
+		priority = 100,
+	},
+	runloop = {
+		name = "AnimalFootstepsRatRun",
+		slot = "runloop",
+	},
+	idle_walk = {
+		name = "AnimalFootstepsRatWalk",
+		slot = "voice",
+	},
+	idle = {
+		name = "AnimalVoiceRatIdle",
+		intervalMin = 10,
+		intervalMax = 20,
+		slot = "voice",
+	},
+	pick_up = {
+		name = "PickUpAnimalRat",
+		slot = "voice",
+		priority = 1,
+	},
+	pick_up_corpse = {
+		name = "PickUpAnimalDeadRat",
+	},
+	put_down = {
+		name = "PutDownAnimalRat",
+		slot = "voice",
+		priority = 1,
+	},
+	put_down_corpse = {
+		name = "PutDownAnimalDeadRat",
+	},
+	stressed = {
+		name = "AnimalVoiceRatStressed",
+		intervalMin = 5,
+		intervalMax = 15,
+		slot = "voice",
+	},
+	scuttle_ceiling = {
+		name = "AnimalRatScuttleCeiling",
+		slot = "voice",
+	},
+	scuttle_cupboard = {
+		name = "AnimalRatScuttleCupboard",
+		slot = "voice",
+	},
+	scuttle_wall = {
+		name = "AnimalRatScuttleWall",
+		slot = "voice",
+	},
 }
 
 ---@class AnimalDefinitions

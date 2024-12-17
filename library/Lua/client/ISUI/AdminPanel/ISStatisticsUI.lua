@@ -33,7 +33,6 @@
 ---@field [any] any
 ISStatisticsUI = ISCollapsableWindow:derive("ISStatisticsUI")
 
-
 ---@return any
 function ISStatisticsUI:close() end
 
@@ -58,13 +57,11 @@ function ISStatisticsUI:prerender() end
 ---@return any
 function ISStatisticsUI:render() end
 
-
 ---@return ISStatisticsUI
 function ISStatisticsUI:new(x, y, player) end
 
 ---@class ISStatisticsPanel : ISPanel
 ISStatisticsPanel = ISPanel:derive("ISStatisticsPanel")
-
 
 ---@return any
 function ISStatisticsPanel:drawRow(l, lC, c, cC, s, sC, y, r, g, b, a, background) end
@@ -80,7 +77,6 @@ function ISStatisticsPanel:render() end
 
 ---@return any
 function ISStatisticsPanel:renderStatistics() end
-
 
 ---@return ISStatisticsPanel
 function ISStatisticsPanel:new(x, y, width, height) end

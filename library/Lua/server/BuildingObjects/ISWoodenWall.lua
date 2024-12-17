@@ -10,7 +10,6 @@
 ---@field [any] any
 ISWoodenWall = ISBuildingObject:derive("ISWoodenWall")
 
-
 ---@return any
 function ISWoodenWall:addCorner(x, y, z, north) end
 
@@ -34,7 +33,6 @@ function ISWoodenWall:onTimedActionStart(action) end
 
 ---@return any
 function ISWoodenWall:render(x, y, z, square) end
-
 
 ---@return ISWoodenWall
 function ISWoodenWall:new(sprite, northSprite, corner) end

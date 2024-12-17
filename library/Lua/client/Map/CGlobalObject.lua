@@ -9,7 +9,6 @@
 ---@field [any] any
 CGlobalObject = ISBaseObject:derive("CGlobalObject")
 
-
 ---@return any
 function CGlobalObject:fromModData(modData) end
 
@@ -24,7 +23,6 @@ function CGlobalObject:noise(message) end
 
 ---@return any
 function CGlobalObject:updateFromIsoObject() end
-
 
 ---@return CGlobalObject
 function CGlobalObject:new(luaSystem, globalObject) end

@@ -7,7 +7,6 @@
 ---@field [any] any
 ISWidgetRecipeCategories = ISPanel:derive("ISWidgetRecipeCategories")
 
-
 ---@return any
 function ISWidgetRecipeCategories:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -37,7 +36,6 @@ function ISWidgetRecipeCategories:setInternalHeight(_height) end
 
 ---@return any
 function ISWidgetRecipeCategories:update() end
-
 
 ---@return ISWidgetRecipeCategories
 function ISWidgetRecipeCategories:new(x, y, width, height) end

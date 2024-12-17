@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ResourceFluid: Resource
 --- @field public class any
-ResourceFluid = {};
+ResourceFluid = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,7 @@ ResourceFluid = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function ResourceFluid:DoTooltip(arg0, arg1) end
 
 --- @public
@@ -25,7 +25,7 @@ function ResourceFluid:canDrainFromItem(arg0) end
 function ResourceFluid:canDrainToItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function ResourceFluid:clear() end
 
 --- @public
@@ -39,11 +39,11 @@ function ResourceFluid:drainFromItem(arg0) end
 function ResourceFluid:drainToItem(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function ResourceFluid:getFluidAmount() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceFluid:getFluidCapacity() end
 
 --- @public
@@ -51,11 +51,11 @@ function ResourceFluid:getFluidCapacity() end
 function ResourceFluid:getFluidContainer() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceFluid:getFluidRatio() end
 
 --- @public
---- @return float
+--- @return number
 function ResourceFluid:getFreeFluidCapacity() end
 
 --- @public
@@ -68,36 +68,34 @@ function ResourceFluid:isFull() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceFluid:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ResourceFluid:loadSync(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ResourceFluid:save(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ResourceFluid:saveSync(arg0) end
 
 --- @public
 --- @param arg0 ResourceFluid
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function ResourceFluid:transferTo(arg0, arg1) end
 
 --- @public
 --- @param arg0 Resource
---- @return void
---- @overload fun(self: ResourceFluid, arg0: Resource, arg1: float): void
+--- @return nil
+--- @overload fun(self: ResourceFluid, arg0: Resource, arg1: number): nil
 function ResourceFluid:tryTransferTo(arg0) end
-
-

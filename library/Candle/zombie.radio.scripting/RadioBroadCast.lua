@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RadioBroadCast
 --- @field public class any
-RadioBroadCast = {};
+RadioBroadCast = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,11 +10,11 @@ RadioBroadCast = {};
 
 --- @public
 --- @param arg0 RadioLine
---- @return void
+--- @return nil
 function RadioBroadCast:AddRadioLine(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function RadioBroadCast:PeekNextLineText() end
 
 --- @public
@@ -22,15 +22,15 @@ function RadioBroadCast:PeekNextLineText() end
 function RadioBroadCast:getCurrentLine() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioBroadCast:getCurrentLineNumber() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioBroadCast:getEndStamp() end
 
 --- @public
---- @return String
+--- @return string
 function RadioBroadCast:getID() end
 
 --- @public
@@ -43,37 +43,36 @@ function RadioBroadCast:getLines() end
 function RadioBroadCast:getNextLine() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioBroadCast:getStartStamp() end
 
 --- @public
---- @return void
---- @overload fun(self: RadioBroadCast, arg0: boolean): void
+--- @return nil
+--- @overload fun(self: RadioBroadCast, arg0: boolean): nil
 function RadioBroadCast:resetLineCounter() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RadioBroadCast:setCurrentLineNumber(arg0) end
 
 --- @public
 --- @param arg0 RadioBroadCast
---- @return void
+--- @return nil
 function RadioBroadCast:setPostSegment(arg0) end
 
 --- @public
 --- @param arg0 RadioBroadCast
---- @return void
+--- @return nil
 function RadioBroadCast:setPreSegment(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return RadioBroadCast
 function RadioBroadCast.new(arg0, arg1, arg2) end

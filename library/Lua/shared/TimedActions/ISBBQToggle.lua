@@ -6,7 +6,6 @@
 ---@field [any] any
 ISBBQToggle = ISBaseTimedAction:derive("ISBBQToggle")
 
-
 ---@return any
 function ISBBQToggle:complete() end
 
@@ -30,7 +29,6 @@ function ISBBQToggle:update() end
 
 ---@return any
 function ISBBQToggle:waitToStart() end
-
 
 ---@return ISBBQToggle
 function ISBBQToggle:new(character, bbq) end

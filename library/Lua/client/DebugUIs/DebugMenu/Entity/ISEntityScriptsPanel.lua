@@ -16,10 +16,8 @@
 ---@field [any] any
 ISEntityScriptsPanel = ISPanel:derive("ISEntityScriptsPanel")
 
-
 ---@return any
 function ISEntityScriptsPanel.onTextChange(box) end
-
 
 ---@return any
 function ISEntityScriptsPanel:createChildren() end
@@ -50,7 +48,6 @@ function ISEntityScriptsPanel:prerender() end
 
 ---@return any
 function ISEntityScriptsPanel:render() end
-
 
 ---@return ISEntityScriptsPanel
 function ISEntityScriptsPanel:new(x, y, width, height, player) end

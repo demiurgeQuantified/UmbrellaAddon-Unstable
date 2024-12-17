@@ -86,10 +86,8 @@
 ISEquippedItem = ISPanel:derive("ISEquippedItem")
 ISEquippedItem.text = nil
 
-
 ---@return any
 function ISEquippedItem.onKeyPressed(key) end
-
 
 ---@return any
 function ISEquippedItem:addMouseOverToolTipItem(_object, _displayString) end
@@ -148,13 +146,11 @@ function ISEquippedItem:shrinkWrap() end
 ---@return any
 function ISEquippedItem:toggleSafety() end
 
-
 ---@return ISEquippedItem
 function ISEquippedItem:new(x, y, width, height, chr) end
 
 ---@class ISMoveablesIconPopup : ISPanel
 ISMoveablesIconPopup = ISPanel:derive("ISMoveablesIconPopup")
-
 
 ---@return any
 function ISMoveablesIconPopup:onMouseDown(x, y) end
@@ -168,7 +164,6 @@ function ISMoveablesIconPopup:prerender() end
 ---@return any
 function ISMoveablesIconPopup:render() end
 
-
 ---@return ISMoveablesIconPopup
 function ISMoveablesIconPopup:new(x, y, width, height) end
 
@@ -177,7 +172,6 @@ function ISMoveablesIconPopup:new(x, y, width, height) end
 ---@field texMiniMap any
 ---@field [any] any
 ISMapPopup = ISPanel:derive("ISMapPopup")
-
 
 ---@return any
 function ISMapPopup:onMouseDown(x, y) end
@@ -190,7 +184,6 @@ function ISMapPopup:prerender() end
 
 ---@return any
 function ISMapPopup:render() end
-
 
 ---@return ISMapPopup
 function ISMapPopup:new(x, y, width, height) end

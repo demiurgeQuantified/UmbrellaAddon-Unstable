@@ -9,7 +9,6 @@
 ---@field [any] any
 ISTakeEngineParts = ISBaseTimedAction:derive("ISTakeEngineParts")
 
-
 ---@return any
 function ISTakeEngineParts:complete() end
 
@@ -33,7 +32,6 @@ function ISTakeEngineParts:stop() end
 
 ---@return any
 function ISTakeEngineParts:update() end
-
 
 ---@return ISTakeEngineParts
 function ISTakeEngineParts:new(character, part, item, maxTime) end

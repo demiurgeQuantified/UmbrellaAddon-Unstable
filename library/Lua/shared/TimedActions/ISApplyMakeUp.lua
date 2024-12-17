@@ -9,7 +9,6 @@
 ---@field [any] any
 ISApplyMakeUp = ISBaseTimedAction:derive("ISApplyMakeUp")
 
-
 ---@return any
 function ISApplyMakeUp:complete() end
 
@@ -30,7 +29,6 @@ function ISApplyMakeUp:stop() end
 
 ---@return any
 function ISApplyMakeUp:update() end
-
 
 ---@return ISApplyMakeUp
 function ISApplyMakeUp:new(character, item, type) end

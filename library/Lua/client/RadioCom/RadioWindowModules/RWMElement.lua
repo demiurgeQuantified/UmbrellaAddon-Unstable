@@ -27,7 +27,6 @@
 ---@field [any] any
 RWMElement = ISPanelJoypad:derive("RWMElement")
 
-
 ---@return any
 function RWMElement:calculateHeights() end
 
@@ -99,7 +98,6 @@ function RWMElement:setExpanded(_bool) end
 
 ---@return any
 function RWMElement:setFocus(_playerNum, _radioParent) end
-
 
 ---@return RWMElement
 function RWMElement:new(x, y, width, height, subpanel, title, radioParent) end

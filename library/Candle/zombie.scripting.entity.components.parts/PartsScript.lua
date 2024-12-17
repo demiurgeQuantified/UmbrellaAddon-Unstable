@@ -1,33 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class PartsScript: ComponentScript
 --- @field public class any
-PartsScript = {};
+PartsScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function PartsScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function PartsScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function PartsScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function PartsScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function PartsScript:PreReload() end
 
 --- @public
@@ -35,7 +35,5 @@ function PartsScript:PreReload() end
 function PartsScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function PartsScript:reset() end
-
-

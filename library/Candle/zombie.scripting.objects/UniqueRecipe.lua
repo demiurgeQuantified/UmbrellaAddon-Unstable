@@ -1,34 +1,34 @@
---- @meta
+--- @meta _
 
 --- @class UniqueRecipe: BaseScriptObject
 --- @field public class any
-UniqueRecipe = {};
+UniqueRecipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 String[]
---- @return void
---- @overload fun(self: UniqueRecipe, arg0: String, arg1: String): void
+--- @return nil
+--- @overload fun(self: UniqueRecipe, arg0: string, arg1: string): nil
 function UniqueRecipe:Load(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function UniqueRecipe:getBaseRecipe() end
 
 --- @public
---- @return int
+--- @return integer
 function UniqueRecipe:getBoredomBonus() end
 
 --- @public
---- @return int
+--- @return integer
 function UniqueRecipe:getHapinessBonus() end
 
 --- @public
---- @return int
+--- @return integer
 function UniqueRecipe:getHungerBonus() end
 
 --- @public
@@ -36,40 +36,39 @@ function UniqueRecipe:getHungerBonus() end
 function UniqueRecipe:getItems() end
 
 --- @public
---- @return String
+--- @return string
 function UniqueRecipe:getName() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UniqueRecipe:setBaseRecipe(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function UniqueRecipe:setBoredomBonus(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function UniqueRecipe:setHapinessBonus(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function UniqueRecipe:setHungerBonus(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UniqueRecipe:setName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return UniqueRecipe
 function UniqueRecipe.new(arg0) end

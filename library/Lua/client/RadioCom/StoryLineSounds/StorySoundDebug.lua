@@ -27,7 +27,6 @@
 ISStorySoundsDebug = ISCollapsableWindow:derive("ISStorySoundsDebug")
 ISStorySoundsDebug.instance = nil
 
-
 ---@return any
 function ISStorySoundsDebug:createChildren() end
 
@@ -42,7 +41,6 @@ function ISStorySoundsDebug:render() end
 
 ---@return any
 function ISStorySoundsDebug:update() end
-
 
 ---@return ISStorySoundsDebug
 function ISStorySoundsDebug:new(x, y, width, height) end

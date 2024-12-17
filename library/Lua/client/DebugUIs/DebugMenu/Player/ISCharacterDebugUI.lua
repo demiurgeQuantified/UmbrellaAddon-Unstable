@@ -25,10 +25,8 @@
 ISCharacterDebugUI = ISPanel:derive("ISCharacterDebugUI")
 ISCharacterDebugUI.instance = nil
 
-
 ---@return any
 function ISCharacterDebugUI.OnOpenPanel() end
-
 
 ---@return any
 function ISCharacterDebugUI:addOption(tickBox, text, selected, setFunction, tickSetFunction) end
@@ -53,7 +51,6 @@ function ISCharacterDebugUI:prerender() end
 
 ---@return any
 function ISCharacterDebugUI:render() end
-
 
 ---@return ISCharacterDebugUI
 function ISCharacterDebugUI:new(x, y, width, height) end

@@ -35,10 +35,8 @@ DailyValuesDebug = ISCollapsableWindow:derive("DailyValuesDebug")
 DailyValuesDebug.instance = nil
 DailyValuesDebug.shiftDown = 0
 
-
 ---@return any
 function DailyValuesDebug.OnOpenPanel() end
-
 
 ---@return any
 function DailyValuesDebug:addLabel(_curY, _labelID, _title) end
@@ -78,7 +76,6 @@ function DailyValuesDebug:stayOnSplitScreen() end
 
 ---@return any
 function DailyValuesDebug:update() end
-
 
 ---@return DailyValuesDebug
 function DailyValuesDebug:new(x, y, width, height, player) end

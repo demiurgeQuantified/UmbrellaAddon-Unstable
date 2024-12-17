@@ -1,22 +1,21 @@
---- @meta
+--- @meta _
 
 --- @class ZLayer
 --- @field public class any
-ZLayer = {};
+ZLayer = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function ZLayer:getHeight() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return XRow
 function ZLayer:getRow(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

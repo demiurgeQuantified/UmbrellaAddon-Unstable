@@ -10,7 +10,6 @@
 ---@field [any] any
 ISFeedAnimalFromHand = ISBaseTimedAction:derive("ISFeedAnimalFromHand")
 
-
 ---@return any
 function ISFeedAnimalFromHand:complete() end
 
@@ -37,7 +36,6 @@ function ISFeedAnimalFromHand:stopSound() end
 
 ---@return any
 function ISFeedAnimalFromHand:update() end
-
 
 ---@return ISFeedAnimalFromHand
 function ISFeedAnimalFromHand:new(character, animal, food) end

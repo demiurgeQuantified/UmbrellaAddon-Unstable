@@ -15,7 +15,6 @@
 ---@field [any] any
 ISStitch = ISBaseTimedAction:derive("ISStitch")
 
-
 ---@return any
 function ISStitch:complete() end
 
@@ -42,7 +41,6 @@ function ISStitch:update() end
 
 ---@return any
 function ISStitch:waitToStart() end
-
 
 ---@return ISStitch
 function ISStitch:new(character, otherPlayer, item, bodyPart, doIt) end

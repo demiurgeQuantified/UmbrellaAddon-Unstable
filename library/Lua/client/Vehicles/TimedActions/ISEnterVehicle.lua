@@ -12,7 +12,6 @@
 ---@field [any] any
 ISEnterVehicle = ISBaseTimedAction:derive("ISEnterVehicle")
 
-
 ---@return any
 function ISEnterVehicle:getExtraLogData() end
 
@@ -30,7 +29,6 @@ function ISEnterVehicle:stop() end
 
 ---@return any
 function ISEnterVehicle:update() end
-
 
 ---@return ISEnterVehicle
 function ISEnterVehicle:new(character, vehicle, seat) end

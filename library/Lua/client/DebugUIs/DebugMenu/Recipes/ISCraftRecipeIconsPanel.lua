@@ -12,7 +12,6 @@
 ---@field [any] any
 ISCraftRecipeIconsPanel = ISPanel:derive("ISCraftRecipeIconsPanel")
 
-
 ---@return any
 function ISCraftRecipeIconsPanel:close() end
 
@@ -36,7 +35,6 @@ function ISCraftRecipeIconsPanel:render() end
 
 ---@return any
 function ISCraftRecipeIconsPanel:updateTooltip() end
-
 
 ---@return ISCraftRecipeIconsPanel
 function ISCraftRecipeIconsPanel:new(x, y, width, height, player) end

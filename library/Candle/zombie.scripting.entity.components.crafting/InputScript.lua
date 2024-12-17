@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class InputScript: IOScript
 --- @field public class any
-InputScript = {};
+InputScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,7 +10,7 @@ InputScript = {};
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function InputScript:OnScriptsLoaded(arg0) end
 
 --- @public
@@ -26,7 +26,7 @@ function InputScript:allowFrozenItem() end
 function InputScript:allowRottenItem() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 --- @overload fun(self: InputScript, arg0: InventoryItem): boolean
 function InputScript:canUseItem(arg0) end
@@ -51,9 +51,9 @@ function InputScript:containsItem(arg0) end
 function InputScript:dontPutBack() end
 
 --- @public
---- @return float
---- @overload fun(self: InputScript, arg0: int): float
---- @overload fun(self: InputScript, arg0: String): float
+--- @return number
+--- @overload fun(self: InputScript, arg0: integer): number
+--- @overload fun(self: InputScript, arg0: string): number
 function InputScript:getAmount() end
 
 --- @public
@@ -69,9 +69,9 @@ function InputScript:getCreateToItemScript() end
 function InputScript:getFluidMatchMode() end
 
 --- @public
---- @return int
---- @overload fun(self: InputScript, arg0: int): int
---- @overload fun(self: InputScript, arg0: String): int
+--- @return integer
+--- @overload fun(self: InputScript, arg0: integer): integer
+--- @overload fun(self: InputScript, arg0: string): integer
 function InputScript:getIntAmount() end
 
 --- @public
@@ -79,7 +79,7 @@ function InputScript:getIntAmount() end
 function InputScript:getItemApplyMode() end
 
 --- @public
---- @return String
+--- @return string
 function InputScript:getOriginalLine() end
 
 --- @public
@@ -95,8 +95,8 @@ function InputScript:getPossibleInputFluids() end
 function InputScript:getPossibleInputItems() end
 
 --- @public
---- @param arg0 String
---- @return float
+--- @param arg0 string
+--- @return number
 function InputScript:getRelativeScale(arg0) end
 
 --- @public
@@ -108,7 +108,7 @@ function InputScript:getReplaceOutputScript() end
 function InputScript:getResourceType() end
 
 --- @public
---- @return int
+--- @return integer
 function InputScript:getShapedIndex() end
 
 --- @public
@@ -310,5 +310,3 @@ function InputScript:notFull() end
 --- @public
 --- @return boolean
 function InputScript:sharpnessCheck() end
-
-

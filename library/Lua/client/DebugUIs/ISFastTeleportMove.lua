@@ -9,7 +9,6 @@ ISFastTeleportMove.cheat = false
 ISFastTeleportMove.currentZ = 0
 ISFastTeleportMove.isAdded = false
 
-
 ---@return any
 function ISFastTeleportMove.moveXY(player, dx, dy) end
 

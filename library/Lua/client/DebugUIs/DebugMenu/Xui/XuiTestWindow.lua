@@ -13,7 +13,6 @@
 ---@field [any] any
 XuiTestWindow = ISCollapsableWindow:derive("XuiTestWindow")
 
-
 ---@return any
 function XuiTestWindow:close() end
 
@@ -34,7 +33,6 @@ function XuiTestWindow:prerender() end
 
 ---@return any
 function XuiTestWindow:render() end
-
 
 ---@return XuiTestWindow
 function XuiTestWindow:new(x, y, width, height, player, script) end

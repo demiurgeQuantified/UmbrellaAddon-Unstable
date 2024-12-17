@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class OpenWindowState: State
 --- @field public class any
-OpenWindowState = {};
+OpenWindowState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ OpenWindowState = {};
 --- @return OpenWindowState
 function OpenWindowState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,22 +20,22 @@ function OpenWindowState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function OpenWindowState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function OpenWindowState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function OpenWindowState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function OpenWindowState:exit(arg0) end
 
 --- @public
@@ -46,9 +45,8 @@ function OpenWindowState:isDoingActionThatCanBeCancelled() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 IsoWindow
---- @return void
+--- @return nil
 function OpenWindowState:setParams(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

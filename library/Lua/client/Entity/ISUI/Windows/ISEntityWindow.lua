@@ -7,10 +7,8 @@
 ---@field [any] any
 ISEntityWindow = ISBaseEntityWindow:derive("ISEntityWindow")
 
-
 ---@return any
 function ISEntityWindow.CanOpenWindowFor(_player, _entity) end
-
 
 ---@return any
 function ISEntityWindow:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -47,7 +45,6 @@ function ISEntityWindow:stayOnSplitScreen() end
 
 ---@return any
 function ISEntityWindow:update() end
-
 
 ---@return ISEntityWindow
 function ISEntityWindow:new(x, y, width, height, player, entity, entityConfig) end

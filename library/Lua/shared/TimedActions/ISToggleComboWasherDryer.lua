@@ -6,7 +6,6 @@
 ---@field [any] any
 ISToggleComboWasherDryer = ISBaseTimedAction:derive("ISToggleComboWasherDryer")
 
-
 ---@return any
 function ISToggleComboWasherDryer:complete() end
 
@@ -27,7 +26,6 @@ function ISToggleComboWasherDryer:stop() end
 
 ---@return any
 function ISToggleComboWasherDryer:update() end
-
 
 ---@return ISToggleComboWasherDryer
 function ISToggleComboWasherDryer:new(character, object) end

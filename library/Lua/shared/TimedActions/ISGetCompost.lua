@@ -7,7 +7,6 @@
 ---@field [any] any
 ISGetCompost = ISBaseTimedAction:derive("ISGetCompost")
 
-
 ---@return any
 function ISGetCompost:complete() end
 
@@ -28,7 +27,6 @@ function ISGetCompost:stop() end
 
 ---@return any
 function ISGetCompost:update() end
-
 
 ---@return ISGetCompost
 function ISGetCompost:new(character, compost, item) end

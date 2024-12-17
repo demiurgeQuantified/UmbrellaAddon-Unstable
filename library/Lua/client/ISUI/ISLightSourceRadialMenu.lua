@@ -6,7 +6,6 @@
 ---@field [any] any
 ISLightSourceRadialMenu = ISBaseObject:derive("ISLightSourceRadialMenu")
 
-
 ---@return any
 function ISLightSourceRadialMenu.checkKey(key) end
 
@@ -18,7 +17,6 @@ function ISLightSourceRadialMenu.onKeyReleased(key) end
 
 ---@return any
 function ISLightSourceRadialMenu.onKeyRepeat(key) end
-
 
 ---@return any
 function ISLightSourceRadialMenu:center() end
@@ -55,7 +53,6 @@ function ISLightSourceRadialMenu:onRemoveBattery(item) end
 
 ---@return any
 function ISLightSourceRadialMenu:onToggle(item) end
-
 
 ---@return ISLightSourceRadialMenu
 function ISLightSourceRadialMenu:new(character) end

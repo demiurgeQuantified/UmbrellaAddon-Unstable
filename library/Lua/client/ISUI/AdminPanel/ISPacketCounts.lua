@@ -12,7 +12,6 @@
 ---@field [any] any
 ISPacketCounts = ISPanel:derive("ISPacketCounts")
 
-
 ---@return any
 function ISPacketCounts:closeSelf() end
 
@@ -31,20 +30,17 @@ function ISPacketCounts:onUpdate() end
 ---@return any
 function ISPacketCounts:render() end
 
-
 ---@return ISPacketCounts
 function ISPacketCounts:new(x, y, width, height) end
 
 ---@class ISPacketCountsList : ISPanel
 ISPacketCountsList = ISPanel:derive("ISPacketCountsList")
 
-
 ---@return any
 function ISPacketCountsList:onMouseWheel(del) end
 
 ---@return any
 function ISPacketCountsList:prerender() end
-
 
 ---@return ISPacketCountsList
 function ISPacketCountsList:new(x, y, width, height) end

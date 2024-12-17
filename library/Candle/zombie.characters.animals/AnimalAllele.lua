@@ -1,27 +1,27 @@
---- @meta
+--- @meta _
 
 --- @class AnimalAllele
 --- @field public class any
-AnimalAllele = {};
+AnimalAllele = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function AnimalAllele:getCurrentValue() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalAllele:getGeneticDisorder() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalAllele:getName() end
 
 --- @public
---- @return float
+--- @return number
 function AnimalAllele:getTrueRatioValue() end
 
 --- @public
@@ -34,42 +34,41 @@ function AnimalAllele:isUsed() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function AnimalAllele:load(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimalAllele:save(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalAllele:setCurrentValue(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalAllele:setDominant(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function AnimalAllele:setGeneticDisorder(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AnimalAllele:setTrueRatioValue(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function AnimalAllele:setUsed(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,29 +1,29 @@
---- @meta
+--- @meta _
 
 --- @class IsoCell
 --- @field public class any
---- @field public CellSizeInChunks int
---- @field public CellSizeInSquares int
+--- @field public CellSizeInChunks integer
+--- @field public CellSizeInSquares integer
 --- @field public ENABLE_SQUARE_CACHE boolean
 --- @field public GridStack ArrayList
---- @field public ISOANGLEFACTOR int
+--- @field public ISOANGLEFACTOR integer
 --- @field public m_floorRenderShader Shader
 --- @field public m_wallRenderShader Shader
---- @field public MaxHeight int
+--- @field public MaxHeight integer
 --- @field public MinusFloorCharacters ArrayList
---- @field public NEARESTZOMBIEDISTSQRMAX float
+--- @field public NEARESTZOMBIEDISTSQRMAX number
 --- @field public perPlayerRender PerPlayerRender[]
---- @field public RTF_MinusFloorCharacters int
---- @field public RTF_ShadedFloor int
---- @field public RTF_Shadows int
---- @field public RTF_SolidFloor int
---- @field public RTF_VegetationCorpses int
+--- @field public RTF_MinusFloorCharacters integer
+--- @field public RTF_ShadedFloor integer
+--- @field public RTF_Shadows integer
+--- @field public RTF_SolidFloor integer
+--- @field public RTF_VegetationCorpses integer
 --- @field public ShadedFloor ArrayList
 --- @field public ShadowSquares ArrayList
 --- @field public SolidFloor ArrayList
 --- @field public VegetationCorpses ArrayList
---- @field public ZOMBIESCANBUDGET int
-IsoCell = {};
+--- @field public ZOMBIESCANBUDGET integer
+IsoCell = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -36,8 +36,8 @@ function IsoCell.FromMouseTile() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function IsoCell.getBComponent(arg0) end
 
 --- @public
@@ -47,18 +47,18 @@ function IsoCell.getBuildings() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function IsoCell.getCellSizeInChunks() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function IsoCell.getCellSizeInSquares() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function IsoCell.getGComponent(arg0) end
 
 --- @public
@@ -68,30 +68,29 @@ function IsoCell.getInstance() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function IsoCell.getMaxHeight() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return int
+--- @param arg0 integer
+--- @return integer
 function IsoCell.getRComponent(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 Stack
---- @return void
+--- @return nil
 function IsoCell.setBuildings(arg0) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return int
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return integer
 function IsoCell.toIntColor(arg0, arg1, arg2, arg3) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -100,21 +99,21 @@ function IsoCell.toIntColor(arg0, arg1, arg2, arg3) end
 --- @public
 --- @param arg0 ArrayList
 --- @param arg1 IsoBuilding
---- @return void
+--- @return nil
 function IsoCell:AddUniqueToBuildingList(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @return void
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return nil
 function IsoCell:CalculateVertColoursForTile(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 int
+--- @param arg1 integer
 --- @return boolean
 function IsoCell:CanBuildingSquareOccludePlayer(arg0, arg1) end
 
@@ -125,22 +124,22 @@ function IsoCell:CanBuildingSquareOccludePlayer(arg0, arg1) end
 function IsoCell:ConnectNewSquare(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:DeleteAllMovingObjects() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:Dispose() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return float
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return number
 function IsoCell:DistanceFromSupport(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 boolean
 --- @return boolean
 function IsoCell:DoBuilding(arg0, arg1) end
@@ -148,33 +147,33 @@ function IsoCell:DoBuilding(arg0, arg1) end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @param arg1 GetSquare
---- @return void
+--- @return nil
 function IsoCell:DoGridNav(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @param arg1 IsoGridSquare
---- @param arg2 int
---- @param arg3 long
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return boolean
 function IsoCell:DoesSquareHaveValidCutaways(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:DrawStencilMask() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function IsoCell:EnsureSurroundNotNull(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ArrayList
 --- @param arg1 IsoGridSquare
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoCell:GetBuildingsInFrontOfCharacter(arg0, arg1, arg2) end
 
 --- @public
@@ -184,7 +183,7 @@ function IsoCell:GetBuildingsInFrontOfCharacter(arg0, arg1, arg2) end
 function IsoCell:GetBuildingsInFrontOfMustSeeSquare(arg0, arg1) end
 
 --- @public
---- @return long
+--- @return integer
 function IsoCell:GetEffectivePlayerRoomId() end
 
 --- @public
@@ -198,7 +197,7 @@ function IsoCell:GetPeekedInBuilding(arg0, arg1) end
 --- @param arg1 IsoGridSquare
 --- @param arg2 ArrayList
 --- @param arg3 ArrayList
---- @return void
+--- @return nil
 function IsoCell:GetSquaresAroundPlayerSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -213,53 +212,53 @@ function IsoCell:IsCollapsibleBuildingSquare(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 long
+--- @param arg1 integer
 --- @return boolean
 function IsoCell:IsCutawaySquare(arg0, arg1) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function IsoCell:IsPlayerWindowPeeking(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function IsoCell:LoadPlayer(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 boolean
---- @return void
---- @overload fun(self: IsoCell, arg0: IsoLot, arg1: int, arg2: int, arg3: int, arg4: boolean): void
---- @overload fun(self: IsoCell, arg0: IsoLot, arg1: int, arg2: int, arg3: int, arg4: IsoChunk, arg5: int, arg6: int, arg7: boolean[]): int
+--- @return nil
+--- @overload fun(self: IsoCell, arg0: IsoLot, arg1: integer, arg2: integer, arg3: integer, arg4: boolean): nil
+--- @overload fun(self: IsoCell, arg0: IsoLot, arg1: integer, arg2: integer, arg3: integer, arg4: IsoChunk, arg5: integer, arg6: integer, arg7: boolean[]): integer
 function IsoCell:PlaceLot(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:ProcessSpottedRooms() end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @return void
+--- @return nil
 function IsoCell:Remove(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:RenderFloorShading(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:RenderSnow(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:RenderTiles(arg0) end
 
 --- @public
@@ -268,88 +267,88 @@ function IsoCell:SetCutawayRoomsForPlayer() end
 
 --- @public
 --- @param arg0 IsoHeatSource
---- @return void
+--- @return nil
 function IsoCell:addHeatSource(arg0) end
 
 --- @public
 --- @param arg0 IsoLightSource
---- @return void
---- @overload fun(self: IsoCell, arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int): IsoLightSource
+--- @return nil
+--- @overload fun(self: IsoCell, arg0: integer, arg1: integer, arg2: integer, arg3: number, arg4: number, arg5: number, arg6: integer): IsoLightSource
 function IsoCell:addLamppost(arg0) end
 
 --- @public
 --- @param arg0 IsoMovingObject
---- @return void
+--- @return nil
 function IsoCell:addMovingObject(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 String
+--- @param arg1 string
 --- @return IsoObject
 function IsoCell:addTileObject(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function IsoCell:addToProcessIsoObject(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function IsoCell:addToProcessIsoObjectRemove(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
---- @overload fun(self: IsoCell, arg0: InventoryItem): void
+--- @return nil
+--- @overload fun(self: IsoCell, arg0: InventoryItem): nil
 function IsoCell:addToProcessItems(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
---- @overload fun(self: IsoCell, arg0: InventoryItem): void
+--- @return nil
+--- @overload fun(self: IsoCell, arg0: InventoryItem): nil
 function IsoCell:addToProcessItemsRemove(arg0) end
 
 --- @public
 --- @param arg0 IsoWorldInventoryObject
---- @return void
+--- @return nil
 function IsoCell:addToProcessWorldItems(arg0) end
 
 --- @public
 --- @param arg0 IsoWorldInventoryObject
---- @return void
+--- @return nil
 function IsoCell:addToProcessWorldItemsRemove(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function IsoCell:addToStaticUpdaterObjectList(arg0) end
 
 --- @public
 --- @param arg0 IsoWindow
---- @return void
+--- @return nil
 function IsoCell:addToWindowList(arg0) end
 
 --- @public
 --- @param arg0 Mover
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
 --- @return boolean
 function IsoCell:blocked(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function IsoCell:checkHaveRoof(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:clearCacheGridSquare(arg0) end
 
 --- @public
@@ -360,17 +359,17 @@ function IsoCell:clearCacheGridSquare(arg0) end
 function IsoCell:collapsibleBuildingSquareAlgorithm(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 boolean
 --- @return IsoGridSquare
 function IsoCell:createNewGridSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 PerPlayerRender
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function IsoCell:flattenAnyFoliage(arg0, arg1) end
 
 --- @public
@@ -379,7 +378,7 @@ function IsoCell:getAddList() end
 
 --- @public
 --- @param arg0 BuildingSearchCriteria
---- @param arg1 int
+--- @param arg1 integer
 --- @return Stack
 function IsoCell:getBestBuildings(arg0, arg1) end
 
@@ -392,20 +391,20 @@ function IsoCell:getBuildingList() end
 function IsoCell:getBuildingScores() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return IsoChunk
 function IsoCell:getChunk(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return IsoChunk
 function IsoCell:getChunkForGridSquare(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoChunkMap
 function IsoCell:getChunkMap(arg0) end
 
@@ -416,15 +415,15 @@ function IsoCell:getChunkMap(arg0) end
 function IsoCell:getClosestBuildingExcept(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getCurrentLightX() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getCurrentLightY() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getCurrentLightZ() end
 
 --- @public
@@ -432,9 +431,9 @@ function IsoCell:getCurrentLightZ() end
 function IsoCell:getCurrentLotHeader() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function IsoCell:getDangerScore(arg0, arg1) end
 
 --- @public
@@ -442,7 +441,7 @@ function IsoCell:getDangerScore(arg0, arg1) end
 function IsoCell:getDangerUpdate() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return KahluaTable
 function IsoCell:getDrag(arg0) end
 
@@ -456,43 +455,43 @@ function IsoCell:getFakeZombieForHit() end
 function IsoCell:getFreeTile(arg0) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 double
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @return IsoGridSquare
---- @overload fun(self: IsoCell, arg0: int, arg1: int, arg2: int): IsoGridSquare
---- @overload fun(self: IsoCell, arg0: Double, arg1: Double, arg2: Double): IsoGridSquare
+--- @overload fun(self: IsoCell, arg0: integer, arg1: integer, arg2: integer): IsoGridSquare
+--- @overload fun(self: IsoCell, arg0: number, arg1: number, arg2: number): IsoGridSquare
 function IsoCell:getGridSquare(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return IsoGridSquare
 function IsoCell:getGridSquareDirect(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @return float
+--- @param arg0 number
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return number
 function IsoCell:getHeatSourceHighestTemperature(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
 function IsoCell:getHeatSourceTemperature(arg0, arg1, arg2) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getHeight() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getHeightInTiles() end
 
 --- @public
@@ -504,9 +503,9 @@ function IsoCell:getLamppostPositions() end
 function IsoCell:getLightInfoUpdate() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return IsoLightSource
 function IsoCell:getLightSourceAt(arg0, arg1, arg2) end
 
@@ -515,40 +514,40 @@ function IsoCell:getLightSourceAt(arg0, arg1, arg2) end
 function IsoCell:getLuaObjectList() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMaxFloors() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMaxX() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMaxY() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMaxZ() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMinX() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMinY() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getMinZ() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoZombie
 function IsoCell:getNearestVisibleZombie(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoSurvivor
 function IsoCell:getNetworkPlayer(arg0) end
 
@@ -557,14 +556,14 @@ function IsoCell:getNetworkPlayer(arg0) end
 function IsoCell:getObjectList() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 double
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @return IsoGridSquare
 function IsoCell:getOrCreateGridSquare(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return PerPlayerRender
 function IsoCell:getPerPlayerRenderAt(arg0) end
 
@@ -593,7 +592,7 @@ function IsoCell:getProcessWorldItems() end
 function IsoCell:getPushableObjectList() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getRainIntensity() end
 
 --- @public
@@ -605,9 +604,9 @@ function IsoCell:getRandomFreeTileInRoom() end
 function IsoCell:getRandomOutdoorTile() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return IsoGridSquare
 function IsoCell:getRelativeGridSquare(arg0, arg1, arg2) end
 
@@ -620,7 +619,7 @@ function IsoCell:getRemoteSurvivorList() end
 function IsoCell:getRemoveList() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoRoom
 function IsoCell:getRoom(arg0) end
 
@@ -629,7 +628,7 @@ function IsoCell:getRoom(arg0) end
 function IsoCell:getRoomList() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getSnowTarget() end
 
 --- @public
@@ -653,11 +652,11 @@ function IsoCell:getVehicles() end
 function IsoCell:getWeatherFX() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getWidth() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getWidthInTiles() end
 
 --- @public
@@ -665,11 +664,11 @@ function IsoCell:getWidthInTiles() end
 function IsoCell:getWindowList() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getWorldX() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoCell:getWorldY() end
 
 --- @public
@@ -677,31 +676,31 @@ function IsoCell:getWorldY() end
 function IsoCell:getZombieList() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return boolean
 function IsoCell:gridSquareIsSnow(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:initTileShaders() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:invalidatePeekedRoom(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return boolean
 function IsoCell:isInChunkMap(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return boolean
 function IsoCell:isNull(arg0, arg1, arg2) end
 
@@ -711,212 +710,211 @@ function IsoCell:isSafeToAdd() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoCell:putInVehicle(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:reloadRainTextures() end
 
 --- @public
 --- @param arg0 IsoWindow
---- @return void
+--- @return nil
 function IsoCell:removeFromWindowList(arg0) end
 
 --- @public
 --- @param arg0 IsoHeatSource
---- @return void
+--- @return nil
 function IsoCell:removeHeatSource(arg0) end
 
 --- @public
 --- @param arg0 IsoLightSource
---- @return void
---- @overload fun(self: IsoCell, arg0: int, arg1: int, arg2: int): void
+--- @return nil
+--- @overload fun(self: IsoCell, arg0: integer, arg1: integer, arg2: integer): nil
 function IsoCell:removeLamppost(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:render() end
 
 --- @public
 --- @param arg0 PerPlayerRender
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function IsoCell:renderDebugLighting(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:renderDebugPhysics(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:renderRain() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:renderShadows() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoCell:resumeVehicleSounds(arg0) end
 
 --- @public
 --- @param arg0 IsoRoom
---- @return void
+--- @return nil
 function IsoCell:roomSpotted(arg0) end
 
 --- @public
 --- @param arg0 DataOutputStream
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoCell:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoChunk
---- @return void
---- @overload fun(self: IsoCell, arg0: IsoChunk, arg1: int): void
+--- @return nil
+--- @overload fun(self: IsoCell, arg0: IsoChunk, arg1: integer): nil
 function IsoCell:setCacheChunk(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 IsoGridSquare
---- @return void
+--- @return nil
 function IsoCell:setCacheGridSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 IsoGridSquare
---- @param arg4 int
---- @return void
+--- @param arg4 integer
+--- @return nil
 function IsoCell:setCacheGridSquareLocal(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setCurrentLightX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setCurrentLightY(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setCurrentLightZ(arg0) end
 
 --- @public
 --- @param arg0 OnceEvery
---- @return void
+--- @return nil
 function IsoCell:setDangerUpdate(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function IsoCell:setDrag(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setHeight(arg0) end
 
 --- @public
 --- @param arg0 Thread
---- @return void
+--- @return nil
 function IsoCell:setLightInfoUpdate(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setMaxX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setMaxY(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setMaxZ(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setMinX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setMinY(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setMinZ(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setRainAlpha(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setRainIntensity(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setRainSpeed(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoCell:setSafeToAdd(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setSnowTarget(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setWidth(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setWorldX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoCell:setWorldY(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:update() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCell:updateHeatSources() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return IsoCell
 function IsoCell.new(arg0, arg1) end

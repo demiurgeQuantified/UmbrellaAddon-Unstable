@@ -58,7 +58,6 @@ ISClothingInsPanel = ISPanelJoypad:derive("ISClothingInsPanel")
 ISClothingInsPanel.viewSimpleID = "viewSimple"
 ISClothingInsPanel.viewAdvancedID = "viewAdvanced"
 
-
 ---@return any
 function ISClothingInsPanel:addMainGroup(_widget, _ignoreAddChild, _view) end
 
@@ -115,7 +114,6 @@ function ISClothingInsPanel:setViewStyle(_viewStyle, _force) end
 
 ---@return any
 function ISClothingInsPanel:update() end
-
 
 ---@return ISClothingInsPanel
 function ISClothingInsPanel:new(player, x, y, width, height) end

@@ -3,7 +3,6 @@
 ---@class CPlantGlobalObject : CGlobalObject
 CPlantGlobalObject = CGlobalObject:derive("CPlantGlobalObject")
 
-
 ---@return any
 function CPlantGlobalObject:canHarvest() end
 
@@ -15,7 +14,6 @@ function CPlantGlobalObject:isAlive() end
 
 ---@return any
 function CPlantGlobalObject:isBadMonth() end
-
 
 ---@return CPlantGlobalObject
 function CPlantGlobalObject:new(luaSystem, globalObject) end

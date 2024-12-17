@@ -20,10 +20,8 @@
 ISAdminTicketsUI = ISPanel:derive("ISAdminTicketsUI")
 ISAdminTicketsUI.messages = {}
 
-
 ---@return any
 function ISAdminTicketsUI.gotTickets(tickets) end
-
 
 ---@return any
 function ISAdminTicketsUI:drawDatas(y, item, alt) end
@@ -54,7 +52,6 @@ function ISAdminTicketsUI:render() end
 
 ---@return any
 function ISAdminTicketsUI:update() end
-
 
 ---@return ISAdminTicketsUI
 function ISAdminTicketsUI:new(x, y, width, height, player) end

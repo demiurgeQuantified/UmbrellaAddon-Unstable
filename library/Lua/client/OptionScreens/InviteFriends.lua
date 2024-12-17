@@ -15,10 +15,8 @@
 ---@field [any] any
 InviteFriends = ISPanelJoypad:derive("InviteFriends")
 
-
 ---@return any
 function InviteFriends.OnSteamFriendStatusChanged(steamID) end
-
 
 ---@return any
 function InviteFriends:clickBack() end
@@ -73,7 +71,6 @@ function InviteFriends:saveInvitedFile() end
 
 ---@return any
 function InviteFriends:toggleAllowDeny(index) end
-
 
 ---@return InviteFriends
 function InviteFriends:new(x, y, width, height) end

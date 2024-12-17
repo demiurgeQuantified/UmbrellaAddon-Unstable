@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ImmutableColor
 --- @field public class any
@@ -19,7 +19,7 @@
 --- @field public transparent ImmutableColor
 --- @field public white ImmutableColor
 --- @field public yellow ImmutableColor
-ImmutableColor = {};
+ImmutableColor = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -27,15 +27,15 @@ ImmutableColor = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @return Integer[]
 function ImmutableColor.HSBtoRGB(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ImmutableColor
 function ImmutableColor.decode(arg0) end
 
@@ -43,7 +43,6 @@ function ImmutableColor.decode(arg0) end
 --- @static
 --- @return ImmutableColor
 function ImmutableColor.random() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -56,74 +55,74 @@ function ImmutableColor:add(arg0) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, arg0: float): ImmutableColor
+--- @overload fun(self: ImmutableColor, arg0: number): ImmutableColor
 function ImmutableColor:brighter() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, arg0: float): ImmutableColor
+--- @overload fun(self: ImmutableColor, arg0: number): ImmutableColor
 function ImmutableColor:darker() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function ImmutableColor:equals(arg0) end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getAlphaByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getAlphaFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getAlphaInt() end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getBlueByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getBlueFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getBlueInt() end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getGreenByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getGreenFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getGreenInt() end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getRedByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getRedFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getRedInt() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:hashCode() end
 
 --- @public
 --- @param arg0 ImmutableColor
---- @param arg1 float
+--- @param arg1 number
 --- @return ImmutableColor
 function ImmutableColor:interp(arg0, arg1) end
 
@@ -133,7 +132,7 @@ function ImmutableColor:interp(arg0, arg1) end
 function ImmutableColor:multiply(arg0) end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return ImmutableColor
 function ImmutableColor:scale(arg0) end
 
@@ -142,22 +141,21 @@ function ImmutableColor:scale(arg0) end
 function ImmutableColor:toMutableColor() end
 
 --- @public
---- @return String
+--- @return string
 function ImmutableColor:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ImmutableColor
 --- @overload fun(arg0: Color): ImmutableColor
 --- @overload fun(arg0: ImmutableColor): ImmutableColor
---- @overload fun(arg0: float, arg1: float, arg2: float): ImmutableColor
---- @overload fun(arg0: int, arg1: int, arg2: int): ImmutableColor
---- @overload fun(arg0: Color, arg1: Color, arg2: float): ImmutableColor
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float): ImmutableColor
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int): ImmutableColor
+--- @overload fun(arg0: number, arg1: number, arg2: number): ImmutableColor
+--- @overload fun(arg0: integer, arg1: integer, arg2: integer): ImmutableColor
+--- @overload fun(arg0: Color, arg1: Color, arg2: number): ImmutableColor
+--- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): ImmutableColor
+--- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer): ImmutableColor
 function ImmutableColor.new(arg0) end

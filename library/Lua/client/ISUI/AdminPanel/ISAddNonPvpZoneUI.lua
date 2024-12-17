@@ -22,7 +22,6 @@
 ---@field [any] any
 ISAddNonPvpZoneUI = ISPanel:derive("ISAddNonPvpZoneUI")
 
-
 ---@return any
 function ISAddNonPvpZoneUI:initialise() end
 
@@ -34,7 +33,6 @@ function ISAddNonPvpZoneUI:prerender() end
 
 ---@return any
 function ISAddNonPvpZoneUI:updateButtons() end
-
 
 ---@return ISAddNonPvpZoneUI
 function ISAddNonPvpZoneUI:new(x, y, width, height, player) end

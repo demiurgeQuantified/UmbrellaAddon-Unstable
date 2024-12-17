@@ -1,67 +1,66 @@
---- @meta
+--- @meta _
 
 --- @class AirFront
 --- @field public class any
-AirFront = {};
+AirFront = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AirFront:addDaySample(arg0) end
 
 --- @public
 --- @param arg0 AirFront
---- @return void
+--- @return nil
 function AirFront:copyFrom(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function AirFront:getAngleDegrees() end
 
 --- @public
---- @return float
+--- @return number
 function AirFront:getDays() end
 
 --- @public
---- @return float
+--- @return number
 function AirFront:getMaxNoise() end
 
 --- @public
---- @return float
+--- @return number
 function AirFront:getStrength() end
 
 --- @public
---- @return float
+--- @return number
 function AirFront:getTotalNoise() end
 
 --- @public
---- @return int
+--- @return integer
 function AirFront:getType() end
 
 --- @public
 --- @param arg0 DataInputStream
---- @return void
+--- @return nil
 function AirFront:load(arg0) end
 
 --- @public
 --- @param arg0 DataOutputStream
---- @return void
+--- @return nil
 function AirFront:save(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function AirFront:setFrontType(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function AirFront:setStrength(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

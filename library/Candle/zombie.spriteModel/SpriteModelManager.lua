@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class SpriteModelManager
 --- @field public class any
-SpriteModelManager = {};
+SpriteModelManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,26 +13,25 @@ SpriteModelManager = {};
 --- @return SpriteModelManager
 function SpriteModelManager.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function SpriteModelManager:Reset() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return nil
 function SpriteModelManager:clearTileProperties(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return Tileset
 function SpriteModelManager:findTileset(arg0, arg1) end
 
@@ -41,53 +40,52 @@ function SpriteModelManager:findTileset(arg0, arg1) end
 function SpriteModelManager:getModIDs() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return SpriteModel
 function SpriteModelManager:getTileProperties(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @return void
+--- @return nil
 function SpriteModelManager:init() end
 
 --- @public
---- @return void
+--- @return nil
 function SpriteModelManager:initGameData() end
 
 --- @public
 --- @param arg0 Mod
---- @return void
+--- @return nil
 function SpriteModelManager:initModData(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SpriteModelManager:initSprites() end
 
 --- @public
---- @return void
+--- @return nil
 function SpriteModelManager:loadedTileDefinitions() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
 --- @param arg4 SpriteModel
---- @return void
+--- @return nil
 function SpriteModelManager:setTileProperties(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @return void
---- @overload fun(self: SpriteModelManager, arg0: String): void
+--- @return nil
+--- @overload fun(self: SpriteModelManager, arg0: string): nil
 function SpriteModelManager:toScriptManager() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SpriteModelManager:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

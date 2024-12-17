@@ -15,7 +15,6 @@
 ---@field [any] any
 ISGameSoundVolumeControl = ISPanel:derive("ISGameSoundVolumeControl")
 
-
 ---@return any
 function ISGameSoundVolumeControl:getTooltip() end
 
@@ -57,7 +56,6 @@ function ISGameSoundVolumeControl:setJoypadFocused(focused) end
 
 ---@return any
 function ISGameSoundVolumeControl:setVolume(volume) end
-
 
 ---@return ISGameSoundVolumeControl
 function ISGameSoundVolumeControl:new(x, y, width, height, target, targetFunc) end

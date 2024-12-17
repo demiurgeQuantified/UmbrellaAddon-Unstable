@@ -42,7 +42,6 @@ ThunderDebug.instance = nil
 ThunderDebug.shiftDown = 0
 ThunderDebug.eventsAdded = false
 
-
 ---@return any
 function ThunderDebug.OnClimateTickDebug(mgr) end
 
@@ -51,7 +50,6 @@ function ThunderDebug.OnOpenPanel() end
 
 ---@return any
 function ThunderDebug.OnThunderEvent(x, y, strike, light, rumble) end
-
 
 ---@return any
 function ThunderDebug:addPoi(_name, _x, _y) end
@@ -91,7 +89,6 @@ function ThunderDebug:update() end
 
 ---@return any
 function ThunderDebug:updateValues(_mgr) end
-
 
 ---@return ThunderDebug
 function ThunderDebug:new(x, y, width, height, player) end

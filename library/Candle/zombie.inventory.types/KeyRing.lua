@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class KeyRing: InventoryItem
 --- @field public class any
-KeyRing = {};
+KeyRing = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,16 +10,16 @@ KeyRing = {};
 
 --- @public
 --- @param arg0 Key
---- @return void
+--- @return nil
 function KeyRing:addKey(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function KeyRing:containsKeyId(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function KeyRing:getCategory() end
 
 --- @public
@@ -27,23 +27,22 @@ function KeyRing:getCategory() end
 function KeyRing:getKeys() end
 
 --- @public
---- @return int
+--- @return integer
 function KeyRing:getSaveType() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function KeyRing:setKeys(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @return KeyRing
 function KeyRing.new(arg0, arg1, arg2, arg3) end

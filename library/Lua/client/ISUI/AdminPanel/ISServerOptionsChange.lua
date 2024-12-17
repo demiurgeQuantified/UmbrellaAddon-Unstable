@@ -23,7 +23,6 @@
 ---@field [any] any
 ISServerOptionsChange = ISPanel:derive("ISServerOptionsChange")
 
-
 ---@return any
 function ISServerOptionsChange:create() end
 
@@ -41,7 +40,6 @@ function ISServerOptionsChange:setVisible(visible) end
 
 ---@return any
 function ISServerOptionsChange:updateButtons() end
-
 
 ---@return ISServerOptionsChange
 function ISServerOptionsChange:new(x, y, width, height, target, onclick, option) end

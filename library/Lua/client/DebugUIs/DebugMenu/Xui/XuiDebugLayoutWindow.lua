@@ -18,7 +18,6 @@
 ---@field [any] any
 XuiDebugLayoutWindow = ISCollapsableWindow:derive("XuiDebugLayoutWindow")
 
-
 ---@return any
 function XuiDebugLayoutWindow:close() end
 
@@ -42,7 +41,6 @@ function XuiDebugLayoutWindow:render() end
 
 ---@return any
 function XuiDebugLayoutWindow:selectUUID(_uuid) end
-
 
 ---@return XuiDebugLayoutWindow
 function XuiDebugLayoutWindow:new(x, y, width, height, player, script) end

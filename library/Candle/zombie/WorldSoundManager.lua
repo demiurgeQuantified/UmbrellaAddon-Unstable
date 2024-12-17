@@ -1,57 +1,57 @@
---- @meta
+--- @meta _
 
 --- @class WorldSoundManager
 --- @field public class any
 --- @field public instance WorldSoundManager
-WorldSoundManager = {};
+WorldSoundManager = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function WorldSoundManager:KillCell() end
 
 --- @public
---- @param arg0 Object
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param arg0 any
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
 --- @return WorldSound
---- @overload fun(self: WorldSoundManager, arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean): WorldSound
---- @overload fun(self: WorldSoundManager, arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float): WorldSound
---- @overload fun(self: WorldSoundManager, arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float, arg9: boolean, arg10: boolean, arg11: boolean): WorldSound
---- @overload fun(self: WorldSoundManager, arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float, arg9: boolean, arg10: boolean, arg11: boolean, arg12: boolean): WorldSound
+--- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean): WorldSound
+--- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
+--- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number, arg9: boolean, arg10: boolean, arg11: boolean): WorldSound
+--- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number, arg9: boolean, arg10: boolean, arg11: boolean, arg12: boolean): WorldSound
 function WorldSoundManager:addSound(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @param arg0 Object
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param arg0 any
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
 --- @param arg6 boolean
 --- @return WorldSound
---- @overload fun(self: WorldSoundManager, arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float): WorldSound
+--- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
 function WorldSoundManager:addSoundRepeating(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @param arg3 boolean
 --- @param arg4 IsoZombie
 --- @return ResultBiggestSound
 function WorldSoundManager:getBiggestSoundZomb(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 int
---- @return float
---- @overload fun(self: WorldSoundManager, arg0: IsoZombie): float
+--- @param arg0 integer
+--- @return number
+--- @overload fun(self: WorldSoundManager, arg0: IsoZombie): number
 function WorldSoundManager:getHearingMultiplier(arg0) end
 
 --- @public
@@ -66,13 +66,13 @@ function WorldSoundManager:getSoundAnimal(arg0) end
 --- @public
 --- @param arg0 WorldSound
 --- @param arg1 IsoZombie
---- @return float
+--- @return number
 function WorldSoundManager:getSoundAttract(arg0, arg1) end
 
 --- @public
 --- @param arg0 WorldSound
 --- @param arg1 IsoAnimal
---- @return float
+--- @return number
 function WorldSoundManager:getSoundAttractAnimal(arg0, arg1) end
 
 --- @public
@@ -81,29 +81,28 @@ function WorldSoundManager:getSoundAttractAnimal(arg0, arg1) end
 function WorldSoundManager:getSoundZomb(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return float
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return number
 function WorldSoundManager:getStressFromSounds(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoCell
---- @return void
+--- @return nil
 function WorldSoundManager:init(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function WorldSoundManager:initFrame() end
 
 --- @public
---- @return void
+--- @return nil
 function WorldSoundManager:render() end
 
 --- @public
---- @return void
+--- @return nil
 function WorldSoundManager:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

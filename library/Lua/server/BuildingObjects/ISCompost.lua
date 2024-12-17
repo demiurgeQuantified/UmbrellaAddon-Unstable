@@ -11,7 +11,6 @@
 ---@field [any] any
 ISCompost = ISBuildingObject:derive("ISCompost")
 
-
 ---@return any
 function ISCompost:create(x, y, z, north, sprite) end
 
@@ -23,7 +22,6 @@ function ISCompost:isValid(square) end
 
 ---@return any
 function ISCompost:render(x, y, z, square) end
-
 
 ---@return ISCompost
 function ISCompost:new(name, sprite) end

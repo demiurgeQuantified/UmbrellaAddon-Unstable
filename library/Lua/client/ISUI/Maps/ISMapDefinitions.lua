@@ -3,7 +3,6 @@
 ---@class MapUtils
 MapUtils = {}
 
-
 ---@return any
 function MapUtils.initDefaultMapData(mapUI) end
 
@@ -22,8 +21,7 @@ function MapUtils.revealKnownArea(mapUI) end
 ---@class LootMaps
 LootMaps = {}
 LootMaps.Init = {}
-LootMaps.DEFAULT_MAP_DIRECTORY = 'media/maps/Muldraugh, KY'
-
+LootMaps.DEFAULT_MAP_DIRECTORY = "media/maps/Muldraugh, KY"
 
 ---@return any
 function LootMaps.callLua(functionName, mapUI, arg1, arg2, arg3, arg4) end
@@ -31,7 +29,6 @@ function LootMaps.callLua(functionName, mapUI, arg1, arg2, arg3, arg4) end
 ---@class PrintMediaMaps
 PrintMediaMaps = {}
 PrintMediaMaps.Init = {}
-
 
 ---@return any
 function PrintMediaMaps.callLua(functionName, mapUI, arg1, arg2, arg3, arg4) end

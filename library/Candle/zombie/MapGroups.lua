@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class MapGroups
 --- @field public class any
-MapGroups = {};
+MapGroups = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,10 +10,9 @@ MapGroups = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function MapGroups.addMissingVanillaDirectories(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,9 +23,9 @@ function MapGroups.addMissingVanillaDirectories(arg0) end
 function MapGroups:checkMapConflicts() end
 
 --- @public
---- @return void
---- @overload fun(self: MapGroups, arg0: ActiveMods, arg1: boolean): void
---- @overload fun(self: MapGroups, arg0: ActiveMods, arg1: boolean, arg2: boolean): void
+--- @return nil
+--- @overload fun(self: MapGroups, arg0: ActiveMods, arg1: boolean): nil
+--- @overload fun(self: MapGroups, arg0: ActiveMods, arg1: boolean, arg2: boolean): nil
 function MapGroups:createGroups() end
 
 --- @public
@@ -34,24 +33,23 @@ function MapGroups:createGroups() end
 function MapGroups:getAllMapsInOrder() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ArrayList
 function MapGroups:getMapConflicts(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ArrayList
 function MapGroups:getMapDirectoriesInGroup(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function MapGroups:getNumberOfGroups() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function MapGroups:setWorld(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

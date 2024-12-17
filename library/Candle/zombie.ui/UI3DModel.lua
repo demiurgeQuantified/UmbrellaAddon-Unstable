@@ -1,27 +1,27 @@
---- @meta
+--- @meta _
 
 --- @class UI3DModel: UIElement
 --- @field public class any
 --- @implement IClothingItemListener
-UI3DModel = {};
+UI3DModel = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UI3DModel:clearVariable(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function UI3DModel:clearVariables() end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: UI3DModel, arg0: String): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: UI3DModel, arg0: string): nil
 function UI3DModel:clothingItemChanged(arg0) end
 
 --- @public
@@ -33,93 +33,92 @@ function UI3DModel:getCharacter() end
 function UI3DModel:getDirection() end
 
 --- @public
---- @return String
+--- @return string
 function UI3DModel:getState() end
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function UI3DModel:getVariable(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function UI3DModel:render() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UI3DModel:reportEvent(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UI3DModel:setAnimSetName(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function UI3DModel:setAnimate(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function UI3DModel:setCharacter(arg0) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function UI3DModel:setDirection(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function UI3DModel:setDoRandomExtAnimations(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function UI3DModel:setIsometric(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function UI3DModel:setOutfitName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function UI3DModel:setState(arg0) end
 
 --- @public
 --- @param arg0 SurvivorDesc
---- @return void
+--- @return nil
 function UI3DModel:setSurvivorDesc(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @return void
---- @overload fun(self: UI3DModel, arg0: String, arg1: float): void
---- @overload fun(self: UI3DModel, arg0: String, arg1: String): void
+--- @return nil
+--- @overload fun(self: UI3DModel, arg0: string, arg1: number): nil
+--- @overload fun(self: UI3DModel, arg0: string, arg1: string): nil
 function UI3DModel:setVariable(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function UI3DModel:setXOffset(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function UI3DModel:setYOffset(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function UI3DModel:setZoom(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

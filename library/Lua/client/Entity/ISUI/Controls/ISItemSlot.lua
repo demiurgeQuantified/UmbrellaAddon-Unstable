@@ -53,7 +53,6 @@
 ---@field [any] any
 ISItemSlot = ISPanel:derive("ISItemSlot")
 
-
 ---@return any
 function ISItemSlot:activateToolTip() end
 
@@ -126,6 +125,17 @@ function ISItemSlot:setToolTip(_b, _text) end
 ---@return any
 function ISItemSlot:update() end
 
-
 ---@return ISItemSlot
-function ISItemSlot:new(x, y, width, height, resource, target, onItemDropped, onItemRemove, onVerifyItem, onBoxClicked) end
+function ISItemSlot:new(
+	x,
+	y,
+	width,
+	height,
+	resource,
+	target,
+	onItemDropped,
+	onItemRemove,
+	onVerifyItem,
+	onBoxClicked
+)
+end

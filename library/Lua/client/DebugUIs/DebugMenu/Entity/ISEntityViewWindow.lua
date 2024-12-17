@@ -30,10 +30,8 @@ ISEntityViewWindow = ISCollapsableWindow:derive("ISEntityViewWindow")
 ISEntityViewWindow.instance = nil
 ISEntityViewWindow.coords = false
 
-
 ---@return any
 function ISEntityViewWindow.OnOpenPanel(_entity) end
-
 
 ---@return any
 function ISEntityViewWindow:close() end
@@ -61,7 +59,6 @@ function ISEntityViewWindow:setTitle(_title) end
 
 ---@return any
 function ISEntityViewWindow:update() end
-
 
 ---@return ISEntityViewWindow
 function ISEntityViewWindow:new(x, y, width, height) end

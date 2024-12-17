@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class GameTime
 --- @field public class any
 --- @field public instance GameTime
---- @field public MULTIPLIER float
-GameTime = {};
+--- @field public MULTIPLIER number
+GameTime = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ GameTime = {};
 
 --- @public
 --- @static
---- @return float
+--- @return number
 function GameTime.getAnimSpeedFix() end
 
 --- @public
@@ -22,12 +22,12 @@ function GameTime.getInstance() end
 
 --- @public
 --- @static
---- @return long
+--- @return integer
 function GameTime.getServerTime() end
 
 --- @public
 --- @static
---- @return long
+--- @return integer
 function GameTime.getServerTimeMills() end
 
 --- @public
@@ -43,64 +43,63 @@ function GameTime.isGamePaused() end
 --- @public
 --- @static
 --- @param arg0 GameTime
---- @return void
+--- @return nil
 function GameTime.setInstance(arg0) end
 
 --- @public
 --- @static
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime.setServerTimeShift(arg0) end
 
 --- @public
 --- @static
---- @param arg0 long
---- @param arg1 long
---- @param arg2 long
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function GameTime.syncServerTime(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
 function GameTime:Lerp(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:RemoveZombiesIndiscriminate(arg0) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
 function GameTime:TimeLerp(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function GameTime:daysInMonth(arg0, arg1) end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getAmbient() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getAmbientMax() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getAmbientMin() end
 
 --- @public
@@ -108,100 +107,100 @@ function GameTime:getAmbientMin() end
 function GameTime:getCalender() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getDawn() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getDay() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getDayPlusOne() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getDaysSurvived() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return String
+--- @return string
 function GameTime:getDeathString(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getDeltaMinutesPerDay() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getDusk() end
 
 --- @public
---- @return String
+--- @return string
 function GameTime:getGameModeText() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getGameWorldSecondsSinceLastUpdate() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getHelicopterDay() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getHelicopterDay1() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getHelicopterEndHour() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getHelicopterStartHour() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getHour() end
 
 --- @public
---- @return double
+--- @return number
 function GameTime:getHoursSurvived() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getInvMultiplier() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getLastTimeOfDay() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMaxZombieCount() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMaxZombieCountStart() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMinZombieCount() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMinZombieCountStart() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getMinutes() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMinutesPerDay() end
 
 --- @public
---- @return long
+--- @return integer
 function GameTime:getMinutesStamp() end
 
 --- @public
@@ -209,72 +208,72 @@ function GameTime:getMinutesStamp() end
 function GameTime:getModData() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getMonth() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMultipliedSecondsSinceLastUpdate() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getMultiplier() end
 
 --- @public
---- @param arg0 float
---- @return float
+--- @param arg0 number
+--- @return number
 function GameTime:getMultiplierFromTimeDelta(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getNight() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getNightMax() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getNightMin() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getNightTint() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getNightsSurvived() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getRealworldSecondsSinceLastUpdate() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getServerMultiplier() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getSkyLightLevel() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getStartDay() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getStartMonth() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getStartTimeOfDay() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getStartYear() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getThirtyFPSMultiplier() end
 
 --- @public
@@ -282,62 +281,62 @@ function GameTime:getThirtyFPSMultiplier() end
 function GameTime:getThunderStorm() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getTimeDelta() end
 
 --- @public
---- @param arg0 float
---- @return float
+--- @param arg0 number
+--- @return number
 function GameTime:getTimeDeltaFromMultiplier(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getTimeOfDay() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return String
+--- @return string
 function GameTime:getTimeSurvived(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getTrueMultiplier() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getUnmoddedMultiplier() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getViewDist() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getViewDistMax() end
 
 --- @public
---- @return float
+--- @return number
 function GameTime:getViewDistMin() end
 
 --- @public
---- @return double
+--- @return number
 function GameTime:getWorldAgeDaysSinceBegin() end
 
 --- @public
---- @return double
+--- @return number
 function GameTime:getWorldAgeHours() end
 
 --- @public
---- @return int
+--- @return integer
 function GameTime:getYear() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return String
+--- @return string
 function GameTime:getZombieKilledText(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function GameTime:init() end
 
 --- @public
@@ -349,201 +348,200 @@ function GameTime:isRainingToday() end
 function GameTime:isThunderDay() end
 
 --- @public
---- @return void
---- @overload fun(self: GameTime, arg0: DataInputStream): void
---- @overload fun(self: GameTime, arg0: ByteBuffer): void
+--- @return nil
+--- @overload fun(self: GameTime, arg0: DataInputStream): nil
+--- @overload fun(self: GameTime, arg0: ByteBuffer): nil
 function GameTime:load() end
 
 --- @public
---- @return void
---- @overload fun(self: GameTime, arg0: DataOutputStream): void
---- @overload fun(self: GameTime, arg0: ByteBuffer): void
+--- @return nil
+--- @overload fun(self: GameTime, arg0: DataOutputStream): nil
+--- @overload fun(self: GameTime, arg0: ByteBuffer): nil
 function GameTime:save() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function GameTime:saveToPacket(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setAmbient(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setAmbientMax(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setAmbientMin(arg0) end
 
 --- @public
 --- @param arg0 PZCalendar
---- @return void
+--- @return nil
 function GameTime:setCalender(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setDawn(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setDay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setDusk(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setHelicopterDay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setHelicopterEndHour(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setHelicopterStartHour(arg0) end
 
 --- @public
---- @param arg0 double
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setHoursSurvived(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setLastTimeOfDay(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMaxZombieCount(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMaxZombieCountStart(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMinZombieCount(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMinZombieCountStart(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMinutesPerDay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setMonth(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMoon(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setMultiplier(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setNightMax(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setNightMin(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setNightsSurvived(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setStartDay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setStartMonth(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setStartTimeOfDay(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setStartYear(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setTargetZombies(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function GameTime:setThunderDay(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setTimeOfDay(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setViewDistMax(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function GameTime:setViewDistMin(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function GameTime:setYear(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function GameTime:update(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return nil
 function GameTime:updateCalendar(arg0, arg1, arg2, arg3, arg4) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -4,7 +4,6 @@
 AnimalContextMenu = {}
 AnimalContextMenu.cheat = getDebug()
 
-
 ---@return any
 function AnimalContextMenu.attachAnimalToObject(attachAnimalTo, playerObj, worldobjects, context) end
 
@@ -193,7 +192,6 @@ function AnimalContextMenu.SetPregnancyPeriod(animal, player) end
 
 ---@return any
 function AnimalContextMenu.showRadialMenu(playerObj) end
-
 
 ---@return any
 function AnimalContextMenu:onKillAnimalConfirm(button) end

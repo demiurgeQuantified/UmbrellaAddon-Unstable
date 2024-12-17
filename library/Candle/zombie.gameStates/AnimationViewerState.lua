@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class AnimationViewerState: GameState
 --- @field public class any
 --- @field public instance AnimationViewerState
-AnimationViewerState = {};
+AnimationViewerState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,74 +14,73 @@ AnimationViewerState = {};
 --- @return AnimationViewerState
 function AnimationViewerState.checkInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:exit() end
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function AnimationViewerState:fromLua0(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
---- @return Object
+--- @param arg0 string
+--- @param arg1 any
+--- @return any
 function AnimationViewerState:fromLua1(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function AnimationViewerState:getBoolean(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ConfigOption
 function AnimationViewerState:getOptionByIndex(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return ConfigOption
 function AnimationViewerState:getOptionByName(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function AnimationViewerState:getOptionCount() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:load() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:reenter() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:render() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:save() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimationViewerState:setBoolean(arg0, arg1) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function AnimationViewerState:setTable(arg0) end
 
 --- @public
@@ -89,9 +88,8 @@ function AnimationViewerState:setTable(arg0) end
 function AnimationViewerState:update() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

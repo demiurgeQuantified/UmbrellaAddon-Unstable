@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class PoisonInfo
 --- @field public class any
-PoisonInfo = {};
+PoisonInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,9 +13,7 @@ PoisonInfo = {};
 function PoisonInfo:getFluid() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param arg0 number
+--- @param arg1 number
 --- @return PoisonEffect
 function PoisonInfo:getPoisonEffect(arg0, arg1) end
-
-

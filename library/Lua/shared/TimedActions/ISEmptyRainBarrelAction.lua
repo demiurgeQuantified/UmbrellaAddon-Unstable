@@ -8,7 +8,6 @@
 ---@field [any] any
 ISEmptyRainBarrelAction = ISBaseTimedAction:derive("ISEmptyRainBarrelAction")
 
-
 ---@return any
 function ISEmptyRainBarrelAction:complete() end
 
@@ -38,7 +37,6 @@ function ISEmptyRainBarrelAction:update() end
 
 ---@return any
 function ISEmptyRainBarrelAction:waitToStart() end
-
 
 ---@return ISEmptyRainBarrelAction
 function ISEmptyRainBarrelAction:new(character, object) end

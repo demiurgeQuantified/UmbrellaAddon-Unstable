@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSBBQParty: RandomizedZoneStoryBase
 --- @field public class any
-RZSBBQParty = {};
+RZSBBQParty = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSBBQParty = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSBBQParty:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

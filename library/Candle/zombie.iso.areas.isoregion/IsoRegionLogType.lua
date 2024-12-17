@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class IsoRegionLogType: Enum
 --- @field public class any
 --- @field public Normal IsoRegionLogType
 --- @field public Warn IsoRegionLogType
-IsoRegionLogType = {};
+IsoRegionLogType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ IsoRegionLogType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoRegionLogType
 function IsoRegionLogType.valueOf(arg0) end
 
@@ -20,5 +20,3 @@ function IsoRegionLogType.valueOf(arg0) end
 --- @static
 --- @return IsoRegionLogType[]
 function IsoRegionLogType.values() end
-
-

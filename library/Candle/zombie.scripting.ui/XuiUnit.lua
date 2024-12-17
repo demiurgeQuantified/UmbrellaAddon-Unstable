@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class XuiUnit: XuiVar
 --- @field public class any
-XuiUnit = {};
+XuiUnit = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function XuiUnit:getValueString() end
 
 --- @public
@@ -17,9 +17,7 @@ function XuiUnit:getValueString() end
 function XuiUnit:isPercent() end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function XuiUnit:setValue(arg0, arg1) end
-
-

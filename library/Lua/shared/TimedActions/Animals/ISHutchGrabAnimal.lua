@@ -7,7 +7,6 @@
 ---@field [any] any
 ISHutchGrabAnimal = ISBaseTimedAction:derive("ISHutchGrabAnimal")
 
-
 ---@return any
 function ISHutchGrabAnimal:complete() end
 
@@ -31,7 +30,6 @@ function ISHutchGrabAnimal:update() end
 
 ---@return any
 function ISHutchGrabAnimal:waitToStart() end
-
 
 ---@return ISHutchGrabAnimal
 function ISHutchGrabAnimal:new(character, index, hutch) end

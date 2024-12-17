@@ -3,7 +3,6 @@
 ---@class TileGeometryEditor_ListBox : ISScrollingListBox
 TileGeometryEditor_ListBox = ISScrollingListBox:derive("TileGeometryEditor_ListBox")
 
-
 ---@return any
 function TileGeometryEditor_ListBox:doDrawItem(y, item, alt) end
 
@@ -16,7 +15,6 @@ function TileGeometryEditor_ListBox:onMouseDown(x, y) end
 ---@return any
 function TileGeometryEditor_ListBox:prerender() end
 
-
 ---@return TileGeometryEditor_ListBox
 function TileGeometryEditor_ListBox:new(x, y, width, height) end
 
@@ -26,10 +24,8 @@ function TileGeometryEditor_ListBox:new(x, y, width, height) end
 ---@field [any] any
 TileGeometryEditor_GeometryListBox = TileGeometryEditor_ListBox:derive("TileGeometryEditor_GeometryListBox")
 
-
 ---@return any
 function TileGeometryEditor_GeometryListBox:onRightMouseDown(x, y) end
-
 
 ---@return TileGeometryEditor_GeometryListBox
 function TileGeometryEditor_GeometryListBox:new(x, y, width, height, editor) end
@@ -41,7 +37,6 @@ function TileGeometryEditor_GeometryListBox:new(x, y, width, height, editor) end
 ---@field scene any
 ---@field [any] any
 TileGeometryEditor_BoxPanel = ISPanel:derive("TileGeometryEditor_BoxPanel")
-
 
 ---@return any
 function TileGeometryEditor_BoxPanel:configGizmo() end
@@ -64,7 +59,6 @@ function TileGeometryEditor_BoxPanel:render() end
 ---@return any
 function TileGeometryEditor_BoxPanel:toUI() end
 
-
 ---@return TileGeometryEditor_BoxPanel
 function TileGeometryEditor_BoxPanel:new(x, y, width, height, editor) end
 
@@ -77,7 +71,6 @@ function TileGeometryEditor_BoxPanel:new(x, y, width, height, editor) end
 ---@field zMinEntry any
 ---@field [any] any
 TileGeometryEditor_CylinderPanel = ISPanel:derive("TileGeometryEditor_CylinderPanel")
-
 
 ---@return any
 function TileGeometryEditor_CylinderPanel:configGizmo() end
@@ -100,7 +93,6 @@ function TileGeometryEditor_CylinderPanel:render() end
 ---@return any
 function TileGeometryEditor_CylinderPanel:toUI() end
 
-
 ---@return TileGeometryEditor_CylinderPanel
 function TileGeometryEditor_CylinderPanel:new(x, y, width, height, editor) end
 
@@ -114,7 +106,6 @@ function TileGeometryEditor_CylinderPanel:new(x, y, width, height, editor) end
 ---@field vector3 any
 ---@field [any] any
 TileGeometryEditor_PropertiesPanel = ISPanel:derive("TileGeometryEditor_PropertiesPanel")
-
 
 ---@return any
 function TileGeometryEditor_PropertiesPanel:configGizmo() end
@@ -137,7 +128,6 @@ function TileGeometryEditor_PropertiesPanel:shouldShowInScene() end
 ---@return any
 function TileGeometryEditor_PropertiesPanel:toUI() end
 
-
 ---@return TileGeometryEditor_PropertiesPanel
 function TileGeometryEditor_PropertiesPanel:new(x, y, width, height, editor) end
 
@@ -148,10 +138,8 @@ function TileGeometryEditor_PropertiesPanel:new(x, y, width, height, editor) end
 ---@field [any] any
 TileGeometryEditor_DepthTexturePanel = ISPanel:derive("TileGeometryEditor_DepthTexturePanel")
 
-
 ---@return any
 function TileGeometryEditor_DepthTexturePanel:render() end
-
 
 ---@return TileGeometryEditor_DepthTexturePanel
 function TileGeometryEditor_DepthTexturePanel:new(x, y, width, height, editor) end
@@ -163,7 +151,6 @@ function TileGeometryEditor_DepthTexturePanel:new(x, y, width, height, editor) e
 ---@field [any] any
 TileGeometryEditor_SeatingPropertiesPanel = ISPanel:derive("TileGeometryEditor_SeatingPropertiesPanel")
 
-
 ---@return any
 function TileGeometryEditor_SeatingPropertiesPanel:createChildren() end
 
@@ -172,7 +159,6 @@ function TileGeometryEditor_SeatingPropertiesPanel:onTickBox(index, selected, ti
 
 ---@return any
 function TileGeometryEditor_SeatingPropertiesPanel:toUI() end
-
 
 ---@return TileGeometryEditor_SeatingPropertiesPanel
 function TileGeometryEditor_SeatingPropertiesPanel:new(x, y, width, height, editor) end
@@ -186,7 +172,6 @@ function TileGeometryEditor_SeatingPropertiesPanel:new(x, y, width, height, edit
 ---@field width any
 ---@field [any] any
 TileGeometryEditor_EditMode = ISBaseObject:derive("TileGeometryEditor_EditMode")
-
 
 ---@return any
 function TileGeometryEditor_EditMode:activate() end
@@ -254,7 +239,6 @@ function TileGeometryEditor_EditMode:renderSceneTiles() end
 ---@return any
 function TileGeometryEditor_EditMode:renderTileName() end
 
-
 ---@return TileGeometryEditor_EditMode
 function TileGeometryEditor_EditMode:new(editor) end
 
@@ -281,10 +265,8 @@ function TileGeometryEditor_EditMode:new(editor) end
 ---@field [any] any
 TileGeometryEditor_EditMode_Geometry = TileGeometryEditor_EditMode:derive("TileGeometryEditor_EditMode_Geometry")
 
-
 ---@return any
 function TileGeometryEditor_EditMode_Geometry.RasterizePolygonCallback(args, x, y) end
-
 
 ---@return any
 function TileGeometryEditor_EditMode_Geometry:activate() end
@@ -385,7 +367,6 @@ function TileGeometryEditor_EditMode_Geometry:zeroRotation(objectName, axis) end
 ---@return any
 function TileGeometryEditor_EditMode_Geometry:zeroTranslation(objectName, axis) end
 
-
 ---@return TileGeometryEditor_EditMode_Geometry
 function TileGeometryEditor_EditMode_Geometry:new(x, y, w, h, editor) end
 
@@ -396,7 +377,6 @@ function TileGeometryEditor_EditMode_Geometry:new(x, y, w, h, editor) end
 ---@field [any] any
 TileGeometryEditor_TilePicker3 = ISPanel:derive("TileGeometryEditor_TilePicker3")
 
-
 ---@return any
 function TileGeometryEditor_TilePicker3:createChildren() end
 
@@ -405,7 +385,6 @@ function TileGeometryEditor_TilePicker3:onMouseWheel(del) end
 
 ---@return any
 function TileGeometryEditor_TilePicker3:onSelectTileset() end
-
 
 ---@return TileGeometryEditor_TilePicker3
 function TileGeometryEditor_TilePicker3:new(x, y, width, height, editor) end
@@ -416,10 +395,8 @@ function TileGeometryEditor_TilePicker3:new(x, y, width, height, editor) end
 ---@field [any] any
 TileGeometryEditor_SeatingListBox = TileGeometryEditor_ListBox:derive("TileGeometryEditor_SeatingListBox")
 
-
 ---@return any
 function TileGeometryEditor_SeatingListBox:onRightMouseDown(x, y) end
-
 
 ---@return TileGeometryEditor_SeatingListBox
 function TileGeometryEditor_SeatingListBox:new(x, y, width, height, editor) end
@@ -436,7 +413,6 @@ function TileGeometryEditor_SeatingListBox:new(x, y, width, height, editor) end
 ---@field tilePicker3 any
 ---@field [any] any
 TileGeometryEditor_EditMode_SceneTiles = TileGeometryEditor_EditMode:derive("TileGeometryEditor_EditMode_SceneTiles")
-
 
 ---@return any
 function TileGeometryEditor_EditMode_SceneTiles:activate() end
@@ -468,7 +444,6 @@ function TileGeometryEditor_EditMode_SceneTiles:renderSceneTiles() end
 ---@return any
 function TileGeometryEditor_EditMode_SceneTiles:renderTileName() end
 
-
 ---@return TileGeometryEditor_EditMode_SceneTiles
 function TileGeometryEditor_EditMode_SceneTiles:new(editor) end
 
@@ -492,7 +467,6 @@ function TileGeometryEditor_EditMode_SceneTiles:new(editor) end
 ---@field tilePicker3 any
 ---@field [any] any
 TileGeometryEditor_EditMode_Seating = TileGeometryEditor_EditMode:derive("TileGeometryEditor_EditMode_Seating")
-
 
 ---@return any
 function TileGeometryEditor_EditMode_Seating:activate() end
@@ -556,7 +530,6 @@ function TileGeometryEditor_EditMode_Seating:renderTileName() end
 
 ---@return any
 function TileGeometryEditor_EditMode_Seating:setGeometryModeSelection() end
-
 
 ---@return TileGeometryEditor_EditMode_Seating
 function TileGeometryEditor_EditMode_Seating:new(editor) end

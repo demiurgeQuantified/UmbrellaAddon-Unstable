@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class SLSoundManager
 --- @field public class any
@@ -6,7 +6,7 @@
 --- @field public Emitter StoryEmitter
 --- @field public ENABLED boolean
 --- @field public LUA_DEBUG boolean
-SLSoundManager = {};
+SLSoundManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,6 @@ SLSoundManager = {};
 --- @static
 --- @return SLSoundManager
 function SLSoundManager.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,7 +34,7 @@ function SLSoundManager:getLuaDebug() end
 function SLSoundManager:getRandomBorderPosition() end
 
 --- @public
---- @return float
+--- @return number
 function SLSoundManager:getRandomBorderRange() end
 
 --- @public
@@ -43,39 +42,37 @@ function SLSoundManager:getRandomBorderRange() end
 function SLSoundManager:getStorySounds() end
 
 --- @public
---- @return void
+--- @return nil
 function SLSoundManager:init() end
 
 --- @public
---- @return void
+--- @return nil
 function SLSoundManager:loadSounds() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SLSoundManager:print(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SLSoundManager:render() end
 
 --- @public
---- @return void
+--- @return nil
 function SLSoundManager:renderDebug() end
 
 --- @public
---- @return void
+--- @return nil
 function SLSoundManager:thunderTest() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function SLSoundManager:update(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function SLSoundManager:updateKeys() end
-
-

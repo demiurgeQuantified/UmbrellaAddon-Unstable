@@ -5,7 +5,6 @@
 ---@field [any] any
 DebugChunkStateUI_Tool = ISBaseObject:derive("DebugChunkStateUI_Tool")
 
-
 ---@return any
 function DebugChunkStateUI_Tool:java0(func) end
 
@@ -24,7 +23,6 @@ function DebugChunkStateUI_Tool:onMouseMove(dx, dy) end
 ---@return any
 function DebugChunkStateUI_Tool:onMouseUp(x, y) end
 
-
 ---@return DebugChunkStateUI_Tool
 function DebugChunkStateUI_Tool:new(ui) end
 
@@ -37,7 +35,6 @@ function DebugChunkStateUI_Tool:new(ui) end
 ---@field [any] any
 DebugChunkStateUI_DragCameraTool = DebugChunkStateUI_Tool:derive("DebugChunkStateUI_DragCameraTool")
 
-
 ---@return any
 function DebugChunkStateUI_DragCameraTool:onMouseDown(x, y) end
 
@@ -46,7 +43,6 @@ function DebugChunkStateUI_DragCameraTool:onMouseMove(dx, dy) end
 
 ---@return any
 function DebugChunkStateUI_DragCameraTool:onMouseUp(x, y) end
-
 
 ---@return DebugChunkStateUI_DragCameraTool
 function DebugChunkStateUI_DragCameraTool:new(ui) end

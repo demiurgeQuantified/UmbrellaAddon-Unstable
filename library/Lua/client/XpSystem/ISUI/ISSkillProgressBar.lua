@@ -19,7 +19,6 @@ ISSkillProgressBar = ISPanel:derive("ISSkillProgressBar")
 ISSkillProgressBar.alpha = 0.0
 ISSkillProgressBar.upAlpha = true
 
-
 ---@return any
 function ISSkillProgressBar.getPerkXp(self) end
 
@@ -31,7 +30,6 @@ function ISSkillProgressBar.getXpForLvl(perk, level) end
 
 ---@return any
 function ISSkillProgressBar.updateAlpha() end
-
 
 ---@return any
 function ISSkillProgressBar:activate() end
@@ -56,7 +54,6 @@ function ISSkillProgressBar:renderPerkRect() end
 
 ---@return any
 function ISSkillProgressBar:updateTooltip(lvlSelected) end
-
 
 ---@return ISSkillProgressBar
 function ISSkillProgressBar:new(x, y, width, height, playerNum, perk, parent) end

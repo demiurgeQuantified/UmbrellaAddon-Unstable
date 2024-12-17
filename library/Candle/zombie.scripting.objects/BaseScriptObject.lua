@@ -1,59 +1,59 @@
---- @meta
+--- @meta _
 
 --- @class BaseScriptObject
 --- @field public class any
-BaseScriptObject = {};
+BaseScriptObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function BaseScriptObject:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function BaseScriptObject:Load(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
---- @overload fun(self: BaseScriptObject, arg0: Block): void
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: BaseScriptObject, arg0: Block): nil
 function BaseScriptObject:LoadCommonBlock(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function BaseScriptObject:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseScriptObject:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function BaseScriptObject:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function BaseScriptObject:PreReload() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function BaseScriptObject:addLoadedScriptBody(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function BaseScriptObject:calculateScriptVersion() end
 
 --- @public
---- @return String
+--- @return string
 function BaseScriptObject:debugString() end
 
 --- @public
@@ -62,7 +62,7 @@ function BaseScriptObject:debugString() end
 function BaseScriptObject:getAllScriptLines(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 ArrayList
 --- @return ArrayList
 function BaseScriptObject:getBodyScriptLines(arg0, arg1) end
@@ -72,7 +72,7 @@ function BaseScriptObject:getBodyScriptLines(arg0, arg1) end
 function BaseScriptObject:getLoadedScriptBodies() end
 
 --- @public
---- @return int
+--- @return integer
 function BaseScriptObject:getLoadedScriptBodyCount() end
 
 --- @public
@@ -92,11 +92,11 @@ function BaseScriptObject:getParent() end
 function BaseScriptObject:getScriptLines() end
 
 --- @public
---- @return String
+--- @return string
 function BaseScriptObject:getScriptObjectFullType() end
 
 --- @public
---- @return String
+--- @return string
 function BaseScriptObject:getScriptObjectName() end
 
 --- @public
@@ -104,12 +104,12 @@ function BaseScriptObject:getScriptObjectName() end
 function BaseScriptObject:getScriptObjectType() end
 
 --- @public
---- @return long
+--- @return integer
 function BaseScriptObject:getScriptVersion() end
 
 --- @public
 --- @param arg0 IVersionHash
---- @return void
+--- @return nil
 function BaseScriptObject:getVersion(arg0) end
 
 --- @public
@@ -121,21 +121,19 @@ function BaseScriptObject:isDebugOnly() end
 function BaseScriptObject:isEnabled() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseScriptObject:reset() end
 
 --- @public
---- @return void
+--- @return nil
 function BaseScriptObject:resetLoadedScriptBodies() end
 
 --- @public
 --- @param arg0 ScriptModule
---- @return void
+--- @return nil
 function BaseScriptObject:setModule(arg0) end
 
 --- @public
 --- @param arg0 BaseScriptObject
---- @return void
+--- @return nil
 function BaseScriptObject:setParent(arg0) end
-
-

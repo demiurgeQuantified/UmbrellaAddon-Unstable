@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class XuiScriptType: Enum
 --- @field public class any
@@ -6,7 +6,7 @@
 --- @field public Layout XuiScriptType
 --- @field public Reference XuiScriptType
 --- @field public Style XuiScriptType
-XuiScriptType = {};
+XuiScriptType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,7 +14,7 @@ XuiScriptType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiScriptType
 function XuiScriptType.valueOf(arg0) end
 
@@ -22,5 +22,3 @@ function XuiScriptType.valueOf(arg0) end
 --- @static
 --- @return XuiScriptType[]
 function XuiScriptType.values() end
-
-

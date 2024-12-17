@@ -9,7 +9,5 @@
 ---@field [any] any
 ISSodaStockingLayout = ISBaseStockingLayout:derive("ISSodaStockingLayout")
 
-
-
 ---@return ISSodaStockingLayout
 function ISSodaStockingLayout:new(x, y, _parentPanel, _blueprintLogic) end

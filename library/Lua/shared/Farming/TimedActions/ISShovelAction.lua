@@ -10,7 +10,6 @@
 ---@field [any] any
 ISShovelAction = ISBaseTimedAction:derive("ISShovelAction")
 
-
 ---@return any
 function ISShovelAction:complete() end
 
@@ -34,7 +33,6 @@ function ISShovelAction:update() end
 
 ---@return any
 function ISShovelAction:waitToStart() end
-
 
 ---@return ISShovelAction
 function ISShovelAction:new(character, item, plant, maxTime) end

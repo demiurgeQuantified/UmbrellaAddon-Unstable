@@ -26,7 +26,6 @@
 ---@field [any] any
 ISAttachedItemsUI = ISCollapsableWindow:derive("ISAttachedItemsUI")
 
-
 ---@return any
 function ISAttachedItemsUI:close() end
 
@@ -59,7 +58,6 @@ function ISAttachedItemsUI:render() end
 
 ---@return any
 function ISAttachedItemsUI:update() end
-
 
 ---@return ISAttachedItemsUI
 function ISAttachedItemsUI:new(x, y, character) end

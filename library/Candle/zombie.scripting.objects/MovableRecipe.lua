@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class MovableRecipe: Recipe
 --- @field public class any
-MovableRecipe = {};
+MovableRecipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,7 @@ function MovableRecipe:getPrimaryTools() end
 function MovableRecipe:getSecondaryTools() end
 
 --- @public
---- @return String
+--- @return string
 function MovableRecipe:getWorldSprite() end
 
 --- @public
@@ -33,53 +33,52 @@ function MovableRecipe:hasXpPerk() end
 function MovableRecipe:isValid() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MovableRecipe:setName(arg0) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function MovableRecipe:setRequiredSkill(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @return void
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
 function MovableRecipe:setResult(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MovableRecipe:setSource(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function MovableRecipe:setTime(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function MovableRecipe:setTool(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function MovableRecipe:setValid(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MovableRecipe:setWorldSprite(arg0) end
 
 --- @public
 --- @param arg0 Perk
---- @return void
+--- @return nil
 function MovableRecipe:setXpPerk(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

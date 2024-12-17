@@ -29,7 +29,6 @@
 ---@field [any] any
 ISWhitelistTable = ISPanel:derive("ISWhitelistTable")
 
-
 ---@return any
 function ISWhitelistTable.getTableResult(datas, rowId, tableName) end
 
@@ -38,7 +37,6 @@ function ISWhitelistTable.onFilterChange(entry, combo) end
 
 ---@return any
 function ISWhitelistTable.onNbrPerPageChange(entry) end
-
 
 ---@return any
 function ISWhitelistTable:clear() end
@@ -66,7 +64,6 @@ function ISWhitelistTable:onOptionPage(button, x, y) end
 
 ---@return any
 function ISWhitelistTable:render() end
-
 
 ---@return ISWhitelistTable
 function ISWhitelistTable:new(x, y, width, height, tableName) end

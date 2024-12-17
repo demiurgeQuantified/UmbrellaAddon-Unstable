@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ZombieIdleState: State
 --- @field public class any
-ZombieIdleState = {};
+ZombieIdleState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ ZombieIdleState = {};
 --- @return ZombieIdleState
 function ZombieIdleState.instance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,24 +20,23 @@ function ZombieIdleState.instance() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
+--- @return nil
 function ZombieIdleState:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieIdleState:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieIdleState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieIdleState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

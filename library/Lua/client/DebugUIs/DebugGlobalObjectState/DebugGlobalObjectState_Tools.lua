@@ -5,7 +5,6 @@
 ---@field [any] any
 DebugGlobalObjectStateUI_Tool = ISBaseObject:derive("DebugGlobalObjectStateUI_Tool")
 
-
 ---@return any
 function DebugGlobalObjectStateUI_Tool:java0(func) end
 
@@ -24,7 +23,6 @@ function DebugGlobalObjectStateUI_Tool:onMouseMove(dx, dy) end
 ---@return any
 function DebugGlobalObjectStateUI_Tool:onMouseUp(x, y) end
 
-
 ---@return DebugGlobalObjectStateUI_Tool
 function DebugGlobalObjectStateUI_Tool:new(ui) end
 
@@ -35,8 +33,8 @@ function DebugGlobalObjectStateUI_Tool:new(ui) end
 ---@field startScreenX any
 ---@field startScreenY any
 ---@field [any] any
-DebugGlobalObjectStateUI_DragCameraTool = DebugGlobalObjectStateUI_Tool:derive("DebugGlobalObjectStateUI_DragCameraTool")
-
+DebugGlobalObjectStateUI_DragCameraTool =
+	DebugGlobalObjectStateUI_Tool:derive("DebugGlobalObjectStateUI_DragCameraTool")
 
 ---@return any
 function DebugGlobalObjectStateUI_DragCameraTool:onMouseDown(x, y) end
@@ -46,7 +44,6 @@ function DebugGlobalObjectStateUI_DragCameraTool:onMouseMove(dx, dy) end
 
 ---@return any
 function DebugGlobalObjectStateUI_DragCameraTool:onMouseUp(x, y) end
-
 
 ---@return DebugGlobalObjectStateUI_DragCameraTool
 function DebugGlobalObjectStateUI_DragCameraTool:new(ui) end

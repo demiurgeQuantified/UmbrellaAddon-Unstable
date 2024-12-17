@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class BuildLogic: BaseCraftingLogic
 --- @field public class any
-BuildLogic = {};
+BuildLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -55,17 +55,17 @@ function BuildLogic:isManualSelectInputs() end
 function BuildLogic:performCurrentRecipe() end
 
 --- @public
---- @return void
+--- @return nil
 function BuildLogic:refresh() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function BuildLogic:setContainers(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
---- @return void
+--- @return nil
 function BuildLogic:setRecipe(arg0) end
 
 --- @public
@@ -73,14 +73,13 @@ function BuildLogic:setRecipe(arg0) end
 function BuildLogic:shouldShowManualSelectInputs() end
 
 --- @public
---- @param arg0 KahluaTableImpl
---- @return void
+--- @param arg0 table
+--- @return nil
 function BuildLogic:startCraftAction(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function BuildLogic:stopCraftAction() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

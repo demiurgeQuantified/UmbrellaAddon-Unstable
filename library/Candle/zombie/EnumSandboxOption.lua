@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class EnumSandboxOption: EnumConfigOption
 --- @field public class any
 --- @implement SandboxOption
-EnumSandboxOption = {};
+EnumSandboxOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,47 +16,47 @@ function EnumSandboxOption:asConfigOption() end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
---- @overload fun(self: EnumSandboxOption, arg0: KahluaTable): void
+--- @return nil
+--- @overload fun(self: EnumSandboxOption, arg0: KahluaTable): nil
 function EnumSandboxOption:fromTable(arg0) end
 
 --- @public
---- @return String
---- @overload fun(self: EnumSandboxOption): String
+--- @return string
+--- @overload fun(self: EnumSandboxOption): string
 function EnumSandboxOption:getPageName() end
 
 --- @public
---- @return String
---- @overload fun(self: EnumSandboxOption): String
+--- @return string
+--- @overload fun(self: EnumSandboxOption): string
 function EnumSandboxOption:getShortName() end
 
 --- @public
---- @return String
---- @overload fun(self: EnumSandboxOption): String
+--- @return string
+--- @overload fun(self: EnumSandboxOption): string
 function EnumSandboxOption:getTableName() end
 
 --- @public
---- @return String
---- @overload fun(self: EnumSandboxOption): String
+--- @return string
+--- @overload fun(self: EnumSandboxOption): string
 function EnumSandboxOption:getTooltip() end
 
 --- @public
---- @return String
---- @overload fun(self: EnumSandboxOption): String
+--- @return string
+--- @overload fun(self: EnumSandboxOption): string
 function EnumSandboxOption:getTranslatedName() end
 
 --- @public
---- @return String
+--- @return string
 function EnumSandboxOption:getValueTranslation() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function EnumSandboxOption:getValueTranslationByIndex(arg0) end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function EnumSandboxOption:getValueTranslationByIndexOrNull(arg0) end
 
 --- @public
@@ -65,33 +65,32 @@ function EnumSandboxOption:getValueTranslationByIndexOrNull(arg0) end
 function EnumSandboxOption:isCustom() end
 
 --- @public
---- @return void
---- @overload fun(self: EnumSandboxOption): void
+--- @return nil
+--- @overload fun(self: EnumSandboxOption): nil
 function EnumSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return SandboxOption
---- @overload fun(self: EnumSandboxOption, arg0: String): SandboxOption
+--- @overload fun(self: EnumSandboxOption, arg0: string): SandboxOption
 function EnumSandboxOption:setPageName(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return SandboxOption
---- @overload fun(self: EnumSandboxOption, arg0: String): SandboxOption
+--- @overload fun(self: EnumSandboxOption, arg0: string): SandboxOption
 function EnumSandboxOption:setTranslation(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return EnumSandboxOption
 function EnumSandboxOption:setValueTranslation(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
---- @overload fun(self: EnumSandboxOption, arg0: KahluaTable): void
+--- @return nil
+--- @overload fun(self: EnumSandboxOption, arg0: KahluaTable): nil
 function EnumSandboxOption:toTable(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -99,8 +98,8 @@ function EnumSandboxOption:toTable(arg0) end
 
 --- @public
 --- @param arg0 SandboxOptions
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
 --- @return EnumSandboxOption
 function EnumSandboxOption.new(arg0, arg1, arg2, arg3) end

@@ -1,27 +1,26 @@
---- @meta
+--- @meta _
 
 --- @class RuntimeAnimationScript: BaseScriptObject
 --- @field public class any
-RuntimeAnimationScript = {};
+RuntimeAnimationScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function RuntimeAnimationScript:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function RuntimeAnimationScript:exec() end
 
 --- @public
---- @return void
+--- @return nil
 function RuntimeAnimationScript:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

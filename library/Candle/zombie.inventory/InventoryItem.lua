@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class InventoryItem: GameEntity
 --- @field public class any
-InventoryItem = {};
+InventoryItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,12 +17,11 @@ function InventoryItem.RemoveFromContainer(arg0) end
 --- @public
 --- @static
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @return InventoryItem
---- @overload fun(arg0: ByteBuffer, arg1: int, arg2: boolean): InventoryItem
---- @overload fun(arg0: ByteBuffer, arg1: int, arg2: boolean, arg3: InventoryItem): InventoryItem
+--- @overload fun(arg0: ByteBuffer, arg1: integer, arg2: boolean): InventoryItem
+--- @overload fun(arg0: ByteBuffer, arg1: integer, arg2: boolean, arg3: InventoryItem): InventoryItem
 function InventoryItem.loadItem(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,24 +34,24 @@ function InventoryItem:CanStack(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function InventoryItem:CopyModData(arg0) end
 
 --- @public
 --- @param arg0 ObjectTooltip
---- @return void
---- @overload fun(self: InventoryItem, arg0: ObjectTooltip, arg1: Layout): void
+--- @return nil
+--- @overload fun(self: InventoryItem, arg0: ObjectTooltip, arg1: Layout): nil
 function InventoryItem:DoTooltip(arg0) end
 
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @param arg2 int
---- @return void
+--- @param arg2 integer
+--- @return nil
 function InventoryItem:DoTooltipEmbedded(arg0, arg1, arg2) end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:HowRotten() end
 
 --- @public
@@ -94,42 +93,42 @@ function InventoryItem:ModDataMatches(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function InventoryItem:OnAddedToContainer(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function InventoryItem:OnBeforeRemoveFromContainer(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
 function InventoryItem:SetContainerPosition(arg0, arg1) end
 
 --- @public
---- @return void
---- @overload fun(self: InventoryItem, arg0: boolean): void
---- @overload fun(self: InventoryItem, arg0: boolean, arg1: boolean, arg2: boolean): void
+--- @return nil
+--- @overload fun(self: InventoryItem, arg0: boolean): nil
+--- @overload fun(self: InventoryItem, arg0: boolean, arg1: boolean, arg2: boolean): nil
 function InventoryItem:Use() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:UseAndSync() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function InventoryItem:UseForCrafting(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:UseItem() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:addExtraItem(arg0) end
 
 --- @public
@@ -137,7 +136,7 @@ function InventoryItem:addExtraItem(arg0) end
 function InventoryItem:allowRandomTint() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:applyMaxSharpness() end
 
 --- @public
@@ -158,42 +157,42 @@ function InventoryItem:canStoreWater() end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyBloodLevelFrom(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyClothing(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyConditionModData(arg0) end
 
 --- @public
 --- @param arg0 KahluaTable
---- @return void
+--- @return nil
 function InventoryItem:copyModData(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyTimesHeadRepairedFrom(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyTimesHeadRepairedTo(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyTimesRepairedFrom(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:copyTimesRepairedTo(arg0) end
 
 --- @public
@@ -203,23 +202,23 @@ function InventoryItem:createAndStoreDefaultDeadBody(arg0) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: InventoryItem, arg0: int): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean, arg3: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
+--- @overload fun(self: InventoryItem, arg0: integer): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
 function InventoryItem:damageCheck() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:doBreakSound() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:doBuildingStash() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:doDamagedSound() end
 
 --- @public
@@ -227,31 +226,31 @@ function InventoryItem:doDamagedSound() end
 function InventoryItem:finishupdate() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getA() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getActualWeight() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getAge() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getAlcoholPower() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAlternateModelName() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAmmoType() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAnimalFeedType() end
 
 --- @public
@@ -259,23 +258,23 @@ function InventoryItem:getAnimalFeedType() end
 function InventoryItem:getAnimalTracks() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getAttachedSlot() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAttachedSlotType() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAttachedToModel() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAttachmentReplacement() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getAttachmentType() end
 
 --- @public
@@ -283,16 +282,16 @@ function InventoryItem:getAttachmentType() end
 function InventoryItem:getAttachmentsProvided() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getB() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getBandagePower() end
 
 --- @public
 --- @param arg0 BloodBodyPartType
---- @return float
+--- @return number
 function InventoryItem:getBlood(arg0) end
 
 --- @public
@@ -300,39 +299,39 @@ function InventoryItem:getBlood(arg0) end
 function InventoryItem:getBloodClothingType() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getBloodLevel() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getBloodLevelAdjustedHigh() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getBloodLevelAdjustedLow() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getBodyLocation() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getBoredomChange() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getBrakeForce() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getBreakSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getBringToBearSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getBurntString() end
 
 --- @public
@@ -344,16 +343,16 @@ function InventoryItem:getByteData() end
 function InventoryItem:getCat() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getCategory() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getChanceToSpawnDamaged() end
 
 --- @public
---- @param arg0 float
---- @return String
+--- @param arg0 number
+--- @return string
 function InventoryItem:getCleanString(arg0) end
 
 --- @public
@@ -369,7 +368,7 @@ function InventoryItem:getClothingItemExtra() end
 function InventoryItem:getClothingItemExtraOption() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getClothingItemName() end
 
 --- @public
@@ -377,11 +376,11 @@ function InventoryItem:getClothingItemName() end
 function InventoryItem:getColor() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getColorBlue() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getColorGreen() end
 
 --- @public
@@ -389,31 +388,31 @@ function InventoryItem:getColorGreen() end
 function InventoryItem:getColorInfo() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getColorRed() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getCondition() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getConditionLowerChance() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getConditionLowerNormal() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getConditionLowerOffroad() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getConditionMax() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getConsolidateOption() end
 
 --- @public
@@ -421,55 +420,55 @@ function InventoryItem:getConsolidateOption() end
 function InventoryItem:getContainer() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getContainerX() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getContainerY() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getContentsWeight() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getCookedString() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getCookingTime() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getCount() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getCountDownSound() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getCurrentAmmoCount() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getCurrentCondition() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getCurrentUses() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getCurrentUsesFloat() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getCustomMenuOption() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getDamagedSound() end
 
 --- @public
@@ -477,52 +476,52 @@ function InventoryItem:getDamagedSound() end
 function InventoryItem:getDeadBodyObject() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getDescription() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getDigType() end
 
 --- @public
 --- @param arg0 BloodBodyPartType
---- @return float
+--- @return number
 function InventoryItem:getDirt(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getDiscomfortModifier() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getDisplayCategory() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getDisplayName() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getDropSound() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getDurability() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getEatTime() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getEatType() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getEngineLoudness() end
 
 --- @public
---- @return long
+--- @return integer
 function InventoryItem:getEntityNetID() end
 
 --- @public
@@ -530,19 +529,19 @@ function InventoryItem:getEntityNetID() end
 function InventoryItem:getEquipParent() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getEquipSound() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getEquippedWeight() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getEvolvedRecipeName() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getExplosionSound() end
 
 --- @public
@@ -550,43 +549,43 @@ function InventoryItem:getExplosionSound() end
 function InventoryItem:getExtraItems() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getExtraItemsWeight() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getFabricType() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getFatigueChange() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getFillFromDispenserSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getFillFromLakeSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getFillFromTapSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getFillFromToiletSound() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getFireFuelRatio() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getFullType() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getG() end
 
 --- @public
@@ -594,39 +593,39 @@ function InventoryItem:getG() end
 function InventoryItem:getGameEntityType() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getGunType() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getHaveBeenRepaired() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getHeadCondition() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getHeadConditionLowerChance() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getHeadConditionLowerChanceMultiplier() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getHeadConditionMax() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getHearingModifier() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getHotbarEquippedWeight() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getID() end
 
 --- @public
@@ -638,7 +637,7 @@ function InventoryItem:getIcon() end
 function InventoryItem:getIconsForTexture() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getInvHeat() end
 
 --- @public
@@ -646,11 +645,11 @@ function InventoryItem:getInvHeat() end
 function InventoryItem:getIsCraftingConsumed() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getItemCapacity() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getItemHeat() end
 
 --- @public
@@ -662,74 +661,74 @@ function InventoryItem:getItemReplacementPrimaryHand() end
 function InventoryItem:getItemReplacementSecondHand() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getItemWhenDry() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getJobDelta() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getJobType() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getKeyId() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getLastAged() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getLightDistance() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getLightStrength() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getLootType() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getLuaCreate() end
 
 --- @public
---- @return int
---- @overload fun(self: InventoryItem, arg0: boolean): int
---- @overload fun(self: InventoryItem, arg0: IsoGameCharacter): int
---- @overload fun(self: InventoryItem, arg0: boolean, arg1: IsoGameCharacter): int
+--- @return integer
+--- @overload fun(self: InventoryItem, arg0: boolean): integer
+--- @overload fun(self: InventoryItem, arg0: IsoGameCharacter): integer
+--- @overload fun(self: InventoryItem, arg0: boolean, arg1: IsoGameCharacter): integer
 function InventoryItem:getMaintenanceMod() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getMakeUpType() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getMaxAmmo() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getMaxCapacity() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getMaxMilk() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getMaxSharpness() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getMaxUses() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getMechanicType() end
 
 --- @public
@@ -737,27 +736,27 @@ function InventoryItem:getMechanicType() end
 function InventoryItem:getMediaData() end
 
 --- @public
---- @return byte
+--- @return integer
 function InventoryItem:getMediaType() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getMeltingTime() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getMetalValue() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getMilkReplaceItem() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getMinutesToBurn() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getMinutesToCook() end
 
 --- @public
@@ -765,23 +764,23 @@ function InventoryItem:getMinutesToCook() end
 function InventoryItem:getModData() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getModID() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getModName() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getModelIndex() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getModule() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getName() end
 
 --- @public
@@ -789,19 +788,19 @@ function InventoryItem:getName() end
 function InventoryItem:getNewPlaceDir() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getOffAge() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getOffAgeMax() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getOffString() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getOnBreak() end
 
 --- @public
@@ -817,19 +816,19 @@ function InventoryItem:getOwner() end
 function InventoryItem:getPlaceDir() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getPlaceMultipleSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getPlaceOneSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getPourLiquidOnGroundSound() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getPourType() end
 
 --- @public
@@ -837,11 +836,11 @@ function InventoryItem:getPourType() end
 function InventoryItem:getPreviousOwner() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getQuality() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getR() end
 
 --- @public
@@ -849,7 +848,7 @@ function InventoryItem:getR() end
 function InventoryItem:getRecordedMediaIndex() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getReduceInfectionPower() end
 
 --- @public
@@ -857,36 +856,36 @@ function InventoryItem:getReduceInfectionPower() end
 function InventoryItem:getRegistry_id() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getRemoteControlID() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getRemoteRange() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getReplaceOnUse() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getReplaceOnUseFullType() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getReplaceOnUseOn() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getReplaceOnUseOnString() end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function InventoryItem:getReplaceType(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getReplaceTypes() end
 
 --- @public
@@ -902,12 +901,12 @@ function InventoryItem:getRequireInHandOrInventory() end
 function InventoryItem:getRightClickContainer() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getSaveType() end
 
 --- @public
 --- @param arg0 SurvivorDesc
---- @return float
+--- @return number
 function InventoryItem:getScore(arg0) end
 
 --- @public
@@ -915,33 +914,33 @@ function InventoryItem:getScore(arg0) end
 function InventoryItem:getScriptItem() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getSharpness() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getSharpnessIncrement() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getSharpnessMultiplier() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getShoutMultiplier() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getShoutType() end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function InventoryItem:getSoundByID(arg0) end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function InventoryItem:getSoundParameter(arg0) end
 
 --- @public
@@ -949,19 +948,19 @@ function InventoryItem:getSoundParameter(arg0) end
 function InventoryItem:getSquare() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getStashChance() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getStashMap() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getStaticModel() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getStaticModelException() end
 
 --- @public
@@ -969,27 +968,27 @@ function InventoryItem:getStaticModelException() end
 function InventoryItem:getStaticModelsByIndex() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getStrainModifier() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getStressChange() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getStringItemType() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getSuspensionCompression() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getSuspensionDamping() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getSwingAnim() end
 
 --- @public
@@ -1029,39 +1028,39 @@ function InventoryItem:getTextureFluidMask() end
 function InventoryItem:getTexturerotten() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getTimesHeadRepaired() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getTimesRepaired() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getTooltip() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getTorchDot() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getType() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getUnCookedString() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getUnequipSound() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getUnequippedWeight() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getUnhappyChange() end
 
 --- @public
@@ -1069,11 +1068,11 @@ function InventoryItem:getUnhappyChange() end
 function InventoryItem:getUser() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getUses() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getVisionModifier() end
 
 --- @public
@@ -1081,35 +1080,35 @@ function InventoryItem:getVisionModifier() end
 function InventoryItem:getVisual() end
 
 --- @public
---- @return int
+--- @return integer
 function InventoryItem:getWeaponLevel() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getWeight() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getWetCooldown() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getWetness() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getWheelFriction() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWithDrainable() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWithoutDrainable() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWorker() end
 
 --- @public
@@ -1117,15 +1116,15 @@ function InventoryItem:getWorker() end
 function InventoryItem:getWorldItem() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWorldObjectSprite() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWorldStaticItem() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWorldStaticModel() end
 
 --- @public
@@ -1133,19 +1132,19 @@ function InventoryItem:getWorldStaticModel() end
 function InventoryItem:getWorldStaticModelsByIndex() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:getWorldTexture() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getX() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getY() end
 
 --- @public
---- @return float
+--- @return number
 function InventoryItem:getZ() end
 
 --- @public
@@ -1173,7 +1172,7 @@ function InventoryItem:hasModData() end
 function InventoryItem:hasQuality() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function InventoryItem:hasReplaceType(arg0) end
 
@@ -1182,7 +1181,7 @@ function InventoryItem:hasReplaceType(arg0) end
 function InventoryItem:hasSharpness() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function InventoryItem:hasTag(arg0) end
 
@@ -1196,25 +1195,25 @@ function InventoryItem:haveExtraItems() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: InventoryItem, arg0: int): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean, arg3: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
+--- @overload fun(self: InventoryItem, arg0: integer): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
 function InventoryItem:headConditionCheck() end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:inheritFoodAgeFrom(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:inheritOlderFoodAge(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:initialiseItem() end
 
 --- @public
@@ -1408,8 +1407,8 @@ function InventoryItem:isWorn() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function InventoryItem:load(arg0, arg1) end
 
 --- @public
@@ -1419,847 +1418,847 @@ function InventoryItem:loadCorpseFromByteData(arg0) end
 
 --- @public
 --- @param arg0 SurvivorDesc
---- @return void
+--- @return nil
 function InventoryItem:monogramAfterDescriptor(arg0) end
 
 --- @public
 --- @param arg0 SurvivorDesc
---- @return void
+--- @return nil
 function InventoryItem:nameAfterDescriptor(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:onBreak() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:playActivateDeactivateSound() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:playActivateSound() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:playDeactivateSound() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:randomizeWorldZRotation() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:reduceCondition() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:reduceHeadCondition() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:reduceSharpness() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:reset() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function InventoryItem:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function InventoryItem:saveWithSize(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setActivated(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setActivatedRemote(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setActualWeight(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setAge(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setAlcoholPower(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setAlcoholic(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setAmmoType(arg0) end
 
 --- @public
 --- @param arg0 AnimalTracks
---- @return void
+--- @return nil
 function InventoryItem:setAnimalTracks(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setAttachedSlot(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setAttachedSlotType(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setAttachedToModel(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setAttachmentReplacement(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setAttachmentType(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setAttachmentsProvided(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:setAutoAge() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setBandagePower(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setBeingFilled(arg0) end
 
 --- @public
 --- @param arg0 BloodBodyPartType
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function InventoryItem:setBlood(arg0, arg1) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setBloodClothingType(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setBloodLevel(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setBoredomChange(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setBrakeForce(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setBreakSound(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setBroken(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setBurnt(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setBurntString(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setCanBeActivated(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setCanBeRemote(arg0) end
 
 --- @public
 --- @param arg0 ItemType
---- @return void
+--- @return nil
 function InventoryItem:setCat(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setChanceToSpawnDamaged(arg0) end
 
 --- @public
 --- @param arg0 Color
---- @return void
+--- @return nil
 function InventoryItem:setColor(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setColorBlue(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setColorGreen(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setColorRed(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
---- @overload fun(self: InventoryItem, arg0: int, arg1: boolean): void
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: boolean): nil
 function InventoryItem:setCondition(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setConditionFrom(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setConditionFromHeadCondition(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setConditionFromModData(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setConditionLowerNormal(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setConditionLowerOffroad(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setConditionMax(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setConditionNoSound(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setConditionTo(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function InventoryItem:setContainer(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setContainerX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setContainerY(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setCooked(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setCookedString(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setCookingTime(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setCount(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setCountDownSound(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setCurrentAmmoCount(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setCurrentUses(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setCurrentUsesFrom(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setCustomColor(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setCustomMenuOption(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setCustomName(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setCustomWeight(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setDescription(arg0) end
 
 --- @public
 --- @param arg0 BloodBodyPartType
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function InventoryItem:setDirt(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setDisplayCategory(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setDurability(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setEngineLoudness(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
---- @overload fun(self: InventoryItem, arg0: IsoGameCharacter, arg1: boolean): void
+--- @return nil
+--- @overload fun(self: InventoryItem, arg0: IsoGameCharacter, arg1: boolean): nil
 function InventoryItem:setEquipParent(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setEvolvedRecipeName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setExplosionSound(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setFatigueChange(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setFavorite(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setGunType(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setHaveBeenRepaired(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setHeadCondition(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setHeadConditionFromCondition(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setID(arg0) end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function InventoryItem:setIcon(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setIconsForTexture(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setInfected(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setInitialised(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setIsCookable(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setIsCraftingConsumed(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setItemCapacity(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setItemHeat(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setItemWhenDry(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setJobDelta(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setJobType(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setKeyId(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setLastAged(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setLightDistance(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setLightStrength(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setMaxAmmo(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setMaxCapacity(arg0) end
 
 --- @public
---- @param arg0 byte
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setMediaType(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setMeltingTime(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setMetalValue(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setMinutesToBurn(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setMinutesToCook(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setModelIndex(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setModule(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setName(arg0) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function InventoryItem:setNewPlaceDir(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setOffAge(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setOffAgeMax(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setOffString(arg0) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function InventoryItem:setPlaceDir(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function InventoryItem:setPreviousOwner(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setQuality(arg0) end
 
 --- @public
 --- @param arg0 MediaData
---- @return void
+--- @return nil
 function InventoryItem:setRecordedMediaData(arg0) end
 
 --- @public
 --- @param arg0 short
---- @return void
+--- @return nil
 function InventoryItem:setRecordedMediaIndex(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setRecordedMediaIndexInteger(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setReduceInfectionPower(arg0) end
 
 --- @public
 --- @param arg0 Item
---- @return void
+--- @return nil
 function InventoryItem:setRegistry_id(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setRemoteControlID(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setRemoteController(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setRemoteRange(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setReplaceOnUse(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setReplaceOnUseOn(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setRequireInHandOrInventory(arg0) end
 
 --- @public
 --- @param arg0 ItemContainer
---- @return void
+--- @return nil
 function InventoryItem:setRightClickContainer(arg0) end
 
 --- @public
 --- @param arg0 Item
---- @return void
+--- @return nil
 function InventoryItem:setScriptItem(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setSharpness(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setSharpnessFrom(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setStashChance(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setStashMap(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setStaticModel(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setStaticModelsByIndex(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setStressChange(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setSuspensionCompression(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setSuspensionDamping(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setTaken(arg0) end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function InventoryItem:setTexture(arg0) end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function InventoryItem:setTextureBurnt(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setTextureColorMask(arg0) end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function InventoryItem:setTextureCooked(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setTextureFluidMask(arg0) end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function InventoryItem:setTexturerotten(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setTimesHeadRepaired(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setTimesRepaired(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setTooltip(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setTorchCone(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setType(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setUnCookedString(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setUnhappyChange(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setUses(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
---- @return void
+--- @return nil
 function InventoryItem:setUsesFrom(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setWeight(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function InventoryItem:setWet(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setWetCooldown(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setWheelFriction(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setWorker(arg0) end
 
 --- @public
 --- @param arg0 IsoWorldInventoryObject
---- @return void
+--- @return nil
 function InventoryItem:setWorldItem(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function InventoryItem:setWorldScale(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setWorldStaticItem(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setWorldStaticModel(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function InventoryItem:setWorldStaticModelsByIndex(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function InventoryItem:setWorldTexture(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function InventoryItem:setWorldZRotation(arg0) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: InventoryItem, arg0: int): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean, arg3: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: int, arg1: float, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
+--- @overload fun(self: InventoryItem, arg0: integer): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
 function InventoryItem:sharpnessCheck() end
 
 --- @public
@@ -2268,54 +2267,53 @@ function InventoryItem:shouldUpdateInWorld() end
 
 --- @public
 --- @param arg0 IsoObject
---- @return void
+--- @return nil
 function InventoryItem:storeInByteData(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:syncItemFields() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:synchWithVisual() end
 
 --- @public
---- @return String
+--- @return string
 function InventoryItem:toString() end
 
 --- @public
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function InventoryItem:tryGetWorldStaticModelByIndex(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:update() end
 
 --- @public
---- @return void
+--- @return nil
 function InventoryItem:updateAge() end
 
 --- @public
---- @return void
---- @overload fun(self: InventoryItem, arg0: BaseSoundEmitter): void
+--- @return nil
+--- @overload fun(self: InventoryItem, arg0: BaseSoundEmitter): nil
 function InventoryItem:updateEquippedAndActivatedSound() end
 
 --- @public
 --- @param arg0 BaseSoundEmitter
---- @return void
+--- @return nil
 function InventoryItem:updateSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @return InventoryItem
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: Item): InventoryItem
+--- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): InventoryItem
 function InventoryItem.new(arg0, arg1, arg2, arg3) end

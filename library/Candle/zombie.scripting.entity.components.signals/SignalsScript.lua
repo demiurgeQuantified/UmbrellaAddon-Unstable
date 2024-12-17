@@ -1,33 +1,33 @@
---- @meta
+--- @meta _
 
 --- @class SignalsScript: ComponentScript
 --- @field public class any
-SignalsScript = {};
+SignalsScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SignalsScript:InitLoadPP(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SignalsScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function SignalsScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function SignalsScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SignalsScript:PreReload() end
 
 --- @public
@@ -35,7 +35,5 @@ function SignalsScript:PreReload() end
 function SignalsScript:isoMasterOnly() end
 
 --- @public
---- @return void
+--- @return nil
 function SignalsScript:reset() end
-
-

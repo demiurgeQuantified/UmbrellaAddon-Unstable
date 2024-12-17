@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class EntityDebugTestType: Enum
 --- @field public class any
 --- @field public BaseTest EntityDebugTestType
-EntityDebugTestType = {};
+EntityDebugTestType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,7 @@ function EntityDebugTestType.getValueList() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return EntityDebugTestType
 function EntityDebugTestType.valueOf(arg0) end
 
@@ -24,5 +24,3 @@ function EntityDebugTestType.valueOf(arg0) end
 --- @static
 --- @return EntityDebugTestType[]
 function EntityDebugTestType.values() end
-
-

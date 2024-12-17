@@ -12,7 +12,6 @@
 ---@field [any] any
 ISWaterPlantAction = ISBaseTimedAction:derive("ISWaterPlantAction")
 
-
 ---@return any
 function ISWaterPlantAction:complete() end
 
@@ -39,7 +38,6 @@ function ISWaterPlantAction:useItemOneUnit() end
 
 ---@return any
 function ISWaterPlantAction:waitToStart() end
-
 
 ---@return ISWaterPlantAction
 function ISWaterPlantAction:new(character, item, uses, sq, maxTime) end

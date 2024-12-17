@@ -12,7 +12,6 @@
 ---@field [any] any
 ISPlantainCataplasm = ISBaseTimedAction:derive("ISPlantainCataplasm")
 
-
 ---@return any
 function ISPlantainCataplasm:complete() end
 
@@ -36,7 +35,6 @@ function ISPlantainCataplasm:update() end
 
 ---@return any
 function ISPlantainCataplasm:waitToStart() end
-
 
 ---@return ISPlantainCataplasm
 function ISPlantainCataplasm:new(character, otherPlayer, item, bodyPart) end

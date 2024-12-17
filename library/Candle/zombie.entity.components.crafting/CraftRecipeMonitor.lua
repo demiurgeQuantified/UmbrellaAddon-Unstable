@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CraftRecipeMonitor
 --- @field public class any
-CraftRecipeMonitor = {};
+CraftRecipeMonitor = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ CraftRecipeMonitor = {};
 --- @static
 --- @return CraftRecipeMonitor
 function CraftRecipeMonitor.Create() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,7 +26,7 @@ function CraftRecipeMonitor:GetLines() end
 function CraftRecipeMonitor:canLog() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeMonitor:close() end
 
 --- @public
@@ -35,70 +34,70 @@ function CraftRecipeMonitor:close() end
 function CraftRecipeMonitor:getRecipe() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipeMonitor:log(arg0) end
 
 --- @public
 --- @param arg0 CraftLogic
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logCraftLogic(arg0) end
 
 --- @public
 --- @param arg0 DryingLogic
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logDryingLogic(arg0) end
 
 --- @public
 --- @param arg0 FurnaceLogic
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logFurnaceLogic(arg0) end
 
 --- @public
 --- @param arg0 InputScript
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logInputScript(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ArrayList
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logList(arg0, arg1) end
 
 --- @public
 --- @param arg0 MashingLogic
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logMashingLogic(arg0) end
 
 --- @public
 --- @param arg0 OutputScript
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logOutputScript(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logRecipe(arg0, arg1) end
 
 --- @public
 --- @param arg0 List
 --- @param arg1 List
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logResources(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 List
---- @return void
+--- @return nil
 function CraftRecipeMonitor:logResourcesList(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeMonitor:open() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipeMonitor:reset() end
 
 --- @public
@@ -107,22 +106,20 @@ function CraftRecipeMonitor:seal() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function CraftRecipeMonitor:setPrintToConsole(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
---- @return void
+--- @return nil
 function CraftRecipeMonitor:setRecipe(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipeMonitor:success(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipeMonitor:warn(arg0) end
-
-

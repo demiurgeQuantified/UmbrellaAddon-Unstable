@@ -6,7 +6,6 @@
 ---@field [any] any
 ISBulletTracerEffect = ISDebugSubPanelBase:derive("ISBulletTracerEffect")
 
-
 ---@return any
 function ISBulletTracerEffect:createChildren() end
 
@@ -24,7 +23,6 @@ function ISBulletTracerEffect:prerender() end
 
 ---@return any
 function ISBulletTracerEffect:setSliderValues() end
-
 
 ---@return ISBulletTracerEffect
 function ISBulletTracerEffect:new(x, y, width, height, doStencil) end

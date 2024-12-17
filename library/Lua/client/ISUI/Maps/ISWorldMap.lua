@@ -14,7 +14,6 @@
 ---@field [any] any
 WorldMapOptions = ISCollapsableWindowJoypad:derive("WorldMapOptions")
 
-
 ---@return any
 function WorldMapOptions:createChildren() end
 
@@ -42,13 +41,11 @@ function WorldMapOptions:onTickBox(index, selected, option) end
 ---@return any
 function WorldMapOptions:synchUI() end
 
-
 ---@return WorldMapOptions
 function WorldMapOptions:new(x, y, width, height, map) end
 
 ---@class ISWorldMapButtonPanel : ISPanelJoypad
 ISWorldMapButtonPanel = ISPanelJoypad:derive("ISWorldMapButtonPanel")
-
 
 ---@return any
 function ISWorldMapButtonPanel:onGainJoypadFocus(joypadData) end
@@ -61,7 +58,6 @@ function ISWorldMapButtonPanel:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISWorldMapButtonPanel:render() end
-
 
 ---@return ISWorldMapButtonPanel
 function ISWorldMapButtonPanel:new(x, y, width, height) end
@@ -117,7 +113,6 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field [any] any
 ISWorldMap = ISPanelJoypad:derive("ISWorldMap")
 
-
 ---@return any
 function ISWorldMap.checkKey(key) end
 
@@ -147,7 +142,6 @@ function ISWorldMap.ShowWorldMap(playerNum, centerX, centerY, zoom) end
 
 ---@return any
 function ISWorldMap.ToggleWorldMap(playerNum) end
-
 
 ---@return any
 function ISWorldMap:close() end
@@ -268,7 +262,6 @@ function ISWorldMap:setShowTileGrid(show) end
 
 ---@return any
 function ISWorldMap:updateJoypad() end
-
 
 ---@return ISWorldMap
 function ISWorldMap:new(x, y, width, height) end

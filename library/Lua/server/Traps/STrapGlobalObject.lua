@@ -20,10 +20,8 @@
 ---@field [any] any
 STrapGlobalObject = SGlobalObject:derive("STrapGlobalObject")
 
-
 ---@return any
 function STrapGlobalObject.SpawnDestroyItems(trapType, square, object) end
-
 
 ---@return any
 function STrapGlobalObject:addAliveAnimal(character) end
@@ -96,7 +94,6 @@ function STrapGlobalObject:toModData(modData) end
 
 ---@return any
 function STrapGlobalObject:toObject(object, transmitData) end
-
 
 ---@return STrapGlobalObject
 function STrapGlobalObject:new(luaSystem, globalObject) end

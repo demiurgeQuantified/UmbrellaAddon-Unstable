@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class MapItem: InventoryItem
 --- @field public class any
 --- @field public WORLD_MAP_INSTANCE MapItem
-MapItem = {};
+MapItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,24 +11,23 @@ MapItem = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function MapItem.LoadWorldMap() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function MapItem.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function MapItem.SaveWorldMap() end
 
 --- @public
 --- @static
 --- @return MapItem
 function MapItem.getSingleton() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,11 +38,11 @@ function MapItem.getSingleton() end
 function MapItem:IsMap() end
 
 --- @public
---- @return String
+--- @return string
 function MapItem:getMapID() end
 
 --- @public
---- @return int
+--- @return integer
 function MapItem:getSaveType() end
 
 --- @public
@@ -52,31 +51,30 @@ function MapItem:getSymbols() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function MapItem:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function MapItem:save(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function MapItem:setMapID(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @return MapItem
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: Item): MapItem
+--- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): MapItem
 function MapItem.new(arg0, arg1, arg2, arg3) end

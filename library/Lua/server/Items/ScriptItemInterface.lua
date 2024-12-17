@@ -3,11 +3,10 @@
 ---@class ScriptItemInterface
 ScriptItemInterface = {}
 ScriptItemInterface.types = {
-    weapon = "Weapon",
-    item = "Normal",
-    food = "Food",
+	weapon = "Weapon",
+	item = "Normal",
+	food = "Food",
 }
-
 
 ---@return any
 function ScriptItemInterface.cloneItemType(newName, originalFullName) end

@@ -22,7 +22,6 @@
 ---@field [any] any
 ISWidgetRecipesPanel = ISPanel:derive("ISWidgetRecipesPanel")
 
-
 ---@return any
 function ISWidgetRecipesPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -91,7 +90,6 @@ function ISWidgetRecipesPanel:updateContainers(_containers) end
 
 ---@return any
 function ISWidgetRecipesPanel:updateTooltip() end
-
 
 ---@return ISWidgetRecipesPanel
 function ISWidgetRecipesPanel:new(x, y, width, height, player, craftBench, isoObject, logic, callbackTarget) end

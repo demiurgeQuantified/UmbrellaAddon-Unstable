@@ -7,7 +7,6 @@
 ---@field [any] any
 ISPlaceTrap = ISBaseTimedAction:derive("ISPlaceTrap")
 
-
 ---@return any
 function ISPlaceTrap:complete() end
 
@@ -28,7 +27,6 @@ function ISPlaceTrap:stop() end
 
 ---@return any
 function ISPlaceTrap:update() end
-
 
 ---@return ISPlaceTrap
 function ISPlaceTrap:new(character, weapon) end

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BloodBodyPartType: Enum
 --- @field public class any
@@ -21,7 +21,7 @@
 --- @field public UpperArm_R BloodBodyPartType
 --- @field public UpperLeg_L BloodBodyPartType
 --- @field public UpperLeg_R BloodBodyPartType
-BloodBodyPartType = {};
+BloodBodyPartType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,31 +29,31 @@ BloodBodyPartType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return BloodBodyPartType
 function BloodBodyPartType.FromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BloodBodyPartType
 function BloodBodyPartType.FromString(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 BloodBodyPartType
---- @return int
+--- @return integer
 function BloodBodyPartType.ToIndex(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 BloodBodyPartType
---- @return String
+--- @return string
 function BloodBodyPartType.getDisplayName(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BloodBodyPartType
 function BloodBodyPartType.valueOf(arg0) end
 
@@ -61,7 +61,6 @@ function BloodBodyPartType.valueOf(arg0) end
 --- @static
 --- @return BloodBodyPartType[]
 function BloodBodyPartType.values() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,11 +71,9 @@ function BloodBodyPartType.values() end
 function BloodBodyPartType:getCharacterMaskParts() end
 
 --- @public
---- @return String
+--- @return string
 function BloodBodyPartType:getDisplayName() end
 
 --- @public
---- @return int
+--- @return integer
 function BloodBodyPartType:index() end
-
-

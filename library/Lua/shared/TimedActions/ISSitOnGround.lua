@@ -6,7 +6,6 @@
 ---@field [any] any
 ISSitOnGround = ISBaseTimedAction:derive("ISSitOnGround")
 
-
 ---@return any
 function ISSitOnGround:complete() end
 
@@ -30,7 +29,6 @@ function ISSitOnGround:update() end
 
 ---@return any
 function ISSitOnGround:waitToStart() end
-
 
 ---@return ISSitOnGround
 function ISSitOnGround:new(character) end

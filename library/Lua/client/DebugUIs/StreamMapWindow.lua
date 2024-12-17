@@ -13,7 +13,6 @@
 ---@field [any] any
 StreamMapWindow = ISCollapsableWindow:derive("StreamMapWindow")
 
-
 ---@return any
 function StreamMapWindow:createChildren() end
 
@@ -46,7 +45,6 @@ function StreamMapWindow:onRenderMouseWheel(del) end
 
 ---@return any
 function StreamMapWindow:renderTex() end
-
 
 ---@return StreamMapWindow
 function StreamMapWindow:new(x, y, width, height) end

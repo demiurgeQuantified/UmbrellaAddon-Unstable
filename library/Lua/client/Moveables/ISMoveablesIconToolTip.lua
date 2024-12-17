@@ -18,7 +18,6 @@
 ---@field [any] any
 ISMoveablesIconToolTip = ISPanel:derive("ISMoveablesIconToolTip")
 
-
 ---@return any
 function ISMoveablesIconToolTip:createChildren() end
 
@@ -30,7 +29,6 @@ function ISMoveablesIconToolTip:prerender() end
 
 ---@return any
 function ISMoveablesIconToolTip:render() end
-
 
 ---@return ISMoveablesIconToolTip
 function ISMoveablesIconToolTip:new(x, y, width, height, marginOffset) end

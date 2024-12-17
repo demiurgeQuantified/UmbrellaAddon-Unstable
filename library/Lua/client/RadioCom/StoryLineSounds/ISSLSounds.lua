@@ -21,7 +21,6 @@
 ---@field [any] any
 ISSLSounds = ISPanel:derive("ISSLSounds")
 
-
 ---@return any
 function ISSLSounds:addSoundItem(_sound) end
 
@@ -48,7 +47,6 @@ function ISSLSounds:render() end
 
 ---@return any
 function ISSLSounds:update() end
-
 
 ---@return ISSLSounds
 function ISSLSounds:new(x, y, width, height) end

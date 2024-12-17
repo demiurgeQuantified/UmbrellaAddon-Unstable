@@ -56,7 +56,6 @@
 ISRichTextPanel = ISPanel:derive("ISRichTextPanel")
 ISRichTextPanel.drawMargins = false
 
-
 ---@return any
 function ISRichTextPanel:doRightJoystickScrolling(joypadData, dx, dy) end
 
@@ -92,7 +91,6 @@ function ISRichTextPanel:setMargins(left, top, right, bottom) end
 
 ---@return any
 function ISRichTextPanel:setText(text) end
-
 
 ---@return ISRichTextPanel
 function ISRichTextPanel:new(x, y, width, height) end

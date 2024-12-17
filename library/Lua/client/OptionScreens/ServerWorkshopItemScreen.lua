@@ -11,7 +11,6 @@
 ---@field [any] any
 ServerWorkshopItemScreen = ISPanelJoypad:derive("ServerWorkshopItemScreen")
 
-
 ---@return any
 function ServerWorkshopItemScreen:create() end
 
@@ -44,7 +43,6 @@ function ServerWorkshopItemScreen:setRequiredItems(itemIDs) end
 
 ---@return any
 function ServerWorkshopItemScreen:updateItemDetails(detailsList) end
-
 
 ---@return ServerWorkshopItemScreen
 function ServerWorkshopItemScreen:new(x, y, width, height) end

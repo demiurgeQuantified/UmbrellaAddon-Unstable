@@ -5,13 +5,11 @@
 ---@field [any] any
 ISBaseComponentPanel = ISPanel:derive("ISBaseComponentPanel")
 
-
 ---@return any
 function ISBaseComponentPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiStyle) end
 
 ---@return any
 function ISBaseComponentPanel.table_constructor(o, x, y, width, height, player, entity, component, componentUiStyle) end
-
 
 ---@return any
 function ISBaseComponentPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -48,7 +46,6 @@ function ISBaseComponentPanel:render() end
 
 ---@return any
 function ISBaseComponentPanel:update() end
-
 
 ---@return ISBaseComponentPanel
 function ISBaseComponentPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

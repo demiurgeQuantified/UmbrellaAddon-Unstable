@@ -14,7 +14,6 @@
 ---@field [any] any
 ISAnimalTracksUI = ISCollapsableWindow:derive("ISAnimalTracksUI")
 
-
 ---@return any
 function ISAnimalTracksUI:create() end
 
@@ -29,7 +28,6 @@ function ISAnimalTracksUI:prerender() end
 
 ---@return any
 function ISAnimalTracksUI:render() end
-
 
 ---@return ISAnimalTracksUI
 function ISAnimalTracksUI:new(x, y, width, height, track, player) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class CraftRecipeManager
 --- @field public class any
-CraftRecipeManager = {};
+CraftRecipeManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,28 +10,28 @@ CraftRecipeManager = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function CraftRecipeManager.FormatAndRegisterRecipeTagsQuery(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CraftRecipeManager.Init() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CraftRecipeManager.LogAllRecipesToFile() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CraftRecipeManager.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CraftRecipeManager.debugPrintTagManager() end
 
 --- @public
@@ -41,10 +41,10 @@ function CraftRecipeManager.debugPrintTagManagerLines() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 List
 --- @return List
---- @overload fun(arg0: String, arg1: List, arg2: List): List
+--- @overload fun(arg0: string, arg1: List, arg2: List): List
 function CraftRecipeManager.filterRecipeList(arg0, arg1) end
 
 --- @public
@@ -71,7 +71,7 @@ function CraftRecipeManager.getAllValidItemsForRecipe(arg0, arg1, arg2) end
 --- @static
 --- @param arg0 CraftRecipe
 --- @param arg1 ArrayList
---- @return int
+--- @return integer
 function CraftRecipeManager.getAutoCraftCountItems(arg0, arg1) end
 
 --- @public
@@ -82,7 +82,7 @@ function CraftRecipeManager.getCraftDataForPlayer(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return List
 function CraftRecipeManager.getRecipesForTag(arg0) end
 
@@ -151,25 +151,24 @@ function CraftRecipeManager.isValidRecipeForCharacter(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 List
 --- @param arg2 boolean
 --- @return List
---- @overload fun(arg0: String, arg1: List, arg2: List, arg3: boolean): List
+--- @overload fun(arg0: string, arg1: List, arg2: List, arg3: boolean): List
 function CraftRecipeManager.populateRecipeList(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return List
 function CraftRecipeManager.queryRecipes(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function CraftRecipeManager.sanitizeTagQuery(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -11,7 +11,6 @@
 ---@field [any] any
 ISVehicleBloodUI = ISCollapsableWindow:derive("ISVehicleBloodUI")
 
-
 ---@return any
 function ISVehicleBloodUI:addLabel(_x, _y, _title, _font, _bLeft) end
 
@@ -35,7 +34,6 @@ function ISVehicleBloodUI:prerender() end
 
 ---@return any
 function ISVehicleBloodUI:setVehicle(vehicle) end
-
 
 ---@return ISVehicleBloodUI
 function ISVehicleBloodUI:new(playerObj) end

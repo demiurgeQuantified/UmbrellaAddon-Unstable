@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class RandomizedBuildingBase: RandomizedWorldBase
 --- @field public class any
---- @field public maximumRoomCount int
-RandomizedBuildingBase = {};
+--- @field public maximumRoomCount integer
+RandomizedBuildingBase = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,14 +12,13 @@ RandomizedBuildingBase = {};
 --- @public
 --- @static
 --- @param arg0 IsoBuilding
---- @return void
+--- @return nil
 function RandomizedBuildingBase.ChunkLoaded(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RandomizedBuildingBase.initAllRBMapChance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,8 +26,8 @@ function RandomizedBuildingBase.initAllRBMapChance() end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function RandomizedBuildingBase:addBarricade(arg0, arg1) end
 
 --- @public
@@ -40,36 +39,36 @@ function RandomizedBuildingBase:addBarricade(arg0, arg1) end
 function RandomizedBuildingBase:addRandomRangedWeapon(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 IsoGridSquare
 --- @param arg2 IsoObject
 --- @return InventoryItem
---- @overload fun(self: RandomizedBuildingBase, arg0: String, arg1: IsoGridSquare, arg2: IsoObject, arg3: boolean): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: boolean): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: IsoObject, arg3: boolean): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number, arg5: boolean): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number, arg5: integer): InventoryItem
 function RandomizedBuildingBase:addWorldItem(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @param arg1 int
---- @param arg2 String
---- @param arg3 Integer
+--- @param arg1 integer
+--- @param arg2 string
+--- @param arg3 integer
 --- @param arg4 RoomDef
 --- @return ArrayList
 function RandomizedBuildingBase:addZombies(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 Integer
+--- @param arg0 integer
+--- @param arg1 string
+--- @param arg2 integer
 --- @param arg3 IsoGridSquare
 --- @return ArrayList
 function RandomizedBuildingBase:addZombiesOnSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @return int
---- @overload fun(self: RandomizedBuildingBase, arg0: IsoGridSquare): int
+--- @return integer
+--- @overload fun(self: RandomizedBuildingBase, arg0: IsoGridSquare): integer
 function RandomizedBuildingBase:getChance() end
 
 --- @public
@@ -78,11 +77,11 @@ function RandomizedBuildingBase:getChance() end
 function RandomizedBuildingBase:getDoor(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedBuildingBase:getMinimumDays() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedBuildingBase:getMinimumRooms() end
 
 --- @public
@@ -91,7 +90,7 @@ function RandomizedBuildingBase:getMinimumRooms() end
 function RandomizedBuildingBase:getWindow(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function RandomizedBuildingBase:init() end
 
 --- @public
@@ -112,36 +111,35 @@ function RandomizedBuildingBase:isValid(arg0, arg1) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @return void
+--- @return nil
 function RandomizedBuildingBase:randomizeBuilding(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function RandomizedBuildingBase:setAlwaysDo(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RandomizedBuildingBase:setChance(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RandomizedBuildingBase:setMinimumDays(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function RandomizedBuildingBase:setMinimumRooms(arg0) end
 
 --- @public
 --- @param arg0 BuildingDef
---- @param arg1 String
---- @param arg2 int
---- @return void
+--- @param arg1 string
+--- @param arg2 integer
+--- @return nil
 function RandomizedBuildingBase:spawnItemsInContainers(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

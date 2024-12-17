@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class SpriteConfigScript: ComponentScript
 --- @field public class any
-SpriteConfigScript = {};
+SpriteConfigScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,11 +10,11 @@ SpriteConfigScript = {};
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function SpriteConfigScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function SpriteConfigScript:PreReload() end
 
 --- @public
@@ -22,15 +22,15 @@ function SpriteConfigScript:PreReload() end
 function SpriteConfigScript:getAllTileNames() end
 
 --- @public
---- @return int
+--- @return integer
 function SpriteConfigScript:getBonusHealth() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteConfigScript:getBreakSound() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteConfigScript:getCornerSprite() end
 
 --- @public
@@ -38,12 +38,12 @@ function SpriteConfigScript:getCornerSprite() end
 function SpriteConfigScript:getDontNeedFrame() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return FaceScript
 function SpriteConfigScript:getFace(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function SpriteConfigScript:getHealth() end
 
 --- @public
@@ -59,11 +59,11 @@ function SpriteConfigScript:getNeedToBeAgainstWall() end
 function SpriteConfigScript:getNeedWindowFrame() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteConfigScript:getOnCreate() end
 
 --- @public
---- @return String
+--- @return string
 function SpriteConfigScript:getOnIsValid() end
 
 --- @public
@@ -71,12 +71,12 @@ function SpriteConfigScript:getOnIsValid() end
 function SpriteConfigScript:getPreviousStages() end
 
 --- @public
---- @return int
+--- @return integer
 function SpriteConfigScript:getSkillBaseHealth() end
 
 --- @public
 --- @param arg0 IVersionHash
---- @return void
+--- @return nil
 function SpriteConfigScript:getVersion(arg0) end
 
 --- @public
@@ -98,5 +98,3 @@ function SpriteConfigScript:isValid() end
 --- @public
 --- @return boolean
 function SpriteConfigScript:isoMasterOnly() end
-
-

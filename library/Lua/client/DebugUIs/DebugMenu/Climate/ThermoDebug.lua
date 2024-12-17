@@ -31,10 +31,8 @@
 ThermoDebug = ISCollapsableWindow:derive("ThermoDebug")
 ThermoDebug.instance = nil
 
-
 ---@return any
 function ThermoDebug.OnOpenPanel() end
-
 
 ---@return any
 function ThermoDebug:addLine(_prefix, _line) end
@@ -74,7 +72,6 @@ function ThermoDebug:stayOnSplitScreen() end
 
 ---@return any
 function ThermoDebug:update() end
-
 
 ---@return ThermoDebug
 function ThermoDebug:new(x, y, width, height, player) end

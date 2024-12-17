@@ -7,7 +7,6 @@
 ---@field [any] any
 RagdollSettingsPanel = ISDebugSubPanelBase:derive("RagdollSettingsPanel")
 
-
 ---@return any
 function RagdollSettingsPanel:addBoolOption(_id, _bool, _x, _y, _w) end
 
@@ -37,7 +36,6 @@ function RagdollSettingsPanel:prerender() end
 
 ---@return any
 function RagdollSettingsPanel:update() end
-
 
 ---@return RagdollSettingsPanel
 function RagdollSettingsPanel:new(x, y, width, height, doStencil) end

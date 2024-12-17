@@ -4,7 +4,6 @@
 ISFeedingTroughMenu = {}
 ISFeedingTroughMenu.FEED_PER_DELTA = 10
 
-
 ---@return any
 function ISFeedingTroughMenu.isValidAnimalFeed(item) end
 

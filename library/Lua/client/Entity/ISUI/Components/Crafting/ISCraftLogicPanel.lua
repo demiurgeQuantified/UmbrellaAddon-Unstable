@@ -22,10 +22,8 @@
 ---@field [any] any
 ISCraftLogicPanel = ISBaseComponentPanel:derive("ISCraftLogicPanel")
 
-
 ---@return any
 function ISCraftLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
-
 
 ---@return any
 function ISCraftLogicPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -62,7 +60,6 @@ function ISCraftLogicPanel:render() end
 
 ---@return any
 function ISCraftLogicPanel:update() end
-
 
 ---@return ISCraftLogicPanel
 function ISCraftLogicPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

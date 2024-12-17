@@ -79,7 +79,6 @@ ISInventoryPane.MAX_ITEMS_IN_STACK_TO_RENDER = 50
 ISInventoryPane.ghc = getCore():getGoodHighlitedColor()
 ISInventoryPane.highlightItem = nil
 
-
 ---@return any
 function ISInventoryPane.getActualItems(items) end
 
@@ -100,7 +99,6 @@ function ISInventoryPane.itemSortByWeightAsc(a, b) end
 
 ---@return any
 function ISInventoryPane.itemSortByWeightDesc(a, b) end
-
 
 ---@return any
 function ISInventoryPane:canPutIn() end
@@ -288,7 +286,6 @@ function ISInventoryPane:updateTooltip() end
 ---@return any
 function ISInventoryPane:updateWorldObjectHighlight() end
 
-
 ---@return ISInventoryPane
 function ISInventoryPane:new(x, y, width, height, inventory, zoom) end
 
@@ -303,7 +300,6 @@ function ISInventoryPane:new(x, y, width, height, inventory, zoom) end
 ---@field [any] any
 ISInventoryPaneDraggedItems = {}
 
-
 ---@return any
 function ISInventoryPaneDraggedItems:cannotDropItem(item) end
 
@@ -315,7 +311,6 @@ function ISInventoryPaneDraggedItems:reset() end
 
 ---@return any
 function ISInventoryPaneDraggedItems:update() end
-
 
 ---@return ISInventoryPaneDraggedItems
 function ISInventoryPaneDraggedItems:new(inventoryPane) end

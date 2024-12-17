@@ -3,7 +3,6 @@
 ---@class BaseGameCharacterDetails
 BaseGameCharacterDetails = {}
 
-
 ---@return any
 function BaseGameCharacterDetails.CreateCharacterInstance(s) end
 

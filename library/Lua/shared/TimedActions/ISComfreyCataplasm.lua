@@ -12,7 +12,6 @@
 ---@field [any] any
 ISComfreyCataplasm = ISBaseTimedAction:derive("ISComfreyCataplasm")
 
-
 ---@return any
 function ISComfreyCataplasm:complete() end
 
@@ -36,7 +35,6 @@ function ISComfreyCataplasm:update() end
 
 ---@return any
 function ISComfreyCataplasm:waitToStart() end
-
 
 ---@return ISComfreyCataplasm
 function ISComfreyCataplasm:new(character, otherPlayer, item, bodyPart) end

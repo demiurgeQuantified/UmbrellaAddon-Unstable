@@ -8,7 +8,6 @@
 ---@field [any] any
 ISSpawnPointsEditor = ISCollapsableWindow:derive("ISSpawnPointsEditor")
 
-
 ---@return any
 function ISSpawnPointsEditor:close() end
 
@@ -50,7 +49,6 @@ function ISSpawnPointsEditor:onSetPointToPlayerPosition(allProfessions) end
 
 ---@return any
 function ISSpawnPointsEditor:PointList_onRightMouseUp(x, y) end
-
 
 ---@return ISSpawnPointsEditor
 function ISSpawnPointsEditor:new() end

@@ -20,7 +20,6 @@
 ---@field [any] any
 ISCraftRecipePanel = ISPanel:derive("ISCraftRecipePanel")
 
-
 ---@return any
 function ISCraftRecipePanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -62,7 +61,6 @@ function ISCraftRecipePanel:update() end
 
 ---@return any
 function ISCraftRecipePanel:updateContainers(containers) end
-
 
 ---@return ISCraftRecipePanel
 function ISCraftRecipePanel:new(x, y, width, height, player, logic, recipeData, craftBench, isoObject) end

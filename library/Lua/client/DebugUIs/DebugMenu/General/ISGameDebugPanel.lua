@@ -7,7 +7,6 @@
 ---@field [any] any
 ISGameDebugPanel = ISDebugSubPanelBase:derive("ISGameDebugPanel")
 
-
 ---@return any
 function ISGameDebugPanel:addBoolOption(_title, _tag) end
 
@@ -40,7 +39,6 @@ function ISGameDebugPanel:prerender() end
 
 ---@return any
 function ISGameDebugPanel:update() end
-
 
 ---@return ISGameDebugPanel
 function ISGameDebugPanel:new(x, y, width, height, doStencil) end

@@ -19,7 +19,6 @@
 ---@field [any] any
 ISSLEvent = ISPanel:derive("ISSLEvent")
 
-
 ---@return any
 function ISSLEvent:addEventSoundItem(_eventSound) end
 
@@ -46,7 +45,6 @@ function ISSLEvent:setEvent(_event) end
 
 ---@return any
 function ISSLEvent:update() end
-
 
 ---@return ISSLEvent
 function ISSLEvent:new(x, y, width, height) end

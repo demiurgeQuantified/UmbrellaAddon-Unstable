@@ -1,25 +1,25 @@
---- @meta
+--- @meta _
 
 --- @class IsoLivingCharacter: IsoGameCharacter
 --- @field public class any
-IsoLivingCharacter = {};
+IsoLivingCharacter = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return boolean
 function IsoLivingCharacter:AttemptAttack(arg0) end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @return boolean
 function IsoLivingCharacter:DoAttack(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoLivingCharacter:clearHandToHandAttack() end
 
 --- @public
@@ -48,9 +48,8 @@ function IsoLivingCharacter:isShovingWhileAiming() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoLivingCharacter:setDoShove(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -58,8 +57,8 @@ function IsoLivingCharacter:setDoShove(arg0) end
 
 --- @public
 --- @param arg0 IsoCell
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
 --- @return IsoLivingCharacter
 function IsoLivingCharacter.new(arg0, arg1, arg2, arg3) end

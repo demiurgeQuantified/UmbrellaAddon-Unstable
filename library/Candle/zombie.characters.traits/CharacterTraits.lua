@@ -1,29 +1,28 @@
---- @meta
+--- @meta _
 
 --- @class CharacterTraits: TraitCollection
 --- @field public class any
-CharacterTraits = {};
+CharacterTraits = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function CharacterTraits:getTraitDamageDealtReductionModifier() end
 
 --- @public
---- @return float
+--- @return number
 function CharacterTraits:getTraitEnduranceLossModifier() end
 
 --- @public
---- @return float
+--- @return number
 function CharacterTraits:getTraitWeatherPenaltyModifier() end
 
 --- @public
 --- @return boolean
 function CharacterTraits:isIlliterate() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -16,7 +16,6 @@
 ---@field [any] any
 ISGrabItemAction = ISBaseTimedAction:derive("ISGrabItemAction")
 
-
 ---@return any
 function ISGrabItemAction:checkQueueList() end
 
@@ -37,7 +36,6 @@ function ISGrabItemAction:transferItem(item) end
 
 ---@return any
 function ISGrabItemAction:update() end
-
 
 ---@return ISGrabItemAction
 function ISGrabItemAction:new(character, item, time) end

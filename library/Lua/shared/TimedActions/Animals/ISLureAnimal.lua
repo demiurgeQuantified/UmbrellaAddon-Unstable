@@ -14,7 +14,6 @@
 ---@field [any] any
 ISLureAnimal = ISBaseTimedAction:derive("ISLureAnimal")
 
-
 ---@return any
 function ISLureAnimal:animEvent(event, parameter) end
 
@@ -53,7 +52,6 @@ function ISLureAnimal:update() end
 
 ---@return any
 function ISLureAnimal:waitToStart() end
-
 
 ---@return ISLureAnimal
 function ISLureAnimal:new(character, animal, item) end

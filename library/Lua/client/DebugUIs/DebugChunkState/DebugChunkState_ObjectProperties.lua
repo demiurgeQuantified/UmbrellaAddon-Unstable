@@ -9,7 +9,6 @@
 ---@field [any] any
 DebugChunkStateUI_ObjPropsHandler = ISPanel:derive("DebugChunkStateUI_ObjPropsHandler")
 
-
 ---@return any
 function DebugChunkStateUI_ObjPropsHandler:addLine(text, arg0, arg1, arg2, arg3, arg4) end
 
@@ -40,7 +39,6 @@ function DebugChunkStateUI_ObjPropsHandler:setObject(object) end
 ---@return any
 function DebugChunkStateUI_ObjPropsHandler:startHighlightArea(userData) end
 
-
 ---@return DebugChunkStateUI_ObjPropsHandler
 function DebugChunkStateUI_ObjPropsHandler:new(x, y, width, height, gameState) end
 
@@ -50,7 +48,6 @@ function DebugChunkStateUI_ObjPropsHandler:new(x, y, width, height, gameState) e
 ---@field [any] any
 DebugChunkStateUI_ObjPropsPanel = ISSectionedPanel:derive("DebugChunkStateUI_ObjPropsPanel")
 
-
 ---@return any
 function DebugChunkStateUI_ObjPropsPanel:createChildren() end
 
@@ -59,7 +56,6 @@ function DebugChunkStateUI_ObjPropsPanel:render() end
 
 ---@return any
 function DebugChunkStateUI_ObjPropsPanel:setObject(object) end
-
 
 ---@return DebugChunkStateUI_ObjPropsPanel
 function DebugChunkStateUI_ObjPropsPanel:new(x, y, width, height, debugChunkState) end

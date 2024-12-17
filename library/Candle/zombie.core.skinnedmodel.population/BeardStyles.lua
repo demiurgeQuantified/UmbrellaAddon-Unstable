@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class BeardStyles
 --- @field public class any
 --- @field public instance BeardStyles
-BeardStyles = {};
+BeardStyles = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,33 +11,32 @@ BeardStyles = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BeardStyles
 function BeardStyles.Parse(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function BeardStyles.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function BeardStyles.init() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BeardStyles
 function BeardStyles.parse(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return BeardStyle
 function BeardStyles:FindStyle(arg0) end
 
@@ -50,10 +49,9 @@ function BeardStyles:getAllStyles() end
 function BeardStyles:getInstance() end
 
 --- @public
---- @param arg0 String
---- @return String
+--- @param arg0 string
+--- @return string
 function BeardStyles:getRandomStyle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

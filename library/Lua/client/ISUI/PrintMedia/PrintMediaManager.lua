@@ -6,10 +6,8 @@
 ---@field [any] any
 PrintMediaManager = ISBaseObject:derive("PrintMediaManager")
 
-
 ---@return any
 function PrintMediaManager:update() end
-
 
 ---@return PrintMediaManager
 function PrintMediaManager:new() end

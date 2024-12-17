@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class AttributeValueType: Enum
 --- @field public class any
@@ -13,7 +13,7 @@
 --- @field public Long AttributeValueType
 --- @field public Short AttributeValueType
 --- @field public String AttributeValueType
-AttributeValueType = {};
+AttributeValueType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -33,19 +33,19 @@ function AttributeValueType.IsNumeric(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return AttributeValueType
 function AttributeValueType.fromByteIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return AttributeValueType
 function AttributeValueType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return AttributeValueType
 function AttributeValueType.valueOfIgnoreCase(arg0) end
 
@@ -54,13 +54,10 @@ function AttributeValueType.valueOfIgnoreCase(arg0) end
 --- @return AttributeValueType[]
 function AttributeValueType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function AttributeValueType:getByteIndex() end
-
-

@@ -13,10 +13,8 @@
 ---@field [any] any
 ISMashingLogicPanel = ISBaseComponentPanel:derive("ISMashingLogicPanel")
 
-
 ---@return any
 function ISMashingLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
-
 
 ---@return any
 function ISMashingLogicPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -47,7 +45,6 @@ function ISMashingLogicPanel:render() end
 
 ---@return any
 function ISMashingLogicPanel:update() end
-
 
 ---@return ISMashingLogicPanel
 function ISMashingLogicPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

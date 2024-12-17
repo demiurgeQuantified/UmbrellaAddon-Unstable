@@ -8,7 +8,6 @@ StatisticChartDiskOperations.instance = nil
 StatisticChartDiskOperations.shiftDown = 0
 StatisticChartDiskOperations.eventsAdded = false
 
-
 ---@return any
 function StatisticChartDiskOperations.doInstance() end
 
@@ -17,7 +16,6 @@ function StatisticChartDiskOperations.OnOpenPanel() end
 
 ---@return any
 function StatisticChartDiskOperations.OnServerStatisticReceived() end
-
 
 ---@return any
 function StatisticChartDiskOperations:createChildren() end

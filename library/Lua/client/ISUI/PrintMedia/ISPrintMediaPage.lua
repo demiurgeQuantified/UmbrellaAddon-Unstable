@@ -20,7 +20,6 @@
 ---@field [any] any
 ISPrintMediaPage = ISCollapsableWindowJoypad:derive("ISPrintMediaPage")
 
-
 ---@return any
 function ISPrintMediaPage:close() end
 
@@ -48,7 +47,6 @@ function ISPrintMediaPage:prerender() end
 ---@return any
 function ISPrintMediaPage:render() end
 
-
 ---@return ISPrintMediaPage
 function ISPrintMediaPage:new(x, y, index, player, item) end
 
@@ -60,7 +58,6 @@ function ISPrintMediaPage:new(x, y, index, player, item) end
 ---@field [any] any
 ISPrintMediaRichText = ISPrintMediaTextPanel:derive("ISPrintMediaRichText")
 ISPrintMediaRichText.doRightJoystickScrolling = ISPanelJoypad.doRightJoystickScrolling
-
 
 ---@return any
 function ISPrintMediaRichText:onJoypadDirDown(joypadData) end
@@ -85,7 +82,6 @@ function ISPrintMediaRichText:prerender() end
 
 ---@return any
 function ISPrintMediaRichText:updateSmoothScrolling() end
-
 
 ---@return ISPrintMediaRichText
 function ISPrintMediaRichText:new(x, y, width, height) end

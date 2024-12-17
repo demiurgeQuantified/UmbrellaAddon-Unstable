@@ -22,7 +22,6 @@
 ---@field [any] any
 ISEnergySlot = ISPanel:derive("ISEnergySlot")
 
-
 ---@return any
 function ISEnergySlot:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -43,7 +42,6 @@ function ISEnergySlot:setResource(_resource) end
 
 ---@return any
 function ISEnergySlot:update() end
-
 
 ---@return ISEnergySlot
 function ISEnergySlot:new(x, y, width, height, player, resource, styleIcon, styleBar) end

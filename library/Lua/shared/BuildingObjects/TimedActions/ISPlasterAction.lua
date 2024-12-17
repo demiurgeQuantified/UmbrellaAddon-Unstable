@@ -9,7 +9,6 @@
 ---@field [any] any
 ISPlasterAction = ISBaseTimedAction:derive("ISPlasterAction")
 
-
 ---@return any
 function ISPlasterAction:complete() end
 
@@ -30,7 +29,6 @@ function ISPlasterAction:stop() end
 
 ---@return any
 function ISPlasterAction:update() end
-
 
 ---@return ISPlasterAction
 function ISPlasterAction:new(character, thumpable, plasterBucket) end

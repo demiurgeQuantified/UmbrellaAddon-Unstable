@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class AnimalInventoryItem: InventoryItem
 --- @field public class any
-AnimalInventoryItem = {};
+AnimalInventoryItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,7 @@ AnimalInventoryItem = {};
 --- @public
 --- @param arg0 ObjectTooltip
 --- @param arg1 Layout
---- @return void
+--- @return nil
 function AnimalInventoryItem:DoTooltip(arg0, arg1) end
 
 --- @public
@@ -23,32 +23,32 @@ function AnimalInventoryItem:finishupdate() end
 function AnimalInventoryItem:getAnimal() end
 
 --- @public
---- @return String
+--- @return string
 function AnimalInventoryItem:getCategory() end
 
 --- @public
---- @return int
+--- @return integer
 function AnimalInventoryItem:getSaveType() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalInventoryItem:initAnimalData() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function AnimalInventoryItem:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function AnimalInventoryItem:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function AnimalInventoryItem:setAnimal(arg0) end
 
 --- @public
@@ -56,19 +56,18 @@ function AnimalInventoryItem:setAnimal(arg0) end
 function AnimalInventoryItem:shouldUpdateInWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimalInventoryItem:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
 --- @return AnimalInventoryItem
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: Item): AnimalInventoryItem
+--- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): AnimalInventoryItem
 function AnimalInventoryItem.new(arg0, arg1, arg2, arg3) end

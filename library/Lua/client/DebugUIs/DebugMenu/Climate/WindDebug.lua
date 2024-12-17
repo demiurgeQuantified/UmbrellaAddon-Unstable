@@ -44,10 +44,8 @@ WindDebug = ISCollapsableWindow:derive("WindDebug")
 WindDebug.instance = nil
 WindDebug.shiftDown = 0
 
-
 ---@return any
 function WindDebug.OnOpenPanel() end
-
 
 ---@return any
 function WindDebug:addColor(_r, _g, _b) end
@@ -90,7 +88,6 @@ function WindDebug:stayOnSplitScreen() end
 
 ---@return any
 function WindDebug:update() end
-
 
 ---@return WindDebug
 function WindDebug:new(x, y, width, height, player) end

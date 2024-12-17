@@ -11,7 +11,6 @@
 ---@field [any] any
 ISHutchGrabCorpseAction = ISBaseTimedAction:derive("ISHutchGrabCorpseAction")
 
-
 ---@return any
 function ISHutchGrabCorpseAction:complete() end
 
@@ -35,7 +34,6 @@ function ISHutchGrabCorpseAction:update() end
 
 ---@return any
 function ISHutchGrabCorpseAction:waitToStart() end
-
 
 ---@return ISHutchGrabCorpseAction
 function ISHutchGrabCorpseAction:new(character, index, hutch) end

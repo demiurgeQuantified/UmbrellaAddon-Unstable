@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Perks
 --- @field public class any
@@ -49,7 +49,7 @@
 --- @field public Tracking Perk
 --- @field public Trapping Perk
 --- @field public Woodwork Perk
-Perks = {};
+Perks = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -57,21 +57,20 @@ Perks = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Perk
 function Perks.FromString(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Perk
 function Perks.fromIndex(arg0) end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function Perks.getMaxIndex() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

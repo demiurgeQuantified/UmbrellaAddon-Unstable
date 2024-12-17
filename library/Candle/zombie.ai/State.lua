@@ -1,10 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class State
 --- @field public class any
 --- @implement IAnimEventListener
 --- @implement IAnimEventWrappedBroadcaster
-State = {};
+State = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,35 +12,35 @@ State = {};
 
 --- @public
 --- @param arg0 IAnimEventListenerSetVariableString
---- @return void
---- @overload fun(self: State, arg0: String, arg1: IAnimEventListener): void
---- @overload fun(self: State, arg0: String, arg1: IAnimEventListenerBoolean): void
---- @overload fun(self: State, arg0: String, arg1: IAnimEventListenerFloat): void
---- @overload fun(self: State, arg0: String, arg1: IAnimEventListenerNoParam): void
---- @overload fun(self: State, arg0: String, arg1: IAnimEventListenerString): void
+--- @return nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListener): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerBoolean): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerFloat): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerNoParam): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerString): nil
 function State:addAnimEventListener(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimEvent
---- @return void
---- @overload fun(self: State, arg0: IsoGameCharacter, arg1: AnimEvent): void
---- @overload fun(self: State, arg0: IsoGameCharacter, arg1: AnimEvent): void
+--- @return nil
+--- @overload fun(self: State, arg0: IsoGameCharacter, arg1: AnimEvent): nil
+--- @overload fun(self: State, arg0: IsoGameCharacter, arg1: AnimEvent): nil
 function State:animEvent(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function State:enter(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function State:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function State:exit(arg0) end
 
 --- @public
@@ -51,11 +51,11 @@ function State:getAnimEventBroadcaster() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 MoveDeltaModifiers
---- @return void
+--- @return nil
 function State:getDeltaModifiers(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function State:getName() end
 
 --- @public
@@ -73,12 +73,12 @@ function State:isDoingActionThatCanBeCancelled() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
 --- @return boolean
 function State:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
@@ -86,7 +86,6 @@ function State:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function State:isMoving(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

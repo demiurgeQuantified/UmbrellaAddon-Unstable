@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class XuiTableRowScript: XuiScript
 --- @field public class any
-XuiTableRowScript = {};
+XuiTableRowScript = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 boolean
 --- @param arg2 XuiScript
 --- @return XuiTableRowScript

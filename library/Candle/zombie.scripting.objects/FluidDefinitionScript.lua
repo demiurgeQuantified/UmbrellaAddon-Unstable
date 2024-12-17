@@ -1,43 +1,43 @@
---- @meta
+--- @meta _
 
 --- @class FluidDefinitionScript: BaseScriptObject
 --- @field public class any
-FluidDefinitionScript = {};
+FluidDefinitionScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function FluidDefinitionScript:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function FluidDefinitionScript:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function FluidDefinitionScript:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function FluidDefinitionScript:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function FluidDefinitionScript:OnScriptsLoaded(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function FluidDefinitionScript:PreReload() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getAlcohol() end
 
 --- @public
@@ -49,11 +49,11 @@ function FluidDefinitionScript:getBlendBlackList() end
 function FluidDefinitionScript:getBlendWhitelist() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getCalories() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getCarbohydrates() end
 
 --- @public
@@ -65,11 +65,11 @@ function FluidDefinitionScript:getCategories() end
 function FluidDefinitionScript:getColor() end
 
 --- @public
---- @return String
+--- @return string
 function FluidDefinitionScript:getDisplayName() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getEnduranceChange() end
 
 --- @public
@@ -77,11 +77,11 @@ function FluidDefinitionScript:getEnduranceChange() end
 function FluidDefinitionScript:getExistsAsVanilla() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getFatigueChange() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getFluReduction() end
 
 --- @public
@@ -89,31 +89,31 @@ function FluidDefinitionScript:getFluReduction() end
 function FluidDefinitionScript:getFluidType() end
 
 --- @public
---- @return String
+--- @return string
 function FluidDefinitionScript:getFluidTypeString() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getFoodSicknessReduction() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getHungerChange() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getLipids() end
 
 --- @public
---- @return String
+--- @return string
 function FluidDefinitionScript:getModID() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getPainReduction() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getPoisonDiluteRatio() end
 
 --- @public
@@ -121,23 +121,23 @@ function FluidDefinitionScript:getPoisonDiluteRatio() end
 function FluidDefinitionScript:getPoisonMaxEffect() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getPoisonMinAmount() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getProteins() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getStressChange() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getThirstChange() end
 
 --- @public
---- @return float
+--- @return number
 function FluidDefinitionScript:getUnhappyChange() end
 
 --- @public
@@ -149,7 +149,5 @@ function FluidDefinitionScript:hasPropertiesSet() end
 function FluidDefinitionScript:isVanilla() end
 
 --- @public
---- @return void
+--- @return nil
 function FluidDefinitionScript:reset() end
-
-

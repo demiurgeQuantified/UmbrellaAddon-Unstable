@@ -25,7 +25,6 @@
 ---@field [any] any
 ISFluidSlot = ISPanel:derive("ISFluidSlot")
 
-
 ---@return any
 function ISFluidSlot:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -49,7 +48,6 @@ function ISFluidSlot:setResource(_resource) end
 
 ---@return any
 function ISFluidSlot:update() end
-
 
 ---@return ISFluidSlot
 function ISFluidSlot:new(x, y, width, height, player, resource, _styleBtnTransfer, _styleBtnClear, _styleBar) end

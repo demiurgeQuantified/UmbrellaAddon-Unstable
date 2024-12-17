@@ -1,33 +1,32 @@
---- @meta
+--- @meta _
 
 --- @class VoiceStyle
 --- @field public class any
-VoiceStyle = {};
+VoiceStyle = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function VoiceStyle:getBodyTypeDefault() end
 
 --- @public
---- @return String
+--- @return string
 function VoiceStyle:getName() end
 
 --- @public
---- @return String
+--- @return string
 function VoiceStyle:getPrefix() end
 
 --- @public
---- @return int
+--- @return integer
 function VoiceStyle:getVoiceType() end
 
 --- @public
 --- @return boolean
 function VoiceStyle:isValid() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

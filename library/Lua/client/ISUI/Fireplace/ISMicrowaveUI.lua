@@ -23,7 +23,6 @@
 ISMicrowaveUI = ISPanelJoypad:derive("ISMicrowaveUI")
 ISMicrowaveUI.messages = {}
 
-
 ---@return any
 function ISMicrowaveUI:addKnobValues() end
 
@@ -53,7 +52,6 @@ function ISMicrowaveUI:update() end
 
 ---@return any
 function ISMicrowaveUI:updateButtons() end
-
 
 ---@return ISMicrowaveUI
 function ISMicrowaveUI:new(x, y, width, height, oven, character) end

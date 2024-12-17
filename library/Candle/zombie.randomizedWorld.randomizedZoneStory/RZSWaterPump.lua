@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSWaterPump: RandomizedZoneStoryBase
 --- @field public class any
-RZSWaterPump = {};
+RZSWaterPump = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSWaterPump = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSWaterPump:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -12,7 +12,6 @@
 ---@field [any] any
 ISGenericCraftStart = ISBaseTimedAction:derive("ISGenericCraftStart")
 
-
 ---@return any
 function ISGenericCraftStart:getDuration() end
 
@@ -30,7 +29,6 @@ function ISGenericCraftStart:stop() end
 
 ---@return any
 function ISGenericCraftStart:update() end
-
 
 ---@return ISGenericCraftStart
 function ISGenericCraftStart:new(character, entity, component, funcCanStart, funcStart) end

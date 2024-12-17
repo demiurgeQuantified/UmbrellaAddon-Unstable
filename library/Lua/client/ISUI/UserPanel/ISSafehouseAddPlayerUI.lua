@@ -19,13 +19,11 @@
 ISSafehouseAddPlayerUI = ISPanel:derive("ISSafehouseAddPlayerUI")
 ISSafehouseAddPlayerUI.messages = {}
 
-
 ---@return any
 function ISSafehouseAddPlayerUI.OnMiniScoreboardUpdate() end
 
 ---@return any
 function ISSafehouseAddPlayerUI.OnScoreboardUpdate(usernames, displayNames, steamIDs) end
-
 
 ---@return any
 function ISSafehouseAddPlayerUI:drawPlayers(y, item, alt) end
@@ -41,7 +39,6 @@ function ISSafehouseAddPlayerUI:populateList() end
 
 ---@return any
 function ISSafehouseAddPlayerUI:prerender() end
-
 
 ---@return ISSafehouseAddPlayerUI
 function ISSafehouseAddPlayerUI:new(x, y, width, height, safehouse, player) end

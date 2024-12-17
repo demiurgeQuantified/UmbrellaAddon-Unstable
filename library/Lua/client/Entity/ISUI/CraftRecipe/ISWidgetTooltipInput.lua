@@ -36,7 +36,6 @@
 ---@field [any] any
 ISWidgetTooltipInput = ISPanel:derive("ISWidgetTooltipInput")
 
-
 ---@return any
 function ISWidgetTooltipInput:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -66,7 +65,6 @@ function ISWidgetTooltipInput:updateScriptValues(_table) end
 
 ---@return any
 function ISWidgetTooltipInput:updateValues() end
-
 
 ---@return ISWidgetTooltipInput
 function ISWidgetTooltipInput:new(x, y, width, height, player, logic, inputScript) end

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoTelevision: IsoWaveSignal
 --- @field public class any
-IsoTelevision = {};
+IsoTelevision = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,15 +10,15 @@ IsoTelevision = {};
 
 --- @public
 --- @param arg0 IsoSprite
---- @return void
+--- @return nil
 function IsoTelevision:addTvScreenSprite(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTelevision:clearTvScreenSprites() end
 
 --- @public
---- @return String
+--- @return string
 function IsoTelevision:getObjectName() end
 
 --- @public
@@ -28,30 +28,29 @@ function IsoTelevision:isFacing(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoTelevision:load(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoSprite
---- @return void
+--- @return nil
 function IsoTelevision:removeTvScreenSprite(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTelevision:renderlast() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoTelevision:save(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTelevision:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

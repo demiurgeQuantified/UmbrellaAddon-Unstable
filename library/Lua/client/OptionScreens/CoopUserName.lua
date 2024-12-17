@@ -14,7 +14,6 @@
 ---@field [any] any
 CoopUserName = ISPanelJoypad:derive("CoopUserName")
 
-
 ---@return any
 function CoopUserName:beforeShow() end
 
@@ -50,7 +49,6 @@ function CoopUserName:render() end
 
 ---@return any
 function CoopUserName:shouldShow() end
-
 
 ---@return CoopUserName
 function CoopUserName:new(x, y, width, height) end

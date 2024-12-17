@@ -40,10 +40,8 @@
 ---@field [any] any
 ISWorldMapSymbols = ISPanelJoypad:derive("ISWorldMapSymbols")
 
-
 ---@return any
 function ISWorldMapSymbols.RequiredWidth() end
-
 
 ---@return any
 function ISWorldMapSymbols:canErase() end
@@ -162,7 +160,6 @@ function ISWorldMapSymbols:undisplay() end
 ---@return any
 function ISWorldMapSymbols:updateSymbolColors() end
 
-
 ---@return ISWorldMapSymbols
 function ISWorldMapSymbols:new(x, y, width, height, mapUI) end
 
@@ -177,7 +174,6 @@ function ISWorldMapSymbols:new(x, y, width, height, mapUI) end
 ---@field symbolsUI any
 ---@field [any] any
 ISWorldMapSymbolTool = ISBaseObject:derive("ISWorldMapSymbolTool")
-
 
 ---@return any
 function ISWorldMapSymbolTool:activate() end
@@ -224,13 +220,11 @@ function ISWorldMapSymbolTool:onRightMouseUp(x, y) end
 ---@return any
 function ISWorldMapSymbolTool:render() end
 
-
 ---@return ISWorldMapSymbolTool
 function ISWorldMapSymbolTool:new(symbolsUI) end
 
 ---@class ISWorldMapSymbolTool_AddSymbol : ISWorldMapSymbolTool
 ISWorldMapSymbolTool_AddSymbol = ISWorldMapSymbolTool:derive("ISWorldMapSymbolTool_AddSymbol")
-
 
 ---@return any
 function ISWorldMapSymbolTool_AddSymbol:activate() end
@@ -253,7 +247,6 @@ function ISWorldMapSymbolTool_AddSymbol:onMouseUp(x, y) end
 ---@return any
 function ISWorldMapSymbolTool_AddSymbol:render() end
 
-
 ---@return ISWorldMapSymbolTool_AddSymbol
 function ISWorldMapSymbolTool_AddSymbol:new(symbolsUI) end
 
@@ -261,7 +254,6 @@ function ISWorldMapSymbolTool_AddSymbol:new(symbolsUI) end
 ---@field modal any
 ---@field [any] any
 ISWorldMapSymbolTool_AddNote = ISWorldMapSymbolTool:derive("ISWorldMapSymbolTool_AddNote")
-
 
 ---@return any
 function ISWorldMapSymbolTool_AddNote:activate() end
@@ -287,7 +279,6 @@ function ISWorldMapSymbolTool_AddNote:onMouseUp(x, y) end
 ---@return any
 function ISWorldMapSymbolTool_AddNote:render() end
 
-
 ---@return ISWorldMapSymbolTool_AddNote
 function ISWorldMapSymbolTool_AddNote:new(symbolsUI) end
 
@@ -295,7 +286,6 @@ function ISWorldMapSymbolTool_AddNote:new(symbolsUI) end
 ---@field modal any
 ---@field [any] any
 ISWorldMapSymbolTool_EditNote = ISWorldMapSymbolTool:derive("ISWorldMapSymbolTool_EditNote")
-
 
 ---@return any
 function ISWorldMapSymbolTool_EditNote:activate() end
@@ -324,7 +314,6 @@ function ISWorldMapSymbolTool_EditNote:onMouseUp(x, y) end
 ---@return any
 function ISWorldMapSymbolTool_EditNote:render() end
 
-
 ---@return ISWorldMapSymbolTool_EditNote
 function ISWorldMapSymbolTool_EditNote:new(symbolsUI) end
 
@@ -336,7 +325,6 @@ function ISWorldMapSymbolTool_EditNote:new(symbolsUI) end
 ---@field originalY any
 ---@field [any] any
 ISWorldMapSymbolTool_MoveAnnotation = ISWorldMapSymbolTool:derive("ISWorldMapSymbolTool_MoveAnnotation")
-
 
 ---@return any
 function ISWorldMapSymbolTool_MoveAnnotation:activate() end
@@ -374,13 +362,11 @@ function ISWorldMapSymbolTool_MoveAnnotation:onRightMouseDown(x, y) end
 ---@return any
 function ISWorldMapSymbolTool_MoveAnnotation:render() end
 
-
 ---@return ISWorldMapSymbolTool_MoveAnnotation
 function ISWorldMapSymbolTool_MoveAnnotation:new(symbolsUI) end
 
 ---@class ISWorldMapSymbolTool_RemoveAnnotation : ISWorldMapSymbolTool
 ISWorldMapSymbolTool_RemoveAnnotation = ISWorldMapSymbolTool:derive("ISWorldMapSymbolTool_RemoveAnnotation")
-
 
 ---@return any
 function ISWorldMapSymbolTool_RemoveAnnotation:activate() end
@@ -406,7 +392,6 @@ function ISWorldMapSymbolTool_RemoveAnnotation:removeAnnotation() end
 ---@return any
 function ISWorldMapSymbolTool_RemoveAnnotation:render() end
 
-
 ---@return ISWorldMapSymbolTool_RemoveAnnotation
 function ISWorldMapSymbolTool_RemoveAnnotation:new(symbolsUI) end
 
@@ -414,7 +399,6 @@ function ISWorldMapSymbolTool_RemoveAnnotation:new(symbolsUI) end
 ---@field propertiesUI any
 ---@field [any] any
 ISWorldMapSymbolTool_Sharing = ISWorldMapSymbolTool:derive("ISWorldMapSymbolTool_Sharing")
-
 
 ---@return any
 function ISWorldMapSymbolTool_Sharing:activate() end
@@ -440,7 +424,6 @@ function ISWorldMapSymbolTool_Sharing:render() end
 ---@return any
 function ISWorldMapSymbolTool_Sharing:showPropertiesUI() end
 
-
 ---@return ISWorldMapSymbolTool_Sharing
 function ISWorldMapSymbolTool_Sharing:new(symbolsUI) end
 
@@ -450,7 +433,6 @@ function ISWorldMapSymbolTool_Sharing:new(symbolsUI) end
 ---@field [any] any
 ISWorldMapSymbolsTabPanel = ISTabPanel:derive("ISWorldMapSymbolsTabPanel")
 
-
 ---@return any
 function ISWorldMapSymbolsTabPanel:onJoypadDown(button, joypadData) end
 
@@ -459,7 +441,6 @@ function ISWorldMapSymbolsTabPanel:render() end
 
 ---@return any
 function ISWorldMapSymbolsTabPanel:setJoypadFocused(focused) end
-
 
 ---@return ISWorldMapSymbolsTabPanel
 function ISWorldMapSymbolsTabPanel:new(x, y, width, height, symbolsUI) end

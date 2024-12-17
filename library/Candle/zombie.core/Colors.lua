@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Colors
 --- @field public class any
@@ -173,7 +173,7 @@
 --- @field public WhiteSmoke Color
 --- @field public Yellow Color
 --- @field public YellowGreen Color
-Colors = {};
+Colors = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -181,33 +181,33 @@ Colors = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 Color
 --- @return Color
 function Colors.AddGameColor(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function Colors.CB_ColorExists(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Color
 function Colors.CB_GetColorByName(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Color
 function Colors.CB_GetColorFromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function Colors.CB_GetColorNameFromIndex(arg0) end
 
 --- @public
@@ -217,7 +217,7 @@ function Colors.CB_GetColorNames() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function Colors.CB_GetColorsCount() end
 
 --- @public
@@ -227,32 +227,32 @@ function Colors.CB_GetRandomColor() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function Colors.ColorExists(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Color
 function Colors.GetColorByName(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Color
 function Colors.GetColorFromIndex(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ColNfo
 function Colors.GetColorInfo(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @return String
+--- @param arg0 integer
+--- @return string
 function Colors.GetColorNameFromIndex(arg0) end
 
 --- @public
@@ -262,14 +262,13 @@ function Colors.GetColorNames() end
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function Colors.GetColorsCount() end
 
 --- @public
 --- @static
 --- @return Color
 function Colors.GetRandomColor() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

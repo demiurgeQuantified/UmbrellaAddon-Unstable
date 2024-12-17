@@ -23,7 +23,6 @@
 ---@field [any] any
 ISModalEditRole = ISPanel:derive("ISModalEditRole")
 
-
 ---@return any
 function ISModalEditRole:closeModal() end
 
@@ -53,7 +52,6 @@ function ISModalEditRole:populateList() end
 
 ---@return any
 function ISModalEditRole:prerender() end
-
 
 ---@return ISModalEditRole
 function ISModalEditRole:new(x, y, width, height, role) end

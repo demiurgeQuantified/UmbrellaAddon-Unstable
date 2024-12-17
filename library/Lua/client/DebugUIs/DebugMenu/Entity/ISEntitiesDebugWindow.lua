@@ -20,10 +20,8 @@
 ISEntitiesDebugWindow = ISCollapsableWindow:derive("ISEntitiesDebugWindow")
 ISEntitiesDebugWindow.coords = false
 
-
 ---@return any
 function ISEntitiesDebugWindow.OnOpenPanel(_player) end
-
 
 ---@return any
 function ISEntitiesDebugWindow:close() end
@@ -48,7 +46,6 @@ function ISEntitiesDebugWindow:prerender() end
 
 ---@return any
 function ISEntitiesDebugWindow:render() end
-
 
 ---@return ISEntitiesDebugWindow
 function ISEntitiesDebugWindow:new(x, y, width, height, player) end

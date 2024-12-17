@@ -6,7 +6,6 @@
 ---@field [any] any
 ISRemoveSheetAction = ISBaseTimedAction:derive("ISRemoveSheetAction")
 
-
 ---@return any
 function ISRemoveSheetAction:complete() end
 
@@ -30,7 +29,6 @@ function ISRemoveSheetAction:update() end
 
 ---@return any
 function ISRemoveSheetAction:waitToStart() end
-
 
 ---@return ISRemoveSheetAction
 function ISRemoveSheetAction:new(character, item) end

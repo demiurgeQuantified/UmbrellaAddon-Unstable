@@ -11,7 +11,6 @@
 ---@field [any] any
 ISRemoveHeadFromAnimal = ISBaseTimedAction:derive("ISRemoveHeadFromAnimal")
 
-
 ---@return any
 function ISRemoveHeadFromAnimal:complete() end
 
@@ -35,7 +34,6 @@ function ISRemoveHeadFromAnimal:update() end
 
 ---@return any
 function ISRemoveHeadFromAnimal:waitToStart() end
-
 
 ---@return ISRemoveHeadFromAnimal
 function ISRemoveHeadFromAnimal:new(character, body, hook, luaHook) end

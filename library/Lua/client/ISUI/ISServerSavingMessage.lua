@@ -14,13 +14,11 @@
 ---@field [any] any
 ISServerSavingMessage = ISPanelJoypad:derive("ISServerSavingMessage")
 
-
 ---@return any
 function ISServerSavingMessage.showPauseMessage() end
 
 ---@return any
 function ISServerSavingMessage.showSavingFinishMessage() end
-
 
 ---@return any
 function ISServerSavingMessage:destroy() end
@@ -33,7 +31,6 @@ function ISServerSavingMessage:prerender() end
 
 ---@return any
 function ISServerSavingMessage:render() end
-
 
 ---@return ISServerSavingMessage
 function ISServerSavingMessage:new(x, y, width, height, text) end

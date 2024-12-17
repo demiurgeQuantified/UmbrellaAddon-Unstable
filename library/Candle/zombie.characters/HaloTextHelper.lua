@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class HaloTextHelper
 --- @field public class any
 --- @field public COLOR_GREEN ColorRGB
 --- @field public COLOR_RED ColorRGB
 --- @field public COLOR_WHITE ColorRGB
-HaloTextHelper = {};
+HaloTextHelper = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,41 +14,41 @@ HaloTextHelper = {};
 --- @public
 --- @static
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function HaloTextHelper.addBadText(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function HaloTextHelper.addGoodText(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoPlayer
---- @param arg1 String
---- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: ColorRGB): void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: int, arg3: int, arg4: int): void
+--- @param arg1 string
+--- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: ColorRGB): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: integer, arg3: integer, arg4: integer): nil
 function HaloTextHelper.addText(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 boolean
 --- @param arg3 ColorRGB
---- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: ColorRGB, arg4: ColorRGB): void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: int, arg4: int, arg5: int): void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int): void
+--- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: boolean, arg3: ColorRGB, arg4: ColorRGB): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: boolean, arg3: integer, arg4: integer, arg5: integer): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: boolean, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: integer, arg8: integer): nil
 function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function HaloTextHelper.forceNextAddText() end
 
 --- @public
@@ -78,9 +78,8 @@ function HaloTextHelper.getGoodColor() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function HaloTextHelper.update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class XuiLuaStyle
 --- @field public class any
 --- @field public AllowedVarTypes EnumSet
-XuiLuaStyle = {};
+XuiLuaStyle = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,14 +12,13 @@ XuiLuaStyle = {};
 --- @public
 --- @static
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function XuiLuaStyle.ReadConfigs(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function XuiLuaStyle.Reset() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,11 +26,11 @@ function XuiLuaStyle.Reset() end
 
 --- @public
 --- @param arg0 XuiLuaStyle
---- @return void
+--- @return nil
 function XuiLuaStyle:copyVarsFrom(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return XuiVar
 function XuiLuaStyle:getVar(arg0) end
 
@@ -40,21 +39,19 @@ function XuiLuaStyle:getVar(arg0) end
 function XuiLuaStyle:getVars() end
 
 --- @public
---- @return String
+--- @return string
 function XuiLuaStyle:getXuiLuaClass() end
 
 --- @public
---- @return String
+--- @return string
 function XuiLuaStyle:getXuiStyleName() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @return boolean
 function XuiLuaStyle:loadVar(arg0, arg1) end
 
 --- @public
---- @return String
+--- @return string
 function XuiLuaStyle:toString() end
-
-

@@ -1,19 +1,19 @@
---- @meta
+--- @meta _
 
 --- @class GlobalObject
 --- @field public class any
-GlobalObject = {};
+GlobalObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function GlobalObject:Reset() end
 
 --- @public
---- @return void
+--- @return nil
 function GlobalObject:destroyThisObject() end
 
 --- @public
@@ -33,15 +33,15 @@ function GlobalObject:getSquare() end
 function GlobalObject:getSystem() end
 
 --- @public
---- @return int
+--- @return integer
 function GlobalObject:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function GlobalObject:getY() end
 
 --- @public
---- @return int
+--- @return integer
 function GlobalObject:getZ() end
 
 --- @public
@@ -50,10 +50,8 @@ function GlobalObject:getZ() end
 function GlobalObject:isValidIsoObject(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function GlobalObject:setLocation(arg0, arg1, arg2) end
-
-

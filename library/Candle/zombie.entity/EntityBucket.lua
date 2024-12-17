@@ -1,17 +1,17 @@
---- @meta
+--- @meta _
 
 --- @class EntityBucket
 --- @field public class any
-EntityBucket = {};
+EntityBucket = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 IBucketListener
---- @return void
+--- @return nil
 function EntityBucket:addListener(arg0, arg1) end
 
 --- @public
@@ -19,17 +19,15 @@ function EntityBucket:addListener(arg0, arg1) end
 function EntityBucket:getEntities() end
 
 --- @public
---- @return int
+--- @return integer
 function EntityBucket:getIndex() end
 
 --- @public
 --- @param arg0 IBucketListener
---- @return void
+--- @return nil
 function EntityBucket:removeListener(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function EntityBucket:setVerbose(arg0) end
-
-

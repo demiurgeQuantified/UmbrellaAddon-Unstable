@@ -3,7 +3,6 @@
 ---@class ISBuildingBlueprintManager
 ISBuildingBlueprintManager = {}
 
-
 ---@return any
 function ISBuildingBlueprintManager.MouseDown(x, y) end
 

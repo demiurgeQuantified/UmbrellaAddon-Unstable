@@ -6,7 +6,6 @@
 ---@field [any] any
 ISCheckAnimalInsideTrailer = ISBaseTimedAction:derive("ISCheckAnimalInsideTrailer")
 
-
 ---@return any
 function ISCheckAnimalInsideTrailer:isValid() end
 
@@ -24,7 +23,6 @@ function ISCheckAnimalInsideTrailer:update() end
 
 ---@return any
 function ISCheckAnimalInsideTrailer:waitToStart() end
-
 
 ---@return ISCheckAnimalInsideTrailer
 function ISCheckAnimalInsideTrailer:new(character, vehicle) end

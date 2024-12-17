@@ -3,7 +3,6 @@
 ---@class OnBreak
 OnBreak = OnBreak or {}
 
-
 ---@return any
 function OnBreak.AxeStone(item, player) end
 

@@ -10,7 +10,6 @@
 ---@field [any] any
 ISMultiStageBuild = ISBaseTimedAction:derive("ISMultiStageBuild")
 
-
 ---@return any
 function ISMultiStageBuild:complete() end
 
@@ -37,7 +36,6 @@ function ISMultiStageBuild:update() end
 
 ---@return any
 function ISMultiStageBuild:waitToStart() end
-
 
 ---@return ISMultiStageBuild
 function ISMultiStageBuild:new(character, stage, item) end

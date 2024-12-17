@@ -6,7 +6,6 @@ SurvivalGuideEntries.useJoypad = false
 SurvivalGuideEntries.list = LuaList:new()
 SurvivalGuideEntries.joypad = LuaList:new()
 
-
 ---@return any
 function SurvivalGuideEntries.addEntry11() end
 

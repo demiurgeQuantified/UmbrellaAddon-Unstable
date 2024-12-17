@@ -23,7 +23,6 @@
 ---@field [any] any
 ISHandcraftWindowHeader = ISPanel:derive("ISHandcraftWindowHeader")
 
-
 ---@return any
 function ISHandcraftWindowHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -47,7 +46,6 @@ function ISHandcraftWindowHeader:render() end
 
 ---@return any
 function ISHandcraftWindowHeader:update() end
-
 
 ---@return ISHandcraftWindowHeader
 function ISHandcraftWindowHeader:new(x, y, width, height, player, _styleIcon, _styleLabel, _styleButton) end

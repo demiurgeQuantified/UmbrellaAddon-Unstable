@@ -8,7 +8,6 @@
 ---@field [any] any
 ISTrimBeard = ISBaseTimedAction:derive("ISTrimBeard")
 
-
 ---@return any
 function ISTrimBeard:animEvent(event, parameter) end
 
@@ -35,7 +34,6 @@ function ISTrimBeard:stopSound() end
 
 ---@return any
 function ISTrimBeard:update() end
-
 
 ---@return ISTrimBeard
 function ISTrimBeard:new(character, beardStyle, item) end

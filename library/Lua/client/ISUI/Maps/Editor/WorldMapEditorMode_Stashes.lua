@@ -10,7 +10,6 @@
 ---@field [any] any
 WorldMapEditorMode_Stashes = WorldMapEditorMode:derive("WorldMapEditorMode_Stashes")
 
-
 ---@return any
 function WorldMapEditorMode_Stashes:cancelMode() end
 
@@ -70,7 +69,6 @@ function WorldMapEditorMode_Stashes:render() end
 
 ---@return any
 function WorldMapEditorMode_Stashes:undisplay() end
-
 
 ---@return WorldMapEditorMode_Stashes
 function WorldMapEditorMode_Stashes:new(editor) end

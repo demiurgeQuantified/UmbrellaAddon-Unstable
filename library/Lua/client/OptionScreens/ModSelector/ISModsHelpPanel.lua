@@ -7,7 +7,6 @@
 ---@field [any] any
 ISModsHelpPanel = ISPanelJoypad:derive("ISModsHelpPanel")
 
-
 ---@return any
 function ISModsHelpPanel:createChildren() end
 
@@ -28,7 +27,6 @@ function ISModsHelpPanel:prerender() end
 
 ---@return any
 function ISModsHelpPanel:render() end
-
 
 ---@return ISModsHelpPanel
 function ISModsHelpPanel:new(x, y, width, height) end

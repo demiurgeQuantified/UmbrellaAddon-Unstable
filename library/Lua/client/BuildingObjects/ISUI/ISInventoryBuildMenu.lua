@@ -3,7 +3,6 @@
 ---@class ISInventoryBuildMenu
 ISInventoryBuildMenu = {}
 
-
 ---@return any
 function ISInventoryBuildMenu.doBuildMenu(player, context, worldobjects, test) end
 

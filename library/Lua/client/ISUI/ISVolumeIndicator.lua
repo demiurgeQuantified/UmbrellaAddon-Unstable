@@ -13,13 +13,11 @@
 ---@field [any] any
 ISVolumeIndicator = ISPanel:derive("ISVolumeIndicator")
 
-
 ---@return any
 function ISVolumeIndicator:prerender() end
 
 ---@return any
 function ISVolumeIndicator:render() end
-
 
 ---@return ISVolumeIndicator
 function ISVolumeIndicator:new(x, y, width, height, target, targetFunc) end

@@ -17,7 +17,6 @@
 ---@field [any] any
 ISAddGeneticDisorderUI = ISPanel:derive("ISAddGeneticDisorderUI")
 
-
 ---@return any
 function ISAddGeneticDisorderUI:create() end
 
@@ -35,7 +34,6 @@ function ISAddGeneticDisorderUI:render() end
 
 ---@return any
 function ISAddGeneticDisorderUI:setVisible(visible) end
-
 
 ---@return ISAddGeneticDisorderUI
 function ISAddGeneticDisorderUI:new(x, y, width, height, target, onclick, allele) end

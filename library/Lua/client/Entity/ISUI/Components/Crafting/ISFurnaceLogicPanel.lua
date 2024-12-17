@@ -18,10 +18,8 @@
 ---@field [any] any
 ISFurnaceLogicPanel = ISBaseComponentPanel:derive("ISFurnaceLogicPanel")
 
-
 ---@return any
 function ISFurnaceLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
-
 
 ---@return any
 function ISFurnaceLogicPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -52,7 +50,6 @@ function ISFurnaceLogicPanel:render() end
 
 ---@return any
 function ISFurnaceLogicPanel:update() end
-
 
 ---@return ISFurnaceLogicPanel
 function ISFurnaceLogicPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

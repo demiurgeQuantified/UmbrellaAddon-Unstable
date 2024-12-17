@@ -11,7 +11,6 @@
 ---@field [any] any
 ISBarricadeAction = ISBaseTimedAction:derive("ISBarricadeAction")
 
-
 ---@return any
 function ISBarricadeAction:complete() end
 
@@ -35,7 +34,6 @@ function ISBarricadeAction:update() end
 
 ---@return any
 function ISBarricadeAction:waitToStart() end
-
 
 ---@return ISBarricadeAction
 function ISBarricadeAction:new(character, item, isMetal, isMetalBar) end

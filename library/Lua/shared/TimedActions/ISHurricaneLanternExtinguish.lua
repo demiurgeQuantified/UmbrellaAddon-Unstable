@@ -9,7 +9,6 @@
 ---@field [any] any
 ISHurricaneLanternExtinguish = ISBaseTimedAction:derive("ISHurricaneLanternExtinguish")
 
-
 ---@return any
 function ISHurricaneLanternExtinguish:complete() end
 
@@ -30,7 +29,6 @@ function ISHurricaneLanternExtinguish:stop() end
 
 ---@return any
 function ISHurricaneLanternExtinguish:update() end
-
 
 ---@return ISHurricaneLanternExtinguish
 function ISHurricaneLanternExtinguish:new(character, item) end

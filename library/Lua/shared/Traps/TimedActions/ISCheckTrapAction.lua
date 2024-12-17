@@ -8,7 +8,6 @@
 ---@field [any] any
 ISCheckTrapAction = ISBaseTimedAction:derive("ISCheckTrapAction")
 
-
 ---@return any
 function ISCheckTrapAction:complete() end
 
@@ -29,7 +28,6 @@ function ISCheckTrapAction:stop() end
 
 ---@return any
 function ISCheckTrapAction:update() end
-
 
 ---@return ISCheckTrapAction
 function ISCheckTrapAction:new(character, trap) end

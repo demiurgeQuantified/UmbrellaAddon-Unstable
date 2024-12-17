@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DebugType: Enum
 --- @field public class any
@@ -63,7 +63,7 @@
 --- @field public Xml DebugType
 --- @field public Zombie DebugType
 --- @field public Zone DebugType
-DebugType = {};
+DebugType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -71,7 +71,7 @@ DebugType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return DebugType
 function DebugType.valueOf(arg0) end
 
@@ -80,27 +80,26 @@ function DebugType.valueOf(arg0) end
 --- @return DebugType[]
 function DebugType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:debugOnceln(arg0) end
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:debugln(arg0) end
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:error(arg0) end
 
 --- @public
@@ -109,10 +108,10 @@ function DebugType:getLogStream() end
 
 --- @public
 --- @param arg0 LogSeverity
---- @param arg1 String
---- @param arg2 int
+--- @param arg1 string
+--- @param arg2 integer
 --- @return StackTraceContainer
---- @overload fun(self: DebugType, arg0: LogSeverity, arg1: String, arg2: int, arg3: int): StackTraceContainer
+--- @overload fun(self: DebugType, arg0: LogSeverity, arg1: string, arg2: integer, arg3: integer): StackTraceContainer
 function DebugType:getStackTrace(arg0, arg1, arg2) end
 
 --- @public
@@ -120,73 +119,71 @@ function DebugType:getStackTrace(arg0, arg1, arg2) end
 function DebugType:isEnabled() end
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:noise(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
---- @overload fun(self: DebugType, arg0: char): void
---- @overload fun(self: DebugType, arg0: double): void
---- @overload fun(self: DebugType, arg0: float): void
---- @overload fun(self: DebugType, arg0: int): void
---- @overload fun(self: DebugType, arg0: Object): void
---- @overload fun(self: DebugType, arg0: String): void
---- @overload fun(self: DebugType, arg0: long): void
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string): nil
+--- @overload fun(self: DebugType, arg0: number): nil
+--- @overload fun(self: DebugType, arg0: number): nil
+--- @overload fun(self: DebugType, arg0: integer): nil
+--- @overload fun(self: DebugType, arg0: any): nil
+--- @overload fun(self: DebugType, arg0: string): nil
+--- @overload fun(self: DebugType, arg0: integer): nil
 function DebugType:print(arg0) end
 
 --- @public
 --- @param arg0 Exception
---- @param arg1 String
+--- @param arg1 string
 --- @param arg2 LogSeverity
---- @return void
+--- @return nil
 function DebugType:printException(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 Object[]
 --- @return PrintStream
 function DebugType:printf(arg0, arg1) end
 
 --- @public
---- @return void
---- @overload fun(self: DebugType, arg0: char[]): void
---- @overload fun(self: DebugType, arg0: boolean): void
---- @overload fun(self: DebugType, arg0: char): void
---- @overload fun(self: DebugType, arg0: double): void
---- @overload fun(self: DebugType, arg0: float): void
---- @overload fun(self: DebugType, arg0: int): void
---- @overload fun(self: DebugType, arg0: Object): void
---- @overload fun(self: DebugType, arg0: String): void
---- @overload fun(self: DebugType, arg0: long): void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @return nil
+--- @overload fun(self: DebugType, arg0: char[]): nil
+--- @overload fun(self: DebugType, arg0: boolean): nil
+--- @overload fun(self: DebugType, arg0: string): nil
+--- @overload fun(self: DebugType, arg0: number): nil
+--- @overload fun(self: DebugType, arg0: number): nil
+--- @overload fun(self: DebugType, arg0: integer): nil
+--- @overload fun(self: DebugType, arg0: any): nil
+--- @overload fun(self: DebugType, arg0: string): nil
+--- @overload fun(self: DebugType, arg0: integer): nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:println() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @param arg1 LogSeverity
---- @param arg2 String
---- @return void
+--- @param arg2 string
+--- @return nil
 function DebugType:routedWrite(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:trace(arg0) end
 
 --- @public
---- @param arg0 Object
---- @return void
---- @overload fun(self: DebugType, arg0: String, arg1: Object[]): void
+--- @param arg0 any
+--- @return nil
+--- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:warn(arg0) end
 
 --- @public
 --- @param arg0 LogSeverity
---- @param arg1 String
---- @return void
+--- @param arg1 string
+--- @return nil
 function DebugType:write(arg0, arg1) end
-
-

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Language
 --- @field public class any
-Language = {};
+Language = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -10,31 +10,30 @@ Language = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Language
 function Language.FromString(arg0) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return Language
 function Language.fromIndex(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Language:base() end
 
 --- @public
---- @return String
+--- @return string
 function Language:charset() end
 
 --- @public
---- @return int
+--- @return integer
 function Language:index() end
 
 --- @public
@@ -42,15 +41,13 @@ function Language:index() end
 function Language:isAzerty() end
 
 --- @public
---- @return String
+--- @return string
 function Language:name() end
 
 --- @public
---- @return String
+--- @return string
 function Language:text() end
 
 --- @public
---- @return String
+--- @return string
 function Language:toString() end
-
-

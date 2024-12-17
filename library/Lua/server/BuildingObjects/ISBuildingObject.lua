@@ -44,13 +44,11 @@
 ---@field [any] any
 ISBuildingObject = ISBaseObject:derive("ISBuildingObject")
 
-
 ---@return any
 function ISBuildingObject.onDestroy(thump, player) end
 
 ---@return any
 function ISBuildingObject.removeFromGround(square) end
-
 
 ---@return any
 function ISBuildingObject:deactivate() end

@@ -16,10 +16,8 @@
 ---@field [any] any
 ZombiePopulationWindow = ISCollapsableWindow:derive("ZombiePopulationWindow")
 
-
 ---@return any
 function ZombiePopulationWindow.OnOpenPanel() end
-
 
 ---@return any
 function ZombiePopulationWindow:close() end
@@ -65,7 +63,6 @@ function ZombiePopulationWindow:onTeleport(worldX, worldY) end
 
 ---@return any
 function ZombiePopulationWindow:renderTex() end
-
 
 ---@return ZombiePopulationWindow
 function ZombiePopulationWindow:new(x, y, width, height) end

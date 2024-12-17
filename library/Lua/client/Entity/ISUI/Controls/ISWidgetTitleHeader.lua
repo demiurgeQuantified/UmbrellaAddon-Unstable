@@ -40,7 +40,6 @@
 ---@field [any] any
 ISWidgetTitleHeader = ISPanel:derive("ISWidgetTitleHeader")
 
-
 ---@return any
 function ISWidgetTitleHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -70,7 +69,6 @@ function ISWidgetTitleHeader:updateLabels() end
 
 ---@return any
 function ISWidgetTitleHeader:updatePropertyIcons() end
-
 
 ---@return ISWidgetTitleHeader
 function ISWidgetTitleHeader:new(x, y, width, height, recipe, player, logic, isFavourite) end

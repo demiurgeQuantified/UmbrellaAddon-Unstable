@@ -7,7 +7,6 @@ ISLayoutManager = {}
 ISLayoutManager.windows = {}
 ISLayoutManager.enableLog = false
 
-
 ---@return any
 function ISLayoutManager.CallRestoreLayout(name, layout) end
 

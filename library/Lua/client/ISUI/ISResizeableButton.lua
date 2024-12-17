@@ -11,7 +11,6 @@
 ---@field [any] any
 ISResizableButton = ISButton:derive("ISResizableButton")
 
-
 ---@return any
 function ISResizableButton:onMouseDown(x, y) end
 
@@ -30,6 +29,16 @@ function ISResizableButton:onMouseUpOutside(x, y) end
 ---@return any
 function ISResizableButton:resize(width) end
 
-
 ---@return ISResizableButton
-function ISResizableButton:new(x, y, width, height, title, clicktarget, onclick, onmousedown, allowMouseUpProcessing) end
+function ISResizableButton:new(
+	x,
+	y,
+	width,
+	height,
+	title,
+	clicktarget,
+	onclick,
+	onmousedown,
+	allowMouseUpProcessing
+)
+end

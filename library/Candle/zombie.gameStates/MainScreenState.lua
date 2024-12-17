@@ -1,12 +1,12 @@
---- @meta
+--- @meta _
 
 --- @class MainScreenState: GameState
 --- @field public class any
 --- @field public ambient Audio
 --- @field public instance MainScreenState
---- @field public totalScale float
---- @field public Version String
-MainScreenState = {};
+--- @field public totalScale number
+--- @field public Version string
+MainScreenState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,13 +15,13 @@ MainScreenState = {};
 --- @public
 --- @static
 --- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @return void
---- @overload fun(arg0: Texture, arg1: int, arg2: int, arg3: int, arg4: int, arg5: Color): void
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 number
+--- @return nil
+--- @overload fun(arg0: Texture, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: Color): nil
 function MainScreenState.DrawTexture(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -33,7 +33,7 @@ function MainScreenState.getCustomBackgroundImage() end
 --- @static
 --- @param arg0 Texture
 --- @param arg1 int[]
---- @return void
+--- @return nil
 function MainScreenState.getCustomBackgroundImageBounds(arg0, arg1) end
 
 --- @public
@@ -49,19 +49,18 @@ function MainScreenState.loadIcons() end
 --- @public
 --- @static
 --- @param arg0 String[]
---- @return void
+--- @return nil
 function MainScreenState.main(arg0) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function MainScreenState.preloadBackgroundTextures() end
 
 --- @public
 --- @static
 --- @return boolean
 function MainScreenState.renderCustomBackground() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,11 +71,11 @@ function MainScreenState.renderCustomBackground() end
 function MainScreenState:ShouldShowLogo() end
 
 --- @public
---- @return void
+--- @return nil
 function MainScreenState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function MainScreenState:exit() end
 
 --- @public
@@ -84,22 +83,21 @@ function MainScreenState:exit() end
 function MainScreenState:redirectState() end
 
 --- @public
---- @return void
+--- @return nil
 function MainScreenState:render() end
 
 --- @public
---- @return void
+--- @return nil
 function MainScreenState:renderBackground() end
 
 --- @public
 --- @param arg0 ConnectToServerState
---- @return void
+--- @return nil
 function MainScreenState:setConnectToServerState(arg0) end
 
 --- @public
 --- @return StateAction
 function MainScreenState:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

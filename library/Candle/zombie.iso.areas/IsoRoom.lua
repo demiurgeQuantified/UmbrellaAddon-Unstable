@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class IsoRoom
 --- @field public class any
-IsoRoom = {};
+IsoRoom = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -14,11 +14,11 @@ IsoRoom = {};
 function IsoRoom:CreateBuilding(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 string
 --- @param arg5 boolean
 --- @return boolean
 function IsoRoom:add2TileBench(arg0, arg1, arg2, arg3, arg4, arg5) end
@@ -41,16 +41,16 @@ function IsoRoom:addPotteryWheel() end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function IsoRoom:addSquare(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoRoom:createLights(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IsoRoomLight
 function IsoRoom:findRoomLightByID(arg0) end
 
@@ -71,7 +71,7 @@ function IsoRoom:getFreeTile() end
 function IsoRoom:getLightSwitches() end
 
 --- @public
---- @return String
+--- @return string
 function IsoRoom:getName() end
 
 --- @public
@@ -133,28 +133,28 @@ function IsoRoom:hasLightSwitches() end
 function IsoRoom:hasWater() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return boolean
 function IsoRoom:isInside(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoRoom:onSee() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoRoom:refreshSquares() end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function IsoRoom:removeSquare(arg0) end
 
 --- @public
 --- @param arg0 ArrayList
---- @return void
+--- @return nil
 function IsoRoom:setWaterSources(arg0) end
 
 --- @public
@@ -166,13 +166,12 @@ function IsoRoom:spawnRandom2TileWorkstation() end
 function IsoRoom:spawnRandomWorkstation() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoRoom:spawnZombies() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoRoom:useWater() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

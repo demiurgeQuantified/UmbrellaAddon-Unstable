@@ -9,7 +9,6 @@
 ---@field [any] any
 ISWidgetRecipeListPanel = ISPanel:derive("ISWidgetRecipeListPanel")
 
-
 ---@return any
 function ISWidgetRecipeListPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -39,7 +38,6 @@ function ISWidgetRecipeListPanel:setSelectedData(_recipe) end
 
 ---@return any
 function ISWidgetRecipeListPanel:update() end
-
 
 ---@return ISWidgetRecipeListPanel
 function ISWidgetRecipeListPanel:new(x, y, width, height, player, logic, callbackTarget) end

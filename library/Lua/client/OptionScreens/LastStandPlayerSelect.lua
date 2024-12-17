@@ -26,7 +26,6 @@
 LastStandPlayerSelect = ISPanelJoypad:derive("LastStandPlayerSelect")
 LastStandPlayerSelect.playerSelected = nil
 
-
 ---@return any
 function LastStandPlayerSelect.clickPlay() end
 
@@ -35,7 +34,6 @@ function LastStandPlayerSelect.initWorld() end
 
 ---@return any
 function LastStandPlayerSelect.newGame(player, square) end
-
 
 ---@return any
 function LastStandPlayerSelect:create() end
@@ -90,7 +88,6 @@ function LastStandPlayerSelect:prerender() end
 
 ---@return any
 function LastStandPlayerSelect:render() end
-
 
 ---@return LastStandPlayerSelect
 function LastStandPlayerSelect:new(x, y, width, height) end

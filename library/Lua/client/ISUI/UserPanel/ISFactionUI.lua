@@ -34,7 +34,6 @@ ISFactionUI = ISPanel:derive("ISFactionUI")
 ISFactionUI.messages = {}
 ISFactionUI.inviteDialogs = {}
 
-
 ---@return any
 function ISFactionUI.AcceptedFactionInvite(factionName, host) end
 
@@ -43,7 +42,6 @@ function ISFactionUI.ReceiveFactionInvite(factionName, host) end
 
 ---@return any
 function ISFactionUI.SyncFaction(factionName) end
-
 
 ---@return any
 function ISFactionUI:close() end
@@ -95,7 +93,6 @@ function ISFactionUI:render() end
 
 ---@return any
 function ISFactionUI:updateButtons() end
-
 
 ---@return ISFactionUI
 function ISFactionUI:new(x, y, width, height, faction, player) end

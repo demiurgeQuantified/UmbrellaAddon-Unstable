@@ -3,8 +3,6 @@
 ---@class ISMenuContextInventory
 ISMenuContextInventory = {}
 
-
-
 ---@return ISMenuContextInventory_Instance
 function ISMenuContextInventory.new() end
 
@@ -17,7 +15,6 @@ function ISMenuContextInventory.new() end
 ---@field test any
 ---@field [any] any
 local ISMenuContextInventory_Instance = {}
-
 
 ---@return any
 function ISMenuContextInventory_Instance.checkInvItem(_item) end

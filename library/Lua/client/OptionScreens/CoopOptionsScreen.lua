@@ -41,7 +41,6 @@
 ---@field [any] any
 CoopOptionsScreen = ISPanelJoypad:derive("CoopOptionsScreen")
 
-
 ---@return any
 function CoopOptionsScreen.OnConnected() end
 
@@ -53,7 +52,6 @@ function CoopOptionsScreen.OnConnectionStateChanged(state, message) end
 
 ---@return any
 function CoopOptionsScreen.onCoopServerMessage(tag, cookie, payload) end
-
 
 ---@return any
 function CoopOptionsScreen:aboutToShow() end
@@ -148,7 +146,6 @@ function CoopOptionsScreen:render() end
 ---@return any
 function CoopOptionsScreen:saveOptions() end
 
-
 ---@return CoopOptionsScreen
 function CoopOptionsScreen:new(x, y, width, height) end
 
@@ -160,7 +157,6 @@ function CoopOptionsScreen:new(x, y, width, height) end
 ---@field oldJoypadIndexY any
 ---@field [any] any
 CoopOptionsScreenPanel = ISPanelJoypad:derive("CoopOptionsScreenPanel")
-
 
 ---@return any
 function CoopOptionsScreenPanel:onGainJoypadFocus(joypadData) end
@@ -176,9 +172,9 @@ function CoopOptionsScreenPanel:onLoseJoypadFocus(joypadData) end
 
 ---@class CoopConnection
 CoopConnection = {
-    username = "admin",
-    servername = "servertest",
-    memory = is64bit() and 4096 or 1024,
+	username = "admin",
+	servername = "servertest",
+	memory = is64bit() and 4096 or 1024,
 }
 
 ---@return any

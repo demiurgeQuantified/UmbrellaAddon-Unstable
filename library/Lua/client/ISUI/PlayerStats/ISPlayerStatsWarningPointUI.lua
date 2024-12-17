@@ -14,7 +14,6 @@
 ---@field [any] any
 ISPlayerStatsWarningPointUI = ISPanel:derive("ISPlayerStatsWarningPointUI")
 
-
 ---@return any
 function ISPlayerStatsWarningPointUI:create() end
 
@@ -29,7 +28,6 @@ function ISPlayerStatsWarningPointUI:render() end
 
 ---@return any
 function ISPlayerStatsWarningPointUI:setVisible(visible) end
-
 
 ---@return ISPlayerStatsWarningPointUI
 function ISPlayerStatsWarningPointUI:new(x, y, width, height, target, onclick) end

@@ -36,7 +36,6 @@
 ---@field [any] any
 ISTiledIconListBox = ISPanel:derive("ISTiledIconListBox")
 
-
 ---@return any
 function ISTiledIconListBox:calculateLayout(_preferredWidth, _preferredHeight) end
 
@@ -105,7 +104,6 @@ function ISTiledIconListBox:setCurrentPage(_page) end
 
 ---@return any
 function ISTiledIconListBox:update() end
-
 
 ---@return ISTiledIconListBox
 function ISTiledIconListBox:new(x, y, width, height, dataList) end

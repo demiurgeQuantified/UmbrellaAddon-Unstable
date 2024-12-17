@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class SurvivorFactory
 --- @field public class any
 --- @field public FemaleForenames ArrayList
 --- @field public MaleForenames ArrayList
 --- @field public Surnames ArrayList
-SurvivorFactory = {};
+SurvivorFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,7 @@ SurvivorFactory = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return SurvivorDesc[]
 function SurvivorFactory.CreateFamily(arg0) end
 
@@ -26,7 +26,7 @@ function SurvivorFactory.CreateSurvivor() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param arg0 integer
 --- @return SurvivorDesc[]
 function SurvivorFactory.CreateSurvivorGroup(arg0) end
 
@@ -34,58 +34,57 @@ function SurvivorFactory.CreateSurvivorGroup(arg0) end
 --- @static
 --- @param arg0 SurvivorDesc
 --- @param arg1 IsoCell
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
 --- @return IsoSurvivor
 function SurvivorFactory.InstansiateInCell(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function SurvivorFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SurvivorFactory.addFemaleForename(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SurvivorFactory.addMaleForename(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function SurvivorFactory.addSurname(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 boolean
---- @return String
+--- @return string
 function SurvivorFactory.getRandomForename(arg0) end
 
 --- @public
 --- @static
---- @return String
+--- @return string
 function SurvivorFactory.getRandomSurname() end
 
 --- @public
 --- @static
 --- @param arg0 SurvivorDesc
---- @return void
+--- @return nil
 function SurvivorFactory.randomName(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 SurvivorDesc
---- @return void
+--- @return nil
 function SurvivorFactory.setTorso(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

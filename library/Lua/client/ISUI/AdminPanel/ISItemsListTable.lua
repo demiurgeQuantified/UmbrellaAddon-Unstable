@@ -18,10 +18,8 @@
 ---@field [any] any
 ISItemsListTable = ISPanel:derive("ISItemsListTable")
 
-
 ---@return any
 function ISItemsListTable.onFilterChange(widget) end
-
 
 ---@return any
 function ISItemsListTable:addItem(item) end
@@ -67,7 +65,6 @@ function ISItemsListTable:render() end
 
 ---@return any
 function ISItemsListTable:update() end
-
 
 ---@return ISItemsListTable
 function ISItemsListTable:new(x, y, width, height, viewer) end

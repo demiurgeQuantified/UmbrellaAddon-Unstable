@@ -1,31 +1,31 @@
---- @meta
+--- @meta _
 
 --- @class DateFormat: Format
 --- @field public class any
---- @field public AM_PM_FIELD int
---- @field public DATE_FIELD int
---- @field public DAY_OF_WEEK_FIELD int
---- @field public DAY_OF_WEEK_IN_MONTH_FIELD int
---- @field public DAY_OF_YEAR_FIELD int
---- @field public DEFAULT int
---- @field public ERA_FIELD int
---- @field public FULL int
---- @field public HOUR0_FIELD int
---- @field public HOUR1_FIELD int
---- @field public HOUR_OF_DAY0_FIELD int
---- @field public HOUR_OF_DAY1_FIELD int
---- @field public LONG int
---- @field public MEDIUM int
---- @field public MILLISECOND_FIELD int
---- @field public MINUTE_FIELD int
---- @field public MONTH_FIELD int
---- @field public SECOND_FIELD int
---- @field public SHORT int
---- @field public TIMEZONE_FIELD int
---- @field public WEEK_OF_MONTH_FIELD int
---- @field public WEEK_OF_YEAR_FIELD int
---- @field public YEAR_FIELD int
-DateFormat = {};
+--- @field public AM_PM_FIELD integer
+--- @field public DATE_FIELD integer
+--- @field public DAY_OF_WEEK_FIELD integer
+--- @field public DAY_OF_WEEK_IN_MONTH_FIELD integer
+--- @field public DAY_OF_YEAR_FIELD integer
+--- @field public DEFAULT integer
+--- @field public ERA_FIELD integer
+--- @field public FULL integer
+--- @field public HOUR0_FIELD integer
+--- @field public HOUR1_FIELD integer
+--- @field public HOUR_OF_DAY0_FIELD integer
+--- @field public HOUR_OF_DAY1_FIELD integer
+--- @field public LONG integer
+--- @field public MEDIUM integer
+--- @field public MILLISECOND_FIELD integer
+--- @field public MINUTE_FIELD integer
+--- @field public MONTH_FIELD integer
+--- @field public SECOND_FIELD integer
+--- @field public SHORT integer
+--- @field public TIMEZONE_FIELD integer
+--- @field public WEEK_OF_MONTH_FIELD integer
+--- @field public WEEK_OF_YEAR_FIELD integer
+--- @field public YEAR_FIELD integer
+DateFormat = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,15 +39,15 @@ function DateFormat.getAvailableLocales() end
 --- @public
 --- @static
 --- @return DateFormat
---- @overload fun(arg0: int): DateFormat
---- @overload fun(arg0: int, arg1: Locale): DateFormat
+--- @overload fun(arg0: integer): DateFormat
+--- @overload fun(arg0: integer, arg1: Locale): DateFormat
 function DateFormat.getDateInstance() end
 
 --- @public
 --- @static
 --- @return DateFormat
---- @overload fun(arg0: int, arg1: int): DateFormat
---- @overload fun(arg0: int, arg1: int, arg2: Locale): DateFormat
+--- @overload fun(arg0: integer, arg1: integer): DateFormat
+--- @overload fun(arg0: integer, arg1: integer, arg2: Locale): DateFormat
 function DateFormat.getDateTimeInstance() end
 
 --- @public
@@ -58,28 +58,27 @@ function DateFormat.getInstance() end
 --- @public
 --- @static
 --- @return DateFormat
---- @overload fun(arg0: int): DateFormat
---- @overload fun(arg0: int, arg1: Locale): DateFormat
+--- @overload fun(arg0: integer): DateFormat
+--- @overload fun(arg0: integer, arg1: Locale): DateFormat
 function DateFormat.getTimeInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return Object
+--- @return any
 function DateFormat:clone() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 any
 --- @return boolean
 function DateFormat:equals(arg0) end
 
 --- @public
 --- @param arg0 Date
---- @return String
---- @overload fun(self: DateFormat, arg0: Object, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
+--- @return string
+--- @overload fun(self: DateFormat, arg0: any, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
 --- @overload fun(self: DateFormat, arg0: Date, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
 function DateFormat:format(arg0) end
 
@@ -96,7 +95,7 @@ function DateFormat:getNumberFormat() end
 function DateFormat:getTimeZone() end
 
 --- @public
---- @return int
+--- @return integer
 function DateFormat:hashCode() end
 
 --- @public
@@ -104,35 +103,33 @@ function DateFormat:hashCode() end
 function DateFormat:isLenient() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Date
---- @overload fun(self: DateFormat, arg0: String, arg1: ParsePosition): Date
+--- @overload fun(self: DateFormat, arg0: string, arg1: ParsePosition): Date
 function DateFormat:parse(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @param arg1 ParsePosition
---- @return Object
+--- @return any
 function DateFormat:parseObject(arg0, arg1) end
 
 --- @public
 --- @param arg0 Calendar
---- @return void
+--- @return nil
 function DateFormat:setCalendar(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function DateFormat:setLenient(arg0) end
 
 --- @public
 --- @param arg0 NumberFormat
---- @return void
+--- @return nil
 function DateFormat:setNumberFormat(arg0) end
 
 --- @public
 --- @param arg0 TimeZone
---- @return void
+--- @return nil
 function DateFormat:setTimeZone(arg0) end
-
-

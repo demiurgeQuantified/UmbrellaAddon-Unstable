@@ -3,7 +3,6 @@
 ---@class Actions
 Actions = {}
 
-
 ---@return any
 function Actions.addOrDropItem(character, item) end
 

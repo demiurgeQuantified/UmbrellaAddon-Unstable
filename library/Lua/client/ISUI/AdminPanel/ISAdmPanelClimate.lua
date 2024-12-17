@@ -14,7 +14,6 @@
 ---@field [any] any
 ISAdmPanelClimate = ISDebugSubPanelBase:derive("ISAdmPanelClimate")
 
-
 ---@return any
 function ISAdmPanelClimate:addUI(_name, _tickbox, _label, _slider) end
 
@@ -38,7 +37,6 @@ function ISAdmPanelClimate:onTicked(_index, _selected, _arg1, _arg2, _tickbox) e
 
 ---@return any
 function ISAdmPanelClimate:prerender() end
-
 
 ---@return ISAdmPanelClimate
 function ISAdmPanelClimate:new(x, y, width, height, player) end

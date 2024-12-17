@@ -1,52 +1,52 @@
---- @meta
+--- @meta _
 
 --- @class DirectionArrow
 --- @field public class any
 --- @field public doDebug boolean
-DirectionArrow = {};
+DirectionArrow = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function DirectionArrow:getA() end
 
 --- @public
---- @return float
+--- @return number
 function DirectionArrow:getB() end
 
 --- @public
---- @return float
+--- @return number
 function DirectionArrow:getG() end
 
 --- @public
---- @return int
+--- @return integer
 function DirectionArrow:getID() end
 
 --- @public
---- @return float
+--- @return number
 function DirectionArrow:getR() end
 
 --- @public
---- @return float
+--- @return number
 function DirectionArrow:getRenderHeight() end
 
 --- @public
---- @return float
+--- @return number
 function DirectionArrow:getRenderWidth() end
 
 --- @public
---- @return int
+--- @return integer
 function DirectionArrow:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function DirectionArrow:getY() end
 
 --- @public
---- @return int
+--- @return integer
 function DirectionArrow:getZ() end
 
 --- @public
@@ -58,87 +58,86 @@ function DirectionArrow:isActive() end
 function DirectionArrow:isRemoved() end
 
 --- @public
---- @return void
+--- @return nil
 function DirectionArrow:remove() end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function DirectionArrow:setA(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function DirectionArrow:setActive(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function DirectionArrow:setB(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function DirectionArrow:setG(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function DirectionArrow:setR(arg0) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function DirectionArrow:setRGBA(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function DirectionArrow:setRenderHeight(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function DirectionArrow:setRenderWidth(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DirectionArrow:setTexDown(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DirectionArrow:setTexStairsDown(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DirectionArrow:setTexStairsUp(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function DirectionArrow:setTexture(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DirectionArrow:setX(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DirectionArrow:setY(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function DirectionArrow:setZ(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -146,6 +145,6 @@ function DirectionArrow:setZ(arg0) end
 
 --- @public
 --- @param arg0 WorldMarkers
---- @param arg1 int
+--- @param arg1 integer
 --- @return DirectionArrow
 function DirectionArrow.new(arg0, arg1) end

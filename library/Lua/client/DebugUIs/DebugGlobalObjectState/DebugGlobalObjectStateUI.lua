@@ -23,7 +23,6 @@
 ---@field [any] any
 DebugGlobalObjectStateUI = ISPanel:derive("DebugGlobalObjectStateUI")
 
-
 ---@return any
 function DebugGlobalObjectStateUI:createChildren() end
 
@@ -92,7 +91,6 @@ function DebugGlobalObjectStateUI:updateSelectedObject() end
 
 ---@return any
 function DebugGlobalObjectStateUI:updateSelectedSystem() end
-
 
 ---@return DebugGlobalObjectStateUI
 function DebugGlobalObjectStateUI:new(x, y, width, height, gameState) end

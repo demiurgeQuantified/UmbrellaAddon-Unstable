@@ -24,10 +24,8 @@
 ---@field [any] any
 ISWidgetBuildControl = ISPanel:derive("ISWidgetBuildControl")
 
-
 ---@return any
 function ISWidgetBuildControl.onTextChange(box) end
-
 
 ---@return any
 function ISWidgetBuildControl:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -64,7 +62,6 @@ function ISWidgetBuildControl:startBuild(force) end
 
 ---@return any
 function ISWidgetBuildControl:update() end
-
 
 ---@return ISWidgetBuildControl
 function ISWidgetBuildControl:new(x, y, width, height, player, logic) end

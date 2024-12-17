@@ -10,7 +10,6 @@
 ---@field [any] any
 ISPathFindAction = ISBaseTimedAction:derive("ISPathFindAction")
 
-
 ---@return any
 function ISPathFindAction:isValid() end
 

@@ -12,10 +12,8 @@
 ISGeneratorInfoWindow = ISCollapsableWindow:derive("ISGeneratorInfoWindow")
 ISGeneratorInfoWindow.windows = {}
 
-
 ---@return any
 function ISGeneratorInfoWindow.getRichText(object, displayStats) end
-
 
 ---@return any
 function ISGeneratorInfoWindow:close() end
@@ -34,7 +32,6 @@ function ISGeneratorInfoWindow:setObject(object) end
 
 ---@return any
 function ISGeneratorInfoWindow:update() end
-
 
 ---@return ISGeneratorInfoWindow
 function ISGeneratorInfoWindow:new(x, y, character, object) end

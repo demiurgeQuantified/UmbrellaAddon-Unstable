@@ -1,11 +1,11 @@
---- @meta
+--- @meta _
 
 --- @class IsoAnimal: IsoPlayer
 --- @field public class any
 --- @implement IAnimalVisual
---- @field public DISPLAY_EXTRA_VALUES Boolean
+--- @field public DISPLAY_EXTRA_VALUES boolean
 --- @field public tempVector2 Vector2
-IsoAnimal = {};
+IsoAnimal = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,7 @@ IsoAnimal = {};
 --- @param arg0 AnimalPart
 --- @param arg1 IsoPlayer
 --- @param arg2 IsoDeadBody
---- @return void
+--- @return nil
 function IsoAnimal.addAnimalPart(arg0, arg1, arg2) end
 
 --- @public
@@ -33,48 +33,47 @@ function IsoAnimal.isExtraValues() end
 --- @public
 --- @static
 --- @param arg0 Food
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function IsoAnimal.modifyMeat(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function IsoAnimal.toggleExtraValues() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:GetAnimSetName() end
 
 --- @public
 --- @param arg0 BaseVehicle
---- @param arg1 float
+--- @param arg1 number
 --- @param arg2 boolean
 --- @param arg3 Vector2
---- @return float
---- @overload fun(self: IsoAnimal, arg0: BaseVehicle, arg1: float, arg2: boolean, arg3: float, arg4: float): float
+--- @return number
+--- @overload fun(self: IsoAnimal, arg0: BaseVehicle, arg1: number, arg2: boolean, arg3: number, arg4: number): number
 function IsoAnimal:Hit(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 IsoAnimal
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoAnimal:HitByAnimal(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:OnDeath() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function IsoAnimal:addAcceptance(arg0, arg1) end
 
 --- @public
@@ -92,13 +91,13 @@ function IsoAnimal:addDebugBucketOfMilk(arg0) end
 function IsoAnimal:addEgg(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:addToWorld() end
 
 --- @public
 --- @param arg0 IsoMovingObject
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoAnimal:alertOtherAnimals(arg0, arg1) end
 
 --- @public
@@ -106,9 +105,9 @@ function IsoAnimal:alertOtherAnimals(arg0, arg1) end
 function IsoAnimal:animalShouldThump() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
 function IsoAnimal:applyDamageFromVehicle(arg0, arg1) end
 
 --- @public
@@ -116,11 +115,11 @@ function IsoAnimal:applyDamageFromVehicle(arg0, arg1) end
 function IsoAnimal:attackOtherMales() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:becomeCorpse() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:calcDamage() end
 
 --- @public
@@ -180,38 +179,38 @@ function IsoAnimal:canHaveEggs() end
 function IsoAnimal:canPoop() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:cancelLuring() end
 
 --- @public
---- @param arg0 float
+--- @param arg0 number
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoAnimal:carCrash(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoAnimal:changeStress(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function IsoAnimal:checkAlphaAndTargetAlpha(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return boolean
 function IsoAnimal:checkKilledByMetaPredator(arg0) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function IsoAnimal:climbOverFence(arg0) end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoAnimal:copyFrom(arg0) end
 
 --- @public
@@ -219,74 +218,74 @@ function IsoAnimal:copyFrom(arg0) end
 function IsoAnimal:createEgg() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoAnimal:debugAgeAway(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:debugForceEgg() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:debugForceSit() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:debugRandomHappyAnim() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:debugRandomIdleAnim() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:delete() end
 
 --- @public
 --- @param arg0 Vector2
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @return void
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
 function IsoAnimal:drawDirectionLine(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoAnimal:drawRope(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function IsoAnimal:eatFromLured(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function IsoAnimal:feedFromHand(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoAnimal
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function IsoAnimal:fertilize(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @return void
+--- @return nil
 function IsoAnimal:fleeTo(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:forceWanderNow() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return float
+--- @return number
 function IsoAnimal:getAcceptanceLevel(arg0) end
 
 --- @public
@@ -294,13 +293,13 @@ function IsoAnimal:getAcceptanceLevel(arg0) end
 function IsoAnimal:getAdef() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getAge() end
 
 --- @public
 --- @param arg0 boolean
---- @param arg1 int
---- @return String
+--- @param arg1 integer
+--- @return string
 function IsoAnimal:getAgeText(arg0, arg1) end
 
 --- @public
@@ -309,26 +308,26 @@ function IsoAnimal:getAgeText(arg0, arg1) end
 function IsoAnimal:getAllPossibleFoodFromInv(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getAnimalID() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoAnimal): float
+--- @return number
+--- @overload fun(self: IsoAnimal): number
 function IsoAnimal:getAnimalSize() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return AnimalSoundState
 function IsoAnimal:getAnimalSoundState(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getAnimalTrailerSize() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoAnimal): String
+--- @return string
+--- @overload fun(self: IsoAnimal): string
 function IsoAnimal:getAnimalType() end
 
 --- @public
@@ -342,11 +341,11 @@ function IsoAnimal:getAnimalZone() end
 
 --- @public
 --- @param arg0 boolean
---- @return String
+--- @return string
 function IsoAnimal:getAppearanceText(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return Position3D
 function IsoAnimal:getAttachmentWorldPos(arg0) end
 
@@ -359,7 +358,7 @@ function IsoAnimal:getAttackedBy() end
 function IsoAnimal:getBabies() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getBabyType() end
 
 --- @public
@@ -367,7 +366,7 @@ function IsoAnimal:getBabyType() end
 function IsoAnimal:getBehavior() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getBloodQuantity() end
 
 --- @public
@@ -375,19 +374,19 @@ function IsoAnimal:getBloodQuantity() end
 function IsoAnimal:getBreed() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getCorpseLength() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getCorpseSize() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getCurrentClutchSize() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getCustomName() end
 
 --- @public
@@ -403,27 +402,27 @@ function IsoAnimal:getData() end
 function IsoAnimal:getEatTypePossibleFromHand() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getEggGeneMod() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getEggsPerDay() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getFeatherItem() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getFeatherNumber() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getFeelersize() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getFertilizedTimeMax() end
 
 --- @public
@@ -435,7 +434,7 @@ function IsoAnimal:getFullGenome() end
 function IsoAnimal:getFullGenomeList() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getFullName() end
 
 --- @public
@@ -444,8 +443,8 @@ function IsoAnimal:getGeneticDisorder() end
 
 --- @public
 --- @param arg0 boolean
---- @param arg1 int
---- @return String
+--- @param arg1 integer
+--- @return string
 function IsoAnimal:getHealthText(arg0, arg1) end
 
 --- @public
@@ -453,11 +452,11 @@ function IsoAnimal:getHealthText(arg0, arg1) end
 function IsoAnimal:getHook() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getHunger() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getHungerBoost() end
 
 --- @public
@@ -465,35 +464,35 @@ function IsoAnimal:getHungerBoost() end
 function IsoAnimal:getHutch() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getItemID() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getMate() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getMaxClutchSize() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getMeatRatio() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getMilkAnimPreset() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getMilkType() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getMinAgeForBaby() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoAnimal:getMinClutchSize() end
 
 --- @public
@@ -501,11 +500,11 @@ function IsoAnimal:getMinClutchSize() end
 function IsoAnimal:getMother() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getNextStageAnimalType() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getObjectName() end
 
 --- @public
@@ -517,12 +516,12 @@ function IsoAnimal:getOwner() end
 function IsoAnimal:getOwnerPlayer() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getPetTimer() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return float
+--- @return number
 function IsoAnimal:getPlayerAcceptance(arg0) end
 
 --- @public
@@ -535,38 +534,38 @@ function IsoAnimal:getPossibleLuringItems(arg0) end
 function IsoAnimal:getRandomSquareInZone() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getStress() end
 
 --- @public
 --- @param arg0 boolean
---- @param arg1 int
---- @return String
+--- @param arg1 integer
+--- @return string
 function IsoAnimal:getStressTxt(arg0, arg1) end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getThirst() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getThirstBoost() end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getThumpDelay() end
 
 --- @public
---- @return String
+--- @return string
 function IsoAnimal:getTypeAndBreed() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return AnimalAllele
 function IsoAnimal:getUsedGene(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function IsoAnimal:getZoneAcceptance() end
 
 --- @public
@@ -574,7 +573,7 @@ function IsoAnimal:getZoneAcceptance() end
 function IsoAnimal:hasAnimalZone() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function IsoAnimal:hasGeneticDisorder(arg0) end
 
@@ -598,18 +597,18 @@ function IsoAnimal:haveMatingSeason() end
 --- @param arg0 HandWeapon
 --- @param arg1 IsoGameCharacter
 --- @param arg2 boolean
---- @param arg3 float
+--- @param arg3 number
 --- @param arg4 boolean
---- @return void
+--- @return nil
 function IsoAnimal:hitConsequences(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 AnimalBreed
---- @return void
+--- @return nil
 function IsoAnimal:init(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:initializeStates() end
 
 --- @public
@@ -682,14 +681,14 @@ function IsoAnimal:isWild() end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function IsoAnimal:killed(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function IsoAnimal:load(arg0, arg1, arg2) end
 
 --- @public
@@ -707,29 +706,29 @@ function IsoAnimal:needHutch() end
 function IsoAnimal:needMom() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoAnimal:onPlayBreedSoundEvent(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:pathFailed() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
 function IsoAnimal:pathToLocation(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoFeedingTrough
---- @return void
+--- @return nil
 function IsoAnimal:pathToTrough(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
+--- @return nil
 function IsoAnimal:petAnimal(arg0) end
 
 --- @public
@@ -737,28 +736,28 @@ function IsoAnimal:petAnimal(arg0) end
 function IsoAnimal:petTimerDone() end
 
 --- @public
---- @param arg0 String
---- @return long
+--- @param arg0 string
+--- @return integer
 function IsoAnimal:playBreedSound(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:playDeadSound() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:playNextFootstepSound() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:playSoundDebug() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:playStressedSound() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:randomizeAge() end
 
 --- @public
@@ -770,159 +769,159 @@ function IsoAnimal:readyToBeMilked() end
 function IsoAnimal:readyToBeSheared() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:remove() end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoAnimal:removeBaby(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @param arg3 ColorInfo
 --- @param arg4 boolean
 --- @param arg5 boolean
 --- @param arg6 Shader
---- @return void
+--- @return nil
 function IsoAnimal:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function IsoAnimal:renderShadow(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:renderlast() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:respondToSound() end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
---- @overload fun(self: IsoAnimal, arg0: ByteBuffer, arg1: boolean, arg2: boolean): void
+--- @return nil
+--- @overload fun(self: IsoAnimal, arg0: ByteBuffer, arg1: boolean, arg2: boolean): nil
 function IsoAnimal:save(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoAnimal:setAgeDebug(arg0) end
 
 --- @public
 --- @param arg0 AnimalZone
---- @return void
+--- @return nil
 function IsoAnimal:setAnimalZone(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function IsoAnimal:setAttackedBy(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function IsoAnimal:setCustomName(arg0) end
 
 --- @public
 --- @param arg0 AnimalData
---- @return void
+--- @return nil
 function IsoAnimal:setData(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function IsoAnimal:setDebugAcceptance(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoAnimal:setDebugStress(arg0) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @return void
+--- @return nil
 function IsoAnimal:setDir(arg0) end
 
 --- @public
---- @param arg0 Boolean
---- @return void
+--- @param arg0 boolean
+--- @return nil
 function IsoAnimal:setExtraValues(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setFemale(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function IsoAnimal:setHealth(arg0) end
 
 --- @public
 --- @param arg0 IsoButcherHook
---- @return void
+--- @return nil
 function IsoAnimal:setHook(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setIsAlerted(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setIsInvincible(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoAnimal:setItemID(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:setMaxSizeDebug() end
 
 --- @public
 --- @param arg0 IsoAnimal
---- @return void
+--- @return nil
 function IsoAnimal:setMother(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setMoveForwardOnZone(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setOnHook(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setShouldBeSkeleton(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setShouldFollowWall(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function IsoAnimal:setWild(arg0) end
 
 --- @public
@@ -966,16 +965,16 @@ function IsoAnimal:shouldStartFollowWall() end
 --- @public
 --- @param arg0 IsoMovingObject
 --- @param arg1 boolean
---- @param arg2 float
---- @return void
+--- @param arg2 number
+--- @return nil
 function IsoAnimal:spotted(arg0, arg1, arg2) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:stopAllMovementNow() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:test() end
 
 --- @public
@@ -986,7 +985,7 @@ function IsoAnimal:testCollideWithVehicles(arg0) end
 --- @public
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
---- @return void
+--- @return nil
 function IsoAnimal:tryLure(arg0, arg1) end
 
 --- @public
@@ -995,50 +994,49 @@ function IsoAnimal:tryLure(arg0, arg1) end
 function IsoAnimal:tryThump(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:unloaded() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:update() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateLOS() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateLastTimeSinceUpdate() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateLoopingSounds() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateRunLoopingSound() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function IsoAnimal:updateStatsAway(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateStress() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateVocalProperties() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoAnimal:updateWalkLoopingSound() end
 
 --- @public
 --- @return boolean
 function IsoAnimal:useRagdoll() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -1047,8 +1045,8 @@ function IsoAnimal:useRagdoll() end
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String): IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: String, arg5: AnimalBreed): IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: boolean): IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: String, arg5: AnimalBreed, arg6: boolean): IsoAnimal
+--- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string): IsoAnimal
+--- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: AnimalBreed): IsoAnimal
+--- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string, arg6: boolean): IsoAnimal
+--- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: AnimalBreed, arg6: boolean): IsoAnimal
 function IsoAnimal.new(arg0) end

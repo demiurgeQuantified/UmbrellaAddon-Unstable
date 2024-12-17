@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ReplaceProviderCharacter: ReplaceProvider
 --- @field public class any
-ReplaceProviderCharacter = {};
+ReplaceProviderCharacter = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

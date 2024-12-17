@@ -11,7 +11,6 @@
 ---@field [any] any
 ISCurePlantAction = ISBaseTimedAction:derive("ISCurePlantAction")
 
-
 ---@return any
 function ISCurePlantAction:complete() end
 
@@ -35,7 +34,6 @@ function ISCurePlantAction:update() end
 
 ---@return any
 function ISCurePlantAction:waitToStart() end
-
 
 ---@return ISCurePlantAction
 function ISCurePlantAction:new(character, item, uses, plant, maxTime, cure) end

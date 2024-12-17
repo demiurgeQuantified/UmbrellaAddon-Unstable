@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class TileDepthTextureAssignmentManager
 --- @field public class any
-TileDepthTextureAssignmentManager = {};
+TileDepthTextureAssignmentManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,56 +13,53 @@ TileDepthTextureAssignmentManager = {};
 --- @return TileDepthTextureAssignmentManager
 function TileDepthTextureAssignmentManager.getInstance() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function TileDepthTextureAssignmentManager:assignDepthTextureToSprite(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
 function TileDepthTextureAssignmentManager:assignTileName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function TileDepthTextureAssignmentManager:clearAssignedTileName(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return String
+--- @param arg0 string
+--- @param arg1 string
+--- @return string
 function TileDepthTextureAssignmentManager:getAssignedTileName(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureAssignmentManager:init() end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureAssignmentManager:initGameData() end
 
 --- @public
 --- @param arg0 Mod
---- @return void
+--- @return nil
 function TileDepthTextureAssignmentManager:initModData(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function TileDepthTextureAssignmentManager:initSprites() end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function TileDepthTextureAssignmentManager:save(arg0) end
-
-

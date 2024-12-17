@@ -16,7 +16,6 @@
 ---@field [any] any
 ISRefuelFromGasPump = ISBaseTimedAction:derive("ISRefuelFromGasPump")
 
-
 ---@return any
 function ISRefuelFromGasPump:complete() end
 
@@ -43,7 +42,6 @@ function ISRefuelFromGasPump:update() end
 
 ---@return any
 function ISRefuelFromGasPump:waitToStart() end
-
 
 ---@return ISRefuelFromGasPump
 function ISRefuelFromGasPump:new(character, part, fuelStation) end

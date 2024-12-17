@@ -15,7 +15,6 @@
 ---@field [any] any
 ISReloadWeaponAction = ISBaseTimedAction:derive("ISReloadWeaponAction")
 
-
 ---@return any
 function ISReloadWeaponAction.attackHook(character, chargeDelta, weapon) end
 
@@ -45,7 +44,6 @@ function ISReloadWeaponAction.ReloadBestMagazine(playerObj, gun) end
 
 ---@return any
 function ISReloadWeaponAction.setReloadSpeed(character, rack) end
-
 
 ---@return any
 function ISReloadWeaponAction:animEvent(event, parameter) end
@@ -82,7 +80,6 @@ function ISReloadWeaponAction:stop() end
 
 ---@return any
 function ISReloadWeaponAction:update() end
-
 
 ---@return ISReloadWeaponAction
 function ISReloadWeaponAction:new(character, gun) end

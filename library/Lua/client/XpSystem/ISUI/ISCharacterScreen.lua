@@ -32,7 +32,6 @@
 ---@field [any] any
 ISCharacterScreen = ISPanelJoypad:derive("ISCharacterScreen")
 
-
 ---@return any
 function ISCharacterScreen.loadBeardAndHairStyle(self) end
 
@@ -56,7 +55,6 @@ function ISCharacterScreen.setDisplayedTraits(self) end
 
 ---@return any
 function ISCharacterScreen.traitsChanged(self) end
-
 
 ---@return any
 function ISCharacterScreen:addTooltip(option, text) end
@@ -103,17 +101,14 @@ function ISCharacterScreen:setVisible(visible, joypadData) end
 ---@return any
 function ISCharacterScreen:updateAvatar() end
 
-
 ---@return ISCharacterScreen
 function ISCharacterScreen:new(x, y, width, height, playerNum) end
 
 ---@class ISCharacterScreenAvatar : ISUI3DModel
 ISCharacterScreenAvatar = ISUI3DModel:derive("ISCharacterScreenAvatar")
 
-
 ---@return any
 function ISCharacterScreenAvatar:onMouseUp(x, y) end
-
 
 ---@return ISCharacterScreenAvatar
 function ISCharacterScreenAvatar:new(x, y, width, height) end

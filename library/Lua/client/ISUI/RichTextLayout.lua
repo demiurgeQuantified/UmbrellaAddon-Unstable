@@ -35,7 +35,6 @@
 ISRichTextLayout = ISBaseObject:derive("ISRichTextLayout")
 ISRichTextLayout.drawMargins = false
 
-
 ---@return any
 function ISRichTextLayout:getHeight() end
 
@@ -62,7 +61,6 @@ function ISRichTextLayout:setText(text) end
 
 ---@return any
 function ISRichTextLayout:setWidth(width) end
-
 
 ---@return ISRichTextLayout
 function ISRichTextLayout:new(width) end

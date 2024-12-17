@@ -35,7 +35,6 @@
 ---@field [any] any
 ISDebugAvatarUI = ISCollapsableWindow:derive("ISDebugAvatarUI")
 
-
 ---@return any
 function ISDebugAvatarUI:changeHeight(button) end
 
@@ -83,7 +82,6 @@ function ISDebugAvatarUI:prerender() end
 
 ---@return any
 function ISDebugAvatarUI:render() end
-
 
 ---@return ISDebugAvatarUI
 function ISDebugAvatarUI:new(player) end

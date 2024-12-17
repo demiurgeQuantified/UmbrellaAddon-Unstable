@@ -22,10 +22,8 @@
 ISMediaInfo = ISCollapsableWindowJoypad:derive("ISMediaInfo")
 ISMediaInfo.instance = nil
 
-
 ---@return any
 function ISMediaInfo.openPanel(_playerNum, _text) end
-
 
 ---@return any
 function ISMediaInfo:close() end
@@ -53,7 +51,6 @@ function ISMediaInfo:prerender() end
 
 ---@return any
 function ISMediaInfo:render() end
-
 
 ---@return ISMediaInfo
 function ISMediaInfo:new(x, y, width, height, playerNum, text) end

@@ -44,10 +44,8 @@ InterpolationPlayerPeriodDebug.instance = nil
 InterpolationPlayerPeriodDebug.shiftDown = 0
 InterpolationPlayerPeriodDebug.eventsAdded = false
 
-
 ---@return any
 function InterpolationPlayerPeriodDebug.OnOpenPanel(player) end
-
 
 ---@return any
 function InterpolationPlayerPeriodDebug:addColor(_r, _g, _b) end
@@ -108,7 +106,6 @@ function InterpolationPlayerPeriodDebug:update() end
 
 ---@return any
 function InterpolationPlayerPeriodDebug:updateValues() end
-
 
 ---@return InterpolationPlayerPeriodDebug
 function InterpolationPlayerPeriodDebug:new(x, y, width, height, player) end

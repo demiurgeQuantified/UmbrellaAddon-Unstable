@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class CraftRecipe: BaseScriptObject
 --- @field public class any
 --- @implement TaggedObject
-CraftRecipe = {};
+CraftRecipe = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -11,37 +11,36 @@ CraftRecipe = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function CraftRecipe.onLuaFileReloaded() end
-
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipe:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
---- @overload fun(self: CraftRecipe, arg0: String, arg1: Block): void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
+--- @overload fun(self: CraftRecipe, arg0: string, arg1: Block): nil
 function CraftRecipe:Load(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipe:OnLoadedAfterLua() end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipe:OnPostWorldDictionaryInit() end
 
 --- @public
 --- @param arg0 ScriptLoadMode
---- @return void
+--- @return nil
 function CraftRecipe:OnScriptsLoaded(arg0) end
 
 --- @public
@@ -50,13 +49,13 @@ function CraftRecipe:OnScriptsLoaded(arg0) end
 function CraftRecipe:OnTestItem(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipe:PreReload() end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function CraftRecipe:addRequiredSkill(arg0, arg1) end
 
 --- @public
@@ -64,24 +63,24 @@ function CraftRecipe:addRequiredSkill(arg0, arg1) end
 function CraftRecipe:canBeDoneInDark() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 --- @overload fun(self: CraftRecipe, arg0: InventoryItem): boolean
 function CraftRecipe:canUseItem(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
+--- @return nil
 function CraftRecipe:checkAutoLearnSkills(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return void
---- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: String): void
+--- @return nil
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: string): nil
 function CraftRecipe:checkMetaRecipe(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function CraftRecipe:clearRequiredSkills() end
 
 --- @public
@@ -90,16 +89,16 @@ function CraftRecipe:clearRequiredSkills() end
 function CraftRecipe:containsIO(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getAnimation() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return RequiredSkill
 function CraftRecipe:getAutoLearnSkill(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function CraftRecipe:getAutoLearnSkillCount() end
 
 --- @public
@@ -107,7 +106,7 @@ function CraftRecipe:getAutoLearnSkillCount() end
 function CraftRecipe:getAutoLearnSkills() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getCategory() end
 
 --- @public
@@ -116,17 +115,17 @@ function CraftRecipe:getExistsAsVanilla() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return int
---- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: boolean): int
+--- @return integer
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: boolean): integer
 function CraftRecipe:getHighestRelevantSkillLevel(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return IOScript
 function CraftRecipe:getIOForIndex(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getIconName() end
 
 --- @public
@@ -135,11 +134,11 @@ function CraftRecipe:getIconTexture() end
 
 --- @public
 --- @param arg0 IOScript
---- @return int
+--- @return integer
 function CraftRecipe:getIndexForIO(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function CraftRecipe:getInputCount() end
 
 --- @public
@@ -152,31 +151,31 @@ function CraftRecipe:getIoLines() end
 
 --- @public
 --- @param arg0 LuaCall
---- @return String
+--- @return string
 function CraftRecipe:getLuaCallString(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getMetaRecipe() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getModID() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getModName() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getName() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getOnAddToMenu() end
 
 --- @public
---- @return int
+--- @return integer
 function CraftRecipe:getOutputCount() end
 
 --- @public
@@ -192,12 +191,12 @@ function CraftRecipe:getProp1() end
 function CraftRecipe:getProp2() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return RequiredSkill
 function CraftRecipe:getRequiredSkill(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function CraftRecipe:getRequiredSkillCount() end
 
 --- @public
@@ -215,7 +214,7 @@ function CraftRecipe:getTagBits() end
 function CraftRecipe:getTags() end
 
 --- @public
---- @return int
+--- @return integer
 function CraftRecipe:getTime() end
 
 --- @public
@@ -235,20 +234,20 @@ function CraftRecipe:getToolLeft() end
 function CraftRecipe:getToolRight() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getTooltip() end
 
 --- @public
---- @return String
+--- @return string
 function CraftRecipe:getTranslationName() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return xp_Award
 function CraftRecipe:getXPAward(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function CraftRecipe:getXPAwardCount() end
 
 --- @public
@@ -265,7 +264,7 @@ function CraftRecipe:hasOnTickInputs() end
 function CraftRecipe:hasOnTickOutputs() end
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function CraftRecipe:hasTag(arg0) end
 
@@ -315,29 +314,28 @@ function CraftRecipe:needToBeLearn() end
 
 --- @public
 --- @param arg0 Texture
---- @return void
+--- @return nil
 function CraftRecipe:overrideIconTexture(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipe:overrideTranslationName(arg0) end
 
 --- @public
---- @param arg0 String
---- @return void
+--- @param arg0 string
+--- @return nil
 function CraftRecipe:setAnimation(arg0) end
 
 --- @public
 --- @param arg0 InputScript
---- @return void
+--- @return nil
 function CraftRecipe:setProp1(arg0) end
 
 --- @public
 --- @param arg0 InputScript
---- @return void
+--- @return nil
 function CraftRecipe:setProp2(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

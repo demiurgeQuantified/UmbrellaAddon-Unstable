@@ -13,48 +13,47 @@ YouHaveOneDay.y = 22
 YouHaveOneDay.z = 1
 YouHaveOneDay.hordeSpawned = false
 YouHaveOneDay.hordePark = {
-    x = 76,
-    y = 67,
+	x = 76,
+	y = 67,
 }
 YouHaveOneDay.hordeFlat = {
-    x = 143,
-    y = 94,
+	x = 143,
+	y = 94,
 }
 YouHaveOneDay.hordeWood = {
-    x = 35,
-    y = 198,
+	x = 35,
+	y = 198,
 }
 YouHaveOneDay.hordeDiner = {
-    x = 191,
-    y = 123,
+	x = 191,
+	y = 123,
 }
 YouHaveOneDay.hordeTownArea = {
-    x = 231,
-    y = 53,
+	x = 231,
+	y = 53,
 }
 YouHaveOneDay.hordeOffice = {
-    x = 262,
-    y = 215,
+	x = 262,
+	y = 215,
 }
 YouHaveOneDay.hordeWoodCamp = {
-    x = 123,
-    y = 276,
+	x = 123,
+	y = 276,
 }
 YouHaveOneDay.hordeGasStation = {
-    x = 128,
-    y = 145,
+	x = 128,
+	y = 145,
 }
 YouHaveOneDay.hordes = {
-    YouHaveOneDay.hordePark,
-    YouHaveOneDay.hordeFlat,
-    YouHaveOneDay.hordeWood,
-    YouHaveOneDay.hordeDiner,
-    YouHaveOneDay.hordeTownArea,
-    YouHaveOneDay.hordeOffice,
-    YouHaveOneDay.hordeWoodCamp,
-    YouHaveOneDay.hordeGasStation,
+	YouHaveOneDay.hordePark,
+	YouHaveOneDay.hordeFlat,
+	YouHaveOneDay.hordeWood,
+	YouHaveOneDay.hordeDiner,
+	YouHaveOneDay.hordeTownArea,
+	YouHaveOneDay.hordeOffice,
+	YouHaveOneDay.hordeWoodCamp,
+	YouHaveOneDay.hordeGasStation,
 }
-
 
 ---@return any
 function YouHaveOneDay.Add() end

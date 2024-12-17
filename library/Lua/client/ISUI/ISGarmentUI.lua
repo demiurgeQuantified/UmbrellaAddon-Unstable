@@ -39,7 +39,6 @@ ISGarmentUI.windows = {}
 ISGarmentUI.ghs = "<GHC>"
 ISGarmentUI.bhs = "<BHC>"
 
-
 ---@return any
 function ISGarmentUI.setBodyPartActionForPlayer(playerObj, bodyPart, action, jobType, args) end
 
@@ -48,7 +47,6 @@ function ISGarmentUI.setBodyPartForLastAction(playerObj, bodyPart) end
 
 ---@return any
 function ISGarmentUI.setOtherActionForPlayer(playerObj, bodyPart, action) end
-
 
 ---@return any
 function ISGarmentUI:addTextures(type, textureName, overlayName) end
@@ -115,7 +113,6 @@ function ISGarmentUI:setBodyPartForAction(action, bodyPart) end
 
 ---@return any
 function ISGarmentUI:update() end
-
 
 ---@return ISGarmentUI
 function ISGarmentUI:new(x, y, character, clothing) end

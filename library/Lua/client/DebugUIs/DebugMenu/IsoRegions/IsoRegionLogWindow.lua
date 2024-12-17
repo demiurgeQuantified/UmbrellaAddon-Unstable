@@ -15,10 +15,8 @@
 IsoRegionLogWindow = ISPanel:derive("IsoRegionLogWindow")
 IsoRegionLogWindow.instance = nil
 
-
 ---@return any
 function IsoRegionLogWindow.OnOpenPanel() end
-
 
 ---@return any
 function IsoRegionLogWindow:close() end
@@ -46,7 +44,6 @@ function IsoRegionLogWindow:prerender() end
 
 ---@return any
 function IsoRegionLogWindow:update() end
-
 
 ---@return IsoRegionLogWindow
 function IsoRegionLogWindow:new(x, y, width, height, title) end

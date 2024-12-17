@@ -11,7 +11,6 @@
 ---@field [any] any
 ISDuplicateKeybindDialog = ISPanel:derive("ISDuplicateKeybindDialog")
 
-
 ---@return any
 function ISDuplicateKeybindDialog:assignKey(keyText, keybind, key) end
 
@@ -32,7 +31,6 @@ function ISDuplicateKeybindDialog:onClear() end
 
 ---@return any
 function ISDuplicateKeybindDialog:onKeep() end
-
 
 ---@return ISDuplicateKeybindDialog
 function ISDuplicateKeybindDialog:new(key, keybindName, keybind2Name) end

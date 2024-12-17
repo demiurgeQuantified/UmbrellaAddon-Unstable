@@ -8,7 +8,6 @@
 ---@field [any] any
 DebugChunkState_ObjectAtCursorPanel = ISPanel:derive("DebugChunkState_ObjectAtCursorPanel")
 
-
 ---@return any
 function DebugChunkState_ObjectAtCursorPanel:createChildren() end
 
@@ -29,7 +28,6 @@ function DebugChunkState_ObjectAtCursorPanel:syncUI() end
 
 ---@return any
 function DebugChunkState_ObjectAtCursorPanel:update() end
-
 
 ---@return DebugChunkState_ObjectAtCursorPanel
 function DebugChunkState_ObjectAtCursorPanel:new(x, y, width, height, debugChunkState) end

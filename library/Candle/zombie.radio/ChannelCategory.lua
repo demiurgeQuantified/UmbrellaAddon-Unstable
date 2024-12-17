@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ChannelCategory: Enum
 --- @field public class any
@@ -10,7 +10,7 @@
 --- @field public Radio ChannelCategory
 --- @field public Television ChannelCategory
 --- @field public Undefined ChannelCategory
-ChannelCategory = {};
+ChannelCategory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,7 @@ ChannelCategory = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ChannelCategory
 function ChannelCategory.valueOf(arg0) end
 
@@ -26,5 +26,3 @@ function ChannelCategory.valueOf(arg0) end
 --- @static
 --- @return ChannelCategory[]
 function ChannelCategory.values() end
-
-

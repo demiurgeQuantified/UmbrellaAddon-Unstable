@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class VehicleDoor
 --- @field public class any
-VehicleDoor = {};
+VehicleDoor = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,7 +10,7 @@ VehicleDoor = {};
 
 --- @public
 --- @param arg0 Door
---- @return void
+--- @return nil
 function VehicleDoor:init(arg0) end
 
 --- @public
@@ -27,30 +27,29 @@ function VehicleDoor:isOpen() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function VehicleDoor:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function VehicleDoor:save(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehicleDoor:setLockBroken(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehicleDoor:setLocked(arg0) end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function VehicleDoor:setOpen(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

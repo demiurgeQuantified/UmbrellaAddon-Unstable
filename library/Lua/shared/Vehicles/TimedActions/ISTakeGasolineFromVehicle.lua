@@ -15,7 +15,6 @@
 ---@field [any] any
 ISTakeGasolineFromVehicle = ISBaseTimedAction:derive("ISTakeGasolineFromVehicle")
 
-
 ---@return any
 function ISTakeGasolineFromVehicle:animEvent(event, parameter) end
 
@@ -48,7 +47,6 @@ function ISTakeGasolineFromVehicle:update() end
 
 ---@return any
 function ISTakeGasolineFromVehicle:waitToStart() end
-
 
 ---@return ISTakeGasolineFromVehicle
 function ISTakeGasolineFromVehicle:new(character, part, item) end

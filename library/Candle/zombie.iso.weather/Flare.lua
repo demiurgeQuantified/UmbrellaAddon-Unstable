@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Flare
 --- @field public class any
-Flare = {};
+Flare = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,70 +13,69 @@ Flare = {};
 function Flare:getColor() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ClimateColorInfo
 function Flare:getColorPlayer(arg0) end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function Flare:getDistModPlayer(arg0) end
 
 --- @public
---- @return int
+--- @return integer
 function Flare:getId() end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getIntensity() end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function Flare:getIntensityPlayer(arg0) end
 
 --- @public
---- @param arg0 int
---- @return float
+--- @param arg0 integer
+--- @return number
 function Flare:getLerpPlayer(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getLifeTime() end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getMaxLifeTime() end
 
 --- @public
---- @param arg0 int
+--- @param arg0 integer
 --- @return ClimateColorInfo
 function Flare:getOutColorPlayer(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getPercent() end
 
 --- @public
---- @return int
+--- @return integer
 function Flare:getRange() end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getWindSpeed() end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getX() end
 
 --- @public
---- @return float
+--- @return number
 function Flare:getY() end
 
 --- @public
 --- @return boolean
 function Flare:isHasLaunched() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

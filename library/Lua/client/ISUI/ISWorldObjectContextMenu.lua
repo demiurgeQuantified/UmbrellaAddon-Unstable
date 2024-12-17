@@ -12,30 +12,29 @@ ISWorldObjectContextMenu.tooltipsUsed = {}
 ISWorldObjectContextMenu.sleepDialog = nil
 ISWorldObjectContextMenu.chairCheckList = {}
 ISWorldObjectContextMenu.chairCheckList.badList = {
-    "Barstool",
-    "Chair",
-    "Chairs",
-    "Ottoman",
-    "Stool",
-    "Stump",
-    "Block",
-    "Table",
+	"Barstool",
+	"Chair",
+	"Chairs",
+	"Ottoman",
+	"Stool",
+	"Stump",
+	"Block",
+	"Table",
 }
 ISWorldObjectContextMenu.chairCheckList.goodList = {
-    "Beach",
-    "Black Fancy",
-    "Comfy",
-    "Dentist Patient",
-    "Fancy White",
-    "Lazy",
-    "Light Blue",
-    "Modern White",
-    "Rattan",
-    "Salon",
-    "Victorian",
-    "Yellow Modern",
+	"Beach",
+	"Black Fancy",
+	"Comfy",
+	"Dentist Patient",
+	"Fancy White",
+	"Lazy",
+	"Light Blue",
+	"Modern White",
+	"Rattan",
+	"Salon",
+	"Victorian",
+	"Yellow Modern",
 }
-
 
 ---@return any
 function ISWorldObjectContextMenu.addGarderingOptions(context, wobjs, player) end
@@ -80,7 +79,14 @@ function ISWorldObjectContextMenu.compareClothingBlood(item1, item2) end
 function ISWorldObjectContextMenu.createMenu(player, worldobjects, x, y, test) end
 
 ---@return any
-function ISWorldObjectContextMenu.doAddFuelGenerator(worldobjects, generator, fuelContainerList, fuelContainer, player) end
+function ISWorldObjectContextMenu.doAddFuelGenerator(
+	worldobjects,
+	generator,
+	fuelContainerList,
+	fuelContainer,
+	player
+)
+end
 
 ---@return any
 function ISWorldObjectContextMenu.doBedOption(context, playerObj, bed) end
@@ -176,7 +182,15 @@ function ISWorldObjectContextMenu.getThumpableName(thump) end
 function ISWorldObjectContextMenu.getUpAndThen(playerObj, function1, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10) end
 
 ---@return any
-function ISWorldObjectContextMenu.getWorldObjectsInRadius(playerNum, screenX, screenY, squares, radius, worldObjects) end
+function ISWorldObjectContextMenu.getWorldObjectsInRadius(
+	playerNum,
+	screenX,
+	screenY,
+	squares,
+	radius,
+	worldObjects
+)
+end
 
 ---@return any
 function ISWorldObjectContextMenu.getZone(x, y, z) end
@@ -609,7 +623,6 @@ function ISWorldObjectContextMenu.toggleComboWasherDryer(context, playerObj, obj
 
 ---@return any
 function ISWorldObjectContextMenu.transferIfNeeded(playerObj, item) end
-
 
 ---@return any
 function ISWorldObjectContextMenu:onCheckDigitalCode(button, playerObj, padlock, thump) end

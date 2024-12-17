@@ -86,27 +86,26 @@
 ---@field [any] any
 ISBaseIcon = ISPanel:derive("ISBaseIcon")
 ISBaseIcon.managedMarkers = {
-    isoMarker = "isoMarkers",
-    worldMarker = "worldMarkers",
+	isoMarker = "isoMarkers",
+	worldMarker = "worldMarkers",
 }
 ISBaseIcon.updateEvents = {
-    {
-        method = "updateViewDistance",
-        tick = 5,
-        breakTick = false,
-    },
-    {
-        method = "updatePerkLevel",
-        tick = 20,
-        breakTick = false,
-    },
-    {
-        method = "updateModifiers",
-        tick = 30,
-        breakTick = false,
-    },
+	{
+		method = "updateViewDistance",
+		tick = 5,
+		breakTick = false,
+	},
+	{
+		method = "updatePerkLevel",
+		tick = 20,
+		breakTick = false,
+	},
+	{
+		method = "updateModifiers",
+		tick = 30,
+		breakTick = false,
+	},
 }
-
 
 ---@return any
 function ISBaseIcon:addIsoMarker() end
@@ -335,7 +334,6 @@ function ISBaseIcon:updateWorldMarker() end
 
 ---@return any
 function ISBaseIcon:updateZoom() end
-
 
 ---@return ISBaseIcon
 function ISBaseIcon:new(_manager, _icon) end

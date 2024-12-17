@@ -14,7 +14,6 @@
 ---@field [any] any
 ISEmptyGraves = ISBuildingObject:derive("ISEmptyGraves")
 
-
 ---@return any
 function ISEmptyGraves.canDigHere(worldObjects) end
 
@@ -29,7 +28,6 @@ function ISEmptyGraves.isGraveFullOfCorpses(grave) end
 
 ---@return any
 function ISEmptyGraves.shovelledFloorCanDig(square) end
-
 
 ---@return any
 function ISEmptyGraves:create(x, y, z, north, sprite) end
@@ -54,7 +52,6 @@ function ISEmptyGraves:setInfo(square, north, sprite, cell, spriteType) end
 
 ---@return any
 function ISEmptyGraves:walkTo(x, y, z) end
-
 
 ---@return ISEmptyGraves
 function ISEmptyGraves:new(sprite, sprite2, northSprite, northSprite2, equipBothHandItem) end

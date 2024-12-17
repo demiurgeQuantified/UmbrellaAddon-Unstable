@@ -1,25 +1,25 @@
---- @meta
+--- @meta _
 
 --- @class NetTimedAction: Action
 --- @field public class any
-NetTimedAction = {};
+NetTimedAction = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @return void
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function NetTimedAction:animEvent(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function NetTimedAction:forceComplete() end
 
 --- @public
---- @return float
+--- @return number
 function NetTimedAction:getProgress() end
 
 --- @public
@@ -30,34 +30,33 @@ function NetTimedAction:isConsistent(arg0) end
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
---- @return void
+--- @return nil
 function NetTimedAction:parse(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoPlayer
---- @return void
---- @overload fun(self: NetTimedAction, arg0: IsoPlayer, arg1: KahluaTable): void
+--- @return nil
+--- @overload fun(self: NetTimedAction, arg0: IsoPlayer, arg1: KahluaTable): nil
 function NetTimedAction:set(arg0) end
 
 --- @public
---- @param arg0 long
---- @return void
+--- @param arg0 integer
+--- @return nil
 function NetTimedAction:setDuration(arg0) end
 
 --- @public
 --- @param arg0 TransactionState
---- @return void
+--- @return nil
 function NetTimedAction:setState(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function NetTimedAction:setTimeData() end
 
 --- @public
 --- @param arg0 ByteBufferWriter
---- @return void
+--- @return nil
 function NetTimedAction:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

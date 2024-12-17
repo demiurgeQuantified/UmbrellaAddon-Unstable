@@ -1,15 +1,15 @@
---- @meta
+--- @meta _
 
 --- @class VideoTexture: Texture
 --- @field public class any
-VideoTexture = {};
+VideoTexture = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function VideoTexture:Close() end
 
 --- @public
@@ -17,22 +17,21 @@ function VideoTexture:Close() end
 function VideoTexture:LoadVideoFile() end
 
 --- @public
---- @return void
+--- @return nil
 function VideoTexture:RenderFrame() end
 
 --- @public
 --- @return boolean
 function VideoTexture:isValid() end
 
-
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return VideoTexture
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: boolean): VideoTexture
+--- @overload fun(arg0: string, arg1: integer, arg2: integer, arg3: boolean): VideoTexture
 function VideoTexture.new(arg0, arg1, arg2) end

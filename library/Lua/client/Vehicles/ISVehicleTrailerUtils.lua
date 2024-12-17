@@ -3,7 +3,6 @@
 ---@class ISVehicleTrailerUtils
 ISVehicleTrailerUtils = {}
 
-
 ---@return any
 function ISVehicleTrailerUtils.getTowableVehicleNear(square, ignoreVehicle, attachmentA, attachmentB) end
 

@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSForestCampEaten: RandomizedZoneStoryBase
 --- @field public class any
-RZSForestCampEaten = {};
+RZSForestCampEaten = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -10,9 +10,8 @@ RZSForestCampEaten = {};
 
 --- @public
 --- @param arg0 Zone
---- @return void
+--- @return nil
 function RZSForestCampEaten:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

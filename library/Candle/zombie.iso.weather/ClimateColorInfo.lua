@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class ClimateColorInfo
 --- @field public class any
-ClimateColorInfo = {};
+ClimateColorInfo = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,7 @@ ClimateColorInfo = {};
 --- @static
 --- @param arg0 ClimateColorInfo
 --- @param arg1 ClimateColorInfo
---- @param arg2 float
+--- @param arg2 number
 --- @param arg3 ClimateColorInfo
 --- @return ClimateColorInfo
 function ClimateColorInfo.interp(arg0, arg1, arg2, arg3) end
@@ -21,7 +21,6 @@ function ClimateColorInfo.interp(arg0, arg1, arg2, arg3) end
 --- @static
 --- @return boolean
 function ClimateColorInfo.writeColorInfoConfig() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,54 +36,53 @@ function ClimateColorInfo:getInterior() end
 
 --- @public
 --- @param arg0 ClimateColorInfo
---- @param arg1 float
+--- @param arg1 number
 --- @param arg2 ClimateColorInfo
 --- @return ClimateColorInfo
 function ClimateColorInfo:interp(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 DataInputStream
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ClimateColorInfo:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ClimateColorInfo:read(arg0) end
 
 --- @public
 --- @param arg0 DataOutputStream
---- @return void
+--- @return nil
 function ClimateColorInfo:save(arg0) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function ClimateColorInfo:scale(arg0) end
 
 --- @public
 --- @param arg0 Color
---- @return void
---- @overload fun(self: ClimateColorInfo, arg0: float, arg1: float, arg2: float, arg3: float): void
+--- @return nil
+--- @overload fun(self: ClimateColorInfo, arg0: number, arg1: number, arg2: number, arg3: number): nil
 function ClimateColorInfo:setExterior(arg0) end
 
 --- @public
 --- @param arg0 Color
---- @return void
---- @overload fun(self: ClimateColorInfo, arg0: float, arg1: float, arg2: float, arg3: float): void
+--- @return nil
+--- @overload fun(self: ClimateColorInfo, arg0: number, arg1: number, arg2: number, arg3: number): nil
 function ClimateColorInfo:setInterior(arg0) end
 
 --- @public
 --- @param arg0 ClimateColorInfo
---- @return void
+--- @return nil
 function ClimateColorInfo:setTo(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function ClimateColorInfo:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -92,6 +90,6 @@ function ClimateColorInfo:write(arg0) end
 
 --- @public
 --- @return ClimateColorInfo
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float): ClimateColorInfo
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float): ClimateColorInfo
+--- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): ClimateColorInfo
+--- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number): ClimateColorInfo
 function ClimateColorInfo.new() end

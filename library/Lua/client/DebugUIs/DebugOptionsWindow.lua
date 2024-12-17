@@ -9,7 +9,6 @@
 ---@field [any] any
 DebugOptionsWindow = ISCollapsableWindow:derive("DebugOptionsWindow")
 
-
 ---@return any
 function DebugOptionsWindow:calcTickBoxBounds() end
 
@@ -24,7 +23,6 @@ function DebugOptionsWindow:onMouseDownOutside(x, y) end
 
 ---@return any
 function DebugOptionsWindow:onTickBox(index, selected, option) end
-
 
 ---@return DebugOptionsWindow
 function DebugOptionsWindow:new(x, y, width, height) end

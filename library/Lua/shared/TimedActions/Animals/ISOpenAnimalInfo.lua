@@ -8,7 +8,6 @@
 ---@field [any] any
 ISOpenAnimalInfo = ISBaseTimedAction:derive("ISOpenAnimalInfo")
 
-
 ---@return any
 function ISOpenAnimalInfo:animEvent(event, parameter) end
 
@@ -41,7 +40,6 @@ function ISOpenAnimalInfo:update() end
 
 ---@return any
 function ISOpenAnimalInfo:waitToStart() end
-
 
 ---@return ISOpenAnimalInfo
 function ISOpenAnimalInfo:new(character, animal) end

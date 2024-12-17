@@ -25,9 +25,21 @@
 ---@field [any] any
 ConnectToServer = ISPanelJoypad:derive("ConnectToServer")
 
-
 ---@return any
-function ConnectToServer:connect(previousScreen, serverName, userName, password, IP, localIP, port, serverPassword, useSteamRelay, doHash, authType) end
+function ConnectToServer:connect(
+	previousScreen,
+	serverName,
+	userName,
+	password,
+	IP,
+	localIP,
+	port,
+	serverPassword,
+	useSteamRelay,
+	doHash,
+	authType
+)
+end
 
 ---@return any
 function ConnectToServer:connectCoop(previousScreen, serverSteamID) end

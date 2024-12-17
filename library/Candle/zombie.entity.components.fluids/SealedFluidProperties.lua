@@ -1,81 +1,81 @@
---- @meta
+--- @meta _
 
 --- @class SealedFluidProperties
 --- @field public class any
---- @field public Str_Alcohol String
---- @field public Str_Calories String
---- @field public Str_Carbohydrates String
---- @field public Str_Endurance String
---- @field public Str_Fatigue String
---- @field public Str_Flu String
---- @field public Str_FoodSickness String
---- @field public Str_Hunger String
---- @field public Str_Lipids String
---- @field public Str_Pain String
---- @field public Str_Proteins String
---- @field public Str_Stress String
---- @field public Str_Thirst String
---- @field public Str_Unhappy String
-SealedFluidProperties = {};
+--- @field public Str_Alcohol string
+--- @field public Str_Calories string
+--- @field public Str_Carbohydrates string
+--- @field public Str_Endurance string
+--- @field public Str_Fatigue string
+--- @field public Str_Flu string
+--- @field public Str_FoodSickness string
+--- @field public Str_Hunger string
+--- @field public Str_Lipids string
+--- @field public Str_Pain string
+--- @field public Str_Proteins string
+--- @field public Str_Stress string
+--- @field public Str_Thirst string
+--- @field public Str_Unhappy string
+SealedFluidProperties = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getAlcohol() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getCalories() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getCarbohydrates() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getEnduranceChange() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getFatigueChange() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getFluReduction() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getFoodSicknessReduction() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getHungerChange() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getLipids() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getPainReduction() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getProteins() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getStressChange() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getThirstChange() end
 
 --- @public
---- @return float
+--- @return number
 function SealedFluidProperties:getUnhappyChange() end
 
 --- @public
@@ -84,15 +84,14 @@ function SealedFluidProperties:hasProperties() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function SealedFluidProperties:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function SealedFluidProperties:save(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
