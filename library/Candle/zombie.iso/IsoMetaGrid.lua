@@ -347,7 +347,7 @@ function IsoMetaGrid:processZones() end
 --- @public
 --- @param arg0 AnimalZone
 --- @return Zone
---- @overload fun(self: IsoMetaGrid, arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: KahluaTable): Zone
+--- @overload fun(self: IsoMetaGrid, arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: table): Zone
 function IsoMetaGrid:registerAnimalZone(arg0) end
 
 --- @public
@@ -355,8 +355,8 @@ function IsoMetaGrid:registerAnimalZone(arg0) end
 --- @param arg1 string
 --- @param arg2 integer
 --- @param arg3 string
---- @param arg4 KahluaTable
---- @param arg5 KahluaTable
+--- @param arg4 table
+--- @param arg5 table
 --- @return Zone
 function IsoMetaGrid:registerGeometryZone(arg0, arg1, arg2, arg3, arg4, arg5) end
 
@@ -368,7 +368,7 @@ function IsoMetaGrid:registerGeometryZone(arg0, arg1, arg2, arg3, arg4, arg5) en
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return Zone
 function IsoMetaGrid:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
@@ -380,7 +380,7 @@ function IsoMetaGrid:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, a
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return nil
 function IsoMetaGrid:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
@@ -392,7 +392,7 @@ function IsoMetaGrid:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return Zone
 function IsoMetaGrid:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
@@ -404,7 +404,7 @@ function IsoMetaGrid:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, ar
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return Zone
 function IsoMetaGrid:registerWorldGenZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 

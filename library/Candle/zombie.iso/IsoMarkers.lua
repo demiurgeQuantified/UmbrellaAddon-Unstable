@@ -27,8 +27,8 @@ function IsoMarkers:addCircleIsoMarker(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg5 boolean
 --- @param arg6 boolean
 --- @return IsoMarker
---- @overload fun(self: IsoMarkers, arg0: KahluaTable, arg1: KahluaTable, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: boolean): IsoMarker
---- @overload fun(self: IsoMarkers, arg0: KahluaTable, arg1: KahluaTable, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: boolean, arg8: number, arg9: number, arg10: number): IsoMarker
+--- @overload fun(self: IsoMarkers, arg0: table, arg1: table, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: boolean): IsoMarker
+--- @overload fun(self: IsoMarkers, arg0: table, arg1: table, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: boolean, arg8: number, arg9: number, arg10: number): IsoMarker
 function IsoMarkers:addIsoMarker(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public

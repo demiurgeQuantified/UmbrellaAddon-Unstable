@@ -36,7 +36,7 @@ function NetTimedAction:parse(arg0, arg1) end
 --- @public
 --- @param arg0 IsoPlayer
 --- @return nil
---- @overload fun(self: NetTimedAction, arg0: IsoPlayer, arg1: KahluaTable): nil
+--- @overload fun(self: NetTimedAction, arg0: IsoPlayer, arg1: table): nil
 function NetTimedAction:set(arg0) end
 
 --- @public

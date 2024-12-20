@@ -27,7 +27,7 @@ function AtomUI:clearStencilRect() end
 function AtomUI:getAngle() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function AtomUI:getColor() end
 
 --- @public
@@ -38,19 +38,19 @@ function AtomUI:getHeight() end
 --- @public
 --- @param arg0 number
 --- @param arg1 number
---- @return KahluaTable
+--- @return table
 function AtomUI:getLuaAbsolutePosition(arg0, arg1) end
 
 --- @public
 --- @param arg0 number
 --- @param arg1 number
---- @return KahluaTable
+--- @return table
 function AtomUI:getLuaLocalPosition(arg0, arg1) end
 
 --- @public
 --- @param arg0 number
 --- @param arg1 number
---- @return KahluaTable
+--- @return table
 function AtomUI:getLuaParentPosition(arg0, arg1) end
 
 --- @public
@@ -93,7 +93,7 @@ function AtomUI:getScaleX() end
 function AtomUI:getScaleY() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function AtomUI:getTable() end
 
 --- @public
@@ -384,6 +384,6 @@ function AtomUI:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return AtomUI
 function AtomUI.new(arg0) end

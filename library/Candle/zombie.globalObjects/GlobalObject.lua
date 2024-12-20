@@ -21,7 +21,7 @@ function GlobalObject:destroyThisObject() end
 function GlobalObject:getIsoObject() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function GlobalObject:getModData() end
 
 --- @public

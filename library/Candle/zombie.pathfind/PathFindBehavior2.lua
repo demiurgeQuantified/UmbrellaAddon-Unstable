@@ -166,7 +166,7 @@ function PathFindBehavior2:pathToLocationF(arg0, arg1, arg2) end
 function PathFindBehavior2:pathToNearest(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function PathFindBehavior2:pathToNearestTable(arg0) end
 

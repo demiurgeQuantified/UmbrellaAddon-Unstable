@@ -16,7 +16,7 @@ function CGlobalObjectSystem:Reset() end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @param arg2 integer
---- @param arg3 KahluaTable
+--- @param arg3 table
 --- @return nil
 function CGlobalObjectSystem:receiveNewLuaObjectAt(arg0, arg1, arg2, arg3) end
 
@@ -29,7 +29,7 @@ function CGlobalObjectSystem:receiveRemoveLuaObjectAt(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function CGlobalObjectSystem:receiveServerCommand(arg0, arg1) end
 
@@ -37,14 +37,14 @@ function CGlobalObjectSystem:receiveServerCommand(arg0, arg1) end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @param arg2 integer
---- @param arg3 KahluaTable
+--- @param arg3 table
 --- @return nil
 function CGlobalObjectSystem:receiveUpdateLuaObjectAt(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 IsoPlayer
---- @param arg2 KahluaTable
+--- @param arg2 table
 --- @return nil
 function CGlobalObjectSystem:sendCommand(arg0, arg1, arg2) end
 

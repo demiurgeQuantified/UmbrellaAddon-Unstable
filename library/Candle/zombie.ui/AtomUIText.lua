@@ -44,6 +44,6 @@ function AtomUIText:setText(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return AtomUIText
 function AtomUIText.new(arg0) end

@@ -10,19 +10,19 @@ BasementsV1 = {}
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function BasementsV1:addAccessDefinitions(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function BasementsV1:addBasementDefinitions(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function BasementsV1:addSpawnLocations(arg0, arg1) end
 
@@ -35,7 +35,7 @@ function BasementsV1:addSpawnLocations(arg0, arg1) end
 --- @param arg5 integer
 --- @param arg6 integer
 --- @param arg7 integer
---- @param arg8 KahluaTable
+--- @param arg8 table
 --- @return BasementSpawnLocation
 function BasementsV1:registerBasementSpawnLocation(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 

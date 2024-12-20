@@ -50,5 +50,5 @@ function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function RadioAPI:getChannels(arg0) end

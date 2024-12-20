@@ -51,7 +51,7 @@ function EditVehicleState:render() end
 function EditVehicleState:setScript(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function EditVehicleState:setTable(arg0) end
 

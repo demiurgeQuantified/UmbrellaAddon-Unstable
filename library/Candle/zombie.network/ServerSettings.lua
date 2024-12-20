@@ -67,7 +67,7 @@ function ServerSettings:loadFiles() end
 
 --- @public
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function ServerSettings:loadSpawnPointsFile(arg0) end
 
 --- @public
@@ -90,7 +90,7 @@ function ServerSettings:saveFiles() end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return boolean
 function ServerSettings:saveSpawnPointsFile(arg0, arg1) end
 

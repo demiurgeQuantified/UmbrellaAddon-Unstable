@@ -78,7 +78,7 @@ function SGlobalObjects.noise(arg0) end
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 IsoPlayer
---- @param arg3 KahluaTable
+--- @param arg3 table
 --- @return boolean
 function SGlobalObjects.receiveClientCommand(arg0, arg1, arg2, arg3) end
 

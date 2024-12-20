@@ -19,19 +19,8 @@ function ZombieGetUpState.instance() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
---- @return nil
-function ZombieGetUpState:animEvent(arg0, arg1) end
-
---- @public
---- @param arg0 IsoGameCharacter
 --- @return nil
 function ZombieGetUpState:enter(arg0) end
-
---- @public
---- @param arg0 IsoGameCharacter
---- @return nil
-function ZombieGetUpState:execute(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter

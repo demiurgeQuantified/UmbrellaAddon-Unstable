@@ -46,8 +46,8 @@ function KahluaUtil.getArg(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 Platform
---- @param arg1 KahluaTable
---- @return KahluaTable
+--- @param arg1 table
+--- @return table
 function KahluaUtil.getClassMetatables(arg0, arg1) end
 
 --- @public
@@ -90,9 +90,9 @@ function KahluaUtil.getOptionalStringArg(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 Platform
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @param arg2 string
---- @return KahluaTable
+--- @return table
 function KahluaUtil.getOrCreateTable(arg0, arg1, arg2) end
 
 --- @public
@@ -106,7 +106,7 @@ function KahluaUtil.getStringArg(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 Platform
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return KahluaThread
 function KahluaUtil.getWorkerThread(arg0, arg1) end
 
@@ -125,7 +125,7 @@ function KahluaUtil.isNegative(arg0) end
 
 --- @public
 --- @static
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 integer
 --- @param arg2 integer
 --- @return integer
@@ -134,7 +134,7 @@ function KahluaUtil.len(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return function
 function KahluaUtil.loadByteCodeFromResource(arg0, arg1) end
 
@@ -177,14 +177,14 @@ function KahluaUtil.round(arg0) end
 
 --- @public
 --- @static
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 KahluaThread
 --- @return nil
 function KahluaUtil.setWorkerThread(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 KahluaThread
 --- @param arg2 string
 --- @return nil

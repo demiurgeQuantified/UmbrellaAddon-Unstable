@@ -54,6 +54,6 @@ function AtomUITexture:setTexture(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return AtomUITexture
 function AtomUITexture.new(arg0) end

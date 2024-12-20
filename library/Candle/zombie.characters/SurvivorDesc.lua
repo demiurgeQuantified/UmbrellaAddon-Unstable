@@ -139,7 +139,7 @@ function SurvivorDesc:getLoyalty() end
 function SurvivorDesc:getMetCount() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function SurvivorDesc:getMeta() end
 
 --- @public

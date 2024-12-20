@@ -15,9 +15,9 @@ EnumSandboxOption = {}
 function EnumSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: EnumSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: EnumSandboxOption, arg0: table): nil
 function EnumSandboxOption:fromTable(arg0) end
 
 --- @public
@@ -87,9 +87,9 @@ function EnumSandboxOption:setTranslation(arg0) end
 function EnumSandboxOption:setValueTranslation(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: EnumSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: EnumSandboxOption, arg0: table): nil
 function EnumSandboxOption:toTable(arg0) end
 
 ------------------------------------

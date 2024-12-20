@@ -164,6 +164,6 @@ function UI3DScene:uiToSceneY(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return UI3DScene
 function UI3DScene.new(arg0) end

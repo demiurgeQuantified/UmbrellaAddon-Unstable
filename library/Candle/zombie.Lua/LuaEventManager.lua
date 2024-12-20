@@ -46,7 +46,7 @@ function LuaEventManager.getEvents(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 Platform
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function LuaEventManager.register(arg0, arg1) end
 

@@ -646,7 +646,7 @@ function UIManager.setbFadeBeforeUI(arg0) end
 
 --- @public
 --- @static
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 any
 --- @return any
 function UIManager.tableget(arg0, arg1) end

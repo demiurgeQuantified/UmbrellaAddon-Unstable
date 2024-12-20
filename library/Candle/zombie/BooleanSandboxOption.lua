@@ -15,9 +15,9 @@ BooleanSandboxOption = {}
 function BooleanSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: BooleanSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: BooleanSandboxOption, arg0: table): nil
 function BooleanSandboxOption:fromTable(arg0) end
 
 --- @public
@@ -68,9 +68,9 @@ function BooleanSandboxOption:setPageName(arg0) end
 function BooleanSandboxOption:setTranslation(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: BooleanSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: BooleanSandboxOption, arg0: table): nil
 function BooleanSandboxOption:toTable(arg0) end
 
 ------------------------------------

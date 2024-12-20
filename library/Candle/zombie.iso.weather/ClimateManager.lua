@@ -343,7 +343,7 @@ function ClimateManager:getMaxWindspeedKph() end
 function ClimateManager:getMaxWindspeedMph() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function ClimateManager:getModData() end
 
 --- @public

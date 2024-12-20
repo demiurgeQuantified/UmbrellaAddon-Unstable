@@ -72,6 +72,11 @@ function PZArrayList:contains(arg0) end
 function PZArrayList:containsAll(arg0) end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function PZArrayList:ensureCapacity(arg0) end
+
+--- @public
 --- @param arg0 any
 --- @return boolean
 function PZArrayList:equals(arg0) end

@@ -11,14 +11,14 @@ ModData = {}
 --- @public
 --- @static
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function ModData.add(arg0, arg1) end
 
 --- @public
 --- @static
 --- @return string
---- @overload fun(arg0: string): KahluaTable
+--- @overload fun(arg0: string): table
 function ModData.create() end
 
 --- @public
@@ -30,13 +30,13 @@ function ModData.exists(arg0) end
 --- @public
 --- @static
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function ModData.get(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function ModData.getOrCreate(arg0) end
 
 --- @public
@@ -47,7 +47,7 @@ function ModData.getTableNames() end
 --- @public
 --- @static
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function ModData.remove(arg0) end
 
 --- @public

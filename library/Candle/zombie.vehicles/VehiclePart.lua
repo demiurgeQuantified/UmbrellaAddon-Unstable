@@ -205,7 +205,7 @@ function VehiclePart:getLuaFunction(arg0) end
 function VehiclePart:getMechanicSkillInstaller() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function VehiclePart:getModData() end
 
 --- @public
@@ -232,7 +232,7 @@ function VehiclePart:getSuspensionDamping() end
 
 --- @public
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function VehiclePart:getTable(arg0) end
 
 --- @public

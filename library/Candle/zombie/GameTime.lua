@@ -204,7 +204,7 @@ function GameTime:getMinutesPerDay() end
 function GameTime:getMinutesStamp() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function GameTime:getModData() end
 
 --- @public

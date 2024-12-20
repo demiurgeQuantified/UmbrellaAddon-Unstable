@@ -8,10 +8,10 @@ BitSet = {}
 ------------- METHODS --------------
 ------------------------------------
 
--- --- @public
--- --- @param arg0 BitSet
--- --- @return nil
--- function BitSet:and(arg0) end
+--- @public
+--- @param arg0 BitSet
+--- @return nil
+BitSet["and"] = function(self, arg0) end
 
 --- @public
 --- @param arg0 BitSet
@@ -88,10 +88,10 @@ function BitSet:notEmpty() end
 --- @return integer
 function BitSet:numBits() end
 
--- --- @public
--- --- @param arg0 BitSet
--- --- @return nil
--- function BitSet:or(arg0) end
+--- @public
+--- @param arg0 BitSet
+--- @return nil
+BitSet["or"] = function(self, arg0) end
 
 --- @public
 --- @param arg0 integer

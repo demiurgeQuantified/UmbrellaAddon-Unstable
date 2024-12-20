@@ -3,7 +3,7 @@
 --- @class LosUtil
 --- @field public class any
 --- @field public cachecleared boolean[]
---- @field public cachedresults byte[][][][]
+--- @field public cachedresults PerPlayerData[]
 --- @field public XSIZE integer
 --- @field public YSIZE integer
 --- @field public ZSIZE integer

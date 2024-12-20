@@ -22,7 +22,7 @@ function GlobalObjectSystem:allocList() end
 function GlobalObjectSystem:finishedWithList(arg0) end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function GlobalObjectSystem:getModData() end
 
 --- @public

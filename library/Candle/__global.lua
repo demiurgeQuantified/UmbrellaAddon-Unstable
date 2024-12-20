@@ -364,13 +364,13 @@ function connectToServerStateCallback(arg0) end
 --- @return nil
 function connectionManagerLog(arg0, arg1) end
 
---- @param arg0 KahluaTable
---- @return KahluaTable
+--- @param arg0 table
+--- @return table
 function convertToPZNetTable(arg0) end
 
---- @param arg0 KahluaTable
---- @return KahluaTable
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable): KahluaTable
+--- @param arg0 table
+--- @return table
+--- @overload fun(arg0: table, arg1: table): table
 function copyTable(arg0) end
 
 --- @param arg0 IsoPlayer
@@ -379,7 +379,7 @@ function copyTable(arg0) end
 --- @param arg3 number
 --- @param arg4 boolean
 --- @param arg5 string
---- @param arg6 KahluaTable
+--- @param arg6 table
 --- @return integer
 function createBuildAction(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
@@ -437,7 +437,7 @@ function createQRCodeTex(arg0, arg1) end
 --- @return IsoDeadBody
 function createRandomDeadBody(arg0, arg1) end
 
---- @return KahluaTable
+--- @return table
 function createRegionFile() end
 
 --- @param arg0 string
@@ -505,7 +505,7 @@ function deleteSave(arg0) end
 --- @return nil
 function disconnect() end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function doChallenge(arg0) end
 
@@ -517,7 +517,7 @@ function doKeyPress(arg0) end
 --- @return nil
 function doLuaDebuggerAction(arg0) end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function doTutorial(arg0) end
 
@@ -556,7 +556,7 @@ function endHelicopter() end
 function endTextFileInput() end
 
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function executeQuery(arg0, arg1) end
 
@@ -618,7 +618,7 @@ function getAllHairStyles(arg0) end
 function getAllItems() end
 
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function getAllItemsForBodyLocation(arg0) end
 
 --- @param arg0 boolean
@@ -902,10 +902,10 @@ function getFilenameOfClosure(arg0) end
 --- @return integer
 function getFirstLineOfClosure(arg0) end
 
---- @return KahluaTable
+--- @return table
 function getFriendsList() end
 
---- @return KahluaTable
+--- @return table
 function getFullSaveDirectoryTable() end
 
 --- @return integer
@@ -1089,7 +1089,7 @@ function getLastStandPlayerFileNames() end
 --- @return string
 function getLastStandPlayersDirectory() end
 
---- @return KahluaTable
+--- @return table
 function getLatestSave() end
 
 --- @param arg0 LuaCallFrame
@@ -1136,13 +1136,13 @@ function getLuaDebuggerErrors() end
 --- @return ArrayList
 function getLuaStackTrace() end
 
---- @return KahluaTable
+--- @return table
 function getMPStatistics() end
 
---- @return KahluaTable
+--- @return table
 function getMPStatus() end
 
---- @return KahluaTable
+--- @return table
 function getMapDirectoryTable() end
 
 --- @param arg0 string
@@ -1150,7 +1150,7 @@ function getMapDirectoryTable() end
 function getMapFoldersForMod(arg0) end
 
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function getMapInfo(arg0) end
 
 --- @return integer
@@ -1174,7 +1174,7 @@ function getMethodParameterCount(arg0) end
 --- @return number
 function getMinimumWorldLevel() end
 
---- @return KahluaTable
+--- @return table
 function getModDirectoryTable() end
 
 --- @param arg0 string
@@ -1234,7 +1234,7 @@ function getOnlinePlayers() end
 function getOnlineUsername() end
 
 --- @param arg0 integer
---- @return KahluaTable
+--- @return table
 function getPacketCounts(arg0) end
 
 --- @return PerformanceSettings
@@ -1256,7 +1256,7 @@ function getPlayerByOnlineID(arg0) end
 function getPlayerFromUsername(arg0) end
 
 --- @param arg0 IsoPlayer
---- @return KahluaTable
+--- @return table
 function getPlayerInfo(arg0) end
 
 --- @param arg0 integer
@@ -1275,7 +1275,7 @@ function getPlayerScreenTop(arg0) end
 --- @return integer
 function getPlayerScreenWidth(arg0) end
 
---- @return KahluaTable
+--- @return table
 function getPublicServersList() end
 
 --- @return IsoPuddles
@@ -1333,11 +1333,11 @@ function getSandboxPresets() end
 --- @return ArrayList
 function getSaveDirectory(arg0) end
 
---- @return KahluaTable
+--- @return table
 function getSaveDirectoryTable() end
 
 --- @param arg0 string
---- @return KahluaTable
+--- @return table
 function getSaveInfo(arg0) end
 
 --- @param arg0 File
@@ -1362,7 +1362,7 @@ function getServerFPS() end
 --- @return string
 function getServerIP() end
 
---- @return KahluaTable
+--- @return table
 function getServerList() end
 
 --- @return string
@@ -1390,10 +1390,10 @@ function getServerSavedWorldVersion(arg0) end
 --- @return ServerSettingsManager
 function getServerSettingsManager() end
 
---- @return KahluaTable
+--- @return table
 function getServerSpawnRegions() end
 
---- @return KahluaTable
+--- @return table
 function getServerStatistic() end
 
 --- @return boolean
@@ -1537,7 +1537,7 @@ function getUsers() end
 function getVehicleById(arg0) end
 
 --- @param arg0 BaseVehicle
---- @return KahluaTable
+--- @return table
 function getVehicleInfo(arg0) end
 
 --- @param arg0 integer
@@ -1571,7 +1571,7 @@ function getWorldMarkers() end
 function getWorldSoundManager() end
 
 --- @param arg0 IsoZombie
---- @return KahluaTable
+--- @return table
 function getZombieInfo(arg0) end
 
 --- @return ZomboidRadio
@@ -1594,12 +1594,12 @@ function getZones(arg0, arg1, arg2) end
 --- @return boolean
 function hasBreakpoint(arg0, arg1) end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 any
 --- @return boolean
 function hasDataBreakpoint(arg0, arg1) end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 any
 --- @return boolean
 function hasDataReadBreakpoint(arg0, arg1) end
@@ -2262,9 +2262,9 @@ function sendButcherAnimal(arg0, arg1) end
 
 --- @param arg0 string
 --- @param arg1 string
---- @param arg2 KahluaTable
+--- @param arg2 table
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: KahluaTable): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: table): nil
 function sendClientCommand(arg0, arg1, arg2) end
 
 --- @param arg0 IsoPlayer
@@ -2507,9 +2507,9 @@ function sendSecretKey(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @param arg0 string
 --- @param arg1 string
---- @param arg2 KahluaTable
+--- @param arg2 table
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: KahluaTable): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: table): nil
 function sendServerCommand(arg0, arg1, arg2) end
 
 --- @param arg0 string
@@ -2669,7 +2669,7 @@ function setZoomLevels(arg0) end
 --- @param arg0 Role
 --- @param arg1 string
 --- @param arg2 Color
---- @param arg3 KahluaTable
+--- @param arg3 table
 --- @return nil
 function setupRole(arg0, arg1, arg2, arg3) end
 
@@ -2750,7 +2750,7 @@ function spawnpointsExistsForMod(arg0, arg1) end
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
 --- @param arg2 IsoGridSquare
---- @param arg3 KahluaTable
+--- @param arg3 table
 --- @return integer
 function startFishingAction(arg0, arg1, arg2, arg3) end
 
@@ -2842,7 +2842,7 @@ function testHelicopter() end
 --- @return nil
 function testSound() end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 any
 --- @return nil
 function timSort(arg0, arg1) end
@@ -2851,12 +2851,12 @@ function timSort(arg0, arg1) end
 --- @return integer
 function toInt(arg0) end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 any
 --- @return nil
 function toggleBreakOnChange(arg0, arg1) end
 
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 any
 --- @return nil
 function toggleBreakOnRead(arg0, arg1) end
@@ -2893,7 +2893,7 @@ function tradingUISendRemoveItem(arg0, arg1, arg2) end
 function tradingUISendUpdateState(arg0, arg1, arg2) end
 
 --- @param arg0 HashMap
---- @return KahluaTable
+--- @return table
 function transformIntoKahluaTable(arg0) end
 
 --- @param arg0 number

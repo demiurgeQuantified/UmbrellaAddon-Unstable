@@ -15,9 +15,9 @@ DoubleSandboxOption = {}
 function DoubleSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: DoubleSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: DoubleSandboxOption, arg0: table): nil
 function DoubleSandboxOption:fromTable(arg0) end
 
 --- @public
@@ -68,9 +68,9 @@ function DoubleSandboxOption:setPageName(arg0) end
 function DoubleSandboxOption:setTranslation(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: DoubleSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: DoubleSandboxOption, arg0: table): nil
 function DoubleSandboxOption:toTable(arg0) end
 
 ------------------------------------

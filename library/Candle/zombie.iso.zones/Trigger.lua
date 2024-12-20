@@ -9,7 +9,7 @@ Trigger = {}
 ------------------------------------
 
 --- @public
---- @return KahluaTable
+--- @return table
 function Trigger:getModData() end
 
 ------------------------------------

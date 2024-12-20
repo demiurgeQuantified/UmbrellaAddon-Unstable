@@ -521,7 +521,7 @@ function UIElement:getScrollHeight() end
 function UIElement:getScrollWithParent() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function UIElement:getTable() end
 
 --- @public
@@ -974,7 +974,7 @@ function UIElement:setScrollWithParent(arg0) end
 function UIElement:setStencilRect(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function UIElement:setTable(arg0) end
 
@@ -1048,5 +1048,5 @@ function UIElement:update() end
 
 --- @public
 --- @return UIElement
---- @overload fun(arg0: KahluaTable): UIElement
+--- @overload fun(arg0: table): UIElement
 function UIElement.new() end

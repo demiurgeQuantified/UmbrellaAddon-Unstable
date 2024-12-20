@@ -40,6 +40,6 @@ function IsoLuaMover:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return IsoLuaMover
 function IsoLuaMover.new(arg0) end

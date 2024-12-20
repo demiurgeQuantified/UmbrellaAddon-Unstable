@@ -106,7 +106,7 @@ function DebugChunkState:save() end
 function DebugChunkState:setBoolean(arg0, arg1) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function DebugChunkState:setTable(arg0) end
 

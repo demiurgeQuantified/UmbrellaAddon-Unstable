@@ -147,7 +147,7 @@ function CraftRecipeData:getFirstManualInputFor(arg0) end
 function CraftRecipeData:getInputItems(arg0) end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function CraftRecipeData:getModData() end
 
 --- @public

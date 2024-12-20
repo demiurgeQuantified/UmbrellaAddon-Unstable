@@ -981,7 +981,7 @@ function Core:getSaveFolder() end
 function Core:getScreenHeight() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function Core:getScreenModes() end
 
 --- @public

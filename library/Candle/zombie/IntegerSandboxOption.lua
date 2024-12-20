@@ -15,9 +15,9 @@ IntegerSandboxOption = {}
 function IntegerSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: IntegerSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: IntegerSandboxOption, arg0: table): nil
 function IntegerSandboxOption:fromTable(arg0) end
 
 --- @public
@@ -68,9 +68,9 @@ function IntegerSandboxOption:setPageName(arg0) end
 function IntegerSandboxOption:setTranslation(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: IntegerSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: IntegerSandboxOption, arg0: table): nil
 function IntegerSandboxOption:toTable(arg0) end
 
 ------------------------------------

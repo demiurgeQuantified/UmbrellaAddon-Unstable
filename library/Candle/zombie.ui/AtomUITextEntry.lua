@@ -274,6 +274,6 @@ function AtomUITextEntry:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return AtomUITextEntry
 function AtomUITextEntry.new(arg0) end

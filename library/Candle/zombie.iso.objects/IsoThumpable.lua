@@ -267,7 +267,7 @@ function IsoThumpable:getLockedByCode() end
 function IsoThumpable:getMaxHealth() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoThumpable:getModData() end
 
 --- @public
@@ -311,7 +311,7 @@ function IsoThumpable:getSpriteModel() end
 function IsoThumpable:getSquare() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoThumpable:getTable() end
 
 --- @public
@@ -509,7 +509,7 @@ function IsoThumpable:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @param arg2 ByteBuffer
 --- @return nil
 function IsoThumpable:saveChange(arg0, arg1, arg2) end
@@ -692,7 +692,7 @@ function IsoThumpable:setLockedByPadlock(arg0) end
 function IsoThumpable:setMaxHealth(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function IsoThumpable:setModData(arg0) end
 
@@ -717,7 +717,7 @@ function IsoThumpable:setSprite(arg0) end
 function IsoThumpable:setSpriteFromName(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function IsoThumpable:setTable(arg0) end
 
@@ -761,6 +761,6 @@ function IsoThumpable:update() end
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoThumpable
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean, arg4: KahluaTable): IsoThumpable
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: string, arg4: boolean, arg5: KahluaTable): IsoThumpable
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean, arg4: table): IsoThumpable
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: string, arg4: boolean, arg5: table): IsoThumpable
 function IsoThumpable.new(arg0) end

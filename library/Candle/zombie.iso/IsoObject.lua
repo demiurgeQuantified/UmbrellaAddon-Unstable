@@ -463,7 +463,7 @@ function IsoObject:getMaskClickedY(arg0, arg1, arg2) end
 function IsoObject:getMasterObject() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoObject:getModData() end
 
 --- @public
@@ -626,7 +626,7 @@ function IsoObject:getSurfaceOffset() end
 function IsoObject:getSurfaceOffsetNoTable() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoObject:getTable() end
 
 --- @public
@@ -759,6 +759,10 @@ function IsoObject:isBlink() end
 --- @public
 --- @return boolean
 function IsoObject:isBush() end
+
+--- @public
+--- @return boolean
+function IsoObject:isCanPath() end
 
 --- @public
 --- @return boolean
@@ -1100,7 +1104,7 @@ function IsoObject:save(arg0) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @param arg2 ByteBuffer
 --- @return nil
 function IsoObject:saveChange(arg0, arg1, arg2) end
@@ -1114,7 +1118,7 @@ function IsoObject:saveState(arg0) end
 --- @param arg0 string
 --- @return nil
 --- @overload fun(self: IsoObject, arg0: string, arg1: Object[]): nil
---- @overload fun(self: IsoObject, arg0: string, arg1: KahluaTable): nil
+--- @overload fun(self: IsoObject, arg0: string, arg1: table): nil
 function IsoObject:sendObjectChange(arg0) end
 
 --- @public
@@ -1204,7 +1208,7 @@ function IsoObject:setKeyId(arg0) end
 function IsoObject:setLightSource(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function IsoObject:setModData(arg0) end
 
@@ -1348,7 +1352,7 @@ function IsoObject:setSpriteModelName(arg0) end
 function IsoObject:setSquare(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function IsoObject:setTable(arg0) end
 

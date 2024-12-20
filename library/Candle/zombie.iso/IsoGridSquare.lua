@@ -161,7 +161,7 @@ function IsoGridSquare:AddSpecialTileObject(arg0) end
 --- @param arg1 integer
 --- @param arg2 string
 --- @param arg3 string
---- @param arg4 KahluaTable
+--- @param arg4 table
 --- @return IsoThumpable
 function IsoGridSquare:AddStairs(arg0, arg1, arg2, arg3, arg4) end
 
@@ -1014,15 +1014,15 @@ function IsoGridSquare:getLocalTemporaryObjects() end
 function IsoGridSquare:getLootZone() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoGridSquare:getLuaMovingObjectList() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoGridSquare:getLuaTileObjectList() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoGridSquare:getModData() end
 
 --- @public

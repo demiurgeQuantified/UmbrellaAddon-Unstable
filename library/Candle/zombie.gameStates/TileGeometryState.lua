@@ -86,7 +86,7 @@ function TileGeometryState:save() end
 function TileGeometryState:setBoolean(arg0, arg1) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function TileGeometryState:setTable(arg0) end
 

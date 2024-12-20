@@ -137,7 +137,7 @@ function IsoFire:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @param arg2 ByteBuffer
 --- @return nil
 function IsoFire:saveChange(arg0, arg1, arg2) end

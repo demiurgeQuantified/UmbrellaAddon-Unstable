@@ -442,7 +442,7 @@ function IsoCell:getDangerUpdate() end
 
 --- @public
 --- @param arg0 integer
---- @return KahluaTable
+--- @return table
 function IsoCell:getDrag(arg0) end
 
 --- @public
@@ -510,7 +510,7 @@ function IsoCell:getLightInfoUpdate() end
 function IsoCell:getLightSourceAt(arg0, arg1, arg2) end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function IsoCell:getLuaObjectList() end
 
 --- @public
@@ -816,7 +816,7 @@ function IsoCell:setCurrentLightZ(arg0) end
 function IsoCell:setDangerUpdate(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @param arg1 integer
 --- @return nil
 function IsoCell:setDrag(arg0, arg1) end

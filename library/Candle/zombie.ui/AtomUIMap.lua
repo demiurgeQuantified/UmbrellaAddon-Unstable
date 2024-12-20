@@ -29,6 +29,6 @@ function AtomUIMap:revealOnMap() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return AtomUIMap
 function AtomUIMap.new(arg0) end

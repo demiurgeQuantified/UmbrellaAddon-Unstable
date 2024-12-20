@@ -113,7 +113,7 @@ function SpriteModelEditorState:save() end
 function SpriteModelEditorState:setBoolean(arg0, arg1) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function SpriteModelEditorState:setTable(arg0) end
 

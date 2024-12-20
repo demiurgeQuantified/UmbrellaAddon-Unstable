@@ -33,7 +33,7 @@ function InventoryItem.loadItem(arg0, arg1) end
 function InventoryItem:CanStack(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function InventoryItem:CopyModData(arg0) end
 
@@ -171,7 +171,7 @@ function InventoryItem:copyClothing(arg0) end
 function InventoryItem:copyConditionModData(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function InventoryItem:copyModData(arg0) end
 
@@ -760,7 +760,7 @@ function InventoryItem:getMinutesToBurn() end
 function InventoryItem:getMinutesToCook() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function InventoryItem:getModData() end
 
 --- @public

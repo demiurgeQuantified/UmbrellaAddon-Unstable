@@ -37,7 +37,7 @@ function Stage:getCraftingSound() end
 function Stage:getDisplayName() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function Stage:getItemsLua() end
 
 --- @public
@@ -57,7 +57,7 @@ function Stage:getName() end
 function Stage:getNorthSprite() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function Stage:getPerksLua() end
 
 --- @public

@@ -77,8 +77,8 @@ function IsoMarker:hasTempSquareObject() end
 --- @param arg4 IsoGridSquare
 --- @param arg5 boolean
 --- @return nil
---- @overload fun(self: IsoMarker, arg0: KahluaTable, arg1: KahluaTable, arg2: integer, arg3: integer, arg4: integer, arg5: IsoGridSquare): nil
---- @overload fun(self: IsoMarker, arg0: KahluaTable, arg1: KahluaTable, arg2: integer, arg3: integer, arg4: integer, arg5: IsoGridSquare, arg6: boolean): nil
+--- @overload fun(self: IsoMarker, arg0: table, arg1: table, arg2: integer, arg3: integer, arg4: integer, arg5: IsoGridSquare): nil
+--- @overload fun(self: IsoMarker, arg0: table, arg1: table, arg2: integer, arg3: integer, arg4: integer, arg5: IsoGridSquare, arg6: boolean): nil
 function IsoMarker:init(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public

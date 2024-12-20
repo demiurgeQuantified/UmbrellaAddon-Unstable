@@ -48,7 +48,7 @@ function DebugGlobalObjectState:render() end
 function DebugGlobalObjectState:renderScene() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function DebugGlobalObjectState:setTable(arg0) end
 

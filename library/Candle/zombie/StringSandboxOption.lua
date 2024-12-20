@@ -15,9 +15,9 @@ StringSandboxOption = {}
 function StringSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: StringSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: StringSandboxOption, arg0: table): nil
 function StringSandboxOption:fromTable(arg0) end
 
 --- @public
@@ -68,9 +68,9 @@ function StringSandboxOption:setPageName(arg0) end
 function StringSandboxOption:setTranslation(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
---- @overload fun(self: StringSandboxOption, arg0: KahluaTable): nil
+--- @overload fun(self: StringSandboxOption, arg0: table): nil
 function StringSandboxOption:toTable(arg0) end
 
 ------------------------------------

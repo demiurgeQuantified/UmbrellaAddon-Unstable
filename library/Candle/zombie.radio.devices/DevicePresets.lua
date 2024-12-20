@@ -38,7 +38,7 @@ function DevicePresets:getPresetName(arg0) end
 function DevicePresets:getPresets() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function DevicePresets:getPresetsLua() end
 
 --- @public

@@ -67,7 +67,7 @@ function AttachmentEditorState:reenter() end
 function AttachmentEditorState:render() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function AttachmentEditorState:setTable(arg0) end
 

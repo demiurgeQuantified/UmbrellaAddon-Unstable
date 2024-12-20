@@ -136,7 +136,7 @@ function MainScreen.resetLuaIfNeeded() end
 function MainScreen.startTutorial() end
 
 ---@return any
-function MainScreen:addCredit(title, name) end
+function MainScreen:addCredit(credit, number) end
 
 ---@return any
 function MainScreen:calcLogoHeight() end

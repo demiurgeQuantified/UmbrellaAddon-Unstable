@@ -119,7 +119,7 @@ function BuildingDef:getRoom(arg0) end
 function BuildingDef:getRooms() end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function BuildingDef:getTable() end
 
 --- @public

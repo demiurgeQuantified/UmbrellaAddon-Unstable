@@ -82,9 +82,9 @@ function IsoWorld.readInt(arg0) end
 
 --- @public
 --- @static
---- @param arg0 InputStream
+--- @param arg0 RandomAccessFile
 --- @return string
---- @overload fun(arg0: RandomAccessFile): string
+--- @overload fun(arg0: InputStream, arg1: StringBuilder): string
 function IsoWorld.readString(arg0) end
 
 ------------------------------------
@@ -361,7 +361,7 @@ function IsoWorld:isValidSquare(arg0, arg1, arg2) end
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return Zone
 function IsoWorld:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
@@ -373,7 +373,7 @@ function IsoWorld:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return nil
 function IsoWorld:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
@@ -382,7 +382,7 @@ function IsoWorld:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg
 --- @param arg1 integer
 --- @param arg2 integer
 --- @param arg3 integer
---- @param arg4 KahluaTable
+--- @param arg4 table
 --- @return nil
 function IsoWorld:registerSpawnOrigin(arg0, arg1, arg2, arg3, arg4) end
 
@@ -394,7 +394,7 @@ function IsoWorld:registerSpawnOrigin(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg4 integer
 --- @param arg5 integer
 --- @param arg6 integer
---- @param arg7 KahluaTable
+--- @param arg7 table
 --- @return Zone
 function IsoWorld:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 

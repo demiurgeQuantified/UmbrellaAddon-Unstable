@@ -430,7 +430,7 @@ function IsoDoor:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @param arg2 ByteBuffer
 --- @return nil
 function IsoDoor:saveChange(arg0, arg1, arg2) end
@@ -520,5 +520,5 @@ function IsoDoor:transmitSetCurtainOpen(arg0) end
 --- @return IsoDoor
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean): IsoDoor
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean): IsoDoor
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean, arg4: KahluaTable): IsoDoor
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean, arg4: table): IsoDoor
 function IsoDoor.new(arg0) end

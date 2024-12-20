@@ -67,7 +67,7 @@ function SteamWorkshopItem:getTags() end
 function SteamWorkshopItem:getTitle() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return boolean
 function SteamWorkshopItem:getUpdateProgress(arg0) end
 

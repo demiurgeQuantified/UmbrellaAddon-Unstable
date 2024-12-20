@@ -14,7 +14,7 @@ MapObjects = {}
 --- @param arg1 function
 --- @param arg2 integer
 --- @return nil
---- @overload fun(arg0: KahluaTable, arg1: function, arg2: integer): nil
+--- @overload fun(arg0: table, arg1: function, arg2: integer): nil
 function MapObjects.OnLoadWithSprite(arg0, arg1, arg2) end
 
 --- @public
@@ -23,7 +23,7 @@ function MapObjects.OnLoadWithSprite(arg0, arg1, arg2) end
 --- @param arg1 function
 --- @param arg2 integer
 --- @return nil
---- @overload fun(arg0: KahluaTable, arg1: function, arg2: integer): nil
+--- @overload fun(arg0: table, arg1: function, arg2: integer): nil
 function MapObjects.OnNewWithSprite(arg0, arg1, arg2) end
 
 --- @public

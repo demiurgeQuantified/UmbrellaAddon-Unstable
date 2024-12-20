@@ -24,6 +24,7 @@
 ---@field isDoorFrame any
 ---@field isStairs any
 ---@field isThumpable any
+---@field isWallLike any
 ---@field maxTime any
 ---@field name any
 ---@field needToBeAgainstWall any
@@ -37,6 +38,7 @@
 ---@field spriteCache any
 ---@field sq any
 ---@field thumpDmg any
+---@field tileCheck any
 ---@field tileSprite any
 ---@field [any] any
 ISBuildIsoEntity = ISBuildingObject:derive("ISBuildIsoEntity")

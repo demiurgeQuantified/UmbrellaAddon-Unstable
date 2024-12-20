@@ -57,7 +57,7 @@ function CGlobalObjects.noise(arg0) end
 --- @static
 --- @param arg0 string
 --- @param arg1 string
---- @param arg2 KahluaTable
+--- @param arg2 table
 --- @return boolean
 function CGlobalObjects.receiveServerCommand(arg0, arg1, arg2) end
 

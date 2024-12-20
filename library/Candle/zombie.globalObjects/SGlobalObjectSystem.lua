@@ -34,7 +34,7 @@ function SGlobalObjectSystem:addGlobalObjectOnClient(arg0) end
 function SGlobalObjectSystem:chunkLoaded(arg0, arg1) end
 
 --- @public
---- @return KahluaTable
+--- @return table
 function SGlobalObjectSystem:getInitialStateForClient() end
 
 --- @public
@@ -49,7 +49,7 @@ function SGlobalObjectSystem:loadedWorldVersion() end
 --- @public
 --- @param arg0 string
 --- @param arg1 IsoPlayer
---- @param arg2 KahluaTable
+--- @param arg2 table
 --- @return nil
 function SGlobalObjectSystem:receiveClientCommand(arg0, arg1, arg2) end
 
@@ -65,22 +65,22 @@ function SGlobalObjectSystem:save() end
 
 --- @public
 --- @param arg0 string
---- @param arg1 KahluaTable
+--- @param arg1 table
 --- @return nil
 function SGlobalObjectSystem:sendCommand(arg0, arg1) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function SGlobalObjectSystem:setModDataKeys(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function SGlobalObjectSystem:setObjectModDataKeys(arg0) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param arg0 table
 --- @return nil
 function SGlobalObjectSystem:setObjectSyncKeys(arg0) end
 
