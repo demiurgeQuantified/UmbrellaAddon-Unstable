@@ -1947,6 +1947,18 @@ SettingsTable = {
 						name = "FirearmNoiseMultiplier",
 					},
 					{
+						name = "FirearmJamMultiplier",
+					},
+					{
+						name = "FirearmMoodleMultiplier",
+					},
+					{
+						name = "FirearmWeatherMultiplier",
+					},
+					{
+						name = "FirearmHeadGearEffect",
+					},
+					{
 						name = "AttackBlockMovements",
 					},
 					{

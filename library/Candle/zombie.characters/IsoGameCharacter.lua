@@ -2436,8 +2436,8 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return BaseGrappleable
---- @overload fun(self: IsoGameCharacter): IGrappleable
+--- @return IGrappleable
+--- @overload fun(self: IsoGameCharacter): BaseGrappleable
 --- @overload fun(self: IsoGameCharacter): IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 

@@ -3344,6 +3344,21 @@ Hook.ContextualAction = {
 ---Called when checking if an item is allowed inside a container with this function assigned. The container's OnlyAcceptCategory will be checked first if it has one.<br><br>container - The container the item is being added to<br>item - The item being added to the container<br><br>Returns: acceptItem - Whether to allow the item in the container
 ---@alias Item_AcceptItemFunction fun(container:ItemContainer,item:InventoryItem):acceptItem:boolean
 
+---Called when checking if an item can be used in the recipe.<br><br>item - The item being tested.<br><br>Returns: test - Whether to allow the item in the recipe.
+---@alias CraftRecipe_OnTest fun(item:InventoryItem):test:boolean
+
+---Called at the start of crafting the recipe.<br><br>character - The character crafting the recipe. Recipes started by a workstation will pass nil.<br>
+---@alias CraftRecipe_OnStart fun(recipeData:CraftRecipeData,character:IsoGameCharacter?)
+
+---Called every tick while crafting the recipe.<br><br>
+---@alias CraftRecipe_OnUpdate fun(recipeData:CraftRecipeData)
+
+---Called when successfully crafting the recipe.<br><br>character - The character who crafted the recipe. Recipes started by a workstation wil pass nil.<br>
+---@alias CraftRecipe_OnCreate fun(recipeData:CraftRecipeData,character:IsoGameCharacter?)
+
+---Called when failing to craft the recipe.<br><br>
+---@alias CraftRecipe_OnFailed fun(recipeData:CraftRecipeData)
+
 ---Called when checking if a character is able to perform the recipe - before showing the option to craft it, and every tick during crafting.<br><br>recipe - The recipe being checked<br>character - The character the recipe is being checked for<br>item - The item the player right clicked to see this recipe. Null when checking whether to show the recipe in the crafting menu, but will be checked with the item set during crafting.<br><br>Returns: canPerform - Whether to allow the character to craft the recipe
 ---@alias Recipe_OnCanPerform fun(recipe:Recipe,character:IsoGameCharacter,item:InventoryItem?):canPerform:boolean
 
