@@ -11,7 +11,7 @@ BitSet = {}
 --- @public
 --- @param arg0 BitSet
 --- @return nil
-BitSet["and"] = function(arg0) end
+BitSet["and"] = function(self, arg0) end
 
 --- @public
 --- @param arg0 BitSet
@@ -91,7 +91,7 @@ function BitSet:numBits() end
 --- @public
 --- @param arg0 BitSet
 --- @return nil
-BitSet["or"] = function(arg0) end
+BitSet["or"] = function(self, arg0) end
 
 --- @public
 --- @param arg0 integer
