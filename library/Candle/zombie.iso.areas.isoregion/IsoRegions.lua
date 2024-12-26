@@ -31,7 +31,7 @@
 --- @field public FILE_SEP string
 --- @field public PRINT_D boolean
 --- @field public SINGLE_CHUNK_PACKET_SIZE integer
-IsoRegions = {}
+IsoRegions = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -172,6 +172,7 @@ function IsoRegions.update() end
 --- @param arg0 string
 --- @return nil
 function IsoRegions.warn(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

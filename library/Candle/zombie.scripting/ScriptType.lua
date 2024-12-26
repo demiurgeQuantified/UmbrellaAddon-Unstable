@@ -36,7 +36,7 @@
 --- @field public XuiLayout ScriptType
 --- @field public XuiSkin ScriptType
 --- @field public XuiStyle ScriptType
-ScriptType = {}
+ScriptType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -57,6 +57,7 @@ function ScriptType.valueOf(arg0) end
 --- @static
 --- @return ScriptType[]
 function ScriptType.values() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -92,3 +93,5 @@ function ScriptType:isVerbose() end
 --- @param arg0 boolean
 --- @return nil
 function ScriptType:setVerbose(arg0) end
+
+

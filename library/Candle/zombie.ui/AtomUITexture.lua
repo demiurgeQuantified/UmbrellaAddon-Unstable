@@ -2,7 +2,7 @@
 
 --- @class AtomUITexture: AtomUI
 --- @field public class any
-AtomUITexture = {}
+AtomUITexture = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -48,6 +48,7 @@ function AtomUITexture:setSlice9(arg0, arg1, arg2, arg3) end
 --- @param arg0 Texture
 --- @return nil
 function AtomUITexture:setTexture(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

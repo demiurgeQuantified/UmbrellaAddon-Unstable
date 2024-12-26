@@ -9,7 +9,7 @@
 --- @field public Steam EnergyType
 --- @field public Thermal EnergyType
 --- @field public VoidEnergy EnergyType
-EnergyType = {}
+EnergyType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -44,6 +44,7 @@ function EnergyType.valueOf(arg0) end
 --- @return EnergyType[]
 function EnergyType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -55,3 +56,5 @@ function EnergyType:getId() end
 --- @public
 --- @return string
 function EnergyType:toStringLower() end
+
+

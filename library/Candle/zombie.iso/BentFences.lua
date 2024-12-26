@@ -2,7 +2,7 @@
 
 --- @class BentFences
 --- @field public class any
-BentFences = {}
+BentFences = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ BentFences = {}
 --- @static
 --- @return BentFences
 function BentFences.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,6 +54,7 @@ function BentFences:swapTiles(arg0, arg1) end
 --- @param arg0 IsoObject
 --- @return nil
 function BentFences:unbendFence(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

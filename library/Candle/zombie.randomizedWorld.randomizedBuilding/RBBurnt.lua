@@ -2,7 +2,7 @@
 
 --- @class RBBurnt: RandomizedBuildingBase
 --- @field public class any
-RBBurnt = {}
+RBBurnt = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RBBurnt:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBBurnt:randomizeBuilding(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

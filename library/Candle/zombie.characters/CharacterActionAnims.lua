@@ -25,7 +25,7 @@
 --- @field public RemoveBullets CharacterActionAnims
 --- @field public Shave CharacterActionAnims
 --- @field public TakePills CharacterActionAnims
-CharacterActionAnims = {}
+CharacterActionAnims = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,3 +41,5 @@ function CharacterActionAnims.valueOf(arg0) end
 --- @static
 --- @return CharacterActionAnims[]
 function CharacterActionAnims.values() end
+
+

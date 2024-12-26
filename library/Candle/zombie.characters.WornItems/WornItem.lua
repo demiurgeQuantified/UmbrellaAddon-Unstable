@@ -2,7 +2,7 @@
 
 --- @class WornItem
 --- @field public class any
-WornItem = {}
+WornItem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,6 +15,7 @@ function WornItem:getItem() end
 --- @public
 --- @return string
 function WornItem:getLocation() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

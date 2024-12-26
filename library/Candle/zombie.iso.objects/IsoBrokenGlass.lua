@@ -2,7 +2,7 @@
 
 --- @class IsoBrokenGlass: IsoObject
 --- @field public class any
-IsoBrokenGlass = {}
+IsoBrokenGlass = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,6 +51,7 @@ function IsoBrokenGlass:renderObjectPicker(arg0, arg1, arg2, arg3) end
 --- @param arg1 boolean
 --- @return nil
 function IsoBrokenGlass:save(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

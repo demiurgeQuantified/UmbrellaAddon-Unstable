@@ -2,7 +2,7 @@
 
 --- @class AnimalChunk
 --- @field public class any
-AnimalChunk = {}
+AnimalChunk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -40,6 +40,7 @@ function AnimalChunk:getVirtualAnimals() end
 --- @public
 --- @return nil
 function AnimalChunk:updateTracks() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

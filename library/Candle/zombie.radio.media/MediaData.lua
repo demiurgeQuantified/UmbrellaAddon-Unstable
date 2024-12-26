@@ -2,7 +2,7 @@
 
 --- @class MediaData
 --- @field public class any
-MediaData = {}
+MediaData = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -117,6 +117,7 @@ function MediaData:setSubtitle(arg0) end
 --- @param arg0 string
 --- @return nil
 function MediaData:setTitle(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

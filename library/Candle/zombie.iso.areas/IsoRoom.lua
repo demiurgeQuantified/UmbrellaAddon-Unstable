@@ -2,7 +2,7 @@
 
 --- @class IsoRoom
 --- @field public class any
-IsoRoom = {}
+IsoRoom = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -172,6 +172,7 @@ function IsoRoom:spawnZombies() end
 --- @public
 --- @return nil
 function IsoRoom:useWater() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

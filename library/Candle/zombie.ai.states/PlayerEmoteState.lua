@@ -2,7 +2,7 @@
 
 --- @class PlayerEmoteState: State
 --- @field public class any
-PlayerEmoteState = {}
+PlayerEmoteState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ PlayerEmoteState = {}
 --- @static
 --- @return PlayerEmoteState
 function PlayerEmoteState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -41,6 +42,7 @@ function PlayerEmoteState:exit(arg0) end
 --- @public
 --- @return boolean
 function PlayerEmoteState:isDoingActionThatCanBeCancelled() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

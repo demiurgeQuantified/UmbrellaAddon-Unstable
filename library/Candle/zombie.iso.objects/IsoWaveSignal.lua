@@ -1,11 +1,8 @@
 --- @meta _
 
---- @class IsoWaveSignal: IsoObject
+--- @class IsoWaveSignal: IsoObject, WaveSignalDevice, ChatElementOwner, Talker
 --- @field public class any
---- @implement WaveSignalDevice
---- @implement ChatElementOwner
---- @implement Talker
-IsoWaveSignal = {}
+IsoWaveSignal = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,6 +12,7 @@ IsoWaveSignal = {}
 --- @static
 --- @return nil
 function IsoWaveSignal.Reset() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -168,6 +166,7 @@ function IsoWaveSignal:setTalkerType(arg0) end
 --- @public
 --- @return nil
 function IsoWaveSignal:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

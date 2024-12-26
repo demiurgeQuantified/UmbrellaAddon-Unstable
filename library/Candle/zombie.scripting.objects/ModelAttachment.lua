@@ -2,7 +2,7 @@
 
 --- @class ModelAttachment
 --- @field public class any
-ModelAttachment = {}
+ModelAttachment = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -74,6 +74,7 @@ function ModelAttachment:setUpdateConstraint(arg0) end
 --- @param arg0 number
 --- @return nil
 function ModelAttachment:setZOffset(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

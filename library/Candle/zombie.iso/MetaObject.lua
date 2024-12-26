@@ -2,7 +2,7 @@
 
 --- @class MetaObject
 --- @field public class any
-MetaObject = {}
+MetaObject = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,6 +32,7 @@ function MetaObject:getY() end
 --- @param arg0 boolean
 --- @return nil
 function MetaObject:setUsed(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

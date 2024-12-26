@@ -2,7 +2,7 @@
 
 --- @class FaceInfo
 --- @field public class any
-FaceInfo = {}
+FaceInfo = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -67,3 +67,5 @@ function FaceInfo:isMultiSquare() end
 --- @param arg3 IsoObject
 --- @return boolean
 function FaceInfo:verifyObject(arg0, arg1, arg2, arg3) end
+
+

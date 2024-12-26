@@ -2,7 +2,7 @@
 
 --- @class PlayerSearchMode
 --- @field public class any
-PlayerSearchMode = {}
+PlayerSearchMode = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,6 +51,7 @@ function PlayerSearchMode:getShaderRadius() end
 --- @public
 --- @return boolean
 function PlayerSearchMode:isShaderEnabled() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

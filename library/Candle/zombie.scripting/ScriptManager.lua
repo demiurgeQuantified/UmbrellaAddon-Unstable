@@ -1,13 +1,12 @@
 --- @meta _
 
---- @class ScriptManager
+--- @class ScriptManager: IScriptObjectStore
 --- @field public class any
---- @implement IScriptObjectStore
 --- @field public Base string
 --- @field public Base_Module string
 --- @field public instance ScriptManager
 --- @field public VanillaID string
-ScriptManager = {}
+ScriptManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,6 +60,7 @@ function ScriptManager.println(arg0, arg1) end
 --- @param arg1 ArrayList
 --- @return nil
 function ScriptManager.resolveGetItemTypes(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -537,6 +537,7 @@ function ScriptManager:searchFolders(arg0, arg1, arg2) end
 --- @public
 --- @return nil
 function ScriptManager:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

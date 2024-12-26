@@ -1,9 +1,7 @@
 --- @meta _
 
---- @class AngelCodeFont
+--- @class AngelCodeFont: Font, AssetStateObserver
 --- @field public class any
---- @implement Font
---- @implement AssetStateObserver
 --- @field public curA number
 --- @field public curB number
 --- @field public curCol Color
@@ -11,7 +9,7 @@
 --- @field public curR number
 --- @field public xoff integer
 --- @field public yoff integer
-AngelCodeFont = {}
+AngelCodeFont = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -77,6 +75,7 @@ function AngelCodeFont:isEmpty() end
 --- @return nil
 --- @overload fun(self: AngelCodeFont, arg0: State, arg1: State, arg2: Asset): nil
 function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

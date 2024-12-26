@@ -2,7 +2,7 @@
 
 --- @class XuiColorsScript: BaseScriptObject
 --- @field public class any
-XuiColorsScript = {}
+XuiColorsScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -21,6 +21,7 @@ function XuiColorsScript:getColorMap() end
 --- @public
 --- @return string
 function XuiColorsScript:getName() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class TileDepthTextureAssignmentManager
 --- @field public class any
-TileDepthTextureAssignmentManager = {}
+TileDepthTextureAssignmentManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ TileDepthTextureAssignmentManager = {}
 --- @static
 --- @return TileDepthTextureAssignmentManager
 function TileDepthTextureAssignmentManager.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,3 +64,5 @@ function TileDepthTextureAssignmentManager:initSprites() end
 --- @param arg0 string
 --- @return nil
 function TileDepthTextureAssignmentManager:save(arg0) end
+
+

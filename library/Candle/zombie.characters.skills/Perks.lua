@@ -49,7 +49,7 @@
 --- @field public Tracking Perk
 --- @field public Trapping Perk
 --- @field public Woodwork Perk
-Perks = {}
+Perks = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -71,6 +71,7 @@ function Perks.fromIndex(arg0) end
 --- @static
 --- @return integer
 function Perks.getMaxIndex() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

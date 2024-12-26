@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class Profession
+--- @class Profession: IListBoxItem
 --- @field public class any
---- @implement IListBoxItem
-Profession = {}
+Profession = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -109,6 +108,7 @@ function Profession:setName(arg0) end
 --- @param arg0 string
 --- @return nil
 function Profession:setType(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class IsoChunkRegion
+--- @class IsoChunkRegion: IChunkRegion
 --- @field public class any
---- @implement IChunkRegion
-IsoChunkRegion = {}
+IsoChunkRegion = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -107,3 +106,5 @@ function IsoChunkRegion:setIsoWorldRegion(arg0) end
 --- @public
 --- @return IsoWorldRegion
 function IsoChunkRegion:unlinkFromIsoWorldRegion() end
+
+

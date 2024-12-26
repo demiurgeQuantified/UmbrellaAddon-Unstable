@@ -2,7 +2,7 @@
 
 --- @class IsoWorldInventoryObject: IsoObject
 --- @field public class any
-IsoWorldInventoryObject = {}
+IsoWorldInventoryObject = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,6 +15,7 @@ IsoWorldInventoryObject = {}
 --- @return number
 --- @overload fun(arg0: IsoGridSquare, arg1: number, arg2: boolean): number
 function IsoWorldInventoryObject.getSurfaceAlpha(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -210,6 +211,7 @@ function IsoWorldInventoryObject:update() end
 --- @public
 --- @return nil
 function IsoWorldInventoryObject:updateSprite() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

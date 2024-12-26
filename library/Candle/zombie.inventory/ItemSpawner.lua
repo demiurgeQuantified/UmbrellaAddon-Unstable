@@ -2,7 +2,7 @@
 
 --- @class ItemSpawner
 --- @field public class any
-ItemSpawner = {}
+ItemSpawner = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -32,6 +32,7 @@ function ItemSpawner.spawnItem(arg0, arg1) end
 --- @return List
 --- @overload fun(arg0: InventoryItem, arg1: integer, arg2: ItemContainer): List
 function ItemSpawner.spawnItems(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

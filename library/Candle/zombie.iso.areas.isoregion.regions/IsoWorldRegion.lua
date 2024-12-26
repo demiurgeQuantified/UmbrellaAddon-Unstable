@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class IsoWorldRegion
+--- @class IsoWorldRegion: IWorldRegion
 --- @field public class any
---- @implement IWorldRegion
-IsoWorldRegion = {}
+IsoWorldRegion = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -96,3 +95,5 @@ function IsoWorldRegion:swapIsoChunkRegions(arg0) end
 --- @public
 --- @return nil
 function IsoWorldRegion:unlinkNeighbors() end
+
+

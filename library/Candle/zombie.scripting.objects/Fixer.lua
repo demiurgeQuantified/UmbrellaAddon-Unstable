@@ -2,7 +2,7 @@
 
 --- @class Fixer
 --- @field public class any
-Fixer = {}
+Fixer = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function Fixer:getFixerSkills() end
 --- @public
 --- @return integer
 function Fixer:getNumberOfUse() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ForceHitReactionLocation
 --- @field public class any
-ForceHitReactionLocation = {}
+ForceHitReactionLocation = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,6 +39,7 @@ function ForceHitReactionLocation:setAdminValue(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function ForceHitReactionLocation:setEnableAdmin(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

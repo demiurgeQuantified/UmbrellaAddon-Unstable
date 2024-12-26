@@ -2,7 +2,7 @@
 
 --- @class TimedActionScript: BaseScriptObject
 --- @field public class any
-TimedActionScript = {}
+TimedActionScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -96,6 +96,7 @@ function TimedActionScript:isCantSit() end
 --- @public
 --- @return boolean
 function TimedActionScript:isFaceObject() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

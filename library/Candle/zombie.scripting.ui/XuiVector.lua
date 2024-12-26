@@ -2,7 +2,7 @@
 
 --- @class XuiVector: XuiVar
 --- @field public class any
-XuiVector = {}
+XuiVector = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -55,6 +55,7 @@ function XuiVector:isxPercent() end
 --- @public
 --- @return boolean
 function XuiVector:isyPercent() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

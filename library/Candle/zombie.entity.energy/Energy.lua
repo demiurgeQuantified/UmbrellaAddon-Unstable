@@ -7,7 +7,7 @@
 --- @field public Steam Energy
 --- @field public Thermal Energy
 --- @field public VoidEnergy Energy
-Energy = {}
+Energy = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -55,6 +55,7 @@ function Energy.loadEnergy(arg0, arg1) end
 --- @return nil
 function Energy.saveEnergy(arg0, arg1) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -86,3 +87,5 @@ function Energy:getVerticalBarTexture() end
 --- @public
 --- @return boolean
 function Energy:isVanilla() end
+
+

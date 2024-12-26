@@ -2,7 +2,7 @@
 
 --- @class IsoMolotovCocktail: IsoPhysicsObject
 --- @field public class any
-IsoMolotovCocktail = {}
+IsoMolotovCocktail = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,6 +38,7 @@ function IsoMolotovCocktail:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @public
 --- @return nil
 function IsoMolotovCocktail:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

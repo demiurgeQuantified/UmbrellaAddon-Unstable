@@ -2,7 +2,7 @@
 
 --- @class VoiceStyle
 --- @field public class any
-VoiceStyle = {}
+VoiceStyle = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,6 +27,7 @@ function VoiceStyle:getVoiceType() end
 --- @public
 --- @return boolean
 function VoiceStyle:isValid() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RVSUtilityVehicle: RandomizedVehicleStoryBase
 --- @field public class any
-RVSUtilityVehicle = {}
+RVSUtilityVehicle = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -40,6 +40,7 @@ function RVSUtilityVehicle:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSUtilityVehicle:spawnElement(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,12 +1,8 @@
 --- @meta _
 
---- @class LinkedList: AbstractSequentialList
+--- @class LinkedList: AbstractSequentialList, List, Deque, Cloneable, Serializable
 --- @field public class any
---- @implement List
---- @implement Deque
---- @implement Cloneable
---- @implement Serializable
-LinkedList = {}
+LinkedList = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -33,6 +29,7 @@ function LinkedList.copyOf(arg0) end
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function LinkedList.of() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -292,6 +289,7 @@ function LinkedList:subList(arg0, arg1) end
 --- @overload fun(self: LinkedList, arg0: Object[]): Object[]
 --- @overload fun(self: LinkedList, arg0: Object[]): Object[]
 function LinkedList:toArray() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

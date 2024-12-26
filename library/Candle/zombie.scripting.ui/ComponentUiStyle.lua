@@ -2,7 +2,7 @@
 
 --- @class ComponentUiStyle
 --- @field public class any
-ComponentUiStyle = {}
+ComponentUiStyle = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,6 +31,7 @@ function ComponentUiStyle:getXuiStyle() end
 --- @public
 --- @return boolean
 function ComponentUiStyle:isEnabled() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

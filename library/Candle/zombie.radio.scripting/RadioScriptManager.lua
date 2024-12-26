@@ -2,7 +2,7 @@
 
 --- @class RadioScriptManager
 --- @field public class any
-RadioScriptManager = {}
+RadioScriptManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,6 +17,7 @@ function RadioScriptManager.getInstance() end
 --- @static
 --- @return boolean
 function RadioScriptManager.hasInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -99,3 +100,5 @@ function RadioScriptManager:simulateScriptsUntil(arg0, arg1) end
 --- @public
 --- @return nil
 function RadioScriptManager:update() end
+
+

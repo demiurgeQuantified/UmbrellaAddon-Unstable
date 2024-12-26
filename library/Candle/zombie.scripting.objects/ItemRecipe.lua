@@ -2,7 +2,7 @@
 
 --- @class ItemRecipe
 --- @field public class any
-ItemRecipe = {}
+ItemRecipe = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,6 +28,7 @@ function ItemRecipe:getUse() end
 --- @param arg0 string
 --- @return nil
 function ItemRecipe:setModule(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

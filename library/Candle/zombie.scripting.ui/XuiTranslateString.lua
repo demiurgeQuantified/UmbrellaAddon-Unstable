@@ -2,7 +2,7 @@
 
 --- @class XuiTranslateString: XuiVar
 --- @field public class any
-XuiTranslateString = {}
+XuiTranslateString = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,3 +16,5 @@ function XuiTranslateString:getValueString() end
 --- @return any
 --- @overload fun(self: XuiTranslateString): string
 function XuiTranslateString:value() end
+
+

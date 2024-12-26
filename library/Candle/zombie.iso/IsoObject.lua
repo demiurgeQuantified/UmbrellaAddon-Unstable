@@ -1,9 +1,7 @@
 --- @meta _
 
---- @class IsoObject: GameEntity
+--- @class IsoObject: GameEntity, Serializable, Thumpable
 --- @field public class any
---- @implement Serializable
---- @implement Thumpable
 --- @field public bmod number
 --- @field public gmod number
 --- @field public lastRendered IsoObject
@@ -15,7 +13,7 @@
 --- @field public OBF_HighlightRenderOnce integer
 --- @field public OBF_SatChair integer
 --- @field public rmod number
-IsoObject = {}
+IsoObject = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,6 +37,7 @@ function IsoObject.FindWaterSourceOnSquare(arg0) end
 --- @param arg0 IsoCell
 --- @param arg1 integer
 --- @return Class
+--- @deprecated
 function IsoObject.factoryClassFromFileInput(arg0, arg1) end
 
 --- @public
@@ -54,6 +53,7 @@ function IsoObject.factoryFromFileInput(arg0, arg1) end
 --- @param arg0 IsoCell
 --- @param arg1 integer
 --- @return IsoObject
+--- @deprecated
 function IsoObject.factoryFromFileInput_OLD(arg0, arg1) end
 
 --- @public
@@ -100,6 +100,7 @@ function IsoObject.setLastRendered(arg0) end
 --- @param arg0 IsoObject
 --- @return nil
 function IsoObject.setLastRenderedRendered(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1422,6 +1423,7 @@ function IsoObject:transmitCompleteItemToClients() end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoObject:transmitCompleteItemToServer() end
 
 --- @public
@@ -1443,6 +1445,7 @@ function IsoObject:transmitUpdatedSpriteToClients() end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoObject:transmitUpdatedSpriteToServer() end
 
 --- @public
@@ -1456,6 +1459,7 @@ function IsoObject:update() end
 --- @public
 --- @param arg0 InventoryItem
 --- @return nil
+--- @deprecated
 function IsoObject:useItemOn(arg0) end
 
 --- @public
@@ -1467,6 +1471,7 @@ function IsoObject:useWater(arg0) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function IsoObject:writeToRemoteBuffer(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

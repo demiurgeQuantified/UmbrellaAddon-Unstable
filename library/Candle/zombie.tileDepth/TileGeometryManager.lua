@@ -3,7 +3,7 @@
 --- @class TileGeometryManager
 --- @field public class any
 --- @field public ONE_PIXEL_OFFSET boolean
-TileGeometryManager = {}
+TileGeometryManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ TileGeometryManager = {}
 --- @static
 --- @return TileGeometryManager
 function TileGeometryManager.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -108,3 +109,5 @@ function TileGeometryManager:setTileProperty(arg0, arg1, arg2, arg3, arg4, arg5)
 --- @param arg0 string
 --- @return nil
 function TileGeometryManager:write(arg0) end
+
+

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class DevicePresets
+--- @class DevicePresets: Cloneable
 --- @field public class any
---- @implement Cloneable
-DevicePresets = {}
+DevicePresets = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -87,6 +86,7 @@ function DevicePresets:setPresetName(arg0, arg1) end
 --- @param arg0 ArrayList
 --- @return nil
 function DevicePresets:setPresets(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

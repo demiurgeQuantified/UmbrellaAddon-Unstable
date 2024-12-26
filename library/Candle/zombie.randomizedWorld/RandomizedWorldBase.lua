@@ -2,7 +2,7 @@
 
 --- @class RandomizedWorldBase
 --- @field public class any
-RandomizedWorldBase = {}
+RandomizedWorldBase = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -229,6 +229,7 @@ function RandomizedWorldBase.is2x2AreaClear(arg0) end
 --- @param arg0 Zone
 --- @return nil
 function RandomizedWorldBase.removeAllVehiclesOnZone(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -930,6 +931,7 @@ function RandomizedWorldBase:spawnCarOnNearestNav(arg0, arg1) end
 --- @param arg0 IsoGridSquare
 --- @return nil
 function RandomizedWorldBase:trashSquare(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

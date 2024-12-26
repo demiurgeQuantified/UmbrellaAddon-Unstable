@@ -2,7 +2,7 @@
 
 --- @class EntityEventType: Enum
 --- @field public class any
-EntityEventType = {}
+EntityEventType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,3 +18,5 @@ function EntityEventType.valueOf(arg0) end
 --- @static
 --- @return EntityEventType[]
 function EntityEventType.values() end
+
+

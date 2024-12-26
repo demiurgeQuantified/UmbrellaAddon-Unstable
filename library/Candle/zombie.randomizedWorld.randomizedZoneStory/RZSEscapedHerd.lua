@@ -2,7 +2,7 @@
 
 --- @class RZSEscapedHerd: RandomizedZoneStoryBase
 --- @field public class any
-RZSEscapedHerd = {}
+RZSEscapedHerd = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RZSEscapedHerd = {}
 --- @return ArrayList
 function RZSEscapedHerd.getBreeds() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,6 +22,7 @@ function RZSEscapedHerd.getBreeds() end
 --- @param arg0 Zone
 --- @return nil
 function RZSEscapedHerd:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

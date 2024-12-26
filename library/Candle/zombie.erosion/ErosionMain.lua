@@ -2,7 +2,7 @@
 
 --- @class ErosionMain
 --- @field public class any
-ErosionMain = {}
+ErosionMain = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -34,6 +34,7 @@ function ErosionMain.Reset() end
 --- @static
 --- @return ErosionMain
 function ErosionMain.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -92,6 +93,7 @@ function ErosionMain:snowCheck() end
 --- @public
 --- @return nil
 function ErosionMain:start() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

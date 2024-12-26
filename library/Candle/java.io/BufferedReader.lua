@@ -2,7 +2,7 @@
 
 --- @class BufferedReader: Reader
 --- @field public class any
-BufferedReader = {}
+BufferedReader = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,6 +46,7 @@ function BufferedReader:reset() end
 --- @param arg0 integer
 --- @return integer
 function BufferedReader:skip(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

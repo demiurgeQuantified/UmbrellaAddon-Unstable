@@ -2,7 +2,7 @@
 
 --- @class DummyCharacterSoundEmitter: BaseCharacterSoundEmitter
 --- @field public class any
-DummyCharacterSoundEmitter = {}
+DummyCharacterSoundEmitter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -128,6 +128,7 @@ function DummyCharacterSoundEmitter:tick() end
 --- @public
 --- @return nil
 function DummyCharacterSoundEmitter:unregister() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class VehicleZone: Zone
 --- @field public class any
 --- @field public VZF_FaceDirection short
-VehicleZone = {}
+VehicleZone = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ VehicleZone = {}
 --- @public
 --- @return boolean
 function VehicleZone:isFaceDirection() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class FluidFilterScript: BaseScriptObject
 --- @field public class any
-FluidFilterScript = {}
+FluidFilterScript = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ FluidFilterScript = {}
 --- @return FluidFilterScript
 --- @overload fun(arg0: boolean): FluidFilterScript
 function FluidFilterScript.GetAnonymous() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,6 +72,7 @@ function FluidFilterScript:getVersion(arg0) end
 --- @public
 --- @return boolean
 function FluidFilterScript:isSingleFluid() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

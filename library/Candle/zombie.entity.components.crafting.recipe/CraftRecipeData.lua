@@ -2,7 +2,7 @@
 
 --- @class CraftRecipeData
 --- @field public class any
-CraftRecipeData = {}
+CraftRecipeData = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,6 +17,7 @@ CraftRecipeData = {}
 --- @param arg4 boolean
 --- @return CraftRecipeData
 function CraftRecipeData.Alloc(arg0, arg1, arg2, arg3, arg4) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -267,6 +268,7 @@ function CraftRecipeData:setMonitor(arg0) end
 --- @param arg0 CraftRecipe
 --- @return nil
 function CraftRecipeData:setRecipe(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

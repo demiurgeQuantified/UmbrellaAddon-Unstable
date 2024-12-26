@@ -2,7 +2,7 @@
 
 --- @class ItemDataList
 --- @field public class any
-ItemDataList = {}
+ItemDataList = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -57,6 +57,7 @@ function ItemDataList:setProcessed(arg0) end
 --- @public
 --- @return integer
 function ItemDataList:size() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

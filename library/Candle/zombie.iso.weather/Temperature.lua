@@ -27,7 +27,7 @@
 --- @field public skinCelciusMin number
 --- @field public TrueInsulationMultiplier number
 --- @field public TrueWindresistMultiplier number
-Temperature = {}
+Temperature = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -113,6 +113,7 @@ function Temperature.getWindChillAmountForPlayer(arg0) end
 --- @static
 --- @return nil
 function Temperature.reset() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

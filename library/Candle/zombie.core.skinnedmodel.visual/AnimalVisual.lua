@@ -2,7 +2,7 @@
 
 --- @class AnimalVisual: BaseVisual
 --- @field public class any
-AnimalVisual = {}
+AnimalVisual = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,6 +71,7 @@ function AnimalVisual:save(arg0) end
 --- @param arg0 string
 --- @return nil
 function AnimalVisual:setSkinTextureName(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

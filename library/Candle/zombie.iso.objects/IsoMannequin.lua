@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class IsoMannequin: IsoObject
+--- @class IsoMannequin: IsoObject, IHumanVisual
 --- @field public class any
---- @implement IHumanVisual
-IsoMannequin = {}
+IsoMannequin = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,6 +40,7 @@ function IsoMannequin.renderMoveableItem(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg4 IsoDirections
 --- @return nil
 function IsoMannequin.renderMoveableObject(arg0, arg1, arg2, arg3, arg4) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -217,6 +217,7 @@ function IsoMannequin:shouldRenderEachFrame() end
 --- @param arg1 IsoGameCharacter
 --- @return nil
 function IsoMannequin:wearItem(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

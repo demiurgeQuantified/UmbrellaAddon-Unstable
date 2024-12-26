@@ -2,7 +2,7 @@
 
 --- @class AirFront
 --- @field public class any
-AirFront = {}
+AirFront = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -61,6 +61,7 @@ function AirFront:setFrontType(arg0) end
 --- @param arg0 number
 --- @return nil
 function AirFront:setStrength(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

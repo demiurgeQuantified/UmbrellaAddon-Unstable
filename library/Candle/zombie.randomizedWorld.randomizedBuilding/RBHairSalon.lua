@@ -2,7 +2,7 @@
 
 --- @class RBHairSalon: RandomizedBuildingBase
 --- @field public class any
-RBHairSalon = {}
+RBHairSalon = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function RBHairSalon:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBHairSalon:roomValid(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

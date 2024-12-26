@@ -2,7 +2,7 @@
 
 --- @class Asset
 --- @field public class any
-Asset = {}
+Asset = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,3 +63,5 @@ function Asset:removeDependency(arg0) end
 --- @param arg0 AssetParams
 --- @return nil
 function Asset:setAssetParams(arg0) end
+
+

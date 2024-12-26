@@ -2,7 +2,7 @@
 
 --- @class FaceScript
 --- @field public class any
-FaceScript = {}
+FaceScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,6 +28,7 @@ function FaceScript:getTotalWidth() end
 --- @public
 --- @return integer
 function FaceScript:getZLayers() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class ObjectRenderEffects
 --- @field public class any
 --- @field public ENABLED boolean
-ObjectRenderEffects = {}
+ObjectRenderEffects = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -46,6 +46,7 @@ function ObjectRenderEffects.release(arg0) end
 --- @return nil
 function ObjectRenderEffects.updateStatic() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -63,3 +64,5 @@ function ObjectRenderEffects:copyMainFromOther(arg0) end
 --- @public
 --- @return boolean
 function ObjectRenderEffects:update() end
+
+

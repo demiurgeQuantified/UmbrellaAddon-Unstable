@@ -5,7 +5,7 @@
 --- @field public FemaleForenames ArrayList
 --- @field public MaleForenames ArrayList
 --- @field public Surnames ArrayList
-SurvivorFactory = {}
+SurvivorFactory = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -85,6 +85,7 @@ function SurvivorFactory.randomName(arg0) end
 --- @param arg0 SurvivorDesc
 --- @return nil
 function SurvivorFactory.setTorso(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

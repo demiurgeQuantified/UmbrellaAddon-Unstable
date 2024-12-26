@@ -2,7 +2,7 @@
 
 --- @class ClothingPatch
 --- @field public class any
-ClothingPatch = {}
+ClothingPatch = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,6 +35,7 @@ function ClothingPatch:load(arg0, arg1) end
 --- @param arg1 integer
 --- @param arg2 boolean
 --- @return nil
+--- @deprecated
 function ClothingPatch:load_old(arg0, arg1, arg2) end
 
 --- @public
@@ -47,7 +48,9 @@ function ClothingPatch:save(arg0, arg1) end
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
 --- @return nil
+--- @deprecated
 function ClothingPatch:save_old(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

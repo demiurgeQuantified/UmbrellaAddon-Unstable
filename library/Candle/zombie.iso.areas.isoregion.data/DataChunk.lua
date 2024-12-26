@@ -2,7 +2,7 @@
 
 --- @class DataChunk
 --- @field public class any
-DataChunk = {}
+DataChunk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -82,3 +82,5 @@ function DataChunk:setSelectedFlags(arg0, arg1, arg2) end
 --- @param arg2 integer
 --- @return integer
 function DataChunk:squareGetFlags(arg0, arg1, arg2) end
+
+

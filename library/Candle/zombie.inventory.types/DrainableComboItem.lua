@@ -1,10 +1,8 @@
 --- @meta _
 
---- @class DrainableComboItem: InventoryItem
+--- @class DrainableComboItem: InventoryItem, Drainable, IUpdater
 --- @field public class any
---- @implement Drainable
---- @implement IUpdater
-DrainableComboItem = {}
+DrainableComboItem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -194,6 +192,7 @@ function DrainableComboItem:setUseWhileUnequiped(arg0) end
 --- @public
 --- @param arg0 number
 --- @return nil
+--- @deprecated
 function DrainableComboItem:setUsedDelta(arg0) end
 
 --- @public
@@ -217,6 +216,7 @@ function DrainableComboItem:update() end
 --- @public
 --- @return nil
 function DrainableComboItem:updateWeight() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

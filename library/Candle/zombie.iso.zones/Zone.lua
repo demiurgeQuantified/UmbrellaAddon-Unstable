@@ -3,7 +3,7 @@
 --- @class Zone
 --- @field public class any
 --- @field public s_clipper Clipper
-Zone = {}
+Zone = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,6 +14,7 @@ Zone = {}
 --- @param arg0 string
 --- @return boolean
 function Zone.isPreferredZoneForSquare(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -252,6 +253,7 @@ function Zone:setY(arg0) end
 --- @public
 --- @return string
 function Zone:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

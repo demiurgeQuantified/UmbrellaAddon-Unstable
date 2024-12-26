@@ -2,7 +2,7 @@
 
 --- @class FixingManager
 --- @field public class any
-FixingManager = {}
+FixingManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -48,6 +48,7 @@ function FixingManager.getFixes(arg0) end
 --- @param arg2 InventoryItem
 --- @return nil
 function FixingManager.useFixer(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

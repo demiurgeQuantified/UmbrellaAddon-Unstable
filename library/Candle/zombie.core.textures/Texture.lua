@@ -1,10 +1,7 @@
 --- @meta _
 
---- @class Texture: Asset
+--- @class Texture: Asset, IDestroyable, ITexture, Serializable
 --- @field public class any
---- @implement IDestroyable
---- @implement ITexture
---- @implement Serializable
 --- @field public ASSET_TYPE AssetType
 --- @field public bDoingQuad boolean
 --- @field public BindCount integer
@@ -17,7 +14,7 @@
 --- @field public nullTextures HashSet
 --- @field public totalTextureID integer
 --- @field public WarnFailFindTexture boolean
-Texture = {}
+Texture = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -118,6 +115,7 @@ function Texture.steamAvatarChanged(arg0) end
 --- @param arg0 string
 --- @return Texture
 function Texture.trygetTexture(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -532,6 +530,7 @@ function Texture:splitIcon() end
 --- @public
 --- @return string
 function Texture:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

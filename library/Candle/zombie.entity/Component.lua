@@ -2,7 +2,7 @@
 
 --- @class Component
 --- @field public class any
-Component = {}
+Component = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -78,3 +78,5 @@ function Component:sendServerPacketTo(arg0, arg1) end
 --- @public
 --- @return string
 function Component:toString() end
+
+

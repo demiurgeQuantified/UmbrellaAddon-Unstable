@@ -2,7 +2,7 @@
 
 --- @class EntityEvent
 --- @field public class any
-EntityEvent = {}
+EntityEvent = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,6 +14,7 @@ EntityEvent = {}
 --- @param arg1 GameEntity
 --- @return EntityEvent
 function EntityEvent.Alloc(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,3 +31,5 @@ function EntityEvent:getEventType() end
 --- @public
 --- @return nil
 function EntityEvent:release() end
+
+

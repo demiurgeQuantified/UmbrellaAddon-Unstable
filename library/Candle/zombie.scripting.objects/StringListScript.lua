@@ -2,7 +2,7 @@
 
 --- @class StringListScript: BaseScriptObject
 --- @field public class any
-StringListScript = {}
+StringListScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,3 +47,5 @@ function StringListScript:getValues() end
 --- @public
 --- @return nil
 function StringListScript:reset() end
+
+

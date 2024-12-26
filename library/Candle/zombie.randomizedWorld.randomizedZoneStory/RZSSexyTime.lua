@@ -2,7 +2,7 @@
 
 --- @class RZSSexyTime: RandomizedZoneStoryBase
 --- @field public class any
-RZSSexyTime = {}
+RZSSexyTime = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSSexyTime = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSSexyTime:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

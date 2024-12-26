@@ -3,7 +3,7 @@
 --- @class WGUtils
 --- @field public class any
 --- @field public instance WGUtils
-WGUtils = {}
+WGUtils = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,3 +50,5 @@ function WGUtils:methodName(arg0) end
 --- @param arg2 String[]
 --- @return string
 function WGUtils:methodsCall(arg0, arg1, arg2) end
+
+

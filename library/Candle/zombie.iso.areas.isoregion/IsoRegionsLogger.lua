@@ -2,7 +2,7 @@
 
 --- @class IsoRegionsLogger
 --- @field public class any
-IsoRegionsLogger = {}
+IsoRegionsLogger = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function IsoRegionsLogger:isDirtyUI() end
 --- @public
 --- @return nil
 function IsoRegionsLogger:unsetDirtyUI() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

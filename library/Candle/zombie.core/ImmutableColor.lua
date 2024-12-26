@@ -19,7 +19,7 @@
 --- @field public transparent ImmutableColor
 --- @field public white ImmutableColor
 --- @field public yellow ImmutableColor
-ImmutableColor = {}
+ImmutableColor = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -43,6 +43,7 @@ function ImmutableColor.decode(arg0) end
 --- @static
 --- @return ImmutableColor
 function ImmutableColor.random() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -143,6 +144,7 @@ function ImmutableColor:toMutableColor() end
 --- @public
 --- @return string
 function ImmutableColor:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

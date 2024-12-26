@@ -2,7 +2,7 @@
 
 --- @class Part
 --- @field public class any
-Part = {}
+Part = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -52,6 +52,7 @@ function Part:setMechanicRequireKey(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function Part:setRepairMechanic(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

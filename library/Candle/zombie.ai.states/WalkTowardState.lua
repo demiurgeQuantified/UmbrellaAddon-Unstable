@@ -2,7 +2,7 @@
 
 --- @class WalkTowardState: State
 --- @field public class any
-WalkTowardState = {}
+WalkTowardState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ WalkTowardState = {}
 --- @static
 --- @return WalkTowardState
 function WalkTowardState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -48,6 +49,7 @@ function WalkTowardState:exit(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function WalkTowardState:isMoving(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

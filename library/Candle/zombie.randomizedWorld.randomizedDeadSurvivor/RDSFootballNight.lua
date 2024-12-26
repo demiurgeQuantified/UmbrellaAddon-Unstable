@@ -2,7 +2,7 @@
 
 --- @class RDSFootballNight: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSFootballNight = {}
+RDSFootballNight = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RDSFootballNight:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSFootballNight:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

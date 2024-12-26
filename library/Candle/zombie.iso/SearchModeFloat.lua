@@ -2,7 +2,7 @@
 
 --- @class SearchModeFloat
 --- @field public class any
-SearchModeFloat = {}
+SearchModeFloat = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -91,3 +91,5 @@ function SearchModeFloat:setTargets(arg0, arg1) end
 --- @param arg0 number
 --- @return nil
 function SearchModeFloat:update(arg0) end
+
+

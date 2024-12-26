@@ -3,7 +3,7 @@
 --- @class LuaTimedAction: BaseAction
 --- @field public class any
 --- @field public statObj Object[]
-LuaTimedAction = {}
+LuaTimedAction = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,6 +28,7 @@ function LuaTimedAction:update() end
 --- @public
 --- @return boolean
 function LuaTimedAction:valid() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

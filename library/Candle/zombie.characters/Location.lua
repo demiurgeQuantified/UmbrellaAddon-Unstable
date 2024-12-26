@@ -2,7 +2,7 @@
 
 --- @class Location
 --- @field public class any
-Location = {}
+Location = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,6 +32,7 @@ function Location:getZ() end
 --- @param arg2 integer
 --- @return Location
 function Location:set(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class Language
 --- @field public class any
-Language = {}
+Language = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function Language.FromString(arg0) end
 --- @param arg0 integer
 --- @return Language
 function Language.fromIndex(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,3 +52,5 @@ function Language:text() end
 --- @public
 --- @return string
 function Language:toString() end
+
+

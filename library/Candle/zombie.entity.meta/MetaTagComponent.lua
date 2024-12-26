@@ -2,7 +2,7 @@
 
 --- @class MetaTagComponent: Component
 --- @field public class any
-MetaTagComponent = {}
+MetaTagComponent = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,3 +16,5 @@ function MetaTagComponent:getStoredID() end
 --- @param arg0 integer
 --- @return nil
 function MetaTagComponent:setStoredID(arg0) end
+
+

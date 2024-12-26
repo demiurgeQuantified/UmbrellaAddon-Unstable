@@ -2,7 +2,7 @@
 
 --- @class DoubleConfigOption: ConfigOption
 --- @field public class any
-DoubleConfigOption = {}
+DoubleConfigOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,6 +71,7 @@ function DoubleConfigOption:setValue(arg0) end
 --- @param arg0 any
 --- @return nil
 function DoubleConfigOption:setValueFromObject(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class BaseVisual
 --- @field public class any
-BaseVisual = {}
+BaseVisual = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -41,6 +41,7 @@ function BaseVisual:load(arg0, arg1) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function BaseVisual:save(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class MashingLogicScript: ComponentScript
 --- @field public class any
-MashingLogicScript = {}
+MashingLogicScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,3 +49,5 @@ function MashingLogicScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function MashingLogicScript:reset() end
+
+

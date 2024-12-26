@@ -2,7 +2,7 @@
 
 --- @class IsoDirectionSet
 --- @field public class any
-IsoDirectionSet = {}
+IsoDirectionSet = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,6 +15,7 @@ IsoDirectionSet = {}
 --- @return IsoDirections
 function IsoDirectionSet.rotate(arg0, arg1) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -22,6 +23,7 @@ function IsoDirectionSet.rotate(arg0, arg1) end
 --- @public
 --- @return IsoDirections
 function IsoDirectionSet:getNext() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

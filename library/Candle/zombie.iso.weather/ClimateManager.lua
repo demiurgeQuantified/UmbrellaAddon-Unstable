@@ -38,7 +38,7 @@
 --- @field public PacketWeatherUpdate integer
 --- @field public THE_DESCENDING_FOG boolean
 --- @field public WINTER_IS_COMING boolean
-ClimateManager = {}
+ClimateManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -131,6 +131,7 @@ function ClimateManager.posToPosNegRange(arg0) end
 --- @param arg0 ClimateManager
 --- @return nil
 function ClimateManager.setInstance(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -727,6 +728,7 @@ function ClimateManager:updateEveryTenMins() end
 --- @public
 --- @return nil
 function ClimateManager:updateOLD() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

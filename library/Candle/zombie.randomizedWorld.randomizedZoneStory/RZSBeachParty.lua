@@ -2,7 +2,7 @@
 
 --- @class RZSBeachParty: RandomizedZoneStoryBase
 --- @field public class any
-RZSBeachParty = {}
+RZSBeachParty = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RZSBeachParty = {}
 --- @return ArrayList
 function RZSBeachParty.getBeachClutter() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,6 +22,7 @@ function RZSBeachParty.getBeachClutter() end
 --- @param arg0 Zone
 --- @return nil
 function RZSBeachParty:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

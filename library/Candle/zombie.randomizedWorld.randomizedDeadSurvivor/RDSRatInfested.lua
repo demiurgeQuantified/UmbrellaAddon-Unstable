@@ -2,7 +2,7 @@
 
 --- @class RDSRatInfested: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSRatInfested = {}
+RDSRatInfested = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RDSRatInfested = {}
 --- @param arg0 RoomDef
 --- @return nil
 function RDSRatInfested.ratRoom(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,6 +29,7 @@ function RDSRatInfested:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSRatInfested:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,10 +1,9 @@
 --- @meta _
 
---- @class UITextBox2: UIElement
+--- @class UITextBox2: UIElement, UITextEntryInterface
 --- @field public class any
---- @implement UITextEntryInterface
 --- @field public ConsoleHasFocus boolean
-UITextBox2 = {}
+UITextBox2 = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -384,6 +383,7 @@ function UITextBox2:update() end
 --- @public
 --- @return nil
 function UITextBox2:updateText() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

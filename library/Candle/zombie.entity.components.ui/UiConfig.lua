@@ -2,7 +2,7 @@
 
 --- @class UiConfig: Component
 --- @field public class any
-UiConfig = {}
+UiConfig = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,3 +32,5 @@ function UiConfig:getSkinOrDefault() end
 --- @public
 --- @return boolean
 function UiConfig:isUiEnabled() end
+
+

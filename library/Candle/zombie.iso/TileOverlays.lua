@@ -3,7 +3,7 @@
 --- @class TileOverlays
 --- @field public class any
 --- @field public instance TileOverlays
-TileOverlays = {}
+TileOverlays = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,6 +37,7 @@ function TileOverlays:hasOverlays(arg0) end
 --- @param arg0 IsoObject
 --- @return nil
 function TileOverlays:updateTileOverlaySprite(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

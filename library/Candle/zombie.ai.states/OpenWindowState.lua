@@ -2,7 +2,7 @@
 
 --- @class OpenWindowState: State
 --- @field public class any
-OpenWindowState = {}
+OpenWindowState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ OpenWindowState = {}
 --- @static
 --- @return OpenWindowState
 function OpenWindowState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,6 +48,7 @@ function OpenWindowState:isDoingActionThatCanBeCancelled() end
 --- @param arg1 IsoWindow
 --- @return nil
 function OpenWindowState:setParams(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

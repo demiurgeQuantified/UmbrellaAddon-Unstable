@@ -14,7 +14,7 @@
 --- @field public playerWrongIP boolean
 --- @field public unexpectedError boolean
 --- @field public worldVersionError boolean
-GameLoadingState = {}
+GameLoadingState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,6 +29,7 @@ function GameLoadingState.Done() end
 --- @static
 --- @return nil
 function GameLoadingState.SendDone() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,6 +54,7 @@ function GameLoadingState:render() end
 --- @public
 --- @return StateAction
 function GameLoadingState:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

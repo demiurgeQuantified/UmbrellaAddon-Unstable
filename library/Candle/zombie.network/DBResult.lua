@@ -2,7 +2,7 @@
 
 --- @class DBResult
 --- @field public class any
-DBResult = {}
+DBResult = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,6 +38,7 @@ function DBResult:setTableName(arg0) end
 --- @param arg0 string
 --- @return nil
 function DBResult:setType(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

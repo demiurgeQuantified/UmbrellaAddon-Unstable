@@ -3,7 +3,7 @@
 --- @class TileDepthTextureManager
 --- @field public class any
 --- @field public DELAYED_LOADING boolean
-TileDepthTextureManager = {}
+TileDepthTextureManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ TileDepthTextureManager = {}
 --- @static
 --- @return TileDepthTextureManager
 function TileDepthTextureManager.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -105,3 +106,5 @@ function TileDepthTextureManager:reloadTileset(arg0, arg1) end
 --- @param arg1 string
 --- @return nil
 function TileDepthTextureManager:saveTileset(arg0, arg1) end
+
+

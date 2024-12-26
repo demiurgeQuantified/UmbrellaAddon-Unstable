@@ -5,7 +5,7 @@
 --- @field public Any ResourceIO
 --- @field public Input ResourceIO
 --- @field public Output ResourceIO
-ResourceIO = {}
+ResourceIO = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,6 +28,7 @@ function ResourceIO.valueOf(arg0) end
 --- @return ResourceIO[]
 function ResourceIO.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -35,3 +36,5 @@ function ResourceIO.values() end
 --- @public
 --- @return integer
 function ResourceIO:getId() end
+
+

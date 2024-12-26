@@ -2,7 +2,7 @@
 
 --- @class RBBasic: RandomizedBuildingBase
 --- @field public class any
-RBBasic = {}
+RBBasic = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ RBBasic = {}
 --- @static
 --- @return ArrayList
 function RBBasic.getUniqueRDSSpawned() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -54,6 +55,7 @@ function RBBasic:getSurvivorStories() end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBBasic:randomizeBuilding(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

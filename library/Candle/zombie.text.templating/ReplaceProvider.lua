@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class ReplaceProvider
+--- @class ReplaceProvider: IReplaceProvider
 --- @field public class any
---- @implement IReplaceProvider
-ReplaceProvider = {}
+ReplaceProvider = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,6 +32,7 @@ function ReplaceProvider:getReplacer(arg0) end
 --- @return boolean
 --- @overload fun(self: ReplaceProvider, arg0: string): boolean
 function ReplaceProvider:hasReplacer(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

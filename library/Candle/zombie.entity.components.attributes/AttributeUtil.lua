@@ -3,7 +3,7 @@
 --- @class AttributeUtil
 --- @field public class any
 --- @field public enum_prefix string
-AttributeUtil = {}
+AttributeUtil = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -89,6 +89,7 @@ function AttributeUtil.releaseItemList(arg0) end
 --- @param arg1 string
 --- @return Enum
 function AttributeUtil.tryEnumValueFromScriptString(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

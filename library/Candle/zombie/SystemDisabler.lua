@@ -15,7 +15,7 @@
 --- @field public useNetworkCharacter boolean
 --- @field public zombiesDontAttack boolean
 --- @field public zombiesSwitchOwnershipEachUpdate boolean
-SystemDisabler = {}
+SystemDisabler = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -119,6 +119,7 @@ function SystemDisabler.setVehiclesEverywhere(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function SystemDisabler.setWorldSyncEnable(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

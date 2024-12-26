@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public sorted List
 --- @field public test NonBlockingHashMap
-PropertyContainer = {}
+PropertyContainer = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -104,6 +104,7 @@ function PropertyContainer:valueEquals(arg0, arg1) end
 --- @param arg1 string
 --- @return boolean
 function PropertyContainer:valueEqualsIgnoreCase(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ClimateForecaster
 --- @field public class any
-ClimateForecaster = {}
+ClimateForecaster = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,6 +20,7 @@ function ClimateForecaster:getForecast() end
 --- @public
 --- @return ArrayList
 function ClimateForecaster:getForecasts() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

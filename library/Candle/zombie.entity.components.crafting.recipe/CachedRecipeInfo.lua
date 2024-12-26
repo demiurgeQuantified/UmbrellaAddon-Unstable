@@ -2,7 +2,7 @@
 
 --- @class CachedRecipeInfo
 --- @field public class any
-CachedRecipeInfo = {}
+CachedRecipeInfo = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function CachedRecipeInfo:isCanPerform() end
 --- @public
 --- @return boolean
 function CachedRecipeInfo:isValid() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

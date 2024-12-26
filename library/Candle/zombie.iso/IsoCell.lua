@@ -23,7 +23,7 @@
 --- @field public SolidFloor ArrayList
 --- @field public VegetationCorpses ArrayList
 --- @field public ZOMBIESCANBUDGET integer
-IsoCell = {}
+IsoCell = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -91,6 +91,7 @@ function IsoCell.setBuildings(arg0) end
 --- @param arg3 number
 --- @return integer
 function IsoCell.toIntColor(arg0, arg1, arg2, arg3) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -759,6 +760,7 @@ function IsoCell:renderShadows() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return nil
+--- @deprecated
 function IsoCell:resumeVehicleSounds(arg0) end
 
 --- @public
@@ -908,6 +910,7 @@ function IsoCell:update() end
 --- @public
 --- @return nil
 function IsoCell:updateHeatSources() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

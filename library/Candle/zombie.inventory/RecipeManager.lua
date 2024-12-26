@@ -2,7 +2,7 @@
 
 --- @class RecipeManager
 --- @field public class any
-RecipeManager = {}
+RecipeManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RecipeManager = {}
 --- @param arg0 string
 --- @param arg1 Recipe
 --- @return boolean
+--- @deprecated
 function RecipeManager.DoesUseItemUp(arg0, arg1) end
 
 --- @public
@@ -20,6 +21,7 @@ function RecipeManager.DoesUseItemUp(arg0, arg1) end
 --- @param arg0 string
 --- @param arg1 string
 --- @return boolean
+--- @deprecated
 function RecipeManager.DoesWipeUseDelta(arg0, arg1) end
 
 --- @public
@@ -46,6 +48,7 @@ function RecipeManager.HasAllRequiredItems(arg0, arg1, arg2, arg3) end
 --- @param arg0 string
 --- @param arg1 Recipe
 --- @return boolean
+--- @deprecated
 function RecipeManager.IsItemDestroyed(arg0, arg1) end
 
 --- @public
@@ -82,6 +85,7 @@ function RecipeManager.ScriptsLoaded() end
 --- @param arg1 Recipe
 --- @param arg2 IsoGameCharacter
 --- @return number
+--- @deprecated
 function RecipeManager.UseAmount(arg0, arg1, arg2) end
 
 --- @public
@@ -211,6 +215,7 @@ function RecipeManager.validateHasHeat(arg0, arg1, arg2, arg3) end
 --- @param arg1 InventoryItem
 --- @return boolean
 function RecipeManager.validateRecipeContainsSourceItem(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class CharacterSoundEmitter: BaseCharacterSoundEmitter
+--- @class CharacterSoundEmitter: BaseCharacterSoundEmitter, ICommonSoundEmitter
 --- @field public class any
---- @implement ICommonSoundEmitter
-CharacterSoundEmitter = {}
+CharacterSoundEmitter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -161,6 +160,7 @@ function CharacterSoundEmitter:triggerCue(arg0) end
 --- @public
 --- @return nil
 function CharacterSoundEmitter:unregister() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

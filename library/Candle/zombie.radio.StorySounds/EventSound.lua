@@ -2,7 +2,7 @@
 
 --- @class EventSound
 --- @field public class any
-EventSound = {}
+EventSound = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,6 +43,7 @@ function EventSound:setName(arg0) end
 --- @param arg0 ArrayList
 --- @return nil
 function EventSound:setStorySounds(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

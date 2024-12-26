@@ -2,7 +2,7 @@
 
 --- @class TileDepthTexture
 --- @field public class any
-TileDepthTexture = {}
+TileDepthTexture = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -112,6 +112,7 @@ function TileDepthTexture:setPixels(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @return nil
 function TileDepthTexture:updateGPUTexture() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

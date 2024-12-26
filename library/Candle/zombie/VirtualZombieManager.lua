@@ -3,7 +3,7 @@
 --- @class VirtualZombieManager
 --- @field public class any
 --- @field public instance VirtualZombieManager
-VirtualZombieManager = {}
+VirtualZombieManager = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -152,6 +152,7 @@ function VirtualZombieManager:tryAddIndoorZombies(arg0, arg1) end
 --- @public
 --- @return nil
 function VirtualZombieManager:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

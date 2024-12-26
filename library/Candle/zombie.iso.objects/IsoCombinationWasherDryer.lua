@@ -2,7 +2,7 @@
 
 --- @class IsoCombinationWasherDryer: IsoObject
 --- @field public class any
-IsoCombinationWasherDryer = {}
+IsoCombinationWasherDryer = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -86,6 +86,7 @@ function IsoCombinationWasherDryer:setModeWasher() end
 --- @public
 --- @return nil
 function IsoCombinationWasherDryer:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

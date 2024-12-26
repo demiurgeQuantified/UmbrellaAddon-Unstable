@@ -2,7 +2,7 @@
 
 --- @class MusicIntensityEvent
 --- @field public class any
-MusicIntensityEvent = {}
+MusicIntensityEvent = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,6 +28,7 @@ function MusicIntensityEvent:getIntensity() end
 --- @param arg0 integer
 --- @return nil
 function MusicIntensityEvent:setElapsedTime(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

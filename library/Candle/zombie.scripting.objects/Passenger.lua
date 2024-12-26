@@ -2,7 +2,7 @@
 
 --- @class Passenger
 --- @field public class any
-Passenger = {}
+Passenger = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -34,6 +34,7 @@ function Passenger:getSwitchSeatById(arg0) end
 --- @public
 --- @return Passenger
 function Passenger:makeCopy() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

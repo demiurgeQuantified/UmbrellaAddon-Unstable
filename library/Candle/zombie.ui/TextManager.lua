@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public instance TextManager
 --- @field public sdfShader SDFShader
-TextManager = {}
+TextManager = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -160,6 +160,7 @@ function TextManager:getFontHeight(arg0) end
 --- @param arg0 integer
 --- @return AngelCodeFont
 function TextManager:getNormalFromFontSize(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

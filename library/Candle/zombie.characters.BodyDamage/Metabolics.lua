@@ -26,7 +26,7 @@
 --- @field public UsingTools Metabolics
 --- @field public Walking2kmh Metabolics
 --- @field public Walking5kmh Metabolics
-Metabolics = {}
+Metabolics = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,6 +61,7 @@ function Metabolics.valueOf(arg0) end
 --- @return Metabolics[]
 function Metabolics.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -80,3 +81,5 @@ function Metabolics:getW() end
 --- @public
 --- @return number
 function Metabolics:getWm2() end
+
+

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class IntegerSandboxOption: IntegerConfigOption
+--- @class IntegerSandboxOption: IntegerConfigOption, SandboxOption
 --- @field public class any
---- @implement SandboxOption
-IntegerSandboxOption = {}
+IntegerSandboxOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,6 +71,7 @@ function IntegerSandboxOption:setTranslation(arg0) end
 --- @return nil
 --- @overload fun(self: IntegerSandboxOption, arg0: table): nil
 function IntegerSandboxOption:toTable(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

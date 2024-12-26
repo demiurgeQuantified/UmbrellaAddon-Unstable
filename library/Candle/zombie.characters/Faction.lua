@@ -3,7 +3,7 @@
 --- @class Faction
 --- @field public class any
 --- @field public factions ArrayList
-Faction = {}
+Faction = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -65,6 +65,7 @@ function Faction.isInSameFaction(arg0, arg1) end
 --- @param arg0 string
 --- @return boolean
 function Faction.tagExist(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -158,6 +159,7 @@ function Faction:syncFaction() end
 --- @param arg1 boolean
 --- @return nil
 function Faction:writeToBuffer(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

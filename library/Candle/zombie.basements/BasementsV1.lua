@@ -2,7 +2,7 @@
 
 --- @class BasementsV1
 --- @field public class any
-BasementsV1 = {}
+BasementsV1 = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,6 +38,7 @@ function BasementsV1:addSpawnLocations(arg0, arg1) end
 --- @param arg8 table
 --- @return BasementSpawnLocation
 function BasementsV1:registerBasementSpawnLocation(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

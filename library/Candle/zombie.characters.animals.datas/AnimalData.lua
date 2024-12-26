@@ -6,7 +6,7 @@
 --- @field public ONE_DAY_MILLISECONDS integer
 --- @field public ONE_HOUR_MILLISECONDS integer
 --- @field public ONE_WEEK_MILLISECONDS integer
-AnimalData = {}
+AnimalData = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,6 +17,7 @@ AnimalData = {}
 --- @param arg0 ArrayList
 --- @return nil
 function AnimalData.shuffleList(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -220,6 +221,7 @@ function AnimalData:getPregnantPeriod() end
 
 --- @public
 --- @return ArrayList
+--- @deprecated
 function AnimalData:getRandomTroughList() end
 
 --- @public
@@ -422,6 +424,7 @@ function AnimalData:updateLastPregnancyTime() end
 --- @public
 --- @return nil
 function AnimalData:updateLastTimeMilked() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

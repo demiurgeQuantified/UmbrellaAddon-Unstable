@@ -32,7 +32,7 @@
 --- @field public WestRoofT IsoObjectType
 --- @field public windowFN IsoObjectType
 --- @field public windowFW IsoObjectType
-IsoObjectType = {}
+IsoObjectType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,6 +61,7 @@ function IsoObjectType.valueOf(arg0) end
 --- @return IsoObjectType[]
 function IsoObjectType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -68,3 +69,5 @@ function IsoObjectType.values() end
 --- @public
 --- @return integer
 function IsoObjectType:index() end
+
+

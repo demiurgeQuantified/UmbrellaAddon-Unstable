@@ -1,9 +1,7 @@
 --- @meta _
 
---- @class IsoPlayer: IsoLivingCharacter
+--- @class IsoPlayer: IsoLivingCharacter, IAnimalVisual, IHumanVisual
 --- @field public class any
---- @implement IAnimalVisual
---- @implement IHumanVisual
 --- @field public assumedPlayer integer
 --- @field public DEATH_MUSIC_NAME string
 --- @field public isTestAIMode boolean
@@ -11,7 +9,7 @@
 --- @field public NoSound boolean
 --- @field public numPlayers integer
 --- @field public players IsoPlayer[]
-IsoPlayer = {}
+IsoPlayer = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -136,6 +134,7 @@ function IsoPlayer.setInstance(arg0) end
 --- @param arg1 IsoPlayer
 --- @return nil
 function IsoPlayer.setLocalPlayer(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -325,6 +324,7 @@ function IsoPlayer:dressInNamedOutfit(arg0) end
 
 --- @public
 --- @return string
+--- @deprecated
 function IsoPlayer:getAccessLevel() end
 
 --- @public
@@ -385,6 +385,7 @@ function IsoPlayer:getClearSpottedTimer() end
 
 --- @public
 --- @return IsoGameCharacter
+--- @deprecated
 function IsoPlayer:getClosestZombieDist() end
 
 --- @public
@@ -1711,6 +1712,7 @@ function IsoPlayer:wasLastAttackHandToHand() end
 --- @public
 --- @return boolean
 function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class IsoMetaCell
 --- @field public class any
-IsoMetaCell = {}
+IsoMetaCell = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -143,6 +143,7 @@ function IsoMetaCell:removeZone(arg0) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function IsoMetaCell:save(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

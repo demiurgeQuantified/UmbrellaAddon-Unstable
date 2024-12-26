@@ -2,7 +2,7 @@
 
 --- @class SpriteConfig: Component
 --- @field public class any
-SpriteConfig = {}
+SpriteConfig = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -68,3 +68,5 @@ function SpriteConfig:isValidMultiSquare() end
 --- @public
 --- @return boolean
 function SpriteConfig:isWasLoadedAsMaster() end
+
+

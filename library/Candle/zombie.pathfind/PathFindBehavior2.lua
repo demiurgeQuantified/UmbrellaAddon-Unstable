@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class PathFindBehavior2
+--- @class PathFindBehavior2: IPathfinder
 --- @field public class any
---- @implement IPathfinder
-PathFindBehavior2 = {}
+PathFindBehavior2 = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +18,7 @@ PathFindBehavior2 = {}
 --- @param arg5 PointOnPath
 --- @return nil
 function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -231,6 +231,7 @@ function PathFindBehavior2:shouldIgnoreCollisionWithSquare(arg0) end
 --- @public
 --- @return BehaviorResult
 function PathFindBehavior2:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

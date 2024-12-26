@@ -31,7 +31,7 @@
 --- @field public randRainMax integer
 --- @field public randRainMin integer
 --- @field public ThunderAmbient Audio
-RainManager = {}
+RainManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -147,6 +147,7 @@ function RainManager.startRaining() end
 --- @static
 --- @return nil
 function RainManager.stopRaining() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

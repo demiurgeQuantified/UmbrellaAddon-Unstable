@@ -2,7 +2,7 @@
 
 --- @class TraitSlot
 --- @field public class any
-TraitSlot = {}
+TraitSlot = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,3 +25,5 @@ function TraitSlot:set(arg0) end
 --- @public
 --- @return string
 function TraitSlot:toString() end
+
+

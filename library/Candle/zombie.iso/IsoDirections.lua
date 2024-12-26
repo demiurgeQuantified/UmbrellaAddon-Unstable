@@ -11,7 +11,7 @@
 --- @field public SE IsoDirections
 --- @field public SW IsoDirections
 --- @field public W IsoDirections
-IsoDirections = {}
+IsoDirections = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -88,6 +88,7 @@ function IsoDirections.valueOf(arg0) end
 --- @return IsoDirections[]
 function IsoDirections.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -133,3 +134,5 @@ function IsoDirections:toAngle() end
 --- @public
 --- @return string
 function IsoDirections:toCompassString() end
+
+

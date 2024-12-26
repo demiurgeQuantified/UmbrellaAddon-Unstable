@@ -2,7 +2,7 @@
 
 --- @class RequiredSkill
 --- @field public class any
-RequiredSkill = {}
+RequiredSkill = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,6 +15,7 @@ function RequiredSkill:getLevel() end
 --- @public
 --- @return Perk
 function RequiredSkill:getPerk() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class BodyLocationGroup
 --- @field public class any
-BodyLocationGroup = {}
+BodyLocationGroup = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -92,6 +92,7 @@ function BodyLocationGroup:setMultiItem(arg0, arg1) end
 --- @public
 --- @return integer
 function BodyLocationGroup:size() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

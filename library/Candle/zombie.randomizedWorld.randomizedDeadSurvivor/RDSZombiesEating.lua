@@ -2,7 +2,7 @@
 
 --- @class RDSZombiesEating: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSZombiesEating = {}
+RDSZombiesEating = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RDSZombiesEating:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSZombiesEating:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

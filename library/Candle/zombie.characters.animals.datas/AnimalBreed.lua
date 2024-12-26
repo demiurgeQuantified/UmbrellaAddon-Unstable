@@ -2,7 +2,7 @@
 
 --- @class AnimalBreed
 --- @field public class any
-AnimalBreed = {}
+AnimalBreed = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -48,6 +48,7 @@ function AnimalBreed:loadForcedGenes(arg0) end
 --- @param arg0 table
 --- @return nil
 function AnimalBreed:loadSounds(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class StringServerOption: StringConfigOption
+--- @class StringServerOption: StringConfigOption, ServerOption
 --- @field public class any
---- @implement ServerOption
-StringServerOption = {}
+StringServerOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +17,7 @@ function StringServerOption:asConfigOption() end
 --- @return string
 --- @overload fun(self: StringServerOption): string
 function StringServerOption:getTooltip() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

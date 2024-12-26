@@ -9,7 +9,7 @@
 --- @field public LOUISVILLE_OBFUSCATION boolean
 --- @field public POST_RADIO_SILENCE boolean
 --- @field public SAVE_FILE string
-ZomboidRadio = {}
+ZomboidRadio = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -36,6 +36,7 @@ function ZomboidRadio.hasInstance() end
 --- @param arg0 string
 --- @return boolean
 function ZomboidRadio.isStaticSound(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -218,3 +219,5 @@ function ZomboidRadio:setHasRecievedServerData(arg0) end
 --- @public
 --- @return nil
 function ZomboidRadio:update() end
+
+

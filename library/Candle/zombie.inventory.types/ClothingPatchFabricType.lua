@@ -5,7 +5,7 @@
 --- @field public Cotton ClothingPatchFabricType
 --- @field public Denim ClothingPatchFabricType
 --- @field public Leather ClothingPatchFabricType
-ClothingPatchFabricType = {}
+ClothingPatchFabricType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -34,6 +34,7 @@ function ClothingPatchFabricType.valueOf(arg0) end
 --- @return ClothingPatchFabricType[]
 function ClothingPatchFabricType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -41,3 +42,5 @@ function ClothingPatchFabricType.values() end
 --- @public
 --- @return string
 function ClothingPatchFabricType:getType() end
+
+

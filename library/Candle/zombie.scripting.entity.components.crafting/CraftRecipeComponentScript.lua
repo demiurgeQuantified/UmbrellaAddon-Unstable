@@ -2,7 +2,7 @@
 
 --- @class CraftRecipeComponentScript: ComponentScript
 --- @field public class any
-CraftRecipeComponentScript = {}
+CraftRecipeComponentScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -45,3 +45,5 @@ function CraftRecipeComponentScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function CraftRecipeComponentScript:reset() end
+
+

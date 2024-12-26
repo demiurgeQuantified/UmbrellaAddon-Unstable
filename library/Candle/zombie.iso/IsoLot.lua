@@ -8,7 +8,7 @@
 --- @field public InfoHeaders HashMap
 --- @field public MapFiles ArrayList
 --- @field public pool ObjectPool
-IsoLot = {}
+IsoLot = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -54,6 +54,7 @@ function IsoLot.readShort(arg0) end
 --- @return string
 function IsoLot.readString(arg0) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -76,6 +77,7 @@ function IsoLot:load(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg4 IsoChunk
 --- @return nil
 function IsoLot:loadNew(arg0, arg1, arg2, arg3, arg4) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

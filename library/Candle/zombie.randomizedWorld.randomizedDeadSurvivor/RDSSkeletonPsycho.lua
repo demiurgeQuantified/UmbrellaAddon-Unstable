@@ -2,7 +2,7 @@
 
 --- @class RDSSkeletonPsycho: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSSkeletonPsycho = {}
+RDSSkeletonPsycho = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RDSSkeletonPsycho = {}
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSSkeletonPsycho:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

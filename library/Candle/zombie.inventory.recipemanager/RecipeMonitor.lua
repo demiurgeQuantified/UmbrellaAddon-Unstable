@@ -6,7 +6,7 @@
 --- @field public colHeader Color
 --- @field public colNeg Color
 --- @field public colPos Color
-RecipeMonitor = {}
+RecipeMonitor = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -152,6 +152,7 @@ function RecipeMonitor.getRecipe() end
 --- @public
 --- @static
 --- @return ArrayList
+--- @deprecated
 function RecipeMonitor.getRecipeLines() end
 
 --- @public
@@ -180,6 +181,7 @@ function RecipeMonitor.setRecipe(arg0) end
 --- @static
 --- @return nil
 function RecipeMonitor.suspend() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

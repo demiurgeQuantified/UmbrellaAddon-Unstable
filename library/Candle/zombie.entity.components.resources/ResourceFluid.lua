@@ -2,7 +2,7 @@
 
 --- @class ResourceFluid: Resource
 --- @field public class any
-ResourceFluid = {}
+ResourceFluid = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -99,3 +99,5 @@ function ResourceFluid:transferTo(arg0, arg1) end
 --- @return nil
 --- @overload fun(self: ResourceFluid, arg0: Resource, arg1: number): nil
 function ResourceFluid:tryTransferTo(arg0) end
+
+

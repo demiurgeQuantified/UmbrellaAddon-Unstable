@@ -2,7 +2,7 @@
 
 --- @class ClimateColorInfo
 --- @field public class any
-ClimateColorInfo = {}
+ClimateColorInfo = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,6 +21,7 @@ function ClimateColorInfo.interp(arg0, arg1, arg2, arg3) end
 --- @static
 --- @return boolean
 function ClimateColorInfo.writeColorInfoConfig() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -83,6 +84,7 @@ function ClimateColorInfo:setTo(arg0) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function ClimateColorInfo:write(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class NetworkUser
 --- @field public class any
-NetworkUser = {}
+NetworkUser = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -89,6 +89,7 @@ function NetworkUser:setSuspicionPoints(arg0) end
 --- @param arg0 integer
 --- @return nil
 function NetworkUser:setWarningPoints(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

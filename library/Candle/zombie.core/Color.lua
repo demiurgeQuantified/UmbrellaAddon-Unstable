@@ -1,8 +1,7 @@
 --- @meta _
 
---- @class Color
+--- @class Color: Serializable
 --- @field public class any
---- @implement Serializable
 --- @field public black Color
 --- @field public blue Color
 --- @field public cyan Color
@@ -20,7 +19,7 @@
 --- @field public transparent Color
 --- @field public white Color
 --- @field public yellow Color
-Color = {}
+Color = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -155,6 +154,7 @@ function Color.setRedChannelToABGR(arg0, arg1) end
 --- @return integer
 function Color.tintABGR(arg0, arg1) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -194,6 +194,7 @@ function Color:equals(arg0) end
 --- @public
 --- @param arg0 integer
 --- @return nil
+--- @deprecated
 function Color:fromColor(arg0) end
 
 --- @public
@@ -335,6 +336,7 @@ function Color:setColor(arg0, arg1, arg2) end
 --- @public
 --- @return string
 function Color:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

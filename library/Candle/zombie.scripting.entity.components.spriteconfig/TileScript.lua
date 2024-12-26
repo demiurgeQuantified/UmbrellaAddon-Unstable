@@ -2,7 +2,7 @@
 
 --- @class TileScript
 --- @field public class any
-TileScript = {}
+TileScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function TileScript:isBlocksSquare() end
 --- @public
 --- @return boolean
 function TileScript:isEmptySpace() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

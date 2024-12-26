@@ -2,7 +2,7 @@
 
 --- @class RDSZombieLockedBathroom: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSZombieLockedBathroom = {}
+RDSZombieLockedBathroom = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RDSZombieLockedBathroom = {}
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSZombieLockedBathroom:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -7,7 +7,7 @@
 --- @field public loadGridSquare ConcurrentLinkedQueue
 --- @field public renderByIndex byte[][]
 --- @field public WriteLock any
-IsoChunk = {}
+IsoChunk = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -77,6 +77,7 @@ function IsoChunk.removeFromCheckedVehicles(arg0) end
 --- @static
 --- @return nil
 function IsoChunk.updatePlayerInBullet() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -279,6 +280,7 @@ function IsoChunk:getGridSquare(arg0, arg1, arg2) end
 
 --- @public
 --- @return integer
+--- @deprecated
 function IsoChunk:getHashCodeObjects() end
 
 --- @public
@@ -346,6 +348,7 @@ function IsoChunk:hasWaterSquare() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function IsoChunk:hashCodeNoOverride() end
 
 --- @public
@@ -428,10 +431,12 @@ function IsoChunk:loadObjectState(arg0) end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoChunk:recalcHashCodeObjects() end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoChunk:recalcNeighboursNow() end
 
 --- @public
@@ -549,6 +554,7 @@ function IsoChunk:updateSounds() end
 --- @public
 --- @return nil
 function IsoChunk:updateVehicleStory() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

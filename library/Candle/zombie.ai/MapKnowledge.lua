@@ -2,7 +2,7 @@
 
 --- @class MapKnowledge
 --- @field public class any
-MapKnowledge = {}
+MapKnowledge = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,6 +58,7 @@ function MapKnowledge:setKnownBlockedWindow(arg0, arg1) end
 --- @param arg1 boolean
 --- @return nil
 function MapKnowledge:setKnownBlockedWindowFrame(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

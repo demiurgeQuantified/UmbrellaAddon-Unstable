@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public INIT_FLAG_DISTANCE_MAX short
 --- @field public INIT_FLAG_DISTANCE_MIN short
-GameSoundClip = {}
+GameSoundClip = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -62,6 +62,7 @@ function GameSoundClip:hasParameter(arg0) end
 --- @public
 --- @return boolean
 function GameSoundClip:hasSustainPoints() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

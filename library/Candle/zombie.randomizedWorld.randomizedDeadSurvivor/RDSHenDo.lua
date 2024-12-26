@@ -2,7 +2,7 @@
 
 --- @class RDSHenDo: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSHenDo = {}
+RDSHenDo = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RDSHenDo:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSHenDo:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -5,7 +5,7 @@
 --- @field public s_clipperBuffer ByteBuffer
 --- @field public s_clipperOffset ClipperOffset
 --- @field public TL_Location ThreadLocal
-IsoMetaGrid = {}
+IsoMetaGrid = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -424,6 +424,7 @@ function IsoMetaGrid:registerZone(arg0) end
 --- @param arg5 integer
 --- @param arg6 integer
 --- @return Zone
+--- @deprecated
 function IsoMetaGrid:registerZoneNoOverlap(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -481,6 +482,7 @@ function IsoMetaGrid:setCellData(arg0, arg1, arg2) end
 --- @public
 --- @return boolean
 function IsoMetaGrid:wasLoaded() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

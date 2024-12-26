@@ -2,7 +2,7 @@
 
 --- @class RZSSadCamp: RandomizedZoneStoryBase
 --- @field public class any
-RZSSadCamp = {}
+RZSSadCamp = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RZSSadCamp = {}
 --- @return ArrayList
 function RZSSadCamp.getOutfits() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,6 +22,7 @@ function RZSSadCamp.getOutfits() end
 --- @param arg0 Zone
 --- @return nil
 function RZSSadCamp:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

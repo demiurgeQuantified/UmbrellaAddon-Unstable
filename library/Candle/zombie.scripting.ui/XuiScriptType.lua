@@ -6,7 +6,7 @@
 --- @field public Layout XuiScriptType
 --- @field public Reference XuiScriptType
 --- @field public Style XuiScriptType
-XuiScriptType = {}
+XuiScriptType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,3 +22,5 @@ function XuiScriptType.valueOf(arg0) end
 --- @static
 --- @return XuiScriptType[]
 function XuiScriptType.values() end
+
+

@@ -2,7 +2,7 @@
 
 --- @class GameCharacterAIBrain
 --- @field public class any
-GameCharacterAIBrain = {}
+GameCharacterAIBrain = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -68,6 +68,7 @@ function GameCharacterAIBrain:setOrder(arg0) end
 --- @public
 --- @return nil
 function GameCharacterAIBrain:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

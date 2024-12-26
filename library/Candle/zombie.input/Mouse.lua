@@ -19,7 +19,7 @@
 --- @field public RMB integer
 --- @field public UICaptured boolean[]
 --- @field public wheelDelta integer
-Mouse = {}
+Mouse = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -199,6 +199,7 @@ function Mouse.update() end
 --- @param arg0 integer
 --- @return boolean
 function Mouse.wasButtonDown(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

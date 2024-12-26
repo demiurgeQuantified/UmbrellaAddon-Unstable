@@ -2,7 +2,7 @@
 
 --- @class AbstractSequentialList: AbstractList
 --- @field public class any
-AbstractSequentialList = {}
+AbstractSequentialList = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -44,3 +44,5 @@ function AbstractSequentialList:remove(arg0) end
 --- @param arg1 any
 --- @return any
 function AbstractSequentialList:set(arg0, arg1) end
+
+

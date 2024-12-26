@@ -2,7 +2,7 @@
 
 --- @class Numeric: AttributeType
 --- @field public class any
-Numeric = {}
+Numeric = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,3 +32,5 @@ function Numeric:hasBounds() end
 --- @param arg0 Number
 --- @return Number
 function Numeric:validate(arg0) end
+
+

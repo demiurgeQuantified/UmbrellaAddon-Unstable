@@ -2,7 +2,7 @@
 
 --- @class IsoButcherHook: IsoObject
 --- @field public class any
-IsoButcherHook = {}
+IsoButcherHook = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -67,6 +67,7 @@ function IsoButcherHook:stopRemovingBlood() end
 --- @public
 --- @return nil
 function IsoButcherHook:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

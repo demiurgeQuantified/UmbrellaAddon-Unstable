@@ -3,7 +3,7 @@
 --- @class DebugGlobalObjectState: GameState
 --- @field public class any
 --- @field public instance DebugGlobalObjectState
-DebugGlobalObjectState = {}
+DebugGlobalObjectState = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,6 +63,7 @@ function DebugGlobalObjectState:updateScene() end
 --- @public
 --- @return nil
 function DebugGlobalObjectState:yield() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

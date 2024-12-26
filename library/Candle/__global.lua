@@ -294,6 +294,7 @@ function canConnect() end
 function canInviteFriends() end
 
 --- @return boolean
+--- @deprecated
 function canModifyPlayerScoreboard() end
 
 --- @return boolean
@@ -417,6 +418,7 @@ function createItemTransaction(arg0, arg1, arg2, arg3) end
 --- @param arg6 number
 --- @param arg7 number
 --- @return integer
+--- @deprecated
 function createItemTransactionWithPosData(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @param arg0 string
@@ -591,6 +593,7 @@ function generateSecretKey(arg0) end
 function getAbsoluteSaveFolderName(arg0) end
 
 --- @return string
+--- @deprecated
 function getAccessLevel() end
 
 --- @param arg0 integer
@@ -629,6 +632,7 @@ function getAllOutfits(arg0) end
 function getAllRecipes() end
 
 --- @return List
+--- @deprecated
 function getAllSavedPlayers() end
 
 --- @return ArrayList
@@ -1611,6 +1615,7 @@ function hasItemTag(arg0, arg1) end
 
 --- @param arg0 string
 --- @return boolean
+--- @deprecated
 function haveAccess(arg0) end
 
 --- @return nil
@@ -1639,6 +1644,7 @@ function is64bit() end
 
 --- @param arg0 string
 --- @return boolean
+--- @deprecated
 function isAccessLevel(arg0) end
 
 --- @param arg0 integer
@@ -2806,6 +2812,7 @@ function syncHandWeaponFields(arg0, arg1) end
 
 --- @param arg0 IsoPlayer
 --- @return nil
+--- @deprecated
 function syncInventory(arg0) end
 
 --- @param arg0 IsoPlayer

@@ -2,7 +2,7 @@
 
 --- @class RZSFrankHemingway: RandomizedZoneStoryBase
 --- @field public class any
-RZSFrankHemingway = {}
+RZSFrankHemingway = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSFrankHemingway = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSFrankHemingway:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

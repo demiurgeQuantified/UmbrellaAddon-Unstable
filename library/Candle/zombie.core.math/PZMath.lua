@@ -10,7 +10,7 @@
 --- @field public radToDegs number
 --- @field public secondsToMillis integer
 --- @field public secondsToNanos integer
-PZMath = {}
+PZMath = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -419,6 +419,7 @@ function PZMath.tryParseInt(arg0, arg1) end
 --- @return number
 --- @overload fun(arg0: number, arg1: number, arg2: number): number
 function PZMath.wrap(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

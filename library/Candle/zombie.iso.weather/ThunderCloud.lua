@@ -2,7 +2,7 @@
 
 --- @class ThunderCloud
 --- @field public class any
-ThunderCloud = {}
+ThunderCloud = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,6 +38,7 @@ function ThunderCloud:lifeTime() end
 --- @param arg2 number
 --- @return nil
 function ThunderCloud:setCenter(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

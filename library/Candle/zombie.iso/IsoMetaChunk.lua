@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public zombiesFullPerChunk number
 --- @field public zombiesMinPerChunk number
-IsoMetaChunk = {}
+IsoMetaChunk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -145,6 +145,7 @@ function IsoMetaChunk:removeZone(arg0) end
 --- @param arg0 integer
 --- @return nil
 function IsoMetaChunk:setZombieIntensity(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

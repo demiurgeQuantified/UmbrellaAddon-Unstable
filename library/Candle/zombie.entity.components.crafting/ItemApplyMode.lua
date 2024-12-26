@@ -5,7 +5,7 @@
 --- @field public Destroy ItemApplyMode
 --- @field public Keep ItemApplyMode
 --- @field public Normal ItemApplyMode
-ItemApplyMode = {}
+ItemApplyMode = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,3 +21,5 @@ function ItemApplyMode.valueOf(arg0) end
 --- @static
 --- @return ItemApplyMode[]
 function ItemApplyMode.values() end
+
+

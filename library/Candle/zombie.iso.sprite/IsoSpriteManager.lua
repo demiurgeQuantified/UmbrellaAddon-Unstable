@@ -3,7 +3,7 @@
 --- @class IsoSpriteManager
 --- @field public class any
 --- @field public instance IsoSpriteManager
-IsoSpriteManager = {}
+IsoSpriteManager = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,6 +30,7 @@ function IsoSpriteManager:getOrAddSpriteCache(arg0) end
 --- @return IsoSprite
 --- @overload fun(self: IsoSpriteManager, arg0: string): IsoSprite
 function IsoSpriteManager:getSprite(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class AnimatorDebugMonitor
 --- @field public class any
 --- @field public instance AnimatorDebugMonitor
-AnimatorDebugMonitor = {}
+AnimatorDebugMonitor = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -24,6 +24,7 @@ function AnimatorDebugMonitor.isKnownVarsDirty() end
 --- @param arg0 string
 --- @return nil
 function AnimatorDebugMonitor.registerVariable(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -114,6 +115,7 @@ function AnimatorDebugMonitor:setTarget(arg0) end
 --- @param arg1 AnimLayer[]
 --- @return nil
 function AnimatorDebugMonitor:update(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

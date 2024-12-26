@@ -2,7 +2,7 @@
 
 --- @class SeamManager
 --- @field public class any
-SeamManager = {}
+SeamManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ SeamManager = {}
 --- @static
 --- @return SeamManager
 function SeamManager.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -147,3 +148,5 @@ function SeamManager:setTileProperty(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg0 string
 --- @return nil
 function SeamManager:write(arg0) end
+
+

@@ -3,7 +3,7 @@
 --- @class RagdollSettingsManager
 --- @field public class any
 --- @field public GlobalChanceID integer
-RagdollSettingsManager = {}
+RagdollSettingsManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function RagdollSettingsManager.getInstance() end
 --- @param arg0 RagdollSettingsManager
 --- @return nil
 function RagdollSettingsManager.setInstance(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -111,6 +112,7 @@ function RagdollSettingsManager:update() end
 --- @param arg0 IsoZombie
 --- @return boolean
 function RagdollSettingsManager:usePhysicHitReaction(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

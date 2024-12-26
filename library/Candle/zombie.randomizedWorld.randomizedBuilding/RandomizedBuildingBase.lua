@@ -3,7 +3,7 @@
 --- @class RandomizedBuildingBase: RandomizedWorldBase
 --- @field public class any
 --- @field public maximumRoomCount integer
-RandomizedBuildingBase = {}
+RandomizedBuildingBase = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function RandomizedBuildingBase.ChunkLoaded(arg0) end
 --- @static
 --- @return nil
 function RandomizedBuildingBase.initAllRBMapChance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -140,6 +141,7 @@ function RandomizedBuildingBase:setMinimumRooms(arg0) end
 --- @param arg2 integer
 --- @return nil
 function RandomizedBuildingBase:spawnItemsInContainers(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

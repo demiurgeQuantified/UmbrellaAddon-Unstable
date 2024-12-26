@@ -13,7 +13,7 @@
 --- @field public Long AttributeValueType
 --- @field public Short AttributeValueType
 --- @field public String AttributeValueType
-AttributeValueType = {}
+AttributeValueType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -54,6 +54,7 @@ function AttributeValueType.valueOfIgnoreCase(arg0) end
 --- @return AttributeValueType[]
 function AttributeValueType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -61,3 +62,5 @@ function AttributeValueType.values() end
 --- @public
 --- @return integer
 function AttributeValueType:getByteIndex() end
+
+

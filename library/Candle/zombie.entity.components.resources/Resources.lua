@@ -3,7 +3,7 @@
 --- @class Resources: Component
 --- @field public class any
 --- @field public defaultGroup string
-Resources = {}
+Resources = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -87,3 +87,5 @@ function Resources:removeResource(arg0) end
 --- @return nil
 --- @overload fun(self: Resources, arg0: ResourceGroup): nil
 function Resources:removeResourceGroup(arg0) end
+
+

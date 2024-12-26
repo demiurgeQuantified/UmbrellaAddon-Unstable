@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public CLIMB_SLOWDOWN number
 --- @field public CLIMB_SPEED number
-ClimbSheetRopeState = {}
+ClimbSheetRopeState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,6 +14,7 @@ ClimbSheetRopeState = {}
 --- @static
 --- @return ClimbSheetRopeState
 function ClimbSheetRopeState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,6 +34,7 @@ function ClimbSheetRopeState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function ClimbSheetRopeState:exit(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

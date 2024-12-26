@@ -2,7 +2,7 @@
 
 --- @class War
 --- @field public class any
-War = {}
+War = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,6 +46,7 @@ function War:setState(arg0) end
 --- @param arg0 integer
 --- @return nil
 function War:setTimestamp(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

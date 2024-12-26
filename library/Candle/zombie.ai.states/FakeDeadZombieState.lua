@@ -2,7 +2,7 @@
 
 --- @class FakeDeadZombieState: State
 --- @field public class any
-FakeDeadZombieState = {}
+FakeDeadZombieState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ FakeDeadZombieState = {}
 --- @static
 --- @return FakeDeadZombieState
 function FakeDeadZombieState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,6 +32,7 @@ function FakeDeadZombieState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function FakeDeadZombieState:exit(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

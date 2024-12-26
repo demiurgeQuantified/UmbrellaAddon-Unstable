@@ -37,7 +37,7 @@
 --- @field public WorldVersion_TrapExplosionDuration integer
 --- @field public WorldVersion_VariableHeight integer
 --- @field public WorldVersion_ZoneIDisUUID integer
-IsoWorld = {}
+IsoWorld = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -82,10 +82,11 @@ function IsoWorld.readInt(arg0) end
 
 --- @public
 --- @static
---- @param arg0 RandomAccessFile
+--- @param arg0 InputStream
 --- @return string
---- @overload fun(arg0: InputStream, arg1: StringBuilder): string
+--- @overload fun(arg0: RandomAccessFile): string
 function IsoWorld.readString(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -436,6 +437,7 @@ function IsoWorld:registerZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param arg5 integer
 --- @param arg6 integer
 --- @return Zone
+--- @deprecated
 function IsoWorld:registerZoneNoOverlap(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -528,11 +530,13 @@ function IsoWorld:setLuaPosZ(arg0) end
 --- @public
 --- @param arg0 integer
 --- @return nil
+--- @deprecated
 function IsoWorld:setLuaSpawnCellX(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
+--- @deprecated
 function IsoWorld:setLuaSpawnCellY(arg0) end
 
 --- @public
@@ -592,6 +596,7 @@ function IsoWorld:transmitWeather() end
 --- @public
 --- @return nil
 function IsoWorld:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

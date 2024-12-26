@@ -23,7 +23,7 @@
 --- @field public LEVELS_PER_TEXTURE integer
 --- @field public PIXELS_PER_LEVEL integer
 --- @field public TEXTURE_HEIGHT integer
-FBORenderChunk = {}
+FBORenderChunk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -94,6 +94,7 @@ function FBORenderChunk:renderInWorldMainThread() end
 --- @param arg0 FBORenderLevels
 --- @return nil
 function FBORenderChunk:setRenderLevels(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

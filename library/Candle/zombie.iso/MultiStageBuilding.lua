@@ -3,7 +3,7 @@
 --- @class MultiStageBuilding
 --- @field public class any
 --- @field public stages ArrayList
-MultiStageBuilding = {}
+MultiStageBuilding = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,6 +28,7 @@ function MultiStageBuilding.getStage(arg0) end
 --- @param arg2 boolean
 --- @return ArrayList
 function MultiStageBuilding.getStages(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

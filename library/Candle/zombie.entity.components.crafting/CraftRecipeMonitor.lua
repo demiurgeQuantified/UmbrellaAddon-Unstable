@@ -2,7 +2,7 @@
 
 --- @class CraftRecipeMonitor
 --- @field public class any
-CraftRecipeMonitor = {}
+CraftRecipeMonitor = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ CraftRecipeMonitor = {}
 --- @static
 --- @return CraftRecipeMonitor
 function CraftRecipeMonitor.Create() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -123,3 +124,5 @@ function CraftRecipeMonitor:success(arg0) end
 --- @param arg0 string
 --- @return nil
 function CraftRecipeMonitor:warn(arg0) end
+
+

@@ -37,7 +37,7 @@
 --- @field public UpperLeg_L BloodClothingType
 --- @field public UpperLeg_R BloodClothingType
 --- @field public UpperLegs BloodClothingType
-BloodClothingType = {}
+BloodClothingType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -122,3 +122,5 @@ function BloodClothingType.valueOf(arg0) end
 --- @static
 --- @return BloodClothingType[]
 function BloodClothingType.values() end
+
+

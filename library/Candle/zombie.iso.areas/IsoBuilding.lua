@@ -5,7 +5,7 @@
 --- @field public GoodBuildingScore number
 --- @field public IDMax integer
 --- @field public PoorBuildingScore number
-IsoBuilding = {}
+IsoBuilding = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -154,6 +154,7 @@ function IsoBuilding:setToxic(arg0) end
 --- @public
 --- @return nil
 function IsoBuilding:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

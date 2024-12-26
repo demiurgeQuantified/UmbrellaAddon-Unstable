@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public Normal IsoRegionLogType
 --- @field public Warn IsoRegionLogType
-IsoRegionLogType = {}
+IsoRegionLogType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,3 +20,5 @@ function IsoRegionLogType.valueOf(arg0) end
 --- @static
 --- @return IsoRegionLogType[]
 function IsoRegionLogType.values() end
+
+

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class DoubleServerOption: DoubleConfigOption
+--- @class DoubleServerOption: DoubleConfigOption, ServerOption
 --- @field public class any
---- @implement ServerOption
-DoubleServerOption = {}
+DoubleServerOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +17,7 @@ function DoubleServerOption:asConfigOption() end
 --- @return string
 --- @overload fun(self: DoubleServerOption): string
 function DoubleServerOption:getTooltip() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

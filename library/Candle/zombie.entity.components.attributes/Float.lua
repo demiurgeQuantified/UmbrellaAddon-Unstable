@@ -2,7 +2,7 @@
 
 --- @class Float: Numeric
 --- @field public class any
-Float = {}
+Float = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,3 +27,5 @@ function Float:getValueType() end
 --- @return number
 --- @overload fun(self: Float, arg0: Number): Number
 function Float:validate(arg0) end
+
+

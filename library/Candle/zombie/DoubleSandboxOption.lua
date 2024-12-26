@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class DoubleSandboxOption: DoubleConfigOption
+--- @class DoubleSandboxOption: DoubleConfigOption, SandboxOption
 --- @field public class any
---- @implement SandboxOption
-DoubleSandboxOption = {}
+DoubleSandboxOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,6 +71,7 @@ function DoubleSandboxOption:setTranslation(arg0) end
 --- @return nil
 --- @overload fun(self: DoubleSandboxOption, arg0: table): nil
 function DoubleSandboxOption:toTable(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

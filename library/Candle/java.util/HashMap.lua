@@ -1,11 +1,8 @@
 --- @meta _
 
---- @class HashMap: AbstractMap
+--- @class HashMap: AbstractMap, Map, Cloneable, Serializable
 --- @field public class any
---- @implement Map
---- @implement Cloneable
---- @implement Serializable
-HashMap = {}
+HashMap = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -44,6 +41,7 @@ function HashMap.of() end
 --- @param arg0 Entry[]
 --- @return Map
 function HashMap.ofEntries(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -194,6 +192,7 @@ function HashMap:size() end
 --- @return Collection
 --- @overload fun(self: HashMap): Collection
 function HashMap:values() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

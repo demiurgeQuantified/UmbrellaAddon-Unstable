@@ -28,7 +28,7 @@
 --- @field public Water Fluid
 --- @field public Whiskey Fluid
 --- @field public Wine Fluid
-Fluid = {}
+Fluid = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -85,6 +85,7 @@ function Fluid.loadFluid(arg0, arg1) end
 --- @param arg1 ByteBuffer
 --- @return nil
 function Fluid.saveFluid(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -155,3 +156,5 @@ function Fluid:isVanilla() end
 --- @public
 --- @return string
 function Fluid:toString() end
+
+

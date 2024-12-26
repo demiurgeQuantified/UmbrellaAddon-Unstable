@@ -7,7 +7,7 @@
 --- @field public TRIP_TREE integer
 --- @field public TRIP_WINDOW integer
 --- @field public TRIP_ZOMBIE integer
-ClimbOverFenceState = {}
+ClimbOverFenceState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,6 +17,7 @@ ClimbOverFenceState = {}
 --- @static
 --- @return ClimbOverFenceState
 function ClimbOverFenceState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -59,3 +60,5 @@ function ClimbOverFenceState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5,
 --- @param arg1 IsoDirections
 --- @return nil
 function ClimbOverFenceState:setParams(arg0, arg1) end
+
+

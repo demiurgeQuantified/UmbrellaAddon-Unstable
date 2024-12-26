@@ -2,7 +2,7 @@
 
 --- @class SoundTimelineScript: BaseScriptObject
 --- @field public class any
-SoundTimelineScript = {}
+SoundTimelineScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,6 +26,7 @@ function SoundTimelineScript:getPosition(arg0) end
 --- @public
 --- @return nil
 function SoundTimelineScript:reset() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

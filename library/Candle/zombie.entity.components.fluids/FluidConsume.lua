@@ -2,7 +2,7 @@
 
 --- @class FluidConsume: SealedFluidProperties
 --- @field public class any
-FluidConsume = {}
+FluidConsume = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,6 +28,7 @@ function FluidConsume.Load(arg0, arg1) end
 --- @return nil
 function FluidConsume.Save(arg0, arg1) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -47,3 +48,5 @@ function FluidConsume:getPoisonEffect() end
 --- @public
 --- @return nil
 function FluidConsume:release() end
+
+

@@ -10,7 +10,7 @@
 --- @field public Radio ChannelCategory
 --- @field public Television ChannelCategory
 --- @field public Undefined ChannelCategory
-ChannelCategory = {}
+ChannelCategory = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,3 +26,5 @@ function ChannelCategory.valueOf(arg0) end
 --- @static
 --- @return ChannelCategory[]
 function ChannelCategory.values() end
+
+

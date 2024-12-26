@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public serialElementSeparator string
 --- @field public serialSubSeparator string
-ResourceBlueprint = {}
+ResourceBlueprint = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -49,6 +49,7 @@ function ResourceBlueprint.alloc(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @return nil
 function ResourceBlueprint.release(arg0) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -85,3 +86,5 @@ function ResourceBlueprint:getType() end
 --- @param arg0 ResourceFlag
 --- @return boolean
 function ResourceBlueprint:hasFlag(arg0) end
+
+

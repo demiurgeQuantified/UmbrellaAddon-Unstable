@@ -3,7 +3,7 @@
 --- @class IsoWaterGeometry
 --- @field public class any
 --- @field public pool ObjectPool
-IsoWaterGeometry = {}
+IsoWaterGeometry = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,6 +37,7 @@ function IsoWaterGeometry:isValid() end
 --- @public
 --- @return boolean
 function IsoWaterGeometry:isbShore() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

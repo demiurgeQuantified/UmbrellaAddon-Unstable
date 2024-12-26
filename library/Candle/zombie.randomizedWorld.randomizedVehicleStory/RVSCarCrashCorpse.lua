@@ -2,7 +2,7 @@
 
 --- @class RVSCarCrashCorpse: RandomizedVehicleStoryBase
 --- @field public class any
-RVSCarCrashCorpse = {}
+RVSCarCrashCorpse = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,6 +26,7 @@ function RVSCarCrashCorpse:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSCarCrashCorpse:spawnElement(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

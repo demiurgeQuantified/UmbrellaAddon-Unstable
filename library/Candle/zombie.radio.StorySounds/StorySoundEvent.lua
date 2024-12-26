@@ -2,7 +2,7 @@
 
 --- @class StorySoundEvent
 --- @field public class any
-StorySoundEvent = {}
+StorySoundEvent = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,6 +25,7 @@ function StorySoundEvent:setEventSounds(arg0) end
 --- @param arg0 string
 --- @return nil
 function StorySoundEvent:setName(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

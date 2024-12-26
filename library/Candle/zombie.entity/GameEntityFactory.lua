@@ -2,7 +2,7 @@
 
 --- @class GameEntityFactory
 --- @field public class any
-GameEntityFactory = {}
+GameEntityFactory = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -88,6 +88,7 @@ function GameEntityFactory.RemoveComponents(arg0, arg1) end
 --- @param arg1 GameEntity
 --- @return nil
 function GameEntityFactory.TransferComponents(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

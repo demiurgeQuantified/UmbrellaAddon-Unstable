@@ -2,7 +2,7 @@
 
 --- @class XuiSpacing: XuiVar
 --- @field public class any
-XuiSpacing = {}
+XuiSpacing = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,6 +47,7 @@ function XuiSpacing:isTopPercent() end
 --- @public
 --- @return boolean
 function XuiSpacing:isValueSet() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

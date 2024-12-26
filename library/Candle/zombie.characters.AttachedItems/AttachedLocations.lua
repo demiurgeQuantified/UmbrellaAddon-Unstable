@@ -2,7 +2,7 @@
 
 --- @class AttachedLocations
 --- @field public class any
-AttachedLocations = {}
+AttachedLocations = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,6 +18,7 @@ function AttachedLocations.Reset() end
 --- @param arg0 string
 --- @return AttachedLocationGroup
 function AttachedLocations.getGroup(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

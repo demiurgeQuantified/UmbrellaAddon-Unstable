@@ -2,7 +2,7 @@
 
 --- @class Int: Numeric
 --- @field public class any
-Int = {}
+Int = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,3 +27,5 @@ function Int:getValueType() end
 --- @return integer
 --- @overload fun(self: Int, arg0: Number): Number
 function Int:validate(arg0) end
+
+

@@ -2,7 +2,7 @@
 
 --- @class RBTwiggy: RandomizedBuildingBase
 --- @field public class any
-RBTwiggy = {}
+RBTwiggy = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function RBTwiggy:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBTwiggy:roomValid(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

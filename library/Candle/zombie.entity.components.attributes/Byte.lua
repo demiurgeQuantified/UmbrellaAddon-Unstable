@@ -2,7 +2,7 @@
 
 --- @class Byte: Numeric
 --- @field public class any
-Byte = {}
+Byte = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,3 +27,5 @@ function Byte:getValueType() end
 --- @return integer
 --- @overload fun(self: Byte, arg0: Number): Number
 function Byte:validate(arg0) end
+
+

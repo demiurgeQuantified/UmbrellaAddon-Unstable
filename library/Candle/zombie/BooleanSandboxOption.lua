@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class BooleanSandboxOption: BooleanConfigOption
+--- @class BooleanSandboxOption: BooleanConfigOption, SandboxOption
 --- @field public class any
---- @implement SandboxOption
-BooleanSandboxOption = {}
+BooleanSandboxOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,6 +71,7 @@ function BooleanSandboxOption:setTranslation(arg0) end
 --- @return nil
 --- @overload fun(self: BooleanSandboxOption, arg0: table): nil
 function BooleanSandboxOption:toTable(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

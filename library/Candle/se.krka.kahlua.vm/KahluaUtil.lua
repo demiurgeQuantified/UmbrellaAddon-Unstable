@@ -2,7 +2,7 @@
 
 --- @class KahluaUtil
 --- @field public class any
-KahluaUtil = {}
+KahluaUtil = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -222,6 +222,7 @@ function KahluaUtil.tostring(arg0, arg1) end
 --- @param arg0 any
 --- @return string
 function KahluaUtil.type(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

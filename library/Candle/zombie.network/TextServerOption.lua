@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class TextServerOption: StringConfigOption
+--- @class TextServerOption: StringConfigOption, ServerOption
 --- @field public class any
---- @implement ServerOption
-TextServerOption = {}
+TextServerOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -22,6 +21,7 @@ function TextServerOption:getTooltip() end
 --- @public
 --- @return string
 function TextServerOption:getType() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

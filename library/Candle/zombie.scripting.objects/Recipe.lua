@@ -2,7 +2,7 @@
 
 --- @class Recipe: BaseScriptObject
 --- @field public class any
-Recipe = {}
+Recipe = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,6 +53,7 @@ function Recipe:getName() end
 
 --- @public
 --- @return string
+--- @deprecated
 function Recipe:getNearItem() end
 
 --- @public
@@ -99,12 +100,14 @@ function Recipe:isRequiresWorkstation() end
 --- @public
 --- @param arg0 string
 --- @return nil
+--- @deprecated
 function Recipe:setNearItem(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return nil
 function Recipe:setOriginalname(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

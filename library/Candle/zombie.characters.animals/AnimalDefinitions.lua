@@ -3,7 +3,7 @@
 --- @class AnimalDefinitions
 --- @field public class any
 --- @field public animalDefs HashMap
-AnimalDefinitions = {}
+AnimalDefinitions = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -35,6 +35,7 @@ function AnimalDefinitions.getDef(arg0) end
 --- @static
 --- @return nil
 function AnimalDefinitions.loadAnimalDefinitions() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -89,6 +90,7 @@ function AnimalDefinitions:isInsideHutchTime(arg0) end
 --- @public
 --- @return boolean
 function AnimalDefinitions:isOutsideHutchTime() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

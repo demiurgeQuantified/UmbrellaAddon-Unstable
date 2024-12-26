@@ -2,7 +2,7 @@
 
 --- @class RZSTrapperCamp: RandomizedZoneStoryBase
 --- @field public class any
-RZSTrapperCamp = {}
+RZSTrapperCamp = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RZSTrapperCamp = {}
 --- @return ArrayList
 function RZSTrapperCamp.getTrapList() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,6 +22,7 @@ function RZSTrapperCamp.getTrapList() end
 --- @param arg0 Zone
 --- @return nil
 function RZSTrapperCamp:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

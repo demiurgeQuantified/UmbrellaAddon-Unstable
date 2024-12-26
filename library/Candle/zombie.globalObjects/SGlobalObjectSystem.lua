@@ -2,7 +2,7 @@
 
 --- @class SGlobalObjectSystem: GlobalObjectSystem
 --- @field public class any
-SGlobalObjectSystem = {}
+SGlobalObjectSystem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -92,6 +92,7 @@ function SGlobalObjectSystem:update() end
 --- @param arg0 SGlobalObject
 --- @return nil
 function SGlobalObjectSystem:updateGlobalObjectOnClient(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

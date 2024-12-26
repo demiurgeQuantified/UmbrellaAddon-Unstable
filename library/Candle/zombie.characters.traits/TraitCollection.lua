@@ -2,7 +2,7 @@
 
 --- @class TraitCollection
 --- @field public class any
-TraitCollection = {}
+TraitCollection = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -66,6 +66,7 @@ function TraitCollection:size() end
 --- @public
 --- @return string
 function TraitCollection:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

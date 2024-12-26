@@ -2,7 +2,7 @@
 
 --- @class EntityUiStyle
 --- @field public class any
-EntityUiStyle = {}
+EntityUiStyle = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,6 +49,7 @@ function EntityUiStyle:getXuiStyle() end
 --- @param arg0 ComponentType
 --- @return boolean
 function EntityUiStyle:isComponentEnabled(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class IsoMarkers
 --- @field public class any
 --- @field public instance IsoMarkers
-IsoMarkers = {}
+IsoMarkers = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -96,3 +96,5 @@ function IsoMarkers:reset() end
 --- @public
 --- @return nil
 function IsoMarkers:update() end
+
+

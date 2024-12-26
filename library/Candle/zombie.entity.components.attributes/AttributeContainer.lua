@@ -3,7 +3,7 @@
 --- @class AttributeContainer: Component
 --- @field public class any
 --- @field public STORAGE_SIZE short
-AttributeContainer = {}
+AttributeContainer = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,6 +22,7 @@ function AttributeContainer.Copy(arg0, arg1) end
 --- @param arg1 AttributeContainer
 --- @return nil
 function AttributeContainer.Merge(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -175,3 +176,5 @@ function AttributeContainer:size() end
 --- @public
 --- @return string
 function AttributeContainer:toString() end
+
+

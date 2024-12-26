@@ -2,7 +2,7 @@
 
 --- @class RDSResourceGarage: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSResourceGarage = {}
+RDSResourceGarage = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RDSResourceGarage:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSResourceGarage:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

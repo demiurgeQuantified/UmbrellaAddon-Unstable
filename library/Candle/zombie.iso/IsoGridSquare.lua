@@ -24,7 +24,7 @@
 --- @field public WALL_TYPE_N integer
 --- @field public WALL_TYPE_S integer
 --- @field public WALL_TYPE_W integer
-IsoGridSquare = {}
+IsoGridSquare = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -140,6 +140,7 @@ function IsoGridSquare.setbDoSlowPathfinding(arg0) end
 --- @param arg0 byte[]
 --- @return boolean
 function IsoGridSquare.toBoolean(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -510,6 +511,7 @@ function IsoGridSquare:SetRLightLevel(arg0) end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoGridSquare:StartFire() end
 
 --- @public
@@ -902,10 +904,12 @@ function IsoGridSquare:getHasTypes() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function IsoGridSquare:getHashCodeObjects() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function IsoGridSquare:getHashCodeObjectsInt() end
 
 --- @public
@@ -1491,6 +1495,7 @@ function IsoGridSquare:hasWindowOrWindowFrame() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function IsoGridSquare:hashCodeNoOverride() end
 
 --- @public
@@ -1815,6 +1820,7 @@ function IsoGridSquare:putOutCampfire() end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoGridSquare:recalcHashCodeObjects() end
 
 --- @public
@@ -1979,6 +1985,7 @@ function IsoGridSquare:setHasFlies(arg0) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
+--- @deprecated
 function IsoGridSquare:setHaveElectricity(arg0) end
 
 --- @public
@@ -2268,6 +2275,7 @@ function IsoGridSquare:transmitRemoveItemFromSquareOnClients(arg0) end
 --- @public
 --- @return nil
 function IsoGridSquare:transmitStopFire() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

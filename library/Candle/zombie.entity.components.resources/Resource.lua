@@ -2,7 +2,7 @@
 
 --- @class Resource
 --- @field public class any
-Resource = {}
+Resource = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -226,3 +226,5 @@ function Resource:setProgress(arg0) end
 --- @return nil
 --- @overload fun(self: Resource, arg0: Resource, arg1: number): nil
 function Resource:tryTransferTo(arg0) end
+
+

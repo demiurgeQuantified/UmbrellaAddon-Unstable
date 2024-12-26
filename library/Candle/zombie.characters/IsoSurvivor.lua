@@ -2,7 +2,7 @@
 
 --- @class IsoSurvivor: IsoLivingCharacter
 --- @field public class any
-IsoSurvivor = {}
+IsoSurvivor = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function IsoSurvivor:getObjectName() end
 --- @public
 --- @return nil
 function IsoSurvivor:reloadSpritePart() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

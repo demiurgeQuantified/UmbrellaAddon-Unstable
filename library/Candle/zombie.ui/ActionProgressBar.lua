@@ -2,7 +2,7 @@
 
 --- @class ActionProgressBar: UIElement
 --- @field public class any
-ActionProgressBar = {}
+ActionProgressBar = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,6 +25,7 @@ function ActionProgressBar:setValue(arg0) end
 --- @param arg0 integer
 --- @return nil
 function ActionProgressBar:update(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -6,7 +6,7 @@
 --- @field public NextTarget StrLerpVal
 --- @field public None StrLerpVal
 --- @field public Target StrLerpVal
-StrLerpVal = {}
+StrLerpVal = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,6 +29,7 @@ function StrLerpVal.valueOf(arg0) end
 --- @return StrLerpVal[]
 function StrLerpVal.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -36,3 +37,5 @@ function StrLerpVal.values() end
 --- @public
 --- @return integer
 function StrLerpVal:getValue() end
+
+

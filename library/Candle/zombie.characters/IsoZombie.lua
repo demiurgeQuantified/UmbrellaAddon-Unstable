@@ -1,8 +1,7 @@
 --- @meta _
 
---- @class IsoZombie: IsoGameCharacter
+--- @class IsoZombie: IsoGameCharacter, IHumanVisual
 --- @field public class any
---- @implement IHumanVisual
 --- @field public AllowRepathDelayMax integer
 --- @field public AttackAnimTimeMax integer
 --- @field public CRAWLER_DAMAGE_DOT number
@@ -28,7 +27,7 @@
 --- @field public THUMP_FLAG_WINDOW integer
 --- @field public THUMP_FLAG_WINDOW_EXTRA integer
 --- @field public THUMP_FLAG_WIRE_FENCE integer
-IsoZombie = {}
+IsoZombie = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -937,6 +936,7 @@ function IsoZombie:wasFakeDead() end
 --- @param arg0 ByteBuffer
 --- @return nil
 function IsoZombie:writeInventory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

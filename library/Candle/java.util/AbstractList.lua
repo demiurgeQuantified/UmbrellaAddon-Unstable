@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class AbstractList: AbstractCollection
+--- @class AbstractList: AbstractCollection, List
 --- @field public class any
---- @implement List
-AbstractList = {}
+AbstractList = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -30,6 +29,7 @@ function AbstractList.copyOf(arg0) end
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function AbstractList.of() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -163,3 +163,5 @@ function AbstractList:subList(arg0, arg1) end
 --- @return Object[]
 --- @overload fun(self: AbstractList, arg0: Object[]): Object[]
 function AbstractList:toArray() end
+
+

@@ -2,7 +2,7 @@
 
 --- @class FBORenderTracerEffects
 --- @field public class any
-FBORenderTracerEffects = {}
+FBORenderTracerEffects = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ FBORenderTracerEffects = {}
 --- @static
 --- @return FBORenderTracerEffects
 function FBORenderTracerEffects.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -59,3 +60,5 @@ function FBORenderTracerEffects:save() end
 --- @param arg1 Matrix4f
 --- @return nil
 function FBORenderTracerEffects:storeWeaponTransform(arg0, arg1) end
+
+

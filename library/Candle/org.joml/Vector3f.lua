@@ -1,10 +1,8 @@
 --- @meta _
 
---- @class Vector3f
+--- @class Vector3f: Externalizable, Vector3fc
 --- @field public class any
---- @implement Externalizable
---- @implement Vector3fc
-Vector3f = {}
+Vector3f = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -47,6 +45,7 @@ function Vector3f.length(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @return number
 function Vector3f.lengthSquared(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -533,6 +532,7 @@ function Vector3f:z() end
 --- @public
 --- @return Vector3f
 function Vector3f:zero() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

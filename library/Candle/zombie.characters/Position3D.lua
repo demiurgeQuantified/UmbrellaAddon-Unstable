@@ -2,7 +2,7 @@
 
 --- @class Position3D
 --- @field public class any
-Position3D = {}
+Position3D = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function Position3D:y() end
 --- @public
 --- @return number
 function Position3D:z() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

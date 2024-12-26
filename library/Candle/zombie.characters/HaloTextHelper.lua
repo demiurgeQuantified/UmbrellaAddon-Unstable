@@ -5,7 +5,7 @@
 --- @field public COLOR_GREEN ColorRGB
 --- @field public COLOR_RED ColorRGB
 --- @field public COLOR_WHITE ColorRGB
-HaloTextHelper = {}
+HaloTextHelper = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -80,6 +80,7 @@ function HaloTextHelper.getGoodColor() end
 --- @static
 --- @return nil
 function HaloTextHelper.update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

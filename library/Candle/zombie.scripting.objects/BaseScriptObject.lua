@@ -2,7 +2,7 @@
 
 --- @class BaseScriptObject
 --- @field public class any
-BaseScriptObject = {}
+BaseScriptObject = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -110,6 +110,7 @@ function BaseScriptObject:getScriptVersion() end
 --- @public
 --- @param arg0 IVersionHash
 --- @return nil
+--- @deprecated
 function BaseScriptObject:getVersion(arg0) end
 
 --- @public
@@ -137,3 +138,5 @@ function BaseScriptObject:setModule(arg0) end
 --- @param arg0 BaseScriptObject
 --- @return nil
 function BaseScriptObject:setParent(arg0) end
+
+

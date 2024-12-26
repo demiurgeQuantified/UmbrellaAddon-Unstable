@@ -2,7 +2,7 @@
 
 --- @class Result
 --- @field public class any
-Result = {}
+Result = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,6 +47,7 @@ function Result:setModule(arg0) end
 --- @param arg0 string
 --- @return nil
 function Result:setType(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

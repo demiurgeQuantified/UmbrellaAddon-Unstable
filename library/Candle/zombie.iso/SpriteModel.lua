@@ -2,7 +2,7 @@
 
 --- @class SpriteModel: BaseScriptObject
 --- @field public class any
-SpriteModel = {}
+SpriteModel = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -88,6 +88,7 @@ function SpriteModel:setScale(arg0) end
 --- @param arg0 string
 --- @return nil
 function SpriteModel:setTextureName(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

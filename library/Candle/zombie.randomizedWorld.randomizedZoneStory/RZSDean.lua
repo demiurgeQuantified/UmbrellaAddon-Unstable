@@ -2,7 +2,7 @@
 
 --- @class RZSDean: RandomizedZoneStoryBase
 --- @field public class any
-RZSDean = {}
+RZSDean = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSDean = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSDean:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class ImprovedFog
 --- @field public class any
 --- @field public MAX_FOG_Z integer
-ImprovedFog = {}
+ImprovedFog = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -25,22 +25,7 @@ ImprovedFog = {}
 --- @param arg11 number
 --- @param arg12 number
 --- @return nil
-function ImprovedFog.DrawSubTextureRGBA(
-	arg0,
-	arg1,
-	arg2,
-	arg3,
-	arg4,
-	arg5,
-	arg6,
-	arg7,
-	arg8,
-	arg9,
-	arg10,
-	arg11,
-	arg12
-)
-end
+function ImprovedFog.DrawSubTextureRGBA(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) end
 
 --- @public
 --- @static
@@ -343,6 +328,7 @@ function ImprovedFog.update() end
 --- @static
 --- @return nil
 function ImprovedFog.updateKeys() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

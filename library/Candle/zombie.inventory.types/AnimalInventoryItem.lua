@@ -2,7 +2,7 @@
 
 --- @class AnimalInventoryItem: InventoryItem
 --- @field public class any
-AnimalInventoryItem = {}
+AnimalInventoryItem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,6 +58,7 @@ function AnimalInventoryItem:shouldUpdateInWorld() end
 --- @public
 --- @return nil
 function AnimalInventoryItem:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

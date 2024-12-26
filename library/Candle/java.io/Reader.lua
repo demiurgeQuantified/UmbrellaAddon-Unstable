@@ -1,10 +1,8 @@
 --- @meta _
 
---- @class Reader
+--- @class Reader: Readable, Closeable
 --- @field public class any
---- @implement Readable
---- @implement Closeable
-Reader = {}
+Reader = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,6 +12,7 @@ Reader = {}
 --- @static
 --- @return Reader
 function Reader.nullReader() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,3 +57,5 @@ function Reader:skip(arg0) end
 --- @param arg0 Writer
 --- @return integer
 function Reader:transferTo(arg0) end
+
+

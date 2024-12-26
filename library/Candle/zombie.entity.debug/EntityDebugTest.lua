@@ -2,7 +2,7 @@
 
 --- @class EntityDebugTest
 --- @field public class any
-EntityDebugTest = {}
+EntityDebugTest = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -25,6 +25,7 @@ function EntityDebugTest.Reset() end
 --- @return nil
 function EntityDebugTest.Update() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -37,6 +38,7 @@ function EntityDebugTest:create(arg0) end
 --- @public
 --- @return nil
 function EntityDebugTest:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

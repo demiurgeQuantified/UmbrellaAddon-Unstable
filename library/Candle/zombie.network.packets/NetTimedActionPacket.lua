@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class NetTimedActionPacket: NetTimedAction
+--- @class NetTimedActionPacket: NetTimedAction, INetworkPacket
 --- @field public class any
---- @implement INetworkPacket
-NetTimedActionPacket = {}
+NetTimedActionPacket = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -60,6 +59,7 @@ function NetTimedActionPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @param arg3 Object[]
 --- @return nil
 function NetTimedActionPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -152,6 +152,7 @@ function NetTimedActionPacket:sync(arg0, arg1) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function NetTimedActionPacket:write(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

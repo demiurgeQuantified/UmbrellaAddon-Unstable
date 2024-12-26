@@ -3,7 +3,7 @@
 --- @class ContainerOverlays
 --- @field public class any
 --- @field public instance ContainerOverlays
-ContainerOverlays = {}
+ContainerOverlays = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,6 +32,7 @@ function ContainerOverlays:hasOverlays(arg0) end
 --- @param arg0 IsoObject
 --- @return nil
 function ContainerOverlays:updateContainerOverlaySprite(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

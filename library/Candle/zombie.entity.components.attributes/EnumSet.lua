@@ -2,7 +2,7 @@
 
 --- @class EnumSet: AttributeType
 --- @field public class any
-EnumSet = {}
+EnumSet = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,3 +25,5 @@ function EnumSet:getInitialValue() end
 --- @public
 --- @return AttributeValueType
 function EnumSet:getValueType() end
+
+

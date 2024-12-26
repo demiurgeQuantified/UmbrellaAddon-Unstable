@@ -2,7 +2,7 @@
 
 --- @class IsoHeatSource
 --- @field public class any
-IsoHeatSource = {}
+IsoHeatSource = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -42,6 +42,7 @@ function IsoHeatSource:setRadius(arg0) end
 --- @param arg0 integer
 --- @return nil
 function IsoHeatSource:setTemperature(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

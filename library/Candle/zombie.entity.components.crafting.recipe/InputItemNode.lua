@@ -2,7 +2,7 @@
 
 --- @class InputItemNode
 --- @field public class any
-InputItemNode = {}
+InputItemNode = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -60,6 +60,7 @@ function InputItemNode:setExpanded(arg0) end
 --- @public
 --- @return nil
 function InputItemNode:toggleExpanded() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

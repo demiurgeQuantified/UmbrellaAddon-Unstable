@@ -2,7 +2,7 @@
 
 --- @class FilterOutputStream: OutputStream
 --- @field public class any
-FilterOutputStream = {}
+FilterOutputStream = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -22,6 +22,7 @@ function FilterOutputStream:flush() end
 --- @overload fun(self: FilterOutputStream, arg0: integer): nil
 --- @overload fun(self: FilterOutputStream, arg0: byte[], arg1: integer, arg2: integer): nil
 function FilterOutputStream:write(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RZSCharcoalBurner: RandomizedZoneStoryBase
 --- @field public class any
-RZSCharcoalBurner = {}
+RZSCharcoalBurner = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSCharcoalBurner = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSCharcoalBurner:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

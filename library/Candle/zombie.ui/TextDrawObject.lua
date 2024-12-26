@@ -2,7 +2,7 @@
 
 --- @class TextDrawObject
 --- @field public class any
-TextDrawObject = {}
+TextDrawObject = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function TextDrawObject.NoRender(arg0) end
 --- @param arg0 integer
 --- @return nil
 function TextDrawObject.RenderBatch(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -263,6 +264,7 @@ function TextDrawObject:setVisibleRadius(arg0) end
 --- @return number
 --- @overload fun(self: TextDrawObject, arg0: number): number
 function TextDrawObject:updateInternalTickClock() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

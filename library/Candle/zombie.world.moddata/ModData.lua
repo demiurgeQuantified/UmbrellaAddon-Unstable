@@ -2,7 +2,7 @@
 
 --- @class ModData
 --- @field public class any
-ModData = {}
+ModData = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,6 +61,7 @@ function ModData.request(arg0) end
 --- @param arg0 string
 --- @return nil
 function ModData.transmit(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

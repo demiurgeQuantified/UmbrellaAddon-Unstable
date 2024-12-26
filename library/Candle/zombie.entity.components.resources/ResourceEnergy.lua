@@ -2,7 +2,7 @@
 
 --- @class ResourceEnergy: Resource
 --- @field public class any
-ResourceEnergy = {}
+ResourceEnergy = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -104,3 +104,5 @@ function ResourceEnergy:transferTo(arg0, arg1) end
 --- @return nil
 --- @overload fun(self: ResourceEnergy, arg0: Resource, arg1: number): nil
 function ResourceEnergy:tryTransferTo(arg0) end
+
+

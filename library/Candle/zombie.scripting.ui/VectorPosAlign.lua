@@ -12,7 +12,7 @@
 --- @field public TopLeft VectorPosAlign
 --- @field public TopMiddle VectorPosAlign
 --- @field public TopRight VectorPosAlign
-VectorPosAlign = {}
+VectorPosAlign = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,6 +28,7 @@ function VectorPosAlign.valueOf(arg0) end
 --- @static
 --- @return VectorPosAlign[]
 function VectorPosAlign.values() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,3 +51,5 @@ function VectorPosAlign:getY(arg0) end
 --- @public
 --- @return number
 function VectorPosAlign:getYmod() end
+
+

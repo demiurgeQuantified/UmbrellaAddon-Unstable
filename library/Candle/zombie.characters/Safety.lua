@@ -2,7 +2,7 @@
 
 --- @class Safety
 --- @field public class any
-Safety = {}
+Safety = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -75,6 +75,7 @@ function Safety:setToggle(arg0) end
 --- @public
 --- @return nil
 function Safety:toggleSafety() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class WorldSound
 --- @field public class any
-WorldSound = {}
+WorldSound = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,6 +20,7 @@ WorldSound = {}
 --- @overload fun(self: WorldSound, arg0: boolean, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
 --- @overload fun(self: WorldSound, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
 function WorldSound:init(arg0, arg1, arg2, arg3, arg4, arg5) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

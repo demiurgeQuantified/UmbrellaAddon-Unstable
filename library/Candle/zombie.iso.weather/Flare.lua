@@ -2,7 +2,7 @@
 
 --- @class Flare
 --- @field public class any
-Flare = {}
+Flare = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -76,6 +76,7 @@ function Flare:getY() end
 --- @public
 --- @return boolean
 function Flare:isHasLaunched() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

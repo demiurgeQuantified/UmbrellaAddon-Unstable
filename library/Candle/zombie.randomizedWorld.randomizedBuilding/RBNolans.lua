@@ -2,7 +2,7 @@
 
 --- @class RBNolans: RandomizedBuildingBase
 --- @field public class any
-RBNolans = {}
+RBNolans = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function RBNolans:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBNolans:roomValid(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

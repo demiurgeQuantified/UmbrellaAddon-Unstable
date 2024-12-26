@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class LuaTimedActionNew: BaseAction
+--- @class LuaTimedActionNew: BaseAction, IPathfinder
 --- @field public class any
---- @implement IPathfinder
-LuaTimedActionNew = {}
+LuaTimedActionNew = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,6 +100,7 @@ function LuaTimedActionNew:valid() end
 --- @public
 --- @return nil
 function LuaTimedActionNew:waitToStart() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

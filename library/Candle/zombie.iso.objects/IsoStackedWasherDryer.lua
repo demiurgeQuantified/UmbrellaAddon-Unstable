@@ -2,7 +2,7 @@
 
 --- @class IsoStackedWasherDryer: IsoObject
 --- @field public class any
-IsoStackedWasherDryer = {}
+IsoStackedWasherDryer = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -83,6 +83,7 @@ function IsoStackedWasherDryer:setWasherActivated(arg0) end
 --- @public
 --- @return nil
 function IsoStackedWasherDryer:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

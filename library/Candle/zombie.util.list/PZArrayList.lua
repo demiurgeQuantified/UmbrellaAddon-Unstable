@@ -1,10 +1,8 @@
 --- @meta _
 
---- @class PZArrayList: AbstractList
+--- @class PZArrayList: AbstractList, List, RandomAccess
 --- @field public class any
---- @implement List
---- @implement RandomAccess
-PZArrayList = {}
+PZArrayList = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -36,6 +34,7 @@ function PZArrayList.emptyList() end
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function PZArrayList.of() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -70,11 +69,6 @@ function PZArrayList:contains(arg0) end
 --- @param arg0 Collection
 --- @return boolean
 function PZArrayList:containsAll(arg0) end
-
---- @public
---- @param arg0 integer
---- @return nil
-function PZArrayList:ensureCapacity(arg0) end
 
 --- @public
 --- @param arg0 any
@@ -181,6 +175,7 @@ function PZArrayList:toArray() end
 --- @public
 --- @return string
 function PZArrayList:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

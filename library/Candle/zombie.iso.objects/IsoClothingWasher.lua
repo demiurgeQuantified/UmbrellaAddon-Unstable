@@ -2,7 +2,7 @@
 
 --- @class IsoClothingWasher: IsoObject
 --- @field public class any
-IsoClothingWasher = {}
+IsoClothingWasher = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -70,6 +70,7 @@ function IsoClothingWasher:setActivated(arg0) end
 --- @public
 --- @return nil
 function IsoClothingWasher:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

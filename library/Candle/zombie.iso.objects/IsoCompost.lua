@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class IsoCompost: IsoObject
+--- @class IsoCompost: IsoObject, Thumpable
 --- @field public class any
---- @implement Thumpable
-IsoCompost = {}
+IsoCompost = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -110,6 +109,7 @@ function IsoCompost:update() end
 --- @public
 --- @return nil
 function IsoCompost:updateSprite() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

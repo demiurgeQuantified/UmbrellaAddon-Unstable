@@ -6,7 +6,7 @@
 --- @field public MaxAmbientCount integer
 --- @field public MaxRange number
 --- @field public OneInAmbienceChance integer
-AmbientStreamManager = {}
+AmbientStreamManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -24,6 +24,7 @@ function AmbientStreamManager.getInstance() end
 --- @param arg2 Vector2f
 --- @return BuildingDef
 function AmbientStreamManager.getNearestBuilding(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -117,6 +118,7 @@ function AmbientStreamManager:stop() end
 --- @public
 --- @return nil
 function AmbientStreamManager:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

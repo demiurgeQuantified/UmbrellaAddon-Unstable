@@ -3,7 +3,7 @@
 --- @class UIDebugConsole: NewWindow
 --- @field public class any
 --- @field public instance UIDebugConsole
-UIDebugConsole = {}
+UIDebugConsole = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -62,6 +62,7 @@ function UIDebugConsole:render() end
 --- @public
 --- @return nil
 function UIDebugConsole:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

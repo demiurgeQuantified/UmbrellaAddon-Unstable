@@ -3,7 +3,7 @@
 --- @class WorldSoundManager
 --- @field public class any
 --- @field public instance WorldSoundManager
-WorldSoundManager = {}
+WorldSoundManager = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -103,6 +103,7 @@ function WorldSoundManager:render() end
 --- @public
 --- @return nil
 function WorldSoundManager:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

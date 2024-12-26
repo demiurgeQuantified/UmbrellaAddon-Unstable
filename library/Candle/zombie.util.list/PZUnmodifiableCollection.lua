@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class PZUnmodifiableCollection
+--- @class PZUnmodifiableCollection: Collection
 --- @field public class any
---- @implement Collection
-PZUnmodifiableCollection = {}
+PZUnmodifiableCollection = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -118,3 +117,5 @@ function PZUnmodifiableCollection:toArray() end
 --- @public
 --- @return string
 function PZUnmodifiableCollection:toString() end
+
+

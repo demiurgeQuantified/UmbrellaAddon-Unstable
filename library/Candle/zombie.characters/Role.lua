@@ -2,7 +2,7 @@
 
 --- @class Role
 --- @field public class any
-Role = {}
+Role = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function Role.haveCapability(arg0, arg1) end
 --- @static
 --- @return boolean
 function Role.isUsingDebugMode() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,6 +102,7 @@ function Role:setDescription(arg0) end
 --- @public
 --- @return nil
 function Role:setReadOnly() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

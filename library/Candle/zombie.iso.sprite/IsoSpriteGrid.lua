@@ -2,7 +2,7 @@
 
 --- @class IsoSpriteGrid
 --- @field public class any
-IsoSpriteGrid = {}
+IsoSpriteGrid = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -83,6 +83,7 @@ function IsoSpriteGrid:setSprite(arg0, arg1, arg2) end
 --- @public
 --- @return boolean
 function IsoSpriteGrid:validate() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

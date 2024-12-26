@@ -2,7 +2,7 @@
 
 --- @class AnimalTracks
 --- @field public class any
-AnimalTracks = {}
+AnimalTracks = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -44,6 +44,7 @@ function AnimalTracks.getNearestTracks(arg0, arg1, arg2) end
 --- @param arg0 string
 --- @return string
 function AnimalTracks.getTrackStr(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -158,6 +159,7 @@ function AnimalTracks:setAddedToWorld(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function AnimalTracks:setDiscovered(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

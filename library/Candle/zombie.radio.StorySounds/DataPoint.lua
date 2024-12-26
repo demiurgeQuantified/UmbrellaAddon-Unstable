@@ -2,7 +2,7 @@
 
 --- @class DataPoint
 --- @field public class any
-DataPoint = {}
+DataPoint = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,6 +25,7 @@ function DataPoint:setIntensity(arg0) end
 --- @param arg0 number
 --- @return nil
 function DataPoint:setTime(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

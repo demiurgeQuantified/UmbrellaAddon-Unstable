@@ -1,10 +1,8 @@
 --- @meta _
 
---- @class IsoWindow: IsoObject
+--- @class IsoWindow: IsoObject, BarricadeAble, Thumpable
 --- @field public class any
---- @implement BarricadeAble
---- @implement Thumpable
-IsoWindow = {}
+IsoWindow = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -68,6 +66,7 @@ function IsoWindow.isTopOfSheetRopeHere(arg0) end
 --- @param arg2 boolean
 --- @return boolean
 function IsoWindow.removeSheetRope(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -406,6 +405,7 @@ function IsoWindow:syncIsoObjectReceive(arg0) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function IsoWindow:syncIsoObjectSend(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

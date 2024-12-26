@@ -8,7 +8,7 @@
 --- @field public HandcraftOnly OutputFlag
 --- @field public IsEmpty OutputFlag
 --- @field public RespectCapacity OutputFlag
-OutputFlag = {}
+OutputFlag = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -24,3 +24,5 @@ function OutputFlag.valueOf(arg0) end
 --- @static
 --- @return OutputFlag[]
 function OutputFlag.values() end
+
+

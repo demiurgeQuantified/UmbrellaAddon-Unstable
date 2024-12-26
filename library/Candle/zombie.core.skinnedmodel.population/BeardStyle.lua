@@ -2,7 +2,7 @@
 
 --- @class BeardStyle
 --- @field public class any
-BeardStyle = {}
+BeardStyle = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function BeardStyle:getTrimChoices() end
 --- @public
 --- @return boolean
 function BeardStyle:isValid() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RDSHouseParty: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSHouseParty = {}
+RDSHouseParty = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RDSHouseParty:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSHouseParty:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

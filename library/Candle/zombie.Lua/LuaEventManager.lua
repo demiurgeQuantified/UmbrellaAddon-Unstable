@@ -1,10 +1,9 @@
 --- @meta _
 
---- @class LuaEventManager
+--- @class LuaEventManager: JavaFunction
 --- @field public class any
---- @implement JavaFunction
 --- @field public OnTickCallbacks ArrayList
-LuaEventManager = {}
+LuaEventManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -95,6 +94,7 @@ function LuaEventManager.triggerEventGarbage(arg0, arg1) end
 --- @return nil
 function LuaEventManager.triggerEventUnique(arg0, arg1) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -105,6 +105,7 @@ function LuaEventManager.triggerEventUnique(arg0, arg1) end
 --- @return integer
 --- @overload fun(self: LuaEventManager, arg0: LuaCallFrame, arg1: integer): integer
 function LuaEventManager:call(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

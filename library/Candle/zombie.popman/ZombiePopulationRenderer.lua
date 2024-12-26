@@ -2,7 +2,7 @@
 
 --- @class ZombiePopulationRenderer
 --- @field public class any
-ZombiePopulationRenderer = {}
+ZombiePopulationRenderer = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -172,6 +172,7 @@ function ZombiePopulationRenderer:worldToScreenX(arg0) end
 --- @param arg0 number
 --- @return number
 function ZombiePopulationRenderer:worldToScreenY(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

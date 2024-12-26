@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class AlarmClock: InventoryItem
+--- @class AlarmClock: InventoryItem, IAlarmClock
 --- @field public class any
---- @implement IAlarmClock
-AlarmClock = {}
+AlarmClock = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -142,6 +141,7 @@ function AlarmClock:update() end
 --- @param arg0 BaseSoundEmitter
 --- @return nil
 function AlarmClock:updateSound(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

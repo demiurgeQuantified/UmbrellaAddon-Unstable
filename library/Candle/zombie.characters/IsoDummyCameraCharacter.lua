@@ -2,7 +2,7 @@
 
 --- @class IsoDummyCameraCharacter: IsoGameCharacter
 --- @field public class any
-IsoDummyCameraCharacter = {}
+IsoDummyCameraCharacter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,6 +11,7 @@ IsoDummyCameraCharacter = {}
 --- @public
 --- @return nil
 function IsoDummyCameraCharacter:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

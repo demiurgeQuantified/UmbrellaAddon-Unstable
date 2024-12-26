@@ -20,7 +20,7 @@
 --- @field public UpperArm_R BodyPartType
 --- @field public UpperLeg_L BodyPartType
 --- @field public UpperLeg_R BodyPartType
-BodyPartType = {}
+BodyPartType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -120,6 +120,7 @@ function BodyPartType.valueOf(arg0) end
 --- @return BodyPartType[]
 function BodyPartType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -146,3 +147,5 @@ function BodyPartType:getScratchWoundModel(arg0) end
 --- @public
 --- @return integer
 function BodyPartType:index() end
+
+

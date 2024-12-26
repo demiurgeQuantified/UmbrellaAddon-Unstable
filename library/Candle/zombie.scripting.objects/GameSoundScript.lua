@@ -2,7 +2,7 @@
 
 --- @class GameSoundScript: BaseScriptObject
 --- @field public class any
-GameSoundScript = {}
+GameSoundScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,6 +17,7 @@ function GameSoundScript:Load(arg0, arg1) end
 --- @public
 --- @return nil
 function GameSoundScript:reset() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

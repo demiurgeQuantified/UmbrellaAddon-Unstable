@@ -2,7 +2,7 @@
 
 --- @class PlayerKnockedDown: State
 --- @field public class any
-PlayerKnockedDown = {}
+PlayerKnockedDown = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ PlayerKnockedDown = {}
 --- @static
 --- @return PlayerKnockedDown
 function PlayerKnockedDown.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,6 +38,7 @@ function PlayerKnockedDown:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function PlayerKnockedDown:exit(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

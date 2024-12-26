@@ -2,7 +2,7 @@
 
 --- @class CraftLogic: Component
 --- @field public class any
-CraftLogic = {}
+CraftLogic = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -121,3 +121,5 @@ function CraftLogic:start(arg0) end
 --- @return nil
 --- @overload fun(self: CraftLogic, arg0: IsoPlayer, arg1: boolean): nil
 function CraftLogic:stop(arg0) end
+
+

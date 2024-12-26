@@ -2,7 +2,7 @@
 
 --- @class IsoWheelieBin: IsoPushableObject
 --- @field public class any
-IsoWheelieBin = {}
+IsoWheelieBin = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -21,6 +21,7 @@ function IsoWheelieBin:getWeight(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoWheelieBin:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

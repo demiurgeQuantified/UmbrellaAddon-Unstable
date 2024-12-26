@@ -2,7 +2,7 @@
 
 --- @class BaseSoundEmitter
 --- @field public class any
-BaseSoundEmitter = {}
+BaseSoundEmitter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -178,6 +178,7 @@ function BaseSoundEmitter:tick() end
 --- @param arg0 integer
 --- @return nil
 function BaseSoundEmitter:triggerCue(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

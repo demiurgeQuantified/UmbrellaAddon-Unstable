@@ -2,7 +2,7 @@
 
 --- @class RVSRichJerk: RandomizedVehicleStoryBase
 --- @field public class any
-RVSRichJerk = {}
+RVSRichJerk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,6 +26,7 @@ function RVSRichJerk:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSRichJerk:spawnElement(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

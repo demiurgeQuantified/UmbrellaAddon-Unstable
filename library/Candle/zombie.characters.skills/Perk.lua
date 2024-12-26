@@ -2,7 +2,7 @@
 
 --- @class Perk
 --- @field public class any
-Perk = {}
+Perk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -93,6 +93,7 @@ function Perk:setCustom() end
 --- @public
 --- @return string
 function Perk:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class MusicThreatConfig
 --- @field public class any
-MusicThreatConfig = {}
+MusicThreatConfig = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ MusicThreatConfig = {}
 --- @static
 --- @return MusicThreatConfig
 function MusicThreatConfig.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -56,6 +57,7 @@ function MusicThreatConfig:isStatusIntensityOverridden(arg0) end
 --- @param arg1 number
 --- @return nil
 function MusicThreatConfig:setStatusIntensityOverride(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

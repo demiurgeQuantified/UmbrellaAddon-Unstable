@@ -2,7 +2,7 @@
 
 --- @class HumanVisual: BaseVisual
 --- @field public class any
-HumanVisual = {}
+HumanVisual = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ HumanVisual = {}
 --- @param arg0 ItemVisuals
 --- @return CharacterMask
 function HumanVisual.GetMask(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -302,6 +303,7 @@ function HumanVisual:setSkinTextureName(arg0) end
 --- @param arg0 Outfit
 --- @return nil
 function HumanVisual:synchWithOutfit(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

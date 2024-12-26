@@ -14,7 +14,7 @@
 --- @field public Moveable ItemType
 --- @field public None ItemType
 --- @field public Weapon ItemType
-ItemType = {}
+ItemType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -37,6 +37,7 @@ function ItemType.valueOf(arg0) end
 --- @return ItemType[]
 function ItemType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -44,3 +45,5 @@ function ItemType.values() end
 --- @public
 --- @return integer
 function ItemType:index() end
+
+

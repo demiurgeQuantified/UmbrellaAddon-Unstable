@@ -2,7 +2,7 @@
 
 --- @class RDSDeadDrunk: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSDeadDrunk = {}
+RDSDeadDrunk = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RDSDeadDrunk = {}
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSDeadDrunk:randomizeDeadSurvivor(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

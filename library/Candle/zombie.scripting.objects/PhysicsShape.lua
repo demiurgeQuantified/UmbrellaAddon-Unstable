@@ -2,7 +2,7 @@
 
 --- @class PhysicsShape
 --- @field public class any
-PhysicsShape = {}
+PhysicsShape = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -41,6 +41,7 @@ function PhysicsShape:setPhysicsShapeScript(arg0) end
 --- @param arg0 number
 --- @return nil
 function PhysicsShape:setRadius(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

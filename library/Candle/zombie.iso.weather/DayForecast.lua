@@ -2,7 +2,7 @@
 
 --- @class DayForecast
 --- @field public class any
-DayForecast = {}
+DayForecast = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -115,6 +115,7 @@ function DayForecast:isHasTropicalStorm() end
 --- @public
 --- @return boolean
 function DayForecast:isWeatherStarts() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

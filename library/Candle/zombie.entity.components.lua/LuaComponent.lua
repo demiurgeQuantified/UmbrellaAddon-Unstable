@@ -2,7 +2,7 @@
 
 --- @class LuaComponent: Component
 --- @field public class any
-LuaComponent = {}
+LuaComponent = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,3 +17,5 @@ function LuaComponent:DoTooltip(arg0, arg1) end
 --- @public
 --- @return boolean
 function LuaComponent:isValid() end
+
+

@@ -2,7 +2,7 @@
 
 --- @class Bool: AttributeType
 --- @field public class any
-Bool = {}
+Bool = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,3 +15,5 @@ function Bool:getInitialValue() end
 --- @public
 --- @return AttributeValueType
 function Bool:getValueType() end
+
+

@@ -5,7 +5,7 @@
 --- @field public Center TextAlign
 --- @field public Left TextAlign
 --- @field public Right TextAlign
-TextAlign = {}
+TextAlign = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,3 +21,5 @@ function TextAlign.valueOf(arg0) end
 --- @static
 --- @return TextAlign[]
 function TextAlign.values() end
+
+

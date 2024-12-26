@@ -2,7 +2,7 @@
 
 --- @class ClimateValues
 --- @field public class any
-ClimateValues = {}
+ClimateValues = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -160,6 +160,7 @@ function ClimateValues:pollDate(arg0) end
 --- @public
 --- @return nil
 function ClimateValues:print() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class Moodle
 --- @field public class any
-Moodle = {}
+Moodle = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,6 +46,7 @@ function Moodle:isChevronIsUp() end
 --- @param arg2 Color
 --- @return nil
 function Moodle:setChevron(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

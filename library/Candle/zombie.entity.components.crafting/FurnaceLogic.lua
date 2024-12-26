@@ -2,7 +2,7 @@
 
 --- @class FurnaceLogic: Component
 --- @field public class any
-FurnaceLogic = {}
+FurnaceLogic = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -165,3 +165,5 @@ function FurnaceLogic:start(arg0) end
 --- @return nil
 --- @overload fun(self: FurnaceLogic, arg0: IsoPlayer, arg1: boolean): nil
 function FurnaceLogic:stop(arg0) end
+
+

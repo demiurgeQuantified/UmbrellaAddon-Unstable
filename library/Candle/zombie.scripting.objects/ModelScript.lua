@@ -1,10 +1,9 @@
 --- @meta _
 
---- @class ModelScript: BaseScriptObject
+--- @class ModelScript: BaseScriptObject, IModelAttachmentOwner
 --- @field public class any
---- @implement IModelAttachmentOwner
 --- @field public DEFAULT_SHADER_NAME string
-ModelScript = {}
+ModelScript = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,6 +13,7 @@ ModelScript = {}
 --- @static
 --- @return nil
 function ModelScript.ScriptsLoaded() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -110,6 +110,7 @@ function ModelScript:reset() end
 --- @param arg0 number
 --- @return nil
 function ModelScript:scaleAttachmentOffset(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

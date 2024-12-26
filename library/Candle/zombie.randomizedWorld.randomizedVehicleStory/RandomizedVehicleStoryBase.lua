@@ -3,7 +3,7 @@
 --- @class RandomizedVehicleStoryBase: RandomizedWorldBase
 --- @field public class any
 --- @field public baseChance integer
-RandomizedVehicleStoryBase = {}
+RandomizedVehicleStoryBase = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -31,6 +31,7 @@ function RandomizedVehicleStoryBase.getRandomFreeUnoccupiedSquare(arg0, arg1, ar
 --- @param arg1 IsoChunk
 --- @return nil
 function RandomizedVehicleStoryBase.initAllRVSMapChance(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -172,6 +173,7 @@ function RandomizedVehicleStoryBase:setMinimumDays(arg0) end
 --- @param arg1 Element
 --- @return nil
 function RandomizedVehicleStoryBase:spawnElement(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

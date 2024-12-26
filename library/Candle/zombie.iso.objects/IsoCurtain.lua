@@ -2,7 +2,7 @@
 
 --- @class IsoCurtain: IsoObject
 --- @field public class any
-IsoCurtain = {}
+IsoCurtain = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ IsoCurtain = {}
 --- @param arg0 IsoObject
 --- @return boolean
 function IsoCurtain.isSheet(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -120,6 +121,7 @@ function IsoCurtain:syncIsoObject(arg0, arg1, arg2) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function IsoCurtain:syncIsoObjectSend(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

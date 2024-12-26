@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class ScriptModule
+--- @class ScriptModule: IScriptObjectStore
 --- @field public class any
---- @implement IScriptObjectStore
-ScriptModule = {}
+ScriptModule = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -200,6 +199,7 @@ function ScriptModule:getXuiSkinScript(arg0) end
 --- @param arg0 string
 --- @return XuiLayoutScript
 function ScriptModule:getXuiStyle(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

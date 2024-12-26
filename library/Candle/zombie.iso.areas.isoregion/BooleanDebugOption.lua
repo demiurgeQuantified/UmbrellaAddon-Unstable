@@ -2,7 +2,7 @@
 
 --- @class BooleanDebugOption: BooleanConfigOption
 --- @field public class any
-BooleanDebugOption = {}
+BooleanDebugOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,6 +11,7 @@ BooleanDebugOption = {}
 --- @public
 --- @return integer
 function BooleanDebugOption:getIndex() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

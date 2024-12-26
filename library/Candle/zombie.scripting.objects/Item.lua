@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public NetIDToItem HashMap
 --- @field public NetItemToID HashMap
-Item = {}
+Item = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -148,6 +148,7 @@ function Item:getCorpseSicknessDefense() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function Item:getCount() end
 
 --- @public
@@ -1296,6 +1297,7 @@ function Item:setWindresist(arg0) end
 --- @public
 --- @return string
 function Item:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

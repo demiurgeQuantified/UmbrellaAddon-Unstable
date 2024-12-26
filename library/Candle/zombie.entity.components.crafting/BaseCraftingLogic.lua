@@ -2,7 +2,7 @@
 
 --- @class BaseCraftingLogic
 --- @field public class any
-BaseCraftingLogic = {}
+BaseCraftingLogic = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -37,6 +37,7 @@ function BaseCraftingLogic.filterRecipeList(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg0 CraftRecipe
 --- @return string
 function BaseCraftingLogic.getFavouriteModDataString(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -91,6 +92,7 @@ function BaseCraftingLogic:setSelectedRecipeStyle(arg0, arg1, arg2) end
 --- @public
 --- @return nil
 function BaseCraftingLogic:sortRecipeList() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

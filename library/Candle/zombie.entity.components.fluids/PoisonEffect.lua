@@ -8,7 +8,7 @@
 --- @field public Mild PoisonEffect
 --- @field public None PoisonEffect
 --- @field public Severe PoisonEffect
-PoisonEffect = {}
+PoisonEffect = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -43,6 +43,7 @@ function PoisonEffect.valueOf(arg0) end
 --- @return PoisonEffect[]
 function PoisonEffect.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -58,3 +59,5 @@ function PoisonEffect:getPlayerEffect() end
 --- @public
 --- @return string
 function PoisonEffect:toStringLower() end
+
+

@@ -2,7 +2,7 @@
 
 --- @class IsoGenerator: IsoObject
 --- @field public class any
-IsoGenerator = {}
+IsoGenerator = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -40,6 +40,7 @@ function IsoGenerator.updateGenerator(arg0) end
 --- @static
 --- @return nil
 function IsoGenerator.updateSurroundingNow() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -149,6 +150,7 @@ function IsoGenerator:syncIsoObjectSend(arg0) end
 --- @public
 --- @return nil
 function IsoGenerator:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

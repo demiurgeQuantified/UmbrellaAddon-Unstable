@@ -2,7 +2,7 @@
 
 --- @class TermsOfServiceState: GameState
 --- @field public class any
-TermsOfServiceState = {}
+TermsOfServiceState = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,6 +28,7 @@ function TermsOfServiceState:render() end
 --- @public
 --- @return StateAction
 function TermsOfServiceState:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

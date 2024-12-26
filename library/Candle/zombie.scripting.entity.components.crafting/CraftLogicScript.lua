@@ -2,7 +2,7 @@
 
 --- @class CraftLogicScript: ComponentScript
 --- @field public class any
-CraftLogicScript = {}
+CraftLogicScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,6 +32,7 @@ function CraftLogicScript:PreReload() end
 
 --- @public
 --- @return ArrayList
+--- @deprecated
 function CraftLogicScript:getCraftProcessorScripts() end
 
 --- @public
@@ -57,3 +58,5 @@ function CraftLogicScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function CraftLogicScript:reset() end
+
+

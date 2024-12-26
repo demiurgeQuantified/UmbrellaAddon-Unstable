@@ -2,7 +2,7 @@
 
 --- @class MusicIntensityConfig
 --- @field public class any
-MusicIntensityConfig = {}
+MusicIntensityConfig = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ MusicIntensityConfig = {}
 --- @static
 --- @return MusicIntensityConfig
 function MusicIntensityConfig.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,6 +38,7 @@ function MusicIntensityConfig:restoreToFullHealth(arg0) end
 --- @param arg1 MusicIntensityEvents
 --- @return MusicIntensityEvent
 function MusicIntensityConfig:triggerEvent(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

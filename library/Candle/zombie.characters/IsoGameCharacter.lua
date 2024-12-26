@@ -1,23 +1,11 @@
 --- @meta _
 
---- @class IsoGameCharacter: IsoMovingObject
+--- @class IsoGameCharacter: IsoMovingObject, Talker, ChatElementOwner, IAnimatable, IAnimationVariableMap, IClothingItemListener, IActionStateChanged, IAnimEventCallback, IAnimEventWrappedBroadcaster, IFMODParameterUpdater, IGrappleableWrapper, ILuaVariableSource, ILuaGameCharacter
 --- @field public class any
---- @implement Talker
---- @implement ChatElementOwner
---- @implement IAnimatable
---- @implement IAnimationVariableMap
---- @implement IClothingItemListener
---- @implement IActionStateChanged
---- @implement IAnimEventCallback
---- @implement IAnimEventWrappedBroadcaster
---- @implement IFMODParameterUpdater
---- @implement IGrappleableWrapper
---- @implement ILuaVariableSource
---- @implement ILuaGameCharacter
 --- @field public RENDER_OFFSET_X integer
 --- @field public RENDER_OFFSET_Y integer
 --- @field public s_maxPossibleTwist number
-IsoGameCharacter = {}
+IsoGameCharacter = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -56,6 +44,7 @@ function IsoGameCharacter.getTempo() end
 --- @static
 --- @return Vector2
 function IsoGameCharacter.getTempo2() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -157,6 +146,7 @@ function IsoGameCharacter:DoSwingCollisionBoneCheck(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
+--- @deprecated
 function IsoGameCharacter:DrawSneezeText() end
 
 --- @public
@@ -250,6 +240,7 @@ function IsoGameCharacter:InitSpriteParts(arg0) end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function IsoGameCharacter:IsAiming() end
 
 --- @public
@@ -1156,6 +1147,7 @@ function IsoGameCharacter:getAnimForwardDirection(arg0) end
 --- @public
 --- @param arg0 Vector2
 --- @return Vector2
+--- @deprecated
 function IsoGameCharacter:getAnimVector(arg0) end
 
 --- @public
@@ -2436,8 +2428,8 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return BaseGrappleable
---- @overload fun(self: IsoGameCharacter): IGrappleable
+--- @return IGrappleable
+--- @overload fun(self: IsoGameCharacter): BaseGrappleable
 --- @overload fun(self: IsoGameCharacter): IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
@@ -2860,6 +2852,7 @@ function IsoGameCharacter:isHitFromBehind() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function IsoGameCharacter:isIgnoreMovementForDirection() end
 
 --- @public
@@ -3316,6 +3309,7 @@ function IsoGameCharacter:isbFalling() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function IsoGameCharacter:isbOnBed() end
 
 --- @public
@@ -4811,6 +4805,7 @@ function IsoGameCharacter:setWornItems(arg0) end
 --- @public
 --- @param arg0 XP
 --- @return nil
+--- @deprecated
 function IsoGameCharacter:setXp(arg0) end
 
 --- @public
@@ -4836,6 +4831,7 @@ function IsoGameCharacter:setbFalling(arg0) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
+--- @deprecated
 function IsoGameCharacter:setbOnBed(arg0) end
 
 --- @public
@@ -5095,6 +5091,7 @@ function IsoGameCharacter:zeroForwardDirectionX() end
 --- @public
 --- @return nil
 function IsoGameCharacter:zeroForwardDirectionY() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

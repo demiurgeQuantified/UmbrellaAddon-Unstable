@@ -2,7 +2,7 @@
 
 --- @class AttachedItem
 --- @field public class any
-AttachedItem = {}
+AttachedItem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,6 +15,7 @@ function AttachedItem:getItem() end
 --- @public
 --- @return string
 function AttachedItem:getLocation() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

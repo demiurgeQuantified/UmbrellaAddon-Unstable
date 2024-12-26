@@ -2,7 +2,7 @@
 
 --- @class IntegerConfigOption: ConfigOption
 --- @field public class any
-IntegerConfigOption = {}
+IntegerConfigOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,6 +71,7 @@ function IntegerConfigOption:setValue(arg0) end
 --- @param arg0 any
 --- @return nil
 function IntegerConfigOption:setValueFromObject(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

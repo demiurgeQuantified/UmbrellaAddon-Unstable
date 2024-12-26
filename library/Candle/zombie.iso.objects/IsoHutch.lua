@@ -2,7 +2,7 @@
 
 --- @class IsoHutch: IsoObject
 --- @field public class any
-IsoHutch = {}
+IsoHutch = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,6 +15,7 @@ IsoHutch = {}
 --- @param arg2 integer
 --- @return IsoHutch
 function IsoHutch.getHutch(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -229,6 +230,7 @@ function IsoHutch:tryFindAndRemoveAnimalFromNestBox(arg0) end
 --- @public
 --- @return nil
 function IsoHutch:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

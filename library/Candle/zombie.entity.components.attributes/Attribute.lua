@@ -16,7 +16,7 @@
 --- @field public TestTags EnumStringSet
 --- @field public TestUses Int
 --- @field public TimesHeadRepaired Int
-Attribute = {}
+Attribute = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -43,6 +43,7 @@ function Attribute.TypeFromName(arg0) end
 --- @static
 --- @return nil
 function Attribute.init() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

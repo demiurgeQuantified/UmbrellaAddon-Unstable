@@ -2,7 +2,7 @@
 
 --- @class RZSSirTwiggy: RandomizedZoneStoryBase
 --- @field public class any
-RZSSirTwiggy = {}
+RZSSirTwiggy = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSSirTwiggy = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSSirTwiggy:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

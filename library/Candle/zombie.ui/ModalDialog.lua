@@ -2,7 +2,7 @@
 
 --- @class ModalDialog: NewWindow
 --- @field public class any
-ModalDialog = {}
+ModalDialog = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,6 +17,7 @@ function ModalDialog:ButtonClicked(arg0) end
 --- @param arg0 string
 --- @return nil
 function ModalDialog:Clicked(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

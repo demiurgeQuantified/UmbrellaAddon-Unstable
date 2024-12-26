@@ -2,7 +2,7 @@
 
 --- @class ClimateBool
 --- @field public class any
-ClimateBool = {}
+ClimateBool = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -80,6 +80,7 @@ function ClimateBool:setModdedValue(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function ClimateBool:setOverride(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

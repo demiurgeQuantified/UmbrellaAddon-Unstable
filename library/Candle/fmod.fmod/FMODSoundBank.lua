@@ -2,7 +2,7 @@
 
 --- @class FMODSoundBank: BaseSoundBank
 --- @field public class any
-FMODSoundBank = {}
+FMODSoundBank = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,6 +33,7 @@ function FMODSoundBank:getFootstep(arg0) end
 --- @param arg0 string
 --- @return FMODVoice
 function FMODSoundBank:getVoice(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

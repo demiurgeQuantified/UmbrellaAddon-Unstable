@@ -2,7 +2,7 @@
 
 --- @class ExitOption
 --- @field public class any
-ExitOption = {}
+ExitOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function ExitOption:getScriptname() end
 --- @public
 --- @return integer
 function ExitOption:getStartDelay() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

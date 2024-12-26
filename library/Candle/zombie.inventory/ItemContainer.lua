@@ -2,7 +2,7 @@
 
 --- @class ItemContainer
 --- @field public class any
-ItemContainer = {}
+ItemContainer = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function ItemContainer.floatingPointCorrection(arg0) end
 --- @param arg0 IsoObject
 --- @return boolean
 function ItemContainer.isObjectPowered(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -818,6 +819,7 @@ function ItemContainer:getFreezerPosition() end
 --- @public
 --- @param arg0 integer
 --- @return InventoryItem
+--- @deprecated
 function ItemContainer:getItemById(arg0) end
 
 --- @public
@@ -1224,6 +1226,7 @@ function ItemContainer:removeAllItems() end
 --- @public
 --- @param arg0 InventoryItem
 --- @return nil
+--- @deprecated
 function ItemContainer:removeItemOnServer(arg0) end
 
 --- @public
@@ -1371,6 +1374,7 @@ function ItemContainer:setWeightReduction(arg0) end
 --- @public
 --- @return string
 function ItemContainer:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class PresetEntry
 --- @field public class any
-PresetEntry = {}
+PresetEntry = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,6 +25,7 @@ function PresetEntry:setFrequency(arg0) end
 --- @param arg0 string
 --- @return nil
 function PresetEntry:setName(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RVSPoliceBlockade: RandomizedVehicleStoryBase
 --- @field public class any
-RVSPoliceBlockade = {}
+RVSPoliceBlockade = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,6 +26,7 @@ function RVSPoliceBlockade:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSPoliceBlockade:spawnElement(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

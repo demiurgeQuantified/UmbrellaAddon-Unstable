@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class AtomUI
+--- @class AtomUI: UIElementInterface
 --- @field public class any
---- @implement UIElementInterface
-AtomUI = {}
+AtomUI = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -378,6 +377,7 @@ function AtomUI:setY(arg0) end
 --- @return nil
 --- @overload fun(self: AtomUI): nil
 function AtomUI:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

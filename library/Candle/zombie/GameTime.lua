@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public instance GameTime
 --- @field public MULTIPLIER number
-GameTime = {}
+GameTime = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -60,6 +60,7 @@ function GameTime.setServerTimeShift(arg0) end
 --- @return nil
 function GameTime.syncServerTime(arg0, arg1, arg2) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -92,6 +93,7 @@ function GameTime:daysInMonth(arg0, arg1) end
 
 --- @public
 --- @return number
+--- @deprecated
 function GameTime:getAmbient() end
 
 --- @public
@@ -542,6 +544,7 @@ function GameTime:update(arg0) end
 --- @param arg4 integer
 --- @return nil
 function GameTime:updateCalendar(arg0, arg1, arg2, arg3, arg4) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

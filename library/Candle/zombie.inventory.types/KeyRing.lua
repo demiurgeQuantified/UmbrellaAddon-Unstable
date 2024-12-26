@@ -2,7 +2,7 @@
 
 --- @class KeyRing: InventoryItem
 --- @field public class any
-KeyRing = {}
+KeyRing = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -34,6 +34,7 @@ function KeyRing:getSaveType() end
 --- @param arg0 ArrayList
 --- @return nil
 function KeyRing:setKeys(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

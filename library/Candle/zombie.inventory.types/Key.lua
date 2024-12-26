@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public doors ArrayList
 --- @field public highlightDoor Key[]
-Key = {}
+Key = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,6 +16,7 @@ Key = {}
 --- @param arg1 InventoryItem
 --- @return nil
 function Key.setHighlightDoors(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -80,6 +81,7 @@ function Key:setPadlock(arg0) end
 --- @public
 --- @return nil
 function Key:takeKeyId() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -22,7 +22,7 @@
 --- @field public texturePacks ArrayList
 --- @field public texturePackTextures TexturePackTextures
 --- @field public version string
-GameWindow = {}
+GameWindow = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -56,6 +56,7 @@ function GameWindow.LoadTexturePack(arg0, arg1) end
 --- @static
 --- @param arg0 string
 --- @return nil
+--- @deprecated
 function GameWindow.LoadTexturePackDDS(arg0) end
 
 --- @public
@@ -160,6 +161,7 @@ function GameWindow.setTexturePackLookup() end
 --- @param arg1 Throwable
 --- @return nil
 function GameWindow.uncaughtException(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

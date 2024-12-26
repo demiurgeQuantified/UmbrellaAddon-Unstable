@@ -2,7 +2,7 @@
 
 --- @class Model
 --- @field public class any
-Model = {}
+Model = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,6 +35,7 @@ function Model:getRotate() end
 --- @public
 --- @return number
 function Model:getScale() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public DEF_CONTAINER_NAME string
 --- @field public MAX_FLUIDS integer
-FluidContainer = {}
+FluidContainer = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -44,6 +44,7 @@ function FluidContainer.GetTransferReason(arg0, arg1) end
 --- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: number): nil
 --- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: number, arg3: boolean): nil
 function FluidContainer.Transfer(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -281,3 +282,5 @@ function FluidContainer:transferFrom(arg0) end
 --- @return nil
 --- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: number): nil
 function FluidContainer:transferTo(arg0) end
+
+

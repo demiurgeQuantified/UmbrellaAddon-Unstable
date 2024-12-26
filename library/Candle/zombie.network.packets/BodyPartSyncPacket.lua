@@ -1,8 +1,7 @@
 --- @meta _
 
---- @class BodyPartSyncPacket
+--- @class BodyPartSyncPacket: INetworkPacket
 --- @field public class any
---- @implement INetworkPacket
 --- @field public BD_additionalPain integer
 --- @field public BD_alcoholicBandage integer
 --- @field public BD_alcoholLevel integer
@@ -45,7 +44,7 @@
 --- @field public BD_stitched integer
 --- @field public BD_stitchTime integer
 --- @field public BD_woundInfectionLevel integer
-BodyPartSyncPacket = {}
+BodyPartSyncPacket = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -102,6 +101,7 @@ function BodyPartSyncPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @param arg3 Object[]
 --- @return nil
 function BodyPartSyncPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -194,6 +194,7 @@ function BodyPartSyncPacket:sync(arg0, arg1) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function BodyPartSyncPacket:write(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

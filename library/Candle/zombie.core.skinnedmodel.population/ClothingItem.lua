@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public ASSET_TYPE AssetType
 --- @field public s_masksFolderDefault string
-ClothingItem = {}
+ClothingItem = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,6 +17,7 @@ ClothingItem = {}
 --- @return nil
 --- @overload fun(arg0: ClothingItemReference, arg1: CharacterMask): nil
 function ClothingItem.tryGetCombinedMask(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -100,6 +101,7 @@ function ClothingItem:isMask() end
 --- @public
 --- @return string
 function ClothingItem:toString() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

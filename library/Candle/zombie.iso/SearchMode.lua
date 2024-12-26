@@ -2,7 +2,7 @@
 
 --- @class SearchMode
 --- @field public class any
-SearchMode = {}
+SearchMode = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,6 +17,7 @@ function SearchMode.getInstance() end
 --- @static
 --- @return nil
 function SearchMode.reset() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -97,3 +98,5 @@ function SearchMode:setOverrideSearchManager(arg0, arg1) end
 --- @public
 --- @return nil
 function SearchMode:update() end
+
+

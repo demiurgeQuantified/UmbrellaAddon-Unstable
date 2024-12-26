@@ -1,8 +1,7 @@
 --- @meta _
 
---- @class SyncPlayerStatsPacket
+--- @class SyncPlayerStatsPacket: INetworkPacket
 --- @field public class any
---- @implement INetworkPacket
 --- @field public Stat_Anger integer
 --- @field public Stat_Boredom integer
 --- @field public Stat_Drunkennes integer
@@ -19,7 +18,7 @@
 --- @field public Stat_Stress integer
 --- @field public Stat_StressFromCigarettes integer
 --- @field public Stat_Thirst integer
-SyncPlayerStatsPacket = {}
+SyncPlayerStatsPacket = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -76,6 +75,7 @@ function SyncPlayerStatsPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @param arg3 Object[]
 --- @return nil
 function SyncPlayerStatsPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -168,6 +168,7 @@ function SyncPlayerStatsPacket:sync(arg0, arg1) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function SyncPlayerStatsPacket:write(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

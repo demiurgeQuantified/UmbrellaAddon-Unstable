@@ -2,7 +2,7 @@
 
 --- @class FMODSoundEmitter: BaseSoundEmitter
 --- @field public class any
-FMODSoundEmitter = {}
+FMODSoundEmitter = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ FMODSoundEmitter = {}
 --- @static
 --- @return nil
 function FMODSoundEmitter.update() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -196,6 +197,7 @@ function FMODSoundEmitter:tick() end
 --- @param arg0 integer
 --- @return nil
 function FMODSoundEmitter:triggerCue(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

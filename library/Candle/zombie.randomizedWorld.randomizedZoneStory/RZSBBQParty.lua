@@ -2,7 +2,7 @@
 
 --- @class RZSBBQParty: RandomizedZoneStoryBase
 --- @field public class any
-RZSBBQParty = {}
+RZSBBQParty = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSBBQParty = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSBBQParty:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

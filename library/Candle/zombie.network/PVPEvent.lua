@@ -2,7 +2,7 @@
 
 --- @class PVPEvent
 --- @field public class any
-PVPEvent = {}
+PVPEvent = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,6 +37,7 @@ function PVPEvent:isSet() end
 --- @return nil
 --- @overload fun(self: PVPEvent, arg0: string, arg1: string, arg2: string, arg3: number, arg4: number, arg5: number): nil
 function PVPEvent:reset(arg0, arg1, arg2, arg3, arg4) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class UI3DModel: UIElement
+--- @class UI3DModel: UIElement, IClothingItemListener
 --- @field public class any
---- @implement IClothingItemListener
-UI3DModel = {}
+UI3DModel = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -119,6 +118,7 @@ function UI3DModel:setYOffset(arg0) end
 --- @param arg0 number
 --- @return nil
 function UI3DModel:setZoom(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ChatBase
 --- @field public class any
-ChatBase = {}
+ChatBase = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -166,6 +166,7 @@ function ChatBase:syncMembersByUsernames(arg0) end
 --- @param arg0 ByteBuffer
 --- @return ChatMessage
 function ChatBase:unpackMessage(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

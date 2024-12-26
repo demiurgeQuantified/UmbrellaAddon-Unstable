@@ -2,7 +2,7 @@
 
 --- @class MapGroups
 --- @field public class any
-MapGroups = {}
+MapGroups = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ MapGroups = {}
 --- @param arg0 string
 --- @return string
 function MapGroups.addMissingVanillaDirectories(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,6 +51,7 @@ function MapGroups:getNumberOfGroups() end
 --- @param arg0 integer
 --- @return nil
 function MapGroups:setWorld(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

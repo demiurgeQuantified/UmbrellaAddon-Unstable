@@ -2,7 +2,7 @@
 
 --- @class MusicThreatStatuses
 --- @field public class any
-MusicThreatStatuses = {}
+MusicThreatStatuses = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,6 +39,7 @@ function MusicThreatStatuses:setStatus(arg0, arg1) end
 --- @public
 --- @return nil
 function MusicThreatStatuses:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

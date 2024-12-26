@@ -2,7 +2,7 @@
 
 --- @class Time
 --- @field public class any
-Time = {}
+Time = {};
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

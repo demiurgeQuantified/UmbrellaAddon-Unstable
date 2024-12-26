@@ -2,7 +2,7 @@
 
 --- @class Stack: Vector
 --- @field public class any
-Stack = {}
+Stack = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -29,6 +29,7 @@ function Stack:push(arg0) end
 --- @param arg0 any
 --- @return integer
 function Stack:search(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

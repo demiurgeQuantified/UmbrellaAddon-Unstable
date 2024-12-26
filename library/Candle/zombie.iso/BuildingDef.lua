@@ -2,7 +2,7 @@
 
 --- @class BuildingDef
 --- @field public class any
-BuildingDef = {}
+BuildingDef = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -226,6 +226,7 @@ function BuildingDef:setKeyId(arg0) end
 --- @param arg0 integer
 --- @return nil
 function BuildingDef:setKeySpawned(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

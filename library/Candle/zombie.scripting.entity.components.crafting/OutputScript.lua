@@ -2,7 +2,7 @@
 
 --- @class OutputScript: IOScript
 --- @field public class any
-OutputScript = {}
+OutputScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -91,6 +91,7 @@ function OutputScript:getResourceType() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function OutputScript:getShapedIndex() end
 
 --- @public
@@ -112,6 +113,7 @@ function OutputScript:isAutomationOnly() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function OutputScript:isCreateUses() end
 
 --- @public
@@ -143,4 +145,7 @@ function OutputScript:isHandcraftOnly() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function OutputScript:isReplaceInput() end
+
+

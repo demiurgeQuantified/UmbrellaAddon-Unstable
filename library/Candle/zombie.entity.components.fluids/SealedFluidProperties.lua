@@ -16,7 +16,7 @@
 --- @field public Str_Stress string
 --- @field public Str_Thirst string
 --- @field public Str_Unhappy string
-SealedFluidProperties = {}
+SealedFluidProperties = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -92,6 +92,7 @@ function SealedFluidProperties:load(arg0, arg1) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function SealedFluidProperties:save(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

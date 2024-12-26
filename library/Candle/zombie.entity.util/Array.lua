@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class Array
+--- @class Array: Iterable
 --- @field public class any
---- @implement Iterable
-Array = {}
+Array = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,6 +20,7 @@ function Array.of(arg0) end
 --- @param arg0 Object[]
 --- @return Array
 function Array.with(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -239,6 +239,7 @@ function Array:toString() end
 --- @param arg0 integer
 --- @return nil
 function Array:truncate(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

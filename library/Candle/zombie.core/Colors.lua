@@ -173,7 +173,7 @@
 --- @field public WhiteSmoke Color
 --- @field public Yellow Color
 --- @field public YellowGreen Color
-Colors = {}
+Colors = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -269,6 +269,7 @@ function Colors.GetColorsCount() end
 --- @static
 --- @return Color
 function Colors.GetRandomColor() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ObjectInfo
 --- @field public class any
-ObjectInfo = {}
+ObjectInfo = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -70,3 +70,5 @@ function ObjectInfo:isSingleFace() end
 --- @public
 --- @return boolean
 function ObjectInfo:needToBeLearn() end
+
+

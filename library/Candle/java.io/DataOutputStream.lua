@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class DataOutputStream: FilterOutputStream
+--- @class DataOutputStream: FilterOutputStream, DataOutput
 --- @field public class any
---- @implement DataOutput
-DataOutputStream = {}
+DataOutputStream = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -91,6 +90,7 @@ function DataOutputStream:writeShort(arg0) end
 --- @return nil
 --- @overload fun(self: DataOutputStream, arg0: string): nil
 function DataOutputStream:writeUTF(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

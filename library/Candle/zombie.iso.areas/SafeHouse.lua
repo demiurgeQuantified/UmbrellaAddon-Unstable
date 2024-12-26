@@ -2,7 +2,7 @@
 
 --- @class SafeHouse
 --- @field public class any
-SafeHouse = {}
+SafeHouse = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -165,6 +165,7 @@ function SafeHouse.removeSafeHouse(arg0) end
 --- @static
 --- @return nil
 function SafeHouse.updateSafehousePlayersConnected() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -372,6 +373,7 @@ function SafeHouse:updatePlayersConnected() end
 --- @param arg0 IsoPlayer
 --- @return nil
 function SafeHouse:updateSafehouse(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

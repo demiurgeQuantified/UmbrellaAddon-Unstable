@@ -2,7 +2,7 @@
 
 --- @class Family
 --- @field public class any
-Family = {}
+Family = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,6 +26,7 @@ function Family.exclude(arg0) end
 --- @return Builder
 function Family.one(arg0) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -47,3 +48,5 @@ function Family:hashCode() end
 --- @param arg0 GameEntity
 --- @return boolean
 function Family:matches(arg0) end
+
+

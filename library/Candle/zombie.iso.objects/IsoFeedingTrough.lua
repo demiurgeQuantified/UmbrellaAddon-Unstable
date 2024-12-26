@@ -2,7 +2,7 @@
 
 --- @class IsoFeedingTrough: IsoObject
 --- @field public class any
-IsoFeedingTrough = {}
+IsoFeedingTrough = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -170,6 +170,7 @@ function IsoFeedingTrough:update() end
 --- @public
 --- @return nil
 function IsoFeedingTrough:updateLuaObject() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

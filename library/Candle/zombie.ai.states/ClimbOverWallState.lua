@@ -2,7 +2,7 @@
 
 --- @class ClimbOverWallState: State
 --- @field public class any
-ClimbOverWallState = {}
+ClimbOverWallState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ ClimbOverWallState = {}
 --- @static
 --- @return ClimbOverWallState
 function ClimbOverWallState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -54,6 +55,7 @@ function ClimbOverWallState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, 
 --- @param arg1 IsoDirections
 --- @return nil
 function ClimbOverWallState:setParams(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

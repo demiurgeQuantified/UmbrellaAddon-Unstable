@@ -2,7 +2,7 @@
 
 --- @class SGlobalObject: GlobalObject
 --- @field public class any
-SGlobalObject = {}
+SGlobalObject = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,3 +18,5 @@ function SGlobalObject:load(arg0, arg1) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function SGlobalObject:save(arg0) end
+
+

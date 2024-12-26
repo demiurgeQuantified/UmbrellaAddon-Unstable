@@ -3,7 +3,7 @@
 --- @class ObservationFactory
 --- @field public class any
 --- @field public ObservationMap HashMap
-ObservationFactory = {}
+ObservationFactory = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -34,6 +34,7 @@ function ObservationFactory.init() end
 --- @param arg1 string
 --- @return nil
 function ObservationFactory.setMutualExclusive(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

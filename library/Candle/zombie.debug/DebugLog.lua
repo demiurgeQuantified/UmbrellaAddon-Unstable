@@ -58,7 +58,7 @@
 --- @field public Xml DebugLogStream
 --- @field public Zombie DebugLogStream
 --- @field public Zone DebugLogStream
-DebugLog = {}
+DebugLog = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -220,6 +220,7 @@ function DebugLog.setStdErr(arg0) end
 --- @param arg0 OutputStream
 --- @return nil
 function DebugLog.setStdOut(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

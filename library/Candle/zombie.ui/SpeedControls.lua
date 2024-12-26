@@ -8,7 +8,7 @@
 --- @field public PauseSpeed integer
 --- @field public PlaySpeed integer
 --- @field public WaitSpeed integer
-SpeedControls = {}
+SpeedControls = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,6 +63,7 @@ function SpeedControls:stepForward() end
 --- @public
 --- @return nil
 function SpeedControls:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -6,7 +6,7 @@
 --- @field public instance MainScreenState
 --- @field public totalScale number
 --- @field public Version string
-MainScreenState = {}
+MainScreenState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -62,6 +62,7 @@ function MainScreenState.preloadBackgroundTextures() end
 --- @return boolean
 function MainScreenState.renderCustomBackground() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -98,6 +99,7 @@ function MainScreenState:setConnectToServerState(arg0) end
 --- @public
 --- @return StateAction
 function MainScreenState:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

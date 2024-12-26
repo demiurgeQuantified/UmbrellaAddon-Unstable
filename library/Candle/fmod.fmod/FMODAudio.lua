@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class FMODAudio
+--- @class FMODAudio: Audio
 --- @field public class any
---- @implement Audio
-FMODAudio = {}
+FMODAudio = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -45,6 +44,7 @@ function FMODAudio:start() end
 --- @return nil
 --- @overload fun(self: FMODAudio): nil
 function FMODAudio:stop() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

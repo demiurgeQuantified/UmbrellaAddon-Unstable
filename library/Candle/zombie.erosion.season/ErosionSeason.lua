@@ -9,7 +9,7 @@
 --- @field public SEASON_SUMMER integer
 --- @field public SEASON_SUMMER2 integer
 --- @field public SEASON_WINTER integer
-ErosionSeason = {}
+ErosionSeason = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ ErosionSeason = {}
 --- @static
 --- @return nil
 function ErosionSeason.Reset() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -205,6 +206,7 @@ function ErosionSeason:setDay(arg0, arg1, arg2) end
 --- @param arg11 number
 --- @return nil
 function ErosionSeason:setRain(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

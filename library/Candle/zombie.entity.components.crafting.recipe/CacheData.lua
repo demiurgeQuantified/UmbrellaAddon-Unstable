@@ -2,7 +2,7 @@
 
 --- @class CacheData
 --- @field public class any
-CacheData = {}
+CacheData = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,6 +38,7 @@ function CacheData:isMoveToOutputs() end
 --- @param arg0 boolean
 --- @return nil
 function CacheData:setMoveToOutputs(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

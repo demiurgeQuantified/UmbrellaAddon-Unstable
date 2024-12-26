@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class AbstractCollection
+--- @class AbstractCollection: Collection
 --- @field public class any
---- @implement Collection
-AbstractCollection = {}
+AbstractCollection = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -108,3 +107,5 @@ function AbstractCollection:toArray() end
 --- @public
 --- @return string
 function AbstractCollection:toString() end
+
+

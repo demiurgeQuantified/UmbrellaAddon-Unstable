@@ -2,7 +2,7 @@
 
 --- @class LoadingQueueState: GameState
 --- @field public class any
-LoadingQueueState = {}
+LoadingQueueState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function LoadingQueueState.onConnectionImmediate() end
 --- @param arg1 HashMap
 --- @return nil
 function LoadingQueueState.onPlaceInQueue(arg0, arg1) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,6 +40,7 @@ function LoadingQueueState:render() end
 --- @public
 --- @return StateAction
 function LoadingQueueState:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

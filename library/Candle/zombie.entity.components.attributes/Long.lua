@@ -2,7 +2,7 @@
 
 --- @class Long: Numeric
 --- @field public class any
-Long = {}
+Long = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,3 +27,5 @@ function Long:getValueType() end
 --- @return integer
 --- @overload fun(self: Long, arg0: Number): Number
 function Long:validate(arg0) end
+
+

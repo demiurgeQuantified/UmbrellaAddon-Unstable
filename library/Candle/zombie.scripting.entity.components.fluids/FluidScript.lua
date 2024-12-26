@@ -2,7 +2,7 @@
 
 --- @class FluidScript
 --- @field public class any
-FluidScript = {}
+FluidScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,3 +23,5 @@ function FluidScript:getFluidType() end
 --- @public
 --- @return number
 function FluidScript:getPercentage() end
+
+

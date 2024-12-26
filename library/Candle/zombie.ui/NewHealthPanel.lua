@@ -3,7 +3,7 @@
 --- @class NewHealthPanel: NewWindow
 --- @field public class any
 --- @field public instance NewHealthPanel
-NewHealthPanel = {}
+NewHealthPanel = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,6 +25,7 @@ function NewHealthPanel:render() end
 --- @public
 --- @return nil
 function NewHealthPanel:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

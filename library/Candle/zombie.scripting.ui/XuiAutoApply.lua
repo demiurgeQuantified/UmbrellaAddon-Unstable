@@ -7,7 +7,7 @@
 --- @field public IfSet XuiAutoApply
 --- @field public IfSetAndKeyExists XuiAutoApply
 --- @field public No XuiAutoApply
-XuiAutoApply = {}
+XuiAutoApply = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,3 +23,5 @@ function XuiAutoApply.valueOf(arg0) end
 --- @static
 --- @return XuiAutoApply[]
 function XuiAutoApply.values() end
+
+

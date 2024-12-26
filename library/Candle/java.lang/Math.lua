@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public E number
 --- @field public PI number
-Math = {}
+Math = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -363,3 +363,5 @@ function Math.toRadians(arg0) end
 --- @return number
 --- @overload fun(arg0: number): number
 function Math.ulp(arg0) end
+
+

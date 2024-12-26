@@ -2,7 +2,7 @@
 
 --- @class StashBuilding
 --- @field public class any
-StashBuilding = {}
+StashBuilding = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,6 +11,7 @@ StashBuilding = {}
 --- @public
 --- @return string
 function StashBuilding:getName() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RuntimeAnimationScript: BaseScriptObject
 --- @field public class any
-RuntimeAnimationScript = {}
+RuntimeAnimationScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -21,6 +21,7 @@ function RuntimeAnimationScript:exec() end
 --- @public
 --- @return nil
 function RuntimeAnimationScript:reset() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

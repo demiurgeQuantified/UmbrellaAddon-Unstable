@@ -20,7 +20,7 @@
 --- @field public _StressFromCigarettes integer
 --- @field public _Thirst integer
 --- @field public NumCloseZombies integer
-Stats = {}
+Stats = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -284,6 +284,7 @@ function Stats:setTrippingRotAngle(arg0) end
 --- @param arg1 integer
 --- @return nil
 function Stats:write(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

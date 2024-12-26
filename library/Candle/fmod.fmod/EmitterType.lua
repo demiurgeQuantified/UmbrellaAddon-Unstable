@@ -5,7 +5,7 @@
 --- @field public Extra EmitterType
 --- @field public Footstep EmitterType
 --- @field public Voice EmitterType
-EmitterType = {}
+EmitterType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,3 +21,5 @@ function EmitterType.valueOf(arg0) end
 --- @static
 --- @return EmitterType[]
 function EmitterType.values() end
+
+

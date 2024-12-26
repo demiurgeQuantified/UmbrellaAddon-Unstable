@@ -3,7 +3,7 @@
 --- @class NonPvpZone
 --- @field public class any
 --- @field public nonPvpZoneList ArrayList
-NonPvpZone = {}
+NonPvpZone = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -42,6 +42,7 @@ function NonPvpZone.getZoneByTitle(arg0) end
 --- @param arg0 string
 --- @return nil
 function NonPvpZone.removeNonPvpZone(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -116,6 +117,7 @@ function NonPvpZone:setY2(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function NonPvpZone:syncNonPvpZone(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

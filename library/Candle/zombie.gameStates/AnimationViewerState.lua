@@ -3,7 +3,7 @@
 --- @class AnimationViewerState: GameState
 --- @field public class any
 --- @field public instance AnimationViewerState
-AnimationViewerState = {}
+AnimationViewerState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ AnimationViewerState = {}
 --- @static
 --- @return AnimationViewerState
 function AnimationViewerState.checkInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -90,6 +91,7 @@ function AnimationViewerState:update() end
 --- @public
 --- @return nil
 function AnimationViewerState:yield() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

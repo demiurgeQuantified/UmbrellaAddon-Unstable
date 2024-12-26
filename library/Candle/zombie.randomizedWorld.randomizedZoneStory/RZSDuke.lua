@@ -2,7 +2,7 @@
 
 --- @class RZSDuke: RandomizedZoneStoryBase
 --- @field public class any
-RZSDuke = {}
+RZSDuke = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSDuke = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSDuke:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ComboItem: InventoryItem
 --- @field public class any
-ComboItem = {}
+ComboItem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,6 +11,7 @@ ComboItem = {}
 --- @public
 --- @return integer
 function ComboItem:getSaveType() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

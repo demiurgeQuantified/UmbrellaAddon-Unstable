@@ -6,7 +6,7 @@
 --- @field public Energy ResourceType
 --- @field public Fluid ResourceType
 --- @field public Item ResourceType
-ResourceType = {}
+ResourceType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,6 +29,7 @@ function ResourceType.valueOf(arg0) end
 --- @return ResourceType[]
 function ResourceType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -36,3 +37,5 @@ function ResourceType.values() end
 --- @public
 --- @return integer
 function ResourceType:getId() end
+
+

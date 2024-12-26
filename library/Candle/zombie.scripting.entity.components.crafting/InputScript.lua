@@ -2,7 +2,7 @@
 
 --- @class InputScript: IOScript
 --- @field public class any
-InputScript = {}
+InputScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,6 +101,7 @@ function InputScript:getRelativeScale(arg0) end
 
 --- @public
 --- @return OutputScript
+--- @deprecated
 function InputScript:getReplaceOutputScript() end
 
 --- @public
@@ -109,6 +110,7 @@ function InputScript:getResourceType() end
 
 --- @public
 --- @return integer
+--- @deprecated
 function InputScript:getShapedIndex() end
 
 --- @public
@@ -249,6 +251,7 @@ function InputScript:isProp2() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function InputScript:isReplace() end
 
 --- @public
@@ -277,6 +280,7 @@ function InputScript:isUndamaged() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function InputScript:isUse() end
 
 --- @public
@@ -310,3 +314,5 @@ function InputScript:notFull() end
 --- @public
 --- @return boolean
 function InputScript:sharpnessCheck() end
+
+

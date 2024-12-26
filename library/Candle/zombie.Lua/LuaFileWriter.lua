@@ -2,7 +2,7 @@
 
 --- @class LuaFileWriter
 --- @field public class any
-LuaFileWriter = {}
+LuaFileWriter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -21,6 +21,7 @@ function LuaFileWriter:write(arg0) end
 --- @param arg0 string
 --- @return nil
 function LuaFileWriter:writeln(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public instance SleepingEvent
 --- @field public zombiesInvasion boolean
-SleepingEvent = {}
+SleepingEvent = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,6 +27,7 @@ function SleepingEvent:update(arg0) end
 --- @return nil
 --- @overload fun(self: SleepingEvent, arg0: IsoGameCharacter, arg1: boolean): nil
 function SleepingEvent:wakeUp(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,10 +1,9 @@
 --- @meta _
 
---- @class SoundManager: BaseSoundManager
+--- @class SoundManager: BaseSoundManager, IFMODParameterUpdater
 --- @field public class any
---- @implement IFMODParameterUpdater
 --- @field public instance BaseSoundManager
-SoundManager = {}
+SoundManager = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -377,6 +376,7 @@ function SoundManager:update4() end
 --- @return nil
 --- @overload fun(self: SoundManager, arg0: integer, arg1: GameSoundClip): nil
 function SoundManager:updateEvent(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

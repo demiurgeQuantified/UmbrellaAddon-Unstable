@@ -2,7 +2,7 @@
 
 --- @class IsoUtils
 --- @field public class any
-IsoUtils = {}
+IsoUtils = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -168,6 +168,7 @@ function IsoUtils.lerp(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @return number
 function IsoUtils.smoothstep(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RBBar: RandomizedBuildingBase
 --- @field public class any
-RBBar = {}
+RBBar = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function RBBar:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBBar:roomValid(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

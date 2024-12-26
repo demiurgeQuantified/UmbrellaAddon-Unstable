@@ -3,7 +3,7 @@
 --- @class BeardStyles
 --- @field public class any
 --- @field public instance BeardStyles
-BeardStyles = {}
+BeardStyles = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -31,6 +31,7 @@ function BeardStyles.init() end
 --- @return BeardStyles
 function BeardStyles.parse(arg0) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -52,6 +53,7 @@ function BeardStyles:getInstance() end
 --- @param arg0 string
 --- @return string
 function BeardStyles:getRandomStyle(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

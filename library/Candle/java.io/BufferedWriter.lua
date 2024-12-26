@@ -2,7 +2,7 @@
 
 --- @class BufferedWriter: Writer
 --- @field public class any
-BufferedWriter = {}
+BufferedWriter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,6 +26,7 @@ function BufferedWriter:newLine() end
 --- @overload fun(self: BufferedWriter, arg0: char[], arg1: integer, arg2: integer): nil
 --- @overload fun(self: BufferedWriter, arg0: string, arg1: integer, arg2: integer): nil
 function BufferedWriter:write(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

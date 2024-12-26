@@ -1,9 +1,8 @@
 --- @meta _
 
---- @class DataInputStream: FilterInputStream
+--- @class DataInputStream: FilterInputStream, DataInput
 --- @field public class any
---- @implement DataInput
-DataInputStream = {}
+DataInputStream = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,6 +13,7 @@ DataInputStream = {}
 --- @param arg0 DataInput
 --- @return string
 function DataInputStream.readUTF(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -98,6 +98,7 @@ function DataInputStream:readUnsignedShort() end
 --- @return integer
 --- @overload fun(self: DataInputStream, arg0: integer): integer
 function DataInputStream:skipBytes(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class GameEntityUtil
 --- @field public class any
 --- @field public CloseWindowDistance integer
-GameEntityUtil = {}
+GameEntityUtil = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ GameEntityUtil = {}
 --- @static
 --- @return integer
 function GameEntityUtil.getCloseWindowDistance() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

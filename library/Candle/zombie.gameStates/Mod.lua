@@ -2,7 +2,7 @@
 
 --- @class Mod
 --- @field public class any
-Mod = {}
+Mod = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -129,6 +129,7 @@ function Mod:setAuthor(arg0) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
+--- @deprecated
 function Mod:setAvailable(arg0) end
 
 --- @public
@@ -185,6 +186,7 @@ function Mod:setTexture(arg0) end
 --- @param arg0 string
 --- @return nil
 function Mod:setUrl(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class AtomUIMap: AtomUI
 --- @field public class any
-AtomUIMap = {}
+AtomUIMap = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function AtomUIMap:render() end
 --- @public
 --- @return nil
 function AtomUIMap:revealOnMap() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

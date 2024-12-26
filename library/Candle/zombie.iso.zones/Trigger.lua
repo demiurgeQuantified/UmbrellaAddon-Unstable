@@ -2,7 +2,7 @@
 
 --- @class Trigger
 --- @field public class any
-Trigger = {}
+Trigger = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,6 +11,7 @@ Trigger = {}
 --- @public
 --- @return table
 function Trigger:getModData() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

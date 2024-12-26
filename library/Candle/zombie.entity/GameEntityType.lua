@@ -1,15 +1,14 @@
 --- @meta _
 
---- @class GameEntityType: Enum
+--- @class GameEntityType: Enum, IOEnum
 --- @field public class any
---- @implement IOEnum
 --- @field public InventoryItem GameEntityType
 --- @field public IsoMovingObject GameEntityType
 --- @field public IsoObject GameEntityType
 --- @field public MetaEntity GameEntityType
 --- @field public Template GameEntityType
 --- @field public VehiclePart GameEntityType
-GameEntityType = {}
+GameEntityType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -32,6 +31,7 @@ function GameEntityType.valueOf(arg0) end
 --- @return GameEntityType[]
 function GameEntityType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -49,3 +49,5 @@ function GameEntityType:getByteId() end
 --- @public
 --- @return integer
 function GameEntityType:getId() end
+
+

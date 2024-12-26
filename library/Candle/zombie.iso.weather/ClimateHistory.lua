@@ -2,7 +2,7 @@
 
 --- @class ClimateHistory
 --- @field public class any
-ClimateHistory = {}
+ClimateHistory = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,6 +17,7 @@ function ClimateHistory:init(arg0) end
 --- @param arg0 ClimateManager
 --- @return nil
 function ClimateHistory:updateDayChange(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

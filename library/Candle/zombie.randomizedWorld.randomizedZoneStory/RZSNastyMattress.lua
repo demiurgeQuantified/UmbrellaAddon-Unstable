@@ -2,7 +2,7 @@
 
 --- @class RZSNastyMattress: RandomizedZoneStoryBase
 --- @field public class any
-RZSNastyMattress = {}
+RZSNastyMattress = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ RZSNastyMattress = {}
 --- @return ArrayList
 function RZSNastyMattress.getForestClutter() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -21,6 +22,7 @@ function RZSNastyMattress.getForestClutter() end
 --- @param arg0 Zone
 --- @return nil
 function RZSNastyMattress:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RadioData
 --- @field public class any
-RadioData = {}
+RadioData = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function RadioData.fetchAllRadioData() end
 --- @return ArrayList
 function RadioData.getTranslatorNames(arg0) end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -30,6 +31,7 @@ function RadioData:getRadioChannels() end
 --- @public
 --- @return boolean
 function RadioData:isVanilla() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

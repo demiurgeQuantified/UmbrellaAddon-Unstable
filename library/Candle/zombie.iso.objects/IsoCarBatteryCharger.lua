@@ -2,7 +2,7 @@
 
 --- @class IsoCarBatteryCharger: IsoObject
 --- @field public class any
-IsoCarBatteryCharger = {}
+IsoCarBatteryCharger = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -96,6 +96,7 @@ function IsoCarBatteryCharger:syncIsoObjectSend(arg0) end
 --- @public
 --- @return nil
 function IsoCarBatteryCharger:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

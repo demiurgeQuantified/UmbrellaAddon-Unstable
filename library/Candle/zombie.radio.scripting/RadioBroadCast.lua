@@ -2,7 +2,7 @@
 
 --- @class RadioBroadCast
 --- @field public class any
-RadioBroadCast = {}
+RadioBroadCast = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -65,6 +65,7 @@ function RadioBroadCast:setPostSegment(arg0) end
 --- @param arg0 RadioBroadCast
 --- @return nil
 function RadioBroadCast:setPreSegment(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

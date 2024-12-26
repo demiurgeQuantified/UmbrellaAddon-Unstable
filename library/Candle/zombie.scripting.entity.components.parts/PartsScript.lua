@@ -2,7 +2,7 @@
 
 --- @class PartsScript: ComponentScript
 --- @field public class any
-PartsScript = {}
+PartsScript = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,3 +37,5 @@ function PartsScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function PartsScript:reset() end
+
+

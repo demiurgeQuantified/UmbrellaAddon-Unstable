@@ -33,7 +33,7 @@
 --- @field public SdfRobertoSans UIFont
 --- @field public Small UIFont
 --- @field public Title UIFont
-UIFont = {}
+UIFont = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -55,3 +55,5 @@ function UIFont.valueOf(arg0) end
 --- @static
 --- @return UIFont[]
 function UIFont.values() end
+
+

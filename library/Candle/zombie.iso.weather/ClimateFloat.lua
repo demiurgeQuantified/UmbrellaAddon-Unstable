@@ -2,7 +2,7 @@
 
 --- @class ClimateFloat
 --- @field public class any
-ClimateFloat = {}
+ClimateFloat = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -102,6 +102,7 @@ function ClimateFloat:setModdedValue(arg0) end
 --- @param arg1 number
 --- @return nil
 function ClimateFloat:setOverride(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

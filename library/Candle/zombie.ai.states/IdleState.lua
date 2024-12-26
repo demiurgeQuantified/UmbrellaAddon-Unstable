@@ -2,7 +2,7 @@
 
 --- @class IdleState: State
 --- @field public class any
-IdleState = {}
+IdleState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ IdleState = {}
 --- @return IdleState
 function IdleState.instance() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -22,6 +23,7 @@ function IdleState.instance() end
 --- @param arg1 AnimEvent
 --- @return nil
 function IdleState:animEvent(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

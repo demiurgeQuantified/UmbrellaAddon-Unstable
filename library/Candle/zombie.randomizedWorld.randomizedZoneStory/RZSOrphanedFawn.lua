@@ -2,7 +2,7 @@
 
 --- @class RZSOrphanedFawn: RandomizedZoneStoryBase
 --- @field public class any
-RZSOrphanedFawn = {}
+RZSOrphanedFawn = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,6 +12,7 @@ RZSOrphanedFawn = {}
 --- @param arg0 Zone
 --- @return nil
 function RZSOrphanedFawn:randomizeZoneStory(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class SeatingManager
 --- @field public class any
-SeatingManager = {}
+SeatingManager = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ SeatingManager = {}
 --- @static
 --- @return SeatingManager
 function SeatingManager.getInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -201,3 +202,5 @@ function SeatingManager:setTileProperty(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg0 string
 --- @return nil
 function SeatingManager:write(arg0) end
+
+

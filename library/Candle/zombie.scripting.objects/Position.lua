@@ -2,7 +2,7 @@
 
 --- @class Position
 --- @field public class any
-Position = {}
+Position = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function Position:getOffset() end
 --- @public
 --- @return Vector3f
 function Position:getRotate() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

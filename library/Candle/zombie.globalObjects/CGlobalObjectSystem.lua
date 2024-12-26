@@ -2,7 +2,7 @@
 
 --- @class CGlobalObjectSystem: GlobalObjectSystem
 --- @field public class any
-CGlobalObjectSystem = {}
+CGlobalObjectSystem = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,6 +47,7 @@ function CGlobalObjectSystem:receiveUpdateLuaObjectAt(arg0, arg1, arg2, arg3) en
 --- @param arg2 table
 --- @return nil
 function CGlobalObjectSystem:sendCommand(arg0, arg1, arg2) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

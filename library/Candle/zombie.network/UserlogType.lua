@@ -10,7 +10,7 @@
 --- @field public SuspiciousActivity UserlogType
 --- @field public UnauthorizedPacket UserlogType
 --- @field public WarningPoint UserlogType
-UserlogType = {}
+UserlogType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,6 +39,7 @@ function UserlogType.valueOf(arg0) end
 --- @return UserlogType[]
 function UserlogType.values() end
 
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -46,3 +47,5 @@ function UserlogType.values() end
 --- @public
 --- @return integer
 function UserlogType:index() end
+
+

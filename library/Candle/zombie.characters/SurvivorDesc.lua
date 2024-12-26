@@ -1,11 +1,10 @@
 --- @meta _
 
---- @class SurvivorDesc
+--- @class SurvivorDesc: IHumanVisual
 --- @field public class any
---- @implement IHumanVisual
 --- @field public HairCommonColors ArrayList
 --- @field public TrouserCommonColors ArrayList
-SurvivorDesc = {}
+SurvivorDesc = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -38,6 +37,7 @@ function SurvivorDesc.getRandomSkinColor() end
 --- @param arg0 integer
 --- @return nil
 function SurvivorDesc.setIDCount(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -354,6 +354,7 @@ function SurvivorDesc:setVoiceType(arg0) end
 --- @param arg1 InventoryItem
 --- @return nil
 function SurvivorDesc:setWornItem(arg0, arg1) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

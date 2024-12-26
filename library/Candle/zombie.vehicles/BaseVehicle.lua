@@ -1,9 +1,7 @@
 --- @meta _
 
---- @class BaseVehicle: IsoMovingObject
+--- @class BaseVehicle: IsoMovingObject, Thumpable, IFMODParameterUpdater
 --- @field public class any
---- @implement Thumpable
---- @implement IFMODParameterUpdater
 --- @field public CENTER_OF_MASS_MAGIC number
 --- @field public FADE_DISTANCE integer
 --- @field public MASK1_DOOR_LEFT_FRONT integer
@@ -50,7 +48,7 @@
 --- @field public TL_vector4f_pool ThreadLocal
 --- @field public vehicleShadow Texture
 --- @field public YURI_FORCE_FIELD boolean
-BaseVehicle = {}
+BaseVehicle = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -162,6 +160,7 @@ function BaseVehicle.releaseVector3f(arg0) end
 --- @param arg0 Vector4f
 --- @return nil
 function BaseVehicle.releaseVector4f(arg0) end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -2350,6 +2349,7 @@ function BaseVehicle:updateTotalMass() end
 --- @public
 --- @return integer
 function BaseVehicle:windowsOpen() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

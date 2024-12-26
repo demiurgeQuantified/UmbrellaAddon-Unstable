@@ -2,7 +2,7 @@
 
 --- @class GlobalObject
 --- @field public class any
-GlobalObject = {}
+GlobalObject = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -55,3 +55,5 @@ function GlobalObject:isValidIsoObject(arg0) end
 --- @param arg2 integer
 --- @return nil
 function GlobalObject:setLocation(arg0, arg1, arg2) end
+
+

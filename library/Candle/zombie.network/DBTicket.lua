@@ -2,7 +2,7 @@
 
 --- @class DBTicket
 --- @field public class any
-DBTicket = {}
+DBTicket = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -61,6 +61,7 @@ function DBTicket:setTicketID(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function DBTicket:setViewed(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

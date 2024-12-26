@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public bNoEventsWhileLoading boolean
 --- @field public doLuaKeyPressed boolean
-GameKeyboard = {}
+GameKeyboard = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -80,6 +80,7 @@ function GameKeyboard.whichKeyPressed(arg0) end
 --- @param arg0 string
 --- @return integer
 function GameKeyboard.whichKeyWasDown(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

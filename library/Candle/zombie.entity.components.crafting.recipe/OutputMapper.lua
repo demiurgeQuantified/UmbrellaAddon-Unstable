@@ -2,7 +2,7 @@
 
 --- @class OutputMapper
 --- @field public class any
-OutputMapper = {}
+OutputMapper = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,6 +51,7 @@ function OutputMapper:registerInputScript(arg0) end
 --- @param arg0 string
 --- @return nil
 function OutputMapper:setDefaultOutputEntree(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

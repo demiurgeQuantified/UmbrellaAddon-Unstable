@@ -2,7 +2,7 @@
 
 --- @class IsoRegionLog
 --- @field public class any
-IsoRegionLog = {}
+IsoRegionLog = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,6 +19,7 @@ function IsoRegionLog:getStr() end
 --- @public
 --- @return IsoRegionLogType
 function IsoRegionLog:getType() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

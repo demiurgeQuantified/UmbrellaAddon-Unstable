@@ -2,7 +2,7 @@
 
 --- @class Source
 --- @field public class any
-Source = {}
+Source = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -55,6 +55,7 @@ function Source:setKeep(arg0) end
 --- @param arg0 number
 --- @return nil
 function Source:setUse(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

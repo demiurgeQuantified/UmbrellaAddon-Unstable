@@ -2,7 +2,7 @@
 
 --- @class RBBurntCorpse: RandomizedBuildingBase
 --- @field public class any
-RBBurntCorpse = {}
+RBBurntCorpse = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,6 +18,7 @@ function RBBurntCorpse:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBBurntCorpse:randomizeBuilding(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

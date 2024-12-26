@@ -2,7 +2,7 @@
 
 --- @class BaseCharacterSoundEmitter
 --- @field public class any
-BaseCharacterSoundEmitter = {}
+BaseCharacterSoundEmitter = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -123,6 +123,7 @@ function BaseCharacterSoundEmitter:tick() end
 --- @public
 --- @return nil
 function BaseCharacterSoundEmitter:unregister() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RBWoodcraft: RandomizedBuildingBase
 --- @field public class any
-RBWoodcraft = {}
+RBWoodcraft = {};
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,6 +23,7 @@ function RBWoodcraft:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBWoodcraft:roomValid(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

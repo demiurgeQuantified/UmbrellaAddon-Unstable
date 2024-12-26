@@ -2,7 +2,7 @@
 
 --- @class CrawlingZombieTurnState: State
 --- @field public class any
-CrawlingZombieTurnState = {}
+CrawlingZombieTurnState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,6 +19,7 @@ function CrawlingZombieTurnState.calculateDir(arg0, arg1) end
 --- @static
 --- @return CrawlingZombieTurnState
 function CrawlingZombieTurnState.instance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -44,6 +45,7 @@ function CrawlingZombieTurnState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function CrawlingZombieTurnState:exit(arg0) end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

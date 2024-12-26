@@ -3,7 +3,7 @@
 --- @class SeamEditorState: GameState
 --- @field public class any
 --- @field public instance SeamEditorState
-SeamEditorState = {}
+SeamEditorState = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,6 +13,7 @@ SeamEditorState = {}
 --- @static
 --- @return SeamEditorState
 function SeamEditorState.checkInstance() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -90,6 +91,7 @@ function SeamEditorState:update() end
 --- @public
 --- @return nil
 function SeamEditorState:yield() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

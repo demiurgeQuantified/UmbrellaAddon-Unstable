@@ -17,7 +17,7 @@
 --- @field public Unit XuiVarType
 --- @field public Vector XuiVarType
 --- @field public VectorPosAlign XuiVarType
-XuiVarType = {}
+XuiVarType = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -33,3 +33,5 @@ function XuiVarType.valueOf(arg0) end
 --- @static
 --- @return XuiVarType[]
 function XuiVarType.values() end
+
+

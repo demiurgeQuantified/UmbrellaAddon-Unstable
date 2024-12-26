@@ -2,7 +2,7 @@
 
 --- @class UITransition
 --- @field public class any
-UITransition = {}
+UITransition = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,6 +12,7 @@ UITransition = {}
 --- @static
 --- @return nil
 function UITransition.UpdateAll() end
+
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,6 +54,7 @@ function UITransition:setIgnoreUpdateTime(arg0) end
 --- @public
 --- @return nil
 function UITransition:update() end
+
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
