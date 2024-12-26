@@ -2,7 +2,7 @@
 
 --- @class IWorldRegion
 --- @field public class any
-IWorldRegion = {};
+IWorldRegion = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,5 +39,3 @@ function IWorldRegion:isFullyRoofed() end
 --- @public
 --- @return boolean
 function IWorldRegion:isPlayerRoom() end
-
-

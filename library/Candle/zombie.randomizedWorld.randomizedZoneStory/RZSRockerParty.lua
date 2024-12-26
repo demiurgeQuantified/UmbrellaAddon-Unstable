@@ -2,7 +2,7 @@
 
 --- @class RZSRockerParty: RandomizedZoneStoryBase
 --- @field public class any
-RZSRockerParty = {};
+RZSRockerParty = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,7 +23,6 @@ function RZSRockerParty.getFireClutter() end
 --- @return ArrayList
 function RZSRockerParty.getForestClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -32,7 +31,6 @@ function RZSRockerParty.getForestClutter() end
 --- @param arg0 Zone
 --- @return nil
 function RZSRockerParty:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

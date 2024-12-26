@@ -2,7 +2,7 @@
 
 --- @class IAlarmClock
 --- @field public class any
-IAlarmClock = {};
+IAlarmClock = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,5 +43,3 @@ function IAlarmClock:setMinute(arg0) end
 --- @public
 --- @return nil
 function IAlarmClock:stopRinging() end
-
-

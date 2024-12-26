@@ -2,7 +2,7 @@
 
 --- @class ZombieFallDownState: State
 --- @field public class any
-ZombieFallDownState = {};
+ZombieFallDownState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ ZombieFallDownState = {};
 --- @static
 --- @return ZombieFallDownState
 function ZombieFallDownState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +37,6 @@ function ZombieFallDownState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function ZombieFallDownState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public Doobo boolean
 --- @field public version string
-IsoArea = {};
+IsoArea = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,7 +39,6 @@ function IsoArea.Thigglewhat22(arg0) end
 --- @param arg0 string
 --- @return byte[]
 function IsoArea.asasa(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

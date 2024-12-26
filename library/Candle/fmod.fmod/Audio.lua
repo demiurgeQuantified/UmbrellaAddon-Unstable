@@ -2,7 +2,7 @@
 
 --- @class Audio
 --- @field public class any
-Audio = {};
+Audio = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,5 +37,3 @@ function Audio:start() end
 --- @public
 --- @return nil
 function Audio:stop() end
-
-

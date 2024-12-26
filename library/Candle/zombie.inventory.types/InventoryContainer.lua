@@ -2,7 +2,7 @@
 
 --- @class InventoryContainer: InventoryItem
 --- @field public class any
-InventoryContainer = {};
+InventoryContainer = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -123,7 +123,6 @@ function InventoryContainer:setWeightReduction(arg0) end
 --- @public
 --- @return nil
 function InventoryContainer:updateAge() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class List: Collection
 --- @field public class any
-List = {};
+List = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,7 +29,6 @@ function List.copyOf(arg0) end
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function List.of() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -178,5 +177,3 @@ function List:subList(arg0, arg1) end
 --- @overload fun(self: List, arg0: Object[]): Object[]
 --- @overload fun(self: List, arg0: IntFunction): Object[]
 function List:toArray() end
-
-

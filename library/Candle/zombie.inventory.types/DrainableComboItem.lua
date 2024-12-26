@@ -2,7 +2,7 @@
 
 --- @class DrainableComboItem: InventoryItem, Drainable, IUpdater
 --- @field public class any
-DrainableComboItem = {};
+DrainableComboItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -216,7 +216,6 @@ function DrainableComboItem:update() end
 --- @public
 --- @return nil
 function DrainableComboItem:updateWeight() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

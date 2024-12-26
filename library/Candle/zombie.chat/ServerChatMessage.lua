@@ -2,7 +2,7 @@
 
 --- @class ServerChatMessage: ChatMessage
 --- @field public class any
-ServerChatMessage = {};
+ServerChatMessage = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,7 +16,6 @@ function ServerChatMessage:getAuthor() end
 --- @param arg0 string
 --- @return nil
 function ServerChatMessage:setAuthor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

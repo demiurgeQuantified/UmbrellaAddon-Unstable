@@ -2,7 +2,7 @@
 
 --- @class TileInfo
 --- @field public class any
-TileInfo = {};
+TileInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -52,5 +52,3 @@ function TileInfo:isMaster() end
 --- @param arg0 IsoObject
 --- @return boolean
 function TileInfo:verifyObject(arg0) end
-
-

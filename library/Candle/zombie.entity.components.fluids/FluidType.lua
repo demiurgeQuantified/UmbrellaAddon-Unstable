@@ -34,7 +34,7 @@
 --- @field public Water FluidType
 --- @field public Whiskey FluidType
 --- @field public Wine FluidType
-FluidType = {};
+FluidType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -74,7 +74,6 @@ function FluidType.valueOf(arg0) end
 --- @return FluidType[]
 function FluidType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -86,5 +85,3 @@ function FluidType:getId() end
 --- @public
 --- @return string
 function FluidType:toStringLower() end
-
-

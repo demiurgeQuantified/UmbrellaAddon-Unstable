@@ -29,7 +29,7 @@
 --- @field public Wet MoodleType
 --- @field public Windchill MoodleType
 --- @field public Zombie MoodleType
-MoodleType = {};
+MoodleType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -83,5 +83,3 @@ function MoodleType.valueOf(arg0) end
 --- @static
 --- @return MoodleType[]
 function MoodleType.values() end
-
-

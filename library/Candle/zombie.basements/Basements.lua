@@ -3,7 +3,7 @@
 --- @class Basements
 --- @field public class any
 --- @field public SAVEFILE_VERSION integer
-Basements = {};
+Basements = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,6 @@ function Basements.getAPIv1() end
 --- @static
 --- @return Basements
 function Basements.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,7 +57,6 @@ function Basements:parseBasementAccessDefinitions() end
 --- @public
 --- @return nil
 function Basements:parseBasementDefinitions() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

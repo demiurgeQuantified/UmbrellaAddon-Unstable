@@ -3,7 +3,7 @@
 --- @class WorldMarkers
 --- @field public class any
 --- @field public instance WorldMarkers
-WorldMarkers = {};
+WorldMarkers = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,6 @@ WorldMarkers = {};
 --- @param arg2 Point
 --- @return boolean
 function WorldMarkers.intersectLineSegments(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -146,5 +145,3 @@ function WorldMarkers:reset() end
 --- @public
 --- @return nil
 function WorldMarkers:update() end
-
-

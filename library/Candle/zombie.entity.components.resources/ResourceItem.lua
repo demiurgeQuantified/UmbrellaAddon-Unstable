@@ -2,7 +2,7 @@
 
 --- @class ResourceItem: Resource
 --- @field public class any
-ResourceItem = {};
+ResourceItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -173,5 +173,3 @@ function ResourceItem:tryLoadSyncItems(arg0, arg1, arg2, arg3, arg4) end
 --- @return nil
 --- @overload fun(self: ResourceItem, arg0: Resource, arg1: number): nil
 function ResourceItem:tryTransferTo(arg0) end
-
-

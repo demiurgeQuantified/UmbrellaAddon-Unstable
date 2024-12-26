@@ -2,7 +2,7 @@
 
 --- @class ColorRGB
 --- @field public class any
-ColorRGB = {};
+ColorRGB = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class TraitFactory
 --- @field public class any
 --- @field public TraitMap LinkedHashMap
-TraitFactory = {};
+TraitFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -52,7 +52,6 @@ function TraitFactory.setMutualExclusive(arg0, arg1) end
 --- @static
 --- @return nil
 function TraitFactory.sortList() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

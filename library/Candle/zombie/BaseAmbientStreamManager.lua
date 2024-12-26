@@ -2,7 +2,7 @@
 
 --- @class BaseAmbientStreamManager
 --- @field public class any
-BaseAmbientStreamManager = {};
+BaseAmbientStreamManager = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -92,7 +92,6 @@ function BaseAmbientStreamManager:stop() end
 --- @public
 --- @return nil
 function BaseAmbientStreamManager:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

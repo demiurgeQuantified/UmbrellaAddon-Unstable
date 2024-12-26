@@ -2,7 +2,7 @@
 
 --- @class Talker
 --- @field public class any
-Talker = {};
+Talker = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,5 +24,3 @@ function Talker:getSayLine() end
 --- @public
 --- @return string
 function Talker:getTalkerType() end
-
-

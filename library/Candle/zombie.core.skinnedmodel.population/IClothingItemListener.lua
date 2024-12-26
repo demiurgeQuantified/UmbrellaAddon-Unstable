@@ -2,7 +2,7 @@
 
 --- @class IClothingItemListener
 --- @field public class any
-IClothingItemListener = {};
+IClothingItemListener = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,5 +12,3 @@ IClothingItemListener = {};
 --- @param arg0 string
 --- @return nil
 function IClothingItemListener:clothingItemChanged(arg0) end
-
-

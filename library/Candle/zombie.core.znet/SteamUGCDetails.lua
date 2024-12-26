@@ -2,7 +2,7 @@
 
 --- @class SteamUGCDetails
 --- @field public class any
-SteamUGCDetails = {};
+SteamUGCDetails = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -48,7 +48,6 @@ function SteamUGCDetails:getTimeUpdated() end
 --- @public
 --- @return string
 function SteamUGCDetails:getTitle() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

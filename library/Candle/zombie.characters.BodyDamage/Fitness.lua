@@ -2,7 +2,7 @@
 
 --- @class Fitness
 --- @field public class any
-Fitness = {};
+Fitness = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,7 +101,6 @@ function Fitness:setRegularityMap(arg0) end
 --- @public
 --- @return nil
 function Fitness:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

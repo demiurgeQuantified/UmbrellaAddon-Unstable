@@ -2,7 +2,7 @@
 
 --- @class RZSWasteDump: RandomizedZoneStoryBase
 --- @field public class any
-RZSWasteDump = {};
+RZSWasteDump = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSWasteDump = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSWasteDump:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

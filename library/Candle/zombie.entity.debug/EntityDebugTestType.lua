@@ -3,7 +3,7 @@
 --- @class EntityDebugTestType: Enum
 --- @field public class any
 --- @field public BaseTest EntityDebugTestType
-EntityDebugTestType = {};
+EntityDebugTestType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -24,5 +24,3 @@ function EntityDebugTestType.valueOf(arg0) end
 --- @static
 --- @return EntityDebugTestType[]
 function EntityDebugTestType.values() end
-
-

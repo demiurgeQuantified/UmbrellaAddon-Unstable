@@ -2,7 +2,7 @@
 
 --- @class SteamFriend
 --- @field public class any
-SteamFriend = {};
+SteamFriend = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function SteamFriend:getState() end
 --- @public
 --- @return string
 function SteamFriend:getSteamID() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

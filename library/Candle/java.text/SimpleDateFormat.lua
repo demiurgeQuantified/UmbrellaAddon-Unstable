@@ -2,7 +2,7 @@
 
 --- @class SimpleDateFormat: DateFormat
 --- @field public class any
-SimpleDateFormat = {};
+SimpleDateFormat = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -74,7 +74,6 @@ function SimpleDateFormat:toLocalizedPattern() end
 --- @public
 --- @return string
 function SimpleDateFormat:toPattern() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

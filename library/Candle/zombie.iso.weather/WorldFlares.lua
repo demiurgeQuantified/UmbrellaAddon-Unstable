@@ -5,7 +5,7 @@
 --- @field public DEBUG_DRAW boolean
 --- @field public ENABLED boolean
 --- @field public NEXT_ID integer
-WorldFlares = {};
+WorldFlares = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -77,7 +77,6 @@ function WorldFlares.setDebugDraw(arg0) end
 --- @static
 --- @return nil
 function WorldFlares.update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

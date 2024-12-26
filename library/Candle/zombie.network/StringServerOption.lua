@@ -2,7 +2,7 @@
 
 --- @class StringServerOption: StringConfigOption, ServerOption
 --- @field public class any
-StringServerOption = {};
+StringServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,6 @@ function StringServerOption:asConfigOption() end
 --- @return string
 --- @overload fun(self: StringServerOption): string
 function StringServerOption:getTooltip() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

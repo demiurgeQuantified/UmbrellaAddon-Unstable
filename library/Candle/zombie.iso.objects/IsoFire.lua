@@ -2,7 +2,7 @@
 
 --- @class IsoFire: IsoObject
 --- @field public class any
-IsoFire = {};
+IsoFire = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,7 +28,6 @@ function IsoFire.CanAddSmoke(arg0, arg1) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function IsoFire.Fire_IsSquareFlamable(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -166,7 +165,6 @@ function IsoFire:setSpreadDelay(arg0) end
 --- @public
 --- @return nil
 function IsoFire:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

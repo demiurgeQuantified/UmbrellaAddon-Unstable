@@ -2,7 +2,7 @@
 
 --- @class IsoPhysicsObject: IsoMovingObject
 --- @field public class any
-IsoPhysicsObject = {};
+IsoPhysicsObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,7 +24,6 @@ function IsoPhysicsObject:getGlobalMovementMod(arg0) end
 --- @public
 --- @return nil
 function IsoPhysicsObject:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

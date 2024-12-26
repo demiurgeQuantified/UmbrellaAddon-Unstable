@@ -47,7 +47,7 @@
 --- @field public SharpnessCheck InputFlag
 --- @field public ToolLeft InputFlag
 --- @field public ToolRight InputFlag
-InputFlag = {};
+InputFlag = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -63,5 +63,3 @@ function InputFlag.valueOf(arg0) end
 --- @static
 --- @return InputFlag[]
 function InputFlag.values() end
-
-

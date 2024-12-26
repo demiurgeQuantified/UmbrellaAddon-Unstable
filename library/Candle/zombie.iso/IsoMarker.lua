@@ -2,7 +2,7 @@
 
 --- @class IsoMarker
 --- @field public class any
-IsoMarker = {};
+IsoMarker = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -162,7 +162,6 @@ function IsoMarker:setR(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return nil
 function IsoMarker:setSquare(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

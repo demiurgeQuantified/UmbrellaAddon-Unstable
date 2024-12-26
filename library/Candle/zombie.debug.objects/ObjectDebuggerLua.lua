@@ -2,7 +2,7 @@
 
 --- @class ObjectDebuggerLua
 --- @field public class any
-ObjectDebuggerLua = {};
+ObjectDebuggerLua = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -35,7 +35,6 @@ function ObjectDebuggerLua.Log(arg0) end
 --- @param arg0 ArrayList
 --- @return nil
 function ObjectDebuggerLua.ReleaseList(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

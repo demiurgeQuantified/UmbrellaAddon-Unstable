@@ -2,7 +2,7 @@
 
 --- @class VehicleDoor
 --- @field public class any
-VehicleDoor = {};
+VehicleDoor = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,7 +50,6 @@ function VehicleDoor:setLocked(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function VehicleDoor:setOpen(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

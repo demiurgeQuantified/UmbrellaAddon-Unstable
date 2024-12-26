@@ -2,7 +2,7 @@
 
 --- @class Radio: Moveable, Talker, IUpdater, WaveSignalDevice
 --- @field public class any
-Radio = {};
+Radio = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -147,7 +147,6 @@ function Radio:setDeviceData(arg0) end
 --- @return nil
 --- @overload fun(self: Radio): nil
 function Radio:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

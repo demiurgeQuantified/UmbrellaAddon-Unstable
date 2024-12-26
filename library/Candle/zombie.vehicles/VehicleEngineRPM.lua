@@ -3,7 +3,7 @@
 --- @class VehicleEngineRPM: BaseScriptObject
 --- @field public class any
 --- @field public MAX_GEARS integer
-VehicleEngineRPM = {};
+VehicleEngineRPM = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -22,7 +22,6 @@ function VehicleEngineRPM:getName() end
 --- @public
 --- @return nil
 function VehicleEngineRPM:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

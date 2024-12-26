@@ -2,7 +2,7 @@
 
 --- @class BuildLogic: BaseCraftingLogic
 --- @field public class any
-BuildLogic = {};
+BuildLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -80,7 +80,6 @@ function BuildLogic:startCraftAction(arg0) end
 --- @public
 --- @return nil
 function BuildLogic:stopCraftAction() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

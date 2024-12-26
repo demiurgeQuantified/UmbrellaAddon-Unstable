@@ -2,7 +2,7 @@
 
 --- @class XuiTableScript: XuiScript
 --- @field public class any
-XuiTableScript = {};
+XuiTableScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -54,7 +54,6 @@ function XuiTableScript:getRowCount() end
 --- @public
 --- @return XuiString
 function XuiTableScript:getRowStyle() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

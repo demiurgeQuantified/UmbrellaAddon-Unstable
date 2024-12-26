@@ -2,7 +2,7 @@
 
 --- @class RadioLine
 --- @field public class any
-RadioLine = {};
+RadioLine = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -45,7 +45,6 @@ function RadioLine:setAirTime(arg0) end
 --- @param arg0 string
 --- @return nil
 function RadioLine:setText(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

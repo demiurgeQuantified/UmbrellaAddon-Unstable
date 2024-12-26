@@ -2,7 +2,7 @@
 
 --- @class RZSAttachedAnimal: RandomizedZoneStoryBase
 --- @field public class any
-RZSAttachedAnimal = {};
+RZSAttachedAnimal = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ RZSAttachedAnimal = {};
 --- @return ArrayList
 function RZSAttachedAnimal.getBreeds() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -22,7 +21,6 @@ function RZSAttachedAnimal.getBreeds() end
 --- @param arg0 Zone
 --- @return nil
 function RZSAttachedAnimal:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -5,7 +5,7 @@
 --- @field public s_clipperBuffer ByteBuffer
 --- @field public s_clipperOffset ClipperOffset
 --- @field public TL_Location ThreadLocal
-IsoMetaGrid = {};
+IsoMetaGrid = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -482,7 +482,6 @@ function IsoMetaGrid:setCellData(arg0, arg1, arg2) end
 --- @public
 --- @return boolean
 function IsoMetaGrid:wasLoaded() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

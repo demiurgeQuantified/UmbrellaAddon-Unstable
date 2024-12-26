@@ -13,7 +13,7 @@
 --- @field public OBF_HighlightRenderOnce integer
 --- @field public OBF_SatChair integer
 --- @field public rmod number
-IsoObject = {};
+IsoObject = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -100,7 +100,6 @@ function IsoObject.setLastRendered(arg0) end
 --- @param arg0 IsoObject
 --- @return nil
 function IsoObject.setLastRenderedRendered(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1471,7 +1470,6 @@ function IsoObject:useWater(arg0) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function IsoObject:writeToRemoteBuffer(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

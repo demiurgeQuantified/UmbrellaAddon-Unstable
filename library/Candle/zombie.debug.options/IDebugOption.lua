@@ -2,7 +2,7 @@
 
 --- @class IDebugOption
 --- @field public class any
-IDebugOption = {};
+IDebugOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,5 +24,3 @@ function IDebugOption:onFullPathChanged() end
 --- @param arg0 IDebugOptionGroup
 --- @return nil
 function IDebugOption:setParent(arg0) end
-
-

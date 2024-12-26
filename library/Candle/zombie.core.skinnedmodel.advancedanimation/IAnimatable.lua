@@ -2,7 +2,7 @@
 
 --- @class IAnimatable: IAnimationVariableSource
 --- @field public class any
-IAnimatable = {};
+IAnimatable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -99,5 +99,3 @@ function IAnimatable:isAnimationRecorderActive() end
 --- @param arg1 string
 --- @return boolean
 function IAnimatable:isVariable(arg0, arg1) end
-
-

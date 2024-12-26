@@ -6,7 +6,7 @@
 --- @field public MAP_MAX_Y integer
 --- @field public MAP_MIN_X integer
 --- @field public MAP_MIN_Y integer
-ThunderStorm = {};
+ThunderStorm = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,6 @@ ThunderStorm = {};
 --- @static
 --- @return integer
 function ThunderStorm.getMapDiagonal() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -109,7 +108,6 @@ function ThunderStorm:update(arg0) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function ThunderStorm:writeNetThunderEvent(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

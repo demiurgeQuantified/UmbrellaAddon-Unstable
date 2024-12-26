@@ -2,7 +2,7 @@
 
 --- @class EntityBucket
 --- @field public class any
-EntityBucket = {};
+EntityBucket = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,5 +31,3 @@ function EntityBucket:removeListener(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function EntityBucket:setVerbose(arg0) end
-
-

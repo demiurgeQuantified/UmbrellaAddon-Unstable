@@ -2,7 +2,7 @@
 
 --- @class TilesetDepthTexture
 --- @field public class any
-TilesetDepthTexture = {};
+TilesetDepthTexture = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -107,7 +107,6 @@ function TilesetDepthTexture:save() end
 --- @param arg0 boolean
 --- @return nil
 function TilesetDepthTexture:setKeepPixels(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

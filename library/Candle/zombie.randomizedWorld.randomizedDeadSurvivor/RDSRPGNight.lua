@@ -2,7 +2,7 @@
 
 --- @class RDSRPGNight: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSRPGNight = {};
+RDSRPGNight = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RDSRPGNight:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSRPGNight:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

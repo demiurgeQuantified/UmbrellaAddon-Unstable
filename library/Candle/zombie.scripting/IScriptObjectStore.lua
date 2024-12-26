@@ -2,7 +2,7 @@
 
 --- @class IScriptObjectStore
 --- @field public class any
-IScriptObjectStore = {};
+IScriptObjectStore = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function IScriptObjectStore:getItem(arg0) end
 --- @param arg0 string
 --- @return Recipe
 function IScriptObjectStore:getRecipe(arg0) end
-
-

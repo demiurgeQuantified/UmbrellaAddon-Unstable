@@ -2,7 +2,7 @@
 
 --- @class Server
 --- @field public class any
-Server = {};
+Server = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -268,7 +268,6 @@ function Server:setVersion(arg0) end
 --- @public
 --- @return nil
 function Server:updateServerCustomizationLastUpdate() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

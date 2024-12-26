@@ -2,7 +2,7 @@
 
 --- @class EnumStringObj
 --- @field public class any
-EnumStringObj = {};
+EnumStringObj = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -77,5 +77,3 @@ function EnumStringObj:sizeStrings() end
 --- @public
 --- @return string
 function EnumStringObj:toString() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class RZSFishingTrip: RandomizedZoneStoryBase
 --- @field public class any
-RZSFishingTrip = {};
+RZSFishingTrip = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,6 @@ function RZSFishingTrip.getFishes() end
 --- @return ArrayList
 function RZSFishingTrip.getFishingTools() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -27,7 +26,6 @@ function RZSFishingTrip.getFishingTools() end
 --- @param arg0 Zone
 --- @return nil
 function RZSFishingTrip:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

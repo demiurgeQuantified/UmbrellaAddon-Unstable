@@ -2,7 +2,7 @@
 
 --- @class EntityScriptInfo: Component
 --- @field public class any
-EntityScriptInfo = {};
+EntityScriptInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,5 +24,3 @@ function EntityScriptInfo:isOriginalIsItem() end
 --- @param arg0 GameEntityScript
 --- @return nil
 function EntityScriptInfo:setOriginalScript(arg0) end
-
-

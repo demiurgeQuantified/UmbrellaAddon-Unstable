@@ -2,7 +2,7 @@
 
 --- @class RVSRoadKillSmall: RandomizedVehicleStoryBase
 --- @field public class any
-RVSRoadKillSmall = {};
+RVSRoadKillSmall = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ RVSRoadKillSmall = {};
 --- @static
 --- @return ArrayList
 function RVSRoadKillSmall.getBreeds() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -36,7 +35,6 @@ function RVSRoadKillSmall:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSRoadKillSmall:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

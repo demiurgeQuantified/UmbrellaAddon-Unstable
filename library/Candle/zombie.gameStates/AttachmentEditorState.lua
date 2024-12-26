@@ -3,7 +3,7 @@
 --- @class AttachmentEditorState: GameState
 --- @field public class any
 --- @field public instance AttachmentEditorState
-AttachmentEditorState = {};
+AttachmentEditorState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -34,7 +34,6 @@ function AttachmentEditorState.updateScript(arg0, arg1, arg2) end
 --- @param arg1 ArrayList
 --- @return boolean
 function AttachmentEditorState.writeScript(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -79,7 +78,6 @@ function AttachmentEditorState:update() end
 --- @public
 --- @return nil
 function AttachmentEditorState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

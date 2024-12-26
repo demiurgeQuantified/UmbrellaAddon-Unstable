@@ -2,7 +2,7 @@
 
 --- @class FluidDefinitionScript: BaseScriptObject
 --- @field public class any
-FluidDefinitionScript = {};
+FluidDefinitionScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -151,5 +151,3 @@ function FluidDefinitionScript:isVanilla() end
 --- @public
 --- @return nil
 function FluidDefinitionScript:reset() end
-
-

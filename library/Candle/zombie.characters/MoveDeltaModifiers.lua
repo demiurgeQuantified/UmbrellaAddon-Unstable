@@ -2,7 +2,7 @@
 
 --- @class MoveDeltaModifiers
 --- @field public class any
-MoveDeltaModifiers = {};
+MoveDeltaModifiers = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,7 +49,6 @@ function MoveDeltaModifiers:setTurnDelta(arg0) end
 --- @param arg0 number
 --- @return nil
 function MoveDeltaModifiers:setTwistDelta(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

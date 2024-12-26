@@ -8,7 +8,7 @@
 --- @field public RestaurantSubstrings ArrayList
 --- @field public Rooms ArrayList
 --- @field public RoomSubstrings ArrayList
-KeyNamer = {};
+KeyNamer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -31,7 +31,6 @@ function KeyNamer.getName(arg0) end
 --- @param arg1 IsoGridSquare
 --- @return nil
 function KeyNamer.nameKey(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

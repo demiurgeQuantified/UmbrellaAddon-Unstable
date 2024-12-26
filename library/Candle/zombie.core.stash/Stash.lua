@@ -2,7 +2,7 @@
 
 --- @class Stash
 --- @field public class any
-Stash = {};
+Stash = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,7 +28,6 @@ function Stash:getName() end
 --- @param arg0 table
 --- @return nil
 function Stash:load(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

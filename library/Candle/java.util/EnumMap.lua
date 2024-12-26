@@ -2,7 +2,7 @@
 
 --- @class EnumMap: AbstractMap, Serializable, Cloneable
 --- @field public class any
-EnumMap = {};
+EnumMap = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -73,7 +73,6 @@ function EnumMap:size() end
 --- @public
 --- @return Collection
 function EnumMap:values() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

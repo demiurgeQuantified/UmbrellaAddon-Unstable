@@ -2,7 +2,7 @@
 
 --- @class RDSRatWar: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSRatWar = {};
+RDSRatWar = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RDSRatWar:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSRatWar:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class Flushable
 --- @field public class any
-Flushable = {};
+Flushable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,5 +11,3 @@ Flushable = {};
 --- @public
 --- @return nil
 function Flushable:flush() end
-
-

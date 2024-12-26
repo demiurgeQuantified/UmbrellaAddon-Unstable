@@ -2,7 +2,7 @@
 
 --- @class Vector2: Cloneable
 --- @field public class any
-Vector2 = {};
+Vector2 = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -54,7 +54,6 @@ function Vector2.moveTowards(arg0, arg1, arg2) end
 --- @param arg1 number
 --- @return Vector2
 function Vector2.scale(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -186,7 +185,6 @@ function Vector2:tangent() end
 --- @public
 --- @return string
 function Vector2:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

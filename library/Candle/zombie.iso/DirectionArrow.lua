@@ -3,7 +3,7 @@
 --- @class DirectionArrow
 --- @field public class any
 --- @field public doDebug boolean
-DirectionArrow = {};
+DirectionArrow = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -138,7 +138,6 @@ function DirectionArrow:setY(arg0) end
 --- @param arg0 integer
 --- @return nil
 function DirectionArrow:setZ(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

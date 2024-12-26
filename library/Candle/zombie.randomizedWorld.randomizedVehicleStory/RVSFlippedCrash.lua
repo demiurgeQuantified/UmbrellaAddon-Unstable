@@ -2,7 +2,7 @@
 
 --- @class RVSFlippedCrash: RandomizedVehicleStoryBase
 --- @field public class any
-RVSFlippedCrash = {};
+RVSFlippedCrash = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,7 +26,6 @@ function RVSFlippedCrash:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSFlippedCrash:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

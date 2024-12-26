@@ -2,7 +2,7 @@
 
 --- @class WarManager
 --- @field public class any
-WarManager = {};
+WarManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -82,5 +82,3 @@ function WarManager.update() end
 --- @param arg3 integer
 --- @return nil
 function WarManager.updateWar(arg0, arg1, arg2, arg3) end
-
-

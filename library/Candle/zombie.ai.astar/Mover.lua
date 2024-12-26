@@ -2,7 +2,7 @@
 
 --- @class Mover
 --- @field public class any
-Mover = {};
+Mover = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,5 +15,3 @@ function Mover:getID() end
 --- @public
 --- @return integer
 function Mover:getPathFindIndex() end
-
-

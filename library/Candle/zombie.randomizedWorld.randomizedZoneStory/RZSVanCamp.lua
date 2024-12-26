@@ -2,7 +2,7 @@
 
 --- @class RZSVanCamp: RandomizedZoneStoryBase
 --- @field public class any
-RZSVanCamp = {};
+RZSVanCamp = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,6 @@ function RZSVanCamp.getBriefcaseClutter() end
 --- @return ArrayList
 function RZSVanCamp.getForestClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -27,7 +26,6 @@ function RZSVanCamp.getForestClutter() end
 --- @param arg0 Zone
 --- @return nil
 function RZSVanCamp:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

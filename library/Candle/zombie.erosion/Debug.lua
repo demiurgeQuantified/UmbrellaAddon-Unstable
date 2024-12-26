@@ -2,7 +2,7 @@
 
 --- @class Debug
 --- @field public class any
-Debug = {};
+Debug = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,7 +19,6 @@ function Debug:getStartDay() end
 --- @public
 --- @return integer
 function Debug:getStartMonth() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

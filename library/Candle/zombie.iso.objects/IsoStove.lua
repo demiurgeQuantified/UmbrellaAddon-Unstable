@@ -2,7 +2,7 @@
 
 --- @class IsoStove: IsoObject, Activatable
 --- @field public class any
-IsoStove = {};
+IsoStove = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -126,7 +126,6 @@ function IsoStove:syncSpriteGridObjects(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoStove:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class SpriteModelEditorState: GameState
 --- @field public class any
 --- @field public instance SpriteModelEditorState
-SpriteModelEditorState = {};
+SpriteModelEditorState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ SpriteModelEditorState = {};
 --- @static
 --- @return SpriteModelEditorState
 function SpriteModelEditorState.checkInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -125,7 +124,6 @@ function SpriteModelEditorState:update() end
 --- @public
 --- @return nil
 function SpriteModelEditorState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

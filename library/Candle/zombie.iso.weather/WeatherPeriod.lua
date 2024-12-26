@@ -16,7 +16,7 @@
 --- @field public STAGE_START integer
 --- @field public STAGE_STORM integer
 --- @field public STAGE_TROPICAL_STORM integer
-WeatherPeriod = {};
+WeatherPeriod = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,7 +26,6 @@ WeatherPeriod = {};
 --- @static
 --- @return number
 function WeatherPeriod.getMaxTemperatureInfluence() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -242,7 +241,6 @@ function WeatherPeriod:update(arg0) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function WeatherPeriod:writeNetWeatherData(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

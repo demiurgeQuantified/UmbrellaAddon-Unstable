@@ -2,7 +2,7 @@
 
 --- @class NewWindow: UIElement
 --- @field public class any
-NewWindow = {};
+NewWindow = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,7 +58,6 @@ function NewWindow:setMovable(arg0) end
 --- @public
 --- @return nil
 function NewWindow:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

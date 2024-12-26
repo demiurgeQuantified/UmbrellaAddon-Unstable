@@ -2,7 +2,7 @@
 
 --- @class PlayerSitOnGroundState: State
 --- @field public class any
-PlayerSitOnGroundState = {};
+PlayerSitOnGroundState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PlayerSitOnGroundState = {};
 --- @static
 --- @return PlayerSitOnGroundState
 function PlayerSitOnGroundState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +37,6 @@ function PlayerSitOnGroundState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function PlayerSitOnGroundState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class AnimalAllele
 --- @field public class any
-AnimalAllele = {};
+AnimalAllele = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,7 +69,6 @@ function AnimalAllele:setTrueRatioValue(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function AnimalAllele:setUsed(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

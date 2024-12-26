@@ -2,7 +2,7 @@
 
 --- @class ImmutableArray: Iterable
 --- @field public class any
-ImmutableArray = {};
+ImmutableArray = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -79,7 +79,6 @@ function ImmutableArray:toArray() end
 --- @return string
 --- @overload fun(self: ImmutableArray, arg0: string): string
 function ImmutableArray:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

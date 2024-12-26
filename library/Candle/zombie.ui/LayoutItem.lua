@@ -2,7 +2,7 @@
 
 --- @class LayoutItem
 --- @field public class any
-LayoutItem = {};
+LayoutItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,7 +63,6 @@ function LayoutItem:setValueRight(arg0, arg1) end
 --- @return nil
 --- @overload fun(self: LayoutItem, arg0: integer): nil
 function LayoutItem:setValueRightNoPlus(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

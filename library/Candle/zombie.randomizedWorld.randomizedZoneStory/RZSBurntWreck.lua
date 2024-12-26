@@ -2,7 +2,7 @@
 
 --- @class RZSBurntWreck: RandomizedZoneStoryBase
 --- @field public class any
-RZSBurntWreck = {};
+RZSBurntWreck = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ RZSBurntWreck = {};
 --- @return ArrayList
 function RZSBurntWreck.getForestClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -22,7 +21,6 @@ function RZSBurntWreck.getForestClutter() end
 --- @param arg0 Zone
 --- @return nil
 function RZSBurntWreck:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -13,7 +13,7 @@
 --- @field public ZONESELECTEDCOLORB number
 --- @field public ZONESELECTEDCOLORG number
 --- @field public ZONESELECTEDCOLORR number
-DesignationZoneAnimal = {};
+DesignationZoneAnimal = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -76,7 +76,6 @@ function DesignationZoneAnimal.removeFoodFromGround(arg0) end
 --- @param arg0 DesignationZoneAnimal
 --- @return nil
 function DesignationZoneAnimal.removeZone(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -143,7 +142,6 @@ function DesignationZoneAnimal:getTroughsConnected() end
 --- @param arg0 IsoAnimal
 --- @return nil
 function DesignationZoneAnimal:removeAnimal(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

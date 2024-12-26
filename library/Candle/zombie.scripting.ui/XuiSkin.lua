@@ -2,7 +2,7 @@
 
 --- @class XuiSkin
 --- @field public class any
-XuiSkin = {};
+XuiSkin = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,7 +17,6 @@ function XuiSkin.Default() end
 --- @static
 --- @return string
 function XuiSkin.getDefaultSkinName() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -66,7 +65,6 @@ function XuiSkin:getName() end
 --- @public
 --- @return boolean
 function XuiSkin:isInvalidated() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -18,7 +18,7 @@
 --- @field public FACE_SINGLE string
 --- @field public FACE_W string
 --- @field public FACE_W_OPEN string
-SpriteConfigManager = {};
+SpriteConfigManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,7 +61,6 @@ function SpriteConfigManager.Reset() end
 --- @param arg0 string
 --- @return ObjectInfo
 function SpriteConfigManager.getObjectInfoFromSprite(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

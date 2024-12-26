@@ -10,7 +10,7 @@
 --- @field public Off LogSeverity
 --- @field public Trace LogSeverity
 --- @field public Warning LogSeverity
-LogSeverity = {};
+LogSeverity = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -31,5 +31,3 @@ function LogSeverity.valueOf(arg0) end
 --- @static
 --- @return LogSeverity[]
 function LogSeverity.values() end
-
-

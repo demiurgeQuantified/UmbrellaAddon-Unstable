@@ -3,7 +3,7 @@
 --- @class GameEntity
 --- @field public class any
 --- @field public DEFAULT_ENTITY_DISPLAY_NAME string
-GameEntity = {};
+GameEntity = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ GameEntity = {};
 --- @static
 --- @return string
 function GameEntity.getDefaultEntityDisplayName() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -199,7 +198,6 @@ function GameEntity:sendSyncEntity(arg0) end
 --- @param arg0 IsoPlayer
 --- @return nil
 function GameEntity:setUsingPlayer(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

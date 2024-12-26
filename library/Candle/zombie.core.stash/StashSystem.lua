@@ -5,7 +5,7 @@
 --- @field public allStashes ArrayList
 --- @field public buildingsToDo ArrayList
 --- @field public possibleStashes ArrayList
-StashSystem = {};
+StashSystem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -91,7 +91,6 @@ function StashSystem.save(arg0) end
 --- @param arg0 BuildingDef
 --- @return nil
 function StashSystem.visitedBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class AttributeType
 --- @field public class any
-AttributeType = {};
+AttributeType = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,5 +47,3 @@ function AttributeType:isReadOnly() end
 --- @public
 --- @return string
 function AttributeType:toString() end
-
-

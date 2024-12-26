@@ -2,7 +2,7 @@
 
 --- @class XuiVar
 --- @field public class any
-XuiVar = {};
+XuiVar = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -79,5 +79,3 @@ function XuiVar:setValue(arg0) end
 --- @public
 --- @return any
 function XuiVar:value() end
-
-

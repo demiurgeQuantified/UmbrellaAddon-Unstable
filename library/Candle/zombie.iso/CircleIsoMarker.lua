@@ -2,7 +2,7 @@
 
 --- @class CircleIsoMarker
 --- @field public class any
-CircleIsoMarker = {};
+CircleIsoMarker = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -154,7 +154,6 @@ function CircleIsoMarker:setSize(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return nil
 function CircleIsoMarker:setSquare(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

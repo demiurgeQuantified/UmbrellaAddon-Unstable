@@ -2,7 +2,7 @@
 
 --- @class RZSHogWild: RandomizedZoneStoryBase
 --- @field public class any
-RZSHogWild = {};
+RZSHogWild = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSHogWild = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSHogWild:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

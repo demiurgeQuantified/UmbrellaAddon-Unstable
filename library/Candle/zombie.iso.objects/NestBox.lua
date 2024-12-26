@@ -3,7 +3,7 @@
 --- @class NestBox
 --- @field public class any
 --- @field public maxEggs integer
-NestBox = {};
+NestBox = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,7 +31,6 @@ function NestBox:getIndex() end
 --- @param arg0 integer
 --- @return Food
 function NestBox:removeEgg(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

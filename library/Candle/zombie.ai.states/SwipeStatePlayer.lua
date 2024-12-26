@@ -2,7 +2,7 @@
 
 --- @class SwipeStatePlayer: State
 --- @field public class any
-SwipeStatePlayer = {};
+SwipeStatePlayer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,7 +19,6 @@ function SwipeStatePlayer.dbgOnGlobalAnimEvent(arg0, arg1) end
 --- @static
 --- @return SwipeStatePlayer
 function SwipeStatePlayer.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,7 +38,6 @@ function SwipeStatePlayer:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function SwipeStatePlayer:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

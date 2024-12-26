@@ -3,7 +3,7 @@
 --- @class ResourceFlag: Enum, IOEnum
 --- @field public class any
 --- @field public AutoDecay ResourceFlag
-ResourceFlag = {};
+ResourceFlag = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,7 +26,6 @@ function ResourceFlag.valueOf(arg0) end
 --- @return ResourceFlag[]
 function ResourceFlag.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -40,5 +39,3 @@ function ResourceFlag:getBits() end
 --- @return integer
 --- @overload fun(self: ResourceFlag): integer
 function ResourceFlag:getByteId() end
-
-

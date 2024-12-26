@@ -3,7 +3,7 @@
 --- @class IsoTree: IsoObject
 --- @field public class any
 --- @field public MAX_SIZE integer
-IsoTree = {};
+IsoTree = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -33,7 +33,6 @@ function IsoTree.renderChopTreeIndicators() end
 --- @param arg3 integer
 --- @return nil
 function IsoTree.setChopTreeCursorLocation(arg0, arg1, arg2, arg3) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -139,7 +138,6 @@ function IsoTree:setHealth(arg0) end
 --- @param arg0 IsoSprite
 --- @return nil
 function IsoTree:setSprite(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

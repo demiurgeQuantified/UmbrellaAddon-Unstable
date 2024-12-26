@@ -2,7 +2,7 @@
 
 --- @class Double: Numeric
 --- @field public class any
-Double = {};
+Double = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,5 +27,3 @@ function Double:getValueType() end
 --- @return number
 --- @overload fun(self: Double, arg0: Number): Number
 function Double:validate(arg0) end
-
-

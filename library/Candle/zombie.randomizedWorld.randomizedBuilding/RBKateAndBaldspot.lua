@@ -2,7 +2,7 @@
 
 --- @class RBKateAndBaldspot: RandomizedBuildingBase
 --- @field public class any
-RBKateAndBaldspot = {};
+RBKateAndBaldspot = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RBKateAndBaldspot:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBKateAndBaldspot:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

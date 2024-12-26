@@ -2,7 +2,7 @@
 
 --- @class AssetStateObserver
 --- @field public class any
-AssetStateObserver = {};
+AssetStateObserver = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -14,5 +14,3 @@ AssetStateObserver = {};
 --- @param arg2 Asset
 --- @return nil
 function AssetStateObserver:onStateChanged(arg0, arg1, arg2) end
-
-

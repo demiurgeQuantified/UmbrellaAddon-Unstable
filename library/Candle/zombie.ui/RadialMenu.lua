@@ -2,7 +2,7 @@
 
 --- @class RadialMenu: UIElement
 --- @field public class any
-RadialMenu = {};
+RadialMenu = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,7 +53,6 @@ function RadialMenu:setSliceTexture(arg0, arg1) end
 --- @public
 --- @return nil
 function RadialMenu:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

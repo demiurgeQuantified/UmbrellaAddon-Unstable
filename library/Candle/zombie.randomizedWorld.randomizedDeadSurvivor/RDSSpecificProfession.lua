@@ -2,7 +2,7 @@
 
 --- @class RDSSpecificProfession: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSSpecificProfession = {};
+RDSSpecificProfession = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RDSSpecificProfession = {};
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSSpecificProfession:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

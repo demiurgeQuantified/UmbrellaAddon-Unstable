@@ -2,7 +2,7 @@
 
 --- @class UniqueRecipe: BaseScriptObject
 --- @field public class any
-UniqueRecipe = {};
+UniqueRecipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,7 +63,6 @@ function UniqueRecipe:setHungerBonus(arg0) end
 --- @param arg0 string
 --- @return nil
 function UniqueRecipe:setName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

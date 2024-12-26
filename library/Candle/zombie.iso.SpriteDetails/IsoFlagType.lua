@@ -109,7 +109,7 @@
 --- @field public waterPiped IsoFlagType
 --- @field public windowN IsoFlagType
 --- @field public windowW IsoFlagType
-IsoFlagType = {};
+IsoFlagType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -138,7 +138,6 @@ function IsoFlagType.valueOf(arg0) end
 --- @return IsoFlagType[]
 function IsoFlagType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -146,5 +145,3 @@ function IsoFlagType.values() end
 --- @public
 --- @return integer
 function IsoFlagType:index() end
-
-

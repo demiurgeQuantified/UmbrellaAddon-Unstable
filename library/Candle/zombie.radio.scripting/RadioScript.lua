@@ -2,7 +2,7 @@
 
 --- @class RadioScript
 --- @field public class any
-RadioScript = {};
+RadioScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -91,7 +91,6 @@ function RadioScript:getValidAirBroadcastDebug() end
 --- @param arg0 integer
 --- @return nil
 function RadioScript:setStartDayStamp(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

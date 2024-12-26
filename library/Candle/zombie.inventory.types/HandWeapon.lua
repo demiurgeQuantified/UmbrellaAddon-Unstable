@@ -2,7 +2,7 @@
 
 --- @class HandWeapon: InventoryItem
 --- @field public class any
-HandWeapon = {};
+HandWeapon = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1262,7 +1262,6 @@ function HandWeapon:setZombieHitSound(arg0) end
 --- @public
 --- @return boolean
 function HandWeapon:usesExternalMagazine() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

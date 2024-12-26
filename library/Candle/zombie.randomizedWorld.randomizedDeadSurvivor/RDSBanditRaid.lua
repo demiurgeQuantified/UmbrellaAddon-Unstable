@@ -2,7 +2,7 @@
 
 --- @class RDSBanditRaid: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSBanditRaid = {};
+RDSBanditRaid = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RDSBanditRaid:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSBanditRaid:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

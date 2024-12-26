@@ -2,7 +2,7 @@
 
 --- @class RBJackieJaye: RandomizedBuildingBase
 --- @field public class any
-RBJackieJaye = {};
+RBJackieJaye = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBJackieJaye:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBJackieJaye:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

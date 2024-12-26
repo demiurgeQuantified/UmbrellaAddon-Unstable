@@ -2,7 +2,7 @@
 
 --- @class GameSound
 --- @field public class any
-GameSound = {};
+GameSound = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -45,7 +45,6 @@ function GameSound:reset() end
 --- @param arg0 number
 --- @return nil
 function GameSound:setUserVolume(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

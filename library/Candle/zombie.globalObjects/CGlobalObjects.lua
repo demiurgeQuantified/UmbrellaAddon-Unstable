@@ -2,7 +2,7 @@
 
 --- @class CGlobalObjects
 --- @field public class any
-CGlobalObjects = {};
+CGlobalObjects = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -66,7 +66,6 @@ function CGlobalObjects.receiveServerCommand(arg0, arg1, arg2) end
 --- @param arg0 string
 --- @return CGlobalObjectSystem
 function CGlobalObjects.registerSystem(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

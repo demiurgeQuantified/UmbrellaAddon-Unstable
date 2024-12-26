@@ -2,7 +2,7 @@
 
 --- @class ComponentEvent
 --- @field public class any
-ComponentEvent = {};
+ComponentEvent = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,7 +14,6 @@ ComponentEvent = {};
 --- @param arg1 Component
 --- @return ComponentEvent
 function ComponentEvent.Alloc(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,5 +30,3 @@ function ComponentEvent:getSender() end
 --- @public
 --- @return nil
 function ComponentEvent:release() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class IOEnum
 --- @field public class any
-IOEnum = {};
+IOEnum = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,5 +15,3 @@ function IOEnum:getBits() end
 --- @public
 --- @return integer
 function IOEnum:getByteId() end
-
-

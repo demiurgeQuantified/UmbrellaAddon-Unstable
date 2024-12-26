@@ -2,7 +2,7 @@
 
 --- @class RDSDevouredByRats: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSDevouredByRats = {};
+RDSDevouredByRats = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RDSDevouredByRats = {};
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSDevouredByRats:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

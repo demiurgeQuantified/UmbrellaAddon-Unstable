@@ -2,7 +2,7 @@
 
 --- @class StorySound
 --- @field public class any
-StorySound = {};
+StorySound = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -36,7 +36,6 @@ function StorySound:setBaseVolume(arg0) end
 --- @param arg0 string
 --- @return nil
 function StorySound:setName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

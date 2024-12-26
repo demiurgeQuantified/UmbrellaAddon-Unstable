@@ -2,7 +2,7 @@
 
 --- @class RVSPlonkies: RandomizedVehicleStoryBase
 --- @field public class any
-RVSPlonkies = {};
+RVSPlonkies = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,7 +26,6 @@ function RVSPlonkies:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSPlonkies:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

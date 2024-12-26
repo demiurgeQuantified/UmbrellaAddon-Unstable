@@ -2,7 +2,7 @@
 
 --- @class TemplateText
 --- @field public class any
-TemplateText = {};
+TemplateText = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -52,7 +52,6 @@ function TemplateText.RegisterKey(arg0, arg1) end
 --- @static
 --- @return nil
 function TemplateText.Reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

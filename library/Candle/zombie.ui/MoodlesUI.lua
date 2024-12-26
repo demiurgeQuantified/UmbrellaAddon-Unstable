@@ -6,7 +6,7 @@
 --- @field public minusRed Texture
 --- @field public plusGreen Texture
 --- @field public plusRed Texture
-MoodlesUI = {};
+MoodlesUI = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,6 @@ MoodlesUI = {};
 --- @static
 --- @return MoodlesUI
 function MoodlesUI.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -64,7 +63,6 @@ function MoodlesUI:update() end
 --- @param arg0 MoodleType
 --- @return nil
 function MoodlesUI:wiggle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

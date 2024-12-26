@@ -2,7 +2,7 @@
 
 --- @class RadialProgressBar: UIElement
 --- @field public class any
-RadialProgressBar = {};
+RadialProgressBar = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,7 +33,6 @@ function RadialProgressBar:setValue(arg0) end
 --- @public
 --- @return nil
 function RadialProgressBar:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

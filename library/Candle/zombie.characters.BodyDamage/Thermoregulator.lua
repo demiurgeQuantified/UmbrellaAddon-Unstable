@@ -2,7 +2,7 @@
 
 --- @class Thermoregulator
 --- @field public class any
-Thermoregulator = {};
+Thermoregulator = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,7 +28,6 @@ function Thermoregulator.getSkinCelciusMin() end
 --- @param arg0 number
 --- @return nil
 function Thermoregulator.setSimulationMultiplier(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -233,7 +232,6 @@ function Thermoregulator:thermalChevronUp() end
 --- @public
 --- @return nil
 function Thermoregulator:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

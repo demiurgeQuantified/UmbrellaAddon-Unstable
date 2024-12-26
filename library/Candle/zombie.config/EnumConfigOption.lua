@@ -2,7 +2,7 @@
 
 --- @class EnumConfigOption: IntegerConfigOption
 --- @field public class any
-EnumConfigOption = {};
+EnumConfigOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,7 +15,6 @@ function EnumConfigOption:getNumValues() end
 --- @public
 --- @return string
 function EnumConfigOption:getType() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

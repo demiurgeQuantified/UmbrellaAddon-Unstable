@@ -2,7 +2,7 @@
 
 --- @class XP: IAntiCheatUpdate
 --- @field public class any
-XP = {};
+XP = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,7 +101,6 @@ function XP:setTotalXP(arg0) end
 --- @param arg1 integer
 --- @return nil
 function XP:setXPToLevel(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

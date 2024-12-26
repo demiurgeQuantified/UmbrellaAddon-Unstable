@@ -2,7 +2,7 @@
 
 --- @class MusicThreatStatus
 --- @field public class any
-MusicThreatStatus = {};
+MusicThreatStatus = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,7 +20,6 @@ function MusicThreatStatus:getIntensity() end
 --- @param arg0 number
 --- @return nil
 function MusicThreatStatus:setIntensity(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

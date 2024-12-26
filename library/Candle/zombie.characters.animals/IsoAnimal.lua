@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public DISPLAY_EXTRA_VALUES boolean
 --- @field public tempVector2 Vector2
-IsoAnimal = {};
+IsoAnimal = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,6 @@ function IsoAnimal.modifyMeat(arg0, arg1, arg2) end
 --- @static
 --- @return nil
 function IsoAnimal.toggleExtraValues() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1037,7 +1036,6 @@ function IsoAnimal:updateWalkLoopingSound() end
 --- @public
 --- @return boolean
 function IsoAnimal:useRagdoll() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

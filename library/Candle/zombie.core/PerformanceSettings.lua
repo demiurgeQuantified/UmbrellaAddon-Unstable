@@ -21,7 +21,7 @@
 --- @field public WaterQuality integer
 --- @field public ZombieAnimationSpeedFalloffCount integer
 --- @field public ZombieBonusFullspeedFalloff integer
-PerformanceSettings = {};
+PerformanceSettings = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -37,7 +37,6 @@ function PerformanceSettings.getLockFPS() end
 --- @param arg0 integer
 --- @return nil
 function PerformanceSettings.setLockFPS(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -118,7 +117,6 @@ function PerformanceSettings:setPuddlesQuality(arg0) end
 --- @param arg0 integer
 --- @return nil
 function PerformanceSettings:setWaterQuality(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

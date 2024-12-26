@@ -2,7 +2,7 @@
 
 --- @class ITexture: IDestroyable, IMaskerable
 --- @field public class any
-ITexture = {};
+ITexture = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,5 +101,3 @@ function ITexture:setMask(arg0) end
 --- @param arg3 integer
 --- @return nil
 function ITexture:setRegion(arg0, arg1, arg2, arg3) end
-
-

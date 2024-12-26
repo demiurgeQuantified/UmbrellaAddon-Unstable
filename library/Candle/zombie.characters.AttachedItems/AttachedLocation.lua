@@ -2,7 +2,7 @@
 
 --- @class AttachedLocation
 --- @field public class any
-AttachedLocation = {};
+AttachedLocation = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,7 +20,6 @@ function AttachedLocation:getId() end
 --- @param arg0 string
 --- @return nil
 function AttachedLocation:setAttachmentName(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

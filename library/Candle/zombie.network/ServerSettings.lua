@@ -2,7 +2,7 @@
 
 --- @class ServerSettings
 --- @field public class any
-ServerSettings = {};
+ServerSettings = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -93,7 +93,6 @@ function ServerSettings:saveFiles() end
 --- @param arg1 table
 --- @return boolean
 function ServerSettings:saveSpawnPointsFile(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

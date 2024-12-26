@@ -2,7 +2,7 @@
 
 --- @class SGlobalObjects
 --- @field public class any
-SGlobalObjects = {};
+SGlobalObjects = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -103,7 +103,6 @@ function SGlobalObjects.saveInitialStateForClient(arg0) end
 --- @static
 --- @return nil
 function SGlobalObjects.update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ErosionConfig
 --- @field public class any
-ErosionConfig = {};
+ErosionConfig = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,7 +35,6 @@ function ErosionConfig:save(arg0) end
 --- @param arg0 string
 --- @return nil
 function ErosionConfig:writeFile(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

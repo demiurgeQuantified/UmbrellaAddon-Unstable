@@ -2,7 +2,7 @@
 
 --- @class Externalizable: Serializable
 --- @field public class any
-Externalizable = {};
+Externalizable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function Externalizable:readExternal(arg0) end
 --- @param arg0 ObjectOutput
 --- @return nil
 function Externalizable:writeExternal(arg0) end
-
-

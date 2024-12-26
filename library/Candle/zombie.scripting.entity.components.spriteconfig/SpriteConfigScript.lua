@@ -2,7 +2,7 @@
 
 --- @class SpriteConfigScript: ComponentScript
 --- @field public class any
-SpriteConfigScript = {};
+SpriteConfigScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -98,5 +98,3 @@ function SpriteConfigScript:isValid() end
 --- @public
 --- @return boolean
 function SpriteConfigScript:isoMasterOnly() end
-
-

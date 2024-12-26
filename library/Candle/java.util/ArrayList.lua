@@ -2,7 +2,7 @@
 
 --- @class ArrayList: AbstractList, List, RandomAccess, Cloneable, Serializable
 --- @field public class any
-ArrayList = {};
+ArrayList = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,7 +29,6 @@ function ArrayList.copyOf(arg0) end
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function ArrayList.of() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -198,7 +197,6 @@ function ArrayList:toArray() end
 --- @public
 --- @return nil
 function ArrayList:trimToSize() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

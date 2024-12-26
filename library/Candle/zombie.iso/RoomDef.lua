@@ -2,7 +2,7 @@
 
 --- @class RoomDef
 --- @field public class any
-RoomDef = {};
+RoomDef = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -188,7 +188,6 @@ function RoomDef:setExplored(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function RoomDef:setRoofFixed(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

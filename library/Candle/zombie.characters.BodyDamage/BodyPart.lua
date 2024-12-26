@@ -2,7 +2,7 @@
 
 --- @class BodyPart
 --- @field public class any
-BodyPart = {};
+BodyPart = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -571,7 +571,6 @@ function BodyPart:sync(arg0, arg1) end
 --- @param arg1 integer
 --- @return nil
 function BodyPart:syncWrite(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

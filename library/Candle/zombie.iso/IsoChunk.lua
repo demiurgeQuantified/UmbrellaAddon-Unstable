@@ -7,7 +7,7 @@
 --- @field public loadGridSquare ConcurrentLinkedQueue
 --- @field public renderByIndex byte[][]
 --- @field public WriteLock any
-IsoChunk = {};
+IsoChunk = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -77,7 +77,6 @@ function IsoChunk.removeFromCheckedVehicles(arg0) end
 --- @static
 --- @return nil
 function IsoChunk.updatePlayerInBullet() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -554,7 +553,6 @@ function IsoChunk:updateSounds() end
 --- @public
 --- @return nil
 function IsoChunk:updateVehicleStory() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

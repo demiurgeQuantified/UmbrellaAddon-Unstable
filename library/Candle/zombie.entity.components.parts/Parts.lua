@@ -2,7 +2,7 @@
 
 --- @class Parts: Component
 --- @field public class any
-Parts = {};
+Parts = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function Parts:DoTooltip(arg0, arg1) end
 --- @public
 --- @return boolean
 function Parts:isValid() end
-
-

@@ -13,7 +13,7 @@
 --- @field public UNIT_L number
 --- @field public UNIT_mL number
 --- @field public UNIT_uL number
-FluidUtil = {};
+FluidUtil = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -109,7 +109,6 @@ function FluidUtil.getUnitMilliLiter() end
 --- @param arg0 number
 --- @return number
 function FluidUtil.roundTransfer(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

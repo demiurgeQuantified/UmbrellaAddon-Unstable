@@ -2,7 +2,7 @@
 
 --- @class RBReverend: RandomizedBuildingBase
 --- @field public class any
-RBReverend = {};
+RBReverend = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBReverend:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBReverend:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

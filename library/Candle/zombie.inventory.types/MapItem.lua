@@ -3,7 +3,7 @@
 --- @class MapItem: InventoryItem
 --- @field public class any
 --- @field public WORLD_MAP_INSTANCE MapItem
-MapItem = {};
+MapItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,7 +28,6 @@ function MapItem.SaveWorldMap() end
 --- @static
 --- @return MapItem
 function MapItem.getSingleton() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -66,7 +65,6 @@ function MapItem:save(arg0, arg1) end
 --- @param arg0 string
 --- @return nil
 function MapItem:setMapID(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class HairStyles
 --- @field public class any
 --- @field public instance HairStyles
-HairStyles = {};
+HairStyles = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -30,7 +30,6 @@ function HairStyles.init() end
 --- @param arg0 string
 --- @return HairStyles
 function HairStyles.parse(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,7 +68,6 @@ function HairStyles:getRandomFemaleStyle(arg0) end
 --- @param arg0 string
 --- @return string
 function HairStyles:getRandomMaleStyle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RBClinic: RandomizedBuildingBase
 --- @field public class any
-RBClinic = {};
+RBClinic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBClinic:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBClinic:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

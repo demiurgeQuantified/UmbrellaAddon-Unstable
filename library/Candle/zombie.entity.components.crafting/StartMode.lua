@@ -5,7 +5,7 @@
 --- @field public Automatic StartMode
 --- @field public Manual StartMode
 --- @field public Passive StartMode
-StartMode = {};
+StartMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,7 +28,6 @@ function StartMode.valueOf(arg0) end
 --- @return StartMode[]
 function StartMode.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -42,5 +41,3 @@ function StartMode:getBits() end
 --- @return integer
 --- @overload fun(self: StartMode): integer
 function StartMode:getByteId() end
-
-

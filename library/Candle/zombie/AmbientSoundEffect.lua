@@ -2,7 +2,7 @@
 
 --- @class AmbientSoundEffect: Audio
 --- @field public class any
-AmbientSoundEffect = {};
+AmbientSoundEffect = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -48,7 +48,6 @@ function AmbientSoundEffect:stop() end
 --- @public
 --- @return nil
 function AmbientSoundEffect:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

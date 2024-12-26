@@ -6,7 +6,7 @@
 --- @field public clientOptionsList HashMap
 --- @field public instance ServerOptions
 --- @field public MAX_PORT integer
-ServerOptions = {};
+ServerOptions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -32,7 +32,6 @@ function ServerOptions.getRandomCard() end
 --- @static
 --- @return nil
 function ServerOptions.initClientCommandsHelp() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -133,7 +132,6 @@ function ServerOptions:resetRegionFile() end
 --- @param arg0 string
 --- @return boolean
 function ServerOptions:saveServerTextFile(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

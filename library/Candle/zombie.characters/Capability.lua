@@ -102,7 +102,7 @@
 --- @field public UseTimedActionInstantCheat Capability
 --- @field public UseZombieDontAttackCheat Capability
 --- @field public WorkWithUserlog Capability
-Capability = {};
+Capability = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -118,5 +118,3 @@ function Capability.valueOf(arg0) end
 --- @static
 --- @return Capability[]
 function Capability.values() end
-
-

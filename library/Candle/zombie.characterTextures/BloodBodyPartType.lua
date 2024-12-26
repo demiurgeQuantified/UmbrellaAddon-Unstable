@@ -21,7 +21,7 @@
 --- @field public UpperArm_R BloodBodyPartType
 --- @field public UpperLeg_L BloodBodyPartType
 --- @field public UpperLeg_R BloodBodyPartType
-BloodBodyPartType = {};
+BloodBodyPartType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -62,7 +62,6 @@ function BloodBodyPartType.valueOf(arg0) end
 --- @return BloodBodyPartType[]
 function BloodBodyPartType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -78,5 +77,3 @@ function BloodBodyPartType:getDisplayName() end
 --- @public
 --- @return integer
 function BloodBodyPartType:index() end
-
-

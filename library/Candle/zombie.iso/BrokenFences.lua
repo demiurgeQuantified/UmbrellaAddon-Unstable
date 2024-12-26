@@ -2,7 +2,7 @@
 
 --- @class BrokenFences
 --- @field public class any
-BrokenFences = {};
+BrokenFences = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ BrokenFences = {};
 --- @static
 --- @return BrokenFences
 function BrokenFences.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -64,7 +63,6 @@ function BrokenFences:setDestroyed(arg0) end
 --- @param arg2 boolean
 --- @return nil
 function BrokenFences:updateSprite(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

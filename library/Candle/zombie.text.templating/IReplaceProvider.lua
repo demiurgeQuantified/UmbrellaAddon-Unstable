@@ -2,7 +2,7 @@
 
 --- @class IReplaceProvider
 --- @field public class any
-IReplaceProvider = {};
+IReplaceProvider = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function IReplaceProvider:getReplacer(arg0) end
 --- @param arg0 string
 --- @return boolean
 function IReplaceProvider:hasReplacer(arg0) end
-
-

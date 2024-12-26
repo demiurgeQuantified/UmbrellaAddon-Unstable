@@ -2,7 +2,7 @@
 
 --- @class ILuaGameCharacter: ILuaVariableSource, ILuaGameCharacterAttachedItems, ILuaGameCharacterDamage, ILuaGameCharacterClothing, ILuaGameCharacterHealth
 --- @field public class any
-ILuaGameCharacter = {};
+ILuaGameCharacter = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1077,5 +1077,3 @@ function ILuaGameCharacter:stopOrTriggerSound(arg0) end
 --- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any): nil
 --- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
 function ILuaGameCharacter:triggerContextualAction(arg0) end
-
-

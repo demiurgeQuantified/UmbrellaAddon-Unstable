@@ -2,7 +2,7 @@
 
 --- @class ConfigOption
 --- @field public class any
-ConfigOption = {};
+ConfigOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,7 +58,6 @@ function ConfigOption:setDefaultToCurrentValue() end
 --- @param arg0 any
 --- @return nil
 function ConfigOption:setValueFromObject(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

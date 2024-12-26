@@ -5,7 +5,7 @@
 --- @field public baseChance integer
 --- @field public totalChance integer
 --- @field public zoneStory string
-RandomizedZoneStoryBase = {};
+RandomizedZoneStoryBase = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -43,7 +43,6 @@ function RandomizedZoneStoryBase.initAllRZSMapChance(arg0) end
 --- @param arg1 boolean
 --- @return boolean
 function RandomizedZoneStoryBase.isValidForStory(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -91,7 +90,6 @@ function RandomizedZoneStoryBase:isValid() end
 --- @param arg0 Zone
 --- @return nil
 function RandomizedZoneStoryBase:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

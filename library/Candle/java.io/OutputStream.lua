@@ -2,7 +2,7 @@
 
 --- @class OutputStream: Closeable, Flushable
 --- @field public class any
-OutputStream = {};
+OutputStream = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ OutputStream = {};
 --- @static
 --- @return OutputStream
 function OutputStream.nullOutputStream() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -34,7 +33,6 @@ function OutputStream:flush() end
 --- @overload fun(self: OutputStream, arg0: integer): nil
 --- @overload fun(self: OutputStream, arg0: byte[], arg1: integer, arg2: integer): nil
 function OutputStream:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

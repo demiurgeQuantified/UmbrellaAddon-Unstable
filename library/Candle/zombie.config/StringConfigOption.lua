@@ -2,7 +2,7 @@
 
 --- @class StringConfigOption: ConfigOption
 --- @field public class any
-StringConfigOption = {};
+StringConfigOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,7 +71,6 @@ function StringConfigOption:setValue(arg0) end
 --- @param arg0 any
 --- @return nil
 function StringConfigOption:setValueFromObject(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

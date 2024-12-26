@@ -2,7 +2,7 @@
 
 --- @class PlayerHitReactionState: State
 --- @field public class any
-PlayerHitReactionState = {};
+PlayerHitReactionState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PlayerHitReactionState = {};
 --- @static
 --- @return PlayerHitReactionState
 function PlayerHitReactionState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +37,6 @@ function PlayerHitReactionState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function PlayerHitReactionState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

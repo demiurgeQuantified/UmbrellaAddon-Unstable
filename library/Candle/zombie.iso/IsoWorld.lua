@@ -37,7 +37,7 @@
 --- @field public WorldVersion_TrapExplosionDuration integer
 --- @field public WorldVersion_VariableHeight integer
 --- @field public WorldVersion_ZoneIDisUUID integer
-IsoWorld = {};
+IsoWorld = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -82,11 +82,10 @@ function IsoWorld.readInt(arg0) end
 
 --- @public
 --- @static
---- @param arg0 InputStream
+--- @param arg0 RandomAccessFile
 --- @return string
---- @overload fun(arg0: RandomAccessFile): string
+--- @overload fun(arg0: InputStream, arg1: StringBuilder): string
 function IsoWorld.readString(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -596,7 +595,6 @@ function IsoWorld:transmitWeather() end
 --- @public
 --- @return nil
 function IsoWorld:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

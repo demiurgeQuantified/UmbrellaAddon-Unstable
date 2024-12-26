@@ -2,7 +2,7 @@
 
 --- @class DeviceData: Cloneable, IFMODParameterUpdater
 --- @field public class any
-DeviceData = {};
+DeviceData = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -466,7 +466,6 @@ function DeviceData:updateMediaPlaying() end
 --- @public
 --- @return nil
 function DeviceData:updateSimple() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

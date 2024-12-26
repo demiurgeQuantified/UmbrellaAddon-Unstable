@@ -2,7 +2,7 @@
 
 --- @class FluidSample
 --- @field public class any
-FluidSample = {};
+FluidSample = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -27,7 +27,6 @@ function FluidSample.Load(arg0, arg1) end
 --- @param arg1 ByteBuffer
 --- @return nil
 function FluidSample.Save(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -85,5 +84,3 @@ function FluidSample:scaleToAmount(arg0) end
 --- @public
 --- @return integer
 function FluidSample:size() end
-
-

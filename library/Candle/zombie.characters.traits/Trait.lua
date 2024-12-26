@@ -2,7 +2,7 @@
 
 --- @class Trait: IListBoxItem
 --- @field public class any
-Trait = {};
+Trait = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -88,7 +88,6 @@ function Trait:setFreeRecipes(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function Trait:setRemoveInMP(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RZSMusicFest: RandomizedZoneStoryBase
 --- @field public class any
-RZSMusicFest = {};
+RZSMusicFest = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSMusicFest = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSMusicFest:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

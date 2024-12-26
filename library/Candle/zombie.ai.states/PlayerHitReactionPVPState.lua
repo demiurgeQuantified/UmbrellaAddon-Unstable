@@ -2,7 +2,7 @@
 
 --- @class PlayerHitReactionPVPState: State
 --- @field public class any
-PlayerHitReactionPVPState = {};
+PlayerHitReactionPVPState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PlayerHitReactionPVPState = {};
 --- @static
 --- @return PlayerHitReactionPVPState
 function PlayerHitReactionPVPState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +37,6 @@ function PlayerHitReactionPVPState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function PlayerHitReactionPVPState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

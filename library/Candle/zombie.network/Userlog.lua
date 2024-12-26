@@ -2,7 +2,7 @@
 
 --- @class Userlog
 --- @field public class any
-Userlog = {};
+Userlog = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -41,7 +41,6 @@ function Userlog:setAmount(arg0) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function Userlog:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

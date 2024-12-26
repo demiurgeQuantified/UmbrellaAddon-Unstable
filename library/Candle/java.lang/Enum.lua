@@ -2,7 +2,7 @@
 
 --- @class Enum: Constable, Comparable, Serializable
 --- @field public class any
-Enum = {};
+Enum = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,7 +14,6 @@ Enum = {};
 --- @param arg1 string
 --- @return Enum
 function Enum.valueOf(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -56,5 +55,3 @@ function Enum:ordinal() end
 --- @public
 --- @return string
 function Enum:toString() end
-
-

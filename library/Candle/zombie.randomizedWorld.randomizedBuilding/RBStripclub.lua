@@ -2,7 +2,7 @@
 
 --- @class RBStripclub: RandomizedBuildingBase
 --- @field public class any
-RBStripclub = {};
+RBStripclub = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RBStripclub:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBStripclub:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

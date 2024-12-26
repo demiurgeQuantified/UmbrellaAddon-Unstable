@@ -2,7 +2,7 @@
 
 --- @class RBShopLooted: RandomizedBuildingBase
 --- @field public class any
-RBShopLooted = {};
+RBShopLooted = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RBShopLooted:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBShopLooted:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

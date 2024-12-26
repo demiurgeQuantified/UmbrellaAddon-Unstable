@@ -9,7 +9,7 @@
 --- @field public curR number
 --- @field public xoff integer
 --- @field public yoff integer
-AngelCodeFont = {};
+AngelCodeFont = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -75,7 +75,6 @@ function AngelCodeFont:isEmpty() end
 --- @return nil
 --- @overload fun(self: AngelCodeFont, arg0: State, arg1: State, arg2: Asset): nil
 function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

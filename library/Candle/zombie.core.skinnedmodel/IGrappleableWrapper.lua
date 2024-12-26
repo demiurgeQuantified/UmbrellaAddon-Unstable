@@ -2,7 +2,7 @@
 
 --- @class IGrappleableWrapper: IGrappleable
 --- @field public class any
-IGrappleableWrapper = {};
+IGrappleableWrapper = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ IGrappleableWrapper = {};
 --- @param arg0 IGrappleable
 --- @return IAnimatable
 function IGrappleableWrapper.getAnimatable(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -351,5 +350,3 @@ function IGrappleableWrapper:setTargetGrapplePos(arg0) end
 --- @overload fun(self: IGrappleableWrapper, arg0: number, arg1: number): nil
 --- @overload fun(self: IGrappleableWrapper, arg0: number, arg1: number): nil
 function IGrappleableWrapper:setTargetGrappleRotation(arg0) end
-
-

@@ -2,7 +2,7 @@
 
 --- @class BaseAnimalBehavior
 --- @field public class any
-BaseAnimalBehavior = {};
+BaseAnimalBehavior = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ BaseAnimalBehavior = {};
 --- @param arg0 ArrayList
 --- @return nil
 function BaseAnimalBehavior.shuffleList(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -127,7 +126,6 @@ function BaseAnimalBehavior:walkedOnSpot() end
 --- @public
 --- @return nil
 function BaseAnimalBehavior:wanderIdle() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

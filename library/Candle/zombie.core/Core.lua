@@ -47,7 +47,7 @@
 --- @field public xx integer
 --- @field public yy integer
 --- @field public zz integer
-Core = {};
+Core = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -160,7 +160,6 @@ function Core.supportCompressedTextures() end
 --- @static
 --- @return boolean
 function Core.supportNPTTexture() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -2147,7 +2146,6 @@ function Core:zoomLevelsChanged() end
 --- @param arg0 boolean
 --- @return nil
 function Core:zoomOptionChanged(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

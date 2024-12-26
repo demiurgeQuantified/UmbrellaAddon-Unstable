@@ -2,7 +2,7 @@
 
 --- @class BurntToDeath: State
 --- @field public class any
-BurntToDeath = {};
+BurntToDeath = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ BurntToDeath = {};
 --- @static
 --- @return BurntToDeath
 function BurntToDeath.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,7 +31,6 @@ function BurntToDeath:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function BurntToDeath:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

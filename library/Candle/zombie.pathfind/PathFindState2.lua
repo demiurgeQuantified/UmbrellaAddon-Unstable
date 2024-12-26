@@ -2,7 +2,7 @@
 
 --- @class PathFindState2: State
 --- @field public class any
-PathFindState2 = {};
+PathFindState2 = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,7 +33,6 @@ function PathFindState2:exit(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function PathFindState2:isMoving(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class IsoTelevision: IsoWaveSignal
 --- @field public class any
-IsoTelevision = {};
+IsoTelevision = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,7 +51,6 @@ function IsoTelevision:save(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoTelevision:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class XuiScript
 --- @field public class any
-XuiScript = {};
+XuiScript = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,7 +22,6 @@ function XuiScript.CreateScriptForClass(arg0, arg1, arg2, arg3) end
 --- @param arg0 Block
 --- @return string
 function XuiScript.ReadLuaClassValue(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -398,7 +397,6 @@ function XuiScript:setXuiStyle(arg0) end
 --- @public
 --- @return string
 function XuiScript:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

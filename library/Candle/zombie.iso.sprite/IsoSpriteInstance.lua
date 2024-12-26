@@ -3,7 +3,7 @@
 --- @class IsoSpriteInstance
 --- @field public class any
 --- @field public pool ObjectPool
-IsoSpriteInstance = {};
+IsoSpriteInstance = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,7 +20,6 @@ function IsoSpriteInstance.add(arg0) end
 --- @param arg0 IsoSprite
 --- @return IsoSpriteInstance
 function IsoSpriteInstance.get(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -143,7 +142,6 @@ function IsoSpriteInstance:setScale(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoSpriteInstance:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

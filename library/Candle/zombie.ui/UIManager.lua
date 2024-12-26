@@ -48,7 +48,7 @@
 --- @field public uiUpdateTimeMS integer
 --- @field public useUIFBO boolean
 --- @field public VisibleAllUI boolean
-UIManager = {};
+UIManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -660,7 +660,6 @@ function UIManager.update() end
 --- @static
 --- @return nil
 function UIManager.updateBeforeFadeOut() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

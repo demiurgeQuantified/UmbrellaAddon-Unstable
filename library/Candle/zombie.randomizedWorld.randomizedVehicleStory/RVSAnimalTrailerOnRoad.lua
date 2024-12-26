@@ -2,7 +2,7 @@
 
 --- @class RVSAnimalTrailerOnRoad: RandomizedVehicleStoryBase
 --- @field public class any
-RVSAnimalTrailerOnRoad = {};
+RVSAnimalTrailerOnRoad = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,7 +26,6 @@ function RVSAnimalTrailerOnRoad:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSAnimalTrailerOnRoad:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

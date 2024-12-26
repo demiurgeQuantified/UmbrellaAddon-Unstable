@@ -2,7 +2,7 @@
 
 --- @class Literature: InventoryItem
 --- @field public class any
-Literature = {};
+Literature = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -179,7 +179,6 @@ function Literature:setTeachedRecipes(arg0) end
 --- @public
 --- @return nil
 function Literature:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

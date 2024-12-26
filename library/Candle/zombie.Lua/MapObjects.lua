@@ -2,7 +2,7 @@
 
 --- @class MapObjects
 --- @field public class any
-MapObjects = {};
+MapObjects = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -72,7 +72,6 @@ function MapObjects.newGridSquare(arg0) end
 --- @param arg1 function
 --- @return nil
 function MapObjects.reroute(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

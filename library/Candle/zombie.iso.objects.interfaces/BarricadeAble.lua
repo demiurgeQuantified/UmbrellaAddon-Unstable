@@ -2,7 +2,7 @@
 
 --- @class BarricadeAble
 --- @field public class any
-BarricadeAble = {};
+BarricadeAble = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -45,5 +45,3 @@ function BarricadeAble:isBarricadeAllowed() end
 --- @public
 --- @return boolean
 function BarricadeAble:isBarricaded() end
-
-

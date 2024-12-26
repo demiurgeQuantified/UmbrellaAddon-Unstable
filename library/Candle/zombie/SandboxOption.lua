@@ -2,7 +2,7 @@
 
 --- @class SandboxOption
 --- @field public class any
-SandboxOption = {};
+SandboxOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -59,5 +59,3 @@ function SandboxOption:setTranslation(arg0) end
 --- @param arg0 table
 --- @return nil
 function SandboxOption:toTable(arg0) end
-
-

@@ -2,7 +2,7 @@
 
 --- @class IsoRegionsRenderer
 --- @field public class any
-IsoRegionsRenderer = {};
+IsoRegionsRenderer = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -263,7 +263,6 @@ function IsoRegionsRenderer:worldToScreenX(arg0) end
 --- @param arg0 number
 --- @return number
 function IsoRegionsRenderer:worldToScreenY(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

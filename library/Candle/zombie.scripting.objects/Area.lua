@@ -2,7 +2,7 @@
 
 --- @class Area
 --- @field public class any
-Area = {};
+Area = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,7 +47,6 @@ function Area:setX(arg0) end
 --- @param arg0 number
 --- @return nil
 function Area:setY(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

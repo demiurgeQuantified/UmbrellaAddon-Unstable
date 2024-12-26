@@ -2,5 +2,4 @@
 
 --- @class RandomAccess
 --- @field public class any
-RandomAccess = {};
-
+RandomAccess = {}

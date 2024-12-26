@@ -2,7 +2,7 @@
 
 --- @class EvolvedRecipe: BaseScriptObject
 --- @field public class any
-EvolvedRecipe = {};
+EvolvedRecipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -119,7 +119,6 @@ function EvolvedRecipe:setAllowFrozenItem(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function EvolvedRecipe:setIsHidden(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

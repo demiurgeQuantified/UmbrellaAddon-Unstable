@@ -7,7 +7,7 @@
 --- @field public ID_RAIN integer
 --- @field public ID_SNOW integer
 --- @field public ZoomMod number
-IsoWeatherFX = {};
+IsoWeatherFX = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -36,7 +36,6 @@ function IsoWeatherFX.clerp(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @return number
 function IsoWeatherFX.lerp(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -169,7 +168,6 @@ function IsoWeatherFX:setWindPrecipIntensity(arg0) end
 --- @public
 --- @return nil
 function IsoWeatherFX:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

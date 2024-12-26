@@ -2,7 +2,7 @@
 
 --- @class RZSTragicPicnic: RandomizedZoneStoryBase
 --- @field public class any
-RZSTragicPicnic = {};
+RZSTragicPicnic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSTragicPicnic = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSTragicPicnic:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

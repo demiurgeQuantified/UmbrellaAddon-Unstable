@@ -2,7 +2,7 @@
 
 --- @class RBMayorWestPoint: RandomizedBuildingBase
 --- @field public class any
-RBMayorWestPoint = {};
+RBMayorWestPoint = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBMayorWestPoint:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBMayorWestPoint:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

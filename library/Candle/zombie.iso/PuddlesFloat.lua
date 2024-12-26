@@ -2,7 +2,7 @@
 
 --- @class PuddlesFloat
 --- @field public class any
-PuddlesFloat = {};
+PuddlesFloat = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,7 +72,6 @@ function PuddlesFloat:setEnableAdmin(arg0) end
 --- @param arg0 number
 --- @return nil
 function PuddlesFloat:setFinalValue(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

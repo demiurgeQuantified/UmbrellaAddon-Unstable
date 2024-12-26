@@ -2,7 +2,7 @@
 
 --- @class RBSpiffo: RandomizedBuildingBase
 --- @field public class any
-RBSpiffo = {};
+RBSpiffo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBSpiffo:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBSpiffo:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -3,7 +3,7 @@
 --- @class TileGeometryState: GameState
 --- @field public class any
 --- @field public instance TileGeometryState
-TileGeometryState = {};
+TileGeometryState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ TileGeometryState = {};
 --- @static
 --- @return TileGeometryState
 function TileGeometryState.checkInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -98,7 +97,6 @@ function TileGeometryState:update() end
 --- @public
 --- @return nil
 function TileGeometryState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

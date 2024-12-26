@@ -2,7 +2,7 @@
 
 --- @class Wheel
 --- @field public class any
-Wheel = {};
+Wheel = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,7 +15,6 @@ function Wheel:getId() end
 --- @public
 --- @return Vector3f
 function Wheel:getOffset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

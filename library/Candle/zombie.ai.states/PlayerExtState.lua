@@ -2,7 +2,7 @@
 
 --- @class PlayerExtState: State
 --- @field public class any
-PlayerExtState = {};
+PlayerExtState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PlayerExtState = {};
 --- @static
 --- @return PlayerExtState
 function PlayerExtState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +37,6 @@ function PlayerExtState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function PlayerExtState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

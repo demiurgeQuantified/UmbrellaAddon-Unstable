@@ -2,7 +2,7 @@
 
 --- @class XuiSkinScript: BaseScriptObject
 --- @field public class any
-XuiSkinScript = {};
+XuiSkinScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -59,7 +59,6 @@ function XuiSkinScript:getStyleInfoMap() end
 --- @public
 --- @return nil
 function XuiSkinScript:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -24,7 +24,7 @@
 --- @field public WALL_TYPE_N integer
 --- @field public WALL_TYPE_S integer
 --- @field public WALL_TYPE_W integer
-IsoGridSquare = {};
+IsoGridSquare = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -140,7 +140,6 @@ function IsoGridSquare.setbDoSlowPathfinding(arg0) end
 --- @param arg0 byte[]
 --- @return boolean
 function IsoGridSquare.toBoolean(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -2275,7 +2274,6 @@ function IsoGridSquare:transmitRemoveItemFromSquareOnClients(arg0) end
 --- @public
 --- @return nil
 function IsoGridSquare:transmitStopFire() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

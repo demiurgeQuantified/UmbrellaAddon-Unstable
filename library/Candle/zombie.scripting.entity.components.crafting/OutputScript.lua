@@ -2,7 +2,7 @@
 
 --- @class OutputScript: IOScript
 --- @field public class any
-OutputScript = {};
+OutputScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -147,5 +147,3 @@ function OutputScript:isHandcraftOnly() end
 --- @return boolean
 --- @deprecated
 function OutputScript:isReplaceInput() end
-
-

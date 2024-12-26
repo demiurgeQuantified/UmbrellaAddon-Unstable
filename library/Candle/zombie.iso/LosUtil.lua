@@ -3,11 +3,11 @@
 --- @class LosUtil
 --- @field public class any
 --- @field public cachecleared boolean[]
---- @field public cachedresults byte[][][][]
+--- @field public cachedresults PerPlayerData[]
 --- @field public XSIZE integer
 --- @field public YSIZE integer
 --- @field public ZSIZE integer
-LosUtil = {};
+LosUtil = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -85,7 +85,6 @@ function LosUtil.lineClearCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param arg7 integer
 --- @return integer
 function LosUtil.lineClearCollideCount(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

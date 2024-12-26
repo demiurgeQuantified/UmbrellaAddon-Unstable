@@ -5,7 +5,7 @@
 --- @field public RENDER_OFFSET_X integer
 --- @field public RENDER_OFFSET_Y integer
 --- @field public s_maxPossibleTwist number
-IsoGameCharacter = {};
+IsoGameCharacter = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -44,7 +44,6 @@ function IsoGameCharacter.getTempo() end
 --- @static
 --- @return Vector2
 function IsoGameCharacter.getTempo2() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -5091,7 +5090,6 @@ function IsoGameCharacter:zeroForwardDirectionX() end
 --- @public
 --- @return nil
 function IsoGameCharacter:zeroForwardDirectionY() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

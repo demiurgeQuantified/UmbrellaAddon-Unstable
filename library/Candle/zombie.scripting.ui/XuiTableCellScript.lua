@@ -2,7 +2,7 @@
 
 --- @class XuiTableCellScript: XuiScript
 --- @field public class any
-XuiTableCellScript = {};
+XuiTableCellScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,6 @@ XuiTableCellScript = {};
 --- @public
 --- @return boolean
 function XuiTableCellScript:isCellHasLoaded() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

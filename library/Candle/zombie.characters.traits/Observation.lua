@@ -2,7 +2,7 @@
 
 --- @class Observation: IListBoxItem
 --- @field public class any
-Observation = {};
+Observation = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,7 +49,6 @@ function Observation:setName(arg0) end
 --- @param arg0 string
 --- @return nil
 function Observation:setTraitID(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class TaggedObject
 --- @field public class any
-TaggedObject = {};
+TaggedObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,5 +15,3 @@ function TaggedObject:getTagBits() end
 --- @public
 --- @return List
 function TaggedObject:getTags() end
-
-

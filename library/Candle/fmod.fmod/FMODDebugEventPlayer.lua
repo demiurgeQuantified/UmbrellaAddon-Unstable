@@ -2,7 +2,7 @@
 
 --- @class FMODDebugEventPlayer
 --- @field public class any
-FMODDebugEventPlayer = {};
+FMODDebugEventPlayer = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -94,7 +94,6 @@ function FMODDebugEventPlayer:stop() end
 --- @public
 --- @return nil
 function FMODDebugEventPlayer:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

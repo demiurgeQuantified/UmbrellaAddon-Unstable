@@ -2,7 +2,7 @@
 
 --- @class Font
 --- @field public class any
-Font = {};
+Font = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,5 +33,3 @@ function Font:getLineHeight() end
 --- @overload fun(self: Font, arg0: string, arg1: integer, arg2: integer): integer
 --- @overload fun(self: Font, arg0: string, arg1: integer, arg2: integer, arg3: boolean): integer
 function Font:getWidth(arg0) end
-
-

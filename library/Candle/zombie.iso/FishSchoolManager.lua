@@ -2,7 +2,7 @@
 
 --- @class FishSchoolManager
 --- @field public class any
-FishSchoolManager = {};
+FishSchoolManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ FishSchoolManager = {};
 --- @static
 --- @return FishSchoolManager
 function FishSchoolManager.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -87,7 +86,6 @@ function FishSchoolManager:updateFishingData() end
 --- @public
 --- @return nil
 function FishSchoolManager:updateSeed() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

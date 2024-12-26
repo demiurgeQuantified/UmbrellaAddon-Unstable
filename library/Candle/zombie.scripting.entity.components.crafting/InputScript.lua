@@ -2,7 +2,7 @@
 
 --- @class InputScript: IOScript
 --- @field public class any
-InputScript = {};
+InputScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -314,5 +314,3 @@ function InputScript:notFull() end
 --- @public
 --- @return boolean
 function InputScript:sharpnessCheck() end
-
-

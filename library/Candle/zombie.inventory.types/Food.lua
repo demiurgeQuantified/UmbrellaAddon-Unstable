@@ -3,7 +3,7 @@
 --- @class Food: InventoryItem
 --- @field public class any
 --- @field public FreezerAgeMultiplier number
-Food = {};
+Food = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -675,7 +675,6 @@ function Food:updateAge() end
 --- @param arg0 BaseSoundEmitter
 --- @return nil
 function Food:updateSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

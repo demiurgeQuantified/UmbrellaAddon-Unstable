@@ -2,7 +2,7 @@
 
 --- @class ContainerID: INetworkPacketField
 --- @field public class any
-ContainerID = {};
+ContainerID = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -95,7 +95,6 @@ function ContainerID:toString() end
 --- @overload fun(self: ContainerID, arg0: ByteBufferWriter): nil
 --- @overload fun(self: ContainerID, arg0: ByteBufferWriter): nil
 function ContainerID:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

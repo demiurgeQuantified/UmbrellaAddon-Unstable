@@ -2,7 +2,7 @@
 
 --- @class GameVersion
 --- @field public class any
-GameVersion = {};
+GameVersion = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ GameVersion = {};
 --- @param arg0 string
 --- @return GameVersion
 function GameVersion.parse(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,7 +62,6 @@ function GameVersion:isLessThanOrEqualTo(arg0) end
 --- @public
 --- @return string
 function GameVersion:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

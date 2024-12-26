@@ -2,7 +2,7 @@
 
 --- @class Deque: Queue
 --- @field public class any
-Deque = {};
+Deque = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -133,5 +133,3 @@ function Deque:removeLastOccurrence(arg0) end
 --- @public
 --- @return integer
 function Deque:size() end
-
-

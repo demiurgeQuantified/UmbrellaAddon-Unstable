@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public MAX_ZOMBIES_EATING integer
 --- @field public treeSoundMgr TreeSoundManager
-IsoMovingObject = {};
+IsoMovingObject = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -27,7 +27,6 @@ function IsoMovingObject.getVectorFromDirection(arg0, arg1) end
 --- @param arg0 integer
 --- @return nil
 function IsoMovingObject.setIDCount(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -779,7 +778,6 @@ function IsoMovingObject:update() end
 --- @public
 --- @return nil
 function IsoMovingObject:updateAnimation() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

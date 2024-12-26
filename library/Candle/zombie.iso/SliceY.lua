@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public SliceBuffer ByteBuffer
 --- @field public SliceBufferLock any
-SliceY = {};
+SliceY = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

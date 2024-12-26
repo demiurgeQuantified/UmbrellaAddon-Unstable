@@ -2,7 +2,7 @@
 
 --- @class XuiColor: XuiVar
 --- @field public class any
-XuiColor = {};
+XuiColor = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,5 +27,3 @@ function XuiColor:getR() end
 --- @public
 --- @return string
 function XuiColor:getValueString() end
-
-

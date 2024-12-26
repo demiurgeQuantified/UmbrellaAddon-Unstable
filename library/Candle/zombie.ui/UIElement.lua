@@ -2,7 +2,7 @@
 
 --- @class UIElement: UIElementInterface
 --- @field public class any
-UIElement = {};
+UIElement = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -76,7 +76,22 @@ function UIElement:DrawScriptItemIcon(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg11 number
 --- @param arg12 number
 --- @return nil
-function UIElement:DrawSubTextureRGBA(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) end
+function UIElement:DrawSubTextureRGBA(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12
+)
+end
 
 --- @public
 --- @param arg0 string
@@ -1025,7 +1040,6 @@ function UIElement:suspendStencil() end
 --- @return nil
 --- @overload fun(self: UIElement): nil
 function UIElement:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

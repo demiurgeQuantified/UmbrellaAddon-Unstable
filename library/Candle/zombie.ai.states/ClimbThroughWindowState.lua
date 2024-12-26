@@ -2,7 +2,7 @@
 
 --- @class ClimbThroughWindowState: State
 --- @field public class any
-ClimbThroughWindowState = {};
+ClimbThroughWindowState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -60,7 +60,6 @@ function ClimbThroughWindowState.slideX(arg0, arg1) end
 --- @param arg1 number
 --- @return nil
 function ClimbThroughWindowState.slideY(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -140,7 +139,6 @@ function ClimbThroughWindowState:isWindowClosing(arg0) end
 --- @param arg1 IsoObject
 --- @return nil
 function ClimbThroughWindowState:setParams(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class AtomUITextEntry: AtomUI, UITextEntryInterface
 --- @field public class any
-AtomUITextEntry = {};
+AtomUITextEntry = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -267,7 +267,6 @@ function AtomUITextEntry:unfocus() end
 --- @public
 --- @return nil
 function AtomUITextEntry:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

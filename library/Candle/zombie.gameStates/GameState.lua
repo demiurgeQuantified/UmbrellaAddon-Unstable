@@ -2,7 +2,7 @@
 
 --- @class GameState
 --- @field public class any
-GameState = {};
+GameState = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,7 +35,6 @@ function GameState:update() end
 --- @public
 --- @return nil
 function GameState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

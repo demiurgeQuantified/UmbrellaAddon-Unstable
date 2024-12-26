@@ -5,7 +5,7 @@
 --- @field public Aggressive SurvivorType
 --- @field public Friendly SurvivorType
 --- @field public Neutral SurvivorType
-SurvivorType = {};
+SurvivorType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,5 +21,3 @@ function SurvivorType.valueOf(arg0) end
 --- @static
 --- @return SurvivorType[]
 function SurvivorType.values() end
-
-

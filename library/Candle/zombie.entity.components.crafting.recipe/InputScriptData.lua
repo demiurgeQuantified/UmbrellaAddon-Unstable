@@ -2,7 +2,7 @@
 
 --- @class InputScriptData: CacheData
 --- @field public class any
-InputScriptData = {};
+InputScriptData = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -64,7 +64,6 @@ function InputScriptData:removeInputItem(arg0) end
 --- @param arg0 ArrayList
 --- @return nil
 function InputScriptData:verifyInputItems(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class GameEntityTemplate: BaseScriptObject
 --- @field public class any
-GameEntityTemplate = {};
+GameEntityTemplate = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,6 @@ function GameEntityTemplate:Load(arg0, arg1) end
 --- @public
 --- @return GameEntityScript
 function GameEntityTemplate:getScript() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

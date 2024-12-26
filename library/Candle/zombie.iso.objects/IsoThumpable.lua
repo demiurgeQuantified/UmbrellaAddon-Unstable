@@ -3,7 +3,7 @@
 --- @class IsoThumpable: IsoObject, BarricadeAble, Thumpable
 --- @field public class any
 --- @field public tempo Vector2
-IsoThumpable = {};
+IsoThumpable = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,7 +15,6 @@ IsoThumpable = {};
 --- @return string
 --- @overload fun(arg0: IsoSprite): string
 function IsoThumpable.GetBreakFurnitureSound(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -752,7 +751,6 @@ function IsoThumpable:toggleLightSource(arg0) end
 --- @public
 --- @return nil
 function IsoThumpable:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

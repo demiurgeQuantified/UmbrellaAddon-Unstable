@@ -2,7 +2,7 @@
 
 --- @class Collection: Iterable
 --- @field public class any
-Collection = {};
+Collection = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -97,5 +97,3 @@ function Collection:stream() end
 --- @overload fun(self: Collection, arg0: Object[]): Object[]
 --- @overload fun(self: Collection, arg0: IntFunction): Object[]
 function Collection:toArray() end
-
-

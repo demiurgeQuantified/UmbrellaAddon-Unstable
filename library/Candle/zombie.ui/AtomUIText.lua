@@ -2,7 +2,7 @@
 
 --- @class AtomUIText: AtomUI
 --- @field public class any
-AtomUIText = {};
+AtomUIText = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +38,6 @@ function AtomUIText:setFont(arg0) end
 --- @param arg0 string
 --- @return nil
 function AtomUIText:setText(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

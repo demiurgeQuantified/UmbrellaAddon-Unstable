@@ -2,7 +2,7 @@
 
 --- @class IsoTrap: IsoObject
 --- @field public class any
-IsoTrap = {};
+IsoTrap = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,7 +15,6 @@ IsoTrap = {};
 --- @param arg2 integer
 --- @return nil
 function IsoTrap.triggerRemote(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -216,7 +215,6 @@ function IsoTrap:triggerExplosion(arg0) end
 --- @public
 --- @return nil
 function IsoTrap:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class RBHeatBreakAfternoon: RandomizedBuildingBase
 --- @field public class any
-RBHeatBreakAfternoon = {};
+RBHeatBreakAfternoon = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RBHeatBreakAfternoon:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBHeatBreakAfternoon:randomizeBuilding(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

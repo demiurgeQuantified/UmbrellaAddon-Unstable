@@ -2,7 +2,7 @@
 
 --- @class VirtualAnimal
 --- @field public class any
-VirtualAnimal = {};
+VirtualAnimal = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -105,7 +105,6 @@ function VirtualAnimal:setY(arg0) end
 --- @param arg0 number
 --- @return nil
 function VirtualAnimal:setZ(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

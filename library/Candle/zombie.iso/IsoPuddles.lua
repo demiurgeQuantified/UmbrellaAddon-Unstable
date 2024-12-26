@@ -11,7 +11,7 @@
 --- @field public FLOAT_WETGROUND integer
 --- @field public leakingPuddlesInTheRoom boolean
 --- @field public VBOs SharedVertexBufferObjects
-IsoPuddles = {};
+IsoPuddles = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,7 +21,6 @@ IsoPuddles = {};
 --- @static
 --- @return IsoPuddles
 function IsoPuddles.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -120,7 +119,6 @@ function IsoPuddles:shouldRenderPuddles() end
 --- @param arg0 ClimateManager
 --- @return nil
 function IsoPuddles:update(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

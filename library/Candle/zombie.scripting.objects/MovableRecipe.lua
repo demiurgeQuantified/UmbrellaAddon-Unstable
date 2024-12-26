@@ -2,7 +2,7 @@
 
 --- @class MovableRecipe: Recipe
 --- @field public class any
-MovableRecipe = {};
+MovableRecipe = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -79,7 +79,6 @@ function MovableRecipe:setWorldSprite(arg0) end
 --- @param arg0 Perk
 --- @return nil
 function MovableRecipe:setXpPerk(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

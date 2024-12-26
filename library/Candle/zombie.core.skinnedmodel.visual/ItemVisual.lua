@@ -3,7 +3,7 @@
 --- @class ItemVisual
 --- @field public class any
 --- @field public NULL_HUE number
-ItemVisual = {};
+ItemVisual = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -14,7 +14,6 @@ ItemVisual = {};
 --- @param arg0 string
 --- @return InventoryItem
 function ItemVisual.createLastStandItem(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -277,7 +276,6 @@ function ItemVisual:synchWithOutfit(arg0) end
 --- @public
 --- @return string
 function ItemVisual:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

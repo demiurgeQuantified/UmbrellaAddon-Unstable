@@ -2,7 +2,7 @@
 
 --- @class IsoPushableObject: IsoMovingObject
 --- @field public class any
-IsoPushableObject = {};
+IsoPushableObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,7 +46,6 @@ function IsoPushableObject:save(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoPushableObject:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

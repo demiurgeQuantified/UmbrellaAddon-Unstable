@@ -2,7 +2,7 @@
 
 --- @class FurnaceLogicScript: ComponentScript
 --- @field public class any
-FurnaceLogicScript = {};
+FurnaceLogicScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -65,5 +65,3 @@ function FurnaceLogicScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function FurnaceLogicScript:reset() end
-
-

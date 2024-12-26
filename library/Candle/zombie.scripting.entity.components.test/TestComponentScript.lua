@@ -2,7 +2,7 @@
 
 --- @class TestComponentScript: ComponentScript
 --- @field public class any
-TestComponentScript = {};
+TestComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,5 +37,3 @@ function TestComponentScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function TestComponentScript:reset() end
-
-

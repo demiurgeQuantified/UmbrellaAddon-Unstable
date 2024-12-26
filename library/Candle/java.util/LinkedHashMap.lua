@@ -2,7 +2,7 @@
 
 --- @class LinkedHashMap: HashMap, Map
 --- @field public class any
-LinkedHashMap = {};
+LinkedHashMap = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,6 @@ function LinkedHashMap.of() end
 --- @param arg0 Entry[]
 --- @return Map
 function LinkedHashMap.ofEntries(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -174,7 +173,6 @@ function LinkedHashMap:size() end
 --- @return Collection
 --- @overload fun(self: LinkedHashMap): Collection
 function LinkedHashMap:values() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

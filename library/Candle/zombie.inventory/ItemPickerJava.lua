@@ -10,7 +10,7 @@
 --- @field public WeaponUpgradeMap HashMap
 --- @field public WeaponUpgrades ArrayList
 --- @field public zombieDensityCap number
-ItemPickerJava = {};
+ItemPickerJava = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -260,7 +260,6 @@ function ItemPickerJava.updateOverlaySprite(arg0) end
 --- @param arg0 InventoryItem
 --- @return nil
 function ItemPickerJava.wearDownItem(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

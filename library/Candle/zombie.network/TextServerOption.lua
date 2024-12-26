@@ -2,7 +2,7 @@
 
 --- @class TextServerOption: StringConfigOption, ServerOption
 --- @field public class any
-TextServerOption = {};
+TextServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -21,7 +21,6 @@ function TextServerOption:getTooltip() end
 --- @public
 --- @return string
 function TextServerOption:getType() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

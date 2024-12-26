@@ -5,7 +5,7 @@
 --- @field public Failed BehaviorResult
 --- @field public Succeeded BehaviorResult
 --- @field public Working BehaviorResult
-BehaviorResult = {};
+BehaviorResult = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,5 +21,3 @@ function BehaviorResult.valueOf(arg0) end
 --- @static
 --- @return BehaviorResult[]
 function BehaviorResult.values() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class JavaFunction
 --- @field public class any
-JavaFunction = {};
+JavaFunction = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,5 +13,3 @@ JavaFunction = {};
 --- @param arg1 integer
 --- @return integer
 function JavaFunction:call(arg0, arg1) end
-
-

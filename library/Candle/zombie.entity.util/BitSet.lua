@@ -2,7 +2,7 @@
 
 --- @class BitSet
 --- @field public class any
-BitSet = {};
+BitSet = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -102,7 +102,6 @@ function BitSet:set(arg0) end
 --- @param arg0 BitSet
 --- @return nil
 function BitSet:xor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

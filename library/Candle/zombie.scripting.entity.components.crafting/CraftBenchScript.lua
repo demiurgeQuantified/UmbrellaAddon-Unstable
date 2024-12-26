@@ -2,7 +2,7 @@
 
 --- @class CraftBenchScript: ComponentScript
 --- @field public class any
-CraftBenchScript = {};
+CraftBenchScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,5 +49,3 @@ function CraftBenchScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function CraftBenchScript:reset() end
-
-

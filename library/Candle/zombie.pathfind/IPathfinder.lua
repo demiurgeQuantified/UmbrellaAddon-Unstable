@@ -2,7 +2,7 @@
 
 --- @class IPathfinder
 --- @field public class any
-IPathfinder = {};
+IPathfinder = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,5 +18,3 @@ function IPathfinder:Failed(arg0) end
 --- @param arg1 Mover
 --- @return nil
 function IPathfinder:Succeeded(arg0, arg1) end
-
-

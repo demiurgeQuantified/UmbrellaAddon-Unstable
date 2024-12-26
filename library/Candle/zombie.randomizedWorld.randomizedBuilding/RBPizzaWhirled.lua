@@ -2,7 +2,7 @@
 
 --- @class RBPizzaWhirled: RandomizedBuildingBase
 --- @field public class any
-RBPizzaWhirled = {};
+RBPizzaWhirled = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBPizzaWhirled:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBPizzaWhirled:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

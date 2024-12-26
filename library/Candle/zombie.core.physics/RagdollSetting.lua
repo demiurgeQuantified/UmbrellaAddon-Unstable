@@ -2,7 +2,7 @@
 
 --- @class RagdollSetting
 --- @field public class any
-RagdollSetting = {};
+RagdollSetting = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,7 +50,6 @@ function RagdollSetting:setAdminValue(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function RagdollSetting:setEnableAdmin(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

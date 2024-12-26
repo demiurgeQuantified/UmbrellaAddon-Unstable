@@ -2,7 +2,7 @@
 
 --- @class WaveSignalDevice
 --- @field public class any
-WaveSignalDevice = {};
+WaveSignalDevice = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -57,5 +57,3 @@ function WaveSignalDevice:setDelta(arg0) end
 --- @param arg0 DeviceData
 --- @return nil
 function WaveSignalDevice:setDeviceData(arg0) end
-
-

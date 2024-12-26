@@ -2,7 +2,7 @@
 
 --- @class ThermalNode
 --- @field public class any
-ThermalNode = {};
+ThermalNode = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -107,7 +107,6 @@ function ThermalNode:hasUpstream() end
 --- @public
 --- @return boolean
 function ThermalNode:isCore() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

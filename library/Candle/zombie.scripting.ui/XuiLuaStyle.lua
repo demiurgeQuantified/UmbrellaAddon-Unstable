@@ -3,7 +3,7 @@
 --- @class XuiLuaStyle
 --- @field public class any
 --- @field public AllowedVarTypes EnumSet
-XuiLuaStyle = {};
+XuiLuaStyle = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,7 +19,6 @@ function XuiLuaStyle.ReadConfigs(arg0) end
 --- @static
 --- @return nil
 function XuiLuaStyle.Reset() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -56,5 +55,3 @@ function XuiLuaStyle:loadVar(arg0, arg1) end
 --- @public
 --- @return string
 function XuiLuaStyle:toString() end
-
-

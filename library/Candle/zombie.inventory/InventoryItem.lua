@@ -2,7 +2,7 @@
 
 --- @class InventoryItem: GameEntity
 --- @field public class any
-InventoryItem = {};
+InventoryItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,7 +22,6 @@ function InventoryItem.RemoveFromContainer(arg0) end
 --- @overload fun(arg0: ByteBuffer, arg1: integer, arg2: boolean): InventoryItem
 --- @overload fun(arg0: ByteBuffer, arg1: integer, arg2: boolean, arg3: InventoryItem): InventoryItem
 function InventoryItem.loadItem(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -2307,7 +2306,6 @@ function InventoryItem:updateEquippedAndActivatedSound() end
 --- @param arg0 BaseSoundEmitter
 --- @return nil
 function InventoryItem:updateSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

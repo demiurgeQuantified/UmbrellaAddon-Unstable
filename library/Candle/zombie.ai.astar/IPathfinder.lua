@@ -2,7 +2,7 @@
 
 --- @class IPathfinder
 --- @field public class any
-IPathfinder = {};
+IPathfinder = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -22,5 +22,3 @@ function IPathfinder:Succeeded(arg0, arg1) end
 --- @public
 --- @return string
 function IPathfinder:getName() end
-
-

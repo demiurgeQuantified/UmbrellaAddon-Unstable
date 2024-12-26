@@ -2,7 +2,7 @@
 
 --- @class XuiTableColumnScript: XuiScript
 --- @field public class any
-XuiTableColumnScript = {};
+XuiTableColumnScript = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

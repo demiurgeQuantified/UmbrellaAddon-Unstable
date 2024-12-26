@@ -2,7 +2,7 @@
 
 --- @class IAnimationVariableMap: IAnimationVariableSource
 --- @field public class any
-IAnimationVariableMap = {};
+IAnimationVariableMap = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -67,5 +67,3 @@ function IAnimationVariableMap:isVariable(arg0, arg1) end
 --- @overload fun(self: IAnimationVariableMap, arg0: string, arg1: number): nil
 --- @overload fun(self: IAnimationVariableMap, arg0: string, arg1: string): nil
 function IAnimationVariableMap:setVariable(arg0) end
-
-

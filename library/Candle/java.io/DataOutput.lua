@@ -2,7 +2,7 @@
 
 --- @class DataOutput
 --- @field public class any
-DataOutput = {};
+DataOutput = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,5 +69,3 @@ function DataOutput:writeShort(arg0) end
 --- @param arg0 string
 --- @return nil
 function DataOutput:writeUTF(arg0) end
-
-

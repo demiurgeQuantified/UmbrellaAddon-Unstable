@@ -2,7 +2,7 @@
 
 --- @class StringSandboxOption: StringConfigOption, SandboxOption
 --- @field public class any
-StringSandboxOption = {};
+StringSandboxOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,7 +71,6 @@ function StringSandboxOption:setTranslation(arg0) end
 --- @return nil
 --- @overload fun(self: StringSandboxOption, arg0: table): nil
 function StringSandboxOption:toTable(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

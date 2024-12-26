@@ -2,7 +2,7 @@
 
 --- @class UIElementInterface
 --- @field public class any
-UIElementInterface = {};
+UIElementInterface = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -161,5 +161,3 @@ function UIElementInterface:render() end
 --- @public
 --- @return nil
 function UIElementInterface:update() end
-
-

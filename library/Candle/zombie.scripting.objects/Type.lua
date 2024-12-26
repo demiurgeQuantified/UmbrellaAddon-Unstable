@@ -18,7 +18,7 @@
 --- @field public Radio Type
 --- @field public Weapon Type
 --- @field public WeaponPart Type
-Type = {};
+Type = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -34,5 +34,3 @@ function Type.valueOf(arg0) end
 --- @static
 --- @return Type[]
 function Type.values() end
-
-

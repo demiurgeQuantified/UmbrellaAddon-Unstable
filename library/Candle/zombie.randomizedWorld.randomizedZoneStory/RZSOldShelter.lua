@@ -2,7 +2,7 @@
 
 --- @class RZSOldShelter: RandomizedZoneStoryBase
 --- @field public class any
-RZSOldShelter = {};
+RZSOldShelter = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSOldShelter = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSOldShelter:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

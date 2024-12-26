@@ -2,7 +2,7 @@
 
 --- @class SteamWorkshopItem
 --- @field public class any
-SteamWorkshopItem = {};
+SteamWorkshopItem = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ SteamWorkshopItem = {};
 --- @static
 --- @return ArrayList
 function SteamWorkshopItem.getAllowedTags() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -139,7 +138,6 @@ function SteamWorkshopItem:validatePreviewImage(arg0) end
 --- @public
 --- @return boolean
 function SteamWorkshopItem:writeWorkshopTxt() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

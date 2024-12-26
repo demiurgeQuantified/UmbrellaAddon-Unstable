@@ -2,7 +2,7 @@
 
 --- @class HairStyle
 --- @field public class any
-HairStyle = {};
+HairStyle = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -40,7 +40,6 @@ function HairStyle:isNoChoose() end
 --- @public
 --- @return boolean
 function HairStyle:isValid() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

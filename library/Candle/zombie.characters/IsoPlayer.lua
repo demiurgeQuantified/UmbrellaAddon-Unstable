@@ -9,7 +9,7 @@
 --- @field public NoSound boolean
 --- @field public numPlayers integer
 --- @field public players IsoPlayer[]
-IsoPlayer = {};
+IsoPlayer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -134,7 +134,6 @@ function IsoPlayer.setInstance(arg0) end
 --- @param arg1 IsoPlayer
 --- @return nil
 function IsoPlayer.setLocalPlayer(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1712,7 +1711,6 @@ function IsoPlayer:wasLastAttackHandToHand() end
 --- @public
 --- @return boolean
 function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

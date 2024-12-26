@@ -2,7 +2,7 @@
 
 --- @class AnimalPartsDefinitions
 --- @field public class any
-AnimalPartsDefinitions = {};
+AnimalPartsDefinitions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -38,7 +38,6 @@ function AnimalPartsDefinitions.getDef(arg0, arg1) end
 --- @param arg0 string
 --- @return string
 function AnimalPartsDefinitions.getLeather(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

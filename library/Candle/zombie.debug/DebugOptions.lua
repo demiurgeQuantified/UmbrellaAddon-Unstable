@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public instance DebugOptions
 --- @field public VERSION integer
-DebugOptions = {};
+DebugOptions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,7 +15,6 @@ DebugOptions = {};
 --- @param arg0 integer
 --- @return nil
 function DebugOptions.testThreadCrash(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -126,7 +125,6 @@ function DebugOptions:setBoolean(arg0, arg1) end
 --- @param arg0 IDebugOptionGroup
 --- @return nil
 function DebugOptions:setParent(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

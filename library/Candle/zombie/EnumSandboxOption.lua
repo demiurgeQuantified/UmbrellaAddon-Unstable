@@ -2,7 +2,7 @@
 
 --- @class EnumSandboxOption: EnumConfigOption, SandboxOption
 --- @field public class any
-EnumSandboxOption = {};
+EnumSandboxOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -90,7 +90,6 @@ function EnumSandboxOption:setValueTranslation(arg0) end
 --- @return nil
 --- @overload fun(self: EnumSandboxOption, arg0: table): nil
 function EnumSandboxOption:toTable(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

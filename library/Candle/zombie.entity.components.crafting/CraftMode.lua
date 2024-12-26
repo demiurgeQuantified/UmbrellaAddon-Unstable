@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public Automation CraftMode
 --- @field public Handcraft CraftMode
-CraftMode = {};
+CraftMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -20,5 +20,3 @@ function CraftMode.valueOf(arg0) end
 --- @static
 --- @return CraftMode[]
 function CraftMode.values() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class Layout
 --- @field public class any
-Layout = {};
+Layout = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -32,7 +32,6 @@ function Layout:setMinLabelWidth(arg0) end
 --- @param arg0 integer
 --- @return nil
 function Layout:setMinValueWidth(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class XuiConfigScript: BaseScriptObject
 --- @field public class any
-XuiConfigScript = {};
+XuiConfigScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,7 +43,6 @@ function XuiConfigScript:getVarConfigs() end
 --- @public
 --- @return nil
 function XuiConfigScript:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

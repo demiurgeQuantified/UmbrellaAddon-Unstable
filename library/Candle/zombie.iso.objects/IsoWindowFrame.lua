@@ -2,7 +2,7 @@
 
 --- @class IsoWindowFrame: IsoObject, BarricadeAble
 --- @field public class any
-IsoWindowFrame = {};
+IsoWindowFrame = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -86,7 +86,6 @@ function IsoWindowFrame.isWindowFrame(arg0) end
 --- @param arg1 IsoPlayer
 --- @return boolean
 function IsoWindowFrame.removeSheetRope(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -213,7 +212,6 @@ function IsoWindowFrame:removeSheetRope(arg0) end
 --- @param arg1 boolean
 --- @return nil
 function IsoWindowFrame:save(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

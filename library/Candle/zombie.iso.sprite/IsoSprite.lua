@@ -15,7 +15,7 @@
 --- @field public SEAM_EAST boolean
 --- @field public SEAM_FIX2 Tiles
 --- @field public SEAM_SOUTH boolean
-IsoSprite = {};
+IsoSprite = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -91,7 +91,6 @@ function IsoSprite.renderTextureWithDepth(arg0, arg1, arg2, arg3, arg4, arg5, ar
 --- @param arg2 IsoSprite
 --- @return nil
 function IsoSprite.setSpriteID(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -383,7 +382,24 @@ function IsoSprite:renderCurrentAnim(arg0, arg1, arg2, arg3, arg4, arg5, arg6, a
 --- @param arg13 boolean
 --- @param arg14 Consumer
 --- @return nil
-function IsoSprite:renderCurrentAnimDepth(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14) end
+function IsoSprite:renderCurrentAnimDepth(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14
+)
+end
 
 --- @public
 --- @param arg0 IsoObject
@@ -402,7 +418,23 @@ function IsoSprite:renderCurrentAnimDepth(arg0, arg1, arg2, arg3, arg4, arg5, ar
 --- @param arg13 Consumer
 --- @return nil
 --- @overload fun(self: IsoSprite, arg0: IsoSpriteInstance, arg1: IsoObject, arg2: IsoDirections, arg3: boolean, arg4: boolean, arg5: boolean, arg6: integer, arg7: number, arg8: number, arg9: number, arg10: number, arg11: number, arg12: ColorInfo, arg13: boolean, arg14: Consumer): nil
-function IsoSprite:renderDepth(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
+function IsoSprite:renderDepth(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13
+)
+end
 
 --- @public
 --- @param arg0 IsoSpriteInstance
@@ -502,7 +534,6 @@ function IsoSprite:setType(arg0) end
 --- @return nil
 --- @overload fun(self: IsoSprite, arg0: IsoSpriteInstance): nil
 function IsoSprite:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

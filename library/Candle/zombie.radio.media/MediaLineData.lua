@@ -2,7 +2,7 @@
 
 --- @class MediaLineData
 --- @field public class any
-MediaLineData = {};
+MediaLineData = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -35,7 +35,6 @@ function MediaLineData:getTextGuid() end
 --- @public
 --- @return string
 function MediaLineData:getTranslatedText() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

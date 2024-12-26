@@ -19,7 +19,7 @@
 --- @field public transparent Color
 --- @field public white Color
 --- @field public yellow Color
-Color = {};
+Color = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -153,7 +153,6 @@ function Color.setRedChannelToABGR(arg0, arg1) end
 --- @param arg1 integer
 --- @return integer
 function Color.tintABGR(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -336,7 +335,6 @@ function Color:setColor(arg0, arg1, arg2) end
 --- @public
 --- @return string
 function Color:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

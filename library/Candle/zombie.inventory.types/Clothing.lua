@@ -3,7 +3,7 @@
 --- @class Clothing: InventoryItem
 --- @field public class any
 --- @field public CONDITION_PER_HOLES integer
-Clothing = {};
+Clothing = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -28,7 +28,6 @@ function Clothing.getBiteDefenseFromItem(arg0, arg1) end
 --- @param arg1 InventoryItem
 --- @return integer
 function Clothing.getScratchDefenseFromItem(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -497,7 +496,6 @@ function Clothing:update() end
 --- @return nil
 --- @overload fun(self: Clothing, arg0: boolean): nil
 function Clothing:updateWetness() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

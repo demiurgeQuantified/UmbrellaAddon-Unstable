@@ -2,7 +2,7 @@
 
 --- @class ItemVisuals: ArrayList
 --- @field public class any
-ItemVisuals = {};
+ItemVisuals = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,7 +30,6 @@ function ItemVisuals:load(arg0, arg1) end
 --- @param arg0 ByteBuffer
 --- @return nil
 function ItemVisuals:save(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

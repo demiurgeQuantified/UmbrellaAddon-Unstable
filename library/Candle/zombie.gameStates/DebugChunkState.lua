@@ -3,7 +3,7 @@
 --- @class DebugChunkState: GameState
 --- @field public class any
 --- @field public instance DebugChunkState
-DebugChunkState = {};
+DebugChunkState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ DebugChunkState = {};
 --- @static
 --- @return DebugChunkState
 function DebugChunkState.checkInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -122,7 +121,6 @@ function DebugChunkState:updateScene() end
 --- @public
 --- @return nil
 function DebugChunkState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

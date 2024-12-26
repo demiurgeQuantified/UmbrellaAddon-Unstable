@@ -2,7 +2,7 @@
 
 --- @class Format: Serializable, Cloneable
 --- @field public class any
-Format = {};
+Format = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,5 +28,3 @@ function Format:formatToCharacterIterator(arg0) end
 --- @return any
 --- @overload fun(self: Format, arg0: string, arg1: ParsePosition): any
 function Format:parseObject(arg0) end
-
-

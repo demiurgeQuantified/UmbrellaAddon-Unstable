@@ -5,7 +5,7 @@
 --- @field public PHYSICS_SHAPE_BOX integer
 --- @field public PHYSICS_SHAPE_MESH integer
 --- @field public PHYSICS_SHAPE_SPHERE integer
-VehicleScript = {};
+VehicleScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -535,7 +535,6 @@ function VehicleScript:toBullet() end
 --- @public
 --- @return boolean
 function VehicleScript:useChassisPhysicsCollision() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

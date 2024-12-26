@@ -2,7 +2,7 @@
 
 --- @class GlobalObjectSystem
 --- @field public class any
-GlobalObjectSystem = {};
+GlobalObjectSystem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -74,5 +74,3 @@ function GlobalObjectSystem:newObject(arg0, arg1, arg2) end
 --- @param arg0 GlobalObject
 --- @return nil
 function GlobalObjectSystem:removeObject(arg0) end
-
-

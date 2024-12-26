@@ -2,7 +2,7 @@
 
 --- @class MannequinScript: BaseScriptObject
 --- @field public class any
-MannequinScript = {};
+MannequinScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -84,7 +84,6 @@ function MannequinScript:setPose(arg0) end
 --- @param arg0 string
 --- @return nil
 function MannequinScript:setTexture(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

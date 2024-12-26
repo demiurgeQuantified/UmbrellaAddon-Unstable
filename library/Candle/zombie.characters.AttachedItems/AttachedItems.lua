@@ -2,7 +2,7 @@
 
 --- @class AttachedItems
 --- @field public class any
-AttachedItems = {};
+AttachedItems = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,7 +69,6 @@ function AttachedItems:setItem(arg0, arg1) end
 --- @public
 --- @return integer
 function AttachedItems:size() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

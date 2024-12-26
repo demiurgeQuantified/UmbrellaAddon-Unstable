@@ -27,7 +27,7 @@
 --- @field public THUMP_FLAG_WINDOW integer
 --- @field public THUMP_FLAG_WINDOW_EXTRA integer
 --- @field public THUMP_FLAG_WIRE_FENCE integer
-IsoZombie = {};
+IsoZombie = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -936,7 +936,6 @@ function IsoZombie:wasFakeDead() end
 --- @param arg0 ByteBuffer
 --- @return nil
 function IsoZombie:writeInventory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

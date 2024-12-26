@@ -2,7 +2,7 @@
 
 --- @class RZSOccultActivity: RandomizedZoneStoryBase
 --- @field public class any
-RZSOccultActivity = {};
+RZSOccultActivity = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSOccultActivity = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSOccultActivity:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

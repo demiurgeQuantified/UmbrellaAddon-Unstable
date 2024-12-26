@@ -2,7 +2,7 @@
 
 --- @class BaseScriptObject
 --- @field public class any
-BaseScriptObject = {};
+BaseScriptObject = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -138,5 +138,3 @@ function BaseScriptObject:setModule(arg0) end
 --- @param arg0 BaseScriptObject
 --- @return nil
 function BaseScriptObject:setParent(arg0) end
-
-

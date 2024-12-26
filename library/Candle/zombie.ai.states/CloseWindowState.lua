@@ -2,7 +2,7 @@
 
 --- @class CloseWindowState: State
 --- @field public class any
-CloseWindowState = {};
+CloseWindowState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ CloseWindowState = {};
 --- @static
 --- @return CloseWindowState
 function CloseWindowState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -47,7 +46,6 @@ function CloseWindowState:getWindow(arg0) end
 --- @public
 --- @return boolean
 function CloseWindowState:isDoingActionThatCanBeCancelled() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

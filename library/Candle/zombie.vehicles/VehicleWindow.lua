@@ -2,7 +2,7 @@
 
 --- @class VehicleWindow
 --- @field public class any
-VehicleWindow = {};
+VehicleWindow = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -76,5 +76,3 @@ function VehicleWindow:setOpen(arg0) end
 --- @param arg0 number
 --- @return nil
 function VehicleWindow:setOpenDelta(arg0) end
-
-

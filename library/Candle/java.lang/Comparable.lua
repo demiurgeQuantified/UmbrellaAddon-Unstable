@@ -2,7 +2,7 @@
 
 --- @class Comparable
 --- @field public class any
-Comparable = {};
+Comparable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,5 +12,3 @@ Comparable = {};
 --- @param arg0 any
 --- @return integer
 function Comparable:compareTo(arg0) end
-
-

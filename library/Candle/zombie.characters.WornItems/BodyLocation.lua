@@ -2,7 +2,7 @@
 
 --- @class BodyLocation
 --- @field public class any
-BodyLocation = {};
+BodyLocation = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -60,7 +60,6 @@ function BodyLocation:setHideModel(arg0) end
 --- @param arg0 boolean
 --- @return BodyLocation
 function BodyLocation:setMultiItem(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

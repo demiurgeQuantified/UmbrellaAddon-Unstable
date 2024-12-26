@@ -2,7 +2,7 @@
 
 --- @class Readable
 --- @field public class any
-Readable = {};
+Readable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,5 +12,3 @@ Readable = {};
 --- @param arg0 CharBuffer
 --- @return integer
 function Readable:read(arg0) end
-
-

@@ -7,7 +7,7 @@
 --- @field public METAL_HEALTH integer
 --- @field public METAL_HEALTH_DAMAGED integer
 --- @field public PLANK_HEALTH integer
-IsoBarricade = {};
+IsoBarricade = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,6 @@ function IsoBarricade.GetBarricadeOnSquare(arg0, arg1) end
 --- @param arg1 IsoGameCharacter
 --- @return IsoBarricade
 function IsoBarricade.GetBarricadeOppositeCharacter(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -219,7 +218,6 @@ function IsoBarricade:setHealth(arg0) end
 --- @param arg0 integer
 --- @return nil
 function IsoBarricade:setMaxHealth(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

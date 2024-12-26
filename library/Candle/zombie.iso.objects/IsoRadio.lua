@@ -2,7 +2,7 @@
 
 --- @class IsoRadio: IsoWaveSignal
 --- @field public class any
-IsoRadio = {};
+IsoRadio = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,6 @@ IsoRadio = {};
 --- @public
 --- @return string
 function IsoRadio:getObjectName() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

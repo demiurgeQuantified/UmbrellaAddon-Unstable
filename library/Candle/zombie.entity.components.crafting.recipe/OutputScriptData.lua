@@ -2,7 +2,7 @@
 
 --- @class OutputScriptData: CacheData
 --- @field public class any
-OutputScriptData = {};
+OutputScriptData = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,6 @@ OutputScriptData = {};
 --- @public
 --- @return OutputScript
 function OutputScriptData:getOutputScript() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

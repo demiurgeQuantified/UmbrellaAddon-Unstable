@@ -2,7 +2,7 @@
 
 --- @class RecipeManager
 --- @field public class any
-RecipeManager = {};
+RecipeManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -215,7 +215,6 @@ function RecipeManager.validateHasHeat(arg0, arg1, arg2, arg3) end
 --- @param arg1 InventoryItem
 --- @return boolean
 function RecipeManager.validateRecipeContainsSourceItem(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

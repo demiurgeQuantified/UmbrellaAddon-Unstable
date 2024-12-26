@@ -2,7 +2,7 @@
 
 --- @class AssocEnumArray: AssocArray
 --- @field public class any
-AssocEnumArray = {};
+AssocEnumArray = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,7 +58,6 @@ function AssocEnumArray:remove(arg0) end
 --- @param arg0 integer
 --- @return any
 function AssocEnumArray:removeIndex(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

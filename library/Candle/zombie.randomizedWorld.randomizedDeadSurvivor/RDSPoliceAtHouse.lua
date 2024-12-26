@@ -2,7 +2,7 @@
 
 --- @class RDSPoliceAtHouse: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSPoliceAtHouse = {};
+RDSPoliceAtHouse = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RDSPoliceAtHouse = {};
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSPoliceAtHouse:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

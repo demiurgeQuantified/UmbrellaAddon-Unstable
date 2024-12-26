@@ -25,7 +25,7 @@
 --- @field public SmokeAlpha number
 --- @field public SmokeAnimDelay number
 --- @field public SmokeTintMod ColorInfo
-IsoFireManager = {};
+IsoFireManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -144,7 +144,6 @@ function IsoFireManager.stopSound(arg0) end
 --- @param arg0 IsoFire
 --- @return nil
 function IsoFireManager.updateSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

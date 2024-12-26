@@ -3,7 +3,7 @@
 --- @class IsoLightSource
 --- @field public class any
 --- @field public NextID integer
-IsoLightSource = {};
+IsoLightSource = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -120,7 +120,6 @@ function IsoLightSource:update() end
 --- @public
 --- @return boolean
 function IsoLightSource:wasActive() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

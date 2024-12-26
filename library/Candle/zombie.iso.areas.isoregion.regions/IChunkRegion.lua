@@ -2,5 +2,4 @@
 
 --- @class IChunkRegion
 --- @field public class any
-IChunkRegion = {};
-
+IChunkRegion = {}

@@ -2,7 +2,7 @@
 
 --- @class VehiclePart: GameEntity, ChatElementOwner, WaveSignalDevice
 --- @field public class any
-VehiclePart = {};
+VehiclePart = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -15,7 +15,6 @@ VehiclePart = {};
 --- @param arg2 number
 --- @return number
 function VehiclePart.getNumberByCondition(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -431,7 +430,6 @@ function VehiclePart:setWheelFriction(arg0) end
 --- @public
 --- @return nil
 function VehiclePart:updateSignalDevice() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

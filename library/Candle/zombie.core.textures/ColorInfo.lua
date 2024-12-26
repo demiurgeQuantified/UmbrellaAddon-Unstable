@@ -2,7 +2,7 @@
 
 --- @class ColorInfo
 --- @field public class any
-ColorInfo = {};
+ColorInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,7 +58,6 @@ function ColorInfo:toImmutableColor() end
 --- @public
 --- @return string
 function ColorInfo:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

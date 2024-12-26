@@ -2,7 +2,7 @@
 
 --- @class FluidContainerScript: ComponentScript
 --- @field public class any
-FluidContainerScript = {};
+FluidContainerScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -64,5 +64,3 @@ function FluidContainerScript:isHiddenAmount() end
 --- @public
 --- @return boolean
 function FluidContainerScript:isInitialFluidsIsRandom() end
-
-

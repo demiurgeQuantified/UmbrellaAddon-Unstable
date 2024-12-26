@@ -2,7 +2,7 @@
 
 --- @class IIdentifiable
 --- @field public class any
-IIdentifiable = {};
+IIdentifiable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,5 +11,3 @@ IIdentifiable = {};
 --- @public
 --- @return ObjectID
 function IIdentifiable:getObjectID() end
-
-

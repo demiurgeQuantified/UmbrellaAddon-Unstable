@@ -2,7 +2,7 @@
 
 --- @class Clipboard
 --- @field public class any
-Clipboard = {};
+Clipboard = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -33,7 +33,6 @@ function Clipboard.setClipboard(arg0) end
 --- @static
 --- @return nil
 function Clipboard.updateMainThread() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

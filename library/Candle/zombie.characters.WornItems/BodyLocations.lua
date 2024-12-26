@@ -2,7 +2,7 @@
 
 --- @class BodyLocations
 --- @field public class any
-BodyLocations = {};
+BodyLocations = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -18,7 +18,6 @@ function BodyLocations.Reset() end
 --- @param arg0 string
 --- @return BodyLocationGroup
 function BodyLocations.getGroup(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

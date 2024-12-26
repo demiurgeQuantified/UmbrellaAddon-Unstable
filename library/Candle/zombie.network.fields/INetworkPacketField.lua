@@ -2,7 +2,7 @@
 
 --- @class INetworkPacketField: IDescriptor
 --- @field public class any
-INetworkPacketField = {};
+INetworkPacketField = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,5 +39,3 @@ function INetworkPacketField:parse(arg0, arg1) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function INetworkPacketField:write(arg0) end
-
-

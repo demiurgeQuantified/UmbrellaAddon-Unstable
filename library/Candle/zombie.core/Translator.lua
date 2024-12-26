@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public debug boolean
 --- @field public language Language
-Translator = {};
+Translator = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -183,7 +183,6 @@ function Translator.setDefaultItemEvolvedRecipeName(arg0, arg1) end
 --- @return nil
 --- @overload fun(arg0: Language): nil
 function Translator.setLanguage(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public fullGenomeDef HashMap
 --- @field public geneticDisorder ArrayList
-AnimalGenomeDefinitions = {};
+AnimalGenomeDefinitions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,7 +19,6 @@ function AnimalGenomeDefinitions.getGeneticDisorderList() end
 --- @static
 --- @return nil
 function AnimalGenomeDefinitions.loadGenomeDefinition() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

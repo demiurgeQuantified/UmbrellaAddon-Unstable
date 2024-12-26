@@ -137,7 +137,7 @@
 --- @field public KEY_YEN integer
 --- @field public KEY_Z integer
 --- @field public KEYBOARD_SIZE integer
-Keyboard = {};
+Keyboard = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -239,7 +239,6 @@ function Keyboard.next() end
 --- @static
 --- @return nil
 function Keyboard.poll() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

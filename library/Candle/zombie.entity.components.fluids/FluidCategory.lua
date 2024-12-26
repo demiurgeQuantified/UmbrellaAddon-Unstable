@@ -14,7 +14,7 @@
 --- @field public Paint FluidCategory
 --- @field public Poisons FluidCategory
 --- @field public Water FluidCategory
-FluidCategory = {};
+FluidCategory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -42,7 +42,6 @@ function FluidCategory.valueOf(arg0) end
 --- @return FluidCategory[]
 function FluidCategory.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -50,5 +49,3 @@ function FluidCategory.values() end
 --- @public
 --- @return integer
 function FluidCategory:getId() end
-
-

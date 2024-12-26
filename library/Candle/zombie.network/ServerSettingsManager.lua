@@ -3,7 +3,7 @@
 --- @class ServerSettingsManager
 --- @field public class any
 --- @field public instance ServerSettingsManager
-ServerSettingsManager = {};
+ServerSettingsManager = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -44,7 +44,6 @@ function ServerSettingsManager:isValidNewName(arg0) end
 --- @public
 --- @return nil
 function ServerSettingsManager:readAllSettings() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

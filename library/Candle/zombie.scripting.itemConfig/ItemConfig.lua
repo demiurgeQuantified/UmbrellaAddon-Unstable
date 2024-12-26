@@ -7,7 +7,7 @@
 --- @field public error_line string
 --- @field public error_root string
 --- @field public VARIABLE_PREFIX string
-ItemConfig = {};
+ItemConfig = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,7 +50,6 @@ function ItemConfig:getName() end
 --- @public
 --- @return boolean
 function ItemConfig:isValid() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

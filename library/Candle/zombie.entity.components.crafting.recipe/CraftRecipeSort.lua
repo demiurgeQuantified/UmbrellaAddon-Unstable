@@ -2,7 +2,7 @@
 
 --- @class CraftRecipeSort
 --- @field public class any
-CraftRecipeSort = {};
+CraftRecipeSort = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,7 +29,6 @@ function CraftRecipeSort.canPerformAndValidRecipes(arg0, arg1, arg2, arg3) end
 --- @param arg1 IsoGameCharacter
 --- @return List
 function CraftRecipeSort.validRecipes(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

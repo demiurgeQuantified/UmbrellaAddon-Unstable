@@ -2,7 +2,7 @@
 
 --- @class TileDepthTextures
 --- @field public class any
-TileDepthTextures = {};
+TileDepthTextures = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,7 +51,6 @@ function TileDepthTextures:mergeTilesets(arg0) end
 --- @param arg0 string
 --- @return nil
 function TileDepthTextures:saveTileset(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

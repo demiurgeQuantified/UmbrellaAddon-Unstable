@@ -2,7 +2,7 @@
 
 --- @class Vector2f: Externalizable, Vector2fc
 --- @field public class any
-Vector2f = {};
+Vector2f = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,7 +39,6 @@ function Vector2f.length(arg0, arg1) end
 --- @param arg1 number
 --- @return number
 function Vector2f.lengthSquared(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -343,7 +342,6 @@ function Vector2f:y() end
 --- @public
 --- @return Vector2f
 function Vector2f:zero() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

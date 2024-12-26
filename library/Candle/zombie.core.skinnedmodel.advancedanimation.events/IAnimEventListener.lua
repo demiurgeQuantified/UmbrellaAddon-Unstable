@@ -2,7 +2,7 @@
 
 --- @class IAnimEventListener
 --- @field public class any
-IAnimEventListener = {};
+IAnimEventListener = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,5 +13,3 @@ IAnimEventListener = {};
 --- @param arg1 AnimEvent
 --- @return nil
 function IAnimEventListener:animEvent(arg0, arg1) end
-
-

@@ -2,7 +2,7 @@
 
 --- @class EnumServerOption: EnumConfigOption, ServerOption
 --- @field public class any
-EnumServerOption = {};
+EnumServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -22,7 +22,6 @@ function EnumServerOption:getTooltip() end
 --- @param arg0 integer
 --- @return string
 function EnumServerOption:getValueTranslationByIndex(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

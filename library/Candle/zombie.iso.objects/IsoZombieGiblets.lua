@@ -2,7 +2,7 @@
 
 --- @class IsoZombieGiblets: IsoPhysicsObject
 --- @field public class any
-IsoZombieGiblets = {};
+IsoZombieGiblets = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,7 +30,6 @@ function IsoZombieGiblets:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @public
 --- @return nil
 function IsoZombieGiblets:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

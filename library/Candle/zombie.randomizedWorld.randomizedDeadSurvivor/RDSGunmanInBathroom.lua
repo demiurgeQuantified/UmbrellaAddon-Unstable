@@ -2,7 +2,7 @@
 
 --- @class RDSGunmanInBathroom: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSGunmanInBathroom = {};
+RDSGunmanInBathroom = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RDSGunmanInBathroom = {};
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSGunmanInBathroom:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

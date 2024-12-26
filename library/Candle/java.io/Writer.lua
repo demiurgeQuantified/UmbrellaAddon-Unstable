@@ -2,7 +2,7 @@
 
 --- @class Writer: Appendable, Closeable, Flushable
 --- @field public class any
-Writer = {};
+Writer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ Writer = {};
 --- @static
 --- @return Writer
 function Writer.nullWriter() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,5 +48,3 @@ function Writer:flush() end
 --- @overload fun(self: Writer, arg0: char[], arg1: integer, arg2: integer): nil
 --- @overload fun(self: Writer, arg0: string, arg1: integer, arg2: integer): nil
 function Writer:write(arg0) end
-
-

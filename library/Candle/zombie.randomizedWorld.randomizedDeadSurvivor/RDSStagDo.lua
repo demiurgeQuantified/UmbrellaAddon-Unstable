@@ -2,7 +2,7 @@
 
 --- @class RDSStagDo: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSStagDo = {};
+RDSStagDo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RDSStagDo:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSStagDo:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

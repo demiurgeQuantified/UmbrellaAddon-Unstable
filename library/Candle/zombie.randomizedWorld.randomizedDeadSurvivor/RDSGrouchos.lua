@@ -2,7 +2,7 @@
 
 --- @class RDSGrouchos: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSGrouchos = {};
+RDSGrouchos = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -18,7 +18,6 @@ function RDSGrouchos:isValid(arg0, arg1) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSGrouchos:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

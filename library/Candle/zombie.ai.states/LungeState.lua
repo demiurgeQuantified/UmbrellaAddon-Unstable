@@ -2,7 +2,7 @@
 
 --- @class LungeState: State
 --- @field public class any
-LungeState = {};
+LungeState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ LungeState = {};
 --- @static
 --- @return LungeState
 function LungeState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,7 +36,6 @@ function LungeState:exit(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function LungeState:isMoving(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

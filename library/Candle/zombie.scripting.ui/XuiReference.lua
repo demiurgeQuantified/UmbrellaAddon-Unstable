@@ -2,7 +2,7 @@
 
 --- @class XuiReference: XuiScript
 --- @field public class any
-XuiReference = {};
+XuiReference = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,7 +39,6 @@ function XuiReference:setDefaultStyle(arg0) end
 --- @param arg0 XuiScript
 --- @return nil
 function XuiReference:setStyle(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

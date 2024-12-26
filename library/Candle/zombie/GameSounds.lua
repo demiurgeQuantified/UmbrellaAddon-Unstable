@@ -5,7 +5,7 @@
 --- @field public soundIsPaused boolean
 --- @field public VCA_VOLUME boolean
 --- @field public VERSION integer
-GameSounds = {};
+GameSounds = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -93,7 +93,6 @@ function GameSounds.saveINI() end
 --- @static
 --- @return nil
 function GameSounds.stopPreview() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

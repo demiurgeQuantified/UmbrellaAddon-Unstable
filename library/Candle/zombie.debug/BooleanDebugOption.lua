@@ -2,7 +2,7 @@
 
 --- @class BooleanDebugOption: BooleanConfigOption, IDebugOption
 --- @field public class any
-BooleanDebugOption = {};
+BooleanDebugOption = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,7 +23,6 @@ function BooleanDebugOption.newDebugOnlyOption(arg0, arg1, arg2) end
 --- @param arg2 boolean
 --- @return BooleanDebugOption
 function BooleanDebugOption.newOption(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -57,7 +56,6 @@ function BooleanDebugOption:onFullPathChanged() end
 --- @return nil
 --- @overload fun(self: BooleanDebugOption, arg0: IDebugOptionGroup): nil
 function BooleanDebugOption:setParent(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class IsoAnimalTrack: IsoObject
 --- @field public class any
-IsoAnimalTrack = {};
+IsoAnimalTrack = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -38,7 +38,6 @@ function IsoAnimalTrack:save(arg0, arg1) end
 --- @param arg0 IsoPlayer
 --- @return nil
 function IsoAnimalTrack:stopGlow(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

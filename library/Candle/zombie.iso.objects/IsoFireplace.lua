@@ -2,7 +2,7 @@
 
 --- @class IsoFireplace: IsoObject
 --- @field public class any
-IsoFireplace = {};
+IsoFireplace = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -121,7 +121,6 @@ function IsoFireplace:update() end
 --- @param arg0 integer
 --- @return integer
 function IsoFireplace:useFuel(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

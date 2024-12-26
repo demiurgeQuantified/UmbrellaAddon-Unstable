@@ -2,7 +2,7 @@
 
 --- @class AttackState: State
 --- @field public class any
-AttackState = {};
+AttackState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ AttackState = {};
 --- @static
 --- @return AttackState
 function AttackState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,7 +42,6 @@ function AttackState:exit(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function AttackState:isAttacking(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

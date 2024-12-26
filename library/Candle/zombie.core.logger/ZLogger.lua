@@ -2,7 +2,7 @@
 
 --- @class ZLogger
 --- @field public class any
-ZLogger = {};
+ZLogger = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -22,7 +22,6 @@ function ZLogger:write(arg0) end
 --- @param arg2 boolean
 --- @return nil
 function ZLogger:writeUnsafe(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

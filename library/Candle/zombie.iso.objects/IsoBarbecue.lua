@@ -2,7 +2,7 @@
 
 --- @class IsoBarbecue: IsoObject
 --- @field public class any
-IsoBarbecue = {};
+IsoBarbecue = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -19,7 +19,6 @@ function IsoBarbecue.isSpriteWithPropaneTank(arg0) end
 --- @param arg0 IsoSprite
 --- @return boolean
 function IsoBarbecue.isSpriteWithoutPropaneTank(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -167,7 +166,6 @@ function IsoBarbecue:update() end
 --- @param arg0 integer
 --- @return integer
 function IsoBarbecue:useFuel(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

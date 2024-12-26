@@ -2,7 +2,7 @@
 
 --- @class Signals: Component
 --- @field public class any
-Signals = {};
+Signals = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function Signals:DoTooltip(arg0, arg1) end
 --- @public
 --- @return boolean
 function Signals:isValid() end
-
-

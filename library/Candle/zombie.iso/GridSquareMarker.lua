@@ -2,7 +2,7 @@
 
 --- @class GridSquareMarker
 --- @field public class any
-GridSquareMarker = {};
+GridSquareMarker = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -193,7 +193,6 @@ function GridSquareMarker:setScaleCircleTexture(arg0) end
 --- @param arg0 number
 --- @return nil
 function GridSquareMarker:setSize(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

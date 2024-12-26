@@ -2,7 +2,7 @@
 
 --- @class DoubleServerOption: DoubleConfigOption, ServerOption
 --- @field public class any
-DoubleServerOption = {};
+DoubleServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,6 @@ function DoubleServerOption:asConfigOption() end
 --- @return string
 --- @overload fun(self: DoubleServerOption): string
 function DoubleServerOption:getTooltip() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class IModelAttachmentOwner
 --- @field public class any
-IModelAttachmentOwner = {};
+IModelAttachmentOwner = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function IModelAttachmentOwner:afterRenameAttachment(arg0) end
 --- @param arg0 ModelAttachment
 --- @return nil
 function IModelAttachmentOwner:beforeRenameAttachment(arg0) end
-
-

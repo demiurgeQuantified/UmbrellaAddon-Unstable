@@ -2,7 +2,7 @@
 
 --- @class NetTimedAction: Action
 --- @field public class any
-NetTimedAction = {};
+NetTimedAction = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -57,7 +57,6 @@ function NetTimedAction:setTimeData() end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function NetTimedAction:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

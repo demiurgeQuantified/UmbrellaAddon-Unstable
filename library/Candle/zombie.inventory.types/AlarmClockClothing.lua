@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public PacketPlayer short
 --- @field public PacketWorld short
-AlarmClockClothing = {};
+AlarmClockClothing = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -143,7 +143,6 @@ function AlarmClockClothing:update() end
 --- @param arg0 BaseSoundEmitter
 --- @return nil
 function AlarmClockClothing:updateSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

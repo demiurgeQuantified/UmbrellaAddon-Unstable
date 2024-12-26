@@ -2,7 +2,7 @@
 
 --- @class Vector2fc
 --- @field public class any
-Vector2fc = {};
+Vector2fc = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -189,5 +189,3 @@ function Vector2fc:x() end
 --- @public
 --- @return number
 function Vector2fc:y() end
-
-

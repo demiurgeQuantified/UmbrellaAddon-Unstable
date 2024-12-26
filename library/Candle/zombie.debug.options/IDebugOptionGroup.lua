@@ -2,7 +2,7 @@
 
 --- @class IDebugOptionGroup: IDebugOption
 --- @field public class any
-IDebugOptionGroup = {};
+IDebugOptionGroup = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -70,5 +70,3 @@ function IDebugOptionGroup:removeChild(arg0) end
 --- @param arg0 IDebugOptionGroup
 --- @return nil
 function IDebugOptionGroup:setParent(arg0) end
-
-

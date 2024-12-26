@@ -2,7 +2,7 @@
 
 --- @class Seeds
 --- @field public class any
-Seeds = {};
+Seeds = {}
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

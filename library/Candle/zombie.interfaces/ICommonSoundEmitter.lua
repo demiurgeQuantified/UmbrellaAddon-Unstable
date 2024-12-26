@@ -2,7 +2,7 @@
 
 --- @class ICommonSoundEmitter
 --- @field public class any
-ICommonSoundEmitter = {};
+ICommonSoundEmitter = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -76,5 +76,3 @@ function ICommonSoundEmitter:tick() end
 --- @param arg0 integer
 --- @return nil
 function ICommonSoundEmitter:triggerCue(arg0) end
-
-

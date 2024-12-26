@@ -2,7 +2,7 @@
 
 --- @class LuaComponentScript: ComponentScript
 --- @field public class any
-LuaComponentScript = {};
+LuaComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,5 +37,3 @@ function LuaComponentScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function LuaComponentScript:reset() end
-
-

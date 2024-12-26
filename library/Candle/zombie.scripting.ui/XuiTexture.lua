@@ -2,7 +2,7 @@
 
 --- @class XuiTexture: XuiVar
 --- @field public class any
-XuiTexture = {};
+XuiTexture = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,5 +11,3 @@ XuiTexture = {};
 --- @public
 --- @return Texture
 function XuiTexture:getTexture() end
-
-

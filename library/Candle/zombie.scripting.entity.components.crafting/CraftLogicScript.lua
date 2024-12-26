@@ -2,7 +2,7 @@
 
 --- @class CraftLogicScript: ComponentScript
 --- @field public class any
-CraftLogicScript = {};
+CraftLogicScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -58,5 +58,3 @@ function CraftLogicScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function CraftLogicScript:reset() end
-
-

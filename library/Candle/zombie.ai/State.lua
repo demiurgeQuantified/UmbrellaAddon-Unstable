@@ -2,7 +2,7 @@
 
 --- @class State: IAnimEventListener, IAnimEventWrappedBroadcaster
 --- @field public class any
-State = {};
+State = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -84,7 +84,6 @@ function State:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param arg0 IsoGameCharacter
 --- @return boolean
 function State:isMoving(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

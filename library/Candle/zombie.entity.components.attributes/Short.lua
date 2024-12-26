@@ -2,7 +2,7 @@
 
 --- @class Short: Numeric
 --- @field public class any
-Short = {};
+Short = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -27,5 +27,3 @@ function Short:getValueType() end
 --- @return Number
 --- @overload fun(self: Short, arg0: Short): Short
 function Short:validate(arg0) end
-
-

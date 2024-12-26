@@ -2,7 +2,7 @@
 
 --- @class DayInfo
 --- @field public class any
-DayInfo = {};
+DayInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -42,7 +42,6 @@ function DayInfo:getYear() end
 --- @param arg2 integer
 --- @return nil
 function DayInfo:set(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

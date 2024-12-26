@@ -2,7 +2,7 @@
 
 --- @class ClimateMoon
 --- @field public class any
-ClimateMoon = {};
+ClimateMoon = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ ClimateMoon = {};
 --- @static
 --- @return ClimateMoon
 function ClimateMoon.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -40,7 +39,6 @@ function ClimateMoon:getPhaseName() end
 --- @param arg2 integer
 --- @return nil
 function ClimateMoon:updatePhase(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

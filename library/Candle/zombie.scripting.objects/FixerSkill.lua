@@ -2,7 +2,7 @@
 
 --- @class FixerSkill
 --- @field public class any
-FixerSkill = {};
+FixerSkill = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,7 +15,6 @@ function FixerSkill:getSkillLevel() end
 --- @public
 --- @return string
 function FixerSkill:getSkillName() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

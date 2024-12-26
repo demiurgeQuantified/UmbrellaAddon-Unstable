@@ -2,7 +2,7 @@
 
 --- @class IntegerServerOption: IntegerConfigOption, ServerOption
 --- @field public class any
-IntegerServerOption = {};
+IntegerServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,6 @@ function IntegerServerOption:asConfigOption() end
 --- @return string
 --- @overload fun(self: IntegerServerOption): string
 function IntegerServerOption:getTooltip() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

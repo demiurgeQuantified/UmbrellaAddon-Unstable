@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public allZones ArrayList
 --- @field public lastUpdate integer
-DesignationZone = {};
+DesignationZone = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -82,7 +82,6 @@ function DesignationZone.removeZone(arg0) end
 --- @return nil
 function DesignationZone.update() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -150,7 +149,6 @@ function DesignationZone:setName(arg0) end
 --- @public
 --- @return nil
 function DesignationZone:unloading() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

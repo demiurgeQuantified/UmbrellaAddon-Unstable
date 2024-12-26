@@ -3,7 +3,7 @@
 --- @class WGParams
 --- @field public class any
 --- @field public instance WGParams
-WGParams = {};
+WGParams = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,5 +72,3 @@ function WGParams:setMinYCell(arg0) end
 --- @param arg0 string
 --- @return nil
 function WGParams:setSeedString(arg0) end
-
-

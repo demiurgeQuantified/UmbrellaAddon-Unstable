@@ -6,7 +6,7 @@
 --- @field public instance SpriteRenderer
 --- @field public NUM_RENDER_STATES integer
 --- @field public ringBuffer RingBuffer
-SpriteRenderer = {};
+SpriteRenderer = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,6 @@ SpriteRenderer = {};
 --- @static
 --- @return integer
 function SpriteRenderer.getWaitTime() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -462,7 +461,23 @@ function SpriteRenderer:render(arg0) end
 --- @param arg12 number
 --- @param arg13 Consumer
 --- @return nil
-function SpriteRenderer:renderClamped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
+function SpriteRenderer:renderClamped(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13
+)
+end
 
 --- @public
 --- @param arg0 number
@@ -526,7 +541,35 @@ function SpriteRenderer:renderRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg
 --- @param arg24 number
 --- @param arg25 Consumer
 --- @return nil
-function SpriteRenderer:renderdebug(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25) end
+function SpriteRenderer:renderdebug(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14,
+	arg15,
+	arg16,
+	arg17,
+	arg18,
+	arg19,
+	arg20,
+	arg21,
+	arg22,
+	arg23,
+	arg24,
+	arg25
+)
+end
 
 --- @public
 --- @param arg0 Texture
@@ -639,7 +682,6 @@ function SpriteRenderer:startOffscreenUI() end
 --- @public
 --- @return nil
 function SpriteRenderer:stopOffscreenUI() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

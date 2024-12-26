@@ -2,7 +2,7 @@
 
 --- @class WornItems
 --- @field public class any
-WornItems = {};
+WornItems = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -95,7 +95,6 @@ function WornItems:setItem(arg0, arg1) end
 --- @public
 --- @return integer
 function WornItems:size() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

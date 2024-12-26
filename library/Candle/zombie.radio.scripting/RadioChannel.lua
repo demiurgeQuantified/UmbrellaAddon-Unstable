@@ -2,7 +2,7 @@
 
 --- @class RadioChannel
 --- @field public class any
-RadioChannel = {};
+RadioChannel = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -138,7 +138,6 @@ function RadioChannel:setTimeSynced(arg0) end
 --- @public
 --- @return nil
 function RadioChannel:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

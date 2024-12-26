@@ -2,7 +2,7 @@
 
 --- @class ItemFilterScript: BaseScriptObject
 --- @field public class any
-ItemFilterScript = {};
+ItemFilterScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -40,7 +40,6 @@ function ItemFilterScript:allowsItem(arg0) end
 --- @public
 --- @return string
 function ItemFilterScript:getName() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

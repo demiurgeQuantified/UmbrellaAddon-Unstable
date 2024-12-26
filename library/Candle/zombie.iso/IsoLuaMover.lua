@@ -2,7 +2,7 @@
 
 --- @class IsoLuaMover: IsoGameCharacter
 --- @field public class any
-IsoLuaMover = {};
+IsoLuaMover = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -34,7 +34,6 @@ function IsoLuaMover:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @public
 --- @return nil
 function IsoLuaMover:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

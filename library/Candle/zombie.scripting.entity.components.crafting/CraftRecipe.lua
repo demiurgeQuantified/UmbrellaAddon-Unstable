@@ -2,7 +2,7 @@
 
 --- @class CraftRecipe: BaseScriptObject, TaggedObject
 --- @field public class any
-CraftRecipe = {};
+CraftRecipe = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ CraftRecipe = {};
 --- @static
 --- @return nil
 function CraftRecipe.onLuaFileReloaded() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -339,7 +338,6 @@ function CraftRecipe:setProp1(arg0) end
 --- @param arg0 InputScript
 --- @return nil
 function CraftRecipe:setProp2(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

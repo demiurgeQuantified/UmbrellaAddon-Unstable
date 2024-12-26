@@ -2,7 +2,7 @@
 
 --- @class RDSHockeyPsycho: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSHockeyPsycho = {};
+RDSHockeyPsycho = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RDSHockeyPsycho = {};
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSHockeyPsycho:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

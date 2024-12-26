@@ -2,7 +2,7 @@
 
 --- @class HandcraftLogic: BaseCraftingLogic
 --- @field public class any
-HandcraftLogic = {};
+HandcraftLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -287,7 +287,6 @@ function HandcraftLogic:startCraftAction(arg0) end
 --- @public
 --- @return nil
 function HandcraftLogic:stopCraftAction() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class AnimalGene
 --- @field public class any
-AnimalGene = {};
+AnimalGene = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,6 @@ function AnimalGene.initGenesFromParents(arg0, arg1) end
 --- @return nil
 function AnimalGene.initGenome(arg0) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -78,7 +77,6 @@ function AnimalGene:load(arg0, arg1, arg2) end
 --- @param arg1 boolean
 --- @return nil
 function AnimalGene:save(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

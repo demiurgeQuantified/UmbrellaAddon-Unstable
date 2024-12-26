@@ -25,7 +25,7 @@
 --- @field public WEEK_OF_MONTH_FIELD integer
 --- @field public WEEK_OF_YEAR_FIELD integer
 --- @field public YEAR_FIELD integer
-DateFormat = {};
+DateFormat = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,7 +61,6 @@ function DateFormat.getInstance() end
 --- @overload fun(arg0: integer): DateFormat
 --- @overload fun(arg0: integer, arg1: Locale): DateFormat
 function DateFormat.getTimeInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -134,5 +133,3 @@ function DateFormat:setNumberFormat(arg0) end
 --- @param arg0 TimeZone
 --- @return nil
 function DateFormat:setTimeZone(arg0) end
-
-

@@ -2,7 +2,7 @@
 
 --- @class IFMODParameterUpdater
 --- @field public class any
-IFMODParameterUpdater = {};
+IFMODParameterUpdater = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,5 +31,3 @@ function IFMODParameterUpdater:stopEvent(arg0, arg1, arg2) end
 --- @param arg1 GameSoundClip
 --- @return nil
 function IFMODParameterUpdater:updateEvent(arg0, arg1) end
-
-

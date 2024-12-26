@@ -2,7 +2,7 @@
 
 --- @class Nutrition
 --- @field public class any
-Nutrition = {};
+Nutrition = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -113,7 +113,6 @@ function Nutrition:syncWeight() end
 --- @public
 --- @return nil
 function Nutrition:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

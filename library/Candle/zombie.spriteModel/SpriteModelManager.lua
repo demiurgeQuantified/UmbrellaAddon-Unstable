@@ -2,7 +2,7 @@
 
 --- @class SpriteModelManager
 --- @field public class any
-SpriteModelManager = {};
+SpriteModelManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ SpriteModelManager = {};
 --- @static
 --- @return SpriteModelManager
 function SpriteModelManager.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -87,7 +86,6 @@ function SpriteModelManager:toScriptManager() end
 --- @param arg0 string
 --- @return nil
 function SpriteModelManager:write(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ClothingPatch
 --- @field public class any
-ClothingPatch = {};
+ClothingPatch = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,7 +50,6 @@ function ClothingPatch:save(arg0, arg1) end
 --- @return nil
 --- @deprecated
 function ClothingPatch:save_old(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

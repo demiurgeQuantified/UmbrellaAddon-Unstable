@@ -3,7 +3,7 @@
 --- @class PerkFactory
 --- @field public class any
 --- @field public PerkList ArrayList
-PerkFactory = {};
+PerkFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -61,7 +61,6 @@ function PerkFactory.init() end
 --- @static
 --- @return nil
 function PerkFactory.initTranslations() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

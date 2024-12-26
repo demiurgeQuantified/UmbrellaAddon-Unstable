@@ -2,7 +2,7 @@
 
 --- @class AttachedLocationGroup
 --- @field public class any
-AttachedLocationGroup = {};
+AttachedLocationGroup = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -36,7 +36,6 @@ function AttachedLocationGroup:indexOf(arg0) end
 --- @public
 --- @return integer
 function AttachedLocationGroup:size() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

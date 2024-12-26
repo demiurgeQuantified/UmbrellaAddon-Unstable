@@ -2,7 +2,7 @@
 
 --- @class IUpdater
 --- @field public class any
-IUpdater = {};
+IUpdater = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,5 +19,3 @@ function IUpdater:renderlast() end
 --- @public
 --- @return nil
 function IUpdater:update() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class FilterInputStream: InputStream
 --- @field public class any
-FilterInputStream = {};
+FilterInputStream = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -39,5 +39,3 @@ function FilterInputStream:reset() end
 --- @param arg0 integer
 --- @return integer
 function FilterInputStream:skip(arg0) end
-
-

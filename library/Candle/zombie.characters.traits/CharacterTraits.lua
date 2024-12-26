@@ -2,7 +2,7 @@
 
 --- @class CharacterTraits: TraitCollection
 --- @field public class any
-CharacterTraits = {};
+CharacterTraits = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function CharacterTraits:getTraitWeatherPenaltyModifier() end
 --- @public
 --- @return boolean
 function CharacterTraits:isIlliterate() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

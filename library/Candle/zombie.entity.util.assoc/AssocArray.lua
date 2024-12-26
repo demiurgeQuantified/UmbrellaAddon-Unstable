@@ -2,7 +2,7 @@
 
 --- @class AssocArray
 --- @field public class any
-AssocArray = {};
+AssocArray = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -131,7 +131,6 @@ function AssocArray:size() end
 --- @public
 --- @return nil
 function AssocArray:trimToSize() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

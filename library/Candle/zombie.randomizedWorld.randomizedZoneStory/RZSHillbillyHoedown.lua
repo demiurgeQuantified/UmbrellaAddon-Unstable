@@ -2,7 +2,7 @@
 
 --- @class RZSHillbillyHoedown: RandomizedZoneStoryBase
 --- @field public class any
-RZSHillbillyHoedown = {};
+RZSHillbillyHoedown = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ RZSHillbillyHoedown = {};
 --- @return ArrayList
 function RZSHillbillyHoedown.getBagClutter() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -22,7 +21,6 @@ function RZSHillbillyHoedown.getBagClutter() end
 --- @param arg0 Zone
 --- @return nil
 function RZSHillbillyHoedown:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

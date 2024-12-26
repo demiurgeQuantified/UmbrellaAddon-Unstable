@@ -2,7 +2,7 @@
 
 --- @class Mod
 --- @field public class any
-Mod = {};
+Mod = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -186,7 +186,6 @@ function Mod:setTexture(arg0) end
 --- @param arg0 string
 --- @return nil
 function Mod:setUrl(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

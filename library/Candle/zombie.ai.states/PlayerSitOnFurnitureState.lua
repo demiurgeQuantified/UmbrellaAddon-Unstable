@@ -2,7 +2,7 @@
 
 --- @class PlayerSitOnFurnitureState: State
 --- @field public class any
-PlayerSitOnFurnitureState = {};
+PlayerSitOnFurnitureState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PlayerSitOnFurnitureState = {};
 --- @static
 --- @return PlayerSitOnFurnitureState
 function PlayerSitOnFurnitureState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,7 +42,6 @@ function PlayerSitOnFurnitureState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function PlayerSitOnFurnitureState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

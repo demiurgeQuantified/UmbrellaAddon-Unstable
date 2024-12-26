@@ -2,7 +2,7 @@
 
 --- @class ChatMessage: Cloneable
 --- @field public class any
-ChatMessage = {};
+ChatMessage = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -174,7 +174,6 @@ function ChatMessage:setTextColor(arg0) end
 --- @public
 --- @return string
 function ChatMessage:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

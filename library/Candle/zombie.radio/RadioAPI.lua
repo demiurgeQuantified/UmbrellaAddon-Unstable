@@ -2,7 +2,7 @@
 
 --- @class RadioAPI
 --- @field public class any
-RadioAPI = {};
+RadioAPI = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -44,7 +44,6 @@ function RadioAPI.timeStampToMinutes(arg0) end
 --- @return integer
 function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -53,5 +52,3 @@ function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
 --- @param arg0 string
 --- @return table
 function RadioAPI:getChannels(arg0) end
-
-

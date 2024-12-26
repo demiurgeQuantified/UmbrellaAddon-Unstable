@@ -2,7 +2,7 @@
 
 --- @class MashingLogic: Component
 --- @field public class any
-MashingLogic = {};
+MashingLogic = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -133,5 +133,3 @@ function MashingLogic:start(arg0) end
 --- @return nil
 --- @overload fun(self: MashingLogic, arg0: IsoPlayer, arg1: boolean): nil
 function MashingLogic:stop(arg0) end
-
-

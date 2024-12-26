@@ -3,7 +3,7 @@
 --- @class ProfessionFactory
 --- @field public class any
 --- @field public ProfessionMap LinkedHashMap
-ProfessionFactory = {};
+ProfessionFactory = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -38,7 +38,6 @@ function ProfessionFactory.getProfessions() end
 --- @static
 --- @return nil
 function ProfessionFactory.init() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

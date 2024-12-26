@@ -2,7 +2,7 @@
 
 --- @class IListBoxItem
 --- @field public class any
-IListBoxItem = {};
+IListBoxItem = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,5 +19,3 @@ function IListBoxItem:getLeftLabel() end
 --- @public
 --- @return string
 function IListBoxItem:getRightLabel() end
-
-

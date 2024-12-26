@@ -2,7 +2,7 @@
 
 --- @class BooleanConfigOption: ConfigOption
 --- @field public class any
-BooleanConfigOption = {};
+BooleanConfigOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,7 +63,6 @@ function BooleanConfigOption:setValue(arg0) end
 --- @param arg0 any
 --- @return nil
 function BooleanConfigOption:setValueFromObject(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

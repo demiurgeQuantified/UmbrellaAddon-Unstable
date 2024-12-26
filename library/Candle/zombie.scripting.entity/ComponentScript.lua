@@ -2,7 +2,7 @@
 
 --- @class ComponentScript: BaseScriptObject
 --- @field public class any
-ComponentScript = {};
+ComponentScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,5 +20,3 @@ function ComponentScript:getName() end
 --- @public
 --- @return boolean
 function ComponentScript:isoMasterOnly() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class ILuaVariableSource
 --- @field public class any
-ILuaVariableSource = {};
+ILuaVariableSource = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,5 +23,3 @@ function ILuaVariableSource:GetVariable(arg0) end
 --- @param arg1 string
 --- @return nil
 function ILuaVariableSource:SetVariable(arg0, arg1) end
-
-

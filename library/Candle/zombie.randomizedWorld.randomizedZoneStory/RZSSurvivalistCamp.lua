@@ -2,7 +2,7 @@
 
 --- @class RZSSurvivalistCamp: RandomizedZoneStoryBase
 --- @field public class any
-RZSSurvivalistCamp = {};
+RZSSurvivalistCamp = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RZSSurvivalistCamp = {};
 --- @param arg0 Zone
 --- @return nil
 function RZSSurvivalistCamp:randomizeZoneStory(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

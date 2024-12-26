@@ -2,7 +2,7 @@
 
 --- @class IsoJukebox: IsoObject
 --- @field public class any
-IsoJukebox = {};
+IsoJukebox = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,7 +30,6 @@ function IsoJukebox:onMouseLeftClick(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoJukebox:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

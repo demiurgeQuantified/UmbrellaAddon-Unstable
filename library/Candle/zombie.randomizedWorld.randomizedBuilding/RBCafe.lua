@@ -2,7 +2,7 @@
 
 --- @class RBCafe: RandomizedBuildingBase
 --- @field public class any
-RBCafe = {};
+RBCafe = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBCafe:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBCafe:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

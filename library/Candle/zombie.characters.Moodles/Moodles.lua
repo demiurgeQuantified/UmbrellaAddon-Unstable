@@ -2,7 +2,7 @@
 
 --- @class Moodles
 --- @field public class any
-Moodles = {};
+Moodles = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -69,7 +69,6 @@ function Moodles:getNumMoodles() end
 --- @param arg0 boolean
 --- @return nil
 function Moodles:setMoodlesStateChanged(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class Vector3fc
 --- @field public class any
-Vector3fc = {};
+Vector3fc = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -332,5 +332,3 @@ function Vector3fc:y() end
 --- @public
 --- @return number
 function Vector3fc:z() end
-
-

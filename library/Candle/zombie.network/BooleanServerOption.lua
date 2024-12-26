@@ -2,7 +2,7 @@
 
 --- @class BooleanServerOption: BooleanConfigOption, ServerOption
 --- @field public class any
-BooleanServerOption = {};
+BooleanServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,6 @@ function BooleanServerOption:asConfigOption() end
 --- @return string
 --- @overload fun(self: BooleanServerOption): string
 function BooleanServerOption:getTooltip() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class DataInput
 --- @field public class any
-DataInput = {};
+DataInput = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -66,5 +66,3 @@ function DataInput:readUnsignedShort() end
 --- @param arg0 integer
 --- @return integer
 function DataInput:skipBytes(arg0) end
-
-

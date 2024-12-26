@@ -2,7 +2,7 @@
 
 --- @class Map
 --- @field public class any
-Map = {};
+Map = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,6 @@ function Map.of() end
 --- @param arg0 Entry[]
 --- @return Map
 function Map.ofEntries(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -165,5 +164,3 @@ function Map:size() end
 --- @public
 --- @return Collection
 function Map:values() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class IsoWorldRegion: IWorldRegion
 --- @field public class any
-IsoWorldRegion = {};
+IsoWorldRegion = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -95,5 +95,3 @@ function IsoWorldRegion:swapIsoChunkRegions(arg0) end
 --- @public
 --- @return nil
 function IsoWorldRegion:unlinkNeighbors() end
-
-

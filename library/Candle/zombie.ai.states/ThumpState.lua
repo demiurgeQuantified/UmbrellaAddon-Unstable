@@ -2,7 +2,7 @@
 
 --- @class ThumpState: State
 --- @field public class any
-ThumpState = {};
+ThumpState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -17,7 +17,6 @@ function ThumpState.getFastForwardDamageMultiplier() end
 --- @static
 --- @return ThumpState
 function ThumpState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,7 +42,6 @@ function ThumpState:execute(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function ThumpState:exit(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

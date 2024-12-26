@@ -2,7 +2,7 @@
 
 --- @class PlayerHomingPoint
 --- @field public class any
-PlayerHomingPoint = {};
+PlayerHomingPoint = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -222,7 +222,6 @@ function PlayerHomingPoint:setY(arg0) end
 --- @param arg0 number
 --- @return nil
 function PlayerHomingPoint:setYOffsetScaled(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

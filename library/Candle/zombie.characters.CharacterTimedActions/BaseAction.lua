@@ -2,7 +2,7 @@
 
 --- @class BaseAction
 --- @field public class any
-BaseAction = {};
+BaseAction = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -175,7 +175,6 @@ function BaseAction:valid() end
 --- @public
 --- @return nil
 function BaseAction:waitToStart() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

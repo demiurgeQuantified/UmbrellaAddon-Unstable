@@ -2,7 +2,7 @@
 
 --- @class IsoLightSwitch: IsoObject
 --- @field public class any
-IsoLightSwitch = {};
+IsoLightSwitch = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ IsoLightSwitch = {};
 --- @param arg0 IsoChunk
 --- @return nil
 function IsoLightSwitch.chunkLoaded(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -251,7 +250,6 @@ function IsoLightSwitch:toggle() end
 --- @public
 --- @return nil
 function IsoLightSwitch:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

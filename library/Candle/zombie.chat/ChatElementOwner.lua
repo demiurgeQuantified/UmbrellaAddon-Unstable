@@ -2,7 +2,7 @@
 
 --- @class ChatElementOwner
 --- @field public class any
-ChatElementOwner = {};
+ChatElementOwner = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,5 +23,3 @@ function ChatElementOwner:getY() end
 --- @public
 --- @return number
 function ChatElementOwner:getZ() end
-
-

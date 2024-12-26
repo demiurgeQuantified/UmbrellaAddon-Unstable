@@ -2,7 +2,7 @@
 
 --- @class RBOffice: RandomizedBuildingBase
 --- @field public class any
-RBOffice = {};
+RBOffice = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBOffice:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBOffice:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

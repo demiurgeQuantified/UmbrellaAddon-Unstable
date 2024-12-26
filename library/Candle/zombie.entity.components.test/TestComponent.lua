@@ -2,7 +2,7 @@
 
 --- @class TestComponent: Component
 --- @field public class any
-TestComponent = {};
+TestComponent = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function TestComponent:DoTooltip(arg0, arg1) end
 --- @public
 --- @return boolean
 function TestComponent:isValid() end
-
-

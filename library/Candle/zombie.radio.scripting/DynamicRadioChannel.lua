@@ -2,7 +2,7 @@
 
 --- @class DynamicRadioChannel: RadioChannel
 --- @field public class any
-DynamicRadioChannel = {};
+DynamicRadioChannel = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,7 +13,6 @@ DynamicRadioChannel = {};
 --- @param arg1 integer
 --- @return nil
 function DynamicRadioChannel:LoadAiringBroadcast(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

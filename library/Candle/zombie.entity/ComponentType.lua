@@ -21,7 +21,7 @@
 --- @field public TestComponent ComponentType
 --- @field public UiConfig ComponentType
 --- @field public Undefined ComponentType
-ComponentType = {};
+ComponentType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -67,7 +67,6 @@ function ComponentType.valueOf(arg0) end
 --- @return ComponentType[]
 function ComponentType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -109,5 +108,3 @@ function ComponentType:isRunInMeta() end
 --- @param arg0 GameEntityType
 --- @return boolean
 function ComponentType:isValidGameEntityType(arg0) end
-
-

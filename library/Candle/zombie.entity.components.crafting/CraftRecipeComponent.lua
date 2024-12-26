@@ -2,7 +2,7 @@
 
 --- @class CraftRecipeComponent: Component
 --- @field public class any
-CraftRecipeComponent = {};
+CraftRecipeComponent = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function CraftRecipeComponent:DoTooltip(arg0, arg1) end
 --- @public
 --- @return boolean
 function CraftRecipeComponent:isValid() end
-
-

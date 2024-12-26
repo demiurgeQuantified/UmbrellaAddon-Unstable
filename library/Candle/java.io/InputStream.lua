@@ -2,7 +2,7 @@
 
 --- @class InputStream: Closeable
 --- @field public class any
-InputStream = {};
+InputStream = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ InputStream = {};
 --- @static
 --- @return InputStream
 function InputStream.nullInputStream() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -70,7 +69,6 @@ function InputStream:skipNBytes(arg0) end
 --- @param arg0 OutputStream
 --- @return integer
 function InputStream:transferTo(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

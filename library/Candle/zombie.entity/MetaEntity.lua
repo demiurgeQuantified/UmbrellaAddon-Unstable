@@ -2,7 +2,7 @@
 
 --- @class MetaEntity: GameEntity
 --- @field public class any
-MetaEntity = {};
+MetaEntity = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,5 +72,3 @@ function MetaEntity:saveMetaEntity(arg0) end
 --- @param arg0 IsoPlayer
 --- @return nil
 function MetaEntity:setUsingPlayer(arg0) end
-
-

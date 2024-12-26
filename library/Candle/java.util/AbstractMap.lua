@@ -2,7 +2,7 @@
 
 --- @class AbstractMap: Map
 --- @field public class any
-AbstractMap = {};
+AbstractMap = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -41,7 +41,6 @@ function AbstractMap.of() end
 --- @param arg0 Entry[]
 --- @return Map
 function AbstractMap.ofEntries(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -183,5 +182,3 @@ function AbstractMap:toString() end
 --- @return Collection
 --- @overload fun(self: AbstractMap): Collection
 function AbstractMap:values() end
-
-

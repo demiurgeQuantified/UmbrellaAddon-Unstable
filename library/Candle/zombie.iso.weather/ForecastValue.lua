@@ -2,7 +2,7 @@
 
 --- @class ForecastValue
 --- @field public class any
-ForecastValue = {};
+ForecastValue = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -43,7 +43,6 @@ function ForecastValue:getTotalMean() end
 --- @public
 --- @return number
 function ForecastValue:getTotalMin() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

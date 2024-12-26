@@ -2,7 +2,7 @@
 
 --- @class WeatherStage
 --- @field public class any
-WeatherStage = {};
+WeatherStage = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -75,7 +75,6 @@ function WeatherStage:setStageID(arg0) end
 --- @param arg0 number
 --- @return nil
 function WeatherStage:setTargetStrength(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

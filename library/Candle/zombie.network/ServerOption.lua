@@ -2,7 +2,7 @@
 
 --- @class ServerOption
 --- @field public class any
-ServerOption = {};
+ServerOption = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,5 +15,3 @@ function ServerOption:asConfigOption() end
 --- @public
 --- @return string
 function ServerOption:getTooltip() end
-
-

@@ -2,7 +2,7 @@
 
 --- @class Iterator
 --- @field public class any
-Iterator = {};
+Iterator = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,5 +24,3 @@ function Iterator:next() end
 --- @public
 --- @return nil
 function Iterator:remove() end
-
-

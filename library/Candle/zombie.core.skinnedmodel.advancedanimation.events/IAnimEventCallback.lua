@@ -2,7 +2,7 @@
 
 --- @class IAnimEventCallback
 --- @field public class any
-IAnimEventCallback = {};
+IAnimEventCallback = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -13,5 +13,3 @@ IAnimEventCallback = {};
 --- @param arg1 AnimEvent
 --- @return nil
 function IAnimEventCallback:OnAnimEvent(arg0, arg1) end
-
-

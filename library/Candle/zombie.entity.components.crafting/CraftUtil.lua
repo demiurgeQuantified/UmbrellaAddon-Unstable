@@ -2,7 +2,7 @@
 
 --- @class CraftUtil
 --- @field public class any
-CraftUtil = {};
+CraftUtil = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -100,7 +100,6 @@ function CraftUtil.getEntityTemperature(arg0) end
 --- @return CraftRecipe
 --- @overload fun(arg0: CraftRecipeData, arg1: List, arg2: List, arg3: List, arg4: CraftRecipeMonitor): CraftRecipe
 function CraftUtil.getPossibleRecipe(arg0, arg1, arg2, arg3) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

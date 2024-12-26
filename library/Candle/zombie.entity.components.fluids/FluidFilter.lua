@@ -2,7 +2,7 @@
 
 --- @class FluidFilter
 --- @field public class any
-FluidFilter = {};
+FluidFilter = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -71,7 +71,6 @@ function FluidFilter:setFilterType(arg0) end
 --- @public
 --- @return string
 function FluidFilter:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

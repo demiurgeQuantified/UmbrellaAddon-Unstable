@@ -2,7 +2,7 @@
 
 --- @class Thumpable
 --- @field public class any
-Thumpable = {};
+Thumpable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,5 +31,3 @@ function Thumpable:getThumpableFor(arg0) end
 --- @public
 --- @return boolean
 function Thumpable:isDestroyed() end
-
-

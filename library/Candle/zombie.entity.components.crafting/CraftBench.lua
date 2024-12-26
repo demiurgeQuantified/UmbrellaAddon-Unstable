@@ -2,7 +2,7 @@
 
 --- @class CraftBench: Component
 --- @field public class any
-CraftBench = {};
+CraftBench = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -42,5 +42,3 @@ function CraftBench:isValid() end
 --- @param arg0 string
 --- @return nil
 function CraftBench:setRecipeTagQuery(arg0) end
-
-

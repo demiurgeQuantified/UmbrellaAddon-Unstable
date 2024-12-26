@@ -2,7 +2,7 @@
 
 --- @class CraftRecipeManager
 --- @field public class any
-CraftRecipeManager = {};
+CraftRecipeManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -169,7 +169,6 @@ function CraftRecipeManager.queryRecipes(arg0) end
 --- @param arg0 string
 --- @return string
 function CraftRecipeManager.sanitizeTagQuery(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

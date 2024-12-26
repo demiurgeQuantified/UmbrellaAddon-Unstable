@@ -2,7 +2,7 @@
 
 --- @class IOScript
 --- @field public class any
-IOScript = {};
+IOScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,5 +15,3 @@ function IOScript:getParentRecipe() end
 --- @public
 --- @return integer
 function IOScript:getRecipeLineIndex() end
-
-

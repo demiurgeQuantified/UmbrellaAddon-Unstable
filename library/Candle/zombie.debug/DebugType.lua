@@ -63,7 +63,7 @@
 --- @field public Xml DebugType
 --- @field public Zombie DebugType
 --- @field public Zone DebugType
-DebugType = {};
+DebugType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -79,7 +79,6 @@ function DebugType.valueOf(arg0) end
 --- @static
 --- @return DebugType[]
 function DebugType.values() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -188,5 +187,3 @@ function DebugType:warn(arg0) end
 --- @param arg1 string
 --- @return nil
 function DebugType:write(arg0, arg1) end
-
-

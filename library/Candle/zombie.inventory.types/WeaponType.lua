@@ -12,7 +12,7 @@
 --- @field public spear WeaponType
 --- @field public throwing WeaponType
 --- @field public twohanded WeaponType
-WeaponType = {};
+WeaponType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -37,7 +37,6 @@ function WeaponType.valueOf(arg0) end
 --- @return WeaponType[]
 function WeaponType.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -45,5 +44,3 @@ function WeaponType.values() end
 --- @public
 --- @return string
 function WeaponType:getType() end
-
-

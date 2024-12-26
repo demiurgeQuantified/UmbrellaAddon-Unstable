@@ -2,7 +2,7 @@
 
 --- @class XuiLayoutScript: BaseScriptObject
 --- @field public class any
-XuiLayoutScript = {};
+XuiLayoutScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -33,7 +33,6 @@ function XuiLayoutScript:parseScript() end
 --- @public
 --- @return nil
 function XuiLayoutScript:preParse() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

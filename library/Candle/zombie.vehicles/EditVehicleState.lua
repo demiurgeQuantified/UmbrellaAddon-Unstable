@@ -3,7 +3,7 @@
 --- @class EditVehicleState: GameState
 --- @field public class any
 --- @field public instance EditVehicleState
-EditVehicleState = {};
+EditVehicleState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ EditVehicleState = {};
 --- @static
 --- @return EditVehicleState
 function EditVehicleState.checkInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -63,7 +62,6 @@ function EditVehicleState:update() end
 --- @public
 --- @return nil
 function EditVehicleState:yield() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

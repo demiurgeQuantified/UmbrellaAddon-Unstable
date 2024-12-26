@@ -2,7 +2,7 @@
 
 --- @class RBTrashed: RandomizedBuildingBase
 --- @field public class any
-RBTrashed = {};
+RBTrashed = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -31,7 +31,6 @@ function RBTrashed:randomizeBuilding(arg0) end
 --- @param arg0 BuildingDef
 --- @return nil
 function RBTrashed:trashHouse(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

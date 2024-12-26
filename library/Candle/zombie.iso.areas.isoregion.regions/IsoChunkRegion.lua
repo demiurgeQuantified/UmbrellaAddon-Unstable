@@ -2,7 +2,7 @@
 
 --- @class IsoChunkRegion: IChunkRegion
 --- @field public class any
-IsoChunkRegion = {};
+IsoChunkRegion = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -106,5 +106,3 @@ function IsoChunkRegion:setIsoWorldRegion(arg0) end
 --- @public
 --- @return IsoWorldRegion
 function IsoChunkRegion:unlinkFromIsoWorldRegion() end
-
-

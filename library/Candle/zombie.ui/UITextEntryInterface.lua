@@ -2,7 +2,7 @@
 
 --- @class UITextEntryInterface
 --- @field public class any
-UITextEntryInterface = {};
+UITextEntryInterface = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -120,5 +120,3 @@ function UITextEntryInterface:setIgnoreFirst(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function UITextEntryInterface:setSelectingRange(arg0) end
-
-

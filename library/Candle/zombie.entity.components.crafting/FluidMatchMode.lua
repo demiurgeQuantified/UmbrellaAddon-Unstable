@@ -5,7 +5,7 @@
 --- @field public Anything FluidMatchMode
 --- @field public Exact FluidMatchMode
 --- @field public Primary FluidMatchMode
-FluidMatchMode = {};
+FluidMatchMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -21,5 +21,3 @@ function FluidMatchMode.valueOf(arg0) end
 --- @static
 --- @return FluidMatchMode[]
 function FluidMatchMode.values() end
-
-

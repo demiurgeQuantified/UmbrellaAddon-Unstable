@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public specialVehicles ArrayList
 --- @field public vehicles HashMap
-VehicleType = {};
+VehicleType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -39,7 +39,6 @@ function VehicleType.hasTypeForZone(arg0) end
 --- @return nil
 function VehicleType.init() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -60,7 +59,6 @@ function VehicleType:getRandomBaseVehicleQuality() end
 --- @param arg0 integer
 --- @return nil
 function VehicleType:setChanceToSpawnKey(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

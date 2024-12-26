@@ -2,7 +2,7 @@
 
 --- @class IsoClothingDryer: IsoObject
 --- @field public class any
-IsoClothingDryer = {};
+IsoClothingDryer = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -70,7 +70,6 @@ function IsoClothingDryer:setActivated(arg0) end
 --- @public
 --- @return nil
 function IsoClothingDryer:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

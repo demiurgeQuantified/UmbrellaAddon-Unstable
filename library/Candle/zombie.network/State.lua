@@ -9,7 +9,7 @@
 --- @field public Ended State
 --- @field public Refused State
 --- @field public Started State
-State = {};
+State = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -26,5 +26,3 @@ function State.valueOf(arg0) end
 --- @static
 --- @return State[]
 function State.values() end
-
-

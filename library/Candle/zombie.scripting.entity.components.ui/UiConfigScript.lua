@@ -2,7 +2,7 @@
 
 --- @class UiConfigScript: ComponentScript
 --- @field public class any
-UiConfigScript = {};
+UiConfigScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,5 +53,3 @@ function UiConfigScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function UiConfigScript:reset() end
-
-

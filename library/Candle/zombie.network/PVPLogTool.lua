@@ -2,7 +2,7 @@
 
 --- @class PVPLogTool
 --- @field public class any
-PVPLogTool = {};
+PVPLogTool = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -45,5 +45,3 @@ function PVPLogTool.logKill(arg0, arg1) end
 --- @param arg1 string
 --- @return nil
 function PVPLogTool.logSafety(arg0, arg1) end
-
-

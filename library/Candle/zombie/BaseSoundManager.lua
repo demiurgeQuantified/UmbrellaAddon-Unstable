@@ -2,7 +2,7 @@
 
 --- @class BaseSoundManager
 --- @field public class any
-BaseSoundManager = {};
+BaseSoundManager = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -343,7 +343,6 @@ function BaseSoundManager:update3D() end
 --- @public
 --- @return nil
 function BaseSoundManager:update4() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

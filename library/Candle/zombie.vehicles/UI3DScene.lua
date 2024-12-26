@@ -3,7 +3,7 @@
 --- @class UI3DScene: UIElement
 --- @field public class any
 --- @field public Z_SCALE number
-UI3DScene = {};
+UI3DScene = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -27,7 +27,6 @@ function UI3DScene.intersect_ray_plane(arg0, arg1, arg2) end
 --- @param arg0 Ray
 --- @return nil
 function UI3DScene.releaseRay(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -159,7 +158,6 @@ function UI3DScene:uiToSceneX(arg0, arg1) end
 --- @param arg1 number
 --- @return number
 function UI3DScene:uiToSceneY(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -7,7 +7,7 @@
 --- @field public VERSION integer
 --- @field public VERSION1 integer
 --- @field public VERSION2 integer
-RecordedMedia = {};
+RecordedMedia = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -30,7 +30,6 @@ function RecordedMedia.receiveRequestData(arg0) end
 --- @param arg0 string
 --- @return string
 function RecordedMedia.toAscii(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -111,7 +110,6 @@ function RecordedMedia:save() end
 --- @param arg0 ByteBuffer
 --- @return nil
 function RecordedMedia:sendRequestData(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

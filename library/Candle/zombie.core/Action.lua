@@ -2,7 +2,7 @@
 
 --- @class Action: INetworkPacketField
 --- @field public class any
-Action = {};
+Action = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -53,5 +53,3 @@ function Action:setTimeData() end
 --- @return nil
 --- @overload fun(self: Action, arg0: ByteBufferWriter): nil
 function Action:write(arg0) end
-
-

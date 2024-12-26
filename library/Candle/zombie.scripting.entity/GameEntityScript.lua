@@ -2,7 +2,7 @@
 
 --- @class GameEntityScript: BaseScriptObject
 --- @field public class any
-GameEntityScript = {};
+GameEntityScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -115,7 +115,6 @@ function GameEntityScript:setModID(arg0) end
 --- @param arg0 short
 --- @return nil
 function GameEntityScript:setRegistry_id(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

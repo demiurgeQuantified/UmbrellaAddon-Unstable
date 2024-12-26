@@ -2,7 +2,7 @@
 
 --- @class RVSDeadEnd: RandomizedVehicleStoryBase
 --- @field public class any
-RVSDeadEnd = {};
+RVSDeadEnd = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,7 +26,6 @@ function RVSDeadEnd:randomizeVehicleStory(arg0, arg1) end
 --- @param arg1 Element
 --- @return nil
 function RVSDeadEnd:spawnElement(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

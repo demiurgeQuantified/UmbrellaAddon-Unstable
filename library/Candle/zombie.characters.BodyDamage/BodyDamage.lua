@@ -3,7 +3,7 @@
 --- @class BodyDamage
 --- @field public class any
 --- @field public InfectionLevelToZombify number
-BodyDamage = {};
+BodyDamage = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -23,7 +23,6 @@ function BodyDamage.damageFromSpikedArmor(arg0, arg1, arg2, arg3) end
 --- @param arg0 integer
 --- @return number
 function BodyDamage.getSicknessFromCorpsesRate(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1054,7 +1053,6 @@ function BodyDamage:splatBloodFloor() end
 --- @public
 --- @return nil
 function BodyDamage:splatBloodFloorBig() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

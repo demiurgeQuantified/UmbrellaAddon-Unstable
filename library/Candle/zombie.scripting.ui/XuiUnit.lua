@@ -2,7 +2,7 @@
 
 --- @class XuiUnit: XuiVar
 --- @field public class any
-XuiUnit = {};
+XuiUnit = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -21,5 +21,3 @@ function XuiUnit:isPercent() end
 --- @param arg1 boolean
 --- @return nil
 function XuiUnit:setValue(arg0, arg1) end
-
-

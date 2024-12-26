@@ -2,7 +2,7 @@
 
 --- @class IActionStateChanged
 --- @field public class any
-IActionStateChanged = {};
+IActionStateChanged = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,5 +12,3 @@ IActionStateChanged = {};
 --- @param arg0 ActionContext
 --- @return nil
 function IActionStateChanged:actionStateChanged(arg0) end
-
-

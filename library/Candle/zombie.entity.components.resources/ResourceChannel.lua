@@ -12,7 +12,7 @@
 --- @field public Channel_Red ResourceChannel
 --- @field public Channel_Yellow ResourceChannel
 --- @field public NO_CHANNEL ResourceChannel
-ResourceChannel = {};
+ResourceChannel = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -35,7 +35,6 @@ function ResourceChannel.valueOf(arg0) end
 --- @return ResourceChannel[]
 function ResourceChannel.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -53,5 +52,3 @@ function ResourceChannel:getByteId() end
 --- @public
 --- @return Color
 function ResourceChannel:getColor() end
-
-

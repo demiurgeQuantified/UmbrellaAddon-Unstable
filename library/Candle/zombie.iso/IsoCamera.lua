@@ -6,7 +6,7 @@
 --- @field public frameState FrameState
 --- @field public PLAYER_OFFSET_X integer
 --- @field public PLAYER_OFFSET_Y integer
-IsoCamera = {};
+IsoCamera = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -176,7 +176,6 @@ function IsoCamera.update() end
 --- @static
 --- @return nil
 function IsoCamera.updateAll() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

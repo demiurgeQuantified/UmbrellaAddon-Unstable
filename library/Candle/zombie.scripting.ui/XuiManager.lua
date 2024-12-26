@@ -3,7 +3,7 @@
 --- @class XuiManager
 --- @field public class any
 --- @field public XuiScriptTypes EnumSet
-XuiManager = {};
+XuiManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -91,7 +91,6 @@ function XuiManager.getDefaultSkinName() end
 --- @param arg0 boolean
 --- @return nil
 function XuiManager.setParseOnce(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

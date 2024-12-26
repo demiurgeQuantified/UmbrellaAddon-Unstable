@@ -2,7 +2,7 @@
 
 --- @class MusicIntensityEvents
 --- @field public class any
-MusicIntensityEvents = {};
+MusicIntensityEvents = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -41,7 +41,6 @@ function MusicIntensityEvents:getIntensity() end
 --- @public
 --- @return nil
 function MusicIntensityEvents:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

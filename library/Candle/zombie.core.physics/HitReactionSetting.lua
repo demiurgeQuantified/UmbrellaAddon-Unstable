@@ -2,7 +2,7 @@
 
 --- @class HitReactionSetting
 --- @field public class any
-HitReactionSetting = {};
+HitReactionSetting = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,7 +50,6 @@ function HitReactionSetting:setAdminValue(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function HitReactionSetting:setEnableAdmin(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class XRow
 --- @field public class any
-XRow = {};
+XRow = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -16,7 +16,6 @@ function XRow:getTile(arg0) end
 --- @public
 --- @return integer
 function XRow:getWidth() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

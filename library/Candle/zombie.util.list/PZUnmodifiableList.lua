@@ -2,7 +2,7 @@
 
 --- @class PZUnmodifiableList: PZUnmodifiableCollection, List
 --- @field public class any
-PZUnmodifiableList = {};
+PZUnmodifiableList = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -35,7 +35,6 @@ function PZUnmodifiableList.of() end
 --- @param arg0 List
 --- @return List
 function PZUnmodifiableList.wrap(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -168,5 +167,3 @@ function PZUnmodifiableList:subList(arg0, arg1) end
 --- @return Object[]
 --- @overload fun(self: PZUnmodifiableList, arg0: Object[]): Object[]
 function PZUnmodifiableList:toArray() end
-
-

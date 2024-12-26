@@ -2,7 +2,7 @@
 
 --- @class Fixing: BaseScriptObject
 --- @field public class any
-Fixing = {};
+Fixing = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -93,7 +93,6 @@ function Fixing:setName(arg0) end
 --- @param arg1 IsoGameCharacter
 --- @return Fixer
 function Fixing:usedInFixer(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

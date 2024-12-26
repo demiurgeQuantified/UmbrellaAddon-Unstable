@@ -2,7 +2,7 @@
 
 --- @class AnimationsMesh: BaseScriptObject
 --- @field public class any
-AnimationsMesh = {};
+AnimationsMesh = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,7 +17,6 @@ function AnimationsMesh:Load(arg0, arg1) end
 --- @public
 --- @return nil
 function AnimationsMesh:reset() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

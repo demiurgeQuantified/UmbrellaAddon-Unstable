@@ -2,7 +2,7 @@
 
 --- @class Constable
 --- @field public class any
-Constable = {};
+Constable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,5 +11,3 @@ Constable = {};
 --- @public
 --- @return Optional
 function Constable:describeConstable() end
-
-

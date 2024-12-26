@@ -2,7 +2,7 @@
 
 --- @class IHumanVisual
 --- @field public class any
-IHumanVisual = {};
+IHumanVisual = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,5 +28,3 @@ function IHumanVisual:isSkeleton() end
 --- @public
 --- @return boolean
 function IHumanVisual:isZombie() end
-
-

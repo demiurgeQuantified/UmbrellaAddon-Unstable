@@ -2,7 +2,7 @@
 
 --- @class IsoLivingCharacter: IsoGameCharacter
 --- @field public class any
-IsoLivingCharacter = {};
+IsoLivingCharacter = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -50,7 +50,6 @@ function IsoLivingCharacter:isShovingWhileAiming() end
 --- @param arg0 boolean
 --- @return nil
 function IsoLivingCharacter:setDoShove(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

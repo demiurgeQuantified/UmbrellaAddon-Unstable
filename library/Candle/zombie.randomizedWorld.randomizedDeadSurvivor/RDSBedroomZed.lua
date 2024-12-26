@@ -2,7 +2,7 @@
 
 --- @class RDSBedroomZed: RandomizedDeadSurvivorBase
 --- @field public class any
-RDSBedroomZed = {};
+RDSBedroomZed = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,7 +12,6 @@ RDSBedroomZed = {};
 --- @param arg0 BuildingDef
 --- @return nil
 function RDSBedroomZed:randomizeDeadSurvivor(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

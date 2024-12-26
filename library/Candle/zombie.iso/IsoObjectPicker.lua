@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public comp Comparator
 --- @field public Instance IsoObjectPicker
-IsoObjectPicker = {};
+IsoObjectPicker = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,7 +101,6 @@ function IsoObjectPicker:StartRender() end
 --- @public
 --- @return IsoObjectPicker
 function IsoObjectPicker:getInstance() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

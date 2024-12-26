@@ -2,7 +2,7 @@
 
 --- @class SmashWindowState: State
 --- @field public class any
-SmashWindowState = {};
+SmashWindowState = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ SmashWindowState = {};
 --- @static
 --- @return SmashWindowState
 function SmashWindowState.instance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -42,7 +41,6 @@ function SmashWindowState:exit(arg0) end
 --- @public
 --- @return boolean
 function SmashWindowState:isDoingActionThatCanBeCancelled() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

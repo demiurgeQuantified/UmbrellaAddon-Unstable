@@ -2,7 +2,7 @@
 
 --- @class FluidProperties: SealedFluidProperties
 --- @field public class any
-FluidProperties = {};
+FluidProperties = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -107,7 +107,6 @@ function FluidProperties:setThirstChange(arg0) end
 --- @param arg0 number
 --- @return nil
 function FluidProperties:setUnhappyChange(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class AttributeInstance
 --- @field public class any
-AttributeInstance = {};
+AttributeInstance = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -79,5 +79,3 @@ function AttributeInstance:stringValue() end
 --- @public
 --- @return string
 function AttributeInstance:toString() end
-
-

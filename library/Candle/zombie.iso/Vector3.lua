@@ -2,7 +2,7 @@
 
 --- @class Vector3: Cloneable
 --- @field public class any
-Vector3 = {};
+Vector3 = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -31,7 +31,6 @@ function Vector3.fromLengthDirection(arg0, arg1) end
 --- @param arg2 Vector3
 --- @return Vector3
 function Vector3.sub(arg0, arg1, arg2) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -146,7 +145,6 @@ function Vector3:sub(arg0, arg1) end
 --- @public
 --- @return string
 function Vector3:toString() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

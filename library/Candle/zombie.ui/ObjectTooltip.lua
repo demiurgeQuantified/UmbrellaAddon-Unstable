@@ -3,7 +3,7 @@
 --- @class ObjectTooltip: UIElement
 --- @field public class any
 --- @field public alphaStep number
-ObjectTooltip = {};
+ObjectTooltip = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -13,7 +13,6 @@ ObjectTooltip = {};
 --- @static
 --- @return nil
 function ObjectTooltip.checkFont() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -191,7 +190,6 @@ function ObjectTooltip:show(arg0, arg1, arg2) end
 --- @public
 --- @return nil
 function ObjectTooltip:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

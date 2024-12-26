@@ -2,7 +2,7 @@
 
 --- @class IAntiCheatUpdate
 --- @field public class any
-IAntiCheatUpdate = {};
+IAntiCheatUpdate = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,5 +19,3 @@ function IAntiCheatUpdate:getMultiplier() end
 --- @public
 --- @return boolean
 function IAntiCheatUpdate:intervalCheck() end
-
-

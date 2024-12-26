@@ -2,7 +2,7 @@
 
 --- @class VehicleGauge: UIElement
 --- @field public class any
-VehicleGauge = {};
+VehicleGauge = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,7 +26,6 @@ function VehicleGauge:setTexture(arg0) end
 --- @param arg0 number
 --- @return nil
 function VehicleGauge:setValue(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

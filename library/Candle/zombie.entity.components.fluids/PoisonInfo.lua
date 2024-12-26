@@ -2,7 +2,7 @@
 
 --- @class PoisonInfo
 --- @field public class any
-PoisonInfo = {};
+PoisonInfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -17,5 +17,3 @@ function PoisonInfo:getFluid() end
 --- @param arg1 number
 --- @return PoisonEffect
 function PoisonInfo:getPoisonEffect(arg0, arg1) end
-
-

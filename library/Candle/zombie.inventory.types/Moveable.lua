@@ -2,7 +2,7 @@
 
 --- @class Moveable: InventoryItem
 --- @field public class any
-Moveable = {};
+Moveable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -151,7 +151,6 @@ function Moveable:setLightUseBattery(arg0) end
 --- @param arg0 string
 --- @return nil
 function Moveable:setWorldSprite(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

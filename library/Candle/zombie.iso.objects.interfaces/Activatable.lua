@@ -2,7 +2,7 @@
 
 --- @class Activatable
 --- @field public class any
-Activatable = {};
+Activatable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -19,5 +19,3 @@ function Activatable:Toggle() end
 --- @public
 --- @return string
 function Activatable:getActivatableType() end
-
-

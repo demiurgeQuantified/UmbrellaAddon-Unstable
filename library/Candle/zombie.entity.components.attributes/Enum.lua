@@ -2,7 +2,7 @@
 
 --- @class Enum: AttributeType
 --- @field public class any
-Enum = {};
+Enum = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -25,5 +25,3 @@ function Enum:getInitialValue() end
 --- @public
 --- @return AttributeValueType
 function Enum:getValueType() end
-
-

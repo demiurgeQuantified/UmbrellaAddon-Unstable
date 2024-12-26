@@ -31,7 +31,7 @@
 --- @field public ZOMBIE_TELEPORT_DISTANCE_SQ integer
 --- @field public ZOMBIE_TELEPORT_PLAYER integer
 --- @field public ZOMBIE_UPDATE_INFO_BUNCH_RATE_MS integer
-NetworkAIParams = {};
+NetworkAIParams = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -63,7 +63,6 @@ function NetworkAIParams.setShowConnectionInfo(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function NetworkAIParams.setShowServerInfo(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

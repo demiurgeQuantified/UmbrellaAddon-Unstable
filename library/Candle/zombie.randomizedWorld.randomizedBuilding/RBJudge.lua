@@ -2,7 +2,7 @@
 
 --- @class RBJudge: RandomizedBuildingBase
 --- @field public class any
-RBJudge = {};
+RBJudge = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBJudge:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBJudge:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

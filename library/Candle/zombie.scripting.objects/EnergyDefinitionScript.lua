@@ -2,7 +2,7 @@
 
 --- @class EnergyDefinitionScript: BaseScriptObject
 --- @field public class any
-EnergyDefinitionScript = {};
+EnergyDefinitionScript = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,7 +22,6 @@ function EnergyDefinitionScript.getDefaultIconTexture() end
 --- @static
 --- @return Texture
 function EnergyDefinitionScript.getDefaultVerticalBarTexture() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -99,5 +98,3 @@ function EnergyDefinitionScript:isVanilla() end
 --- @public
 --- @return nil
 function EnergyDefinitionScript:reset() end
-
-

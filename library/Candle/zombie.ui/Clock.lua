@@ -3,7 +3,7 @@
 --- @class Clock: UIElement
 --- @field public class any
 --- @field public instance Clock
-Clock = {};
+Clock = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -26,7 +26,6 @@ function Clock:render() end
 --- @public
 --- @return nil
 function Clock:resize() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

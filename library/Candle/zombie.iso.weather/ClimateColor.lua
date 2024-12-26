@@ -2,7 +2,7 @@
 
 --- @class ClimateColor
 --- @field public class any
-ClimateColor = {};
+ClimateColor = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -112,7 +112,6 @@ function ClimateColor:setModdedValue(arg0) end
 --- @return nil
 --- @overload fun(self: ClimateColor, arg0: ClimateColorInfo, arg1: number): nil
 function ClimateColor:setOverride(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

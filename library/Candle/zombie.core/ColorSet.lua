@@ -5,7 +5,7 @@
 --- @field public ColorBlind ColorSet
 --- @field public Game ColorSet
 --- @field public Standard ColorSet
-ColorSet = {};
+ColorSet = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -22,7 +22,6 @@ function ColorSet.valueOf(arg0) end
 --- @return ColorSet[]
 function ColorSet.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -30,5 +29,3 @@ function ColorSet.values() end
 --- @public
 --- @return integer
 function ColorSet:getIndex() end
-
-

@@ -6,7 +6,7 @@
 --- @field public Emitter StoryEmitter
 --- @field public ENABLED boolean
 --- @field public LUA_DEBUG boolean
-SLSoundManager = {};
+SLSoundManager = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -16,7 +16,6 @@ SLSoundManager = {};
 --- @static
 --- @return SLSoundManager
 function SLSoundManager.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -77,5 +76,3 @@ function SLSoundManager:update(arg0, arg1, arg2) end
 --- @public
 --- @return nil
 function SLSoundManager:updateKeys() end
-
-

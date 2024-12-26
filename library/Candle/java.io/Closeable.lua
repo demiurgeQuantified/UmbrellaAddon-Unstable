@@ -2,7 +2,7 @@
 
 --- @class Closeable: AutoCloseable
 --- @field public class any
-Closeable = {};
+Closeable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -12,5 +12,3 @@ Closeable = {};
 --- @return nil
 --- @overload fun(self: Closeable): nil
 function Closeable:close() end
-
-

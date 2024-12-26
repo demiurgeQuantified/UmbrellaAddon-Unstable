@@ -2,7 +2,7 @@
 
 --- @class PZCalendar
 --- @field public class any
-PZCalendar = {};
+PZCalendar = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -12,7 +12,6 @@ PZCalendar = {};
 --- @static
 --- @return PZCalendar
 function PZCalendar.getInstance() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -49,7 +48,6 @@ function PZCalendar:set(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg0 integer
 --- @return nil
 function PZCalendar:setTimeInMillis(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

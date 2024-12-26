@@ -8,7 +8,7 @@
 --- @field public TYPE_SCOPE string
 --- @field public TYPE_SLING string
 --- @field public TYPE_STOCK string
-WeaponPart = {};
+WeaponPart = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -204,7 +204,6 @@ function WeaponPart:setSpreadModifier(arg0) end
 --- @param arg0 number
 --- @return nil
 function WeaponPart:setWeightModifier(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

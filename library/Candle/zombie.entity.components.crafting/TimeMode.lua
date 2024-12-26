@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public GameMinutes TimeMode
 --- @field public Seconds TimeMode
-TimeMode = {};
+TimeMode = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -27,7 +27,6 @@ function TimeMode.valueOf(arg0) end
 --- @return TimeMode[]
 function TimeMode.values() end
 
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -41,5 +40,3 @@ function TimeMode:getBits() end
 --- @return integer
 --- @overload fun(self: TimeMode): integer
 function TimeMode:getByteId() end
-
-

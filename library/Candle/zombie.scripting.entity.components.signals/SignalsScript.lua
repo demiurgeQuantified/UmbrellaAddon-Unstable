@@ -2,7 +2,7 @@
 
 --- @class SignalsScript: ComponentScript
 --- @field public class any
-SignalsScript = {};
+SignalsScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,5 +37,3 @@ function SignalsScript:isoMasterOnly() end
 --- @public
 --- @return nil
 function SignalsScript:reset() end
-
-

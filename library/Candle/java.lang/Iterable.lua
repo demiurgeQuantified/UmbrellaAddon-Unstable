@@ -2,7 +2,7 @@
 
 --- @class Iterable
 --- @field public class any
-Iterable = {};
+Iterable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,5 +20,3 @@ function Iterable:iterator() end
 --- @public
 --- @return Spliterator
 function Iterable:spliterator() end
-
-

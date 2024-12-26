@@ -2,7 +2,7 @@
 
 --- @class VehicleTemplate: BaseScriptObject
 --- @field public class any
-VehicleTemplate = {};
+VehicleTemplate = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -11,7 +11,6 @@ VehicleTemplate = {};
 --- @public
 --- @return VehicleScript
 function VehicleTemplate:getScript() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

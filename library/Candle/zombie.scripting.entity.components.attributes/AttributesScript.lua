@@ -2,7 +2,7 @@
 
 --- @class AttributesScript: ComponentScript
 --- @field public class any
-AttributesScript = {};
+AttributesScript = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,5 +20,3 @@ function AttributesScript:PreReload() end
 --- @public
 --- @return AttributeContainer
 function AttributesScript:getTemplateContainer() end
-
-

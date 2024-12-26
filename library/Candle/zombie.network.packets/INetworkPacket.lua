@@ -2,7 +2,7 @@
 
 --- @class INetworkPacket: INetworkPacketField
 --- @field public class any
-INetworkPacket = {};
+INetworkPacket = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -59,7 +59,6 @@ function INetworkPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @param arg3 Object[]
 --- @return nil
 function INetworkPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -161,5 +160,3 @@ function INetworkPacket:sync(arg0, arg1) end
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function INetworkPacket:write(arg0) end
-
-

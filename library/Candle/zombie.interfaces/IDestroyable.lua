@@ -2,7 +2,7 @@
 
 --- @class IDestroyable
 --- @field public class any
-IDestroyable = {};
+IDestroyable = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,5 +15,3 @@ function IDestroyable:destroy() end
 --- @public
 --- @return boolean
 function IDestroyable:isDestroyed() end
-
-

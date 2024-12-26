@@ -11,7 +11,7 @@
 --- @field public Undefined ContainerType
 --- @field public Vehicle ContainerType
 --- @field public WorldObject ContainerType
-ContainerType = {};
+ContainerType = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -27,5 +27,3 @@ function ContainerType.valueOf(arg0) end
 --- @static
 --- @return ContainerType[]
 function ContainerType.values() end
-
-

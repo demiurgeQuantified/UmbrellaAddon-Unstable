@@ -3,7 +3,7 @@
 --- @class IsoDeadBody: IsoMovingObject, Talker, IAnimalVisual, IHumanVisual, IIdentifiable, IGrappleableWrapper
 --- @field public class any
 --- @field public MAX_ROT_STAGES integer
-IsoDeadBody = {};
+IsoDeadBody = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -45,7 +45,6 @@ function IsoDeadBody.renderShadow(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7
 --- @static
 --- @return nil
 function IsoDeadBody.updateBodies() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -715,7 +714,6 @@ function IsoDeadBody:toString() end
 --- @public
 --- @return nil
 function IsoDeadBody:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

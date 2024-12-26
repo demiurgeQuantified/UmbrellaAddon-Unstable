@@ -3,7 +3,7 @@
 --- @class IsoDoor: IsoObject, BarricadeAble, Thumpable
 --- @field public class any
 --- @field public tempo Vector2
-IsoDoor = {};
+IsoDoor = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -83,7 +83,6 @@ function IsoDoor.toggleDoubleDoor(arg0, arg1) end
 --- @param arg1 boolean
 --- @return nil
 function IsoDoor.toggleGarageDoor(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -510,7 +509,6 @@ function IsoDoor:toggleCurtain() end
 --- @param arg0 boolean
 --- @return nil
 function IsoDoor:transmitSetCurtainOpen(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

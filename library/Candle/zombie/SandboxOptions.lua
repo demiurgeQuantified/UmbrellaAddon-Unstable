@@ -3,7 +3,7 @@
 --- @class SandboxOptions
 --- @field public class any
 --- @field public instance SandboxOptions
-SandboxOptions = {};
+SandboxOptions = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -24,7 +24,6 @@ function SandboxOptions.getInstance() end
 --- @param arg0 string
 --- @return boolean
 function SandboxOptions.isValidPresetName(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -247,7 +246,6 @@ function SandboxOptions:toLua() end
 --- @public
 --- @return nil
 function SandboxOptions:updateFromLua() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -2,7 +2,7 @@
 
 --- @class ActiveMods
 --- @field public class any
-ActiveMods = {};
+ActiveMods = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -47,7 +47,6 @@ function ActiveMods.requiresResetLua(arg0) end
 --- @param arg0 ActiveMods
 --- @return nil
 function ActiveMods.setLoadedMods(arg0) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -98,7 +97,6 @@ function ActiveMods:removeMod(arg0) end
 --- @param arg1 boolean
 --- @return nil
 function ActiveMods:setModActive(arg0, arg1) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

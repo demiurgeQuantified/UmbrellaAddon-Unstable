@@ -2,7 +2,7 @@
 
 --- @class PZUnmodifiableCollection: Collection
 --- @field public class any
-PZUnmodifiableCollection = {};
+PZUnmodifiableCollection = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -117,5 +117,3 @@ function PZUnmodifiableCollection:toArray() end
 --- @public
 --- @return string
 function PZUnmodifiableCollection:toString() end
-
-

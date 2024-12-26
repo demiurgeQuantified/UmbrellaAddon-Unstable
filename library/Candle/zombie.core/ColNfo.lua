@@ -2,7 +2,7 @@
 
 --- @class ColNfo
 --- @field public class any
-ColNfo = {};
+ColNfo = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -51,7 +51,6 @@ function ColNfo:getR() end
 --- @public
 --- @return integer
 function ColNfo:getRInt() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -23,7 +23,7 @@
 --- @field public WorldXA integer
 --- @field public WorldYA integer
 --- @field public WorldZA integer
-IsoChunkMap = {};
+IsoChunkMap = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -40,7 +40,6 @@ function IsoChunkMap.CalcChunkWidth() end
 --- @param arg1 integer
 --- @return nil
 function IsoChunkMap.setWorldStartPos(arg0, arg1) end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -205,7 +204,6 @@ function IsoChunkMap:setInitialPos(arg0, arg1) end
 --- @public
 --- @return nil
 function IsoChunkMap:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

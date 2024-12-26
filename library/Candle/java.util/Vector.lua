@@ -2,7 +2,7 @@
 
 --- @class Vector: AbstractList, List, RandomAccess, Cloneable, Serializable
 --- @field public class any
-Vector = {};
+Vector = {}
 
 ------------------------------------
 ---------- STATIC METHODS ----------
@@ -29,7 +29,6 @@ function Vector.copyOf(arg0) end
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
 --- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function Vector.of() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -267,7 +266,6 @@ function Vector:toString() end
 --- @public
 --- @return nil
 function Vector:trimToSize() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

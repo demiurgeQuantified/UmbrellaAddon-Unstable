@@ -2,7 +2,7 @@
 
 --- @class Stage
 --- @field public class any
-Stage = {};
+Stage = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -85,7 +85,6 @@ function Stage:getTimeNeeded(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function Stage:playCompletionSound(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

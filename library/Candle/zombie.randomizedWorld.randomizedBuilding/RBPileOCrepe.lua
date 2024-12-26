@@ -2,7 +2,7 @@
 
 --- @class RBPileOCrepe: RandomizedBuildingBase
 --- @field public class any
-RBPileOCrepe = {};
+RBPileOCrepe = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -23,7 +23,6 @@ function RBPileOCrepe:randomizeBuilding(arg0) end
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function RBPileOCrepe:roomValid(arg0) end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

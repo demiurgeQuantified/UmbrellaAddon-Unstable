@@ -2,7 +2,7 @@
 
 --- @class IAnimEventWrappedBroadcaster: IAnimEventListener
 --- @field public class any
-IAnimEventWrappedBroadcaster = {};
+IAnimEventWrappedBroadcaster = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -28,5 +28,3 @@ function IAnimEventWrappedBroadcaster:animEvent(arg0, arg1) end
 --- @public
 --- @return AnimEventBroadcaster
 function IAnimEventWrappedBroadcaster:getAnimEventBroadcaster() end
-
-

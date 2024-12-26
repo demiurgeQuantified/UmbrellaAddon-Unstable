@@ -2,7 +2,7 @@
 
 --- @class RadarPanel: UIElement
 --- @field public class any
-RadarPanel = {};
+RadarPanel = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -15,7 +15,6 @@ function RadarPanel:render() end
 --- @public
 --- @return nil
 function RadarPanel:update() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

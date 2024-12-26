@@ -2,7 +2,7 @@
 
 --- @class VehicleLight
 --- @field public class any
-VehicleLight = {};
+VehicleLight = {}
 
 ------------------------------------
 ------------- METHODS --------------
@@ -61,7 +61,6 @@ function VehicleLight:setFocusingDown() end
 --- @return nil
 --- @deprecated
 function VehicleLight:setFocusingUp() end
-
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
