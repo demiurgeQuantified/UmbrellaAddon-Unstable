@@ -9,11 +9,11 @@ UniqueRecipe = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 String[]
+--- @param name string
+--- @param strArray String[]
 --- @return nil
 --- @overload fun(self: UniqueRecipe, arg0: string, arg1: string): nil
-function UniqueRecipe:Load(arg0, arg1) end
+function UniqueRecipe:Load(name, strArray) end
 
 --- @public
 --- @return string
@@ -40,35 +40,35 @@ function UniqueRecipe:getItems() end
 function UniqueRecipe:getName() end
 
 --- @public
---- @param arg0 string
+--- @param baseRecipe string
 --- @return nil
-function UniqueRecipe:setBaseRecipe(arg0) end
+function UniqueRecipe:setBaseRecipe(baseRecipe) end
 
 --- @public
---- @param arg0 integer
+--- @param boredomBonus integer
 --- @return nil
-function UniqueRecipe:setBoredomBonus(arg0) end
+function UniqueRecipe:setBoredomBonus(boredomBonus) end
 
 --- @public
---- @param arg0 integer
+--- @param hapinessBonus integer
 --- @return nil
-function UniqueRecipe:setHapinessBonus(arg0) end
+function UniqueRecipe:setHapinessBonus(hapinessBonus) end
 
 --- @public
---- @param arg0 integer
+--- @param hungerBonus integer
 --- @return nil
-function UniqueRecipe:setHungerBonus(arg0) end
+function UniqueRecipe:setHungerBonus(hungerBonus) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function UniqueRecipe:setName(arg0) end
+function UniqueRecipe:setName(name) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return UniqueRecipe
-function UniqueRecipe.new(arg0) end
+function UniqueRecipe.new(name) end

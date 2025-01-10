@@ -18,6 +18,9 @@ function IsoStove:Activated() end
 function IsoStove:PlayToggleSound() end
 
 --- @public
+---
+---  Turn on or off the stove, if no electricity it won't work
+---
 --- @return nil
 --- @overload fun(self: IsoStove): nil
 function IsoStove:Toggle() end
@@ -64,37 +67,37 @@ function IsoStove:isRunningFor() end
 function IsoStove:isTemperatureChanging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoStove:load(arg0, arg1, arg2) end
+function IsoStove:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoStove:save(arg0, arg1) end
+function IsoStove:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function IsoStove:setActivated(arg0) end
+function IsoStove:setActivated(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param broken boolean
 --- @return nil
-function IsoStove:setBroken(arg0) end
+function IsoStove:setBroken(broken) end
 
 --- @public
---- @param arg0 number
+--- @param maxTemperature number
 --- @return nil
-function IsoStove:setMaxTemperature(arg0) end
+function IsoStove:setMaxTemperature(maxTemperature) end
 
 --- @public
---- @param arg0 integer
+--- @param seconds integer
 --- @return nil
-function IsoStove:setTimer(arg0) end
+function IsoStove:setTimer(seconds) end
 
 --- @public
 --- @return boolean
@@ -105,23 +108,23 @@ function IsoStove:shouldShowOnOverlay() end
 function IsoStove:sync() end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 integer
---- @param arg2 UdpConnection
---- @param arg3 ByteBuffer
+--- @param bRemote boolean
+--- @param val integer
+--- @param source UdpConnection
+--- @param bb ByteBuffer
 --- @return nil
-function IsoStove:syncIsoObject(arg0, arg1, arg2, arg3) end
+function IsoStove:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return nil
-function IsoStove:syncIsoObjectSend(arg0) end
+function IsoStove:syncIsoObjectSend(b) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
+--- @param toggle boolean
+--- @param network boolean
 --- @return nil
-function IsoStove:syncSpriteGridObjects(arg0, arg1) end
+function IsoStove:syncSpriteGridObjects(toggle, network) end
 
 --- @public
 --- @return nil
@@ -132,7 +135,7 @@ function IsoStove:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoStove
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoStove
-function IsoStove.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoStove
+function IsoStove.new(cell) end

@@ -9,14 +9,14 @@ KeyRing = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Key
+--- @param key Key
 --- @return nil
-function KeyRing:addKey(arg0) end
+function KeyRing:addKey(key) end
 
 --- @public
---- @param arg0 integer
+--- @param keyId integer
 --- @return boolean
-function KeyRing:containsKeyId(arg0) end
+function KeyRing:containsKeyId(keyId) end
 
 --- @public
 --- @return string
@@ -31,18 +31,18 @@ function KeyRing:getKeys() end
 function KeyRing:getSaveType() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param keys ArrayList
 --- @return nil
-function KeyRing:setKeys(arg0) end
+function KeyRing:setKeys(keys) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param tex string
 --- @return KeyRing
-function KeyRing.new(arg0, arg1, arg2, arg3) end
+function KeyRing.new(module, name, type, tex) end

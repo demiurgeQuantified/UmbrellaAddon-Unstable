@@ -17,24 +17,24 @@ function ErosionConfig:consolePrint() end
 function ErosionConfig:getDebug() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function ErosionConfig:load(arg0) end
+function ErosionConfig:load(bb) end
 
 --- @public
---- @param arg0 string
+--- @param _file string
 --- @return boolean
-function ErosionConfig:readFile(arg0) end
+function ErosionConfig:readFile(_file) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function ErosionConfig:save(arg0) end
+function ErosionConfig:save(bb) end
 
 --- @public
---- @param arg0 string
+--- @param _file string
 --- @return nil
-function ErosionConfig:writeFile(arg0) end
+function ErosionConfig:writeFile(_file) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

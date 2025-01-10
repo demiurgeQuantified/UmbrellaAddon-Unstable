@@ -41,9 +41,9 @@ UIFont = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return UIFont
-function UIFont.FromString(arg0) end
+function UIFont.FromString(str) end
 
 --- @public
 --- @static
@@ -53,5 +53,9 @@ function UIFont.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return UIFont[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return UIFont[] an array containing the constants of this enum class, in the order they are declared
 function UIFont.values() end

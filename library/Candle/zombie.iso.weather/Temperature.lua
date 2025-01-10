@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class Temperature
+--- @class Temperature TurboTuTone.
 --- @field public class any
 --- @field public BodyMaxTemp number
 --- @field public BodyMinTemp number
@@ -35,22 +35,22 @@ Temperature = {}
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param celsius number
 --- @return number
-function Temperature.CelsiusToFahrenheit(arg0) end
+function Temperature.CelsiusToFahrenheit(celsius) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param fahrenheit number
 --- @return number
-function Temperature.FahrenheitToCelsius(arg0) end
+function Temperature.FahrenheitToCelsius(fahrenheit) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
+--- @param t number
+--- @param v number
 --- @return number
-function Temperature.WindchillCelsiusKph(arg0, arg1) end
+function Temperature.WindchillCelsiusKph(t, v) end
 
 --- @public
 --- @static
@@ -64,9 +64,9 @@ function Temperature.getFahrenheitPostfix() end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param rate number
 --- @return number
-function Temperature.getFractionForRealTimeRatePerMin(arg0) end
+function Temperature.getFractionForRealTimeRatePerMin(rate) end
 
 --- @public
 --- @static
@@ -81,33 +81,33 @@ function Temperature.getTemperaturePostfix() end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param celsius number
 --- @return string
-function Temperature.getTemperatureString(arg0) end
+function Temperature.getTemperatureString(celsius) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param insulation number
 --- @return number
-function Temperature.getTrueInsulationValue(arg0) end
+function Temperature.getTrueInsulationValue(insulation) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param windresist number
 --- @return number
-function Temperature.getTrueWindresistanceValue(arg0) end
+function Temperature.getTrueWindresistanceValue(windresist) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param val number
 --- @return Color
-function Temperature.getValueColor(arg0) end
+function Temperature.getValueColor(val) end
 
 --- @public
 --- @static
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return number
-function Temperature.getWindChillAmountForPlayer(arg0) end
+function Temperature.getWindChillAmountForPlayer(player) end
 
 --- @public
 --- @static

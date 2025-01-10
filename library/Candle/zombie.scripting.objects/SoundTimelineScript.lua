@@ -9,19 +9,19 @@ SoundTimelineScript = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param totalFile string
 --- @return nil
-function SoundTimelineScript:Load(arg0, arg1) end
+function SoundTimelineScript:Load(name, totalFile) end
 
 --- @public
 --- @return string
 function SoundTimelineScript:getEventName() end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return integer
-function SoundTimelineScript:getPosition(arg0) end
+function SoundTimelineScript:getPosition(id) end
 
 --- @public
 --- @return nil

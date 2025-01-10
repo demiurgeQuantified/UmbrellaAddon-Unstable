@@ -9,9 +9,9 @@ VehicleWindow = {}
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param amount integer
 --- @return nil
-function VehicleWindow:damage(arg0) end
+function VehicleWindow:damage(amount) end
 
 --- @public
 --- @return integer
@@ -26,14 +26,14 @@ function VehicleWindow:getOpenDelta() end
 function VehicleWindow:getPart() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function VehicleWindow:hit(arg0) end
+function VehicleWindow:hit(chr) end
 
 --- @public
---- @param arg0 Window
+--- @param scriptWindow Window
 --- @return nil
-function VehicleWindow:init(arg0) end
+function VehicleWindow:init(scriptWindow) end
 
 --- @public
 --- @return boolean
@@ -52,27 +52,27 @@ function VehicleWindow:isOpen() end
 function VehicleWindow:isOpenable() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function VehicleWindow:load(arg0, arg1) end
+function VehicleWindow:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function VehicleWindow:save(arg0) end
+function VehicleWindow:save(output) end
 
 --- @public
---- @param arg0 integer
+--- @param health integer
 --- @return nil
-function VehicleWindow:setHealth(arg0) end
+function VehicleWindow:setHealth(health) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return nil
-function VehicleWindow:setOpen(arg0) end
+function VehicleWindow:setOpen(open) end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
-function VehicleWindow:setOpenDelta(arg0) end
+function VehicleWindow:setOpenDelta(delta) end

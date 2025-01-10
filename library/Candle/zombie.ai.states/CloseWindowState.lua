@@ -18,33 +18,33 @@ function CloseWindowState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function CloseWindowState:animEvent(arg0, arg1) end
+function CloseWindowState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function CloseWindowState:enter(arg0) end
+function CloseWindowState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function CloseWindowState:execute(arg0) end
+function CloseWindowState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function CloseWindowState:exit(arg0) end
+function CloseWindowState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return IsoWindow
-function CloseWindowState:getWindow(arg0) end
+function CloseWindowState:getWindow(owner) end
 
 --- @public
---- @return boolean
+--- @return boolean TRUE if this state handles the "Cancel Action" key or the B controller button.
 function CloseWindowState:isDoingActionThatCanBeCancelled() end
 
 ------------------------------------

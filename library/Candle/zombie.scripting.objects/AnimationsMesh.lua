@@ -9,10 +9,10 @@ AnimationsMesh = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param totalFile string
 --- @return nil
-function AnimationsMesh:Load(arg0, arg1) end
+function AnimationsMesh:Load(name, totalFile) end
 
 --- @public
 --- @return nil

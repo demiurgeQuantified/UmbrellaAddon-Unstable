@@ -18,10 +18,10 @@ function UI3DModel:clearVariable(arg0) end
 function UI3DModel:clearVariables() end
 
 --- @public
---- @param arg0 string
+--- @param itemGuid string
 --- @return nil
---- @overload fun(self: UI3DModel, arg0: string): nil
-function UI3DModel:clothingItemChanged(arg0) end
+--- @overload fun(self: UI3DModel, itemGuid: string): nil
+function UI3DModel:clothingItemChanged(itemGuid) end
 
 --- @public
 --- @return IsoGameCharacter
@@ -45,56 +45,56 @@ function UI3DModel:getVariable(arg0) end
 function UI3DModel:render() end
 
 --- @public
---- @param arg0 string
+--- @param event string
 --- @return nil
-function UI3DModel:reportEvent(arg0) end
+function UI3DModel:reportEvent(event) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function UI3DModel:setAnimSetName(arg0) end
+function UI3DModel:setAnimSetName(name) end
 
 --- @public
---- @param arg0 boolean
+--- @param animate boolean
 --- @return nil
-function UI3DModel:setAnimate(arg0) end
+function UI3DModel:setAnimate(animate) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param character IsoGameCharacter
 --- @return nil
-function UI3DModel:setCharacter(arg0) end
+function UI3DModel:setCharacter(character) end
 
 --- @public
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return nil
-function UI3DModel:setDirection(arg0) end
+function UI3DModel:setDirection(dir) end
 
 --- @public
---- @param arg0 boolean
+--- @param doExt boolean
 --- @return nil
-function UI3DModel:setDoRandomExtAnimations(arg0) end
+function UI3DModel:setDoRandomExtAnimations(doExt) end
 
 --- @public
---- @param arg0 boolean
+--- @param iso boolean
 --- @return nil
-function UI3DModel:setIsometric(arg0) end
+function UI3DModel:setIsometric(iso) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param outfitName string
+--- @param female boolean
+--- @param zombie boolean
 --- @return nil
-function UI3DModel:setOutfitName(arg0, arg1, arg2) end
+function UI3DModel:setOutfitName(outfitName, female, zombie) end
 
 --- @public
---- @param arg0 string
+--- @param state string
 --- @return nil
-function UI3DModel:setState(arg0) end
+function UI3DModel:setState(state) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param survivorDesc SurvivorDesc
 --- @return nil
-function UI3DModel:setSurvivorDesc(arg0) end
+function UI3DModel:setSurvivorDesc(survivorDesc) end
 
 --- @public
 --- @param arg0 string
@@ -105,25 +105,25 @@ function UI3DModel:setSurvivorDesc(arg0) end
 function UI3DModel:setVariable(arg0, arg1) end
 
 --- @public
---- @param arg0 number
+--- @param newXOffset number
 --- @return nil
-function UI3DModel:setXOffset(arg0) end
+function UI3DModel:setXOffset(newXOffset) end
 
 --- @public
---- @param arg0 number
+--- @param newYOffset number
 --- @return nil
-function UI3DModel:setYOffset(arg0) end
+function UI3DModel:setYOffset(newYOffset) end
 
 --- @public
---- @param arg0 number
+--- @param newZoom number
 --- @return nil
-function UI3DModel:setZoom(arg0) end
+function UI3DModel:setZoom(newZoom) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return UI3DModel
-function UI3DModel.new(arg0) end
+function UI3DModel.new(table) end

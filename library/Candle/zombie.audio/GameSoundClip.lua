@@ -55,9 +55,9 @@ function GameSoundClip:hasMaxDistance() end
 function GameSoundClip:hasMinDistance() end
 
 --- @public
---- @param arg0 FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
 --- @return boolean
-function GameSoundClip:hasParameter(arg0) end
+function GameSoundClip:hasParameter(parameterDescription) end
 
 --- @public
 --- @return boolean
@@ -68,6 +68,6 @@ function GameSoundClip:hasSustainPoints() end
 ------------------------------------
 
 --- @public
---- @param arg0 GameSound
+--- @param gameSound GameSound
 --- @return GameSoundClip
-function GameSoundClip.new(arg0) end
+function GameSoundClip.new(gameSound) end

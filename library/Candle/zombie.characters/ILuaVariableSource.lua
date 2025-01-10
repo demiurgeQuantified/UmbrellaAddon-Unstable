@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ILuaVariableSource
+--- @class ILuaVariableSource ILuaVariableSource   Provides the functions expected by LUA when dealing with objects of this type.
 --- @field public class any
 ILuaVariableSource = {}
 
@@ -9,17 +9,17 @@ ILuaVariableSource = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return nil
-function ILuaVariableSource:ClearVariable(arg0) end
+function ILuaVariableSource:ClearVariable(key) end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return string
-function ILuaVariableSource:GetVariable(arg0) end
+function ILuaVariableSource:GetVariable(key) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param key string
+--- @param value string
 --- @return nil
-function ILuaVariableSource:SetVariable(arg0, arg1) end
+function ILuaVariableSource:SetVariable(key, value) end

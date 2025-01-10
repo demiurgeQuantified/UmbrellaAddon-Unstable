@@ -9,9 +9,9 @@ BodyLocation = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return BodyLocation
-function BodyLocation:addAlias(arg0) end
+function BodyLocation:addAlias(alias) end
 
 --- @public
 --- @return string
@@ -23,19 +23,19 @@ function BodyLocation:getId() end
 function BodyLocation:isAltModel(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return boolean
-function BodyLocation:isExclusive(arg0) end
+function BodyLocation:isExclusive(id) end
 
 --- @public
---- @param arg0 string
+--- @param otherId string
 --- @return boolean
-function BodyLocation:isHideModel(arg0) end
+function BodyLocation:isHideModel(otherId) end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return boolean
-function BodyLocation:isID(arg0) end
+function BodyLocation:isID(id) end
 
 --- @public
 --- @return boolean
@@ -47,26 +47,26 @@ function BodyLocation:isMultiItem() end
 function BodyLocation:setAltModel(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param otherId string
 --- @return BodyLocation
-function BodyLocation:setExclusive(arg0) end
+function BodyLocation:setExclusive(otherId) end
 
 --- @public
---- @param arg0 string
+--- @param otherId string
 --- @return BodyLocation
-function BodyLocation:setHideModel(arg0) end
+function BodyLocation:setHideModel(otherId) end
 
 --- @public
---- @param arg0 boolean
+--- @param bMultiItem boolean
 --- @return BodyLocation
-function BodyLocation:setMultiItem(arg0) end
+function BodyLocation:setMultiItem(bMultiItem) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 BodyLocationGroup
---- @param arg1 string
+--- @param group BodyLocationGroup
+--- @param id string
 --- @return BodyLocation
-function BodyLocation.new(arg0, arg1) end
+function BodyLocation.new(group, id) end

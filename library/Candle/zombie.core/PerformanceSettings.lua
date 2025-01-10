@@ -34,9 +34,9 @@ function PerformanceSettings.getLockFPS() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param lockFPS integer
 --- @return nil
-function PerformanceSettings.setLockFPS(arg0) end
+function PerformanceSettings.setLockFPS(lockFPS) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -79,44 +79,44 @@ function PerformanceSettings:getWaterQuality() end
 function PerformanceSettings:isFramerateUncapped() end
 
 --- @public
---- @param arg0 integer
+--- @param fogQuality integer
 --- @return nil
-function PerformanceSettings:setFogQuality(arg0) end
+function PerformanceSettings:setFogQuality(fogQuality) end
 
 --- @public
---- @param arg0 integer
+--- @param framerate integer
 --- @return nil
-function PerformanceSettings:setFramerate(arg0) end
+function PerformanceSettings:setFramerate(framerate) end
 
 --- @public
---- @param arg0 boolean
+--- @param val boolean
 --- @return nil
-function PerformanceSettings:setFramerateUncapped(arg0) end
+function PerformanceSettings:setFramerateUncapped(val) end
 
 --- @public
---- @param arg0 integer
+--- @param fps integer
 --- @return nil
-function PerformanceSettings:setLightingFPS(arg0) end
+function PerformanceSettings:setLightingFPS(fps) end
 
 --- @public
---- @param arg0 integer
+--- @param lighting integer
 --- @return nil
-function PerformanceSettings:setLightingQuality(arg0) end
+function PerformanceSettings:setLightingQuality(lighting) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return nil
-function PerformanceSettings:setNewRoofHiding(arg0) end
+function PerformanceSettings:setNewRoofHiding(enabled) end
 
 --- @public
---- @param arg0 integer
+--- @param puddles integer
 --- @return nil
-function PerformanceSettings:setPuddlesQuality(arg0) end
+function PerformanceSettings:setPuddlesQuality(puddles) end
 
 --- @public
---- @param arg0 integer
+--- @param water integer
 --- @return nil
-function PerformanceSettings:setWaterQuality(arg0) end
+function PerformanceSettings:setWaterQuality(water) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -9,9 +9,9 @@ Safety = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Safety
+--- @param other Safety
 --- @return nil
-function Safety:copyFrom(arg0) end
+function Safety:copyFrom(other) end
 
 --- @public
 --- @return any
@@ -42,35 +42,35 @@ function Safety:isLast() end
 function Safety:isToggleAllowed() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Safety:load(arg0, arg1) end
+function Safety:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function Safety:save(arg0) end
+function Safety:save(output) end
 
 --- @public
---- @param arg0 number
+--- @param cooldown number
 --- @return nil
-function Safety:setCooldown(arg0) end
+function Safety:setCooldown(cooldown) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return nil
-function Safety:setEnabled(arg0) end
+function Safety:setEnabled(enabled) end
 
 --- @public
---- @param arg0 boolean
+--- @param last boolean
 --- @return nil
-function Safety:setLast(arg0) end
+function Safety:setLast(last) end
 
 --- @public
---- @param arg0 number
+--- @param toggle number
 --- @return nil
-function Safety:setToggle(arg0) end
+function Safety:setToggle(toggle) end
 
 --- @public
 --- @return nil
@@ -82,5 +82,5 @@ function Safety:toggleSafety() end
 
 --- @public
 --- @return Safety
---- @overload fun(arg0: IsoGameCharacter): Safety
+--- @overload fun(character: IsoGameCharacter): Safety
 function Safety.new() end

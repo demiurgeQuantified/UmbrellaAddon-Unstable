@@ -40,15 +40,15 @@ IsoObjectType = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return IsoObjectType
-function IsoObjectType.FromString(arg0) end
+function IsoObjectType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param value integer
 --- @return IsoObjectType
-function IsoObjectType.fromIndex(arg0) end
+function IsoObjectType.fromIndex(value) end
 
 --- @public
 --- @static
@@ -58,7 +58,11 @@ function IsoObjectType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return IsoObjectType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return IsoObjectType[] an array containing the constants of this enum class, in the order they are declared
 function IsoObjectType.values() end
 
 ------------------------------------

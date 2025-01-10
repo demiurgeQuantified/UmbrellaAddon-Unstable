@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RadialProgressBar: UIElement
+--- @class RadialProgressBar: UIElement TurboTuTone.
 --- @field public class any
 RadialProgressBar = {}
 
@@ -21,14 +21,14 @@ function RadialProgressBar:getValue() end
 function RadialProgressBar:render() end
 
 --- @public
---- @param arg0 Texture
+--- @param texture Texture
 --- @return nil
-function RadialProgressBar:setTexture(arg0) end
+function RadialProgressBar:setTexture(texture) end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
-function RadialProgressBar:setValue(arg0) end
+function RadialProgressBar:setValue(delta) end
 
 --- @public
 --- @return nil
@@ -39,7 +39,7 @@ function RadialProgressBar:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 table
---- @param arg1 Texture
+--- @param table table
+--- @param tex Texture
 --- @return RadialProgressBar
-function RadialProgressBar.new(arg0, arg1) end
+function RadialProgressBar.new(table, tex) end

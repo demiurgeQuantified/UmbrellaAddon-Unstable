@@ -9,9 +9,9 @@ IsoMarker = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoObject
+--- @param tempObject IsoObject
 --- @return nil
-function IsoMarker:addTempSquareObject(arg0) end
+function IsoMarker:addTempSquareObject(tempObject) end
 
 --- @public
 --- @return number
@@ -70,16 +70,16 @@ function IsoMarker:getZ() end
 function IsoMarker:hasTempSquareObject() end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 IsoGridSquare
---- @param arg5 boolean
+--- @param spriteName string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param gs IsoGridSquare
+--- @param doTempIsoObject boolean
 --- @return nil
---- @overload fun(self: IsoMarker, arg0: table, arg1: table, arg2: integer, arg3: integer, arg4: integer, arg5: IsoGridSquare): nil
---- @overload fun(self: IsoMarker, arg0: table, arg1: table, arg2: integer, arg3: integer, arg4: integer, arg5: IsoGridSquare, arg6: boolean): nil
-function IsoMarker:init(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(self: IsoMarker, textureTable: table, textureOverlayTable: table, x: integer, y: integer, z: integer, gs: IsoGridSquare): nil
+--- @overload fun(self: IsoMarker, textureTable: table, textureOverlayTable: table, x: integer, y: integer, z: integer, gs: IsoGridSquare, doTempIsoObject: boolean): nil
+function IsoMarker:init(spriteName, x, y, z, gs, doTempIsoObject) end
 
 --- @public
 --- @return boolean
@@ -102,66 +102,66 @@ function IsoMarker:remove() end
 function IsoMarker:removeTempSquareObjects() end
 
 --- @public
---- @param arg0 number
+--- @param a number
 --- @return nil
-function IsoMarker:setA(arg0) end
+function IsoMarker:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return nil
-function IsoMarker:setActive(arg0) end
+function IsoMarker:setActive(active) end
 
 --- @public
---- @param arg0 number
+--- @param alpha number
 --- @return nil
-function IsoMarker:setAlpha(arg0) end
+function IsoMarker:setAlpha(alpha) end
 
 --- @public
---- @param arg0 number
+--- @param alphaMax number
 --- @return nil
-function IsoMarker:setAlphaMax(arg0) end
+function IsoMarker:setAlphaMax(alphaMax) end
 
 --- @public
---- @param arg0 number
+--- @param alphaMin number
 --- @return nil
-function IsoMarker:setAlphaMin(arg0) end
+function IsoMarker:setAlphaMin(alphaMin) end
 
 --- @public
---- @param arg0 number
+--- @param b number
 --- @return nil
-function IsoMarker:setB(arg0) end
+function IsoMarker:setB(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param doAlpha boolean
 --- @return nil
-function IsoMarker:setDoAlpha(arg0) end
+function IsoMarker:setDoAlpha(doAlpha) end
 
 --- @public
---- @param arg0 number
+--- @param fadeSpeed number
 --- @return nil
-function IsoMarker:setFadeSpeed(arg0) end
+function IsoMarker:setFadeSpeed(fadeSpeed) end
 
 --- @public
---- @param arg0 number
+--- @param g number
 --- @return nil
-function IsoMarker:setG(arg0) end
+function IsoMarker:setG(g) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function IsoMarker:setPos(arg0, arg1, arg2) end
+function IsoMarker:setPos(x, y, z) end
 
 --- @public
---- @param arg0 number
+--- @param r number
 --- @return nil
-function IsoMarker:setR(arg0) end
+function IsoMarker:setR(r) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return nil
-function IsoMarker:setSquare(arg0) end
+function IsoMarker:setSquare(square) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

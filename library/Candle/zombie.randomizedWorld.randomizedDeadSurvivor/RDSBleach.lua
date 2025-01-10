@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSBleach: RandomizedDeadSurvivorBase
+--- @class RDSBleach: RandomizedDeadSurvivorBase Create a dead survivor in the kitchen with empty bleach bottle around him
 --- @field public class any
 RDSBleach = {}
 
@@ -9,9 +9,9 @@ RDSBleach = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSBleach:randomizeDeadSurvivor(arg0) end
+function RDSBleach:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

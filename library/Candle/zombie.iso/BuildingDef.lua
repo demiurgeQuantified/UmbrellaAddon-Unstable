@@ -9,9 +9,9 @@ BuildingDef = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ArrayList
+--- @param tempRooms ArrayList
 --- @return nil
-function BuildingDef:CalculateBounds(arg0) end
+function BuildingDef:CalculateBounds(tempRooms) end
 
 --- @public
 --- @return nil
@@ -33,15 +33,15 @@ function BuildingDef:addRoomsOf(arg0, arg1) end
 function BuildingDef:calculateCollapseRect() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param cellX integer
+--- @param cellY integer
 --- @return integer
-function BuildingDef:calculateMetaID(arg0, arg1) end
+function BuildingDef:calculateMetaID(cellX, cellY) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function BuildingDef:containsRoom(arg0) end
+function BuildingDef:containsRoom(name) end
 
 --- @public
 --- @param arg0 integer
@@ -59,11 +59,11 @@ function BuildingDef:getChunkX() end
 function BuildingDef:getChunkY() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 Vector2f
+--- @param x number
+--- @param y number
+--- @param closestXY Vector2f
 --- @return number
-function BuildingDef:getClosestPoint(arg0, arg1, arg2) end
+function BuildingDef:getClosestPoint(x, y, closestXY) end
 
 --- @public
 --- @return RoomDef
@@ -98,10 +98,10 @@ function BuildingDef:getMaxLevel() end
 function BuildingDef:getMinLevel() end
 
 --- @public
---- @param arg0 integer
+--- @param minArea integer
 --- @return RoomDef
 --- @overload fun(self: BuildingDef, arg0: integer, arg1: boolean): RoomDef
-function BuildingDef:getRandomRoom(arg0) end
+function BuildingDef:getRandomRoom(minArea) end
 
 --- @public
 --- @param arg0 integer
@@ -109,10 +109,10 @@ function BuildingDef:getRandomRoom(arg0) end
 function BuildingDef:getRoofRoomID(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param roomName string
 --- @return RoomDef
 --- @overload fun(self: BuildingDef, arg0: string, arg1: boolean): RoomDef
-function BuildingDef:getRoom(arg0) end
+function BuildingDef:getRoom(roomName) end
 
 --- @public
 --- @return ArrayList
@@ -183,10 +183,10 @@ function BuildingDef:isFullyStreamedIn() end
 function BuildingDef:isHasBeenVisited() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return boolean
-function BuildingDef:overlapsChunk(arg0, arg1) end
+function BuildingDef:overlapsChunk(wx, wy) end
 
 --- @public
 --- @return nil
@@ -197,19 +197,19 @@ function BuildingDef:recalculate() end
 function BuildingDef:refreshSquares() end
 
 --- @public
---- @param arg0 boolean
+--- @param alarm boolean
 --- @return nil
-function BuildingDef:setAlarmed(arg0) end
+function BuildingDef:setAlarmed(alarm) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function BuildingDef:setAllExplored(arg0) end
+function BuildingDef:setAllExplored(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param hasBeenVisited boolean
 --- @return nil
-function BuildingDef:setHasBeenVisited(arg0) end
+function BuildingDef:setHasBeenVisited(hasBeenVisited) end
 
 --- @public
 --- @param arg0 integer
@@ -218,14 +218,14 @@ function BuildingDef:setHasBeenVisited(arg0) end
 function BuildingDef:setInvalidateCacheForAllChunks(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
+--- @param keyId integer
 --- @return nil
-function BuildingDef:setKeyId(arg0) end
+function BuildingDef:setKeyId(keyId) end
 
 --- @public
---- @param arg0 integer
+--- @param keySpawned integer
 --- @return nil
-function BuildingDef:setKeySpawned(arg0) end
+function BuildingDef:setKeySpawned(keySpawned) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

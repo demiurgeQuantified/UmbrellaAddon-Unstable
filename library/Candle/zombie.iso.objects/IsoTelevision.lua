@@ -9,9 +9,9 @@ IsoTelevision = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return nil
-function IsoTelevision:addTvScreenSprite(arg0) end
+function IsoTelevision:addTvScreenSprite(sprite) end
 
 --- @public
 --- @return nil
@@ -22,31 +22,31 @@ function IsoTelevision:clearTvScreenSprites() end
 function IsoTelevision:getObjectName() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return boolean
-function IsoTelevision:isFacing(arg0) end
+function IsoTelevision:isFacing(player) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoTelevision:load(arg0, arg1, arg2) end
+function IsoTelevision:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return nil
-function IsoTelevision:removeTvScreenSprite(arg0) end
+function IsoTelevision:removeTvScreenSprite(sprite) end
 
 --- @public
 --- @return nil
 function IsoTelevision:renderlast() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoTelevision:save(arg0, arg1) end
+function IsoTelevision:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return nil
@@ -57,7 +57,7 @@ function IsoTelevision:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoTelevision
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoTelevision
-function IsoTelevision.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoTelevision
+function IsoTelevision.new(cell) end

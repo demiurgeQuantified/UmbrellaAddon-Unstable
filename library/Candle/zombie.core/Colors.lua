@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class Colors
+--- @class Colors TurboTuTone.
 --- @field public class any
 --- @field public AliceBlue Color
 --- @field public AntiqueWhite Color
@@ -227,21 +227,21 @@ function Colors.CB_GetRandomColor() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function Colors.ColorExists(arg0) end
+function Colors.ColorExists(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return Color
-function Colors.GetColorByName(arg0) end
+function Colors.GetColorByName(name) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return Color
-function Colors.GetColorFromIndex(arg0) end
+function Colors.GetColorFromIndex(index) end
 
 --- @public
 --- @static

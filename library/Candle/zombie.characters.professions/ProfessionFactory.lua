@@ -16,18 +16,18 @@ function ProfessionFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 integer
+--- @param type string
+--- @param name string
+--- @param IconPath string
+--- @param points integer
 --- @return Profession
-function ProfessionFactory.addProfession(arg0, arg1, arg2, arg3) end
+function ProfessionFactory.addProfession(type, name, IconPath, points) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param type string
 --- @return Profession
-function ProfessionFactory.getProfession(arg0) end
+function ProfessionFactory.getProfession(type) end
 
 --- @public
 --- @static

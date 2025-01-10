@@ -37,20 +37,20 @@ function VehicleLight:getFocusing() end
 function VehicleLight:getIntensity() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function VehicleLight:load(arg0, arg1) end
+function VehicleLight:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function VehicleLight:save(arg0) end
+function VehicleLight:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return nil
-function VehicleLight:setActive(arg0) end
+function VehicleLight:setActive(active) end
 
 --- @public
 --- @return nil

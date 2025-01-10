@@ -9,27 +9,39 @@ Font = {}
 ------------------------------------
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 string
+---
+---  Draw a string to the screen
+---
+--- @param x number The x location at which to draw the string
+--- @param y number
+--- @param text string
 --- @return nil
---- @overload fun(self: Font, arg0: number, arg1: number, arg2: string, arg3: Color): nil
---- @overload fun(self: Font, arg0: number, arg1: number, arg2: string, arg3: Color, arg4: integer, arg5: integer): nil
-function Font:drawString(arg0, arg1, arg2) end
+--- @overload fun(self: Font, x: number, y: number, text: string, col: Color): nil
+--- @overload fun(self: Font, x: number, y: number, text: string, col: Color, startIndex: integer, endIndex: integer): nil
+function Font:drawString(x, y, text) end
 
 --- @public
---- @param arg0 string
---- @return integer
-function Font:getHeight(arg0) end
+---
+---  get the height of the given string
+---
+--- @param str string The string to obtain the rendered with of
+--- @return integer The width of the given string
+function Font:getHeight(str) end
 
 --- @public
---- @return integer
+---
+---  get the maximum height of any line drawn by this font
+---
+--- @return integer The maxium height of any line drawn by this font
 function Font:getLineHeight() end
 
 --- @public
---- @param arg0 string
---- @return integer
---- @overload fun(self: Font, arg0: string, arg1: boolean): integer
---- @overload fun(self: Font, arg0: string, arg1: integer, arg2: integer): integer
---- @overload fun(self: Font, arg0: string, arg1: integer, arg2: integer, arg3: boolean): integer
-function Font:getWidth(arg0) end
+---
+---  get the width of the given string
+---
+--- @param str string The string to obtain the rendered with of
+--- @return integer The width of the given string
+--- @overload fun(self: Font, str: string, xAdvance: boolean): integer
+--- @overload fun(self: Font, str: string, startIndex: integer, endIndex: integer): integer
+--- @overload fun(self: Font, str: string, startIndex: integer, endIndex: integer, xAdvance: boolean): integer
+function Font:getWidth(str) end

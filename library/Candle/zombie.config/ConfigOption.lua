@@ -33,18 +33,18 @@ function ConfigOption:getValueAsObject() end
 function ConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return boolean
-function ConfigOption:isValidString(arg0) end
+function ConfigOption:isValidString(s) end
 
 --- @public
 --- @return ConfigOption
 function ConfigOption:makeCopy() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return nil
-function ConfigOption:parse(arg0) end
+function ConfigOption:parse(s) end
 
 --- @public
 --- @return nil
@@ -55,15 +55,15 @@ function ConfigOption:resetToDefault() end
 function ConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return nil
-function ConfigOption:setValueFromObject(arg0) end
+function ConfigOption:setValueFromObject(o) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function ConfigOption.new(arg0) end
+function ConfigOption.new(name) end

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class SteamFriend
+--- @class SteamFriend Created by Gennadiy on 11.06.2015.
 --- @field public class any
 SteamFriend = {}
 
@@ -30,5 +30,5 @@ function SteamFriend:getSteamID() end
 
 --- @public
 --- @return SteamFriend
---- @overload fun(arg0: string, arg1: integer): SteamFriend
+--- @overload fun(name: string, steamID: integer): SteamFriend
 function SteamFriend.new() end

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RVSFlippedCrash: RandomizedVehicleStoryBase
+--- @class RVSFlippedCrash: RandomizedVehicleStoryBase Flipped car with bodies & blood near it, can be burnt
 --- @field public class any
 RVSFlippedCrash = {}
 
@@ -9,23 +9,23 @@ RVSFlippedCrash = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RVSFlippedCrash:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RVSFlippedCrash:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return nil
-function RVSFlippedCrash:randomizeVehicleStory(arg0, arg1) end
+function RVSFlippedCrash:randomizeVehicleStory(zone, chunk) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return nil
-function RVSFlippedCrash:spawnElement(arg0, arg1) end
+function RVSFlippedCrash:spawnElement(spawner, element) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

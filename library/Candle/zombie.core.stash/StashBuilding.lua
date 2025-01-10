@@ -17,8 +17,8 @@ function StashBuilding:getName() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
+--- @param stashName string
+--- @param buildingX integer
+--- @param buildingY integer
 --- @return StashBuilding
-function StashBuilding.new(arg0, arg1, arg2) end
+function StashBuilding.new(stashName, buildingX, buildingY) end

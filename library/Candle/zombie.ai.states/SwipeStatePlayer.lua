@@ -25,19 +25,19 @@ function SwipeStatePlayer.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function SwipeStatePlayer:enter(arg0) end
+function SwipeStatePlayer:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function SwipeStatePlayer:execute(arg0) end
+function SwipeStatePlayer:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function SwipeStatePlayer:exit(arg0) end
+function SwipeStatePlayer:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

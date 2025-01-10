@@ -25,8 +25,8 @@ function ExitOption:getStartDelay() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
+--- @param name string
+--- @param rollchance integer
+--- @param startdelay integer
 --- @return ExitOption
-function ExitOption.new(arg0, arg1, arg2) end
+function ExitOption.new(name, rollchance, startdelay) end

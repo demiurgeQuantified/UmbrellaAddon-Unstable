@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSGunmanInBathroom: RandomizedDeadSurvivorBase
+--- @class RDSGunmanInBathroom: RandomizedDeadSurvivorBase Just a dead survivor in a bathroom with pistol or shotgun on him
 --- @field public class any
 RDSGunmanInBathroom = {}
 
@@ -9,9 +9,9 @@ RDSGunmanInBathroom = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSGunmanInBathroom:randomizeDeadSurvivor(arg0) end
+function RDSGunmanInBathroom:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

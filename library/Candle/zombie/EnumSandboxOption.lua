@@ -14,10 +14,10 @@ EnumSandboxOption = {}
 function EnumSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: EnumSandboxOption, arg0: table): nil
-function EnumSandboxOption:fromTable(arg0) end
+--- @overload fun(self: EnumSandboxOption, table: table): nil
+function EnumSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
@@ -49,14 +49,14 @@ function EnumSandboxOption:getTranslatedName() end
 function EnumSandboxOption:getValueTranslation() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return string
-function EnumSandboxOption:getValueTranslationByIndex(arg0) end
+function EnumSandboxOption:getValueTranslationByIndex(index) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return string
-function EnumSandboxOption:getValueTranslationByIndexOrNull(arg0) end
+function EnumSandboxOption:getValueTranslationByIndexOrNull(index) end
 
 --- @public
 --- @return boolean
@@ -69,36 +69,36 @@ function EnumSandboxOption:isCustom() end
 function EnumSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 string
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: EnumSandboxOption, arg0: string): SandboxOption
-function EnumSandboxOption:setPageName(arg0) end
+--- @overload fun(self: EnumSandboxOption, pageName: string): SandboxOption
+function EnumSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: EnumSandboxOption, arg0: string): SandboxOption
-function EnumSandboxOption:setTranslation(arg0) end
+--- @overload fun(self: EnumSandboxOption, translation: string): SandboxOption
+function EnumSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return EnumSandboxOption
-function EnumSandboxOption:setValueTranslation(arg0) end
+function EnumSandboxOption:setValueTranslation(translation) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: EnumSandboxOption, arg0: table): nil
-function EnumSandboxOption:toTable(arg0) end
+--- @overload fun(self: EnumSandboxOption, table: table): nil
+function EnumSandboxOption:toTable(table) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
+--- @param owner SandboxOptions
+--- @param name string
+--- @param numValues integer
+--- @param defaultValue integer
 --- @return EnumSandboxOption
-function EnumSandboxOption.new(arg0, arg1, arg2, arg3) end
+function EnumSandboxOption.new(owner, name, numValues, defaultValue) end

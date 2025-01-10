@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBBasic: RandomizedBuildingBase
+--- @class RBBasic: RandomizedBuildingBase This is a basic randomized building, some inside door will be opened, can  have profession specific loots and cold cooked food in stove Also this type  of house can have speicfic dead survivor/zombies/story inside them
 --- @field public class any
 RBBasic = {}
 
@@ -25,16 +25,16 @@ function RBBasic.getUniqueRDSSpawned() end
 function RBBasic:doProfessionBuilding(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 string
+--- @param def BuildingDef
+--- @param professionChoosed string
 --- @return nil
-function RBBasic:doProfessionStory(arg0, arg1) end
+function RBBasic:doProfessionStory(def, professionChoosed) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 RandomizedDeadSurvivorBase
+--- @param buildingDef BuildingDef
+--- @param DSDef RandomizedDeadSurvivorBase
 --- @return nil
-function RBBasic:doRandomDeadSurvivorStory(arg0, arg1) end
+function RBBasic:doRandomDeadSurvivorStory(buildingDef, DSDef) end
 
 --- @public
 --- @param arg0 BaseVehicle
@@ -51,9 +51,9 @@ function RBBasic:getSurvivorProfession() end
 function RBBasic:getSurvivorStories() end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBBasic:randomizeBuilding(arg0) end
+function RBBasic:randomizeBuilding(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

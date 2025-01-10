@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IReplaceProvider
+--- @class IReplaceProvider TurboTuTone.  Interface that can provide IReplace for ITemplateBuilder.  Any keys present in a IReplaceProvider take priority when replacing keys in a template.   NOTE: When checking the key String, this should be equaling a lowercase version or equalsIgnoreCase
 --- @field public class any
 IReplaceProvider = {}
 
@@ -9,11 +9,11 @@ IReplaceProvider = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return IReplace
-function IReplaceProvider:getReplacer(arg0) end
+function IReplaceProvider:getReplacer(key) end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return boolean
-function IReplaceProvider:hasReplacer(arg0) end
+function IReplaceProvider:hasReplacer(key) end

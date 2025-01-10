@@ -12,9 +12,9 @@ IsoMetaGrid = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param isoPlayer IsoGameCharacter
 --- @return nil
-function IsoMetaGrid:AddToMeta(arg0) end
+function IsoMetaGrid:AddToMeta(isoPlayer) end
 
 --- @public
 --- @return nil
@@ -33,9 +33,9 @@ function IsoMetaGrid:CreateStep2() end
 function IsoMetaGrid:Dispose() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param isoPlayer IsoPlayer
 --- @return nil
-function IsoMetaGrid:RemoveFromMeta(arg0) end
+function IsoMetaGrid:RemoveFromMeta(isoPlayer) end
 
 --- @public
 --- @param arg0 IsoMetaCell
@@ -58,17 +58,17 @@ function IsoMetaGrid:addZone(arg0) end
 function IsoMetaGrid:checkVehiclesZones() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param isoPlayer IsoPlayer
 --- @return integer
-function IsoMetaGrid:countNearbyBuildingsRooms(arg0) end
+function IsoMetaGrid:countNearbyBuildingsRooms(isoPlayer) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
 --- @return integer
-function IsoMetaGrid:countRoomsIntersecting(arg0, arg1, arg2, arg3) end
+function IsoMetaGrid:countRoomsIntersecting(x, y, w, h) end
 
 --- @public
 --- @param arg0 integer
@@ -77,16 +77,16 @@ function IsoMetaGrid:countRoomsIntersecting(arg0, arg1, arg2, arg3) end
 function IsoMetaGrid:getAssociatedBuildingAt(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return BuildingDef
-function IsoMetaGrid:getBuildingAt(arg0, arg1) end
+function IsoMetaGrid:getBuildingAt(x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return BuildingDef
-function IsoMetaGrid:getBuildingAtRelax(arg0, arg1) end
+function IsoMetaGrid:getBuildingAtRelax(x, y) end
 
 --- @public
 --- @return ArrayList
@@ -108,16 +108,16 @@ function IsoMetaGrid:getBuildingsIntersecting(arg0, arg1, arg2, arg3, arg4) end
 function IsoMetaGrid:getCell(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return IsoMetaCell
-function IsoMetaGrid:getCellData(arg0, arg1) end
+function IsoMetaGrid:getCellData(x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return IsoMetaCell
-function IsoMetaGrid:getCellDataAbs(arg0, arg1) end
+function IsoMetaGrid:getCellDataAbs(x, y) end
 
 --- @public
 --- @param arg0 integer
@@ -126,16 +126,16 @@ function IsoMetaGrid:getCellDataAbs(arg0, arg1) end
 function IsoMetaGrid:getCellOrCreate(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param cx integer
+--- @param cy integer
 --- @return IsoMetaChunk
-function IsoMetaGrid:getChunkData(arg0, arg1) end
+function IsoMetaGrid:getChunkData(cx, cy) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return IsoMetaChunk
-function IsoMetaGrid:getChunkDataFromTile(arg0, arg1) end
+function IsoMetaGrid:getChunkDataFromTile(x, y) end
 
 --- @public
 --- @return IsoMetaCell
@@ -146,11 +146,11 @@ function IsoMetaGrid:getCurrentCellData() end
 function IsoMetaGrid:getCurrentChunkData() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return RoomDef
-function IsoMetaGrid:getEmptyOutsideAt(arg0, arg1, arg2) end
+function IsoMetaGrid:getEmptyOutsideAt(x, y, z) end
 
 --- @public
 --- @return integer
@@ -169,10 +169,10 @@ function IsoMetaGrid:getMaxX() end
 function IsoMetaGrid:getMaxY() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return IsoMetaCell
-function IsoMetaGrid:getMetaGridFromTile(arg0, arg1) end
+function IsoMetaGrid:getMetaGridFromTile(wx, wy) end
 
 --- @public
 --- @return integer
@@ -187,26 +187,26 @@ function IsoMetaGrid:getMinY() end
 function IsoMetaGrid:getRandomIndoorCoord() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param x number
+--- @param y number
+--- @param min number
+--- @param max number
 --- @return RoomDef
-function IsoMetaGrid:getRandomRoomBetweenRange(arg0, arg1, arg2, arg3) end
+function IsoMetaGrid:getRandomRoomBetweenRange(x, y, min, max) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 integer
+--- @param x number
+--- @param y number
+--- @param range integer
 --- @return RoomDef
-function IsoMetaGrid:getRandomRoomNotInRange(arg0, arg1, arg2) end
+function IsoMetaGrid:getRandomRoomNotInRange(x, y, range) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return RoomDef
-function IsoMetaGrid:getRoomAt(arg0, arg1, arg2) end
+function IsoMetaGrid:getRoomAt(x, y, z) end
 
 --- @public
 --- @param arg0 integer
@@ -214,59 +214,59 @@ function IsoMetaGrid:getRoomAt(arg0, arg1, arg2) end
 function IsoMetaGrid:getRoomByID(arg0) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 ArrayList
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
+--- @param roomDefs ArrayList
 --- @return nil
-function IsoMetaGrid:getRoomsIntersecting(arg0, arg1, arg2, arg3, arg4) end
+function IsoMetaGrid:getRoomsIntersecting(x, y, w, h, roomDefs) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return VehicleZone
-function IsoMetaGrid:getVehicleZoneAt(arg0, arg1, arg2) end
+function IsoMetaGrid:getVehicleZoneAt(x, y, z) end
 
 --- @public
 --- @return integer
 function IsoMetaGrid:getWidth() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return Zone
-function IsoMetaGrid:getZoneAt(arg0, arg1, arg2) end
+function IsoMetaGrid:getZoneAt(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param w integer
+--- @param h integer
+--- @param type string
 --- @return Zone
-function IsoMetaGrid:getZoneWithBoundsAndType(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMetaGrid:getZoneWithBoundsAndType(x, y, z, w, h, type) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return ArrayList
---- @overload fun(self: IsoMetaGrid, arg0: integer, arg1: integer, arg2: integer, arg3: ArrayList): ArrayList
-function IsoMetaGrid:getZonesAt(arg0, arg1, arg2) end
+--- @overload fun(self: IsoMetaGrid, x: integer, y: integer, z: integer, result: ArrayList): ArrayList
+function IsoMetaGrid:getZonesAt(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param w integer
+--- @param h integer
 --- @return ArrayList
---- @overload fun(self: IsoMetaGrid, arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: ArrayList): ArrayList
-function IsoMetaGrid:getZonesIntersecting(arg0, arg1, arg2, arg3, arg4) end
+--- @overload fun(self: IsoMetaGrid, x: integer, y: integer, z: integer, w: integer, h: integer, result: ArrayList): ArrayList
+function IsoMetaGrid:getZonesIntersecting(x, y, z, w, h) end
 
 --- @public
 --- @return integer
@@ -295,29 +295,29 @@ function IsoMetaGrid:hasCellData(arg0, arg1) end
 function IsoMetaGrid:isChunkLoaded(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return boolean
-function IsoMetaGrid:isValidChunk(arg0, arg1) end
+function IsoMetaGrid:isValidChunk(wx, wy) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return boolean
-function IsoMetaGrid:isValidSquare(arg0, arg1) end
+function IsoMetaGrid:isValidSquare(x, y) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 Zone
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param zone1 Zone
+--- @param zone2 Zone
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return boolean
-function IsoMetaGrid:isZoneAbove(arg0, arg1, arg2, arg3, arg4) end
+function IsoMetaGrid:isZoneAbove(zone1, zone2, x, y, z) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoMetaGrid, arg0: ByteBuffer): nil
+--- @overload fun(self: IsoMetaGrid, input: ByteBuffer): nil
 --- @overload fun(self: IsoMetaGrid, arg0: string, arg1: BiConsumer): nil
 function IsoMetaGrid:load() end
 
@@ -335,10 +335,10 @@ function IsoMetaGrid:loadAnimalZones(arg0, arg1) end
 function IsoMetaGrid:loadCells(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function IsoMetaGrid:loadZone(arg0, arg1) end
+function IsoMetaGrid:loadZone(input, WorldVersion) end
 
 --- @public
 --- @return nil
@@ -351,50 +351,50 @@ function IsoMetaGrid:processZones() end
 function IsoMetaGrid:registerAnimalZone(arg0) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 string
---- @param arg4 table
---- @param arg5 table
+--- @param name string
+--- @param type string
+--- @param z integer
+--- @param geometry string
+--- @param pointsTable table
+--- @param properties table
 --- @return Zone
-function IsoMetaGrid:registerGeometryZone(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMetaGrid:registerGeometryZone(name, type, z, geometry, pointsTable, properties) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 table
+--- @param name string
+--- @param type string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param width integer
+--- @param height integer
+--- @param properties table
 --- @return Zone
-function IsoMetaGrid:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoMetaGrid:registerMannequinZone(name, type, x, y, z, width, height, properties) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 table
+--- @param name string
+--- @param type string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param width integer
+--- @param height integer
+--- @param properties table
 --- @return nil
-function IsoMetaGrid:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoMetaGrid:registerRoomTone(name, type, x, y, z, width, height, properties) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 table
+--- @param name string
+--- @param type string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param width integer
+--- @param height integer
+--- @param properties table
 --- @return Zone
-function IsoMetaGrid:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoMetaGrid:registerVehiclesZone(name, type, x, y, z, width, height, properties) end
 
 --- @public
 --- @param arg0 string
@@ -411,41 +411,41 @@ function IsoMetaGrid:registerWorldGenZone(arg0, arg1, arg2, arg3, arg4, arg5, ar
 --- @public
 --- @param arg0 Zone
 --- @return Zone
---- @overload fun(self: IsoMetaGrid, arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer): Zone
---- @overload fun(self: IsoMetaGrid, arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: ZoneGeometryType, arg8: TIntArrayList, arg9: integer): Zone
+--- @overload fun(self: IsoMetaGrid, name: string, type: string, x: integer, y: integer, z: integer, width: integer, height: integer): Zone
+--- @overload fun(self: IsoMetaGrid, name: string, type: string, x: integer, y: integer, z: integer, width: integer, height: integer, geometryType: ZoneGeometryType, points: TIntArrayList, polylineWidth: integer): Zone
 function IsoMetaGrid:registerZone(arg0) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
+--- @param name string
+--- @param type string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param width integer
+--- @param height integer
 --- @return Zone
 --- @deprecated
-function IsoMetaGrid:registerZoneNoOverlap(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoMetaGrid:registerZoneNoOverlap(name, type, x, y, z, width, height) end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function IsoMetaGrid:removeZone(arg0) end
+function IsoMetaGrid:removeZone(zone) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param cellX integer
+--- @param cellY integer
 --- @return nil
-function IsoMetaGrid:removeZonesForCell(arg0, arg1) end
+function IsoMetaGrid:removeZonesForCell(cellX, cellY) end
 
 --- @public
---- @param arg0 string
+--- @param lotDir string
 --- @return nil
-function IsoMetaGrid:removeZonesForLotDirectory(arg0) end
+function IsoMetaGrid:removeZonesForLotDirectory(lotDir) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoMetaGrid, arg0: ByteBuffer): nil
+--- @overload fun(self: IsoMetaGrid, output: ByteBuffer): nil
 function IsoMetaGrid:save() end
 
 --- @public
@@ -454,16 +454,16 @@ function IsoMetaGrid:save() end
 function IsoMetaGrid:saveAnimalZones(arg0) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param output ByteBuffer
+--- @param part integer
+--- @param fromServer boolean
 --- @return nil
-function IsoMetaGrid:savePart(arg0, arg1, arg2) end
+function IsoMetaGrid:savePart(output, part, fromServer) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function IsoMetaGrid:saveZone(arg0) end
+function IsoMetaGrid:saveZone(output) end
 
 --- @public
 --- @param arg0 integer

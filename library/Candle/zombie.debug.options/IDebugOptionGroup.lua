@@ -9,9 +9,9 @@ IDebugOptionGroup = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IDebugOption
+--- @param childOption IDebugOption
 --- @return nil
-function IDebugOptionGroup:addChild(arg0) end
+function IDebugOptionGroup:addChild(childOption) end
 
 --- @public
 --- @return Iterable
@@ -48,14 +48,14 @@ function IDebugOptionGroup:newOption(arg0, arg1) end
 function IDebugOptionGroup:newOptionGroup(arg0) end
 
 --- @public
---- @param arg0 IDebugOption
+--- @param newChild IDebugOption
 --- @return nil
-function IDebugOptionGroup:onChildAdded(arg0) end
+function IDebugOptionGroup:onChildAdded(newChild) end
 
 --- @public
---- @param arg0 IDebugOption
+--- @param newDescendant IDebugOption
 --- @return nil
-function IDebugOptionGroup:onDescendantAdded(arg0) end
+function IDebugOptionGroup:onDescendantAdded(newDescendant) end
 
 --- @public
 --- @return nil

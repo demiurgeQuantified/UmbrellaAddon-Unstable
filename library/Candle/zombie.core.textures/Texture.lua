@@ -4,7 +4,7 @@
 --- @field public class any
 --- @field public ASSET_TYPE AssetType
 --- @field public bDoingQuad boolean
---- @field public BindCount integer
+--- @field public BindCount integer indicates if all the texture will auto create the masks on load  The auto creation works only with the getTexture() methods
 --- @field public la number
 --- @field public lastlastTextureID integer
 --- @field public lastTextureID integer
@@ -32,24 +32,24 @@ function Texture.clearTextures() end
 
 --- @public
 --- @static
---- @param arg0 HashMap
---- @param arg1 HashMap
+--- @param map HashMap
+--- @param mapFull HashMap
 --- @return nil
-function Texture.collectAllIcons(arg0, arg1) end
+function Texture.collectAllIcons(map, mapFull) end
 
 --- @public
 --- @static
---- @param arg0 int[]
---- @param arg1 integer
---- @param arg2 integer
+--- @param imgPixels int[]
+--- @param imgw integer
+--- @param imgh integer
 --- @return int[]
-function Texture.flipPixels(arg0, arg1, arg2) end
+function Texture.flipPixels(imgPixels, imgw, imgh) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Texture.forgetTexture(arg0) end
+function Texture.forgetTexture(name) end
 
 --- @public
 --- @static
@@ -63,24 +63,28 @@ function Texture.getErrorTexture() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return Texture
---- @overload fun(arg0: string, arg1: integer): Texture
---- @overload fun(arg0: string, arg1: string): Texture
---- @overload fun(arg0: string, arg1: int[], arg2: string): Texture
-function Texture.getSharedTexture(arg0) end
+--- @overload fun(name: string, flags: integer): Texture
+--- @overload fun(name: string, palette: string): Texture
+--- @overload fun(name: string, palette: int[], paletteName: string): Texture
+function Texture.getSharedTexture(name) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param steamID integer
 --- @return Texture
-function Texture.getSteamAvatar(arg0) end
+function Texture.getSteamAvatar(steamID) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @return Texture
-function Texture.getTexture(arg0) end
+---
+---  gets a texture from it's name; If the texture isn't already loaded this method
+---  load it.
+---
+--- @param name string the name of texture
+--- @return Texture returns the texture from the given name
+function Texture.getTexture(name) end
 
 --- @public
 --- @static
@@ -94,27 +98,27 @@ function Texture.onTexturePacksChanged() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filePath string
 --- @return string
-function Texture.processFilePath(arg0) end
+function Texture.processFilePath(filePath) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Texture.reload(arg0) end
+function Texture.reload(name) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param steamID integer
 --- @return nil
-function Texture.steamAvatarChanged(arg0) end
+function Texture.steamAvatarChanged(steamID) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return Texture
-function Texture.trygetTexture(arg0) end
+function Texture.trygetTexture(name) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -129,49 +133,67 @@ function Texture.trygetTexture(arg0) end
 function Texture:TexDeferedCreation(arg0, arg1, arg2) end
 
 --- @public
+---
+---  Blinds the image
+---
 --- @return nil
 --- @overload fun(self: Texture): nil
---- @overload fun(self: Texture, arg0: integer): nil
---- @overload fun(self: Texture, arg0: integer): nil
+--- @overload fun(self: Texture, unit: integer): nil
+--- @overload fun(self: Texture, unit: integer): nil
 function Texture:bind() end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param from Texture
+--- @param x integer
+--- @param y integer
+--- @param width integer
+--- @param height integer
 --- @return nil
-function Texture:copyMaskRegion(arg0, arg1, arg2, arg3, arg4) end
+function Texture:copyMaskRegion(from, x, y, width, height) end
 
 --- @public
+---
+---  creates the mask of collisions
+---
 --- @return nil
---- @overload fun(self: Texture, arg0: boolean[]): nil
---- @overload fun(self: Texture, arg0: BooleanGrid): nil
---- @overload fun(self: Texture, arg0: WrappedBuffer): nil
+--- @overload fun(self: Texture, mask: boolean[]): nil
+--- @overload fun(self: Texture, mask: BooleanGrid): nil
+--- @overload fun(self: Texture, buf: WrappedBuffer): nil
 function Texture:createMask() end
 
 --- @public
+---
+---  destroys the image and release all resources
+---
 --- @return nil
 --- @overload fun(self: Texture): nil
 function Texture:destroy() end
 
 --- @public
---- @param arg0 Texture
+--- @param other Texture
 --- @return boolean
-function Texture:equals(arg0) end
+function Texture:equals(other) end
 
 --- @public
+---
+---  returns the texture's pixel in a ByteBuffer
+---
 --- @return WrappedBuffer
 --- @overload fun(self: Texture): WrappedBuffer
 function Texture:getData() end
 
 --- @public
---- @return integer
---- @overload fun(self: Texture): integer
+---
+---  Description copied from interface: ITexture
+---
+--- @return integer the height of image
+--- @overload fun(self: Texture): integer the height of image
 function Texture:getHeight() end
 
 --- @public
+---
+---  Description copied from interface: ITexture
+---
 --- @return integer
 --- @overload fun(self: Texture): integer
 function Texture:getHeightHW() end
@@ -181,12 +203,18 @@ function Texture:getHeightHW() end
 function Texture:getHeightOrig() end
 
 --- @public
---- @return integer
---- @overload fun(self: Texture): integer
+---
+---  Description copied from interface: ITexture
+---
+--- @return integer the ID of image in the Vram
+--- @overload fun(self: Texture): integer the ID of image in the Vram
 function Texture:getID() end
 
 --- @public
---- @return Mask
+---
+---  returns the mask of collisions
+---
+--- @return Mask mask of collisions
 function Texture:getMask() end
 
 --- @public
@@ -218,20 +246,29 @@ function Texture:getTextureId() end
 function Texture:getType() end
 
 --- @public
---- @param arg0 Vector2
+--- @param uvScale Vector2
 --- @return Vector2
-function Texture:getUVScale(arg0) end
+function Texture:getUVScale(uvScale) end
 
 --- @public
---- @return boolean
+---
+---  indicates if the image will use the alpha channel or note
+---
+--- @return boolean if the image will use the alpha channel or note
 function Texture:getUseAlphaChannel() end
 
 --- @public
---- @return integer
---- @overload fun(self: Texture): integer
+---
+---  Description copied from interface: ITexture
+---
+--- @return integer the width of image
+--- @overload fun(self: Texture): integer the width of image
 function Texture:getWidth() end
 
 --- @public
+---
+---  Description copied from interface: ITexture
+---
 --- @return integer
 --- @overload fun(self: Texture): integer
 function Texture:getWidthHW() end
@@ -245,13 +282,19 @@ function Texture:getWidthOrig() end
 function Texture:getX() end
 
 --- @public
---- @return number
---- @overload fun(self: Texture): number
+---
+---  Description copied from interface: ITexture
+---
+--- @return number the end X-coordinate
+--- @overload fun(self: Texture): number the end X-coordinate
 function Texture:getXEnd() end
 
 --- @public
---- @return number
---- @overload fun(self: Texture): number
+---
+---  Description copied from interface: ITexture
+---
+--- @return number the start X-coordinate
+--- @overload fun(self: Texture): number the start X-coordinate
 function Texture:getXStart() end
 
 --- @public
@@ -259,20 +302,32 @@ function Texture:getXStart() end
 function Texture:getY() end
 
 --- @public
---- @return number
---- @overload fun(self: Texture): number
+---
+---  Description copied from interface: ITexture
+---
+--- @return number the end Y-coordinate
+--- @overload fun(self: Texture): number the end Y-coordinate
 function Texture:getYEnd() end
 
 --- @public
---- @return number
---- @overload fun(self: Texture): number
+---
+---  Description copied from interface: ITexture
+---
+--- @return number the start Y-coordinate
+--- @overload fun(self: Texture): number the start Y-coordinate
 function Texture:getYStart() end
 
 --- @public
+---
+---  indicates if the texture has a mask of collisions or not
+---
 --- @return boolean
 function Texture:isCollisionable() end
 
 --- @public
+---
+---  returns if the texture is destroyed or not
+---
 --- @return boolean
 --- @overload fun(self: Texture): boolean
 function Texture:isDestroyed() end
@@ -284,8 +339,11 @@ function Texture:isDestroyed() end
 function Texture:isMaskSet(arg0, arg1) end
 
 --- @public
---- @return boolean
---- @overload fun(self: Texture): boolean
+---
+---  Description copied from interface: ITexture
+---
+--- @return boolean if the texture is solid or not.
+--- @overload fun(self: Texture): boolean if the texture is solid or not.
 function Texture:isSolid() end
 
 --- @public
@@ -293,234 +351,252 @@ function Texture:isSolid() end
 function Texture:isValid() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param cache ByteBuffer
 --- @return nil
-function Texture:loadMaskRegion(arg0) end
+function Texture:loadMaskRegion(cache) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+---
+---  Description copied from interface: ITexture
+---
+--- @param red integer color used in the test
+--- @param green integer
+--- @param blue integer
 --- @return nil
---- @overload fun(self: Texture, arg0: integer, arg1: integer, arg2: integer): nil
-function Texture:makeTransp(arg0, arg1, arg2) end
+--- @overload fun(self: Texture, red: integer, green: integer, blue: integer): nil
+function Texture:makeTransp(red, green, blue) end
 
 --- @public
 --- @return nil
 function Texture:onBeforeReady() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Texture:reloadFromFile(arg0) end
+function Texture:reloadFromFile(name) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return nil
---- @overload fun(self: Texture, arg0: number, arg1: number, arg2: number, arg3: number): nil
---- @overload fun(self: Texture, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: Consumer): nil
---- @overload fun(self: Texture, arg0: ObjectRenderEffects, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: Consumer): nil
-function Texture:render(arg0, arg1) end
+--- @overload fun(self: Texture, x: number, y: number, width: number, height: number): nil
+--- @overload fun(self: Texture, x: number, y: number, width: number, height: number, r: number, g: number, b: number, a: number, texdModifier: Consumer): nil
+--- @overload fun(self: Texture, dr: ObjectRenderEffects, x: number, y: number, width: number, height: number, r: number, g: number, b: number, a: number, texdModifier: Consumer): nil
+function Texture:render(x, y) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 integer
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param l integer
+--- @param u integer
+--- @param r integer
+--- @param d integer
 --- @return nil
-function Texture:renderdiamond(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function Texture:renderdiamond(x, y, width, height, l, u, r, d) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 integer
---- @param arg8 number
---- @param arg9 number
---- @param arg10 number
---- @param arg11 number
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param texx integer
+--- @param texy integer
+--- @param texWidth integer
+--- @param texHeight integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function Texture:rendershader2(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+function Texture:rendershader2(x, y, width, height, texx, texy, texWidth, texHeight, r, g, b, a) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 Consumer
+--- @param x integer
+--- @param y integer
+--- @param width integer
+--- @param height integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param texdModifier Consumer
 --- @return nil
-function Texture:renderstrip(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function Texture:renderstrip(x, y, width, height, r, g, b, a, texdModifier) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 integer
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param u integer
+--- @param d integer
+--- @param u2 integer
+--- @param d2 integer
 --- @return nil
-function Texture:renderwalln(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function Texture:renderwalln(x, y, width, height, u, d, u2, d2) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 integer
---- @param arg8 integer
---- @param arg9 integer
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param u integer
+--- @param d integer
+--- @param u2 integer
+--- @param d2 integer
+--- @param r integer
+--- @param r2 integer
 --- @return nil
-function Texture:renderwallnw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+function Texture:renderwallnw(x, y, width, height, u, d, u2, d2, r, r2) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 integer
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param u integer
+--- @param d integer
+--- @param u2 integer
+--- @param d2 integer
 --- @return nil
-function Texture:renderwallw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function Texture:renderwallw(x, y, width, height, u, d, u2, d2) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Texture:saveMask(arg0) end
+function Texture:saveMask(name) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param cache ByteBuffer
 --- @return nil
-function Texture:saveMaskRegion(arg0) end
+function Texture:saveMaskRegion(cache) end
 
 --- @public
---- @param arg0 string
+--- @param filename string
 --- @return nil
-function Texture:saveOnRenderThread(arg0) end
+function Texture:saveOnRenderThread(filename) end
 
 --- @public
---- @param arg0 string
+--- @param filename string
 --- @return nil
-function Texture:saveToCurrentSavefileDirectory(arg0) end
+function Texture:saveToCurrentSavefileDirectory(filename) end
 
 --- @public
---- @param arg0 string
+--- @param filename string
 --- @return nil
-function Texture:saveToZomboidDirectory(arg0) end
+function Texture:saveToZomboidDirectory(filename) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+---
+---  Description copied from interface: ITexture
+---
+--- @param red integer color used in the test
+--- @param green integer
+--- @param blue integer
+--- @param alpha integer
 --- @return nil
---- @overload fun(self: Texture, arg0: integer, arg1: integer, arg2: integer, arg3: integer): nil
-function Texture:setAlphaForeach(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: Texture, red: integer, green: integer, blue: integer, alpha: integer): nil
+function Texture:setAlphaForeach(red, green, blue, alpha) end
 
 --- @public
 --- @return nil
 function Texture:setCustomizedTexture() end
 
 --- @public
---- @param arg0 ByteBuffer
+---
+---  sets the texture's pixel from a ByteBuffer
+---
+--- @param data ByteBuffer texture's pixel data
 --- @return nil
---- @overload fun(self: Texture, arg0: ByteBuffer): nil
-function Texture:setData(arg0) end
+--- @overload fun(self: Texture, data: ByteBuffer): nil
+function Texture:setData(data) end
 
 --- @public
---- @param arg0 integer
+--- @param height integer
 --- @return nil
-function Texture:setHeight(arg0) end
+function Texture:setHeight(height) end
 
 --- @public
---- @param arg0 Mask
+---
+---  sets the mask of collisions
+---
+--- @param mask Mask the mask of collisions to set
 --- @return nil
---- @overload fun(self: Texture, arg0: Mask): nil
-function Texture:setMask(arg0) end
+--- @overload fun(self: Texture, mask: Mask): nil
+function Texture:setMask(mask) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Texture:setName(arg0) end
+function Texture:setName(name) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Texture:setNameOnly(arg0) end
+function Texture:setNameOnly(name) end
 
 --- @public
---- @param arg0 integer
+--- @param offset integer
 --- @return nil
-function Texture:setOffsetX(arg0) end
+function Texture:setOffsetX(offset) end
 
 --- @public
---- @param arg0 integer
+--- @param offset integer
 --- @return nil
-function Texture:setOffsetY(arg0) end
+function Texture:setOffsetY(offset) end
 
 --- @public
---- @param arg0 integer
+--- @param realHeight integer
 --- @return nil
-function Texture:setRealHeight(arg0) end
+function Texture:setRealHeight(realHeight) end
 
 --- @public
---- @param arg0 integer
+--- @param realWidth integer
 --- @return nil
-function Texture:setRealWidth(arg0) end
+function Texture:setRealWidth(realWidth) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+---
+---  Description copied from interface: ITexture
+---
+--- @param x integer xstart position
+--- @param y integer
+--- @param width integer
+--- @param height integer
 --- @return nil
---- @overload fun(self: Texture, arg0: integer, arg1: integer, arg2: integer, arg3: integer): nil
-function Texture:setRegion(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: Texture, x: integer, y: integer, width: integer, height: integer): nil
+function Texture:setRegion(x, y, width, height) end
 
 --- @public
---- @param arg0 boolean
+---
+---  indicates if the texture contains the alpha channel or not
+---
+--- @param value boolean if true, the image will use the alpha channel
 --- @return nil
-function Texture:setUseAlphaChannel(arg0) end
+function Texture:setUseAlphaChannel(value) end
 
 --- @public
---- @param arg0 integer
+--- @param width integer
 --- @return nil
-function Texture:setWidth(arg0) end
+function Texture:setWidth(width) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param xOffset integer
+--- @param yOffset integer
+--- @param width integer
+--- @param height integer
 --- @return Texture
---- @overload fun(self: Texture, arg0: string, arg1: integer, arg2: integer, arg3: integer, arg4: integer): Texture
---- @overload fun(self: Texture, arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: integer): Texture[]
-function Texture:split(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: Texture, name: string, xOffset: integer, yOffset: integer, width: integer, height: integer): Texture
+--- @overload fun(self: Texture, xOffset: integer, yOffset: integer, row: integer, coloumn: integer, width: integer, height: integer, spaceX: integer, spaceY: integer): Texture[]
+function Texture:split(xOffset, yOffset, width, height) end
 
 --- @public
---- @param arg0 int[]
---- @param arg1 int[]
+--- @param xstep int[]
+--- @param ystep int[]
 --- @return Texture[][]
-function Texture:split2D(arg0, arg1) end
+function Texture:split2D(xstep, ystep) end
 
 --- @public
 --- @return Texture
@@ -535,21 +611,24 @@ function Texture:toString() end
 ------------------------------------
 
 --- @public
+---
+---  creates an emptiy texture and adds it to the game engine's texture list
+---
 --- @return Texture
---- @overload fun(arg0: string): Texture
---- @overload fun(arg0: Texture): Texture
---- @overload fun(arg0: string, arg1: int[]): Texture
---- @overload fun(arg0: string, arg1: boolean): Texture
---- @overload fun(arg0: string, arg1: string): Texture
---- @overload fun(arg0: TextureID, arg1: string): Texture
---- @overload fun(arg0: integer, arg1: integer, arg2: integer): Texture
---- @overload fun(arg0: string, arg1: boolean, arg2: boolean): Texture
---- @overload fun(arg0: string, arg1: BufferedInputStream, arg2: boolean): Texture
---- @overload fun(arg0: AssetPath, arg1: AssetManager, arg2: TextureAssetParams): Texture
+--- @overload fun(file: string): Texture
+--- @overload fun(t: Texture): Texture
+--- @overload fun(name: string, palette: int[]): Texture
+--- @overload fun(file: string, useAlphaChannel: boolean): Texture
+--- @overload fun(name: string, palette: string): Texture
+--- @overload fun(data: TextureID, name: string): Texture
+--- @overload fun(width: integer, height: integer, flags: integer): Texture
+--- @overload fun(file: string, bDelete: boolean, bUseAlpha: boolean): Texture
+--- @overload fun(name: string, b: BufferedInputStream, bDoMask: boolean): Texture
+--- @overload fun(path: AssetPath, manager: AssetManager, params: TextureAssetParams): Texture
 --- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: boolean): Texture
---- @overload fun(arg0: integer, arg1: integer, arg2: string, arg3: integer): Texture
---- @overload fun(arg0: string, arg1: integer, arg2: integer, arg3: integer): Texture
---- @overload fun(arg0: string, arg1: BufferedInputStream, arg2: boolean, arg3: PZFileformat): Texture
+--- @overload fun(width: integer, height: integer, name: string, flags: integer): Texture
+--- @overload fun(file: string, red: integer, green: integer, blue: integer): Texture
+--- @overload fun(name: string, b: BufferedInputStream, bDoMask: boolean, format: PZFileformat): Texture
 --- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: integer): Texture
 --- @overload fun(arg0: TextureID, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer): Texture
 function Texture.new() end

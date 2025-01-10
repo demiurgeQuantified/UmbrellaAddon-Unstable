@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class WorldFlares
+--- @class WorldFlares TurboTuTone.
 --- @field public class any
 --- @field public DEBUG_DRAW boolean
 --- @field public ENABLED boolean
@@ -18,11 +18,11 @@ function WorldFlares.Clear() end
 
 --- @public
 --- @static
---- @param arg0 PlayerRenderSettings
---- @param arg1 integer
---- @param arg2 IsoPlayer
+--- @param renderSettings PlayerRenderSettings
+--- @param plrIndex integer
+--- @param player IsoPlayer
 --- @return nil
-function WorldFlares.applyFlaresForPlayer(arg0, arg1, arg2) end
+function WorldFlares.applyFlaresForPlayer(renderSettings, plrIndex, player) end
 
 --- @public
 --- @static
@@ -36,9 +36,9 @@ function WorldFlares.getDebugDraw() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return Flare
-function WorldFlares.getFlare(arg0) end
+function WorldFlares.getFlare(index) end
 
 --- @public
 --- @static
@@ -47,31 +47,31 @@ function WorldFlares.getFlareCount() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param id integer
 --- @return Flare
-function WorldFlares.getFlareID(arg0) end
+function WorldFlares.getFlareID(id) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 number
---- @param arg9 number
---- @param arg10 number
+--- @param lifetime number
+--- @param x integer
+--- @param y integer
+--- @param range integer
+--- @param windSpeed number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param ri number
+--- @param gi number
+--- @param bi number
 --- @return nil
-function WorldFlares.launchFlare(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
+function WorldFlares.launchFlare(lifetime, x, y, range, windSpeed, r, g, b, ri, gi, bi) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function WorldFlares.setDebugDraw(arg0) end
+function WorldFlares.setDebugDraw(b) end
 
 --- @public
 --- @static

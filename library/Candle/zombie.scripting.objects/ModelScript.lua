@@ -24,21 +24,21 @@ function ModelScript.ScriptsLoaded() end
 function ModelScript:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param totalFile string
 --- @return nil
-function ModelScript:Load(arg0, arg1) end
+function ModelScript:Load(name, totalFile) end
 
 --- @public
---- @param arg0 ModelAttachment
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function ModelScript:addAttachment(arg0) end
+function ModelScript:addAttachment(attach) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 ModelAttachment
+--- @param index integer
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function ModelScript:addAttachmentAt(arg0, arg1) end
+function ModelScript:addAttachmentAt(index, attach) end
 
 --- @public
 --- @param arg0 ModelAttachment
@@ -53,14 +53,14 @@ function ModelScript:afterRenameAttachment(arg0) end
 function ModelScript:beforeRenameAttachment(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ModelAttachment
-function ModelScript:getAttachment(arg0) end
+function ModelScript:getAttachment(index) end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return ModelAttachment
-function ModelScript:getAttachmentById(arg0) end
+function ModelScript:getAttachmentById(id) end
 
 --- @public
 --- @return integer
@@ -88,7 +88,7 @@ function ModelScript:getShaderName() end
 
 --- @public
 --- @return string
---- @overload fun(self: ModelScript, arg0: boolean): string
+--- @overload fun(self: ModelScript, allowNull: boolean): string
 function ModelScript:getTextureName() end
 
 --- @public
@@ -96,10 +96,10 @@ function ModelScript:getTextureName() end
 function ModelScript:isStatic() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ModelAttachment
---- @overload fun(self: ModelScript, arg0: ModelAttachment): ModelAttachment
-function ModelScript:removeAttachment(arg0) end
+--- @overload fun(self: ModelScript, attach: ModelAttachment): ModelAttachment
+function ModelScript:removeAttachment(index) end
 
 --- @public
 --- @return nil

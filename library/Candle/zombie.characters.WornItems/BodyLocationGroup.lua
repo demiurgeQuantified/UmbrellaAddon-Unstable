@@ -9,38 +9,38 @@ BodyLocationGroup = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return nil
-function BodyLocationGroup:checkValid(arg0) end
+function BodyLocationGroup:checkValid(locationId) end
 
 --- @public
 --- @return ArrayList
 function BodyLocationGroup:getAllLocations() end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return BodyLocation
-function BodyLocationGroup:getLocation(arg0) end
+function BodyLocationGroup:getLocation(locationId) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return BodyLocation
-function BodyLocationGroup:getLocationByIndex(arg0) end
+function BodyLocationGroup:getLocationByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return BodyLocation
-function BodyLocationGroup:getLocationNotNull(arg0) end
+function BodyLocationGroup:getLocationNotNull(locationId) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return BodyLocation
-function BodyLocationGroup:getOrCreateLocation(arg0) end
+function BodyLocationGroup:getOrCreateLocation(locationId) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return integer
-function BodyLocationGroup:indexOf(arg0) end
+function BodyLocationGroup:indexOf(locationId) end
 
 --- @public
 --- @param arg0 string
@@ -49,21 +49,21 @@ function BodyLocationGroup:indexOf(arg0) end
 function BodyLocationGroup:isAltModel(arg0, arg1) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param firstId string
+--- @param secondId string
 --- @return boolean
-function BodyLocationGroup:isExclusive(arg0, arg1) end
+function BodyLocationGroup:isExclusive(firstId, secondId) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param firstId string
+--- @param secondId string
 --- @return boolean
-function BodyLocationGroup:isHideModel(arg0, arg1) end
+function BodyLocationGroup:isHideModel(firstId, secondId) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return boolean
-function BodyLocationGroup:isMultiItem(arg0) end
+function BodyLocationGroup:isMultiItem(locationId) end
 
 --- @public
 --- @param arg0 string
@@ -72,22 +72,22 @@ function BodyLocationGroup:isMultiItem(arg0) end
 function BodyLocationGroup:setAltModel(arg0, arg1) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param firstId string
+--- @param secondId string
 --- @return nil
-function BodyLocationGroup:setExclusive(arg0, arg1) end
+function BodyLocationGroup:setExclusive(firstId, secondId) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param firstId string
+--- @param secondId string
 --- @return nil
-function BodyLocationGroup:setHideModel(arg0, arg1) end
+function BodyLocationGroup:setHideModel(firstId, secondId) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param locationId string
+--- @param bMultiItem boolean
 --- @return nil
-function BodyLocationGroup:setMultiItem(arg0, arg1) end
+function BodyLocationGroup:setMultiItem(locationId, bMultiItem) end
 
 --- @public
 --- @return integer
@@ -98,6 +98,6 @@ function BodyLocationGroup:size() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return BodyLocationGroup
-function BodyLocationGroup.new(arg0) end
+function BodyLocationGroup.new(id) end

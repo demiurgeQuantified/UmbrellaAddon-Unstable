@@ -10,10 +10,10 @@ CrawlingZombieTurnState = {}
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoDirections
+--- @param owner IsoGameCharacter
+--- @param targetDir IsoDirections
 --- @return boolean
-function CrawlingZombieTurnState.calculateDir(arg0, arg1) end
+function CrawlingZombieTurnState.calculateDir(owner, targetDir) end
 
 --- @public
 --- @static
@@ -25,25 +25,25 @@ function CrawlingZombieTurnState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function CrawlingZombieTurnState:animEvent(arg0, arg1) end
+function CrawlingZombieTurnState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function CrawlingZombieTurnState:enter(arg0) end
+function CrawlingZombieTurnState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function CrawlingZombieTurnState:execute(arg0) end
+function CrawlingZombieTurnState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function CrawlingZombieTurnState:exit(arg0) end
+function CrawlingZombieTurnState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

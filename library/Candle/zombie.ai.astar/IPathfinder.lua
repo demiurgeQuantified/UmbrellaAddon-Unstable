@@ -9,15 +9,15 @@ IPathfinder = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Mover
+--- @param mover Mover
 --- @return nil
-function IPathfinder:Failed(arg0) end
+function IPathfinder:Failed(mover) end
 
 --- @public
---- @param arg0 Path
---- @param arg1 Mover
+--- @param path Path
+--- @param mover Mover
 --- @return nil
-function IPathfinder:Succeeded(arg0, arg1) end
+function IPathfinder:Succeeded(path, mover) end
 
 --- @public
 --- @return string

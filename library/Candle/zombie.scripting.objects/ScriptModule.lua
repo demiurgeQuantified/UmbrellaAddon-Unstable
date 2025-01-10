@@ -85,10 +85,10 @@ function ScriptModule:getGameEntityTemplate(arg0) end
 function ScriptModule:getGameSound(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return Item
---- @overload fun(self: ScriptModule, arg0: string): Item
-function ScriptModule:getItem(arg0) end
+--- @overload fun(self: ScriptModule, name: string): Item
+function ScriptModule:getItem(name) end
 
 --- @public
 --- @param arg0 string
@@ -106,9 +106,9 @@ function ScriptModule:getItemFilter(arg0) end
 function ScriptModule:getMannequinScript(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ModelScript
-function ScriptModule:getModelScript(arg0) end
+function ScriptModule:getModelScript(name) end
 
 --- @public
 --- @return string
@@ -125,10 +125,10 @@ function ScriptModule:getPhysicsShape(arg0) end
 function ScriptModule:getRagdollScript(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return Recipe
---- @overload fun(self: ScriptModule, arg0: string): Recipe
-function ScriptModule:getRecipe(arg0) end
+--- @overload fun(self: ScriptModule, name: string): Recipe
+function ScriptModule:getRecipe(name) end
 
 --- @public
 --- @param arg0 string
@@ -156,19 +156,19 @@ function ScriptModule:getTimedActionScript(arg0) end
 function ScriptModule:getUniqueRecipe(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return VehicleScript
-function ScriptModule:getVehicle(arg0) end
+function ScriptModule:getVehicle(name) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return VehicleEngineRPM
-function ScriptModule:getVehicleEngineRPM(arg0) end
+function ScriptModule:getVehicleEngineRPM(name) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return VehicleTemplate
-function ScriptModule:getVehicleTemplate(arg0) end
+function ScriptModule:getVehicleTemplate(name) end
 
 --- @public
 --- @param arg0 string

@@ -9,14 +9,14 @@ Recipe = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return nil
-function Recipe:DoResult(arg0) end
+function Recipe:DoResult(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return nil
-function Recipe:DoSource(arg0) end
+function Recipe:DoSource(type) end
 
 --- @public
 --- @param arg0 string
@@ -25,19 +25,19 @@ function Recipe:DoSource(arg0) end
 function Recipe:Load(arg0, arg1) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 integer
+--- @param perk Perk
+--- @param level integer
 --- @return nil
-function Recipe:addRequiredSkill(arg0, arg1) end
+function Recipe:addRequiredSkill(perk, level) end
 
 --- @public
 --- @return nil
 function Recipe:clearRequiredSkills() end
 
 --- @public
---- @param arg0 string
+--- @param sourceFullType string
 --- @return Source
-function Recipe:findSource(arg0) end
+function Recipe:findSource(sourceFullType) end
 
 --- @public
 --- @return string
@@ -65,9 +65,9 @@ function Recipe:getNumberOfNeededItem() end
 function Recipe:getOriginalname() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return RequiredSkill
-function Recipe:getRequiredSkill(arg0) end
+function Recipe:getRequiredSkill(index) end
 
 --- @public
 --- @return integer
@@ -98,15 +98,15 @@ function Recipe:getStationMultiplier() end
 function Recipe:isRequiresWorkstation() end
 
 --- @public
---- @param arg0 string
+--- @param nearItem string
 --- @return nil
 --- @deprecated
-function Recipe:setNearItem(arg0) end
+function Recipe:setNearItem(nearItem) end
 
 --- @public
---- @param arg0 string
+--- @param originalname string
 --- @return nil
-function Recipe:setOriginalname(arg0) end
+function Recipe:setOriginalname(originalname) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

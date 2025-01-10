@@ -14,11 +14,11 @@ IsoLightSource = {}
 function IsoLightSource:clearInfluence() end
 
 --- @public
---- @return number
+--- @return number the b
 function IsoLightSource:getB() end
 
 --- @public
---- @return number
+--- @return number the g
 function IsoLightSource:getG() end
 
 --- @public
@@ -26,31 +26,31 @@ function IsoLightSource:getG() end
 function IsoLightSource:getLocalToBuilding() end
 
 --- @public
---- @return number
+--- @return number the r
 function IsoLightSource:getR() end
 
 --- @public
---- @return integer
+--- @return integer the radius
 function IsoLightSource:getRadius() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the switches
 function IsoLightSource:getSwitches() end
 
 --- @public
---- @return integer
+--- @return integer the x
 function IsoLightSource:getX() end
 
 --- @public
---- @return integer
+--- @return integer the y
 function IsoLightSource:getY() end
 
 --- @public
---- @return integer
+--- @return integer the z
 function IsoLightSource:getZ() end
 
 --- @public
---- @return boolean
+--- @return boolean the bActive
 function IsoLightSource:isActive() end
 
 --- @public
@@ -59,58 +59,58 @@ function IsoLightSource:isHydroPowered() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoLightSource, arg0: integer, arg1: integer, arg2: integer, arg3: integer): boolean
+--- @overload fun(self: IsoLightSource, minX: integer, minY: integer, maxX: integer, maxY: integer): boolean
 function IsoLightSource:isInBounds() end
 
 --- @public
---- @param arg0 boolean
+--- @param bActive boolean the bActive to set
 --- @return nil
-function IsoLightSource:setActive(arg0) end
+function IsoLightSource:setActive(bActive) end
 
 --- @public
---- @param arg0 number
+--- @param b number the b to set
 --- @return nil
-function IsoLightSource:setB(arg0) end
+function IsoLightSource:setB(b) end
 
 --- @public
---- @param arg0 number
+--- @param g number the g to set
 --- @return nil
-function IsoLightSource:setG(arg0) end
+function IsoLightSource:setG(g) end
 
 --- @public
---- @param arg0 number
+--- @param r number the r to set
 --- @return nil
-function IsoLightSource:setR(arg0) end
+function IsoLightSource:setR(r) end
 
 --- @public
---- @param arg0 integer
+--- @param radius integer the radius to set
 --- @return nil
-function IsoLightSource:setRadius(arg0) end
+function IsoLightSource:setRadius(radius) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param switches ArrayList the switches to set
 --- @return nil
-function IsoLightSource:setSwitches(arg0) end
+function IsoLightSource:setSwitches(switches) end
 
 --- @public
---- @param arg0 boolean
+--- @param bWasActive boolean the bWasActive to set
 --- @return nil
-function IsoLightSource:setWasActive(arg0) end
+function IsoLightSource:setWasActive(bWasActive) end
 
 --- @public
---- @param arg0 integer
+--- @param x integer the x to set
 --- @return nil
-function IsoLightSource:setX(arg0) end
+function IsoLightSource:setX(x) end
 
 --- @public
---- @param arg0 integer
+--- @param y integer the y to set
 --- @return nil
-function IsoLightSource:setY(arg0) end
+function IsoLightSource:setY(y) end
 
 --- @public
---- @param arg0 integer
+--- @param z integer the z to set
 --- @return nil
-function IsoLightSource:setZ(arg0) end
+function IsoLightSource:setZ(z) end
 
 --- @public
 --- @return nil
@@ -118,7 +118,7 @@ function IsoLightSource:setZ(arg0) end
 function IsoLightSource:update() end
 
 --- @public
---- @return boolean
+--- @return boolean the bWasActive
 function IsoLightSource:wasActive() end
 
 ------------------------------------
@@ -126,14 +126,14 @@ function IsoLightSource:wasActive() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param radius integer
 --- @return IsoLightSource
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: number, arg4: number, arg5: number, arg6: integer, arg7: integer): IsoLightSource
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: number, arg4: number, arg5: number, arg6: integer, arg7: IsoBuilding): IsoLightSource
-function IsoLightSource.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(x: integer, y: integer, z: integer, r: number, g: number, b: number, radius: integer, life: integer): IsoLightSource
+--- @overload fun(x: integer, y: integer, z: integer, r: number, g: number, b: number, radius: integer, building: IsoBuilding): IsoLightSource
+function IsoLightSource.new(x, y, z, r, g, b, radius) end

@@ -17,9 +17,9 @@ function BooleanDebugOption:getIndex() end
 ------------------------------------
 
 --- @public
---- @param arg0 ArrayList
---- @param arg1 string
---- @param arg2 boolean
+--- @param optionList ArrayList
+--- @param name string
+--- @param defaultValue boolean
 --- @return BooleanDebugOption
---- @overload fun(arg0: ArrayList, arg1: string, arg2: boolean, arg3: integer): BooleanDebugOption
-function BooleanDebugOption.new(arg0, arg1, arg2) end
+--- @overload fun(optionList: ArrayList, name: string, defaultValue: boolean, zLevel: integer): BooleanDebugOption
+function BooleanDebugOption.new(optionList, name, defaultValue) end

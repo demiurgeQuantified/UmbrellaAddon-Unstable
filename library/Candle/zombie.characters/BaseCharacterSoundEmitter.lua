@@ -17,51 +17,51 @@ function BaseCharacterSoundEmitter:hasSoundsToStart() end
 function BaseCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return boolean
---- @overload fun(self: BaseCharacterSoundEmitter, arg0: integer): boolean
-function BaseCharacterSoundEmitter:isPlaying(arg0) end
+--- @overload fun(self: BaseCharacterSoundEmitter, channel: integer): boolean
+function BaseCharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
+--- @param file string
+--- @param volume number
 --- @return nil
-function BaseCharacterSoundEmitter:playFootsteps(arg0, arg1) end
+function BaseCharacterSoundEmitter:playFootsteps(file, volume) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
---- @overload fun(self: BaseCharacterSoundEmitter, arg0: string, arg1: IsoObject): integer
-function BaseCharacterSoundEmitter:playSound(arg0) end
+--- @overload fun(self: BaseCharacterSoundEmitter, file: string, proxy: IsoObject): integer
+function BaseCharacterSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoObject
+--- @param file string
+--- @param proxy IsoObject
 --- @return integer
-function BaseCharacterSoundEmitter:playSoundImpl(arg0, arg1) end
+function BaseCharacterSoundEmitter:playSoundImpl(file, proxy) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
-function BaseCharacterSoundEmitter:playVocals(arg0) end
+function BaseCharacterSoundEmitter:playVocals(file) end
 
 --- @public
 --- @return nil
 function BaseCharacterSoundEmitter:register() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return nil
-function BaseCharacterSoundEmitter:set(arg0, arg1, arg2) end
+function BaseCharacterSoundEmitter:set(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 number
+--- @param soundRef integer
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param value number
 --- @return nil
-function BaseCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
+function BaseCharacterSoundEmitter:setParameterValue(soundRef, parameterDescription, value) end
 
 --- @public
 --- @param arg0 integer
@@ -71,30 +71,30 @@ function BaseCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 function BaseCharacterSoundEmitter:setParameterValueByName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param pitch number
 --- @return nil
-function BaseCharacterSoundEmitter:setPitch(arg0, arg1) end
+function BaseCharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param volume number
 --- @return nil
-function BaseCharacterSoundEmitter:setVolume(arg0, arg1) end
+function BaseCharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
 --- @return nil
 function BaseCharacterSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function BaseCharacterSoundEmitter:stopOrTriggerSound(arg0) end
+function BaseCharacterSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function BaseCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function BaseCharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param arg0 integer
@@ -102,19 +102,19 @@ function BaseCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
 function BaseCharacterSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param channel integer
 --- @return integer
-function BaseCharacterSoundEmitter:stopSound(arg0) end
+function BaseCharacterSoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 string
+--- @param soundName string
 --- @return integer
-function BaseCharacterSoundEmitter:stopSoundByName(arg0) end
+function BaseCharacterSoundEmitter:stopSoundByName(soundName) end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function BaseCharacterSoundEmitter:stopSoundLocal(arg0) end
+function BaseCharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return nil
@@ -129,6 +129,6 @@ function BaseCharacterSoundEmitter:unregister() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return BaseCharacterSoundEmitter
-function BaseCharacterSoundEmitter.new(arg0) end
+function BaseCharacterSoundEmitter.new(chr) end

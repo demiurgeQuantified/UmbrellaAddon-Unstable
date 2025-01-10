@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class Moveable: InventoryItem
+--- @class Moveable: InventoryItem Turbo.
 --- @field public class any
 Moveable = {}
 
@@ -13,9 +13,9 @@ Moveable = {}
 function Moveable:CanBeDroppedOnFloor() end
 
 --- @public
---- @param arg0 string
+--- @param sprite string
 --- @return boolean
-function Moveable:ReadFromWorldSprite(arg0) end
+function Moveable:ReadFromWorldSprite(sprite) end
 
 --- @public
 --- @param arg0 string
@@ -59,7 +59,7 @@ function Moveable:getLightR() end
 function Moveable:getMovableFullName() end
 
 --- @public
---- @return string
+--- @return string the name
 function Moveable:getName() end
 
 --- @public
@@ -91,76 +91,76 @@ function Moveable:isLightUseBattery() end
 function Moveable:isMultiGridAnchor() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Moveable:load(arg0, arg1) end
+function Moveable:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function Moveable:save(arg0, arg1) end
+function Moveable:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param isLight boolean
 --- @return nil
-function Moveable:setLight(arg0) end
+function Moveable:setLight(isLight) end
 
 --- @public
---- @param arg0 number
+--- @param lightB number
 --- @return nil
-function Moveable:setLightB(arg0) end
+function Moveable:setLightB(lightB) end
 
 --- @public
---- @param arg0 string
+--- @param lightBulbItem string
 --- @return nil
-function Moveable:setLightBulbItem(arg0) end
+function Moveable:setLightBulbItem(lightBulbItem) end
 
 --- @public
---- @param arg0 number
+--- @param lightDelta number
 --- @return nil
-function Moveable:setLightDelta(arg0) end
+function Moveable:setLightDelta(lightDelta) end
 
 --- @public
---- @param arg0 number
+--- @param lightG number
 --- @return nil
-function Moveable:setLightG(arg0) end
+function Moveable:setLightG(lightG) end
 
 --- @public
---- @param arg0 boolean
+--- @param lightHasBattery boolean
 --- @return nil
-function Moveable:setLightHasBattery(arg0) end
+function Moveable:setLightHasBattery(lightHasBattery) end
 
 --- @public
---- @param arg0 number
+--- @param lightPower number
 --- @return nil
-function Moveable:setLightPower(arg0) end
+function Moveable:setLightPower(lightPower) end
 
 --- @public
---- @param arg0 number
+--- @param lightR number
 --- @return nil
-function Moveable:setLightR(arg0) end
+function Moveable:setLightR(lightR) end
 
 --- @public
---- @param arg0 boolean
+--- @param lightUseBattery boolean
 --- @return nil
-function Moveable:setLightUseBattery(arg0) end
+function Moveable:setLightUseBattery(lightUseBattery) end
 
 --- @public
---- @param arg0 string
+--- @param WorldSprite string
 --- @return nil
-function Moveable:setWorldSprite(arg0) end
+function Moveable:setWorldSprite(WorldSprite) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param tex string
 --- @return Moveable
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): Moveable
-function Moveable.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(module: string, name: string, type: string, item: Item): Moveable
+function Moveable.new(module, name, type, tex) end

@@ -18,36 +18,39 @@ function WalkTowardState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function WalkTowardState:animEvent(arg0, arg1) end
+function WalkTowardState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoZombie
---- @param arg1 Vector2
+--- @param zomb IsoZombie
+--- @param location Vector2
 --- @return boolean
-function WalkTowardState:calculateTargetLocation(arg0, arg1) end
+function WalkTowardState:calculateTargetLocation(zomb, location) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function WalkTowardState:enter(arg0) end
+function WalkTowardState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function WalkTowardState:execute(arg0) end
+function WalkTowardState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function WalkTowardState:exit(arg0) end
+function WalkTowardState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+---
+---  Return TRUE if the owner is currently moving.  Defaults to FALSE
+---
+--- @param owner IsoGameCharacter
 --- @return boolean
-function WalkTowardState:isMoving(arg0) end
+function WalkTowardState:isMoving(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

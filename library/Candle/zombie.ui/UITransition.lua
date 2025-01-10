@@ -26,29 +26,29 @@ function UITransition:fraction() end
 function UITransition:getElapsed() end
 
 --- @public
---- @param arg0 number
---- @param arg1 boolean
+--- @param duration number
+--- @param fadeOut boolean
 --- @return nil
-function UITransition:init(arg0, arg1) end
+function UITransition:init(duration, fadeOut) end
 
 --- @public
 --- @return nil
 function UITransition:reset() end
 
 --- @public
---- @param arg0 number
+--- @param elapsed number
 --- @return nil
-function UITransition:setElapsed(arg0) end
+function UITransition:setElapsed(elapsed) end
 
 --- @public
---- @param arg0 boolean
+--- @param fadeIn boolean
 --- @return nil
-function UITransition:setFadeIn(arg0) end
+function UITransition:setFadeIn(fadeIn) end
 
 --- @public
---- @param arg0 boolean
+--- @param ignore boolean
 --- @return nil
-function UITransition:setIgnoreUpdateTime(arg0) end
+function UITransition:setIgnoreUpdateTime(ignore) end
 
 --- @public
 --- @return nil

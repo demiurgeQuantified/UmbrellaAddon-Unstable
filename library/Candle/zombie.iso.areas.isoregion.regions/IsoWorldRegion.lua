@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoWorldRegion: IWorldRegion
+--- @class IsoWorldRegion: IWorldRegion TurboTuTone.
 --- @field public class any
 IsoWorldRegion = {}
 
@@ -9,14 +9,14 @@ IsoWorldRegion = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoChunkRegion
+--- @param region IsoChunkRegion
 --- @return nil
-function IsoWorldRegion:addIsoChunkRegion(arg0) end
+function IsoWorldRegion:addIsoChunkRegion(region) end
 
 --- @public
---- @param arg0 IsoChunkRegion
+--- @param region IsoChunkRegion
 --- @return boolean
-function IsoWorldRegion:containsIsoChunkRegion(arg0) end
+function IsoWorldRegion:containsIsoChunkRegion(region) end
 
 --- @public
 --- @return Color
@@ -79,18 +79,18 @@ function IsoWorldRegion:isPlayerRoom() end
 function IsoWorldRegion:linkNeighbors() end
 
 --- @public
---- @param arg0 IsoWorldRegion
+--- @param other IsoWorldRegion
 --- @return nil
-function IsoWorldRegion:merge(arg0) end
+function IsoWorldRegion:merge(other) end
 
 --- @public
 --- @return integer
 function IsoWorldRegion:size() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param newlist ArrayList
 --- @return ArrayList
-function IsoWorldRegion:swapIsoChunkRegions(arg0) end
+function IsoWorldRegion:swapIsoChunkRegions(newlist) end
 
 --- @public
 --- @return nil

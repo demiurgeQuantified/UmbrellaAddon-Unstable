@@ -13,9 +13,9 @@ Talker = {}
 function Talker:IsSpeaking() end
 
 --- @public
---- @param arg0 string
+--- @param line string
 --- @return nil
-function Talker:Say(arg0) end
+function Talker:Say(line) end
 
 --- @public
 --- @return string

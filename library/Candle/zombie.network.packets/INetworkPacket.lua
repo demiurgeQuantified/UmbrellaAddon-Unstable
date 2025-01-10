@@ -74,11 +74,11 @@ function INetworkPacket:getPacketSizeBytes() end
 function INetworkPacket:isConsistent(arg0) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
+--- @param b ByteBuffer
+--- @param connection UdpConnection
 --- @return nil
---- @overload fun(self: INetworkPacket, arg0: ByteBuffer, arg1: UdpConnection): nil
-function INetworkPacket:parse(arg0, arg1) end
+--- @overload fun(self: INetworkPacket, b: ByteBuffer, connection: UdpConnection): nil
+function INetworkPacket:parse(b, connection) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -157,6 +157,6 @@ function INetworkPacket:setData(arg0) end
 function INetworkPacket:sync(arg0, arg1) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return nil
-function INetworkPacket:write(arg0) end
+function INetworkPacket:write(b) end

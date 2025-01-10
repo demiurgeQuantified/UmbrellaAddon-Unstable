@@ -52,18 +52,18 @@ function BooleanDebugOption:isDebugOnly() end
 function BooleanDebugOption:onFullPathChanged() end
 
 --- @public
---- @param arg0 IDebugOptionGroup
+--- @param parent IDebugOptionGroup
 --- @return nil
---- @overload fun(self: BooleanDebugOption, arg0: IDebugOptionGroup): nil
-function BooleanDebugOption:setParent(arg0) end
+--- @overload fun(self: BooleanDebugOption, parent: IDebugOptionGroup): nil
+function BooleanDebugOption:setParent(parent) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param name string
+--- @param debugOnly boolean
+--- @param defaultValue boolean
 --- @return BooleanDebugOption
-function BooleanDebugOption.new(arg0, arg1, arg2) end
+function BooleanDebugOption.new(name, debugOnly, defaultValue) end

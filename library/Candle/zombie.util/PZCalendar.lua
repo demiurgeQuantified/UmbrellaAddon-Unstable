@@ -18,9 +18,9 @@ function PZCalendar.getInstance() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param field integer
 --- @return integer
-function PZCalendar:get(arg0) end
+function PZCalendar:get(field) end
 
 --- @public
 --- @return Date
@@ -31,29 +31,29 @@ function PZCalendar:getTime() end
 function PZCalendar:getTimeInMillis() end
 
 --- @public
---- @param arg0 integer
+--- @param year integer
 --- @return boolean
-function PZCalendar:isLeapYear(arg0) end
+function PZCalendar:isLeapYear(year) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param year integer
+--- @param month integer
+--- @param dayOfMonth integer
+--- @param hourOfDay integer
+--- @param minute integer
 --- @return nil
-function PZCalendar:set(arg0, arg1, arg2, arg3, arg4) end
+function PZCalendar:set(year, month, dayOfMonth, hourOfDay, minute) end
 
 --- @public
---- @param arg0 integer
+--- @param millis integer
 --- @return nil
-function PZCalendar:setTimeInMillis(arg0) end
+function PZCalendar:setTimeInMillis(millis) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 Calendar
+--- @param calendar Calendar
 --- @return PZCalendar
-function PZCalendar.new(arg0) end
+function PZCalendar.new(calendar) end

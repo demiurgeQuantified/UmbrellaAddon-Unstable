@@ -20,11 +20,11 @@ WeaponType = {}
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return WeaponType
---- @overload fun(arg0: HandWeapon): WeaponType
+--- @overload fun(weapon: HandWeapon): WeaponType
 --- @overload fun(arg0: IsoGameCharacter, arg1: InventoryItem, arg2: InventoryItem): WeaponType
-function WeaponType.getWeaponType(arg0) end
+function WeaponType.getWeaponType(chr) end
 
 --- @public
 --- @static
@@ -34,7 +34,11 @@ function WeaponType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return WeaponType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return WeaponType[] an array containing the constants of this enum class, in the order they are declared
 function WeaponType.values() end
 
 ------------------------------------

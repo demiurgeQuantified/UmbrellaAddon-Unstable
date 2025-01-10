@@ -14,10 +14,10 @@ StringSandboxOption = {}
 function StringSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: StringSandboxOption, arg0: table): nil
-function StringSandboxOption:fromTable(arg0) end
+--- @overload fun(self: StringSandboxOption, table: table): nil
+function StringSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
@@ -55,31 +55,31 @@ function StringSandboxOption:isCustom() end
 function StringSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 string
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: StringSandboxOption, arg0: string): SandboxOption
-function StringSandboxOption:setPageName(arg0) end
+--- @overload fun(self: StringSandboxOption, pageName: string): SandboxOption
+function StringSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: StringSandboxOption, arg0: string): SandboxOption
-function StringSandboxOption:setTranslation(arg0) end
+--- @overload fun(self: StringSandboxOption, translation: string): SandboxOption
+function StringSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: StringSandboxOption, arg0: table): nil
-function StringSandboxOption:toTable(arg0) end
+--- @overload fun(self: StringSandboxOption, table: table): nil
+function StringSandboxOption:toTable(table) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 string
---- @param arg2 string
---- @param arg3 integer
+--- @param owner SandboxOptions
+--- @param name string
+--- @param defaultValue string
+--- @param maxLength integer
 --- @return StringSandboxOption
-function StringSandboxOption.new(arg0, arg1, arg2, arg3) end
+function StringSandboxOption.new(owner, name, defaultValue, maxLength) end

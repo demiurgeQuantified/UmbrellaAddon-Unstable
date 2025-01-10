@@ -13,9 +13,9 @@ IHumanVisual = {}
 function IHumanVisual:getHumanVisual() end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return nil
-function IHumanVisual:getItemVisuals(arg0) end
+function IHumanVisual:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return boolean

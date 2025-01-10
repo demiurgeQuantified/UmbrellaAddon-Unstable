@@ -17,9 +17,9 @@ function IsoPhysicsObject:collideGround() end
 function IsoPhysicsObject:collideWall() end
 
 --- @public
---- @param arg0 boolean
+--- @param bDoNoises boolean
 --- @return number
-function IsoPhysicsObject:getGlobalMovementMod(arg0) end
+function IsoPhysicsObject:getGlobalMovementMod(bDoNoises) end
 
 --- @public
 --- @return nil
@@ -30,6 +30,6 @@ function IsoPhysicsObject:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoPhysicsObject
-function IsoPhysicsObject.new(arg0) end
+function IsoPhysicsObject.new(cell) end

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class PresetEntry
+--- @class PresetEntry turbo
 --- @field public class any
 PresetEntry = {}
 
@@ -17,14 +17,14 @@ function PresetEntry:getFrequency() end
 function PresetEntry:getName() end
 
 --- @public
---- @param arg0 integer
+--- @param f integer
 --- @return nil
-function PresetEntry:setFrequency(arg0) end
+function PresetEntry:setFrequency(f) end
 
 --- @public
---- @param arg0 string
+--- @param n string
 --- @return nil
-function PresetEntry:setName(arg0) end
+function PresetEntry:setName(n) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -32,5 +32,5 @@ function PresetEntry:setName(arg0) end
 
 --- @public
 --- @return PresetEntry
---- @overload fun(arg0: string, arg1: integer): PresetEntry
+--- @overload fun(n: string, f: integer): PresetEntry
 function PresetEntry.new() end

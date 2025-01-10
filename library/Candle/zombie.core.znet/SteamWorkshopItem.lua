@@ -34,9 +34,9 @@ function SteamWorkshopItem:getContentFolder() end
 function SteamWorkshopItem:getDescription() end
 
 --- @public
---- @param arg0 string
+--- @param error string
 --- @return string
-function SteamWorkshopItem:getExtendedErrorInfo(arg0) end
+function SteamWorkshopItem:getExtendedErrorInfo(error) end
 
 --- @public
 --- @return string
@@ -67,9 +67,9 @@ function SteamWorkshopItem:getTags() end
 function SteamWorkshopItem:getTitle() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return boolean
-function SteamWorkshopItem:getUpdateProgress(arg0) end
+function SteamWorkshopItem:getUpdateProgress(table) end
 
 --- @public
 --- @return integer
@@ -88,39 +88,39 @@ function SteamWorkshopItem:getVisibilityInteger() end
 function SteamWorkshopItem:readWorkshopTxt() end
 
 --- @public
---- @param arg0 string
+--- @param changeNote string
 --- @return nil
-function SteamWorkshopItem:setChangeNote(arg0) end
+function SteamWorkshopItem:setChangeNote(changeNote) end
 
 --- @public
---- @param arg0 string
+--- @param description string
 --- @return nil
-function SteamWorkshopItem:setDescription(arg0) end
+function SteamWorkshopItem:setDescription(description) end
 
 --- @public
---- @param arg0 string
+--- @param ID string
 --- @return nil
-function SteamWorkshopItem:setID(arg0) end
+function SteamWorkshopItem:setID(ID) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param tags ArrayList
 --- @return nil
-function SteamWorkshopItem:setTags(arg0) end
+function SteamWorkshopItem:setTags(tags) end
 
 --- @public
---- @param arg0 string
+--- @param title string
 --- @return nil
-function SteamWorkshopItem:setTitle(arg0) end
+function SteamWorkshopItem:setTitle(title) end
 
 --- @public
---- @param arg0 string
+--- @param visibility string
 --- @return nil
-function SteamWorkshopItem:setVisibility(arg0) end
+function SteamWorkshopItem:setVisibility(visibility) end
 
 --- @public
---- @param arg0 integer
+--- @param v integer
 --- @return nil
-function SteamWorkshopItem:setVisibilityInteger(arg0) end
+function SteamWorkshopItem:setVisibilityInteger(v) end
 
 --- @public
 --- @return boolean
@@ -131,9 +131,9 @@ function SteamWorkshopItem:submitUpdate() end
 function SteamWorkshopItem:validateContents() end
 
 --- @public
---- @param arg0 Path
+--- @param path Path
 --- @return string
-function SteamWorkshopItem:validatePreviewImage(arg0) end
+function SteamWorkshopItem:validatePreviewImage(path) end
 
 --- @public
 --- @return boolean
@@ -144,6 +144,6 @@ function SteamWorkshopItem:writeWorkshopTxt() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param workshopFolder string
 --- @return SteamWorkshopItem
-function SteamWorkshopItem.new(arg0) end
+function SteamWorkshopItem.new(workshopFolder) end

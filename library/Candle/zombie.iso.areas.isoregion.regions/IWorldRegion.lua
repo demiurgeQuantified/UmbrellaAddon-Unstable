@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IWorldRegion
+--- @class IWorldRegion TurboTuTone.
 --- @field public class any
 IWorldRegion = {}
 

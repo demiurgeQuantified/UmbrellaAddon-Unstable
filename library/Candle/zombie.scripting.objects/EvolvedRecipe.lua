@@ -15,11 +15,11 @@ EvolvedRecipe = {}
 function EvolvedRecipe:Load(arg0, arg1) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 InventoryItem
---- @param arg2 IsoGameCharacter
+--- @param baseItem InventoryItem
+--- @param usedItem InventoryItem
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function EvolvedRecipe:addItem(arg0, arg1, arg2) end
+function EvolvedRecipe:addItem(baseItem, usedItem, chr) end
 
 --- @public
 --- @return string
@@ -34,16 +34,16 @@ function EvolvedRecipe:getBaseItem() end
 function EvolvedRecipe:getFullResultItem() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param usedItem InventoryItem
 --- @return ItemRecipe
-function EvolvedRecipe:getItemRecipe(arg0) end
+function EvolvedRecipe:getItemRecipe(usedItem) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
---- @param arg2 ArrayList
+--- @param chr IsoGameCharacter
+--- @param baseItem InventoryItem
+--- @param containers ArrayList
 --- @return ArrayList
-function EvolvedRecipe:getItemsCanBeUse(arg0, arg1, arg2) end
+function EvolvedRecipe:getItemsCanBeUse(chr, baseItem, containers) end
 
 --- @public
 --- @return Map
@@ -95,36 +95,36 @@ function EvolvedRecipe:isCookable() end
 function EvolvedRecipe:isHidden() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function EvolvedRecipe:isResultItem(arg0) end
+function EvolvedRecipe:isResultItem(item) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 InventoryItem
+--- @param baseItem InventoryItem
+--- @param spiceItem InventoryItem
 --- @return boolean
-function EvolvedRecipe:isSpiceAdded(arg0, arg1) end
+function EvolvedRecipe:isSpiceAdded(baseItem, spiceItem) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param itemTest InventoryItem
 --- @return boolean
-function EvolvedRecipe:needToBeCooked(arg0) end
+function EvolvedRecipe:needToBeCooked(itemTest) end
 
 --- @public
---- @param arg0 boolean
+--- @param allow boolean
 --- @return nil
-function EvolvedRecipe:setAllowFrozenItem(arg0) end
+function EvolvedRecipe:setAllowFrozenItem(allow) end
 
 --- @public
---- @param arg0 boolean
+--- @param hide boolean
 --- @return nil
-function EvolvedRecipe:setIsHidden(arg0) end
+function EvolvedRecipe:setIsHidden(hide) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return EvolvedRecipe
-function EvolvedRecipe.new(arg0) end
+function EvolvedRecipe.new(name) end

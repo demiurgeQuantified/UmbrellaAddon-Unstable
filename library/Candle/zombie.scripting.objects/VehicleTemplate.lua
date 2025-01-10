@@ -17,8 +17,8 @@ function VehicleTemplate:getScript() end
 ------------------------------------
 
 --- @public
---- @param arg0 ScriptModule
---- @param arg1 string
---- @param arg2 string
+--- @param module ScriptModule
+--- @param name string
+--- @param body string
 --- @return VehicleTemplate
-function VehicleTemplate.new(arg0, arg1, arg2) end
+function VehicleTemplate.new(module, name, body) end

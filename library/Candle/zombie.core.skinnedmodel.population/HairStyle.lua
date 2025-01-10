@@ -9,9 +9,9 @@ HairStyle = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return string
-function HairStyle:getAlternate(arg0) end
+function HairStyle:getAlternate(category) end
 
 --- @public
 --- @return integer

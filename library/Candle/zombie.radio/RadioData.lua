@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RadioData
+--- @class RadioData Turbo
 --- @field public class any
 RadioData = {}
 
@@ -15,9 +15,9 @@ function RadioData.fetchAllRadioData() end
 
 --- @public
 --- @static
---- @param arg0 Language
+--- @param language Language
 --- @return ArrayList
-function RadioData.getTranslatorNames(arg0) end
+function RadioData.getTranslatorNames(language) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -36,6 +36,6 @@ function RadioData:isVanilla() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param xmlFile string
 --- @return RadioData
-function RadioData.new(arg0) end
+function RadioData.new(xmlFile) end

@@ -19,107 +19,107 @@ function ObjectTooltip.checkFont() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 number
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
+--- @param f number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ObjectTooltip:DrawProgressBar(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function ObjectTooltip:DrawProgressBar(x, y, w, h, f, r, g, b, a) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 string
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param font UIFont
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
 --- @return nil
-function ObjectTooltip:DrawText(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ObjectTooltip:DrawText(font, text, x, y, r, g, b, alpha) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 string
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param font UIFont
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
 --- @return nil
-function ObjectTooltip:DrawTextCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ObjectTooltip:DrawTextCentre(font, text, x, y, r, g, b, alpha) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 string
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param font UIFont
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
 --- @return nil
-function ObjectTooltip:DrawTextRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ObjectTooltip:DrawTextRight(font, text, x, y, r, g, b, alpha) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param alpha number
 --- @return nil
-function ObjectTooltip:DrawTextureScaled(arg0, arg1, arg2, arg3, arg4, arg5) end
+function ObjectTooltip:DrawTextureScaled(tex, x, y, width, height, alpha) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 number
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
 --- @return nil
-function ObjectTooltip:DrawTextureScaledAspect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function ObjectTooltip:DrawTextureScaledAspect(tex, x, y, width, height, r, g, b, alpha) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 boolean
+--- @param value integer
+--- @param x integer
+--- @param y integer
+--- @param highGood boolean
 --- @return nil
-function ObjectTooltip:DrawValueRight(arg0, arg1, arg2, arg3) end
+function ObjectTooltip:DrawValueRight(value, x, y, highGood) end
 
 --- @public
---- @param arg0 number
---- @param arg1 integer
---- @param arg2 integer
+--- @param value number
+--- @param x integer
+--- @param y integer
 --- @return nil
---- @overload fun(self: ObjectTooltip, arg0: integer, arg1: integer, arg2: integer): nil
-function ObjectTooltip:DrawValueRightNoPlus(arg0, arg1, arg2) end
+--- @overload fun(self: ObjectTooltip, value: integer, x: integer, y: integer): nil
+function ObjectTooltip:DrawValueRightNoPlus(value, x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param textX integer
+--- @param text string
 --- @return nil
-function ObjectTooltip:adjustWidth(arg0, arg1) end
+function ObjectTooltip:adjustWidth(textX, text) end
 
 --- @public
 --- @return Layout
 function ObjectTooltip:beginLayout() end
 
 --- @public
---- @param arg0 Layout
+--- @param layout Layout
 --- @return nil
-function ObjectTooltip:endLayout(arg0) end
+function ObjectTooltip:endLayout(layout) end
 
 --- @public
 --- @return IsoGameCharacter
@@ -150,42 +150,42 @@ function ObjectTooltip:hide() end
 function ObjectTooltip:isMeasureOnly() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param dx number
+--- @param dy number
 --- @return boolean
-function ObjectTooltip:onMouseMove(arg0, arg1) end
+function ObjectTooltip:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param dx number
+--- @param dy number
 --- @return nil
-function ObjectTooltip:onMouseMoveOutside(arg0, arg1) end
+function ObjectTooltip:onMouseMoveOutside(dx, dy) end
 
 --- @public
 --- @return nil
 function ObjectTooltip:render() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function ObjectTooltip:setCharacter(arg0) end
+function ObjectTooltip:setCharacter(chr) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ObjectTooltip:setMeasureOnly(arg0) end
+function ObjectTooltip:setMeasureOnly(b) end
 
 --- @public
---- @param arg0 number
+--- @param weight number
 --- @return nil
-function ObjectTooltip:setWeightOfStack(arg0) end
+function ObjectTooltip:setWeightOfStack(weight) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 number
---- @param arg2 number
+--- @param obj IsoObject
+--- @param x number
+--- @param y number
 --- @return nil
-function ObjectTooltip:show(arg0, arg1, arg2) end
+function ObjectTooltip:show(obj, x, y) end
 
 --- @public
 --- @return nil

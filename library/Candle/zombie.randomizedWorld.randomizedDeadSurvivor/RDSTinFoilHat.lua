@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSTinFoilHat: RandomizedDeadSurvivorBase
+--- @class RDSTinFoilHat: RandomizedDeadSurvivorBase Zombies family with tin foil hat
 --- @field public class any
 RDSTinFoilHat = {}
 
@@ -9,9 +9,9 @@ RDSTinFoilHat = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSTinFoilHat:randomizeDeadSurvivor(arg0) end
+function RDSTinFoilHat:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

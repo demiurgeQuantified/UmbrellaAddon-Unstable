@@ -23,10 +23,10 @@ function IntegerServerOption:getTooltip() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOptions
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param owner ServerOptions
+--- @param name string
+--- @param min integer
+--- @param max integer
+--- @param defaultValue integer
 --- @return IntegerServerOption
-function IntegerServerOption.new(arg0, arg1, arg2, arg3, arg4) end
+function IntegerServerOption.new(owner, name, min, max, defaultValue) end

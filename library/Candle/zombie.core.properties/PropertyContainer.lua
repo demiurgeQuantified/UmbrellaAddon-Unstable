@@ -11,9 +11,9 @@ PropertyContainer = {}
 ------------------------------------
 
 --- @public
---- @param arg0 PropertyContainer
+--- @param other PropertyContainer
 --- @return nil
-function PropertyContainer:AddProperties(arg0) end
+function PropertyContainer:AddProperties(other) end
 
 --- @public
 --- @return nil
@@ -24,30 +24,30 @@ function PropertyContainer:Clear() end
 function PropertyContainer:CreateKeySet() end
 
 --- @public
---- @param arg0 number
+--- @param flag number
 --- @return boolean
---- @overload fun(self: PropertyContainer, arg0: string): boolean
---- @overload fun(self: PropertyContainer, arg0: IsoFlagType): boolean
-function PropertyContainer:Is(arg0) end
+--- @overload fun(self: PropertyContainer, isoPropertyType: string): boolean
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType): boolean
+function PropertyContainer:Is(flag) end
 
 --- @public
---- @param arg0 IsoFlagType
+--- @param flag IsoFlagType
 --- @return nil
---- @overload fun(self: PropertyContainer, arg0: string, arg1: string): nil
---- @overload fun(self: PropertyContainer, arg0: IsoFlagType, arg1: string): nil
---- @overload fun(self: PropertyContainer, arg0: string, arg1: string, arg2: boolean): nil
-function PropertyContainer:Set(arg0) end
+--- @overload fun(self: PropertyContainer, propName: string, propName2: string): nil
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType, ignored: string): nil
+--- @overload fun(self: PropertyContainer, propName: string, propName2: string, checkIsoFlagType: boolean): nil
+function PropertyContainer:Set(flag) end
 
 --- @public
---- @param arg0 string
+--- @param propName string
 --- @return nil
---- @overload fun(self: PropertyContainer, arg0: IsoFlagType): nil
-function PropertyContainer:UnSet(arg0) end
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType): nil
+function PropertyContainer:UnSet(propName) end
 
 --- @public
---- @param arg0 string
+--- @param property string
 --- @return string
-function PropertyContainer:Val(arg0) end
+function PropertyContainer:Val(property) end
 
 --- @public
 --- @return ArrayList

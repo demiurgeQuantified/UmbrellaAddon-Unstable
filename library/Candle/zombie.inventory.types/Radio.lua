@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class Radio: Moveable, Talker, IUpdater, WaveSignalDevice
+--- @class Radio: Moveable, Talker, IUpdater, WaveSignalDevice Turbo
 --- @field public class any
 Radio = {}
 
@@ -9,18 +9,18 @@ Radio = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 string
---- @param arg5 string
---- @param arg6 integer
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
 --- @return nil
---- @overload fun(self: Radio, arg0: string, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
---- @overload fun(self: Radio, arg0: ChatMessage, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
+--- @overload fun(self: Radio, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
+--- @overload fun(self: Radio, msg: ChatMessage, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
 --- @overload fun(self: Radio, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
-function Radio:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function Radio:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
@@ -33,24 +33,24 @@ function Radio:HasPlayerInRange() end
 function Radio:IsSpeaking() end
 
 --- @public
---- @param arg0 string
+--- @param sprite string
 --- @return boolean
-function Radio:ReadFromWorldSprite(arg0) end
+function Radio:ReadFromWorldSprite(sprite) end
 
 --- @public
---- @param arg0 string
+--- @param line string
 --- @return nil
---- @overload fun(self: Radio, arg0: string): nil
-function Radio:Say(arg0) end
+--- @overload fun(self: Radio, line: string): nil
+function Radio:Say(line) end
 
 --- @public
 --- @return string
 function Radio:canBeEquipped() end
 
 --- @public
---- @param arg0 integer
+--- @param distance integer
 --- @return nil
-function Radio:doReceiveSignal(arg0) end
+function Radio:doReceiveSignal(distance) end
 
 --- @public
 --- @return string
@@ -105,10 +105,10 @@ function Radio:getY() end
 function Radio:getZ() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Radio:load(arg0, arg1) end
+function Radio:load(input, WorldVersion) end
 
 --- @public
 --- @return nil
@@ -121,10 +121,10 @@ function Radio:render() end
 function Radio:renderlast() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function Radio:save(arg0, arg1) end
+function Radio:save(output, net) end
 
 --- @public
 --- @param arg0 string
@@ -132,16 +132,16 @@ function Radio:save(arg0, arg1) end
 function Radio:setCanBeEquipped(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
---- @overload fun(self: Radio, arg0: number): nil
-function Radio:setDelta(arg0) end
+--- @overload fun(self: Radio, delta: number): nil
+function Radio:setDelta(delta) end
 
 --- @public
---- @param arg0 DeviceData
+--- @param data DeviceData
 --- @return nil
---- @overload fun(self: Radio, arg0: DeviceData): nil
-function Radio:setDeviceData(arg0) end
+--- @overload fun(self: Radio, data: DeviceData): nil
+function Radio:setDeviceData(data) end
 
 --- @public
 --- @return nil
@@ -153,9 +153,9 @@ function Radio:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return Radio
-function Radio.new(arg0, arg1, arg2, arg3) end
+function Radio.new(module, name, itemType, texName) end

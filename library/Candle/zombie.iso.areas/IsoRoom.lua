@@ -9,9 +9,9 @@ IsoRoom = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoBuilding
-function IsoRoom:CreateBuilding(arg0) end
+function IsoRoom:CreateBuilding(cell) end
 
 --- @public
 --- @param arg0 string
@@ -40,14 +40,14 @@ function IsoRoom:addOldPotteryWheel() end
 function IsoRoom:addPotteryWheel() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return nil
-function IsoRoom:addSquare(arg0) end
+function IsoRoom:addSquare(sq) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return nil
-function IsoRoom:createLights(arg0) end
+function IsoRoom:createLights(active) end
 
 --- @public
 --- @param arg0 integer
@@ -117,7 +117,7 @@ function IsoRoom:getSquares() end
 function IsoRoom:getTileList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the WaterSources
 function IsoRoom:getWaterSources() end
 
 --- @public
@@ -133,11 +133,11 @@ function IsoRoom:hasLightSwitches() end
 function IsoRoom:hasWater() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return boolean
-function IsoRoom:isInside(arg0, arg1, arg2) end
+function IsoRoom:isInside(x, y, z) end
 
 --- @public
 --- @return nil
@@ -148,14 +148,14 @@ function IsoRoom:onSee() end
 function IsoRoom:refreshSquares() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return nil
-function IsoRoom:removeSquare(arg0) end
+function IsoRoom:removeSquare(sq) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param WaterSources ArrayList the WaterSources to set
 --- @return nil
-function IsoRoom:setWaterSources(arg0) end
+function IsoRoom:setWaterSources(WaterSources) end
 
 --- @public
 --- @return boolean

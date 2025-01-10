@@ -9,22 +9,22 @@ Profession = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param trait string
 --- @return nil
-function Profession:addFreeTrait(arg0) end
+function Profession:addFreeTrait(trait) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 integer
+--- @param perk Perk
+--- @param level integer
 --- @return nil
-function Profession:addXPBoost(arg0, arg1) end
+function Profession:addXPBoost(perk, level) end
 
 --- @public
---- @return integer
+--- @return integer the cost
 function Profession:getCost() end
 
 --- @public
---- @return string
+--- @return string the description
 function Profession:getDescription() end
 
 --- @public
@@ -32,7 +32,7 @@ function Profession:getDescription() end
 function Profession:getFreeRecipes() end
 
 --- @public
---- @return Stack
+--- @return Stack the FreeTraitStack
 function Profession:getFreeTraitStack() end
 
 --- @public
@@ -54,7 +54,7 @@ function Profession:getLabel() end
 function Profession:getLeftLabel() end
 
 --- @public
---- @return string
+--- @return string the name
 function Profession:getName() end
 
 --- @public
@@ -67,7 +67,7 @@ function Profession:getRightLabel() end
 function Profession:getTexture() end
 
 --- @public
---- @return string
+--- @return string the type
 function Profession:getType() end
 
 --- @public
@@ -75,49 +75,49 @@ function Profession:getType() end
 function Profession:getXPBoostMap() end
 
 --- @public
---- @param arg0 integer
+--- @param cost integer the cost to set
 --- @return nil
-function Profession:setCost(arg0) end
+function Profession:setCost(cost) end
 
 --- @public
---- @param arg0 string
+--- @param description string the description to set
 --- @return nil
-function Profession:setDescription(arg0) end
+function Profession:setDescription(description) end
 
 --- @public
---- @param arg0 List
+--- @param freeRecipes List
 --- @return nil
-function Profession:setFreeRecipes(arg0) end
+function Profession:setFreeRecipes(freeRecipes) end
 
 --- @public
---- @param arg0 Stack
+--- @param FreeTraitStack Stack the FreeTraitStack to set
 --- @return nil
-function Profession:setFreeTraitStack(arg0) end
+function Profession:setFreeTraitStack(FreeTraitStack) end
 
 --- @public
---- @param arg0 string
+--- @param IconPath string the IconPath to set
 --- @return nil
-function Profession:setIconPath(arg0) end
+function Profession:setIconPath(IconPath) end
 
 --- @public
---- @param arg0 string
+--- @param name string the name to set
 --- @return nil
-function Profession:setName(arg0) end
+function Profession:setName(name) end
 
 --- @public
---- @param arg0 string
+--- @param type string the type to set
 --- @return nil
-function Profession:setType(arg0) end
+function Profession:setType(type) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 integer
---- @param arg4 string
+--- @param type string
+--- @param name string
+--- @param IconPathname string
+--- @param cost integer
+--- @param desc string
 --- @return Profession
-function Profession.new(arg0, arg1, arg2, arg3, arg4) end
+function Profession.new(type, name, IconPathname, cost, desc) end

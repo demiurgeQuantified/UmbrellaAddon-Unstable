@@ -50,8 +50,8 @@ function GlobalObject:getZ() end
 function GlobalObject:isValidIsoObject(arg0) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function GlobalObject:setLocation(arg0, arg1, arg2) end
+function GlobalObject:setLocation(x, y, z) end

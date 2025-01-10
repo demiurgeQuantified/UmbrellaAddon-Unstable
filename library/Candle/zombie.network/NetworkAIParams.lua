@@ -54,15 +54,15 @@ function NetworkAIParams.isShowServerInfo() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return nil
-function NetworkAIParams.setShowConnectionInfo(arg0) end
+function NetworkAIParams.setShowConnectionInfo(enabled) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return nil
-function NetworkAIParams.setShowServerInfo(arg0) end
+function NetworkAIParams.setShowServerInfo(enabled) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

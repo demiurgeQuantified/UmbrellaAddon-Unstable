@@ -15,15 +15,15 @@ function CGlobalObjects.Reset() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return CGlobalObjectSystem
-function CGlobalObjects.getSystemByIndex(arg0) end
+function CGlobalObjects.getSystemByIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return CGlobalObjectSystem
-function CGlobalObjects.getSystemByName(arg0) end
+function CGlobalObjects.getSystemByName(name) end
 
 --- @public
 --- @static
@@ -37,35 +37,35 @@ function CGlobalObjects.initSystems() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function CGlobalObjects.loadInitialState(arg0) end
+function CGlobalObjects.loadInitialState(bb) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return CGlobalObjectSystem
-function CGlobalObjects.newSystem(arg0) end
+function CGlobalObjects.newSystem(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param message string
 --- @return nil
-function CGlobalObjects.noise(arg0) end
+function CGlobalObjects.noise(message) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
---- @param arg2 table
+--- @param systemName string
+--- @param command string
+--- @param args table
 --- @return boolean
-function CGlobalObjects.receiveServerCommand(arg0, arg1, arg2) end
+function CGlobalObjects.receiveServerCommand(systemName, command, args) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return CGlobalObjectSystem
-function CGlobalObjects.registerSystem(arg0) end
+function CGlobalObjects.registerSystem(name) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

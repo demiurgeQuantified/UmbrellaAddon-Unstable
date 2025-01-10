@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ClimateValues
+--- @class ClimateValues TurboTuTone.
 --- @field public class any
 ClimateValues = {}
 
@@ -9,9 +9,9 @@ ClimateValues = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateValues
+--- @param copy ClimateValues
 --- @return nil
-function ClimateValues:CopyValues(arg0) end
+function ClimateValues:CopyValues(copy) end
 
 --- @public
 --- @return number
@@ -150,12 +150,12 @@ function ClimateValues:isDayDoFog() end
 function ClimateValues:isTemperatureIsSnow() end
 
 --- @public
---- @param arg0 GregorianCalendar
+--- @param calendar GregorianCalendar
 --- @return nil
---- @overload fun(self: ClimateValues, arg0: integer, arg1: integer, arg2: integer): nil
---- @overload fun(self: ClimateValues, arg0: integer, arg1: integer, arg2: integer, arg3: integer): nil
---- @overload fun(self: ClimateValues, arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: integer): nil
-function ClimateValues:pollDate(arg0) end
+--- @overload fun(self: ClimateValues, year: integer, month: integer, dayOfMonth: integer): nil
+--- @overload fun(self: ClimateValues, year: integer, month: integer, dayOfMonth: integer, hourOfDay: integer): nil
+--- @overload fun(self: ClimateValues, year: integer, month: integer, dayOfMonth: integer, hourOfDay: integer, minute: integer): nil
+function ClimateValues:pollDate(calendar) end
 
 --- @public
 --- @return nil
@@ -166,6 +166,6 @@ function ClimateValues:print() end
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateManager
+--- @param clim ClimateManager
 --- @return ClimateValues
-function ClimateValues.new(arg0) end
+function ClimateValues.new(clim) end

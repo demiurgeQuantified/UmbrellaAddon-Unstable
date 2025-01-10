@@ -18,11 +18,11 @@ function IsoMetaCell:Dispose() end
 function IsoMetaCell:addAnimalZone(arg0) end
 
 --- @public
---- @param arg0 RoomDef
---- @param arg1 integer
---- @param arg2 integer
+--- @param room RoomDef
+--- @param cellX integer
+--- @param cellY integer
 --- @return nil
-function IsoMetaCell:addRoom(arg0, arg1, arg2) end
+function IsoMetaCell:addRoom(room, cellX, cellY) end
 
 --- @public
 --- @param arg0 ArrayList
@@ -32,19 +32,19 @@ function IsoMetaCell:addRoom(arg0, arg1, arg2) end
 function IsoMetaCell:addRooms(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 string
+--- @param def BuildingDef
+--- @param triggerRange integer
+--- @param zombieExclusionRange integer
+--- @param type string
 --- @return nil
-function IsoMetaCell:addTrigger(arg0, arg1, arg2, arg3) end
+function IsoMetaCell:addTrigger(def, triggerRange, zombieExclusionRange, type) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 integer
---- @param arg2 integer
+--- @param zone Zone
+--- @param cellX integer
+--- @param cellY integer
 --- @return nil
-function IsoMetaCell:addZone(arg0, arg1, arg2) end
+function IsoMetaCell:addZone(zone, cellX, cellY) end
 
 --- @public
 --- @param arg0 integer
@@ -86,17 +86,17 @@ function IsoMetaCell:getBuildingsIntersecting(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @param arg0 integer
 --- @return IsoMetaChunk
---- @overload fun(self: IsoMetaCell, arg0: integer, arg1: integer): IsoMetaChunk
+--- @overload fun(self: IsoMetaCell, x: integer, y: integer): IsoMetaChunk
 function IsoMetaCell:getChunk(arg0) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 ArrayList
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
+--- @param result ArrayList
 --- @return nil
-function IsoMetaCell:getRoomsIntersecting(arg0, arg1, arg2, arg3, arg4) end
+function IsoMetaCell:getRoomsIntersecting(x, y, w, h, result) end
 
 --- @public
 --- @return integer
@@ -107,19 +107,19 @@ function IsoMetaCell:getX() end
 function IsoMetaCell:getY() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 ArrayList
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param w integer
+--- @param h integer
+--- @param result ArrayList
 --- @return nil
-function IsoMetaCell:getZonesIntersecting(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMetaCell:getZonesIntersecting(x, y, z, w, h, result) end
 
 --- @public
---- @param arg0 Set
+--- @param result Set
 --- @return nil
-function IsoMetaCell:getZonesUnique(arg0) end
+function IsoMetaCell:getZonesUnique(result) end
 
 --- @public
 --- @param arg0 integer
@@ -135,9 +135,9 @@ function IsoMetaCell:hasChunk(arg0) end
 function IsoMetaCell:load(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function IsoMetaCell:removeZone(arg0) end
+function IsoMetaCell:removeZone(zone) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -149,7 +149,7 @@ function IsoMetaCell:save(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return IsoMetaCell
-function IsoMetaCell.new(arg0, arg1) end
+function IsoMetaCell.new(wx, wy) end

@@ -16,9 +16,9 @@ function IsoDeadBody.Reset() end
 
 --- @public
 --- @static
---- @param arg0 short
+--- @param id short
 --- @return boolean
-function IsoDeadBody.isDead(arg0) end
+function IsoDeadBody.isDead(id) end
 
 --- @public
 --- @static
@@ -28,18 +28,18 @@ function IsoDeadBody.removeDeadBody(arg0) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 Vector3f
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 ColorInfo
---- @param arg8 number
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param forward Vector3f
+--- @param w number
+--- @param fm number
+--- @param bm number
+--- @param lightInfo ColorInfo
+--- @param alpha number
 --- @return nil
 --- @overload fun(arg0: number, arg1: number, arg2: number, arg3: Vector3f, arg4: number, arg5: number, arg6: number, arg7: ColorInfo, arg8: number, arg9: boolean): nil
-function IsoDeadBody.renderShadow(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function IsoDeadBody.renderShadow(x, y, z, forward, w, fm, bm, lightInfo, alpha) end
 
 --- @public
 --- @static
@@ -61,10 +61,10 @@ function IsoDeadBody:AcceptGrapple(arg0, arg1) end
 function IsoDeadBody:Burn() end
 
 --- @public
---- @param arg0 Vector2
---- @param arg1 IsoObject
+--- @param collision Vector2
+--- @param object IsoObject
 --- @return nil
-function IsoDeadBody:Collision(arg0, arg1) end
+function IsoDeadBody:Collision(collision, object) end
 
 --- @public
 --- @param arg0 IGrappleable
@@ -97,10 +97,10 @@ function IsoDeadBody:LetGoOfGrappled(arg0) end
 function IsoDeadBody:RejectGrapple(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param line string
 --- @return nil
---- @overload fun(self: IsoDeadBody, arg0: string): nil
-function IsoDeadBody:Say(arg0) end
+--- @overload fun(self: IsoDeadBody, line: string): nil
+function IsoDeadBody:Say(line) end
 
 --- @public
 --- @return nil
@@ -111,9 +111,9 @@ function IsoDeadBody:addToWorld() end
 function IsoDeadBody:canBeGrappled() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param removedItem InventoryItem
 --- @return nil
-function IsoDeadBody:checkClothing(arg0) end
+function IsoDeadBody:checkClothing(removedItem) end
 
 --- @public
 --- @return number
@@ -249,10 +249,10 @@ function IsoDeadBody:getInventoryWeight() end
 function IsoDeadBody:getItem() end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return nil
---- @overload fun(self: IsoDeadBody, arg0: ItemVisuals): nil
-function IsoDeadBody:getItemVisuals(arg0) end
+--- @overload fun(self: IsoDeadBody, itemVisuals: ItemVisuals): nil
+function IsoDeadBody:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return ObjectID
@@ -425,10 +425,10 @@ function IsoDeadBody:isHandItem(arg0) end
 function IsoDeadBody:isKilledByFall() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param screenX number
+--- @param screenY number
 --- @return boolean
-function IsoDeadBody:isMouseOver(arg0, arg1) end
+function IsoDeadBody:isMouseOver(screenX, screenY) end
 
 --- @public
 --- @return boolean
@@ -471,22 +471,22 @@ function IsoDeadBody:isSkeleton() end
 function IsoDeadBody:isZombie() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoDeadBody:load(arg0, arg1, arg2) end
+function IsoDeadBody:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDeadBody:loadChange(arg0, arg1) end
+function IsoDeadBody:loadChange(change, bb) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param b ByteBuffer
 --- @return string
-function IsoDeadBody:readInventory(arg0) end
+function IsoDeadBody:readInventory(b) end
 
 --- @public
 --- @return IsoGameCharacter
@@ -505,27 +505,27 @@ function IsoDeadBody:reanimateNow() end
 function IsoDeadBody:removeFromWorld() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoDeadBody:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoDeadBody:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
 --- @return nil
 function IsoDeadBody:renderDebugData() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param lightInfo ColorInfo
 --- @return nil
-function IsoDeadBody:renderObjectPicker(arg0, arg1, arg2, arg3) end
+function IsoDeadBody:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
 --- @return nil
@@ -536,17 +536,17 @@ function IsoDeadBody:renderShadow() end
 function IsoDeadBody:renderlast() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoDeadBody:save(arg0, arg1) end
+function IsoDeadBody:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDeadBody:saveChange(arg0, arg1, arg2) end
+function IsoDeadBody:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param arg0 IsoAnimal
@@ -554,9 +554,9 @@ function IsoDeadBody:saveChange(arg0, arg1, arg2) end
 function IsoDeadBody:setAnimalData(arg0) end
 
 --- @public
---- @param arg0 AttachedItems
+--- @param other AttachedItems
 --- @return nil
-function IsoDeadBody:setAttachedItems(arg0) end
+function IsoDeadBody:setAttachedItems(other) end
 
 --- @public
 --- @param arg0 short
@@ -564,14 +564,14 @@ function IsoDeadBody:setAttachedItems(arg0) end
 function IsoDeadBody:setCharacterOnlineID(arg0) end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param container ItemContainer the container to set
 --- @return nil
-function IsoDeadBody:setContainer(arg0) end
+function IsoDeadBody:setContainer(container) end
 
 --- @public
---- @param arg0 boolean
+--- @param crawling boolean
 --- @return nil
-function IsoDeadBody:setCrawling(arg0) end
+function IsoDeadBody:setCrawling(crawling) end
 
 --- @public
 --- @param arg0 boolean
@@ -584,14 +584,14 @@ function IsoDeadBody:setDoContinueGrapple(arg0) end
 function IsoDeadBody:setDoGrapple(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param fakeDead boolean
 --- @return nil
-function IsoDeadBody:setFakeDead(arg0) end
+function IsoDeadBody:setFakeDead(fakeDead) end
 
 --- @public
---- @param arg0 boolean
+--- @param fallOnFront boolean
 --- @return nil
-function IsoDeadBody:setFallOnFront(arg0) end
+function IsoDeadBody:setFallOnFront(fallOnFront) end
 
 --- @public
 --- @param arg0 Vector2
@@ -651,19 +651,19 @@ function IsoDeadBody:setOnFloor(arg0) end
 function IsoDeadBody:setPerformingGrappleGrabAnimation(arg0) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
-function IsoDeadBody:setPrimaryHandItem(arg0) end
+function IsoDeadBody:setPrimaryHandItem(item) end
 
 --- @public
---- @param arg0 number
+--- @param hours number
 --- @return nil
-function IsoDeadBody:setReanimateTime(arg0) end
+function IsoDeadBody:setReanimateTime(hours) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
-function IsoDeadBody:setSecondaryHandItem(arg0) end
+function IsoDeadBody:setSecondaryHandItem(item) end
 
 --- @public
 --- @param arg0 string
@@ -699,9 +699,9 @@ function IsoDeadBody:setTargetGrapplePos(arg0, arg1, arg2) end
 function IsoDeadBody:setTargetGrappleRotation(arg0, arg1) end
 
 --- @public
---- @param arg0 WornItems
+--- @param other WornItems
 --- @return nil
-function IsoDeadBody:setWornItems(arg0) end
+function IsoDeadBody:setWornItems(other) end
 
 --- @public
 --- @return nil
@@ -720,9 +720,9 @@ function IsoDeadBody:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param died IsoGameCharacter
 --- @return IsoDeadBody
---- @overload fun(arg0: IsoCell): IsoDeadBody
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean): IsoDeadBody
+--- @overload fun(cell: IsoCell): IsoDeadBody
+--- @overload fun(died: IsoGameCharacter, wasCorpseAlready: boolean): IsoDeadBody
 --- @overload fun(arg0: IsoGameCharacter, arg1: boolean, arg2: boolean): IsoDeadBody
-function IsoDeadBody.new(arg0) end
+function IsoDeadBody.new(died) end

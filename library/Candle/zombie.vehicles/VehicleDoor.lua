@@ -9,9 +9,9 @@ VehicleDoor = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Door
+--- @param scriptDoor Door
 --- @return nil
-function VehicleDoor:init(arg0) end
+function VehicleDoor:init(scriptDoor) end
 
 --- @public
 --- @return boolean
@@ -26,36 +26,36 @@ function VehicleDoor:isLocked() end
 function VehicleDoor:isOpen() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function VehicleDoor:load(arg0, arg1) end
+function VehicleDoor:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function VehicleDoor:save(arg0) end
+function VehicleDoor:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param broken boolean
 --- @return nil
-function VehicleDoor:setLockBroken(arg0) end
+function VehicleDoor:setLockBroken(broken) end
 
 --- @public
---- @param arg0 boolean
+--- @param locked boolean
 --- @return nil
-function VehicleDoor:setLocked(arg0) end
+function VehicleDoor:setLocked(locked) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return nil
-function VehicleDoor:setOpen(arg0) end
+function VehicleDoor:setOpen(open) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 VehiclePart
+--- @param part VehiclePart
 --- @return VehicleDoor
-function VehicleDoor.new(arg0) end
+function VehicleDoor.new(part) end

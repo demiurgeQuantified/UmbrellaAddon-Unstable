@@ -18,25 +18,25 @@ function ZombieIdleState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function ZombieIdleState:animEvent(arg0, arg1) end
+function ZombieIdleState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieIdleState:enter(arg0) end
+function ZombieIdleState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieIdleState:execute(arg0) end
+function ZombieIdleState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieIdleState:exit(arg0) end
+function ZombieIdleState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

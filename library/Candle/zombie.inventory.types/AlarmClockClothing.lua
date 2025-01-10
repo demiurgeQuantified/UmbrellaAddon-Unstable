@@ -11,10 +11,10 @@ AlarmClockClothing = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return nil
-function AlarmClockClothing:DoTooltip(arg0, arg1) end
+function AlarmClockClothing:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean
@@ -64,27 +64,27 @@ function AlarmClockClothing:isDigital() end
 function AlarmClockClothing:isRinging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function AlarmClockClothing:load(arg0, arg1) end
+function AlarmClockClothing:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function AlarmClockClothing:save(arg0, arg1) end
+function AlarmClockClothing:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param alarmSet boolean
 --- @return nil
---- @overload fun(self: AlarmClockClothing, arg0: boolean): nil
-function AlarmClockClothing:setAlarmSet(arg0) end
+--- @overload fun(self: AlarmClockClothing, alarmSet: boolean): nil
+function AlarmClockClothing:setAlarmSet(alarmSet) end
 
 --- @public
---- @param arg0 string
+--- @param alarmSound string
 --- @return nil
-function AlarmClockClothing:setAlarmSound(arg0) end
+function AlarmClockClothing:setAlarmSound(alarmSound) end
 
 --- @public
 --- @param arg0 integer
@@ -93,21 +93,21 @@ function AlarmClockClothing:setAlarmSound(arg0) end
 function AlarmClockClothing:setForceDontRing(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param hour integer
 --- @return nil
---- @overload fun(self: AlarmClockClothing, arg0: integer): nil
-function AlarmClockClothing:setHour(arg0) end
+--- @overload fun(self: AlarmClockClothing, hour: integer): nil
+function AlarmClockClothing:setHour(hour) end
 
 --- @public
---- @param arg0 integer
+--- @param min integer
 --- @return nil
---- @overload fun(self: AlarmClockClothing, arg0: integer): nil
-function AlarmClockClothing:setMinute(arg0) end
+--- @overload fun(self: AlarmClockClothing, min: integer): nil
+function AlarmClockClothing:setMinute(min) end
 
 --- @public
---- @param arg0 integer
+--- @param soundRadius integer
 --- @return nil
-function AlarmClockClothing:setSoundRadius(arg0) end
+function AlarmClockClothing:setSoundRadius(soundRadius) end
 
 --- @public
 --- @return boolean
@@ -123,9 +123,9 @@ function AlarmClockClothing:stopRinging() end
 function AlarmClockClothing:syncAlarmClock() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return nil
-function AlarmClockClothing:syncAlarmClock_Player(arg0) end
+function AlarmClockClothing:syncAlarmClock_Player(player) end
 
 --- @public
 --- @return nil
@@ -140,21 +140,21 @@ function AlarmClockClothing:syncStopRinging() end
 function AlarmClockClothing:update() end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return nil
-function AlarmClockClothing:updateSound(arg0) end
+function AlarmClockClothing:updateSound(emitter) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
---- @param arg4 string
---- @param arg5 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
+--- @param palette string
+--- @param SpriteName string
 --- @return AlarmClockClothing
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item, arg4: string, arg5: string): AlarmClockClothing
-function AlarmClockClothing.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(module: string, name: string, itemType: string, item: Item, palette: string, SpriteName: string): AlarmClockClothing
+function AlarmClockClothing.new(module, name, itemType, texName, palette, SpriteName) end

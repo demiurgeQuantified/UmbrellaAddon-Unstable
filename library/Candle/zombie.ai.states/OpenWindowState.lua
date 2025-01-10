@@ -18,35 +18,35 @@ function OpenWindowState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function OpenWindowState:animEvent(arg0, arg1) end
+function OpenWindowState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function OpenWindowState:enter(arg0) end
+function OpenWindowState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function OpenWindowState:execute(arg0) end
+function OpenWindowState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function OpenWindowState:exit(arg0) end
+function OpenWindowState:exit(owner) end
 
 --- @public
---- @return boolean
+--- @return boolean TRUE if this state handles the "Cancel Action" key or the B controller button.
 function OpenWindowState:isDoingActionThatCanBeCancelled() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoWindow
+--- @param owner IsoGameCharacter
+--- @param window IsoWindow
 --- @return nil
-function OpenWindowState:setParams(arg0, arg1) end
+function OpenWindowState:setParams(owner, window) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

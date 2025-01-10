@@ -9,9 +9,9 @@ Asset = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Asset
+--- @param dependent_asset Asset
 --- @return nil
-function Asset:addDependency(arg0) end
+function Asset:addDependency(dependent_asset) end
 
 --- @public
 --- @return AssetManager
@@ -50,16 +50,16 @@ function Asset:isFailure() end
 function Asset:isReady() end
 
 --- @public
---- @param arg0 State
+--- @param state State
 --- @return nil
-function Asset:onCreated(arg0) end
+function Asset:onCreated(state) end
 
 --- @public
---- @param arg0 Asset
+--- @param dependent_asset Asset
 --- @return nil
-function Asset:removeDependency(arg0) end
+function Asset:removeDependency(dependent_asset) end
 
 --- @public
---- @param arg0 AssetParams
+--- @param params AssetParams
 --- @return nil
-function Asset:setAssetParams(arg0) end
+function Asset:setAssetParams(params) end

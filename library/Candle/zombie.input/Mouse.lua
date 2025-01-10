@@ -27,9 +27,9 @@ Mouse = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param number integer
 --- @return nil
-function Mouse.UIBlockButtonDown(arg0) end
+function Mouse.UIBlockButtonDown(number) end
 
 --- @public
 --- @static
@@ -68,15 +68,15 @@ function Mouse.initCustomCursor() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param number integer
 --- @return boolean
-function Mouse.isButtonDown(arg0) end
+function Mouse.isButtonDown(number) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param number integer
 --- @return boolean
-function Mouse.isButtonDownUICheck(arg0) end
+function Mouse.isButtonDownUICheck(number) end
 
 --- @public
 --- @static
@@ -162,9 +162,9 @@ function Mouse.isRightUp() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return Cursor
-function Mouse.loadCursor(arg0) end
+function Mouse.loadCursor(filename) end
 
 --- @public
 --- @static
@@ -178,16 +178,16 @@ function Mouse.renderCursorTexture() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bVisible boolean
 --- @return nil
-function Mouse.setCursorVisible(arg0) end
+function Mouse.setCursorVisible(bVisible) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function Mouse.setXY(arg0, arg1) end
+function Mouse.setXY(x, y) end
 
 --- @public
 --- @static

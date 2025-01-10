@@ -17,21 +17,21 @@ function ActionProgressBar:getValue() end
 function ActionProgressBar:render() end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
-function ActionProgressBar:setValue(arg0) end
+function ActionProgressBar:setValue(delta) end
 
 --- @public
---- @param arg0 integer
+--- @param nPlayer integer
 --- @return nil
-function ActionProgressBar:update(arg0) end
+function ActionProgressBar:update(nPlayer) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return ActionProgressBar
-function ActionProgressBar.new(arg0, arg1) end
+function ActionProgressBar.new(x, y) end

@@ -12,19 +12,19 @@ SurvivorDesc = {}
 
 --- @public
 --- @static
---- @param arg0 ColorInfo
+--- @param color ColorInfo
 --- @return nil
-function SurvivorDesc.addHairColor(arg0) end
+function SurvivorDesc.addHairColor(color) end
 
 --- @public
 --- @static
---- @param arg0 ColorInfo
+--- @param color ColorInfo
 --- @return nil
-function SurvivorDesc.addTrouserColor(arg0) end
+function SurvivorDesc.addTrouserColor(color) end
 
 --- @public
 --- @static
---- @return integer
+--- @return integer the IDCount
 function SurvivorDesc.getIDCount() end
 
 --- @public
@@ -34,30 +34,30 @@ function SurvivorDesc.getRandomSkinColor() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param aIDCount integer the IDCount to set
 --- @return nil
-function SurvivorDesc.setIDCount(arg0) end
+function SurvivorDesc.setIDCount(aIDCount) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param obv string
 --- @return nil
-function SurvivorDesc:addObservation(arg0) end
+function SurvivorDesc:addObservation(obv) end
 
 --- @public
---- @param arg0 string
+--- @param outfitName string
 --- @return nil
-function SurvivorDesc:dressInNamedOutfit(arg0) end
+function SurvivorDesc:dressInNamedOutfit(outfitName) end
 
 --- @public
---- @return number
+--- @return number the aggressiveness
 function SurvivorDesc:getAggressiveness() end
 
 --- @public
---- @return number
+--- @return number the bravery
 function SurvivorDesc:getBravery() end
 
 --- @public
@@ -69,7 +69,7 @@ function SurvivorDesc:getCalculatedToughness() end
 function SurvivorDesc:getCommonHairColor() end
 
 --- @public
---- @return number
+--- @return number the compassion
 function SurvivorDesc:getCompassion() end
 
 --- @public
@@ -82,15 +82,15 @@ function SurvivorDesc:getDescription(arg0) end
 function SurvivorDesc:getExtras() end
 
 --- @public
---- @return number
+--- @return number the favourindoors
 function SurvivorDesc:getFavourindoors() end
 
 --- @public
---- @return string
+--- @return string the forename
 function SurvivorDesc:getForename() end
 
 --- @public
---- @return number
+--- @return number the friendliness
 function SurvivorDesc:getFriendliness() end
 
 --- @public
@@ -107,34 +107,34 @@ function SurvivorDesc:getGroup() end
 function SurvivorDesc:getHumanVisual() end
 
 --- @public
---- @return integer
+--- @return integer the ID
 function SurvivorDesc:getID() end
 
 --- @public
---- @return IsoGameCharacter
+--- @return IsoGameCharacter the Instance
 function SurvivorDesc:getInstance() end
 
 --- @public
---- @return string
+--- @return string the InventoryScript
 function SurvivorDesc:getInventoryScript() end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return nil
---- @overload fun(self: SurvivorDesc, arg0: ItemVisuals): nil
-function SurvivorDesc:getItemVisuals(arg0) end
+--- @overload fun(self: SurvivorDesc, itemVisuals: ItemVisuals): nil
+function SurvivorDesc:getItemVisuals(itemVisuals) end
 
 --- @public
---- @return number
+--- @return number the loner
 function SurvivorDesc:getLoner() end
 
 --- @public
---- @return number
+--- @return number the loyalty
 function SurvivorDesc:getLoyalty() end
 
 --- @public
---- @return HashMap
---- @overload fun(self: SurvivorDesc, arg0: SurvivorDesc): integer
+--- @return HashMap the MetCount
+--- @overload fun(self: SurvivorDesc, descriptor: SurvivorDesc): integer
 function SurvivorDesc:getMetCount() end
 
 --- @public
@@ -146,19 +146,19 @@ function SurvivorDesc:getMeta() end
 function SurvivorDesc:getObservations() end
 
 --- @public
---- @return string
+--- @return string the Profession
 function SurvivorDesc:getProfession() end
 
 --- @public
---- @return string
+--- @return string the surname
 function SurvivorDesc:getSurname() end
 
 --- @public
---- @return number
+--- @return number the temper
 function SurvivorDesc:getTemper() end
 
 --- @public
---- @return string
+--- @return string the torso
 function SurvivorDesc:getTorso() end
 
 --- @public
@@ -178,9 +178,9 @@ function SurvivorDesc:getVoicePrefix() end
 function SurvivorDesc:getVoiceType() end
 
 --- @public
---- @param arg0 string
+--- @param bodyLocation string
 --- @return InventoryItem
-function SurvivorDesc:getWornItem(arg0) end
+function SurvivorDesc:getWornItem(bodyLocation) end
 
 --- @public
 --- @return WornItems
@@ -191,9 +191,9 @@ function SurvivorDesc:getWornItems() end
 function SurvivorDesc:getXPBoostMap() end
 
 --- @public
---- @param arg0 string
+--- @param o string
 --- @return boolean
-function SurvivorDesc:hasObservation(arg0) end
+function SurvivorDesc:hasObservation(o) end
 
 --- @public
 --- @return boolean
@@ -227,111 +227,111 @@ function SurvivorDesc:isSkeleton() end
 function SurvivorDesc:isZombie() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 IsoGameCharacter
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param chr IsoGameCharacter
 --- @return nil
-function SurvivorDesc:load(arg0, arg1, arg2) end
+function SurvivorDesc:load(input, WorldVersion, chr) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return nil
-function SurvivorDesc:meet(arg0) end
+function SurvivorDesc:meet(desc) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function SurvivorDesc:save(arg0) end
+function SurvivorDesc:save(output) end
 
 --- @public
---- @param arg0 number
+--- @param aggressiveness number the aggressiveness to set
 --- @return nil
-function SurvivorDesc:setAggressiveness(arg0) end
+function SurvivorDesc:setAggressiveness(aggressiveness) end
 
 --- @public
---- @param arg0 number
+--- @param bravery number the bravery to set
 --- @return nil
-function SurvivorDesc:setBravery(arg0) end
+function SurvivorDesc:setBravery(bravery) end
 
 --- @public
---- @param arg0 number
+--- @param compassion number the compassion to set
 --- @return nil
-function SurvivorDesc:setCompassion(arg0) end
+function SurvivorDesc:setCompassion(compassion) end
 
 --- @public
---- @param arg0 number
+--- @param favourindoors number the favourindoors to set
 --- @return nil
-function SurvivorDesc:setFavourindoors(arg0) end
+function SurvivorDesc:setFavourindoors(favourindoors) end
 
 --- @public
---- @param arg0 boolean
+--- @param bFemale boolean
 --- @return nil
-function SurvivorDesc:setFemale(arg0) end
+function SurvivorDesc:setFemale(bFemale) end
 
 --- @public
---- @param arg0 string
+--- @param forename string the forename to set
 --- @return nil
-function SurvivorDesc:setForename(arg0) end
+function SurvivorDesc:setForename(forename) end
 
 --- @public
---- @param arg0 number
+--- @param friendliness number the friendliness to set
 --- @return nil
-function SurvivorDesc:setFriendliness(arg0) end
+function SurvivorDesc:setFriendliness(friendliness) end
 
 --- @public
---- @param arg0 integer
+--- @param ID integer the ID to set
 --- @return nil
-function SurvivorDesc:setID(arg0) end
+function SurvivorDesc:setID(ID) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param Instance IsoGameCharacter the Instance to set
 --- @return nil
-function SurvivorDesc:setInstance(arg0) end
+function SurvivorDesc:setInstance(Instance) end
 
 --- @public
---- @param arg0 string
+--- @param InventoryScript string the InventoryScript to set
 --- @return nil
-function SurvivorDesc:setInventoryScript(arg0) end
+function SurvivorDesc:setInventoryScript(InventoryScript) end
 
 --- @public
---- @param arg0 number
+--- @param loner number the loner to set
 --- @return nil
-function SurvivorDesc:setLoner(arg0) end
+function SurvivorDesc:setLoner(loner) end
 
 --- @public
---- @param arg0 number
+--- @param loyalty number the loyalty to set
 --- @return nil
-function SurvivorDesc:setLoyalty(arg0) end
+function SurvivorDesc:setLoyalty(loyalty) end
 
 --- @public
---- @param arg0 string
+--- @param Profession string the Profession to set
 --- @return nil
-function SurvivorDesc:setProfession(arg0) end
+function SurvivorDesc:setProfession(Profession) end
 
 --- @public
---- @param arg0 Profession
+--- @param profession Profession
 --- @return nil
-function SurvivorDesc:setProfessionSkills(arg0) end
+function SurvivorDesc:setProfessionSkills(profession) end
 
 --- @public
---- @param arg0 string
+--- @param surname string the surname to set
 --- @return nil
-function SurvivorDesc:setSurname(arg0) end
+function SurvivorDesc:setSurname(surname) end
 
 --- @public
---- @param arg0 number
+--- @param temper number the temper to set
 --- @return nil
-function SurvivorDesc:setTemper(arg0) end
+function SurvivorDesc:setTemper(temper) end
 
 --- @public
---- @param arg0 string
+--- @param torso string the torso to set
 --- @return nil
-function SurvivorDesc:setTorso(arg0) end
+function SurvivorDesc:setTorso(torso) end
 
 --- @public
---- @param arg0 SurvivorType
+--- @param type SurvivorType
 --- @return nil
-function SurvivorDesc:setType(arg0) end
+function SurvivorDesc:setType(type) end
 
 --- @public
 --- @param arg0 number
@@ -349,10 +349,10 @@ function SurvivorDesc:setVoicePrefix(arg0) end
 function SurvivorDesc:setVoiceType(arg0) end
 
 --- @public
---- @param arg0 string
---- @param arg1 InventoryItem
+--- @param bodyLocation string
+--- @param item InventoryItem
 --- @return nil
-function SurvivorDesc:setWornItem(arg0, arg1) end
+function SurvivorDesc:setWornItem(bodyLocation, item) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -360,6 +360,6 @@ function SurvivorDesc:setWornItem(arg0, arg1) end
 
 --- @public
 --- @return SurvivorDesc
---- @overload fun(arg0: boolean): SurvivorDesc
---- @overload fun(arg0: SurvivorDesc): SurvivorDesc
+--- @overload fun(bNew: boolean): SurvivorDesc
+--- @overload fun(other: SurvivorDesc): SurvivorDesc
 function SurvivorDesc.new() end

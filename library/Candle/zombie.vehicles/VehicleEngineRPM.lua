@@ -10,10 +10,10 @@ VehicleEngineRPM = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param totalFile string
 --- @return nil
-function VehicleEngineRPM:Load(arg0, arg1) end
+function VehicleEngineRPM:Load(name, totalFile) end
 
 --- @public
 --- @return string

@@ -14,17 +14,17 @@ UIDebugConsole = {}
 function UIDebugConsole:ProcessCommand() end
 
 --- @public
---- @param arg0 byte[]
---- @param arg1 integer
---- @param arg2 integer
+--- @param b byte[]
+--- @param __off__ integer
+--- @param len integer
 --- @return nil
-function UIDebugConsole:addOutput(arg0, arg1, arg2) end
+function UIDebugConsole:addOutput(b, __off__, len) end
 
 --- @public
---- @param arg0 CharSequence
---- @param arg1 CharSequence
+--- @param lhs CharSequence
+--- @param rhs CharSequence
 --- @return integer
-function UIDebugConsole:levenshteinDistance(arg0, arg1) end
+function UIDebugConsole:levenshteinDistance(lhs, rhs) end
 
 --- @public
 --- @param arg0 number
@@ -51,9 +51,9 @@ function UIDebugConsole:onMouseUp(arg0, arg1) end
 function UIDebugConsole:onMouseUpOutside(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
+--- @param key integer
 --- @return nil
-function UIDebugConsole:onOtherKey(arg0) end
+function UIDebugConsole:onOtherKey(key) end
 
 --- @public
 --- @return nil
@@ -68,7 +68,7 @@ function UIDebugConsole:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return UIDebugConsole
-function UIDebugConsole.new(arg0, arg1) end
+function UIDebugConsole.new(x, y) end

@@ -14,10 +14,10 @@ DoubleSandboxOption = {}
 function DoubleSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: DoubleSandboxOption, arg0: table): nil
-function DoubleSandboxOption:fromTable(arg0) end
+--- @overload fun(self: DoubleSandboxOption, table: table): nil
+function DoubleSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
@@ -55,32 +55,32 @@ function DoubleSandboxOption:isCustom() end
 function DoubleSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 string
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: DoubleSandboxOption, arg0: string): SandboxOption
-function DoubleSandboxOption:setPageName(arg0) end
+--- @overload fun(self: DoubleSandboxOption, pageName: string): SandboxOption
+function DoubleSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: DoubleSandboxOption, arg0: string): SandboxOption
-function DoubleSandboxOption:setTranslation(arg0) end
+--- @overload fun(self: DoubleSandboxOption, translation: string): SandboxOption
+function DoubleSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: DoubleSandboxOption, arg0: table): nil
-function DoubleSandboxOption:toTable(arg0) end
+--- @overload fun(self: DoubleSandboxOption, table: table): nil
+function DoubleSandboxOption:toTable(table) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 string
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param owner SandboxOptions
+--- @param name string
+--- @param min number
+--- @param max number
+--- @param defaultValue number
 --- @return DoubleSandboxOption
-function DoubleSandboxOption.new(arg0, arg1, arg2, arg3, arg4) end
+function DoubleSandboxOption.new(owner, name, min, max, defaultValue) end

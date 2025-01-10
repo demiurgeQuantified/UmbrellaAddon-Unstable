@@ -10,9 +10,9 @@ NewHealthPanel = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function NewHealthPanel:SetCharacter(arg0) end
+function NewHealthPanel:SetCharacter(chr) end
 
 --- @public
 --- @return string
@@ -31,8 +31,8 @@ function NewHealthPanel:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 IsoGameCharacter
+--- @param x integer
+--- @param y integer
+--- @param ParentCharacter IsoGameCharacter
 --- @return NewHealthPanel
-function NewHealthPanel.new(arg0, arg1, arg2) end
+function NewHealthPanel.new(x, y, ParentCharacter) end

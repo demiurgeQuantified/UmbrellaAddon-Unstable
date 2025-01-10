@@ -52,10 +52,10 @@ function IsoCompost:getObjectName() end
 function IsoCompost:getThumpCondition() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoCompost, arg0: IsoGameCharacter): Thumpable
-function IsoCompost:getThumpableFor(arg0) end
+--- @overload fun(self: IsoCompost, chr: IsoGameCharacter): Thumpable
+function IsoCompost:getThumpableFor(chr) end
 
 --- @public
 --- @return boolean
@@ -63,26 +63,26 @@ function IsoCompost:getThumpableFor(arg0) end
 function IsoCompost:isDestroyed() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoCompost:load(arg0, arg1, arg2) end
+function IsoCompost:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return nil
 function IsoCompost:remove() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoCompost:save(arg0, arg1) end
+function IsoCompost:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 number
+--- @param compost number
 --- @return nil
-function IsoCompost:setCompost(arg0) end
+function IsoCompost:setCompost(compost) end
 
 --- @public
 --- @param arg0 integer
@@ -115,8 +115,8 @@ function IsoCompost:updateSprite() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoCompost
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string): IsoCompost
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoCompost
-function IsoCompost.new(arg0) end
+function IsoCompost.new(cell) end

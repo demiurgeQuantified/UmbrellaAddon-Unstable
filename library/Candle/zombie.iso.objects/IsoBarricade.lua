@@ -15,90 +15,90 @@ IsoBarricade = {}
 
 --- @public
 --- @static
---- @param arg0 BarricadeAble
---- @param arg1 boolean
+--- @param to BarricadeAble
+--- @param addOpposite boolean
 --- @return IsoBarricade
---- @overload fun(arg0: BarricadeAble, arg1: IsoGameCharacter): IsoBarricade
-function IsoBarricade.AddBarricadeToObject(arg0, arg1) end
+--- @overload fun(to: BarricadeAble, chr: IsoGameCharacter): IsoBarricade
+function IsoBarricade.AddBarricadeToObject(to, addOpposite) end
 
 --- @public
 --- @static
---- @param arg0 BarricadeAble
---- @param arg1 IsoGameCharacter
+--- @param obj BarricadeAble
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
-function IsoBarricade.GetBarricadeForCharacter(arg0, arg1) end
+function IsoBarricade.GetBarricadeForCharacter(obj, chr) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 IsoDirections
+--- @param square IsoGridSquare
+--- @param dir IsoDirections
 --- @return IsoBarricade
-function IsoBarricade.GetBarricadeOnSquare(arg0, arg1) end
+function IsoBarricade.GetBarricadeOnSquare(square, dir) end
 
 --- @public
 --- @static
---- @param arg0 BarricadeAble
---- @param arg1 IsoGameCharacter
+--- @param obj BarricadeAble
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
-function IsoBarricade.GetBarricadeOppositeCharacter(arg0, arg1) end
+function IsoBarricade.GetBarricadeOppositeCharacter(obj, chr) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param amount integer
 --- @return nil
-function IsoBarricade:Damage(arg0) end
+function IsoBarricade:Damage(amount) end
 
 --- @public
---- @param arg0 integer
+--- @param amount integer
 --- @return nil
-function IsoBarricade:DamageBarricade(arg0) end
+function IsoBarricade:DamageBarricade(amount) end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
---- @param arg2 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return boolean
-function IsoBarricade:TestCollide(arg0, arg1, arg2) end
+function IsoBarricade:TestCollide(obj, from, to) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return VisionResult
-function IsoBarricade:TestVision(arg0, arg1) end
+function IsoBarricade:TestVision(from, to) end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoBarricade, arg0: IsoMovingObject): nil
-function IsoBarricade:Thump(arg0) end
+--- @overload fun(self: IsoBarricade, thumper: IsoMovingObject): nil
+function IsoBarricade:Thump(thumper) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: IsoBarricade, arg0: IsoGameCharacter, arg1: HandWeapon): nil
-function IsoBarricade:WeaponHit(arg0, arg1) end
+--- @overload fun(self: IsoBarricade, owner: IsoGameCharacter, weapon: HandWeapon): nil
+function IsoBarricade:WeaponHit(owner, weapon) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param metal InventoryItem
 --- @return nil
-function IsoBarricade:addMetal(arg0, arg1) end
+function IsoBarricade:addMetal(chr, metal) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param metalBar InventoryItem
 --- @return nil
-function IsoBarricade:addMetalBar(arg0, arg1) end
+function IsoBarricade:addMetalBar(chr, metalBar) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param plank InventoryItem
 --- @return nil
-function IsoBarricade:addPlank(arg0, arg1) end
+function IsoBarricade:addPlank(chr, plank) end
 
 --- @public
 --- @return boolean
@@ -109,9 +109,9 @@ function IsoBarricade:canAddPlank() end
 function IsoBarricade:getBarricadedObject() end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoBarricade:getFacingPosition(arg0) end
+function IsoBarricade:getFacingPosition(pos) end
 
 --- @public
 --- @return integer
@@ -135,10 +135,10 @@ function IsoBarricade:getObjectName() end
 function IsoBarricade:getThumpCondition() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoBarricade, arg0: IsoGameCharacter): Thumpable
-function IsoBarricade:getThumpableFor(arg0) end
+--- @overload fun(self: IsoBarricade, chr: IsoGameCharacter): Thumpable
+function IsoBarricade:getThumpableFor(chr) end
 
 --- @public
 --- @return boolean
@@ -158,56 +158,56 @@ function IsoBarricade:isMetal() end
 function IsoBarricade:isMetalBar() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoBarricade:load(arg0, arg1, arg2) end
+function IsoBarricade:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoBarricade:loadChange(arg0, arg1) end
+function IsoBarricade:loadChange(change, bb) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function IsoBarricade:removeMetal(arg0) end
+function IsoBarricade:removeMetal(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function IsoBarricade:removeMetalBar(arg0) end
+function IsoBarricade:removeMetalBar(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function IsoBarricade:removePlank(arg0) end
+function IsoBarricade:removePlank(chr) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoBarricade:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoBarricade:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoBarricade:save(arg0, arg1) end
+function IsoBarricade:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoBarricade:saveChange(arg0, arg1, arg2) end
+function IsoBarricade:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param arg0 integer
@@ -224,7 +224,7 @@ function IsoBarricade:setMaxHealth(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoBarricade
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoDirections): IsoBarricade
-function IsoBarricade.new(arg0) end
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, dir: IsoDirections): IsoBarricade
+function IsoBarricade.new(cell) end

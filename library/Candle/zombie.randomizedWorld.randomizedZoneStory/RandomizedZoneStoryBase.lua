@@ -33,26 +33,26 @@ function RandomizedZoneStoryBase.getRandomFreeUnoccupiedSquare(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function RandomizedZoneStoryBase.initAllRZSMapChance(arg0) end
+function RandomizedZoneStoryBase.initAllRZSMapChance(zone) end
 
 --- @public
 --- @static
---- @param arg0 Zone
---- @param arg1 boolean
+--- @param zone Zone
+--- @param force boolean
 --- @return boolean
-function RandomizedZoneStoryBase.isValidForStory(arg0, arg1) end
+function RandomizedZoneStoryBase.isValidForStory(zone, force) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 RandomizedZoneStoryBase
---- @param arg1 Zone
+--- @param rzs RandomizedZoneStoryBase
+--- @param zone Zone
 --- @return nil
-function RandomizedZoneStoryBase:cleanAreaForStory(arg0, arg1) end
+function RandomizedZoneStoryBase:cleanAreaForStory(rzs, zone) end
 
 --- @public
 --- @return integer
@@ -69,27 +69,30 @@ function RandomizedZoneStoryBase:getMinimumWidth() end
 function RandomizedZoneStoryBase:getRandomExtraFreeSquare(arg0, arg1) end
 
 --- @public
---- @param arg0 RandomizedZoneStoryBase
---- @param arg1 Zone
+---
+---  Get a random free square in our story zone
+---
+--- @param rzs RandomizedZoneStoryBase
+--- @param zone Zone
 --- @return IsoGridSquare
 --- @overload fun(self: RandomizedZoneStoryBase, arg0: RandomizedZoneStoryBase, arg1: Zone, arg2: IsoGridSquare): IsoGridSquare
-function RandomizedZoneStoryBase:getRandomFreeSquare(arg0, arg1) end
+function RandomizedZoneStoryBase:getRandomFreeSquare(rzs, zone) end
 
 --- @public
---- @param arg0 RandomizedZoneStoryBase
---- @param arg1 Zone
+--- @param rzs RandomizedZoneStoryBase
+--- @param zone Zone
 --- @return IsoGridSquare
-function RandomizedZoneStoryBase:getRandomFreeSquareFullZone(arg0, arg1) end
+function RandomizedZoneStoryBase:getRandomFreeSquareFullZone(rzs, zone) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: RandomizedZoneStoryBase, arg0: Zone, arg1: boolean): boolean
+--- @overload fun(self: RandomizedZoneStoryBase, zone: Zone, force: boolean): boolean
 function RandomizedZoneStoryBase:isValid() end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function RandomizedZoneStoryBase:randomizeZoneStory(arg0) end
+function RandomizedZoneStoryBase:randomizeZoneStory(zone) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -25,15 +25,15 @@ function Stash:getItem() end
 function Stash:getName() end
 
 --- @public
---- @param arg0 table
+--- @param stashDesc table
 --- @return nil
-function Stash:load(arg0) end
+function Stash:load(stashDesc) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return Stash
-function Stash.new(arg0) end
+function Stash.new(name) end

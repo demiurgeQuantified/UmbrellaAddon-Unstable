@@ -14,10 +14,10 @@ Clock = {}
 function Clock:isDateVisible() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return boolean
-function Clock:onMouseDown(arg0, arg1) end
+function Clock:onMouseDown(x, y) end
 
 --- @public
 --- @return nil
@@ -32,7 +32,7 @@ function Clock:resize() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return Clock
-function Clock.new(arg0, arg1) end
+function Clock.new(x, y) end

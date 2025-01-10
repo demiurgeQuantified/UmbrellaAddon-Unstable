@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBBurntCorpse: RandomizedBuildingBase
+--- @class RBBurntCorpse: RandomizedBuildingBase This building will be 60% burnt (no fire started tho)  Add some burnt skeleton in it
 --- @field public class any
 RBBurntCorpse = {}
 
@@ -15,9 +15,9 @@ RBBurntCorpse = {}
 function RBBurntCorpse:isValid(arg0, arg1) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBBurntCorpse:randomizeBuilding(arg0) end
+function RBBurntCorpse:randomizeBuilding(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -18,15 +18,15 @@ UserlogType = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return UserlogType
-function UserlogType.FromString(arg0) end
+function UserlogType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param value integer
 --- @return UserlogType
-function UserlogType.fromIndex(arg0) end
+function UserlogType.fromIndex(value) end
 
 --- @public
 --- @static
@@ -36,7 +36,11 @@ function UserlogType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return UserlogType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return UserlogType[] an array containing the constants of this enum class, in the order they are declared
 function UserlogType.values() end
 
 ------------------------------------

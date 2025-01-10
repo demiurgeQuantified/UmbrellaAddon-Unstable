@@ -9,9 +9,9 @@ SteamUGCDetails = {}
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return integer
-function SteamUGCDetails:getChildID(arg0) end
+function SteamUGCDetails:getChildID(index) end
 
 --- @public
 --- @return long[]
@@ -54,11 +54,11 @@ function SteamUGCDetails:getTitle() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 long[]
+--- @param ID integer
+--- @param title string
+--- @param timeCreated integer
+--- @param timeUpdated integer
+--- @param fileSize integer
+--- @param childIDs long[]
 --- @return SteamUGCDetails
-function SteamUGCDetails.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+function SteamUGCDetails.new(ID, title, timeCreated, timeUpdated, fileSize, childIDs) end

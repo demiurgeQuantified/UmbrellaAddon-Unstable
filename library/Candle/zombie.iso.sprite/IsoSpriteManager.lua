@@ -10,26 +10,26 @@ IsoSpriteManager = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param tex string
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, arg0: string, arg1: integer): IsoSprite
-function IsoSpriteManager:AddSprite(arg0) end
+--- @overload fun(self: IsoSpriteManager, tex: string, ID: integer): IsoSprite
+function IsoSpriteManager:AddSprite(tex) end
 
 --- @public
 --- @return nil
 function IsoSpriteManager:Dispose() end
 
 --- @public
---- @param arg0 string
+--- @param tex string
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, arg0: string, arg1: Color): IsoSprite
-function IsoSpriteManager:getOrAddSpriteCache(arg0) end
+--- @overload fun(self: IsoSpriteManager, tex: string, col: Color): IsoSprite
+function IsoSpriteManager:getOrAddSpriteCache(tex) end
 
 --- @public
---- @param arg0 integer
+--- @param gid integer
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, arg0: string): IsoSprite
-function IsoSpriteManager:getSprite(arg0) end
+--- @overload fun(self: IsoSpriteManager, gid: string): IsoSprite
+function IsoSpriteManager:getSprite(gid) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

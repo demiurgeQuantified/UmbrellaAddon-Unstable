@@ -14,9 +14,9 @@ UITextBox2 = {}
 function UITextBox2:ClearHighlights() end
 
 --- @public
---- @param arg0 string
+--- @param text string
 --- @return nil
-function UITextBox2:SetText(arg0) end
+function UITextBox2:SetText(text) end
 
 --- @public
 --- @return nil
@@ -186,40 +186,40 @@ function UITextBox2:onKeyRight() end
 function UITextBox2:onKeyUp() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return boolean
-function UITextBox2:onMouseDown(arg0, arg1) end
+function UITextBox2:onMouseDown(x, y) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param dx number
+--- @param dy number
 --- @return boolean
-function UITextBox2:onMouseMove(arg0, arg1) end
+function UITextBox2:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param dx number
+--- @param dy number
 --- @return nil
-function UITextBox2:onMouseMoveOutside(arg0, arg1) end
+function UITextBox2:onMouseMoveOutside(dx, dy) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return boolean
-function UITextBox2:onMouseUp(arg0, arg1) end
+function UITextBox2:onMouseUp(x, y) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return nil
-function UITextBox2:onMouseUpOutside(arg0, arg1) end
+function UITextBox2:onMouseUpOutside(x, y) end
 
 --- @public
---- @param arg0 integer
+--- @param key integer
 --- @return nil
---- @overload fun(self: UITextBox2, arg0: integer): nil
-function UITextBox2:onOtherKey(arg0) end
+--- @overload fun(self: UITextBox2, key: integer): nil
+function UITextBox2:onOtherKey(key) end
 
 --- @public
 --- @return nil
@@ -262,19 +262,19 @@ function UITextBox2:resetBlink() end
 function UITextBox2:selectAll() end
 
 --- @public
---- @param arg0 boolean
+--- @param hasButton boolean
 --- @return nil
-function UITextBox2:setClearButton(arg0) end
+function UITextBox2:setClearButton(hasButton) end
 
 --- @public
---- @param arg0 integer
+--- @param line integer
 --- @return nil
-function UITextBox2:setCursorLine(arg0) end
+function UITextBox2:setCursorLine(line) end
 
 --- @public
---- @param arg0 integer
+--- @param charIndex integer
 --- @return nil
-function UITextBox2:setCursorPos(arg0) end
+function UITextBox2:setCursorPos(charIndex) end
 
 --- @public
 --- @param arg0 boolean
@@ -283,24 +283,24 @@ function UITextBox2:setCursorPos(arg0) end
 function UITextBox2:setDoingTextEntry(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function UITextBox2:setEditable(arg0) end
+function UITextBox2:setEditable(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param forceUpperCase boolean
 --- @return nil
-function UITextBox2:setForceUpperCase(arg0) end
+function UITextBox2:setForceUpperCase(forceUpperCase) end
 
 --- @public
---- @param arg0 number
+--- @param alpha number
 --- @return nil
-function UITextBox2:setFrameAlpha(arg0) end
+function UITextBox2:setFrameAlpha(alpha) end
 
 --- @public
---- @param arg0 boolean
+--- @param hasFrame boolean
 --- @return nil
-function UITextBox2:setHasFrame(arg0) end
+function UITextBox2:setHasFrame(hasFrame) end
 
 --- @public
 --- @param arg0 boolean
@@ -309,29 +309,29 @@ function UITextBox2:setHasFrame(arg0) end
 function UITextBox2:setIgnoreFirst(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function UITextBox2:setMasked(arg0) end
+function UITextBox2:setMasked(b) end
 
 --- @public
---- @param arg0 integer
+--- @param maxLines integer
 --- @return nil
-function UITextBox2:setMaxLines(arg0) end
+function UITextBox2:setMaxLines(maxLines) end
 
 --- @public
---- @param arg0 integer
+--- @param maxtextLength integer
 --- @return nil
-function UITextBox2:setMaxTextLength(arg0) end
+function UITextBox2:setMaxTextLength(maxtextLength) end
 
 --- @public
---- @param arg0 boolean
+--- @param multiple boolean
 --- @return nil
-function UITextBox2:setMultipleLine(arg0) end
+function UITextBox2:setMultipleLine(multiple) end
 
 --- @public
---- @param arg0 boolean
+--- @param onlyNumbers boolean
 --- @return nil
-function UITextBox2:setOnlyNumbers(arg0) end
+function UITextBox2:setOnlyNumbers(onlyNumbers) end
 
 --- @public
 --- @param arg0 boolean
@@ -339,9 +339,9 @@ function UITextBox2:setOnlyNumbers(arg0) end
 function UITextBox2:setOnlyText(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function UITextBox2:setSelectable(arg0) end
+function UITextBox2:setSelectable(b) end
 
 --- @public
 --- @param arg0 boolean
@@ -350,9 +350,9 @@ function UITextBox2:setSelectable(arg0) end
 function UITextBox2:setSelectingRange(arg0) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param newColor ColorInfo
 --- @return nil
-function UITextBox2:setTextColor(arg0) end
+function UITextBox2:setTextColor(newColor) end
 
 --- @public
 --- @param arg0 number
@@ -368,9 +368,9 @@ function UITextBox2:setTextRGBA(arg0, arg1, arg2, arg3) end
 function UITextBox2:setWrapLines(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param textOffset integer
 --- @return integer
-function UITextBox2:toDisplayLine(arg0) end
+function UITextBox2:toDisplayLine(textOffset) end
 
 --- @public
 --- @return nil
@@ -389,12 +389,12 @@ function UITextBox2:updateText() end
 ------------------------------------
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 string
---- @param arg6 boolean
+--- @param font UIFont
+--- @param x integer
+--- @param y integer
+--- @param width integer
+--- @param height integer
+--- @param text string
+--- @param HasFrame boolean
 --- @return UITextBox2
-function UITextBox2.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function UITextBox2.new(font, x, y, width, height, text, HasFrame) end

@@ -33,10 +33,10 @@ function ClimateBool:getName() end
 function ClimateBool:getOverride() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param id integer
+--- @param name string
 --- @return ClimateBool
-function ClimateBool:init(arg0, arg1) end
+function ClimateBool:init(id, name) end
 
 --- @public
 --- @return boolean
@@ -47,39 +47,39 @@ function ClimateBool:isEnableAdmin() end
 function ClimateBool:isEnableOverride() end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setAdminValue(arg0) end
+function ClimateBool:setAdminValue(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setEnableAdmin(arg0) end
+function ClimateBool:setEnableAdmin(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setEnableModded(arg0) end
+function ClimateBool:setEnableModded(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setEnableOverride(arg0) end
+function ClimateBool:setEnableOverride(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setFinalValue(arg0) end
+function ClimateBool:setFinalValue(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setModdedValue(arg0) end
+function ClimateBool:setModdedValue(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateBool:setOverride(arg0) end
+function ClimateBool:setOverride(b) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

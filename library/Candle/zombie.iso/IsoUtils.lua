@@ -10,164 +10,164 @@ IsoUtils = {}
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param fromX number
+--- @param fromY number
+--- @param toX number
+--- @param toY number
 --- @return number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number): number
-function IsoUtils.DistanceManhatten(arg0, arg1, arg2, arg3) end
+--- @overload fun(fromX: number, fromY: number, toX: number, toY: number, fromZ: number, toZ: number): number
+function IsoUtils.DistanceManhatten(fromX, fromY, toX, toY) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param fromX number
+--- @param fromY number
+--- @param toX number
+--- @param toY number
 --- @return number
-function IsoUtils.DistanceManhattenSquare(arg0, arg1, arg2, arg3) end
+function IsoUtils.DistanceManhattenSquare(fromX, fromY, toX, toY) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param fromX number
+--- @param fromY number
+--- @param toX number
+--- @param toY number
 --- @return number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number): number
-function IsoUtils.DistanceTo(arg0, arg1, arg2, arg3) end
+--- @overload fun(fromX: number, fromY: number, fromZ: number, toX: number, toY: number, toZ: number): number
+function IsoUtils.DistanceTo(fromX, fromY, toX, toY) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param fromX number
+--- @param fromY number
+--- @param toX number
+--- @param toY number
 --- @return number
-function IsoUtils.DistanceTo2D(arg0, arg1, arg2, arg3) end
+function IsoUtils.DistanceTo2D(fromX, fromY, toX, toY) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param fromX number
+--- @param fromY number
+--- @param toX number
+--- @param toY number
 --- @return number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number): number
-function IsoUtils.DistanceToSquared(arg0, arg1, arg2, arg3) end
+--- @overload fun(fromX: number, fromY: number, fromZ: number, toX: number, toY: number, toZ: number): number
+function IsoUtils.DistanceToSquared(fromX, fromY, toX, toY) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param screenX number
+--- @param screenY number
+--- @param floor number
 --- @return number
-function IsoUtils.XToIso(arg0, arg1, arg2) end
+function IsoUtils.XToIso(screenX, screenY, floor) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 integer
+--- @param screenX number
+--- @param screenY number
+--- @param floor integer
 --- @return number
-function IsoUtils.XToIsoTrue(arg0, arg1, arg2) end
+function IsoUtils.XToIsoTrue(screenX, screenY, floor) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 integer
+--- @param objectX number
+--- @param objectY number
+--- @param objectZ number
+--- @param screenZ integer
 --- @return number
-function IsoUtils.XToScreen(arg0, arg1, arg2, arg3) end
+function IsoUtils.XToScreen(objectX, objectY, objectZ, screenZ) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 integer
+--- @param objectX number
+--- @param objectY number
+--- @param objectZ number
+--- @param screenZ integer
 --- @return number
-function IsoUtils.XToScreenExact(arg0, arg1, arg2, arg3) end
+function IsoUtils.XToScreenExact(objectX, objectY, objectZ, screenZ) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param objectX integer
+--- @param objectY integer
+--- @param objectZ integer
+--- @param screenZ integer
 --- @return number
-function IsoUtils.XToScreenInt(arg0, arg1, arg2, arg3) end
+function IsoUtils.XToScreenInt(objectX, objectY, objectZ, screenZ) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param screenX number
+--- @param screenY number
+--- @param floor number
 --- @return number
-function IsoUtils.YToIso(arg0, arg1, arg2) end
+function IsoUtils.YToIso(screenX, screenY, floor) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 integer
+--- @param objectX number
+--- @param objectY number
+--- @param objectZ number
+--- @param screenZ integer
 --- @return number
-function IsoUtils.YToScreen(arg0, arg1, arg2, arg3) end
+function IsoUtils.YToScreen(objectX, objectY, objectZ, screenZ) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 integer
+--- @param objectX number
+--- @param objectY number
+--- @param objectZ number
+--- @param screenZ integer
 --- @return number
-function IsoUtils.YToScreenExact(arg0, arg1, arg2, arg3) end
+function IsoUtils.YToScreenExact(objectX, objectY, objectZ, screenZ) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param objectX integer
+--- @param objectY integer
+--- @param objectZ integer
+--- @param screenZ integer
 --- @return number
-function IsoUtils.YToScreenInt(arg0, arg1, arg2, arg3) end
+function IsoUtils.YToScreenInt(objectX, objectY, objectZ, screenZ) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param minVal number
+--- @param maxVal number
 --- @return number
-function IsoUtils.clamp(arg0, arg1, arg2) end
+function IsoUtils.clamp(x, minVal, maxVal) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
+--- @param chr IsoGameCharacter
+--- @param xA number
+--- @param yA number
+--- @param xB number
+--- @param yB number
+--- @param similar number
 --- @return boolean
-function IsoUtils.isSimilarDirection(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoUtils.isSimilarDirection(chr, xA, yA, xB, yB, similar) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param val number
+--- @param min number
+--- @param max number
 --- @return number
-function IsoUtils.lerp(arg0, arg1, arg2) end
+function IsoUtils.lerp(val, min, max) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param edge0 number
+--- @param edge1 number
+--- @param x number
 --- @return number
-function IsoUtils.smoothstep(arg0, arg1, arg2) end
+function IsoUtils.smoothstep(edge0, edge1, x) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

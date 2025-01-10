@@ -41,18 +41,18 @@ function IntegerConfigOption:getValueAsObject() end
 function IntegerConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return boolean
-function IntegerConfigOption:isValidString(arg0) end
+function IntegerConfigOption:isValidString(s) end
 
 --- @public
 --- @return ConfigOption
 function IntegerConfigOption:makeCopy() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return nil
-function IntegerConfigOption:parse(arg0) end
+function IntegerConfigOption:parse(s) end
 
 --- @public
 --- @return nil
@@ -63,23 +63,23 @@ function IntegerConfigOption:resetToDefault() end
 function IntegerConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 integer
+--- @param value integer
 --- @return nil
-function IntegerConfigOption:setValue(arg0) end
+function IntegerConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return nil
-function IntegerConfigOption:setValueFromObject(arg0) end
+function IntegerConfigOption:setValueFromObject(o) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param name string
+--- @param min integer
+--- @param max integer
+--- @param defaultValue integer
 --- @return IntegerConfigOption
-function IntegerConfigOption.new(arg0, arg1, arg2, arg3) end
+function IntegerConfigOption.new(name, min, max, defaultValue) end

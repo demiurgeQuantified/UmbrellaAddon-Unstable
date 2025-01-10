@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ClimateForecaster
+--- @class ClimateForecaster TurboTuTone.
 --- @field public class any
 ClimateForecaster = {}
 
@@ -14,7 +14,7 @@ function ClimateForecaster:getDaysTillFirstWeather() end
 
 --- @public
 --- @return DayForecast
---- @overload fun(self: ClimateForecaster, arg0: integer): DayForecast
+--- @overload fun(self: ClimateForecaster, offset: integer): DayForecast
 function ClimateForecaster:getForecast() end
 
 --- @public

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class MediaData
+--- @class MediaData TurboTuTone.
 --- @field public class any
 MediaData = {}
 
@@ -9,13 +9,13 @@ MediaData = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 string
+--- @param text string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param codes string
 --- @return nil
-function MediaData:addLine(arg0, arg1, arg2, arg3, arg4) end
+function MediaData:addLine(text, r, g, b, codes) end
 
 --- @public
 --- @return string
@@ -38,9 +38,9 @@ function MediaData:getId() end
 function MediaData:getIndex() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return MediaLineData
-function MediaData:getLine(arg0) end
+function MediaData:getLine(index) end
 
 --- @public
 --- @return integer
@@ -99,32 +99,32 @@ function MediaData:hasSubTitle() end
 function MediaData:hasTitle() end
 
 --- @public
---- @param arg0 string
+--- @param author string
 --- @return nil
-function MediaData:setAuthor(arg0) end
+function MediaData:setAuthor(author) end
 
 --- @public
---- @param arg0 string
+--- @param extra string
 --- @return nil
-function MediaData:setExtra(arg0) end
+function MediaData:setExtra(extra) end
 
 --- @public
---- @param arg0 string
+--- @param subtitle string
 --- @return nil
-function MediaData:setSubtitle(arg0) end
+function MediaData:setSubtitle(subtitle) end
 
 --- @public
---- @param arg0 string
+--- @param title string
 --- @return nil
-function MediaData:setTitle(arg0) end
+function MediaData:setTitle(title) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
+--- @param id string
+--- @param itemDisplayName string
+--- @param spawning integer
 --- @return MediaData
-function MediaData.new(arg0, arg1, arg2) end
+function MediaData.new(id, itemDisplayName, spawning) end

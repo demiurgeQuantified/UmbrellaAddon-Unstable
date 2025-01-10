@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class Metabolics: Enum
+--- @class Metabolics: Enum TurboTuTone.
 --- @field public class any
 --- @field public ClimbRope Metabolics
 --- @field public Default Metabolics
@@ -34,21 +34,21 @@ Metabolics = {}
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param met number
 --- @return number
-function Metabolics.MetToBtuHr(arg0) end
+function Metabolics.MetToBtuHr(met) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param met number
 --- @return number
-function Metabolics.MetToW(arg0) end
+function Metabolics.MetToW(met) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param met number
 --- @return number
-function Metabolics.MetToWm2(arg0) end
+function Metabolics.MetToWm2(met) end
 
 --- @public
 --- @static
@@ -58,7 +58,11 @@ function Metabolics.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return Metabolics[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return Metabolics[] an array containing the constants of this enum class, in the order they are declared
 function Metabolics.values() end
 
 ------------------------------------

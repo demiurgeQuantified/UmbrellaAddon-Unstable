@@ -41,18 +41,18 @@ function StringConfigOption:getValueAsObject() end
 function StringConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return boolean
-function StringConfigOption:isValidString(arg0) end
+function StringConfigOption:isValidString(s) end
 
 --- @public
 --- @return ConfigOption
 function StringConfigOption:makeCopy() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return nil
-function StringConfigOption:parse(arg0) end
+function StringConfigOption:parse(s) end
 
 --- @public
 --- @return nil
@@ -63,14 +63,14 @@ function StringConfigOption:resetToDefault() end
 function StringConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 string
+--- @param value string
 --- @return nil
-function StringConfigOption:setValue(arg0) end
+function StringConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return nil
-function StringConfigOption:setValueFromObject(arg0) end
+function StringConfigOption:setValueFromObject(o) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -81,5 +81,5 @@ function StringConfigOption:setValueFromObject(arg0) end
 --- @param arg1 string
 --- @param arg2 String[]
 --- @return StringConfigOption
---- @overload fun(arg0: string, arg1: string, arg2: integer): StringConfigOption
+--- @overload fun(name: string, defaultValue: string, maxLength: integer): StringConfigOption
 function StringConfigOption.new(arg0, arg1, arg2) end

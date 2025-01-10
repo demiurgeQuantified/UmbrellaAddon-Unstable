@@ -20,19 +20,19 @@ function ClimbDownSheetRopeState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ClimbDownSheetRopeState:enter(arg0) end
+function ClimbDownSheetRopeState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ClimbDownSheetRopeState:execute(arg0) end
+function ClimbDownSheetRopeState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ClimbDownSheetRopeState:exit(arg0) end
+function ClimbDownSheetRopeState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

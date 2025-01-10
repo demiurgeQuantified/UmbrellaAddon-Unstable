@@ -15,16 +15,16 @@ Fixing = {}
 function Fixing:Load(arg0, arg1) end
 
 --- @public
---- @param arg0 string
+--- @param require string
 --- @return nil
-function Fixing:addRequiredItem(arg0) end
+function Fixing:addRequiredItem(require) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 Fixer
---- @param arg2 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixer Fixer
+--- @param brokenObject InventoryItem
 --- @return integer
-function Fixing:countUses(arg0, arg1, arg2) end
+function Fixing:countUses(chr, fixer, brokenObject) end
 
 --- @public
 --- @return number
@@ -43,56 +43,56 @@ function Fixing:getGlobalItem() end
 function Fixing:getName() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 Fixer
---- @param arg2 InventoryItem
---- @param arg3 ArrayList
+--- @param chr IsoGameCharacter
+--- @param fixer Fixer
+--- @param brokenItem InventoryItem
+--- @param items ArrayList
 --- @return ArrayList
-function Fixing:getRequiredFixerItems(arg0, arg1, arg2, arg3) end
+function Fixing:getRequiredFixerItems(chr, fixer, brokenItem, items) end
 
 --- @public
 --- @return ArrayList
 function Fixing:getRequiredItem() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 Fixer
---- @param arg2 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixer Fixer
+--- @param brokenItem InventoryItem
 --- @return ArrayList
-function Fixing:getRequiredItems(arg0, arg1, arg2) end
+function Fixing:getRequiredItems(chr, fixer, brokenItem) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function Fixing:haveGlobalItem(arg0) end
+function Fixing:haveGlobalItem(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 Fixer
---- @param arg2 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixer Fixer
+--- @param brokenObject InventoryItem
 --- @return InventoryItem
-function Fixing:haveThisFixer(arg0, arg1, arg2) end
+function Fixing:haveThisFixer(chr, fixer, brokenObject) end
 
 --- @public
---- @param arg0 number
+--- @param conditionModifier number
 --- @return nil
-function Fixing:setConditionModifier(arg0) end
+function Fixing:setConditionModifier(conditionModifier) end
 
 --- @public
---- @param arg0 Fixer
+--- @param globalItem Fixer
 --- @return nil
-function Fixing:setGlobalItem(arg0) end
+function Fixing:setGlobalItem(globalItem) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Fixing:setName(arg0) end
+function Fixing:setName(name) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
+--- @param itemType InventoryItem
+--- @param chr IsoGameCharacter
 --- @return Fixer
-function Fixing:usedInFixer(arg0, arg1) end
+function Fixing:usedInFixer(itemType, chr) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

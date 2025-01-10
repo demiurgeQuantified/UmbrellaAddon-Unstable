@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoRegionsRenderer
+--- @class IsoRegionsRenderer TurboTuTone.  Base functionality copied from ZombiePopulationRenderer
 --- @field public class any
 IsoRegionsRenderer = {}
 
@@ -13,45 +13,45 @@ IsoRegionsRenderer = {}
 function IsoRegionsRenderer:editRotate() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function IsoRegionsRenderer:editSquare(arg0, arg1) end
+function IsoRegionsRenderer:editSquare(x, y) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function IsoRegionsRenderer:getBoolean(arg0) end
+function IsoRegionsRenderer:getBoolean(name) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return IsoChunkRegion
-function IsoRegionsRenderer:getChunkRegion(arg0, arg1) end
+function IsoRegionsRenderer:getChunkRegion(x, y) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ConfigOption
-function IsoRegionsRenderer:getEditOptionByIndex(arg0) end
+function IsoRegionsRenderer:getEditOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function IsoRegionsRenderer:getEditOptionByName(arg0) end
+function IsoRegionsRenderer:getEditOptionByName(name) end
 
 --- @public
 --- @return integer
 function IsoRegionsRenderer:getEditOptionCount() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ConfigOption
-function IsoRegionsRenderer:getOptionByIndex(arg0) end
+function IsoRegionsRenderer:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function IsoRegionsRenderer:getOptionByName(arg0) end
+function IsoRegionsRenderer:getOptionByName(name) end
 
 --- @public
 --- @return integer
@@ -62,24 +62,24 @@ function IsoRegionsRenderer:getOptionCount() end
 function IsoRegionsRenderer:getZLevel() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ConfigOption
-function IsoRegionsRenderer:getZLevelOptionByIndex(arg0) end
+function IsoRegionsRenderer:getZLevelOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function IsoRegionsRenderer:getZLevelOptionByName(arg0) end
+function IsoRegionsRenderer:getZLevelOptionByName(name) end
 
 --- @public
 --- @return integer
 function IsoRegionsRenderer:getZLevelOptionCount() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return boolean
-function IsoRegionsRenderer:hasChunkRegion(arg0, arg1) end
+function IsoRegionsRenderer:hasChunkRegion(x, y) end
 
 --- @public
 --- @return boolean
@@ -94,175 +94,175 @@ function IsoRegionsRenderer:isHasSelected() end
 function IsoRegionsRenderer:load() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function IsoRegionsRenderer:outlineRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoRegionsRenderer:outlineRect(x, y, w, h, r, g, b, a) end
 
 --- @public
 --- @return nil
 function IsoRegionsRenderer:recalcSurroundings() end
 
 --- @public
---- @param arg0 UIElement
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param ui UIElement
+--- @param zoom number
+--- @param xPos number
+--- @param yPos number
 --- @return nil
-function IsoRegionsRenderer:render(arg0, arg1, arg2, arg3) end
+function IsoRegionsRenderer:render(ui, zoom, xPos, yPos) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 number
+--- @param cellX integer
+--- @param cellY integer
+--- @param effectivePopulation integer
+--- @param targetPopulation integer
+--- @param lastRepopTime number
 --- @return nil
-function IsoRegionsRenderer:renderCellInfo(arg0, arg1, arg2, arg3, arg4) end
+function IsoRegionsRenderer:renderCellInfo(cellX, cellY, effectivePopulation, targetPopulation, lastRepopTime) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
+--- @param size number
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function IsoRegionsRenderer:renderEntity(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoRegionsRenderer:renderEntity(size, x, y, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function IsoRegionsRenderer:renderLine(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoRegionsRenderer:renderLine(x1, y1, x2, y2, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function IsoRegionsRenderer:renderRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoRegionsRenderer:renderRect(x, y, w, h, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
 --- @return nil
-function IsoRegionsRenderer:renderSquare(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoRegionsRenderer:renderSquare(x, y, r, g, b, alpha) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 string
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function IsoRegionsRenderer:renderString(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoRegionsRenderer:renderString(x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 string
---- @param arg3 Color
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param c Color
 --- @return nil
---- @overload fun(self: IsoRegionsRenderer, arg0: number, arg1: number, arg2: string, arg3: number, arg4: number, arg5: number, arg6: number): nil
-function IsoRegionsRenderer:renderStringUI(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: IsoRegionsRenderer, x: number, y: number, str: string, r: number, g: number, b: number, a: number): nil
+function IsoRegionsRenderer:renderStringUI(x, y, str, c) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
 --- @return nil
-function IsoRegionsRenderer:renderZombie(arg0, arg1, arg2, arg3, arg4) end
+function IsoRegionsRenderer:renderZombie(x, y, r, g, b) end
 
 --- @public
 --- @return nil
 function IsoRegionsRenderer:save() end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param value boolean
 --- @return nil
-function IsoRegionsRenderer:setBoolean(arg0, arg1) end
+function IsoRegionsRenderer:setBoolean(name, value) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 boolean
+--- @param index integer
+--- @param b boolean
 --- @return nil
-function IsoRegionsRenderer:setEditOption(arg0, arg1) end
+function IsoRegionsRenderer:setEditOption(index, b) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function IsoRegionsRenderer:setEditSquareCoord(arg0, arg1) end
+function IsoRegionsRenderer:setEditSquareCoord(x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function IsoRegionsRenderer:setSelected(arg0, arg1) end
+function IsoRegionsRenderer:setSelected(x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function IsoRegionsRenderer:setSelectedWorld(arg0, arg1) end
+function IsoRegionsRenderer:setSelectedWorld(x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 boolean
+--- @param index integer
+--- @param b boolean
 --- @return nil
-function IsoRegionsRenderer:setZLevelOption(arg0, arg1) end
+function IsoRegionsRenderer:setZLevelOption(index, b) end
 
 --- @public
---- @param arg0 number
+--- @param x number
 --- @return number
-function IsoRegionsRenderer:uiToWorldX(arg0) end
+function IsoRegionsRenderer:uiToWorldX(x) end
 
 --- @public
---- @param arg0 number
+--- @param y number
 --- @return number
-function IsoRegionsRenderer:uiToWorldY(arg0) end
+function IsoRegionsRenderer:uiToWorldY(y) end
 
 --- @public
 --- @return nil
 function IsoRegionsRenderer:unsetSelected() end
 
 --- @public
---- @param arg0 number
+--- @param x number
 --- @return number
-function IsoRegionsRenderer:worldToScreenX(arg0) end
+function IsoRegionsRenderer:worldToScreenX(x) end
 
 --- @public
---- @param arg0 number
+--- @param y number
 --- @return number
-function IsoRegionsRenderer:worldToScreenY(arg0) end
+function IsoRegionsRenderer:worldToScreenY(y) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

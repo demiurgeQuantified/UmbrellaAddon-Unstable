@@ -10,28 +10,28 @@ VehiclePart = {}
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param number number
+--- @param cond number
+--- @param min number
 --- @return number
-function VehiclePart.getNumberByCondition(arg0, arg1, arg2) end
+function VehiclePart.getNumberByCondition(number, cond, min) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 string
---- @param arg5 string
---- @param arg6 integer
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
 --- @return nil
---- @overload fun(self: VehiclePart, arg0: string, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
+--- @overload fun(self: VehiclePart, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
 --- @overload fun(self: VehiclePart, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
-function VehiclePart:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function VehiclePart:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
@@ -39,43 +39,43 @@ function VehiclePart:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function VehiclePart:HasPlayerInRange() end
 
 --- @public
---- @param arg0 VehiclePart
+--- @param child VehiclePart
 --- @return nil
-function VehiclePart:addChild(arg0) end
+function VehiclePart:addChild(child) end
 
 --- @public
 --- @return DeviceData
 function VehiclePart:createSignalDevice() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 integer
+--- @param xOffset number
+--- @param yOffset number
+--- @param dist number
+--- @param intensity number
+--- @param dot number
+--- @param focusing integer
 --- @return nil
-function VehiclePart:createSpotLight(arg0, arg1, arg2, arg3, arg4, arg5) end
+function VehiclePart:createSpotLight(xOffset, yOffset, dist, intensity, dot, focusing) end
 
 --- @public
---- @param arg0 integer
+--- @param amount integer
 --- @return nil
-function VehiclePart:damage(arg0) end
+function VehiclePart:damage(amount) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 integer
+--- @param newItem InventoryItem
+--- @param mechanicSkill integer
 --- @return nil
-function VehiclePart:doInventoryItemStats(arg0, arg1) end
+function VehiclePart:doInventoryItemStats(newItem, mechanicSkill) end
 
 --- @public
 --- @return VehicleWindow
 function VehiclePart:findWindow() end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return Anim
-function VehiclePart:getAnimById(arg0) end
+function VehiclePart:getAnimById(id) end
 
 --- @public
 --- @return string
@@ -90,9 +90,9 @@ function VehiclePart:getCategory() end
 function VehiclePart:getChatElement() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return VehiclePart
-function VehiclePart:getChild(arg0) end
+function VehiclePart:getChild(index) end
 
 --- @public
 --- @return integer
@@ -108,7 +108,7 @@ function VehiclePart:getCondition() end
 
 --- @public
 --- @return integer
---- @overload fun(self: VehiclePart, arg0: IsoGameCharacter): integer
+--- @overload fun(self: VehiclePart, chr: IsoGameCharacter): integer
 function VehiclePart:getContainerCapacity() end
 
 --- @public
@@ -194,9 +194,9 @@ function VehiclePart:getLightFocusing() end
 function VehiclePart:getLightIntensity() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return string
-function VehiclePart:getLuaFunction(arg0) end
+function VehiclePart:getLuaFunction(name) end
 
 --- @public
 --- @return integer
@@ -229,9 +229,9 @@ function VehiclePart:getSuspensionCompression() end
 function VehiclePart:getSuspensionDamping() end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return table
-function VehiclePart:getTable(arg0) end
+function VehiclePart:getTable(id) end
 
 --- @public
 --- @return BaseVehicle
@@ -296,57 +296,57 @@ function VehiclePart:isSetAllModelsVisible() end
 function VehiclePart:isSpecificItem() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function VehiclePart:load(arg0, arg1) end
+function VehiclePart:load(input, WorldVersion) end
 
 --- @public
 --- @return nil
 function VehiclePart:repair() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function VehiclePart:save(arg0) end
+function VehiclePart:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param visible boolean
 --- @return nil
-function VehiclePart:setAllModelsVisible(arg0) end
+function VehiclePart:setAllModelsVisible(visible) end
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return nil
-function VehiclePart:setCategory(arg0) end
+function VehiclePart:setCategory(category) end
 
 --- @public
---- @param arg0 integer
+--- @param condition integer
 --- @return nil
-function VehiclePart:setCondition(arg0) end
+function VehiclePart:setCondition(condition) end
 
 --- @public
---- @param arg0 integer
+--- @param cap integer
 --- @return nil
-function VehiclePart:setContainerCapacity(arg0) end
+function VehiclePart:setContainerCapacity(cap) end
 
 --- @public
---- @param arg0 number
+--- @param amount number
 --- @return nil
---- @overload fun(self: VehiclePart, arg0: number, arg1: boolean, arg2: boolean): nil
-function VehiclePart:setContainerContentAmount(arg0) end
+--- @overload fun(self: VehiclePart, amount: number, force: boolean, noUpdateMass: boolean): nil
+function VehiclePart:setContainerContentAmount(amount) end
 
 --- @public
---- @param arg0 number
+--- @param d number
 --- @return nil
---- @overload fun(self: VehiclePart, arg0: number): nil
-function VehiclePart:setDelta(arg0) end
+--- @overload fun(self: VehiclePart, d: number): nil
+function VehiclePart:setDelta(d) end
 
 --- @public
---- @param arg0 DeviceData
+--- @param data DeviceData
 --- @return nil
---- @overload fun(self: VehiclePart, arg0: DeviceData): nil
-function VehiclePart:setDeviceData(arg0) end
+--- @overload fun(self: VehiclePart, data: DeviceData): nil
+function VehiclePart:setDeviceData(data) end
 
 --- @public
 --- @param arg0 number
@@ -354,78 +354,78 @@ function VehiclePart:setDeviceData(arg0) end
 function VehiclePart:setDurability(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param engineLoudness number
 --- @return nil
-function VehiclePart:setEngineLoudness(arg0) end
+function VehiclePart:setEngineLoudness(engineLoudness) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 number
---- @param arg2 number
+--- @param item InventoryItem
+--- @param baseQuality number
+--- @param chanceToSpawnDamaged number
 --- @return nil
-function VehiclePart:setGeneralCondition(arg0, arg1, arg2) end
+function VehiclePart:setGeneralCondition(item, baseQuality, chanceToSpawnDamaged) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
---- @overload fun(self: VehiclePart, arg0: InventoryItem, arg1: integer): nil
-function VehiclePart:setInventoryItem(arg0) end
+--- @overload fun(self: VehiclePart, item: InventoryItem, mechanicSkill: integer): nil
+function VehiclePart:setInventoryItem(item) end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param container ItemContainer
 --- @return nil
-function VehiclePart:setItemContainer(arg0) end
+function VehiclePart:setItemContainer(container) end
 
 --- @public
---- @param arg0 number
+--- @param hours number
 --- @return nil
-function VehiclePart:setLastUpdated(arg0) end
+function VehiclePart:setLastUpdated(hours) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return nil
-function VehiclePart:setLightActive(arg0) end
+function VehiclePart:setLightActive(active) end
 
 --- @public
---- @param arg0 integer
+--- @param mechanicSkillInstaller integer
 --- @return nil
-function VehiclePart:setMechanicSkillInstaller(arg0) end
+function VehiclePart:setMechanicSkillInstaller(mechanicSkillInstaller) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param id string
+--- @param visible boolean
 --- @return nil
-function VehiclePart:setModelVisible(arg0, arg1) end
+function VehiclePart:setModelVisible(id, visible) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
-function VehiclePart:setRandomCondition(arg0) end
+function VehiclePart:setRandomCondition(item) end
 
 --- @public
---- @param arg0 Part
+--- @param scriptPart Part
 --- @return nil
-function VehiclePart:setScriptPart(arg0) end
+function VehiclePart:setScriptPart(scriptPart) end
 
 --- @public
---- @param arg0 boolean
+--- @param specificItem boolean
 --- @return nil
-function VehiclePart:setSpecificItem(arg0) end
+function VehiclePart:setSpecificItem(specificItem) end
 
 --- @public
---- @param arg0 number
+--- @param suspensionCompression number
 --- @return nil
-function VehiclePart:setSuspensionCompression(arg0) end
+function VehiclePart:setSuspensionCompression(suspensionCompression) end
 
 --- @public
---- @param arg0 number
+--- @param suspensionDamping number
 --- @return nil
-function VehiclePart:setSuspensionDamping(arg0) end
+function VehiclePart:setSuspensionDamping(suspensionDamping) end
 
 --- @public
---- @param arg0 number
+--- @param wheelFriction number
 --- @return nil
-function VehiclePart:setWheelFriction(arg0) end
+function VehiclePart:setWheelFriction(wheelFriction) end
 
 --- @public
 --- @return nil
@@ -436,6 +436,6 @@ function VehiclePart:updateSignalDevice() end
 ------------------------------------
 
 --- @public
---- @param arg0 BaseVehicle
+--- @param vehicle BaseVehicle
 --- @return VehiclePart
-function VehiclePart.new(arg0) end
+function VehiclePart.new(vehicle) end

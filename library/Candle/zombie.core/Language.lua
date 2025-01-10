@@ -10,15 +10,15 @@ Language = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return Language
-function Language.FromString(arg0) end
+function Language.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return Language
-function Language.fromIndex(arg0) end
+function Language.fromIndex(index) end
 
 ------------------------------------
 ------------- METHODS --------------

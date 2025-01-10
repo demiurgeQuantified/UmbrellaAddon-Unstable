@@ -41,18 +41,18 @@ function DoubleConfigOption:getValueAsObject() end
 function DoubleConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return boolean
-function DoubleConfigOption:isValidString(arg0) end
+function DoubleConfigOption:isValidString(s) end
 
 --- @public
 --- @return ConfigOption
 function DoubleConfigOption:makeCopy() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return nil
-function DoubleConfigOption:parse(arg0) end
+function DoubleConfigOption:parse(s) end
 
 --- @public
 --- @return nil
@@ -63,23 +63,23 @@ function DoubleConfigOption:resetToDefault() end
 function DoubleConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 number
+--- @param value number
 --- @return nil
-function DoubleConfigOption:setValue(arg0) end
+function DoubleConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return nil
-function DoubleConfigOption:setValueFromObject(arg0) end
+function DoubleConfigOption:setValueFromObject(o) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param name string
+--- @param min number
+--- @param max number
+--- @param defaultValue number
 --- @return DoubleConfigOption
-function DoubleConfigOption.new(arg0, arg1, arg2, arg3) end
+function DoubleConfigOption.new(name, min, max, defaultValue) end

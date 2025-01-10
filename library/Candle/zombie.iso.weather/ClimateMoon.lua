@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ClimateMoon
+--- @class ClimateMoon TurboTuTone.
 --- @field public class any
 ClimateMoon = {}
 
@@ -34,11 +34,11 @@ function ClimateMoon:getMoonFloat() end
 function ClimateMoon:getPhaseName() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param year integer
+--- @param month integer
+--- @param day integer
 --- @return nil
-function ClimateMoon:updatePhase(arg0, arg1, arg2) end
+function ClimateMoon:updatePhase(year, month, day) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

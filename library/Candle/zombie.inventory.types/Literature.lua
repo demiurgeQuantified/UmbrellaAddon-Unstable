@@ -9,20 +9,20 @@ Literature = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return nil
-function Literature:DoTooltip(arg0, arg1) end
+function Literature:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean
 function Literature:IsLiterature() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param index integer
+--- @param text string
 --- @return nil
-function Literature:addPage(arg0, arg1) end
+function Literature:addPage(index, text) end
 
 --- @public
 --- @return boolean
@@ -41,7 +41,7 @@ function Literature:getAlreadyReadPages() end
 function Literature:getBookName() end
 
 --- @public
---- @return number
+--- @return number the boredomChange
 function Literature:getBoredomChange() end
 
 --- @public
@@ -89,7 +89,7 @@ function Literature:getSaveType() end
 function Literature:getSkillTrained() end
 
 --- @public
---- @return number
+--- @return number the stressChange
 function Literature:getStressChange() end
 
 --- @public
@@ -97,7 +97,7 @@ function Literature:getStressChange() end
 function Literature:getTeachedRecipes() end
 
 --- @public
---- @return number
+--- @return number the unhappyChange
 function Literature:getUnhappyChange() end
 
 --- @public
@@ -105,76 +105,76 @@ function Literature:getUnhappyChange() end
 function Literature:isEmptyPages() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Literature:load(arg0, arg1) end
+function Literature:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function Literature:save(arg0, arg1) end
+function Literature:save(output, net) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return string
-function Literature:seePage(arg0) end
+function Literature:seePage(index) end
 
 --- @public
---- @param arg0 integer
+--- @param alreadyReadPages integer
 --- @return nil
-function Literature:setAlreadyReadPages(arg0) end
+function Literature:setAlreadyReadPages(alreadyReadPages) end
 
 --- @public
---- @param arg0 string
+--- @param bookName string
 --- @return nil
-function Literature:setBookName(arg0) end
+function Literature:setBookName(bookName) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeWrite boolean
 --- @return nil
-function Literature:setCanBeWrite(arg0) end
+function Literature:setCanBeWrite(canBeWrite) end
 
 --- @public
---- @param arg0 HashMap
+--- @param customPages HashMap
 --- @return nil
-function Literature:setCustomPages(arg0) end
+function Literature:setCustomPages(customPages) end
 
 --- @public
---- @param arg0 string
+--- @param lockedBy string
 --- @return nil
-function Literature:setLockedBy(arg0) end
+function Literature:setLockedBy(lockedBy) end
 
 --- @public
---- @param arg0 integer
+--- @param lvlSkillTrained integer
 --- @return nil
-function Literature:setLvlSkillTrained(arg0) end
+function Literature:setLvlSkillTrained(lvlSkillTrained) end
 
 --- @public
---- @param arg0 integer
+--- @param numLevelsTrained integer
 --- @return nil
-function Literature:setNumLevelsTrained(arg0) end
+function Literature:setNumLevelsTrained(numLevelsTrained) end
 
 --- @public
---- @param arg0 integer
+--- @param numberOfPages integer
 --- @return nil
-function Literature:setNumberOfPages(arg0) end
+function Literature:setNumberOfPages(numberOfPages) end
 
 --- @public
---- @param arg0 integer
+--- @param pageToWrite integer
 --- @return nil
-function Literature:setPageToWrite(arg0) end
+function Literature:setPageToWrite(pageToWrite) end
 
 --- @public
---- @param arg0 string
+--- @param skillTrained string
 --- @return nil
-function Literature:setSkillTrained(arg0) end
+function Literature:setSkillTrained(skillTrained) end
 
 --- @public
---- @param arg0 List
+--- @param teachedRecipes List
 --- @return nil
-function Literature:setTeachedRecipes(arg0) end
+function Literature:setTeachedRecipes(teachedRecipes) end
 
 --- @public
 --- @return nil
@@ -185,10 +185,10 @@ function Literature:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return Literature
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): Literature
-function Literature.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(module: string, name: string, itemType: string, item: Item): Literature
+function Literature.new(module, name, itemType, texName) end

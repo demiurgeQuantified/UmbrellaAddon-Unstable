@@ -27,17 +27,17 @@ ImmutableColor = {}
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param hue number
+--- @param saturation number
+--- @param brightness number
 --- @return Integer[]
-function ImmutableColor.HSBtoRGB(arg0, arg1, arg2) end
+function ImmutableColor.HSBtoRGB(hue, saturation, brightness) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param nm string
 --- @return ImmutableColor
-function ImmutableColor.decode(arg0) end
+function ImmutableColor.decode(nm) end
 
 --- @public
 --- @static
@@ -49,24 +49,24 @@ function ImmutableColor.random() end
 ------------------------------------
 
 --- @public
---- @param arg0 ImmutableColor
+--- @param c ImmutableColor
 --- @return ImmutableColor
-function ImmutableColor:add(arg0) end
+function ImmutableColor:add(c) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, arg0: number): ImmutableColor
+--- @overload fun(self: ImmutableColor, scale: number): ImmutableColor
 function ImmutableColor:brighter() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, arg0: number): ImmutableColor
+--- @overload fun(self: ImmutableColor, scale: number): ImmutableColor
 function ImmutableColor:darker() end
 
 --- @public
---- @param arg0 any
+--- @param other any
 --- @return boolean
-function ImmutableColor:equals(arg0) end
+function ImmutableColor:equals(other) end
 
 --- @public
 --- @return integer
@@ -121,20 +121,20 @@ function ImmutableColor:getRedInt() end
 function ImmutableColor:hashCode() end
 
 --- @public
---- @param arg0 ImmutableColor
---- @param arg1 number
+--- @param to ImmutableColor
+--- @param delta number
 --- @return ImmutableColor
-function ImmutableColor:interp(arg0, arg1) end
+function ImmutableColor:interp(to, delta) end
 
 --- @public
---- @param arg0 Color
+--- @param c Color
 --- @return ImmutableColor
-function ImmutableColor:multiply(arg0) end
+function ImmutableColor:multiply(c) end
 
 --- @public
---- @param arg0 number
+--- @param value number
 --- @return ImmutableColor
-function ImmutableColor:scale(arg0) end
+function ImmutableColor:scale(value) end
 
 --- @public
 --- @return Color
@@ -149,13 +149,13 @@ function ImmutableColor:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param value integer
 --- @return ImmutableColor
---- @overload fun(arg0: Color): ImmutableColor
---- @overload fun(arg0: ImmutableColor): ImmutableColor
---- @overload fun(arg0: number, arg1: number, arg2: number): ImmutableColor
---- @overload fun(arg0: integer, arg1: integer, arg2: integer): ImmutableColor
---- @overload fun(arg0: Color, arg1: Color, arg2: number): ImmutableColor
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): ImmutableColor
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer): ImmutableColor
-function ImmutableColor.new(arg0) end
+--- @overload fun(color: Color): ImmutableColor
+--- @overload fun(color: ImmutableColor): ImmutableColor
+--- @overload fun(r: number, g: number, b: number): ImmutableColor
+--- @overload fun(r: integer, g: integer, b: integer): ImmutableColor
+--- @overload fun(A: Color, B: Color, delta: number): ImmutableColor
+--- @overload fun(r: number, g: number, b: number, a: number): ImmutableColor
+--- @overload fun(r: integer, g: integer, b: integer, a: integer): ImmutableColor
+function ImmutableColor.new(value) end

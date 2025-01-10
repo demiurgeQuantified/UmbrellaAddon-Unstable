@@ -9,30 +9,30 @@ LuaTimedActionNew = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Mover
+--- @param mover Mover
 --- @return nil
---- @overload fun(self: LuaTimedActionNew, arg0: Mover): nil
-function LuaTimedActionNew:Failed(arg0) end
+--- @overload fun(self: LuaTimedActionNew, mover: Mover): nil
+function LuaTimedActionNew:Failed(mover) end
 
 --- @public
---- @param arg0 AnimEvent
+--- @param event AnimEvent
 --- @return nil
-function LuaTimedActionNew:OnAnimEvent(arg0) end
+function LuaTimedActionNew:OnAnimEvent(event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param chr IsoGameCharacter
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function LuaTimedActionNew:Pathfind(arg0, arg1, arg2, arg3) end
+function LuaTimedActionNew:Pathfind(chr, x, y, z) end
 
 --- @public
---- @param arg0 Path
---- @param arg1 Mover
+--- @param path Path
+--- @param mover Mover
 --- @return nil
---- @overload fun(self: LuaTimedActionNew, arg0: Path, arg1: Mover): nil
-function LuaTimedActionNew:Succeeded(arg0, arg1) end
+--- @overload fun(self: LuaTimedActionNew, path: Path, mover: Mover): nil
+function LuaTimedActionNew:Succeeded(path, mover) end
 
 --- @public
 --- @return nil
@@ -67,9 +67,9 @@ function LuaTimedActionNew:perform() end
 function LuaTimedActionNew:replaceObjectInTable(arg0, arg1) end
 
 --- @public
---- @param arg0 number
+--- @param time number
 --- @return nil
-function LuaTimedActionNew:setCurrentTime(arg0) end
+function LuaTimedActionNew:setCurrentTime(time) end
 
 --- @public
 --- @param arg0 boolean
@@ -77,9 +77,9 @@ function LuaTimedActionNew:setCurrentTime(arg0) end
 function LuaTimedActionNew:setCustomRemoteTimedActionSync(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param maxTime integer
 --- @return nil
-function LuaTimedActionNew:setTime(arg0) end
+function LuaTimedActionNew:setTime(maxTime) end
 
 --- @public
 --- @return nil
@@ -106,7 +106,7 @@ function LuaTimedActionNew:waitToStart() end
 ------------------------------------
 
 --- @public
---- @param arg0 table
---- @param arg1 IsoGameCharacter
+--- @param table table
+--- @param chr IsoGameCharacter
 --- @return LuaTimedActionNew
-function LuaTimedActionNew.new(arg0, arg1) end
+function LuaTimedActionNew.new(table, chr) end

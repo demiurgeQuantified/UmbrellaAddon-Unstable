@@ -45,36 +45,36 @@ function WeatherStage:getStageID() end
 function WeatherStage:getStageStart() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param mid integer
+--- @param __end__ integer
 --- @return nil
-function WeatherStage:lerpEntryTo(arg0, arg1) end
+function WeatherStage:lerpEntryTo(mid, __end__) end
 
 --- @public
---- @param arg0 DataInputStream
---- @param arg1 integer
+--- @param input DataInputStream
+--- @param worldVersion integer
 --- @return nil
-function WeatherStage:load(arg0, arg1) end
+function WeatherStage:load(input, worldVersion) end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return nil
-function WeatherStage:save(arg0) end
+function WeatherStage:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function WeatherStage:setHasStartedCloud(arg0) end
+function WeatherStage:setHasStartedCloud(b) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return nil
-function WeatherStage:setStageID(arg0) end
+function WeatherStage:setStageID(id) end
 
 --- @public
---- @param arg0 number
+--- @param t number
 --- @return nil
-function WeatherStage:setTargetStrength(arg0) end
+function WeatherStage:setTargetStrength(t) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -82,5 +82,5 @@ function WeatherStage:setTargetStrength(arg0) end
 
 --- @public
 --- @return WeatherStage
---- @overload fun(arg0: integer): WeatherStage
+--- @overload fun(id: integer): WeatherStage
 function WeatherStage.new() end

@@ -15,9 +15,9 @@ SpeedControls = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function SpeedControls:ButtonClicked(arg0) end
+function SpeedControls:ButtonClicked(name) end
 
 --- @public
 --- @return nil
@@ -28,9 +28,9 @@ function SpeedControls:Pause() end
 function SpeedControls:SetCorrectIconStates() end
 
 --- @public
---- @param arg0 integer
+--- @param NewSpeed integer
 --- @return nil
-function SpeedControls:SetCurrentGameSpeed(arg0) end
+function SpeedControls:SetCurrentGameSpeed(NewSpeed) end
 
 --- @public
 --- @return integer
@@ -41,16 +41,16 @@ function SpeedControls:getCurrentGameSpeed() end
 function SpeedControls:isPaused() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param dx number
+--- @param dy number
 --- @return boolean
-function SpeedControls:onMouseMove(arg0, arg1) end
+function SpeedControls:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param dx number
+--- @param dy number
 --- @return nil
-function SpeedControls:onMouseMoveOutside(arg0, arg1) end
+function SpeedControls:onMouseMoveOutside(dx, dy) end
 
 --- @public
 --- @return nil

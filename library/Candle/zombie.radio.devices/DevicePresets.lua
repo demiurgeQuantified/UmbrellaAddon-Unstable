@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class DevicePresets: Cloneable
+--- @class DevicePresets: Cloneable Turrubo
 --- @field public class any
 DevicePresets = {}
 
@@ -9,10 +9,10 @@ DevicePresets = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param name string
+--- @param frequency integer
 --- @return nil
-function DevicePresets:addPreset(arg0, arg1) end
+function DevicePresets:addPreset(name, frequency) end
 
 --- @public
 --- @return nil
@@ -23,14 +23,14 @@ function DevicePresets:clearPresets() end
 function DevicePresets:getMaxPresets() end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return integer
-function DevicePresets:getPresetFreq(arg0) end
+function DevicePresets:getPresetFreq(id) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return string
-function DevicePresets:getPresetName(arg0) end
+function DevicePresets:getPresetName(id) end
 
 --- @public
 --- @return ArrayList
@@ -41,51 +41,51 @@ function DevicePresets:getPresets() end
 function DevicePresets:getPresetsLua() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param net boolean
 --- @return nil
-function DevicePresets:load(arg0, arg1, arg2) end
+function DevicePresets:load(input, WorldVersion, net) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return nil
-function DevicePresets:removePreset(arg0) end
+function DevicePresets:removePreset(id) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function DevicePresets:save(arg0, arg1) end
+function DevicePresets:save(output, net) end
 
 --- @public
---- @param arg0 integer
+--- @param m integer
 --- @return nil
-function DevicePresets:setMaxPresets(arg0) end
+function DevicePresets:setMaxPresets(m) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
---- @param arg2 integer
+--- @param id integer
+--- @param name string
+--- @param frequency integer
 --- @return nil
-function DevicePresets:setPreset(arg0, arg1, arg2) end
+function DevicePresets:setPreset(id, name, frequency) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param id integer
+--- @param frequency integer
 --- @return nil
-function DevicePresets:setPresetFreq(arg0, arg1) end
+function DevicePresets:setPresetFreq(id, frequency) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param id integer
+--- @param name string
 --- @return nil
-function DevicePresets:setPresetName(arg0, arg1) end
+function DevicePresets:setPresetName(id, name) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param p ArrayList
 --- @return nil
-function DevicePresets:setPresets(arg0) end
+function DevicePresets:setPresets(p) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

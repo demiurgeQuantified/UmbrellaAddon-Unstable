@@ -9,9 +9,9 @@ ColorInfo = {}
 ------------------------------------
 
 --- @public
---- @param arg0 number
+--- @param s number
 --- @return nil
-function ColorInfo:desaturate(arg0) end
+function ColorInfo:desaturate(s) end
 
 --- @public
 --- @return number
@@ -30,17 +30,17 @@ function ColorInfo:getG() end
 function ColorInfo:getR() end
 
 --- @public
---- @param arg0 ColorInfo
---- @param arg1 number
---- @param arg2 ColorInfo
+--- @param to ColorInfo
+--- @param delta number
+--- @param dest ColorInfo
 --- @return nil
-function ColorInfo:interp(arg0, arg1, arg2) end
+function ColorInfo:interp(to, delta, dest) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param other ColorInfo
 --- @return ColorInfo
---- @overload fun(self: ColorInfo, arg0: number, arg1: number, arg2: number, arg3: number): ColorInfo
-function ColorInfo:set(arg0) end
+--- @overload fun(self: ColorInfo, R: number, G: number, B: number, A: number): ColorInfo
+function ColorInfo:set(other) end
 
 --- @public
 --- @param arg0 integer
@@ -65,5 +65,5 @@ function ColorInfo:toString() end
 
 --- @public
 --- @return ColorInfo
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): ColorInfo
+--- @overload fun(R: number, G: number, B: number, A: number): ColorInfo
 function ColorInfo.new() end

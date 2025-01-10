@@ -9,6 +9,6 @@ IClothingItemListener = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param itemGuid string
 --- @return nil
-function IClothingItemListener:clothingItemChanged(arg0) end
+function IClothingItemListener:clothingItemChanged(itemGuid) end

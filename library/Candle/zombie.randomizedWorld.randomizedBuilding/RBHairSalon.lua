@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBHairSalon: RandomizedBuildingBase
+--- @class RBHairSalon: RandomizedBuildingBase Add some food on table
 --- @field public class any
 RBHairSalon = {}
 
@@ -9,20 +9,23 @@ RBHairSalon = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+---
+---  Description copied from class: RandomizedBuildingBase
+---
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBHairSalon:isValid(arg0, arg1) end
+function RBHairSalon:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBHairSalon:randomizeBuilding(arg0) end
+function RBHairSalon:randomizeBuilding(def) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return boolean
-function RBHairSalon:roomValid(arg0) end
+function RBHairSalon:roomValid(sq) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

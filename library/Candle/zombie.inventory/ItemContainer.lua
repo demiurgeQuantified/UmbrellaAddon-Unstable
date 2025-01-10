@@ -10,9 +10,9 @@ ItemContainer = {}
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param val number
 --- @return number
-function ItemContainer.floatingPointCorrection(arg0) end
+function ItemContainer.floatingPointCorrection(val) end
 
 --- @public
 --- @static
@@ -25,110 +25,114 @@ function ItemContainer.isObjectPowered(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: InventoryItem): InventoryItem
---- @overload fun(self: ItemContainer, arg0: string, arg1: number): boolean
-function ItemContainer:AddItem(arg0) end
+--- @overload fun(self: ItemContainer, item: InventoryItem): InventoryItem
+--- @overload fun(self: ItemContainer, type: string, useDelta: number): boolean
+function ItemContainer:AddItem(type) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:AddItemBlind(arg0) end
+function ItemContainer:AddItemBlind(item) end
 
 --- @public
 --- @param arg0 ArrayList
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer): ArrayList
---- @overload fun(self: ItemContainer, arg0: InventoryItem, arg1: integer): ArrayList
+--- @overload fun(self: ItemContainer, item: string, use: integer): ArrayList
+--- @overload fun(self: ItemContainer, item: InventoryItem, use: integer): ArrayList
 function ItemContainer:AddItems(arg0) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:DoAddItem(arg0) end
+function ItemContainer:DoAddItem(item) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:DoAddItemBlind(arg0) end
+function ItemContainer:DoAddItemBlind(item) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
-function ItemContainer:DoRemoveItem(arg0) end
+function ItemContainer:DoRemoveItem(item) end
 
 --- @public
 --- @param arg0 string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: ItemType): InventoryItem
+--- @overload fun(self: ItemContainer, itemType: ItemType): InventoryItem
 function ItemContainer:Find(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return ArrayList
-function ItemContainer:FindAll(arg0) end
+function ItemContainer:FindAll(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer): ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: ArrayList): InventoryItem
-function ItemContainer:FindAndReturn(arg0) end
+--- @overload fun(self: ItemContainer, type: string, count: integer): ArrayList
+--- @overload fun(self: ItemContainer, type: string, itemToCheck: ArrayList): InventoryItem
+function ItemContainer:FindAndReturn(type) end
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return InventoryItem
-function ItemContainer:FindAndReturnCategory(arg0) end
+function ItemContainer:FindAndReturnCategory(category) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: InventoryItem): InventoryItem
-function ItemContainer:FindAndReturnStack(arg0) end
+--- @overload fun(self: ItemContainer, itemlike: InventoryItem): InventoryItem
+function ItemContainer:FindAndReturnStack(type) end
 
 --- @public
---- @param arg0 integer
+--- @param uses integer
 --- @return InventoryItem
-function ItemContainer:FindAndReturnWaterItem(arg0) end
+function ItemContainer:FindAndReturnWaterItem(uses) end
 
 --- @public
 --- @return InventoryItem
 function ItemContainer:FindWaterSource() end
 
 --- @public
---- @param arg0 ItemType
+--- @param itemType ItemType
 --- @return boolean
-function ItemContainer:HasType(arg0) end
+function ItemContainer:HasType(itemType) end
 
 --- @public
---- @param arg0 string
+--- @param itemTypes string
 --- @return nil
---- @overload fun(self: ItemContainer, arg0: InventoryItem): nil
---- @overload fun(self: ItemContainer, arg0: ItemType): InventoryItem
-function ItemContainer:Remove(arg0) end
+--- @overload fun(self: ItemContainer, item: InventoryItem): nil
+--- @overload fun(self: ItemContainer, itemType: ItemType): InventoryItem
+function ItemContainer:Remove(itemTypes) end
 
 --- @public
---- @param arg0 string
+---
+---  Remove all the item of the type in parameter inside the container Ex of
+---  : Broccoli (no need the module like Base.Broccoli)
+---
+--- @param itemType string
 --- @return ArrayList
 --- @overload fun(self: ItemContainer, arg0: string, arg1: integer): ArrayList
-function ItemContainer:RemoveAll(arg0) end
+function ItemContainer:RemoveAll(itemType) end
 
 --- @public
---- @param arg0 string
+--- @param String string
 --- @return nil
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): InventoryItem
-function ItemContainer:RemoveOneOf(arg0) end
+--- @overload fun(self: ItemContainer, String: string, insideInv: boolean): InventoryItem
+function ItemContainer:RemoveOneOf(String) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:addItem(arg0) end
+function ItemContainer:addItem(item) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
-function ItemContainer:addItemOnServer(arg0) end
+function ItemContainer:addItemOnServer(item) end
 
 --- @public
 --- @return nil
@@ -139,103 +143,103 @@ function ItemContainer:addItemsToProcessItems() end
 function ItemContainer:clear() end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return boolean
---- @overload fun(self: ItemContainer, arg0: InventoryItem): boolean
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): boolean
---- @overload fun(self: ItemContainer, arg0: InventoryItem, arg1: boolean): boolean
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean, arg2: boolean): boolean
-function ItemContainer:contains(arg0) end
+--- @overload fun(self: ItemContainer, item: InventoryItem): boolean
+--- @overload fun(self: ItemContainer, type: string, doInv: boolean): boolean
+--- @overload fun(self: ItemContainer, itemToFind: InventoryItem, doInv: boolean): boolean
+--- @overload fun(self: ItemContainer, type: string, doInv: boolean, ignoreBroken: boolean): boolean
+function ItemContainer:contains(type) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return boolean
-function ItemContainer:containsEval(arg0) end
+function ItemContainer:containsEval(functionObj) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return boolean
-function ItemContainer:containsEvalArg(arg0, arg1) end
+function ItemContainer:containsEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return boolean
-function ItemContainer:containsEvalArgRecurse(arg0, arg1) end
+function ItemContainer:containsEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return boolean
-function ItemContainer:containsEvalRecurse(arg0) end
+function ItemContainer:containsEvalRecurse(functionObj) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return boolean
-function ItemContainer:containsID(arg0) end
+function ItemContainer:containsID(id) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:containsRecursive(arg0) end
+function ItemContainer:containsRecursive(item) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return boolean
-function ItemContainer:containsTag(arg0) end
+function ItemContainer:containsTag(tag) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param tag string
+--- @param functionObj function
 --- @return boolean
-function ItemContainer:containsTagEval(arg0, arg1) end
+function ItemContainer:containsTagEval(tag, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
 --- @return boolean
-function ItemContainer:containsTagEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:containsTagEvalArgRecurse(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param tag string
+--- @param functionObj function
 --- @return boolean
-function ItemContainer:containsTagEvalRecurse(arg0, arg1) end
+function ItemContainer:containsTagEvalRecurse(tag, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return boolean
-function ItemContainer:containsTagRecurse(arg0) end
+function ItemContainer:containsTagRecurse(tag) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return boolean
-function ItemContainer:containsType(arg0) end
+function ItemContainer:containsType(type) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return boolean
-function ItemContainer:containsTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:containsTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return boolean
-function ItemContainer:containsTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:containsTypeEvalRecurse(type, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return boolean
-function ItemContainer:containsTypeRecurse(arg0) end
+function ItemContainer:containsTypeRecurse(type) end
 
 --- @public
---- @param arg0 string
+--- @param moduleType string
 --- @return boolean
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): boolean
-function ItemContainer:containsWithModule(arg0) end
+--- @overload fun(self: ItemContainer, moduleType: string, withDeltaLeft: boolean): boolean
+function ItemContainer:containsWithModule(moduleType) end
 
 --- @public
 --- @return nil
@@ -246,156 +250,156 @@ function ItemContainer:emptyIt() end
 function ItemContainer:getAcceptItemFunction() end
 
 --- @public
---- @return number
+--- @return number the ageFactor
 function ItemContainer:getAgeFactor() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: Predicate, arg1: ArrayList): ArrayList
-function ItemContainer:getAll(arg0) end
+--- @overload fun(self: ItemContainer, predicate: Predicate, result: ArrayList): ArrayList
+function ItemContainer:getAll(predicate) end
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: ArrayList): ArrayList
-function ItemContainer:getAllCategory(arg0) end
+--- @overload fun(self: ItemContainer, category: string, result: ArrayList): ArrayList
+function ItemContainer:getAllCategory(category) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ArrayList
+--- @param category string
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllCategoryRecurse(arg0, arg1) end
+function ItemContainer:getAllCategoryRecurse(category, result) end
 
 --- @public
 --- @return ArrayList
 function ItemContainer:getAllCleaningFluidSources() end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: ArrayList): ArrayList
-function ItemContainer:getAllEval(arg0) end
+--- @overload fun(self: ItemContainer, functionObj: function, result: ArrayList): ArrayList
+function ItemContainer:getAllEval(functionObj) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: any, arg2: ArrayList): ArrayList
-function ItemContainer:getAllEvalArg(arg0, arg1) end
+--- @overload fun(self: ItemContainer, functionObj: function, arg: any, result: ArrayList): ArrayList
+function ItemContainer:getAllEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: any, arg2: ArrayList): ArrayList
-function ItemContainer:getAllEvalArgRecurse(arg0, arg1) end
+--- @overload fun(self: ItemContainer, functionObj: function, arg: any, result: ArrayList): ArrayList
+function ItemContainer:getAllEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: ArrayList): ArrayList
-function ItemContainer:getAllEvalRecurse(arg0) end
+--- @overload fun(self: ItemContainer, functionObj: function, result: ArrayList): ArrayList
+function ItemContainer:getAllEvalRecurse(functionObj) end
 
 --- @public
 --- @return ArrayList
 function ItemContainer:getAllFoodsForAnimals() end
 
 --- @public
---- @param arg0 LinkedHashMap
---- @param arg1 boolean
+--- @param items LinkedHashMap
+--- @param inInv boolean
 --- @return LinkedHashMap
-function ItemContainer:getAllItems(arg0, arg1) end
+function ItemContainer:getAllItems(items, inInv) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 ArrayList
+--- @param predicate Predicate
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllRecurse(arg0, arg1) end
+function ItemContainer:getAllRecurse(predicate, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ArrayList
+--- @param tag string
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTag(arg0, arg1) end
+function ItemContainer:getAllTag(tag, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: ArrayList): ArrayList
-function ItemContainer:getAllTagEval(arg0, arg1) end
+--- @overload fun(self: ItemContainer, tag: string, functionObj: function, result: ArrayList): ArrayList
+function ItemContainer:getAllTagEval(type, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: any, arg3: ArrayList): ArrayList
-function ItemContainer:getAllTagEvalArg(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, tag: string, functionObj: function, arg: any, result: ArrayList): ArrayList
+function ItemContainer:getAllTagEvalArg(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
---- @param arg3 ArrayList
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
+function ItemContainer:getAllTagEvalArgRecurse(tag, functionObj, arg, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 ArrayList
+--- @param tag string
+--- @param functionObj function
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTagEvalRecurse(arg0, arg1, arg2) end
+function ItemContainer:getAllTagEvalRecurse(tag, functionObj, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ArrayList
+--- @param tag string
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTagRecurse(arg0, arg1) end
+function ItemContainer:getAllTagRecurse(tag, result) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: ArrayList): ArrayList
-function ItemContainer:getAllType(arg0) end
+--- @overload fun(self: ItemContainer, type: string, result: ArrayList): ArrayList
+function ItemContainer:getAllType(type) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: ArrayList): ArrayList
-function ItemContainer:getAllTypeEval(arg0, arg1) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEval(type, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: any, arg3: ArrayList): ArrayList
-function ItemContainer:getAllTypeEvalArg(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, arg: any, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEvalArg(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: any, arg3: ArrayList): ArrayList
-function ItemContainer:getAllTypeEvalArgRecurse(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, arg: any, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: ArrayList): ArrayList
-function ItemContainer:getAllTypeEvalRecurse(arg0, arg1) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEvalRecurse(type, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: ArrayList): ArrayList
-function ItemContainer:getAllTypeRecurse(arg0) end
+--- @overload fun(self: ItemContainer, type: string, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeRecurse(type) end
 
 --- @public
 --- @return ArrayList
@@ -422,128 +426,128 @@ function ItemContainer:getAvailableFluidContainer(arg0) end
 function ItemContainer:getAvailableFluidContainersCapacity(arg0) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 Comparator
+--- @param predicate Predicate
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBest(arg0, arg1) end
+function ItemContainer:getBest(predicate, comparator) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param descriptor SurvivorDesc
 --- @return InventoryItem
-function ItemContainer:getBestBandage(arg0) end
+function ItemContainer:getBestBandage(descriptor) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: Predicate): InventoryItem
-function ItemContainer:getBestCondition(arg0) end
+--- @overload fun(self: ItemContainer, predicate: Predicate): InventoryItem
+function ItemContainer:getBestCondition(type) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getBestConditionEval(arg0) end
+function ItemContainer:getBestConditionEval(functionObj) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getBestConditionEvalArg(arg0, arg1) end
+function ItemContainer:getBestConditionEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getBestConditionEvalArgRecurse(arg0, arg1) end
+function ItemContainer:getBestConditionEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getBestConditionEvalRecurse(arg0) end
+function ItemContainer:getBestConditionEvalRecurse(functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: Predicate): InventoryItem
-function ItemContainer:getBestConditionRecurse(arg0) end
+--- @overload fun(self: ItemContainer, predicate: Predicate): InventoryItem
+function ItemContainer:getBestConditionRecurse(type) end
 
 --- @public
---- @param arg0 function
---- @param arg1 function
+--- @param predicateObj function
+--- @param comparatorObj function
 --- @return InventoryItem
-function ItemContainer:getBestEval(arg0, arg1) end
+function ItemContainer:getBestEval(predicateObj, comparatorObj) end
 
 --- @public
---- @param arg0 function
---- @param arg1 function
---- @param arg2 any
+--- @param predicateObj function
+--- @param comparatorObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getBestEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getBestEvalArg(predicateObj, comparatorObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 function
---- @param arg2 any
+--- @param predicateObj function
+--- @param comparatorObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getBestEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getBestEvalArgRecurse(predicateObj, comparatorObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 function
+--- @param predicateObj function
+--- @param comparatorObj function
 --- @return InventoryItem
-function ItemContainer:getBestEvalRecurse(arg0, arg1) end
+function ItemContainer:getBestEvalRecurse(predicateObj, comparatorObj) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param descriptor SurvivorDesc
 --- @return InventoryItem
-function ItemContainer:getBestFood(arg0) end
+function ItemContainer:getBestFood(descriptor) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 Comparator
+--- @param predicate Predicate
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBestRecurse(arg0, arg1) end
+function ItemContainer:getBestRecurse(predicate, comparator) end
 
 --- @public
---- @param arg0 string
---- @param arg1 Comparator
+--- @param type string
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBestType(arg0, arg1) end
+function ItemContainer:getBestType(type, comparator) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param comparatorObj function
 --- @return InventoryItem
-function ItemContainer:getBestTypeEval(arg0, arg1) end
+function ItemContainer:getBestTypeEval(type, comparatorObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param comparatorObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getBestTypeEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getBestTypeEvalArg(type, comparatorObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param comparatorObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getBestTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getBestTypeEvalArgRecurse(type, comparatorObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param comparatorObj function
 --- @return InventoryItem
-function ItemContainer:getBestTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:getBestTypeEvalRecurse(type, comparatorObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 Comparator
+--- @param type string
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBestTypeRecurse(arg0, arg1) end
+function ItemContainer:getBestTypeRecurse(type, comparator) end
 
 --- @public
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: SurvivorDesc): InventoryItem
+--- @overload fun(self: ItemContainer, desc: SurvivorDesc): InventoryItem
 function ItemContainer:getBestWeapon() end
 
 --- @public
@@ -575,126 +579,126 @@ function ItemContainer:getContainingItem() end
 function ItemContainer:getContentsWeight() end
 
 --- @public
---- @return number
+--- @return number the CookingFactor
 function ItemContainer:getCookingFactor() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return integer
-function ItemContainer:getCount(arg0) end
+function ItemContainer:getCount(predicate) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return integer
-function ItemContainer:getCountEval(arg0) end
+function ItemContainer:getCountEval(functionObj) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return integer
-function ItemContainer:getCountEvalArg(arg0, arg1) end
+function ItemContainer:getCountEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return integer
-function ItemContainer:getCountEvalArgRecurse(arg0, arg1) end
+function ItemContainer:getCountEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return integer
-function ItemContainer:getCountEvalRecurse(arg0) end
+function ItemContainer:getCountEvalRecurse(functionObj) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return integer
-function ItemContainer:getCountRecurse(arg0) end
+function ItemContainer:getCountRecurse(predicate) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return integer
-function ItemContainer:getCountTag(arg0) end
+function ItemContainer:getCountTag(tag) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param tag string
+--- @param functionObj function
 --- @return integer
-function ItemContainer:getCountTagEval(arg0, arg1) end
+function ItemContainer:getCountTagEval(tag, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
 --- @return integer
-function ItemContainer:getCountTagEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getCountTagEvalArg(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
 --- @return integer
-function ItemContainer:getCountTagEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getCountTagEvalArgRecurse(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param tag string
+--- @param functionObj function
 --- @return integer
-function ItemContainer:getCountTagEvalRecurse(arg0, arg1) end
+function ItemContainer:getCountTagEvalRecurse(tag, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return integer
-function ItemContainer:getCountTagRecurse(arg0) end
+function ItemContainer:getCountTagRecurse(tag) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
-function ItemContainer:getCountType(arg0) end
+function ItemContainer:getCountType(type) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return integer
-function ItemContainer:getCountTypeEval(arg0, arg1) end
+function ItemContainer:getCountTypeEval(type, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return integer
-function ItemContainer:getCountTypeEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getCountTypeEvalArg(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return integer
-function ItemContainer:getCountTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getCountTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return integer
-function ItemContainer:getCountTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:getCountTypeEvalRecurse(type, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
-function ItemContainer:getCountTypeRecurse(arg0) end
+function ItemContainer:getCountTypeRecurse(type) end
 
 --- @public
 --- @return number
 function ItemContainer:getCustomTemperature() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return integer
-function ItemContainer:getEffectiveCapacity(arg0) end
+function ItemContainer:getEffectiveCapacity(chr) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return InventoryItem
-function ItemContainer:getFirst(arg0) end
+function ItemContainer:getFirst(predicate) end
 
 --- @public
 --- @param arg0 string
@@ -702,40 +706,40 @@ function ItemContainer:getFirst(arg0) end
 function ItemContainer:getFirstAvailableFluidContainer(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return InventoryItem
-function ItemContainer:getFirstCategory(arg0) end
+function ItemContainer:getFirstCategory(category) end
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return InventoryItem
-function ItemContainer:getFirstCategoryRecurse(arg0) end
+function ItemContainer:getFirstCategoryRecurse(category) end
 
 --- @public
 --- @return InventoryItem
 function ItemContainer:getFirstCleaningFluidSources() end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getFirstEval(arg0) end
+function ItemContainer:getFirstEval(functionObj) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getFirstEvalArg(arg0, arg1) end
+function ItemContainer:getFirstEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
+--- @param functionObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getFirstEvalArgRecurse(arg0, arg1) end
+function ItemContainer:getFirstEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 function
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getFirstEvalRecurse(arg0) end
+function ItemContainer:getFirstEvalRecurse(functionObj) end
 
 --- @public
 --- @param arg0 string
@@ -743,67 +747,67 @@ function ItemContainer:getFirstEvalRecurse(arg0) end
 function ItemContainer:getFirstFluidContainer(arg0) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return InventoryItem
-function ItemContainer:getFirstRecurse(arg0) end
+function ItemContainer:getFirstRecurse(predicate) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return InventoryItem
-function ItemContainer:getFirstTag(arg0) end
+function ItemContainer:getFirstTag(tag) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param tag string
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getFirstTagEval(arg0, arg1) end
+function ItemContainer:getFirstTagEval(tag, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getFirstTagEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getFirstTagEvalArgRecurse(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param tag string
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getFirstTagEvalRecurse(arg0, arg1) end
+function ItemContainer:getFirstTagEvalRecurse(tag, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return InventoryItem
-function ItemContainer:getFirstTagRecurse(arg0) end
+function ItemContainer:getFirstTagRecurse(tag) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
-function ItemContainer:getFirstType(arg0) end
+function ItemContainer:getFirstType(type) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getFirstTypeEval(arg0, arg1) end
+function ItemContainer:getFirstTypeEval(type, functionObj) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
+--- @param type string
+--- @param functionObj function
+--- @param arg any
 --- @return InventoryItem
-function ItemContainer:getFirstTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getFirstTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
+--- @param type string
+--- @param functionObj function
 --- @return InventoryItem
-function ItemContainer:getFirstTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:getFirstTypeEvalRecurse(type, functionObj) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
-function ItemContainer:getFirstTypeRecurse(arg0) end
+function ItemContainer:getFirstTypeRecurse(type) end
 
 --- @public
 --- @param arg0 boolean
@@ -816,51 +820,51 @@ function ItemContainer:getFirstWaterFluidSources(arg0) end
 function ItemContainer:getFreezerPosition() end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return InventoryItem
 --- @deprecated
-function ItemContainer:getItemById(arg0) end
+function ItemContainer:getItemById(id) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): integer
-function ItemContainer:getItemCount(arg0) end
+--- @overload fun(self: ItemContainer, type: string, doBags: boolean): integer
+function ItemContainer:getItemCount(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
-function ItemContainer:getItemCountFromTypeRecurse(arg0) end
+function ItemContainer:getItemCountFromTypeRecurse(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
-function ItemContainer:getItemCountRecurse(arg0) end
+function ItemContainer:getItemCountRecurse(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean, arg2: boolean): InventoryItem
---- @overload fun(self: ItemContainer, arg0: string, arg1: IsoGameCharacter, arg2: boolean, arg3: boolean, arg4: boolean): InventoryItem
-function ItemContainer:getItemFromType(arg0) end
+--- @overload fun(self: ItemContainer, type: string, ignoreBroken: boolean, includeInv: boolean): InventoryItem
+--- @overload fun(self: ItemContainer, type: string, chr: IsoGameCharacter, notEquipped: boolean, ignoreBroken: boolean, includeInv: boolean): InventoryItem
+function ItemContainer:getItemFromType(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return InventoryItem
-function ItemContainer:getItemFromTypeRecurse(arg0) end
+function ItemContainer:getItemFromTypeRecurse(type) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return InventoryItem
-function ItemContainer:getItemWithID(arg0) end
+function ItemContainer:getItemWithID(id) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return InventoryItem
-function ItemContainer:getItemWithIDRecursiv(arg0) end
+function ItemContainer:getItemWithIDRecursiv(id) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the Items
 function ItemContainer:getItems() end
 
 --- @public
@@ -868,38 +872,38 @@ function ItemContainer:getItems() end
 function ItemContainer:getItems4Admin() end
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return ArrayList
-function ItemContainer:getItemsFromCategory(arg0) end
+function ItemContainer:getItemsFromCategory(category) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): ArrayList
-function ItemContainer:getItemsFromFullType(arg0) end
+--- @overload fun(self: ItemContainer, type: string, includeInv: boolean): ArrayList
+function ItemContainer:getItemsFromFullType(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): ArrayList
-function ItemContainer:getItemsFromType(arg0) end
+--- @overload fun(self: ItemContainer, type: string, includeInv: boolean): ArrayList
+function ItemContainer:getItemsFromType(type) end
 
 --- @public
 --- @return number
 function ItemContainer:getMaxWeight() end
 
 --- @public
---- @param arg0 string
+--- @param item string
 --- @return integer
-function ItemContainer:getNumItems(arg0) end
+function ItemContainer:getNumItems(item) end
 
 --- @public
---- @param arg0 string
+--- @param findItem string
 --- @return integer
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean): integer
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean, arg2: boolean): integer
---- @overload fun(self: ItemContainer, arg0: string, arg1: boolean, arg2: ArrayList): integer
-function ItemContainer:getNumberOfItem(arg0) end
+--- @overload fun(self: ItemContainer, findItem: string, includeReplaceOnDeplete: boolean): integer
+--- @overload fun(self: ItemContainer, findItem: string, includeReplaceOnDeplete: boolean, insideInv: boolean): integer
+--- @overload fun(self: ItemContainer, findItem: string, includeReplaceOnDeplete: boolean, containers: ArrayList): integer
+function ItemContainer:getNumberOfItem(findItem) end
 
 --- @public
 --- @return string
@@ -914,7 +918,7 @@ function ItemContainer:getOpenSound() end
 function ItemContainer:getOutermostContainer() end
 
 --- @public
---- @return IsoObject
+--- @return IsoObject the parent
 function ItemContainer:getParent() end
 
 --- @public
@@ -922,161 +926,161 @@ function ItemContainer:getParent() end
 function ItemContainer:getPutSound() end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 integer
---- @param arg2 ArrayList
+--- @param predicate Predicate
+--- @param count integer
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSome(arg0, arg1, arg2) end
+function ItemContainer:getSome(predicate, count, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param category string
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeCategory(arg0, arg1) end
+--- @overload fun(self: ItemContainer, category: string, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeCategory(category, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 ArrayList
+--- @param category string
+--- @param count integer
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeCategoryRecurse(arg0, arg1, arg2) end
+function ItemContainer:getSomeCategoryRecurse(category, count, result) end
 
 --- @public
---- @param arg0 function
---- @param arg1 integer
+--- @param functionObj function
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeEval(arg0, arg1) end
+--- @overload fun(self: ItemContainer, functionObj: function, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeEval(functionObj, count) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
---- @param arg2 integer
+--- @param functionObj function
+--- @param arg any
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: any, arg2: integer, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeEvalArg(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, functionObj: function, arg: any, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeEvalArg(functionObj, arg, count) end
 
 --- @public
---- @param arg0 function
---- @param arg1 any
---- @param arg2 integer
+--- @param functionObj function
+--- @param arg any
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: any, arg2: integer, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeEvalArgRecurse(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, functionObj: function, arg: any, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeEvalArgRecurse(functionObj, arg, count) end
 
 --- @public
---- @param arg0 function
---- @param arg1 integer
+--- @param functionObj function
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: function, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeEvalRecurse(arg0, arg1) end
+--- @overload fun(self: ItemContainer, functionObj: function, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeEvalRecurse(functionObj, count) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 integer
---- @param arg2 ArrayList
+--- @param predicate Predicate
+--- @param count integer
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeRecurse(arg0, arg1, arg2) end
+function ItemContainer:getSomeRecurse(predicate, count, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param tag string
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeTag(arg0, arg1) end
+--- @overload fun(self: ItemContainer, tag: string, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTag(tag, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 integer
---- @param arg3 ArrayList
+--- @param tag string
+--- @param functionObj function
+--- @param count integer
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeTagEval(arg0, arg1, arg2, arg3) end
+function ItemContainer:getSomeTagEval(tag, functionObj, count, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
---- @param arg3 integer
---- @param arg4 ArrayList
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
+--- @param count integer
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeTagEvalArg(arg0, arg1, arg2, arg3, arg4) end
+function ItemContainer:getSomeTagEvalArg(tag, functionObj, arg, count, result) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
---- @param arg3 integer
+--- @param tag string
+--- @param functionObj function
+--- @param arg any
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: any, arg3: integer, arg4: ArrayList): ArrayList
-function ItemContainer:getSomeTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: ItemContainer, tag: string, functionObj: function, arg: any, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTagEvalArgRecurse(tag, functionObj, arg, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 integer
+--- @param tag string
+--- @param functionObj function
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: integer, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeTagEvalRecurse(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, tag: string, functionObj: function, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTagEvalRecurse(tag, functionObj, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param tag string
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeTagRecurse(arg0, arg1) end
+--- @overload fun(self: ItemContainer, tag: string, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTagRecurse(tag, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param type string
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeType(arg0, arg1) end
+--- @overload fun(self: ItemContainer, type: string, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeType(type, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 integer
+--- @param type string
+--- @param functionObj function
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: integer, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEval(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEval(type, functionObj, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
---- @param arg3 integer
+--- @param type string
+--- @param functionObj function
+--- @param arg any
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: any, arg3: integer, arg4: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEvalArg(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, arg: any, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEvalArg(type, functionObj, arg, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 any
---- @param arg3 integer
+--- @param type string
+--- @param functionObj function
+--- @param arg any
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: any, arg3: integer, arg4: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEvalArgRecurse(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, arg: any, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEvalArgRecurse(type, functionObj, arg, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 function
---- @param arg2 integer
+--- @param type string
+--- @param functionObj function
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: function, arg2: integer, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEvalRecurse(arg0, arg1, arg2) end
+--- @overload fun(self: ItemContainer, type: string, functionObj: function, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEvalRecurse(type, functionObj, count) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param type string
+--- @param count integer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: string, arg1: integer, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeTypeRecurse(arg0, arg1) end
+--- @overload fun(self: ItemContainer, type: string, count: integer, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeRecurse(type, count) end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the SourceGrid
 function ItemContainer:getSourceGrid() end
 
 --- @public
@@ -1088,33 +1092,33 @@ function ItemContainer:getSquare() end
 function ItemContainer:getTemprature() end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return number
-function ItemContainer:getTotalFoodScore(arg0) end
+function ItemContainer:getTotalFoodScore(desc) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return number
-function ItemContainer:getTotalWeaponScore(arg0) end
+function ItemContainer:getTotalWeaponScore(desc) end
 
 --- @public
---- @return string
+--- @return string the type
 function ItemContainer:getType() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return integer
-function ItemContainer:getUsesRecurse(arg0) end
+function ItemContainer:getUsesRecurse(predicate) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
-function ItemContainer:getUsesType(arg0) end
+function ItemContainer:getUsesType(type) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return integer
-function ItemContainer:getUsesTypeRecurse(arg0) end
+function ItemContainer:getUsesTypeRecurse(type) end
 
 --- @public
 --- @return VehiclePart
@@ -1133,23 +1137,23 @@ function ItemContainer:getWeight() end
 function ItemContainer:getWeightReduction() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 number
+--- @param chr IsoGameCharacter
+--- @param weightVal number
 --- @return boolean
---- @overload fun(self: ItemContainer, arg0: IsoGameCharacter, arg1: InventoryItem): boolean
-function ItemContainer:hasRoomFor(arg0, arg1) end
+--- @overload fun(self: ItemContainer, chr: IsoGameCharacter, item: InventoryItem): boolean
+function ItemContainer:hasRoomFor(chr, weightVal) end
 
 --- @public
---- @param arg0 integer
+--- @param keyId integer
 --- @return InventoryItem
-function ItemContainer:haveThisKeyId(arg0) end
+function ItemContainer:haveThisKeyId(keyId) end
 
 --- @public
---- @return boolean
+--- @return boolean the active
 function ItemContainer:isActive() end
 
 --- @public
---- @return boolean
+--- @return boolean the dirty
 function ItemContainer:isDirty() end
 
 --- @public
@@ -1173,23 +1177,23 @@ function ItemContainer:isExplored() end
 function ItemContainer:isHasBeenLooted() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function ItemContainer:isInCharacterInventory(arg0) end
+function ItemContainer:isInCharacterInventory(chr) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:isInside(arg0) end
+function ItemContainer:isInside(item) end
 
 --- @public
---- @return boolean
+--- @return boolean the IsDevice
 function ItemContainer:isIsDevice() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:isItemAllowed(arg0) end
+function ItemContainer:isItemAllowed(item) end
 
 --- @public
 --- @return boolean
@@ -1200,9 +1204,9 @@ function ItemContainer:isMicrowave() end
 function ItemContainer:isPowered() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:isRemoveItemAllowed(arg0) end
+function ItemContainer:isRemoveItemAllowed(item) end
 
 --- @public
 --- @return boolean
@@ -1213,30 +1217,30 @@ function ItemContainer:isStove() end
 function ItemContainer:isTemperatureChanging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return ArrayList
-function ItemContainer:load(arg0, arg1) end
+function ItemContainer:load(input, WorldVersion) end
 
 --- @public
 --- @return nil
 function ItemContainer:removeAllItems() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
 --- @deprecated
-function ItemContainer:removeItemOnServer(arg0) end
+function ItemContainer:removeItemOnServer(item) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return boolean
-function ItemContainer:removeItemWithID(arg0) end
+function ItemContainer:removeItemWithID(id) end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return boolean
-function ItemContainer:removeItemWithIDRecurse(arg0) end
+function ItemContainer:removeItemWithIDRecurse(id) end
 
 --- @public
 --- @return nil
@@ -1255,25 +1259,25 @@ function ItemContainer:requestSync() end
 function ItemContainer:reset() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return ArrayList
---- @overload fun(self: ItemContainer, arg0: ByteBuffer, arg1: IsoGameCharacter): ArrayList
-function ItemContainer:save(arg0) end
+--- @overload fun(self: ItemContainer, output: ByteBuffer, noCompress: IsoGameCharacter): ArrayList
+function ItemContainer:save(output) end
 
 --- @public
---- @param arg0 string
+--- @param functionName string
 --- @return nil
-function ItemContainer:setAcceptItemFunction(arg0) end
+function ItemContainer:setAcceptItemFunction(functionName) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean the active to set
 --- @return nil
-function ItemContainer:setActive(arg0) end
+function ItemContainer:setActive(active) end
 
 --- @public
---- @param arg0 number
+--- @param ageFactor number the ageFactor to set
 --- @return nil
-function ItemContainer:setAgeFactor(arg0) end
+function ItemContainer:setAgeFactor(ageFactor) end
 
 --- @public
 --- @param arg0 integer
@@ -1281,94 +1285,94 @@ function ItemContainer:setAgeFactor(arg0) end
 function ItemContainer:setCapacity(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param closeSound string
 --- @return nil
-function ItemContainer:setCloseSound(arg0) end
+function ItemContainer:setCloseSound(closeSound) end
 
 --- @public
---- @param arg0 string
+--- @param containerPosition string
 --- @return nil
-function ItemContainer:setContainerPosition(arg0) end
+function ItemContainer:setContainerPosition(containerPosition) end
 
 --- @public
---- @param arg0 number
+--- @param CookingFactor number the CookingFactor to set
 --- @return nil
-function ItemContainer:setCookingFactor(arg0) end
+function ItemContainer:setCookingFactor(CookingFactor) end
 
 --- @public
---- @param arg0 number
+--- @param newTemp number
 --- @return nil
-function ItemContainer:setCustomTemperature(arg0) end
+function ItemContainer:setCustomTemperature(newTemp) end
 
 --- @public
---- @param arg0 boolean
+--- @param dirty boolean the dirty to set
 --- @return nil
-function ItemContainer:setDirty(arg0) end
+function ItemContainer:setDirty(dirty) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ItemContainer:setDrawDirty(arg0) end
+function ItemContainer:setDrawDirty(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ItemContainer:setExplored(arg0) end
+function ItemContainer:setExplored(b) end
 
 --- @public
---- @param arg0 string
+--- @param freezerPosition string
 --- @return nil
-function ItemContainer:setFreezerPosition(arg0) end
+function ItemContainer:setFreezerPosition(freezerPosition) end
 
 --- @public
---- @param arg0 boolean
+--- @param hasBeenLooted boolean
 --- @return nil
-function ItemContainer:setHasBeenLooted(arg0) end
+function ItemContainer:setHasBeenLooted(hasBeenLooted) end
 
 --- @public
---- @param arg0 boolean
+--- @param IsDevice boolean the IsDevice to set
 --- @return nil
-function ItemContainer:setIsDevice(arg0) end
+function ItemContainer:setIsDevice(IsDevice) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param Items ArrayList the Items to set
 --- @return nil
-function ItemContainer:setItems(arg0) end
+function ItemContainer:setItems(Items) end
 
 --- @public
---- @param arg0 string
+--- @param onlyAcceptCategory string
 --- @return nil
-function ItemContainer:setOnlyAcceptCategory(arg0) end
+function ItemContainer:setOnlyAcceptCategory(onlyAcceptCategory) end
 
 --- @public
---- @param arg0 string
+--- @param openSound string
 --- @return nil
-function ItemContainer:setOpenSound(arg0) end
+function ItemContainer:setOpenSound(openSound) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param parent IsoObject the parent to set
 --- @return nil
-function ItemContainer:setParent(arg0) end
+function ItemContainer:setParent(parent) end
 
 --- @public
---- @param arg0 string
+--- @param putSound string
 --- @return nil
-function ItemContainer:setPutSound(arg0) end
+function ItemContainer:setPutSound(putSound) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param SourceGrid IsoGridSquare the SourceGrid to set
 --- @return nil
-function ItemContainer:setSourceGrid(arg0) end
+function ItemContainer:setSourceGrid(SourceGrid) end
 
 --- @public
---- @param arg0 string
+--- @param type string the type to set
 --- @return nil
-function ItemContainer:setType(arg0) end
+function ItemContainer:setType(type) end
 
 --- @public
---- @param arg0 integer
+--- @param weightReduction integer
 --- @return nil
-function ItemContainer:setWeightReduction(arg0) end
+function ItemContainer:setWeightReduction(weightReduction) end
 
 --- @public
 --- @return string
@@ -1380,7 +1384,7 @@ function ItemContainer:toString() end
 
 --- @public
 --- @return ItemContainer
---- @overload fun(arg0: integer): ItemContainer
---- @overload fun(arg0: string, arg1: IsoGridSquare, arg2: IsoObject): ItemContainer
---- @overload fun(arg0: integer, arg1: string, arg2: IsoGridSquare, arg3: IsoObject): ItemContainer
+--- @overload fun(ID: integer): ItemContainer
+--- @overload fun(containerName: string, square: IsoGridSquare, parent: IsoObject): ItemContainer
+--- @overload fun(ID: integer, containerName: string, square: IsoGridSquare, parent: IsoObject): ItemContainer
 function ItemContainer.new() end

@@ -17,8 +17,8 @@ function IsoDummyCameraCharacter:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return IsoDummyCameraCharacter
-function IsoDummyCameraCharacter.new(arg0, arg1, arg2) end
+function IsoDummyCameraCharacter.new(x, y, z) end

@@ -24,16 +24,16 @@ function AmbientSoundEffect:isPlaying() end
 function AmbientSoundEffect:pause() end
 
 --- @public
---- @param arg0 string
+--- @param choice string
 --- @return nil
---- @overload fun(self: AmbientSoundEffect, arg0: string): nil
-function AmbientSoundEffect:setName(arg0) end
+--- @overload fun(self: AmbientSoundEffect, choice: string): nil
+function AmbientSoundEffect:setName(choice) end
 
 --- @public
---- @param arg0 number
+--- @param volume number
 --- @return nil
---- @overload fun(self: AmbientSoundEffect, arg0: number): nil
-function AmbientSoundEffect:setVolume(arg0) end
+--- @overload fun(self: AmbientSoundEffect, volume: number): nil
+function AmbientSoundEffect:setVolume(volume) end
 
 --- @public
 --- @return nil
@@ -54,6 +54,6 @@ function AmbientSoundEffect:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return AmbientSoundEffect
-function AmbientSoundEffect.new(arg0) end
+function AmbientSoundEffect.new(name) end

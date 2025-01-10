@@ -1,5 +1,5 @@
 --- @meta _
 
---- @class IChunkRegion
+--- @class IChunkRegion TurboTuTone.
 --- @field public class any
 IChunkRegion = {}

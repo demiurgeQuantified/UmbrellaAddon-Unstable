@@ -18,9 +18,9 @@ function RZSHunterCamp.getForestClutter() end
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function RZSHunterCamp:randomizeZoneStory(arg0) end
+function RZSHunterCamp:randomizeZoneStory(zone) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

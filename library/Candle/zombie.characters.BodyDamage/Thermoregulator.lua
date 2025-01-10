@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class Thermoregulator
+--- @class Thermoregulator TurboTuTone.  Thermoregulator for living bodies.
 --- @field public class any
 Thermoregulator = {}
 
@@ -25,9 +25,9 @@ function Thermoregulator.getSkinCelciusMin() end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param multiplier number
 --- @return nil
-function Thermoregulator.setSimulationMultiplier(arg0) end
+function Thermoregulator.setSimulationMultiplier(multiplier) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -154,19 +154,19 @@ function Thermoregulator:getMetabolicTarget() end
 function Thermoregulator:getMovementModifier() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ThermalNode
-function Thermoregulator:getNode(arg0) end
+function Thermoregulator:getNode(index) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param type BloodBodyPartType
 --- @return ThermalNode
-function Thermoregulator:getNodeForBloodType(arg0) end
+function Thermoregulator:getNodeForBloodType(type) end
 
 --- @public
---- @param arg0 BodyPartType
+--- @param type BodyPartType
 --- @return ThermalNode
-function Thermoregulator:getNodeForType(arg0) end
+function Thermoregulator:getNodeForType(type) end
 
 --- @public
 --- @return integer
@@ -201,25 +201,25 @@ function Thermoregulator:getThermalDamage() end
 function Thermoregulator:getTimedActionTimeModifier() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Thermoregulator:load(arg0, arg1) end
+function Thermoregulator:load(input, WorldVersion) end
 
 --- @public
 --- @return nil
 function Thermoregulator:reset() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function Thermoregulator:save(arg0) end
+function Thermoregulator:save(output) end
 
 --- @public
---- @param arg0 number
+--- @param target number
 --- @return nil
---- @overload fun(self: Thermoregulator, arg0: Metabolics): nil
-function Thermoregulator:setMetabolicTarget(arg0) end
+--- @overload fun(self: Thermoregulator, meta: Metabolics): nil
+function Thermoregulator:setMetabolicTarget(target) end
 
 --- @public
 --- @return integer
@@ -238,6 +238,6 @@ function Thermoregulator:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 BodyDamage
+--- @param parent BodyDamage
 --- @return Thermoregulator
-function Thermoregulator.new(arg0) end
+function Thermoregulator.new(parent) end

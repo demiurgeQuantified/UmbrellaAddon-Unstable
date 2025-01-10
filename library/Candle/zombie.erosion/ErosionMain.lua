@@ -10,9 +10,9 @@ ErosionMain = {}
 
 --- @public
 --- @static
---- @param arg0 IsoChunk
+--- @param _chunk IsoChunk
 --- @return nil
-function ErosionMain.ChunkLoaded(arg0) end
+function ErosionMain.ChunkLoaded(_chunk) end
 
 --- @public
 --- @static
@@ -21,9 +21,9 @@ function ErosionMain.EveryTenMinutes() end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param _sq IsoGridSquare
 --- @return nil
-function ErosionMain.LoadGridsquare(arg0) end
+function ErosionMain.LoadGridsquare(_sq) end
 
 --- @public
 --- @static
@@ -76,14 +76,14 @@ function ErosionMain:isSnow() end
 function ErosionMain:mainTimer() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function ErosionMain:receiveState(arg0) end
+function ErosionMain:receiveState(bb) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function ErosionMain:sendState(arg0) end
+function ErosionMain:sendState(bb) end
 
 --- @public
 --- @return nil
@@ -98,7 +98,7 @@ function ErosionMain:start() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoSpriteManager
---- @param arg1 boolean
+--- @param _sprMngr IsoSpriteManager
+--- @param _debug boolean
 --- @return ErosionMain
-function ErosionMain.new(arg0, arg1) end
+function ErosionMain.new(_sprMngr, _debug) end

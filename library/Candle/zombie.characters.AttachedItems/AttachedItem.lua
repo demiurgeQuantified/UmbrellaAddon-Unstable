@@ -21,7 +21,7 @@ function AttachedItem:getLocation() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 InventoryItem
+--- @param location string
+--- @param item InventoryItem
 --- @return AttachedItem
-function AttachedItem.new(arg0, arg1) end
+function AttachedItem.new(location, item) end

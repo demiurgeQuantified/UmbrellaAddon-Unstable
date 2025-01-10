@@ -14,10 +14,10 @@ IntegerSandboxOption = {}
 function IntegerSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: IntegerSandboxOption, arg0: table): nil
-function IntegerSandboxOption:fromTable(arg0) end
+--- @overload fun(self: IntegerSandboxOption, table: table): nil
+function IntegerSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
@@ -55,32 +55,32 @@ function IntegerSandboxOption:isCustom() end
 function IntegerSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 string
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: IntegerSandboxOption, arg0: string): SandboxOption
-function IntegerSandboxOption:setPageName(arg0) end
+--- @overload fun(self: IntegerSandboxOption, pageName: string): SandboxOption
+function IntegerSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: IntegerSandboxOption, arg0: string): SandboxOption
-function IntegerSandboxOption:setTranslation(arg0) end
+--- @overload fun(self: IntegerSandboxOption, translation: string): SandboxOption
+function IntegerSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: IntegerSandboxOption, arg0: table): nil
-function IntegerSandboxOption:toTable(arg0) end
+--- @overload fun(self: IntegerSandboxOption, table: table): nil
+function IntegerSandboxOption:toTable(table) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param owner SandboxOptions
+--- @param name string
+--- @param min integer
+--- @param max integer
+--- @param defaultValue integer
 --- @return IntegerSandboxOption
-function IntegerSandboxOption.new(arg0, arg1, arg2, arg3, arg4) end
+function IntegerSandboxOption.new(owner, name, min, max, defaultValue) end

@@ -39,15 +39,15 @@ RainManager = {}
 
 --- @public
 --- @static
---- @param arg0 IsoRainSplash
+--- @param NewRainSplash IsoRainSplash
 --- @return nil
-function RainManager.AddRainSplash(arg0) end
+function RainManager.AddRainSplash(NewRainSplash) end
 
 --- @public
 --- @static
---- @param arg0 IsoRaindrop
+--- @param NewRaindrop IsoRaindrop
 --- @return nil
-function RainManager.AddRaindrop(arg0) end
+function RainManager.AddRaindrop(NewRaindrop) end
 
 --- @public
 --- @static
@@ -56,44 +56,44 @@ function RainManager.AddSplashes() end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return nil
-function RainManager.RemoveAllOn(arg0) end
+function RainManager.RemoveAllOn(sq) end
 
 --- @public
 --- @static
---- @param arg0 IsoRainSplash
+--- @param DyingRainSplash IsoRainSplash
 --- @return nil
-function RainManager.RemoveRainSplash(arg0) end
+function RainManager.RemoveRainSplash(DyingRainSplash) end
 
 --- @public
 --- @static
---- @param arg0 IsoRaindrop
+--- @param DyingRaindrop IsoRaindrop
 --- @return nil
-function RainManager.RemoveRaindrop(arg0) end
+function RainManager.RemoveRaindrop(DyingRaindrop) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 IsoGridSquare
+--- @param playerIndex integer
+--- @param PlayerCurrentSquare IsoGridSquare
 --- @return nil
-function RainManager.SetPlayerLocation(arg0, arg1) end
+function RainManager.SetPlayerLocation(playerIndex, PlayerCurrentSquare) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 IsoGridSquare
---- @param arg2 boolean
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param CanSee boolean
 --- @return nil
-function RainManager.StartRainSplash(arg0, arg1, arg2) end
+function RainManager.StartRainSplash(cell, gridSquare, CanSee) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 IsoGridSquare
---- @param arg2 boolean
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param CanSee boolean
 --- @return nil
-function RainManager.StartRaindrop(arg0, arg1, arg2) end
+function RainManager.StartRaindrop(cell, gridSquare, CanSee) end
 
 --- @public
 --- @static
@@ -112,9 +112,9 @@ function RainManager.getRainIntensity() end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return boolean
-function RainManager.inBounds(arg0) end
+function RainManager.inBounds(sq) end
 
 --- @public
 --- @static
@@ -128,15 +128,15 @@ function RainManager.reset() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param pRandRainMax integer
 --- @return nil
-function RainManager.setRandRainMax(arg0) end
+function RainManager.setRandRainMax(pRandRainMax) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param pRandRainMin integer
 --- @return nil
-function RainManager.setRandRainMin(arg0) end
+function RainManager.setRandRainMin(pRandRainMin) end
 
 --- @public
 --- @static

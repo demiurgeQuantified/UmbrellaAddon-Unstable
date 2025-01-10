@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSGunslinger: RandomizedDeadSurvivorBase
+--- @class RDSGunslinger: RandomizedDeadSurvivorBase Create a dead survivor somewhere with lot of modified guns/ammo on him
 --- @field public class any
 RDSGunslinger = {}
 
@@ -9,9 +9,9 @@ RDSGunslinger = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSGunslinger:randomizeDeadSurvivor(arg0) end
+function RDSGunslinger:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

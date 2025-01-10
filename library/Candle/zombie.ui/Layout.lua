@@ -17,21 +17,21 @@ function Layout:addItem() end
 function Layout:free() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 ObjectTooltip
+--- @param left integer
+--- @param top integer
+--- @param ui ObjectTooltip
 --- @return integer
-function Layout:render(arg0, arg1, arg2) end
+function Layout:render(left, top, ui) end
 
 --- @public
---- @param arg0 integer
+--- @param minWidth integer
 --- @return nil
-function Layout:setMinLabelWidth(arg0) end
+function Layout:setMinLabelWidth(minWidth) end
 
 --- @public
---- @param arg0 integer
+--- @param minWidth integer
 --- @return nil
-function Layout:setMinValueWidth(arg0) end
+function Layout:setMinValueWidth(minWidth) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

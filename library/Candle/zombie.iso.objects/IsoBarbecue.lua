@@ -10,24 +10,24 @@ IsoBarbecue = {}
 
 --- @public
 --- @static
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return boolean
-function IsoBarbecue.isSpriteWithPropaneTank(arg0) end
+function IsoBarbecue.isSpriteWithPropaneTank(sprite) end
 
 --- @public
 --- @static
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return boolean
-function IsoBarbecue.isSpriteWithoutPropaneTank(arg0) end
+function IsoBarbecue.isSpriteWithoutPropaneTank(sprite) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param units integer
 --- @return nil
-function IsoBarbecue:addFuel(arg0) end
+function IsoBarbecue:addFuel(units) end
 
 --- @public
 --- @return nil
@@ -74,17 +74,17 @@ function IsoBarbecue:isPropaneBBQ() end
 function IsoBarbecue:isSmouldering() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoBarbecue:load(arg0, arg1, arg2) end
+function IsoBarbecue:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoBarbecue:loadChange(arg0, arg1) end
+function IsoBarbecue:loadChange(change, bb) end
 
 --- @public
 --- @return nil
@@ -95,15 +95,15 @@ function IsoBarbecue:removeFromWorld() end
 function IsoBarbecue:removePropaneTank() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoBarbecue:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoBarbecue:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
 --- @param arg0 number
@@ -114,37 +114,37 @@ function IsoBarbecue:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function IsoBarbecue:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoBarbecue:save(arg0, arg1) end
+function IsoBarbecue:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoBarbecue:saveChange(arg0, arg1, arg2) end
+function IsoBarbecue:saveChange(change, tbl, bb) end
 
 --- @public
---- @param arg0 integer
+--- @param units integer
 --- @return nil
-function IsoBarbecue:setFuelAmount(arg0) end
+function IsoBarbecue:setFuelAmount(units) end
 
 --- @public
---- @param arg0 boolean
+--- @param lit boolean
 --- @return nil
-function IsoBarbecue:setLit(arg0) end
+function IsoBarbecue:setLit(lit) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param tank InventoryItem
 --- @return nil
-function IsoBarbecue:setPropaneTank(arg0) end
+function IsoBarbecue:setPropaneTank(tank) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param newsprite IsoSprite the sprite to set
 --- @return nil
-function IsoBarbecue:setSprite(arg0) end
+function IsoBarbecue:setSprite(newsprite) end
 
 --- @public
 --- @return nil
@@ -163,16 +163,16 @@ function IsoBarbecue:turnOn() end
 function IsoBarbecue:update() end
 
 --- @public
---- @param arg0 integer
+--- @param amount integer
 --- @return integer
-function IsoBarbecue:useFuel(arg0) end
+function IsoBarbecue:useFuel(amount) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoBarbecue
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoBarbecue
-function IsoBarbecue.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoBarbecue
+function IsoBarbecue.new(cell) end

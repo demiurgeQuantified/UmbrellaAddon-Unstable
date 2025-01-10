@@ -19,27 +19,27 @@ State = {}
 function State:addAnimEventListener(arg0) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
---- @overload fun(self: State, arg0: IsoGameCharacter, arg1: AnimEvent): nil
---- @overload fun(self: State, arg0: IsoGameCharacter, arg1: AnimEvent): nil
-function State:animEvent(arg0, arg1) end
+--- @overload fun(self: State, owner: IsoGameCharacter, event: AnimEvent): nil
+--- @overload fun(self: State, owner: IsoGameCharacter, event: AnimEvent): nil
+function State:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function State:enter(arg0) end
+function State:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function State:execute(arg0) end
+function State:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function State:exit(arg0) end
+function State:exit(owner) end
 
 --- @public
 --- @return AnimEventBroadcaster
@@ -47,10 +47,10 @@ function State:exit(arg0) end
 function State:getAnimEventBroadcaster() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 MoveDeltaModifiers
+--- @param owner IsoGameCharacter
+--- @param modifiers MoveDeltaModifiers
 --- @return nil
-function State:getDeltaModifiers(arg0, arg1) end
+function State:getDeltaModifiers(owner, modifiers) end
 
 --- @public
 --- @return string
@@ -61,29 +61,39 @@ function State:getName() end
 function State:getStatePermissions() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+---
+---  Return TRUE if the owner is currently attacking.   Defaults to FALSE
+---
+--- @param owner IsoGameCharacter
 --- @return boolean
-function State:isAttacking(arg0) end
+function State:isAttacking(owner) end
 
 --- @public
---- @return boolean
+--- @return boolean TRUE if this state handles the "Cancel Action" key or the B controller button.
 function State:isDoingActionThatCanBeCancelled() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
+---
+---  Return TRUE if the owner should ignore collisions when passing between two
+---   Defaults to FALSE
+---
+--- @param owner IsoGameCharacter
+--- @param fromX integer
+--- @param fromY integer
+--- @param fromZ integer
+--- @param toX integer
+--- @param toY integer
+--- @param toZ integer
 --- @return boolean
-function State:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function State:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+---
+---  Return TRUE if the owner is currently moving.   Defaults to FALSE
+---
+--- @param owner IsoGameCharacter
 --- @return boolean
-function State:isMoving(arg0) end
+function State:isMoving(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

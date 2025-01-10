@@ -57,7 +57,7 @@ function PlayerSearchMode:isShaderEnabled() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 SearchMode
+--- @param index integer
+--- @param sm SearchMode
 --- @return PlayerSearchMode
-function PlayerSearchMode.new(arg0, arg1) end
+function PlayerSearchMode.new(index, sm) end

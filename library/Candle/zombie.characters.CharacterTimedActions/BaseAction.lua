@@ -9,16 +9,16 @@ BaseAction = {}
 ------------------------------------
 
 --- @public
---- @param arg0 AnimEvent
+--- @param event AnimEvent
 --- @return nil
-function BaseAction:OnAnimEvent(arg0) end
+function BaseAction:OnAnimEvent(event) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 number
+--- @param name string
+--- @param radius integer
+--- @param maxGain number
 --- @return nil
-function BaseAction:PlayLoopedSoundTillComplete(arg0, arg1, arg2) end
+function BaseAction:PlayLoopedSoundTillComplete(name, radius, maxGain) end
 
 --- @public
 --- @return nil
@@ -94,58 +94,58 @@ function BaseAction:resetJobDelta() end
 function BaseAction:restoreWeaponType() end
 
 --- @public
---- @param arg0 string
+--- @param animNode string
 --- @return nil
---- @overload fun(self: BaseAction, arg0: CharacterActionAnims): nil
-function BaseAction:setActionAnim(arg0) end
+--- @overload fun(self: BaseAction, act: CharacterActionAnims): nil
+function BaseAction:setActionAnim(animNode) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param key string
+--- @param val boolean
 --- @return nil
---- @overload fun(self: BaseAction, arg0: string, arg1: string): nil
-function BaseAction:setAnimVariable(arg0, arg1) end
+--- @overload fun(self: BaseAction, key: string, val: string): nil
+function BaseAction:setAnimVariable(key, val) end
 
 --- @public
---- @param arg0 boolean
+--- @param block boolean
 --- @return nil
-function BaseAction:setBlockMovementEtc(arg0) end
+function BaseAction:setBlockMovementEtc(block) end
 
 --- @public
---- @param arg0 boolean
+--- @param looped boolean
 --- @return nil
-function BaseAction:setLoopedAction(arg0) end
+function BaseAction:setLoopedAction(looped) end
 
 --- @public
---- @param arg0 boolean
+--- @param override boolean
 --- @return nil
-function BaseAction:setOverrideAnimation(arg0) end
+function BaseAction:setOverrideAnimation(override) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 InventoryItem
+--- @param primaryHand InventoryItem
+--- @param secondaryHand InventoryItem
 --- @return nil
---- @overload fun(self: BaseAction, arg0: InventoryItem, arg1: InventoryItem, arg2: boolean): nil
-function BaseAction:setOverrideHandModels(arg0, arg1) end
+--- @overload fun(self: BaseAction, primaryHand: InventoryItem, secondaryHand: InventoryItem, resetModel: boolean): nil
+function BaseAction:setOverrideHandModels(primaryHand, secondaryHand) end
 
 --- @public
---- @param arg0 any
---- @param arg1 any
---- @param arg2 boolean
+--- @param primaryHand any
+--- @param secondaryHand any
+--- @param resetModel boolean
 --- @return nil
-function BaseAction:setOverrideHandModelsObject(arg0, arg1, arg2) end
+function BaseAction:setOverrideHandModelsObject(primaryHand, secondaryHand, resetModel) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param primaryHand string
+--- @param secondaryHand string
 --- @return nil
---- @overload fun(self: BaseAction, arg0: string, arg1: string, arg2: boolean): nil
-function BaseAction:setOverrideHandModelsString(arg0, arg1) end
+--- @overload fun(self: BaseAction, primaryHand: string, secondaryHand: string, resetModel: boolean): nil
+function BaseAction:setOverrideHandModelsString(primaryHand, secondaryHand) end
 
 --- @public
---- @param arg0 boolean
+--- @param use boolean
 --- @return nil
-function BaseAction:setUseProgressBar(arg0) end
+function BaseAction:setUseProgressBar(use) end
 
 --- @public
 --- @param arg0 boolean
@@ -181,6 +181,6 @@ function BaseAction:waitToStart() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return BaseAction
-function BaseAction.new(arg0) end
+function BaseAction.new(chr) end

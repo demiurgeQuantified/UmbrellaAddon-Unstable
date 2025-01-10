@@ -9,164 +9,164 @@ DummySoundManager = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Audio
---- @param arg1 number
---- @param arg2 string
+--- @param musicTrack Audio
+--- @param f number
+--- @param PrefMusic string
 --- @return Audio
-function DummySoundManager:BlendThenStart(arg0, arg1, arg2) end
+function DummySoundManager:BlendThenStart(musicTrack, f, PrefMusic) end
 
 --- @public
---- @param arg0 Audio
---- @param arg1 number
+--- @param audio Audio
+--- @param targetVolume number
 --- @return nil
---- @overload fun(self: DummySoundManager, arg0: Audio, arg1: number, arg2: number): nil
-function DummySoundManager:BlendVolume(arg0, arg1) end
+--- @overload fun(self: DummySoundManager, audio: Audio, targetVolume: number, blendSpeedAlpha: number): nil
+function DummySoundManager:BlendVolume(audio, targetVolume) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return nil
-function DummySoundManager:CacheSound(arg0) end
+function DummySoundManager:CacheSound(file) end
 
 --- @public
 --- @return nil
 function DummySoundManager:CheckDoMusic() end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param bLoop boolean
 --- @return nil
-function DummySoundManager:DoMusic(arg0, arg1) end
+function DummySoundManager:DoMusic(name, bLoop) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param name string
+--- @param milli integer
 --- @return nil
-function DummySoundManager:FadeOutMusic(arg0, arg1) end
+function DummySoundManager:FadeOutMusic(name, milli) end
 
 --- @public
 --- @return boolean
 function DummySoundManager:IsMusicPlaying() end
 
 --- @public
---- @param arg0 string
---- @param arg1 Audio
---- @param arg2 boolean
---- @param arg3 number
+--- @param name string
+--- @param musicTrack Audio
+--- @param loop boolean
+--- @param volume number
 --- @return nil
---- @overload fun(self: DummySoundManager, arg0: string, arg1: Audio, arg2: number, arg3: boolean): nil
-function DummySoundManager:PlayAsMusic(arg0, arg1, arg2, arg3) end
+--- @overload fun(self: DummySoundManager, name: string, musicTrack: Audio, volume: number, bloop: boolean): nil
+function DummySoundManager:PlayAsMusic(name, musicTrack, loop, volume) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 number
+--- @param name string
+--- @param loop boolean
+--- @param maxGain number
 --- @return Audio
-function DummySoundManager:PlayJukeboxSound(arg0, arg1, arg2) end
+function DummySoundManager:PlayJukeboxSound(name, loop, maxGain) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 boolean
---- @param arg3 number
+--- @param n string
+--- @param name string
+--- @param loop boolean
+--- @param maxGain number
 --- @return Audio
-function DummySoundManager:PlayMusic(arg0, arg1, arg2, arg3) end
+function DummySoundManager:PlayMusic(n, name, loop, maxGain) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 number
+--- @param name string
+--- @param loop boolean
+--- @param maxGain number
 --- @return Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: boolean, arg2: number, arg3: number): Audio
-function DummySoundManager:PlaySound(arg0, arg1, arg2) end
+--- @overload fun(self: DummySoundManager, name: string, loop: boolean, pitchVar: number, maxGain: number): Audio
+function DummySoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 number
+--- @param name string
+--- @param loop boolean
+--- @param maxGain number
 --- @return Audio
-function DummySoundManager:PlaySoundEvenSilent(arg0, arg1, arg2) end
+function DummySoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 number
+--- @param name string
+--- @param loop boolean
+--- @param maxGain number
 --- @return Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: boolean, arg2: number, arg3: number): Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: integer, arg2: boolean, arg3: number): Audio
-function DummySoundManager:PlaySoundWav(arg0, arg1, arg2) end
+--- @overload fun(self: DummySoundManager, name: string, loop: boolean, maxGain: number, pitchVar: number): Audio
+--- @overload fun(self: DummySoundManager, name: string, variations: integer, loop: boolean, maxGain: number): Audio
+function DummySoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoGridSquare
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 boolean
+--- @param name string
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: boolean, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean): Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number, arg5: integer, arg6: boolean): Audio
-function DummySoundManager:PlayWorldSound(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(self: DummySoundManager, name: string, loop: boolean, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, ignoreOutside: boolean): Audio
+--- @overload fun(self: DummySoundManager, name: string, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, choices: integer, ignoreOutside: boolean): Audio
+function DummySoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 boolean
+--- @param name string
+--- @param loop boolean
+--- @param sx integer
+--- @param sy integer
+--- @param sz integer
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param ignoreOutside boolean
 --- @return Audio
-function DummySoundManager:PlayWorldSoundImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function DummySoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoGridSquare
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 boolean
+--- @param name string
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: boolean, arg2: IsoGridSquare, arg3: number, arg4: number, arg5: number, arg6: boolean): Audio
---- @overload fun(self: DummySoundManager, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number, arg5: integer, arg6: boolean): nil
-function DummySoundManager:PlayWorldSoundWav(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(self: DummySoundManager, name: string, loop: boolean, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, ignoreOutside: boolean): Audio
+--- @overload fun(self: DummySoundManager, name: string, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, choices: integer, ignoreOutside: boolean): nil
+function DummySoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
---- @param arg2 IsoGridSquare
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 boolean
+--- @param name string
+--- @param loop boolean
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param ignoreOutside boolean
 --- @return Audio
-function DummySoundManager:PlayWorldSoundWavImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function DummySoundManager:PlayWorldSoundWavImpl(name, loop, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return Audio
-function DummySoundManager:PrepareMusic(arg0) end
+function DummySoundManager:PrepareMusic(name) end
 
 --- @public
 --- @return nil
 function DummySoundManager:Purge() end
 
 --- @public
---- @param arg0 Audio
---- @param arg1 number
---- @param arg2 string
+--- @param musicTrack Audio
+--- @param f number
+--- @param PrefMusic string
 --- @return Audio
-function DummySoundManager:Start(arg0, arg1, arg2) end
+function DummySoundManager:Start(musicTrack, f, PrefMusic) end
 
 --- @public
 --- @return nil
 function DummySoundManager:StopMusic() end
 
 --- @public
---- @param arg0 Audio
+--- @param SoundEffect Audio
 --- @return nil
-function DummySoundManager:StopSound(arg0) end
+function DummySoundManager:StopSound(SoundEffect) end
 
 --- @public
 --- @return nil
@@ -209,21 +209,21 @@ function DummySoundManager:getSoundVolume() end
 function DummySoundManager:getVehicleEngineVolume() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param range number
 --- @return boolean
-function DummySoundManager:isListenerInRange(arg0, arg1, arg2) end
+function DummySoundManager:isListenerInRange(x, y, range) end
 
 --- @public
 --- @return boolean
 function DummySoundManager:isPlayingMusic() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
---- @overload fun(self: DummySoundManager, arg0: integer): boolean
-function DummySoundManager:isPlayingUISound(arg0) end
+--- @overload fun(self: DummySoundManager, eventInstance: integer): boolean
+function DummySoundManager:isPlayingUISound(name) end
 
 --- @public
 --- @return boolean
@@ -234,9 +234,9 @@ function DummySoundManager:isRemastered() end
 function DummySoundManager:pauseSoundAndMusic() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function DummySoundManager:playAmbient(arg0) end
+function DummySoundManager:playAmbient(name) end
 
 --- @public
 --- @param arg0 IsoGridSquare
@@ -245,84 +245,84 @@ function DummySoundManager:playAmbient(arg0) end
 function DummySoundManager:playImpactSound(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function DummySoundManager:playMusic(arg0) end
+function DummySoundManager:playMusic(name) end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
+--- @param name string
+--- @param gain number
 --- @return nil
-function DummySoundManager:playMusicNonTriggered(arg0, arg1) end
+function DummySoundManager:playMusicNonTriggered(name, gain) end
 
 --- @public
---- @param arg0 string
+--- @param choice string
 --- @return nil
-function DummySoundManager:playNightAmbient(arg0) end
+function DummySoundManager:playNightAmbient(choice) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return integer
-function DummySoundManager:playUISound(arg0) end
+function DummySoundManager:playUISound(name) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return nil
-function DummySoundManager:registerEmitter(arg0) end
+function DummySoundManager:registerEmitter(emitter) end
 
 --- @public
 --- @return nil
 function DummySoundManager:resumeSoundAndMusic() end
 
 --- @public
---- @param arg0 number
+--- @param volume number
 --- @return nil
-function DummySoundManager:setAmbientVolume(arg0) end
+function DummySoundManager:setAmbientVolume(volume) end
 
 --- @public
---- @param arg0 string
+--- @param stateName string
 --- @return nil
-function DummySoundManager:setMusicState(arg0) end
+function DummySoundManager:setMusicState(stateName) end
 
 --- @public
---- @param arg0 number
+--- @param volume number
 --- @return nil
-function DummySoundManager:setMusicVolume(arg0) end
+function DummySoundManager:setMusicVolume(volume) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 string
+--- @param player IsoPlayer
+--- @param stateName string
 --- @return nil
-function DummySoundManager:setMusicWakeState(arg0, arg1) end
+function DummySoundManager:setMusicWakeState(player, stateName) end
 
 --- @public
---- @param arg0 number
+--- @param volume number
 --- @return nil
-function DummySoundManager:setSoundVolume(arg0) end
+function DummySoundManager:setSoundVolume(volume) end
 
 --- @public
---- @param arg0 number
+--- @param volume number
 --- @return nil
-function DummySoundManager:setVehicleEngineVolume(arg0) end
+function DummySoundManager:setVehicleEngineVolume(volume) end
 
 --- @public
 --- @return nil
 function DummySoundManager:stop() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function DummySoundManager:stopMusic(arg0) end
+function DummySoundManager:stopMusic(name) end
 
 --- @public
---- @param arg0 integer
+--- @param eventInstance integer
 --- @return nil
-function DummySoundManager:stopUISound(arg0) end
+function DummySoundManager:stopUISound(eventInstance) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return nil
-function DummySoundManager:unregisterEmitter(arg0) end
+function DummySoundManager:unregisterEmitter(emitter) end
 
 --- @public
 --- @return nil

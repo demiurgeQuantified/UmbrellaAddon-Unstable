@@ -11,9 +11,9 @@ MultiStageBuilding = {}
 
 --- @public
 --- @static
---- @param arg0 Stage
+--- @param stage Stage
 --- @return nil
-function MultiStageBuilding.addStage(arg0) end
+function MultiStageBuilding.addStage(stage) end
 
 --- @public
 --- @static
@@ -23,11 +23,11 @@ function MultiStageBuilding.getStage(arg0) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoObject
---- @param arg2 boolean
+--- @param chr IsoGameCharacter
+--- @param itemClicked IsoObject
+--- @param cheat boolean
 --- @return ArrayList
-function MultiStageBuilding.getStages(arg0, arg1, arg2) end
+function MultiStageBuilding.getStages(chr, itemClicked, cheat) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

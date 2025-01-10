@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RadioLine
+--- @class RadioLine Turbo
 --- @field public class any
 RadioLine = {}
 
@@ -37,24 +37,24 @@ function RadioLine:getText() end
 function RadioLine:isCustomAirTime() end
 
 --- @public
---- @param arg0 number
+--- @param airTime number
 --- @return nil
-function RadioLine:setAirTime(arg0) end
+function RadioLine:setAirTime(airTime) end
 
 --- @public
---- @param arg0 string
+--- @param text string
 --- @return nil
-function RadioLine:setText(arg0) end
+function RadioLine:setText(text) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param txt string
+--- @param red number
+--- @param green number
+--- @param blue number
 --- @return RadioLine
---- @overload fun(arg0: string, arg1: number, arg2: number, arg3: number, arg4: string): RadioLine
-function RadioLine.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(txt: string, red: number, green: number, blue: number, fx: string): RadioLine
+function RadioLine.new(txt, red, green, blue) end

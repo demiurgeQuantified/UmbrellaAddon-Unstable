@@ -13,9 +13,9 @@ SandboxOption = {}
 function SandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function SandboxOption:fromTable(arg0) end
+function SandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
@@ -46,16 +46,16 @@ function SandboxOption:isCustom() end
 function SandboxOption:setCustom() end
 
 --- @public
---- @param arg0 string
+--- @param pageName string
 --- @return SandboxOption
-function SandboxOption:setPageName(arg0) end
+function SandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return SandboxOption
-function SandboxOption:setTranslation(arg0) end
+function SandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function SandboxOption:toTable(arg0) end
+function SandboxOption:toTable(table) end

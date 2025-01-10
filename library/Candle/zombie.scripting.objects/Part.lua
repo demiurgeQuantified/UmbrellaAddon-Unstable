@@ -44,14 +44,14 @@ function Part:isMechanicRequireKey() end
 function Part:isRepairMechanic() end
 
 --- @public
---- @param arg0 boolean
+--- @param mechanicRequireKey boolean
 --- @return nil
-function Part:setMechanicRequireKey(arg0) end
+function Part:setMechanicRequireKey(mechanicRequireKey) end
 
 --- @public
---- @param arg0 boolean
+--- @param repairMechanic boolean
 --- @return nil
-function Part:setRepairMechanic(arg0) end
+function Part:setRepairMechanic(repairMechanic) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

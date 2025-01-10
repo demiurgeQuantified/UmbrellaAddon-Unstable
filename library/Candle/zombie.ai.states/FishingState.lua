@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class FishingState: State
+--- @class FishingState: State TurboTuTone.
 --- @field public class any
 FishingState = {}
 
@@ -18,19 +18,19 @@ function FishingState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FishingState:enter(arg0) end
+function FishingState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FishingState:execute(arg0) end
+function FishingState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FishingState:exit(arg0) end
+function FishingState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

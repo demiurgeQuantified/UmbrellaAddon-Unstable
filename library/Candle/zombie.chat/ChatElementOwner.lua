@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ChatElementOwner
+--- @class ChatElementOwner Turbo
 --- @field public class any
 ChatElementOwner = {}
 

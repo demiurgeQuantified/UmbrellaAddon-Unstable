@@ -21,9 +21,9 @@ function Perk:getName() end
 function Perk:getParent() end
 
 --- @public
---- @param arg0 integer
+--- @param level integer
 --- @return number
-function Perk:getTotalXpForLevel(arg0) end
+function Perk:getTotalXpForLevel(level) end
 
 --- @public
 --- @return Perk
@@ -70,9 +70,9 @@ function Perk:getXp8() end
 function Perk:getXp9() end
 
 --- @public
---- @param arg0 integer
+--- @param level integer
 --- @return number
-function Perk:getXpForLevel(arg0) end
+function Perk:getXpForLevel(level) end
 
 --- @public
 --- @return integer
@@ -99,7 +99,7 @@ function Perk:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return Perk
---- @overload fun(arg0: string, arg1: Perk): Perk
-function Perk.new(arg0) end
+--- @overload fun(id: string, parent: Perk): Perk
+function Perk.new(id) end

@@ -9,6 +9,6 @@ IActionStateChanged = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ActionContext
+--- @param sender ActionContext
 --- @return nil
-function IActionStateChanged:actionStateChanged(arg0) end
+function IActionStateChanged:actionStateChanged(sender) end

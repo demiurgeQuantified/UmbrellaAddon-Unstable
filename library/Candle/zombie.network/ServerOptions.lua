@@ -14,9 +14,9 @@ ServerOptions = {}
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param doLine boolean
 --- @return ArrayList
-function ServerOptions.getClientCommandList(arg0) end
+function ServerOptions.getClientCommandList(doLine) end
 
 --- @public
 --- @static
@@ -38,35 +38,35 @@ function ServerOptions.initClientCommandsHelp() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOption
+--- @param option ServerOption
 --- @return nil
-function ServerOptions:addOption(arg0) end
+function ServerOptions:addOption(option) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param key string
+--- @param value string
 --- @return string
-function ServerOptions:changeOption(arg0, arg1) end
+function ServerOptions:changeOption(key, value) end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return boolean
-function ServerOptions:getBoolean(arg0) end
+function ServerOptions:getBoolean(key) end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return number
-function ServerOptions:getDouble(arg0) end
+function ServerOptions:getDouble(key) end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return number
-function ServerOptions:getFloat(arg0) end
+function ServerOptions:getFloat(key) end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return integer
-function ServerOptions:getInteger(arg0) end
+function ServerOptions:getInteger(key) end
 
 --- @public
 --- @return integer
@@ -81,19 +81,19 @@ function ServerOptions:getMaxPlayersForEstablishingConnection() end
 function ServerOptions:getNumOptions() end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return string
-function ServerOptions:getOption(arg0) end
+function ServerOptions:getOption(key) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ServerOption
-function ServerOptions:getOptionByIndex(arg0) end
+function ServerOptions:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ServerOption
-function ServerOptions:getOptionByName(arg0) end
+function ServerOptions:getOptionByName(name) end
 
 --- @public
 --- @return ArrayList
@@ -108,30 +108,30 @@ function ServerOptions:getPublicOptions() end
 function ServerOptions:init() end
 
 --- @public
---- @param arg0 string
+--- @param serverName string
 --- @return boolean
-function ServerOptions:loadServerTextFile(arg0) end
+function ServerOptions:loadServerTextFile(serverName) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param key string
+--- @param value string
 --- @return nil
-function ServerOptions:putOption(arg0, arg1) end
+function ServerOptions:putOption(key, value) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param key string
+--- @param value string
 --- @return nil
-function ServerOptions:putSaveOption(arg0, arg1) end
+function ServerOptions:putSaveOption(key, value) end
 
 --- @public
 --- @return nil
 function ServerOptions:resetRegionFile() end
 
 --- @public
---- @param arg0 string
+--- @param serverName string
 --- @return boolean
-function ServerOptions:saveServerTextFile(arg0) end
+function ServerOptions:saveServerTextFile(serverName) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -19,41 +19,41 @@ IsoDirections = {}
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return IsoDirections
-function IsoDirections.RotLeft(arg0) end
+function IsoDirections.RotLeft(dir) end
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return IsoDirections
-function IsoDirections.RotRight(arg0) end
+function IsoDirections.RotRight(dir) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param angle Vector2
 --- @return IsoDirections
-function IsoDirections.cardinalFromAngle(arg0) end
+function IsoDirections.cardinalFromAngle(angle) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param angleRadians number
 --- @return IsoDirections
---- @overload fun(arg0: Vector2): IsoDirections
---- @overload fun(arg0: number, arg1: number): IsoDirections
-function IsoDirections.fromAngle(arg0) end
+--- @overload fun(angle: Vector2): IsoDirections
+--- @overload fun(angleX: number, angleY: number): IsoDirections
+function IsoDirections.fromAngle(angleRadians) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param angle Vector2
 --- @return IsoDirections
-function IsoDirections.fromAngleActual(arg0) end
+function IsoDirections.fromAngleActual(angle) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return IsoDirections
-function IsoDirections.fromIndex(arg0) end
+function IsoDirections.fromIndex(index) end
 
 --- @public
 --- @static
@@ -73,9 +73,9 @@ function IsoDirections.getRandom() end
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return IsoDirections
-function IsoDirections.reverse(arg0) end
+function IsoDirections.reverse(dir) end
 
 --- @public
 --- @static
@@ -85,7 +85,11 @@ function IsoDirections.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return IsoDirections[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return IsoDirections[] an array containing the constants of this enum class, in the order they are declared
 function IsoDirections.values() end
 
 ------------------------------------
@@ -98,12 +102,12 @@ function IsoDirections:Rot180() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, arg0: integer): IsoDirections
+--- @overload fun(self: IsoDirections, time: integer): IsoDirections
 function IsoDirections:RotLeft() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, arg0: integer): IsoDirections
+--- @overload fun(self: IsoDirections, time: integer): IsoDirections
 function IsoDirections:RotRight() end
 
 --- @public

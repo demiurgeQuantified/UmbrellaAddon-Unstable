@@ -10,62 +10,62 @@ TextDrawObject = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerNum integer
 --- @return nil
-function TextDrawObject.NoRender(arg0) end
+function TextDrawObject.NoRender(playerNum) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerNum integer
 --- @return nil
-function TextDrawObject.RenderBatch(arg0) end
+function TextDrawObject.RenderBatch(playerNum) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: boolean): nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: boolean, arg3: number): nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: boolean): nil
---- @overload fun(self: TextDrawObject, arg0: TextDrawHorizontal, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: boolean): nil
-function TextDrawObject:AddBatchedDraw(arg0, arg1) end
+--- @overload fun(self: TextDrawObject, x: number, y: number, drawOutlines: boolean): nil
+--- @overload fun(self: TextDrawObject, x: number, y: number, drawOutlines: boolean, alpha: number): nil
+--- @overload fun(self: TextDrawObject, x: number, y: number, r: number, g: number, b: number, a: number, drawOutlines: boolean): nil
+--- @overload fun(self: TextDrawObject, horz: TextDrawHorizontal, x: number, y: number, r: number, g: number, b: number, a: number, drawOutlines: boolean): nil
+function TextDrawObject:AddBatchedDraw(x, y) end
 
 --- @public
 --- @return nil
 function TextDrawObject:Clear() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: boolean): nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: boolean, arg3: number): nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: boolean): nil
---- @overload fun(self: TextDrawObject, arg0: TextDrawHorizontal, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: boolean): nil
-function TextDrawObject:Draw(arg0, arg1) end
+--- @overload fun(self: TextDrawObject, x: number, y: number, drawOutlines: boolean): nil
+--- @overload fun(self: TextDrawObject, x: number, y: number, drawOutlines: boolean, alpha: number): nil
+--- @overload fun(self: TextDrawObject, x: number, y: number, r: number, g: number, b: number, a: number, drawOutlines: boolean): nil
+--- @overload fun(self: TextDrawObject, horz: TextDrawHorizontal, x: number, y: number, r: number, g: number, b: number, a: number, drawOutlines: boolean): nil
+function TextDrawObject:Draw(x, y) end
 
 --- @public
---- @param arg0 TextDrawHorizontal
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 boolean
+--- @param horz TextDrawHorizontal
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param drawOutlines boolean
 --- @return nil
-function TextDrawObject:DrawRaw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function TextDrawObject:DrawRaw(horz, x, y, r, g, b, a, drawOutlines) end
 
 --- @public
---- @param arg0 string
+--- @param str string
 --- @return nil
---- @overload fun(self: TextDrawObject, arg0: string, arg1: integer): nil
---- @overload fun(self: TextDrawObject, arg0: UIFont, arg1: string, arg2: integer): nil
-function TextDrawObject:ReadString(arg0) end
+--- @overload fun(self: TextDrawObject, str: string, maxLineWidth: integer): nil
+--- @overload fun(self: TextDrawObject, font: UIFont, str: string, maxLineWidth: integer): nil
+function TextDrawObject:ReadString(str) end
 
 --- @public
 --- @return nil
@@ -124,144 +124,152 @@ function TextDrawObject:getWidth() end
 function TextDrawObject:isNullOrZeroLength() end
 
 --- @public
---- @param arg0 boolean
+--- @param allowAnyImage boolean
 --- @return nil
-function TextDrawObject:setAllowAnyImage(arg0) end
+function TextDrawObject:setAllowAnyImage(allowAnyImage) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowBBcode boolean
 --- @return nil
-function TextDrawObject:setAllowBBcode(arg0) end
+function TextDrawObject:setAllowBBcode(allowBBcode) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowChatIcons boolean
 --- @return nil
-function TextDrawObject:setAllowChatIcons(arg0) end
+function TextDrawObject:setAllowChatIcons(allowChatIcons) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowColors boolean
 --- @return nil
-function TextDrawObject:setAllowColors(arg0) end
+function TextDrawObject:setAllowColors(allowColors) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowFonts boolean
 --- @return nil
-function TextDrawObject:setAllowFonts(arg0) end
+function TextDrawObject:setAllowFonts(allowFonts) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowImages boolean
 --- @return nil
-function TextDrawObject:setAllowImages(arg0) end
+function TextDrawObject:setAllowImages(allowImages) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowLineBreaks boolean
 --- @return nil
-function TextDrawObject:setAllowLineBreaks(arg0) end
+function TextDrawObject:setAllowLineBreaks(allowLineBreaks) end
 
 --- @public
---- @param arg0 integer
+--- @param dim integer
 --- @return nil
-function TextDrawObject:setCustomImageMaxDimensions(arg0) end
+function TextDrawObject:setCustomImageMaxDimensions(dim) end
 
 --- @public
---- @param arg0 string
+--- @param tag string
 --- @return nil
-function TextDrawObject:setCustomTag(arg0) end
+function TextDrawObject:setCustomTag(tag) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param r number
+--- @param g number
+--- @param b number
 --- @return nil
---- @overload fun(self: TextDrawObject, arg0: integer, arg1: integer, arg2: integer): nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: number, arg3: number): nil
---- @overload fun(self: TextDrawObject, arg0: integer, arg1: integer, arg2: integer, arg3: integer): nil
-function TextDrawObject:setDefaultColors(arg0, arg1, arg2) end
+--- @overload fun(self: TextDrawObject, r: integer, g: integer, b: integer): nil
+--- @overload fun(self: TextDrawObject, r: number, g: number, b: number, a: number): nil
+--- @overload fun(self: TextDrawObject, r: integer, g: integer, b: integer, a: integer): nil
+function TextDrawObject:setDefaultColors(r, g, b) end
 
 --- @public
---- @param arg0 UIFont
+--- @param f UIFont
 --- @return nil
-function TextDrawObject:setDefaultFont(arg0) end
+function TextDrawObject:setDefaultFont(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param draw boolean
 --- @return nil
-function TextDrawObject:setDrawBackground(arg0) end
+function TextDrawObject:setDrawBackground(draw) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return nil
-function TextDrawObject:setEnabled(arg0) end
+function TextDrawObject:setEnabled(enabled) end
 
 --- @public
---- @param arg0 boolean
+--- @param equalizeLineHeights boolean
 --- @return nil
-function TextDrawObject:setEqualizeLineHeights(arg0) end
+function TextDrawObject:setEqualizeLineHeights(equalizeLineHeights) end
 
 --- @public
---- @param arg0 integer
+--- @param range integer
 --- @return nil
-function TextDrawObject:setHearRange(arg0) end
+function TextDrawObject:setHearRange(range) end
 
 --- @public
---- @param arg0 string
+--- @param horz string
 --- @return nil
---- @overload fun(self: TextDrawObject, arg0: TextDrawHorizontal): nil
-function TextDrawObject:setHorizontalAlign(arg0) end
+--- @overload fun(self: TextDrawObject, horz: TextDrawHorizontal): nil
+function TextDrawObject:setHorizontalAlign(horz) end
 
 --- @public
---- @param arg0 number
+--- @param ticks number
 --- @return nil
-function TextDrawObject:setInternalTickClock(arg0) end
+function TextDrawObject:setInternalTickClock(ticks) end
 
 --- @public
---- @param arg0 integer
+--- @param charsperline integer
 --- @return nil
-function TextDrawObject:setMaxCharsPerLine(arg0) end
+function TextDrawObject:setMaxCharsPerLine(charsperline) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param r number
+--- @param g number
+--- @param b number
 --- @return nil
---- @overload fun(self: TextDrawObject, arg0: integer, arg1: integer, arg2: integer): nil
---- @overload fun(self: TextDrawObject, arg0: number, arg1: number, arg2: number, arg3: number): nil
---- @overload fun(self: TextDrawObject, arg0: integer, arg1: integer, arg2: integer, arg3: integer): nil
-function TextDrawObject:setOutlineColors(arg0, arg1, arg2) end
+--- @overload fun(self: TextDrawObject, r: integer, g: integer, b: integer): nil
+--- @overload fun(self: TextDrawObject, r: number, g: number, b: number, a: number): nil
+--- @overload fun(self: TextDrawObject, r: integer, g: integer, b: integer, a: integer): nil
+function TextDrawObject:setOutlineColors(r, g, b) end
 
 --- @public
---- @param arg0 number
+--- @param value number
 --- @return nil
-function TextDrawObject:setScrambleVal(arg0) end
+function TextDrawObject:setScrambleVal(value) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param allowBBcode boolean
+--- @param allowImages boolean
+--- @param allowChatIcons boolean
+--- @param allowColors boolean
+--- @param allowFonts boolean
+--- @param equalizeLineHeights boolean
 --- @return nil
-function TextDrawObject:setSettings(arg0, arg1, arg2, arg3, arg4, arg5) end
+function TextDrawObject:setSettings(
+	allowBBcode,
+	allowImages,
+	allowChatIcons,
+	allowColors,
+	allowFonts,
+	equalizeLineHeights
+)
+end
 
 --- @public
---- @param arg0 String[]
+--- @param list String[]
 --- @return nil
-function TextDrawObject:setValidFonts(arg0) end
+function TextDrawObject:setValidFonts(list) end
 
 --- @public
---- @param arg0 String[]
+--- @param list String[]
 --- @return nil
-function TextDrawObject:setValidImages(arg0) end
+function TextDrawObject:setValidImages(list) end
 
 --- @public
---- @param arg0 integer
+--- @param radius integer
 --- @return nil
-function TextDrawObject:setVisibleRadius(arg0) end
+function TextDrawObject:setVisibleRadius(radius) end
 
 --- @public
 --- @return number
---- @overload fun(self: TextDrawObject, arg0: number): number
+--- @overload fun(self: TextDrawObject, delta: number): number
 function TextDrawObject:updateInternalTickClock() end
 
 ------------------------------------
@@ -270,6 +278,6 @@ function TextDrawObject:updateInternalTickClock() end
 
 --- @public
 --- @return TextDrawObject
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: boolean): TextDrawObject
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: boolean, arg4: boolean, arg5: boolean, arg6: boolean, arg7: boolean, arg8: boolean): TextDrawObject
+--- @overload fun(r: integer, g: integer, b: integer, allowBBcode: boolean): TextDrawObject
+--- @overload fun(r: integer, g: integer, b: integer, allowBBcode: boolean, allowImages: boolean, allowChatIcons: boolean, allowColors: boolean, allowFonts: boolean, equalizeLineHeights: boolean): TextDrawObject
 function TextDrawObject.new() end

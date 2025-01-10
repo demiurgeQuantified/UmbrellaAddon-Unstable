@@ -18,25 +18,25 @@ function PlayerKnockedDown.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function PlayerKnockedDown:animEvent(arg0, arg1) end
+function PlayerKnockedDown:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerKnockedDown:enter(arg0) end
+function PlayerKnockedDown:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerKnockedDown:execute(arg0) end
+function PlayerKnockedDown:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerKnockedDown:exit(arg0) end
+function PlayerKnockedDown:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -9,9 +9,9 @@ IsoFireplace = {}
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param units integer
 --- @return nil
-function IsoFireplace:addFuel(arg0) end
+function IsoFireplace:addFuel(units) end
 
 --- @public
 --- @return nil
@@ -22,9 +22,9 @@ function IsoFireplace:addToWorld() end
 function IsoFireplace:extinguish() end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoFireplace:getFacingPosition(arg0) end
+function IsoFireplace:getFacingPosition(pos) end
 
 --- @public
 --- @return integer
@@ -55,32 +55,32 @@ function IsoFireplace:isLit() end
 function IsoFireplace:isSmouldering() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoFireplace:load(arg0, arg1, arg2) end
+function IsoFireplace:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoFireplace:loadChange(arg0, arg1) end
+function IsoFireplace:loadChange(change, bb) end
 
 --- @public
 --- @return nil
 function IsoFireplace:removeFromWorld() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoFireplace:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoFireplace:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
 --- @param arg0 number
@@ -91,43 +91,43 @@ function IsoFireplace:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function IsoFireplace:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoFireplace:save(arg0, arg1) end
+function IsoFireplace:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoFireplace:saveChange(arg0, arg1, arg2) end
+function IsoFireplace:saveChange(change, tbl, bb) end
 
 --- @public
---- @param arg0 integer
+--- @param units integer
 --- @return nil
-function IsoFireplace:setFuelAmount(arg0) end
+function IsoFireplace:setFuelAmount(units) end
 
 --- @public
---- @param arg0 boolean
+--- @param lit boolean
 --- @return nil
-function IsoFireplace:setLit(arg0) end
+function IsoFireplace:setLit(lit) end
 
 --- @public
 --- @return nil
 function IsoFireplace:update() end
 
 --- @public
---- @param arg0 integer
+--- @param amount integer
 --- @return integer
-function IsoFireplace:useFuel(arg0) end
+function IsoFireplace:useFuel(amount) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoFireplace
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoFireplace
-function IsoFireplace.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoFireplace
+function IsoFireplace.new(cell) end

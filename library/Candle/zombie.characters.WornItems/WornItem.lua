@@ -21,7 +21,7 @@ function WornItem:getLocation() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 InventoryItem
+--- @param location string
+--- @param item InventoryItem
 --- @return WornItem
-function WornItem.new(arg0, arg1) end
+function WornItem.new(location, item) end

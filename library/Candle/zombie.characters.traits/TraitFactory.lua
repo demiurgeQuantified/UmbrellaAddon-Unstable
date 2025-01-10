@@ -16,20 +16,20 @@ function TraitFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 string
---- @param arg4 boolean
+--- @param type string
+--- @param name string
+--- @param cost integer
+--- @param desc string
+--- @param profession boolean
 --- @return Trait
---- @overload fun(arg0: string, arg1: string, arg2: integer, arg3: string, arg4: boolean, arg5: boolean): Trait
-function TraitFactory.addTrait(arg0, arg1, arg2, arg3, arg4) end
+--- @overload fun(type: string, name: string, cost: integer, desc: string, profession: boolean, removeInMP: boolean): Trait
+function TraitFactory.addTrait(type, name, cost, desc, profession) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return Trait
-function TraitFactory.getTrait(arg0) end
+function TraitFactory.getTrait(name) end
 
 --- @public
 --- @static
@@ -43,10 +43,10 @@ function TraitFactory.init() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
+--- @param a string
+--- @param b string
 --- @return nil
-function TraitFactory.setMutualExclusive(arg0, arg1) end
+function TraitFactory.setMutualExclusive(a, b) end
 
 --- @public
 --- @static

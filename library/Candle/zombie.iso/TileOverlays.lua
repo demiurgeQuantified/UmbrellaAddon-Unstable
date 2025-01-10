@@ -14,14 +14,14 @@ TileOverlays = {}
 function TileOverlays:Reset() end
 
 --- @public
---- @param arg0 table
+--- @param overlayMap table
 --- @return nil
-function TileOverlays:addOverlays(arg0) end
+function TileOverlays:addOverlays(overlayMap) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return nil
-function TileOverlays:fixTableTopOverlays(arg0) end
+function TileOverlays:fixTableTopOverlays(square) end
 
 --- @public
 --- @param arg0 string
@@ -29,14 +29,14 @@ function TileOverlays:fixTableTopOverlays(arg0) end
 function TileOverlays:getUnderlyingSpriteNames(arg0) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function TileOverlays:hasOverlays(arg0) end
+function TileOverlays:hasOverlays(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return nil
-function TileOverlays:updateTileOverlaySprite(arg0) end
+function TileOverlays:updateTileOverlaySprite(obj) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

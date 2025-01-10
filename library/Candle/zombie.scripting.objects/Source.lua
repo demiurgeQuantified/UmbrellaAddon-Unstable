@@ -37,24 +37,24 @@ function Source:isDestroy() end
 function Source:isKeep() end
 
 --- @public
---- @param arg0 number
+--- @param count number
 --- @return nil
-function Source:setCount(arg0) end
+function Source:setCount(count) end
 
 --- @public
---- @param arg0 boolean
+--- @param destroy boolean
 --- @return nil
-function Source:setDestroy(arg0) end
+function Source:setDestroy(destroy) end
 
 --- @public
---- @param arg0 boolean
+--- @param keep boolean
 --- @return nil
-function Source:setKeep(arg0) end
+function Source:setKeep(keep) end
 
 --- @public
---- @param arg0 number
+--- @param use number
 --- @return nil
-function Source:setUse(arg0) end
+function Source:setUse(use) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

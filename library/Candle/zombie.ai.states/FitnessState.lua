@@ -18,25 +18,25 @@ function FitnessState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function FitnessState:animEvent(arg0, arg1) end
+function FitnessState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FitnessState:enter(arg0) end
+function FitnessState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FitnessState:execute(arg0) end
+function FitnessState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FitnessState:exit(arg0) end
+function FitnessState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

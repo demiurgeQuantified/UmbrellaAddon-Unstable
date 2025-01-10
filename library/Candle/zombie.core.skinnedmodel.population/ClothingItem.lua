@@ -12,11 +12,11 @@ ClothingItem = {}
 
 --- @public
 --- @static
---- @param arg0 ClothingItem
---- @param arg1 CharacterMask
+--- @param item ClothingItem
+--- @param in_out_mask CharacterMask
 --- @return nil
---- @overload fun(arg0: ClothingItemReference, arg1: CharacterMask): nil
-function ClothingItem.tryGetCombinedMask(arg0, arg1) end
+--- @overload fun(itemRef: ClothingItemReference, in_out_mask: CharacterMask): nil
+function ClothingItem.tryGetCombinedMask(item, in_out_mask) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -52,9 +52,9 @@ function ClothingItem:getAltModel(arg0) end
 function ClothingItem:getBaseTextures() end
 
 --- @public
---- @param arg0 CharacterMask
+--- @param in_out_mask CharacterMask
 --- @return nil
-function ClothingItem:getCombinedMask(arg0) end
+function ClothingItem:getCombinedMask(in_out_mask) end
 
 --- @public
 --- @return string
@@ -69,9 +69,9 @@ function ClothingItem:getFemaleModel() end
 function ClothingItem:getMaleModel() end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return string
-function ClothingItem:getModel(arg0) end
+function ClothingItem:getModel(female) end
 
 --- @public
 --- @return ArrayList
@@ -106,7 +106,7 @@ function ClothingItem:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 AssetPath
---- @param arg1 AssetManager
+--- @param path AssetPath
+--- @param assetManager AssetManager
 --- @return ClothingItem
-function ClothingItem.new(arg0, arg1) end
+function ClothingItem.new(path, assetManager) end

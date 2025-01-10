@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class TemplateText
+--- @class TemplateText TurboTuTone.
 --- @field public class any
 TemplateText = {}
 
@@ -10,11 +10,11 @@ TemplateText = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param input string
 --- @return string
---- @overload fun(arg0: string, arg1: table): string
---- @overload fun(arg0: string, arg1: IReplaceProvider): string
-function TemplateText.Build(arg0) end
+--- @overload fun(input: string, table: table): string
+--- @overload fun(input: string, replaceProvider: IReplaceProvider): string
+function TemplateText.Build(input) end
 
 --- @public
 --- @static
@@ -33,20 +33,20 @@ function TemplateText.Initialize() end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param bound number
 --- @return number
---- @overload fun(arg0: integer): integer
---- @overload fun(arg0: number, arg1: number): number
---- @overload fun(arg0: integer, arg1: integer): integer
-function TemplateText.RandNext(arg0) end
+--- @overload fun(bound: integer): integer
+--- @overload fun(min: number, max: number): number
+--- @overload fun(min: integer, max: integer): integer
+function TemplateText.RandNext(bound) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 table
+--- @param key string
+--- @param table table
 --- @return nil
---- @overload fun(arg0: string, arg1: IReplace): nil
-function TemplateText.RegisterKey(arg0, arg1) end
+--- @overload fun(key: string, replace: IReplace): nil
+function TemplateText.RegisterKey(key, table) end
 
 --- @public
 --- @static

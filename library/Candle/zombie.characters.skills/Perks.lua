@@ -57,15 +57,15 @@ Perks = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param id string
 --- @return Perk
-function Perks.FromString(arg0) end
+function Perks.FromString(id) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param value integer
 --- @return Perk
-function Perks.fromIndex(arg0) end
+function Perks.fromIndex(value) end
 
 --- @public
 --- @static

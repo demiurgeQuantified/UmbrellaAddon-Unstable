@@ -18,25 +18,25 @@ function PlayerExtState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function PlayerExtState:animEvent(arg0, arg1) end
+function PlayerExtState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerExtState:enter(arg0) end
+function PlayerExtState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerExtState:execute(arg0) end
+function PlayerExtState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerExtState:exit(arg0) end
+function PlayerExtState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

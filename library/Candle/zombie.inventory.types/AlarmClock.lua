@@ -9,10 +9,10 @@ AlarmClock = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return nil
-function AlarmClock:DoTooltip(arg0, arg1) end
+function AlarmClock:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean
@@ -62,27 +62,27 @@ function AlarmClock:isDigital() end
 function AlarmClock:isRinging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function AlarmClock:load(arg0, arg1) end
+function AlarmClock:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function AlarmClock:save(arg0, arg1) end
+function AlarmClock:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param alarmSet boolean
 --- @return nil
---- @overload fun(self: AlarmClock, arg0: boolean): nil
-function AlarmClock:setAlarmSet(arg0) end
+--- @overload fun(self: AlarmClock, alarmSet: boolean): nil
+function AlarmClock:setAlarmSet(alarmSet) end
 
 --- @public
---- @param arg0 string
+--- @param alarmSound string
 --- @return nil
-function AlarmClock:setAlarmSound(arg0) end
+function AlarmClock:setAlarmSound(alarmSound) end
 
 --- @public
 --- @param arg0 integer
@@ -91,21 +91,21 @@ function AlarmClock:setAlarmSound(arg0) end
 function AlarmClock:setForceDontRing(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param hour integer
 --- @return nil
---- @overload fun(self: AlarmClock, arg0: integer): nil
-function AlarmClock:setHour(arg0) end
+--- @overload fun(self: AlarmClock, hour: integer): nil
+function AlarmClock:setHour(hour) end
 
 --- @public
---- @param arg0 integer
+--- @param min integer
 --- @return nil
---- @overload fun(self: AlarmClock, arg0: integer): nil
-function AlarmClock:setMinute(arg0) end
+--- @overload fun(self: AlarmClock, min: integer): nil
+function AlarmClock:setMinute(min) end
 
 --- @public
---- @param arg0 integer
+--- @param soundRadius integer
 --- @return nil
-function AlarmClock:setSoundRadius(arg0) end
+function AlarmClock:setSoundRadius(soundRadius) end
 
 --- @public
 --- @return boolean
@@ -121,9 +121,9 @@ function AlarmClock:stopRinging() end
 function AlarmClock:syncAlarmClock() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return nil
-function AlarmClock:syncAlarmClock_Player(arg0) end
+function AlarmClock:syncAlarmClock_Player(player) end
 
 --- @public
 --- @return nil
@@ -138,19 +138,19 @@ function AlarmClock:syncStopRinging() end
 function AlarmClock:update() end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return nil
-function AlarmClock:updateSound(arg0) end
+function AlarmClock:updateSound(emitter) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return AlarmClock
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): AlarmClock
-function AlarmClock.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(module: string, name: string, itemType: string, item: Item): AlarmClock
+function AlarmClock.new(module, name, itemType, texName) end

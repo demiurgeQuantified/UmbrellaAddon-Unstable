@@ -20,35 +20,35 @@ function RadioAPI.hasInstance() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param stamp integer
 --- @return integer
-function RadioAPI.timeStampToDays(arg0) end
+function RadioAPI.timeStampToDays(stamp) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param stamp integer
 --- @return integer
-function RadioAPI.timeStampToHours(arg0) end
+function RadioAPI.timeStampToHours(stamp) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param stamp integer
 --- @return integer
-function RadioAPI.timeStampToMinutes(arg0) end
+function RadioAPI.timeStampToMinutes(stamp) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param days integer
+--- @param hours integer
+--- @param minutes integer
 --- @return integer
-function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
+function RadioAPI.timeToTimeStamp(days, hours, minutes) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param category string
 --- @return table
-function RadioAPI:getChannels(arg0) end
+function RadioAPI:getChannels(category) end

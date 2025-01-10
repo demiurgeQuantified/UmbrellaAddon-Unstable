@@ -11,10 +11,10 @@ Item = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param str string
 --- @return nil
 --- @overload fun(self: Item, arg0: string, arg1: string): nil
-function Item:DoParam(arg0) end
+function Item:DoParam(str) end
 
 --- @public
 --- @param arg0 string
@@ -22,10 +22,10 @@ function Item:DoParam(arg0) end
 function Item:InitLoadPP(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param param string
 --- @return InventoryItem
 --- @overload fun(self: Item, arg0: string, arg1: boolean): InventoryItem
-function Item:InstanceItem(arg0) end
+function Item:InstanceItem(param) end
 
 --- @public
 --- @param arg0 string
@@ -55,11 +55,11 @@ function Item:PreReload() end
 function Item:getAcceptItemFunction() end
 
 --- @public
---- @return number
+--- @return number the ActualWeight
 function Item:getActualWeight() end
 
 --- @public
---- @return string
+--- @return string the AmmoType
 function Item:getAmmoType() end
 
 --- @public
@@ -71,11 +71,11 @@ function Item:getB() end
 function Item:getBloodClothingType() end
 
 --- @public
---- @return string
+--- @return string the bodyLocation
 function Item:getBodyLocation() end
 
 --- @public
---- @return number
+--- @return number the BoredomChange
 function Item:getBoredomChange() end
 
 --- @public
@@ -91,7 +91,7 @@ function Item:getBringToBearSound() end
 function Item:getBulletOutSound() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the Categories
 function Item:getCategories() end
 
 --- @public
@@ -131,11 +131,11 @@ function Item:getColorGreen() end
 function Item:getColorRed() end
 
 --- @public
---- @return integer
+--- @return integer the ConditionLowerChance
 function Item:getConditionLowerChance() end
 
 --- @public
---- @return integer
+--- @return integer the ConditionMax
 function Item:getConditionMax() end
 
 --- @public
@@ -147,7 +147,7 @@ function Item:getCookingSound() end
 function Item:getCorpseSicknessDefense() end
 
 --- @public
---- @return integer
+--- @return integer the Count
 --- @deprecated
 function Item:getCount() end
 
@@ -164,11 +164,11 @@ function Item:getCustomEatSound() end
 function Item:getDamagedSound() end
 
 --- @public
---- @return integer
+--- @return integer the DaysFresh
 function Item:getDaysFresh() end
 
 --- @public
---- @return integer
+--- @return integer the DaysTotallyRotten
 function Item:getDaysTotallyRotten() end
 
 --- @public
@@ -184,15 +184,15 @@ function Item:getDiscomfortModifier() end
 function Item:getDisplayCategory() end
 
 --- @public
---- @return string
+--- @return string the DisplayName
 function Item:getDisplayName() end
 
 --- @public
---- @return integer
+--- @return integer the DoorDamage
 function Item:getDoorDamage() end
 
 --- @public
---- @return string
+--- @return string the DoorHitSound
 function Item:getDoorHitSound() end
 
 --- @public
@@ -220,11 +220,11 @@ function Item:getEjectAmmoStartSound() end
 function Item:getEjectAmmoStopSound() end
 
 --- @public
---- @return number
+--- @return number the EnduranceChange
 function Item:getEnduranceChange() end
 
 --- @public
---- @return number
+--- @return number the EnduranceMod
 function Item:getEnduranceMod() end
 
 --- @public
@@ -280,11 +280,11 @@ function Item:getHeadConditionLowerChanceMultiplier() end
 function Item:getHearingModifier() end
 
 --- @public
---- @return number
+--- @return number the HungerChange
 function Item:getHungerChange() end
 
 --- @public
---- @return string
+--- @return string the Icon
 function Item:getIcon() end
 
 --- @public
@@ -292,7 +292,7 @@ function Item:getIcon() end
 function Item:getIconsForTexture() end
 
 --- @public
---- @return string
+--- @return string the ImpactSound
 function Item:getImpactSound() end
 
 --- @public
@@ -320,7 +320,7 @@ function Item:getItemConfig() end
 function Item:getItemConfigKey() end
 
 --- @public
---- @return number
+--- @return number the KnockdownMod
 function Item:getKnockdownMod() end
 
 --- @public
@@ -340,11 +340,11 @@ function Item:getLuaCreate() end
 function Item:getMapID() end
 
 --- @public
---- @return number
+--- @return number the MaxDamage
 function Item:getMaxDamage() end
 
 --- @public
---- @return integer
+--- @return integer the MaxHitCount
 function Item:getMaxHitCount() end
 
 --- @public
@@ -356,27 +356,27 @@ function Item:getMaxItemSize() end
 function Item:getMaxLevelTrained() end
 
 --- @public
---- @return number
+--- @return number the MaxRange
 function Item:getMaxRange() end
 
 --- @public
---- @return number
+--- @return number the MinAngle
 function Item:getMinAngle() end
 
 --- @public
---- @return number
+--- @return number the MinDamage
 function Item:getMinDamage() end
 
 --- @public
---- @return number
+--- @return number the MinimumSwingTime
 function Item:getMinimumSwingTime() end
 
 --- @public
---- @return integer
+--- @return integer the MinutesToBurn
 function Item:getMinutesToBurn() end
 
 --- @public
---- @return integer
+--- @return integer the MinutesToCook
 function Item:getMinutesToCook() end
 
 --- @public
@@ -384,11 +384,11 @@ function Item:getMinutesToCook() end
 function Item:getModuleName() end
 
 --- @public
---- @return number
+--- @return number the NPCSoundBoost
 function Item:getNPCSoundBoost() end
 
 --- @public
---- @return string
+--- @return string the name
 function Item:getName() end
 
 --- @public
@@ -420,23 +420,23 @@ function Item:getOnBreak() end
 function Item:getOpenSound() end
 
 --- @public
---- @return number
+--- @return number the OtherCharacterVolumeBoost
 function Item:getOtherCharacterVolumeBoost() end
 
 --- @public
---- @return string
+--- @return string the OtherHandRequire
 function Item:getOtherHandRequire() end
 
 --- @public
---- @return Stack
+--- @return Stack the PaletteChoices
 function Item:getPaletteChoices() end
 
 --- @public
---- @return string
+--- @return string the PalettesStart
 function Item:getPalettesStart() end
 
 --- @public
---- @return string
+--- @return string the PhysicsObject
 function Item:getPhysicsObject() end
 
 --- @public
@@ -460,7 +460,7 @@ function Item:getPoisonPower() end
 function Item:getPourType() end
 
 --- @public
---- @return number
+--- @return number the PushBackMod
 function Item:getPushBackMod() end
 
 --- @public
@@ -484,13 +484,13 @@ function Item:getRecordedMediaCat() end
 function Item:getReplaceOnDeplete() end
 
 --- @public
---- @return string
+--- @return string the ReplaceOnUse
 function Item:getReplaceOnUse() end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return string
-function Item:getReplaceType(arg0) end
+function Item:getReplaceType(key) end
 
 --- @public
 --- @return string
@@ -521,21 +521,21 @@ function Item:getShoutType() end
 function Item:getSkillTrained() end
 
 --- @public
---- @param arg0 string
+--- @param ID string
 --- @return string
-function Item:getSoundByID(arg0) end
+function Item:getSoundByID(ID) end
 
 --- @public
---- @param arg0 string
+--- @param parameterName string
 --- @return string
-function Item:getSoundParameter(arg0) end
+function Item:getSoundParameter(parameterName) end
 
 --- @public
---- @return integer
+--- @return integer the SoundRadius
 function Item:getSoundRadius() end
 
 --- @public
---- @return integer
+--- @return integer the SoundVolume
 function Item:getSoundVolume() end
 
 --- @public
@@ -543,11 +543,11 @@ function Item:getSoundVolume() end
 function Item:getSpawnWith() end
 
 --- @public
---- @return integer
+--- @return integer the SplatNumber
 function Item:getSplatNumber() end
 
 --- @public
---- @return string
+--- @return string the SpriteName
 function Item:getSpriteName() end
 
 --- @public
@@ -567,23 +567,23 @@ function Item:getStaticModelsByIndex() end
 function Item:getStrainModifier() end
 
 --- @public
---- @return number
+--- @return number the StressChange
 function Item:getStressChange() end
 
 --- @public
---- @return number
+--- @return number the SwingAmountBeforeImpact
 function Item:getSwingAmountBeforeImpact() end
 
 --- @public
---- @return string
+--- @return string the SwingAnim
 function Item:getSwingAnim() end
 
 --- @public
---- @return string
+--- @return string the SwingSound
 function Item:getSwingSound() end
 
 --- @public
---- @return number
+--- @return number the SwingTime
 function Item:getSwingTime() end
 
 --- @public
@@ -607,11 +607,11 @@ function Item:getThirstChange() end
 function Item:getTicksPerEquipUse() end
 
 --- @public
---- @return number
+--- @return number the ToHitModifier
 function Item:getToHitModifier() end
 
 --- @public
---- @return Type
+--- @return Type the type
 function Item:getType() end
 
 --- @public
@@ -623,11 +623,11 @@ function Item:getTypeString() end
 function Item:getUnequipSound() end
 
 --- @public
---- @return number
+--- @return number the UnhappyChange
 function Item:getUnhappyChange() end
 
 --- @public
---- @return number
+--- @return number the UseDelta
 function Item:getUseDelta() end
 
 --- @public
@@ -643,7 +643,7 @@ function Item:getVisionModifier() end
 function Item:getWaterresist() end
 
 --- @public
---- @return string
+--- @return string the WeaponSprite
 function Item:getWeaponSprite() end
 
 --- @public
@@ -651,11 +651,11 @@ function Item:getWeaponSprite() end
 function Item:getWeaponSpritesByIndex() end
 
 --- @public
---- @return number
+--- @return number the WeaponWeight
 function Item:getWeaponWeight() end
 
 --- @public
---- @return number
+--- @return number the EmptyWeight
 function Item:getWeightEmpty() end
 
 --- @public
@@ -687,9 +687,9 @@ function Item:getWorldStaticModel() end
 function Item:getWorldStaticModelsByIndex() end
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return boolean
-function Item:hasReplaceType(arg0) end
+function Item:hasReplaceType(key) end
 
 --- @public
 --- @param arg0 string
@@ -701,31 +701,31 @@ function Item:hasTag(arg0) end
 function Item:ignoreZombieDensity() end
 
 --- @public
---- @return boolean
+--- @return boolean the Alcoholic
 function Item:isAlcoholic() end
 
 --- @public
---- @return boolean
+--- @return boolean the AlwaysKnockdown
 function Item:isAlwaysKnockdown() end
 
 --- @public
---- @return boolean
+--- @return boolean the AlwaysWelcomeGift
 function Item:isAlwaysWelcomeGift() end
 
 --- @public
---- @return boolean
+--- @return boolean the AngleFalloff
 function Item:isAngleFalloff() end
 
 --- @public
---- @return boolean
+--- @return boolean the CanBandage
 function Item:isCanBandage() end
 
 --- @public
---- @return boolean
+--- @return boolean the CanBarricade
 function Item:isCanBarricade() end
 
 --- @public
---- @return boolean
+--- @return boolean the CantAttackWithLowestEndurance
 function Item:isCantAttackWithLowestEndurance() end
 
 --- @public
@@ -745,11 +745,11 @@ function Item:isCookwareLoot() end
 function Item:isCosmetic() end
 
 --- @public
---- @return boolean
+--- @return boolean the DangerousUncooked
 function Item:isDangerousUncooked() end
 
 --- @public
---- @return boolean
+--- @return boolean the DisappearOnUse
 function Item:isDisappearOnUse() end
 
 --- @public
@@ -761,7 +761,7 @@ function Item:isFarmingLoot() end
 function Item:isHidden() end
 
 --- @public
---- @return boolean
+--- @return boolean the IsCookable
 function Item:isIsCookable() end
 
 --- @public
@@ -769,7 +769,7 @@ function Item:isIsCookable() end
 function Item:isKeepOnDeplete() end
 
 --- @public
---- @return boolean
+--- @return boolean the KnockBackOnNoDeath
 function Item:isKnockBackOnNoDeath() end
 
 --- @public
@@ -793,31 +793,31 @@ function Item:isMedicalLoot() end
 function Item:isMementoLoot() end
 
 --- @public
---- @return boolean
+--- @return boolean the MultipleHitConditionAffected
 function Item:isMultipleHitConditionAffected() end
 
 --- @public
---- @return boolean
+--- @return boolean the OtherHandUse
 function Item:isOtherHandUse() end
 
 --- @public
---- @return boolean
+--- @return boolean the RangeFalloff
 function Item:isRangeFalloff() end
 
 --- @public
---- @return boolean
+--- @return boolean the Ranged
 function Item:isRanged() end
 
 --- @public
---- @return boolean
+--- @return boolean the ShareDamage
 function Item:isShareDamage() end
 
 --- @public
---- @return boolean
+--- @return boolean the ShareEndurance
 function Item:isShareEndurance() end
 
 --- @public
---- @return boolean
+--- @return boolean the SplatBloodOnNoDeath
 function Item:isSplatBloodOnNoDeath() end
 
 --- @public
@@ -829,19 +829,19 @@ function Item:isSurvivalGearLoot() end
 function Item:isToolLoot() end
 
 --- @public
---- @return boolean
+--- @return boolean the UseEndurance
 function Item:isUseEndurance() end
 
 --- @public
---- @return boolean
+--- @return boolean the UseSelf
 function Item:isUseSelf() end
 
 --- @public
---- @return boolean
+--- @return boolean the UseWhileEquipped
 function Item:isUseWhileEquipped() end
 
 --- @public
---- @return boolean
+--- @return boolean the UseWhileUnequipped
 function Item:isUseWhileUnequipped() end
 
 --- @public
@@ -865,154 +865,154 @@ function Item:resolveItemTypes() end
 function Item:resolveModelScripts() end
 
 --- @public
---- @param arg0 number
+--- @param ActualWeight number the ActualWeight to set
 --- @return nil
-function Item:setActualWeight(arg0) end
+function Item:setActualWeight(ActualWeight) end
 
 --- @public
---- @param arg0 boolean
+--- @param Alcoholic boolean the Alcoholic to set
 --- @return nil
-function Item:setAlcoholic(arg0) end
+function Item:setAlcoholic(Alcoholic) end
 
 --- @public
---- @param arg0 boolean
+--- @param AlwaysKnockdown boolean the AlwaysKnockdown to set
 --- @return nil
-function Item:setAlwaysKnockdown(arg0) end
+function Item:setAlwaysKnockdown(AlwaysKnockdown) end
 
 --- @public
---- @param arg0 boolean
+--- @param AlwaysWelcomeGift boolean the AlwaysWelcomeGift to set
 --- @return nil
-function Item:setAlwaysWelcomeGift(arg0) end
+function Item:setAlwaysWelcomeGift(AlwaysWelcomeGift) end
 
 --- @public
---- @param arg0 string
+--- @param AmmoType string the AmmoType to set
 --- @return nil
-function Item:setAmmoType(arg0) end
+function Item:setAmmoType(AmmoType) end
 
 --- @public
---- @param arg0 boolean
+--- @param AngleFalloff boolean the AngleFalloff to set
 --- @return nil
-function Item:setAngleFalloff(arg0) end
+function Item:setAngleFalloff(AngleFalloff) end
 
 --- @public
---- @param arg0 string
+--- @param bodyLocation string the bodyLocation to set
 --- @return nil
-function Item:setBodyLocation(arg0) end
+function Item:setBodyLocation(bodyLocation) end
 
 --- @public
---- @param arg0 number
+--- @param BoredomChange number the BoredomChange to set
 --- @return nil
-function Item:setBoredomChange(arg0) end
+function Item:setBoredomChange(BoredomChange) end
 
 --- @public
---- @param arg0 boolean
+--- @param CanBandage boolean the CanBandage to set
 --- @return nil
-function Item:setCanBandage(arg0) end
+function Item:setCanBandage(CanBandage) end
 
 --- @public
---- @param arg0 boolean
+--- @param CanBarricade boolean the CanBarricade to set
 --- @return nil
-function Item:setCanBarricade(arg0) end
+function Item:setCanBarricade(CanBarricade) end
 
 --- @public
---- @param arg0 boolean
+--- @param CantAttackWithLowestEndurance boolean the CantAttackWithLowestEndurance to set
 --- @return nil
-function Item:setCantAttackWithLowestEndurance(arg0) end
+function Item:setCantAttackWithLowestEndurance(CantAttackWithLowestEndurance) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param Categories ArrayList the Categories to set
 --- @return nil
-function Item:setCategories(arg0) end
+function Item:setCategories(Categories) end
 
 --- @public
---- @param arg0 ClothingItem
+--- @param asset ClothingItem
 --- @return nil
-function Item:setClothingItemAsset(arg0) end
+function Item:setClothingItemAsset(asset) end
 
 --- @public
---- @param arg0 integer
+--- @param ConditionLowerChance integer the ConditionLowerChance to set
 --- @return nil
-function Item:setConditionLowerChance(arg0) end
+function Item:setConditionLowerChance(ConditionLowerChance) end
 
 --- @public
---- @param arg0 integer
+--- @param ConditionMax integer the ConditionMax to set
 --- @return nil
-function Item:setConditionMax(arg0) end
+function Item:setConditionMax(ConditionMax) end
 
 --- @public
---- @param arg0 integer
+--- @param Count integer the Count to set
 --- @return nil
-function Item:setCount(arg0) end
+function Item:setCount(Count) end
 
 --- @public
---- @param arg0 boolean
+--- @param DangerousUncooked boolean the DangerousUncooked to set
 --- @return nil
-function Item:setDangerousUncooked(arg0) end
+function Item:setDangerousUncooked(DangerousUncooked) end
 
 --- @public
---- @param arg0 integer
+--- @param DaysFresh integer the DaysFresh to set
 --- @return nil
-function Item:setDaysFresh(arg0) end
+function Item:setDaysFresh(DaysFresh) end
 
 --- @public
---- @param arg0 integer
+--- @param DaysTotallyRotten integer the DaysTotallyRotten to set
 --- @return nil
-function Item:setDaysTotallyRotten(arg0) end
+function Item:setDaysTotallyRotten(DaysTotallyRotten) end
 
 --- @public
---- @param arg0 boolean
+--- @param DisappearOnUse boolean the DisappearOnUse to set
 --- @return nil
-function Item:setDisappearOnUse(arg0) end
+function Item:setDisappearOnUse(DisappearOnUse) end
 
 --- @public
---- @param arg0 string
+--- @param DisplayName string the DisplayName to set
 --- @return nil
-function Item:setDisplayName(arg0) end
+function Item:setDisplayName(DisplayName) end
 
 --- @public
---- @param arg0 integer
+--- @param DoorDamage integer the DoorDamage to set
 --- @return nil
-function Item:setDoorDamage(arg0) end
+function Item:setDoorDamage(DoorDamage) end
 
 --- @public
---- @param arg0 string
+--- @param DoorHitSound string the DoorHitSound to set
 --- @return nil
-function Item:setDoorHitSound(arg0) end
+function Item:setDoorHitSound(DoorHitSound) end
 
 --- @public
---- @param arg0 number
+--- @param EnduranceChange number the EnduranceChange to set
 --- @return nil
-function Item:setEnduranceChange(arg0) end
+function Item:setEnduranceChange(EnduranceChange) end
 
 --- @public
---- @param arg0 number
+--- @param EnduranceMod number the EnduranceMod to set
 --- @return nil
-function Item:setEnduranceMod(arg0) end
+function Item:setEnduranceMod(EnduranceMod) end
 
 --- @public
---- @param arg0 number
+--- @param HungerChange number the HungerChange to set
 --- @return nil
-function Item:setHungerChange(arg0) end
+function Item:setHungerChange(HungerChange) end
 
 --- @public
---- @param arg0 string
+--- @param Icon string the Icon to set
 --- @return nil
-function Item:setIcon(arg0) end
+function Item:setIcon(Icon) end
 
 --- @public
---- @param arg0 string
+--- @param ImpactSound string the ImpactSound to set
 --- @return nil
-function Item:setImpactSound(arg0) end
+function Item:setImpactSound(ImpactSound) end
 
 --- @public
---- @param arg0 number
+--- @param f number
 --- @return nil
-function Item:setInsulation(arg0) end
+function Item:setInsulation(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param IsCookable boolean the IsCookable to set
 --- @return nil
-function Item:setIsCookable(arg0) end
+function Item:setIsCookable(IsCookable) end
 
 --- @public
 --- @param arg0 ItemConfig
@@ -1025,274 +1025,274 @@ function Item:setItemConfig(arg0) end
 function Item:setKeepOnDeplete(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param KnockBackOnNoDeath boolean the KnockBackOnNoDeath to set
 --- @return nil
-function Item:setKnockBackOnNoDeath(arg0) end
+function Item:setKnockBackOnNoDeath(KnockBackOnNoDeath) end
 
 --- @public
---- @param arg0 number
+--- @param KnockdownMod number the KnockdownMod to set
 --- @return nil
-function Item:setKnockdownMod(arg0) end
+function Item:setKnockdownMod(KnockdownMod) end
 
 --- @public
---- @param arg0 string
+--- @param functionName string
 --- @return nil
-function Item:setLuaCreate(arg0) end
+function Item:setLuaCreate(functionName) end
 
 --- @public
---- @param arg0 number
+--- @param MaxDamage number the MaxDamage to set
 --- @return nil
-function Item:setMaxDamage(arg0) end
+function Item:setMaxDamage(MaxDamage) end
 
 --- @public
---- @param arg0 integer
+--- @param MaxHitCount integer the MaxHitCount to set
 --- @return nil
-function Item:setMaxHitCount(arg0) end
+function Item:setMaxHitCount(MaxHitCount) end
 
 --- @public
---- @param arg0 number
+--- @param MaxRange number the MaxRange to set
 --- @return nil
-function Item:setMaxRange(arg0) end
+function Item:setMaxRange(MaxRange) end
 
 --- @public
---- @param arg0 number
+--- @param MinAngle number the MinAngle to set
 --- @return nil
-function Item:setMinAngle(arg0) end
+function Item:setMinAngle(MinAngle) end
 
 --- @public
---- @param arg0 number
+--- @param MinDamage number the MinDamage to set
 --- @return nil
-function Item:setMinDamage(arg0) end
+function Item:setMinDamage(MinDamage) end
 
 --- @public
---- @param arg0 number
+--- @param MinimumSwingTime number the MinimumSwingTime to set
 --- @return nil
-function Item:setMinimumSwingTime(arg0) end
+function Item:setMinimumSwingTime(MinimumSwingTime) end
 
 --- @public
---- @param arg0 integer
+--- @param MinutesToBurn integer the MinutesToBurn to set
 --- @return nil
-function Item:setMinutesToBurn(arg0) end
+function Item:setMinutesToBurn(MinutesToBurn) end
 
 --- @public
---- @param arg0 integer
+--- @param MinutesToCook integer the MinutesToCook to set
 --- @return nil
-function Item:setMinutesToCook(arg0) end
+function Item:setMinutesToCook(MinutesToCook) end
 
 --- @public
---- @param arg0 boolean
+--- @param MultipleHitConditionAffected boolean the MultipleHitConditionAffected to set
 --- @return nil
-function Item:setMultipleHitConditionAffected(arg0) end
+function Item:setMultipleHitConditionAffected(MultipleHitConditionAffected) end
 
 --- @public
---- @param arg0 number
+--- @param NPCSoundBoost number the NPCSoundBoost to set
 --- @return nil
-function Item:setNPCSoundBoost(arg0) end
+function Item:setNPCSoundBoost(NPCSoundBoost) end
 
 --- @public
---- @param arg0 string
+--- @param name string the name to set
 --- @return nil
-function Item:setName(arg0) end
+function Item:setName(name) end
 
 --- @public
---- @param arg0 number
+--- @param OtherCharacterVolumeBoost number the OtherCharacterVolumeBoost to set
 --- @return nil
-function Item:setOtherCharacterVolumeBoost(arg0) end
+function Item:setOtherCharacterVolumeBoost(OtherCharacterVolumeBoost) end
 
 --- @public
---- @param arg0 string
+--- @param OtherHandRequire string the OtherHandRequire to set
 --- @return nil
-function Item:setOtherHandRequire(arg0) end
+function Item:setOtherHandRequire(OtherHandRequire) end
 
 --- @public
---- @param arg0 boolean
+--- @param OtherHandUse boolean the OtherHandUse to set
 --- @return nil
-function Item:setOtherHandUse(arg0) end
+function Item:setOtherHandUse(OtherHandUse) end
 
 --- @public
---- @param arg0 Stack
+--- @param PaletteChoices Stack the PaletteChoices to set
 --- @return nil
-function Item:setPaletteChoices(arg0) end
+function Item:setPaletteChoices(PaletteChoices) end
 
 --- @public
---- @param arg0 string
+--- @param PalettesStart string the PalettesStart to set
 --- @return nil
-function Item:setPalettesStart(arg0) end
+function Item:setPalettesStart(PalettesStart) end
 
 --- @public
---- @param arg0 string
+--- @param PhysicsObject string the PhysicsObject to set
 --- @return nil
-function Item:setPhysicsObject(arg0) end
+function Item:setPhysicsObject(PhysicsObject) end
 
 --- @public
---- @param arg0 number
+--- @param PushBackMod number the PushBackMod to set
 --- @return nil
-function Item:setPushBackMod(arg0) end
+function Item:setPushBackMod(PushBackMod) end
 
 --- @public
---- @param arg0 boolean
+--- @param RangeFalloff boolean the RangeFalloff to set
 --- @return nil
-function Item:setRangeFalloff(arg0) end
+function Item:setRangeFalloff(RangeFalloff) end
 
 --- @public
---- @param arg0 boolean
+--- @param Ranged boolean the Ranged to set
 --- @return nil
-function Item:setRanged(arg0) end
+function Item:setRanged(Ranged) end
 
 --- @public
---- @param arg0 string
+--- @param ReplaceOnDeplete string
 --- @return nil
-function Item:setReplaceOnDeplete(arg0) end
+function Item:setReplaceOnDeplete(ReplaceOnDeplete) end
 
 --- @public
---- @param arg0 string
+--- @param ReplaceOnUse string the ReplaceOnUse to set
 --- @return nil
-function Item:setReplaceOnUse(arg0) end
+function Item:setReplaceOnUse(ReplaceOnUse) end
 
 --- @public
---- @param arg0 boolean
+--- @param ShareDamage boolean the ShareDamage to set
 --- @return nil
-function Item:setShareDamage(arg0) end
+function Item:setShareDamage(ShareDamage) end
 
 --- @public
---- @param arg0 boolean
+--- @param ShareEndurance boolean the ShareEndurance to set
 --- @return nil
-function Item:setShareEndurance(arg0) end
+function Item:setShareEndurance(ShareEndurance) end
 
 --- @public
---- @param arg0 integer
+--- @param SoundRadius integer the SoundRadius to set
 --- @return nil
-function Item:setSoundRadius(arg0) end
+function Item:setSoundRadius(SoundRadius) end
 
 --- @public
---- @param arg0 integer
+--- @param SoundVolume integer the SoundVolume to set
 --- @return nil
-function Item:setSoundVolume(arg0) end
+function Item:setSoundVolume(SoundVolume) end
 
 --- @public
---- @param arg0 boolean
+--- @param SplatBloodOnNoDeath boolean the SplatBloodOnNoDeath to set
 --- @return nil
-function Item:setSplatBloodOnNoDeath(arg0) end
+function Item:setSplatBloodOnNoDeath(SplatBloodOnNoDeath) end
 
 --- @public
---- @param arg0 integer
+--- @param SplatNumber integer the SplatNumber to set
 --- @return nil
-function Item:setSplatNumber(arg0) end
+function Item:setSplatNumber(SplatNumber) end
 
 --- @public
---- @param arg0 string
+--- @param SpriteName string the SpriteName to set
 --- @return nil
-function Item:setSpriteName(arg0) end
+function Item:setSpriteName(SpriteName) end
 
 --- @public
---- @param arg0 number
+--- @param StressChange number the StressChange to set
 --- @return nil
-function Item:setStressChange(arg0) end
+function Item:setStressChange(StressChange) end
 
 --- @public
---- @param arg0 number
+--- @param SwingAmountBeforeImpact number the SwingAmountBeforeImpact to set
 --- @return nil
-function Item:setSwingAmountBeforeImpact(arg0) end
+function Item:setSwingAmountBeforeImpact(SwingAmountBeforeImpact) end
 
 --- @public
---- @param arg0 string
+--- @param SwingAnim string the SwingAnim to set
 --- @return nil
-function Item:setSwingAnim(arg0) end
+function Item:setSwingAnim(SwingAnim) end
 
 --- @public
---- @param arg0 string
+--- @param SwingSound string the SwingSound to set
 --- @return nil
-function Item:setSwingSound(arg0) end
+function Item:setSwingSound(SwingSound) end
 
 --- @public
---- @param arg0 number
+--- @param SwingTime number the SwingTime to set
 --- @return nil
-function Item:setSwingTime(arg0) end
+function Item:setSwingTime(SwingTime) end
 
 --- @public
---- @param arg0 number
+--- @param temperature number
 --- @return nil
-function Item:setTemperature(arg0) end
+function Item:setTemperature(temperature) end
 
 --- @public
---- @param arg0 number
+--- @param ThirstChange number
 --- @return nil
-function Item:setThirstChange(arg0) end
+function Item:setThirstChange(ThirstChange) end
 
 --- @public
---- @param arg0 integer
+--- @param TicksPerEquipUse integer the TicksPerEquipUse to set
 --- @return nil
-function Item:setTicksPerEquipUse(arg0) end
+function Item:setTicksPerEquipUse(TicksPerEquipUse) end
 
 --- @public
---- @param arg0 number
+--- @param ToHitModifier number the ToHitModifier to set
 --- @return nil
-function Item:setToHitModifier(arg0) end
+function Item:setToHitModifier(ToHitModifier) end
 
 --- @public
---- @param arg0 Type
+--- @param type Type the type to set
 --- @return nil
-function Item:setType(arg0) end
+function Item:setType(type) end
 
 --- @public
---- @param arg0 number
+--- @param UnhappyChange number the UnhappyChange to set
 --- @return nil
-function Item:setUnhappyChange(arg0) end
+function Item:setUnhappyChange(UnhappyChange) end
 
 --- @public
---- @param arg0 number
+--- @param UseDelta number the UseDelta to set
 --- @return nil
-function Item:setUseDelta(arg0) end
+function Item:setUseDelta(UseDelta) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseEndurance boolean the UseEndurance to set
 --- @return nil
-function Item:setUseEndurance(arg0) end
+function Item:setUseEndurance(UseEndurance) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseSelf boolean the UseSelf to set
 --- @return nil
-function Item:setUseSelf(arg0) end
+function Item:setUseSelf(UseSelf) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseWhileEquipped boolean the UseWhileEquipped to set
 --- @return nil
-function Item:setUseWhileEquipped(arg0) end
+function Item:setUseWhileEquipped(UseWhileEquipped) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseWhileUnequipped boolean the UseWhileUnequipped to set
 --- @return nil
-function Item:setUseWhileUnequipped(arg0) end
+function Item:setUseWhileUnequipped(UseWhileUnequipped) end
 
 --- @public
---- @param arg0 number
+--- @param w number
 --- @return nil
-function Item:setWaterresist(arg0) end
+function Item:setWaterresist(w) end
 
 --- @public
---- @param arg0 string
+--- @param WeaponSprite string the WeaponSprite to set
 --- @return nil
-function Item:setWeaponSprite(arg0) end
+function Item:setWeaponSprite(WeaponSprite) end
 
 --- @public
---- @param arg0 number
+--- @param WeaponWeight number the WeaponWeight to set
 --- @return nil
-function Item:setWeaponWeight(arg0) end
+function Item:setWeaponWeight(WeaponWeight) end
 
 --- @public
---- @param arg0 number
+--- @param weight number the EmptyWeight to set
 --- @return nil
-function Item:setWeightEmpty(arg0) end
+function Item:setWeightEmpty(weight) end
 
 --- @public
---- @param arg0 number
+--- @param weight number
 --- @return nil
-function Item:setWeightWet(arg0) end
+function Item:setWeightWet(weight) end
 
 --- @public
---- @param arg0 number
+--- @param w number
 --- @return nil
-function Item:setWindresist(arg0) end
+function Item:setWindresist(w) end
 
 --- @public
 --- @return string

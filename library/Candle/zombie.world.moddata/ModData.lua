@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ModData
+--- @class ModData TurboTuTone.   Exposed class with only allowed functions accessible for modding
 --- @field public class any
 ModData = {}
 
@@ -10,34 +10,34 @@ ModData = {}
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 table
+--- @param tag string
+--- @param table table
 --- @return nil
-function ModData.add(arg0, arg1) end
+function ModData.add(tag, table) end
 
 --- @public
 --- @static
 --- @return string
---- @overload fun(arg0: string): table
+--- @overload fun(tag: string): table
 function ModData.create() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tag string
 --- @return boolean
-function ModData.exists(arg0) end
+function ModData.exists(tag) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tag string
 --- @return table
-function ModData.get(arg0) end
+function ModData.get(tag) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tag string
 --- @return table
-function ModData.getOrCreate(arg0) end
+function ModData.getOrCreate(tag) end
 
 --- @public
 --- @static
@@ -46,21 +46,21 @@ function ModData.getTableNames() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tag string
 --- @return table
-function ModData.remove(arg0) end
+function ModData.remove(tag) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tag string
 --- @return nil
-function ModData.request(arg0) end
+function ModData.request(tag) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tag string
 --- @return nil
-function ModData.transmit(arg0) end
+function ModData.transmit(tag) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RadioScript
+--- @class RadioScript Turbo
 --- @field public class any
 RadioScript = {}
 
@@ -9,17 +9,17 @@ RadioScript = {}
 ------------------------------------
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param broadcast RadioBroadCast
 --- @return nil
---- @overload fun(self: RadioScript, arg0: RadioBroadCast, arg1: boolean): nil
-function RadioScript:AddBroadcast(arg0) end
+--- @overload fun(self: RadioScript, broadcast: RadioBroadCast, ignoreTimestamps: boolean): nil
+function RadioScript:AddBroadcast(broadcast) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
+--- @param scriptname string
+--- @param chance integer
+--- @param startdelay integer
 --- @return nil
-function RadioScript:AddExitOption(arg0, arg1, arg2) end
+function RadioScript:AddExitOption(scriptname, chance, startdelay) end
 
 --- @public
 --- @return string
@@ -34,9 +34,9 @@ function RadioScript:GetName() end
 function RadioScript:Reset() end
 
 --- @public
---- @param arg0 integer
+--- @param timeStamp integer
 --- @return boolean
-function RadioScript:UpdateScript(arg0) end
+function RadioScript:UpdateScript(timeStamp) end
 
 --- @public
 --- @return nil
@@ -47,9 +47,9 @@ function RadioScript:clearExitOptions() end
 function RadioScript:getBroadcastList() end
 
 --- @public
---- @param arg0 string
+--- @param guid string
 --- @return RadioBroadCast
-function RadioScript:getBroadcastWithID(arg0) end
+function RadioScript:getBroadcastWithID(guid) end
 
 --- @public
 --- @return RadioBroadCast
@@ -88,18 +88,18 @@ function RadioScript:getValidAirBroadcast() end
 function RadioScript:getValidAirBroadcastDebug() end
 
 --- @public
---- @param arg0 integer
+--- @param day integer
 --- @return nil
-function RadioScript:setStartDayStamp(arg0) end
+function RadioScript:setStartDayStamp(day) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
+--- @param n string
+--- @param loopmin integer
+--- @param loopmax integer
 --- @return RadioScript
---- @overload fun(arg0: string, arg1: integer, arg2: integer, arg3: string): RadioScript
-function RadioScript.new(arg0, arg1, arg2) end
+--- @overload fun(n: string, loopmin: integer, loopmax: integer, guid: string): RadioScript
+function RadioScript.new(n, loopmin, loopmax) end

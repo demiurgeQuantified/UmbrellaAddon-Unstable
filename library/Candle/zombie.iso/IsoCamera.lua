@@ -14,9 +14,9 @@ IsoCamera = {}
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param GameChar IsoGameCharacter
 --- @return nil
-function IsoCamera.SetCharacterToFollow(arg0) end
+function IsoCamera.SetCharacterToFollow(GameChar) end
 
 --- @public
 --- @static
@@ -35,47 +35,47 @@ function IsoCamera.getCameraCharacterZ() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastOffX
 function IsoCamera.getLastOffX() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastOffY
 function IsoCamera.getLastOffY() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the OffX
 function IsoCamera.getOffX() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the OffY
 function IsoCamera.getOffY() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getOffscreenHeight(arg0) end
+function IsoCamera.getOffscreenHeight(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getOffscreenLeft(arg0) end
+function IsoCamera.getOffscreenLeft(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getOffscreenTop(arg0) end
+function IsoCamera.getOffscreenTop(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getOffscreenWidth(arg0) end
+function IsoCamera.getOffscreenWidth(playerIndex) end
 
 --- @public
 --- @static
@@ -89,27 +89,27 @@ function IsoCamera.getRightClickOffY() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getScreenHeight(arg0) end
+function IsoCamera.getScreenHeight(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getScreenLeft(arg0) end
+function IsoCamera.getScreenLeft(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getScreenTop(arg0) end
+function IsoCamera.getScreenTop(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param playerIndex integer
 --- @return integer
-function IsoCamera.getScreenWidth(arg0) end
+function IsoCamera.getScreenWidth(playerIndex) end
 
 --- @public
 --- @static
@@ -123,7 +123,7 @@ function IsoCamera.getTOffY() end
 
 --- @public
 --- @static
---- @return integer
+--- @return integer the TargetTileY
 function IsoCamera.getTargetTileY() end
 
 --- @public
@@ -139,33 +139,33 @@ function IsoCamera.setCameraCharacter(arg0) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastOffX number the lastOffX to set
 --- @return nil
-function IsoCamera.setLastOffX(arg0) end
+function IsoCamera.setLastOffX(aLastOffX) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastOffY number the lastOffY to set
 --- @return nil
-function IsoCamera.setLastOffY(arg0) end
+function IsoCamera.setLastOffY(aLastOffY) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aOffX number the OffX to set
 --- @return nil
-function IsoCamera.setOffX(arg0) end
+function IsoCamera.setOffX(aOffX) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aOffY number the OffY to set
 --- @return nil
-function IsoCamera.setOffY(arg0) end
+function IsoCamera.setOffY(aOffY) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param aTargetTileY integer the TargetTileY to set
 --- @return nil
-function IsoCamera.setTargetTileY(arg0) end
+function IsoCamera.setTargetTileY(aTargetTileY) end
 
 --- @public
 --- @static

@@ -18,28 +18,28 @@ function SmashWindowState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function SmashWindowState:animEvent(arg0, arg1) end
+function SmashWindowState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function SmashWindowState:enter(arg0) end
+function SmashWindowState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function SmashWindowState:execute(arg0) end
+function SmashWindowState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function SmashWindowState:exit(arg0) end
+function SmashWindowState:exit(owner) end
 
 --- @public
---- @return boolean
+--- @return boolean TRUE if this state handles the "Cancel Action" key or the B controller button.
 function SmashWindowState:isDoingActionThatCanBeCancelled() end
 
 ------------------------------------

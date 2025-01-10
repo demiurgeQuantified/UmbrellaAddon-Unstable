@@ -9,6 +9,10 @@ Nutrition = {}
 ------------------------------------
 
 --- @public
+---
+---  > 100 obese 85 to 100 over weight 75 to 85 normal 65 to 75 underweight 50 to
+---  very underweight <= 50 emaciated
+---
 --- @return nil
 function Nutrition:applyTraitFromWeight() end
 
@@ -17,6 +21,10 @@ function Nutrition:applyTraitFromWeight() end
 function Nutrition:applyWeightFromTraits() end
 
 --- @public
+---
+---  You gain xp only if you're in good shape As underweight or overweight you can
+---  be "fit"
+---
 --- @return boolean
 function Nutrition:canAddFitnessXp() end
 
@@ -57,54 +65,54 @@ function Nutrition:isIncWeight() end
 function Nutrition:isIncWeightLot() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return nil
-function Nutrition:load(arg0) end
+function Nutrition:load(input) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function Nutrition:save(arg0) end
+function Nutrition:save(output) end
 
 --- @public
---- @param arg0 number
+--- @param calories number
 --- @return nil
-function Nutrition:setCalories(arg0) end
+function Nutrition:setCalories(calories) end
 
 --- @public
---- @param arg0 number
+--- @param carbohydrates number
 --- @return nil
-function Nutrition:setCarbohydrates(arg0) end
+function Nutrition:setCarbohydrates(carbohydrates) end
 
 --- @public
---- @param arg0 boolean
+--- @param decWeight boolean
 --- @return nil
-function Nutrition:setDecWeight(arg0) end
+function Nutrition:setDecWeight(decWeight) end
 
 --- @public
---- @param arg0 boolean
+--- @param incWeight boolean
 --- @return nil
-function Nutrition:setIncWeight(arg0) end
+function Nutrition:setIncWeight(incWeight) end
 
 --- @public
---- @param arg0 boolean
+--- @param incWeightLot boolean
 --- @return nil
-function Nutrition:setIncWeightLot(arg0) end
+function Nutrition:setIncWeightLot(incWeightLot) end
 
 --- @public
---- @param arg0 number
+--- @param lipids number
 --- @return nil
-function Nutrition:setLipids(arg0) end
+function Nutrition:setLipids(lipids) end
 
 --- @public
---- @param arg0 number
+--- @param proteins number
 --- @return nil
-function Nutrition:setProteins(arg0) end
+function Nutrition:setProteins(proteins) end
 
 --- @public
---- @param arg0 number
+--- @param weight number
 --- @return nil
-function Nutrition:setWeight(arg0) end
+function Nutrition:setWeight(weight) end
 
 --- @public
 --- @return nil
@@ -119,6 +127,6 @@ function Nutrition:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param parent IsoPlayer
 --- @return Nutrition
-function Nutrition.new(arg0) end
+function Nutrition.new(parent) end

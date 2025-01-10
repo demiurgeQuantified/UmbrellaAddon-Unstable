@@ -38,9 +38,9 @@ function PhysicsShape:getTypeString() end
 function PhysicsShape:setPhysicsShapeScript(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param radius number
 --- @return nil
-function PhysicsShape:setRadius(arg0) end
+function PhysicsShape:setRadius(radius) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

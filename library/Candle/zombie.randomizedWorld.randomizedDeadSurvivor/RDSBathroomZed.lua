@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSBathroomZed: RandomizedDeadSurvivorBase
+--- @class RDSBathroomZed: RandomizedDeadSurvivorBase Create 1 to 2 zombies in the bathroom with some bathroom items on the ground
 --- @field public class any
 RDSBathroomZed = {}
 
@@ -9,9 +9,9 @@ RDSBathroomZed = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSBathroomZed:randomizeDeadSurvivor(arg0) end
+function RDSBathroomZed:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

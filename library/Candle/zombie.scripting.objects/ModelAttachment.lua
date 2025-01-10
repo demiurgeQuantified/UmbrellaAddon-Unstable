@@ -41,19 +41,19 @@ function ModelAttachment:getZOffset() end
 function ModelAttachment:isUpdateConstraint() end
 
 --- @public
---- @param arg0 string
+--- @param bone string
 --- @return nil
-function ModelAttachment:setBone(arg0) end
+function ModelAttachment:setBone(bone) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param canAttach ArrayList
 --- @return nil
-function ModelAttachment:setCanAttach(arg0) end
+function ModelAttachment:setCanAttach(canAttach) end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return nil
-function ModelAttachment:setId(arg0) end
+function ModelAttachment:setId(id) end
 
 --- @public
 --- @param arg0 IModelAttachmentOwner
@@ -66,20 +66,20 @@ function ModelAttachment:setOwner(arg0) end
 function ModelAttachment:setScale(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param updateConstraint boolean
 --- @return nil
-function ModelAttachment:setUpdateConstraint(arg0) end
+function ModelAttachment:setUpdateConstraint(updateConstraint) end
 
 --- @public
---- @param arg0 number
+--- @param zoffset number
 --- @return nil
-function ModelAttachment:setZOffset(arg0) end
+function ModelAttachment:setZOffset(zoffset) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return ModelAttachment
-function ModelAttachment.new(arg0) end
+function ModelAttachment.new(id) end

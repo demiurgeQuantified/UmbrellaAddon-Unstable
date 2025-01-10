@@ -9,9 +9,9 @@ DrainableComboItem = {}
 ------------------------------------
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function DrainableComboItem:CanStack(arg0) end
+function DrainableComboItem:CanStack(item) end
 
 --- @public
 --- @return boolean
@@ -51,7 +51,7 @@ function DrainableComboItem:getInvHeat() end
 function DrainableComboItem:getMaxUses() end
 
 --- @public
---- @return string
+--- @return string the OnCooked
 function DrainableComboItem:getOnCooked() end
 
 --- @public
@@ -59,11 +59,11 @@ function DrainableComboItem:getOnCooked() end
 function DrainableComboItem:getOnEat() end
 
 --- @public
---- @return List
+--- @return List the ReplaceOnCooked
 function DrainableComboItem:getReplaceOnCooked() end
 
 --- @public
---- @return string
+--- @return string the ReplaceOnDeplete
 function DrainableComboItem:getReplaceOnDeplete() end
 
 --- @public
@@ -75,19 +75,19 @@ function DrainableComboItem:getReplaceOnDepleteFullType() end
 function DrainableComboItem:getSaveType() end
 
 --- @public
---- @return number
+--- @return number the ticks
 function DrainableComboItem:getTicks() end
 
 --- @public
---- @return integer
+--- @return integer the ticksPerEquipUse
 function DrainableComboItem:getTicksPerEquipUse() end
 
 --- @public
---- @return number
+--- @return number the useDelta
 function DrainableComboItem:getUseDelta() end
 
 --- @public
---- @return number
+--- @return number the EmptyWeight
 function DrainableComboItem:getWeightEmpty() end
 
 --- @public
@@ -103,11 +103,11 @@ function DrainableComboItem:isEnergy() end
 function DrainableComboItem:isFullUses() end
 
 --- @public
---- @return boolean
+--- @return boolean the bUseWhileEquiped
 function DrainableComboItem:isUseWhileEquiped() end
 
 --- @public
---- @return boolean
+--- @return boolean the bUseWhileUnequiped
 function DrainableComboItem:isUseWhileUnequiped() end
 
 --- @public
@@ -125,9 +125,9 @@ function DrainableComboItem:render() end
 function DrainableComboItem:renderlast() end
 
 --- @public
---- @param arg0 boolean
+--- @param canConsolidate boolean
 --- @return nil
-function DrainableComboItem:setCanConsolidate(arg0) end
+function DrainableComboItem:setCanConsolidate(canConsolidate) end
 
 --- @public
 --- @param arg0 integer
@@ -140,14 +140,14 @@ function DrainableComboItem:setCurrentUses(arg0) end
 function DrainableComboItem:setCurrentUsesFloat(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param heat number
 --- @return nil
-function DrainableComboItem:setHeat(arg0) end
+function DrainableComboItem:setHeat(heat) end
 
 --- @public
---- @param arg0 string
+--- @param onCooked string the onCooked to set
 --- @return nil
-function DrainableComboItem:setOnCooked(arg0) end
+function DrainableComboItem:setOnCooked(onCooked) end
 
 --- @public
 --- @param arg0 string
@@ -155,50 +155,50 @@ function DrainableComboItem:setOnCooked(arg0) end
 function DrainableComboItem:setOnEat(arg0) end
 
 --- @public
---- @param arg0 List
+--- @param replaceOnCooked List the ReplaceOnCooked to set
 --- @return nil
-function DrainableComboItem:setReplaceOnCooked(arg0) end
+function DrainableComboItem:setReplaceOnCooked(replaceOnCooked) end
 
 --- @public
---- @param arg0 string
+--- @param ReplaceOnDeplete string
 --- @return nil
-function DrainableComboItem:setReplaceOnDeplete(arg0) end
+function DrainableComboItem:setReplaceOnDeplete(ReplaceOnDeplete) end
 
 --- @public
---- @param arg0 number
+--- @param ticks number the ticks to set
 --- @return nil
-function DrainableComboItem:setTicks(arg0) end
+function DrainableComboItem:setTicks(ticks) end
 
 --- @public
---- @param arg0 integer
+--- @param ticksPerEquipUse integer the ticksPerEquipUse to set
 --- @return nil
-function DrainableComboItem:setTicksPerEquipUse(arg0) end
+function DrainableComboItem:setTicksPerEquipUse(ticksPerEquipUse) end
 
 --- @public
---- @param arg0 number
+--- @param useDelta number the useDelta to set
 --- @return nil
-function DrainableComboItem:setUseDelta(arg0) end
+function DrainableComboItem:setUseDelta(useDelta) end
 
 --- @public
---- @param arg0 boolean
+--- @param bUseWhileEquiped boolean the bUseWhileEquiped to set
 --- @return nil
-function DrainableComboItem:setUseWhileEquiped(arg0) end
+function DrainableComboItem:setUseWhileEquiped(bUseWhileEquiped) end
 
 --- @public
---- @param arg0 boolean
+--- @param bUseWhileUnequiped boolean the bUseWhileUnequiped to set
 --- @return nil
-function DrainableComboItem:setUseWhileUnequiped(arg0) end
+function DrainableComboItem:setUseWhileUnequiped(bUseWhileUnequiped) end
 
 --- @public
---- @param arg0 number
+--- @param usedDelta number
 --- @return nil
 --- @deprecated
-function DrainableComboItem:setUsedDelta(arg0) end
+function DrainableComboItem:setUsedDelta(usedDelta) end
 
 --- @public
---- @param arg0 number
+--- @param weight number the EmptyWeight to set
 --- @return nil
-function DrainableComboItem:setWeightEmpty(arg0) end
+function DrainableComboItem:setWeightEmpty(weight) end
 
 --- @public
 --- @return boolean
@@ -222,10 +222,10 @@ function DrainableComboItem:updateWeight() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return DrainableComboItem
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): DrainableComboItem
-function DrainableComboItem.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(module: string, name: string, itemType: string, item: Item): DrainableComboItem
+function DrainableComboItem.new(module, name, itemType, texName) end

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class SLSoundManager
+--- @class SLSoundManager Turbo   Story line sound manager
 --- @field public class any
 --- @field public DEBUG boolean
 --- @field public Emitter StoryEmitter
@@ -50,9 +50,9 @@ function SLSoundManager:init() end
 function SLSoundManager:loadSounds() end
 
 --- @public
---- @param arg0 string
+--- @param line string
 --- @return nil
-function SLSoundManager:print(arg0) end
+function SLSoundManager:print(line) end
 
 --- @public
 --- @return nil
@@ -67,11 +67,11 @@ function SLSoundManager:renderDebug() end
 function SLSoundManager:thunderTest() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param storylineDay integer
+--- @param hour integer
+--- @param min integer
 --- @return nil
-function SLSoundManager:update(arg0, arg1, arg2) end
+function SLSoundManager:update(storylineDay, hour, min) end
 
 --- @public
 --- @return nil

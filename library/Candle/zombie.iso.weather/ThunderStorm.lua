@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ThunderStorm
+--- @class ThunderStorm TurboTuTone.
 --- @field public class any
 --- @field public MAP_MAX_X integer
 --- @field public MAP_MAX_Y integer
@@ -26,20 +26,20 @@ function ThunderStorm.getMapDiagonal() end
 function ThunderStorm:HasActiveThunderClouds() end
 
 --- @public
---- @param arg0 PlayerRenderSettings
---- @param arg1 integer
---- @param arg2 IsoPlayer
+--- @param renderSettings PlayerRenderSettings
+--- @param plrIndex integer
+--- @param player IsoPlayer
 --- @return nil
-function ThunderStorm:applyLightningForPlayer(arg0, arg1, arg2) end
+function ThunderStorm:applyLightningForPlayer(renderSettings, plrIndex, player) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
+--- @param x integer
+--- @param y integer
+--- @param doStrike boolean
+--- @param doLightning boolean
+--- @param doRumble boolean
 --- @return nil
-function ThunderStorm:enqueueThunderEvent(arg0, arg1, arg2, arg3, arg4) end
+function ThunderStorm:enqueueThunderEvent(x, y, doStrike, doLightning, doRumble) end
 
 --- @public
 --- @return ArrayList
@@ -50,70 +50,73 @@ function ThunderStorm:getClouds() end
 function ThunderStorm:isModifyingNight() end
 
 --- @public
---- @param arg0 DataInputStream
+--- @param input DataInputStream
 --- @return nil
-function ThunderStorm:load(arg0) end
+function ThunderStorm:load(input) end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return nil
-function ThunderStorm:noise(arg0) end
+function ThunderStorm:noise(s) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return nil
-function ThunderStorm:readNetThunderEvent(arg0) end
+function ThunderStorm:readNetThunderEvent(input) end
 
 --- @public
---- @param arg0 DataOutputStream
+---
+---  IO
+---
+--- @param output DataOutputStream
 --- @return nil
-function ThunderStorm:save(arg0) end
+function ThunderStorm:save(output) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 boolean
+--- @param str number
+--- @param angle number
+--- @param radius number
+--- @param eventFreq number
+--- @param thunderRatio number
+--- @param duration number
+--- @param targetRandomPlayer boolean
 --- @return nil
---- @overload fun(self: ThunderStorm, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: boolean, arg7: number): ThunderCloud
-function ThunderStorm:startThunderCloud(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(self: ThunderStorm, str: number, angle: number, radius: number, eventFreq: number, thunderRatio: number, duration: number, targetRandomPlayer: boolean, percentageOffset: number): ThunderCloud
+function ThunderStorm:startThunderCloud(str, angle, radius, eventFreq, thunderRatio, duration, targetRandomPlayer) end
 
 --- @public
 --- @return nil
 function ThunderStorm:stopAllClouds() end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return nil
-function ThunderStorm:stopCloud(arg0) end
+function ThunderStorm:stopCloud(id) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
+--- @param x integer
+--- @param y integer
+--- @param doStrike boolean
+--- @param doLightning boolean
+--- @param doRumble boolean
 --- @return nil
-function ThunderStorm:triggerThunderEvent(arg0, arg1, arg2, arg3, arg4) end
+function ThunderStorm:triggerThunderEvent(x, y, doStrike, doLightning, doRumble) end
 
 --- @public
---- @param arg0 number
+--- @param currentTime number
 --- @return nil
-function ThunderStorm:update(arg0) end
+function ThunderStorm:update(currentTime) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function ThunderStorm:writeNetThunderEvent(arg0) end
+function ThunderStorm:writeNetThunderEvent(output) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateManager
+--- @param climmgr ClimateManager
 --- @return ThunderStorm
-function ThunderStorm.new(arg0) end
+function ThunderStorm.new(climmgr) end

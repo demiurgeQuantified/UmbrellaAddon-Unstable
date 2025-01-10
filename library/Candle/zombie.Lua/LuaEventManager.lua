@@ -11,9 +11,9 @@ LuaEventManager = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return Event
-function LuaEventManager.AddEvent(arg0) end
+function LuaEventManager.AddEvent(name) end
 
 --- @public
 --- @static
@@ -44,17 +44,17 @@ function LuaEventManager.getEvents(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 Platform
---- @param arg1 table
+--- @param platform Platform
+--- @param environment table
 --- @return nil
-function LuaEventManager.register(arg0, arg1) end
+function LuaEventManager.register(platform, environment) end
 
 --- @public
 --- @static
---- @param arg0 Prototype
---- @param arg1 function
+--- @param prototype Prototype
+--- @param luaClosure function
 --- @return nil
-function LuaEventManager.reroute(arg0, arg1) end
+function LuaEventManager.reroute(prototype, luaClosure) end
 
 --- @public
 --- @static
@@ -65,45 +65,48 @@ function LuaEventManager.setEvents(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param event string
 --- @return nil
---- @overload fun(arg0: string, arg1: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): nil
-function LuaEventManager.triggerEvent(arg0) end
+--- @overload fun(event: string, param1: any): nil
+--- @overload fun(event: string, param1: any, param2: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any, param4: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any, param4: any, param5: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any, param4: any, param5: any, param6: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any, param4: any, param5: any, param6: any, param7: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any, param4: any, param5: any, param6: any, param7: any, param8: any): nil
+function LuaEventManager.triggerEvent(event) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 any
+--- @param event string
+--- @param param1 any
 --- @return nil
---- @overload fun(arg0: string, arg1: any, arg2: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
-function LuaEventManager.triggerEventGarbage(arg0, arg1) end
+--- @overload fun(event: string, param1: any, param2: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any): nil
+--- @overload fun(event: string, param1: any, param2: any, param3: any, param4: any): nil
+function LuaEventManager.triggerEventGarbage(event, param1) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 any
+--- @param event string
+--- @param param1 any
 --- @return nil
-function LuaEventManager.triggerEventUnique(arg0, arg1) end
+function LuaEventManager.triggerEventUnique(event, param1) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 LuaCallFrame
---- @param arg1 integer
---- @return integer
---- @overload fun(self: LuaEventManager, arg0: LuaCallFrame, arg1: integer): integer
-function LuaEventManager:call(arg0, arg1) end
+---
+---  Description copied from interface: se.krka.kahlua.vm.JavaFunction
+---
+--- @param callFrame LuaCallFrame
+--- @param nArguments integer
+--- @return integer N, number of return values. The top N objects on the stack are considered the return values.
+--- @overload fun(self: LuaEventManager, callFrame: LuaCallFrame, nArguments: integer): integer N, number of return values. The top N objects on the stack are considered the return values.
+function LuaEventManager:call(callFrame, nArguments) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

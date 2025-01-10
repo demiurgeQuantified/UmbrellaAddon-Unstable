@@ -12,9 +12,9 @@ GameKeyboard = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param key integer
 --- @return nil
-function GameKeyboard.eatKeyPress(arg0) end
+function GameKeyboard.eatKeyPress(key) end
 
 --- @public
 --- @static
@@ -28,17 +28,24 @@ function GameKeyboard.getEventQueuePolling() end
 
 --- @public
 --- @static
---- @param arg0 integer
+---
+---  Is the key down. Continuous.
+---
+--- @param key integer
 --- @return boolean
 --- @overload fun(arg0: string): boolean
-function GameKeyboard.isKeyDown(arg0) end
+function GameKeyboard.isKeyDown(key) end
 
 --- @public
 --- @static
---- @param arg0 integer
+---
+---  Has the key been pressed. Not continuous. That is, is the key down now, but was
+---  down before.
+---
+--- @param key integer
 --- @return boolean
 --- @overload fun(arg0: string): boolean
-function GameKeyboard.isKeyPressed(arg0) end
+function GameKeyboard.isKeyPressed(key) end
 
 --- @public
 --- @static
@@ -47,9 +54,9 @@ function GameKeyboard.poll() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param doIt boolean
 --- @return nil
-function GameKeyboard.setDoLuaKeyPressed(arg0) end
+function GameKeyboard.setDoLuaKeyPressed(doIt) end
 
 --- @public
 --- @static
@@ -58,10 +65,13 @@ function GameKeyboard.update() end
 
 --- @public
 --- @static
---- @param arg0 integer
+---
+---  Was they key down last frame. Continuous.
+---
+--- @param key integer
 --- @return boolean
 --- @overload fun(arg0: string): boolean
-function GameKeyboard.wasKeyDown(arg0) end
+function GameKeyboard.wasKeyDown(key) end
 
 --- @public
 --- @static

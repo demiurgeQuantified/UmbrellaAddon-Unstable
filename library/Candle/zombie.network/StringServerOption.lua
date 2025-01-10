@@ -23,9 +23,9 @@ function StringServerOption:getTooltip() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOptions
---- @param arg1 string
---- @param arg2 string
---- @param arg3 integer
+--- @param owner ServerOptions
+--- @param name string
+--- @param defaultValue string
+--- @param maxLength integer
 --- @return StringServerOption
-function StringServerOption.new(arg0, arg1, arg2, arg3) end
+function StringServerOption.new(owner, name, defaultValue, maxLength) end

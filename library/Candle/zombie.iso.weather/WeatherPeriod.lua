@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class WeatherPeriod
+--- @class WeatherPeriod TurboTuTone.
 --- @field public class any
 --- @field public FRONT_STRENGTH_THRESHOLD number
 --- @field public STAGE_BLIZZARD integer
@@ -32,16 +32,16 @@ function WeatherPeriod.getMaxTemperatureInfluence() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
+--- @param moddedID string
+--- @param duration number
 --- @return WeatherStage
-function WeatherPeriod:createAndAddModdedStage(arg0, arg1) end
+function WeatherPeriod:createAndAddModdedStage(moddedID, duration) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param typeid integer
+--- @param duration number
 --- @return WeatherStage
-function WeatherPeriod:createAndAddStage(arg0, arg1) end
+function WeatherPeriod:createAndAddStage(typeid, duration) end
 
 --- @public
 --- @return boolean
@@ -112,9 +112,9 @@ function WeatherPeriod:getPrintStuff() end
 function WeatherPeriod:getRainThreshold() end
 
 --- @public
---- @param arg0 number
+--- @param worldAgeHours number
 --- @return WeatherStage
-function WeatherPeriod:getStageForWorldAge(arg0) end
+function WeatherPeriod:getStageForWorldAge(worldAgeHours) end
 
 --- @public
 --- @return number
@@ -157,11 +157,11 @@ function WeatherPeriod:hasStorm() end
 function WeatherPeriod:hasTropical() end
 
 --- @public
---- @param arg0 AirFront
---- @param arg1 number
+--- @param front AirFront
+--- @param hoursSinceStart number
 --- @return nil
---- @overload fun(self: WeatherPeriod, arg0: AirFront, arg1: number, arg2: integer, arg3: number): nil
-function WeatherPeriod:initSimulationDebug(arg0, arg1) end
+--- @overload fun(self: WeatherPeriod, front: AirFront, hoursSinceStart: number, doThisStageOnly: integer, singleStageDuration: number): nil
+function WeatherPeriod:initSimulationDebug(front, hoursSinceStart) end
 
 --- @public
 --- @return boolean
@@ -180,74 +180,77 @@ function WeatherPeriod:isThunderStorm() end
 function WeatherPeriod:isTropicalStorm() end
 
 --- @public
---- @param arg0 DataInputStream
---- @param arg1 integer
+--- @param input DataInputStream
+--- @param worldVersion integer
 --- @return nil
-function WeatherPeriod:load(arg0, arg1) end
+function WeatherPeriod:load(input, worldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return nil
-function WeatherPeriod:readNetWeatherData(arg0) end
+function WeatherPeriod:readNetWeatherData(input) end
 
 --- @public
---- @param arg0 DataOutputStream
+---
+---  IO
+---
+--- @param output DataOutputStream
 --- @return nil
-function WeatherPeriod:save(arg0) end
+function WeatherPeriod:save(output) end
 
 --- @public
---- @param arg0 ClimateColorInfo
+--- @param cloudcol ClimateColorInfo
 --- @return nil
-function WeatherPeriod:setCloudColor(arg0) end
+function WeatherPeriod:setCloudColor(cloudcol) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function WeatherPeriod:setDummy(arg0) end
+function WeatherPeriod:setDummy(b) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function WeatherPeriod:setKateBobStormCoords(arg0, arg1) end
+function WeatherPeriod:setKateBobStormCoords(x, y) end
 
 --- @public
---- @param arg0 number
+--- @param progress number
 --- @return nil
-function WeatherPeriod:setKateBobStormProgress(arg0) end
+function WeatherPeriod:setKateBobStormProgress(progress) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function WeatherPeriod:setPrintStuff(arg0) end
+function WeatherPeriod:setPrintStuff(b) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 number
---- @param arg2 number
+--- @param warmFront boolean
+--- @param strength number
+--- @param angle number
 --- @return boolean
-function WeatherPeriod:startCreateModdedPeriod(arg0, arg1, arg2) end
+function WeatherPeriod:startCreateModdedPeriod(warmFront, strength, angle) end
 
 --- @public
 --- @return nil
 function WeatherPeriod:stopWeatherPeriod() end
 
 --- @public
---- @param arg0 number
+--- @param hoursSinceStart number
 --- @return nil
-function WeatherPeriod:update(arg0) end
+function WeatherPeriod:update(hoursSinceStart) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function WeatherPeriod:writeNetWeatherData(arg0) end
+function WeatherPeriod:writeNetWeatherData(output) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateManager
---- @param arg1 ThunderStorm
+--- @param climmgr ClimateManager
+--- @param ts ThunderStorm
 --- @return WeatherPeriod
-function WeatherPeriod.new(arg0, arg1) end
+function WeatherPeriod.new(climmgr, ts) end

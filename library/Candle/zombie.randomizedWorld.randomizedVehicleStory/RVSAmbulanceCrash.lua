@@ -9,23 +9,23 @@ RVSAmbulanceCrash = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RVSAmbulanceCrash:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RVSAmbulanceCrash:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return nil
-function RVSAmbulanceCrash:randomizeVehicleStory(arg0, arg1) end
+function RVSAmbulanceCrash:randomizeVehicleStory(zone, chunk) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return nil
-function RVSAmbulanceCrash:spawnElement(arg0, arg1) end
+function RVSAmbulanceCrash:spawnElement(spawner, element) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

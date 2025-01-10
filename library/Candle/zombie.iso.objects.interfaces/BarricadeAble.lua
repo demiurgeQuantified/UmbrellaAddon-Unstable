@@ -9,9 +9,9 @@ BarricadeAble = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
-function BarricadeAble:getBarricadeForCharacter(arg0) end
+function BarricadeAble:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
@@ -22,9 +22,9 @@ function BarricadeAble:getBarricadeOnOppositeSquare() end
 function BarricadeAble:getBarricadeOnSameSquare() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
-function BarricadeAble:getBarricadeOppositeCharacter(arg0) end
+function BarricadeAble:getBarricadeOppositeCharacter(chr) end
 
 --- @public
 --- @return boolean

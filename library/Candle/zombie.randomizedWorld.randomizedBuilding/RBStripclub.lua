@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBStripclub: RandomizedBuildingBase
+--- @class RBStripclub: RandomizedBuildingBase Add money/alcohol on table  Can also generate a rare male venue
 --- @field public class any
 RBStripclub = {}
 
@@ -9,15 +9,18 @@ RBStripclub = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+---
+---  Description copied from class: RandomizedBuildingBase
+---
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBStripclub:isValid(arg0, arg1) end
+function RBStripclub:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBStripclub:randomizeBuilding(arg0) end
+function RBStripclub:randomizeBuilding(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

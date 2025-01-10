@@ -9,8 +9,8 @@ ColorRGB = {}
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param r integer
+--- @param g integer
+--- @param b integer
 --- @return ColorRGB
-function ColorRGB.new(arg0, arg1, arg2) end
+function ColorRGB.new(r, g, b) end

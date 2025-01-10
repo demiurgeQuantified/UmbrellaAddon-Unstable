@@ -13,32 +13,32 @@ SurvivorFactory = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param nCount integer
 --- @return SurvivorDesc[]
-function SurvivorFactory.CreateFamily(arg0) end
+function SurvivorFactory.CreateFamily(nCount) end
 
 --- @public
 --- @static
 --- @return SurvivorDesc
---- @overload fun(arg0: SurvivorType): SurvivorDesc
---- @overload fun(arg0: SurvivorType, arg1: boolean): SurvivorDesc
+--- @overload fun(survivorType: SurvivorType): SurvivorDesc
+--- @overload fun(survivorType: SurvivorType, bFemale: boolean): SurvivorDesc
 function SurvivorFactory.CreateSurvivor() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param nCount integer
 --- @return SurvivorDesc[]
-function SurvivorFactory.CreateSurvivorGroup(arg0) end
+function SurvivorFactory.CreateSurvivorGroup(nCount) end
 
 --- @public
 --- @static
---- @param arg0 SurvivorDesc
---- @param arg1 IsoCell
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param desc SurvivorDesc
+--- @param cell IsoCell
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return IsoSurvivor
-function SurvivorFactory.InstansiateInCell(arg0, arg1, arg2, arg3, arg4) end
+function SurvivorFactory.InstansiateInCell(desc, cell, x, y, z) end
 
 --- @public
 --- @static
@@ -47,27 +47,27 @@ function SurvivorFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param forename string
 --- @return nil
-function SurvivorFactory.addFemaleForename(arg0) end
+function SurvivorFactory.addFemaleForename(forename) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param forename string
 --- @return nil
-function SurvivorFactory.addMaleForename(arg0) end
+function SurvivorFactory.addMaleForename(forename) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param surName string
 --- @return nil
-function SurvivorFactory.addSurname(arg0) end
+function SurvivorFactory.addSurname(surName) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bFemale boolean
 --- @return string
-function SurvivorFactory.getRandomForename(arg0) end
+function SurvivorFactory.getRandomForename(bFemale) end
 
 --- @public
 --- @static
@@ -76,15 +76,15 @@ function SurvivorFactory.getRandomSurname() end
 
 --- @public
 --- @static
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return nil
-function SurvivorFactory.randomName(arg0) end
+function SurvivorFactory.randomName(desc) end
 
 --- @public
 --- @static
---- @param arg0 SurvivorDesc
+--- @param survivor SurvivorDesc
 --- @return nil
-function SurvivorFactory.setTorso(arg0) end
+function SurvivorFactory.setTorso(survivor) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

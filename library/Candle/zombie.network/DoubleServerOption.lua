@@ -23,10 +23,10 @@ function DoubleServerOption:getTooltip() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOptions
---- @param arg1 string
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param owner ServerOptions
+--- @param name string
+--- @param min number
+--- @param max number
+--- @param defaultValue number
 --- @return DoubleServerOption
-function DoubleServerOption.new(arg0, arg1, arg2, arg3, arg4) end
+function DoubleServerOption.new(owner, name, min, max, defaultValue) end

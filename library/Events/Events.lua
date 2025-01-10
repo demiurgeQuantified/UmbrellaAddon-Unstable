@@ -721,7 +721,7 @@ Events.OnDoTileBuilding = {
 }
 
 ---cursor - The build cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
----@alias Callback_OnDoTileBuilding2 fun(cursor:ISMoveableCursor,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare?)
+---@alias Callback_OnDoTileBuilding2 fun(cursor:ISBuildingObject,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare?)
 
 ---(Client) OnDoTileBuilding2: Fires every tick while the local mouse and keyboard player has a build cursor (or other drag).
 ---<br><br>cursor - The build cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
@@ -733,7 +733,7 @@ Events.OnDoTileBuilding2 = {
 }
 
 ---cursor - The cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
----@alias Callback_OnDoTileBuilding3 fun(cursor:ISMoveableCursor,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare?)
+---@alias Callback_OnDoTileBuilding3 fun(cursor:ISBuildingObject,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare?)
 
 ---(Client) OnDoTileBuilding3: Fires every tick while a controller player has a build cursor (or other drag).
 ---<br><br>cursor - The cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
@@ -2493,7 +2493,7 @@ Events.onUpdateIcon = {
 }
 
 ---
----@alias Callback_OnUpdateModdedWeatherStage fun(weatherPeriod:WeatherPeriod,weatherStage:WeatherStage,strength:number)
+---@alias Callback_OnUpdateModdedWeatherStage fun(weatherPeriod:WeatherPeriod,weatherStage:WeatherPeriod.WeatherStage,strength:number)
 
 ---(Server) OnUpdateModdedWeatherStage: Fires when a modded weather stage tries to be updated.
 ---<br><br>

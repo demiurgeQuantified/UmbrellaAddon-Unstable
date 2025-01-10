@@ -12,10 +12,10 @@ Key = {}
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 InventoryItem
+--- @param playerNum integer
+--- @param item InventoryItem
 --- @return nil
-function Key.setHighlightDoors(arg0, arg1) end
+function Key.setHighlightDoors(playerNum, item) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -46,38 +46,41 @@ function Key:isDigitalPadlock() end
 function Key:isPadlock() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Key:load(arg0, arg1) end
+function Key:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function Key:save(arg0, arg1) end
+function Key:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param digitalPadlock boolean
 --- @return nil
-function Key:setDigitalPadlock(arg0) end
+function Key:setDigitalPadlock(digitalPadlock) end
 
 --- @public
---- @param arg0 integer
+--- @param keyId integer
 --- @return nil
-function Key:setKeyId(arg0) end
+function Key:setKeyId(keyId) end
 
 --- @public
---- @param arg0 integer
+--- @param numberOfKey integer
 --- @return nil
-function Key:setNumberOfKey(arg0) end
+function Key:setNumberOfKey(numberOfKey) end
 
 --- @public
---- @param arg0 boolean
+--- @param padlock boolean
 --- @return nil
-function Key:setPadlock(arg0) end
+function Key:setPadlock(padlock) end
 
 --- @public
+---
+---  Get the key number of the building and set it to the key
+---
 --- @return nil
 function Key:takeKeyId() end
 
@@ -86,9 +89,9 @@ function Key:takeKeyId() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param tex string
 --- @return Key
-function Key.new(arg0, arg1, arg2, arg3) end
+function Key.new(module, name, type, tex) end

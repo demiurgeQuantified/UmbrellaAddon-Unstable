@@ -14,9 +14,9 @@ ContainerOverlays = {}
 function ContainerOverlays:Reset() end
 
 --- @public
---- @param arg0 table
+--- @param overlayMap table
 --- @return nil
-function ContainerOverlays:addOverlays(arg0) end
+function ContainerOverlays:addOverlays(overlayMap) end
 
 --- @public
 --- @param arg0 string
@@ -24,14 +24,14 @@ function ContainerOverlays:addOverlays(arg0) end
 function ContainerOverlays:getUnderlyingSpriteNames(arg0) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function ContainerOverlays:hasOverlays(arg0) end
+function ContainerOverlays:hasOverlays(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return nil
-function ContainerOverlays:updateContainerOverlaySprite(arg0) end
+function ContainerOverlays:updateContainerOverlaySprite(obj) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

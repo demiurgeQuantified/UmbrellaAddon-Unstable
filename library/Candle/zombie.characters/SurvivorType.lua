@@ -19,5 +19,9 @@ function SurvivorType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return SurvivorType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return SurvivorType[] an array containing the constants of this enum class, in the order they are declared
 function SurvivorType.values() end

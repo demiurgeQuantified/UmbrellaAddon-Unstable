@@ -9,29 +9,29 @@ AttachedLocationGroup = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return nil
-function AttachedLocationGroup:checkValid(arg0) end
+function AttachedLocationGroup:checkValid(locationId) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return AttachedLocation
-function AttachedLocationGroup:getLocation(arg0) end
+function AttachedLocationGroup:getLocation(locationId) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return AttachedLocation
-function AttachedLocationGroup:getLocationByIndex(arg0) end
+function AttachedLocationGroup:getLocationByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return AttachedLocation
-function AttachedLocationGroup:getOrCreateLocation(arg0) end
+function AttachedLocationGroup:getOrCreateLocation(locationId) end
 
 --- @public
---- @param arg0 string
+--- @param locationId string
 --- @return integer
-function AttachedLocationGroup:indexOf(arg0) end
+function AttachedLocationGroup:indexOf(locationId) end
 
 --- @public
 --- @return integer
@@ -42,6 +42,6 @@ function AttachedLocationGroup:size() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return AttachedLocationGroup
-function AttachedLocationGroup.new(arg0) end
+function AttachedLocationGroup.new(id) end

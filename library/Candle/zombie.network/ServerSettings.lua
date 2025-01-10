@@ -9,10 +9,10 @@ ServerSettings = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param file string
 --- @return nil
-function ServerSettings:addSpawnRegion(arg0, arg1) end
+function ServerSettings:addSpawnRegion(name, file) end
 
 --- @public
 --- @return nil
@@ -23,9 +23,9 @@ function ServerSettings:clearSpawnRegions() end
 function ServerSettings:deleteFiles() end
 
 --- @public
---- @param arg0 string
+--- @param newName string
 --- @return boolean
-function ServerSettings:duplicateFiles(arg0) end
+function ServerSettings:duplicateFiles(newName) end
 
 --- @public
 --- @return string
@@ -48,14 +48,14 @@ function ServerSettings:getSandboxOptions() end
 function ServerSettings:getServerOptions() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return string
-function ServerSettings:getSpawnRegionFile(arg0) end
+function ServerSettings:getSpawnRegionFile(index) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return string
-function ServerSettings:getSpawnRegionName(arg0) end
+function ServerSettings:getSpawnRegionName(index) end
 
 --- @public
 --- @return boolean
@@ -66,19 +66,19 @@ function ServerSettings:isValid() end
 function ServerSettings:loadFiles() end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return table
-function ServerSettings:loadSpawnPointsFile(arg0) end
+function ServerSettings:loadSpawnPointsFile(file) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return nil
-function ServerSettings:removeSpawnRegion(arg0) end
+function ServerSettings:removeSpawnRegion(index) end
 
 --- @public
---- @param arg0 string
+--- @param newName string
 --- @return boolean
-function ServerSettings:rename(arg0) end
+function ServerSettings:rename(newName) end
 
 --- @public
 --- @return nil
@@ -89,16 +89,16 @@ function ServerSettings:resetToDefault() end
 function ServerSettings:saveFiles() end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
+--- @param file string
+--- @param professionsTable table
 --- @return boolean
-function ServerSettings:saveSpawnPointsFile(arg0, arg1) end
+function ServerSettings:saveSpawnPointsFile(file, professionsTable) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ServerSettings
-function ServerSettings.new(arg0) end
+function ServerSettings.new(name) end

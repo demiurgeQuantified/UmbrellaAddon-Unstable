@@ -13,56 +13,56 @@ LayoutItem = {}
 function LayoutItem:calcSizes() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 ObjectTooltip
+--- @param x integer
+--- @param y integer
+--- @param mid integer
+--- @param right integer
+--- @param ui ObjectTooltip
 --- @return nil
-function LayoutItem:render(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:render(x, y, mid, right, ui) end
 
 --- @public
 --- @return nil
 function LayoutItem:reset() end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param label string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function LayoutItem:setLabel(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:setLabel(label, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param fraction number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function LayoutItem:setProgress(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:setProgress(fraction, r, g, b, a) end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param label string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function LayoutItem:setValue(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:setValue(label, r, g, b, a) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 boolean
+--- @param value integer
+--- @param highGood boolean
 --- @return nil
-function LayoutItem:setValueRight(arg0, arg1) end
+function LayoutItem:setValueRight(value, highGood) end
 
 --- @public
---- @param arg0 number
+--- @param value number
 --- @return nil
---- @overload fun(self: LayoutItem, arg0: integer): nil
-function LayoutItem:setValueRightNoPlus(arg0) end
+--- @overload fun(self: LayoutItem, value: integer): nil
+function LayoutItem:setValueRightNoPlus(value) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

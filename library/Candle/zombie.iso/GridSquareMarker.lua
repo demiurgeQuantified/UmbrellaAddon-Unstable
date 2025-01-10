@@ -81,14 +81,14 @@ function GridSquareMarker:getY() end
 function GridSquareMarker:getZ() end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 number
+--- @param texid string
+--- @param overlay string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param size number
 --- @return nil
-function GridSquareMarker:init(arg0, arg1, arg2, arg3, arg4, arg5) end
+function GridSquareMarker:init(texid, overlay, x, y, z, size) end
 
 --- @public
 --- @return boolean
@@ -99,6 +99,9 @@ function GridSquareMarker:isActive() end
 function GridSquareMarker:isDoAlpha() end
 
 --- @public
+---
+---  If blink set uses Core.blinkAlpha, this takes precedence over other alpha
+---
 --- @return boolean
 function GridSquareMarker:isDoBlink() end
 
@@ -115,84 +118,84 @@ function GridSquareMarker:isScaleCircleTexture() end
 function GridSquareMarker:remove() end
 
 --- @public
---- @param arg0 number
+--- @param a number
 --- @return nil
-function GridSquareMarker:setA(arg0) end
+function GridSquareMarker:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return nil
-function GridSquareMarker:setActive(arg0) end
+function GridSquareMarker:setActive(active) end
 
 --- @public
---- @param arg0 number
+--- @param alpha number
 --- @return nil
-function GridSquareMarker:setAlpha(arg0) end
+function GridSquareMarker:setAlpha(alpha) end
 
 --- @public
---- @param arg0 number
+--- @param alphaMax number
 --- @return nil
-function GridSquareMarker:setAlphaMax(arg0) end
+function GridSquareMarker:setAlphaMax(alphaMax) end
 
 --- @public
---- @param arg0 number
+--- @param alphaMin number
 --- @return nil
-function GridSquareMarker:setAlphaMin(arg0) end
+function GridSquareMarker:setAlphaMin(alphaMin) end
 
 --- @public
---- @param arg0 number
+--- @param b number
 --- @return nil
-function GridSquareMarker:setB(arg0) end
+function GridSquareMarker:setB(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param doAlpha boolean
 --- @return nil
-function GridSquareMarker:setDoAlpha(arg0) end
+function GridSquareMarker:setDoAlpha(doAlpha) end
 
 --- @public
---- @param arg0 boolean
+--- @param doBlink boolean
 --- @return nil
-function GridSquareMarker:setDoBlink(arg0) end
+function GridSquareMarker:setDoBlink(doBlink) end
 
 --- @public
---- @param arg0 number
+--- @param fadeSpeed number
 --- @return nil
-function GridSquareMarker:setFadeSpeed(arg0) end
+function GridSquareMarker:setFadeSpeed(fadeSpeed) end
 
 --- @public
---- @param arg0 number
+--- @param g number
 --- @return nil
-function GridSquareMarker:setG(arg0) end
+function GridSquareMarker:setG(g) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function GridSquareMarker:setPos(arg0, arg1, arg2) end
+function GridSquareMarker:setPos(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 number
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param size number
 --- @return nil
-function GridSquareMarker:setPosAndSize(arg0, arg1, arg2, arg3) end
+function GridSquareMarker:setPosAndSize(x, y, z, size) end
 
 --- @public
---- @param arg0 number
+--- @param r number
 --- @return nil
-function GridSquareMarker:setR(arg0) end
+function GridSquareMarker:setR(r) end
 
 --- @public
---- @param arg0 boolean
+--- @param bScale boolean
 --- @return nil
-function GridSquareMarker:setScaleCircleTexture(arg0) end
+function GridSquareMarker:setScaleCircleTexture(bScale) end
 
 --- @public
---- @param arg0 number
+--- @param size number
 --- @return nil
-function GridSquareMarker:setSize(arg0) end
+function GridSquareMarker:setSize(size) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

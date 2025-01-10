@@ -25,17 +25,17 @@ function ItemRecipe:getName() end
 function ItemRecipe:getUse() end
 
 --- @public
---- @param arg0 string
+--- @param module string
 --- @return nil
-function ItemRecipe:setModule(arg0) end
+function ItemRecipe:setModule(module) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
+--- @param name string
+--- @param module string
+--- @param use integer
 --- @return ItemRecipe
-function ItemRecipe.new(arg0, arg1, arg2) end
+function ItemRecipe.new(name, module, use) end

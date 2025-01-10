@@ -13,15 +13,15 @@ ClothingPatchFabricType = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return ClothingPatchFabricType
-function ClothingPatchFabricType.fromIndex(arg0) end
+function ClothingPatchFabricType.fromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param type string
 --- @return ClothingPatchFabricType
-function ClothingPatchFabricType.fromType(arg0) end
+function ClothingPatchFabricType.fromType(type) end
 
 --- @public
 --- @static
@@ -31,7 +31,11 @@ function ClothingPatchFabricType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return ClothingPatchFabricType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return ClothingPatchFabricType[] an array containing the constants of this enum class, in the order they are declared
 function ClothingPatchFabricType.values() end
 
 ------------------------------------

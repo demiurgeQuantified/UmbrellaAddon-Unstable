@@ -11,17 +11,17 @@ ObservationFactory = {}
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
+--- @param type string
+--- @param name string
+--- @param desc string
 --- @return nil
-function ObservationFactory.addObservation(arg0, arg1, arg2) end
+function ObservationFactory.addObservation(type, name, desc) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return Observation
-function ObservationFactory.getObservation(arg0) end
+function ObservationFactory.getObservation(name) end
 
 --- @public
 --- @static
@@ -30,10 +30,10 @@ function ObservationFactory.init() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
+--- @param a string
+--- @param b string
 --- @return nil
-function ObservationFactory.setMutualExclusive(arg0, arg1) end
+function ObservationFactory.setMutualExclusive(a, b) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -9,9 +9,9 @@ IAnimationVariableMap = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param key string
 --- @return nil
-function IAnimationVariableMap:clearVariable(arg0) end
+function IAnimationVariableMap:clearVariable(key) end
 
 --- @public
 --- @return nil
@@ -61,9 +61,12 @@ function IAnimationVariableMap:getVariableString(arg0) end
 function IAnimationVariableMap:isVariable(arg0, arg1) end
 
 --- @public
---- @param arg0 IAnimationVariableSlot
+---
+---  Set the specified animation variable slot. Overwriting an existing slot if
+---
+--- @param slot IAnimationVariableSlot
 --- @return nil
---- @overload fun(self: IAnimationVariableMap, arg0: string, arg1: boolean): nil
---- @overload fun(self: IAnimationVariableMap, arg0: string, arg1: number): nil
---- @overload fun(self: IAnimationVariableMap, arg0: string, arg1: string): nil
-function IAnimationVariableMap:setVariable(arg0) end
+--- @overload fun(self: IAnimationVariableMap, key: string, value: boolean): nil
+--- @overload fun(self: IAnimationVariableMap, key: string, value: number): nil
+--- @overload fun(self: IAnimationVariableMap, key: string, value: string): nil
+function IAnimationVariableMap:setVariable(slot) end

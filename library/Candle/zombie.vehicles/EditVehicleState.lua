@@ -27,15 +27,15 @@ function EditVehicleState:enter() end
 function EditVehicleState:exit() end
 
 --- @public
---- @param arg0 string
+--- @param func string
 --- @return any
-function EditVehicleState:fromLua0(arg0) end
+function EditVehicleState:fromLua0(func) end
 
 --- @public
---- @param arg0 string
---- @param arg1 any
+--- @param func string
+--- @param arg0 any
 --- @return any
-function EditVehicleState:fromLua1(arg0, arg1) end
+function EditVehicleState:fromLua1(func, arg0) end
 
 --- @public
 --- @return nil
@@ -46,14 +46,14 @@ function EditVehicleState:reenter() end
 function EditVehicleState:render() end
 
 --- @public
---- @param arg0 string
+--- @param scriptName string
 --- @return nil
-function EditVehicleState:setScript(arg0) end
+function EditVehicleState:setScript(scriptName) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function EditVehicleState:setTable(arg0) end
+function EditVehicleState:setTable(table) end
 
 --- @public
 --- @return StateAction

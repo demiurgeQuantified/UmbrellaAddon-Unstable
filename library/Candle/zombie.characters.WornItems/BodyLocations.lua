@@ -15,9 +15,9 @@ function BodyLocations.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param id string
 --- @return BodyLocationGroup
-function BodyLocations.getGroup(arg0) end
+function BodyLocations.getGroup(id) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

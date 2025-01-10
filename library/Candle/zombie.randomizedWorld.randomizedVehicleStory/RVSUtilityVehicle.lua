@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RVSUtilityVehicle: RandomizedVehicleStoryBase
+--- @class RVSUtilityVehicle: RandomizedVehicleStoryBase An utility vehicle (mccoys, fire dept, police, ranger, postal..) with corresponding outfit zeds and sometimes tools
 --- @field public class any
 RVSUtilityVehicle = {}
 
@@ -9,37 +9,49 @@ RVSUtilityVehicle = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 string
---- @param arg3 string
---- @param arg4 string
---- @param arg5 integer
---- @param arg6 string
---- @param arg7 ArrayList
---- @param arg8 integer
---- @param arg9 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param zoneName string
+--- @param scriptName string
+--- @param outfits string
+--- @param femaleChance integer
+--- @param vehicleDistrib string
+--- @param items ArrayList
+--- @param nbrOfItem integer
+--- @param addTrailer boolean
 --- @return nil
-function RVSUtilityVehicle:doUtilityVehicle(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+function RVSUtilityVehicle:doUtilityVehicle(
+	zone,
+	chunk,
+	zoneName,
+	scriptName,
+	outfits,
+	femaleChance,
+	vehicleDistrib,
+	items,
+	nbrOfItem,
+	addTrailer
+)
+end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RVSUtilityVehicle:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RVSUtilityVehicle:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return nil
-function RVSUtilityVehicle:randomizeVehicleStory(arg0, arg1) end
+function RVSUtilityVehicle:randomizeVehicleStory(zone, chunk) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return nil
-function RVSUtilityVehicle:spawnElement(arg0, arg1) end
+function RVSUtilityVehicle:spawnElement(spawner, element) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

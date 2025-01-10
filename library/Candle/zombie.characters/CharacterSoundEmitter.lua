@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class CharacterSoundEmitter: BaseCharacterSoundEmitter, ICommonSoundEmitter
+--- @class CharacterSoundEmitter: BaseCharacterSoundEmitter, ICommonSoundEmitter Created by LEMMYMAIN on 18/09/2014.
 --- @field public class any
 CharacterSoundEmitter = {}
 
@@ -13,10 +13,10 @@ CharacterSoundEmitter = {}
 function CharacterSoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return boolean
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): boolean
-function CharacterSoundEmitter:hasSustainPoints(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, handle: integer): boolean
+function CharacterSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
@@ -28,56 +28,56 @@ function CharacterSoundEmitter:isClear() end
 function CharacterSoundEmitter:isEmpty() end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return boolean
---- @overload fun(self: CharacterSoundEmitter, arg0: string): boolean
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): boolean
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): boolean
-function CharacterSoundEmitter:isPlaying(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, alias: string): boolean
+--- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): boolean
+--- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): boolean
+function CharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
+--- @param file string
+--- @param volume number
 --- @return nil
-function CharacterSoundEmitter:playFootsteps(arg0, arg1) end
+function CharacterSoundEmitter:playFootsteps(file, volume) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
---- @overload fun(self: CharacterSoundEmitter, arg0: string): integer
---- @overload fun(self: CharacterSoundEmitter, arg0: string, arg1: boolean): integer
---- @overload fun(self: CharacterSoundEmitter, arg0: string, arg1: boolean): integer
---- @overload fun(self: CharacterSoundEmitter, arg0: string, arg1: IsoObject): integer
-function CharacterSoundEmitter:playSound(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, file: string): integer
+--- @overload fun(self: CharacterSoundEmitter, file: string, doWorldSound: boolean): integer
+--- @overload fun(self: CharacterSoundEmitter, file: string, doWorldSound: boolean): integer
+--- @overload fun(self: CharacterSoundEmitter, file: string, proxy: IsoObject): integer
+function CharacterSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoObject
+--- @param file string
+--- @param proxy IsoObject
 --- @return integer
-function CharacterSoundEmitter:playSoundImpl(arg0, arg1) end
+function CharacterSoundEmitter:playSoundImpl(file, proxy) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
-function CharacterSoundEmitter:playVocals(arg0) end
+function CharacterSoundEmitter:playVocals(file) end
 
 --- @public
 --- @return nil
 function CharacterSoundEmitter:register() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return nil
-function CharacterSoundEmitter:set(arg0, arg1, arg2) end
+function CharacterSoundEmitter:set(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 number
+--- @param soundRef integer
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param value number
 --- @return nil
-function CharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
+function CharacterSoundEmitter:setParameterValue(soundRef, parameterDescription, value) end
 
 --- @public
 --- @param arg0 integer
@@ -87,42 +87,42 @@ function CharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 function CharacterSoundEmitter:setParameterValueByName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param pitch number
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: integer, arg1: number): nil
-function CharacterSoundEmitter:setPitch(arg0, arg1) end
+--- @overload fun(self: CharacterSoundEmitter, handle: integer, pitch: number): nil
+function CharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: number, arg1: number, arg2: number): nil
-function CharacterSoundEmitter:setPos(arg0, arg1, arg2) end
+--- @overload fun(self: CharacterSoundEmitter, x: number, y: number, z: number): nil
+function CharacterSoundEmitter:setPos(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param volume number
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: integer, arg1: number): nil
-function CharacterSoundEmitter:setVolume(arg0, arg1) end
+--- @overload fun(self: CharacterSoundEmitter, handle: integer, volume: number): nil
+function CharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
 --- @return nil
 function CharacterSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 integer
+--- @param eventInstance integer
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): nil
-function CharacterSoundEmitter:stopOrTriggerSound(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): nil
+function CharacterSoundEmitter:stopOrTriggerSound(eventInstance) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: string): nil
-function CharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, name: string): nil
+function CharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param arg0 integer
@@ -131,20 +131,20 @@ function CharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
 function CharacterSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param eventInstance integer
 --- @return integer
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): integer
-function CharacterSoundEmitter:stopSound(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): integer
+function CharacterSoundEmitter:stopSound(eventInstance) end
 
 --- @public
---- @param arg0 string
+--- @param soundName string
 --- @return integer
-function CharacterSoundEmitter:stopSoundByName(arg0) end
+function CharacterSoundEmitter:stopSoundByName(soundName) end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function CharacterSoundEmitter:stopSoundLocal(arg0) end
+function CharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return nil
@@ -152,10 +152,10 @@ function CharacterSoundEmitter:stopSoundLocal(arg0) end
 function CharacterSoundEmitter:tick() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): nil
-function CharacterSoundEmitter:triggerCue(arg0) end
+--- @overload fun(self: CharacterSoundEmitter, handle: integer): nil
+function CharacterSoundEmitter:triggerCue(handle) end
 
 --- @public
 --- @return nil
@@ -166,6 +166,6 @@ function CharacterSoundEmitter:unregister() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return CharacterSoundEmitter
-function CharacterSoundEmitter.new(arg0) end
+function CharacterSoundEmitter.new(chr) end

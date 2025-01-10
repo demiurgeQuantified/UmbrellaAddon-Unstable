@@ -28,63 +28,63 @@ function LosUtil.getFirstBlockingIsoGridSquare(arg0, arg1, arg2, arg3, arg4, arg
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param width integer
+--- @param height integer
 --- @return nil
-function LosUtil.init(arg0, arg1) end
+function LosUtil.init(width, height) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 boolean
+--- @param cell IsoCell
+--- @param x0 integer
+--- @param y0 integer
+--- @param z0 integer
+--- @param x1 integer
+--- @param y1 integer
+--- @param z1 integer
+--- @param bIgnoreDoors boolean
 --- @return TestResults
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: boolean, arg8: integer): TestResults
-function LosUtil.lineClear(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+--- @overload fun(cell: IsoCell, x0: integer, y0: integer, z0: integer, x1: integer, y1: integer, z1: integer, bIgnoreDoors: boolean, RangeTillWindows: integer): TestResults
+function LosUtil.lineClear(cell, x0, y0, z0, x1, y1, z1, bIgnoreDoors) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 boolean
---- @param arg8 integer
+--- @param cell IsoCell
+--- @param x1 integer
+--- @param y1 integer
+--- @param z1 integer
+--- @param x0 integer
+--- @param y0 integer
+--- @param z0 integer
+--- @param bIgnoreDoors boolean
+--- @param playerIndex integer
 --- @return TestResults
-function LosUtil.lineClearCached(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function LosUtil.lineClearCached(cell, x1, y1, z1, x0, y0, z0, bIgnoreDoors, playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 boolean
+--- @param x1 integer
+--- @param y1 integer
+--- @param z1 integer
+--- @param x0 integer
+--- @param y0 integer
+--- @param z0 integer
+--- @param bIgnoreDoors boolean
 --- @return boolean
-function LosUtil.lineClearCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function LosUtil.lineClearCollide(x1, y1, z1, x0, y0, z0, bIgnoreDoors) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoCell
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 integer
+--- @param chr IsoGameCharacter
+--- @param cell IsoCell
+--- @param x1 integer
+--- @param y1 integer
+--- @param z1 integer
+--- @param x0 integer
+--- @param y0 integer
+--- @param z0 integer
 --- @return integer
-function LosUtil.lineClearCollideCount(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function LosUtil.lineClearCollideCount(chr, cell, x1, y1, z1, x0, y0, z0) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

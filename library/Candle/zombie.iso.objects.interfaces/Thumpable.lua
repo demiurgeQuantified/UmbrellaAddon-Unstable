@@ -9,24 +9,24 @@ Thumpable = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param thumper IsoMovingObject
 --- @return nil
-function Thumpable:Thump(arg0) end
+function Thumpable:Thump(thumper) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
+--- @param chr IsoGameCharacter
+--- @param weapon HandWeapon
 --- @return nil
-function Thumpable:WeaponHit(arg0, arg1) end
+function Thumpable:WeaponHit(chr, weapon) end
 
 --- @public
 --- @return number
 function Thumpable:getThumpCondition() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return Thumpable
-function Thumpable:getThumpableFor(arg0) end
+function Thumpable:getThumpableFor(chr) end
 
 --- @public
 --- @return boolean

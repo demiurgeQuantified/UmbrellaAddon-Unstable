@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSFootballNight: RandomizedDeadSurvivorBase
+--- @class RDSFootballNight: RandomizedDeadSurvivorBase Create some zombies in sports outfits with crisps, alcohol & cigarettes lying around
 --- @field public class any
 RDSFootballNight = {}
 
@@ -9,15 +9,18 @@ RDSFootballNight = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+---
+---  Description copied from class: RandomizedBuildingBase
+---
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSFootballNight:isValid(arg0, arg1) end
+function RDSFootballNight:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSFootballNight:randomizeDeadSurvivor(arg0) end
+function RDSFootballNight:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

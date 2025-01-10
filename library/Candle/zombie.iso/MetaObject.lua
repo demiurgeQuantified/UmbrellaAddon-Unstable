@@ -29,18 +29,18 @@ function MetaObject:getX() end
 function MetaObject:getY() end
 
 --- @public
---- @param arg0 boolean
+--- @param bUsed boolean
 --- @return nil
-function MetaObject:setUsed(arg0) end
+function MetaObject:setUsed(bUsed) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 RoomDef
+--- @param type integer
+--- @param x integer
+--- @param y integer
+--- @param def RoomDef
 --- @return MetaObject
-function MetaObject.new(arg0, arg1, arg2, arg3) end
+function MetaObject.new(type, x, y, def) end

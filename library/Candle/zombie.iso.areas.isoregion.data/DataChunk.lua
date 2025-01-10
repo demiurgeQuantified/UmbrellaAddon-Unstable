@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class DataChunk
+--- @class DataChunk TurboTuTone.
 --- @field public class any
 DataChunk = {}
 
@@ -17,68 +17,71 @@ function DataChunk:getChunkX() end
 function DataChunk:getChunkY() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return IsoChunkRegion
-function DataChunk:getIsoChunkRegion(arg0, arg1, arg2) end
+function DataChunk:getIsoChunkRegion(x, y, z) end
 
 --- @public
 --- @return integer
 function DataChunk:getLastUpdateStamp() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return integer
---- @overload fun(self: DataChunk, arg0: integer, arg1: integer, arg2: integer, arg3: boolean): integer
-function DataChunk:getSquare(arg0, arg1, arg2) end
+--- @overload fun(self: DataChunk, x: integer, y: integer, z: integer, ignoreCoordCheck: boolean): integer
+function DataChunk:getSquare(x, y, z) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param bb ByteBuffer
+--- @param worldVersion integer
+--- @param readLength boolean
 --- @return nil
-function DataChunk:load(arg0, arg1, arg2) end
+function DataChunk:load(bb, worldVersion, readLength) end
 
 --- @public
---- @param arg0 ByteBuffer
+---
+---  SAVE/LOAD
+---
+--- @param bb ByteBuffer
 --- @return nil
-function DataChunk:save(arg0) end
+function DataChunk:save(bb) end
 
 --- @public
---- @param arg0 integer
+--- @param flags integer
 --- @return boolean
-function DataChunk:selectedHasFlags(arg0) end
+function DataChunk:selectedHasFlags(flags) end
 
 --- @public
 --- @return nil
 function DataChunk:setDirtyAllActive() end
 
 --- @public
---- @param arg0 integer
+--- @param lastUpdateStamp integer
 --- @return nil
-function DataChunk:setLastUpdateStamp(arg0) end
+function DataChunk:setLastUpdateStamp(lastUpdateStamp) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param regionIndex integer
 --- @return nil
-function DataChunk:setRegion(arg0, arg1, arg2, arg3) end
+function DataChunk:setRegion(x, y, z, regionIndex) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function DataChunk:setSelectedFlags(arg0, arg1, arg2) end
+function DataChunk:setSelectedFlags(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return integer
-function DataChunk:squareGetFlags(arg0, arg1, arg2) end
+function DataChunk:squareGetFlags(x, y, z) end

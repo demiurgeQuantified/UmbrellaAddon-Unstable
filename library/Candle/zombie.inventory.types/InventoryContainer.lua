@@ -9,10 +9,10 @@ InventoryContainer = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
+--- @param tooltipUI ObjectTooltip
 --- @return nil
---- @overload fun(self: InventoryContainer, arg0: ObjectTooltip, arg1: Layout): nil
-function InventoryContainer:DoTooltip(arg0) end
+--- @overload fun(self: InventoryContainer, tooltipUI: ObjectTooltip, layout: Layout): nil
+function InventoryContainer:DoTooltip(tooltipUI) end
 
 --- @public
 --- @return boolean
@@ -43,9 +43,9 @@ function InventoryContainer:getClothingExtraSubmenu() end
 function InventoryContainer:getContentsWeight() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return integer
-function InventoryContainer:getEffectiveCapacity(arg0) end
+function InventoryContainer:getEffectiveCapacity(chr) end
 
 --- @public
 --- @return number
@@ -80,45 +80,45 @@ function InventoryContainer:getWeightReduction() end
 function InventoryContainer:isEmpty() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function InventoryContainer:load(arg0, arg1) end
+function InventoryContainer:load(input, WorldVersion) end
 
 --- @public
 --- @return nil
 function InventoryContainer:reset() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function InventoryContainer:save(arg0, arg1) end
+function InventoryContainer:save(output, net) end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
-function InventoryContainer:setBloodLevel(arg0) end
+function InventoryContainer:setBloodLevel(delta) end
 
 --- @public
---- @param arg0 string
+--- @param canBeEquipped string
 --- @return nil
-function InventoryContainer:setCanBeEquipped(arg0) end
+function InventoryContainer:setCanBeEquipped(canBeEquipped) end
 
 --- @public
---- @param arg0 integer
+--- @param capacity integer
 --- @return nil
-function InventoryContainer:setCapacity(arg0) end
+function InventoryContainer:setCapacity(capacity) end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param cont ItemContainer
 --- @return nil
-function InventoryContainer:setItemContainer(arg0) end
+function InventoryContainer:setItemContainer(cont) end
 
 --- @public
---- @param arg0 integer
+--- @param weightReduction integer
 --- @return nil
-function InventoryContainer:setWeightReduction(arg0) end
+function InventoryContainer:setWeightReduction(weightReduction) end
 
 --- @public
 --- @return nil
@@ -129,9 +129,9 @@ function InventoryContainer:updateAge() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return InventoryContainer
-function InventoryContainer.new(arg0, arg1, arg2, arg3) end
+function InventoryContainer.new(module, name, itemType, texName) end

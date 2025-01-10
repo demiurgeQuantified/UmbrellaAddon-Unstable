@@ -48,15 +48,15 @@ function AttachmentEditorState:enter() end
 function AttachmentEditorState:exit() end
 
 --- @public
---- @param arg0 string
+--- @param func string
 --- @return any
-function AttachmentEditorState:fromLua0(arg0) end
+function AttachmentEditorState:fromLua0(func) end
 
 --- @public
---- @param arg0 string
---- @param arg1 any
+--- @param func string
+--- @param arg0 any
 --- @return any
-function AttachmentEditorState:fromLua1(arg0, arg1) end
+function AttachmentEditorState:fromLua1(func, arg0) end
 
 --- @public
 --- @return nil
@@ -67,9 +67,9 @@ function AttachmentEditorState:reenter() end
 function AttachmentEditorState:render() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function AttachmentEditorState:setTable(arg0) end
+function AttachmentEditorState:setTable(table) end
 
 --- @public
 --- @return StateAction

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class SearchMode
+--- @class SearchMode TurboTuTone.
 --- @field public class any
 SearchMode = {}
 
@@ -23,48 +23,48 @@ function SearchMode.reset() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return SearchModeFloat
-function SearchMode:getBlur(arg0) end
+function SearchMode:getBlur(plrIdx) end
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return SearchModeFloat
-function SearchMode:getDarkness(arg0) end
+function SearchMode:getDarkness(plrIdx) end
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return SearchModeFloat
-function SearchMode:getDesat(arg0) end
+function SearchMode:getDesat(plrIdx) end
 
 --- @public
 --- @return number
 function SearchMode:getFadeTime() end
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return SearchModeFloat
-function SearchMode:getGradientWidth(arg0) end
+function SearchMode:getGradientWidth(plrIdx) end
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return SearchModeFloat
-function SearchMode:getRadius(arg0) end
+function SearchMode:getRadius(plrIdx) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return PlayerSearchMode
-function SearchMode:getSearchModeForPlayer(arg0) end
+function SearchMode:getSearchModeForPlayer(index) end
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return boolean
-function SearchMode:isEnabled(arg0) end
+function SearchMode:isEnabled(plrIdx) end
 
 --- @public
---- @param arg0 integer
+--- @param plrIdx integer
 --- @return boolean
-function SearchMode:isOverride(arg0) end
+function SearchMode:isOverride(plrIdx) end
 
 --- @public
 --- @param arg0 integer
@@ -72,21 +72,21 @@ function SearchMode:isOverride(arg0) end
 function SearchMode:isOverrideSearchManager(arg0) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 boolean
+--- @param plrIdx integer
+--- @param b boolean
 --- @return nil
-function SearchMode:setEnabled(arg0, arg1) end
+function SearchMode:setEnabled(plrIdx, b) end
 
 --- @public
---- @param arg0 number
+--- @param fadeTime number
 --- @return nil
-function SearchMode:setFadeTime(arg0) end
+function SearchMode:setFadeTime(fadeTime) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 boolean
+--- @param plrIdx integer
+--- @param enabled boolean
 --- @return nil
-function SearchMode:setOverride(arg0, arg1) end
+function SearchMode:setOverride(plrIdx, enabled) end
 
 --- @public
 --- @param arg0 integer

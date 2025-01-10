@@ -1,24 +1,24 @@
 --- @meta _
 
---- @class Color: Serializable
+--- @class Color: Serializable A simple wrapper round the values required for a colour
 --- @field public class any
---- @field public black Color
---- @field public blue Color
---- @field public cyan Color
---- @field public darkGray Color
---- @field public darkGreen Color
---- @field public gray Color
---- @field public green Color
---- @field public lightGray Color
---- @field public lightGreen Color
---- @field public magenta Color
---- @field public orange Color
---- @field public pink Color
---- @field public purple Color
---- @field public red Color
---- @field public transparent Color
---- @field public white Color
---- @field public yellow Color
+--- @field public black Color The fixed colour black
+--- @field public blue Color The fixed colour blue
+--- @field public cyan Color The fixed colour cyan
+--- @field public darkGray Color The fixed colour dark gray
+--- @field public darkGreen Color The fixed colour dark green
+--- @field public gray Color The fixed colour gray
+--- @field public green Color The fixed colour green
+--- @field public lightGray Color The fixed colour light gray
+--- @field public lightGreen Color The fixed colour light green
+--- @field public magenta Color The fixed colour dark magenta
+--- @field public orange Color The fixed colour dark orange
+--- @field public pink Color The fixed colour dark pink
+--- @field public purple Color The fixed colour purple
+--- @field public red Color The fixed colour red
+--- @field public transparent Color The fixed color transparent
+--- @field public white Color The fixed colour white
+--- @field public yellow Color The fixed colour yellow
 Color = {}
 
 ------------------------------------
@@ -27,181 +27,210 @@ Color = {}
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param hue number
+--- @param saturation number
+--- @param brightness number
 --- @return Color
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: Color): Color
-function Color.HSBtoRGB(arg0, arg1, arg2) end
+--- @overload fun(hue: number, saturation: number, brightness: number, result: Color): Color
+function Color.HSBtoRGB(hue, saturation, brightness) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 Color
+--- @param valueABGR integer
+--- @param out_result Color
 --- @return Color
-function Color.abgrToColor(arg0, arg1) end
+function Color.abgrToColor(valueABGR, out_result) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param valueABGR integer
+--- @param targetABGR integer
 --- @return integer
-function Color.blendABGR(arg0, arg1) end
+function Color.blendABGR(valueABGR, targetABGR) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param valueABGR integer
+--- @param targetABGR integer
 --- @return integer
-function Color.blendBGR(arg0, arg1) end
+function Color.blendBGR(valueABGR, targetABGR) end
 
 --- @public
 --- @static
---- @param arg0 Color
+--- @param val Color
 --- @return integer
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): integer
-function Color.colorToABGR(arg0) end
+--- @overload fun(r: number, g: number, b: number, a: number): integer
+function Color.colorToABGR(val) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @return Color
-function Color.decode(arg0) end
+---
+---  Decode a number in a string and process it as a colour  reference.
+---
+--- @param nm string The number string to decode
+--- @return Color The color generated from the number read
+function Color.decode(nm) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param valueABGR integer
 --- @return number
-function Color.getAlphaChannelFromABGR(arg0) end
+function Color.getAlphaChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param valueABGR integer
 --- @return number
-function Color.getBlueChannelFromABGR(arg0) end
+function Color.getBlueChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param valueABGR integer
 --- @return number
-function Color.getGreenChannelFromABGR(arg0) end
+function Color.getGreenChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param valueABGR integer
 --- @return number
-function Color.getRedChannelFromABGR(arg0) end
+function Color.getRedChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 number
+--- @param colA integer
+--- @param colB integer
+--- @param alpha number
 --- @return integer
-function Color.lerpABGR(arg0, arg1, arg2) end
+function Color.lerpABGR(colA, colB, alpha) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param valueABGR integer
+--- @param multiplierABGR integer
 --- @return integer
-function Color.multiplyABGR(arg0, arg1) end
+function Color.multiplyABGR(valueABGR, multiplierABGR) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param valueABGR integer
+--- @param multiplierABGR integer
 --- @return integer
-function Color.multiplyBGR(arg0, arg1) end
+function Color.multiplyBGR(valueABGR, multiplierABGR) end
 
 --- @public
 --- @static
+---
+---  Create a random color.
+---
 --- @return Color
 function Color.random() end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 number
+--- @param valueABGR integer
+--- @param a number
 --- @return integer
-function Color.setAlphaChannelToABGR(arg0, arg1) end
+function Color.setAlphaChannelToABGR(valueABGR, a) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 number
+--- @param valueABGR integer
+--- @param b number
 --- @return integer
-function Color.setBlueChannelToABGR(arg0, arg1) end
+function Color.setBlueChannelToABGR(valueABGR, b) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 number
+--- @param valueABGR integer
+--- @param g number
 --- @return integer
-function Color.setGreenChannelToABGR(arg0, arg1) end
+function Color.setGreenChannelToABGR(valueABGR, g) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 number
+--- @param valueABGR integer
+--- @param r number
 --- @return integer
-function Color.setRedChannelToABGR(arg0, arg1) end
+function Color.setRedChannelToABGR(valueABGR, r) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param targetABGR integer
+--- @param tintABGR integer
 --- @return integer
-function Color.tintABGR(arg0, arg1) end
+function Color.tintABGR(targetABGR, tintABGR) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Color
+---
+---  Add another colour to this one
+---
+--- @param c Color The colour to add
 --- @return nil
-function Color:add(arg0) end
+function Color:add(c) end
 
 --- @public
---- @param arg0 Color
---- @return Color
-function Color:addToCopy(arg0) end
+---
+---  Add another colour to this one
+---
+--- @param c Color The colour to add
+--- @return Color The copy which has had the color added to it
+function Color:addToCopy(c) end
 
 --- @public
---- @return Color
---- @overload fun(self: Color, arg0: number): Color
+---
+---  Make a brighter instance of this colour
+---
+--- @return Color The brighter version of this colour
+--- @overload fun(self: Color, scale: number): Color The brighter version of this colour
 function Color:brighter() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param hFactor number
+--- @param sFactor number
+--- @param bFactor number
 --- @return nil
-function Color:changeHSBValue(arg0, arg1, arg2) end
+function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 
 --- @public
---- @return Color
---- @overload fun(self: Color, arg0: number): Color
+---
+---  Make a darker instance of this colour
+---
+--- @return Color The darker version of this colour
+--- @overload fun(self: Color, scale: number): Color The darker version of this colour
 function Color:darker() end
 
 --- @public
---- @param arg0 any
+--- @param other any
 --- @return boolean
-function Color:equals(arg0) end
+function Color:equals(other) end
 
 --- @public
---- @param arg0 integer
+---
+---  Converts the supplied binary value into color values, and sets the result to
+---  object.   Performs a clamp on the alpha channel.   Performs a special-case on
+---  alpha channel, where if it is 0, it is set to MAX instead.
+---
+--- @param valueABGR integer
 --- @return nil
 --- @deprecated
-function Color:fromColor(arg0) end
+function Color:fromColor(valueABGR) end
 
 --- @public
---- @return integer
+---
+---  get the alpha byte component of this colour
+---
+--- @return integer The alpha component (range 0-255)
 function Color:getAlpha() end
 
 --- @public
---- @return integer
+---
+---  get the alpha byte component of this colour
+---
+--- @return integer The alpha component (range 0-255)
 function Color:getAlphaByte() end
 
 --- @public
@@ -213,11 +242,17 @@ function Color:getAlphaFloat() end
 function Color:getB() end
 
 --- @public
---- @return integer
+---
+---  get the blue byte component of this colour
+---
+--- @return integer The blue component (range 0-255)
 function Color:getBlue() end
 
 --- @public
---- @return integer
+---
+---  get the blue byte component of this colour
+---
+--- @return integer The blue component (range 0-255)
 function Color:getBlueByte() end
 
 --- @public
@@ -229,11 +264,17 @@ function Color:getBlueFloat() end
 function Color:getG() end
 
 --- @public
---- @return integer
+---
+---  get the green byte component of this colour
+---
+--- @return integer The green component (range 0-255)
 function Color:getGreen() end
 
 --- @public
---- @return integer
+---
+---  get the green byte component of this colour
+---
+--- @return integer The green component (range 0-255)
 function Color:getGreenByte() end
 
 --- @public
@@ -245,11 +286,17 @@ function Color:getGreenFloat() end
 function Color:getR() end
 
 --- @public
---- @return integer
+---
+---  get the red byte component of this colour
+---
+--- @return integer The red component (range 0-255)
 function Color:getRed() end
 
 --- @public
---- @return integer
+---
+---  get the red byte component of this colour
+---
+--- @return integer The red component (range 0-255)
 function Color:getRedByte() end
 
 --- @public
@@ -261,11 +308,11 @@ function Color:getRedFloat() end
 function Color:hashCode() end
 
 --- @public
---- @param arg0 Color
---- @param arg1 number
---- @param arg2 Color
+--- @param to Color
+--- @param delta number
+--- @param dest Color
 --- @return nil
-function Color:interp(arg0, arg1, arg2) end
+function Color:interp(to, delta, dest) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -284,9 +331,12 @@ function Color:loadCompact(arg0) end
 function Color:loadCompactNoAlpha(arg0) end
 
 --- @public
---- @param arg0 Color
---- @return Color
-function Color:multiply(arg0) end
+---
+---  Multiply this color by another
+---
+--- @param c Color the other color
+--- @return Color product of the two colors
+function Color:multiply(c) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -304,33 +354,39 @@ function Color:saveCompact(arg0) end
 function Color:saveCompactNoAlpha(arg0) end
 
 --- @public
---- @param arg0 number
+---
+---  Scale the components of the colour by the given value
+---
+--- @param value number The value to scale by
 --- @return Color
-function Color:scale(arg0) end
+function Color:scale(value) end
 
 --- @public
---- @param arg0 number
---- @return Color
-function Color:scaleCopy(arg0) end
+---
+---  Scale the components of the colour by the given value
+---
+--- @param value number The value to scale by
+--- @return Color The copy which has been scaled
+function Color:scaleCopy(value) end
 
 --- @public
---- @param arg0 Color
+--- @param other Color
 --- @return Color
---- @overload fun(self: Color, arg0: number, arg1: number, arg2: number): Color
---- @overload fun(self: Color, arg0: number, arg1: number, arg2: number, arg3: number): Color
-function Color:set(arg0) end
+--- @overload fun(self: Color, r: number, g: number, b: number): Color
+--- @overload fun(self: Color, r: number, g: number, b: number, a: number): Color
+function Color:set(other) end
 
 --- @public
---- @param arg0 integer
+--- @param valueABGR integer
 --- @return nil
-function Color:setABGR(arg0) end
+function Color:setABGR(valueABGR) end
 
 --- @public
---- @param arg0 Color
---- @param arg1 Color
---- @param arg2 number
+--- @param A Color
+--- @param B Color
+--- @param delta number
 --- @return nil
-function Color:setColor(arg0, arg1, arg2) end
+function Color:setColor(A, B, delta) end
 
 --- @public
 --- @return string
@@ -342,11 +398,11 @@ function Color:toString() end
 
 --- @public
 --- @return Color
---- @overload fun(arg0: integer): Color
---- @overload fun(arg0: Color): Color
---- @overload fun(arg0: number, arg1: number, arg2: number): Color
---- @overload fun(arg0: integer, arg1: integer, arg2: integer): Color
---- @overload fun(arg0: Color, arg1: Color, arg2: number): Color
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): Color
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer): Color
+--- @overload fun(value: integer): Color
+--- @overload fun(color: Color): Color
+--- @overload fun(r: number, g: number, b: number): Color
+--- @overload fun(r: integer, g: integer, b: integer): Color
+--- @overload fun(A: Color, B: Color, delta: number): Color
+--- @overload fun(r: number, g: number, b: number, a: number): Color
+--- @overload fun(r: integer, g: integer, b: integer, a: integer): Color
 function Color.new() end

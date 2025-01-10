@@ -21,7 +21,7 @@ function FixerSkill:getSkillName() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param skillName string
+--- @param skillLvl integer
 --- @return FixerSkill
-function FixerSkill.new(arg0, arg1) end
+function FixerSkill.new(skillName, skillLvl) end

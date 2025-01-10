@@ -9,48 +9,48 @@ BaseAmbientStreamManager = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 number
+--- @param name string
+--- @param x integer
+--- @param y integer
+--- @param radius integer
+--- @param volume number
 --- @return nil
-function BaseAmbientStreamManager:addAmbient(arg0, arg1, arg2, arg3, arg4) end
+function BaseAmbientStreamManager:addAmbient(name, x, y, radius, volume) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 integer
---- @param arg3 string
+--- @param x number
+--- @param y number
+--- @param z integer
+--- @param name string
 --- @return nil
-function BaseAmbientStreamManager:addAmbientEmitter(arg0, arg1, arg2, arg3) end
+function BaseAmbientStreamManager:addAmbientEmitter(x, y, z, name) end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param name string
+--- @param vol number
+--- @param bIndoors boolean
+--- @param bRain boolean
+--- @param bNight boolean
+--- @param bDay boolean
 --- @return nil
-function BaseAmbientStreamManager:addBlend(arg0, arg1, arg2, arg3, arg4, arg5) end
+function BaseAmbientStreamManager:addBlend(name, vol, bIndoors, bRain, bNight, bDay) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 integer
---- @param arg3 string
+--- @param x number
+--- @param y number
+--- @param z integer
+--- @param name string
 --- @return nil
-function BaseAmbientStreamManager:addDaytimeAmbientEmitter(arg0, arg1, arg2, arg3) end
+function BaseAmbientStreamManager:addDaytimeAmbientEmitter(x, y, z, name) end
 
 --- @public
 --- @return nil
 function BaseAmbientStreamManager:checkHaveElectricity() end
 
 --- @public
---- @param arg0 RoomDef
+--- @param room RoomDef
 --- @return nil
-function BaseAmbientStreamManager:doAlarm(arg0) end
+function BaseAmbientStreamManager:doAlarm(room) end
 
 --- @public
 --- @return nil

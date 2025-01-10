@@ -13,14 +13,14 @@ Flare = {}
 function Flare:getColor() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ClimateColorInfo
-function Flare:getColorPlayer(arg0) end
+function Flare:getColorPlayer(index) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return number
-function Flare:getDistModPlayer(arg0) end
+function Flare:getDistModPlayer(index) end
 
 --- @public
 --- @return integer
@@ -31,14 +31,14 @@ function Flare:getId() end
 function Flare:getIntensity() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return number
-function Flare:getIntensityPlayer(arg0) end
+function Flare:getIntensityPlayer(index) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return number
-function Flare:getLerpPlayer(arg0) end
+function Flare:getLerpPlayer(index) end
 
 --- @public
 --- @return number
@@ -49,9 +49,9 @@ function Flare:getLifeTime() end
 function Flare:getMaxLifeTime() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ClimateColorInfo
-function Flare:getOutColorPlayer(arg0) end
+function Flare:getOutColorPlayer(index) end
 
 --- @public
 --- @return number

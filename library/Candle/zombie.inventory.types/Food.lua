@@ -10,15 +10,15 @@ Food = {}
 ------------------------------------
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function Food:CanStack(arg0) end
+function Food:CanStack(item) end
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return nil
-function Food:DoTooltip(arg0, arg1) end
+function Food:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean
@@ -56,7 +56,7 @@ function Food:finishupdate() end
 function Food:freeze() end
 
 --- @public
---- @return number
+--- @return number the ActualWeight
 function Food:getActualWeight() end
 
 --- @public
@@ -77,7 +77,7 @@ function Food:getBaseHungChange() end
 function Food:getBaseHunger() end
 
 --- @public
---- @return number
+--- @return number the boredomChange
 function Food:getBoredomChange() end
 
 --- @public
@@ -173,7 +173,7 @@ function Food:getMilkQty() end
 function Food:getMilkType() end
 
 --- @public
---- @return string
+--- @return string the name
 function Food:getName() end
 
 --- @public
@@ -225,9 +225,9 @@ function Food:getRottenTime() end
 function Food:getSaveType() end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return number
-function Food:getScore(arg0) end
+function Food:getScore(desc) end
 
 --- @public
 --- @return ArrayList
@@ -238,7 +238,7 @@ function Food:getSpices() end
 function Food:getStaticModel() end
 
 --- @public
---- @return number
+--- @return number the stressChange
 function Food:getStressChange() end
 
 --- @public
@@ -262,7 +262,7 @@ function Food:getThirstChangeUnmodified() end
 function Food:getTimeToHatch() end
 
 --- @public
---- @return number
+--- @return number the unhappyChange
 function Food:getUnhappyChange() end
 
 --- @public
@@ -278,11 +278,11 @@ function Food:getUseForPoison() end
 function Food:getUseOnConsume() end
 
 --- @public
---- @return number
+--- @return number the Weight
 function Food:getWeight() end
 
 --- @public
---- @return string
+--- @return string the WorldTexture
 function Food:getWorldTexture() end
 
 --- @public
@@ -384,21 +384,21 @@ function Food:isWholeFoodItem() end
 function Food:isbDangerousUncooked() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function Food:load(arg0, arg1) end
+function Food:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 number
+--- @param percentage number
 --- @return nil
-function Food:multiplyFoodValues(arg0) end
+function Food:multiplyFoodValues(percentage) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function Food:save(arg0, arg1) end
+function Food:save(output, net) end
 
 --- @public
 --- @param arg0 string
@@ -415,64 +415,64 @@ function Food:setAnimalHatchBreed(arg0) end
 function Food:setAutoAge() end
 
 --- @public
---- @param arg0 boolean
+--- @param bBadCold boolean
 --- @return nil
-function Food:setBadCold(arg0) end
+function Food:setBadCold(bBadCold) end
 
 --- @public
---- @param arg0 boolean
+--- @param badInMicrowave boolean
 --- @return nil
-function Food:setBadInMicrowave(arg0) end
+function Food:setBadInMicrowave(badInMicrowave) end
 
 --- @public
---- @param arg0 number
+--- @param baseHunger number
 --- @return nil
-function Food:setBaseHunger(arg0) end
+function Food:setBaseHunger(baseHunger) end
 
 --- @public
---- @param arg0 number
+--- @param calories number
 --- @return nil
-function Food:setCalories(arg0) end
+function Food:setCalories(calories) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeFrozen boolean
 --- @return nil
-function Food:setCanBeFrozen(arg0) end
+function Food:setCanBeFrozen(canBeFrozen) end
 
 --- @public
---- @param arg0 number
+--- @param carbohydrates number
 --- @return nil
-function Food:setCarbohydrates(arg0) end
+function Food:setCarbohydrates(carbohydrates) end
 
 --- @public
---- @param arg0 string
+--- @param chef string
 --- @return nil
-function Food:setChef(arg0) end
+function Food:setChef(chef) end
 
 --- @public
---- @param arg0 number
+--- @param compostTime number
 --- @return nil
-function Food:setCompostTime(arg0) end
+function Food:setCompostTime(compostTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function Food:setCookedInMicrowave(arg0) end
+function Food:setCookedInMicrowave(b) end
 
 --- @public
---- @param arg0 string
+--- @param customEatSound string
 --- @return nil
-function Food:setCustomEatSound(arg0) end
+function Food:setCustomEatSound(customEatSound) end
 
 --- @public
---- @param arg0 number
+--- @param endChange number
 --- @return nil
-function Food:setEndChange(arg0) end
+function Food:setEndChange(endChange) end
 
 --- @public
---- @param arg0 number
+--- @param endChange number
 --- @return nil
-function Food:setEnduranceChange(arg0) end
+function Food:setEnduranceChange(endChange) end
 
 --- @public
 --- @param arg0 boolean
@@ -485,54 +485,54 @@ function Food:setFertilized(arg0) end
 function Food:setFertilizedTime(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param fluReduction integer
 --- @return nil
-function Food:setFluReduction(arg0) end
+function Food:setFluReduction(fluReduction) end
 
 --- @public
---- @param arg0 string
+--- @param foodType string
 --- @return nil
-function Food:setFoodType(arg0) end
+function Food:setFoodType(foodType) end
 
 --- @public
---- @param arg0 number
+--- @param freezingTime number
 --- @return nil
-function Food:setFreezingTime(arg0) end
+function Food:setFreezingTime(freezingTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param frozen boolean
 --- @return nil
-function Food:setFrozen(arg0) end
+function Food:setFrozen(frozen) end
 
 --- @public
---- @param arg0 boolean
+--- @param bGoodHot boolean
 --- @return nil
-function Food:setGoodHot(arg0) end
+function Food:setGoodHot(bGoodHot) end
 
 --- @public
---- @param arg0 number
+--- @param Heat number
 --- @return nil
-function Food:setHeat(arg0) end
+function Food:setHeat(Heat) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return nil
-function Food:setHerbalistType(arg0) end
+function Food:setHerbalistType(type) end
 
 --- @public
---- @param arg0 number
+--- @param hungChange number
 --- @return nil
-function Food:setHungChange(arg0) end
+function Food:setHungChange(hungChange) end
 
 --- @public
---- @param arg0 integer
+--- @param LastCookMinute integer
 --- @return nil
-function Food:setLastCookMinute(arg0) end
+function Food:setLastCookMinute(LastCookMinute) end
 
 --- @public
---- @param arg0 number
+--- @param lipids number
 --- @return nil
-function Food:setLipids(arg0) end
+function Food:setLipids(lipids) end
 
 --- @public
 --- @param arg0 integer
@@ -545,84 +545,84 @@ function Food:setMilkQty(arg0) end
 function Food:setMilkType(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param onCooked string
 --- @return nil
-function Food:setOnCooked(arg0) end
+function Food:setOnCooked(onCooked) end
 
 --- @public
---- @param arg0 string
+--- @param onEat string
 --- @return nil
-function Food:setOnEat(arg0) end
+function Food:setOnEat(onEat) end
 
 --- @public
---- @param arg0 boolean
+--- @param packaged boolean
 --- @return nil
-function Food:setPackaged(arg0) end
+function Food:setPackaged(packaged) end
 
 --- @public
---- @param arg0 number
+--- @param painReduction number
 --- @return nil
-function Food:setPainReduction(arg0) end
+function Food:setPainReduction(painReduction) end
 
 --- @public
---- @param arg0 integer
+--- @param poisonDetectionLevel integer
 --- @return nil
-function Food:setPoisonDetectionLevel(arg0) end
+function Food:setPoisonDetectionLevel(poisonDetectionLevel) end
 
 --- @public
---- @param arg0 integer
+--- @param poisonLevelForRecipe integer
 --- @return nil
-function Food:setPoisonLevelForRecipe(arg0) end
+function Food:setPoisonLevelForRecipe(poisonLevelForRecipe) end
 
 --- @public
---- @param arg0 integer
+--- @param poisonPower integer
 --- @return nil
-function Food:setPoisonPower(arg0) end
+function Food:setPoisonPower(poisonPower) end
 
 --- @public
---- @param arg0 number
+--- @param proteins number
 --- @return nil
-function Food:setProteins(arg0) end
+function Food:setProteins(proteins) end
 
 --- @public
---- @param arg0 integer
+--- @param ReduceFoodSickness integer
 --- @return nil
-function Food:setReduceFoodSickness(arg0) end
+function Food:setReduceFoodSickness(ReduceFoodSickness) end
 
 --- @public
---- @param arg0 boolean
+--- @param removeNegativeEffectOnCooked boolean
 --- @return nil
-function Food:setRemoveNegativeEffectOnCooked(arg0) end
+function Food:setRemoveNegativeEffectOnCooked(removeNegativeEffectOnCooked) end
 
 --- @public
---- @param arg0 List
+--- @param replaceOnCooked List
 --- @return nil
-function Food:setReplaceOnCooked(arg0) end
+function Food:setReplaceOnCooked(replaceOnCooked) end
 
 --- @public
---- @param arg0 string
+--- @param replaceOnRotten string
 --- @return nil
-function Food:setReplaceOnRotten(arg0) end
+function Food:setReplaceOnRotten(replaceOnRotten) end
 
 --- @public
---- @param arg0 boolean
+--- @param rotten boolean
 --- @return nil
-function Food:setRotten(arg0) end
+function Food:setRotten(rotten) end
 
 --- @public
---- @param arg0 number
+--- @param time number
 --- @return nil
-function Food:setRottenTime(arg0) end
+function Food:setRottenTime(time) end
 
 --- @public
---- @param arg0 boolean
+--- @param isSpice boolean
 --- @return nil
-function Food:setSpice(arg0) end
+function Food:setSpice(isSpice) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param spices ArrayList
 --- @return nil
-function Food:setSpices(arg0) end
+function Food:setSpices(spices) end
 
 --- @public
 --- @param arg0 boolean
@@ -630,9 +630,9 @@ function Food:setSpices(arg0) end
 function Food:setTainted(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param thirstChange number
 --- @return nil
-function Food:setThirstChange(arg0) end
+function Food:setThirstChange(thirstChange) end
 
 --- @public
 --- @param arg0 integer
@@ -640,19 +640,19 @@ function Food:setThirstChange(arg0) end
 function Food:setTimeToHatch(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param useForPoison integer
 --- @return nil
-function Food:setUseForPoison(arg0) end
+function Food:setUseForPoison(useForPoison) end
 
 --- @public
---- @param arg0 string
+--- @param useOnConsume string
 --- @return nil
-function Food:setUseOnConsume(arg0) end
+function Food:setUseOnConsume(useOnConsume) end
 
 --- @public
---- @param arg0 boolean
+--- @param bDangerousUncooked boolean
 --- @return nil
-function Food:setbDangerousUncooked(arg0) end
+function Food:setbDangerousUncooked(bDangerousUncooked) end
 
 --- @public
 --- @return boolean
@@ -672,19 +672,19 @@ function Food:update() end
 function Food:updateAge() end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return nil
-function Food:updateSound(arg0) end
+function Food:updateSound(emitter) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return Food
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): Food
-function Food.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(module: string, name: string, itemType: string, item: Item): Food
+function Food.new(module, name, itemType, texName) end

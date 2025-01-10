@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSCorpsePsycho: RandomizedDeadSurvivorBase
+--- @class RDSCorpsePsycho: RandomizedDeadSurvivorBase Create corpses in a kitchen with one zombie as doctor
 --- @field public class any
 RDSCorpsePsycho = {}
 
@@ -9,9 +9,9 @@ RDSCorpsePsycho = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSCorpsePsycho:randomizeDeadSurvivor(arg0) end
+function RDSCorpsePsycho:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

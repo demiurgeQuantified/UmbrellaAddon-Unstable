@@ -11,9 +11,9 @@ BeardStyles = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return BeardStyles
-function BeardStyles.Parse(arg0) end
+function BeardStyles.Parse(filename) end
 
 --- @public
 --- @static
@@ -27,18 +27,18 @@ function BeardStyles.init() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return BeardStyles
-function BeardStyles.parse(arg0) end
+function BeardStyles.parse(filename) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return BeardStyle
-function BeardStyles:FindStyle(arg0) end
+function BeardStyles:FindStyle(name) end
 
 --- @public
 --- @return ArrayList
@@ -49,9 +49,9 @@ function BeardStyles:getAllStyles() end
 function BeardStyles:getInstance() end
 
 --- @public
---- @param arg0 string
+--- @param outfitName string
 --- @return string
-function BeardStyles:getRandomStyle(arg0) end
+function BeardStyles:getRandomStyle(outfitName) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

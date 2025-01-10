@@ -142,33 +142,33 @@ function ErosionSeason:getTempMax() end
 function ErosionSeason:getTempMin() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param day integer
+--- @param month integer
+--- @param year integer
 --- @return GregorianCalendar
-function ErosionSeason:getWinterStartDay(arg0, arg1, arg2) end
+function ErosionSeason:getWinterStartDay(day, month, year) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 number
---- @param arg6 integer
---- @param arg7 integer
---- @param arg8 integer
+--- @param _lat integer
+--- @param _tempMax integer
+--- @param _tempMin integer
+--- @param _tempDiff integer
+--- @param _seasonLag integer
+--- @param _noon number
+--- @param _seedA integer
+--- @param _seedB integer
+--- @param _seedC integer
 --- @return nil
-function ErosionSeason:init(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function ErosionSeason:init(_lat, _tempMax, _tempMin, _tempDiff, _seasonLag, _noon, _seedA, _seedB, _seedC) end
 
 --- @public
 --- @return boolean
 function ErosionSeason:isRainDay() end
 
 --- @public
---- @param arg0 integer
+--- @param _season integer
 --- @return boolean
-function ErosionSeason:isSeason(arg0) end
+function ErosionSeason:isSeason(_season) end
 
 --- @public
 --- @return boolean
@@ -179,32 +179,32 @@ function ErosionSeason:isSunnyDay() end
 function ErosionSeason:isThunderDay() end
 
 --- @public
---- @param arg0 integer
+--- @param season integer
 --- @return nil
-function ErosionSeason:setCurSeason(arg0) end
+function ErosionSeason:setCurSeason(season) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param _day integer
+--- @param _month integer
+--- @param _year integer
 --- @return nil
-function ErosionSeason:setDay(arg0, arg1, arg2) end
+function ErosionSeason:setDay(_day, _month, _year) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 number
---- @param arg9 number
---- @param arg10 number
---- @param arg11 number
+--- @param _jan number
+--- @param _feb number
+--- @param _mar number
+--- @param _apr number
+--- @param _may number
+--- @param _jun number
+--- @param _jul number
+--- @param _aug number
+--- @param _sep number
+--- @param _oct number
+--- @param _nov number
+--- @param _dec number
 --- @return nil
-function ErosionSeason:setRain(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+function ErosionSeason:setRain(_jan, _feb, _mar, _apr, _may, _jun, _jul, _aug, _sep, _oct, _nov, _dec) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

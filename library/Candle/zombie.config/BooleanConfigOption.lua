@@ -33,18 +33,18 @@ function BooleanConfigOption:getValueAsObject() end
 function BooleanConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return boolean
-function BooleanConfigOption:isValidString(arg0) end
+function BooleanConfigOption:isValidString(s) end
 
 --- @public
 --- @return ConfigOption
 function BooleanConfigOption:makeCopy() end
 
 --- @public
---- @param arg0 string
+--- @param s string
 --- @return nil
-function BooleanConfigOption:parse(arg0) end
+function BooleanConfigOption:parse(s) end
 
 --- @public
 --- @return nil
@@ -55,21 +55,21 @@ function BooleanConfigOption:resetToDefault() end
 function BooleanConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 boolean
+--- @param value boolean
 --- @return nil
-function BooleanConfigOption:setValue(arg0) end
+function BooleanConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return nil
-function BooleanConfigOption:setValueFromObject(arg0) end
+function BooleanConfigOption:setValueFromObject(o) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param defaultValue boolean
 --- @return BooleanConfigOption
-function BooleanConfigOption.new(arg0, arg1) end
+function BooleanConfigOption.new(name, defaultValue) end

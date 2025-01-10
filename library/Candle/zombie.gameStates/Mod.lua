@@ -9,16 +9,16 @@ Mod = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param name string
+--- @param flags integer
 --- @return nil
-function Mod:addPack(arg0, arg1) end
+function Mod:addPack(name, flags) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param name string
+--- @param fileNumber integer
 --- @return nil
-function Mod:addTileDef(arg0, arg1) end
+function Mod:addTileDef(name, fileNumber) end
 
 --- @public
 --- @return string
@@ -73,9 +73,9 @@ function Mod:getName() end
 function Mod:getPacks() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return string
-function Mod:getPoster(arg0) end
+function Mod:getPoster(index) end
 
 --- @public
 --- @return integer
@@ -127,10 +127,10 @@ function Mod:isAvailableSelf() end
 function Mod:setAuthor(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param available boolean
 --- @return nil
 --- @deprecated
-function Mod:setAvailable(arg0) end
+function Mod:setAvailable(available) end
 
 --- @public
 --- @param arg0 string
@@ -143,9 +143,9 @@ function Mod:setCategory(arg0) end
 function Mod:setIcon(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return nil
-function Mod:setId(arg0) end
+function Mod:setId(id) end
 
 --- @public
 --- @param arg0 ArrayList
@@ -168,30 +168,30 @@ function Mod:setLoadBefore(arg0) end
 function Mod:setModVersion(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Mod:setName(arg0) end
+function Mod:setName(name) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param require ArrayList
 --- @return nil
-function Mod:setRequire(arg0) end
+function Mod:setRequire(require) end
 
 --- @public
---- @param arg0 Texture
+--- @param tex Texture
 --- @return nil
-function Mod:setTexture(arg0) end
+function Mod:setTexture(tex) end
 
 --- @public
---- @param arg0 string
+--- @param url string
 --- @return nil
-function Mod:setUrl(arg0) end
+function Mod:setUrl(url) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param dir string
 --- @return Mod
-function Mod.new(arg0) end
+function Mod.new(dir) end

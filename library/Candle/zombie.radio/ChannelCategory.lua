@@ -24,5 +24,9 @@ function ChannelCategory.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return ChannelCategory[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return ChannelCategory[] an array containing the constants of this enum class, in the order they are declared
 function ChannelCategory.values() end

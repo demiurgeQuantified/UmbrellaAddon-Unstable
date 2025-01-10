@@ -21,60 +21,60 @@ function Moodles:UI_RefreshNeeded() end
 function Moodles:Update() end
 
 --- @public
---- @param arg0 integer
+--- @param MoodleIndex integer
 --- @return integer
-function Moodles:getGoodBadNeutral(arg0) end
+function Moodles:getGoodBadNeutral(MoodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param moodleIndex integer
 --- @return Color
-function Moodles:getMoodleChevronColor(arg0) end
+function Moodles:getMoodleChevronColor(moodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param moodleIndex integer
 --- @return integer
-function Moodles:getMoodleChevronCount(arg0) end
+function Moodles:getMoodleChevronCount(moodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param moodleIndex integer
 --- @return boolean
-function Moodles:getMoodleChevronIsUp(arg0) end
+function Moodles:getMoodleChevronIsUp(moodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param MoodleIndex integer
 --- @return string
-function Moodles:getMoodleDescriptionString(arg0) end
+function Moodles:getMoodleDescriptionString(MoodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param MoodleIndex integer
 --- @return string
-function Moodles:getMoodleDisplayString(arg0) end
+function Moodles:getMoodleDisplayString(MoodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param MoodleIndex integer
 --- @return integer
---- @overload fun(self: Moodles, arg0: MoodleType): integer
-function Moodles:getMoodleLevel(arg0) end
+--- @overload fun(self: Moodles, MType: MoodleType): integer
+function Moodles:getMoodleLevel(MoodleIndex) end
 
 --- @public
---- @param arg0 integer
+--- @param MoodleIndex integer
 --- @return MoodleType
-function Moodles:getMoodleType(arg0) end
+function Moodles:getMoodleType(MoodleIndex) end
 
 --- @public
 --- @return integer
 function Moodles:getNumMoodles() end
 
 --- @public
---- @param arg0 boolean
+--- @param refresh boolean
 --- @return nil
-function Moodles:setMoodlesStateChanged(arg0) end
+function Moodles:setMoodlesStateChanged(refresh) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param parent IsoGameCharacter
 --- @return Moodles
-function Moodles.new(arg0) end
+function Moodles.new(parent) end

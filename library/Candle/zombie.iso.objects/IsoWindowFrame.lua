@@ -10,82 +10,82 @@ IsoWindowFrame = {}
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 IsoGameCharacter
+--- @param o IsoObject
+--- @param chr IsoGameCharacter
 --- @return nil
-function IsoWindowFrame.addSheet(arg0, arg1) end
+function IsoWindowFrame.addSheet(o, chr) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 IsoPlayer
---- @param arg2 string
+--- @param o IsoObject
+--- @param player IsoPlayer
+--- @param itemType string
 --- @return boolean
-function IsoWindowFrame.addSheetRope(arg0, arg1, arg2) end
+function IsoWindowFrame.addSheetRope(o, player, itemType) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return boolean
-function IsoWindowFrame.canAddSheetRope(arg0) end
+function IsoWindowFrame.canAddSheetRope(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 IsoGameCharacter
+--- @param o IsoObject
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoWindowFrame.canClimbThrough(arg0, arg1) end
+function IsoWindowFrame.canClimbThrough(o, chr) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return integer
-function IsoWindowFrame.countAddSheetRope(arg0) end
+function IsoWindowFrame.countAddSheetRope(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 IsoGameCharacter
+--- @param o IsoObject
+--- @param chr IsoGameCharacter
 --- @return IsoGridSquare
-function IsoWindowFrame.getAddSheetSquare(arg0, arg1) end
+function IsoWindowFrame.getAddSheetSquare(o, chr) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return IsoCurtain
-function IsoWindowFrame.getCurtain(arg0) end
+function IsoWindowFrame.getCurtain(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return IsoGridSquare
-function IsoWindowFrame.getIndoorSquare(arg0) end
+function IsoWindowFrame.getIndoorSquare(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return IsoGridSquare
-function IsoWindowFrame.getOppositeSquare(arg0) end
+function IsoWindowFrame.getOppositeSquare(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return boolean
-function IsoWindowFrame.haveSheetRope(arg0) end
+function IsoWindowFrame.haveSheetRope(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param o IsoObject
 --- @return boolean
---- @overload fun(arg0: IsoObject, arg1: boolean): boolean
-function IsoWindowFrame.isWindowFrame(arg0) end
+--- @overload fun(o: IsoObject, north: boolean): boolean
+function IsoWindowFrame.isWindowFrame(o) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 IsoPlayer
+--- @param o IsoObject
+--- @param player IsoPlayer
 --- @return boolean
-function IsoWindowFrame.removeSheetRope(arg0, arg1) end
+function IsoWindowFrame.removeSheetRope(o, player) end
 
 ------------------------------------
 ------------- METHODS --------------

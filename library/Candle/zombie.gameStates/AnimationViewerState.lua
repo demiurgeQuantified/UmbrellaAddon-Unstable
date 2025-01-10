@@ -27,30 +27,30 @@ function AnimationViewerState:enter() end
 function AnimationViewerState:exit() end
 
 --- @public
---- @param arg0 string
+--- @param func string
 --- @return any
-function AnimationViewerState:fromLua0(arg0) end
+function AnimationViewerState:fromLua0(func) end
 
 --- @public
---- @param arg0 string
---- @param arg1 any
+--- @param func string
+--- @param arg0 any
 --- @return any
-function AnimationViewerState:fromLua1(arg0, arg1) end
+function AnimationViewerState:fromLua1(func, arg0) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function AnimationViewerState:getBoolean(arg0) end
+function AnimationViewerState:getBoolean(name) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ConfigOption
-function AnimationViewerState:getOptionByIndex(arg0) end
+function AnimationViewerState:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function AnimationViewerState:getOptionByName(arg0) end
+function AnimationViewerState:getOptionByName(name) end
 
 --- @public
 --- @return integer
@@ -73,15 +73,15 @@ function AnimationViewerState:render() end
 function AnimationViewerState:save() end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param value boolean
 --- @return nil
-function AnimationViewerState:setBoolean(arg0, arg1) end
+function AnimationViewerState:setBoolean(name, value) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function AnimationViewerState:setTable(arg0) end
+function AnimationViewerState:setTable(table) end
 
 --- @public
 --- @return StateAction

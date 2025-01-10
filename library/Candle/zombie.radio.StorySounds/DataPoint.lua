@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class DataPoint
+--- @class DataPoint Turbo
 --- @field public class any
 DataPoint = {}
 
@@ -17,21 +17,21 @@ function DataPoint:getIntensity() end
 function DataPoint:getTime() end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function DataPoint:setIntensity(arg0) end
+function DataPoint:setIntensity(intensity) end
 
 --- @public
---- @param arg0 number
+--- @param time number
 --- @return nil
-function DataPoint:setTime(arg0) end
+function DataPoint:setTime(time) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param time number
+--- @param intensity number
 --- @return DataPoint
-function DataPoint.new(arg0, arg1) end
+function DataPoint.new(time, intensity) end

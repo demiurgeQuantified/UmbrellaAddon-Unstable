@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class EventSound
+--- @class EventSound Turbo
 --- @field public class any
 EventSound = {}
 
@@ -25,24 +25,24 @@ function EventSound:getName() end
 function EventSound:getStorySounds() end
 
 --- @public
---- @param arg0 Color
+--- @param color Color
 --- @return nil
-function EventSound:setColor(arg0) end
+function EventSound:setColor(color) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param dataPoints ArrayList
 --- @return nil
-function EventSound:setDataPoints(arg0) end
+function EventSound:setDataPoints(dataPoints) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function EventSound:setName(arg0) end
+function EventSound:setName(name) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param storySounds ArrayList
 --- @return nil
-function EventSound:setStorySounds(arg0) end
+function EventSound:setStorySounds(storySounds) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -50,5 +50,5 @@ function EventSound:setStorySounds(arg0) end
 
 --- @public
 --- @return EventSound
---- @overload fun(arg0: string): EventSound
+--- @overload fun(name: string): EventSound
 function EventSound.new() end

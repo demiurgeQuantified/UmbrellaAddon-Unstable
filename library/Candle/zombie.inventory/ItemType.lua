@@ -22,9 +22,9 @@ ItemType = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param value integer
 --- @return ItemType
-function ItemType.fromIndex(arg0) end
+function ItemType.fromIndex(value) end
 
 --- @public
 --- @static
@@ -34,7 +34,11 @@ function ItemType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return ItemType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return ItemType[] an array containing the constants of this enum class, in the order they are declared
 function ItemType.values() end
 
 ------------------------------------

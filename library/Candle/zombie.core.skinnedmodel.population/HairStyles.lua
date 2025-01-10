@@ -11,9 +11,9 @@ HairStyles = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return HairStyles
-function HairStyles.Parse(arg0) end
+function HairStyles.Parse(filename) end
 
 --- @public
 --- @static
@@ -27,23 +27,23 @@ function HairStyles.init() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return HairStyles
-function HairStyles.parse(arg0) end
+function HairStyles.parse(filename) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return HairStyle
-function HairStyles:FindFemaleStyle(arg0) end
+function HairStyles:FindFemaleStyle(name) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return HairStyle
-function HairStyles:FindMaleStyle(arg0) end
+function HairStyles:FindMaleStyle(name) end
 
 --- @public
 --- @return ArrayList
@@ -54,20 +54,20 @@ function HairStyles:getAllFemaleStyles() end
 function HairStyles:getAllMaleStyles() end
 
 --- @public
---- @param arg0 HairStyle
---- @param arg1 string
+--- @param style HairStyle
+--- @param category string
 --- @return HairStyle
-function HairStyles:getAlternateForHat(arg0, arg1) end
+function HairStyles:getAlternateForHat(style, category) end
 
 --- @public
---- @param arg0 string
+--- @param outfitName string
 --- @return string
-function HairStyles:getRandomFemaleStyle(arg0) end
+function HairStyles:getRandomFemaleStyle(outfitName) end
 
 --- @public
---- @param arg0 string
+--- @param outfitName string
 --- @return string
-function HairStyles:getRandomMaleStyle(arg0) end
+function HairStyles:getRandomMaleStyle(outfitName) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -9,55 +9,55 @@ TraitCollection = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param trait string
 --- @return nil
-function TraitCollection:add(arg0) end
+function TraitCollection:add(trait) end
 
 --- @public
---- @param arg0 Collection
+--- @param c Collection
 --- @return nil
-function TraitCollection:addAll(arg0) end
+function TraitCollection:addAll(c) end
 
 --- @public
 --- @return nil
 function TraitCollection:clear() end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return boolean
---- @overload fun(self: TraitCollection, arg0: string): boolean
-function TraitCollection:contains(arg0) end
+--- @overload fun(self: TraitCollection, trait: string): boolean
+function TraitCollection:contains(o) end
 
 --- @public
---- @param arg0 integer
+--- @param n integer
 --- @return string
-function TraitCollection:get(arg0) end
+function TraitCollection:get(n) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return TraitSlot
-function TraitCollection:getTraitSlot(arg0) end
+function TraitCollection:getTraitSlot(name) end
 
 --- @public
 --- @return boolean
 function TraitCollection:isEmpty() end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return boolean
---- @overload fun(self: TraitCollection, arg0: string): boolean
-function TraitCollection:remove(arg0) end
+--- @overload fun(self: TraitCollection, name: string): boolean
+function TraitCollection:remove(o) end
 
 --- @public
---- @param arg0 Collection
+--- @param c Collection
 --- @return nil
-function TraitCollection:removeAll(arg0) end
+function TraitCollection:removeAll(c) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param val boolean
 --- @return nil
-function TraitCollection:set(arg0, arg1) end
+function TraitCollection:set(name, val) end
 
 --- @public
 --- @return integer

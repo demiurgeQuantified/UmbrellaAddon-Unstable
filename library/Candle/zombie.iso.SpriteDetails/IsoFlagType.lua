@@ -117,15 +117,15 @@ IsoFlagType = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return IsoFlagType
-function IsoFlagType.FromString(arg0) end
+function IsoFlagType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param value integer
 --- @return IsoFlagType
-function IsoFlagType.fromIndex(arg0) end
+function IsoFlagType.fromIndex(value) end
 
 --- @public
 --- @static
@@ -135,7 +135,11 @@ function IsoFlagType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return IsoFlagType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return IsoFlagType[] an array containing the constants of this enum class, in the order they are declared
 function IsoFlagType.values() end
 
 ------------------------------------

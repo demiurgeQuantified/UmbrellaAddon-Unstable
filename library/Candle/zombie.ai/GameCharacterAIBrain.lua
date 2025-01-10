@@ -9,21 +9,21 @@ GameCharacterAIBrain = {}
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param ttx integer
+--- @param tty integer
+--- @param ttz integer
 --- @return nil
-function GameCharacterAIBrain:AddBlockedMemory(arg0, arg1, arg2) end
+function GameCharacterAIBrain:AddBlockedMemory(ttx, tty, ttz) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
+--- @param lx integer
+--- @param ly integer
+--- @param lz integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return boolean
-function GameCharacterAIBrain:HasBlockedMemory(arg0, arg1, arg2, arg3, arg4, arg5) end
+function GameCharacterAIBrain:HasBlockedMemory(lx, ly, lz, x, y, z) end
 
 --- @public
 --- @return IsoGameCharacter
@@ -35,13 +35,13 @@ function GameCharacterAIBrain:getCloseZombieCount() end
 
 --- @public
 --- @return IsoZombie
---- @overload fun(self: GameCharacterAIBrain, arg0: boolean): IsoZombie
+--- @overload fun(self: GameCharacterAIBrain, recurse: boolean): IsoZombie
 function GameCharacterAIBrain:getClosestChasingZombie() end
 
 --- @public
---- @param arg0 integer
+--- @param num integer
 --- @return ArrayList
-function GameCharacterAIBrain:getClosestChasingZombies(arg0) end
+function GameCharacterAIBrain:getClosestChasingZombies(num) end
 
 --- @public
 --- @return SurvivorGroup
@@ -52,18 +52,18 @@ function GameCharacterAIBrain:getGroup() end
 function GameCharacterAIBrain:getOrder() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param isoPlayer IsoPlayer
 --- @return nil
-function GameCharacterAIBrain:postUpdateHuman(arg0) end
+function GameCharacterAIBrain:postUpdateHuman(isoPlayer) end
 
 --- @public
 --- @return nil
 function GameCharacterAIBrain:renderlast() end
 
 --- @public
---- @param arg0 string
+--- @param order string
 --- @return nil
-function GameCharacterAIBrain:setOrder(arg0) end
+function GameCharacterAIBrain:setOrder(order) end
 
 --- @public
 --- @return nil
@@ -74,6 +74,6 @@ function GameCharacterAIBrain:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param character IsoGameCharacter
 --- @return GameCharacterAIBrain
-function GameCharacterAIBrain.new(arg0) end
+function GameCharacterAIBrain.new(character) end

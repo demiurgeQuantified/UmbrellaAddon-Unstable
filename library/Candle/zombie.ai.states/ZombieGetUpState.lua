@@ -18,14 +18,14 @@ function ZombieGetUpState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieGetUpState:enter(arg0) end
+function ZombieGetUpState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieGetUpState:exit(arg0) end
+function ZombieGetUpState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

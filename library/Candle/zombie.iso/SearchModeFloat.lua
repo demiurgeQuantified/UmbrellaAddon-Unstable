@@ -49,12 +49,12 @@ function SearchModeFloat:reset() end
 function SearchModeFloat:resetAll() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param exterior number
+--- @param targetExterior number
+--- @param interior number
+--- @param targetInterior number
 --- @return nil
-function SearchModeFloat:set(arg0, arg1, arg2, arg3) end
+function SearchModeFloat:set(exterior, targetExterior, interior, targetInterior) end
 
 --- @public
 --- @param arg0 number
@@ -62,32 +62,32 @@ function SearchModeFloat:set(arg0, arg1, arg2, arg3) end
 function SearchModeFloat:setAll(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param exterior number
 --- @return nil
-function SearchModeFloat:setExterior(arg0) end
+function SearchModeFloat:setExterior(exterior) end
 
 --- @public
---- @param arg0 number
+--- @param interior number
 --- @return nil
-function SearchModeFloat:setInterior(arg0) end
+function SearchModeFloat:setInterior(interior) end
 
 --- @public
---- @param arg0 number
+--- @param targetExterior number
 --- @return nil
-function SearchModeFloat:setTargetExterior(arg0) end
+function SearchModeFloat:setTargetExterior(targetExterior) end
 
 --- @public
---- @param arg0 number
+--- @param targetInterior number
 --- @return nil
-function SearchModeFloat:setTargetInterior(arg0) end
+function SearchModeFloat:setTargetInterior(targetInterior) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param targetExterior number
+--- @param targetInterior number
 --- @return nil
-function SearchModeFloat:setTargets(arg0, arg1) end
+function SearchModeFloat:setTargets(targetExterior, targetInterior) end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
-function SearchModeFloat:update(arg0) end
+function SearchModeFloat:update(delta) end

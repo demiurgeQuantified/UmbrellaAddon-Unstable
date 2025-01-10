@@ -30,9 +30,9 @@ GameWindow = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param text string
 --- @return nil
-function GameWindow.DoLoadingText(arg0) end
+function GameWindow.DoLoadingText(text) end
 
 --- @public
 --- @static
@@ -46,31 +46,31 @@ function GameWindow.InitGameThread() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 integer
+--- @param pack string
+--- @param flags integer
 --- @return nil
---- @overload fun(arg0: string, arg1: integer, arg2: string): nil
-function GameWindow.LoadTexturePack(arg0, arg1) end
+--- @overload fun(pack: string, flags: integer, modID: string): nil
+function GameWindow.LoadTexturePack(pack, flags) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param pack string
 --- @return nil
 --- @deprecated
-function GameWindow.LoadTexturePackDDS(arg0) end
+function GameWindow.LoadTexturePackDDS(pack) end
 
 --- @public
 --- @static
---- @param arg0 DataInputStream
+--- @param input DataInputStream
 --- @return string
---- @overload fun(arg0: ByteBuffer): string
-function GameWindow.ReadString(arg0) end
+--- @overload fun(input: ByteBuffer): string
+function GameWindow.ReadString(input) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return string
-function GameWindow.ReadStringUTF(arg0) end
+function GameWindow.ReadStringUTF(input) end
 
 --- @public
 --- @static
@@ -80,18 +80,18 @@ function GameWindow.ReadUUID(arg0) end
 
 --- @public
 --- @static
---- @param arg0 DataOutputStream
---- @param arg1 string
+--- @param output DataOutputStream
+--- @param str string
 --- @return nil
---- @overload fun(arg0: ByteBuffer, arg1: string): nil
-function GameWindow.WriteString(arg0, arg1) end
+--- @overload fun(output: ByteBuffer, str: string): nil
+function GameWindow.WriteString(output, str) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
---- @param arg1 string
+--- @param output ByteBuffer
+--- @param str string
 --- @return nil
-function GameWindow.WriteStringUTF(arg0, arg1) end
+function GameWindow.WriteStringUTF(output, str) end
 
 --- @public
 --- @static
@@ -102,9 +102,9 @@ function GameWindow.WriteUUID(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function GameWindow.doRenderEvent(arg0) end
+function GameWindow.doRenderEvent(b) end
 
 --- @public
 --- @static
@@ -129,15 +129,15 @@ function GameWindow.isIngameState() end
 
 --- @public
 --- @static
---- @param arg0 DataInputStream
+--- @param __in__ DataInputStream
 --- @return integer
-function GameWindow.readInt(arg0) end
+function GameWindow.readInt(__in__) end
 
 --- @public
 --- @static
---- @param arg0 DataInputStream
+--- @param __in__ DataInputStream
 --- @return integer
-function GameWindow.readLong(arg0) end
+function GameWindow.readLong(__in__) end
 
 --- @public
 --- @static
@@ -146,9 +146,9 @@ function GameWindow.render() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDoChars boolean
 --- @return nil
-function GameWindow.save(arg0) end
+function GameWindow.save(bDoChars) end
 
 --- @public
 --- @static
@@ -157,10 +157,10 @@ function GameWindow.setTexturePackLookup() end
 
 --- @public
 --- @static
---- @param arg0 Thread
---- @param arg1 Throwable
+--- @param thread Thread
+--- @param e Throwable
 --- @return nil
-function GameWindow.uncaughtException(arg0, arg1) end
+function GameWindow.uncaughtException(thread, e) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

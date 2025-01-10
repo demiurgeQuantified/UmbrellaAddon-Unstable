@@ -130,29 +130,29 @@ function Server:isSavePwd() end
 function Server:setAuthType(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param description string
 --- @return nil
-function Server:setDescription(arg0) end
+function Server:setDescription(description) end
 
 --- @public
---- @param arg0 boolean
+--- @param hosted boolean
 --- @return nil
-function Server:setHosted(arg0) end
+function Server:setHosted(hosted) end
 
 --- @public
---- @param arg0 string
+--- @param ip string
 --- @return nil
-function Server:setIp(arg0) end
+function Server:setIp(ip) end
 
 --- @public
---- @param arg0 integer
+--- @param lastUpdate integer
 --- @return nil
-function Server:setLastUpdate(arg0) end
+function Server:setLastUpdate(lastUpdate) end
 
 --- @public
---- @param arg0 string
+--- @param ip string
 --- @return nil
-function Server:setLocalIP(arg0) end
+function Server:setLocalIP(ip) end
 
 --- @public
 --- @param arg0 integer
@@ -160,19 +160,19 @@ function Server:setLocalIP(arg0) end
 function Server:setLoginScreenId(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param maxPlayers string
 --- @return nil
-function Server:setMaxPlayers(arg0) end
+function Server:setMaxPlayers(maxPlayers) end
 
 --- @public
---- @param arg0 string
+--- @param mods string
 --- @return nil
-function Server:setMods(arg0) end
+function Server:setMods(mods) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Server:setName(arg0) end
+function Server:setName(name) end
 
 --- @public
 --- @param arg0 boolean
@@ -180,40 +180,40 @@ function Server:setName(arg0) end
 function Server:setNeedSave(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return nil
-function Server:setOpen(arg0) end
+function Server:setOpen(open) end
 
 --- @public
---- @param arg0 boolean
+--- @param pp boolean
 --- @return nil
-function Server:setPasswordProtected(arg0) end
+function Server:setPasswordProtected(pp) end
 
 --- @public
---- @param arg0 string
+--- @param ping string
 --- @return nil
-function Server:setPing(arg0) end
+function Server:setPing(ping) end
 
 --- @public
---- @param arg0 string
+--- @param players string
 --- @return nil
-function Server:setPlayers(arg0) end
+function Server:setPlayers(players) end
 
 --- @public
---- @param arg0 string
+--- @param port string
 --- @return nil
-function Server:setPort(arg0) end
+function Server:setPort(port) end
 
 --- @public
---- @param arg0 boolean
+--- @param bPublic boolean
 --- @return nil
-function Server:setPublic(arg0) end
+function Server:setPublic(bPublic) end
 
 --- @public
---- @param arg0 string
+--- @param pwd string
 --- @return nil
 --- @overload fun(self: Server, arg0: string, arg1: boolean): nil
-function Server:setPwd(arg0) end
+function Server:setPwd(pwd) end
 
 --- @public
 --- @param arg0 boolean
@@ -241,14 +241,14 @@ function Server:setServerLoadingScreen(arg0) end
 function Server:setServerLoginScreen(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param pwd string
 --- @return nil
-function Server:setServerPassword(arg0) end
+function Server:setServerPassword(pwd) end
 
 --- @public
---- @param arg0 string
+--- @param steamId string
 --- @return nil
-function Server:setSteamId(arg0) end
+function Server:setSteamId(steamId) end
 
 --- @public
 --- @param arg0 boolean
@@ -256,14 +256,14 @@ function Server:setSteamId(arg0) end
 function Server:setUseSteamRelay(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param userName string
 --- @return nil
-function Server:setUserName(arg0) end
+function Server:setUserName(userName) end
 
 --- @public
---- @param arg0 string
+--- @param version string
 --- @return nil
-function Server:setVersion(arg0) end
+function Server:setVersion(version) end
 
 --- @public
 --- @return nil

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBSchool: RandomizedBuildingBase
+--- @class RBSchool: RandomizedBuildingBase Add pen, pencils, books... on school desk
 --- @field public class any
 RBSchool = {}
 
@@ -9,20 +9,23 @@ RBSchool = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+---
+---  Description copied from class: RandomizedBuildingBase
+---
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBSchool:isValid(arg0, arg1) end
+function RBSchool:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBSchool:randomizeBuilding(arg0) end
+function RBSchool:randomizeBuilding(def) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return boolean
-function RBSchool:roomValid(arg0) end
+function RBSchool:roomValid(sq) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

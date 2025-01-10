@@ -10,35 +10,41 @@ Vector2 = {}
 
 --- @public
 --- @static
---- @param arg0 Vector2
---- @param arg1 Vector2
---- @param arg2 number
---- @param arg3 Vector2
---- @return Vector2
-function Vector2.addScaled(arg0, arg1, arg2, arg3) end
+---
+---  Result = a + b * scale
+---
+--- @param a Vector2
+--- @param b Vector2
+--- @param scale number
+--- @param result Vector2
+--- @return Vector2 The supplied result vector.
+function Vector2.addScaled(a, b, scale, result) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param x number
+--- @param y number
+--- @param tx number
+--- @param ty number
 --- @return number
-function Vector2.dot(arg0, arg1, arg2, arg3) end
+function Vector2.dot(x, y, tx, ty) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
+---
+---  Create a new vector with a specified length and direction
+---
+--- @param length number
+--- @param direction number The direction of the new vector, in radians
 --- @return Vector2
-function Vector2.fromLengthDirection(arg0, arg1) end
+function Vector2.fromLengthDirection(length, direction) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return number
-function Vector2.getDirection(arg0, arg1) end
+function Vector2.getDirection(x, y) end
 
 --- @public
 --- @static
@@ -50,54 +56,75 @@ function Vector2.moveTowards(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
---- @param arg1 number
+--- @param val Vector2
+--- @param scale number
 --- @return Vector2
-function Vector2.scale(arg0, arg1) end
+function Vector2.scale(val, scale) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Vector2
+---
+---  Add another vector to this one and return this
+---
+--- @param other Vector2 The other Vector2 to add to this one
+--- @return Vector2 this
+function Vector2:add(other) end
+
+--- @public
+---
+---  Set the direction of this vector to point to another vector, maintaining the
+---
+--- @param other Vector2 The Vector2 to point this one at.
 --- @return Vector2
-function Vector2:add(arg0) end
+function Vector2:aimAt(other) end
 
 --- @public
---- @param arg0 Vector2
---- @return Vector2
-function Vector2:aimAt(arg0) end
+---
+---  Calculate angle between this and other vectors
+---
+--- @param other Vector2 The other vector
+--- @return number The angle in radians in the range [0,PI]
+function Vector2:angleBetween(other) end
 
 --- @public
---- @param arg0 Vector2
---- @return number
-function Vector2:angleBetween(arg0) end
+---
+---  Calculate the angle between this point and another
+---
+--- @param other Vector2 The second point as vector
+--- @return number The angle between them, in radians
+function Vector2:angleTo(other) end
 
 --- @public
---- @param arg0 Vector2
---- @return number
-function Vector2:angleTo(arg0) end
-
---- @public
+---
+---  Clone this vector
+---
 --- @return any
 --- @overload fun(self: Vector2): Vector2
 function Vector2:clone() end
 
 --- @public
---- @param arg0 Vector2
---- @return number
-function Vector2:distanceTo(arg0) end
+---
+---  Calculate the distance between this point and another
+---
+--- @param other Vector2 The second point as vector
+--- @return number The distance between them
+function Vector2:distanceTo(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return number
-function Vector2:dot(arg0) end
+function Vector2:dot(other) end
 
 --- @public
---- @param arg0 any
---- @return boolean
-function Vector2:equals(arg0) end
+---
+---  See if this vector is equal to another
+---
+--- @param other any A Vector2 to compare this one to
+--- @return boolean true if other is a Vector2 equal to this one
+function Vector2:equals(other) end
 
 --- @public
 --- @return integer
@@ -112,24 +139,33 @@ function Vector2:floorY() end
 function Vector2:getDirection() end
 
 --- @public
---- @return number
+---
+---  get the direction in which this vector is pointing
+---
+--- @return number The direction in which this vector is pointing in radians
 --- @deprecated
 function Vector2:getDirectionNeg() end
 
 --- @public
---- @return number
+---
+---  get the length of this vector
+---
+--- @return number The length of this vector
 function Vector2:getLength() end
 
 --- @public
---- @return number
+---
+---  get the squared length of this vector
+---
+--- @return number The squared length of this vector
 function Vector2:getLengthSquared() end
 
 --- @public
---- @return number
+--- @return number the x
 function Vector2:getX() end
 
 --- @public
---- @return number
+--- @return number the y
 function Vector2:getY() end
 
 --- @public
@@ -137,46 +173,58 @@ function Vector2:getY() end
 function Vector2:normalize() end
 
 --- @public
---- @param arg0 number
+--- @param rad number
 --- @return nil
-function Vector2:rotate(arg0) end
+function Vector2:rotate(rad) end
 
 --- @public
---- @param arg0 number
+--- @param scale number
 --- @return nil
-function Vector2:scale(arg0) end
+function Vector2:scale(scale) end
 
 --- @public
---- @param arg0 Vector2
+---
+---  Make this vector identical to another vector
+---
+--- @param other Vector2 The Vector2 to copy
 --- @return Vector2
---- @overload fun(self: Vector2, arg0: number, arg1: number): Vector2
-function Vector2:set(arg0) end
+--- @overload fun(self: Vector2, x: number, y: number): Vector2
+function Vector2:set(other) end
 
 --- @public
---- @param arg0 number
+---
+---  Set the direction of this vector, maintaining the length
+---
+--- @param direction number The new direction of this vector, in radians
 --- @return Vector2
-function Vector2:setDirection(arg0) end
+function Vector2:setDirection(direction) end
 
 --- @public
---- @param arg0 number
+---
+---  Set the length of this vector, maintaining the direction
+---
+--- @param length number The length of this vector
 --- @return Vector2
-function Vector2:setLength(arg0) end
+function Vector2:setLength(length) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+---
+---  Set the length and direction of this vector
+---
+--- @param direction number The direction of this vector, in radians
+--- @param length number
 --- @return Vector2
-function Vector2:setLengthAndDirection(arg0, arg1) end
+function Vector2:setLengthAndDirection(direction, length) end
 
 --- @public
---- @param arg0 number
+--- @param x number the x to set
 --- @return nil
-function Vector2:setX(arg0) end
+function Vector2:setX(x) end
 
 --- @public
---- @param arg0 number
+--- @param y number the y to set
 --- @return nil
-function Vector2:setY(arg0) end
+function Vector2:setY(y) end
 
 --- @public
 --- @return nil
@@ -191,7 +239,10 @@ function Vector2:toString() end
 ------------------------------------
 
 --- @public
+---
+---  Create a new vector with zero length
+---
 --- @return Vector2
---- @overload fun(arg0: Vector2): Vector2
---- @overload fun(arg0: number, arg1: number): Vector2
+--- @overload fun(other: Vector2): Vector2
+--- @overload fun(x: number, y: number): Vector2
 function Vector2.new() end

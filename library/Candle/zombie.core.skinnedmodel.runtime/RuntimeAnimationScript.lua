@@ -9,10 +9,10 @@ RuntimeAnimationScript = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param totalFile string
 --- @return nil
-function RuntimeAnimationScript:Load(arg0, arg1) end
+function RuntimeAnimationScript:Load(name, totalFile) end
 
 --- @public
 --- @return nil

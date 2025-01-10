@@ -10,94 +10,127 @@ Vector3 = {}
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param x number
+--- @param y number
+--- @param tx number
+--- @param ty number
 --- @return number
-function Vector3.dot(arg0, arg1, arg2, arg3) end
+function Vector3.dot(x, y, tx, ty) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
+---
+---  Create a new vector with a specified length and direction
+---
+--- @param length number
+--- @param direction number The direction of the new vector, in radians
 --- @return Vector2
-function Vector3.fromLengthDirection(arg0, arg1) end
+function Vector3.fromLengthDirection(length, direction) end
 
 --- @public
 --- @static
---- @param arg0 Vector3
---- @param arg1 Vector3
---- @param arg2 Vector3
+--- @param a Vector3
+--- @param b Vector3
+--- @param out Vector3
 --- @return Vector3
-function Vector3.sub(arg0, arg1, arg2) end
+function Vector3.sub(a, b, out) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 Vector2
---- @return Vector2
-function Vector3:add(arg0) end
+---
+---  Add another vector to this one and return as a new vector
+---
+--- @param other Vector2 The other Vector2 to add to this one
+--- @return Vector2 The result as new Vector2
+function Vector3:add(other) end
 
 --- @public
---- @param arg0 Vector2
+---
+---  Add another vector to this one and store the result in this one
+---
+--- @param other Vector2 The other Vector2 to add to this one
+--- @return Vector3 This vector, with the other vector added
+--- @overload fun(self: Vector3, other: Vector3): Vector3
+function Vector3:addToThis(other) end
+
+--- @public
+---
+---  Set the direction of this vector to point to another vector, maintaining the
+---
+--- @param other Vector2 The Vector2 to point this one at.
 --- @return Vector3
---- @overload fun(self: Vector3, arg0: Vector3): Vector3
-function Vector3:addToThis(arg0) end
+function Vector3:aimAt(other) end
 
 --- @public
---- @param arg0 Vector2
---- @return Vector3
-function Vector3:aimAt(arg0) end
+---
+---  Calculate the angle between this point and another
+---
+--- @param other Vector2 The second point as vector
+--- @return number The angle between them, in radians
+function Vector3:angleTo(other) end
 
 --- @public
---- @param arg0 Vector2
---- @return number
-function Vector3:angleTo(arg0) end
-
---- @public
+---
+---  Clone this vector
+---
 --- @return any
 --- @overload fun(self: Vector3): Vector3
 function Vector3:clone() end
 
 --- @public
---- @param arg0 Vector2
---- @return number
+---
+---  Calculate the distance between this point and another
+---
+--- @param other Vector2 The second point as vector
+--- @return number The distance between them
 --- @overload fun(self: Vector3, arg0: Vector3): number
-function Vector3:distanceTo(arg0) end
+function Vector3:distanceTo(other) end
 
 --- @public
---- @param arg0 number
+--- @param scalar number
 --- @return Vector3
-function Vector3:div(arg0) end
+function Vector3:div(scalar) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return number
-function Vector3:dot(arg0) end
+function Vector3:dot(other) end
 
 --- @public
---- @param arg0 Vector3
+--- @param other Vector3
 --- @return number
-function Vector3:dot3d(arg0) end
+function Vector3:dot3d(other) end
 
 --- @public
---- @param arg0 any
---- @return boolean
-function Vector3:equals(arg0) end
+---
+---  See if this vector is equal to another
+---
+--- @param other any A Vector2 to compare this one to
+--- @return boolean true if other is a Vector2 equal to this one
+function Vector3:equals(other) end
 
 --- @public
---- @return number
+---
+---  get the direction in which this vector is pointing
+---
+--- @return number The direction in which this vector is pointing in radians
 function Vector3:getDirection() end
 
 --- @public
---- @return number
+---
+---  get the length of this vector
+---
+--- @return number The length of this vector
 function Vector3:getLength() end
 
 --- @public
---- @return number
+---
+---  get the length squared (L^2) of this vector
+---
+--- @return number The length squared of this vector
 function Vector3:getLengthSq() end
 
 --- @public
@@ -105,42 +138,54 @@ function Vector3:getLengthSq() end
 function Vector3:normalize() end
 
 --- @public
---- @param arg0 number
+--- @param rad number
 --- @return nil
-function Vector3:rotate(arg0) end
+function Vector3:rotate(rad) end
 
 --- @public
---- @param arg0 number
+--- @param rad number
 --- @return nil
-function Vector3:rotatey(arg0) end
+function Vector3:rotatey(rad) end
 
 --- @public
---- @param arg0 Vector3
+---
+---  Make this vector identical to another vector
+---
+--- @param other Vector3 The Vector2 to copy
 --- @return Vector3
---- @overload fun(self: Vector3, arg0: number, arg1: number, arg2: number): Vector3
-function Vector3:set(arg0) end
+--- @overload fun(self: Vector3, x: number, y: number, z: number): Vector3
+function Vector3:set(other) end
 
 --- @public
---- @param arg0 number
+---
+---  Set the direction of this vector, maintaining the length
+---
+--- @param direction number The new direction of this vector, in radians
 --- @return Vector3
-function Vector3:setDirection(arg0) end
+function Vector3:setDirection(direction) end
 
 --- @public
---- @param arg0 number
+---
+---  Set the length of this vector, maintaining the direction
+---
+--- @param length number The length of this vector
 --- @return Vector3
-function Vector3:setLength(arg0) end
+function Vector3:setLength(length) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+---
+---  Set the length and direction of this vector
+---
+--- @param direction number The direction of this vector, in radians
+--- @param length number
 --- @return Vector3
-function Vector3:setLengthAndDirection(arg0, arg1) end
+function Vector3:setLengthAndDirection(direction, length) end
 
 --- @public
---- @param arg0 Vector3
---- @param arg1 Vector3
+--- @param val Vector3
+--- @param out Vector3
 --- @return Vector3
-function Vector3:sub(arg0, arg1) end
+function Vector3:sub(val, out) end
 
 --- @public
 --- @return string
@@ -151,7 +196,10 @@ function Vector3:toString() end
 ------------------------------------
 
 --- @public
+---
+---  Create a new vector with zero length
+---
 --- @return Vector3
---- @overload fun(arg0: Vector3): Vector3
---- @overload fun(arg0: number, arg1: number, arg2: number): Vector3
+--- @overload fun(other: Vector3): Vector3
+--- @overload fun(x: number, y: number, z: number): Vector3
 function Vector3.new() end

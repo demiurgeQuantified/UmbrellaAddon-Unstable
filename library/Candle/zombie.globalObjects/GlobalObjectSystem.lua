@@ -17,9 +17,9 @@ function GlobalObjectSystem:Reset() end
 function GlobalObjectSystem:allocList() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param list ArrayList
 --- @return nil
-function GlobalObjectSystem:finishedWithList(arg0) end
+function GlobalObjectSystem:finishedWithList(list) end
 
 --- @public
 --- @return table
@@ -32,45 +32,45 @@ function GlobalObjectSystem:getName() end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return GlobalObject
---- @overload fun(self: GlobalObjectSystem, arg0: integer, arg1: integer, arg2: integer): GlobalObject
+--- @overload fun(self: GlobalObjectSystem, x: integer, y: integer, z: integer): GlobalObject
 function GlobalObjectSystem:getObjectAt(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return GlobalObject
-function GlobalObjectSystem:getObjectByIndex(arg0) end
+function GlobalObjectSystem:getObjectByIndex(index) end
 
 --- @public
 --- @return integer
 function GlobalObjectSystem:getObjectCount() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return ArrayList
-function GlobalObjectSystem:getObjectsAdjacentTo(arg0, arg1, arg2) end
+function GlobalObjectSystem:getObjectsAdjacentTo(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return ArrayList
-function GlobalObjectSystem:getObjectsInChunk(arg0, arg1) end
+function GlobalObjectSystem:getObjectsInChunk(wx, wy) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return boolean
-function GlobalObjectSystem:hasObjectsInChunk(arg0, arg1) end
+function GlobalObjectSystem:hasObjectsInChunk(wx, wy) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return GlobalObject
-function GlobalObjectSystem:newObject(arg0, arg1, arg2) end
+function GlobalObjectSystem:newObject(x, y, z) end
 
 --- @public
---- @param arg0 GlobalObject
+--- @param object GlobalObject
 --- @return nil
-function GlobalObjectSystem:removeObject(arg0) end
+function GlobalObjectSystem:removeObject(object) end

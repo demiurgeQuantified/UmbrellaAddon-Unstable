@@ -21,15 +21,15 @@ function ItemVisuals:findMask() end
 function ItemVisuals:getDescription() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function ItemVisuals:load(arg0, arg1) end
+function ItemVisuals:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function ItemVisuals:save(arg0) end
+function ItemVisuals:save(output) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

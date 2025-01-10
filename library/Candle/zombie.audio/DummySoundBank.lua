@@ -9,30 +9,30 @@ DummySoundBank = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
---- @param arg4 string
+--- @param alias string
+--- @param grass string
+--- @param wood string
+--- @param concrete string
+--- @param upstairs string
 --- @return nil
-function DummySoundBank:addFootstep(arg0, arg1, arg2, arg3, arg4) end
+function DummySoundBank:addFootstep(alias, grass, wood, concrete, upstairs) end
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 number
+--- @param alias string
+--- @param sound string
+--- @param priority number
 --- @return nil
-function DummySoundBank:addVoice(arg0, arg1, arg2) end
+function DummySoundBank:addVoice(alias, sound, priority) end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return FMODFootstep
-function DummySoundBank:getFootstep(arg0) end
+function DummySoundBank:getFootstep(alias) end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return FMODVoice
-function DummySoundBank:getVoice(arg0) end
+function DummySoundBank:getVoice(alias) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

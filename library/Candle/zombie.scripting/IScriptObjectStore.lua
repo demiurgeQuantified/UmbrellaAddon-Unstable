@@ -9,11 +9,11 @@ IScriptObjectStore = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return Item
-function IScriptObjectStore:getItem(arg0) end
+function IScriptObjectStore:getItem(name) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return Recipe
-function IScriptObjectStore:getRecipe(arg0) end
+function IScriptObjectStore:getRecipe(name) end

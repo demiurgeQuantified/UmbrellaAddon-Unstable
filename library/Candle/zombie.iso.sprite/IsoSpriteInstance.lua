@@ -11,15 +11,15 @@ IsoSpriteInstance = {}
 
 --- @public
 --- @static
---- @param arg0 IsoSpriteInstance
+--- @param isoSpriteInstance IsoSpriteInstance
 --- @return nil
-function IsoSpriteInstance.add(arg0) end
+function IsoSpriteInstance.add(isoSpriteInstance) end
 
 --- @public
 --- @static
---- @param arg0 IsoSprite
+--- @param spr IsoSprite
 --- @return IsoSpriteInstance
-function IsoSpriteInstance.get(arg0) end
+function IsoSpriteInstance.get(spr) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -30,25 +30,25 @@ function IsoSpriteInstance.get(arg0) end
 function IsoSpriteInstance:Dispose() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function IsoSpriteInstance:RenderGhostTileColor(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoSpriteInstance:RenderGhostTileColor(x, y, z, r, g, b, a) end
 
 --- @public
---- @param arg0 number
+--- @param f number
 --- @return nil
-function IsoSpriteInstance:SetAlpha(arg0) end
+function IsoSpriteInstance:SetAlpha(f) end
 
 --- @public
---- @param arg0 number
+--- @param targetAlpha number
 --- @return nil
-function IsoSpriteInstance:SetTargetAlpha(arg0) end
+function IsoSpriteInstance:SetTargetAlpha(targetAlpha) end
 
 --- @public
 --- @return number
@@ -107,37 +107,37 @@ function IsoSpriteInstance:isFinished() end
 function IsoSpriteInstance:isMultiplyObjectAlpha() end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 IsoDirections
---- @param arg5 number
---- @param arg6 number
---- @param arg7 ColorInfo
+--- @param obj IsoObject
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param dir IsoDirections
+--- @param offsetX number
+--- @param offsetY number
+--- @param info2 ColorInfo
 --- @return nil
 --- @overload fun(self: IsoSpriteInstance, arg0: IsoObject, arg1: number, arg2: number, arg3: number, arg4: IsoDirections, arg5: number, arg6: number, arg7: ColorInfo, arg8: boolean): nil
 --- @overload fun(self: IsoSpriteInstance, arg0: IsoObject, arg1: number, arg2: number, arg3: number, arg4: IsoDirections, arg5: number, arg6: number, arg7: ColorInfo, arg8: boolean, arg9: Consumer): nil
-function IsoSpriteInstance:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoSpriteInstance:render(obj, x, y, z, dir, offsetX, offsetY, info2) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param texW number
+--- @param texH number
+--- @param width number
+--- @param height number
 --- @return nil
-function IsoSpriteInstance:scaleAspect(arg0, arg1, arg2, arg3) end
+function IsoSpriteInstance:scaleAspect(texW, texH, width, height) end
 
 --- @public
---- @param arg0 number
+--- @param perSecond number
 --- @return nil
-function IsoSpriteInstance:setFrameSpeedPerFrame(arg0) end
+function IsoSpriteInstance:setFrameSpeedPerFrame(perSecond) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param scaleX number
+--- @param scaleY number
 --- @return nil
-function IsoSpriteInstance:setScale(arg0, arg1) end
+function IsoSpriteInstance:setScale(scaleX, scaleY) end
 
 --- @public
 --- @return nil
@@ -149,5 +149,5 @@ function IsoSpriteInstance:update() end
 
 --- @public
 --- @return IsoSpriteInstance
---- @overload fun(arg0: IsoSprite): IsoSpriteInstance
+--- @overload fun(spr: IsoSprite): IsoSpriteInstance
 function IsoSpriteInstance.new() end

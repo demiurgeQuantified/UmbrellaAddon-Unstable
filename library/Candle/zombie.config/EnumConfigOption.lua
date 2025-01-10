@@ -21,8 +21,8 @@ function EnumConfigOption:getType() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
+--- @param name string
+--- @param numValues integer
+--- @param defaultValue integer
 --- @return EnumConfigOption
-function EnumConfigOption.new(arg0, arg1, arg2) end
+function EnumConfigOption.new(name, numValues, defaultValue) end

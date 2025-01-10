@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBBurnt: RandomizedBuildingBase
+--- @class RBBurnt: RandomizedBuildingBase This building will be 90% burnt (no fire started tho)
 --- @field public class any
 RBBurnt = {}
 
@@ -9,15 +9,18 @@ RBBurnt = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+---
+---  Description copied from class: RandomizedBuildingBase
+---
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBBurnt:isValid(arg0, arg1) end
+function RBBurnt:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBBurnt:randomizeBuilding(arg0) end
+function RBBurnt:randomizeBuilding(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

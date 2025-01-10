@@ -9,46 +9,46 @@ RadialMenu = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 Texture
+--- @param text string
+--- @param texture Texture
 --- @return nil
-function RadialMenu:addSlice(arg0, arg1) end
+function RadialMenu:addSlice(text, texture) end
 
 --- @public
 --- @return nil
 function RadialMenu:clear() end
 
 --- @public
---- @param arg0 integer
+--- @param joypad integer
 --- @return integer
-function RadialMenu:getSliceIndexFromJoypad(arg0) end
+function RadialMenu:getSliceIndexFromJoypad(joypad) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param mx integer
+--- @param my integer
 --- @return integer
-function RadialMenu:getSliceIndexFromMouse(arg0, arg1) end
+function RadialMenu:getSliceIndexFromMouse(mx, my) end
 
 --- @public
 --- @return nil
 function RadialMenu:render() end
 
 --- @public
---- @param arg0 integer
+--- @param joypad integer
 --- @return nil
-function RadialMenu:setJoypad(arg0) end
+function RadialMenu:setJoypad(joypad) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param sliceIndex integer
+--- @param text string
 --- @return nil
-function RadialMenu:setSliceText(arg0, arg1) end
+function RadialMenu:setSliceText(sliceIndex, text) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 Texture
+--- @param sliceIndex integer
+--- @param texture Texture
 --- @return nil
-function RadialMenu:setSliceTexture(arg0, arg1) end
+function RadialMenu:setSliceTexture(sliceIndex, texture) end
 
 --- @public
 --- @return nil
@@ -59,9 +59,9 @@ function RadialMenu:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param x integer
+--- @param y integer
+--- @param innerRadius integer
+--- @param outerRadius integer
 --- @return RadialMenu
-function RadialMenu.new(arg0, arg1, arg2, arg3) end
+function RadialMenu.new(x, y, innerRadius, outerRadius) end

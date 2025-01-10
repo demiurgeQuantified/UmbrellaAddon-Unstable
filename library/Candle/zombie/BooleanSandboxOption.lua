@@ -14,10 +14,10 @@ BooleanSandboxOption = {}
 function BooleanSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: BooleanSandboxOption, arg0: table): nil
-function BooleanSandboxOption:fromTable(arg0) end
+--- @overload fun(self: BooleanSandboxOption, table: table): nil
+function BooleanSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
@@ -55,30 +55,30 @@ function BooleanSandboxOption:isCustom() end
 function BooleanSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 string
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: BooleanSandboxOption, arg0: string): SandboxOption
-function BooleanSandboxOption:setPageName(arg0) end
+--- @overload fun(self: BooleanSandboxOption, pageName: string): SandboxOption
+function BooleanSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 string
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: BooleanSandboxOption, arg0: string): SandboxOption
-function BooleanSandboxOption:setTranslation(arg0) end
+--- @overload fun(self: BooleanSandboxOption, translation: string): SandboxOption
+function BooleanSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
---- @overload fun(self: BooleanSandboxOption, arg0: table): nil
-function BooleanSandboxOption:toTable(arg0) end
+--- @overload fun(self: BooleanSandboxOption, table: table): nil
+function BooleanSandboxOption:toTable(table) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 string
---- @param arg2 boolean
+--- @param owner SandboxOptions
+--- @param name string
+--- @param defaultValue boolean
 --- @return BooleanSandboxOption
-function BooleanSandboxOption.new(arg0, arg1, arg2) end
+function BooleanSandboxOption.new(owner, name, defaultValue) end

@@ -21,9 +21,9 @@ function SandboxOptions.getInstance() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function SandboxOptions.isValidPresetName(arg0) end
+function SandboxOptions.isValidPresetName(name) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -34,9 +34,9 @@ function SandboxOptions.isValidPresetName(arg0) end
 function SandboxOptions:applySettings() end
 
 --- @public
---- @param arg0 SandboxOptions
+--- @param other SandboxOptions
 --- @return nil
-function SandboxOptions:copyValuesFrom(arg0) end
+function SandboxOptions:copyValuesFrom(other) end
 
 --- @public
 --- @return boolean
@@ -94,14 +94,14 @@ function SandboxOptions:getFirstYear() end
 function SandboxOptions:getNumOptions() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return SandboxOption
-function SandboxOptions:getOptionByIndex(arg0) end
+function SandboxOptions:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return SandboxOption
-function SandboxOptions:getOptionByName(arg0) end
+function SandboxOptions:getOptionByName(name) end
 
 --- @public
 --- @return integer
@@ -145,7 +145,7 @@ function SandboxOptions:isUnstableScriptNameSpam() end
 
 --- @public
 --- @return nil
---- @overload fun(self: SandboxOptions, arg0: ByteBuffer): nil
+--- @overload fun(self: SandboxOptions, input: ByteBuffer): nil
 function SandboxOptions:load() end
 
 --- @public
@@ -153,38 +153,38 @@ function SandboxOptions:load() end
 function SandboxOptions:loadCurrentGameBinFile() end
 
 --- @public
---- @param arg0 string
+--- @param presetName string
 --- @return boolean
-function SandboxOptions:loadGameFile(arg0) end
+function SandboxOptions:loadGameFile(presetName) end
 
 --- @public
---- @param arg0 string
+--- @param presetName string
 --- @return boolean
-function SandboxOptions:loadPresetFile(arg0) end
+function SandboxOptions:loadPresetFile(presetName) end
 
 --- @public
---- @param arg0 string
+--- @param serverName string
 --- @return boolean
-function SandboxOptions:loadServerLuaFile(arg0) end
+function SandboxOptions:loadServerLuaFile(serverName) end
 
 --- @public
---- @param arg0 string
+--- @param serverName string
 --- @return boolean
-function SandboxOptions:loadServerTextFile(arg0) end
+function SandboxOptions:loadServerTextFile(serverName) end
 
 --- @public
---- @param arg0 string
+--- @param serverName string
 --- @return boolean
-function SandboxOptions:loadServerZombiesFile(arg0) end
+function SandboxOptions:loadServerZombiesFile(serverName) end
 
 --- @public
 --- @return SandboxOptions
 function SandboxOptions:newCopy() end
 
 --- @public
---- @param arg0 CustomSandboxOption
+--- @param customSandboxOption CustomSandboxOption
 --- @return nil
-function SandboxOptions:newCustomOption(arg0) end
+function SandboxOptions:newCustomOption(customSandboxOption) end
 
 --- @public
 --- @param arg0 integer
@@ -192,48 +192,54 @@ function SandboxOptions:newCustomOption(arg0) end
 function SandboxOptions:randomAlarmDecay(arg0) end
 
 --- @public
---- @param arg0 integer
+---
+---  Random the number of day for the selectricity shut off
+---
+--- @param electricityShutoffModifier integer
 --- @return integer
-function SandboxOptions:randomElectricityShut(arg0) end
+function SandboxOptions:randomElectricityShut(electricityShutoffModifier) end
 
 --- @public
---- @param arg0 integer
+---
+---  Random the number of day for the water shut off
+---
+--- @param waterShutoffModifier integer
 --- @return integer
-function SandboxOptions:randomWaterShut(arg0) end
+function SandboxOptions:randomWaterShut(waterShutoffModifier) end
 
 --- @public
 --- @return nil
 function SandboxOptions:resetToDefault() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function SandboxOptions:save(arg0) end
+function SandboxOptions:save(output) end
 
 --- @public
---- @param arg0 string
+--- @param presetName string
 --- @return boolean
-function SandboxOptions:saveGameFile(arg0) end
+function SandboxOptions:saveGameFile(presetName) end
 
 --- @public
---- @param arg0 string
+--- @param presetName string
 --- @return boolean
-function SandboxOptions:savePresetFile(arg0) end
+function SandboxOptions:savePresetFile(presetName) end
 
 --- @public
---- @param arg0 string
+--- @param serverName string
 --- @return boolean
-function SandboxOptions:saveServerLuaFile(arg0) end
+function SandboxOptions:saveServerLuaFile(serverName) end
 
 --- @public
 --- @return nil
 function SandboxOptions:sendToServer() end
 
 --- @public
---- @param arg0 string
---- @param arg1 any
+--- @param name string
+--- @param o any
 --- @return nil
-function SandboxOptions:set(arg0, arg1) end
+function SandboxOptions:set(name, o) end
 
 --- @public
 --- @return nil

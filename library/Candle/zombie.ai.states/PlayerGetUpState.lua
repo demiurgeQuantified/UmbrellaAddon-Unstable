@@ -18,19 +18,19 @@ function PlayerGetUpState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerGetUpState:enter(arg0) end
+function PlayerGetUpState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerGetUpState:execute(arg0) end
+function PlayerGetUpState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerGetUpState:exit(arg0) end
+function PlayerGetUpState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

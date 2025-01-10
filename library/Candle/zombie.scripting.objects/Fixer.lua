@@ -25,8 +25,8 @@ function Fixer:getNumberOfUse() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 LinkedList
---- @param arg2 integer
+--- @param name string
+--- @param skills LinkedList
+--- @param numberOfUse integer
 --- @return Fixer
-function Fixer.new(arg0, arg1, arg2) end
+function Fixer.new(name, skills, numberOfUse) end

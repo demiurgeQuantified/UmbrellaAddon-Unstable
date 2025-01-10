@@ -32,27 +32,27 @@ function IsoLot.get(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
---- @param arg0 IsoLot
+--- @param lot IsoLot
 --- @return nil
-function IsoLot.put(arg0) end
+function IsoLot.put(lot) end
 
 --- @public
 --- @static
---- @param arg0 RandomAccessFile
+--- @param __in__ RandomAccessFile
 --- @return integer
-function IsoLot.readInt(arg0) end
+function IsoLot.readInt(__in__) end
 
 --- @public
 --- @static
---- @param arg0 RandomAccessFile
+--- @param __in__ RandomAccessFile
 --- @return integer
-function IsoLot.readShort(arg0) end
+function IsoLot.readShort(__in__) end
 
 --- @public
 --- @static
---- @param arg0 BufferedRandomAccessFile
+--- @param __in__ BufferedRandomAccessFile
 --- @return string
-function IsoLot.readString(arg0) end
+function IsoLot.readString(__in__) end
 
 ------------------------------------
 ------------- METHODS --------------

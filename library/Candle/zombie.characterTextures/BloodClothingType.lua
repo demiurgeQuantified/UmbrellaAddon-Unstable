@@ -45,72 +45,75 @@ BloodClothingType = {}
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
---- @param arg1 HumanVisual
---- @param arg2 ArrayList
+---
+---  Should be used only for debug, use Clothing.addPatch for gameplay stuff
+---
+--- @param part BloodBodyPartType
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
 --- @return nil
-function BloodClothingType.addBasicPatch(arg0, arg1, arg2) end
+function BloodClothingType.addBasicPatch(part, humanVisual, itemVisuals) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 HumanVisual
---- @param arg2 ArrayList
---- @param arg3 boolean
+--- @param count integer
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
+--- @param allLayers boolean
 --- @return nil
---- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean): nil
---- @overload fun(arg0: BloodBodyPartType, arg1: number, arg2: HumanVisual, arg3: ArrayList, arg4: boolean): nil
-function BloodClothingType.addBlood(arg0, arg1, arg2, arg3) end
+--- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): nil
+--- @overload fun(part: BloodBodyPartType, intensity: number, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): nil
+function BloodClothingType.addBlood(count, humanVisual, itemVisuals, allLayers) end
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
---- @param arg1 HumanVisual
---- @param arg2 ArrayList
---- @param arg3 boolean
+--- @param part BloodBodyPartType
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
+--- @param allLayers boolean
 --- @return nil
---- @overload fun(arg0: BloodBodyPartType, arg1: number, arg2: HumanVisual, arg3: ArrayList, arg4: boolean): nil
-function BloodClothingType.addDirt(arg0, arg1, arg2, arg3) end
+--- @overload fun(part: BloodBodyPartType, intensity: number, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): nil
+function BloodClothingType.addDirt(part, humanVisual, itemVisuals, allLayers) end
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
---- @param arg1 HumanVisual
---- @param arg2 ArrayList
+--- @param part BloodBodyPartType
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
 --- @return nil
---- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean): boolean
-function BloodClothingType.addHole(arg0, arg1, arg2) end
+--- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): boolean
+function BloodClothingType.addHole(part, humanVisual, itemVisuals) end
 
 --- @public
 --- @static
---- @param arg0 Clothing
+--- @param clothing Clothing
 --- @return nil
-function BloodClothingType.calcTotalBloodLevel(arg0) end
+function BloodClothingType.calcTotalBloodLevel(clothing) end
 
 --- @public
 --- @static
---- @param arg0 Clothing
+--- @param clothing Clothing
 --- @return nil
-function BloodClothingType.calcTotalDirtLevel(arg0) end
+function BloodClothingType.calcTotalDirtLevel(clothing) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return BloodClothingType
-function BloodClothingType.fromString(arg0) end
+function BloodClothingType.fromString(str) end
 
 --- @public
 --- @static
---- @param arg0 ArrayList
+--- @param bloodClothingType ArrayList
 --- @return integer
-function BloodClothingType.getCoveredPartCount(arg0) end
+function BloodClothingType.getCoveredPartCount(bloodClothingType) end
 
 --- @public
 --- @static
---- @param arg0 ArrayList
+--- @param bloodClothingType ArrayList
 --- @return ArrayList
---- @overload fun(arg0: ArrayList, arg1: ArrayList): ArrayList
-function BloodClothingType.getCoveredParts(arg0) end
+--- @overload fun(bloodClothingType: ArrayList, result: ArrayList): ArrayList
+function BloodClothingType.getCoveredParts(bloodClothingType) end
 
 --- @public
 --- @static
@@ -120,5 +123,9 @@ function BloodClothingType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return BloodClothingType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return BloodClothingType[] an array containing the constants of this enum class, in the order they are declared
 function BloodClothingType.values() end

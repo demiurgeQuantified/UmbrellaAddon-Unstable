@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoWaveSignal: IsoObject, WaveSignalDevice, ChatElementOwner, Talker
+--- @class IsoWaveSignal: IsoObject, WaveSignalDevice, ChatElementOwner, Talker Turbo
 --- @field public class any
 IsoWaveSignal = {}
 
@@ -18,20 +18,20 @@ function IsoWaveSignal.Reset() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 string
---- @param arg5 string
---- @param arg6 integer
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
 --- @return nil
---- @overload fun(self: IsoWaveSignal, arg0: string, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer): nil
---- @overload fun(self: IsoWaveSignal, arg0: string, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string, arg6: integer): nil
---- @overload fun(self: IsoWaveSignal, arg0: string, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer, arg7: boolean): nil
---- @overload fun(self: IsoWaveSignal, arg0: string, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string, arg6: integer, arg7: boolean): nil
+--- @overload fun(self: IsoWaveSignal, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
+--- @overload fun(self: IsoWaveSignal, line: string, r: integer, g: integer, b: integer, guid: string, codes: string, distance: integer): nil
+--- @overload fun(self: IsoWaveSignal, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer, attractZombies: boolean): nil
+--- @overload fun(self: IsoWaveSignal, line: string, r: integer, g: integer, b: integer, guid: string, codes: string, distance: integer, attractZombies: boolean): nil
 --- @overload fun(self: IsoWaveSignal, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
-function IsoWaveSignal:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoWaveSignal:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
@@ -44,19 +44,19 @@ function IsoWaveSignal:HasPlayerInRange() end
 function IsoWaveSignal:IsSpeaking() end
 
 --- @public
---- @param arg0 string
+--- @param line string
 --- @return nil
---- @overload fun(self: IsoWaveSignal, arg0: string): nil
-function IsoWaveSignal:Say(arg0) end
+--- @overload fun(self: IsoWaveSignal, line: string): nil
+function IsoWaveSignal:Say(line) end
 
 --- @public
 --- @return nil
 function IsoWaveSignal:addToWorld() end
 
 --- @public
---- @param arg0 string
+--- @param itemfull string
 --- @return DeviceData
-function IsoWaveSignal:cloneDeviceDataFromItem(arg0) end
+function IsoWaveSignal:cloneDeviceDataFromItem(itemfull) end
 
 --- @public
 --- @return ChatElement
@@ -107,16 +107,16 @@ function IsoWaveSignal:getZ() end
 function IsoWaveSignal:hasChatToDisplay() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoWaveSignal:load(arg0, arg1, arg2) end
+function IsoWaveSignal:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoWaveSignal:loadState(arg0) end
+function IsoWaveSignal:loadState(bb) end
 
 --- @public
 --- @return nil
@@ -135,32 +135,32 @@ function IsoWaveSignal:renderlast() end
 function IsoWaveSignal:renderlastold2() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoWaveSignal:save(arg0, arg1) end
+function IsoWaveSignal:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoWaveSignal:saveState(arg0) end
+function IsoWaveSignal:saveState(bb) end
 
 --- @public
---- @param arg0 number
+--- @param delta number
 --- @return nil
---- @overload fun(self: IsoWaveSignal, arg0: number): nil
-function IsoWaveSignal:setDelta(arg0) end
+--- @overload fun(self: IsoWaveSignal, delta: number): nil
+function IsoWaveSignal:setDelta(delta) end
 
 --- @public
---- @param arg0 DeviceData
+--- @param data DeviceData
 --- @return nil
---- @overload fun(self: IsoWaveSignal, arg0: DeviceData): nil
-function IsoWaveSignal:setDeviceData(arg0) end
+--- @overload fun(self: IsoWaveSignal, data: DeviceData): nil
+function IsoWaveSignal:setDeviceData(data) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return nil
-function IsoWaveSignal:setTalkerType(arg0) end
+function IsoWaveSignal:setTalkerType(type) end
 
 --- @public
 --- @return nil
@@ -171,7 +171,7 @@ function IsoWaveSignal:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoWaveSignal
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoWaveSignal
-function IsoWaveSignal.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoWaveSignal
+function IsoWaveSignal.new(cell) end

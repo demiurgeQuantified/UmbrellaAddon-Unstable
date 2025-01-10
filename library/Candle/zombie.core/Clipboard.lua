@@ -25,9 +25,9 @@ function Clipboard.rememberCurrentValue() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return nil
-function Clipboard.setClipboard(arg0) end
+function Clipboard.setClipboard(str) end
 
 --- @public
 --- @static

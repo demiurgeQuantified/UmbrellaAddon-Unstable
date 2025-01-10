@@ -10,9 +10,9 @@ MapGroups = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param mapName string
 --- @return string
-function MapGroups.addMissingVanillaDirectories(arg0) end
+function MapGroups.addMissingVanillaDirectories(mapName) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -24,8 +24,8 @@ function MapGroups:checkMapConflicts() end
 
 --- @public
 --- @return nil
---- @overload fun(self: MapGroups, arg0: ActiveMods, arg1: boolean): nil
---- @overload fun(self: MapGroups, arg0: ActiveMods, arg1: boolean, arg2: boolean): nil
+--- @overload fun(self: MapGroups, activeMods: ActiveMods, includeVanilla: boolean): nil
+--- @overload fun(self: MapGroups, activeMods: ActiveMods, includeVanilla: boolean, includeChallenges: boolean): nil
 function MapGroups:createGroups() end
 
 --- @public
@@ -33,23 +33,23 @@ function MapGroups:createGroups() end
 function MapGroups:getAllMapsInOrder() end
 
 --- @public
---- @param arg0 string
+--- @param mapName string
 --- @return ArrayList
-function MapGroups:getMapConflicts(arg0) end
+function MapGroups:getMapConflicts(mapName) end
 
 --- @public
---- @param arg0 integer
+--- @param groupIndex integer
 --- @return ArrayList
-function MapGroups:getMapDirectoriesInGroup(arg0) end
+function MapGroups:getMapDirectoriesInGroup(groupIndex) end
 
 --- @public
 --- @return integer
 function MapGroups:getNumberOfGroups() end
 
 --- @public
---- @param arg0 integer
+--- @param groupIndex integer
 --- @return nil
-function MapGroups:setWorld(arg0) end
+function MapGroups:setWorld(groupIndex) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

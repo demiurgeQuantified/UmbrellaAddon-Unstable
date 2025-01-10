@@ -22,37 +22,37 @@ function BentFences.getInstance() end
 function BentFences:Reset() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 table
+--- @param VERSION integer
+--- @param tiles table
 --- @return nil
-function BentFences:addFenceTiles(arg0, arg1) end
+function BentFences:addFenceTiles(VERSION, tiles) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoDirections
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return nil
-function BentFences:bendFence(arg0, arg1) end
+function BentFences:bendFence(obj, dir) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function BentFences:isBentObject(arg0) end
+function BentFences:isBentObject(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function BentFences:isUnbentObject(arg0) end
+function BentFences:isUnbentObject(obj) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoDirections
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return nil
-function BentFences:swapTiles(arg0, arg1) end
+function BentFences:swapTiles(obj, dir) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return nil
-function BentFences:unbendFence(arg0) end
+function BentFences:unbendFence(obj) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

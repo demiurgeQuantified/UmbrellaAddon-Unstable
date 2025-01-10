@@ -9,19 +9,19 @@ ZombiePopulationRenderer = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function ZombiePopulationRenderer:getBoolean(arg0) end
+function ZombiePopulationRenderer:getBoolean(name) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ConfigOption
-function ZombiePopulationRenderer:getOptionByIndex(arg0) end
+function ZombiePopulationRenderer:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function ZombiePopulationRenderer:getOptionByName(arg0) end
+function ZombiePopulationRenderer:getOptionByName(name) end
 
 --- @public
 --- @return integer
@@ -32,146 +32,146 @@ function ZombiePopulationRenderer:getOptionCount() end
 function ZombiePopulationRenderer:load() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ZombiePopulationRenderer:outlineRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ZombiePopulationRenderer:outlineRect(x, y, w, h, r, g, b, a) end
 
 --- @public
---- @param arg0 UIElement
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param ui UIElement
+--- @param zoom number
+--- @param xPos number
+--- @param yPos number
 --- @return nil
-function ZombiePopulationRenderer:render(arg0, arg1, arg2, arg3) end
+function ZombiePopulationRenderer:render(ui, zoom, xPos, yPos) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 number
+--- @param cellX integer
+--- @param cellY integer
+--- @param effectivePopulation integer
+--- @param targetPopulation integer
+--- @param lastRepopTime number
 --- @return nil
-function ZombiePopulationRenderer:renderCellInfo(arg0, arg1, arg2, arg3, arg4) end
+function ZombiePopulationRenderer:renderCellInfo(cellX, cellY, effectivePopulation, targetPopulation, lastRepopTime) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
+--- @param x number
+--- @param y number
+--- @param radius number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ZombiePopulationRenderer:renderCircle(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ZombiePopulationRenderer:renderCircle(x, y, radius, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ZombiePopulationRenderer:renderLine(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ZombiePopulationRenderer:renderLine(x1, y1, x2, y2, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ZombiePopulationRenderer:renderRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ZombiePopulationRenderer:renderRect(x, y, w, h, r, g, b, a) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 string
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ZombiePopulationRenderer:renderString(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ZombiePopulationRenderer:renderString(x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
+--- @param sqlid integer
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
 --- @return nil
-function ZombiePopulationRenderer:renderVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
+function ZombiePopulationRenderer:renderVehicle(sqlid, x, y, r, g, b) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
 --- @return nil
-function ZombiePopulationRenderer:renderZombie(arg0, arg1, arg2, arg3, arg4) end
+function ZombiePopulationRenderer:renderZombie(x, y, r, g, b) end
 
 --- @public
 --- @return nil
 function ZombiePopulationRenderer:save() end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param value boolean
 --- @return nil
-function ZombiePopulationRenderer:setBoolean(arg0, arg1) end
+function ZombiePopulationRenderer:setBoolean(name, value) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function ZombiePopulationRenderer:setWallFollowerEnd(arg0, arg1) end
+function ZombiePopulationRenderer:setWallFollowerEnd(x, y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function ZombiePopulationRenderer:setWallFollowerStart(arg0, arg1) end
+function ZombiePopulationRenderer:setWallFollowerStart(x, y) end
 
 --- @public
---- @param arg0 number
+--- @param x number
 --- @return number
-function ZombiePopulationRenderer:uiToWorldX(arg0) end
+function ZombiePopulationRenderer:uiToWorldX(x) end
 
 --- @public
---- @param arg0 number
+--- @param y number
 --- @return number
-function ZombiePopulationRenderer:uiToWorldY(arg0) end
+function ZombiePopulationRenderer:uiToWorldY(y) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return nil
-function ZombiePopulationRenderer:wallFollowerMouseMove(arg0, arg1) end
+function ZombiePopulationRenderer:wallFollowerMouseMove(x, y) end
 
 --- @public
---- @param arg0 number
+--- @param x number
 --- @return number
-function ZombiePopulationRenderer:worldToScreenX(arg0) end
+function ZombiePopulationRenderer:worldToScreenX(x) end
 
 --- @public
---- @param arg0 number
+--- @param y number
 --- @return number
-function ZombiePopulationRenderer:worldToScreenY(arg0) end
+function ZombiePopulationRenderer:worldToScreenY(y) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

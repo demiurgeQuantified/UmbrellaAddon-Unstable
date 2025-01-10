@@ -23,25 +23,25 @@ function ThumpState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function ThumpState:animEvent(arg0, arg1) end
+function ThumpState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ThumpState:enter(arg0) end
+function ThumpState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ThumpState:execute(arg0) end
+function ThumpState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ThumpState:exit(arg0) end
+function ThumpState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

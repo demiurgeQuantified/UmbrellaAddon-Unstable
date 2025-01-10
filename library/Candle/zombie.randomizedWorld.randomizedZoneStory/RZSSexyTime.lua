@@ -9,9 +9,9 @@ RZSSexyTime = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function RZSSexyTime:randomizeZoneStory(arg0) end
+function RZSSexyTime:randomizeZoneStory(zone) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

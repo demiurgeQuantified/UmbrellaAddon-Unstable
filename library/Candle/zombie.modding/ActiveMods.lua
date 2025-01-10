@@ -15,21 +15,21 @@ function ActiveMods.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param id string
 --- @return ActiveMods
-function ActiveMods.getById(arg0) end
+function ActiveMods.getById(id) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return ActiveMods
-function ActiveMods.getByIndex(arg0) end
+function ActiveMods.getByIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param id string
 --- @return integer
-function ActiveMods.indexOf(arg0) end
+function ActiveMods.indexOf(id) end
 
 --- @public
 --- @static
@@ -38,15 +38,15 @@ function ActiveMods.renderUI() end
 
 --- @public
 --- @static
---- @param arg0 ActiveMods
+--- @param activeMods ActiveMods
 --- @return boolean
-function ActiveMods.requiresResetLua(arg0) end
+function ActiveMods.requiresResetLua(activeMods) end
 
 --- @public
 --- @static
---- @param arg0 ActiveMods
+--- @param activeMods ActiveMods
 --- @return nil
-function ActiveMods.setLoadedMods(arg0) end
+function ActiveMods.setLoadedMods(activeMods) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -65,9 +65,9 @@ function ActiveMods:checkMissingMods() end
 function ActiveMods:clear() end
 
 --- @public
---- @param arg0 ActiveMods
+--- @param other ActiveMods
 --- @return nil
-function ActiveMods:copyFrom(arg0) end
+function ActiveMods:copyFrom(other) end
 
 --- @public
 --- @return ArrayList
@@ -78,31 +78,31 @@ function ActiveMods:getMapOrder() end
 function ActiveMods:getMods() end
 
 --- @public
---- @param arg0 string
+--- @param modID string
 --- @return boolean
-function ActiveMods:isModActive(arg0) end
+function ActiveMods:isModActive(modID) end
 
 --- @public
---- @param arg0 string
+--- @param folder string
 --- @return nil
-function ActiveMods:removeMapOrder(arg0) end
+function ActiveMods:removeMapOrder(folder) end
 
 --- @public
---- @param arg0 string
+--- @param modID string
 --- @return nil
-function ActiveMods:removeMod(arg0) end
+function ActiveMods:removeMod(modID) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param modID string
+--- @param active boolean
 --- @return nil
-function ActiveMods:setModActive(arg0, arg1) end
+function ActiveMods:setModActive(modID, active) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return ActiveMods
-function ActiveMods.new(arg0) end
+function ActiveMods.new(id) end

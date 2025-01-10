@@ -15,10 +15,10 @@ WeaponPart = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return nil
-function WeaponPart:DoTooltip(arg0, arg1) end
+function WeaponPart:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -111,14 +111,14 @@ function WeaponPart:onAttach(arg0, arg1) end
 function WeaponPart:onDetach(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
+--- @param aimingTime integer
 --- @return nil
-function WeaponPart:setAimingTime(arg0) end
+function WeaponPart:setAimingTime(aimingTime) end
 
 --- @public
---- @param arg0 number
+--- @param angle number
 --- @return nil
-function WeaponPart:setAngle(arg0) end
+function WeaponPart:setAngle(angle) end
 
 --- @public
 --- @param arg0 string
@@ -126,19 +126,19 @@ function WeaponPart:setAngle(arg0) end
 function WeaponPart:setCanAttachCallback(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param clipSize integer
 --- @return nil
-function WeaponPart:setClipSize(arg0) end
+function WeaponPart:setClipSize(clipSize) end
 
 --- @public
---- @param arg0 number
+--- @param damage number
 --- @return nil
-function WeaponPart:setDamage(arg0) end
+function WeaponPart:setDamage(damage) end
 
 --- @public
---- @param arg0 integer
+--- @param hitChance integer
 --- @return nil
-function WeaponPart:setHitChance(arg0) end
+function WeaponPart:setHitChance(hitChance) end
 
 --- @public
 --- @param arg0 number
@@ -146,9 +146,9 @@ function WeaponPart:setHitChance(arg0) end
 function WeaponPart:setLowLightBonus(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param maxRange number
 --- @return nil
-function WeaponPart:setMaxRange(arg0) end
+function WeaponPart:setMaxRange(maxRange) end
 
 --- @public
 --- @param arg0 number
@@ -156,9 +156,9 @@ function WeaponPart:setMaxRange(arg0) end
 function WeaponPart:setMaxSightRange(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param minRangeRanged number
 --- @return nil
-function WeaponPart:setMinRangeRanged(arg0) end
+function WeaponPart:setMinRangeRanged(minRangeRanged) end
 
 --- @public
 --- @param arg0 number
@@ -166,9 +166,9 @@ function WeaponPart:setMinRangeRanged(arg0) end
 function WeaponPart:setMinSightRange(arg0) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param mountOn ArrayList
 --- @return nil
-function WeaponPart:setMountOn(arg0) end
+function WeaponPart:setMountOn(mountOn) end
 
 --- @public
 --- @param arg0 string
@@ -181,19 +181,19 @@ function WeaponPart:setOnAttachCallback(arg0) end
 function WeaponPart:setOnDetachCallback(arg0) end
 
 --- @public
---- @param arg0 string
+--- @param partType string
 --- @return nil
-function WeaponPart:setPartType(arg0) end
+function WeaponPart:setPartType(partType) end
 
 --- @public
---- @param arg0 number
+--- @param recoilDelay number
 --- @return nil
-function WeaponPart:setRecoilDelay(arg0) end
+function WeaponPart:setRecoilDelay(recoilDelay) end
 
 --- @public
---- @param arg0 integer
+--- @param reloadTime integer
 --- @return nil
-function WeaponPart:setReloadTime(arg0) end
+function WeaponPart:setReloadTime(reloadTime) end
 
 --- @public
 --- @param arg0 number
@@ -201,18 +201,18 @@ function WeaponPart:setReloadTime(arg0) end
 function WeaponPart:setSpreadModifier(arg0) end
 
 --- @public
---- @param arg0 number
+--- @param weightModifier number
 --- @return nil
-function WeaponPart:setWeightModifier(arg0) end
+function WeaponPart:setWeightModifier(weightModifier) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return WeaponPart
-function WeaponPart.new(arg0, arg1, arg2, arg3) end
+function WeaponPart.new(module, name, itemType, texName) end

@@ -15,26 +15,26 @@ function IsoGenerator.Reset() end
 
 --- @public
 --- @static
---- @param arg0 IsoChunk
+--- @param chunk IsoChunk
 --- @return nil
-function IsoGenerator.chunkLoaded(arg0) end
+function IsoGenerator.chunkLoaded(chunk) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
+--- @param generatorX integer
+--- @param generatorY integer
+--- @param generatorZ integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return boolean
-function IsoGenerator.isPoweringSquare(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoGenerator.isPoweringSquare(generatorX, generatorY, generatorZ, x, y, z) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return nil
-function IsoGenerator.updateGenerator(arg0) end
+function IsoGenerator.updateGenerator(sq) end
 
 --- @public
 --- @static
@@ -82,11 +82,11 @@ function IsoGenerator:isActivated() end
 function IsoGenerator:isConnected() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoGenerator:load(arg0, arg1, arg2) end
+function IsoGenerator:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return nil
@@ -97,44 +97,44 @@ function IsoGenerator:remove() end
 function IsoGenerator:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoGenerator:save(arg0, arg1) end
+function IsoGenerator:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return nil
-function IsoGenerator:setActivated(arg0) end
+function IsoGenerator:setActivated(activated) end
 
 --- @public
---- @param arg0 integer
+--- @param condition integer
 --- @return nil
-function IsoGenerator:setCondition(arg0) end
+function IsoGenerator:setCondition(condition) end
 
 --- @public
---- @param arg0 boolean
+--- @param connected boolean
 --- @return nil
-function IsoGenerator:setConnected(arg0) end
+function IsoGenerator:setConnected(connected) end
 
 --- @public
---- @param arg0 number
+--- @param fuel number
 --- @return nil
-function IsoGenerator:setFuel(arg0) end
+function IsoGenerator:setFuel(fuel) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return nil
-function IsoGenerator:setInfoFromItem(arg0) end
+function IsoGenerator:setInfoFromItem(item) end
 
 --- @public
 --- @return nil
 function IsoGenerator:setSurroundingElectricity() end
 
 --- @public
---- @param arg0 number
+--- @param totalPowerUsing number
 --- @return nil
-function IsoGenerator:setTotalPowerUsing(arg0) end
+function IsoGenerator:setTotalPowerUsing(totalPowerUsing) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -142,9 +142,9 @@ function IsoGenerator:setTotalPowerUsing(arg0) end
 function IsoGenerator:syncIsoObjectReceive(arg0) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return nil
-function IsoGenerator:syncIsoObjectSend(arg0) end
+function IsoGenerator:syncIsoObjectSend(b) end
 
 --- @public
 --- @return nil
@@ -155,8 +155,8 @@ function IsoGenerator:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoGenerator
---- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare): IsoGenerator
---- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare, arg3: boolean): IsoGenerator
-function IsoGenerator.new(arg0) end
+--- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare): IsoGenerator
+--- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare, remote: boolean): IsoGenerator
+function IsoGenerator.new(cell) end

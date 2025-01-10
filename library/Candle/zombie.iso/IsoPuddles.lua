@@ -47,14 +47,14 @@ function IsoPuddles:getFloatMax() end
 function IsoPuddles:getHMTexture() end
 
 --- @public
---- @param arg0 integer
+--- @param id integer
 --- @return PuddlesFloat
-function IsoPuddles:getPuddlesFloat(arg0) end
+function IsoPuddles:getPuddlesFloat(id) end
 
 --- @public
---- @param arg0 integer
+--- @param z integer
 --- @return FloatBuffer
-function IsoPuddles:getPuddlesParams(arg0) end
+function IsoPuddles:getPuddlesParams(z) end
 
 --- @public
 --- @return number
@@ -100,10 +100,10 @@ function IsoPuddles:puddlesGeometry(arg0, arg1) end
 function IsoPuddles:puddlesProjection(arg0) end
 
 --- @public
---- @param arg0 ArrayList
---- @param arg1 integer
+--- @param grid ArrayList
+--- @param z integer
 --- @return nil
-function IsoPuddles:render(arg0, arg1) end
+function IsoPuddles:render(grid, z) end
 
 --- @public
 --- @param arg0 ArrayList
@@ -116,9 +116,9 @@ function IsoPuddles:renderToChunkTexture(arg0, arg1) end
 function IsoPuddles:shouldRenderPuddles() end
 
 --- @public
---- @param arg0 ClimateManager
+--- @param cm ClimateManager
 --- @return nil
-function IsoPuddles:update(arg0) end
+function IsoPuddles:update(cm) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

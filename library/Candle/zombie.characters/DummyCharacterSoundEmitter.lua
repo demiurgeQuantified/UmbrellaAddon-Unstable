@@ -13,60 +13,60 @@ DummyCharacterSoundEmitter = {}
 function DummyCharacterSoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return boolean
-function DummyCharacterSoundEmitter:hasSustainPoints(arg0) end
+function DummyCharacterSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
 function DummyCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return boolean
---- @overload fun(self: DummyCharacterSoundEmitter, arg0: integer): boolean
-function DummyCharacterSoundEmitter:isPlaying(arg0) end
+--- @overload fun(self: DummyCharacterSoundEmitter, channel: integer): boolean
+function DummyCharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
+--- @param file string
+--- @param volume number
 --- @return nil
-function DummyCharacterSoundEmitter:playFootsteps(arg0, arg1) end
+function DummyCharacterSoundEmitter:playFootsteps(file, volume) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
---- @overload fun(self: DummyCharacterSoundEmitter, arg0: string, arg1: IsoObject): integer
-function DummyCharacterSoundEmitter:playSound(arg0) end
+--- @overload fun(self: DummyCharacterSoundEmitter, file: string, proxy: IsoObject): integer
+function DummyCharacterSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoObject
+--- @param file string
+--- @param proxy IsoObject
 --- @return integer
-function DummyCharacterSoundEmitter:playSoundImpl(arg0, arg1) end
+function DummyCharacterSoundEmitter:playSoundImpl(file, proxy) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
-function DummyCharacterSoundEmitter:playVocals(arg0) end
+function DummyCharacterSoundEmitter:playVocals(file) end
 
 --- @public
 --- @return nil
 function DummyCharacterSoundEmitter:register() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return nil
-function DummyCharacterSoundEmitter:set(arg0, arg1, arg2) end
+function DummyCharacterSoundEmitter:set(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 number
+--- @param soundRef integer
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param value number
 --- @return nil
-function DummyCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
+function DummyCharacterSoundEmitter:setParameterValue(soundRef, parameterDescription, value) end
 
 --- @public
 --- @param arg0 integer
@@ -76,30 +76,30 @@ function DummyCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 function DummyCharacterSoundEmitter:setParameterValueByName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param pitch number
 --- @return nil
-function DummyCharacterSoundEmitter:setPitch(arg0, arg1) end
+function DummyCharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param volume number
 --- @return nil
-function DummyCharacterSoundEmitter:setVolume(arg0, arg1) end
+function DummyCharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
 --- @return nil
 function DummyCharacterSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function DummyCharacterSoundEmitter:stopOrTriggerSound(arg0) end
+function DummyCharacterSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function DummyCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function DummyCharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param arg0 integer
@@ -107,19 +107,19 @@ function DummyCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
 function DummyCharacterSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param channel integer
 --- @return integer
-function DummyCharacterSoundEmitter:stopSound(arg0) end
+function DummyCharacterSoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 string
+--- @param soundName string
 --- @return integer
-function DummyCharacterSoundEmitter:stopSoundByName(arg0) end
+function DummyCharacterSoundEmitter:stopSoundByName(soundName) end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function DummyCharacterSoundEmitter:stopSoundLocal(arg0) end
+function DummyCharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return nil
@@ -134,6 +134,6 @@ function DummyCharacterSoundEmitter:unregister() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return DummyCharacterSoundEmitter
-function DummyCharacterSoundEmitter.new(arg0) end
+function DummyCharacterSoundEmitter.new(chr) end

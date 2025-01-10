@@ -14,9 +14,9 @@ StrLerpVal = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param id integer
 --- @return StrLerpVal
-function StrLerpVal.fromValue(arg0) end
+function StrLerpVal.fromValue(id) end
 
 --- @public
 --- @static
@@ -26,7 +26,11 @@ function StrLerpVal.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return StrLerpVal[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return StrLerpVal[] an array containing the constants of this enum class, in the order they are declared
 function StrLerpVal.values() end
 
 ------------------------------------

@@ -10,11 +10,11 @@ IsoTrap = {}
 
 --- @public
 --- @static
---- @param arg0 IsoPlayer
---- @param arg1 integer
---- @param arg2 integer
+--- @param player IsoPlayer
+--- @param remoteID integer
+--- @param range integer
 --- @return nil
-function IsoTrap.triggerRemote(arg0, arg1, arg2) end
+function IsoTrap.triggerRemote(player, remoteID, range) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,11 +101,11 @@ function IsoTrap:isExploding() end
 function IsoTrap:isInstantExplosion() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoTrap:load(arg0, arg1, arg2) end
+function IsoTrap:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return nil
@@ -116,26 +116,26 @@ function IsoTrap:playExplosionSound() end
 function IsoTrap:removeFromWorld() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoTrap:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoTrap:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoTrap:save(arg0, arg1) end
+function IsoTrap:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
+--- @param sound string
 --- @return nil
-function IsoTrap:setCountDownSound(arg0) end
+function IsoTrap:setCountDownSound(sound) end
 
 --- @public
 --- @param arg0 integer
@@ -143,34 +143,34 @@ function IsoTrap:setCountDownSound(arg0) end
 function IsoTrap:setExplosionDuration(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param explosionPower integer
 --- @return nil
-function IsoTrap:setExplosionPower(arg0) end
+function IsoTrap:setExplosionPower(explosionPower) end
 
 --- @public
---- @param arg0 integer
+--- @param explosionRange integer
 --- @return nil
-function IsoTrap:setExplosionRange(arg0) end
+function IsoTrap:setExplosionRange(explosionRange) end
 
 --- @public
---- @param arg0 string
+--- @param explosionSound string
 --- @return nil
-function IsoTrap:setExplosionSound(arg0) end
+function IsoTrap:setExplosionSound(explosionSound) end
 
 --- @public
---- @param arg0 number
+--- @param extraDamage number
 --- @return nil
-function IsoTrap:setExtraDamage(arg0) end
+function IsoTrap:setExtraDamage(extraDamage) end
 
 --- @public
---- @param arg0 integer
+--- @param firePower integer
 --- @return nil
-function IsoTrap:setFirePower(arg0) end
+function IsoTrap:setFirePower(firePower) end
 
 --- @public
---- @param arg0 integer
+--- @param fireRange integer
 --- @return nil
-function IsoTrap:setFireRange(arg0) end
+function IsoTrap:setFireRange(fireRange) end
 
 --- @public
 --- @param arg0 boolean
@@ -178,39 +178,39 @@ function IsoTrap:setFireRange(arg0) end
 function IsoTrap:setInstantExplosion(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param noiseDuration integer
 --- @return nil
-function IsoTrap:setNoiseDuration(arg0) end
+function IsoTrap:setNoiseDuration(noiseDuration) end
 
 --- @public
---- @param arg0 integer
+--- @param noiseRange integer
 --- @return nil
-function IsoTrap:setNoiseRange(arg0) end
+function IsoTrap:setNoiseRange(noiseRange) end
 
 --- @public
---- @param arg0 integer
+--- @param remoteControlID integer
 --- @return nil
-function IsoTrap:setRemoteControlID(arg0) end
+function IsoTrap:setRemoteControlID(remoteControlID) end
 
 --- @public
---- @param arg0 integer
+--- @param sensorRange integer
 --- @return nil
-function IsoTrap:setSensorRange(arg0) end
+function IsoTrap:setSensorRange(sensorRange) end
 
 --- @public
---- @param arg0 integer
+--- @param smokeRange integer
 --- @return nil
-function IsoTrap:setSmokeRange(arg0) end
+function IsoTrap:setSmokeRange(smokeRange) end
 
 --- @public
---- @param arg0 integer
+--- @param timerBeforeExplosion integer
 --- @return nil
-function IsoTrap:setTimerBeforeExplosion(arg0) end
+function IsoTrap:setTimerBeforeExplosion(timerBeforeExplosion) end
 
 --- @public
---- @param arg0 boolean
+--- @param sensor boolean
 --- @return nil
-function IsoTrap:triggerExplosion(arg0) end
+function IsoTrap:triggerExplosion(sensor) end
 
 --- @public
 --- @return nil
@@ -221,7 +221,7 @@ function IsoTrap:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoTrap
---- @overload fun(arg0: HandWeapon, arg1: IsoCell, arg2: IsoGridSquare): IsoTrap
-function IsoTrap.new(arg0) end
+--- @overload fun(weapon: HandWeapon, cell: IsoCell, sq: IsoGridSquare): IsoTrap
+function IsoTrap.new(cell) end

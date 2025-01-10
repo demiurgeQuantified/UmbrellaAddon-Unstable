@@ -14,44 +14,44 @@ function MapKnowledge:forget() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(self: MapKnowledge, arg0: integer, arg1: integer, arg2: integer): KnownBlockedEdges
+--- @overload fun(self: MapKnowledge, x: integer, y: integer, z: integer): KnownBlockedEdges
 function MapKnowledge:getKnownBlockedEdges() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return KnownBlockedEdges
-function MapKnowledge:getOrCreateKnownBlockedEdges(arg0, arg1, arg2) end
+function MapKnowledge:getOrCreateKnownBlockedEdges(x, y, z) end
 
 --- @public
---- @param arg0 IsoDoor
---- @param arg1 boolean
+--- @param object IsoDoor
+--- @param blocked boolean
 --- @return nil
---- @overload fun(self: MapKnowledge, arg0: IsoThumpable, arg1: boolean): nil
-function MapKnowledge:setKnownBlockedDoor(arg0, arg1) end
+--- @overload fun(self: MapKnowledge, object: IsoThumpable, blocked: boolean): nil
+function MapKnowledge:setKnownBlockedDoor(object, blocked) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 boolean
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param blocked boolean
 --- @return nil
-function MapKnowledge:setKnownBlockedEdgeN(arg0, arg1, arg2, arg3) end
+function MapKnowledge:setKnownBlockedEdgeN(x, y, z, blocked) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 boolean
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param blocked boolean
 --- @return nil
-function MapKnowledge:setKnownBlockedEdgeW(arg0, arg1, arg2, arg3) end
+function MapKnowledge:setKnownBlockedEdgeW(x, y, z, blocked) end
 
 --- @public
---- @param arg0 IsoWindow
---- @param arg1 boolean
+--- @param object IsoWindow
+--- @param blocked boolean
 --- @return nil
-function MapKnowledge:setKnownBlockedWindow(arg0, arg1) end
+function MapKnowledge:setKnownBlockedWindow(object, blocked) end
 
 --- @public
 --- @param arg0 IsoWindowFrame

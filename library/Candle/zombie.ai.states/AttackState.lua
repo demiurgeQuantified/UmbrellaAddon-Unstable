@@ -18,30 +18,33 @@ function AttackState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function AttackState:animEvent(arg0, arg1) end
+function AttackState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function AttackState:enter(arg0) end
+function AttackState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function AttackState:execute(arg0) end
+function AttackState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function AttackState:exit(arg0) end
+function AttackState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+---
+---  Description copied from class: State
+---
+--- @param owner IsoGameCharacter
 --- @return boolean
-function AttackState:isAttacking(arg0) end
+function AttackState:isAttacking(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

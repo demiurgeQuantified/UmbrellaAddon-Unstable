@@ -9,9 +9,9 @@ SGlobalObjectSystem = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoObject
+--- @param isoObject IsoObject
 --- @return nil
-function SGlobalObjectSystem:OnIsoObjectChangedItself(arg0) end
+function SGlobalObjectSystem:OnIsoObjectChangedItself(isoObject) end
 
 --- @public
 --- @param arg0 IsoObject
@@ -23,15 +23,15 @@ function SGlobalObjectSystem:OnModDataChangeItself(arg0) end
 function SGlobalObjectSystem:Reset() end
 
 --- @public
---- @param arg0 SGlobalObject
+--- @param globalObject SGlobalObject
 --- @return nil
-function SGlobalObjectSystem:addGlobalObjectOnClient(arg0) end
+function SGlobalObjectSystem:addGlobalObjectOnClient(globalObject) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return nil
-function SGlobalObjectSystem:chunkLoaded(arg0, arg1) end
+function SGlobalObjectSystem:chunkLoaded(wx, wy) end
 
 --- @public
 --- @return table
@@ -39,7 +39,7 @@ function SGlobalObjectSystem:getInitialStateForClient() end
 
 --- @public
 --- @return nil
---- @overload fun(self: SGlobalObjectSystem, arg0: ByteBuffer, arg1: integer): nil
+--- @overload fun(self: SGlobalObjectSystem, bb: ByteBuffer, WorldVersion: integer): nil
 function SGlobalObjectSystem:load() end
 
 --- @public
@@ -47,57 +47,57 @@ function SGlobalObjectSystem:load() end
 function SGlobalObjectSystem:loadedWorldVersion() end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoPlayer
---- @param arg2 table
+--- @param command string
+--- @param playerObj IsoPlayer
+--- @param args table
 --- @return nil
-function SGlobalObjectSystem:receiveClientCommand(arg0, arg1, arg2) end
+function SGlobalObjectSystem:receiveClientCommand(command, playerObj, args) end
 
 --- @public
---- @param arg0 SGlobalObject
+--- @param globalObject SGlobalObject
 --- @return nil
-function SGlobalObjectSystem:removeGlobalObjectOnClient(arg0) end
+function SGlobalObjectSystem:removeGlobalObjectOnClient(globalObject) end
 
 --- @public
 --- @return nil
---- @overload fun(self: SGlobalObjectSystem, arg0: ByteBuffer): nil
+--- @overload fun(self: SGlobalObjectSystem, bb: ByteBuffer): nil
 function SGlobalObjectSystem:save() end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
+--- @param command string
+--- @param args table
 --- @return nil
-function SGlobalObjectSystem:sendCommand(arg0, arg1) end
+function SGlobalObjectSystem:sendCommand(command, args) end
 
 --- @public
---- @param arg0 table
+--- @param keys table
 --- @return nil
-function SGlobalObjectSystem:setModDataKeys(arg0) end
+function SGlobalObjectSystem:setModDataKeys(keys) end
 
 --- @public
---- @param arg0 table
+--- @param keys table
 --- @return nil
-function SGlobalObjectSystem:setObjectModDataKeys(arg0) end
+function SGlobalObjectSystem:setObjectModDataKeys(keys) end
 
 --- @public
---- @param arg0 table
+--- @param keys table
 --- @return nil
-function SGlobalObjectSystem:setObjectSyncKeys(arg0) end
+function SGlobalObjectSystem:setObjectSyncKeys(keys) end
 
 --- @public
 --- @return nil
 function SGlobalObjectSystem:update() end
 
 --- @public
---- @param arg0 SGlobalObject
+--- @param globalObject SGlobalObject
 --- @return nil
-function SGlobalObjectSystem:updateGlobalObjectOnClient(arg0) end
+function SGlobalObjectSystem:updateGlobalObjectOnClient(globalObject) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return SGlobalObjectSystem
-function SGlobalObjectSystem.new(arg0) end
+function SGlobalObjectSystem.new(name) end

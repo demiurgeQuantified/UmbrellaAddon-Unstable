@@ -10,14 +10,14 @@ ServerSettingsManager = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return string
-function ServerSettingsManager:getNameInSettingsFolder(arg0) end
+function ServerSettingsManager:getNameInSettingsFolder(name) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ServerSettings
-function ServerSettingsManager:getSettingsByIndex(arg0) end
+function ServerSettingsManager:getSettingsByIndex(index) end
 
 --- @public
 --- @return integer
@@ -32,14 +32,14 @@ function ServerSettingsManager:getSettingsFolder() end
 function ServerSettingsManager:getSuffixes() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function ServerSettingsManager:isValidName(arg0) end
+function ServerSettingsManager:isValidName(name) end
 
 --- @public
---- @param arg0 string
+--- @param newName string
 --- @return boolean
-function ServerSettingsManager:isValidNewName(arg0) end
+function ServerSettingsManager:isValidNewName(newName) end
 
 --- @public
 --- @return nil

@@ -13,19 +13,19 @@ BaseSoundEmitter = {}
 function BaseSoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return boolean
-function BaseSoundEmitter:hasSustainPoints(arg0) end
+function BaseSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
 function BaseSoundEmitter:isEmpty() end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return boolean
---- @overload fun(self: BaseSoundEmitter, arg0: integer): boolean
-function BaseSoundEmitter:isPlaying(arg0) end
+--- @overload fun(self: BaseSoundEmitter, channel: integer): boolean
+function BaseSoundEmitter:isPlaying(alias) end
 
 --- @public
 --- @param arg0 integer
@@ -34,70 +34,70 @@ function BaseSoundEmitter:isPlaying(arg0) end
 function BaseSoundEmitter:isUsingParameter(arg0, arg1) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
-function BaseSoundEmitter:playAmbientLoopedImpl(arg0) end
+function BaseSoundEmitter:playAmbientLoopedImpl(file) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return integer
-function BaseSoundEmitter:playAmbientSound(arg0) end
+function BaseSoundEmitter:playAmbientSound(name) end
 
 --- @public
---- @param arg0 GameSoundClip
---- @param arg1 IsoObject
+--- @param clip GameSoundClip
+--- @param parent IsoObject
 --- @return integer
-function BaseSoundEmitter:playClip(arg0, arg1) end
+function BaseSoundEmitter:playClip(clip, parent) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: boolean): integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: IsoGameCharacter): integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: IsoGridSquare): integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: IsoObject): integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: integer, arg2: integer, arg3: integer): integer
-function BaseSoundEmitter:playSound(arg0) end
+--- @overload fun(self: BaseSoundEmitter, file: string, doWorldSound: boolean): integer
+--- @overload fun(self: BaseSoundEmitter, file: string, character: IsoGameCharacter): integer
+--- @overload fun(self: BaseSoundEmitter, file: string, square: IsoGridSquare): integer
+--- @overload fun(self: BaseSoundEmitter, file: string, parent: IsoObject): integer
+--- @overload fun(self: BaseSoundEmitter, file: string, x: integer, y: integer, z: integer): integer
+function BaseSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoGridSquare
+--- @param file string
+--- @param square IsoGridSquare
 --- @return integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: IsoObject): integer
---- @overload fun(self: BaseSoundEmitter, arg0: string, arg1: boolean, arg2: IsoObject): integer
-function BaseSoundEmitter:playSoundImpl(arg0, arg1) end
+--- @overload fun(self: BaseSoundEmitter, file: string, parent: IsoObject): integer
+--- @overload fun(self: BaseSoundEmitter, file: string, doWorldSound: boolean, parent: IsoObject): integer
+function BaseSoundEmitter:playSoundImpl(file, square) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
-function BaseSoundEmitter:playSoundLooped(arg0) end
+function BaseSoundEmitter:playSoundLooped(file) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
-function BaseSoundEmitter:playSoundLoopedImpl(arg0) end
+function BaseSoundEmitter:playSoundLoopedImpl(file) end
 
 --- @public
 --- @return nil
 function BaseSoundEmitter:randomStart() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return boolean
-function BaseSoundEmitter:restart(arg0) end
+function BaseSoundEmitter:restart(handle) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 boolean
+--- @param handle integer
+--- @param is3D boolean
 --- @return nil
-function BaseSoundEmitter:set3D(arg0, arg1) end
+function BaseSoundEmitter:set3D(handle, is3D) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 number
+--- @param handle integer
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param value number
 --- @return nil
-function BaseSoundEmitter:setParameterValue(arg0, arg1, arg2) end
+function BaseSoundEmitter:setParameterValue(handle, parameterDescription, value) end
 
 --- @public
 --- @param arg0 integer
@@ -107,48 +107,48 @@ function BaseSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 function BaseSoundEmitter:setParameterValueByName(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param pitch number
 --- @return nil
-function BaseSoundEmitter:setPitch(arg0, arg1) end
+function BaseSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return nil
-function BaseSoundEmitter:setPos(arg0, arg1, arg2) end
+function BaseSoundEmitter:setPos(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param handle integer
+--- @param positionName string
 --- @return nil
-function BaseSoundEmitter:setTimelinePosition(arg0, arg1) end
+function BaseSoundEmitter:setTimelinePosition(handle, positionName) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param volume number
 --- @return nil
-function BaseSoundEmitter:setVolume(arg0, arg1) end
+function BaseSoundEmitter:setVolume(handle, volume) end
 
 --- @public
---- @param arg0 number
+--- @param volume number
 --- @return nil
-function BaseSoundEmitter:setVolumeAll(arg0) end
+function BaseSoundEmitter:setVolumeAll(volume) end
 
 --- @public
 --- @return nil
 function BaseSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function BaseSoundEmitter:stopOrTriggerSound(arg0) end
+function BaseSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function BaseSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function BaseSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param arg0 integer
@@ -156,28 +156,28 @@ function BaseSoundEmitter:stopOrTriggerSoundByName(arg0) end
 function BaseSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param channel integer
 --- @return integer
-function BaseSoundEmitter:stopSound(arg0) end
+function BaseSoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return integer
-function BaseSoundEmitter:stopSoundByName(arg0) end
+function BaseSoundEmitter:stopSoundByName(name) end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function BaseSoundEmitter:stopSoundLocal(arg0) end
+function BaseSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return nil
 function BaseSoundEmitter:tick() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function BaseSoundEmitter:triggerCue(arg0) end
+function BaseSoundEmitter:triggerCue(handle) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

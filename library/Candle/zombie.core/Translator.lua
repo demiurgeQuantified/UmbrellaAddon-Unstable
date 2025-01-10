@@ -12,10 +12,10 @@ Translator = {}
 
 --- @public
 --- @static
---- @param arg0 Language
---- @param arg1 ArrayList
+--- @param language Language
+--- @param languages ArrayList
 --- @return nil
-function Translator.addLanguageToList(arg0, arg1) end
+function Translator.addLanguageToList(language, languages) end
 
 --- @public
 --- @static
@@ -71,9 +71,9 @@ function Translator.getDefaultLanguage() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param trim string
 --- @return string
-function Translator.getDisplayItemName(arg0) end
+function Translator.getDisplayItemName(trim) end
 
 --- @public
 --- @static
@@ -89,15 +89,15 @@ function Translator.getFluidText(arg0) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param fullType string
 --- @return string
-function Translator.getItemEvolvedRecipeName(arg0) end
+function Translator.getItemEvolvedRecipeName(fullType) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param fullType string
 --- @return string
-function Translator.getItemNameFromFullType(arg0) end
+function Translator.getItemNameFromFullType(fullType) end
 
 --- @public
 --- @static
@@ -106,21 +106,21 @@ function Translator.getLanguage() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return string
-function Translator.getMoveableDisplayName(arg0) end
+function Translator.getMoveableDisplayName(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return string
-function Translator.getMoveableDisplayNameOrNull(arg0) end
+function Translator.getMoveableDisplayNameOrNull(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return string
-function Translator.getMultiStageBuild(arg0) end
+function Translator.getMultiStageBuild(name) end
 
 --- @public
 --- @static
@@ -129,41 +129,45 @@ function Translator.getNewsVersions() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param s string
 --- @return string
-function Translator.getRadioText(arg0) end
+function Translator.getRadioText(s) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return string
-function Translator.getRecipeName(arg0) end
+function Translator.getRecipeName(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+---
+---  Return the translated text for the selected language  If we don't fnid any
+---  for the selected language, we return the default text (in English)
+---
+--- @param desc string
 --- @return string
---- @overload fun(arg0: string, arg1: any): string
---- @overload fun(arg0: string, arg1: any, arg2: any): string
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): string
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): string
-function Translator.getText(arg0) end
+--- @overload fun(desc: string, arg1: any): string
+--- @overload fun(desc: string, arg1: any, arg2: any): string
+--- @overload fun(desc: string, arg1: any, arg2: any, arg3: any): string
+--- @overload fun(desc: string, arg1: any, arg2: any, arg3: any, arg4: any): string
+function Translator.getText(desc) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param desc string
 --- @return string
-function Translator.getTextMediaEN(arg0) end
+function Translator.getTextMediaEN(desc) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param desc string
 --- @return string
---- @overload fun(arg0: string, arg1: any): string
---- @overload fun(arg0: string, arg1: any, arg2: any): string
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): string
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): string
-function Translator.getTextOrNull(arg0) end
+--- @overload fun(desc: string, arg1: any): string
+--- @overload fun(desc: string, arg1: any, arg2: any): string
+--- @overload fun(desc: string, arg1: any, arg2: any, arg3: any): string
+--- @overload fun(desc: string, arg1: any, arg2: any, arg3: any, arg4: any): string
+function Translator.getTextOrNull(desc) end
 
 --- @public
 --- @static
@@ -172,17 +176,17 @@ function Translator.loadFiles() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
+--- @param fullType string
+--- @param english string
 --- @return nil
-function Translator.setDefaultItemEvolvedRecipeName(arg0, arg1) end
+function Translator.setDefaultItemEvolvedRecipeName(fullType, english) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param languageId integer
 --- @return nil
---- @overload fun(arg0: Language): nil
-function Translator.setLanguage(arg0) end
+--- @overload fun(newlanguage: Language): nil
+function Translator.setLanguage(languageId) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

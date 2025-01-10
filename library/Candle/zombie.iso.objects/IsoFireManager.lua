@@ -33,55 +33,55 @@ IsoFireManager = {}
 
 --- @public
 --- @static
---- @param arg0 IsoFire
+--- @param NewFire IsoFire
 --- @return nil
-function IsoFireManager.Add(arg0) end
+function IsoFireManager.Add(NewFire) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param BurningCharacter IsoGameCharacter
 --- @return nil
-function IsoFireManager.AddBurningCharacter(arg0) end
+function IsoFireManager.AddBurningCharacter(BurningCharacter) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
---- @param arg2 integer
+--- @param FireSquare IsoGridSquare
+--- @param TestSquare IsoGridSquare
+--- @param playerIndex integer
 --- @return nil
-function IsoFireManager.Fire_LightCalc(arg0, arg1, arg2) end
+function IsoFireManager.Fire_LightCalc(FireSquare, TestSquare, playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param TestSquare IsoGridSquare
 --- @return nil
-function IsoFireManager.LightTileWithFire(arg0) end
+function IsoFireManager.LightTileWithFire(TestSquare) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 IsoGridSquare
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
 --- @return nil
 --- @deprecated
-function IsoFireManager.MolotovSmash(arg0, arg1) end
+function IsoFireManager.MolotovSmash(cell, gridSquare) end
 
 --- @public
 --- @static
---- @param arg0 IsoFire
+--- @param DyingFire IsoFire
 --- @return nil
-function IsoFireManager.Remove(arg0) end
+function IsoFireManager.Remove(DyingFire) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return nil
-function IsoFireManager.RemoveAllOn(arg0) end
+function IsoFireManager.RemoveAllOn(sq) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param BurningCharacter IsoGameCharacter
 --- @return nil
-function IsoFireManager.RemoveBurningCharacter(arg0) end
+function IsoFireManager.RemoveBurningCharacter(BurningCharacter) end
 
 --- @public
 --- @static
@@ -90,23 +90,23 @@ function IsoFireManager.Reset() end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 IsoGridSquare
---- @param arg2 boolean
---- @param arg3 integer
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param IgniteOnAny boolean
+--- @param FireStartingEnergy integer
 --- @return nil
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer, arg4: integer): nil
-function IsoFireManager.StartFire(arg0, arg1, arg2, arg3) end
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, IgniteOnAny: boolean, FireStartingEnergy: integer, Life: integer): nil
+function IsoFireManager.StartFire(cell, gridSquare, IgniteOnAny, FireStartingEnergy) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 IsoGridSquare
---- @param arg2 boolean
---- @param arg3 integer
---- @param arg4 integer
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param IgniteOnAny boolean
+--- @param FireStartingEnergy integer
+--- @param Life integer
 --- @return nil
-function IsoFireManager.StartSmoke(arg0, arg1, arg2, arg3, arg4) end
+function IsoFireManager.StartSmoke(cell, gridSquare, IgniteOnAny, FireStartingEnergy, Life) end
 
 --- @public
 --- @static
@@ -115,35 +115,35 @@ function IsoFireManager.Update() end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param character IsoGameCharacter
 --- @return nil
-function IsoFireManager.addCharacterOnFire(arg0) end
+function IsoFireManager.addCharacterOnFire(character) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param character IsoGameCharacter
 --- @return nil
-function IsoFireManager.deleteCharacterOnFire(arg0) end
+function IsoFireManager.deleteCharacterOnFire(character) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 IsoGridSquare
---- @param arg2 integer
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param power integer
 --- @return nil
-function IsoFireManager.explode(arg0, arg1, arg2) end
+function IsoFireManager.explode(cell, gridSquare, power) end
 
 --- @public
 --- @static
---- @param arg0 IsoFire
+--- @param fire IsoFire
 --- @return nil
-function IsoFireManager.stopSound(arg0) end
+function IsoFireManager.stopSound(fire) end
 
 --- @public
 --- @static
---- @param arg0 IsoFire
+--- @param fire IsoFire
 --- @return nil
-function IsoFireManager.updateSound(arg0) end
+function IsoFireManager.updateSound(fire) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

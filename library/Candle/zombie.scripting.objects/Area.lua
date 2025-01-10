@@ -29,24 +29,24 @@ function Area:getX() end
 function Area:getY() end
 
 --- @public
---- @param arg0 number
+--- @param d number
 --- @return nil
-function Area:setH(arg0) end
+function Area:setH(d) end
 
 --- @public
---- @param arg0 number
+--- @param d number
 --- @return nil
-function Area:setW(arg0) end
+function Area:setW(d) end
 
 --- @public
---- @param arg0 number
+--- @param d number
 --- @return nil
-function Area:setX(arg0) end
+function Area:setX(d) end
 
 --- @public
---- @param arg0 number
+--- @param d number
 --- @return nil
-function Area:setY(arg0) end
+function Area:setY(d) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -18,19 +18,19 @@ function PlayerOnGroundState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerOnGroundState:enter(arg0) end
+function PlayerOnGroundState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerOnGroundState:execute(arg0) end
+function PlayerOnGroundState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerOnGroundState:exit(arg0) end
+function PlayerOnGroundState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

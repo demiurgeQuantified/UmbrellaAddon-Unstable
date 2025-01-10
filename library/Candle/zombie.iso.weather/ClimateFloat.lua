@@ -49,10 +49,10 @@ function ClimateFloat:getOverride() end
 function ClimateFloat:getOverrideInterpolate() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 string
+--- @param id integer
+--- @param name string
 --- @return ClimateFloat
-function ClimateFloat:init(arg0, arg1) end
+function ClimateFloat:init(id, name) end
 
 --- @public
 --- @return boolean
@@ -63,45 +63,45 @@ function ClimateFloat:isEnableAdmin() end
 function ClimateFloat:isEnableOverride() end
 
 --- @public
---- @param arg0 number
+--- @param f number
 --- @return nil
-function ClimateFloat:setAdminValue(arg0) end
+function ClimateFloat:setAdminValue(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateFloat:setEnableAdmin(arg0) end
+function ClimateFloat:setEnableAdmin(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateFloat:setEnableModded(arg0) end
+function ClimateFloat:setEnableModded(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function ClimateFloat:setEnableOverride(arg0) end
+function ClimateFloat:setEnableOverride(b) end
 
 --- @public
---- @param arg0 number
+--- @param f number
 --- @return nil
-function ClimateFloat:setFinalValue(arg0) end
+function ClimateFloat:setFinalValue(f) end
 
 --- @public
---- @param arg0 number
+--- @param f number
 --- @return nil
-function ClimateFloat:setModdedInterpolate(arg0) end
+function ClimateFloat:setModdedInterpolate(f) end
 
 --- @public
---- @param arg0 number
+--- @param f number
 --- @return nil
-function ClimateFloat:setModdedValue(arg0) end
+function ClimateFloat:setModdedValue(f) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param targ number
+--- @param inter number
 --- @return nil
-function ClimateFloat:setOverride(arg0, arg1) end
+function ClimateFloat:setOverride(targ, inter) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

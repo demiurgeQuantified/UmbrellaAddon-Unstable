@@ -22,47 +22,47 @@ function BrokenFences.getInstance() end
 function BrokenFences:Reset() end
 
 --- @public
---- @param arg0 table
+--- @param tiles table
 --- @return nil
-function BrokenFences:addBrokenTiles(arg0) end
+function BrokenFences:addBrokenTiles(tiles) end
 
 --- @public
---- @param arg0 table
+--- @param tiles table
 --- @return nil
-function BrokenFences:addDebrisTiles(arg0) end
+function BrokenFences:addDebrisTiles(tiles) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoDirections
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return nil
-function BrokenFences:destroyFence(arg0, arg1) end
+function BrokenFences:destroyFence(obj, dir) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function BrokenFences:isBreakableObject(arg0) end
+function BrokenFences:isBreakableObject(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return nil
-function BrokenFences:setDamagedLeft(arg0) end
+function BrokenFences:setDamagedLeft(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return nil
-function BrokenFences:setDamagedRight(arg0) end
+function BrokenFences:setDamagedRight(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return nil
-function BrokenFences:setDestroyed(arg0) end
+function BrokenFences:setDestroyed(obj) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param obj IsoObject
+--- @param brokenLeft boolean
+--- @param brokenRight boolean
 --- @return nil
-function BrokenFences:updateSprite(arg0, arg1, arg2) end
+function BrokenFences:updateSprite(obj, brokenLeft, brokenRight) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSPrisonEscape: RandomizedDeadSurvivorBase
+--- @class RDSPrisonEscape: RandomizedDeadSurvivorBase 2-3 zombies in inmate jumpsuits with some duffel bags on them with ropes,  duct tape, etc.
 --- @field public class any
 RDSPrisonEscape = {}
 
@@ -9,9 +9,9 @@ RDSPrisonEscape = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSPrisonEscape:randomizeDeadSurvivor(arg0) end
+function RDSPrisonEscape:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

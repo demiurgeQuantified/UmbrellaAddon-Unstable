@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoWeatherFX
+--- @class IsoWeatherFX TurboTuTone.
 --- @field public class any
 --- @field public ID_CLOUD integer
 --- @field public ID_FOG integer
@@ -15,27 +15,27 @@ IsoWeatherFX = {}
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param min number
+--- @param max number
+--- @param val number
 --- @return number
-function IsoWeatherFX.clamp(arg0, arg1, arg2) end
+function IsoWeatherFX.clamp(min, max, val) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param t number
+--- @param a number
+--- @param b number
 --- @return number
-function IsoWeatherFX.clerp(arg0, arg1, arg2) end
+function IsoWeatherFX.clerp(t, a, b) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param t number
+--- @param a number
+--- @param b number
 --- @return number
-function IsoWeatherFX.lerp(arg0, arg1, arg2) end
+function IsoWeatherFX.lerp(t, a, b) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -115,55 +115,55 @@ function IsoWeatherFX:renderClouds() end
 function IsoWeatherFX:renderFog() end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param doClouds boolean
+--- @param doFog boolean
+--- @param doPrecip boolean
 --- @return nil
-function IsoWeatherFX:renderLayered(arg0, arg1, arg2) end
+function IsoWeatherFX:renderLayered(doClouds, doFog, doPrecip) end
 
 --- @public
 --- @return nil
 function IsoWeatherFX:renderPrecipitation() end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function IsoWeatherFX:setCloudIntensity(arg0) end
+function IsoWeatherFX:setCloudIntensity(intensity) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function IsoWeatherFX:setDebugBounds(arg0) end
+function IsoWeatherFX:setDebugBounds(b) end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function IsoWeatherFX:setFogIntensity(arg0) end
+function IsoWeatherFX:setFogIntensity(intensity) end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function IsoWeatherFX:setPrecipitationIntensity(arg0) end
+function IsoWeatherFX:setPrecipitationIntensity(intensity) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return nil
-function IsoWeatherFX:setPrecipitationIsSnow(arg0) end
+function IsoWeatherFX:setPrecipitationIsSnow(b) end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function IsoWeatherFX:setWindAngleIntensity(arg0) end
+function IsoWeatherFX:setWindAngleIntensity(intensity) end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function IsoWeatherFX:setWindIntensity(arg0) end
+function IsoWeatherFX:setWindIntensity(intensity) end
 
 --- @public
---- @param arg0 number
+--- @param intensity number
 --- @return nil
-function IsoWeatherFX:setWindPrecipIntensity(arg0) end
+function IsoWeatherFX:setWindPrecipIntensity(intensity) end
 
 --- @public
 --- @return nil

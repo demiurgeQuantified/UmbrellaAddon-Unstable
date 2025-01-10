@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class MovableRecipe: Recipe
+--- @class MovableRecipe: Recipe TurboTuTone.
 --- @field public class any
 MovableRecipe = {}
 
@@ -33,52 +33,52 @@ function MovableRecipe:hasXpPerk() end
 function MovableRecipe:isValid() end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function MovableRecipe:setName(arg0) end
+function MovableRecipe:setName(name) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 integer
+--- @param perk Perk
+--- @param level integer
 --- @return nil
-function MovableRecipe:setRequiredSkill(arg0, arg1) end
+function MovableRecipe:setRequiredSkill(perk, level) end
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param resultItem string
+--- @param count integer
 --- @return nil
-function MovableRecipe:setResult(arg0, arg1) end
+function MovableRecipe:setResult(resultItem, count) end
 
 --- @public
---- @param arg0 string
+--- @param sourceItem string
 --- @return nil
-function MovableRecipe:setSource(arg0) end
+function MovableRecipe:setSource(sourceItem) end
 
 --- @public
---- @param arg0 number
+--- @param time number
 --- @return nil
-function MovableRecipe:setTime(arg0) end
+function MovableRecipe:setTime(time) end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param tools string
+--- @param isPrimary boolean
 --- @return nil
-function MovableRecipe:setTool(arg0, arg1) end
+function MovableRecipe:setTool(tools, isPrimary) end
 
 --- @public
---- @param arg0 boolean
+--- @param valid boolean
 --- @return nil
-function MovableRecipe:setValid(arg0) end
+function MovableRecipe:setValid(valid) end
 
 --- @public
---- @param arg0 string
+--- @param worldSprite string
 --- @return nil
-function MovableRecipe:setWorldSprite(arg0) end
+function MovableRecipe:setWorldSprite(worldSprite) end
 
 --- @public
---- @param arg0 Perk
+--- @param perk Perk
 --- @return nil
-function MovableRecipe:setXpPerk(arg0) end
+function MovableRecipe:setXpPerk(perk) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

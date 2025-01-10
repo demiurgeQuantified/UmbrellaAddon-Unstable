@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class DebugLog
+--- @class DebugLog Created by LEMMYPC on 31/12/13.
 --- @field public class any
 --- @field public Action DebugLogStream
 --- @field public ActionSystem DebugLogStream
@@ -71,10 +71,10 @@ function DebugLog.enableDebugLogs() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
---- @param arg1 LogSeverity
+--- @param type DebugType
+--- @param severity LogSeverity
 --- @return nil
-function DebugLog.enableLog(arg0, arg1) end
+function DebugLog.enableLog(type, severity) end
 
 --- @public
 --- @static
@@ -115,9 +115,9 @@ function DebugLog.getDebugTypes() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
+--- @param type DebugType
 --- @return LogSeverity
-function DebugLog.getLogLevel(arg0) end
+function DebugLog.getLogLevel(type) end
 
 --- @public
 --- @static
@@ -143,16 +143,16 @@ function DebugLog.init() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
+--- @param type DebugType
 --- @return boolean
-function DebugLog.isEnabled(arg0) end
+function DebugLog.isEnabled(type) end
 
 --- @public
 --- @static
---- @param arg0 DebugType
---- @param arg1 LogSeverity
+--- @param type DebugType
+--- @param logSeverity LogSeverity
 --- @return boolean
-function DebugLog.isLogEnabled(arg0, arg1) end
+function DebugLog.isLogEnabled(type, logSeverity) end
 
 --- @public
 --- @static
@@ -172,10 +172,10 @@ function DebugLog.loadDebugConfig(arg0) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return nil
---- @overload fun(arg0: DebugType, arg1: string): nil
-function DebugLog.log(arg0) end
+--- @overload fun(type: DebugType, str: string): nil
+function DebugLog.log(str) end
 
 --- @public
 --- @static
@@ -197,10 +197,10 @@ function DebugLog.save() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
---- @param arg1 boolean
+--- @param type DebugType
+--- @param bEnabled boolean
 --- @return nil
-function DebugLog.setLogEnabled(arg0, arg1) end
+function DebugLog.setLogEnabled(type, bEnabled) end
 
 --- @public
 --- @static
@@ -211,15 +211,15 @@ function DebugLog.setLogSeverity(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 OutputStream
+--- @param out OutputStream
 --- @return nil
-function DebugLog.setStdErr(arg0) end
+function DebugLog.setStdErr(out) end
 
 --- @public
 --- @static
---- @param arg0 OutputStream
+--- @param out OutputStream
 --- @return nil
-function DebugLog.setStdOut(arg0) end
+function DebugLog.setStdOut(out) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

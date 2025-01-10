@@ -25,19 +25,19 @@ function DBResult:getType() end
 function DBResult:getValues() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param columns ArrayList
 --- @return nil
-function DBResult:setColumns(arg0) end
+function DBResult:setColumns(columns) end
 
 --- @public
---- @param arg0 string
+--- @param tableName string
 --- @return nil
-function DBResult:setTableName(arg0) end
+function DBResult:setTableName(tableName) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return nil
-function DBResult:setType(arg0) end
+function DBResult:setType(type) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

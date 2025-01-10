@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class BloodBodyPartType: Enum
+--- @class BloodBodyPartType: Enum Created by LEMMY on 7/1/2016.
 --- @field public class any
 --- @field public Back BloodBodyPartType
 --- @field public Foot_L BloodBodyPartType
@@ -29,27 +29,27 @@ BloodBodyPartType = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return BloodBodyPartType
-function BloodBodyPartType.FromIndex(arg0) end
+function BloodBodyPartType.FromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return BloodBodyPartType
-function BloodBodyPartType.FromString(arg0) end
+function BloodBodyPartType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
+--- @param BPT BloodBodyPartType
 --- @return integer
-function BloodBodyPartType.ToIndex(arg0) end
+function BloodBodyPartType.ToIndex(BPT) end
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
+--- @param BPT BloodBodyPartType
 --- @return string
-function BloodBodyPartType.getDisplayName(arg0) end
+function BloodBodyPartType.getDisplayName(BPT) end
 
 --- @public
 --- @static
@@ -59,7 +59,11 @@ function BloodBodyPartType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return BloodBodyPartType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return BloodBodyPartType[] an array containing the constants of this enum class, in the order they are declared
 function BloodBodyPartType.values() end
 
 ------------------------------------

@@ -13,23 +13,23 @@ Passenger = {}
 function Passenger:getId() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return Position
-function Passenger:getPosition(arg0) end
+function Passenger:getPosition(index) end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return Position
-function Passenger:getPositionById(arg0) end
+function Passenger:getPositionById(id) end
 
 --- @public
 --- @return integer
 function Passenger:getPositionCount() end
 
 --- @public
---- @param arg0 string
+--- @param id string
 --- @return SwitchSeat
-function Passenger:getSwitchSeatById(arg0) end
+function Passenger:getSwitchSeatById(id) end
 
 --- @public
 --- @return Passenger

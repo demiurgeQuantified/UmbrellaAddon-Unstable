@@ -9,23 +9,26 @@ ChatBase = {}
 ------------------------------------
 
 --- @public
---- @param arg0 short
+--- @param playerID short
 --- @return nil
-function ChatBase:addMember(arg0) end
+function ChatBase:addMember(playerID) end
 
 --- @public
 --- @return nil
 function ChatBase:close() end
 
 --- @public
---- @param arg0 string
---- @return ChatMessage
-function ChatBase:createMessage(arg0) end
+---
+---  Message creator. Every chat know how to create its own message
+---
+--- @param text string text of the message
+--- @return ChatMessage corresponding object to message
+function ChatBase:createMessage(text) end
 
 --- @public
---- @param arg0 string
+--- @param text string
 --- @return ServerChatMessage
-function ChatBase:createServerMessage(arg0) end
+function ChatBase:createServerMessage(text) end
 
 --- @public
 --- @return Color
@@ -44,14 +47,14 @@ function ChatBase:getJustAddedMembers() end
 function ChatBase:getJustRemovedMembers() end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return string
-function ChatBase:getMessagePrefix(arg0) end
+function ChatBase:getMessagePrefix(msg) end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return string
-function ChatBase:getMessageTextWithPrefix(arg0) end
+function ChatBase:getMessageTextWithPrefix(msg) end
 
 --- @public
 --- @return ChatMode
@@ -86,95 +89,98 @@ function ChatBase:isEnabled() end
 function ChatBase:isSendingToRadio() end
 
 --- @public
---- @param arg0 Short
+--- @param playerID Short
 --- @return nil
-function ChatBase:leaveMember(arg0) end
+function ChatBase:leaveMember(playerID) end
 
 --- @public
---- @param arg0 ByteBufferWriter
---- @param arg1 ChatMessage
+--- @param b ByteBufferWriter
+--- @param msg ChatMessage
 --- @return nil
-function ChatBase:packMessage(arg0, arg1) end
+function ChatBase:packMessage(b, msg) end
 
 --- @public
---- @param arg0 Short
+--- @param playerID Short
 --- @return nil
-function ChatBase:removeMember(arg0) end
+function ChatBase:removeMember(playerID) end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return nil
---- @overload fun(self: ChatBase, arg0: ServerChatMessage): nil
-function ChatBase:sendMessageToChatMembers(arg0) end
+--- @overload fun(self: ChatBase, msg: ServerChatMessage): nil
+function ChatBase:sendMessageToChatMembers(msg) end
 
 --- @public
---- @param arg0 short
---- @param arg1 ChatMessage
+--- @param playerID short
+--- @param msg ChatMessage
 --- @return nil
---- @overload fun(self: ChatBase, arg0: UdpConnection, arg1: ChatMessage): nil
-function ChatBase:sendMessageToPlayer(arg0, arg1) end
+--- @overload fun(self: ChatBase, connection: UdpConnection, msg: ChatMessage): nil
+function ChatBase:sendMessageToPlayer(playerID, msg) end
 
 --- @public
---- @param arg0 UdpConnection
+--- @param playerConnection UdpConnection
 --- @return nil
-function ChatBase:sendPlayerJoinChatPacket(arg0) end
+function ChatBase:sendPlayerJoinChatPacket(playerConnection) end
 
 --- @public
---- @param arg0 short
+--- @param playerID short
 --- @return nil
---- @overload fun(self: ChatBase, arg0: UdpConnection): nil
-function ChatBase:sendPlayerLeaveChatPacket(arg0) end
+--- @overload fun(self: ChatBase, connection: UdpConnection): nil
+function ChatBase:sendPlayerLeaveChatPacket(playerID) end
 
 --- @public
---- @param arg0 ChatMessage
---- @param arg1 DeviceData
+--- @param msg ChatMessage
+--- @param deviceData DeviceData
 --- @return nil
-function ChatBase:sendToServer(arg0, arg1) end
+function ChatBase:sendToServer(msg, deviceData) end
 
 --- @public
---- @param arg0 string
+--- @param fontSize string
 --- @return nil
-function ChatBase:setFontSize(arg0) end
+function ChatBase:setFontSize(fontSize) end
 
 --- @public
---- @param arg0 ChatSettings
+--- @param settings ChatSettings
 --- @return nil
-function ChatBase:setSettings(arg0) end
+function ChatBase:setSettings(settings) end
 
 --- @public
---- @param arg0 boolean
+--- @param showTimestamp boolean
 --- @return nil
-function ChatBase:setShowTimestamp(arg0) end
+function ChatBase:setShowTimestamp(showTimestamp) end
 
 --- @public
---- @param arg0 boolean
+--- @param showTitle boolean
 --- @return nil
-function ChatBase:setShowTitle(arg0) end
+function ChatBase:setShowTitle(showTitle) end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return nil
---- @overload fun(self: ChatBase, arg0: string, arg1: string): nil
-function ChatBase:showMessage(arg0) end
+--- @overload fun(self: ChatBase, text: string, author: string): nil
+function ChatBase:showMessage(msg) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param players ArrayList
 --- @return nil
-function ChatBase:syncMembersByUsernames(arg0) end
+function ChatBase:syncMembersByUsernames(players) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return ChatMessage
-function ChatBase:unpackMessage(arg0) end
+function ChatBase:unpackMessage(bb) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 ChatType
---- @param arg2 ChatTab
+---
+---  Should be called only on server side of chat system
+---
+--- @param id integer
+--- @param type ChatType
+--- @param tab ChatTab
 --- @return ChatBase
---- @overload fun(arg0: ByteBuffer, arg1: ChatType, arg2: ChatTab, arg3: IsoPlayer): ChatBase
-function ChatBase.new(arg0, arg1, arg2) end
+--- @overload fun(bb: ByteBuffer, type: ChatType, tab: ChatTab, owner: IsoPlayer): ChatBase
+function ChatBase.new(id, type, tab) end

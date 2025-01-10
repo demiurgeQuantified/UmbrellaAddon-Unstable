@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class StorySound
+--- @class StorySound Turbo
 --- @field public class any
 StorySound = {}
 
@@ -22,27 +22,27 @@ function StorySound:getName() end
 
 --- @public
 --- @return integer
---- @overload fun(self: StorySound, arg0: number): integer
---- @overload fun(self: StorySound, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number): integer
---- @overload fun(self: StorySound, arg0: number, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number): integer
+--- @overload fun(self: StorySound, volumeOverride: number): integer
+--- @overload fun(self: StorySound, x: number, y: number, z: number, minRange: number, maxRange: number): integer
+--- @overload fun(self: StorySound, volumeMod: number, x: number, y: number, z: number, minRange: number, maxRange: number): integer
 function StorySound:playSound() end
 
 --- @public
---- @param arg0 number
+--- @param baseVolume number
 --- @return nil
-function StorySound:setBaseVolume(arg0) end
+function StorySound:setBaseVolume(baseVolume) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function StorySound:setName(arg0) end
+function StorySound:setName(name) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
+--- @param name string
+--- @param baseVol number
 --- @return StorySound
-function StorySound.new(arg0, arg1) end
+function StorySound.new(name, baseVol) end

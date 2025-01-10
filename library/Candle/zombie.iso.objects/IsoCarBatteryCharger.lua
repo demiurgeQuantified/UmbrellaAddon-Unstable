@@ -33,55 +33,55 @@ function IsoCarBatteryCharger:getObjectName() end
 function IsoCarBatteryCharger:isActivated() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param bb ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoCarBatteryCharger:load(arg0, arg1, arg2) end
+function IsoCarBatteryCharger:load(bb, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return nil
 function IsoCarBatteryCharger:removeFromWorld() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoCarBatteryCharger:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoCarBatteryCharger:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param lightInfo ColorInfo
 --- @return nil
-function IsoCarBatteryCharger:renderObjectPicker(arg0, arg1, arg2, arg3) end
+function IsoCarBatteryCharger:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param bb ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoCarBatteryCharger:save(arg0, arg1) end
+function IsoCarBatteryCharger:save(bb, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return nil
-function IsoCarBatteryCharger:setActivated(arg0) end
+function IsoCarBatteryCharger:setActivated(activated) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param battery InventoryItem
 --- @return nil
-function IsoCarBatteryCharger:setBattery(arg0) end
+function IsoCarBatteryCharger:setBattery(battery) end
 
 --- @public
---- @param arg0 number
+--- @param chargeRate number
 --- @return nil
-function IsoCarBatteryCharger:setChargeRate(arg0) end
+function IsoCarBatteryCharger:setChargeRate(chargeRate) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -89,9 +89,9 @@ function IsoCarBatteryCharger:setChargeRate(arg0) end
 function IsoCarBatteryCharger:syncIsoObjectReceive(arg0) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return nil
-function IsoCarBatteryCharger:syncIsoObjectSend(arg0) end
+function IsoCarBatteryCharger:syncIsoObjectSend(b) end
 
 --- @public
 --- @return nil
@@ -102,7 +102,7 @@ function IsoCarBatteryCharger:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoCarBatteryCharger
---- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare): IsoCarBatteryCharger
-function IsoCarBatteryCharger.new(arg0) end
+--- @overload fun(item: InventoryItem, cell: IsoCell, square: IsoGridSquare): IsoCarBatteryCharger
+function IsoCarBatteryCharger.new(cell) end

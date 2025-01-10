@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoRegionsLogger
+--- @class IsoRegionsLogger TurboTuTone.
 --- @field public class any
 IsoRegionsLogger = {}
 
@@ -25,6 +25,6 @@ function IsoRegionsLogger:unsetDirtyUI() end
 ------------------------------------
 
 --- @public
---- @param arg0 boolean
+--- @param doConsolePrint boolean
 --- @return IsoRegionsLogger
-function IsoRegionsLogger.new(arg0) end
+function IsoRegionsLogger.new(doConsolePrint) end

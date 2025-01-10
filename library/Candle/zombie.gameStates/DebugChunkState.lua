@@ -31,53 +31,53 @@ function DebugChunkState:enter() end
 function DebugChunkState:exit() end
 
 --- @public
---- @param arg0 string
+--- @param func string
 --- @return any
-function DebugChunkState:fromLua0(arg0) end
+function DebugChunkState:fromLua0(func) end
 
 --- @public
---- @param arg0 string
+--- @param func string
+--- @param arg0 any
+--- @return any
+function DebugChunkState:fromLua1(func, arg0) end
+
+--- @public
+--- @param func string
+--- @param arg0 any
 --- @param arg1 any
 --- @return any
-function DebugChunkState:fromLua1(arg0, arg1) end
+function DebugChunkState:fromLua2(func, arg0, arg1) end
 
 --- @public
---- @param arg0 string
---- @param arg1 any
---- @param arg2 any
---- @return any
-function DebugChunkState:fromLua2(arg0, arg1, arg2) end
-
---- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function DebugChunkState:getBoolean(arg0) end
+function DebugChunkState:getBoolean(name) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return ConfigOption
-function DebugChunkState:getOptionByIndex(arg0) end
+function DebugChunkState:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return ConfigOption
-function DebugChunkState:getOptionByName(arg0) end
+function DebugChunkState:getOptionByName(name) end
 
 --- @public
 --- @return integer
 function DebugChunkState:getOptionCount() end
 
 --- @public
---- @param arg0 IsoCell
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
---- @param arg7 boolean
+--- @param cell IsoCell
+--- @param x1 integer
+--- @param y1 integer
+--- @param z1 integer
+--- @param x0 integer
+--- @param y0 integer
+--- @param z0 integer
+--- @param bIgnoreDoors boolean
 --- @return TestResults
-function DebugChunkState:lineClearCached(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function DebugChunkState:lineClearCached(cell, x1, y1, z1, x0, y0, z0, bIgnoreDoors) end
 
 --- @public
 --- @return nil
@@ -100,15 +100,15 @@ function DebugChunkState:renderScene() end
 function DebugChunkState:save() end
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+--- @param name string
+--- @param value boolean
 --- @return nil
-function DebugChunkState:setBoolean(arg0, arg1) end
+function DebugChunkState:setBoolean(name, value) end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function DebugChunkState:setTable(arg0) end
+function DebugChunkState:setTable(table) end
 
 --- @public
 --- @return StateAction

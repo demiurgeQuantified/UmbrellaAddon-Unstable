@@ -9,10 +9,10 @@ GameSoundScript = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
+--- @param name string
+--- @param totalFile string
 --- @return nil
-function GameSoundScript:Load(arg0, arg1) end
+function GameSoundScript:Load(name, totalFile) end
 
 --- @public
 --- @return nil

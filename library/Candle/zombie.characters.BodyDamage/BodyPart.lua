@@ -9,14 +9,14 @@ BodyPart = {}
 ------------------------------------
 
 --- @public
---- @param arg0 number
+--- @param Val number
 --- @return nil
-function BodyPart:AddDamage(arg0) end
+function BodyPart:AddDamage(Val) end
 
 --- @public
---- @param arg0 number
+--- @param Val number
 --- @return nil
-function BodyPart:AddHealth(arg0) end
+function BodyPart:AddHealth(Val) end
 
 --- @public
 --- @return nil
@@ -47,24 +47,24 @@ function BodyPart:IsFakeInfected() end
 function BodyPart:IsInfected() end
 
 --- @public
---- @param arg0 number
+--- @param Val number
 --- @return nil
-function BodyPart:ReduceHealth(arg0) end
+function BodyPart:ReduceHealth(Val) end
 
 --- @public
 --- @return nil
 function BodyPart:RestoreToFullHealth() end
 
 --- @public
---- @param arg0 boolean
+--- @param Bitten boolean
 --- @return nil
---- @overload fun(self: BodyPart, arg0: boolean, arg1: boolean): nil
-function BodyPart:SetBitten(arg0) end
+--- @overload fun(self: BodyPart, Bitten: boolean, Infected: boolean): nil
+function BodyPart:SetBitten(Bitten) end
 
 --- @public
---- @param arg0 boolean
+--- @param BleedingStemmed boolean
 --- @return nil
-function BodyPart:SetBleedingStemmed(arg0) end
+function BodyPart:SetBleedingStemmed(BleedingStemmed) end
 
 --- @public
 --- @param arg0 boolean
@@ -72,29 +72,29 @@ function BodyPart:SetBleedingStemmed(arg0) end
 function BodyPart:SetCauterized(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param inf boolean
 --- @return nil
-function BodyPart:SetFakeInfected(arg0) end
+function BodyPart:SetFakeInfected(inf) end
 
 --- @public
---- @param arg0 number
+--- @param NewHealth number
 --- @return nil
-function BodyPart:SetHealth(arg0) end
+function BodyPart:SetHealth(NewHealth) end
 
 --- @public
---- @param arg0 boolean
+--- @param inf boolean
 --- @return nil
-function BodyPart:SetInfected(arg0) end
+function BodyPart:SetInfected(inf) end
 
 --- @public
---- @param arg0 boolean
+--- @param Scratched boolean
 --- @return nil
-function BodyPart:SetScratchedWeapon(arg0) end
+function BodyPart:SetScratchedWeapon(Scratched) end
 
 --- @public
---- @param arg0 boolean
+--- @param Scratched boolean
 --- @return nil
-function BodyPart:SetScratchedWindow(arg0) end
+function BodyPart:SetScratchedWindow(Scratched) end
 
 --- @public
 --- @param arg0 number
@@ -114,15 +114,19 @@ function BodyPart:bitten() end
 function BodyPart:bleeding() end
 
 --- @public
---- @param arg0 number
+--- @param damage number
 --- @return nil
-function BodyPart:damageFromFirearm(arg0) end
+function BodyPart:damageFromFirearm(damage) end
 
 --- @public
 --- @return boolean
 function BodyPart:deepWounded() end
 
 --- @public
+---
+---  Generate an amount of bleeding time  will depend on injuries type and body part
+---   Use this instead of setBleedingTime() so all is automated.
+---
 --- @return nil
 function BodyPart:generateBleeding() end
 
@@ -145,13 +149,13 @@ function BodyPart:generateFracture(arg0) end
 function BodyPart:generateFractureNew(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param baseChance integer
 --- @return nil
-function BodyPart:generateZombieInfection(arg0) end
+function BodyPart:generateZombieInfection(baseChance) end
 
 --- @public
 --- @return number
---- @overload fun(self: BodyPart, arg0: boolean): number
+--- @overload fun(self: BodyPart, includeStiffness: boolean): number
 function BodyPart:getAdditionalPain() end
 
 --- @public
@@ -351,220 +355,220 @@ function BodyPart:isSplint() end
 function BodyPart:scratched() end
 
 --- @public
---- @param arg0 number
+--- @param additionalPain number
 --- @return nil
-function BodyPart:setAdditionalPain(arg0) end
+function BodyPart:setAdditionalPain(additionalPain) end
 
 --- @public
---- @param arg0 number
+--- @param alcoholLevel number
 --- @return nil
-function BodyPart:setAlcoholLevel(arg0) end
+function BodyPart:setAlcoholLevel(alcoholLevel) end
 
 --- @public
---- @param arg0 number
+--- @param bandageLife number
 --- @return nil
-function BodyPart:setBandageLife(arg0) end
+function BodyPart:setBandageLife(bandageLife) end
 
 --- @public
---- @param arg0 string
+--- @param bandageType string
 --- @return nil
-function BodyPart:setBandageType(arg0) end
+function BodyPart:setBandageType(bandageType) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 number
+--- @param Bandaged boolean
+--- @param bandageLife number
 --- @return nil
---- @overload fun(self: BodyPart, arg0: boolean, arg1: number, arg2: boolean, arg3: string): nil
-function BodyPart:setBandaged(arg0, arg1) end
+--- @overload fun(self: BodyPart, Bandaged: boolean, bandageLife: number, isAlcoholic: boolean, bandageType: string): nil
+function BodyPart:setBandaged(Bandaged, bandageLife) end
 
 --- @public
---- @param arg0 number
+--- @param biteTime number
 --- @return nil
-function BodyPart:setBiteTime(arg0) end
+function BodyPart:setBiteTime(biteTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param Bleeding boolean
 --- @return nil
-function BodyPart:setBleeding(arg0) end
+function BodyPart:setBleeding(Bleeding) end
 
 --- @public
---- @param arg0 number
+--- @param bleedingTime number
 --- @return nil
-function BodyPart:setBleedingTime(arg0) end
+function BodyPart:setBleedingTime(bleedingTime) end
 
 --- @public
---- @param arg0 number
+--- @param burnSpeedModifier number
 --- @return nil
-function BodyPart:setBurnSpeedModifier(arg0) end
+function BodyPart:setBurnSpeedModifier(burnSpeedModifier) end
 
 --- @public
---- @param arg0 number
+--- @param burnTime number
 --- @return nil
-function BodyPart:setBurnTime(arg0) end
+function BodyPart:setBurnTime(burnTime) end
 
 --- @public
 --- @return nil
 function BodyPart:setBurned() end
 
 --- @public
---- @param arg0 number
+--- @param comfreyFactor number
 --- @return nil
-function BodyPart:setComfreyFactor(arg0) end
+function BodyPart:setComfreyFactor(comfreyFactor) end
 
 --- @public
---- @param arg0 boolean
+--- @param cut boolean
 --- @return nil
---- @overload fun(self: BodyPart, arg0: boolean, arg1: boolean): nil
-function BodyPart:setCut(arg0) end
+--- @overload fun(self: BodyPart, cut: boolean, forceNoInfection: boolean): nil
+function BodyPart:setCut(cut) end
 
 --- @public
---- @param arg0 number
+--- @param cutSpeedModifier number
 --- @return nil
-function BodyPart:setCutSpeedModifier(arg0) end
+function BodyPart:setCutSpeedModifier(cutSpeedModifier) end
 
 --- @public
---- @param arg0 number
+--- @param cutTime number
 --- @return nil
-function BodyPart:setCutTime(arg0) end
+function BodyPart:setCutTime(cutTime) end
 
 --- @public
---- @param arg0 number
+--- @param deepWoundSpeedModifier number
 --- @return nil
-function BodyPart:setDeepWoundSpeedModifier(arg0) end
+function BodyPart:setDeepWoundSpeedModifier(deepWoundSpeedModifier) end
 
 --- @public
---- @param arg0 number
+--- @param deepWoundTime number
 --- @return nil
-function BodyPart:setDeepWoundTime(arg0) end
+function BodyPart:setDeepWoundTime(deepWoundTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param Wounded boolean
 --- @return nil
-function BodyPart:setDeepWounded(arg0) end
+function BodyPart:setDeepWounded(Wounded) end
 
 --- @public
---- @param arg0 number
+--- @param fractureTime number
 --- @return nil
-function BodyPart:setFractureTime(arg0) end
+function BodyPart:setFractureTime(fractureTime) end
 
 --- @public
---- @param arg0 number
+--- @param garlicFactor number
 --- @return nil
-function BodyPart:setGarlicFactor(arg0) end
+function BodyPart:setGarlicFactor(garlicFactor) end
 
 --- @public
---- @param arg0 boolean
+--- @param getBandageXp boolean
 --- @return nil
-function BodyPart:setGetBandageXp(arg0) end
+function BodyPart:setGetBandageXp(getBandageXp) end
 
 --- @public
---- @param arg0 boolean
+--- @param getSplintXp boolean
 --- @return nil
-function BodyPart:setGetSplintXp(arg0) end
+function BodyPart:setGetSplintXp(getSplintXp) end
 
 --- @public
---- @param arg0 boolean
+--- @param getStitchXp boolean
 --- @return nil
-function BodyPart:setGetStitchXp(arg0) end
+function BodyPart:setGetStitchXp(getStitchXp) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 integer
+--- @param haveBullet boolean
+--- @param doctorLevel integer
 --- @return nil
-function BodyPart:setHaveBullet(arg0, arg1) end
+function BodyPart:setHaveBullet(haveBullet, doctorLevel) end
 
 --- @public
---- @param arg0 boolean
+--- @param haveGlass boolean
 --- @return nil
-function BodyPart:setHaveGlass(arg0) end
+function BodyPart:setHaveGlass(haveGlass) end
 
 --- @public
---- @param arg0 boolean
+--- @param infectedWound boolean
 --- @return nil
-function BodyPart:setInfectedWound(arg0) end
+function BodyPart:setInfectedWound(infectedWound) end
 
 --- @public
---- @param arg0 number
+--- @param lastTimeBurnWash number
 --- @return nil
-function BodyPart:setLastTimeBurnWash(arg0) end
+function BodyPart:setLastTimeBurnWash(lastTimeBurnWash) end
 
 --- @public
---- @param arg0 boolean
+--- @param needBurnWash boolean
 --- @return nil
-function BodyPart:setNeedBurnWash(arg0) end
+function BodyPart:setNeedBurnWash(needBurnWash) end
 
 --- @public
---- @param arg0 number
+--- @param plantainFactor number
 --- @return nil
-function BodyPart:setPlantainFactor(arg0) end
+function BodyPart:setPlantainFactor(plantainFactor) end
 
 --- @public
---- @param arg0 number
+--- @param scratchSpeedModifier number
 --- @return nil
-function BodyPart:setScratchSpeedModifier(arg0) end
+function BodyPart:setScratchSpeedModifier(scratchSpeedModifier) end
 
 --- @public
---- @param arg0 number
+--- @param scratchTime number
 --- @return nil
-function BodyPart:setScratchTime(arg0) end
+function BodyPart:setScratchTime(scratchTime) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
+--- @param Scratched boolean
+--- @param forceNoInfection boolean
 --- @return nil
-function BodyPart:setScratched(arg0, arg1) end
+function BodyPart:setScratched(Scratched, forceNoInfection) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 number
+--- @param splint boolean
+--- @param splintFactor number
 --- @return nil
-function BodyPart:setSplint(arg0, arg1) end
+function BodyPart:setSplint(splint, splintFactor) end
 
 --- @public
---- @param arg0 number
+--- @param splintFactor number
 --- @return nil
-function BodyPart:setSplintFactor(arg0) end
+function BodyPart:setSplintFactor(splintFactor) end
 
 --- @public
---- @param arg0 string
+--- @param splintItem string
 --- @return nil
-function BodyPart:setSplintItem(arg0) end
+function BodyPart:setSplintItem(splintItem) end
 
 --- @public
---- @param arg0 number
+--- @param stiffness number
 --- @return nil
-function BodyPart:setStiffness(arg0) end
+function BodyPart:setStiffness(stiffness) end
 
 --- @public
---- @param arg0 number
+--- @param stitchTime number
 --- @return nil
-function BodyPart:setStitchTime(arg0) end
+function BodyPart:setStitchTime(stitchTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param Stitched boolean
 --- @return nil
-function BodyPart:setStitched(arg0) end
+function BodyPart:setStitched(Stitched) end
 
 --- @public
---- @param arg0 number
+--- @param wetness number
 --- @return nil
-function BodyPart:setWetness(arg0) end
+function BodyPart:setWetness(wetness) end
 
 --- @public
---- @param arg0 number
+--- @param infectedWound number
 --- @return nil
-function BodyPart:setWoundInfectionLevel(arg0) end
+function BodyPart:setWoundInfectionLevel(infectedWound) end
 
 --- @public
 --- @return boolean
 function BodyPart:stitched() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param bb ByteBuffer
+--- @param id integer
 --- @return nil
---- @overload fun(self: BodyPart, arg0: BodyPart, arg1: Updater): nil
-function BodyPart:sync(arg0, arg1) end
+--- @overload fun(self: BodyPart, other: BodyPart, updater: Updater): nil
+function BodyPart:sync(bb, id) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
@@ -577,7 +581,7 @@ function BodyPart:syncWrite(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 BodyPartType
---- @param arg1 IsoGameCharacter
+--- @param ChosenType BodyPartType
+--- @param PC IsoGameCharacter
 --- @return BodyPart
-function BodyPart.new(arg0, arg1) end
+function BodyPart.new(ChosenType, PC) end

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RadioBroadCast
+--- @class RadioBroadCast Turbo
 --- @field public class any
 RadioBroadCast = {}
 
@@ -9,9 +9,9 @@ RadioBroadCast = {}
 ------------------------------------
 
 --- @public
---- @param arg0 RadioLine
+--- @param radioLine RadioLine
 --- @return nil
-function RadioBroadCast:AddRadioLine(arg0) end
+function RadioBroadCast:AddRadioLine(radioLine) end
 
 --- @public
 --- @return string
@@ -39,7 +39,7 @@ function RadioBroadCast:getLines() end
 
 --- @public
 --- @return RadioLine
---- @overload fun(self: RadioBroadCast, arg0: boolean): RadioLine
+--- @overload fun(self: RadioBroadCast, doChildren: boolean): RadioLine
 function RadioBroadCast:getNextLine() end
 
 --- @public
@@ -48,31 +48,31 @@ function RadioBroadCast:getStartStamp() end
 
 --- @public
 --- @return nil
---- @overload fun(self: RadioBroadCast, arg0: boolean): nil
+--- @overload fun(self: RadioBroadCast, doChildren: boolean): nil
 function RadioBroadCast:resetLineCounter() end
 
 --- @public
---- @param arg0 integer
+--- @param n integer
 --- @return nil
-function RadioBroadCast:setCurrentLineNumber(arg0) end
+function RadioBroadCast:setCurrentLineNumber(n) end
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param broadCast RadioBroadCast
 --- @return nil
-function RadioBroadCast:setPostSegment(arg0) end
+function RadioBroadCast:setPostSegment(broadCast) end
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param broadCast RadioBroadCast
 --- @return nil
-function RadioBroadCast:setPreSegment(arg0) end
+function RadioBroadCast:setPreSegment(broadCast) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
+--- @param id string
+--- @param startstamp integer
+--- @param endstamp integer
 --- @return RadioBroadCast
-function RadioBroadCast.new(arg0, arg1, arg2) end
+function RadioBroadCast.new(id, startstamp, endstamp) end

@@ -14,39 +14,39 @@ WorldSoundManager = {}
 function WorldSoundManager:KillCell() end
 
 --- @public
---- @param arg0 any
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
 --- @return WorldSound
---- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean): WorldSound
---- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
---- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number, arg9: boolean, arg10: boolean, arg11: boolean): WorldSound
+--- @overload fun(self: WorldSoundManager, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean): WorldSound
+--- @overload fun(self: WorldSoundManager, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean, zombieIgnoreDist: number, stressMod: number): WorldSound
+--- @overload fun(self: WorldSoundManager, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean, zombieIgnoreDist: number, stressMod: number, sourceIsZombie: boolean, doSend: boolean, remote: boolean): WorldSound
 --- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number, arg9: boolean, arg10: boolean, arg11: boolean, arg12: boolean): WorldSound
-function WorldSoundManager:addSound(arg0, arg1, arg2, arg3, arg4, arg5) end
+function WorldSoundManager:addSound(source, x, y, z, radius, volume) end
 
 --- @public
---- @param arg0 any
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 boolean
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param StressHumans boolean
 --- @return WorldSound
 --- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
-function WorldSoundManager:addSoundRepeating(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function WorldSoundManager:addSoundRepeating(source, x, y, z, radius, volume, StressHumans) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 boolean
---- @param arg4 IsoZombie
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param ignoreBySameType boolean
+--- @param zom IsoZombie
 --- @return ResultBiggestSound
-function WorldSoundManager:getBiggestSoundZomb(arg0, arg1, arg2, arg3, arg4) end
+function WorldSoundManager:getBiggestSoundZomb(x, y, z, ignoreBySameType, zom) end
 
 --- @public
 --- @param arg0 integer
@@ -64,10 +64,10 @@ function WorldSoundManager:getNew() end
 function WorldSoundManager:getSoundAnimal(arg0) end
 
 --- @public
---- @param arg0 WorldSound
---- @param arg1 IsoZombie
+--- @param sound WorldSound
+--- @param zom IsoZombie
 --- @return number
-function WorldSoundManager:getSoundAttract(arg0, arg1) end
+function WorldSoundManager:getSoundAttract(sound, zom) end
 
 --- @public
 --- @param arg0 WorldSound
@@ -76,21 +76,21 @@ function WorldSoundManager:getSoundAttract(arg0, arg1) end
 function WorldSoundManager:getSoundAttractAnimal(arg0, arg1) end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param zom IsoZombie
 --- @return WorldSound
-function WorldSoundManager:getSoundZomb(arg0) end
+function WorldSoundManager:getSoundZomb(zom) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return number
-function WorldSoundManager:getStressFromSounds(arg0, arg1, arg2) end
+function WorldSoundManager:getStressFromSounds(x, y, z) end
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return nil
-function WorldSoundManager:init(arg0) end
+function WorldSoundManager:init(cell) end
 
 --- @public
 --- @return nil

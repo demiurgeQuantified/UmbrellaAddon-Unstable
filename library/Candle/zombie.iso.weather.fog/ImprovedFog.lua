@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ImprovedFog
+--- @class ImprovedFog TurboTuTone.
 --- @field public class any
 --- @field public MAX_FOG_Z integer
 ImprovedFog = {}
@@ -11,36 +11,21 @@ ImprovedFog = {}
 
 --- @public
 --- @static
---- @param arg0 Texture
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
---- @param arg5 number
---- @param arg6 number
---- @param arg7 number
---- @param arg8 number
---- @param arg9 number
---- @param arg10 number
---- @param arg11 number
---- @param arg12 number
+--- @param tex Texture
+--- @param subX number
+--- @param subY number
+--- @param subW number
+--- @param subH number
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function ImprovedFog.DrawSubTextureRGBA(
-	arg0,
-	arg1,
-	arg2,
-	arg3,
-	arg4,
-	arg5,
-	arg6,
-	arg7,
-	arg8,
-	arg9,
-	arg10,
-	arg11,
-	arg12
-)
-end
+function ImprovedFog.DrawSubTextureRGBA(tex, subX, subY, subW, subH, x, y, w, h, r, g, b, a) end
 
 --- @public
 --- @static
@@ -179,147 +164,147 @@ function ImprovedFog.isRenderOnlyOneRow() end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param squareMax IsoGridSquare
 --- @return nil
-function ImprovedFog.renderRowsBehind(arg0) end
+function ImprovedFog.renderRowsBehind(squareMax) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param alphaCircleAlpha number
 --- @return nil
-function ImprovedFog.setAlphaCircleAlpha(arg0) end
+function ImprovedFog.setAlphaCircleAlpha(alphaCircleAlpha) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param alphaCircleRad number
 --- @return nil
-function ImprovedFog.setAlphaCircleRad(arg0) end
+function ImprovedFog.setAlphaCircleRad(alphaCircleRad) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param baseAlpha number
 --- @return nil
-function ImprovedFog.setBaseAlpha(arg0) end
+function ImprovedFog.setBaseAlpha(baseAlpha) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param bottomAlphaHeight number
 --- @return nil
-function ImprovedFog.setBottomAlphaHeight(arg0) end
+function ImprovedFog.setBottomAlphaHeight(bottomAlphaHeight) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param colorB number
 --- @return nil
-function ImprovedFog.setColorB(arg0) end
+function ImprovedFog.setColorB(colorB) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param colorG number
 --- @return nil
-function ImprovedFog.setColorG(arg0) end
+function ImprovedFog.setColorG(colorG) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param colorR number
 --- @return nil
-function ImprovedFog.setColorR(arg0) end
+function ImprovedFog.setColorR(colorR) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param drawDebugColors boolean
 --- @return nil
-function ImprovedFog.setDrawDebugColors(arg0) end
+function ImprovedFog.setDrawDebugColors(drawDebugColors) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enableEditing boolean
 --- @return nil
-function ImprovedFog.setEnableEditing(arg0) end
+function ImprovedFog.setEnableEditing(enableEditing) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param highQuality boolean
 --- @return nil
-function ImprovedFog.setHighQuality(arg0) end
+function ImprovedFog.setHighQuality(highQuality) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param maxXOffset integer
 --- @return nil
-function ImprovedFog.setMaxXOffset(arg0) end
+function ImprovedFog.setMaxXOffset(maxXOffset) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param maxYOffset integer
 --- @return nil
-function ImprovedFog.setMaxYOffset(arg0) end
+function ImprovedFog.setMaxYOffset(maxYOffset) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param minXOffset integer
 --- @return nil
-function ImprovedFog.setMinXOffset(arg0) end
+function ImprovedFog.setMinXOffset(minXOffset) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param octaves number
 --- @return nil
-function ImprovedFog.setOctaves(arg0) end
+function ImprovedFog.setOctaves(octaves) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param renderCurrentLayerOnly boolean
 --- @return nil
-function ImprovedFog.setRenderCurrentLayerOnly(arg0) end
+function ImprovedFog.setRenderCurrentLayerOnly(renderCurrentLayerOnly) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param renderEndOnly boolean
 --- @return nil
-function ImprovedFog.setRenderEndOnly(arg0) end
+function ImprovedFog.setRenderEndOnly(renderEndOnly) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param renderEveryXRow integer
 --- @return nil
-function ImprovedFog.setRenderEveryXRow(arg0) end
+function ImprovedFog.setRenderEveryXRow(renderEveryXRow) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param renderOnlyOneRow boolean
 --- @return nil
-function ImprovedFog.setRenderOnlyOneRow(arg0) end
+function ImprovedFog.setRenderOnlyOneRow(renderOnlyOneRow) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param renderXRowsFromCenter integer
 --- @return nil
-function ImprovedFog.setRenderXRowsFromCenter(arg0) end
+function ImprovedFog.setRenderXRowsFromCenter(renderXRowsFromCenter) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param scalingX number
 --- @return nil
-function ImprovedFog.setScalingX(arg0) end
+function ImprovedFog.setScalingX(scalingX) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param scalingY number
 --- @return nil
-function ImprovedFog.setScalingY(arg0) end
+function ImprovedFog.setScalingY(scalingY) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param secondLayerAlpha number
 --- @return nil
-function ImprovedFog.setSecondLayerAlpha(arg0) end
+function ImprovedFog.setSecondLayerAlpha(secondLayerAlpha) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param topAlphaHeight number
 --- @return nil
-function ImprovedFog.setTopAlphaHeight(arg0) end
+function ImprovedFog.setTopAlphaHeight(topAlphaHeight) end
 
 --- @public
 --- @static
@@ -329,10 +314,10 @@ function ImprovedFog.startFrame(arg0) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param nPlayer integer
+--- @param z integer
 --- @return boolean
-function ImprovedFog.startRender(arg0, arg1) end
+function ImprovedFog.startRender(nPlayer, z) end
 
 --- @public
 --- @static

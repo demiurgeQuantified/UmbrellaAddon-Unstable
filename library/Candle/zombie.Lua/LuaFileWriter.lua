@@ -13,20 +13,20 @@ LuaFileWriter = {}
 function LuaFileWriter:close() end
 
 --- @public
---- @param arg0 string
+--- @param str string
 --- @return nil
-function LuaFileWriter:write(arg0) end
+function LuaFileWriter:write(str) end
 
 --- @public
---- @param arg0 string
+--- @param str string
 --- @return nil
-function LuaFileWriter:writeln(arg0) end
+function LuaFileWriter:writeln(str) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 PrintWriter
+--- @param writer PrintWriter
 --- @return LuaFileWriter
-function LuaFileWriter.new(arg0) end
+function LuaFileWriter.new(writer) end

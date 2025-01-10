@@ -9,8 +9,11 @@ ITexture = {}
 ------------------------------------
 
 --- @public
+---
+---  bind the current texture in the VRAM
+---
 --- @return nil
---- @overload fun(self: ITexture, arg0: integer): nil
+--- @overload fun(self: ITexture, unit: integer): nil
 function ITexture:bind() end
 
 --- @public
@@ -18,19 +21,31 @@ function ITexture:bind() end
 function ITexture:destroy() end
 
 --- @public
+---
+---  returns the texture's pixel in a ByteBuffer   EXAMPLE:
+---
 --- @return WrappedBuffer
 function ITexture:getData() end
 
 --- @public
---- @return integer
+---
+---  returns the height of image
+---
+--- @return integer the height of image
 function ITexture:getHeight() end
 
 --- @public
+---
+---  return the height hardware of image
+---
 --- @return integer
 function ITexture:getHeightHW() end
 
 --- @public
---- @return integer
+---
+---  returns the ID of image in the Vram
+---
+--- @return integer the ID of image in the Vram
 function ITexture:getID() end
 
 --- @public
@@ -38,27 +53,45 @@ function ITexture:getID() end
 function ITexture:getMask() end
 
 --- @public
---- @return integer
+---
+---  returns the width of image
+---
+--- @return integer the width of image
 function ITexture:getWidth() end
 
 --- @public
+---
+---  return the width Hardware of image
+---
 --- @return integer
 function ITexture:getWidthHW() end
 
 --- @public
---- @return number
+---
+---  returns the end X-coordinate
+---
+--- @return number the end X-coordinate
 function ITexture:getXEnd() end
 
 --- @public
---- @return number
+---
+---  returns the start X-coordinate
+---
+--- @return number the start X-coordinate
 function ITexture:getXStart() end
 
 --- @public
---- @return number
+---
+---  returns the end Y-coordinate
+---
+--- @return number the end Y-coordinate
 function ITexture:getYEnd() end
 
 --- @public
---- @return number
+---
+---  returns the start Y-coordinate
+---
+--- @return number the start Y-coordinate
 function ITexture:getYStart() end
 
 --- @public
@@ -66,38 +99,57 @@ function ITexture:getYStart() end
 function ITexture:isDestroyed() end
 
 --- @public
---- @return boolean
+---
+---  indicates if the texture is solid or not.
+---
+--- @return boolean if the texture is solid or not.
 function ITexture:isSolid() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+---
+---  sets transparent each pixel that it's equal to the red, green blue value
+---
+--- @param red integer color used in the test
+--- @param green integer
+--- @param blue integer
 --- @return nil
-function ITexture:makeTransp(arg0, arg1, arg2) end
+function ITexture:makeTransp(red, green, blue) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+---
+---  sets the specified alpha for each pixel that it's equal to the red, green blue
+---  specified
+---
+--- @param red integer color used in the test
+--- @param green integer
+--- @param blue integer
+--- @param alpha integer
 --- @return nil
-function ITexture:setAlphaForeach(arg0, arg1, arg2, arg3) end
+function ITexture:setAlphaForeach(red, green, blue, alpha) end
 
 --- @public
---- @param arg0 ByteBuffer
+---
+---  sets the texture's pixel from a ByteBuffer   EXAMPLE:
+---
+--- @param data ByteBuffer texture's pixel data
 --- @return nil
-function ITexture:setData(arg0) end
+function ITexture:setData(data) end
 
 --- @public
---- @param arg0 Mask
+---
+---  Pixel collision mask of texture
+---
+--- @param mask Mask
 --- @return nil
-function ITexture:setMask(arg0) end
+function ITexture:setMask(mask) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+---
+---  sets the region of the image
+---
+--- @param x integer xstart position
+--- @param y integer
+--- @param width integer
+--- @param height integer
 --- @return nil
-function ITexture:setRegion(arg0, arg1, arg2, arg3) end
+function ITexture:setRegion(x, y, width, height) end

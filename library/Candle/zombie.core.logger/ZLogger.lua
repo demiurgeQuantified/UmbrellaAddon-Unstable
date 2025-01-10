@@ -9,12 +9,12 @@ ZLogger = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Exception
+--- @param ex Exception
 --- @return nil
---- @overload fun(self: ZLogger, arg0: string): nil
---- @overload fun(self: ZLogger, arg0: string, arg1: string): nil
+--- @overload fun(self: ZLogger, logs: string): nil
+--- @overload fun(self: ZLogger, logs: string, level: string): nil
 --- @overload fun(self: ZLogger, arg0: string, arg1: string, arg2: boolean): nil
-function ZLogger:write(arg0) end
+function ZLogger:write(ex) end
 
 --- @public
 --- @param arg0 string
@@ -28,7 +28,10 @@ function ZLogger:writeUnsafe(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 boolean
+---
+---  Write logs into file and console.
+---
+--- @param name string
+--- @param useConsole boolean
 --- @return ZLogger
-function ZLogger.new(arg0, arg1) end
+function ZLogger.new(name, useConsole) end

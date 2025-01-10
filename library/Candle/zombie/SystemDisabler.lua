@@ -68,39 +68,39 @@ function SystemDisabler.printDetailedInfo() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setDoCharacterStats(arg0) end
+function SystemDisabler.setDoCharacterStats(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setDoPlayerCreation(arg0) end
+function SystemDisabler.setDoPlayerCreation(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setDoSurvivorCreation(arg0) end
+function SystemDisabler.setDoSurvivorCreation(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setDoZombieCreation(arg0) end
+function SystemDisabler.setDoZombieCreation(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enable boolean
 --- @return nil
-function SystemDisabler.setEnableAdvancedSoundOptions(arg0) end
+function SystemDisabler.setEnableAdvancedSoundOptions(enable) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setOverridePOVCharacters(arg0) end
+function SystemDisabler.setOverridePOVCharacters(bDo) end
 
 --- @public
 --- @static
@@ -110,15 +110,15 @@ function SystemDisabler.setUncappedFPS(arg0) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setVehiclesEverywhere(arg0) end
+function SystemDisabler.setVehiclesEverywhere(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return nil
-function SystemDisabler.setWorldSyncEnable(arg0) end
+function SystemDisabler.setWorldSyncEnable(bDo) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

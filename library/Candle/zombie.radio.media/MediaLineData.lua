@@ -41,10 +41,10 @@ function MediaLineData:getTranslatedText() end
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 string
+--- @param text string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param codes string
 --- @return MediaLineData
-function MediaLineData.new(arg0, arg1, arg2, arg3, arg4) end
+function MediaLineData.new(text, r, g, b, codes) end

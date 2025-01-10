@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RBShopLooted: RandomizedBuildingBase
+--- @class RBShopLooted: RandomizedBuildingBase Shop being looted by bandits + 2 cops and corpses inside the shop
 --- @field public class any
 RBShopLooted = {}
 
@@ -9,15 +9,18 @@ RBShopLooted = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+---
+---  Description copied from class: RandomizedBuildingBase
+---
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBShopLooted:isValid(arg0, arg1) end
+function RBShopLooted:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RBShopLooted:randomizeBuilding(arg0) end
+function RBShopLooted:randomizeBuilding(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

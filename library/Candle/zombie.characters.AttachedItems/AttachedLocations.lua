@@ -15,9 +15,9 @@ function AttachedLocations.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param id string
 --- @return AttachedLocationGroup
-function AttachedLocations.getGroup(arg0) end
+function AttachedLocations.getGroup(id) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

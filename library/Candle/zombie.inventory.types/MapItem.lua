@@ -50,31 +50,31 @@ function MapItem:getSaveType() end
 function MapItem:getSymbols() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function MapItem:load(arg0, arg1) end
+function MapItem:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function MapItem:save(arg0, arg1) end
+function MapItem:save(output, net) end
 
 --- @public
---- @param arg0 string
+--- @param mapID string
 --- @return nil
-function MapItem:setMapID(arg0) end
+function MapItem:setMapID(mapID) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param tex string
 --- @return MapItem
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): MapItem
-function MapItem.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(module: string, name: string, type: string, item: Item): MapItem
+function MapItem.new(module, name, type, tex) end

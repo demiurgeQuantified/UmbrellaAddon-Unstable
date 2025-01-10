@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ICommonSoundEmitter
+--- @class ICommonSoundEmitter TurboTuTone.
 --- @field public class any
 ICommonSoundEmitter = {}
 
@@ -9,54 +9,54 @@ ICommonSoundEmitter = {}
 ------------------------------------
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return boolean
-function ICommonSoundEmitter:hasSustainPoints(arg0) end
+function ICommonSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
 function ICommonSoundEmitter:isEmpty() end
 
 --- @public
---- @param arg0 string
+--- @param alias string
 --- @return boolean
---- @overload fun(self: ICommonSoundEmitter, arg0: integer): boolean
-function ICommonSoundEmitter:isPlaying(arg0) end
+--- @overload fun(self: ICommonSoundEmitter, channel: integer): boolean
+function ICommonSoundEmitter:isPlaying(alias) end
 
 --- @public
---- @param arg0 string
+--- @param file string
 --- @return integer
---- @overload fun(self: ICommonSoundEmitter, arg0: string, arg1: boolean): integer
-function ICommonSoundEmitter:playSound(arg0) end
+--- @overload fun(self: ICommonSoundEmitter, file: string, doWorldSound: boolean): integer
+function ICommonSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param pitch number
 --- @return nil
-function ICommonSoundEmitter:setPitch(arg0, arg1) end
+function ICommonSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return nil
-function ICommonSoundEmitter:setPos(arg0, arg1, arg2) end
+function ICommonSoundEmitter:setPos(x, y, z) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 number
+--- @param handle integer
+--- @param volume number
 --- @return nil
-function ICommonSoundEmitter:setVolume(arg0, arg1) end
+function ICommonSoundEmitter:setVolume(handle, volume) end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function ICommonSoundEmitter:stopOrTriggerSound(arg0) end
+function ICommonSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function ICommonSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function ICommonSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param arg0 integer
@@ -64,15 +64,15 @@ function ICommonSoundEmitter:stopOrTriggerSoundByName(arg0) end
 function ICommonSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param channel integer
 --- @return integer
-function ICommonSoundEmitter:stopSound(arg0) end
+function ICommonSoundEmitter:stopSound(channel) end
 
 --- @public
 --- @return nil
 function ICommonSoundEmitter:tick() end
 
 --- @public
---- @param arg0 integer
+--- @param handle integer
 --- @return nil
-function ICommonSoundEmitter:triggerCue(arg0) end
+function ICommonSoundEmitter:triggerCue(handle) end

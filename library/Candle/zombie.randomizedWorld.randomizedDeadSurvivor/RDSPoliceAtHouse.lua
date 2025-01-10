@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSPoliceAtHouse: RandomizedDeadSurvivorBase
+--- @class RDSPoliceAtHouse: RandomizedDeadSurvivorBase 2-3 zombies Cops in the house too with a police car waiting outside.
 --- @field public class any
 RDSPoliceAtHouse = {}
 
@@ -9,9 +9,9 @@ RDSPoliceAtHouse = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSPoliceAtHouse:randomizeDeadSurvivor(arg0) end
+function RDSPoliceAtHouse:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

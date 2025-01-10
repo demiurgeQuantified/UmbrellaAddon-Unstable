@@ -17,16 +17,16 @@ function AttachedLocation:getAttachmentName() end
 function AttachedLocation:getId() end
 
 --- @public
---- @param arg0 string
+--- @param attachmentName string
 --- @return nil
-function AttachedLocation:setAttachmentName(arg0) end
+function AttachedLocation:setAttachmentName(attachmentName) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 AttachedLocationGroup
---- @param arg1 string
+--- @param group AttachedLocationGroup
+--- @param id string
 --- @return AttachedLocation
-function AttachedLocation.new(arg0, arg1) end
+function AttachedLocation.new(group, id) end

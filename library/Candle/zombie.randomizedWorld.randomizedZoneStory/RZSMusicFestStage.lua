@@ -9,9 +9,9 @@ RZSMusicFestStage = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return nil
-function RZSMusicFestStage:randomizeZoneStory(arg0) end
+function RZSMusicFestStage:randomizeZoneStory(zone) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

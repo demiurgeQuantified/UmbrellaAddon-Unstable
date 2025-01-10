@@ -13,23 +13,23 @@ IsoLuaMover = {}
 function IsoLuaMover:getObjectName() end
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 boolean
---- @param arg3 boolean
+--- @param name string
+--- @param seconds number
+--- @param looped boolean
+--- @param playing boolean
 --- @return nil
-function IsoLuaMover:playAnim(arg0, arg1, arg2, arg3) end
+function IsoLuaMover:playAnim(name, seconds, looped, playing) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoLuaMover:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoLuaMover:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @return nil
@@ -40,6 +40,6 @@ function IsoLuaMover:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return IsoLuaMover
-function IsoLuaMover.new(arg0) end
+function IsoLuaMover.new(table) end

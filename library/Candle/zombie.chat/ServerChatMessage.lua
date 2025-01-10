@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ServerChatMessage: ChatMessage
+--- @class ServerChatMessage: ChatMessage Messages which sent by server to any chat stream. This applied stream setting but author always Server
 --- @field public class any
 ServerChatMessage = {}
 
@@ -13,16 +13,16 @@ ServerChatMessage = {}
 function ServerChatMessage:getAuthor() end
 
 --- @public
---- @param arg0 string
+--- @param author string
 --- @return nil
-function ServerChatMessage:setAuthor(arg0) end
+function ServerChatMessage:setAuthor(author) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 ChatBase
---- @param arg1 string
+--- @param chat ChatBase
+--- @param text string
 --- @return ServerChatMessage
-function ServerChatMessage.new(arg0, arg1) end
+function ServerChatMessage.new(chat, text) end

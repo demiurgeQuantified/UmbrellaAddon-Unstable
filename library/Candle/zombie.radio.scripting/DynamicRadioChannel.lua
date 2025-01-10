@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class DynamicRadioChannel: RadioChannel
+--- @class DynamicRadioChannel: RadioChannel TurboTuTone.
 --- @field public class any
 DynamicRadioChannel = {}
 
@@ -9,19 +9,19 @@ DynamicRadioChannel = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
+--- @param guid string
+--- @param line integer
 --- @return nil
-function DynamicRadioChannel:LoadAiringBroadcast(arg0, arg1) end
+function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 ChannelCategory
+--- @param n string
+--- @param freq integer
+--- @param c ChannelCategory
 --- @return DynamicRadioChannel
---- @overload fun(arg0: string, arg1: integer, arg2: ChannelCategory, arg3: string): DynamicRadioChannel
-function DynamicRadioChannel.new(arg0, arg1, arg2) end
+--- @overload fun(n: string, freq: integer, c: ChannelCategory, guid: string): DynamicRadioChannel
+function DynamicRadioChannel.new(n, freq, c) end

@@ -9,16 +9,16 @@ WaveSignalDevice = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 string
---- @param arg5 string
---- @param arg6 integer
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
 --- @return nil
---- @overload fun(self: WaveSignalDevice, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
-function WaveSignalDevice:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(self: WaveSignalDevice, player: IsoPlayer, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
+function WaveSignalDevice:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
@@ -49,11 +49,11 @@ function WaveSignalDevice:getY() end
 function WaveSignalDevice:getZ() end
 
 --- @public
---- @param arg0 number
+--- @param d number
 --- @return nil
-function WaveSignalDevice:setDelta(arg0) end
+function WaveSignalDevice:setDelta(d) end
 
 --- @public
---- @param arg0 DeviceData
+--- @param data DeviceData
 --- @return nil
-function WaveSignalDevice:setDeviceData(arg0) end
+function WaveSignalDevice:setDeviceData(data) end

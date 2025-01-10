@@ -14,15 +14,15 @@ MainScreenState = {}
 
 --- @public
 --- @static
---- @param arg0 Texture
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 number
+--- @param tex Texture
+--- @param x integer
+--- @param y integer
+--- @param width integer
+--- @param height integer
+--- @param alpha number
 --- @return nil
---- @overload fun(arg0: Texture, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: Color): nil
-function MainScreenState.DrawTexture(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(tex: Texture, x: integer, y: integer, width: integer, height: integer, col: Color): nil
+function MainScreenState.DrawTexture(tex, x, y, width, height, alpha) end
 
 --- @public
 --- @static
@@ -48,9 +48,9 @@ function MainScreenState.loadIcons() end
 
 --- @public
 --- @static
---- @param arg0 String[]
+--- @param args String[]
 --- @return nil
-function MainScreenState.main(arg0) end
+function MainScreenState.main(args) end
 
 --- @public
 --- @static
@@ -91,9 +91,9 @@ function MainScreenState:render() end
 function MainScreenState:renderBackground() end
 
 --- @public
---- @param arg0 ConnectToServerState
+--- @param state ConnectToServerState
 --- @return nil
-function MainScreenState:setConnectToServerState(arg0) end
+function MainScreenState:setConnectToServerState(state) end
 
 --- @public
 --- @return StateAction

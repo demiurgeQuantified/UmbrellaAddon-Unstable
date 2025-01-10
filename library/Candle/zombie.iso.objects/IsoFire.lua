@@ -10,24 +10,24 @@ IsoFire = {}
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 boolean
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
 --- @return boolean
---- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean): boolean
-function IsoFire.CanAddFire(arg0, arg1) end
+--- @overload fun(gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, smoke: boolean): boolean
+function IsoFire.CanAddFire(gridSquare, CanBurnAnywhere) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 boolean
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
 --- @return boolean
-function IsoFire.CanAddSmoke(arg0, arg1) end
+function IsoFire.CanAddSmoke(gridSquare, CanBurnAnywhere) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param gridSquare IsoGridSquare
 --- @return boolean
-function IsoFire.Fire_IsSquareFlamable(arg0) end
+function IsoFire.Fire_IsSquareFlamable(gridSquare) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -42,16 +42,16 @@ function IsoFire:HasTooltip() end
 function IsoFire:Spread() end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param PassedObjectSquare IsoGridSquare
 --- @return boolean
-function IsoFire:TestCollide(arg0, arg1) end
+function IsoFire:TestCollide(obj, PassedObjectSquare) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return VisionResult
-function IsoFire:TestVision(arg0, arg1) end
+function IsoFire:TestVision(from, to) end
 
 --- @public
 --- @return nil
@@ -78,6 +78,9 @@ function IsoFire:getLightRadius() end
 function IsoFire:getObjectName() end
 
 --- @public
+---
+---  The more this number is low, the faster it's gonna spread
+---
 --- @return integer
 function IsoFire:getSpreadDelay() end
 
@@ -94,32 +97,32 @@ function IsoFire:isCampfire() end
 function IsoFire:isPermanent() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param b ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoFire:load(arg0, arg1, arg2) end
+function IsoFire:load(b, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoFire:loadChange(arg0, arg1) end
+function IsoFire:loadChange(change, bb) end
 
 --- @public
 --- @return nil
 function IsoFire:removeFromWorld() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoFire:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoFire:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
 --- @param arg0 number
@@ -130,37 +133,43 @@ function IsoFire:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function IsoFire:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoFire:save(arg0, arg1) end
+function IsoFire:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoFire:saveChange(arg0, arg1, arg2) end
+function IsoFire:saveChange(change, tbl, bb) end
 
 --- @public
---- @param arg0 integer
+---
+---  Up this number to make the fire life longer
+---
+--- @param Life integer
 --- @return nil
-function IsoFire:setLife(arg0) end
+function IsoFire:setLife(Life) end
 
 --- @public
---- @param arg0 integer
+--- @param lifeStage integer
 --- @return nil
-function IsoFire:setLifeStage(arg0) end
+function IsoFire:setLifeStage(lifeStage) end
 
 --- @public
---- @param arg0 integer
+--- @param radius integer
 --- @return nil
-function IsoFire:setLightRadius(arg0) end
+function IsoFire:setLightRadius(radius) end
 
 --- @public
---- @param arg0 integer
+---
+---  The more this number is low, the faster it's gonna spread
+---
+--- @param SpreadDelay integer
 --- @return nil
-function IsoFire:setSpreadDelay(arg0) end
+function IsoFire:setSpreadDelay(SpreadDelay) end
 
 --- @public
 --- @return nil
@@ -171,10 +180,10 @@ function IsoFire:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare): IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer): IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer, arg4: integer): IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: integer, arg4: integer, arg5: boolean): IsoFire
-function IsoFire.new(arg0) end
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare): IsoFire
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: integer): IsoFire
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: integer, SetLife: integer): IsoFire
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: integer, SetLife: integer, isSmoke: boolean): IsoFire
+function IsoFire.new(cell) end

@@ -18,25 +18,25 @@ function FakeDeadAttackState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function FakeDeadAttackState:animEvent(arg0, arg1) end
+function FakeDeadAttackState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FakeDeadAttackState:enter(arg0) end
+function FakeDeadAttackState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FakeDeadAttackState:execute(arg0) end
+function FakeDeadAttackState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function FakeDeadAttackState:exit(arg0) end
+function FakeDeadAttackState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

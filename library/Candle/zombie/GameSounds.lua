@@ -29,15 +29,15 @@ function GameSounds.ScriptsLoaded() end
 
 --- @public
 --- @static
---- @param arg0 GameSound
+--- @param sound GameSound
 --- @return nil
-function GameSounds.addSound(arg0) end
+function GameSounds.addSound(sound) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param inMenu boolean
 --- @return nil
-function GameSounds.fix3DListenerPosition(arg0) end
+function GameSounds.fix3DListenerPosition(inMenu) end
 
 --- @public
 --- @static
@@ -46,27 +46,27 @@ function GameSounds.getCategories() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return GameSound
-function GameSounds.getOrCreateSound(arg0) end
+function GameSounds.getOrCreateSound(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return GameSound
-function GameSounds.getSound(arg0) end
+function GameSounds.getSound(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param category string
 --- @return ArrayList
-function GameSounds.getSoundsInCategory(arg0) end
+function GameSounds.getSoundsInCategory(category) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function GameSounds.isKnownSound(arg0) end
+function GameSounds.isKnownSound(name) end
 
 --- @public
 --- @static
@@ -80,9 +80,9 @@ function GameSounds.loadINI() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return nil
-function GameSounds.previewSound(arg0) end
+function GameSounds.previewSound(name) end
 
 --- @public
 --- @static

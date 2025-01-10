@@ -18,24 +18,27 @@ function LungeState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function LungeState:enter(arg0) end
+function LungeState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function LungeState:execute(arg0) end
+function LungeState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function LungeState:exit(arg0) end
+function LungeState:exit(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+---
+---  Return TRUE if the owner is currently moving.   Defaults to FALSE
+---
+--- @param owner IsoGameCharacter
 --- @return boolean
-function LungeState:isMoving(arg0) end
+function LungeState:isMoving(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

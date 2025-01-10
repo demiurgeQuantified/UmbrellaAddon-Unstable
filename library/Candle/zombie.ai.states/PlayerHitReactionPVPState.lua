@@ -18,25 +18,25 @@ function PlayerHitReactionPVPState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function PlayerHitReactionPVPState:animEvent(arg0, arg1) end
+function PlayerHitReactionPVPState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerHitReactionPVPState:enter(arg0) end
+function PlayerHitReactionPVPState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerHitReactionPVPState:execute(arg0) end
+function PlayerHitReactionPVPState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerHitReactionPVPState:exit(arg0) end
+function PlayerHitReactionPVPState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

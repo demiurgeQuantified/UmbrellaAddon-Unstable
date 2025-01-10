@@ -17,15 +17,15 @@ function IsoZombieGiblets:Serialize() end
 function IsoZombieGiblets:getObjectName() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param info ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoZombieGiblets:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoZombieGiblets:render(x, y, z, info, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @return nil
@@ -36,7 +36,7 @@ function IsoZombieGiblets:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoZombieGiblets
---- @overload fun(arg0: GibletType, arg1: IsoCell, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number): IsoZombieGiblets
-function IsoZombieGiblets.new(arg0) end
+--- @overload fun(type: GibletType, cell: IsoCell, x: number, y: number, z: number, xvel: number, yvel: number): IsoZombieGiblets
+function IsoZombieGiblets.new(cell) end

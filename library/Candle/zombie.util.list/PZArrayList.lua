@@ -59,10 +59,10 @@ function PZArrayList:addAll(arg0) end
 function PZArrayList:clear() end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return boolean
---- @overload fun(self: PZArrayList, arg0: any): boolean
-function PZArrayList:contains(arg0) end
+--- @overload fun(self: PZArrayList, o: any): boolean
+function PZArrayList:contains(o) end
 
 --- @public
 --- @param arg0 Collection
@@ -80,10 +80,10 @@ function PZArrayList:ensureCapacity(arg0) end
 function PZArrayList:equals(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return any
---- @overload fun(self: PZArrayList, arg0: integer): any
-function PZArrayList:get(arg0) end
+--- @overload fun(self: PZArrayList, index: integer): any
+function PZArrayList:get(index) end
 
 --- @public
 --- @return Object[]
@@ -94,10 +94,10 @@ function PZArrayList:getElements() end
 function PZArrayList:hashCode() end
 
 --- @public
---- @param arg0 any
+--- @param o any
 --- @return integer
---- @overload fun(self: PZArrayList, arg0: any): integer
-function PZArrayList:indexOf(arg0) end
+--- @overload fun(self: PZArrayList, o: any): integer
+function PZArrayList:indexOf(o) end
 
 --- @public
 --- @return boolean
@@ -117,17 +117,17 @@ function PZArrayList:lastIndexOf(arg0) end
 --- @public
 --- @return ListIterator
 --- @overload fun(self: PZArrayList): ListIterator
---- @overload fun(self: PZArrayList, arg0: integer): ListIterator
---- @overload fun(self: PZArrayList, arg0: integer): ListIterator
+--- @overload fun(self: PZArrayList, index: integer): ListIterator
+--- @overload fun(self: PZArrayList, index: integer): ListIterator
 function PZArrayList:listIterator() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return any
---- @overload fun(self: PZArrayList, arg0: integer): any
---- @overload fun(self: PZArrayList, arg0: any): boolean
---- @overload fun(self: PZArrayList, arg0: any): boolean
-function PZArrayList:remove(arg0) end
+--- @overload fun(self: PZArrayList, index: integer): any
+--- @overload fun(self: PZArrayList, o: any): boolean
+--- @overload fun(self: PZArrayList, o: any): boolean
+function PZArrayList:remove(index) end
 
 --- @public
 --- @param arg0 Collection
@@ -185,7 +185,7 @@ function PZArrayList:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 Class
---- @param arg1 integer
+--- @param elementType Class
+--- @param initialCapacity integer
 --- @return PZArrayList
-function PZArrayList.new(arg0, arg1) end
+function PZArrayList.new(elementType, initialCapacity) end

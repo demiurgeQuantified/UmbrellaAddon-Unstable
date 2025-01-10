@@ -21,6 +21,6 @@ function IDebugOption:getParent() end
 function IDebugOption:onFullPathChanged() end
 
 --- @public
---- @param arg0 IDebugOptionGroup
+--- @param parent IDebugOptionGroup
 --- @return nil
-function IDebugOption:setParent(arg0) end
+function IDebugOption:setParent(parent) end

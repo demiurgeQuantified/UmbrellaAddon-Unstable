@@ -10,10 +10,10 @@ SGlobalObjects = {}
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 IsoObject
+--- @param systemName string
+--- @param isoObject IsoObject
 --- @return nil
-function SGlobalObjects.OnIsoObjectChangedItself(arg0, arg1) end
+function SGlobalObjects.OnIsoObjectChangedItself(systemName, isoObject) end
 
 --- @public
 --- @static
@@ -29,22 +29,22 @@ function SGlobalObjects.Reset() end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return nil
-function SGlobalObjects.chunkLoaded(arg0, arg1) end
+function SGlobalObjects.chunkLoaded(wx, wy) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return SGlobalObjectSystem
-function SGlobalObjects.getSystemByIndex(arg0) end
+function SGlobalObjects.getSystemByIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return SGlobalObjectSystem
-function SGlobalObjects.getSystemByName(arg0) end
+function SGlobalObjects.getSystemByName(name) end
 
 --- @public
 --- @static
@@ -63,30 +63,30 @@ function SGlobalObjects.load() end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return SGlobalObjectSystem
-function SGlobalObjects.newSystem(arg0) end
+function SGlobalObjects.newSystem(name) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param message string
 --- @return nil
-function SGlobalObjects.noise(arg0) end
+function SGlobalObjects.noise(message) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
---- @param arg2 IsoPlayer
---- @param arg3 table
+--- @param systemName string
+--- @param command string
+--- @param playerObj IsoPlayer
+--- @param args table
 --- @return boolean
-function SGlobalObjects.receiveClientCommand(arg0, arg1, arg2, arg3) end
+function SGlobalObjects.receiveClientCommand(systemName, command, playerObj, args) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param name string
 --- @return SGlobalObjectSystem
-function SGlobalObjects.registerSystem(arg0) end
+function SGlobalObjects.registerSystem(name) end
 
 --- @public
 --- @static
@@ -95,9 +95,9 @@ function SGlobalObjects.save() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function SGlobalObjects.saveInitialStateForClient(arg0) end
+function SGlobalObjects.saveInitialStateForClient(bb) end
 
 --- @public
 --- @static

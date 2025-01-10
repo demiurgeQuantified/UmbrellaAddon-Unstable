@@ -18,22 +18,22 @@ function DebugGlobalObjectState:enter() end
 function DebugGlobalObjectState:exit() end
 
 --- @public
---- @param arg0 string
+--- @param func string
 --- @return any
-function DebugGlobalObjectState:fromLua0(arg0) end
+function DebugGlobalObjectState:fromLua0(func) end
 
 --- @public
---- @param arg0 string
---- @param arg1 any
+--- @param func string
+--- @param arg0 any
 --- @return any
-function DebugGlobalObjectState:fromLua1(arg0, arg1) end
+function DebugGlobalObjectState:fromLua1(func, arg0) end
 
 --- @public
---- @param arg0 string
+--- @param func string
+--- @param arg0 any
 --- @param arg1 any
---- @param arg2 any
 --- @return any
-function DebugGlobalObjectState:fromLua2(arg0, arg1, arg2) end
+function DebugGlobalObjectState:fromLua2(func, arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -48,9 +48,9 @@ function DebugGlobalObjectState:render() end
 function DebugGlobalObjectState:renderScene() end
 
 --- @public
---- @param arg0 table
+--- @param table table
 --- @return nil
-function DebugGlobalObjectState:setTable(arg0) end
+function DebugGlobalObjectState:setTable(table) end
 
 --- @public
 --- @return StateAction

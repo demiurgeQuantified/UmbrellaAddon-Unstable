@@ -15,29 +15,29 @@ function ZombieOnGroundState.instance() end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoGameCharacter
+--- @param chrStanding IsoGameCharacter
+--- @param chrProne IsoGameCharacter
 --- @return boolean
-function ZombieOnGroundState.isCharacterStandingOnOther(arg0, arg1) end
+function ZombieOnGroundState.isCharacterStandingOnOther(chrStanding, chrProne) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieOnGroundState:enter(arg0) end
+function ZombieOnGroundState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieOnGroundState:execute(arg0) end
+function ZombieOnGroundState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ZombieOnGroundState:exit(arg0) end
+function ZombieOnGroundState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

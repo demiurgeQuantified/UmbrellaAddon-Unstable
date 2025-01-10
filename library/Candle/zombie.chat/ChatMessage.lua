@@ -102,74 +102,74 @@ function ChatMessage:isShowInChat() end
 function ChatMessage:makeFromDiscord() end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return nil
-function ChatMessage:pack(arg0) end
+function ChatMessage:pack(b) end
 
 --- @public
---- @param arg0 string
+--- @param author string
 --- @return nil
-function ChatMessage:setAuthor(arg0) end
+function ChatMessage:setAuthor(author) end
 
 --- @public
---- @param arg0 string
+--- @param customTag string
 --- @return nil
-function ChatMessage:setCustomTag(arg0) end
+function ChatMessage:setCustomTag(customTag) end
 
 --- @public
---- @param arg0 LocalDateTime
+--- @param datetime LocalDateTime
 --- @return nil
-function ChatMessage:setDatetime(arg0) end
+function ChatMessage:setDatetime(datetime) end
 
 --- @public
---- @param arg0 boolean
+--- @param __local__ boolean
 --- @return nil
-function ChatMessage:setLocal(arg0) end
+function ChatMessage:setLocal(__local__) end
 
 --- @public
---- @param arg0 boolean
+--- @param overHeadSpeech boolean
 --- @return nil
-function ChatMessage:setOverHeadSpeech(arg0) end
+function ChatMessage:setOverHeadSpeech(overHeadSpeech) end
 
 --- @public
---- @param arg0 integer
+--- @param radioChannel integer
 --- @return nil
-function ChatMessage:setRadioChannel(arg0) end
+function ChatMessage:setRadioChannel(radioChannel) end
 
 --- @public
---- @param arg0 string
+--- @param text string
 --- @return nil
-function ChatMessage:setScrambledText(arg0) end
+function ChatMessage:setScrambledText(text) end
 
 --- @public
---- @param arg0 boolean
+--- @param serverAlert boolean
 --- @return nil
-function ChatMessage:setServerAlert(arg0) end
+function ChatMessage:setServerAlert(serverAlert) end
 
 --- @public
---- @param arg0 boolean
+--- @param serverAuthor boolean
 --- @return nil
-function ChatMessage:setServerAuthor(arg0) end
+function ChatMessage:setServerAuthor(serverAuthor) end
 
 --- @public
---- @param arg0 boolean
+--- @param shouldAttractZombies boolean
 --- @return nil
-function ChatMessage:setShouldAttractZombies(arg0) end
+function ChatMessage:setShouldAttractZombies(shouldAttractZombies) end
 
 --- @public
---- @param arg0 boolean
+--- @param showInChat boolean
 --- @return nil
-function ChatMessage:setShowInChat(arg0) end
+function ChatMessage:setShowInChat(showInChat) end
 
 --- @public
---- @param arg0 string
+--- @param text string
 --- @return nil
-function ChatMessage:setText(arg0) end
+function ChatMessage:setText(text) end
 
 --- @public
---- @param arg0 Color
+--- @param textColor Color
 --- @return nil
-function ChatMessage:setTextColor(arg0) end
+function ChatMessage:setTextColor(textColor) end
 
 --- @public
 --- @return string
@@ -180,8 +180,8 @@ function ChatMessage:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 ChatBase
---- @param arg1 string
+--- @param chat ChatBase
+--- @param text string
 --- @return ChatMessage
---- @overload fun(arg0: ChatBase, arg1: LocalDateTime, arg2: string): ChatMessage
-function ChatMessage.new(arg0, arg1) end
+--- @overload fun(chat: ChatBase, datetime: LocalDateTime, text: string): ChatMessage
+function ChatMessage.new(chat, text) end

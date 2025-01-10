@@ -15,17 +15,17 @@ IsoChunk = {}
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return boolean
-function IsoChunk.FileExists(arg0, arg1) end
+function IsoChunk.FileExists(wx, wy) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param tileName string
 --- @return string
---- @overload fun(arg0: IsoGridSquare, arg1: integer): integer
-function IsoChunk.Fix2x(arg0) end
+--- @overload fun(square: IsoGridSquare, spriteID: integer): integer
+function IsoChunk.Fix2x(tileName) end
 
 --- @public
 --- @static
@@ -39,39 +39,39 @@ function IsoChunk.Reset() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 ByteBuffer
+--- @param prefix string
+--- @param wx integer
+--- @param wy integer
+--- @param bb ByteBuffer
 --- @return ByteBuffer
-function IsoChunk.SafeRead(arg0, arg1, arg2, arg3) end
+function IsoChunk.SafeRead(prefix, wx, wy, bb) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 ByteBuffer
+--- @param prefix string
+--- @param wx integer
+--- @param wy integer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoChunk.SafeWrite(arg0, arg1, arg2, arg3) end
+function IsoChunk.SafeWrite(prefix, wx, wy, bb) end
 
 --- @public
 --- @static
---- @param arg0 BaseVehicle
+--- @param v BaseVehicle
 --- @return nil
-function IsoChunk.addFromCheckedVehicles(arg0) end
+function IsoChunk.addFromCheckedVehicles(v) end
 
 --- @public
 --- @static
---- @param arg0 BaseVehicle
+--- @param v BaseVehicle
 --- @return boolean
-function IsoChunk.doSpawnedVehiclesInInvalidPosition(arg0) end
+function IsoChunk.doSpawnedVehiclesInInvalidPosition(v) end
 
 --- @public
 --- @static
---- @param arg0 BaseVehicle
+--- @param v BaseVehicle
 --- @return nil
-function IsoChunk.removeFromCheckedVehicles(arg0) end
+function IsoChunk.removeFromCheckedVehicles(v) end
 
 --- @public
 --- @static
@@ -83,26 +83,26 @@ function IsoChunk.updatePlayerInBullet() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return nil
-function IsoChunk:AddBlood(arg0, arg1) end
+function IsoChunk:AddBlood(wx, wy) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return nil
-function IsoChunk:AddCorpses(arg0, arg1) end
+function IsoChunk:AddCorpses(wx, wy) end
 
 --- @public
 --- @return nil
 function IsoChunk:AddVehicles() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return nil
-function IsoChunk:Blam(arg0, arg1) end
+function IsoChunk:Blam(wx, wy) end
 
 --- @public
 --- @param arg0 boolean
@@ -110,68 +110,71 @@ function IsoChunk:Blam(arg0, arg1) end
 function IsoChunk:IsOnScreen(arg0) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param wx integer
+--- @param wy integer
 --- @return boolean
-function IsoChunk:LoadBrandNew(arg0, arg1) end
+function IsoChunk:LoadBrandNew(wx, wy) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 ByteBuffer
+--- @param wx integer
+--- @param wy integer
+--- @param bb ByteBuffer
 --- @return boolean
-function IsoChunk:LoadFromBuffer(arg0, arg1, arg2) end
+function IsoChunk:LoadFromBuffer(wx, wy, bb) end
 
 --- @public
 --- @return nil
 function IsoChunk:LoadFromDisk() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoChunk:LoadFromDiskOrBuffer(arg0) end
+function IsoChunk:LoadFromDiskOrBuffer(bb) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 ByteBuffer
+--- @param wx integer
+--- @param wy integer
+--- @param fromServer ByteBuffer
 --- @return boolean
-function IsoChunk:LoadOrCreate(arg0, arg1, arg2) end
+function IsoChunk:LoadOrCreate(wx, wy, fromServer) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 Zone
---- @param arg2 string
---- @param arg3 VehicleType
---- @return boolean
-function IsoChunk:RandomizeModel(arg0, arg1, arg2, arg3) end
+---
+---  Randomize a model with his corresponding texture defined in VehicleType
+---
+--- @param v BaseVehicle vehicle
+--- @param zone Zone
+--- @param name string
+--- @param type VehicleType
+--- @return boolean true if succed
+function IsoChunk:RandomizeModel(v, zone, name, type) end
 
 --- @public
---- @param arg0 boolean
+--- @param bSaveQuit boolean
 --- @return nil
---- @overload fun(self: IsoChunk, arg0: ByteBuffer, arg1: CRC32): ByteBuffer
-function IsoChunk:Save(arg0) end
+--- @overload fun(self: IsoChunk, bb: ByteBuffer, crc: CRC32): ByteBuffer
+function IsoChunk:Save(bSaveQuit) end
 
 --- @public
---- @param arg0 Chunk
---- @param arg1 CRC32
+--- @param ccrc Chunk
+--- @param crc32 CRC32
 --- @return nil
-function IsoChunk:SaveLoadedChunk(arg0, arg1) end
+function IsoChunk:SaveLoadedChunk(ccrc, crc32) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 integer
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param Type integer
 --- @return nil
-function IsoChunk:addBloodSplat(arg0, arg1, arg2, arg3) end
+function IsoChunk:addBloodSplat(x, y, z, Type) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function IsoChunk:addGeneratorPos(arg0, arg1, arg2) end
+function IsoChunk:addGeneratorPos(x, y, z) end
 
 --- @public
 --- @param arg0 ChunkGenerationStatus
@@ -179,16 +182,16 @@ function IsoChunk:addGeneratorPos(arg0, arg1, arg2) end
 function IsoChunk:addModded(arg0) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 PerObjectLogic
+--- @param object IsoObject
+--- @param logic PerObjectLogic
 --- @return nil
-function IsoChunk:addObjectAmbientEmitter(arg0, arg1) end
+function IsoChunk:addObjectAmbientEmitter(object, logic) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 boolean
+--- @param zone Zone
+--- @param addToWorld boolean
 --- @return nil
-function IsoChunk:addRandomCarCrash(arg0, arg1) end
+function IsoChunk:addRandomCarCrash(zone, addToWorld) end
 
 --- @public
 --- @param arg0 integer
@@ -196,19 +199,19 @@ function IsoChunk:addRandomCarCrash(arg0, arg1) end
 function IsoChunk:addSpawnedRoom(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param forced boolean
 --- @return nil
-function IsoChunk:addSurvivorInHorde(arg0) end
+function IsoChunk:addSurvivorInHorde(forced) end
 
 --- @public
 --- @return nil
 function IsoChunk:assignLoadID() end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 boolean
+--- @param zone Zone
+--- @param force boolean
 --- @return boolean
-function IsoChunk:canAddRandomCarCrash(arg0, arg1) end
+function IsoChunk:canAddRandomCarCrash(zone, force) end
 
 --- @public
 --- @return nil
@@ -271,11 +274,11 @@ function IsoChunk:getCutawayDataForLevel(arg0) end
 function IsoChunk:getErosionData() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return IsoGridSquare
-function IsoChunk:getGridSquare(arg0, arg1, arg2) end
+function IsoChunk:getGridSquare(x, y, z) end
 
 --- @public
 --- @return integer
@@ -337,9 +340,9 @@ function IsoChunk:getVispolyData() end
 function IsoChunk:getVispolyDataForLevel(arg0) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param object IsoObject
 --- @return boolean
-function IsoChunk:hasObjectAmbientEmitter(arg0) end
+function IsoChunk:hasObjectAmbientEmitter(object) end
 
 --- @public
 --- @return boolean
@@ -389,11 +392,11 @@ function IsoChunk:isBlendingDoneFull() end
 function IsoChunk:isBlendingDonePartial() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return boolean
-function IsoChunk:isGeneratorPoweringSquare(arg0, arg1, arg2) end
+function IsoChunk:isGeneratorPoweringSquare(x, y, z) end
 
 --- @public
 --- @return EnumSet
@@ -424,9 +427,9 @@ function IsoChunk:loadInMainThread() end
 function IsoChunk:loadInWorldStreamerThread() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoChunk:loadObjectState(arg0) end
+function IsoChunk:loadObjectState(bb) end
 
 --- @public
 --- @return nil
@@ -443,16 +446,16 @@ function IsoChunk:recalcNeighboursNow() end
 function IsoChunk:removeFromWorld() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function IsoChunk:removeGeneratorPos(arg0, arg1, arg2) end
+function IsoChunk:removeGeneratorPos(x, y, z) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param object IsoObject
 --- @return nil
-function IsoChunk:removeObjectAmbientEmitter(arg0) end
+function IsoChunk:removeObjectAmbientEmitter(object) end
 
 --- @public
 --- @return nil
@@ -464,9 +467,9 @@ function IsoChunk:resetForStore() end
 function IsoChunk:rmModded(arg0) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return boolean
-function IsoChunk:saveObjectState(arg0) end
+function IsoChunk:saveObjectState(bb) end
 
 --- @public
 --- @param arg0 boolean
@@ -516,17 +519,17 @@ function IsoChunk:setMinMaxLevel(arg0, arg1) end
 function IsoChunk:setModifDepth(arg0, arg1) end
 
 --- @public
---- @param arg0 VehicleStorySpawnData
+--- @param spawnData VehicleStorySpawnData
 --- @return nil
-function IsoChunk:setRandomVehicleStoryToSpawnLater(arg0) end
+function IsoChunk:setRandomVehicleStoryToSpawnLater(spawnData) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 IsoGridSquare
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param square IsoGridSquare
 --- @return nil
-function IsoChunk:setSquare(arg0, arg1, arg2, arg3) end
+function IsoChunk:setSquare(x, y, z, square) end
 
 --- @public
 --- @param arg0 integer
@@ -559,6 +562,6 @@ function IsoChunk:updateVehicleStory() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoChunk
-function IsoChunk.new(arg0) end
+function IsoChunk.new(cell) end

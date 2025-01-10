@@ -25,23 +25,23 @@ function IsoPushableObject:Serialize() end
 function IsoPushableObject:getObjectName() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return number
-function IsoPushableObject:getWeight(arg0, arg1) end
+function IsoPushableObject:getWeight(x, y) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoPushableObject:load(arg0, arg1, arg2) end
+function IsoPushableObject:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoPushableObject:save(arg0, arg1) end
+function IsoPushableObject:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return nil
@@ -52,8 +52,8 @@ function IsoPushableObject:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoPushableObject
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoPushableObject
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer): IsoPushableObject
-function IsoPushableObject.new(arg0) end
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite): IsoPushableObject
+--- @overload fun(cell: IsoCell, x: integer, y: integer, z: integer): IsoPushableObject
+function IsoPushableObject.new(cell) end

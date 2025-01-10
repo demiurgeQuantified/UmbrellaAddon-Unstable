@@ -11,13 +11,13 @@ NonPvpZone = {}
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param title string
+--- @param x integer
+--- @param y integer
+--- @param x2 integer
+--- @param y2 integer
 --- @return NonPvpZone
-function NonPvpZone.addNonPvpZone(arg0, arg1, arg2, arg3, arg4) end
+function NonPvpZone.addNonPvpZone(title, x, y, x2, y2) end
 
 --- @public
 --- @static
@@ -26,22 +26,22 @@ function NonPvpZone.getAllZones() end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return NonPvpZone
-function NonPvpZone.getNonPvpZone(arg0, arg1) end
+function NonPvpZone.getNonPvpZone(x, y) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param title string
 --- @return NonPvpZone
-function NonPvpZone.getZoneByTitle(arg0) end
+function NonPvpZone.getZoneByTitle(title) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param title string
 --- @return nil
-function NonPvpZone.removeNonPvpZone(arg0) end
+function NonPvpZone.removeNonPvpZone(title) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -72,50 +72,50 @@ function NonPvpZone:getY() end
 function NonPvpZone:getY2() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function NonPvpZone:load(arg0, arg1) end
+function NonPvpZone:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function NonPvpZone:save(arg0) end
+function NonPvpZone:save(output) end
 
 --- @public
---- @param arg0 integer
+--- @param size integer
 --- @return nil
-function NonPvpZone:setSize(arg0) end
+function NonPvpZone:setSize(size) end
 
 --- @public
---- @param arg0 string
+--- @param title string
 --- @return nil
-function NonPvpZone:setTitle(arg0) end
+function NonPvpZone:setTitle(title) end
 
 --- @public
---- @param arg0 integer
+--- @param x integer
 --- @return nil
-function NonPvpZone:setX(arg0) end
+function NonPvpZone:setX(x) end
 
 --- @public
---- @param arg0 integer
+--- @param x2 integer
 --- @return nil
-function NonPvpZone:setX2(arg0) end
+function NonPvpZone:setX2(x2) end
 
 --- @public
---- @param arg0 integer
+--- @param y integer
 --- @return nil
-function NonPvpZone:setY(arg0) end
+function NonPvpZone:setY(y) end
 
 --- @public
---- @param arg0 integer
+--- @param y2 integer
 --- @return nil
-function NonPvpZone:setY2(arg0) end
+function NonPvpZone:setY2(y2) end
 
 --- @public
---- @param arg0 boolean
+--- @param remove boolean
 --- @return nil
-function NonPvpZone:syncNonPvpZone(arg0) end
+function NonPvpZone:syncNonPvpZone(remove) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -123,5 +123,5 @@ function NonPvpZone:syncNonPvpZone(arg0) end
 
 --- @public
 --- @return NonPvpZone
---- @overload fun(arg0: string, arg1: integer, arg2: integer, arg3: integer, arg4: integer): NonPvpZone
+--- @overload fun(title: string, x: integer, y: integer, x2: integer, y2: integer): NonPvpZone
 function NonPvpZone.new() end

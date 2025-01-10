@@ -9,8 +9,8 @@ AssetStateObserver = {}
 ------------------------------------
 
 --- @public
---- @param arg0 State
---- @param arg1 State
---- @param arg2 Asset
+--- @param oldState State
+--- @param newState State
+--- @param asset Asset
 --- @return nil
-function AssetStateObserver:onStateChanged(arg0, arg1, arg2) end
+function AssetStateObserver:onStateChanged(oldState, newState, asset) end

@@ -11,78 +11,78 @@ IsoDoor = {}
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfFour IsoObject
 --- @return boolean
-function IsoDoor.destroyDoubleDoor(arg0) end
+function IsoDoor.destroyDoubleDoor(oneOfFour) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfThree IsoObject
 --- @return boolean
-function IsoDoor.destroyGarageDoor(arg0) end
+function IsoDoor.destroyGarageDoor(oneOfThree) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfFour IsoObject
 --- @return integer
-function IsoDoor.getDoubleDoorIndex(arg0) end
+function IsoDoor.getDoubleDoorIndex(oneOfFour) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 integer
+--- @param oneOfFour IsoObject
+--- @param index integer
 --- @return IsoObject
-function IsoDoor.getDoubleDoorObject(arg0, arg1) end
+function IsoDoor.getDoubleDoorObject(oneOfFour, index) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfThree IsoObject
 --- @return IsoObject
-function IsoDoor.getGarageDoorFirst(arg0) end
+function IsoDoor.getGarageDoorFirst(oneOfThree) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfThree IsoObject
 --- @return integer
-function IsoDoor.getGarageDoorIndex(arg0) end
+function IsoDoor.getGarageDoorIndex(oneOfThree) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfThree IsoObject
 --- @return IsoObject
-function IsoDoor.getGarageDoorNext(arg0) end
+function IsoDoor.getGarageDoorNext(oneOfThree) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfThree IsoObject
 --- @return IsoObject
-function IsoDoor.getGarageDoorPrev(arg0) end
+function IsoDoor.getGarageDoorPrev(oneOfThree) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param object IsoObject
 --- @return boolean
-function IsoDoor.isDoorObstructed(arg0) end
+function IsoDoor.isDoorObstructed(object) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param oneOfFour IsoObject
 --- @return boolean
-function IsoDoor.isDoubleDoorObstructed(arg0) end
+function IsoDoor.isDoubleDoorObstructed(oneOfFour) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 boolean
+--- @param oneOfFour IsoObject
+--- @param doSync boolean
 --- @return nil
-function IsoDoor.toggleDoubleDoor(arg0, arg1) end
+function IsoDoor.toggleDoubleDoor(oneOfFour, doSync) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
---- @param arg1 boolean
+--- @param oneOfThree IsoObject
+--- @param doSync boolean
 --- @return nil
-function IsoDoor.toggleGarageDoor(arg0, arg1) end
+function IsoDoor.toggleGarageDoor(oneOfThree, doSync) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -101,70 +101,70 @@ function IsoDoor:IsOpen() end
 function IsoDoor:IsStrengthenedByPushedItems() end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
---- @param arg2 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return boolean
-function IsoDoor:TestCollide(arg0, arg1, arg2) end
+function IsoDoor:TestCollide(obj, from, to) end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
---- @param arg2 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return boolean
-function IsoDoor:TestPathfindCollide(arg0, arg1, arg2) end
+function IsoDoor:TestPathfindCollide(obj, from, to) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return VisionResult
-function IsoDoor:TestVision(arg0, arg1) end
+function IsoDoor:TestVision(from, to) end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoDoor, arg0: IsoMovingObject): nil
-function IsoDoor:Thump(arg0) end
+--- @overload fun(self: IsoDoor, thumper: IsoMovingObject): nil
+function IsoDoor:Thump(thumper) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function IsoDoor:ToggleDoor(arg0) end
+function IsoDoor:ToggleDoor(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function IsoDoor:ToggleDoorActual(arg0) end
+function IsoDoor:ToggleDoorActual(chr) end
 
 --- @public
 --- @return nil
 function IsoDoor:ToggleDoorSilent() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: IsoDoor, arg0: IsoGameCharacter, arg1: HandWeapon): nil
-function IsoDoor:WeaponHit(arg0, arg1) end
+--- @overload fun(self: IsoDoor, owner: IsoGameCharacter, weapon: HandWeapon): nil
+function IsoDoor:WeaponHit(owner, weapon) end
 
 --- @public
 --- @return nil
 function IsoDoor:addRandomBarricades() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
---- @overload fun(self: IsoDoor, arg0: boolean, arg1: IsoGameCharacter): nil
-function IsoDoor:addSheet(arg0) end
+--- @overload fun(self: IsoDoor, inside: boolean, chr: IsoGameCharacter): nil
+function IsoDoor:addSheet(chr) end
 
 --- @public
 --- @return nil
 function IsoDoor:addToWorld() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoDoor:canClimbOver(arg0) end
+function IsoDoor:canClimbOver(chr) end
 
 --- @public
 --- @param arg0 IsoDoor
@@ -189,15 +189,18 @@ function IsoDoor:couldBeOpen(arg0) end
 function IsoDoor:destroy() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+---
+---  Returns the square the player should stand on to add a sheet.
+---
+--- @param chr IsoGameCharacter
 --- @return IsoGridSquare
-function IsoDoor:getAddSheetSquare(arg0) end
+function IsoDoor:getAddSheetSquare(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoDoor, arg0: IsoGameCharacter): IsoBarricade
-function IsoDoor:getBarricadeForCharacter(arg0) end
+--- @overload fun(self: IsoDoor, chr: IsoGameCharacter): IsoBarricade
+function IsoDoor:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
@@ -210,20 +213,20 @@ function IsoDoor:getBarricadeOnOppositeSquare() end
 function IsoDoor:getBarricadeOnSameSquare() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoDoor, arg0: IsoGameCharacter): IsoBarricade
-function IsoDoor:getBarricadeOppositeCharacter(arg0) end
+--- @overload fun(self: IsoDoor, chr: IsoGameCharacter): IsoBarricade
+function IsoDoor:getBarricadeOppositeCharacter(chr) end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoDoor:getFacingPosition(arg0) end
+function IsoDoor:getFacingPosition(pos) end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoDoor:getFacingPositionAlt(arg0) end
+function IsoDoor:getFacingPositionAlt(pos) end
 
 --- @public
 --- @return integer
@@ -256,9 +259,9 @@ function IsoDoor:getOpenSprite() end
 function IsoDoor:getOppositeSquare() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoGridSquare
-function IsoDoor:getOtherSideOfDoor(arg0) end
+function IsoDoor:getOtherSideOfDoor(chr) end
 
 --- @public
 --- @return IsoObject
@@ -274,13 +277,16 @@ function IsoDoor:getRenderEffectObjectByIndex(arg0) end
 function IsoDoor:getRenderEffectObjectCount() end
 
 --- @public
+---
+---  Returns the square the player should stand on to open/close/remove a sheet.
+---
 --- @return IsoGridSquare
 function IsoDoor:getSheetSquare() end
 
 --- @public
---- @param arg0 boolean
+--- @param ignoreOpen boolean
 --- @return IsoDirections
-function IsoDoor:getSpriteEdge(arg0) end
+function IsoDoor:getSpriteEdge(ignoreOpen) end
 
 --- @public
 --- @return SpriteModel
@@ -300,19 +306,19 @@ function IsoDoor:getThumpCondition() end
 function IsoDoor:getThumpSound() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoDoor, arg0: IsoGameCharacter): Thumpable
-function IsoDoor:getThumpableFor(arg0) end
+--- @overload fun(self: IsoDoor, chr: IsoGameCharacter): Thumpable
+function IsoDoor:getThumpableFor(chr) end
 
 --- @public
 --- @return boolean
 function IsoDoor:haveKey() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square2 IsoGridSquare
 --- @return boolean
-function IsoDoor:isAdjacentToSquare(arg0) end
+function IsoDoor:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
@@ -338,15 +344,15 @@ function IsoDoor:isDestroyed() end
 function IsoDoor:isExterior() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
 --- @deprecated
-function IsoDoor:isExteriorDoor(arg0) end
+function IsoDoor:isExteriorDoor(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoDoor:isFacingSheet(arg0) end
+function IsoDoor:isFacingSheet(chr) end
 
 --- @public
 --- @return boolean
@@ -365,48 +371,48 @@ function IsoDoor:isLockedByKey() end
 function IsoDoor:isObstructed() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoDoor:load(arg0, arg1, arg2) end
+function IsoDoor:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDoor:loadChange(arg0, arg1) end
+function IsoDoor:loadChange(change, bb) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDoor:loadState(arg0) end
+function IsoDoor:loadState(bb) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return boolean
-function IsoDoor:onMouseLeftClick(arg0, arg1) end
+function IsoDoor:onMouseLeftClick(x, y) end
 
 --- @public
 --- @return nil
 function IsoDoor:removeFromWorld() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
-function IsoDoor:removeSheet(arg0) end
+function IsoDoor:removeSheet(chr) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param info ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoDoor:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoDoor:render(x, y, z, info, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @param arg0 IsoDirections
@@ -422,62 +428,62 @@ function IsoDoor:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function IsoDoor:renderWallTile(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoDoor:save(arg0, arg1) end
+function IsoDoor:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDoor:saveChange(arg0, arg1, arg2) end
+function IsoDoor:saveChange(change, tbl, bb) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDoor:saveState(arg0) end
+function IsoDoor:saveState(bb) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return nil
-function IsoDoor:setCurtainOpen(arg0) end
+function IsoDoor:setCurtainOpen(open) end
 
 --- @public
---- @param arg0 boolean
+--- @param haveKey boolean
 --- @return nil
-function IsoDoor:setHaveKey(arg0) end
+function IsoDoor:setHaveKey(haveKey) end
 
 --- @public
---- @param arg0 integer
+--- @param Health integer
 --- @return nil
-function IsoDoor:setHealth(arg0) end
+function IsoDoor:setHealth(Health) end
 
 --- @public
---- @param arg0 boolean
+--- @param lock boolean
 --- @return nil
-function IsoDoor:setIsLocked(arg0) end
+function IsoDoor:setIsLocked(lock) end
 
 --- @public
---- @param arg0 integer
+--- @param keyId integer
 --- @return nil
-function IsoDoor:setKeyId(arg0) end
+function IsoDoor:setKeyId(keyId) end
 
 --- @public
---- @param arg0 boolean
+--- @param bLocked boolean
 --- @return nil
-function IsoDoor:setLocked(arg0) end
+function IsoDoor:setLocked(bLocked) end
 
 --- @public
---- @param arg0 boolean
+--- @param lockedByKey boolean
 --- @return nil
-function IsoDoor:setLockedByKey(arg0) end
+function IsoDoor:setLockedByKey(lockedByKey) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return nil
-function IsoDoor:setOpenSprite(arg0) end
+function IsoDoor:setOpenSprite(sprite) end
 
 --- @public
 --- @param arg0 ArrayList
@@ -489,35 +495,35 @@ function IsoDoor:syncDoorGarage(arg0) end
 function IsoDoor:syncDoorKey() end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 integer
---- @param arg2 UdpConnection
---- @param arg3 ByteBuffer
+--- @param bRemote boolean
+--- @param val integer
+--- @param source UdpConnection
+--- @param bb ByteBuffer
 --- @return nil
-function IsoDoor:syncIsoObject(arg0, arg1, arg2, arg3) end
+function IsoDoor:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return nil
-function IsoDoor:syncIsoObjectSend(arg0) end
+function IsoDoor:syncIsoObjectSend(b) end
 
 --- @public
 --- @return nil
 function IsoDoor:toggleCurtain() end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return nil
-function IsoDoor:transmitSetCurtainOpen(arg0) end
+function IsoDoor:transmitSetCurtainOpen(open) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoDoor
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean): IsoDoor
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean): IsoDoor
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean, arg4: table): IsoDoor
-function IsoDoor.new(arg0) end
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean): IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean, table: table): IsoDoor
+function IsoDoor.new(cell) end

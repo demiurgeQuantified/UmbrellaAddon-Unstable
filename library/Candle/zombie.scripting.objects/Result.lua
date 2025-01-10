@@ -29,24 +29,24 @@ function Result:getModule() end
 function Result:getType() end
 
 --- @public
---- @param arg0 integer
+--- @param count integer
 --- @return nil
-function Result:setCount(arg0) end
+function Result:setCount(count) end
 
 --- @public
---- @param arg0 integer
+--- @param count integer
 --- @return nil
-function Result:setDrainableCount(arg0) end
+function Result:setDrainableCount(count) end
 
 --- @public
---- @param arg0 string
+--- @param module string
 --- @return nil
-function Result:setModule(arg0) end
+function Result:setModule(module) end
 
 --- @public
---- @param arg0 string
+--- @param type string
 --- @return nil
-function Result:setType(arg0) end
+function Result:setType(type) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -14,10 +14,10 @@ Trait = {}
 function Trait:addFreeTrait(arg0) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 integer
+--- @param perk Perk
+--- @param level integer
 --- @return nil
-function Trait:addXPBoost(arg0, arg1) end
+function Trait:addXPBoost(perk, level) end
 
 --- @public
 --- @return integer
@@ -75,30 +75,30 @@ function Trait:isFree() end
 function Trait:isRemoveInMP() end
 
 --- @public
---- @param arg0 string
+--- @param desc string
 --- @return nil
-function Trait:setDescription(arg0) end
+function Trait:setDescription(desc) end
 
 --- @public
---- @param arg0 List
+--- @param freeRecipes List
 --- @return nil
-function Trait:setFreeRecipes(arg0) end
+function Trait:setFreeRecipes(freeRecipes) end
 
 --- @public
---- @param arg0 boolean
+--- @param removeInMP boolean
 --- @return nil
-function Trait:setRemoveInMP(arg0) end
+function Trait:setRemoveInMP(removeInMP) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 integer
---- @param arg3 string
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param tr string
+--- @param name string
+--- @param cost integer
+--- @param desc string
+--- @param prof boolean
+--- @param removeInMP boolean
 --- @return Trait
-function Trait.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+function Trait.new(tr, name, cost, desc, prof, removeInMP) end

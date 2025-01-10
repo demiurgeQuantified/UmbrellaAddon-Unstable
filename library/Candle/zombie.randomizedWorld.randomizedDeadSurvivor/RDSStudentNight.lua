@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSStudentNight: RandomizedDeadSurvivorBase
+--- @class RDSStudentNight: RandomizedDeadSurvivorBase Create some zombies in varsity outfit + 2 naked zombies in bedroom
 --- @field public class any
 RDSStudentNight = {}
 
@@ -9,9 +9,9 @@ RDSStudentNight = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSStudentNight:randomizeDeadSurvivor(arg0) end
+function RDSStudentNight:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

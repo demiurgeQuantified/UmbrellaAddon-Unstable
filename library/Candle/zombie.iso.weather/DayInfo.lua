@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class DayInfo
+--- @class DayInfo DAY INFO
 --- @field public class any
 DayInfo = {}
 
@@ -37,11 +37,11 @@ function DayInfo:getSeason() end
 function DayInfo:getYear() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param day integer
+--- @param month integer
+--- @param year integer
 --- @return nil
-function DayInfo:set(arg0, arg1, arg2) end
+function DayInfo:set(day, month, year) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

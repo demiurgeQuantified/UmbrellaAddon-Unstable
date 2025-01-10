@@ -36,27 +36,27 @@ function Observation:getRightLabel() end
 function Observation:getTraitID() end
 
 --- @public
---- @param arg0 string
+--- @param description string
 --- @return nil
-function Observation:setDescription(arg0) end
+function Observation:setDescription(description) end
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return nil
-function Observation:setName(arg0) end
+function Observation:setName(name) end
 
 --- @public
---- @param arg0 string
+--- @param traitID string
 --- @return nil
-function Observation:setTraitID(arg0) end
+function Observation:setTraitID(traitID) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 string
---- @param arg2 string
+--- @param tr string
+--- @param name string
+--- @param desc string
 --- @return Observation
-function Observation.new(arg0, arg1, arg2) end
+function Observation.new(tr, name, desc) end

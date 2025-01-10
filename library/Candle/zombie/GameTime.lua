@@ -42,69 +42,69 @@ function GameTime.isGamePaused() end
 
 --- @public
 --- @static
---- @param arg0 GameTime
+--- @param aInstance GameTime
 --- @return nil
-function GameTime.setInstance(arg0) end
+function GameTime.setInstance(aInstance) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param tshift integer
 --- @return nil
-function GameTime.setServerTimeShift(arg0) end
+function GameTime.setServerTimeShift(tshift) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param timeClientSend integer
+--- @param timeServer integer
+--- @param timeClientReceive integer
 --- @return nil
-function GameTime.syncServerTime(arg0, arg1, arg2) end
+function GameTime.syncServerTime(timeClientSend, timeServer, timeClientReceive) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param start number
+--- @param __end__ number
+--- @param delta number
 --- @return number
-function GameTime:Lerp(arg0, arg1, arg2) end
+function GameTime:Lerp(start, __end__, delta) end
 
 --- @public
---- @param arg0 integer
+--- @param i integer
 --- @return nil
-function GameTime:RemoveZombiesIndiscriminate(arg0) end
+function GameTime:RemoveZombiesIndiscriminate(i) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param startVal number
+--- @param endVal number
+--- @param startTime number
+--- @param endTime number
 --- @return number
-function GameTime:TimeLerp(arg0, arg1, arg2, arg3) end
+function GameTime:TimeLerp(startVal, endVal, startTime, endTime) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param year integer
+--- @param month integer
 --- @return integer
-function GameTime:daysInMonth(arg0, arg1) end
+function GameTime:daysInMonth(year, month) end
 
 --- @public
---- @return number
+--- @return number the Ambient
 --- @deprecated
 function GameTime:getAmbient() end
 
 --- @public
---- @return number
+--- @return number the AmbientMax
 function GameTime:getAmbientMax() end
 
 --- @public
---- @return number
+--- @return number the AmbientMin
 function GameTime:getAmbientMin() end
 
 --- @public
---- @return PZCalendar
+--- @return PZCalendar the Calender
 function GameTime:getCalender() end
 
 --- @public
@@ -112,7 +112,7 @@ function GameTime:getCalender() end
 function GameTime:getDawn() end
 
 --- @public
---- @return integer
+--- @return integer the Day
 function GameTime:getDay() end
 
 --- @public
@@ -124,9 +124,9 @@ function GameTime:getDayPlusOne() end
 function GameTime:getDaysSurvived() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param playerObj IsoPlayer
 --- @return string
-function GameTime:getDeathString(arg0) end
+function GameTime:getDeathString(playerObj) end
 
 --- @public
 --- @return number
@@ -165,7 +165,7 @@ function GameTime:getHelicopterStartHour() end
 function GameTime:getHour() end
 
 --- @public
---- @return number
+--- @return number the HoursSurvived
 function GameTime:getHoursSurvived() end
 
 --- @public
@@ -173,23 +173,23 @@ function GameTime:getHoursSurvived() end
 function GameTime:getInvMultiplier() end
 
 --- @public
---- @return number
+--- @return number the LastTimeOfDay
 function GameTime:getLastTimeOfDay() end
 
 --- @public
---- @return number
+--- @return number the MaxZombieCount
 function GameTime:getMaxZombieCount() end
 
 --- @public
---- @return number
+--- @return number the MaxZombieCountStart
 function GameTime:getMaxZombieCountStart() end
 
 --- @public
---- @return number
+--- @return number the MinZombieCount
 function GameTime:getMinZombieCount() end
 
 --- @public
---- @return number
+--- @return number the MinZombieCountStart
 function GameTime:getMinZombieCountStart() end
 
 --- @public
@@ -197,7 +197,7 @@ function GameTime:getMinZombieCountStart() end
 function GameTime:getMinutes() end
 
 --- @public
---- @return number
+--- @return number the MinutesPerDay
 function GameTime:getMinutesPerDay() end
 
 --- @public
@@ -209,7 +209,7 @@ function GameTime:getMinutesStamp() end
 function GameTime:getModData() end
 
 --- @public
---- @return integer
+--- @return integer the Month
 function GameTime:getMonth() end
 
 --- @public
@@ -217,7 +217,7 @@ function GameTime:getMonth() end
 function GameTime:getMultipliedSecondsSinceLastUpdate() end
 
 --- @public
---- @return number
+--- @return number the Multiplier
 function GameTime:getMultiplier() end
 
 --- @public
@@ -226,7 +226,7 @@ function GameTime:getMultiplier() end
 function GameTime:getMultiplierFromTimeDelta(arg0) end
 
 --- @public
---- @return number
+--- @return number the NightTint
 function GameTime:getNight() end
 
 --- @public
@@ -238,11 +238,11 @@ function GameTime:getNightMax() end
 function GameTime:getNightMin() end
 
 --- @public
---- @return number
+--- @return number the NightTint
 function GameTime:getNightTint() end
 
 --- @public
---- @return integer
+--- @return integer the NightsSurvived
 function GameTime:getNightsSurvived() end
 
 --- @public
@@ -258,19 +258,19 @@ function GameTime:getServerMultiplier() end
 function GameTime:getSkyLightLevel() end
 
 --- @public
---- @return integer
+--- @return integer the StartDay
 function GameTime:getStartDay() end
 
 --- @public
---- @return integer
+--- @return integer the StartMonth
 function GameTime:getStartMonth() end
 
 --- @public
---- @return number
+--- @return number the StartTimeOfDay
 function GameTime:getStartTimeOfDay() end
 
 --- @public
---- @return integer
+--- @return integer the StartYear
 function GameTime:getStartYear() end
 
 --- @public
@@ -291,13 +291,13 @@ function GameTime:getTimeDelta() end
 function GameTime:getTimeDeltaFromMultiplier(arg0) end
 
 --- @public
---- @return number
+--- @return number the TimeOfDay
 function GameTime:getTimeOfDay() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param playerObj IsoPlayer
 --- @return string
-function GameTime:getTimeSurvived(arg0) end
+function GameTime:getTimeSurvived(playerObj) end
 
 --- @public
 --- @return number
@@ -308,15 +308,15 @@ function GameTime:getTrueMultiplier() end
 function GameTime:getUnmoddedMultiplier() end
 
 --- @public
---- @return number
+--- @return number the ViewDist
 function GameTime:getViewDist() end
 
 --- @public
---- @return number
+--- @return number the ViewDistMax
 function GameTime:getViewDistMax() end
 
 --- @public
---- @return number
+--- @return number the ViewDistMin
 function GameTime:getViewDistMin() end
 
 --- @public
@@ -328,20 +328,20 @@ function GameTime:getWorldAgeDaysSinceBegin() end
 function GameTime:getWorldAgeHours() end
 
 --- @public
---- @return integer
+--- @return integer the Year
 function GameTime:getYear() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param playerObj IsoPlayer
 --- @return string
-function GameTime:getZombieKilledText(arg0) end
+function GameTime:getZombieKilledText(playerObj) end
 
 --- @public
 --- @return nil
 function GameTime:init() end
 
 --- @public
---- @return boolean
+--- @return boolean the RainingToday
 function GameTime:isRainingToday() end
 
 --- @public
@@ -350,199 +350,199 @@ function GameTime:isThunderDay() end
 
 --- @public
 --- @return nil
---- @overload fun(self: GameTime, arg0: DataInputStream): nil
---- @overload fun(self: GameTime, arg0: ByteBuffer): nil
+--- @overload fun(self: GameTime, input: DataInputStream): nil
+--- @overload fun(self: GameTime, input: ByteBuffer): nil
 function GameTime:load() end
 
 --- @public
 --- @return nil
---- @overload fun(self: GameTime, arg0: DataOutputStream): nil
---- @overload fun(self: GameTime, arg0: ByteBuffer): nil
+--- @overload fun(self: GameTime, output: DataOutputStream): nil
+--- @overload fun(self: GameTime, output: ByteBuffer): nil
 function GameTime:save() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function GameTime:saveToPacket(arg0) end
+function GameTime:saveToPacket(bb) end
 
 --- @public
---- @param arg0 number
+--- @param Ambient number the Ambient to set
 --- @return nil
-function GameTime:setAmbient(arg0) end
+function GameTime:setAmbient(Ambient) end
 
 --- @public
---- @param arg0 number
+--- @param AmbientMax number the AmbientMax to set
 --- @return nil
-function GameTime:setAmbientMax(arg0) end
+function GameTime:setAmbientMax(AmbientMax) end
 
 --- @public
---- @param arg0 number
+--- @param AmbientMin number the AmbientMin to set
 --- @return nil
-function GameTime:setAmbientMin(arg0) end
+function GameTime:setAmbientMin(AmbientMin) end
 
 --- @public
---- @param arg0 PZCalendar
+--- @param Calender PZCalendar the Calender to set
 --- @return nil
-function GameTime:setCalender(arg0) end
+function GameTime:setCalender(Calender) end
 
 --- @public
---- @param arg0 integer
+--- @param dawn integer
 --- @return nil
-function GameTime:setDawn(arg0) end
+function GameTime:setDawn(dawn) end
 
 --- @public
---- @param arg0 integer
+--- @param Day integer the Day to set
 --- @return nil
-function GameTime:setDay(arg0) end
+function GameTime:setDay(Day) end
 
 --- @public
---- @param arg0 integer
+--- @param dusk integer
 --- @return nil
-function GameTime:setDusk(arg0) end
+function GameTime:setDusk(dusk) end
 
 --- @public
---- @param arg0 integer
+--- @param day integer
 --- @return nil
-function GameTime:setHelicopterDay(arg0) end
+function GameTime:setHelicopterDay(day) end
 
 --- @public
---- @param arg0 integer
+--- @param hour integer
 --- @return nil
-function GameTime:setHelicopterEndHour(arg0) end
+function GameTime:setHelicopterEndHour(hour) end
 
 --- @public
---- @param arg0 integer
+--- @param hour integer
 --- @return nil
-function GameTime:setHelicopterStartHour(arg0) end
+function GameTime:setHelicopterStartHour(hour) end
 
 --- @public
---- @param arg0 number
+--- @param HoursSurvived number the HoursSurvived to set
 --- @return nil
-function GameTime:setHoursSurvived(arg0) end
+function GameTime:setHoursSurvived(HoursSurvived) end
 
 --- @public
---- @param arg0 number
+--- @param LastTimeOfDay number the LastTimeOfDay to set
 --- @return nil
-function GameTime:setLastTimeOfDay(arg0) end
+function GameTime:setLastTimeOfDay(LastTimeOfDay) end
 
 --- @public
---- @param arg0 number
+--- @param MaxZombieCount number the MaxZombieCount to set
 --- @return nil
-function GameTime:setMaxZombieCount(arg0) end
+function GameTime:setMaxZombieCount(MaxZombieCount) end
 
 --- @public
---- @param arg0 number
+--- @param MaxZombieCountStart number the MaxZombieCountStart to set
 --- @return nil
-function GameTime:setMaxZombieCountStart(arg0) end
+function GameTime:setMaxZombieCountStart(MaxZombieCountStart) end
 
 --- @public
---- @param arg0 number
+--- @param MinZombieCount number the MinZombieCount to set
 --- @return nil
-function GameTime:setMinZombieCount(arg0) end
+function GameTime:setMinZombieCount(MinZombieCount) end
 
 --- @public
---- @param arg0 number
+--- @param MinZombieCountStart number the MinZombieCountStart to set
 --- @return nil
-function GameTime:setMinZombieCountStart(arg0) end
+function GameTime:setMinZombieCountStart(MinZombieCountStart) end
 
 --- @public
---- @param arg0 number
+--- @param MinutesPerDay number the MinutesPerDay to set
 --- @return nil
-function GameTime:setMinutesPerDay(arg0) end
+function GameTime:setMinutesPerDay(MinutesPerDay) end
 
 --- @public
---- @param arg0 integer
+--- @param Month integer the Month to set
 --- @return nil
-function GameTime:setMonth(arg0) end
+function GameTime:setMonth(Month) end
 
 --- @public
---- @param arg0 number
+--- @param moon number
 --- @return nil
-function GameTime:setMoon(arg0) end
+function GameTime:setMoon(moon) end
 
 --- @public
---- @param arg0 number
+--- @param Multiplier number the Multiplier to set
 --- @return nil
-function GameTime:setMultiplier(arg0) end
+function GameTime:setMultiplier(Multiplier) end
 
 --- @public
---- @param arg0 number
+--- @param max number
 --- @return nil
-function GameTime:setNightMax(arg0) end
+function GameTime:setNightMax(max) end
 
 --- @public
---- @param arg0 number
+--- @param min number
 --- @return nil
-function GameTime:setNightMin(arg0) end
+function GameTime:setNightMin(min) end
 
 --- @public
---- @param arg0 integer
+--- @param NightsSurvived integer the NightsSurvived to set
 --- @return nil
-function GameTime:setNightsSurvived(arg0) end
+function GameTime:setNightsSurvived(NightsSurvived) end
 
 --- @public
---- @param arg0 integer
+--- @param StartDay integer the StartDay to set
 --- @return nil
-function GameTime:setStartDay(arg0) end
+function GameTime:setStartDay(StartDay) end
 
 --- @public
---- @param arg0 integer
+--- @param StartMonth integer the StartMonth to set
 --- @return nil
-function GameTime:setStartMonth(arg0) end
+function GameTime:setStartMonth(StartMonth) end
 
 --- @public
---- @param arg0 number
+--- @param StartTimeOfDay number the StartTimeOfDay to set
 --- @return nil
-function GameTime:setStartTimeOfDay(arg0) end
+function GameTime:setStartTimeOfDay(StartTimeOfDay) end
 
 --- @public
---- @param arg0 integer
+--- @param StartYear integer the StartYear to set
 --- @return nil
-function GameTime:setStartYear(arg0) end
+function GameTime:setStartYear(StartYear) end
 
 --- @public
---- @param arg0 integer
+--- @param TargetZombies integer the TargetZombies to set
 --- @return nil
-function GameTime:setTargetZombies(arg0) end
+function GameTime:setTargetZombies(TargetZombies) end
 
 --- @public
---- @param arg0 boolean
+--- @param thunderDay boolean
 --- @return nil
-function GameTime:setThunderDay(arg0) end
+function GameTime:setThunderDay(thunderDay) end
 
 --- @public
---- @param arg0 number
+--- @param TimeOfDay number the TimeOfDay to set
 --- @return nil
-function GameTime:setTimeOfDay(arg0) end
+function GameTime:setTimeOfDay(TimeOfDay) end
 
 --- @public
---- @param arg0 number
+--- @param ViewDistMax number the ViewDistMax to set
 --- @return nil
-function GameTime:setViewDistMax(arg0) end
+function GameTime:setViewDistMax(ViewDistMax) end
 
 --- @public
---- @param arg0 number
+--- @param ViewDistMin number the ViewDistMin to set
 --- @return nil
-function GameTime:setViewDistMin(arg0) end
+function GameTime:setViewDistMin(ViewDistMin) end
 
 --- @public
---- @param arg0 integer
+--- @param Year integer the Year to set
 --- @return nil
-function GameTime:setYear(arg0) end
+function GameTime:setYear(Year) end
 
 --- @public
---- @param arg0 boolean
+--- @param bSleeping boolean
 --- @return nil
-function GameTime:update(arg0) end
+function GameTime:update(bSleeping) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
+--- @param year integer
+--- @param month integer
+--- @param dayOfMonth integer
+--- @param hourOfDay integer
+--- @param minute integer
 --- @return nil
-function GameTime:updateCalendar(arg0, arg1, arg2, arg3, arg4) end
+function GameTime:updateCalendar(year, month, dayOfMonth, hourOfDay, minute) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -18,25 +18,25 @@ function PlayerSitOnGroundState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return nil
-function PlayerSitOnGroundState:animEvent(arg0, arg1) end
+function PlayerSitOnGroundState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerSitOnGroundState:enter(arg0) end
+function PlayerSitOnGroundState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerSitOnGroundState:execute(arg0) end
+function PlayerSitOnGroundState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function PlayerSitOnGroundState:exit(arg0) end
+function PlayerSitOnGroundState:exit(owner) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

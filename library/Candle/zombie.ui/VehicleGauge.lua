@@ -13,29 +13,29 @@ VehicleGauge = {}
 function VehicleGauge:render() end
 
 --- @public
---- @param arg0 integer
+--- @param newSize integer
 --- @return nil
-function VehicleGauge:setNeedleWidth(arg0) end
+function VehicleGauge:setNeedleWidth(newSize) end
 
 --- @public
---- @param arg0 Texture
+--- @param newText Texture
 --- @return nil
-function VehicleGauge:setTexture(arg0) end
+function VehicleGauge:setTexture(newText) end
 
 --- @public
---- @param arg0 number
+--- @param value number
 --- @return nil
-function VehicleGauge:setValue(arg0) end
+function VehicleGauge:setValue(value) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 Texture
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 number
---- @param arg4 number
+--- @param texture Texture
+--- @param needleX integer
+--- @param needleY integer
+--- @param minAngle number
+--- @param maxAngle number
 --- @return VehicleGauge
-function VehicleGauge.new(arg0, arg1, arg2, arg3, arg4) end
+function VehicleGauge.new(texture, needleX, needleY, minAngle, maxAngle) end

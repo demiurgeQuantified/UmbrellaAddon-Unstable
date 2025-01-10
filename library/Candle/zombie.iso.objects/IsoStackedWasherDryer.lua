@@ -25,60 +25,60 @@ function IsoStackedWasherDryer:getObjectName() end
 function IsoStackedWasherDryer:isDryerActivated() end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoStackedWasherDryer:isItemAllowedInContainer(arg0, arg1) end
+function IsoStackedWasherDryer:isItemAllowedInContainer(container, item) end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoStackedWasherDryer:isRemoveItemAllowedFromContainer(arg0, arg1) end
+function IsoStackedWasherDryer:isRemoveItemAllowedFromContainer(container, item) end
 
 --- @public
 --- @return boolean
 function IsoStackedWasherDryer:isWasherActivated() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoStackedWasherDryer:load(arg0, arg1, arg2) end
+function IsoStackedWasherDryer:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 ByteBuffer
+--- @param change string
+--- @param bb ByteBuffer
 --- @return nil
-function IsoStackedWasherDryer:loadChange(arg0, arg1) end
+function IsoStackedWasherDryer:loadChange(change, bb) end
 
 --- @public
 --- @return nil
 function IsoStackedWasherDryer:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoStackedWasherDryer:save(arg0, arg1) end
+function IsoStackedWasherDryer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
---- @param arg2 ByteBuffer
+--- @param change string
+--- @param tbl table
+--- @param bb ByteBuffer
 --- @return nil
-function IsoStackedWasherDryer:saveChange(arg0, arg1, arg2) end
+function IsoStackedWasherDryer:saveChange(change, tbl, bb) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return nil
-function IsoStackedWasherDryer:setDryerActivated(arg0) end
+function IsoStackedWasherDryer:setDryerActivated(activated) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return nil
-function IsoStackedWasherDryer:setWasherActivated(arg0) end
+function IsoStackedWasherDryer:setWasherActivated(activated) end
 
 --- @public
 --- @return nil
@@ -89,7 +89,7 @@ function IsoStackedWasherDryer:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoStackedWasherDryer
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoStackedWasherDryer
-function IsoStackedWasherDryer.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoStackedWasherDryer
+function IsoStackedWasherDryer.new(cell) end

@@ -9,14 +9,14 @@ IsoLivingCharacter = {}
 ------------------------------------
 
 --- @public
---- @param arg0 number
+--- @param ChargeDelta number
 --- @return boolean
-function IsoLivingCharacter:AttemptAttack(arg0) end
+function IsoLivingCharacter:AttemptAttack(ChargeDelta) end
 
 --- @public
---- @param arg0 number
+--- @param ChargeDelta number
 --- @return boolean
-function IsoLivingCharacter:DoAttack(arg0) end
+function IsoLivingCharacter:DoAttack(ChargeDelta) end
 
 --- @public
 --- @return nil
@@ -47,18 +47,18 @@ function IsoLivingCharacter:isGrapplingWhileAiming() end
 function IsoLivingCharacter:isShovingWhileAiming() end
 
 --- @public
---- @param arg0 boolean
+--- @param bDoShove boolean
 --- @return nil
-function IsoLivingCharacter:setDoShove(arg0) end
+function IsoLivingCharacter:setDoShove(bDoShove) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param cell IsoCell
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return IsoLivingCharacter
-function IsoLivingCharacter.new(arg0, arg1, arg2, arg3) end
+function IsoLivingCharacter.new(cell, x, y, z) end

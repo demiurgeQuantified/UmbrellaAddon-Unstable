@@ -23,39 +23,42 @@ function ClimbOverFenceState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ClimbOverFenceState:enter(arg0) end
+function ClimbOverFenceState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ClimbOverFenceState:execute(arg0) end
+function ClimbOverFenceState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return nil
-function ClimbOverFenceState:exit(arg0) end
+function ClimbOverFenceState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 MoveDeltaModifiers
+--- @param owner IsoGameCharacter
+--- @param modifiers MoveDeltaModifiers
 --- @return nil
-function ClimbOverFenceState:getDeltaModifiers(arg0, arg1) end
+function ClimbOverFenceState:getDeltaModifiers(owner, modifiers) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
---- @param arg6 integer
+---
+---  Description copied from class: State
+---
+--- @param owner IsoGameCharacter
+--- @param fromX integer
+--- @param fromY integer
+--- @param fromZ integer
+--- @param toX integer
+--- @param toY integer
+--- @param toZ integer
 --- @return boolean
-function ClimbOverFenceState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimbOverFenceState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoDirections
+--- @param owner IsoGameCharacter
+--- @param dir IsoDirections
 --- @return nil
-function ClimbOverFenceState:setParams(arg0, arg1) end
+function ClimbOverFenceState:setParams(owner, dir) end

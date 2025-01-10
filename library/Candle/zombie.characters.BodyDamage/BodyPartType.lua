@@ -28,81 +28,81 @@ BodyPartType = {}
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return BodyPartType
-function BodyPartType.FromIndex(arg0) end
+function BodyPartType.FromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return BodyPartType
-function BodyPartType.FromString(arg0) end
+function BodyPartType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return number
-function BodyPartType.GetDistToCore(arg0) end
+function BodyPartType.GetDistToCore(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return number
-function BodyPartType.GetMaxActionPenalty(arg0) end
+function BodyPartType.GetMaxActionPenalty(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return number
-function BodyPartType.GetMaxMovementPenalty(arg0) end
+function BodyPartType.GetMaxMovementPenalty(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return number
-function BodyPartType.GetSkinSurface(arg0) end
+function BodyPartType.GetSkinSurface(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return number
-function BodyPartType.GetUmbrellaMod(arg0) end
+function BodyPartType.GetUmbrellaMod(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param BPT BodyPartType
 --- @return integer
-function BodyPartType.ToIndex(arg0) end
+function BodyPartType.ToIndex(BPT) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param BPT BodyPartType
 --- @return string
-function BodyPartType.ToString(arg0) end
+function BodyPartType.ToString(BPT) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return number
-function BodyPartType.getBleedingTimeModifyer(arg0) end
+function BodyPartType.getBleedingTimeModifyer(index) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return number
-function BodyPartType.getDamageModifyer(arg0) end
+function BodyPartType.getDamageModifyer(index) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param BPT BodyPartType
 --- @return string
-function BodyPartType.getDisplayName(arg0) end
+function BodyPartType.getDisplayName(BPT) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param index integer
 --- @return number
-function BodyPartType.getPainModifyer(arg0) end
+function BodyPartType.getPainModifyer(index) end
 
 --- @public
 --- @static
@@ -117,7 +117,11 @@ function BodyPartType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return BodyPartType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return BodyPartType[] an array containing the constants of this enum class, in the order they are declared
 function BodyPartType.values() end
 
 ------------------------------------
@@ -129,19 +133,19 @@ function BodyPartType.values() end
 function BodyPartType:getBandageModel() end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return string
-function BodyPartType:getBiteWoundModel(arg0) end
+function BodyPartType:getBiteWoundModel(female) end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return string
-function BodyPartType:getCutWoundModel(arg0) end
+function BodyPartType:getCutWoundModel(female) end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return string
-function BodyPartType:getScratchWoundModel(arg0) end
+function BodyPartType:getScratchWoundModel(female) end
 
 --- @public
 --- @return integer

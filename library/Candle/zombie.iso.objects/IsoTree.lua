@@ -27,33 +27,33 @@ function IsoTree.renderChopTreeIndicators() end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
+--- @param playerIndex integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function IsoTree.setChopTreeCursorLocation(arg0, arg1, arg2, arg3) end
+function IsoTree.setChopTreeCursorLocation(playerIndex, x, y, z) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 number
+--- @param amount number
 --- @return nil
-function IsoTree:Damage(arg0) end
+function IsoTree:Damage(amount) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 number
+--- @param vehicle BaseVehicle
+--- @param amount number
 --- @return nil
-function IsoTree:HitByVehicle(arg0, arg1) end
+function IsoTree:HitByVehicle(vehicle, amount) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
 --- @return nil
-function IsoTree:WeaponHit(arg0, arg1) end
+function IsoTree:WeaponHit(owner, weapon) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -86,58 +86,58 @@ function IsoTree:getRenderSquare() end
 function IsoTree:getSize() end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param chr IsoMovingObject
 --- @return number
-function IsoTree:getSlowFactor(arg0) end
+function IsoTree:getSlowFactor(chr) end
 
 --- @public
 --- @return nil
 function IsoTree:initTree() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param x integer
+--- @param y integer
+--- @param flip boolean
 --- @return boolean
-function IsoTree:isMaskClicked(arg0, arg1, arg2) end
+function IsoTree:isMaskClicked(x, y, flip) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoTree:load(arg0, arg1, arg2) end
+function IsoTree:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return nil
-function IsoTree:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoTree:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @return nil
 function IsoTree:reset() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return nil
-function IsoTree:save(arg0, arg1) end
+function IsoTree:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 integer
+--- @param health integer
 --- @return nil
-function IsoTree:setHealth(arg0) end
+function IsoTree:setHealth(health) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite the sprite to set
 --- @return nil
-function IsoTree:setSprite(arg0) end
+function IsoTree:setSprite(sprite) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
@@ -145,7 +145,7 @@ function IsoTree:setSprite(arg0) end
 
 --- @public
 --- @return IsoTree
---- @overload fun(arg0: IsoCell): IsoTree
---- @overload fun(arg0: IsoGridSquare, arg1: string): IsoTree
---- @overload fun(arg0: IsoGridSquare, arg1: IsoSprite): IsoTree
+--- @overload fun(cell: IsoCell): IsoTree
+--- @overload fun(sq: IsoGridSquare, gid: string): IsoTree
+--- @overload fun(sq: IsoGridSquare, gid: IsoSprite): IsoTree
 function IsoTree.new() end

@@ -13,10 +13,10 @@ IsoWheelieBin = {}
 function IsoWheelieBin:getObjectName() end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
+--- @param x number
+--- @param y number
 --- @return number
-function IsoWheelieBin:getWeight(arg0, arg1) end
+function IsoWheelieBin:getWeight(x, y) end
 
 --- @public
 --- @return nil
@@ -27,7 +27,7 @@ function IsoWheelieBin:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoWheelieBin
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer): IsoWheelieBin
-function IsoWheelieBin.new(arg0) end
+--- @overload fun(cell: IsoCell, x: integer, y: integer, z: integer): IsoWheelieBin
+function IsoWheelieBin.new(cell) end

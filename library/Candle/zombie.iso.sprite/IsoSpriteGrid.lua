@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoSpriteGrid
+--- @class IsoSpriteGrid Turbo
 --- @field public class any
 IsoSpriteGrid = {}
 
@@ -21,30 +21,30 @@ function IsoSpriteGrid:getHeight() end
 function IsoSpriteGrid:getLevels() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param x integer
+--- @param y integer
 --- @return IsoSprite
 --- @overload fun(self: IsoSpriteGrid, arg0: integer, arg1: integer, arg2: integer): IsoSprite
-function IsoSpriteGrid:getSprite(arg0, arg1) end
+function IsoSpriteGrid:getSprite(x, y) end
 
 --- @public
 --- @return integer
 function IsoSpriteGrid:getSpriteCount() end
 
 --- @public
---- @param arg0 integer
+--- @param index integer
 --- @return IsoSprite
-function IsoSpriteGrid:getSpriteFromIndex(arg0) end
+function IsoSpriteGrid:getSpriteFromIndex(index) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return integer
-function IsoSpriteGrid:getSpriteGridPosX(arg0) end
+function IsoSpriteGrid:getSpriteGridPosX(sprite) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return integer
-function IsoSpriteGrid:getSpriteGridPosY(arg0) end
+function IsoSpriteGrid:getSpriteGridPosY(sprite) end
 
 --- @public
 --- @param arg0 IsoSprite
@@ -52,10 +52,10 @@ function IsoSpriteGrid:getSpriteGridPosY(arg0) end
 function IsoSpriteGrid:getSpriteGridPosZ(arg0) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return integer
 --- @overload fun(self: IsoSpriteGrid, arg0: integer, arg1: integer, arg2: integer): integer
-function IsoSpriteGrid:getSpriteIndex(arg0) end
+function IsoSpriteGrid:getSpriteIndex(sprite) end
 
 --- @public
 --- @return IsoSprite[]
@@ -73,12 +73,12 @@ function IsoSpriteGrid:getWidth() end
 function IsoSpriteGrid:isValidXYZ(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 IsoSprite
+--- @param x integer
+--- @param y integer
+--- @param sprite IsoSprite
 --- @return nil
 --- @overload fun(self: IsoSpriteGrid, arg0: integer, arg1: integer, arg2: integer, arg3: IsoSprite): nil
-function IsoSpriteGrid:setSprite(arg0, arg1, arg2) end
+function IsoSpriteGrid:setSprite(x, y, sprite) end
 
 --- @public
 --- @return boolean
@@ -89,8 +89,8 @@ function IsoSpriteGrid:validate() end
 ------------------------------------
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
+--- @param w integer
+--- @param h integer
 --- @return IsoSpriteGrid
 --- @overload fun(arg0: integer, arg1: integer, arg2: integer): IsoSpriteGrid
-function IsoSpriteGrid.new(arg0, arg1) end
+function IsoSpriteGrid.new(w, h) end

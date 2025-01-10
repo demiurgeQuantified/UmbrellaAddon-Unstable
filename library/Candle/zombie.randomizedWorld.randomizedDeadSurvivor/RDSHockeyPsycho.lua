@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class RDSHockeyPsycho: RandomizedDeadSurvivorBase
+--- @class RDSHockeyPsycho: RandomizedDeadSurvivorBase Well, it's friday the 13th... Basically.
 --- @field public class any
 RDSHockeyPsycho = {}
 
@@ -9,9 +9,9 @@ RDSHockeyPsycho = {}
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return nil
-function RDSHockeyPsycho:randomizeDeadSurvivor(arg0) end
+function RDSHockeyPsycho:randomizeDeadSurvivor(def) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

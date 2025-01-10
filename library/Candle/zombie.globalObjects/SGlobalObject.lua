@@ -9,12 +9,12 @@ SGlobalObject = {}
 ------------------------------------
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param bb ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function SGlobalObject:load(arg0, arg1) end
+function SGlobalObject:load(bb, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return nil
-function SGlobalObject:save(arg0) end
+function SGlobalObject:save(bb) end

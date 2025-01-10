@@ -33,11 +33,11 @@ function ThunderCloud:isRunning() end
 function ThunderCloud:lifeTime() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 number
+--- @param centerX integer
+--- @param centerY integer
+--- @param angle number
 --- @return nil
-function ThunderCloud:setCenter(arg0, arg1, arg2) end
+function ThunderCloud:setCenter(centerX, centerY, angle) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

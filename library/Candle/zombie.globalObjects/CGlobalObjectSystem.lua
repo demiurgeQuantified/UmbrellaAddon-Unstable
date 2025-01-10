@@ -13,46 +13,46 @@ CGlobalObjectSystem = {}
 function CGlobalObjectSystem:Reset() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 table
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param args table
 --- @return nil
-function CGlobalObjectSystem:receiveNewLuaObjectAt(arg0, arg1, arg2, arg3) end
+function CGlobalObjectSystem:receiveNewLuaObjectAt(x, y, z, args) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return nil
-function CGlobalObjectSystem:receiveRemoveLuaObjectAt(arg0, arg1, arg2) end
+function CGlobalObjectSystem:receiveRemoveLuaObjectAt(x, y, z) end
 
 --- @public
---- @param arg0 string
---- @param arg1 table
+--- @param command string
+--- @param args table
 --- @return nil
-function CGlobalObjectSystem:receiveServerCommand(arg0, arg1) end
+function CGlobalObjectSystem:receiveServerCommand(command, args) end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 table
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param args table
 --- @return nil
-function CGlobalObjectSystem:receiveUpdateLuaObjectAt(arg0, arg1, arg2, arg3) end
+function CGlobalObjectSystem:receiveUpdateLuaObjectAt(x, y, z, args) end
 
 --- @public
---- @param arg0 string
---- @param arg1 IsoPlayer
---- @param arg2 table
+--- @param command string
+--- @param player IsoPlayer
+--- @param args table
 --- @return nil
-function CGlobalObjectSystem:sendCommand(arg0, arg1, arg2) end
+function CGlobalObjectSystem:sendCommand(command, player, args) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return CGlobalObjectSystem
-function CGlobalObjectSystem.new(arg0) end
+function CGlobalObjectSystem.new(name) end

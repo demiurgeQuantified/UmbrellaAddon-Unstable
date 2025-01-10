@@ -11,22 +11,22 @@ SleepingEvent = {}
 ------------------------------------
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 integer
+--- @param chr IsoPlayer
+--- @param sleepingTime integer
 --- @return nil
 --- @overload fun(self: SleepingEvent, arg0: IsoPlayer, arg1: integer, arg2: boolean, arg3: boolean): nil
-function SleepingEvent:setPlayerFallAsleep(arg0, arg1) end
+function SleepingEvent:setPlayerFallAsleep(chr, sleepingTime) end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param chr IsoPlayer
 --- @return nil
-function SleepingEvent:update(arg0) end
+function SleepingEvent:update(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return nil
---- @overload fun(self: SleepingEvent, arg0: IsoGameCharacter, arg1: boolean): nil
-function SleepingEvent:wakeUp(arg0) end
+--- @overload fun(self: SleepingEvent, chr: IsoGameCharacter, remote: boolean): nil
+function SleepingEvent:wakeUp(chr) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

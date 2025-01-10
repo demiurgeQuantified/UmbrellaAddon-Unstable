@@ -67,33 +67,33 @@ function UIManager.CloseContainers() end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 integer
+--- @param width integer
+--- @param height integer
 --- @return nil
-function UIManager.CreateFBO(arg0, arg1) end
+function UIManager.CreateFBO(width, height) end
 
 --- @public
 --- @static
---- @param arg0 Texture
---- @param arg1 number
---- @param arg2 number
+--- @param tex Texture
+--- @param x number
+--- @param y number
 --- @return nil
---- @overload fun(arg0: Texture, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number): nil
-function UIManager.DrawTexture(arg0, arg1, arg2) end
+--- @overload fun(tex: Texture, x: number, y: number, width: number, height: number, alpha: number): nil
+function UIManager.DrawTexture(tex, x, y) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param seconds number
 --- @return nil
---- @overload fun(arg0: number, arg1: number): nil
-function UIManager.FadeIn(arg0) end
+--- @overload fun(playerIndex: number, seconds: number): nil
+function UIManager.FadeIn(seconds) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param seconds number
 --- @return nil
---- @overload fun(arg0: number, arg1: number): nil
-function UIManager.FadeOut(arg0) end
+--- @overload fun(playerIndex: number, seconds: number): nil
+function UIManager.FadeOut(seconds) end
 
 --- @public
 --- @static
@@ -113,22 +113,22 @@ function UIManager.closeContainers() end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 boolean
+--- @param x number
+--- @param y number
+--- @param test boolean
 --- @return TextureFBO
-function UIManager.createTexture(arg0, arg1, arg2) end
+function UIManager.createTexture(x, y, test) end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 integer
+--- @param filename string
+--- @param pc integer
 --- @return nil
-function UIManager.debugBreakpoint(arg0, arg1) end
+function UIManager.debugBreakpoint(filename, pc) end
 
 --- @public
 --- @static
---- @return Texture
+--- @return Texture the black
 function UIManager.getBlack() end
 
 --- @public
@@ -139,12 +139,12 @@ function UIManager.getBlinkAlpha(arg0) end
 
 --- @public
 --- @static
---- @return Clock
+--- @return Clock the clock
 function UIManager.getClock() end
 
 --- @public
 --- @static
---- @return UIDebugConsole
+--- @return UIDebugConsole the DebugConsole
 function UIManager.getDebugConsole() end
 
 --- @public
@@ -154,7 +154,7 @@ function UIManager.getDefaultThread() end
 
 --- @public
 --- @static
---- @return ArrayList
+--- @return ArrayList the DoneTutorials
 function UIManager.getDoneTutorials() end
 
 --- @public
@@ -169,53 +169,53 @@ function UIManager.getDoubleClickInterval() end
 
 --- @public
 --- @static
---- @return number
---- @overload fun(arg0: number): number
+--- @return number the FadeAlpha
+--- @overload fun(playerIndex: number): number
 function UIManager.getFadeAlpha() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the FadeInTime
 function UIManager.getFadeInTime() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the FadeInTimeMax
 function UIManager.getFadeInTimeMax() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastAlpha
 function UIManager.getLastAlpha() end
 
 --- @public
 --- @static
---- @return Texture
+--- @return Texture the lastMouseTexture
 function UIManager.getLastMouseTexture() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastMouseX
 function UIManager.getLastMouseX() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastMouseY
 function UIManager.getLastMouseY() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastOffX
 function UIManager.getLastOffX() end
 
 --- @public
 --- @static
---- @return number
+--- @return number the lastOffY
 function UIManager.getLastOffY() end
 
 --- @public
 --- @static
---- @return IsoObject
+--- @return IsoObject the LastPicked
 function UIManager.getLastPicked() end
 
 --- @public
@@ -230,59 +230,59 @@ function UIManager.getMillisSinceLastUpdate() end
 
 --- @public
 --- @static
---- @return ModalDialog
+--- @return ModalDialog the Modal
 function UIManager.getModal() end
 
 --- @public
 --- @static
---- @param arg0 number
---- @return MoodlesUI
-function UIManager.getMoodleUI(arg0) end
+--- @param index number
+--- @return MoodlesUI the MoodleUI
+function UIManager.getMoodleUI(index) end
 
 --- @public
 --- @static
---- @return Texture
+--- @return Texture the mouseArrow
 function UIManager.getMouseArrow() end
 
 --- @public
 --- @static
---- @return Texture
+--- @return Texture the mouseAttack
 function UIManager.getMouseAttack() end
 
 --- @public
 --- @static
---- @return Texture
+--- @return Texture the mouseExamine
 function UIManager.getMouseExamine() end
 
 --- @public
 --- @static
---- @return Texture
+--- @return Texture the mouseGrab
 function UIManager.getMouseGrab() end
 
 --- @public
 --- @static
---- @return ClickObject
+--- @return ClickObject the Picked
 function UIManager.getPicked() end
 
 --- @public
 --- @static
---- @return Vector2
+--- @return Vector2 the PickedTile
 function UIManager.getPickedTile() end
 
 --- @public
 --- @static
---- @return Vector2
+--- @return Vector2 the PickedTileLocal
 function UIManager.getPickedTileLocal() end
 
 --- @public
 --- @static
---- @param arg0 number
---- @return ActionProgressBar
-function UIManager.getProgressBar(arg0) end
+--- @param index number
+--- @return ActionProgressBar the ProgressBar
+function UIManager.getProgressBar(index) end
 
 --- @public
 --- @static
---- @return IsoObject
+--- @return IsoObject the RightDownObject
 function UIManager.getRightDownObject() end
 
 --- @public
@@ -297,7 +297,7 @@ function UIManager.getSecondsSinceLastUpdate() end
 
 --- @public
 --- @static
---- @return SpeedControls
+--- @return SpeedControls the speedControls
 function UIManager.getSpeedControls() end
 
 --- @public
@@ -309,20 +309,20 @@ function UIManager.getSyncedIconIndex(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
+--- @param mx number
+--- @param my number
+--- @param z number
 --- @return Vector2
-function UIManager.getTileFromMouse(arg0, arg1, arg2) end
+function UIManager.getTileFromMouse(mx, my, z) end
 
 --- @public
 --- @static
---- @return ObjectTooltip
+--- @return ObjectTooltip the toolTip
 function UIManager.getToolTip() end
 
 --- @public
 --- @static
---- @return ArrayList
+--- @return ArrayList the UI
 function UIManager.getUI() end
 
 --- @public
@@ -332,13 +332,13 @@ function UIManager.init() end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
---- @param arg4 number
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param clickTime number
 --- @return boolean
-function UIManager.isDoubleClick(arg0, arg1, arg2, arg3, arg4) end
+function UIManager.isDoubleClick(x1, y1, x2, y2, clickTime) end
 
 --- @public
 --- @static
@@ -347,7 +347,7 @@ function UIManager.isFBOActive() end
 
 --- @public
 --- @static
---- @return boolean
+--- @return boolean the FadingOut
 function UIManager.isFadingOut() end
 
 --- @public
@@ -372,26 +372,26 @@ function UIManager.isShowPausedMessage() end
 
 --- @public
 --- @static
---- @return boolean
+--- @return boolean the bFadeBeforeUI
 function UIManager.isbFadeBeforeUI() end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param key integer
 --- @return boolean
-function UIManager.onKeyPress(arg0) end
+function UIManager.onKeyPress(key) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param key integer
 --- @return boolean
-function UIManager.onKeyRelease(arg0) end
+function UIManager.onKeyRelease(key) end
 
 --- @public
 --- @static
---- @param arg0 integer
+--- @param key integer
 --- @return boolean
-function UIManager.onKeyRepeat(arg0) end
+function UIManager.onKeyRepeat(key) end
 
 --- @public
 --- @static
@@ -416,162 +416,162 @@ function UIManager.resize() end
 
 --- @public
 --- @static
---- @param arg0 Texture
+--- @param aBlack Texture the black to set
 --- @return nil
-function UIManager.setBlack(arg0) end
+function UIManager.setBlack(aBlack) end
 
 --- @public
 --- @static
---- @param arg0 Clock
+--- @param aClock Clock the clock to set
 --- @return nil
-function UIManager.setClock(arg0) end
+function UIManager.setClock(aClock) end
 
 --- @public
 --- @static
---- @param arg0 UIDebugConsole
+--- @param aDebugConsole UIDebugConsole the DebugConsole to set
 --- @return nil
-function UIManager.setDebugConsole(arg0) end
+function UIManager.setDebugConsole(aDebugConsole) end
 
 --- @public
 --- @static
---- @param arg0 ArrayList
+--- @param aDoneTutorials ArrayList the DoneTutorials to set
 --- @return nil
-function UIManager.setDoneTutorials(arg0) end
+function UIManager.setDoneTutorials(aDoneTutorials) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aFadeAlpha number the FadeAlpha to set
 --- @return nil
-function UIManager.setFadeAlpha(arg0) end
+function UIManager.setFadeAlpha(aFadeAlpha) end
 
 --- @public
 --- @static
---- @param arg0 integer
---- @param arg1 boolean
+--- @param playerIndex integer
+--- @param bFadeBeforeUI boolean
 --- @return nil
-function UIManager.setFadeBeforeUI(arg0, arg1) end
+function UIManager.setFadeBeforeUI(playerIndex, bFadeBeforeUI) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aFadeInTime number the FadeInTime to set
 --- @return nil
-function UIManager.setFadeInTime(arg0) end
+function UIManager.setFadeInTime(aFadeInTime) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aFadeInTimeMax number the FadeInTimeMax to set
 --- @return nil
-function UIManager.setFadeInTimeMax(arg0) end
+function UIManager.setFadeInTimeMax(aFadeInTimeMax) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 number
+--- @param playerIndex number
+--- @param FadeTime number
 --- @return nil
-function UIManager.setFadeTime(arg0, arg1) end
+function UIManager.setFadeTime(playerIndex, FadeTime) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param aFadingOut boolean the FadingOut to set
 --- @return nil
-function UIManager.setFadingOut(arg0) end
+function UIManager.setFadingOut(aFadingOut) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastAlpha number the lastAlpha to set
 --- @return nil
-function UIManager.setLastAlpha(arg0) end
+function UIManager.setLastAlpha(aLastAlpha) end
 
 --- @public
 --- @static
---- @param arg0 Texture
+--- @param aLastMouseTexture Texture the lastMouseTexture to set
 --- @return nil
-function UIManager.setLastMouseTexture(arg0) end
+function UIManager.setLastMouseTexture(aLastMouseTexture) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastMouseX number the lastMouseX to set
 --- @return nil
-function UIManager.setLastMouseX(arg0) end
+function UIManager.setLastMouseX(aLastMouseX) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastMouseY number the lastMouseY to set
 --- @return nil
-function UIManager.setLastMouseY(arg0) end
+function UIManager.setLastMouseY(aLastMouseY) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastOffX number the lastOffX to set
 --- @return nil
-function UIManager.setLastOffX(arg0) end
+function UIManager.setLastOffX(aLastOffX) end
 
 --- @public
 --- @static
---- @param arg0 number
+--- @param aLastOffY number the lastOffY to set
 --- @return nil
-function UIManager.setLastOffY(arg0) end
+function UIManager.setLastOffY(aLastOffY) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param aLastPicked IsoObject the LastPicked to set
 --- @return nil
-function UIManager.setLastPicked(arg0) end
+function UIManager.setLastPicked(aLastPicked) end
 
 --- @public
 --- @static
---- @param arg0 ModalDialog
+--- @param aModal ModalDialog the Modal to set
 --- @return nil
-function UIManager.setModal(arg0) end
+function UIManager.setModal(aModal) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 MoodlesUI
+--- @param index number
+--- @param aMoodleUI MoodlesUI the MoodleUI to set
 --- @return nil
-function UIManager.setMoodleUI(arg0, arg1) end
+function UIManager.setMoodleUI(index, aMoodleUI) end
 
 --- @public
 --- @static
---- @param arg0 Texture
+--- @param aMouseArrow Texture the mouseArrow to set
 --- @return nil
-function UIManager.setMouseArrow(arg0) end
+function UIManager.setMouseArrow(aMouseArrow) end
 
 --- @public
 --- @static
---- @param arg0 Texture
+--- @param aMouseAttack Texture the mouseAttack to set
 --- @return nil
-function UIManager.setMouseAttack(arg0) end
+function UIManager.setMouseAttack(aMouseAttack) end
 
 --- @public
 --- @static
---- @param arg0 Texture
+--- @param aMouseExamine Texture the mouseExamine to set
 --- @return nil
-function UIManager.setMouseExamine(arg0) end
+function UIManager.setMouseExamine(aMouseExamine) end
 
 --- @public
 --- @static
---- @param arg0 Texture
+--- @param aMouseGrab Texture the mouseGrab to set
 --- @return nil
-function UIManager.setMouseGrab(arg0) end
+function UIManager.setMouseGrab(aMouseGrab) end
 
 --- @public
 --- @static
---- @param arg0 ClickObject
+--- @param aPicked ClickObject the Picked to set
 --- @return nil
-function UIManager.setPicked(arg0) end
+function UIManager.setPicked(aPicked) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param aPickedTile Vector2 the PickedTile to set
 --- @return nil
-function UIManager.setPickedTile(arg0) end
+function UIManager.setPickedTile(aPickedTile) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param aPickedTileLocal Vector2 the PickedTileLocal to set
 --- @return nil
-function UIManager.setPickedTileLocal(arg0) end
+function UIManager.setPickedTileLocal(aPickedTileLocal) end
 
 --- @public
 --- @static
@@ -591,58 +591,58 @@ function UIManager.setPlayerInventoryTooltip(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 number
---- @param arg1 ActionProgressBar
+--- @param index number
+--- @param aProgressBar ActionProgressBar the ProgressBar to set
 --- @return nil
-function UIManager.setProgressBar(arg0, arg1) end
+function UIManager.setProgressBar(index, aProgressBar) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param aRightDownObject IsoObject the RightDownObject to set
 --- @return nil
-function UIManager.setRightDownObject(arg0) end
+function UIManager.setRightDownObject(aRightDownObject) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param show boolean
 --- @return nil
-function UIManager.setShowLuaDebuggerOnError(arg0) end
+function UIManager.setShowLuaDebuggerOnError(show) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param showPausedMessage boolean
 --- @return nil
-function UIManager.setShowPausedMessage(arg0) end
+function UIManager.setShowPausedMessage(showPausedMessage) end
 
 --- @public
 --- @static
---- @param arg0 SpeedControls
+--- @param aSpeedControls SpeedControls the speedControls to set
 --- @return nil
-function UIManager.setSpeedControls(arg0) end
+function UIManager.setSpeedControls(aSpeedControls) end
 
 --- @public
 --- @static
---- @param arg0 ObjectTooltip
+--- @param aToolTip ObjectTooltip the toolTip to set
 --- @return nil
-function UIManager.setToolTip(arg0) end
+function UIManager.setToolTip(aToolTip) end
 
 --- @public
 --- @static
---- @param arg0 ArrayList
+--- @param aUI ArrayList the UI to set
 --- @return nil
-function UIManager.setUI(arg0) end
+function UIManager.setUI(aUI) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param visible boolean
 --- @return nil
-function UIManager.setVisibleAllUI(arg0) end
+function UIManager.setVisibleAllUI(visible) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param abFadeBeforeUI boolean the bFadeBeforeUI to set
 --- @return nil
-function UIManager.setbFadeBeforeUI(arg0) end
+function UIManager.setbFadeBeforeUI(abFadeBeforeUI) end
 
 --- @public
 --- @static

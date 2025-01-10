@@ -12,9 +12,9 @@ IsoArea = {}
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return string
-function IsoArea.Ardo(arg0) end
+function IsoArea.Ardo(filename) end
 
 --- @public
 --- @static
@@ -23,22 +23,22 @@ function IsoArea.Thigglewhat() end
 
 --- @public
 --- @static
---- @param arg0 string
---- @param arg1 string
+--- @param str string
+--- @param gfgf string
 --- @return boolean
-function IsoArea.Thigglewhat2(arg0, arg1) end
+function IsoArea.Thigglewhat2(str, gfgf) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param str string
 --- @return string
-function IsoArea.Thigglewhat22(arg0) end
+function IsoArea.Thigglewhat22(str) end
 
 --- @public
 --- @static
---- @param arg0 string
+--- @param filename string
 --- @return byte[]
-function IsoArea.asasa(arg0) end
+function IsoArea.asasa(filename) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -33,18 +33,18 @@ function GameSound:getUserVolume() end
 function GameSound:isLooped() end
 
 --- @public
---- @param arg0 string
+--- @param parameterName string
 --- @return integer
-function GameSound:numClipsUsingParameter(arg0) end
+function GameSound:numClipsUsingParameter(parameterName) end
 
 --- @public
 --- @return nil
 function GameSound:reset() end
 
 --- @public
---- @param arg0 number
+--- @param gain number
 --- @return nil
-function GameSound:setUserVolume(arg0) end
+function GameSound:setUserVolume(gain) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------
