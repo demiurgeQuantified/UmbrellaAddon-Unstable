@@ -194,6 +194,9 @@ function MultiplayerZoneEditorMode_Safehouse_Details:hasPrivilegedAccessLevel() 
 function MultiplayerZoneEditorMode_Safehouse_Details:hideModalUI() end
 
 ---@return any
+function MultiplayerZoneEditorMode_Safehouse_Details:isMember() end
+
+---@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:isOwner() end
 
 ---@return any

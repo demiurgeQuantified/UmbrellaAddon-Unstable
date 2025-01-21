@@ -183,6 +183,10 @@ function BuildingDef:isFullyStreamedIn() end
 function BuildingDef:isHasBeenVisited() end
 
 --- @public
+--- @return boolean
+function BuildingDef:isShop() end
+
+--- @public
 --- @param wx integer
 --- @param wy integer
 --- @return boolean

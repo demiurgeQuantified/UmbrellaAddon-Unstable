@@ -4,6 +4,7 @@
 ---@field eatAudio any
 ---@field eatSound any
 ---@field ignoreHandsWounds any
+---@field isEating any
 ---@field item any
 ---@field maxTime any
 ---@field stopOnAim any

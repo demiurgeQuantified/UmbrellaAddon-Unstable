@@ -284,6 +284,16 @@ forageSkills = {
 			["Junk"] = 10,
 		},
 	},
+	Whittler = {
+		name = "Whittler",
+		type = "trait",
+		visionBonus = 0,
+		weatherEffect = 0,
+		darknessEffect = 0,
+		specialisations = {
+			["Firewood"] = 30,
+		},
+	},
 	Unlucky = {
 		name = "Unlucky",
 		type = "trait",
@@ -380,6 +390,23 @@ forageSkills = {
 			["MedicinalPlants"] = 5,
 			["WildPlants"] = 5,
 			["WildHerbs"] = 5,
+		},
+	},
+	WildernessKnowledge = {
+		name = "WildernessKnowledge",
+		type = "trait",
+		visionBonus = 0.4,
+		weatherEffect = 13,
+		darknessEffect = 5,
+		specialisations = {
+			["Animals"] = 5,
+			["Berries"] = 5,
+			["Mushrooms"] = 5,
+			["MedicinalPlants"] = 5,
+			["WildPlants"] = 5,
+			["WildHerbs"] = 5,
+			["Firewood"] = 5,
+			["Stones"] = 5,
 		},
 	},
 	Cook = {

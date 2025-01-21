@@ -71,6 +71,10 @@ function BaseAction:hasStalled() end
 
 --- @public
 --- @return boolean
+function BaseAction:isPathfinding() end
+
+--- @public
+--- @return boolean
 function BaseAction:isStarted() end
 
 --- @public
@@ -141,6 +145,11 @@ function BaseAction:setOverrideHandModelsObject(primaryHand, secondaryHand, rese
 --- @return nil
 --- @overload fun(self: BaseAction, primaryHand: string, secondaryHand: string, resetModel: boolean): nil
 function BaseAction:setOverrideHandModelsString(primaryHand, secondaryHand) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseAction:setPathfinding(arg0) end
 
 --- @public
 --- @param use boolean

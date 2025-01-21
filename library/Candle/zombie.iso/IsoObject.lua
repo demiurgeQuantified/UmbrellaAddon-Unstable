@@ -305,6 +305,10 @@ function IsoObject:addSheetRope(player, itemType) end
 function IsoObject:addToWorld() end
 
 --- @public
+--- @return nil
+function IsoObject:afterRotated() end
+
+--- @public
 --- @return boolean
 function IsoObject:canAddSheetRope() end
 

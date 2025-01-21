@@ -38,6 +38,11 @@ function StaggerBackState:execute(owner) end
 --- @return nil
 function StaggerBackState:exit(owner) end
 
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return number
+function StaggerBackState:getMaxStaggerTime(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTOR ------------
 ------------------------------------

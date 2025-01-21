@@ -51,6 +51,13 @@ function FluidUtil.getAmountMilli(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @return string
+function FluidUtil.getFractionFormatted(arg0, arg1) end
+
+--- @public
+--- @static
 --- @return number
 function FluidUtil.getMinContainerCapacity() end
 

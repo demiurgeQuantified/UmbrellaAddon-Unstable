@@ -143,6 +143,16 @@ function RandomizedWorldBase.getMedicallutterItem() end
 --- @public
 --- @static
 --- @return string
+function RandomizedWorldBase.getMurderSceneClutterItem() end
+
+--- @public
+--- @static
+--- @return string
+function RandomizedWorldBase.getNastyMattressClutterItem() end
+
+--- @public
+--- @static
+--- @return string
 function RandomizedWorldBase.getOfficeCarDealerClutterItem() end
 
 --- @public
@@ -275,6 +285,7 @@ function RandomizedWorldBase:addGrindstone(arg0) end
 --- @param type string
 --- @return InventoryItem
 --- @overload fun(self: RandomizedWorldBase, square: IsoGridSquare, item: InventoryItem): InventoryItem
+--- @overload fun(self: RandomizedWorldBase, arg0: IsoGridSquare, arg1: InventoryItem, arg2: boolean): InventoryItem
 function RandomizedWorldBase:addItemOnGround(square, type) end
 
 --- @public
@@ -486,7 +497,10 @@ function RandomizedWorldBase:addTraitOfBlood(dir, time, x, y, z) end
 --- @overload fun(self: RandomizedWorldBase, arg0: IsoGridSquare, arg1: IsoChunk, arg2: string, arg3: string, arg4: integer, arg5: IsoDirections, arg6: string): BaseVehicle
 --- @overload fun(self: RandomizedWorldBase, arg0: number, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer, arg7: string): BaseVehicle
 --- @overload fun(self: RandomizedWorldBase, zone: Zone, sq: IsoGridSquare, chunk: IsoChunk, zoneName: string, scriptName: string, skinIndex: integer, dir: IsoDirections, specificContainer: string): BaseVehicle
+--- @overload fun(self: RandomizedWorldBase, arg0: number, arg1: number, arg2: number, arg3: number, arg4: string, arg5: string, arg6: integer, arg7: string, arg8: boolean): BaseVehicle
 --- @overload fun(self: RandomizedWorldBase, zone: Zone, vehicleX: number, vehicleY: number, vehicleZ: number, direction: number, zoneName: string, scriptName: string, skinIndex: integer, specificContainer: string): BaseVehicle
+--- @overload fun(self: RandomizedWorldBase, arg0: Zone, arg1: IsoGridSquare, arg2: IsoChunk, arg3: string, arg4: string, arg5: integer, arg6: IsoDirections, arg7: string, arg8: boolean): BaseVehicle
+--- @overload fun(self: RandomizedWorldBase, arg0: Zone, arg1: number, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer, arg8: string, arg9: boolean): BaseVehicle
 function RandomizedWorldBase:addVehicle(zone, sq, chunk, zoneName, scriptName, dir) end
 
 --- @public
@@ -595,6 +609,14 @@ function RandomizedWorldBase:getBathroomSinkClutter() end
 --- @public
 --- @return string
 function RandomizedWorldBase:getBathroomSinkClutterItem() end
+
+--- @public
+--- @return ArrayList
+function RandomizedWorldBase:getBeachPartyClutter() end
+
+--- @public
+--- @return string
+function RandomizedWorldBase:getBeachPartyClutterItem() end
 
 --- @public
 --- @return ArrayList
@@ -758,8 +780,16 @@ function RandomizedWorldBase:getMaximumDays() end
 function RandomizedWorldBase:getMedicalClutter() end
 
 --- @public
+--- @return ArrayList
+function RandomizedWorldBase:getMurderSceneClutter() end
+
+--- @public
 --- @return string
 function RandomizedWorldBase:getName() end
+
+--- @public
+--- @return ArrayList
+function RandomizedWorldBase:getNastyMattressClutter() end
 
 --- @public
 --- @return ArrayList
@@ -882,6 +912,14 @@ function RandomizedWorldBase:getUtilityToolClutter() end
 --- @public
 --- @return string
 function RandomizedWorldBase:getUtilityToolClutterItem() end
+
+--- @public
+--- @return ArrayList
+function RandomizedWorldBase:getVanCampClutter() end
+
+--- @public
+--- @return string
+function RandomizedWorldBase:getVanCampClutterItem() end
 
 --- @public
 --- @return ArrayList

@@ -5,15 +5,6 @@
 RZSNastyMattress = {}
 
 ------------------------------------
----------- STATIC METHODS ----------
-------------------------------------
-
---- @public
---- @static
---- @return ArrayList
-function RZSNastyMattress.getForestClutter() end
-
-------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 

@@ -2,6 +2,7 @@
 
 ---@class ISUnequipAction : ISBaseTimedAction
 ---@field animSpeed any
+---@field clothingAction any
 ---@field fromHotbar any
 ---@field hotbar any
 ---@field ignoreHandsWounds any

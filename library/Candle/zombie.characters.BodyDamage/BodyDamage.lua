@@ -712,6 +712,10 @@ function BodyDamage:isIsOnFire() end
 
 --- @public
 --- @return boolean
+function BodyDamage:isNeckBleeding() end
+
+--- @public
+--- @return boolean
 function BodyDamage:isReduceFakeInfection() end
 
 --- @public

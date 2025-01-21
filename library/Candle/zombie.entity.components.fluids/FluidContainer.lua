@@ -202,6 +202,10 @@ function FluidContainer:isEmpty() end
 
 --- @public
 --- @return boolean
+function FluidContainer:isFilledWithCleanWater() end
+
+--- @public
+--- @return boolean
 function FluidContainer:isFull() end
 
 --- @public
@@ -281,3 +285,11 @@ function FluidContainer:transferFrom(arg0) end
 --- @return nil
 --- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: number): nil
 function FluidContainer:transferTo(arg0) end
+
+--- @public
+--- @return nil
+function FluidContainer:unseal() end
+
+--- @public
+--- @return nil
+function FluidContainer:unsealIfNotFull() end

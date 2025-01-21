@@ -330,6 +330,10 @@ function Core:addAltKeyBinding(arg0, arg1) end
 function Core:addKeyBinding(keyName, key) end
 
 --- @public
+--- @return boolean
+function Core:allowOptionTextureCompression() end
+
+--- @public
 --- @return nil
 function Core:countMissing3DItems() end
 
@@ -1014,6 +1018,10 @@ function Core:getTermsOfServiceVersion() end
 
 --- @public
 --- @return boolean
+function Core:getUseOpenGL21() end
+
+--- @public
+--- @return boolean
 function Core:getUseShaders() end
 
 --- @public
@@ -1027,10 +1035,6 @@ function Core:getVersionNumber() end
 --- @public
 --- @return integer
 function Core:getVidMem() end
-
---- @public
---- @return ColorInfo
-function Core:getWorkstationHighlitedColor() end
 
 --- @public
 --- @param width integer
@@ -2104,11 +2108,6 @@ function Core:setVidMem(mem) end
 --- @param b boolean
 --- @return nil
 function Core:setWindowed(b) end
-
---- @public
---- @param arg0 ColorInfo
---- @return nil
-function Core:setWorkstationHighlitedColor(arg0) end
 
 --- @public
 --- @param zombieGroupSound boolean

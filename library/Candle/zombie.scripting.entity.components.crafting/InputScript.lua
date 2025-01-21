@@ -19,6 +19,10 @@ function InputScript:allowDestroyedItem() end
 
 --- @public
 --- @return boolean
+function InputScript:allowFavorites() end
+
+--- @public
+--- @return boolean
 function InputScript:allowFrozenItem() end
 
 --- @public
@@ -45,6 +49,36 @@ function InputScript:containsFluid(arg0) end
 --- @param arg0 Item
 --- @return boolean
 function InputScript:containsItem(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:doesItemPassClothingTypeStatusTests(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:doesItemPassDamageStatusTests(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:doesItemPassFoodAndCookingTests(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:doesItemPassIsOrNotEmptyAndFullTests(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:doesItemPassRoutineStatusTests(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:doesItemPassSharpnessStatusTests(arg0) end
 
 --- @public
 --- @return boolean
@@ -168,6 +202,10 @@ function InputScript:isAutomationOnly() end
 
 --- @public
 --- @return boolean
+function InputScript:isCanBeDoneFromFloor() end
+
+--- @public
+--- @return boolean
 function InputScript:isCookedFoodItem() end
 
 --- @public
@@ -280,11 +318,6 @@ function InputScript:isUndamaged() end
 
 --- @public
 --- @return boolean
---- @deprecated
-function InputScript:isUse() end
-
---- @public
---- @return boolean
 function InputScript:isWholeFoodItem() end
 
 --- @public
@@ -310,6 +343,26 @@ function InputScript:notEmpty() end
 --- @public
 --- @return boolean
 function InputScript:notFull() end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:passesBrokenTest(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:passesFavoriteTest(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:passesFrozenTest(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:passesRottenTest(arg0) end
 
 --- @public
 --- @return boolean

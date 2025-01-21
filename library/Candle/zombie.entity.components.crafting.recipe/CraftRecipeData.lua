@@ -97,6 +97,10 @@ function CraftRecipeData:getAllCreatedItems() end
 
 --- @public
 --- @return ArrayList
+function CraftRecipeData:getAllDestroyInputItems() end
+
+--- @public
+--- @return ArrayList
 function CraftRecipeData:getAllInputItems() end
 
 --- @public

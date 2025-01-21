@@ -30,6 +30,10 @@ function IsoStove:Toggle() end
 function IsoStove:addToWorld() end
 
 --- @public
+--- @return nil
+function IsoStove:afterRotated() end
+
+--- @public
 --- @return string
 --- @overload fun(self: IsoStove): string
 function IsoStove:getActivatableType() end

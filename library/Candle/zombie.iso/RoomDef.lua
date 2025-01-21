@@ -165,6 +165,10 @@ function RoomDef:isKidsRoom() end
 function RoomDef:isRoofFixed() end
 
 --- @public
+--- @return boolean
+function RoomDef:isShop() end
+
+--- @public
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return nil

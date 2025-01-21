@@ -198,6 +198,10 @@ function IsoAnimal:changeStress(arg0) end
 function IsoAnimal:checkAlphaAndTargetAlpha(arg0) end
 
 --- @public
+--- @return boolean
+function IsoAnimal:checkForChickenpocalypse() end
+
+--- @public
 --- @param arg0 integer
 --- @return boolean
 function IsoAnimal:checkKilledByMetaPredator(arg0) end
@@ -817,6 +821,11 @@ function IsoAnimal:save(arg0, arg1) end
 --- @param arg0 integer
 --- @return nil
 function IsoAnimal:setAgeDebug(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoAnimal:setAnimalID(arg0) end
 
 --- @public
 --- @param arg0 AnimalZone

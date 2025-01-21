@@ -19,7 +19,4 @@ function AcceptItemFunction.HolsterShoulder(container, item) end
 function AcceptItemFunction.KeyRing(container, item) end
 
 ---@return any
-function AcceptItemFunction.KeyRing(container, item) end
-
----@return any
 function AcceptItemFunction.Wallet(container, item) end

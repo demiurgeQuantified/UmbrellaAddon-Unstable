@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISWearClothing : ISBaseTimedAction
+---@field clothingAction any
 ---@field equipSound any
 ---@field fromHotbar any
 ---@field item any

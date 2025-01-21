@@ -1153,6 +1153,10 @@ function ItemContainer:haveThisKeyId(keyId) end
 function ItemContainer:isActive() end
 
 --- @public
+--- @return boolean
+function ItemContainer:isCorpse() end
+
+--- @public
 --- @return boolean the dirty
 function ItemContainer:isDirty() end
 
@@ -1207,6 +1211,10 @@ function ItemContainer:isPowered() end
 --- @param item InventoryItem
 --- @return boolean
 function ItemContainer:isRemoveItemAllowed(item) end
+
+--- @public
+--- @return boolean
+function ItemContainer:isShop() end
 
 --- @public
 --- @return boolean

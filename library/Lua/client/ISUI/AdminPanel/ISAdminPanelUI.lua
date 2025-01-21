@@ -22,6 +22,7 @@
 ---@field seeRolesBtn any
 ---@field seeSafehousesBtn any
 ---@field seeTicketsBtn any
+---@field seeUsersBtn any
 ---@field showStatisticsBtn any
 ---@field variableColor any
 ---@field zOffsetSmallFont any

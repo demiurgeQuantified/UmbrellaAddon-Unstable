@@ -62,6 +62,12 @@ function CraftRecipe:addRequiredSkill(arg0, arg1) end
 function CraftRecipe:canBeDoneInDark() end
 
 --- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+--- @overload fun(self: CraftRecipe, arg0: Item): boolean
+function CraftRecipe:canOutputItem(arg0) end
+
+--- @public
 --- @param arg0 string
 --- @return boolean
 --- @overload fun(self: CraftRecipe, arg0: InventoryItem): boolean
@@ -70,7 +76,12 @@ function CraftRecipe:canUseItem(arg0) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return nil
-function CraftRecipe:checkAutoLearnSkills(arg0) end
+function CraftRecipe:checkAutoLearnAllSkills(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function CraftRecipe:checkAutoLearnAnySkills(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -94,15 +105,28 @@ function CraftRecipe:getAnimation() end
 --- @public
 --- @param arg0 integer
 --- @return RequiredSkill
-function CraftRecipe:getAutoLearnSkill(arg0) end
+function CraftRecipe:getAutoLearnAllSkill(arg0) end
 
 --- @public
 --- @return integer
-function CraftRecipe:getAutoLearnSkillCount() end
+function CraftRecipe:getAutoLearnAllSkillCount() end
 
 --- @public
 --- @return ArrayList
-function CraftRecipe:getAutoLearnSkills() end
+function CraftRecipe:getAutoLearnAllSkills() end
+
+--- @public
+--- @param arg0 integer
+--- @return RequiredSkill
+function CraftRecipe:getAutoLearnAnySkill(arg0) end
+
+--- @public
+--- @return integer
+function CraftRecipe:getAutoLearnAnySkillCount() end
+
+--- @public
+--- @return ArrayList
+function CraftRecipe:getAutoLearnAnySkills() end
 
 --- @public
 --- @return string
@@ -268,6 +292,12 @@ function CraftRecipe:hasOnTickOutputs() end
 function CraftRecipe:hasTag(arg0) end
 
 --- @public
+--- @param arg0 Perk
+--- @return boolean
+--- @overload fun(self: CraftRecipe, arg0: Perk, arg1: boolean): boolean
+function CraftRecipe:involvesSkill(arg0) end
+
+--- @public
 --- @return boolean
 function CraftRecipe:isAllowBatchCraft() end
 
@@ -301,6 +331,10 @@ function CraftRecipe:isRequiresPlayer() end
 --- @return boolean
 --- @deprecated
 function CraftRecipe:isShapeless() end
+
+--- @public
+--- @return boolean
+function CraftRecipe:isSmithing() end
 
 --- @public
 --- @return boolean

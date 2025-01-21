@@ -35,6 +35,9 @@
 ISMultiplayerZoneEditor = ISPanelJoypad:derive("ISMultiplayerZoneEditor")
 
 ---@return any
+function ISMultiplayerZoneEditor.OnRolesReceived() end
+
+---@return any
 function ISMultiplayerZoneEditor.ShowEditor() end
 
 ---@return any

@@ -149,6 +149,10 @@ function Stats:isTripping() end
 function Stats:load(input) end
 
 --- @public
+--- @return nil
+function Stats:normalizeThirst() end
+
+--- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 integer
 --- @return nil

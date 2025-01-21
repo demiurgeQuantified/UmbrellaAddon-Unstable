@@ -5,15 +5,6 @@
 RZSMurderScene = {}
 
 ------------------------------------
----------- STATIC METHODS ----------
-------------------------------------
-
---- @public
---- @static
---- @return ArrayList
-function RZSMurderScene.getMurderClutter() end
-
-------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 

@@ -19,6 +19,18 @@ function FaceScript:getLayer(arg0) end
 
 --- @public
 --- @return integer
+function FaceScript:getLightsourceOffsetX() end
+
+--- @public
+--- @return integer
+function FaceScript:getLightsourceOffsetY() end
+
+--- @public
+--- @return integer
+function FaceScript:getLightsourceOffsetZ() end
+
+--- @public
+--- @return integer
 function FaceScript:getTotalHeight() end
 
 --- @public

@@ -148,6 +148,10 @@ function NetTimedActionPacket:setData(arg0) end
 function NetTimedActionPacket:sync(arg0, arg1) end
 
 --- @public
+--- @return boolean
+function NetTimedActionPacket:tryProcessInternal() end
+
+--- @public
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function NetTimedActionPacket:write(arg0) end

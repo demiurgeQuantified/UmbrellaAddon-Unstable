@@ -372,6 +372,14 @@ function VehicleScript:getSounds() end
 function VehicleScript:getSpecialKeyRing() end
 
 --- @public
+--- @return integer
+function VehicleScript:getSpecialKeyRingChance() end
+
+--- @public
+--- @return integer
+function VehicleScript:getSpecialLootChance() end
+
+--- @public
 --- @param speed number
 --- @return number
 function VehicleScript:getSteeringClamp(speed) end

@@ -50,7 +50,6 @@
 ---@field tabs any
 ---@field targetColor any
 ---@field width any
----@field workstationHighColor any
 ---@field x any
 ---@field y any
 ---@field [any] any
@@ -276,9 +275,6 @@ function MainOptions:onTabsActivateView(tabs) end
 function MainOptions:onTargetColor(button) end
 
 ---@return any
-function MainOptions:onWorkstationHighlightColor(button) end
-
----@return any
 function MainOptions:pickedBadHighlightColor(color, mouseUp) end
 
 ---@return any
@@ -298,9 +294,6 @@ function MainOptions:pickedObjHighlightColor(color, mouseUp) end
 
 ---@return any
 function MainOptions:pickedTargetColor(color, mouseUp) end
-
----@return any
-function MainOptions:pickedWorkstationHighlightColor(color, mouseUp) end
 
 ---@return any
 function MainOptions:prerender() end

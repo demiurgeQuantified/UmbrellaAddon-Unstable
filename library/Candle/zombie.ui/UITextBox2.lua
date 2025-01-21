@@ -186,6 +186,10 @@ function UITextBox2:onKeyRight() end
 function UITextBox2:onKeyUp() end
 
 --- @public
+--- @return nil
+function UITextBox2:onLostFocus() end
+
+--- @public
 --- @param x number
 --- @param y number
 --- @return boolean
@@ -260,6 +264,11 @@ function UITextBox2:resetBlink() end
 --- @return nil
 --- @overload fun(self: UITextBox2): nil
 function UITextBox2:selectAll() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function UITextBox2:setCentreVertically(arg0) end
 
 --- @public
 --- @param hasButton boolean

@@ -54,6 +54,10 @@ function DebugChunkState:fromLua2(func, arg0, arg1) end
 function DebugChunkState:getBoolean(name) end
 
 --- @public
+--- @return number
+function DebugChunkState:getObjectAtCursorScale() end
+
+--- @public
 --- @param index integer
 --- @return ConfigOption
 function DebugChunkState:getOptionByIndex(index) end

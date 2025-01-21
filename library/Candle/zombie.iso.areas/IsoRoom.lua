@@ -140,6 +140,10 @@ function IsoRoom:hasWater() end
 function IsoRoom:isInside(x, y, z) end
 
 --- @public
+--- @return boolean
+function IsoRoom:isShop() end
+
+--- @public
 --- @return nil
 function IsoRoom:onSee() end
 

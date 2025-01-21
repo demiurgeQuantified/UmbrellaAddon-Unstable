@@ -66,6 +66,10 @@ function IsoTree:WeaponHitEffects(arg0, arg1) end
 function IsoTree:checkChopTreeIndicator() end
 
 --- @public
+--- @return nil
+function IsoTree:dropWood() end
+
+--- @public
 --- @return integer
 function IsoTree:getHealth() end
 
@@ -138,6 +142,11 @@ function IsoTree:setHealth(health) end
 --- @param sprite IsoSprite the sprite to set
 --- @return nil
 function IsoTree:setSprite(sprite) end
+
+--- @public
+--- @return nil
+--- @overload fun(self: IsoTree, arg0: IsoGameCharacter): nil
+function IsoTree:toppleTree() end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

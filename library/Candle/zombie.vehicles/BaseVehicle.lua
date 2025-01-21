@@ -256,16 +256,19 @@ function BaseVehicle:addKeyToGloveBox() end
 --- @public
 --- @param sq IsoGridSquare
 --- @return boolean
+--- @overload fun(self: BaseVehicle, arg0: IsoGridSquare, arg1: boolean): boolean
 function BaseVehicle:addKeyToSquare(sq) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @param arg1 integer
 --- @return boolean
+--- @overload fun(self: BaseVehicle, arg0: IsoGridSquare, arg1: integer, arg2: boolean): boolean
 function BaseVehicle:addKeyToSquare2(arg0, arg1) end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:addKeyToWorld() end
 
 --- @public
@@ -285,6 +288,7 @@ function BaseVehicle:addRandomDamageFromCrash(chr, damage) end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:addToWorld() end
 
 --- @public
@@ -459,6 +463,7 @@ function BaseVehicle:checkPhysicsValidWithServer() end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
+--- @overload fun(self: BaseVehicle, arg0: IsoGridSquare, arg1: boolean): boolean
 function BaseVehicle:checkSquareForVehicleKeySpot(arg0) end
 
 --- @public
@@ -576,6 +581,7 @@ function BaseVehicle:engineDoRunning() end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseVehicle, arg0: string): nil
 function BaseVehicle:engineDoShuttingDown() end
 
 --- @public
@@ -588,6 +594,7 @@ function BaseVehicle:engineDoStarting() end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseVehicle, arg0: string): nil
 function BaseVehicle:engineDoStartingFailed() end
 
 --- @public
@@ -1108,6 +1115,10 @@ function BaseVehicle:getSkinIndex() end
 
 --- @public
 --- @return number
+function BaseVehicle:getSpecialKeyRingChance() end
+
+--- @public
+--- @return number
 function BaseVehicle:getSpeed2D() end
 
 --- @public
@@ -1288,6 +1299,10 @@ function BaseVehicle:hasLightbar() end
 function BaseVehicle:hasLighter() end
 
 --- @public
+--- @return boolean
+function BaseVehicle:hasLiveBattery() end
+
+--- @public
 --- @param seat integer
 --- @return boolean
 function BaseVehicle:hasRoof(seat) end
@@ -1334,6 +1349,14 @@ function BaseVehicle:isBackSignalEmitting() end
 --- @public
 --- @return boolean
 function BaseVehicle:isBraking() end
+
+--- @public
+--- @return boolean
+function BaseVehicle:isBurnt() end
+
+--- @public
+--- @return boolean
+function BaseVehicle:isBurntOrSmashed() end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -1433,6 +1456,10 @@ function BaseVehicle:isInBounds(worldX, worldY) end
 --- @public
 --- @return boolean
 function BaseVehicle:isInForest() end
+
+--- @public
+--- @return boolean
+function BaseVehicle:isInTrafficJam() end
 
 --- @public
 --- @param arg0 IsoGridSquare
@@ -1539,6 +1566,10 @@ function BaseVehicle:isSeatOccupied(seat) end
 --- @public
 --- @return boolean
 function BaseVehicle:isSirening() end
+
+--- @public
+--- @return boolean
+function BaseVehicle:isSmashed() end
 
 --- @public
 --- @return boolean
@@ -2132,6 +2163,7 @@ function BaseVehicle:showPassenger(seat) end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseVehicle, arg0: string): nil
 function BaseVehicle:shutOff() end
 
 --- @public
@@ -2286,6 +2318,7 @@ function BaseVehicle:tryHotwire(electricityLevel) end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:trySpawnKey() end
 
 --- @public

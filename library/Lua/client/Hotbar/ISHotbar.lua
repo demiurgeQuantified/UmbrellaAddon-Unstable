@@ -42,6 +42,9 @@ function ISHotbar.onKeyPressed(key) end
 function ISHotbar.onKeyStartPressed(key) end
 
 ---@return any
+function ISHotbar.onStopGrapple(player) end
+
+---@return any
 function ISHotbar:activateSlot(slotIndex) end
 
 ---@return any

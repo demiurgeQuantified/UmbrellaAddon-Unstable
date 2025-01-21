@@ -56,6 +56,7 @@
 ---@field overBottomPanelButton any
 ---@field quitToDesktop any
 ---@field quitToDesktopDialog any
+---@field reportBug any
 ---@field resetLua any
 ---@field returnOption any
 ---@field sandOptions any
@@ -178,6 +179,9 @@ function MainScreen:onClickModList() end
 function MainScreen:OnClickNews() end
 
 ---@return any
+function MainScreen:onClickReportBug(button) end
+
+---@return any
 function MainScreen:onClickTermsOfService(button) end
 
 ---@return any
@@ -279,6 +283,8 @@ function LoadMainScreenPanel() end
 function isPlayerDoingActionThatCanBeCancelled(playerObj) end
 ---@return any
 function stopDoingActionThatCanBeCancelled(playerObj) end
+---@return any
+function CancelAction() end
 ---@return any
 function ToggleEscapeMenu(key) end
 ---@return any

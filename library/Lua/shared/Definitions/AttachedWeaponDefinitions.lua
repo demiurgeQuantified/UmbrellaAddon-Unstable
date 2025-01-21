@@ -602,6 +602,7 @@ AttachedWeaponDefinitions.weaponInStomach = {
 		"Base.MetalworkingChisel",
 		"Base.Nightstick",
 		"Base.PipeWrench",
+		"Base.SheetMetalSnips",
 		"Base.SteelBar",
 		"Base.SteelBarHalf",
 		"Base.SteelRodHalf",

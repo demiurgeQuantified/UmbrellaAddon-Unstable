@@ -8,8 +8,13 @@
 ---@field boxHeight any
 ---@field buttonCraft any
 ---@field buttonForceCraft any
+---@field buttonLess any
+---@field buttonMax any
+---@field buttonMore any
+---@field buttonPadding any
 ---@field colProgress any
 ---@field craftTimes any
+---@field durationLabel any
 ---@field entryBox any
 ---@field interactiveMode any
 ---@field isAutoFill any
@@ -21,8 +26,9 @@
 ---@field minimumWidth any
 ---@field origButtonHeight any
 ---@field player any
+---@field progressBar any
+---@field quantityLabel any
 ---@field returnToContainer any
----@field slider any
 ---@field [any] any
 ISWidgetHandCraftControl = ISPanel:derive("ISWidgetHandCraftControl")
 
@@ -60,13 +66,16 @@ function ISWidgetHandCraftControl:onInputsChanged() end
 function ISWidgetHandCraftControl:onResize() end
 
 ---@return any
-function ISWidgetHandCraftControl:onSliderChange(_newval, _slider) end
-
----@return any
 function ISWidgetHandCraftControl:prerender() end
 
 ---@return any
 function ISWidgetHandCraftControl:render() end
+
+---@return any
+function ISWidgetHandCraftControl:sanitizeCraftQuantity() end
+
+---@return any
+function ISWidgetHandCraftControl:setCraftQuantity(amount) end
 
 ---@return any
 function ISWidgetHandCraftControl:startHandcraft(force) end

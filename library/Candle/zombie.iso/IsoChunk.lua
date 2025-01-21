@@ -362,11 +362,6 @@ function IsoChunk:invalidateRenderChunkLevel(arg0, arg1) end
 --- @public
 --- @param arg0 integer
 --- @return nil
-function IsoChunk:invalidateRenderChunks(arg0) end
-
---- @public
---- @param arg0 integer
---- @return nil
 function IsoChunk:invalidateVispolyChunkLevel(arg0) end
 
 --- @public

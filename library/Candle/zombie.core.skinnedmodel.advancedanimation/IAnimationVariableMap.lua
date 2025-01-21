@@ -45,6 +45,12 @@ function IAnimationVariableMap:getVariableBoolean(arg0) end
 
 --- @public
 --- @param arg0 string
+--- @param arg1 Enum
+--- @return Enum
+function IAnimationVariableMap:getVariableEnum(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
 --- @param arg1 number
 --- @return number
 function IAnimationVariableMap:getVariableFloat(arg0, arg1) end
@@ -66,7 +72,13 @@ function IAnimationVariableMap:isVariable(arg0, arg1) end
 ---
 --- @param slot IAnimationVariableSlot
 --- @return nil
---- @overload fun(self: IAnimationVariableMap, key: string, value: boolean): nil
---- @overload fun(self: IAnimationVariableMap, key: string, value: number): nil
---- @overload fun(self: IAnimationVariableMap, key: string, value: string): nil
+--- @overload fun(self: IAnimationVariableMap, key: string, value: boolean): IAnimationVariableSlot
+--- @overload fun(self: IAnimationVariableMap, key: string, value: number): IAnimationVariableSlot
+--- @overload fun(self: IAnimationVariableMap, key: string, value: string): IAnimationVariableSlot
 function IAnimationVariableMap:setVariable(slot) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Enum
+--- @return IAnimationVariableSlot
+function IAnimationVariableMap:setVariableEnum(arg0, arg1) end

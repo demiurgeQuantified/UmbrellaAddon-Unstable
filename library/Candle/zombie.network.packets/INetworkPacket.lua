@@ -157,6 +157,10 @@ function INetworkPacket:setData(arg0) end
 function INetworkPacket:sync(arg0, arg1) end
 
 --- @public
+--- @return boolean
+function INetworkPacket:tryProcessInternal() end
+
+--- @public
 --- @param b ByteBufferWriter
 --- @return nil
 function INetworkPacket:write(b) end

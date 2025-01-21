@@ -162,6 +162,10 @@ function IsoDoor:addSheet(chr) end
 function IsoDoor:addToWorld() end
 
 --- @public
+--- @return boolean
+function IsoDoor:canAddCurtain() end
+
+--- @public
 --- @param chr IsoGameCharacter
 --- @return boolean
 function IsoDoor:canClimbOver(chr) end

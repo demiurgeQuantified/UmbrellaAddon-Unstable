@@ -3,9 +3,12 @@
 ---@class ISWidgetRecipeListPanel : ISPanel
 ---@field callbackTarget any
 ---@field enabledShowAllFilter any
+---@field expandToFitTooltip any
+---@field largestTooltipWidth any
 ---@field logic any
 ---@field player any
 ---@field recipeListPanel any
+---@field wrapTooltipText any
 ---@field [any] any
 ISWidgetRecipeListPanel = ISPanel:derive("ISWidgetRecipeListPanel")
 

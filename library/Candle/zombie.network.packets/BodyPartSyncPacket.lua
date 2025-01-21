@@ -190,6 +190,10 @@ function BodyPartSyncPacket:setData(arg0) end
 function BodyPartSyncPacket:sync(arg0, arg1) end
 
 --- @public
+--- @return boolean
+function BodyPartSyncPacket:tryProcessInternal() end
+
+--- @public
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function BodyPartSyncPacket:write(arg0) end

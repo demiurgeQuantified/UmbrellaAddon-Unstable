@@ -312,6 +312,10 @@ function Item:getInsertAmmoStopSound() end
 function Item:getInsulation() end
 
 --- @public
+--- @return string
+function Item:getItemAfterCleaning() end
+
+--- @public
 --- @return ItemConfig
 function Item:getItemConfig() end
 
@@ -505,6 +509,10 @@ function Item:getReplaceTypesMap() end
 function Item:getReplaceWhenUnequip() end
 
 --- @public
+--- @return List
+function Item:getResearchableRecipes() end
+
+--- @public
 --- @return string
 function Item:getShellFallSound() end
 
@@ -692,6 +700,10 @@ function Item:getWorldStaticModelsByIndex() end
 function Item:hasReplaceType(key) end
 
 --- @public
+--- @return boolean
+function Item:hasResearchableRecipes() end
+
+--- @public
 --- @param arg0 string
 --- @return boolean
 function Item:hasTag(arg0) end
@@ -815,6 +827,10 @@ function Item:isShareDamage() end
 --- @public
 --- @return boolean the ShareEndurance
 function Item:isShareEndurance() end
+
+--- @public
+--- @return boolean
+function Item:isSpice() end
 
 --- @public
 --- @return boolean the SplatBloodOnNoDeath

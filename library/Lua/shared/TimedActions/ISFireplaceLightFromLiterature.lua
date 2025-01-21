@@ -35,4 +35,4 @@ function ISFireplaceLightFromLiterature:update() end
 function ISFireplaceLightFromLiterature:waitToStart() end
 
 ---@return ISFireplaceLightFromLiterature
-function ISFireplaceLightFromLiterature:new(character, item, lighter, fireplace, fuelAmt) end
+function ISFireplaceLightFromLiterature:new(character, item, lighter, fireplace) end

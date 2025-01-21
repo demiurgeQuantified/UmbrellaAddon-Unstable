@@ -1027,7 +1027,7 @@ SpecialLootSpawns.Postcards = {
 	"SouthKorea",
 	"Seoul",
 	"Gibraltar",
-	"Martha'sVineyard",
+	"MarthasVineyard",
 	"theCaribbean",
 	"Montserrat",
 	"MountEverest",
@@ -1365,6 +1365,8 @@ SpecialLootSpawns.BSToolsSchematics = {
 	"Forge_Metalworking_Chisel",
 	"Forge_Metalworking_Punch",
 	"Forge_Metalworking_Pliers",
+	"Forge_File",
+	"Forge_Drill",
 	"Forge_Saw",
 	"Forge_Corkscrew",
 	"Forge_Needle",
@@ -1376,6 +1378,9 @@ SpecialLootSpawns.BSToolsSchematics = {
 	"Forge_Hinge",
 	"Forge_Door_Knob",
 	"Forge_JarLid",
+	"Forge_Heading_Tool",
+	"Forge_Draw_Plate",
+	"MakeCrudeWhetstone",
 }
 SpecialLootSpawns.MeleeWeaponSchematics = {
 	"MakeCrudeWhetstone",
@@ -1393,7 +1398,9 @@ SpecialLootSpawns.MeleeWeaponSchematics = {
 	"Forge_Crude_Sword_Blade",
 	"Forge_Machete_Blade",
 	"Forge_Sword_Blade",
-	"Forge_Shortsword_Blade",
+	"Forge_ShortSword_Blade",
+	"ForgeMaceHead",
+	"MakeSpikedClub",
 	"FireHardenSpear",
 	"BindSpear",
 	"BarbedWireWeapon",
@@ -1416,6 +1423,7 @@ SpecialLootSpawns.MeleeWeaponSchematics = {
 	"MakeGlassShiv",
 	"MakeShiv",
 	"MakeToothbrushShiv",
+	"SharpenBone",
 }
 SpecialLootSpawns.ArmorSchematics = {
 	"MakeMagazineArmor",

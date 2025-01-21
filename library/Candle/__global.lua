@@ -511,6 +511,10 @@ function deleteSave(file) end
 --- @return nil
 function disconnect() end
 
+--- @param arg0 table
+--- @return nil
+function displayLUATable(arg0) end
+
 --- @param challenge table
 --- @return nil
 function doChallenge(challenge) end
@@ -1835,6 +1839,9 @@ function isSteamOverlayEnabled() end
 function isSteamRunningOnSteamDeck() end
 
 --- @return boolean
+function isSteamServerBrowserEnabled() end
+
+--- @return boolean
 function isSystemLinux() end
 
 --- @return boolean
@@ -1880,6 +1887,15 @@ function istype(obj, name) end
 --- @param arg1 integer
 --- @return any
 function javaListRemoveAt(arg0, arg1) end
+
+--- @param arg0 string
+--- @param arg1 string
+--- @return ArrayList
+function listFilesInModDirectory(arg0, arg1) end
+
+--- @param arg0 string
+--- @return ArrayList
+function listFilesInZomboidLuaDirectory(arg0) end
 
 --- @param name string
 --- @param loc string
@@ -2607,6 +2623,11 @@ function setDefaultRoleFor(arg0, arg1) end
 --- @param NewSpeed integer
 --- @return nil
 function setGameSpeed(NewSpeed) end
+
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+function setMinMaxZombiesPerChunk(arg0, arg1) end
 
 --- @param name string
 --- @param mesh string

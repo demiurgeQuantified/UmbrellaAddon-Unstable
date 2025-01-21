@@ -278,6 +278,7 @@ SpecialLootSpawns.BookTitles.Childs = {
 	"TheLandofTuckedaway",
 	"TheAdventuresofTooksBear",
 	"TheMagicHoodie",
+	"TheMagicHoodieSigned",
 	"GenuinesBookofGlobalRecords92",
 	"GenuinesBookofGlobalRecords91",
 	"GenuinesBookofGlobalRecords90",
@@ -1159,20 +1160,17 @@ SpecialLootSpawns.BookTitles.NewAge = {
 }
 SpecialLootSpawns.BookTitles.Nature = {
 	"AfricanInvertebrates",
-	"AmericasCutestDogs",
 	"CreaturesoftheAmazon",
 	"JunglesandTundra",
 	"LifeintheArcticCircle",
 	"LifeintheLakes",
 	"LovelyDogs",
 	"MammalsofEurope",
-	"NiceCats",
 	"ShellfishoftheAtlantic",
 	"SpidersandSnakes",
 	"TheMightyOak",
 	"TheMojave",
 	"WalkingThroughAmerica",
-	"FuturemanHowWeMightEvolve",
 	"LifeBeforeMan",
 	"ATripThroughtheForest",
 	"OurGreenEarth",
@@ -1898,6 +1896,8 @@ SpecialLootSpawns.BookTitles.ChildsPicture_Special = {
 	"NosyNate",
 	"NosyNateVisitstheZoo",
 	"NosyNateAttheHospital",
+	"AmericasCutestDogs",
+	"NiceCats",
 }
 SpecialLootSpawns.BookTitles.Photo_Special = {
 	"TheModernArts",
@@ -1923,6 +1923,8 @@ SpecialLootSpawns.BookTitles.Photo_Special = {
 	"TheUniverse",
 	"PhotographingtheHumanBody",
 	"NudityAnArtisticGuide",
+	"AmericasCutestDogs",
+	"NiceCats",
 }
 SpecialLootSpawns.BookDetails = {
 	KentuckyStateBaseball1992 = {
@@ -2494,6 +2496,10 @@ SpecialLootSpawns.BookDetails = {
 	},
 	TheMagicHoodie = {
 		cover = "both",
+	},
+	TheMagicHoodieSigned = {
+		cover = "hardcover",
+		countsAs = "TheMagicHoodie",
 	},
 	Hairyfoot = {
 		cover = "softcover",
@@ -4312,9 +4318,6 @@ SpecialLootSpawns.BookDetails = {
 	AfricanInvertebrates = {
 		cover = "hardcover",
 	},
-	AmericasCutestDogs = {
-		cover = "both",
-	},
 	CreaturesoftheAmazon = {
 		cover = "hardcover",
 	},
@@ -4334,9 +4337,6 @@ SpecialLootSpawns.BookDetails = {
 		cover = "hardcover",
 	},
 	MammalsofEurope = {
-		cover = "hardcover",
-	},
-	NiceCats = {
 		cover = "hardcover",
 	},
 	ShellfishoftheAtlantic = {

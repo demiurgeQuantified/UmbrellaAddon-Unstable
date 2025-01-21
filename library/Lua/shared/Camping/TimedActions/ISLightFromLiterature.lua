@@ -35,4 +35,4 @@ function ISLightFromLiterature:update() end
 function ISLightFromLiterature:waitToStart() end
 
 ---@return ISLightFromLiterature
-function ISLightFromLiterature:new(character, item, lighter, campfire, fuelAmt) end
+function ISLightFromLiterature:new(character, item, lighter, campfire) end

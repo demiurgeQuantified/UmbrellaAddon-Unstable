@@ -10,8 +10,11 @@
 ---@field h any
 ---@field HueImage any
 ---@field hueSlider any
----@field index any
 ---@field initialColor any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field mouseDown any
 ---@field mouseDownInColorBox any
 ---@field pickedArgs any
@@ -28,19 +31,13 @@ ISColorPickerHSB = ISPanelJoypad:derive("ISColorPickerHSB")
 function ISColorPickerHSB:createChildren() end
 
 ---@return any
-function ISColorPickerHSB:onJoypadDirDown(joypadData) end
-
----@return any
-function ISColorPickerHSB:onJoypadDirLeft(joypadData) end
-
----@return any
-function ISColorPickerHSB:onJoypadDirRight(joypadData) end
-
----@return any
-function ISColorPickerHSB:onJoypadDirUp(joypadData) end
+function ISColorPickerHSB:onGainJoypadFocus(joypadData) end
 
 ---@return any
 function ISColorPickerHSB:onJoypadDown(button) end
+
+---@return any
+function ISColorPickerHSB:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISColorPickerHSB:onMouseDown(x, y) end

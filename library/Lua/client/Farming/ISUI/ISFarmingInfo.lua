@@ -2,7 +2,7 @@
 
 ---@class ISFarmingInfo : ISPanelJoypad
 ---@field character any
----@field isEnalbed any
+---@field isEnabled any
 ---@field plant any
 ---@field vegetable any
 ---@field [any] any

@@ -51,6 +51,22 @@ function SpriteConfigScript:getHealth() end
 function SpriteConfigScript:getIsThumpable() end
 
 --- @public
+--- @return integer
+function SpriteConfigScript:getLightRadius() end
+
+--- @public
+--- @return string
+function SpriteConfigScript:getLightsourceFuel() end
+
+--- @public
+--- @return string
+function SpriteConfigScript:getLightsourceItem() end
+
+--- @public
+--- @return ArrayList
+function SpriteConfigScript:getLightsourceTagItem() end
+
+--- @public
 --- @return boolean
 function SpriteConfigScript:getNeedToBeAgainstWall() end
 

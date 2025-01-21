@@ -74,6 +74,10 @@ function IsoBarbecue:isPropaneBBQ() end
 function IsoBarbecue:isSmouldering() end
 
 --- @public
+--- @return boolean
+function IsoBarbecue:isTemperatureChanging() end
+
+--- @public
 --- @param input ByteBuffer
 --- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean

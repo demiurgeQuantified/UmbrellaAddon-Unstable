@@ -59,6 +59,10 @@ function FluidContainerScript:getWhitelistCopy() end
 
 --- @public
 --- @return boolean
+function FluidContainerScript:isFilledWithCleanWater() end
+
+--- @public
+--- @return boolean
 function FluidContainerScript:isHiddenAmount() end
 
 --- @public

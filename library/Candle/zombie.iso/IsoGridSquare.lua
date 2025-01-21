@@ -1431,6 +1431,10 @@ function IsoGridSquare:hasFireObject() end
 
 --- @public
 --- @return boolean
+function IsoGridSquare:hasFireplace() end
+
+--- @public
+--- @return boolean
 function IsoGridSquare:hasFlies() end
 
 --- @public
@@ -1723,6 +1727,10 @@ function IsoGridSquare:isSameStaircase(x, y, z) end
 --- @param playerIndex integer
 --- @return boolean the bSeen
 function IsoGridSquare:isSeen(playerIndex) end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:isShop() end
 
 --- @public
 --- @param arg0 IsoDirections

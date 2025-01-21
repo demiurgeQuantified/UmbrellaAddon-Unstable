@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISHandCraftPanel : ISPanel
+---@field _categoryString any
 ---@field _filterMode any
 ---@field _filterString any
 ---@field activeTooltip any
@@ -51,7 +52,7 @@ function ISHandCraftPanel:createRecipesColumn() end
 function ISHandCraftPanel:deactivateTooltip() end
 
 ---@return any
-function ISHandCraftPanel:filterRecipeList(_category) end
+function ISHandCraftPanel:filterRecipeList() end
 
 ---@return any
 function ISHandCraftPanel:getCategoryList() end

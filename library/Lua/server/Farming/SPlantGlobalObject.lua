@@ -20,6 +20,7 @@
 ---@field nbOfGrow any
 ---@field nextGrowing any
 ---@field objectName any
+---@field owner any
 ---@field slugsLvl any
 ---@field spriteName any
 ---@field state any

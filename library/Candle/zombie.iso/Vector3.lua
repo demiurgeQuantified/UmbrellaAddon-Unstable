@@ -87,6 +87,7 @@ function Vector3:clone() end
 --- @param other Vector2 The second point as vector
 --- @return number The distance between them
 --- @overload fun(self: Vector3, arg0: Vector3): number
+--- @overload fun(self: Vector3, arg0: number, arg1: number, arg2: number): number
 function Vector3:distanceTo(other) end
 
 --- @public

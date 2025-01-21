@@ -12,11 +12,6 @@ GameTime = {}
 
 --- @public
 --- @static
---- @return number
-function GameTime.getAnimSpeedFix() end
-
---- @public
---- @static
 --- @return GameTime
 function GameTime.getInstance() end
 

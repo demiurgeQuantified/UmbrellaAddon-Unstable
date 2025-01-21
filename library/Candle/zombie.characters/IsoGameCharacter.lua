@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoGameCharacter: IsoMovingObject, Talker, ChatElementOwner, IAnimatable, IAnimationVariableMap, IClothingItemListener, IActionStateChanged, IAnimEventCallback, IAnimEventWrappedBroadcaster, IFMODParameterUpdater, IGrappleableWrapper, ILuaVariableSource, ILuaGameCharacter
+--- @class IsoGameCharacter: IsoMovingObject, Talker, ChatElementOwner, IAnimatable, IAnimationVariableMap, IAnimationVariableSourceContainer, IClothingItemListener, IActionStateChanged, IAnimEventCallback, IAnimEventWrappedBroadcaster, IFMODParameterUpdater, IGrappleableWrapper, ILuaVariableSource, ILuaGameCharacter
 --- @field public class any
 --- @field public RENDER_OFFSET_X integer
 --- @field public RENDER_OFFSET_Y integer
@@ -93,6 +93,7 @@ function IsoGameCharacter:CanAttack() end
 --- @public
 --- @param obj IsoMovingObject
 --- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: IsoObject): boolean
 function IsoGameCharacter:CanSee(obj) end
 
 --- @public
@@ -247,7 +248,6 @@ function IsoGameCharacter:IsAiming() end
 --- @param y number
 --- @param z number
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, we: HandWeapon, obj: IsoMovingObject, bonePos: Vector3, extraRange: boolean): boolean
 function IsoGameCharacter:IsAttackRange(x, y, z) end
 
 --- @public
@@ -642,6 +642,10 @@ function IsoGameCharacter:addVisualDamage(itemType) end
 function IsoGameCharacter:addWorldSoundUnlessInvisible(radius, volume, bStressHumans) end
 
 --- @public
+--- @return number
+function IsoGameCharacter:aimAtFloorTargetDistance() end
+
+--- @public
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:allowsTwist() end
@@ -1031,7 +1035,7 @@ function IsoGameCharacter:endPlaybackGameVariables(playbackVars) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return BallisticsTarget
-function IsoGameCharacter:ensureExitsBallisticsTarget(arg0) end
+function IsoGameCharacter:ensureExistsBallisticsTarget(arg0) end
 
 --- @public
 --- @param v BaseVehicle
@@ -1120,6 +1124,10 @@ function IsoGameCharacter:getAdvancedAnimator() end
 --- @public
 --- @return integer
 function IsoGameCharacter:getAge() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getAimAtFloorAmount() end
 
 --- @public
 --- @return number
@@ -1589,7 +1597,14 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 ---  Description copied from interface: IAnimationVariableSource
 ---
 --- @return Iterable
+--- @overload fun(self: IsoGameCharacter): Iterable
 function IsoGameCharacter:getGameVariables() end
+
+--- @public
+--- @return AnimationVariableSource
+--- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
+--- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
+function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
 --- @param bDoNoises boolean
@@ -2387,6 +2402,7 @@ function IsoGameCharacter:getUserNameHeight() end
 --- @param key string
 --- @return IAnimationVariableSlot
 --- @overload fun(self: IsoGameCharacter, handle: AnimationVariableHandle): IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, handle: AnimationVariableHandle): IAnimationVariableSlot
 function IsoGameCharacter:getVariable(key) end
 
 --- @public
@@ -2419,6 +2435,10 @@ function IsoGameCharacter:getVariableString(name) end
 --- @return BaseVehicle
 --- @overload fun(self: IsoGameCharacter): BaseVehicle
 function IsoGameCharacter:getVehicle() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getVerticalAimAngle() end
 
 --- @public
 --- @return ArrayList the VeryCloseEnemyList
@@ -2480,8 +2500,8 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return IGrappleable
---- @overload fun(self: IsoGameCharacter): BaseGrappleable
+--- @return BaseGrappleable
+--- @overload fun(self: IsoGameCharacter): IGrappleable
 --- @overload fun(self: IsoGameCharacter): IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
@@ -2758,6 +2778,10 @@ function IsoGameCharacter:isClosingWindow(window) end
 function IsoGameCharacter:isCriticalHit() end
 
 --- @public
+--- @return boolean
+function IsoGameCharacter:isCurrentActionPathfinding() end
+
+--- @public
 --- @param state State
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, state: State): boolean
@@ -3007,6 +3031,13 @@ function IsoGameCharacter:isMaskClicked(x, y, flip) end
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isMechanicsCheat() end
+
+--- @public
+--- @param arg0 HandWeapon
+--- @param arg1 IsoMovingObject
+--- @param arg2 Vector3
+--- @return boolean
+function IsoGameCharacter:isMeleeAttackRange(arg0, arg1, arg2) end
 
 --- @public
 --- @return boolean
@@ -3351,6 +3382,10 @@ function IsoGameCharacter:isWearingTag(arg0) end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isWearingVisualAid() end
+
+--- @public
+--- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isZombie() end
 
@@ -3678,6 +3713,7 @@ function IsoGameCharacter:setAge(age) end
 --- @public
 --- @param b boolean
 --- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: boolean, arg1: number): nil
 function IsoGameCharacter:setAimAtFloor(b) end
 
 --- @public
@@ -4824,12 +4860,12 @@ function IsoGameCharacter:setUsePhysicHitReaction(arg0) end
 --- @param var IAnimationVariableSlot
 --- @return nil
 --- @overload fun(self: IsoGameCharacter, var: IAnimationVariableSlot): nil
---- @overload fun(self: IsoGameCharacter, key: string, value: boolean): nil
---- @overload fun(self: IsoGameCharacter, key: string, value: boolean): nil
---- @overload fun(self: IsoGameCharacter, key: string, value: number): nil
---- @overload fun(self: IsoGameCharacter, key: string, value: number): nil
---- @overload fun(self: IsoGameCharacter, key: string, value: string): nil
---- @overload fun(self: IsoGameCharacter, key: string, value: string): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: boolean): IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, key: string, value: boolean): IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, key: string, value: number): IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, key: string, value: number): IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, key: string, value: string): IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, key: string, value: string): IAnimationVariableSlot
 --- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
 --- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
 --- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
@@ -4847,6 +4883,13 @@ function IsoGameCharacter:setUsePhysicHitReaction(arg0) end
 --- @overload fun(self: IsoGameCharacter, key: string, defaultVal: integer, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): nil
 --- @overload fun(self: IsoGameCharacter, key: string, defaultVal: string, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): nil
 function IsoGameCharacter:setVariable(var) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Enum
+--- @return IAnimationVariableSlot
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: Enum): IAnimationVariableSlot
+function IsoGameCharacter:setVariableEnum(arg0, arg1) end
 
 --- @public
 --- @param v BaseVehicle

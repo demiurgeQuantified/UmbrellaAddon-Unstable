@@ -41,6 +41,11 @@ function DeviceData:addMediaItem(media) end
 function DeviceData:canBePoweredHere() end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function DeviceData:canPlayerRemoteInteract(arg0) end
+
+--- @public
 --- @return nil
 function DeviceData:cleanSoundsAndEmitter() end
 
@@ -225,6 +230,10 @@ function DeviceData:isPlayingMedia() end
 --- @public
 --- @return boolean
 function DeviceData:isReceivingSignal() end
+
+--- @public
+--- @return boolean
+function DeviceData:isTelevision() end
 
 --- @public
 --- @return boolean

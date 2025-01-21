@@ -180,6 +180,13 @@ function ItemPickerJava.isGoodKey(arg0) end
 --- @public
 --- @static
 --- @param arg0 InventoryItem
+--- @return nil
+--- @overload fun(arg0: InventoryItem, arg1: ItemContainer): nil
+function ItemPickerJava.itemSpawnSanityCheck(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 InventoryItem
 --- @param arg1 IsoGridSquare
 --- @return nil
 function ItemPickerJava.keyNamerBuilding(arg0, arg1) end

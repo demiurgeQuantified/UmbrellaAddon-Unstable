@@ -353,14 +353,14 @@ ProfessionVehicles.VanMetalworker = {
 		"Base.VanMeltingPointMetal",
 	},
 }
-ProfessionVehicles.VanMobileMechanics = {
-	LAA = {
-		"Base.VanMobileMechanics",
+ProfessionVehicles.PickUpTruck = {
+	Louisville = {
+		"Base.PickUpTruck_Camo",
 	},
 }
-ProfessionVehicles.VanUtility = {
-	LAA = {
-		"Base.PickUpTruckLightsAirport",
+ProfessionVehicles.PickUpVan = {
+	Louisville = {
+		"Base.PickUpVan_Camo",
 	},
 }
 ProfessionVehicles.VanSeats_Mural = {
@@ -388,6 +388,56 @@ ProfessionVehicles.VanSeats_Mural = {
 	},
 	Alternate = {
 		"Base.VanSeats",
+	},
+}
+ProfessionVehicles.VanMechanic = {
+	Louisville = {
+		"Base.StepVan_LouisvilleMotorShop",
+		"Base.VanMobileMechanics",
+	},
+	Muldraugh = {
+		"Base.VanKorshunovs",
+		"Base.VanMobileMechanics",
+	},
+	Riverside = {
+		"Base.VanBrewsterHarbin",
+		"Base.VanMobileMechanics",
+	},
+	Rosewood = {
+		"Base.StepVan_CompleteRepairShop",
+		"Base.VanPlattAuto",
+		"Base.VanMobileMechanics",
+	},
+	WestPoint = {
+		"Base.VanMooreMechanics",
+		"Base.VanMobileMechanics",
+	},
+	General = {
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.StepVan_CompleteRepairShop",
+		"Base.StepVan_LouisvilleMotorShop",
+		"Base.VanBrewsterHarbin",
+		"Base.VanMooreMechanics",
+		"Base.VanPlattAuto",
+	},
+	Alternate = {
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.VanMobileMechanics",
+		"Base.StepVan_CompleteRepairShop",
+		"Base.StepVan_LouisvilleMotorShop",
+		"Base.VanBrewsterHarbin",
+		"Base.VanMooreMechanics",
+		"Base.VanPlattAuto",
+	},
+	LAA = {
+		"Base.VanMobileMechanics",
 	},
 }
 ProfessionVehicles.PickUpVanBuilder = ProfessionVehicles.VanBuilder

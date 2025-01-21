@@ -13,11 +13,6 @@ RZSVanCamp = {}
 --- @return ArrayList
 function RZSVanCamp.getBriefcaseClutter() end
 
---- @public
---- @static
---- @return ArrayList
-function RZSVanCamp.getForestClutter() end
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------

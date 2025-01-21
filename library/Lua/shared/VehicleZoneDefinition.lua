@@ -128,11 +128,11 @@ VehicleZoneDistribution.trailerpark.vehicles["Base.CarNormal"] = {
 }
 VehicleZoneDistribution.trailerpark.vehicles["Base.SmallCar"] = {
 	index = -1,
-	spawnChance = 25,
+	spawnChance = 29,
 }
 VehicleZoneDistribution.trailerpark.vehicles["Base.SmallCar02"] = {
 	index = -1,
-	spawnChance = 25,
+	spawnChance = 29,
 }
 VehicleZoneDistribution.trailerpark.vehicles["Base.CarStationWagon"] = {
 	index = -1,
@@ -148,11 +148,11 @@ VehicleZoneDistribution.trailerpark.vehicles["Base.StepVan"] = {
 }
 VehicleZoneDistribution.trailerpark.vehicles["Base.PickUpTruck_Camo"] = {
 	index = -1,
-	spawnChance = 5,
+	spawnChance = 1,
 }
 VehicleZoneDistribution.trailerpark.vehicles["Base.PickUpVan_Camo"] = {
 	index = -1,
-	spawnChance = 5,
+	spawnChance = 1,
 }
 VehicleZoneDistribution.trailerpark.chanceToSpawnBurnt = 20
 VehicleZoneDistribution.trailerpark.baseVehicleQuality = 0.5
@@ -665,11 +665,11 @@ VehicleZoneDistribution.farm = {}
 VehicleZoneDistribution.farm.vehicles = {}
 VehicleZoneDistribution.farm.vehicles["Base.PickUpTruck"] = {
 	index = -1,
-	spawnChance = 10,
+	spawnChance = 14,
 }
 VehicleZoneDistribution.farm.vehicles["Base.PickUpVan"] = {
 	index = -1,
-	spawnChance = 10,
+	spawnChance = 14,
 }
 VehicleZoneDistribution.farm.vehicles["Base.Trailer"] = {
 	index = -1,
@@ -685,11 +685,11 @@ VehicleZoneDistribution.farm.vehicles["Base.Trailer_Livestock"] = {
 }
 VehicleZoneDistribution.farm.vehicles["Base.PickUpTruck_Camo"] = {
 	index = -1,
-	spawnChance = 5,
+	spawnChance = 1,
 }
 VehicleZoneDistribution.farm.vehicles["Base.PickUpVan_Camo"] = {
 	index = -1,
-	spawnChance = 5,
+	spawnChance = 1,
 }
 VehicleZoneDistribution.farm.chanceToSpawnNormal = 0
 VehicleZoneDistribution.farm.chanceToSpawnSpecial = 0

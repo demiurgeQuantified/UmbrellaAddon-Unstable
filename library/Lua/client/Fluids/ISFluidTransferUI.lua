@@ -22,6 +22,7 @@
 ---@field panelLeft any
 ---@field panelLeftText any
 ---@field panelLeftX any
+---@field panelMiddle any
 ---@field panelRight any
 ---@field panelRightText any
 ---@field panelRightX any
@@ -43,6 +44,9 @@ ISFluidTransferUI.cheatTransfer = false
 
 ---@return any
 function ISFluidTransferUI.OpenPanel(_player, _container, _source) end
+
+---@return any
+function ISFluidTransferUI:arrangePanels() end
 
 ---@return any
 function ISFluidTransferUI:close() end

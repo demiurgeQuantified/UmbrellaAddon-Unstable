@@ -649,6 +649,10 @@ function InventoryItem:getInvHeat() end
 function InventoryItem:getIsCraftingConsumed() end
 
 --- @public
+--- @return string
+function InventoryItem:getItemAfterCleaning() end
+
+--- @public
 --- @return number
 function InventoryItem:getItemCapacity() end
 
@@ -899,6 +903,10 @@ function InventoryItem:getReplaceTypesMap() end
 --- @public
 --- @return ArrayList
 function InventoryItem:getRequireInHandOrInventory() end
+
+--- @public
+--- @return List
+function InventoryItem:getResearchableRecipes() end
 
 --- @public
 --- @return ItemContainer the rightClickContainer
@@ -1183,6 +1191,10 @@ function InventoryItem:hasReplaceType(key) end
 
 --- @public
 --- @return boolean
+function InventoryItem:hasResearchableRecipes() end
+
+--- @public
+--- @return boolean
 function InventoryItem:hasSharpness() end
 
 --- @public
@@ -1299,6 +1311,10 @@ function InventoryItem:isEmittingLight() end
 
 --- @public
 --- @return boolean
+function InventoryItem:isEmptyOfFluid() end
+
+--- @public
+--- @return boolean
 function InventoryItem:isEntityValid() end
 
 --- @public
@@ -1311,6 +1327,11 @@ function InventoryItem:isEquippedNoSprint() end
 
 --- @public
 --- @return boolean
+--- @overload fun(self: InventoryItem, arg0: IsoGameCharacter): boolean
+function InventoryItem:isFakeEquipped() end
+
+--- @public
+--- @return boolean
 function InventoryItem:isFavorite() end
 
 --- @public
@@ -1319,7 +1340,15 @@ function InventoryItem:isFishingLure() end
 
 --- @public
 --- @return boolean
+function InventoryItem:isFluidContainer() end
+
+--- @public
+--- @return boolean
 function InventoryItem:isFood() end
+
+--- @public
+--- @return boolean
+function InventoryItem:isFullOfFluid() end
 
 --- @public
 --- @return boolean
@@ -1351,6 +1380,10 @@ function InventoryItem:isKeepOnDeplete() end
 
 --- @public
 --- @return boolean
+function InventoryItem:isKeyRing() end
+
+--- @public
+--- @return boolean
 function InventoryItem:isMemento() end
 
 --- @public
@@ -1373,6 +1406,10 @@ function InventoryItem:isRemoteController() end
 --- @public
 --- @return boolean
 function InventoryItem:isRequiresEquippedBothHands() end
+
+--- @public
+--- @return boolean
+function InventoryItem:isSpice() end
 
 --- @public
 --- @return boolean
@@ -1446,6 +1483,22 @@ function InventoryItem:playActivateSound() end
 --- @public
 --- @return nil
 function InventoryItem:playDeactivateSound() end
+
+--- @public
+--- @return nil
+function InventoryItem:randomizeCondition() end
+
+--- @public
+--- @return nil
+function InventoryItem:randomizeGeneralCondition() end
+
+--- @public
+--- @return nil
+function InventoryItem:randomizeHeadCondition() end
+
+--- @public
+--- @return nil
+function InventoryItem:randomizeSharpness() end
 
 --- @public
 --- @return nil
@@ -2292,6 +2345,10 @@ function InventoryItem:toString() end
 --- @param arg0 integer
 --- @return string
 function InventoryItem:tryGetWorldStaticModelByIndex(arg0) end
+
+--- @public
+--- @return nil
+function InventoryItem:unsealIfNotFull() end
 
 --- @public
 --- @return nil

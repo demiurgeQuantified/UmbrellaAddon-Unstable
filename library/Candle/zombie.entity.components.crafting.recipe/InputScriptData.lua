@@ -53,6 +53,10 @@ function InputScriptData:isCachedCanConsume() end
 
 --- @public
 --- @return boolean
+function InputScriptData:isDestroy() end
+
+--- @public
+--- @return boolean
 function InputScriptData:isInputItemsSatisfied() end
 
 --- @public

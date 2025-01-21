@@ -77,6 +77,12 @@ function IAnimatable:getVariableBoolean(arg0) end
 
 --- @public
 --- @param arg0 string
+--- @param arg1 Enum
+--- @return Enum
+function IAnimatable:getVariableEnum(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
 --- @param arg1 number
 --- @return number
 function IAnimatable:getVariableFloat(arg0, arg1) end

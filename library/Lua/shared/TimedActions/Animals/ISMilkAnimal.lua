@@ -7,6 +7,7 @@
 ---@field lastTimer any
 ---@field maxTime any
 ---@field milkAnim any
+---@field sound any
 ---@field stopOnAim any
 ---@field timePerLiter any
 ---@field timer any
@@ -42,6 +43,9 @@ function ISMilkAnimal:start() end
 
 ---@return any
 function ISMilkAnimal:stop() end
+
+---@return any
+function ISMilkAnimal:stopSound() end
 
 ---@return any
 function ISMilkAnimal:stress() end

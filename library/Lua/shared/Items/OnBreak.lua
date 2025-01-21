@@ -25,6 +25,9 @@ function OnBreak.BaseballBat_Rakehead(item, player) end
 function OnBreak.BaseballBat_Sawblade(item, player) end
 
 ---@return any
+function OnBreak.BrassScrap(item, player) end
+
+---@return any
 function OnBreak.BrokenGlass(item, player) end
 
 ---@return any
@@ -170,6 +173,9 @@ function OnBreak.SpearBreadKnife(item, player) end
 
 ---@return any
 function OnBreak.SpearButterKnife(item, player) end
+
+---@return any
+function OnBreak.SpearCrude(item, player) end
 
 ---@return any
 function OnBreak.SpearCrudeLong(item, player) end

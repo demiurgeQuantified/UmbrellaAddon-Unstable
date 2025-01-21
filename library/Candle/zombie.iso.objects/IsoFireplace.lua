@@ -19,6 +19,10 @@ function IsoFireplace:addToWorld() end
 
 --- @public
 --- @return nil
+function IsoFireplace:afterRotated() end
+
+--- @public
+--- @return nil
 function IsoFireplace:extinguish() end
 
 --- @public
@@ -53,6 +57,10 @@ function IsoFireplace:isLit() end
 --- @public
 --- @return boolean
 function IsoFireplace:isSmouldering() end
+
+--- @public
+--- @return boolean
+function IsoFireplace:isTemperatureChanging() end
 
 --- @public
 --- @param input ByteBuffer

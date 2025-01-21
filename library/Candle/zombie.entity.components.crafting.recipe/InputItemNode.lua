@@ -34,6 +34,10 @@ function InputItemNode:isExpanded() end
 
 --- @public
 --- @return boolean
+function InputItemNode:isItemCount() end
+
+--- @public
+--- @return boolean
 function InputItemNode:isKeep() end
 
 --- @public
@@ -47,10 +51,6 @@ function InputItemNode:isToolLeft() end
 --- @public
 --- @return boolean
 function InputItemNode:isToolRight() end
-
---- @public
---- @return boolean
-function InputItemNode:isUse() end
 
 --- @public
 --- @param arg0 boolean

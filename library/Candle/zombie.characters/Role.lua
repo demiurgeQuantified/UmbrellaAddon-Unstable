@@ -50,6 +50,14 @@ function Role:getDescription() end
 function Role:getName() end
 
 --- @public
+--- @return boolean
+function Role:hasAdminPower() end
+
+--- @public
+--- @return boolean
+function Role:hasAdminTool() end
+
+--- @public
 --- @param arg0 Capability
 --- @return boolean
 function Role:haveCapability(arg0) end

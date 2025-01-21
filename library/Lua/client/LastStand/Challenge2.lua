@@ -28,6 +28,7 @@ Challenge2.upgradeScreen = {}
 Challenge2.radarPanel = {}
 Challenge2.id = "Challenge2"
 Challenge2.image = "media/lua/client/LastStand/Challenge2.png"
+Challenge2.video = "HouseInTheWoods.bik"
 Challenge2.world = "challengemaps/Challenge1"
 Challenge2.x = 153
 Challenge2.y = 158

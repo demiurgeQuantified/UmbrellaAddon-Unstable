@@ -28,6 +28,7 @@
 --- @field public WorldVersion_FastMoveCheat integer
 --- @field public WorldVersion_FishingCheat integer
 --- @field public WorldVersion_HutchAndVehicleAnimalFormat integer
+--- @field public WorldVersion_InventoryItemUsesInteger integer
 --- @field public WorldVersion_IsoCompostHealthValues integer
 --- @field public WorldVersion_ObjectID integer
 --- @field public WorldVersion_PlayerExtraInfoFlags integer

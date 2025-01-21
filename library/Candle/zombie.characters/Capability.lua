@@ -22,7 +22,6 @@
 --- @field public CanSeePlayersStats Capability
 --- @field public CanSetupNonPVPZone Capability
 --- @field public CanSetupSafehouses Capability
---- @field public CanSetupSafezones Capability
 --- @field public CanTalkEvenBeingInvisible Capability
 --- @field public CantBeBannedByAnticheat Capability
 --- @field public CantBeBannedByUser Capability
@@ -36,7 +35,6 @@
 --- @field public CreateHorde Capability
 --- @field public CreateStory Capability
 --- @field public DebugConsole Capability
---- @field public DisconnectPlayerByConnectionNumber Capability
 --- @field public DisplayServerMessage Capability
 --- @field public EditItem Capability
 --- @field public FactionCheat Capability
@@ -46,7 +44,6 @@
 --- @field public HideFromSteamUserList Capability
 --- @field public InspectPlayerInventory Capability
 --- @field public KickUser Capability
---- @field public LogDirectlyInvisibleOrInvincible Capability
 --- @field public LoginOnServer Capability
 --- @field public MakeEventsAlarmGunshot Capability
 --- @field public ManipulateMods Capability
@@ -56,9 +53,9 @@
 --- @field public ModifyDB Capability
 --- @field public ModifyNetworkUsers Capability
 --- @field public None Capability
---- @field public OpenAdminPanel Capability
 --- @field public PopmanManage Capability
 --- @field public PriorityLogin Capability
+--- @field public PVPLogTool Capability
 --- @field public QuitWorld Capability
 --- @field public ReadUserLog Capability
 --- @field public ReloadLuaFiles Capability
@@ -66,7 +63,6 @@
 --- @field public RolesWrite Capability
 --- @field public SandboxOptions Capability
 --- @field public SaveWorld Capability
---- @field public SeeConnectionInfoOfPlayer Capability
 --- @field public SeeDB Capability
 --- @field public SeeNetworkUsers Capability
 --- @field public SeePlayersConnected Capability
@@ -78,7 +74,6 @@
 --- @field public TeleportPlayerToAnotherPlayer Capability
 --- @field public TeleportToCoordinates Capability
 --- @field public TeleportToPlayer Capability
---- @field public ToggleCantBeHitByPlayers Capability
 --- @field public ToggleGodModEveryone Capability
 --- @field public ToggleGodModHimself Capability
 --- @field public ToggleInvincibleHimself Capability
@@ -98,7 +93,6 @@
 --- @field public UseHealthCheat Capability
 --- @field public UseMechanicsCheat Capability
 --- @field public UseMovablesCheat Capability
---- @field public UseNightLengthModifier Capability
 --- @field public UseTimedActionInstantCheat Capability
 --- @field public UseZombieDontAttackCheat Capability
 --- @field public WorkWithUserlog Capability

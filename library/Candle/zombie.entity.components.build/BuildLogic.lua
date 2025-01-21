@@ -17,6 +17,10 @@ function BuildLogic:canPerformCurrentRecipe() end
 function BuildLogic:getAllBuildableRecipes() end
 
 --- @public
+--- @return ArrayList
+function BuildLogic:getAllConsumedItems() end
+
+--- @public
 --- @return CraftRecipe
 function BuildLogic:getRecipe() end
 

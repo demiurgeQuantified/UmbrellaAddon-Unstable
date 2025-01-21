@@ -5,6 +5,7 @@
 ---@field lastTimer any
 ---@field maxTime any
 ---@field nestbox any
+---@field sound any
 ---@field timePerEgg any
 ---@field timer any
 ---@field [any] any
@@ -33,6 +34,9 @@ function ISHutchGrabEgg:start() end
 
 ---@return any
 function ISHutchGrabEgg:stop() end
+
+---@return any
+function ISHutchGrabEgg:stopSound() end
 
 ---@return any
 function ISHutchGrabEgg:update() end

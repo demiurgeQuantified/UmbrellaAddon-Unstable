@@ -164,6 +164,10 @@ function SyncPlayerStatsPacket:setData(arg0) end
 function SyncPlayerStatsPacket:sync(arg0, arg1) end
 
 --- @public
+--- @return boolean
+function SyncPlayerStatsPacket:tryProcessInternal() end
+
+--- @public
 --- @param arg0 ByteBufferWriter
 --- @return nil
 function SyncPlayerStatsPacket:write(arg0) end

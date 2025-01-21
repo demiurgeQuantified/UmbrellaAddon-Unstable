@@ -263,6 +263,9 @@ function CharacterCreationMain:setVisible(bVisible, joypadData) end
 function CharacterCreationMain:shouldShowAllOutfits() end
 
 ---@return any
+function CharacterCreationMain:showColorPicker(picker) end
+
+---@return any
 function CharacterCreationMain:syncTorsoWithUI() end
 
 ---@return any

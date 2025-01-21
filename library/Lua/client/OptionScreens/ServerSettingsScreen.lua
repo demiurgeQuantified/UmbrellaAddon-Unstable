@@ -1768,6 +1768,9 @@ SettingsTable = {
 						name = "Basement.SpawnFrequency",
 						title = "Basements",
 					},
+					{
+						name = "MaximumFireFuelHours",
+					},
 				},
 			},
 			{
@@ -1929,6 +1932,9 @@ SettingsTable = {
 						name = "MuscleStrainFactor",
 					},
 					{
+						name = "DiscomfortFactor",
+					},
+					{
 						name = "WoundInfectionFactor",
 					},
 					{
@@ -1942,6 +1948,9 @@ SettingsTable = {
 					},
 					{
 						name = "MultiHitZombies",
+					},
+					{
+						name = "FirearmUseDamageChance",
 					},
 					{
 						name = "FirearmNoiseMultiplier",

@@ -43,6 +43,11 @@ StoryClutter.BarnClutter = {
 	"Base.JawboneBovide",
 	"Base.Toolbox_Wooden",
 	"Base.Fleshing_Tool",
+	"Base.Whetstone",
+	"Base.BarbedWire",
+	"Base.IronBandSmall",
+	"Base.HandAxe_Old",
+	"Base.Axe_Old",
 }
 StoryClutter.BathroomSinkClutter = {
 	"Base.Comb",
@@ -92,6 +97,37 @@ StoryClutter.BBQClutter = {
 	"Base.Pop",
 	"Base.PorkChop",
 	"Base.Steak",
+	"Base.Hotdog_single",
+	"Base.BeerEmpty",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
+	"Base.BeerCanEmpty",
+}
+StoryClutter.BeachPartyClutter = {
+	"Base.Crisps",
+	"Base.Crisps3",
+	"Base.Pop",
+	"Base.Whiskey",
+	"Base.CigaretteSingle",
+	"Base.BeerBottle",
+	"Base.BeerBottle",
+	"Base.BeerCan",
+	"Base.BeerCan",
+	"Base.BeerCan",
+	"Base.BeerCan",
+	"Base.BeerCan",
+	"Base.BeerCan",
+	"Base.Hat_Visor_WhiteTINT",
+	"Base.BathTowel",
+	"Base.Glasses_Sun",
+	"Base.Glasses_SunCheap",
+	"Base.Glasses_SwimmingGoggles",
+	"Base.Hotdog",
+	"Base.Bikini_TINT",
+	"Base.BeerEmpty",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
+	"Base.BeerCanEmpty",
 }
 StoryClutter.BedClutter = {
 	"Base.Shirt_FormalTINT",
@@ -251,6 +287,10 @@ StoryClutter.DormClutter = {
 	"Base.CorrectionFluid",
 	"Base.Specimen_Butterflies",
 	"Base.KeyRing_StinkyFace",
+	"Base.CanPipe",
+	"Base.Glasses_SunCheap",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
 }
 StoryClutter.FarmStorageClutter = {
 	"Base.Lantern_Hurricane",
@@ -331,6 +371,7 @@ StoryClutter.FarmStorageClutter = {
 	"Base.BookFarming4",
 	"Base.BookFarming5",
 	"Base.Shotgun",
+	"DoubleBarrelShotgun",
 	"Base.Jack",
 	"Base.Extinguisher",
 	"Base.BlowerFan",
@@ -361,6 +402,15 @@ StoryClutter.FarmStorageClutter = {
 	"Base.WaterDispenserBottle",
 	"Base.ShotgunShells",
 	"Base.Calipers",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
+	"Base.BarbedWire",
+	"Base.SheetMetalSnips",
+	"Base.IronBandSmall",
+	"Base.MasonsChisel",
+	"Base.MasonsTrowel",
+	"Base.HandAxe_Old",
+	"Base.Axe_Old",
 }
 StoryClutter.FootballNightDrinks = {
 	"Base.BeerPack",
@@ -371,6 +421,8 @@ StoryClutter.FootballNightDrinks = {
 	"Base.CigaretteSingle",
 	"Base.Wine",
 	"Base.Wine2",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
 }
 StoryClutter.FootballNightSnacks = {
 	"Base.Crisps",
@@ -484,6 +536,13 @@ StoryClutter.GarageStorageClutter = {
 	"Base.Bag_GardenBasket",
 	"Base.WaterDispenserBottle",
 	"Base.Calipers",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
+	"Base.SheetMetalSnips",
+	"Base.IronBandSmall",
+	"Base.MasonsChisel",
+	"Base.MasonsTrowel",
+	"Base.HandAxe",
 }
 StoryClutter.GigamartClutter = {
 	"Base.CreditCard",
@@ -611,6 +670,10 @@ StoryClutter.HoedownClutter = {
 	"Base.MetalCup",
 	"Base.PillsVitamins",
 	"Base.Violin",
+	"Base.BeerEmpty",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
+	"Base.BeerCanEmpty",
 }
 StoryClutter.HousePartyClutter = {
 	"Base.Pop",
@@ -647,7 +710,7 @@ StoryClutter.KidClutter = {
 	"Base.JacquesBeaver",
 	"Base.MoleyMole",
 	"Base.PancakeHedgehog",
-	"Base.Pancho",
+	"Base.PanchoDog",
 	"Base.Plushabug",
 	"Base.Pillow_Happyface",
 	"Base.Pillow_Star",
@@ -713,6 +776,7 @@ StoryClutter.KidClutter = {
 	"Base.MagazineWordsearch",
 	"Base.Clitter",
 	"Base.GuitarPick",
+	"Base.Glasses_SunCheap",
 }
 StoryClutter.KitchenCounterClutter = {
 	"Base.Dogfood",
@@ -830,6 +894,7 @@ StoryClutter.KitchenCounterClutter = {
 	"Base.ParkingTicket",
 	"Base.SpeedingTicket",
 	"Base.Postcard",
+	"Base.Whetstone",
 }
 StoryClutter.KitchenSinkClutter = {
 	"Base.CleaningLiquid2",
@@ -876,6 +941,7 @@ StoryClutter.LaundryRoomClutter = {
 	"Base.Underpants_White",
 	"Base.WineBox",
 	"Base.Vinegar_Jug",
+	"Base.SewingKit",
 }
 StoryClutter.LivingroomClutter = {
 	"Base.TVMagazine",
@@ -928,6 +994,42 @@ StoryClutter.MedicalClutter = {
 	"Base.Gloves_Surgical",
 	"Base.RubberHose",
 }
+StoryClutter.MurderSceneClutter = {
+	"Base.PetrolCan",
+	"Base.Hammer",
+	"Base.Tarp",
+	"Base.Rope",
+	"Base.DuctTape",
+	"Base.Saw",
+	"Base.Garbagebag",
+	"Base.Scissors",
+	"Base.BlowTorch",
+	"Base.BallPeenHammer",
+	"Base.Gloves_Surgical",
+	"Base.ClubHammer",
+	"Base.Gloves_LeatherGlovesBlack",
+	"Base.Hat_BalaclavaFull",
+	"Base.Screwdriver",
+	"Base.Zipties",
+	"Base.EmptySandbag",
+	"Base.SmashedBottle",
+	"Base.LeadPipe",
+	"Base.StraightRazor",
+	"Base.TireIron",
+	"Base.SuspiciousPackage",
+	"Base.MoneyBundle",
+	"Base.Briefcase_Money",
+}
+StoryClutter.NastyMattressClutter = {
+	"Base.BeerCanEmpty",
+	"Base.BeerEmpty",
+	"Base.SmashedBottle",
+	"Base.LighterDisposable",
+	"Base.CigaretteRollingPapers",
+	"Base.HottieZ",
+	"Base.RippedSheetsDirty",
+	"Base.CanPipe",
+}
 StoryClutter.OldShelterClutter = {
 	"Base.GuitarAcoustic",
 	"Base.Harmonica",
@@ -943,6 +1045,7 @@ StoryClutter.OldShelterClutter = {
 	"Base.Book",
 	"Base.Paperback",
 	"Base.Spork",
+	"Base.Whetstone",
 }
 StoryClutter.OfficeCarDealerClutter = {
 	"BusinessCard_Nolans",
@@ -1080,7 +1183,7 @@ StoryClutter.PillowClutter = {
 	"Base.JacquesBeaver",
 	"Base.MoleyMole",
 	"Base.PancakeHedgehog",
-	"Base.Pancho",
+	"Base.PanchoDog",
 	"Base.Plushabug",
 	"Base.Pillow_Happyface",
 	"Base.Pillow_Heart",
@@ -1134,6 +1237,8 @@ StoryClutter.RichJerkClutter = {
 	"Base.Suitcase",
 	"Base.Wallet_Male",
 	"Base.Passport",
+	"Base.Pager",
+	"Base.CordlessPhone",
 }
 StoryClutter.SadCampsiteClutter = {
 	"Base.TinCanEmpty",
@@ -1237,6 +1342,7 @@ StoryClutter.SurvivalistCampsiteClutter = {
 	"Base.HottieZ",
 	"Base.MetalCup",
 	"Base.Harmonica",
+	"Base.Whetstone",
 }
 StoryClutter.TwiggyClutter = {
 	"Base.BeerBottle",
@@ -1253,6 +1359,8 @@ StoryClutter.TwiggyClutter = {
 	"Base.Vermouth",
 	"Base.Vodka",
 	"Base.Whiskey",
+	"Base.BeerEmpty",
+	"Base.BeerCanEmpty",
 }
 StoryClutter.UtilityToolClutter = {
 	"Base.Hammer",
@@ -1263,6 +1371,29 @@ StoryClutter.UtilityToolClutter = {
 	"Base.Shovel2",
 	"Base.Sledgehammer",
 	"Base.Sledgehammer2",
+}
+StoryClutter.VanCampClutter = {
+	"Base.Phonebook",
+	"Base.HottieZ",
+	"Base.Socks_Ankle_Black",
+	"Base.Boxers_White",
+	"Base.Suit_Jacket",
+	"Base.Suit_JacketTINT",
+	"Base.Trousers_Suit",
+	"Base.Tie_Full",
+	"Base.Pillow",
+	"Base.ToiletPaper",
+	"Base.Shirt_FormalWhite_ShortSleeve",
+	"Base.Shirt_FormalWhite",
+	"Base.Shirt_FormalWhite_ShortSleeve",
+	"Base.Shirt_FormalWhite",
+	"Base.Hotdog",
+	"Base.Paperwork",
+	"Base.ParkingTicket",
+	"Base.Paperback_SelfHelp",
+	"Base.GenericMail",
+	"Base.PhotoAlbum",
+	"Base.Photo",
 }
 StoryClutter.WatchClutter = {
 	"Base.WristWatch_Right_ClassicBlack",

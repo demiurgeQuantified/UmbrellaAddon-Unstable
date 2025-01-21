@@ -6,6 +6,7 @@
 ---@field eatAudio any
 ---@field eatSound any
 ---@field ignoreHandsWounds any
+---@field isEating any
 ---@field item any
 ---@field maxTime any
 ---@field openFlame any
@@ -30,6 +31,9 @@ function ISEatFoodAction:getDuration() end
 
 ---@return any
 function ISEatFoodAction:getRequiredItem() end
+
+---@return any
+function ISEatFoodAction:getSecondItem() end
 
 ---@return any
 function ISEatFoodAction:isEatingRemaining(item) end

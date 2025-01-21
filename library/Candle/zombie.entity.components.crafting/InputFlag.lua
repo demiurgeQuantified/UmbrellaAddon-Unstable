@@ -7,10 +7,12 @@
 --- @field public AllowFrozenItem InputFlag
 --- @field public AllowRottenItem InputFlag
 --- @field public AutomationOnly InputFlag
+--- @field public CanBeDoneFromFloor InputFlag
 --- @field public CopyClothing InputFlag
 --- @field public DontPutBack InputFlag
 --- @field public DontReplace InputFlag
 --- @field public FakeOutput InputFlag
+--- @field public FullOfWater InputFlag
 --- @field public HandcraftOnly InputFlag
 --- @field public InheritAmmunition InputFlag
 --- @field public InheritColor InputFlag
@@ -24,6 +26,7 @@
 --- @field public IsDamaged InputFlag
 --- @field public IsEmpty InputFlag
 --- @field public IsEmptyContainer InputFlag
+--- @field public IsExclusive InputFlag
 --- @field public IsFull InputFlag
 --- @field public IsHeadPart InputFlag
 --- @field public IsNotDull InputFlag
@@ -33,12 +36,14 @@
 --- @field public IsUndamaged InputFlag
 --- @field public IsWholeFoodItem InputFlag
 --- @field public IsWorn InputFlag
+--- @field public ItemCount InputFlag
 --- @field public ItemIsEnergy InputFlag
 --- @field public ItemIsFluid InputFlag
 --- @field public ItemIsUses InputFlag
 --- @field public MayDegrade InputFlag
 --- @field public MayDegradeHeavy InputFlag
 --- @field public MayDegradeLight InputFlag
+--- @field public MostlyFullOfWater InputFlag
 --- @field public NoBrokenItems InputFlag
 --- @field public NotEmpty InputFlag
 --- @field public NotFull InputFlag

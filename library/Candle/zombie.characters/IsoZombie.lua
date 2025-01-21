@@ -181,6 +181,11 @@ function IsoZombie:calcHitDir(wielder, weapon, out) end
 function IsoZombie:canBeDeletedUnnoticed(minDistance) end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function IsoZombie:canSeeHeadSquare(arg0) end
+
+--- @public
 --- @return boolean
 function IsoZombie:cantBite() end
 
@@ -204,6 +209,11 @@ function IsoZombie:clothingItemChanged(itemGuid) end
 --- @param obj IsoObject
 --- @return nil
 function IsoZombie:collideWith(obj) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function IsoZombie:couldSeeHeadSquare(arg0) end
 
 --- @public
 --- @return nil
@@ -259,6 +269,11 @@ function IsoZombie:getEatSpeed() end
 --- @public
 --- @return number
 function IsoZombie:getFootstepVolume() end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return IsoGridSquare
+function IsoZombie:getHeadSquare(arg0) end
 
 --- @public
 --- @return Vector2

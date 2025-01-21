@@ -14,6 +14,12 @@ OutputScript = {}
 function OutputScript:OnScriptsLoaded(arg0) end
 
 --- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+--- @overload fun(self: OutputScript, arg0: Item): boolean
+function OutputScript:canOutputItem(arg0) end
+
+--- @public
 --- @param arg0 Energy
 --- @return boolean
 function OutputScript:containsEnergy(arg0) end

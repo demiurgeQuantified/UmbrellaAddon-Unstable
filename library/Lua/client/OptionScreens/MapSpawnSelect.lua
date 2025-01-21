@@ -12,7 +12,11 @@
 ---@field nextButton any
 ---@field notSortedList any
 ---@field previousScreen any
+---@field randomButton any
 ---@field richText any
+---@field seedLabel any
+---@field seedPanel any
+---@field seedTextBox any
 ---@field selectedMapIndex any
 ---@field selectedRegion any
 ---@field sortedList any
@@ -21,6 +25,9 @@
 ---@field textEntryLabel any
 ---@field [any] any
 MapSpawnSelect = ISPanelJoypad:derive("MapSpawnSelect")
+
+---@return any
+function MapSpawnSelect:checkSeed() end
 
 ---@return any
 function MapSpawnSelect:checkSorted(item) end
@@ -35,10 +42,16 @@ function MapSpawnSelect:clickNext() end
 function MapSpawnSelect:create() end
 
 ---@return any
+function MapSpawnSelect:discardGenParams() end
+
+---@return any
 function MapSpawnSelect:doDrawItem(y, item, alt) end
 
 ---@return any
 function MapSpawnSelect:fillList() end
+
+---@return any
+function MapSpawnSelect:generateNewSeed() end
 
 ---@return any
 function MapSpawnSelect:getChallengeSpawnRegion() end
@@ -93,6 +106,9 @@ function MapSpawnSelect:recalculateMapSize() end
 
 ---@return any
 function MapSpawnSelect:render() end
+
+---@return any
+function MapSpawnSelect:saveGenParams() end
 
 ---@return any
 function MapSpawnSelect:useDefaultSpawnRegion() end

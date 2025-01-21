@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISBuildPanel : ISPanel
+---@field _categoryString any
 ---@field _filterString any
 ---@field background any
 ---@field buildEntity any
@@ -54,7 +55,7 @@ function ISBuildPanel:createRecipePanel() end
 function ISBuildPanel:createRecipesColumn() end
 
 ---@return any
-function ISBuildPanel:filterRecipeList(_category) end
+function ISBuildPanel:filterRecipeList() end
 
 ---@return any
 function ISBuildPanel:getCategoryList() end
@@ -97,6 +98,9 @@ function ISBuildPanel:refreshList() end
 
 ---@return any
 function ISBuildPanel:render() end
+
+---@return any
+function ISBuildPanel:ReselectRecipeOrFirst(_recipe) end
 
 ---@return any
 function ISBuildPanel:setRecipeFilter(_filterString) end

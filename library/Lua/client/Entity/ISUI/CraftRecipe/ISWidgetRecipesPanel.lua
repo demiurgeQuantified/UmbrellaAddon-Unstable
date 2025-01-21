@@ -3,6 +3,7 @@
 ---@class ISWidgetRecipesPanel : ISPanel
 ---@field activeTooltip any
 ---@field callbackTarget any
+---@field expandToFitTooltip any
 ---@field logic any
 ---@field player any
 ---@field recipeFilterPanel any
@@ -19,6 +20,7 @@
 ---@field tooltipCounterTime any
 ---@field tooltipLogic any
 ---@field tooltipRecipe any
+---@field wrapTooltipText any
 ---@field [any] any
 ISWidgetRecipesPanel = ISPanel:derive("ISWidgetRecipesPanel")
 
@@ -41,7 +43,7 @@ function ISWidgetRecipesPanel:createRecipeListPanel(_parentTable) end
 function ISWidgetRecipesPanel:deactivateTooltip() end
 
 ---@return any
-function ISWidgetRecipesPanel:filterRecipeList(_category) end
+function ISWidgetRecipesPanel:filterRecipeList() end
 
 ---@return any
 function ISWidgetRecipesPanel:getActivePanel() end

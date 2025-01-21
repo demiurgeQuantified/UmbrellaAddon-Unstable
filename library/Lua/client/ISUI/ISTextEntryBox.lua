@@ -70,6 +70,9 @@ function ISTextEntryBox:onCommandEntered() end
 function ISTextEntryBox:onJoypadDown(button, joypadData) end
 
 ---@return any
+function ISTextEntryBox:onLostFocus() end
+
+---@return any
 function ISTextEntryBox:onMouseMove(dx, dy) end
 
 ---@return any

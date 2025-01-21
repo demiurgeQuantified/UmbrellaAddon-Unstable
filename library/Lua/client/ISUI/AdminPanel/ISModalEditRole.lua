@@ -7,6 +7,7 @@
 ---@field buttonColorLabel any
 ---@field capabilities any
 ---@field close any
+---@field color any
 ---@field colorPicker any
 ---@field filter any
 ---@field height any

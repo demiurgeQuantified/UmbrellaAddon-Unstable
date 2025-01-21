@@ -4,6 +4,7 @@
 ---@field combo any
 ---@field debugChunkState any
 ---@field sliderLevels any
+---@field sliderScale any
 ---@field sliderWidth any
 ---@field [any] any
 DebugChunkState_ObjectAtCursorPanel = ISPanel:derive("DebugChunkState_ObjectAtCursorPanel")
@@ -16,6 +17,9 @@ function DebugChunkState_ObjectAtCursorPanel:onChangeObject() end
 
 ---@return any
 function DebugChunkState_ObjectAtCursorPanel:onLevelsChanged(value, slider) end
+
+---@return any
+function DebugChunkState_ObjectAtCursorPanel:onScaleChanged(value, slider) end
 
 ---@return any
 function DebugChunkState_ObjectAtCursorPanel:onWidthChanged(value, slider) end

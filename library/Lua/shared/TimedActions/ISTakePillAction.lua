@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISTakePillAction : ISBaseTimedAction
+---@field isEating any
 ---@field item any
 ---@field maxTime any
 ---@field stopOnAim any
