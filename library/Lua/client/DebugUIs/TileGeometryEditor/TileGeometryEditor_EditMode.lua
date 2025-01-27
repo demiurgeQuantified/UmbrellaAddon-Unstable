@@ -447,6 +447,102 @@ function TileGeometryEditor_EditMode_SceneTiles:renderTileName() end
 ---@return TileGeometryEditor_EditMode_SceneTiles
 function TileGeometryEditor_EditMode_SceneTiles:new(editor) end
 
+---@class TileGeometryEditor_CurtainPropertiesPanel : ISPanel
+---@field curtainOffsetEntry any
+---@field curtainOffsetLabel any
+---@field editor any
+---@field movingFace any
+---@field scene any
+---@field selectedTileForCurtain any
+---@field [any] any
+TileGeometryEditor_CurtainPropertiesPanel = ISPanel:derive("TileGeometryEditor_CurtainPropertiesPanel")
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:configGizmo() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:createChildren() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:createEntry(x, y, w, h, id) end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:getCurtainEdge(sprite) end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:isTranslatingCurtain() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:onButtonClear() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:onButtonCurtainN() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:onButtonCurtainW() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:selectedTileHasCurtainOffsetProperty() end
+
+---@return any
+function TileGeometryEditor_CurtainPropertiesPanel:toUI() end
+
+---@return TileGeometryEditor_CurtainPropertiesPanel
+function TileGeometryEditor_CurtainPropertiesPanel:new(x, y, width, height, editor) end
+
+---@class TileGeometryEditor_EditMode_Curtain : TileGeometryEditor_EditMode
+---@field button1 any
+---@field buttonPanel any
+---@field previousAnimation any
+---@field previousTool any
+---@field propertiesPanel any
+---@field selectedTile any
+---@field tilePicker3 any
+---@field [any] any
+TileGeometryEditor_EditMode_Curtain = TileGeometryEditor_EditMode:derive("TileGeometryEditor_EditMode_Curtain")
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:activate() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:configGizmo() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:createChildren() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:deactivate() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:onButtonToggleGeometry() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:onMouseDownScene(x, y) end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:onSave() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:prerenderEditor() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:prerenderProperties() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:renderItemBackground(tilesetName, col, row, x, y, w, h) end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:renderSceneTiles() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:selectedTileHasCurtainOffsetProperty() end
+
+---@return any
+function TileGeometryEditor_EditMode_Curtain:setGeometryModeSelection() end
+
+---@return TileGeometryEditor_EditMode_Curtain
+function TileGeometryEditor_EditMode_Curtain:new(editor) end
+
 ---@class TileGeometryEditor_EditMode_Seating : TileGeometryEditor_EditMode
 ---@field button1 any
 ---@field button2 any

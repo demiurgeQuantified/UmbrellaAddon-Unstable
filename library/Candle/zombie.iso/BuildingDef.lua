@@ -184,6 +184,10 @@ function BuildingDef:isHasBeenVisited() end
 
 --- @public
 --- @return boolean
+function BuildingDef:isResidential() end
+
+--- @public
+--- @return boolean
 function BuildingDef:isShop() end
 
 --- @public

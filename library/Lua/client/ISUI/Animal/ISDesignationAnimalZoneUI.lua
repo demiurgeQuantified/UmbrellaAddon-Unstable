@@ -3,11 +3,14 @@
 ---@class ISDesignationZoneAnimalZoneUI : ISPanel
 ---@field animalbuttons any
 ---@field animalLabels any
+---@field animalPanel any
 ---@field backgroundColor any
 ---@field borderColor any
 ---@field buttonBorderColor any
 ---@field height any
 ---@field infoBtn any
+---@field itemHgt any
+---@field itemPadY any
 ---@field moveWithMouse any
 ---@field nbOfAnimals any
 ---@field ok any
@@ -46,3 +49,20 @@ function ISDesignationZoneAnimalZoneUI:updateAnimals() end
 
 ---@return ISDesignationZoneAnimalZoneUI
 function ISDesignationZoneAnimalZoneUI:new(x, y, width, height, player, zone) end
+
+---@class ISDesignationZoneAnimalZoneUI_AnimalsPanel : ISPanelJoypad
+---@field ui any
+---@field [any] any
+ISDesignationZoneAnimalZoneUI_AnimalsPanel = ISPanelJoypad:derive("ISDesignationZoneAnimalZoneUI_AnimalsPanel")
+
+---@return any
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:onMouseWheel(del) end
+
+---@return any
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:prerender() end
+
+---@return any
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:render() end
+
+---@return ISDesignationZoneAnimalZoneUI_AnimalsPanel
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:new(x, y, width, height, ui) end

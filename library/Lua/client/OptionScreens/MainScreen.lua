@@ -284,7 +284,7 @@ function isPlayerDoingActionThatCanBeCancelled(playerObj) end
 ---@return any
 function stopDoingActionThatCanBeCancelled(playerObj) end
 ---@return any
-function CancelAction() end
+function CancelAction(playerNum) end
 ---@return any
 function ToggleEscapeMenu(key) end
 ---@return any

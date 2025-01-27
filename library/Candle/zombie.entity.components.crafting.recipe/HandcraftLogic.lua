@@ -226,15 +226,6 @@ function HandcraftLogic:refresh() end
 function HandcraftLogic:removeInputItem(arg0) end
 
 --- @public
---- @return nil
-function HandcraftLogic:selectionSpam() end
-
---- @public
---- @param arg0 ArrayList
---- @return nil
-function HandcraftLogic:selectionSpamWithout(arg0) end
-
---- @public
 --- @param arg0 ArrayList
 --- @return nil
 function HandcraftLogic:setContainers(arg0) end
@@ -264,6 +255,12 @@ function HandcraftLogic:setManualSelectInputs(arg0) end
 --- @param arg0 CraftRecipe
 --- @return nil
 function HandcraftLogic:setRecipe(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipe
+--- @param arg1 InventoryItem
+--- @return nil
+function HandcraftLogic:setRecipeFromContextClick(arg0, arg1) end
 
 --- @public
 --- @param arg0 List

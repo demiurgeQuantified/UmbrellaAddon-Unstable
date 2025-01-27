@@ -400,6 +400,9 @@ function AttachmentEditorUI_EditAttachment:onToggleGlobalLocal() end
 function AttachmentEditorUI_EditAttachment:pickCharacterBone() end
 
 ---@return any
+function AttachmentEditorUI_EditAttachment:pickModelBone() end
+
+---@return any
 function AttachmentEditorUI_EditAttachment:populateObjectList() end
 
 ---@return any

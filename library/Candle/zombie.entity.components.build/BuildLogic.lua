@@ -25,6 +25,10 @@ function BuildLogic:getAllConsumedItems() end
 function BuildLogic:getRecipe() end
 
 --- @public
+--- @return CraftRecipeData
+function BuildLogic:getRecipeData() end
+
+--- @public
 --- @return ArrayList
 function BuildLogic:getRecipeList() end
 

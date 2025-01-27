@@ -67,6 +67,9 @@ function ISHandCraftPanel:initialise() end
 function ISHandCraftPanel:onCategoryChanged(_category) end
 
 ---@return any
+function ISHandCraftPanel:OnCloseWindow() end
+
+---@return any
 function ISHandCraftPanel:onRecipeChanged(_recipe) end
 
 ---@return any

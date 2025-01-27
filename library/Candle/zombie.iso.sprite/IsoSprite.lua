@@ -223,12 +223,20 @@ function IsoSprite:ReplaceCurrentAnimFrames(ObjectName) end
 
 --- @public
 --- @return nil
+function IsoSprite:clearCurtainOffset() end
+
+--- @public
+--- @return nil
 function IsoSprite:disposeAnimation() end
 
 --- @public
 --- @param arg0 integer
 --- @return IsoDirectionFrame
 function IsoSprite:getAnimFrame(arg0) end
+
+--- @public
+--- @return Vector3f
+function IsoSprite:getCurtainOffset() end
 
 --- @public
 --- @return IsoDirections
@@ -495,6 +503,13 @@ function IsoSprite:save(output) end
 function IsoSprite:setAnimate(animate) end
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function IsoSprite:setCurtainOffset(arg0, arg1, arg2) end
+
+--- @public
 --- @param objectName string
 --- @param animName string
 --- @param numFrames integer
@@ -529,6 +544,10 @@ function IsoSprite:setTintMod(info) end
 --- @param ntype IsoObjectType
 --- @return nil
 function IsoSprite:setType(ntype) end
+
+--- @public
+--- @return boolean
+function IsoSprite:shouldHaveCollision() end
 
 --- @public
 --- @return nil

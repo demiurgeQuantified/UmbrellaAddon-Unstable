@@ -13,6 +13,8 @@ BaseCraftingLogic = {}
 --- @param arg0 string
 --- @param arg1 any
 --- @return nil
+--- @overload fun(arg0: string, arg1: any, arg2: any): nil
+--- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
 function BaseCraftingLogic.callLua(arg0, arg1) end
 
 --- @public

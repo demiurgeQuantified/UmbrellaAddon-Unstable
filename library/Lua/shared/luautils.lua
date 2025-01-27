@@ -70,6 +70,9 @@ function luautils.walkAdj(playerObj, square, keepActions, excludeList) end
 function luautils.walkAdjAltTest(playerObj, square, altSquare, keepActions) end
 
 ---@return any
+function luautils.walkAdjFence(playerObj, square, object, keepActions) end
+
+---@return any
 function luautils.walkAdjTest(playerObj, square) end
 
 ---@return any

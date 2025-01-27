@@ -10,3 +10,4 @@ BuildRecipeCode.feedingTrough = {}
 BuildRecipeCode.campfire = {}
 BuildRecipeCode.composter = {}
 BuildRecipeCode.windowGlass = {}
+BuildRecipeCode.woodLampPillar = {}

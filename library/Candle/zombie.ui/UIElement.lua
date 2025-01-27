@@ -478,8 +478,8 @@ function UIElement:getHeight() end
 function UIElement:getMaxDrawHeight() end
 
 --- @public
---- @return UIElementInterface the Parent
---- @overload fun(self: UIElement): UIElement the Parent
+--- @return UIElement the Parent
+--- @overload fun(self: UIElement): UIElementInterface the Parent
 --- @overload fun(self: UIElement): UIElementInterface the Parent
 function UIElement:getParent() end
 

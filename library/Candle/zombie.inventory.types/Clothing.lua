@@ -104,11 +104,6 @@ function Clothing:canBe3DRender() end
 function Clothing:canFullyRestore(chr, part, fabric) end
 
 --- @public
---- @param arg0 Clothing
---- @return nil
-function Clothing:copyClothingFrom(arg0) end
-
---- @public
 --- @param newClothing Clothing
 --- @return nil
 function Clothing:copyPatchesTo(newClothing) end

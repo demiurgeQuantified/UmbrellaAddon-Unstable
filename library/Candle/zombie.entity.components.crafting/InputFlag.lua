@@ -17,7 +17,9 @@
 --- @field public InheritAmmunition InputFlag
 --- @field public InheritColor InputFlag
 --- @field public InheritCondition InputFlag
+--- @field public InheritCooked InputFlag
 --- @field public InheritFavorite InputFlag
+--- @field public InheritFood InputFlag
 --- @field public InheritFoodAge InputFlag
 --- @field public InheritHeadCondition InputFlag
 --- @field public InheritSharpness InputFlag

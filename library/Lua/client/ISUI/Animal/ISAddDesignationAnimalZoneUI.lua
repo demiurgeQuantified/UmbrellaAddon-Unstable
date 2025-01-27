@@ -29,6 +29,9 @@ ISAddDesignationAnimalZoneUI = ISPanel:derive("ISAddDesignationAnimalZoneUI")
 function ISAddDesignationAnimalZoneUI:addZone() end
 
 ---@return any
+function ISAddDesignationAnimalZoneUI:highlightSquareAtMousePointer() end
+
+---@return any
 function ISAddDesignationAnimalZoneUI:initialise() end
 
 ---@return any
@@ -41,19 +44,22 @@ function ISAddDesignationAnimalZoneUI:onCreateZone(button) end
 function ISAddDesignationAnimalZoneUI:onMouseDownOutside(x, y) end
 
 ---@return any
-function ISAddDesignationAnimalZoneUI:onMouseMoveOutside(x, y) end
+function ISAddDesignationAnimalZoneUI:onMouseMoveOutside(dx, dy) end
 
 ---@return any
 function ISAddDesignationAnimalZoneUI:onMouseUpOutside(x, y) end
 
 ---@return any
-function ISAddDesignationAnimalZoneUI:pickSquare(x, y) end
+function ISAddDesignationAnimalZoneUI:pickSquare(screenX, screenY) end
 
 ---@return any
 function ISAddDesignationAnimalZoneUI:prerender() end
 
 ---@return any
 function ISAddDesignationAnimalZoneUI:reset() end
+
+---@return any
+function ISAddDesignationAnimalZoneUI:undisplay() end
 
 ---@return any
 function ISAddDesignationAnimalZoneUI:updateButtons() end

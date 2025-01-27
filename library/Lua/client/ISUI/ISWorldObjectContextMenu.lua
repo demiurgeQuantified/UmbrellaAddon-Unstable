@@ -122,6 +122,9 @@ function ISWorldObjectContextMenu.doFillWaterMenu(sink, playerNum, context) end
 function ISWorldObjectContextMenu.doFishNetOptions(context, playerObj, square) end
 
 ---@return any
+function ISWorldObjectContextMenu.doLightSwitchOption(test, context, player) end
+
+---@return any
 function ISWorldObjectContextMenu.doorCurtainCheck(argTable) end
 
 ---@return any
@@ -138,6 +141,12 @@ function ISWorldObjectContextMenu.doRemovePlant(playerObj, square, wallVine) end
 
 ---@return any
 function ISWorldObjectContextMenu.doSleepOption(context, bed, player, playerObj) end
+
+---@return any
+function ISWorldObjectContextMenu.doStoveOption(test, context, player) end
+
+---@return any
+function ISWorldObjectContextMenu.doThumpableWindowOption(test, context, player) end
 
 ---@return any
 function ISWorldObjectContextMenu.doWashClothingMenu(sink, player, context) end
@@ -301,7 +310,7 @@ function ISWorldObjectContextMenu.onCleanGraffiti(worldobjects, square, player) 
 function ISWorldObjectContextMenu.onClearAshes(worldobjects, player, ashes) end
 
 ---@return any
-function ISWorldObjectContextMenu.onClimbOverFence(worldobjects, fence, player) end
+function ISWorldObjectContextMenu.onClimbOverFence(worldobjects, fence, direction, player) end
 
 ---@return any
 function ISWorldObjectContextMenu.onClimbSheetRope(worldobjects, square, down, player) end

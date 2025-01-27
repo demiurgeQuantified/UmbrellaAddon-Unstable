@@ -4,6 +4,9 @@
 --- @field public class any
 --- @field public HeadCondition Int
 --- @field public HeadConditionMax Int
+--- @field public OriginX Int
+--- @field public OriginY Int
+--- @field public OriginZ Int
 --- @field public Quality Int
 --- @field public Sharpness Float
 --- @field public TestBool Bool

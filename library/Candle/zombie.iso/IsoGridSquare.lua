@@ -1207,6 +1207,11 @@ function IsoGridSquare:getStaticMovingObjects() end
 function IsoGridSquare:getTargetDarkMulti(playerIndex) end
 
 --- @public
+--- @param arg0 boolean
+--- @return IsoThumpable
+function IsoGridSquare:getThumpable(arg0) end
+
+--- @public
 --- @param bNorth boolean
 --- @return IsoObject
 function IsoGridSquare:getThumpableWall(bNorth) end

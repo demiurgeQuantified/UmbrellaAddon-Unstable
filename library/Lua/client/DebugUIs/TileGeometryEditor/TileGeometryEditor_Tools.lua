@@ -108,6 +108,9 @@ function TileGeometryEditor_GizmoTool_Translate:onGizmoChanged(delta) end
 ---@return any
 function TileGeometryEditor_GizmoTool_Translate:onGizmoStart() end
 
+---@return any
+function TileGeometryEditor_GizmoTool_Translate:snap() end
+
 ---@return TileGeometryEditor_GizmoTool_Translate
 function TileGeometryEditor_GizmoTool_Translate:new(editor) end
 

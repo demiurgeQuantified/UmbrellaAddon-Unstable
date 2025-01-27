@@ -788,6 +788,10 @@ VehicleZoneDistribution.business.vehicles["Base.Van_LectroMax"] = {
 	index = -1,
 	spawnChance = 2,
 }
+VehicleZoneDistribution.business.vehicles["Base.Van_Locksmith"] = {
+	index = -1,
+	spawnChance = 2,
+}
 VehicleZoneDistribution.business.vehicles["Base.Van_MassGenFac"] = {
 	index = -1,
 	spawnChance = 2,
@@ -800,6 +804,26 @@ VehicleZoneDistribution.business.vehicles["Base.Van_VoltMojo"] = {
 	index = -1,
 	spawnChance = 2,
 }
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Blacksmith"] = {
+	index = -1,
+	spawnChance = 2,
+}
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Cereal"] = {
+	index = -1,
+	spawnChance = 4,
+}
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Citr8"] = {
+	index = -1,
+	spawnChance = 4,
+}
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Florist"] = {
+	index = -1,
+	spawnChance = 4,
+}
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Genuine_Beer"] = {
+	index = -1,
+	spawnChance = 2,
+}
 VehicleZoneDistribution.business.vehicles["Base.StepVan_Heralds"] = {
 	index = -1,
 	spawnChance = 4,
@@ -808,13 +832,17 @@ VehicleZoneDistribution.business.vehicles["Base.StepVan_HuangsLaundry"] = {
 	index = -1,
 	spawnChance = 4,
 }
-VehicleZoneDistribution.business.vehicles["Base.StepVan_Plonkies"] = {
+VehicleZoneDistribution.business.vehicles["Base.StepVan_MarineBites"] = {
+	index = -1,
+	spawnChance = 4,
+}
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Masonry"] = {
 	index = -1,
 	spawnChance = 2,
 }
-VehicleZoneDistribution.business.vehicles["Base.StepVan_Citr8"] = {
+VehicleZoneDistribution.business.vehicles["Base.StepVan_Plonkies"] = {
 	index = -1,
-	spawnChance = 4,
+	spawnChance = 2,
 }
 VehicleZoneDistribution.business.vehicles["Base.StepVan_SouthEasternHosp"] = {
 	index = -1,
@@ -824,19 +852,7 @@ VehicleZoneDistribution.business.vehicles["Base.StepVan_SouthEasternPaint"] = {
 	index = -1,
 	spawnChance = 4,
 }
-VehicleZoneDistribution.business.vehicles["Base.StepVan_MarineBites"] = {
-	index = -1,
-	spawnChance = 4,
-}
 VehicleZoneDistribution.business.vehicles["Base.StepVan_Zippee"] = {
-	index = -1,
-	spawnChance = 2,
-}
-VehicleZoneDistribution.business.vehicles["Base.StepVan_Cereal"] = {
-	index = -1,
-	spawnChance = 4,
-}
-VehicleZoneDistribution.business.vehicles["Base.StepVan_Genuine_Beer"] = {
 	index = -1,
 	spawnChance = 2,
 }
@@ -856,13 +872,25 @@ VehicleZoneDistribution.business.vehicles["Base.VanUncloggers"] = {
 	index = -1,
 	spawnChance = 4,
 }
-VehicleZoneDistribution.business.vehicles["Base.Van_Transit"] = {
+VehicleZoneDistribution.business.vehicles["Base.Van_Blacksmith"] = {
 	index = -1,
-	spawnChance = 4,
+	spawnChance = 2,
 }
 VehicleZoneDistribution.business.vehicles["Base.Van_BugWipers"] = {
 	index = -1,
 	spawnChance = 2,
+}
+VehicleZoneDistribution.business.vehicles["Base.Van_CraftSupplies"] = {
+	index = -1,
+	spawnChance = 4,
+}
+VehicleZoneDistribution.business.vehicles["Base.Van_Masonry"] = {
+	index = -1,
+	spawnChance = 2,
+}
+VehicleZoneDistribution.business.vehicles["Base.Van_Transit"] = {
+	index = -1,
+	spawnChance = 4,
 }
 VehicleZoneDistribution.business.vehicles["Base.Van_Perfick_Potato"] = {
 	index = -1,

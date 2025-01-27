@@ -1693,6 +1693,8 @@ ClutterTables.BinItems = {
 	0.05,
 	"Crowbar",
 	0.05,
+	"Fleshing_Tool",
+	0.05,
 	"Hammer",
 	0.05,
 	"Handiknife",

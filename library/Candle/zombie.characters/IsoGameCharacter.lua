@@ -1038,6 +1038,10 @@ function IsoGameCharacter:endPlaybackGameVariables(playbackVars) end
 function IsoGameCharacter:ensureExistsBallisticsTarget(arg0) end
 
 --- @public
+--- @return nil
+function IsoGameCharacter:ensureNotInVehicle() end
+
+--- @public
 --- @param v BaseVehicle
 --- @param seat integer
 --- @param offset Vector3f
@@ -1601,8 +1605,8 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return AnimationVariableSource
---- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
+--- @return IAnimationVariableSource
+--- @overload fun(self: IsoGameCharacter): AnimationVariableSource
 --- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
@@ -5062,6 +5066,15 @@ function IsoGameCharacter:stopEvent(eventInstance, clip, parameterSet) end
 --- @return nil
 --- @overload fun(self: IsoGameCharacter, eventInstance: integer): nil
 function IsoGameCharacter:stopOrTriggerSound(eventInstance) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: integer, arg1: integer): nil
+--- @overload fun(self: IsoGameCharacter, arg0: number, arg1: number, arg2: integer): nil
+--- @overload fun(self: IsoGameCharacter, arg0: integer, arg1: integer, arg2: integer): nil
+function IsoGameCharacter:teleportTo(arg0, arg1) end
 
 --- @public
 ---

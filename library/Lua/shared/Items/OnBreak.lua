@@ -52,6 +52,9 @@ function OnBreak.CrudeSword_Broken(item, player) end
 function OnBreak.FieldHockeyStick(item, player) end
 
 ---@return any
+function OnBreak.FireAxe(item, player) end
+
+---@return any
 function OnBreak.FlintNodule(item, player) end
 
 ---@return any
@@ -92,6 +95,9 @@ function OnBreak.HandleSpade(item, player) end
 
 ---@return any
 function OnBreak.HandScythe(item, player) end
+
+---@return any
+function OnBreak.Hatchet_Bone(item, player) end
 
 ---@return any
 function OnBreak.HeadHandler(item, player, newItemString, stickIn, forceLocation, bonusCount, fullCondition) end
@@ -137,6 +143,9 @@ function OnBreak.MeatCleaver(item, player) end
 
 ---@return any
 function OnBreak.MetalPipe(item, player) end
+
+---@return any
+function OnBreak.OldAxe(item, player) end
 
 ---@return any
 function OnBreak.PickAxe(item, player) end

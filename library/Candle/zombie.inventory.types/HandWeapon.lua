@@ -599,6 +599,10 @@ function HandWeapon:isAlwaysKnockdown() end
 function HandWeapon:isAngleFalloff() end
 
 --- @public
+--- @return boolean
+function HandWeapon:isBareHands() end
+
+--- @public
 --- @return boolean the bCanBarracade
 function HandWeapon:isCanBarracade() end
 

@@ -189,6 +189,11 @@ function RoomDef:setBuilding(def) end
 function RoomDef:setExplored(explored) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function RoomDef:setName(arg0) end
+
+--- @public
 --- @param b boolean
 --- @return nil
 function RoomDef:setRoofFixed(b) end

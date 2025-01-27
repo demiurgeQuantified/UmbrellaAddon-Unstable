@@ -48,6 +48,59 @@ function Food:canBeFrozen() end
 function Food:checkEggHatch(arg0) end
 
 --- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyAgeFrom(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyCookedBurntFrom(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyFoodFrom(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @param arg1 integer
+--- @return nil
+function Food:copyFoodFromSplit(arg0, arg1) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyFrozenFrom(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyNutritionFrom(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @param arg1 number
+--- @return nil
+function Food:copyNutritionFromRatio(arg0, arg1) end
+
+--- @public
+--- @param arg0 Food
+--- @param arg1 integer
+--- @return nil
+function Food:copyNutritionFromSplit(arg0, arg1) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyPoisonFrom(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
+function Food:copyTemperatureFrom(arg0) end
+
+--- @public
 --- @return boolean
 function Food:finishupdate() end
 

@@ -75,6 +75,10 @@ function IsoTree:getHealth() end
 
 --- @public
 --- @return integer
+function IsoTree:getLogYield() end
+
+--- @public
+--- @return integer
 function IsoTree:getMaxHealth() end
 
 --- @public

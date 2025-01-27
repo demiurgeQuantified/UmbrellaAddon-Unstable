@@ -21,6 +21,7 @@ StoryClutter.BarnClutter = {
 	"Base.PickAxe",
 	"Base.JerryCan",
 	"Base.Bucket",
+	"Base.BucketWood",
 	"Base.Twine",
 	"Base.Hat_StrawHat",
 	"Base.Dungarees",
@@ -315,6 +316,7 @@ StoryClutter.FarmStorageClutter = {
 	"Base.Fertilizer",
 	"Base.CompostBag",
 	"Base.Bucket",
+	"Base.BucketWood",
 	"Base.HandFork",
 	"Base.HandShovel",
 	"Base.Twine",
@@ -411,6 +413,7 @@ StoryClutter.FarmStorageClutter = {
 	"Base.MasonsTrowel",
 	"Base.HandAxe_Old",
 	"Base.Axe_Old",
+	"Base.Fleshing_Tool",
 }
 StoryClutter.FootballNightDrinks = {
 	"Base.BeerPack",
@@ -1343,6 +1346,7 @@ StoryClutter.SurvivalistCampsiteClutter = {
 	"Base.MetalCup",
 	"Base.Harmonica",
 	"Base.Whetstone",
+	"Base.Fleshing_Tool",
 }
 StoryClutter.TwiggyClutter = {
 	"Base.BeerBottle",

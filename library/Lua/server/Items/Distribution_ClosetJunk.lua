@@ -609,6 +609,8 @@ ClutterTables.ClosetItems = {
 	0.01,
 	"FishingTackle2",
 	0.01,
+	"Fleshing_Tool",
+	0.01,
 	"Flier",
 	0.1,
 	"Flute",

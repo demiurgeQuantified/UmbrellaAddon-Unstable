@@ -29,7 +29,7 @@ function DesignationZoneAnimal.Reset() end
 --- @param arg0 IsoWorldInventoryObject
 --- @param arg1 IsoGridSquare
 --- @return nil
-function DesignationZoneAnimal.addFoodOnGround(arg0, arg1) end
+function DesignationZoneAnimal.addItemOnGround(arg0, arg1) end
 
 --- @public
 --- @static
@@ -68,8 +68,26 @@ function DesignationZoneAnimal.getZone(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 IsoWorldInventoryObject
+--- @return boolean
+function DesignationZoneAnimal.isItemDung(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoWorldInventoryObject
+--- @return boolean
+function DesignationZoneAnimal.isItemFeather(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoWorldInventoryObject
+--- @return boolean
+function DesignationZoneAnimal.isItemFood(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoWorldInventoryObject
 --- @return nil
-function DesignationZoneAnimal.removeFoodFromGround(arg0) end
+function DesignationZoneAnimal.removeItemFromGround(arg0) end
 
 --- @public
 --- @static
@@ -80,6 +98,11 @@ function DesignationZoneAnimal.removeZone(arg0) end
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
+
+--- @public
+--- @param arg0 IsoWorldInventoryObject
+--- @return nil
+function DesignationZoneAnimal:addFoodOnGround(arg0) end
 
 --- @public
 --- @return nil
@@ -121,6 +144,14 @@ function DesignationZoneAnimal:getHutchs() end
 --- @public
 --- @return ArrayList
 function DesignationZoneAnimal:getHutchsConnected() end
+
+--- @public
+--- @return integer
+function DesignationZoneAnimal:getNbOfDung() end
+
+--- @public
+--- @return integer
+function DesignationZoneAnimal:getNbOfFeather() end
 
 --- @public
 --- @return ArrayList

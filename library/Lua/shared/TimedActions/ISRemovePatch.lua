@@ -3,6 +3,7 @@
 ---@class ISRemovePatch : ISBaseTimedAction
 ---@field character any
 ---@field clothing any
+---@field fabricType any
 ---@field maxTime any
 ---@field needle any
 ---@field part any

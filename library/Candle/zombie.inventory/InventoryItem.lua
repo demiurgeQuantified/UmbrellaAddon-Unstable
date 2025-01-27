@@ -153,6 +153,10 @@ function InventoryItem:canEmitLight() end
 
 --- @public
 --- @return boolean
+function InventoryItem:canHaveOrigin() end
+
+--- @public
+--- @return boolean
 function InventoryItem:canStoreWater() end
 
 --- @public
@@ -812,6 +816,18 @@ function InventoryItem:getOffString() end
 function InventoryItem:getOnBreak() end
 
 --- @public
+--- @return integer
+function InventoryItem:getOriginX() end
+
+--- @public
+--- @return integer
+function InventoryItem:getOriginY() end
+
+--- @public
+--- @return integer
+function InventoryItem:getOriginZ() end
+
+--- @public
 --- @return ItemContainer
 function InventoryItem:getOutermostContainer() end
 
@@ -1179,6 +1195,10 @@ function InventoryItem:hasMetal() end
 --- @public
 --- @return boolean
 function InventoryItem:hasModData() end
+
+--- @public
+--- @return boolean
+function InventoryItem:hasOrigin() end
 
 --- @public
 --- @return boolean
@@ -2044,6 +2064,28 @@ function InventoryItem:setOffAgeMax(OffAgeMax) end
 --- @param OffString string the OffString to set
 --- @return nil
 function InventoryItem:setOffString(OffString) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: integer): boolean
+--- @overload fun(self: InventoryItem, arg0: integer, arg1: integer, arg2: integer): boolean
+function InventoryItem:setOrigin(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:setOriginX(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:setOriginY(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:setOriginZ(arg0) end
 
 --- @public
 --- @param placeDir IsoDirections the placeDir to set

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISClimbOverFence : ISBaseTimedAction
+---@field direction any
 ---@field item any
 ---@field maxTime any
 ---@field stopOnAim any
@@ -34,4 +35,4 @@ function ISClimbOverFence:update() end
 function ISClimbOverFence:waitToStart() end
 
 ---@return ISClimbOverFence
-function ISClimbOverFence:new(character, item) end
+function ISClimbOverFence:new(character, item, direction) end

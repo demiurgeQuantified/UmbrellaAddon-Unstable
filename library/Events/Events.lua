@@ -2938,11 +2938,11 @@ Events.OnContextKey = {
 	Remove = function(callback) end,
 }
 
----
+---zombie - The zombie being spawned.<br>
 ---@alias Callback_OnZombieCreate fun(zombie:IsoZombie)
 
----OnZombieCreate:
----<br><br>
+---OnZombieCreate: Fires when a zombie is being spawned.
+---<br><br>zombie - The zombie being spawned.<br>
 Events.OnZombieCreate = {
 	---@param callback Callback_OnZombieCreate
 	Add = function(callback) end,
@@ -3016,11 +3016,11 @@ Events.LoadChunk = {
 	Remove = function(callback) end,
 }
 
----unknown - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
----@alias Callback_OnProcessTransaction fun(type:"scrapMoveable"|"pickUpMoveable"|"rotateMoveable"|"placeMoveable"|"dropOnFloor",player:IsoPlayer,item:InventoryItem,sourceId:ContainerID,destinationId:ContainerID,unknown:table)
+---args - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
+---@alias Callback_OnProcessTransaction fun(action:"scrapMoveable"|"pickUpMoveable"|"rotateMoveable"|"placeMoveable"|"dropOnFloor",character:IsoPlayer,item:InventoryItem,source:ContainerID,destination:ContainerID,args:table)
 
 ---OnProcessTransaction:
----<br><br>unknown - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
+---<br><br>args - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
 Events.OnProcessTransaction = {
 	---@param callback Callback_OnProcessTransaction
 	Add = function(callback) end,
@@ -3029,7 +3029,7 @@ Events.OnProcessTransaction = {
 }
 
 ---
----@alias Callback_OnProcessAction fun(unknown:"build",player:IsoPlayer,argTable:table)
+---@alias Callback_OnProcessAction fun(action:"build",character:IsoPlayer,args:table)
 
 ---OnProcessAction:
 ---<br><br>
@@ -3172,11 +3172,11 @@ Events.OnServerCustomizationDataReceived = {
 	Remove = function(callback) end,
 }
 
----
+---body - The dead body being spawned.<br>
 ---@alias Callback_OnDeadBodySpawn fun(body:IsoDeadBody)
 
----OnDeadBodySpawn:
----<br><br>
+---OnDeadBodySpawn: Fires when spawning a dead body.
+---<br><br>body - The dead body being spawned.<br>
 Events.OnDeadBodySpawn = {
 	---@param callback Callback_OnDeadBodySpawn
 	Add = function(callback) end,
@@ -3208,11 +3208,11 @@ Events.OnItemFound = {
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_SetDragItem fun(drag:table,playerNum:integer)
+---item - The drag item being set.<br>playerNum - The index of the player whose drag item is being set.<br>
+---@alias Callback_SetDragItem fun(item:table,playerNum:integer)
 
----SetDragItem:
----<br><br>
+---(Client) SetDragItem: Fires when a local player's drag item (typically a build cursor) is set.
+---<br><br>item - The drag item being set.<br>playerNum - The index of the player whose drag item is being set.<br>
 Events.SetDragItem = {
 	---@param callback Callback_SetDragItem
 	Add = function(callback) end,
@@ -3221,7 +3221,7 @@ Events.SetDragItem = {
 }
 
 ---
----@alias Callback_OnSteamServerFailedToRespond2 fun(unknown:string,unknown2:integer)
+---@alias Callback_OnSteamServerFailedToRespond2 fun(host:string,port:integer)
 
 ---OnSteamServerFailedToRespond2:
 ---<br><br>
@@ -3323,7 +3323,7 @@ Hook.WeaponSwingHitPoint = {
 ---
 ---@alias Callback_ContextualAction fun(actionType:string,character:IsoGameCharacter,object:any,arg1:any,arg2:any,arg3:any)
 
----ContextualAction: TODO!! this one looks actually useful!!
+---ContextualAction:
 ---<br><br>
 Hook.ContextualAction = {
 	---@param callback Callback_ContextualAction

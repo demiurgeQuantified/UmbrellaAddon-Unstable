@@ -370,9 +370,6 @@ function ISInventoryPaneContextMenu.OnNewCraft(selectedItem, recipe, player, all
 function ISInventoryPaneContextMenu.OnNewCraftComplete(logic) end
 
 ---@return any
-function ISInventoryPaneContextMenu.OnNewCraftCompleteAll(completedAction, recipe, playerObj, containers, usedItems) end
-
----@return any
 function ISInventoryPaneContextMenu.onPillsItems(items, player) end
 
 ---@return any
@@ -419,6 +416,9 @@ function ISInventoryPaneContextMenu.onSetBombTimer(trap, player) end
 
 ---@return any
 function ISInventoryPaneContextMenu.onStopAlarm(alarm, player) end
+
+---@return any
+function ISInventoryPaneContextMenu.onTeleportToKeyOrigin(item, player) end
 
 ---@return any
 function ISInventoryPaneContextMenu.onTransferWater(items, itemFrom, itemTo, player) end
