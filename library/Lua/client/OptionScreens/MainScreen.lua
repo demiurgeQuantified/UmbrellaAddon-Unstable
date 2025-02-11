@@ -11,7 +11,6 @@
 ---@field bootstrapConnectPopup any
 ---@field borderColor any
 ---@field bottomPanel any
----@field charCreationHeader any
 ---@field charCreationMain any
 ---@field charCreationProfession any
 ---@field connectToServer any

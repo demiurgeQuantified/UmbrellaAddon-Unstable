@@ -58,14 +58,33 @@ function CraftRecipe:PreReload() end
 function CraftRecipe:addRequiredSkill(arg0, arg1) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function CraftRecipe:addXP(arg0) end
+
+--- @public
+--- @return boolean
+function CraftRecipe:canAlwaysBeResearched() end
+
+--- @public
 --- @return boolean
 function CraftRecipe:canBeDoneInDark() end
+
+--- @public
+--- @return boolean
+function CraftRecipe:canBeResearched() end
 
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
 --- @overload fun(self: CraftRecipe, arg0: Item): boolean
 function CraftRecipe:canOutputItem(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: boolean): boolean
+function CraftRecipe:canResearch(arg0) end
 
 --- @public
 --- @param arg0 string
@@ -97,6 +116,10 @@ function CraftRecipe:clearRequiredSkills() end
 --- @param arg0 IOScript
 --- @return boolean
 function CraftRecipe:containsIO(arg0) end
+
+--- @public
+--- @return string
+function CraftRecipe:generateDebugText() end
 
 --- @public
 --- @return string
@@ -141,6 +164,11 @@ function CraftRecipe:getExistsAsVanilla() end
 --- @return integer
 --- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: boolean): integer
 function CraftRecipe:getHighestRelevantSkillLevel(arg0) end
+
+--- @public
+--- @return integer
+--- @overload fun(self: CraftRecipe, arg0: boolean): integer
+function CraftRecipe:getHighestSkillRequirement() end
 
 --- @public
 --- @param arg0 integer
@@ -225,6 +253,10 @@ function CraftRecipe:getRequiredSkillCount() end
 --- @public
 --- @return ArrayList
 function CraftRecipe:getRequiredSkills() end
+
+--- @public
+--- @return integer
+function CraftRecipe:getResearchSkillLevel() end
 
 --- @public
 --- @return BitSet
@@ -329,6 +361,10 @@ function CraftRecipe:isRequiresPlayer() end
 
 --- @public
 --- @return boolean
+function CraftRecipe:isResearchAll() end
+
+--- @public
+--- @return boolean
 --- @deprecated
 function CraftRecipe:isShapeless() end
 
@@ -347,6 +383,11 @@ function CraftRecipe:isVanilla() end
 --- @public
 --- @return boolean
 function CraftRecipe:needToBeLearn() end
+
+--- @public
+--- @param arg0 integer
+--- @return integer
+function CraftRecipe:normalizeSkillLevel(arg0) end
 
 --- @public
 --- @param arg0 Texture
@@ -372,6 +413,11 @@ function CraftRecipe:setProp1(arg0) end
 --- @param arg0 InputScript
 --- @return nil
 function CraftRecipe:setProp2(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function CraftRecipe:setResearchSkillLevel(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

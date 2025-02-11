@@ -158,6 +158,11 @@ function HandcraftLogic:getResultTexture() end
 --- @public
 --- @param arg0 InputScript
 --- @return List
+function HandcraftLogic:getSatisfiedInputFluids(arg0) end
+
+--- @public
+--- @param arg0 InputScript
+--- @return List
 function HandcraftLogic:getSatisfiedInputInventoryItems(arg0) end
 
 --- @public

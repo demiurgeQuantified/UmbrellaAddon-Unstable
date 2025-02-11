@@ -3,6 +3,7 @@
 --- @class PZMath
 --- @field public class any
 --- @field public degToRads number Conversion ratios, Degrees to Radians and back
+--- @field public halfPI number
 --- @field public microsToNanos integer
 --- @field public millisToMicros integer
 --- @field public PI number The double value that is closer than any other to  pi, the ratio of the circumference of a circle to its  diameter.

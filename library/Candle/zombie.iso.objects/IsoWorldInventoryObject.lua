@@ -64,11 +64,11 @@ function IsoWorldInventoryObject:getScreenPosX(playerIndex) end
 function IsoWorldInventoryObject:getScreenPosY(playerIndex) end
 
 --- @public
---- @return integer
+--- @return number
 function IsoWorldInventoryObject:getWaterAmount() end
 
 --- @public
---- @return integer
+--- @return number
 function IsoWorldInventoryObject:getWaterMax() end
 
 --- @public
@@ -172,14 +172,10 @@ function IsoWorldInventoryObject:setIgnoreRemoveSandbox(b) end
 function IsoWorldInventoryObject:setOffset(arg0, arg1, arg2) end
 
 --- @public
---- @param tainted boolean
+--- @param arg0 number
+--- @param arg1 boolean
 --- @return nil
-function IsoWorldInventoryObject:setTaintedWater(tainted) end
-
---- @public
---- @param units integer
---- @return nil
-function IsoWorldInventoryObject:setWaterAmount(units) end
+function IsoWorldInventoryObject:setWaterAmount(arg0, arg1) end
 
 --- @public
 --- @return nil

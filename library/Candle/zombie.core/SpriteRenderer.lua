@@ -120,7 +120,7 @@ function SpriteRenderer:doCoreIntParam(id, val) end
 
 --- @public
 --- @param gd GenericDrawer
---- @return nil
+--- @return TextureDraw
 function SpriteRenderer:drawGeneric(gd) end
 
 --- @public

@@ -236,6 +236,10 @@ function FluidContainer:isPoisonous() end
 function FluidContainer:isPureFluid(arg0) end
 
 --- @public
+--- @return boolean
+function FluidContainer:isTainted() end
+
+--- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 integer
 --- @return nil

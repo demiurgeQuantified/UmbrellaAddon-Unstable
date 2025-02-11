@@ -137,6 +137,14 @@ ProfessionVehicles.StepVan_Heralds = {
 		"Base.StepVan",
 	},
 }
+ProfessionVehicles.StepVan_MobileLibrary = {
+	Louisville = {
+		"Base.StepVan",
+	},
+	LAA = {
+		"Base.StepVan",
+	},
+}
 ProfessionVehicles.StepVan_SouthEasternHosp = {
 	LAA = {
 		"Base.StepVanAirportCatering",

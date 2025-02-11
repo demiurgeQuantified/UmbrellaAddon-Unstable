@@ -69,6 +69,10 @@ function HandWeapon:clearAllWeaponParts() end
 function HandWeapon:clearWeaponPart(arg0) end
 
 --- @public
+--- @return string
+function HandWeapon:cycleFireMode() end
+
+--- @public
 --- @return nil
 function HandWeapon:detachAllWeaponParts() end
 
@@ -189,6 +193,11 @@ function HandWeapon:getDamageCategory() end
 --- @param chr IsoGameCharacter
 --- @return number
 function HandWeapon:getDamageMod(chr) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return ArrayList
+function HandWeapon:getDetachableWeaponParts(arg0) end
 
 --- @public
 --- @return number the doSwingBeforeImpact
@@ -672,6 +681,10 @@ function HandWeapon:isReloadable(owner) end
 function HandWeapon:isRoundChambered() end
 
 --- @public
+--- @return boolean
+function HandWeapon:isSelectFire() end
+
+--- @public
 --- @return boolean the shareDamage
 function HandWeapon:isShareDamage() end
 
@@ -711,7 +724,7 @@ function HandWeapon:load(input, WorldVersion) end
 function HandWeapon:muscleStrainMod(arg0) end
 
 --- @public
---- @return nil
+--- @return integer
 function HandWeapon:randomizeBullets() end
 
 --- @public

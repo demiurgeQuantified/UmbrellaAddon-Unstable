@@ -14,8 +14,16 @@ XP = {}
 --- @return nil
 --- @overload fun(self: XP, arg0: HandWeapon, arg1: integer): nil
 --- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean): nil
+--- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean): nil
 --- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean, arg4: boolean): nil
+--- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean, arg4: boolean, arg5: boolean): nil
 function XP:AddXP(arg0, arg1) end
+
+--- @public
+--- @param arg0 Perk
+--- @param arg1 number
+--- @return nil
+function XP:AddXPHaloText(arg0, arg1) end
 
 --- @public
 --- @param arg0 Perk

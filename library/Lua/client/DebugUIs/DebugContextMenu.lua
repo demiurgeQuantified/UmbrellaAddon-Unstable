@@ -60,6 +60,9 @@ function DebugContextMenu.doRandomizedVehicleStory(square, rvs) end
 function DebugContextMenu.doRandomizedZoneStory(square, rzs) end
 
 ---@return any
+function DebugContextMenu.doSurvivorSwapMenu(player, context, worldobjects, test) end
+
+---@return any
 function DebugContextMenu.onAddDesignationZone(playerObj) end
 
 ---@return any

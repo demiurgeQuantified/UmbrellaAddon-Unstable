@@ -15,6 +15,7 @@ PrintMediaDefinitions.Brochures = {
 	"WestMapleCountryClub",
 }
 PrintMediaDefinitions.Fliers = {
+	"AMZSteel",
 	"AlsAutoShop",
 	"BeefChunk",
 	"BensCabin",
@@ -40,6 +41,7 @@ PrintMediaDefinitions.Fliers = {
 	"Fossoil7",
 	"Fossoil8",
 	"FourthofJulyCelebrationDixieMobilePark",
+	"GnomeSweetGnome",
 	"GoldenSunset",
 	"GreenesJobAdEkron",
 	"GunsUnlimitedEchoCreek",
@@ -96,8 +98,12 @@ PrintMediaDefinitions.Fliers = {
 	"RiversideIndependenceDayPartyAllWelcome",
 	"RiversidePD",
 	"RosewoodFD",
+	"RoxysRollerRink",
 	"RustyRifle",
 	"Sammies",
+	"SpiffosHiringDixie",
+	"SpiffosHiringLouisville",
+	"SpiffosHiringWestPoint",
 	"StuartandLogScrapyard",
 	"SunsetPinesFuneralHome",
 	"SureFitnessBoxingClub",

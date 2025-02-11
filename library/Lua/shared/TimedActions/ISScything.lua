@@ -4,6 +4,7 @@
 ---@field item any
 ---@field maxTime any
 ---@field radius any
+---@field sound any
 ---@field sq any
 ---@field [any] any
 ISScything = ISBaseTimedAction:derive("ISScything")
@@ -28,6 +29,9 @@ function ISScything:start() end
 
 ---@return any
 function ISScything:stop() end
+
+---@return any
+function ISScything:stopSound() end
 
 ---@return any
 function ISScything:update() end

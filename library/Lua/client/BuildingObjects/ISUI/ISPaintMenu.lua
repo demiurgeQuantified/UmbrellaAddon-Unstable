@@ -12,6 +12,9 @@ function ISPaintMenu.addSignOption(subMenuPaint, name, wall, painting, r, g, b) 
 function ISPaintMenu.doPaintMenu(player, context, worldobjects, test) end
 
 ---@return any
+function ISPaintMenu.getWallType(obj) end
+
+---@return any
 function ISPaintMenu.onPaint(worldobjects, player, thumpable, painting) end
 
 ---@return any

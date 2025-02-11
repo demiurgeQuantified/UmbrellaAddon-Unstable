@@ -316,6 +316,9 @@ function TileGeometryEditor_TilePicker:onMouseWheel(del) end
 ---@return any
 function TileGeometryEditor_TilePicker:onSelectTileset() end
 
+---@return any
+function TileGeometryEditor_TilePicker:setTileset(tilesetName) end
+
 ---@return TileGeometryEditor_TilePicker
 function TileGeometryEditor_TilePicker:new(x, y, width, height, editor) end
 
@@ -334,6 +337,9 @@ function TileGeometryEditor_TilePicker2:onMouseWheel(del) end
 
 ---@return any
 function TileGeometryEditor_TilePicker2:onSelectTileset() end
+
+---@return any
+function TileGeometryEditor_TilePicker2:setTileset(tilesetName) end
 
 ---@return TileGeometryEditor_TilePicker2
 function TileGeometryEditor_TilePicker2:new(x, y, width, height, editor) end

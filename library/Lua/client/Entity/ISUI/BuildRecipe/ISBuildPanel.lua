@@ -73,6 +73,9 @@ function ISBuildPanel:initialise() end
 function ISBuildPanel:onCategoryChanged(_category) end
 
 ---@return any
+function ISBuildPanel:onDoubleClick(item) end
+
+---@return any
 function ISBuildPanel:onRecipeChanged(_recipe) end
 
 ---@return any

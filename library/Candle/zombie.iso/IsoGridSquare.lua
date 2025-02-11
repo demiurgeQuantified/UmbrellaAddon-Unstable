@@ -178,6 +178,7 @@ function IsoGridSquare:AddTileObject(obj) end
 --- @param height number
 --- @return InventoryItem
 --- @overload fun(self: IsoGridSquare, item: InventoryItem, x: number, y: number, height: number): InventoryItem
+--- @overload fun(self: IsoGridSquare, arg0: string, arg1: number, arg2: number, arg3: number, arg4: boolean): InventoryItem
 --- @overload fun(self: IsoGridSquare, String: string, x: number, y: number, height: number, nbr: integer): nil
 --- @overload fun(self: IsoGridSquare, item: InventoryItem, x: number, y: number, height: number, transmit: boolean): InventoryItem
 function IsoGridSquare:AddWorldInventoryItem(String, x, y, height) end
@@ -735,10 +736,6 @@ function IsoGridSquare:getApparentZ(dx, dy) end
 --- @param next IsoGridSquare
 --- @return IsoObject
 function IsoGridSquare:getBedTo(next) end
-
---- @public
---- @return IBiome
-function IsoGridSquare:getBiome() end
 
 --- @public
 --- @return IsoBrokenGlass
@@ -1512,6 +1509,10 @@ function IsoGridSquare:hasTrashReceptacle() end
 
 --- @public
 --- @return boolean
+function IsoGridSquare:hasWater() end
+
+--- @public
+--- @return boolean
 function IsoGridSquare:hasWindowFrame() end
 
 --- @public
@@ -1967,11 +1968,6 @@ function IsoGridSquare:save(output, outputObj) end
 --- @param y integer
 --- @return number
 function IsoGridSquare:scoreAsWaypoint(x, y) end
-
---- @public
---- @param arg0 IBiome
---- @return nil
-function IsoGridSquare:setBiome(arg0) end
 
 --- @public
 --- @param CacheIsFree boolean the CacheIsFree to set

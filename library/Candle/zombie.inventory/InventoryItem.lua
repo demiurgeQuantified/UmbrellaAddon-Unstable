@@ -144,6 +144,10 @@ function InventoryItem:applyMaxSharpness() end
 function InventoryItem:canBeActivated() end
 
 --- @public
+--- @return string
+function InventoryItem:canBeEquipped() end
+
+--- @public
 --- @return boolean
 function InventoryItem:canBeRemote() end
 
@@ -846,6 +850,10 @@ function InventoryItem:getPlaceMultipleSound() end
 --- @public
 --- @return string
 function InventoryItem:getPlaceOneSound() end
+
+--- @public
+--- @return IsoPlayer
+function InventoryItem:getPlayer() end
 
 --- @public
 --- @return string

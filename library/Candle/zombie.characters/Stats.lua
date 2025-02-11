@@ -150,7 +150,81 @@ function Stats:load(input) end
 
 --- @public
 --- @return nil
+function Stats:normalizeAnger() end
+
+--- @public
+--- @return nil
+function Stats:normalizeDrunkeness() end
+
+--- @public
+--- @return nil
+function Stats:normalizeEndurance() end
+
+--- @public
+--- @return nil
+function Stats:normalizeFatigue() end
+
+--- @public
+--- @return nil
+function Stats:normalizeFear() end
+
+--- @public
+--- @return nil
+function Stats:normalizeFitness() end
+
+--- @public
+--- @return nil
+function Stats:normalizeHunger() end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function Stats:normalizeMaxOneHundredValue(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function Stats:normalizeMaxOneValue(arg0) end
+
+--- @public
+--- @return nil
+function Stats:normalizeMorale() end
+
+--- @public
+--- @return nil
+function Stats:normalizePain() end
+
+--- @public
+--- @return nil
+function Stats:normalizePanic() end
+
+--- @public
+--- @return nil
+function Stats:normalizeSanity() end
+
+--- @public
+--- @return nil
+function Stats:normalizeSickness() end
+
+--- @public
+--- @return nil
+function Stats:normalizeStats() end
+
+--- @public
+--- @return nil
+function Stats:normalizeStress() end
+
+--- @public
+--- @return nil
+function Stats:normalizeStressFromCigarettes() end
+
+--- @public
+--- @return nil
 function Stats:normalizeThirst() end
+
+--- @public
+--- @return nil
+function Stats:normalize_boredom() end
 
 --- @public
 --- @param arg0 ByteBuffer

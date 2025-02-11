@@ -386,6 +386,9 @@ function TileGeometryEditor_TilePicker3:onMouseWheel(del) end
 ---@return any
 function TileGeometryEditor_TilePicker3:onSelectTileset() end
 
+---@return any
+function TileGeometryEditor_TilePicker3:setTileset(tilesetName) end
+
 ---@return TileGeometryEditor_TilePicker3
 function TileGeometryEditor_TilePicker3:new(x, y, width, height, editor) end
 

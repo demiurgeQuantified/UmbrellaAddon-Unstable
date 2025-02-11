@@ -1,12 +1,11 @@
 ---@meta
 
 ---@class ISTakeWaterAction : ISBaseTimedAction
----@field endUsedDelta any
----@field fluidobject any
+---@field endUsedAmount any
 ---@field item any
 ---@field maxTime any
 ---@field sound any
----@field startUsedDelta any
+---@field startUsedAmount any
 ---@field waterObject any
 ---@field waterTaintedCL any
 ---@field waterUnit any
@@ -24,9 +23,6 @@ function ISTakeWaterAction:isValid() end
 
 ---@return any
 function ISTakeWaterAction:perform() end
-
----@return any
-function ISTakeWaterAction:serverStart() end
 
 ---@return any
 function ISTakeWaterAction:serverStop() end

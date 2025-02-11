@@ -2,6 +2,7 @@
 
 ---@class ISAddAnimalInTrailer : ISBaseTimedAction
 ---@field animal any
+---@field animalInventoryItem any
 ---@field fromHand any
 ---@field maxTime any
 ---@field vehicle any

@@ -51,6 +51,25 @@ function Item:OnScriptsLoaded(arg0) end
 function Item:PreReload() end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: Item, arg0: CraftRecipe): nil
+function Item:addResearchableRecipe(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return nil
+function Item:addResearchableRecipes(arg0) end
+
+--- @public
+--- @return boolean
+function Item:canBeForaged() end
+
+--- @public
+--- @return boolean
+function Item:canSpawnAsLoot() end
+
+--- @public
 --- @return string
 function Item:getAcceptItemFunction() end
 
@@ -509,7 +528,9 @@ function Item:getReplaceTypesMap() end
 function Item:getReplaceWhenUnequip() end
 
 --- @public
---- @return List
+--- @return ArrayList
+--- @overload fun(self: Item, arg0: IsoGameCharacter): ArrayList
+--- @overload fun(self: Item, arg0: IsoGameCharacter, arg1: boolean): ArrayList
 function Item:getResearchableRecipes() end
 
 --- @public
@@ -757,6 +778,10 @@ function Item:isCookwareLoot() end
 function Item:isCosmetic() end
 
 --- @public
+--- @return boolean
+function Item:isCraftRecipeProduct() end
+
+--- @public
 --- @return boolean the DangerousUncooked
 function Item:isDangerousUncooked() end
 
@@ -869,6 +894,11 @@ function Item:isVisualAid() end
 function Item:isWorldRender() end
 
 --- @public
+--- @param arg0 integer
+--- @return integer
+function Item:normalizeSkillLevel(arg0) end
+
+--- @public
 --- @return nil
 function Item:reset() end
 
@@ -929,6 +959,16 @@ function Item:setCanBandage(CanBandage) end
 --- @param CanBarricade boolean the CanBarricade to set
 --- @return nil
 function Item:setCanBarricade(CanBarricade) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Item:setCanBeForaged(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Item:setCanSpawnAsLoot(arg0) end
 
 --- @public
 --- @param CantAttackWithLowestEndurance boolean the CantAttackWithLowestEndurance to set
@@ -1029,6 +1069,11 @@ function Item:setInsulation(f) end
 --- @param IsCookable boolean the IsCookable to set
 --- @return nil
 function Item:setIsCookable(IsCookable) end
+
+--- @public
+--- @return nil
+--- @overload fun(self: Item, arg0: boolean): nil
+function Item:setIsCraftRecipeProduct() end
 
 --- @public
 --- @param arg0 ItemConfig

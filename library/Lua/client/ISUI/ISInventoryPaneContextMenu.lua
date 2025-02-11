@@ -283,9 +283,6 @@ function ISInventoryPaneContextMenu.OnCraftComplete(
 end
 
 ---@return any
-function ISInventoryPaneContextMenu.onDrink(items, waterContainer, percentage, player) end
-
----@return any
 function ISInventoryPaneContextMenu.onDrinkFluid(item, percent, playerObj) end
 
 ---@return any
@@ -401,6 +398,9 @@ function ISInventoryPaneContextMenu.onRenameFood(food, player) end
 
 ---@return any
 function ISInventoryPaneContextMenu.onRenameMap(map, player) end
+
+---@return any
+function ISInventoryPaneContextMenu.onResearchRecipe(item, playerObj) end
 
 ---@return any
 function ISInventoryPaneContextMenu.OnResetRemoteControlID(item, player) end

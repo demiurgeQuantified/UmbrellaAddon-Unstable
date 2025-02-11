@@ -5,8 +5,7 @@
 ---@field anchorLeft any
 ---@field anchorRight any
 ---@field anchorTop any
----@field avatarPanelX any
----@field avatarPanelY any
+---@field avatarPanel any
 ---@field backButton any
 ---@field backgroundColor any
 ---@field beardLbl any
@@ -40,6 +39,8 @@
 ---@field disabledLArrow any
 ---@field disabledRArrow any
 ---@field female any
+---@field forenameEntry any
+---@field genderCombo any
 ---@field hairColorButton any
 ---@field hairColorLbl any
 ---@field hairStubbleLbl any
@@ -67,6 +68,7 @@
 ---@field skinColors any
 ---@field soundPlayer any
 ---@field soundRef any
+---@field surnameEntry any
 ---@field voiceDemoButton any
 ---@field voiceLbl any
 ---@field voicePitchLbl any
@@ -101,6 +103,9 @@ function CharacterCreationMain:checkAllClothingOptions() end
 function CharacterCreationMain:create() end
 
 ---@return any
+function CharacterCreationMain:createAvatar() end
+
+---@return any
 function CharacterCreationMain:createBeardTypeBtn() end
 
 ---@return any
@@ -119,6 +124,9 @@ function CharacterCreationMain:createClothingComboDebug(bodyLocation) end
 function CharacterCreationMain:createHairTypeBtn() end
 
 ---@return any
+function CharacterCreationMain:createNameAndGender() end
+
+---@return any
 function CharacterCreationMain:createVoiceTypeBtn() end
 
 ---@return any
@@ -135,6 +143,9 @@ function CharacterCreationMain:disableBtn() end
 
 ---@return any
 function CharacterCreationMain:doClothingCombo(definition, erasePrevious) end
+
+---@return any
+function CharacterCreationMain:dressWithDefinitions(definition, resetWornItems) end
 
 ---@return any
 function CharacterCreationMain:getVoicePitch() end
@@ -194,6 +205,9 @@ function CharacterCreationMain:onClothingTextureComboSelected(combo, bodyLocatio
 function CharacterCreationMain:onGainJoypadFocus(joypadData) end
 
 ---@return any
+function CharacterCreationMain:onGenderSelected(combo) end
+
+---@return any
 function CharacterCreationMain:onHairColorMouseDown(button, x, y) end
 
 ---@return any
@@ -221,6 +235,9 @@ function CharacterCreationMain:onOptionMouseDown(button, x, y) end
 function CharacterCreationMain:onOutfitSelected(combo) end
 
 ---@return any
+function CharacterCreationMain:onRandomCharacter() end
+
+---@return any
 function CharacterCreationMain:onRandomizeOutfitClicked() end
 
 ---@return any
@@ -242,10 +259,19 @@ function CharacterCreationMain:onVoiceTypeSelected(combo) end
 function CharacterCreationMain:prerender() end
 
 ---@return any
+function CharacterCreationMain:randomGenericOutfit() end
+
+---@return any
+function CharacterCreationMain:randomVoice() end
+
+---@return any
 function CharacterCreationMain:removeAllClothingWidgets() end
 
 ---@return any
 function CharacterCreationMain:requiredSize(panel) end
+
+---@return any
+function CharacterCreationMain:rescaleAvatarViewer() end
 
 ---@return any
 function CharacterCreationMain:saveBuildStep1() end
@@ -255,6 +281,9 @@ function CharacterCreationMain:saveBuildStep2(button, joypadData, param2) end
 
 ---@return any
 function CharacterCreationMain:saveBuildValidate(text) end
+
+---@return any
+function CharacterCreationMain:setAvatarFromUI() end
 
 ---@return any
 function CharacterCreationMain:setVisible(bVisible, joypadData) end
@@ -292,6 +321,7 @@ function CharacterCreationMain:new(x, y, width, height) end
 ---@field joypadIndex any
 ---@field joypadIndexY any
 ---@field prevJoypadIndexY any
+---@field scrollBar any
 ---@field [any] any
 CharacterCreationMainCharacterPanel = ISPanelJoypad:derive("CharacterCreationMainCharacterPanel")
 
@@ -312,6 +342,12 @@ function CharacterCreationMainCharacterPanel:onJoypadDown(button, joypadData) en
 
 ---@return any
 function CharacterCreationMainCharacterPanel:onLoseJoypadFocus(joypadData) end
+
+---@return any
+function CharacterCreationMainCharacterPanel:onMouseWheel(del) end
+
+---@return any
+function CharacterCreationMainCharacterPanel:positionRelativeToScrollBar() end
 
 ---@return any
 function CharacterCreationMainCharacterPanel:prerender() end

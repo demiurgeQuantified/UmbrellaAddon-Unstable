@@ -10,7 +10,6 @@
 --- @field public instance PerformanceSettings
 --- @field public InterpolateAnims boolean
 --- @field public LightingFPS integer
---- @field public LightingFrameSkip integer
 --- @field public LightingThread boolean
 --- @field public ManualFrameSkips integer
 --- @field public ModelLighting boolean

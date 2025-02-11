@@ -12,6 +12,7 @@
 --- @field public blinkAlpha number
 --- @field public blinkAlphaIncrease boolean
 --- @field public bTutorial boolean
+--- @field public BulletZtoPZWorldScale number
 --- @field public bUseGameViewport boolean
 --- @field public bUseViewports boolean
 --- @field public ChallengeID string
@@ -691,6 +692,14 @@ function Core:getOptionLightSensitivity() end
 function Core:getOptionLockCursorToWindow() end
 
 --- @public
+--- @return boolean
+function Core:getOptionMacOSIgnoreMouseWheelAcceleration() end
+
+--- @public
+--- @return boolean
+function Core:getOptionMacOSMapHorizontalMouseWheelToVertical() end
+
+--- @public
 --- @return number
 function Core:getOptionMaxChatOpaque() end
 
@@ -802,6 +811,10 @@ function Core:getOptionShoulderButtonContainerSwitch() end
 --- @public
 --- @return boolean
 function Core:getOptionShowAimTexture() end
+
+--- @public
+--- @return boolean
+function Core:getOptionShowCraftingXP() end
 
 --- @public
 --- @return boolean
@@ -1634,6 +1647,16 @@ function Core:setOptionLightSensitivity(arg0) end
 function Core:setOptionLockCursorToWindow(b) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function Core:setOptionMacOSIgnoreMouseWheelAcceleration(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Core:setOptionMacOSMapHorizontalMouseWheelToVertical(arg0) end
+
+--- @public
 --- @param optionMaxChatOpaque number
 --- @return nil
 function Core:setOptionMaxChatOpaque(optionMaxChatOpaque) end
@@ -1788,6 +1811,11 @@ function Core:setOptionShowChatTimestamp(optionShowChatTimestamp) end
 --- @param optionShowChatTitle boolean
 --- @return nil
 function Core:setOptionShowChatTitle(optionShowChatTitle) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Core:setOptionShowCraftingXP(arg0) end
 
 --- @public
 --- @param show boolean

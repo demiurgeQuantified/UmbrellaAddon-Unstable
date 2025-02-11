@@ -208,6 +208,10 @@ function IsoChunk:addSurvivorInHorde(forced) end
 function IsoChunk:assignLoadID() end
 
 --- @public
+--- @return integer
+function IsoChunk:attachmentsPartialSize() end
+
+--- @public
 --- @param zone Zone
 --- @param force boolean
 --- @return boolean
@@ -255,6 +259,11 @@ function IsoChunk:doLoadGridsquare() end
 --- @public
 --- @return nil
 function IsoChunk:doReuseGridsquares() end
+
+--- @public
+--- @param arg0 integer
+--- @return SquareCoord
+function IsoChunk:getAttachmentsPartial(arg0) end
 
 --- @public
 --- @return boolean[]
@@ -338,6 +347,11 @@ function IsoChunk:getVispolyData() end
 --- @param arg0 integer
 --- @return ChunkLevelData
 function IsoChunk:getVispolyDataForLevel(arg0) end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoChunk, arg0: SquareCoord): boolean
+function IsoChunk:hasAttachmentsPartial() end
 
 --- @public
 --- @param object IsoObject
@@ -454,6 +468,10 @@ function IsoChunk:removeObjectAmbientEmitter(object) end
 
 --- @public
 --- @return nil
+function IsoChunk:resetAttachmentsPartial() end
+
+--- @public
+--- @return nil
 function IsoChunk:resetForStore() end
 
 --- @public
@@ -470,6 +488,11 @@ function IsoChunk:saveObjectState(bb) end
 --- @param arg0 boolean
 --- @return nil
 function IsoChunk:setAttachmentsDoneFull(arg0) end
+
+--- @public
+--- @param arg0 SquareCoord
+--- @return nil
+function IsoChunk:setAttachmentsPartial(arg0) end
 
 --- @public
 --- @param arg0 integer

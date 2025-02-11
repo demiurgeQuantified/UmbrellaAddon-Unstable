@@ -7,6 +7,7 @@ Recipe.OnCanPerform = {}
 Recipe.OnCreate = {}
 Recipe.OnGiveXP = {}
 Recipe.OnTest = {}
+Recipe.WeaponParts = {}
 Recipe.MysteryCans = {
 	"Base.CannedBologneseOpen",
 	"Base.CannedCarrotsOpen",

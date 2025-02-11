@@ -345,6 +345,10 @@ function IsoObject:countAddSheetRope() end
 function IsoObject:createContainersFromSpriteProperties() end
 
 --- @public
+--- @return nil
+function IsoObject:createFluidContainersFromSpriteProperties() end
+
+--- @public
 --- @return integer
 function IsoObject:customHashCode() end
 
@@ -692,11 +696,11 @@ function IsoObject:getType() end
 function IsoObject:getUsesExternalWaterSource() end
 
 --- @public
---- @return integer
+--- @return number
 function IsoObject:getWaterAmount() end
 
 --- @public
---- @return integer
+--- @return number
 function IsoObject:getWaterMax() end
 
 --- @public
@@ -1400,11 +1404,6 @@ function IsoObject:setSquare(square) end
 function IsoObject:setTable(table) end
 
 --- @public
---- @param tainted boolean
---- @return nil
-function IsoObject:setTaintedWater(tainted) end
-
---- @public
 --- @param targetAlpha number the targetAlpha to set
 --- @return nil
 --- @overload fun(self: IsoObject, playerIndex: integer, targetAlpha: number): nil
@@ -1421,9 +1420,10 @@ function IsoObject:setType(type) end
 function IsoObject:setUsesExternalWaterSource(b) end
 
 --- @public
---- @param units integer
+--- @param arg0 number
+--- @param arg1 boolean
 --- @return nil
-function IsoObject:setWaterAmount(units) end
+function IsoObject:setWaterAmount(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -1505,9 +1505,9 @@ function IsoObject:update() end
 function IsoObject:useItemOn(item) end
 
 --- @public
---- @param amount integer
---- @return integer
-function IsoObject:useWater(amount) end
+--- @param arg0 number
+--- @return number
+function IsoObject:useWater(arg0) end
 
 --- @public
 --- @param b ByteBufferWriter

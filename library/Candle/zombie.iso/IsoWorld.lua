@@ -19,6 +19,7 @@
 --- @field public WorldVersion_CharacterDiscomfort integer
 --- @field public WorldVersion_CharacterVoiceOptions integer
 --- @field public WorldVersion_CharacterVoiceType integer
+--- @field public WorldVersion_ChunksAttachmentsPartial integer
 --- @field public WorldVersion_ChunksAttachmentsState integer
 --- @field public WorldVersion_ChunksWorldGeneratedBoolean integer
 --- @field public WorldVersion_ChunksWorldModifiedBoolean integer

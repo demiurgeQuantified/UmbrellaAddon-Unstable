@@ -1103,6 +1103,10 @@ function IsoGameCharacter:fallenOnKnees() end
 function IsoGameCharacter:forceAwake() end
 
 --- @public
+--- @return nil
+function IsoGameCharacter:forgetRecipes() end
+
+--- @public
 --- @return number
 function IsoGameCharacter:getAbsoluteExcessTwist() end
 
@@ -1605,8 +1609,8 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return IAnimationVariableSource
---- @overload fun(self: IsoGameCharacter): AnimationVariableSource
+--- @return AnimationVariableSource
+--- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
 --- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
@@ -3369,6 +3373,10 @@ function IsoGameCharacter:isVisibleToNPCs() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isWeaponReady() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isWearingAwkwardGloves() end
 
 --- @public
@@ -3713,6 +3721,12 @@ function IsoGameCharacter:saveChange(change, tbl, bb) end
 --- @param age integer
 --- @return nil
 function IsoGameCharacter:setAge(age) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+function IsoGameCharacter:setAimAngles(arg0, arg1) end
 
 --- @public
 --- @param b boolean
@@ -4905,6 +4919,11 @@ function IsoGameCharacter:setVehicle(v) end
 --- @param arg0 boolean
 --- @return nil
 function IsoGameCharacter:setVehicleCollision(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setVerticalAimAngle(arg0) end
 
 --- @public
 --- @param VisibleToNPCs boolean the VisibleToNPCs to set

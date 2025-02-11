@@ -34,6 +34,10 @@ function SpriteConfigScript:getBreakSound() end
 function SpriteConfigScript:getCornerSprite() end
 
 --- @public
+--- @return string
+function SpriteConfigScript:getDebugItem() end
+
+--- @public
 --- @return boolean
 function SpriteConfigScript:getDontNeedFrame() end
 

@@ -10,6 +10,11 @@ biome_map_config = {
 		zone = "WaterNoFish",
 	},
 	{
+		pixel = 59,
+		biome = "clay_shore",
+		zone = "Forest",
+	},
+	{
 		pixel = 64,
 		zone = "ForagingNav",
 	},

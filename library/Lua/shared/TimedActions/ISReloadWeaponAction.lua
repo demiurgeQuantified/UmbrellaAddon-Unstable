@@ -31,7 +31,7 @@ function ISReloadWeaponAction.canShoot(weapon) end
 function ISReloadWeaponAction.OnPlayerAttackFinished(playerObj, weapon) end
 
 ---@return any
-function ISReloadWeaponAction.OnPressRackButton(player, gun) end
+function ISReloadWeaponAction.OnPressRackButton(player, gun, shift) end
 
 ---@return any
 function ISReloadWeaponAction.OnPressReloadButton(player, gun) end

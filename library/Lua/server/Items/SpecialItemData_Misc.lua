@@ -1342,6 +1342,8 @@ SpecialLootSpawns.CookwareSchematic = {
 SpecialLootSpawns.BSToolsSchematics = {
 	"Forge_Smithing_Hammer_Head",
 	"Forge_Wood_Axe_Head",
+	"Forge_Hand_Axe_Head",
+	"Forge_Old_Axe_Head",
 	"Forge_Sledgehammer_Head",
 	"Forge_Pick_Axe_Head",
 	"Forge_Club_Hammer_Head",

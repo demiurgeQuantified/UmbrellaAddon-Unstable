@@ -169,6 +169,9 @@ function OnBreak.ShortSword(item, player) end
 function OnBreak.Sledgehammer(item, player) end
 
 ---@return any
+function OnBreak.SledgehammerNoShaft(item, player) end
+
+---@return any
 function OnBreak.SmallHandle(item, player) end
 
 ---@return any

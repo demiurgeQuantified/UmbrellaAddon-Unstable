@@ -70,6 +70,9 @@ function ISHandCraftPanel:onCategoryChanged(_category) end
 function ISHandCraftPanel:OnCloseWindow() end
 
 ---@return any
+function ISHandCraftPanel:onDoubleClick(item) end
+
+---@return any
 function ISHandCraftPanel:onRecipeChanged(_recipe) end
 
 ---@return any

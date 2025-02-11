@@ -1347,6 +1347,7 @@ StoryClutter.SurvivalistCampsiteClutter = {
 	"Base.Harmonica",
 	"Base.Whetstone",
 	"Base.Fleshing_Tool",
+	"Base.HandAxe",
 }
 StoryClutter.TwiggyClutter = {
 	"Base.BeerBottle",

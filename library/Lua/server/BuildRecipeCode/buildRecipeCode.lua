@@ -2,6 +2,7 @@
 
 ---@class BuildRecipeCode
 BuildRecipeCode = BuildRecipeCode or {}
+BuildRecipeCode.canBePlastered = {}
 BuildRecipeCode.stairs = {}
 BuildRecipeCode.floor = {}
 BuildRecipeCode.butcheringHook = {}

@@ -16,6 +16,7 @@ HaloTextHelper = {}
 --- @param arg0 IsoPlayer
 --- @param arg1 string
 --- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string): nil
 function HaloTextHelper.addBadText(arg0, arg1) end
 
 --- @public
@@ -23,6 +24,7 @@ function HaloTextHelper.addBadText(arg0, arg1) end
 --- @param arg0 IsoPlayer
 --- @param arg1 string
 --- @return nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string): nil
 function HaloTextHelper.addGoodText(arg0, arg1) end
 
 --- @public
@@ -30,8 +32,9 @@ function HaloTextHelper.addGoodText(arg0, arg1) end
 --- @param player IsoPlayer
 --- @param text string
 --- @return nil
---- @overload fun(player: IsoPlayer, text: string, color: ColorRGB): nil
---- @overload fun(player: IsoPlayer, text: string, r: integer, g: integer, b: integer): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: ColorRGB): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: integer, arg4: integer, arg5: integer): nil
 function HaloTextHelper.addText(player, text) end
 
 --- @public
@@ -42,8 +45,12 @@ function HaloTextHelper.addText(player, text) end
 --- @param color ColorRGB
 --- @return nil
 --- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, color: ColorRGB, arrowColor: ColorRGB): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: ColorRGB): nil
 --- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, r: integer, g: integer, b: integer): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: ColorRGB, arg5: ColorRGB): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: integer, arg5: integer, arg6: integer): nil
 --- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, r: integer, g: integer, b: integer, aR: integer, aG: integer, aB: integer): nil
+--- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: integer, arg5: integer, arg6: integer, arg7: integer, arg8: integer, arg9: integer): nil
 function HaloTextHelper.addTextWithArrow(player, text, arrowIsUp, color) end
 
 --- @public

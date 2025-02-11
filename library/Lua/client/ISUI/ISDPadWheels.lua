@@ -23,3 +23,6 @@ function ISDPadWheels.onShout(playerObj) end
 
 ---@return any
 function ISDPadWheels.onToggleLight(playerObj, item) end
+
+---@return any
+function ISDPadWheels.showSurvGuide(playerIndex) end

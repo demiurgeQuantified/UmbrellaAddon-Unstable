@@ -10,6 +10,7 @@ OutputMapper = {}
 
 --- @public
 --- @return nil
+--- @overload fun(self: OutputMapper, arg0: string): nil
 function OutputMapper:OnPostWorldDictionaryInit() end
 
 --- @public

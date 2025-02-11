@@ -34,7 +34,7 @@ function CraftRecipeData:areAllInputItemsSatisfied() end
 --- @public
 --- @param arg0 List
 --- @return boolean
---- @overload fun(self: CraftRecipeData, arg0: List, arg1: List, arg2: boolean): boolean
+--- @overload fun(self: CraftRecipeData, arg0: List, arg1: List, arg2: boolean, arg3: boolean): boolean
 function CraftRecipeData:canConsumeInputs(arg0) end
 
 --- @public
@@ -55,8 +55,9 @@ function CraftRecipeData:canOfferInputItem(arg0) end
 --- @param arg0 IsoGameCharacter
 --- @param arg1 List
 --- @param arg2 List
+--- @param arg3 boolean
 --- @return boolean
-function CraftRecipeData:canPerform(arg0, arg1, arg2) end
+function CraftRecipeData:canPerform(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 List

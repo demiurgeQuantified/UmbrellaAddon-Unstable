@@ -5,6 +5,7 @@
 ---@field lastTimer any
 ---@field maxTime any
 ---@field shear any
+---@field sound any
 ---@field stopOnAim any
 ---@field timePerLiter any
 ---@field timer any
@@ -37,6 +38,9 @@ function ISShearAnimal:start() end
 
 ---@return any
 function ISShearAnimal:stop() end
+
+---@return any
+function ISShearAnimal:stopSound() end
 
 ---@return any
 function ISShearAnimal:stress() end

@@ -27,6 +27,12 @@ function WeaponPart:DoTooltip(tooltipUI, layout) end
 function WeaponPart:canAttach(arg0, arg1) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 HandWeapon
+--- @return boolean
+function WeaponPart:canDetach(arg0, arg1) end
+
+--- @public
 --- @return integer
 function WeaponPart:getAimingTime() end
 
@@ -124,6 +130,11 @@ function WeaponPart:setAngle(angle) end
 --- @param arg0 string
 --- @return nil
 function WeaponPart:setCanAttachCallback(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function WeaponPart:setCanDetachCallback(arg0) end
 
 --- @public
 --- @param clipSize integer

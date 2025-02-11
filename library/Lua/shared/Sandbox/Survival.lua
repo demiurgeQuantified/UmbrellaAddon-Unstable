@@ -33,7 +33,7 @@ return {
 	FridgeFactor = 3,
 	LootRespawn = 1,
 	SeenHoursPreventLootRespawn = 0,
-	WorldItemRemovalList = "Base.Hat,Base.Glasses,Base.Maggots,Base.Slug,Base.Slug2,Base.Snail,Base.Worm",
+	WorldItemRemovalList = "Base.Hat,Base.Glasses,Base.Maggots,Base.Slug,Base.Slug2,Base.Snail,Base.Worm,Base.Dung_Mouse,Base.Dung_Rat",
 	HoursForWorldItemRemoval = 24.0,
 	ItemRemovalListBlacklistToggle = false,
 	TimeSinceApo = 1,

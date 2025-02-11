@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class CoopCharacterCreation : ISPanelJoypad
----@field charCreationHeader any
 ---@field charCreationMain any
 ---@field charCreationProfession any
 ---@field coopUserName any
