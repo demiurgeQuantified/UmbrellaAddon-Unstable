@@ -9,10 +9,6 @@ Moodles = {}
 ------------------------------------
 
 --- @public
---- @return nil
-function Moodles:Randomise() end
-
---- @public
 --- @return boolean
 function Moodles:UI_RefreshNeeded() end
 
@@ -64,6 +60,11 @@ function Moodles:getMoodleType(MoodleIndex) end
 --- @public
 --- @return integer
 function Moodles:getNumMoodles() end
+
+--- @public
+--- @param arg0 MoodleType
+--- @return boolean
+function Moodles:isMaxMoodleLevel(arg0) end
 
 --- @public
 --- @param refresh boolean

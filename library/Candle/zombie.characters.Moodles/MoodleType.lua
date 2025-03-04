@@ -3,6 +3,7 @@
 --- @class MoodleType: Enum
 --- @field public class any
 --- @field public Angry MoodleType
+--- @field public BadMoodleType integer
 --- @field public Bleeding MoodleType
 --- @field public Bored MoodleType
 --- @field public CantSprint MoodleType
@@ -10,6 +11,7 @@
 --- @field public Drunk MoodleType
 --- @field public Endurance MoodleType
 --- @field public FoodEaten MoodleType
+--- @field public GoodMoodleType integer
 --- @field public HasACold MoodleType
 --- @field public HeavyLoad MoodleType
 --- @field public Hungry MoodleType
@@ -17,6 +19,7 @@
 --- @field public Hypothermia MoodleType
 --- @field public Injured MoodleType
 --- @field public MAX MoodleType
+--- @field public NeutralMoodleType integer
 --- @field public NoxiousSmell MoodleType
 --- @field public Pain MoodleType
 --- @field public Panic MoodleType

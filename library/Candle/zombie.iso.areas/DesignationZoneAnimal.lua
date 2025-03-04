@@ -155,6 +155,10 @@ function DesignationZoneAnimal:getNbOfFeather() end
 
 --- @public
 --- @return ArrayList
+function DesignationZoneAnimal:getNearWaterSquaresConnected() end
+
+--- @public
+--- @return ArrayList
 function DesignationZoneAnimal:getRoofAreas() end
 
 --- @public

@@ -149,7 +149,7 @@ function ISButtonPrompt:onAPress() end
 function ISButtonPrompt:onBPress() end
 
 ---@return any
-function ISButtonPrompt:onJoypadButtonReleased(button) end
+function ISButtonPrompt:onJoypadButtonReleased(button, joypadData) end
 
 ---@return any
 function ISButtonPrompt:onLBPress() end
@@ -168,6 +168,9 @@ function ISButtonPrompt:openDeviceOptions(device) end
 
 ---@return any
 function ISButtonPrompt:openDoor(door) end
+
+---@return any
+function ISButtonPrompt:openEntityUI(entity) end
 
 ---@return any
 function ISButtonPrompt:openWindow(window) end

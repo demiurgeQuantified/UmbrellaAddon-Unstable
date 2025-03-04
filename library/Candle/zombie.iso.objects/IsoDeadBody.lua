@@ -3,6 +3,7 @@
 --- @class IsoDeadBody: IsoMovingObject, Talker, IAnimalVisual, IHumanVisual, IIdentifiable, IGrappleableWrapper
 --- @field public class any
 --- @field public MAX_ROT_STAGES integer
+--- @field public MAX_ROT_STAGES_ANIMALS integer
 IsoDeadBody = {}
 
 ------------------------------------
@@ -111,6 +112,11 @@ function IsoDeadBody:addToWorld() end
 function IsoDeadBody:canBeGrappled() end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function IsoDeadBody:changeRotStage(arg0) end
+
+--- @public
 --- @param removedItem InventoryItem
 --- @return nil
 function IsoDeadBody:checkClothing(removedItem) end
@@ -194,8 +200,8 @@ function IsoDeadBody:getGrabHeadPosition(arg0) end
 function IsoDeadBody:getGrabLegsPosition(arg0) end
 
 --- @public
---- @param arg0 Vector3
---- @return Vector3
+--- @param arg0 Vector3f
+--- @return Vector3f
 --- @overload fun(self: IsoDeadBody, arg0: Vector3): Vector3
 function IsoDeadBody:getGrappleOffset(arg0) end
 
@@ -314,8 +320,8 @@ function IsoDeadBody:getSharedGrappleType() end
 function IsoDeadBody:getTalkerType() end
 
 --- @public
---- @param arg0 Vector3
---- @return Vector3
+--- @param arg0 Vector3f
+--- @return Vector3f
 --- @overload fun(self: IsoDeadBody, arg0: Vector3): Vector3
 function IsoDeadBody:getTargetGrapplePos(arg0) end
 

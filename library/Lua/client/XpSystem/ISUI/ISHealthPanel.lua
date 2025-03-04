@@ -21,6 +21,7 @@
 ---@field otherPlayerY any
 ---@field playerNum any
 ---@field progressBarLoaded any
+---@field tabtotalwidth any
 ---@field textRight any
 ---@field [any] any
 ISHealthPanel = ISPanelJoypad:derive("ISHealthPanel")

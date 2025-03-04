@@ -70,6 +70,10 @@ function IsoGenerator:getItemsPowered() end
 function IsoGenerator:getObjectName() end
 
 --- @public
+--- @return string
+function IsoGenerator:getSoundPrefix() end
+
+--- @public
 --- @return number
 function IsoGenerator:getTotalPowerUsing() end
 

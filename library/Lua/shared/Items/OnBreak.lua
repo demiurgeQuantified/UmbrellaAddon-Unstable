@@ -106,6 +106,18 @@ function OnBreak.HeadHandler(item, player, newItemString, stickIn, forceLocation
 function OnBreak.HuntingKnife(item, player) end
 
 ---@return any
+function OnBreak.IronBar(item, player) end
+
+---@return any
+function OnBreak.IronBarHalf(item, player) end
+
+---@return any
+function OnBreak.IronRod(item, player) end
+
+---@return any
+function OnBreak.IronRodHalf(item, player) end
+
+---@return any
 function OnBreak.JawboneBovide_Axe(item, player) end
 
 ---@return any
@@ -140,6 +152,9 @@ function OnBreak.Machete(item, player) end
 
 ---@return any
 function OnBreak.MeatCleaver(item, player) end
+
+---@return any
+function OnBreak.MetalBar(item, player) end
 
 ---@return any
 function OnBreak.MetalPipe(item, player) end
@@ -251,6 +266,15 @@ function OnBreak.SpearStone(item, player) end
 
 ---@return any
 function OnBreak.SpearStoneLong(item, player) end
+
+---@return any
+function OnBreak.SteelBar(item, player) end
+
+---@return any
+function OnBreak.SteelBarHalf(item, player) end
+
+---@return any
+function OnBreak.SteelRodHalf(item, player) end
 
 ---@return any
 function OnBreak.StoneAxeLarge(item, player) end

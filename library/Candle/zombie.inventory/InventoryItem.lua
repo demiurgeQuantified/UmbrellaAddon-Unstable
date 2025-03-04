@@ -929,7 +929,8 @@ function InventoryItem:getReplaceTypesMap() end
 function InventoryItem:getRequireInHandOrInventory() end
 
 --- @public
---- @return List
+--- @return ArrayList
+--- @overload fun(self: InventoryItem, arg0: IsoGameCharacter): ArrayList
 function InventoryItem:getResearchableRecipes() end
 
 --- @public
@@ -1173,6 +1174,18 @@ function InventoryItem:getWorldStaticModelsByIndex() end
 function InventoryItem:getWorldTexture() end
 
 --- @public
+--- @return integer
+function InventoryItem:getWorldXRotation() end
+
+--- @public
+--- @return integer
+function InventoryItem:getWorldYRotation() end
+
+--- @public
+--- @return integer
+function InventoryItem:getWorldZRotation() end
+
+--- @public
 --- @return number
 function InventoryItem:getX() end
 
@@ -1244,7 +1257,6 @@ function InventoryItem:haveExtraItems() end
 --- @overload fun(self: InventoryItem, arg0: integer, arg1: number): boolean
 --- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean): boolean
 --- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
 function InventoryItem:headConditionCheck() end
 
 --- @public
@@ -1541,8 +1553,9 @@ function InventoryItem:reduceCondition() end
 function InventoryItem:reduceHeadCondition() end
 
 --- @public
+--- @param arg0 IsoGameCharacter
 --- @return nil
-function InventoryItem:reduceSharpness() end
+function InventoryItem:researchRecipes(arg0) end
 
 --- @public
 --- @return nil
@@ -1775,6 +1788,11 @@ function InventoryItem:setConditionNoSound(arg0) end
 --- @param arg0 InventoryItem
 --- @return nil
 function InventoryItem:setConditionTo(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:setConditionWhileLoading(arg0) end
 
 --- @public
 --- @param container ItemContainer the container to set
@@ -2357,6 +2375,16 @@ function InventoryItem:setWorldStaticModelsByIndex(arg0) end
 function InventoryItem:setWorldTexture(WorldTexture) end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:setWorldXRotation(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:setWorldYRotation(arg0) end
+
+--- @public
 --- @param rot integer
 --- @return nil
 function InventoryItem:setWorldZRotation(rot) end
@@ -2367,7 +2395,6 @@ function InventoryItem:setWorldZRotation(rot) end
 --- @overload fun(self: InventoryItem, arg0: integer, arg1: number): boolean
 --- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean): boolean
 --- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean): boolean
---- @overload fun(self: InventoryItem, arg0: integer, arg1: number, arg2: boolean, arg3: boolean, arg4: IsoGameCharacter): boolean
 function InventoryItem:sharpnessCheck() end
 
 --- @public

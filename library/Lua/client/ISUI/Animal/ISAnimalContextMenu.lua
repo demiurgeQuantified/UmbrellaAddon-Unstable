@@ -92,7 +92,7 @@ function AnimalContextMenu.onDebugForcePoop(animal, playerObj) end
 function AnimalContextMenu.onDebugSetAcceptance(animal, playerObj, acceptance) end
 
 ---@return any
-function AnimalContextMenu.onDebugSetStress(animal, chr) end
+function AnimalContextMenu.onDebugSetStress(animal, playerNum) end
 
 ---@return any
 function AnimalContextMenu.onDetachAnimal(animal, chr) end
@@ -167,10 +167,10 @@ function AnimalContextMenu.onSetFire(animal, playerObj) end
 function AnimalContextMenu.onSetHungry(animal, playerObj) end
 
 ---@return any
-function AnimalContextMenu.onSetMilkQty(animal, chr) end
+function AnimalContextMenu.onSetMilkQty(animal, playerNum) end
 
 ---@return any
-function AnimalContextMenu.onSetWoolQty(animal, chr) end
+function AnimalContextMenu.onSetWoolQty(animal, playerNum) end
 
 ---@return any
 function AnimalContextMenu.onShearAnimal(animal, chr, shear) end

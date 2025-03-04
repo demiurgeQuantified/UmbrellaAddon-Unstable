@@ -220,6 +220,7 @@ AttachedWeaponDefinitions.knifeBack_Special = {
 		"Base.LongStick_Broken",
 		"Base.SharpBone_Long",
 		"Base.Toothbrush_Shiv",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knifeLowQualityLeftLeg = {
@@ -297,6 +298,7 @@ AttachedWeaponDefinitions.knifeLeftLeg_Special = {
 		"Base.LongStick_Broken",
 		"Base.SharpBone_Long",
 		"Base.Toothbrush_Shiv",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knifeLowQualityLeftLeg = {
@@ -374,6 +376,7 @@ AttachedWeaponDefinitions.knifeRightLeg_Special = {
 		"Base.LongStick_Broken",
 		"Base.SharpBone_Long",
 		"Base.Toothbrush_Shiv",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knifeLowQualityShoulder = {
@@ -455,6 +458,7 @@ AttachedWeaponDefinitions.knifeShoulder_Special = {
 		"Base.LongStick_Broken",
 		"Base.SharpBone_Long",
 		"Base.Toothbrush_Shiv",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.MacheteShoulder = {
@@ -568,6 +572,7 @@ AttachedWeaponDefinitions.knifeStomach_Special = {
 		"Base.LongStick_Broken",
 		"Base.SharpBone_Long",
 		"Base.Toothbrush_Shiv",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.weaponInStomach = {
@@ -1677,6 +1682,7 @@ AttachedWeaponDefinitions.knivesBelt_Bandit = {
 		"Base.SteakKnife",
 		"Base.SwitchKnife",
 		"Base.Toothbrush_Shiv",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knivesBelt_Early = {
@@ -1708,6 +1714,7 @@ AttachedWeaponDefinitions.knivesBelt_Early = {
 		"Base.KnifeShiv",
 		"Base.Toothbrush_Shiv",
 		"Base.FightingKnife",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knivesBelt_Mid = {
@@ -1747,6 +1754,7 @@ AttachedWeaponDefinitions.knivesBelt_Mid = {
 		"Base.Toothbrush_Shiv",
 		"Base.FightingKnife",
 		"Base.CrudeKnife",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knivesBelt_Late = {
@@ -1788,6 +1796,7 @@ AttachedWeaponDefinitions.knivesBelt_Late = {
 		"Base.Machete_Crude",
 		"Base.SharpBone_Long",
 		"Base.ShortSword_Scrap",
+		"Base.Screwdriver_Improvised",
 	},
 }
 AttachedWeaponDefinitions.knivesBeltHunter = {
@@ -2385,7 +2394,7 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Dean = {
 }
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit = {
 	chance = 50,
-	maxitem = 2,
+	maxitem = 1,
 	weapons = {
 		AttachedWeaponDefinitions.meleeInBack_Bandit,
 		AttachedWeaponDefinitions.hammerBelt_Bandit,
@@ -2393,8 +2402,8 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit = {
 	},
 }
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Early = {
-	chance = 60,
-	maxitem = 3,
+	chance = 50,
+	maxitem = 2,
 	weapons = {
 		AttachedWeaponDefinitions.meleeInBack_Early,
 		AttachedWeaponDefinitions.hammerBelt_Early,
@@ -2403,8 +2412,8 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Early = {
 	},
 }
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Mid = {
-	chance = 70,
-	maxitem = 4,
+	chance = 60,
+	maxitem = 3,
 	weapons = {
 		AttachedWeaponDefinitions.meleeInBack_Mid,
 		AttachedWeaponDefinitions.handgunHolster,
@@ -2414,8 +2423,8 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Mid = {
 	},
 }
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Late = {
-	chance = 80,
-	maxitem = 5,
+	chance = 70,
+	maxitem = 4,
 	weapons = {
 		AttachedWeaponDefinitions.handgunHolster,
 		AttachedWeaponDefinitions.hammerBelt_Late,
@@ -2439,7 +2448,7 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist = {
 	},
 }
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid = {
-	chance = 60,
+	chance = 50,
 	maxitem = 4,
 	weapons = {
 		AttachedWeaponDefinitions.meleeInBackBag_Mid,
@@ -2452,7 +2461,7 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid = {
 	},
 }
 AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late = {
-	chance = 70,
+	chance = 60,
 	maxitem = 5,
 	weapons = {
 		AttachedWeaponDefinitions.meleeInBackBag_Late,

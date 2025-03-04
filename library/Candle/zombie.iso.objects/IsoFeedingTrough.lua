@@ -18,6 +18,16 @@ function IsoFeedingTrough:addLinkedAnimal(arg0) end
 function IsoFeedingTrough:addToWorld() end
 
 --- @public
+--- @param arg0 FluidType
+--- @param arg1 number
+--- @return nil
+function IsoFeedingTrough:addWater(arg0, arg1) end
+
+--- @public
+--- @return nil
+function IsoFeedingTrough:checkContainer() end
+
+--- @public
 --- @return nil
 function IsoFeedingTrough:checkIsoRegion() end
 
@@ -31,7 +41,15 @@ function IsoFeedingTrough:checkOverlayFull() end
 
 --- @public
 --- @return nil
+function IsoFeedingTrough:checkWaterFromRain() end
+
+--- @public
+--- @return nil
 function IsoFeedingTrough:checkZone() end
+
+--- @public
+--- @return nil
+function IsoFeedingTrough:createFluidContainer() end
 
 --- @public
 --- @param arg0 table
@@ -102,6 +120,10 @@ function IsoFeedingTrough:load(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
+function IsoFeedingTrough:onFluidContainerUpdate() end
+
+--- @public
+--- @return nil
 function IsoFeedingTrough:onFoodAdded() end
 
 --- @public
@@ -110,7 +132,16 @@ function IsoFeedingTrough:onRemoveFood() end
 
 --- @public
 --- @return nil
+function IsoFeedingTrough:removeFluidContainer() end
+
+--- @public
+--- @return nil
 function IsoFeedingTrough:removeFromWorld() end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoFeedingTrough:removeWater(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -157,11 +188,6 @@ function IsoFeedingTrough:setMaxWater(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function IsoFeedingTrough:setNorth(arg0) end
-
---- @public
---- @param arg0 number
---- @return nil
-function IsoFeedingTrough:setWater(arg0) end
 
 --- @public
 --- @return nil

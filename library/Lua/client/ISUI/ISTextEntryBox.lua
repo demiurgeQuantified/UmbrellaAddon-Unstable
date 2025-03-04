@@ -106,6 +106,9 @@ function ISTextEntryBox:setCursorPos(charIndex) end
 function ISTextEntryBox:setEditable(editable) end
 
 ---@return any
+function ISTextEntryBox:setFont(font) end
+
+---@return any
 function ISTextEntryBox:setForceUpperCase(forceUpperCase) end
 
 ---@return any

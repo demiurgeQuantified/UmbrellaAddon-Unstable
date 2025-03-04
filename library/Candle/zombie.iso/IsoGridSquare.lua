@@ -523,10 +523,10 @@ function IsoGridSquare:TreatAsSolidFloor() end
 function IsoGridSquare:addBrokenGlass() end
 
 --- @public
---- @param body IsoDeadBody
---- @param bRemote boolean
---- @return nil
-function IsoGridSquare:addCorpse(body, bRemote) end
+--- @return IsoDeadBody
+--- @overload fun(self: IsoGridSquare, arg0: boolean): IsoDeadBody
+--- @overload fun(self: IsoGridSquare, body: IsoDeadBody, bRemote: boolean): nil
+function IsoGridSquare:addCorpse() end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -663,6 +663,13 @@ function IsoGridSquare:containsVegetation() end
 function IsoGridSquare:createAnimalCorpseFromItem(arg0) end
 
 --- @public
+--- @param arg0 boolean
+--- @return IsoDeadBody
+--- @overload fun(self: IsoGridSquare, arg0: IsoZombie): IsoDeadBody
+--- @overload fun(self: IsoGridSquare, arg0: IsoZombie, arg1: boolean): IsoDeadBody
+function IsoGridSquare:createCorpse(arg0) end
+
+--- @public
 --- @param player IsoPlayer
 --- @param north boolean
 --- @return boolean
@@ -731,6 +738,10 @@ function IsoGridSquare:getAnimals() end
 --- @param dy number
 --- @return number
 function IsoGridSquare:getApparentZ(dx, dy) end
+
+--- @public
+--- @return IsoObject
+function IsoGridSquare:getBed() end
 
 --- @public
 --- @param next IsoGridSquare
@@ -957,6 +968,10 @@ function IsoGridSquare:getHourLastSeen() end
 function IsoGridSquare:getHoursSinceLastSeen() end
 
 --- @public
+--- @return IsoHutch
+function IsoGridSquare:getHutch() end
+
+--- @public
 --- @return ArrayList
 function IsoGridSquare:getHutchTiles() end
 
@@ -1045,6 +1060,11 @@ function IsoGridSquare:getMovingObjects() end
 function IsoGridSquare:getN() end
 
 --- @public
+--- @param arg0 integer
+--- @return integer
+function IsoGridSquare:getNextNonItemObjectIndex(arg0) end
+
+--- @public
 --- @return PZArrayList the Objects
 function IsoGridSquare:getObjects() end
 
@@ -1089,6 +1109,10 @@ function IsoGridSquare:getPlayerCutawayFlag(playerIndex, currentTimeMillis) end
 --- @public
 --- @return PropertyContainer the Properties
 function IsoGridSquare:getProperties() end
+
+--- @public
+--- @return IsoObject
+function IsoGridSquare:getPuddleFloor() end
 
 --- @public
 --- @return IsoPuddlesGeometry

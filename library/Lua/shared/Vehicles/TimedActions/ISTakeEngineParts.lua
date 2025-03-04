@@ -13,9 +13,6 @@ ISTakeEngineParts = ISBaseTimedAction:derive("ISTakeEngineParts")
 function ISTakeEngineParts:complete() end
 
 ---@return any
-function ISTakeEngineParts:getDuration() end
-
----@return any
 function ISTakeEngineParts:getExtraLogData() end
 
 ---@return any

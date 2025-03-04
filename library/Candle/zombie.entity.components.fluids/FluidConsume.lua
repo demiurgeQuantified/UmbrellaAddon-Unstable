@@ -28,6 +28,13 @@ function FluidConsume.Load(arg0, arg1) end
 --- @return nil
 function FluidConsume.Save(arg0, arg1) end
 
+--- @public
+--- @static
+--- @param arg0 FluidConsume
+--- @param arg1 FluidConsume
+--- @return FluidConsume
+function FluidConsume.combine(arg0, arg1) end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -35,6 +42,11 @@ function FluidConsume.Save(arg0, arg1) end
 --- @public
 --- @return nil
 function FluidConsume:clear() end
+
+--- @public
+--- @param arg0 FluidConsume
+--- @return FluidConsume
+function FluidConsume:combineWith(arg0) end
 
 --- @public
 --- @return number

@@ -12,6 +12,9 @@
 LuaFileBrowser = ISCollapsableWindow:derive("LuaFileBrowser")
 
 ---@return any
+function LuaFileBrowser:checkFontSize() end
+
+---@return any
 function LuaFileBrowser:createChildren() end
 
 ---@return any
@@ -25,6 +28,12 @@ function LuaFileBrowser:onButtonReload() end
 
 ---@return any
 function LuaFileBrowser:onMouseDoubleClickFile(item) end
+
+---@return any
+function LuaFileBrowser:prerender() end
+
+---@return any
+function LuaFileBrowser:setListBoxItemHeight(listBox) end
 
 ---@return any
 function LuaFileBrowser:update() end

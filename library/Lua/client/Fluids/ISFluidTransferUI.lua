@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISFluidTransferUI : ISPanel
+---@class ISFluidTransferUI : ISPanelJoypad
 ---@field action any
 ---@field backgroundColor any
 ---@field borderColor any
@@ -9,6 +9,7 @@
 ---@field btnTransfer any
 ---@field buttonBorderColor any
 ---@field container any
+---@field disableJoypadNavigation any
 ---@field disableSwap any
 ---@field disableTransfer any
 ---@field errorDefault any
@@ -16,6 +17,10 @@
 ---@field errorText any
 ---@field info any
 ---@field isIsoPanel any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field maxTransferLabel any
 ---@field maxTransferText any
 ---@field moveWithMouse any
@@ -27,6 +32,7 @@
 ---@field panelRightText any
 ---@field panelRightX any
 ---@field player any
+---@field playerNum any
 ---@field slider any
 ---@field source any
 ---@field titleLabel any
@@ -37,7 +43,7 @@
 ---@field variableColor any
 ---@field zOffsetSmallFont any
 ---@field [any] any
-ISFluidTransferUI = ISPanel:derive("ISFluidTransferUI")
+ISFluidTransferUI = ISPanelJoypad:derive("ISFluidTransferUI")
 ISFluidTransferUI.players = {}
 ISFluidTransferUI.cheatSkill = false
 ISFluidTransferUI.cheatTransfer = false
@@ -70,6 +76,12 @@ function ISFluidTransferUI:onContainerRemove(_removedItem, _panel) end
 function ISFluidTransferUI:onContainerVerify(_item, _panel) end
 
 ---@return any
+function ISFluidTransferUI:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISFluidTransferUI:onJoypadDown(button, joypadData) end
+
+---@return any
 function ISFluidTransferUI:onRightMouseUp(x, y) end
 
 ---@return any
@@ -83,6 +95,9 @@ function ISFluidTransferUI:render() end
 
 ---@return any
 function ISFluidTransferUI:setMaxTransfer(_value) end
+
+---@return any
+function ISFluidTransferUI:setOrClearItem(panel) end
 
 ---@return any
 function ISFluidTransferUI:setTransferring(_value) end

@@ -26,6 +26,12 @@ function ISEntityWindow:initialise() end
 function ISEntityWindow:onCraftButtonClick(_button) end
 
 ---@return any
+function ISEntityWindow:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISEntityWindow:onJoypadDown_Descendant(descendant, button, joypadData) end
+
+---@return any
 function ISEntityWindow:onKeyRelease(key) end
 
 ---@return any

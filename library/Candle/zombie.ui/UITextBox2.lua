@@ -297,6 +297,11 @@ function UITextBox2:setDoingTextEntry(arg0) end
 function UITextBox2:setEditable(b) end
 
 --- @public
+--- @param arg0 UIFont
+--- @return nil
+function UITextBox2:setFont(arg0) end
+
+--- @public
 --- @param forceUpperCase boolean
 --- @return nil
 function UITextBox2:setForceUpperCase(forceUpperCase) end

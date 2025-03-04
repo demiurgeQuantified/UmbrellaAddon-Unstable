@@ -894,9 +894,9 @@ function Item:isVisualAid() end
 function Item:isWorldRender() end
 
 --- @public
---- @param arg0 integer
---- @return integer
-function Item:normalizeSkillLevel(arg0) end
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function Item:researchRecipes(arg0) end
 
 --- @public
 --- @return nil

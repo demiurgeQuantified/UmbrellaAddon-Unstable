@@ -31,13 +31,13 @@ function ISCraftInventoryPanel:createChildren() end
 function ISCraftInventoryPanel:createListHeader(_text, hasExpandArrow) end
 
 ---@return any
-function ISCraftInventoryPanel:createListItemEntree(_node, _inventoryItem, _index) end
+function ISCraftInventoryPanel:createListItemEntry(_node, _inventoryItem, _index) end
 
 ---@return any
 function ISCraftInventoryPanel:createListItemNode(_node) end
 
 ---@return any
-function ISCraftInventoryPanel:createUnavailableListItemEntree(_item, _index) end
+function ISCraftInventoryPanel:createUnavailableListItemEntry(_item, _index) end
 
 ---@return any
 function ISCraftInventoryPanel:drawListItem(y, item, alt) end

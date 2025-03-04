@@ -105,7 +105,7 @@ function WalkToAdjacent:new() end
 
 ---@class InventoryLootingStep : TutorialStep
 InventoryLootingStep = TutorialStep:derive("InventoryLootingStep")
-InventoryLootingStep.itemToEat = "DeadMouse"
+InventoryLootingStep.itemToEat = "DeadRat"
 
 ---@return any
 function InventoryLootingStep:begin() end

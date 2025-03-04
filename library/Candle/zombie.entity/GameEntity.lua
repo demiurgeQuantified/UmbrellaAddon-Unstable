@@ -55,6 +55,10 @@ function GameEntity:getComponentForIndex(arg0) end
 function GameEntity:getComponentFromID(arg0) end
 
 --- @public
+--- @return Durability
+function GameEntity:getDurabilityComponent() end
+
+--- @public
 --- @return string
 function GameEntity:getEntityDisplayName() end
 
@@ -158,6 +162,10 @@ function GameEntity:loadEntity(arg0, arg1) end
 --- @return nil
 --- @overload fun(self: GameEntity, arg0: boolean): nil
 function GameEntity:onEquip() end
+
+--- @public
+--- @return nil
+function GameEntity:onFluidContainerUpdate() end
 
 --- @public
 --- @return nil

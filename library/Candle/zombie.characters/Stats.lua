@@ -178,12 +178,12 @@ function Stats:normalizeHunger() end
 
 --- @public
 --- @param arg0 number
---- @return nil
+--- @return number
 function Stats:normalizeMaxOneHundredValue(arg0) end
 
 --- @public
 --- @param arg0 number
---- @return nil
+--- @return number
 function Stats:normalizeMaxOneValue(arg0) end
 
 --- @public

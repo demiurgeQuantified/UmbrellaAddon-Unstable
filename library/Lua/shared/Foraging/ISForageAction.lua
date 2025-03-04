@@ -5,6 +5,8 @@
 ---@field discardItems any
 ---@field forageIcon any
 ---@field iconID any
+---@field isPoison any
+---@field itemCount any
 ---@field itemDef any
 ---@field itemType any
 ---@field manager any
@@ -45,4 +47,4 @@ function ISForageAction:update() end
 function ISForageAction:waitToStart() end
 
 ---@return ISForageAction
-function ISForageAction:new(character, iconID, targetContainer, discardItems, itemType) end
+function ISForageAction:new(character, iconID, targetContainer, discardItems, itemType, isPoison) end

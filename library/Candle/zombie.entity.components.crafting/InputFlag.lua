@@ -10,6 +10,7 @@
 --- @field public CanBeDoneFromFloor InputFlag
 --- @field public CopyClothing InputFlag
 --- @field public DontPutBack InputFlag
+--- @field public DontRecordInput InputFlag
 --- @field public DontReplace InputFlag
 --- @field public FakeOutput InputFlag
 --- @field public FullOfWater InputFlag
@@ -51,6 +52,8 @@
 --- @field public NotFull InputFlag
 --- @field public Prop1 InputFlag
 --- @field public Prop2 InputFlag
+--- @field public RecordInput InputFlag
+--- @field public ResearchInput InputFlag
 --- @field public SharpnessCheck InputFlag
 --- @field public ToolLeft InputFlag
 --- @field public ToolRight InputFlag

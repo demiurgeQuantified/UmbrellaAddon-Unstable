@@ -50,6 +50,7 @@
 ---@field mouseOverList any
 ---@field movableBtn any
 ---@field movableIcon any
+---@field movableIconOff any
 ---@field movableIconPickup any
 ---@field movableIconPlace any
 ---@field movableIconRotate any
@@ -67,7 +68,7 @@
 ---@field safety any
 ---@field safetyBtn any
 ---@field searchBtn any
----@field searchIconOff any
+---@field searchIcon any
 ---@field searchIconOn any
 ---@field toolTip any
 ---@field warActive any
@@ -106,6 +107,9 @@ function ISEquippedItem:getDraggedEquippableItem() end
 
 ---@return any
 function ISEquippedItem:getDraggedEquippableItems() end
+
+---@return any
+function ISEquippedItem:getSidebarSize() end
 
 ---@return any
 function ISEquippedItem:initialise() end

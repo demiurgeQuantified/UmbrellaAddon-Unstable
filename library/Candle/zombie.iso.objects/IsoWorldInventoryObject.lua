@@ -34,12 +34,38 @@ function IsoWorldInventoryObject:HasTooltip() end
 function IsoWorldInventoryObject:Serialize() end
 
 --- @public
+--- @param arg0 FluidType
+--- @param arg1 number
+--- @return nil
+function IsoWorldInventoryObject:addFluid(arg0, arg1) end
+
+--- @public
 --- @return nil
 function IsoWorldInventoryObject:addToWorld() end
 
 --- @public
+--- @return nil
+function IsoWorldInventoryObject:emptyFluid() end
+
+--- @public
 --- @return boolean
 function IsoWorldInventoryObject:finishupdate() end
+
+--- @public
+--- @return string
+function IsoWorldInventoryObject:getCustomMenuOption() end
+
+--- @public
+--- @return number
+function IsoWorldInventoryObject:getFluidAmount() end
+
+--- @public
+--- @return number
+function IsoWorldInventoryObject:getFluidCapacity() end
+
+--- @public
+--- @return string
+function IsoWorldInventoryObject:getFluidUiName() end
 
 --- @public
 --- @return InventoryItem
@@ -48,6 +74,18 @@ function IsoWorldInventoryObject:getItem() end
 --- @public
 --- @return string
 function IsoWorldInventoryObject:getObjectName() end
+
+--- @public
+--- @return number
+function IsoWorldInventoryObject:getOffX() end
+
+--- @public
+--- @return number
+function IsoWorldInventoryObject:getOffY() end
+
+--- @public
+--- @return number
+function IsoWorldInventoryObject:getOffZ() end
 
 --- @public
 --- @return IsoGridSquare
@@ -65,14 +103,6 @@ function IsoWorldInventoryObject:getScreenPosY(playerIndex) end
 
 --- @public
 --- @return number
-function IsoWorldInventoryObject:getWaterAmount() end
-
---- @public
---- @return number
-function IsoWorldInventoryObject:getWaterMax() end
-
---- @public
---- @return number
 function IsoWorldInventoryObject:getWorldPosX() end
 
 --- @public
@@ -85,11 +115,20 @@ function IsoWorldInventoryObject:getWorldPosZ() end
 
 --- @public
 --- @return boolean
+function IsoWorldInventoryObject:hasWater() end
+
+--- @public
+--- @return boolean
 function IsoWorldInventoryObject:isHighlighted() end
 
 --- @public
 --- @return boolean
 function IsoWorldInventoryObject:isIgnoreRemoveSandbox() end
+
+--- @public
+--- @param arg0 boolean
+--- @return boolean
+function IsoWorldInventoryObject:isPureWater(arg0) end
 
 --- @public
 --- @return boolean
@@ -166,16 +205,25 @@ function IsoWorldInventoryObject:setIgnoreRemoveSandbox(b) end
 
 --- @public
 --- @param arg0 number
+--- @return nil
+function IsoWorldInventoryObject:setOffX(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoWorldInventoryObject:setOffY(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoWorldInventoryObject:setOffZ(arg0) end
+
+--- @public
+--- @param arg0 number
 --- @param arg1 number
 --- @param arg2 number
 --- @return nil
 function IsoWorldInventoryObject:setOffset(arg0, arg1, arg2) end
-
---- @public
---- @param arg0 number
---- @param arg1 boolean
---- @return nil
-function IsoWorldInventoryObject:setWaterAmount(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -200,12 +248,29 @@ function IsoWorldInventoryObject:syncIsoObject(arg0, arg1, arg2, arg3) end
 function IsoWorldInventoryObject:syncIsoObjectSend(arg0) end
 
 --- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @return number
+function IsoWorldInventoryObject:transferFluidFrom(arg0, arg1) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @return number
+function IsoWorldInventoryObject:transferFluidTo(arg0, arg1) end
+
+--- @public
 --- @return nil
 function IsoWorldInventoryObject:update() end
 
 --- @public
 --- @return nil
 function IsoWorldInventoryObject:updateSprite() end
+
+--- @public
+--- @param arg0 number
+--- @return number
+function IsoWorldInventoryObject:useFluid(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

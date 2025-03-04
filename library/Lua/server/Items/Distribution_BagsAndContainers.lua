@@ -1109,6 +1109,16 @@ BagsAndContainers.BanditBag_Mid = {
 	maxMap = 1,
 	stashChance = 10,
 }
+BagsAndContainers.BanditBag_Late = {
+	rolls = 4,
+	items = BagsAndContainers.BanditItems,
+	junk = {
+		rolls = 1,
+		items = {},
+	},
+	maxMap = 1,
+	stashChance = 10,
+}
 BagsAndContainers.Cashbox = {
 	rolls = 4,
 	items = {
@@ -1775,6 +1785,8 @@ BagsAndContainers.Farming = {
 		10,
 		"GardenSaw",
 		10,
+		"HandAxe",
+		4,
 		"HandDrill",
 		10,
 		"HandFork",
@@ -1981,6 +1993,8 @@ BagsAndContainers.Gardening = {
 		10,
 		"HandDrill",
 		10,
+		"HandAxe",
+		4,
 		"HandFork",
 		10,
 		"HandScythe",
@@ -4417,6 +4431,10 @@ BagsAndContainers.SurvivorItems = {
 	4,
 	"PrimitiveToolMag2",
 	4,
+	"PrimitiveToolMag3",
+	4,
+	"SurvivalSchematic",
+	4,
 	"TrickMag1",
 	4,
 	"WeaponMag1",
@@ -4541,7 +4559,7 @@ BagsAndContainers.SurvivorBag_Mid = {
 	stashChance = 10,
 }
 BagsAndContainers.SurvivorBag_Late = {
-	rolls = 3,
+	rolls = 2,
 	items = BagsAndContainers.SurvivorItems,
 	junk = {
 		rolls = 1,
@@ -4705,6 +4723,8 @@ BagsAndContainers.Toolbox = {
 		8,
 		"Hammer",
 		8,
+		"HandAxe",
+		1,
 		"HandDrill",
 		4,
 		"HeadingTool",

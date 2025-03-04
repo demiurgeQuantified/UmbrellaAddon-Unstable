@@ -56,7 +56,6 @@ function IsoAnimal:GetAnimSetName() end
 --- @param arg2 boolean
 --- @param arg3 Vector2
 --- @return number
---- @overload fun(self: IsoAnimal, arg0: BaseVehicle, arg1: number, arg2: boolean, arg3: number, arg4: number): number
 function IsoAnimal:Hit(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -680,6 +679,10 @@ function IsoAnimal:isOnHook() end
 
 --- @public
 --- @return boolean
+function IsoAnimal:isRoadKill() end
+
+--- @public
+--- @return boolean
 function IsoAnimal:isWild() end
 
 --- @public
@@ -892,6 +895,11 @@ function IsoAnimal:setIsAlerted(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function IsoAnimal:setIsInvincible(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoAnimal:setIsRoadKill(arg0) end
 
 --- @public
 --- @param arg0 integer

@@ -56,7 +56,22 @@ function ISHandcraftWindow:initialise() end
 function ISHandcraftWindow:isKeyConsumed(key) end
 
 ---@return any
+function ISHandcraftWindow:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISHandcraftWindow:onJoypadDown(button, joypadData) end
+
+---@return any
+function ISHandcraftWindow:onJoypadDown_Descendant(descendant, button, joypadData) end
+
+---@return any
+function ISHandcraftWindow:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+---@return any
 function ISHandcraftWindow:onKeyRelease(key) end
+
+---@return any
+function ISHandcraftWindow:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISHandcraftWindow:prerender() end

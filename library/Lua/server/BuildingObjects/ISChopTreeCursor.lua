@@ -12,6 +12,9 @@ ISChopTreeCursor = ISBuildingObject:derive("ISChopTreeCursor")
 function ISChopTreeCursor:create(x, y, z, north, sprite) end
 
 ---@return any
+function ISChopTreeCursor:getAPrompt() end
+
+---@return any
 function ISChopTreeCursor:isValid(square) end
 
 ---@return any

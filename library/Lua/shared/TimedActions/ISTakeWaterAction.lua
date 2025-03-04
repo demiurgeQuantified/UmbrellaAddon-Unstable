@@ -37,6 +37,9 @@ function ISTakeWaterAction:stop() end
 function ISTakeWaterAction:stopSound() end
 
 ---@return any
+function ISTakeWaterAction:transferFluid(_amount) end
+
+---@return any
 function ISTakeWaterAction:update() end
 
 ---@return any

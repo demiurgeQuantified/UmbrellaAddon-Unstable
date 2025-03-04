@@ -12,7 +12,6 @@
 --- @field public blinkAlpha number
 --- @field public blinkAlphaIncrease boolean
 --- @field public bTutorial boolean
---- @field public BulletZtoPZWorldScale number
 --- @field public bUseGameViewport boolean
 --- @field public bUseViewports boolean
 --- @field public ChallengeID string
@@ -398,6 +397,10 @@ function Core:getBreakModGameVersion() end
 function Core:getChallengeID() end
 
 --- @public
+--- @return integer
+function Core:getConsoleDotTxtSizeKB() end
+
+--- @public
 --- @return boolean
 function Core:getContentTranslationsEnabled() end
 
@@ -584,6 +587,10 @@ function Core:getOptionClockFormat() end
 function Core:getOptionClockSize() end
 
 --- @public
+--- @return string
+function Core:getOptionCodeFontSize() end
+
+--- @public
 --- @return boolean
 function Core:getOptionColorblindPatterns() end
 
@@ -765,6 +772,10 @@ function Core:getOptionPanCameraWhileAiming() end
 function Core:getOptionPanCameraWhileDriving() end
 
 --- @public
+--- @return boolean
+function Core:getOptionPlayMusicWhenPaused() end
+
+--- @public
 --- @return number
 function Core:getOptionPrecipitationSpeedMultiplier() end
 
@@ -839,6 +850,10 @@ function Core:getOptionShowSurvivalGuide() end
 --- @public
 --- @return boolean
 function Core:getOptionShowValidTargetReticleTexture() end
+
+--- @public
+--- @return integer
+function Core:getOptionSidebarSize() end
 
 --- @public
 --- @return integer
@@ -1346,6 +1361,12 @@ function Core:setChallenge(bChallenge) end
 function Core:setCollideZombies(collideZombies) end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+--- @overload fun(self: Core, arg0: string): nil
+function Core:setConsoleDotTxtSizeKB(arg0) end
+
+--- @public
 --- @param b boolean
 --- @return nil
 function Core:setContentTranslationsEnabled(b) end
@@ -1520,6 +1541,11 @@ function Core:setOptionClockFormat(fmt) end
 --- @param size integer
 --- @return nil
 function Core:setOptionClockSize(size) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function Core:setOptionCodeFontSize(arg0) end
 
 --- @public
 --- @param arg0 boolean
@@ -1738,6 +1764,11 @@ function Core:setOptionPanCameraWhileAiming(enable) end
 function Core:setOptionPanCameraWhileDriving(enable) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function Core:setOptionPlayMusicWhenPaused(arg0) end
+
+--- @public
 --- @param arg0 number
 --- @return nil
 function Core:setOptionPrecipitationSpeedMultiplier(arg0) end
@@ -1846,6 +1877,11 @@ function Core:setOptionShowSurvivalGuide(b) end
 --- @param arg0 boolean
 --- @return nil
 function Core:setOptionShowValidTargetReticleTexture(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function Core:setOptionSidebarSize(arg0) end
 
 --- @public
 --- @param v integer

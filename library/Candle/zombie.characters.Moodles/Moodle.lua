@@ -9,11 +9,6 @@ Moodle = {}
 ------------------------------------
 
 --- @public
---- @param val integer
---- @return nil
-function Moodle:SetLevel(val) end
-
---- @public
 --- @return boolean
 function Moodle:Update() end
 
@@ -37,6 +32,10 @@ function Moodle:getChevronCount() end
 function Moodle:getLevel() end
 
 --- @public
+--- @return MoodleType
+function Moodle:getMoodleType() end
+
+--- @public
 --- @return boolean
 function Moodle:isChevronIsUp() end
 
@@ -55,5 +54,4 @@ function Moodle:setChevron(count, isup, col) end
 --- @param ChosenType MoodleType
 --- @param parent IsoGameCharacter
 --- @return Moodle
---- @overload fun(ChosenType: MoodleType, parent: IsoGameCharacter, maxChevrons: integer): Moodle
 function Moodle.new(ChosenType, parent) end

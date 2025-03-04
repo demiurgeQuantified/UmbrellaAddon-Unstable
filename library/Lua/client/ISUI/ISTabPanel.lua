@@ -110,6 +110,9 @@ function ISTabPanel:removeView(view) end
 function ISTabPanel:render() end
 
 ---@return any
+function ISTabPanel:replaceView(view, panel) end
+
+---@return any
 function ISTabPanel:setCenterTabs(center) end
 
 ---@return any

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class HandWeapon: InventoryItem
+--- @class HandWeapon: InventoryItem, IUpdater
 --- @field public class any
 HandWeapon = {}
 
@@ -30,6 +30,12 @@ function HandWeapon:IsWeapon() end
 --- @overload fun(self: HandWeapon, part: WeaponPart, doChange: boolean): nil
 --- @overload fun(self: HandWeapon, arg0: IsoGameCharacter, arg1: WeaponPart, arg2: boolean): nil
 function HandWeapon:attachWeaponPart(part) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 HandWeapon
+--- @return boolean
+function HandWeapon:canAttackPierceTransparentWall(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -121,8 +127,8 @@ function HandWeapon:getAimingPerkRangeModifier() end
 function HandWeapon:getAimingTime() end
 
 --- @public
---- @return ArrayList
---- @overload fun(self: HandWeapon, result: ArrayList): ArrayList
+--- @return List
+--- @overload fun(self: HandWeapon, arg0: List): List
 function HandWeapon:getAllWeaponParts() end
 
 --- @public
@@ -196,7 +202,7 @@ function HandWeapon:getDamageMod(chr) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @return ArrayList
+--- @return List
 function HandWeapon:getDetachableWeaponParts(arg0) end
 
 --- @public
@@ -728,10 +734,24 @@ function HandWeapon:muscleStrainMod(arg0) end
 function HandWeapon:randomizeBullets() end
 
 --- @public
+--- @return nil
+--- @overload fun(self: HandWeapon): nil
+function HandWeapon:render() end
+
+--- @public
+--- @return nil
+function HandWeapon:renderlast() end
+
+--- @public
 --- @param output ByteBuffer
 --- @param net boolean
 --- @return nil
 function HandWeapon:save(output, net) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function HandWeapon:setActivated(arg0) end
 
 --- @public
 --- @param arg0 WeaponPart
@@ -1278,6 +1298,11 @@ function HandWeapon:setWeaponSpritesByIndex(arg0) end
 --- @param hitSound string
 --- @return nil
 function HandWeapon:setZombieHitSound(hitSound) end
+
+--- @public
+--- @return nil
+--- @overload fun(self: HandWeapon): nil
+function HandWeapon:update() end
 
 --- @public
 --- @return boolean

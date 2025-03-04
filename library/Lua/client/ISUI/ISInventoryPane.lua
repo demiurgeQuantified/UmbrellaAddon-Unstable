@@ -155,6 +155,9 @@ function ISInventoryPane:hideButtons() end
 function ISInventoryPane:initialise() end
 
 ---@return any
+function ISInventoryPane:isLiteratureRead(playerObj, item) end
+
+---@return any
 function ISInventoryPane:isMouseOverScrollBar() end
 
 ---@return any

@@ -133,6 +133,13 @@ function KahluaUtil.len(arg0, arg1, arg2) end
 
 --- @public
 --- @static
+--- @param arg0 File
+--- @param arg1 table
+--- @return function
+function KahluaUtil.loadByteCodeFromFile(arg0, arg1) end
+
+--- @public
+--- @static
 --- @param arg0 string
 --- @param arg1 table
 --- @return function
@@ -186,7 +193,7 @@ function KahluaUtil.setWorkerThread(arg0, arg1) end
 --- @static
 --- @param arg0 table
 --- @param arg1 KahluaThread
---- @param arg2 string
+--- @param arg2 File
 --- @return nil
 function KahluaUtil.setupLibrary(arg0, arg1, arg2) end
 

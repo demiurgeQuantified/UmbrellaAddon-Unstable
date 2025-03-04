@@ -12,7 +12,7 @@ ISCutHair = ISBaseTimedAction:derive("ISCutHair")
 function ISCutHair:complete() end
 
 ---@return any
-function ISCutHair:getDuration() end
+function ISCutHair:getDuration(maxTime) end
 
 ---@return any
 function ISCutHair:isValid() end

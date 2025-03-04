@@ -289,6 +289,10 @@ function InputScript:isProp2() end
 
 --- @public
 --- @return boolean
+function InputScript:isRecordInput() end
+
+--- @public
+--- @return boolean
 --- @deprecated
 function InputScript:isReplace() end
 

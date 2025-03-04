@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISWidgetIngredientsInputs : ISPanel
+---@class ISWidgetIngredientsInputs : ISPanelJoypad
 ---@field autoFillContents any
 ---@field background any
 ---@field backgroundColor any
@@ -15,6 +15,10 @@
 ---@field itemMargin any
 ---@field itemNameMaxLines any
 ---@field itemSpacing any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field logic any
 ---@field margin any
 ---@field minimumHeight any
@@ -22,7 +26,7 @@
 ---@field player any
 ---@field textureLink any
 ---@field [any] any
-ISWidgetIngredientsInputs = ISPanel:derive("ISWidgetIngredientsInputs")
+ISWidgetIngredientsInputs = ISPanelJoypad:derive("ISWidgetIngredientsInputs")
 
 ---@return any
 function ISWidgetIngredientsInputs:addInput(_inputScript) end
@@ -35,6 +39,15 @@ function ISWidgetIngredientsInputs:createChildren() end
 
 ---@return any
 function ISWidgetIngredientsInputs:initialise() end
+
+---@return any
+function ISWidgetIngredientsInputs:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISWidgetIngredientsInputs:onJoypadDown(button, joypadData) end
+
+---@return any
+function ISWidgetIngredientsInputs:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISWidgetIngredientsInputs:onRebuildItemNodes(_inputItems) end

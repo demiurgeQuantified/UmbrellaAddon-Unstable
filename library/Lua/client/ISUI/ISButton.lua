@@ -41,6 +41,7 @@
 ---@field pressed any
 ---@field pressedTime any
 ---@field repeatWhilePressedFunc any
+---@field repeatWhilePressedTimer any
 ---@field sounds any
 ---@field target any
 ---@field textColor any

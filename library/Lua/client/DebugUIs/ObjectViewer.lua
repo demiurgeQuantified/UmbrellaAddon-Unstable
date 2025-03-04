@@ -25,6 +25,9 @@ function ObjectViewer.onDataWrite(data) end
 function ObjectViewer.onWatch(item) end
 
 ---@return any
+function ObjectViewer:checkFontSize() end
+
+---@return any
 function ObjectViewer:createChildren() end
 
 ---@return any
@@ -44,6 +47,9 @@ function ObjectViewer:onRightMouseDownObject(x, y) end
 
 ---@return any
 function ObjectViewer:onSourceMouseWheel(del) end
+
+---@return any
+function ObjectViewer:prerender() end
 
 ---@return any
 function ObjectViewer:restorePos() end

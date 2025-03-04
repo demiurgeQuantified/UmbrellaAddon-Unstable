@@ -36,6 +36,9 @@ function ISCraftRecipePanel:getRecipe() end
 function ISCraftRecipePanel:initialise() end
 
 ---@return any
+function ISCraftRecipePanel:onGainJoypadFocus(joypadData) end
+
+---@return any
 function ISCraftRecipePanel:onInputsChanged() end
 
 ---@return any

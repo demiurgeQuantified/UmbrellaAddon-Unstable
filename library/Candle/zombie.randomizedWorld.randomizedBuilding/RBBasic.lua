@@ -10,6 +10,61 @@ RBBasic = {}
 
 --- @public
 --- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doCafeStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @param arg1 ArrayList
+--- @return nil
+function RBBasic.doGeneralRoom(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doGigamartStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doGroceryStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doJudgeStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doNolansOfficeStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doOfficeStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doTwiggyStuff(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @return nil
+function RBBasic.doWoodcraftStuff(arg0) end
+
+--- @public
+--- @static
 --- @return ArrayList
 function RBBasic.getUniqueRDSSpawned() end
 

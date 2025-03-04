@@ -47,6 +47,21 @@ function ISTiledIconPanel:onButtonClick(_button) end
 function ISTiledIconPanel:onFilterData(_string, _dataList, _sourceDataList) end
 
 ---@return any
+function ISTiledIconPanel:onJoypadButtonReleased(button, joypadData) end
+
+---@return any
+function ISTiledIconPanel:onJoypadDirDown(joypadData) end
+
+---@return any
+function ISTiledIconPanel:onJoypadDirLeft(joypadData) end
+
+---@return any
+function ISTiledIconPanel:onJoypadDirRight(joypadData) end
+
+---@return any
+function ISTiledIconPanel:onJoypadDirUp(joypadData) end
+
+---@return any
 function ISTiledIconPanel:onPageChanged() end
 
 ---@return any

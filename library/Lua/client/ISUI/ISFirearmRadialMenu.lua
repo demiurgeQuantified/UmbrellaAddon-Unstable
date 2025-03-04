@@ -19,7 +19,7 @@ function ISFirearmRadialMenu.getBestLBButtonAction(buttonPrompt) end
 function ISFirearmRadialMenu.getBestRBButtonAction(buttonPrompt) end
 
 ---@return any
-function ISFirearmRadialMenu.onJoypadButtonReleased(buttonPrompt, button) end
+function ISFirearmRadialMenu.onJoypadButtonReleased(buttonPrompt, button, joypadData) end
 
 ---@return any
 function ISFirearmRadialMenu.onKeyPressed(key) end

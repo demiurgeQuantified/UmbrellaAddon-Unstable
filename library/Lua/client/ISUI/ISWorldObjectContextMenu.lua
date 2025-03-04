@@ -113,13 +113,16 @@ function ISWorldObjectContextMenu.doCreateChumOptions(context, playerObj, square
 function ISWorldObjectContextMenu.doDrinkWaterMenu(object, player, context) end
 
 ---@return any
+function ISWorldObjectContextMenu.doFillFluidMenu(sink, playerNum, context) end
+
+---@return any
 function ISWorldObjectContextMenu.doFillFuelMenu(source, playerNum, context) end
 
 ---@return any
-function ISWorldObjectContextMenu.doFillWaterMenu(sink, playerNum, context) end
+function ISWorldObjectContextMenu.doFishNetOptions(context, playerObj, square) end
 
 ---@return any
-function ISWorldObjectContextMenu.doFishNetOptions(context, playerObj, square) end
+function ISWorldObjectContextMenu.doFluidContainerMenu(context, object, player) end
 
 ---@return any
 function ISWorldObjectContextMenu.doLightSwitchOption(test, context, player) end
@@ -180,6 +183,9 @@ function ISWorldObjectContextMenu.getFishingLure(player, rod) end
 
 ---@return any
 function ISWorldObjectContextMenu.getFishingRode(playerObj) end
+
+---@return any
+function ISWorldObjectContextMenu.getMoveableDisplayName(obj) end
 
 ---@return any
 function ISWorldObjectContextMenu.getSquaresInRadius(worldX, worldY, worldZ, radius, doneSquares, squares) end
@@ -280,7 +286,10 @@ function ISWorldObjectContextMenu.onBedAnim(playerObj, anim) end
 function ISWorldObjectContextMenu.onBurnCorpse(worldobjects, player, corpse) end
 
 ---@return any
-function ISWorldObjectContextMenu.onBuryCorpse(grave, player) end
+function ISWorldObjectContextMenu.onBuryAnimalCorpse(grave, playerObj, animal) end
+
+---@return any
+function ISWorldObjectContextMenu.onBuryCorpse(grave, player, primaryHandItem) end
 
 ---@return any
 function ISWorldObjectContextMenu.onButcherHook(hook, playerObj) end
@@ -337,6 +346,9 @@ function ISWorldObjectContextMenu.onDropCorpseItem(worldobjects, player) end
 function ISWorldObjectContextMenu.onExcavateStairs(worldobjects, player, excavatableFloor) end
 
 ---@return any
+function ISWorldObjectContextMenu.onExtendedPlacement(item, char) end
+
+---@return any
 function ISWorldObjectContextMenu.onFillGrave(grave, player, shovel) end
 
 ---@return any
@@ -347,6 +359,9 @@ function ISWorldObjectContextMenu.onFishingNet(_, player, fishNet) end
 
 ---@return any
 function ISWorldObjectContextMenu.onFixGenerator(worldobjects, generator, player) end
+
+---@return any
+function ISWorldObjectContextMenu.onFluidEmpty(player, fluidcontainer) end
 
 ---@return any
 function ISWorldObjectContextMenu.onFluidInfo(player, fluidcontainer) end
@@ -632,6 +647,9 @@ function ISWorldObjectContextMenu.toggleComboWasherDryer(context, playerObj, obj
 
 ---@return any
 function ISWorldObjectContextMenu.transferIfNeeded(playerObj, item) end
+
+---@return any
+function ISWorldObjectContextMenu.updateGrave(grave) end
 
 ---@return any
 function ISWorldObjectContextMenu:onCheckDigitalCode(button, playerObj, padlock, thump) end

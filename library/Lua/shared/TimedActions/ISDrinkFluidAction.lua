@@ -4,6 +4,7 @@
 ---@field character any
 ---@field eatAudio any
 ---@field eatSound any
+---@field fluidContainer any
 ---@field ignoreHandsWounds any
 ---@field item any
 ---@field maxTime any

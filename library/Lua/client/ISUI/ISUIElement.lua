@@ -15,6 +15,7 @@
 ---@field ID any
 ---@field javaObject any
 ---@field joyfocus any
+---@field joypadFocused any
 ---@field minimumHeight any
 ---@field minimumWidth any
 ---@field onMouseDoubleClick any
@@ -45,6 +46,9 @@ function ISUIElement:backMost() end
 
 ---@return any
 function ISUIElement:bringToTop() end
+
+---@return any
+function ISUIElement:centerOnScreen(playerNum) end
 
 ---@return any
 function ISUIElement:clampStencilRectToParent(x, y, w, h) end
@@ -200,6 +204,9 @@ function ISUIElement:getIsVisible() end
 function ISUIElement:getJavaObject() end
 
 ---@return any
+function ISUIElement:getJoypadNavigateStartDelay() end
+
+---@return any
 function ISUIElement:getKeepOnScreen() end
 
 ---@return any
@@ -257,6 +264,9 @@ function ISUIElement:getY() end
 function ISUIElement:getYScroll() end
 
 ---@return any
+function ISUIElement:hasConflictWithJoypadNavigateStart() end
+
+---@return any
 function ISUIElement:ignoreHeightChange() end
 
 ---@return any
@@ -299,19 +309,70 @@ function ISUIElement:onFocus(x, y) end
 function ISUIElement:onGainJoypadFocus(joypadData) end
 
 ---@return any
-function ISUIElement:onJoypadDirDown() end
+function ISUIElement:onJoypadBeforeDeactivate(joypadData) end
 
 ---@return any
-function ISUIElement:onJoypadDirLeft() end
+function ISUIElement:onJoypadBeforeDeactivate_Descendant(descendant, joypadData) end
 
 ---@return any
-function ISUIElement:onJoypadDirRight() end
+function ISUIElement:onJoypadButtonReleased(button, joypadData) end
 
 ---@return any
-function ISUIElement:onJoypadDirUp() end
+function ISUIElement:onJoypadButtonReleased_Descendant(descendant, button, joypadData) end
 
 ---@return any
-function ISUIElement:onJoypadDown(button) end
+function ISUIElement:onJoypadDirDown(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirDown_Descendant(descendant, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirLeft(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirLeft_Descendant(descendant, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirRight(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirRight_Descendant(descendant, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirUp(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDirUp_Descendant(descendant, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDown(button, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadDown_Descendant(descendant, button, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateDown(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateEnd(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateLeft(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateParent(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateRight(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateStart(joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+---@return any
+function ISUIElement:onJoypadNavigateUp(joypadData) end
 
 ---@return any
 function ISUIElement:onLoseJoypadFocus(joypadData) end
@@ -365,6 +426,18 @@ function ISUIElement:removeFromUIManager() end
 function ISUIElement:render() end
 
 ---@return any
+function ISUIElement:renderJoypadFocus(x, y, w, h) end
+
+---@return any
+function ISUIElement:renderJoypadNavigateHighlight(joypadData, child) end
+
+---@return any
+function ISUIElement:renderJoypadNavigateOverlay(playerNum) end
+
+---@return any
+function ISUIElement:renderJoypadNavigateTexture(joypadData, child, texture) end
+
+---@return any
 function ISUIElement:repaintStencilRect(x, y, w, h) end
 
 ---@return any
@@ -411,6 +484,9 @@ function ISUIElement:setHeight(h) end
 
 ---@return any
 function ISUIElement:setHeightAndParentHeight(h) end
+
+---@return any
+function ISUIElement:setJoypadFocused(focused, joypadData) end
 
 ---@return any
 function ISUIElement:setMaxDrawHeight(height) end

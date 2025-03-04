@@ -37,6 +37,12 @@ function TileDepthTextureManager:getDefaultDepthTexture() end
 --- @public
 --- @param arg0 integer
 --- @param arg1 integer
+--- @return Texture
+function TileDepthTextureManager:getEmptyDepthTexture(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
 --- @return TileDepthTexture
 function TileDepthTextureManager:getPresetDepthTexture(arg0, arg1) end
 

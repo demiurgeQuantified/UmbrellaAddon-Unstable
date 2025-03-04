@@ -484,7 +484,7 @@ function ISInventoryPaneContextMenu.takePill(item, player) end
 function ISInventoryPaneContextMenu.transferBullets(playerObj, ammoType, currentAmmo, maxAmmo) end
 
 ---@return any
-function ISInventoryPaneContextMenu.transferIfNeeded(playerObj, item) end
+function ISInventoryPaneContextMenu.transferIfNeeded(playerObj, item, preventTransferWorldObjects) end
 
 ---@return any
 function ISInventoryPaneContextMenu.transferItems(items, playerInv, player, dontWalk) end

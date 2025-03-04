@@ -396,6 +396,11 @@ function ScriptManager:getModuleNoDisableCheck(name) end
 
 --- @public
 --- @param arg0 string
+--- @return PhysicsHitReactionScript
+function ScriptManager:getPhysicsHitReactionScript(arg0) end
+
+--- @public
+--- @param arg0 string
 --- @return PhysicsShapeScript
 function ScriptManager:getPhysicsShape(arg0) end
 

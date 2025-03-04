@@ -34,7 +34,13 @@ function luautils.isEquipped(_item, _player) end
 function luautils.isSquareAdjacentToSquare(_square1, _square2) end
 
 ---@return any
+function luautils.lerp(_sourceValue, _destinationValue, _stepRate, _finalStepRatio) end
+
+---@return any
 function luautils.okModal(_text, _centered, _width, _height, _posX, _posY) end
+
+---@return any
+function luautils.roughlyEqual(_value, _value2, _delta) end
 
 ---@return any
 function luautils.round(num, idp) end

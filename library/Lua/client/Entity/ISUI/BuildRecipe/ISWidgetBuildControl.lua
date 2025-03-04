@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISWidgetBuildControl : ISPanel
+---@class ISWidgetBuildControl : ISPanelJoypad
 ---@field allowBatchCraft any
 ---@field autoFillContents any
 ---@field background any
@@ -14,6 +14,10 @@
 ---@field isAutoFill any
 ---@field isAutoFillX any
 ---@field isAutoFillY any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field logic any
 ---@field margin any
 ---@field minimumHeight any
@@ -22,7 +26,7 @@
 ---@field player any
 ---@field slider any
 ---@field [any] any
-ISWidgetBuildControl = ISPanel:derive("ISWidgetBuildControl")
+ISWidgetBuildControl = ISPanelJoypad:derive("ISWidgetBuildControl")
 
 ---@return any
 function ISWidgetBuildControl.onTextChange(box) end
@@ -43,7 +47,13 @@ function ISWidgetBuildControl:onAutoToggled(_newState) end
 function ISWidgetBuildControl:onButtonClick(_button) end
 
 ---@return any
+function ISWidgetBuildControl:onGainJoypadFocus(joypadData) end
+
+---@return any
 function ISWidgetBuildControl:onHandcraftActionComplete() end
+
+---@return any
+function ISWidgetBuildControl:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISWidgetBuildControl:onResize() end

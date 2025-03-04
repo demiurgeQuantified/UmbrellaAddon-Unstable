@@ -54,13 +54,6 @@ function GameWindow.LoadTexturePack(pack, flags) end
 
 --- @public
 --- @static
---- @param pack string
---- @return nil
---- @deprecated
-function GameWindow.LoadTexturePackDDS(pack) end
-
---- @public
---- @static
 --- @param input DataInputStream
 --- @return string
 --- @overload fun(input: ByteBuffer): string

@@ -26,6 +26,7 @@
 ---@field coloredInv any
 ---@field conDefault any
 ---@field containerIconMaps any
+---@field disableJoypadNavigation any
 ---@field downX any
 ---@field downY any
 ---@field floorContainer any

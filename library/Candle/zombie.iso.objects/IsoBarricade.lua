@@ -42,6 +42,22 @@ function IsoBarricade.GetBarricadeOnSquare(square, dir) end
 --- @return IsoBarricade
 function IsoBarricade.GetBarricadeOppositeCharacter(obj, chr) end
 
+--- @public
+--- @static
+--- @return nil
+function IsoBarricade.barricadeCurrentCellWithMetalBars() end
+
+--- @public
+--- @static
+--- @return nil
+function IsoBarricade.barricadeCurrentCellWithMetalPlate() end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return nil
+function IsoBarricade.barricadeCurrentCellWithPlanks(arg0) end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -103,6 +119,12 @@ function IsoBarricade:addPlank(chr, plank) end
 --- @public
 --- @return boolean
 function IsoBarricade:canAddPlank() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 HandWeapon
+--- @return boolean
+function IsoBarricade:canAttackBypassIsoBarricade(arg0, arg1) end
 
 --- @public
 --- @return BarricadeAble
@@ -213,11 +235,6 @@ function IsoBarricade:saveChange(change, tbl, bb) end
 --- @param arg0 integer
 --- @return nil
 function IsoBarricade:setHealth(arg0) end
-
---- @public
---- @param arg0 integer
---- @return nil
-function IsoBarricade:setMaxHealth(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

@@ -60,6 +60,7 @@ function CraftRecipe:addRequiredSkill(arg0, arg1) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return nil
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter, arg1: boolean): nil
 function CraftRecipe:addXP(arg0) end
 
 --- @public
@@ -93,6 +94,10 @@ function CraftRecipe:canResearch(arg0) end
 function CraftRecipe:canUseItem(arg0) end
 
 --- @public
+--- @return boolean
+function CraftRecipe:cannotBeResearched() end
+
+--- @public
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function CraftRecipe:checkAutoLearnAllSkills(arg0) end
@@ -119,6 +124,7 @@ function CraftRecipe:containsIO(arg0) end
 
 --- @public
 --- @return string
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter): string
 function CraftRecipe:generateDebugText() end
 
 --- @public
@@ -256,6 +262,7 @@ function CraftRecipe:getRequiredSkills() end
 
 --- @public
 --- @return integer
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter): integer
 function CraftRecipe:getResearchSkillLevel() end
 
 --- @public
@@ -270,6 +277,7 @@ function CraftRecipe:getTags() end
 
 --- @public
 --- @return integer
+--- @overload fun(self: CraftRecipe, arg0: IsoGameCharacter): integer
 function CraftRecipe:getTime() end
 
 --- @public

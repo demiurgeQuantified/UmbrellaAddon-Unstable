@@ -3,7 +3,6 @@
 --- @class PropertyContainer
 --- @field public class any
 --- @field public sorted List
---- @field public test NonBlockingHashMap
 PropertyContainer = {}
 
 ------------------------------------

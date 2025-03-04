@@ -22,6 +22,7 @@
 ---@field height any
 ---@field isSlider any
 ---@field isSliderPanel any
+---@field joyfocus any
 ---@field joypadFocused any
 ---@field leftPressed any
 ---@field maxValue any
@@ -106,10 +107,13 @@ function ISSliderPanel:setCurrentValue(_v, _ignoreOnChange) end
 function ISSliderPanel:setDoButtons(_b) end
 
 ---@return any
-function ISSliderPanel:setJoypadFocused(focused) end
+function ISSliderPanel:setJoypadFocused(focused, joypadData) end
 
 ---@return any
 function ISSliderPanel:setValues(_min, _max, _step, _shift, _ignoreCurVal) end
+
+---@return any
+function ISSliderPanel:setWidth(w) end
 
 ---@return any
 function ISSliderPanel:update() end

@@ -141,6 +141,10 @@ function FluidContainer:getFilledRatio() end
 function FluidContainer:getFreeCapacity() end
 
 --- @public
+--- @return boolean
+function FluidContainer:getMetaIsOutside() end
+
+--- @public
 --- @return PoisonEffect
 function FluidContainer:getPoisonEffect() end
 
@@ -237,6 +241,10 @@ function FluidContainer:isPureFluid(arg0) end
 
 --- @public
 --- @return boolean
+function FluidContainer:isQualifiesForMetaStorage() end
+
+--- @public
+--- @return boolean
 function FluidContainer:isTainted() end
 
 --- @public
@@ -277,6 +285,16 @@ function FluidContainer:setContainerName(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function FluidContainer:setInputLocked(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function FluidContainer:setRainCatcher(arg0) end
+
+--- @public
+--- @param arg0 FluidFilter
+--- @return nil
+function FluidContainer:setWhitelist(arg0) end
 
 --- @public
 --- @param arg0 FluidContainer

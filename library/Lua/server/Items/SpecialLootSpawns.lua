@@ -437,6 +437,9 @@ function SpecialLootSpawns.OnCreateSubjectBook(item, subject) end
 function SpecialLootSpawns.OnCreateSubjectMagazine(item, subject) end
 
 ---@return any
+function SpecialLootSpawns.OnCreateSurvivalSchematic(item) end
+
+---@return any
 function SpecialLootSpawns.OnCreateTechMagazine(item) end
 
 ---@return any

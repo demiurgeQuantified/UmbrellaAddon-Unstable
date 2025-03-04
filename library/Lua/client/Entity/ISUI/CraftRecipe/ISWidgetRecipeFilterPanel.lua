@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISWidgetRecipeFilterPanel : ISPanel
+---@class ISWidgetRecipeFilterPanel : ISPanelJoypad
 ---@field autoFillContents any
 ---@field backgroundColor any
 ---@field buttonGrid any
@@ -11,6 +11,10 @@
 ---@field isAutoFill any
 ---@field isAutoFillX any
 ---@field isAutoFillY any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field margin any
 ---@field marginBottom any
 ---@field marginLeft any
@@ -23,7 +27,7 @@
 ---@field searchHackLabel any
 ---@field tickbox any
 ---@field [any] any
-ISWidgetRecipeFilterPanel = ISPanel:derive("ISWidgetRecipeFilterPanel")
+ISWidgetRecipeFilterPanel = ISPanelJoypad:derive("ISWidgetRecipeFilterPanel")
 
 ---@return any
 function ISWidgetRecipeFilterPanel.onTextChange(box) end
@@ -42,6 +46,12 @@ function ISWidgetRecipeFilterPanel:onButtonClick(_button) end
 
 ---@return any
 function ISWidgetRecipeFilterPanel:OnClickFilterType(box) end
+
+---@return any
+function ISWidgetRecipeFilterPanel:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISWidgetRecipeFilterPanel:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISWidgetRecipeFilterPanel:onResize() end

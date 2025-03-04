@@ -231,12 +231,25 @@ function BaseSoundManager:isRemastered() end
 
 --- @public
 --- @return nil
+--- @overload fun(self: BaseSoundManager, arg0: boolean): nil
 function BaseSoundManager:pauseSoundAndMusic() end
 
 --- @public
 --- @param name string
 --- @return nil
 function BaseSoundManager:playAmbient(name) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 MaterialType
+--- @return nil
+function BaseSoundManager:playDamageSound(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 MaterialType
+--- @return nil
+function BaseSoundManager:playDestructionSound(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare

@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISVehicleAnimalUI : ISCollapsableWindow
+---@class ISVehicleAnimalUI : ISCollapsableWindowJoypad
 ---@field addBtn any
 ---@field animalCount any
 ---@field avatarBackgroundTexture any
@@ -12,12 +12,16 @@
 ---@field btnHeight any
 ---@field btnWidth any
 ---@field character any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field playerNum any
 ---@field progressBar any
 ---@field scrollPanel any
 ---@field vehicle any
 ---@field [any] any
-ISVehicleAnimalUI = ISCollapsableWindow:derive("ISVehicleAnimalUI")
+ISVehicleAnimalUI = ISCollapsableWindowJoypad:derive("ISVehicleAnimalUI")
 ISVehicleAnimalUI.ui = nil
 
 ---@return any
@@ -45,19 +49,28 @@ function ISVehicleAnimalUI:isKeyConsumed(key) end
 function ISVehicleAnimalUI:onAddAnimal() end
 
 ---@return any
-function ISVehicleAnimalUI:onAnimalInfo(button, x, y) end
+function ISVehicleAnimalUI:onAnimalInfo(animal) end
 
 ---@return any
-function ISVehicleAnimalUI:onGrabAnimal(button, x, y) end
+function ISVehicleAnimalUI:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISVehicleAnimalUI:onGrabAnimal(animal) end
+
+---@return any
+function ISVehicleAnimalUI:onJoypadBeforeDeactivate(joypadData) end
+
+---@return any
+function ISVehicleAnimalUI:onJoypadBeforeDeactivate_Descendant(descendant, joypadData) end
+
+---@return any
+function ISVehicleAnimalUI:onJoypadDown_Descendant(descendant, button, joypadData) end
 
 ---@return any
 function ISVehicleAnimalUI:onKeyRelease(key) end
 
 ---@return any
-function ISVehicleAnimalUI:onRemoveAnimal(button, x, y) end
-
----@return any
-function ISVehicleAnimalUI:onRightMouseUpScrollPanel(x, y) end
+function ISVehicleAnimalUI:onRemoveAnimal(animal) end
 
 ---@return any
 function ISVehicleAnimalUI:prerender() end
@@ -76,6 +89,27 @@ function ISVehicleAnimalUI:update() end
 
 ---@return ISVehicleAnimalUI
 function ISVehicleAnimalUI:new(vehicle, player) end
+
+---@class ISAnimalInVehiclePanel : ISPanelJoypad
+---@field animalUI any
+---@field avatar any
+---@field [any] any
+ISAnimalInVehiclePanel = ISPanelJoypad:derive("ISAnimalInVehiclePanel")
+
+---@return any
+function ISAnimalInVehiclePanel:createChildren() end
+
+---@return any
+function ISAnimalInVehiclePanel:onJoypadDownInParent(button, joypadData) end
+
+---@return any
+function ISAnimalInVehiclePanel:onRightMouseUp(x, y) end
+
+---@return any
+function ISAnimalInVehiclePanel:prerender() end
+
+---@return ISAnimalInVehiclePanel
+function ISAnimalInVehiclePanel:new(width, height, animalUI) end
 
 ---@class ISVehicleAnimal3DModel : ISUI3DModel
 ISVehicleAnimal3DModel = ISUI3DModel:derive("ISVehicleAnimal3DModel")

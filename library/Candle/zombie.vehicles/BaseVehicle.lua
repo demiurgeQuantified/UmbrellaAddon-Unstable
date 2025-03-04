@@ -1274,6 +1274,10 @@ function BaseVehicle:getZombieType() end
 function BaseVehicle:getZone() end
 
 --- @public
+--- @return boolean
+function BaseVehicle:hasAlarm() end
+
+--- @public
 --- @param connection UdpConnection
 --- @return boolean
 function BaseVehicle:hasAuthorization(connection) end
@@ -1628,6 +1632,14 @@ function BaseVehicle:netPlayerServerSendAuthorisation(bb) end
 --- @public
 --- @return boolean
 function BaseVehicle:notKillCrops() end
+
+--- @public
+--- @return nil
+function BaseVehicle:onAlarmStart() end
+
+--- @public
+--- @return nil
+function BaseVehicle:onAlarmStop() end
 
 --- @public
 --- @return nil

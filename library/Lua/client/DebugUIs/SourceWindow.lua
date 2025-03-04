@@ -12,6 +12,9 @@ SourceWindow = ISCollapsableWindow:derive("SourceWindow")
 SourceWindow.map = {}
 
 ---@return any
+function SourceWindow:checkFontSize() end
+
+---@return any
 function SourceWindow:createChildren() end
 
 ---@return any
@@ -30,10 +33,19 @@ function SourceWindow:onMouseDoubleClickBreakpointToggle(item) end
 function SourceWindow:onSourceMouseWheel(del) end
 
 ---@return any
+function SourceWindow:prerender() end
+
+---@return any
 function SourceWindow:reloadFile() end
 
 ---@return any
 function SourceWindow:renderSrc() end
+
+---@return any
+function SourceWindow:scrollToLine(line) end
+
+---@return any
+function SourceWindow:setListBoxItemHeight(listBox) end
 
 ---@return SourceWindow
 function SourceWindow:new(x, y, width, height, filename) end

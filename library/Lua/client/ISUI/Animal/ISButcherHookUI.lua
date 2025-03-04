@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISButcherHookUI : ISCollapsableWindow
+---@class ISButcherHookUI : ISCollapsableWindowJoypad
 ---@field actionText any
 ---@field addCorpseBtn any
 ---@field animal3D any
@@ -19,12 +19,17 @@
 ---@field bloodLabel any
 ---@field borderColor any
 ---@field chr any
+---@field configJoypadLater any
 ---@field corpse any
 ---@field doingAction any
 ---@field head any
 ---@field headInfoLabel any
 ---@field headLabel any
 ---@field hook any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field knife any
 ---@field leather any
 ---@field leatherInfoLabel any
@@ -43,8 +48,8 @@
 ---@field removeLeatherBtn any
 ---@field removeMeatBtn any
 ---@field [any] any
-ISButcherHookUI = ISCollapsableWindow:derive("ISButcherHookUI")
-ISButcherHookUI.ui = nil
+ISButcherHookUI = ISCollapsableWindowJoypad:derive("ISButcherHookUI")
+ISButcherHookUI.ui = {}
 
 ---@return any
 function ISButcherHookUI.onReattachAnimal(hook, animal) end
@@ -56,10 +61,16 @@ function ISButcherHookUI.onStopBleedingAnimal(self) end
 function ISButcherHookUI:addCorpseAction(corpse) end
 
 ---@return any
+function ISButcherHookUI:checkAnimalOnHook() end
+
+---@return any
 function ISButcherHookUI:checkDistance() end
 
 ---@return any
 function ISButcherHookUI:close() end
+
+---@return any
+function ISButcherHookUI:configJoypad() end
 
 ---@return any
 function ISButcherHookUI:create() end
@@ -93,6 +104,12 @@ function ISButcherHookUI:onClickRemoveCorpse() end
 
 ---@return any
 function ISButcherHookUI:onCutCorpse() end
+
+---@return any
+function ISButcherHookUI:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISButcherHookUI:onJoypadDown(button, joypadData) end
 
 ---@return any
 function ISButcherHookUI:onRemoveBlood() end

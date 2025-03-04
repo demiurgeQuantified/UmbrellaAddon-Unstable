@@ -28,6 +28,13 @@ function FluidSample.Load(arg0, arg1) end
 --- @return nil
 function FluidSample.Save(arg0, arg1) end
 
+--- @public
+--- @static
+--- @param arg0 FluidSample
+--- @param arg1 FluidSample
+--- @return FluidSample
+function FluidSample.combine(arg0, arg1) end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -35,6 +42,11 @@ function FluidSample.Save(arg0, arg1) end
 --- @public
 --- @return nil
 function FluidSample:clear() end
+
+--- @public
+--- @param arg0 FluidSample
+--- @return FluidSample
+function FluidSample:combineWith(arg0) end
 
 --- @public
 --- @return FluidSample

@@ -78,9 +78,9 @@ function IGrappleableWrapper:getBearingFromGrappledTarget() end
 function IGrappleableWrapper:getBearingToGrappledTarget() end
 
 --- @public
---- @param arg0 Vector3
---- @return Vector3
---- @overload fun(self: IGrappleableWrapper, arg0: Vector3): Vector3
+--- @param arg0 Vector3f
+--- @return Vector3f
+--- @overload fun(self: IGrappleableWrapper, arg0: Vector3f): Vector3f
 --- @overload fun(self: IGrappleableWrapper, arg0: Vector3): Vector3
 --- @overload fun(self: IGrappleableWrapper, arg0: Vector3): Vector3
 function IGrappleableWrapper:getGrappleOffset(arg0) end
@@ -151,9 +151,9 @@ function IGrappleableWrapper:getSharedGrappleAnimTime() end
 function IGrappleableWrapper:getSharedGrappleType() end
 
 --- @public
---- @param arg0 Vector3
---- @return Vector3
---- @overload fun(self: IGrappleableWrapper, arg0: Vector3): Vector3
+--- @param arg0 Vector3f
+--- @return Vector3f
+--- @overload fun(self: IGrappleableWrapper, arg0: Vector3f): Vector3f
 --- @overload fun(self: IGrappleableWrapper, arg0: Vector3): Vector3
 --- @overload fun(self: IGrappleableWrapper, arg0: Vector3): Vector3
 function IGrappleableWrapper:getTargetGrapplePos(arg0) end
@@ -258,7 +258,7 @@ function IGrappleableWrapper:setFallOnFront(arg0) end
 function IGrappleableWrapper:setForwardDirection(arg0) end
 
 --- @public
---- @param arg0 Vector3
+--- @param arg0 Vector3f
 --- @return nil
 --- @overload fun(self: IGrappleableWrapper, arg0: Vector3): nil
 --- @overload fun(self: IGrappleableWrapper, arg0: number, arg1: number, arg2: number): nil
@@ -337,7 +337,7 @@ function IGrappleableWrapper:setSharedGrappleType(arg0) end
 function IGrappleableWrapper:setTargetAndCurrentDirection(arg0) end
 
 --- @public
---- @param arg0 Vector3
+--- @param arg0 Vector3f
 --- @return nil
 --- @overload fun(self: IGrappleableWrapper, arg0: Vector3): nil
 --- @overload fun(self: IGrappleableWrapper, arg0: number, arg1: number, arg2: number): nil

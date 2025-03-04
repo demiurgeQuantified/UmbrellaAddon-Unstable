@@ -86,7 +86,7 @@ function HandcraftLogic:getInputItemNodesForInput(arg0) end
 
 --- @public
 --- @param arg0 InputScript
---- @return integer
+--- @return number
 function HandcraftLogic:getInputUses(arg0) end
 
 --- @public

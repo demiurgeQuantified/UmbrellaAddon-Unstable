@@ -126,6 +126,19 @@ function addAnimal(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @return nil
 function addAreaHighlight(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
+function addAreaHighlightForPlayer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
 --- @param sq IsoGridSquare
 --- @param nbr integer
 --- @return nil
@@ -242,6 +255,7 @@ function addZombiesInBuilding(def, totalZombies, outfit, room, femaleChance) end
 --- @param femaleChance integer
 --- @return ArrayList
 --- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: boolean, arg11: boolean, arg12: number): ArrayList
+--- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: boolean, arg11: boolean, arg12: number, arg13: boolean): ArrayList
 function addZombiesInOutfit(x, y, z, totalZombies, outfit, femaleChance) end
 
 --- @param x1 integer

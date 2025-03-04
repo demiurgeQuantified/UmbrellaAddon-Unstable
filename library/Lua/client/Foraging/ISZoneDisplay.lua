@@ -12,10 +12,12 @@
 ---@field cloudIntensity any
 ---@field currentTip any
 ---@field currentZone any
+---@field currentZones any
 ---@field dawn any
 ---@field dusk any
 ---@field fadeElements any
 ---@field fadeTarget any
+---@field fadeTargets any
 ---@field flashNumber any
 ---@field flashNumberMax any
 ---@field flashTipButton any
@@ -47,6 +49,7 @@
 ---@field x any
 ---@field y any
 ---@field zdImages any
+---@field zoneTitleString any
 ---@field [any] any
 ISZoneDisplay = ISPanel:derive("ISZoneDisplay")
 ISZoneDisplay.tips = {
@@ -153,6 +156,36 @@ ISZoneDisplay.tips = {
 		shown = false,
 	},
 }
+ISZoneDisplay.fuzzyChanceTable = {
+	[1] = {
+		text = getText("Sandbox_Rarity_option1"),
+		chance = 0,
+	},
+	[2] = {
+		text = getText("Sandbox_Rarity_option2"),
+		chance = 1,
+	},
+	[3] = {
+		text = getText("Sandbox_Rarity_option3"),
+		chance = 5,
+	},
+	[4] = {
+		text = getText("Sandbox_Rarity_option4"),
+		chance = 10,
+	},
+	[5] = {
+		text = getText("Sandbox_Rarity_option5"),
+		chance = 25,
+	},
+	[6] = {
+		text = getText("Sandbox_Rarity_option6"),
+		chance = 50,
+	},
+	[7] = {
+		text = getText("Sandbox_Rarity_option7"),
+		chance = 1000,
+	},
+}
 
 ---@return any
 function ISZoneDisplay:canSeeOutside() end
@@ -162,9 +195,6 @@ function ISZoneDisplay:canSeeThroughObject(_object) end
 
 ---@return any
 function ISZoneDisplay:close() end
-
----@return any
-function ISZoneDisplay:doFadeStep() end
 
 ---@return any
 function ISZoneDisplay:getVisionTooltipText() end

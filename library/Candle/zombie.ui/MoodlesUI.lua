@@ -2,10 +2,6 @@
 
 --- @class MoodlesUI: UIElement
 --- @field public class any
---- @field public minusGreen Texture
---- @field public minusRed Texture
---- @field public plusGreen Texture
---- @field public plusRed Texture
 MoodlesUI = {}
 
 ------------------------------------
@@ -20,19 +16,6 @@ function MoodlesUI.getInstance() end
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
-
---- @public
---- @return boolean
-function MoodlesUI:CurrentlyAnimating() end
-
---- @public
---- @param el UIElement
---- @param t integer
---- @param r integer
---- @param b integer
---- @param l integer
---- @return nil
-function MoodlesUI:Nest(el, t, r, b, l) end
 
 --- @public
 --- @param dx number

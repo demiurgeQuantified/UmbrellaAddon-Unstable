@@ -13,7 +13,7 @@ ISRepairEngine = ISBaseTimedAction:derive("ISRepairEngine")
 function ISRepairEngine:complete() end
 
 ---@return any
-function ISRepairEngine:getDuration() end
+function ISRepairEngine:getDuration(maxTime) end
 
 ---@return any
 function ISRepairEngine:isValid() end

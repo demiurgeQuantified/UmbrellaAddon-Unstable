@@ -95,6 +95,7 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field playerNum any
 ---@field povXms any
 ---@field povYms any
+---@field prevFocus any
 ---@field pyramidBtn any
 ---@field RBumperZoom any
 ---@field showCellGrid any

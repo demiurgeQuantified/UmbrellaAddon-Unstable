@@ -7,6 +7,7 @@
 --- @field public CraftLogic ComponentType
 --- @field public CraftRecipe ComponentType
 --- @field public DryingLogic ComponentType
+--- @field public Durability ComponentType
 --- @field public FluidContainer ComponentType
 --- @field public FurnaceLogic ComponentType
 --- @field public Lua ComponentType

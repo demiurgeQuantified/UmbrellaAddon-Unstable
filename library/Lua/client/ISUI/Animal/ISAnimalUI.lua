@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISAnimalUI : ISCollapsableWindow
+---@class ISAnimalUI : ISCollapsableWindowJoypad
 ---@field ageBtn any
 ---@field animal any
 ---@field animalName any
@@ -16,14 +16,19 @@
 ---@field chr any
 ---@field feedBtn any
 ---@field genderBtn any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field milkAnimalBtn any
 ---@field playerNum any
+---@field prevFocus any
 ---@field refreshNeeded any
 ---@field renameBtn any
 ---@field skillLvl any
 ---@field xOffset any
 ---@field [any] any
-ISAnimalUI = ISCollapsableWindow:derive("ISAnimalUI")
+ISAnimalUI = ISCollapsableWindowJoypad:derive("ISAnimalUI")
 ISAnimalUI.maxDist = 5
 ISAnimalUI.btnOffset = 210
 
@@ -56,6 +61,12 @@ function ISAnimalUI:maxTextWidth(font, text, maxWidth) end
 
 ---@return any
 function ISAnimalUI:onChangeGender() end
+
+---@return any
+function ISAnimalUI:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISAnimalUI:onJoypadDown(button, joypadData) end
 
 ---@return any
 function ISAnimalUI:onMilkAnimal() end

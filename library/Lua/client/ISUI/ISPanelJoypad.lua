@@ -29,6 +29,21 @@
 ISPanelJoypad = ISUIElement:derive("ISPanelJoypad")
 
 ---@return any
+function ISPanelJoypad:clearISButtonA() end
+
+---@return any
+function ISPanelJoypad:clearISButtonB() end
+
+---@return any
+function ISPanelJoypad:clearISButtons() end
+
+---@return any
+function ISPanelJoypad:clearISButtonX() end
+
+---@return any
+function ISPanelJoypad:clearISButtonY() end
+
+---@return any
 function ISPanelJoypad:clearJoypadFocus(joypadData) end
 
 ---@return any
@@ -45,6 +60,18 @@ function ISPanelJoypad:getClosestChild(children, x) end
 
 ---@return any
 function ISPanelJoypad:getJoypadFocus() end
+
+---@return any
+function ISPanelJoypad:getMaxVisibleRow() end
+
+---@return any
+function ISPanelJoypad:getMinVisibleRow() end
+
+---@return any
+function ISPanelJoypad:getNextVisibleRow(row) end
+
+---@return any
+function ISPanelJoypad:getPrevVisibleRow(row) end
 
 ---@return any
 function ISPanelJoypad:getVisibleChildren(joypadIndexY) end

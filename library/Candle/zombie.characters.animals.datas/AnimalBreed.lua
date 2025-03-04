@@ -21,6 +21,10 @@ function AnimalBreed:getMilkType() end
 function AnimalBreed:getName() end
 
 --- @public
+--- @return string
+function AnimalBreed:getRottenTexture() end
+
+--- @public
 --- @param arg0 string
 --- @return Sound
 function AnimalBreed:getSound(arg0) end

@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISWidgetHandCraftControl : ISPanel
+---@class ISWidgetHandCraftControl : ISPanelJoypad
 ---@field allowBatchCraft any
 ---@field autoFillContents any
 ---@field background any
@@ -20,6 +20,10 @@
 ---@field isAutoFill any
 ---@field isAutoFillX any
 ---@field isAutoFillY any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
 ---@field logic any
 ---@field margin any
 ---@field minimumHeight any
@@ -30,7 +34,7 @@
 ---@field quantityLabel any
 ---@field returnToContainer any
 ---@field [any] any
-ISWidgetHandCraftControl = ISPanel:derive("ISWidgetHandCraftControl")
+ISWidgetHandCraftControl = ISPanelJoypad:derive("ISWidgetHandCraftControl")
 
 ---@return any
 function ISWidgetHandCraftControl.onTextChange(box) end
@@ -51,6 +55,9 @@ function ISWidgetHandCraftControl:onAutoToggled(_newState) end
 function ISWidgetHandCraftControl:onButtonClick(_button) end
 
 ---@return any
+function ISWidgetHandCraftControl:onGainJoypadFocus(joypadData) end
+
+---@return any
 function ISWidgetHandCraftControl:onHandcraftActionCancelled() end
 
 ---@return any
@@ -61,6 +68,9 @@ function ISWidgetHandCraftControl:onHandcraftActionStart(action) end
 
 ---@return any
 function ISWidgetHandCraftControl:onInputsChanged() end
+
+---@return any
+function ISWidgetHandCraftControl:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISWidgetHandCraftControl:onResize() end

@@ -212,6 +212,12 @@ function RandomizedWorldBase.getWoodcraftClutterItem() end
 
 --- @public
 --- @static
+--- @param arg0 IsoGridSquare
+--- @return boolean
+function RandomizedWorldBase.is1x1AreaClear(arg0) end
+
+--- @public
+--- @static
 --- @param square IsoGridSquare
 --- @return boolean
 function RandomizedWorldBase.is1x2AreaClear(square) end
@@ -578,6 +584,14 @@ function RandomizedWorldBase:checkRadiusForCarSpawn(arg0, arg1) end
 --- @param arg0 IsoGridSquare
 --- @return nil
 function RandomizedWorldBase:cleanSquareAndNeighbors(arg0) end
+
+--- @public
+--- @param arg0 RoomDef
+--- @return IsoDeadBody
+--- @overload fun(self: RandomizedWorldBase, arg0: IsoGridSquare, arg1: boolean): IsoDeadBody
+--- @overload fun(self: RandomizedWorldBase, arg0: IsoGridSquare, arg1: IsoZombie): IsoDeadBody
+--- @overload fun(self: RandomizedWorldBase, arg0: RoomDef, arg1: boolean): IsoDeadBody
+function RandomizedWorldBase:createCorpse(arg0) end
 
 --- @public
 --- @param arg0 IsoGridSquare

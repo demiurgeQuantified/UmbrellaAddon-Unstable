@@ -4,6 +4,8 @@
 ---@field animal any
 ---@field maxTime any
 ---@field player any
+---@field playerNum any
+---@field prevFocus any
 ---@field useProgressBar any
 ---@field [any] any
 ISOpenAnimalInfo = ISBaseTimedAction:derive("ISOpenAnimalInfo")
@@ -42,4 +44,4 @@ function ISOpenAnimalInfo:update() end
 function ISOpenAnimalInfo:waitToStart() end
 
 ---@return ISOpenAnimalInfo
-function ISOpenAnimalInfo:new(character, animal) end
+function ISOpenAnimalInfo:new(character, animal, prevFocus) end

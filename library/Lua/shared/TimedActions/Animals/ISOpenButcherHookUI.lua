@@ -4,6 +4,7 @@
 ---@field hook any
 ---@field maxTime any
 ---@field player any
+---@field playerNum any
 ---@field useProgressBar any
 ---@field [any] any
 ISOpenButcherHookUI = ISBaseTimedAction:derive("ISOpenButcherHookUI")

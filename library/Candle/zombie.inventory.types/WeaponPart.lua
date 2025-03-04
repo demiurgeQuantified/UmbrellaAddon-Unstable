@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class WeaponPart: InventoryItem
+--- @class WeaponPart: InventoryItem, IUpdater
 --- @field public class any
 --- @field public TYPE_CANON string
 --- @field public TYPE_CLIP string
@@ -13,6 +13,12 @@ WeaponPart = {}
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
+
+--- @public
+--- @param arg0 ObjectTooltip
+--- @param arg1 Layout
+--- @return nil
+function WeaponPart:DoBatteryTooltip(arg0, arg1) end
 
 --- @public
 --- @param tooltipUI ObjectTooltip
@@ -50,6 +56,10 @@ function WeaponPart:getClipSize() end
 
 --- @public
 --- @return number
+function WeaponPart:getCurrentUsesFloat() end
+
+--- @public
+--- @return number
 function WeaponPart:getDamage() end
 
 --- @public
@@ -69,6 +79,10 @@ function WeaponPart:getMaxRange() end
 function WeaponPart:getMaxSightRange() end
 
 --- @public
+--- @return integer
+function WeaponPart:getMaxUses() end
+
+--- @public
 --- @return number
 function WeaponPart:getMinRangeRanged() end
 
@@ -77,7 +91,7 @@ function WeaponPart:getMinRangeRanged() end
 function WeaponPart:getMinSightRange() end
 
 --- @public
---- @return ArrayList
+--- @return List
 function WeaponPart:getMountOn() end
 
 --- @public
@@ -117,6 +131,15 @@ function WeaponPart:onAttach(arg0, arg1) end
 function WeaponPart:onDetach(arg0, arg1) end
 
 --- @public
+--- @return nil
+--- @overload fun(self: WeaponPart): nil
+function WeaponPart:render() end
+
+--- @public
+--- @return nil
+function WeaponPart:renderlast() end
+
+--- @public
 --- @param aimingTime integer
 --- @return nil
 function WeaponPart:setAimingTime(aimingTime) end
@@ -140,6 +163,11 @@ function WeaponPart:setCanDetachCallback(arg0) end
 --- @param clipSize integer
 --- @return nil
 function WeaponPart:setClipSize(clipSize) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function WeaponPart:setCurrentUsesFloat(arg0) end
 
 --- @public
 --- @param damage number
@@ -177,9 +205,9 @@ function WeaponPart:setMinRangeRanged(minRangeRanged) end
 function WeaponPart:setMinSightRange(arg0) end
 
 --- @public
---- @param mountOn ArrayList
+--- @param arg0 List
 --- @return nil
-function WeaponPart:setMountOn(mountOn) end
+function WeaponPart:setMountOn(arg0) end
 
 --- @public
 --- @param arg0 string
@@ -212,9 +240,25 @@ function WeaponPart:setReloadTime(reloadTime) end
 function WeaponPart:setSpreadModifier(arg0) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function WeaponPart:setUseDelta(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+--- @deprecated
+function WeaponPart:setUsedDelta(arg0) end
+
+--- @public
 --- @param weightModifier number
 --- @return nil
 function WeaponPart:setWeightModifier(weightModifier) end
+
+--- @public
+--- @return nil
+--- @overload fun(self: WeaponPart): nil
+function WeaponPart:update() end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

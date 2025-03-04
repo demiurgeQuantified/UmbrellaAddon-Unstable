@@ -15,6 +15,11 @@ biome_map_config = {
 		zone = "Forest",
 	},
 	{
+		pixel = 79,
+		biome = "clay_lake",
+		zone = "Forest",
+	},
+	{
 		pixel = 64,
 		zone = "ForagingNav",
 	},
@@ -43,48 +48,48 @@ biome_map_config = {
 	{
 		pixel = 153,
 		biome = "ph_forest",
-		zone = "Forest",
+		zone = "PHForest",
 	},
 	{
 		pixel = 166,
 		biome = "phmix_forest",
 		ore = "map_forest",
-		zone = "Forest",
+		zone = "PHMixForest",
 	},
 	{
 		pixel = 179,
 		biome = "pr_forest",
 		ore = "map_forest",
-		zone = "Forest",
+		zone = "PRForest",
 	},
 	{
 		pixel = 192,
 		biome = "farmmix_forest",
 		ore = "map_forest",
-		zone = "Forest",
+		zone = "FarmMixForest",
 	},
 	{
 		pixel = 204,
 		biome = "farm_forest",
-		zone = "Forest",
+		zone = "FarmForest",
 	},
 	{
 		pixel = 217,
 		biome = "birch_forest",
 		ore = "map_forest",
-		zone = "Forest",
+		zone = "BirchForest",
 	},
 	{
 		pixel = 230,
 		biome = "birchmix_forest",
 		ore = "map_forest",
-		zone = "Forest",
+		zone = "BirchMixForest",
 	},
 	{
 		pixel = 243,
 		biome = "organic_forest",
 		ore = "map_forest",
-		zone = "Forest",
+		zone = "OrganicForest",
 	},
 	{
 		pixel = 255,

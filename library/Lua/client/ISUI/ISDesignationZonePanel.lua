@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISDesignationZonePanel : ISCollapsableWindow
+---@class ISDesignationZonePanel : ISCollapsableWindowJoypad
 ---@field addZone any
 ---@field backgroundColor any
 ---@field borderColor any
@@ -8,6 +8,11 @@
 ---@field closeButton any
 ---@field currentWidth any
 ---@field height any
+---@field joypadButtons any
+---@field joypadButtonsY any
+---@field joypadIndex any
+---@field joypadIndexY any
+---@field listTakesFocus any
 ---@field moveWithMouse any
 ---@field player any
 ---@field playerNum any
@@ -17,10 +22,10 @@
 ---@field width any
 ---@field zoneList any
 ---@field [any] any
-ISDesignationZonePanel = ISCollapsableWindow:derive("ISDesignationZonePanel")
+ISDesignationZonePanel = ISCollapsableWindowJoypad:derive("ISDesignationZonePanel")
 
 ---@return any
-function ISDesignationZonePanel.toggleZoneUI() end
+function ISDesignationZonePanel.toggleZoneUI(playerNum) end
 
 ---@return any
 function ISDesignationZonePanel:close() end
@@ -33,6 +38,18 @@ function ISDesignationZonePanel:initialise() end
 
 ---@return any
 function ISDesignationZonePanel:onClick(button) end
+
+---@return any
+function ISDesignationZonePanel:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISDesignationZonePanel:onJoypadDirDown(joypadData) end
+
+---@return any
+function ISDesignationZonePanel:onJoypadDirUp(joypadData) end
+
+---@return any
+function ISDesignationZonePanel:onLoseJoypadFocus(joypadData) end
 
 ---@return any
 function ISDesignationZonePanel:onRemoveZone(button) end

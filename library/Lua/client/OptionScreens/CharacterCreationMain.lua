@@ -25,6 +25,7 @@
 ---@field clothingDecalCombo any
 ---@field clothingLbl any
 ---@field clothingPanel any
+---@field clothingRect any
 ---@field clothingTextureCombo any
 ---@field clothingTextureComboWidth any
 ---@field clothingWidgets any
@@ -77,7 +78,6 @@
 ---@field voiceTypeCombo any
 ---@field voiceTypeLbl any
 ---@field x any
----@field xOffset any
 ---@field y any
 ---@field yOffset any
 ---@field [any] any
@@ -253,7 +253,7 @@ function CharacterCreationMain:onSkinColorPicked(color, mouseUp) end
 function CharacterCreationMain:onSkinColorSelected(button, x, y) end
 
 ---@return any
-function CharacterCreationMain:onVoiceTypeSelected(combo) end
+function CharacterCreationMain:onVoiceTypeSelected() end
 
 ---@return any
 function CharacterCreationMain:prerender() end
@@ -316,11 +316,17 @@ function CharacterCreationMain:updateSelectedClothingCombo() end
 function CharacterCreationMain:new(x, y, width, height) end
 
 ---@class CharacterCreationMainCharacterPanel : ISPanelJoypad
+---@field columnWidth any
+---@field comboResizeTable any
+---@field dividerResizeTable any
 ---@field joypadButtons any
 ---@field joypadButtonsY any
 ---@field joypadIndex any
 ---@field joypadIndexY any
 ---@field prevJoypadIndexY any
+---@field repos2Table any
+---@field repos3Table any
+---@field reposTable any
 ---@field scrollBar any
 ---@field [any] any
 CharacterCreationMainCharacterPanel = ISPanelJoypad:derive("CharacterCreationMainCharacterPanel")

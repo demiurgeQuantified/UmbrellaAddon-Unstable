@@ -147,6 +147,10 @@ function TextManager:MeasureStringYReal(arg0, arg1) end
 function TextManager:WrapText(arg0, arg1, arg2) end
 
 --- @public
+--- @return UIFont
+function TextManager:getCurrentCodeFont() end
+
+--- @public
 --- @param font UIFont
 --- @return AngelCodeFont
 function TextManager:getFontFromEnum(font) end

@@ -52,6 +52,10 @@ function BuildingDef:containsXYZ(arg0, arg1, arg2) end
 
 --- @public
 --- @return integer
+function BuildingDef:getArea() end
+
+--- @public
+--- @return integer
 function BuildingDef:getChunkX() end
 
 --- @public
@@ -98,10 +102,10 @@ function BuildingDef:getMaxLevel() end
 function BuildingDef:getMinLevel() end
 
 --- @public
---- @param minArea integer
 --- @return RoomDef
+--- @overload fun(self: BuildingDef, minArea: integer): RoomDef
 --- @overload fun(self: BuildingDef, arg0: integer, arg1: boolean): RoomDef
-function BuildingDef:getRandomRoom(minArea) end
+function BuildingDef:getRandomRoom() end
 
 --- @public
 --- @param arg0 integer
@@ -117,6 +121,10 @@ function BuildingDef:getRoom(roomName) end
 --- @public
 --- @return ArrayList
 function BuildingDef:getRooms() end
+
+--- @public
+--- @return integer
+function BuildingDef:getRoomsNumber() end
 
 --- @public
 --- @return table

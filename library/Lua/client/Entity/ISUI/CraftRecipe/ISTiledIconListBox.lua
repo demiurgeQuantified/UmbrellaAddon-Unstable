@@ -55,6 +55,9 @@ function ISTiledIconListBox:getCurrentPage() end
 function ISTiledIconListBox:getDataElement(_index) end
 
 ---@return any
+function ISTiledIconListBox:getDataElementColumnRow(_tileData) end
+
+---@return any
 function ISTiledIconListBox:getPages() end
 
 ---@return any
@@ -65,6 +68,18 @@ function ISTiledIconListBox:getTileIndexForCoordinate(_x, _y) end
 
 ---@return any
 function ISTiledIconListBox:initialise() end
+
+---@return any
+function ISTiledIconListBox:onJoypadDirDown(joypadData) end
+
+---@return any
+function ISTiledIconListBox:onJoypadDirLeft(joypadData) end
+
+---@return any
+function ISTiledIconListBox:onJoypadDirRight(joypadData) end
+
+---@return any
+function ISTiledIconListBox:onJoypadDirUp(joypadData) end
 
 ---@return any
 function ISTiledIconListBox:onMouseDown(x, y) end
@@ -101,6 +116,9 @@ function ISTiledIconListBox:renderTile(_tileData, _x, _y, _width, _height, _mous
 
 ---@return any
 function ISTiledIconListBox:setCurrentPage(_page) end
+
+---@return any
+function ISTiledIconListBox:trySelectDataElement(_index) end
 
 ---@return any
 function ISTiledIconListBox:update() end

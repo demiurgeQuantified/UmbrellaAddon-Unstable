@@ -116,6 +116,11 @@ function ScriptModule:getName() end
 
 --- @public
 --- @param arg0 string
+--- @return PhysicsHitReactionScript
+function ScriptModule:getPhysicsHitReactionScript(arg0) end
+
+--- @public
+--- @param arg0 string
 --- @return PhysicsShapeScript
 function ScriptModule:getPhysicsShape(arg0) end
 

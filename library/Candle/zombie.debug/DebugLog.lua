@@ -48,7 +48,6 @@
 --- @field public Sprite DebugLogStream
 --- @field public Statistic DebugLogStream
 --- @field public Translation DebugLogStream
---- @field public UnitTests DebugLogStream
 --- @field public Vehicle DebugLogStream
 --- @field public VERSION integer
 --- @field public VERSION1 integer

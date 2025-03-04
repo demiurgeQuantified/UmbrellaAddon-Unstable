@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISRadialMenu : ISPanelJoypad
+---@field disableJoypadNavigation any
 ---@field hideWhenButtonReleased any
 ---@field innerRadius any
 ---@field javaObject any

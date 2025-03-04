@@ -1,6 +1,6 @@
 ---@meta
 
----@class ISFluidInfoUI : ISPanel
+---@class ISFluidInfoUI : ISPanelJoypad
 ---@field backgroundColor any
 ---@field borderColor any
 ---@field btnClose any
@@ -17,7 +17,7 @@
 ---@field variableColor any
 ---@field zOffsetSmallFont any
 ---@field [any] any
-ISFluidInfoUI = ISPanel:derive("ISFluidInfoUI")
+ISFluidInfoUI = ISPanelJoypad:derive("ISFluidInfoUI")
 ISFluidInfoUI.players = {}
 ISFluidInfoUI.cheatSkill = false
 ISFluidInfoUI.cheatTransfer = false
@@ -36,6 +36,9 @@ function ISFluidInfoUI:initialise() end
 
 ---@return any
 function ISFluidInfoUI:onButton(_btn) end
+
+---@return any
+function ISFluidInfoUI:onGainJoypadFocus(joypadData) end
 
 ---@return any
 function ISFluidInfoUI:prerender() end

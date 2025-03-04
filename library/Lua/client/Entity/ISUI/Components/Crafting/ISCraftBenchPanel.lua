@@ -18,6 +18,18 @@ function ISCraftBenchPanel:createChildren() end
 function ISCraftBenchPanel:initialise() end
 
 ---@return any
+function ISCraftBenchPanel:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISCraftBenchPanel:onJoypadDown(button, joypadData) end
+
+---@return any
+function ISCraftBenchPanel:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+---@return any
+function ISCraftBenchPanel:onLoseJoypadFocus(joypadData) end
+
+---@return any
 function ISCraftBenchPanel:onResize() end
 
 ---@return any

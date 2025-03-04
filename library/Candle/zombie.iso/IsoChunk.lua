@@ -349,9 +349,9 @@ function IsoChunk:getVispolyData() end
 function IsoChunk:getVispolyDataForLevel(arg0) end
 
 --- @public
+--- @param arg0 SquareCoord
 --- @return boolean
---- @overload fun(self: IsoChunk, arg0: SquareCoord): boolean
-function IsoChunk:hasAttachmentsPartial() end
+function IsoChunk:hasAttachmentsPartial(arg0) end
 
 --- @public
 --- @param object IsoObject
@@ -465,10 +465,6 @@ function IsoChunk:removeGeneratorPos(x, y, z) end
 --- @param object IsoObject
 --- @return nil
 function IsoChunk:removeObjectAmbientEmitter(object) end
-
---- @public
---- @return nil
-function IsoChunk:resetAttachmentsPartial() end
 
 --- @public
 --- @return nil

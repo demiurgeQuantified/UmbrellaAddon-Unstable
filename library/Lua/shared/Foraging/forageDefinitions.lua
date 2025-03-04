@@ -30,6 +30,7 @@ forageDefaultDefs = {
 			Farm = 1,
 			TrailerPark = 1,
 			TownZone = 1,
+			Nav = 1,
 			ForagingNav = 1,
 		},
 		months = {
@@ -70,6 +71,7 @@ forageDefaultDefs = {
 		densityMax = 1,
 		refillPercent = 1,
 		abundanceSetting = "NatureAbundance",
+		containsBiomes = {},
 	},
 	defaultCatDef = {
 		chance = 1,
@@ -96,6 +98,10 @@ forageDefaultDefs = {
 			TrailerPark = 1,
 			TownZone = 1,
 			ForagingNav = 1,
+			PHForest = 1,
+			PRForest = 1,
+			OrganicForest = 1,
+			BirchForest = 1,
 		},
 		spriteAffinities = {},
 		chanceToMoveIcon = 0.0,
@@ -114,45 +120,4 @@ forageDefaultDefs = {
 	},
 }
 
----@class forageDefs
-forageDefs = {
-	SawflyLarva = {
-		type = "Base.SawflyLarva",
-		skill = 0,
-		xp = 5,
-		rainChance = 10,
-		snowChance = -20,
-		nightChance = 100,
-		categories = {
-			"Insects",
-			"FishBait",
-		},
-		zones = {
-			Forest = 3,
-			DeepForest = 3,
-			Vegitation = 3,
-			FarmLand = 3,
-			Farm = 3,
-			TrailerPark = 3,
-			TownZone = 3,
-			ForagingNav = 3,
-		},
-		months = {
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10,
-			11,
-		},
-		malusMonths = {
-			3,
-			4,
-		},
-		forceOutside = false,
-		canBeAboveFloor = true,
-	},
-}
+forageDefs = {}

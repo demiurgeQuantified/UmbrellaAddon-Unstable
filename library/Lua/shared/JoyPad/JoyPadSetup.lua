@@ -101,6 +101,9 @@ JoypadControllerData = ISBaseObject:derive("JoypadControllerData")
 function JoypadControllerData:clearJoypad() end
 
 ---@return any
+function JoypadControllerData:onHoldButton(button, time) end
+
+---@return any
 function JoypadControllerData:onPauseButtonPressed() end
 
 ---@return any
@@ -147,10 +150,12 @@ function JoypadControllerData:new(id) end
 
 ---@class JoypadData : ISBaseObject
 ---@field controller any
+---@field currentNavigateUI any
 ---@field focus any
 ---@field id any
 ---@field inMainMenu any
 ---@field isActive any
+---@field isDoingNavigation any
 ---@field lastfocus any
 ---@field listBox any
 ---@field player any
@@ -163,7 +168,13 @@ JoypadData = ISBaseObject:derive("JoypadData")
 function JoypadData:clearController() end
 
 ---@return any
+function JoypadData:endNavigation() end
+
+---@return any
 function JoypadData:isConnected() end
+
+---@return any
+function JoypadData:isFocusOnElementOrDescendant(ui) end
 
 ---@return any
 function JoypadData:setActive(isActive) end
@@ -171,11 +182,18 @@ function JoypadData:setActive(isActive) end
 ---@return any
 function JoypadData:setController(controller) end
 
+---@return any
+function JoypadData:startNavigation() end
+
 ---@return JoypadData
 function JoypadData:new() end
 
 ---@return any
 function getFocusForPlayer(playerNum) end
+---@return any
+function isJoypadFocusOnElementOrDescendant(playerNum, ui) end
+---@return any
+function getJoypadData(playerID) end
 ---@return any
 function getJoypadFocus(playerID) end
 ---@return any

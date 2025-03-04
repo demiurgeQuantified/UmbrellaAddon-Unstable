@@ -87,7 +87,6 @@ function IsoGameCharacter:Callout() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:CanAttack() end
 
 --- @public
@@ -157,7 +156,9 @@ function IsoGameCharacter:Dressup(desc) end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: FluidContainer, arg1: number): boolean
 --- @overload fun(self: IsoGameCharacter, arg0: InventoryItem, arg1: number): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: FluidContainer, arg1: number, arg2: boolean): boolean
 --- @overload fun(self: IsoGameCharacter, arg0: InventoryItem, arg1: number, arg2: boolean): boolean
 function IsoGameCharacter:DrinkFluid(arg0) end
 
@@ -616,6 +617,12 @@ function IsoGameCharacter:addNeckMuscleStrain(arg0) end
 --- @overload fun(self: IsoGameCharacter, arg0: string, arg1: integer): nil
 --- @overload fun(self: IsoGameCharacter, arg0: string, arg1: integer): nil
 function IsoGameCharacter:addReadLiterature(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: string): nil
+function IsoGameCharacter:addReadPrintMedia(arg0) end
 
 --- @public
 --- @param arg0 number
@@ -1609,8 +1616,8 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return AnimationVariableSource
---- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
+--- @return IAnimationVariableSource
+--- @overload fun(self: IsoGameCharacter): AnimationVariableSource
 --- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
@@ -1620,8 +1627,8 @@ function IsoGameCharacter:getGameVariablesInternal() end
 function IsoGameCharacter:getGlobalMovementMod(bDoNoises) end
 
 --- @public
---- @param arg0 Vector3
---- @return Vector3
+--- @param arg0 Vector3f
+--- @return Vector3f
 --- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
 function IsoGameCharacter:getGrappleOffset(arg0) end
 
@@ -2112,6 +2119,11 @@ function IsoGameCharacter:getRandomDefaultOutfit() end
 function IsoGameCharacter:getReadLiterature() end
 
 --- @public
+--- @return HashSet
+--- @overload fun(self: IsoGameCharacter): HashSet
+function IsoGameCharacter:getReadPrintMedia() end
+
+--- @public
 --- @return ArrayList
 function IsoGameCharacter:getReadyModelData() end
 
@@ -2309,9 +2321,9 @@ function IsoGameCharacter:getSurvivorKills() end
 function IsoGameCharacter:getTalkerType() end
 
 --- @public
---- @param arg0 Vector3
---- @return Vector3
---- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
+--- @param arg0 Vector3f
+--- @return Vector3f
+--- @overload fun(self: IsoGameCharacter, arg0: Vector3f): Vector3f
 --- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
 --- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
 function IsoGameCharacter:getTargetGrapplePos(arg0) end
@@ -2508,8 +2520,8 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return BaseGrappleable
---- @overload fun(self: IsoGameCharacter): IGrappleable
+--- @return IGrappleable
+--- @overload fun(self: IsoGameCharacter): BaseGrappleable
 --- @overload fun(self: IsoGameCharacter): IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
@@ -2841,6 +2853,11 @@ function IsoGameCharacter:isDriving() end
 function IsoGameCharacter:isEditingRagdoll() end
 
 --- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
+function IsoGameCharacter:isEnduranceSufficientForAction() end
+
+--- @public
 --- @param item InventoryItem
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, item: InventoryItem): boolean
@@ -3155,6 +3172,12 @@ function IsoGameCharacter:isPrimaryEquipped(item) end
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, item: InventoryItem): boolean
 function IsoGameCharacter:isPrimaryHandItem(item) end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: string): boolean
+function IsoGameCharacter:isPrintMediaRead(arg0) end
 
 --- @public
 --- @return boolean

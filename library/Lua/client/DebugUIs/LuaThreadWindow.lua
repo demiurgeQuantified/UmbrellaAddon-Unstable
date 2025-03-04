@@ -15,6 +15,9 @@
 LuaThreadWindow = ISPanel:derive("LuaThreadWindow")
 
 ---@return any
+function LuaThreadWindow:checkFontSize() end
+
+---@return any
 function LuaThreadWindow:createChildren() end
 
 ---@return any

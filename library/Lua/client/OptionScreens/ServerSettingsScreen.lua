@@ -906,6 +906,9 @@ SettingsTable = {
 						name = "DaysUntilMaximumDiminishedLoot",
 					},
 					{
+						name = "MaximumLootedBuildingRooms",
+					},
+					{
 						name = "FoodLootNew",
 						title = "LootRarity",
 						advancedCombo = {

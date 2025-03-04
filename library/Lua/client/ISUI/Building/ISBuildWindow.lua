@@ -55,6 +55,15 @@ function ISBuildWindow:initialise() end
 function ISBuildWindow:isKeyConsumed(key) end
 
 ---@return any
+function ISBuildWindow:onGainJoypadFocus(joypadData) end
+
+---@return any
+function ISBuildWindow:onJoypadDown_Descendant(descendant, button, joypadData) end
+
+---@return any
+function ISBuildWindow:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+---@return any
 function ISBuildWindow:onKeyRelease(key) end
 
 ---@return any

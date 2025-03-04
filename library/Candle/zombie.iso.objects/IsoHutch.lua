@@ -136,6 +136,10 @@ function IsoHutch:isDoorClosed() end
 
 --- @public
 --- @return boolean
+function IsoHutch:isEggHatchDoorClosed() end
+
+--- @public
+--- @return boolean
 function IsoHutch:isEggHatchDoorOpen() end
 
 --- @public

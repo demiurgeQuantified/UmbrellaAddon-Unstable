@@ -21,37 +21,37 @@ Fishing.Utils.fishSizeChancesBySkillLevel[0] = {
 Fishing.Utils.fishSizeChancesBySkillLevel[1] = {
 	85,
 	15,
-	1,
+	0,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[2] = {
 	75,
-	20,
-	5,
+	24,
+	1,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[3] = {
-	65,
+	70,
 	25,
-	10,
+	5,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[4] = {
-	55,
+	60,
 	30,
-	15,
+	10,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[5] = {
+	48,
 	40,
-	40,
-	20,
+	12,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[6] = {
-	30,
-	40,
-	30,
+	35,
+	45,
+	20,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[7] = {
 	25,
-	40,
-	35,
+	45,
+	30,
 }
 Fishing.Utils.fishSizeChancesBySkillLevel[8] = {
 	20,

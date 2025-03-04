@@ -25,6 +25,9 @@ function WatchWindow.onDataWrite(data) end
 function WatchWindow:addWatch(obj) end
 
 ---@return any
+function WatchWindow:checkFontSize() end
+
+---@return any
 function WatchWindow:createChildren() end
 
 ---@return any
@@ -44,6 +47,9 @@ function WatchWindow:onRightMouseDownObject(x, y) end
 
 ---@return any
 function WatchWindow:onSourceMouseWheel(del) end
+
+---@return any
+function WatchWindow:prerender() end
 
 ---@return any
 function WatchWindow:restorePos() end

@@ -8,10 +8,6 @@
 --- @field public lastRenderedRendered IsoObject
 --- @field public LowLightingQualityHack boolean
 --- @field public MAX_WALL_SPLATS integer
---- @field public OBF_Blink integer
---- @field public OBF_Highlighted integer
---- @field public OBF_HighlightRenderOnce integer
---- @field public OBF_SatChair integer
 --- @field public rmod number
 IsoObject = {}
 
@@ -186,6 +182,10 @@ function IsoObject:DoSpecialTooltip(tooltipUI, square) end
 function IsoObject:DoTooltip(tooltipUI) end
 
 --- @public
+--- @return IsoObject
+function IsoObject:FindExternalWaterSource() end
+
+--- @public
 --- @param vehicle BaseVehicle
 --- @return number
 function IsoObject:GetVehicleSlowFactor(vehicle) end
@@ -284,6 +284,12 @@ function IsoObject:addAttachedAnimSpriteInstance(arg0) end
 function IsoObject:addChild(child) end
 
 --- @public
+--- @param arg0 FluidType
+--- @param arg1 number
+--- @return nil
+function IsoObject:addFluid(arg0, arg1) end
+
+--- @public
 --- @param arg0 string
 --- @return InventoryItem
 --- @overload fun(self: IsoObject, arg0: string, arg1: boolean): InventoryItem
@@ -364,6 +370,10 @@ function IsoObject:destroyFence(dir) end
 --- @public
 --- @return nil
 function IsoObject:doFindExternalWaterSource() end
+
+--- @public
+--- @return nil
+function IsoObject:emptyFluid() end
 
 --- @public
 --- @return number the alpha
@@ -456,6 +466,18 @@ function IsoObject:getFacingPositionAlt(pos) end
 --- @public
 --- @return IsoGridSquare
 function IsoObject:getFasciaAttachedSquare() end
+
+--- @public
+--- @return number
+function IsoObject:getFluidAmount() end
+
+--- @public
+--- @return number
+function IsoObject:getFluidCapacity() end
+
+--- @public
+--- @return string
+function IsoObject:getFluidUiName() end
 
 --- @public
 --- @return GameEntityType
@@ -696,14 +718,6 @@ function IsoObject:getType() end
 function IsoObject:getUsesExternalWaterSource() end
 
 --- @public
---- @return number
-function IsoObject:getWaterAmount() end
-
---- @public
---- @return number
-function IsoObject:getWaterMax() end
-
---- @public
 --- @return ObjectRenderEffects
 function IsoObject:getWindRenderEffects() end
 
@@ -734,6 +748,10 @@ function IsoObject:hasAttachedAnimSprites() end
 --- @public
 --- @return boolean
 function IsoObject:hasExternalWaterSource() end
+
+--- @public
+--- @return boolean
+function IsoObject:hasFluid() end
 
 --- @public
 --- @return boolean
@@ -790,6 +808,7 @@ function IsoObject:isAnimating() end
 
 --- @public
 --- @return boolean
+--- @overload fun(self: IsoObject, arg0: integer): boolean
 function IsoObject:isBlink() end
 
 --- @public
@@ -840,6 +859,12 @@ function IsoObject:isGrave() end
 
 --- @public
 --- @return boolean
+--- @overload fun(self: IsoObject, arg0: integer): boolean
+function IsoObject:isHighlightRenderOnce() end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoObject, arg0: integer): boolean
 function IsoObject:isHighlighted() end
 
 --- @public
@@ -968,6 +993,11 @@ function IsoObject:loadFromRemoteBuffer(b) end
 --- @param bb ByteBuffer
 --- @return nil
 function IsoObject:loadState(bb) end
+
+--- @public
+--- @param arg0 number
+--- @return FluidContainer
+function IsoObject:moveFluidToTemporaryContainer(arg0) end
 
 --- @public
 --- @return nil
@@ -1198,6 +1228,7 @@ function IsoObject:setAttachedAnimSprite(AttachedAnimSprite) end
 --- @public
 --- @param blink boolean
 --- @return nil
+--- @overload fun(self: IsoObject, arg0: integer, arg1: boolean): nil
 function IsoObject:setBlink(blink) end
 
 --- @public
@@ -1239,9 +1270,17 @@ function IsoObject:setExplored(arg0) end
 function IsoObject:setHighlightColor(highlightColor) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+--- @overload fun(self: IsoObject, arg0: integer, arg1: boolean): nil
+function IsoObject:setHighlightRenderOnce(arg0) end
+
+--- @public
 --- @param highlight boolean
 --- @return nil
 --- @overload fun(self: IsoObject, highlight: boolean, renderOnce: boolean): nil
+--- @overload fun(self: IsoObject, arg0: integer, arg1: boolean): nil
+--- @overload fun(self: IsoObject, arg0: integer, arg1: boolean, arg2: boolean): nil
 function IsoObject:setHighlighted(highlight) end
 
 --- @public
@@ -1420,12 +1459,6 @@ function IsoObject:setType(type) end
 function IsoObject:setUsesExternalWaterSource(b) end
 
 --- @public
---- @param arg0 number
---- @param arg1 boolean
---- @return nil
-function IsoObject:setWaterAmount(arg0, arg1) end
-
---- @public
 --- @return boolean
 function IsoObject:shouldShowOnOverlay() end
 
@@ -1458,6 +1491,18 @@ function IsoObject:syncIsoObjectSend(bb) end
 --- @public
 --- @return string
 function IsoObject:toString() end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @return number
+function IsoObject:transferFluidFrom(arg0, arg1) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @return number
+function IsoObject:transferFluidTo(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -1499,15 +1544,15 @@ function IsoObject:unsetOutlineHighlight() end
 function IsoObject:update() end
 
 --- @public
+--- @param arg0 number
+--- @return number
+function IsoObject:useFluid(arg0) end
+
+--- @public
 --- @param item InventoryItem
 --- @return nil
 --- @deprecated
 function IsoObject:useItemOn(item) end
-
---- @public
---- @param arg0 number
---- @return number
-function IsoObject:useWater(arg0) end
 
 --- @public
 --- @param b ByteBufferWriter

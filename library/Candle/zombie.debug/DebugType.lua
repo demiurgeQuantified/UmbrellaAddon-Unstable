@@ -56,7 +56,6 @@
 --- @field public Sprite DebugType
 --- @field public Statistic DebugType
 --- @field public Translation DebugType
---- @field public UnitTests DebugType
 --- @field public Vehicle DebugType
 --- @field public Voice DebugType
 --- @field public WorldGen DebugType

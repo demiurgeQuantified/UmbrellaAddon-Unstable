@@ -47,12 +47,6 @@ function BloodBodyPartType.ToIndex(BPT) end
 
 --- @public
 --- @static
---- @param BPT BloodBodyPartType
---- @return string
-function BloodBodyPartType.getDisplayName(BPT) end
-
---- @public
---- @static
 --- @param arg0 string
 --- @return BloodBodyPartType
 function BloodBodyPartType.valueOf(arg0) end

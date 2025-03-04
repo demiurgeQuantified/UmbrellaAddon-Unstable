@@ -3,6 +3,7 @@
 ---@class ISGetHutchInfo : ISBaseTimedAction
 ---@field hutch any
 ---@field maxTime any
+---@field playerNum any
 ---@field stopOnAim any
 ---@field [any] any
 ISGetHutchInfo = ISBaseTimedAction:derive("ISGetHutchInfo")

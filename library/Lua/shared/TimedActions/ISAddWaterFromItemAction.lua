@@ -5,7 +5,6 @@
 ---@field itemFrom any
 ---@field itemFromEndingAmount any
 ---@field itemFromStartAmount any
----@field itemFromTainted any
 ---@field maxTime any
 ---@field objectTo any
 ---@field sound any
@@ -26,9 +25,6 @@ function ISAddWaterFromItemAction:perform() end
 
 ---@return any
 function ISAddWaterFromItemAction:serverStop() end
-
----@return any
-function ISAddWaterFromItemAction:setItemFromWaterAmount(_amount) end
 
 ---@return any
 function ISAddWaterFromItemAction:start() end

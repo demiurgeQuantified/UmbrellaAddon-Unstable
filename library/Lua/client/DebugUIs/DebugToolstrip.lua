@@ -6,6 +6,7 @@
 ---@field buttonResume any
 ---@field buttonStepInto any
 ---@field buttonStepOver any
+---@field comboFont any
 ---@field debugLog any
 ---@field debugLogWindow any
 ---@field debugOptions any
@@ -31,6 +32,9 @@ function DebugToolstrip:onButtonStepInto() end
 
 ---@return any
 function DebugToolstrip:onButtonStepOver() end
+
+---@return any
+function DebugToolstrip:onComboFont() end
 
 ---@return any
 function DebugToolstrip:onDebugLog() end

@@ -294,6 +294,16 @@ forageSkills = {
 			["Firewood"] = 30,
 		},
 	},
+	Mason = {
+		name = "Mason",
+		type = "trait",
+		visionBonus = 0,
+		weatherEffect = 0,
+		darknessEffect = 0,
+		specialisations = {
+			["Stones"] = 30,
+		},
+	},
 	Unlucky = {
 		name = "Unlucky",
 		type = "trait",

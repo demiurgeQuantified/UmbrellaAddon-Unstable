@@ -34,7 +34,16 @@ function ISItemsListTable:drawDatas(y, item, alt) end
 function ISItemsListTable:filterCategory(widget, scriptItem) end
 
 ---@return any
+function ISItemsListTable:filterCraft(widget, scriptItem) end
+
+---@return any
 function ISItemsListTable:filterDisplayCategory(widget, scriptItem) end
+
+---@return any
+function ISItemsListTable:filterForage(widget, scriptItem) end
+
+---@return any
+function ISItemsListTable:filterLoot(widget, scriptItem) end
 
 ---@return any
 function ISItemsListTable:filterLootCategory(widget, scriptItem) end

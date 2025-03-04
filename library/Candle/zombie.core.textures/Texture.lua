@@ -66,8 +66,6 @@ function Texture.getErrorTexture() end
 --- @param name string
 --- @return Texture
 --- @overload fun(name: string, flags: integer): Texture
---- @overload fun(name: string, palette: string): Texture
---- @overload fun(name: string, palette: int[], paletteName: string): Texture
 function Texture.getSharedTexture(name) end
 
 --- @public
@@ -617,9 +615,7 @@ function Texture:toString() end
 --- @return Texture
 --- @overload fun(file: string): Texture
 --- @overload fun(t: Texture): Texture
---- @overload fun(name: string, palette: int[]): Texture
 --- @overload fun(file: string, useAlphaChannel: boolean): Texture
---- @overload fun(name: string, palette: string): Texture
 --- @overload fun(data: TextureID, name: string): Texture
 --- @overload fun(width: integer, height: integer, flags: integer): Texture
 --- @overload fun(file: string, bDelete: boolean, bUseAlpha: boolean): Texture
@@ -628,7 +624,6 @@ function Texture:toString() end
 --- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: boolean): Texture
 --- @overload fun(width: integer, height: integer, name: string, flags: integer): Texture
 --- @overload fun(file: string, red: integer, green: integer, blue: integer): Texture
---- @overload fun(name: string, b: BufferedInputStream, bDoMask: boolean, format: PZFileformat): Texture
 --- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: integer): Texture
 --- @overload fun(arg0: TextureID, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer): Texture
 function Texture.new() end

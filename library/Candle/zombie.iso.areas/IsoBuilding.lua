@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoBuilding: IsoArea
+--- @class IsoBuilding
 --- @field public class any
 --- @field public GoodBuildingScore number
 --- @field public IDMax integer

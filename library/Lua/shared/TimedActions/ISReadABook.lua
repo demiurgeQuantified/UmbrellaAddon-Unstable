@@ -11,6 +11,7 @@
 ---@field maxTime any
 ---@field minutesPerPage any
 ---@field pageTimer any
+---@field playerNum any
 ---@field startPage any
 ---@field stats any
 ---@field [any] any

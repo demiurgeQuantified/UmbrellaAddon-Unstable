@@ -86,6 +86,14 @@ function GameEntityFactory.RemoveComponents(arg0, arg1) end
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 GameEntity
+--- @param arg2 ComponentType
+--- @return nil
+function GameEntityFactory.TransferComponent(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 GameEntity
+--- @param arg1 GameEntity
 --- @return nil
 function GameEntityFactory.TransferComponents(arg0, arg1) end
 

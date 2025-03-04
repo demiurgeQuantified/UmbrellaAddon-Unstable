@@ -341,6 +341,9 @@ function ISContextMenu:removeOptionByName(optName) end
 function ISContextMenu:render() end
 
 ---@return any
+function ISContextMenu:renderOptionTextureOrColor(option, x, y, w, h) end
+
+---@return any
 function ISContextMenu:setFont(font) end
 
 ---@return any

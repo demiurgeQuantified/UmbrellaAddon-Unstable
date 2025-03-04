@@ -14,6 +14,9 @@
 StreamMapWindow = ISCollapsableWindow:derive("StreamMapWindow")
 
 ---@return any
+function StreamMapWindow:checkFontSize() end
+
+---@return any
 function StreamMapWindow:createChildren() end
 
 ---@return any
@@ -42,6 +45,9 @@ function StreamMapWindow:onMouseDoubleClickOpenObject(item) end
 
 ---@return any
 function StreamMapWindow:onRenderMouseWheel(del) end
+
+---@return any
+function StreamMapWindow:prerender() end
 
 ---@return any
 function StreamMapWindow:renderTex() end

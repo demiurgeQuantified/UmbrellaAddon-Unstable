@@ -2,6 +2,12 @@
 
 --- @class RagdollSettingsManager
 --- @field public class any
+--- @field public DefaultImpulse number
+--- @field public DefaultImpulseMax number
+--- @field public DefaultImpulseMin number
+--- @field public DefaultUpwardImpulse number
+--- @field public DefaultUpwardImpulseMax number
+--- @field public DefaultUpwardImpulseMin number
 --- @field public GlobalChanceID integer
 RagdollSettingsManager = {}
 

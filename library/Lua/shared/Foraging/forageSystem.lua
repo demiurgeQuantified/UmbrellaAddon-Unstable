@@ -2,6 +2,7 @@
 
 ---@class forageSystem
 ---@field itemBlacklist any
+---@field statisticsTable any
 ---@field [any] any
 forageSystem = {
 	isInitialised = false,
@@ -478,6 +479,61 @@ forageSystem = {
 			"blends_streetoverlays_01_29",
 			"blends_streetoverlays_01_30",
 			"blends_streetoverlays_01_31",
+			"boulders_0",
+			"boulders_1",
+			"boulders_2",
+			"boulders_3",
+			"boulders_4",
+			"boulders_5",
+			"boulders_6",
+			"boulders_7",
+			"boulders_8",
+			"boulders_9",
+			"boulders_10",
+			"boulders_11",
+			"boulders_12",
+			"boulders_13",
+			"boulders_14",
+			"boulders_15",
+			"boulders_16",
+			"boulders_17",
+			"boulders_18",
+			"boulders_19",
+			"boulders_20",
+			"boulders_21",
+			"boulders_22",
+			"boulders_23",
+			"boulders_24",
+			"boulders_25",
+			"boulders_26",
+			"boulders_27",
+			"boulders_28",
+			"boulders_29",
+			"boulders_30",
+			"boulders_31",
+			"boulders_32",
+			"boulders_33",
+			"boulders_34",
+			"boulders_35",
+			"crafting_ore_32",
+			"crafting_ore_33",
+			"crafting_ore_34",
+			"crafting_ore_35",
+			"crafting_ore_35",
+			"crafting_ore_36",
+			"crafting_ore_37",
+			"crafting_ore_38",
+			"crafting_ore_39",
+			"crafting_ore_40",
+			"crafting_ore_41",
+			"crafting_ore_42",
+			"crafting_ore_43",
+			"crafting_ore_44",
+			"crafting_ore_45",
+			"crafting_ore_46",
+			"crafting_ore_47",
+			"crafting_ore_48",
+			"crafting_ore_49",
 		},
 	},
 }
@@ -507,6 +563,12 @@ function forageSystem.checkMetaZone(_zoneData) end
 function forageSystem.checkRefillZone(_zoneData) end
 
 ---@return any
+function forageSystem.clearTables() end
+
+---@return any
+function forageSystem.createDebugLog(_doItemStats) end
+
+---@return any
 function forageSystem.createForageIcons(_zoneData, _recreate, _count) end
 
 ---@return any
@@ -534,13 +596,13 @@ function forageSystem.doGenericItemSpawn(_character, _inventory, _itemDef, _item
 function forageSystem.doGlassesCheck(_character, _skillDef, _bonusEffect) end
 
 ---@return any
-function forageSystem.doItemDefCheck() end
+function forageSystem.doItemDefCheck(_doItemFile) end
 
 ---@return any
 function forageSystem.doJunkWeaponSpawn(_character, _inventory, _itemDef, _items) end
 
 ---@return any
-function forageSystem.doPoisonItemSpawn(_character, _inventory, _itemDef, _items) end
+function forageSystem.doPoisonItemSpawn(_character, _inventory, _itemDef, _items, isKnownPoison) end
 
 ---@return any
 function forageSystem.doRandomAgeSpawn(_character, _inventory, _itemDef, _items) end
@@ -732,7 +794,10 @@ function forageSystem.pickRandomItemType(_lootTable) end
 function forageSystem.populateCatDefs(_catDefs) end
 
 ---@return any
-function forageSystem.populateItemDefs(_itemDefs, _clearAllExisting) end
+function forageSystem.populateItemDefs(_itemDefs) end
+
+---@return any
+function forageSystem.populateMixedZoneCategories() end
 
 ---@return any
 function forageSystem.populateScavengeDefs() end
@@ -751,6 +816,9 @@ function forageSystem.removeItemDef(_itemDef) end
 
 ---@return any
 function forageSystem.setOptionValues() end
+
+---@return any
+function forageSystem.statisticsDebug() end
 
 ---@return any
 function forageSystem.takeItem(_zoneData, _number) end

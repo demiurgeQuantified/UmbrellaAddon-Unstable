@@ -97,3 +97,45 @@ CustomTileProps_SetPair["crafted_02_40"] = {
 	CanScrap = "",
 	Material = "Stone",
 }
+CustomTileProps_SetPair["camping_01_6"] = {
+	ContainerCapacity = "15",
+}
+
+---@class CustomTileProps_RemovePair
+CustomTileProps_RemovePair = {}
+CustomTileProps_RemovePair["crafted_04_114"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_115"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_116"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_117"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_118"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_119"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_122"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_123"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_124"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_125"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_126"] = {
+	"BlocksPlacement",
+}
+CustomTileProps_RemovePair["crafted_04_127"] = {
+	"BlocksPlacement",
+}

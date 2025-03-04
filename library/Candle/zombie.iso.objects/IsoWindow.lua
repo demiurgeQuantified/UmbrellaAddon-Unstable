@@ -2,6 +2,8 @@
 
 --- @class IsoWindow: IsoObject, BarricadeAble, Thumpable
 --- @field public class any
+--- @field public NoWeaponDoorDamage number
+--- @field public WeaponDoorDamageModifier number
 IsoWindow = {}
 
 ------------------------------------
@@ -67,6 +69,11 @@ function IsoWindow.isTopOfSheetRopeHere(sq) end
 --- @return boolean
 function IsoWindow.removeSheetRope(player, square, north) end
 
+--- @public
+--- @static
+--- @return nil
+function IsoWindow.resetCurrentCellWindows() end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -79,8 +86,6 @@ function IsoWindow:AttackObject(owner) end
 --- @public
 --- @param amount number
 --- @return nil
---- @overload fun(self: IsoWindow, amount: number, isZombie: boolean): nil
---- @overload fun(self: IsoWindow, amount: number, chr: IsoMovingObject): nil
 function IsoWindow:Damage(amount) end
 
 --- @public
@@ -158,6 +163,12 @@ function IsoWindow:addToWorld() end
 function IsoWindow:canAddSheetRope() end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 HandWeapon
+--- @return boolean
+function IsoWindow:canAttackBypassIsoBarricade(arg0, arg1) end
+
+--- @public
 --- @param chr IsoGameCharacter
 --- @return boolean
 function IsoWindow:canClimbThrough(chr) end
@@ -207,6 +218,10 @@ function IsoWindow:getFirstCharacterClimbingThrough() end
 --- @return IsoGameCharacter
 --- @overload fun(self: IsoWindow, square: IsoGridSquare): IsoGameCharacter
 function IsoWindow:getFirstCharacterClosing() end
+
+--- @public
+--- @return integer
+function IsoWindow:getHealth() end
 
 --- @public
 --- @return IsoGridSquare
@@ -290,6 +305,10 @@ function IsoWindow:isLocked() end
 
 --- @public
 --- @return boolean
+function IsoWindow:isNorth() end
+
+--- @public
+--- @return boolean
 function IsoWindow:isPermaLocked() end
 
 --- @public
@@ -347,6 +366,10 @@ function IsoWindow:removeSheetRope(player) end
 --- @param shader Shader
 --- @return nil
 function IsoWindow:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
+
+--- @public
+--- @return nil
+function IsoWindow:reset() end
 
 --- @public
 --- @param output ByteBuffer

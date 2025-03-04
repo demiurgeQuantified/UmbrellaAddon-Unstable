@@ -13,10 +13,6 @@ ILuaGameCharacter = {}
 function ILuaGameCharacter:Callout() end
 
 --- @public
---- @return boolean
-function ILuaGameCharacter:CanAttack() end
-
---- @public
 --- @param arg0 string
 --- @return nil
 function ILuaGameCharacter:ClearVariable(arg0) end
@@ -29,7 +25,9 @@ function ILuaGameCharacter:Dressup(arg0) end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
+--- @overload fun(self: ILuaGameCharacter, arg0: FluidContainer, arg1: number): boolean
 --- @overload fun(self: ILuaGameCharacter, arg0: InventoryItem, arg1: number): boolean
+--- @overload fun(self: ILuaGameCharacter, arg0: FluidContainer, arg1: number, arg2: boolean): boolean
 --- @overload fun(self: ILuaGameCharacter, arg0: InventoryItem, arg1: number, arg2: boolean): boolean
 function ILuaGameCharacter:DrinkFluid(arg0) end
 
@@ -155,6 +153,11 @@ function ILuaGameCharacter:addKnownMediaLine(guid) end
 --- @return nil
 --- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: integer): nil
 function ILuaGameCharacter:addReadLiterature(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function ILuaGameCharacter:addReadPrintMedia(arg0) end
 
 --- @public
 --- @param radius integer
@@ -414,6 +417,10 @@ function ILuaGameCharacter:getPrimaryHandItem() end
 function ILuaGameCharacter:getReadLiterature() end
 
 --- @public
+--- @return HashSet
+function ILuaGameCharacter:getReadPrintMedia() end
+
+--- @public
 --- @return number
 function ILuaGameCharacter:getRecoilDelay() end
 
@@ -556,6 +563,10 @@ function ILuaGameCharacter:isDeathDragDown() end
 function ILuaGameCharacter:isDriving() end
 
 --- @public
+--- @return boolean
+function ILuaGameCharacter:isEnduranceSufficientForAction() end
+
+--- @public
 --- @param item InventoryItem
 --- @return boolean
 function ILuaGameCharacter:isEquipped(item) end
@@ -651,6 +662,11 @@ function ILuaGameCharacter:isPlayingDeathSound() end
 --- @param item InventoryItem
 --- @return boolean
 function ILuaGameCharacter:isPrimaryHandItem(item) end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+function ILuaGameCharacter:isPrintMediaRead(arg0) end
 
 --- @public
 --- @return boolean

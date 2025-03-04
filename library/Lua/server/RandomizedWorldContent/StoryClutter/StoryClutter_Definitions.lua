@@ -414,6 +414,8 @@ StoryClutter.FarmStorageClutter = {
 	"Base.HandAxe_Old",
 	"Base.Axe_Old",
 	"Base.Fleshing_Tool",
+	"Base.Sledgehammer",
+	"Base.Sledgehammer2",
 }
 StoryClutter.FootballNightDrinks = {
 	"Base.BeerPack",
@@ -546,6 +548,8 @@ StoryClutter.GarageStorageClutter = {
 	"Base.MasonsChisel",
 	"Base.MasonsTrowel",
 	"Base.HandAxe",
+	"Base.Sledgehammer",
+	"Base.Sledgehammer2",
 }
 StoryClutter.GigamartClutter = {
 	"Base.CreditCard",
@@ -898,6 +902,7 @@ StoryClutter.KitchenCounterClutter = {
 	"Base.SpeedingTicket",
 	"Base.Postcard",
 	"Base.Whetstone",
+	"Base.Coffee2",
 }
 StoryClutter.KitchenSinkClutter = {
 	"Base.CleaningLiquid2",
@@ -1348,6 +1353,7 @@ StoryClutter.SurvivalistCampsiteClutter = {
 	"Base.Whetstone",
 	"Base.Fleshing_Tool",
 	"Base.HandAxe",
+	"Base.FirewoodBundle",
 }
 StoryClutter.TwiggyClutter = {
 	"Base.BeerBottle",

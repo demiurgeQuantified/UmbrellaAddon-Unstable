@@ -14,6 +14,12 @@ BaseAnimalBehavior = {}
 --- @return nil
 function BaseAnimalBehavior.shuffleList(arg0) end
 
+--- @public
+--- @static
+--- @param arg0 ArrayList
+--- @return nil
+function BaseAnimalBehavior.shuffleListSq(arg0) end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -78,6 +84,11 @@ function BaseAnimalBehavior:forceEatFromMom() end
 function BaseAnimalBehavior:forceFleeFromChr(arg0) end
 
 --- @public
+--- @param arg0 IsoGridSquare
+--- @return IsoGridSquare
+function BaseAnimalBehavior:getNearestWaterSquare(arg0) end
+
+--- @public
 --- @return ArrayList
 function BaseAnimalBehavior:getRandomTroughList() end
 
@@ -100,6 +111,11 @@ function BaseAnimalBehavior:resetBehaviorAction() end
 function BaseAnimalBehavior:setBlockMovement(arg0) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseAnimalBehavior:setDoingBehavior(arg0) end
+
+--- @public
 --- @param arg0 integer
 --- @return nil
 function BaseAnimalBehavior:setHourBeforeLeavingHutch(arg0) end
@@ -110,6 +126,14 @@ function BaseAnimalBehavior:setHourBeforeLeavingHutch(arg0) end
 --- @param arg2 number
 --- @return nil
 function BaseAnimalBehavior:spotted(arg0, arg1, arg2) end
+
+--- @public
+--- @return IsoObject
+function BaseAnimalBehavior:tryAndGetGrassFloor() end
+
+--- @public
+--- @return IsoObject
+function BaseAnimalBehavior:tryAndGetPuddle() end
 
 --- @public
 --- @return nil

@@ -25,4 +25,7 @@ function ISDPadWheels.onShout(playerObj) end
 function ISDPadWheels.onToggleLight(playerObj, item) end
 
 ---@return any
+function ISDPadWheels.showAnimalZoneUI(playerNum) end
+
+---@return any
 function ISDPadWheels.showSurvGuide(playerIndex) end

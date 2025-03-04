@@ -17,6 +17,7 @@
 --- @field public ItemFilter ScriptType
 --- @field public Mannequin ScriptType
 --- @field public Model ScriptType
+--- @field public PhysicsHitReaction ScriptType
 --- @field public PhysicsShape ScriptType
 --- @field public Ragdoll ScriptType
 --- @field public Recipe ScriptType

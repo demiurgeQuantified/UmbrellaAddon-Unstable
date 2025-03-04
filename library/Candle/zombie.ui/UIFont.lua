@@ -6,6 +6,9 @@
 --- @field public AutoNormMedium UIFont
 --- @field public AutoNormSmall UIFont
 --- @field public Code UIFont
+--- @field public CodeLarge UIFont
+--- @field public CodeMedium UIFont
+--- @field public CodeSmall UIFont
 --- @field public Cred1 UIFont
 --- @field public Cred2 UIFont
 --- @field public DebugConsole UIFont
