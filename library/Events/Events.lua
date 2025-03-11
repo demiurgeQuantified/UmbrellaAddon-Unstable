@@ -3272,6 +3272,18 @@ Events.OnStopGrapple = {
 	Remove = function(callback) end,
 }
 
+---bannedIPs - List of banned ip database entries.<br>
+---@alias Callback_ViewBannedIPs fun(bannedIPs:ArrayList)
+
+---(Multiplayer) (Client) ViewBannedIPs: Triggered when receiving the response to a request from getBannedIPs().
+---<br><br>bannedIPs - List of banned ip database entries.<br>
+Events.ViewBannedIPs = {
+	---@param callback Callback_ViewBannedIPs
+	Add = function(callback) end,
+	---@param callback Callback_ViewBannedIPs
+	Remove = function(callback) end,
+}
+
 Hook = {}
 
 ---attacker - The character attempting to attack.<br>
@@ -3382,11 +3394,9 @@ Hook.ContextualAction = {
 ---@alias umbrella.Item_OnEat fun(item:InventoryItem,character:IsoGameCharacter,amount:number)
 
 ---Called when checking if an item is allowed inside a container with this function assigned. The container's OnlyAcceptCategory will be checked first if it has one.<br><br>container - The container the item is being added to<br>item - The item being added to the container<br><br>boolean acceptItem - Whether to allow the item in the container
-
 ---@alias umbrella.Item_AcceptItemFunction fun(container:ItemContainer,item:InventoryItem):acceptItem:boolean
 
 ---Called when checking if an item can be used in the recipe.<br><br>item - The item being tested.<br><br>boolean test - Whether to allow the item in the recipe.
-
 ---@alias umbrella.CraftRecipe_OnTest fun(item:InventoryItem):test:boolean
 
 ---Called at the start of crafting the recipe.<br><br>character - The character crafting the recipe. Recipes started by a workstation will pass nil.<br>
@@ -3402,11 +3412,9 @@ Hook.ContextualAction = {
 ---@alias umbrella.CraftRecipe_OnFailed fun(recipeData:CraftRecipeData)
 
 ---Called when checking if a character is able to perform the recipe - before showing the option to craft it, and every tick during crafting.<br><br>recipe - The recipe being checked<br>character - The character the recipe is being checked for<br>item - The item the player right clicked to see this recipe. Null when checking whether to show the recipe in the crafting menu, but will be checked with the item set during crafting.<br><br>boolean canPerform - Whether to allow the character to craft the recipe
-
 ---@alias umbrella.Recipe_OnCanPerform fun(recipe:Recipe,character:IsoGameCharacter,item:InventoryItem?):canPerform:boolean
 
 ---Called when checking if an item is allowed to be used in a recipe.<br><br>item - The item being checked<br>result - The result of the recipe<br><br>boolean test - Whether to allow the item into the recipe
-
 ---@alias umbrella.Recipe_OnTest fun(item:InventoryItem,result:Recipe.Result):test:boolean
 
 ---Called after crafting the recipe.<br><br>sources - The items used to craft the recipe<br>result - The item crafted by the recipe. Passed even if RemoveResultItem is set<br>character - The character who crafted the recipe<br>item - The item used in the crafting action. This is either the item that was right clicked to start the crafting, or the first source item if it was crafted from the recipe menu.<br>isPrimaryHandItem - True if item is equipped in the player's primary hand<br>isSecondaryHandItem - True if item is equipped in the player's secondary hand<br>
@@ -3425,11 +3433,9 @@ Hook.ContextualAction = {
 ---@alias umbrella.VehiclePart_create fun(vehicle:BaseVehicle,part:VehiclePart)
 
 ---Called every tick while the engine is running. If any part returns false the engine will immediately shut off.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being checked<br><br>boolean working - Whether the engine should be working
-
 ---@alias umbrella.VehiclePart_checkEngine fun(vehicle:BaseVehicle,part:VehiclePart):working:boolean
 
 ---Called every tick while a player is in the driver's seat and able to drive. If any part returns false the player will not be able to control the vehicle.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being checked<br><br>boolean operable - Whether the vehicle is operable
-
 ---@alias umbrella.VehiclePart_checkOperate fun(vehicle:BaseVehicle,part:VehiclePart):operable:boolean
 
 ---Called regularly to update the part, targeting a rate of every half an in-game minute (1.25 seconds on 1 hour days).<br><br>vehicle - The vehicle the part belongs to<br>part - The part being updated<br>deltaMinutes - The number of minutes since the last update<br>
@@ -3439,23 +3445,19 @@ Hook.ContextualAction = {
 ---@alias umbrella.VehiclePart_use fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter)
 
 ---Called when testing if the part can be installed.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being tested<br>character - The character using the part<br><br>boolean test - Whether the part can be installed
-
 ---@alias umbrella.VehiclePart_Install_test fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter):test:boolean
 
 ---Called after the part is successfully installed.<br><br>vehicle - The vehicle the part belongs to<br>part - The part that was installed<br>
 ---@alias umbrella.VehiclePart_Install_complete fun(vehicle:BaseVehicle,part:VehiclePart)
 
 ---Called when testing if the part can be uninstalled.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being tested<br>character - The character using the part<br><br>boolean test - Whether the part can be uninstalled
-
 ---@alias umbrella.VehiclePart_Uninstall_test fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter):test:boolean
 
 ---Called after the part is successfully uninstalled.<br><br>vehicle - The vehicle the part belongs to<br>part - The part that was uninstalled<br>item - The item that was removed<br>
 ---@alias umbrella.VehiclePart_Uninstall_complete fun(vehicle:BaseVehicle,part:VehiclePart,item:InventoryItem)
 
 ---Used by the -Eval methods in ItemContainer. These methods will only consider items that this function returns true for.<br><br>item - The item being tested.<br><br>boolean allowItem - Whether the item is a valid match.
-
 ---@alias umbrella.ItemContainer_Predicate fun(item:InventoryItem):allowItem:boolean
 
 ---Used by the getBest methods in ItemContainer. These methods will sort all matches using this function, and return the item in first place.<br><br>a - The first item being tested.<br>b - The second item being tested.<br><br>number  - This should be positive if a should be prioritised over b, and negative if b should be prioritised.
-
 ---@alias umbrella.ItemContainer_Comparator fun(a:InventoryItem,b:InventoryItem):number
