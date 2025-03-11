@@ -38,6 +38,27 @@ function PlayerExtState:execute(owner) end
 --- @return nil
 function PlayerExtState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerExtState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerExtState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerExtState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerExtState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerExtState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

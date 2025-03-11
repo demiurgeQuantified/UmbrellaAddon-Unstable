@@ -1721,6 +1721,11 @@ function IsoObject:setTargetAlpha(targetAlpha) end
 function IsoObject:setTargetAlpha(playerIndex, targetAlpha) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function IsoObject:setTile(arg0) end
+
+--- @public
 --- @param type IsoObjectType
 --- @return nil
 function IsoObject:setType(type) end

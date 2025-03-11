@@ -69,6 +69,13 @@ function CraftRecipeManager.getAllRecipeTags() end
 --- @public
 --- @static
 --- @param arg0 CraftRecipe
+--- @param arg1 InventoryItem
+--- @return ArrayList
+function CraftRecipeManager.getAllValidInputScriptsForItem(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 CraftRecipe
 --- @param arg1 ArrayList
 --- @param arg2 ArrayList
 --- @return ArrayList

@@ -47,7 +47,7 @@ function WGParams:getSeed() end
 function WGParams:getSeedString() end
 
 --- @public
---- @return nil
+--- @return Result
 function WGParams:load() end
 
 --- @public

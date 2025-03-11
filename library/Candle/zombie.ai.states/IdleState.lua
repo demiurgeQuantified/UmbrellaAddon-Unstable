@@ -23,6 +23,16 @@ function IdleState.instance() end
 --- @return nil
 function IdleState:animEvent(owner, event) end
 
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IdleState:enter(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IdleState:exit(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

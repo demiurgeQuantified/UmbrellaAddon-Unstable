@@ -42,6 +42,23 @@ function PlayerEmoteState:exit(owner) end
 --- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
 function PlayerEmoteState:isDoingActionThatCanBeCancelled() end
 
+--- @public
+--- @return boolean
+function PlayerEmoteState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerEmoteState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerEmoteState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerEmoteState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

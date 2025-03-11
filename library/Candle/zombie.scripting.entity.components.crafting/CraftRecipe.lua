@@ -127,8 +127,20 @@ function CraftRecipe:checkAutoLearnAllSkills(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 boolean
+--- @return nil
+function CraftRecipe:checkAutoLearnAllSkills(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
 --- @return nil
 function CraftRecipe:checkAutoLearnAnySkills(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 boolean
+--- @return nil
+function CraftRecipe:checkAutoLearnAnySkills(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter

@@ -103,6 +103,10 @@ function FluidFilter:remove(arg0) end
 function FluidFilter:save(arg0) end
 
 --- @public
+--- @return nil
+function FluidFilter:seal() end
+
+--- @public
 --- @param arg0 string
 --- @return nil
 function FluidFilter:setFilterScript(arg0) end

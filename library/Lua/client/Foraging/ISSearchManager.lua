@@ -29,7 +29,6 @@
 ---@field distanceSinceFind any
 ---@field effectOverlayValues any
 ---@field forageIcons any
----@field haloNotes any
 ---@field height any
 ---@field iconCategories any
 ---@field iconLoadRate any
@@ -82,7 +81,6 @@
 ---@field timeToMoveIcon any
 ---@field timeToMoveIconExtra any
 ---@field timeToMoveIconMax any
----@field triggerHalo any
 ---@field updateEvents any
 ---@field updateTick any
 ---@field updateTickMax any
@@ -176,9 +174,6 @@ function ISSearchManager.onUpdateIcon(_zoneData, _iconID, _icon) end
 function ISSearchManager.setManager(_character, _manager) end
 
 ---@return any
-function ISSearchManager:addHaloNote(_text) end
-
----@return any
 function ISSearchManager:addIcon(_id, _iconClass, _itemType, _itemObj, _x, _y, _z) end
 
 ---@return any
@@ -212,9 +207,6 @@ function ISSearchManager:checkWorldIcons() end
 function ISSearchManager:clearCheckedSquares() end
 
 ---@return any
-function ISSearchManager:clearHaloNotes() end
-
----@return any
 function ISSearchManager:clearIcons() end
 
 ---@return any
@@ -243,9 +235,6 @@ function ISSearchManager:createIconsForWorldItems(_square) end
 
 ---@return any
 function ISSearchManager:createIconsForZone(_zoneData, _recreate) end
-
----@return any
-function ISSearchManager:displayHaloNotes() end
 
 ---@return any
 function ISSearchManager:doChangePosition(_icon) end

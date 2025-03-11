@@ -32,6 +32,23 @@ function PlayerGetUpState:execute(owner) end
 --- @return nil
 function PlayerGetUpState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerGetUpState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerGetUpState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerGetUpState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerGetUpState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

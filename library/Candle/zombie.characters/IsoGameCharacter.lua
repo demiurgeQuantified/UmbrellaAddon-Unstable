@@ -2,6 +2,8 @@
 
 --- @class IsoGameCharacter: IsoMovingObject, Talker, ChatElementOwner, IAnimatable, IAnimationVariableMap, IAnimationVariableSourceContainer, IClothingItemListener, IActionStateChanged, IAnimEventCallback, IAnimEventWrappedBroadcaster, IFMODParameterUpdater, IGrappleableWrapper, ILuaVariableSource, ILuaGameCharacter
 --- @field public class any
+--- @field public AwkwardGlovesStrengthDivisor integer
+--- @field public GlovesStrengthBonus integer
 --- @field public RENDER_OFFSET_X integer
 --- @field public RENDER_OFFSET_Y integer
 --- @field public s_maxPossibleTwist number
@@ -291,6 +293,11 @@ function IsoGameCharacter:HasTrait(trait) end
 --- @param trait string
 --- @return boolean
 function IsoGameCharacter:HasTrait(trait) end
+
+--- @public
+--- @param arg0 TraitSlot
+--- @return boolean
+function IsoGameCharacter:HasTrait(arg0) end
 
 --- @public
 --- @param weapon HandWeapon
@@ -3468,10 +3475,6 @@ function IsoGameCharacter:isAttachedItem(item) end
 function IsoGameCharacter:isAttachedItem(item) end
 
 --- @public
---- @return boolean _ the AttackWasSuperAttack
-function IsoGameCharacter:isAttackWasSuperAttack() end
-
---- @public
 --- @return boolean
 function IsoGameCharacter:isAttacking() end
 
@@ -4206,10 +4209,6 @@ function IsoGameCharacter:isStomping() end
 function IsoGameCharacter:isStrafing() end
 
 --- @public
---- @return boolean _ the superAttack
-function IsoGameCharacter:isSuperAttack() end
-
---- @public
 --- @return boolean
 function IsoGameCharacter:isTeleporting() end
 
@@ -4676,6 +4675,11 @@ function IsoGameCharacter:resetBodyDamageRemote() end
 function IsoGameCharacter:resetEquippedHandsModels() end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function IsoGameCharacter:resetGrappleStateToDefault(arg0) end
+
+--- @public
 --- @return nil
 function IsoGameCharacter:resetHairGrowingTime() end
 
@@ -4802,11 +4806,6 @@ function IsoGameCharacter:setAttachedItems(other) end
 --- @param attackTargetSquare IsoGridSquare the attackTargetSquare to set
 --- @return nil
 function IsoGameCharacter:setAttackTargetSquare(attackTargetSquare) end
-
---- @public
---- @param AttackWasSuperAttack boolean the AttackWasSuperAttack to set
---- @return nil
-function IsoGameCharacter:setAttackWasSuperAttack(AttackWasSuperAttack) end
 
 --- @public
 --- @param AttackedBy IsoGameCharacter the AttackedBy to set
@@ -5943,11 +5942,6 @@ function IsoGameCharacter:setStaggerTimeMod(staggerTimeMod) end
 --- @param val boolean
 --- @return nil
 function IsoGameCharacter:setStateMachineLocked(val) end
-
---- @public
---- @param superAttack boolean the superAttack to set
---- @return nil
-function IsoGameCharacter:setSuperAttack(superAttack) end
 
 --- @public
 --- @param survivorKills integer

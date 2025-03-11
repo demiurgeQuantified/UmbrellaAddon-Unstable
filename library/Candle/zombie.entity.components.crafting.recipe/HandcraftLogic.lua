@@ -34,6 +34,10 @@ function HandcraftLogic:canPerformCurrentRecipe() end
 function HandcraftLogic:checkValidRecipeSelected() end
 
 --- @public
+--- @return nil
+function HandcraftLogic:clearManualInputs() end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 boolean

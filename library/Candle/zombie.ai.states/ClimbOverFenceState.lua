@@ -58,6 +58,18 @@ function ClimbOverFenceState:getDeltaModifiers(owner, modifiers) end
 function ClimbOverFenceState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
+--- @return boolean
+function ClimbOverFenceState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ClimbOverFenceState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ClimbOverFenceState:isSyncOnSquare() end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @param dir IsoDirections
 --- @return nil

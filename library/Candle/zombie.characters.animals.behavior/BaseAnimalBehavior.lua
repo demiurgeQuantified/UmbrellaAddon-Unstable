@@ -132,8 +132,9 @@ function BaseAnimalBehavior:spotted(arg0, arg1, arg2) end
 function BaseAnimalBehavior:tryAndGetGrassFloor() end
 
 --- @public
+--- @param arg0 integer
 --- @return IsoObject
-function BaseAnimalBehavior:tryAndGetPuddle() end
+function BaseAnimalBehavior:tryAndGetPuddle(arg0) end
 
 --- @public
 --- @return nil

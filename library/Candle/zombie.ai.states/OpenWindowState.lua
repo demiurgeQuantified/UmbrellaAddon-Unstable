@@ -43,6 +43,22 @@ function OpenWindowState:exit(owner) end
 function OpenWindowState:isDoingActionThatCanBeCancelled() end
 
 --- @public
+--- @return boolean
+function OpenWindowState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function OpenWindowState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function OpenWindowState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function OpenWindowState:isSyncOnSquare() end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @param window IsoWindow
 --- @return nil

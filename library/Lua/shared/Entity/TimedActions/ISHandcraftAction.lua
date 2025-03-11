@@ -31,6 +31,12 @@ function ISHandcraftAction.FromLogic(handcraftLogic) end
 function ISHandcraftAction.FromLogicMultiple(handcraftLogic) end
 
 ---@return any
+function ISHandcraftAction:clearItemsProgressBar(bSetJobType) end
+
+---@return any
+function ISHandcraftAction:complete() end
+
+---@return any
 function ISHandcraftAction:getDuration() end
 
 ---@return any
@@ -38,6 +44,9 @@ function ISHandcraftAction:isValid() end
 
 ---@return any
 function ISHandcraftAction:perform() end
+
+---@return any
+function ISHandcraftAction:performRecipe() end
 
 ---@return any
 function ISHandcraftAction:serverStart() end

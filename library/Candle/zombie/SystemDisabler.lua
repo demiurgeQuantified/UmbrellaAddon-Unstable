@@ -2,7 +2,6 @@
 
 --- @class SystemDisabler
 --- @field public class any
---- @field public disableSyncInventory boolean
 --- @field public doCharacterStats boolean
 --- @field public doEnableDetectOpenGLErrorsInTexture boolean
 --- @field public doOverridePOVCharacters boolean
@@ -14,7 +13,6 @@
 --- @field public doZombieCreation boolean
 --- @field public useNetworkCharacter boolean
 --- @field public zombiesDontAttack boolean
---- @field public zombiesSwitchOwnershipEachUpdate boolean
 SystemDisabler = {}
 
 ------------------------------------

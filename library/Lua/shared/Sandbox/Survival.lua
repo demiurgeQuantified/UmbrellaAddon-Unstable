@@ -159,5 +159,6 @@ return {
 		XPMultiplierMasonry = 1,
 		XPMultiplierPottery = 1,
 		XPMultiplierCarving = 1,
+		XPMultiplierGlassmaking = 1,
 	},
 }

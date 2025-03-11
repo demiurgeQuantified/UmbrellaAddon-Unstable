@@ -2,6 +2,8 @@
 
 --- @class IsoFire: IsoObject
 --- @field public class any
+--- @field public MaxLife integer
+--- @field public MinLife integer
 IsoFire = {}
 
 ------------------------------------

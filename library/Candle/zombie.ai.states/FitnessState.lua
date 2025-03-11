@@ -38,6 +38,27 @@ function FitnessState:execute(owner) end
 --- @return nil
 function FitnessState:exit(owner) end
 
+--- @public
+--- @return boolean
+function FitnessState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function FitnessState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function FitnessState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function FitnessState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function FitnessState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

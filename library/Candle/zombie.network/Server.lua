@@ -29,10 +29,6 @@ function Server:getLastUpdate() end
 function Server:getLocalIP() end
 
 --- @public
---- @return integer
-function Server:getLoginScreenId() end
-
---- @public
 --- @return string
 function Server:getMaxPlayers() end
 
@@ -153,11 +149,6 @@ function Server:setLastUpdate(lastUpdate) end
 --- @param ip string
 --- @return nil
 function Server:setLocalIP(ip) end
-
---- @public
---- @param arg0 integer
---- @return nil
-function Server:setLoginScreenId(arg0) end
 
 --- @public
 --- @param maxPlayers string

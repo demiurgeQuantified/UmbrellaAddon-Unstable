@@ -36,18 +36,6 @@ function MainScreenState.DrawTexture(tex, x, y, width, height, col) end
 
 --- @public
 --- @static
---- @return Texture
-function MainScreenState.getCustomBackgroundImage() end
-
---- @public
---- @static
---- @param arg0 Texture
---- @param arg1 int[]
---- @return nil
-function MainScreenState.getCustomBackgroundImageBounds(arg0, arg1) end
-
---- @public
---- @static
 --- @return MainScreenState
 function MainScreenState.getInstance() end
 
@@ -66,11 +54,6 @@ function MainScreenState.main(args) end
 --- @static
 --- @return nil
 function MainScreenState.preloadBackgroundTextures() end
-
---- @public
---- @static
---- @return boolean
-function MainScreenState.renderCustomBackground() end
 
 ------------------------------------
 ------------- METHODS --------------

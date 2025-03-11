@@ -1839,6 +1839,12 @@ SettingsTable = {
 					{
 						name = "DaysUntilMaximumRatIndex",
 					},
+					{
+						name = "ClayLakeChance",
+					},
+					{
+						name = "ClayRiverChance",
+					},
 				},
 			},
 			{

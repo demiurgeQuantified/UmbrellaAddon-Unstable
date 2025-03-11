@@ -38,6 +38,27 @@ function PlayerAimState:execute(owner) end
 --- @return nil
 function PlayerAimState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerAimState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerAimState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerAimState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerAimState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerAimState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

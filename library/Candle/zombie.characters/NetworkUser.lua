@@ -21,6 +21,15 @@ function NetworkUser:getAuthTypeName() end
 function NetworkUser:getDisplayName() end
 
 --- @public
+--- @param arg0 string
+--- @return string
+function NetworkUser:getFirstBannedIPForUser(arg0) end
+
+--- @public
+--- @return string
+function NetworkUser:getIpBanned() end
+
+--- @public
 --- @return integer
 function NetworkUser:getKicks() end
 
@@ -31,6 +40,10 @@ function NetworkUser:getLastConnection() end
 --- @public
 --- @return Role
 function NetworkUser:getRole() end
+
+--- @public
+--- @return string
+function NetworkUser:getSteamIdBanned() end
 
 --- @public
 --- @return string
@@ -59,6 +72,11 @@ function NetworkUser:isInWhitelist() end
 --- @public
 --- @return boolean
 function NetworkUser:isOnline() end
+
+--- @public
+--- @param arg0 string
+--- @return string
+function NetworkUser:isSteamIdBanned(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer

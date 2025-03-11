@@ -69,14 +69,9 @@ function IsoBarricade.barricadeCurrentCellWithPlanks(arg0) end
 ------------------------------------
 
 --- @public
---- @param amount integer
+--- @param arg0 number
 --- @return nil
-function IsoBarricade:Damage(amount) end
-
---- @public
---- @param amount integer
---- @return nil
-function IsoBarricade:DamageBarricade(amount) end
+function IsoBarricade:Damage(arg0) end
 
 --- @public
 --- @param obj IsoMovingObject
@@ -271,8 +266,7 @@ function IsoBarricade:setHealth(arg0) end
 function IsoBarricade.new(cell) end
 
 --- @public
---- @param cell IsoCell
---- @param gridSquare IsoGridSquare
---- @param dir IsoDirections
+--- @param arg0 IsoGridSquare
+--- @param arg1 IsoDirections
 --- @return IsoBarricade
-function IsoBarricade.new(cell, gridSquare, dir) end
+function IsoBarricade.new(arg0, arg1) end

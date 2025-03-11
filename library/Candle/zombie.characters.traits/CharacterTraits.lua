@@ -2,6 +2,12 @@
 
 --- @class CharacterTraits: TraitCollection
 --- @field public class any
+--- @field public AllThumbsStrengthPenalty integer
+--- @field public BurglarStrengthBonus integer
+--- @field public DextrousStrengthBonus integer
+--- @field public GymnastStrengthBonus integer
+--- @field public ObeseStrengthPenalty integer
+--- @field public OverweightStrengthPenalty integer
 CharacterTraits = {}
 
 ------------------------------------

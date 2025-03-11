@@ -38,6 +38,27 @@ function PlayerSitOnGroundState:execute(owner) end
 --- @return nil
 function PlayerSitOnGroundState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerSitOnGroundState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerSitOnGroundState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerSitOnGroundState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerSitOnGroundState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerSitOnGroundState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

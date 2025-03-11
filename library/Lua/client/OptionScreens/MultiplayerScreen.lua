@@ -10,8 +10,6 @@
 ---@field backButton any
 ---@field backgroundColor any
 ---@field borderColor any
----@field choiceBackgroundNext any
----@field choiceBackgroundPrevious any
 ---@field height any
 ---@field javaObject any
 ---@field listbox any

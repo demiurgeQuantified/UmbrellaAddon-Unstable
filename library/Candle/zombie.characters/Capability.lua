@@ -11,7 +11,6 @@
 --- @field public BanUnbanUser Capability
 --- @field public BypassLuaChecksum Capability
 --- @field public CanAlwaysJoinServer Capability
---- @field public CanBanPlayerFromAllChat Capability
 --- @field public CanGoInsideSafehouses Capability
 --- @field public CanHearAll Capability
 --- @field public CanMedicalCheat Capability
@@ -22,7 +21,6 @@
 --- @field public CanSeePlayersStats Capability
 --- @field public CanSetupNonPVPZone Capability
 --- @field public CanSetupSafehouses Capability
---- @field public CanTalkEvenBeingInvisible Capability
 --- @field public CantBeBannedByAnticheat Capability
 --- @field public CantBeBannedByUser Capability
 --- @field public CantBeKickedByAnticheat Capability
@@ -69,7 +67,6 @@
 --- @field public SeePublicServerOptions Capability
 --- @field public SeesInvisiblePlayers Capability
 --- @field public SeeWorldMap Capability
---- @field public SendPulse Capability
 --- @field public StartStopRain Capability
 --- @field public TeleportPlayerToAnotherPlayer Capability
 --- @field public TeleportToCoordinates Capability

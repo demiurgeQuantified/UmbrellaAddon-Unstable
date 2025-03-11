@@ -47,6 +47,22 @@ function CloseWindowState:getWindow(owner) end
 --- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
 function CloseWindowState:isDoingActionThatCanBeCancelled() end
 
+--- @public
+--- @return boolean
+function CloseWindowState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function CloseWindowState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function CloseWindowState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function CloseWindowState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

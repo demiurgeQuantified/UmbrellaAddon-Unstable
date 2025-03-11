@@ -233,6 +233,31 @@ ISCarMechanicsOverlay.CarList["Base.Van_KnoxDisti"] = {
 	x = 10,
 	y = 0,
 }
+ISCarMechanicsOverlay.CarList["Base.Trailer_Livestock"] = {
+	imgPrefix = "livestocktrailer_",
+	x = 10,
+	y = 0,
+}
+ISCarMechanicsOverlay.CarList["Base.Trailer_Horsebox"] = {
+	imgPrefix = "horsetrailer_",
+	x = 10,
+	y = 0,
+}
+ISCarMechanicsOverlay.CarList["Base.Trailer"] = {
+	imgPrefix = "utilitytrailer_",
+	x = 10,
+	y = 0,
+}
+ISCarMechanicsOverlay.CarList["Base.TrailerAdvert"] = {
+	imgPrefix = "advertisingtrailer_",
+	x = 10,
+	y = 0,
+}
+ISCarMechanicsOverlay.CarList["Base.TrailerCover"] = {
+	imgPrefix = "utilitytrailer_",
+	x = 10,
+	y = 0,
+}
 ISCarMechanicsOverlay.CarList["Base.PickUpTruckJPLandscaping"] = {
 	imgPrefix = "truck_",
 	x = 10,
@@ -1472,6 +1497,14 @@ ISCarMechanicsOverlay.PartList["TruckBed"].vehicles["sportscar_"] = {
 	y = 415,
 	x2 = 196,
 	y2 = 438,
+}
+ISCarMechanicsOverlay.PartList["TrailerAnimalFood"] = {
+	img = "storage_eggcompartment",
+	vehicles = {},
+}
+ISCarMechanicsOverlay.PartList["TrailerAnimalEggs"] = {
+	img = "storage_foodcompartment",
+	vehicles = {},
 }
 ISCarMechanicsOverlay.CarList["Base.SUV"].PartList = {}
 ISCarMechanicsOverlay.CarList["Base.SUV"].PartList["WindshieldRear"] = {

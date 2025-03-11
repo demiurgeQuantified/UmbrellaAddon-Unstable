@@ -47,4 +47,4 @@ function ISForageAction:update() end
 function ISForageAction:waitToStart() end
 
 ---@return ISForageAction
-function ISForageAction:new(character, iconID, targetContainer, discardItems, itemType, isPoison) end
+function ISForageAction:new(character, icon, targetContainer, discardItems, itemType, isPoison) end

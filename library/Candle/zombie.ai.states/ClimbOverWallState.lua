@@ -53,6 +53,18 @@ function ClimbOverWallState:exit(owner) end
 function ClimbOverWallState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
+--- @return boolean
+function ClimbOverWallState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ClimbOverWallState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ClimbOverWallState:isSyncOnSquare() end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @param dir IsoDirections
 --- @return nil

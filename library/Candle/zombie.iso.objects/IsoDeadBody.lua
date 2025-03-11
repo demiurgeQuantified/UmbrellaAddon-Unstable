@@ -615,6 +615,11 @@ function IsoDeadBody:renderShadow() end
 function IsoDeadBody:renderlast() end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function IsoDeadBody:resetGrappleStateToDefault(arg0) end
+
+--- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
 --- @return nil

@@ -8,7 +8,9 @@
 ---@field buttonBorderColor any
 ---@field changeOwnership any
 ---@field changeTitle any
+---@field dateCreated any
 ---@field height any
+---@field location any
 ---@field moveWithMouse any
 ---@field no any
 ---@field owner any

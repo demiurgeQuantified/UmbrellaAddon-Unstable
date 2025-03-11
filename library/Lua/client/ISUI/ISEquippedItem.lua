@@ -109,9 +109,6 @@ function ISEquippedItem:getDraggedEquippableItem() end
 function ISEquippedItem:getDraggedEquippableItems() end
 
 ---@return any
-function ISEquippedItem:getSidebarSize() end
-
----@return any
 function ISEquippedItem:initialise() end
 
 ---@return any
@@ -192,5 +189,7 @@ function ISMapPopup:render() end
 ---@return ISMapPopup
 function ISMapPopup:new(x, y, width, height) end
 
+---@return any
+function setTextureWidth() end
 ---@return any
 function launchEquippedItem(playerObj) end

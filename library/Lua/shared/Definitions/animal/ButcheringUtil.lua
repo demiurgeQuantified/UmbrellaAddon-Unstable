@@ -34,6 +34,9 @@ function ButcheringUtil.getLeather(name) end
 function ButcheringUtil.getPartChance(baseChance, size, meatRatio, player) end
 
 ---@return any
+function ButcheringUtil.getSkull(name) end
+
+---@return any
 function ButcheringUtil.giveMeatModified(meatDef, nb, player, meatRatio, carcass, fromGround, rotten, deathAge) end
 
 ---@return any

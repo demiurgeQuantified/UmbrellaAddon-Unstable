@@ -360,6 +360,16 @@ function IGrappleableWrapper:isPerformingGrappleGrabAnimation() end
 function IGrappleableWrapper:isPerformingGrappleGrabAnimation() end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function IGrappleableWrapper:resetGrappleStateToDefault(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function IGrappleableWrapper:resetGrappleStateToDefault(arg0) end
+
+--- @public
 --- @param arg0 boolean
 --- @return nil
 function IGrappleableWrapper:setDoContinueGrapple(arg0) end

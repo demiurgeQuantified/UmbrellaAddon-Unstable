@@ -31,6 +31,16 @@ function CacheData:getFirstAppliedItem() end
 function CacheData:getMostRecentItem() end
 
 --- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function CacheData:hasAppliedItem(arg0) end
+
+--- @public
+--- @param arg0 Item
+--- @return boolean
+function CacheData:hasAppliedItemType(arg0) end
+
+--- @public
 --- @return boolean
 function CacheData:isMoveToOutputs() end
 

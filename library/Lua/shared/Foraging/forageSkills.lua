@@ -508,8 +508,8 @@ forageSkills = {
 		darknessEffect = 0,
 		specialisations = {},
 	},
-	HeartyAppitite = {
-		name = "HeartyAppitite",
+	HeartyAppetite = {
+		name = "HeartyAppetite",
 		type = "trait",
 		visionBonus = 0,
 		weatherEffect = 0,

@@ -2,8 +2,8 @@
 
 --- @class ClimbDownSheetRopeState: State
 --- @field public class any
---- @field public CLIMB_DOWN_SLOWDOWN number
---- @field public CLIMB_DOWN_SPEED number
+--- @field public ClimbDownSlowdown number
+--- @field public ClimbDownSpeed number
 ClimbDownSheetRopeState = {}
 
 ------------------------------------
@@ -33,6 +33,27 @@ function ClimbDownSheetRopeState:execute(owner) end
 --- @param owner IsoGameCharacter
 --- @return nil
 function ClimbDownSheetRopeState:exit(owner) end
+
+--- @public
+--- @return boolean
+function ClimbDownSheetRopeState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ClimbDownSheetRopeState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ClimbDownSheetRopeState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ClimbDownSheetRopeState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function ClimbDownSheetRopeState:setParams(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

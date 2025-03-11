@@ -103,6 +103,12 @@ function CraftRecipeData:consumeOnTickInputs(arg0) end
 function CraftRecipeData:containsInputItem(arg0) end
 
 --- @public
+--- @param arg0 InputScriptData
+--- @param arg1 InventoryItem
+--- @return boolean
+function CraftRecipeData:containsInputItem(arg0, arg1) end
+
+--- @public
 --- @param arg0 List
 --- @return boolean
 function CraftRecipeData:createOnTickOutputs(arg0) end
@@ -218,8 +224,9 @@ function CraftRecipeData:getModelHandTwo() end
 --- @param arg1 List
 --- @param arg2 List
 --- @param arg3 List
+--- @param arg4 boolean
 --- @return integer
-function CraftRecipeData:getPossibleCraftCount(arg0, arg1, arg2, arg3) end
+function CraftRecipeData:getPossibleCraftCount(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @return CraftRecipe
@@ -296,7 +303,13 @@ function CraftRecipeData:luaCallOnUpdate() end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
-function CraftRecipeData:offerInputItem(arg0) end
+function CraftRecipeData:offerAndReplaceInputItem(arg0) end
+
+--- @public
+--- @param arg0 InputScriptData
+--- @param arg1 InventoryItem
+--- @return boolean
+function CraftRecipeData:offerAndReplaceInputItem(arg0, arg1) end
 
 --- @public
 --- @param arg0 InputScript

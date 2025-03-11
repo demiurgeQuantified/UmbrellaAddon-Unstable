@@ -12,6 +12,7 @@
 ---@field canPassThrough any
 ---@field character any
 ---@field completionSound any
+---@field containers any
 ---@field corner any
 ---@field craftingBank any
 ---@field craftRecipe any
@@ -101,4 +102,4 @@ function ISBuildIsoEntity:setInfo(square, north, sprite, openSprite) end
 function ISBuildIsoEntity:walkTo(x, y, z) end
 
 ---@return ISBuildIsoEntity
-function ISBuildIsoEntity:new(character, objectInfo, buildPanelLogic) end
+function ISBuildIsoEntity:new(character, objectInfo, nSprite, containers, logic) end

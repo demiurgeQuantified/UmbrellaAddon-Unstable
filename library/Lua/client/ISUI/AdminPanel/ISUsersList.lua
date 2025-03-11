@@ -3,13 +3,14 @@
 ---@class ISUsersList : ISPanel
 ---@field add any
 ---@field backgroundColor any
+---@field bannedIPs any
 ---@field borderColor any
 ---@field close any
 ---@field datas any
----@field delete any
 ---@field height any
 ---@field moveWithMouse any
 ---@field player any
+---@field searchEntry any
 ---@field width any
 ---@field [any] any
 ISUsersList = ISPanel:derive("ISUsersList")
@@ -22,6 +23,9 @@ function ISUsersList:closeModal() end
 
 ---@return any
 function ISUsersList:doContextMenu(item, x, y) end
+
+---@return any
+function ISUsersList:doSearch() end
 
 ---@return any
 function ISUsersList:drawDatas(y, item, alt) end

@@ -1796,10 +1796,6 @@ function IsoPlayer:updateVocalProperties() end
 --- @return boolean
 function IsoPlayer:wasLastAttackHandToHand() end
 
---- @public
---- @return boolean
-function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
-
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

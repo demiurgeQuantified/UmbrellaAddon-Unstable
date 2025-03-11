@@ -38,6 +38,27 @@ function PlayerStrafeState:execute(owner) end
 --- @return nil
 function PlayerStrafeState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerStrafeState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerStrafeState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerStrafeState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerStrafeState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerStrafeState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

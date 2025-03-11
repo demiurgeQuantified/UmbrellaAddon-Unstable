@@ -42,6 +42,13 @@ function BaseCraftingLogic.callLuaBool(arg0, arg1) end
 --- @public
 --- @static
 --- @param arg0 string
+--- @param arg1 any
+--- @return table
+function BaseCraftingLogic.callLuaObject(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 string
 --- @param arg1 string
 --- @param arg2 List
 --- @param arg3 List

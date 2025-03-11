@@ -133,9 +133,26 @@ function ClimbThroughWindowState:isPastInnerEdgeOfSquare(owner, x, y, moveDir) e
 function ClimbThroughWindowState:isPastOuterEdgeOfSquare(owner, x, y, moveDir) end
 
 --- @public
+--- @return boolean
+function ClimbThroughWindowState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ClimbThroughWindowState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ClimbThroughWindowState:isSyncOnSquare() end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @return boolean
 function ClimbThroughWindowState:isWindowClosing(owner) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function ClimbThroughWindowState:setParams(arg0) end
 
 --- @public
 --- @param owner IsoGameCharacter

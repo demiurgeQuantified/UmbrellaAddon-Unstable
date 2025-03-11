@@ -39,6 +39,23 @@ function SwipeStatePlayer:execute(owner) end
 --- @return nil
 function SwipeStatePlayer:exit(owner) end
 
+--- @public
+--- @return boolean
+function SwipeStatePlayer:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function SwipeStatePlayer:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function SwipeStatePlayer:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function SwipeStatePlayer:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

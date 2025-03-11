@@ -38,6 +38,18 @@ function PlayerActionsState:execute(owner) end
 --- @return nil
 function PlayerActionsState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerActionsState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerActionsState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerActionsState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

@@ -35,6 +35,7 @@
 --- @field public WorldVersion_PlayerExtraInfoFlags integer
 --- @field public WorldVersion_PreviouslyMoved integer
 --- @field public WorldVersion_PrintMediaRottingCorpsesBodyDamage integer
+--- @field public WorldVersion_SafeHouseCreatedTimeAndLocation integer
 --- @field public WorldVersion_SafeHouseHitPoints integer
 --- @field public WorldVersion_SquareSeen integer
 --- @field public WorldVersion_TrapExplosionDuration integer

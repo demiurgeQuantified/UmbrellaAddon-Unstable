@@ -42,6 +42,18 @@ function SmashWindowState:exit(owner) end
 --- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
 function SmashWindowState:isDoingActionThatCanBeCancelled() end
 
+--- @public
+--- @return boolean
+function SmashWindowState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function SmashWindowState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function SmashWindowState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

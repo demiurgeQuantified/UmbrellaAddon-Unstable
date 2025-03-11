@@ -32,6 +32,27 @@ function FishingState:execute(owner) end
 --- @return nil
 function FishingState:exit(owner) end
 
+--- @public
+--- @return boolean
+function FishingState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function FishingState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function FishingState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function FishingState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function FishingState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

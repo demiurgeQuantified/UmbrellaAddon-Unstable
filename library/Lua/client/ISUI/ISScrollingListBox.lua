@@ -114,6 +114,9 @@ function ISScrollingListBox:onMouseUpOutside(x, y) end
 function ISScrollingListBox:onMouseWheel(del) end
 
 ---@return any
+function ISScrollingListBox:parentsHaveScrollChildren() end
+
+---@return any
 function ISScrollingListBox:prerender() end
 
 ---@return any

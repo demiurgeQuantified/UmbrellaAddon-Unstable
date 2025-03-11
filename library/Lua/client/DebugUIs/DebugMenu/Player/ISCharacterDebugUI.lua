@@ -11,12 +11,14 @@
 ---@field player any
 ---@field setFunctionAnimal any
 ---@field setFunctionDeadBody any
----@field setFunctionPlayer any
+---@field setFunctionLocalPlayer any
+---@field setFunctionRemotePlayer any
 ---@field setFunctionZombie any
 ---@field tcks any
 ---@field tickBoxAnimal any
 ---@field tickBoxDeadBody any
----@field tickBoxPlayer any
+---@field tickBoxLocalPlayer any
+---@field tickBoxRemotePlayer any
 ---@field tickBoxZombie any
 ---@field width any
 ---@field [any] any
@@ -30,7 +32,7 @@ function ISCharacterDebugUI.OnOpenPanel() end
 function ISCharacterDebugUI:addOption(tickBox, text, selected, setFunction, tickSetFunction) end
 
 ---@return any
-function ISCharacterDebugUI:addTickOptions(tickBox, tickSetFunction) end
+function ISCharacterDebugUI:addTickOptions(tickBox, tickSetFunction, name) end
 
 ---@return any
 function ISCharacterDebugUI:apply() end

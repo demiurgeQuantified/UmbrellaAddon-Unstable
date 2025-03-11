@@ -30,7 +30,11 @@ function InputItemNode:getScriptItem() end
 
 --- @public
 --- @return boolean
-function InputItemNode:isExpanded() end
+function InputItemNode:isExpandedAvailable() end
+
+--- @public
+--- @return boolean
+function InputItemNode:isExpandedUsed() end
 
 --- @public
 --- @return boolean
@@ -55,11 +59,20 @@ function InputItemNode:isToolRight() end
 --- @public
 --- @param arg0 boolean
 --- @return nil
-function InputItemNode:setExpanded(arg0) end
+function InputItemNode:setExpandedAvailable(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function InputItemNode:setExpandedUsed(arg0) end
 
 --- @public
 --- @return nil
-function InputItemNode:toggleExpanded() end
+function InputItemNode:toggleExpandedAvailable() end
+
+--- @public
+--- @return nil
+function InputItemNode:toggleExpandedUsed() end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

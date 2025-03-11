@@ -5,6 +5,7 @@
 ---@field background any
 ---@field colBad any
 ---@field colGood any
+---@field colYellow any
 ---@field inputScriptFilter any
 ---@field isAutoFill any
 ---@field isAutoFillX any
@@ -31,10 +32,10 @@ function ISCraftInventoryPanel:createChildren() end
 function ISCraftInventoryPanel:createListHeader(_text, hasExpandArrow) end
 
 ---@return any
-function ISCraftInventoryPanel:createListItemEntry(_node, _inventoryItem, _index) end
+function ISCraftInventoryPanel:createListItemEntry(_node, _inventoryItem, _index, _isUsedItems) end
 
 ---@return any
-function ISCraftInventoryPanel:createListItemNode(_node) end
+function ISCraftInventoryPanel:createListItemNode(_node, _isUsedItems) end
 
 ---@return any
 function ISCraftInventoryPanel:createUnavailableListItemEntry(_item, _index) end

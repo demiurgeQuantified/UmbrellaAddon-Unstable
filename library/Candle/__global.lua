@@ -749,6 +749,9 @@ function getAttachmentEditorState() end
 --- @return number
 function getAverageFPS() end
 
+--- @return nil
+function getBannedIPs() end
+
 --- @return BaseSoundBank
 function getBaseSoundBank() end
 
@@ -822,10 +825,6 @@ function getClassFieldVal(o, field) end
 --- @param i integer
 --- @return Method
 function getClassFunction(o, i) end
-
---- @param arg0 integer
---- @return Texture
-function getClientLoadingScreen(arg0) end
 
 --- @return string
 function getClientUsername() end
@@ -3001,11 +3000,6 @@ function syncBodyPart(arg0, arg1) end
 --- @param arg1 HandWeapon
 --- @return nil
 function syncHandWeaponFields(arg0, arg1) end
-
---- @param arg0 IsoPlayer
---- @return nil
---- @deprecated
-function syncInventory(arg0) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem

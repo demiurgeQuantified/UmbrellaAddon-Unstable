@@ -250,6 +250,14 @@ function SafeHouse:containsLocation(x, y) end
 
 --- @public
 --- @return integer
+function SafeHouse:getDatetimeCreated() end
+
+--- @public
+--- @return string
+function SafeHouse:getDatetimeCreatedStr() end
+
+--- @public
+--- @return integer
 function SafeHouse:getH() end
 
 --- @public
@@ -263,6 +271,10 @@ function SafeHouse:getId() end
 --- @public
 --- @return integer
 function SafeHouse:getLastVisited() end
+
+--- @public
+--- @return string
+function SafeHouse:getLocation() end
 
 --- @public
 --- @return integer
@@ -358,6 +370,11 @@ function SafeHouse:removePlayer(player) end
 function SafeHouse:save(output) end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function SafeHouse:setDatetimeCreated(arg0) end
+
+--- @public
 --- @param h integer
 --- @return nil
 function SafeHouse:setH(h) end
@@ -371,6 +388,11 @@ function SafeHouse:setHitPoints(arg0) end
 --- @param lastVisited integer
 --- @return nil
 function SafeHouse:setLastVisited(lastVisited) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function SafeHouse:setLocation(arg0) end
 
 --- @public
 --- @param arg0 integer

@@ -28,6 +28,9 @@ ISModalEditRole = ISPanel:derive("ISModalEditRole")
 function ISModalEditRole:closeModal() end
 
 ---@return any
+function ISModalEditRole:doSearch() end
+
+---@return any
 function ISModalEditRole:drawDatas(y, item, alt) end
 
 ---@return any

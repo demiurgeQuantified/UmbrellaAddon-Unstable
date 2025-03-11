@@ -133,6 +133,27 @@ function State:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 --- @return boolean
 function State:isMoving(owner) end
 
+--- @public
+--- @return boolean
+function State:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function State:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function State:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function State:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function State:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

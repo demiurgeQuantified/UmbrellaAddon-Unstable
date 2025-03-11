@@ -153,6 +153,9 @@ function ISBuildingObject:tryBuild(x, y, z) end
 function ISBuildingObject:update() end
 
 ---@return any
+function ISBuildingObject:updateModData() end
+
+---@return any
 function ISBuildingObject:walkTo(x, y, z) end
 
 ---@return any

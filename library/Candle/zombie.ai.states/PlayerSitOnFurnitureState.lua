@@ -43,6 +43,27 @@ function PlayerSitOnFurnitureState:execute(arg0) end
 --- @return nil
 function PlayerSitOnFurnitureState:exit(arg0) end
 
+--- @public
+--- @return boolean
+function PlayerSitOnFurnitureState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerSitOnFurnitureState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerSitOnFurnitureState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerSitOnFurnitureState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function PlayerSitOnFurnitureState:setParams(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

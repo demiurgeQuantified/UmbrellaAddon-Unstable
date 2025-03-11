@@ -61,6 +61,7 @@
 ---@field sandOptions any
 ---@field scoreboard any
 ---@field scoreOption any
+---@field seedLabel any
 ---@field serverConnectPopup any
 ---@field serverList any
 ---@field serverSettingsScreen any
