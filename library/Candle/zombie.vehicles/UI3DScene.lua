@@ -121,14 +121,26 @@ function UI3DScene:render() end
 --- @public
 --- @param arg0 Vector3f
 --- @return number
---- @overload fun(self: UI3DScene, sceneX: number, sceneY: number, sceneZ: number): number
 function UI3DScene:sceneToUIX(arg0) end
+
+--- @public
+--- @param sceneX number
+--- @param sceneY number
+--- @param sceneZ number
+--- @return number
+function UI3DScene:sceneToUIX(sceneX, sceneY, sceneZ) end
 
 --- @public
 --- @param arg0 Vector3f
 --- @return number
---- @overload fun(self: UI3DScene, sceneX: number, sceneY: number, sceneZ: number): number
 function UI3DScene:sceneToUIY(arg0) end
+
+--- @public
+--- @param sceneX number
+--- @param sceneY number
+--- @param sceneZ number
+--- @return number
+function UI3DScene:sceneToUIY(sceneX, sceneY, sceneZ) end
 
 --- @public
 --- @param arg0 number
@@ -144,8 +156,16 @@ function UI3DScene:uiToGrid(arg0, arg1, arg2, arg3) end
 --- @param uiZ number
 --- @param out Vector3f
 --- @return Vector3f
---- @overload fun(self: UI3DScene, modelTransform: Matrix4f, uiX: number, uiY: number, uiZ: number, out: Vector3f): Vector3f
 function UI3DScene:uiToScene(uiX, uiY, uiZ, out) end
+
+--- @public
+--- @param modelTransform Matrix4f
+--- @param uiX number
+--- @param uiY number
+--- @param uiZ number
+--- @param out Vector3f
+--- @return Vector3f
+function UI3DScene:uiToScene(modelTransform, uiX, uiY, uiZ, out) end
 
 --- @public
 --- @param uiX number
@@ -160,7 +180,7 @@ function UI3DScene:uiToSceneX(uiX, uiY) end
 function UI3DScene:uiToSceneY(uiX, uiY) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

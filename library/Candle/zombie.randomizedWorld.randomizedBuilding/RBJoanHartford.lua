@@ -25,7 +25,7 @@ function RBJoanHartford:randomizeBuilding(arg0) end
 function RBJoanHartford:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

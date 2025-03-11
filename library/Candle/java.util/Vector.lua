@@ -17,18 +17,118 @@ function Vector.copyOf(arg0) end
 --- @public
 --- @static
 --- @return List
---- @overload fun(arg0: Object[]): List
---- @overload fun(arg0: any): List
---- @overload fun(arg0: any, arg1: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function Vector.of() end
+
+--- @public
+--- @static
+--- @param arg0 Object[]
+--- @return List
+function Vector.of(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @return List
+function Vector.of(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @return List
+function Vector.of(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @return List
+function Vector.of(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @return List
+function Vector.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -37,18 +137,46 @@ function Vector.of() end
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: Vector, arg0: any): boolean
---- @overload fun(self: Vector, arg0: integer, arg1: any): nil
---- @overload fun(self: Vector, arg0: integer, arg1: any): nil
 function Vector:add(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
+function Vector:add(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @return nil
+function Vector:add(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @return nil
+function Vector:add(arg0, arg1) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(self: Vector, arg0: Collection): boolean
---- @overload fun(self: Vector, arg0: integer, arg1: Collection): boolean
---- @overload fun(self: Vector, arg0: integer, arg1: Collection): boolean
 function Vector:addAll(arg0) end
+
+--- @public
+--- @param arg0 Collection
+--- @return boolean
+function Vector:addAll(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 Collection
+--- @return boolean
+function Vector:addAll(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 Collection
+--- @return boolean
+function Vector:addAll(arg0, arg1) end
 
 --- @public
 --- @param arg0 any
@@ -61,7 +189,10 @@ function Vector:capacity() end
 
 --- @public
 --- @return nil
---- @overload fun(self: Vector): nil
+function Vector:clear() end
+
+--- @public
+--- @return nil
 function Vector:clear() end
 
 --- @public
@@ -71,13 +202,21 @@ function Vector:clone() end
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: Vector, arg0: any): boolean
+function Vector:contains(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function Vector:contains(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(self: Vector, arg0: Collection): boolean
+function Vector:containsAll(arg0) end
+
+--- @public
+--- @param arg0 Collection
+--- @return boolean
 function Vector:containsAll(arg0) end
 
 --- @public
@@ -102,7 +241,11 @@ function Vector:ensureCapacity(arg0) end
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: Vector, arg0: any): boolean
+function Vector:equals(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function Vector:equals(arg0) end
 
 --- @public
@@ -117,20 +260,36 @@ function Vector:forEach(arg0) end
 --- @public
 --- @param arg0 integer
 --- @return any
---- @overload fun(self: Vector, arg0: integer): any
+function Vector:get(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return any
 function Vector:get(arg0) end
 
 --- @public
 --- @return integer
---- @overload fun(self: Vector): integer
+function Vector:hashCode() end
+
+--- @public
+--- @return integer
 function Vector:hashCode() end
 
 --- @public
 --- @param arg0 any
 --- @return integer
---- @overload fun(self: Vector, arg0: any): integer
---- @overload fun(self: Vector, arg0: any, arg1: integer): integer
 function Vector:indexOf(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return integer
+function Vector:indexOf(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 integer
+--- @return integer
+function Vector:indexOf(arg0, arg1) end
 
 --- @public
 --- @param arg0 any
@@ -140,12 +299,18 @@ function Vector:insertElementAt(arg0, arg1) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: Vector): boolean
+function Vector:isEmpty() end
+
+--- @public
+--- @return boolean
 function Vector:isEmpty() end
 
 --- @public
 --- @return Iterator
---- @overload fun(self: Vector): Iterator
+function Vector:iterator() end
+
+--- @public
+--- @return Iterator
 function Vector:iterator() end
 
 --- @public
@@ -155,29 +320,65 @@ function Vector:lastElement() end
 --- @public
 --- @param arg0 any
 --- @return integer
---- @overload fun(self: Vector, arg0: any): integer
---- @overload fun(self: Vector, arg0: any, arg1: integer): integer
 function Vector:lastIndexOf(arg0) end
 
 --- @public
+--- @param arg0 any
+--- @return integer
+function Vector:lastIndexOf(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 integer
+--- @return integer
+function Vector:lastIndexOf(arg0, arg1) end
+
+--- @public
 --- @return ListIterator
---- @overload fun(self: Vector): ListIterator
---- @overload fun(self: Vector, arg0: integer): ListIterator
---- @overload fun(self: Vector, arg0: integer): ListIterator
+function Vector:listIterator() end
+
+--- @public
+--- @return ListIterator
 function Vector:listIterator() end
 
 --- @public
 --- @param arg0 integer
+--- @return ListIterator
+function Vector:listIterator(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return ListIterator
+function Vector:listIterator(arg0) end
+
+--- @public
+--- @param arg0 integer
 --- @return any
---- @overload fun(self: Vector, arg0: integer): any
---- @overload fun(self: Vector, arg0: any): boolean
---- @overload fun(self: Vector, arg0: any): boolean
+function Vector:remove(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return any
+function Vector:remove(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
+function Vector:remove(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function Vector:remove(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(self: Vector, arg0: Collection): boolean
+function Vector:removeAll(arg0) end
+
+--- @public
+--- @param arg0 Collection
+--- @return boolean
 function Vector:removeAll(arg0) end
 
 --- @public
@@ -202,20 +403,33 @@ function Vector:removeIf(arg0) end
 --- @public
 --- @param arg0 UnaryOperator
 --- @return nil
---- @overload fun(self: Vector, arg0: UnaryOperator): nil
+function Vector:replaceAll(arg0) end
+
+--- @public
+--- @param arg0 UnaryOperator
+--- @return nil
 function Vector:replaceAll(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(self: Vector, arg0: Collection): boolean
+function Vector:retainAll(arg0) end
+
+--- @public
+--- @param arg0 Collection
+--- @return boolean
 function Vector:retainAll(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @param arg1 any
 --- @return any
---- @overload fun(self: Vector, arg0: integer, arg1: any): any
+function Vector:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @return any
 function Vector:set(arg0, arg1) end
 
 --- @public
@@ -231,33 +445,59 @@ function Vector:setSize(arg0) end
 
 --- @public
 --- @return integer
---- @overload fun(self: Vector): integer
+function Vector:size() end
+
+--- @public
+--- @return integer
 function Vector:size() end
 
 --- @public
 --- @param arg0 Comparator
 --- @return nil
---- @overload fun(self: Vector, arg0: Comparator): nil
+function Vector:sort(arg0) end
+
+--- @public
+--- @param arg0 Comparator
+--- @return nil
 function Vector:sort(arg0) end
 
 --- @public
 --- @return Spliterator
---- @overload fun(self: Vector): Spliterator
+function Vector:spliterator() end
+
+--- @public
+--- @return Spliterator
 function Vector:spliterator() end
 
 --- @public
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return List
---- @overload fun(self: Vector, arg0: integer, arg1: integer): List
+function Vector:subList(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return List
 function Vector:subList(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(self: Vector): Object[]
---- @overload fun(self: Vector, arg0: Object[]): Object[]
---- @overload fun(self: Vector, arg0: Object[]): Object[]
 function Vector:toArray() end
+
+--- @public
+--- @return Object[]
+function Vector:toArray() end
+
+--- @public
+--- @param arg0 Object[]
+--- @return Object[]
+function Vector:toArray(arg0) end
+
+--- @public
+--- @param arg0 Object[]
+--- @return Object[]
+function Vector:toArray(arg0) end
 
 --- @public
 --- @return string
@@ -268,12 +508,25 @@ function Vector:toString() end
 function Vector:trimToSize() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Vector
---- @overload fun(arg0: integer): Vector
---- @overload fun(arg0: Collection): Vector
---- @overload fun(arg0: integer, arg1: integer): Vector
 function Vector.new() end
+
+--- @public
+--- @param arg0 integer
+--- @return Vector
+function Vector.new(arg0) end
+
+--- @public
+--- @param arg0 Collection
+--- @return Vector
+function Vector.new(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return Vector
+function Vector.new(arg0, arg1) end

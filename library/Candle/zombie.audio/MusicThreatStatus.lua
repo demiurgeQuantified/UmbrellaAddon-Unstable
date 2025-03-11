@@ -22,7 +22,7 @@ function MusicThreatStatus:getIntensity() end
 function MusicThreatStatus:setIntensity(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

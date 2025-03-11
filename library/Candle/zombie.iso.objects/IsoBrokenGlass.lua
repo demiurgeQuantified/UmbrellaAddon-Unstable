@@ -53,7 +53,7 @@ function IsoBrokenGlass:renderObjectPicker(x, y, z, lightInfo) end
 function IsoBrokenGlass:save(bb, IS_DEBUG_SAVE) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

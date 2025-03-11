@@ -39,16 +39,40 @@ function DateFormat.getAvailableLocales() end
 --- @public
 --- @static
 --- @return DateFormat
---- @overload fun(arg0: integer): DateFormat
---- @overload fun(arg0: integer, arg1: Locale): DateFormat
 function DateFormat.getDateInstance() end
 
 --- @public
 --- @static
+--- @param arg0 integer
 --- @return DateFormat
---- @overload fun(arg0: integer, arg1: integer): DateFormat
---- @overload fun(arg0: integer, arg1: integer, arg2: Locale): DateFormat
+function DateFormat.getDateInstance(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 Locale
+--- @return DateFormat
+function DateFormat.getDateInstance(arg0, arg1) end
+
+--- @public
+--- @static
+--- @return DateFormat
 function DateFormat.getDateTimeInstance() end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return DateFormat
+function DateFormat.getDateTimeInstance(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 Locale
+--- @return DateFormat
+function DateFormat.getDateTimeInstance(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -58,9 +82,20 @@ function DateFormat.getInstance() end
 --- @public
 --- @static
 --- @return DateFormat
---- @overload fun(arg0: integer): DateFormat
---- @overload fun(arg0: integer, arg1: Locale): DateFormat
 function DateFormat.getTimeInstance() end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return DateFormat
+function DateFormat.getTimeInstance(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 Locale
+--- @return DateFormat
+function DateFormat.getTimeInstance(arg0, arg1) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -78,9 +113,21 @@ function DateFormat:equals(arg0) end
 --- @public
 --- @param arg0 Date
 --- @return string
---- @overload fun(self: DateFormat, arg0: any, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
---- @overload fun(self: DateFormat, arg0: Date, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
 function DateFormat:format(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 StringBuffer
+--- @param arg2 FieldPosition
+--- @return StringBuffer
+function DateFormat:format(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 Date
+--- @param arg1 StringBuffer
+--- @param arg2 FieldPosition
+--- @return StringBuffer
+function DateFormat:format(arg0, arg1, arg2) end
 
 --- @public
 --- @return Calendar
@@ -105,8 +152,13 @@ function DateFormat:isLenient() end
 --- @public
 --- @param arg0 string
 --- @return Date
---- @overload fun(self: DateFormat, arg0: string, arg1: ParsePosition): Date
 function DateFormat:parse(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 ParsePosition
+--- @return Date
+function DateFormat:parse(arg0, arg1) end
 
 --- @public
 --- @param arg0 string

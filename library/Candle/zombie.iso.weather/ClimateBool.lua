@@ -82,7 +82,7 @@ function ClimateBool:setModdedValue(b) end
 function ClimateBool:setOverride(b) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

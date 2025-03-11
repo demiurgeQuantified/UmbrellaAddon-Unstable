@@ -39,7 +39,7 @@ function PlayerExtState:execute(owner) end
 function PlayerExtState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

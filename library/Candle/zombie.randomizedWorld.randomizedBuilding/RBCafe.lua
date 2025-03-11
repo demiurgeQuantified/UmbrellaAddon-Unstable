@@ -10,7 +10,7 @@ RBCafe = {}
 
 --- @public
 ---
----  Description copied from class: RandomizedBuildingBase
+--- Description copied from class: RandomizedBuildingBase
 ---
 --- @param def BuildingDef
 --- @param force boolean
@@ -28,7 +28,7 @@ function RBCafe:randomizeBuilding(def) end
 function RBCafe:roomValid(sq) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -95,7 +95,7 @@ function ServerSettings:saveFiles() end
 function ServerSettings:saveSpawnPointsFile(file, professionsTable) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

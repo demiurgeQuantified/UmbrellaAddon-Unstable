@@ -49,7 +49,7 @@ function XuiSpacing:isTopPercent() end
 function XuiSpacing:isValueSet() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

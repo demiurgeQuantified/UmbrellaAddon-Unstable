@@ -23,11 +23,18 @@ function IsoWheelieBin:getWeight(x, y) end
 function IsoWheelieBin:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoWheelieBin
---- @overload fun(cell: IsoCell, x: integer, y: integer, z: integer): IsoWheelieBin
 function IsoWheelieBin.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return IsoWheelieBin
+function IsoWheelieBin.new(cell, x, y, z) end

@@ -32,12 +32,18 @@ function AlarmClock:getCategory() end
 
 --- @public
 --- @return integer
---- @overload fun(self: AlarmClock): integer
 function AlarmClock:getHour() end
 
 --- @public
 --- @return integer
---- @overload fun(self: AlarmClock): integer
+function AlarmClock:getHour() end
+
+--- @public
+--- @return integer
+function AlarmClock:getMinute() end
+
+--- @public
+--- @return integer
 function AlarmClock:getMinute() end
 
 --- @public
@@ -50,7 +56,10 @@ function AlarmClock:getSoundRadius() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AlarmClock): boolean
+function AlarmClock:isAlarmSet() end
+
+--- @public
+--- @return boolean
 function AlarmClock:isAlarmSet() end
 
 --- @public
@@ -76,7 +85,11 @@ function AlarmClock:save(output, net) end
 --- @public
 --- @param alarmSet boolean
 --- @return nil
---- @overload fun(self: AlarmClock, alarmSet: boolean): nil
+function AlarmClock:setAlarmSet(alarmSet) end
+
+--- @public
+--- @param alarmSet boolean
+--- @return nil
 function AlarmClock:setAlarmSet(alarmSet) end
 
 --- @public
@@ -87,19 +100,31 @@ function AlarmClock:setAlarmSound(alarmSound) end
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: AlarmClock, arg0: integer): nil
+function AlarmClock:setForceDontRing(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function AlarmClock:setForceDontRing(arg0) end
 
 --- @public
 --- @param hour integer
 --- @return nil
---- @overload fun(self: AlarmClock, hour: integer): nil
+function AlarmClock:setHour(hour) end
+
+--- @public
+--- @param hour integer
+--- @return nil
 function AlarmClock:setHour(hour) end
 
 --- @public
 --- @param min integer
 --- @return nil
---- @overload fun(self: AlarmClock, min: integer): nil
+function AlarmClock:setMinute(min) end
+
+--- @public
+--- @param min integer
+--- @return nil
 function AlarmClock:setMinute(min) end
 
 --- @public
@@ -113,7 +138,10 @@ function AlarmClock:shouldUpdateInWorld() end
 
 --- @public
 --- @return nil
---- @overload fun(self: AlarmClock): nil
+function AlarmClock:stopRinging() end
+
+--- @public
+--- @return nil
 function AlarmClock:stopRinging() end
 
 --- @public
@@ -143,7 +171,7 @@ function AlarmClock:update() end
 function AlarmClock:updateSound(emitter) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -152,5 +180,12 @@ function AlarmClock:updateSound(emitter) end
 --- @param itemType string
 --- @param texName string
 --- @return AlarmClock
---- @overload fun(module: string, name: string, itemType: string, item: Item): AlarmClock
 function AlarmClock.new(module, name, itemType, texName) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param item Item
+--- @return AlarmClock
+function AlarmClock.new(module, name, itemType, item) end

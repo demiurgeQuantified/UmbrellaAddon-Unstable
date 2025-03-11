@@ -14,7 +14,7 @@ RDSBedroomZed = {}
 function RDSBedroomZed:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

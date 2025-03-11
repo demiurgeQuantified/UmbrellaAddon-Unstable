@@ -10,12 +10,18 @@ Byte = {}
 
 --- @public
 --- @return integer
---- @overload fun(self: Byte): Number
+function Byte:getMax() end
+
+--- @public
+--- @return Number
 function Byte:getMax() end
 
 --- @public
 --- @return integer
---- @overload fun(self: Byte): Number
+function Byte:getMin() end
+
+--- @public
+--- @return Number
 function Byte:getMin() end
 
 --- @public
@@ -25,5 +31,9 @@ function Byte:getValueType() end
 --- @public
 --- @param arg0 integer
 --- @return integer
---- @overload fun(self: Byte, arg0: Number): Number
+function Byte:validate(arg0) end
+
+--- @public
+--- @param arg0 Number
+--- @return Number
 function Byte:validate(arg0) end

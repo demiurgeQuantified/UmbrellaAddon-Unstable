@@ -20,8 +20,12 @@ function BitSet:andNot(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BitSet, arg0: integer): nil
 function BitSet:clear() end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function BitSet:clear(arg0) end
 
 --- @public
 --- @param arg0 BitSet
@@ -104,11 +108,19 @@ function BitSet:set(arg0) end
 function BitSet:xor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return BitSet
---- @overload fun(arg0: integer): BitSet
---- @overload fun(arg0: BitSet): BitSet
 function BitSet.new() end
+
+--- @public
+--- @param arg0 integer
+--- @return BitSet
+function BitSet.new(arg0) end
+
+--- @public
+--- @param arg0 BitSet
+--- @return BitSet
+function BitSet.new(arg0) end

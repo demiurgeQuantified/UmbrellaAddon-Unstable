@@ -32,7 +32,7 @@ function RadioData:getRadioChannels() end
 function RadioData:isVanilla() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

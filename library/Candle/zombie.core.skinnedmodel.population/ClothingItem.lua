@@ -15,8 +15,14 @@ ClothingItem = {}
 --- @param item ClothingItem
 --- @param in_out_mask CharacterMask
 --- @return nil
---- @overload fun(itemRef: ClothingItemReference, in_out_mask: CharacterMask): nil
 function ClothingItem.tryGetCombinedMask(item, in_out_mask) end
+
+--- @public
+--- @static
+--- @param itemRef ClothingItemReference
+--- @param in_out_mask CharacterMask
+--- @return nil
+function ClothingItem.tryGetCombinedMask(itemRef, in_out_mask) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -102,7 +108,7 @@ function ClothingItem:isMask() end
 function ClothingItem:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -70,13 +70,19 @@ function RandomizedZoneStoryBase:getRandomExtraFreeSquare(arg0, arg1) end
 
 --- @public
 ---
----  Get a random free square in our story zone
+--- Get a random free square in our story zone
 ---
 --- @param rzs RandomizedZoneStoryBase
 --- @param zone Zone
 --- @return IsoGridSquare
---- @overload fun(self: RandomizedZoneStoryBase, arg0: RandomizedZoneStoryBase, arg1: Zone, arg2: IsoGridSquare): IsoGridSquare
 function RandomizedZoneStoryBase:getRandomFreeSquare(rzs, zone) end
+
+--- @public
+--- @param arg0 RandomizedZoneStoryBase
+--- @param arg1 Zone
+--- @param arg2 IsoGridSquare
+--- @return IsoGridSquare
+function RandomizedZoneStoryBase:getRandomFreeSquare(arg0, arg1, arg2) end
 
 --- @public
 --- @param rzs RandomizedZoneStoryBase
@@ -86,8 +92,13 @@ function RandomizedZoneStoryBase:getRandomFreeSquareFullZone(rzs, zone) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: RandomizedZoneStoryBase, zone: Zone, force: boolean): boolean
 function RandomizedZoneStoryBase:isValid() end
+
+--- @public
+--- @param zone Zone
+--- @param force boolean
+--- @return boolean
+function RandomizedZoneStoryBase:isValid(zone, force) end
 
 --- @public
 --- @param zone Zone
@@ -95,7 +106,7 @@ function RandomizedZoneStoryBase:isValid() end
 function RandomizedZoneStoryBase:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

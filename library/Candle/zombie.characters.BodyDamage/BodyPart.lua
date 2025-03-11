@@ -58,8 +58,13 @@ function BodyPart:RestoreToFullHealth() end
 --- @public
 --- @param Bitten boolean
 --- @return nil
---- @overload fun(self: BodyPart, Bitten: boolean, Infected: boolean): nil
 function BodyPart:SetBitten(Bitten) end
+
+--- @public
+--- @param Bitten boolean
+--- @param Infected boolean
+--- @return nil
+function BodyPart:SetBitten(Bitten, Infected) end
 
 --- @public
 --- @param BleedingStemmed boolean
@@ -124,8 +129,8 @@ function BodyPart:deepWounded() end
 
 --- @public
 ---
----  Generate an amount of bleeding time  will depend on injuries type and body part
----   Use this instead of setBleedingTime() so all is automated.
+--- Generate an amount of bleeding time  will depend on injuries type and body part
+--- Use this instead of setBleedingTime() so all is automated.
 ---
 --- @return nil
 function BodyPart:generateBleeding() end
@@ -155,8 +160,12 @@ function BodyPart:generateZombieInfection(baseChance) end
 
 --- @public
 --- @return number
---- @overload fun(self: BodyPart, includeStiffness: boolean): number
 function BodyPart:getAdditionalPain() end
+
+--- @public
+--- @param includeStiffness boolean
+--- @return number
+function BodyPart:getAdditionalPain(includeStiffness) end
 
 --- @public
 --- @return number
@@ -378,8 +387,15 @@ function BodyPart:setBandageType(bandageType) end
 --- @param Bandaged boolean
 --- @param bandageLife number
 --- @return nil
---- @overload fun(self: BodyPart, Bandaged: boolean, bandageLife: number, isAlcoholic: boolean, bandageType: string): nil
 function BodyPart:setBandaged(Bandaged, bandageLife) end
+
+--- @public
+--- @param Bandaged boolean
+--- @param bandageLife number
+--- @param isAlcoholic boolean
+--- @param bandageType string
+--- @return nil
+function BodyPart:setBandaged(Bandaged, bandageLife, isAlcoholic, bandageType) end
 
 --- @public
 --- @param biteTime number
@@ -418,8 +434,13 @@ function BodyPart:setComfreyFactor(comfreyFactor) end
 --- @public
 --- @param cut boolean
 --- @return nil
---- @overload fun(self: BodyPart, cut: boolean, forceNoInfection: boolean): nil
 function BodyPart:setCut(cut) end
+
+--- @public
+--- @param cut boolean
+--- @param forceNoInfection boolean
+--- @return nil
+function BodyPart:setCut(cut, forceNoInfection) end
 
 --- @public
 --- @param cutSpeedModifier number
@@ -567,8 +588,13 @@ function BodyPart:stitched() end
 --- @param bb ByteBuffer
 --- @param id integer
 --- @return nil
---- @overload fun(self: BodyPart, other: BodyPart, updater: Updater): nil
 function BodyPart:sync(bb, id) end
+
+--- @public
+--- @param other BodyPart
+--- @param updater Updater
+--- @return nil
+function BodyPart:sync(other, updater) end
 
 --- @public
 --- @param arg0 ByteBufferWriter
@@ -577,7 +603,7 @@ function BodyPart:sync(bb, id) end
 function BodyPart:syncWrite(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

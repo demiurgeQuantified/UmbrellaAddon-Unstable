@@ -26,10 +26,26 @@ function HandWeapon:IsWeapon() end
 --- @public
 --- @param part WeaponPart
 --- @return nil
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter, arg1: WeaponPart): nil
---- @overload fun(self: HandWeapon, part: WeaponPart, doChange: boolean): nil
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter, arg1: WeaponPart, arg2: boolean): nil
 function HandWeapon:attachWeaponPart(part) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 WeaponPart
+--- @return nil
+function HandWeapon:attachWeaponPart(arg0, arg1) end
+
+--- @public
+--- @param part WeaponPart
+--- @param doChange boolean
+--- @return nil
+function HandWeapon:attachWeaponPart(part, doChange) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 WeaponPart
+--- @param arg2 boolean
+--- @return nil
+function HandWeapon:attachWeaponPart(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -71,7 +87,11 @@ function HandWeapon:clearAllWeaponParts() end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: HandWeapon, arg0: WeaponPart): nil
+function HandWeapon:clearWeaponPart(arg0) end
+
+--- @public
+--- @param arg0 WeaponPart
+--- @return nil
 function HandWeapon:clearWeaponPart(arg0) end
 
 --- @public
@@ -85,10 +105,25 @@ function HandWeapon:detachAllWeaponParts() end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: HandWeapon, part: WeaponPart): nil
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter, arg1: WeaponPart): nil
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter, arg1: WeaponPart, arg2: boolean): nil
 function HandWeapon:detachWeaponPart(arg0) end
+
+--- @public
+--- @param part WeaponPart
+--- @return nil
+function HandWeapon:detachWeaponPart(part) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 WeaponPart
+--- @return nil
+function HandWeapon:detachWeaponPart(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 WeaponPart
+--- @param arg2 boolean
+--- @return nil
+function HandWeapon:detachWeaponPart(arg0, arg1, arg2) end
 
 --- @public
 --- @return WeaponPart
@@ -99,7 +134,7 @@ function HandWeapon:getActiveLight() end
 function HandWeapon:getActiveSight() end
 
 --- @public
---- @return number the ActualWeight
+--- @return number _ the ActualWeight
 function HandWeapon:getActualWeight() end
 
 --- @public
@@ -128,8 +163,12 @@ function HandWeapon:getAimingTime() end
 
 --- @public
 --- @return List
---- @overload fun(self: HandWeapon, arg0: List): List
 function HandWeapon:getAllWeaponParts() end
+
+--- @public
+--- @param arg0 List
+--- @return List
+function HandWeapon:getAllWeaponParts(arg0) end
 
 --- @public
 --- @return string
@@ -145,7 +184,7 @@ function HandWeapon:getBaseSpeed() end
 
 --- @public
 ---
----  Get the magazine with the most bullets in it
+--- Get the magazine with the most bullets in it
 ---
 --- @param owner IsoGameCharacter
 --- @return InventoryItem
@@ -176,7 +215,7 @@ function HandWeapon:getClickSound() end
 function HandWeapon:getClipSize() end
 
 --- @public
---- @return integer the ConditionLowerChance
+--- @return integer _ the ConditionLowerChance
 function HandWeapon:getConditionLowerChance() end
 
 --- @public
@@ -206,15 +245,15 @@ function HandWeapon:getDamageMod(chr) end
 function HandWeapon:getDetachableWeaponParts(arg0) end
 
 --- @public
---- @return number the doSwingBeforeImpact
+--- @return number _ the doSwingBeforeImpact
 function HandWeapon:getDoSwingBeforeImpact() end
 
 --- @public
---- @return integer the DoorDamage
+--- @return integer _ the DoorDamage
 function HandWeapon:getDoorDamage() end
 
 --- @public
---- @return string the doorHitSound
+--- @return string _ the doorHitSound
 function HandWeapon:getDoorHitSound() end
 
 --- @public
@@ -230,7 +269,7 @@ function HandWeapon:getEjectAmmoStartSound() end
 function HandWeapon:getEjectAmmoStopSound() end
 
 --- @public
---- @return number the EnduranceMod
+--- @return number _ the EnduranceMod
 function HandWeapon:getEnduranceMod() end
 
 --- @public
@@ -283,7 +322,7 @@ function HandWeapon:getHitChance() end
 function HandWeapon:getHitFloorSound() end
 
 --- @public
---- @return string the impactSound
+--- @return string _ the impactSound
 function HandWeapon:getImpactSound() end
 
 --- @public
@@ -308,7 +347,7 @@ function HandWeapon:getJamGunChance() end
 function HandWeapon:getKnockbackMod(chr) end
 
 --- @public
---- @return number the KnockdownMod
+--- @return number _ the KnockdownMod
 function HandWeapon:getKnockdownMod() end
 
 --- @public
@@ -328,37 +367,45 @@ function HandWeapon:getLowLightBonus() end
 function HandWeapon:getMagazineType() end
 
 --- @public
---- @return number the maxAngle
+--- @return number _ the maxAngle
 function HandWeapon:getMaxAngle() end
 
 --- @public
---- @return number the maxDamage
+--- @return number _ the maxDamage
 function HandWeapon:getMaxDamage() end
 
 --- @public
---- @return integer the maxHitCount
+--- @return integer _ the maxHitCount
 function HandWeapon:getMaxHitCount() end
 
 --- @public
---- @return number the maxRange
---- @overload fun(self: HandWeapon, owner: IsoGameCharacter): number
+--- @return number _ the maxRange
 function HandWeapon:getMaxRange() end
 
 --- @public
+--- @param owner IsoGameCharacter
 --- @return number
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter): number
+function HandWeapon:getMaxRange(owner) end
+
+--- @public
+--- @return number
 function HandWeapon:getMaxSightRange() end
 
 --- @public
---- @return number the minAngle
+--- @param arg0 IsoGameCharacter
+--- @return number
+function HandWeapon:getMaxSightRange(arg0) end
+
+--- @public
+--- @return number _ the minAngle
 function HandWeapon:getMinAngle() end
 
 --- @public
---- @return number the minDamage
+--- @return number _ the minDamage
 function HandWeapon:getMinDamage() end
 
 --- @public
---- @return number the minRange
+--- @return number _ the minRange
 function HandWeapon:getMinRange() end
 
 --- @public
@@ -367,11 +414,15 @@ function HandWeapon:getMinRangeRanged() end
 
 --- @public
 --- @return number
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter): number
 function HandWeapon:getMinSightRange() end
 
 --- @public
---- @return number the minimumSwingTime
+--- @param arg0 IsoGameCharacter
+--- @return number
+function HandWeapon:getMinSightRange(arg0) end
+
+--- @public
+--- @return number _ the minimumSwingTime
 function HandWeapon:getMinimumSwingTime() end
 
 --- @public
@@ -383,7 +434,7 @@ function HandWeapon:getModelWeaponPart() end
 function HandWeapon:getNoiseDuration() end
 
 --- @public
---- @return number the noiseFactor
+--- @return number _ the noiseFactor
 function HandWeapon:getNoiseFactor() end
 
 --- @public
@@ -395,11 +446,11 @@ function HandWeapon:getNoiseRange() end
 function HandWeapon:getOriginalWeaponSprite() end
 
 --- @public
---- @return number the otherBoost
+--- @return number _ the otherBoost
 function HandWeapon:getOtherBoost() end
 
 --- @public
---- @return string the otherHandRequire
+--- @return string _ the otherHandRequire
 function HandWeapon:getOtherHandRequire() end
 
 --- @public
@@ -407,7 +458,7 @@ function HandWeapon:getOtherHandRequire() end
 function HandWeapon:getPerk() end
 
 --- @public
---- @return string the physicsObject
+--- @return string _ the physicsObject
 function HandWeapon:getPhysicsObject() end
 
 --- @public
@@ -427,7 +478,7 @@ function HandWeapon:getProjectileSpread() end
 function HandWeapon:getProjectileWeightCenter() end
 
 --- @public
---- @return number the pushBackMod
+--- @return number _ the pushBackMod
 function HandWeapon:getPushBackMod() end
 
 --- @public
@@ -441,8 +492,12 @@ function HandWeapon:getRangeMod(chr) end
 
 --- @public
 --- @return integer
---- @overload fun(self: HandWeapon, arg0: IsoGameCharacter): integer
 function HandWeapon:getRecoilDelay() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return integer
+function HandWeapon:getRecoilDelay(arg0) end
 
 --- @public
 --- @return integer
@@ -478,11 +533,11 @@ function HandWeapon:getSmokeRange() end
 function HandWeapon:getSoundGain() end
 
 --- @public
---- @return integer the soundRadius
+--- @return integer _ the soundRadius
 function HandWeapon:getSoundRadius() end
 
 --- @public
---- @return integer the soundVolume
+--- @return integer _ the soundVolume
 function HandWeapon:getSoundVolume() end
 
 --- @public
@@ -495,7 +550,7 @@ function HandWeapon:getSpeedMod(chr) end
 function HandWeapon:getSpentRoundCount() end
 
 --- @public
---- @return integer the splatNumber
+--- @return integer _ the splatNumber
 function HandWeapon:getSplatNumber() end
 
 --- @public
@@ -519,11 +574,11 @@ function HandWeapon:getStopPower() end
 function HandWeapon:getSubCategory() end
 
 --- @public
---- @return string the swingSound
+--- @return string _ the swingSound
 function HandWeapon:getSwingSound() end
 
 --- @public
---- @return number the swingTime
+--- @return number _ the swingTime
 function HandWeapon:getSwingTime() end
 
 --- @public
@@ -532,7 +587,7 @@ function HandWeapon:getSwingTime() end
 function HandWeapon:getToHitMod(chr) end
 
 --- @public
---- @return number the toHitModifier
+--- @return number _ the toHitModifier
 function HandWeapon:getToHitModifier() end
 
 --- @public
@@ -550,14 +605,22 @@ function HandWeapon:getTriggerExplosionTimer() end
 --- @public
 --- @param type string
 --- @return WeaponPart
---- @overload fun(self: HandWeapon, arg0: WeaponPart): WeaponPart
 function HandWeapon:getWeaponPart(type) end
+
+--- @public
+--- @param arg0 WeaponPart
+--- @return WeaponPart
+function HandWeapon:getWeaponPart(arg0) end
 
 --- @public
 --- @param type string
 --- @return number
---- @overload fun(self: HandWeapon, part: WeaponPart): number
 function HandWeapon:getWeaponPartWeightModifier(type) end
+
+--- @public
+--- @param part WeaponPart
+--- @return number
+function HandWeapon:getWeaponPartWeightModifier(part) end
 
 --- @public
 --- @return string
@@ -569,7 +632,7 @@ function HandWeapon:getWeaponReloadType() end
 function HandWeapon:getWeaponSkill(arg0) end
 
 --- @public
---- @return string the weaponSprite
+--- @return string _ the weaponSprite
 function HandWeapon:getWeaponSprite() end
 
 --- @public
@@ -577,7 +640,7 @@ function HandWeapon:getWeaponSprite() end
 function HandWeapon:getWeaponSpritesByIndex() end
 
 --- @public
---- @return number the Weight
+--- @return number _ the Weight
 function HandWeapon:getWeight() end
 
 --- @public
@@ -606,11 +669,11 @@ function HandWeapon:isAimedFirearm() end
 function HandWeapon:isAimedHandWeapon() end
 
 --- @public
---- @return boolean the AlwaysKnockdown
+--- @return boolean _ the AlwaysKnockdown
 function HandWeapon:isAlwaysKnockdown() end
 
 --- @public
---- @return boolean the angleFalloff
+--- @return boolean _ the angleFalloff
 function HandWeapon:isAngleFalloff() end
 
 --- @public
@@ -618,11 +681,11 @@ function HandWeapon:isAngleFalloff() end
 function HandWeapon:isBareHands() end
 
 --- @public
---- @return boolean the bCanBarracade
+--- @return boolean _ the bCanBarracade
 function HandWeapon:isCanBarracade() end
 
 --- @public
---- @return boolean the CantAttackWithLowestEndurance
+--- @return boolean _ the CantAttackWithLowestEndurance
 function HandWeapon:isCantAttackWithLowestEndurance() end
 
 --- @public
@@ -646,7 +709,7 @@ function HandWeapon:isInstantExplosion() end
 function HandWeapon:isJammed() end
 
 --- @public
---- @return boolean the knockBackOnNoDeath
+--- @return boolean _ the knockBackOnNoDeath
 function HandWeapon:isKnockBackOnNoDeath() end
 
 --- @public
@@ -654,11 +717,11 @@ function HandWeapon:isKnockBackOnNoDeath() end
 function HandWeapon:isManuallyRemoveSpentRounds() end
 
 --- @public
---- @return boolean the MultipleHitConditionAffected
+--- @return boolean _ the MultipleHitConditionAffected
 function HandWeapon:isMultipleHitConditionAffected() end
 
 --- @public
---- @return boolean the otherHandUse
+--- @return boolean _ the otherHandUse
 function HandWeapon:isOtherHandUse() end
 
 --- @public
@@ -670,11 +733,11 @@ function HandWeapon:isPiercingBullets() end
 function HandWeapon:isRackAfterShoot() end
 
 --- @public
---- @return boolean the rangeFalloff
+--- @return boolean _ the rangeFalloff
 function HandWeapon:isRangeFalloff() end
 
 --- @public
---- @return boolean the ranged
+--- @return boolean _ the ranged
 function HandWeapon:isRanged() end
 
 --- @public
@@ -691,11 +754,11 @@ function HandWeapon:isRoundChambered() end
 function HandWeapon:isSelectFire() end
 
 --- @public
---- @return boolean the shareDamage
+--- @return boolean _ the shareDamage
 function HandWeapon:isShareDamage() end
 
 --- @public
---- @return boolean the shareEndurance
+--- @return boolean _ the shareEndurance
 function HandWeapon:isShareEndurance() end
 
 --- @public
@@ -703,7 +766,7 @@ function HandWeapon:isShareEndurance() end
 function HandWeapon:isSpentRoundChambered() end
 
 --- @public
---- @return boolean the splatBloodOnNoDeath
+--- @return boolean _ the splatBloodOnNoDeath
 function HandWeapon:isSplatBloodOnNoDeath() end
 
 --- @public
@@ -711,11 +774,11 @@ function HandWeapon:isSplatBloodOnNoDeath() end
 function HandWeapon:isTorchCone() end
 
 --- @public
---- @return boolean the useEndurance
+--- @return boolean _ the useEndurance
 function HandWeapon:isUseEndurance() end
 
 --- @public
---- @return boolean the useSelf
+--- @return boolean _ the useSelf
 function HandWeapon:isUseSelf() end
 
 --- @public
@@ -735,7 +798,10 @@ function HandWeapon:randomizeBullets() end
 
 --- @public
 --- @return nil
---- @overload fun(self: HandWeapon): nil
+function HandWeapon:render() end
+
+--- @public
+--- @return nil
 function HandWeapon:render() end
 
 --- @public
@@ -1276,8 +1342,13 @@ function HandWeapon:setWeaponLength(weaponLength) end
 --- @public
 --- @param arg0 WeaponPart
 --- @return nil
---- @overload fun(self: HandWeapon, type: string, part: WeaponPart): nil
 function HandWeapon:setWeaponPart(arg0) end
+
+--- @public
+--- @param type string
+--- @param part WeaponPart
+--- @return nil
+function HandWeapon:setWeaponPart(type, part) end
 
 --- @public
 --- @param weaponReloadType string
@@ -1301,7 +1372,10 @@ function HandWeapon:setZombieHitSound(hitSound) end
 
 --- @public
 --- @return nil
---- @overload fun(self: HandWeapon): nil
+function HandWeapon:update() end
+
+--- @public
+--- @return nil
 function HandWeapon:update() end
 
 --- @public
@@ -1309,7 +1383,7 @@ function HandWeapon:update() end
 function HandWeapon:usesExternalMagazine() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -1318,5 +1392,12 @@ function HandWeapon:usesExternalMagazine() end
 --- @param itemType string
 --- @param texName string
 --- @return HandWeapon
---- @overload fun(module: string, name: string, itemType: string, item: Item): HandWeapon
 function HandWeapon.new(module, name, itemType, texName) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param item Item
+--- @return HandWeapon
+function HandWeapon.new(module, name, itemType, item) end

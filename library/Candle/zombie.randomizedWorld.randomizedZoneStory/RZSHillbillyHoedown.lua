@@ -23,7 +23,7 @@ function RZSHillbillyHoedown.getBagClutter() end
 function RZSHillbillyHoedown:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

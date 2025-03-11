@@ -140,7 +140,7 @@ function SteamWorkshopItem:validatePreviewImage(path) end
 function SteamWorkshopItem:writeWorkshopTxt() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

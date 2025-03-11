@@ -33,7 +33,7 @@ function RBTrashed:randomizeBuilding(arg0) end
 function RBTrashed:trashHouse(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -118,7 +118,7 @@ function PerformanceSettings:setPuddlesQuality(puddles) end
 function PerformanceSettings:setWaterQuality(water) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

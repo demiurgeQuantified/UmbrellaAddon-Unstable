@@ -24,9 +24,23 @@ function CraftUtil.ReleaseResourceList(arg0) end
 --- @param arg0 InventoryItem
 --- @param arg1 InventoryItem
 --- @return boolean
---- @overload fun(arg0: InventoryItem, arg1: InventoryItem, arg2: boolean): boolean
---- @overload fun(arg0: Item, arg1: Item, arg2: boolean): boolean
 function CraftUtil.canItemsStack(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 InventoryItem
+--- @param arg1 InventoryItem
+--- @param arg2 boolean
+--- @return boolean
+function CraftUtil.canItemsStack(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 Item
+--- @param arg1 Item
+--- @param arg2 boolean
+--- @return boolean
+function CraftUtil.canItemsStack(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -35,20 +49,67 @@ function CraftUtil.canItemsStack(arg0, arg1) end
 --- @param arg2 List
 --- @param arg3 List
 --- @return boolean
---- @overload fun(arg0: CraftRecipe, arg1: CraftRecipeData, arg2: List, arg3: List, arg4: CraftRecipeMonitor): boolean
 function CraftUtil.canPerformRecipe(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 CraftRecipe
+--- @param arg1 CraftRecipeData
+--- @param arg2 List
+--- @param arg3 List
+--- @param arg4 CraftRecipeMonitor
+--- @return boolean
+function CraftUtil.canPerformRecipe(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
 --- @param arg0 Resource
 --- @param arg1 InventoryItem
 --- @return boolean
---- @overload fun(arg0: Resource, arg1: Item): boolean
---- @overload fun(arg0: Resource, arg1: InventoryItem, arg2: integer): boolean
---- @overload fun(arg0: Resource, arg1: Item, arg2: integer): boolean
---- @overload fun(arg0: Resource, arg1: InventoryItem, arg2: integer, arg3: Resource, arg4: HashSet): boolean
---- @overload fun(arg0: Resource, arg1: Item, arg2: integer, arg3: Resource, arg4: HashSet): boolean
 function CraftUtil.canResourceFitItem(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 Resource
+--- @param arg1 Item
+--- @return boolean
+function CraftUtil.canResourceFitItem(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 Resource
+--- @param arg1 InventoryItem
+--- @param arg2 integer
+--- @return boolean
+function CraftUtil.canResourceFitItem(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 Resource
+--- @param arg1 Item
+--- @param arg2 integer
+--- @return boolean
+function CraftUtil.canResourceFitItem(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 Resource
+--- @param arg1 InventoryItem
+--- @param arg2 integer
+--- @param arg3 Resource
+--- @param arg4 HashSet
+--- @return boolean
+function CraftUtil.canResourceFitItem(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param arg0 Resource
+--- @param arg1 Item
+--- @param arg2 integer
+--- @param arg3 Resource
+--- @param arg4 HashSet
+--- @return boolean
+function CraftUtil.canResourceFitItem(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -57,8 +118,17 @@ function CraftUtil.canResourceFitItem(arg0, arg1) end
 --- @param arg2 List
 --- @param arg3 List
 --- @return boolean
---- @overload fun(arg0: CraftRecipeData, arg1: List, arg2: List, arg3: List, arg4: CraftRecipeMonitor): boolean
 function CraftUtil.canStart(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 CraftRecipeData
+--- @param arg1 List
+--- @param arg2 List
+--- @param arg3 List
+--- @param arg4 CraftRecipeMonitor
+--- @return boolean
+function CraftUtil.canStart(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -80,9 +150,39 @@ function CraftUtil.debugCanStart(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg4 Resource
 --- @param arg5 HashSet
 --- @return Resource
---- @overload fun(arg0: ResourceIO, arg1: List, arg2: Energy, arg3: number, arg4: Resource, arg5: HashSet): Resource
---- @overload fun(arg0: ResourceIO, arg1: List, arg2: InventoryItem, arg3: integer, arg4: Resource, arg5: HashSet): Resource
---- @overload fun(arg0: ResourceIO, arg1: List, arg2: Item, arg3: integer, arg4: Resource, arg5: HashSet): Resource
+function CraftUtil.findResourceOrEmpty(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 ResourceIO
+--- @param arg1 List
+--- @param arg2 Energy
+--- @param arg3 number
+--- @param arg4 Resource
+--- @param arg5 HashSet
+--- @return Resource
+function CraftUtil.findResourceOrEmpty(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 ResourceIO
+--- @param arg1 List
+--- @param arg2 InventoryItem
+--- @param arg3 integer
+--- @param arg4 Resource
+--- @param arg5 HashSet
+--- @return Resource
+function CraftUtil.findResourceOrEmpty(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 ResourceIO
+--- @param arg1 List
+--- @param arg2 Item
+--- @param arg3 integer
+--- @param arg4 Resource
+--- @param arg5 HashSet
+--- @return Resource
 function CraftUtil.findResourceOrEmpty(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -98,11 +198,20 @@ function CraftUtil.getEntityTemperature(arg0) end
 --- @param arg2 List
 --- @param arg3 List
 --- @return CraftRecipe
---- @overload fun(arg0: CraftRecipeData, arg1: List, arg2: List, arg3: List, arg4: CraftRecipeMonitor): CraftRecipe
 function CraftUtil.getPossibleRecipe(arg0, arg1, arg2, arg3) end
 
+--- @public
+--- @static
+--- @param arg0 CraftRecipeData
+--- @param arg1 List
+--- @param arg2 List
+--- @param arg3 List
+--- @param arg4 CraftRecipeMonitor
+--- @return CraftRecipe
+function CraftUtil.getPossibleRecipe(arg0, arg1, arg2, arg3, arg4) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

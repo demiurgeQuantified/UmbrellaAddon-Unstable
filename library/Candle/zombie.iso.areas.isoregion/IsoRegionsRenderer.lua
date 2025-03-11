@@ -188,8 +188,18 @@ function IsoRegionsRenderer:renderString(x, y, str, r, g, b, a) end
 --- @param str string
 --- @param c Color
 --- @return nil
---- @overload fun(self: IsoRegionsRenderer, x: number, y: number, str: string, r: number, g: number, b: number, a: number): nil
 function IsoRegionsRenderer:renderStringUI(x, y, str, c) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function IsoRegionsRenderer:renderStringUI(x, y, str, r, g, b, a) end
 
 --- @public
 --- @param x number
@@ -265,7 +275,7 @@ function IsoRegionsRenderer:worldToScreenX(x) end
 function IsoRegionsRenderer:worldToScreenY(y) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

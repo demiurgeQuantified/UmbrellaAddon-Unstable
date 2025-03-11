@@ -18,7 +18,7 @@ function XRow:getTile(arg0) end
 function XRow:getWidth() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

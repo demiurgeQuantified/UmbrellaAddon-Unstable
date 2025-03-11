@@ -11,7 +11,11 @@ Deque = {}
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: Deque, arg0: any): boolean
+function Deque:add(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function Deque:add(arg0) end
 
 --- @public
@@ -40,7 +44,10 @@ function Deque:descendingIterator() end
 
 --- @public
 --- @return any
---- @overload fun(self: Deque): any
+function Deque:element() end
+
+--- @public
+--- @return any
 function Deque:element() end
 
 --- @public
@@ -58,7 +65,11 @@ function Deque:iterator() end
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: Deque, arg0: any): boolean
+function Deque:offer(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function Deque:offer(arg0) end
 
 --- @public
@@ -73,7 +84,10 @@ function Deque:offerLast(arg0) end
 
 --- @public
 --- @return any
---- @overload fun(self: Deque): any
+function Deque:peek() end
+
+--- @public
+--- @return any
 function Deque:peek() end
 
 --- @public
@@ -86,7 +100,10 @@ function Deque:peekLast() end
 
 --- @public
 --- @return any
---- @overload fun(self: Deque): any
+function Deque:poll() end
+
+--- @public
+--- @return any
 function Deque:poll() end
 
 --- @public
@@ -108,9 +125,16 @@ function Deque:push(arg0) end
 
 --- @public
 --- @return any
---- @overload fun(self: Deque): any
---- @overload fun(self: Deque, arg0: any): boolean
 function Deque:remove() end
+
+--- @public
+--- @return any
+function Deque:remove() end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
+function Deque:remove(arg0) end
 
 --- @public
 --- @return any

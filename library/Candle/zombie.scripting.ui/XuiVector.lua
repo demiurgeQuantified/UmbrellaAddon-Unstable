@@ -57,7 +57,7 @@ function XuiVector:isxPercent() end
 function XuiVector:isyPercent() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -33,7 +33,7 @@ function FakeDeadZombieState:execute(owner) end
 function FakeDeadZombieState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

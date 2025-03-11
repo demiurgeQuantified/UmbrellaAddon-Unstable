@@ -62,7 +62,7 @@ function InputItemNode:setExpanded(arg0) end
 function InputItemNode:toggleExpanded() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

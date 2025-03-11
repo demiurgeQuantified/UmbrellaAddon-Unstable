@@ -188,7 +188,7 @@ function Mod:setTexture(tex) end
 function Mod:setUrl(url) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

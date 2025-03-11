@@ -217,7 +217,7 @@ function RecipeManager.validateHasHeat(arg0, arg1, arg2, arg3) end
 function RecipeManager.validateRecipeContainsSourceItem(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

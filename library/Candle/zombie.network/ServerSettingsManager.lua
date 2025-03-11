@@ -46,7 +46,7 @@ function ServerSettingsManager:isValidNewName(newName) end
 function ServerSettingsManager:readAllSettings() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

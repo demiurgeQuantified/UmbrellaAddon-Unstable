@@ -30,7 +30,7 @@ function MultiStageBuilding.getStage(arg0) end
 function MultiStageBuilding.getStages(chr, itemClicked, cheat) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

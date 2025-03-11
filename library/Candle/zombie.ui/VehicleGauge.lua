@@ -28,7 +28,7 @@ function VehicleGauge:setTexture(newText) end
 function VehicleGauge:setValue(value) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

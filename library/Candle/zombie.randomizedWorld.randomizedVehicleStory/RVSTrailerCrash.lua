@@ -28,7 +28,7 @@ function RVSTrailerCrash:randomizeVehicleStory(zone, chunk) end
 function RVSTrailerCrash:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

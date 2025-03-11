@@ -25,23 +25,51 @@ function PropertyContainer:CreateKeySet() end
 --- @public
 --- @param flag number
 --- @return boolean
---- @overload fun(self: PropertyContainer, isoPropertyType: string): boolean
---- @overload fun(self: PropertyContainer, flag: IsoFlagType): boolean
+function PropertyContainer:Is(flag) end
+
+--- @public
+--- @param isoPropertyType string
+--- @return boolean
+function PropertyContainer:Is(isoPropertyType) end
+
+--- @public
+--- @param flag IsoFlagType
+--- @return boolean
 function PropertyContainer:Is(flag) end
 
 --- @public
 --- @param flag IsoFlagType
 --- @return nil
---- @overload fun(self: PropertyContainer, propName: string, propName2: string): nil
---- @overload fun(self: PropertyContainer, flag: IsoFlagType, ignored: string): nil
---- @overload fun(self: PropertyContainer, propName: string, propName2: string, checkIsoFlagType: boolean): nil
 function PropertyContainer:Set(flag) end
 
 --- @public
 --- @param propName string
+--- @param propName2 string
 --- @return nil
---- @overload fun(self: PropertyContainer, flag: IsoFlagType): nil
+function PropertyContainer:Set(propName, propName2) end
+
+--- @public
+--- @param flag IsoFlagType
+--- @param ignored string
+--- @return nil
+function PropertyContainer:Set(flag, ignored) end
+
+--- @public
+--- @param propName string
+--- @param propName2 string
+--- @param checkIsoFlagType boolean
+--- @return nil
+function PropertyContainer:Set(propName, propName2, checkIsoFlagType) end
+
+--- @public
+--- @param propName string
+--- @return nil
 function PropertyContainer:UnSet(propName) end
+
+--- @public
+--- @param flag IsoFlagType
+--- @return nil
+function PropertyContainer:UnSet(flag) end
 
 --- @public
 --- @param property string
@@ -105,7 +133,7 @@ function PropertyContainer:valueEquals(arg0, arg1) end
 function PropertyContainer:valueEqualsIgnoreCase(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

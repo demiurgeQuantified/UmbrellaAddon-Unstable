@@ -103,7 +103,13 @@ function ObjectTooltip:DrawValueRight(value, x, y, highGood) end
 --- @param x integer
 --- @param y integer
 --- @return nil
---- @overload fun(self: ObjectTooltip, value: integer, x: integer, y: integer): nil
+function ObjectTooltip:DrawValueRightNoPlus(value, x, y) end
+
+--- @public
+--- @param value integer
+--- @param x integer
+--- @param y integer
+--- @return nil
 function ObjectTooltip:DrawValueRightNoPlus(value, x, y) end
 
 --- @public
@@ -192,7 +198,7 @@ function ObjectTooltip:show(obj, x, y) end
 function ObjectTooltip:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

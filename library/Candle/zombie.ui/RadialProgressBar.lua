@@ -35,7 +35,7 @@ function RadialProgressBar:setValue(delta) end
 function RadialProgressBar:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

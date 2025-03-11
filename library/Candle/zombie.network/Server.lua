@@ -212,8 +212,13 @@ function Server:setPublic(bPublic) end
 --- @public
 --- @param pwd string
 --- @return nil
---- @overload fun(self: Server, arg0: string, arg1: boolean): nil
 function Server:setPwd(pwd) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return nil
+function Server:setPwd(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
@@ -270,7 +275,7 @@ function Server:setVersion(version) end
 function Server:updateServerCustomizationLastUpdate() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

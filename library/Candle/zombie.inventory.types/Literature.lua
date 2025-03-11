@@ -41,7 +41,7 @@ function Literature:getAlreadyReadPages() end
 function Literature:getBookName() end
 
 --- @public
---- @return number the boredomChange
+--- @return number _ the boredomChange
 function Literature:getBoredomChange() end
 
 --- @public
@@ -89,7 +89,7 @@ function Literature:getSaveType() end
 function Literature:getSkillTrained() end
 
 --- @public
---- @return number the stressChange
+--- @return number _ the stressChange
 function Literature:getStressChange() end
 
 --- @public
@@ -97,7 +97,7 @@ function Literature:getStressChange() end
 function Literature:getTeachedRecipes() end
 
 --- @public
---- @return number the unhappyChange
+--- @return number _ the unhappyChange
 function Literature:getUnhappyChange() end
 
 --- @public
@@ -181,7 +181,7 @@ function Literature:setTeachedRecipes(teachedRecipes) end
 function Literature:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -190,5 +190,12 @@ function Literature:update() end
 --- @param itemType string
 --- @param texName string
 --- @return Literature
---- @overload fun(module: string, name: string, itemType: string, item: Item): Literature
 function Literature.new(module, name, itemType, texName) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param item Item
+--- @return Literature
+function Literature.new(module, name, itemType, item) end

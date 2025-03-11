@@ -37,7 +37,7 @@ function GameState:update() end
 function GameState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -74,13 +74,20 @@ function IsoMannequin:getCustomSettingsFromItem(item) end
 
 --- @public
 --- @return HumanVisual
---- @overload fun(self: IsoMannequin): HumanVisual
+function IsoMannequin:getHumanVisual() end
+
+--- @public
+--- @return HumanVisual
 function IsoMannequin:getHumanVisual() end
 
 --- @public
 --- @param itemVisuals ItemVisuals
 --- @return nil
---- @overload fun(self: IsoMannequin, itemVisuals: ItemVisuals): nil
+function IsoMannequin:getItemVisuals(itemVisuals) end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @return nil
 function IsoMannequin:getItemVisuals(itemVisuals) end
 
 --- @public
@@ -102,7 +109,10 @@ function IsoMannequin:getVariables(vars) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoMannequin): boolean
+function IsoMannequin:isFemale() end
+
+--- @public
+--- @return boolean
 function IsoMannequin:isFemale() end
 
 --- @public
@@ -113,12 +123,18 @@ function IsoMannequin:isItemAllowedInContainer(container, item) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoMannequin): boolean
 function IsoMannequin:isSkeleton() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoMannequin): boolean
+function IsoMannequin:isSkeleton() end
+
+--- @public
+--- @return boolean
+function IsoMannequin:isZombie() end
+
+--- @public
+--- @return boolean
 function IsoMannequin:isZombie() end
 
 --- @public
@@ -218,11 +234,17 @@ function IsoMannequin:shouldRenderEachFrame() end
 function IsoMannequin:wearItem(item, chr) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoMannequin
---- @overload fun(cell: IsoCell, square: IsoGridSquare, sprite: IsoSprite): IsoMannequin
 function IsoMannequin.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param square IsoGridSquare
+--- @param sprite IsoSprite
+--- @return IsoMannequin
+function IsoMannequin.new(cell, square, sprite) end

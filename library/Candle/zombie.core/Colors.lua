@@ -271,7 +271,7 @@ function Colors.GetColorsCount() end
 function Colors.GetRandomColor() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

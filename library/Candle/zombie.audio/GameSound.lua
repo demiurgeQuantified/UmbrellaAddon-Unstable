@@ -47,7 +47,7 @@ function GameSound:reset() end
 function GameSound:setUserVolume(gain) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

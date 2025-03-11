@@ -19,12 +19,22 @@ function FilterOutputStream:flush() end
 --- @public
 --- @param arg0 byte[]
 --- @return nil
---- @overload fun(self: FilterOutputStream, arg0: integer): nil
---- @overload fun(self: FilterOutputStream, arg0: byte[], arg1: integer, arg2: integer): nil
 function FilterOutputStream:write(arg0) end
 
+--- @public
+--- @param arg0 integer
+--- @return nil
+function FilterOutputStream:write(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function FilterOutputStream:write(arg0, arg1, arg2) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -22,13 +22,24 @@ function Enum.valueOf(arg0, arg1) end
 --- @public
 --- @param arg0 Enum
 --- @return integer
---- @overload fun(self: Enum, arg0: any): integer
---- @overload fun(self: Enum, arg0: any): integer
+function Enum:compareTo(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return integer
+function Enum:compareTo(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return integer
 function Enum:compareTo(arg0) end
 
 --- @public
 --- @return Optional
---- @overload fun(self: Enum): Optional
+function Enum:describeConstable() end
+
+--- @public
+--- @return Optional
 function Enum:describeConstable() end
 
 --- @public

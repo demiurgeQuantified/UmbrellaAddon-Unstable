@@ -28,7 +28,7 @@ function ZombieGetUpState:enter(owner) end
 function ZombieGetUpState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -37,8 +37,13 @@ function HumanVisual:addBodyVisualFromItemType(itemType) end
 --- @param arg0 ItemVisuals
 --- @param arg1 ClothingItem
 --- @return ItemVisual
---- @overload fun(self: HumanVisual, itemVisuals: ItemVisuals, scriptItem: Item): ItemVisual
 function HumanVisual:addClothingItem(arg0, arg1) end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @param scriptItem Item
+--- @return ItemVisual
+function HumanVisual:addClothingItem(itemVisuals, scriptItem) end
 
 --- @public
 --- @return nil
@@ -53,15 +58,27 @@ function HumanVisual:copyFrom(other_) end
 --- @param itemGUID string
 --- @param itemVisuals ItemVisuals
 --- @return nil
---- @overload fun(self: HumanVisual, itemGUID: string, itemVisuals: ItemVisuals, clearCurrentVisuals: boolean): nil
 function HumanVisual:dressInClothingItem(itemGUID, itemVisuals) end
+
+--- @public
+--- @param itemGUID string
+--- @param itemVisuals ItemVisuals
+--- @param clearCurrentVisuals boolean
+--- @return nil
+function HumanVisual:dressInClothingItem(itemGUID, itemVisuals, clearCurrentVisuals) end
 
 --- @public
 --- @param outfitName string
 --- @param itemVisuals ItemVisuals
 --- @return nil
---- @overload fun(self: HumanVisual, arg0: string, arg1: ItemVisuals, arg2: boolean): nil
 function HumanVisual:dressInNamedOutfit(outfitName, itemVisuals) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 ItemVisuals
+--- @param arg2 boolean
+--- @return nil
+function HumanVisual:dressInNamedOutfit(arg0, arg1, arg2) end
 
 --- @public
 --- @return ImmutableColor
@@ -304,7 +321,7 @@ function HumanVisual:setSkinTextureName(textureName) end
 function HumanVisual:synchWithOutfit(outfit) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

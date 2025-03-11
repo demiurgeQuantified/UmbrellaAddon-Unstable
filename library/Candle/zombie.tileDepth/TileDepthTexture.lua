@@ -114,7 +114,7 @@ function TileDepthTexture:setPixels(arg0, arg1, arg2, arg3, arg4) end
 function TileDepthTexture:updateGPUTexture() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

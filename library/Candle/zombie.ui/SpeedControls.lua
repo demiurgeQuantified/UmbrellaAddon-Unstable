@@ -65,7 +65,7 @@ function SpeedControls:stepForward() end
 function SpeedControls:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

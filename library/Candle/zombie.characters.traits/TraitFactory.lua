@@ -22,8 +22,18 @@ function TraitFactory.Reset() end
 --- @param desc string
 --- @param profession boolean
 --- @return Trait
---- @overload fun(type: string, name: string, cost: integer, desc: string, profession: boolean, removeInMP: boolean): Trait
 function TraitFactory.addTrait(type, name, cost, desc, profession) end
+
+--- @public
+--- @static
+--- @param type string
+--- @param name string
+--- @param cost integer
+--- @param desc string
+--- @param profession boolean
+--- @param removeInMP boolean
+--- @return Trait
+function TraitFactory.addTrait(type, name, cost, desc, profession, removeInMP) end
 
 --- @public
 --- @static
@@ -54,7 +64,7 @@ function TraitFactory.setMutualExclusive(a, b) end
 function TraitFactory.sortList() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

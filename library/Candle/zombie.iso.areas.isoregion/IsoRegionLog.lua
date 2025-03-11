@@ -21,7 +21,7 @@ function IsoRegionLog:getStr() end
 function IsoRegionLog:getType() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

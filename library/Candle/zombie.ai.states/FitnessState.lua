@@ -39,7 +39,7 @@ function FitnessState:execute(owner) end
 function FitnessState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

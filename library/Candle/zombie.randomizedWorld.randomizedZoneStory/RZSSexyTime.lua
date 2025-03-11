@@ -14,7 +14,7 @@ RZSSexyTime = {}
 function RZSSexyTime:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -12,7 +12,7 @@ IsoMovingObject = {}
 
 --- @public
 --- @static
---- @return integer the IDCount
+--- @return integer _ the IDCount
 function IsoMovingObject.getIDCount() end
 
 --- @public
@@ -39,8 +39,13 @@ function IsoMovingObject:Despawn() end
 --- @public
 --- @param other IsoMovingObject
 --- @return number
---- @overload fun(self: IsoMovingObject, x: integer, y: integer): number
 function IsoMovingObject:DistTo(other) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @return number
+function IsoMovingObject:DistTo(x, y) end
 
 --- @public
 --- @param other IsoObject
@@ -50,8 +55,13 @@ function IsoMovingObject:DistToProper(other) end
 --- @public
 --- @param other IsoMovingObject
 --- @return number
---- @overload fun(self: IsoMovingObject, x: number, y: number): number
 function IsoMovingObject:DistToSquared(other) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @return number
+function IsoMovingObject:DistToSquared(x, y) end
 
 --- @public
 --- @return nil
@@ -82,9 +92,9 @@ function IsoMovingObject:MoveUnmodded(dir) end
 
 --- @public
 ---
----  This function calculate count of attackers
+--- This function calculate count of attackers
 ---
---- @return integer 0 - no attackets, 1 - one player can attack this character, 2 - multiply players can attack this character
+--- @return integer _ 0 - no attackets, 1 - one player can attack this character, 2 - multiply players can attack this character
 function IsoMovingObject:canHaveMultipleHits() end
 
 --- @public
@@ -123,7 +133,7 @@ function IsoMovingObject:getBumpedType(bumped) end
 function IsoMovingObject:getCollideType() end
 
 --- @public
---- @return IsoObject the CollidedObject
+--- @return IsoObject _ the CollidedObject
 function IsoMovingObject:getCollidedObject() end
 
 --- @public
@@ -131,7 +141,7 @@ function IsoMovingObject:getCollidedObject() end
 function IsoMovingObject:getCurrentBuilding() end
 
 --- @public
---- @return IsoGridSquare the current
+--- @return IsoGridSquare _ the current
 function IsoMovingObject:getCurrentSquare() end
 
 --- @public
@@ -163,7 +173,7 @@ function IsoMovingObject:getFacingPosition(pos) end
 function IsoMovingObject:getFeelerTile(dist) end
 
 --- @public
---- @return number the feelersize
+--- @return number _ the feelersize
 function IsoMovingObject:getFeelersize() end
 
 --- @public
@@ -172,32 +182,39 @@ function IsoMovingObject:getFuturWalkedSquare() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoMovingObject, bDoNoises: boolean): number
 function IsoMovingObject:getGlobalMovementMod() end
 
 --- @public
---- @return Vector2 the hitDir
+--- @param bDoNoises boolean
+--- @return number
+function IsoMovingObject:getGlobalMovementMod(bDoNoises) end
+
+--- @public
+--- @return Vector2 _ the hitDir
 function IsoMovingObject:getHitDir() end
 
 --- @public
---- @return number the hitForce
+--- @return number _ the hitForce
 function IsoMovingObject:getHitForce() end
 
 --- @public
---- @return number the hitFromAngle
+--- @return number _ the hitFromAngle
 function IsoMovingObject:getHitFromAngle() end
 
 --- @public
 --- @return integer
---- @overload fun(self: IsoMovingObject): integer
 function IsoMovingObject:getID() end
 
 --- @public
---- @return number the impulsex
+--- @return integer
+function IsoMovingObject:getID() end
+
+--- @public
+--- @return number _ the impulsex
 function IsoMovingObject:getImpulsex() end
 
 --- @public
---- @return number the impulsey
+--- @return number _ the impulsey
 function IsoMovingObject:getImpulsey() end
 
 --- @public
@@ -205,11 +222,11 @@ function IsoMovingObject:getImpulsey() end
 function IsoMovingObject:getLastCollideTime() end
 
 --- @public
---- @return IsoGridSquare the last
+--- @return IsoGridSquare _ the last
 function IsoMovingObject:getLastSquare() end
 
 --- @public
---- @return IsoZombie the lastTargettedBy
+--- @return IsoZombie _ the lastTargettedBy
 function IsoMovingObject:getLastTargettedBy() end
 
 --- @public
@@ -225,11 +242,11 @@ function IsoMovingObject:getLastY() end
 function IsoMovingObject:getLastZ() end
 
 --- @public
---- @return number the limpulsex
+--- @return number _ the limpulsex
 function IsoMovingObject:getLimpulsex() end
 
 --- @public
---- @return number the limpulsey
+--- @return number _ the limpulsey
 function IsoMovingObject:getLimpulsey() end
 
 --- @public
@@ -237,7 +254,7 @@ function IsoMovingObject:getLimpulsey() end
 function IsoMovingObject:getMasterRegion() end
 
 --- @public
---- @return Vector2 the movementLastFrame
+--- @return Vector2 _ the movementLastFrame
 function IsoMovingObject:getMovementLastFrame() end
 
 --- @public
@@ -249,7 +266,7 @@ function IsoMovingObject:getNextX() end
 function IsoMovingObject:getNextY() end
 
 --- @public
---- @return boolean whether the object should take damage or not.
+--- @return boolean _ whether the object should take damage or not.
 function IsoMovingObject:getNoDamage() end
 
 --- @public
@@ -258,14 +275,24 @@ function IsoMovingObject:getObjectName() end
 
 --- @public
 --- @return integer
---- @overload fun(self: IsoMovingObject): integer
+function IsoMovingObject:getPathFindIndex() end
+
+--- @public
+--- @return integer
 function IsoMovingObject:getPathFindIndex() end
 
 --- @public
 --- @param arg0 Vector3f
 --- @return Vector3f
---- @overload fun(self: IsoMovingObject, out: Vector3): Vector3 The out parameter.
 function IsoMovingObject:getPosition(arg0) end
+
+--- @public
+---
+--- Get the object's position. Stored in the supplied parameter.
+---
+--- @param out Vector3
+--- @return Vector3 _ The out parameter.
+function IsoMovingObject:getPosition(out) end
 
 --- @public
 --- @return number
@@ -276,7 +303,7 @@ function IsoMovingObject:getScreenX() end
 function IsoMovingObject:getScreenY() end
 
 --- @public
---- @return string the ScriptModule
+--- @return string _ the ScriptModule
 function IsoMovingObject:getScriptModule() end
 
 --- @public
@@ -288,11 +315,11 @@ function IsoMovingObject:getScriptNextX() end
 function IsoMovingObject:getScriptNextY() end
 
 --- @public
---- @return number the scriptnx
+--- @return number _ the scriptnx
 function IsoMovingObject:getScriptnx() end
 
 --- @public
---- @return number the scriptny
+--- @return number _ the scriptny
 function IsoMovingObject:getScriptny() end
 
 --- @public
@@ -300,7 +327,7 @@ function IsoMovingObject:getScriptny() end
 function IsoMovingObject:getSquare() end
 
 --- @public
---- @return number the StateEventDelayTimer
+--- @return number _ the StateEventDelayTimer
 function IsoMovingObject:getStateEventDelayTimer() end
 
 --- @public
@@ -308,7 +335,7 @@ function IsoMovingObject:getStateEventDelayTimer() end
 function IsoMovingObject:getThumpTarget() end
 
 --- @public
---- @return integer the TimeSinceZombieAttack
+--- @return integer _ the TimeSinceZombieAttack
 function IsoMovingObject:getTimeSinceZombieAttack() end
 
 --- @public
@@ -318,11 +345,16 @@ function IsoMovingObject:getVectorFromDirection(moveForwardVec) end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoMovingObject, x: number, y: number): number
 function IsoMovingObject:getWeight() end
 
 --- @public
---- @return number the width
+--- @param x number
+--- @param y number
+--- @return number
+function IsoMovingObject:getWeight(x, y) end
+
+--- @public
+--- @return number _ the width
 function IsoMovingObject:getWidth() end
 
 --- @public
@@ -346,7 +378,7 @@ function IsoMovingObject:isCharacter() end
 function IsoMovingObject:isCloseKilled() end
 
 --- @public
---- @return boolean the Collidable
+--- @return boolean _ the Collidable
 function IsoMovingObject:isCollidable() end
 
 --- @public
@@ -354,27 +386,27 @@ function IsoMovingObject:isCollidable() end
 function IsoMovingObject:isCollided() end
 
 --- @public
---- @return boolean the collidedE
+--- @return boolean _ the collidedE
 function IsoMovingObject:isCollidedE() end
 
 --- @public
---- @return boolean the collidedN
+--- @return boolean _ the collidedN
 function IsoMovingObject:isCollidedN() end
 
 --- @public
---- @return boolean the collidedS
+--- @return boolean _ the collidedS
 function IsoMovingObject:isCollidedS() end
 
 --- @public
---- @return boolean the collidedThisFrame
+--- @return boolean _ the collidedThisFrame
 function IsoMovingObject:isCollidedThisFrame() end
 
 --- @public
---- @return boolean the collidedW
+--- @return boolean _ the collidedW
 function IsoMovingObject:isCollidedW() end
 
 --- @public
---- @return boolean the CollidedWithDoor
+--- @return boolean _ the CollidedWithDoor
 function IsoMovingObject:isCollidedWithDoor() end
 
 --- @public
@@ -382,7 +414,7 @@ function IsoMovingObject:isCollidedWithDoor() end
 function IsoMovingObject:isCollidedWithVehicle() end
 
 --- @public
---- @return boolean the destroyed
+--- @return boolean _ the destroyed
 function IsoMovingObject:isDestroyed() end
 
 --- @public
@@ -395,7 +427,7 @@ function IsoMovingObject:isEatingOther(other) end
 function IsoMovingObject:isExistInTheWorld() end
 
 --- @public
---- @return boolean the firstUpdate
+--- @return boolean _ the firstUpdate
 function IsoMovingObject:isFirstUpdate() end
 
 --- @public
@@ -412,11 +444,11 @@ function IsoMovingObject:isPushableForSeparate() end
 function IsoMovingObject:isPushedByForSeparate(other) end
 
 --- @public
---- @return boolean the shootable
+--- @return boolean _ the shootable
 function IsoMovingObject:isShootable() end
 
 --- @public
---- @return boolean the solid
+--- @return boolean _ the solid
 function IsoMovingObject:isSolid() end
 
 --- @public
@@ -428,7 +460,7 @@ function IsoMovingObject:isSolidForSeparate() end
 function IsoMovingObject:isZombiesDontAttack() end
 
 --- @public
---- @return boolean the bAltCollide
+--- @return boolean _ the bAltCollide
 function IsoMovingObject:isbAltCollide() end
 
 --- @public
@@ -476,7 +508,7 @@ function IsoMovingObject:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 ---
----  Collision detection
+--- Collision detection
 ---
 --- @return nil
 function IsoMovingObject:separate() end
@@ -673,9 +705,20 @@ function IsoMovingObject:setPathFindIndex(PathFindIndex) end
 --- @public
 --- @param arg0 Vector2
 --- @return nil
---- @overload fun(self: IsoMovingObject, arg0: number, arg1: number): nil
---- @overload fun(self: IsoMovingObject, arg0: number, arg1: number, arg2: number): nil
 function IsoMovingObject:setPosition(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+function IsoMovingObject:setPosition(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function IsoMovingObject:setPosition(arg0, arg1, arg2) end
 
 --- @public
 --- @param ScriptModule string the ScriptModule to set
@@ -786,12 +829,28 @@ function IsoMovingObject:update() end
 function IsoMovingObject:updateAnimation() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return IsoMovingObject
---- @overload fun(cell: IsoCell): IsoMovingObject
---- @overload fun(cell: IsoCell, bObjectListAdd: boolean): IsoMovingObject
---- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite, bObjectListAdd: boolean): IsoMovingObject
 function IsoMovingObject.new() end
+
+--- @public
+--- @param cell IsoCell
+--- @return IsoMovingObject
+function IsoMovingObject.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param bObjectListAdd boolean
+--- @return IsoMovingObject
+function IsoMovingObject.new(cell, bObjectListAdd) end
+
+--- @public
+--- @param cell IsoCell
+--- @param square IsoGridSquare
+--- @param spr IsoSprite
+--- @param bObjectListAdd boolean
+--- @return IsoMovingObject
+function IsoMovingObject.new(cell, square, spr, bObjectListAdd) end

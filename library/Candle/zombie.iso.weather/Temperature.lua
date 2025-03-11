@@ -115,7 +115,7 @@ function Temperature.getWindChillAmountForPlayer(player) end
 function Temperature.reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

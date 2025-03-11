@@ -152,17 +152,38 @@ function ClimateValues:isTemperatureIsSnow() end
 --- @public
 --- @param calendar GregorianCalendar
 --- @return nil
---- @overload fun(self: ClimateValues, year: integer, month: integer, dayOfMonth: integer): nil
---- @overload fun(self: ClimateValues, year: integer, month: integer, dayOfMonth: integer, hourOfDay: integer): nil
---- @overload fun(self: ClimateValues, year: integer, month: integer, dayOfMonth: integer, hourOfDay: integer, minute: integer): nil
 function ClimateValues:pollDate(calendar) end
+
+--- @public
+--- @param year integer
+--- @param month integer
+--- @param dayOfMonth integer
+--- @return nil
+function ClimateValues:pollDate(year, month, dayOfMonth) end
+
+--- @public
+--- @param year integer
+--- @param month integer
+--- @param dayOfMonth integer
+--- @param hourOfDay integer
+--- @return nil
+function ClimateValues:pollDate(year, month, dayOfMonth, hourOfDay) end
+
+--- @public
+--- @param year integer
+--- @param month integer
+--- @param dayOfMonth integer
+--- @param hourOfDay integer
+--- @param minute integer
+--- @return nil
+function ClimateValues:pollDate(year, month, dayOfMonth, hourOfDay, minute) end
 
 --- @public
 --- @return nil
 function ClimateValues:print() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

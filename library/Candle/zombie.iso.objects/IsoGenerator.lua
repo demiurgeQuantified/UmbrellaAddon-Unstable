@@ -155,12 +155,25 @@ function IsoGenerator:syncIsoObjectSend(b) end
 function IsoGenerator:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoGenerator
---- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare): IsoGenerator
---- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare, remote: boolean): IsoGenerator
 function IsoGenerator.new(cell) end
+
+--- @public
+--- @param item InventoryItem
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @return IsoGenerator
+function IsoGenerator.new(item, cell, sq) end
+
+--- @public
+--- @param item InventoryItem
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param remote boolean
+--- @return IsoGenerator
+function IsoGenerator.new(item, cell, sq, remote) end

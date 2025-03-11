@@ -13,7 +13,12 @@ IsoThumpable = {}
 --- @static
 --- @param arg0 string
 --- @return string
---- @overload fun(arg0: IsoSprite): string
+function IsoThumpable.GetBreakFurnitureSound(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoSprite
+--- @return string
 function IsoThumpable.GetBreakFurnitureSound(arg0) end
 
 ------------------------------------
@@ -60,7 +65,11 @@ function IsoThumpable:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoThumpable, thumper: IsoMovingObject): nil
+function IsoThumpable:Thump(thumper) end
+
+--- @public
+--- @param thumper IsoMovingObject
+--- @return nil
 function IsoThumpable:Thump(thumper) end
 
 --- @public
@@ -81,7 +90,12 @@ function IsoThumpable:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: IsoThumpable, owner: IsoGameCharacter, weapon: HandWeapon): nil
+function IsoThumpable:WeaponHit(owner, weapon) end
+
+--- @public
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
+--- @return nil
 function IsoThumpable:WeaponHit(owner, weapon) end
 
 --- @public
@@ -168,23 +182,37 @@ function IsoThumpable:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoThumpable, chr: IsoGameCharacter): IsoBarricade
+function IsoThumpable:getBarricadeForCharacter(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
 function IsoThumpable:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoThumpable): IsoBarricade
 function IsoThumpable:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoThumpable): IsoBarricade
+function IsoThumpable:getBarricadeOnOppositeSquare() end
+
+--- @public
+--- @return IsoBarricade
+function IsoThumpable:getBarricadeOnSameSquare() end
+
+--- @public
+--- @return IsoBarricade
 function IsoThumpable:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoThumpable, chr: IsoGameCharacter): IsoBarricade
+function IsoThumpable:getBarricadeOppositeCharacter(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
 function IsoThumpable:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -193,7 +221,7 @@ function IsoThumpable:getBreakSound() end
 
 --- @public
 ---
----  Can you barricade/unbarricade the item
+--- Can you barricade/unbarricade the item
 ---
 --- @return boolean
 function IsoThumpable:getCanBarricade() end
@@ -273,7 +301,10 @@ function IsoThumpable:getModData() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoThumpable): boolean
+function IsoThumpable:getNorth() end
+
+--- @public
+--- @return boolean
 function IsoThumpable:getNorth() end
 
 --- @public
@@ -286,7 +317,10 @@ function IsoThumpable:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(self: IsoThumpable): IsoGridSquare
+function IsoThumpable:getOppositeSquare() end
+
+--- @public
+--- @return IsoGridSquare
 function IsoThumpable:getOppositeSquare() end
 
 --- @public
@@ -312,12 +346,15 @@ function IsoThumpable:getSpriteModel() end
 function IsoThumpable:getSquare() end
 
 --- @public
---- @return table the table
+--- @return table _ the table
 function IsoThumpable:getTable() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoThumpable): number
+function IsoThumpable:getThumpCondition() end
+
+--- @public
+--- @return number
 function IsoThumpable:getThumpCondition() end
 
 --- @public
@@ -331,7 +368,11 @@ function IsoThumpable:getThumpSound() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoThumpable, chr: IsoGameCharacter): Thumpable
+function IsoThumpable:getThumpableFor(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return Thumpable
 function IsoThumpable:getThumpableFor(chr) end
 
 --- @public
@@ -359,12 +400,18 @@ function IsoThumpable:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoThumpable): boolean
 function IsoThumpable:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoThumpable): boolean
+function IsoThumpable:isBarricadeAllowed() end
+
+--- @public
+--- @return boolean
+function IsoThumpable:isBarricaded() end
+
+--- @public
+--- @return boolean
 function IsoThumpable:isBarricaded() end
 
 --- @public
@@ -373,8 +420,8 @@ function IsoThumpable:isBlockAllTheSquare() end
 
 --- @public
 ---
----  Can you pass through the item, if false we gonna test the collide default to
----  (so it collide)
+--- Can you pass through the item, if false we gonna test the collide default to
+--- (so it collide)
 ---
 --- @return boolean
 function IsoThumpable:isCanPassThrough() end
@@ -385,7 +432,10 @@ function IsoThumpable:isCorner() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoThumpable): boolean
+function IsoThumpable:isDestroyed() end
+
+--- @public
+--- @return boolean
 function IsoThumpable:isDestroyed() end
 
 --- @public
@@ -526,7 +576,7 @@ function IsoThumpable:setBlockAllTheSquare(blockAllTheSquare) end
 
 --- @public
 ---
----  The sound that be played if this object is broken default "BreakDoor"
+--- The sound that be played if this object is broken default "BreakDoor"
 ---
 --- @param pBreakSound string
 --- @return nil
@@ -534,7 +584,7 @@ function IsoThumpable:setBreakSound(pBreakSound) end
 
 --- @public
 ---
----  Can you barricade/unbarricade the item default true
+--- Can you barricade/unbarricade the item default true
 ---
 --- @param pCanBarricade boolean
 --- @return nil
@@ -598,7 +648,11 @@ function IsoThumpable:setIsDismantable(dismantable) end
 --- @public
 --- @param pIsDoor boolean
 --- @return nil
---- @overload fun(self: IsoThumpable, pIsDoor: boolean): nil
+function IsoThumpable:setIsDoor(pIsDoor) end
+
+--- @public
+--- @param pIsDoor boolean
+--- @return nil
 function IsoThumpable:setIsDoor(pIsDoor) end
 
 --- @public
@@ -634,8 +688,13 @@ function IsoThumpable:setIsThumpable(thumpable) end
 --- @public
 --- @param keyId integer
 --- @return nil
---- @overload fun(self: IsoThumpable, keyId: integer, doNetwork: boolean): nil
 function IsoThumpable:setKeyId(keyId) end
+
+--- @public
+--- @param keyId integer
+--- @param doNetwork boolean
+--- @return nil
+function IsoThumpable:setKeyId(keyId, doNetwork) end
 
 --- @public
 --- @param lifeDelta number
@@ -734,7 +793,7 @@ function IsoThumpable:setTable(table) end
 
 --- @public
 ---
----  Numbers of zeds need to hurt the object default 8
+--- Numbers of zeds need to hurt the object default 8
 ---
 --- @param pThumpDmg integer
 --- @return nil
@@ -769,13 +828,45 @@ function IsoThumpable:toggleLightSource(toggle) end
 function IsoThumpable:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoThumpable
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string, arg3: boolean): IsoThumpable
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, sprite: string, north: boolean, table: table): IsoThumpable
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, closedSprite: string, openSprite: string, north: boolean, table: table): IsoThumpable
 function IsoThumpable.new(cell) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 IsoGridSquare
+--- @param arg2 string
+--- @param arg3 boolean
+--- @return IsoThumpable
+function IsoThumpable.new(arg0, arg1, arg2, arg3) end
+
+--- @public
+---
+--- Create an object than can be interacted by you, survivor or zombie (destroy,
+--- etc.) This one can be a wall, a fence, etc.
+---
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param sprite string
+--- @param north boolean
+--- @param table table
+--- @return IsoThumpable
+function IsoThumpable.new(cell, gridSquare, sprite, north, table) end
+
+--- @public
+---
+--- Create an object than can be interacted by you, survivor or zombie (destroy,
+--- etc.) This one have a closed/openSprite so it can be a  door for example
+---
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param closedSprite string
+--- @param openSprite string
+--- @param north boolean
+--- @param table table
+--- @return IsoThumpable
+function IsoThumpable.new(cell, gridSquare, closedSprite, openSprite, north, table) end

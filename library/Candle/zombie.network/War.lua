@@ -48,7 +48,7 @@ function War:setState(arg0) end
 function War:setTimestamp(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

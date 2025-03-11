@@ -12,8 +12,14 @@ AssocArray = {}
 --- @param arg0 any
 --- @param arg1 any
 --- @return boolean
---- @overload fun(self: AssocArray, arg0: integer, arg1: any, arg2: any): nil
 function AssocArray:add(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @param arg2 any
+--- @return nil
+function AssocArray:add(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 AssocArray
@@ -133,10 +139,14 @@ function AssocArray:size() end
 function AssocArray:trimToSize() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return AssocArray
---- @overload fun(arg0: integer): AssocArray
 function AssocArray.new() end
+
+--- @public
+--- @param arg0 integer
+--- @return AssocArray
+function AssocArray.new(arg0) end

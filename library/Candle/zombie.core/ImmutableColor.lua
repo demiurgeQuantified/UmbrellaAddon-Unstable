@@ -55,13 +55,21 @@ function ImmutableColor:add(c) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, scale: number): ImmutableColor
 function ImmutableColor:brighter() end
 
 --- @public
+--- @param scale number
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, scale: number): ImmutableColor
+function ImmutableColor:brighter(scale) end
+
+--- @public
+--- @return ImmutableColor
 function ImmutableColor:darker() end
+
+--- @public
+--- @param scale number
+--- @return ImmutableColor
+function ImmutableColor:darker(scale) end
 
 --- @public
 --- @param other any
@@ -145,17 +153,57 @@ function ImmutableColor:toMutableColor() end
 function ImmutableColor:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param value integer
 --- @return ImmutableColor
---- @overload fun(color: Color): ImmutableColor
---- @overload fun(color: ImmutableColor): ImmutableColor
---- @overload fun(r: number, g: number, b: number): ImmutableColor
---- @overload fun(r: integer, g: integer, b: integer): ImmutableColor
---- @overload fun(A: Color, B: Color, delta: number): ImmutableColor
---- @overload fun(r: number, g: number, b: number, a: number): ImmutableColor
---- @overload fun(r: integer, g: integer, b: integer, a: integer): ImmutableColor
 function ImmutableColor.new(value) end
+
+--- @public
+--- @param color Color
+--- @return ImmutableColor
+function ImmutableColor.new(color) end
+
+--- @public
+--- @param color ImmutableColor
+--- @return ImmutableColor
+function ImmutableColor.new(color) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @return ImmutableColor
+function ImmutableColor.new(r, g, b) end
+
+--- @public
+--- @param r integer
+--- @param g integer
+--- @param b integer
+--- @return ImmutableColor
+function ImmutableColor.new(r, g, b) end
+
+--- @public
+--- @param A Color
+--- @param B Color
+--- @param delta number
+--- @return ImmutableColor
+function ImmutableColor.new(A, B, delta) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return ImmutableColor
+function ImmutableColor.new(r, g, b, a) end
+
+--- @public
+--- @param r integer
+--- @param g integer
+--- @param b integer
+--- @param a integer
+--- @return ImmutableColor
+function ImmutableColor.new(r, g, b, a) end

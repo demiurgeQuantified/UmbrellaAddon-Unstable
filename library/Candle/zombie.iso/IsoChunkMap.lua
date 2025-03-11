@@ -206,7 +206,7 @@ function IsoChunkMap:setInitialPos(wx, wy) end
 function IsoChunkMap:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

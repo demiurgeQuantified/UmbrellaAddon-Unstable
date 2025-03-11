@@ -38,7 +38,7 @@ function AttachedLocationGroup:indexOf(locationId) end
 function AttachedLocationGroup:size() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -63,7 +63,7 @@ function SpriteConfigManager.Reset() end
 function SpriteConfigManager.getObjectInfoFromSprite(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -30,8 +30,12 @@ function TileDepthTextures:getTextureFromTileName(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: TileDepthTextures, arg0: string): nil
 function TileDepthTextures:initSprites() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function TileDepthTextures:initSprites(arg0) end
 
 --- @public
 --- @return nil
@@ -53,7 +57,7 @@ function TileDepthTextures:mergeTilesets(arg0) end
 function TileDepthTextures:saveTileset(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

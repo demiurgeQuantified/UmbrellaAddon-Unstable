@@ -37,7 +37,7 @@ function MediaLineData:getTextGuid() end
 function MediaLineData:getTranslatedText() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

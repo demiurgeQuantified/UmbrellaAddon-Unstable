@@ -10,7 +10,7 @@ RBStripclub = {}
 
 --- @public
 ---
----  Description copied from class: RandomizedBuildingBase
+--- Description copied from class: RandomizedBuildingBase
 ---
 --- @param def BuildingDef
 --- @param force boolean
@@ -23,7 +23,7 @@ function RBStripclub:isValid(def, force) end
 function RBStripclub:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

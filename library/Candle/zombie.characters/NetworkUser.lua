@@ -91,10 +91,21 @@ function NetworkUser:setSuspicionPoints(arg0) end
 function NetworkUser:setWarningPoints(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return NetworkUser
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: string, arg4: integer, arg5: string, arg6: string, arg7: boolean): NetworkUser
 function NetworkUser.new() end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 integer
+--- @param arg5 string
+--- @param arg6 string
+--- @param arg7 boolean
+--- @return NetworkUser
+function NetworkUser.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end

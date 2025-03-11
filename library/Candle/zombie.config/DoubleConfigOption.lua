@@ -73,7 +73,7 @@ function DoubleConfigOption:setValue(value) end
 function DoubleConfigOption:setValueFromObject(o) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

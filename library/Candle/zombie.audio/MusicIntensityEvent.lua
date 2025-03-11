@@ -30,7 +30,7 @@ function MusicIntensityEvent:getIntensity() end
 function MusicIntensityEvent:setElapsedTime(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

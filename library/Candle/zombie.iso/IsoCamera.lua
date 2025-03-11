@@ -35,22 +35,22 @@ function IsoCamera.getCameraCharacterZ() end
 
 --- @public
 --- @static
---- @return number the lastOffX
+--- @return number _ the lastOffX
 function IsoCamera.getLastOffX() end
 
 --- @public
 --- @static
---- @return number the lastOffY
+--- @return number _ the lastOffY
 function IsoCamera.getLastOffY() end
 
 --- @public
 --- @static
---- @return number the OffX
+--- @return number _ the OffX
 function IsoCamera.getOffX() end
 
 --- @public
 --- @static
---- @return number the OffY
+--- @return number _ the OffY
 function IsoCamera.getOffY() end
 
 --- @public
@@ -123,7 +123,7 @@ function IsoCamera.getTOffY() end
 
 --- @public
 --- @static
---- @return integer the TargetTileY
+--- @return integer _ the TargetTileY
 function IsoCamera.getTargetTileY() end
 
 --- @public
@@ -178,7 +178,7 @@ function IsoCamera.update() end
 function IsoCamera.updateAll() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -20,7 +20,7 @@ function RDSRPGNight:isValid(arg0, arg1) end
 function RDSRPGNight:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

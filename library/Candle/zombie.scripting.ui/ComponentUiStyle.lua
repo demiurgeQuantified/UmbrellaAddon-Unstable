@@ -33,7 +33,7 @@ function ComponentUiStyle:getXuiStyle() end
 function ComponentUiStyle:isEnabled() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

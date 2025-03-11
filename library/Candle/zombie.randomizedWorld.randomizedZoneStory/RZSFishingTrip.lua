@@ -28,7 +28,7 @@ function RZSFishingTrip.getFishingTools() end
 function RZSFishingTrip:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

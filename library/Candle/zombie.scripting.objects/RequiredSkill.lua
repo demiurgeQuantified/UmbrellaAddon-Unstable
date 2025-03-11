@@ -17,7 +17,7 @@ function RequiredSkill:getLevel() end
 function RequiredSkill:getPerk() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

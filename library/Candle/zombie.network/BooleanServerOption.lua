@@ -10,16 +10,22 @@ BooleanServerOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: BooleanServerOption): ConfigOption
+function BooleanServerOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function BooleanServerOption:asConfigOption() end
 
 --- @public
 --- @return string
---- @overload fun(self: BooleanServerOption): string
+function BooleanServerOption:getTooltip() end
+
+--- @public
+--- @return string
 function BooleanServerOption:getTooltip() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

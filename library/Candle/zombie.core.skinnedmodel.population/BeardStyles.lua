@@ -54,7 +54,7 @@ function BeardStyles:getInstance() end
 function BeardStyles:getRandomStyle(outfitName) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

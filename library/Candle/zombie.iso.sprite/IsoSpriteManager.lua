@@ -12,8 +12,13 @@ IsoSpriteManager = {}
 --- @public
 --- @param tex string
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, tex: string, ID: integer): IsoSprite
 function IsoSpriteManager:AddSprite(tex) end
+
+--- @public
+--- @param tex string
+--- @param ID integer
+--- @return IsoSprite
+function IsoSpriteManager:AddSprite(tex, ID) end
 
 --- @public
 --- @return nil
@@ -22,17 +27,26 @@ function IsoSpriteManager:Dispose() end
 --- @public
 --- @param tex string
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, tex: string, col: Color): IsoSprite
 function IsoSpriteManager:getOrAddSpriteCache(tex) end
+
+--- @public
+--- @param tex string
+--- @param col Color
+--- @return IsoSprite
+function IsoSpriteManager:getOrAddSpriteCache(tex, col) end
 
 --- @public
 --- @param gid integer
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, gid: string): IsoSprite
+function IsoSpriteManager:getSprite(gid) end
+
+--- @public
+--- @param gid string
+--- @return IsoSprite
 function IsoSpriteManager:getSprite(gid) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

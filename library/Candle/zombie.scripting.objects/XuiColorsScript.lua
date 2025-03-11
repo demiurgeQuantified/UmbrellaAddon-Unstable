@@ -23,7 +23,7 @@ function XuiColorsScript:getColorMap() end
 function XuiColorsScript:getName() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

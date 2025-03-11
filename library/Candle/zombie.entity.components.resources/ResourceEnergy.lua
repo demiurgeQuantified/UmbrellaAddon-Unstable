@@ -102,5 +102,10 @@ function ResourceEnergy:transferTo(arg0, arg1) end
 --- @public
 --- @param arg0 Resource
 --- @return nil
---- @overload fun(self: ResourceEnergy, arg0: Resource, arg1: number): nil
 function ResourceEnergy:tryTransferTo(arg0) end
+
+--- @public
+--- @param arg0 Resource
+--- @param arg1 number
+--- @return nil
+function ResourceEnergy:tryTransferTo(arg0, arg1) end

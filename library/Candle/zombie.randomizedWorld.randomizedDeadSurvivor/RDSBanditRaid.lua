@@ -20,7 +20,7 @@ function RDSBanditRaid:isValid(arg0, arg1) end
 function RDSBanditRaid:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

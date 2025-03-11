@@ -104,7 +104,7 @@ function ClimateFloat:setModdedValue(f) end
 function ClimateFloat:setOverride(targ, inter) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

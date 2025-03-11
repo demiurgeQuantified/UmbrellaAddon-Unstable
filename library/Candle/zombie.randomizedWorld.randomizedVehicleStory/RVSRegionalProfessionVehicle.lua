@@ -28,7 +28,7 @@ function RVSRegionalProfessionVehicle:randomizeVehicleStory(arg0, arg1) end
 function RVSRegionalProfessionVehicle:spawnElement(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

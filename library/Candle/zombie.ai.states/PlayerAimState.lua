@@ -39,7 +39,7 @@ function PlayerAimState:execute(owner) end
 function PlayerAimState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

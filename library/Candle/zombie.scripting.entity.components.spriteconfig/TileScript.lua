@@ -21,7 +21,7 @@ function TileScript:isBlocksSquare() end
 function TileScript:isEmptySpace() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

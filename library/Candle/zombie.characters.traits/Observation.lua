@@ -14,12 +14,18 @@ function Observation:getDescription() end
 
 --- @public
 --- @return string
---- @overload fun(self: Observation): string
 function Observation:getLabel() end
 
 --- @public
 --- @return string
---- @overload fun(self: Observation): string
+function Observation:getLabel() end
+
+--- @public
+--- @return string
+function Observation:getLeftLabel() end
+
+--- @public
+--- @return string
 function Observation:getLeftLabel() end
 
 --- @public
@@ -28,7 +34,10 @@ function Observation:getName() end
 
 --- @public
 --- @return string
---- @overload fun(self: Observation): string
+function Observation:getRightLabel() end
+
+--- @public
+--- @return string
 function Observation:getRightLabel() end
 
 --- @public
@@ -51,7 +60,7 @@ function Observation:setName(name) end
 function Observation:setTraitID(traitID) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

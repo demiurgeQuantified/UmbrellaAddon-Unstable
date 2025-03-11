@@ -17,7 +17,7 @@ function WornItem:getItem() end
 function WornItem:getLocation() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

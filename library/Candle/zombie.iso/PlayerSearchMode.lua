@@ -53,7 +53,7 @@ function PlayerSearchMode:getShaderRadius() end
 function PlayerSearchMode:isShaderEnabled() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

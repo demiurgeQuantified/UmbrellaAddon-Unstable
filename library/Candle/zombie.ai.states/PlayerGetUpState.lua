@@ -33,7 +33,7 @@ function PlayerGetUpState:execute(owner) end
 function PlayerGetUpState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

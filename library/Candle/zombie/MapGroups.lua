@@ -24,9 +24,20 @@ function MapGroups:checkMapConflicts() end
 
 --- @public
 --- @return nil
---- @overload fun(self: MapGroups, activeMods: ActiveMods, includeVanilla: boolean): nil
---- @overload fun(self: MapGroups, activeMods: ActiveMods, includeVanilla: boolean, includeChallenges: boolean): nil
 function MapGroups:createGroups() end
+
+--- @public
+--- @param activeMods ActiveMods
+--- @param includeVanilla boolean
+--- @return nil
+function MapGroups:createGroups(activeMods, includeVanilla) end
+
+--- @public
+--- @param activeMods ActiveMods
+--- @param includeVanilla boolean
+--- @param includeChallenges boolean
+--- @return nil
+function MapGroups:createGroups(activeMods, includeVanilla, includeChallenges) end
 
 --- @public
 --- @return ArrayList
@@ -52,7 +63,7 @@ function MapGroups:getNumberOfGroups() end
 function MapGroups:setWorld(groupIndex) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

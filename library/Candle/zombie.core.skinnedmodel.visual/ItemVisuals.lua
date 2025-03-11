@@ -32,7 +32,7 @@ function ItemVisuals:load(input, WorldVersion) end
 function ItemVisuals:save(output) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

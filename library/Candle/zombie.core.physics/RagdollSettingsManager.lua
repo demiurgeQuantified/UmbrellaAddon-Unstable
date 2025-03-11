@@ -42,8 +42,12 @@ function RagdollSettingsManager:getEnabledSetting(arg0) end
 
 --- @public
 --- @return ForceHitReactionLocation
---- @overload fun(self: RagdollSettingsManager, arg0: integer): ForceHitReactionLocation
 function RagdollSettingsManager:getForceHitReactionLocation() end
+
+--- @public
+--- @param arg0 integer
+--- @return ForceHitReactionLocation
+function RagdollSettingsManager:getForceHitReactionLocation(arg0) end
 
 --- @public
 --- @return string
@@ -119,7 +123,7 @@ function RagdollSettingsManager:update() end
 function RagdollSettingsManager:usePhysicHitReaction(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

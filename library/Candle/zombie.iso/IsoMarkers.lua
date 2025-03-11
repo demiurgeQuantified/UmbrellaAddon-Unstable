@@ -27,9 +27,47 @@ function IsoMarkers:addCircleIsoMarker(gs, r, g, b, a) end
 --- @param doAlpha boolean
 --- @param doIsoObject boolean
 --- @return IsoMarker
---- @overload fun(self: IsoMarkers, textureTable: table, textureOverlayTable: table, gs: IsoGridSquare, r: number, g: number, b: number, doAlpha: boolean, doIsoObject: boolean): IsoMarker
---- @overload fun(self: IsoMarkers, textureTable: table, textureOverlayTable: table, gs: IsoGridSquare, r: number, g: number, b: number, doAlpha: boolean, doIsoObject: boolean, fadeSpeed: number, fadeMin: number, fadeMax: number): IsoMarker
 function IsoMarkers:addIsoMarker(spriteName, gs, r, g, b, doAlpha, doIsoObject) end
+
+--- @public
+--- @param textureTable table
+--- @param textureOverlayTable table
+--- @param gs IsoGridSquare
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param doAlpha boolean
+--- @param doIsoObject boolean
+--- @return IsoMarker
+function IsoMarkers:addIsoMarker(textureTable, textureOverlayTable, gs, r, g, b, doAlpha, doIsoObject) end
+
+--- @public
+--- @param textureTable table
+--- @param textureOverlayTable table
+--- @param gs IsoGridSquare
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param doAlpha boolean
+--- @param doIsoObject boolean
+--- @param fadeSpeed number
+--- @param fadeMin number
+--- @param fadeMax number
+--- @return IsoMarker
+function IsoMarkers:addIsoMarker(
+	textureTable,
+	textureOverlayTable,
+	gs,
+	r,
+	g,
+	b,
+	doAlpha,
+	doIsoObject,
+	fadeSpeed,
+	fadeMin,
+	fadeMax
+)
+end
 
 --- @public
 --- @param id integer
@@ -48,14 +86,22 @@ function IsoMarkers:init() end
 --- @public
 --- @param id integer
 --- @return boolean
---- @overload fun(self: IsoMarkers, marker: CircleIsoMarker): boolean
 function IsoMarkers:removeCircleIsoMarker(id) end
+
+--- @public
+--- @param marker CircleIsoMarker
+--- @return boolean
+function IsoMarkers:removeCircleIsoMarker(marker) end
 
 --- @public
 --- @param id integer
 --- @return boolean
---- @overload fun(self: IsoMarkers, marker: IsoMarker): boolean
 function IsoMarkers:removeIsoMarker(id) end
+
+--- @public
+--- @param marker IsoMarker
+--- @return boolean
+function IsoMarkers:removeIsoMarker(marker) end
 
 --- @public
 --- @return nil

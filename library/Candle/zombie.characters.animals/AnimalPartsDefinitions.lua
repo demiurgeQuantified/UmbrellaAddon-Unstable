@@ -40,7 +40,7 @@ function AnimalPartsDefinitions.getDef(arg0, arg1) end
 function AnimalPartsDefinitions.getLeather(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

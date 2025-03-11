@@ -104,7 +104,7 @@ function ClimbThroughWindowState:getWindow(owner) end
 
 --- @public
 ---
----  Description copied from class: State
+--- Description copied from class: State
 ---
 --- @param owner IsoGameCharacter
 --- @param fromX integer
@@ -144,7 +144,7 @@ function ClimbThroughWindowState:isWindowClosing(owner) end
 function ClimbThroughWindowState:setParams(owner, obj) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

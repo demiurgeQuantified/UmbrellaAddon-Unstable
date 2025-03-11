@@ -54,14 +54,25 @@ function TileDepthTextureManager:getPresetTilesetDepthTexture() end
 --- @param arg0 string
 --- @param arg1 integer
 --- @return TileDepthTexture
---- @overload fun(self: TileDepthTextureManager, arg0: string, arg1: string, arg2: integer): TileDepthTexture
 function TileDepthTextureManager:getTexture(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
 --- @return TileDepthTexture
---- @overload fun(self: TileDepthTextureManager, arg0: string, arg1: string): TileDepthTexture
+function TileDepthTextureManager:getTexture(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @return TileDepthTexture
 function TileDepthTextureManager:getTextureFromTileName(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @return TileDepthTexture
+function TileDepthTextureManager:getTextureFromTileName(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -78,8 +89,12 @@ function TileDepthTextureManager:initModData(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: TileDepthTextureManager, arg0: string): nil
 function TileDepthTextureManager:initSprites() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function TileDepthTextureManager:initSprites(arg0) end
 
 --- @public
 --- @return boolean

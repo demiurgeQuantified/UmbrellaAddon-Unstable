@@ -20,7 +20,7 @@ function RDSRatKing:isValid(arg0, arg1) end
 function RDSRatKing:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

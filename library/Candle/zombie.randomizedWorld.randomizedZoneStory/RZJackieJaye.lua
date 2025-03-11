@@ -14,7 +14,7 @@ RZJackieJaye = {}
 function RZJackieJaye:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

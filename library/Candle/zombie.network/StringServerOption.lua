@@ -10,16 +10,22 @@ StringServerOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: StringServerOption): ConfigOption
+function StringServerOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function StringServerOption:asConfigOption() end
 
 --- @public
 --- @return string
---- @overload fun(self: StringServerOption): string
+function StringServerOption:getTooltip() end
+
+--- @public
+--- @return string
 function StringServerOption:getTooltip() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

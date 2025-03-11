@@ -21,11 +21,78 @@ function WorldSoundManager:KillCell() end
 --- @param radius integer
 --- @param volume integer
 --- @return WorldSound
---- @overload fun(self: WorldSoundManager, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean): WorldSound
---- @overload fun(self: WorldSoundManager, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean, zombieIgnoreDist: number, stressMod: number): WorldSound
---- @overload fun(self: WorldSoundManager, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean, zombieIgnoreDist: number, stressMod: number, sourceIsZombie: boolean, doSend: boolean, remote: boolean): WorldSound
---- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number, arg9: boolean, arg10: boolean, arg11: boolean, arg12: boolean): WorldSound
 function WorldSoundManager:addSound(source, x, y, z, radius, volume) end
+
+--- @public
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param stressHumans boolean
+--- @return WorldSound
+function WorldSoundManager:addSound(source, x, y, z, radius, volume, stressHumans) end
+
+--- @public
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param stressHumans boolean
+--- @param zombieIgnoreDist number
+--- @param stressMod number
+--- @return WorldSound
+function WorldSoundManager:addSound(source, x, y, z, radius, volume, stressHumans, zombieIgnoreDist, stressMod) end
+
+--- @public
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param stressHumans boolean
+--- @param zombieIgnoreDist number
+--- @param stressMod number
+--- @param sourceIsZombie boolean
+--- @param doSend boolean
+--- @param remote boolean
+--- @return WorldSound
+function WorldSoundManager:addSound(
+	source,
+	x,
+	y,
+	z,
+	radius,
+	volume,
+	stressHumans,
+	zombieIgnoreDist,
+	stressMod,
+	sourceIsZombie,
+	doSend,
+	remote
+)
+end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 boolean
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 boolean
+--- @param arg10 boolean
+--- @param arg11 boolean
+--- @param arg12 boolean
+--- @return WorldSound
+function WorldSoundManager:addSound(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) end
 
 --- @public
 --- @param source any
@@ -36,8 +103,20 @@ function WorldSoundManager:addSound(source, x, y, z, radius, volume) end
 --- @param volume integer
 --- @param StressHumans boolean
 --- @return WorldSound
---- @overload fun(self: WorldSoundManager, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
 function WorldSoundManager:addSoundRepeating(source, x, y, z, radius, volume, StressHumans) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 boolean
+--- @param arg7 number
+--- @param arg8 number
+--- @return WorldSound
+function WorldSoundManager:addSoundRepeating(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
 --- @param x integer
@@ -51,7 +130,11 @@ function WorldSoundManager:getBiggestSoundZomb(x, y, z, ignoreBySameType, zom) e
 --- @public
 --- @param arg0 integer
 --- @return number
---- @overload fun(self: WorldSoundManager, arg0: IsoZombie): number
+function WorldSoundManager:getHearingMultiplier(arg0) end
+
+--- @public
+--- @param arg0 IsoZombie
+--- @return number
 function WorldSoundManager:getHearingMultiplier(arg0) end
 
 --- @public
@@ -105,7 +188,7 @@ function WorldSoundManager:render() end
 function WorldSoundManager:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

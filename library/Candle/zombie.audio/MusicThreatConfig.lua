@@ -58,7 +58,7 @@ function MusicThreatConfig:isStatusIntensityOverridden(arg0) end
 function MusicThreatConfig:setStatusIntensityOverride(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

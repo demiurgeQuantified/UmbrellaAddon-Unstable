@@ -33,7 +33,7 @@ function PlayerOnGroundState:execute(owner) end
 function PlayerOnGroundState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

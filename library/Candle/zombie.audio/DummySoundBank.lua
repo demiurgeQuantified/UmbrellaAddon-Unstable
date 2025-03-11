@@ -35,7 +35,7 @@ function DummySoundBank:getFootstep(alias) end
 function DummySoundBank:getVoice(alias) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

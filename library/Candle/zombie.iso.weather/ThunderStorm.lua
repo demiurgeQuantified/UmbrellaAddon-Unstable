@@ -66,7 +66,7 @@ function ThunderStorm:readNetThunderEvent(input) end
 
 --- @public
 ---
----  IO
+--- IO
 ---
 --- @param output DataOutputStream
 --- @return nil
@@ -81,8 +81,29 @@ function ThunderStorm:save(output) end
 --- @param duration number
 --- @param targetRandomPlayer boolean
 --- @return nil
---- @overload fun(self: ThunderStorm, str: number, angle: number, radius: number, eventFreq: number, thunderRatio: number, duration: number, targetRandomPlayer: boolean, percentageOffset: number): ThunderCloud
 function ThunderStorm:startThunderCloud(str, angle, radius, eventFreq, thunderRatio, duration, targetRandomPlayer) end
+
+--- @public
+--- @param str number
+--- @param angle number
+--- @param radius number
+--- @param eventFreq number
+--- @param thunderRatio number
+--- @param duration number
+--- @param targetRandomPlayer boolean
+--- @param percentageOffset number
+--- @return ThunderCloud
+function ThunderStorm:startThunderCloud(
+	str,
+	angle,
+	radius,
+	eventFreq,
+	thunderRatio,
+	duration,
+	targetRandomPlayer,
+	percentageOffset
+)
+end
 
 --- @public
 --- @return nil
@@ -113,7 +134,7 @@ function ThunderStorm:update(currentTime) end
 function ThunderStorm:writeNetThunderEvent(output) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -198,11 +198,17 @@ function IsoFeedingTrough:update() end
 function IsoFeedingTrough:updateLuaObject() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoFeedingTrough
---- @overload fun(arg0: IsoGridSquare, arg1: string, arg2: IsoGridSquare): IsoFeedingTrough
 function IsoFeedingTrough.new(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 string
+--- @param arg2 IsoGridSquare
+--- @return IsoFeedingTrough
+function IsoFeedingTrough.new(arg0, arg1, arg2) end

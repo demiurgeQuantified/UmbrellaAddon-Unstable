@@ -19,10 +19,10 @@ function ChatBase:close() end
 
 --- @public
 ---
----  Message creator. Every chat know how to create its own message
+--- Message creator. Every chat know how to create its own message
 ---
 --- @param text string text of the message
---- @return ChatMessage corresponding object to message
+--- @return ChatMessage _ corresponding object to message
 function ChatBase:createMessage(text) end
 
 --- @public
@@ -107,15 +107,24 @@ function ChatBase:removeMember(playerID) end
 --- @public
 --- @param msg ChatMessage
 --- @return nil
---- @overload fun(self: ChatBase, msg: ServerChatMessage): nil
+function ChatBase:sendMessageToChatMembers(msg) end
+
+--- @public
+--- @param msg ServerChatMessage
+--- @return nil
 function ChatBase:sendMessageToChatMembers(msg) end
 
 --- @public
 --- @param playerID short
 --- @param msg ChatMessage
 --- @return nil
---- @overload fun(self: ChatBase, connection: UdpConnection, msg: ChatMessage): nil
 function ChatBase:sendMessageToPlayer(playerID, msg) end
+
+--- @public
+--- @param connection UdpConnection
+--- @param msg ChatMessage
+--- @return nil
+function ChatBase:sendMessageToPlayer(connection, msg) end
 
 --- @public
 --- @param playerConnection UdpConnection
@@ -125,8 +134,12 @@ function ChatBase:sendPlayerJoinChatPacket(playerConnection) end
 --- @public
 --- @param playerID short
 --- @return nil
---- @overload fun(self: ChatBase, connection: UdpConnection): nil
 function ChatBase:sendPlayerLeaveChatPacket(playerID) end
+
+--- @public
+--- @param connection UdpConnection
+--- @return nil
+function ChatBase:sendPlayerLeaveChatPacket(connection) end
 
 --- @public
 --- @param msg ChatMessage
@@ -157,8 +170,13 @@ function ChatBase:setShowTitle(showTitle) end
 --- @public
 --- @param msg ChatMessage
 --- @return nil
---- @overload fun(self: ChatBase, text: string, author: string): nil
 function ChatBase:showMessage(msg) end
+
+--- @public
+--- @param text string
+--- @param author string
+--- @return nil
+function ChatBase:showMessage(text, author) end
 
 --- @public
 --- @param players ArrayList
@@ -171,16 +189,26 @@ function ChatBase:syncMembersByUsernames(players) end
 function ChatBase:unpackMessage(bb) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 ---
----  Should be called only on server side of chat system
+--- Should be called only on server side of chat system
 ---
---- @param id integer
---- @param type ChatType
---- @param tab ChatTab
+--- @param id integer unique id of chat. It will be used to identify chat in client-server communication
+--- @param type ChatType meta information about chat. Many parameters depends on that
+--- @param tab ChatTab this tab will transferred to clients when it will connecting
 --- @return ChatBase
---- @overload fun(bb: ByteBuffer, type: ChatType, tab: ChatTab, owner: IsoPlayer): ChatBase
 function ChatBase.new(id, type, tab) end
+
+--- @public
+---
+--- Should called only on client side of chat system
+---
+--- @param bb ByteBuffer package from server that describe how chat should look and work
+--- @param type ChatType meta information about chat. Many parameters depends on that
+--- @param tab ChatTab tab where chat should show their info
+--- @param owner IsoPlayer actual player instance
+--- @return ChatBase
+function ChatBase.new(bb, type, tab, owner) end

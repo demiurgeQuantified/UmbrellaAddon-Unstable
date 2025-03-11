@@ -70,7 +70,7 @@ function HairStyles:getRandomFemaleStyle(outfitName) end
 function HairStyles:getRandomMaleStyle(outfitName) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

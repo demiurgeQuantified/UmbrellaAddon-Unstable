@@ -95,7 +95,7 @@ function GameSounds.saveINI() end
 function GameSounds.stopPreview() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

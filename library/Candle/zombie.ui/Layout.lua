@@ -34,7 +34,7 @@ function Layout:setMinLabelWidth(minWidth) end
 function Layout:setMinValueWidth(minWidth) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

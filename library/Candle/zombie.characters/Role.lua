@@ -111,7 +111,7 @@ function Role:setDescription(arg0) end
 function Role:setReadOnly() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

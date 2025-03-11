@@ -39,8 +39,13 @@ function TilesetDepthTexture:getName() end
 --- @public
 --- @param arg0 integer
 --- @return TileDepthTexture
---- @overload fun(self: TilesetDepthTexture, arg0: integer, arg1: integer): TileDepthTexture
 function TilesetDepthTexture:getOrCreateTile(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return TileDepthTexture
+function TilesetDepthTexture:getOrCreateTile(arg0, arg1) end
 
 --- @public
 --- @return string
@@ -109,7 +114,7 @@ function TilesetDepthTexture:save() end
 function TilesetDepthTexture:setKeepPixels(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -28,7 +28,7 @@ function RVSCarCrashDeer:randomizeVehicleStory(arg0, arg1) end
 function RVSCarCrashDeer:spawnElement(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

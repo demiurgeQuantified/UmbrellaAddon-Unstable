@@ -16,7 +16,11 @@ function OutputScript:OnScriptsLoaded(arg0) end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
---- @overload fun(self: OutputScript, arg0: Item): boolean
+function OutputScript:canOutputItem(arg0) end
+
+--- @public
+--- @param arg0 Item
+--- @return boolean
 function OutputScript:canOutputItem(arg0) end
 
 --- @public
@@ -125,7 +129,11 @@ function OutputScript:isCreateUses() end
 --- @public
 --- @param arg0 Energy
 --- @return boolean
---- @overload fun(self: OutputScript, arg0: DrainableComboItem): boolean
+function OutputScript:isEnergyMatch(arg0) end
+
+--- @public
+--- @param arg0 DrainableComboItem
+--- @return boolean
 function OutputScript:isEnergyMatch(arg0) end
 
 --- @public

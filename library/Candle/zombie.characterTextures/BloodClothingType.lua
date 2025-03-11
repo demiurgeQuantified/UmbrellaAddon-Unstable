@@ -46,7 +46,7 @@ BloodClothingType = {}
 --- @public
 --- @static
 ---
----  Should be used only for debug, use Clothing.addPatch for gameplay stuff
+--- Should be used only for debug, use Clothing.addPatch for gameplay stuff
 ---
 --- @param part BloodBodyPartType
 --- @param humanVisual HumanVisual
@@ -61,8 +61,6 @@ function BloodClothingType.addBasicPatch(part, humanVisual, itemVisuals) end
 --- @param itemVisuals ArrayList
 --- @param allLayers boolean
 --- @return nil
---- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): nil
---- @overload fun(part: BloodBodyPartType, intensity: number, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): nil
 function BloodClothingType.addBlood(count, humanVisual, itemVisuals, allLayers) end
 
 --- @public
@@ -72,8 +70,36 @@ function BloodClothingType.addBlood(count, humanVisual, itemVisuals, allLayers) 
 --- @param itemVisuals ArrayList
 --- @param allLayers boolean
 --- @return nil
---- @overload fun(part: BloodBodyPartType, intensity: number, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): nil
+function BloodClothingType.addBlood(part, humanVisual, itemVisuals, allLayers) end
+
+--- @public
+--- @static
+--- @param part BloodBodyPartType
+--- @param intensity number
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
+--- @param allLayers boolean
+--- @return nil
+function BloodClothingType.addBlood(part, intensity, humanVisual, itemVisuals, allLayers) end
+
+--- @public
+--- @static
+--- @param part BloodBodyPartType
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
+--- @param allLayers boolean
+--- @return nil
 function BloodClothingType.addDirt(part, humanVisual, itemVisuals, allLayers) end
+
+--- @public
+--- @static
+--- @param part BloodBodyPartType
+--- @param intensity number
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
+--- @param allLayers boolean
+--- @return nil
+function BloodClothingType.addDirt(part, intensity, humanVisual, itemVisuals, allLayers) end
 
 --- @public
 --- @static
@@ -81,8 +107,16 @@ function BloodClothingType.addDirt(part, humanVisual, itemVisuals, allLayers) en
 --- @param humanVisual HumanVisual
 --- @param itemVisuals ArrayList
 --- @return nil
---- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): boolean
 function BloodClothingType.addHole(part, humanVisual, itemVisuals) end
+
+--- @public
+--- @static
+--- @param part BloodBodyPartType
+--- @param humanVisual HumanVisual
+--- @param itemVisuals ArrayList
+--- @param allLayers boolean
+--- @return boolean
+function BloodClothingType.addHole(part, humanVisual, itemVisuals, allLayers) end
 
 --- @public
 --- @static
@@ -112,8 +146,14 @@ function BloodClothingType.getCoveredPartCount(bloodClothingType) end
 --- @static
 --- @param bloodClothingType ArrayList
 --- @return ArrayList
---- @overload fun(bloodClothingType: ArrayList, result: ArrayList): ArrayList
 function BloodClothingType.getCoveredParts(bloodClothingType) end
+
+--- @public
+--- @static
+--- @param bloodClothingType ArrayList
+--- @param result ArrayList
+--- @return ArrayList
+function BloodClothingType.getCoveredParts(bloodClothingType, result) end
 
 --- @public
 --- @static
@@ -124,8 +164,8 @@ function BloodClothingType.valueOf(arg0) end
 --- @public
 --- @static
 ---
----  Returns an array containing the constants of this enum class, in the order they
----  declared.
+--- Returns an array containing the constants of this enum class, in the order they
+--- declared.
 ---
---- @return BloodClothingType[] an array containing the constants of this enum class, in the order they are declared
+--- @return BloodClothingType[] _ an array containing the constants of this enum class, in the order they are declared
 function BloodClothingType.values() end

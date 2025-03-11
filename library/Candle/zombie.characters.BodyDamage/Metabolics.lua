@@ -59,10 +59,10 @@ function Metabolics.valueOf(arg0) end
 --- @public
 --- @static
 ---
----  Returns an array containing the constants of this enum class, in the order they
----  declared.
+--- Returns an array containing the constants of this enum class, in the order they
+--- declared.
 ---
---- @return Metabolics[] an array containing the constants of this enum class, in the order they are declared
+--- @return Metabolics[] _ an array containing the constants of this enum class, in the order they are declared
 function Metabolics.values() end
 
 ------------------------------------

@@ -35,11 +35,20 @@ function PVPEvent:isSet() end
 --- @param arg3 number
 --- @param arg4 number
 --- @return nil
---- @overload fun(self: PVPEvent, arg0: string, arg1: string, arg2: string, arg3: number, arg4: number, arg5: number): nil
 function PVPEvent:reset(arg0, arg1, arg2, arg3, arg4) end
 
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
+function PVPEvent:reset(arg0, arg1, arg2, arg3, arg4, arg5) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

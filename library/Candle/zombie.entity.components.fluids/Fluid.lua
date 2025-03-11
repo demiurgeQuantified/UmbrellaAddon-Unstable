@@ -43,7 +43,12 @@ function Fluid.FluidsInitialized() end
 --- @static
 --- @param arg0 string
 --- @return Fluid
---- @overload fun(arg0: FluidType): Fluid
+function Fluid.Get(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 FluidType
+--- @return Fluid
 function Fluid.Get(arg0) end
 
 --- @public

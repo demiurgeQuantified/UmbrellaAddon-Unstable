@@ -18,7 +18,7 @@ function Clothing.CreateFromSprite(Sprite) end
 --- @public
 --- @static
 ---
----  Used from lua tooltip when repairing clothing
+--- Used from lua tooltip when repairing clothing
 ---
 --- @param chr IsoGameCharacter
 --- @param fabric InventoryItem
@@ -28,7 +28,7 @@ function Clothing.getBiteDefenseFromItem(chr, fabric) end
 --- @public
 --- @static
 ---
----  Used from lua tooltip when repairing clothing
+--- Used from lua tooltip when repairing clothing
 ---
 --- @param chr IsoGameCharacter
 --- @param fabric InventoryItem
@@ -56,8 +56,12 @@ function Clothing:IsClothing() end
 
 --- @public
 --- @return nil
---- @overload fun(self: Clothing, arg0: boolean): nil
 function Clothing:Unwear() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Clothing:Unwear(arg0) end
 
 --- @public
 --- @param bCrafting boolean
@@ -110,8 +114,12 @@ function Clothing:copyPatchesTo(newClothing) end
 
 --- @public
 --- @return nil
---- @overload fun(self: Clothing, arg0: number): nil
 function Clothing:drainGasMask() end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function Clothing:drainGasMask(arg0) end
 
 --- @public
 --- @return nil
@@ -219,7 +227,7 @@ function Clothing:getHolesNumber() end
 function Clothing:getInsulation() end
 
 --- @public
---- @return string the name
+--- @return string _ the name
 function Clothing:getName() end
 
 --- @public
@@ -231,7 +239,7 @@ function Clothing:getNbrOfCoveredParts() end
 function Clothing:getNeckProtectionModifier() end
 
 --- @public
---- @return string the palette
+--- @return string _ the palette
 function Clothing:getPalette() end
 
 --- @public
@@ -256,7 +264,7 @@ function Clothing:getSaveType() end
 function Clothing:getScratchDefense() end
 
 --- @public
---- @return string the SpriteName
+--- @return string _ the SpriteName
 function Clothing:getSpriteName() end
 
 --- @public
@@ -284,7 +292,7 @@ function Clothing:getUsedDelta() end
 function Clothing:getWaterResistance() end
 
 --- @public
---- @return number the Weight
+--- @return number _ the Weight
 function Clothing:getWeight() end
 
 --- @public
@@ -495,11 +503,15 @@ function Clothing:update() end
 
 --- @public
 --- @return nil
---- @overload fun(self: Clothing, bIgnoreEquipped: boolean): nil
 function Clothing:updateWetness() end
 
+--- @public
+--- @param bIgnoreEquipped boolean
+--- @return nil
+function Clothing:updateWetness(bIgnoreEquipped) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -510,5 +522,14 @@ function Clothing:updateWetness() end
 --- @param palette string
 --- @param SpriteName string
 --- @return Clothing
---- @overload fun(module: string, name: string, itemType: string, item: Item, palette: string, SpriteName: string): Clothing
 function Clothing.new(module, name, itemType, texName, palette, SpriteName) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param item Item
+--- @param palette string
+--- @param SpriteName string
+--- @return Clothing
+function Clothing.new(module, name, itemType, item, palette, SpriteName) end

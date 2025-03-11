@@ -69,11 +69,15 @@ function IsoButcherHook:stopRemovingBlood() end
 function IsoButcherHook:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoButcherHook
---- @overload fun(arg0: IsoGridSquare): IsoButcherHook
+function IsoButcherHook.new(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return IsoButcherHook
 function IsoButcherHook.new(arg0) end

@@ -77,10 +77,14 @@ function WeatherStage:setStageID(id) end
 function WeatherStage:setTargetStrength(t) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return WeatherStage
---- @overload fun(id: integer): WeatherStage
 function WeatherStage.new() end
+
+--- @public
+--- @param id integer
+--- @return WeatherStage
+function WeatherStage.new(id) end

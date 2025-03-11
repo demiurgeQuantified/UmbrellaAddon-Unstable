@@ -14,7 +14,7 @@ RZSOccultActivity = {}
 function RZSOccultActivity:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

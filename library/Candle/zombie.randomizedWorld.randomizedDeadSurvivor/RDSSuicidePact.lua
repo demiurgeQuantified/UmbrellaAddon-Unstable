@@ -14,7 +14,7 @@ RDSSuicidePact = {}
 function RDSSuicidePact:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

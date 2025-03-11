@@ -34,7 +34,7 @@ function ContainerOverlays:hasOverlays(obj) end
 function ContainerOverlays:updateContainerOverlaySprite(obj) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

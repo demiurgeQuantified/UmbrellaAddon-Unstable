@@ -25,7 +25,7 @@ function CharacterTraits:getTraitWeatherPenaltyModifier() end
 function CharacterTraits:isIlliterate() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

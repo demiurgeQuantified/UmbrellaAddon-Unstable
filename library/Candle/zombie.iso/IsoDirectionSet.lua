@@ -24,7 +24,7 @@ function IsoDirectionSet.rotate(dir, amount) end
 function IsoDirectionSet:getNext() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

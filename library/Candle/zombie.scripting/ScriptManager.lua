@@ -51,7 +51,13 @@ function ScriptManager.isDebugEnabled(arg0) end
 --- @param arg0 ScriptType
 --- @param arg1 string
 --- @return nil
---- @overload fun(arg0: BaseScriptObject, arg1: string): nil
+function ScriptManager.println(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 BaseScriptObject
+--- @param arg1 string
+--- @return nil
 function ScriptManager.println(arg0, arg1) end
 
 --- @public
@@ -72,8 +78,13 @@ function ScriptManager:CheckExitPoints() end
 --- @public
 --- @param name string
 --- @return Item
---- @overload fun(self: ScriptManager, name: string, moduleDefaultsToBase: boolean): Item
 function ScriptManager:FindItem(name) end
+
+--- @public
+--- @param name string
+--- @param moduleDefaultsToBase boolean
+--- @return Item
+function ScriptManager:FindItem(name, moduleDefaultsToBase) end
 
 --- @public
 --- @return nil
@@ -107,7 +118,11 @@ function ScriptManager:PostWorldDictionaryInit() end
 --- @public
 --- @param arg0 EnumSet
 --- @return nil
---- @overload fun(self: ScriptManager, arg0: ScriptType): nil
+function ScriptManager:ReloadScripts(arg0) end
+
+--- @public
+--- @param arg0 ScriptType
+--- @return nil
 function ScriptManager:ReloadScripts(arg0) end
 
 --- @public
@@ -340,7 +355,11 @@ function ScriptManager:getGameSound(arg0) end
 --- @public
 --- @param name string
 --- @return Item
---- @overload fun(self: ScriptManager, name: string): Item
+function ScriptManager:getItem(name) end
+
+--- @public
+--- @param name string
+--- @return Item
 function ScriptManager:getItem(name) end
 
 --- @public
@@ -386,8 +405,13 @@ function ScriptManager:getModelScript(name) end
 --- @public
 --- @param name string
 --- @return ScriptModule
---- @overload fun(self: ScriptManager, name: string, defaultToBase: boolean): ScriptModule
 function ScriptManager:getModule(name) end
+
+--- @public
+--- @param name string
+--- @param defaultToBase boolean
+--- @return ScriptModule
+function ScriptManager:getModule(name, defaultToBase) end
 
 --- @public
 --- @param name string
@@ -412,7 +436,11 @@ function ScriptManager:getRagdollScript(arg0) end
 --- @public
 --- @param name string
 --- @return Recipe
---- @overload fun(self: ScriptManager, name: string): Recipe
+function ScriptManager:getRecipe(name) end
+
+--- @public
+--- @param name string
+--- @return Recipe
 function ScriptManager:getRecipe(name) end
 
 --- @public
@@ -437,7 +465,7 @@ function ScriptManager:getSpecificEntity(arg0) end
 
 --- @public
 ---
----  Attempts to get the specific item of "module.type" without defaulting to module
+--- Attempts to get the specific item of "module.type" without defaulting to module
 ---
 --- @param name string
 --- @return Item
@@ -514,8 +542,12 @@ function ScriptManager:getZedDmgMap() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: ScriptManager, arg0: boolean): boolean
 function ScriptManager:hasLoadErrors() end
+
+--- @public
+--- @param arg0 boolean
+--- @return boolean
+function ScriptManager:hasLoadErrors(arg0) end
 
 --- @public
 --- @param itemType string
@@ -546,7 +578,7 @@ function ScriptManager:searchFolders(base, fo, loadList) end
 function ScriptManager:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

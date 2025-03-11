@@ -27,10 +27,14 @@ function StorySoundEvent:setEventSounds(eventSounds) end
 function StorySoundEvent:setName(name) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return StorySoundEvent
---- @overload fun(name: string): StorySoundEvent
 function StorySoundEvent.new() end
+
+--- @public
+--- @param name string
+--- @return StorySoundEvent
+function StorySoundEvent.new(name) end

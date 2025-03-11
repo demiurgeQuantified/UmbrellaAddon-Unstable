@@ -14,7 +14,7 @@ RDSCorpsePsycho = {}
 function RDSCorpsePsycho:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -23,7 +23,7 @@ function RZSBurntWreck.getForestClutter() end
 function RZSBurntWreck:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

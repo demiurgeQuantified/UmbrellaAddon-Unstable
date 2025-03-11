@@ -28,7 +28,7 @@ function RVSConstructionSite:randomizeVehicleStory(zone, chunk) end
 function RVSConstructionSite:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

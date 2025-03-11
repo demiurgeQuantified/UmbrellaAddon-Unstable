@@ -18,7 +18,7 @@ function ZLayer:getHeight() end
 function ZLayer:getRow(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

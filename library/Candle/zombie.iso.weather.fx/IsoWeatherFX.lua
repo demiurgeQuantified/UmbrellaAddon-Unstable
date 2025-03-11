@@ -170,7 +170,7 @@ function IsoWeatherFX:setWindPrecipIntensity(intensity) end
 function IsoWeatherFX:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

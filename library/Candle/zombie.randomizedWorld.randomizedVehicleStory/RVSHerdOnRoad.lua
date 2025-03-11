@@ -24,7 +24,7 @@ function RVSHerdOnRoad.getBreeds() end
 function RVSHerdOnRoad:randomizeVehicleStory(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -241,7 +241,7 @@ function Keyboard.next() end
 function Keyboard.poll() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

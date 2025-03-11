@@ -109,7 +109,7 @@ function Recipe:setNearItem(nearItem) end
 function Recipe:setOriginalname(originalname) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

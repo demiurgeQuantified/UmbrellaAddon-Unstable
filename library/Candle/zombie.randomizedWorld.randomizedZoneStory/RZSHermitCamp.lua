@@ -33,7 +33,7 @@ function RZSHermitCamp.getForestClutter() end
 function RZSHermitCamp:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

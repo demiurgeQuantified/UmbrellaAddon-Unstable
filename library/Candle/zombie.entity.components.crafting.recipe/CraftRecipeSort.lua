@@ -31,7 +31,7 @@ function CraftRecipeSort.canPerformAndValidRecipes(arg0, arg1, arg2, arg3) end
 function CraftRecipeSort.validRecipes(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

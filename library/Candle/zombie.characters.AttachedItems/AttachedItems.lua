@@ -71,11 +71,15 @@ function AttachedItems:setItem(location, item) end
 function AttachedItems:size() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param other AttachedItems
 --- @return AttachedItems
---- @overload fun(group: AttachedLocationGroup): AttachedItems
 function AttachedItems.new(other) end
+
+--- @public
+--- @param group AttachedLocationGroup
+--- @return AttachedItems
+function AttachedItems.new(group) end

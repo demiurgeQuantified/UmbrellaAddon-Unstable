@@ -25,7 +25,7 @@ function RBNolans:randomizeBuilding(arg0) end
 function RBNolans:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -50,7 +50,7 @@ function AtomUITexture:setSlice9(arg0, arg1, arg2, arg3) end
 function AtomUITexture:setTexture(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

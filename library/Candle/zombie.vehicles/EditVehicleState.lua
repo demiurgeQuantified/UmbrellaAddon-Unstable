@@ -64,7 +64,7 @@ function EditVehicleState:update() end
 function EditVehicleState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

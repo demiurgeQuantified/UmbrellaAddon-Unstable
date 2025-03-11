@@ -126,7 +126,7 @@ function SpriteModelEditorState:update() end
 function SpriteModelEditorState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

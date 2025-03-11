@@ -40,8 +40,8 @@ function CharacterActionAnims.valueOf(arg0) end
 --- @public
 --- @static
 ---
----  Returns an array containing the constants of this enum class, in the order they
----  declared.
+--- Returns an array containing the constants of this enum class, in the order they
+--- declared.
 ---
---- @return CharacterActionAnims[] an array containing the constants of this enum class, in the order they are declared
+--- @return CharacterActionAnims[] _ an array containing the constants of this enum class, in the order they are declared
 function CharacterActionAnims.values() end

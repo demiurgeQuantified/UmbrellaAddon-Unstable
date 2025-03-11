@@ -43,22 +43,55 @@ function RandomizedBuildingBase:addRandomRangedWeapon(container, addBulletsInGun
 --- @param sq IsoGridSquare
 --- @param obj IsoObject
 --- @return InventoryItem
---- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: IsoObject, arg3: boolean): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, item: string, sq: IsoGridSquare, xoffset: number, yoffset: number, zoffset: number): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number, arg5: boolean): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, item: string, sq: IsoGridSquare, xoffset: number, yoffset: number, zoffset: number, worldZ: integer): InventoryItem
 function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 IsoGridSquare
+--- @param arg2 IsoObject
+--- @param arg3 boolean
+--- @return InventoryItem
+function RandomizedBuildingBase:addWorldItem(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param item string
+--- @param sq IsoGridSquare
+--- @param xoffset number
+--- @param yoffset number
+--- @param zoffset number
+--- @return InventoryItem
+function RandomizedBuildingBase:addWorldItem(item, sq, xoffset, yoffset, zoffset) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoGridSquare
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 boolean
+--- @return InventoryItem
+function RandomizedBuildingBase:addWorldItem(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param item string
+--- @param sq IsoGridSquare
+--- @param xoffset number
+--- @param yoffset number
+--- @param zoffset number
+--- @param worldZ integer
+--- @return InventoryItem
+function RandomizedBuildingBase:addWorldItem(item, sq, xoffset, yoffset, zoffset, worldZ) end
+
+--- @public
 ---
----  If you specify a outfit, make sure it works for both gender! (or force
----  to 0 or 1 if it's gender-specific)
+--- If you specify a outfit, make sure it works for both gender! (or force
+--- to 0 or 1 if it's gender-specific)
 ---
 --- @param def BuildingDef buildingDef
---- @param totalZombies integer
---- @param outfit string
---- @param femaleChance integer
---- @param room RoomDef
+--- @param totalZombies integer zombies to spawn (if 0 we gonna randomize it)
+--- @param outfit string force zombies spanwed in a specific outfit (not mandatory)
+--- @param femaleChance integer force female zombies (if not set it'll be 50% chance, you can set             it to 0 to exclude female from spawning, or 100 to force only             female)
+--- @param room RoomDef force spawn zombies inside a certain room (not mandatory)
 --- @return ArrayList
 function RandomizedBuildingBase:addZombies(def, totalZombies, outfit, femaleChance, room) end
 
@@ -72,8 +105,12 @@ function RandomizedBuildingBase:addZombiesOnSquare(totalZombies, outfit, femaleC
 
 --- @public
 --- @return integer
---- @overload fun(self: RandomizedBuildingBase, arg0: IsoGridSquare): integer
 function RandomizedBuildingBase:getChance() end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return integer
+function RandomizedBuildingBase:getChance(arg0) end
 
 --- @public
 --- @param sq IsoGridSquare
@@ -109,9 +146,9 @@ function RandomizedBuildingBase:isTableFor3DItems(obj, sq) end
 
 --- @public
 ---
----  Don't do any building change in a player's building Also check if the  building
----  a bathroom, a kitchen and a bedroom  This is ignored for the alwaysDo building
----  i can do stuff in spiffo, pizzawhirled, etc..)
+--- Don't do any building change in a player's building Also check if the  building
+--- a bathroom, a kitchen and a bedroom  This is ignored for the alwaysDo building
+--- i can do stuff in spiffo, pizzawhirled, etc..)
 ---
 --- @param def BuildingDef
 --- @param force boolean
@@ -151,7 +188,7 @@ function RandomizedBuildingBase:setMinimumRooms(minimumRooms) end
 function RandomizedBuildingBase:spawnItemsInContainers(def, distribName, chance) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -39,8 +39,15 @@ function ColorInfo:interp(to, delta, dest) end
 --- @public
 --- @param other ColorInfo
 --- @return ColorInfo
---- @overload fun(self: ColorInfo, R: number, G: number, B: number, A: number): ColorInfo
 function ColorInfo:set(other) end
+
+--- @public
+--- @param R number
+--- @param G number
+--- @param B number
+--- @param A number
+--- @return ColorInfo
+function ColorInfo:set(R, G, B, A) end
 
 --- @public
 --- @param arg0 integer
@@ -60,10 +67,17 @@ function ColorInfo:toImmutableColor() end
 function ColorInfo:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return ColorInfo
---- @overload fun(R: number, G: number, B: number, A: number): ColorInfo
 function ColorInfo.new() end
+
+--- @public
+--- @param R number
+--- @param G number
+--- @param B number
+--- @param A number
+--- @return ColorInfo
+function ColorInfo.new(R, G, B, A) end

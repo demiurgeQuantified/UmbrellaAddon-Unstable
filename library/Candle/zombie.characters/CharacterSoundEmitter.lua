@@ -15,7 +15,11 @@ function CharacterSoundEmitter:hasSoundsToStart() end
 --- @public
 --- @param handle integer
 --- @return boolean
---- @overload fun(self: CharacterSoundEmitter, handle: integer): boolean
+function CharacterSoundEmitter:hasSustainPoints(handle) end
+
+--- @public
+--- @param handle integer
+--- @return boolean
 function CharacterSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
@@ -24,16 +28,31 @@ function CharacterSoundEmitter:isClear() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: CharacterSoundEmitter): boolean
+function CharacterSoundEmitter:isEmpty() end
+
+--- @public
+--- @return boolean
 function CharacterSoundEmitter:isEmpty() end
 
 --- @public
 --- @param alias string
 --- @return boolean
---- @overload fun(self: CharacterSoundEmitter, alias: string): boolean
---- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): boolean
---- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): boolean
 function CharacterSoundEmitter:isPlaying(alias) end
+
+--- @public
+--- @param alias string
+--- @return boolean
+function CharacterSoundEmitter:isPlaying(alias) end
+
+--- @public
+--- @param eventInstance integer
+--- @return boolean
+function CharacterSoundEmitter:isPlaying(eventInstance) end
+
+--- @public
+--- @param eventInstance integer
+--- @return boolean
+function CharacterSoundEmitter:isPlaying(eventInstance) end
 
 --- @public
 --- @param file string
@@ -44,11 +63,31 @@ function CharacterSoundEmitter:playFootsteps(file, volume) end
 --- @public
 --- @param file string
 --- @return integer
---- @overload fun(self: CharacterSoundEmitter, file: string): integer
---- @overload fun(self: CharacterSoundEmitter, file: string, doWorldSound: boolean): integer
---- @overload fun(self: CharacterSoundEmitter, file: string, doWorldSound: boolean): integer
---- @overload fun(self: CharacterSoundEmitter, file: string, proxy: IsoObject): integer
 function CharacterSoundEmitter:playSound(file) end
+
+--- @public
+--- @param file string
+--- @return integer
+function CharacterSoundEmitter:playSound(file) end
+
+--- @public
+--- @param file string
+--- @param doWorldSound boolean
+--- @return integer
+function CharacterSoundEmitter:playSound(file, doWorldSound) end
+
+--- @public
+--- @param file string
+--- @param doWorldSound boolean
+--- @return integer
+--- @deprecated
+function CharacterSoundEmitter:playSound(file, doWorldSound) end
+
+--- @public
+--- @param file string
+--- @param proxy IsoObject
+--- @return integer
+function CharacterSoundEmitter:playSound(file, proxy) end
 
 --- @public
 --- @param file string
@@ -90,7 +129,12 @@ function CharacterSoundEmitter:setParameterValueByName(arg0, arg1, arg2) end
 --- @param handle integer
 --- @param pitch number
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, handle: integer, pitch: number): nil
+function CharacterSoundEmitter:setPitch(handle, pitch) end
+
+--- @public
+--- @param handle integer
+--- @param pitch number
+--- @return nil
 function CharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
@@ -98,14 +142,25 @@ function CharacterSoundEmitter:setPitch(handle, pitch) end
 --- @param y number
 --- @param z number
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, x: number, y: number, z: number): nil
+function CharacterSoundEmitter:setPos(x, y, z) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
+--- @return nil
 function CharacterSoundEmitter:setPos(x, y, z) end
 
 --- @public
 --- @param handle integer
 --- @param volume number
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, handle: integer, volume: number): nil
+function CharacterSoundEmitter:setVolume(handle, volume) end
+
+--- @public
+--- @param handle integer
+--- @param volume number
+--- @return nil
 function CharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
@@ -115,25 +170,41 @@ function CharacterSoundEmitter:stopAll() end
 --- @public
 --- @param eventInstance integer
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): nil
+function CharacterSoundEmitter:stopOrTriggerSound(eventInstance) end
+
+--- @public
+--- @param eventInstance integer
+--- @return nil
 function CharacterSoundEmitter:stopOrTriggerSound(eventInstance) end
 
 --- @public
 --- @param name string
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, name: string): nil
+function CharacterSoundEmitter:stopOrTriggerSoundByName(name) end
+
+--- @public
+--- @param name string
+--- @return nil
 function CharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, arg0: integer): nil
+function CharacterSoundEmitter:stopOrTriggerSoundLocal(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function CharacterSoundEmitter:stopOrTriggerSoundLocal(arg0) end
 
 --- @public
 --- @param eventInstance integer
 --- @return integer
---- @overload fun(self: CharacterSoundEmitter, eventInstance: integer): integer
+function CharacterSoundEmitter:stopSound(eventInstance) end
+
+--- @public
+--- @param eventInstance integer
+--- @return integer
 function CharacterSoundEmitter:stopSound(eventInstance) end
 
 --- @public
@@ -148,13 +219,20 @@ function CharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter): nil
+function CharacterSoundEmitter:tick() end
+
+--- @public
+--- @return nil
 function CharacterSoundEmitter:tick() end
 
 --- @public
 --- @param handle integer
 --- @return nil
---- @overload fun(self: CharacterSoundEmitter, handle: integer): nil
+function CharacterSoundEmitter:triggerCue(handle) end
+
+--- @public
+--- @param handle integer
+--- @return nil
 function CharacterSoundEmitter:triggerCue(handle) end
 
 --- @public
@@ -162,7 +240,7 @@ function CharacterSoundEmitter:triggerCue(handle) end
 function CharacterSoundEmitter:unregister() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

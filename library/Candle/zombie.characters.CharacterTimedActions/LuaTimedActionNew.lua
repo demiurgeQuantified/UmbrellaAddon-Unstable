@@ -11,7 +11,11 @@ LuaTimedActionNew = {}
 --- @public
 --- @param mover Mover
 --- @return nil
---- @overload fun(self: LuaTimedActionNew, mover: Mover): nil
+function LuaTimedActionNew:Failed(mover) end
+
+--- @public
+--- @param mover Mover
+--- @return nil
 function LuaTimedActionNew:Failed(mover) end
 
 --- @public
@@ -31,7 +35,12 @@ function LuaTimedActionNew:Pathfind(chr, x, y, z) end
 --- @param path Path
 --- @param mover Mover
 --- @return nil
---- @overload fun(self: LuaTimedActionNew, path: Path, mover: Mover): nil
+function LuaTimedActionNew:Succeeded(path, mover) end
+
+--- @public
+--- @param path Path
+--- @param mover Mover
+--- @return nil
 function LuaTimedActionNew:Succeeded(path, mover) end
 
 --- @public
@@ -49,7 +58,10 @@ function LuaTimedActionNew:getMetaType() end
 
 --- @public
 --- @return string
---- @overload fun(self: LuaTimedActionNew): string
+function LuaTimedActionNew:getName() end
+
+--- @public
+--- @return string
 function LuaTimedActionNew:getName() end
 
 --- @public
@@ -102,7 +114,7 @@ function LuaTimedActionNew:valid() end
 function LuaTimedActionNew:waitToStart() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

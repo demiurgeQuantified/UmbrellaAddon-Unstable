@@ -12,8 +12,13 @@ UniqueRecipe = {}
 --- @param name string
 --- @param strArray String[]
 --- @return nil
---- @overload fun(self: UniqueRecipe, arg0: string, arg1: string): nil
 function UniqueRecipe:Load(name, strArray) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
+function UniqueRecipe:Load(arg0, arg1) end
 
 --- @public
 --- @return string
@@ -65,7 +70,7 @@ function UniqueRecipe:setHungerBonus(hungerBonus) end
 function UniqueRecipe:setName(name) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

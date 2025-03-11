@@ -88,8 +88,18 @@ function DebugLog.enableServerLogs() end
 --- @param arg3 boolean
 --- @param arg4 string
 --- @return string
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: any, arg3: boolean, arg4: string, arg5: Object[]): string
 function DebugLog.formatString(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param arg0 DebugType
+--- @param arg1 LogSeverity
+--- @param arg2 any
+--- @param arg3 boolean
+--- @param arg4 string
+--- @param arg5 Object[]
+--- @return string
+function DebugLog.formatString(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
@@ -173,8 +183,14 @@ function DebugLog.loadDebugConfig(arg0) end
 --- @static
 --- @param str string
 --- @return nil
---- @overload fun(type: DebugType, str: string): nil
 function DebugLog.log(str) end
+
+--- @public
+--- @static
+--- @param type DebugType
+--- @param str string
+--- @return nil
+function DebugLog.log(type, str) end
 
 --- @public
 --- @static
@@ -221,7 +237,7 @@ function DebugLog.setStdErr(out) end
 function DebugLog.setStdOut(out) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

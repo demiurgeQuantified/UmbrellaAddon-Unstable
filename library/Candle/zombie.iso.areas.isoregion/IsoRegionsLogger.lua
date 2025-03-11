@@ -21,7 +21,7 @@ function IsoRegionsLogger:isDirtyUI() end
 function IsoRegionsLogger:unsetDirtyUI() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

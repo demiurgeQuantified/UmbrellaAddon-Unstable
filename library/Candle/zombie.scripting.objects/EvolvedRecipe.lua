@@ -121,7 +121,7 @@ function EvolvedRecipe:setAllowFrozenItem(allow) end
 function EvolvedRecipe:setIsHidden(hide) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

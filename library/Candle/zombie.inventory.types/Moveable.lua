@@ -59,7 +59,7 @@ function Moveable:getLightR() end
 function Moveable:getMovableFullName() end
 
 --- @public
---- @return string the name
+--- @return string _ the name
 function Moveable:getName() end
 
 --- @public
@@ -153,7 +153,7 @@ function Moveable:setLightUseBattery(lightUseBattery) end
 function Moveable:setWorldSprite(WorldSprite) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -162,5 +162,12 @@ function Moveable:setWorldSprite(WorldSprite) end
 --- @param type string
 --- @param tex string
 --- @return Moveable
---- @overload fun(module: string, name: string, type: string, item: Item): Moveable
 function Moveable.new(module, name, type, tex) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param item Item
+--- @return Moveable
+function Moveable.new(module, name, type, item) end

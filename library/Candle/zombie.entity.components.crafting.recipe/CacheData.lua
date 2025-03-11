@@ -40,7 +40,7 @@ function CacheData:isMoveToOutputs() end
 function CacheData:setMoveToOutputs(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

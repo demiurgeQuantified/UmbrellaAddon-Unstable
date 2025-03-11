@@ -92,7 +92,7 @@ function AnimationViewerState:update() end
 function AnimationViewerState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

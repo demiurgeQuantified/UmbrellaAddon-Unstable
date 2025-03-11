@@ -14,7 +14,7 @@ RDSGunslinger = {}
 function RDSGunslinger:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

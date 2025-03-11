@@ -24,7 +24,7 @@ function VehicleEngineRPM:getName() end
 function VehicleEngineRPM:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -29,23 +29,33 @@ function GameKeyboard.getEventQueuePolling() end
 --- @public
 --- @static
 ---
----  Is the key down. Continuous.
+--- Is the key down. Continuous.
 ---
 --- @param key integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
 function GameKeyboard.isKeyDown(key) end
 
 --- @public
 --- @static
+--- @param arg0 string
+--- @return boolean
+function GameKeyboard.isKeyDown(arg0) end
+
+--- @public
+--- @static
 ---
----  Has the key been pressed. Not continuous. That is, is the key down now, but was
----  down before.
+--- Has the key been pressed. Not continuous. That is, is the key down now, but was
+--- down before.
 ---
 --- @param key integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
 function GameKeyboard.isKeyPressed(key) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return boolean
+function GameKeyboard.isKeyPressed(arg0) end
 
 --- @public
 --- @static
@@ -66,12 +76,17 @@ function GameKeyboard.update() end
 --- @public
 --- @static
 ---
----  Was they key down last frame. Continuous.
+--- Was they key down last frame. Continuous.
 ---
 --- @param key integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
 function GameKeyboard.wasKeyDown(key) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return boolean
+function GameKeyboard.wasKeyDown(arg0) end
 
 --- @public
 --- @static
@@ -92,7 +107,7 @@ function GameKeyboard.whichKeyPressed(arg0) end
 function GameKeyboard.whichKeyWasDown(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

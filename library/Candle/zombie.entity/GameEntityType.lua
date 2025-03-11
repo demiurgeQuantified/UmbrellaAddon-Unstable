@@ -37,12 +37,18 @@ function GameEntityType.values() end
 
 --- @public
 --- @return integer
---- @overload fun(self: GameEntityType): integer
 function GameEntityType:getBits() end
 
 --- @public
 --- @return integer
---- @overload fun(self: GameEntityType): integer
+function GameEntityType:getBits() end
+
+--- @public
+--- @return integer
+function GameEntityType:getByteId() end
+
+--- @public
+--- @return integer
 function GameEntityType:getByteId() end
 
 --- @public

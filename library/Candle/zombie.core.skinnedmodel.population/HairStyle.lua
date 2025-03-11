@@ -42,7 +42,7 @@ function HairStyle:isNoChoose() end
 function HairStyle:isValid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

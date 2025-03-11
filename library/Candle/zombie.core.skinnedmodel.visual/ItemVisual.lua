@@ -59,8 +59,12 @@ function ItemVisual:getAlternateModelName() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ItemVisual, clothingItem: ClothingItem): string
 function ItemVisual:getBaseTexture() end
+
+--- @public
+--- @param clothingItem ClothingItem
+--- @return string
+function ItemVisual:getBaseTexture(clothingItem) end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
@@ -119,8 +123,12 @@ function ItemVisual:getHolesNumber() end
 
 --- @public
 --- @return number
---- @overload fun(self: ItemVisual, clothingItem: ClothingItem): number
 function ItemVisual:getHue() end
+
+--- @public
+--- @param clothingItem ClothingItem
+--- @return number
+function ItemVisual:getHue(clothingItem) end
 
 --- @public
 --- @return InventoryItem
@@ -145,13 +153,21 @@ function ItemVisual:getScriptItem() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ItemVisual, clothingItem: ClothingItem): string
 function ItemVisual:getTextureChoice() end
 
 --- @public
+--- @param clothingItem ClothingItem
+--- @return string
+function ItemVisual:getTextureChoice(clothingItem) end
+
+--- @public
 --- @return ImmutableColor
---- @overload fun(self: ItemVisual, clothingItem: ClothingItem): ImmutableColor
 function ItemVisual:getTint() end
+
+--- @public
+--- @param clothingItem ClothingItem
+--- @return ImmutableColor
+function ItemVisual:getTint(clothingItem) end
 
 --- @public
 --- @return number
@@ -278,10 +294,14 @@ function ItemVisual:synchWithOutfit(itemRef) end
 function ItemVisual:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return ItemVisual
---- @overload fun(other: ItemVisual): ItemVisual
 function ItemVisual.new() end
+
+--- @public
+--- @param other ItemVisual
+--- @return ItemVisual
+function ItemVisual.new(other) end

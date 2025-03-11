@@ -103,9 +103,18 @@ function BuildingDef:getMinLevel() end
 
 --- @public
 --- @return RoomDef
---- @overload fun(self: BuildingDef, minArea: integer): RoomDef
---- @overload fun(self: BuildingDef, arg0: integer, arg1: boolean): RoomDef
 function BuildingDef:getRandomRoom() end
+
+--- @public
+--- @param minArea integer
+--- @return RoomDef
+function BuildingDef:getRandomRoom(minArea) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 boolean
+--- @return RoomDef
+function BuildingDef:getRandomRoom(arg0, arg1) end
 
 --- @public
 --- @param arg0 integer
@@ -115,8 +124,13 @@ function BuildingDef:getRoofRoomID(arg0) end
 --- @public
 --- @param roomName string
 --- @return RoomDef
---- @overload fun(self: BuildingDef, arg0: string, arg1: boolean): RoomDef
 function BuildingDef:getRoom(roomName) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return RoomDef
+function BuildingDef:getRoom(arg0, arg1) end
 
 --- @public
 --- @return ArrayList
@@ -244,7 +258,7 @@ function BuildingDef:setKeyId(keyId) end
 function BuildingDef:setKeySpawned(keySpawned) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

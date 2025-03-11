@@ -31,7 +31,7 @@ function Stack:push(arg0) end
 function Stack:search(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

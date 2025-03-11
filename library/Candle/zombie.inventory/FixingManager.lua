@@ -50,7 +50,7 @@ function FixingManager.getFixes(item) end
 function FixingManager.useFixer(chr, fixer, brokenItem) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

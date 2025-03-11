@@ -40,7 +40,7 @@ function AtomUIText:setFont(arg0) end
 function AtomUIText:setText(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

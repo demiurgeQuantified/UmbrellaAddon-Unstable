@@ -10,14 +10,14 @@ IDestroyable = {}
 
 --- @public
 ---
----  destory the object
+--- destory the object
 ---
 --- @return nil
 function IDestroyable:destroy() end
 
 --- @public
 ---
----  returns if the object is destryed or not
+--- returns if the object is destryed or not
 ---
 --- @return boolean
 function IDestroyable:isDestroyed() end

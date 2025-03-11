@@ -49,7 +49,7 @@ function CGlobalObjectSystem:receiveUpdateLuaObjectAt(x, y, z, args) end
 function CGlobalObjectSystem:sendCommand(command, player, args) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

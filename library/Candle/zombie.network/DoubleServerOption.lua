@@ -10,16 +10,22 @@ DoubleServerOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: DoubleServerOption): ConfigOption
+function DoubleServerOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function DoubleServerOption:asConfigOption() end
 
 --- @public
 --- @return string
---- @overload fun(self: DoubleServerOption): string
+function DoubleServerOption:getTooltip() end
+
+--- @public
+--- @return string
 function DoubleServerOption:getTooltip() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

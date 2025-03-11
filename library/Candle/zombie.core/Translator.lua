@@ -142,16 +142,46 @@ function Translator.getRecipeName(name) end
 --- @public
 --- @static
 ---
----  Return the translated text for the selected language  If we don't fnid any
----  for the selected language, we return the default text (in English)
+--- Return the translated text for the selected language  If we don't fnid any
+--- for the selected language, we return the default text (in English)
 ---
 --- @param desc string
 --- @return string
---- @overload fun(desc: string, arg1: any): string
---- @overload fun(desc: string, arg1: any, arg2: any): string
---- @overload fun(desc: string, arg1: any, arg2: any, arg3: any): string
---- @overload fun(desc: string, arg1: any, arg2: any, arg3: any, arg4: any): string
 function Translator.getText(desc) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @return string
+function Translator.getText(desc, arg1) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @param arg2 any
+--- @return string
+function Translator.getText(desc, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return string
+function Translator.getText(desc, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return string
+function Translator.getText(desc, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -163,11 +193,41 @@ function Translator.getTextMediaEN(desc) end
 --- @static
 --- @param desc string
 --- @return string
---- @overload fun(desc: string, arg1: any): string
---- @overload fun(desc: string, arg1: any, arg2: any): string
---- @overload fun(desc: string, arg1: any, arg2: any, arg3: any): string
---- @overload fun(desc: string, arg1: any, arg2: any, arg3: any, arg4: any): string
 function Translator.getTextOrNull(desc) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @return string
+function Translator.getTextOrNull(desc, arg1) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @param arg2 any
+--- @return string
+function Translator.getTextOrNull(desc, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return string
+function Translator.getTextOrNull(desc, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param desc string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return string
+function Translator.getTextOrNull(desc, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -185,11 +245,16 @@ function Translator.setDefaultItemEvolvedRecipeName(fullType, english) end
 --- @static
 --- @param languageId integer
 --- @return nil
---- @overload fun(newlanguage: Language): nil
 function Translator.setLanguage(languageId) end
 
+--- @public
+--- @static
+--- @param newlanguage Language
+--- @return nil
+function Translator.setLanguage(newlanguage) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

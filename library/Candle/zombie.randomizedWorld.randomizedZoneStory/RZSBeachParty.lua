@@ -14,7 +14,7 @@ RZSBeachParty = {}
 function RZSBeachParty:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -14,7 +14,7 @@ RDSDevouredByRats = {}
 function RDSDevouredByRats:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

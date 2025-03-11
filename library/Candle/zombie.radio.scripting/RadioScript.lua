@@ -11,8 +11,13 @@ RadioScript = {}
 --- @public
 --- @param broadcast RadioBroadCast
 --- @return nil
---- @overload fun(self: RadioScript, broadcast: RadioBroadCast, ignoreTimestamps: boolean): nil
 function RadioScript:AddBroadcast(broadcast) end
+
+--- @public
+--- @param broadcast RadioBroadCast
+--- @param ignoreTimestamps boolean
+--- @return nil
+function RadioScript:AddBroadcast(broadcast, ignoreTimestamps) end
 
 --- @public
 --- @param scriptname string
@@ -93,7 +98,7 @@ function RadioScript:getValidAirBroadcastDebug() end
 function RadioScript:setStartDayStamp(day) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -101,5 +106,12 @@ function RadioScript:setStartDayStamp(day) end
 --- @param loopmin integer
 --- @param loopmax integer
 --- @return RadioScript
---- @overload fun(n: string, loopmin: integer, loopmax: integer, guid: string): RadioScript
 function RadioScript.new(n, loopmin, loopmax) end
+
+--- @public
+--- @param n string
+--- @param loopmin integer
+--- @param loopmax integer
+--- @param guid string
+--- @return RadioScript
+function RadioScript.new(n, loopmin, loopmax, guid) end

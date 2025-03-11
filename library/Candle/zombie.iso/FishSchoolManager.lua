@@ -88,7 +88,7 @@ function FishSchoolManager:updateFishingData() end
 function FishSchoolManager:updateSeed() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

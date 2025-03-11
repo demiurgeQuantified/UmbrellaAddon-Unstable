@@ -34,7 +34,11 @@ function ItemFilterScript:PreReload() end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
---- @overload fun(self: ItemFilterScript, arg0: Item): boolean
+function ItemFilterScript:allowsItem(arg0) end
+
+--- @public
+--- @param arg0 Item
+--- @return boolean
 function ItemFilterScript:allowsItem(arg0) end
 
 --- @public
@@ -42,7 +46,7 @@ function ItemFilterScript:allowsItem(arg0) end
 function ItemFilterScript:getName() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

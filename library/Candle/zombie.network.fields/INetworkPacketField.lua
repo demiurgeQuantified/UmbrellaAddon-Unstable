@@ -17,8 +17,12 @@ function INetworkPacketField:getClassDescription(arg0, arg1, arg2) end
 
 --- @public
 --- @return string
---- @overload fun(self: INetworkPacketField, arg0: HashSet): string
 function INetworkPacketField:getDescription() end
+
+--- @public
+--- @param arg0 HashSet
+--- @return string
+function INetworkPacketField:getDescription(arg0) end
 
 --- @public
 --- @return integer

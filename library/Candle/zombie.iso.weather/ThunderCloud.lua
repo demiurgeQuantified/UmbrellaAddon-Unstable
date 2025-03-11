@@ -40,7 +40,7 @@ function ThunderCloud:lifeTime() end
 function ThunderCloud:setCenter(centerX, centerY, angle) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

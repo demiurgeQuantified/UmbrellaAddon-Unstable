@@ -25,7 +25,7 @@ function RBBarn:randomizeBuilding(arg0) end
 function RBBarn:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

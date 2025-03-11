@@ -52,7 +52,10 @@ function Collection:isEmpty() end
 
 --- @public
 --- @return Iterator
---- @overload fun(self: Collection): Iterator
+function Collection:iterator() end
+
+--- @public
+--- @return Iterator
 function Collection:iterator() end
 
 --- @public
@@ -85,7 +88,10 @@ function Collection:size() end
 
 --- @public
 --- @return Spliterator
---- @overload fun(self: Collection): Spliterator
+function Collection:spliterator() end
+
+--- @public
+--- @return Spliterator
 function Collection:spliterator() end
 
 --- @public
@@ -94,6 +100,14 @@ function Collection:stream() end
 
 --- @public
 --- @return Object[]
---- @overload fun(self: Collection, arg0: Object[]): Object[]
---- @overload fun(self: Collection, arg0: IntFunction): Object[]
 function Collection:toArray() end
+
+--- @public
+--- @param arg0 Object[]
+--- @return Object[]
+function Collection:toArray(arg0) end
+
+--- @public
+--- @param arg0 IntFunction
+--- @return Object[]
+function Collection:toArray(arg0) end

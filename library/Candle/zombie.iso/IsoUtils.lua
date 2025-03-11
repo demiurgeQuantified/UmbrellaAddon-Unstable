@@ -15,8 +15,18 @@ IsoUtils = {}
 --- @param toX number
 --- @param toY number
 --- @return number
---- @overload fun(fromX: number, fromY: number, toX: number, toY: number, fromZ: number, toZ: number): number
 function IsoUtils.DistanceManhatten(fromX, fromY, toX, toY) end
+
+--- @public
+--- @static
+--- @param fromX number
+--- @param fromY number
+--- @param toX number
+--- @param toY number
+--- @param fromZ number
+--- @param toZ number
+--- @return number
+function IsoUtils.DistanceManhatten(fromX, fromY, toX, toY, fromZ, toZ) end
 
 --- @public
 --- @static
@@ -34,8 +44,18 @@ function IsoUtils.DistanceManhattenSquare(fromX, fromY, toX, toY) end
 --- @param toX number
 --- @param toY number
 --- @return number
---- @overload fun(fromX: number, fromY: number, fromZ: number, toX: number, toY: number, toZ: number): number
 function IsoUtils.DistanceTo(fromX, fromY, toX, toY) end
+
+--- @public
+--- @static
+--- @param fromX number
+--- @param fromY number
+--- @param fromZ number
+--- @param toX number
+--- @param toY number
+--- @param toZ number
+--- @return number
+function IsoUtils.DistanceTo(fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
 --- @static
@@ -53,8 +73,18 @@ function IsoUtils.DistanceTo2D(fromX, fromY, toX, toY) end
 --- @param toX number
 --- @param toY number
 --- @return number
---- @overload fun(fromX: number, fromY: number, fromZ: number, toX: number, toY: number, toZ: number): number
 function IsoUtils.DistanceToSquared(fromX, fromY, toX, toY) end
+
+--- @public
+--- @static
+--- @param fromX number
+--- @param fromY number
+--- @param fromZ number
+--- @param toX number
+--- @param toY number
+--- @param toZ number
+--- @return number
+function IsoUtils.DistanceToSquared(fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
 --- @static
@@ -170,7 +200,7 @@ function IsoUtils.lerp(val, min, max) end
 function IsoUtils.smoothstep(edge0, edge1, x) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

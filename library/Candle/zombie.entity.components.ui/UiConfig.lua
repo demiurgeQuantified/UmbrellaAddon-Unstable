@@ -22,8 +22,12 @@ function UiConfig:getEntityUiStyle() end
 
 --- @public
 --- @return XuiSkin
---- @overload fun(self: UiConfig, arg0: boolean): XuiSkin
 function UiConfig:getSkin() end
+
+--- @public
+--- @param arg0 boolean
+--- @return XuiSkin
+function UiConfig:getSkin(arg0) end
 
 --- @public
 --- @return XuiSkin

@@ -71,7 +71,7 @@ function AnimalAllele:setTrueRatioValue(arg0) end
 function AnimalAllele:setUsed(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

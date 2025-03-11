@@ -24,12 +24,18 @@ function UITextBox2:clearInput() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
 function UITextBox2:copyToClipboard() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:copyToClipboard() end
+
+--- @public
+--- @return nil
+function UITextBox2:cutToClipboard() end
+
+--- @public
+--- @return nil
 function UITextBox2:cutToClipboard() end
 
 --- @public
@@ -50,7 +56,10 @@ function UITextBox2:getForceUpperCase() end
 
 --- @public
 --- @return UINineGrid
---- @overload fun(self: UITextBox2): UINineGrid
+function UITextBox2:getFrame() end
+
+--- @public
+--- @return UINineGrid
 function UITextBox2:getFrame() end
 
 --- @public
@@ -75,7 +84,10 @@ function UITextBox2:getMaxTextLength() end
 
 --- @public
 --- @return Color
---- @overload fun(self: UITextBox2): Color
+function UITextBox2:getStandardFrameColour() end
+
+--- @public
+--- @return Color
 function UITextBox2:getStandardFrameColour() end
 
 --- @public
@@ -92,12 +104,18 @@ function UITextBox2:ignoreFirstInput() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: UITextBox2): boolean
 function UITextBox2:isDoingTextEntry() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: UITextBox2): boolean
+function UITextBox2:isDoingTextEntry() end
+
+--- @public
+--- @return boolean
+function UITextBox2:isEditable() end
+
+--- @public
+--- @return boolean
 function UITextBox2:isEditable() end
 
 --- @public
@@ -106,7 +124,10 @@ function UITextBox2:isFocused() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: UITextBox2): boolean
+function UITextBox2:isIgnoreFirst() end
+
+--- @public
+--- @return boolean
 function UITextBox2:isIgnoreFirst() end
 
 --- @public
@@ -119,12 +140,18 @@ function UITextBox2:isMultipleLine() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: UITextBox2): boolean
 function UITextBox2:isOnlyNumbers() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: UITextBox2): boolean
+function UITextBox2:isOnlyNumbers() end
+
+--- @public
+--- @return boolean
+function UITextBox2:isOnlyText() end
+
+--- @public
+--- @return boolean
 function UITextBox2:isOnlyText() end
 
 --- @public
@@ -133,7 +160,10 @@ function UITextBox2:isSelectable() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: UITextBox2): boolean
+function UITextBox2:isTextLimit() end
+
+--- @public
+--- @return boolean
 function UITextBox2:isTextLimit() end
 
 --- @public
@@ -142,47 +172,74 @@ function UITextBox2:onCommandEntered() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
 function UITextBox2:onKeyBack() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyBack() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyDelete() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyDelete() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyDown() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyDown() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyEnd() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyEnd() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyEnter() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyEnter() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyHome() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyHome() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyLeft() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyLeft() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyRight() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:onKeyRight() end
+
+--- @public
+--- @return nil
+function UITextBox2:onKeyUp() end
+
+--- @public
+--- @return nil
 function UITextBox2:onKeyUp() end
 
 --- @public
@@ -222,7 +279,11 @@ function UITextBox2:onMouseUpOutside(x, y) end
 --- @public
 --- @param key integer
 --- @return nil
---- @overload fun(self: UITextBox2, key: integer): nil
+function UITextBox2:onOtherKey(key) end
+
+--- @public
+--- @param key integer
+--- @return nil
 function UITextBox2:onOtherKey(key) end
 
 --- @public
@@ -243,13 +304,20 @@ function UITextBox2:onresize() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:pasteFromClipboard() end
+
+--- @public
+--- @return nil
 function UITextBox2:pasteFromClipboard() end
 
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: UITextBox2, arg0: string): nil
+function UITextBox2:putCharacter(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function UITextBox2:putCharacter(arg0) end
 
 --- @public
@@ -262,7 +330,10 @@ function UITextBox2:resetBlink() end
 
 --- @public
 --- @return nil
---- @overload fun(self: UITextBox2): nil
+function UITextBox2:selectAll() end
+
+--- @public
+--- @return nil
 function UITextBox2:selectAll() end
 
 --- @public
@@ -288,7 +359,11 @@ function UITextBox2:setCursorPos(charIndex) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
---- @overload fun(self: UITextBox2, arg0: boolean): nil
+function UITextBox2:setDoingTextEntry(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
 function UITextBox2:setDoingTextEntry(arg0) end
 
 --- @public
@@ -319,7 +394,11 @@ function UITextBox2:setHasFrame(hasFrame) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
---- @overload fun(self: UITextBox2, arg0: boolean): nil
+function UITextBox2:setIgnoreFirst(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
 function UITextBox2:setIgnoreFirst(arg0) end
 
 --- @public
@@ -360,7 +439,11 @@ function UITextBox2:setSelectable(b) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
---- @overload fun(self: UITextBox2, arg0: boolean): nil
+function UITextBox2:setSelectingRange(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
 function UITextBox2:setSelectingRange(arg0) end
 
 --- @public
@@ -399,7 +482,7 @@ function UITextBox2:update() end
 function UITextBox2:updateText() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

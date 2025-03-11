@@ -18,8 +18,15 @@ function FluidSample.Alloc() end
 --- @param arg0 ByteBuffer
 --- @param arg1 integer
 --- @return FluidSample
---- @overload fun(arg0: FluidSample, arg1: ByteBuffer, arg2: integer): FluidSample
 function FluidSample.Load(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 FluidSample
+--- @param arg1 ByteBuffer
+--- @param arg2 integer
+--- @return FluidSample
+function FluidSample.Load(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -64,7 +71,11 @@ function FluidSample:getFluid(arg0) end
 --- @public
 --- @param arg0 integer
 --- @return FluidInstance
---- @overload fun(self: FluidSample, arg0: Fluid): FluidInstance
+function FluidSample:getFluidInstance(arg0) end
+
+--- @public
+--- @param arg0 Fluid
+--- @return FluidInstance
 function FluidSample:getFluidInstance(arg0) end
 
 --- @public

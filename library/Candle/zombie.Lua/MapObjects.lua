@@ -14,8 +14,15 @@ MapObjects = {}
 --- @param __function__ function
 --- @param priority integer
 --- @return nil
---- @overload fun(spriteNames: table, __function__: function, priority: integer): nil
 function MapObjects.OnLoadWithSprite(spriteName, __function__, priority) end
+
+--- @public
+--- @static
+--- @param spriteNames table
+--- @param __function__ function
+--- @param priority integer
+--- @return nil
+function MapObjects.OnLoadWithSprite(spriteNames, __function__, priority) end
 
 --- @public
 --- @static
@@ -23,8 +30,15 @@ function MapObjects.OnLoadWithSprite(spriteName, __function__, priority) end
 --- @param __function__ function
 --- @param priority integer
 --- @return nil
---- @overload fun(spriteNames: table, __function__: function, priority: integer): nil
 function MapObjects.OnNewWithSprite(spriteName, __function__, priority) end
+
+--- @public
+--- @static
+--- @param spriteNames table
+--- @param __function__ function
+--- @param priority integer
+--- @return nil
+function MapObjects.OnNewWithSprite(spriteNames, __function__, priority) end
 
 --- @public
 --- @static
@@ -74,7 +88,7 @@ function MapObjects.newGridSquare(square) end
 function MapObjects.reroute(prototype, luaClosure) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

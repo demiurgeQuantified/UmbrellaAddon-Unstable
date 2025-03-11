@@ -23,7 +23,7 @@ function RZSEscapedHerd.getBreeds() end
 function RZSEscapedHerd:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

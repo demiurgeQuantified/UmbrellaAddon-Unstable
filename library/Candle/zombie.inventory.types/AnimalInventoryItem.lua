@@ -60,7 +60,7 @@ function AnimalInventoryItem:shouldUpdateInWorld() end
 function AnimalInventoryItem:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -69,5 +69,12 @@ function AnimalInventoryItem:update() end
 --- @param arg2 string
 --- @param arg3 string
 --- @return AnimalInventoryItem
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: Item): AnimalInventoryItem
+function AnimalInventoryItem.new(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 Item
+--- @return AnimalInventoryItem
 function AnimalInventoryItem.new(arg0, arg1, arg2, arg3) end

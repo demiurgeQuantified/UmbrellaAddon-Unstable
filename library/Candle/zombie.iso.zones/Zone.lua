@@ -167,8 +167,15 @@ function Zone:isRectangle() end
 --- @param arg0 ByteBuffer
 --- @param arg1 integer
 --- @return Zone
---- @overload fun(self: Zone, arg0: ByteBuffer, arg1: integer, arg2: Map, arg3: SharedStrings): Zone
 function Zone:load(arg0, arg1) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @param arg1 integer
+--- @param arg2 Map
+--- @param arg3 SharedStrings
+--- @return Zone
+function Zone:load(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 Location
@@ -183,8 +190,13 @@ function Zone:removeSquare(arg0) end
 --- @public
 --- @param arg0 ByteBuffer
 --- @return nil
---- @overload fun(self: Zone, arg0: ByteBuffer, arg1: Map): nil
 function Zone:save(arg0) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @param arg1 Map
+--- @return nil
+function Zone:save(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -254,11 +266,34 @@ function Zone:setY(arg0) end
 function Zone:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Zone
---- @overload fun(arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer): Zone
---- @overload fun(arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: ZoneGeometryType, arg8: TIntArrayList, arg9: integer): Zone
 function Zone.new() end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @return Zone
+function Zone.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @param arg7 ZoneGeometryType
+--- @param arg8 TIntArrayList
+--- @param arg9 integer
+--- @return Zone
+function Zone.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end

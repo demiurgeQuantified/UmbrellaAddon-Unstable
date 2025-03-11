@@ -27,7 +27,7 @@ function DataPoint:setIntensity(intensity) end
 function DataPoint:setTime(time) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

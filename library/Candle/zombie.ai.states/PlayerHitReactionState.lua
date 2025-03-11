@@ -39,7 +39,7 @@ function PlayerHitReactionState:execute(owner) end
 function PlayerHitReactionState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -13,8 +13,15 @@ IsoWorldInventoryObject = {}
 --- @param square IsoGridSquare
 --- @param zoff number
 --- @return number
---- @overload fun(arg0: IsoGridSquare, arg1: number, arg2: boolean): number
 function IsoWorldInventoryObject.getSurfaceAlpha(square, zoff) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGridSquare
+--- @param arg1 number
+--- @param arg2 boolean
+--- @return number
+function IsoWorldInventoryObject.getSurfaceAlpha(arg0, arg1, arg2) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -273,11 +280,19 @@ function IsoWorldInventoryObject:updateSprite() end
 function IsoWorldInventoryObject:useFluid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoWorldInventoryObject
---- @overload fun(item: InventoryItem, sq: IsoGridSquare, xoff: number, yoff: number, zoff: number): IsoWorldInventoryObject
 function IsoWorldInventoryObject.new(cell) end
+
+--- @public
+--- @param item InventoryItem
+--- @param sq IsoGridSquare
+--- @param xoff number
+--- @param yoff number
+--- @param zoff number
+--- @return IsoWorldInventoryObject
+function IsoWorldInventoryObject.new(item, sq, xoff, yoff, zoff) end

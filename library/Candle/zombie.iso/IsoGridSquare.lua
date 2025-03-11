@@ -39,17 +39,17 @@ function IsoGridSquare.auth(username, pw) end
 
 --- @public
 --- @static
---- @return number the darkStep
+--- @return number _ the darkStep
 function IsoGridSquare.getDarkStep() end
 
 --- @public
 --- @static
---- @return ColorInfo the defColorInfo
+--- @return ColorInfo _ the defColorInfo
 function IsoGridSquare.getDefColorInfo() end
 
 --- @public
 --- @static
---- @return integer the lightcache
+--- @return integer _ the lightcache
 function IsoGridSquare.getLightcache() end
 
 --- @public
@@ -59,7 +59,15 @@ function IsoGridSquare.getLightcache() end
 --- @param y integer
 --- @param z integer
 --- @return boolean
---- @overload fun(matrix: integer, x: integer, y: integer, z: integer): boolean
+function IsoGridSquare.getMatrixBit(matrix, x, y, z) end
+
+--- @public
+--- @static
+--- @param matrix integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return boolean
 function IsoGridSquare.getMatrixBit(matrix, x, y, z) end
 
 --- @public
@@ -70,12 +78,22 @@ function IsoGridSquare.getMatrixBit(matrix, x, y, z) end
 --- @param y integer
 --- @param z integer
 --- @return IsoGridSquare
---- @overload fun(isoGridSquareCache: ArrayDeque, cell: IsoCell, slice: SliceY, x: integer, y: integer, z: integer): IsoGridSquare
 function IsoGridSquare.getNew(cell, slice, x, y, z) end
 
 --- @public
 --- @static
---- @return number the RecalcLightTime
+--- @param isoGridSquareCache ArrayDeque
+--- @param cell IsoCell
+--- @param slice SliceY
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return IsoGridSquare
+function IsoGridSquare.getNew(isoGridSquareCache, cell, slice, x, y, z) end
+
+--- @public
+--- @static
+--- @return number _ the RecalcLightTime
 function IsoGridSquare.getRecalcLightTime() end
 
 --- @public
@@ -87,7 +105,7 @@ function IsoGridSquare.getSquaresForThread(isoGridSquareCacheDest, count) end
 
 --- @public
 --- @static
---- @return boolean the bDoSlowPathfinding
+--- @return boolean _ the bDoSlowPathfinding
 function IsoGridSquare.isbDoSlowPathfinding() end
 
 --- @public
@@ -120,7 +138,16 @@ function IsoGridSquare.setLightcache(aLightcache) end
 --- @param z integer
 --- @param val boolean
 --- @return integer
---- @overload fun(matrix: integer, x: integer, y: integer, z: integer, val: boolean): integer
+function IsoGridSquare.setMatrixBit(matrix, x, y, z, val) end
+
+--- @public
+--- @static
+--- @param matrix integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param val boolean
+--- @return integer
 function IsoGridSquare.setMatrixBit(matrix, x, y, z, val) end
 
 --- @public
@@ -148,8 +175,13 @@ function IsoGridSquare.toBoolean(data) end
 --- @public
 --- @param obj IsoObject
 --- @return nil
---- @overload fun(self: IsoGridSquare, obj: IsoObject, index: integer): nil
 function IsoGridSquare:AddSpecialObject(obj) end
+
+--- @public
+--- @param obj IsoObject
+--- @param index integer
+--- @return nil
+function IsoGridSquare:AddSpecialObject(obj, index) end
 
 --- @public
 --- @param obj IsoObject
@@ -168,8 +200,13 @@ function IsoGridSquare:AddStairs(north, level, sprite, pillarSprite, table) end
 --- @public
 --- @param obj IsoObject
 --- @return nil
---- @overload fun(self: IsoGridSquare, obj: IsoObject, index: integer): nil
 function IsoGridSquare:AddTileObject(obj) end
+
+--- @public
+--- @param obj IsoObject
+--- @param index integer
+--- @return nil
+function IsoGridSquare:AddTileObject(obj, index) end
 
 --- @public
 --- @param String string
@@ -177,16 +214,51 @@ function IsoGridSquare:AddTileObject(obj) end
 --- @param y number
 --- @param height number
 --- @return InventoryItem
---- @overload fun(self: IsoGridSquare, item: InventoryItem, x: number, y: number, height: number): InventoryItem
---- @overload fun(self: IsoGridSquare, arg0: string, arg1: number, arg2: number, arg3: number, arg4: boolean): InventoryItem
---- @overload fun(self: IsoGridSquare, String: string, x: number, y: number, height: number, nbr: integer): nil
---- @overload fun(self: IsoGridSquare, item: InventoryItem, x: number, y: number, height: number, transmit: boolean): InventoryItem
 function IsoGridSquare:AddWorldInventoryItem(String, x, y, height) end
 
 --- @public
+--- @param item InventoryItem
+--- @param x number
+--- @param y number
+--- @param height number
+--- @return InventoryItem
+function IsoGridSquare:AddWorldInventoryItem(item, x, y, height) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 boolean
+--- @return InventoryItem
+function IsoGridSquare:AddWorldInventoryItem(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param String string
+--- @param x number
+--- @param y number
+--- @param height number
+--- @param nbr integer
 --- @return nil
---- @overload fun(self: IsoGridSquare, explode: boolean): nil
+function IsoGridSquare:AddWorldInventoryItem(String, x, y, height, nbr) end
+
+--- @public
+--- @param item InventoryItem
+--- @param x number
+--- @param y number
+--- @param height number
+--- @param transmit boolean
+--- @return InventoryItem
+function IsoGridSquare:AddWorldInventoryItem(item, x, y, height, transmit) end
+
+--- @public
+--- @return nil
 function IsoGridSquare:Burn() end
+
+--- @public
+--- @param explode boolean
+--- @return nil
+function IsoGridSquare:Burn(explode) end
 
 --- @public
 --- @return nil
@@ -212,15 +284,37 @@ function IsoGridSquare:CalcVisibility(playerIndex) end
 --- @param bPathfind boolean
 --- @param bIgnoreSolidTrans boolean
 --- @return boolean
---- @overload fun(self: IsoGridSquare, gridSquare: IsoGridSquare, bVision: boolean, bPathfind: boolean, bIgnoreSolidTrans: boolean, bIgnoreSolid: boolean): boolean
---- @overload fun(self: IsoGridSquare, gridSquare: IsoGridSquare, bVision: boolean, bPathfind: boolean, bIgnoreSolidTrans: boolean, bIgnoreSolid: boolean, getter: GetSquare): boolean
 function IsoGridSquare:CalculateCollide(gridSquare, bVision, bPathfind, bIgnoreSolidTrans) end
 
 --- @public
 --- @param gridSquare IsoGridSquare
+--- @param bVision boolean
+--- @param bPathfind boolean
+--- @param bIgnoreSolidTrans boolean
+--- @param bIgnoreSolid boolean
 --- @return boolean
---- @overload fun(self: IsoGridSquare, gridSquare: IsoGridSquare, getter: GetSquare): boolean
+function IsoGridSquare:CalculateCollide(gridSquare, bVision, bPathfind, bIgnoreSolidTrans, bIgnoreSolid) end
+
+--- @public
+--- @param gridSquare IsoGridSquare
+--- @param bVision boolean
+--- @param bPathfind boolean
+--- @param bIgnoreSolidTrans boolean
+--- @param bIgnoreSolid boolean
+--- @param getter GetSquare
+--- @return boolean
+function IsoGridSquare:CalculateCollide(gridSquare, bVision, bPathfind, bIgnoreSolidTrans, bIgnoreSolid, getter) end
+
+--- @public
+--- @param gridSquare IsoGridSquare
+--- @return boolean
 function IsoGridSquare:CalculateVisionBlocked(gridSquare) end
+
+--- @public
+--- @param gridSquare IsoGridSquare
+--- @param getter GetSquare
+--- @return boolean
+function IsoGridSquare:CalculateVisionBlocked(gridSquare, getter) end
 
 --- @public
 --- @return nil
@@ -242,16 +336,34 @@ function IsoGridSquare:DirtySlice() end
 --- @public
 --- @param sq IsoGridSquare
 --- @return number
---- @overload fun(self: IsoGridSquare, other: IsoMovingObject): number
---- @overload fun(self: IsoGridSquare, x: integer, y: integer): number
 function IsoGridSquare:DistTo(sq) end
+
+--- @public
+--- @param other IsoMovingObject
+--- @return number
+function IsoGridSquare:DistTo(other) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @return number
+function IsoGridSquare:DistTo(x, y) end
 
 --- @public
 --- @param sq IsoGridSquare
 --- @return number
---- @overload fun(self: IsoGridSquare, other: IsoMovingObject): number
---- @overload fun(self: IsoGridSquare, arg0: integer, arg1: integer): number
 function IsoGridSquare:DistToProper(sq) end
+
+--- @public
+--- @param other IsoMovingObject
+--- @return number
+function IsoGridSquare:DistToProper(other) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return number
+function IsoGridSquare:DistToProper(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoObject
@@ -343,8 +455,16 @@ function IsoGridSquare:EnsureSurroundNotNull() end
 --- @param range integer
 --- @param EnemyList ArrayList
 --- @return IsoGameCharacter
---- @overload fun(self: IsoGridSquare, g: IsoGameCharacter, range: integer, EnemyList: ArrayList, RangeTest: IsoGameCharacter, TestRangeMax: integer): IsoGameCharacter
 function IsoGridSquare:FindEnemy(g, range, EnemyList) end
+
+--- @public
+--- @param g IsoGameCharacter
+--- @param range integer
+--- @param EnemyList ArrayList
+--- @param RangeTest IsoGameCharacter
+--- @param TestRangeMax integer
+--- @return IsoGameCharacter
+function IsoGridSquare:FindEnemy(g, range, EnemyList, RangeTest, TestRangeMax) end
 
 --- @public
 --- @param g IsoGameCharacter
@@ -425,37 +545,65 @@ function IsoGridSquare:InvalidateSpecialObjectPaths() end
 --- @public
 --- @param flag string
 --- @return boolean
---- @overload fun(self: IsoGridSquare, flag: IsoFlagType): boolean
+function IsoGridSquare:Is(flag) end
+
+--- @public
+--- @param flag IsoFlagType
+--- @return boolean
 function IsoGridSquare:Is(flag) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoGridSquare, halfTileBorder: boolean): boolean
 function IsoGridSquare:IsOnScreen() end
+
+--- @public
+--- @param halfTileBorder boolean
+--- @return boolean
+function IsoGridSquare:IsOnScreen(halfTileBorder) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return nil
---- @overload fun(self: IsoGridSquare, square: IsoGridSquare, getter: GetSquare): nil
 function IsoGridSquare:ReCalculateCollide(square) end
 
 --- @public
 --- @param square IsoGridSquare
+--- @param getter GetSquare
 --- @return nil
---- @overload fun(self: IsoGridSquare, square: IsoGridSquare, getter: GetSquare): nil
-function IsoGridSquare:ReCalculatePathFind(square) end
+function IsoGridSquare:ReCalculateCollide(square, getter) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return nil
---- @overload fun(self: IsoGridSquare, square: IsoGridSquare, getter: GetSquare): nil
+function IsoGridSquare:ReCalculatePathFind(square) end
+
+--- @public
+--- @param square IsoGridSquare
+--- @param getter GetSquare
+--- @return nil
+function IsoGridSquare:ReCalculatePathFind(square, getter) end
+
+--- @public
+--- @param square IsoGridSquare
+--- @return nil
 function IsoGridSquare:ReCalculateVisionBlocked(square) end
+
+--- @public
+--- @param square IsoGridSquare
+--- @param getter GetSquare
+--- @return nil
+function IsoGridSquare:ReCalculateVisionBlocked(square, getter) end
 
 --- @public
 --- @param bDoReverse boolean
 --- @return nil
---- @overload fun(self: IsoGridSquare, bDoReverse: boolean, getter: GetSquare): nil
 function IsoGridSquare:RecalcAllWithNeighbours(bDoReverse) end
+
+--- @public
+--- @param bDoReverse boolean
+--- @param getter GetSquare
+--- @return nil
+function IsoGridSquare:RecalcAllWithNeighbours(bDoReverse, getter) end
 
 --- @public
 --- @return nil
@@ -524,9 +672,18 @@ function IsoGridSquare:addBrokenGlass() end
 
 --- @public
 --- @return IsoDeadBody
---- @overload fun(self: IsoGridSquare, arg0: boolean): IsoDeadBody
---- @overload fun(self: IsoGridSquare, body: IsoDeadBody, bRemote: boolean): nil
 function IsoGridSquare:addCorpse() end
+
+--- @public
+--- @param arg0 boolean
+--- @return IsoDeadBody
+function IsoGridSquare:addCorpse(arg0) end
+
+--- @public
+--- @param body IsoDeadBody
+--- @param bRemote boolean
+--- @return nil
+function IsoGridSquare:addCorpse(body, bRemote) end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -595,8 +752,18 @@ function IsoGridSquare:addUndergroundBlock(arg0) end
 --- @param arg0 string
 --- @param arg1 string
 --- @return IsoThumpable
---- @overload fun(self: IsoGridSquare, arg0: IsoThumpable, arg1: GameEntityScript): nil
---- @overload fun(self: IsoGridSquare, arg0: GameEntityScript, arg1: string): IsoThumpable
+function IsoGridSquare:addWorkstationEntity(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoThumpable
+--- @param arg1 GameEntityScript
+--- @return nil
+function IsoGridSquare:addWorkstationEntity(arg0, arg1) end
+
+--- @public
+--- @param arg0 GameEntityScript
+--- @param arg1 string
+--- @return IsoThumpable
 function IsoGridSquare:addWorkstationEntity(arg0, arg1) end
 
 --- @public
@@ -647,8 +814,7 @@ function IsoGridSquare:clearWater() end
 
 --- @public
 ---
----  Check if there's at least one solid floor around this tile, used to build
----  floor
+--- Check if there's at least one solid floor around this tile, used to build wooden
 ---
 --- @return boolean
 function IsoGridSquare:connectedWithFloor() end
@@ -665,9 +831,18 @@ function IsoGridSquare:createAnimalCorpseFromItem(arg0) end
 --- @public
 --- @param arg0 boolean
 --- @return IsoDeadBody
---- @overload fun(self: IsoGridSquare, arg0: IsoZombie): IsoDeadBody
---- @overload fun(self: IsoGridSquare, arg0: IsoZombie, arg1: boolean): IsoDeadBody
 function IsoGridSquare:createCorpse(arg0) end
+
+--- @public
+--- @param arg0 IsoZombie
+--- @return IsoDeadBody
+function IsoGridSquare:createCorpse(arg0) end
+
+--- @public
+--- @param arg0 IsoZombie
+--- @param arg1 boolean
+--- @return IsoDeadBody
+function IsoGridSquare:createCorpse(arg0, arg1) end
 
 --- @public
 --- @param player IsoPlayer
@@ -778,7 +953,7 @@ function IsoGridSquare:getCampfire() end
 function IsoGridSquare:getCanSee(playerIndex) end
 
 --- @public
---- @return IsoCell the getCell()
+--- @return IsoCell _ the getCell()
 function IsoGridSquare:getCell() end
 
 --- @public
@@ -812,7 +987,7 @@ function IsoGridSquare:getCurtain(curtainType) end
 
 --- @public
 --- @param playerIndex integer
---- @return number the darkMulti
+--- @return number _ the darkMulti
 function IsoGridSquare:getDarkMulti(playerIndex) end
 
 --- @public
@@ -824,7 +999,7 @@ function IsoGridSquare:getDeadBody() end
 function IsoGridSquare:getDeadBodys() end
 
 --- @public
---- @return ArrayList the DeferedCharacters
+--- @return ArrayList _ the DeferedCharacters
 function IsoGridSquare:getDeferedCharacters() end
 
 --- @public
@@ -850,14 +1025,14 @@ function IsoGridSquare:getDoorOrWindowOrWindowFrame(dir, ignoreOpen) end
 
 --- @public
 ---
----  Get the door between this grid and the next in parameter
+--- Get the door between this grid and the next in parameter
 ---
 --- @param next IsoGridSquare
 --- @return IsoObject
 function IsoGridSquare:getDoorTo(next) end
 
 --- @public
---- @return IsoGridSquare the e
+--- @return IsoGridSquare _ the e
 function IsoGridSquare:getE() end
 
 --- @public
@@ -909,8 +1084,8 @@ function IsoGridSquare:getGrassLike() end
 
 --- @public
 ---
----  Check if there's any object on this grid that has a sneak modifier, we use this
----  check if we reduce the chance of being spotted while crouching
+--- Check if there's any object on this grid that has a sneak modifier, we use this
+--- check if we reduce the chance of being spotted while crouching
 ---
 --- @param onlySolidTrans boolean
 --- @return number
@@ -976,7 +1151,7 @@ function IsoGridSquare:getHutch() end
 function IsoGridSquare:getHutchTiles() end
 
 --- @public
---- @return integer the ID
+--- @return integer _ the ID
 function IsoGridSquare:getID() end
 
 --- @public
@@ -994,27 +1169,27 @@ function IsoGridSquare:getIsoDoor() end
 function IsoGridSquare:getIsoWorldRegion() end
 
 --- @public
---- @return number the lampostTotalB
+--- @return number _ the lampostTotalB
 function IsoGridSquare:getLampostTotalB() end
 
 --- @public
---- @return number the lampostTotalG
+--- @return number _ the lampostTotalG
 function IsoGridSquare:getLampostTotalG() end
 
 --- @public
---- @return number the lampostTotalR
+--- @return number _ the lampostTotalR
 function IsoGridSquare:getLampostTotalR() end
 
 --- @public
---- @return ArrayList the LightInfluenceB
+--- @return ArrayList _ the LightInfluenceB
 function IsoGridSquare:getLightInfluenceB() end
 
 --- @public
---- @return ArrayList the LightInfluenceG
+--- @return ArrayList _ the LightInfluenceG
 function IsoGridSquare:getLightInfluenceG() end
 
 --- @public
---- @return ArrayList the LightInfluenceR
+--- @return ArrayList _ the LightInfluenceR
 function IsoGridSquare:getLightInfluenceR() end
 
 --- @public
@@ -1052,11 +1227,11 @@ function IsoGridSquare:getLuaTileObjectList() end
 function IsoGridSquare:getModData() end
 
 --- @public
---- @return ArrayList the MovingObjects
+--- @return ArrayList _ the MovingObjects
 function IsoGridSquare:getMovingObjects() end
 
 --- @public
---- @return IsoGridSquare the n
+--- @return IsoGridSquare _ the n
 function IsoGridSquare:getN() end
 
 --- @public
@@ -1065,7 +1240,7 @@ function IsoGridSquare:getN() end
 function IsoGridSquare:getNextNonItemObjectIndex(arg0) end
 
 --- @public
---- @return PZArrayList the Objects
+--- @return PZArrayList _ the Objects
 function IsoGridSquare:getObjects() end
 
 --- @public
@@ -1107,7 +1282,7 @@ function IsoGridSquare:getPlayerBuiltFloor() end
 function IsoGridSquare:getPlayerCutawayFlag(playerIndex, currentTimeMillis) end
 
 --- @public
---- @return PropertyContainer the Properties
+--- @return PropertyContainer _ the Properties
 function IsoGridSquare:getProperties() end
 
 --- @public
@@ -1147,7 +1322,7 @@ function IsoGridSquare:getRandomAdjacentFreeSameRoom() end
 function IsoGridSquare:getRoofHideBuilding() end
 
 --- @public
---- @return IsoRoom the room
+--- @return IsoRoom _ the room
 function IsoGridSquare:getRoom() end
 
 --- @public
@@ -1159,7 +1334,7 @@ function IsoGridSquare:getRoomID() end
 function IsoGridSquare:getRoomSize() end
 
 --- @public
---- @return IsoGridSquare the s
+--- @return IsoGridSquare _ the s
 function IsoGridSquare:getS() end
 
 --- @public
@@ -1178,8 +1353,13 @@ function IsoGridSquare:getSlopedSurfaceDirection() end
 --- @public
 --- @param arg0 IsoDirections
 --- @return number
---- @overload fun(self: IsoGridSquare, arg0: number, arg1: number): number
 function IsoGridSquare:getSlopedSurfaceHeight(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
+function IsoGridSquare:getSlopedSurfaceHeight(arg0, arg1) end
 
 --- @public
 --- @return number
@@ -1190,7 +1370,7 @@ function IsoGridSquare:getSlopedSurfaceHeightMax() end
 function IsoGridSquare:getSlopedSurfaceHeightMin() end
 
 --- @public
---- @return ArrayList the SpecialObjects
+--- @return ArrayList _ the SpecialObjects
 function IsoGridSquare:getSpecialObjects() end
 
 --- @public
@@ -1219,12 +1399,12 @@ function IsoGridSquare:getStairsHeightMax() end
 function IsoGridSquare:getStairsHeightMin() end
 
 --- @public
---- @return ArrayList the StaticMovingObjects
+--- @return ArrayList _ the StaticMovingObjects
 function IsoGridSquare:getStaticMovingObjects() end
 
 --- @public
 --- @param playerIndex integer
---- @return number the targetDarkMulti
+--- @return number _ the targetDarkMulti
 function IsoGridSquare:getTargetDarkMulti(playerIndex) end
 
 --- @public
@@ -1299,13 +1479,17 @@ function IsoGridSquare:getVertLight(i, playerIndex) end
 function IsoGridSquare:getVisionMatrix(dx, dy, dz) end
 
 --- @public
---- @return IsoGridSquare the w
+--- @return IsoGridSquare _ the w
 function IsoGridSquare:getW() end
 
 --- @public
 --- @return IsoObject
---- @overload fun(self: IsoGridSquare, bNorth: boolean): IsoObject
 function IsoGridSquare:getWall() end
+
+--- @public
+--- @param bNorth boolean
+--- @return IsoObject
+function IsoGridSquare:getWall(bNorth) end
 
 --- @public
 --- @param arg0 boolean
@@ -1349,8 +1533,12 @@ function IsoGridSquare:getWaterObject() end
 
 --- @public
 --- @return IsoWindow
---- @overload fun(self: IsoGridSquare, north: boolean): IsoWindow
 function IsoGridSquare:getWindow() end
+
+--- @public
+--- @param north boolean
+--- @return IsoWindow
+function IsoGridSquare:getWindow(north) end
 
 --- @public
 --- @param north boolean
@@ -1364,7 +1552,7 @@ function IsoGridSquare:getWindowFrameTo(next) end
 
 --- @public
 ---
----  Get the IsoThumpable window between this grid and the next in parameter
+--- Get the IsoThumpable window between this grid and the next in parameter
 ---
 --- @param next IsoGridSquare
 --- @return IsoThumpable
@@ -1372,7 +1560,7 @@ function IsoGridSquare:getWindowThumpableTo(next) end
 
 --- @public
 ---
----  Get the IsoWindow window between this grid and the next in parameter
+--- Get the IsoWindow window between this grid and the next in parameter
 ---
 --- @param next IsoGridSquare
 --- @return IsoWindow
@@ -1465,8 +1653,17 @@ function IsoGridSquare:hasFlies() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoGridSquare, north: boolean): boolean
 function IsoGridSquare:hasFloor() end
+
+--- @public
+---
+--- Check if a tile has a solid floor, used to build stuff at z level > 0  Also
+--- check the tile "behind" the one w<e're trying to build something has a floor
+--- one is required)
+---
+--- @param north boolean is the item we're trying to place facing north or not
+--- @return boolean
+function IsoGridSquare:hasFloor(north) end
 
 --- @public
 --- @return boolean
@@ -1631,16 +1828,16 @@ function IsoGridSquare:isAdjacentToWindow() end
 function IsoGridSquare:isBlockedTo(other) end
 
 --- @public
---- @return boolean the CacheIsFree
+--- @return boolean _ the CacheIsFree
 function IsoGridSquare:isCacheIsFree() end
 
 --- @public
---- @return boolean the CachedIsFree
+--- @return boolean _ the CachedIsFree
 function IsoGridSquare:isCachedIsFree() end
 
 --- @public
 --- @param playerIndex integer
---- @return boolean the canSee
+--- @return boolean _ the canSee
 function IsoGridSquare:isCanSee(playerIndex) end
 
 --- @public
@@ -1649,7 +1846,7 @@ function IsoGridSquare:isCommonGrass() end
 
 --- @public
 --- @param playerIndex integer
---- @return boolean the bCouldSee
+--- @return boolean _ the bCouldSee
 function IsoGridSquare:isCouldSee(playerIndex) end
 
 --- @public
@@ -1682,8 +1879,13 @@ function IsoGridSquare:isFree(bCountOtherCharacters) end
 --- @public
 --- @param bCountOtherCharacters boolean
 --- @return boolean
---- @overload fun(self: IsoGridSquare, bCountOtherCharacters: boolean, bDoZombie: boolean): boolean
 function IsoGridSquare:isFreeOrMidair(bCountOtherCharacters) end
+
+--- @public
+--- @param bCountOtherCharacters boolean
+--- @param bDoZombie boolean
+--- @return boolean
+function IsoGridSquare:isFreeOrMidair(bCountOtherCharacters, bDoZombie) end
 
 --- @public
 --- @param arg0 IsoDirections
@@ -1743,8 +1945,13 @@ function IsoGridSquare:isRural() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoGridSquare, sq: IsoGridSquare, depth: integer): nil
 function IsoGridSquare:isSafeToSpawn() end
+
+--- @public
+--- @param sq IsoGridSquare
+--- @param depth integer
+--- @return nil
+function IsoGridSquare:isSafeToSpawn(sq, depth) end
 
 --- @public
 --- @param x integer
@@ -1755,7 +1962,7 @@ function IsoGridSquare:isSameStaircase(x, y, z) end
 
 --- @public
 --- @param playerIndex integer
---- @return boolean the bSeen
+--- @return boolean _ the bSeen
 function IsoGridSquare:isSeen(playerIndex) end
 
 --- @public
@@ -1772,11 +1979,11 @@ function IsoGridSquare:isSlopedSurfaceEdgeBlocked(arg0) end
 function IsoGridSquare:isSolid() end
 
 --- @public
---- @return boolean the SolidFloor
+--- @return boolean _ the SolidFloor
 function IsoGridSquare:isSolidFloor() end
 
 --- @public
---- @return boolean the SolidFloorCached
+--- @return boolean _ the SolidFloorCached
 function IsoGridSquare:isSolidFloorCached() end
 
 --- @public
@@ -1821,8 +2028,13 @@ function IsoGridSquare:isWallSquareNW() end
 --- @public
 --- @param other IsoGridSquare
 --- @return boolean
---- @overload fun(self: IsoGridSquare, arg0: IsoGridSquare, arg1: integer): boolean
 function IsoGridSquare:isWallTo(other) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 integer
+--- @return boolean
+function IsoGridSquare:isWallTo(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -1848,8 +2060,14 @@ function IsoGridSquare:isWindowTo(other) end
 --- @param b ByteBuffer
 --- @param WorldVersion integer
 --- @return nil
---- @overload fun(self: IsoGridSquare, b: ByteBuffer, WorldVersion: integer, IS_DEBUG_SAVE: boolean): nil
 function IsoGridSquare:load(b, WorldVersion) end
+
+--- @public
+--- @param b ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
+--- @return nil
+function IsoGridSquare:load(b, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param obj IsoObject
@@ -1860,8 +2078,14 @@ function IsoGridSquare:placeWallAndDoorCheck(obj, index) end
 --- @public
 --- @param file string
 --- @return integer
---- @overload fun(self: IsoGridSquare, file: string, doWorldSound: boolean): integer
 function IsoGridSquare:playSound(file) end
+
+--- @public
+--- @param file string
+--- @param doWorldSound boolean
+--- @return integer
+--- @deprecated
+function IsoGridSquare:playSound(file, doWorldSound) end
 
 --- @public
 --- @param arg0 string
@@ -1973,8 +2197,15 @@ function IsoGridSquare:renderMinusFloor(arg0, arg1, arg2, arg3, arg4, arg5, arg6
 --- @param arg0 integer
 --- @param arg1 ColorInfo
 --- @return nil
---- @overload fun(self: IsoGridSquare, arg0: integer, arg1: ColorInfo, arg2: number, arg3: boolean): nil
 function IsoGridSquare:renderRainSplash(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 ColorInfo
+--- @param arg2 number
+--- @param arg3 boolean
+--- @return nil
+function IsoGridSquare:renderRainSplash(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return nil
@@ -1984,8 +2215,14 @@ function IsoGridSquare:restackSheetRope() end
 --- @param output ByteBuffer
 --- @param outputObj ObjectOutputStream
 --- @return nil
---- @overload fun(self: IsoGridSquare, output: ByteBuffer, outputObj: ObjectOutputStream, IS_DEBUG_SAVE: boolean): nil
 function IsoGridSquare:save(output, outputObj) end
+
+--- @public
+--- @param output ByteBuffer
+--- @param outputObj ObjectOutputStream
+--- @param IS_DEBUG_SAVE boolean
+--- @return nil
+function IsoGridSquare:save(output, outputObj, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param x integer
@@ -2245,8 +2482,14 @@ function IsoGridSquare:splatBlood(dist, alpha) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
---- @overload fun(self: IsoGridSquare, arg0: boolean, arg1: number, arg2: number): nil
 function IsoGridSquare:startWaterSplash(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function IsoGridSquare:startWaterSplash(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
@@ -2289,8 +2532,16 @@ function IsoGridSquare:testCollideSpecialObjects(next) end
 --- @param y integer
 --- @param z integer
 --- @return boolean
---- @overload fun(self: IsoGridSquare, mover: IsoMovingObject, x: integer, y: integer, z: integer, getter: GetSquare): boolean
 function IsoGridSquare:testPathFindAdjacent(mover, x, y, z) end
+
+--- @public
+--- @param mover IsoMovingObject
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param getter GetSquare
+--- @return boolean
+function IsoGridSquare:testPathFindAdjacent(mover, x, y, z, getter) end
 
 --- @public
 --- @param x integer
@@ -2326,7 +2577,7 @@ function IsoGridSquare:transmitRemoveItemFromSquareOnClients(arg0) end
 function IsoGridSquare:transmitStopFire() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

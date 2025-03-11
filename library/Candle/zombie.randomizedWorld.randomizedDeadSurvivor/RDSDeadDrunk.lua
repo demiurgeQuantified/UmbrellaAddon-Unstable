@@ -14,7 +14,7 @@ RDSDeadDrunk = {}
 function RDSDeadDrunk:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -56,8 +56,12 @@ function CraftLogic:getRecipeTagQuery() end
 
 --- @public
 --- @return List
---- @overload fun(self: CraftLogic, arg0: ArrayList): ArrayList
 function CraftLogic:getRecipes() end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return ArrayList
+function CraftLogic:getRecipes(arg0) end
 
 --- @public
 --- @return IsoPlayer
@@ -119,5 +123,10 @@ function CraftLogic:start(arg0) end
 --- @public
 --- @param arg0 IsoPlayer
 --- @return nil
---- @overload fun(self: CraftLogic, arg0: IsoPlayer, arg1: boolean): nil
 function CraftLogic:stop(arg0) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @param arg1 boolean
+--- @return nil
+function CraftLogic:stop(arg0, arg1) end

@@ -20,7 +20,7 @@ function RBLooted:isValid(arg0, arg1) end
 function RBLooted:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

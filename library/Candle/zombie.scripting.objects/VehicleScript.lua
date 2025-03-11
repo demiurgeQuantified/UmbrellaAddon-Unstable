@@ -45,13 +45,21 @@ function VehicleScript:addPhysicsShape(arg0) end
 --- @public
 --- @param arg0 ModelAttachment
 --- @return nil
---- @overload fun(self: VehicleScript, arg0: ModelAttachment): nil
 function VehicleScript:afterRenameAttachment(arg0) end
 
 --- @public
 --- @param arg0 ModelAttachment
 --- @return nil
---- @overload fun(self: VehicleScript, arg0: ModelAttachment): nil
+function VehicleScript:afterRenameAttachment(arg0) end
+
+--- @public
+--- @param arg0 ModelAttachment
+--- @return nil
+function VehicleScript:beforeRenameAttachment(arg0) end
+
+--- @public
+--- @param arg0 ModelAttachment
+--- @return nil
 function VehicleScript:beforeRenameAttachment(arg0) end
 
 --- @public
@@ -248,8 +256,13 @@ function VehicleScript:getModel() end
 --- @public
 --- @param id string
 --- @return Model
---- @overload fun(self: VehicleScript, id: string, models: ArrayList): Model
 function VehicleScript:getModelById(id) end
+
+--- @public
+--- @param id string
+--- @param models ArrayList
+--- @return Model
+function VehicleScript:getModelById(id, models) end
 
 --- @public
 --- @param index integer
@@ -468,8 +481,12 @@ function VehicleScript:notKillCrops() end
 --- @public
 --- @param index integer
 --- @return ModelAttachment
---- @overload fun(self: VehicleScript, attach: ModelAttachment): ModelAttachment
 function VehicleScript:removeAttachment(index) end
+
+--- @public
+--- @param attach ModelAttachment
+--- @return ModelAttachment
+function VehicleScript:removeAttachment(attach) end
 
 --- @public
 --- @param arg0 integer
@@ -545,7 +562,7 @@ function VehicleScript:toBullet() end
 function VehicleScript:useChassisPhysicsCollision() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

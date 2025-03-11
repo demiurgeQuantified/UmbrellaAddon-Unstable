@@ -46,7 +46,7 @@ function CrawlingZombieTurnState:execute(owner) end
 function CrawlingZombieTurnState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

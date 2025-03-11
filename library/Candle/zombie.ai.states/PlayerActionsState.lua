@@ -39,7 +39,7 @@ function PlayerActionsState:execute(owner) end
 function PlayerActionsState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

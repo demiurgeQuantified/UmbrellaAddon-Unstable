@@ -19,7 +19,10 @@ function Reader.nullReader() end
 
 --- @public
 --- @return nil
---- @overload fun(self: Reader): nil
+function Reader:close() end
+
+--- @public
+--- @return nil
 function Reader:close() end
 
 --- @public
@@ -33,11 +36,29 @@ function Reader:markSupported() end
 
 --- @public
 --- @return integer
---- @overload fun(self: Reader, arg0: char[]): integer
---- @overload fun(self: Reader, arg0: CharBuffer): integer
---- @overload fun(self: Reader, arg0: CharBuffer): integer
---- @overload fun(self: Reader, arg0: char[], arg1: integer, arg2: integer): integer
 function Reader:read() end
+
+--- @public
+--- @param arg0 char[]
+--- @return integer
+function Reader:read(arg0) end
+
+--- @public
+--- @param arg0 CharBuffer
+--- @return integer
+function Reader:read(arg0) end
+
+--- @public
+--- @param arg0 CharBuffer
+--- @return integer
+function Reader:read(arg0) end
+
+--- @public
+--- @param arg0 char[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function Reader:read(arg0, arg1, arg2) end
 
 --- @public
 --- @return boolean

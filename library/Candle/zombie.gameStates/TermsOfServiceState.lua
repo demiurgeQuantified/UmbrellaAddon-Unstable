@@ -30,7 +30,7 @@ function TermsOfServiceState:render() end
 function TermsOfServiceState:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -14,7 +14,7 @@ RZSBBQParty = {}
 function RZSBBQParty:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

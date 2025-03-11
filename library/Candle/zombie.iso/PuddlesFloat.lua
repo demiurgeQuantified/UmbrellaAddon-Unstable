@@ -74,7 +74,7 @@ function PuddlesFloat:setEnableAdmin(b) end
 function PuddlesFloat:setFinalValue(f) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

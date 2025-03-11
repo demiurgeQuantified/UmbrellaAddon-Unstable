@@ -14,5 +14,8 @@ function XuiTranslateString:getValueString() end
 
 --- @public
 --- @return any
---- @overload fun(self: XuiTranslateString): string
+function XuiTranslateString:value() end
+
+--- @public
+--- @return string
 function XuiTranslateString:value() end

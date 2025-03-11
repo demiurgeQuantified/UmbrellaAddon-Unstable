@@ -121,7 +121,7 @@ function IsoPuddles:shouldRenderPuddles() end
 function IsoPuddles:update(cm) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

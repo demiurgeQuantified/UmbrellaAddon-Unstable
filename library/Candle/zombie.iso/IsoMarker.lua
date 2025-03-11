@@ -77,9 +77,28 @@ function IsoMarker:hasTempSquareObject() end
 --- @param gs IsoGridSquare
 --- @param doTempIsoObject boolean
 --- @return nil
---- @overload fun(self: IsoMarker, textureTable: table, textureOverlayTable: table, x: integer, y: integer, z: integer, gs: IsoGridSquare): nil
---- @overload fun(self: IsoMarker, textureTable: table, textureOverlayTable: table, x: integer, y: integer, z: integer, gs: IsoGridSquare, doTempIsoObject: boolean): nil
 function IsoMarker:init(spriteName, x, y, z, gs, doTempIsoObject) end
+
+--- @public
+--- @param textureTable table
+--- @param textureOverlayTable table
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param gs IsoGridSquare
+--- @return nil
+function IsoMarker:init(textureTable, textureOverlayTable, x, y, z, gs) end
+
+--- @public
+--- @param textureTable table
+--- @param textureOverlayTable table
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param gs IsoGridSquare
+--- @param doTempIsoObject boolean
+--- @return nil
+function IsoMarker:init(textureTable, textureOverlayTable, x, y, z, gs, doTempIsoObject) end
 
 --- @public
 --- @return boolean
@@ -164,7 +183,7 @@ function IsoMarker:setR(r) end
 function IsoMarker:setSquare(square) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

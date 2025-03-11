@@ -28,7 +28,7 @@ function RVSCrashHorde:randomizeVehicleStory(zone, chunk) end
 function RVSCrashHorde:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

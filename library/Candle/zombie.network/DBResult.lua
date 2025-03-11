@@ -40,7 +40,7 @@ function DBResult:setTableName(tableName) end
 function DBResult:setType(type) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

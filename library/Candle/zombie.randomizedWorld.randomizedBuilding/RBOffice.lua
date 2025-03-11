@@ -10,7 +10,7 @@ RBOffice = {}
 
 --- @public
 ---
----  Description copied from class: RandomizedBuildingBase
+--- Description copied from class: RandomizedBuildingBase
 ---
 --- @param def BuildingDef
 --- @param force boolean
@@ -28,7 +28,7 @@ function RBOffice:randomizeBuilding(def) end
 function RBOffice:roomValid(sq) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

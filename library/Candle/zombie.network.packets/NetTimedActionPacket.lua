@@ -28,10 +28,31 @@ function NetTimedActionPacket.processPacketOnServer(arg0, arg1, arg2) end
 --- @param arg0 PacketType
 --- @param arg1 Object[]
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: PacketType, arg2: Object[]): nil
---- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): nil
---- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): nil
 function NetTimedActionPacket.send(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 PacketType
+--- @param arg2 Object[]
+--- @return nil
+function NetTimedActionPacket.send(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
+--- @param arg2 Object[]
+--- @return nil
+function NetTimedActionPacket.send(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
+--- @param arg2 Object[]
+--- @return nil
+function NetTimedActionPacket.send(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -48,8 +69,17 @@ function NetTimedActionPacket.sendToAll(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @param arg3 Object[]
 --- @return nil
---- @overload fun(arg0: PacketType, arg1: UdpConnection, arg2: number, arg3: number, arg4: Object[]): nil
 function NetTimedActionPacket.sendToRelative(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 PacketType
+--- @param arg1 UdpConnection
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 Object[]
+--- @return nil
+function NetTimedActionPacket.sendToRelative(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -68,7 +98,12 @@ function NetTimedActionPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) e
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
 --- @return nil
---- @overload fun(self: NetTimedActionPacket, arg0: ByteBuffer, arg1: UdpConnection): nil
+function NetTimedActionPacket:parse(arg0, arg1) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @param arg1 UdpConnection
+--- @return nil
 function NetTimedActionPacket:parse(arg0, arg1) end
 
 --- @public
@@ -157,7 +192,7 @@ function NetTimedActionPacket:tryProcessInternal() end
 function NetTimedActionPacket:write(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

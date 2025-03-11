@@ -47,7 +47,7 @@ function Moodle:isChevronIsUp() end
 function Moodle:setChevron(count, isup, col) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -121,7 +121,7 @@ function SystemDisabler.setVehiclesEverywhere(bDo) end
 function SystemDisabler.setWorldSyncEnable(bDo) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

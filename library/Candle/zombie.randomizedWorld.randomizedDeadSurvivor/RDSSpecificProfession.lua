@@ -14,7 +14,7 @@ RDSSpecificProfession = {}
 function RDSSpecificProfession:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

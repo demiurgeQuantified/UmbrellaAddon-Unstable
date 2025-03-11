@@ -30,7 +30,7 @@ function CachedRecipeInfo:isValid() end
 function CachedRecipeInfo:overrideCanPerform(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

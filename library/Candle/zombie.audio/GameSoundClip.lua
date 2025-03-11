@@ -64,7 +64,7 @@ function GameSoundClip:hasParameter(parameterDescription) end
 function GameSoundClip:hasSustainPoints() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

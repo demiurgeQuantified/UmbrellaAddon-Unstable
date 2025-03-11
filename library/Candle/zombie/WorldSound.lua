@@ -16,13 +16,47 @@ WorldSound = {}
 --- @param radius integer
 --- @param volume integer
 --- @return WorldSound
---- @overload fun(self: WorldSound, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stresshumans: boolean): WorldSound
---- @overload fun(self: WorldSound, sourceIsZombie: boolean, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean, zombieIgnoreDist: number, stressMod: number): WorldSound
---- @overload fun(self: WorldSound, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stresshumans: boolean, zombieIgnoreDist: number, stressMod: number): WorldSound
 function WorldSound:init(source, x, y, z, radius, volume) end
 
+--- @public
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param stresshumans boolean
+--- @return WorldSound
+function WorldSound:init(source, x, y, z, radius, volume, stresshumans) end
+
+--- @public
+--- @param sourceIsZombie boolean
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param stressHumans boolean
+--- @param zombieIgnoreDist number
+--- @param stressMod number
+--- @return WorldSound
+function WorldSound:init(sourceIsZombie, x, y, z, radius, volume, stressHumans, zombieIgnoreDist, stressMod) end
+
+--- @public
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
+--- @param stresshumans boolean
+--- @param zombieIgnoreDist number
+--- @param stressMod number
+--- @return WorldSound
+function WorldSound:init(source, x, y, z, radius, volume, stresshumans, zombieIgnoreDist, stressMod) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

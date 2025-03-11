@@ -36,7 +36,7 @@ function Passenger:getSwitchSeatById(id) end
 function Passenger:makeCopy() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -18,8 +18,13 @@ function ModData.add(tag, table) end
 --- @public
 --- @static
 --- @return string
---- @overload fun(tag: string): table
 function ModData.create() end
+
+--- @public
+--- @static
+--- @param tag string
+--- @return table
+function ModData.create(tag) end
 
 --- @public
 --- @static
@@ -63,7 +68,7 @@ function ModData.request(tag) end
 function ModData.transmit(tag) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

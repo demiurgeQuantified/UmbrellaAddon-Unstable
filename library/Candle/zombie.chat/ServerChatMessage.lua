@@ -18,7 +18,7 @@ function ServerChatMessage:getAuthor() end
 function ServerChatMessage:setAuthor(author) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -27,9 +27,19 @@ function FilterInputStream:markSupported() end
 
 --- @public
 --- @return integer
---- @overload fun(self: FilterInputStream, arg0: byte[]): integer
---- @overload fun(self: FilterInputStream, arg0: byte[], arg1: integer, arg2: integer): integer
 function FilterInputStream:read() end
+
+--- @public
+--- @param arg0 byte[]
+--- @return integer
+function FilterInputStream:read(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function FilterInputStream:read(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil

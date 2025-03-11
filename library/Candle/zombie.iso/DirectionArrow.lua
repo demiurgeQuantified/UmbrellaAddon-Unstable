@@ -35,14 +35,14 @@ function DirectionArrow:getRenderHeight() end
 
 --- @public
 ---
----  Render width and height for the pointer texture.
+--- Render width and height for the pointer texture.
 ---
 --- @return number
 function DirectionArrow:getRenderWidth() end
 
 --- @public
 ---
----  The target position on the map for this pointer.
+--- The target position on the map for this pointer.
 ---
 --- @return integer
 function DirectionArrow:getX() end
@@ -57,7 +57,7 @@ function DirectionArrow:getZ() end
 
 --- @public
 ---
----  Active can be set to false, the pointer will remain but wont be drawn.
+--- Active can be set to false, the pointer will remain but wont be drawn.
 ---
 --- @return boolean
 function DirectionArrow:isActive() end
@@ -68,7 +68,7 @@ function DirectionArrow:isRemoved() end
 
 --- @public
 ---
----  When called will remove the pointer next tick
+--- When called will remove the pointer next tick
 ---
 --- @return nil
 function DirectionArrow:remove() end
@@ -152,7 +152,7 @@ function DirectionArrow:setY(y) end
 function DirectionArrow:setZ(z) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

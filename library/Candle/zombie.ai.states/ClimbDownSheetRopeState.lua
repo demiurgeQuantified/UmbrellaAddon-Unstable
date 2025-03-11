@@ -35,7 +35,7 @@ function ClimbDownSheetRopeState:execute(owner) end
 function ClimbDownSheetRopeState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

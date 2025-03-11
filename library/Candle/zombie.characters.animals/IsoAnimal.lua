@@ -315,7 +315,10 @@ function IsoAnimal:getAnimalID() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoAnimal): number
+function IsoAnimal:getAnimalSize() end
+
+--- @public
+--- @return number
 function IsoAnimal:getAnimalSize() end
 
 --- @public
@@ -329,12 +332,18 @@ function IsoAnimal:getAnimalTrailerSize() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoAnimal): string
+function IsoAnimal:getAnimalType() end
+
+--- @public
+--- @return string
 function IsoAnimal:getAnimalType() end
 
 --- @public
 --- @return AnimalVisual
---- @overload fun(self: IsoAnimal): AnimalVisual
+function IsoAnimal:getAnimalVisual() end
+
+--- @public
+--- @return AnimalVisual
 function IsoAnimal:getAnimalVisual() end
 
 --- @public
@@ -817,8 +826,14 @@ function IsoAnimal:respondToSound() end
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
 --- @return nil
---- @overload fun(self: IsoAnimal, arg0: ByteBuffer, arg1: boolean, arg2: boolean): nil
 function IsoAnimal:save(arg0, arg1) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @return nil
+function IsoAnimal:save(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 integer
@@ -1055,14 +1070,52 @@ function IsoAnimal:updateWalkLoopingSound() end
 function IsoAnimal:useRagdoll() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string): IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: AnimalBreed): IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: string, arg6: boolean): IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: AnimalBreed, arg6: boolean): IsoAnimal
 function IsoAnimal.new(arg0) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 string
+--- @return IsoAnimal
+function IsoAnimal.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 AnimalBreed
+--- @return IsoAnimal
+function IsoAnimal.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 string
+--- @param arg6 boolean
+--- @return IsoAnimal
+function IsoAnimal.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 AnimalBreed
+--- @param arg6 boolean
+--- @return IsoAnimal
+function IsoAnimal.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end

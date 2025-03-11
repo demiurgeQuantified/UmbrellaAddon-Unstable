@@ -149,16 +149,34 @@ function IsoTree:setSprite(sprite) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoTree, arg0: IsoGameCharacter): nil
 function IsoTree:toppleTree() end
 
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IsoTree:toppleTree(arg0) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return IsoTree
---- @overload fun(cell: IsoCell): IsoTree
---- @overload fun(sq: IsoGridSquare, gid: string): IsoTree
---- @overload fun(sq: IsoGridSquare, gid: IsoSprite): IsoTree
 function IsoTree.new() end
+
+--- @public
+--- @param cell IsoCell
+--- @return IsoTree
+function IsoTree.new(cell) end
+
+--- @public
+--- @param sq IsoGridSquare
+--- @param gid string
+--- @return IsoTree
+function IsoTree.new(sq, gid) end
+
+--- @public
+--- @param sq IsoGridSquare
+--- @param gid IsoSprite
+--- @return IsoTree
+function IsoTree.new(sq, gid) end

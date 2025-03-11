@@ -86,8 +86,13 @@ function IsoMetaCell:getBuildingsIntersecting(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @param arg0 integer
 --- @return IsoMetaChunk
---- @overload fun(self: IsoMetaCell, x: integer, y: integer): IsoMetaChunk
 function IsoMetaCell:getChunk(arg0) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @return IsoMetaChunk
+function IsoMetaCell:getChunk(x, y) end
 
 --- @public
 --- @param x integer
@@ -124,8 +129,13 @@ function IsoMetaCell:getZonesUnique(result) end
 --- @public
 --- @param arg0 integer
 --- @return boolean
---- @overload fun(self: IsoMetaCell, arg0: integer, arg1: integer): boolean
 function IsoMetaCell:hasChunk(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return boolean
+function IsoMetaCell:hasChunk(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoMetaGrid
@@ -145,7 +155,7 @@ function IsoMetaCell:removeZone(zone) end
 function IsoMetaCell:save(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

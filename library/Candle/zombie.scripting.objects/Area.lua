@@ -49,7 +49,7 @@ function Area:setX(d) end
 function Area:setY(d) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

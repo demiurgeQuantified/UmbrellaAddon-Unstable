@@ -55,7 +55,7 @@ function RadialMenu:setSliceTexture(sliceIndex, texture) end
 function RadialMenu:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

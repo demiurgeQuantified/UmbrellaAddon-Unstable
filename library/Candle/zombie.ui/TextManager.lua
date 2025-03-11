@@ -21,10 +21,43 @@ function TextManager:CentreStringYOffset(arg0, arg1) end
 --- @param y number
 --- @param str string
 --- @return nil
---- @overload fun(self: TextManager, x: number, y: number, str: string, r: number, g: number, b: number, a: number): nil
---- @overload fun(self: TextManager, font: UIFont, x: number, y: number, str: string, r: number, g: number, b: number, a: number): nil
---- @overload fun(self: TextManager, font: UIFont, x: number, y: number, zoom: number, str: string, r: number, g: number, b: number, a: number): nil
 function TextManager:DrawString(x, y, str) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function TextManager:DrawString(x, y, str, r, g, b, a) end
+
+--- @public
+--- @param font UIFont
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function TextManager:DrawString(font, x, y, str, r, g, b, a) end
+
+--- @public
+--- @param font UIFont
+--- @param x number
+--- @param y number
+--- @param zoom number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function TextManager:DrawString(font, x, y, zoom, str, r, g, b, a) end
 
 --- @public
 --- @param font UIFont
@@ -47,8 +80,19 @@ function TextManager:DrawStringBBcode(font, x, y, str, r, g, b, a) end
 --- @param b number
 --- @param a number
 --- @return nil
---- @overload fun(self: TextManager, font: UIFont, x: number, y: number, str: string, r: number, g: number, b: number, a: number): nil
 function TextManager:DrawStringCentre(x, y, str, r, g, b, a) end
+
+--- @public
+--- @param font UIFont
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function TextManager:DrawStringCentre(font, x, y, str, r, g, b, a) end
 
 --- @public
 --- @param font UIFont
@@ -71,8 +115,19 @@ function TextManager:DrawStringCentreDefered(font, x, y, str, r, g, b, a) end
 --- @param b number
 --- @param a number
 --- @return nil
---- @overload fun(self: TextManager, font: UIFont, x: number, y: number, str: string, r: number, g: number, b: number, a: number): nil
 function TextManager:DrawStringRight(x, y, str, r, g, b, a) end
+
+--- @public
+--- @param font UIFont
+--- @param x number
+--- @param y number
+--- @param str string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function TextManager:DrawStringRight(font, x, y, str, r, g, b, a) end
 
 --- @public
 --- @param font UIFont
@@ -123,8 +178,15 @@ function TextManager:MeasureStringX(font, str) end
 --- @param font UIFont
 --- @param str string
 --- @return integer
---- @overload fun(self: TextManager, arg0: UIFont, arg1: string, arg2: boolean, arg3: boolean): integer
 function TextManager:MeasureStringY(font, str) end
+
+--- @public
+--- @param arg0 UIFont
+--- @param arg1 string
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @return integer
+function TextManager:MeasureStringY(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 UIFont
@@ -143,8 +205,16 @@ function TextManager:MeasureStringYReal(arg0, arg1) end
 --- @param arg1 string
 --- @param arg2 integer
 --- @return string
---- @overload fun(self: TextManager, arg0: UIFont, arg1: string, arg2: integer, arg3: integer, arg4: string): string
 function TextManager:WrapText(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 UIFont
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @return string
+function TextManager:WrapText(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @return UIFont
@@ -166,7 +236,7 @@ function TextManager:getFontHeight(fontID) end
 function TextManager:getNormalFromFontSize(points) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

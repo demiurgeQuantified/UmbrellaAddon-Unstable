@@ -57,8 +57,19 @@ function ClimateColor:isEnableOverride() end
 --- @public
 --- @param targ ClimateColorInfo
 --- @return nil
---- @overload fun(self: ClimateColor, r: number, g: number, b: number, a: number, r1: number, g1: number, b1: number, a1: number): nil
 function ClimateColor:setAdminValue(targ) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param r1 number
+--- @param g1 number
+--- @param b1 number
+--- @param a1 number
+--- @return nil
+function ClimateColor:setAdminValue(r, g, b, a, r1, g1, b1, a1) end
 
 --- @public
 --- @param r number
@@ -110,11 +121,16 @@ function ClimateColor:setModdedValue(targ) end
 --- @param input ByteBuffer
 --- @param interp number
 --- @return nil
---- @overload fun(self: ClimateColor, targ: ClimateColorInfo, inter: number): nil
 function ClimateColor:setOverride(input, interp) end
 
+--- @public
+--- @param targ ClimateColorInfo
+--- @param inter number
+--- @return nil
+function ClimateColor:setOverride(targ, inter) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

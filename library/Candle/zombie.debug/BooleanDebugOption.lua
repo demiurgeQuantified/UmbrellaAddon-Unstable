@@ -30,12 +30,18 @@ function BooleanDebugOption.newOption(arg0, arg1, arg2) end
 
 --- @public
 --- @return string
---- @overload fun(self: BooleanDebugOption): string
+function BooleanDebugOption:getName() end
+
+--- @public
+--- @return string
 function BooleanDebugOption:getName() end
 
 --- @public
 --- @return IDebugOptionGroup
---- @overload fun(self: BooleanDebugOption): IDebugOptionGroup
+function BooleanDebugOption:getParent() end
+
+--- @public
+--- @return IDebugOptionGroup
 function BooleanDebugOption:getParent() end
 
 --- @public
@@ -48,17 +54,24 @@ function BooleanDebugOption:isDebugOnly() end
 
 --- @public
 --- @return nil
---- @overload fun(self: BooleanDebugOption): nil
+function BooleanDebugOption:onFullPathChanged() end
+
+--- @public
+--- @return nil
 function BooleanDebugOption:onFullPathChanged() end
 
 --- @public
 --- @param parent IDebugOptionGroup
 --- @return nil
---- @overload fun(self: BooleanDebugOption, parent: IDebugOptionGroup): nil
+function BooleanDebugOption:setParent(parent) end
+
+--- @public
+--- @param parent IDebugOptionGroup
+--- @return nil
 function BooleanDebugOption:setParent(parent) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

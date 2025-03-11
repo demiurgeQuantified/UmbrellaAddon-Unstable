@@ -60,7 +60,7 @@ function NewWindow:setMovable(bMoveable) end
 function NewWindow:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

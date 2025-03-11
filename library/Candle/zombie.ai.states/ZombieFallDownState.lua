@@ -39,7 +39,7 @@ function ZombieFallDownState:execute(owner) end
 function ZombieFallDownState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

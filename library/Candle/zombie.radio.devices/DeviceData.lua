@@ -111,7 +111,10 @@ function DeviceData:getEmitter() end
 
 --- @public
 --- @return FMODParameterList
---- @overload fun(self: DeviceData): FMODParameterList
+function DeviceData:getFMODParameters() end
+
+--- @public
+--- @return FMODParameterList
 function DeviceData:getFMODParameters() end
 
 --- @public
@@ -290,8 +293,13 @@ function DeviceData:setBaseVolumeRange(f) end
 --- @public
 --- @param c integer
 --- @return nil
---- @overload fun(self: DeviceData, chan: integer, setislistening: boolean): nil
 function DeviceData:setChannel(c) end
+
+--- @public
+--- @param chan integer
+--- @param setislistening boolean
+--- @return nil
+function DeviceData:setChannel(chan, setislistening) end
 
 --- @public
 --- @param chan integer
@@ -431,7 +439,6 @@ function DeviceData:setUseDelta(f) end
 --- @param arg1 GameSoundClip
 --- @param arg2 BitSet
 --- @return nil
---- @overload fun(self: DeviceData, arg0: integer, arg1: GameSoundClip, arg2: BitSet): nil
 function DeviceData:startEvent(arg0, arg1, arg2) end
 
 --- @public
@@ -439,7 +446,20 @@ function DeviceData:startEvent(arg0, arg1, arg2) end
 --- @param arg1 GameSoundClip
 --- @param arg2 BitSet
 --- @return nil
---- @overload fun(self: DeviceData, arg0: integer, arg1: GameSoundClip, arg2: BitSet): nil
+function DeviceData:startEvent(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 GameSoundClip
+--- @param arg2 BitSet
+--- @return nil
+function DeviceData:stopEvent(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 GameSoundClip
+--- @param arg2 BitSet
+--- @return nil
 function DeviceData:stopEvent(arg0, arg1, arg2) end
 
 --- @public
@@ -465,7 +485,12 @@ function DeviceData:update(isIso, playerInRange) end
 --- @param arg0 integer
 --- @param arg1 GameSoundClip
 --- @return nil
---- @overload fun(self: DeviceData, arg0: integer, arg1: GameSoundClip): nil
+function DeviceData:updateEvent(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 GameSoundClip
+--- @return nil
 function DeviceData:updateEvent(arg0, arg1) end
 
 --- @public
@@ -477,10 +502,14 @@ function DeviceData:updateMediaPlaying() end
 function DeviceData:updateSimple() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return DeviceData
---- @overload fun(parent: WaveSignalDevice): DeviceData
 function DeviceData.new() end
+
+--- @public
+--- @param parent WaveSignalDevice
+--- @return DeviceData
+function DeviceData.new(parent) end

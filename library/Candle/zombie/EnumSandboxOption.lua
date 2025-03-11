@@ -10,38 +10,60 @@ EnumSandboxOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: EnumSandboxOption): ConfigOption
+function EnumSandboxOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function EnumSandboxOption:asConfigOption() end
 
 --- @public
 --- @param table table
 --- @return nil
---- @overload fun(self: EnumSandboxOption, table: table): nil
+function EnumSandboxOption:fromTable(table) end
+
+--- @public
+--- @param table table
+--- @return nil
 function EnumSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
---- @overload fun(self: EnumSandboxOption): string
 function EnumSandboxOption:getPageName() end
 
 --- @public
 --- @return string
---- @overload fun(self: EnumSandboxOption): string
+function EnumSandboxOption:getPageName() end
+
+--- @public
+--- @return string
 function EnumSandboxOption:getShortName() end
 
 --- @public
 --- @return string
---- @overload fun(self: EnumSandboxOption): string
+function EnumSandboxOption:getShortName() end
+
+--- @public
+--- @return string
 function EnumSandboxOption:getTableName() end
 
 --- @public
 --- @return string
---- @overload fun(self: EnumSandboxOption): string
+function EnumSandboxOption:getTableName() end
+
+--- @public
+--- @return string
 function EnumSandboxOption:getTooltip() end
 
 --- @public
 --- @return string
---- @overload fun(self: EnumSandboxOption): string
+function EnumSandboxOption:getTooltip() end
+
+--- @public
+--- @return string
+function EnumSandboxOption:getTranslatedName() end
+
+--- @public
+--- @return string
 function EnumSandboxOption:getTranslatedName() end
 
 --- @public
@@ -60,24 +82,38 @@ function EnumSandboxOption:getValueTranslationByIndexOrNull(index) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: EnumSandboxOption): boolean
+function EnumSandboxOption:isCustom() end
+
+--- @public
+--- @return boolean
 function EnumSandboxOption:isCustom() end
 
 --- @public
 --- @return nil
---- @overload fun(self: EnumSandboxOption): nil
+function EnumSandboxOption:setCustom() end
+
+--- @public
+--- @return nil
 function EnumSandboxOption:setCustom() end
 
 --- @public
 --- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: EnumSandboxOption, pageName: string): SandboxOption
+function EnumSandboxOption:setPageName(pageName) end
+
+--- @public
+--- @param pageName string
+--- @return SandboxOption
 function EnumSandboxOption:setPageName(pageName) end
 
 --- @public
 --- @param translation string
 --- @return SandboxOption
---- @overload fun(self: EnumSandboxOption, translation: string): SandboxOption
+function EnumSandboxOption:setTranslation(translation) end
+
+--- @public
+--- @param translation string
+--- @return SandboxOption
 function EnumSandboxOption:setTranslation(translation) end
 
 --- @public
@@ -88,11 +124,15 @@ function EnumSandboxOption:setValueTranslation(translation) end
 --- @public
 --- @param table table
 --- @return nil
---- @overload fun(self: EnumSandboxOption, table: table): nil
+function EnumSandboxOption:toTable(table) end
+
+--- @public
+--- @param table table
+--- @return nil
 function EnumSandboxOption:toTable(table) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

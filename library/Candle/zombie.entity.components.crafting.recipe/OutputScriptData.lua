@@ -13,7 +13,7 @@ OutputScriptData = {}
 function OutputScriptData:getOutputScript() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

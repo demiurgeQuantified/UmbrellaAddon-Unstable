@@ -79,7 +79,7 @@ function AnimalGene:load(arg0, arg1, arg2) end
 function AnimalGene:save(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -19,7 +19,7 @@ function ClimateHistory:init(climateManager) end
 function ClimateHistory:updateDayChange(climateManager) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

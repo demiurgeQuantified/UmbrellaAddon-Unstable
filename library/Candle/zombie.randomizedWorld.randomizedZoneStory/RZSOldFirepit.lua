@@ -14,7 +14,7 @@ RZSOldFirepit = {}
 function RZSOldFirepit:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

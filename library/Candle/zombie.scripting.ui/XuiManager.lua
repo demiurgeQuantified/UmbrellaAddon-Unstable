@@ -93,7 +93,7 @@ function XuiManager.getDefaultSkinName() end
 function XuiManager.setParseOnce(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

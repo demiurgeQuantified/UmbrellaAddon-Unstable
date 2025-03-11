@@ -25,7 +25,7 @@ function BeardStyle:getTrimChoices() end
 function BeardStyle:isValid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

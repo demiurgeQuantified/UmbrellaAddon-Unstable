@@ -19,7 +19,7 @@ function AnimationsMesh:Load(name, totalFile) end
 function AnimationsMesh:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -39,9 +39,20 @@ function IsoDirections.cardinalFromAngle(angle) end
 --- @static
 --- @param angleRadians number
 --- @return IsoDirections
---- @overload fun(angle: Vector2): IsoDirections
---- @overload fun(angleX: number, angleY: number): IsoDirections
 function IsoDirections.fromAngle(angleRadians) end
+
+--- @public
+--- @static
+--- @param angle Vector2
+--- @return IsoDirections
+function IsoDirections.fromAngle(angle) end
+
+--- @public
+--- @static
+--- @param angleX number
+--- @param angleY number
+--- @return IsoDirections
+function IsoDirections.fromAngle(angleX, angleY) end
 
 --- @public
 --- @static
@@ -86,10 +97,10 @@ function IsoDirections.valueOf(arg0) end
 --- @public
 --- @static
 ---
----  Returns an array containing the constants of this enum class, in the order they
----  declared.
+--- Returns an array containing the constants of this enum class, in the order they
+--- declared.
 ---
---- @return IsoDirections[] an array containing the constants of this enum class, in the order they are declared
+--- @return IsoDirections[] _ an array containing the constants of this enum class, in the order they are declared
 function IsoDirections.values() end
 
 ------------------------------------
@@ -102,13 +113,21 @@ function IsoDirections:Rot180() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, time: integer): IsoDirections
 function IsoDirections:RotLeft() end
 
 --- @public
+--- @param time integer
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, time: integer): IsoDirections
+function IsoDirections:RotLeft(time) end
+
+--- @public
+--- @return IsoDirections
 function IsoDirections:RotRight() end
+
+--- @public
+--- @param time integer
+--- @return IsoDirections
+function IsoDirections:RotRight(time) end
 
 --- @public
 --- @return Vector2

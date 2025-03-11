@@ -10,70 +10,110 @@ IntegerSandboxOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: IntegerSandboxOption): ConfigOption
+function IntegerSandboxOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function IntegerSandboxOption:asConfigOption() end
 
 --- @public
 --- @param table table
 --- @return nil
---- @overload fun(self: IntegerSandboxOption, table: table): nil
+function IntegerSandboxOption:fromTable(table) end
+
+--- @public
+--- @param table table
+--- @return nil
 function IntegerSandboxOption:fromTable(table) end
 
 --- @public
 --- @return string
---- @overload fun(self: IntegerSandboxOption): string
 function IntegerSandboxOption:getPageName() end
 
 --- @public
 --- @return string
---- @overload fun(self: IntegerSandboxOption): string
+function IntegerSandboxOption:getPageName() end
+
+--- @public
+--- @return string
 function IntegerSandboxOption:getShortName() end
 
 --- @public
 --- @return string
---- @overload fun(self: IntegerSandboxOption): string
+function IntegerSandboxOption:getShortName() end
+
+--- @public
+--- @return string
 function IntegerSandboxOption:getTableName() end
 
 --- @public
 --- @return string
---- @overload fun(self: IntegerSandboxOption): string
+function IntegerSandboxOption:getTableName() end
+
+--- @public
+--- @return string
 function IntegerSandboxOption:getTooltip() end
 
 --- @public
 --- @return string
---- @overload fun(self: IntegerSandboxOption): string
+function IntegerSandboxOption:getTooltip() end
+
+--- @public
+--- @return string
+function IntegerSandboxOption:getTranslatedName() end
+
+--- @public
+--- @return string
 function IntegerSandboxOption:getTranslatedName() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IntegerSandboxOption): boolean
+function IntegerSandboxOption:isCustom() end
+
+--- @public
+--- @return boolean
 function IntegerSandboxOption:isCustom() end
 
 --- @public
 --- @return nil
---- @overload fun(self: IntegerSandboxOption): nil
+function IntegerSandboxOption:setCustom() end
+
+--- @public
+--- @return nil
 function IntegerSandboxOption:setCustom() end
 
 --- @public
 --- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: IntegerSandboxOption, pageName: string): SandboxOption
+function IntegerSandboxOption:setPageName(pageName) end
+
+--- @public
+--- @param pageName string
+--- @return SandboxOption
 function IntegerSandboxOption:setPageName(pageName) end
 
 --- @public
 --- @param translation string
 --- @return SandboxOption
---- @overload fun(self: IntegerSandboxOption, translation: string): SandboxOption
+function IntegerSandboxOption:setTranslation(translation) end
+
+--- @public
+--- @param translation string
+--- @return SandboxOption
 function IntegerSandboxOption:setTranslation(translation) end
 
 --- @public
 --- @param table table
 --- @return nil
---- @overload fun(self: IntegerSandboxOption, table: table): nil
+function IntegerSandboxOption:toTable(table) end
+
+--- @public
+--- @param table table
+--- @return nil
 function IntegerSandboxOption:toTable(table) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

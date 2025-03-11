@@ -10,43 +10,66 @@ FMODAudio = {}
 
 --- @public
 --- @return string
---- @overload fun(self: FMODAudio): string
+function FMODAudio:getName() end
+
+--- @public
+--- @return string
 function FMODAudio:getName() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: FMODAudio): boolean
+function FMODAudio:isPlaying() end
+
+--- @public
+--- @return boolean
 function FMODAudio:isPlaying() end
 
 --- @public
 --- @return nil
---- @overload fun(self: FMODAudio): nil
+function FMODAudio:pause() end
+
+--- @public
+--- @return nil
 function FMODAudio:pause() end
 
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: FMODAudio, arg0: string): nil
+function FMODAudio:setName(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function FMODAudio:setName(arg0) end
 
 --- @public
 --- @param arg0 number
 --- @return nil
---- @overload fun(self: FMODAudio, arg0: number): nil
+function FMODAudio:setVolume(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
 function FMODAudio:setVolume(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: FMODAudio): nil
 function FMODAudio:start() end
 
 --- @public
 --- @return nil
---- @overload fun(self: FMODAudio): nil
+function FMODAudio:start() end
+
+--- @public
+--- @return nil
+function FMODAudio:stop() end
+
+--- @public
+--- @return nil
 function FMODAudio:stop() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

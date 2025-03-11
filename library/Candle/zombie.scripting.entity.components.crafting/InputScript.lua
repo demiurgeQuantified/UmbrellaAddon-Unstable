@@ -32,7 +32,11 @@ function InputScript:allowRottenItem() end
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: InputScript, arg0: InventoryItem): boolean
+function InputScript:canUseItem(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
 function InputScript:canUseItem(arg0) end
 
 --- @public
@@ -86,9 +90,17 @@ function InputScript:dontPutBack() end
 
 --- @public
 --- @return number
---- @overload fun(self: InputScript, arg0: integer): number
---- @overload fun(self: InputScript, arg0: string): number
 function InputScript:getAmount() end
+
+--- @public
+--- @param arg0 integer
+--- @return number
+function InputScript:getAmount(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return number
+function InputScript:getAmount(arg0) end
 
 --- @public
 --- @return InputScript
@@ -104,9 +116,17 @@ function InputScript:getFluidMatchMode() end
 
 --- @public
 --- @return integer
---- @overload fun(self: InputScript, arg0: integer): integer
---- @overload fun(self: InputScript, arg0: string): integer
 function InputScript:getIntAmount() end
+
+--- @public
+--- @param arg0 integer
+--- @return integer
+function InputScript:getIntAmount(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return integer
+function InputScript:getIntAmount(arg0) end
 
 --- @public
 --- @return ItemApplyMode
@@ -227,7 +247,11 @@ function InputScript:isEmptyContainer() end
 --- @public
 --- @param arg0 Energy
 --- @return boolean
---- @overload fun(self: InputScript, arg0: DrainableComboItem): boolean
+function InputScript:isEnergyMatch(arg0) end
+
+--- @public
+--- @param arg0 DrainableComboItem
+--- @return boolean
 function InputScript:isEnergyMatch(arg0) end
 
 --- @public

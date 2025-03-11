@@ -41,12 +41,18 @@ function ResourceChannel.values() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ResourceChannel): integer
 function ResourceChannel:getBits() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ResourceChannel): integer
+function ResourceChannel:getBits() end
+
+--- @public
+--- @return integer
+function ResourceChannel:getByteId() end
+
+--- @public
+--- @return integer
 function ResourceChannel:getByteId() end
 
 --- @public

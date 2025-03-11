@@ -20,7 +20,7 @@ function RBOther:isValid(arg0, arg1) end
 function RBOther:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

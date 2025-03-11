@@ -330,7 +330,7 @@ function ImprovedFog.update() end
 function ImprovedFog.updateKeys() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

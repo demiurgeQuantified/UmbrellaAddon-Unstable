@@ -24,10 +24,62 @@ PerkFactory = {}
 --- @param xp9 integer
 --- @param xp10 integer
 --- @return Perk
---- @overload fun(perk: Perk, translation: string, xp1: integer, xp2: integer, xp3: integer, xp4: integer, xp5: integer, xp6: integer, xp7: integer, xp8: integer, xp9: integer, xp10: integer, passiv: boolean): Perk
---- @overload fun(perk: Perk, translation: string, parent: Perk, xp1: integer, xp2: integer, xp3: integer, xp4: integer, xp5: integer, xp6: integer, xp7: integer, xp8: integer, xp9: integer, xp10: integer): Perk
---- @overload fun(perk: Perk, translation: string, parent: Perk, xp1: integer, xp2: integer, xp3: integer, xp4: integer, xp5: integer, xp6: integer, xp7: integer, xp8: integer, xp9: integer, xp10: integer, passiv: boolean): Perk
 function PerkFactory.AddPerk(perk, translation, xp1, xp2, xp3, xp4, xp5, xp6, xp7, xp8, xp9, xp10) end
+
+--- @public
+--- @static
+--- @param perk Perk
+--- @param translation string
+--- @param xp1 integer
+--- @param xp2 integer
+--- @param xp3 integer
+--- @param xp4 integer
+--- @param xp5 integer
+--- @param xp6 integer
+--- @param xp7 integer
+--- @param xp8 integer
+--- @param xp9 integer
+--- @param xp10 integer
+--- @param passiv boolean
+--- @return Perk
+function PerkFactory.AddPerk(perk, translation, xp1, xp2, xp3, xp4, xp5, xp6, xp7, xp8, xp9, xp10, passiv) end
+
+--- @public
+--- @static
+--- @param perk Perk
+--- @param translation string
+--- @param parent Perk
+--- @param xp1 integer
+--- @param xp2 integer
+--- @param xp3 integer
+--- @param xp4 integer
+--- @param xp5 integer
+--- @param xp6 integer
+--- @param xp7 integer
+--- @param xp8 integer
+--- @param xp9 integer
+--- @param xp10 integer
+--- @return Perk
+function PerkFactory.AddPerk(perk, translation, parent, xp1, xp2, xp3, xp4, xp5, xp6, xp7, xp8, xp9, xp10) end
+
+--- @public
+--- @static
+--- @param perk Perk
+--- @param translation string
+--- @param parent Perk
+--- @param xp1 integer
+--- @param xp2 integer
+--- @param xp3 integer
+--- @param xp4 integer
+--- @param xp5 integer
+--- @param xp6 integer
+--- @param xp7 integer
+--- @param xp8 integer
+--- @param xp9 integer
+--- @param xp10 integer
+--- @param passiv boolean
+--- @return Perk
+function PerkFactory.AddPerk(perk, translation, parent, xp1, xp2, xp3, xp4, xp5, xp6, xp7, xp8, xp9, xp10, passiv) end
 
 --- @public
 --- @static
@@ -63,7 +115,7 @@ function PerkFactory.init() end
 function PerkFactory.initTranslations() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

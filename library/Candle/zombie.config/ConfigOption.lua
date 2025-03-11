@@ -60,7 +60,7 @@ function ConfigOption:setDefaultToCurrentValue() end
 function ConfigOption:setValueFromObject(o) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

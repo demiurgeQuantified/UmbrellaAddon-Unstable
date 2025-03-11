@@ -105,7 +105,7 @@ function SGlobalObjects.saveInitialStateForClient(bb) end
 function SGlobalObjects.update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

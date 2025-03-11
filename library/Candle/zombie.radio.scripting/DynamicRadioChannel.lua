@@ -15,7 +15,7 @@ DynamicRadioChannel = {}
 function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -23,5 +23,12 @@ function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 --- @param freq integer
 --- @param c ChannelCategory
 --- @return DynamicRadioChannel
---- @overload fun(n: string, freq: integer, c: ChannelCategory, guid: string): DynamicRadioChannel
 function DynamicRadioChannel.new(n, freq, c) end
+
+--- @public
+--- @param n string
+--- @param freq integer
+--- @param c ChannelCategory
+--- @param guid string
+--- @return DynamicRadioChannel
+function DynamicRadioChannel.new(n, freq, c, guid) end

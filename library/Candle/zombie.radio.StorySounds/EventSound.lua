@@ -45,10 +45,14 @@ function EventSound:setName(name) end
 function EventSound:setStorySounds(storySounds) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return EventSound
---- @overload fun(name: string): EventSound
 function EventSound.new() end
+
+--- @public
+--- @param name string
+--- @return EventSound
+function EventSound.new(name) end

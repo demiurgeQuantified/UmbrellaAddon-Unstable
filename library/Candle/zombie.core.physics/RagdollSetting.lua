@@ -52,7 +52,7 @@ function RagdollSetting:setAdminValue(arg0) end
 function RagdollSetting:setEnableAdmin(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

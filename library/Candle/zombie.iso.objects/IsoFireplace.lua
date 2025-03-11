@@ -131,11 +131,17 @@ function IsoFireplace:update() end
 function IsoFireplace:useFuel(amount) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoFireplace
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoFireplace
 function IsoFireplace.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param gid IsoSprite
+--- @return IsoFireplace
+function IsoFireplace.new(cell, sq, gid) end

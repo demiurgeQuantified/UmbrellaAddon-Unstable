@@ -39,7 +39,7 @@ function TileOverlays:hasOverlays(obj) end
 function TileOverlays:updateTileOverlaySprite(obj) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

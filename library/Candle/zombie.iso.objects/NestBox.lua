@@ -33,7 +33,7 @@ function NestBox:getIndex() end
 function NestBox:removeEgg(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

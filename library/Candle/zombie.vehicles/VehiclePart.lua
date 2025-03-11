@@ -29,13 +29,37 @@ function VehiclePart.getNumberByCondition(number, cond, min) end
 --- @param codes string
 --- @param distance integer
 --- @return nil
---- @overload fun(self: VehiclePart, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
---- @overload fun(self: VehiclePart, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
 function VehiclePart:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
+--- @return nil
+function VehiclePart:AddDeviceText(line, r, g, b, guid, codes, distance) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 string
+--- @param arg6 string
+--- @param arg7 integer
+--- @return nil
+function VehiclePart:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+
+--- @public
 --- @return boolean
---- @overload fun(self: VehiclePart): boolean
+function VehiclePart:HasPlayerInRange() end
+
+--- @public
+--- @return boolean
 function VehiclePart:HasPlayerInRange() end
 
 --- @public
@@ -108,8 +132,12 @@ function VehiclePart:getCondition() end
 
 --- @public
 --- @return integer
---- @overload fun(self: VehiclePart, chr: IsoGameCharacter): integer
 function VehiclePart:getContainerCapacity() end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return integer
+function VehiclePart:getContainerCapacity(chr) end
 
 --- @public
 --- @return number
@@ -125,12 +153,18 @@ function VehiclePart:getContainerSeatNumber() end
 
 --- @public
 --- @return number
---- @overload fun(self: VehiclePart): number
+function VehiclePart:getDelta() end
+
+--- @public
+--- @return number
 function VehiclePart:getDelta() end
 
 --- @public
 --- @return DeviceData
---- @overload fun(self: VehiclePart): DeviceData
+function VehiclePart:getDeviceData() end
+
+--- @public
+--- @return DeviceData
 function VehiclePart:getDeviceData() end
 
 --- @public
@@ -216,8 +250,14 @@ function VehiclePart:getScriptPart() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(self: VehiclePart): IsoGridSquare
---- @overload fun(self: VehiclePart): IsoGridSquare
+function VehiclePart:getSquare() end
+
+--- @public
+--- @return IsoGridSquare
+function VehiclePart:getSquare() end
+
+--- @public
+--- @return IsoGridSquare
 function VehiclePart:getSquare() end
 
 --- @public
@@ -251,20 +291,38 @@ function VehiclePart:getWindow() end
 
 --- @public
 --- @return number
---- @overload fun(self: VehiclePart): number
---- @overload fun(self: VehiclePart): number
 function VehiclePart:getX() end
 
 --- @public
 --- @return number
---- @overload fun(self: VehiclePart): number
---- @overload fun(self: VehiclePart): number
+function VehiclePart:getX() end
+
+--- @public
+--- @return number
+function VehiclePart:getX() end
+
+--- @public
+--- @return number
 function VehiclePart:getY() end
 
 --- @public
 --- @return number
---- @overload fun(self: VehiclePart): number
---- @overload fun(self: VehiclePart): number
+function VehiclePart:getY() end
+
+--- @public
+--- @return number
+function VehiclePart:getY() end
+
+--- @public
+--- @return number
+function VehiclePart:getZ() end
+
+--- @public
+--- @return number
+function VehiclePart:getZ() end
+
+--- @public
+--- @return number
 function VehiclePart:getZ() end
 
 --- @public
@@ -333,19 +391,33 @@ function VehiclePart:setContainerCapacity(cap) end
 --- @public
 --- @param amount number
 --- @return nil
---- @overload fun(self: VehiclePart, amount: number, force: boolean, noUpdateMass: boolean): nil
 function VehiclePart:setContainerContentAmount(amount) end
+
+--- @public
+--- @param amount number
+--- @param force boolean
+--- @param noUpdateMass boolean
+--- @return nil
+function VehiclePart:setContainerContentAmount(amount, force, noUpdateMass) end
 
 --- @public
 --- @param d number
 --- @return nil
---- @overload fun(self: VehiclePart, d: number): nil
+function VehiclePart:setDelta(d) end
+
+--- @public
+--- @param d number
+--- @return nil
 function VehiclePart:setDelta(d) end
 
 --- @public
 --- @param data DeviceData
 --- @return nil
---- @overload fun(self: VehiclePart, data: DeviceData): nil
+function VehiclePart:setDeviceData(data) end
+
+--- @public
+--- @param data DeviceData
+--- @return nil
 function VehiclePart:setDeviceData(data) end
 
 --- @public
@@ -368,8 +440,13 @@ function VehiclePart:setGeneralCondition(item, baseQuality, chanceToSpawnDamaged
 --- @public
 --- @param item InventoryItem
 --- @return nil
---- @overload fun(self: VehiclePart, item: InventoryItem, mechanicSkill: integer): nil
 function VehiclePart:setInventoryItem(item) end
+
+--- @public
+--- @param item InventoryItem
+--- @param mechanicSkill integer
+--- @return nil
+function VehiclePart:setInventoryItem(item, mechanicSkill) end
 
 --- @public
 --- @param container ItemContainer
@@ -432,7 +509,7 @@ function VehiclePart:setWheelFriction(wheelFriction) end
 function VehiclePart:updateSignalDevice() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

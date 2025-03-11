@@ -52,7 +52,7 @@ function HitReactionSetting:setAdminValue(arg0) end
 function HitReactionSetting:setEnableAdmin(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

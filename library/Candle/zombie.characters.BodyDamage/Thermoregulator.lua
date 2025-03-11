@@ -218,8 +218,12 @@ function Thermoregulator:save(output) end
 --- @public
 --- @param target number
 --- @return nil
---- @overload fun(self: Thermoregulator, meta: Metabolics): nil
 function Thermoregulator:setMetabolicTarget(target) end
+
+--- @public
+--- @param meta Metabolics
+--- @return nil
+function Thermoregulator:setMetabolicTarget(meta) end
 
 --- @public
 --- @return integer
@@ -234,7 +238,7 @@ function Thermoregulator:thermalChevronUp() end
 function Thermoregulator:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

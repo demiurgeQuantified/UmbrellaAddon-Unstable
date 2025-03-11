@@ -49,7 +49,7 @@ function ZombieGetDownState:isNearStartXY(owner) end
 function ZombieGetDownState:setParams(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

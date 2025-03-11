@@ -34,10 +34,16 @@ function StartMode.values() end
 
 --- @public
 --- @return integer
---- @overload fun(self: StartMode): integer
 function StartMode:getBits() end
 
 --- @public
 --- @return integer
---- @overload fun(self: StartMode): integer
+function StartMode:getBits() end
+
+--- @public
+--- @return integer
+function StartMode:getByteId() end
+
+--- @public
+--- @return integer
 function StartMode:getByteId() end

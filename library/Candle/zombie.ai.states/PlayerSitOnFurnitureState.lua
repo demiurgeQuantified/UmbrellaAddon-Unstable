@@ -44,7 +44,7 @@ function PlayerSitOnFurnitureState:execute(arg0) end
 function PlayerSitOnFurnitureState:exit(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

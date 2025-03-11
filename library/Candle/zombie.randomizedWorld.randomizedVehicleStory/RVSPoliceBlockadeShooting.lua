@@ -35,7 +35,7 @@ function RVSPoliceBlockadeShooting:randomizeVehicleStory(zone, chunk) end
 function RVSPoliceBlockadeShooting:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

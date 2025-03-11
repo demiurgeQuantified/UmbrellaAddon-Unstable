@@ -35,7 +35,7 @@ function PathFindState2:exit(arg0) end
 function PathFindState2:isMoving(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

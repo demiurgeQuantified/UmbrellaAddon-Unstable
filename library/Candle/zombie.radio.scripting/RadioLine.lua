@@ -47,7 +47,7 @@ function RadioLine:setAirTime(airTime) end
 function RadioLine:setText(text) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -56,5 +56,13 @@ function RadioLine:setText(text) end
 --- @param green number
 --- @param blue number
 --- @return RadioLine
---- @overload fun(txt: string, red: number, green: number, blue: number, fx: string): RadioLine
 function RadioLine.new(txt, red, green, blue) end
+
+--- @public
+--- @param txt string
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param fx string
+--- @return RadioLine
+function RadioLine.new(txt, red, green, blue, fx) end

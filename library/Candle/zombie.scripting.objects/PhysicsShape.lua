@@ -43,7 +43,7 @@ function PhysicsShape:setPhysicsShapeScript(arg0) end
 function PhysicsShape:setRadius(radius) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

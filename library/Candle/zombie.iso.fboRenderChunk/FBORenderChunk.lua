@@ -96,7 +96,7 @@ function FBORenderChunk:renderInWorldMainThread() end
 function FBORenderChunk:setRenderLevels(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

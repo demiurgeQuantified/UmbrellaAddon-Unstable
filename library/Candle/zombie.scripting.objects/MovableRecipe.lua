@@ -81,7 +81,7 @@ function MovableRecipe:setWorldSprite(worldSprite) end
 function MovableRecipe:setXpPerk(perk) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

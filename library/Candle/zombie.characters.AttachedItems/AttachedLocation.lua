@@ -22,7 +22,7 @@ function AttachedLocation:getId() end
 function AttachedLocation:setAttachmentName(attachmentName) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

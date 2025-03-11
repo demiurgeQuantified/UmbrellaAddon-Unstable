@@ -39,7 +39,7 @@ function PlayerStrafeState:execute(owner) end
 function PlayerStrafeState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

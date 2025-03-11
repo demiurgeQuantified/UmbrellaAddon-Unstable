@@ -14,7 +14,7 @@ RZSTragicPicnic = {}
 function RZSTragicPicnic:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

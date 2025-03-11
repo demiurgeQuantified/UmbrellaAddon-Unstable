@@ -11,8 +11,13 @@ FluidFilterScript = {}
 --- @public
 --- @static
 --- @return FluidFilterScript
---- @overload fun(arg0: boolean): FluidFilterScript
 function FluidFilterScript.GetAnonymous() end
+
+--- @public
+--- @static
+--- @param arg0 boolean
+--- @return FluidFilterScript
+function FluidFilterScript.GetAnonymous(arg0) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -73,7 +78,7 @@ function FluidFilterScript:getVersion(arg0) end
 function FluidFilterScript:isSingleFluid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

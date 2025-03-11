@@ -32,11 +32,21 @@ function IsoZombieGiblets:render(x, y, z, info, bDoAttached, bWallLightingPass, 
 function IsoZombieGiblets:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoZombieGiblets
---- @overload fun(type: GibletType, cell: IsoCell, x: number, y: number, z: number, xvel: number, yvel: number): IsoZombieGiblets
 function IsoZombieGiblets.new(cell) end
+
+--- @public
+--- @param type GibletType
+--- @param cell IsoCell
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param xvel number
+--- @param yvel number
+--- @return IsoZombieGiblets
+function IsoZombieGiblets.new(type, cell, x, y, z, xvel, yvel) end

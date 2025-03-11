@@ -57,14 +57,24 @@ function ContainerID:isContainerTheSame(arg0, arg1) end
 --- @param arg0 ByteBuffer
 --- @param arg1 UdpConnection
 --- @return nil
---- @overload fun(self: ContainerID, arg0: ByteBuffer, arg1: UdpConnection): nil
+function ContainerID:parse(arg0, arg1) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @param arg1 UdpConnection
+--- @return nil
 function ContainerID:parse(arg0, arg1) end
 
 --- @public
 --- @param arg0 ItemContainer
 --- @return nil
---- @overload fun(self: ContainerID, arg0: ItemContainer, arg1: IsoObject): nil
 function ContainerID:set(arg0) end
+
+--- @public
+--- @param arg0 ItemContainer
+--- @param arg1 IsoObject
+--- @return nil
+function ContainerID:set(arg0, arg1) end
 
 --- @public
 --- @param arg0 ItemContainer
@@ -92,12 +102,20 @@ function ContainerID:toString() end
 --- @public
 --- @param arg0 ByteBuffer
 --- @return nil
---- @overload fun(self: ContainerID, arg0: ByteBufferWriter): nil
---- @overload fun(self: ContainerID, arg0: ByteBufferWriter): nil
+function ContainerID:write(arg0) end
+
+--- @public
+--- @param arg0 ByteBufferWriter
+--- @return nil
+function ContainerID:write(arg0) end
+
+--- @public
+--- @param arg0 ByteBufferWriter
+--- @return nil
 function ContainerID:write(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

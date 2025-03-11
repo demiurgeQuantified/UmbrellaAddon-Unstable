@@ -109,7 +109,7 @@ function ThermalNode:hasUpstream() end
 function ThermalNode:isCore() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -118,5 +118,13 @@ function ThermalNode:isCore() end
 --- @param arg2 BodyPart
 --- @param arg3 number
 --- @return ThermalNode
---- @overload fun(arg0: Thermoregulator, arg1: boolean, arg2: number, arg3: BodyPart, arg4: number): ThermalNode
 function ThermalNode.new(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 Thermoregulator
+--- @param arg1 boolean
+--- @param arg2 number
+--- @param arg3 BodyPart
+--- @param arg4 number
+--- @return ThermalNode
+function ThermalNode.new(arg0, arg1, arg2, arg3, arg4) end

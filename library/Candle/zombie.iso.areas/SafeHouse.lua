@@ -13,8 +13,17 @@ SafeHouse = {}
 --- @param square IsoGridSquare
 --- @param player IsoPlayer
 --- @return SafeHouse
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string): SafeHouse
 function SafeHouse.addSafeHouse(square, player) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @return SafeHouse
+function SafeHouse.addSafeHouse(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -45,10 +54,28 @@ function SafeHouse.getOnlineID(arg0, arg1) end
 --- @static
 --- @param arg0 integer
 --- @return SafeHouse
---- @overload fun(arg0: string): SafeHouse
---- @overload fun(square: IsoGridSquare): SafeHouse
---- @overload fun(x: integer, y: integer, w: integer, h: integer): SafeHouse
 function SafeHouse.getSafeHouse(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return SafeHouse
+function SafeHouse.getSafeHouse(arg0) end
+
+--- @public
+--- @static
+--- @param square IsoGridSquare
+--- @return SafeHouse
+function SafeHouse.getSafeHouse(square) end
+
+--- @public
+--- @static
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
+--- @return SafeHouse
+function SafeHouse.getSafeHouse(x, y, w, h) end
 
 --- @public
 --- @static
@@ -68,15 +95,29 @@ function SafeHouse.getSafehouseList() end
 --- @param arg2 integer
 --- @param arg3 integer
 --- @return SafeHouse
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: SafeHouse): SafeHouse
 function SafeHouse.getSafehouseOverlapping(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 SafeHouse
+--- @return SafeHouse
+function SafeHouse.getSafehouseOverlapping(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
 --- @param username string
 --- @return SafeHouse
---- @overload fun(player: IsoPlayer): SafeHouse
 function SafeHouse.hasSafehouse(username) end
+
+--- @public
+--- @static
+--- @param player IsoPlayer
+--- @return SafeHouse
+function SafeHouse.hasSafehouse(player) end
 
 --- @public
 --- @static
@@ -115,10 +156,10 @@ function SafeHouse.isPlayerAllowedOnSquare(player, sq) end
 --- @public
 --- @static
 ---
----  Return if the square is a safehouse non allowed for the player You need to be
----  a safehouse AND not be allowed to return the safe If you're allowed,  you'll
----  null in return If username is null, you basically just return if  there's a
----  here
+--- Return if the square is a safehouse non allowed for the player You need to be
+--- a safehouse AND not be allowed to return the safe If you're allowed,  you'll
+--- null in return If username is null, you basically just return if  there's a
+--- here
 ---
 --- @param square IsoGridSquare
 --- @param username string
@@ -189,8 +230,12 @@ function SafeHouse:addPlayer(player) end
 --- @public
 --- @param username string
 --- @return SafeHouse
---- @overload fun(self: SafeHouse, player: IsoPlayer): SafeHouse
 function SafeHouse:alreadyHaveSafehouse(username) end
+
+--- @public
+--- @param player IsoPlayer
+--- @return SafeHouse
+function SafeHouse:alreadyHaveSafehouse(player) end
 
 --- @public
 --- @param player IsoPlayer
@@ -275,8 +320,12 @@ function SafeHouse:haveInvite(arg0) end
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: SafeHouse, player: IsoPlayer): boolean
 function SafeHouse:isOwner(arg0) end
+
+--- @public
+--- @param player IsoPlayer
+--- @return boolean
+function SafeHouse:isOwner(player) end
 
 --- @public
 --- @param username string
@@ -286,8 +335,12 @@ function SafeHouse:isRespawnInSafehouse(username) end
 --- @public
 --- @param name string
 --- @return boolean
---- @overload fun(self: SafeHouse, player: IsoPlayer): boolean
 function SafeHouse:playerAllowed(name) end
+
+--- @public
+--- @param player IsoPlayer
+--- @return boolean
+function SafeHouse:playerAllowed(player) end
 
 --- @public
 --- @param arg0 string
@@ -376,15 +429,15 @@ function SafeHouse:updatePlayersConnected() end
 
 --- @public
 ---
----  Update the last visited value everytime someone is in this safehouse If it's
----  visited for some time (SafehouseRemoval serveroption) it's automatically
+--- Update the last visited value everytime someone is in this safehouse If it's
+--- visited for some time (SafehouseRemoval serveroption) it's automatically
 ---
 --- @param player IsoPlayer
 --- @return nil
 function SafeHouse:updateSafehouse(player) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

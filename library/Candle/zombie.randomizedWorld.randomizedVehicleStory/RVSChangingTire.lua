@@ -28,7 +28,7 @@ function RVSChangingTire:randomizeVehicleStory(zone, chunk) end
 function RVSChangingTire:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -58,8 +58,14 @@ function RecipeMonitor.IsEnabled() end
 --- @static
 --- @param arg0 string
 --- @return nil
---- @overload fun(arg0: string, arg1: Color): nil
 function RecipeMonitor.Log(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 Color
+--- @return nil
+function RecipeMonitor.Log(arg0, arg1) end
 
 --- @public
 --- @static
@@ -183,7 +189,7 @@ function RecipeMonitor.setRecipe(arg0) end
 function RecipeMonitor.suspend() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

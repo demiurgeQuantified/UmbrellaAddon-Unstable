@@ -14,7 +14,7 @@ RDSBleach = {}
 function RDSBleach:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

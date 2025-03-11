@@ -24,7 +24,7 @@ function IdleState.instance() end
 function IdleState:animEvent(owner, event) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -14,7 +14,7 @@ RZSWasteDump = {}
 function RZSWasteDump:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

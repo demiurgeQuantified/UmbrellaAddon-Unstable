@@ -11,8 +11,13 @@ InventoryContainer = {}
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @return nil
---- @overload fun(self: InventoryContainer, tooltipUI: ObjectTooltip, layout: Layout): nil
 function InventoryContainer:DoTooltip(tooltipUI) end
+
+--- @public
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
+--- @return nil
+function InventoryContainer:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean
@@ -125,7 +130,7 @@ function InventoryContainer:setWeightReduction(weightReduction) end
 function InventoryContainer:updateAge() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

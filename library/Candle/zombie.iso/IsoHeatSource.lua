@@ -30,8 +30,15 @@ function IsoHeatSource:getZ() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoHeatSource, minX: integer, minY: integer, maxX: integer, maxY: integer): boolean
 function IsoHeatSource:isInBounds() end
+
+--- @public
+--- @param minX integer
+--- @param minY integer
+--- @param maxX integer
+--- @param maxY integer
+--- @return boolean
+function IsoHeatSource:isInBounds(minX, minY, maxX, maxY) end
 
 --- @public
 --- @param radius integer
@@ -44,7 +51,7 @@ function IsoHeatSource:setRadius(radius) end
 function IsoHeatSource:setTemperature(temperature) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

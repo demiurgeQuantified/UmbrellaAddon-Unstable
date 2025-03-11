@@ -39,7 +39,7 @@ function ZombieReanimateState:execute(owner) end
 function ZombieReanimateState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

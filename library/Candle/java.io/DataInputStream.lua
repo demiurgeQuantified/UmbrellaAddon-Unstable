@@ -21,85 +21,148 @@ function DataInputStream.readUTF(arg0) end
 --- @public
 --- @param arg0 byte[]
 --- @return integer
---- @overload fun(self: DataInputStream, arg0: byte[], arg1: integer, arg2: integer): integer
 function DataInputStream:read(arg0) end
 
 --- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function DataInputStream:read(arg0, arg1, arg2) end
+
+--- @public
 --- @return boolean
---- @overload fun(self: DataInputStream): boolean
+function DataInputStream:readBoolean() end
+
+--- @public
+--- @return boolean
 function DataInputStream:readBoolean() end
 
 --- @public
 --- @return integer
---- @overload fun(self: DataInputStream): integer
+function DataInputStream:readByte() end
+
+--- @public
+--- @return integer
 function DataInputStream:readByte() end
 
 --- @public
 --- @return string
---- @overload fun(self: DataInputStream): string
+function DataInputStream:readChar() end
+
+--- @public
+--- @return string
 function DataInputStream:readChar() end
 
 --- @public
 --- @return number
---- @overload fun(self: DataInputStream): number
 function DataInputStream:readDouble() end
 
 --- @public
 --- @return number
---- @overload fun(self: DataInputStream): number
+function DataInputStream:readDouble() end
+
+--- @public
+--- @return number
+function DataInputStream:readFloat() end
+
+--- @public
+--- @return number
 function DataInputStream:readFloat() end
 
 --- @public
 --- @param arg0 byte[]
 --- @return nil
---- @overload fun(self: DataInputStream, arg0: byte[]): nil
---- @overload fun(self: DataInputStream, arg0: byte[], arg1: integer, arg2: integer): nil
---- @overload fun(self: DataInputStream, arg0: byte[], arg1: integer, arg2: integer): nil
 function DataInputStream:readFully(arg0) end
 
 --- @public
+--- @param arg0 byte[]
+--- @return nil
+function DataInputStream:readFully(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function DataInputStream:readFully(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function DataInputStream:readFully(arg0, arg1, arg2) end
+
+--- @public
 --- @return integer
---- @overload fun(self: DataInputStream): integer
+function DataInputStream:readInt() end
+
+--- @public
+--- @return integer
 function DataInputStream:readInt() end
 
 --- @public
 --- @return string
---- @overload fun(self: DataInputStream): string
+--- @deprecated
+function DataInputStream:readLine() end
+
+--- @public
+--- @return string
 function DataInputStream:readLine() end
 
 --- @public
 --- @return integer
---- @overload fun(self: DataInputStream): integer
+function DataInputStream:readLong() end
+
+--- @public
+--- @return integer
 function DataInputStream:readLong() end
 
 --- @public
 --- @return short
---- @overload fun(self: DataInputStream): short
+function DataInputStream:readShort() end
+
+--- @public
+--- @return short
 function DataInputStream:readShort() end
 
 --- @public
 --- @return string
---- @overload fun(self: DataInputStream): string
+function DataInputStream:readUTF() end
+
+--- @public
+--- @return string
 function DataInputStream:readUTF() end
 
 --- @public
 --- @return integer
---- @overload fun(self: DataInputStream): integer
 function DataInputStream:readUnsignedByte() end
 
 --- @public
 --- @return integer
---- @overload fun(self: DataInputStream): integer
+function DataInputStream:readUnsignedByte() end
+
+--- @public
+--- @return integer
+function DataInputStream:readUnsignedShort() end
+
+--- @public
+--- @return integer
 function DataInputStream:readUnsignedShort() end
 
 --- @public
 --- @param arg0 integer
 --- @return integer
---- @overload fun(self: DataInputStream, arg0: integer): integer
+function DataInputStream:skipBytes(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return integer
 function DataInputStream:skipBytes(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

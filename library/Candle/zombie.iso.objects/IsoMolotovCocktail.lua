@@ -40,11 +40,22 @@ function IsoMolotovCocktail:render(x, y, z, info, bDoAttached, bWallLightingPass
 function IsoMolotovCocktail:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoMolotovCocktail
---- @overload fun(cell: IsoCell, x: number, y: number, z: number, xvel: number, yvel: number, weapon: HandWeapon, character: IsoGameCharacter): IsoMolotovCocktail
 function IsoMolotovCocktail.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param xvel number
+--- @param yvel number
+--- @param weapon HandWeapon
+--- @param character IsoGameCharacter
+--- @return IsoMolotovCocktail
+function IsoMolotovCocktail.new(cell, x, y, z, xvel, yvel, weapon, character) end

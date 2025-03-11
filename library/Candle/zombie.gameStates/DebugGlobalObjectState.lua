@@ -65,7 +65,7 @@ function DebugGlobalObjectState:updateScene() end
 function DebugGlobalObjectState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

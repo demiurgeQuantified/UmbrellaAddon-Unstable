@@ -28,7 +28,7 @@ function RVSBanditRoad:randomizeVehicleStory(zone, chunk) end
 function RVSBanditRoad:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

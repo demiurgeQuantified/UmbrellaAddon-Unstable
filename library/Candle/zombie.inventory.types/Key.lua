@@ -79,13 +79,13 @@ function Key:setPadlock(padlock) end
 
 --- @public
 ---
----  Get the key number of the building and set it to the key
+--- Get the key number of the building and set it to the key
 ---
 --- @return nil
 function Key:takeKeyId() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

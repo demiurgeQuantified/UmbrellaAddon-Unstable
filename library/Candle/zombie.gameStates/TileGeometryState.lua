@@ -99,7 +99,7 @@ function TileGeometryState:update() end
 function TileGeometryState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

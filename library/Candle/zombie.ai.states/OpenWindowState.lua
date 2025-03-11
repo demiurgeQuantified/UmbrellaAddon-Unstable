@@ -39,7 +39,7 @@ function OpenWindowState:execute(owner) end
 function OpenWindowState:exit(owner) end
 
 --- @public
---- @return boolean TRUE if this state handles the "Cancel Action" key or the B controller button.
+--- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
 function OpenWindowState:isDoingActionThatCanBeCancelled() end
 
 --- @public
@@ -49,7 +49,7 @@ function OpenWindowState:isDoingActionThatCanBeCancelled() end
 function OpenWindowState:setParams(owner, window) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

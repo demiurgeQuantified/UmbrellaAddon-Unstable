@@ -22,10 +22,31 @@ function StorySound:getName() end
 
 --- @public
 --- @return integer
---- @overload fun(self: StorySound, volumeOverride: number): integer
---- @overload fun(self: StorySound, x: number, y: number, z: number, minRange: number, maxRange: number): integer
---- @overload fun(self: StorySound, volumeMod: number, x: number, y: number, z: number, minRange: number, maxRange: number): integer
 function StorySound:playSound() end
+
+--- @public
+--- @param volumeOverride number
+--- @return integer
+function StorySound:playSound(volumeOverride) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param minRange number
+--- @param maxRange number
+--- @return integer
+function StorySound:playSound(x, y, z, minRange, maxRange) end
+
+--- @public
+--- @param volumeMod number
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param minRange number
+--- @param maxRange number
+--- @return integer
+function StorySound:playSound(volumeMod, x, y, z, minRange, maxRange) end
 
 --- @public
 --- @param baseVolume number
@@ -38,7 +59,7 @@ function StorySound:setBaseVolume(baseVolume) end
 function StorySound:setName(name) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

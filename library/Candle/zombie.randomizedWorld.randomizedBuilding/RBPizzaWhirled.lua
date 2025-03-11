@@ -10,7 +10,7 @@ RBPizzaWhirled = {}
 
 --- @public
 ---
----  Description copied from class: RandomizedBuildingBase
+--- Description copied from class: RandomizedBuildingBase
 ---
 --- @param def BuildingDef
 --- @param force boolean
@@ -28,7 +28,7 @@ function RBPizzaWhirled:randomizeBuilding(def) end
 function RBPizzaWhirled:roomValid(sq) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

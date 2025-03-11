@@ -14,7 +14,7 @@ RZSNastyMattress = {}
 function RZSNastyMattress:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

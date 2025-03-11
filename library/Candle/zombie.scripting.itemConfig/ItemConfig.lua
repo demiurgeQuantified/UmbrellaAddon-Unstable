@@ -52,7 +52,7 @@ function ItemConfig:getName() end
 function ItemConfig:isValid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

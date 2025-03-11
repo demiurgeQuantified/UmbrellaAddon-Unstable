@@ -13,16 +13,30 @@ GameEntityFactory = {}
 --- @param arg0 GameEntity
 --- @param arg1 Component
 --- @return nil
---- @overload fun(arg0: GameEntity, arg1: boolean, arg2: Component): nil
 function GameEntityFactory.AddComponent(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 GameEntity
+--- @param arg1 boolean
+--- @param arg2 Component
+--- @return nil
+function GameEntityFactory.AddComponent(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 GameEntity
 --- @param arg1 Component[]
 --- @return nil
---- @overload fun(arg0: GameEntity, arg1: boolean, arg2: Component[]): nil
 function GameEntityFactory.AddComponents(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 GameEntity
+--- @param arg1 boolean
+--- @param arg2 Component[]
+--- @return nil
+function GameEntityFactory.AddComponents(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -98,7 +112,7 @@ function GameEntityFactory.TransferComponent(arg0, arg1, arg2) end
 function GameEntityFactory.TransferComponents(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

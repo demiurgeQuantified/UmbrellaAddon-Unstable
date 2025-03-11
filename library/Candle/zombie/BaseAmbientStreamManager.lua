@@ -94,7 +94,7 @@ function BaseAmbientStreamManager:stop() end
 function BaseAmbientStreamManager:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

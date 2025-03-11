@@ -25,10 +25,15 @@ function SteamFriend:getState() end
 function SteamFriend:getSteamID() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return SteamFriend
---- @overload fun(name: string, steamID: integer): SteamFriend
 function SteamFriend.new() end
+
+--- @public
+--- @param name string
+--- @param steamID integer
+--- @return SteamFriend
+function SteamFriend.new(name, steamID) end

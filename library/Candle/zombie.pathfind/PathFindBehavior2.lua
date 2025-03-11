@@ -26,14 +26,23 @@ function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5
 --- @public
 --- @param arg0 Mover
 --- @return nil
---- @overload fun(self: PathFindBehavior2, arg0: Mover): nil
+function PathFindBehavior2:Failed(arg0) end
+
+--- @public
+--- @param arg0 Mover
+--- @return nil
 function PathFindBehavior2:Failed(arg0) end
 
 --- @public
 --- @param arg0 Path
 --- @param arg1 Mover
 --- @return nil
---- @overload fun(self: PathFindBehavior2, arg0: Path, arg1: Mover): nil
+function PathFindBehavior2:Succeeded(arg0, arg1) end
+
+--- @public
+--- @param arg0 Path
+--- @param arg1 Mover
+--- @return nil
 function PathFindBehavior2:Succeeded(arg0, arg1) end
 
 --- @public
@@ -232,7 +241,7 @@ function PathFindBehavior2:shouldIgnoreCollisionWithSquare(arg0) end
 function PathFindBehavior2:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

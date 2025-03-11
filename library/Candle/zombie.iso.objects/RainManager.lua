@@ -149,7 +149,7 @@ function RainManager.startRaining() end
 function RainManager.stopRaining() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

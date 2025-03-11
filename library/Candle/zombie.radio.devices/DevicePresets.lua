@@ -88,7 +88,7 @@ function DevicePresets:setPresetName(id, name) end
 function DevicePresets:setPresets(p) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

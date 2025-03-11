@@ -39,7 +39,7 @@ function IsoWaterGeometry:isValid() end
 function IsoWaterGeometry:isbShore() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

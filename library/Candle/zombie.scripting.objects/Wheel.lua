@@ -17,7 +17,7 @@ function Wheel:getId() end
 function Wheel:getOffset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

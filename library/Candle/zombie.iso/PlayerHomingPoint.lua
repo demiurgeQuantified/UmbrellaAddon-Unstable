@@ -14,7 +14,7 @@ function PlayerHomingPoint:getA() end
 
 --- @public
 ---
----  The lerp value for angle adjustment, can be tweaked to be more slowly or faster
+--- The lerp value for angle adjustment, can be tweaked to be more slowly or faster
 ---
 --- @return number
 function PlayerHomingPoint:getAngleLerpVal() end
@@ -29,8 +29,8 @@ function PlayerHomingPoint:getG() end
 
 --- @public
 ---
----  Offset the screen target point, for example to point to top of counter by
----  Y value
+--- Offset the screen target point, for example to point to top of counter by
+--- Y value
 ---
 --- @return number
 function PlayerHomingPoint:getHomeOnOffsetX() end
@@ -41,8 +41,8 @@ function PlayerHomingPoint:getHomeOnOffsetY() end
 
 --- @public
 ---
----  The distance in tiles uppon which the pointer will jump to target (if
----  is enabled, and the target is onScreen)
+--- The distance in tiles uppon which the pointer will jump to target (if
+--- is enabled, and the target is onScreen)
 ---
 --- @return integer
 function PlayerHomingPoint:getHomeOnTargetDist() end
@@ -53,8 +53,8 @@ function PlayerHomingPoint:getID() end
 
 --- @public
 ---
----  The lerp value for jumping to target (homeOneTarget), can be tweaked to be more
----  or faster responding.
+--- The lerp value for jumping to target (homeOneTarget), can be tweaked to be more
+--- or faster responding.
 ---
 --- @return number
 function PlayerHomingPoint:getMovementLerpVal() end
@@ -69,8 +69,8 @@ function PlayerHomingPoint:getRenderHeight() end
 
 --- @public
 ---
----  The base render position for pointers is the center of the screen, adjust this
----  have it more at feet or head of character for example.
+--- The base render position for pointers is the center of the screen, adjust this
+--- have it more at feet or head of character for example.
 ---
 --- @return number
 function PlayerHomingPoint:getRenderOffsetX() end
@@ -81,14 +81,14 @@ function PlayerHomingPoint:getRenderOffsetY() end
 
 --- @public
 ---
----  Render width and height for the pointer texture.
+--- Render width and height for the pointer texture.
 ---
 --- @return number
 function PlayerHomingPoint:getRenderWidth() end
 
 --- @public
 ---
----  The distance in pixels the pointer will hover around the character.
+--- The distance in pixels the pointer will hover around the character.
 ---
 --- @return number
 function PlayerHomingPoint:getStickToCharDist() end
@@ -99,7 +99,7 @@ function PlayerHomingPoint:getTargetAngle() end
 
 --- @public
 ---
----  The target position on the map for this pointer.
+--- The target position on the map for this pointer.
 ---
 --- @return integer
 function PlayerHomingPoint:getX() end
@@ -110,21 +110,21 @@ function PlayerHomingPoint:getY() end
 
 --- @public
 ---
----  Active can be set to false, the pointer will remain but wont be drawn.
+--- Active can be set to false, the pointer will remain but wont be drawn.
 ---
 --- @return boolean
 function PlayerHomingPoint:isActive() end
 
 --- @public
 ---
----  When enabled will ommit angle calculation, custom angle be set with
+--- When enabled will ommit angle calculation, custom angle be set with
 ---
 --- @return boolean
 function PlayerHomingPoint:isCustomTargetAngle() end
 
 --- @public
 ---
----  if enabled the pointer will jump to the target when its in view (and within the
+--- if enabled the pointer will jump to the target when its in view (and within the
 ---
 --- @return boolean
 function PlayerHomingPoint:isHomeOnTargetInView() end
@@ -135,7 +135,7 @@ function PlayerHomingPoint:isRemoved() end
 
 --- @public
 ---
----  When called will remove the pointer next tick
+--- When called will remove the pointer next tick
 ---
 --- @return nil
 function PlayerHomingPoint:remove() end
@@ -264,7 +264,7 @@ function PlayerHomingPoint:setY(y) end
 function PlayerHomingPoint:setYOffsetScaled(offset) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

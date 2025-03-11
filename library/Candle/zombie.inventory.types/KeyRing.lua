@@ -36,7 +36,7 @@ function KeyRing:getSaveType() end
 function KeyRing:setKeys(keys) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

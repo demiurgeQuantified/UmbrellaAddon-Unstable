@@ -14,7 +14,10 @@ function EnumMap:clear() end
 
 --- @public
 --- @return any
---- @overload fun(self: EnumMap): EnumMap
+function EnumMap:clone() end
+
+--- @public
+--- @return EnumMap
 function EnumMap:clone() end
 
 --- @public
@@ -53,7 +56,12 @@ function EnumMap:keySet() end
 --- @param arg0 Enum
 --- @param arg1 any
 --- @return any
---- @overload fun(self: EnumMap, arg0: any, arg1: any): any
+function EnumMap:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 any
+--- @return any
 function EnumMap:put(arg0, arg1) end
 
 --- @public
@@ -75,12 +83,20 @@ function EnumMap:size() end
 function EnumMap:values() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 Class
 --- @return EnumMap
---- @overload fun(arg0: EnumMap): EnumMap
---- @overload fun(arg0: Map): EnumMap
+function EnumMap.new(arg0) end
+
+--- @public
+--- @param arg0 EnumMap
+--- @return EnumMap
+function EnumMap.new(arg0) end
+
+--- @public
+--- @param arg0 Map
+--- @return EnumMap
 function EnumMap.new(arg0) end

@@ -27,8 +27,14 @@ function BufferedReader:markSupported() end
 
 --- @public
 --- @return integer
---- @overload fun(self: BufferedReader, arg0: char[], arg1: integer, arg2: integer): integer
 function BufferedReader:read() end
+
+--- @public
+--- @param arg0 char[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function BufferedReader:read(arg0, arg1, arg2) end
 
 --- @public
 --- @return string
@@ -48,11 +54,16 @@ function BufferedReader:reset() end
 function BufferedReader:skip(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 Reader
 --- @return BufferedReader
---- @overload fun(arg0: Reader, arg1: integer): BufferedReader
 function BufferedReader.new(arg0) end
+
+--- @public
+--- @param arg0 Reader
+--- @param arg1 integer
+--- @return BufferedReader
+function BufferedReader.new(arg0, arg1) end

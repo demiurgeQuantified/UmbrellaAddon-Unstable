@@ -14,7 +14,7 @@ RZSRangerSmith = {}
 function RZSRangerSmith:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

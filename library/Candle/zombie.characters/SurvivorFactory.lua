@@ -20,9 +20,20 @@ function SurvivorFactory.CreateFamily(nCount) end
 --- @public
 --- @static
 --- @return SurvivorDesc
---- @overload fun(survivorType: SurvivorType): SurvivorDesc
---- @overload fun(survivorType: SurvivorType, bFemale: boolean): SurvivorDesc
 function SurvivorFactory.CreateSurvivor() end
+
+--- @public
+--- @static
+--- @param survivorType SurvivorType
+--- @return SurvivorDesc
+function SurvivorFactory.CreateSurvivor(survivorType) end
+
+--- @public
+--- @static
+--- @param survivorType SurvivorType
+--- @param bFemale boolean
+--- @return SurvivorDesc
+function SurvivorFactory.CreateSurvivor(survivorType, bFemale) end
 
 --- @public
 --- @static
@@ -87,7 +98,7 @@ function SurvivorFactory.randomName(desc) end
 function SurvivorFactory.setTorso(survivor) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

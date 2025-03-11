@@ -94,7 +94,7 @@ function SealedFluidProperties:load(arg0, arg1) end
 function SealedFluidProperties:save(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

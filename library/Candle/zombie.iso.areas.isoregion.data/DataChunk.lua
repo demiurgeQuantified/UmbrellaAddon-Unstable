@@ -32,8 +32,15 @@ function DataChunk:getLastUpdateStamp() end
 --- @param y integer
 --- @param z integer
 --- @return integer
---- @overload fun(self: DataChunk, x: integer, y: integer, z: integer, ignoreCoordCheck: boolean): integer
 function DataChunk:getSquare(x, y, z) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param ignoreCoordCheck boolean
+--- @return integer
+function DataChunk:getSquare(x, y, z, ignoreCoordCheck) end
 
 --- @public
 --- @param bb ByteBuffer
@@ -44,7 +51,7 @@ function DataChunk:load(bb, worldVersion, readLength) end
 
 --- @public
 ---
----  SAVE/LOAD
+--- SAVE/LOAD
 ---
 --- @param bb ByteBuffer
 --- @return nil

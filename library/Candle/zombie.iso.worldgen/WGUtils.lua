@@ -18,7 +18,11 @@ function WGUtils:canPlace(arg0, arg1) end
 --- @public
 --- @param arg0 string
 --- @return string
---- @overload fun(self: WGUtils, arg0: table): string
+function WGUtils:displayTable(arg0) end
+
+--- @public
+--- @param arg0 table
+--- @return string
 function WGUtils:displayTable(arg0) end
 
 --- @public

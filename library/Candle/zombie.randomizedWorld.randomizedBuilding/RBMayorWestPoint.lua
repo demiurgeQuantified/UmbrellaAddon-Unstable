@@ -25,7 +25,7 @@ function RBMayorWestPoint:randomizeBuilding(arg0) end
 function RBMayorWestPoint:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

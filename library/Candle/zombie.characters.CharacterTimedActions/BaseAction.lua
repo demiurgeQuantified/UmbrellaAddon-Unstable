@@ -100,14 +100,23 @@ function BaseAction:restoreWeaponType() end
 --- @public
 --- @param animNode string
 --- @return nil
---- @overload fun(self: BaseAction, act: CharacterActionAnims): nil
 function BaseAction:setActionAnim(animNode) end
+
+--- @public
+--- @param act CharacterActionAnims
+--- @return nil
+function BaseAction:setActionAnim(act) end
 
 --- @public
 --- @param key string
 --- @param val boolean
 --- @return nil
---- @overload fun(self: BaseAction, key: string, val: string): nil
+function BaseAction:setAnimVariable(key, val) end
+
+--- @public
+--- @param key string
+--- @param val string
+--- @return nil
 function BaseAction:setAnimVariable(key, val) end
 
 --- @public
@@ -129,8 +138,14 @@ function BaseAction:setOverrideAnimation(override) end
 --- @param primaryHand InventoryItem
 --- @param secondaryHand InventoryItem
 --- @return nil
---- @overload fun(self: BaseAction, primaryHand: InventoryItem, secondaryHand: InventoryItem, resetModel: boolean): nil
 function BaseAction:setOverrideHandModels(primaryHand, secondaryHand) end
+
+--- @public
+--- @param primaryHand InventoryItem
+--- @param secondaryHand InventoryItem
+--- @param resetModel boolean
+--- @return nil
+function BaseAction:setOverrideHandModels(primaryHand, secondaryHand, resetModel) end
 
 --- @public
 --- @param primaryHand any
@@ -143,8 +158,14 @@ function BaseAction:setOverrideHandModelsObject(primaryHand, secondaryHand, rese
 --- @param primaryHand string
 --- @param secondaryHand string
 --- @return nil
---- @overload fun(self: BaseAction, primaryHand: string, secondaryHand: string, resetModel: boolean): nil
 function BaseAction:setOverrideHandModelsString(primaryHand, secondaryHand) end
+
+--- @public
+--- @param primaryHand string
+--- @param secondaryHand string
+--- @param resetModel boolean
+--- @return nil
+function BaseAction:setOverrideHandModelsString(primaryHand, secondaryHand, resetModel) end
 
 --- @public
 --- @param arg0 boolean
@@ -186,7 +207,7 @@ function BaseAction:valid() end
 function BaseAction:waitToStart() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

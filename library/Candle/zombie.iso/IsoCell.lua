@@ -42,7 +42,7 @@ function IsoCell.getBComponent(col) end
 
 --- @public
 --- @static
---- @return Stack the getBuildings
+--- @return Stack _ the getBuildings
 function IsoCell.getBuildings() end
 
 --- @public
@@ -68,7 +68,7 @@ function IsoCell.getInstance() end
 
 --- @public
 --- @static
---- @return integer the MaxHeight
+--- @return integer _ the MaxHeight
 function IsoCell.getMaxHeight() end
 
 --- @public
@@ -233,9 +233,28 @@ function IsoCell:LoadPlayer(WorldVersion) end
 --- @param sz integer
 --- @param bClearExisting boolean
 --- @return nil
---- @overload fun(self: IsoCell, lot: IsoLot, sx: integer, sy: integer, sz: integer, bClearExisting: boolean): nil
---- @overload fun(self: IsoCell, arg0: IsoLot, arg1: integer, arg2: integer, arg3: integer, arg4: IsoChunk, arg5: integer, arg6: integer, arg7: boolean[]): integer
 function IsoCell:PlaceLot(filename, sx, sy, sz, bClearExisting) end
+
+--- @public
+--- @param lot IsoLot
+--- @param sx integer
+--- @param sy integer
+--- @param sz integer
+--- @param bClearExisting boolean
+--- @return nil
+function IsoCell:PlaceLot(lot, sx, sy, sz, bClearExisting) end
+
+--- @public
+--- @param arg0 IsoLot
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 IsoChunk
+--- @param arg5 integer
+--- @param arg6 integer
+--- @param arg7 boolean[]
+--- @return integer
+function IsoCell:PlaceLot(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @return nil
@@ -273,8 +292,18 @@ function IsoCell:addHeatSource(heatSource) end
 --- @public
 --- @param light IsoLightSource
 --- @return nil
---- @overload fun(self: IsoCell, x: integer, y: integer, z: integer, r: number, g: number, b: number, rad: integer): IsoLightSource
 function IsoCell:addLamppost(light) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param rad integer
+--- @return IsoLightSource
+function IsoCell:addLamppost(x, y, z, r, g, b, rad) end
 
 --- @public
 --- @param o IsoMovingObject
@@ -300,14 +329,22 @@ function IsoCell:addToProcessIsoObjectRemove(object) end
 --- @public
 --- @param items ArrayList
 --- @return nil
---- @overload fun(self: IsoCell, item: InventoryItem): nil
 function IsoCell:addToProcessItems(items) end
+
+--- @public
+--- @param item InventoryItem
+--- @return nil
+function IsoCell:addToProcessItems(item) end
 
 --- @public
 --- @param items ArrayList
 --- @return nil
---- @overload fun(self: IsoCell, item: InventoryItem): nil
 function IsoCell:addToProcessItemsRemove(items) end
+
+--- @public
+--- @param item InventoryItem
+--- @return nil
+function IsoCell:addToProcessItemsRemove(item) end
 
 --- @public
 --- @param worldItem IsoWorldInventoryObject
@@ -373,7 +410,7 @@ function IsoCell:createNewGridSquare(x, y, z, recalcAll) end
 function IsoCell:flattenAnyFoliage(arg0, arg1) end
 
 --- @public
---- @return ArrayList the addList
+--- @return ArrayList _ the addList
 function IsoCell:getAddList() end
 
 --- @public
@@ -383,11 +420,11 @@ function IsoCell:getAddList() end
 function IsoCell:getBestBuildings(criteria, count) end
 
 --- @public
---- @return ArrayList the BuildingList
+--- @return ArrayList _ the BuildingList
 function IsoCell:getBuildingList() end
 
 --- @public
---- @return HashMap the BuildingScores
+--- @return HashMap _ the BuildingScores
 function IsoCell:getBuildingScores() end
 
 --- @public
@@ -415,15 +452,15 @@ function IsoCell:getChunkMap(pl) end
 function IsoCell:getClosestBuildingExcept(chr, except) end
 
 --- @public
---- @return integer the currentLX
+--- @return integer _ the currentLX
 function IsoCell:getCurrentLightX() end
 
 --- @public
---- @return integer the currentLY
+--- @return integer _ the currentLY
 function IsoCell:getCurrentLightY() end
 
 --- @public
---- @return integer the currentLZ
+--- @return integer _ the currentLZ
 function IsoCell:getCurrentLightZ() end
 
 --- @public
@@ -437,7 +474,7 @@ function IsoCell:getCurrentLotHeader() end
 function IsoCell:getDangerScore(x, y) end
 
 --- @public
---- @return OnceEvery the dangerUpdate
+--- @return OnceEvery _ the dangerUpdate
 function IsoCell:getDangerUpdate() end
 
 --- @public
@@ -459,8 +496,20 @@ function IsoCell:getFreeTile(def) end
 --- @param y number
 --- @param z number
 --- @return IsoGridSquare
---- @overload fun(self: IsoCell, x: integer, y: integer, z: integer): IsoGridSquare
---- @overload fun(self: IsoCell, x: number, y: number, z: number): IsoGridSquare
+function IsoCell:getGridSquare(x, y, z) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return IsoGridSquare
+function IsoCell:getGridSquare(x, y, z) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
+--- @return IsoGridSquare
 function IsoCell:getGridSquare(x, y, z) end
 
 --- @public
@@ -487,7 +536,7 @@ function IsoCell:getHeatSourceHighestTemperature(surroundingAirTemperature, x, y
 function IsoCell:getHeatSourceTemperature(x, y, z) end
 
 --- @public
---- @return integer the height
+--- @return integer _ the height
 function IsoCell:getHeight() end
 
 --- @public
@@ -495,11 +544,11 @@ function IsoCell:getHeight() end
 function IsoCell:getHeightInTiles() end
 
 --- @public
---- @return Stack the LamppostPositions
+--- @return Stack _ the LamppostPositions
 function IsoCell:getLamppostPositions() end
 
 --- @public
---- @return Thread the LightInfoUpdate
+--- @return Thread _ the LightInfoUpdate
 function IsoCell:getLightInfoUpdate() end
 
 --- @public
@@ -518,27 +567,27 @@ function IsoCell:getLuaObjectList() end
 function IsoCell:getMaxFloors() end
 
 --- @public
---- @return integer the maxX
+--- @return integer _ the maxX
 function IsoCell:getMaxX() end
 
 --- @public
---- @return integer the maxY
+--- @return integer _ the maxY
 function IsoCell:getMaxY() end
 
 --- @public
---- @return integer the maxZ
+--- @return integer _ the maxZ
 function IsoCell:getMaxZ() end
 
 --- @public
---- @return integer the minX
+--- @return integer _ the minX
 function IsoCell:getMinX() end
 
 --- @public
---- @return integer the minY
+--- @return integer _ the minY
 function IsoCell:getMinY() end
 
 --- @public
---- @return integer the minZ
+--- @return integer _ the minZ
 function IsoCell:getMinZ() end
 
 --- @public
@@ -552,7 +601,7 @@ function IsoCell:getNearestVisibleZombie(playerIndex) end
 function IsoCell:getNetworkPlayer(RemoteID) end
 
 --- @public
---- @return ArrayList the ObjectList
+--- @return ArrayList _ the ObjectList
 function IsoCell:getObjectList() end
 
 --- @public
@@ -576,11 +625,11 @@ function IsoCell:getProcessIsoObjectRemove() end
 function IsoCell:getProcessIsoObjects() end
 
 --- @public
---- @return ArrayList the ProcessItems
+--- @return ArrayList _ the ProcessItems
 function IsoCell:getProcessItems() end
 
 --- @public
---- @return ArrayList the ProcessItemsRemove
+--- @return ArrayList _ the ProcessItemsRemove
 function IsoCell:getProcessItemsRemove() end
 
 --- @public
@@ -588,7 +637,7 @@ function IsoCell:getProcessItemsRemove() end
 function IsoCell:getProcessWorldItems() end
 
 --- @public
---- @return ArrayList the PushableObjectList
+--- @return ArrayList _ the PushableObjectList
 function IsoCell:getPushableObjectList() end
 
 --- @public
@@ -611,11 +660,11 @@ function IsoCell:getRandomOutdoorTile() end
 function IsoCell:getRelativeGridSquare(x, y, z) end
 
 --- @public
---- @return ArrayList the RemoteSurvivorList
+--- @return ArrayList _ the RemoteSurvivorList
 function IsoCell:getRemoteSurvivorList() end
 
 --- @public
---- @return ArrayList the removeList
+--- @return ArrayList _ the removeList
 function IsoCell:getRemoveList() end
 
 --- @public
@@ -624,7 +673,7 @@ function IsoCell:getRemoveList() end
 function IsoCell:getRoom(ID) end
 
 --- @public
---- @return ArrayList the RoomList
+--- @return ArrayList _ the RoomList
 function IsoCell:getRoomList() end
 
 --- @public
@@ -636,7 +685,7 @@ function IsoCell:getSnowTarget() end
 function IsoCell:getSpriteManager() end
 
 --- @public
---- @return ArrayList the StaticUpdaterObjectList
+--- @return ArrayList _ the StaticUpdaterObjectList
 function IsoCell:getStaticUpdaterObjectList() end
 
 --- @public
@@ -652,7 +701,7 @@ function IsoCell:getVehicles() end
 function IsoCell:getWeatherFX() end
 
 --- @public
---- @return integer the width
+--- @return integer _ the width
 function IsoCell:getWidth() end
 
 --- @public
@@ -664,15 +713,15 @@ function IsoCell:getWidthInTiles() end
 function IsoCell:getWindowList() end
 
 --- @public
---- @return integer the worldX
+--- @return integer _ the worldX
 function IsoCell:getWorldX() end
 
 --- @public
---- @return integer the worldY
+--- @return integer _ the worldY
 function IsoCell:getWorldY() end
 
 --- @public
---- @return ArrayList the ZombieList
+--- @return ArrayList _ the ZombieList
 function IsoCell:getZombieList() end
 
 --- @public
@@ -705,7 +754,7 @@ function IsoCell:isInChunkMap(x, y) end
 function IsoCell:isNull(x, y, z) end
 
 --- @public
---- @return boolean the safeToAdd
+--- @return boolean _ the safeToAdd
 function IsoCell:isSafeToAdd() end
 
 --- @public
@@ -730,8 +779,14 @@ function IsoCell:removeHeatSource(heatSource) end
 --- @public
 --- @param light IsoLightSource
 --- @return nil
---- @overload fun(self: IsoCell, x: integer, y: integer, z: integer): nil
 function IsoCell:removeLamppost(light) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return nil
+function IsoCell:removeLamppost(x, y, z) end
 
 --- @public
 --- @return nil
@@ -776,8 +831,13 @@ function IsoCell:save(output, bDoChars) end
 --- @public
 --- @param chunk IsoChunk
 --- @return nil
---- @overload fun(self: IsoCell, chunk: IsoChunk, playerIndex: integer): nil
 function IsoCell:setCacheChunk(chunk) end
+
+--- @public
+--- @param chunk IsoChunk
+--- @param playerIndex integer
+--- @return nil
+function IsoCell:setCacheChunk(chunk, playerIndex) end
 
 --- @public
 --- @param x integer
@@ -911,7 +971,7 @@ function IsoCell:update() end
 function IsoCell:updateHeatSources() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

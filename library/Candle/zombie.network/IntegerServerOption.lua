@@ -10,16 +10,22 @@ IntegerServerOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: IntegerServerOption): ConfigOption
+function IntegerServerOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function IntegerServerOption:asConfigOption() end
 
 --- @public
 --- @return string
---- @overload fun(self: IntegerServerOption): string
+function IntegerServerOption:getTooltip() end
+
+--- @public
+--- @return string
 function IntegerServerOption:getTooltip() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

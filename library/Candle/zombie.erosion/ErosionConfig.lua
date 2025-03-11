@@ -37,7 +37,7 @@ function ErosionConfig:save(bb) end
 function ErosionConfig:writeFile(_file) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

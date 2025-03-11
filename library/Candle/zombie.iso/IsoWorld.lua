@@ -80,15 +80,26 @@ function IsoWorld.parseDistributions() end
 --- @static
 --- @param __in__ InputStream
 --- @return integer
---- @overload fun(__in__: RandomAccessFile): integer
+function IsoWorld.readInt(__in__) end
+
+--- @public
+--- @static
+--- @param __in__ RandomAccessFile
+--- @return integer
 function IsoWorld.readInt(__in__) end
 
 --- @public
 --- @static
 --- @param __in__ RandomAccessFile
 --- @return string
---- @overload fun(arg0: InputStream, arg1: StringBuilder): string
 function IsoWorld.readString(__in__) end
+
+--- @public
+--- @static
+--- @param arg0 InputStream
+--- @param arg1 StringBuilder
+--- @return string
+function IsoWorld.readString(arg0, arg1) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -159,8 +170,12 @@ function IsoWorld:checkVehiclesZones() end
 
 --- @public
 --- @return HashMap
---- @overload fun(self: IsoWorld, filename: string): ArrayList
 function IsoWorld:getAllTiles() end
+
+--- @public
+--- @param filename string
+--- @return ArrayList
+function IsoWorld:getAllTiles(filename) end
 
 --- @public
 --- @return ArrayList
@@ -196,8 +211,14 @@ function IsoWorld:getFrameNo() end
 
 --- @public
 --- @return BaseSoundEmitter
---- @overload fun(self: IsoWorld, x: number, y: number, z: number): BaseSoundEmitter
 function IsoWorld:getFreeEmitter() end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
+--- @return BaseSoundEmitter
+function IsoWorld:getFreeEmitter(x, y, z) end
 
 --- @public
 --- @return string
@@ -205,9 +226,9 @@ function IsoWorld:getGameMode() end
 
 --- @public
 ---
----  Utility method for ClimateManager.getTemperature()
+--- Utility method for ClimateManager.getTemperature()
 ---
---- @return number The current temperature.
+--- @return number _ The current temperature.
 function IsoWorld:getGlobalTemperature() end
 
 --- @public
@@ -603,7 +624,7 @@ function IsoWorld:transmitWeather() end
 function IsoWorld:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

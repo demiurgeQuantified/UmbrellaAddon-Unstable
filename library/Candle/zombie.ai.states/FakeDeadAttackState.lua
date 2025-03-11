@@ -39,7 +39,7 @@ function FakeDeadAttackState:execute(owner) end
 function FakeDeadAttackState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

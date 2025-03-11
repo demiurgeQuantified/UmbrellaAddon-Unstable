@@ -174,7 +174,7 @@ function ZombiePopulationRenderer:worldToScreenX(x) end
 function ZombiePopulationRenderer:worldToScreenY(y) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

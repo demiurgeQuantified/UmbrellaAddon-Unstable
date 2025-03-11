@@ -10,5 +10,8 @@ Closeable = {}
 
 --- @public
 --- @return nil
---- @overload fun(self: Closeable): nil
+function Closeable:close() end
+
+--- @public
+--- @return nil
 function Closeable:close() end

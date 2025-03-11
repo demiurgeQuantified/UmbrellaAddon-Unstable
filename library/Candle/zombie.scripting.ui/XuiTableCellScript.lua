@@ -13,7 +13,7 @@ XuiTableCellScript = {}
 function XuiTableCellScript:isCellHasLoaded() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

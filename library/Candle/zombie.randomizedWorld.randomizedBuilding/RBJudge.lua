@@ -25,7 +25,7 @@ function RBJudge:randomizeBuilding(arg0) end
 function RBJudge:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

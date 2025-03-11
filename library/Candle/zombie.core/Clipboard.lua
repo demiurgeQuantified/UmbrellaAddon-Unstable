@@ -35,7 +35,7 @@ function Clipboard.setClipboard(str) end
 function Clipboard.updateMainThread() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

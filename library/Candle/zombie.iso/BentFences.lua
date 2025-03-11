@@ -55,7 +55,7 @@ function BentFences:swapTiles(obj, dir) end
 function BentFences:unbendFence(obj) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

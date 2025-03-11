@@ -94,7 +94,7 @@ function BodyLocationGroup:setMultiItem(locationId, bMultiItem) end
 function BodyLocationGroup:size() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

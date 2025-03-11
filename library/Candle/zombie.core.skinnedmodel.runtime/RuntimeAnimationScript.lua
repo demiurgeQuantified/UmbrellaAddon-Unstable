@@ -23,7 +23,7 @@ function RuntimeAnimationScript:exec() end
 function RuntimeAnimationScript:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

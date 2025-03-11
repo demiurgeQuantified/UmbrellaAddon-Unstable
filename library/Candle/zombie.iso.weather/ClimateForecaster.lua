@@ -14,15 +14,19 @@ function ClimateForecaster:getDaysTillFirstWeather() end
 
 --- @public
 --- @return DayForecast
---- @overload fun(self: ClimateForecaster, offset: integer): DayForecast
 function ClimateForecaster:getForecast() end
+
+--- @public
+--- @param offset integer
+--- @return DayForecast
+function ClimateForecaster:getForecast(offset) end
 
 --- @public
 --- @return ArrayList
 function ClimateForecaster:getForecasts() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -40,8 +40,12 @@ function IsoZombie:DoCorpseInventory() end
 --- @public
 --- @param volume number
 --- @return nil
---- @overload fun(self: IsoZombie, type: string): nil
 function IsoZombie:DoFootstepSound(volume) end
+
+--- @public
+--- @param type string
+--- @return nil
+function IsoZombie:DoFootstepSound(type) end
 
 --- @public
 --- @return nil
@@ -66,20 +70,46 @@ function IsoZombie:GetAnimSetName() end
 --- @param isHitFromBehind boolean
 --- @param hitDir Vector2
 --- @return number
---- @overload fun(self: IsoZombie, vehicle: BaseVehicle, speed: number, isHitFromBehind: boolean, hitDirX: number, hitDirY: number): number
---- @overload fun(self: IsoZombie, weapon: HandWeapon, wielder: IsoGameCharacter, damageSplit: number, bIgnoreDamage: boolean, modDelta: number, bRemote: boolean): number
 function IsoZombie:Hit(vehicle, speed, isHitFromBehind, hitDir) end
 
 --- @public
+--- @param vehicle BaseVehicle
+--- @param speed number
+--- @param isHitFromBehind boolean
+--- @param hitDirX number
+--- @param hitDirY number
+--- @return number
+function IsoZombie:Hit(vehicle, speed, isHitFromBehind, hitDirX, hitDirY) end
+
+--- @public
+--- @param weapon HandWeapon
+--- @param wielder IsoGameCharacter
+--- @param damageSplit number
+--- @param bIgnoreDamage boolean
+--- @param modDelta number
+--- @param bRemote boolean
+--- @return number
+function IsoZombie:Hit(weapon, wielder, damageSplit, bIgnoreDamage, modDelta, bRemote) end
+
+--- @public
 --- @return nil
---- @overload fun(self: IsoZombie, desc: SurvivorDesc): nil
 function IsoZombie:InitSpritePartsZombie() end
+
+--- @public
+--- @param desc SurvivorDesc
+--- @return nil
+function IsoZombie:InitSpritePartsZombie(desc) end
 
 --- @public
 --- @param killer IsoGameCharacter
 --- @return nil
---- @overload fun(self: IsoZombie, killer: IsoGameCharacter, bGory: boolean): nil
 function IsoZombie:Kill(killer) end
+
+--- @public
+--- @param killer IsoGameCharacter
+--- @param bGory boolean
+--- @return nil
+function IsoZombie:Kill(killer, bGory) end
 
 --- @public
 --- @param dir Vector2
@@ -134,16 +164,16 @@ function IsoZombie:addRandomBloodDirtHolesEtc() end
 
 --- @public
 ---
----  Possibly add visual bandages (bloody) on the zombie  TODO: Make InventoryItem
----  to it in DeadBodyAtlas to being able to remove them (like primary/secondary
+--- Possibly add visual bandages (bloody) on the zombie  TODO: Make InventoryItem
+--- to it in DeadBodyAtlas to being able to remove them (like primary/secondary
 ---
 --- @return nil
 function IsoZombie:addRandomVisualBandages() end
 
 --- @public
 ---
----  Add some random visual damage (clothing actually) to the zombies.  Those items
----  appear in inventory.
+--- Add some random visual damage (clothing actually) to the zombies.  Those items
+--- appear in inventory.
 ---
 --- @return nil
 function IsoZombie:addRandomVisualDamages() end
@@ -199,7 +229,7 @@ function IsoZombie:clearItemsToSpawnAtDeath() end
 
 --- @public
 ---
----  Description copied from class: IsoGameCharacter
+--- Description copied from class: IsoGameCharacter
 ---
 --- @param itemGuid string The item's Globally Unique Identifier (GUID).
 --- @return nil
@@ -217,8 +247,12 @@ function IsoZombie:couldSeeHeadSquare(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoZombie, arg0: integer): nil
 function IsoZombie:doZombieSpeed() end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoZombie:doZombieSpeed(arg0) end
 
 --- @public
 --- @param itemGUID string
@@ -237,7 +271,7 @@ function IsoZombie:dressInPersistentOutfitID(outfitID) end
 
 --- @public
 ---
----  Description copied from class: IsoGameCharacter
+--- Description copied from class: IsoGameCharacter
 ---
 --- @return nil
 function IsoZombie:dressInRandomOutfit() end
@@ -293,14 +327,25 @@ function IsoZombie:getHitTime() end
 
 --- @public
 --- @return HumanVisual
---- @overload fun(self: IsoZombie): HumanVisual
+function IsoZombie:getHumanVisual() end
+
+--- @public
+--- @return HumanVisual
 function IsoZombie:getHumanVisual() end
 
 --- @public
 --- @return ItemVisuals
---- @overload fun(self: IsoZombie, itemVisuals: ItemVisuals): nil
---- @overload fun(self: IsoZombie, itemVisuals: ItemVisuals): nil
 function IsoZombie:getItemVisuals() end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @return nil
+function IsoZombie:getItemVisuals(itemVisuals) end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @return nil
+function IsoZombie:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return string
@@ -528,7 +573,10 @@ function IsoZombie:isSitAgainstWall() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoZombie): boolean
+function IsoZombie:isSkeleton() end
+
+--- @public
+--- @return boolean
 function IsoZombie:isSkeleton() end
 
 --- @public
@@ -572,13 +620,20 @@ function IsoZombie:isVehicleCollisionActive(testVehicle) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoZombie): boolean
 function IsoZombie:isZombie() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoZombie, other: IsoMovingObject): boolean
+function IsoZombie:isZombie() end
+
+--- @public
+--- @return boolean
 function IsoZombie:isZombieAttacking() end
+
+--- @public
+--- @param other IsoMovingObject
+--- @return boolean
+function IsoZombie:isZombieAttacking(other) end
 
 --- @public
 --- @param hitFromBehind boolean
@@ -727,8 +782,14 @@ function IsoZombie:setDressInRandomOutfit(dressInRandom) end
 --- @param target IsoMovingObject
 --- @param force boolean
 --- @return nil
---- @overload fun(self: IsoZombie, target: IsoMovingObject, force: boolean, eatSpeed: number): nil
 function IsoZombie:setEatBodyTarget(target, force) end
+
+--- @public
+--- @param target IsoMovingObject
+--- @param force boolean
+--- @param eatSpeed number
+--- @return nil
+function IsoZombie:setEatBodyTarget(target, force, eatSpeed) end
 
 --- @public
 --- @param bFakeDead boolean
@@ -843,8 +904,13 @@ function IsoZombie:setTargetSeenTime(seconds) end
 --- @public
 --- @param condition number
 --- @return nil
---- @overload fun(self: IsoZombie, condition: integer, maxCondition: integer): nil
 function IsoZombie:setThumpCondition(condition) end
+
+--- @public
+--- @param condition integer
+--- @param maxCondition integer
+--- @return nil
+function IsoZombie:setThumpCondition(condition, maxCondition) end
 
 --- @public
 --- @param v integer
@@ -967,11 +1033,17 @@ function IsoZombie:wasFakeDead() end
 function IsoZombie:writeInventory(b) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoZombie
---- @overload fun(cell: IsoCell, desc: SurvivorDesc, _palette: integer): IsoZombie
 function IsoZombie.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param desc SurvivorDesc
+--- @param _palette integer
+--- @return IsoZombie
+function IsoZombie.new(cell, desc, _palette) end

@@ -27,7 +27,7 @@ function NewHealthPanel:render() end
 function NewHealthPanel:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

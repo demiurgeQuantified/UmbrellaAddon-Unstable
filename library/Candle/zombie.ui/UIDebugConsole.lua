@@ -64,7 +64,7 @@ function UIDebugConsole:render() end
 function UIDebugConsole:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

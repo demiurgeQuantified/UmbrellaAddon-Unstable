@@ -42,7 +42,11 @@ function FMODSoundEmitter:isEmpty() end
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: FMODSoundEmitter, arg0: integer): boolean
+function FMODSoundEmitter:isPlaying(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
 function FMODSoundEmitter:isPlaying(arg0) end
 
 --- @public
@@ -70,20 +74,58 @@ function FMODSoundEmitter:playClip(arg0, arg1) end
 --- @public
 --- @param arg0 string
 --- @return integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: boolean): integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: IsoGameCharacter): integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: IsoGridSquare): integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: IsoObject): integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: integer, arg2: integer, arg3: integer): integer
 function FMODSoundEmitter:playSound(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return integer
+function FMODSoundEmitter:playSound(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoGameCharacter
+--- @return integer
+function FMODSoundEmitter:playSound(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 IsoGridSquare
 --- @return integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: IsoObject): integer
---- @overload fun(self: FMODSoundEmitter, arg0: string, arg1: boolean, arg2: IsoObject): integer
+function FMODSoundEmitter:playSound(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoObject
+--- @return integer
+function FMODSoundEmitter:playSound(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return integer
+function FMODSoundEmitter:playSound(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoGridSquare
+--- @return integer
 function FMODSoundEmitter:playSoundImpl(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoObject
+--- @return integer
+function FMODSoundEmitter:playSoundImpl(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 IsoObject
+--- @return integer
+function FMODSoundEmitter:playSoundImpl(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
@@ -198,7 +240,7 @@ function FMODSoundEmitter:tick() end
 function FMODSoundEmitter:triggerCue(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

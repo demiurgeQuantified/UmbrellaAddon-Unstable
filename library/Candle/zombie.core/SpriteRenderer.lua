@@ -303,8 +303,16 @@ function SpriteRenderer:glDoEndFrameFx(player) end
 --- @param zoom number
 --- @param player integer
 --- @return nil
---- @overload fun(self: SpriteRenderer, w: integer, h: integer, zoom: number, player: integer, isTextFrame: boolean): nil
 function SpriteRenderer:glDoStartFrame(w, h, zoom, player) end
+
+--- @public
+--- @param w integer
+--- @param h integer
+--- @param zoom number
+--- @param player integer
+--- @param isTextFrame boolean
+--- @return nil
+function SpriteRenderer:glDoStartFrame(w, h, zoom, player, isTextFrame) end
 
 --- @public
 --- @param arg0 integer
@@ -435,15 +443,220 @@ function SpriteRenderer:releaseFBORenderChunkLock() end
 --- @public
 --- @param arg0 ImDrawData
 --- @return nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x: number, y: number, width: number, height: number, r: number, g: number, b: number, a: number, texdModifier: Consumer): nil
---- @overload fun(self: SpriteRenderer, arg0: Texture, arg1: Texture, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: number, arg10: Consumer): nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number, c1: integer, c2: integer, c3: integer, c4: integer): nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number, r: number, g: number, b: number, a: number, texdModifier: Consumer): nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x: number, y: number, width: number, height: number, r: number, g: number, b: number, a: number, u1: number, v1: number, u2: number, v2: number, u3: number, v3: number, u4: number, v4: number): nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x: number, y: number, width: number, height: number, r: number, g: number, b: number, a: number, u1: number, v1: number, u2: number, v2: number, u3: number, v3: number, u4: number, v4: number, texdModifier: Consumer): nil
---- @overload fun(self: SpriteRenderer, arg0: Texture, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: number, arg10: number, arg11: number, arg12: number, arg13: number, arg14: number, arg15: number, arg16: number, arg17: number, arg18: number, arg19: number, arg20: number): nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number, r1: number, g1: number, b1: number, a1: number, r2: number, g2: number, b2: number, a2: number, r3: number, g3: number, b3: number, a3: number, r4: number, g4: number, b4: number, a4: number, texdModifier: Consumer): nil
 function SpriteRenderer:render(arg0) end
+
+--- @public
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param texdModifier Consumer
+--- @return nil
+function SpriteRenderer:render(tex, x, y, width, height, r, g, b, a, texdModifier) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 Texture
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @param arg10 Consumer
+--- @return nil
+function SpriteRenderer:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
+
+--- @public
+--- @param tex Texture
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param x3 number
+--- @param y3 number
+--- @param x4 number
+--- @param y4 number
+--- @param c1 integer
+--- @param c2 integer
+--- @param c3 integer
+--- @param c4 integer
+--- @return nil
+function SpriteRenderer:render(tex, x1, y1, x2, y2, x3, y3, x4, y4, c1, c2, c3, c4) end
+
+--- @public
+--- @param tex Texture
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param x3 number
+--- @param y3 number
+--- @param x4 number
+--- @param y4 number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param texdModifier Consumer
+--- @return nil
+function SpriteRenderer:render(tex, x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a, texdModifier) end
+
+--- @public
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param u1 number
+--- @param v1 number
+--- @param u2 number
+--- @param v2 number
+--- @param u3 number
+--- @param v3 number
+--- @param u4 number
+--- @param v4 number
+--- @return nil
+function SpriteRenderer:render(tex, x, y, width, height, r, g, b, a, u1, v1, u2, v2, u3, v3, u4, v4) end
+
+--- @public
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param u1 number
+--- @param v1 number
+--- @param u2 number
+--- @param v2 number
+--- @param u3 number
+--- @param v3 number
+--- @param u4 number
+--- @param v4 number
+--- @param texdModifier Consumer
+--- @return nil
+function SpriteRenderer:render(tex, x, y, width, height, r, g, b, a, u1, v1, u2, v2, u3, v3, u4, v4, texdModifier) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @param arg10 number
+--- @param arg11 number
+--- @param arg12 number
+--- @param arg13 number
+--- @param arg14 number
+--- @param arg15 number
+--- @param arg16 number
+--- @param arg17 number
+--- @param arg18 number
+--- @param arg19 number
+--- @param arg20 number
+--- @return nil
+function SpriteRenderer:render(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14,
+	arg15,
+	arg16,
+	arg17,
+	arg18,
+	arg19,
+	arg20
+)
+end
+
+--- @public
+--- @param tex Texture
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param x3 number
+--- @param y3 number
+--- @param x4 number
+--- @param y4 number
+--- @param r1 number
+--- @param g1 number
+--- @param b1 number
+--- @param a1 number
+--- @param r2 number
+--- @param g2 number
+--- @param b2 number
+--- @param a2 number
+--- @param r3 number
+--- @param g3 number
+--- @param b3 number
+--- @param a3 number
+--- @param r4 number
+--- @param g4 number
+--- @param b4 number
+--- @param a4 number
+--- @param texdModifier Consumer
+--- @return nil
+function SpriteRenderer:render(
+	tex,
+	x1,
+	y1,
+	x2,
+	y2,
+	x3,
+	y3,
+	x4,
+	y4,
+	r1,
+	g1,
+	b1,
+	a1,
+	r2,
+	g2,
+	b2,
+	a2,
+	r3,
+	g3,
+	b3,
+	a3,
+	r4,
+	g4,
+	b4,
+	a4,
+	texdModifier
+)
+end
 
 --- @public
 --- @param tex Texture
@@ -493,9 +706,49 @@ end
 --- @param b number
 --- @param a number
 --- @return nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number, r: number, g: number, b: number, a: number): nil
---- @overload fun(self: SpriteRenderer, tex: Texture, x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number, r: number, g: number, b: number, a: number, u1: number, v1: number, u2: number, v2: number, u3: number, v3: number, u4: number, v4: number): nil
 function SpriteRenderer:renderPoly(x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a) end
+
+--- @public
+--- @param tex Texture
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param x3 number
+--- @param y3 number
+--- @param x4 number
+--- @param y4 number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function SpriteRenderer:renderPoly(tex, x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a) end
+
+--- @public
+--- @param tex Texture
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param x3 number
+--- @param y3 number
+--- @param x4 number
+--- @param y4 number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param u1 number
+--- @param v1 number
+--- @param u2 number
+--- @param v2 number
+--- @param u3 number
+--- @param v3 number
+--- @param u4 number
+--- @param v4 number
+--- @return nil
+function SpriteRenderer:renderPoly(tex, x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a, u1, v1, u2, v2, u3, v3, u4, v4) end
 
 --- @public
 --- @return nil
@@ -610,8 +863,21 @@ function SpriteRenderer:renderi(tex, x, y, width, height, r, g, b, a, texdModifi
 --- @param b number
 --- @param a number
 --- @return nil
---- @overload fun(self: SpriteRenderer, arg0: Texture, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: number, arg6: number, arg7: number, arg8: number, arg9: number): nil
 function SpriteRenderer:renderline(tex, x1, y1, x2, y2, r, g, b, a) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
+function SpriteRenderer:renderline(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
 --- @param arg0 Texture
@@ -625,8 +891,22 @@ function SpriteRenderer:renderline(tex, x1, y1, x2, y2, r, g, b, a) end
 --- @param arg8 number
 --- @param arg9 integer
 --- @return nil
---- @overload fun(self: SpriteRenderer, arg0: Texture, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: number, arg10: number): nil
 function SpriteRenderer:renderlinef(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @param arg10 number
+--- @return nil
+function SpriteRenderer:renderlinef(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
 
 --- @public
 --- @param tex Texture
@@ -684,7 +964,7 @@ function SpriteRenderer:startOffscreenUI() end
 function SpriteRenderer:stopOffscreenUI() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

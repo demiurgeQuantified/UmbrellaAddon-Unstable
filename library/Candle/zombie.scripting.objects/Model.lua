@@ -37,7 +37,7 @@ function Model:getRotate() end
 function Model:getScale() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

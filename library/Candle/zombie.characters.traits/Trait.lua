@@ -37,12 +37,18 @@ function Trait:getFreeTraits() end
 
 --- @public
 --- @return string
---- @overload fun(self: Trait): string
 function Trait:getLabel() end
 
 --- @public
 --- @return string
---- @overload fun(self: Trait): string
+function Trait:getLabel() end
+
+--- @public
+--- @return string
+function Trait:getLeftLabel() end
+
+--- @public
+--- @return string
 function Trait:getLeftLabel() end
 
 --- @public
@@ -51,7 +57,10 @@ function Trait:getMutuallyExclusiveTraits() end
 
 --- @public
 --- @return string
---- @overload fun(self: Trait): string
+function Trait:getRightLabel() end
+
+--- @public
+--- @return string
 function Trait:getRightLabel() end
 
 --- @public
@@ -90,7 +99,7 @@ function Trait:setFreeRecipes(freeRecipes) end
 function Trait:setRemoveInMP(removeInMP) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

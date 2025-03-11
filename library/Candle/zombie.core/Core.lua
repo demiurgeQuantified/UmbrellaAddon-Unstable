@@ -245,8 +245,16 @@ function Core:DoStartFrameNoZoom(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param zoom number
 --- @param player integer
 --- @return nil
---- @overload fun(self: Core, w: integer, h: integer, zoom: number, player: integer, isTextFrame: boolean): nil
 function Core:DoStartFrameStuff(w, h, zoom, player) end
+
+--- @public
+--- @param w integer
+--- @param h integer
+--- @param zoom number
+--- @param player integer
+--- @param isTextFrame boolean
+--- @return nil
+function Core:DoStartFrameStuff(w, h, zoom, player, isTextFrame) end
 
 --- @public
 --- @param w integer
@@ -257,8 +265,12 @@ function Core:DoStartFrameStuffSmartTextureFx(w, h, player) end
 
 --- @public
 --- @return nil
---- @overload fun(self: Core, nPlayer: integer): nil
 function Core:EndFrame() end
+
+--- @public
+--- @param nPlayer integer
+--- @return nil
+function Core:EndFrame(nPlayer) end
 
 --- @public
 --- @param nPlayer integer
@@ -281,13 +293,24 @@ function Core:RenderOffScreenBuffer() end
 --- @param sp boolean
 --- @param reason string
 --- @return nil
---- @overload fun(self: Core, activeMods: string, reason: string): nil
+--- @deprecated
 function Core:ResetLua(sp, reason) end
 
 --- @public
+--- @param activeMods string
+--- @param reason string
 --- @return nil
---- @overload fun(self: Core, nPlayer: integer, clear: boolean): nil
+function Core:ResetLua(activeMods, reason) end
+
+--- @public
+--- @return nil
 function Core:StartFrame() end
+
+--- @public
+--- @param nPlayer integer
+--- @param clear boolean
+--- @return nil
+function Core:StartFrame(nPlayer, clear) end
 
 --- @public
 --- @param arg0 integer
@@ -313,9 +336,23 @@ function Core:TakeFullScreenshot(filename) end
 
 --- @public
 --- @return nil
---- @overload fun(self: Core, width: integer, height: integer, readBuffer: integer): nil
---- @overload fun(self: Core, x: integer, y: integer, width: integer, height: integer, readBuffer: integer): nil
 function Core:TakeScreenshot() end
+
+--- @public
+--- @param width integer
+--- @param height integer
+--- @param readBuffer integer
+--- @return nil
+function Core:TakeScreenshot(width, height, readBuffer) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param width integer
+--- @param height integer
+--- @param readBuffer integer
+--- @return nil
+function Core:TakeScreenshot(x, y, width, height, readBuffer) end
 
 --- @public
 --- @param arg0 string
@@ -503,8 +540,12 @@ function Core:getObjectHighlitedColor() end
 
 --- @public
 --- @return TextureFBO
---- @overload fun(self: Core, nPlayer: integer): TextureFBO
 function Core:getOffscreenBuffer() end
+
+--- @public
+--- @param nPlayer integer
+--- @return TextureFBO
+function Core:getOffscreenBuffer(nPlayer) end
 
 --- @public
 --- @param playerIndex integer
@@ -1363,7 +1404,11 @@ function Core:setCollideZombies(collideZombies) end
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: Core, arg0: string): nil
+function Core:setConsoleDotTxtSizeKB(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function Core:setConsoleDotTxtSizeKB(arg0) end
 
 --- @public
@@ -1972,8 +2017,13 @@ function Core:setOptionVoiceAGCMode(option) end
 --- @public
 --- @param option boolean
 --- @return nil
---- @overload fun(self: Core, arg0: boolean, arg1: boolean): nil
 function Core:setOptionVoiceEnable(option) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 boolean
+--- @return nil
+function Core:setOptionVoiceEnable(arg0, arg1) end
 
 --- @public
 --- @param option integer
@@ -2211,7 +2261,7 @@ function Core:zoomLevelsChanged() end
 function Core:zoomOptionChanged(inGame) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

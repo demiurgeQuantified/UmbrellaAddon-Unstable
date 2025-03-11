@@ -41,7 +41,7 @@ function XuiReference:setDefaultStyle(arg0) end
 function XuiReference:setStyle(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

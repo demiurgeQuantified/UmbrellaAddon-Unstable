@@ -35,8 +35,12 @@ function GameCharacterAIBrain:getCloseZombieCount() end
 
 --- @public
 --- @return IsoZombie
---- @overload fun(self: GameCharacterAIBrain, recurse: boolean): IsoZombie
 function GameCharacterAIBrain:getClosestChasingZombie() end
+
+--- @public
+--- @param recurse boolean
+--- @return IsoZombie
+function GameCharacterAIBrain:getClosestChasingZombie(recurse) end
 
 --- @public
 --- @param num integer
@@ -70,7 +74,7 @@ function GameCharacterAIBrain:setOrder(order) end
 function GameCharacterAIBrain:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

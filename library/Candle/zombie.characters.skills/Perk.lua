@@ -95,11 +95,16 @@ function Perk:setCustom() end
 function Perk:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param id string
 --- @return Perk
---- @overload fun(id: string, parent: Perk): Perk
 function Perk.new(id) end
+
+--- @public
+--- @param id string
+--- @param parent Perk
+--- @return Perk
+function Perk.new(id, parent) end

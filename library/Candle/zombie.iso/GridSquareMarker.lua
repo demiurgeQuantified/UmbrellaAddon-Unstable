@@ -100,7 +100,7 @@ function GridSquareMarker:isDoAlpha() end
 
 --- @public
 ---
----  If blink set uses Core.blinkAlpha, this takes precedence over other alpha
+--- If blink set uses Core.blinkAlpha, this takes precedence over other alpha
 ---
 --- @return boolean
 function GridSquareMarker:isDoBlink() end
@@ -198,7 +198,7 @@ function GridSquareMarker:setScaleCircleTexture(bScale) end
 function GridSquareMarker:setSize(size) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

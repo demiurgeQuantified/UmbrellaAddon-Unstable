@@ -63,7 +63,7 @@ function AirFront:setFrontType(type) end
 function AirFront:setStrength(str) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -10,7 +10,10 @@ IsoStove = {}
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoStove): boolean
+function IsoStove:Activated() end
+
+--- @public
+--- @return boolean
 function IsoStove:Activated() end
 
 --- @public
@@ -19,10 +22,16 @@ function IsoStove:PlayToggleSound() end
 
 --- @public
 ---
----  Turn on or off the stove, if no electricity it won't work
+--- Turn on or off the stove, if no electricity it won't work
 ---
 --- @return nil
---- @overload fun(self: IsoStove): nil
+function IsoStove:Toggle() end
+
+--- @public
+---
+--- Turn on or off the stove, if no electricity it won't work
+---
+--- @return nil
 function IsoStove:Toggle() end
 
 --- @public
@@ -35,7 +44,10 @@ function IsoStove:afterRotated() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoStove): string
+function IsoStove:getActivatableType() end
+
+--- @public
+--- @return string
 function IsoStove:getActivatableType() end
 
 --- @public
@@ -135,11 +147,17 @@ function IsoStove:syncSpriteGridObjects(toggle, network) end
 function IsoStove:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoStove
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoStove
 function IsoStove.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param gid IsoSprite
+--- @return IsoStove
+function IsoStove.new(cell, sq, gid) end

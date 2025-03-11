@@ -10,8 +10,8 @@ Nutrition = {}
 
 --- @public
 ---
----  > 100 obese 85 to 100 over weight 75 to 85 normal 65 to 75 underweight 50 to
----  very underweight <= 50 emaciated
+--- > 100 obese 85 to 100 over weight 75 to 85 normal 65 to 75 underweight 50 to  65
+--- underweight <= 50 emaciated
 ---
 --- @return nil
 function Nutrition:applyTraitFromWeight() end
@@ -22,8 +22,8 @@ function Nutrition:applyWeightFromTraits() end
 
 --- @public
 ---
----  You gain xp only if you're in good shape As underweight or overweight you can
----  be "fit"
+--- You gain xp only if you're in good shape As underweight or overweight you can
+--- be "fit"
 ---
 --- @return boolean
 function Nutrition:canAddFitnessXp() end
@@ -123,7 +123,7 @@ function Nutrition:syncWeight() end
 function Nutrition:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

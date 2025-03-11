@@ -87,7 +87,7 @@ function Stage:getTimeNeeded(chr) end
 function Stage:playCompletionSound(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

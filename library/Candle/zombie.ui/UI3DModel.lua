@@ -20,7 +20,11 @@ function UI3DModel:clearVariables() end
 --- @public
 --- @param itemGuid string
 --- @return nil
---- @overload fun(self: UI3DModel, itemGuid: string): nil
+function UI3DModel:clothingItemChanged(itemGuid) end
+
+--- @public
+--- @param itemGuid string
+--- @return nil
 function UI3DModel:clothingItemChanged(itemGuid) end
 
 --- @public
@@ -100,8 +104,18 @@ function UI3DModel:setSurvivorDesc(survivorDesc) end
 --- @param arg0 string
 --- @param arg1 boolean
 --- @return nil
---- @overload fun(self: UI3DModel, arg0: string, arg1: number): nil
---- @overload fun(self: UI3DModel, arg0: string, arg1: string): nil
+function UI3DModel:setVariable(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @return nil
+function UI3DModel:setVariable(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
 function UI3DModel:setVariable(arg0, arg1) end
 
 --- @public
@@ -120,7 +134,7 @@ function UI3DModel:setYOffset(newYOffset) end
 function UI3DModel:setZoom(newZoom) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

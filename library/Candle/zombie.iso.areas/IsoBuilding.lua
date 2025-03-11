@@ -53,15 +53,29 @@ function IsoBuilding:TriggerAlarm() end
 --- @param obj IsoDoor
 --- @param bOtherTile boolean
 --- @return nil
---- @overload fun(self: IsoBuilding, obj: IsoDoor, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding): nil
 function IsoBuilding:addDoor(obj, bOtherTile) end
+
+--- @public
+--- @param obj IsoDoor
+--- @param bOtherTile boolean
+--- @param from IsoGridSquare
+--- @param building IsoBuilding
+--- @return nil
+function IsoBuilding:addDoor(obj, bOtherTile, from, building) end
 
 --- @public
 --- @param obj IsoWindow
 --- @param bOtherTile boolean
 --- @return nil
---- @overload fun(self: IsoBuilding, obj: IsoWindow, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding): nil
 function IsoBuilding:addWindow(obj, bOtherTile) end
+
+--- @public
+--- @param obj IsoWindow
+--- @param bOtherTile boolean
+--- @param from IsoGridSquare
+--- @param building IsoBuilding
+--- @return nil
+function IsoBuilding:addWindow(obj, bOtherTile, from, building) end
 
 --- @public
 --- @param room string
@@ -70,7 +84,7 @@ function IsoBuilding:containsRoom(room) end
 
 --- @public
 ---
----  Check for player inside the house and awake them all
+--- Check for player inside the house and awake them all
 ---
 --- @return nil
 function IsoBuilding:forceAwake() end
@@ -108,8 +122,12 @@ function IsoBuilding:getRandomFirstFloorWindow() end
 
 --- @public
 --- @return IsoRoom
---- @overload fun(self: IsoBuilding, room: string): IsoRoom
 function IsoBuilding:getRandomRoom() end
+
+--- @public
+--- @param room string
+--- @return IsoRoom
+function IsoBuilding:getRandomRoom(room) end
 
 --- @public
 --- @return integer
@@ -159,10 +177,14 @@ function IsoBuilding:setToxic(isToxic) end
 function IsoBuilding:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return IsoBuilding
---- @overload fun(cell: IsoCell): IsoBuilding
 function IsoBuilding.new() end
+
+--- @public
+--- @param cell IsoCell
+--- @return IsoBuilding
+function IsoBuilding.new(cell) end

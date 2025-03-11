@@ -52,7 +52,7 @@ function IsoLivingCharacter:isShovingWhileAiming() end
 function IsoLivingCharacter:setDoShove(bDoShove) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

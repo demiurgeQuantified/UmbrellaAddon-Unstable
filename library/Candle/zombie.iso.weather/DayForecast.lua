@@ -117,7 +117,7 @@ function DayForecast:isHasTropicalStorm() end
 function DayForecast:isWeatherStarts() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

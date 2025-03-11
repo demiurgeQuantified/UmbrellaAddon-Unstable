@@ -14,7 +14,7 @@ RZSDuke = {}
 function RZSDuke:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

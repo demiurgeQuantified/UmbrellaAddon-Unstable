@@ -36,7 +36,7 @@ function ObservationFactory.init() end
 function ObservationFactory.setMutualExclusive(a, b) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

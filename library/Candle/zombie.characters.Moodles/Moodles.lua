@@ -49,8 +49,12 @@ function Moodles:getMoodleDisplayString(MoodleIndex) end
 --- @public
 --- @param MoodleIndex integer
 --- @return integer
---- @overload fun(self: Moodles, MType: MoodleType): integer
 function Moodles:getMoodleLevel(MoodleIndex) end
+
+--- @public
+--- @param MType MoodleType
+--- @return integer
+function Moodles:getMoodleLevel(MType) end
 
 --- @public
 --- @param MoodleIndex integer
@@ -72,7 +76,7 @@ function Moodles:isMaxMoodleLevel(arg0) end
 function Moodles:setMoodlesStateChanged(refresh) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

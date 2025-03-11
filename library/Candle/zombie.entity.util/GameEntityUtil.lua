@@ -15,7 +15,7 @@ GameEntityUtil = {}
 function GameEntityUtil.getCloseWindowDistance() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

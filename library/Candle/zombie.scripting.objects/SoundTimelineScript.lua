@@ -28,7 +28,7 @@ function SoundTimelineScript:getPosition(id) end
 function SoundTimelineScript:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

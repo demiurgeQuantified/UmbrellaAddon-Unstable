@@ -31,8 +31,16 @@ Color = {}
 --- @param saturation number
 --- @param brightness number
 --- @return Color
---- @overload fun(hue: number, saturation: number, brightness: number, result: Color): Color
 function Color.HSBtoRGB(hue, saturation, brightness) end
+
+--- @public
+--- @static
+--- @param hue number
+--- @param saturation number
+--- @param brightness number
+--- @param result Color
+--- @return Color
+function Color.HSBtoRGB(hue, saturation, brightness, result) end
 
 --- @public
 --- @static
@@ -59,16 +67,24 @@ function Color.blendBGR(valueABGR, targetABGR) end
 --- @static
 --- @param val Color
 --- @return integer
---- @overload fun(r: number, g: number, b: number, a: number): integer
 function Color.colorToABGR(val) end
 
 --- @public
 --- @static
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return integer
+function Color.colorToABGR(r, g, b, a) end
+
+--- @public
+--- @static
 ---
----  Decode a number in a string and process it as a colour  reference.
+--- Decode a number in a string and process it as a colour  reference.
 ---
 --- @param nm string The number string to decode
---- @return Color The color generated from the number read
+--- @return Color _ The color generated from the number read
 function Color.decode(nm) end
 
 --- @public
@@ -120,7 +136,7 @@ function Color.multiplyBGR(valueABGR, multiplierABGR) end
 --- @public
 --- @static
 ---
----  Create a random color.
+--- Create a random color.
 ---
 --- @return Color
 function Color.random() end
@@ -166,7 +182,7 @@ function Color.tintABGR(targetABGR, tintABGR) end
 
 --- @public
 ---
----  Add another colour to this one
+--- Add another colour to this one
 ---
 --- @param c Color The colour to add
 --- @return nil
@@ -174,19 +190,26 @@ function Color:add(c) end
 
 --- @public
 ---
----  Add another colour to this one
+--- Add another colour to this one
 ---
 --- @param c Color The colour to add
---- @return Color The copy which has had the color added to it
+--- @return Color _ The copy which has had the color added to it
 function Color:addToCopy(c) end
 
 --- @public
 ---
----  Make a brighter instance of this colour
+--- Make a brighter instance of this colour
 ---
---- @return Color The brighter version of this colour
---- @overload fun(self: Color, scale: number): Color The brighter version of this colour
+--- @return Color _ The brighter version of this colour
 function Color:brighter() end
+
+--- @public
+---
+--- Make a brighter instance of this colour
+---
+--- @param scale number The scale up of RGB (i.e. if you supply 0.03 the colour will be brightened by 3%)
+--- @return Color _ The brighter version of this colour
+function Color:brighter(scale) end
 
 --- @public
 --- @param hFactor number
@@ -197,11 +220,18 @@ function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 
 --- @public
 ---
----  Make a darker instance of this colour
+--- Make a darker instance of this colour
 ---
---- @return Color The darker version of this colour
---- @overload fun(self: Color, scale: number): Color The darker version of this colour
+--- @return Color _ The darker version of this colour
 function Color:darker() end
+
+--- @public
+---
+--- Make a darker instance of this colour
+---
+--- @param scale number The scale down of RGB (i.e. if you supply 0.03 the colour will be darkened by 3%)
+--- @return Color _ The darker version of this colour
+function Color:darker(scale) end
 
 --- @public
 --- @param other any
@@ -210,9 +240,9 @@ function Color:equals(other) end
 
 --- @public
 ---
----  Converts the supplied binary value into color values, and sets the result to
----  object.   Performs a clamp on the alpha channel.   Performs a special-case on
----  alpha channel, where if it is 0, it is set to MAX instead.
+--- Converts the supplied binary value into color values, and sets the result to
+--- object.   Performs a clamp on the alpha channel.   Performs a special-case on
+--- alpha channel, where if it is 0, it is set to MAX instead.
 ---
 --- @param valueABGR integer
 --- @return nil
@@ -221,16 +251,16 @@ function Color:fromColor(valueABGR) end
 
 --- @public
 ---
----  get the alpha byte component of this colour
+--- get the alpha byte component of this colour
 ---
---- @return integer The alpha component (range 0-255)
+--- @return integer _ The alpha component (range 0-255)
 function Color:getAlpha() end
 
 --- @public
 ---
----  get the alpha byte component of this colour
+--- get the alpha byte component of this colour
 ---
---- @return integer The alpha component (range 0-255)
+--- @return integer _ The alpha component (range 0-255)
 function Color:getAlphaByte() end
 
 --- @public
@@ -243,16 +273,16 @@ function Color:getB() end
 
 --- @public
 ---
----  get the blue byte component of this colour
+--- get the blue byte component of this colour
 ---
---- @return integer The blue component (range 0-255)
+--- @return integer _ The blue component (range 0-255)
 function Color:getBlue() end
 
 --- @public
 ---
----  get the blue byte component of this colour
+--- get the blue byte component of this colour
 ---
---- @return integer The blue component (range 0-255)
+--- @return integer _ The blue component (range 0-255)
 function Color:getBlueByte() end
 
 --- @public
@@ -265,16 +295,16 @@ function Color:getG() end
 
 --- @public
 ---
----  get the green byte component of this colour
+--- get the green byte component of this colour
 ---
---- @return integer The green component (range 0-255)
+--- @return integer _ The green component (range 0-255)
 function Color:getGreen() end
 
 --- @public
 ---
----  get the green byte component of this colour
+--- get the green byte component of this colour
 ---
---- @return integer The green component (range 0-255)
+--- @return integer _ The green component (range 0-255)
 function Color:getGreenByte() end
 
 --- @public
@@ -287,16 +317,16 @@ function Color:getR() end
 
 --- @public
 ---
----  get the red byte component of this colour
+--- get the red byte component of this colour
 ---
---- @return integer The red component (range 0-255)
+--- @return integer _ The red component (range 0-255)
 function Color:getRed() end
 
 --- @public
 ---
----  get the red byte component of this colour
+--- get the red byte component of this colour
 ---
---- @return integer The red component (range 0-255)
+--- @return integer _ The red component (range 0-255)
 function Color:getRedByte() end
 
 --- @public
@@ -332,10 +362,10 @@ function Color:loadCompactNoAlpha(arg0) end
 
 --- @public
 ---
----  Multiply this color by another
+--- Multiply this color by another
 ---
 --- @param c Color the other color
---- @return Color product of the two colors
+--- @return Color _ product of the two colors
 function Color:multiply(c) end
 
 --- @public
@@ -355,7 +385,7 @@ function Color:saveCompactNoAlpha(arg0) end
 
 --- @public
 ---
----  Scale the components of the colour by the given value
+--- Scale the components of the colour by the given value
 ---
 --- @param value number The value to scale by
 --- @return Color
@@ -363,18 +393,31 @@ function Color:scale(value) end
 
 --- @public
 ---
----  Scale the components of the colour by the given value
+--- Scale the components of the colour by the given value
 ---
 --- @param value number The value to scale by
---- @return Color The copy which has been scaled
+--- @return Color _ The copy which has been scaled
 function Color:scaleCopy(value) end
 
 --- @public
 --- @param other Color
 --- @return Color
---- @overload fun(self: Color, r: number, g: number, b: number): Color
---- @overload fun(self: Color, r: number, g: number, b: number, a: number): Color
 function Color:set(other) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @return Color
+function Color:set(r, g, b) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return Color
+function Color:set(r, g, b, a) end
 
 --- @public
 --- @param valueABGR integer
@@ -393,16 +436,75 @@ function Color:setColor(A, B, delta) end
 function Color:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Color
---- @overload fun(value: integer): Color
---- @overload fun(color: Color): Color
---- @overload fun(r: number, g: number, b: number): Color
---- @overload fun(r: integer, g: integer, b: integer): Color
---- @overload fun(A: Color, B: Color, delta: number): Color
---- @overload fun(r: number, g: number, b: number, a: number): Color
---- @overload fun(r: integer, g: integer, b: integer, a: integer): Color
 function Color.new() end
+
+--- @public
+---
+--- Create a colour from an evil integer packed 0xAARRGGBB. If AA  is specified as
+--- then it will be interpreted as unspecified  and hence a value of 255 will be
+---
+--- @param value integer The value to interpret for the colour
+--- @return Color
+function Color.new(value) end
+
+--- @public
+---
+--- Copy constructor
+---
+--- @param color Color The color to copy into the new instance
+--- @return Color
+function Color.new(color) end
+
+--- @public
+---
+--- Create a 3 component colour
+---
+--- @param r number The red component of the colour (0.0
+--- @param g number The green component of the colour (0.0
+--- @param b number The blue component of the colour (0.0
+--- @return Color
+function Color.new(r, g, b) end
+
+--- @public
+---
+--- Create a 3 component colour
+---
+--- @param r integer The red component of the colour (0
+--- @param g integer The green component of the colour (0
+--- @param b integer The blue component of the colour (0
+--- @return Color
+function Color.new(r, g, b) end
+
+--- @public
+--- @param A Color
+--- @param B Color
+--- @param delta number
+--- @return Color
+function Color.new(A, B, delta) end
+
+--- @public
+---
+--- Create a 4 component colour
+---
+--- @param r number The red component of the colour (0.0
+--- @param g number The green component of the colour (0.0
+--- @param b number The blue component of the colour (0.0
+--- @param a number The alpha component of the colour (0.0
+--- @return Color
+function Color.new(r, g, b, a) end
+
+--- @public
+---
+--- Create a 4 component colour
+---
+--- @param r integer The red component of the colour (0
+--- @param g integer The green component of the colour (0
+--- @param b integer The blue component of the colour (0
+--- @param a integer The alpha component of the colour (0
+--- @return Color
+function Color.new(r, g, b, a) end

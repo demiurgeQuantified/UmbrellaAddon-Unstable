@@ -19,8 +19,14 @@ function DummySoundManager:BlendThenStart(musicTrack, f, PrefMusic) end
 --- @param audio Audio
 --- @param targetVolume number
 --- @return nil
---- @overload fun(self: DummySoundManager, audio: Audio, targetVolume: number, blendSpeedAlpha: number): nil
 function DummySoundManager:BlendVolume(audio, targetVolume) end
+
+--- @public
+--- @param audio Audio
+--- @param targetVolume number
+--- @param blendSpeedAlpha number
+--- @return nil
+function DummySoundManager:BlendVolume(audio, targetVolume, blendSpeedAlpha) end
 
 --- @public
 --- @param file string
@@ -53,8 +59,15 @@ function DummySoundManager:IsMusicPlaying() end
 --- @param loop boolean
 --- @param volume number
 --- @return nil
---- @overload fun(self: DummySoundManager, name: string, musicTrack: Audio, volume: number, bloop: boolean): nil
 function DummySoundManager:PlayAsMusic(name, musicTrack, loop, volume) end
+
+--- @public
+--- @param name string
+--- @param musicTrack Audio
+--- @param volume number
+--- @param bloop boolean
+--- @return nil
+function DummySoundManager:PlayAsMusic(name, musicTrack, volume, bloop) end
 
 --- @public
 --- @param name string
@@ -76,8 +89,15 @@ function DummySoundManager:PlayMusic(n, name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain number
 --- @return Audio
---- @overload fun(self: DummySoundManager, name: string, loop: boolean, pitchVar: number, maxGain: number): Audio
 function DummySoundManager:PlaySound(name, loop, maxGain) end
+
+--- @public
+--- @param name string
+--- @param loop boolean
+--- @param pitchVar number
+--- @param maxGain number
+--- @return Audio
+function DummySoundManager:PlaySound(name, loop, pitchVar, maxGain) end
 
 --- @public
 --- @param name string
@@ -91,9 +111,23 @@ function DummySoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain number
 --- @return Audio
---- @overload fun(self: DummySoundManager, name: string, loop: boolean, maxGain: number, pitchVar: number): Audio
---- @overload fun(self: DummySoundManager, name: string, variations: integer, loop: boolean, maxGain: number): Audio
 function DummySoundManager:PlaySoundWav(name, loop, maxGain) end
+
+--- @public
+--- @param name string
+--- @param loop boolean
+--- @param maxGain number
+--- @param pitchVar number
+--- @return Audio
+function DummySoundManager:PlaySoundWav(name, loop, maxGain, pitchVar) end
+
+--- @public
+--- @param name string
+--- @param variations integer
+--- @param loop boolean
+--- @param maxGain number
+--- @return Audio
+function DummySoundManager:PlaySoundWav(name, variations, loop, maxGain) end
 
 --- @public
 --- @param name string
@@ -103,9 +137,29 @@ function DummySoundManager:PlaySoundWav(name, loop, maxGain) end
 --- @param maxGain number
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(self: DummySoundManager, name: string, loop: boolean, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, ignoreOutside: boolean): Audio
---- @overload fun(self: DummySoundManager, name: string, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, choices: integer, ignoreOutside: boolean): Audio
 function DummySoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
+
+--- @public
+--- @param name string
+--- @param loop boolean
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param ignoreOutside boolean
+--- @return Audio
+function DummySoundManager:PlayWorldSound(name, loop, source, pitchVar, radius, maxGain, ignoreOutside) end
+
+--- @public
+--- @param name string
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param choices integer
+--- @param ignoreOutside boolean
+--- @return Audio
+function DummySoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, choices, ignoreOutside) end
 
 --- @public
 --- @param name string
@@ -128,9 +182,29 @@ function DummySoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, 
 --- @param maxGain number
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(self: DummySoundManager, name: string, loop: boolean, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, ignoreOutside: boolean): Audio
---- @overload fun(self: DummySoundManager, name: string, source: IsoGridSquare, pitchVar: number, radius: number, maxGain: number, choices: integer, ignoreOutside: boolean): nil
 function DummySoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
+
+--- @public
+--- @param name string
+--- @param loop boolean
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param ignoreOutside boolean
+--- @return Audio
+function DummySoundManager:PlayWorldSoundWav(name, loop, source, pitchVar, radius, maxGain, ignoreOutside) end
+
+--- @public
+--- @param name string
+--- @param source IsoGridSquare
+--- @param pitchVar number
+--- @param radius number
+--- @param maxGain number
+--- @param choices integer
+--- @param ignoreOutside boolean
+--- @return nil
+function DummySoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, choices, ignoreOutside) end
 
 --- @public
 --- @param name string
@@ -222,8 +296,12 @@ function DummySoundManager:isPlayingMusic() end
 --- @public
 --- @param name string
 --- @return boolean
---- @overload fun(self: DummySoundManager, eventInstance: integer): boolean
 function DummySoundManager:isPlayingUISound(name) end
+
+--- @public
+--- @param eventInstance integer
+--- @return boolean
+function DummySoundManager:isPlayingUISound(eventInstance) end
 
 --- @public
 --- @return boolean
@@ -231,8 +309,12 @@ function DummySoundManager:isRemastered() end
 
 --- @public
 --- @return nil
---- @overload fun(self: DummySoundManager, arg0: boolean): nil
 function DummySoundManager:pauseSoundAndMusic() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function DummySoundManager:pauseSoundAndMusic(arg0) end
 
 --- @public
 --- @param name string
@@ -254,8 +336,13 @@ function DummySoundManager:playDestructionSound(arg0, arg1) end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return nil
---- @overload fun(self: DummySoundManager, arg0: IsoGridSquare, arg1: MaterialType): nil
 function DummySoundManager:playImpactSound(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 MaterialType
+--- @return nil
+function DummySoundManager:playImpactSound(arg0, arg1) end
 
 --- @public
 --- @param name string
@@ -358,7 +445,7 @@ function DummySoundManager:update3D() end
 function DummySoundManager:update4() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

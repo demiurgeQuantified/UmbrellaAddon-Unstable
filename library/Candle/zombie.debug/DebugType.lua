@@ -77,10 +77,10 @@ function DebugType.valueOf(arg0) end
 --- @public
 --- @static
 ---
----  Returns an array containing the constants of this enum class, in the order they
----  declared.
+--- Returns an array containing the constants of this enum class, in the order they
+--- declared.
 ---
---- @return DebugType[] an array containing the constants of this enum class, in the order they are declared
+--- @return DebugType[] _ an array containing the constants of this enum class, in the order they are declared
 function DebugType.values() end
 
 ------------------------------------
@@ -90,20 +90,35 @@ function DebugType.values() end
 --- @public
 --- @param arg0 any
 --- @return nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:debugOnceln(arg0) end
 
 --- @public
---- @param arg0 any
+--- @param arg0 string
+--- @param arg1 Object[]
 --- @return nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
-function DebugType:debugln(arg0) end
+function DebugType:debugOnceln(arg0, arg1) end
 
 --- @public
 --- @param arg0 any
 --- @return nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
+function DebugType:debugln(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Object[]
+--- @return nil
+function DebugType:debugln(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @return nil
 function DebugType:error(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Object[]
+--- @return nil
+function DebugType:error(arg0, arg1) end
 
 --- @public
 --- @return DebugLogStream
@@ -114,8 +129,15 @@ function DebugType:getLogStream() end
 --- @param arg1 string
 --- @param arg2 integer
 --- @return StackTraceContainer
---- @overload fun(self: DebugType, arg0: LogSeverity, arg1: string, arg2: integer, arg3: integer): StackTraceContainer
 function DebugType:getStackTrace(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 LogSeverity
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return StackTraceContainer
+function DebugType:getStackTrace(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return boolean
@@ -124,19 +146,52 @@ function DebugType:isEnabled() end
 --- @public
 --- @param arg0 any
 --- @return nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:noise(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Object[]
+--- @return nil
+function DebugType:noise(arg0, arg1) end
 
 --- @public
 --- @param arg0 boolean
 --- @return nil
---- @overload fun(self: DebugType, arg0: string): nil
---- @overload fun(self: DebugType, arg0: number): nil
---- @overload fun(self: DebugType, arg0: number): nil
---- @overload fun(self: DebugType, arg0: integer): nil
---- @overload fun(self: DebugType, arg0: any): nil
---- @overload fun(self: DebugType, arg0: string): nil
---- @overload fun(self: DebugType, arg0: integer): nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function DebugType:print(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function DebugType:print(arg0) end
 
 --- @public
@@ -154,17 +209,58 @@ function DebugType:printf(arg0, arg1) end
 
 --- @public
 --- @return nil
---- @overload fun(self: DebugType, arg0: char[]): nil
---- @overload fun(self: DebugType, arg0: boolean): nil
---- @overload fun(self: DebugType, arg0: string): nil
---- @overload fun(self: DebugType, arg0: number): nil
---- @overload fun(self: DebugType, arg0: number): nil
---- @overload fun(self: DebugType, arg0: integer): nil
---- @overload fun(self: DebugType, arg0: any): nil
---- @overload fun(self: DebugType, arg0: string): nil
---- @overload fun(self: DebugType, arg0: integer): nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:println() end
+
+--- @public
+--- @param arg0 char[]
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function DebugType:println(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Object[]
+--- @return nil
+function DebugType:println(arg0, arg1) end
 
 --- @public
 --- @param arg0 integer
@@ -176,14 +272,24 @@ function DebugType:routedWrite(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 any
 --- @return nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:trace(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Object[]
+--- @return nil
+function DebugType:trace(arg0, arg1) end
 
 --- @public
 --- @param arg0 any
 --- @return nil
---- @overload fun(self: DebugType, arg0: string, arg1: Object[]): nil
 function DebugType:warn(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Object[]
+--- @return nil
+function DebugType:warn(arg0, arg1) end
 
 --- @public
 --- @param arg0 LogSeverity

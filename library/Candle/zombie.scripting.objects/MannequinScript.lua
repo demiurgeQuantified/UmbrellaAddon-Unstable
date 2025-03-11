@@ -86,7 +86,7 @@ function MannequinScript:setPose(str) end
 function MannequinScript:setTexture(str) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

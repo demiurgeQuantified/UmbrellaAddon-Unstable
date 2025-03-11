@@ -73,7 +73,7 @@ function Perks.fromIndex(value) end
 function Perks.getMaxIndex() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

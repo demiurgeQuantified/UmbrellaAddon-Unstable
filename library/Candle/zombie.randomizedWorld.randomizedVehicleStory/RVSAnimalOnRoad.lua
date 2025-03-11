@@ -37,7 +37,7 @@ function RVSAnimalOnRoad:randomizeVehicleStory(arg0, arg1) end
 function RVSAnimalOnRoad:spawnElement(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

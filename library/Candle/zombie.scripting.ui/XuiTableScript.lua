@@ -56,7 +56,7 @@ function XuiTableScript:getRowCount() end
 function XuiTableScript:getRowStyle() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

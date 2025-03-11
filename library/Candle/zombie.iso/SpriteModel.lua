@@ -90,7 +90,7 @@ function SpriteModel:setScale(arg0) end
 function SpriteModel:setTextureName(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

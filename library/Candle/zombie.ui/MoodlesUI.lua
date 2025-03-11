@@ -48,7 +48,7 @@ function MoodlesUI:update() end
 function MoodlesUI:wiggle(Moodle) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

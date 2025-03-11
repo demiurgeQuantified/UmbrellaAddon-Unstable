@@ -45,8 +45,13 @@ function IsoMetaGrid:addCellToSave(arg0) end
 --- @public
 --- @param arg0 BuildingDef
 --- @return nil
---- @overload fun(self: IsoMetaGrid, arg0: BuildingDef, arg1: ArrayList): nil
 function IsoMetaGrid:addRoomsToAdjacentCells(arg0) end
+
+--- @public
+--- @param arg0 BuildingDef
+--- @param arg1 ArrayList
+--- @return nil
+function IsoMetaGrid:addRoomsToAdjacentCells(arg0, arg1) end
 
 --- @public
 --- @param arg0 Zone
@@ -255,8 +260,15 @@ function IsoMetaGrid:getZoneWithBoundsAndType(x, y, z, w, h, type) end
 --- @param y integer
 --- @param z integer
 --- @return ArrayList
---- @overload fun(self: IsoMetaGrid, x: integer, y: integer, z: integer, result: ArrayList): ArrayList
 function IsoMetaGrid:getZonesAt(x, y, z) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param result ArrayList
+--- @return ArrayList
+function IsoMetaGrid:getZonesAt(x, y, z, result) end
 
 --- @public
 --- @param x integer
@@ -265,8 +277,17 @@ function IsoMetaGrid:getZonesAt(x, y, z) end
 --- @param w integer
 --- @param h integer
 --- @return ArrayList
---- @overload fun(self: IsoMetaGrid, x: integer, y: integer, z: integer, w: integer, h: integer, result: ArrayList): ArrayList
 function IsoMetaGrid:getZonesIntersecting(x, y, z, w, h) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param w integer
+--- @param h integer
+--- @param result ArrayList
+--- @return ArrayList
+function IsoMetaGrid:getZonesIntersecting(x, y, z, w, h, result) end
 
 --- @public
 --- @return integer
@@ -317,9 +338,18 @@ function IsoMetaGrid:isZoneAbove(zone1, zone2, x, y, z) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoMetaGrid, input: ByteBuffer): nil
---- @overload fun(self: IsoMetaGrid, arg0: string, arg1: BiConsumer): nil
 function IsoMetaGrid:load() end
+
+--- @public
+--- @param input ByteBuffer
+--- @return nil
+function IsoMetaGrid:load(input) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 BiConsumer
+--- @return nil
+function IsoMetaGrid:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -347,8 +377,19 @@ function IsoMetaGrid:processZones() end
 --- @public
 --- @param arg0 AnimalZone
 --- @return Zone
---- @overload fun(self: IsoMetaGrid, arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer, arg7: table): Zone
 function IsoMetaGrid:registerAnimalZone(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @param arg7 table
+--- @return Zone
+function IsoMetaGrid:registerAnimalZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @param name string
@@ -411,9 +452,32 @@ function IsoMetaGrid:registerWorldGenZone(arg0, arg1, arg2, arg3, arg4, arg5, ar
 --- @public
 --- @param arg0 Zone
 --- @return Zone
---- @overload fun(self: IsoMetaGrid, name: string, type: string, x: integer, y: integer, z: integer, width: integer, height: integer): Zone
---- @overload fun(self: IsoMetaGrid, name: string, type: string, x: integer, y: integer, z: integer, width: integer, height: integer, geometryType: ZoneGeometryType, points: TIntArrayList, polylineWidth: integer): Zone
 function IsoMetaGrid:registerZone(arg0) end
+
+--- @public
+--- @param name string
+--- @param type string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param width integer
+--- @param height integer
+--- @return Zone
+function IsoMetaGrid:registerZone(name, type, x, y, z, width, height) end
+
+--- @public
+--- @param name string
+--- @param type string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param width integer
+--- @param height integer
+--- @param geometryType ZoneGeometryType
+--- @param points TIntArrayList
+--- @param polylineWidth integer
+--- @return Zone
+function IsoMetaGrid:registerZone(name, type, x, y, z, width, height, geometryType, points, polylineWidth) end
 
 --- @public
 --- @param name string
@@ -445,8 +509,12 @@ function IsoMetaGrid:removeZonesForLotDirectory(lotDir) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoMetaGrid, output: ByteBuffer): nil
 function IsoMetaGrid:save() end
+
+--- @public
+--- @param output ByteBuffer
+--- @return nil
+function IsoMetaGrid:save(output) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -484,7 +552,7 @@ function IsoMetaGrid:setCellData(arg0, arg1, arg2) end
 function IsoMetaGrid:wasLoaded() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

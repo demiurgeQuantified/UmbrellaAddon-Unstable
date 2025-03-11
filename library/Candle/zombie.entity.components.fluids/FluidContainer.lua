@@ -33,17 +33,39 @@ function FluidContainer.DisposeContainer(arg0) end
 --- @param arg0 FluidContainer
 --- @param arg1 FluidContainer
 --- @return string
---- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: boolean): string
 function FluidContainer.GetTransferReason(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 FluidContainer
 --- @param arg1 FluidContainer
+--- @param arg2 boolean
+--- @return string
+function FluidContainer.GetTransferReason(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 FluidContainer
+--- @param arg1 FluidContainer
 --- @return nil
---- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: number): nil
---- @overload fun(arg0: FluidContainer, arg1: FluidContainer, arg2: number, arg3: boolean): nil
 function FluidContainer.Transfer(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 FluidContainer
+--- @param arg1 FluidContainer
+--- @param arg2 number
+--- @return nil
+function FluidContainer.Transfer(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 FluidContainer
+--- @param arg1 FluidContainer
+--- @param arg2 number
+--- @param arg3 boolean
+--- @return nil
+function FluidContainer.Transfer(arg0, arg1, arg2, arg3) end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -52,20 +74,39 @@ function FluidContainer.Transfer(arg0, arg1) end
 --- @public
 --- @param arg0 ObjectTooltip
 --- @return nil
---- @overload fun(self: FluidContainer, arg0: ObjectTooltip, arg1: Layout): nil
 function FluidContainer:DoTooltip(arg0) end
 
 --- @public
+--- @param arg0 ObjectTooltip
+--- @param arg1 Layout
 --- @return nil
---- @overload fun(self: FluidContainer, arg0: boolean): nil
+function FluidContainer:DoTooltip(arg0, arg1) end
+
+--- @public
+--- @return nil
 function FluidContainer:Empty() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function FluidContainer:Empty(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 number
 --- @return nil
---- @overload fun(self: FluidContainer, arg0: Fluid, arg1: number): nil
---- @overload fun(self: FluidContainer, arg0: FluidType, arg1: number): nil
+function FluidContainer:addFluid(arg0, arg1) end
+
+--- @public
+--- @param arg0 Fluid
+--- @param arg1 number
+--- @return nil
+function FluidContainer:addFluid(arg0, arg1) end
+
+--- @public
+--- @param arg0 FluidType
+--- @param arg1 number
+--- @return nil
 function FluidContainer:addFluid(arg0, arg1) end
 
 --- @public
@@ -104,9 +145,18 @@ function FluidContainer:copyFluidsFrom(arg0) end
 
 --- @public
 --- @return FluidSample
---- @overload fun(self: FluidContainer, arg0: number): FluidSample
---- @overload fun(self: FluidContainer, arg0: FluidSample, arg1: number): FluidSample
 function FluidContainer:createFluidSample() end
+
+--- @public
+--- @param arg0 number
+--- @return FluidSample
+function FluidContainer:createFluidSample(arg0) end
+
+--- @public
+--- @param arg0 FluidSample
+--- @param arg1 number
+--- @return FluidSample
+function FluidContainer:createFluidSample(arg0, arg1) end
 
 --- @public
 --- @return number
@@ -255,11 +305,30 @@ function FluidContainer:load(arg0, arg1) end
 
 --- @public
 --- @return nil
---- @overload fun(self: FluidContainer, arg0: boolean): FluidConsume
---- @overload fun(self: FluidContainer, arg0: number): nil
---- @overload fun(self: FluidContainer, arg0: number, arg1: boolean): FluidConsume
---- @overload fun(self: FluidContainer, arg0: number, arg1: boolean, arg2: FluidConsume): FluidConsume
 function FluidContainer:removeFluid() end
+
+--- @public
+--- @param arg0 boolean
+--- @return FluidConsume
+function FluidContainer:removeFluid(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function FluidContainer:removeFluid(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 boolean
+--- @return FluidConsume
+function FluidContainer:removeFluid(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 boolean
+--- @param arg2 FluidConsume
+--- @return FluidConsume
+function FluidContainer:removeFluid(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -299,14 +368,24 @@ function FluidContainer:setWhitelist(arg0) end
 --- @public
 --- @param arg0 FluidContainer
 --- @return nil
---- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: number): nil
 function FluidContainer:transferFrom(arg0) end
 
 --- @public
 --- @param arg0 FluidContainer
+--- @param arg1 number
 --- @return nil
---- @overload fun(self: FluidContainer, arg0: FluidContainer, arg1: number): nil
+function FluidContainer:transferFrom(arg0, arg1) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @return nil
 function FluidContainer:transferTo(arg0) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @return nil
+function FluidContainer:transferTo(arg0, arg1) end
 
 --- @public
 --- @return nil

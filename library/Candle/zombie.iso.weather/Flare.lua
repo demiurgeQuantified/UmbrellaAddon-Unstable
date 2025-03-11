@@ -78,7 +78,7 @@ function Flare:getY() end
 function Flare:isHasLaunched() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

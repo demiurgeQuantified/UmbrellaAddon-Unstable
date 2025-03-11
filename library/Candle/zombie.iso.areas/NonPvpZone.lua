@@ -118,10 +118,18 @@ function NonPvpZone:setY2(y2) end
 function NonPvpZone:syncNonPvpZone(remove) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return NonPvpZone
---- @overload fun(title: string, x: integer, y: integer, x2: integer, y2: integer): NonPvpZone
 function NonPvpZone.new() end
+
+--- @public
+--- @param title string
+--- @param x integer
+--- @param y integer
+--- @param x2 integer
+--- @param y2 integer
+--- @return NonPvpZone
+function NonPvpZone.new(title, x, y, x2, y2) end

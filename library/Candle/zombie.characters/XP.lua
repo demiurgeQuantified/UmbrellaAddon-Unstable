@@ -12,12 +12,48 @@ XP = {}
 --- @param type Perk
 --- @param amount number
 --- @return nil
---- @overload fun(self: XP, weapon: HandWeapon, amount: integer): nil
---- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean): nil
---- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean): nil
---- @overload fun(self: XP, type: Perk, amount: number, callLua: boolean, doXPBoost: boolean, remote: boolean): nil
---- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean, arg4: boolean, arg5: boolean): nil
 function XP:AddXP(type, amount) end
+
+--- @public
+--- @param weapon HandWeapon
+--- @param amount integer
+--- @return nil
+--- @deprecated
+function XP:AddXP(weapon, amount) end
+
+--- @public
+--- @param arg0 Perk
+--- @param arg1 number
+--- @param arg2 boolean
+--- @return nil
+function XP:AddXP(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 Perk
+--- @param arg1 number
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @return nil
+function XP:AddXP(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param type Perk
+--- @param amount number
+--- @param callLua boolean
+--- @param doXPBoost boolean
+--- @param remote boolean
+--- @return nil
+function XP:AddXP(type, amount, callLua, doXPBoost, remote) end
+
+--- @public
+--- @param arg0 Perk
+--- @param arg1 number
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @param arg4 boolean
+--- @param arg5 boolean
+--- @return nil
+function XP:AddXP(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @param arg0 Perk
@@ -41,7 +77,10 @@ function XP:addXpMultiplier(perks, multiplier, minLevel, maxLevel) end
 
 --- @public
 --- @return number
---- @overload fun(self: XP): number
+function XP:getGrowthRate() end
+
+--- @public
+--- @return number
 function XP:getGrowthRate() end
 
 --- @public
@@ -50,9 +89,16 @@ function XP:getLevel() end
 
 --- @public
 --- @return number
---- @overload fun(self: XP): number
---- @overload fun(self: XP, perk: Perk): number
 function XP:getMultiplier() end
+
+--- @public
+--- @return number
+function XP:getMultiplier() end
+
+--- @public
+--- @param perk Perk
+--- @return number
+function XP:getMultiplier(perk) end
 
 --- @public
 --- @return HashMap
@@ -74,7 +120,10 @@ function XP:getXP(type) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: XP): boolean
+function XP:intervalCheck() end
+
+--- @public
+--- @return boolean
 function XP:intervalCheck() end
 
 --- @public
@@ -111,7 +160,7 @@ function XP:setTotalXP(xp) end
 function XP:setXPToLevel(key, perkLevel) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

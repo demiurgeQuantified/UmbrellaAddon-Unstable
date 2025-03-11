@@ -14,11 +14,11 @@ IsoLightSource = {}
 function IsoLightSource:clearInfluence() end
 
 --- @public
---- @return number the b
+--- @return number _ the b
 function IsoLightSource:getB() end
 
 --- @public
---- @return number the g
+--- @return number _ the g
 function IsoLightSource:getG() end
 
 --- @public
@@ -26,31 +26,31 @@ function IsoLightSource:getG() end
 function IsoLightSource:getLocalToBuilding() end
 
 --- @public
---- @return number the r
+--- @return number _ the r
 function IsoLightSource:getR() end
 
 --- @public
---- @return integer the radius
+--- @return integer _ the radius
 function IsoLightSource:getRadius() end
 
 --- @public
---- @return ArrayList the switches
+--- @return ArrayList _ the switches
 function IsoLightSource:getSwitches() end
 
 --- @public
---- @return integer the x
+--- @return integer _ the x
 function IsoLightSource:getX() end
 
 --- @public
---- @return integer the y
+--- @return integer _ the y
 function IsoLightSource:getY() end
 
 --- @public
---- @return integer the z
+--- @return integer _ the z
 function IsoLightSource:getZ() end
 
 --- @public
---- @return boolean the bActive
+--- @return boolean _ the bActive
 function IsoLightSource:isActive() end
 
 --- @public
@@ -59,8 +59,15 @@ function IsoLightSource:isHydroPowered() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoLightSource, minX: integer, minY: integer, maxX: integer, maxY: integer): boolean
 function IsoLightSource:isInBounds() end
+
+--- @public
+--- @param minX integer
+--- @param minY integer
+--- @param maxX integer
+--- @param maxY integer
+--- @return boolean
+function IsoLightSource:isInBounds(minX, minY, maxX, maxY) end
 
 --- @public
 --- @param bActive boolean the bActive to set
@@ -118,11 +125,11 @@ function IsoLightSource:setZ(z) end
 function IsoLightSource:update() end
 
 --- @public
---- @return boolean the bWasActive
+--- @return boolean _ the bWasActive
 function IsoLightSource:wasActive() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -134,6 +141,28 @@ function IsoLightSource:wasActive() end
 --- @param b number
 --- @param radius integer
 --- @return IsoLightSource
---- @overload fun(x: integer, y: integer, z: integer, r: number, g: number, b: number, radius: integer, life: integer): IsoLightSource
---- @overload fun(x: integer, y: integer, z: integer, r: number, g: number, b: number, radius: integer, building: IsoBuilding): IsoLightSource
 function IsoLightSource.new(x, y, z, r, g, b, radius) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param radius integer
+--- @param life integer
+--- @return IsoLightSource
+function IsoLightSource.new(x, y, z, r, g, b, radius, life) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param radius integer
+--- @param building IsoBuilding
+--- @return IsoLightSource
+function IsoLightSource.new(x, y, z, r, g, b, radius, building) end

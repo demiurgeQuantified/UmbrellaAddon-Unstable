@@ -39,8 +39,12 @@ function RadioBroadCast:getLines() end
 
 --- @public
 --- @return RadioLine
---- @overload fun(self: RadioBroadCast, doChildren: boolean): RadioLine
 function RadioBroadCast:getNextLine() end
+
+--- @public
+--- @param doChildren boolean
+--- @return RadioLine
+function RadioBroadCast:getNextLine(doChildren) end
 
 --- @public
 --- @return integer
@@ -48,8 +52,12 @@ function RadioBroadCast:getStartStamp() end
 
 --- @public
 --- @return nil
---- @overload fun(self: RadioBroadCast, doChildren: boolean): nil
 function RadioBroadCast:resetLineCounter() end
+
+--- @public
+--- @param doChildren boolean
+--- @return nil
+function RadioBroadCast:resetLineCounter(doChildren) end
 
 --- @public
 --- @param n integer
@@ -67,7 +75,7 @@ function RadioBroadCast:setPostSegment(broadCast) end
 function RadioBroadCast:setPreSegment(broadCast) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

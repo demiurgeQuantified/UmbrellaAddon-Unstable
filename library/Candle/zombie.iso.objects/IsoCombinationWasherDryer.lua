@@ -88,11 +88,17 @@ function IsoCombinationWasherDryer:setModeWasher() end
 function IsoCombinationWasherDryer:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoCombinationWasherDryer
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoCombinationWasherDryer
 function IsoCombinationWasherDryer.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param gid IsoSprite
+--- @return IsoCombinationWasherDryer
+function IsoCombinationWasherDryer.new(cell, sq, gid) end

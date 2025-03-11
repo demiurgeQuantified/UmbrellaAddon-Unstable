@@ -53,11 +53,17 @@ function IsoTelevision:save(output, IS_DEBUG_SAVE) end
 function IsoTelevision:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoTelevision
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoTelevision
 function IsoTelevision.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param spr IsoSprite
+--- @return IsoTelevision
+function IsoTelevision.new(cell, sq, spr) end

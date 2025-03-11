@@ -10,7 +10,10 @@ ChatMessage = {}
 
 --- @public
 --- @return ChatMessage
---- @overload fun(self: ChatMessage): any
+function ChatMessage:clone() end
+
+--- @public
+--- @return any
 function ChatMessage:clone() end
 
 --- @public
@@ -176,12 +179,18 @@ function ChatMessage:setTextColor(textColor) end
 function ChatMessage:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param chat ChatBase
 --- @param text string
 --- @return ChatMessage
---- @overload fun(chat: ChatBase, datetime: LocalDateTime, text: string): ChatMessage
 function ChatMessage.new(chat, text) end
+
+--- @public
+--- @param chat ChatBase
+--- @param datetime LocalDateTime
+--- @param text string
+--- @return ChatMessage
+function ChatMessage.new(chat, datetime, text) end

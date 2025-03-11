@@ -61,7 +61,7 @@ function XuiSkinScript:getStyleInfoMap() end
 function XuiSkinScript:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

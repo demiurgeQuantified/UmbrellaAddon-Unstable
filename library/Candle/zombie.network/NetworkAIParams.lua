@@ -65,7 +65,7 @@ function NetworkAIParams.setShowConnectionInfo(enabled) end
 function NetworkAIParams.setShowServerInfo(enabled) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

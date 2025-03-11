@@ -21,10 +21,16 @@ function Position3D:y() end
 function Position3D:z() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Position3D
---- @overload fun(arg0: integer, arg1: integer, arg2: integer): Position3D
 function Position3D.new() end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return Position3D
+function Position3D.new(arg0, arg1, arg2) end

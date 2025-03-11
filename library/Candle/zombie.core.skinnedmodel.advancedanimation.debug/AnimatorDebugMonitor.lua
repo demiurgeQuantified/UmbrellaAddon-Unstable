@@ -116,7 +116,7 @@ function AnimatorDebugMonitor:setTarget(arg0) end
 function AnimatorDebugMonitor:update(chr, Layers) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

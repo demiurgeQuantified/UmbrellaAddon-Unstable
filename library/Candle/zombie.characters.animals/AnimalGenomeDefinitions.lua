@@ -21,7 +21,7 @@ function AnimalGenomeDefinitions.getGeneticDisorderList() end
 function AnimalGenomeDefinitions.loadGenomeDefinition() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

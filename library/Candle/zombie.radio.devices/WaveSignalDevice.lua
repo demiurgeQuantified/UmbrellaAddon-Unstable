@@ -17,8 +17,19 @@ WaveSignalDevice = {}
 --- @param codes string
 --- @param distance integer
 --- @return nil
---- @overload fun(self: WaveSignalDevice, player: IsoPlayer, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
 function WaveSignalDevice:AddDeviceText(line, r, g, b, guid, codes, distance) end
+
+--- @public
+--- @param player IsoPlayer
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
+--- @return nil
+function WaveSignalDevice:AddDeviceText(player, line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean

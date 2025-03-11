@@ -18,8 +18,15 @@ function FluidConsume.Alloc() end
 --- @param arg0 ByteBuffer
 --- @param arg1 integer
 --- @return FluidConsume
---- @overload fun(arg0: FluidConsume, arg1: ByteBuffer, arg2: integer): FluidConsume
 function FluidConsume.Load(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 FluidConsume
+--- @param arg1 ByteBuffer
+--- @param arg2 integer
+--- @return FluidConsume
+function FluidConsume.Load(arg0, arg1, arg2) end
 
 --- @public
 --- @static

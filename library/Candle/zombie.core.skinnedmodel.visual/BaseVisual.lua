@@ -43,7 +43,7 @@ function BaseVisual:load(input, WorldVersion) end
 function BaseVisual:save(output) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -107,7 +107,7 @@ function VirtualAnimal:setY(arg0) end
 function VirtualAnimal:setZ(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

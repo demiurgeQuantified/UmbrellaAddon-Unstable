@@ -160,8 +160,15 @@ function WeatherPeriod:hasTropical() end
 --- @param front AirFront
 --- @param hoursSinceStart number
 --- @return nil
---- @overload fun(self: WeatherPeriod, front: AirFront, hoursSinceStart: number, doThisStageOnly: integer, singleStageDuration: number): nil
 function WeatherPeriod:initSimulationDebug(front, hoursSinceStart) end
+
+--- @public
+--- @param front AirFront
+--- @param hoursSinceStart number
+--- @param doThisStageOnly integer
+--- @param singleStageDuration number
+--- @return nil
+function WeatherPeriod:initSimulationDebug(front, hoursSinceStart, doThisStageOnly, singleStageDuration) end
 
 --- @public
 --- @return boolean
@@ -192,7 +199,7 @@ function WeatherPeriod:readNetWeatherData(input) end
 
 --- @public
 ---
----  IO
+--- IO
 ---
 --- @param output DataOutputStream
 --- @return nil
@@ -246,7 +253,7 @@ function WeatherPeriod:update(hoursSinceStart) end
 function WeatherPeriod:writeNetWeatherData(output) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

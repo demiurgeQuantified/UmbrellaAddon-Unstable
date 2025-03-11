@@ -34,14 +34,23 @@ function IAnimationVariableMap:getSubVariableSource(arg0) end
 --- @public
 --- @param arg0 string
 --- @return IAnimationVariableSlot
---- @overload fun(self: IAnimationVariableMap, arg0: AnimationVariableHandle): IAnimationVariableSlot
+function IAnimationVariableMap:getVariable(arg0) end
+
+--- @public
+--- @param arg0 AnimationVariableHandle
+--- @return IAnimationVariableSlot
 function IAnimationVariableMap:getVariable(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: IAnimationVariableMap, arg0: string, arg1: boolean): boolean
 function IAnimationVariableMap:getVariableBoolean(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return boolean
+function IAnimationVariableMap:getVariableBoolean(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
@@ -68,14 +77,29 @@ function IAnimationVariableMap:isVariable(arg0, arg1) end
 
 --- @public
 ---
----  Set the specified animation variable slot. Overwriting an existing slot if
+--- Set the specified animation variable slot. Overwriting an existing slot if
 ---
 --- @param slot IAnimationVariableSlot
 --- @return nil
---- @overload fun(self: IAnimationVariableMap, key: string, value: boolean): IAnimationVariableSlot
---- @overload fun(self: IAnimationVariableMap, key: string, value: number): IAnimationVariableSlot
---- @overload fun(self: IAnimationVariableMap, key: string, value: string): IAnimationVariableSlot
 function IAnimationVariableMap:setVariable(slot) end
+
+--- @public
+--- @param key string
+--- @param value boolean
+--- @return IAnimationVariableSlot
+function IAnimationVariableMap:setVariable(key, value) end
+
+--- @public
+--- @param key string
+--- @param value number
+--- @return IAnimationVariableSlot
+function IAnimationVariableMap:setVariable(key, value) end
+
+--- @public
+--- @param key string
+--- @param value string
+--- @return IAnimationVariableSlot
+function IAnimationVariableMap:setVariable(key, value) end
 
 --- @public
 --- @param arg0 string

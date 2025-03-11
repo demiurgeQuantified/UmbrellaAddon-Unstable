@@ -67,7 +67,7 @@ function XuiSkin:getName() end
 function XuiSkin:isInvalidated() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

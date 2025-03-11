@@ -119,7 +119,7 @@ function MediaData:setSubtitle(subtitle) end
 function MediaData:setTitle(title) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

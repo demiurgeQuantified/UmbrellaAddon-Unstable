@@ -68,7 +68,7 @@ function CGlobalObjects.receiveServerCommand(systemName, command, args) end
 function CGlobalObjects.registerSystem(name) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

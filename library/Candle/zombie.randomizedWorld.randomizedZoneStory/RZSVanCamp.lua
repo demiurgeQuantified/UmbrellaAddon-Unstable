@@ -23,7 +23,7 @@ function RZSVanCamp.getBriefcaseClutter() end
 function RZSVanCamp:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

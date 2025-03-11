@@ -28,10 +28,31 @@ function INetworkPacket.processPacketOnServer(arg0, arg1, arg2) end
 --- @param arg0 PacketType
 --- @param arg1 Object[]
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: PacketType, arg2: Object[]): nil
---- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): nil
---- @overload fun(arg0: UdpConnection, arg1: PacketType, arg2: Object[]): nil
 function INetworkPacket.send(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 PacketType
+--- @param arg2 Object[]
+--- @return nil
+function INetworkPacket.send(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
+--- @param arg2 Object[]
+--- @return nil
+function INetworkPacket.send(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
+--- @param arg2 Object[]
+--- @return nil
+function INetworkPacket.send(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -48,8 +69,17 @@ function INetworkPacket.sendToAll(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @param arg3 Object[]
 --- @return nil
---- @overload fun(arg0: PacketType, arg1: UdpConnection, arg2: number, arg3: number, arg4: Object[]): nil
 function INetworkPacket.sendToRelative(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 PacketType
+--- @param arg1 UdpConnection
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 Object[]
+--- @return nil
+function INetworkPacket.sendToRelative(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -77,7 +107,12 @@ function INetworkPacket:isConsistent(arg0) end
 --- @param b ByteBuffer
 --- @param connection UdpConnection
 --- @return nil
---- @overload fun(self: INetworkPacket, b: ByteBuffer, connection: UdpConnection): nil
+function INetworkPacket:parse(b, connection) end
+
+--- @public
+--- @param b ByteBuffer
+--- @param connection UdpConnection
+--- @return nil
 function INetworkPacket:parse(b, connection) end
 
 --- @public

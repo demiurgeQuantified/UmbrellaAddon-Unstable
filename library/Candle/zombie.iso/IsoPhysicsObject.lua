@@ -26,7 +26,7 @@ function IsoPhysicsObject:getGlobalMovementMod(bDoNoises) end
 function IsoPhysicsObject:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -17,7 +17,7 @@ function AttachedItem:getItem() end
 function AttachedItem:getLocation() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

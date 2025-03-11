@@ -14,7 +14,7 @@ RDSStudentNight = {}
 function RDSStudentNight:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

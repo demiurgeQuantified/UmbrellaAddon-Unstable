@@ -12,8 +12,13 @@ ReplaceProvider = {}
 --- @param key string
 --- @param value string
 --- @return nil
---- @overload fun(self: ReplaceProvider, key: string, table: table): nil
 function ReplaceProvider:addKey(key, value) end
+
+--- @public
+--- @param key string
+--- @param table table
+--- @return nil
+function ReplaceProvider:addKey(key, table) end
 
 --- @public
 --- @param key string
@@ -24,17 +29,25 @@ function ReplaceProvider:addReplacer(key, replace) end
 --- @public
 --- @param key string
 --- @return IReplace
---- @overload fun(self: ReplaceProvider, key: string): IReplace
+function ReplaceProvider:getReplacer(key) end
+
+--- @public
+--- @param key string
+--- @return IReplace
 function ReplaceProvider:getReplacer(key) end
 
 --- @public
 --- @param key string
 --- @return boolean
---- @overload fun(self: ReplaceProvider, key: string): boolean
+function ReplaceProvider:hasReplacer(key) end
+
+--- @public
+--- @param key string
+--- @return boolean
 function ReplaceProvider:hasReplacer(key) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

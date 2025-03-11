@@ -291,7 +291,7 @@ function HandcraftLogic:startCraftAction(arg0) end
 function HandcraftLogic:stopCraftAction() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

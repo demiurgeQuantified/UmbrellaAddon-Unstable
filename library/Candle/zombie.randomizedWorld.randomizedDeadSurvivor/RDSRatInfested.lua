@@ -30,7 +30,7 @@ function RDSRatInfested:isValid(arg0, arg1) end
 function RDSRatInfested:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

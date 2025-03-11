@@ -17,18 +17,118 @@ function PZUnmodifiableList.copyOf(arg0) end
 --- @public
 --- @static
 --- @return List
---- @overload fun(arg0: Object[]): List
---- @overload fun(arg0: any): List
---- @overload fun(arg0: any, arg1: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any): List
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): List
 function PZUnmodifiableList.of() end
+
+--- @public
+--- @static
+--- @param arg0 Object[]
+--- @return List
+function PZUnmodifiableList.of(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @return List
+function PZUnmodifiableList.of(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @return List
+function PZUnmodifiableList.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
 --- @static
@@ -43,16 +143,36 @@ function PZUnmodifiableList.wrap(arg0) end
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZUnmodifiableList, arg0: integer, arg1: any): nil
---- @overload fun(self: PZUnmodifiableList, arg0: integer, arg1: any): nil
 function PZUnmodifiableList:add(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @return nil
+function PZUnmodifiableList:add(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @return nil
+function PZUnmodifiableList:add(arg0, arg1) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(self: PZUnmodifiableList, arg0: integer, arg1: Collection): boolean
---- @overload fun(self: PZUnmodifiableList, arg0: integer, arg1: Collection): boolean
 function PZUnmodifiableList:addAll(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 Collection
+--- @return boolean
+function PZUnmodifiableList:addAll(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 Collection
+--- @return boolean
+function PZUnmodifiableList:addAll(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -71,24 +191,39 @@ function PZUnmodifiableList:containsAll(arg0) end
 --- @public
 --- @param arg0 any
 --- @return boolean
---- @overload fun(self: PZUnmodifiableList, arg0: any): boolean
+function PZUnmodifiableList:equals(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function PZUnmodifiableList:equals(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return any
---- @overload fun(self: PZUnmodifiableList, arg0: integer): any
+function PZUnmodifiableList:get(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return any
 function PZUnmodifiableList:get(arg0) end
 
 --- @public
 --- @return integer
---- @overload fun(self: PZUnmodifiableList): integer
+function PZUnmodifiableList:hashCode() end
+
+--- @public
+--- @return integer
 function PZUnmodifiableList:hashCode() end
 
 --- @public
 --- @param arg0 any
 --- @return integer
---- @overload fun(self: PZUnmodifiableList, arg0: any): integer
+function PZUnmodifiableList:indexOf(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return integer
 function PZUnmodifiableList:indexOf(arg0) end
 
 --- @public
@@ -102,21 +237,44 @@ function PZUnmodifiableList:iterator() end
 --- @public
 --- @param arg0 any
 --- @return integer
---- @overload fun(self: PZUnmodifiableList, arg0: any): integer
+function PZUnmodifiableList:lastIndexOf(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return integer
 function PZUnmodifiableList:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
---- @overload fun(self: PZUnmodifiableList): ListIterator
---- @overload fun(self: PZUnmodifiableList, arg0: integer): ListIterator
---- @overload fun(self: PZUnmodifiableList, arg0: integer): ListIterator
+function PZUnmodifiableList:listIterator() end
+
+--- @public
+--- @return ListIterator
 function PZUnmodifiableList:listIterator() end
 
 --- @public
 --- @param arg0 integer
+--- @return ListIterator
+function PZUnmodifiableList:listIterator(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return ListIterator
+function PZUnmodifiableList:listIterator(arg0) end
+
+--- @public
+--- @param arg0 integer
 --- @return any
---- @overload fun(self: PZUnmodifiableList, arg0: integer): any
---- @overload fun(self: PZUnmodifiableList, arg0: any): boolean
+function PZUnmodifiableList:remove(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return any
+function PZUnmodifiableList:remove(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
 function PZUnmodifiableList:remove(arg0) end
 
 --- @public
@@ -127,7 +285,11 @@ function PZUnmodifiableList:removeAll(arg0) end
 --- @public
 --- @param arg0 UnaryOperator
 --- @return nil
---- @overload fun(self: PZUnmodifiableList, arg0: UnaryOperator): nil
+function PZUnmodifiableList:replaceAll(arg0) end
+
+--- @public
+--- @param arg0 UnaryOperator
+--- @return nil
 function PZUnmodifiableList:replaceAll(arg0) end
 
 --- @public
@@ -139,7 +301,12 @@ function PZUnmodifiableList:retainAll(arg0) end
 --- @param arg0 integer
 --- @param arg1 any
 --- @return any
---- @overload fun(self: PZUnmodifiableList, arg0: integer, arg1: any): any
+function PZUnmodifiableList:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 any
+--- @return any
 function PZUnmodifiableList:set(arg0, arg1) end
 
 --- @public
@@ -149,7 +316,11 @@ function PZUnmodifiableList:size() end
 --- @public
 --- @param arg0 Comparator
 --- @return nil
---- @overload fun(self: PZUnmodifiableList, arg0: Comparator): nil
+function PZUnmodifiableList:sort(arg0) end
+
+--- @public
+--- @param arg0 Comparator
+--- @return nil
 function PZUnmodifiableList:sort(arg0) end
 
 --- @public
@@ -160,10 +331,19 @@ function PZUnmodifiableList:spliterator() end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return List
---- @overload fun(self: PZUnmodifiableList, arg0: integer, arg1: integer): List
+function PZUnmodifiableList:subList(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return List
 function PZUnmodifiableList:subList(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(self: PZUnmodifiableList, arg0: Object[]): Object[]
 function PZUnmodifiableList:toArray() end
+
+--- @public
+--- @param arg0 Object[]
+--- @return Object[]
+function PZUnmodifiableList:toArray(arg0) end

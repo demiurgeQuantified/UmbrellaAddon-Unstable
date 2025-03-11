@@ -19,8 +19,14 @@ function VehicleType.Reset() end
 --- @static
 --- @param zoneName string
 --- @return VehicleType
---- @overload fun(zoneName: string, doNormalWhenSpecific: boolean): VehicleType
 function VehicleType.getRandomVehicleType(zoneName) end
+
+--- @public
+--- @static
+--- @param zoneName string
+--- @param doNormalWhenSpecific boolean
+--- @return VehicleType
+function VehicleType.getRandomVehicleType(zoneName, doNormalWhenSpecific) end
 
 --- @public
 --- @static
@@ -61,7 +67,7 @@ function VehicleType:getRandomBaseVehicleQuality() end
 function VehicleType:setChanceToSpawnKey(chanceToSpawnKey) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

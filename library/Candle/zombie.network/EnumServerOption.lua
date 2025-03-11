@@ -10,12 +10,18 @@ EnumServerOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: EnumServerOption): ConfigOption
+function EnumServerOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function EnumServerOption:asConfigOption() end
 
 --- @public
 --- @return string
---- @overload fun(self: EnumServerOption): string
+function EnumServerOption:getTooltip() end
+
+--- @public
+--- @return string
 function EnumServerOption:getTooltip() end
 
 --- @public
@@ -24,7 +30,7 @@ function EnumServerOption:getTooltip() end
 function EnumServerOption:getValueTranslationByIndex(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

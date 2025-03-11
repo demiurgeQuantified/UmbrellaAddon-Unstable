@@ -49,14 +49,26 @@ function GameWindow.InitGameThread() end
 --- @param pack string
 --- @param flags integer
 --- @return nil
---- @overload fun(pack: string, flags: integer, modID: string): nil
 function GameWindow.LoadTexturePack(pack, flags) end
+
+--- @public
+--- @static
+--- @param pack string
+--- @param flags integer
+--- @param modID string
+--- @return nil
+function GameWindow.LoadTexturePack(pack, flags, modID) end
 
 --- @public
 --- @static
 --- @param input DataInputStream
 --- @return string
---- @overload fun(input: ByteBuffer): string
+function GameWindow.ReadString(input) end
+
+--- @public
+--- @static
+--- @param input ByteBuffer
+--- @return string
 function GameWindow.ReadString(input) end
 
 --- @public
@@ -76,7 +88,13 @@ function GameWindow.ReadUUID(arg0) end
 --- @param output DataOutputStream
 --- @param str string
 --- @return nil
---- @overload fun(output: ByteBuffer, str: string): nil
+function GameWindow.WriteString(output, str) end
+
+--- @public
+--- @static
+--- @param output ByteBuffer
+--- @param str string
+--- @return nil
 function GameWindow.WriteString(output, str) end
 
 --- @public
@@ -156,7 +174,7 @@ function GameWindow.setTexturePackLookup() end
 function GameWindow.uncaughtException(thread, e) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

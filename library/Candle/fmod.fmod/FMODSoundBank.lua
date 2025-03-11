@@ -35,7 +35,7 @@ function FMODSoundBank:getFootstep(arg0) end
 function FMODSoundBank:getVoice(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

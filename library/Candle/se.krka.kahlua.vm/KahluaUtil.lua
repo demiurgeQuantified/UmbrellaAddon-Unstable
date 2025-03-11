@@ -207,15 +207,26 @@ function KahluaUtil.toBoolean(arg0) end
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(arg0: integer): number
+function KahluaUtil.toDouble(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return number
 function KahluaUtil.toDouble(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 string
 --- @return number
---- @overload fun(arg0: string, arg1: integer): number
 function KahluaUtil.tonumber(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 integer
+--- @return number
+function KahluaUtil.tonumber(arg0, arg1) end
 
 --- @public
 --- @static
@@ -231,7 +242,7 @@ function KahluaUtil.tostring(arg0, arg1) end
 function KahluaUtil.type(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

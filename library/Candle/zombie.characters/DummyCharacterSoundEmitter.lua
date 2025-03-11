@@ -24,8 +24,12 @@ function DummyCharacterSoundEmitter:isClear() end
 --- @public
 --- @param alias string
 --- @return boolean
---- @overload fun(self: DummyCharacterSoundEmitter, channel: integer): boolean
 function DummyCharacterSoundEmitter:isPlaying(alias) end
+
+--- @public
+--- @param channel integer
+--- @return boolean
+function DummyCharacterSoundEmitter:isPlaying(channel) end
 
 --- @public
 --- @param file string
@@ -36,8 +40,13 @@ function DummyCharacterSoundEmitter:playFootsteps(file, volume) end
 --- @public
 --- @param file string
 --- @return integer
---- @overload fun(self: DummyCharacterSoundEmitter, file: string, proxy: IsoObject): integer
 function DummyCharacterSoundEmitter:playSound(file) end
+
+--- @public
+--- @param file string
+--- @param proxy IsoObject
+--- @return integer
+function DummyCharacterSoundEmitter:playSound(file, proxy) end
 
 --- @public
 --- @param file string
@@ -130,7 +139,7 @@ function DummyCharacterSoundEmitter:tick() end
 function DummyCharacterSoundEmitter:unregister() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

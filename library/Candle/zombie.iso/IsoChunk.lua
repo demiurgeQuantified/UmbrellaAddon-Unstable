@@ -24,8 +24,14 @@ function IsoChunk.FileExists(wx, wy) end
 --- @static
 --- @param tileName string
 --- @return string
---- @overload fun(square: IsoGridSquare, spriteID: integer): integer
 function IsoChunk.Fix2x(tileName) end
+
+--- @public
+--- @static
+--- @param square IsoGridSquare
+--- @param spriteID integer
+--- @return integer
+function IsoChunk.Fix2x(square, spriteID) end
 
 --- @public
 --- @static
@@ -140,20 +146,25 @@ function IsoChunk:LoadOrCreate(wx, wy, fromServer) end
 
 --- @public
 ---
----  Randomize a model with his corresponding texture defined in VehicleType
+--- Randomize a model with his corresponding texture defined in VehicleType
 ---
 --- @param v BaseVehicle vehicle
---- @param zone Zone
+--- @param zone Zone zone we're spawning on
 --- @param name string
 --- @param type VehicleType
---- @return boolean true if succed
+--- @return boolean _ true if succed
 function IsoChunk:RandomizeModel(v, zone, name, type) end
 
 --- @public
 --- @param bSaveQuit boolean
 --- @return nil
---- @overload fun(self: IsoChunk, bb: ByteBuffer, crc: CRC32): ByteBuffer
 function IsoChunk:Save(bSaveQuit) end
+
+--- @public
+--- @param bb ByteBuffer
+--- @param crc CRC32
+--- @return ByteBuffer
+function IsoChunk:Save(bb, crc) end
 
 --- @public
 --- @param ccrc Chunk
@@ -409,9 +420,17 @@ function IsoChunk:isGeneratorPoweringSquare(x, y, z) end
 
 --- @public
 --- @return EnumSet
---- @overload fun(self: IsoChunk, arg0: EnumSet): nil
---- @overload fun(self: IsoChunk, arg0: ChunkGenerationStatus): nil
 function IsoChunk:isModded() end
+
+--- @public
+--- @param arg0 EnumSet
+--- @return nil
+function IsoChunk:isModded(arg0) end
+
+--- @public
+--- @param arg0 ChunkGenerationStatus
+--- @return nil
+function IsoChunk:isModded(arg0) end
 
 --- @public
 --- @return boolean
@@ -529,7 +548,12 @@ function IsoChunk:setMinMaxLevel(arg0, arg1) end
 --- @param arg0 BlendDirection
 --- @param arg1 integer
 --- @return nil
---- @overload fun(self: IsoChunk, arg0: BlendDirection, arg1: integer): nil
+function IsoChunk:setModifDepth(arg0, arg1) end
+
+--- @public
+--- @param arg0 BlendDirection
+--- @param arg1 integer
+--- @return nil
 function IsoChunk:setModifDepth(arg0, arg1) end
 
 --- @public
@@ -572,7 +596,7 @@ function IsoChunk:updateSounds() end
 function IsoChunk:updateVehicleStory() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

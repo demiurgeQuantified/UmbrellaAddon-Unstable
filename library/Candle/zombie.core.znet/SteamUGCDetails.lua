@@ -50,7 +50,7 @@ function SteamUGCDetails:getTimeUpdated() end
 function SteamUGCDetails:getTitle() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

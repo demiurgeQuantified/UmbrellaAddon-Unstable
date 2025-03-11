@@ -95,8 +95,17 @@ function IsoFireManager.Reset() end
 --- @param IgniteOnAny boolean
 --- @param FireStartingEnergy integer
 --- @return nil
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, IgniteOnAny: boolean, FireStartingEnergy: integer, Life: integer): nil
 function IsoFireManager.StartFire(cell, gridSquare, IgniteOnAny, FireStartingEnergy) end
+
+--- @public
+--- @static
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param IgniteOnAny boolean
+--- @param FireStartingEnergy integer
+--- @param Life integer
+--- @return nil
+function IsoFireManager.StartFire(cell, gridSquare, IgniteOnAny, FireStartingEnergy, Life) end
 
 --- @public
 --- @static
@@ -146,7 +155,7 @@ function IsoFireManager.stopSound(fire) end
 function IsoFireManager.updateSound(fire) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

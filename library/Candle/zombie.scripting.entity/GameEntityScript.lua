@@ -117,7 +117,7 @@ function GameEntityScript:setModID(arg0) end
 function GameEntityScript:setRegistry_id(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

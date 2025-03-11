@@ -14,7 +14,7 @@ RZSCampsite = {}
 function RZSCampsite:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

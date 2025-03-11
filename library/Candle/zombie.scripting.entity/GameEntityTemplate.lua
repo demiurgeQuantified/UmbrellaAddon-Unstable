@@ -19,7 +19,7 @@ function GameEntityTemplate:Load(arg0, arg1) end
 function GameEntityTemplate:getScript() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

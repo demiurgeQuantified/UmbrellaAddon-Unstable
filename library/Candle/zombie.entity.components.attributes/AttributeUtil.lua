@@ -91,7 +91,7 @@ function AttributeUtil.releaseItemList(arg0) end
 function AttributeUtil.tryEnumValueFromScriptString(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -94,7 +94,7 @@ function ErosionMain:snowCheck() end
 function ErosionMain:start() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

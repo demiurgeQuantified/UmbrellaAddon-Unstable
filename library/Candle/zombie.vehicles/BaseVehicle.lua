@@ -63,8 +63,14 @@ function BaseVehicle.LoadAllVehicleTextures() end
 --- @static
 --- @param name string
 --- @return Texture
---- @overload fun(name: string, flags: integer): Texture
 function BaseVehicle.LoadVehicleTexture(name) end
+
+--- @public
+--- @static
+--- @param name string
+--- @param flags integer
+--- @return Texture
+function BaseVehicle.LoadVehicleTexture(name, flags) end
 
 --- @public
 --- @static
@@ -195,27 +201,45 @@ function BaseVehicle:Serialize() end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: BaseVehicle, thumper: IsoMovingObject): nil
+function BaseVehicle:Thump(thumper) end
+
+--- @public
+--- @param thumper IsoMovingObject
+--- @return nil
 function BaseVehicle:Thump(thumper) end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: BaseVehicle, chr: IsoGameCharacter, weapon: HandWeapon): nil
+function BaseVehicle:WeaponHit(chr, weapon) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @param weapon HandWeapon
+--- @return nil
 function BaseVehicle:WeaponHit(chr, weapon) end
 
 --- @public
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: IsoDeadBody, arg1: IsoPlayer): nil
+function BaseVehicle:addAnimalFromHandsInTrailer(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoDeadBody
+--- @param arg1 IsoPlayer
+--- @return nil
 function BaseVehicle:addAnimalFromHandsInTrailer(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoAnimal
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: IsoDeadBody): nil
+function BaseVehicle:addAnimalInTrailer(arg0) end
+
+--- @public
+--- @param arg0 IsoDeadBody
+--- @return nil
 function BaseVehicle:addAnimalInTrailer(arg0) end
 
 --- @public
@@ -225,9 +249,9 @@ function BaseVehicle:addBuildingKeyToGloveBox(arg0) end
 
 --- @public
 ---
----  When hitting a character (zombie or player) damage aren't the same as hitting a
----   damaged will be mainly focus on windshield/hood, not on doors/windows like
----  hitting a wall.
+--- When hitting a character (zombie or player) damage aren't the same as hitting a
+--- damaged will be mainly focus on windshield/hood, not on doors/windows like when
+--- a wall.
 ---
 --- @param dmg integer
 --- @return nil
@@ -235,9 +259,9 @@ function BaseVehicle:addDamageFrontHitAChr(dmg) end
 
 --- @public
 ---
----  When hitting a character (zombie or player) damage aren't the same as hitting a
----   damaged will be mainly focus on windshield/truckbed, not on doors/windows like
----  hitting a wall.
+--- When hitting a character (zombie or player) damage aren't the same as hitting a
+--- damaged will be mainly focus on windshield/truckbed, not on doors/windows like
+--- hitting a wall.
 ---
 --- @param dmg integer
 --- @return nil
@@ -256,20 +280,35 @@ function BaseVehicle:addKeyToGloveBox() end
 --- @public
 --- @param sq IsoGridSquare
 --- @return boolean
---- @overload fun(self: BaseVehicle, arg0: IsoGridSquare, arg1: boolean): boolean
 function BaseVehicle:addKeyToSquare(sq) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 boolean
+--- @return boolean
+function BaseVehicle:addKeyToSquare(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
 --- @param arg1 integer
 --- @return boolean
---- @overload fun(self: BaseVehicle, arg0: IsoGridSquare, arg1: integer, arg2: boolean): boolean
 function BaseVehicle:addKeyToSquare2(arg0, arg1) end
 
 --- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 integer
+--- @param arg2 boolean
+--- @return boolean
+function BaseVehicle:addKeyToSquare2(arg0, arg1, arg2) end
+
+--- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:addKeyToWorld() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseVehicle:addKeyToWorld(arg0) end
 
 --- @public
 --- @param player IsoPlayer
@@ -277,8 +316,16 @@ function BaseVehicle:addKeyToWorld() end
 --- @param attachmentA string
 --- @param attachmentB string
 --- @return nil
---- @overload fun(self: BaseVehicle, player: IsoPlayer, vehicleB: BaseVehicle, attachmentA: string, attachmentB: string, remote: boolean): nil
 function BaseVehicle:addPointConstraint(player, vehicleB, attachmentA, attachmentB) end
+
+--- @public
+--- @param player IsoPlayer
+--- @param vehicleB BaseVehicle
+--- @param attachmentA string
+--- @param attachmentB string
+--- @param remote boolean
+--- @return nil
+function BaseVehicle:addPointConstraint(player, vehicleB, attachmentA, attachmentB, remote) end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -288,8 +335,12 @@ function BaseVehicle:addRandomDamageFromCrash(chr, damage) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:addToWorld() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseVehicle:addToWorld(arg0) end
 
 --- @public
 --- @return nil
@@ -306,14 +357,24 @@ function BaseVehicle:areAllDoorsLocked() end
 --- @public
 --- @param area Area
 --- @return Vector2
---- @overload fun(self: BaseVehicle, area: Area, out: Vector2): Vector2
 function BaseVehicle:areaPositionWorld(area) end
 
 --- @public
 --- @param area Area
+--- @param out Vector2
 --- @return Vector2
---- @overload fun(self: BaseVehicle, area: Area, out: Vector2): Vector2
+function BaseVehicle:areaPositionWorld(area, out) end
+
+--- @public
+--- @param area Area
+--- @return Vector2
 function BaseVehicle:areaPositionWorld4PlayerInteract(area) end
+
+--- @public
+--- @param area Area
+--- @param out Vector2
+--- @return Vector2
+function BaseVehicle:areaPositionWorld4PlayerInteract(area, out) end
 
 --- @public
 --- @param attachmentName string
@@ -373,7 +434,11 @@ function BaseVehicle:canAccessContainer(partIndex, chr) end
 --- @public
 --- @param arg0 IsoAnimal
 --- @return boolean
---- @overload fun(self: BaseVehicle, arg0: IsoDeadBody): boolean
+function BaseVehicle:canAddAnimalInTrailer(arg0) end
+
+--- @public
+--- @param arg0 IsoDeadBody
+--- @return boolean
 function BaseVehicle:canAddAnimalInTrailer(arg0) end
 
 --- @public
@@ -381,8 +446,15 @@ function BaseVehicle:canAddAnimalInTrailer(arg0) end
 --- @param attachmentA string
 --- @param attachmentB string
 --- @return boolean
---- @overload fun(self: BaseVehicle, vehicleB: BaseVehicle, attachmentA: string, attachmentB: string, reconnect: boolean): boolean
 function BaseVehicle:canAttachTrailer(vehicleB, attachmentA, attachmentB) end
+
+--- @public
+--- @param vehicleB BaseVehicle
+--- @param attachmentA string
+--- @param attachmentB string
+--- @param reconnect boolean
+--- @return boolean
+function BaseVehicle:canAttachTrailer(vehicleB, attachmentA, attachmentB, reconnect) end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -421,7 +493,7 @@ function BaseVehicle:canUnlockDoor(part, chr) end
 
 --- @public
 ---
----  Change transmission, slow down the car if you change shift for a superior one
+--- Change transmission, slow down the car if you change shift for a superior one
 ---
 --- @param newTransmission TransmissionNumber
 --- @return nil
@@ -463,8 +535,13 @@ function BaseVehicle:checkPhysicsValidWithServer() end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
---- @overload fun(self: BaseVehicle, arg0: IsoGridSquare, arg1: boolean): boolean
 function BaseVehicle:checkSquareForVehicleKeySpot(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 boolean
+--- @return boolean
+function BaseVehicle:checkSquareForVehicleKeySpot(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
@@ -479,8 +556,13 @@ function BaseVehicle:checkSquareForVehicleKeySpotZombie(arg0) end
 --- @public
 --- @param arg0 IsoZombie
 --- @return boolean
---- @overload fun(self: BaseVehicle, arg0: IsoZombie, arg1: string): boolean
 function BaseVehicle:checkZombieKeyForVehicle(arg0) end
+
+--- @public
+--- @param arg0 IsoZombie
+--- @param arg1 string
+--- @return boolean
+function BaseVehicle:checkZombieKeyForVehicle(arg0, arg1) end
 
 --- @public
 --- @param target IsoGameCharacter
@@ -524,8 +606,12 @@ function BaseVehicle:createImpulse(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:createPhysics() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseVehicle:createPhysics(arg0) end
 
 --- @public
 --- @return InventoryItem
@@ -581,8 +667,12 @@ function BaseVehicle:engineDoRunning() end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: string): nil
 function BaseVehicle:engineDoShuttingDown() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function BaseVehicle:engineDoShuttingDown(arg0) end
 
 --- @public
 --- @return nil
@@ -594,8 +684,12 @@ function BaseVehicle:engineDoStarting() end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: string): nil
 function BaseVehicle:engineDoStartingFailed() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function BaseVehicle:engineDoStartingFailed(arg0) end
 
 --- @public
 --- @return nil
@@ -609,8 +703,14 @@ function BaseVehicle:engineDoStartingSuccess() end
 --- @param seat integer
 --- @param chr IsoGameCharacter
 --- @return boolean
---- @overload fun(self: BaseVehicle, seat: integer, chr: IsoGameCharacter, offset: Vector3f): boolean
 function BaseVehicle:enter(seat, chr) end
+
+--- @public
+--- @param seat integer
+--- @param chr IsoGameCharacter
+--- @param offset Vector3f
+--- @return boolean
+function BaseVehicle:enter(seat, chr, offset) end
 
 --- @public
 --- @param seat integer
@@ -671,15 +771,27 @@ function BaseVehicle:getAnimationPlayer() end
 --- @public
 --- @param areaId string
 --- @return Vector2
---- @overload fun(self: BaseVehicle, areaId: string, out: Vector2): Vector2
 function BaseVehicle:getAreaCenter(areaId) end
+
+--- @public
+--- @param areaId string
+--- @param out Vector2
+--- @return Vector2
+function BaseVehicle:getAreaCenter(areaId, out) end
 
 --- @public
 --- @param areaId string
 --- @param chr IsoGameCharacter
 --- @return number
---- @overload fun(self: BaseVehicle, arg0: string, arg1: number, arg2: number, arg3: number): number
 function BaseVehicle:getAreaDist(areaId, chr) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
+function BaseVehicle:getAreaDist(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param attachmentName string
@@ -811,7 +923,10 @@ function BaseVehicle:getEngineSpeed() end
 
 --- @public
 --- @return FMODParameterList
---- @overload fun(self: BaseVehicle): FMODParameterList
+function BaseVehicle:getFMODParameters() end
+
+--- @public
+--- @return FMODParameterList
 function BaseVehicle:getFMODParameters() end
 
 --- @public
@@ -905,8 +1020,15 @@ function BaseVehicle:getLinearVelocity(out) end
 --- @param worldPos Vector3f
 --- @param localPos Vector3f
 --- @return Vector3f
---- @overload fun(self: BaseVehicle, worldX: number, worldY: number, worldZ: number, localPos: Vector3f): Vector3f
 function BaseVehicle:getLocalPos(worldPos, localPos) end
+
+--- @public
+--- @param worldX number
+--- @param worldY number
+--- @param worldZ number
+--- @param localPos Vector3f
+--- @return Vector3f
+function BaseVehicle:getLocalPos(worldX, worldY, worldZ, localPos) end
 
 --- @public
 --- @return number
@@ -955,8 +1077,8 @@ function BaseVehicle:getObjectName() end
 
 --- @public
 ---
----  Give the offroad efficiency of the car, based on car's script + where the
----  is (in forest you get more  damage than vegitation)  Currently x2 to balance
+--- Give the offroad efficiency of the car, based on car's script + where the
+--- is (in forest you get more  damage than vegitation)  Currently x2 to balance
 ---
 --- @return number
 function BaseVehicle:getOffroadEfficiency() end
@@ -1022,8 +1144,15 @@ function BaseVehicle:getPassengerPosition(seat, id) end
 --- @param posn Position
 --- @param out Vector3f
 --- @return Vector3f
---- @overload fun(self: BaseVehicle, x: number, y: number, z: number, out: Vector3f): Vector3f
 function BaseVehicle:getPassengerPositionWorldPos(posn, out) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param out Vector3f
+--- @return Vector3f
+function BaseVehicle:getPassengerPositionWorldPos(x, y, z, out) end
 
 --- @public
 --- @param seat integer
@@ -1157,13 +1286,20 @@ function BaseVehicle:getSwitchSeatSound(seatFrom, seatTo) end
 
 --- @public
 --- @return number
---- @overload fun(self: BaseVehicle): number
+function BaseVehicle:getThumpCondition() end
+
+--- @public
+--- @return number
 function BaseVehicle:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: BaseVehicle, chr: IsoGameCharacter): Thumpable
+function BaseVehicle:getThumpableFor(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return Thumpable
 function BaseVehicle:getThumpableFor(chr) end
 
 --- @public
@@ -1222,8 +1358,13 @@ function BaseVehicle:getUpVectorDot() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return VehiclePart
---- @overload fun(self: BaseVehicle, chr: IsoGameCharacter, checkDir: boolean): VehiclePart
 function BaseVehicle:getUseablePart(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @param checkDir boolean
+--- @return VehiclePart
+function BaseVehicle:getUseablePart(chr, checkDir) end
 
 --- @public
 --- @return VehicleEngineRPM
@@ -1255,10 +1396,31 @@ function BaseVehicle:getWindowLightsOn() end
 --- @param localPos Vector3f
 --- @param worldPos Vector3f
 --- @return Vector3f
---- @overload fun(self: BaseVehicle, localPos: Vector3f, worldPos: Vector3f, script: VehicleScript): Vector3f
---- @overload fun(self: BaseVehicle, localX: number, localY: number, localZ: number, worldPos: Vector3f): Vector3f
---- @overload fun(self: BaseVehicle, localX: number, localY: number, localZ: number, worldPos: Vector3f, script: VehicleScript): Vector3f
 function BaseVehicle:getWorldPos(localPos, worldPos) end
+
+--- @public
+--- @param localPos Vector3f
+--- @param worldPos Vector3f
+--- @param script VehicleScript
+--- @return Vector3f
+function BaseVehicle:getWorldPos(localPos, worldPos, script) end
+
+--- @public
+--- @param localX number
+--- @param localY number
+--- @param localZ number
+--- @param worldPos Vector3f
+--- @return Vector3f
+function BaseVehicle:getWorldPos(localX, localY, localZ, worldPos) end
+
+--- @public
+--- @param localX number
+--- @param localY number
+--- @param localZ number
+--- @param worldPos Vector3f
+--- @param script VehicleScript
+--- @return Vector3f
+function BaseVehicle:getWorldPos(localX, localY, localZ, worldPos, script) end
 
 --- @public
 --- @param out Transform
@@ -1318,7 +1480,7 @@ function BaseVehicle:hasZombieType(arg0) end
 
 --- @public
 ---
----  Check if one of the seat door is unlocked
+--- Check if one of the seat door is unlocked
 ---
 --- @return boolean
 function BaseVehicle:haveOneDoorUnlocked() end
@@ -1326,9 +1488,18 @@ function BaseVehicle:haveOneDoorUnlocked() end
 --- @public
 --- @param chr IsoZombie
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: IsoAnimal): nil
---- @overload fun(self: BaseVehicle, character: IsoGameCharacter, vars: HitVars): nil
 function BaseVehicle:hitCharacter(chr) end
+
+--- @public
+--- @param arg0 IsoAnimal
+--- @return nil
+function BaseVehicle:hitCharacter(arg0) end
+
+--- @public
+--- @param character IsoGameCharacter
+--- @param vars HitVars
+--- @return nil
+function BaseVehicle:hitCharacter(character, vars) end
 
 --- @public
 --- @return boolean
@@ -1424,8 +1595,13 @@ function BaseVehicle:isEnterBlocked2(chr, seat) end
 --- @public
 --- @param seat integer
 --- @return boolean
---- @overload fun(self: BaseVehicle, chr: IsoGameCharacter, seat: integer): boolean
 function BaseVehicle:isExitBlocked(seat) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @param seat integer
+--- @return boolean
+function BaseVehicle:isExitBlocked(chr, seat) end
 
 --- @public
 --- @param seat integer
@@ -1448,8 +1624,13 @@ function BaseVehicle:isHotwiredBroken() end
 --- @param arg0 string
 --- @param arg1 Vector3f
 --- @return boolean
---- @overload fun(self: BaseVehicle, areaId: string, chr: IsoGameCharacter): boolean
 function BaseVehicle:isInArea(arg0, arg1) end
+
+--- @public
+--- @param areaId string
+--- @param chr IsoGameCharacter
+--- @return boolean
+function BaseVehicle:isInArea(areaId, chr) end
 
 --- @public
 --- @param worldX number
@@ -1468,8 +1649,14 @@ function BaseVehicle:isInTrafficJam() end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
---- @overload fun(self: BaseVehicle, x: integer, y: integer, z: integer): boolean
 function BaseVehicle:isIntersectingSquare(arg0) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return boolean
+function BaseVehicle:isIntersectingSquare(x, y, z) end
 
 --- @public
 --- @param x integer
@@ -1484,8 +1671,15 @@ function BaseVehicle:isInvalidChunkAhead() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: BaseVehicle, moveW: boolean, moveE: boolean, moveN: boolean, moveS: boolean): boolean
 function BaseVehicle:isInvalidChunkAround() end
+
+--- @public
+--- @param moveW boolean
+--- @param moveE boolean
+--- @param moveN boolean
+--- @param moveS boolean
+--- @return boolean
+function BaseVehicle:isInvalidChunkAround(moveW, moveE, moveN, moveS) end
 
 --- @public
 --- @return boolean
@@ -1685,8 +1879,14 @@ function BaseVehicle:playPartSound(part, player, animId) end
 --- @param seat integer
 --- @param animId string
 --- @return nil
---- @overload fun(self: BaseVehicle, seat: integer, animId: string, chr: IsoGameCharacter): nil
 function BaseVehicle:playPassengerAnim(seat, animId) end
+
+--- @public
+--- @param seat integer
+--- @param animId string
+--- @param chr IsoGameCharacter
+--- @return nil
+function BaseVehicle:playPassengerAnim(seat, animId, chr) end
 
 --- @public
 --- @param seat integer
@@ -1834,14 +2034,18 @@ function BaseVehicle:saveChange(change, tbl, bb) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:scriptReloaded() end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseVehicle:scriptReloaded(arg0) end
+
+--- @public
 ---
----  Used in mechanics UI, we enable the vehicle in Bullet when starting mechanics
----  physic will be updated. When  we close the UI, we should  disable it in Bullet,
----  if the engine is running.
+--- Used in mechanics UI, we enable the vehicle in Bullet when starting mechanics so
+--- will be updated. When  we close the UI, we should  disable it in Bullet, expect
+--- the engine is running.
 ---
 --- @param active boolean
 --- @return nil
@@ -2075,8 +2279,12 @@ function BaseVehicle:setRust(rust) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, name: string): nil
 function BaseVehicle:setScript() end
+
+--- @public
+--- @param name string
+--- @return nil
+function BaseVehicle:setScript(name) end
 
 --- @public
 --- @param name string
@@ -2096,8 +2304,13 @@ function BaseVehicle:setSkinIndex(index) end
 --- @public
 --- @param location string
 --- @return BaseVehicle
---- @overload fun(self: BaseVehicle, location: string, flipped: boolean): BaseVehicle
 function BaseVehicle:setSmashed(location) end
+
+--- @public
+--- @param location string
+--- @param flipped boolean
+--- @return BaseVehicle
+function BaseVehicle:setSmashed(location, flipped) end
 
 --- @public
 --- @param __on__ boolean
@@ -2170,13 +2383,21 @@ function BaseVehicle:shouldNotHaveLoot() end
 --- @public
 --- @param seat integer
 --- @return boolean
---- @overload fun(self: BaseVehicle, chr: IsoGameCharacter): boolean
 function BaseVehicle:showPassenger(seat) end
 
 --- @public
+--- @param chr IsoGameCharacter
+--- @return boolean
+function BaseVehicle:showPassenger(chr) end
+
+--- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: string): nil
 function BaseVehicle:shutOff() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function BaseVehicle:shutOff(arg0) end
 
 --- @public
 --- @return boolean
@@ -2191,7 +2412,6 @@ function BaseVehicle:softReset() end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return nil
---- @overload fun(self: BaseVehicle, eventInstance: integer, clip: GameSoundClip, parameterSet: BitSet): nil
 function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -2199,7 +2419,20 @@ function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return nil
---- @overload fun(self: BaseVehicle, eventInstance: integer, clip: GameSoundClip, parameterSet: BitSet): nil
+function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
+
+--- @public
+--- @param eventInstance integer
+--- @param clip GameSoundClip
+--- @param parameterSet BitSet
+--- @return nil
+function BaseVehicle:stopEvent(eventInstance, clip, parameterSet) end
+
+--- @public
+--- @param eventInstance integer
+--- @param clip GameSoundClip
+--- @param parameterSet BitSet
+--- @return nil
 function BaseVehicle:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -2244,8 +2477,15 @@ function BaseVehicle:testCollisionWithObject(obj, circleRadius, out) end
 --- @param chr IsoGameCharacter
 --- @param doSound boolean
 --- @return integer
---- @overload fun(self: BaseVehicle, chr: IsoMovingObject, angleX: number, angleY: number, doSound: boolean): integer
 function BaseVehicle:testCollisionWithProneCharacter(chr, doSound) end
+
+--- @public
+--- @param chr IsoMovingObject
+--- @param angleX number
+--- @param angleY number
+--- @param doSound boolean
+--- @return integer
+function BaseVehicle:testCollisionWithProneCharacter(chr, angleX, angleY, doSound) end
 
 --- @public
 --- @param obj BaseVehicle
@@ -2321,8 +2561,8 @@ function BaseVehicle:triggerAlarm() end
 
 --- @public
 ---
----  Try to hotwire a car Calcul is: 100-Engine quality (capped to 5) + Skill
----  electricityLvl * 4 % of  hotwiring the car Failing may cause the ignition to
+--- Try to hotwire a car Calcul is: 100-Engine quality (capped to 5) + Skill
+--- electricityLvl * 4 % of  hotwiring the car Failing may cause the ignition to
 ---
 --- @param electricityLevel integer
 --- @return nil
@@ -2330,8 +2570,12 @@ function BaseVehicle:tryHotwire(electricityLevel) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, arg0: boolean): nil
 function BaseVehicle:trySpawnKey() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseVehicle:trySpawnKey(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
@@ -2345,8 +2589,12 @@ function BaseVehicle:trySpawnVehicleKeyOnZombie(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: BaseVehicle, haveKey: boolean): nil
 function BaseVehicle:tryStartEngine() end
+
+--- @public
+--- @param haveKey boolean
+--- @return nil
+function BaseVehicle:tryStartEngine(haveKey) end
 
 --- @public
 --- @return nil
@@ -2364,7 +2612,12 @@ function BaseVehicle:updateControls() end
 --- @param eventInstance integer
 --- @param clip GameSoundClip
 --- @return nil
---- @overload fun(self: BaseVehicle, eventInstance: integer, clip: GameSoundClip): nil
+function BaseVehicle:updateEvent(eventInstance, clip) end
+
+--- @public
+--- @param eventInstance integer
+--- @param clip GameSoundClip
+--- @return nil
 function BaseVehicle:updateEvent(eventInstance, clip) end
 
 --- @public
@@ -2393,7 +2646,7 @@ function BaseVehicle:updateLights() end
 
 --- @public
 ---
----  Update the stats of the part depending on condition
+--- Update the stats of the part depending on condition
 ---
 --- @return nil
 function BaseVehicle:updatePartStats() end
@@ -2427,7 +2680,7 @@ function BaseVehicle:updateTotalMass() end
 function BaseVehicle:windowsOpen() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

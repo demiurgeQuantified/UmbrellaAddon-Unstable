@@ -11,14 +11,23 @@ EnumStringObj = {}
 --- @public
 --- @param arg0 Enum
 --- @return nil
---- @overload fun(self: EnumStringObj, arg0: string): nil
+function EnumStringObj:add(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function EnumStringObj:add(arg0) end
 
 --- @public
 --- @param arg0 EnumStringObj
 --- @return nil
---- @overload fun(self: EnumStringObj, arg0: boolean, arg1: EnumStringObj): nil
 function EnumStringObj:addAll(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 EnumStringObj
+--- @return nil
+function EnumStringObj:addAll(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -27,7 +36,11 @@ function EnumStringObj:clear() end
 --- @public
 --- @param arg0 Enum
 --- @return boolean
---- @overload fun(self: EnumStringObj, arg0: string): boolean
+function EnumStringObj:contains(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
 function EnumStringObj:contains(arg0) end
 
 --- @public
@@ -51,7 +64,11 @@ function EnumStringObj:isEmpty() end
 --- @public
 --- @param arg0 Enum
 --- @return boolean
---- @overload fun(self: EnumStringObj, arg0: string): boolean
+function EnumStringObj:remove(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
 function EnumStringObj:remove(arg0) end
 
 --- @public

@@ -10,12 +10,18 @@ TextServerOption = {}
 
 --- @public
 --- @return ConfigOption
---- @overload fun(self: TextServerOption): ConfigOption
+function TextServerOption:asConfigOption() end
+
+--- @public
+--- @return ConfigOption
 function TextServerOption:asConfigOption() end
 
 --- @public
 --- @return string
---- @overload fun(self: TextServerOption): string
+function TextServerOption:getTooltip() end
+
+--- @public
+--- @return string
 function TextServerOption:getTooltip() end
 
 --- @public
@@ -23,7 +29,7 @@ function TextServerOption:getTooltip() end
 function TextServerOption:getType() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

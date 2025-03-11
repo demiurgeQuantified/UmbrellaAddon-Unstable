@@ -86,20 +86,20 @@ function GameTime:TimeLerp(startVal, endVal, startTime, endTime) end
 function GameTime:daysInMonth(year, month) end
 
 --- @public
---- @return number the Ambient
+--- @return number _ the Ambient
 --- @deprecated
 function GameTime:getAmbient() end
 
 --- @public
---- @return number the AmbientMax
+--- @return number _ the AmbientMax
 function GameTime:getAmbientMax() end
 
 --- @public
---- @return number the AmbientMin
+--- @return number _ the AmbientMin
 function GameTime:getAmbientMin() end
 
 --- @public
---- @return PZCalendar the Calender
+--- @return PZCalendar _ the Calender
 function GameTime:getCalender() end
 
 --- @public
@@ -107,7 +107,7 @@ function GameTime:getCalender() end
 function GameTime:getDawn() end
 
 --- @public
---- @return integer the Day
+--- @return integer _ the Day
 function GameTime:getDay() end
 
 --- @public
@@ -160,7 +160,7 @@ function GameTime:getHelicopterStartHour() end
 function GameTime:getHour() end
 
 --- @public
---- @return number the HoursSurvived
+--- @return number _ the HoursSurvived
 function GameTime:getHoursSurvived() end
 
 --- @public
@@ -168,23 +168,23 @@ function GameTime:getHoursSurvived() end
 function GameTime:getInvMultiplier() end
 
 --- @public
---- @return number the LastTimeOfDay
+--- @return number _ the LastTimeOfDay
 function GameTime:getLastTimeOfDay() end
 
 --- @public
---- @return number the MaxZombieCount
+--- @return number _ the MaxZombieCount
 function GameTime:getMaxZombieCount() end
 
 --- @public
---- @return number the MaxZombieCountStart
+--- @return number _ the MaxZombieCountStart
 function GameTime:getMaxZombieCountStart() end
 
 --- @public
---- @return number the MinZombieCount
+--- @return number _ the MinZombieCount
 function GameTime:getMinZombieCount() end
 
 --- @public
---- @return number the MinZombieCountStart
+--- @return number _ the MinZombieCountStart
 function GameTime:getMinZombieCountStart() end
 
 --- @public
@@ -192,7 +192,7 @@ function GameTime:getMinZombieCountStart() end
 function GameTime:getMinutes() end
 
 --- @public
---- @return number the MinutesPerDay
+--- @return number _ the MinutesPerDay
 function GameTime:getMinutesPerDay() end
 
 --- @public
@@ -204,7 +204,7 @@ function GameTime:getMinutesStamp() end
 function GameTime:getModData() end
 
 --- @public
---- @return integer the Month
+--- @return integer _ the Month
 function GameTime:getMonth() end
 
 --- @public
@@ -212,7 +212,7 @@ function GameTime:getMonth() end
 function GameTime:getMultipliedSecondsSinceLastUpdate() end
 
 --- @public
---- @return number the Multiplier
+--- @return number _ the Multiplier
 function GameTime:getMultiplier() end
 
 --- @public
@@ -221,7 +221,7 @@ function GameTime:getMultiplier() end
 function GameTime:getMultiplierFromTimeDelta(arg0) end
 
 --- @public
---- @return number the NightTint
+--- @return number _ the NightTint
 function GameTime:getNight() end
 
 --- @public
@@ -233,11 +233,11 @@ function GameTime:getNightMax() end
 function GameTime:getNightMin() end
 
 --- @public
---- @return number the NightTint
+--- @return number _ the NightTint
 function GameTime:getNightTint() end
 
 --- @public
---- @return integer the NightsSurvived
+--- @return integer _ the NightsSurvived
 function GameTime:getNightsSurvived() end
 
 --- @public
@@ -253,19 +253,19 @@ function GameTime:getServerMultiplier() end
 function GameTime:getSkyLightLevel() end
 
 --- @public
---- @return integer the StartDay
+--- @return integer _ the StartDay
 function GameTime:getStartDay() end
 
 --- @public
---- @return integer the StartMonth
+--- @return integer _ the StartMonth
 function GameTime:getStartMonth() end
 
 --- @public
---- @return number the StartTimeOfDay
+--- @return number _ the StartTimeOfDay
 function GameTime:getStartTimeOfDay() end
 
 --- @public
---- @return integer the StartYear
+--- @return integer _ the StartYear
 function GameTime:getStartYear() end
 
 --- @public
@@ -286,7 +286,7 @@ function GameTime:getTimeDelta() end
 function GameTime:getTimeDeltaFromMultiplier(arg0) end
 
 --- @public
---- @return number the TimeOfDay
+--- @return number _ the TimeOfDay
 function GameTime:getTimeOfDay() end
 
 --- @public
@@ -303,15 +303,15 @@ function GameTime:getTrueMultiplier() end
 function GameTime:getUnmoddedMultiplier() end
 
 --- @public
---- @return number the ViewDist
+--- @return number _ the ViewDist
 function GameTime:getViewDist() end
 
 --- @public
---- @return number the ViewDistMax
+--- @return number _ the ViewDistMax
 function GameTime:getViewDistMax() end
 
 --- @public
---- @return number the ViewDistMin
+--- @return number _ the ViewDistMin
 function GameTime:getViewDistMin() end
 
 --- @public
@@ -323,7 +323,7 @@ function GameTime:getWorldAgeDaysSinceBegin() end
 function GameTime:getWorldAgeHours() end
 
 --- @public
---- @return integer the Year
+--- @return integer _ the Year
 function GameTime:getYear() end
 
 --- @public
@@ -336,7 +336,7 @@ function GameTime:getZombieKilledText(playerObj) end
 function GameTime:init() end
 
 --- @public
---- @return boolean the RainingToday
+--- @return boolean _ the RainingToday
 function GameTime:isRainingToday() end
 
 --- @public
@@ -345,15 +345,31 @@ function GameTime:isThunderDay() end
 
 --- @public
 --- @return nil
---- @overload fun(self: GameTime, input: DataInputStream): nil
---- @overload fun(self: GameTime, input: ByteBuffer): nil
 function GameTime:load() end
 
 --- @public
+--- @param input DataInputStream
 --- @return nil
---- @overload fun(self: GameTime, output: DataOutputStream): nil
---- @overload fun(self: GameTime, output: ByteBuffer): nil
+function GameTime:load(input) end
+
+--- @public
+--- @param input ByteBuffer
+--- @return nil
+function GameTime:load(input) end
+
+--- @public
+--- @return nil
 function GameTime:save() end
+
+--- @public
+--- @param output DataOutputStream
+--- @return nil
+function GameTime:save(output) end
+
+--- @public
+--- @param output ByteBuffer
+--- @return nil
+function GameTime:save(output) end
 
 --- @public
 --- @param bb ByteBuffer
@@ -540,7 +556,7 @@ function GameTime:update(bSleeping) end
 function GameTime:updateCalendar(year, month, dayOfMonth, hourOfDay, minute) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

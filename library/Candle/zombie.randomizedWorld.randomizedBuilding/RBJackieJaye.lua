@@ -25,7 +25,7 @@ function RBJackieJaye:randomizeBuilding(arg0) end
 function RBJackieJaye:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

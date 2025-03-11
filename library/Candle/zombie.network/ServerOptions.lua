@@ -134,7 +134,7 @@ function ServerOptions:resetRegionFile() end
 function ServerOptions:saveServerTextFile(serverName) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

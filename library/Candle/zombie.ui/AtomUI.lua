@@ -31,7 +31,10 @@ function AtomUI:getColor() end
 
 --- @public
 --- @return number
---- @overload fun(self: AtomUI): number
+function AtomUI:getHeight() end
+
+--- @public
+--- @return number
 function AtomUI:getHeight() end
 
 --- @public
@@ -54,7 +57,10 @@ function AtomUI:getLuaParentPosition(arg0, arg1) end
 
 --- @public
 --- @return number
---- @overload fun(self: AtomUI): number
+function AtomUI:getMaxDrawHeight() end
+
+--- @public
+--- @return number
 function AtomUI:getMaxDrawHeight() end
 
 --- @public
@@ -63,7 +69,10 @@ function AtomUI:getNodes() end
 
 --- @public
 --- @return UIElementInterface
---- @overload fun(self: AtomUI): UIElementInterface
+function AtomUI:getParent() end
+
+--- @public
+--- @return UIElementInterface
 function AtomUI:getParent() end
 
 --- @public
@@ -80,7 +89,10 @@ function AtomUI:getPivotY() end
 
 --- @public
 --- @return integer
---- @overload fun(self: AtomUI): integer
+function AtomUI:getRenderThisPlayerOnly() end
+
+--- @public
+--- @return integer
 function AtomUI:getRenderThisPlayerOnly() end
 
 --- @public
@@ -101,17 +113,26 @@ function AtomUI:getUIName() end
 
 --- @public
 --- @return number
---- @overload fun(self: AtomUI): number
 function AtomUI:getWidth() end
 
 --- @public
 --- @return number
---- @overload fun(self: AtomUI): number
+function AtomUI:getWidth() end
+
+--- @public
+--- @return number
 function AtomUI:getX() end
 
 --- @public
 --- @return number
---- @overload fun(self: AtomUI): number
+function AtomUI:getX() end
+
+--- @public
+--- @return number
+function AtomUI:getY() end
+
+--- @public
+--- @return number
 function AtomUI:getY() end
 
 --- @public
@@ -120,22 +141,34 @@ function AtomUI:init() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
 function AtomUI:isAlwaysOnTop() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isAlwaysOnTop() end
+
+--- @public
+--- @return boolean
 function AtomUI:isBackMost() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isBackMost() end
+
+--- @public
+--- @return boolean
 function AtomUI:isCapture() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isCapture() end
+
+--- @public
+--- @return boolean
+function AtomUI:isDefaultDraw() end
+
+--- @public
+--- @return boolean
 function AtomUI:isDefaultDraw() end
 
 --- @public
@@ -144,64 +177,104 @@ function AtomUI:isEnabled() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
 function AtomUI:isFollowGameWorld() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isFollowGameWorld() end
+
+--- @public
+--- @return boolean
 function AtomUI:isForceCursorVisible() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isForceCursorVisible() end
+
+--- @public
+--- @return boolean
 function AtomUI:isIgnoreLossControl() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isIgnoreLossControl() end
+
+--- @public
+--- @return boolean
+function AtomUI:isMouseOver() end
+
+--- @public
+--- @return boolean
 function AtomUI:isMouseOver() end
 
 --- @public
 --- @param arg0 number
 --- @param arg1 number
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: number, arg1: number): boolean
 function AtomUI:isOverElement(arg0, arg1) end
 
 --- @public
 --- @param arg0 number
 --- @param arg1 number
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: number, arg1: number): boolean
+function AtomUI:isOverElement(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return boolean
+function AtomUI:isPointOver(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return boolean
 function AtomUI:isPointOver(arg0, arg1) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
 function AtomUI:isVisible() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: AtomUI): boolean
+function AtomUI:isVisible() end
+
+--- @public
+--- @return boolean
+function AtomUI:isWantKeyEvents() end
+
+--- @public
+--- @return boolean
 function AtomUI:isWantKeyEvents() end
 
 --- @public
 --- @param arg0 integer
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: integer): boolean
 function AtomUI:onConsumeKeyPress(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: integer): boolean
+function AtomUI:onConsumeKeyPress(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
 function AtomUI:onConsumeKeyRelease(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: integer): boolean
+function AtomUI:onConsumeKeyRelease(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function AtomUI:onConsumeKeyRepeat(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
 function AtomUI:onConsumeKeyRepeat(arg0) end
 
 --- @public
@@ -209,7 +282,6 @@ function AtomUI:onConsumeKeyRepeat(arg0) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: integer, arg1: number, arg2: number): boolean
 function AtomUI:onConsumeMouseButtonDown(arg0, arg1, arg2) end
 
 --- @public
@@ -217,7 +289,20 @@ function AtomUI:onConsumeMouseButtonDown(arg0, arg1, arg2) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: integer, arg1: number, arg2: number): boolean
+function AtomUI:onConsumeMouseButtonDown(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
+function AtomUI:onConsumeMouseButtonUp(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
 function AtomUI:onConsumeMouseButtonUp(arg0, arg1, arg2) end
 
 --- @public
@@ -226,7 +311,14 @@ function AtomUI:onConsumeMouseButtonUp(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @param arg3 number
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: number, arg1: number, arg2: number, arg3: number): boolean
+function AtomUI:onConsumeMouseMove(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return boolean
 function AtomUI:onConsumeMouseMove(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -234,7 +326,13 @@ function AtomUI:onConsumeMouseMove(arg0, arg1, arg2, arg3) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return boolean
---- @overload fun(self: AtomUI, arg0: number, arg1: number, arg2: number): boolean
+function AtomUI:onConsumeMouseWheel(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
 function AtomUI:onConsumeMouseWheel(arg0, arg1, arg2) end
 
 --- @public
@@ -243,7 +341,14 @@ function AtomUI:onConsumeMouseWheel(arg0, arg1, arg2) end
 --- @param arg2 number
 --- @param arg3 number
 --- @return nil
---- @overload fun(self: AtomUI, arg0: number, arg1: number, arg2: number, arg3: number): nil
+function AtomUI:onExtendMouseMoveOutside(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
 function AtomUI:onExtendMouseMoveOutside(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -251,7 +356,6 @@ function AtomUI:onExtendMouseMoveOutside(arg0, arg1, arg2, arg3) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return nil
---- @overload fun(self: AtomUI, arg0: integer, arg1: number, arg2: number): nil
 function AtomUI:onMouseButtonDownOutside(arg0, arg1, arg2) end
 
 --- @public
@@ -259,7 +363,20 @@ function AtomUI:onMouseButtonDownOutside(arg0, arg1, arg2) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return nil
---- @overload fun(self: AtomUI, arg0: integer, arg1: number, arg2: number): nil
+function AtomUI:onMouseButtonDownOutside(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function AtomUI:onMouseButtonUpOutside(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
 function AtomUI:onMouseButtonUpOutside(arg0, arg1, arg2) end
 
 --- @public
@@ -269,7 +386,10 @@ function AtomUI:removeNode(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: AtomUI): nil
+function AtomUI:render() end
+
+--- @public
+--- @return nil
 function AtomUI:render() end
 
 --- @public
@@ -375,11 +495,14 @@ function AtomUI:setY(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: AtomUI): nil
+function AtomUI:update() end
+
+--- @public
+--- @return nil
 function AtomUI:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

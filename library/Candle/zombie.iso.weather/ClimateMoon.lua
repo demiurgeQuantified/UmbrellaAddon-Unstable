@@ -41,7 +41,7 @@ function ClimateMoon:getPhaseName() end
 function ClimateMoon:updatePhase(year, month, day) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

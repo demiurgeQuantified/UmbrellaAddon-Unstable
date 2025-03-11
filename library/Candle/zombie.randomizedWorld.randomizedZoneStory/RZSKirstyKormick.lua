@@ -14,7 +14,7 @@ RZSKirstyKormick = {}
 function RZSKirstyKormick:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

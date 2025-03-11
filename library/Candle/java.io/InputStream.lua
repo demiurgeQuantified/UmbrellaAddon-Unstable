@@ -23,7 +23,10 @@ function InputStream:available() end
 
 --- @public
 --- @return nil
---- @overload fun(self: InputStream): nil
+function InputStream:close() end
+
+--- @public
+--- @return nil
 function InputStream:close() end
 
 --- @public
@@ -37,9 +40,19 @@ function InputStream:markSupported() end
 
 --- @public
 --- @return integer
---- @overload fun(self: InputStream, arg0: byte[]): integer
---- @overload fun(self: InputStream, arg0: byte[], arg1: integer, arg2: integer): integer
 function InputStream:read() end
+
+--- @public
+--- @param arg0 byte[]
+--- @return integer
+function InputStream:read(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function InputStream:read(arg0, arg1, arg2) end
 
 --- @public
 --- @return byte[]
@@ -48,8 +61,14 @@ function InputStream:readAllBytes() end
 --- @public
 --- @param arg0 integer
 --- @return byte[]
---- @overload fun(self: InputStream, arg0: byte[], arg1: integer, arg2: integer): integer
 function InputStream:readNBytes(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function InputStream:readNBytes(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
@@ -71,7 +90,7 @@ function InputStream:skipNBytes(arg0) end
 function InputStream:transferTo(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

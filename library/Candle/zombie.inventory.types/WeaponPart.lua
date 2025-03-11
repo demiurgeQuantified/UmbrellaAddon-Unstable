@@ -132,7 +132,10 @@ function WeaponPart:onDetach(arg0, arg1) end
 
 --- @public
 --- @return nil
---- @overload fun(self: WeaponPart): nil
+function WeaponPart:render() end
+
+--- @public
+--- @return nil
 function WeaponPart:render() end
 
 --- @public
@@ -257,11 +260,14 @@ function WeaponPart:setWeightModifier(weightModifier) end
 
 --- @public
 --- @return nil
---- @overload fun(self: WeaponPart): nil
+function WeaponPart:update() end
+
+--- @public
+--- @return nil
 function WeaponPart:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

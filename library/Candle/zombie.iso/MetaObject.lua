@@ -34,7 +34,7 @@ function MetaObject:getY() end
 function MetaObject:setUsed(bUsed) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

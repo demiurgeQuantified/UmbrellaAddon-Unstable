@@ -103,8 +103,15 @@ function RadioChannel:isVanilla() end
 --- @param scriptName string
 --- @param day integer
 --- @return nil
---- @overload fun(self: RadioChannel, scriptName: string, day: integer, loop: integer, maxloops: integer): nil
 function RadioChannel:setActiveScript(scriptName, day) end
+
+--- @public
+--- @param scriptName string
+--- @param day integer
+--- @param loop integer
+--- @param maxloops integer
+--- @return nil
+function RadioChannel:setActiveScript(scriptName, day, loop, maxloops) end
 
 --- @public
 --- @return nil
@@ -140,7 +147,7 @@ function RadioChannel:setTimeSynced(isTimeSynced) end
 function RadioChannel:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -148,5 +155,12 @@ function RadioChannel:update() end
 --- @param freq integer
 --- @param c ChannelCategory
 --- @return RadioChannel
---- @overload fun(n: string, freq: integer, c: ChannelCategory, guid: string): RadioChannel
 function RadioChannel.new(n, freq, c) end
+
+--- @public
+--- @param n string
+--- @param freq integer
+--- @param c ChannelCategory
+--- @param guid string
+--- @return RadioChannel
+function RadioChannel.new(n, freq, c, guid) end

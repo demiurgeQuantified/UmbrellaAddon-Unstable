@@ -17,7 +17,7 @@ function EnumConfigOption:getNumValues() end
 function EnumConfigOption:getType() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

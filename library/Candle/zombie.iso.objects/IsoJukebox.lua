@@ -32,12 +32,24 @@ function IsoJukebox:onMouseLeftClick(x, y) end
 function IsoJukebox:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoJukebox
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: string): IsoJukebox
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoJukebox
 function IsoJukebox.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param gid string
+--- @return IsoJukebox
+function IsoJukebox.new(cell, sq, gid) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param spr IsoSprite
+--- @return IsoJukebox
+function IsoJukebox.new(cell, sq, spr) end

@@ -31,8 +31,14 @@ function DataInput:readFloat() end
 --- @public
 --- @param arg0 byte[]
 --- @return nil
---- @overload fun(self: DataInput, arg0: byte[], arg1: integer, arg2: integer): nil
 function DataInput:readFully(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function DataInput:readFully(arg0, arg1, arg2) end
 
 --- @public
 --- @return integer

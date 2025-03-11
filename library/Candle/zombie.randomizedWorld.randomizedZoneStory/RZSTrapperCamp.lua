@@ -23,7 +23,7 @@ function RZSTrapperCamp.getTrapList() end
 function RZSTrapperCamp:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

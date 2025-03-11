@@ -24,17 +24,227 @@ function Map.entry(arg0, arg1) end
 --- @public
 --- @static
 --- @return Map
---- @overload fun(arg0: any, arg1: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any, arg10: any, arg11: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any, arg10: any, arg11: any, arg12: any, arg13: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any, arg10: any, arg11: any, arg12: any, arg13: any, arg14: any, arg15: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any, arg10: any, arg11: any, arg12: any, arg13: any, arg14: any, arg15: any, arg16: any, arg17: any): Map
---- @overload fun(arg0: any, arg1: any, arg2: any, arg3: any, arg4: any, arg5: any, arg6: any, arg7: any, arg8: any, arg9: any, arg10: any, arg11: any, arg12: any, arg13: any, arg14: any, arg15: any, arg16: any, arg17: any, arg18: any, arg19: any): Map
 function Map.of() end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @return Map
+function Map.of(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return Map
+function Map.of(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @return Map
+function Map.of(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @return Map
+function Map.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @return Map
+function Map.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @param arg10 any
+--- @param arg11 any
+--- @return Map
+function Map.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @param arg10 any
+--- @param arg11 any
+--- @param arg12 any
+--- @param arg13 any
+--- @return Map
+function Map.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @param arg10 any
+--- @param arg11 any
+--- @param arg12 any
+--- @param arg13 any
+--- @param arg14 any
+--- @param arg15 any
+--- @return Map
+function Map.of(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14,
+	arg15
+)
+end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @param arg10 any
+--- @param arg11 any
+--- @param arg12 any
+--- @param arg13 any
+--- @param arg14 any
+--- @param arg15 any
+--- @param arg16 any
+--- @param arg17 any
+--- @return Map
+function Map.of(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14,
+	arg15,
+	arg16,
+	arg17
+)
+end
+
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @param arg5 any
+--- @param arg6 any
+--- @param arg7 any
+--- @param arg8 any
+--- @param arg9 any
+--- @param arg10 any
+--- @param arg11 any
+--- @param arg12 any
+--- @param arg13 any
+--- @param arg14 any
+--- @param arg15 any
+--- @param arg16 any
+--- @param arg17 any
+--- @param arg18 any
+--- @param arg19 any
+--- @return Map
+function Map.of(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14,
+	arg15,
+	arg16,
+	arg17,
+	arg18,
+	arg19
+)
+end
 
 --- @public
 --- @static
@@ -142,15 +352,26 @@ function Map:putIfAbsent(arg0, arg1) end
 --- @public
 --- @param arg0 any
 --- @return any
---- @overload fun(self: Map, arg0: any, arg1: any): boolean
 function Map:remove(arg0) end
 
 --- @public
 --- @param arg0 any
 --- @param arg1 any
+--- @return boolean
+function Map:remove(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 any
 --- @return any
---- @overload fun(self: Map, arg0: any, arg1: any, arg2: any): boolean
 function Map:replace(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @return boolean
+function Map:replace(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 BiFunction

@@ -73,7 +73,7 @@ function AnimalVisual:save(arg0) end
 function AnimalVisual:setSkinTextureName(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -14,8 +14,16 @@ VideoTexture = {}
 --- @param arg1 integer
 --- @param arg2 integer
 --- @return VideoTexture
---- @overload fun(arg0: string, arg1: integer, arg2: integer, arg3: boolean): VideoTexture
 function VideoTexture.getOrCreate(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 boolean
+--- @return VideoTexture
+function VideoTexture.getOrCreate(arg0, arg1, arg2, arg3) end
 
 ------------------------------------
 ------------- METHODS --------------

@@ -54,7 +54,7 @@ function RVSUtilityVehicle:randomizeVehicleStory(zone, chunk) end
 function RVSUtilityVehicle:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

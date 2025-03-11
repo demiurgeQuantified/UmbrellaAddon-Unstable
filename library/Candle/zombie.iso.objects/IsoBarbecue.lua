@@ -172,11 +172,17 @@ function IsoBarbecue:update() end
 function IsoBarbecue:useFuel(amount) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoBarbecue
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoBarbecue
 function IsoBarbecue.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param gid IsoSprite
+--- @return IsoBarbecue
+function IsoBarbecue.new(cell, sq, gid) end

@@ -47,8 +47,12 @@ function SyncXp(player) end
 
 --- @param max number
 --- @return number
---- @overload fun(min: number, max: number): number
 function ZombRand(max) end
+
+--- @param min number
+--- @param max number
+--- @return number
+function ZombRand(min, max) end
 
 --- @param min number
 --- @param max number
@@ -101,8 +105,11 @@ function addAllBurntVehicles() end
 function addAllSmashedVehicles() end
 
 --- @return nil
---- @overload fun(predicate: Predicate): nil
 function addAllVehicles() end
+
+--- @param predicate Predicate
+--- @return nil
+function addAllVehicles(predicate) end
 
 --- @param arg0 IsoCell
 --- @param arg1 integer
@@ -111,8 +118,17 @@ function addAllVehicles() end
 --- @param arg4 string
 --- @param arg5 AnimalBreed
 --- @return IsoAnimal
---- @overload fun(arg0: IsoCell, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: AnimalBreed, arg6: boolean): IsoAnimal
 function addAnimal(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @param arg0 IsoCell
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 AnimalBreed
+--- @param arg6 boolean
+--- @return IsoAnimal
+function addAnimal(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @param arg0 integer
 --- @param arg1 integer
@@ -142,8 +158,14 @@ function addAreaHighlightForPlayer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg
 --- @param sq IsoGridSquare
 --- @param nbr integer
 --- @return nil
---- @overload fun(self:  arg0: IsoGridSquare, arg1: integer, arg2: number, arg3: number): nil
 function addBloodSplat(sq, nbr) end
+
+--- @param arg0 IsoGridSquare
+--- @param arg1 integer
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
+function addBloodSplat(arg0, arg1, arg2, arg3) end
 
 --- @return nil
 function addCarCrash() end
@@ -254,9 +276,40 @@ function addZombiesInBuilding(def, totalZombies, outfit, room, femaleChance) end
 --- @param outfit string
 --- @param femaleChance integer
 --- @return ArrayList
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: boolean, arg11: boolean, arg12: number): ArrayList
---- @overload fun(arg0: integer, arg1: integer, arg2: integer, arg3: integer, arg4: string, arg5: integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: boolean, arg11: boolean, arg12: number, arg13: boolean): ArrayList
 function addZombiesInOutfit(x, y, z, totalZombies, outfit, femaleChance) end
+
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 integer
+--- @param arg6 boolean
+--- @param arg7 boolean
+--- @param arg8 boolean
+--- @param arg9 boolean
+--- @param arg10 boolean
+--- @param arg11 boolean
+--- @param arg12 number
+--- @return ArrayList
+function addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) end
+
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 integer
+--- @param arg6 boolean
+--- @param arg7 boolean
+--- @param arg8 boolean
+--- @param arg9 boolean
+--- @param arg10 boolean
+--- @param arg11 boolean
+--- @param arg12 number
+--- @param arg13 boolean
+--- @return ArrayList
+function addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
 
 --- @param x1 integer
 --- @param y1 integer
@@ -385,8 +438,12 @@ function convertToPZNetTable(arg0) end
 
 --- @param table table
 --- @return table
---- @overload fun(to: table, from: table): table
 function copyTable(table) end
+
+--- @param to table
+--- @param from table
+--- @return table
+function copyTable(to, from) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 number
@@ -454,8 +511,8 @@ function createQRCodeTex(arg0, arg1) end
 function createRandomDeadBody(square, blood) end
 
 ---
----  Create a dynamic table containing all spawnpoints.lua we find in vanilla
----  + in loaded mods
+--- Create a dynamic table containing all spawnpoints.lua we find in vanilla  folder
+--- in loaded mods
 ---
 --- @return table
 function createRegionFile() end
@@ -489,8 +546,12 @@ function debugFullyStreamedIn(x, y) end
 
 --- @param param any
 --- @return nil
---- @overload fun(param: any, depth: integer): nil
 function debugLuaTable(param) end
+
+--- @param param any
+--- @param depth integer
+--- @return nil
+function debugLuaTable(param, depth) end
 
 --- @param roomType number
 --- @return nil
@@ -1131,14 +1192,21 @@ function getLoadedLuaCount() end
 
 --- @param c Coroutine
 --- @return integer
---- @overload fun(arg0: LuaCallFrame): integer
 function getLocalVarCount(c) end
+
+--- @param arg0 LuaCallFrame
+--- @return integer
+function getLocalVarCount(arg0) end
 
 --- @param c Coroutine
 --- @param n integer
 --- @return string
---- @overload fun(arg0: LuaCallFrame, arg1: integer): string
 function getLocalVarName(c, n) end
+
+--- @param arg0 LuaCallFrame
+--- @param arg1 integer
+--- @return string
+function getLocalVarName(arg0, arg1) end
 
 --- @param c Coroutine
 --- @param n integer
@@ -1502,11 +1570,33 @@ function getTableResult(tableName, numberPerPages) end
 
 --- @param txt string
 --- @return string
---- @overload fun(txt: string, arg1: any): string
---- @overload fun(txt: string, arg1: any, arg2: any): string
---- @overload fun(txt: string, arg1: any, arg2: any, arg3: any): string
---- @overload fun(txt: string, arg1: any, arg2: any, arg3: any, arg4: any): string
 function getText(txt) end
+
+--- @param txt string
+--- @param arg1 any
+--- @return string
+function getText(txt, arg1) end
+
+--- @param txt string
+--- @param arg1 any
+--- @param arg2 any
+--- @return string
+function getText(txt, arg1, arg2) end
+
+--- @param txt string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return string
+function getText(txt, arg1, arg2, arg3) end
+
+--- @param txt string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return string
+function getText(txt, arg1, arg2, arg3, arg4) end
 
 --- @return TextManager
 function getTextManager() end
@@ -1517,11 +1607,33 @@ function getTextMediaEN(txt) end
 
 --- @param txt string
 --- @return string
---- @overload fun(txt: string, arg1: any): string
---- @overload fun(txt: string, arg1: any, arg2: any): string
---- @overload fun(txt: string, arg1: any, arg2: any, arg3: any): string
---- @overload fun(txt: string, arg1: any, arg2: any, arg3: any, arg4: any): string
 function getTextOrNull(txt) end
+
+--- @param txt string
+--- @param arg1 any
+--- @return string
+function getTextOrNull(txt, arg1) end
+
+--- @param txt string
+--- @param arg1 any
+--- @param arg2 any
+--- @return string
+function getTextOrNull(txt, arg1, arg2) end
+
+--- @param txt string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return string
+function getTextOrNull(txt, arg1, arg2, arg3) end
+
+--- @param txt string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return string
+function getTextOrNull(txt, arg1, arg2, arg3, arg4) end
 
 --- @param filename string
 --- @return Texture
@@ -1645,9 +1757,16 @@ function initUISystem() end
 
 --- @param item string
 --- @return InventoryItem
---- @overload fun(item: Item): InventoryItem
---- @overload fun(arg0: string, arg1: number): InventoryItem
 function instanceItem(item) end
+
+--- @param item Item
+--- @return InventoryItem
+function instanceItem(item) end
+
+--- @param arg0 string
+--- @param arg1 number
+--- @return InventoryItem
+function instanceItem(arg0, arg1) end
 
 --- @param obj any
 --- @param name string
@@ -1794,13 +1913,19 @@ function isJoypadUp(joypad) end
 
 --- @param key integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
 function isKeyDown(key) end
+
+--- @param arg0 string
+--- @return boolean
+function isKeyDown(arg0) end
 
 --- @param key integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
 function isKeyPressed(key) end
+
+--- @param arg0 string
+--- @return boolean
+function isKeyPressed(arg0) end
 
 --- @param mod Mod
 --- @return boolean
@@ -2250,14 +2375,24 @@ function screenZoomOut() end
 --- @param arg1 IsoPlayer
 --- @param arg2 BaseVehicle
 --- @return nil
---- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle): nil
+function sendAddAnimalFromHandsInTrailer(arg0, arg1, arg2) end
+
+--- @param arg0 IsoDeadBody
+--- @param arg1 IsoPlayer
+--- @param arg2 BaseVehicle
+--- @return nil
 function sendAddAnimalFromHandsInTrailer(arg0, arg1, arg2) end
 
 --- @param arg0 IsoAnimal
 --- @param arg1 IsoPlayer
 --- @param arg2 BaseVehicle
 --- @return nil
---- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle): nil
+function sendAddAnimalInTrailer(arg0, arg1, arg2) end
+
+--- @param arg0 IsoDeadBody
+--- @param arg1 IsoPlayer
+--- @param arg2 BaseVehicle
+--- @return nil
 function sendAddAnimalInTrailer(arg0, arg1, arg2) end
 
 --- @param arg0 ItemContainer
@@ -2304,8 +2439,14 @@ function sendButcherAnimal(arg0, arg1) end
 --- @param command string
 --- @param args table
 --- @return nil
---- @overload fun(player: IsoPlayer, module: string, command: string, args: table): nil
 function sendClientCommand(module, command, args) end
+
+--- @param player IsoPlayer
+--- @param module string
+--- @param command string
+--- @param args table
+--- @return nil
+function sendClientCommand(player, module, command, args) end
 
 --- @param arg0 IsoPlayer
 --- @param arg1 string
@@ -2459,7 +2600,13 @@ function sendPlayerStatsChange(player) end
 --- @param arg2 BaseVehicle
 --- @param arg3 AnimalInventoryItem
 --- @return nil
---- @overload fun(arg0: IsoDeadBody, arg1: IsoPlayer, arg2: BaseVehicle, arg3: AnimalInventoryItem): nil
+function sendRemoveAndGrabAnimalFromTrailer(arg0, arg1, arg2, arg3) end
+
+--- @param arg0 IsoDeadBody
+--- @param arg1 IsoPlayer
+--- @param arg2 BaseVehicle
+--- @param arg3 AnimalInventoryItem
+--- @return nil
 function sendRemoveAndGrabAnimalFromTrailer(arg0, arg1, arg2, arg3) end
 
 --- @param arg0 IsoAnimal
@@ -2549,8 +2696,14 @@ function sendSecretKey(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param command string
 --- @param args table
 --- @return nil
---- @overload fun(player: IsoPlayer, module: string, command: string, args: table): nil
 function sendServerCommand(module, command, args) end
+
+--- @param player IsoPlayer
+--- @param module string
+--- @param command string
+--- @param args table
+--- @return nil
+function sendServerCommand(player, module, command, args) end
 
 --- @param arg0 string
 --- @param arg1 string
@@ -2879,8 +3032,11 @@ function syncVisuals(arg0) end
 function tabToX(a, tabX) end
 
 --- @return nil
---- @overload fun(fileName: string): nil
 function takeScreenshot() end
+
+--- @param fileName string
+--- @return nil
+function takeScreenshot(fileName) end
 
 --- @return nil
 function testHelicopter() end
@@ -2979,11 +3135,33 @@ function transmitBigWaterSplash(arg0, arg1, arg2, arg3) end
 
 --- @param event string
 --- @return nil
---- @overload fun(event: string, param: any): nil
---- @overload fun(event: string, param: any, param2: any): nil
---- @overload fun(event: string, param: any, param2: any, param3: any): nil
---- @overload fun(event: string, param: any, param2: any, param3: any, param4: any): nil
 function triggerEvent(event) end
+
+--- @param event string
+--- @param param any
+--- @return nil
+function triggerEvent(event, param) end
+
+--- @param event string
+--- @param param any
+--- @param param2 any
+--- @return nil
+function triggerEvent(event, param, param2) end
+
+--- @param event string
+--- @param param any
+--- @param param2 any
+--- @param param3 any
+--- @return nil
+function triggerEvent(event, param, param2, param3) end
+
+--- @param event string
+--- @param param any
+--- @param param2 any
+--- @param param3 any
+--- @param param4 any
+--- @return nil
+function triggerEvent(event, param, param2, param3, param4) end
 
 --- @param arg0 string
 --- @return Texture
@@ -3008,8 +3186,11 @@ function useTextureFiltering(bUse) end
 
 --- @param key integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
 function wasKeyDown(key) end
+
+--- @param arg0 string
+--- @return boolean
+function wasKeyDown(arg0) end
 
 --- @return boolean
 function wasMouseActiveMoreRecentlyThanJoypad() end

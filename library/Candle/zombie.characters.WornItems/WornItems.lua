@@ -97,11 +97,15 @@ function WornItems:setItem(location, item) end
 function WornItems:size() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param group BodyLocationGroup
 --- @return WornItems
---- @overload fun(other: WornItems): WornItems
 function WornItems.new(group) end
+
+--- @public
+--- @param other WornItems
+--- @return WornItems
+function WornItems.new(other) end

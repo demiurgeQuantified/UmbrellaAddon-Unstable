@@ -21,16 +21,36 @@ function Math.IEEEremainder(arg0, arg1) end
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(arg0: number): number
---- @overload fun(arg0: integer): integer
---- @overload fun(arg0: integer): integer
+function Math.abs(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return number
 function Math.abs(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 integer
 --- @return integer
---- @overload fun(arg0: integer): integer
+function Math.abs(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return integer
+function Math.abs(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return integer
+function Math.absExact(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return integer
 function Math.absExact(arg0) end
 
 --- @public
@@ -44,7 +64,13 @@ function Math.acos(arg0) end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return integer
---- @overload fun(arg0: integer, arg1: integer): integer
+function Math.addExact(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function Math.addExact(arg0, arg1) end
 
 --- @public
@@ -83,7 +109,13 @@ function Math.ceil(arg0) end
 --- @param arg0 number
 --- @param arg1 number
 --- @return number
---- @overload fun(arg0: number, arg1: number): number
+function Math.copySign(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function Math.copySign(arg0, arg1) end
 
 --- @public
@@ -102,7 +134,12 @@ function Math.cosh(arg0) end
 --- @static
 --- @param arg0 integer
 --- @return integer
---- @overload fun(arg0: integer): integer
+function Math.decrementExact(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return integer
 function Math.decrementExact(arg0) end
 
 --- @public
@@ -128,8 +165,6 @@ function Math.floor(arg0) end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return integer
---- @overload fun(arg0: integer, arg1: integer): integer
---- @overload fun(arg0: integer, arg1: integer): integer
 function Math.floorDiv(arg0, arg1) end
 
 --- @public
@@ -137,8 +172,34 @@ function Math.floorDiv(arg0, arg1) end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return integer
---- @overload fun(arg0: integer, arg1: integer): integer
---- @overload fun(arg0: integer, arg1: integer): integer
+function Math.floorDiv(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.floorDiv(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.floorMod(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.floorMod(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function Math.floorMod(arg0, arg1) end
 
 --- @public
@@ -147,14 +208,26 @@ function Math.floorMod(arg0, arg1) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return number
---- @overload fun(arg0: number, arg1: number, arg2: number): number
+function Math.fma(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
 function Math.fma(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param arg0 number
 --- @return integer
---- @overload fun(arg0: number): integer
+function Math.getExponent(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return integer
 function Math.getExponent(arg0) end
 
 --- @public
@@ -168,7 +241,12 @@ function Math.hypot(arg0, arg1) end
 --- @static
 --- @param arg0 integer
 --- @return integer
---- @overload fun(arg0: integer): integer
+function Math.incrementExact(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return integer
 function Math.incrementExact(arg0) end
 
 --- @public
@@ -194,9 +272,6 @@ function Math.log1p(arg0) end
 --- @param arg0 number
 --- @param arg1 number
 --- @return number
---- @overload fun(arg0: number, arg1: number): number
---- @overload fun(arg0: integer, arg1: integer): integer
---- @overload fun(arg0: integer, arg1: integer): integer
 function Math.max(arg0, arg1) end
 
 --- @public
@@ -204,9 +279,34 @@ function Math.max(arg0, arg1) end
 --- @param arg0 number
 --- @param arg1 number
 --- @return number
---- @overload fun(arg0: number, arg1: number): number
---- @overload fun(arg0: integer, arg1: integer): integer
---- @overload fun(arg0: integer, arg1: integer): integer
+function Math.max(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.max(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.max(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
+function Math.min(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function Math.min(arg0, arg1) end
 
 --- @public
@@ -214,8 +314,34 @@ function Math.min(arg0, arg1) end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return integer
---- @overload fun(arg0: integer, arg1: integer): integer
---- @overload fun(arg0: integer, arg1: integer): integer
+function Math.min(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.min(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.multiplyExact(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
+function Math.multiplyExact(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function Math.multiplyExact(arg0, arg1) end
 
 --- @public
@@ -236,7 +362,12 @@ function Math.multiplyHigh(arg0, arg1) end
 --- @static
 --- @param arg0 integer
 --- @return integer
---- @overload fun(arg0: integer): integer
+function Math.negateExact(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return integer
 function Math.negateExact(arg0) end
 
 --- @public
@@ -244,21 +375,37 @@ function Math.negateExact(arg0) end
 --- @param arg0 number
 --- @param arg1 number
 --- @return number
---- @overload fun(arg0: number, arg1: number): number
+function Math.nextAfter(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
 function Math.nextAfter(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(arg0: number): number
 function Math.nextDown(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(arg0: number): number
+function Math.nextDown(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return number
+function Math.nextUp(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return number
 function Math.nextUp(arg0) end
 
 --- @public
@@ -283,7 +430,12 @@ function Math.rint(arg0) end
 --- @static
 --- @param arg0 number
 --- @return integer
---- @overload fun(arg0: number): integer
+function Math.round(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return integer
 function Math.round(arg0) end
 
 --- @public
@@ -291,14 +443,25 @@ function Math.round(arg0) end
 --- @param arg0 number
 --- @param arg1 integer
 --- @return number
---- @overload fun(arg0: number, arg1: integer): number
+function Math.scalb(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 integer
+--- @return number
 function Math.scalb(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(arg0: number): number
+function Math.signum(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return number
 function Math.signum(arg0) end
 
 --- @public
@@ -324,7 +487,13 @@ function Math.sqrt(arg0) end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return integer
---- @overload fun(arg0: integer, arg1: integer): integer
+function Math.subtractExact(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return integer
 function Math.subtractExact(arg0, arg1) end
 
 --- @public
@@ -361,5 +530,10 @@ function Math.toRadians(arg0) end
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(arg0: number): number
+function Math.ulp(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @return number
 function Math.ulp(arg0) end

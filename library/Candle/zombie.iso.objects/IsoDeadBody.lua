@@ -39,8 +39,22 @@ function IsoDeadBody.removeDeadBody(arg0) end
 --- @param lightInfo ColorInfo
 --- @param alpha number
 --- @return nil
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: Vector3f, arg4: number, arg5: number, arg6: number, arg7: ColorInfo, arg8: number, arg9: boolean): nil
 function IsoDeadBody.renderShadow(x, y, z, forward, w, fm, bm, lightInfo, alpha) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 Vector3f
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 ColorInfo
+--- @param arg8 number
+--- @param arg9 boolean
+--- @return nil
+function IsoDeadBody.renderShadow(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
 --- @static
@@ -73,7 +87,14 @@ function IsoDeadBody:Collision(collision, object) end
 --- @param arg2 number
 --- @param arg3 string
 --- @return nil
---- @overload fun(self: IsoDeadBody, arg0: IGrappleable, arg1: HandWeapon, arg2: number, arg3: string): nil
+function IsoDeadBody:Grappled(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 IGrappleable
+--- @param arg1 HandWeapon
+--- @param arg2 number
+--- @param arg3 string
+--- @return nil
 function IsoDeadBody:Grappled(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -84,7 +105,10 @@ function IsoDeadBody:GrapplerLetGo(arg0, arg1) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDeadBody): boolean
+function IsoDeadBody:IsSpeaking() end
+
+--- @public
+--- @return boolean
 function IsoDeadBody:IsSpeaking() end
 
 --- @public
@@ -100,7 +124,11 @@ function IsoDeadBody:RejectGrapple(arg0) end
 --- @public
 --- @param line string
 --- @return nil
---- @overload fun(self: IsoDeadBody, line: string): nil
+function IsoDeadBody:Say(line) end
+
+--- @public
+--- @param line string
+--- @return nil
 function IsoDeadBody:Say(line) end
 
 --- @public
@@ -132,17 +160,26 @@ function IsoDeadBody:getAnimForwardDirection(arg0) end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoDeadBody): number
+function IsoDeadBody:getAnimalSize() end
+
+--- @public
+--- @return number
 function IsoDeadBody:getAnimalSize() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoDeadBody): string
+function IsoDeadBody:getAnimalType() end
+
+--- @public
+--- @return string
 function IsoDeadBody:getAnimalType() end
 
 --- @public
 --- @return AnimalVisual
---- @overload fun(self: IsoDeadBody): AnimalVisual
+function IsoDeadBody:getAnimalVisual() end
+
+--- @public
+--- @return AnimalVisual
 function IsoDeadBody:getAnimalVisual() end
 
 --- @public
@@ -202,7 +239,11 @@ function IsoDeadBody:getGrabLegsPosition(arg0) end
 --- @public
 --- @param arg0 Vector3f
 --- @return Vector3f
---- @overload fun(self: IsoDeadBody, arg0: Vector3): Vector3
+function IsoDeadBody:getGrappleOffset(arg0) end
+
+--- @public
+--- @param arg0 Vector3
+--- @return Vector3
 function IsoDeadBody:getGrappleOffset(arg0) end
 
 --- @public
@@ -239,7 +280,10 @@ function IsoDeadBody:getGrapplingTarget() end
 
 --- @public
 --- @return HumanVisual
---- @overload fun(self: IsoDeadBody): HumanVisual
+function IsoDeadBody:getHumanVisual() end
+
+--- @public
+--- @return HumanVisual
 function IsoDeadBody:getHumanVisual() end
 
 --- @public
@@ -257,12 +301,19 @@ function IsoDeadBody:getItem() end
 --- @public
 --- @param itemVisuals ItemVisuals
 --- @return nil
---- @overload fun(self: IsoDeadBody, itemVisuals: ItemVisuals): nil
+function IsoDeadBody:getItemVisuals(itemVisuals) end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @return nil
 function IsoDeadBody:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return ObjectID
---- @overload fun(self: IsoDeadBody): ObjectID
+function IsoDeadBody:getObjectID() end
+
+--- @public
+--- @return ObjectID
 function IsoDeadBody:getObjectID() end
 
 --- @public
@@ -291,7 +342,10 @@ function IsoDeadBody:getRenderSquare() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoDeadBody): string
+function IsoDeadBody:getSayLine() end
+
+--- @public
+--- @return string
 function IsoDeadBody:getSayLine() end
 
 --- @public
@@ -316,13 +370,20 @@ function IsoDeadBody:getSharedGrappleType() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoDeadBody): string
+function IsoDeadBody:getTalkerType() end
+
+--- @public
+--- @return string
 function IsoDeadBody:getTalkerType() end
 
 --- @public
 --- @param arg0 Vector3f
 --- @return Vector3f
---- @overload fun(self: IsoDeadBody, arg0: Vector3): Vector3
+function IsoDeadBody:getTargetGrapplePos(arg0) end
+
+--- @public
+--- @param arg0 Vector3
+--- @return Vector3
 function IsoDeadBody:getTargetGrapplePos(arg0) end
 
 --- @public
@@ -344,7 +405,10 @@ function IsoDeadBody:getWornItems() end
 
 --- @public
 --- @return IGrappleable
---- @overload fun(self: IsoDeadBody): IGrappleable
+function IsoDeadBody:getWrappedGrappleable() end
+
+--- @public
+--- @return IGrappleable
 function IsoDeadBody:getWrappedGrappleable() end
 
 --- @public
@@ -409,7 +473,10 @@ function IsoDeadBody:isFallOnFront() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDeadBody): boolean
+function IsoDeadBody:isFemale() end
+
+--- @public
+--- @return boolean
 function IsoDeadBody:isFemale() end
 
 --- @public
@@ -468,12 +535,18 @@ function IsoDeadBody:isSecondaryHandItem(arg0) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDeadBody): boolean
 function IsoDeadBody:isSkeleton() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDeadBody): boolean
+function IsoDeadBody:isSkeleton() end
+
+--- @public
+--- @return boolean
+function IsoDeadBody:isZombie() end
+
+--- @public
+--- @return boolean
 function IsoDeadBody:isZombie() end
 
 --- @public
@@ -722,13 +795,28 @@ function IsoDeadBody:toString() end
 function IsoDeadBody:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param died IsoGameCharacter
 --- @return IsoDeadBody
---- @overload fun(cell: IsoCell): IsoDeadBody
---- @overload fun(died: IsoGameCharacter, wasCorpseAlready: boolean): IsoDeadBody
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean, arg2: boolean): IsoDeadBody
 function IsoDeadBody.new(died) end
+
+--- @public
+--- @param cell IsoCell
+--- @return IsoDeadBody
+function IsoDeadBody.new(cell) end
+
+--- @public
+--- @param died IsoGameCharacter
+--- @param wasCorpseAlready boolean
+--- @return IsoDeadBody
+function IsoDeadBody.new(died, wasCorpseAlready) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @return IsoDeadBody
+function IsoDeadBody.new(arg0, arg1, arg2) end

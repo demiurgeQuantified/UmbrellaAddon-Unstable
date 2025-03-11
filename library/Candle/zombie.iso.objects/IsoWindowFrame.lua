@@ -77,8 +77,14 @@ function IsoWindowFrame.haveSheetRope(o) end
 --- @static
 --- @param o IsoObject
 --- @return boolean
---- @overload fun(o: IsoObject, north: boolean): boolean
 function IsoWindowFrame.isWindowFrame(o) end
+
+--- @public
+--- @static
+--- @param o IsoObject
+--- @param north boolean
+--- @return boolean
+function IsoWindowFrame.isWindowFrame(o, north) end
 
 --- @public
 --- @static
@@ -127,23 +133,37 @@ function IsoWindowFrame:getAddSheetSquare(arg0) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoWindowFrame, arg0: IsoGameCharacter): IsoBarricade
+function IsoWindowFrame:getBarricadeForCharacter(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return IsoBarricade
 function IsoWindowFrame:getBarricadeForCharacter(arg0) end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoWindowFrame): IsoBarricade
 function IsoWindowFrame:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoWindowFrame): IsoBarricade
+function IsoWindowFrame:getBarricadeOnOppositeSquare() end
+
+--- @public
+--- @return IsoBarricade
+function IsoWindowFrame:getBarricadeOnSameSquare() end
+
+--- @public
+--- @return IsoBarricade
 function IsoWindowFrame:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoWindowFrame, arg0: IsoGameCharacter): IsoBarricade
+function IsoWindowFrame:getBarricadeOppositeCharacter(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return IsoBarricade
 function IsoWindowFrame:getBarricadeOppositeCharacter(arg0) end
 
 --- @public
@@ -152,7 +172,10 @@ function IsoWindowFrame:getCurtain() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindowFrame): boolean
+function IsoWindowFrame:getNorth() end
+
+--- @public
+--- @return boolean
 function IsoWindowFrame:getNorth() end
 
 --- @public
@@ -161,7 +184,10 @@ function IsoWindowFrame:getObjectName() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(self: IsoWindowFrame): IsoGridSquare
+function IsoWindowFrame:getOppositeSquare() end
+
+--- @public
+--- @return IsoGridSquare
 function IsoWindowFrame:getOppositeSquare() end
 
 --- @public
@@ -187,12 +213,18 @@ function IsoWindowFrame:haveSheetRope() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindowFrame): boolean
 function IsoWindowFrame:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindowFrame): boolean
+function IsoWindowFrame:isBarricadeAllowed() end
+
+--- @public
+--- @return boolean
+function IsoWindowFrame:isBarricaded() end
+
+--- @public
+--- @return boolean
 function IsoWindowFrame:isBarricaded() end
 
 --- @public
@@ -214,11 +246,18 @@ function IsoWindowFrame:removeSheetRope(arg0) end
 function IsoWindowFrame:save(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoWindowFrame
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean): IsoWindowFrame
 function IsoWindowFrame.new(arg0) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 IsoGridSquare
+--- @param arg2 IsoSprite
+--- @param arg3 boolean
+--- @return IsoWindowFrame
+function IsoWindowFrame.new(arg0, arg1, arg2, arg3) end

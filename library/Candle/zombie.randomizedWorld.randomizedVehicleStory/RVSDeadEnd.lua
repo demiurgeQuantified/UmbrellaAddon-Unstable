@@ -28,7 +28,7 @@ function RVSDeadEnd:randomizeVehicleStory(arg0, arg1) end
 function RVSDeadEnd:spawnElement(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

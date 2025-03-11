@@ -64,7 +64,7 @@ function GameVersion:isLessThanOrEqualTo(rhs) end
 function GameVersion:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

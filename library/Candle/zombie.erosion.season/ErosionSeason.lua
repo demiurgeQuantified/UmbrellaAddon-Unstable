@@ -26,7 +26,10 @@ function ErosionSeason.Reset() end
 
 --- @public
 --- @return any
---- @overload fun(self: ErosionSeason): ErosionSeason
+function ErosionSeason:clone() end
+
+--- @public
+--- @return ErosionSeason
 function ErosionSeason:clone() end
 
 --- @public
@@ -207,7 +210,7 @@ function ErosionSeason:setDay(_day, _month, _year) end
 function ErosionSeason:setRain(_jan, _feb, _mar, _apr, _may, _jun, _jul, _aug, _sep, _oct, _nov, _dec) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

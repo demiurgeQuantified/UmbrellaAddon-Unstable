@@ -58,8 +58,14 @@ function IsoWindow.isSheetRopeHere(sq) end
 --- @static
 --- @param sq IsoGridSquare
 --- @return boolean
---- @overload fun(sq: IsoGridSquare, north: boolean): boolean
 function IsoWindow.isTopOfSheetRopeHere(sq) end
+
+--- @public
+--- @static
+--- @param sq IsoGridSquare
+--- @param north boolean
+--- @return boolean
+function IsoWindow.isTopOfSheetRopeHere(sq, north) end
 
 --- @public
 --- @static
@@ -112,7 +118,11 @@ function IsoWindow:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoWindow, thumper: IsoMovingObject): nil
+function IsoWindow:Thump(thumper) end
+
+--- @public
+--- @param thumper IsoMovingObject
+--- @return nil
 function IsoWindow:Thump(thumper) end
 
 --- @public
@@ -124,7 +134,12 @@ function IsoWindow:ToggleWindow(chr) end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: IsoWindow, owner: IsoGameCharacter, weapon: HandWeapon): nil
+function IsoWindow:WeaponHit(owner, weapon) end
+
+--- @public
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
+--- @return nil
 function IsoWindow:WeaponHit(owner, weapon) end
 
 --- @public
@@ -136,8 +151,12 @@ function IsoWindow:addBarricadesDebug(numPlanks, metal) end
 --- @public
 --- @param onOppositeSquare boolean
 --- @return nil
---- @overload fun(self: IsoWindow, chr: IsoMovingObject): nil
 function IsoWindow:addBrokenGlass(onOppositeSquare) end
+
+--- @public
+--- @param chr IsoMovingObject
+--- @return nil
+function IsoWindow:addBrokenGlass(chr) end
 
 --- @public
 --- @return nil
@@ -185,23 +204,37 @@ function IsoWindow:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoWindow, chr: IsoGameCharacter): IsoBarricade
+function IsoWindow:getBarricadeForCharacter(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
 function IsoWindow:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoWindow): IsoBarricade
 function IsoWindow:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoWindow): IsoBarricade
+function IsoWindow:getBarricadeOnOppositeSquare() end
+
+--- @public
+--- @return IsoBarricade
+function IsoWindow:getBarricadeOnSameSquare() end
+
+--- @public
+--- @return IsoBarricade
 function IsoWindow:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoWindow, chr: IsoGameCharacter): IsoBarricade
+function IsoWindow:getBarricadeOppositeCharacter(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
 function IsoWindow:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -211,13 +244,21 @@ function IsoWindow:getFacingPosition(pos) end
 
 --- @public
 --- @return IsoGameCharacter
---- @overload fun(self: IsoWindow, square: IsoGridSquare): IsoGameCharacter
 function IsoWindow:getFirstCharacterClimbingThrough() end
 
 --- @public
+--- @param square IsoGridSquare
 --- @return IsoGameCharacter
---- @overload fun(self: IsoWindow, square: IsoGridSquare): IsoGameCharacter
+function IsoWindow:getFirstCharacterClimbingThrough(square) end
+
+--- @public
+--- @return IsoGameCharacter
 function IsoWindow:getFirstCharacterClosing() end
+
+--- @public
+--- @param square IsoGridSquare
+--- @return IsoGameCharacter
+function IsoWindow:getFirstCharacterClosing(square) end
 
 --- @public
 --- @return integer
@@ -233,7 +274,10 @@ function IsoWindow:getInsideSquare() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindow): boolean
+function IsoWindow:getNorth() end
+
+--- @public
+--- @return boolean
 function IsoWindow:getNorth() end
 
 --- @public
@@ -246,7 +290,10 @@ function IsoWindow:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(self: IsoWindow): IsoGridSquare
+function IsoWindow:getOppositeSquare() end
+
+--- @public
+--- @return IsoGridSquare
 function IsoWindow:getOppositeSquare() end
 
 --- @public
@@ -259,13 +306,20 @@ function IsoWindow:getSquare() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoWindow): number
+function IsoWindow:getThumpCondition() end
+
+--- @public
+--- @return number
 function IsoWindow:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoWindow, chr: IsoGameCharacter): Thumpable
+function IsoWindow:getThumpableFor(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return Thumpable
 function IsoWindow:getThumpableFor(chr) end
 
 --- @public
@@ -274,17 +328,26 @@ function IsoWindow:haveSheetRope() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindow): boolean
 function IsoWindow:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindow): boolean
+function IsoWindow:isBarricadeAllowed() end
+
+--- @public
+--- @return boolean
 function IsoWindow:isBarricaded() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWindow): boolean
+function IsoWindow:isBarricaded() end
+
+--- @public
+--- @return boolean
+function IsoWindow:isDestroyed() end
+
+--- @public
+--- @return boolean
 function IsoWindow:isDestroyed() end
 
 --- @public
@@ -414,9 +477,18 @@ function IsoWindow:setSmashedSprite(sprite) end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoWindow, bRemote: boolean): nil
---- @overload fun(self: IsoWindow, bRemote: boolean, doAlarm: boolean): nil
 function IsoWindow:smashWindow() end
+
+--- @public
+--- @param bRemote boolean
+--- @return nil
+function IsoWindow:smashWindow(bRemote) end
+
+--- @public
+--- @param bRemote boolean
+--- @param doAlarm boolean
+--- @return nil
+function IsoWindow:smashWindow(bRemote, doAlarm) end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -429,11 +501,18 @@ function IsoWindow:syncIsoObjectReceive(arg0) end
 function IsoWindow:syncIsoObjectSend(b) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoWindow
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoWindow
 function IsoWindow.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param gid IsoSprite
+--- @param north boolean
+--- @return IsoWindow
+function IsoWindow.new(cell, gridSquare, gid, north) end

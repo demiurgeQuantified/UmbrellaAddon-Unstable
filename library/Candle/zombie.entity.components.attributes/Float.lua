@@ -10,12 +10,18 @@ Float = {}
 
 --- @public
 --- @return number
---- @overload fun(self: Float): Number
+function Float:getMax() end
+
+--- @public
+--- @return Number
 function Float:getMax() end
 
 --- @public
 --- @return number
---- @overload fun(self: Float): Number
+function Float:getMin() end
+
+--- @public
+--- @return Number
 function Float:getMin() end
 
 --- @public
@@ -25,5 +31,9 @@ function Float:getValueType() end
 --- @public
 --- @param arg0 number
 --- @return number
---- @overload fun(self: Float, arg0: Number): Number
+function Float:validate(arg0) end
+
+--- @public
+--- @param arg0 Number
+--- @return Number
 function Float:validate(arg0) end

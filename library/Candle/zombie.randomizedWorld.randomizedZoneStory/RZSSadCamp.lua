@@ -23,7 +23,7 @@ function RZSSadCamp.getOutfits() end
 function RZSSadCamp:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

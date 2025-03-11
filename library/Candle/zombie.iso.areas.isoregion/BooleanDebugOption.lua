@@ -13,7 +13,7 @@ BooleanDebugOption = {}
 function BooleanDebugOption:getIndex() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -21,5 +21,12 @@ function BooleanDebugOption:getIndex() end
 --- @param name string
 --- @param defaultValue boolean
 --- @return BooleanDebugOption
---- @overload fun(optionList: ArrayList, name: string, defaultValue: boolean, zLevel: integer): BooleanDebugOption
 function BooleanDebugOption.new(optionList, name, defaultValue) end
+
+--- @public
+--- @param optionList ArrayList
+--- @param name string
+--- @param defaultValue boolean
+--- @param zLevel integer
+--- @return BooleanDebugOption
+function BooleanDebugOption.new(optionList, name, defaultValue, zLevel) end

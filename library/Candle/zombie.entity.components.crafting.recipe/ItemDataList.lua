@@ -11,10 +11,24 @@ ItemDataList = {}
 --- @public
 --- @param arg0 InventoryItem
 --- @return nil
---- @overload fun(self: ItemDataList, arg0: Item): nil
---- @overload fun(self: ItemDataList, arg0: InventoryItem, arg1: boolean): nil
---- @overload fun(self: ItemDataList, arg0: Item, arg1: boolean): nil
 function ItemDataList:addItem(arg0) end
+
+--- @public
+--- @param arg0 Item
+--- @return nil
+function ItemDataList:addItem(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 boolean
+--- @return nil
+function ItemDataList:addItem(arg0, arg1) end
+
+--- @public
+--- @param arg0 Item
+--- @param arg1 boolean
+--- @return nil
+function ItemDataList:addItem(arg0, arg1) end
 
 --- @public
 --- @return nil
@@ -33,8 +47,13 @@ function ItemDataList:getItem(arg0) end
 --- @public
 --- @param arg0 ArrayList
 --- @return nil
---- @overload fun(self: ItemDataList, arg0: ArrayList, arg1: boolean): nil
 function ItemDataList:getUnprocessed(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @param arg1 boolean
+--- @return nil
+function ItemDataList:getUnprocessed(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -59,7 +78,7 @@ function ItemDataList:setProcessed(arg0) end
 function ItemDataList:size() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

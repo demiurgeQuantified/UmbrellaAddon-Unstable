@@ -25,18 +25,51 @@ function ILuaGameCharacter:Dressup(arg0) end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
---- @overload fun(self: ILuaGameCharacter, arg0: FluidContainer, arg1: number): boolean
---- @overload fun(self: ILuaGameCharacter, arg0: InventoryItem, arg1: number): boolean
---- @overload fun(self: ILuaGameCharacter, arg0: FluidContainer, arg1: number, arg2: boolean): boolean
---- @overload fun(self: ILuaGameCharacter, arg0: InventoryItem, arg1: number, arg2: boolean): boolean
 function ILuaGameCharacter:DrinkFluid(arg0) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @return boolean
+function ILuaGameCharacter:DrinkFluid(arg0, arg1) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @return boolean
+function ILuaGameCharacter:DrinkFluid(arg0, arg1) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @param arg1 number
+--- @param arg2 boolean
+--- @return boolean
+function ILuaGameCharacter:DrinkFluid(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 boolean
+--- @return boolean
+function ILuaGameCharacter:DrinkFluid(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
---- @overload fun(self: ILuaGameCharacter, arg0: InventoryItem, arg1: number): boolean
---- @overload fun(self: ILuaGameCharacter, arg0: InventoryItem, arg1: number, arg2: boolean): boolean
 function ILuaGameCharacter:Eat(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @return boolean
+function ILuaGameCharacter:Eat(arg0, arg1) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 boolean
+--- @return boolean
+function ILuaGameCharacter:Eat(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
@@ -55,9 +88,26 @@ function ILuaGameCharacter:HasTrait(trait) end
 --- @param arg3 boolean
 --- @param arg4 number
 --- @return number
---- @overload fun(self: ILuaGameCharacter, arg0: BaseVehicle, arg1: number, arg2: boolean, arg3: number, arg4: number): number
---- @overload fun(self: ILuaGameCharacter, arg0: HandWeapon, arg1: IsoGameCharacter, arg2: number, arg3: boolean, arg4: number, arg5: boolean): number
 function ILuaGameCharacter:Hit(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 BaseVehicle
+--- @param arg1 number
+--- @param arg2 boolean
+--- @param arg3 number
+--- @param arg4 number
+--- @return number
+function ILuaGameCharacter:Hit(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 HandWeapon
+--- @param arg1 IsoGameCharacter
+--- @param arg2 number
+--- @param arg3 boolean
+--- @param arg4 number
+--- @param arg5 boolean
+--- @return number
+function ILuaGameCharacter:Hit(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @return boolean
@@ -66,8 +116,13 @@ function ILuaGameCharacter:IsSpeaking() end
 --- @public
 --- @param perk Perk
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, perk: Perk, removePick: boolean): nil
 function ILuaGameCharacter:LevelPerk(perk) end
+
+--- @public
+--- @param perk Perk
+--- @param removePick boolean
+--- @return nil
+function ILuaGameCharacter:LevelPerk(perk, removePick) end
 
 --- @public
 --- @param perk Perk
@@ -98,8 +153,18 @@ function ILuaGameCharacter:ReadLiterature(literature) end
 --- @public
 --- @param line string
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, line: string, r: number, g: number, b: number, font: UIFont, baseRange: number, customTag: string): nil
 function ILuaGameCharacter:Say(line) end
+
+--- @public
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param font UIFont
+--- @param baseRange number
+--- @param customTag string
+--- @return nil
+function ILuaGameCharacter:Say(line, r, g, b, font, baseRange, customTag) end
 
 --- @public
 --- @param arg0 string
@@ -115,8 +180,13 @@ function ILuaGameCharacter:StartAction(act) end
 --- @public
 --- @param event string
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, event: string, type: string): nil
 function ILuaGameCharacter:StartTimedActionAnim(event) end
+
+--- @public
+--- @param event string
+--- @param type string
+--- @return nil
+function ILuaGameCharacter:StartTimedActionAnim(event, type) end
 
 --- @public
 --- @return nil
@@ -151,8 +221,13 @@ function ILuaGameCharacter:addKnownMediaLine(guid) end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: integer): nil
 function ILuaGameCharacter:addReadLiterature(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
+function ILuaGameCharacter:addReadLiterature(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
@@ -217,10 +292,24 @@ function ILuaGameCharacter:climbSheetRope() end
 --- @public
 --- @param w IsoThumpable
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, w: IsoWindow): nil
---- @overload fun(self: ILuaGameCharacter, w: IsoThumpable, startingFrame: integer): nil
---- @overload fun(self: ILuaGameCharacter, w: IsoWindow, startingFrame: integer): nil
 function ILuaGameCharacter:climbThroughWindow(w) end
+
+--- @public
+--- @param w IsoWindow
+--- @return nil
+function ILuaGameCharacter:climbThroughWindow(w) end
+
+--- @public
+--- @param w IsoThumpable
+--- @param startingFrame integer
+--- @return nil
+function ILuaGameCharacter:climbThroughWindow(w, startingFrame) end
+
+--- @public
+--- @param w IsoWindow
+--- @param startingFrame integer
+--- @return nil
+function ILuaGameCharacter:climbThroughWindow(w, startingFrame) end
 
 --- @public
 --- @param arg0 IsoWindowFrame
@@ -470,8 +559,12 @@ function ILuaGameCharacter:getVisual() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ILuaGameCharacter, arg0: HandWeapon): integer
 function ILuaGameCharacter:getWeaponLevel() end
+
+--- @public
+--- @param arg0 HandWeapon
+--- @return integer
+function ILuaGameCharacter:getWeaponLevel(arg0) end
 
 --- @public
 --- @return number
@@ -622,8 +715,12 @@ function ILuaGameCharacter:isKnownMediaLine(guid) end
 --- @public
 --- @param item InventoryItem
 --- @return boolean
---- @overload fun(self: ILuaGameCharacter, arg0: Item): boolean
 function ILuaGameCharacter:isKnownPoison(item) end
+
+--- @public
+--- @param arg0 Item
+--- @return boolean
+function ILuaGameCharacter:isKnownPoison(arg0) end
 
 --- @public
 --- @param arg0 string
@@ -679,8 +776,12 @@ function ILuaGameCharacter:isReading() end
 --- @public
 --- @param name string
 --- @return boolean
---- @overload fun(self: ILuaGameCharacter, recipe: Recipe): boolean
 function ILuaGameCharacter:isRecipeKnown(name) end
+
+--- @public
+--- @param recipe Recipe
+--- @return boolean
+function ILuaGameCharacter:isRecipeKnown(recipe) end
 
 --- @public
 --- @return boolean
@@ -904,9 +1005,22 @@ function ILuaGameCharacter:setGodMod(b) end
 --- @public
 --- @param str string
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, str: string, dispTime: number): nil
---- @overload fun(self: ILuaGameCharacter, str: string, r: integer, g: integer, b: integer, dispTime: number): nil
 function ILuaGameCharacter:setHaloNote(str) end
+
+--- @public
+--- @param str string
+--- @param dispTime number
+--- @return nil
+function ILuaGameCharacter:setHaloNote(str, dispTime) end
+
+--- @public
+--- @param str string
+--- @param r integer
+--- @param g integer
+--- @param b integer
+--- @param dispTime number
+--- @return nil
+function ILuaGameCharacter:setHaloNote(str, r, g, b, dispTime) end
 
 --- @public
 --- @param arg0 number
@@ -1088,8 +1202,34 @@ function ILuaGameCharacter:stopOrTriggerSound(eventInstance) end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: any): nil
---- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: any, arg2: any): nil
---- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any): nil
---- @overload fun(self: ILuaGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
 function ILuaGameCharacter:triggerContextualAction(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
+function ILuaGameCharacter:triggerContextualAction(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @return nil
+function ILuaGameCharacter:triggerContextualAction(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return nil
+function ILuaGameCharacter:triggerContextualAction(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @param arg4 any
+--- @return nil
+function ILuaGameCharacter:triggerContextualAction(arg0, arg1, arg2, arg3, arg4) end

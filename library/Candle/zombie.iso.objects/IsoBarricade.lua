@@ -18,8 +18,14 @@ IsoBarricade = {}
 --- @param to BarricadeAble
 --- @param addOpposite boolean
 --- @return IsoBarricade
---- @overload fun(to: BarricadeAble, chr: IsoGameCharacter): IsoBarricade
 function IsoBarricade.AddBarricadeToObject(to, addOpposite) end
+
+--- @public
+--- @static
+--- @param to BarricadeAble
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
+function IsoBarricade.AddBarricadeToObject(to, chr) end
 
 --- @public
 --- @static
@@ -88,14 +94,23 @@ function IsoBarricade:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoBarricade, thumper: IsoMovingObject): nil
+function IsoBarricade:Thump(thumper) end
+
+--- @public
+--- @param thumper IsoMovingObject
+--- @return nil
 function IsoBarricade:Thump(thumper) end
 
 --- @public
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: IsoBarricade, owner: IsoGameCharacter, weapon: HandWeapon): nil
+function IsoBarricade:WeaponHit(owner, weapon) end
+
+--- @public
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
+--- @return nil
 function IsoBarricade:WeaponHit(owner, weapon) end
 
 --- @public
@@ -153,13 +168,20 @@ function IsoBarricade:getObjectName() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoBarricade): number
+function IsoBarricade:getThumpCondition() end
+
+--- @public
+--- @return number
 function IsoBarricade:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoBarricade, chr: IsoGameCharacter): Thumpable
+function IsoBarricade:getThumpableFor(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return Thumpable
 function IsoBarricade:getThumpableFor(chr) end
 
 --- @public
@@ -168,7 +190,10 @@ function IsoBarricade:isBlockVision() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoBarricade): boolean
+function IsoBarricade:isDestroyed() end
+
+--- @public
+--- @return boolean
 function IsoBarricade:isDestroyed() end
 
 --- @public
@@ -237,11 +262,17 @@ function IsoBarricade:saveChange(change, tbl, bb) end
 function IsoBarricade:setHealth(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoBarricade
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, dir: IsoDirections): IsoBarricade
 function IsoBarricade.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param dir IsoDirections
+--- @return IsoBarricade
+function IsoBarricade.new(cell, gridSquare, dir) end

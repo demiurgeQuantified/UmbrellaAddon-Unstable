@@ -39,8 +39,13 @@ function SGlobalObjectSystem:getInitialStateForClient() end
 
 --- @public
 --- @return nil
---- @overload fun(self: SGlobalObjectSystem, bb: ByteBuffer, WorldVersion: integer): nil
 function SGlobalObjectSystem:load() end
+
+--- @public
+--- @param bb ByteBuffer
+--- @param WorldVersion integer
+--- @return nil
+function SGlobalObjectSystem:load(bb, WorldVersion) end
 
 --- @public
 --- @return integer
@@ -60,8 +65,12 @@ function SGlobalObjectSystem:removeGlobalObjectOnClient(globalObject) end
 
 --- @public
 --- @return nil
---- @overload fun(self: SGlobalObjectSystem, bb: ByteBuffer): nil
 function SGlobalObjectSystem:save() end
+
+--- @public
+--- @param bb ByteBuffer
+--- @return nil
+function SGlobalObjectSystem:save(bb) end
 
 --- @public
 --- @param command string
@@ -94,7 +103,7 @@ function SGlobalObjectSystem:update() end
 function SGlobalObjectSystem:updateGlobalObjectOnClient(globalObject) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

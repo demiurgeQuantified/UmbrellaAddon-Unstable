@@ -20,7 +20,7 @@ function RandomizedDeadSurvivorBase:isValid(arg0, arg1) end
 function RandomizedDeadSurvivorBase:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

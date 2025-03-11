@@ -94,12 +94,12 @@ function IsoPlayer.hasInstance() end
 --- @public
 --- @static
 ---
----  The IsoPlayer.instance thread-safe invoke.   Calls the supplied callback if the
----  is non-null.   Performs this in a thread-safe manner.    It is intended that,
----  any thread intend to use the IsoPlayer.instance, and does not want another
----    to change the ptr in the meanwhile, it should call
----  callback)    eg.   IsoPlayer.invokeOnPlayerInstance(()->     {
----      }
+--- The IsoPlayer.instance thread-safe invoke.   Calls the supplied callback if the
+--- is non-null.   Performs this in a thread-safe manner.    It is intended that,
+--- any thread intend to use the IsoPlayer.instance, and does not want another
+--- to change the ptr in the meanwhile, it should call
+--- callback)    eg.   IsoPlayer.invokeOnPlayerInstance(()->     {
+--- }
 ---
 --- @param callback Runnable
 --- @return nil
@@ -109,7 +109,12 @@ function IsoPlayer.invokeOnPlayerInstance(callback) end
 --- @static
 --- @param arg0 any
 --- @return boolean
---- @overload fun(arg0: IsoGameCharacter): boolean
+function IsoPlayer.isLocalPlayer(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGameCharacter
+--- @return boolean
 function IsoPlayer.isLocalPlayer(arg0) end
 
 --- @public
@@ -154,8 +159,14 @@ function IsoPlayer:AttemptAttack() end
 --- @public
 --- @param chargeDelta number
 --- @return boolean
---- @overload fun(self: IsoPlayer, chargeDelta: number, forceShove: boolean, clickSound: string): boolean
 function IsoPlayer:DoAttack(chargeDelta) end
+
+--- @public
+--- @param chargeDelta number
+--- @param forceShove boolean
+--- @param clickSound string
+--- @return boolean
+function IsoPlayer:DoAttack(chargeDelta, forceShove, clickSound) end
 
 --- @public
 --- @param type string
@@ -283,8 +294,12 @@ function IsoPlayer:checkActionGroup() end
 --- @public
 --- @param remoteChr IsoPlayer
 --- @return boolean
---- @overload fun(self: IsoPlayer, remoteConnection: UdpConnection): boolean
 function IsoPlayer:checkCanSeeClient(remoteChr) end
+
+--- @public
+--- @param remoteConnection UdpConnection
+--- @return boolean
+function IsoPlayer:checkCanSeeClient(remoteConnection) end
 
 --- @public
 --- @return boolean
@@ -357,17 +372,26 @@ function IsoPlayer:getAlreadyReadBook() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoPlayer): number
+function IsoPlayer:getAnimalSize() end
+
+--- @public
+--- @return number
 function IsoPlayer:getAnimalSize() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoPlayer): string
+function IsoPlayer:getAnimalType() end
+
+--- @public
+--- @return string
 function IsoPlayer:getAnimalType() end
 
 --- @public
 --- @return AnimalVisual
---- @overload fun(self: IsoPlayer): AnimalVisual
+function IsoPlayer:getAnimalVisual() end
+
+--- @public
+--- @return AnimalVisual
 function IsoPlayer:getAnimalVisual() end
 
 --- @public
@@ -383,7 +407,7 @@ function IsoPlayer:getAttachedAnimals() end
 function IsoPlayer:getAttackType() end
 
 --- @public
---- @return IsoCell the cell
+--- @return IsoCell _ the cell
 function IsoPlayer:getCell() end
 
 --- @public
@@ -479,7 +503,10 @@ function IsoPlayer:getHoursSurvived() end
 
 --- @public
 --- @return HumanVisual
---- @overload fun(self: IsoPlayer): HumanVisual
+function IsoPlayer:getHumanVisual() end
+
+--- @public
+--- @return HumanVisual
 function IsoPlayer:getHumanVisual() end
 
 --- @public
@@ -496,9 +523,17 @@ function IsoPlayer:getInvAimingRangeMod() end
 
 --- @public
 --- @return ItemVisuals
---- @overload fun(self: IsoPlayer, itemVisuals: ItemVisuals): nil
---- @overload fun(self: IsoPlayer, itemVisuals: ItemVisuals): nil
 function IsoPlayer:getItemVisuals() end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @return nil
+function IsoPlayer:getItemVisuals(itemVisuals) end
+
+--- @public
+--- @param itemVisuals ItemVisuals
+--- @return nil
+function IsoPlayer:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return integer
@@ -601,9 +636,9 @@ function IsoPlayer:getPlayerClothingInsulation() end
 
 --- @public
 ---
----  Return the amount of temperature given by clothes wear
+--- Return the amount of temperature given by clothes wear
 ---
---- @return number temperature
+--- @return number _ temperature
 function IsoPlayer:getPlayerClothingTemperature() end
 
 --- @public
@@ -703,9 +738,18 @@ function IsoPlayer:getUseableVehicle() end
 
 --- @public
 --- @return string
---- @overload fun(self: IsoPlayer, canShowFirstname: boolean): string
---- @overload fun(self: IsoPlayer, arg0: boolean, arg1: boolean): string
 function IsoPlayer:getUsername() end
+
+--- @public
+--- @param canShowFirstname boolean
+--- @return string
+function IsoPlayer:getUsername(canShowFirstname) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 boolean
+--- @return string
+function IsoPlayer:getUsername(arg0, arg1) end
 
 --- @public
 --- @return BaseVisual
@@ -1021,7 +1065,10 @@ function IsoPlayer:isShowTag() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoPlayer): boolean
+function IsoPlayer:isSkeleton() end
+
+--- @public
+--- @return boolean
 function IsoPlayer:isSkeleton() end
 
 --- @public
@@ -1080,8 +1127,14 @@ function IsoPlayer:isbSeenThisFrame() end
 --- @public
 --- @param fileName string
 --- @return nil
---- @overload fun(self: IsoPlayer, input: ByteBuffer, WorldVersion: integer, IS_DEBUG_SAVE: boolean): nil
 function IsoPlayer:load(fileName) end
+
+--- @public
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param IS_DEBUG_SAVE boolean
+--- @return nil
+function IsoPlayer:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 InventoryItem
@@ -1094,10 +1147,10 @@ function IsoPlayer:nullifyAiming() end
 
 --- @public
 ---
----  Callback from ModelManager.Add/Remove functions.
+--- Callback from ModelManager.Add/Remove functions.
 ---
 --- @param modelManager ModelManager Event sender.
---- @param isCulled boolean
+--- @param isCulled boolean Whether or not this object is culled from the visible scene or not.
 --- @return nil
 function IsoPlayer:onCullStateChanged(modelManager, isCulled) end
 
@@ -1185,9 +1238,18 @@ function IsoPlayer:resetSleepingPillsTaken() end
 
 --- @public
 --- @return nil
---- @overload fun(self: IsoPlayer, fileName: string): nil
---- @overload fun(self: IsoPlayer, output: ByteBuffer, IS_DEBUG_SAVE: boolean): nil
 function IsoPlayer:save() end
+
+--- @public
+--- @param fileName string
+--- @return nil
+function IsoPlayer:save(fileName) end
+
+--- @public
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
+--- @return nil
+function IsoPlayer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param allChatMuted boolean
@@ -1465,7 +1527,11 @@ function IsoPlayer:setMaxWeightDelta(maxWeightDelta) end
 --- @public
 --- @param material string
 --- @return nil
---- @overload fun(self: IsoPlayer, material: Material): nil
+function IsoPlayer:setMeleeHitSurface(material) end
+
+--- @public
+--- @param material Material
+--- @return nil
 function IsoPlayer:setMeleeHitSurface(material) end
 
 --- @public
@@ -1532,7 +1598,11 @@ function IsoPlayer:setPlayerStats(bb, adminUsername) end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: IsoPlayer, arg0: Role): nil
+function IsoPlayer:setRole(arg0) end
+
+--- @public
+--- @param arg0 Role
+--- @return nil
 function IsoPlayer:setRole(arg0) end
 
 --- @public
@@ -1562,8 +1632,8 @@ function IsoPlayer:setShowTag(show) end
 
 --- @public
 ---
----  If you've take more than 10 sleeping pills you lose some health If you're
----  1 pills = 2
+--- If you've take more than 10 sleeping pills you lose some health If you're
+--- 1 pills = 2
 ---
 --- @param sleepingPillsTaken integer
 --- @return nil
@@ -1731,12 +1801,29 @@ function IsoPlayer:wasLastAttackHandToHand() end
 function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoPlayer
---- @overload fun(cell: IsoCell, desc: SurvivorDesc, x: integer, y: integer, z: integer): IsoPlayer
---- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: integer, arg3: integer, arg4: integer, arg5: boolean): IsoPlayer
 function IsoPlayer.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param desc SurvivorDesc
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return IsoPlayer
+function IsoPlayer.new(cell, desc, x, y, z) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 SurvivorDesc
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 boolean
+--- @return IsoPlayer
+function IsoPlayer.new(arg0, arg1, arg2, arg3, arg4, arg5) end

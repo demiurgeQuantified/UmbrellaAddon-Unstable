@@ -73,7 +73,7 @@ function StringConfigOption:setValue(value) end
 function StringConfigOption:setValueFromObject(o) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -81,5 +81,11 @@ function StringConfigOption:setValueFromObject(o) end
 --- @param arg1 string
 --- @param arg2 String[]
 --- @return StringConfigOption
---- @overload fun(name: string, defaultValue: string, maxLength: integer): StringConfigOption
 function StringConfigOption.new(arg0, arg1, arg2) end
+
+--- @public
+--- @param name string
+--- @param defaultValue string
+--- @param maxLength integer
+--- @return StringConfigOption
+function StringConfigOption.new(name, defaultValue, maxLength) end

@@ -46,7 +46,12 @@ function WarManager.getWarRelevent(arg0) end
 --- @static
 --- @param arg0 integer
 --- @return boolean
---- @overload fun(arg0: string): boolean
+function WarManager.isWarClaimed(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return boolean
 function WarManager.isWarClaimed(arg0) end
 
 --- @public

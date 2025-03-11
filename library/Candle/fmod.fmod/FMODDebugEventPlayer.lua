@@ -88,15 +88,19 @@ function FMODDebugEventPlayer:setVolume(arg0) end
 
 --- @public
 --- @return nil
---- @overload fun(self: FMODDebugEventPlayer, arg0: boolean): nil
 function FMODDebugEventPlayer:stop() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function FMODDebugEventPlayer:stop(arg0) end
 
 --- @public
 --- @return nil
 function FMODDebugEventPlayer:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

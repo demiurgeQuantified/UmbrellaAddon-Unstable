@@ -39,7 +39,7 @@ function PlayerSitOnGroundState:execute(owner) end
 function PlayerSitOnGroundState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

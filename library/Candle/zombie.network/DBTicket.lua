@@ -63,7 +63,7 @@ function DBTicket:setTicketID(ticketID) end
 function DBTicket:setViewed(viewed) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

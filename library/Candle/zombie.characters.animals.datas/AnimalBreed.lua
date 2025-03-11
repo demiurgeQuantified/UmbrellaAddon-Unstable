@@ -54,7 +54,7 @@ function AnimalBreed:loadForcedGenes(arg0) end
 function AnimalBreed:loadSounds(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

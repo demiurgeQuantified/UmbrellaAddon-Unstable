@@ -97,5 +97,10 @@ function ResourceFluid:transferTo(arg0, arg1) end
 --- @public
 --- @param arg0 Resource
 --- @return nil
---- @overload fun(self: ResourceFluid, arg0: Resource, arg1: number): nil
 function ResourceFluid:tryTransferTo(arg0) end
+
+--- @public
+--- @param arg0 Resource
+--- @param arg1 number
+--- @return nil
+function ResourceFluid:tryTransferTo(arg0, arg1) end

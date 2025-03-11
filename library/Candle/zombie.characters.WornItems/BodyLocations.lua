@@ -20,7 +20,7 @@ function BodyLocations.Reset() end
 function BodyLocations.getGroup(id) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

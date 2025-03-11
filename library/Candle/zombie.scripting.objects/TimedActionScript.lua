@@ -98,7 +98,7 @@ function TimedActionScript:isCantSit() end
 function TimedActionScript:isFaceObject() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -28,7 +28,12 @@ function AnimalDefinitions.getAnimalDefsArray() end
 --- @static
 --- @param arg0 string
 --- @return AnimalDefinitions
---- @overload fun(arg0: IsoAnimal): AnimalDefinitions
+function AnimalDefinitions.getDef(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoAnimal
+--- @return AnimalDefinitions
 function AnimalDefinitions.getDef(arg0) end
 
 --- @public
@@ -91,7 +96,7 @@ function AnimalDefinitions:isInsideHutchTime(arg0) end
 function AnimalDefinitions:isOutsideHutchTime() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

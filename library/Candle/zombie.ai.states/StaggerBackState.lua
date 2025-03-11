@@ -44,7 +44,7 @@ function StaggerBackState:exit(owner) end
 function StaggerBackState:getMaxStaggerTime(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -95,7 +95,7 @@ function Fixing:setName(name) end
 function Fixing:usedInFixer(itemType, chr) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

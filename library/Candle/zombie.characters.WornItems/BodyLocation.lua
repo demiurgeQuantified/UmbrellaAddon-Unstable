@@ -62,7 +62,7 @@ function BodyLocation:setHideModel(otherId) end
 function BodyLocation:setMultiItem(bMultiItem) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

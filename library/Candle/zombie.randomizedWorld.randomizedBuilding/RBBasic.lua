@@ -111,7 +111,7 @@ function RBBasic:getSurvivorStories() end
 function RBBasic:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

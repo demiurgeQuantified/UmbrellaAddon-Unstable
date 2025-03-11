@@ -15,7 +15,11 @@ function ObjectInfo:canRotate() end
 --- @public
 --- @param arg0 integer
 --- @return FaceInfo
---- @overload fun(self: ObjectInfo, arg0: string): FaceInfo
+function ObjectInfo:getFace(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return FaceInfo
 function ObjectInfo:getFace(arg0) end
 
 --- @public

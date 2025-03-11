@@ -70,7 +70,7 @@ function InputScriptData:removeInputItem(arg0) end
 function InputScriptData:verifyInputItems(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

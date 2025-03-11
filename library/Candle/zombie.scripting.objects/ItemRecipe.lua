@@ -30,7 +30,7 @@ function ItemRecipe:getUse() end
 function ItemRecipe:setModule(module) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

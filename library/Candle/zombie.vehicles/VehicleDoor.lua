@@ -52,7 +52,7 @@ function VehicleDoor:setLocked(locked) end
 function VehicleDoor:setOpen(open) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -13,7 +13,7 @@ StashBuilding = {}
 function StashBuilding:getName() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -14,7 +14,7 @@ RZSHogWild = {}
 function RZSHogWild:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

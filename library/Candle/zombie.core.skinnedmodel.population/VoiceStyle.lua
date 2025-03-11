@@ -29,7 +29,7 @@ function VoiceStyle:getVoiceType() end
 function VoiceStyle:isValid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

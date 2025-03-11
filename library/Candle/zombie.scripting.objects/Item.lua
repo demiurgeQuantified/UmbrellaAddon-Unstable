@@ -13,8 +13,13 @@ Item = {}
 --- @public
 --- @param str string
 --- @return nil
---- @overload fun(self: Item, arg0: string, arg1: string): nil
 function Item:DoParam(str) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
+function Item:DoParam(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
@@ -24,8 +29,13 @@ function Item:InitLoadPP(arg0) end
 --- @public
 --- @param param string
 --- @return InventoryItem
---- @overload fun(self: Item, arg0: string, arg1: boolean): InventoryItem
 function Item:InstanceItem(param) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return InventoryItem
+function Item:InstanceItem(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
@@ -53,7 +63,11 @@ function Item:PreReload() end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: Item, arg0: CraftRecipe): nil
+function Item:addResearchableRecipe(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipe
+--- @return nil
 function Item:addResearchableRecipe(arg0) end
 
 --- @public
@@ -74,11 +88,11 @@ function Item:canSpawnAsLoot() end
 function Item:getAcceptItemFunction() end
 
 --- @public
---- @return number the ActualWeight
+--- @return number _ the ActualWeight
 function Item:getActualWeight() end
 
 --- @public
---- @return string the AmmoType
+--- @return string _ the AmmoType
 function Item:getAmmoType() end
 
 --- @public
@@ -90,11 +104,11 @@ function Item:getB() end
 function Item:getBloodClothingType() end
 
 --- @public
---- @return string the bodyLocation
+--- @return string _ the bodyLocation
 function Item:getBodyLocation() end
 
 --- @public
---- @return number the BoredomChange
+--- @return number _ the BoredomChange
 function Item:getBoredomChange() end
 
 --- @public
@@ -110,7 +124,7 @@ function Item:getBringToBearSound() end
 function Item:getBulletOutSound() end
 
 --- @public
---- @return ArrayList the Categories
+--- @return ArrayList _ the Categories
 function Item:getCategories() end
 
 --- @public
@@ -150,11 +164,11 @@ function Item:getColorGreen() end
 function Item:getColorRed() end
 
 --- @public
---- @return integer the ConditionLowerChance
+--- @return integer _ the ConditionLowerChance
 function Item:getConditionLowerChance() end
 
 --- @public
---- @return integer the ConditionMax
+--- @return integer _ the ConditionMax
 function Item:getConditionMax() end
 
 --- @public
@@ -166,7 +180,7 @@ function Item:getCookingSound() end
 function Item:getCorpseSicknessDefense() end
 
 --- @public
---- @return integer the Count
+--- @return integer _ the Count
 --- @deprecated
 function Item:getCount() end
 
@@ -183,11 +197,11 @@ function Item:getCustomEatSound() end
 function Item:getDamagedSound() end
 
 --- @public
---- @return integer the DaysFresh
+--- @return integer _ the DaysFresh
 function Item:getDaysFresh() end
 
 --- @public
---- @return integer the DaysTotallyRotten
+--- @return integer _ the DaysTotallyRotten
 function Item:getDaysTotallyRotten() end
 
 --- @public
@@ -203,15 +217,15 @@ function Item:getDiscomfortModifier() end
 function Item:getDisplayCategory() end
 
 --- @public
---- @return string the DisplayName
+--- @return string _ the DisplayName
 function Item:getDisplayName() end
 
 --- @public
---- @return integer the DoorDamage
+--- @return integer _ the DoorDamage
 function Item:getDoorDamage() end
 
 --- @public
---- @return string the DoorHitSound
+--- @return string _ the DoorHitSound
 function Item:getDoorHitSound() end
 
 --- @public
@@ -239,11 +253,11 @@ function Item:getEjectAmmoStartSound() end
 function Item:getEjectAmmoStopSound() end
 
 --- @public
---- @return number the EnduranceChange
+--- @return number _ the EnduranceChange
 function Item:getEnduranceChange() end
 
 --- @public
---- @return number the EnduranceMod
+--- @return number _ the EnduranceMod
 function Item:getEnduranceMod() end
 
 --- @public
@@ -299,11 +313,11 @@ function Item:getHeadConditionLowerChanceMultiplier() end
 function Item:getHearingModifier() end
 
 --- @public
---- @return number the HungerChange
+--- @return number _ the HungerChange
 function Item:getHungerChange() end
 
 --- @public
---- @return string the Icon
+--- @return string _ the Icon
 function Item:getIcon() end
 
 --- @public
@@ -311,7 +325,7 @@ function Item:getIcon() end
 function Item:getIconsForTexture() end
 
 --- @public
---- @return string the ImpactSound
+--- @return string _ the ImpactSound
 function Item:getImpactSound() end
 
 --- @public
@@ -343,7 +357,7 @@ function Item:getItemConfig() end
 function Item:getItemConfigKey() end
 
 --- @public
---- @return number the KnockdownMod
+--- @return number _ the KnockdownMod
 function Item:getKnockdownMod() end
 
 --- @public
@@ -363,11 +377,11 @@ function Item:getLuaCreate() end
 function Item:getMapID() end
 
 --- @public
---- @return number the MaxDamage
+--- @return number _ the MaxDamage
 function Item:getMaxDamage() end
 
 --- @public
---- @return integer the MaxHitCount
+--- @return integer _ the MaxHitCount
 function Item:getMaxHitCount() end
 
 --- @public
@@ -379,27 +393,27 @@ function Item:getMaxItemSize() end
 function Item:getMaxLevelTrained() end
 
 --- @public
---- @return number the MaxRange
+--- @return number _ the MaxRange
 function Item:getMaxRange() end
 
 --- @public
---- @return number the MinAngle
+--- @return number _ the MinAngle
 function Item:getMinAngle() end
 
 --- @public
---- @return number the MinDamage
+--- @return number _ the MinDamage
 function Item:getMinDamage() end
 
 --- @public
---- @return number the MinimumSwingTime
+--- @return number _ the MinimumSwingTime
 function Item:getMinimumSwingTime() end
 
 --- @public
---- @return integer the MinutesToBurn
+--- @return integer _ the MinutesToBurn
 function Item:getMinutesToBurn() end
 
 --- @public
---- @return integer the MinutesToCook
+--- @return integer _ the MinutesToCook
 function Item:getMinutesToCook() end
 
 --- @public
@@ -407,11 +421,11 @@ function Item:getMinutesToCook() end
 function Item:getModuleName() end
 
 --- @public
---- @return number the NPCSoundBoost
+--- @return number _ the NPCSoundBoost
 function Item:getNPCSoundBoost() end
 
 --- @public
---- @return string the name
+--- @return string _ the name
 function Item:getName() end
 
 --- @public
@@ -443,23 +457,23 @@ function Item:getOnBreak() end
 function Item:getOpenSound() end
 
 --- @public
---- @return number the OtherCharacterVolumeBoost
+--- @return number _ the OtherCharacterVolumeBoost
 function Item:getOtherCharacterVolumeBoost() end
 
 --- @public
---- @return string the OtherHandRequire
+--- @return string _ the OtherHandRequire
 function Item:getOtherHandRequire() end
 
 --- @public
---- @return Stack the PaletteChoices
+--- @return Stack _ the PaletteChoices
 function Item:getPaletteChoices() end
 
 --- @public
---- @return string the PalettesStart
+--- @return string _ the PalettesStart
 function Item:getPalettesStart() end
 
 --- @public
---- @return string the PhysicsObject
+--- @return string _ the PhysicsObject
 function Item:getPhysicsObject() end
 
 --- @public
@@ -483,7 +497,7 @@ function Item:getPoisonPower() end
 function Item:getPourType() end
 
 --- @public
---- @return number the PushBackMod
+--- @return number _ the PushBackMod
 function Item:getPushBackMod() end
 
 --- @public
@@ -507,7 +521,7 @@ function Item:getRecordedMediaCat() end
 function Item:getReplaceOnDeplete() end
 
 --- @public
---- @return string the ReplaceOnUse
+--- @return string _ the ReplaceOnUse
 function Item:getReplaceOnUse() end
 
 --- @public
@@ -529,9 +543,18 @@ function Item:getReplaceWhenUnequip() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(self: Item, arg0: IsoGameCharacter): ArrayList
---- @overload fun(self: Item, arg0: IsoGameCharacter, arg1: boolean): ArrayList
 function Item:getResearchableRecipes() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return ArrayList
+function Item:getResearchableRecipes(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 boolean
+--- @return ArrayList
+function Item:getResearchableRecipes(arg0, arg1) end
 
 --- @public
 --- @return string
@@ -560,11 +583,11 @@ function Item:getSoundByID(ID) end
 function Item:getSoundParameter(parameterName) end
 
 --- @public
---- @return integer the SoundRadius
+--- @return integer _ the SoundRadius
 function Item:getSoundRadius() end
 
 --- @public
---- @return integer the SoundVolume
+--- @return integer _ the SoundVolume
 function Item:getSoundVolume() end
 
 --- @public
@@ -572,11 +595,11 @@ function Item:getSoundVolume() end
 function Item:getSpawnWith() end
 
 --- @public
---- @return integer the SplatNumber
+--- @return integer _ the SplatNumber
 function Item:getSplatNumber() end
 
 --- @public
---- @return string the SpriteName
+--- @return string _ the SpriteName
 function Item:getSpriteName() end
 
 --- @public
@@ -596,23 +619,23 @@ function Item:getStaticModelsByIndex() end
 function Item:getStrainModifier() end
 
 --- @public
---- @return number the StressChange
+--- @return number _ the StressChange
 function Item:getStressChange() end
 
 --- @public
---- @return number the SwingAmountBeforeImpact
+--- @return number _ the SwingAmountBeforeImpact
 function Item:getSwingAmountBeforeImpact() end
 
 --- @public
---- @return string the SwingAnim
+--- @return string _ the SwingAnim
 function Item:getSwingAnim() end
 
 --- @public
---- @return string the SwingSound
+--- @return string _ the SwingSound
 function Item:getSwingSound() end
 
 --- @public
---- @return number the SwingTime
+--- @return number _ the SwingTime
 function Item:getSwingTime() end
 
 --- @public
@@ -636,11 +659,11 @@ function Item:getThirstChange() end
 function Item:getTicksPerEquipUse() end
 
 --- @public
---- @return number the ToHitModifier
+--- @return number _ the ToHitModifier
 function Item:getToHitModifier() end
 
 --- @public
---- @return Type the type
+--- @return Type _ the type
 function Item:getType() end
 
 --- @public
@@ -652,11 +675,11 @@ function Item:getTypeString() end
 function Item:getUnequipSound() end
 
 --- @public
---- @return number the UnhappyChange
+--- @return number _ the UnhappyChange
 function Item:getUnhappyChange() end
 
 --- @public
---- @return number the UseDelta
+--- @return number _ the UseDelta
 function Item:getUseDelta() end
 
 --- @public
@@ -672,7 +695,7 @@ function Item:getVisionModifier() end
 function Item:getWaterresist() end
 
 --- @public
---- @return string the WeaponSprite
+--- @return string _ the WeaponSprite
 function Item:getWeaponSprite() end
 
 --- @public
@@ -680,11 +703,11 @@ function Item:getWeaponSprite() end
 function Item:getWeaponSpritesByIndex() end
 
 --- @public
---- @return number the WeaponWeight
+--- @return number _ the WeaponWeight
 function Item:getWeaponWeight() end
 
 --- @public
---- @return number the EmptyWeight
+--- @return number _ the EmptyWeight
 function Item:getWeightEmpty() end
 
 --- @public
@@ -734,31 +757,31 @@ function Item:hasTag(arg0) end
 function Item:ignoreZombieDensity() end
 
 --- @public
---- @return boolean the Alcoholic
+--- @return boolean _ the Alcoholic
 function Item:isAlcoholic() end
 
 --- @public
---- @return boolean the AlwaysKnockdown
+--- @return boolean _ the AlwaysKnockdown
 function Item:isAlwaysKnockdown() end
 
 --- @public
---- @return boolean the AlwaysWelcomeGift
+--- @return boolean _ the AlwaysWelcomeGift
 function Item:isAlwaysWelcomeGift() end
 
 --- @public
---- @return boolean the AngleFalloff
+--- @return boolean _ the AngleFalloff
 function Item:isAngleFalloff() end
 
 --- @public
---- @return boolean the CanBandage
+--- @return boolean _ the CanBandage
 function Item:isCanBandage() end
 
 --- @public
---- @return boolean the CanBarricade
+--- @return boolean _ the CanBarricade
 function Item:isCanBarricade() end
 
 --- @public
---- @return boolean the CantAttackWithLowestEndurance
+--- @return boolean _ the CantAttackWithLowestEndurance
 function Item:isCantAttackWithLowestEndurance() end
 
 --- @public
@@ -782,11 +805,11 @@ function Item:isCosmetic() end
 function Item:isCraftRecipeProduct() end
 
 --- @public
---- @return boolean the DangerousUncooked
+--- @return boolean _ the DangerousUncooked
 function Item:isDangerousUncooked() end
 
 --- @public
---- @return boolean the DisappearOnUse
+--- @return boolean _ the DisappearOnUse
 function Item:isDisappearOnUse() end
 
 --- @public
@@ -798,7 +821,7 @@ function Item:isFarmingLoot() end
 function Item:isHidden() end
 
 --- @public
---- @return boolean the IsCookable
+--- @return boolean _ the IsCookable
 function Item:isIsCookable() end
 
 --- @public
@@ -806,7 +829,7 @@ function Item:isIsCookable() end
 function Item:isKeepOnDeplete() end
 
 --- @public
---- @return boolean the KnockBackOnNoDeath
+--- @return boolean _ the KnockBackOnNoDeath
 function Item:isKnockBackOnNoDeath() end
 
 --- @public
@@ -830,27 +853,27 @@ function Item:isMedicalLoot() end
 function Item:isMementoLoot() end
 
 --- @public
---- @return boolean the MultipleHitConditionAffected
+--- @return boolean _ the MultipleHitConditionAffected
 function Item:isMultipleHitConditionAffected() end
 
 --- @public
---- @return boolean the OtherHandUse
+--- @return boolean _ the OtherHandUse
 function Item:isOtherHandUse() end
 
 --- @public
---- @return boolean the RangeFalloff
+--- @return boolean _ the RangeFalloff
 function Item:isRangeFalloff() end
 
 --- @public
---- @return boolean the Ranged
+--- @return boolean _ the Ranged
 function Item:isRanged() end
 
 --- @public
---- @return boolean the ShareDamage
+--- @return boolean _ the ShareDamage
 function Item:isShareDamage() end
 
 --- @public
---- @return boolean the ShareEndurance
+--- @return boolean _ the ShareEndurance
 function Item:isShareEndurance() end
 
 --- @public
@@ -858,7 +881,7 @@ function Item:isShareEndurance() end
 function Item:isSpice() end
 
 --- @public
---- @return boolean the SplatBloodOnNoDeath
+--- @return boolean _ the SplatBloodOnNoDeath
 function Item:isSplatBloodOnNoDeath() end
 
 --- @public
@@ -870,19 +893,19 @@ function Item:isSurvivalGearLoot() end
 function Item:isToolLoot() end
 
 --- @public
---- @return boolean the UseEndurance
+--- @return boolean _ the UseEndurance
 function Item:isUseEndurance() end
 
 --- @public
---- @return boolean the UseSelf
+--- @return boolean _ the UseSelf
 function Item:isUseSelf() end
 
 --- @public
---- @return boolean the UseWhileEquipped
+--- @return boolean _ the UseWhileEquipped
 function Item:isUseWhileEquipped() end
 
 --- @public
---- @return boolean the UseWhileUnequipped
+--- @return boolean _ the UseWhileUnequipped
 function Item:isUseWhileUnequipped() end
 
 --- @public
@@ -1072,8 +1095,12 @@ function Item:setIsCookable(IsCookable) end
 
 --- @public
 --- @return nil
---- @overload fun(self: Item, arg0: boolean): nil
 function Item:setIsCraftRecipeProduct() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Item:setIsCraftRecipeProduct(arg0) end
 
 --- @public
 --- @param arg0 ItemConfig
@@ -1360,7 +1387,7 @@ function Item:setWindresist(w) end
 function Item:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -74,8 +74,14 @@ function DesignationZone.load(arg0, arg1) end
 --- @static
 --- @param arg0 DesignationZone
 --- @return nil
---- @overload fun(arg0: string, arg1: string): nil
 function DesignationZone.removeZone(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 string
+--- @return nil
+function DesignationZone.removeZone(arg0, arg1) end
 
 --- @public
 --- @static
@@ -151,10 +157,20 @@ function DesignationZone:setName(arg0) end
 function DesignationZone:unloading() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return DesignationZone
---- @overload fun(arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: integer): DesignationZone
 function DesignationZone.new() end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @return DesignationZone
+function DesignationZone.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end

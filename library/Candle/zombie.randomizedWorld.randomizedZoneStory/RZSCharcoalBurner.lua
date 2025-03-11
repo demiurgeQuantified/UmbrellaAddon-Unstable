@@ -14,7 +14,7 @@ RZSCharcoalBurner = {}
 function RZSCharcoalBurner:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

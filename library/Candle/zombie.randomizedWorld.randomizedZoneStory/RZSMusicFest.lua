@@ -14,7 +14,7 @@ RZSMusicFest = {}
 function RZSMusicFest:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

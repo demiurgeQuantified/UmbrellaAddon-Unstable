@@ -395,8 +395,13 @@ function AnimalData:setWeight(arg0) end
 --- @public
 --- @param arg0 number
 --- @return nil
---- @overload fun(self: AnimalData, arg0: number, arg1: boolean): nil
 function AnimalData:setWoolQuantity(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 boolean
+--- @return nil
+function AnimalData:setWoolQuantity(arg0, arg1) end
 
 --- @public
 --- @param arg0 PZCalendar
@@ -425,7 +430,7 @@ function AnimalData:updateLastPregnancyTime() end
 function AnimalData:updateLastTimeMilked() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

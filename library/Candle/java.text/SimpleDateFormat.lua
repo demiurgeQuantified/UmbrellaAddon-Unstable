@@ -76,12 +76,26 @@ function SimpleDateFormat:toLocalizedPattern() end
 function SimpleDateFormat:toPattern() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return SimpleDateFormat
---- @overload fun(arg0: string): SimpleDateFormat
---- @overload fun(arg0: string, arg1: DateFormatSymbols): SimpleDateFormat
---- @overload fun(arg0: string, arg1: Locale): SimpleDateFormat
 function SimpleDateFormat.new() end
+
+--- @public
+--- @param arg0 string
+--- @return SimpleDateFormat
+function SimpleDateFormat.new(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 DateFormatSymbols
+--- @return SimpleDateFormat
+function SimpleDateFormat.new(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Locale
+--- @return SimpleDateFormat
+function SimpleDateFormat.new(arg0, arg1) end

@@ -32,8 +32,14 @@ function GlobalObjectSystem:getName() end
 --- @public
 --- @param arg0 IsoGridSquare
 --- @return GlobalObject
---- @overload fun(self: GlobalObjectSystem, x: integer, y: integer, z: integer): GlobalObject
 function GlobalObjectSystem:getObjectAt(arg0) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return GlobalObject
+function GlobalObjectSystem:getObjectAt(x, y, z) end
 
 --- @public
 --- @param index integer

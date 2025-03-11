@@ -48,12 +48,25 @@ function IsoPushableObject:save(output, IS_DEBUG_SAVE) end
 function IsoPushableObject:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoPushableObject
---- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite): IsoPushableObject
---- @overload fun(cell: IsoCell, x: integer, y: integer, z: integer): IsoPushableObject
 function IsoPushableObject.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param square IsoGridSquare
+--- @param spr IsoSprite
+--- @return IsoPushableObject
+function IsoPushableObject.new(cell, square, spr) end
+
+--- @public
+--- @param cell IsoCell
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return IsoPushableObject
+function IsoPushableObject.new(cell, x, y, z) end

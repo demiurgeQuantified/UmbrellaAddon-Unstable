@@ -40,7 +40,7 @@ function ProfessionFactory.getProfessions() end
 function ProfessionFactory.init() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

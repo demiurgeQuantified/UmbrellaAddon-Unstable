@@ -63,7 +63,7 @@ function VehicleLight:setFocusingDown() end
 function VehicleLight:setFocusingUp() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

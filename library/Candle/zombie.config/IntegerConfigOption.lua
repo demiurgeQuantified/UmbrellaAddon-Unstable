@@ -73,7 +73,7 @@ function IntegerConfigOption:setValue(value) end
 function IntegerConfigOption:setValueFromObject(o) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

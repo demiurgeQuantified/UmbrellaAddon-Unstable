@@ -48,18 +48,30 @@ function SandboxOptions:getCompostHours() end
 
 --- @public
 --- @return integer
---- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): integer
 function SandboxOptions:getCurrentDiminishedLootPercentage() end
 
 --- @public
+--- @param arg0 IsoGridSquare
+--- @return integer
+function SandboxOptions:getCurrentDiminishedLootPercentage(arg0) end
+
+--- @public
 --- @return number
---- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): number
 function SandboxOptions:getCurrentLootMultiplier() end
 
 --- @public
+--- @param arg0 IsoGridSquare
+--- @return number
+function SandboxOptions:getCurrentLootMultiplier(arg0) end
+
+--- @public
 --- @return integer
---- @overload fun(self: SandboxOptions, arg0: IsoGridSquare): integer
 function SandboxOptions:getCurrentLootedChance() end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return integer
+function SandboxOptions:getCurrentLootedChance(arg0) end
 
 --- @public
 --- @return integer
@@ -145,8 +157,12 @@ function SandboxOptions:isUnstableScriptNameSpam() end
 
 --- @public
 --- @return nil
---- @overload fun(self: SandboxOptions, input: ByteBuffer): nil
 function SandboxOptions:load() end
+
+--- @public
+--- @param input ByteBuffer
+--- @return nil
+function SandboxOptions:load(input) end
 
 --- @public
 --- @return nil
@@ -193,7 +209,7 @@ function SandboxOptions:randomAlarmDecay(arg0) end
 
 --- @public
 ---
----  Random the number of day for the selectricity shut off
+--- Random the number of day for the selectricity shut off
 ---
 --- @param electricityShutoffModifier integer
 --- @return integer
@@ -201,7 +217,7 @@ function SandboxOptions:randomElectricityShut(electricityShutoffModifier) end
 
 --- @public
 ---
----  Random the number of day for the water shut off
+--- Random the number of day for the water shut off
 ---
 --- @param waterShutoffModifier integer
 --- @return integer
@@ -254,7 +270,7 @@ function SandboxOptions:toLua() end
 function SandboxOptions:updateFromLua() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

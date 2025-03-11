@@ -17,7 +17,7 @@ function FixerSkill:getSkillLevel() end
 function FixerSkill:getSkillName() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

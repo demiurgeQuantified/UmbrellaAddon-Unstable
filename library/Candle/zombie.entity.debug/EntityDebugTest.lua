@@ -39,7 +39,7 @@ function EntityDebugTest:create(arg0) end
 function EntityDebugTest:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

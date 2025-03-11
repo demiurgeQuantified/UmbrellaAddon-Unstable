@@ -28,12 +28,12 @@ function RVSCarCrashCorpse:randomizeVehicleStory(zone, chunk) end
 function RVSCarCrashCorpse:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 ---
----  Vehicle alone, corpse not so far from the car's front with blood trail
+--- Vehicle alone, corpse not so far from the car's front with blood trail
 ---
 --- @return RVSCarCrashCorpse
 function RVSCarCrashCorpse.new() end

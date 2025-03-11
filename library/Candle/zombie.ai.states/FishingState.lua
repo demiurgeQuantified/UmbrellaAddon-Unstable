@@ -33,7 +33,7 @@ function FishingState:execute(owner) end
 function FishingState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

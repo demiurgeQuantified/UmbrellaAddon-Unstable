@@ -103,7 +103,7 @@ function IsoObjectPicker:StartRender() end
 function IsoObjectPicker:getInstance() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

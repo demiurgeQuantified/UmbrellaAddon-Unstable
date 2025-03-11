@@ -40,7 +40,7 @@ function ZombieOnGroundState:execute(owner) end
 function ZombieOnGroundState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

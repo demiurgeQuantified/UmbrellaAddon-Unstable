@@ -78,7 +78,7 @@ function IsoLot:load(arg0, arg1, arg2, arg3, arg4, arg5) end
 function IsoLot:loadNew(arg0, arg1, arg2, arg3, arg4) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

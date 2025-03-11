@@ -66,14 +66,23 @@ function IAnimatable:getUID() end
 --- @public
 --- @param arg0 string
 --- @return IAnimationVariableSlot
---- @overload fun(self: IAnimatable, arg0: AnimationVariableHandle): IAnimationVariableSlot
+function IAnimatable:getVariable(arg0) end
+
+--- @public
+--- @param arg0 AnimationVariableHandle
+--- @return IAnimationVariableSlot
 function IAnimatable:getVariable(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: IAnimatable, arg0: string, arg1: boolean): boolean
 function IAnimatable:getVariableBoolean(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return boolean
+function IAnimatable:getVariableBoolean(arg0, arg1) end
 
 --- @public
 --- @param arg0 string

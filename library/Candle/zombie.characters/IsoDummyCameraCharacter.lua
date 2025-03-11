@@ -13,7 +13,7 @@ IsoDummyCameraCharacter = {}
 function IsoDummyCameraCharacter:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

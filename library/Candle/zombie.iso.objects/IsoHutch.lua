@@ -235,11 +235,19 @@ function IsoHutch:tryFindAndRemoveAnimalFromNestBox(arg0) end
 function IsoHutch:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 IsoCell
 --- @return IsoHutch
---- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: string, arg3: table, arg4: IsoGridSquare): IsoHutch
 function IsoHutch.new(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 boolean
+--- @param arg2 string
+--- @param arg3 table
+--- @param arg4 IsoGridSquare
+--- @return IsoHutch
+function IsoHutch.new(arg0, arg1, arg2, arg3, arg4) end

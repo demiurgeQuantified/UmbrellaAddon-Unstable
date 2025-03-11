@@ -10,7 +10,7 @@ RBSpiffo = {}
 
 --- @public
 ---
----  Description copied from class: RandomizedBuildingBase
+--- Description copied from class: RandomizedBuildingBase
 ---
 --- @param def BuildingDef
 --- @param force boolean
@@ -28,7 +28,7 @@ function RBSpiffo:randomizeBuilding(def) end
 function RBSpiffo:roomValid(sq) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

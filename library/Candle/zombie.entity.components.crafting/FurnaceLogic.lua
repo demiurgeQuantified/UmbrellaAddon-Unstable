@@ -163,5 +163,10 @@ function FurnaceLogic:start(arg0) end
 --- @public
 --- @param arg0 IsoPlayer
 --- @return nil
---- @overload fun(self: FurnaceLogic, arg0: IsoPlayer, arg1: boolean): nil
 function FurnaceLogic:stop(arg0) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @param arg1 boolean
+--- @return nil
+function FurnaceLogic:stop(arg0, arg1) end

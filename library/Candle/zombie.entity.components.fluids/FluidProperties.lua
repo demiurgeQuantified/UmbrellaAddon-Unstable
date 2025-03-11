@@ -109,7 +109,7 @@ function FluidProperties:setThirstChange(arg0) end
 function FluidProperties:setUnhappyChange(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -30,7 +30,7 @@ function LuaTimedAction:update() end
 function LuaTimedAction:valid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

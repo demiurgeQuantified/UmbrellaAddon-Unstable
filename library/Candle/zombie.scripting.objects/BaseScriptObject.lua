@@ -22,7 +22,11 @@ function BaseScriptObject:Load(arg0, arg1) end
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: BaseScriptObject, arg0: Block): nil
+function BaseScriptObject:LoadCommonBlock(arg0) end
+
+--- @public
+--- @param arg0 Block
+--- @return nil
 function BaseScriptObject:LoadCommonBlock(arg0) end
 
 --- @public

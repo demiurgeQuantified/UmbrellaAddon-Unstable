@@ -41,7 +41,7 @@ function LoadingQueueState:render() end
 function LoadingQueueState:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -70,8 +70,13 @@ function IsoCurtain:getSoundPrefix() end
 --- @public
 --- @param square2 IsoGridSquare
 --- @return boolean
---- @overload fun(self: IsoCurtain, square1: IsoGridSquare, square2: IsoGridSquare): boolean
 function IsoCurtain:isAdjacentToSquare(square2) end
+
+--- @public
+--- @param square1 IsoGridSquare
+--- @param square2 IsoGridSquare
+--- @return boolean
+function IsoCurtain:isAdjacentToSquare(square1, square2) end
 
 --- @public
 --- @param input ByteBuffer
@@ -113,8 +118,15 @@ function IsoCurtain:save(output, IS_DEBUG_SAVE) end
 --- @param val integer
 --- @param source UdpConnection
 --- @return nil
---- @overload fun(self: IsoCurtain, bRemote: boolean, val: integer, source: UdpConnection, bb: ByteBuffer): nil
 function IsoCurtain:syncIsoObject(bRemote, val, source) end
+
+--- @public
+--- @param bRemote boolean
+--- @param val integer
+--- @param source UdpConnection
+--- @param bb ByteBuffer
+--- @return nil
+function IsoCurtain:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
 --- @param b ByteBufferWriter
@@ -122,12 +134,27 @@ function IsoCurtain:syncIsoObject(bRemote, val, source) end
 function IsoCurtain:syncIsoObjectSend(b) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoCurtain
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean): IsoCurtain
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean, spriteclosed: boolean): IsoCurtain
 function IsoCurtain.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param gid string
+--- @param north boolean
+--- @return IsoCurtain
+function IsoCurtain.new(cell, gridSquare, gid, north) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param gid IsoSprite
+--- @param north boolean
+--- @param spriteclosed boolean
+--- @return IsoCurtain
+function IsoCurtain.new(cell, gridSquare, gid, north, spriteclosed) end

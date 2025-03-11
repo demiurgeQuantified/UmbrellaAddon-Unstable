@@ -13,8 +13,15 @@ IsoFire = {}
 --- @param gridSquare IsoGridSquare
 --- @param CanBurnAnywhere boolean
 --- @return boolean
---- @overload fun(gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, smoke: boolean): boolean
 function IsoFire.CanAddFire(gridSquare, CanBurnAnywhere) end
+
+--- @public
+--- @static
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
+--- @param smoke boolean
+--- @return boolean
+function IsoFire.CanAddFire(gridSquare, CanBurnAnywhere, smoke) end
 
 --- @public
 --- @static
@@ -79,7 +86,7 @@ function IsoFire:getObjectName() end
 
 --- @public
 ---
----  The more this number is low, the faster it's gonna spread
+--- The more this number is low, the faster it's gonna spread
 ---
 --- @return integer
 function IsoFire:getSpreadDelay() end
@@ -147,7 +154,7 @@ function IsoFire:saveChange(change, tbl, bb) end
 
 --- @public
 ---
----  Up this number to make the fire life longer
+--- Up this number to make the fire life longer
 ---
 --- @param Life integer
 --- @return nil
@@ -165,7 +172,7 @@ function IsoFire:setLightRadius(radius) end
 
 --- @public
 ---
----  The more this number is low, the faster it's gonna spread
+--- The more this number is low, the faster it's gonna spread
 ---
 --- @param SpreadDelay integer
 --- @return nil
@@ -176,14 +183,43 @@ function IsoFire:setSpreadDelay(SpreadDelay) end
 function IsoFire:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoFire
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare): IsoFire
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: integer): IsoFire
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: integer, SetLife: integer): IsoFire
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: integer, SetLife: integer, isSmoke: boolean): IsoFire
 function IsoFire.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @return IsoFire
+function IsoFire.new(cell, gridSquare) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
+--- @param StartingEnergy integer
+--- @return IsoFire
+function IsoFire.new(cell, gridSquare, CanBurnAnywhere, StartingEnergy) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
+--- @param StartingEnergy integer
+--- @param SetLife integer
+--- @return IsoFire
+function IsoFire.new(cell, gridSquare, CanBurnAnywhere, StartingEnergy, SetLife) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
+--- @param StartingEnergy integer
+--- @param SetLife integer
+--- @param isSmoke boolean
+--- @return IsoFire
+function IsoFire.new(cell, gridSquare, CanBurnAnywhere, StartingEnergy, SetLife, isSmoke) end

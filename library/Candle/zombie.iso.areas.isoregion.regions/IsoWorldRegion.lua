@@ -24,12 +24,18 @@ function IsoWorldRegion:getColor() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(self: IsoWorldRegion): ArrayList
 function IsoWorldRegion:getDebugConnectedNeighborCopy() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(self: IsoWorldRegion): ArrayList
+function IsoWorldRegion:getDebugConnectedNeighborCopy() end
+
+--- @public
+--- @return ArrayList
+function IsoWorldRegion:getDebugIsoChunkRegionCopy() end
+
+--- @public
+--- @return ArrayList
 function IsoWorldRegion:getDebugIsoChunkRegionCopy() end
 
 --- @public
@@ -38,12 +44,18 @@ function IsoWorldRegion:getID() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(self: IsoWorldRegion): ArrayList
+function IsoWorldRegion:getNeighbors() end
+
+--- @public
+--- @return ArrayList
 function IsoWorldRegion:getNeighbors() end
 
 --- @public
 --- @return integer
---- @overload fun(self: IsoWorldRegion): integer
+function IsoWorldRegion:getRoofCnt() end
+
+--- @public
+--- @return integer
 function IsoWorldRegion:getRoofCnt() end
 
 --- @public
@@ -52,7 +64,10 @@ function IsoWorldRegion:getRoofedPercentage() end
 
 --- @public
 --- @return integer
---- @overload fun(self: IsoWorldRegion): integer
+function IsoWorldRegion:getSquareSize() end
+
+--- @public
+--- @return integer
 function IsoWorldRegion:getSquareSize() end
 
 --- @public
@@ -61,17 +76,26 @@ function IsoWorldRegion:isEnclosed() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWorldRegion): boolean
 function IsoWorldRegion:isFogMask() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWorldRegion): boolean
+function IsoWorldRegion:isFogMask() end
+
+--- @public
+--- @return boolean
 function IsoWorldRegion:isFullyRoofed() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoWorldRegion): boolean
+function IsoWorldRegion:isFullyRoofed() end
+
+--- @public
+--- @return boolean
+function IsoWorldRegion:isPlayerRoom() end
+
+--- @public
+--- @return boolean
 function IsoWorldRegion:isPlayerRoom() end
 
 --- @public

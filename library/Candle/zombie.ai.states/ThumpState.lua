@@ -44,7 +44,7 @@ function ThumpState:execute(owner) end
 function ThumpState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

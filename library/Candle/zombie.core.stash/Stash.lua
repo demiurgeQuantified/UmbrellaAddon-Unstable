@@ -30,7 +30,7 @@ function Stash:getName() end
 function Stash:load(stashDesc) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -93,8 +93,12 @@ function IsoMetaChunk:getUnadjustedZombieIntensity() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoMetaChunk, bRandom: boolean): number
 function IsoMetaChunk:getZombieIntensity() end
+
+--- @public
+--- @param bRandom boolean
+--- @return number
+function IsoMetaChunk:getZombieIntensity(bRandom) end
 
 --- @public
 --- @param index integer
@@ -106,16 +110,30 @@ function IsoMetaChunk:getZone(index) end
 --- @param y integer
 --- @param z integer
 --- @return Zone
---- @overload fun(self: IsoMetaChunk, arg0: integer, arg1: integer, arg2: integer, arg3: string): Zone
 function IsoMetaChunk:getZoneAt(x, y, z) end
 
 --- @public
 --- @param arg0 integer
 --- @param arg1 integer
 --- @param arg2 integer
+--- @param arg3 string
+--- @return Zone
+function IsoMetaChunk:getZoneAt(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return ArrayList
---- @overload fun(self: IsoMetaChunk, x: integer, y: integer, z: integer, result: ArrayList): ArrayList
 function IsoMetaChunk:getZonesAt(arg0, arg1, arg2) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param result ArrayList
+--- @return ArrayList
+function IsoMetaChunk:getZonesAt(x, y, z, result) end
 
 --- @public
 --- @param x integer
@@ -147,7 +165,7 @@ function IsoMetaChunk:removeZone(zone) end
 function IsoMetaChunk:setZombieIntensity(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

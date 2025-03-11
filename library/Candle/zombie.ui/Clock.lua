@@ -28,7 +28,7 @@ function Clock:render() end
 function Clock:resize() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

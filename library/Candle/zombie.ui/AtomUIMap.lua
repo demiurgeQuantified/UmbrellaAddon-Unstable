@@ -25,7 +25,7 @@ function AtomUIMap:render() end
 function AtomUIMap:revealOnMap() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

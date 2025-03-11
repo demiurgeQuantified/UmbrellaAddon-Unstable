@@ -117,7 +117,7 @@ function IsoRoom:getSquares() end
 function IsoRoom:getTileList() end
 
 --- @public
---- @return ArrayList the WaterSources
+--- @return ArrayList _ the WaterSources
 function IsoRoom:getWaterSources() end
 
 --- @public
@@ -178,7 +178,7 @@ function IsoRoom:spawnZombies() end
 function IsoRoom:useWater() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

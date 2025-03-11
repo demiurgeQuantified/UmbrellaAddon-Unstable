@@ -40,7 +40,7 @@ function ClimbOverWallState:exit(owner) end
 
 --- @public
 ---
----  Description copied from class: State
+--- Description copied from class: State
 ---
 --- @param owner IsoGameCharacter
 --- @param fromX integer
@@ -59,7 +59,7 @@ function ClimbOverWallState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY
 function ClimbOverWallState:setParams(owner, dir) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

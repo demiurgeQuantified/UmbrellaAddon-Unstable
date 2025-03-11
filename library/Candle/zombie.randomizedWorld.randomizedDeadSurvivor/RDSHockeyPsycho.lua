@@ -14,7 +14,7 @@ RDSHockeyPsycho = {}
 function RDSHockeyPsycho:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

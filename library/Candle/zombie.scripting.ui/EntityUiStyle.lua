@@ -51,7 +51,7 @@ function EntityUiStyle:getXuiStyle() end
 function EntityUiStyle:isComponentEnabled(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

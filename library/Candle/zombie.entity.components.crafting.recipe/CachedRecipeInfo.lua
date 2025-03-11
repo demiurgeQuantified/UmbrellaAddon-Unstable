@@ -25,7 +25,7 @@ function CachedRecipeInfo:isCanPerform() end
 function CachedRecipeInfo:isValid() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

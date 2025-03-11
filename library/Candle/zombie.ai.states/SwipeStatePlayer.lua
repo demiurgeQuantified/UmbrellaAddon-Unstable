@@ -40,7 +40,7 @@ function SwipeStatePlayer:execute(owner) end
 function SwipeStatePlayer:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

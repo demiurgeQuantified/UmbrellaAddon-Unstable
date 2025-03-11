@@ -45,7 +45,10 @@ function ImmutableArray:indexOf(arg0, arg1) end
 
 --- @public
 --- @return Iterator
---- @overload fun(self: ImmutableArray): Iterator
+function ImmutableArray:iterator() end
+
+--- @public
+--- @return Iterator
 function ImmutableArray:iterator() end
 
 --- @public
@@ -72,16 +75,24 @@ function ImmutableArray:spliterator() end
 
 --- @public
 --- @return Object[]
---- @overload fun(self: ImmutableArray, arg0: Class): Object[]
 function ImmutableArray:toArray() end
 
 --- @public
+--- @param arg0 Class
+--- @return Object[]
+function ImmutableArray:toArray(arg0) end
+
+--- @public
 --- @return string
---- @overload fun(self: ImmutableArray, arg0: string): string
 function ImmutableArray:toString() end
 
+--- @public
+--- @param arg0 string
+--- @return string
+function ImmutableArray:toString(arg0) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -19,7 +19,7 @@ function GameSoundScript:Load(name, totalFile) end
 function GameSoundScript:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

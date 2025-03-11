@@ -156,7 +156,7 @@ function CircleIsoMarker:setSize(size) end
 function CircleIsoMarker:setSquare(square) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -20,7 +20,7 @@ function RDSResourceGarage:isValid(arg0, arg1) end
 function RDSResourceGarage:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

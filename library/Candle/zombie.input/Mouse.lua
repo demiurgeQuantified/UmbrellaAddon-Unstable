@@ -201,7 +201,7 @@ function Mouse.update() end
 function Mouse.wasButtonDown(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

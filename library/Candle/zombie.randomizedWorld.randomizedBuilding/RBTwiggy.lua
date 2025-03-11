@@ -25,7 +25,7 @@ function RBTwiggy:randomizeBuilding(arg0) end
 function RBTwiggy:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

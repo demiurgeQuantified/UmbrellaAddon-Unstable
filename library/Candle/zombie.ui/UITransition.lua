@@ -55,7 +55,7 @@ function UITransition:setIgnoreUpdateTime(ignore) end
 function UITransition:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

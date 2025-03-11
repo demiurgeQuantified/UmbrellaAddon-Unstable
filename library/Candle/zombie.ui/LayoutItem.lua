@@ -61,11 +61,15 @@ function LayoutItem:setValueRight(value, highGood) end
 --- @public
 --- @param value number
 --- @return nil
---- @overload fun(self: LayoutItem, value: integer): nil
+function LayoutItem:setValueRightNoPlus(value) end
+
+--- @public
+--- @param value integer
+--- @return nil
 function LayoutItem:setValueRightNoPlus(value) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

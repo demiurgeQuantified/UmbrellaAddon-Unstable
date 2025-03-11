@@ -17,7 +17,12 @@ Energy = {}
 --- @static
 --- @param arg0 string
 --- @return Energy
---- @overload fun(arg0: EnergyType): Energy
+function Energy.Get(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 EnergyType
+--- @return Energy
 function Energy.Get(arg0) end
 
 --- @public

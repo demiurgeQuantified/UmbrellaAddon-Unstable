@@ -14,7 +14,7 @@ VehicleZone = {}
 function VehicleZone:isFaceDirection() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

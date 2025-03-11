@@ -29,8 +29,14 @@ function WGParams:getMinYCell() end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return Random
---- @overload fun(self: WGParams, arg0: integer, arg1: integer, arg2: integer): Random
 function WGParams:getRandom(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return Random
+function WGParams:getRandom(arg0, arg1, arg2) end
 
 --- @public
 --- @return integer

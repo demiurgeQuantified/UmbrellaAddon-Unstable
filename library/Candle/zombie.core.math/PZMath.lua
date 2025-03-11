@@ -32,32 +32,32 @@ function PZMath.acosf(arg0) end
 --- @public
 --- @static
 ---
----  Almost Identity   Imagine you don't want to modify a signal unless it's drops
----  zero or close to it, in which case you want  to replace the value with a small
----  constant. Then, rather than clamping the value and introduce  a discontinuity,
----  can smoothly blend the signal into the desired clipped value. So, let m be the
----   (anything above m stays unchanged), and n the value things will take when the
----  is zero.  Then, the following function does the soft clipping (in a cubic
----    https://iquilezles.org/www/articles/functions/functions.htm
+--- Almost Identity   Imagine you don't want to modify a signal unless it's drops to
+--- or close to it, in which case you want  to replace the value with a small
+--- constant. Then, rather than clamping the value and introduce  a discontinuity,
+--- can smoothly blend the signal into the desired clipped value. So, let m be the
+--- (anything above m stays unchanged), and n the value things will take when the
+--- is zero.  Then, the following function does the soft clipping (in a cubic
+--- https://iquilezles.org/www/articles/functions/functions.htm
 ---
 --- @param x number value in [0..1]
 --- @param m number
 --- @param n number
---- @return number value in [0..1]
+--- @return number _ value in [0..1]
 function PZMath.almostIdentity(x, m, n) end
 
 --- @public
 --- @static
 ---
----  Almost Unit Identity   This is a near-identiy function that maps the unit
----  into itself. It is the cousin of smoothstep(), in  that it maps 0 to 0, 1 to 1,
----  has a 0 derivative at the origin, just like smoothstep. However, instead of
----  a 0 derivative at 1, it has a derivative of 1 at that point. It's equivalent to
----  Almost Identiy above  with n=0 and m=1. Since it's a cubic just like
----  it is very fast to evaluate.
+--- Almost Unit Identity   This is a near-identiy function that maps the unit
+--- into itself. It is the cousin of smoothstep(), in  that it maps 0 to 0, 1 to 1,
+--- has a 0 derivative at the origin, just like smoothstep. However, instead of
+--- a 0 derivative at 1, it has a derivative of 1 at that point. It's equivalent to
+--- Almost Identiy above  with n=0 and m=1. Since it's a cubic just like
+--- it is very fast to evaluate.
 ---
 --- @param x number value in [0..1]
---- @return number value in [0..1]
+--- @return number _ value in [0..1]
 function PZMath.almostUnitIdentity(x) end
 
 --- @public
@@ -65,8 +65,16 @@ function PZMath.almostUnitIdentity(x) end
 --- @param arg0 Vector2
 --- @param arg1 Vector2
 --- @return number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): number
 function PZMath.angleBetween(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
+function PZMath.angleBetween(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
@@ -111,10 +119,37 @@ function PZMath.ceil(val) end
 --- @param arg1 number
 --- @param arg2 number
 --- @return number
---- @overload fun(val: number, min: number, max: number): number min <= val <= max
---- @overload fun(val: integer, min: integer, max: integer): integer min <= val <= max
---- @overload fun(val: integer, min: integer, max: integer): integer
 function PZMath.clamp(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+---
+--- Result is clamped between min and max.
+---
+--- @param val number
+--- @param min number
+--- @param max number
+--- @return number _ min <= val <= max
+function PZMath.clamp(val, min, max) end
+
+--- @public
+--- @static
+---
+--- Result is clamped between min and max.
+---
+--- @param val integer
+--- @param min integer
+--- @param max integer
+--- @return integer _ min <= val <= max
+function PZMath.clamp(val, min, max) end
+
+--- @public
+--- @static
+--- @param val integer
+--- @param min integer
+--- @param max integer
+--- @return integer
+function PZMath.clamp(val, min, max) end
 
 --- @public
 --- @static
@@ -155,7 +190,13 @@ function PZMath.closestVector3(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, a
 --- @param src Matrix4f
 --- @param dst Matrix4f
 --- @return Matrix4f
---- @overload fun(src: Matrix4f, dst: Matrix4f): Matrix4f
+function PZMath.convertMatrix(src, dst) end
+
+--- @public
+--- @static
+--- @param src Matrix4f
+--- @param dst Matrix4f
+--- @return Matrix4f
 function PZMath.convertMatrix(src, dst) end
 
 --- @public
@@ -190,22 +231,39 @@ function PZMath.degToRad(degrees) end
 --- @param a number
 --- @param b number
 --- @return boolean
---- @overload fun(a: number, b: number, delta: number): boolean
 function PZMath.equal(a, b) end
+
+--- @public
+--- @static
+--- @param a number
+--- @param b number
+--- @param delta number
+--- @return boolean
+function PZMath.equal(a, b, delta) end
 
 --- @public
 --- @static
 --- @param x number
 --- @return integer
---- @overload fun(x: number): integer
+function PZMath.fastfloor(x) end
+
+--- @public
+--- @static
+--- @param x number
+--- @return integer
 function PZMath.fastfloor(x) end
 
 --- @public
 --- @static
 --- @param arg0 number
 --- @return number
---- @overload fun(val: number): number
 function PZMath.floor(arg0) end
+
+--- @public
+--- @static
+--- @param val number
+--- @return number
+function PZMath.floor(val) end
 
 --- @public
 --- @static
@@ -216,12 +274,12 @@ function PZMath.frac(val) end
 --- @public
 --- @static
 ---
----  Gain   Remapping the unit interval into the unit interval by expanding the
----  and compressing the center, and  keeping 1/2 mapped to 1/2, that can be done
----  the gain() function. This was a common function in RSL tutorials  (the
----  Shading Language). k=1 is the identity curve, k<1 produces the classic gain()
----  and k>1  produces "s" shaped curces. The curves are symmetric (and inverse) for
----  and k=1/a.   https://iquilezles.org/www/articles/functions/functions.htm
+--- Gain   Remapping the unit interval into the unit interval by expanding the sides
+--- compressing the center, and  keeping 1/2 mapped to 1/2, that can be done with
+--- gain() function. This was a common function in RSL tutorials  (the Renderman
+--- Language). k=1 is the identity curve, k<1 produces the classic gain() shape, and
+--- produces "s" shaped curces. The curves are symmetric (and inverse) for k=a and
+--- https://iquilezles.org/www/articles/functions/functions.htm
 ---
 --- @param x number
 --- @param k number
@@ -248,10 +306,34 @@ function PZMath.getClosestAngleDegrees(in_degsA, in_degsB) end
 --- @param dest number
 --- @param alpha number
 --- @return number
---- @overload fun(out: Vector3f, a: Vector3f, b: Vector3f, t: number): Vector3f
---- @overload fun(out: Vector2, a: Vector2, b: Vector2, t: number): Vector2
---- @overload fun(arg0: Vector3, arg1: Vector3, arg2: Vector3, arg3: number): Vector3
 function PZMath.lerp(src, dest, alpha) end
+
+--- @public
+--- @static
+--- @param out Vector3f
+--- @param a Vector3f
+--- @param b Vector3f
+--- @param t number
+--- @return Vector3f
+function PZMath.lerp(out, a, b, t) end
+
+--- @public
+--- @static
+--- @param out Vector2
+--- @param a Vector2
+--- @param b Vector2
+--- @param t number
+--- @return Vector2
+function PZMath.lerp(out, a, b, t) end
+
+--- @public
+--- @static
+--- @param arg0 Vector3
+--- @param arg1 Vector3
+--- @param arg2 Vector3
+--- @param arg3 number
+--- @return Vector3
+function PZMath.lerp(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
@@ -284,22 +366,82 @@ function PZMath.lerpFunc_EaseOutQuad(x) end
 --- @param a number
 --- @param b number
 --- @return number
---- @overload fun(a: integer, b: integer): integer
---- @overload fun(arg0: number, arg1: number, arg2: number): number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number): number
 function PZMath.max(a, b) end
+
+--- @public
+--- @static
+--- @param a integer
+--- @param b integer
+--- @return integer
+function PZMath.max(a, b) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
+function PZMath.max(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
+function PZMath.max(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return number
+function PZMath.max(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
 --- @param a number
 --- @param b number
 --- @return number
---- @overload fun(a: integer, b: integer): integer
---- @overload fun(arg0: number, arg1: number, arg2: number): number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number): number
---- @overload fun(arg0: number, arg1: number, arg2: number, arg3: number, arg4: number): number
 function PZMath.min(a, b) end
+
+--- @public
+--- @static
+--- @param a integer
+--- @param b integer
+--- @return integer
+function PZMath.min(a, b) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
+function PZMath.min(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return number
+function PZMath.min(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return number
+function PZMath.min(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static
@@ -311,10 +453,29 @@ function PZMath.nextPowerOfTwo(arg0) end
 --- @static
 --- @param arg0 float[]
 --- @return float[]
---- @overload fun(arg0: ArrayList): ArrayList
---- @overload fun(arg0: Object[], arg1: FloatGet, arg2: FloatSet): nil
---- @overload fun(arg0: List, arg1: FloatGet, arg2: FloatSet): nil
 function PZMath.normalize(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 ArrayList
+--- @return ArrayList
+function PZMath.normalize(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 Object[]
+--- @param arg1 FloatGet
+--- @param arg2 FloatSet
+--- @return nil
+function PZMath.normalize(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 List
+--- @param arg1 FloatGet
+--- @param arg2 FloatSet
+--- @return nil
+function PZMath.normalize(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -443,11 +604,18 @@ function PZMath.tryParseInt(varStr, defaultVal) end
 --- @param val number
 --- @param range number
 --- @return number
---- @overload fun(in_val: number, in_min: number, in_max: number): number
 function PZMath.wrap(val, range) end
 
+--- @public
+--- @static
+--- @param in_val number
+--- @param in_min number
+--- @param in_max number
+--- @return number
+function PZMath.wrap(in_val, in_min, in_max) end
+
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

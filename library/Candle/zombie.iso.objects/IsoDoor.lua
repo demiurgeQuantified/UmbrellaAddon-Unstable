@@ -123,7 +123,11 @@ function IsoDoor:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoDoor, thumper: IsoMovingObject): nil
+function IsoDoor:Thump(thumper) end
+
+--- @public
+--- @param thumper IsoMovingObject
+--- @return nil
 function IsoDoor:Thump(thumper) end
 
 --- @public
@@ -144,7 +148,12 @@ function IsoDoor:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return nil
---- @overload fun(self: IsoDoor, owner: IsoGameCharacter, weapon: HandWeapon): nil
+function IsoDoor:WeaponHit(owner, weapon) end
+
+--- @public
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
+--- @return nil
 function IsoDoor:WeaponHit(owner, weapon) end
 
 --- @public
@@ -154,8 +163,13 @@ function IsoDoor:addRandomBarricades() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return nil
---- @overload fun(self: IsoDoor, inside: boolean, chr: IsoGameCharacter): nil
 function IsoDoor:addSheet(chr) end
+
+--- @public
+--- @param inside boolean
+--- @param chr IsoGameCharacter
+--- @return nil
+function IsoDoor:addSheet(inside, chr) end
 
 --- @public
 --- @return nil
@@ -194,7 +208,7 @@ function IsoDoor:destroy() end
 
 --- @public
 ---
----  Returns the square the player should stand on to add a sheet.
+--- Returns the square the player should stand on to add a sheet.
 ---
 --- @param chr IsoGameCharacter
 --- @return IsoGridSquare
@@ -203,23 +217,37 @@ function IsoDoor:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoDoor, chr: IsoGameCharacter): IsoBarricade
+function IsoDoor:getBarricadeForCharacter(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
 function IsoDoor:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoDoor): IsoBarricade
 function IsoDoor:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(self: IsoDoor): IsoBarricade
+function IsoDoor:getBarricadeOnOppositeSquare() end
+
+--- @public
+--- @return IsoBarricade
+function IsoDoor:getBarricadeOnSameSquare() end
+
+--- @public
+--- @return IsoBarricade
 function IsoDoor:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(self: IsoDoor, chr: IsoGameCharacter): IsoBarricade
+function IsoDoor:getBarricadeOppositeCharacter(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return IsoBarricade
 function IsoDoor:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -246,7 +274,10 @@ function IsoDoor:getMaxHealth() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDoor): boolean
+function IsoDoor:getNorth() end
+
+--- @public
+--- @return boolean
 function IsoDoor:getNorth() end
 
 --- @public
@@ -259,7 +290,10 @@ function IsoDoor:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(self: IsoDoor): IsoGridSquare
+function IsoDoor:getOppositeSquare() end
+
+--- @public
+--- @return IsoGridSquare
 function IsoDoor:getOppositeSquare() end
 
 --- @public
@@ -282,7 +316,7 @@ function IsoDoor:getRenderEffectObjectCount() end
 
 --- @public
 ---
----  Returns the square the player should stand on to open/close/remove a sheet.
+--- Returns the square the player should stand on to open/close/remove a sheet.
 ---
 --- @return IsoGridSquare
 function IsoDoor:getSheetSquare() end
@@ -302,7 +336,10 @@ function IsoDoor:getSquare() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoDoor): number
+function IsoDoor:getThumpCondition() end
+
+--- @public
+--- @return number
 function IsoDoor:getThumpCondition() end
 
 --- @public
@@ -312,7 +349,11 @@ function IsoDoor:getThumpSound() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoDoor, chr: IsoGameCharacter): Thumpable
+function IsoDoor:getThumpableFor(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return Thumpable
 function IsoDoor:getThumpableFor(chr) end
 
 --- @public
@@ -326,12 +367,18 @@ function IsoDoor:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDoor): boolean
 function IsoDoor:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDoor): boolean
+function IsoDoor:isBarricadeAllowed() end
+
+--- @public
+--- @return boolean
+function IsoDoor:isBarricaded() end
+
+--- @public
+--- @return boolean
 function IsoDoor:isBarricaded() end
 
 --- @public
@@ -340,7 +387,10 @@ function IsoDoor:isCurtainOpen() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoDoor): boolean
+function IsoDoor:isDestroyed() end
+
+--- @public
+--- @return boolean
 function IsoDoor:isDestroyed() end
 
 --- @public
@@ -521,13 +571,35 @@ function IsoDoor:toggleCurtain() end
 function IsoDoor:transmitSetCurtainOpen(open) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoDoor
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean): IsoDoor
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoDoor
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean, table: table): IsoDoor
 function IsoDoor.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param gid string
+--- @param north boolean
+--- @return IsoDoor
+function IsoDoor.new(cell, gridSquare, gid, north) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param gid IsoSprite
+--- @param north boolean
+--- @return IsoDoor
+function IsoDoor.new(cell, gridSquare, gid, north) end
+
+--- @public
+--- @param cell IsoCell
+--- @param gridSquare IsoGridSquare
+--- @param gid string
+--- @param north boolean
+--- @param table table
+--- @return IsoDoor
+function IsoDoor.new(cell, gridSquare, gid, north, table) end

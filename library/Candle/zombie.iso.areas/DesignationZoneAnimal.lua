@@ -62,8 +62,15 @@ function DesignationZoneAnimal.getType() end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @return DesignationZoneAnimal
---- @overload fun(arg0: integer, arg1: integer, arg2: integer): DesignationZoneAnimal
 function DesignationZoneAnimal.getZone(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return DesignationZoneAnimal
+function DesignationZoneAnimal.getZone(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -179,7 +186,7 @@ function DesignationZoneAnimal:getTroughsConnected() end
 function DesignationZoneAnimal:removeAnimal(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

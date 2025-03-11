@@ -43,13 +43,21 @@ function ModelScript:addAttachmentAt(index, attach) end
 --- @public
 --- @param arg0 ModelAttachment
 --- @return nil
---- @overload fun(self: ModelScript, arg0: ModelAttachment): nil
 function ModelScript:afterRenameAttachment(arg0) end
 
 --- @public
 --- @param arg0 ModelAttachment
 --- @return nil
---- @overload fun(self: ModelScript, arg0: ModelAttachment): nil
+function ModelScript:afterRenameAttachment(arg0) end
+
+--- @public
+--- @param arg0 ModelAttachment
+--- @return nil
+function ModelScript:beforeRenameAttachment(arg0) end
+
+--- @public
+--- @param arg0 ModelAttachment
+--- @return nil
 function ModelScript:beforeRenameAttachment(arg0) end
 
 --- @public
@@ -88,8 +96,12 @@ function ModelScript:getShaderName() end
 
 --- @public
 --- @return string
---- @overload fun(self: ModelScript, allowNull: boolean): string
 function ModelScript:getTextureName() end
+
+--- @public
+--- @param allowNull boolean
+--- @return string
+function ModelScript:getTextureName(allowNull) end
 
 --- @public
 --- @return boolean
@@ -98,8 +110,12 @@ function ModelScript:isStatic() end
 --- @public
 --- @param index integer
 --- @return ModelAttachment
---- @overload fun(self: ModelScript, attach: ModelAttachment): ModelAttachment
 function ModelScript:removeAttachment(index) end
+
+--- @public
+--- @param attach ModelAttachment
+--- @return ModelAttachment
+function ModelScript:removeAttachment(attach) end
 
 --- @public
 --- @return nil
@@ -111,7 +127,7 @@ function ModelScript:reset() end
 function ModelScript:scaleAttachmentOffset(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

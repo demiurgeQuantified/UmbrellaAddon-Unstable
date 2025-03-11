@@ -11,24 +11,56 @@ FluidFilter = {}
 --- @public
 --- @param arg0 string
 --- @return FluidFilter
---- @overload fun(self: FluidFilter, arg0: Fluid): FluidFilter
---- @overload fun(self: FluidFilter, arg0: FluidCategory): FluidFilter
---- @overload fun(self: FluidFilter, arg0: FluidType): FluidFilter
+function FluidFilter:add(arg0) end
+
+--- @public
+--- @param arg0 Fluid
+--- @return FluidFilter
+function FluidFilter:add(arg0) end
+
+--- @public
+--- @param arg0 FluidCategory
+--- @return FluidFilter
+function FluidFilter:add(arg0) end
+
+--- @public
+--- @param arg0 FluidType
+--- @return FluidFilter
 function FluidFilter:add(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: FluidFilter, arg0: Fluid): boolean
---- @overload fun(self: FluidFilter, arg0: FluidType): boolean
+function FluidFilter:allows(arg0) end
+
+--- @public
+--- @param arg0 Fluid
+--- @return boolean
+function FluidFilter:allows(arg0) end
+
+--- @public
+--- @param arg0 FluidType
+--- @return boolean
 function FluidFilter:allows(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return boolean
---- @overload fun(self: FluidFilter, arg0: Fluid): boolean
---- @overload fun(self: FluidFilter, arg0: FluidCategory): boolean
---- @overload fun(self: FluidFilter, arg0: FluidType): boolean
+function FluidFilter:contains(arg0) end
+
+--- @public
+--- @param arg0 Fluid
+--- @return boolean
+function FluidFilter:contains(arg0) end
+
+--- @public
+--- @param arg0 FluidCategory
+--- @return boolean
+function FluidFilter:contains(arg0) end
+
+--- @public
+--- @param arg0 FluidType
+--- @return boolean
 function FluidFilter:contains(arg0) end
 
 --- @public
@@ -48,9 +80,21 @@ function FluidFilter:load(arg0, arg1) end
 --- @public
 --- @param arg0 string
 --- @return FluidFilter
---- @overload fun(self: FluidFilter, arg0: Fluid): FluidFilter
---- @overload fun(self: FluidFilter, arg0: FluidCategory): FluidFilter
---- @overload fun(self: FluidFilter, arg0: FluidType): FluidFilter
+function FluidFilter:remove(arg0) end
+
+--- @public
+--- @param arg0 Fluid
+--- @return FluidFilter
+function FluidFilter:remove(arg0) end
+
+--- @public
+--- @param arg0 FluidCategory
+--- @return FluidFilter
+function FluidFilter:remove(arg0) end
+
+--- @public
+--- @param arg0 FluidType
+--- @return FluidFilter
 function FluidFilter:remove(arg0) end
 
 --- @public
@@ -73,7 +117,7 @@ function FluidFilter:setFilterType(arg0) end
 function FluidFilter:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

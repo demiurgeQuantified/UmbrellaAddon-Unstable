@@ -19,7 +19,7 @@ function ModalDialog:ButtonClicked(name) end
 function ModalDialog:Clicked(name) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

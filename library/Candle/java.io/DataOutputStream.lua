@@ -19,80 +19,144 @@ function DataOutputStream:size() end
 --- @public
 --- @param arg0 byte[]
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
---- @overload fun(self: DataOutputStream, arg0: byte[], arg1: integer, arg2: integer): nil
---- @overload fun(self: DataOutputStream, arg0: byte[], arg1: integer, arg2: integer): nil
 function DataOutputStream:write(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function DataOutputStream:write(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function DataOutputStream:write(arg0) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function DataOutputStream:write(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 byte[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function DataOutputStream:write(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 boolean
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: boolean): nil
+function DataOutputStream:writeBoolean(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
 function DataOutputStream:writeBoolean(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
+function DataOutputStream:writeByte(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function DataOutputStream:writeByte(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: string): nil
+function DataOutputStream:writeBytes(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function DataOutputStream:writeBytes(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
+function DataOutputStream:writeChar(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function DataOutputStream:writeChar(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: string): nil
+function DataOutputStream:writeChars(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function DataOutputStream:writeChars(arg0) end
 
 --- @public
 --- @param arg0 number
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: number): nil
 function DataOutputStream:writeDouble(arg0) end
 
 --- @public
 --- @param arg0 number
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: number): nil
+function DataOutputStream:writeDouble(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function DataOutputStream:writeFloat(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
 function DataOutputStream:writeFloat(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
 function DataOutputStream:writeInt(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
+function DataOutputStream:writeInt(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function DataOutputStream:writeLong(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: integer): nil
+function DataOutputStream:writeLong(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function DataOutputStream:writeShort(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
 function DataOutputStream:writeShort(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @return nil
---- @overload fun(self: DataOutputStream, arg0: string): nil
+function DataOutputStream:writeUTF(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function DataOutputStream:writeUTF(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

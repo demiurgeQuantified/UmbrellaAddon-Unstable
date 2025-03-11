@@ -42,7 +42,7 @@ function AnimalChunk:getVirtualAnimals() end
 function AnimalChunk:updateTracks() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

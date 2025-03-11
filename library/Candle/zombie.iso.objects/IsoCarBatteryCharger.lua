@@ -98,11 +98,17 @@ function IsoCarBatteryCharger:syncIsoObjectSend(b) end
 function IsoCarBatteryCharger:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoCarBatteryCharger
---- @overload fun(item: InventoryItem, cell: IsoCell, square: IsoGridSquare): IsoCarBatteryCharger
 function IsoCarBatteryCharger.new(cell) end
+
+--- @public
+--- @param item InventoryItem
+--- @param cell IsoCell
+--- @param square IsoGridSquare
+--- @return IsoCarBatteryCharger
+function IsoCarBatteryCharger.new(item, cell, square) end

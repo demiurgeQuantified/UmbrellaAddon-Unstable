@@ -27,7 +27,7 @@ Stats = {}
 ------------------------------------
 
 --- @public
---- @return number the Anger
+--- @return number _ the Anger
 function Stats:getAnger() end
 
 --- @public
@@ -35,15 +35,15 @@ function Stats:getAnger() end
 function Stats:getBasicStress() end
 
 --- @public
---- @return number the boredom
+--- @return number _ the boredom
 function Stats:getBoredom() end
 
 --- @public
---- @return number the Drunkenness
+--- @return number _ the Drunkenness
 function Stats:getDrunkenness() end
 
 --- @public
---- @return number the endurance
+--- @return number _ the endurance
 function Stats:getEndurance() end
 
 --- @public
@@ -51,35 +51,35 @@ function Stats:getEndurance() end
 function Stats:getEnduranceRecharging() end
 
 --- @public
---- @return number the endurancedanger
+--- @return number _ the endurancedanger
 function Stats:getEndurancedanger() end
 
 --- @public
---- @return number the endurancelast
+--- @return number _ the endurancelast
 function Stats:getEndurancelast() end
 
 --- @public
---- @return number the endurancewarn
+--- @return number _ the endurancewarn
 function Stats:getEndurancewarn() end
 
 --- @public
---- @return number the fatigue
+--- @return number _ the fatigue
 function Stats:getFatigue() end
 
 --- @public
---- @return number the Fear
+--- @return number _ the Fear
 function Stats:getFear() end
 
 --- @public
---- @return number the fitness
+--- @return number _ the fitness
 function Stats:getFitness() end
 
 --- @public
---- @return number the hunger
+--- @return number _ the hunger
 function Stats:getHunger() end
 
 --- @public
---- @return number the idleboredom
+--- @return number _ the idleboredom
 function Stats:getIdleboredom() end
 
 --- @public
@@ -87,7 +87,7 @@ function Stats:getIdleboredom() end
 function Stats:getMaxStressFromCigarettes() end
 
 --- @public
---- @return number the morale
+--- @return number _ the morale
 function Stats:getMorale() end
 
 --- @public
@@ -103,23 +103,23 @@ function Stats:getNumVeryCloseZombies() end
 function Stats:getNumVisibleZombies() end
 
 --- @public
---- @return number the Pain
+--- @return number _ the Pain
 function Stats:getPain() end
 
 --- @public
---- @return number the Panic
+--- @return number _ the Panic
 function Stats:getPanic() end
 
 --- @public
---- @return number the Sanity
+--- @return number _ the Sanity
 function Stats:getSanity() end
 
 --- @public
---- @return number the Sickness
+--- @return number _ the Sickness
 function Stats:getSickness() end
 
 --- @public
---- @return number the stress
+--- @return number _ the stress
 function Stats:getStress() end
 
 --- @public
@@ -127,26 +127,31 @@ function Stats:getStress() end
 function Stats:getStressFromCigarettes() end
 
 --- @public
---- @return number the thirst
+--- @return number _ the thirst
 function Stats:getThirst() end
 
 --- @public
---- @return number the TrippingRotAngle
+--- @return number _ the TrippingRotAngle
 function Stats:getTrippingRotAngle() end
 
 --- @public
---- @return integer the NumVisibleZombies
+--- @return integer _ the NumVisibleZombies
 function Stats:getVisibleZombies() end
 
 --- @public
---- @return boolean the Tripping
+--- @return boolean _ the Tripping
 function Stats:isTripping() end
 
 --- @public
 --- @param input DataInputStream
 --- @return nil
---- @overload fun(self: Stats, input: ByteBuffer, WorldVersion: integer): nil
 function Stats:load(input) end
+
+--- @public
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @return nil
+function Stats:load(input, WorldVersion) end
 
 --- @public
 --- @return nil
@@ -239,7 +244,11 @@ function Stats:resetStats() end
 --- @public
 --- @param output DataOutputStream
 --- @return nil
---- @overload fun(self: Stats, output: ByteBuffer): nil
+function Stats:save(output) end
+
+--- @public
+--- @param output ByteBuffer
+--- @return nil
 function Stats:save(output) end
 
 --- @public
@@ -364,7 +373,7 @@ function Stats:setTrippingRotAngle(TrippingRotAngle) end
 function Stats:write(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

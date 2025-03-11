@@ -37,7 +37,7 @@ function RVSRoadKill:randomizeVehicleStory(arg0, arg1) end
 function RVSRoadKill:spawnElement(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

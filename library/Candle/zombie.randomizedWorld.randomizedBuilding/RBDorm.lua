@@ -25,7 +25,7 @@ function RBDorm:randomizeBuilding(arg0) end
 function RBDorm:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

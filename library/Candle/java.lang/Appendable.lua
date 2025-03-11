@@ -11,6 +11,16 @@ Appendable = {}
 --- @public
 --- @param arg0 string
 --- @return Appendable
---- @overload fun(self: Appendable, arg0: CharSequence): Appendable
---- @overload fun(self: Appendable, arg0: CharSequence, arg1: integer, arg2: integer): Appendable
 function Appendable:append(arg0) end
+
+--- @public
+--- @param arg0 CharSequence
+--- @return Appendable
+function Appendable:append(arg0) end
+
+--- @public
+--- @param arg0 CharSequence
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return Appendable
+function Appendable:append(arg0, arg1, arg2) end

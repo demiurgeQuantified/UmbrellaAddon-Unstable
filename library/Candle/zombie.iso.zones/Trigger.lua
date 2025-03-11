@@ -13,7 +13,7 @@ Trigger = {}
 function Trigger:getModData() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -33,10 +33,16 @@ function TimeMode.values() end
 
 --- @public
 --- @return integer
---- @overload fun(self: TimeMode): integer
 function TimeMode:getBits() end
 
 --- @public
 --- @return integer
---- @overload fun(self: TimeMode): integer
+function TimeMode:getBits() end
+
+--- @public
+--- @return integer
+function TimeMode:getByteId() end
+
+--- @public
+--- @return integer
 function TimeMode:getByteId() end

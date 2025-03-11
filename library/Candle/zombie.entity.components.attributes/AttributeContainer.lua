@@ -59,38 +59,132 @@ function AttributeContainer:forEach(arg0) end
 --- @public
 --- @param arg0 Bool
 --- @return boolean
---- @overload fun(self: AttributeContainer, arg0: Byte): integer
---- @overload fun(self: AttributeContainer, arg0: Double): number
---- @overload fun(self: AttributeContainer, arg0: Enum): Enum
---- @overload fun(self: AttributeContainer, arg0: EnumSet): EnumSet
---- @overload fun(self: AttributeContainer, arg0: EnumStringSet): EnumStringObj
---- @overload fun(self: AttributeContainer, arg0: Float): number
---- @overload fun(self: AttributeContainer, arg0: Int): integer
---- @overload fun(self: AttributeContainer, arg0: Long): integer
---- @overload fun(self: AttributeContainer, arg0: Short): short
---- @overload fun(self: AttributeContainer, arg0: String): string
---- @overload fun(self: AttributeContainer, arg0: Bool, arg1: boolean): boolean
---- @overload fun(self: AttributeContainer, arg0: Byte, arg1: integer): integer
---- @overload fun(self: AttributeContainer, arg0: Double, arg1: number): number
---- @overload fun(self: AttributeContainer, arg0: Enum, arg1: Enum): Enum
---- @overload fun(self: AttributeContainer, arg0: Float, arg1: number): number
---- @overload fun(self: AttributeContainer, arg0: Int, arg1: integer): integer
---- @overload fun(self: AttributeContainer, arg0: Long, arg1: integer): integer
---- @overload fun(self: AttributeContainer, arg0: Short, arg1: short): short
---- @overload fun(self: AttributeContainer, arg0: String, arg1: string): string
 function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Byte
+--- @return integer
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Double
+--- @return number
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Enum
+--- @return Enum
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 EnumSet
+--- @return EnumSet
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 EnumStringSet
+--- @return EnumStringObj
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Float
+--- @return number
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Int
+--- @return integer
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Long
+--- @return integer
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Short
+--- @return short
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 String
+--- @return string
+function AttributeContainer:get(arg0) end
+
+--- @public
+--- @param arg0 Bool
+--- @param arg1 boolean
+--- @return boolean
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Byte
+--- @param arg1 integer
+--- @return integer
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Double
+--- @param arg1 number
+--- @return number
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Enum
+--- @param arg1 Enum
+--- @return Enum
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Float
+--- @param arg1 number
+--- @return number
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Int
+--- @param arg1 integer
+--- @return integer
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Long
+--- @param arg1 integer
+--- @return integer
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 Short
+--- @param arg1 short
+--- @return short
+function AttributeContainer:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 String
+--- @param arg1 string
+--- @return string
+function AttributeContainer:get(arg0, arg1) end
 
 --- @public
 --- @param arg0 integer
 --- @return AttributeInstance
---- @overload fun(self: AttributeContainer, arg0: AttributeType): AttributeInstance
+function AttributeContainer:getAttribute(arg0) end
+
+--- @public
+--- @param arg0 AttributeType
+--- @return AttributeInstance
 function AttributeContainer:getAttribute(arg0) end
 
 --- @public
 --- @param arg0 Numeric
 --- @return number
---- @overload fun(self: AttributeContainer, arg0: Numeric, arg1: number): number
 function AttributeContainer:getFloatValue(arg0) end
+
+--- @public
+--- @param arg0 Numeric
+--- @param arg1 number
+--- @return number
+function AttributeContainer:getFloatValue(arg0, arg1) end
 
 --- @public
 --- @param arg0 integer
@@ -112,16 +206,66 @@ function AttributeContainer:load(arg0, arg1) end
 --- @param arg0 Bool
 --- @param arg1 boolean
 --- @return nil
---- @overload fun(self: AttributeContainer, arg0: Byte, arg1: integer): nil
---- @overload fun(self: AttributeContainer, arg0: Double, arg1: number): nil
---- @overload fun(self: AttributeContainer, arg0: Enum, arg1: Enum): nil
---- @overload fun(self: AttributeContainer, arg0: EnumSet, arg1: EnumSet): nil
---- @overload fun(self: AttributeContainer, arg0: EnumStringSet, arg1: EnumStringObj): nil
---- @overload fun(self: AttributeContainer, arg0: Float, arg1: number): nil
---- @overload fun(self: AttributeContainer, arg0: Int, arg1: integer): nil
---- @overload fun(self: AttributeContainer, arg0: Long, arg1: integer): nil
---- @overload fun(self: AttributeContainer, arg0: Short, arg1: short): nil
---- @overload fun(self: AttributeContainer, arg0: String, arg1: string): nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Byte
+--- @param arg1 integer
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Double
+--- @param arg1 number
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Enum
+--- @param arg1 Enum
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 EnumSet
+--- @param arg1 EnumSet
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 EnumStringSet
+--- @param arg1 EnumStringObj
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Float
+--- @param arg1 number
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Int
+--- @param arg1 integer
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Long
+--- @param arg1 integer
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 Short
+--- @param arg1 short
+--- @return nil
+function AttributeContainer:put(arg0, arg1) end
+
+--- @public
+--- @param arg0 String
+--- @param arg1 string
+--- @return nil
 function AttributeContainer:put(arg0, arg1) end
 
 --- @public
@@ -150,16 +294,66 @@ function AttributeContainer:save(arg0) end
 --- @param arg0 Bool
 --- @param arg1 boolean
 --- @return nil
---- @overload fun(self: AttributeContainer, arg0: Byte, arg1: integer): nil
---- @overload fun(self: AttributeContainer, arg0: Double, arg1: number): nil
---- @overload fun(self: AttributeContainer, arg0: Enum, arg1: Enum): nil
---- @overload fun(self: AttributeContainer, arg0: EnumSet, arg1: EnumSet): nil
---- @overload fun(self: AttributeContainer, arg0: EnumStringSet, arg1: EnumStringObj): nil
---- @overload fun(self: AttributeContainer, arg0: Float, arg1: number): nil
---- @overload fun(self: AttributeContainer, arg0: Int, arg1: integer): nil
---- @overload fun(self: AttributeContainer, arg0: Long, arg1: integer): nil
---- @overload fun(self: AttributeContainer, arg0: Short, arg1: short): nil
---- @overload fun(self: AttributeContainer, arg0: String, arg1: string): nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Byte
+--- @param arg1 integer
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Double
+--- @param arg1 number
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Enum
+--- @param arg1 Enum
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 EnumSet
+--- @param arg1 EnumSet
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 EnumStringSet
+--- @param arg1 EnumStringObj
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Float
+--- @param arg1 number
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Int
+--- @param arg1 integer
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Long
+--- @param arg1 integer
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 Short
+--- @param arg1 short
+--- @return nil
+function AttributeContainer:set(arg0, arg1) end
+
+--- @public
+--- @param arg0 String
+--- @param arg1 string
+--- @return nil
 function AttributeContainer:set(arg0, arg1) end
 
 --- @public

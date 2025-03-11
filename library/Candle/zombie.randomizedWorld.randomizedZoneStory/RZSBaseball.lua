@@ -14,7 +14,7 @@ RZSBaseball = {}
 function RZSBaseball:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

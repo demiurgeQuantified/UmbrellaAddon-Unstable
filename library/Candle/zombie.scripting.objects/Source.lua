@@ -57,7 +57,7 @@ function Source:setKeep(keep) end
 function Source:setUse(use) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

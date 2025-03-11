@@ -87,7 +87,11 @@ function ScriptModule:getGameSound(arg0) end
 --- @public
 --- @param name string
 --- @return Item
---- @overload fun(self: ScriptModule, name: string): Item
+function ScriptModule:getItem(name) end
+
+--- @public
+--- @param name string
+--- @return Item
 function ScriptModule:getItem(name) end
 
 --- @public
@@ -132,7 +136,11 @@ function ScriptModule:getRagdollScript(arg0) end
 --- @public
 --- @param name string
 --- @return Recipe
---- @overload fun(self: ScriptModule, name: string): Recipe
+function ScriptModule:getRecipe(name) end
+
+--- @public
+--- @param name string
+--- @return Recipe
 function ScriptModule:getRecipe(name) end
 
 --- @public
@@ -206,7 +214,7 @@ function ScriptModule:getXuiSkinScript(arg0) end
 function ScriptModule:getXuiStyle(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

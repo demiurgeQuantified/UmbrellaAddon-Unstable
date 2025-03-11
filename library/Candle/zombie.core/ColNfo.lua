@@ -53,7 +53,7 @@ function ColNfo:getR() end
 function ColNfo:getRInt() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

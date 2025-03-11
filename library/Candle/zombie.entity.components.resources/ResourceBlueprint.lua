@@ -14,9 +14,22 @@ ResourceBlueprint = {}
 --- @static
 --- @param arg0 string
 --- @return ResourceBlueprint
---- @overload fun(arg0: ResourceBlueprint, arg1: string): ResourceBlueprint
---- @overload fun(arg0: ResourceBlueprint, arg1: string, arg2: boolean): ResourceBlueprint
 function ResourceBlueprint.Deserialize(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 ResourceBlueprint
+--- @param arg1 string
+--- @return ResourceBlueprint
+function ResourceBlueprint.Deserialize(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 ResourceBlueprint
+--- @param arg1 string
+--- @param arg2 boolean
+--- @return ResourceBlueprint
+function ResourceBlueprint.Deserialize(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -28,8 +41,19 @@ function ResourceBlueprint.DeserializeFromScript(arg0) end
 --- @static
 --- @param arg0 ResourceBlueprint
 --- @return string
---- @overload fun(arg0: string, arg1: ResourceType, arg2: ResourceIO, arg3: number, arg4: string, arg5: ResourceChannel, arg6: EnumBitStore): string
 function ResourceBlueprint.Serialize(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 ResourceType
+--- @param arg2 ResourceIO
+--- @param arg3 number
+--- @param arg4 string
+--- @param arg5 ResourceChannel
+--- @param arg6 EnumBitStore
+--- @return string
+function ResourceBlueprint.Serialize(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @static

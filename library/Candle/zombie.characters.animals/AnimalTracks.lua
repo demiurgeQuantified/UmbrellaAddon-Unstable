@@ -160,7 +160,7 @@ function AnimalTracks:setAddedToWorld(arg0) end
 function AnimalTracks:setDiscovered(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

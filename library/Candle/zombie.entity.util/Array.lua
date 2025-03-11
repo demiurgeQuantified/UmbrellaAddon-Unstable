@@ -12,8 +12,15 @@ Array = {}
 --- @static
 --- @param arg0 Class
 --- @return Array
---- @overload fun(arg0: boolean, arg1: integer, arg2: Class): Array
 function Array.of(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 boolean
+--- @param arg1 integer
+--- @param arg2 Class
+--- @return Array
+function Array.of(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -28,18 +35,52 @@ function Array.with(arg0) end
 --- @public
 --- @param arg0 any
 --- @return nil
---- @overload fun(self: Array, arg0: any, arg1: any): nil
---- @overload fun(self: Array, arg0: any, arg1: any, arg2: any): nil
---- @overload fun(self: Array, arg0: any, arg1: any, arg2: any, arg3: any): nil
 function Array:add(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 any
+--- @return nil
+function Array:add(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @return nil
+function Array:add(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return nil
+function Array:add(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 Object[]
 --- @return nil
---- @overload fun(self: Array, arg0: Array): nil
---- @overload fun(self: Array, arg0: Object[], arg1: integer, arg2: integer): nil
---- @overload fun(self: Array, arg0: Array, arg1: integer, arg2: integer): nil
 function Array:addAll(arg0) end
+
+--- @public
+--- @param arg0 Array
+--- @return nil
+function Array:addAll(arg0) end
+
+--- @public
+--- @param arg0 Object[]
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function Array:addAll(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 Array
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function Array:addAll(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
@@ -120,8 +161,14 @@ function Array:isEmpty() end
 
 --- @public
 --- @return ArrayIterator
---- @overload fun(self: Array): Iterator
---- @overload fun(self: Array): Iterator
+function Array:iterator() end
+
+--- @public
+--- @return Iterator
+function Array:iterator() end
+
+--- @public
+--- @return Iterator
 function Array:iterator() end
 
 --- @public
@@ -211,8 +258,12 @@ function Array:shuffle() end
 
 --- @public
 --- @return nil
---- @overload fun(self: Array, arg0: Comparator): nil
 function Array:sort() end
+
+--- @public
+--- @param arg0 Comparator
+--- @return nil
+function Array:sort(arg0) end
 
 --- @public
 --- @return Spliterator
@@ -226,13 +277,21 @@ function Array:swap(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(self: Array, arg0: Class): Object[]
 function Array:toArray() end
 
 --- @public
+--- @param arg0 Class
+--- @return Object[]
+function Array:toArray(arg0) end
+
+--- @public
 --- @return string
---- @overload fun(self: Array, arg0: string): string
 function Array:toString() end
+
+--- @public
+--- @param arg0 string
+--- @return string
+function Array:toString(arg0) end
 
 --- @public
 --- @param arg0 integer
@@ -240,16 +299,50 @@ function Array:toString() end
 function Array:truncate(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Array
---- @overload fun(arg0: Object[]): Array
---- @overload fun(arg0: integer): Array
---- @overload fun(arg0: Class): Array
---- @overload fun(arg0: Array): Array
---- @overload fun(arg0: boolean, arg1: integer): Array
---- @overload fun(arg0: boolean, arg1: integer, arg2: Class): Array
---- @overload fun(arg0: boolean, arg1: Object[], arg2: integer, arg3: integer): Array
 function Array.new() end
+
+--- @public
+--- @param arg0 Object[]
+--- @return Array
+function Array.new(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return Array
+function Array.new(arg0) end
+
+--- @public
+--- @param arg0 Class
+--- @return Array
+function Array.new(arg0) end
+
+--- @public
+--- @param arg0 Array
+--- @return Array
+function Array.new(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 integer
+--- @return Array
+function Array.new(arg0, arg1) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 integer
+--- @param arg2 Class
+--- @return Array
+function Array.new(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 Object[]
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return Array
+function Array.new(arg0, arg1, arg2, arg3) end

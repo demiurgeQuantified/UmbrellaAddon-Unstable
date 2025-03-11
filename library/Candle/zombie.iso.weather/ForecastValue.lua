@@ -45,7 +45,7 @@ function ForecastValue:getTotalMean() end
 function ForecastValue:getTotalMin() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

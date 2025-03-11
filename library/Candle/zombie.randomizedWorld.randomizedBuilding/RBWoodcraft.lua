@@ -25,7 +25,7 @@ function RBWoodcraft:randomizeBuilding(arg0) end
 function RBWoodcraft:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

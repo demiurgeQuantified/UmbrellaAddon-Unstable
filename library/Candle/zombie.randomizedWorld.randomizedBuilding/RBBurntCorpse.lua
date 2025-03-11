@@ -20,7 +20,7 @@ function RBBurntCorpse:isValid(arg0, arg1) end
 function RBBurntCorpse:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

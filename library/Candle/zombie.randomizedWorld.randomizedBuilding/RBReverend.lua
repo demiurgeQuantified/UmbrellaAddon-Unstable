@@ -25,7 +25,7 @@ function RBReverend:randomizeBuilding(arg0) end
 function RBReverend:roomValid(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

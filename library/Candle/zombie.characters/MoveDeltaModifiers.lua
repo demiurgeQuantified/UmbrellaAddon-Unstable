@@ -51,7 +51,7 @@ function MoveDeltaModifiers:setTurnDelta(arg0) end
 function MoveDeltaModifiers:setTwistDelta(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

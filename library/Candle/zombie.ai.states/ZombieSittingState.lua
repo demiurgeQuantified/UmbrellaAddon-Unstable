@@ -33,7 +33,7 @@ function ZombieSittingState:execute(owner) end
 function ZombieSittingState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

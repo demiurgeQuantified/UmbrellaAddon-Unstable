@@ -49,7 +49,7 @@ function Result:setModule(module) end
 function Result:setType(type) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

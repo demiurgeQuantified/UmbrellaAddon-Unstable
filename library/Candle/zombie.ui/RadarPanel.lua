@@ -17,7 +17,7 @@ function RadarPanel:render() end
 function RadarPanel:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

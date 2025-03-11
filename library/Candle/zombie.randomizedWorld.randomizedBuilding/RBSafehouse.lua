@@ -20,7 +20,7 @@ function RBSafehouse:isValid(arg0, arg1) end
 function RBSafehouse:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

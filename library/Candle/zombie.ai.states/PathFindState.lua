@@ -14,7 +14,7 @@ PathFindState = {}
 function PathFindState.instance() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

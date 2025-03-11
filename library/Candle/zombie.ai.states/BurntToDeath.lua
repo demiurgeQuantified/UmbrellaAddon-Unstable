@@ -33,7 +33,7 @@ function BurntToDeath:execute(owner) end
 function BurntToDeath:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -32,10 +32,16 @@ function ResourceFlag.values() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ResourceFlag): integer
 function ResourceFlag:getBits() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ResourceFlag): integer
+function ResourceFlag:getBits() end
+
+--- @public
+--- @return integer
+function ResourceFlag:getByteId() end
+
+--- @public
+--- @return integer
 function ResourceFlag:getByteId() end

@@ -20,11 +20,11 @@ function Profession:addFreeTrait(trait) end
 function Profession:addXPBoost(perk, level) end
 
 --- @public
---- @return integer the cost
+--- @return integer _ the cost
 function Profession:getCost() end
 
 --- @public
---- @return string the description
+--- @return string _ the description
 function Profession:getDescription() end
 
 --- @public
@@ -32,7 +32,7 @@ function Profession:getDescription() end
 function Profession:getFreeRecipes() end
 
 --- @public
---- @return Stack the FreeTraitStack
+--- @return Stack _ the FreeTraitStack
 function Profession:getFreeTraitStack() end
 
 --- @public
@@ -45,21 +45,30 @@ function Profession:getIconPath() end
 
 --- @public
 --- @return string
---- @overload fun(self: Profession): string
 function Profession:getLabel() end
 
 --- @public
 --- @return string
---- @overload fun(self: Profession): string
+function Profession:getLabel() end
+
+--- @public
+--- @return string
 function Profession:getLeftLabel() end
 
 --- @public
---- @return string the name
+--- @return string
+function Profession:getLeftLabel() end
+
+--- @public
+--- @return string _ the name
 function Profession:getName() end
 
 --- @public
 --- @return string
---- @overload fun(self: Profession): string
+function Profession:getRightLabel() end
+
+--- @public
+--- @return string
 function Profession:getRightLabel() end
 
 --- @public
@@ -67,7 +76,7 @@ function Profession:getRightLabel() end
 function Profession:getTexture() end
 
 --- @public
---- @return string the type
+--- @return string _ the type
 function Profession:getType() end
 
 --- @public
@@ -110,7 +119,7 @@ function Profession:setName(name) end
 function Profession:setType(type) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

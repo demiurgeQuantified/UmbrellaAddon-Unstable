@@ -55,7 +55,7 @@ function GameLoadingState:render() end
 function GameLoadingState:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

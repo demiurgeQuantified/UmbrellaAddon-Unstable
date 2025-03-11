@@ -92,7 +92,7 @@ function SeamEditorState:update() end
 function SeamEditorState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

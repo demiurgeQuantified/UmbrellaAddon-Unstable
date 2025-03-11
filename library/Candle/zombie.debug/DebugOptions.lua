@@ -23,7 +23,11 @@ function DebugOptions.testThreadCrash(idx) end
 --- @public
 --- @param newChild IDebugOption
 --- @return nil
---- @overload fun(self: DebugOptions, newChild: IDebugOption): nil
+function DebugOptions:addChild(newChild) end
+
+--- @public
+--- @param newChild IDebugOption
+--- @return nil
 function DebugOptions:addChild(newChild) end
 
 --- @public
@@ -33,13 +37,20 @@ function DebugOptions:getBoolean(name) end
 
 --- @public
 --- @return Iterable
---- @overload fun(self: DebugOptions): Iterable
+function DebugOptions:getChildren() end
+
+--- @public
+--- @return Iterable
 function DebugOptions:getChildren() end
 
 --- @public
 --- @param arg0 string
 --- @return string
---- @overload fun(self: DebugOptions, arg0: string): string
+function DebugOptions:getCombinedName(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return string
 function DebugOptions:getCombinedName(arg0) end
 
 --- @public
@@ -92,13 +103,21 @@ function DebugOptions:newOptionGroup(arg0) end
 --- @public
 --- @param newOption IDebugOption
 --- @return nil
---- @overload fun(self: DebugOptions, newOption: IDebugOption): nil
 function DebugOptions:onChildAdded(newOption) end
 
 --- @public
 --- @param newOption IDebugOption
 --- @return nil
---- @overload fun(self: DebugOptions, newOption: IDebugOption): nil
+function DebugOptions:onChildAdded(newOption) end
+
+--- @public
+--- @param newOption IDebugOption
+--- @return nil
+function DebugOptions:onDescendantAdded(newOption) end
+
+--- @public
+--- @param newOption IDebugOption
+--- @return nil
 function DebugOptions:onDescendantAdded(newOption) end
 
 --- @public
@@ -108,7 +127,11 @@ function DebugOptions:onFullPathChanged() end
 --- @public
 --- @param arg0 IDebugOption
 --- @return nil
---- @overload fun(self: DebugOptions, arg0: IDebugOption): nil
+function DebugOptions:removeChild(arg0) end
+
+--- @public
+--- @param arg0 IDebugOption
+--- @return nil
 function DebugOptions:removeChild(arg0) end
 
 --- @public
@@ -127,7 +150,7 @@ function DebugOptions:setBoolean(name, value) end
 function DebugOptions:setParent(parent) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

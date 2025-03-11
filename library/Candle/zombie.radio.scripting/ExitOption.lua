@@ -21,7 +21,7 @@ function ExitOption:getScriptname() end
 function ExitOption:getStartDelay() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

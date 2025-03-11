@@ -20,14 +20,24 @@ function ICommonSoundEmitter:isEmpty() end
 --- @public
 --- @param alias string
 --- @return boolean
---- @overload fun(self: ICommonSoundEmitter, channel: integer): boolean
 function ICommonSoundEmitter:isPlaying(alias) end
+
+--- @public
+--- @param channel integer
+--- @return boolean
+function ICommonSoundEmitter:isPlaying(channel) end
 
 --- @public
 --- @param file string
 --- @return integer
---- @overload fun(self: ICommonSoundEmitter, file: string, doWorldSound: boolean): integer
 function ICommonSoundEmitter:playSound(file) end
+
+--- @public
+--- @param file string
+--- @param doWorldSound boolean
+--- @return integer
+--- @deprecated
+function ICommonSoundEmitter:playSound(file, doWorldSound) end
 
 --- @public
 --- @param handle integer

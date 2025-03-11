@@ -45,7 +45,7 @@ function XuiConfigScript:getVarConfigs() end
 function XuiConfigScript:reset() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

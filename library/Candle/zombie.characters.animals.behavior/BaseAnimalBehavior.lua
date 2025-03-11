@@ -152,7 +152,7 @@ function BaseAnimalBehavior:walkedOnSpot() end
 function BaseAnimalBehavior:wanderIdle() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -16,26 +16,65 @@ HaloTextHelper = {}
 --- @param arg0 IsoPlayer
 --- @param arg1 string
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string): nil
 function HaloTextHelper.addBadText(arg0, arg1) end
 
 --- @public
 --- @static
 --- @param arg0 IsoPlayer
 --- @param arg1 string
+--- @param arg2 string
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string): nil
+function HaloTextHelper.addBadText(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @return nil
 function HaloTextHelper.addGoodText(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
+function HaloTextHelper.addGoodText(arg0, arg1, arg2) end
 
 --- @public
 --- @static
 --- @param player IsoPlayer
 --- @param text string
 --- @return nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string): nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: ColorRGB): nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: integer, arg4: integer, arg5: integer): nil
 function HaloTextHelper.addText(player, text) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
+function HaloTextHelper.addText(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 ColorRGB
+--- @return nil
+function HaloTextHelper.addText(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @return nil
+function HaloTextHelper.addText(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
@@ -44,14 +83,90 @@ function HaloTextHelper.addText(player, text) end
 --- @param arrowIsUp boolean
 --- @param color ColorRGB
 --- @return nil
---- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, color: ColorRGB, arrowColor: ColorRGB): nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: ColorRGB): nil
---- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, r: integer, g: integer, b: integer): nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: ColorRGB, arg5: ColorRGB): nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: integer, arg5: integer, arg6: integer): nil
---- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, r: integer, g: integer, b: integer, aR: integer, aG: integer, aB: integer): nil
---- @overload fun(arg0: IsoPlayer, arg1: string, arg2: string, arg3: boolean, arg4: integer, arg5: integer, arg6: integer, arg7: integer, arg8: integer, arg9: integer): nil
 function HaloTextHelper.addTextWithArrow(player, text, arrowIsUp, color) end
+
+--- @public
+--- @static
+--- @param player IsoPlayer
+--- @param text string
+--- @param arrowIsUp boolean
+--- @param color ColorRGB
+--- @param arrowColor ColorRGB
+--- @return nil
+function HaloTextHelper.addTextWithArrow(player, text, arrowIsUp, color, arrowColor) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 boolean
+--- @param arg4 ColorRGB
+--- @return nil
+function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param player IsoPlayer
+--- @param text string
+--- @param arrowIsUp boolean
+--- @param r integer
+--- @param g integer
+--- @param b integer
+--- @return nil
+function HaloTextHelper.addTextWithArrow(player, text, arrowIsUp, r, g, b) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 boolean
+--- @param arg4 ColorRGB
+--- @param arg5 ColorRGB
+--- @return nil
+function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 boolean
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @return nil
+function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @static
+--- @param player IsoPlayer
+--- @param text string
+--- @param arrowIsUp boolean
+--- @param r integer
+--- @param g integer
+--- @param b integer
+--- @param aR integer
+--- @param aG integer
+--- @param aB integer
+--- @return nil
+function HaloTextHelper.addTextWithArrow(player, text, arrowIsUp, r, g, b, aR, aG, aB) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 boolean
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 integer
+--- @param arg7 integer
+--- @param arg8 integer
+--- @param arg9 integer
+--- @return nil
+function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
 --- @static
@@ -89,7 +204,7 @@ function HaloTextHelper.getGoodColor() end
 function HaloTextHelper.update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

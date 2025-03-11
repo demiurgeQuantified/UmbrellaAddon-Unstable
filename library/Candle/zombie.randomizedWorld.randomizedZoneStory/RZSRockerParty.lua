@@ -33,7 +33,7 @@ function RZSRockerParty.getForestClutter() end
 function RZSRockerParty:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

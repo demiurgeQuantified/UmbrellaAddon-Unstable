@@ -44,8 +44,21 @@ function LosUtil.init(width, height) end
 --- @param z1 integer
 --- @param bIgnoreDoors boolean
 --- @return TestResults
---- @overload fun(cell: IsoCell, x0: integer, y0: integer, z0: integer, x1: integer, y1: integer, z1: integer, bIgnoreDoors: boolean, RangeTillWindows: integer): TestResults
 function LosUtil.lineClear(cell, x0, y0, z0, x1, y1, z1, bIgnoreDoors) end
+
+--- @public
+--- @static
+--- @param cell IsoCell
+--- @param x0 integer
+--- @param y0 integer
+--- @param z0 integer
+--- @param x1 integer
+--- @param y1 integer
+--- @param z1 integer
+--- @param bIgnoreDoors boolean
+--- @param RangeTillWindows integer
+--- @return TestResults
+function LosUtil.lineClear(cell, x0, y0, z0, x1, y1, z1, bIgnoreDoors, RangeTillWindows) end
 
 --- @public
 --- @static
@@ -87,7 +100,7 @@ function LosUtil.lineClearCollide(x1, y1, z1, x0, y0, z0, bIgnoreDoors) end
 function LosUtil.lineClearCollideCount(chr, cell, x1, y1, z1, x0, y0, z0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

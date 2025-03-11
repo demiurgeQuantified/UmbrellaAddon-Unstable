@@ -65,7 +65,7 @@ function BooleanConfigOption:setValue(value) end
 function BooleanConfigOption:setValueFromObject(o) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

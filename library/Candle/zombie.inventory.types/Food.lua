@@ -109,7 +109,7 @@ function Food:finishupdate() end
 function Food:freeze() end
 
 --- @public
---- @return number the ActualWeight
+--- @return number _ the ActualWeight
 function Food:getActualWeight() end
 
 --- @public
@@ -130,7 +130,7 @@ function Food:getBaseHungChange() end
 function Food:getBaseHunger() end
 
 --- @public
---- @return number the boredomChange
+--- @return number _ the boredomChange
 function Food:getBoredomChange() end
 
 --- @public
@@ -226,7 +226,7 @@ function Food:getMilkQty() end
 function Food:getMilkType() end
 
 --- @public
---- @return string the name
+--- @return string _ the name
 function Food:getName() end
 
 --- @public
@@ -291,7 +291,7 @@ function Food:getSpices() end
 function Food:getStaticModel() end
 
 --- @public
---- @return number the stressChange
+--- @return number _ the stressChange
 function Food:getStressChange() end
 
 --- @public
@@ -315,7 +315,7 @@ function Food:getThirstChangeUnmodified() end
 function Food:getTimeToHatch() end
 
 --- @public
---- @return number the unhappyChange
+--- @return number _ the unhappyChange
 function Food:getUnhappyChange() end
 
 --- @public
@@ -331,11 +331,11 @@ function Food:getUseForPoison() end
 function Food:getUseOnConsume() end
 
 --- @public
---- @return number the Weight
+--- @return number _ the Weight
 function Food:getWeight() end
 
 --- @public
---- @return string the WorldTexture
+--- @return string _ the WorldTexture
 function Food:getWorldTexture() end
 
 --- @public
@@ -721,8 +721,12 @@ function Food:update() end
 
 --- @public
 --- @return nil
---- @overload fun(self: Food, arg0: boolean): nil
 function Food:updateAge() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Food:updateAge(arg0) end
 
 --- @public
 --- @param emitter BaseSoundEmitter
@@ -730,7 +734,7 @@ function Food:updateAge() end
 function Food:updateSound(emitter) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -739,5 +743,12 @@ function Food:updateSound(emitter) end
 --- @param itemType string
 --- @param texName string
 --- @return Food
---- @overload fun(module: string, name: string, itemType: string, item: Item): Food
 function Food.new(module, name, itemType, texName) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param item Item
+--- @return Food
+function Food.new(module, name, itemType, item) end

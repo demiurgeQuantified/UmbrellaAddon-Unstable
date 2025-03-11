@@ -39,7 +39,7 @@ function MusicIntensityConfig:restoreToFullHealth(arg0) end
 function MusicIntensityConfig:triggerEvent(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

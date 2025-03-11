@@ -58,24 +58,24 @@ function IsoRegions.getChunkFile(chunkX, chunkY) end
 --- @public
 --- @static
 ---
----  Returns a IChunkRegion for the square.  Note: Returned objects from this
----  should not be retained as the DataRoot may get swapped.
+--- Returns a IChunkRegion for the square.  Note: Returned objects from this
+--- should not be retained as the DataRoot may get swapped.
 ---
 --- @param x integer
 --- @param y integer
 --- @param z integer
---- @return IChunkRegion can be null.
+--- @return IChunkRegion _ can be null.
 function IsoRegions.getChunkRegion(x, y, z) end
 
 --- @public
 --- @static
 ---
----  Returns a DataChunk for the square.  Note: Returned objects from this function
----  not be retained as the DataRoot may get swapped.
+--- Returns a DataChunk for the square.  Note: Returned objects from this function
+--- not be retained as the DataRoot may get swapped.
 ---
 --- @param chunkx integer
 --- @param chunky integer
---- @return DataChunk can be null.
+--- @return DataChunk _ can be null.
 function IsoRegions.getDataChunk(chunkx, chunky) end
 
 --- @public
@@ -91,14 +91,14 @@ function IsoRegions.getHeaderFile() end
 --- @public
 --- @static
 ---
----  Returns a IWorldRegion for the square.  Note: Returned objects from this
----  should not be retained as the DataRoot may get swapped.  Note: The IWorldRegion
----  get cached in IsoGridSquare for optimizing purposes but this gets handled in
+--- Returns a IWorldRegion for the square.  Note: Returned objects from this
+--- should not be retained as the DataRoot may get swapped.  Note: The IWorldRegion
+--- get cached in IsoGridSquare for optimizing purposes but this gets handled in
 ---
 --- @param x integer
 --- @param y integer
 --- @param z integer
---- @return IWorldRegion can be null.
+--- @return IWorldRegion _ can be null.
 function IsoRegions.getIsoWorldRegion(x, y, z) end
 
 --- @public
@@ -135,8 +135,14 @@ function IsoRegions.isDebugLoadAllChunks() end
 --- @static
 --- @param str string
 --- @return nil
---- @overload fun(str: string, col: Color): nil
 function IsoRegions.log(str) end
+
+--- @public
+--- @static
+--- @param str string
+--- @param col Color
+--- @return nil
+function IsoRegions.log(str, col) end
 
 --- @public
 --- @static
@@ -165,9 +171,9 @@ function IsoRegions.setDebugLoadAllChunks(b) end
 --- @public
 --- @static
 ---
----  Needs to be called before a player manipulates the grid.  Records bitFlags for
----  state of the square that are compared to bitFlags for the state of the square
----  manipulation to detect relevant changes.
+--- Needs to be called before a player manipulates the grid.  Records bitFlags for
+--- state of the square that are compared to bitFlags for the state of the square
+--- manipulation to detect relevant changes.
 ---
 --- @param gs IsoGridSquare
 --- @return nil
@@ -176,13 +182,23 @@ function IsoRegions.setPreviousFlags(gs) end
 --- @public
 --- @static
 ---
----  Called after the grid has been manipulated by a player.  NOTE: setPreviousFlags
----  to be called prior to the grid being manipulated by a player.
+--- Called after the grid has been manipulated by a player.  NOTE: setPreviousFlags
+--- to be called prior to the grid being manipulated by a player.
 ---
 --- @param gs IsoGridSquare
 --- @return nil
---- @overload fun(gs: IsoGridSquare, isRemoval: boolean): nil
 function IsoRegions.squareChanged(gs) end
+
+--- @public
+--- @static
+---
+--- Called after the grid has been manipulated by a player.  NOTE: setPreviousFlags
+--- to be called prior to the grid being manipulated by a player.
+---
+--- @param gs IsoGridSquare
+--- @param isRemoval boolean
+--- @return nil
+function IsoRegions.squareChanged(gs, isRemoval) end
 
 --- @public
 --- @static
@@ -196,7 +212,7 @@ function IsoRegions.update() end
 function IsoRegions.warn(str) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

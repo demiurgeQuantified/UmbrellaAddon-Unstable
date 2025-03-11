@@ -39,7 +39,7 @@ function ZombieIdleState:execute(owner) end
 function ZombieIdleState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

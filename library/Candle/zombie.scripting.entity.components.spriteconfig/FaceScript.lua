@@ -42,7 +42,7 @@ function FaceScript:getTotalWidth() end
 function FaceScript:getZLayers() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

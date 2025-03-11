@@ -119,7 +119,7 @@ function AmbientStreamManager:stop() end
 function AmbientStreamManager:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

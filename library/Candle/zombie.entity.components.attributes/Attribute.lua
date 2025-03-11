@@ -48,7 +48,7 @@ function Attribute.TypeFromName(arg0) end
 function Attribute.init() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

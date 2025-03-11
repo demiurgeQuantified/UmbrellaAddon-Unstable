@@ -13,7 +13,7 @@ PerkInfo = {}
 function PerkInfo:getLevel() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

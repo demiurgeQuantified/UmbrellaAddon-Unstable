@@ -54,7 +54,7 @@ function Part:setMechanicRequireKey(mechanicRequireKey) end
 function Part:setRepairMechanic(repairMechanic) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

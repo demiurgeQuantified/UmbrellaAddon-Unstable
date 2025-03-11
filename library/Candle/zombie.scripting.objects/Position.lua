@@ -25,7 +25,7 @@ function Position:getOffset() end
 function Position:getRotate() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -20,7 +20,7 @@ function RDSGrouchos:isValid(arg0, arg1) end
 function RDSGrouchos:randomizeDeadSurvivor(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

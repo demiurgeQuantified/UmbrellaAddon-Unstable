@@ -25,8 +25,12 @@ function TraitCollection:clear() end
 --- @public
 --- @param o any
 --- @return boolean
---- @overload fun(self: TraitCollection, trait: string): boolean
 function TraitCollection:contains(o) end
+
+--- @public
+--- @param trait string
+--- @return boolean
+function TraitCollection:contains(trait) end
 
 --- @public
 --- @param n integer
@@ -45,8 +49,12 @@ function TraitCollection:isEmpty() end
 --- @public
 --- @param o any
 --- @return boolean
---- @overload fun(self: TraitCollection, name: string): boolean
 function TraitCollection:remove(o) end
+
+--- @public
+--- @param name string
+--- @return boolean
+function TraitCollection:remove(name) end
 
 --- @public
 --- @param c Collection
@@ -68,7 +76,7 @@ function TraitCollection:size() end
 function TraitCollection:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

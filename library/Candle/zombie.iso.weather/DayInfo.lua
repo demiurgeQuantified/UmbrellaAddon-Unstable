@@ -44,7 +44,7 @@ function DayInfo:getYear() end
 function DayInfo:set(day, month, year) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

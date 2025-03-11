@@ -28,7 +28,7 @@ function RVSAmbulanceCrash:randomizeVehicleStory(zone, chunk) end
 function RVSAmbulanceCrash:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

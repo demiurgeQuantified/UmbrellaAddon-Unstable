@@ -21,7 +21,7 @@ function Fixer:getFixerSkills() end
 function Fixer:getNumberOfUse() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

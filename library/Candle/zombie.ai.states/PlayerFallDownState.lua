@@ -39,7 +39,7 @@ function PlayerFallDownState:execute(owner) end
 function PlayerFallDownState:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

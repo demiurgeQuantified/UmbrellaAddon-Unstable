@@ -72,11 +72,17 @@ function IsoClothingDryer:setActivated(activated) end
 function IsoClothingDryer:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoClothingDryer
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoClothingDryer
 function IsoClothingDryer.new(cell) end
+
+--- @public
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @param gid IsoSprite
+--- @return IsoClothingDryer
+function IsoClothingDryer.new(cell, sq, gid) end

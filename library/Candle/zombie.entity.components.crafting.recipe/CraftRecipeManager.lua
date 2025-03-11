@@ -44,8 +44,15 @@ function CraftRecipeManager.debugPrintTagManagerLines() end
 --- @param arg0 string
 --- @param arg1 List
 --- @return List
---- @overload fun(arg0: string, arg1: List, arg2: List): List
 function CraftRecipeManager.filterRecipeList(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 List
+--- @param arg2 List
+--- @return List
+function CraftRecipeManager.filterRecipeList(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -155,8 +162,16 @@ function CraftRecipeManager.isValidRecipeForCharacter(arg0, arg1, arg2) end
 --- @param arg1 List
 --- @param arg2 boolean
 --- @return List
---- @overload fun(arg0: string, arg1: List, arg2: List, arg3: boolean): List
 function CraftRecipeManager.populateRecipeList(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 List
+--- @param arg2 List
+--- @param arg3 boolean
+--- @return List
+function CraftRecipeManager.populateRecipeList(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
@@ -171,7 +186,7 @@ function CraftRecipeManager.queryRecipes(arg0) end
 function CraftRecipeManager.sanitizeTagQuery(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

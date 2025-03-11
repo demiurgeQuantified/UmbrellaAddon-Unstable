@@ -10,14 +10,23 @@ OutputMapper = {}
 
 --- @public
 --- @return nil
---- @overload fun(self: OutputMapper, arg0: string): nil
 function OutputMapper:OnPostWorldDictionaryInit() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function OutputMapper:OnPostWorldDictionaryInit(arg0) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 String[]
 --- @return nil
---- @overload fun(self: OutputMapper, arg0: string, arg1: ArrayList): nil
+function OutputMapper:addOutputEntree(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 ArrayList
+--- @return nil
 function OutputMapper:addOutputEntree(arg0, arg1) end
 
 --- @public
@@ -27,8 +36,13 @@ function OutputMapper:getEntrees() end
 --- @public
 --- @param arg0 CraftRecipeData
 --- @return Item
---- @overload fun(self: OutputMapper, arg0: CraftRecipeData, arg1: boolean): Item
 function OutputMapper:getOutputItem(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipeData
+--- @param arg1 boolean
+--- @return Item
+function OutputMapper:getOutputItem(arg0, arg1) end
 
 --- @public
 --- @param arg0 Item
@@ -54,7 +68,7 @@ function OutputMapper:registerInputScript(arg0) end
 function OutputMapper:setDefaultOutputEntree(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

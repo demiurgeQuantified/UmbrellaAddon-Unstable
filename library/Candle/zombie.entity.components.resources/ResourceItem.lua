@@ -11,8 +11,13 @@ ResourceItem = {}
 --- @public
 --- @param arg0 ObjectTooltip
 --- @return nil
---- @overload fun(self: ResourceItem, arg0: ObjectTooltip, arg1: Layout): nil
 function ResourceItem:DoTooltip(arg0) end
+
+--- @public
+--- @param arg0 ObjectTooltip
+--- @param arg1 Layout
+--- @return nil
+function ResourceItem:DoTooltip(arg0, arg1) end
 
 --- @public
 --- @param arg0 InventoryItem
@@ -23,7 +28,11 @@ function ResourceItem:acceptsItem(arg0, arg1) end
 --- @public
 --- @param arg0 InventoryItem
 --- @return boolean
---- @overload fun(self: ResourceItem, arg0: Item): boolean
+function ResourceItem:canStackItem(arg0) end
+
+--- @public
+--- @param arg0 Item
+--- @return boolean
 function ResourceItem:canStackItem(arg0) end
 
 --- @public
@@ -115,24 +124,45 @@ function ResourceItem:loadSync(arg0, arg1) end
 --- @param arg0 InventoryItem
 --- @param arg1 boolean
 --- @return InventoryItem
---- @overload fun(self: ResourceItem, arg0: InventoryItem, arg1: boolean, arg2: boolean, arg3: boolean): InventoryItem
 function ResourceItem:offerItem(arg0, arg1) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @return InventoryItem
+function ResourceItem:offerItem(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 ArrayList
 --- @return ArrayList
---- @overload fun(self: ResourceItem, arg0: ArrayList, arg1: boolean): ArrayList
 function ResourceItem:offerItems(arg0) end
 
 --- @public
---- @return InventoryItem
---- @overload fun(self: ResourceItem, arg0: integer): InventoryItem
-function ResourceItem:peekItem() end
+--- @param arg0 ArrayList
+--- @param arg1 boolean
+--- @return ArrayList
+function ResourceItem:offerItems(arg0, arg1) end
 
 --- @public
 --- @return InventoryItem
---- @overload fun(self: ResourceItem, arg0: boolean, arg1: boolean): InventoryItem
+function ResourceItem:peekItem() end
+
+--- @public
+--- @param arg0 integer
+--- @return InventoryItem
+function ResourceItem:peekItem(arg0) end
+
+--- @public
+--- @return InventoryItem
 function ResourceItem:pollItem() end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 boolean
+--- @return InventoryItem
+function ResourceItem:pollItem(arg0, arg1) end
 
 --- @public
 --- @param arg0 ArrayList
@@ -171,5 +201,10 @@ function ResourceItem:tryLoadSyncItems(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @param arg0 Resource
 --- @return nil
---- @overload fun(self: ResourceItem, arg0: Resource, arg1: number): nil
 function ResourceItem:tryTransferTo(arg0) end
+
+--- @public
+--- @param arg0 Resource
+--- @param arg1 number
+--- @return nil
+function ResourceItem:tryTransferTo(arg0, arg1) end

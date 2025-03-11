@@ -17,8 +17,14 @@ function Vector2fc:absolute(arg0) end
 --- @param arg0 Vector2fc
 --- @param arg1 Vector2f
 --- @return Vector2f
---- @overload fun(self: Vector2fc, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2fc:add(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 Vector2f
+--- @return Vector2f
+function Vector2fc:add(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 Vector2fc
@@ -33,22 +39,43 @@ function Vector2fc:ceil(arg0) end
 --- @public
 --- @param arg0 Vector2fc
 --- @return number
---- @overload fun(self: Vector2fc, arg0: number, arg1: number): number
 function Vector2fc:distance(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
+function Vector2fc:distance(arg0, arg1) end
 
 --- @public
 --- @param arg0 Vector2fc
 --- @return number
---- @overload fun(self: Vector2fc, arg0: number, arg1: number): number
 function Vector2fc:distanceSquared(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
+function Vector2fc:distanceSquared(arg0, arg1) end
 
 --- @public
 --- @param arg0 number
 --- @param arg1 Vector2f
 --- @return Vector2f
---- @overload fun(self: Vector2fc, arg0: Vector2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2fc, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2fc:div(arg0, arg1) end
+
+--- @public
+--- @param arg0 Vector2fc
+--- @param arg1 Vector2f
+--- @return Vector2f
+function Vector2fc:div(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 Vector2f
+--- @return Vector2f
+function Vector2fc:div(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 Vector2fc
@@ -59,7 +86,12 @@ function Vector2fc:dot(arg0) end
 --- @param arg0 number
 --- @param arg1 number
 --- @return boolean
---- @overload fun(self: Vector2fc, arg0: Vector2fc, arg1: number): boolean
+function Vector2fc:equals(arg0, arg1) end
+
+--- @public
+--- @param arg0 Vector2fc
+--- @param arg1 number
+--- @return boolean
 function Vector2fc:equals(arg0, arg1) end
 
 --- @public
@@ -72,20 +104,57 @@ function Vector2fc:floor(arg0) end
 --- @param arg1 Vector2fc
 --- @param arg2 Vector2f
 --- @return Vector2f
---- @overload fun(self: Vector2fc, arg0: Vector2fc, arg1: Vector2fc, arg2: Vector2f): Vector2f
+function Vector2fc:fma(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 Vector2fc
+--- @param arg1 Vector2fc
+--- @param arg2 Vector2f
+--- @return Vector2f
 function Vector2fc:fma(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 integer
 --- @return number
---- @overload fun(self: Vector2fc, arg0: ByteBuffer): ByteBuffer
---- @overload fun(self: Vector2fc, arg0: FloatBuffer): FloatBuffer
---- @overload fun(self: Vector2fc, arg0: Vector2d): Vector2d
---- @overload fun(self: Vector2fc, arg0: Vector2f): Vector2f
---- @overload fun(self: Vector2fc, arg0: integer, arg1: ByteBuffer): ByteBuffer
---- @overload fun(self: Vector2fc, arg0: integer, arg1: FloatBuffer): FloatBuffer
---- @overload fun(self: Vector2fc, arg0: integer, arg1: Vector2i): Vector2i
 function Vector2fc:get(arg0) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @return ByteBuffer
+function Vector2fc:get(arg0) end
+
+--- @public
+--- @param arg0 FloatBuffer
+--- @return FloatBuffer
+function Vector2fc:get(arg0) end
+
+--- @public
+--- @param arg0 Vector2d
+--- @return Vector2d
+function Vector2fc:get(arg0) end
+
+--- @public
+--- @param arg0 Vector2f
+--- @return Vector2f
+function Vector2fc:get(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 ByteBuffer
+--- @return ByteBuffer
+function Vector2fc:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 FloatBuffer
+--- @return FloatBuffer
+function Vector2fc:get(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 Vector2i
+--- @return Vector2i
+function Vector2fc:get(arg0, arg1) end
 
 --- @public
 --- @param arg0 integer
@@ -135,11 +204,32 @@ function Vector2fc:minComponent() end
 --- @param arg0 number
 --- @param arg1 Vector2f
 --- @return Vector2f
---- @overload fun(self: Vector2fc, arg0: Matrix2dc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2fc, arg0: Matrix2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2fc, arg0: Vector2fc, arg1: Vector2f): Vector2f
---- @overload fun(self: Vector2fc, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2fc:mul(arg0, arg1) end
+
+--- @public
+--- @param arg0 Matrix2dc
+--- @param arg1 Vector2f
+--- @return Vector2f
+function Vector2fc:mul(arg0, arg1) end
+
+--- @public
+--- @param arg0 Matrix2fc
+--- @param arg1 Vector2f
+--- @return Vector2f
+function Vector2fc:mul(arg0, arg1) end
+
+--- @public
+--- @param arg0 Vector2fc
+--- @param arg1 Vector2f
+--- @return Vector2f
+function Vector2fc:mul(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 Vector2f
+--- @return Vector2f
+function Vector2fc:mul(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 Matrix3x2fc
@@ -167,8 +257,13 @@ function Vector2fc:negate(arg0) end
 --- @public
 --- @param arg0 Vector2f
 --- @return Vector2f
---- @overload fun(self: Vector2fc, arg0: number, arg1: Vector2f): Vector2f
 function Vector2fc:normalize(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 Vector2f
+--- @return Vector2f
+function Vector2fc:normalize(arg0, arg1) end
 
 --- @public
 --- @param arg0 Vector2f
@@ -179,8 +274,14 @@ function Vector2fc:round(arg0) end
 --- @param arg0 Vector2fc
 --- @param arg1 Vector2f
 --- @return Vector2f
---- @overload fun(self: Vector2fc, arg0: number, arg1: number, arg2: Vector2f): Vector2f
 function Vector2fc:sub(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 Vector2f
+--- @return Vector2f
+function Vector2fc:sub(arg0, arg1, arg2) end
 
 --- @public
 --- @return number

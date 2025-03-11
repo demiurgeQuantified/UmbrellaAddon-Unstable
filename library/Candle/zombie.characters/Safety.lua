@@ -77,10 +77,14 @@ function Safety:setToggle(toggle) end
 function Safety:toggleSafety() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Safety
---- @overload fun(character: IsoGameCharacter): Safety
 function Safety.new() end
+
+--- @public
+--- @param character IsoGameCharacter
+--- @return Safety
+function Safety.new(character) end

@@ -14,7 +14,7 @@ RZSBuryingCamp = {}
 function RZSBuryingCamp:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

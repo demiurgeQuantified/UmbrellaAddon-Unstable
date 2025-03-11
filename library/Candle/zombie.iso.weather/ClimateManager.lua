@@ -62,7 +62,14 @@ function ClimateManager.ToMph(val) end
 --- @param max number
 --- @param val number
 --- @return number
---- @overload fun(min: integer, max: integer, val: integer): integer
+function ClimateManager.clamp(min, max, val) end
+
+--- @public
+--- @static
+--- @param min integer
+--- @param max integer
+--- @param val integer
+--- @return integer
 function ClimateManager.clamp(min, max, val) end
 
 --- @public
@@ -155,8 +162,12 @@ function ClimateManager:Reset() end
 
 --- @public
 --- @return nil
---- @overload fun(self: ClimateManager, RainModOverride: integer): nil
 function ClimateManager:execute_Simulation() end
+
+--- @public
+--- @param RainModOverride integer
+--- @return nil
+function ClimateManager:execute_Simulation(RainModOverride) end
 
 --- @public
 --- @return nil
@@ -177,15 +188,31 @@ function ClimateManager:getAirMassTemperature() end
 --- @public
 --- @param plr IsoGameCharacter
 --- @return number
---- @overload fun(self: ClimateManager, plr: IsoGameCharacter, doWindChill: boolean): number
 function ClimateManager:getAirTemperatureForCharacter(plr) end
+
+--- @public
+--- @param plr IsoGameCharacter
+--- @param doWindChill boolean
+--- @return number
+function ClimateManager:getAirTemperatureForCharacter(plr, doWindChill) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return number
---- @overload fun(self: ClimateManager, square: IsoGridSquare, vehicle: BaseVehicle): number
---- @overload fun(self: ClimateManager, square: IsoGridSquare, vehicle: BaseVehicle, doWindChill: boolean): number
 function ClimateManager:getAirTemperatureForSquare(square) end
+
+--- @public
+--- @param square IsoGridSquare
+--- @param vehicle BaseVehicle
+--- @return number
+function ClimateManager:getAirTemperatureForSquare(square, vehicle) end
+
+--- @public
+--- @param square IsoGridSquare
+--- @param vehicle BaseVehicle
+--- @param doWindChill boolean
+--- @return number
+function ClimateManager:getAirTemperatureForSquare(square, vehicle, doWindChill) end
 
 --- @public
 --- @return number
@@ -538,7 +565,7 @@ function ClimateManager:resetOverrides() end
 
 --- @public
 ---
----  IO
+--- IO
 ---
 --- @param output DataOutputStream
 --- @return nil
@@ -712,7 +739,6 @@ function ClimateManager:triggerCustomWeatherStage(stage, duration) end
 --- @param angle number
 --- @param initialPuddles number
 --- @return nil
---- @overload fun(self: ClimateManager, centerX: integer, centerY: integer, duration: number, strength: number, initialProgress: number, angle: number, initialPuddles: number, cloudcolor: ClimateColorInfo): nil
 function ClimateManager:triggerKateBobIntroStorm(
 	centerX,
 	centerY,
@@ -721,6 +747,28 @@ function ClimateManager:triggerKateBobIntroStorm(
 	initialProgress,
 	angle,
 	initialPuddles
+)
+end
+
+--- @public
+--- @param centerX integer
+--- @param centerY integer
+--- @param duration number
+--- @param strength number
+--- @param initialProgress number
+--- @param angle number
+--- @param initialPuddles number
+--- @param cloudcolor ClimateColorInfo
+--- @return nil
+function ClimateManager:triggerKateBobIntroStorm(
+	centerX,
+	centerY,
+	duration,
+	strength,
+	initialProgress,
+	angle,
+	initialPuddles,
+	cloudcolor
 )
 end
 
@@ -741,7 +789,7 @@ function ClimateManager:updateEveryTenMins() end
 function ClimateManager:updateOLD() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

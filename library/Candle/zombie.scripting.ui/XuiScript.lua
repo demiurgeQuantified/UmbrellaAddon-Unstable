@@ -366,8 +366,14 @@ function XuiScript:isStyle() end
 --- @param arg0 string
 --- @param arg1 string
 --- @return boolean
---- @overload fun(self: XuiScript, arg0: string, arg1: string, arg2: boolean): boolean
 function XuiScript:loadVar(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 boolean
+--- @return boolean
+function XuiScript:loadVar(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 XuiScript
@@ -399,7 +405,7 @@ function XuiScript:setXuiStyle(arg0) end
 function XuiScript:toString() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -407,5 +413,12 @@ function XuiScript:toString() end
 --- @param arg1 boolean
 --- @param arg2 string
 --- @return XuiScript
---- @overload fun(arg0: string, arg1: boolean, arg2: string, arg3: XuiScriptType): XuiScript
 function XuiScript.new(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 string
+--- @param arg3 XuiScriptType
+--- @return XuiScript
+function XuiScript.new(arg0, arg1, arg2, arg3) end

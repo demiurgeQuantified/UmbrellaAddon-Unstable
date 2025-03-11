@@ -99,7 +99,7 @@ function ActiveMods:removeMod(modID) end
 function ActiveMods:setModActive(modID, active) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

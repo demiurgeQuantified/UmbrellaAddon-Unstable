@@ -14,7 +14,7 @@ RDSGunmanInBathroom = {}
 function RDSGunmanInBathroom:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

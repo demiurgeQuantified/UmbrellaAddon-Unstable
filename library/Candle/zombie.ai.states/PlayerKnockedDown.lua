@@ -39,7 +39,7 @@ function PlayerKnockedDown:execute(owner) end
 function PlayerKnockedDown:exit(owner) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

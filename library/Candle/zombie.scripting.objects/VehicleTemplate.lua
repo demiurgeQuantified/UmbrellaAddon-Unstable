@@ -13,7 +13,7 @@ VehicleTemplate = {}
 function VehicleTemplate:getScript() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

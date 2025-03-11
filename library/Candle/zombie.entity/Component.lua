@@ -11,8 +11,13 @@ Component = {}
 --- @public
 --- @param arg0 ObjectTooltip
 --- @return nil
---- @overload fun(self: Component, arg0: ObjectTooltip, arg1: Layout): nil
 function Component:DoTooltip(arg0) end
+
+--- @public
+--- @param arg0 ObjectTooltip
+--- @param arg1 Layout
+--- @return nil
+function Component:DoTooltip(arg0, arg1) end
 
 --- @public
 --- @param arg0 ComponentType

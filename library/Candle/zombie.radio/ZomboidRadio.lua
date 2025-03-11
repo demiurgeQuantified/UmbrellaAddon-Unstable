@@ -109,9 +109,52 @@ function ZomboidRadio:Save() end
 --- @param msg ChatMessage
 --- @param signalStrength integer
 --- @return nil
---- @overload fun(self: ZomboidRadio, sourceX: integer, sourceY: integer, channel: integer, msg: string, guid: string, codes: string, r: number, g: number, b: number, signalStrength: integer, isTV: boolean): nil
---- @overload fun(self: ZomboidRadio, source: integer, sourceX: integer, sourceY: integer, channel: integer, msg: string, guid: string, codes: string, r: number, g: number, b: number, signalStrength: integer, isTV: boolean): nil
 function ZomboidRadio:SendTransmission(sourceX, sourceY, msg, signalStrength) end
+
+--- @public
+--- @param sourceX integer
+--- @param sourceY integer
+--- @param channel integer
+--- @param msg string
+--- @param guid string
+--- @param codes string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param signalStrength integer
+--- @param isTV boolean
+--- @return nil
+function ZomboidRadio:SendTransmission(sourceX, sourceY, channel, msg, guid, codes, r, g, b, signalStrength, isTV) end
+
+--- @public
+--- @param source integer
+--- @param sourceX integer
+--- @param sourceY integer
+--- @param channel integer
+--- @param msg string
+--- @param guid string
+--- @param codes string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param signalStrength integer
+--- @param isTV boolean
+--- @return nil
+function ZomboidRadio:SendTransmission(
+	source,
+	sourceX,
+	sourceY,
+	channel,
+	msg,
+	guid,
+	codes,
+	r,
+	g,
+	b,
+	signalStrength,
+	isTV
+)
+end
 
 --- @public
 --- @param device WaveSignalDevice
@@ -134,8 +177,15 @@ function ZomboidRadio:WriteRadioServerDataPacket(bb) end
 --- @param frequency integer
 --- @param category string
 --- @return nil
---- @overload fun(self: ZomboidRadio, name: string, frequency: integer, category: string, overwrite: boolean): nil
 function ZomboidRadio:addChannelName(name, frequency, category) end
+
+--- @public
+--- @param name string
+--- @param frequency integer
+--- @param category string
+--- @param overwrite boolean
+--- @return nil
+function ZomboidRadio:addChannelName(name, frequency, category, overwrite) end
 
 --- @public
 --- @return any
@@ -185,8 +235,13 @@ function ZomboidRadio:getRandomBzztFzzt() end
 
 --- @public
 --- @return integer
---- @overload fun(self: ZomboidRadio, rangemin: integer, rangemax: integer): integer
 function ZomboidRadio:getRandomFrequency() end
+
+--- @public
+--- @param rangemin integer
+--- @param rangemax integer
+--- @return integer
+function ZomboidRadio:getRandomFrequency(rangemin, rangemax) end
 
 --- @public
 --- @return RecordedMedia

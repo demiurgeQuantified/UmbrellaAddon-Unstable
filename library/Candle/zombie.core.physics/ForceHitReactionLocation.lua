@@ -41,7 +41,7 @@ function ForceHitReactionLocation:setAdminValue(arg0) end
 function ForceHitReactionLocation:setEnableAdmin(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -112,7 +112,7 @@ function RecordedMedia:save() end
 function RecordedMedia:sendRequestData(bb) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

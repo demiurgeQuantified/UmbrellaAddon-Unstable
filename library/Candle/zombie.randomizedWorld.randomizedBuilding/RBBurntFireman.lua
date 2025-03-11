@@ -20,7 +20,7 @@ function RBBurntFireman:isValid(arg0, arg1) end
 function RBBurntFireman:randomizeBuilding(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

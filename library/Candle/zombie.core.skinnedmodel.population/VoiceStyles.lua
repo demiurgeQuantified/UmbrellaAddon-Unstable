@@ -49,7 +49,7 @@ function VoiceStyles:getAllStyles() end
 function VoiceStyles:getInstance() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

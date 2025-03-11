@@ -35,7 +35,7 @@ function XuiLayoutScript:parseScript() end
 function XuiLayoutScript:preParse() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

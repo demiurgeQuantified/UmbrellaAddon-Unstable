@@ -65,7 +65,7 @@ function BrokenFences:setDestroyed(obj) end
 function BrokenFences:updateSprite(obj, brokenLeft, brokenRight) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

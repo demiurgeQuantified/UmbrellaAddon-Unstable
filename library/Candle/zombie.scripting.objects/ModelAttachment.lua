@@ -76,7 +76,7 @@ function ModelAttachment:setUpdateConstraint(updateConstraint) end
 function ModelAttachment:setZOffset(zoffset) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

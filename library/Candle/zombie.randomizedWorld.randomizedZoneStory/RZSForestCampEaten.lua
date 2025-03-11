@@ -14,7 +14,7 @@ RZSForestCampEaten = {}
 function RZSForestCampEaten:randomizeZoneStory(zone) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

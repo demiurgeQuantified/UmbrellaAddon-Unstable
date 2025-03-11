@@ -127,7 +127,7 @@ function DebugChunkState:updateScene() end
 function DebugChunkState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -43,15 +43,25 @@ function Faction.getFactions() end
 --- @static
 --- @param username string
 --- @return Faction
---- @overload fun(player: IsoPlayer): Faction
 function Faction.getPlayerFaction(username) end
+
+--- @public
+--- @static
+--- @param player IsoPlayer
+--- @return Faction
+function Faction.getPlayerFaction(player) end
 
 --- @public
 --- @static
 --- @param username string
 --- @return boolean
---- @overload fun(player: IsoPlayer): boolean
 function Faction.isAlreadyInFaction(username) end
+
+--- @public
+--- @static
+--- @param player IsoPlayer
+--- @return boolean
+function Faction.isAlreadyInFaction(player) end
 
 --- @public
 --- @static
@@ -160,10 +170,15 @@ function Faction:syncFaction() end
 function Faction:writeToBuffer(bb, remove) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Faction
---- @overload fun(name: string, owner: string): Faction
 function Faction.new() end
+
+--- @public
+--- @param name string
+--- @param owner string
+--- @return Faction
+function Faction.new(name, owner) end

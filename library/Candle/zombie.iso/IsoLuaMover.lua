@@ -36,7 +36,7 @@ function IsoLuaMover:render(x, y, z, col, bDoAttached, bWallLightingPass, shader
 function IsoLuaMover:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

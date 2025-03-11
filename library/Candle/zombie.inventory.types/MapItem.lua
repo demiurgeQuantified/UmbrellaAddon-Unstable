@@ -67,7 +67,7 @@ function MapItem:save(output, net) end
 function MapItem:setMapID(mapID) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
@@ -76,5 +76,12 @@ function MapItem:setMapID(mapID) end
 --- @param type string
 --- @param tex string
 --- @return MapItem
---- @overload fun(module: string, name: string, type: string, item: Item): MapItem
 function MapItem.new(module, name, type, tex) end
+
+--- @public
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param item Item
+--- @return MapItem
+function MapItem.new(module, name, type, item) end

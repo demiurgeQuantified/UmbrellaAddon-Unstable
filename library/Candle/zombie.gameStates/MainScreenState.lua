@@ -21,8 +21,18 @@ MainScreenState = {}
 --- @param height integer
 --- @param alpha number
 --- @return nil
---- @overload fun(tex: Texture, x: integer, y: integer, width: integer, height: integer, col: Color): nil
 function MainScreenState.DrawTexture(tex, x, y, width, height, alpha) end
+
+--- @public
+--- @static
+--- @param tex Texture
+--- @param x integer
+--- @param y integer
+--- @param width integer
+--- @param height integer
+--- @param col Color
+--- @return nil
+function MainScreenState.DrawTexture(tex, x, y, width, height, col) end
 
 --- @public
 --- @static
@@ -100,7 +110,7 @@ function MainScreenState:setConnectToServerState(state) end
 function MainScreenState:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

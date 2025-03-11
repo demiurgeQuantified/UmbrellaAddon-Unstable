@@ -152,9 +152,20 @@ function IsoLightSwitch:setActivated(arg0) end
 --- @public
 --- @param active boolean
 --- @return boolean
---- @overload fun(self: IsoLightSwitch, active: boolean, setActiveBoolOnly: boolean): boolean
---- @overload fun(self: IsoLightSwitch, active: boolean, setActiveBoolOnly: boolean, ignoreSwitchCheck: boolean): boolean
 function IsoLightSwitch:setActive(active) end
+
+--- @public
+--- @param active boolean
+--- @param setActiveBoolOnly boolean
+--- @return boolean
+function IsoLightSwitch:setActive(active, setActiveBoolOnly) end
+
+--- @public
+--- @param active boolean
+--- @param setActiveBoolOnly boolean
+--- @param ignoreSwitchCheck boolean
+--- @return boolean
+function IsoLightSwitch:setActive(active, setActiveBoolOnly, ignoreSwitchCheck) end
 
 --- @public
 --- @param item string
@@ -235,8 +246,15 @@ function IsoLightSwitch:syncCustomizedSettings(source) end
 --- @param val integer
 --- @param source UdpConnection
 --- @return nil
---- @overload fun(self: IsoLightSwitch, bRemote: boolean, val: integer, source: UdpConnection, bb: ByteBuffer): nil
 function IsoLightSwitch:syncIsoObject(bRemote, val, source) end
+
+--- @public
+--- @param bRemote boolean
+--- @param val integer
+--- @param source UdpConnection
+--- @param bb ByteBuffer
+--- @return nil
+function IsoLightSwitch:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
 --- @param b ByteBufferWriter
@@ -252,11 +270,18 @@ function IsoLightSwitch:toggle() end
 function IsoLightSwitch:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoLightSwitch
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: integer): IsoLightSwitch
 function IsoLightSwitch.new(cell) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 IsoGridSquare
+--- @param arg2 IsoSprite
+--- @param arg3 integer
+--- @return IsoLightSwitch
+function IsoLightSwitch.new(arg0, arg1, arg2, arg3) end

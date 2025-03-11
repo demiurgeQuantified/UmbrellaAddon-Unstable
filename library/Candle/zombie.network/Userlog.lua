@@ -43,11 +43,20 @@ function Userlog:setAmount(amount) end
 function Userlog:write(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @return Userlog
---- @overload fun(arg0: string, arg1: string, arg2: string, arg3: string, arg4: integer, arg5: string): Userlog
 function Userlog.new(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 integer
+--- @param arg5 string
+--- @return Userlog
+function Userlog.new(arg0, arg1, arg2, arg3, arg4, arg5) end

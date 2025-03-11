@@ -131,8 +131,14 @@ function ItemPickerJava.getItemPickerContainers() end
 --- @static
 --- @param itemname string
 --- @return number
---- @overload fun(arg0: string, arg1: boolean): number
 function ItemPickerJava.getLootModifier(itemname) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return number
+function ItemPickerJava.getLootModifier(arg0, arg1) end
 
 --- @public
 --- @static
@@ -181,8 +187,14 @@ function ItemPickerJava.isGoodKey(arg0) end
 --- @static
 --- @param arg0 InventoryItem
 --- @return nil
---- @overload fun(arg0: InventoryItem, arg1: ItemContainer): nil
 function ItemPickerJava.itemSpawnSanityCheck(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 InventoryItem
+--- @param arg1 ItemContainer
+--- @return nil
+function ItemPickerJava.itemSpawnSanityCheck(arg0, arg1) end
 
 --- @public
 --- @static
@@ -220,8 +232,15 @@ function ItemPickerJava.rotItem(arg0) end
 --- @param arg0 InventoryItem
 --- @param arg1 ItemContainer
 --- @return nil
---- @overload fun(arg0: InventoryItem, arg1: ItemContainer, arg2: ItemContainer): nil
 function ItemPickerJava.spawnLootCarKey(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 InventoryItem
+--- @param arg1 ItemContainer
+--- @param arg2 ItemContainer
+--- @return nil
+function ItemPickerJava.spawnLootCarKey(arg0, arg1, arg2) end
 
 --- @public
 --- @static
@@ -269,7 +288,7 @@ function ItemPickerJava.updateOverlaySprite(obj) end
 function ItemPickerJava.wearDownItem(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

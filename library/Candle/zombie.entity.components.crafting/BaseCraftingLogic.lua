@@ -13,9 +13,24 @@ BaseCraftingLogic = {}
 --- @param arg0 string
 --- @param arg1 any
 --- @return nil
---- @overload fun(arg0: string, arg1: any, arg2: any): nil
---- @overload fun(arg0: string, arg1: any, arg2: any, arg3: any): nil
 function BaseCraftingLogic.callLua(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @return nil
+function BaseCraftingLogic.callLua(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @param arg3 any
+--- @return nil
+function BaseCraftingLogic.callLua(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
@@ -48,16 +63,35 @@ function BaseCraftingLogic.getFavouriteModDataString(arg0) end
 --- @param arg0 string
 --- @param arg1 any
 --- @return nil
---- @overload fun(self: BaseCraftingLogic, arg0: string, arg1: any, arg2: any): nil
 function BaseCraftingLogic:addEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 any
+--- @param arg2 any
+--- @return nil
+function BaseCraftingLogic:addEventListener(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 string
 --- @return nil
---- @overload fun(self: BaseCraftingLogic, arg0: string, arg1: string, arg2: boolean): nil
---- @overload fun(self: BaseCraftingLogic, arg0: string, arg1: string, arg2: boolean, arg3: IsoPlayer): nil
 function BaseCraftingLogic:filterRecipeList(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 boolean
+--- @return nil
+function BaseCraftingLogic:filterRecipeList(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 boolean
+--- @param arg3 IsoPlayer
+--- @return nil
+function BaseCraftingLogic:filterRecipeList(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 CraftRecipe
@@ -95,7 +129,7 @@ function BaseCraftingLogic:setSelectedRecipeStyle(arg0, arg1, arg2) end
 function BaseCraftingLogic:sortRecipeList() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

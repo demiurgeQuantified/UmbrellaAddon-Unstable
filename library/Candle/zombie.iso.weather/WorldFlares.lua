@@ -79,7 +79,7 @@ function WorldFlares.setDebugDraw(b) end
 function WorldFlares.update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

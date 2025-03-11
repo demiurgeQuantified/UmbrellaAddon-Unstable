@@ -33,8 +33,8 @@ function Type.valueOf(arg0) end
 --- @public
 --- @static
 ---
----  Returns an array containing the constants of this enum class, in the order they
----  declared.
+--- Returns an array containing the constants of this enum class, in the order they
+--- declared.
 ---
---- @return Type[] an array containing the constants of this enum class, in the order they are declared
+--- @return Type[] _ an array containing the constants of this enum class, in the order they are declared
 function Type.values() end

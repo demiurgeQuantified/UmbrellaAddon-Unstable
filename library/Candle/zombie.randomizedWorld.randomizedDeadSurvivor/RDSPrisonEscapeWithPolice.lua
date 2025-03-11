@@ -14,7 +14,7 @@ RDSPrisonEscapeWithPolice = {}
 function RDSPrisonEscapeWithPolice:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -24,8 +24,12 @@ function BaseSoundEmitter:isEmpty() end
 --- @public
 --- @param alias string
 --- @return boolean
---- @overload fun(self: BaseSoundEmitter, channel: integer): boolean
 function BaseSoundEmitter:isPlaying(alias) end
+
+--- @public
+--- @param channel integer
+--- @return boolean
+function BaseSoundEmitter:isPlaying(channel) end
 
 --- @public
 --- @param arg0 integer
@@ -52,20 +56,60 @@ function BaseSoundEmitter:playClip(clip, parent) end
 --- @public
 --- @param file string
 --- @return integer
---- @overload fun(self: BaseSoundEmitter, file: string, doWorldSound: boolean): integer
---- @overload fun(self: BaseSoundEmitter, file: string, character: IsoGameCharacter): integer
---- @overload fun(self: BaseSoundEmitter, file: string, square: IsoGridSquare): integer
---- @overload fun(self: BaseSoundEmitter, file: string, parent: IsoObject): integer
---- @overload fun(self: BaseSoundEmitter, file: string, x: integer, y: integer, z: integer): integer
 function BaseSoundEmitter:playSound(file) end
+
+--- @public
+--- @param file string
+--- @param doWorldSound boolean
+--- @return integer
+--- @deprecated
+function BaseSoundEmitter:playSound(file, doWorldSound) end
+
+--- @public
+--- @param file string
+--- @param character IsoGameCharacter
+--- @return integer
+function BaseSoundEmitter:playSound(file, character) end
 
 --- @public
 --- @param file string
 --- @param square IsoGridSquare
 --- @return integer
---- @overload fun(self: BaseSoundEmitter, file: string, parent: IsoObject): integer
---- @overload fun(self: BaseSoundEmitter, file: string, doWorldSound: boolean, parent: IsoObject): integer
+function BaseSoundEmitter:playSound(file, square) end
+
+--- @public
+--- @param file string
+--- @param parent IsoObject
+--- @return integer
+function BaseSoundEmitter:playSound(file, parent) end
+
+--- @public
+--- @param file string
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return integer
+function BaseSoundEmitter:playSound(file, x, y, z) end
+
+--- @public
+--- @param file string
+--- @param square IsoGridSquare
+--- @return integer
 function BaseSoundEmitter:playSoundImpl(file, square) end
+
+--- @public
+--- @param file string
+--- @param parent IsoObject
+--- @return integer
+function BaseSoundEmitter:playSoundImpl(file, parent) end
+
+--- @public
+--- @param file string
+--- @param doWorldSound boolean
+--- @param parent IsoObject
+--- @return integer
+--- @deprecated
+function BaseSoundEmitter:playSoundImpl(file, doWorldSound, parent) end
 
 --- @public
 --- @param file string
@@ -180,7 +224,7 @@ function BaseSoundEmitter:tick() end
 function BaseSoundEmitter:triggerCue(handle) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

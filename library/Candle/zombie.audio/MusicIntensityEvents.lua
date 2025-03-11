@@ -43,7 +43,7 @@ function MusicIntensityEvents:getIntensity() end
 function MusicIntensityEvents:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

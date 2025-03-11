@@ -79,8 +79,12 @@ function SpriteModelManager:setTileProperties(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @return nil
---- @overload fun(self: SpriteModelManager, arg0: string): nil
 function SpriteModelManager:toScriptManager() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function SpriteModelManager:toScriptManager(arg0) end
 
 --- @public
 --- @param arg0 string
@@ -88,7 +92,7 @@ function SpriteModelManager:toScriptManager() end
 function SpriteModelManager:write(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

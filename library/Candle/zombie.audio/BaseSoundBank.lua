@@ -36,7 +36,7 @@ function BaseSoundBank:getFootstep(alias) end
 function BaseSoundBank:getVoice(alias) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

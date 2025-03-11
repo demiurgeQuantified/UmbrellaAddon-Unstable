@@ -41,7 +41,7 @@ function MusicThreatStatuses:setStatus(arg0, arg1) end
 function MusicThreatStatuses:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -52,11 +52,18 @@ function ClothingPatch:save(output, net) end
 function ClothingPatch:save_old(output, net) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param arg0 Clothing
 --- @return ClothingPatch
---- @overload fun(arg0: Clothing, arg1: integer, arg2: integer, arg3: boolean): ClothingPatch
 function ClothingPatch.new(arg0) end
+
+--- @public
+--- @param arg0 Clothing
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 boolean
+--- @return ClothingPatch
+function ClothingPatch.new(arg0, arg1, arg2, arg3) end

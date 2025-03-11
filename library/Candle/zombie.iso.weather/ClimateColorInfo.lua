@@ -65,14 +65,28 @@ function ClimateColorInfo:scale(val) end
 --- @public
 --- @param other Color
 --- @return nil
---- @overload fun(self: ClimateColorInfo, r: number, g: number, b: number, a: number): nil
 function ClimateColorInfo:setExterior(other) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function ClimateColorInfo:setExterior(r, g, b, a) end
 
 --- @public
 --- @param other Color
 --- @return nil
---- @overload fun(self: ClimateColorInfo, r: number, g: number, b: number, a: number): nil
 function ClimateColorInfo:setInterior(other) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
+function ClimateColorInfo:setInterior(r, g, b, a) end
 
 --- @public
 --- @param other ClimateColorInfo
@@ -85,11 +99,29 @@ function ClimateColorInfo:setTo(other) end
 function ClimateColorInfo:write(output) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return ClimateColorInfo
---- @overload fun(r: number, g: number, b: number, a: number): ClimateColorInfo
---- @overload fun(r: number, g: number, b: number, a: number, r2: number, g2: number, b2: number, a2: number): ClimateColorInfo
 function ClimateColorInfo.new() end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return ClimateColorInfo
+function ClimateColorInfo.new(r, g, b, a) end
+
+--- @public
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @param r2 number
+--- @param g2 number
+--- @param b2 number
+--- @param a2 number
+--- @return ClimateColorInfo
+function ClimateColorInfo.new(r, g, b, a, r2, g2, b2, a2) end

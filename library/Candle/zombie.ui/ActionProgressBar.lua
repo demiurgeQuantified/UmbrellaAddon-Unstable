@@ -27,7 +27,7 @@ function ActionProgressBar:setValue(delta) end
 function ActionProgressBar:update(nPlayer) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

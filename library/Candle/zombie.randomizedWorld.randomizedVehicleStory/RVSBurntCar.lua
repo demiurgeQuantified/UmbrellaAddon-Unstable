@@ -28,7 +28,7 @@ function RVSBurntCar:randomizeVehicleStory(zone, chunk) end
 function RVSBurntCar:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -14,7 +14,7 @@ RZSOrphanedFawn = {}
 function RZSOrphanedFawn:randomizeZoneStory(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -27,10 +27,15 @@ function PresetEntry:setFrequency(f) end
 function PresetEntry:setName(n) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return PresetEntry
---- @overload fun(n: string, f: integer): PresetEntry
 function PresetEntry.new() end
+
+--- @public
+--- @param n string
+--- @param f integer
+--- @return PresetEntry
+function PresetEntry.new(n, f) end

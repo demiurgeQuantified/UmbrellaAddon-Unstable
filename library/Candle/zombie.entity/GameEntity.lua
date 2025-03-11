@@ -160,8 +160,12 @@ function GameEntity:loadEntity(arg0, arg1) end
 
 --- @public
 --- @return nil
---- @overload fun(self: GameEntity, arg0: boolean): nil
 function GameEntity:onEquip() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function GameEntity:onEquip(arg0) end
 
 --- @public
 --- @return nil
@@ -173,8 +177,12 @@ function GameEntity:onUnEquip() end
 
 --- @public
 --- @return nil
---- @overload fun(self: GameEntity, arg0: boolean): nil
 function GameEntity:removeFromWorld() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function GameEntity:removeFromWorld(arg0) end
 
 --- @public
 --- @return nil
@@ -208,7 +216,7 @@ function GameEntity:sendSyncEntity(arg0) end
 function GameEntity:setUsingPlayer(arg0) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

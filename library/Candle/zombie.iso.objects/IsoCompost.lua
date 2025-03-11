@@ -16,14 +16,23 @@ function IsoCompost:Damage(arg0) end
 --- @public
 --- @param arg0 IsoMovingObject
 --- @return nil
---- @overload fun(self: IsoCompost, arg0: IsoMovingObject): nil
+function IsoCompost:Thump(arg0) end
+
+--- @public
+--- @param arg0 IsoMovingObject
+--- @return nil
 function IsoCompost:Thump(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 HandWeapon
 --- @return nil
---- @overload fun(self: IsoCompost, arg0: IsoGameCharacter, arg1: HandWeapon): nil
+function IsoCompost:WeaponHit(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 HandWeapon
+--- @return nil
 function IsoCompost:WeaponHit(arg0, arg1) end
 
 --- @public
@@ -48,18 +57,28 @@ function IsoCompost:getObjectName() end
 
 --- @public
 --- @return number
---- @overload fun(self: IsoCompost): number
+function IsoCompost:getThumpCondition() end
+
+--- @public
+--- @return number
 function IsoCompost:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(self: IsoCompost, chr: IsoGameCharacter): Thumpable
+function IsoCompost:getThumpableFor(chr) end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return Thumpable
 function IsoCompost:getThumpableFor(chr) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoCompost): boolean
+function IsoCompost:isDestroyed() end
+
+--- @public
+--- @return boolean
 function IsoCompost:isDestroyed() end
 
 --- @public
@@ -111,12 +130,24 @@ function IsoCompost:update() end
 function IsoCompost:updateSprite() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoCompost
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: string): IsoCompost
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite): IsoCompost
 function IsoCompost.new(cell) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 IsoGridSquare
+--- @param arg2 string
+--- @return IsoCompost
+function IsoCompost.new(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 IsoCell
+--- @param arg1 IsoGridSquare
+--- @param arg2 IsoSprite
+--- @return IsoCompost
+function IsoCompost.new(arg0, arg1, arg2) end

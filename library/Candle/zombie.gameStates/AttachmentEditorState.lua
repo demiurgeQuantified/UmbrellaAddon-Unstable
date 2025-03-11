@@ -80,7 +80,7 @@ function AttachmentEditorState:update() end
 function AttachmentEditorState:yield() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

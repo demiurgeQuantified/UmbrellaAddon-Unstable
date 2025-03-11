@@ -19,7 +19,12 @@ State = {}
 --- @static
 --- @param arg0 integer
 --- @return State
---- @overload fun(arg0: string): State
+function State.valueOf(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return State
 function State.valueOf(arg0) end
 
 --- @public

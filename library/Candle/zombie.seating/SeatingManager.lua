@@ -43,8 +43,20 @@ function SeatingManager:fixDefaultPositions() end
 --- @param arg5 string
 --- @param arg6 Vector3f
 --- @return boolean
---- @overload fun(self: SeatingManager, arg0: string, arg1: IsoSprite, arg2: string, arg3: string, arg4: Model, arg5: string, arg6: string, arg7: string, arg8: Vector2f): boolean
 function SeatingManager:getAdjacentPosition(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoSprite
+--- @param arg2 string
+--- @param arg3 string
+--- @param arg4 Model
+--- @param arg5 string
+--- @param arg6 string
+--- @param arg7 string
+--- @param arg8 Vector2f
+--- @return boolean
+function SeatingManager:getAdjacentPosition(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -62,10 +74,27 @@ function SeatingManager:getDeferredMovement(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 IsoObject
 --- @return string
---- @overload fun(self: SeatingManager, arg0: IsoSprite): string
---- @overload fun(self: SeatingManager, arg0: string, arg1: integer, arg2: integer): string
---- @overload fun(self: SeatingManager, arg0: string, arg1: string, arg2: integer, arg3: integer): string
 function SeatingManager:getFacingDirection(arg0) end
+
+--- @public
+--- @param arg0 IsoSprite
+--- @return string
+function SeatingManager:getFacingDirection(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return string
+function SeatingManager:getFacingDirection(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return string
+function SeatingManager:getFacingDirection(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return ArrayList
@@ -90,9 +119,22 @@ function SeatingManager:getTile(arg0, arg1, arg2, arg3) end
 --- @public
 --- @param arg0 IsoObject
 --- @return integer
---- @overload fun(self: SeatingManager, arg0: string, arg1: integer, arg2: integer): integer
---- @overload fun(self: SeatingManager, arg0: string, arg1: string, arg2: integer, arg3: integer): integer
 function SeatingManager:getTilePositionCount(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function SeatingManager:getTilePositionCount(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return integer
+function SeatingManager:getTilePositionCount(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 string
@@ -128,18 +170,48 @@ function SeatingManager:getTilePositionTranslate(arg0, arg1, arg2, arg3, arg4) e
 --- @param arg2 integer
 --- @param arg3 string
 --- @return string
---- @overload fun(self: SeatingManager, arg0: string, arg1: string, arg2: integer, arg3: integer, arg4: string): string
 function SeatingManager:getTileProperty(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @return string
+function SeatingManager:getTileProperty(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 IsoSprite
 --- @param arg1 string
 --- @param arg2 Vector3f
 --- @return Vector3f
---- @overload fun(self: SeatingManager, arg0: string, arg1: integer, arg2: string, arg3: Vector3f): Vector3f
---- @overload fun(self: SeatingManager, arg0: string, arg1: IsoSprite, arg2: string, arg3: Vector3f): Vector3f
---- @overload fun(self: SeatingManager, arg0: string, arg1: string, arg2: integer, arg3: string, arg4: Vector3f): Vector3f
 function SeatingManager:getTranslation(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 string
+--- @param arg3 Vector3f
+--- @return Vector3f
+function SeatingManager:getTranslation(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoSprite
+--- @param arg2 string
+--- @param arg3 Vector3f
+--- @return Vector3f
+function SeatingManager:getTranslation(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 string
+--- @param arg4 Vector3f
+--- @return Vector3f
+function SeatingManager:getTranslation(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 string

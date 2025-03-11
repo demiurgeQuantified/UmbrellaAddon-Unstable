@@ -14,7 +14,7 @@ RDSTinFoilHat = {}
 function RDSTinFoilHat:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

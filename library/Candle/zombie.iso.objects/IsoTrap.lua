@@ -217,11 +217,17 @@ function IsoTrap:triggerExplosion(sensor) end
 function IsoTrap:update() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoTrap
---- @overload fun(weapon: HandWeapon, cell: IsoCell, sq: IsoGridSquare): IsoTrap
 function IsoTrap.new(cell) end
+
+--- @public
+--- @param weapon HandWeapon
+--- @param cell IsoCell
+--- @param sq IsoGridSquare
+--- @return IsoTrap
+function IsoTrap.new(weapon, cell, sq) end

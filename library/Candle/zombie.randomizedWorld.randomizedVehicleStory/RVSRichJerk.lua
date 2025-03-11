@@ -28,7 +28,7 @@ function RVSRichJerk:randomizeVehicleStory(arg0, arg1) end
 function RVSRichJerk:spawnElement(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

@@ -78,22 +78,44 @@ function UIManager.CreateFBO(width, height) end
 --- @param x number
 --- @param y number
 --- @return nil
---- @overload fun(tex: Texture, x: number, y: number, width: number, height: number, alpha: number): nil
 function UIManager.DrawTexture(tex, x, y) end
 
 --- @public
 --- @static
---- @param seconds number
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param alpha number
 --- @return nil
---- @overload fun(playerIndex: number, seconds: number): nil
-function UIManager.FadeIn(seconds) end
+function UIManager.DrawTexture(tex, x, y, width, height, alpha) end
 
 --- @public
 --- @static
 --- @param seconds number
 --- @return nil
---- @overload fun(playerIndex: number, seconds: number): nil
+function UIManager.FadeIn(seconds) end
+
+--- @public
+--- @static
+--- @param playerIndex number
+--- @param seconds number
+--- @return nil
+function UIManager.FadeIn(playerIndex, seconds) end
+
+--- @public
+--- @static
+--- @param seconds number
+--- @return nil
 function UIManager.FadeOut(seconds) end
+
+--- @public
+--- @static
+--- @param playerIndex number
+--- @param seconds number
+--- @return nil
+function UIManager.FadeOut(playerIndex, seconds) end
 
 --- @public
 --- @static
@@ -128,7 +150,7 @@ function UIManager.debugBreakpoint(filename, pc) end
 
 --- @public
 --- @static
---- @return Texture the black
+--- @return Texture _ the black
 function UIManager.getBlack() end
 
 --- @public
@@ -139,12 +161,12 @@ function UIManager.getBlinkAlpha(arg0) end
 
 --- @public
 --- @static
---- @return Clock the clock
+--- @return Clock _ the clock
 function UIManager.getClock() end
 
 --- @public
 --- @static
---- @return UIDebugConsole the DebugConsole
+--- @return UIDebugConsole _ the DebugConsole
 function UIManager.getDebugConsole() end
 
 --- @public
@@ -154,7 +176,7 @@ function UIManager.getDefaultThread() end
 
 --- @public
 --- @static
---- @return ArrayList the DoneTutorials
+--- @return ArrayList _ the DoneTutorials
 function UIManager.getDoneTutorials() end
 
 --- @public
@@ -169,53 +191,58 @@ function UIManager.getDoubleClickInterval() end
 
 --- @public
 --- @static
---- @return number the FadeAlpha
---- @overload fun(playerIndex: number): number
+--- @return number _ the FadeAlpha
 function UIManager.getFadeAlpha() end
 
 --- @public
 --- @static
---- @return number the FadeInTime
+--- @param playerIndex number
+--- @return number
+function UIManager.getFadeAlpha(playerIndex) end
+
+--- @public
+--- @static
+--- @return number _ the FadeInTime
 function UIManager.getFadeInTime() end
 
 --- @public
 --- @static
---- @return number the FadeInTimeMax
+--- @return number _ the FadeInTimeMax
 function UIManager.getFadeInTimeMax() end
 
 --- @public
 --- @static
---- @return number the lastAlpha
+--- @return number _ the lastAlpha
 function UIManager.getLastAlpha() end
 
 --- @public
 --- @static
---- @return Texture the lastMouseTexture
+--- @return Texture _ the lastMouseTexture
 function UIManager.getLastMouseTexture() end
 
 --- @public
 --- @static
---- @return number the lastMouseX
+--- @return number _ the lastMouseX
 function UIManager.getLastMouseX() end
 
 --- @public
 --- @static
---- @return number the lastMouseY
+--- @return number _ the lastMouseY
 function UIManager.getLastMouseY() end
 
 --- @public
 --- @static
---- @return number the lastOffX
+--- @return number _ the lastOffX
 function UIManager.getLastOffX() end
 
 --- @public
 --- @static
---- @return number the lastOffY
+--- @return number _ the lastOffY
 function UIManager.getLastOffY() end
 
 --- @public
 --- @static
---- @return IsoObject the LastPicked
+--- @return IsoObject _ the LastPicked
 function UIManager.getLastPicked() end
 
 --- @public
@@ -230,59 +257,59 @@ function UIManager.getMillisSinceLastUpdate() end
 
 --- @public
 --- @static
---- @return ModalDialog the Modal
+--- @return ModalDialog _ the Modal
 function UIManager.getModal() end
 
 --- @public
 --- @static
 --- @param index number
---- @return MoodlesUI the MoodleUI
+--- @return MoodlesUI _ the MoodleUI
 function UIManager.getMoodleUI(index) end
 
 --- @public
 --- @static
---- @return Texture the mouseArrow
+--- @return Texture _ the mouseArrow
 function UIManager.getMouseArrow() end
 
 --- @public
 --- @static
---- @return Texture the mouseAttack
+--- @return Texture _ the mouseAttack
 function UIManager.getMouseAttack() end
 
 --- @public
 --- @static
---- @return Texture the mouseExamine
+--- @return Texture _ the mouseExamine
 function UIManager.getMouseExamine() end
 
 --- @public
 --- @static
---- @return Texture the mouseGrab
+--- @return Texture _ the mouseGrab
 function UIManager.getMouseGrab() end
 
 --- @public
 --- @static
---- @return ClickObject the Picked
+--- @return ClickObject _ the Picked
 function UIManager.getPicked() end
 
 --- @public
 --- @static
---- @return Vector2 the PickedTile
+--- @return Vector2 _ the PickedTile
 function UIManager.getPickedTile() end
 
 --- @public
 --- @static
---- @return Vector2 the PickedTileLocal
+--- @return Vector2 _ the PickedTileLocal
 function UIManager.getPickedTileLocal() end
 
 --- @public
 --- @static
 --- @param index number
---- @return ActionProgressBar the ProgressBar
+--- @return ActionProgressBar _ the ProgressBar
 function UIManager.getProgressBar(index) end
 
 --- @public
 --- @static
---- @return IsoObject the RightDownObject
+--- @return IsoObject _ the RightDownObject
 function UIManager.getRightDownObject() end
 
 --- @public
@@ -297,7 +324,7 @@ function UIManager.getSecondsSinceLastUpdate() end
 
 --- @public
 --- @static
---- @return SpeedControls the speedControls
+--- @return SpeedControls _ the speedControls
 function UIManager.getSpeedControls() end
 
 --- @public
@@ -317,12 +344,12 @@ function UIManager.getTileFromMouse(mx, my, z) end
 
 --- @public
 --- @static
---- @return ObjectTooltip the toolTip
+--- @return ObjectTooltip _ the toolTip
 function UIManager.getToolTip() end
 
 --- @public
 --- @static
---- @return ArrayList the UI
+--- @return ArrayList _ the UI
 function UIManager.getUI() end
 
 --- @public
@@ -347,7 +374,7 @@ function UIManager.isFBOActive() end
 
 --- @public
 --- @static
---- @return boolean the FadingOut
+--- @return boolean _ the FadingOut
 function UIManager.isFadingOut() end
 
 --- @public
@@ -372,7 +399,7 @@ function UIManager.isShowPausedMessage() end
 
 --- @public
 --- @static
---- @return boolean the bFadeBeforeUI
+--- @return boolean _ the bFadeBeforeUI
 function UIManager.isbFadeBeforeUI() end
 
 --- @public
@@ -662,7 +689,7 @@ function UIManager.update() end
 function UIManager.updateBeforeFadeOut() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

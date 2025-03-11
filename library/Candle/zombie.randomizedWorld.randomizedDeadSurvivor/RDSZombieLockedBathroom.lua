@@ -14,7 +14,7 @@ RDSZombieLockedBathroom = {}
 function RDSZombieLockedBathroom:randomizeDeadSurvivor(def) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

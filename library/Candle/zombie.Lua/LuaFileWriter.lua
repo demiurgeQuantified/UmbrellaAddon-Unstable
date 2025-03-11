@@ -23,7 +23,7 @@ function LuaFileWriter:write(str) end
 function LuaFileWriter:writeln(str) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

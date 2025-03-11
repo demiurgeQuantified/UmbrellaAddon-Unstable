@@ -21,12 +21,29 @@ function IsoSurvivor:getObjectName() end
 function IsoSurvivor:reloadSpritePart() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @param cell IsoCell
 --- @return IsoSurvivor
---- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: integer, y: integer, z: integer): IsoSurvivor
---- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: integer, y: integer, z: integer, bSetInstance: boolean): IsoSurvivor
 function IsoSurvivor.new(cell) end
+
+--- @public
+--- @param desc SurvivorDesc
+--- @param cell IsoCell
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return IsoSurvivor
+function IsoSurvivor.new(desc, cell, x, y, z) end
+
+--- @public
+--- @param desc SurvivorDesc
+--- @param cell IsoCell
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param bSetInstance boolean
+--- @return IsoSurvivor
+function IsoSurvivor.new(desc, cell, x, y, z, bSetInstance) end

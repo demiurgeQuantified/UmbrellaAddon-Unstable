@@ -34,8 +34,15 @@ function RoomDef:getArea() end
 --- @public
 --- @param chunk IsoChunk
 --- @return number
---- @overload fun(self: RoomDef, x: integer, y: integer, w: integer, h: integer): number
 function RoomDef:getAreaOverlapping(chunk) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
+--- @return number
+function RoomDef:getAreaOverlapping(x, y, w, h) end
 
 --- @public
 --- @return BuildingDef
@@ -199,7 +206,7 @@ function RoomDef:setName(arg0) end
 function RoomDef:setRoofFixed(b) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

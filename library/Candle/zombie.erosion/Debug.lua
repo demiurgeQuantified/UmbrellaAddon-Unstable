@@ -21,7 +21,7 @@ function Debug:getStartDay() end
 function Debug:getStartMonth() end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

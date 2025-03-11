@@ -28,7 +28,7 @@ function RVSFlippedCrash:randomizeVehicleStory(zone, chunk) end
 function RVSFlippedCrash:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

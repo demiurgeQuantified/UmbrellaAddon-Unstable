@@ -33,7 +33,7 @@ function KeyNamer.getName(arg0) end
 function KeyNamer.nameKey(arg0, arg1) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

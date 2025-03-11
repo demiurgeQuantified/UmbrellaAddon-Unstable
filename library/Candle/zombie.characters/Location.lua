@@ -11,8 +11,14 @@ Location = {}
 --- @public
 --- @param other any
 --- @return boolean
---- @overload fun(self: Location, arg0: integer, arg1: integer, arg2: integer): boolean
 function Location:equals(other) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return boolean
+function Location:equals(arg0, arg1, arg2) end
 
 --- @public
 --- @return integer
@@ -34,10 +40,16 @@ function Location:getZ() end
 function Location:set(x, y, z) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
 --- @return Location
---- @overload fun(x: integer, y: integer, z: integer): Location
 function Location.new() end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return Location
+function Location.new(x, y, z) end

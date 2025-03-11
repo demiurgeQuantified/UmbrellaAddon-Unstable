@@ -20,7 +20,7 @@ function AttachedLocations.Reset() end
 function AttachedLocations.getGroup(id) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public

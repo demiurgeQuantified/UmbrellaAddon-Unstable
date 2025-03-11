@@ -28,7 +28,7 @@ function RandomizedVehicleStoryBase.getRandomFreeUnoccupiedSquare(arg0, arg1, ar
 --- @public
 --- @static
 ---
----  We init a map with every possible stories for this zone
+--- We init a map with every possible stories for this zone
 ---
 --- @param zone Zone
 --- @param chunk IsoChunk
@@ -58,8 +58,8 @@ function RandomizedVehicleStoryBase:callVehicleStorySpawner(zone, chunk, additio
 
 --- @public
 ---
----  Get the center of the chunk according to the zone (so center of the 10x10
----  AND the zone)
+--- Get the center of the chunk according to the zone (so center of the 10x10  chunk
+--- the zone)
 ---
 --- @param zone Zone
 --- @param chunk IsoChunk
@@ -181,7 +181,7 @@ function RandomizedVehicleStoryBase:setMinimumDays(minimumDays) end
 function RandomizedVehicleStoryBase:spawnElement(spawner, element) end
 
 ------------------------------------
------------ CONSTRUCTOR ------------
+----------- CONSTRUCTORS -----------
 ------------------------------------
 
 --- @public
