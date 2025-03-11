@@ -34,10 +34,16 @@ function DirectionArrow:getR() end
 function DirectionArrow:getRenderHeight() end
 
 --- @public
+---
+---  Render width and height for the pointer texture.
+---
 --- @return number
 function DirectionArrow:getRenderWidth() end
 
 --- @public
+---
+---  The target position on the map for this pointer.
+---
 --- @return integer
 function DirectionArrow:getX() end
 
@@ -50,6 +56,9 @@ function DirectionArrow:getY() end
 function DirectionArrow:getZ() end
 
 --- @public
+---
+---  Active can be set to false, the pointer will remain but wont be drawn.
+---
 --- @return boolean
 function DirectionArrow:isActive() end
 
@@ -58,86 +67,89 @@ function DirectionArrow:isActive() end
 function DirectionArrow:isRemoved() end
 
 --- @public
+---
+---  When called will remove the pointer next tick
+---
 --- @return nil
 function DirectionArrow:remove() end
 
 --- @public
---- @param arg0 number
+--- @param a number
 --- @return nil
-function DirectionArrow:setA(arg0) end
+function DirectionArrow:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return nil
-function DirectionArrow:setActive(arg0) end
+function DirectionArrow:setActive(active) end
 
 --- @public
---- @param arg0 number
+--- @param b number
 --- @return nil
-function DirectionArrow:setB(arg0) end
+function DirectionArrow:setB(b) end
 
 --- @public
---- @param arg0 number
+--- @param g number
 --- @return nil
-function DirectionArrow:setG(arg0) end
+function DirectionArrow:setG(g) end
 
 --- @public
---- @param arg0 number
+--- @param r number
 --- @return nil
-function DirectionArrow:setR(arg0) end
+function DirectionArrow:setR(r) end
 
 --- @public
---- @param arg0 number
---- @param arg1 number
---- @param arg2 number
---- @param arg3 number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
 --- @return nil
-function DirectionArrow:setRGBA(arg0, arg1, arg2, arg3) end
+function DirectionArrow:setRGBA(r, g, b, a) end
 
 --- @public
---- @param arg0 number
+--- @param renderHeight number
 --- @return nil
-function DirectionArrow:setRenderHeight(arg0) end
+function DirectionArrow:setRenderHeight(renderHeight) end
 
 --- @public
---- @param arg0 number
+--- @param renderWidth number
 --- @return nil
-function DirectionArrow:setRenderWidth(arg0) end
+function DirectionArrow:setRenderWidth(renderWidth) end
 
 --- @public
---- @param arg0 string
+--- @param texname string
 --- @return nil
-function DirectionArrow:setTexDown(arg0) end
+function DirectionArrow:setTexDown(texname) end
 
 --- @public
---- @param arg0 string
+--- @param texname string
 --- @return nil
-function DirectionArrow:setTexStairsDown(arg0) end
+function DirectionArrow:setTexStairsDown(texname) end
 
 --- @public
---- @param arg0 string
+--- @param texname string
 --- @return nil
-function DirectionArrow:setTexStairsUp(arg0) end
+function DirectionArrow:setTexStairsUp(texname) end
 
 --- @public
---- @param arg0 string
+--- @param texname string
 --- @return nil
-function DirectionArrow:setTexture(arg0) end
+function DirectionArrow:setTexture(texname) end
 
 --- @public
---- @param arg0 integer
+--- @param x integer
 --- @return nil
-function DirectionArrow:setX(arg0) end
+function DirectionArrow:setX(x) end
 
 --- @public
---- @param arg0 integer
+--- @param y integer
 --- @return nil
-function DirectionArrow:setY(arg0) end
+function DirectionArrow:setY(y) end
 
 --- @public
---- @param arg0 integer
+--- @param z integer
 --- @return nil
-function DirectionArrow:setZ(arg0) end
+function DirectionArrow:setZ(z) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

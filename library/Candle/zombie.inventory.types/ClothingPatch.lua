@@ -25,31 +25,31 @@ function ClothingPatch:getFabricTypeName() end
 function ClothingPatch:getScratchDefense() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function ClothingPatch:load(arg0, arg1) end
+function ClothingPatch:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion integer
+--- @param net boolean
 --- @return nil
 --- @deprecated
-function ClothingPatch:load_old(arg0, arg1, arg2) end
+function ClothingPatch:load_old(input, WorldVersion, net) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
-function ClothingPatch:save(arg0, arg1) end
+function ClothingPatch:save(output, net) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return nil
 --- @deprecated
-function ClothingPatch:save_old(arg0, arg1) end
+function ClothingPatch:save_old(output, net) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

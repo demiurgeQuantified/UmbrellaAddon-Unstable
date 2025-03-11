@@ -9,17 +9,17 @@ WorldSound = {}
 ------------------------------------
 
 --- @public
---- @param arg0 any
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 integer
---- @param arg4 integer
---- @param arg5 integer
+--- @param source any
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param radius integer
+--- @param volume integer
 --- @return WorldSound
---- @overload fun(self: WorldSound, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean): WorldSound
---- @overload fun(self: WorldSound, arg0: boolean, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
---- @overload fun(self: WorldSound, arg0: any, arg1: integer, arg2: integer, arg3: integer, arg4: integer, arg5: integer, arg6: boolean, arg7: number, arg8: number): WorldSound
-function WorldSound:init(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(self: WorldSound, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stresshumans: boolean): WorldSound
+--- @overload fun(self: WorldSound, sourceIsZombie: boolean, x: integer, y: integer, z: integer, radius: integer, volume: integer, stressHumans: boolean, zombieIgnoreDist: number, stressMod: number): WorldSound
+--- @overload fun(self: WorldSound, source: any, x: integer, y: integer, z: integer, radius: integer, volume: integer, stresshumans: boolean, zombieIgnoreDist: number, stressMod: number): WorldSound
+function WorldSound:init(source, x, y, z, radius, volume) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

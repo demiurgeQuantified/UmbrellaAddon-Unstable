@@ -1616,8 +1616,8 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return IAnimationVariableSource
---- @overload fun(self: IsoGameCharacter): AnimationVariableSource
+--- @return AnimationVariableSource
+--- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
 --- @overload fun(self: IsoGameCharacter): IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 

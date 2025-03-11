@@ -9,24 +9,24 @@ Stage = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
---- @param arg1 String[]
+--- @param name string
+--- @param strArray String[]
 --- @return nil
-function Stage:Load(arg0, arg1) end
+function Stage:Load(name, strArray) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoObject
---- @param arg2 boolean
+--- @param chr IsoGameCharacter
+--- @param itemClicked IsoObject
+--- @param cheat boolean
 --- @return boolean
-function Stage:canBeDone(arg0, arg1, arg2) end
+function Stage:canBeDone(chr, itemClicked, cheat) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoThumpable
---- @param arg2 boolean
+--- @param chr IsoGameCharacter
+--- @param item IsoThumpable
+--- @param removeItems boolean
 --- @return nil
-function Stage:doStage(arg0, arg1, arg2) end
+function Stage:doStage(chr, item, removeItems) end
 
 --- @public
 --- @return string
@@ -77,9 +77,9 @@ function Stage:getSprite() end
 function Stage:getThumpSound() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return integer
-function Stage:getTimeNeeded(arg0) end
+function Stage:getTimeNeeded(chr) end
 
 --- @public
 --- @param arg0 IsoGameCharacter

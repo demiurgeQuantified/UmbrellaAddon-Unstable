@@ -517,7 +517,7 @@ Events.OnCoopServerMessage = {
 ---character - The character who was created.<br>desc - The character's descriptor.<br>
 ---@alias Callback_OnCreateLivingCharacter fun(character:IsoLivingCharacter,desc:SurvivorDesc)
 
----(Client) OnCreateLivingCharacter: Fires when an IsoPlayer or IsoSurvivor object is created.
+---OnCreateLivingCharacter: Fires when any IsoLivingCharacter object is created. Most useful for detecting spawning animals.
 ---<br><br>character - The character who was created.<br>desc - The character's descriptor.<br>
 Events.OnCreateLivingCharacter = {
 	---@param callback Callback_OnCreateLivingCharacter
@@ -757,11 +757,11 @@ Events.OnEnterVehicle = {
 	Remove = function(callback) end,
 }
 
----character - The character that equipped the item.<br>item - The item that was equipped.<br>
----@alias Callback_OnEquipPrimary fun(character:IsoGameCharacter,item:InventoryItem)
+---character - The character that equipped the item.<br>item - The newly equipped item.<br>
+---@alias Callback_OnEquipPrimary fun(character:IsoGameCharacter,item:InventoryItem?)
 
----OnEquipPrimary: Fires when a character equips a new item in their primary slot.
----<br><br>character - The character that equipped the item.<br>item - The item that was equipped.<br>
+---OnEquipPrimary: Triggered when a character changes the item in their primary equip slot.
+---<br><br>character - The character that equipped the item.<br>item - The newly equipped item.<br>
 Events.OnEquipPrimary = {
 	---@param callback Callback_OnEquipPrimary
 	Add = function(callback) end,
@@ -769,11 +769,11 @@ Events.OnEquipPrimary = {
 	Remove = function(callback) end,
 }
 
----character - The character that equipped the item.<br>item - The item that was equipped.<br>
----@alias Callback_OnEquipSecondary fun(character:IsoGameCharacter,item:InventoryItem)
+---character - The character that equipped the item.<br>item - The newly equipped item.<br>
+---@alias Callback_OnEquipSecondary fun(character:IsoGameCharacter,item:InventoryItem?)
 
----OnEquipSecondary: Fires when a character equips a new item in their secondary slot.
----<br><br>character - The character that equipped the item.<br>item - The item that was equipped.<br>
+---OnEquipSecondary: Triggered when a character changes the item in their secondary equip slot.
+---<br><br>character - The character that equipped the item.<br>item - The newly equipped item.<br>
 Events.OnEquipSecondary = {
 	---@param callback Callback_OnEquipSecondary
 	Add = function(callback) end,

@@ -9,15 +9,15 @@ XP = {}
 ------------------------------------
 
 --- @public
---- @param arg0 Perk
---- @param arg1 number
+--- @param type Perk
+--- @param amount number
 --- @return nil
---- @overload fun(self: XP, arg0: HandWeapon, arg1: integer): nil
+--- @overload fun(self: XP, weapon: HandWeapon, amount: integer): nil
 --- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean): nil
 --- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean): nil
---- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean, arg4: boolean): nil
+--- @overload fun(self: XP, type: Perk, amount: number, callLua: boolean, doXPBoost: boolean, remote: boolean): nil
 --- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean, arg4: boolean, arg5: boolean): nil
-function XP:AddXP(arg0, arg1) end
+function XP:AddXP(type, amount) end
 
 --- @public
 --- @param arg0 Perk
@@ -26,18 +26,18 @@ function XP:AddXP(arg0, arg1) end
 function XP:AddXPHaloText(arg0, arg1) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 number
+--- @param type Perk
+--- @param amount number
 --- @return nil
-function XP:AddXPNoMultiplier(arg0, arg1) end
+function XP:AddXPNoMultiplier(type, amount) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 number
---- @param arg2 integer
---- @param arg3 integer
+--- @param perks Perk
+--- @param multiplier number
+--- @param minLevel integer
+--- @param maxLevel integer
 --- @return nil
-function XP:addXpMultiplier(arg0, arg1, arg2, arg3) end
+function XP:addXpMultiplier(perks, multiplier, minLevel, maxLevel) end
 
 --- @public
 --- @return number
@@ -51,7 +51,7 @@ function XP:getLevel() end
 --- @public
 --- @return number
 --- @overload fun(self: XP): number
---- @overload fun(self: XP, arg0: Perk): number
+--- @overload fun(self: XP, perk: Perk): number
 function XP:getMultiplier() end
 
 --- @public
@@ -59,18 +59,18 @@ function XP:getMultiplier() end
 function XP:getMultiplierMap() end
 
 --- @public
---- @param arg0 Perk
+--- @param type Perk
 --- @return integer
-function XP:getPerkBoost(arg0) end
+function XP:getPerkBoost(type) end
 
 --- @public
 --- @return number
 function XP:getTotalXp() end
 
 --- @public
---- @param arg0 Perk
+--- @param type Perk
 --- @return number
-function XP:getXP(arg0) end
+function XP:getXP(type) end
 
 --- @public
 --- @return boolean
@@ -78,37 +78,37 @@ function XP:getXP(arg0) end
 function XP:intervalCheck() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 integer
+--- @param input ByteBuffer
+--- @param WorldVersion integer
 --- @return nil
-function XP:load(arg0, arg1) end
+function XP:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return nil
-function XP:save(arg0) end
+function XP:save(output) end
 
 --- @public
---- @param arg0 integer
+--- @param newlevel integer
 --- @return nil
-function XP:setLevel(arg0) end
+function XP:setLevel(newlevel) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 integer
+--- @param perk Perk
+--- @param level integer
 --- @return nil
-function XP:setPerkBoost(arg0, arg1) end
+function XP:setPerkBoost(perk, level) end
 
 --- @public
---- @param arg0 number
+--- @param xp number
 --- @return nil
-function XP:setTotalXP(arg0) end
+function XP:setTotalXP(xp) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 integer
+--- @param key Perk
+--- @param perkLevel integer
 --- @return nil
-function XP:setXPToLevel(arg0, arg1) end
+function XP:setXPToLevel(key, perkLevel) end
 
 ------------------------------------
 ----------- CONSTRUCTOR ------------

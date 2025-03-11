@@ -9,18 +9,18 @@ TraitSlot = {}
 ------------------------------------
 
 --- @public
---- @param arg0 string
+--- @param name string
 --- @return boolean
-function TraitSlot:isName(arg0) end
+function TraitSlot:isName(name) end
 
 --- @public
 --- @return boolean
 function TraitSlot:isSet() end
 
 --- @public
---- @param arg0 boolean
+--- @param val boolean
 --- @return nil
-function TraitSlot:set(arg0) end
+function TraitSlot:set(val) end
 
 --- @public
 --- @return string
