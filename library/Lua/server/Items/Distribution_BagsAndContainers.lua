@@ -284,6 +284,8 @@ BagsAndContainers.BanditItems = {
 	0.1,
 	"IDcard_Blank",
 	0.1,
+	"KeyRing_Clover",
+	0.005,
 	"KeyRing_RabbitFoot",
 	0.1,
 	"Locket",

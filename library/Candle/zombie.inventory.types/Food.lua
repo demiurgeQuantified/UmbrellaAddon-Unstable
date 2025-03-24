@@ -162,6 +162,14 @@ function Food:getCompostTime() end
 function Food:getCookingSound() end
 
 --- @public
+--- @return integer
+function Food:getCurrentUses() end
+
+--- @public
+--- @return number
+function Food:getCurrentUsesFloat() end
+
+--- @public
 --- @return string
 function Food:getCustomEatSound() end
 
@@ -216,6 +224,10 @@ function Food:getLastCookMinute() end
 --- @public
 --- @return number
 function Food:getLipids() end
+
+--- @public
+--- @return integer
+function Food:getMaxUses() end
 
 --- @public
 --- @return integer
@@ -511,6 +523,11 @@ function Food:setCompostTime(compostTime) end
 --- @param b boolean
 --- @return nil
 function Food:setCookedInMicrowave(b) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function Food:setCurrentUses(arg0) end
 
 --- @public
 --- @param customEatSound string

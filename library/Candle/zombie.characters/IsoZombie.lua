@@ -532,6 +532,10 @@ function IsoZombie:isLocal() end
 
 --- @public
 --- @return boolean
+function IsoZombie:isMovingToPlayerSound() end
+
+--- @public
+--- @return boolean
 function IsoZombie:isNoTeeth() end
 
 --- @public
@@ -566,6 +570,10 @@ function IsoZombie:isReanimatedPlayer() end
 --- @public
 --- @return boolean
 function IsoZombie:isRemoteZombie() end
+
+--- @public
+--- @return boolean
+function IsoZombie:isRespondingToPlayerSound() end
 
 --- @public
 --- @return boolean

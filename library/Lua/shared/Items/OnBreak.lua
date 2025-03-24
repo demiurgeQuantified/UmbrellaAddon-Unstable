@@ -16,6 +16,9 @@ function OnBreak.Banjo(item, player) end
 function OnBreak.BaseballBat(item, player) end
 
 ---@return any
+function OnBreak.BaseballBat_Nails(item, player) end
+
+---@return any
 function OnBreak.BaseballBat_RailSpike(item, player) end
 
 ---@return any
@@ -136,16 +139,34 @@ function OnBreak.KitchenKnife(item, player) end
 function OnBreak.LargeBranch(item, player) end
 
 ---@return any
+function OnBreak.LargeBranch_Nails(item, player) end
+
+---@return any
 function OnBreak.LargeKnife(item, player) end
 
 ---@return any
 function OnBreak.LongHandle(item, player) end
 
 ---@return any
+function OnBreak.LongHandle_Nails(item, player) end
+
+---@return any
 function OnBreak.LongHandle_RakeHead(item, player) end
 
 ---@return any
+function OnBreak.LongMace(item, player) end
+
+---@return any
+function OnBreak.LongMaceStone(item, player) end
+
+---@return any
 function OnBreak.LongStick(item, player) end
+
+---@return any
+function OnBreak.Mace(item, player) end
+
+---@return any
+function OnBreak.MaceStone(item, player) end
 
 ---@return any
 function OnBreak.Machete(item, player) end
@@ -160,6 +181,9 @@ function OnBreak.MetalBar(item, player) end
 function OnBreak.MetalPipe(item, player) end
 
 ---@return any
+function OnBreak.Nails(item, player) end
+
+---@return any
 function OnBreak.OldAxe(item, player) end
 
 ---@return any
@@ -167,6 +191,9 @@ function OnBreak.PickAxe(item, player) end
 
 ---@return any
 function OnBreak.Plank(item, player) end
+
+---@return any
+function OnBreak.Plank_Nails(item, player) end
 
 ---@return any
 function OnBreak.Rake(item, player) end
@@ -295,10 +322,13 @@ function OnBreak.Sword_Scrap(item, player) end
 function OnBreak.TableLeg(item, player) end
 
 ---@return any
-function OnBreak.WoodAxe(item, player) end
+function OnBreak.TableLeg_Nails(item, player) end
 
 ---@return any
 function OnBreak.WoodAxe(item, player) end
 
 ---@return any
 function OnBreak.WoodenStick(item, player) end
+
+---@return any
+function OnBreak.WoodenStick_Nails(item, player) end

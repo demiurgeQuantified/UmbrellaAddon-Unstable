@@ -24,6 +24,9 @@ function ISOpenVehicleDoor:isValid() end
 function ISOpenVehicleDoor:perform() end
 
 ---@return any
+function ISOpenVehicleDoor:selectContainerInLootWindow() end
+
+---@return any
 function ISOpenVehicleDoor:start() end
 
 ---@return any

@@ -548,6 +548,11 @@ function IsoObject:getGameEntityType() end
 function IsoObject:getHighlightColor() end
 
 --- @public
+--- @param arg0 integer
+--- @return ColorInfo
+function IsoObject:getHighlightColor(arg0) end
+
+--- @public
 --- @return boolean
 function IsoObject:getIsSurfaceNormalOffset() end
 
@@ -1079,6 +1084,10 @@ function IsoObject:isTableTopObject() end
 function IsoObject:isTaintedWater() end
 
 --- @public
+--- @return boolean
+function IsoObject:isTallHoppable() end
+
+--- @public
 --- @param playerIndex integer
 --- @return boolean
 function IsoObject:isTargetAlphaZero(playerIndex) end
@@ -1086,6 +1095,18 @@ function IsoObject:isTargetAlphaZero(playerIndex) end
 --- @public
 --- @return boolean
 function IsoObject:isTent() end
+
+--- @public
+--- @return boolean
+function IsoObject:isWall() end
+
+--- @public
+--- @return boolean
+function IsoObject:isWallN() end
+
+--- @public
+--- @return boolean
+function IsoObject:isWallW() end
 
 --- @public
 --- @return boolean
@@ -1442,12 +1463,27 @@ function IsoObject:setExplored(arg0) end
 function IsoObject:setHighlightColor(highlightColor) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 ColorInfo
+--- @return nil
+function IsoObject:setHighlightColor(arg0, arg1) end
+
+--- @public
 --- @param r number
 --- @param g number
 --- @param b number
 --- @param a number
 --- @return nil
 function IsoObject:setHighlightColor(r, g, b, a) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @return nil
+function IsoObject:setHighlightColor(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 boolean

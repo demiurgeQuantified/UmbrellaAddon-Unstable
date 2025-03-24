@@ -2,8 +2,6 @@
 
 --- @class ClimbDownSheetRopeState: State
 --- @field public class any
---- @field public ClimbDownSlowdown number
---- @field public ClimbDownSpeed number
 ClimbDownSheetRopeState = {}
 
 ------------------------------------

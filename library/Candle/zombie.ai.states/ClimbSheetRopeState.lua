@@ -14,12 +14,35 @@ ClimbSheetRopeState = {}
 
 --- @public
 --- @static
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function ClimbSheetRopeState.applyIdealDirection(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function ClimbSheetRopeState.createClimbData(arg0) end
+
+--- @public
+--- @static
 --- @return ClimbSheetRopeState
 function ClimbSheetRopeState.instance() end
+
+--- @public
+--- @static
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function ClimbSheetRopeState.setIdealDirection(arg0) end
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function ClimbSheetRopeState:debug(arg0) end
 
 --- @public
 --- @param owner IsoGameCharacter

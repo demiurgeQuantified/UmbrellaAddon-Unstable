@@ -542,6 +542,9 @@ forageSystem = {
 function forageSystem.addCatDef(_catDef, _overwrite) end
 
 ---@return any
+function forageSystem.addForageDef(_itemType, _forageDef) end
+
+---@return any
 function forageSystem.addItemDef(_itemDef) end
 
 ---@return any
@@ -578,6 +581,12 @@ function forageSystem.createForageZone(_x, _y, _defZone) end
 function forageSystem.createZoneData(_forageZone, _zoneDef) end
 
 ---@return any
+function forageSystem.debugRefreshAllZones() end
+
+---@return any
+function forageSystem.debugRefreshZone(_zoneData) end
+
+---@return any
 function forageSystem.doClothingItemSpawn(_character, _inventory, _itemDef, _items) end
 
 ---@return any
@@ -602,7 +611,7 @@ function forageSystem.doItemDefCheck(_doItemFile) end
 function forageSystem.doJunkWeaponSpawn(_character, _inventory, _itemDef, _items) end
 
 ---@return any
-function forageSystem.doPoisonItemSpawn(_character, _inventory, _itemDef, _items, isKnownPoison) end
+function forageSystem.doPoisonItemSpawn(_character, _inventory, _itemDef, _items) end
 
 ---@return any
 function forageSystem.doRandomAgeSpawn(_character, _inventory, _itemDef, _items) end
@@ -665,7 +674,7 @@ function forageSystem.getLevelVisionBonus(_perkLevel) end
 function forageSystem.getLightLevelPenalty(_character, _square, _doReduction) end
 
 ---@return any
-function forageSystem.getMonthBonus(_itemDef, _month) end
+function forageSystem.getMonthBonus(_itemDef, _month, _monthBonus, _monthMalus) end
 
 ---@return any
 function forageSystem.getMovementVisionPenalty(_character) end
@@ -818,7 +827,10 @@ function forageSystem.removeItemDef(_itemDef) end
 function forageSystem.setOptionValues() end
 
 ---@return any
-function forageSystem.statisticsDebug() end
+function forageSystem.setScriptItemFocusCategories(_itemDef, _scriptItem) end
+
+---@return any
+function forageSystem.statisticsDebug(_createDebugLog, _doItemStats) end
 
 ---@return any
 function forageSystem.takeItem(_zoneData, _number) end

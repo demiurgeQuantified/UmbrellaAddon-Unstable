@@ -2,6 +2,7 @@
 
 ---@class ISClimbOverFence : ISBaseTimedAction
 ---@field direction any
+---@field isTallHoppable any
 ---@field item any
 ---@field maxTime any
 ---@field stopOnAim any

@@ -190,8 +190,9 @@ function IsoDoor:canClimbOver(chr) end
 function IsoDoor:changeSprite(arg0) end
 
 --- @public
+--- @param arg0 integer
 --- @return nil
-function IsoDoor:checkKeyHighlight() end
+function IsoDoor:checkKeyHighlight(arg0) end
 
 --- @public
 --- @return integer

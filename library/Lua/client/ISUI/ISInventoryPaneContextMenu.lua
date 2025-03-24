@@ -286,7 +286,7 @@ end
 function ISInventoryPaneContextMenu.onDrinkFluid(item, percent, playerObj) end
 
 ---@return any
-function ISInventoryPaneContextMenu.onDrinkForThirst(waterContainer, playerObj, units) end
+function ISInventoryPaneContextMenu.onDrinkForThirst(waterContainer, playerObj, percent) end
 
 ---@return any
 function ISInventoryPaneContextMenu.onDropItems(items, player) end

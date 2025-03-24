@@ -109,6 +109,7 @@ return {
 		ZombiesDragDown = true,
 		ZombiesFenceLunge = true,
 		DisableFakeDead = 1,
+		FenceThumpersRequired = 50,
 	},
 	ZombieConfig = {
 		PopulationMultiplier = tonumber(ZombiePopulationMultiplier.Normal),

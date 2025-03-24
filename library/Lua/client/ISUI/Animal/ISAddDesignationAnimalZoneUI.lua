@@ -15,7 +15,6 @@
 ---@field joypadWorldY any
 ---@field player any
 ---@field playerNum any
----@field selectedSq any
 ---@field startingX any
 ---@field startingY any
 ---@field startRenderTile any

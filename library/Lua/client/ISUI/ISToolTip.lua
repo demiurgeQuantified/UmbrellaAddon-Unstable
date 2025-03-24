@@ -83,6 +83,9 @@ function ISToolTip:reset() end
 function ISToolTip:setContextMenu(contextMenu) end
 
 ---@return any
+function ISToolTip:setDescription(str) end
+
+---@return any
 function ISToolTip:setDesiredPosition(x, y) end
 
 ---@return any
@@ -96,6 +99,9 @@ function ISToolTip:setTexture(textureName) end
 
 ---@return any
 function ISToolTip:setTextureDirectly(texture) end
+
+---@return any
+function ISToolTip:setTitle(str) end
 
 ---@return ISToolTip
 function ISToolTip:new() end

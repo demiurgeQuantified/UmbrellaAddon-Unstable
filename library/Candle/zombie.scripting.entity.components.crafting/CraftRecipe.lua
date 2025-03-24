@@ -211,6 +211,11 @@ function CraftRecipe:getExistsAsVanilla() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @return Perk
+function CraftRecipe:getHighestRelevantSkill(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
 --- @return integer
 function CraftRecipe:getHighestRelevantSkillLevel(arg0) end
 

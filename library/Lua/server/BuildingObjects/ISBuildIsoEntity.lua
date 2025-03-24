@@ -23,6 +23,7 @@
 ---@field hoppable any
 ---@field isDoor any
 ---@field isDoorFrame any
+---@field isFloor any
 ---@field isStairs any
 ---@field isThumpable any
 ---@field isWallLike any

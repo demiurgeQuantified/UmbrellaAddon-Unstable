@@ -79,8 +79,8 @@ function Stats:getFitness() end
 function Stats:getHunger() end
 
 --- @public
---- @return number _ the idleboredom
-function Stats:getIdleboredom() end
+--- @return number
+function Stats:getIdleness() end
 
 --- @public
 --- @return number
@@ -180,6 +180,10 @@ function Stats:normalizeFitness() end
 --- @public
 --- @return nil
 function Stats:normalizeHunger() end
+
+--- @public
+--- @return nil
+function Stats:normalizeIdleness() end
 
 --- @public
 --- @param arg0 number
@@ -307,9 +311,9 @@ function Stats:setFitness(fitness) end
 function Stats:setHunger(hunger) end
 
 --- @public
---- @param idleboredom number the idleboredom to set
+--- @param arg0 number
 --- @return nil
-function Stats:setIdleboredom(idleboredom) end
+function Stats:setIdleness(arg0) end
 
 --- @public
 --- @param morale number the morale to set

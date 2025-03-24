@@ -45,6 +45,9 @@ function DebugContextMenu.doDebugObjectMenu(player, context, worldobjects, test)
 function DebugContextMenu.doDebugZombieMenu(player, context, worldobjects, test) end
 
 ---@return any
+function DebugContextMenu.doForageMenu(player, context, worldobjects, test) end
+
+---@return any
 function DebugContextMenu.doMissingClothingItems() end
 
 ---@return any
@@ -84,7 +87,7 @@ function DebugContextMenu.OnBBQSetFuel(obj) end
 function DebugContextMenu.OnBBQZeroFuel(obj) end
 
 ---@return any
-function DebugContextMenu.OnBendFence(worldobjects, fence) end
+function DebugContextMenu.OnBendFence(worldobjects, fence, towards) end
 
 ---@return any
 function DebugContextMenu.OnBreakFence(worldobjects, fence) end
@@ -180,6 +183,9 @@ function DebugContextMenu.onRemoveItemTool(playerObj) end
 function DebugContextMenu.onRemoveVehicles(zone) end
 
 ---@return any
+function DebugContextMenu.OnResetFence(worldobjects, fence) end
+
+---@return any
 function DebugContextMenu.onRunningUI(playerObj) end
 
 ---@return any
@@ -250,6 +256,9 @@ function DebugContextMenu.onTeleportUI(playerObj) end
 
 ---@return any
 function DebugContextMenu.onTeleportValid(button, x, y, z) end
+
+---@return any
+function DebugContextMenu.onTick() end
 
 ---@return any
 function DebugContextMenu.onTick() end

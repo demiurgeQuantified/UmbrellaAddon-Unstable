@@ -333,11 +333,6 @@ function IsoGameCharacter:Hit(weapon, wielder, damageSplit, bIgnoreDamage, modDe
 function IsoGameCharacter:InitSpriteParts(desc) end
 
 --- @public
---- @return boolean
---- @deprecated
-function IsoGameCharacter:IsAiming() end
-
---- @public
 --- @param x number
 --- @param y number
 --- @param z number
@@ -1285,6 +1280,11 @@ function IsoGameCharacter:climbSheetRope() end
 function IsoGameCharacter:climbSheetRope() end
 
 --- @public
+--- @param arg0 IsoObject
+--- @return nil
+function IsoGameCharacter:climbThroughWindow(arg0) end
+
+--- @public
 --- @param w IsoThumpable
 --- @return nil
 function IsoGameCharacter:climbThroughWindow(w) end
@@ -1863,6 +1863,10 @@ function IsoGameCharacter:getChopTreeSpeed() end
 function IsoGameCharacter:getClickSound() end
 
 --- @public
+--- @return ClimbData
+function IsoGameCharacter:getClimbData() end
+
+--- @public
 --- @param arg0 boolean
 --- @return number
 function IsoGameCharacter:getClimbRopeSpeed(arg0) end
@@ -2153,11 +2157,11 @@ function IsoGameCharacter:getGameVariables() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return AnimationVariableSource
+--- @return IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
---- @return IAnimationVariableSource
+--- @return AnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
@@ -2286,6 +2290,10 @@ function IsoGameCharacter:getHurtSound() end
 --- @public
 --- @return number
 function IsoGameCharacter:getHyperthermiaMod() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getIdleSquareTime() end
 
 --- @public
 --- @return boolean
@@ -3227,11 +3235,11 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return BaseGrappleable
+--- @return IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
---- @return IGrappleable
+--- @return BaseGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
@@ -3571,6 +3579,14 @@ function IsoGameCharacter:isCurrentState(state) end
 --- @param state State
 --- @return boolean
 function IsoGameCharacter:isCurrentState(state) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isCurrentlyBusy() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isCurrentlyIdle() end
 
 --- @public
 --- @return boolean
@@ -3918,6 +3934,11 @@ function IsoGameCharacter:isNPC() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isNearSirenVehicle() end
+
+--- @public
+--- @param arg0 IsoObject
+--- @return boolean
+function IsoGameCharacter:isObjectBehind(arg0) end
 
 --- @public
 --- @return boolean
@@ -4387,6 +4408,10 @@ function IsoGameCharacter:load(input, WorldVersion, IS_DEBUG_SAVE) end
 --- @param bb ByteBuffer
 --- @return nil
 function IsoGameCharacter:loadChange(change, bb) end
+
+--- @public
+--- @return number
+function IsoGameCharacter:nearbyZombieClimbPenalty() end
 
 --- @public
 ---
@@ -4941,6 +4966,11 @@ function IsoGameCharacter:setCanUseBrushTool(arg0) end
 --- @param clickSound string
 --- @return nil
 function IsoGameCharacter:setClickSound(clickSound) end
+
+--- @public
+--- @param arg0 ClimbData
+--- @return nil
+function IsoGameCharacter:setClimbData(arg0) end
 
 --- @public
 --- @param arg0 number

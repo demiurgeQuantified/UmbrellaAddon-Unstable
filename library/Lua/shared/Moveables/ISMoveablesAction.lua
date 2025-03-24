@@ -10,6 +10,7 @@
 ---@field moveProps any
 ---@field object any
 ---@field origSpriteName any
+---@field playerNum any
 ---@field sound any
 ---@field spriteFrame any
 ---@field square any

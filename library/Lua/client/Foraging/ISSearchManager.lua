@@ -144,6 +144,12 @@ ISSearchManager.ignoredItemTypes = {
 }
 
 ---@return any
+function ISSearchManager.createDebugContextMenu(_player, _context, _manager, _square) end
+
+---@return any
+function ISSearchManager.createDebugSpawnAllContextMenu(_player, _context, _manager, _square) end
+
+---@return any
 function ISSearchManager.createUI(_player) end
 
 ---@return any
@@ -222,6 +228,9 @@ function ISSearchManager:clearSpriteCheckedSquares() end
 function ISSearchManager:clearZoneData() end
 
 ---@return any
+function ISSearchManager:createAllIconsOnSquare(_square, _category) end
+
+---@return any
 function ISSearchManager:createBonusIcon(_square, _catDef, _zoneData) end
 
 ---@return any
@@ -235,6 +244,9 @@ function ISSearchManager:createIconsForWorldItems(_square) end
 
 ---@return any
 function ISSearchManager:createIconsForZone(_zoneData, _recreate) end
+
+---@return any
+function ISSearchManager:createSpecificIcon(_square, _itemType, _zoneData, _isBonus, _isFocus, _count) end
 
 ---@return any
 function ISSearchManager:doChangePosition(_icon) end
@@ -294,6 +306,12 @@ function ISSearchManager:isIconOnSquare(_square, _iconList) end
 function ISSearchManager:loadIcons() end
 
 ---@return any
+function ISSearchManager:moveAllZoneIconsToSquare(_square) end
+
+---@return any
+function ISSearchManager:onEnteredItemType(button, _square, _zoneData, _count) end
+
+---@return any
 function ISSearchManager:onMouseDown() end
 
 ---@return any
@@ -307,6 +325,9 @@ function ISSearchManager:onToggleVisible() end
 
 ---@return any
 function ISSearchManager:prerender() end
+
+---@return any
+function ISSearchManager:refreshZoneIcons(_square) end
 
 ---@return any
 function ISSearchManager:removeIcon(_icon) end

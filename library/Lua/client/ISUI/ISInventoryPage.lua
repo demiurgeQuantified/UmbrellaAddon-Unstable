@@ -111,6 +111,9 @@ function ISInventoryPage.onInventoryFontChanged() end
 function ISInventoryPage.onKeyPressed(key) end
 
 ---@return any
+function ISInventoryPage.OnObjectHighlighted(playerNum, object, isHighlighted) end
+
+---@return any
 function ISInventoryPage.toggleInventory() end
 
 ---@return any
@@ -279,7 +282,7 @@ function ISInventoryPage:selectPrevContainer() end
 function ISInventoryPage:setBlinkingContainer(blinking, containerType) end
 
 ---@return any
-function ISInventoryPage:setForceSelectedContainer(container) end
+function ISInventoryPage:setForceSelectedContainer(container, ms) end
 
 ---@return any
 function ISInventoryPage:setInfo(text) end
@@ -304,6 +307,9 @@ function ISInventoryPage:transferAll() end
 
 ---@return any
 function ISInventoryPage:update() end
+
+---@return any
+function ISInventoryPage:updateContainerHighlight() end
 
 ---@return ISInventoryPage
 function ISInventoryPage:new(x, y, width, height, inventory, onCharacter, zoom) end

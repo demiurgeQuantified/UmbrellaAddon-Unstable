@@ -1908,6 +1908,12 @@ SettingsTable = {
 					{
 						name = "Map.MapNeedsLight",
 					},
+					{
+						name = "ZombieLore.FenceThumpersRequired",
+					},
+					{
+						name = "ZombieLore.FenceDamageMultiplier",
+					},
 				},
 			},
 			{

@@ -1455,10 +1455,6 @@ function ItemContainer:getWaterContainerCount() end
 
 --- @public
 --- @return integer
-function ItemContainer:getWeight() end
-
---- @public
---- @return integer
 function ItemContainer:getWeightReduction() end
 
 --- @public

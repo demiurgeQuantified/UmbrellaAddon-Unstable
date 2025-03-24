@@ -34,10 +34,12 @@ biome_map_config = {
 	},
 	{
 		pixel = 128,
+		biome = "farmmix_forest",
 		zone = "Farm",
 	},
 	{
 		pixel = 141,
+		biome = "farmmix_forest",
 		zone = "FarmLand",
 	},
 	{

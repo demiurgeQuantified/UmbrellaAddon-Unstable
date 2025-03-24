@@ -34,7 +34,6 @@
 ---@field healthIconOscillatorStep any
 ---@field heartIcon any
 ---@field heartIconOn any
----@field height any
 ---@field infopanel any
 ---@field invBtn any
 ---@field inventory any
@@ -63,6 +62,7 @@
 ---@field offHand any
 ---@field offTexture any
 ---@field onTexture any
+---@field playerNum any
 ---@field previousHealth any
 ---@field radialIcon any
 ---@field safety any
@@ -70,6 +70,7 @@
 ---@field searchBtn any
 ---@field searchIcon any
 ---@field searchIconOn any
+---@field sidebarSizeOption any
 ---@field toolTip any
 ---@field warActive any
 ---@field warInactive any
@@ -77,9 +78,6 @@
 ---@field warManagerBtnX any
 ---@field warManagerBtnY any
 ---@field warSoon any
----@field width any
----@field x any
----@field y any
 ---@field zoneBtn any
 ---@field zoneIcon any
 ---@field zoneIconOn any
@@ -95,6 +93,9 @@ function ISEquippedItem:addMouseOverToolTipItem(_object, _displayString) end
 
 ---@return any
 function ISEquippedItem:checkBounds(_boundsItem, _x, _y) end
+
+---@return any
+function ISEquippedItem:checkSidebarSizeOption() end
 
 ---@return any
 function ISEquippedItem:checkToolTip() end
@@ -189,7 +190,5 @@ function ISMapPopup:render() end
 ---@return ISMapPopup
 function ISMapPopup:new(x, y, width, height) end
 
----@return any
-function setTextureWidth() end
 ---@return any
 function launchEquippedItem(playerObj) end

@@ -2,8 +2,7 @@
 
 --- @class Key: InventoryItem
 --- @field public class any
---- @field public doors ArrayList
---- @field public highlightDoor Key[]
+--- @field public highlightDoor HighlightDoor[]
 Key = {}
 
 ------------------------------------

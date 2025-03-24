@@ -331,6 +331,10 @@ function IsoMovingObject:getSquare() end
 function IsoMovingObject:getStateEventDelayTimer() end
 
 --- @public
+--- @return integer
+function IsoMovingObject:getSurroundingThumpers() end
+
+--- @public
 --- @return Thumpable
 function IsoMovingObject:getThumpTarget() end
 

@@ -924,6 +924,16 @@ function IsoGridSquare:getBed() end
 function IsoGridSquare:getBedTo(next) end
 
 --- @public
+--- @param arg0 boolean
+--- @return IsoObject
+function IsoGridSquare:getBendable(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return IsoObject
+function IsoGridSquare:getBendableTo(arg0) end
+
+--- @public
 --- @return IsoBrokenGlass
 function IsoGridSquare:getBrokenGlass() end
 

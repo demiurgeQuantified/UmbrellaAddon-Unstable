@@ -425,6 +425,8 @@ VehicleDistributions.SportsGloveBox = {
 		1,
 		"IDcard",
 		1,
+		"KeyRing_Clover",
+		0.005,
 		"KeyRing_RabbitFoot",
 		1,
 		"KnifeButterfly",

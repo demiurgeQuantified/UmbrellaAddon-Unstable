@@ -4,6 +4,7 @@
 ---@field container any
 ---@field iconClass any
 ---@field isForageable any
+---@field isKnownPoison any
 ---@field isValidSquare any
 ---@field itemObj any
 ---@field itemObjTable any
@@ -12,6 +13,9 @@
 ---@field pinOffset any
 ---@field [any] any
 ISWorldItemIcon = ISBaseIcon:derive("ISWorldItemIcon")
+
+---@return any
+function ISWorldItemIcon:checkForPoison() end
 
 ---@return any
 function ISWorldItemIcon:checkIsForageable() end

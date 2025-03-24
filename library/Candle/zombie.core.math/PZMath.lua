@@ -385,11 +385,28 @@ function PZMath.max(arg0, arg1, arg2) end
 
 --- @public
 --- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function PZMath.max(arg0, arg1, arg2) end
+
+--- @public
+--- @static
 --- @param arg0 number
 --- @param arg1 number
 --- @param arg2 number
 --- @param arg3 number
 --- @return number
+function PZMath.max(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return integer
 function PZMath.max(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -400,6 +417,16 @@ function PZMath.max(arg0, arg1, arg2, arg3) end
 --- @param arg3 number
 --- @param arg4 number
 --- @return number
+function PZMath.max(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return integer
 function PZMath.max(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
@@ -426,11 +453,28 @@ function PZMath.min(arg0, arg1, arg2) end
 
 --- @public
 --- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return integer
+function PZMath.min(arg0, arg1, arg2) end
+
+--- @public
+--- @static
 --- @param arg0 number
 --- @param arg1 number
 --- @param arg2 number
 --- @param arg3 number
 --- @return number
+function PZMath.min(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return integer
 function PZMath.min(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -441,6 +485,16 @@ function PZMath.min(arg0, arg1, arg2, arg3) end
 --- @param arg3 number
 --- @param arg4 number
 --- @return number
+function PZMath.min(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return integer
 function PZMath.min(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public

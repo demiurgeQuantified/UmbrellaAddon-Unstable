@@ -71,6 +71,12 @@ function Color.colorToABGR(val) end
 
 --- @public
 --- @static
+--- @param arg0 ColorInfo
+--- @return integer
+function Color.colorToABGR(arg0) end
+
+--- @public
+--- @static
 --- @param r number
 --- @param g number
 --- @param b number

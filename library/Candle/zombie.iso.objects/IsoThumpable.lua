@@ -146,8 +146,9 @@ function IsoThumpable:canClimbThrough(chr) end
 function IsoThumpable:changeSprite(arg0) end
 
 --- @public
+--- @param arg0 integer
 --- @return nil
-function IsoThumpable:checkKeyHighlight() end
+function IsoThumpable:checkKeyHighlight(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -490,6 +491,10 @@ function IsoThumpable:isPaintable() end
 --- @public
 --- @return boolean
 function IsoThumpable:isStairs() end
+
+--- @public
+--- @return boolean
+function IsoThumpable:isTallHoppable() end
 
 --- @public
 --- @return boolean

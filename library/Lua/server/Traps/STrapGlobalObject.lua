@@ -17,6 +17,7 @@
 ---@field trappingSkill any
 ---@field trapType any
 ---@field zone any
+---@field zones any
 ---@field [any] any
 STrapGlobalObject = SGlobalObject:derive("STrapGlobalObject")
 
@@ -81,6 +82,9 @@ function STrapGlobalObject:setAnimal(animal) end
 function STrapGlobalObject:setDef() end
 
 ---@return any
+function STrapGlobalObject:setZones(square) end
+
+---@return any
 function STrapGlobalObject:spawnDestroyItems(square, object) end
 
 ---@return any
@@ -88,6 +92,9 @@ function STrapGlobalObject:stateFromIsoObject(isoObject) end
 
 ---@return any
 function STrapGlobalObject:stateToIsoObject(isoObject) end
+
+---@return any
+function STrapGlobalObject:testForAnimal(zoneType, animalsList) end
 
 ---@return any
 function STrapGlobalObject:toModData(modData) end

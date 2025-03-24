@@ -63,6 +63,11 @@ function Item:PreReload() end
 --- @public
 --- @param arg0 string
 --- @return nil
+function Item:addForageFocusCategory(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
 function Item:addResearchableRecipe(arg0) end
 
 --- @public
@@ -82,6 +87,10 @@ function Item:canBeForaged() end
 --- @public
 --- @return boolean
 function Item:canSpawnAsLoot() end
+
+--- @public
+--- @return nil
+function Item:clearForageFocusCategories() end
 
 --- @public
 --- @return string
@@ -295,6 +304,10 @@ function Item:getFillFromToiletSound() end
 --- @public
 --- @return number
 function Item:getFireFuelRatio() end
+
+--- @public
+--- @return HashSet
+function Item:getForageFocusCategories() end
 
 --- @public
 --- @return string

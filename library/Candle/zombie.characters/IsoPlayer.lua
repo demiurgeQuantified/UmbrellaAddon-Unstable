@@ -335,6 +335,11 @@ function IsoPlayer:doBeatenVehicle(vehicleSpeed) end
 function IsoPlayer:doContext(dir) end
 
 --- @public
+--- @param arg0 IsoDirections
+--- @return boolean
+function IsoPlayer:doContextClimbOverWall(arg0) end
+
+--- @public
 --- @param itemGUID string
 --- @return nil
 function IsoPlayer:dressInClothingItem(itemGUID) end
@@ -916,6 +921,10 @@ function IsoPlayer:isForceRun() end
 --- @public
 --- @return boolean
 function IsoPlayer:isForceSprint() end
+
+--- @public
+--- @return boolean
+function IsoPlayer:isGettingUp() end
 
 --- @public
 --- @return boolean

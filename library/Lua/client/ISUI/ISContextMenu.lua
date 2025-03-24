@@ -18,6 +18,7 @@
 ---@field fontHgt any
 ---@field forceVisible any
 ---@field height any
+---@field highlightedOption any
 ---@field itemHgt any
 ---@field keepOnScreen any
 ---@field mouseOut any
@@ -175,6 +176,9 @@ function ISContextMenu:calcHeight() end
 
 ---@return any
 function ISContextMenu:calcWidth() end
+
+---@return any
+function ISContextMenu:callOptionHighlightFunction(option, isHighlighted) end
 
 ---@return any
 function ISContextMenu:clear() end

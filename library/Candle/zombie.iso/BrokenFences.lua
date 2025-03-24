@@ -32,15 +32,32 @@ function BrokenFences:addBrokenTiles(tiles) end
 function BrokenFences:addDebrisTiles(tiles) end
 
 --- @public
+--- @param arg0 IsoObject
+--- @param arg1 IsoGridSquare
+--- @return nil
+function BrokenFences:addItems(arg0, arg1) end
+
+--- @public
 --- @param obj IsoObject
 --- @param dir IsoDirections
 --- @return nil
 function BrokenFences:destroyFence(obj, dir) end
 
 --- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 boolean
+--- @return IsoObject
+function BrokenFences:getBreakableObject(arg0, arg1) end
+
+--- @public
 --- @param obj IsoObject
 --- @return boolean
 function BrokenFences:isBreakableObject(obj) end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+function BrokenFences:isBreakableSprite(arg0) end
 
 --- @public
 --- @param obj IsoObject

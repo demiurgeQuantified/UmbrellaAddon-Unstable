@@ -766,7 +766,7 @@ function BodyDamage:getTemperatureChangeTick() end
 function BodyDamage:getThermoregulator() end
 
 --- @public
---- @return integer _ the TimeToSneezeOrCough
+--- @return number _ the TimeToSneezeOrCough
 function BodyDamage:getTimeToSneezeOrCough() end
 
 --- @public
@@ -1153,9 +1153,9 @@ function BodyDamage:setStandardPainReductionWhenWell(StandardPainReductionWhenWe
 function BodyDamage:setTemperature(t) end
 
 --- @public
---- @param TimeToSneezeOrCough integer the TimeToSneezeOrCough to set
+--- @param arg0 number
 --- @return nil
-function BodyDamage:setTimeToSneezeOrCough(TimeToSneezeOrCough) end
+function BodyDamage:setTimeToSneezeOrCough(arg0) end
 
 --- @public
 --- @param UnhappynessLevel number the UnhappynessLevel to set

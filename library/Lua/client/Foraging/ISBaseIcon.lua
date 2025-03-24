@@ -30,7 +30,6 @@
 ---@field isDarknessCapped any
 ---@field isForageable any
 ---@field isKnownPoison any
----@field isMover any
 ---@field isNoticed any
 ---@field isoMarker any
 ---@field isSeen any
@@ -114,6 +113,9 @@ function ISBaseIcon:addIsoMarker() end
 function ISBaseIcon:addWorldMarker() end
 
 ---@return any
+function ISBaseIcon:checkForPoison() end
+
+---@return any
 function ISBaseIcon:checkIsForageable() end
 
 ---@return any
@@ -124,6 +126,9 @@ function ISBaseIcon:checkIsSpotted() end
 
 ---@return any
 function ISBaseIcon:doContextMenu(_context) end
+
+---@return any
+function ISBaseIcon:doGrabSubMenu(_context, _contextOption, _inventory) end
 
 ---@return any
 function ISBaseIcon:doPickup() end

@@ -38,7 +38,6 @@
 ---@field overrideRemoveFull any
 ---@field owner any
 ---@field ownerTexture any
----@field pad any
 ---@field player any
 ---@field tagColor any
 ---@field textColor any

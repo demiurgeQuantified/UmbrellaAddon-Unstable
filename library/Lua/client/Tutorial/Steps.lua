@@ -25,6 +25,9 @@ function TutorialTests.HealthOpen() end
 function TutorialTests.highlight(obj, thickness) end
 
 ---@return any
+function TutorialTests.inArea(x, y, w, h) end
+
+---@return any
 function TutorialTests.LookedAround() end
 
 ---@return any
@@ -378,6 +381,9 @@ function ShotgunStep.OnSquare() end
 
 ---@return any
 function ShotgunStep.Outhouse() end
+
+---@return any
+function ShotgunStep.playerUpdate(player) end
 
 ---@return any
 function ShotgunStep.Sprinted() end

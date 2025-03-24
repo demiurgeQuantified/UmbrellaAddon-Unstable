@@ -3,7 +3,10 @@
 --- @class GameTime
 --- @field public class any
 --- @field public instance GameTime
+--- @field public MinutesPerHour number
 --- @field public MULTIPLIER number
+--- @field public SecondsPerHour number
+--- @field public SecondsPerMinute number
 GameTime = {}
 
 ------------------------------------

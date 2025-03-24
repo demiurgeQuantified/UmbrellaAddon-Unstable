@@ -22,6 +22,7 @@
 ---@field isCorner any
 ---@field isDoor any
 ---@field isDoorFrame any
+---@field isFloor any
 ---@field isLeftDown any
 ---@field isThumpable any
 ---@field isWallLike any

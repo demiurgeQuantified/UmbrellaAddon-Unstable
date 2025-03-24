@@ -122,6 +122,7 @@ return {
 		DisableFakeDead = 1,
 		ZombiesArmorFactor = 2,
 		ZombiesMaxDefense = 85,
+		FenceThumpersRequired = 50,
 	},
 	ZombieConfig = {
 		PopulationMultiplier = tonumber(ZombiePopulationMultiplier.Normal),

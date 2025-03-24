@@ -879,6 +879,8 @@ ClutterTables.ClosetItems = {
 	0.1,
 	"Kettle",
 	0.1,
+	"KeyRing_Clover",
+	0.005,
 	"KeyRing_RabbitFoot",
 	1,
 	"Keytar",

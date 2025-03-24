@@ -345,6 +345,11 @@ function InputScript:isUncookedFoodItem() end
 function InputScript:isUndamaged() end
 
 --- @public
+--- @param arg0 Item
+--- @return boolean
+function InputScript:isUsesPartialItem(arg0) end
+
+--- @public
 --- @return boolean
 function InputScript:isWholeFoodItem() end
 

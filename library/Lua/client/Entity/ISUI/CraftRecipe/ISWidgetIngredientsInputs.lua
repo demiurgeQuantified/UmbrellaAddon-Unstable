@@ -23,6 +23,7 @@
 ---@field margin any
 ---@field minimumHeight any
 ---@field minimumWidth any
+---@field panel any
 ---@field player any
 ---@field textureLink any
 ---@field [any] any

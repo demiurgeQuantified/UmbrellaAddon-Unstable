@@ -39,6 +39,8 @@ ZomboidGlobals = {
 	CleanBloodBleachAmount = 0.25,
 	CleanGraffitiPetrolAmount = 1.25,
 	LightFromPetrolAmount = 0.1,
+	IdleIncrease = 0.0005,
+	IdleDecrease = 0.0060,
 }
 
 ---@class ZombiePopulationMultiplier

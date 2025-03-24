@@ -53,7 +53,6 @@ forageDefaultDefs = {
 		forceOutside = true,
 		isOnWater = false,
 		forceOnWater = false,
-		isMover = false,
 		canBeAboveFloor = false,
 		doIsoMarkerObject = false,
 		doIsoMarkerSprite = nil,

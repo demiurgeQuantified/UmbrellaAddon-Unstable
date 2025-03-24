@@ -2,12 +2,26 @@
 
 --- @class CharacterTraits: TraitCollection
 --- @field public class any
+--- @field public AllThumbsClimbingPenalty number
 --- @field public AllThumbsStrengthPenalty integer
+--- @field public AwkwardGlovesClimbingPenaltyDivisor number
+--- @field public BurglarClimbingBonus number
 --- @field public BurglarStrengthBonus integer
+--- @field public ClumsyClimbingPenaltyDivisor number
+--- @field public DextrousClimbingBonus number
 --- @field public DextrousStrengthBonus integer
+--- @field public DrunkClimbingPenaltyMultiplier number
+--- @field public EnduranceClimbingPenaltyMultiplier number
+--- @field public GymnastClimbingBonus number
 --- @field public GymnastStrengthBonus integer
+--- @field public HeavyLoadClimbingPenaltyMultiplier number
+--- @field public ObeseClimbingPenalty number
 --- @field public ObeseStrengthPenalty integer
+--- @field public OverweightClimbingPenalty number
 --- @field public OverweightStrengthPenalty integer
+--- @field public PainClimbingPenaltyMultiplier number
+--- @field public PerkClimbingBonusMultiplier number
+--- @field public RegularGlovesClimbingBonus number
 CharacterTraits = {}
 
 ------------------------------------

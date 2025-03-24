@@ -82,7 +82,6 @@ function ISHutchNestBox:render() end
 function ISHutchNestBox:new(x, y, width, height, hutchUI, index) end
 
 ---@class ISHutchNestParentPanel : ISPanelJoypad
----@field boxCleanBtn any
 ---@field closedDoorPanel any
 ---@field disableJoypadNavigation any
 ---@field eggHatchDoorBtn any
@@ -226,6 +225,9 @@ function ISHutchRoostParentPanel:new(x, y, width, height, hutchUI) end
 ISHutchUI = ISCollapsableWindowJoypad:derive("ISHutchUI")
 ISHutchUI.instance = nil
 ISHutchUI.ui = {}
+
+---@return any
+function ISHutchUI.ShowWindow(playerObj, hutch) end
 
 ---@return any
 function ISHutchUI:add3DAnimal(panel, animal, chickenX, chickenY) end

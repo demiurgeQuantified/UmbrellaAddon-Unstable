@@ -10,9 +10,9 @@
 ---@field moveWithMouse any
 ---@field owner any
 ---@field panel any
----@field panelText any
 ---@field panelX any
 ---@field player any
+---@field title any
 ---@field transferColor any
 ---@field variableColor any
 ---@field zOffsetSmallFont any

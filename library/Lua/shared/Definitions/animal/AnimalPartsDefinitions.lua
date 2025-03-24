@@ -6,6 +6,12 @@ local pigletparts = {}
 local pigparts = {}
 local lambparts = {}
 local sheepparts = {}
+local deerparts = {}
+local fawnparts = {}
+local rabbitspart = {}
+local rabbitskitpart = {}
+local raccoonkitparts = {}
+local raccoonparts = {}
 
 ---@class AnimalPartsDefinitions
 AnimalPartsDefinitions = AnimalPartsDefinitions or {}
@@ -273,47 +279,52 @@ AnimalPartsDefinitions.animals["lambfriesian"].head = "Base.Sheep_Lamb_Head_Whit
 AnimalPartsDefinitions.animals["lambfriesian"].skull = "Base.Lamb_Skull"
 AnimalPartsDefinitions.animals["lambfriesian"].xpPerItem = 6
 AnimalPartsDefinitions.animals["doewhitetailed"] = AnimalPartsDefinitions.animals["doewhitetailed"] or {}
-AnimalPartsDefinitions.animals["doewhitetailed"].parts = AnimalPartsDefinitions.animals["doewhitetailed"].parts or {}
+AnimalPartsDefinitions.animals["doewhitetailed"].parts = AnimalPartsDefinitions.animals["doewhitetailed"].parts
+	or deerparts
 AnimalPartsDefinitions.animals["doewhitetailed"].bones = AnimalPartsDefinitions.animals["doewhitetailed"].bones or {}
 AnimalPartsDefinitions.animals["doewhitetailed"].leather = "Base.DeerLeather_Full"
 AnimalPartsDefinitions.animals["doewhitetailed"].head = "Base.Deer_Doe_Head"
 AnimalPartsDefinitions.animals["lambsuffolk"].skull = "Base.DeerDoe_Skull"
 AnimalPartsDefinitions.animals["doewhitetailed"].xpPerItem = 25
 AnimalPartsDefinitions.animals["buckwhitetailed"] = AnimalPartsDefinitions.animals["buckwhitetailed"] or {}
-AnimalPartsDefinitions.animals["buckwhitetailed"].parts = AnimalPartsDefinitions.animals["buckwhitetailed"].parts or {}
+AnimalPartsDefinitions.animals["buckwhitetailed"].parts = AnimalPartsDefinitions.animals["buckwhitetailed"].parts
+	or deerparts
 AnimalPartsDefinitions.animals["buckwhitetailed"].bones = AnimalPartsDefinitions.animals["buckwhitetailed"].bones or {}
 AnimalPartsDefinitions.animals["buckwhitetailed"].leather = "Base.DeerLeather_Full"
 AnimalPartsDefinitions.animals["buckwhitetailed"].head = "Base.Deer_Buck_Head"
 AnimalPartsDefinitions.animals["buckwhitetailed"].skull = "Base.DeerStag_Skull"
 AnimalPartsDefinitions.animals["buckwhitetailed"].xpPerItem = 25
 AnimalPartsDefinitions.animals["fawnwhitetailed"] = AnimalPartsDefinitions.animals["fawnwhitetailed"] or {}
-AnimalPartsDefinitions.animals["fawnwhitetailed"].parts = AnimalPartsDefinitions.animals["fawnwhitetailed"].parts or {}
+AnimalPartsDefinitions.animals["fawnwhitetailed"].parts = AnimalPartsDefinitions.animals["fawnwhitetailed"].parts
+	or fawnparts
 AnimalPartsDefinitions.animals["fawnwhitetailed"].bones = AnimalPartsDefinitions.animals["fawnwhitetailed"].bones or {}
 AnimalPartsDefinitions.animals["fawnwhitetailed"].leather = "Base.FawnLeather_Full"
 AnimalPartsDefinitions.animals["fawnwhitetailed"].head = "Base.Deer_Fawn_Head"
 AnimalPartsDefinitions.animals["fawnwhitetailed"].skull = "Base.DeerFawn_Skull"
 AnimalPartsDefinitions.animals["fawnwhitetailed"].xpPerItem = 18
 AnimalPartsDefinitions.animals["rabdoeswamp"] = AnimalPartsDefinitions.animals["rabdoeswamp"] or {}
-AnimalPartsDefinitions.animals["rabdoeswamp"].parts = AnimalPartsDefinitions.animals["rabdoeswamp"].parts or {}
+AnimalPartsDefinitions.animals["rabdoeswamp"].parts = AnimalPartsDefinitions.animals["rabdoeswamp"].parts or rabbitspart
 AnimalPartsDefinitions.animals["rabdoeswamp"].bones = AnimalPartsDefinitions.animals["rabdoeswamp"].bones or {}
 AnimalPartsDefinitions.animals["rabdoeswamp"].head = "Base.Rabbit_Head_Swamp"
 AnimalPartsDefinitions.animals["rabdoeswamp"].skull = "Base.Rabbit_Skull"
 AnimalPartsDefinitions.animals["rabdoeswamp"].xpPerItem = 7
 AnimalPartsDefinitions.animals["rabbuckswamp"] = AnimalPartsDefinitions.animals["rabbuckswamp"] or {}
-AnimalPartsDefinitions.animals["rabbuckswamp"].parts = AnimalPartsDefinitions.animals["rabbuckswamp"].parts or {}
+AnimalPartsDefinitions.animals["rabbuckswamp"].parts = AnimalPartsDefinitions.animals["rabbuckswamp"].parts
+	or rabbitspart
 AnimalPartsDefinitions.animals["rabbuckswamp"].bones = AnimalPartsDefinitions.animals["rabbuckswamp"].bones or {}
 AnimalPartsDefinitions.animals["rabbuckswamp"].head = "Base.Rabbit_Head_Swamp"
 AnimalPartsDefinitions.animals["rabbuckswamp"].skull = "Base.Rabbit_Skull"
 AnimalPartsDefinitions.animals["rabbuckswamp"].xpPerItem = 7
 AnimalPartsDefinitions.animals["rabkittenswamp"] = AnimalPartsDefinitions.animals["rabkittenswamp"] or {}
-AnimalPartsDefinitions.animals["rabkittenswamp"].parts = AnimalPartsDefinitions.animals["rabkittenswamp"].parts or {}
+AnimalPartsDefinitions.animals["rabkittenswamp"].parts = AnimalPartsDefinitions.animals["rabkittenswamp"].parts
+	or rabbitskitpart
 AnimalPartsDefinitions.animals["rabkittenswamp"].bones = AnimalPartsDefinitions.animals["rabkittenswamp"].bones or {}
 AnimalPartsDefinitions.animals["rabkittenswamp"].head = "Base.Rabbit_Kitten_Head_Swamp"
 AnimalPartsDefinitions.animals["rabkittenswamp"].skull = "Base.Rabbit_KittenSkull"
 AnimalPartsDefinitions.animals["rabkittenswamp"].xpPerItem = 3
 AnimalPartsDefinitions.animals["rabdoeappalachian"] = AnimalPartsDefinitions.animals["rabdoeappalachian"] or {}
 AnimalPartsDefinitions.animals["rabdoeappalachian"].parts = AnimalPartsDefinitions.animals["rabdoeappalachian"].parts
-	or {}
+	or rabbitspart
 AnimalPartsDefinitions.animals["rabdoeappalachian"].bones = AnimalPartsDefinitions.animals["rabdoeappalachian"].bones
 	or {}
 AnimalPartsDefinitions.animals["rabdoeappalachian"].head = "Base.Rabbit_Head_Appalachian"
@@ -321,7 +332,7 @@ AnimalPartsDefinitions.animals["rabdoeappalachian"].skull = "Base.Rabbit_Skull"
 AnimalPartsDefinitions.animals["rabdoeappalachian"].xpPerItem = 7
 AnimalPartsDefinitions.animals["rabbuckappalachian"] = AnimalPartsDefinitions.animals["rabbuckappalachian"] or {}
 AnimalPartsDefinitions.animals["rabbuckappalachian"].parts = AnimalPartsDefinitions.animals["rabbuckappalachian"].parts
-	or {}
+	or rabbitspart
 AnimalPartsDefinitions.animals["rabbuckappalachian"].bones = AnimalPartsDefinitions.animals["rabbuckappalachian"].bones
 	or {}
 AnimalPartsDefinitions.animals["rabbuckappalachian"].head = "Base.Rabbit_Head_Appalachian"
@@ -329,7 +340,7 @@ AnimalPartsDefinitions.animals["rabbuckappalachian"].skull = "Base.Rabbit_Skull"
 AnimalPartsDefinitions.animals["rabbuckappalachian"].xpPerItem = 7
 AnimalPartsDefinitions.animals["rabkittenappalachian"] = AnimalPartsDefinitions.animals["rabkittenappalachian"] or {}
 AnimalPartsDefinitions.animals["rabkittenappalachian"].parts = AnimalPartsDefinitions.animals["rabkittenappalachian"].parts
-	or {}
+	or rabbitskitpart
 AnimalPartsDefinitions.animals["rabkittenappalachian"].bones = AnimalPartsDefinitions.animals["rabkittenappalachian"].bones
 	or {}
 AnimalPartsDefinitions.animals["rabkittenappalachian"].head = "Base.Rabbit_Kitten_Head_Appalachian"
@@ -337,7 +348,7 @@ AnimalPartsDefinitions.animals["rabkittenappalachian"].skull = "Base.Rabbit_Kitt
 AnimalPartsDefinitions.animals["rabkittenappalachian"].xpPerItem = 3
 AnimalPartsDefinitions.animals["rabdoecottontail"] = AnimalPartsDefinitions.animals["rabdoecottontail"] or {}
 AnimalPartsDefinitions.animals["rabdoecottontail"].parts = AnimalPartsDefinitions.animals["rabdoecottontail"].parts
-	or {}
+	or rabbitspart
 AnimalPartsDefinitions.animals["rabdoecottontail"].bones = AnimalPartsDefinitions.animals["rabdoecottontail"].bones
 	or {}
 AnimalPartsDefinitions.animals["rabdoecottontail"].head = "Base.Rabbit_Head_CottonTail"
@@ -345,7 +356,7 @@ AnimalPartsDefinitions.animals["rabdoecottontail"].skull = "Base.Rabbit_Skull"
 AnimalPartsDefinitions.animals["rabdoecottontail"].xpPerItem = 7
 AnimalPartsDefinitions.animals["rabbuckcottontail"] = AnimalPartsDefinitions.animals["rabbuckcottontail"] or {}
 AnimalPartsDefinitions.animals["rabbuckcottontail"].parts = AnimalPartsDefinitions.animals["rabbuckcottontail"].parts
-	or {}
+	or rabbitspart
 AnimalPartsDefinitions.animals["rabbuckcottontail"].bones = AnimalPartsDefinitions.animals["rabbuckcottontail"].bones
 	or {}
 AnimalPartsDefinitions.animals["rabbuckcottontail"].head = "Base.Rabbit_Head_CottonTail"
@@ -353,7 +364,7 @@ AnimalPartsDefinitions.animals["rabbuckcottontail"].skull = "Base.Rabbit_Skull"
 AnimalPartsDefinitions.animals["rabbuckcottontail"].xpPerItem = 7
 AnimalPartsDefinitions.animals["rabkittencottontail"] = AnimalPartsDefinitions.animals["rabkittencottontail"] or {}
 AnimalPartsDefinitions.animals["rabkittencottontail"].parts = AnimalPartsDefinitions.animals["rabkittencottontail"].parts
-	or {}
+	or rabbitskitpart
 AnimalPartsDefinitions.animals["rabkittencottontail"].bones = AnimalPartsDefinitions.animals["rabkittencottontail"].bones
 	or {}
 AnimalPartsDefinitions.animals["rabkittencottontail"].head = "Base.Rabbit_Kitten_Head_CottonTail"
@@ -422,7 +433,8 @@ AnimalPartsDefinitions.animals["mousepupswhite"].parts = AnimalPartsDefinitions.
 AnimalPartsDefinitions.animals["mousepupswhite"].noSkeleton = true
 AnimalPartsDefinitions.animals["mousepupswhite"].xpPerItem = 5
 AnimalPartsDefinitions.animals["raccoonsowgrey"] = AnimalPartsDefinitions.animals["raccoonsowgrey"] or {}
-AnimalPartsDefinitions.animals["raccoonsowgrey"].parts = AnimalPartsDefinitions.animals["raccoonsowgrey"].parts or {}
+AnimalPartsDefinitions.animals["raccoonsowgrey"].parts = AnimalPartsDefinitions.animals["raccoonsowgrey"].parts
+	or raccoonparts
 AnimalPartsDefinitions.animals["raccoonsowgrey"].bones = AnimalPartsDefinitions.animals["raccoonsowgrey"].bones or {}
 AnimalPartsDefinitions.animals["raccoonsowgrey"].leather = "Base.RaccoonLeather_Grey_Full"
 AnimalPartsDefinitions.animals["raccoonsowgrey"].head = "Base.Raccoon_Sow_Head"
@@ -430,7 +442,8 @@ AnimalPartsDefinitions.animals["raccoonsowgrey"].skull = "Base.Raccoon_Skull"
 AnimalPartsDefinitions.animals["raccoonsowgrey"].noSkeleton = true
 AnimalPartsDefinitions.animals["raccoonsowgrey"].xpPerItem = 10
 AnimalPartsDefinitions.animals["raccoonboargrey"] = AnimalPartsDefinitions.animals["raccoonboargrey"] or {}
-AnimalPartsDefinitions.animals["raccoonboargrey"].parts = AnimalPartsDefinitions.animals["raccoonboargrey"].parts or {}
+AnimalPartsDefinitions.animals["raccoonboargrey"].parts = AnimalPartsDefinitions.animals["raccoonboargrey"].parts
+	or raccoonparts
 AnimalPartsDefinitions.animals["raccoonboargrey"].bones = AnimalPartsDefinitions.animals["raccoonboargrey"].bones or {}
 AnimalPartsDefinitions.animals["raccoonboargrey"].head = "Base.Raccoon_Boar_Head"
 AnimalPartsDefinitions.animals["raccoonboargrey"].skull = "Base.Raccoon_Skull"
@@ -438,7 +451,8 @@ AnimalPartsDefinitions.animals["raccoonboargrey"].leather = "Base.RaccoonLeather
 AnimalPartsDefinitions.animals["raccoonboargrey"].noSkeleton = true
 AnimalPartsDefinitions.animals["raccoonboargrey"].xpPerItem = 10
 AnimalPartsDefinitions.animals["raccoonkitgrey"] = AnimalPartsDefinitions.animals["raccoonkitgrey"] or {}
-AnimalPartsDefinitions.animals["raccoonkitgrey"].parts = AnimalPartsDefinitions.animals["raccoonkitgrey"].parts or {}
+AnimalPartsDefinitions.animals["raccoonkitgrey"].parts = AnimalPartsDefinitions.animals["raccoonkitgrey"].parts
+	or raccoonkitparts
 AnimalPartsDefinitions.animals["raccoonkitgrey"].bones = AnimalPartsDefinitions.animals["rabkittencottontail"].bones
 	or {}
 AnimalPartsDefinitions.animals["raccoonkitgrey"].leather = "Base.RaccoonLeather_Grey_Full"
