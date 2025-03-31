@@ -9,7 +9,6 @@
         "server/?.lua"
     ],
     "Lua.completion.requireSeparator": "/",
-    "Lua.workspace.preloadFileSize": 800,
     "Lua.runtime.builtin": {
       "debug": "disable",
       "io": "disable",
