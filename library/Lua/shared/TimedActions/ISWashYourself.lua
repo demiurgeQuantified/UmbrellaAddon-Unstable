@@ -1,52 +1,45 @@
 ---@meta
 
 ---@class ISWashYourself : ISBaseTimedAction
----@field forceProgressBar any
----@field maxTime any
----@field sink any
----@field soaps any
----@field sound any
----@field useSoap any
----@field [any] any
+---@field forceProgressBar boolean
+---@field maxTime number?
+---@field sink unknown
+---@field soaps unknown
+---@field sound unknown
+---@field useSoap boolean
 ISWashYourself = ISBaseTimedAction:derive("ISWashYourself")
+ISWashYourself.Type = "ISWashYourself"
 
----@return any
+---@return number
 function ISWashYourself.GetRequiredSoap(character) end
 
----@return any
+---@return number
 function ISWashYourself.GetRequiredWater(character) end
 
----@return any
+---@return boolean
 function ISWashYourself:complete() end
 
----@return any
+---@return number?
 function ISWashYourself:getDuration() end
 
----@return any
+---@return boolean
 function ISWashYourself:isValid() end
 
----@return any
 function ISWashYourself:perform() end
 
----@return any
 function ISWashYourself:removeAllMakeup() end
 
----@return any
 function ISWashYourself:removeMakeup(item) end
 
----@return any
 function ISWashYourself:start() end
 
----@return any
 function ISWashYourself:stop() end
 
----@return any
 function ISWashYourself:stopSound() end
 
----@return any
 function ISWashYourself:update() end
 
----@return any
+---@return boolean
 function ISWashYourself:washPart(visual, part) end
 
 ---@return ISWashYourself

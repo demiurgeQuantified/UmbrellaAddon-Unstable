@@ -1,59 +1,52 @@
 ---@meta
 
 ---@class ISComponentsTabPanel : ISPanel
----@field background any
----@field disableHeaders any
----@field doIcons any
----@field doText any
----@field entity any
----@field entityConfig any
----@field entityDebug any
----@field layoutParent any
----@field margin any
----@field maximumHeight any
----@field maximumWidth any
----@field menuLayout any
----@field minimumHeight any
----@field minimumPanelWidth any
----@field minimumWidth any
----@field multiPanels any
----@field originalColor any
----@field padding any
----@field panelColumn any
----@field panels any
----@field player any
----@field selectedColor any
----@field selectedIndex any
----@field tableLayout any
----@field [any] any
+---@field disableHeaders boolean
+---@field doIcons boolean
+---@field doText boolean
+---@field entity unknown
+---@field entityConfig unknown
+---@field entityDebug unknown?
+---@field layoutParent boolean
+---@field margin number
+---@field maximumHeight number
+---@field maximumWidth number
+---@field menuLayout unknown?
+---@field minimumPanelWidth number
+---@field multiPanels boolean
+---@field originalColor table
+---@field padding number
+---@field panelColumn unknown
+---@field panels boolean | table
+---@field player unknown
+---@field selectedColor table
+---@field selectedIndex unknown
+---@field tableLayout unknown?
 ISComponentsTabPanel = ISPanel:derive("ISComponentsTabPanel")
+ISComponentsTabPanel.Type = "ISComponentsTabPanel"
 
----@return any
 function ISComponentsTabPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISComponentsTabPanel:createChildren() end
 
----@return any
 function ISComponentsTabPanel:initialise() end
 
----@return any
 function ISComponentsTabPanel:onButtonClick(_button) end
 
----@return any
 function ISComponentsTabPanel:onResize() end
 
----@return any
 function ISComponentsTabPanel:prerender() end
 
----@return any
 function ISComponentsTabPanel:render() end
 
----@return any
+---@param _recalc boolean
 function ISComponentsTabPanel:selectPanel(_index, _recalc) end
 
----@return any
 function ISComponentsTabPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISComponentsTabPanel
 function ISComponentsTabPanel:new(x, y, width, height, player, entity, entityConfig) end

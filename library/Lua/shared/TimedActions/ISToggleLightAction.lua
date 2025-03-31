@@ -1,33 +1,26 @@
 ---@meta
 
 ---@class ISToggleLightAction : ISBaseTimedAction
----@field maxTime any
----@field object any
----@field stopOnRun any
----@field stopOnWalk any
----@field useProgressBar any
----@field [any] any
+---@field object unknown
+---@field useProgressBar boolean
 ISToggleLightAction = ISBaseTimedAction:derive("ISToggleLightAction")
+ISToggleLightAction.Type = "ISToggleLightAction"
 
----@return any
+---@return boolean
 function ISToggleLightAction:complete() end
 
----@return any
+---@return number
 function ISToggleLightAction:getDuration() end
 
----@return any
+---@return boolean
 function ISToggleLightAction:isValid() end
 
----@return any
 function ISToggleLightAction:perform() end
 
----@return any
 function ISToggleLightAction:start() end
 
----@return any
 function ISToggleLightAction:stop() end
 
----@return any
 function ISToggleLightAction:update() end
 
 ---@return ISToggleLightAction

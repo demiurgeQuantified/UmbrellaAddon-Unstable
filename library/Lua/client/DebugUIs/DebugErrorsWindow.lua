@@ -1,20 +1,21 @@
 ---@meta
 
 ---@class DebugErrorsWindow : ISCollapsableWindow
----@field errorCount any
----@field textBox any
----@field title any
----@field [any] any
+---@field errorCount number
+---@field textBox ISTextEntryBox
+---@field title string
 DebugErrorsWindow = ISCollapsableWindow:derive("DebugErrorsWindow")
+DebugErrorsWindow.Type = "DebugErrorsWindow"
 
----@return any
 function DebugErrorsWindow:createChildren() end
 
----@return any
 function DebugErrorsWindow:prerender() end
 
----@return any
 function DebugErrorsWindow:refresh() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return DebugErrorsWindow
 function DebugErrorsWindow:new(x, y, width, height) end

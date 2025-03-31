@@ -1,24 +1,18 @@
 ---@meta
 
 ---@class ISLightbarUITimedAction : ISBaseTimedAction
----@field character any
----@field maxTime any
----@field [any] any
 ISLightbarUITimedAction = ISBaseTimedAction:derive("ISLightbarUITimedAction")
+ISLightbarUITimedAction.Type = "ISLightbarUITimedAction"
 
----@return any
+---@return boolean
 function ISLightbarUITimedAction:isValid() end
 
----@return any
 function ISLightbarUITimedAction:perform() end
 
----@return any
 function ISLightbarUITimedAction:start() end
 
----@return any
 function ISLightbarUITimedAction:stop() end
 
----@return any
 function ISLightbarUITimedAction:update() end
 
 ---@return ISLightbarUITimedAction

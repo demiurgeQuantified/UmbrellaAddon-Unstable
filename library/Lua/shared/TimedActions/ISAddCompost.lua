@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISAddCompost : ISBaseTimedAction
----@field compost any
----@field item any
----@field maxTime any
----@field [any] any
+---@field compost unknown
+---@field item unknown
 ISAddCompost = ISBaseTimedAction:derive("ISAddCompost")
+ISAddCompost.Type = "ISAddCompost"
 
----@return any
+---@return boolean
 function ISAddCompost:complete() end
 
----@return any
+---@return number
 function ISAddCompost:getDuration() end
 
----@return any
+---@return boolean?
 function ISAddCompost:isValid() end
 
----@return any
 function ISAddCompost:perform() end
 
----@return any
 function ISAddCompost:start() end
 
----@return any
 function ISAddCompost:stop() end
 
----@return any
 function ISAddCompost:update() end
 
 ---@return ISAddCompost

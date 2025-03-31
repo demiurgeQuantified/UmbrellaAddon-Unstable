@@ -1,47 +1,43 @@
 ---@meta
 
 ---@class ISGatherBloodFromAnimal : ISBaseTimedAction
----@field animalDef any
----@field body any
----@field bucket any
----@field hook any
----@field lastTimer any
----@field literPerTick any
----@field luaHook any
----@field maxTime any
----@field perkLevel any
----@field timePerLiter any
----@field timer any
----@field xp any
----@field [any] any
+---@field animalDef unknown?
+---@field body unknown?
+---@field bucket unknown
+---@field hook unknown
+---@field lastTimer number
+---@field literPerTick number
+---@field luaHook ISButcherHookUI
+---@field perkLevel unknown
+---@field timePerLiter number
+---@field timer number
+---@field xp unknown
 ISGatherBloodFromAnimal = ISBaseTimedAction:derive("ISGatherBloodFromAnimal")
+ISGatherBloodFromAnimal.Type = "ISGatherBloodFromAnimal"
 
----@return any
+---@return boolean
 function ISGatherBloodFromAnimal:complete() end
 
----@return any
 function ISGatherBloodFromAnimal:forceStop() end
 
----@return any
+---@return number
 function ISGatherBloodFromAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISGatherBloodFromAnimal:isValid() end
 
----@return any
 function ISGatherBloodFromAnimal:perform() end
 
----@return any
 function ISGatherBloodFromAnimal:start() end
 
----@return any
 function ISGatherBloodFromAnimal:stop() end
 
----@return any
 function ISGatherBloodFromAnimal:update() end
 
----@return any
+---@return unknown
 function ISGatherBloodFromAnimal:waitToStart() end
 
+---@param body unknown?
+---@param luaHook ISButcherHookUI
 ---@return ISGatherBloodFromAnimal
 function ISGatherBloodFromAnimal:new(character, body, hook, luaHook, bucket) end

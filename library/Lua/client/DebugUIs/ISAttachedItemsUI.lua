@@ -1,63 +1,46 @@
 ---@meta
 
 ---@class ISAttachedItemsUI : ISCollapsableWindow
----@field add any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field character any
----@field chr any
----@field datas any
----@field height any
----@field itemType any
----@field itemTypeLabel any
----@field location any
----@field locationLabel any
----@field moveWithMouse any
----@field onzombie any
----@field playerNum any
----@field remove any
----@field removeZombie any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field add ISButton
+---@field character unknown
+---@field chr unknown
+---@field datas ISScrollingListBox
+---@field itemType ISTextEntryBox
+---@field itemTypeLabel ISLabel
+---@field location ISComboBox
+---@field locationLabel ISLabel
+---@field onzombie ISButton
+---@field playerNum unknown
+---@field remove ISButton
+---@field removeZombie ISButton
+---@field title string
 ISAttachedItemsUI = ISCollapsableWindow:derive("ISAttachedItemsUI")
+ISAttachedItemsUI.Type = "ISAttachedItemsUI"
 
----@return any
 function ISAttachedItemsUI:close() end
 
----@return any
 function ISAttachedItemsUI:createChildren() end
 
----@return any
+---@return number
 function ISAttachedItemsUI:drawDatas(y, item, alt) end
 
----@return any
 function ISAttachedItemsUI:onAdd(char) end
 
----@return any
 function ISAttachedItemsUI:onAddOnChar() end
 
----@return any
 function ISAttachedItemsUI:onAddZombie() end
 
----@return any
 function ISAttachedItemsUI:onRemove() end
 
----@return any
 function ISAttachedItemsUI:onRemoveZombie() end
 
----@return any
 function ISAttachedItemsUI:populateList() end
 
----@return any
 function ISAttachedItemsUI:render() end
 
----@return any
 function ISAttachedItemsUI:update() end
 
+---@param x number
+---@param y number
 ---@return ISAttachedItemsUI
 function ISAttachedItemsUI:new(x, y, character) end

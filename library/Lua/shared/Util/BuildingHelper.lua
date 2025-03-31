@@ -3,11 +3,11 @@
 ---@class BuildingHelper
 BuildingHelper = {}
 
----@return any
+---@return unknown?
 function BuildingHelper.getFreeTileFromBuilding(building) end
 
----@return any
+---@return table
 function BuildingHelper.getFreeTilesFromRandomRoomInBuilding(building, count) end
 
----@return any
+---@return unknown?
 function BuildingHelper.getShovelAnim(item) end

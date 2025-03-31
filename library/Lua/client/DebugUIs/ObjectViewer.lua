@@ -1,61 +1,50 @@
 ---@meta
 
 ---@class ObjectViewer : ISCollapsableWindow
----@field backgroundColor any
----@field height any
----@field obj any
----@field objectView any
----@field sc any
----@field selected any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field obj unknown
+---@field objectView ISScrollingListBox
+---@field sc unknown
+---@field selected number
+---@field title unknown
 ObjectViewer = ISCollapsableWindow:derive("ObjectViewer")
+ObjectViewer.Type = "ObjectViewer"
 ObjectViewer.map = {}
 
----@return any
 function ObjectViewer.onDataRead(data) end
 
----@return any
 function ObjectViewer.onDataWrite(data) end
 
----@return any
 function ObjectViewer.onWatch(item) end
 
----@return any
 function ObjectViewer:checkFontSize() end
 
----@return any
 function ObjectViewer:createChildren() end
 
----@return any
+---@return number
 function ObjectViewer:doDrawItem(y, item, alt) end
 
----@return any
 function ObjectViewer:fill() end
 
----@return any
 function ObjectViewer:initialise() end
 
----@return any
 function ObjectViewer:onMouseDoubleClickOpenObject(item) end
 
----@return any
+---@param x number
+---@param y number
 function ObjectViewer:onRightMouseDownObject(x, y) end
 
----@return any
+---@return boolean
 function ObjectViewer:onSourceMouseWheel(del) end
 
----@return any
 function ObjectViewer:prerender() end
 
----@return any
 function ObjectViewer:restorePos() end
 
----@return any
 function ObjectViewer:storePos() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ObjectViewer
 function ObjectViewer:new(x, y, width, height, obj) end

@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISRemoveCarBatteryFromChargerAction : ISBaseTimedAction
----@field charger any
----@field maxTime any
----@field [any] any
+---@field charger unknown
 ISRemoveCarBatteryFromChargerAction = ISBaseTimedAction:derive("ISRemoveCarBatteryFromChargerAction")
+ISRemoveCarBatteryFromChargerAction.Type = "ISRemoveCarBatteryFromChargerAction"
 
----@return any
+---@return boolean?
 function ISRemoveCarBatteryFromChargerAction:complete() end
 
----@return any
+---@return number
 function ISRemoveCarBatteryFromChargerAction:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveCarBatteryFromChargerAction:isValid() end
 
----@return any
 function ISRemoveCarBatteryFromChargerAction:perform() end
 
----@return any
 function ISRemoveCarBatteryFromChargerAction:start() end
 
----@return any
 function ISRemoveCarBatteryFromChargerAction:stop() end
 
----@return any
 function ISRemoveCarBatteryFromChargerAction:update() end
 
----@return any
+---@return unknown
 function ISRemoveCarBatteryFromChargerAction:waitToStart() end
 
 ---@return ISRemoveCarBatteryFromChargerAction

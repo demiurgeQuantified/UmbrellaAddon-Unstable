@@ -1,36 +1,32 @@
 ---@meta
 
 ---@class ISBBQInsertPropaneTank : ISBaseTimedAction
----@field bbq any
----@field maxTime any
----@field sound any
----@field tank any
----@field [any] any
+---@field bbq unknown
+---@field sound unknown
+---@field tank unknown
 ISBBQInsertPropaneTank = ISBaseTimedAction:derive("ISBBQInsertPropaneTank")
+ISBBQInsertPropaneTank.Type = "ISBBQInsertPropaneTank"
 
----@return any
+---@return boolean
 function ISBBQInsertPropaneTank:complete() end
 
----@return any
+---@return number
 function ISBBQInsertPropaneTank:getDuration() end
 
----@return any
+---@return boolean?
 function ISBBQInsertPropaneTank:isValid() end
 
----@return any
 function ISBBQInsertPropaneTank:perform() end
 
----@return any
 function ISBBQInsertPropaneTank:start() end
 
----@return any
 function ISBBQInsertPropaneTank:stop() end
 
----@return any
 function ISBBQInsertPropaneTank:update() end
 
----@return any
+---@return unknown
 function ISBBQInsertPropaneTank:waitToStart() end
 
+---@param character unknown?
 ---@return ISBBQInsertPropaneTank
 function ISBBQInsertPropaneTank:new(character, bbq, tank) end

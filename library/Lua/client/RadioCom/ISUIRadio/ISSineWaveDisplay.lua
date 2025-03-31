@@ -1,50 +1,42 @@
 ---@meta
 
 ---@class ISSineWaveDisplay : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field doGridLines any
----@field greyCol any
----@field gridColor any
----@field gridHorzSpacing any
----@field gridVertSpacing any
----@field hasChanged any
----@field height any
----@field isOn any
----@field offset any
----@field offsetCntr any
----@field offsetUpdInt any
----@field wave any
----@field waveCntr any
----@field waveParams any
----@field waveUpdInt any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field doGridLines boolean
+---@field greyCol table
+---@field gridColor table
+---@field gridHorzSpacing number
+---@field gridVertSpacing number
+---@field hasChanged boolean
+---@field isOn boolean
+---@field offset number
+---@field offsetCntr number
+---@field offsetUpdInt number
+---@field wave table
+---@field waveCntr number
+---@field waveParams table
+---@field waveUpdInt number
 ISSineWaveDisplay = ISPanel:derive("ISSineWaveDisplay")
+ISSineWaveDisplay.Type = "ISSineWaveDisplay"
 
----@return any
 function ISSineWaveDisplay:createChildren() end
 
----@return any
+---@return table
 function ISSineWaveDisplay:getWaveData(_len, _minH, _maxH) end
 
----@return any
 function ISSineWaveDisplay:initialise() end
 
----@return any
 function ISSineWaveDisplay:prerender() end
 
----@return any
 function ISSineWaveDisplay:render() end
 
----@return any
+---@param _minLen number
+---@param _maxLen number
+---@param _minHeight number
+---@param _maxHeight number
+---@param _minUpdFreq number
+---@param _maxUpdFreq number
+---@param _minScrollSpeed number
+---@param _maxScrollSpeed number
 function ISSineWaveDisplay:setWaveParameters(
 	_minLen,
 	_maxLen,
@@ -57,11 +49,14 @@ function ISSineWaveDisplay:setWaveParameters(
 )
 end
 
----@return any
+---@param _b boolean
 function ISSineWaveDisplay:toggleOn(_b) end
 
----@return any
 function ISSineWaveDisplay:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISSineWaveDisplay
 function ISSineWaveDisplay:new(x, y, width, height) end

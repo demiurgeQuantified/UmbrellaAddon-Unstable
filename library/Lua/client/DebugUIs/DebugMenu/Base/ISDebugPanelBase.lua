@@ -1,41 +1,44 @@
 ---@meta
 
 ---@class ISDebugPanelBase : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field moveWithMouse any
----@field panelInfo any
----@field panels any
----@field panelTitle any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field buttonBorderColor table
+---@field panelInfo table
+---@field panels table
+---@field panelTitle string
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISDebugPanelBase = ISPanel:derive("ISDebugPanelBase")
+ISDebugPanelBase.Type = "ISDebugPanelBase"
+ISDebugPanelBase.instance = nil
 
----@return any
+---@param _class table
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@param _title string
+---@return unknown?
 function ISDebugPanelBase.OnOpenPanel(_class, _x, _y, _w, _h, _title) end
 
----@return any
 function ISDebugPanelBase:close() end
 
----@return any
 function ISDebugPanelBase:createChildren() end
 
----@return any
 function ISDebugPanelBase:initialise() end
 
----@return any
 function ISDebugPanelBase:onClick(_button) end
 
----@return any
 function ISDebugPanelBase:onMadeActive() end
 
----@return any
+---@param _buttonTitle string
 function ISDebugPanelBase:registerPanel(_buttonTitle, _panelClass, _ignoreSorting) end
 
----@return any
 function ISDebugPanelBase:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
 ---@return ISDebugPanelBase
 function ISDebugPanelBase:new(x, y, width, height, title) end

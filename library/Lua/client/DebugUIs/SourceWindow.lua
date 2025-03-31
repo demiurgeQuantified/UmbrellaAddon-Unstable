@@ -1,51 +1,47 @@
 ---@meta
 
 ---@class SourceWindow : ISCollapsableWindow
----@field backgroundColor any
----@field filename any
----@field keepOnScreen any
----@field reloadBtn any
----@field sourceView any
----@field title any
----@field [any] any
+---@field filename string
+---@field keepOnScreen boolean
+---@field reloadBtn ISButton
+---@field sourceView ISScrollingListBox
+---@field title unknown
 SourceWindow = ISCollapsableWindow:derive("SourceWindow")
+SourceWindow.Type = "SourceWindow"
 SourceWindow.map = {}
 
----@return any
 function SourceWindow:checkFontSize() end
 
----@return any
 function SourceWindow:createChildren() end
 
----@return any
+---@return number
 function SourceWindow:doDrawItem(y, item) end
 
----@return any
 function SourceWindow:fill() end
 
----@return any
 function SourceWindow:initialise() end
 
----@return any
 function SourceWindow:onMouseDoubleClickBreakpointToggle(item) end
 
----@return any
+---@return boolean
 function SourceWindow:onSourceMouseWheel(del) end
 
----@return any
 function SourceWindow:prerender() end
 
----@return any
+---@return boolean
 function SourceWindow:reloadFile() end
 
----@return any
 function SourceWindow:renderSrc() end
 
----@return any
+---@param line number
 function SourceWindow:scrollToLine(line) end
 
----@return any
 function SourceWindow:setListBoxItemHeight(listBox) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param filename string
 ---@return SourceWindow
 function SourceWindow:new(x, y, width, height, filename) end

@@ -1,203 +1,164 @@
 ---@meta
 
 ---@class CharacterCreationProfession : ISPanelJoypad
----@field addBadTraitBtn any
----@field addTraitBtn any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backButton any
----@field backgroundColor any
----@field belowLists any
----@field borderColor any
----@field bottomOfLists any
----@field cost any
----@field deleteBuildButton any
----@field fontHgt any
----@field freeTraits any
----@field height any
----@field infoBtn any
----@field infoRichText any
----@field inputModal any
----@field itemheightoverride any
----@field javaObject any
----@field joyfocus any
----@field listboxBadTrait any
----@field listboxProf any
----@field listboxTrait any
----@field listboxTraitSelected any
----@field listboxXpBoost any
----@field playButton any
----@field pointToSpend any
----@field presetPanel any
----@field previousScreen any
----@field profession any
----@field randomButton any
----@field removeTraitBtn any
----@field resetButton any
----@field saveBuildButton any
----@field savedBuilds any
----@field tablePadX any
----@field tableWidth any
----@field tooltipColor any
----@field tooltipHgt any
----@field tooltipLabel any
----@field tooltipRichText any
----@field topOfLists any
----@field traitButtonHgt any
----@field traitButtonPad any
----@field whiteBar any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field addBadTraitBtn ISButton
+---@field addTraitBtn ISButton
+---@field backButton ISButton
+---@field belowLists number
+---@field bottomOfLists number
+---@field cost number
+---@field deleteBuildButton ISButton
+---@field fontHgt unknown
+---@field freeTraits table
+---@field infoBtn ISButton
+---@field infoRichText ISModalRichText?
+---@field inputModal ISTextBox
+---@field itemheightoverride table
+---@field listboxBadTrait unknown
+---@field listboxProf unknown
+---@field listboxTrait unknown
+---@field listboxTraitSelected unknown
+---@field listboxXpBoost ISScrollingListBox
+---@field playButton ISButton
+---@field pointToSpend number
+---@field presetPanel unknown
+---@field previousScreen unknown?
+---@field profession unknown?
+---@field randomButton ISButton
+---@field removeTraitBtn ISButton
+---@field resetButton ISButton
+---@field saveBuildButton ISButton
+---@field savedBuilds ISComboBox
+---@field tablePadX number
+---@field tableWidth number
+---@field tooltipColor table
+---@field tooltipHgt number
+---@field tooltipLabel string?
+---@field tooltipRichText ISRichTextPanel
+---@field topOfLists number
+---@field traitButtonHgt number
+---@field traitButtonPad number
+---@field whiteBar unknown
 CharacterCreationProfession = ISPanelJoypad:derive("CharacterCreationProfession")
+CharacterCreationProfession.Type = "CharacterCreationProfession"
+CharacterCreationProfession.instance = nil ---@type CharacterCreationProfession?
 
----@return any
 function CharacterCreationProfession.initWorld() end
 
----@return any
+---@param self CharacterCreationProfession
 function CharacterCreationProfession.loadBuild(self, box) end
 
----@return any
 function CharacterCreationProfession:addTrait(bad) end
 
----@return any
 function CharacterCreationProfession:changeClothes() end
 
----@return any
 function CharacterCreationProfession:checkXPBoost() end
 
----@return any
 function CharacterCreationProfession:create() end
 
----@return any
 function CharacterCreationProfession:deleteBuildStep1() end
 
----@return any
 function CharacterCreationProfession:deleteBuildStep2(button, joypadData) end
 
----@return any
+---@return number
 function CharacterCreationProfession:drawProfessionMap(y, item, alt) end
 
----@return any
+---@return number
 function CharacterCreationProfession:drawTraitMap(y, item, alt) end
 
----@return any
+---@return number
 function CharacterCreationProfession:drawXpBoostMap(y, item, alt) end
 
----@return any
+---@return table
 function CharacterCreationProfession:getTraitColor(trait) end
 
----@return any
 function CharacterCreationProfession:initialise() end
 
----@return any
 function CharacterCreationProfession:instantiate() end
 
----@return any
+---@return boolean
 function CharacterCreationProfession:isTraitExcluded(trait) end
 
----@return any
+---@param bAdd boolean
 function CharacterCreationProfession:mutualyExclusive(trait, bAdd) end
 
----@return any
+---@return number
 function CharacterCreationProfession:negativeTraitOffset() end
 
----@return any
 function CharacterCreationProfession:onDblClickBadTrait(item) end
 
----@return any
 function CharacterCreationProfession:onDblClickSelectedTrait(item) end
 
----@return any
 function CharacterCreationProfession:onDblClickTrait(item) end
 
----@return any
 function CharacterCreationProfession:onGainJoypadFocus(joypadData) end
 
----@return any
 function CharacterCreationProfession:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function CharacterCreationProfession:onJoypadDirLeft(joypadData) end
 
----@return any
 function CharacterCreationProfession:onJoypadDirRight(joypadData) end
 
----@return any
 function CharacterCreationProfession:onJoypadDirUp(joypadData) end
 
----@return any
 function CharacterCreationProfession:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number?
+---@param y number?
 function CharacterCreationProfession:onOptionMouseDown(button, x, y) end
 
----@return any
 function CharacterCreationProfession:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
 function CharacterCreationProfession:onSelectBadTrait(item) end
 
----@return any
 function CharacterCreationProfession:onSelectChosenTrait(item) end
 
----@return any
 function CharacterCreationProfession:onSelectProf(item) end
 
----@return any
 function CharacterCreationProfession:onSelectTrait(item) end
 
----@return any
+---@return number
 function CharacterCreationProfession:PointToSpend() end
 
----@return any
 function CharacterCreationProfession:populateBadTraitList(list) end
 
----@return any
 function CharacterCreationProfession:populateProfessionList(list) end
 
----@return any
 function CharacterCreationProfession:populateTraitList(list) end
 
----@return any
 function CharacterCreationProfession:prerender() end
 
----@return any
+---@param findText string
+---@return boolean
 function CharacterCreationProfession:presetExists(findText) end
 
----@return any
 function CharacterCreationProfession:randomizeTraits() end
 
----@return any
 function CharacterCreationProfession:removeTrait() end
 
----@return any
 function CharacterCreationProfession:render() end
 
----@return any
 function CharacterCreationProfession:resetBuild() end
 
----@return any
 function CharacterCreationProfession:resetTraits() end
 
----@return any
 function CharacterCreationProfession:saveBuildStep1() end
 
----@return any
 function CharacterCreationProfession:saveBuildStep2(button, joypadData, param2) end
 
----@return any
+---@return boolean
 function CharacterCreationProfession:saveBuildValidate(text) end
 
----@return any
+---@param visible boolean
+---@param joypadData unknown?
 function CharacterCreationProfession:setVisible(visible, joypadData) end
 
----@return any
 function CharacterCreationProfession:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return CharacterCreationProfession
 function CharacterCreationProfession:new(x, y, width, height) end
 
@@ -205,17 +166,22 @@ function CharacterCreationProfession:new(x, y, width, height) end
 BCRC = {}
 BCRC.savefile = "saved_builds.txt"
 
----@return any
+---@return string?
 function BCRC.dump(o, lvl) end
 
----@return any
+---@param _centered boolean
+---@param _width number?
+---@param _height number?
+---@param _posX unknown?
+---@param _posY unknown?
+---@param _text string
+---@param target CharacterCreationMain
+---@return ISTextBox
 function BCRC.inputModal(_centered, _width, _height, _posX, _posY, _text, _onclick, target, param1, param2) end
 
----@return any
 function BCRC.pline(text) end
 
----@return any
+---@return table
 function BCRC.readSaveFile() end
 
----@return any
 function BCRC.writeSaveFile(options) end

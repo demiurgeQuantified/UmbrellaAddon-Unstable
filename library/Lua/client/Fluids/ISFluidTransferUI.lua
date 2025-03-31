@@ -1,118 +1,101 @@
 ---@meta
 
 ---@class ISFluidTransferUI : ISPanelJoypad
----@field action any
----@field backgroundColor any
----@field borderColor any
----@field btnClose any
----@field btnSwap any
----@field btnTransfer any
----@field buttonBorderColor any
----@field container any
----@field disableJoypadNavigation any
----@field disableSwap any
----@field disableTransfer any
----@field errorDefault any
----@field errorLabel any
----@field errorText any
----@field info any
----@field isIsoPanel any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field maxTransferLabel any
----@field maxTransferText any
----@field moveWithMouse any
----@field panelLeft any
----@field panelLeftText any
----@field panelLeftX any
----@field panelMiddle any
----@field panelRight any
----@field panelRightText any
----@field panelRightX any
----@field player any
----@field playerNum any
----@field slider any
----@field source any
----@field titleLabel any
----@field titleText any
----@field transferColor any
----@field transferringLabel any
----@field transferringText any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field action boolean | ISFluidTransferAction
+---@field btnClose ISButton
+---@field btnSwap ISButton
+---@field btnTransfer ISButton
+---@field buttonBorderColor table
+---@field container unknown
+---@field disableJoypadNavigation boolean
+---@field disableSwap boolean
+---@field disableTransfer boolean
+---@field errorDefault string
+---@field errorLabel ISLabel
+---@field errorText string
+---@field info table
+---@field isIsoPanel boolean
+---@field maxTransferLabel ISLabel
+---@field maxTransferText string
+---@field panelLeft ISFluidContainerPanel
+---@field panelLeftText string
+---@field panelLeftX unknown
+---@field panelMiddle ISPanelJoypad
+---@field panelRight ISFluidContainerPanel
+---@field panelRightText string
+---@field panelRightX unknown
+---@field player unknown
+---@field playerNum unknown
+---@field slider ISSliderPanel
+---@field source unknown
+---@field titleLabel ISLabel
+---@field titleText string
+---@field transferColor table
+---@field transferringLabel ISLabel
+---@field transferringText string
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISFluidTransferUI = ISPanelJoypad:derive("ISFluidTransferUI")
+ISFluidTransferUI.Type = "ISFluidTransferUI"
 ISFluidTransferUI.players = {}
 ISFluidTransferUI.cheatSkill = false
 ISFluidTransferUI.cheatTransfer = false
 
----@return any
+---@param _container ISFluidContainer
 function ISFluidTransferUI.OpenPanel(_player, _container, _source) end
 
----@return any
 function ISFluidTransferUI:arrangePanels() end
 
----@return any
 function ISFluidTransferUI:close() end
 
----@return any
 function ISFluidTransferUI:createChildren() end
 
----@return any
 function ISFluidTransferUI:initialise() end
 
----@return any
 function ISFluidTransferUI:onButton(_btn) end
 
----@return any
 function ISFluidTransferUI:onContainerAdd(_item, _panel) end
 
----@return any
 function ISFluidTransferUI:onContainerRemove(_removedItem, _panel) end
 
----@return any
+---@return boolean
 function ISFluidTransferUI:onContainerVerify(_item, _panel) end
 
----@return any
 function ISFluidTransferUI:onGainJoypadFocus(joypadData) end
 
----@return any
+---@return unknown?
 function ISFluidTransferUI:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISFluidTransferUI:onRightMouseUp(x, y) end
 
----@return any
 function ISFluidTransferUI:onSlider(_value, _slider) end
 
----@return any
 function ISFluidTransferUI:prerender() end
 
----@return any
 function ISFluidTransferUI:render() end
 
----@return any
+---@param _value number
 function ISFluidTransferUI:setMaxTransfer(_value) end
 
----@return any
 function ISFluidTransferUI:setOrClearItem(panel) end
 
----@return any
+---@param _value number
 function ISFluidTransferUI:setTransferring(_value) end
 
----@return any
 function ISFluidTransferUI:toggleCheatSkill(_b) end
 
----@return any
 function ISFluidTransferUI:toggleCheatTransfer(_b) end
 
----@return any
 function ISFluidTransferUI:update() end
 
----@return any
 function ISFluidTransferUI:validatePanel(_forceUpdate) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFluidTransferUI
 function ISFluidTransferUI:new(x, y, width, height, _player, _container, source) end

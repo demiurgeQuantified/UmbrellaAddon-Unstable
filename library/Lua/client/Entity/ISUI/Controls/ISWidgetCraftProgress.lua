@@ -1,47 +1,41 @@
 ---@meta
 
 ---@class ISWidgetCraftProgress : ISPanel
----@field autoFillContents any
----@field background any
----@field callbackTarget any
----@field entity any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field originalBarHeight any
----@field originalBarWidth any
----@field player any
----@field progressBar any
----@field styleBar any
----@field [any] any
+---@field autoFillContents boolean
+---@field callbackTarget unknown
+---@field entity unknown
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field margin number
+---@field originalBarHeight unknown
+---@field originalBarWidth unknown
+---@field player unknown
+---@field progressBar unknown?
+---@field styleBar unknown
 ISWidgetCraftProgress = ISPanel:derive("ISWidgetCraftProgress")
+ISWidgetCraftProgress.Type = "ISWidgetCraftProgress"
 
----@return any
 function ISWidgetCraftProgress:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetCraftProgress:createChildren() end
 
----@return any
 function ISWidgetCraftProgress:initialise() end
 
----@return any
+---@return number
 function ISWidgetCraftProgress:onGetProgress() end
 
----@return any
 function ISWidgetCraftProgress:onResize() end
 
----@return any
 function ISWidgetCraftProgress:prerender() end
 
----@return any
 function ISWidgetCraftProgress:render() end
 
----@return any
 function ISWidgetCraftProgress:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetCraftProgress
 function ISWidgetCraftProgress:new(x, y, width, height, player, entity, callbackTarget, _styleBar) end

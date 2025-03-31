@@ -1,93 +1,71 @@
 ---@meta
 
 ---@class WindDebug : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field chartLabelsLeft any
----@field chartLabelsLeftTxt any
----@field chartLabelsRight any
----@field chartLabelsRightTxt any
----@field charts any
----@field collapseCounter any
----@field colTable any
----@field currentTile any
----@field dayStamp any
----@field drawFrame any
----@field greyCol any
----@field height any
----@field historyM1 any
----@field hotKeyPanels any
----@field hourStamp any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field monthStamp any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field richtext any
----@field subFocus any
----@field title any
----@field varInfo any
----@field width any
----@field x any
----@field y any
----@field year any
----@field [any] any
+---@field chartLabelsLeft table
+---@field chartLabelsLeftTxt table
+---@field chartLabelsRight table
+---@field chartLabelsRightTxt table
+---@field charts table
+---@field colTable table
+---@field currentTile unknown?
+---@field dayStamp number
+---@field greyCol table
+---@field historyM1 ValuePlotter
+---@field hotKeyPanels table
+---@field hourStamp number
+---@field isJoypadWindow boolean
+---@field monthStamp number
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field richtext unknown?
+---@field subFocus unknown?
+---@field title string
+---@field varInfo table
+---@field year number
 WindDebug = ISCollapsableWindow:derive("WindDebug")
-WindDebug.instance = nil
+WindDebug.Type = "WindDebug"
+WindDebug.instance = nil ---@type WindDebug?
 WindDebug.shiftDown = 0
 
----@return any
+---@return WindDebug?
 function WindDebug.OnOpenPanel() end
 
----@return any
+---@param _r number
+---@param _g number
+---@param _b number
 function WindDebug:addColor(_r, _g, _b) end
 
----@return any
+---@param _name string
 function WindDebug:addVarInfo(_name, _desc, _min, _max, _func) end
 
----@return any
 function WindDebug:clear() end
 
----@return any
 function WindDebug:close() end
 
----@return any
 function WindDebug:createChildren() end
 
----@return any
 function WindDebug:initialise() end
 
----@return any
 function WindDebug:initVariables() end
 
----@return any
 function WindDebug:onButton(_btn) end
 
----@return any
 function WindDebug:onButtonToggle(_btn) end
 
----@return any
 function WindDebug:onResize() end
 
----@return any
 function WindDebug:prerender() end
 
----@return any
 function WindDebug:render() end
 
----@return any
 function WindDebug:stayOnSplitScreen() end
 
----@return any
 function WindDebug:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return WindDebug
 function WindDebug:new(x, y, width, height, player) end

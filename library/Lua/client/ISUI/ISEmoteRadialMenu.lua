@@ -1,39 +1,34 @@
 ---@meta
 
 ---@class ISEmoteRadialMenu : ISBaseObject
----@field character any
----@field playerNum any
----@field [any] any
+---@field character unknown
+---@field playerNum unknown
 ISEmoteRadialMenu = ISBaseObject:derive("ISEmoteRadialMenu")
+ISEmoteRadialMenu.Type = "ISEmoteRadialMenu"
+ISEmoteRadialMenu.defaultMenu = nil ---@type table?
+ISEmoteRadialMenu.variants = nil ---@type table?
+ISEmoteRadialMenu.icons = nil ---@type table?
+ISEmoteRadialMenu.menu = nil ---@type table?
 
----@return any
+---@return boolean
 function ISEmoteRadialMenu.checkKey(key) end
 
----@return any
 function ISEmoteRadialMenu.onKeyPressed(key) end
 
----@return any
 function ISEmoteRadialMenu.onKeyReleased(key) end
 
----@return any
 function ISEmoteRadialMenu.onKeyRepeat(key) end
 
----@return any
 function ISEmoteRadialMenu:center() end
 
----@return any
 function ISEmoteRadialMenu:configEmote() end
 
----@return any
 function ISEmoteRadialMenu:display() end
 
----@return any
 function ISEmoteRadialMenu:emote(emote) end
 
----@return any
 function ISEmoteRadialMenu:fillMenu(submenu) end
 
----@return any
 function ISEmoteRadialMenu:init() end
 
 ---@return ISEmoteRadialMenu

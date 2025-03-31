@@ -1,52 +1,50 @@
 ---@meta
 
 ---@class ISRadioOption : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field changeOptionMethod any
----@field changeOptionTarget any
----@field choicesColor any
----@field height any
----@field leftMargin any
----@field mouseOverOption any
----@field name any
----@field optionCount any
----@field options any
----@field selected any
----@field tickTexture any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field changeOptionMethod unknown
+---@field changeOptionTarget unknown
+---@field choicesColor table
+---@field leftMargin number
+---@field mouseOverOption number
+---@field name string
+---@field optionCount number
+---@field options table
+---@field selected number
+---@field tickTexture unknown
 ISRadioOption = ISPanel:derive("ISRadioOption")
+ISRadioOption.Type = "ISRadioOption"
 
----@return any
+---@param name string
 function ISRadioOption:addOption(name) end
 
----@return any
 function ISRadioOption:initialise() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISRadioOption:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISRadioOption:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISRadioOption:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISRadioOption:onMouseUp(x, y) end
 
----@return any
 function ISRadioOption:prerender() end
 
----@return any
 function ISRadioOption:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param name string
 ---@return ISRadioOption
 function ISRadioOption:new(x, y, width, height, name, changeOptionTarget, changeOptionMethod) end

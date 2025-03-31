@@ -1,47 +1,39 @@
 ---@meta
 
 ---@class ISChopTreeAction : ISBaseTimedAction
----@field axe any
----@field caloriesModifier any
----@field forceProgressBar any
----@field maxTime any
----@field spriteFrame any
----@field tree any
----@field [any] any
+---@field axe unknown
+---@field forceProgressBar boolean
+---@field spriteFrame number
+---@field tree unknown
 ISChopTreeAction = ISBaseTimedAction:derive("ISChopTreeAction")
+ISChopTreeAction.Type = "ISChopTreeAction"
 
----@return any
 function ISChopTreeAction:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISChopTreeAction:complete() end
 
----@return any
+---@return number
 function ISChopTreeAction:getDuration() end
 
----@return any
+---@return boolean
 function ISChopTreeAction:isValid() end
 
----@return any
 function ISChopTreeAction:perform() end
 
----@return any
 function ISChopTreeAction:serverStart() end
 
----@return any
 function ISChopTreeAction:start() end
 
----@return any
 function ISChopTreeAction:stop() end
 
----@return any
 function ISChopTreeAction:update() end
 
----@return any
 function ISChopTreeAction:useEndurance() end
 
----@return any
+---@return unknown
 function ISChopTreeAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISChopTreeAction
 function ISChopTreeAction:new(character, tree) end

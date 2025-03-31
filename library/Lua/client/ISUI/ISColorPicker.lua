@@ -1,68 +1,72 @@
 ---@meta
 
 ---@class ISColorPicker : ISPanelJoypad
----@field borderSize any
----@field buttonSize any
----@field colors any
----@field columns any
----@field index any
----@field mouseDown any
----@field pickedArgs any
----@field pickedFunc any
----@field rows any
----@field [any] any
+---@field borderSize number
+---@field buttonSize number
+---@field colors table
+---@field columns number
+---@field index number
+---@field mouseDown boolean
+---@field pickedArgs table
+---@field pickedFunc unknown
+---@field rows number
 ISColorPicker = ISPanelJoypad:derive("ISColorPicker")
+ISColorPicker.Type = "ISColorPicker"
 
----@return any
 function ISColorPicker:onJoypadDirDown(joypadData) end
 
----@return any
 function ISColorPicker:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISColorPicker:onJoypadDirRight(joypadData) end
 
----@return any
 function ISColorPicker:onJoypadDirUp(joypadData) end
 
----@return any
 function ISColorPicker:onJoypadDown(button) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPicker:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPicker:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function ISColorPicker:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPicker:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPicker:onMouseUpOutside(x, y) end
 
----@return any
 function ISColorPicker:picked(hide) end
 
----@return any
 function ISColorPicker:picked2(hide) end
 
----@return any
 function ISColorPicker:removeSelf() end
 
----@return any
 function ISColorPicker:render() end
 
----@return any
+---@param colors table
+---@param columns number
+---@param rows number
 function ISColorPicker:setColors(colors, columns, rows) end
 
----@return any
 function ISColorPicker:setInitialColor(initial) end
 
----@return any
 function ISColorPicker:setPickedFunc(func, arg1, arg2, arg3, arg4) end
 
+---@param x number
+---@param y number
+---@param HSBFactor table?
 ---@return ISColorPicker
 function ISColorPicker:new(x, y, HSBFactor) end

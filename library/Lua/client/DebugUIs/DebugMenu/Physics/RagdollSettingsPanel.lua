@@ -1,41 +1,43 @@
 ---@meta
 
 ---@class RagdollSettingsPanel : ISDebugSubPanelBase
----@field allOptions any
----@field bools any
----@field floats any
----@field [any] any
+---@field allOptions table
+---@field bools table
+---@field floats table
 RagdollSettingsPanel = ISDebugSubPanelBase:derive("RagdollSettingsPanel")
+RagdollSettingsPanel.Type = "RagdollSettingsPanel"
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function RagdollSettingsPanel:addBoolOption(_id, _bool, _x, _y, _w) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function RagdollSettingsPanel:addFloatOption(_id, _float, _x, _y, _w) end
 
----@return any
 function RagdollSettingsPanel:createChildren() end
 
----@return any
 function RagdollSettingsPanel:initialise() end
 
----@return any
 function RagdollSettingsPanel:onClick(_button) end
 
----@return any
 function RagdollSettingsPanel:onSliderChange(_newval, _slider) end
 
----@return any
 function RagdollSettingsPanel:onTicked(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function RagdollSettingsPanel:onTickedValue(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function RagdollSettingsPanel:prerender() end
 
----@return any
 function RagdollSettingsPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RagdollSettingsPanel
 function RagdollSettingsPanel:new(x, y, width, height, doStencil) end

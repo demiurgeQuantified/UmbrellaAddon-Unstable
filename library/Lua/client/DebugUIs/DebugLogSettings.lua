@@ -1,29 +1,28 @@
 ---@meta
 
 ---@class DebugLogSettings : ISCollapsableWindow
----@field backgroundColor any
----@field comboLookup any
----@field resizable any
----@field [any] any
+---@field comboLookup table
 DebugLogSettings = ISCollapsableWindow:derive("DebugLogSettings")
+DebugLogSettings.Type = "DebugLogSettings"
 
----@return any
 function DebugLogSettings:createChildren() end
 
----@return any
 function DebugLogSettings:onComboBox(comboBox, debugType) end
 
----@return any
+---@param x number
+---@param y number
 function DebugLogSettings:onMouseDownOutside(x, y) end
 
----@return any
 function DebugLogSettings:onSetAll(comboBox) end
 
----@return any
+---@param bVisible boolean
 function DebugLogSettings:setVisible(bVisible) end
 
----@return any
 function DebugLogSettings:syncCombos() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return DebugLogSettings
 function DebugLogSettings:new(x, y, width, height) end

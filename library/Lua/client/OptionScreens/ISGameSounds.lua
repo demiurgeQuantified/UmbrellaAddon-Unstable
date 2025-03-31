@@ -1,60 +1,61 @@
 ---@meta
 
 ---@class ISGameSounds : ISPanelJoypad
----@field addY any
----@field anchorBottom any
----@field anchorRight any
----@field backgroundColor any
----@field borderColor any
----@field buttonClose any
----@field buttonReload any
----@field joyfocus any
----@field mainPanel any
----@field maxLabelWidth any
----@field previewControl any
----@field tabs any
----@field volumesChanged any
----@field [any] any
+---@field addY number
+---@field buttonClose ISButton
+---@field buttonReload ISButton
+---@field mainPanel table
+---@field maxLabelWidth number
+---@field previewControl unknown?
+---@field tabs ISTabPanel
+---@field volumesChanged boolean
 ISGameSounds = ISPanelJoypad:derive("ISGameSounds")
+ISGameSounds.Type = "ISGameSounds"
 
----@return any
 function ISGameSounds.onPlaySound(args) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param name string
+---@return ISComboBox
 function ISGameSounds:addCombo(x, y, w, h, name, options, selected, target, onchange) end
 
----@return any
+---@param name string?
 function ISGameSounds:addPage(name) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param name string?
+---@param target ISGameSounds
+---@return ISGameSoundVolumeControl
 function ISGameSounds:addVolumeControl(x, y, w, h, name, volume, target, onchange) end
 
----@return any
 function ISGameSounds:createChildren() end
 
----@return any
 function ISGameSounds:onClose() end
 
----@return any
 function ISGameSounds:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISGameSounds:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
+---@return boolean
 function ISGameSounds:onMouseWheel(del) end
 
----@return any
 function ISGameSounds:onReload() end
 
----@return any
 function ISGameSounds:onReturnToGame() end
 
----@return any
 function ISGameSounds:onStopSound() end
 
----@return any
 function ISGameSounds:onVolumeChanged(control, volume) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISGameSounds
 function ISGameSounds:new(x, y, width, height) end

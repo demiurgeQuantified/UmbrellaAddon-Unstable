@@ -3,14 +3,13 @@
 ---@class RecipeUtils
 RecipeUtils = {}
 
----@return any
 function RecipeUtils.CreateSourceItem(recipe, source, sourceFullType, options, result) end
 
----@return any
+---@return unknown?
 function RecipeUtils.CreateSourceItem1(recipe, source, sourceFullType, options) end
 
----@return any
 function RecipeUtils.CreateSourceItem2(recipe, source, sourceFullType, options, result) end
 
----@return any
+---@param options table
+---@param result table
 function RecipeUtils.CreateSourceItems(recipe, options, result) end

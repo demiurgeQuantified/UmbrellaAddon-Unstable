@@ -1,37 +1,32 @@
 ---@meta
 
 ---@class ISWalkToTimedAction : ISBaseTimedAction
----@field additionalContext any
----@field additionalTest any
----@field character any
----@field location any
----@field maxTime any
----@field onCompleteArgs any
----@field onCompleteFunc any
----@field pathIndex any
----@field result any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field additionalContext unknown
+---@field additionalTest unknown
+---@field character unknown?
+---@field location unknown?
+---@field onCompleteArgs table
+---@field onCompleteFunc function
+---@field pathIndex number
+---@field result unknown
 ISWalkToTimedAction = ISBaseTimedAction:derive("ISWalkToTimedAction")
+ISWalkToTimedAction.Type = "ISWalkToTimedAction"
 
----@return any
+---@return boolean
 function ISWalkToTimedAction:isValid() end
 
----@return any
 function ISWalkToTimedAction:perform() end
 
----@return any
+---@param func function
 function ISWalkToTimedAction:setOnComplete(func, arg1, arg2, arg3, arg4) end
 
----@return any
 function ISWalkToTimedAction:start() end
 
----@return any
 function ISWalkToTimedAction:stop() end
 
----@return any
 function ISWalkToTimedAction:update() end
 
+---@param character unknown?
+---@param location unknown?
 ---@return ISWalkToTimedAction
 function ISWalkToTimedAction:new(character, location, additionalTest, additionalContext) end

@@ -1,95 +1,69 @@
 ---@meta
 
 ---@class ISHandcraftWindow : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field collapseCounter any
----@field dirtyLayout any
----@field drawFrame any
----@field enableHeader any
----@field handCraftPanel any
----@field hasClosedWindowInstance any
----@field height any
----@field isCollapsed any
----@field isoObject any
----@field isoObjectInProximity any
----@field maximumHeight any
----@field maximumHeightPercent any
----@field maximumWidth any
----@field minimumHeight any
----@field minimumWidth any
----@field overrideBPrompt any
----@field panelCloseDistance any
----@field pin any
----@field player any
----@field playerNum any
----@field queryOverride any
----@field resizable any
----@field title any
----@field width any
----@field windowHeader any
----@field x any
----@field xuiPreferredResizeHeight any
----@field xuiPreferredResizeWidth any
----@field xuiResizeAnchorRight any
----@field y any
----@field [any] any
+---@field dirtyLayout boolean
+---@field enableHeader boolean
+---@field handCraftPanel unknown?
+---@field hasClosedWindowInstance boolean
+---@field isoObject unknown
+---@field isoObjectInProximity boolean
+---@field maximumHeight number
+---@field maximumHeightPercent number
+---@field maximumWidth number
+---@field overrideBPrompt boolean
+---@field panelCloseDistance number
+---@field player unknown
+---@field playerNum unknown
+---@field queryOverride unknown
+---@field title unknown?
+---@field windowHeader unknown?
+---@field xuiPreferredResizeHeight number
+---@field xuiPreferredResizeWidth number
+---@field xuiResizeAnchorRight boolean
 ISHandcraftWindow = ISCollapsableWindow:derive("ISHandcraftWindow")
+ISHandcraftWindow.Type = "ISHandcraftWindow"
 
----@return any
+---@param _preferredWidth number
+---@param _preferredHeight number
 function ISHandcraftWindow:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISHandcraftWindow:close() end
 
----@return any
 function ISHandcraftWindow:createChildren() end
 
----@return any
 function ISHandcraftWindow:initialise() end
 
----@return any
+---@return boolean
 function ISHandcraftWindow:isKeyConsumed(key) end
 
----@return any
 function ISHandcraftWindow:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISHandcraftWindow:onJoypadDown(button, joypadData) end
 
----@return any
 function ISHandcraftWindow:onJoypadDown_Descendant(descendant, button, joypadData) end
 
----@return any
 function ISHandcraftWindow:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
----@return any
 function ISHandcraftWindow:onKeyRelease(key) end
 
----@return any
 function ISHandcraftWindow:onLoseJoypadFocus(joypadData) end
 
----@return any
 function ISHandcraftWindow:prerender() end
 
----@return any
 function ISHandcraftWindow:render() end
 
----@return any
 function ISHandcraftWindow:stayOnSplitScreen() end
 
----@return any
+---@return boolean?
 function ISHandcraftWindow:update() end
 
----@return any
 function ISHandcraftWindow:validateSizeBounds() end
 
----@return any
 function ISHandcraftWindow:xuiRecalculateLayout(_preferredWidth, _preferredHeight, _force, _anchorRight) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISHandcraftWindow
 function ISHandcraftWindow:new(x, y, width, height, player, isoObject, queryOverride) end

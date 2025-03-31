@@ -1,35 +1,27 @@
 ---@meta
 
 ---@class ISHotwireVehicle : ISBaseTimedAction
----@field maxTime any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field sound unknown
 ISHotwireVehicle = ISBaseTimedAction:derive("ISHotwireVehicle")
+ISHotwireVehicle.Type = "ISHotwireVehicle"
 
----@return any
+---@return boolean
 function ISHotwireVehicle:complete() end
 
----@return any
+---@return number
 function ISHotwireVehicle:getDuration() end
 
----@return any
+---@return boolean
 function ISHotwireVehicle:isValid() end
 
----@return any
 function ISHotwireVehicle:perform() end
 
----@return any
 function ISHotwireVehicle:start() end
 
----@return any
 function ISHotwireVehicle:stop() end
 
----@return any
 function ISHotwireVehicle:stopSound() end
 
----@return any
 function ISHotwireVehicle:update() end
 
 ---@return ISHotwireVehicle

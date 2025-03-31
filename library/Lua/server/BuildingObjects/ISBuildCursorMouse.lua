@@ -1,36 +1,39 @@
 ---@meta
 
 ---@class ISBuildCursorMouse : ISBuildingObject
----@field character any
----@field chosenSprite any
----@field isValid any
----@field noNeedHammer any
----@field onSquareSelected any
----@field player any
----@field previousSprite any
----@field skipBuildAction any
----@field sq any
----@field tooltip any
----@field [any] any
+---@field character unknown
+---@field chosenSprite unknown
+---@field isValid boolean
+---@field noNeedHammer boolean
+---@field onSquareSelected unknown
+---@field player unknown
+---@field previousSprite unknown
+---@field skipBuildAction boolean
+---@field sq unknown
+---@field tooltip unknown?
 ISBuildCursorMouse = ISBuildingObject:derive("ISBuildCursorMouse")
+ISBuildCursorMouse.Type = "ISBuildCursorMouse"
+ISBuildCursorMouse.spriteRender = nil
 
----@return any
+---@return boolean
 function ISBuildCursorMouse.IsVisible() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBuildCursorMouse:create(x, y, z, north, sprite) end
 
----@return any
 function ISBuildCursorMouse:deactivate() end
 
----@return any
 function ISBuildCursorMouse:hideTooltip() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBuildCursorMouse:render(x, y, z, square) end
 
----@return any
 function ISBuildCursorMouse:renderTooltip() end
 
+---@param isValid boolean
 ---@return ISBuildCursorMouse
 function ISBuildCursorMouse:new(character, onSquareSelected, isValid) end

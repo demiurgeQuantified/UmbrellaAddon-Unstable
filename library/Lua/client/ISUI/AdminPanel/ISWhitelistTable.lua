@@ -1,69 +1,64 @@
 ---@meta
 
 ---@class ISWhitelistTable : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field columnSize any
----@field combo any
----@field currentPage any
----@field datas any
----@field entriesPerPages any
----@field entry any
----@field filtered any
----@field filters any
----@field fullPages any
----@field listHeaderColor any
----@field loading any
----@field nbrPerPageLbl any
----@field nbrPerPages any
----@field nextPage any
----@field pageLbl any
----@field pagePanel any
----@field pages any
----@field pagesLbl any
----@field prePage any
----@field schema any
----@field tableName any
----@field totalResult any
----@field [any] any
+---@field buttonBorderColor table
+---@field columnSize table
+---@field combo ISComboBox
+---@field currentPage number
+---@field datas ISScrollingListBox
+---@field entriesPerPages number
+---@field entry ISTextEntryBox
+---@field filtered boolean
+---@field filters table
+---@field fullPages table
+---@field listHeaderColor table
+---@field loading boolean
+---@field nbrPerPageLbl ISLabel
+---@field nbrPerPages ISTextEntryBox
+---@field nextPage ISButton
+---@field pageLbl ISLabel
+---@field pagePanel ISPanel
+---@field pages table
+---@field pagesLbl ISLabel
+---@field prePage ISButton
+---@field schema table
+---@field totalResult number
 ISWhitelistTable = ISPanel:derive("ISWhitelistTable")
+ISWhitelistTable.Type = "ISWhitelistTable"
+ISWhitelistTable.instance = nil ---@type ISWhitelistTable?
 
----@return any
+---@param tableName string
 function ISWhitelistTable.getTableResult(datas, rowId, tableName) end
 
----@return any
 function ISWhitelistTable.onFilterChange(entry, combo) end
 
----@return any
 function ISWhitelistTable.onNbrPerPageChange(entry) end
 
----@return any
 function ISWhitelistTable:clear() end
 
----@return any
 function ISWhitelistTable:clearFilters() end
 
----@return any
 function ISWhitelistTable:computeResult(datas) end
 
----@return any
 function ISWhitelistTable:createChildren() end
 
----@return any
 function ISWhitelistTable:doPagesButtons() end
 
----@return any
+---@return number
 function ISWhitelistTable:drawDatas(y, item, alt) end
 
----@return any
 function ISWhitelistTable:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISWhitelistTable:onOptionPage(button, x, y) end
 
----@return any
 function ISWhitelistTable:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param tableName string
 ---@return ISWhitelistTable
 function ISWhitelistTable:new(x, y, width, height, tableName) end

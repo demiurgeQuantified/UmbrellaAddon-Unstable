@@ -1,36 +1,33 @@
 ---@meta
 
 ---@class ISClearAshes : ISBaseTimedAction
----@field ashes any
----@field character any
----@field maxTime any
----@field spriteFrame any
----@field [any] any
+---@field ashes unknown?
+---@field character unknown?
+---@field spriteFrame number
 ISClearAshes = ISBaseTimedAction:derive("ISClearAshes")
+ISClearAshes.Type = "ISClearAshes"
 
----@return any
+---@return boolean
 function ISClearAshes:complete() end
 
----@return any
+---@return number
 function ISClearAshes:getDuration() end
 
----@return any
+---@return boolean
 function ISClearAshes:isValid() end
 
----@return any
 function ISClearAshes:perform() end
 
----@return any
 function ISClearAshes:start() end
 
----@return any
 function ISClearAshes:stop() end
 
----@return any
 function ISClearAshes:update() end
 
----@return any
+---@return unknown
 function ISClearAshes:waitToStart() end
 
+---@param character unknown?
+---@param ashes unknown?
 ---@return ISClearAshes
 function ISClearAshes:new(character, ashes) end

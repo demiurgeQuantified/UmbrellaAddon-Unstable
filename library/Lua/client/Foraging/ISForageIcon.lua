@@ -1,61 +1,49 @@
 ---@meta
 
 ---@class ISForageIcon : ISBaseIcon
----@field altWorldTexture any
----@field canMoveVertical any
----@field canRollForSearchFocus any
----@field catDef any
----@field iconClass any
----@field identified any
----@field identifyDistance any
----@field isForageable any
----@field isMover any
----@field itemDef any
----@field itemList any
----@field itemObj any
----@field itemSize any
----@field itemTexture any
----@field itemType any
----@field onClickContext any
----@field onMouseDoubleClick any
----@field perkLevel any
----@field render3DTexture any
----@field renderWorldIcon any
----@field textureCenter any
----@field zoneData any
----@field zoneDef any
----@field [any] any
+---@field altWorldTexture unknown
+---@field canRollForSearchFocus boolean?
+---@field catDef unknown
+---@field isMover boolean
+---@field itemDef unknown
+---@field onClickContext function
+---@field render3DTexture unknown
+---@field renderWorldIcon unknown
+---@field zoneData unknown
+---@field zoneDef unknown
 ISForageIcon = ISBaseIcon:derive("ISForageIcon")
+ISForageIcon.Type = "ISForageIcon"
 
----@return any
+---@return boolean
 function ISForageIcon:checkIsForageable() end
 
----@return any
 function ISForageIcon:checkIsIdentified() end
 
----@return any
+---@param _x number
+---@param _y number
+---@return boolean?
 function ISForageIcon:doForage(_x, _y, _contextOption, _targetContainer) end
 
----@return any
 function ISForageIcon:doSearchFocusCheck() end
 
----@return any
+---@return boolean?
 function ISForageIcon:getNewCategoryItem(_catDef, _zoneData) end
 
----@return any
 function ISForageIcon:initialise() end
 
----@return any
+---@param _x number
+---@param _y number
 function ISForageIcon:onClickDiscard(_x, _y, _contextOption) end
 
----@return any
+---@return boolean
 function ISForageIcon:onRightMouseDown() end
 
----@return any
+---@return unknown
 function ISForageIcon:onRightMouseUp() end
 
----@return any
 function ISForageIcon:updatePinIconPosition() end
 
+---@param _manager ISSearchManager
+---@param _forageIcon table
 ---@return ISForageIcon
 function ISForageIcon:new(_manager, _forageIcon, _zoneData) end

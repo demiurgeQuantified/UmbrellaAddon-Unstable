@@ -1,33 +1,26 @@
 ---@meta
 
 ---@class ISApplyMakeUp : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field type any
----@field [any] any
+---@field item unknown
+---@field type unknown
 ISApplyMakeUp = ISBaseTimedAction:derive("ISApplyMakeUp")
+ISApplyMakeUp.Type = "ISApplyMakeUp"
 
----@return any
+---@return boolean
 function ISApplyMakeUp:complete() end
 
----@return any
+---@return number
 function ISApplyMakeUp:getDuration() end
 
----@return any
+---@return boolean
 function ISApplyMakeUp:isValid() end
 
----@return any
 function ISApplyMakeUp:perform() end
 
----@return any
 function ISApplyMakeUp:start() end
 
----@return any
 function ISApplyMakeUp:stop() end
 
----@return any
 function ISApplyMakeUp:update() end
 
 ---@return ISApplyMakeUp

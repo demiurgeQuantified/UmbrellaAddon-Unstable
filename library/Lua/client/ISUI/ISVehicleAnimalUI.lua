@@ -1,139 +1,132 @@
 ---@meta
 
 ---@class ISVehicleAnimalUI : ISCollapsableWindowJoypad
----@field addBtn any
----@field animalCount any
----@field avatarBackgroundTexture any
----@field avatarHeight any
----@field avatarWidth any
----@field backgroundColor any
----@field borderColor any
----@field btnBorder any
----@field btnHeight any
----@field btnWidth any
----@field character any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field playerNum any
----@field progressBar any
----@field scrollPanel any
----@field vehicle any
----@field [any] any
+---@field addBtn ISButton
+---@field animalCount unknown
+---@field avatarBackgroundTexture unknown
+---@field avatarHeight number
+---@field avatarWidth number
+---@field btnBorder table
+---@field btnHeight number
+---@field btnWidth number
+---@field character unknown
+---@field playerNum unknown
+---@field progressBar ISProgressBar
+---@field scrollPanel ISPanelJoypad
+---@field vehicle unknown
 ISVehicleAnimalUI = ISCollapsableWindowJoypad:derive("ISVehicleAnimalUI")
-ISVehicleAnimalUI.ui = nil
+ISVehicleAnimalUI.Type = "ISVehicleAnimalUI"
+ISVehicleAnimalUI.ui = nil ---@type ISVehicleAnimalUI?
 
----@return any
 function ISVehicleAnimalUI.onKillAnimalDebug(animal, player) end
 
----@return any
 function ISVehicleAnimalUI:checkCanAddAnimal() end
 
----@return any
 function ISVehicleAnimalUI:close() end
 
----@return any
 function ISVehicleAnimalUI:create(reset) end
 
----@return any
 function ISVehicleAnimalUI:createChildren() end
 
----@return any
 function ISVehicleAnimalUI:initialise() end
 
----@return any
+---@return boolean
 function ISVehicleAnimalUI:isKeyConsumed(key) end
 
----@return any
 function ISVehicleAnimalUI:onAddAnimal() end
 
----@return any
 function ISVehicleAnimalUI:onAnimalInfo(animal) end
 
----@return any
 function ISVehicleAnimalUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISVehicleAnimalUI:onGrabAnimal(animal) end
 
----@return any
 function ISVehicleAnimalUI:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function ISVehicleAnimalUI:onJoypadBeforeDeactivate_Descendant(descendant, joypadData) end
 
----@return any
 function ISVehicleAnimalUI:onJoypadDown_Descendant(descendant, button, joypadData) end
 
----@return any
 function ISVehicleAnimalUI:onKeyRelease(key) end
 
----@return any
 function ISVehicleAnimalUI:onRemoveAnimal(animal) end
 
----@return any
 function ISVehicleAnimalUI:prerender() end
 
----@return any
 function ISVehicleAnimalUI:prerenderScrollPanel() end
 
----@return any
 function ISVehicleAnimalUI:render() end
 
----@return any
+---@param panel ISPanelJoypad
 function ISVehicleAnimalUI:reset(panel) end
 
----@return any
 function ISVehicleAnimalUI:update() end
 
 ---@return ISVehicleAnimalUI
 function ISVehicleAnimalUI:new(vehicle, player) end
 
 ---@class ISAnimalInVehiclePanel : ISPanelJoypad
----@field animalUI any
----@field avatar any
----@field [any] any
+---@field animalUI ISVehicleAnimalUI
+---@field avatar ISVehicleAnimal3DModel
 ISAnimalInVehiclePanel = ISPanelJoypad:derive("ISAnimalInVehiclePanel")
+ISAnimalInVehiclePanel.Type = "ISAnimalInVehiclePanel"
 
----@return any
 function ISAnimalInVehiclePanel:createChildren() end
 
----@return any
 function ISAnimalInVehiclePanel:onJoypadDownInParent(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISAnimalInVehiclePanel:onRightMouseUp(x, y) end
 
----@return any
 function ISAnimalInVehiclePanel:prerender() end
 
+---@param width number
+---@param height number
+---@param animalUI ISVehicleAnimalUI
 ---@return ISAnimalInVehiclePanel
 function ISAnimalInVehiclePanel:new(width, height, animalUI) end
 
 ---@class ISVehicleAnimal3DModel : ISUI3DModel
 ISVehicleAnimal3DModel = ISUI3DModel:derive("ISVehicleAnimal3DModel")
+ISVehicleAnimal3DModel.Type = "ISVehicleAnimal3DModel"
 
----@return any
 function ISVehicleAnimal3DModel:instantiate() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISVehicleAnimal3DModel:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function ISVehicleAnimal3DModel:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function ISVehicleAnimal3DModel:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISVehicleAnimal3DModel:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISVehicleAnimal3DModel:onMouseUpOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISVehicleAnimal3DModel:onRightMouseUp(x, y) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISVehicleAnimal3DModel
 function ISVehicleAnimal3DModel:new(x, y, width, height) end

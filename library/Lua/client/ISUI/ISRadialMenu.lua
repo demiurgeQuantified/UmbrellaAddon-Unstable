@@ -1,61 +1,57 @@
 ---@meta
 
 ---@class ISRadialMenu : ISPanelJoypad
----@field disableJoypadNavigation any
----@field hideWhenButtonReleased any
----@field innerRadius any
----@field javaObject any
----@field outerRadius any
----@field playerNum any
----@field slices any
----@field sounds any
----@field [any] any
+---@field disableJoypadNavigation boolean
+---@field hideWhenButtonReleased unknown
+---@field innerRadius number
+---@field outerRadius number
+---@field playerNum number
+---@field slices table
+---@field sounds table
 ISRadialMenu = ISPanelJoypad:derive("ISRadialMenu")
+ISRadialMenu.Type = "ISRadialMenu"
 
----@return any
 function ISRadialMenu:addSlice(text, texture, command, arg1, arg2, arg3, arg4, arg5, arg6) end
 
----@return any
 function ISRadialMenu:center() end
 
----@return any
 function ISRadialMenu:clear() end
 
----@return any
+---@param sliceIndex number
+---@return unknown?
 function ISRadialMenu:getSliceCommand(sliceIndex) end
 
----@return any
 function ISRadialMenu:instantiate() end
 
----@return any
+---@return boolean
 function ISRadialMenu:isEmpty() end
 
----@return any
 function ISRadialMenu:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISRadialMenu:onJoypadButtonReleased(button, joypadData) end
 
----@return any
 function ISRadialMenu:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISRadialMenu:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISRadialMenu:onMouseDownOutside(x, y) end
 
----@return any
 function ISRadialMenu:setHideWhenButtonReleased(button) end
 
----@return any
 function ISRadialMenu:setSliceText(sliceIndex, text) end
 
----@return any
 function ISRadialMenu:setSliceTexture(sliceIndex, texture) end
 
----@return any
 function ISRadialMenu:undisplay() end
 
+---@param x number
+---@param y number
+---@param innerRadius number
+---@param outerRadius number
+---@param playerNum number
 ---@return ISRadialMenu
 function ISRadialMenu:new(x, y, innerRadius, outerRadius, playerNum) end

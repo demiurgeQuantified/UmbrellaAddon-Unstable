@@ -1,119 +1,117 @@
 ---@meta
 
 ---@class ISFluidContainerPanel : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field borderOuterColor any
----@field container any
----@field containerBox any
----@field containerCopy any
----@field containerName any
----@field customTitle any
----@field detailInnerColor any
----@field doOwnerOutlines any
----@field doTitle any
----@field fluidBar any
----@field funcTarget any
----@field height any
----@field info any
----@field innerHeight any
----@field innerY any
----@field invalidColor any
----@field isInvalid any
----@field isIso any
----@field isItem any
----@field isLeft any
----@field isoHeight any
----@field itemDropBox any
----@field onContainerAdd any
----@field onContainerRemove any
----@field onContainerVerify any
----@field outlineColor any
----@field overrideAddFull any
----@field overrideRemoveFull any
----@field owner any
----@field ownerTexture any
----@field player any
----@field tagColor any
----@field textColor any
----@field textureList any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field borderOuterColor table
+---@field container ISFluidContainer?
+---@field containerBox table
+---@field containerCopy unknown?
+---@field containerName string | boolean
+---@field customTitle string | boolean
+---@field detailInnerColor table
+---@field doOwnerOutlines boolean
+---@field doTitle boolean
+---@field fluidBar ISFluidBar
+---@field funcTarget boolean
+---@field info table
+---@field innerHeight number
+---@field innerY number
+---@field invalidColor table
+---@field isInvalid boolean
+---@field isIso unknown
+---@field isItem boolean
+---@field isLeft boolean
+---@field isoHeight unknown
+---@field itemDropBox ISItemDropBox
+---@field onContainerAdd boolean
+---@field onContainerRemove boolean
+---@field onContainerVerify boolean
+---@field outlineColor table
+---@field overrideAddFull boolean
+---@field overrideRemoveFull boolean
+---@field owner unknown
+---@field ownerTexture unknown
+---@field player unknown
+---@field tagColor table
+---@field textColor table
+---@field textureList table
+---@field title string
 ISFluidContainerPanel = ISPanel:derive("ISFluidContainerPanel")
+ISFluidContainerPanel.Type = "ISFluidContainerPanel"
 
----@return any
 function ISFluidContainerPanel:addItem(_items) end
 
----@return any
 function ISFluidContainerPanel:addItemAux(_item) end
 
----@return any
+---@param x number
+---@param y number
 function ISFluidContainerPanel:clickedDropBox(x, y) end
 
----@return any
 function ISFluidContainerPanel:createChildren() end
 
----@return any
+---@param x number
+---@param y number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISFluidContainerPanel:drawTextureIso(texture, x, y, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
 function ISFluidContainerPanel:drawTextureOutlines(texture, x, y) end
 
----@return any
+---@return unknown?
 function ISFluidContainerPanel:getContainer() end
 
----@return any
+---@return unknown?
 function ISFluidContainerPanel:getContainerOwner() end
 
----@return any
+---@return table?
 function ISFluidContainerPanel:getIsoObjectTextures() end
 
----@return any
+---@return boolean?
 function ISFluidContainerPanel:hasValidContainer() end
 
----@return any
 function ISFluidContainerPanel:initialise() end
 
----@return any
 function ISFluidContainerPanel:onClose() end
 
----@return any
 function ISFluidContainerPanel:prerender() end
 
----@return any
 function ISFluidContainerPanel:removeItem() end
 
----@return any
 function ISFluidContainerPanel:render() end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _r number
+---@param _g number
+---@param _b number
+---@param _a number
 function ISFluidContainerPanel:renderText(_s, _x, _y, _r, _g, _b, _a, _font, _func) end
 
----@return any
+---@param _name string
 function ISFluidContainerPanel:setContainerName(_name) end
 
----@return any
+---@param _b boolean
 function ISFluidContainerPanel:setInvalid(_b) end
 
----@return any
+---@param _b boolean
 function ISFluidContainerPanel:setIsLeft(_b) end
 
----@return any
+---@param _b boolean
 function ISFluidContainerPanel:setPanelLocked(_b) end
 
----@return any
+---@param _title string
 function ISFluidContainerPanel:setTitle(_title) end
 
----@return any
+---@return boolean?
 function ISFluidContainerPanel:verifyItem(_item) end
 
+---@param x number
+---@param y number
+---@param _container unknown?
+---@param _doTitle boolean
+---@param _isLeft boolean
 ---@return ISFluidContainerPanel
 function ISFluidContainerPanel:new(x, y, _player, _container, _doTitle, _isLeft, _isoHeight) end

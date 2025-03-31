@@ -1,38 +1,33 @@
 ---@meta
 
 ---@class ISHutchGrabCorpseAction : ISBaseTimedAction
----@field animal any
----@field corpse any
----@field forceProgressBar any
----@field hutch any
----@field ignoreHandsWounds any
----@field index any
----@field maxTime any
----@field [any] any
+---@field animal unknown
+---@field corpse unknown
+---@field forceProgressBar boolean
+---@field hutch unknown
+---@field ignoreHandsWounds boolean
+---@field index unknown
 ISHutchGrabCorpseAction = ISBaseTimedAction:derive("ISHutchGrabCorpseAction")
+ISHutchGrabCorpseAction.Type = "ISHutchGrabCorpseAction"
 
----@return any
+---@return boolean
 function ISHutchGrabCorpseAction:complete() end
 
----@return any
+---@return number
 function ISHutchGrabCorpseAction:getDuration() end
 
----@return any
+---@return boolean
 function ISHutchGrabCorpseAction:isValid() end
 
----@return any
 function ISHutchGrabCorpseAction:perform() end
 
----@return any
 function ISHutchGrabCorpseAction:start() end
 
----@return any
 function ISHutchGrabCorpseAction:stop() end
 
----@return any
 function ISHutchGrabCorpseAction:update() end
 
----@return any
+---@return unknown
 function ISHutchGrabCorpseAction:waitToStart() end
 
 ---@return ISHutchGrabCorpseAction

@@ -1,61 +1,50 @@
 ---@meta
 
 ---@class WatchWindow : ISCollapsableWindow
----@field backgroundColor any
----@field height any
----@field obj any
----@field objectView any
----@field objlist any
----@field sc any
----@field selected any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field obj LuaList | table
+---@field objectView ISScrollingListBox
+---@field objlist LuaList | table
+---@field sc unknown
+---@field selected number
+---@field title string
 WatchWindow = ISCollapsableWindow:derive("WatchWindow")
+WatchWindow.Type = "WatchWindow"
 
----@return any
 function WatchWindow.onDataRead(data) end
 
----@return any
 function WatchWindow.onDataWrite(data) end
 
----@return any
 function WatchWindow:addWatch(obj) end
 
----@return any
 function WatchWindow:checkFontSize() end
 
----@return any
 function WatchWindow:createChildren() end
 
----@return any
+---@return number
 function WatchWindow:doDrawItem(y, item, alt) end
 
----@return any
 function WatchWindow:fill() end
 
----@return any
 function WatchWindow:initialise() end
 
----@return any
 function WatchWindow:onMouseDoubleClickOpenObject(item) end
 
----@return any
+---@param x number
+---@param y number
 function WatchWindow:onRightMouseDownObject(x, y) end
 
----@return any
+---@return boolean
 function WatchWindow:onSourceMouseWheel(del) end
 
----@return any
 function WatchWindow:prerender() end
 
----@return any
 function WatchWindow:restorePos() end
 
----@return any
 function WatchWindow:storePos() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return WatchWindow
 function WatchWindow:new(x, y, width, height) end

@@ -1,50 +1,48 @@
 ---@meta
 
 ---@class ISFluidDebugWindow : ISCollapsableWindow
----@field fluidCategoriesScreen any
----@field fluidItemsScreen any
----@field fluidMixerScreen any
----@field fluidOverviewScreen any
----@field height any
----@field heightMod any
----@field instance any
----@field minimumHeight any
----@field minimumWidth any
----@field panel any
----@field player any
----@field playerNum any
----@field rh any
----@field searchText any
----@field th any
----@field title any
----@field width any
----@field [any] any
+---@field fluidCategoriesScreen ISFluidCategoriesViewPanel
+---@field fluidItemsScreen ISFluidItemsViewPanel
+---@field fluidMixerScreen ISFluidMixerViewPanel
+---@field fluidOverviewScreen ISFluidOverviewPanel
+---@field height unknown
+---@field heightMod number
+---@field panel ISTabPanel
+---@field player unknown
+---@field playerNum unknown
+---@field rh number
+---@field searchText string
+---@field th unknown
+---@field title string
+---@field width unknown
 ISFluidDebugWindow = ISCollapsableWindow:derive("ISFluidDebugWindow")
-ISFluidDebugWindow.coords = false
+ISFluidDebugWindow.Type = "ISFluidDebugWindow"
+ISFluidDebugWindow.coords = nil ---@type boolean | table
+ISFluidDebugWindow.instance = nil ---@type ISFluidDebugWindow?
 
----@return any
+---@return ISFluidDebugWindow?
 function ISFluidDebugWindow.OnOpenPanel(_player) end
 
----@return any
 function ISFluidDebugWindow:close() end
 
----@return any
 function ISFluidDebugWindow:createChildren() end
 
----@return any
+---@return number
 function ISFluidDebugWindow:incY(_y, _obj, _margin) end
 
----@return any
 function ISFluidDebugWindow:initialise() end
 
----@return any
+---@param _width number
+---@param _height number
 function ISFluidDebugWindow:onResize(_width, _height) end
 
----@return any
 function ISFluidDebugWindow:prerender() end
 
----@return any
 function ISFluidDebugWindow:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFluidDebugWindow
 function ISFluidDebugWindow:new(x, y, width, height, player) end

@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISFixAction : ISBaseTimedAction
----@field caloriesModifier any
----@field fixer any
----@field fixerNum any
----@field fixing any
----@field fixingNum any
----@field item any
----@field jobType any
----@field maxTime any
----@field [any] any
+---@field fixer unknown
+---@field fixerNum number
+---@field fixing unknown
+---@field fixingNum number
+---@field item unknown
+---@field jobType string
 ISFixAction = ISBaseTimedAction:derive("ISFixAction")
+ISFixAction.Type = "ISFixAction"
 
----@return any
+---@return boolean
 function ISFixAction:complete() end
 
----@return any
+---@return number
 function ISFixAction:getDuration() end
 
----@return any
+---@return unknown
 function ISFixAction:isValid() end
 
----@return any
 function ISFixAction:perform() end
 
----@return any
 function ISFixAction:start() end
 
----@return any
 function ISFixAction:stop() end
 
----@return any
 function ISFixAction:update() end
 
+---@param fixingNum number
+---@param fixerNum number
 ---@return ISFixAction
 function ISFixAction:new(character, item, fixingNum, fixerNum) end

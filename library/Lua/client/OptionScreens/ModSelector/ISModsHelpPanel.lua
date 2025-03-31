@@ -1,32 +1,31 @@
 ---@meta
 
 ---@class ISModsHelpPanel : ISPanelJoypad
----@field ok any
----@field richText any
----@field texture any
----@field [any] any
+---@field ok ISButton
+---@field richText ISRichTextPanel
+---@field texture unknown
 ISModsHelpPanel = ISPanelJoypad:derive("ISModsHelpPanel")
+ISModsHelpPanel.Type = "ISModsHelpPanel"
 
----@return any
 function ISModsHelpPanel:createChildren() end
 
----@return any
 function ISModsHelpPanel:doRightJoystickScrolling() end
 
----@return any
 function ISModsHelpPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISModsHelpPanel:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISModsHelpPanel:onOK(button, x, y) end
 
----@return any
 function ISModsHelpPanel:prerender() end
 
----@return any
 function ISModsHelpPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISModsHelpPanel
 function ISModsHelpPanel:new(x, y, width, height) end

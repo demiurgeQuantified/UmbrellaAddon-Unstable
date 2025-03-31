@@ -1,45 +1,43 @@
 ---@meta
 
 ---@class ISPlayerStatsChooseTraitUI : ISPanel
----@field backgroundColor any
----@field badTraits any
----@field borderColor any
----@field cancel any
----@field chr any
----@field combo any
----@field comboList any
----@field goodTrait any
----@field goodTraits any
----@field moveWithMouse any
----@field ok any
----@field onclick any
----@field target any
----@field traitsSelector any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field badTraits table
+---@field cancel ISButton
+---@field chr unknown
+---@field combo ISComboBox
+---@field comboList table
+---@field goodTrait table
+---@field goodTraits table
+---@field ok ISButton
+---@field onclick unknown
+---@field target unknown?
+---@field traitsSelector ISTickBox
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISPlayerStatsChooseTraitUI = ISPanel:derive("ISPlayerStatsChooseTraitUI")
+ISPlayerStatsChooseTraitUI.Type = "ISPlayerStatsChooseTraitUI"
 
----@return any
 function ISPlayerStatsChooseTraitUI:create() end
 
----@return any
 function ISPlayerStatsChooseTraitUI:initialise() end
 
----@return any
 function ISPlayerStatsChooseTraitUI:onChangeList() end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsChooseTraitUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISPlayerStatsChooseTraitUI:populateComboList() end
 
----@return any
 function ISPlayerStatsChooseTraitUI:render() end
 
----@return any
+---@param visible boolean
 function ISPlayerStatsChooseTraitUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target unknown?
 ---@return ISPlayerStatsChooseTraitUI
 function ISPlayerStatsChooseTraitUI:new(x, y, width, height, target, onclick, player) end

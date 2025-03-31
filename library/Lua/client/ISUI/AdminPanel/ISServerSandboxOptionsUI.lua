@@ -1,64 +1,49 @@
 ---@meta
 
 ---@class ISServerSandboxOptionsUI : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field applyButton any
----@field backgroundColor any
----@field borderColor any
----@field closeButton any
----@field controls any
----@field currentPanel any
----@field customui any
----@field groupBox any
----@field height any
----@field listbox any
----@field moveWithMouse any
----@field options any
----@field searchEntry any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field applyButton ISButton
+---@field closeButton ISButton
+---@field controls table
+---@field currentPanel unknown?
+---@field customui table
+---@field groupBox table
+---@field listbox unknown
+---@field options unknown
+---@field searchEntry ISTextEntryBox
 ISServerSandboxOptionsUI = ISPanelJoypad:derive("ISServerSandboxOptionsUI")
+ISServerSandboxOptionsUI.Type = "ISServerSandboxOptionsUI"
+ISServerSandboxOptionsUI.instance = nil ---@type ISServerSandboxOptionsUI?
 
----@return any
 function ISServerSandboxOptionsUI.searchPrerender(self) end
 
----@return any
 function ISServerSandboxOptionsUI:createChildren() end
 
----@return any
+---@return unknown
 function ISServerSandboxOptionsUI:createPanel(page) end
 
----@return any
 function ISServerSandboxOptionsUI:destroy() end
 
----@return any
 function ISServerSandboxOptionsUI:doSearch() end
 
----@return any
 function ISServerSandboxOptionsUI:onButtonApply() end
 
----@return any
 function ISServerSandboxOptionsUI:onButtonClose() end
 
----@return any
+---@param optionName string
 function ISServerSandboxOptionsUI:onComboBoxSelected(combo, optionName) end
 
----@return any
 function ISServerSandboxOptionsUI:onMouseDownListbox(item) end
 
----@return any
+---@param optionName string
 function ISServerSandboxOptionsUI:onTickBoxSelected(_, value, optionName) end
 
----@return any
 function ISServerSandboxOptionsUI:settingsFromUI(options) end
 
----@return any
 function ISServerSandboxOptionsUI:settingsToUI(options) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISServerSandboxOptionsUI
 function ISServerSandboxOptionsUI:new(x, y, width, height) end

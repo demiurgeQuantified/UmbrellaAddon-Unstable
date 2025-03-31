@@ -1,34 +1,31 @@
 ---@meta
 
 ---@class ISTestComponentPanel : ISBaseComponentPanel
----@field margin any
----@field title any
----@field [any] any
+---@field margin number
+---@field title unknown?
 ISTestComponentPanel = ISBaseComponentPanel:derive("ISTestComponentPanel")
+ISTestComponentPanel.Type = "ISTestComponentPanel"
 
----@return any
+---@return boolean?
 function ISTestComponentPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 
----@return any
 function ISTestComponentPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISTestComponentPanel:createChildren() end
 
----@return any
 function ISTestComponentPanel:initialise() end
 
----@return any
 function ISTestComponentPanel:onResize() end
 
----@return any
 function ISTestComponentPanel:prerender() end
 
----@return any
 function ISTestComponentPanel:render() end
 
----@return any
 function ISTestComponentPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISTestComponentPanel
 function ISTestComponentPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

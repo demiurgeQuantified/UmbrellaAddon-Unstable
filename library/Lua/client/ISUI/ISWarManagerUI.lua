@@ -1,46 +1,39 @@
 ---@meta
 
 ---@class ISWarManagerUI : ISPanel
----@field acceptBtn any
----@field backgroundColor any
----@field borderColor any
----@field cancelBtn any
----@field closeBtn any
----@field datas any
----@field endBtn any
----@field height any
----@field itemheight any
----@field moveWithMouse any
----@field player any
----@field refuseBtn any
----@field scrollBarSpacing any
----@field width any
----@field [any] any
+---@field acceptBtn ISButton
+---@field cancelBtn ISButton
+---@field closeBtn ISButton
+---@field datas ISScrollingListBox
+---@field endBtn ISButton
+---@field itemheight number
+---@field player unknown
+---@field refuseBtn ISButton
+---@field scrollBarSpacing number
 ISWarManagerUI = ISPanel:derive("ISWarManagerUI")
+ISWarManagerUI.Type = "ISWarManagerUI"
+ISWarManagerUI.instance = nil ---@type ISWarManagerUI?
 
----@return any
 function ISWarManagerUI.OnWarUpdate() end
 
----@return any
 function ISWarManagerUI:closeModal() end
 
----@return any
+---@return number
 function ISWarManagerUI:drawDatas(y, item, alt) end
 
----@return any
 function ISWarManagerUI:initialise() end
 
----@return any
 function ISWarManagerUI:onClick(button) end
 
----@return any
 function ISWarManagerUI:onSelectWar(_item) end
 
----@return any
 function ISWarManagerUI:populateList() end
 
----@return any
 function ISWarManagerUI:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWarManagerUI
 function ISWarManagerUI:new(x, y, width, height, player) end

@@ -1,97 +1,87 @@
 ---@meta
 
 ---@class ISFluidBar : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field bubblesAlpha any
----@field bubblesTex any
----@field container any
----@field containerAdd any
----@field containerMixed any
----@field detailInnerColor any
----@field differenceAlpha any
----@field doToolTip any
----@field drawMeasures any
----@field fluidAddColor any
----@field fluidColor any
----@field gradientAlpha any
----@field gradientTex any
----@field height any
----@field innerH any
----@field innerW any
----@field innerX any
----@field innerY any
----@field player any
----@field ratioNew any
----@field ratioOrig any
----@field resource any
----@field showMixed any
----@field toolTip any
----@field triangleWidth any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field bubblesAlpha number
+---@field bubblesTex unknown
+---@field container unknown?
+---@field containerAdd unknown?
+---@field containerMixed unknown?
+---@field detailInnerColor table
+---@field differenceAlpha number
+---@field doToolTip boolean
+---@field drawMeasures boolean
+---@field fluidAddColor table
+---@field fluidColor table
+---@field gradientAlpha number
+---@field gradientTex unknown
+---@field innerH number
+---@field innerW number
+---@field innerX number
+---@field innerY number
+---@field player unknown
+---@field ratioNew number
+---@field ratioOrig number
+---@field resource unknown?
+---@field showMixed boolean?
+---@field toolTip ISToolTipInv?
+---@field triangleWidth number
 ISFluidBar = ISPanel:derive("ISFluidBar")
+ISFluidBar.Type = "ISFluidBar"
 
----@return any
 function ISFluidBar:activateToolTip() end
 
----@return any
 function ISFluidBar:createChildren() end
 
----@return any
 function ISFluidBar:deactivateToolTip() end
 
----@return any
 function ISFluidBar:drawAmountLine(_y) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
 function ISFluidBar:drawBubbles(_x, _y, _w, _h, _alpha) end
 
----@return any
 function ISFluidBar:drawTriangle(_size, _sx, _y, _col, _xmod) end
 
----@return any
+---@param _ratio number
+---@return number
+---@return unknown
 function ISFluidBar:getRatioY(_ratio) end
 
----@return any
 function ISFluidBar:initialise() end
 
----@return any
+---@param dx number
+---@param dy number
 function ISFluidBar:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISFluidBar:onMouseMoveOutside(dx, dy) end
 
----@return any
 function ISFluidBar:prerender() end
 
----@return any
-function ISFluidBar:prerender() end
-
----@return any
 function ISFluidBar:render() end
 
----@return any
 function ISFluidBar:resetRatioNew() end
 
----@return any
+---@param _fluidContainer unknown?
 function ISFluidBar:setContainer(_fluidContainer) end
 
----@return any
+---@param _fluidContainer unknown?
 function ISFluidBar:setContainerAdd(_fluidContainer) end
 
----@return any
+---@param _fluidContainer unknown?
+---@param _showMixed boolean?
 function ISFluidBar:setContainerMixed(_fluidContainer, _showMixed) end
 
----@return any
+---@param _ratio number
 function ISFluidBar:setRatioNew(_ratio) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param _resource unknown?
 ---@return ISFluidBar
 function ISFluidBar:new(x, y, width, height, _player, _resource) end

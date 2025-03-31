@@ -1,43 +1,36 @@
 ---@meta
 
 ---@class ISFactionAddPlayerUI : ISPanel
----@field addPlayer any
----@field backgroundColor any
----@field borderColor any
----@field faction any
----@field height any
----@field isOwner any
----@field moveWithMouse any
----@field no any
----@field player any
----@field playerList any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field addPlayer ISButton
+---@field faction unknown
+---@field isOwner unknown
+---@field no ISButton
+---@field player unknown
+---@field playerList ISScrollingListBox
+---@field scoreboard table
 ISFactionAddPlayerUI = ISPanel:derive("ISFactionAddPlayerUI")
+ISFactionAddPlayerUI.Type = "ISFactionAddPlayerUI"
 ISFactionAddPlayerUI.messages = {}
+ISFactionAddPlayerUI.instance = nil ---@type ISFactionAddPlayerUI?
 
----@return any
 function ISFactionAddPlayerUI.OnMiniScoreboardUpdate() end
 
----@return any
 function ISFactionAddPlayerUI.OnScoreboardUpdate(usernames, displayNames, steamIDs) end
 
----@return any
+---@return number
 function ISFactionAddPlayerUI:drawPlayers(y, item, alt) end
 
----@return any
 function ISFactionAddPlayerUI:initialise() end
 
----@return any
 function ISFactionAddPlayerUI:onClick(button) end
 
----@return any
 function ISFactionAddPlayerUI:populateList() end
 
----@return any
 function ISFactionAddPlayerUI:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFactionAddPlayerUI
 function ISFactionAddPlayerUI:new(x, y, width, height, faction, player) end

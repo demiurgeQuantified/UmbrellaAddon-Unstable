@@ -1,77 +1,68 @@
 ---@meta
 
 ---@class ISCraftInventoryPanel : ISPanel
----@field autoFillContents any
----@field background any
----@field colBad any
----@field colGood any
----@field colYellow any
----@field inputScriptFilter any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field isDirty any
----@field itemListBox any
----@field logic any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field player any
----@field selectedItem any
----@field unavailablesExpanded any
----@field [any] any
+---@field autoFillContents boolean
+---@field colBad table
+---@field colGood table
+---@field colYellow table
+---@field inputScriptFilter unknown?
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field isDirty boolean
+---@field itemListBox unknown?
+---@field logic unknown
+---@field margin number
+---@field player unknown
+---@field selectedItem unknown
+---@field unavailablesExpanded boolean
 ISCraftInventoryPanel = ISPanel:derive("ISCraftInventoryPanel")
+ISCraftInventoryPanel.Type = "ISCraftInventoryPanel"
 
----@return any
 function ISCraftInventoryPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISCraftInventoryPanel:createChildren() end
 
----@return any
+---@return table
 function ISCraftInventoryPanel:createListHeader(_text, hasExpandArrow) end
 
----@return any
+---@param _isUsedItems boolean
+---@return table
 function ISCraftInventoryPanel:createListItemEntry(_node, _inventoryItem, _index, _isUsedItems) end
 
----@return any
+---@param _isUsedItems boolean
+---@return table
 function ISCraftInventoryPanel:createListItemNode(_node, _isUsedItems) end
 
----@return any
+---@return table
 function ISCraftInventoryPanel:createUnavailableListItemEntry(_item, _index) end
 
----@return any
+---@return number
 function ISCraftInventoryPanel:drawListItem(y, item, alt) end
 
----@return any
 function ISCraftInventoryPanel:initialise() end
 
----@return any
 function ISCraftInventoryPanel:onListSelected(_item) end
 
----@return any
 function ISCraftInventoryPanel:onRebuildItemNodes(_inputItems) end
 
----@return any
 function ISCraftInventoryPanel:onResize() end
 
----@return any
 function ISCraftInventoryPanel:populate() end
 
----@return any
 function ISCraftInventoryPanel:prerender() end
 
----@return any
 function ISCraftInventoryPanel:render() end
 
----@return any
 function ISCraftInventoryPanel:selectFirst() end
 
----@return any
 function ISCraftInventoryPanel:update() end
 
----@return any
 function ISCraftInventoryPanel:updateContainers(_containers) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCraftInventoryPanel
 function ISCraftInventoryPanel:new(x, y, width, height, player, logic) end

@@ -1,18 +1,16 @@
 ---@meta
 
 ---@class ISAnimalPickMateCursor : ISPickCharacterCursor
----@field dragNilAfterPlace any
----@field femaleAnimal any
----@field [any] any
+---@field femaleAnimal unknown
 ISAnimalPickMateCursor = ISPickCharacterCursor:derive("ISAnimalPickMateCursor")
+ISAnimalPickMateCursor.Type = "ISAnimalPickMateCursor"
 
----@return any
+---@return string?
 function ISAnimalPickMateCursor:getAPrompt() end
 
----@return any
+---@return boolean?
 function ISAnimalPickMateCursor:isValidCharacter(chr) end
 
----@return any
 function ISAnimalPickMateCursor:onPickCharacter(chr) end
 
 ---@return ISAnimalPickMateCursor

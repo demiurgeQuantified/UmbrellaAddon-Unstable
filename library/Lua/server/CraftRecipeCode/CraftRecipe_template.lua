@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class CraftRecipeCode
-CraftRecipeCode = CraftRecipeCode or {}
+CraftRecipeCode = {}
 CraftRecipeCode.generic = {}

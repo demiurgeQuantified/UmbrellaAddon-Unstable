@@ -1,113 +1,100 @@
 ---@meta
 
 ---@class ISVolumeBar : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field dimChange any
----@field dragInside any
----@field elBackgroundColor any
----@field elBorderColor any
----@field elBorderHighlightColor any
----@field elHighlightColor any
----@field elHoverColor any
----@field enableControls any
----@field fontheight any
----@field greyCol any
----@field height any
----@field hoverVolume any
----@field innerMargin any
----@field joyMeter any
----@field mouseEnabled any
----@field onVolumeChange any
----@field onVolumeChangeTarget any
----@field posChange any
----@field volume any
----@field volumeSteps any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field dimChange boolean
+---@field dragInside boolean
+---@field elBackgroundColor table
+---@field elBorderColor table
+---@field elBorderHighlightColor table
+---@field elHighlightColor table
+---@field elHoverColor table
+---@field enableControls boolean
+---@field fontheight number
+---@field greyCol table
+---@field hoverVolume number
+---@field innerMargin number
+---@field joyMeter number
+---@field mouseEnabled boolean
+---@field onVolumeChange unknown
+---@field onVolumeChangeTarget RWMVolume
+---@field posChange boolean
+---@field volume number
+---@field volumeSteps number
 ISVolumeBar = ISPanel:derive("ISVolumeBar")
+ISVolumeBar.Type = "ISVolumeBar"
 
----@return any
 function ISVolumeBar:createChildren() end
 
----@return any
+---@return number
 function ISVolumeBar:getHoverVolume() end
 
----@return any
+---@return number
 function ISVolumeBar:getVolume() end
 
----@return any
+---@return number
 function ISVolumeBar:getVolumeFromXPosition(_x) end
 
----@return any
+---@return number
 function ISVolumeBar:getVolumeSteps() end
 
----@return any
 function ISVolumeBar:initialise() end
 
----@return any
+---@return boolean
 function ISVolumeBar:isDragging() end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeBar:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeBar:onMouseMove(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeBar:onMouseMoveOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeBar:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeBar:onMouseUpOutside(x, y) end
 
----@return any
 function ISVolumeBar:prerender() end
 
----@return any
 function ISVolumeBar:render() end
 
----@return any
 function ISVolumeBar:resetHoverVolume() end
 
----@return any
+---@param b boolean
 function ISVolumeBar:setEnableControls(b) end
 
----@return any
 function ISVolumeBar:setHeight(h) end
 
----@return any
 function ISVolumeBar:setHoverVolume(_vol) end
 
----@return any
 function ISVolumeBar:setVolume(vol) end
 
----@return any
+---@param _up boolean
 function ISVolumeBar:setVolumeJoypad(_up) end
 
----@return any
 function ISVolumeBar:setVolumeSteps(vol) end
 
----@return any
+---@param w number
 function ISVolumeBar:setWidth(w) end
 
----@return any
 function ISVolumeBar:setX(x) end
 
----@return any
 function ISVolumeBar:setY(y) end
 
----@return any
 function ISVolumeBar:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param onVolumeChangeTarget RWMVolume
 ---@return ISVolumeBar
 function ISVolumeBar:new(x, y, width, height, onVolumeChange, onVolumeChangeTarget) end

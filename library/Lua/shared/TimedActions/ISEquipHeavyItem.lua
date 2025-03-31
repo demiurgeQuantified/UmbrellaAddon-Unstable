@@ -1,36 +1,31 @@
 ---@meta
 
 ---@class ISEquipHeavyItem : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field [any] any
+---@field item unknown
 ISEquipHeavyItem = ISBaseTimedAction:derive("ISEquipHeavyItem")
+ISEquipHeavyItem.Type = "ISEquipHeavyItem"
 
----@return any
+---@return boolean
 function ISEquipHeavyItem:complete() end
 
----@return any
+---@return number
 function ISEquipHeavyItem:getDuration() end
 
----@return any
+---@return boolean
 function ISEquipHeavyItem:isAlreadyTransferred(item) end
 
----@return any
+---@return boolean
 function ISEquipHeavyItem:isValid() end
 
----@return any
 function ISEquipHeavyItem:perform() end
 
----@return any
 function ISEquipHeavyItem:start() end
 
----@return any
 function ISEquipHeavyItem:stop() end
 
----@return any
 function ISEquipHeavyItem:update() end
 
----@return any
+---@return unknown
 function ISEquipHeavyItem:waitToStart() end
 
 ---@return ISEquipHeavyItem

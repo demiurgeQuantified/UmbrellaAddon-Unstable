@@ -1,58 +1,53 @@
 ---@meta
 
 ---@class ISFluidCategoriesViewPanel : ISPanel
----@field entryBox any
----@field fluidList any
----@field list any
----@field listLabel any
----@field player any
----@field playerNum any
----@field searchText any
----@field selectedCategory any
----@field [any] any
+---@field entryBox ISTextEntryBox
+---@field fluidList ISScrollingListBox
+---@field list ISScrollingListBox
+---@field listLabel ISLabel
+---@field player unknown
+---@field playerNum unknown
+---@field searchText string
+---@field selectedCategory unknown
 ISFluidCategoriesViewPanel = ISPanel:derive("ISFluidCategoriesViewPanel")
+ISFluidCategoriesViewPanel.Type = "ISFluidCategoriesViewPanel"
 
----@return any
 function ISFluidCategoriesViewPanel.onTextChange(box) end
 
----@return any
 function ISFluidCategoriesViewPanel:close() end
 
----@return any
 function ISFluidCategoriesViewPanel:createChildren() end
 
----@return any
+---@return number
 function ISFluidCategoriesViewPanel:drawCategoryListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISFluidCategoriesViewPanel:drawFluidListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISFluidCategoriesViewPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISFluidCategoriesViewPanel:initialise() end
 
----@return any
 function ISFluidCategoriesViewPanel:onButtonClick(_button) end
 
----@return any
 function ISFluidCategoriesViewPanel:onCategorySelected(_item) end
 
----@return any
+---@param _width number
+---@param _height number
 function ISFluidCategoriesViewPanel:onResize(_width, _height) end
 
----@return any
 function ISFluidCategoriesViewPanel:populate() end
 
----@return any
 function ISFluidCategoriesViewPanel:populateFluids() end
 
----@return any
 function ISFluidCategoriesViewPanel:prerender() end
 
----@return any
 function ISFluidCategoriesViewPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFluidCategoriesViewPanel
 function ISFluidCategoriesViewPanel:new(x, y, width, height, player) end

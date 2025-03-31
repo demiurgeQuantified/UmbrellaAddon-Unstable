@@ -1,74 +1,61 @@
 ---@meta
 
 ---@class ISDigitalCode : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field button1m any
----@field button1p any
----@field button2m any
----@field button2p any
----@field button3m any
----@field button3p any
----@field character any
----@field height any
----@field joypadButtons any
----@field joypadIndex any
----@field joypadIndexY any
----@field name any
----@field new any
----@field number1 any
----@field number2 any
----@field number3 any
----@field ok any
----@field onclick any
----@field padlock any
----@field player any
----@field playerX any
----@field playerY any
----@field target any
----@field thumpable any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field button1m ISButton
+---@field button1p ISButton
+---@field button2m ISButton
+---@field button2p ISButton
+---@field button3m ISButton
+---@field button3p ISButton
+---@field character unknown?
+---@field joypadButtons unknown
+---@field name unknown?
+---@field new boolean
+---@field number1 ISTextEntryBox
+---@field number2 ISTextEntryBox
+---@field number3 ISTextEntryBox
+---@field ok ISButton
+---@field onclick unknown
+---@field padlock unknown?
+---@field player unknown
+---@field playerX unknown
+---@field playerY unknown
+---@field target unknown?
+---@field thumpable unknown
 ISDigitalCode = ISPanelJoypad:derive("ISDigitalCode")
+ISDigitalCode.Type = "ISDigitalCode"
 
----@return any
+---@param number number
 function ISDigitalCode:decrement(number) end
 
----@return any
 function ISDigitalCode:destroy() end
 
----@return any
+---@return number
 function ISDigitalCode:getCode() end
 
----@return any
+---@param number number
 function ISDigitalCode:increment(number) end
 
----@return any
 function ISDigitalCode:initialise() end
 
----@return any
 function ISDigitalCode:onClick(button) end
 
----@return any
 function ISDigitalCode:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISDigitalCode:onJoypadDown(button) end
 
----@return any
 function ISDigitalCode:prerender() end
 
----@return any
 function ISDigitalCode:render() end
 
----@return any
 function ISDigitalCode:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target unknown?
+---@param padlock unknown?
+---@param new boolean
 ---@return ISDigitalCode
 function ISDigitalCode:new(x, y, width, height, target, onclick, player, padlock, thumpable, new) end

@@ -1,26 +1,20 @@
 ---@meta
 
 ---@class ISGetHutchInfo : ISBaseTimedAction
----@field hutch any
----@field maxTime any
----@field playerNum any
----@field stopOnAim any
----@field [any] any
+---@field hutch unknown
+---@field playerNum unknown
 ISGetHutchInfo = ISBaseTimedAction:derive("ISGetHutchInfo")
+ISGetHutchInfo.Type = "ISGetHutchInfo"
 
----@return any
+---@return boolean
 function ISGetHutchInfo:isValid() end
 
----@return any
 function ISGetHutchInfo:perform() end
 
----@return any
 function ISGetHutchInfo:start() end
 
----@return any
 function ISGetHutchInfo:stop() end
 
----@return any
 function ISGetHutchInfo:update() end
 
 ---@return ISGetHutchInfo

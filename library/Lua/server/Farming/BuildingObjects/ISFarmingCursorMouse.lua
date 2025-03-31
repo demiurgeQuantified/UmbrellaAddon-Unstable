@@ -1,34 +1,36 @@
 ---@meta
 
 ---@class ISFarmingCursorMouse : ISBuildingObject
----@field character any
----@field isValid any
----@field noNeedHammer any
----@field onSquareSelected any
----@field player any
----@field skipBuildAction any
----@field sq any
----@field tooltip any
----@field [any] any
+---@field character unknown
+---@field isValid boolean
+---@field noNeedHammer boolean
+---@field onSquareSelected unknown
+---@field player unknown
+---@field skipBuildAction boolean
+---@field sq unknown
+---@field tooltip unknown?
 ISFarmingCursorMouse = ISBuildingObject:derive("ISFarmingCursorMouse")
+ISFarmingCursorMouse.Type = "ISFarmingCursorMouse"
 
----@return any
+---@return ISFarmingCursorMouse | boolean
 function ISFarmingCursorMouse.IsVisible() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISFarmingCursorMouse:create(x, y, z, north, sprite) end
 
----@return any
 function ISFarmingCursorMouse:deactivate() end
 
----@return any
 function ISFarmingCursorMouse:hideTooltip() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISFarmingCursorMouse:render(x, y, z, square) end
 
----@return any
 function ISFarmingCursorMouse:renderTooltip() end
 
+---@param isValid boolean
 ---@return ISFarmingCursorMouse
 function ISFarmingCursorMouse:new(character, onSquareSelected, isValid) end

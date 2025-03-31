@@ -1,51 +1,44 @@
 ---@meta
 
 ---@class ISWidgetCraftDebug : ISPanel
----@field autoFillContents any
----@field background any
----@field buttonDebug any
----@field callbackTarget any
----@field component any
----@field entity any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field originalButtonHeight any
----@field originalButtonWidth any
----@field player any
----@field styleButton any
----@field [any] any
+---@field autoFillContents boolean
+---@field buttonDebug unknown?
+---@field callbackTarget unknown
+---@field component unknown
+---@field entity unknown
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field margin number
+---@field originalButtonHeight unknown
+---@field originalButtonWidth unknown
+---@field player unknown
+---@field styleButton unknown
 ISWidgetCraftDebug = ISPanel:derive("ISWidgetCraftDebug")
+ISWidgetCraftDebug.Type = "ISWidgetCraftDebug"
 
----@return any
 function ISWidgetCraftDebug:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetCraftDebug:createChildren() end
 
----@return any
 function ISWidgetCraftDebug:initialise() end
 
----@return any
 function ISWidgetCraftDebug:onButtonClick(_button) end
 
----@return any
 function ISWidgetCraftDebug:onResize() end
 
----@return any
+---@return boolean
 function ISWidgetCraftDebug:onStartDebug() end
 
----@return any
 function ISWidgetCraftDebug:prerender() end
 
----@return any
 function ISWidgetCraftDebug:render() end
 
----@return any
 function ISWidgetCraftDebug:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetCraftDebug
 function ISWidgetCraftDebug:new(x, y, width, height, player, entity, component, callbackTarget, _styleButton) end

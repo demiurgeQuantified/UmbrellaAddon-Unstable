@@ -1,61 +1,78 @@
 ---@meta
 
 ---@class ISScytheGrassCursor : ISBuildingObject
----@field character any
----@field maxRadius any
----@field noNeedHammer any
----@field player any
----@field radius any
----@field renderFloorHelper any
----@field scythe any
----@field skipBuildAction any
----@field skipWalk any
----@field [any] any
+---@field character unknown
+---@field maxRadius number
+---@field noNeedHammer boolean
+---@field player unknown
+---@field radius number
+---@field renderFloorHelper boolean
+---@field scythe unknown
+---@field skipBuildAction boolean
+---@field skipWalk boolean
 ISScytheGrassCursor = ISBuildingObject:derive("ISScytheGrassCursor")
+ISScytheGrassCursor.Type = "ISScytheGrassCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISScytheGrassCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string
 function ISScytheGrassCursor:getAPrompt() end
 
----@return any
+---@return unknown?
 function ISScytheGrassCursor:getClosestSquare(squares) end
 
----@return any
+---@return table
 function ISScytheGrassCursor:getGrassObject(square) end
 
----@return any
+---@return unknown?
 function ISScytheGrassCursor:getLBPrompt() end
 
----@return any
+---@return unknown?
 function ISScytheGrassCursor:getRBPrompt() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return table
 function ISScytheGrassCursor:getSquares(x, y, z) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return number
+---@return number
+---@return number
 function ISScytheGrassCursor:getTopLeftOfSquares(x, y, z) end
 
----@return any
+---@return ISTimedActionQueue | table
 function ISScytheGrassCursor:isRunningAction() end
 
----@return any
+---@return boolean
 function ISScytheGrassCursor:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISScytheGrassCursor:isValidArea(x, y, z) end
 
----@return any
+---@return unknown?
 function ISScytheGrassCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISScytheGrassCursor:render(x, y, z, square) end
 
----@return any
 function ISScytheGrassCursor:rotateKey(key) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISScytheGrassCursor:walkTo(x, y, z) end
 
 ---@return ISScytheGrassCursor

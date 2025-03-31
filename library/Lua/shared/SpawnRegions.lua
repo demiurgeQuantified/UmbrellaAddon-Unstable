@@ -3,17 +3,21 @@
 ---@class SpawnRegionMgr
 SpawnRegionMgr = {}
 
----@return any
+---@return table?
 function SpawnRegionMgr.getSpawnRegions() end
 
----@return any
+---@return table?
 function SpawnRegionMgr.getSpawnRegionsAux() end
 
----@return any
+---@param filename string
+---@param server boolean
+---@return unknown?
 function SpawnRegionMgr.loadSpawnPointsFile(filename, server) end
 
----@return any
+---@return table
 function SpawnRegionMgr.loadSpawnRegions(regions) end
 
----@return any
+---@param filename string
+---@param server boolean?
+---@return table?
 function SpawnRegionMgr.loadSpawnRegionsFile(filename, server) end

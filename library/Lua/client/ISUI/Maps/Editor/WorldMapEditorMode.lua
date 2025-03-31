@@ -1,45 +1,48 @@
 ---@meta
 
 ---@class WorldMapEditorMode : ISPanel
----@field editor any
----@field mapAPI any
----@field mapUI any
----@field styleAPI any
----@field symbolsAPI any
----@field [any] any
+---@field editor unknown
+---@field mapAPI unknown
+---@field mapUI unknown
+---@field styleAPI unknown
+---@field symbolsAPI unknown
 WorldMapEditorMode = ISPanel:derive("WorldMapEditorMode")
+WorldMapEditorMode.Type = "WorldMapEditorMode"
 
----@return any
 function WorldMapEditorMode:display() end
 
----@return any
+---@return string
 function WorldMapEditorMode:generateLuaScript() end
 
----@return any
+---@return boolean
 function WorldMapEditorMode:isKeyConsumed(key) end
 
----@return any
 function WorldMapEditorMode:loadSettingsFromMap() end
 
----@return any
+---@return boolean
 function WorldMapEditorMode:onKeyPress(key) end
 
----@return any
+---@return boolean
 function WorldMapEditorMode:onKeyRelease(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapEditorMode:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode:onMouseUp(x, y) end
 
----@return any
+---@return boolean
 function WorldMapEditorMode:onMouseWheel(del) end
 
----@return any
 function WorldMapEditorMode:undisplay() end
 
 ---@return WorldMapEditorMode

@@ -1,37 +1,31 @@
 ---@meta
 
 ---@class ISAddBaitAction : ISBaseTimedAction
----@field bait any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field trap any
----@field [any] any
+---@field bait unknown
+---@field trap unknown
 ISAddBaitAction = ISBaseTimedAction:derive("ISAddBaitAction")
+ISAddBaitAction.Type = "ISAddBaitAction"
 
----@return any
+---@return boolean
 function ISAddBaitAction:complete() end
 
----@return any
+---@return number
 function ISAddBaitAction:getDuration() end
 
----@return any
+---@return boolean
 function ISAddBaitAction:isValid() end
 
----@return any
 function ISAddBaitAction:perform() end
 
----@return any
 function ISAddBaitAction:start() end
 
----@return any
 function ISAddBaitAction:stop() end
 
----@return any
 function ISAddBaitAction:update() end
 
----@return any
+---@return unknown
 function ISAddBaitAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISAddBaitAction
 function ISAddBaitAction:new(character, bait, trap) end

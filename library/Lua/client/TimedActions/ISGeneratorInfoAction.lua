@@ -1,16 +1,14 @@
 ---@meta
 
 ---@class ISGeneratorInfoAction : ISBaseTimedAction
----@field maxTime any
----@field object any
----@field playerNum any
----@field [any] any
+---@field object unknown
+---@field playerNum unknown
 ISGeneratorInfoAction = ISBaseTimedAction:derive("ISGeneratorInfoAction")
+ISGeneratorInfoAction.Type = "ISGeneratorInfoAction"
 
----@return any
+---@return boolean
 function ISGeneratorInfoAction:isValid() end
 
----@return any
 function ISGeneratorInfoAction:perform() end
 
 ---@return ISGeneratorInfoAction

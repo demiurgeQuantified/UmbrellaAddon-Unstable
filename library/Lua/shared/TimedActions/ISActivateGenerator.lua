@@ -1,35 +1,32 @@
 ---@meta
 
 ---@class ISActivateGenerator : ISBaseTimedAction
----@field activate any
----@field generator any
----@field maxTime any
----@field [any] any
+---@field activate boolean
+---@field generator unknown
 ISActivateGenerator = ISBaseTimedAction:derive("ISActivateGenerator")
+ISActivateGenerator.Type = "ISActivateGenerator"
 
----@return any
+---@return boolean?
 function ISActivateGenerator:complete() end
 
----@return any
+---@return number
 function ISActivateGenerator:getDuration() end
 
----@return any
+---@return boolean
 function ISActivateGenerator:isValid() end
 
----@return any
 function ISActivateGenerator:perform() end
 
----@return any
 function ISActivateGenerator:start() end
 
----@return any
 function ISActivateGenerator:stop() end
 
----@return any
 function ISActivateGenerator:update() end
 
----@return any
+---@return unknown
 function ISActivateGenerator:waitToStart() end
 
+---@param character unknown?
+---@param activate boolean
 ---@return ISActivateGenerator
 function ISActivateGenerator:new(character, generator, activate) end

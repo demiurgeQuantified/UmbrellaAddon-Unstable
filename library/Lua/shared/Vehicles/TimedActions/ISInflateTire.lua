@@ -1,43 +1,37 @@
 ---@meta
 
 ---@class ISInflateTire : ISBaseTimedAction
----@field item any
----@field jobType any
----@field maxTime any
----@field part any
----@field psiSent any
----@field psiStart any
----@field psiTarget any
----@field stopOnRun any
----@field stopOnWalk any
----@field totalPsi any
----@field vehicle any
----@field [any] any
+---@field item unknown
+---@field jobType string
+---@field part unknown
+---@field psiSent unknown
+---@field psiStart unknown
+---@field psiTarget number
+---@field totalPsi number
+---@field vehicle unknown
 ISInflateTire = ISBaseTimedAction:derive("ISInflateTire")
+ISInflateTire.Type = "ISInflateTire"
 
----@return any
+---@return boolean
 function ISInflateTire:complete() end
 
----@return any
+---@return number
 function ISInflateTire:getDuration() end
 
----@return any
+---@return boolean
 function ISInflateTire:isValid() end
 
----@return any
 function ISInflateTire:perform() end
 
----@return any
 function ISInflateTire:serverStop() end
 
----@return any
 function ISInflateTire:start() end
 
----@return any
 function ISInflateTire:stop() end
 
----@return any
+---@return boolean?
 function ISInflateTire:update() end
 
+---@param psiTarget number
 ---@return ISInflateTire
 function ISInflateTire:new(character, part, item, psiTarget) end

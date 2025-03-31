@@ -1,44 +1,35 @@
 ---@meta
 
 ---@class ISDryMyself : ISBaseTimedAction
----@field caloriesModifier any
----@field item any
----@field maxTime any
----@field serverStartTime any
----@field started any
----@field tick any
----@field timer any
----@field [any] any
+---@field item unknown
+---@field serverStartTime unknown
+---@field started boolean
+---@field tick number
+---@field timer number
 ISDryMyself = ISBaseTimedAction:derive("ISDryMyself")
+ISDryMyself.Type = "ISDryMyself"
 
----@return any
+---@return boolean
 function ISDryMyself:complete() end
 
----@return any
+---@return number
 function ISDryMyself:getDuration() end
 
----@return any
+---@return boolean?
 function ISDryMyself:isValid() end
 
----@return any
 function ISDryMyself:perform() end
 
----@return any
 function ISDryMyself:serverStart() end
 
----@return any
 function ISDryMyself:serverStop() end
 
----@return any
 function ISDryMyself:start() end
 
----@return any
 function ISDryMyself:stop() end
 
----@return any
 function ISDryMyself:syncItemUses() end
 
----@return any
 function ISDryMyself:update() end
 
 ---@return ISDryMyself

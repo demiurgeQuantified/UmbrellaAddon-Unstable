@@ -4,13 +4,18 @@
 MusicChoices = {
 	drama = 0,
 	last = "",
-	---@return any
+
+	---@return boolean?
 	compareByDrama = function(a, b) end,
-	---@return any
+
+	---@return boolean?
 	compareByAmbientDrama = function(a, b) end,
-	---@return any
+
+	---@param drama number
+	---@return unknown
 	get = function(drama) end,
-	---@return any
+
+	---@return unknown
 	getAmbient = function(drama) end,
 	choices = {
 		{
@@ -677,3 +682,16 @@ MusicChoices = {
 		},
 	},
 }
+
+---@return boolean?
+function MusicChoices.compareByAmbientDrama(a, b) end
+
+---@return boolean?
+function MusicChoices.compareByDrama(a, b) end
+
+---@param drama number
+---@return unknown
+function MusicChoices.get(drama) end
+
+---@return unknown
+function MusicChoices.getAmbient(drama) end

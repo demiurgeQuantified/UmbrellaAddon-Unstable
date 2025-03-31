@@ -1,33 +1,27 @@
 ---@meta
 
 ---@class ISPlumbItem : ISBaseTimedAction
----@field character any
----@field itemToPipe any
----@field maxTime any
----@field sound any
----@field wrench any
----@field [any] any
+---@field itemToPipe unknown
+---@field sound unknown
+---@field wrench unknown
 ISPlumbItem = ISBaseTimedAction:derive("ISPlumbItem")
+ISPlumbItem.Type = "ISPlumbItem"
 
----@return any
+---@return boolean
 function ISPlumbItem:complete() end
 
----@return any
+---@return number
 function ISPlumbItem:getDuration() end
 
----@return any
+---@return unknown
 function ISPlumbItem:isValid() end
 
----@return any
 function ISPlumbItem:perform() end
 
----@return any
 function ISPlumbItem:start() end
 
----@return any
 function ISPlumbItem:stop() end
 
----@return any
 function ISPlumbItem:update() end
 
 ---@return ISPlumbItem

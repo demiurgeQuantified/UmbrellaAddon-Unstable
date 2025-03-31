@@ -1,43 +1,36 @@
 ---@meta
 
 ---@class ISHutchCleanNest : ISBaseTimedAction
----@field bleach any
----@field hutch any
----@field lastTimer any
----@field maxTime any
----@field timePerDirt any
----@field timer any
----@field [any] any
+---@field bleach unknown
+---@field hutch unknown
+---@field lastTimer number
+---@field timePerDirt number
+---@field timer number
 ISHutchCleanNest = ISBaseTimedAction:derive("ISHutchCleanNest")
+ISHutchCleanNest.Type = "ISHutchCleanNest"
 
----@return any
 function ISHutchCleanNest:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISHutchCleanNest:complete() end
 
----@return any
+---@return number
 function ISHutchCleanNest:getDuration() end
 
----@return any
+---@return boolean
 function ISHutchCleanNest:isValid() end
 
----@return any
 function ISHutchCleanNest:perform() end
 
----@return any
 function ISHutchCleanNest:serverStart() end
 
----@return any
 function ISHutchCleanNest:start() end
 
----@return any
 function ISHutchCleanNest:stop() end
 
----@return any
 function ISHutchCleanNest:update() end
 
----@return any
+---@return unknown
 function ISHutchCleanNest:waitToStart() end
 
 ---@return ISHutchCleanNest

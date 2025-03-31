@@ -1,40 +1,32 @@
 ---@meta
 
 ---@class ISMultiStageBuild : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field item any
----@field maxTime any
----@field sound any
----@field stage any
----@field [any] any
+---@field item unknown
+---@field sound unknown?
+---@field stage unknown
 ISMultiStageBuild = ISBaseTimedAction:derive("ISMultiStageBuild")
+ISMultiStageBuild.Type = "ISMultiStageBuild"
 
----@return any
+---@return boolean
 function ISMultiStageBuild:complete() end
 
----@return any
 function ISMultiStageBuild:consumeMaterial() end
 
----@return any
+---@return number
 function ISMultiStageBuild:getDuration() end
 
----@return any
+---@return boolean
 function ISMultiStageBuild:isValid() end
 
----@return any
 function ISMultiStageBuild:perform() end
 
----@return any
 function ISMultiStageBuild:start() end
 
----@return any
 function ISMultiStageBuild:stop() end
 
----@return any
 function ISMultiStageBuild:update() end
 
----@return any
+---@return unknown
 function ISMultiStageBuild:waitToStart() end
 
 ---@return ISMultiStageBuild

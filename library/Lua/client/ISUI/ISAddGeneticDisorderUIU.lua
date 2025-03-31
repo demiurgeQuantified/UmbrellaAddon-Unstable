@@ -1,39 +1,38 @@
 ---@meta
 
 ---@class ISAddGeneticDisorderUI : ISPanel
----@field allele any
----@field backgroundColor any
----@field borderColor any
----@field cancel any
----@field combo any
----@field comboList any
----@field gdList any
----@field moveWithMouse any
----@field ok any
----@field onclick any
----@field target any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field allele unknown
+---@field cancel ISButton
+---@field combo ISComboBox
+---@field comboList table
+---@field gdList table
+---@field ok ISButton
+---@field onclick unknown
+---@field target ISAnimalGenomeUI
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISAddGeneticDisorderUI = ISPanel:derive("ISAddGeneticDisorderUI")
+ISAddGeneticDisorderUI.Type = "ISAddGeneticDisorderUI"
 
----@return any
 function ISAddGeneticDisorderUI:create() end
 
----@return any
 function ISAddGeneticDisorderUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISAddGeneticDisorderUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISAddGeneticDisorderUI:populateComboList() end
 
----@return any
 function ISAddGeneticDisorderUI:render() end
 
----@return any
+---@param visible boolean
 function ISAddGeneticDisorderUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target ISAnimalGenomeUI
 ---@return ISAddGeneticDisorderUI
 function ISAddGeneticDisorderUI:new(x, y, width, height, target, onclick, allele) end

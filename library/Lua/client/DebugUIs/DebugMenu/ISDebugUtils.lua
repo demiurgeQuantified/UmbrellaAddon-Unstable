@@ -5,41 +5,97 @@ ISDebugUtils = {}
 ISDebugUtils.FONT_HGT_MED = getTextManager():getFontHeight(UIFont.Medium)
 ISDebugUtils.FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.Small)
 
----@return any
+---@param _self table
+---@param _data (table | string)?
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@param _title string
+---@return number
+---@return ISButton
 function ISDebugUtils.addButton(_self, _data, _x, _y, _w, _h, _title, _func) end
 
----@return any
+---@param _self table
+---@param _data string
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _func unknown?
+---@return number
+---@return ISComboBox
 function ISDebugUtils.addComboBox(_self, _data, _x, _y, _w, _font, _func) end
 
----@return any
+---@param _self table
+---@param _y number
+---@return number
 function ISDebugUtils.addHorzBar(_self, _y) end
 
----@return any
+---@param _self table
+---@param _data table | string
+---@param _x number
+---@param _y number
+---@param _title string
+---@param _font unknown?
+---@param _bLeft boolean?
+---@return number
+---@return ISLabel
 function ISDebugUtils.addLabel(_self, _data, _x, _y, _title, _font, _bLeft) end
 
----@return any
+---@param _self table
+---@param _data string
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@return number
+---@return ISSliderPanel
 function ISDebugUtils.addSlider(_self, _data, _x, _y, _w, _h, _func) end
 
----@return any
+---@param _self ISAnimDebugMonitor | WorldFlaresDebug
+---@param _data string | table
+---@param _title string
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@return number
+---@return ISTextEntryBox
 function ISDebugUtils.addTextEntryBox(_self, _data, _title, _x, _y, _w, _h) end
 
----@return any
+---@param _self table
+---@param _data string | table
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@param _title string
+---@param options table
+---@param _func unknown?
+---@return number
+---@return ISTickBox
 function ISDebugUtils.addTickBox(_self, _data, _x, _y, _w, _h, _title, options, _func) end
 
----@return any
+---@return number
 function ISDebugUtils.clamp01(_n) end
 
----@return any
+---@param _self table
+---@param _x number
+---@param _width number
 function ISDebugUtils.initHorzBars(_self, _x, _width) end
 
----@return any
+---@return boolean
 function ISDebugUtils.onMouseWheel(self, del) end
 
----@return any
+---@param _v number
+---@param _d number
+---@return string
 function ISDebugUtils.printval(_v, _d) end
 
----@return any
+---@param _self ISDebugSubPanelBase | ISAnimDebugMonitor
 function ISDebugUtils.renderHorzBars(_self) end
 
----@return any
+---@param num number
+---@param numDecimalPlaces number
+---@return number
 function ISDebugUtils.roundNum(num, numDecimalPlaces) end

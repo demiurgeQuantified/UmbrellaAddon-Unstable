@@ -1,33 +1,33 @@
 ---@meta
 
 ---@class ISCraftRecipeTagsDebugPanel : ISPanel
----@field listView any
----@field player any
----@field playerNum any
----@field searchText any
----@field [any] any
+---@field listView ISStringListView
+---@field player unknown
+---@field playerNum unknown
+---@field searchText string
 ISCraftRecipeTagsDebugPanel = ISPanel:derive("ISCraftRecipeTagsDebugPanel")
+ISCraftRecipeTagsDebugPanel.Type = "ISCraftRecipeTagsDebugPanel"
 
----@return any
 function ISCraftRecipeTagsDebugPanel:close() end
 
----@return any
 function ISCraftRecipeTagsDebugPanel:createChildren() end
 
----@return any
+---@return number
 function ISCraftRecipeTagsDebugPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISCraftRecipeTagsDebugPanel:initialise() end
 
----@return any
+---@param _width number
+---@param _height number
 function ISCraftRecipeTagsDebugPanel:onResize(_width, _height) end
 
----@return any
 function ISCraftRecipeTagsDebugPanel:prerender() end
 
----@return any
 function ISCraftRecipeTagsDebugPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCraftRecipeTagsDebugPanel
 function ISCraftRecipeTagsDebugPanel:new(x, y, width, height, player) end

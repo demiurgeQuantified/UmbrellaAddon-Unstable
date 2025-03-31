@@ -1,28 +1,29 @@
 ---@meta
 
 ---@class DebugOptionsWindow : ISCollapsableWindow
----@field backgroundColor any
----@field categoryList any
----@field categoryMap any
----@field resizable any
----@field tickBoxes any
----@field [any] any
+---@field categoryList unknown
+---@field categoryMap table
+---@field tickBoxes table
 DebugOptionsWindow = ISCollapsableWindow:derive("DebugOptionsWindow")
+DebugOptionsWindow.Type = "DebugOptionsWindow"
 
----@return any
+---@return number
+---@return number
 function DebugOptionsWindow:calcTickBoxBounds() end
 
----@return any
 function DebugOptionsWindow:createChildren() end
 
----@return any
 function DebugOptionsWindow:onCategorySelected(category) end
 
----@return any
+---@param x number
+---@param y number
 function DebugOptionsWindow:onMouseDownOutside(x, y) end
 
----@return any
 function DebugOptionsWindow:onTickBox(index, selected, option) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return DebugOptionsWindow
 function DebugOptionsWindow:new(x, y, width, height) end

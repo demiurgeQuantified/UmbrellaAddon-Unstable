@@ -1,64 +1,59 @@
 ---@meta
 
 ---@class ISAdminPanelUI : ISPanel
----@field adminPowerBtn any
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field cancel any
----@field checkStatsBtn any
----@field climateOptionsBtn any
----@field dbBtn any
----@field itemListBtn any
----@field miniScoreboardBtn any
----@field moveWithMouse any
----@field nonpvpzoneBtn any
----@field packetCountsBtn any
----@field pvpLogTool any
----@field safezoneBtn any
----@field sandboxOptionsBtn any
----@field seeFactionBtn any
----@field seeOptionsBtn any
----@field seeRolesBtn any
----@field seeSafehousesBtn any
----@field seeTicketsBtn any
----@field seeUsersBtn any
----@field showStatisticsBtn any
----@field variableColor any
----@field zOffsetSmallFont any
----@field zoneEditor any
----@field [any] any
+---@field adminPowerBtn ISButton
+---@field buttonBorderColor table
+---@field cancel ISButton
+---@field checkStatsBtn ISButton
+---@field climateOptionsBtn ISButton
+---@field dbBtn ISButton
+---@field itemListBtn ISButton
+---@field miniScoreboardBtn ISButton
+---@field nonpvpzoneBtn ISButton
+---@field packetCountsBtn ISButton
+---@field pvpLogTool ISButton
+---@field safezoneBtn ISButton
+---@field sandboxOptionsBtn ISButton
+---@field seeFactionBtn ISButton
+---@field seeOptionsBtn ISButton
+---@field seeRolesBtn ISButton
+---@field seeSafehousesBtn ISButton
+---@field seeTicketsBtn ISButton
+---@field seeUsersBtn ISButton
+---@field showStatisticsBtn ISButton
+---@field variableColor table
+---@field zOffsetSmallFont number
+---@field zoneEditor ISButton
 ISAdminPanelUI = ISPanel:derive("ISAdminPanelUI")
+ISAdminPanelUI.Type = "ISAdminPanelUI"
+ISAdminPanelUI.instance = nil ---@type ISAdminPanelUI?
 
----@return any
 function ISAdminPanelUI.OnNetworkUsersReceived() end
 
----@return any
 function ISAdminPanelUI.OnRolesReceived() end
 
----@return any
 function ISAdminPanelUI.OnSafehousesChanged() end
 
----@return any
 function ISAdminPanelUI:close() end
 
----@return any
 function ISAdminPanelUI:create() end
 
----@return any
 function ISAdminPanelUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISAdminPanelUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISAdminPanelUI:render() end
 
----@return any
+---@param visible boolean
 function ISAdminPanelUI:setVisible(visible) end
 
----@return any
 function ISAdminPanelUI:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAdminPanelUI
 function ISAdminPanelUI:new(x, y, width, height) end

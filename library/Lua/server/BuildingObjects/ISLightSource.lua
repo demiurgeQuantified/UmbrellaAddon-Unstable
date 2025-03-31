@@ -1,29 +1,30 @@
 ---@meta
 
 ---@class ISLightSource : ISBuildingObject
----@field baseItem any
----@field blockAllTheSquare any
----@field canBarricade any
----@field character any
----@field dismantable any
----@field fuel any
----@field javaObject any
----@field name any
----@field radius any
----@field sq any
----@field [any] any
+---@field baseItem string
+---@field character unknown
+---@field fuel string
+---@field javaObject unknown
+---@field name string
+---@field radius number
+---@field sq unknown
 ISLightSource = ISBuildingObject:derive("ISLightSource")
+ISLightSource.Type = "ISLightSource"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISLightSource:create(x, y, z, north, sprite) end
 
----@return any
+---@return number
 function ISLightSource:getHealth() end
 
----@return any
+---@return boolean
 function ISLightSource:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISLightSource:render(x, y, z, square) end
 
 ---@return ISLightSource

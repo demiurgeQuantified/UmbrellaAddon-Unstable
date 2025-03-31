@@ -1,8 +1,6 @@
 ---@meta
 
 ---@class DynamicRadio
----@field valid any
----@field [any] any
 DynamicRadio = {}
 DynamicRadio.valid = true
 DynamicRadio.scripts = {}
@@ -21,8 +19,7 @@ DynamicRadio.channels = {
 }
 DynamicRadio.cache = {}
 
----@return any
 function DynamicRadio.OnEveryHour() end
 
----@return any
+---@param _isNewGame boolean
 function DynamicRadio.OnLoadRadioScripts(_scriptManager, _isNewGame) end

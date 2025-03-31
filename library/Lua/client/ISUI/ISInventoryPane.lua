@@ -1,319 +1,300 @@
 ---@meta
 
 ---@class ISInventoryPane : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field blinkAlpha any
----@field blinkAlphaIncrease any
----@field borderColor any
----@field brokenItemIcon any
----@field buttonOption any
----@field clickedScrollBar any
----@field collapseAll any
----@field collapsed any
----@field collapseicon any
----@field column2 any
----@field column3 any
----@field column4 any
----@field contextButton1 any
----@field contextButton2 any
----@field contextButton3 any
----@field downX any
----@field downY any
----@field draggedItems any
----@field dragging any
----@field draggingMarquis any
----@field draggingMarquisX any
----@field draggingMarquisY any
----@field draggingX any
----@field draggingY any
----@field dragStarted any
----@field equippedInHotbar any
----@field equippedItemIcon any
----@field expandAll any
----@field expandicon any
----@field favoriteStar any
----@field filtericon any
----@field filterMenu any
----@field firstSelect any
----@field font any
----@field fontHgt any
----@field frozenItemIcon any
----@field headerHgt any
----@field height any
----@field highlightItems any
----@field hotbar any
----@field inventory any
----@field itemHgt any
----@field itemindex any
----@field items any
----@field itemslist any
----@field itemSortFunc any
----@field joyselection any
----@field minimumHeight any
----@field minimumWidth any
----@field mode any
----@field mouseOverOption any
----@field nameHeader any
----@field poisonIcon any
----@field previousMouseUp any
----@field removeAllDialog any
----@field selected any
----@field smoothScrollTargetY any
----@field smoothScrollY any
----@field texScale any
----@field toolRender any
----@field treecolicon any
----@field treeexpicon any
----@field typeHeader any
----@field width any
----@field x any
----@field y any
----@field zoom any
----@field [any] any
+---@field blinkAlpha number
+---@field blinkAlphaIncrease boolean
+---@field brokenItemIcon unknown
+---@field buttonOption number
+---@field clickedScrollBar boolean
+---@field collapseAll ISButton
+---@field collapsed table
+---@field collapseicon unknown
+---@field column2 number
+---@field column3 number
+---@field column4 number
+---@field contextButton1 ISButton
+---@field contextButton2 ISButton
+---@field contextButton3 ISButton
+---@field draggedItems ISInventoryPaneDraggedItems
+---@field dragging number?
+---@field draggingMarquis boolean
+---@field draggingMarquisX number
+---@field draggingMarquisY number
+---@field draggingX number
+---@field draggingY number
+---@field dragStarted boolean
+---@field equippedInHotbar unknown
+---@field equippedItemIcon unknown
+---@field expandAll ISButton
+---@field expandicon unknown
+---@field favoriteStar unknown
+---@field filtericon unknown
+---@field filterMenu ISButton
+---@field firstSelect number?
+---@field font unknown
+---@field fontHgt unknown
+---@field frozenItemIcon unknown
+---@field headerHgt number
+---@field highlightItems table
+---@field hotbar unknown?
+---@field inventory unknown
+---@field itemHgt unknown
+---@field itemindex table
+---@field items table
+---@field itemslist table
+---@field itemSortFunc function
+---@field joyselection number
+---@field mode string
+---@field mouseOverOption number
+---@field nameHeader ISResizableButton
+---@field poisonIcon unknown
+---@field previousMouseUp number?
+---@field removeAllDialog ISModalDialog?
+---@field selected table
+---@field smoothScrollTargetY number?
+---@field smoothScrollY number?
+---@field texScale number
+---@field toolRender ISToolTipInv
+---@field treecolicon unknown
+---@field treeexpicon unknown
+---@field typeHeader ISResizableButton
+---@field zoom unknown
 ISInventoryPane = ISPanel:derive("ISInventoryPane")
+ISInventoryPane.Type = "ISInventoryPane"
 ISInventoryPane.MAX_ITEMS_IN_STACK_TO_RENDER = 50
 ISInventoryPane.ghc = getCore():getGoodHighlitedColor()
 ISInventoryPane.highlightItem = nil
 
----@return any
+---@param items table
+---@return table
 function ISInventoryPane.getActualItems(items) end
 
----@return any
+---@return boolean
 function ISInventoryPane.itemSortByCatDesc(a, b) end
 
----@return any
+---@return boolean
 function ISInventoryPane.itemSortByCatInc(a, b) end
 
----@return any
+---@return boolean
 function ISInventoryPane.itemSortByNameDesc(a, b) end
 
----@return any
+---@return boolean
 function ISInventoryPane.itemSortByNameInc(a, b) end
 
----@return any
+---@return boolean
 function ISInventoryPane.itemSortByWeightAsc(a, b) end
 
----@return any
+---@return boolean
 function ISInventoryPane.itemSortByWeightDesc(a, b) end
 
----@return any
+---@return boolean
 function ISInventoryPane:canPutIn() end
 
----@return any
 function ISInventoryPane:clearWorldObjectHighlights() end
 
----@return any
 function ISInventoryPane:collapseAll(button) end
 
----@return any
 function ISInventoryPane:createChildren() end
 
----@return any
+---@param y number
 function ISInventoryPane:doButtons(y) end
 
----@return any
 function ISInventoryPane:doContextOnJoypadSelected() end
 
----@return any
 function ISInventoryPane:doContextualDblClick(item) end
 
----@return any
 function ISInventoryPane:doGrabOnJoypadSelected() end
 
----@return any
 function ISInventoryPane:doJoypadExpandCollapse() end
 
----@return any
+---@return boolean
 function ISInventoryPane:doWorldObjectHighlight(_item) end
 
----@return any
 function ISInventoryPane:drawItemDetails(item, y, xoff, yoff, red) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param f number
+---@param fg table
 function ISInventoryPane:drawProgressBar(x, y, w, h, f, fg) end
 
----@return any
+---@param text string
+---@param fraction number
+---@param top number
+---@param fgText table
+---@param fgBar table
 function ISInventoryPane:drawTextAndProgressBar(text, fraction, xoff, top, fgText, fgBar) end
 
----@return any
 function ISInventoryPane:expandAll(button) end
 
----@return any
 function ISInventoryPane:findItemForWorldObjectHighlight(_itemTest) end
 
----@return any
+---@return number
 function ISInventoryPane:getScrollAreaHeight() end
 
----@return any
 function ISInventoryPane:hideButtons() end
 
----@return any
 function ISInventoryPane:initialise() end
 
----@return any
+---@return boolean
 function ISInventoryPane:isLiteratureRead(playerObj, item) end
 
----@return any
+---@return unknown
 function ISInventoryPane:isMouseOverScrollBar() end
 
----@return any
 function ISInventoryPane:lootAll() end
 
----@return any
 function ISInventoryPane:onConfirmDelete(button) end
 
----@return any
 function ISInventoryPane:onContext(button) end
 
----@return any
 function ISInventoryPane:onFilterMenu(button) end
 
----@return any
 function ISInventoryPane:onInventoryFontChanged() end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown?
 function ISInventoryPane:onMouseDoubleClick(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISInventoryPane:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPane:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISInventoryPane:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISInventoryPane:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISInventoryPane:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPane:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function ISInventoryPane:onMouseWheel(del) end
 
----@return any
 function ISInventoryPane:onResize() end
 
----@return any
+---@param button ISResizableButton
 function ISInventoryPane:onResizeColumn(button) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISInventoryPane:onRightMouseUp(x, y) end
 
----@return any
 function ISInventoryPane:prerender() end
 
----@return any
 function ISInventoryPane:refreshContainer() end
 
----@return any
 function ISInventoryPane:removeAll(player) end
 
----@return any
 function ISInventoryPane:render() end
 
----@return any
+---@param doDragged boolean
 function ISInventoryPane:renderdetails(doDragged) end
 
----@return any
 function ISInventoryPane:rendericons() end
 
----@return any
+---@param name string
 function ISInventoryPane:RestoreLayout(name, layout) end
 
----@return any
 function ISInventoryPane:restoreSelection(selected) end
 
----@return any
+---@param x number
+---@param y number
+---@return number
 function ISInventoryPane:rowAt(x, y) end
 
----@return any
+---@param name string
 function ISInventoryPane:SaveLayout(name, layout) end
 
----@return any
+---@param selected table
+---@return table
 function ISInventoryPane:saveSelection(selected) end
 
----@return any
+---@param index number
 function ISInventoryPane:selectIndex(index) end
 
----@return any
+---@param mode string
 function ISInventoryPane:setMode(mode) end
 
----@return any
 function ISInventoryPane:sortByName(button) end
 
----@return any
 function ISInventoryPane:sortByType(button) end
 
----@return any
+---@param _isAscending boolean
 function ISInventoryPane:sortByWeight(_isAscending) end
 
----@return any
 function ISInventoryPane:sortItemsByType(items) end
 
----@return any
 function ISInventoryPane:sortItemsByTypeAndWeight(items) end
 
----@return any
 function ISInventoryPane:sortItemsByWeight(items) end
 
----@return any
+---@return unknown
 function ISInventoryPane:toggleStove() end
 
----@return any
+---@param index number
+---@return number
 function ISInventoryPane:topOfItem(index) end
 
----@return any
 function ISInventoryPane:transferAll() end
 
----@return any
+---@param items table
 function ISInventoryPane:transferItemsByWeight(items, container) end
 
----@return any
 function ISInventoryPane:update() end
 
----@return any
 function ISInventoryPane:updateSmoothScrolling() end
 
----@return any
 function ISInventoryPane:updateTooltip() end
 
----@return any
 function ISInventoryPane:updateWorldObjectHighlight() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISInventoryPane
 function ISInventoryPane:new(x, y, width, height, inventory, zoom) end
 
 ---@class ISInventoryPaneDraggedItems
----@field inventoryPane any
----@field itemNotOK any
----@field items any
----@field mouseOverContainer any
----@field mouseOverItemCount any
----@field mouseOverWhat any
----@field playerNum any
----@field [any] any
+---@field inventoryPane ISInventoryPane
+---@field itemNotOK table
+---@field items table?
+---@field mouseOverContainer unknown?
+---@field mouseOverItemCount number
+---@field mouseOverWhat string?
+---@field playerNum unknown
 ISInventoryPaneDraggedItems = {}
 
----@return any
+---@return boolean
 function ISInventoryPaneDraggedItems:cannotDropItem(item) end
 
----@return any
+---@return unknown?
+---@return string?
 function ISInventoryPaneDraggedItems:getDropContainer() end
 
----@return any
 function ISInventoryPaneDraggedItems:reset() end
 
----@return any
 function ISInventoryPaneDraggedItems:update() end
 
+---@param inventoryPane ISInventoryPane
 ---@return ISInventoryPaneDraggedItems
 function ISInventoryPaneDraggedItems:new(inventoryPane) end

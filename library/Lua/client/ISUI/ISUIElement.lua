@@ -1,579 +1,716 @@
 ---@meta
 
 ---@class ISUIElement : ISBaseObject
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field children any
----@field controller any
----@field dock any
----@field enabled any
----@field forceCursorVisible any
----@field height any
----@field hscroll any
----@field ID any
----@field javaObject any
----@field joyfocus any
----@field joypadFocused any
----@field minimumHeight any
----@field minimumWidth any
----@field onMouseDoubleClick any
----@field removed any
----@field scrollwidth any
----@field target any
----@field vscroll any
----@field wantExtraMouseEvents any
----@field wantKeyEvents any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field anchorBottom boolean
+---@field anchorLeft boolean
+---@field anchorRight boolean
+---@field anchorTop boolean
+---@field children table
+---@field controller unknown
+---@field dock string
+---@field enabled unknown
+---@field forceCursorVisible unknown?
+---@field height number
+---@field hscroll ISScrollBar
+---@field ID number
+---@field javaObject unknown
+---@field joyfocus unknown?
+---@field joypadFocused boolean
+---@field minimumHeight number
+---@field minimumWidth number
+---@field onMouseDoubleClick unknown
+---@field removed boolean
+---@field scrollwidth number
+---@field target unknown
+---@field vscroll ISScrollBar
+---@field wantExtraMouseEvents unknown?
+---@field wantKeyEvents unknown?
+---@field width number
+---@field x number
+---@field y number
 ISUIElement = ISBaseObject:derive("ISUIElement")
+ISUIElement.Type = "ISUIElement"
 ISUIElement.IDMax = 1
 
----@return any
+---@param otherElement unknown?
 function ISUIElement:addChild(otherElement) end
 
----@return any
 function ISUIElement:addScrollBars(addHorizontal) end
 
----@return any
 function ISUIElement:addToUIManager() end
 
----@return any
 function ISUIElement:backMost() end
 
----@return any
 function ISUIElement:bringToTop() end
 
----@return any
+---@param playerNum number
 function ISUIElement:centerOnScreen(playerNum) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@return number
+---@return number
+---@return number
+---@return number
 function ISUIElement:clampStencilRectToParent(x, y, w, h) end
 
----@return any
 function ISUIElement:clearChildren() end
 
----@return any
+---@return unknown
 function ISUIElement:clearMaxDrawHeight() end
 
----@return any
+---@return unknown
 function ISUIElement:clearStencilRect() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISUIElement:containsPoint(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISUIElement:containsPointLocal(x, y) end
 
----@return any
 function ISUIElement:createChildren() end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 function ISUIElement:drawItemIcon(item, x, y, a, w, h) end
 
----@return any
+---@param x number
+---@param y number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawLine2(x, y, x2, y2, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 function ISUIElement:drawProgressBar(x, y, w, h, f, fg) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawRect(x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawRectBorder(x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawRectBorderStatic(x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawRectStatic(x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 function ISUIElement:drawScriptItemIcon(scriptItem, x, y, a, w, h) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawText(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextCentre(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextCentreStatic(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextRight(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextRightStatic(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextStatic(str, x, y, r, g, b, a, font) end
 
----@return any
-function ISUIElement:drawTextStatic(str, x, y, r, g, b, a, font) end
-
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextUntrimmed(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param x number
+---@param y number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTexture(texture, x, y, a, r, g, b) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextureAllPoint(texture, tlx, tly, trx, try, brx, bry, blx, bly, r, g, b, a) end
 
----@return any
 function ISUIElement:DrawTextureAngle(tex, centerX, centerY, angle) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureScaled(texture, x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureScaledAspect(texture, x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureScaledAspect2(texture, x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureScaledAspect3(texture, x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureScaledStatic(texture, x, y, w, h, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureScaledUniform(texture, x, y, scale, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param a number
+---@param r number
+---@param g number
+---@param b number
 function ISUIElement:drawTextureStatic(texture, x, y, a, r, g, b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextureTiled(texture, x, y, w, h, r, g, b, a) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextureTiledX(texture, x, y, w, h, r, g, b, a) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextureTiledY(texture, x, y, w, h, r, g, b, a) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextureTiledYOffset(texture, x, y, w, h, r, g, b, a) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:drawTextZoomed(str, x, y, zoom, r, g, b, a, font) end
 
----@return any
 function ISUIElement:EndOutline() end
 
----@return any
+---@return unknown
 function ISUIElement:getAbsoluteX() end
 
----@return any
+---@return unknown
 function ISUIElement:getAbsoluteY() end
 
----@return any
+---@return number
 function ISUIElement:getBottom() end
 
----@return any
+---@return number
 function ISUIElement:getCentreX() end
 
----@return any
+---@return number
 function ISUIElement:getCentreY() end
 
----@return any
+---@return table
 function ISUIElement:getChildren() end
 
----@return any
+---@return unknown
 function ISUIElement:getController() end
 
----@return any
+---@return unknown
 function ISUIElement:getHeight() end
 
----@return any
+---@return unknown
 function ISUIElement:getIsCaptured() end
 
----@return any
+---@return unknown
 function ISUIElement:getIsFollowGameWorld() end
 
----@return any
+---@return unknown
 function ISUIElement:getIsVisible() end
 
----@return any
+---@return unknown
 function ISUIElement:getJavaObject() end
 
----@return any
+---@return number
 function ISUIElement:getJoypadNavigateStartDelay() end
 
----@return any
+---@return boolean
 function ISUIElement:getKeepOnScreen() end
 
----@return any
+---@return unknown
 function ISUIElement:getMaxDrawHeight() end
 
----@return any
+---@return number
 function ISUIElement:getMouseX() end
 
----@return any
+---@return number
 function ISUIElement:getMouseY() end
 
----@return any
+---@return ISTabPanelPaginated
 function ISUIElement:getParent() end
 
----@return any
+---@return unknown
 function ISUIElement:getRenderThisPlayerOnly() end
 
----@return any
+---@return number
 function ISUIElement:getRight() end
 
----@return any
+---@return number
 function ISUIElement:getScrollAreaHeight() end
 
----@return any
+---@return number
 function ISUIElement:getScrollAreaWidth() end
 
----@return any
+---@return unknown?
 function ISUIElement:getScrollChildren() end
 
----@return any
+---@return number
 function ISUIElement:getScrollHeight() end
 
----@return any
+---@return number
 function ISUIElement:getScrollWidth() end
 
----@return any
+---@return unknown?
 function ISUIElement:getScrollWithParent() end
 
----@return any
+---@param name string?
+---@return unknown
 function ISUIElement:getUIName(name) end
 
----@return any
+---@return unknown
 function ISUIElement:getWidth() end
 
----@return any
+---@return unknown
 function ISUIElement:getX() end
 
----@return any
+---@return unknown
 function ISUIElement:getXScroll() end
 
----@return any
+---@return unknown
 function ISUIElement:getY() end
 
----@return any
+---@return unknown
 function ISUIElement:getYScroll() end
 
----@return any
+---@return boolean
 function ISUIElement:hasConflictWithJoypadNavigateStart() end
 
----@return any
+---@return unknown
 function ISUIElement:ignoreHeightChange() end
 
----@return any
+---@return unknown
 function ISUIElement:ignoreWidthChange() end
 
----@return any
 function ISUIElement:initialise() end
 
----@return any
 function ISUIElement:instantiate() end
 
----@return any
+---@return unknown
 function ISUIElement:isEnabled() end
 
----@return any
+---@return unknown
 function ISUIElement:isFollowGameWorld() end
 
----@return any
+---@return unknown
 function ISUIElement:isMouseOver() end
 
----@return any
+---@return unknown
 function ISUIElement:isPointOver(screenX, screenY) end
 
----@return any
+---@return unknown
 function ISUIElement:isReallyVisible() end
 
----@return any
+---@return boolean
 function ISUIElement:isRemoved() end
 
----@return any
+---@return unknown
 function ISUIElement:isVisible() end
 
----@return any
+---@return ISScrollBar | boolean
 function ISUIElement:isVScrollBarVisible() end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onFocus(x, y) end
 
----@return any
 function ISUIElement:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISUIElement:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function ISUIElement:onJoypadBeforeDeactivate_Descendant(descendant, joypadData) end
 
----@return any
 function ISUIElement:onJoypadButtonReleased(button, joypadData) end
 
----@return any
 function ISUIElement:onJoypadButtonReleased_Descendant(descendant, button, joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirDown(joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirDown_Descendant(descendant, joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirLeft_Descendant(descendant, joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirRight(joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirRight_Descendant(descendant, joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirUp(joypadData) end
 
----@return any
 function ISUIElement:onJoypadDirUp_Descendant(descendant, joypadData) end
 
----@return any
 function ISUIElement:onJoypadDown(button, joypadData) end
 
----@return any
 function ISUIElement:onJoypadDown_Descendant(descendant, button, joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateDown(joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateEnd(joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateLeft(joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateParent(joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateRight(joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateStart(joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
----@return any
 function ISUIElement:onJoypadNavigateUp(joypadData) end
 
----@return any
 function ISUIElement:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISUIElement:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISUIElement:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function ISUIElement:onMouseWheel(del) end
 
----@return any
 function ISUIElement:onResize() end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onRightMouseDownOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onRightMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISUIElement:onRightMouseUpOutside(x, y) end
 
----@return any
 function ISUIElement:prerender() end
 
----@return any
+---@return unknown
 function ISUIElement:recalcSize() end
 
----@return any
 function ISUIElement:removeChild(otherElement) end
 
----@return any
 function ISUIElement:removeFromUIManager() end
 
----@return any
 function ISUIElement:render() end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 function ISUIElement:renderJoypadFocus(x, y, w, h) end
 
----@return any
 function ISUIElement:renderJoypadNavigateHighlight(joypadData, child) end
 
----@return any
+---@param playerNum number
 function ISUIElement:renderJoypadNavigateOverlay(playerNum) end
 
----@return any
 function ISUIElement:renderJoypadNavigateTexture(joypadData, child, texture) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@return unknown
 function ISUIElement:repaintStencilRect(x, y, w, h) end
 
----@return any
 function ISUIElement:resumeStencil() end
 
----@return any
 function ISUIElement:setAlwaysOnTop(b) end
 
----@return any
 function ISUIElement:setAnchorBottom(bAnchor) end
 
----@return any
 function ISUIElement:setAnchorLeft(bAnchor) end
 
----@return any
 function ISUIElement:setAnchorRight(bAnchor) end
 
----@return any
 function ISUIElement:setAnchors(bAnchor) end
 
----@return any
 function ISUIElement:setAnchorsTBLR(bAnchorT, bAnchorB, bAnchorL, bAnchorR) end
 
----@return any
 function ISUIElement:setAnchorTop(bAnchor) end
 
----@return any
 function ISUIElement:setCapture(bCapture) end
 
----@return any
 function ISUIElement:setController(c) end
 
----@return any
 function ISUIElement:setEnabled(en) end
 
----@return any
 function ISUIElement:setFollowGameWorld(bFollow) end
 
----@return any
 function ISUIElement:setForceCursorVisible(force) end
 
----@return any
+---@param h number
 function ISUIElement:setHeight(h) end
 
----@return any
 function ISUIElement:setHeightAndParentHeight(h) end
 
----@return any
+---@param focused boolean
 function ISUIElement:setJoypadFocused(focused, joypadData) end
 
----@return any
+---@return unknown
 function ISUIElement:setMaxDrawHeight(height) end
 
----@return any
 function ISUIElement:setOnMouseDoubleClick(target, onmousedblclick) end
 
----@return any
 function ISUIElement:setRemoved(bremove) end
 
----@return any
+---@param playerNum number
 function ISUIElement:setRenderThisPlayerOnly(playerNum) end
 
----@return any
 function ISUIElement:setScrollChildren(b) end
 
----@return any
 function ISUIElement:setScrollHeight(h) end
 
----@return any
 function ISUIElement:setScrollWidth(w) end
 
----@return any
 function ISUIElement:setScrollWithParent(b) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@return unknown
 function ISUIElement:setStencilRect(x, y, w, h) end
 
----@return any
+---@param name string
 function ISUIElement:setUIName(name) end
 
----@return any
+---@param bVisible boolean
 function ISUIElement:setVisible(bVisible) end
 
----@return any
 function ISUIElement:setWantExtraMouseEvents(want) end
 
----@return any
 function ISUIElement:setWantKeyEvents(want) end
 
----@return any
+---@param w number
 function ISUIElement:setWidth(w) end
 
----@return any
 function ISUIElement:setWidthAndParentWidth(wi) end
 
----@return any
+---@param x number
 function ISUIElement:setX(x) end
 
----@return any
 function ISUIElement:setXScroll(x) end
 
----@return any
+---@param y number
 function ISUIElement:setY(y) end
 
----@return any
 function ISUIElement:setYScroll(y) end
 
----@return any
 function ISUIElement:shrinkWrap(padRight, padBottom, predicate) end
 
----@return any
 function ISUIElement:shrinkX(x) end
 
----@return any
 function ISUIElement:shrinkY(y) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISUIElement:StartOutline(tex, outlineThickness, r, g, b, a) end
 
----@return any
+---@param playerNum number
 function ISUIElement:stayOnSplitScreen(playerNum) end
 
----@return any
 function ISUIElement:suspendStencil() end
 
----@return any
+---@return string
 function ISUIElement:toString() end
 
----@return any
 function ISUIElement:update() end
 
----@return any
 function ISUIElement:updateScrollbars() end
 
----@return any
+---@param title string
+---@return ISCollapsableWindow
 function ISUIElement:wrapInCollapsableWindow(title, resizable, subClass) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISUIElement
 function ISUIElement:new(x, y, width, height) end

@@ -46,13 +46,13 @@ WeaponUpgrades = {
 	Revolver_Long = {},
 }
 
----@return any
 function ClearAllDistributionItems(_dist, _dorecursive) end
----@return any
+
 function RemoveItemFromDistribution(_dist, _item, _chance, _dorecursive) end
----@return any
+
 function ReplaceItemInDistribution(_dist, _item, _chance, _replacement, _replaceChance, _dorecursive) end
----@return any
+
+---@param _orig SuburbsDistributions
 function MergeDistributionRecursive(_orig, _mod) end
----@return any
+
 function DeepPrintDistributionTable(_dist, tab) end

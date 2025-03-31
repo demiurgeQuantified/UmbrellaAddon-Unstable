@@ -2,47 +2,36 @@
 
 ---@class SCampfireSystem : SGlobalObjectSystem
 SCampfireSystem = SGlobalObjectSystem:derive("SCampfireSystem")
+SCampfireSystem.Type = "SCampfireSystem"
 
----@return any
-function SCampfireSystem.putOut(square) end
-
----@return any
+---@return unknown?
 function SCampfireSystem:addCampfire(grid) end
 
----@return any
 function SCampfireSystem:convertOldModData() end
 
----@return any
 function SCampfireSystem:initSystem() end
 
----@return any
+---@return boolean
 function SCampfireSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return boolean
 function SCampfireSystem:isValidModData(modData) end
 
----@return any
 function SCampfireSystem:lowerFirelvl() end
 
----@return any
 function SCampfireSystem:lowerFuelAmount() end
 
----@return any
 function SCampfireSystem:lowerFuelAmountSpecific(luaObject, amt) end
 
----@return any
 function SCampfireSystem:nearCamp(delay) end
 
----@return any
+---@return SCampfireGlobalObject
 function SCampfireSystem:newLuaObject(globalObject) end
 
----@return any
 function SCampfireSystem:OnClientCommand(command, playerObj, args) end
 
----@return any
 function SCampfireSystem:putOut(luaObject) end
 
----@return any
 function SCampfireSystem:removeCampfire(luaObject) end
 
 ---@return SCampfireSystem

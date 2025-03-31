@@ -1,73 +1,71 @@
 ---@meta
 
 ---@class ISKnob : ISUIElement
----@field amplitude any
----@field dragging any
----@field draggingX any
----@field height any
----@field isKnob any
----@field joypadFocused any
----@field lastValue any
----@field originalX any
----@field player any
----@field selected any
----@field switchSound any
----@field tex any
----@field title any
----@field values any
----@field valuesBg any
----@field width any
----@field [any] any
+---@field amplitude number
+---@field dragging boolean
+---@field draggingX unknown
+---@field isKnob boolean
+---@field lastValue number
+---@field originalX unknown
+---@field player unknown
+---@field selected number
+---@field switchSound string
+---@field tex unknown
+---@field title string
+---@field values table
+---@field valuesBg unknown
 ISKnob = ISUIElement:derive("ISKnob")
+ISKnob.Type = "ISKnob"
 ISKnob.messages = {}
 
----@return any
+---@param angle number
+---@param value number
 function ISKnob:addValue(angle, value) end
 
----@return any
 function ISKnob:forceClick() end
 
----@return any
+---@return unknown
 function ISKnob:getValue() end
 
----@return any
 function ISKnob:initialise() end
 
----@return any
 function ISKnob:onJoypadDirDown(joypadData) end
 
----@return any
 function ISKnob:onJoypadDirUp(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISKnob:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISKnob:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISKnob:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISKnob:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISKnob:onMouseUpOutside(x, y) end
 
----@return any
 function ISKnob:playSwitchSound() end
 
----@return any
 function ISKnob:prerender() end
 
----@return any
 function ISKnob:render() end
 
----@return any
 function ISKnob:setJoypadFocused(focused) end
 
----@return any
+---@param value number
 function ISKnob:setKnobPosition(value) end
 
+---@param x number
+---@param y number
+---@param title string
 ---@return ISKnob
 function ISKnob:new(x, y, tex, valuesBg, title, player) end

@@ -1585,23 +1585,24 @@ PrintMediaDefinitions.OldNewspapers = {
 	"TheKentuckyDefender",
 	"EvansvillePost",
 }
-PrintMediaDefinitions.RegionalPapers = {}
-PrintMediaDefinitions.RegionalPapers.Louisville = {
-	"LouisvilleSunTimes",
-	"LouisvilleSunTimes",
-	"KentuckyHerald",
-	"KentuckyHerald",
-}
-PrintMediaDefinitions.RegionalPapers.MarchRidge = {
-	"KnoxKnews",
-	"KnoxKnews",
-	"LouisvilleSunTimes",
-	"KentuckyHerald",
-}
-PrintMediaDefinitions.RegionalPapers.Muldraugh = {
-	"KentuckyHerald",
-}
-PrintMediaDefinitions.RegionalPapers.General = {
-	"KnoxKnews",
-	"KentuckyHerald",
+PrintMediaDefinitions.RegionalPapers = {
+	Louisville = {
+		"LouisvilleSunTimes",
+		"LouisvilleSunTimes",
+		"KentuckyHerald",
+		"KentuckyHerald",
+	},
+	MarchRidge = {
+		"KnoxKnews",
+		"KnoxKnews",
+		"LouisvilleSunTimes",
+		"KentuckyHerald",
+	},
+	Muldraugh = {
+		"KentuckyHerald",
+	},
+	General = {
+		"KnoxKnews",
+		"KentuckyHerald",
+	},
 }

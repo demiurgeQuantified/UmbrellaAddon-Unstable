@@ -1,40 +1,36 @@
 ---@meta
 
 ---@class ISGrabCorpseAction : ISBaseTimedAction
----@field corpse any
----@field corpseBody any
----@field forceProgressBar any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field corpse unknown
+---@field corpseBody unknown?
+---@field forceProgressBar boolean
+---@field sound unknown
 ISGrabCorpseAction = ISBaseTimedAction:derive("ISGrabCorpseAction")
+ISGrabCorpseAction.Type = "ISGrabCorpseAction"
 
----@return any
+---@return boolean?
 function ISGrabCorpseAction:complete() end
 
----@return any
+---@return number
 function ISGrabCorpseAction:getDuration() end
 
----@return any
+---@return boolean
 function ISGrabCorpseAction:isValid() end
 
----@return any
 function ISGrabCorpseAction:perform() end
 
----@return any
 function ISGrabCorpseAction:start() end
 
----@return any
 function ISGrabCorpseAction:stop() end
 
----@return any
 function ISGrabCorpseAction:stopSound() end
 
----@return any
 function ISGrabCorpseAction:update() end
 
----@return any
+---@return unknown
 function ISGrabCorpseAction:waitToStart() end
 
+---@param character unknown?
+---@param corpseBody unknown?
 ---@return ISGrabCorpseAction
 function ISGrabCorpseAction:new(character, corpseBody) end

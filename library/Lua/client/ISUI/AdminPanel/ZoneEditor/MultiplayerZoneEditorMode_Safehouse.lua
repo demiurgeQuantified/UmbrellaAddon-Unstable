@@ -1,242 +1,304 @@
 ---@meta
 
 ---@class MultiplayerZoneEditorMode_Safehouse : MultiplayerZoneEditorMode
----@field addButton any
----@field delaySelectTitle any
----@field detailsPanel any
----@field listbox any
----@field modalUI any
----@field mode any
----@field resizeMode any
----@field resizer any
----@field selectedZone any
----@field snapMode any
----@field [any] any
+---@field addButton ISButton
+---@field delaySelectTitle unknown?
+---@field detailsPanel MultiplayerZoneEditorMode_Safehouse_Details
+---@field listbox ISScrollingListBox
+---@field modalUI MultiplayerZoneEditorMode_Safehouse_Confirm?
+---@field mode string?
+---@field resizeMode string?
+---@field resizer WorldMapEditorResizer
+---@field selectedZone unknown?
+---@field snapMode string
 MultiplayerZoneEditorMode_Safehouse = MultiplayerZoneEditorMode:derive("MultiplayerZoneEditorMode_Safehouse")
+MultiplayerZoneEditorMode_Safehouse.Type = "MultiplayerZoneEditorMode_Safehouse"
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:cancelResize() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:createChildren() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:createNewZone(x1, y1, x2, y2) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:fillList() end
 
----@return any
+---@return unknown
 function MultiplayerZoneEditorMode_Safehouse:getPlayer() end
 
----@return any
+---@return unknown?
 function MultiplayerZoneEditorMode_Safehouse:getSelectedZone() end
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:isNewZoneValid(x1, y1, x2, y2) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:onAddZone() end
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:onKeyRelease(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:onMouseUpOutside(x, y) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:onNewZoneNameEntered(button) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse:onRightMouseDown(x, y) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:prerender() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:render() end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function MultiplayerZoneEditorMode_Safehouse:renderRect(x1, y1, x2, y2, r, g, b, a) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:renderResizer() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:selectedZoneChanged() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:setZoneBounds(x1, y1, x2, y2) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse:undisplay() end
 
 ---@return MultiplayerZoneEditorMode_Safehouse
 function MultiplayerZoneEditorMode_Safehouse:new(editor) end
 
 ---@class MultiplayerZoneEditorMode_Safehouse_Confirm : ISPanelJoypad
----@field backgroundColor any
----@field borderColor any
----@field entryOwner any
----@field entryTitle any
----@field ISButtonA any
----@field ISButtonB any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field name any
----@field no any
----@field onclick any
----@field player any
----@field target any
----@field titlebarbkg any
----@field x any
----@field y any
----@field yes any
----@field [any] any
-MultiplayerZoneEditorMode_Safehouse_Confirm = ISPanelJoypad:derive("MultiplayerZoneEditorMode_Safehouse_Confirm")
+---@field entryOwner ISTextEntryBox
+---@field entryTitle ISTextEntryBox
+---@field name unknown?
+---@field no ISButton
+---@field onclick unknown
+---@field player unknown?
+---@field target MultiplayerZoneEditorMode_Safehouse
+---@field titlebarbkg unknown
+---@field yes ISButton
+MultiplayerZoneEditorMode_Safehouse_Confirm = ISPanelJoypad:derive("SafehouseConfirm")
+MultiplayerZoneEditorMode_Safehouse_Confirm.Type = "SafehouseConfirm"
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:close() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:createChildren() end
 
----@return any
+---@param x number
+---@param y number
+---@param height number
+---@return ISLabel
+---@return ISTextEntryBox
 function MultiplayerZoneEditorMode_Safehouse_Confirm:createLabelPlusEntry(x, y, height, labelText) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onClick(button) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onGainJoypadFocus(joypadData) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onJoypadDirDown(joypadData) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onJoypadDirUp(joypadData) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function MultiplayerZoneEditorMode_Safehouse_Confirm:onMouseMoveOutside(dx, dy) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:prerender() end
 
----@return any
+---@return number
 function MultiplayerZoneEditorMode_Safehouse_Confirm:titleBarHeight() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Confirm:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target MultiplayerZoneEditorMode_Safehouse
+---@param player unknown?
 ---@return MultiplayerZoneEditorMode_Safehouse_Confirm
 function MultiplayerZoneEditorMode_Safehouse_Confirm:new(x, y, width, height, target, onclick, player) end
 
 ---@class MultiplayerZoneEditorMode_Safehouse_Details : ISPanel
----@field addPlayer any
----@field addPlayerUI any
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field changeOwnership any
----@field changeTitle any
----@field height any
----@field modalUI any
----@field owner any
----@field player any
----@field playerList any
----@field quitSafehouse any
----@field refreshPlayerList any
----@field releaseSafehouse any
----@field removePlayer any
----@field respawn any
----@field safehouse any
----@field selectedPlayer any
----@field title any
----@field updateTick any
----@field updateTickMax any
----@field width any
----@field [any] any
+---@field addPlayer ISButton
+---@field addPlayerUI unknown
+---@field buttonBorderColor table
+---@field changeOwnership ISButton
+---@field changeTitle ISButton
+---@field modalUI table?
+---@field owner ISLabel
+---@field player unknown
+---@field playerList ISScrollingListBox
+---@field quitSafehouse ISButton
+---@field refreshPlayerList ISButton
+---@field releaseSafehouse ISButton
+---@field removePlayer ISButton
+---@field respawn ISTickBox
+---@field safehouse unknown?
+---@field selectedPlayer unknown?
+---@field title ISLabel
+---@field updateTick number
+---@field updateTickMax number
 MultiplayerZoneEditorMode_Safehouse_Details = ISPanel:derive("MultiplayerZoneEditorMode_Safehouse_Details")
+MultiplayerZoneEditorMode_Safehouse_Details.Type = "MultiplayerZoneEditorMode_Safehouse_Details"
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details.OnSafehousesChanged() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:createChildren() end
 
----@return any
+---@return number
 function MultiplayerZoneEditorMode_Safehouse_Details:drawPlayers(y, item, alt) end
 
----@return any
+---@return unknown
 function MultiplayerZoneEditorMode_Safehouse_Details:hasPrivilegedAccessLevel() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:hideModalUI() end
 
----@return any
+---@return boolean?
 function MultiplayerZoneEditorMode_Safehouse_Details:isMember() end
 
----@return any
+---@return boolean?
 function MultiplayerZoneEditorMode_Safehouse_Details:isOwner() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onChangeTitle(button) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onClick(button) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onClickRespawn(clickedOption, enabled) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onQuitSafehouse(button) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onReleaseSafehouse(button, player) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onRemovePlayerFromSafehouse(button, player) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:onSafehousesChanged() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:populateList() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:prerender() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:render() end
 
----@return any
+---@param safehouse unknown?
 function MultiplayerZoneEditorMode_Safehouse_Details:setSafehouse(safehouse) end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:updateButtons() end
 
----@return any
 function MultiplayerZoneEditorMode_Safehouse_Details:updatePlayerList() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return MultiplayerZoneEditorMode_Safehouse_Details
 function MultiplayerZoneEditorMode_Safehouse_Details:new(x, y, width, height, player) end
+
+---@class DetailsPanel
+---@field addPlayer ISButton
+---@field addPlayerUI unknown
+---@field backgroundColor table
+---@field borderColor table
+---@field buttonBorderColor table
+---@field changeOwnership ISButton
+---@field changeTitle ISButton
+---@field height number
+---@field modalUI table?
+---@field owner ISLabel
+---@field player unknown
+---@field playerList ISScrollingListBox
+---@field quitSafehouse ISButton
+---@field refreshPlayerList ISButton
+---@field releaseSafehouse ISButton
+---@field removePlayer ISButton
+---@field respawn ISTickBox
+---@field safehouse unknown?
+---@field selectedPlayer unknown?
+---@field title ISLabel
+---@field updateTick number
+---@field updateTickMax number
+---@field width number
+DetailsPanel = {}
+
+function DetailsPanel.OnSafehousesChanged() end
+
+function DetailsPanel:createChildren() end
+
+---@return number
+function DetailsPanel:drawPlayers(y, item, alt) end
+
+---@return unknown
+function DetailsPanel:hasPrivilegedAccessLevel() end
+
+function DetailsPanel:hideModalUI() end
+
+---@return boolean?
+function DetailsPanel:isMember() end
+
+---@return boolean?
+function DetailsPanel:isOwner() end
+
+function DetailsPanel:onChangeTitle(button) end
+
+function DetailsPanel:onClick(button) end
+
+function DetailsPanel:onClickRespawn(clickedOption, enabled) end
+
+function DetailsPanel:onQuitSafehouse(button) end
+
+function DetailsPanel:onReleaseSafehouse(button, player) end
+
+function DetailsPanel:onRemovePlayerFromSafehouse(button, player) end
+
+function DetailsPanel:onSafehousesChanged() end
+
+function DetailsPanel:populateList() end
+
+function DetailsPanel:prerender() end
+
+function DetailsPanel:render() end
+
+---@param safehouse unknown?
+function DetailsPanel:setSafehouse(safehouse) end
+
+function DetailsPanel:updateButtons() end
+
+function DetailsPanel:updatePlayerList() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return MultiplayerZoneEditorMode_Safehouse_Details
+function DetailsPanel:new(x, y, width, height, player) end

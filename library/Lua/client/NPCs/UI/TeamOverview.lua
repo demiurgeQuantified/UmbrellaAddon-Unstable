@@ -1,26 +1,26 @@
 ---@meta
 
 ---@class TeamOverview : ISCollapsableWindow
----@field a any
----@field b any
----@field c any
----@field group any
----@field leader any
----@field memberList any
----@field [any] any
+---@field a unknown
+---@field b unknown
+---@field c unknown
+---@field group unknown
+---@field leader unknown
+---@field memberList ISScrollingListBox
 TeamOverview = ISCollapsableWindow:derive("TeamOverview")
+TeamOverview.Type = "TeamOverview"
 
----@return any
 function TeamOverview:createChildren() end
 
----@return any
 function TeamOverview:drawMember(y, item, alt) end
 
----@return any
 function TeamOverview:initialise() end
 
----@return any
 function TeamOverview:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return TeamOverview
 function TeamOverview:new(x, y, width, height, leaderInstance) end

@@ -1,39 +1,37 @@
 ---@meta
 
 ---@class ISCurePlantAction : ISBaseTimedAction
----@field character any
----@field cure any
----@field item any
----@field maxTime any
----@field plant any
----@field sound any
----@field uses any
----@field [any] any
+---@field cure string
+---@field item unknown?
+---@field plant unknown
+---@field sound unknown
+---@field uses number
 ISCurePlantAction = ISBaseTimedAction:derive("ISCurePlantAction")
+ISCurePlantAction.Type = "ISCurePlantAction"
 
----@return any
+---@return boolean
 function ISCurePlantAction:complete() end
 
----@return any
+---@return number
 function ISCurePlantAction:getDuration() end
 
----@return any
+---@return boolean
 function ISCurePlantAction:isValid() end
 
----@return any
 function ISCurePlantAction:perform() end
 
----@return any
 function ISCurePlantAction:start() end
 
----@return any
 function ISCurePlantAction:stop() end
 
----@return any
 function ISCurePlantAction:update() end
 
----@return any
+---@return unknown
 function ISCurePlantAction:waitToStart() end
 
+---@param item unknown?
+---@param uses number
+---@param maxTime number
+---@param cure string
 ---@return ISCurePlantAction
 function ISCurePlantAction:new(character, item, uses, plant, maxTime, cure) end

@@ -1,136 +1,102 @@
 ---@meta
 
 ---@class ISRadioWindow : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field collapseCounter any
----@field device any
----@field deviceData any
----@field deviceType any
----@field drawFrame any
----@field drawJoypadFocus any
----@field height any
----@field hotKeyPanels any
----@field isCollapsed any
----@field isJoypadWindow any
----@field modules any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field subFocus any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field device unknown?
+---@field deviceData unknown?
+---@field deviceType string?
+---@field drawJoypadFocus boolean
+---@field hotKeyPanels table
+---@field isJoypadWindow boolean
+---@field modules table
+---@field overrideBPrompt boolean
+---@field player unknown?
+---@field playerNum unknown
+---@field subFocus unknown?
+---@field title string
 ISRadioWindow = ISCollapsableWindow:derive("ISRadioWindow")
+ISRadioWindow.Type = "ISRadioWindow"
 ISRadioWindow.instances = {}
 ISRadioWindow.instancesIso = {}
 
----@return any
+---@return ISRadioWindow
 function ISRadioWindow.activate(_player, _deviceObject) end
 
----@return any
 function ISRadioWindow.closeIfActive(_player, _deviceObject) end
 
----@return any
+---@return boolean
 function ISRadioWindow.isActive(_player, _deviceObject) end
 
----@return any
 function ISRadioWindow.onEquip(_player, _item) end
 
----@return any
+---@param _modulePanel table
+---@param _moduleName string
+---@param _enable boolean
 function ISRadioWindow:addModule(_modulePanel, _moduleName, _enable) end
 
----@return any
 function ISRadioWindow:clear() end
 
----@return any
 function ISRadioWindow:close() end
 
----@return any
-function ISRadioWindow:close() end
-
----@return any
 function ISRadioWindow:createChildren() end
 
----@return any
 function ISRadioWindow:focusNext(_up) end
 
----@return any
 function ISRadioWindow:focusSelf() end
 
----@return any
+---@return string?
 function ISRadioWindow:getAPrompt() end
 
----@return any
+---@return string
 function ISRadioWindow:getBPrompt() end
 
----@return any
+---@return string
 function ISRadioWindow:getLBPrompt() end
 
----@return any
+---@return string
 function ISRadioWindow:getRBPrompt() end
 
----@return any
+---@return string?
 function ISRadioWindow:getXPrompt() end
 
----@return any
+---@return string?
 function ISRadioWindow:getYPrompt() end
 
----@return any
 function ISRadioWindow:initialise() end
 
----@return any
+---@return unknown?
 function ISRadioWindow:isValidPrompt() end
 
----@return any
 function ISRadioWindow:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISRadioWindow:onJoypadDirDown() end
 
----@return any
 function ISRadioWindow:onJoypadDirLeft() end
 
----@return any
 function ISRadioWindow:onJoypadDirRight() end
 
----@return any
 function ISRadioWindow:onJoypadDirUp() end
 
----@return any
 function ISRadioWindow:onJoypadDown(button) end
 
----@return any
 function ISRadioWindow:onLoseJoypadFocus(joypadData) end
 
----@return any
 function ISRadioWindow:prerender() end
 
----@return any
 function ISRadioWindow:readFromObject(_player, _deviceObject) end
 
----@return any
 function ISRadioWindow:render() end
 
----@return any
 function ISRadioWindow:setSubFocus(_newFocus) end
 
----@return any
 function ISRadioWindow:stayOnSplitScreen() end
 
----@return any
 function ISRadioWindow:unfocusSelf() end
 
----@return any
 function ISRadioWindow:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISRadioWindow
 function ISRadioWindow:new(x, y, width, height, player) end

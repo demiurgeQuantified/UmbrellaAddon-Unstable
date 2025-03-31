@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISAnimalZoneFirstInfo : ISPanelJoypad
----@field backgroundColor any
----@field borderColor any
----@field okBtn any
----@field playerNum any
----@field rich any
----@field x any
----@field y any
----@field [any] any
+---@field okBtn ISButton
+---@field playerNum number
+---@field rich ISRichTextPanel
 ISAnimalZoneFirstInfo = ISPanelJoypad:derive("ISAnimalZoneFirstInfo")
+ISAnimalZoneFirstInfo.Type = "ISAnimalZoneFirstInfo"
 
----@return any
+---@param playerNum number
+---@param force boolean
 function ISAnimalZoneFirstInfo.showUI(playerNum, force) end
 
----@return any
 function ISAnimalZoneFirstInfo:initialise() end
 
----@return any
 function ISAnimalZoneFirstInfo:onClickOk() end
 
----@return any
 function ISAnimalZoneFirstInfo:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISAnimalZoneFirstInfo:prerender() end
 
----@return any
 function ISAnimalZoneFirstInfo:render() end
 
+---@param x number
+---@param y number
+---@param playerNum number
 ---@return ISAnimalZoneFirstInfo
 function ISAnimalZoneFirstInfo:new(x, y, playerNum) end

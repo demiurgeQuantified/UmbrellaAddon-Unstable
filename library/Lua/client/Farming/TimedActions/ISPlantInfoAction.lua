@@ -1,28 +1,23 @@
 ---@meta
 
 ---@class ISPlantInfoAction : ISBaseTimedAction
----@field maxTime any
----@field plant any
----@field playerNum any
----@field [any] any
+---@field plant unknown
+---@field playerNum unknown
 ISPlantInfoAction = ISBaseTimedAction:derive("ISPlantInfoAction")
+ISPlantInfoAction.Type = "ISPlantInfoAction"
 
----@return any
+---@return boolean
 function ISPlantInfoAction:isValid() end
 
----@return any
 function ISPlantInfoAction:perform() end
 
----@return any
 function ISPlantInfoAction:start() end
 
----@return any
 function ISPlantInfoAction:stop() end
 
----@return any
 function ISPlantInfoAction:update() end
 
----@return any
+---@return unknown
 function ISPlantInfoAction:waitToStart() end
 
 ---@return ISPlantInfoAction

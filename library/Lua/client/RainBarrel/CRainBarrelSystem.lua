@@ -2,11 +2,12 @@
 
 ---@class CRainBarrelSystem : CGlobalObjectSystem
 CRainBarrelSystem = CGlobalObjectSystem:derive("CRainBarrelSystem")
+CRainBarrelSystem.Type = "CRainBarrelSystem"
 
----@return any
+---@return boolean
 function CRainBarrelSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return CRainBarrelGlobalObject
 function CRainBarrelSystem:newLuaObject(globalObject) end
 
 ---@return CRainBarrelSystem

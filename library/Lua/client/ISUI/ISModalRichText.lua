@@ -1,64 +1,55 @@
 ---@meta
 
 ---@class ISModalRichText : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field chatText any
----@field destroyOnClick any
----@field height any
----@field name any
----@field no any
----@field ok any
----@field onclick any
----@field param1 any
----@field param2 any
----@field player any
----@field target any
----@field text any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field yesno any
----@field [any] any
+---@field chatText ISRichTextPanel
+---@field destroyOnClick boolean
+---@field name unknown?
+---@field no ISButton?
+---@field ok ISButton?
+---@field onclick unknown?
+---@field param1 unknown
+---@field param2 unknown
+---@field player number?
+---@field target unknown?
+---@field text string
+---@field yes ISButton?
+---@field yesno boolean
 ISModalRichText = ISPanelJoypad:derive("ISModalRichText")
+ISModalRichText.Type = "ISModalRichText"
 
----@return any
 function ISModalRichText:destroy() end
 
----@return any
 function ISModalRichText:initialise() end
 
----@return any
 function ISModalRichText:onClick(button) end
 
----@return any
 function ISModalRichText:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISModalRichText:onJoypadDown(button) end
 
----@return any
 function ISModalRichText:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISModalRichText:onMouseDown(x, y) end
 
----@return any
 function ISModalRichText:prerender() end
 
----@return any
 function ISModalRichText:setHeightToContents() end
 
----@return any
 function ISModalRichText:update() end
 
----@return any
 function ISModalRichText:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param text string
+---@param yesno boolean
+---@param target unknown?
+---@param onclick unknown?
+---@param player number?
 ---@return ISModalRichText
 function ISModalRichText:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

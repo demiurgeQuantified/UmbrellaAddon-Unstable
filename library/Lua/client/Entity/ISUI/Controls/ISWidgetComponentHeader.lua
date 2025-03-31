@@ -1,43 +1,40 @@
 ---@meta
 
 ---@class ISWidgetComponentHeader : ISPanel
----@field component any
----@field componentUiStyle any
----@field enableIcon any
----@field entity any
----@field icon any
----@field iconSize any
----@field margin any
----@field padding any
----@field player any
----@field styleIcon any
----@field styleLabel any
----@field textureBackground any
----@field title any
----@field [any] any
+---@field component unknown
+---@field componentUiStyle unknown
+---@field enableIcon boolean
+---@field entity unknown
+---@field icon unknown?
+---@field iconSize number
+---@field margin number
+---@field padding number
+---@field player unknown
+---@field styleIcon unknown
+---@field styleLabel unknown
+---@field textureBackground unknown?
+---@field title unknown?
 ISWidgetComponentHeader = ISPanel:derive("ISWidgetComponentHeader")
+ISWidgetComponentHeader.Type = "ISWidgetComponentHeader"
 
----@return any
 function ISWidgetComponentHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetComponentHeader:createChildren() end
 
----@return any
 function ISWidgetComponentHeader:initialise() end
 
----@return any
 function ISWidgetComponentHeader:onResize() end
 
----@return any
 function ISWidgetComponentHeader:prerender() end
 
----@return any
 function ISWidgetComponentHeader:render() end
 
----@return any
 function ISWidgetComponentHeader:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetComponentHeader
 function ISWidgetComponentHeader:new(
 	x,

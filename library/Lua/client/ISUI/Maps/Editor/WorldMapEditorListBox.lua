@@ -1,68 +1,66 @@
 ---@meta
 
 ---@class WorldMapEditorListBox : ISPanel
----@field arg1 any
----@field arg2 any
----@field arg3 any
----@field arg4 any
----@field buttonAdd any
----@field buttonMoveDown any
----@field buttonMoveUp any
----@field buttonRemove any
----@field callback any
----@field listbox any
----@field selectedItem any
----@field target any
----@field [any] any
+---@field arg1 unknown
+---@field arg2 unknown
+---@field arg3 unknown
+---@field arg4 unknown
+---@field buttonAdd ISButton
+---@field buttonMoveDown ISButton
+---@field buttonMoveUp ISButton
+---@field buttonRemove ISButton
+---@field callback unknown
+---@field listbox ISScrollingListBox
+---@field selectedItem number
+---@field target table
 WorldMapEditorListBox = ISPanel:derive("WorldMapEditorListBox")
+WorldMapEditorListBox.Type = "WorldMapEditorListBox"
 
----@return any
 function WorldMapEditorListBox:addItem(text, data) end
 
----@return any
 function WorldMapEditorListBox:clear() end
 
----@return any
 function WorldMapEditorListBox:createChildren() end
 
----@return any
+---@return unknown
 function WorldMapEditorListBox:getItemByIndex(index) end
 
----@return any
+---@return ISScrollingListBox
 function WorldMapEditorListBox:getListBox() end
 
----@return any
+---@return number?
 function WorldMapEditorListBox:getSelectedIndex() end
 
----@return any
+---@return unknown
 function WorldMapEditorListBox:getSelectedItem() end
 
----@return any
+---@param index number
+---@param data unknown?
 function WorldMapEditorListBox:insertItem(index, text, data) end
 
----@return any
 function WorldMapEditorListBox:onAddItem() end
 
----@return any
 function WorldMapEditorListBox:onMoveDown() end
 
----@return any
 function WorldMapEditorListBox:onMoveUp() end
 
----@return any
 function WorldMapEditorListBox:onRemoveItem() end
 
----@return any
 function WorldMapEditorListBox:prerender() end
 
----@return any
+---@param index number?
 function WorldMapEditorListBox:removeItemByIndex(index) end
 
----@return any
+---@param index number?
 function WorldMapEditorListBox:setSelectedIndex(index) end
 
----@return any
+---@return number
 function WorldMapEditorListBox:size() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target table
 ---@return WorldMapEditorListBox
 function WorldMapEditorListBox:new(x, y, width, height, callback, target, arg1, arg2, arg3, arg4) end

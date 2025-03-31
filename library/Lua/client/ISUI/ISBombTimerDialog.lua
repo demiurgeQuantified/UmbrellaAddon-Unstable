@@ -1,70 +1,56 @@
 ---@meta
 
 ---@class ISBombTimerDialog : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field button10m any
----@field button10p any
----@field button1m any
----@field button1p any
----@field button5m any
----@field button5p any
----@field height any
----@field joypadIndex any
----@field joypadIndexY any
----@field name any
----@field no any
----@field param1 any
----@field param2 any
----@field param3 any
----@field param4 any
----@field player any
----@field playerNum any
----@field playerX any
----@field playerY any
----@field prompt any
----@field target any
----@field targetFunc any
----@field textBox any
----@field time any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field [any] any
+---@field button10m ISButton
+---@field button10p ISButton
+---@field button1m ISButton
+---@field button1p ISButton
+---@field button5m ISButton
+---@field button5p ISButton
+---@field name unknown?
+---@field no ISButton
+---@field param1 unknown
+---@field param2 unknown
+---@field param3 unknown
+---@field param4 unknown
+---@field player unknown
+---@field playerNum unknown
+---@field playerX unknown
+---@field playerY unknown
+---@field prompt string
+---@field target unknown?
+---@field targetFunc unknown
+---@field textBox ISTextEntryBox
+---@field time unknown
+---@field yes ISButton
 ISBombTimerDialog = ISPanelJoypad:derive("ISBombTimerDialog")
+ISBombTimerDialog.Type = "ISBombTimerDialog"
 
----@return any
 function ISBombTimerDialog:addTime(seconds) end
 
----@return any
 function ISBombTimerDialog:destroy() end
 
----@return any
+---@return number?
 function ISBombTimerDialog:getTime() end
 
----@return any
 function ISBombTimerDialog:initialise() end
 
----@return any
 function ISBombTimerDialog:onButton(button) end
 
----@return any
 function ISBombTimerDialog:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISBombTimerDialog:onJoypadDown(button) end
 
----@return any
 function ISBombTimerDialog:prerender() end
 
----@return any
 function ISBombTimerDialog:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param prompt string
+---@param target unknown?
 ---@return ISBombTimerDialog
 function ISBombTimerDialog:new(
 	x,

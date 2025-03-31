@@ -1,31 +1,25 @@
 ---@meta
 
 ---@class CreateChumFromGroundSandAction : ISBaseTimedAction
----@field character any
----@field maxTime any
----@field square any
----@field [any] any
+---@field square unknown
 CreateChumFromGroundSandAction = ISBaseTimedAction:derive("CreateChumFromGroundSandAction")
+CreateChumFromGroundSandAction.Type = "CreateChumFromGroundSandAction"
 
----@return any
+---@return boolean
 function CreateChumFromGroundSandAction:complete() end
 
----@return any
+---@return number
 function CreateChumFromGroundSandAction:getDuration() end
 
----@return any
+---@return boolean
 function CreateChumFromGroundSandAction:isValid() end
 
----@return any
 function CreateChumFromGroundSandAction:perform() end
 
----@return any
 function CreateChumFromGroundSandAction:start() end
 
----@return any
 function CreateChumFromGroundSandAction:stop() end
 
----@return any
 function CreateChumFromGroundSandAction:update() end
 
 ---@return CreateChumFromGroundSandAction

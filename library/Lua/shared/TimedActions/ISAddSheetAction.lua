@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISAddSheetAction : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field [any] any
+---@field item unknown
 ISAddSheetAction = ISBaseTimedAction:derive("ISAddSheetAction")
+ISAddSheetAction.Type = "ISAddSheetAction"
 
----@return any
+---@return boolean
 function ISAddSheetAction:complete() end
 
----@return any
+---@return number
 function ISAddSheetAction:getDuration() end
 
----@return any
+---@return boolean
 function ISAddSheetAction:isValid() end
 
----@return any
 function ISAddSheetAction:perform() end
 
----@return any
 function ISAddSheetAction:start() end
 
----@return any
 function ISAddSheetAction:stop() end
 
----@return any
 function ISAddSheetAction:update() end
 
----@return any
+---@return unknown
 function ISAddSheetAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISAddSheetAction
 function ISAddSheetAction:new(character, item) end

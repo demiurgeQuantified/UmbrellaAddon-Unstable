@@ -1,44 +1,36 @@
 ---@meta
 
 ---@class ISWallpaperAction : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field isThump any
----@field maxTime any
----@field papering any
----@field sound any
----@field sprite any
----@field thumpable any
----@field wallpaper any
----@field wallType any
----@field [any] any
+---@field isThump boolean
+---@field papering unknown
+---@field sound unknown
+---@field sprite unknown
+---@field thumpable unknown
+---@field wallpaper unknown
+---@field wallType unknown
 ISWallpaperAction = ISBaseTimedAction:derive("ISWallpaperAction")
+ISWallpaperAction.Type = "ISWallpaperAction"
 
----@return any
+---@return boolean
 function ISWallpaperAction:complete() end
 
----@return any
+---@return number
 function ISWallpaperAction:getDuration() end
 
----@return any
+---@return boolean
 function ISWallpaperAction:isValid() end
 
----@return any
 function ISWallpaperAction:perform() end
 
----@return any
 function ISWallpaperAction:serverStart() end
 
----@return any
 function ISWallpaperAction:start() end
 
----@return any
 function ISWallpaperAction:stop() end
 
----@return any
 function ISWallpaperAction:update() end
 
----@return any
+---@return unknown
 function ISWallpaperAction:waitToStart() end
 
 ---@return ISWallpaperAction

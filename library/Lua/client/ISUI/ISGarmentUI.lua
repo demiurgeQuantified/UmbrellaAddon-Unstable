@@ -1,118 +1,113 @@
 ---@meta
 
 ---@class ISGarmentUI : ISCollapsableWindow
----@field actionToBodyPart any
----@field addedHeight any
----@field backgroundColor any
----@field biteColumn any
----@field bodyPartAction any
----@field bodyPartColumn any
----@field borderColor any
----@field bulletColumn any
----@field chr any
----@field clothing any
----@field drawJoypadFocus any
----@field listbox any
----@field noRepairWidth any
----@field parts any
----@field playerNum any
----@field progressHeight any
----@field progressWidth any
----@field progressWidth1 any
----@field progressWidth2 any
----@field progressWidth3 any
----@field progressWidthTotal any
----@field progressX1 any
----@field progressX2 any
----@field progressX3 any
----@field progressY any
----@field scratchColumn any
----@field sex any
----@field textures any
----@field texturesHeight any
----@field texturesY any
----@field texturesYOffset any
----@field title any
----@field [any] any
+---@field actionToBodyPart table
+---@field addedHeight number
+---@field biteColumn number
+---@field bodyPartAction table
+---@field bodyPartColumn unknown
+---@field bulletColumn unknown
+---@field chr unknown
+---@field clothing unknown
+---@field drawJoypadFocus boolean
+---@field listbox ISScrollingListBox
+---@field noRepairWidth unknown
+---@field parts table
+---@field playerNum unknown
+---@field progressHeight number
+---@field progressWidth number
+---@field progressWidth1 unknown
+---@field progressWidth2 unknown
+---@field progressWidth3 unknown
+---@field progressWidthTotal number
+---@field progressX1 number
+---@field progressX2 number
+---@field progressX3 number
+---@field progressY number
+---@field scratchColumn unknown
+---@field sex string
+---@field textures table
+---@field texturesHeight number
+---@field texturesY number
+---@field texturesYOffset number
+---@field title unknown
 ISGarmentUI = ISCollapsableWindow:derive("ISGarmentUI")
+ISGarmentUI.Type = "ISGarmentUI"
 ISGarmentUI.windows = {}
 ISGarmentUI.ghs = "<GHC>"
 ISGarmentUI.bhs = "<BHC>"
 
----@return any
+---@param action (ISRemovePatch | ISRepairClothing)?
+---@param jobType string?
+---@param args table?
 function ISGarmentUI.setBodyPartActionForPlayer(playerObj, bodyPart, action, jobType, args) end
 
----@return any
 function ISGarmentUI.setBodyPartForLastAction(playerObj, bodyPart) end
 
----@return any
 function ISGarmentUI.setOtherActionForPlayer(playerObj, bodyPart, action) end
 
----@return any
+---@param type string
+---@param textureName string
+---@param overlayName string
 function ISGarmentUI:addTextures(type, textureName, overlayName) end
 
----@return any
 function ISGarmentUI:calcColumnWidths() end
 
----@return any
 function ISGarmentUI:calcProgressPositions() end
 
----@return any
 function ISGarmentUI:calcProgressWidths() end
 
----@return any
+---@param doListHeight boolean
 function ISGarmentUI:calculateHeight(doListHeight) end
 
----@return any
 function ISGarmentUI:close() end
 
----@return any
 function ISGarmentUI:create() end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function ISGarmentUI:doContextMenu(part, x, y) end
 
----@return any
+---@return number
 function ISGarmentUI:doDrawItem(y, item, alt) end
 
----@return any
+---@param submenu unknown?
+---@return unknown?
 function ISGarmentUI:doPatch(fabric, thread, needle, part, context, submenu) end
 
----@return any
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 function ISGarmentUI:drawBar(x, y, width, height, percent, highGood) end
 
----@return any
+---@return number
 function ISGarmentUI:getPaddablePartsNumber(clothing, parts) end
 
----@return any
 function ISGarmentUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISGarmentUI:onBodyPartListRightMouseUp(x, y) end
 
----@return any
 function ISGarmentUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISGarmentUI:onJoypadDirDown(joypadData) end
 
----@return any
 function ISGarmentUI:onJoypadDirUp(joypadData) end
 
----@return any
 function ISGarmentUI:onJoypadDown(button, joypadData) end
 
----@return any
 function ISGarmentUI:render() end
 
----@return any
 function ISGarmentUI:setBodyPartAction(bodyPart, args) end
 
----@return any
 function ISGarmentUI:setBodyPartForAction(action, bodyPart) end
 
----@return any
 function ISGarmentUI:update() end
 
+---@param x number
+---@param y number
 ---@return ISGarmentUI
 function ISGarmentUI:new(x, y, character, clothing) end

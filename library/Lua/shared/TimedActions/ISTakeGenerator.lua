@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISTakeGenerator : ISBaseTimedAction
----@field generator any
----@field maxTime any
----@field [any] any
+---@field generator unknown
 ISTakeGenerator = ISBaseTimedAction:derive("ISTakeGenerator")
+ISTakeGenerator.Type = "ISTakeGenerator"
 
----@return any
+---@return boolean
 function ISTakeGenerator:complete() end
 
----@return any
+---@return number
 function ISTakeGenerator:getDuration() end
 
----@return any
+---@return boolean
 function ISTakeGenerator:isValid() end
 
----@return any
 function ISTakeGenerator:perform() end
 
----@return any
 function ISTakeGenerator:start() end
 
----@return any
 function ISTakeGenerator:stop() end
 
----@return any
 function ISTakeGenerator:update() end
 
----@return any
+---@return unknown
 function ISTakeGenerator:waitToStart() end
 
+---@param character unknown?
 ---@return ISTakeGenerator
 function ISTakeGenerator:new(character, generator) end

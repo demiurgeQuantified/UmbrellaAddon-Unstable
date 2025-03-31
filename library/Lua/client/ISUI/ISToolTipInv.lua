@@ -1,72 +1,67 @@
 ---@meta
 
 ---@class ISToolTipInv : ISPanel
----@field anchorBottom any
----@field anchorBottomLeft any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field followMouse any
----@field height any
----@field item any
----@field owner any
----@field tooltip any
----@field toolTipDone any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field anchorBottomLeft unknown?
+---@field followMouse boolean
+---@field item unknown?
+---@field owner table?
+---@field tooltip unknown
+---@field toolTipDone boolean
 ISToolTipInv = ISPanel:derive("ISToolTipInv")
+ISToolTipInv.Type = "ISToolTipInv"
 
----@return any
 function ISToolTipInv:adjustPositionToAvoidOverlap(avoidRect) end
 
----@return any
 function ISToolTipInv:initialise() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTipInv:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISToolTipInv:onMouseDownOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTipInv:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTipInv:onRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTipInv:onRightMouseUp(x, y) end
 
----@return any
+---@return boolean
 function ISToolTipInv:overlaps(r1, r2) end
 
----@return any
+---@return unknown
 function ISToolTipInv:placeAbove(r1, r2) end
 
----@return any
+---@return unknown
 function ISToolTipInv:placeLeft(r1, r2) end
 
----@return any
+---@return unknown
 function ISToolTipInv:placeRight(r1, r2) end
 
----@return any
 function ISToolTipInv:prerender() end
 
----@return any
 function ISToolTipInv:render() end
 
----@return any
 function ISToolTipInv:setCharacter(chr) end
 
----@return any
+---@param item unknown?
 function ISToolTipInv:setItem(item) end
 
----@return any
+---@param ui table
 function ISToolTipInv:setOwner(ui) end
 
+---@param item unknown?
 ---@return ISToolTipInv
 function ISToolTipInv:new(item) end

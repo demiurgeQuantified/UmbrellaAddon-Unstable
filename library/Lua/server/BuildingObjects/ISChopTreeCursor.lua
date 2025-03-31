@@ -1,24 +1,30 @@
 ---@meta
 
 ---@class ISChopTreeCursor : ISBuildingObject
----@field character any
----@field noNeedHammer any
----@field player any
----@field skipBuildAction any
----@field [any] any
+---@field character unknown
+---@field noNeedHammer boolean
+---@field player unknown
+---@field skipBuildAction boolean
 ISChopTreeCursor = ISBuildingObject:derive("ISChopTreeCursor")
+ISChopTreeCursor.Type = "ISChopTreeCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISChopTreeCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string?
 function ISChopTreeCursor:getAPrompt() end
 
----@return any
+---@return unknown
 function ISChopTreeCursor:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISChopTreeCursor:render(x, y, z, square) end
 
+---@param sprite string
+---@param northSprite string
 ---@return ISChopTreeCursor
 function ISChopTreeCursor:new(sprite, northSprite, character) end

@@ -1,35 +1,29 @@
 ---@meta
 
 ---@class AIAttachLureAction : ISBaseTimedAction
----@field lure any
----@field maxTime any
----@field rod any
----@field sound any
----@field [any] any
+---@field lure unknown
+---@field rod unknown
+---@field sound unknown
 AIAttachLureAction = ISBaseTimedAction:derive("AIAttachLureAction")
+AIAttachLureAction.Type = "AIAttachLureAction"
 
----@return any
+---@return boolean
 function AIAttachLureAction:complete() end
 
----@return any
+---@return number
 function AIAttachLureAction:getDuration() end
 
----@return any
+---@return unknown?
 function AIAttachLureAction:isValid() end
 
----@return any
 function AIAttachLureAction:perform() end
 
----@return any
 function AIAttachLureAction:start() end
 
----@return any
 function AIAttachLureAction:stop() end
 
----@return any
 function AIAttachLureAction:stopSound() end
 
----@return any
 function AIAttachLureAction:update() end
 
 ---@return AIAttachLureAction

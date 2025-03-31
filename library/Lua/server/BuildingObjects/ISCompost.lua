@@ -1,27 +1,29 @@
 ---@meta
 
 ---@class ISCompost : ISBuildingObject
----@field blockAllTheSquare any
----@field canBarricade any
----@field canBeAlwaysPlaced any
----@field dismantable any
----@field javaObject any
----@field name any
----@field sq any
----@field [any] any
+---@field javaObject unknown
+---@field name string | number
+---@field sq unknown
 ISCompost = ISBuildingObject:derive("ISCompost")
+ISCompost.Type = "ISCompost"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISCompost:create(x, y, z, north, sprite) end
 
----@return any
+---@return number
 function ISCompost:getHealth() end
 
----@return any
+---@return boolean
 function ISCompost:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISCompost:render(x, y, z, square) end
 
+---@param name string | number
+---@param sprite string
 ---@return ISCompost
 function ISCompost:new(name, sprite) end

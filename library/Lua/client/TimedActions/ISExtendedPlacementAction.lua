@@ -1,19 +1,17 @@
 ---@meta
 
 ---@class ISExtendedPlacementAction : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field playerNum any
----@field [any] any
+---@field item unknown
+---@field playerNum unknown
 ISExtendedPlacementAction = ISBaseTimedAction:derive("ISExtendedPlacementAction")
+ISExtendedPlacementAction.Type = "ISExtendedPlacementAction"
 
----@return any
+---@return unknown
 function ISExtendedPlacementAction:isValid() end
 
----@return any
 function ISExtendedPlacementAction:perform() end
 
----@return any
+---@return unknown
 function ISExtendedPlacementAction:waitToStart() end
 
 ---@return ISExtendedPlacementAction

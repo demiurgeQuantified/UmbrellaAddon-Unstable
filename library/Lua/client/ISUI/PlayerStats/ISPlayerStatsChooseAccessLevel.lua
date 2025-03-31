@@ -1,39 +1,38 @@
 ---@meta
 
 ---@class ISPlayerStatsChooseAccessLevelUI : ISPanel
----@field admin any
----@field backgroundColor any
----@field borderColor any
----@field cancel any
----@field chr any
----@field combo any
----@field comboList any
----@field moveWithMouse any
----@field ok any
----@field onclick any
----@field target any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field admin unknown
+---@field cancel ISButton
+---@field chr unknown
+---@field combo ISComboBox
+---@field comboList table
+---@field ok ISButton
+---@field onclick unknown
+---@field target unknown?
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISPlayerStatsChooseAccessLevelUI = ISPanel:derive("ISPlayerStatsChooseAccessLevelUI")
+ISPlayerStatsChooseAccessLevelUI.Type = "ISPlayerStatsChooseAccessLevelUI"
 
----@return any
 function ISPlayerStatsChooseAccessLevelUI:create() end
 
----@return any
 function ISPlayerStatsChooseAccessLevelUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsChooseAccessLevelUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISPlayerStatsChooseAccessLevelUI:populateComboList() end
 
----@return any
 function ISPlayerStatsChooseAccessLevelUI:render() end
 
----@return any
+---@param visible boolean
 function ISPlayerStatsChooseAccessLevelUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target unknown?
 ---@return ISPlayerStatsChooseAccessLevelUI
 function ISPlayerStatsChooseAccessLevelUI:new(x, y, width, height, target, onclick, player, admin) end

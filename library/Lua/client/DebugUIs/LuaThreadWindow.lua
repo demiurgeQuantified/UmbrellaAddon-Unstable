@@ -1,54 +1,44 @@
 ---@meta
 
 ---@class LuaThreadWindow : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field callframeStack any
----@field currentCallframeIndex any
----@field locals any
----@field metaNodes any
----@field objectStack any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field callframeStack ISScrollingListBox
+---@field currentCallframeIndex number?
+---@field locals ISScrollingListBox
+---@field metaNodes ISScrollingListBox
+---@field objectStack ISScrollingListBox
 LuaThreadWindow = ISPanel:derive("LuaThreadWindow")
+LuaThreadWindow.Type = "LuaThreadWindow"
 
----@return any
 function LuaThreadWindow:checkFontSize() end
 
----@return any
 function LuaThreadWindow:createChildren() end
 
----@return any
+---@return number
 function LuaThreadWindow:doDrawItem(y, item, alt) end
 
----@return any
 function LuaThreadWindow:fill() end
 
----@return any
 function LuaThreadWindow:initialise() end
 
----@return any
 function LuaThreadWindow:onMouseDoubleClickCallframe(item) end
 
----@return any
 function LuaThreadWindow:onMouseDoubleClickMeta(item) end
 
----@return any
 function LuaThreadWindow:onMouseDoubleClickObject(item) end
 
----@return any
+---@param width number
+---@param height number
 function LuaThreadWindow:onResize(width, height) end
 
----@return any
 function LuaThreadWindow:populateLocalVariables() end
 
----@return any
 function LuaThreadWindow:prerender() end
 
----@return any
 function LuaThreadWindow:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return LuaThreadWindow
 function LuaThreadWindow:new(x, y, width, height) end

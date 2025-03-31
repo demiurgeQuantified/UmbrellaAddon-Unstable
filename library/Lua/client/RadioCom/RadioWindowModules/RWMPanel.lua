@@ -1,76 +1,61 @@
 ---@meta
 
 ---@class RWMPanel : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field device any
----@field deviceData any
----@field deviceType any
----@field focusElement any
----@field height any
----@field overrideBPrompt any
----@field player any
----@field playerNum any
----@field radioParent any
----@field width any
----@field wrapParent any
----@field x any
----@field y any
----@field [any] any
+---@field device unknown?
+---@field deviceData unknown?
+---@field deviceType unknown?
+---@field focusElement unknown?
+---@field overrideBPrompt boolean
+---@field player unknown?
+---@field playerNum number
+---@field radioParent unknown
+---@field wrapParent unknown
 RWMPanel = ISPanelJoypad:derive("RWMPanel")
+RWMPanel.Type = "RWMPanel"
 
----@return any
 function RWMPanel:clear() end
 
----@return any
 function RWMPanel:clearJoypadFocus(joypadData) end
 
----@return any
 function RWMPanel:createChildren() end
 
----@return any
+---@return boolean?
 function RWMPanel:doWalkTo() end
 
----@return any
+---@return unknown?
 function RWMPanel:getAPrompt() end
 
----@return any
+---@return unknown?
 function RWMPanel:getBPrompt() end
 
----@return any
+---@return unknown?
 function RWMPanel:getXPrompt() end
 
----@return any
+---@return unknown?
 function RWMPanel:getYPrompt() end
 
----@return any
 function RWMPanel:initialise() end
 
----@return any
+---@return unknown?
 function RWMPanel:isValidPrompt() end
 
----@return any
 function RWMPanel:onJoypadDown(button) end
 
----@return any
 function RWMPanel:prerender() end
 
----@return any
+---@return boolean
 function RWMPanel:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMPanel:render() end
 
----@return any
+---@param _playerNum number
 function RWMPanel:setFocus(_playerNum, _radioParent, _parent) end
 
----@return any
 function RWMPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RWMPanel
 function RWMPanel:new(x, y, width, height) end

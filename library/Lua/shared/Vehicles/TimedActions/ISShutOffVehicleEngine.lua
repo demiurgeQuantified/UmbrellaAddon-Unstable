@@ -1,31 +1,24 @@
 ---@meta
 
 ---@class ISShutOffVehicleEngine : ISBaseTimedAction
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
 ISShutOffVehicleEngine = ISBaseTimedAction:derive("ISShutOffVehicleEngine")
+ISShutOffVehicleEngine.Type = "ISShutOffVehicleEngine"
 
----@return any
+---@return boolean
 function ISShutOffVehicleEngine:complete() end
 
----@return any
+---@return number
 function ISShutOffVehicleEngine:getDuration() end
 
----@return any
+---@return boolean
 function ISShutOffVehicleEngine:isValid() end
 
----@return any
 function ISShutOffVehicleEngine:perform() end
 
----@return any
 function ISShutOffVehicleEngine:start() end
 
----@return any
 function ISShutOffVehicleEngine:stop() end
 
----@return any
 function ISShutOffVehicleEngine:update() end
 
 ---@return ISShutOffVehicleEngine

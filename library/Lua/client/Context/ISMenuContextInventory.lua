@@ -1,26 +1,21 @@
 ---@meta
 
----@class ISMenuContextInventory
 ISMenuContextInventory = {}
 
----@return ISMenuContextInventory_Instance
+---@return ISMenuContextInventory
 function ISMenuContextInventory.new() end
 
----@class ISMenuContextInventory_Instance
----@field context any
----@field inventory any
----@field items any
----@field player any
----@field playerNum any
----@field test any
----@field [any] any
-local ISMenuContextInventory_Instance = {}
+---@class ISMenuContextInventory : ISMenuElement
+---@field context unknown?
+---@field inventory unknown?
+---@field items unknown?
+---@field player unknown?
+---@field playerNum unknown?
+---@field test boolean?
+local __ISMenuContextInventory = {}
 
----@return any
-function ISMenuContextInventory_Instance.checkInvItem(_item) end
+function __ISMenuContextInventory.checkInvItem(_item) end
 
----@return any
-function ISMenuContextInventory_Instance.createMenu(_player, _context, _items, _item) end
+function __ISMenuContextInventory.createMenu(_player, _context, _items, _item) end
 
----@return any
-function ISMenuContextInventory_Instance.init() end
+function __ISMenuContextInventory.init() end

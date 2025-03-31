@@ -1,52 +1,48 @@
 ---@meta
 
 ---@class ISButcherHookProcessorPanel : ISPanel
----@field background any
----@field component any
----@field craftControl any
----@field craftControlDebug any
----@field craftProcessor any
----@field craftProgress any
----@field craftRecipeSelect any
----@field entity any
----@field fluidOutputs any
----@field itemInputs any
----@field itemOutputs any
----@field player any
----@field resourceContainer any
----@field tableLayout any
----@field [any] any
+---@field component unknown
+---@field craftControl unknown?
+---@field craftControlDebug unknown?
+---@field craftProcessor unknown
+---@field craftProgress unknown?
+---@field craftRecipeSelect unknown?
+---@field entity unknown
+---@field fluidOutputs unknown?
+---@field itemInputs unknown?
+---@field itemOutputs unknown?
+---@field player unknown
+---@field resourceContainer unknown
+---@field tableLayout unknown?
 ISButcherHookProcessorPanel = ISPanel:derive("ISButcherHookProcessorPanel")
+ISButcherHookProcessorPanel.Type = "ISButcherHookProcessorPanel"
 
----@return any
 function ISButcherHookProcessorPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISButcherHookProcessorPanel:createChildren() end
 
----@return any
+---@return unknown?
 function ISButcherHookProcessorPanel:createEnergySlotPanel(_style) end
 
----@return any
+---@return unknown?
 function ISButcherHookProcessorPanel:createFluidSlotPanel(_style) end
 
----@return any
+---@return unknown?
 function ISButcherHookProcessorPanel:createItemSlotPanel(_style) end
 
----@return any
 function ISButcherHookProcessorPanel:initialise() end
 
----@return any
 function ISButcherHookProcessorPanel:onResize() end
 
----@return any
 function ISButcherHookProcessorPanel:prerender() end
 
----@return any
 function ISButcherHookProcessorPanel:render() end
 
----@return any
 function ISButcherHookProcessorPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISButcherHookProcessorPanel
 function ISButcherHookProcessorPanel:new(x, y, width, height, player, entity, component, craftProcessor) end

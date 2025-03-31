@@ -2,20 +2,19 @@
 
 ---@class SFeedingTroughSystem : SGlobalObjectSystem
 SFeedingTroughSystem = SGlobalObjectSystem:derive("SFeedingTroughSystem")
+SFeedingTroughSystem.Type = "SFeedingTroughSystem"
 
----@return any
+---@return unknown?
 function SFeedingTroughSystem:addTrough(grid, def, north, slave) end
 
----@return any
 function SFeedingTroughSystem:initSystem() end
 
----@return any
+---@return unknown
 function SFeedingTroughSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return SFeedingTroughGlobalObject
 function SFeedingTroughSystem:newLuaObject(globalObject) end
 
----@return any
 function SFeedingTroughSystem:OnClientCommand(command, playerObj, args) end
 
 ---@return SFeedingTroughSystem

@@ -1,36 +1,35 @@
 ---@meta
 
 ---@class WorldMapEditorLocationControl : ISBaseObject
----@field editor any
----@field mapAPI any
----@field mapUI any
----@field originalX any
----@field originalY any
----@field snapMode any
----@field x any
----@field y any
----@field [any] any
+---@field editor unknown
+---@field mapAPI unknown
+---@field mapUI unknown
+---@field originalX number
+---@field originalY number
+---@field snapMode string
+---@field x number
+---@field y number
 WorldMapEditorLocationControl = ISBaseObject:derive("WorldMapEditorLocationControl")
+WorldMapEditorLocationControl.Type = "WorldMapEditorLocationControl"
 
----@return any
 function WorldMapEditorLocationControl:cancelDrag() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorLocationControl:hitTest(x, y) end
 
----@return any
 function WorldMapEditorLocationControl:onMouseMove(mx, my) end
 
----@return any
 function WorldMapEditorLocationControl:render() end
 
----@return any
+---@param x number
+---@param y number
 function WorldMapEditorLocationControl:setLocation(x, y) end
 
----@return any
+---@return number
 function WorldMapEditorLocationControl:snap(xy) end
 
----@return any
 function WorldMapEditorLocationControl:startDrag() end
 
 ---@return WorldMapEditorLocationControl

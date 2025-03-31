@@ -1,27 +1,23 @@
 ---@meta
 
 ---@class ISSwitchVehicleSeat : ISBaseTimedAction
----@field character any
----@field maxTime any
----@field seatFrom any
----@field seatTo any
----@field [any] any
+---@field seatFrom unknown?
+---@field seatTo number?
 ISSwitchVehicleSeat = ISBaseTimedAction:derive("ISSwitchVehicleSeat")
+ISSwitchVehicleSeat.Type = "ISSwitchVehicleSeat"
 
----@return any
+---@return boolean
 function ISSwitchVehicleSeat:isValid() end
 
----@return any
 function ISSwitchVehicleSeat:perform() end
 
----@return any
 function ISSwitchVehicleSeat:start() end
 
----@return any
 function ISSwitchVehicleSeat:stop() end
 
----@return any
 function ISSwitchVehicleSeat:update() end
 
+---@param seatTo number?
+---@param seatFrom unknown?
 ---@return ISSwitchVehicleSeat
 function ISSwitchVehicleSeat:new(character, seatTo, seatFrom) end

@@ -1,35 +1,31 @@
 ---@meta
 
 ---@class ISRemoveGrass : ISBaseTimedAction
----@field maxTime any
----@field spriteFrame any
----@field square any
----@field [any] any
+---@field spriteFrame number
+---@field square unknown
 ISRemoveGrass = ISBaseTimedAction:derive("ISRemoveGrass")
+ISRemoveGrass.Type = "ISRemoveGrass"
 
----@return any
+---@return boolean
 function ISRemoveGrass:complete() end
 
----@return any
+---@return number
 function ISRemoveGrass:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveGrass:isValid() end
 
----@return any
 function ISRemoveGrass:perform() end
 
----@return any
 function ISRemoveGrass:start() end
 
----@return any
 function ISRemoveGrass:stop() end
 
----@return any
 function ISRemoveGrass:update() end
 
----@return any
+---@return unknown
 function ISRemoveGrass:waitToStart() end
 
+---@param character unknown?
 ---@return ISRemoveGrass
 function ISRemoveGrass:new(character, square) end

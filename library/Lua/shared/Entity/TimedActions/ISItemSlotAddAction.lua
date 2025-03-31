@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISItemSlotAddAction : ISBaseTimedAction
----@field entity any
----@field item any
----@field itemSlot any
----@field maxTime any
----@field resource any
----@field [any] any
+---@field entity unknown
+---@field item unknown
+---@field itemSlot unknown?
+---@field resource unknown
 ISItemSlotAddAction = ISBaseTimedAction:derive("ISItemSlotAddAction")
+ISItemSlotAddAction.Type = "ISItemSlotAddAction"
 
----@return any
+---@return boolean
 function ISItemSlotAddAction:complete() end
 
----@return any
+---@return number
 function ISItemSlotAddAction:getDuration() end
 
----@return any
+---@return boolean
 function ISItemSlotAddAction:isValid() end
 
----@return any
 function ISItemSlotAddAction:perform() end
 
----@return any
 function ISItemSlotAddAction:start() end
 
----@return any
 function ISItemSlotAddAction:stop() end
 
----@return any
 function ISItemSlotAddAction:update() end
 
 ---@return ISItemSlotAddAction

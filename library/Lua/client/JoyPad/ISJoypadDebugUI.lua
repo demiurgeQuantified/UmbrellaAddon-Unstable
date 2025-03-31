@@ -2,20 +2,17 @@
 
 ---@class ISJoypadDebugUI : ISUIElement
 ISJoypadDebugUI = ISUIElement:derive("ISJoypadDebugUI")
+ISJoypadDebugUI.Type = "ISJoypadDebugUI"
 
----@return any
+---@return number
 function ISJoypadDebugUI:addLine(x1, x2, y, label, value) end
 
----@return any
 function ISJoypadDebugUI:createChildren() end
 
----@return any
 function ISJoypadDebugUI:prerender() end
 
----@return any
 function ISJoypadDebugUI:render() end
 
----@return any
 function ISJoypadDebugUI:update() end
 
 ---@return ISJoypadDebugUI

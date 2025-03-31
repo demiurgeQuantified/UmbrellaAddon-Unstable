@@ -1,37 +1,34 @@
 ---@meta
 
 ---@class ISBBQAddFuel : ISBaseTimedAction
----@field fireplace any
----@field fuelAmt any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field fireplace unknown
+---@field fuelAmt number
+---@field item unknown
+---@field sound unknown
 ISBBQAddFuel = ISBaseTimedAction:derive("ISBBQAddFuel")
+ISBBQAddFuel.Type = "ISBBQAddFuel"
 
----@return any
+---@return boolean
 function ISBBQAddFuel:complete() end
 
----@return any
+---@return number
 function ISBBQAddFuel:getDuration() end
 
----@return any
+---@return boolean?
 function ISBBQAddFuel:isValid() end
 
----@return any
 function ISBBQAddFuel:perform() end
 
----@return any
 function ISBBQAddFuel:start() end
 
----@return any
 function ISBBQAddFuel:stop() end
 
----@return any
 function ISBBQAddFuel:update() end
 
----@return any
+---@return unknown
 function ISBBQAddFuel:waitToStart() end
 
+---@param character unknown?
+---@param fuelAmt number
 ---@return ISBBQAddFuel
 function ISBBQAddFuel:new(character, fireplace, item, fuelAmt) end

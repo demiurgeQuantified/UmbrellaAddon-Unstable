@@ -1,32 +1,26 @@
 ---@meta
 
 ---@class ISStopAlarmClockAction : ISBaseTimedAction
----@field alarm any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field alarm unknown
+---@field stopOnWalk unknown
 ISStopAlarmClockAction = ISBaseTimedAction:derive("ISStopAlarmClockAction")
+ISStopAlarmClockAction.Type = "ISStopAlarmClockAction"
 
----@return any
+---@return boolean
 function ISStopAlarmClockAction:complete() end
 
----@return any
+---@return number
 function ISStopAlarmClockAction:getDuration() end
 
----@return any
+---@return boolean
 function ISStopAlarmClockAction:isValid() end
 
----@return any
 function ISStopAlarmClockAction:perform() end
 
----@return any
 function ISStopAlarmClockAction:start() end
 
----@return any
 function ISStopAlarmClockAction:stop() end
 
----@return any
 function ISStopAlarmClockAction:update() end
 
 ---@return ISStopAlarmClockAction

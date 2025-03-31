@@ -1,49 +1,44 @@
 ---@meta
 
 ---@class ISTakeWaterAction : ISBaseTimedAction
----@field endUsedAmount any
----@field item any
----@field maxTime any
----@field sound any
----@field startUsedAmount any
----@field waterObject any
----@field waterTaintedCL any
----@field waterUnit any
----@field [any] any
+---@field endUsedAmount unknown
+---@field item unknown?
+---@field maxTime number?
+---@field sound unknown
+---@field startUsedAmount number
+---@field waterObject unknown
+---@field waterTaintedCL unknown
+---@field waterUnit unknown
 ISTakeWaterAction = ISBaseTimedAction:derive("ISTakeWaterAction")
+ISTakeWaterAction.Type = "ISTakeWaterAction"
 
----@return any
+---@return boolean
 function ISTakeWaterAction:complete() end
 
----@return any
+---@return number?
 function ISTakeWaterAction:getDuration() end
 
----@return any
+---@return boolean
 function ISTakeWaterAction:isValid() end
 
----@return any
 function ISTakeWaterAction:perform() end
 
----@return any
 function ISTakeWaterAction:serverStop() end
 
----@return any
 function ISTakeWaterAction:start() end
 
----@return any
 function ISTakeWaterAction:stop() end
 
----@return any
 function ISTakeWaterAction:stopSound() end
 
----@return any
+---@param _amount number
 function ISTakeWaterAction:transferFluid(_amount) end
 
----@return any
 function ISTakeWaterAction:update() end
 
----@return any
+---@return unknown
 function ISTakeWaterAction:waitToStart() end
 
+---@param item unknown?
 ---@return ISTakeWaterAction
 function ISTakeWaterAction:new(character, item, waterObject, waterTaintedCL) end

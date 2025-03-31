@@ -1,70 +1,63 @@
 ---@meta
 
 ---@class ISWidgetTooltipInput : ISPanel
----@field amountWidth any
----@field amountWidth2 any
----@field arrow any
----@field autoFillContents any
----@field borderColor any
----@field colBad any
----@field colPartial any
----@field consumeScript any
----@field createScript any
----@field displayAsOutput any
----@field doToolTip any
----@field editedLabels any
----@field iconSize any
----@field inputScript any
----@field interactiveMode any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field logic any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field normalBorderColor any
----@field player any
----@field primary any
----@field secondary any
----@field textColor any
----@field textureConsume any
----@field textureCreate any
----@field textureDrain any
----@field textureFluid any
----@field textureKeep any
----@field [any] any
+---@field amountWidth unknown
+---@field amountWidth2 unknown
+---@field arrow unknown?
+---@field autoFillContents boolean
+---@field colBad table
+---@field colPartial table
+---@field consumeScript unknown
+---@field createScript unknown
+---@field displayAsOutput boolean
+---@field doToolTip boolean
+---@field editedLabels boolean
+---@field iconSize number
+---@field inputScript unknown
+---@field interactiveMode boolean
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field logic unknown
+---@field margin number
+---@field normalBorderColor table
+---@field player unknown
+---@field primary table
+---@field secondary table
+---@field textColor table
+---@field textureConsume unknown
+---@field textureCreate unknown
+---@field textureDrain unknown
+---@field textureFluid unknown
+---@field textureKeep unknown
 ISWidgetTooltipInput = ISPanel:derive("ISWidgetTooltipInput")
+ISWidgetTooltipInput.Type = "ISWidgetTooltipInput"
 
----@return any
 function ISWidgetTooltipInput:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetTooltipInput:createChildren() end
 
----@return any
+---@return table
 function ISWidgetTooltipInput:createScriptValues(_script) end
 
----@return any
 function ISWidgetTooltipInput:initialise() end
 
----@return any
 function ISWidgetTooltipInput:onResize() end
 
----@return any
 function ISWidgetTooltipInput:prerender() end
 
----@return any
 function ISWidgetTooltipInput:render() end
 
----@return any
 function ISWidgetTooltipInput:update() end
 
----@return any
+---@param _table table
 function ISWidgetTooltipInput:updateScriptValues(_table) end
 
----@return any
 function ISWidgetTooltipInput:updateValues() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetTooltipInput
 function ISWidgetTooltipInput:new(x, y, width, height, player, logic, inputScript) end

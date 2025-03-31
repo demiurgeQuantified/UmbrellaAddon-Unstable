@@ -1,41 +1,35 @@
 ---@meta
 
 ---@class ISFillGrave : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field graves any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field character unknown?
+---@field graves unknown
+---@field item unknown
+---@field sound unknown
 ISFillGrave = ISBaseTimedAction:derive("ISFillGrave")
+ISFillGrave.Type = "ISFillGrave"
 
----@return any
 function ISFillGrave:changeSprite(square) end
 
----@return any
+---@return boolean
 function ISFillGrave:complete() end
 
----@return any
+---@return number
 function ISFillGrave:getDuration() end
 
----@return any
+---@return boolean?
 function ISFillGrave:isValid() end
 
----@return any
 function ISFillGrave:perform() end
 
----@return any
 function ISFillGrave:start() end
 
----@return any
 function ISFillGrave:stop() end
 
----@return any
 function ISFillGrave:update() end
 
----@return any
+---@return unknown
 function ISFillGrave:waitToStart() end
 
+---@param character unknown?
 ---@return ISFillGrave
 function ISFillGrave:new(character, graves, shovel) end

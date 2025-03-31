@@ -1,49 +1,47 @@
 ---@meta
 
 ---@class ISFluidContainer : ISBaseObject
----@field fluidContainer any
----@field fluidResource any
----@field isFluidResource any
----@field isInventoryItem any
----@field isoPanel any
----@field [any] any
+---@field fluidContainer unknown?
+---@field fluidResource unknown?
+---@field isFluidResource boolean
+---@field isInventoryItem boolean
+---@field isoPanel boolean
 ISFluidContainer = ISBaseObject:derive("ISFluidContainer")
+ISFluidContainer.Type = "ISFluidContainer"
 
----@return any
+---@return ISFluidContainer?
 function ISFluidContainer:copy() end
 
----@return any
+---@return unknown?
 function ISFluidContainer:getFluidContainer() end
 
----@return any
+---@return unknown?
 function ISFluidContainer:getFluidObject() end
 
----@return any
+---@return unknown?
 function ISFluidContainer:getFluidResource() end
 
----@return any
+---@return unknown?
 function ISFluidContainer:getOwner() end
 
----@return any
 function ISFluidContainer:initFromObject(_fluidObject) end
 
----@return any
+---@return boolean
 function ISFluidContainer:isIsoPanel() end
 
----@return any
+---@return boolean
 function ISFluidContainer:isItem() end
 
----@return any
+---@return boolean
 function ISFluidContainer:isResource() end
 
----@return any
+---@return boolean
 function ISFluidContainer:isValid() end
 
----@return any
 function ISFluidContainer:resetObject() end
 
----@return any
 function ISFluidContainer:sync() end
 
+---@param _fluidObject unknown?
 ---@return ISFluidContainer
 function ISFluidContainer:new(_fluidObject) end

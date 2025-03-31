@@ -1,69 +1,58 @@
 ---@meta
 
 ---@class ISWashVehicle : ISBaseTimedAction
----@field accumulator any
----@field amountSent any
----@field area any
----@field id any
----@field maxTime any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field waterAccumulator any
----@field [any] any
+---@field accumulator number
+---@field amountSent unknown
+---@field area unknown
+---@field id unknown
+---@field sound unknown
+---@field vehicle unknown
+---@field waterAccumulator number
 ISWashVehicle = ISBaseTimedAction:derive("ISWashVehicle")
+ISWashVehicle.Type = "ISWashVehicle"
 ISWashVehicle.BLOOD_PER_WATER = 5
 
----@return any
+---@return unknown?
 function ISWashVehicle.chooseArea(character, vehicle) end
 
----@return any
+---@return number
 function ISWashVehicle.getWaterAmountForArea(vehicle, id) end
 
----@return any
+---@return number
 function ISWashVehicle.getWaterAmountForPlayer(character) end
 
----@return any
+---@return boolean
 function ISWashVehicle.hasBlood(vehicle) end
 
----@return any
 function ISWashVehicle:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISWashVehicle:complete() end
 
----@return any
+---@return number
 function ISWashVehicle:getDuration() end
 
----@return any
+---@return unknown
 function ISWashVehicle:isValid() end
 
----@return any
 function ISWashVehicle:perform() end
 
----@return any
+---@param bloodRemoved number
 function ISWashVehicle:removeBlood(bloodRemoved, waterUsed) end
 
----@return any
 function ISWashVehicle:serverStart() end
 
----@return any
 function ISWashVehicle:start() end
 
----@return any
 function ISWashVehicle:stop() end
 
----@return any
 function ISWashVehicle:update() end
 
----@return any
 function ISWashVehicle:updateWashing() end
 
----@return any
 function ISWashVehicle:useWater(units) end
 
----@return any
+---@return unknown
 function ISWashVehicle:waitToStart() end
 
 ---@return ISWashVehicle

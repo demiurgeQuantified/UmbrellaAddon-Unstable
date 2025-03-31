@@ -1,44 +1,35 @@
 ---@meta
 
 ---@class ISPetAnimal : ISBaseTimedAction
----@field animal any
----@field maxTime any
----@field stopOnAim any
----@field useProgressBar any
----@field [any] any
+---@field animal unknown
+---@field useProgressBar boolean
 ISPetAnimal = ISBaseTimedAction:derive("ISPetAnimal")
+ISPetAnimal.Type = "ISPetAnimal"
 
----@return any
 function ISPetAnimal:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISPetAnimal:complete() end
 
----@return any
 function ISPetAnimal:forceStop() end
 
----@return any
+---@return number
 function ISPetAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISPetAnimal:isValid() end
 
----@return any
 function ISPetAnimal:perform() end
 
----@return any
 function ISPetAnimal:serverStart() end
 
----@return any
 function ISPetAnimal:start() end
 
----@return any
 function ISPetAnimal:stop() end
 
----@return any
 function ISPetAnimal:update() end
 
----@return any
+---@return unknown
 function ISPetAnimal:waitToStart() end
 
 ---@return ISPetAnimal

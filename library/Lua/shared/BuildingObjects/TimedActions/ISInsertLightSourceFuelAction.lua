@@ -1,34 +1,29 @@
 ---@meta
 
 ---@class ISInsertLightSourceFuelAction : ISBaseTimedAction
----@field fuel any
----@field lightSource any
----@field maxTime any
----@field [any] any
+---@field fuel unknown
+---@field lightSource unknown
 ISInsertLightSourceFuelAction = ISBaseTimedAction:derive("ISInsertLightSourceFuelAction")
+ISInsertLightSourceFuelAction.Type = "ISInsertLightSourceFuelAction"
 
----@return any
+---@return boolean
 function ISInsertLightSourceFuelAction:complete() end
 
----@return any
+---@return number
 function ISInsertLightSourceFuelAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISInsertLightSourceFuelAction:isValid() end
 
----@return any
+---@return boolean
 function ISInsertLightSourceFuelAction:isValidStart() end
 
----@return any
 function ISInsertLightSourceFuelAction:perform() end
 
----@return any
 function ISInsertLightSourceFuelAction:start() end
 
----@return any
 function ISInsertLightSourceFuelAction:stop() end
 
----@return any
 function ISInsertLightSourceFuelAction:update() end
 
 ---@return ISInsertLightSourceFuelAction

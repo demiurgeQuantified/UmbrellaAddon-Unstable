@@ -1,52 +1,46 @@
 ---@meta
 
 ---@class ISRestAction : ISBaseTimedAction
----@field bed any
----@field caloriesModifier any
----@field delayStart any
----@field forceProgressBar any
----@field maxTime any
----@field mul any
----@field sideStr any
----@field useAnimations any
----@field [any] any
+---@field bed unknown
+---@field delayStart number
+---@field forceProgressBar boolean
+---@field mul number
+---@field sideStr unknown?
+---@field useAnimations boolean
 ISRestAction = ISBaseTimedAction:derive("ISRestAction")
+ISRestAction.Type = "ISRestAction"
 
----@return any
+---@return unknown
+---@return unknown?
 function ISRestAction:calculateSitOnFurnitureDirection(character, bed) end
 
----@return any
+---@return boolean
 function ISRestAction:complete() end
 
----@return any
+---@return boolean
 function ISRestAction:furnitureHasSittingData(bed) end
 
----@return any
+---@return number
 function ISRestAction:getDuration() end
 
----@return any
+---@return boolean
 function ISRestAction:isValid() end
 
----@return any
 function ISRestAction:perform() end
 
----@return any
 function ISRestAction:setBeforeSitDirection() end
 
----@return any
 function ISRestAction:setWhileSittingDirection() end
 
----@return any
 function ISRestAction:start() end
 
----@return any
 function ISRestAction:stop() end
 
----@return any
 function ISRestAction:update() end
 
----@return any
+---@return boolean
 function ISRestAction:waitToStart() end
 
+---@param useAnimations boolean
 ---@return ISRestAction
 function ISRestAction:new(character, bed, useAnimations) end

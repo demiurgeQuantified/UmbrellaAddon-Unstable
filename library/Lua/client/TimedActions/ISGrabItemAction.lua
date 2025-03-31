@@ -1,41 +1,32 @@
 ---@meta
 
 ---@class ISGrabItemAction : ISBaseTimedAction
----@field character any
----@field destContainer any
----@field ignoreAction any
----@field item any
----@field loopedAction any
----@field maxTime any
----@field queueList any
----@field sourceContainer any
----@field started any
----@field stopOnRun any
----@field stopOnWalk any
----@field transactionId any
----@field [any] any
+---@field destContainer unknown
+---@field ignoreAction boolean
+---@field item unknown
+---@field loopedAction boolean
+---@field queueList table
+---@field sourceContainer unknown
+---@field started boolean
+---@field transactionId number
 ISGrabItemAction = ISBaseTimedAction:derive("ISGrabItemAction")
+ISGrabItemAction.Type = "ISGrabItemAction"
 
----@return any
 function ISGrabItemAction:checkQueueList() end
 
----@return any
+---@return boolean
 function ISGrabItemAction:isValid() end
 
----@return any
 function ISGrabItemAction:perform() end
 
----@return any
 function ISGrabItemAction:start() end
 
----@return any
 function ISGrabItemAction:stop() end
 
----@return any
 function ISGrabItemAction:transferItem(item) end
 
----@return any
 function ISGrabItemAction:update() end
 
+---@param time number
 ---@return ISGrabItemAction
 function ISGrabItemAction:new(character, item, time) end

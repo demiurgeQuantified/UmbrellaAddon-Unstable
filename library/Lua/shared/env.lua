@@ -1,22 +1,37 @@
 ---@meta
 
----@return any
+---@param num number
+---@param idp number?
+---@return number
 function round(num, idp) end
----@return any
+
+---@return function?
 function xpairs(_t) end
----@return any
+
+---@return number
 function logTo01(value) end
----@return any
+
+---@param num number
+---@param idp number?
+---@return number?
 function round2(num, idp) end
----@return any
+
+---@param inputstr string
+---@return table
 function strsplit(inputstr, sep) end
----@return any
+
+---@return unknown?
 function findFunction(_s, _parent) end
----@return any
+
+---@param _name string
+---@return table
 function namedColorToTable(_name) end
----@return any
+
+---@return table
 function colorToTable(_c) end
----@return any
+
+---@return table
 function safeColorToTable(_c) end
----@return any
+
+---@return boolean
 function onMouseWheelScrollHandler(_self, _del) end

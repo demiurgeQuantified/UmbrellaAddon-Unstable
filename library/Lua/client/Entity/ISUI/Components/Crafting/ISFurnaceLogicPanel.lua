@@ -1,55 +1,52 @@
 ---@meta
 
 ---@class ISFurnaceLogicPanel : ISBaseComponentPanel
----@field craftControl any
----@field craftControlDebug any
----@field craftProgress any
----@field fuelInputs any
----@field fuelInputsGroupName any
----@field fuelOutputs any
----@field fuelOutputsGroupName any
----@field fuelTableLayout any
----@field furnaceInputs any
----@field furnaceInputsGroupName any
----@field furnaceOutputs any
----@field furnaceOutputsGroupName any
----@field resourcesComponent any
----@field tableLayout any
----@field [any] any
+---@field craftControl unknown?
+---@field craftControlDebug unknown?
+---@field craftProgress unknown?
+---@field fuelInputs unknown?
+---@field fuelInputsGroupName unknown
+---@field fuelOutputs unknown?
+---@field fuelOutputsGroupName unknown
+---@field fuelTableLayout unknown?
+---@field furnaceInputs unknown?
+---@field furnaceInputsGroupName unknown
+---@field furnaceOutputs unknown?
+---@field furnaceOutputsGroupName unknown
+---@field resourcesComponent unknown
+---@field tableLayout unknown?
 ISFurnaceLogicPanel = ISBaseComponentPanel:derive("ISFurnaceLogicPanel")
+ISFurnaceLogicPanel.Type = "ISFurnaceLogicPanel"
 
----@return any
+---@return boolean?
 function ISFurnaceLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 
----@return any
 function ISFurnaceLogicPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISFurnaceLogicPanel:createChildren() end
 
----@return any
+---@return unknown?
 function ISFurnaceLogicPanel:createEnergySlotPanel(_style) end
 
----@return any
+---@return unknown?
 function ISFurnaceLogicPanel:createFluidSlotPanel(_style) end
 
----@return any
+---@return unknown?
 function ISFurnaceLogicPanel:createItemSlotPanel(_style, _drawProgress) end
 
----@return any
 function ISFurnaceLogicPanel:initialise() end
 
----@return any
 function ISFurnaceLogicPanel:onResize() end
 
----@return any
 function ISFurnaceLogicPanel:prerender() end
 
----@return any
 function ISFurnaceLogicPanel:render() end
 
----@return any
 function ISFurnaceLogicPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFurnaceLogicPanel
 function ISFurnaceLogicPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

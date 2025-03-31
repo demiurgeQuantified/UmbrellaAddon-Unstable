@@ -1,43 +1,40 @@
 ---@meta
 
 ---@class ISWaterPlantAction : ISBaseTimedAction
----@field character any
----@field deltaPerUse any
----@field item any
----@field maxTime any
----@field sound any
----@field sq any
----@field uses any
----@field usesUsed any
----@field [any] any
+---@field character unknown?
+---@field deltaPerUse number
+---@field item unknown
+---@field sound unknown
+---@field sq unknown
+---@field uses number
+---@field usesUsed number
 ISWaterPlantAction = ISBaseTimedAction:derive("ISWaterPlantAction")
+ISWaterPlantAction.Type = "ISWaterPlantAction"
 
----@return any
+---@return boolean
 function ISWaterPlantAction:complete() end
 
----@return any
+---@return number
 function ISWaterPlantAction:getDuration() end
 
----@return any
+---@return boolean
 function ISWaterPlantAction:isValid() end
 
----@return any
 function ISWaterPlantAction:perform() end
 
----@return any
 function ISWaterPlantAction:start() end
 
----@return any
 function ISWaterPlantAction:stop() end
 
----@return any
 function ISWaterPlantAction:update() end
 
----@return any
 function ISWaterPlantAction:useItemOneUnit() end
 
----@return any
+---@return unknown
 function ISWaterPlantAction:waitToStart() end
 
+---@param character unknown?
+---@param uses number
+---@param maxTime number
 ---@return ISWaterPlantAction
 function ISWaterPlantAction:new(character, item, uses, sq, maxTime) end

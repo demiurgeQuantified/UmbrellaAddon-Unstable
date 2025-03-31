@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class AddChumToWaterAction : ISBaseTimedAction
----@field chum any
----@field maxTime any
----@field square any
----@field [any] any
+---@field chum unknown
+---@field square unknown
 AddChumToWaterAction = ISBaseTimedAction:derive("AddChumToWaterAction")
+AddChumToWaterAction.Type = "AddChumToWaterAction"
 
----@return any
+---@return boolean
 function AddChumToWaterAction:complete() end
 
----@return any
+---@return number
 function AddChumToWaterAction:getDuration() end
 
----@return any
+---@return unknown?
 function AddChumToWaterAction:isValid() end
 
----@return any
 function AddChumToWaterAction:perform() end
 
----@return any
 function AddChumToWaterAction:start() end
 
----@return any
 function AddChumToWaterAction:stop() end
 
----@return any
 function AddChumToWaterAction:update() end
 
 ---@return AddChumToWaterAction

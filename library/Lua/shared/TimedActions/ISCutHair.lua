@@ -1,35 +1,29 @@
 ---@meta
 
 ---@class ISCutHair : ISBaseTimedAction
----@field hairStyle any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field hairStyle string
+---@field item unknown
+---@field sound unknown
 ISCutHair = ISBaseTimedAction:derive("ISCutHair")
+ISCutHair.Type = "ISCutHair"
 
----@return any
+---@return boolean
 function ISCutHair:complete() end
 
----@return any
+---@return number
 function ISCutHair:getDuration(maxTime) end
 
----@return any
+---@return boolean
 function ISCutHair:isValid() end
 
----@return any
 function ISCutHair:perform() end
 
----@return any
 function ISCutHair:start() end
 
----@return any
 function ISCutHair:stop() end
 
----@return any
 function ISCutHair:stopSound() end
 
----@return any
 function ISCutHair:update() end
 
 ---@return ISCutHair

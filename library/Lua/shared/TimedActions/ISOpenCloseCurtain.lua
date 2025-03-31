@@ -1,35 +1,31 @@
 ---@meta
 
 ---@class ISOpenCloseCurtain : ISBaseTimedAction
----@field ignoreHandsWounds any
----@field item any
----@field maxTime any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field item unknown
 ISOpenCloseCurtain = ISBaseTimedAction:derive("ISOpenCloseCurtain")
+ISOpenCloseCurtain.Type = "ISOpenCloseCurtain"
 
----@return any
+---@return boolean
 function ISOpenCloseCurtain:complete() end
 
----@return any
+---@return number
 function ISOpenCloseCurtain:getDuration() end
 
----@return any
+---@return boolean
 function ISOpenCloseCurtain:isValid() end
 
----@return any
 function ISOpenCloseCurtain:perform() end
 
----@return any
 function ISOpenCloseCurtain:start() end
 
----@return any
 function ISOpenCloseCurtain:stop() end
 
----@return any
 function ISOpenCloseCurtain:update() end
 
----@return any
+---@return unknown
 function ISOpenCloseCurtain:waitToStart() end
 
+---@param character unknown?
 ---@return ISOpenCloseCurtain
 function ISOpenCloseCurtain:new(character, item) end

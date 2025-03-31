@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISRepairEngine : ISBaseTimedAction
----@field item any
----@field jobType any
----@field maxTime any
----@field part any
----@field vehicle any
----@field [any] any
+---@field item unknown
+---@field jobType string
+---@field part unknown
+---@field vehicle unknown
 ISRepairEngine = ISBaseTimedAction:derive("ISRepairEngine")
+ISRepairEngine.Type = "ISRepairEngine"
 
----@return any
+---@return boolean
 function ISRepairEngine:complete() end
 
----@return any
+---@return number
 function ISRepairEngine:getDuration(maxTime) end
 
----@return any
+---@return boolean
 function ISRepairEngine:isValid() end
 
----@return any
 function ISRepairEngine:perform() end
 
----@return any
 function ISRepairEngine:start() end
 
----@return any
 function ISRepairEngine:stop() end
 
----@return any
 function ISRepairEngine:update() end
 
----@return any
+---@return unknown
 function ISRepairEngine:waitToStart() end
 
+---@param maxTime number
 ---@return ISRepairEngine
 function ISRepairEngine:new(character, part, item, maxTime) end

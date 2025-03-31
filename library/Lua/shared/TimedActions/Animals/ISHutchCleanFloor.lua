@@ -1,50 +1,42 @@
 ---@meta
 
 ---@class ISHutchCleanFloor : ISBaseTimedAction
----@field bleach any
----@field hutch any
----@field lastTimer any
----@field maxTime any
----@field mop any
----@field playerInv any
----@field sound any
----@field timePerDirt any
----@field timer any
----@field water any
----@field [any] any
+---@field bleach unknown
+---@field hutch unknown
+---@field lastTimer number
+---@field mop unknown
+---@field playerInv unknown
+---@field sound unknown
+---@field timePerDirt number
+---@field timer number
+---@field water unknown
 ISHutchCleanFloor = ISBaseTimedAction:derive("ISHutchCleanFloor")
+ISHutchCleanFloor.Type = "ISHutchCleanFloor"
 
----@return any
 function ISHutchCleanFloor:animEvent(event, parameter) end
 
----@return any
 function ISHutchCleanFloor:clean() end
 
----@return any
+---@return boolean
 function ISHutchCleanFloor:complete() end
 
----@return any
+---@return number
 function ISHutchCleanFloor:getDuration() end
 
----@return any
+---@return boolean
 function ISHutchCleanFloor:isValid() end
 
----@return any
 function ISHutchCleanFloor:perform() end
 
----@return any
 function ISHutchCleanFloor:serverStart() end
 
----@return any
 function ISHutchCleanFloor:start() end
 
----@return any
 function ISHutchCleanFloor:stop() end
 
----@return any
 function ISHutchCleanFloor:update() end
 
----@return any
+---@return unknown
 function ISHutchCleanFloor:waitToStart() end
 
 ---@return ISHutchCleanFloor

@@ -1,115 +1,97 @@
 ---@meta
 
 ---@class RWMChannel : RWMPanel
----@field addPresetButton any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field comboBox any
----@field deletePresetButton any
----@field editMode any
----@field editPresetButton any
----@field editPresetPanel any
----@field focusElement any
----@field fontheight any
----@field frequencyDivider any
----@field height any
----@field lastModeExpanded any
----@field parent any
----@field presetMode any
----@field presets any
----@field selectedPreset any
----@field tuneInButton any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field addPresetButton ISButton
+---@field comboBox ISComboBox
+---@field deletePresetButton ISButton
+---@field editMode boolean
+---@field editPresetButton ISButton
+---@field editPresetPanel RWMSubEditPreset
+---@field focusElement ISComboBox?
+---@field fontheight number
+---@field frequencyDivider number
+---@field lastModeExpanded boolean
+---@field parent unknown?
+---@field presetMode string?
+---@field presets unknown?
+---@field selectedPreset unknown
+---@field tuneInButton ISButton
 RWMChannel = RWMPanel:derive("RWMChannel")
+RWMChannel.Type = "RWMChannel"
 
----@return any
+---@param _name string
 function RWMChannel:addComboOption(_freq, _name) end
 
----@return any
 function RWMChannel:clear() end
 
----@return any
 function RWMChannel:clearJoypadFocus(joypadData) end
 
----@return any
 function RWMChannel:comboChange() end
 
----@return any
 function RWMChannel:createChildren() end
 
----@return any
 function RWMChannel:doAddPresetButton() end
 
----@return any
 function RWMChannel:doDeletePresetButton() end
 
----@return any
 function RWMChannel:doEditPresetButton() end
 
----@return any
 function RWMChannel:doTuneInButton() end
 
----@return any
+---@return string?
 function RWMChannel:getAPrompt() end
 
----@return any
+---@return string?
 function RWMChannel:getBPrompt() end
 
----@return any
+---@return unknown?
 function RWMChannel:getParent() end
 
----@return any
+---@return string?
 function RWMChannel:getRBPrompt() end
 
----@return any
+---@return string?
 function RWMChannel:getXPrompt() end
 
----@return any
+---@return string?
 function RWMChannel:getYPrompt() end
 
----@return any
 function RWMChannel:initialise() end
 
----@return any
+---@return boolean?
 function RWMChannel:isValidPresets() end
 
----@return any
+---@param _name string
 function RWMChannel:onChildSave(_freq, _name) end
 
----@return any
+---@return boolean
+---@return boolean
 function RWMChannel:onJoypadDown(button) end
 
----@return any
 function RWMChannel:prerender() end
 
----@return any
+---@return boolean
 function RWMChannel:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMChannel:readPresets(_selected) end
 
----@return any
 function RWMChannel:render() end
 
----@return any
+---@param num number
+---@param idp number
+---@return number
 function RWMChannel:round(num, idp) end
 
----@return any
+---@param _edit boolean
 function RWMChannel:setPanelMode(_edit, _ignoreParent) end
 
----@return any
 function RWMChannel:setParent(_parent) end
 
----@return any
 function RWMChannel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RWMChannel
 function RWMChannel:new(x, y, width, height) end

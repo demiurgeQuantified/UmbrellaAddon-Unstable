@@ -1,45 +1,37 @@
 ---@meta
 
 ---@class ISOpenButcherHookUI : ISBaseTimedAction
----@field hook any
----@field maxTime any
----@field player any
----@field playerNum any
----@field useProgressBar any
----@field [any] any
+---@field hook unknown
+---@field player unknown
+---@field playerNum unknown
+---@field useProgressBar boolean
 ISOpenButcherHookUI = ISBaseTimedAction:derive("ISOpenButcherHookUI")
+ISOpenButcherHookUI.Type = "ISOpenButcherHookUI"
 
----@return any
 function ISOpenButcherHookUI:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISOpenButcherHookUI:complete() end
 
----@return any
 function ISOpenButcherHookUI:forceStop() end
 
----@return any
+---@return number
 function ISOpenButcherHookUI:getDuration() end
 
----@return any
+---@return boolean
 function ISOpenButcherHookUI:isValid() end
 
----@return any
 function ISOpenButcherHookUI:perform() end
 
----@return any
 function ISOpenButcherHookUI:serverStart() end
 
----@return any
 function ISOpenButcherHookUI:start() end
 
----@return any
 function ISOpenButcherHookUI:stop() end
 
----@return any
 function ISOpenButcherHookUI:update() end
 
----@return any
+---@return unknown
 function ISOpenButcherHookUI:waitToStart() end
 
 ---@return ISOpenButcherHookUI

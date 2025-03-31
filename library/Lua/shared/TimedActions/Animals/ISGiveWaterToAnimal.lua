@@ -1,50 +1,41 @@
 ---@meta
 
 ---@class ISGiveWaterToAnimal : ISBaseTimedAction
----@field animal any
----@field item any
----@field lastTimer any
----@field maxTime any
----@field sound any
----@field timePerUse any
----@field timer any
----@field [any] any
+---@field animal unknown
+---@field item unknown
+---@field lastTimer number
+---@field sound unknown
+---@field timePerUse number
+---@field timer number
 ISGiveWaterToAnimal = ISBaseTimedAction:derive("ISGiveWaterToAnimal")
+ISGiveWaterToAnimal.Type = "ISGiveWaterToAnimal"
 
----@return any
 function ISGiveWaterToAnimal:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISGiveWaterToAnimal:complete() end
 
----@return any
 function ISGiveWaterToAnimal:forceStop() end
 
----@return any
+---@return number
 function ISGiveWaterToAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISGiveWaterToAnimal:isValid() end
 
----@return any
 function ISGiveWaterToAnimal:perform() end
 
----@return any
 function ISGiveWaterToAnimal:serverStart() end
 
----@return any
 function ISGiveWaterToAnimal:start() end
 
----@return any
 function ISGiveWaterToAnimal:stop() end
 
----@return any
 function ISGiveWaterToAnimal:stopSound() end
 
----@return any
 function ISGiveWaterToAnimal:update() end
 
----@return any
+---@return unknown
 function ISGiveWaterToAnimal:waitToStart() end
 
 ---@return ISGiveWaterToAnimal

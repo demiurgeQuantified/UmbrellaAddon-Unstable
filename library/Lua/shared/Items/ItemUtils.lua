@@ -3,5 +3,5 @@
 ---@class ItemUtils
 ItemUtils = {}
 
----@return any
+---@return unknown?
 function ItemUtils.getContainers(character) end

@@ -1,72 +1,56 @@
 ---@meta
 
 ---@class ISEntityViewPanel : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field entity any
----@field entityScriptButton any
----@field greyCol any
----@field height any
----@field list any
----@field listView any
----@field objectRuntimeButton any
----@field reloadButton any
----@field reloadScriptButton any
----@field scriptLabel any
----@field scriptRuntimeButton any
----@field searchText any
----@field selectedEntityItem any
----@field subLabel any
----@field viewButtons any
----@field viewMode any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field entity unknown?
+---@field entityScriptButton ISButton
+---@field greyCol table
+---@field list ISScrollingListBox
+---@field listView ISStringListView
+---@field objectRuntimeButton ISButton
+---@field reloadButton ISButton
+---@field reloadScriptButton ISButton
+---@field scriptLabel ISLabel
+---@field scriptRuntimeButton ISButton
+---@field searchText string
+---@field selectedEntityItem unknown
+---@field subLabel ISLabel
+---@field viewButtons table
+---@field viewMode number
 ISEntityViewPanel = ISPanel:derive("ISEntityViewPanel")
+ISEntityViewPanel.Type = "ISEntityViewPanel"
 
----@return any
 function ISEntityViewPanel:createChildren() end
 
----@return any
+---@return number
 function ISEntityViewPanel:drawEntityListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISEntityViewPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISEntityViewPanel:initialise() end
 
----@return any
 function ISEntityViewPanel:onButtonClick(_button) end
 
----@return any
 function ISEntityViewPanel:onEntityListSelected(_item) end
 
----@return any
 function ISEntityViewPanel:onResize() end
 
----@return any
 function ISEntityViewPanel:populate() end
 
----@return any
 function ISEntityViewPanel:populateListView() end
 
----@return any
 function ISEntityViewPanel:prerender() end
 
----@return any
 function ISEntityViewPanel:render() end
 
----@return any
+---@param _entity unknown?
 function ISEntityViewPanel:setEntity(_entity) end
 
----@return any
 function ISEntityViewPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISEntityViewPanel
 function ISEntityViewPanel:new(x, y, width, height, entity) end

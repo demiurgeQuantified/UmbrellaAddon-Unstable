@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISTakeTrap : ISBaseTimedAction
----@field maxTime any
----@field trap any
----@field [any] any
+---@field trap unknown
 ISTakeTrap = ISBaseTimedAction:derive("ISTakeTrap")
+ISTakeTrap.Type = "ISTakeTrap"
 
----@return any
+---@return boolean
 function ISTakeTrap:complete() end
 
----@return any
+---@return number
 function ISTakeTrap:getDuration() end
 
----@return any
+---@return boolean
 function ISTakeTrap:isValid() end
 
----@return any
 function ISTakeTrap:perform() end
 
----@return any
 function ISTakeTrap:start() end
 
----@return any
 function ISTakeTrap:stop() end
 
----@return any
 function ISTakeTrap:update() end
 
----@return any
+---@return unknown
 function ISTakeTrap:waitToStart() end
 
+---@param character unknown?
 ---@return ISTakeTrap
 function ISTakeTrap:new(character, trap, time) end

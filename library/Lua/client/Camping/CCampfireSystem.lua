@@ -2,11 +2,12 @@
 
 ---@class CCampfireSystem : CGlobalObjectSystem
 CCampfireSystem = CGlobalObjectSystem:derive("CCampfireSystem")
+CCampfireSystem.Type = "CCampfireSystem"
 
----@return any
+---@return boolean
 function CCampfireSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return CCampfireGlobalObject
 function CCampfireSystem:newLuaObject(globalObject) end
 
 ---@return CCampfireSystem

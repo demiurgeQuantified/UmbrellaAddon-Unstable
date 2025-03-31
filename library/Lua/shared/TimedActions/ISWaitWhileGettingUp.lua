@@ -1,41 +1,42 @@
 ---@meta
 
 ---@class ISWaitWhileGettingUp : ISBaseTimedAction
----@field maxTime any
----@field onCompleteArgs any
----@field onCompleteFunc any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field useProgressBar any
----@field [any] any
+---@field onCompleteArgs table
+---@field onCompleteFunc function
+---@field useProgressBar boolean
 ISWaitWhileGettingUp = ISBaseTimedAction:derive("ISWaitWhileGettingUp")
+ISWaitWhileGettingUp.Type = "ISWaitWhileGettingUp"
 
----@return any
+---@return boolean
 function ISWaitWhileGettingUp:complete() end
 
----@return any
+---@return number
 function ISWaitWhileGettingUp:getDuration() end
 
----@return any
+---@return boolean
 function ISWaitWhileGettingUp:isValid() end
 
----@return any
 function ISWaitWhileGettingUp:perform() end
 
----@return any
+---@param func function
+---@param p2 unknown?
+---@param p3 unknown?
+---@param p4 unknown?
+---@param p5 unknown?
+---@param p6 unknown?
+---@param p7 unknown?
+---@param p8 unknown?
+---@param p9 unknown?
+---@param p10 unknown?
 function ISWaitWhileGettingUp:setOnComplete(func, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, ...) end
 
----@return any
 function ISWaitWhileGettingUp:start() end
 
----@return any
 function ISWaitWhileGettingUp:stop() end
 
----@return any
 function ISWaitWhileGettingUp:update() end
 
----@return any
+---@return boolean
 function ISWaitWhileGettingUp:waitToStart() end
 
 ---@return ISWaitWhileGettingUp

@@ -1,40 +1,35 @@
 ---@meta
 
----@class ISPriorityTable
 ISPriorityTable = {}
 
----@return ISPriorityTable_Instance
+---@return ISPriorityTable
 function ISPriorityTable.new() end
 
----@class ISPriorityTable_Instance
-local ISPriorityTable_Instance = {}
+---@class ISPriorityTable
+local __ISPriorityTable = {}
 
----@return any
-function ISPriorityTable_Instance.add(_k, _v, _z) end
+function __ISPriorityTable.add(_k, _v, _z) end
 
----@return any
-function ISPriorityTable_Instance.get(_k) end
+---@return unknown?
+function __ISPriorityTable.get(_k) end
 
----@return any
-function ISPriorityTable_Instance.getIndex(_index) end
+---@return unknown?
+function __ISPriorityTable.getIndex(_index) end
 
----@return any
-function ISPriorityTable_Instance.indexIterator() end
+---@return function
+function __ISPriorityTable.indexIterator() end
 
----@return any
-function ISPriorityTable_Instance.keyIterator() end
+---@return function
+function __ISPriorityTable.keyIterator() end
 
----@return any
-function ISPriorityTable_Instance.remove(_k) end
+function __ISPriorityTable.remove(_k) end
 
----@return any
-function ISPriorityTable_Instance.removeIndex(_index) end
+function __ISPriorityTable.removeIndex(_index) end
 
----@return any
-function ISPriorityTable_Instance.setDefaultZvalue(_z) end
+function __ISPriorityTable.setDefaultZvalue(_z) end
 
----@return any
-function ISPriorityTable_Instance.size() end
+---@return number
+function __ISPriorityTable.size() end
 
----@return any
-function ISPriorityTable_Instance.toString() end
+---@return string
+function __ISPriorityTable.toString() end

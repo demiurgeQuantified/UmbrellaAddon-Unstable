@@ -1,389 +1,310 @@
 ---@meta
 
 ---@class CharacterCreationMain : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field avatarPanel any
----@field backButton any
----@field backgroundColor any
----@field beardLbl any
----@field beardRect any
----@field beardStubbleLbl any
----@field beardStubbleTickBox any
----@field beardTypeCombo any
----@field beardTypeLbl any
----@field borderColor any
----@field characterPanel any
----@field chestHairLbl any
----@field chestHairTickBox any
----@field clothingColorBtn any
----@field clothingCombo any
----@field clothingComboLabel any
----@field clothingDebugCreated any
----@field clothingDecalCombo any
----@field clothingLbl any
----@field clothingPanel any
----@field clothingRect any
----@field clothingTextureCombo any
----@field clothingTextureComboWidth any
----@field clothingWidgets any
----@field colorPanel any
----@field colorPicker any
----@field colorPickerHair any
----@field colorPickerSkin any
----@field columnWidth any
----@field comboWid any
----@field decalItem any
----@field deleteBuildButton any
----@field disabledLArrow any
----@field disabledRArrow any
----@field female any
----@field forenameEntry any
----@field genderCombo any
----@field hairColorButton any
----@field hairColorLbl any
----@field hairStubbleLbl any
----@field hairStubbleTickBox any
----@field hairType any
----@field hairTypeCombo any
----@field hairTypeLbl any
----@field inputModal any
----@field itemheightoverride any
----@field javaObject any
----@field lArrow any
----@field originalYOffset any
----@field outfitCombo any
----@field outfitLbl any
----@field playButton any
----@field presetPanel any
----@field randomButton any
----@field randomizeOutfitBtn any
----@field rArrow any
----@field saveBuildButton any
----@field savedBuilds any
----@field skinColor any
----@field skinColorButton any
----@field skinColorLbl any
----@field skinColors any
----@field soundPlayer any
----@field soundRef any
----@field surnameEntry any
----@field voiceDemoButton any
----@field voiceLbl any
----@field voicePitchLbl any
----@field voicePitchSlider any
----@field voiceRect any
----@field voiceTypeCombo any
----@field voiceTypeLbl any
----@field x any
----@field y any
----@field yOffset any
----@field [any] any
+---@field avatarPanel CharacterCreationAvatar
+---@field backButton ISButton
+---@field beardLbl ISLabel
+---@field beardRect ISRect
+---@field beardStubbleLbl ISLabel
+---@field beardStubbleTickBox ISTickBox
+---@field beardTypeCombo ISComboBox
+---@field beardTypeLbl ISLabel
+---@field characterPanel CharacterCreationMainCharacterPanel
+---@field chestHairLbl ISLabel
+---@field chestHairTickBox ISTickBox
+---@field clothingColorBtn table
+---@field clothingCombo table
+---@field clothingComboLabel table
+---@field clothingDebugCreated boolean
+---@field clothingDecalCombo table
+---@field clothingLbl ISLabel
+---@field clothingPanel table
+---@field clothingRect ISRect
+---@field clothingTextureCombo table
+---@field clothingTextureComboWidth number
+---@field clothingWidgets table
+---@field colorPanel table
+---@field colorPicker ISColorPickerHSB
+---@field colorPickerHair ISColorPicker
+---@field colorPickerSkin ISColorPicker
+---@field columnWidth unknown
+---@field comboWid unknown
+---@field decalItem unknown
+---@field deleteBuildButton ISButton
+---@field disabledLArrow unknown
+---@field disabledRArrow unknown
+---@field female unknown
+---@field forenameEntry ISTextEntryBox
+---@field genderCombo ISComboBox
+---@field hairColorButton ISButton
+---@field hairColorLbl ISLabel
+---@field hairStubbleLbl ISLabel
+---@field hairStubbleTickBox ISTickBox
+---@field hairType number
+---@field hairTypeCombo ISComboBox
+---@field hairTypeLbl ISLabel
+---@field inputModal ISTextBox
+---@field itemheightoverride table
+---@field lArrow unknown
+---@field originalYOffset number
+---@field outfitCombo ISComboBox?
+---@field outfitLbl ISLabel?
+---@field playButton ISButton
+---@field presetPanel unknown
+---@field randomButton ISButton
+---@field randomizeOutfitBtn ISButton?
+---@field rArrow unknown
+---@field saveBuildButton ISButton
+---@field savedBuilds ISComboBox
+---@field skinColor number
+---@field skinColorButton ISButton
+---@field skinColorLbl ISLabel
+---@field skinColors table
+---@field soundPlayer unknown
+---@field soundRef number
+---@field surnameEntry ISTextEntryBox
+---@field voiceDemoButton ISButton
+---@field voiceLbl ISLabel
+---@field voicePitchLbl ISLabel
+---@field voicePitchSlider ISSliderPanel
+---@field voiceRect ISRect
+---@field voiceTypeCombo ISComboBox
+---@field voiceTypeLbl ISLabel
+---@field yOffset number
 CharacterCreationMain = ISPanelJoypad:derive("CharacterCreationMain")
+CharacterCreationMain.Type = "CharacterCreationMain"
 CharacterCreationMain.savefile = "saved_outfits.txt"
+CharacterCreationMain.forceUpdateCombo = nil ---@type boolean?
+CharacterCreationMain.instance = nil ---@type CharacterCreationMain?
 
----@return any
 function CharacterCreationMain.loadOutfit(self, box) end
 
----@return any
+---@return table
 function CharacterCreationMain.readSavedOutfitFile() end
 
----@return any
 function CharacterCreationMain.writeSaveFile(options) end
 
----@return any
 function CharacterCreationMain:arrangeClothingUI() end
 
----@return any
 function CharacterCreationMain:checkAllClothingOptions() end
 
----@return any
 function CharacterCreationMain:create() end
 
----@return any
 function CharacterCreationMain:createAvatar() end
 
----@return any
 function CharacterCreationMain:createBeardTypeBtn() end
 
----@return any
 function CharacterCreationMain:createBodyTypeBtn() end
 
----@return any
 function CharacterCreationMain:createClothingBtn() end
 
----@return any
 function CharacterCreationMain:createClothingCombo(bodyLocation) end
 
----@return any
 function CharacterCreationMain:createClothingComboDebug(bodyLocation) end
 
----@return any
 function CharacterCreationMain:createHairTypeBtn() end
 
----@return any
 function CharacterCreationMain:createNameAndGender() end
 
----@return any
 function CharacterCreationMain:createVoiceTypeBtn() end
 
----@return any
 function CharacterCreationMain:debugClothingDefinitions() end
 
----@return any
 function CharacterCreationMain:deleteBuildStep1() end
 
----@return any
 function CharacterCreationMain:deleteBuildStep2(button, joypadData) end
 
----@return any
 function CharacterCreationMain:disableBtn() end
 
----@return any
 function CharacterCreationMain:doClothingCombo(definition, erasePrevious) end
 
----@return any
 function CharacterCreationMain:dressWithDefinitions(definition, resetWornItems) end
 
----@return any
+---@return number
 function CharacterCreationMain:getVoicePitch() end
 
----@return any
+---@return string
 function CharacterCreationMain:getVoicePrefix() end
 
----@return any
+---@return string
 function CharacterCreationMain:getVoiceType() end
 
----@return any
 function CharacterCreationMain:initClothing() end
 
----@return any
 function CharacterCreationMain:initClothingDebug() end
 
----@return any
 function CharacterCreationMain:initialise() end
 
----@return any
 function CharacterCreationMain:initPlayer() end
 
----@return any
 function CharacterCreationMain:instantiate() end
 
----@return any
 function CharacterCreationMain:loadJoypadButtons(joypadData) end
 
----@return any
-function CharacterCreationMain:loadOutfit(box) end
-
----@return any
 function CharacterCreationMain:onBeardStubbleSelected(index, selected) end
 
----@return any
 function CharacterCreationMain:onBeardTypeSelected(combo) end
 
----@return any
 function CharacterCreationMain:onChestHairSelected(index, selected) end
 
----@return any
 function CharacterCreationMain:onClothingColorClicked(button, bodyLocation) end
 
----@return any
 function CharacterCreationMain:onClothingColorPicked(color, mouseUp, bodyLocation) end
 
----@return any
 function CharacterCreationMain:onClothingComboSelected(combo, bodyLocation) end
 
----@return any
 function CharacterCreationMain:onClothingDecalComboSelected(combo, bodyLocation) end
 
----@return any
 function CharacterCreationMain:onClothingTextureComboSelected(combo, bodyLocation) end
 
----@return any
 function CharacterCreationMain:onGainJoypadFocus(joypadData) end
 
----@return any
 function CharacterCreationMain:onGenderSelected(combo) end
 
----@return any
+---@param x number
+---@param y number
 function CharacterCreationMain:onHairColorMouseDown(button, x, y) end
 
----@return any
 function CharacterCreationMain:onHairColorPicked(color, mouseUp) end
 
----@return any
 function CharacterCreationMain:onHairTypeSelected(combo) end
 
----@return any
 function CharacterCreationMain:onJoypadDirLeft(joypadData) end
 
----@return any
 function CharacterCreationMain:onJoypadDirRight(joypadData) end
 
----@return any
 function CharacterCreationMain:onJoypadDirUp(joypadData) end
 
----@return any
 function CharacterCreationMain:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function CharacterCreationMain:onOptionMouseDown(button, x, y) end
 
----@return any
+---@param combo unknown?
 function CharacterCreationMain:onOutfitSelected(combo) end
 
----@return any
 function CharacterCreationMain:onRandomCharacter() end
 
----@return any
 function CharacterCreationMain:onRandomizeOutfitClicked() end
 
----@return any
 function CharacterCreationMain:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
 function CharacterCreationMain:onShavedHairSelected(index, selected) end
 
----@return any
 function CharacterCreationMain:onSkinColorPicked(color, mouseUp) end
 
----@return any
+---@param x number
+---@param y number
 function CharacterCreationMain:onSkinColorSelected(button, x, y) end
 
----@return any
 function CharacterCreationMain:onVoiceTypeSelected() end
 
----@return any
 function CharacterCreationMain:prerender() end
 
----@return any
 function CharacterCreationMain:randomGenericOutfit() end
 
----@return any
 function CharacterCreationMain:randomVoice() end
 
----@return any
 function CharacterCreationMain:removeAllClothingWidgets() end
 
----@return any
+---@return number
+---@return number
 function CharacterCreationMain:requiredSize(panel) end
 
----@return any
 function CharacterCreationMain:rescaleAvatarViewer() end
 
----@return any
 function CharacterCreationMain:saveBuildStep1() end
 
----@return any
 function CharacterCreationMain:saveBuildStep2(button, joypadData, param2) end
 
----@return any
+---@return boolean
 function CharacterCreationMain:saveBuildValidate(text) end
 
----@return any
 function CharacterCreationMain:setAvatarFromUI() end
 
----@return any
+---@param bVisible boolean
+---@param joypadData unknown?
 function CharacterCreationMain:setVisible(bVisible, joypadData) end
 
----@return any
+---@return boolean
 function CharacterCreationMain:shouldShowAllOutfits() end
 
----@return any
 function CharacterCreationMain:showColorPicker(picker) end
 
----@return any
 function CharacterCreationMain:syncTorsoWithUI() end
 
----@return any
 function CharacterCreationMain:syncUIWithTorso() end
 
----@return any
 function CharacterCreationMain:update() end
 
----@return any
 function CharacterCreationMain:updateClothingTextureCombo(bodyLocation, clothing) end
 
----@return any
 function CharacterCreationMain:updateColorButton(bodyLocation, clothing) end
 
----@return any
 function CharacterCreationMain:updateSelectedClothingCombo() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return CharacterCreationMain
 function CharacterCreationMain:new(x, y, width, height) end
 
 ---@class CharacterCreationMainCharacterPanel : ISPanelJoypad
----@field columnWidth any
----@field comboResizeTable any
----@field dividerResizeTable any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field prevJoypadIndexY any
----@field repos2Table any
----@field repos3Table any
----@field reposTable any
----@field scrollBar any
----@field [any] any
+---@field columnWidth number
+---@field comboResizeTable table
+---@field dividerResizeTable table
+---@field joypadButtons unknown
+---@field prevJoypadIndexY number
+---@field repos2Table table
+---@field repos3Table table
+---@field reposTable table
+---@field scrollBar boolean
 CharacterCreationMainCharacterPanel = ISPanelJoypad:derive("CharacterCreationMainCharacterPanel")
+CharacterCreationMainCharacterPanel.Type = "CharacterCreationMainCharacterPanel"
 
----@return any
 function CharacterCreationMainCharacterPanel:loadJoypadButtons(joypadData) end
 
----@return any
 function CharacterCreationMainCharacterPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function CharacterCreationMainCharacterPanel:onJoypadDirLeft(joypadData) end
 
----@return any
 function CharacterCreationMainCharacterPanel:onJoypadDirRight(joypadData) end
 
----@return any
 function CharacterCreationMainCharacterPanel:onJoypadDown(button, joypadData) end
 
----@return any
 function CharacterCreationMainCharacterPanel:onLoseJoypadFocus(joypadData) end
 
----@return any
 function CharacterCreationMainCharacterPanel:onMouseWheel(del) end
 
----@return any
 function CharacterCreationMainCharacterPanel:positionRelativeToScrollBar() end
 
----@return any
 function CharacterCreationMainCharacterPanel:prerender() end
 
----@return any
 function CharacterCreationMainCharacterPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return CharacterCreationMainCharacterPanel
 function CharacterCreationMainCharacterPanel:new(x, y, width, height) end
 
 ---@class CharacterCreationMainPresetPanel : ISPanelJoypad
 CharacterCreationMainPresetPanel = ISPanelJoypad:derive("CharacterCreationMainPresetPanel")
+CharacterCreationMainPresetPanel.Type = "CharacterCreationMainPresetPanel"
 
----@return any
 function CharacterCreationMainPresetPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function CharacterCreationMainPresetPanel:onJoypadDirLeft(joypadData) end
 
----@return any
 function CharacterCreationMainPresetPanel:onJoypadDirRight(joypadData) end
 
----@return any
 function CharacterCreationMainPresetPanel:onJoypadDirUp(joypadData) end
 
----@return any
 function CharacterCreationMainPresetPanel:onJoypadDown(button, joypadData) end
 
----@return any
 function CharacterCreationMainPresetPanel:onLoseJoypadFocus(joypadData) end
 
----@return any
 function CharacterCreationMainPresetPanel:render() end

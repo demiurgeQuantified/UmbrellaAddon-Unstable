@@ -1,19 +1,14 @@
 ---@meta
 
 ---@class ISFireplaceInfoAction : ISBaseTimedAction
----@field character any
----@field fireplace any
----@field maxTime any
----@field playerNum any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field fireplace unknown
+---@field playerNum unknown
 ISFireplaceInfoAction = ISBaseTimedAction:derive("ISFireplaceInfoAction")
+ISFireplaceInfoAction.Type = "ISFireplaceInfoAction"
 
----@return any
+---@return boolean
 function ISFireplaceInfoAction:isValid() end
 
----@return any
 function ISFireplaceInfoAction:perform() end
 
 ---@return ISFireplaceInfoAction

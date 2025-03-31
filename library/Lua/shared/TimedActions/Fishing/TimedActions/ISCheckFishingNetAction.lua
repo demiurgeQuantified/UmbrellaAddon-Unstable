@@ -1,31 +1,27 @@
 ---@meta
 
 ---@class ISCheckFishingNetAction : ISBaseTimedAction
----@field hours any
----@field maxTime any
----@field trap any
----@field [any] any
+---@field hours unknown
+---@field maxTime number?
+---@field trap unknown
 ISCheckFishingNetAction = ISBaseTimedAction:derive("ISCheckFishingNetAction")
+ISCheckFishingNetAction.Type = "ISCheckFishingNetAction"
 
----@return any
+---@return boolean
 function ISCheckFishingNetAction:complete() end
 
----@return any
+---@return number?
 function ISCheckFishingNetAction:getDuration() end
 
----@return any
+---@return boolean
 function ISCheckFishingNetAction:isValid() end
 
----@return any
 function ISCheckFishingNetAction:perform() end
 
----@return any
 function ISCheckFishingNetAction:start() end
 
----@return any
 function ISCheckFishingNetAction:stop() end
 
----@return any
 function ISCheckFishingNetAction:update() end
 
 ---@return ISCheckFishingNetAction

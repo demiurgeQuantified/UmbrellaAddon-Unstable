@@ -1,27 +1,22 @@
 ---@meta
 
 ---@class StatisticChartUpdatePeriod : StatisticChart
----@field instance any
----@field [any] any
 StatisticChartUpdatePeriod = StatisticChart:derive("StatisticChartUpdatePeriod")
+StatisticChartUpdatePeriod.Type = "StatisticChartUpdatePeriod"
 StatisticChartUpdatePeriod.instance = nil
 StatisticChartUpdatePeriod.shiftDown = 0
 StatisticChartUpdatePeriod.eventsAdded = false
 
----@return any
+---@return unknown?
 function StatisticChartUpdatePeriod.doInstance() end
 
----@return any
+---@return unknown?
 function StatisticChartUpdatePeriod.OnOpenPanel() end
 
----@return any
 function StatisticChartUpdatePeriod.OnServerStatisticReceived() end
 
----@return any
 function StatisticChartUpdatePeriod:createChildren() end
 
----@return any
 function StatisticChartUpdatePeriod:initVariables() end
 
----@return any
 function StatisticChartUpdatePeriod:updateValues() end

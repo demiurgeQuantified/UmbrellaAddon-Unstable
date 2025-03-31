@@ -43,26 +43,19 @@ TheDescendingFog.spawns = {
 }
 TheDescendingFog.hourOfDay = 7
 
----@return any
 function TheDescendingFog.Add() end
 
----@return any
+---@param playerNum number
 function TheDescendingFog.AddPlayer(playerNum, playerObj) end
 
----@return any
 function TheDescendingFog.EveryTenMinutes() end
 
----@return any
 function TheDescendingFog.OnGameStart() end
 
----@return any
 function TheDescendingFog.OnInitSeasons(_season) end
 
----@return any
 function TheDescendingFog.OnInitWorld() end
 
----@return any
 function TheDescendingFog.RemovePlayer(p) end
 
----@return any
 function TheDescendingFog.Render() end

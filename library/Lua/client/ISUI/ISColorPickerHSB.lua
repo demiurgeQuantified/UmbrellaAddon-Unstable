@@ -1,91 +1,90 @@
 ---@meta
 
 ---@class ISColorPickerHSB : ISPanelJoypad
----@field b any
----@field borderSize any
----@field buttonSize any
----@field colorBlockX any
----@field colorBlockY any
----@field currentColor any
----@field h any
----@field HueImage any
----@field hueSlider any
----@field initialColor any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field mouseDown any
----@field mouseDownInColorBox any
----@field pickedArgs any
----@field pickedFunc any
----@field pickedRGB any
----@field s any
----@field SatImage any
----@field satSlider any
----@field valSlider any
----@field [any] any
+---@field b number
+---@field borderSize number
+---@field buttonSize number
+---@field colorBlockX number
+---@field colorBlockY number
+---@field currentColor unknown
+---@field h number
+---@field HueImage unknown
+---@field hueSlider ISSliderPanel
+---@field initialColor unknown
+---@field mouseDown boolean
+---@field mouseDownInColorBox boolean
+---@field pickedArgs table
+---@field pickedFunc unknown
+---@field pickedRGB table
+---@field s number
+---@field SatImage unknown
+---@field satSlider ISSliderPanel
+---@field valSlider ISSliderPanel
 ISColorPickerHSB = ISPanelJoypad:derive("ISColorPickerHSB")
+ISColorPickerHSB.Type = "ISColorPickerHSB"
 
----@return any
 function ISColorPickerHSB:createChildren() end
 
----@return any
 function ISColorPickerHSB:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISColorPickerHSB:onJoypadDown(button) end
 
----@return any
 function ISColorPickerHSB:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPickerHSB:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISColorPickerHSB:onMouseDownColorBox(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPickerHSB:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean?
 function ISColorPickerHSB:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPickerHSB:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISColorPickerHSB:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function ISColorPickerHSB:onSave() end
 
----@return any
 function ISColorPickerHSB:onSliderChange(value, slider) end
 
----@return any
 function ISColorPickerHSB:picked(hide) end
 
----@return any
 function ISColorPickerHSB:picked2(hide) end
 
----@return any
 function ISColorPickerHSB:removeSelf() end
 
----@return any
 function ISColorPickerHSB:render() end
 
----@return any
 function ISColorPickerHSB:setCurrentColor(h, s, b) end
 
----@return any
 function ISColorPickerHSB:setInitialColor(initial) end
 
----@return any
 function ISColorPickerHSB:setPickedFunc(func, arg1, arg2, arg3, arg4) end
 
----@return any
+---@return number
+---@return number
+---@return unknown
 function ISColorPickerHSB:toHSB(Color) end
 
+---@param x number
+---@param y number
 ---@return ISColorPickerHSB
 function ISColorPickerHSB:new(x, y, initial) end

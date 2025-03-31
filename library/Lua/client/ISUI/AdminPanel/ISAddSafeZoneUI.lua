@@ -1,58 +1,49 @@
 ---@meta
 
 ---@class ISAddSafeZoneUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field cancel any
----@field character any
----@field claimOptions any
----@field creatingZone any
----@field fullHighlight any
----@field height any
----@field moveWithMouse any
----@field notIntersecting any
----@field ok any
----@field ownerEntry any
----@field size any
----@field startingPoint any
----@field startingX any
----@field startingY any
----@field titleEntry any
----@field width any
----@field X1 any
----@field X2 any
----@field Y1 any
----@field Y2 any
----@field zoneheight any
----@field zonewidth any
----@field [any] any
+---@field buttonBorderColor table
+---@field cancel ISButton
+---@field character unknown
+---@field claimOptions ISTickBox
+---@field creatingZone boolean
+---@field fullHighlight boolean
+---@field notIntersecting boolean
+---@field ok ISButton
+---@field ownerEntry ISTextEntryBox
+---@field size unknown
+---@field startingPoint ISButton
+---@field startingX unknown
+---@field startingY unknown
+---@field titleEntry ISTextEntryBox
+---@field X1 unknown
+---@field X2 unknown
+---@field Y1 unknown
+---@field Y2 unknown
+---@field zoneheight unknown
+---@field zonewidth unknown
 ISAddSafeZoneUI = ISPanel:derive("ISAddSafeZoneUI")
-ISAddSafeZoneUI.instance = nil
+ISAddSafeZoneUI.Type = "ISAddSafeZoneUI"
+ISAddSafeZoneUI.instance = nil ---@type ISAddSafeZoneUI?
 
----@return any
 function ISAddSafeZoneUI:checkIfIntersectingAnotherZone() end
 
----@return any
 function ISAddSafeZoneUI:highlightZone(_x1, _x2, _y1, _y2, _fullHighlight) end
 
----@return any
 function ISAddSafeZoneUI:initialise() end
 
----@return any
 function ISAddSafeZoneUI:onClick(button) end
 
----@return any
 function ISAddSafeZoneUI:onClickClaimOptions(_clickedOption, _ticked) end
 
----@return any
 function ISAddSafeZoneUI:prerender() end
 
----@return any
 function ISAddSafeZoneUI:redefineStartingPoint() end
 
----@return any
 function ISAddSafeZoneUI:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAddSafeZoneUI
 function ISAddSafeZoneUI:new(x, y, width, height, character) end

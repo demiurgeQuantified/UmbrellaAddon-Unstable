@@ -1,42 +1,36 @@
 ---@meta
 
 ---@class ISBuryCorpse : ISBaseTimedAction
----@field caloriesModifier any
----@field graves any
----@field maxTime any
----@field shovel any
----@field [any] any
+---@field graves unknown
+---@field shovel unknown
 ISBuryCorpse = ISBaseTimedAction:derive("ISBuryCorpse")
+ISBuryCorpse.Type = "ISBuryCorpse"
 
----@return any
+---@return boolean
 function ISBuryCorpse:complete() end
 
----@return any
+---@return number
 function ISBuryCorpse:getDuration() end
 
----@return any
 function ISBuryCorpse:increaseCorpse(square) end
 
----@return any
+---@return unknown
 function ISBuryCorpse:isValid() end
 
----@return any
+---@return boolean
 function ISBuryCorpse:isValidStart() end
 
----@return any
 function ISBuryCorpse:perform() end
 
----@return any
 function ISBuryCorpse:start() end
 
----@return any
 function ISBuryCorpse:stop() end
 
----@return any
 function ISBuryCorpse:update() end
 
----@return any
+---@return unknown
 function ISBuryCorpse:waitToStart() end
 
+---@param character unknown?
 ---@return ISBuryCorpse
 function ISBuryCorpse:new(character, graves, shovel) end

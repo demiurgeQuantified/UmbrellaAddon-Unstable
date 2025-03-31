@@ -8,11 +8,14 @@ ScriptItemInterface.types = {
 	food = "Food",
 }
 
----@return any
+---@param newName string
+---@param originalFullName string
+---@return unknown
 function ScriptItemInterface.cloneItemType(newName, originalFullName) end
 
----@return any
 function ScriptItemInterface.instanceItemType(item) end
 
----@return any
+---@param name string
+---@param displayname string
+---@return unknown
 function ScriptItemInterface.newItemType(name, displayname, type, inventoryIcon) end

@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISPutAnimalInHutch : ISBaseTimedAction
----@field hutch any
----@field maxTime any
----@field [any] any
+---@field hutch unknown
 ISPutAnimalInHutch = ISBaseTimedAction:derive("ISPutAnimalInHutch")
+ISPutAnimalInHutch.Type = "ISPutAnimalInHutch"
 
----@return any
+---@return boolean
 function ISPutAnimalInHutch:complete() end
 
----@return any
+---@return number
 function ISPutAnimalInHutch:getDuration() end
 
----@return any
+---@return unknown
 function ISPutAnimalInHutch:isValid() end
 
----@return any
 function ISPutAnimalInHutch:perform() end
 
----@return any
 function ISPutAnimalInHutch:start() end
 
----@return any
 function ISPutAnimalInHutch:stop() end
 
----@return any
 function ISPutAnimalInHutch:update() end
 
----@return any
+---@return unknown
 function ISPutAnimalInHutch:waitToStart() end
 
 ---@return ISPutAnimalInHutch

@@ -1,35 +1,32 @@
 ---@meta
 
 ---@class ISActivateCarBatteryChargerAction : ISBaseTimedAction
----@field activate any
----@field charger any
----@field maxTime any
----@field [any] any
+---@field activate boolean
+---@field charger unknown
 ISActivateCarBatteryChargerAction = ISBaseTimedAction:derive("ISActivateCarBatteryChargerAction")
+ISActivateCarBatteryChargerAction.Type = "ISActivateCarBatteryChargerAction"
 
----@return any
+---@return boolean?
 function ISActivateCarBatteryChargerAction:complete() end
 
----@return any
+---@return number
 function ISActivateCarBatteryChargerAction:getDuration() end
 
----@return any
+---@return boolean
 function ISActivateCarBatteryChargerAction:isValid() end
 
----@return any
 function ISActivateCarBatteryChargerAction:perform() end
 
----@return any
 function ISActivateCarBatteryChargerAction:start() end
 
----@return any
 function ISActivateCarBatteryChargerAction:stop() end
 
----@return any
 function ISActivateCarBatteryChargerAction:update() end
 
----@return any
+---@return unknown
 function ISActivateCarBatteryChargerAction:waitToStart() end
 
+---@param character unknown?
+---@param activate boolean
 ---@return ISActivateCarBatteryChargerAction
 function ISActivateCarBatteryChargerAction:new(character, charger, activate) end

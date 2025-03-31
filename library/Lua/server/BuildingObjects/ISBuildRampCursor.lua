@@ -1,24 +1,34 @@
 ---@meta
 
 ---@class ISBuildRampCursor : ISBuildingObject
----@field character any
----@field which any
----@field [any] any
+---@field character unknown
+---@field which unknown
 ISBuildRampCursor = ISBuildingObject:derive("ISBuildRampCursor")
+ISBuildRampCursor.Type = "ISBuildRampCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@param spriteName string
+---@return unknown?
 function ISBuildRampCursor:addRampObject(x, y, z, spriteName) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBuildRampCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return boolean
 function ISBuildRampCursor:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBuildRampCursor:removeRampObjects(x, y, z) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBuildRampCursor:render(x, y, z, square) end
 
 ---@return ISBuildRampCursor

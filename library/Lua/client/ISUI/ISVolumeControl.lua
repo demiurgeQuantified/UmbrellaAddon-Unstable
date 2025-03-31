@@ -1,54 +1,56 @@
 ---@meta
 
 ---@class ISVolumeControl : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field dragging any
----@field fade any
----@field isSlider any
----@field joypadFocused any
----@field target any
----@field targetFunc any
----@field tooltipUI any
----@field volume any
----@field [any] any
+---@field dragging boolean
+---@field fade unknown
+---@field isSlider boolean
+---@field joypadFocused unknown
+---@field target WeatherFXDebug
+---@field targetFunc unknown
+---@field tooltipUI ISToolTip
+---@field volume number
 ISVolumeControl = ISPanel:derive("ISVolumeControl")
+ISVolumeControl.Type = "ISVolumeControl"
 
----@return any
+---@return number
 function ISVolumeControl:getVolume() end
 
----@return any
+---@return number
 function ISVolumeControl:getVolumeAtX(x) end
 
----@return any
 function ISVolumeControl:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISVolumeControl:onJoypadDirRight(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeControl:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISVolumeControl:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeControl:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISVolumeControl:onMouseUpOutside(x, y) end
 
----@return any
 function ISVolumeControl:prerender() end
 
----@return any
 function ISVolumeControl:render() end
 
----@return any
 function ISVolumeControl:setJoypadFocused(focused) end
 
----@return any
+---@param volume number
 function ISVolumeControl:setVolume(volume) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target WeatherFXDebug
 ---@return ISVolumeControl
 function ISVolumeControl:new(x, y, width, height, target, targetFunc) end

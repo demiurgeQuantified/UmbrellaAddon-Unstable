@@ -1,39 +1,31 @@
 ---@meta
 
 ---@class ISCreateFactionUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field entry any
----@field height any
----@field moveWithMouse any
----@field no any
----@field ok any
----@field player any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field buttonBorderColor table
+---@field entry ISTextEntryBox
+---@field no ISButton
+---@field ok ISButton
+---@field player unknown
 ISCreateFactionUI = ISPanel:derive("ISCreateFactionUI")
+ISCreateFactionUI.Type = "ISCreateFactionUI"
 ISCreateFactionUI.messages = {}
+ISCreateFactionUI.instance = nil ---@type ISCreateFactionUI?
 
----@return any
 function ISCreateFactionUI:close() end
 
----@return any
 function ISCreateFactionUI:initialise() end
 
----@return any
 function ISCreateFactionUI:onClick(button) end
 
----@return any
 function ISCreateFactionUI:prerender() end
 
----@return any
 function ISCreateFactionUI:render() end
 
----@return any
 function ISCreateFactionUI:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCreateFactionUI
 function ISCreateFactionUI:new(x, y, width, height, player) end

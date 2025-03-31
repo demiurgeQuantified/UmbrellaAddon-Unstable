@@ -1,31 +1,28 @@
 ---@meta
 
 ---@class SadisticMusicDirector : ISBaseObject
----@field drama any
----@field lastChangedTrack any
----@field lastNumZombie any
----@field lastSeenZombie any
----@field lastTimeSinceZombie any
----@field lastTriggerDrama any
----@field triggerDelay any
----@field [any] any
+---@field drama number
+---@field lastChangedTrack number
+---@field lastNumZombie number
+---@field lastSeenZombie number
+---@field lastTimeSinceZombie number
+---@field lastTriggerDrama number
+---@field triggerDelay number
 SadisticMusicDirector = ISBaseObject:derive("SadisticMusicDirector")
+SadisticMusicDirector.Type = "SadisticMusicDirector"
 SadisticMusicDirector.instance = SadisticMusicDirector:new()
 
----@return any
 function SadisticMusicDirector:changeTrack() end
 
----@return any
+---@param num number
 function SadisticMusicDirector:seenZombies(num) end
 
----@return any
+---@return boolean
 function SadisticMusicDirector:shouldChangeTrack() end
 
----@return any
 function SadisticMusicDirector:tick() end
 
 ---@return SadisticMusicDirector
 function SadisticMusicDirector:new() end
 
----@return any
 function SadisticMusicDirectorTick() end

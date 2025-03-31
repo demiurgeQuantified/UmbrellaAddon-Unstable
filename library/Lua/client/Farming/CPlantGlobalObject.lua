@@ -2,18 +2,20 @@
 
 ---@class CPlantGlobalObject : CGlobalObject
 CPlantGlobalObject = CGlobalObject:derive("CPlantGlobalObject")
+CPlantGlobalObject.Type = "CPlantGlobalObject"
 
----@return any
+---@return boolean
 function CPlantGlobalObject:canHarvest() end
 
----@return any
+---@return unknown
 function CPlantGlobalObject:getObject() end
 
----@return any
+---@return boolean
 function CPlantGlobalObject:isAlive() end
 
----@return any
+---@return boolean?
 function CPlantGlobalObject:isBadMonth() end
 
+---@param luaSystem CFarmingSystem
 ---@return CPlantGlobalObject
 function CPlantGlobalObject:new(luaSystem, globalObject) end

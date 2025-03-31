@@ -1,47 +1,39 @@
 ---@meta
 
 ---@class ISEnergySlot : ISPanel
----@field background any
----@field enableIcon any
----@field energy any
----@field energyBar any
----@field energyBorderColorOrig any
----@field equalSpacing any
----@field icon any
----@field isVertical any
----@field margin any
----@field minimumBarSize any
----@field minimumHeight any
----@field minimumWidth any
----@field player any
----@field resource any
----@field styleBar any
----@field styleIcon any
----@field x any
----@field y any
----@field [any] any
+---@field enableIcon boolean
+---@field energy unknown
+---@field energyBar unknown?
+---@field energyBorderColorOrig unknown
+---@field equalSpacing boolean
+---@field icon unknown?
+---@field isVertical boolean
+---@field margin number
+---@field minimumBarSize number
+---@field player unknown
+---@field resource unknown
+---@field styleBar unknown
+---@field styleIcon unknown
 ISEnergySlot = ISPanel:derive("ISEnergySlot")
+ISEnergySlot.Type = "ISEnergySlot"
 
----@return any
 function ISEnergySlot:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISEnergySlot:createChildren() end
 
----@return any
 function ISEnergySlot:initialise() end
 
----@return any
 function ISEnergySlot:prerender() end
 
----@return any
 function ISEnergySlot:render() end
 
----@return any
 function ISEnergySlot:setResource(_resource) end
 
----@return any
 function ISEnergySlot:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISEnergySlot
 function ISEnergySlot:new(x, y, width, height, player, resource, styleIcon, styleBar) end

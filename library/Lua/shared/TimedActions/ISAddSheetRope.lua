@@ -1,34 +1,29 @@
 ---@meta
 
 ---@class ISAddSheetRope : ISBaseTimedAction
----@field maxTime any
----@field sheetRope any
----@field window any
----@field [any] any
+---@field sheetRope unknown
+---@field window unknown
 ISAddSheetRope = ISBaseTimedAction:derive("ISAddSheetRope")
+ISAddSheetRope.Type = "ISAddSheetRope"
 
----@return any
+---@return boolean
 function ISAddSheetRope:complete() end
 
----@return any
+---@return number
 function ISAddSheetRope:getDuration() end
 
----@return any
+---@return boolean
 function ISAddSheetRope:isValid() end
 
----@return any
 function ISAddSheetRope:perform() end
 
----@return any
 function ISAddSheetRope:start() end
 
----@return any
 function ISAddSheetRope:stop() end
 
----@return any
 function ISAddSheetRope:update() end
 
----@return any
+---@return unknown
 function ISAddSheetRope:waitToStart() end
 
 ---@return ISAddSheetRope

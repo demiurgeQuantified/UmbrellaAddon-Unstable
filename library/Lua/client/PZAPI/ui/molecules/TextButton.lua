@@ -1,1 +1,17 @@
 ---@meta
+
+---@class UI.TextButton : UI.Panel
+---@overload fun(args: table): UI.TextButton
+---@field super UI.Panel
+local __UI_TextButton = {}
+__UI_TextButton.sounds = {
+	activate = "UIActivateButton",
+}
+
+function __UI_TextButton:onHover(state) end
+
+function __UI_TextButton:onLeftClick() end
+
+---@class PZAPI
+PZAPI = {}
+PZAPI.UI.TextButton = nil ---@type UI.TextButton

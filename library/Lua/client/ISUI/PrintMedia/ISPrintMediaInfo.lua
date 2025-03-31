@@ -1,46 +1,43 @@
 ---@meta
 
 ---@class ISPrintMediaInfo : ISBaseObject
----@field data any
----@field moreTextInfo any
----@field nextcondition any
----@field text any
----@field title any
----@field [any] any
+---@field data table
+---@field moreTextInfo unknown
+---@field nextcondition unknown
+---@field text unknown
+---@field title string
 ISPrintMediaInfo = ISBaseObject:derive("ISPrintMediaInfo")
+ISPrintMediaInfo.Type = "ISPrintMediaInfo"
 
----@return any
 function ISPrintMediaInfo:initialise() end
 
+---@param title string
 ---@return ISPrintMediaInfo
 function ISPrintMediaInfo:new(title, text, moreTextInfo, nextcondition) end
 
 ---@class ISPrintMediaSetInfo : ISBaseObject
----@field currentPage any
----@field pageCount any
----@field pages any
----@field [any] any
+---@field currentPage number
+---@field pageCount number
+---@field pages table
 ISPrintMediaSetInfo = ISBaseObject:derive("ISPrintMediaSetInfo")
+ISPrintMediaSetInfo.Type = "ISPrintMediaSetInfo"
 
----@return any
+---@param pagetitle string
 function ISPrintMediaSetInfo:addPage(pagetitle, pagetext, moreTextInfo, pagenextcondition) end
 
----@return any
 function ISPrintMediaSetInfo:applyPageToRichTextPanel(tutorialPanel) end
 
----@return any
+---@return unknown
 function ISPrintMediaSetInfo:getCurrent() end
 
----@return any
+---@return boolean
 function ISPrintMediaSetInfo:hasNext() end
 
----@return any
+---@return boolean
 function ISPrintMediaSetInfo:hasPrevious() end
 
----@return any
 function ISPrintMediaSetInfo:initialise() end
 
----@return any
 function ISPrintMediaSetInfo:update(tutorialPanel) end
 
 ---@return ISPrintMediaSetInfo

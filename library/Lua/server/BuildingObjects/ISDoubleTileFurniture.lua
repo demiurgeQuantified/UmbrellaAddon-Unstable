@@ -1,45 +1,48 @@
 ---@meta
 
 ---@class ISDoubleTileFurniture : ISBuildingObject
----@field blockAllTheSquare any
----@field buildLow any
----@field canBarricade any
----@field canBeAlwaysPlaced any
----@field dismantable any
----@field modData any
----@field name any
----@field northSprite2 any
----@field sprite2 any
----@field sq any
----@field [any] any
+---@field buildLow boolean
+---@field name string
+---@field northSprite2 unknown
+---@field sprite2 unknown
+---@field sq unknown
 ISDoubleTileFurniture = ISBuildingObject:derive("ISDoubleTileFurniture")
+ISDoubleTileFurniture.Type = "ISDoubleTileFurniture"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISDoubleTileFurniture:create(x, y, z, north, sprite) end
 
----@return any
+---@return number
 function ISDoubleTileFurniture:getHealth() end
 
----@return any
+---@return unknown
 function ISDoubleTileFurniture:getSquare2(square, north) end
 
----@return any
+---@return number
+---@return number
+---@return unknown
 function ISDoubleTileFurniture:getSquare2Pos(square, north) end
 
----@return any
+---@return boolean
 function ISDoubleTileFurniture:isValid(square) end
 
----@return any
 function ISDoubleTileFurniture:removeFromGround(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISDoubleTileFurniture:render(x, y, z, square) end
 
----@return any
 function ISDoubleTileFurniture:setInfo(square, north, sprite) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean?
 function ISDoubleTileFurniture:walkTo(x, y, z) end
 
+---@param name string
 ---@return ISDoubleTileFurniture
 function ISDoubleTileFurniture:new(name, sprite, sprite2, northSprite, northSprite2) end

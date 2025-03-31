@@ -1,35 +1,31 @@
 ---@meta
 
 ---@class ISLockDoor : ISBaseTimedAction
----@field door any
----@field lock any
----@field maxTime any
----@field [any] any
+---@field door unknown
+---@field lock boolean
 ISLockDoor = ISBaseTimedAction:derive("ISLockDoor")
+ISLockDoor.Type = "ISLockDoor"
 
----@return any
+---@return boolean
 function ISLockDoor:complete() end
 
----@return any
+---@return number
 function ISLockDoor:getDuration() end
 
----@return any
+---@return string?
 function ISLockDoor:getSoundPrefix() end
 
----@return any
+---@return boolean
 function ISLockDoor:isValid() end
 
----@return any
 function ISLockDoor:perform() end
 
----@return any
 function ISLockDoor:start() end
 
----@return any
 function ISLockDoor:stop() end
 
----@return any
 function ISLockDoor:update() end
 
+---@param lock boolean
 ---@return ISLockDoor
 function ISLockDoor:new(character, door, lock) end

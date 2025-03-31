@@ -1,103 +1,84 @@
 ---@meta
 
 ---@class RWMElement : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field buttonTexture any
----@field drawJoypadFocus any
----@field fontheight any
----@field fontheightMed any
----@field headerButton any
----@field height any
----@field isExpanded any
----@field isJoypadWindow any
----@field overrideBPrompt any
----@field playerNum any
----@field radioParent any
----@field subpanel any
----@field titleText any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field buttonTexture unknown
+---@field drawJoypadFocus boolean
+---@field fontheight unknown
+---@field fontheightMed unknown
+---@field headerButton ISButton
+---@field isExpanded boolean
+---@field isJoypadWindow boolean
+---@field overrideBPrompt boolean
+---@field playerNum number
+---@field radioParent ISRadioWindow
+---@field subpanel unknown
+---@field titleText string
 RWMElement = ISPanelJoypad:derive("RWMElement")
+RWMElement.Type = "RWMElement"
 
----@return any
 function RWMElement:calculateHeights() end
 
----@return any
 function RWMElement:clear() end
 
----@return any
 function RWMElement:createChildren() end
 
----@return any
+---@return unknown?
 function RWMElement:getAPrompt() end
 
----@return any
+---@return unknown?
 function RWMElement:getBPrompt() end
 
----@return any
+---@return string
 function RWMElement:getLBPrompt() end
 
----@return any
+---@return string
 function RWMElement:getRBPrompt() end
 
----@return any
+---@return unknown?
 function RWMElement:getXPrompt() end
 
----@return any
+---@return unknown?
 function RWMElement:getYPrompt() end
 
----@return any
 function RWMElement:initialise() end
 
----@return any
+---@return boolean
 function RWMElement:isValidPrompt() end
 
----@return any
 function RWMElement:onGainJoypadFocus(joypadData) end
 
----@return any
 function RWMElement:onHeaderClick() end
 
----@return any
 function RWMElement:onJoypadDirDown(joypadData) end
 
----@return any
 function RWMElement:onJoypadDirLeft(joypadData) end
 
----@return any
 function RWMElement:onJoypadDirRight(joypadData) end
 
----@return any
 function RWMElement:onJoypadDirUp(joypadData) end
 
----@return any
 function RWMElement:onJoypadDown(button) end
 
----@return any
 function RWMElement:onLoseJoypadFocus(joypadData) end
 
----@return any
 function RWMElement:prerender() end
 
----@return any
+---@return unknown?
 function RWMElement:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMElement:render() end
 
----@return any
+---@param _bool boolean
 function RWMElement:setExpanded(_bool) end
 
----@return any
+---@param _playerNum number
 function RWMElement:setFocus(_playerNum, _radioParent) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
+---@param radioParent ISRadioWindow
 ---@return RWMElement
 function RWMElement:new(x, y, width, height, subpanel, title, radioParent) end

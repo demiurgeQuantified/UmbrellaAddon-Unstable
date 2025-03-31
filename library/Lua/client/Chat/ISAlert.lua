@@ -1,27 +1,24 @@
 ---@meta
 
 ---@class ISAlert : ISUIElement
----@field alert any
----@field height any
----@field servermsg any
----@field servermsgTimer any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field servermsg string?
+---@field servermsgTimer number
 ISAlert = ISUIElement:derive("ISAlert")
+ISAlert.Type = "ISAlert"
+ISAlert.instance = nil ---@type ISAlert?
+ISAlert.alert = nil ---@type ISAlert?
 
----@return any
 function ISAlert.getAlert(message, tabID) end
 
----@return any
 function ISAlert.setupAlerts() end
 
----@return any
 function ISAlert:initialise() end
 
----@return any
 function ISAlert:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAlert
 function ISAlert:new(x, y, width, height) end

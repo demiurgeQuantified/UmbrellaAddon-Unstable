@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class AttachedWeaponDefinitions
-AttachedWeaponDefinitions = AttachedWeaponDefinitions or {}
+AttachedWeaponDefinitions = {}
 AttachedWeaponDefinitions.spearStomach = {
 	chance = 5,
 	weaponLocation = {
@@ -223,29 +223,7 @@ AttachedWeaponDefinitions.knifeBack_Special = {
 		"Base.Screwdriver_Improvised",
 	},
 }
-AttachedWeaponDefinitions.knifeLowQualityLeftLeg = {
-	chance = 30,
-	weaponLocation = {
-		"Knife Left Leg",
-	},
-	bloodLocations = {
-		"UpperLeg_L",
-	},
-	addHoles = false,
-	daySurvived = 0,
-	weapons = {
-		"Base.ButterKnife",
-		"Base.CarvingFork2",
-		"Base.Fork",
-		"Base.HandFork",
-		"Base.LetterOpener",
-		"Base.KnifeFillet",
-		"Base.KnifeParing",
-		"Base.Screwdriver",
-		"Base.Scissors",
-		"Base.TinOpener_Old",
-	},
-}
+AttachedWeaponDefinitions.knifeLowQualityLeftLeg = nil ---@type table
 AttachedWeaponDefinitions.huntingKnifeLeftLeg = {
 	chance = 5,
 	weaponLocation = {
@@ -299,29 +277,6 @@ AttachedWeaponDefinitions.knifeLeftLeg_Special = {
 		"Base.SharpBone_Long",
 		"Base.Toothbrush_Shiv",
 		"Base.Screwdriver_Improvised",
-	},
-}
-AttachedWeaponDefinitions.knifeLowQualityLeftLeg = {
-	chance = 30,
-	weaponLocation = {
-		"Knife Right Leg",
-	},
-	bloodLocations = {
-		"UpperRight_L",
-	},
-	addHoles = false,
-	daySurvived = 0,
-	weapons = {
-		"Base.ButterKnife",
-		"Base.CarvingFork2",
-		"Base.Fork",
-		"Base.HandFork",
-		"Base.LetterOpener",
-		"Base.KnifeFillet",
-		"Base.KnifeParing",
-		"Base.Screwdriver",
-		"Base.Scissors",
-		"Base.TinOpener_Old",
 	},
 }
 AttachedWeaponDefinitions.huntingKnifeRightLeg = {
@@ -2216,305 +2171,272 @@ AttachedWeaponDefinitions.handgunHolsterShoulder_Hass = {
 		"Base.Revolver_Long",
 	},
 }
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit = {}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.HockeyPsycho = {
-	chance = 100,
-	weapons = {
-		AttachedWeaponDefinitions.macheteInBack,
+AttachedWeaponDefinitions.attachedWeaponCustomOutfit = {
+	HockeyPsycho = {
+		chance = 100,
+		weapons = {
+			AttachedWeaponDefinitions.macheteInBack,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.PrivateMilitia = {
-	chance = 50,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.survivalistBedroll,
-		AttachedWeaponDefinitions.shotgunPolice,
-		AttachedWeaponDefinitions.assaultRifleOnBack,
-		AttachedWeaponDefinitions.huntingRifleOnBack,
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.knivesBeltHunter,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.armyBelt,
+	PrivateMilitia = {
+		chance = 50,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.survivalistBedroll,
+			AttachedWeaponDefinitions.shotgunPolice,
+			AttachedWeaponDefinitions.assaultRifleOnBack,
+			AttachedWeaponDefinitions.huntingRifleOnBack,
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.knivesBeltHunter,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.armyBelt,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Police = {
-	chance = 40,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterPolice,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.policeRadio,
-		AttachedWeaponDefinitions.shotgunPolice,
+	Police = {
+		chance = 40,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterPolice,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.policeRadio,
+			AttachedWeaponDefinitions.shotgunPolice,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Detective = {
-	chance = 50,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterDetective,
-		AttachedWeaponDefinitions.policeRadio,
-		AttachedWeaponDefinitions.handgunHolsterAnkle,
+	Detective = {
+		chance = 50,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterDetective,
+			AttachedWeaponDefinitions.policeRadio,
+			AttachedWeaponDefinitions.handgunHolsterAnkle,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Agent = {
-	chance = 80,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterDetective,
-		AttachedWeaponDefinitions.policeRadio,
-		AttachedWeaponDefinitions.handgunHolsterAnkle,
+	Agent = {
+		chance = 80,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterDetective,
+			AttachedWeaponDefinitions.policeRadio,
+			AttachedWeaponDefinitions.handgunHolsterAnkle,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Judge_Matt_Hass = {
-	chance = 100,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterAnkle,
-		AttachedWeaponDefinitions.handgunHolsterShoulder_Hass,
+	Judge_Matt_Hass = {
+		chance = 100,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterAnkle,
+			AttachedWeaponDefinitions.handgunHolsterShoulder_Hass,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.PoliceState = {
-	chance = 50,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterPolice,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.policeRadio,
-		AttachedWeaponDefinitions.shotgunPolice,
+	PoliceState = {
+		chance = 50,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterPolice,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.policeRadio,
+			AttachedWeaponDefinitions.shotgunPolice,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.PoliceRiot = {
-	chance = 60,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterPolice,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.shotgunPolice,
-		AttachedWeaponDefinitions.policeRadio,
+	PoliceRiot = {
+		chance = 60,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterPolice,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.shotgunPolice,
+			AttachedWeaponDefinitions.policeRadio,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Police_SWAT = {
-	chance = 60,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterSWAT,
-		AttachedWeaponDefinitions.gunOnBackSWAT,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.policeRadio,
+	Police_SWAT = {
+		chance = 60,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterSWAT,
+			AttachedWeaponDefinitions.gunOnBackSWAT,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.policeRadio,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Sheriff_Deputy = {
-	chance = 50,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterSheriff,
-		AttachedWeaponDefinitions.shotgunPolice,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.policeRadio,
+	Sheriff_Deputy = {
+		chance = 50,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterSheriff,
+			AttachedWeaponDefinitions.shotgunPolice,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.policeRadio,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Backpacker = {
-	chance = 50,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.backpackerBedroll,
-		AttachedWeaponDefinitions.backpackerBedrollBig,
+	Backpacker = nil, ---@type table
+	BankRobber = {
+		chance = 60,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+			AttachedWeaponDefinitions.gunOnBackCrime,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.BankRobber = {
-	chance = 60,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
-		AttachedWeaponDefinitions.gunOnBackCrime,
+	BankRobberSuit = {
+		chance = 80,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+			AttachedWeaponDefinitions.gunOnBackCrime,
+			AttachedWeaponDefinitions.policeRadio,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.BankRobberSuit = {
-	chance = 80,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
-		AttachedWeaponDefinitions.gunOnBackCrime,
-		AttachedWeaponDefinitions.policeRadio,
+	BountyHunter = {
+		chance = 70,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.policeRadio,
+			AttachedWeaponDefinitions.nightstick,
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.BountyHunter = {
-	chance = 70,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.policeRadio,
-		AttachedWeaponDefinitions.nightstick,
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
+	Mob = {
+		chance = 80,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterDetective,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Backpacker = {
-	chance = 50,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.backpackerBedroll,
-		AttachedWeaponDefinitions.backpackerBedrollBig,
-		AttachedWeaponDefinitions.guitarGuy,
+	MobCasual = {
+		chance = 80,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterDetective,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Mob = {
-	chance = 80,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterDetective,
+	GuitarGuy = {
+		chance = 100,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.guitarGuy,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.MobCasual = {
-	chance = 80,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolsterDetective,
+	Woodcut = {
+		chance = 100,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.woodcut,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.GuitarGuy = {
-	chance = 100,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.guitarGuy,
+	Dean = {
+		chance = 100,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.dean,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Woodcut = {
-	chance = 100,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.woodcut,
+	Bandit = {
+		chance = 50,
+		maxitem = 1,
+		weapons = {
+			AttachedWeaponDefinitions.meleeInBack_Bandit,
+			AttachedWeaponDefinitions.hammerBelt_Bandit,
+			AttachedWeaponDefinitions.knivesBelt_Bandit,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Dean = {
-	chance = 100,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.dean,
+	Bandit_Early = {
+		chance = 50,
+		maxitem = 2,
+		weapons = {
+			AttachedWeaponDefinitions.meleeInBack_Early,
+			AttachedWeaponDefinitions.hammerBelt_Early,
+			AttachedWeaponDefinitions.knivesBelt_Early,
+			AttachedWeaponDefinitions.handgunHolster,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit = {
-	chance = 50,
-	maxitem = 1,
-	weapons = {
-		AttachedWeaponDefinitions.meleeInBack_Bandit,
-		AttachedWeaponDefinitions.hammerBelt_Bandit,
-		AttachedWeaponDefinitions.knivesBelt_Bandit,
+	Bandit_Mid = {
+		chance = 60,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.meleeInBack_Mid,
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.hammerBelt_Mid,
+			AttachedWeaponDefinitions.knivesBelt_Mid,
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Early = {
-	chance = 50,
-	maxitem = 2,
-	weapons = {
-		AttachedWeaponDefinitions.meleeInBack_Early,
-		AttachedWeaponDefinitions.hammerBelt_Early,
-		AttachedWeaponDefinitions.knivesBelt_Early,
-		AttachedWeaponDefinitions.handgunHolster,
+	Bandit_Late = {
+		chance = 70,
+		maxitem = 4,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.hammerBelt_Late,
+			AttachedWeaponDefinitions.knivesBelt_Late,
+			AttachedWeaponDefinitions.meleeInBack_Late,
+			AttachedWeaponDefinitions.survivalistBedroll,
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Mid = {
-	chance = 60,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.meleeInBack_Mid,
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.hammerBelt_Mid,
-		AttachedWeaponDefinitions.knivesBelt_Mid,
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
+	Survivalist = {
+		chance = 50,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.meleeInBackBag,
+			AttachedWeaponDefinitions.survivalistBedroll,
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.knivesBelt_Early,
+			AttachedWeaponDefinitions.hammerBelt_Early,
+			AttachedWeaponDefinitions.canteen,
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Bandit_Late = {
-	chance = 70,
-	maxitem = 4,
-	weapons = {
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.hammerBelt_Late,
-		AttachedWeaponDefinitions.knivesBelt_Late,
-		AttachedWeaponDefinitions.meleeInBack_Late,
-		AttachedWeaponDefinitions.survivalistBedroll,
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
+	Survivalist_Mid = {
+		chance = 50,
+		maxitem = 4,
+		weapons = {
+			AttachedWeaponDefinitions.meleeInBackBag_Mid,
+			AttachedWeaponDefinitions.survivalistBedroll,
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.knivesBelt_Mid,
+			AttachedWeaponDefinitions.hammerBelt_Mid,
+			AttachedWeaponDefinitions.canteen,
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist = {
-	chance = 50,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.meleeInBackBag,
-		AttachedWeaponDefinitions.survivalistBedroll,
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.knivesBelt_Early,
-		AttachedWeaponDefinitions.hammerBelt_Early,
-		AttachedWeaponDefinitions.canteen,
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
+	Survivalist_Late = {
+		chance = 60,
+		maxitem = 5,
+		weapons = {
+			AttachedWeaponDefinitions.meleeInBackBag_Late,
+			AttachedWeaponDefinitions.survivalistBedroll,
+			AttachedWeaponDefinitions.handgunHolster,
+			AttachedWeaponDefinitions.knivesBelt_Late,
+			AttachedWeaponDefinitions.hammerBelt_Late,
+			AttachedWeaponDefinitions.canteen,
+			AttachedWeaponDefinitions.handgunHolsterShoulder,
+		},
 	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid = {
-	chance = 50,
-	maxitem = 4,
-	weapons = {
-		AttachedWeaponDefinitions.meleeInBackBag_Mid,
-		AttachedWeaponDefinitions.survivalistBedroll,
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.knivesBelt_Mid,
-		AttachedWeaponDefinitions.hammerBelt_Mid,
-		AttachedWeaponDefinitions.canteen,
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
+	Survivalist02 = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist,
+	Survivalist03 = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist,
+	Survivalist04 = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist,
+	Survivalist05 = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist,
+	Survivalist02_Mid = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid,
+	Survivalist03_Mid = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid,
+	Survivalist04_Mid = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid,
+	Survivalist05_Mid = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid,
+	Survivalist02_Late = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late,
+	Survivalist03_Late = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late,
+	Survivalist04_Late = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late,
+	Survivalist05_Late = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late,
+	ArmorTest_Gladiator = {
+		chance = 80,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.hammerBelt_Late,
+			AttachedWeaponDefinitions.knivesBelt_Late,
+			AttachedWeaponDefinitions.meleeInBack_Late,
+		},
 	},
+	ArmorTest_Metal = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator,
+	ArmorTest_Natural = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator,
+	ArmorTest_RoadRash = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator,
+	ArmorTest_Spikey = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator,
+	ArmorTest_SportsBall = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator,
+	ArmorTest_Tint = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator,
 }
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late = {
-	chance = 60,
-	maxitem = 5,
-	weapons = {
-		AttachedWeaponDefinitions.meleeInBackBag_Late,
-		AttachedWeaponDefinitions.survivalistBedroll,
-		AttachedWeaponDefinitions.handgunHolster,
-		AttachedWeaponDefinitions.knivesBelt_Late,
-		AttachedWeaponDefinitions.hammerBelt_Late,
-		AttachedWeaponDefinitions.canteen,
-		AttachedWeaponDefinitions.handgunHolsterShoulder,
-	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist02 =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist03 =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist04 =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist05 =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist02_Mid =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist03_Mid =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist04_Mid =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist05_Mid =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Mid
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist02_Late =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist03_Late =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist04_Late =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist05_Late =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.Survivalist_Late
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator = {
-	chance = 80,
-	maxitem = 3,
-	weapons = {
-		AttachedWeaponDefinitions.hammerBelt_Late,
-		AttachedWeaponDefinitions.knivesBelt_Late,
-		AttachedWeaponDefinitions.meleeInBack_Late,
-	},
-}
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Metal =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Natural =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_RoadRash =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Spikey =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_SportsBall =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator
-AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Tint =
-	AttachedWeaponDefinitions.attachedWeaponCustomOutfit.ArmorTest_Gladiator

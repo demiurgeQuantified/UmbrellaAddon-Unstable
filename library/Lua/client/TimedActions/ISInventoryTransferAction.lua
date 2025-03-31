@@ -1,108 +1,92 @@
 ---@meta
 
 ---@class ISInventoryTransferAction : ISBaseTimedAction
----@field allowMissingItems any
----@field character any
----@field destContainer any
----@field destContainerOpened any
----@field destContainerOpenSound any
----@field dontAdd any
----@field item any
----@field jobType any
----@field loopedAction any
----@field maxTime any
----@field onCompleteArgs any
----@field onCompleteFunc any
----@field queueList any
----@field selectedContainer any
----@field sourceContainerOpened any
----@field sourceContainerOpenSound any
----@field srcContainer any
----@field started any
----@field stopOnRun any
----@field stopOnWalk any
----@field transactionId any
----@field transactions any
----@field [any] any
+---@field allowMissingItems boolean
+---@field destContainer unknown
+---@field destContainerOpened unknown
+---@field destContainerOpenSound unknown
+---@field dontAdd boolean
+---@field item unknown
+---@field jobType string
+---@field loopedAction boolean
+---@field maxTime number?
+---@field onCompleteArgs table
+---@field onCompleteFunc unknown
+---@field queueList table
+---@field selectedContainer unknown?
+---@field sourceContainerOpened unknown
+---@field sourceContainerOpenSound unknown
+---@field srcContainer unknown
+---@field started boolean
+---@field transactionId number
+---@field transactions table
 ISInventoryTransferAction = ISBaseTimedAction:derive("ISInventoryTransferAction")
+ISInventoryTransferAction.Type = "ISInventoryTransferAction"
 ISInventoryTransferAction.putSoundDelay = 2
 ISInventoryTransferAction.putSoundTime = 0
 ISInventoryTransferAction.putSound = nil
+ISInventoryTransferAction.putSoundContainer = nil
 
----@return any
+---@return boolean
 function ISInventoryTransferAction:canDropOnFloor(square) end
 
----@return any
+---@return boolean
 function ISInventoryTransferAction:canMergeAction(action) end
 
----@return any
 function ISInventoryTransferAction:checkQueueList() end
 
----@return any
 function ISInventoryTransferAction:doActionAnim(cont) end
 
----@return any
+---@return boolean
 function ISInventoryTransferAction:floorHasRoomFor(square, item) end
 
----@return any
 function ISInventoryTransferAction:forceComplete() end
 
----@return any
+---@return table
 function ISInventoryTransferAction:getExtraLogData() end
 
----@return any
+---@return unknown?
 function ISInventoryTransferAction:getNotFullFloorSquare(item) end
 
----@return any
+---@return string
 function ISInventoryTransferAction:getSoundName() end
 
----@return any
+---@return number
 function ISInventoryTransferAction:getTimeDelta() end
 
----@return any
+---@return unknown
 function ISInventoryTransferAction:isAlreadyTransferred(item) end
 
----@return any
+---@return boolean
 function ISInventoryTransferAction:isValid() end
 
----@return any
 function ISInventoryTransferAction:perform() end
 
----@return any
 function ISInventoryTransferAction:playDestContainerCloseSound() end
 
----@return any
 function ISInventoryTransferAction:playDestContainerOpenSound() end
 
----@return any
 function ISInventoryTransferAction:playSourceContainerCloseSound() end
 
----@return any
 function ISInventoryTransferAction:playSourceContainerOpenSound() end
 
----@return any
+---@param allow boolean
 function ISInventoryTransferAction:setAllowMissingItems(allow) end
 
----@return any
 function ISInventoryTransferAction:setOnComplete(func, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
----@return any
 function ISInventoryTransferAction:start() end
 
----@return any
 function ISInventoryTransferAction:startActionAnim() end
 
----@return any
 function ISInventoryTransferAction:stop() end
 
----@return any
 function ISInventoryTransferAction:transferItem(item) end
 
----@return any
 function ISInventoryTransferAction:update() end
 
+---@param time number?
 ---@return ISInventoryTransferAction
 function ISInventoryTransferAction:new(character, item, srcContainer, destContainer, time) end
 
----@return any
 function javaTransferItems(character, item, srcContainer, destContainer) end

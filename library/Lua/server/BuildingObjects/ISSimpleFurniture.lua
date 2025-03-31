@@ -1,31 +1,33 @@
 ---@meta
 
 ---@class ISSimpleFurniture : ISBuildingObject
----@field blockAllTheSquare any
----@field buildLow any
----@field canBarricade any
----@field canBeAlwaysPlaced any
----@field dismantable any
----@field javaObject any
----@field name any
----@field sq any
----@field [any] any
+---@field buildLow boolean
+---@field javaObject unknown
+---@field name string
+---@field sq unknown
 ISSimpleFurniture = ISBuildingObject:derive("ISSimpleFurniture")
+ISSimpleFurniture.Type = "ISSimpleFurniture"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISSimpleFurniture:create(x, y, z, north, sprite) end
 
----@return any
+---@return number
 function ISSimpleFurniture:getHealth() end
 
----@return any
+---@return boolean
 function ISSimpleFurniture:isValid(square) end
 
----@return any
 function ISSimpleFurniture:removeFromGround(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISSimpleFurniture:render(x, y, z, square) end
 
+---@param name string
+---@param sprite string
+---@param northSprite string
 ---@return ISSimpleFurniture
 function ISSimpleFurniture:new(name, sprite, northSprite) end

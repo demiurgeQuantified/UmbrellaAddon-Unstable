@@ -1,38 +1,36 @@
 ---@meta
 
 ---@class ISSeedActionNew : ISBaseTimedAction
----@field character any
----@field maxTime any
----@field plant any
----@field seed any
----@field sound any
----@field typeOfSeed any
----@field [any] any
+---@field character unknown?
+---@field plant string
+---@field seed table
+---@field sound unknown
+---@field typeOfSeed unknown
 ISSeedActionNew = ISBaseTimedAction:derive("ISSeedActionNew")
+ISSeedActionNew.Type = "ISSeedActionNew"
 
----@return any
+---@return boolean
 function ISSeedActionNew:complete() end
 
----@return any
+---@return number
 function ISSeedActionNew:getDuration() end
 
----@return any
+---@return boolean
 function ISSeedActionNew:isValid() end
 
----@return any
 function ISSeedActionNew:perform() end
 
----@return any
 function ISSeedActionNew:start() end
 
----@return any
 function ISSeedActionNew:stop() end
 
----@return any
 function ISSeedActionNew:update() end
 
----@return any
+---@return unknown
 function ISSeedActionNew:waitToStart() end
 
+---@param character unknown?
+---@param seed table
+---@param plant string
 ---@return ISSeedActionNew
 function ISSeedActionNew:new(character, seed, typeOfSeed, plant) end

@@ -3,8 +3,16 @@
 ---@class ISCoordConversion
 ISCoordConversion = {}
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return number
+---@return number
 function ISCoordConversion.ToScreen(x, y, z, cz) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return unknown
+---@return unknown
 function ISCoordConversion.ToWorld(x, y, z) end

@@ -1,56 +1,57 @@
 ---@meta
 
 ---@class ISSectionedPanel : ISPanel
----@field maintainHeight any
----@field sections any
----@field [any] any
+---@field maintainHeight boolean
+---@field sections table
 ISSectionedPanel = ISPanel:derive("ISSectionedPanel")
+ISSectionedPanel.Type = "ISSectionedPanel"
 
----@return any
+---@param panel ISScrollingListBox | DebugChunkStateUI_ObjPropsPanel
+---@param title string
 function ISSectionedPanel:addSection(panel, title) end
 
----@return any
 function ISSectionedPanel:clear() end
 
----@return any
+---@return boolean
 function ISSectionedPanel:onMouseWheel(del) end
 
----@return any
 function ISSectionedPanel:prerender() end
 
----@return any
 function ISSectionedPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISSectionedPanel
 function ISSectionedPanel:new(x, y, width, height) end
 
 ---@class ISSectionedPanel_Section : ISPanel
----@field enabled any
----@field expanded any
----@field headerButton any
----@field panel any
----@field panelHeight any
----@field title any
----@field [any] any
+---@field enabled boolean
+---@field expanded boolean
+---@field headerButton ISButton
+---@field panel unknown
+---@field panelHeight unknown
+---@field title string
 ISSectionedPanel_Section = ISPanel:derive("ISSectionedPanel_Section")
+ISSectionedPanel_Section.Type = "ISSectionedPanel_Section"
 
----@return any
 function ISSectionedPanel_Section:calculateHeights() end
 
----@return any
 function ISSectionedPanel_Section:clear() end
 
----@return any
 function ISSectionedPanel_Section:createChildren() end
 
----@return any
 function ISSectionedPanel_Section:onHeaderClick() end
 
----@return any
 function ISSectionedPanel_Section:prerender() end
 
----@return any
 function ISSectionedPanel_Section:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
 ---@return ISSectionedPanel_Section
 function ISSectionedPanel_Section:new(x, y, width, height, panel, title) end

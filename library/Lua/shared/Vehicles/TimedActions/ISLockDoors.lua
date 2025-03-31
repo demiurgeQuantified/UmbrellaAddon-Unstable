@@ -1,33 +1,26 @@
 ---@meta
 
 ---@class ISLockDoors : ISBaseTimedAction
----@field locked any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field [any] any
+---@field locked unknown
+---@field vehicle unknown
 ISLockDoors = ISBaseTimedAction:derive("ISLockDoors")
+ISLockDoors.Type = "ISLockDoors"
 
----@return any
+---@return boolean?
 function ISLockDoors:complete() end
 
----@return any
+---@return number
 function ISLockDoors:getDuration() end
 
----@return any
+---@return boolean
 function ISLockDoors:isValid() end
 
----@return any
 function ISLockDoors:perform() end
 
----@return any
 function ISLockDoors:start() end
 
----@return any
 function ISLockDoors:stop() end
 
----@return any
 function ISLockDoors:update() end
 
 ---@return ISLockDoors

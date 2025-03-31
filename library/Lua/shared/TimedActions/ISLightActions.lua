@@ -1,56 +1,51 @@
 ---@meta
 
 ---@class ISLightActions : ISBaseTimedAction
----@field ignoreHandsWounds any
----@field item any
----@field lightswitch any
----@field maxTime any
----@field mode any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field item unknown?
+---@field lightswitch unknown
+---@field mode string
 ISLightActions = ISBaseTimedAction:derive("ISLightActions")
+ISLightActions.Type = "ISLightActions"
 ISLightActions.perkLevel = 5
 
----@return any
+---@return boolean
 function ISLightActions:complete() end
 
----@return any
 function ISLightActions:completeAddBattery() end
 
----@return any
 function ISLightActions:completeAddLightBulb() end
 
----@return any
 function ISLightActions:completeModifyLamp() end
 
----@return any
 function ISLightActions:completeRemoveBattery() end
 
----@return any
 function ISLightActions:completeRemoveLightBulb() end
 
----@return any
+---@return number
 function ISLightActions:getDuration() end
 
----@return any
+---@return boolean?
 function ISLightActions:isValid() end
 
----@return any
+---@return boolean?
 function ISLightActions:isValidAddBattery() end
 
----@return any
+---@return boolean?
 function ISLightActions:isValidAddLightBulb() end
 
----@return any
+---@return boolean?
 function ISLightActions:isValidModifyLamp() end
 
----@return any
+---@return unknown
 function ISLightActions:isValidRemoveBattery() end
 
----@return any
+---@return unknown
 function ISLightActions:isValidRemoveLightBulb() end
 
----@return any
 function ISLightActions:perform() end
 
+---@param mode string
+---@param item unknown?
 ---@return ISLightActions
 function ISLightActions:new(mode, character, lightswitch, item) end

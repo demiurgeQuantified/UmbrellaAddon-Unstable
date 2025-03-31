@@ -1,41 +1,34 @@
 ---@meta
 
 ---@class ISDropWorldItemAction : ISBaseTimedAction
----@field character any
----@field isMultiple any
----@field item any
----@field maxTime any
----@field rotation any
----@field sound any
----@field sq any
----@field stopOnRun any
----@field stopOnWalk any
----@field xoffset any
----@field yoffset any
----@field zoffset any
----@field [any] any
+---@field isMultiple boolean
+---@field item unknown
+---@field rotation unknown
+---@field sound unknown
+---@field sq unknown
+---@field xoffset unknown
+---@field yoffset unknown
+---@field zoffset unknown
 ISDropWorldItemAction = ISBaseTimedAction:derive("ISDropWorldItemAction")
+ISDropWorldItemAction.Type = "ISDropWorldItemAction"
 
----@return any
+---@return boolean
 function ISDropWorldItemAction:complete() end
 
----@return any
+---@return number
 function ISDropWorldItemAction:getDuration() end
 
----@return any
+---@return boolean?
 function ISDropWorldItemAction:isValid() end
 
----@return any
 function ISDropWorldItemAction:perform() end
 
----@return any
 function ISDropWorldItemAction:start() end
 
----@return any
 function ISDropWorldItemAction:stop() end
 
----@return any
 function ISDropWorldItemAction:update() end
 
+---@param isMultiple boolean
 ---@return ISDropWorldItemAction
 function ISDropWorldItemAction:new(character, item, sq, xoffset, yoffset, zoffset, rotation, isMultiple) end

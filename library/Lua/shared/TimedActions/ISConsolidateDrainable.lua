@@ -1,46 +1,40 @@
 ---@meta
 
 ---@class ISConsolidateDrainable : ISBaseTimedAction
----@field drainable any
----@field fromStart any
----@field fromTarget any
----@field intoItem any
----@field intoStart any
----@field intoTarget any
----@field maxTime any
----@field otherItems any
----@field [any] any
+---@field drainable unknown?
+---@field fromStart unknown
+---@field fromTarget number
+---@field intoItem unknown
+---@field intoStart unknown
+---@field intoTarget number
+---@field otherItems unknown?
 ISConsolidateDrainable = ISBaseTimedAction:derive("ISConsolidateDrainable")
+ISConsolidateDrainable.Type = "ISConsolidateDrainable"
 
----@return any
+---@return boolean
 function ISConsolidateDrainable:complete() end
 
----@return any
+---@return number
 function ISConsolidateDrainable:getDuration() end
 
----@return any
+---@return unknown?
 function ISConsolidateDrainable:isValid() end
 
----@return any
+---@return unknown?
 function ISConsolidateDrainable:nextItem() end
 
----@return any
 function ISConsolidateDrainable:perform() end
 
----@return any
 function ISConsolidateDrainable:runAgain(drainable, intoItem) end
 
----@return any
 function ISConsolidateDrainable:serverStop() end
 
----@return any
 function ISConsolidateDrainable:start() end
 
----@return any
 function ISConsolidateDrainable:stop() end
 
----@return any
 function ISConsolidateDrainable:update() end
 
+---@param otherItems unknown?
 ---@return ISConsolidateDrainable
 function ISConsolidateDrainable:new(character, drainable, intoItem, otherItems) end

@@ -1,55 +1,50 @@
 ---@meta
 
 ---@class ISAdminMessage : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field chatText any
----@field destroyOnClick any
----@field height any
----@field name any
----@field no any
----@field px any
----@field py any
----@field pz any
----@field text any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field [any] any
+---@field chatText ISRichTextPanel
+---@field destroyOnClick boolean
+---@field name unknown?
+---@field no ISButton?
+---@field px number
+---@field py number
+---@field pz number
+---@field text string
+---@field yes ISButton?
 ISAdminMessage = ISPanel:derive("ISAdminMessage")
+ISAdminMessage.Type = "ISAdminMessage"
 ISAdminMessage.messages = {}
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISAdminMessage.AddAdminMessage(message, x, y, z) end
 
----@return any
 function ISAdminMessage.RecalculPositions() end
 
----@return any
 function ISAdminMessage:destroy() end
 
----@return any
 function ISAdminMessage:initialise() end
 
----@return any
 function ISAdminMessage:onClick(button) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISAdminMessage:onMouseDown(x, y) end
 
----@return any
 function ISAdminMessage:prerender() end
 
----@return any
 function ISAdminMessage:update() end
 
----@return any
 function ISAdminMessage:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param text string
+---@param px number
+---@param py number
+---@param pz number
 ---@return ISAdminMessage
 function ISAdminMessage:new(x, y, width, height, text, px, py, pz) end

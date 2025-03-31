@@ -1,58 +1,55 @@
 ---@meta
 
 ---@class ISProgressBar : ISUIElement
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field doRenderTexture any
----@field doTextBackdrop any
----@field font any
----@field height any
----@field horizontalTexture any
----@field isVertical any
----@field moveWithMouse any
----@field paddingBottom any
----@field paddingLeft any
----@field paddingRight any
----@field paddingTop any
----@field progress any
----@field progressColor any
----@field text any
----@field textBackColor any
----@field textColor any
----@field textH any
----@field textW any
----@field verticalTexture any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field background boolean
+---@field backgroundColor table
+---@field borderColor table
+---@field doRenderTexture boolean
+---@field doTextBackdrop boolean
+---@field font unknown
+---@field horizontalTexture unknown
+---@field isVertical boolean
+---@field moveWithMouse boolean
+---@field paddingBottom number
+---@field paddingLeft number
+---@field paddingRight number
+---@field paddingTop number
+---@field progress number
+---@field progressColor table
+---@field text string
+---@field textBackColor table
+---@field textColor table
+---@field textH unknown
+---@field textW unknown
+---@field verticalTexture unknown
 ISProgressBar = ISUIElement:derive("ISProgressBar")
+ISProgressBar.Type = "ISProgressBar"
 
----@return any
+---@return unknown?
 function ISProgressBar:getRenderTexture() end
 
----@return any
 function ISProgressBar:initialise() end
 
----@return any
 function ISProgressBar:noBackground() end
 
----@return any
 function ISProgressBar:prerender() end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
 function ISProgressBar:renderTexture(_x, _y, _w, _h, _vertical) end
 
----@return any
+---@param _p number
 function ISProgressBar:setProgress(_p) end
 
----@return any
+---@param _text string
 function ISProgressBar:setText(_text) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param text string | boolean
 ---@return ISProgressBar
 function ISProgressBar:new(x, y, width, height, text, font) end

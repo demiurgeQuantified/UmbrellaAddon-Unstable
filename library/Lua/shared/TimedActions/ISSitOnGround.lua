@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISSitOnGround : ISBaseTimedAction
----@field maxTime any
----@field useProgressBar any
----@field [any] any
+---@field useProgressBar boolean
 ISSitOnGround = ISBaseTimedAction:derive("ISSitOnGround")
+ISSitOnGround.Type = "ISSitOnGround"
 
----@return any
+---@return boolean
 function ISSitOnGround:complete() end
 
----@return any
+---@return number
 function ISSitOnGround:getDuration() end
 
----@return any
+---@return boolean
 function ISSitOnGround:isValid() end
 
----@return any
 function ISSitOnGround:perform() end
 
----@return any
 function ISSitOnGround:start() end
 
----@return any
 function ISSitOnGround:stop() end
 
----@return any
 function ISSitOnGround:update() end
 
----@return any
+---@return boolean
 function ISSitOnGround:waitToStart() end
 
 ---@return ISSitOnGround

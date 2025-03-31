@@ -1,64 +1,61 @@
 ---@meta
 
 ---@class ISVehicleAngles : ISCollapsableWindow
----@field angleX any
----@field angleY any
----@field angleZ any
----@field script any
----@field scriptName any
----@field sliderZ any
----@field title any
----@field vehicle any
----@field [any] any
+---@field angleX ISSliderPanel
+---@field angleY ISSliderPanel
+---@field angleZ ISSliderPanel
+---@field script unknown?
+---@field scriptName ISLabel
+---@field sliderZ ISSliderPanel
+---@field title string
+---@field vehicle unknown?
 ISVehicleAngles = ISCollapsableWindow:derive("ISVehicleAngles")
+ISVehicleAngles.Type = "ISVehicleAngles"
 
----@return any
+---@param _x number
+---@param _y number
+---@param _title string
+---@param _bLeft boolean
+---@return number
+---@return ISLabel
 function ISVehicleAngles:addLabel(_x, _y, _title, _font, _bLeft) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@param _func function
+---@return number
+---@return ISSliderPanel
 function ISVehicleAngles:addSlider(_x, _y, _w, _h, _func) end
 
----@return any
 function ISVehicleAngles:callbackAngleX(value, slider) end
 
----@return any
 function ISVehicleAngles:callbackAngleY(value, slider) end
 
----@return any
 function ISVehicleAngles:callbackAngleZ(value, slider) end
 
----@return any
 function ISVehicleAngles:callbackHeight(value, slider) end
 
----@return any
 function ISVehicleAngles:clearVehicle() end
 
----@return any
 function ISVehicleAngles:close() end
 
----@return any
 function ISVehicleAngles:createChildren() end
 
----@return any
 function ISVehicleAngles:onButtonBottom() end
 
----@return any
 function ISVehicleAngles:onButtonDrop() end
 
----@return any
 function ISVehicleAngles:onButtonLeft() end
 
----@return any
 function ISVehicleAngles:onButtonLevel() end
 
----@return any
 function ISVehicleAngles:prerender() end
 
----@return any
 function ISVehicleAngles:setVehicle(vehicle) end
 
 ---@return ISVehicleAngles
 function ISVehicleAngles:new() end
 
----@return any
 function debugVehicleAngles(vehicle) end

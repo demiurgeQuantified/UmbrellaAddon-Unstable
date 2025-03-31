@@ -1,13 +1,11 @@
 ---@meta
 
 ---@class StoryTables
-StoryTables = StoryTables or {}
+StoryTables = {}
 
----@return any
 function StoryTables.addClutterTableToArray(arrayList, table) end
 
----@return any
 function StoryTables.addItemToClutterTable(arrayList, item) end
 
----@return any
+---@param table table
 function StoryTables.initClutterArray(arrayList, table) end

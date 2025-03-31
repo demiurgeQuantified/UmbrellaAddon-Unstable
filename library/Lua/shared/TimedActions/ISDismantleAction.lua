@@ -1,35 +1,30 @@
 ---@meta
 
 ---@class ISDismantleAction : ISBaseTimedAction
----@field caloriesModifier any
----@field maxTime any
----@field thumpable any
----@field [any] any
+---@field thumpable unknown
 ISDismantleAction = ISBaseTimedAction:derive("ISDismantleAction")
+ISDismantleAction.Type = "ISDismantleAction"
 
----@return any
+---@return boolean
 function ISDismantleAction:complete() end
 
----@return any
+---@return number
 function ISDismantleAction:getDuration() end
 
----@return any
+---@return boolean
 function ISDismantleAction:isValid() end
 
----@return any
 function ISDismantleAction:perform() end
 
----@return any
 function ISDismantleAction:start() end
 
----@return any
 function ISDismantleAction:stop() end
 
----@return any
 function ISDismantleAction:update() end
 
----@return any
+---@return unknown
 function ISDismantleAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISDismantleAction
 function ISDismantleAction:new(character, thumpable) end

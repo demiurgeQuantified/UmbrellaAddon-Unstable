@@ -1,207 +1,169 @@
 ---@meta
 
 ---@class ServerList : ISPanelJoypad
----@field addBtn any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field authType any
----@field authTypeLabel any
----@field backButton any
----@field backgroundColor any
----@field borderColor any
----@field closeAuthPopupButton any
----@field connectTypeEntry any
----@field connectTypeLabel any
----@field deleteBtn any
----@field descEntry any
----@field descLabel any
----@field entryBoxes any
----@field eraseBtn any
----@field firstAddServer any
----@field getModBtn any
----@field googleAuthButton any
----@field googleAuthConnectLabel any
----@field googleAuthLabel any
----@field googleAuthPopup any
----@field googleKey any
----@field ISButtonA any
----@field ISButtonB any
----@field itemheightoverride any
----@field javaObject any
----@field lastUseSteamRelay any
----@field listbox any
----@field localIPEntry any
----@field localIPLabel any
----@field NoLabel any
----@field passwordEntry any
----@field passwordLabel any
----@field passwordText any
----@field passwordWasFocused any
----@field playButton any
----@field portEntry any
----@field portLabel any
----@field publicBtn any
----@field refreshBtn any
----@field registerBtn any
----@field rememberPasswordTickBox any
----@field scrollPanel any
----@field serverEntry any
----@field serverLabel any
----@field serverNameEntry any
----@field serverNameLabel any
----@field serverPasswordEntry any
----@field showCountdownForJoin any
----@field steamIPwarningLabel any
----@field tabs any
----@field usernameEntry any
----@field usernameLabel any
----@field x any
----@field y any
----@field [any] any
+---@field addBtn ISButton
+---@field authType ISComboBox
+---@field authTypeLabel ISLabel
+---@field backButton ISButton
+---@field closeAuthPopupButton ISButton
+---@field connectTypeEntry ISTickBox
+---@field connectTypeLabel ISLabel
+---@field deleteBtn ISButton
+---@field descEntry ISTextEntryBox
+---@field descLabel ISLabel
+---@field entryBoxes table
+---@field eraseBtn ISButton
+---@field firstAddServer boolean
+---@field getModBtn ISButton
+---@field googleAuthButton ISButton
+---@field googleAuthConnectLabel ISRichTextPanel
+---@field googleAuthLabel ISLabel
+---@field googleAuthPopup ISPanel
+---@field googleKey string
+---@field itemheightoverride table
+---@field lastUseSteamRelay boolean
+---@field listbox ISScrollingListBox
+---@field localIPEntry ISTextEntryBox
+---@field localIPLabel ISLabel
+---@field NoLabel boolean
+---@field passwordEntry ISTextEntryBox
+---@field passwordLabel ISLabel
+---@field passwordText string
+---@field passwordWasFocused boolean
+---@field playButton ISButton
+---@field portEntry ISTextEntryBox
+---@field portLabel ISLabel
+---@field publicBtn ISButton
+---@field refreshBtn ISButton
+---@field registerBtn ISButton
+---@field rememberPasswordTickBox ISTickBox
+---@field scrollPanel ISPanelJoypad
+---@field serverEntry ISTextEntryBox
+---@field serverLabel ISLabel
+---@field serverNameEntry ISTextEntryBox
+---@field serverNameLabel ISLabel
+---@field serverPasswordEntry ISTextEntryBox
+---@field showCountdownForJoin boolean
+---@field steamIPwarningLabel ISRichTextPanel
+---@field tabs ISTabPanel
+---@field usernameEntry ISTextEntryBox
+---@field usernameLabel ISLabel
 ServerList = ISPanelJoypad:derive("ServerList")
+ServerList.Type = "ServerList"
 ServerList.pingedList = {}
 ServerList.refreshTime = 0
 ServerList.refreshInterval = 5
+ServerList.instance = nil ---@type ServerList?
 ServerList.pingIndex = 1
 
----@return any
 function ServerList.onResetLua(reason) end
 
----@return any
 function ServerList.OnSteamRulesRefreshComplete(host, port, rules) end
 
----@return any
 function ServerList.OnSteamServerFailedToRespond2(host, port) end
 
----@return any
 function ServerList.OnSteamServerResponded2(host, port, server2) end
 
----@return any
 function ServerList.ServerPinged(ip, users) end
 
----@return any
 function ServerList:addServerToList(server) end
 
----@return any
+---@return boolean
+---@return string?
 function ServerList:canConnect() end
 
----@return any
+---@return boolean
 function ServerList:checkFields() end
 
----@return any
 function ServerList:clickNext() end
 
----@return any
+---@return number
 function ServerList:countMods(modString) end
 
----@return any
 function ServerList:create() end
 
----@return any
+---@return number
 function ServerList:drawMap(y, item, alt) end
 
----@return any
 function ServerList:emptyServerFile(server, append) end
 
----@return any
 function ServerList:erase() end
 
----@return any
 function ServerList:fillFields(item) end
 
----@return any
 function ServerList:initialise() end
 
----@return any
 function ServerList:instantiate() end
 
----@return any
 function ServerList:onClickServer(item) end
 
----@return any
 function ServerList:onCloseQRButton() end
 
----@return any
 function ServerList:OnConnected() end
 
----@return any
 function ServerList:OnConnectFailed(message, detail) end
 
----@return any
 function ServerList:onGainJoypadFocus(joypadData) end
 
----@return any
 function ServerList:onGainJoypadFocus_RightPanel(joypadData) end
 
----@return any
 function ServerList:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function ServerList:onJoypadDirDown(joypadData) end
 
----@return any
 function ServerList:onJoypadDirLeft_RightPanel(joypadData) end
 
----@return any
 function ServerList:onJoypadDirRight_ListBox(joypadData) end
 
----@return any
 function ServerList:onJoypadDirUp(joypadData) end
 
----@return any
 function ServerList:onJoypadDown(button, joypadData) end
 
----@return any
 function ServerList:onJoypadDown_ListBox(button, joypadData) end
 
----@return any
 function ServerList:onJoypadDown_RightPanel(button, joypadData) end
 
----@return any
 function ServerList:onLoseJoypadFocus_RightPanel(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ServerList:onMouseDown_Tabs(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ServerList:onOptionMouseDown(button, x, y) end
 
----@return any
 function ServerList:OnQRReceived(message) end
 
----@return any
 function ServerList:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
 function ServerList:onSendButton() end
 
----@return any
+---@param init boolean
 function ServerList:pingServers(init) end
 
----@return any
 function ServerList:prerender() end
 
----@return any
 function ServerList:refreshList() end
 
----@return any
+---@param item table
 function ServerList:setServerDescription(item) end
 
----@return any
+---@param item table
 function ServerList:setServerMods(item) end
 
----@return any
 function ServerList:trimFields(item) end
 
----@return any
+---@param append boolean
 function ServerList:writeServerOnFile(server, append) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ServerList
 function ServerList:new(x, y, width, height) end
 
----@return any
 function OnConnectFailed(message, detail) end
----@return any
+
 function OnConnected() end

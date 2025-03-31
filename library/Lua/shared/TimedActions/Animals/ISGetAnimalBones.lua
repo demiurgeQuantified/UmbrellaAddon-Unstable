@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISGetAnimalBones : ISBaseTimedAction
----@field body any
----@field maxTime any
----@field [any] any
+---@field body unknown
 ISGetAnimalBones = ISBaseTimedAction:derive("ISGetAnimalBones")
+ISGetAnimalBones.Type = "ISGetAnimalBones"
 
----@return any
+---@return boolean
 function ISGetAnimalBones:complete() end
 
----@return any
+---@return number
 function ISGetAnimalBones:getDuration() end
 
----@return any
+---@return boolean
 function ISGetAnimalBones:isValid() end
 
----@return any
 function ISGetAnimalBones:perform() end
 
----@return any
 function ISGetAnimalBones:start() end
 
----@return any
 function ISGetAnimalBones:stop() end
 
----@return any
 function ISGetAnimalBones:update() end
 
----@return any
+---@return unknown
 function ISGetAnimalBones:waitToStart() end
 
 ---@return ISGetAnimalBones

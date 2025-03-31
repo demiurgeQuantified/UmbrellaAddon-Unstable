@@ -1,106 +1,100 @@
 ---@meta
 
 ---@class ISToolTip : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field contextMenu any
----@field defaultMyWidth any
----@field description any
----@field descriptionPanel any
----@field desiredX any
----@field desiredY any
----@field followMouse any
----@field footNote any
----@field height any
----@field maxLineWidth any
----@field name any
----@field nameMarginX any
----@field owner any
----@field texture any
----@field width any
----@field [any] any
+---@field contextMenu unknown?
+---@field defaultMyWidth number
+---@field description string
+---@field descriptionPanel ISRichTextPanel
+---@field desiredX number?
+---@field desiredY number?
+---@field followMouse boolean
+---@field footNote unknown?
+---@field maxLineWidth unknown?
+---@field name string?
+---@field nameMarginX number
+---@field owner table?
+---@field texture unknown?
 ISToolTip = ISPanel:derive("ISToolTip")
+ISToolTip.Type = "ISToolTip"
 
----@return any
+---@return unknown
 function ISToolTip.GetFont() end
 
----@return any
 function ISToolTip:adjustPositionToAvoidOverlap(avoidRect) end
 
----@return any
 function ISToolTip:doLayout() end
 
----@return any
 function ISToolTip:initialise() end
 
----@return any
 function ISToolTip:instantiate() end
 
----@return any
+---@param x number
+---@param y number
+---@return number
+---@return number
 function ISToolTip:layoutContents(x, y, myWidth) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTip:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTip:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTip:onRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISToolTip:onRightMouseUp(x, y) end
 
----@return any
+---@return boolean
 function ISToolTip:overlaps(r1, r2) end
 
----@return any
+---@return unknown
 function ISToolTip:placeAbove(r1, r2) end
 
----@return any
+---@return unknown
 function ISToolTip:placeLeft(r1, r2) end
 
----@return any
+---@return unknown
 function ISToolTip:placeRight(r1, r2) end
 
----@return any
 function ISToolTip:prerender() end
 
----@return any
 function ISToolTip:render() end
 
----@return any
 function ISToolTip:renderContents() end
 
----@return any
 function ISToolTip:reset() end
 
----@return any
 function ISToolTip:setContextMenu(contextMenu) end
 
----@return any
+---@param str string
 function ISToolTip:setDescription(str) end
 
----@return any
+---@param x number
+---@param y number
 function ISToolTip:setDesiredPosition(x, y) end
 
----@return any
+---@param name string
 function ISToolTip:setName(name) end
 
----@return any
+---@param ui table
 function ISToolTip:setOwner(ui) end
 
----@return any
+---@param textureName string
 function ISToolTip:setTexture(textureName) end
 
----@return any
 function ISToolTip:setTextureDirectly(texture) end
 
----@return any
+---@param str string
 function ISToolTip:setTitle(str) end
 
 ---@return ISToolTip

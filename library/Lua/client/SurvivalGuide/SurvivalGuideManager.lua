@@ -1,34 +1,28 @@
 ---@meta
 
 ---@class SurvivalGuideManager : ISBaseObject
----@field instance any
----@field panel any
----@field [any] any
+---@field panel ISTutorialPanel
 SurvivalGuideManager = ISBaseObject:derive("SurvivalGuideManager")
+SurvivalGuideManager.Type = "SurvivalGuideManager"
+SurvivalGuideManager.instance = nil ---@type SurvivalGuideManager?
 
----@return any
 function SurvivalGuideManager.OnCreatePlayer() end
 
----@return any
 function SurvivalGuideManager.OnGameStart() end
 
----@return any
 function SurvivalGuideManager.onKeyPressed(key) end
 
----@return any
 function SurvivalGuideManager.OnNewGame() end
 
----@return any
+---@param name string
 function SurvivalGuideManager:RestoreLayout(name, layout) end
 
----@return any
+---@param name string
 function SurvivalGuideManager:SaveLayout(name, layout) end
 
----@return any
 function SurvivalGuideManager:update() end
 
 ---@return SurvivalGuideManager
 function SurvivalGuideManager:new() end
 
----@return any
 function doSurvivalGuide() end

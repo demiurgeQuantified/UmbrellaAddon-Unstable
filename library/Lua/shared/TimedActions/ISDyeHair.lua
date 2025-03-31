@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISDyeHair : ISBaseTimedAction
----@field beard any
----@field hairDye any
----@field maxTime any
----@field [any] any
+---@field beard unknown
+---@field hairDye unknown
 ISDyeHair = ISBaseTimedAction:derive("ISDyeHair")
+ISDyeHair.Type = "ISDyeHair"
 
----@return any
+---@return boolean
 function ISDyeHair:complete() end
 
----@return any
+---@return number
 function ISDyeHair:getDuration() end
 
----@return any
+---@return unknown?
 function ISDyeHair:isValid() end
 
----@return any
 function ISDyeHair:perform() end
 
----@return any
 function ISDyeHair:start() end
 
----@return any
 function ISDyeHair:stop() end
 
----@return any
 function ISDyeHair:update() end
 
 ---@return ISDyeHair

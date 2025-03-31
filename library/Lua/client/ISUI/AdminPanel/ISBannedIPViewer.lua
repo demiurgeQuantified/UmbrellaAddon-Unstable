@@ -1,57 +1,47 @@
 ---@meta
 
 ---@class ISBannedIPViewer : ISPanel
----@field backgroundColor any
----@field bannedIPs any
----@field borderColor any
----@field datas any
----@field height any
----@field listHeaderColor any
----@field moveWithMouse any
----@field no any
----@field player any
----@field refreshBtn any
----@field searchEntry any
----@field selectedFaction any
----@field selectedIP any
----@field unbanBtn any
----@field width any
----@field [any] any
+---@field bannedIPs unknown?
+---@field datas ISScrollingListBox
+---@field listHeaderColor table
+---@field no ISButton
+---@field player unknown
+---@field refreshBtn ISButton
+---@field searchEntry ISTextEntryBox
+---@field selectedFaction unknown?
+---@field selectedIP unknown?
+---@field unbanBtn ISButton
 ISBannedIPViewer = ISPanel:derive("ISBannedIPViewer")
+ISBannedIPViewer.Type = "ISBannedIPViewer"
 ISBannedIPViewer.messages = {}
+ISBannedIPViewer.instance = nil ---@type ISBannedIPViewer?
 
----@return any
 function ISBannedIPViewer.gotBannedIPs(bannedIPs) end
 
----@return any
 function ISBannedIPViewer:doSearch() end
 
----@return any
+---@return number
 function ISBannedIPViewer:drawDatas(y, item, alt) end
 
----@return any
 function ISBannedIPViewer:getBannedIPs() end
 
----@return any
 function ISBannedIPViewer:initialise() end
 
----@return any
 function ISBannedIPViewer:onClick(button) end
 
----@return any
 function ISBannedIPViewer:onUnbanIP(button) end
 
----@return any
 function ISBannedIPViewer:populateList() end
 
----@return any
 function ISBannedIPViewer:prerender() end
 
----@return any
 function ISBannedIPViewer:render() end
 
----@return any
 function ISBannedIPViewer:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISBannedIPViewer
 function ISBannedIPViewer:new(x, y, width, height, player) end

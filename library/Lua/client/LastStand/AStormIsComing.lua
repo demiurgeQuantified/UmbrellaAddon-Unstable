@@ -43,26 +43,19 @@ AStormIsComing.spawns = {
 }
 AStormIsComing.hourOfDay = 7
 
----@return any
 function AStormIsComing.Add() end
 
----@return any
+---@param playerNum number
 function AStormIsComing.AddPlayer(playerNum, playerObj) end
 
----@return any
 function AStormIsComing.EveryTenMinutes() end
 
----@return any
 function AStormIsComing.OnGameStart() end
 
----@return any
 function AStormIsComing.OnInitSeasons(_season) end
 
----@return any
 function AStormIsComing.OnInitWorld() end
 
----@return any
 function AStormIsComing.RemovePlayer(p) end
 
----@return any
 function AStormIsComing.Render() end

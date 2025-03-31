@@ -1,34 +1,42 @@
 ---@meta
 
 ---@class ISResizableButton : ISButton
----@field maximumWidth any
----@field minimumWidth any
----@field mouseOver any
----@field mouseOverResize any
----@field onresize any
----@field resizeLeft any
----@field resizing any
----@field [any] any
+---@field maximumWidth unknown?
+---@field mouseOverResize boolean
+---@field onresize unknown?
+---@field resizeLeft boolean
+---@field resizing boolean
 ISResizableButton = ISButton:derive("ISResizableButton")
+ISResizableButton.Type = "ISResizableButton"
 
----@return any
+---@param x number
+---@param y number
 function ISResizableButton:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISResizableButton:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISResizableButton:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISResizableButton:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISResizableButton:onMouseUpOutside(x, y) end
 
----@return any
 function ISResizableButton:resize(width) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
+---@param clicktarget ISInventoryPane
 ---@return ISResizableButton
 function ISResizableButton:new(
 	x,

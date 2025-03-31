@@ -1,126 +1,122 @@
 ---@meta
 
 ---@class ISBodyPartPanel : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundAlpha any
----@field backgroundColor any
----@field baseTexture any
----@field bFemale any
----@field borderColor any
----@field bps any
----@field cacheColor any
----@field canSelect any
----@field colorScheme any
----@field defaultAlpha any
----@field deselectedAlpha any
----@field doToolTip any
----@field drawDebugLines any
----@field drawSelectedHitbox any
----@field functionTarget any
----@field height any
----@field lockedSelection any
----@field maxValue any
----@field minValue any
----@field nodeAlpha any
----@field nodes any
----@field onPartSelected any
----@field outlineTex any
----@field player any
----@field playerNum any
----@field selectedAlpha any
----@field selectedBp any
----@field selectlines any
----@field toolTipText any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field backgroundAlpha number
+---@field baseTexture unknown
+---@field bFemale unknown
+---@field bps table
+---@field cacheColor unknown
+---@field canSelect boolean
+---@field colorScheme table
+---@field defaultAlpha number
+---@field deselectedAlpha number
+---@field doToolTip boolean
+---@field drawDebugLines boolean
+---@field drawSelectedHitbox boolean
+---@field functionTarget (ISClothingInsPanel | ISCharacterProtection)?
+---@field lockedSelection boolean
+---@field maxValue number
+---@field minValue number
+---@field nodeAlpha number
+---@field nodes table
+---@field onPartSelected function?
+---@field outlineTex unknown
+---@field player unknown
+---@field playerNum unknown
+---@field selectedAlpha number
+---@field selectedBp boolean
+---@field selectlines table
+---@field toolTipText string
 ISBodyPartPanel = ISPanelJoypad:derive("ISBodyPartPanel")
+ISBodyPartPanel.Type = "ISBodyPartPanel"
 
----@return any
 function ISBodyPartPanel:activateToolTip() end
 
----@return any
 function ISBodyPartPanel:createChildren() end
 
----@return any
 function ISBodyPartPanel:deactivateToolTip() end
 
----@return any
 function ISBodyPartPanel:deselect() end
 
----@return any
+---@param x number
+---@param y number
 function ISBodyPartPanel:drawLineLeft(x, y) end
 
----@return any
+---@param _nodeTex string
+---@param _nodeOutlineTex string
 function ISBodyPartPanel:enableNodes(_nodeTex, _nodeOutlineTex) end
 
----@return any
+---@return unknown?
 function ISBodyPartPanel:getBodyPartColor(_bodyPartType) end
 
----@return any
+---@return boolean
 function ISBodyPartPanel:getPartForCoordinate(mx, my) end
 
----@return any
+---@return unknown
+---@return unknown
+---@return unknown
 function ISBodyPartPanel:getRgbForValue(_val) end
 
----@return any
 function ISBodyPartPanel:initialise() end
 
----@return any
 function ISBodyPartPanel:onJoypadDown(button) end
 
----@return any
+---@param x number
+---@param y number
 function ISBodyPartPanel:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISBodyPartPanel:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISBodyPartPanel:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISBodyPartPanel:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISBodyPartPanel:onRightMouseUp(x, y) end
 
----@return any
+---@param _nodeTex string
+---@param _nodeOutlineTex string
 function ISBodyPartPanel:overrideNodeTexture(_bodyPartType, _nodeTex, _nodeOutlineTex) end
 
----@return any
 function ISBodyPartPanel:prerender() end
 
----@return any
 function ISBodyPartPanel:render() end
 
----@return any
 function ISBodyPartPanel:setAlphas(_defaultAlpha, _nodeAlpha, _selectedAlpha, _deselectedAlpha, _backgroundAlpha) end
 
----@return any
+---@return unknown
 function ISBodyPartPanel:setColorForValue(_val, _color) end
 
----@return any
+---@param _colorScheme table
 function ISBodyPartPanel:setColorScheme(_colorScheme) end
 
----@return any
+---@param _b boolean
+---@param _defaultAnchorY number
 function ISBodyPartPanel:setEnableSelectLines(_b, _defaultAnchorX, _defaultAnchorY) end
 
----@return any
+---@param mx number
+---@param my number
+---@param bLock boolean
 function ISBodyPartPanel:setSelected(mx, my, bLock) end
 
----@return any
 function ISBodyPartPanel:setSelectLinesAnchor(_anchorX, _anchorY) end
 
----@return any
 function ISBodyPartPanel:setToolTip(_b, _text) end
 
----@return any
+---@param _value number
+---@param _force boolean?
 function ISBodyPartPanel:setValue(_bodyPartType, _value, _force) end
 
+---@param x number
+---@param y number
+---@param target (ISClothingInsPanel | ISCharacterProtection)?
+---@param onPartSelected function?
 ---@return ISBodyPartPanel
 function ISBodyPartPanel:new(player, x, y, target, onPartSelected) end

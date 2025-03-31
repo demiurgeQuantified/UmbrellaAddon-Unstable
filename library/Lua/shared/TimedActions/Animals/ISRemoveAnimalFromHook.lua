@@ -1,39 +1,36 @@
 ---@meta
 
 ---@class ISRemoveAnimalFromHook : ISBaseTimedAction
----@field animalDef any
----@field body any
----@field hook any
----@field luaHook any
----@field maxTime any
----@field perkLevel any
----@field xp any
----@field [any] any
+---@field animalDef unknown?
+---@field body unknown?
+---@field hook unknown
+---@field luaHook ISButcherHookUI
+---@field perkLevel unknown
+---@field xp unknown
 ISRemoveAnimalFromHook = ISBaseTimedAction:derive("ISRemoveAnimalFromHook")
+ISRemoveAnimalFromHook.Type = "ISRemoveAnimalFromHook"
 
----@return any
+---@return boolean
 function ISRemoveAnimalFromHook:complete() end
 
----@return any
+---@return number
 function ISRemoveAnimalFromHook:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveAnimalFromHook:isValid() end
 
----@return any
 function ISRemoveAnimalFromHook:perform() end
 
----@return any
 function ISRemoveAnimalFromHook:start() end
 
----@return any
 function ISRemoveAnimalFromHook:stop() end
 
----@return any
 function ISRemoveAnimalFromHook:update() end
 
----@return any
+---@return unknown
 function ISRemoveAnimalFromHook:waitToStart() end
 
+---@param body unknown?
+---@param luaHook ISButcherHookUI
 ---@return ISRemoveAnimalFromHook
 function ISRemoveAnimalFromHook:new(character, body, hook, luaHook) end

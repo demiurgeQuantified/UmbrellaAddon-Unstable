@@ -1,35 +1,30 @@
 ---@meta
 
 ---@class ISWringClothing : ISBaseTimedAction
----@field forceProgressBar any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field forceProgressBar boolean
+---@field item unknown
+---@field maxTime unknown
+---@field sound unknown
 ISWringClothing = ISBaseTimedAction:derive("ISWringClothing")
+ISWringClothing.Type = "ISWringClothing"
 
----@return any
+---@return boolean
 function ISWringClothing:complete() end
 
----@return any
+---@return number
 function ISWringClothing:getDuration() end
 
----@return any
+---@return boolean
 function ISWringClothing:isValid() end
 
----@return any
 function ISWringClothing:perform() end
 
----@return any
 function ISWringClothing:start() end
 
----@return any
 function ISWringClothing:stop() end
 
----@return any
 function ISWringClothing:stopSound() end
 
----@return any
 function ISWringClothing:update() end
 
 ---@return ISWringClothing

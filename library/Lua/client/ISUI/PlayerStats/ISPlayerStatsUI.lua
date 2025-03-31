@@ -1,130 +1,115 @@
 ---@meta
 
 ---@class ISPlayerStatsUI : ISPanel
----@field addLvlBtn any
----@field addTraitBtn any
----@field addXpBtn any
----@field admin any
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field buttonHeight any
----@field buttonOffset any
----@field buttonPadY any
----@field buttonWidth any
----@field changeAccessLvlBtn any
----@field changeForename any
----@field changeProfession any
----@field changeSurname any
----@field changeUsernameBtn any
----@field char any
----@field closeBtn any
----@field listHeaderColor any
----@field loseLvlBtn any
----@field mainPanel any
----@field manageInvBtn any
----@field moveWithMouse any
----@field muteAllBtn any
----@field perks any
----@field perksAddXPButtons any
----@field selectedPerk any
----@field syncWeightTimer any
----@field traits any
----@field traitsRemoveButtons any
----@field userlogBtn any
----@field userlogs any
----@field variableColor any
----@field warningPoint any
----@field warningPointsBtn any
----@field weightBtn any
----@field windows any
----@field xpListBox any
----@field [any] any
+---@field addLvlBtn ISButton
+---@field addTraitBtn ISButton
+---@field addXpBtn ISButton
+---@field admin unknown
+---@field buttonBorderColor table
+---@field buttonHeight number
+---@field buttonOffset number
+---@field buttonPadY number
+---@field buttonWidth number
+---@field changeAccessLvlBtn ISButton
+---@field changeForename ISButton
+---@field changeProfession ISButton
+---@field changeSurname ISButton
+---@field changeUsernameBtn ISButton
+---@field char unknown
+---@field closeBtn ISButton
+---@field listHeaderColor table
+---@field loseLvlBtn ISButton
+---@field mainPanel ISPanel
+---@field manageInvBtn ISButton
+---@field muteAllBtn ISButton
+---@field perks table
+---@field perksAddXPButtons table
+---@field selectedPerk unknown?
+---@field syncWeightTimer number
+---@field traits table
+---@field traitsRemoveButtons table
+---@field userlogBtn ISButton
+---@field userlogs table
+---@field variableColor table
+---@field warningPoint number
+---@field warningPointsBtn ISButton
+---@field weightBtn ISButton
+---@field windows table
+---@field xpListBox ISScrollingListBox
 ISPlayerStatsUI = ISPanel:derive("ISPlayerStatsUI")
+ISPlayerStatsUI.Type = "ISPlayerStatsUI"
+ISPlayerStatsUI.instance = nil ---@type ISPlayerStatsUI?
 
----@return any
+---@param self ISPlayerStatsUI
 function ISPlayerStatsUI.loadPerks(self) end
 
----@return any
 function ISPlayerStatsUI.loadProfession(self) end
 
----@return any
 function ISPlayerStatsUI.loadTraits(self) end
 
----@return any
 function ISPlayerStatsUI.loadUserlog(self) end
 
----@return any
 function ISPlayerStatsUI.OnOpenPanel() end
 
----@return any
+---@param username string
 function ISPlayerStatsUI.receiveUserLog(username, logs) end
 
----@return any
+---@return boolean
 function ISPlayerStatsUI:canModifyThis() end
 
----@return any
 function ISPlayerStatsUI:create() end
 
----@return any
+---@return number
 function ISPlayerStatsUI:drawPerk(y, item, alt) end
 
----@return any
 function ISPlayerStatsUI:initialise() end
 
----@return any
 function ISPlayerStatsUI:onAddTrait(button, trait) end
 
----@return any
 function ISPlayerStatsUI:onAddWarningPoint(button, reason, amount) end
 
----@return any
 function ISPlayerStatsUI:onAddXP(button, perk, amount, addGlobalXP, useMultipliers) end
 
----@return any
 function ISPlayerStatsUI:onChangeAccessLevel(button, accessLevel) end
 
----@return any
+---@param changedName string
 function ISPlayerStatsUI:onChangeName(button, player, changedName) end
 
----@return any
 function ISPlayerStatsUI:onChangeProfession(button, prof) end
 
----@return any
 function ISPlayerStatsUI:onChangeWeight(button, player) end
 
----@return any
+---@return boolean?
 function ISPlayerStatsUI:onMouseWheelXXX(del) end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsUI:onOptionMouseDown(button, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsUI:onRemoveTrait(button, x, y) end
 
----@return any
 function ISPlayerStatsUI:prerender() end
 
----@return any
 function ISPlayerStatsUI:render() end
 
----@return any
+---@param visible boolean
 function ISPlayerStatsUI:setVisible(visible) end
 
----@return any
 function ISPlayerStatsUI:subPanelPreRender() end
 
----@return any
 function ISPlayerStatsUI:subPanelRender() end
 
----@return any
 function ISPlayerStatsUI:updateButtons() end
 
----@return any
 function ISPlayerStatsUI:updateColumns() end
 
----@return any
 function ISPlayerStatsUI:updateWeight() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISPlayerStatsUI
 function ISPlayerStatsUI:new(x, y, width, height, playerChecked, admin) end

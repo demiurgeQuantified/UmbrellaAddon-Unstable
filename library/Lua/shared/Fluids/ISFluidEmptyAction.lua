@@ -1,30 +1,25 @@
 ---@meta
 
 ---@class ISFluidEmptyAction : ISBaseTimedAction
----@field amount any
----@field container any
----@field containerObject any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field amount unknown
+---@field container ISFluidContainer
+---@field containerObject unknown
+---@field sound unknown
 ISFluidEmptyAction = ISBaseTimedAction:derive("ISFluidEmptyAction")
+ISFluidEmptyAction.Type = "ISFluidEmptyAction"
 
----@return any
+---@return boolean
 function ISFluidEmptyAction:complete() end
 
----@return any
+---@return boolean?
 function ISFluidEmptyAction:isValid() end
 
----@return any
 function ISFluidEmptyAction:perform() end
 
----@return any
 function ISFluidEmptyAction:start() end
 
----@return any
 function ISFluidEmptyAction:stop() end
 
----@return any
 function ISFluidEmptyAction:update() end
 
 ---@return ISFluidEmptyAction

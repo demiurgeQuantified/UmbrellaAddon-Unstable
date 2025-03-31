@@ -1,88 +1,64 @@
 ---@meta
 
 ---@class ISBuildWindow : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field BuildPanel any
----@field collapseCounter any
----@field dirtyLayout any
----@field drawFrame any
----@field enableHeader any
----@field hasClosedWindowInstance any
----@field height any
----@field isCollapsed any
----@field isoObject any
----@field maximumHeight any
----@field maximumHeightPercent any
----@field maximumWidth any
----@field minimumHeight any
----@field minimumWidth any
----@field overrideBPrompt any
----@field panelCloseDistance any
----@field pin any
----@field player any
----@field playerNum any
----@field queryOverride any
----@field resizable any
----@field title any
----@field width any
----@field windowHeader any
----@field x any
----@field xuiPreferredResizeHeight any
----@field xuiPreferredResizeWidth any
----@field xuiResizeAnchorRight any
----@field y any
----@field [any] any
+---@field BuildPanel unknown?
+---@field dirtyLayout boolean
+---@field enableHeader boolean
+---@field hasClosedWindowInstance boolean
+---@field isoObject unknown
+---@field maximumHeight number
+---@field maximumHeightPercent number
+---@field maximumWidth number
+---@field overrideBPrompt boolean
+---@field panelCloseDistance number
+---@field player unknown
+---@field playerNum unknown
+---@field queryOverride unknown
+---@field title unknown?
+---@field windowHeader unknown?
+---@field xuiPreferredResizeHeight number
+---@field xuiPreferredResizeWidth number
+---@field xuiResizeAnchorRight boolean
 ISBuildWindow = ISCollapsableWindow:derive("ISBuildWindow")
+ISBuildWindow.Type = "ISBuildWindow"
 
----@return any
+---@param _preferredWidth number
+---@param _preferredHeight number
 function ISBuildWindow:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISBuildWindow:close() end
 
----@return any
 function ISBuildWindow:createChildren() end
 
----@return any
 function ISBuildWindow:initialise() end
 
----@return any
+---@return boolean
 function ISBuildWindow:isKeyConsumed(key) end
 
----@return any
 function ISBuildWindow:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISBuildWindow:onJoypadDown_Descendant(descendant, button, joypadData) end
 
----@return any
 function ISBuildWindow:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
----@return any
 function ISBuildWindow:onKeyRelease(key) end
 
----@return any
 function ISBuildWindow:prerender() end
 
----@return any
 function ISBuildWindow:render() end
 
----@return any
 function ISBuildWindow:stayOnSplitScreen() end
 
----@return any
+---@return boolean?
 function ISBuildWindow:update() end
 
----@return any
 function ISBuildWindow:validateSizeBounds() end
 
----@return any
 function ISBuildWindow:xuiRecalculateLayout(_preferredWidth, _preferredHeight, _force, _anchorRight) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISBuildWindow
 function ISBuildWindow:new(x, y, width, height, player, isoObject, queryOverride) end

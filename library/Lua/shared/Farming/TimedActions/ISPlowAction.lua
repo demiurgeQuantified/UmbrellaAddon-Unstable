@@ -1,41 +1,33 @@
 ---@meta
 
 ---@class ISPlowAction : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field gridSquare any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field gridSquare unknown
+---@field item unknown
+---@field sound unknown
 ISPlowAction = ISBaseTimedAction:derive("ISPlowAction")
+ISPlowAction.Type = "ISPlowAction"
 
----@return any
+---@return boolean
 function ISPlowAction:complete() end
 
----@return any
+---@return number
 function ISPlowAction:getDuration() end
 
----@return any
+---@return boolean?
 function ISPlowAction:isValid() end
 
----@return any
 function ISPlowAction:perform() end
 
----@return any
 function ISPlowAction:start() end
 
----@return any
 function ISPlowAction:stop() end
 
----@return any
 function ISPlowAction:update() end
 
----@return any
+---@return unknown
 function ISPlowAction:waitToStart() end
 
 ---@return ISPlowAction
 function ISPlowAction:new(character, gridSquare, item) end
 
----@return any
 function wormCheck(character, item, square) end

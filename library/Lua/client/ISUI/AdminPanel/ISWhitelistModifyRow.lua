@@ -1,40 +1,37 @@
 ---@meta
 
 ---@class ISWhitelistModifyRow : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field buttonDatas any
----@field close any
----@field columns any
----@field columnSize any
----@field combo any
----@field data any
----@field entriesPerPages any
----@field entry any
----@field listHeaderColor any
----@field moveWithMouse any
----@field schema any
----@field tableName any
----@field Update any
----@field view any
----@field [any] any
+---@field buttonBorderColor table
+---@field buttonDatas table
+---@field close ISButton
+---@field columns unknown
+---@field columnSize unknown
+---@field combo ISComboBox
+---@field data unknown
+---@field entriesPerPages unknown
+---@field entry ISTextEntryBox
+---@field listHeaderColor table
+---@field schema table
+---@field tableName unknown
+---@field Update ISButton
+---@field view table
 ISWhitelistModifyRow = ISPanel:derive("ISWhitelistModifyRow")
+ISWhitelistModifyRow.Type = "ISWhitelistModifyRow"
 
----@return any
 function ISWhitelistModifyRow:createChildren() end
 
----@return any
 function ISWhitelistModifyRow:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISWhitelistModifyRow:onOptionMouseDown(button, x, y) end
 
----@return any
-function ISWhitelistModifyRow:onOptionMouseDown(button, x, y) end
-
----@return any
 function ISWhitelistModifyRow:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param view table
 ---@return ISWhitelistModifyRow
 function ISWhitelistModifyRow:new(x, y, width, height, view) end

@@ -1,38 +1,41 @@
 ---@meta
 
 ---@class ForceHitReactionPanel : ISDebugSubPanelBase
----@field allOptions any
----@field bools any
----@field floats any
----@field [any] any
+---@field allOptions table
+---@field bools table
+---@field floats table
 ForceHitReactionPanel = ISDebugSubPanelBase:derive("ForceHitReactionPanel")
+ForceHitReactionPanel.Type = "ForceHitReactionPanel"
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function ForceHitReactionPanel:addBoolOption(_id, _bool, _x, _y, _w) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function ForceHitReactionPanel:addFloatOption(_id, _float, _x, _y, _w) end
 
----@return any
 function ForceHitReactionPanel:createChildren() end
 
----@return any
 function ForceHitReactionPanel:initialise() end
 
----@return any
 function ForceHitReactionPanel:onSliderChange(_newval, _slider) end
 
----@return any
 function ForceHitReactionPanel:onTicked(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function ForceHitReactionPanel:onTickedValue(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function ForceHitReactionPanel:prerender() end
 
----@return any
 function ForceHitReactionPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ForceHitReactionPanel
 function ForceHitReactionPanel:new(x, y, width, height, doStencil) end

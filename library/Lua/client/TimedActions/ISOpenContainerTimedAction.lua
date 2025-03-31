@@ -1,27 +1,25 @@
 ---@meta
 
 ---@class ISOpenContainerTimedAction : ISBaseTimedAction
----@field container any
----@field maxTime any
----@field x any
----@field y any
----@field [any] any
+---@field container unknown
+---@field maxTime unknown
+---@field x number
+---@field y number
 ISOpenContainerTimedAction = ISBaseTimedAction:derive("ISOpenContainerTimedAction")
+ISOpenContainerTimedAction.Type = "ISOpenContainerTimedAction"
 
----@return any
+---@return boolean
 function ISOpenContainerTimedAction:isValid() end
 
----@return any
 function ISOpenContainerTimedAction:perform() end
 
----@return any
 function ISOpenContainerTimedAction:start() end
 
----@return any
 function ISOpenContainerTimedAction:stop() end
 
----@return any
 function ISOpenContainerTimedAction:update() end
 
+---@param x number
+---@param y number
 ---@return ISOpenContainerTimedAction
 function ISOpenContainerTimedAction:new(character, container, time, x, y) end

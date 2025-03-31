@@ -1,12 +1,11 @@
 ---@meta
 
 ---@class InsomniaChallenge
----@field wave any
----@field waveTime any
----@field [any] any
 InsomniaChallenge = {}
 InsomniaChallenge.zombiesSpawned = 0
 InsomniaChallenge.deadZombie = 0
+InsomniaChallenge.wave = nil ---@type number?
+InsomniaChallenge.waveTime = nil ---@type number?
 InsomniaChallenge.name = "Insomnia"
 InsomniaChallenge.description =
 	"Zombies are blind during the day. Bloodhounds after the sun goes down. Its going to be a long night."
@@ -19,31 +18,24 @@ InsomniaChallenge.y = (33 * 300) + 271
 InsomniaChallenge.z = 0
 InsomniaChallenge.hourOfDay = 7
 
----@return any
 function InsomniaChallenge.Add() end
 
----@return any
+---@param playerNum number
 function InsomniaChallenge.AddPlayer(playerNum, playerObj) end
 
----@return any
 function InsomniaChallenge.Init() end
 
----@return any
+---@param playerNum number
 function InsomniaChallenge.onBackButtonWheel(playerNum, dir) end
 
----@return any
 function InsomniaChallenge.PreloadInit() end
 
----@return any
 function InsomniaChallenge.RemovePlayer(playerObj) end
 
----@return any
 function InsomniaChallenge.Render() end
 
----@return any
 function InsomniaChallenge.Tick() end
 
----@return any
 function removeInsomnia() end
----@return any
+
 function injectInsomnia() end

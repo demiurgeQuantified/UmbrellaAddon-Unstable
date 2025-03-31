@@ -1,26 +1,24 @@
 ---@meta
 
 ---@class ISFeedingTroughUI : ISCollapsableWindow
----@field backgroundColor any
----@field borderColor any
----@field chr any
----@field item any
----@field playerNum any
----@field refreshNeeded any
----@field [any] any
+---@field chr unknown
+---@field item unknown
+---@field playerNum unknown
+---@field refreshNeeded boolean
 ISFeedingTroughUI = ISCollapsableWindow:derive("ISFeedingTroughUI")
+ISFeedingTroughUI.Type = "ISFeedingTroughUI"
 
----@return any
 function ISFeedingTroughUI:create() end
 
----@return any
 function ISFeedingTroughUI:initialise() end
 
----@return any
 function ISFeedingTroughUI:prerender() end
 
----@return any
 function ISFeedingTroughUI:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFeedingTroughUI
 function ISFeedingTroughUI:new(x, y, width, height, trough, player) end

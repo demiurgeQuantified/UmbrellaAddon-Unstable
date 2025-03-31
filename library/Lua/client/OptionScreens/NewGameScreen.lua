@@ -1,116 +1,99 @@
 ---@meta
 
 ---@class NewGameScreen : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backButton any
----@field backgroundColor any
----@field borderColor any
----@field buttonMods any
----@field fadeIn any
----@field fadeOut any
----@field height any
----@field ISButtonA any
----@field ISButtonB any
----@field itemheightoverride any
----@field javaObject any
----@field joypadButtons any
----@field joypadFocused any
----@field joypadIndex any
----@field joypadIndexY any
----@field mainPanel any
----@field mainPanelReqWidth any
----@field modal any
----@field MouseEnterMainMenuItem any
----@field nextButton any
----@field overBottomPanelButton any
----@field richText any
----@field selected any
----@field selectedItem any
----@field startY any
----@field survival any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field backButton ISButton
+---@field buttonMods ISButton
+---@field fadeIn unknown
+---@field fadeOut unknown?
+---@field itemheightoverride table
+---@field joypadButtons unknown
+---@field joypadFocused unknown
+---@field mainPanel unknown
+---@field mainPanelReqWidth number
+---@field modal unknown?
+---@field MouseEnterMainMenuItem unknown?
+---@field nextButton ISButton
+---@field overBottomPanelButton unknown?
+---@field richText unknown
+---@field selected number
+---@field selectedItem ISLabel
+---@field startY number
+---@field survival ISLabel
 NewGameScreen = ISPanelJoypad:derive("NewGameScreen")
+NewGameScreen.Type = "NewGameScreen"
+NewGameScreen.instance = nil ---@type NewGameScreen?
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen.dblClickChallenge(item, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen.dblClickDifficulty(item, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen.dblClickPlaystyle(item, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen.dblClickSurvival(item, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen.dblClickTutorial(item, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen.onChooseDifficulty(item, x, y) end
 
----@return any
+---@param item ISLabel
+---@param x number
+---@param y number
 function NewGameScreen.onMenuItemMouseDown(item, x, y) end
 
----@return any
 function NewGameScreen:clickPlay() end
 
----@return any
 function NewGameScreen:create() end
 
----@return any
 function NewGameScreen:disableBtn() end
 
----@return any
 function NewGameScreen:initialise() end
 
----@return any
 function NewGameScreen:instantiate() end
 
----@return any
 function NewGameScreen:Label_setJoypadFocused(focused, joypadData) end
 
----@return any
+---@return boolean
 function NewGameScreen:needDifficulty() end
 
----@return any
 function NewGameScreen:onGainJoypadFocus(joypadData) end
 
----@return any
 function NewGameScreen:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function NewGameScreen:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function NewGameScreen:onOptionMouseDown(button, x, y) end
 
----@return any
 function NewGameScreen:onResetLua(reason) end
 
----@return any
 function NewGameScreen:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
 function NewGameScreen:prerender() end
 
----@return any
 function NewGameScreen:prerenderBottomPanelLabel() end
 
----@return any
 function NewGameScreen:render() end
 
----@return any
 function NewGameScreen:update() end
 
----@return any
 function NewGameScreen:updateBottomPanelButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return NewGameScreen
 function NewGameScreen:new(x, y, width, height) end

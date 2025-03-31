@@ -2854,11 +2854,11 @@ Events.TradingUIAddItem = {
 	Remove = function(callback) end,
 }
 
----player - The player who removed the item.<br>index - The index of the removed item.<br>
----@alias Callback_TradingUIRemoveItem fun(player:IsoPlayer,index:integer)
+---player - The player who removed the item.<br>id - The id of the removed item.<br>
+---@alias Callback_TradingUIRemoveItem fun(player:IsoPlayer,id:integer)
 
 ---(Multiplayer) (Client) TradingUIRemoveItem: Fires when the other player in a trade removes an item.
----<br><br>player - The player who removed the item.<br>index - The index of the removed item.<br>
+---<br><br>player - The player who removed the item.<br>id - The id of the removed item.<br>
 Events.TradingUIRemoveItem = {
 	---@param callback Callback_TradingUIRemoveItem
 	Add = function(callback) end,

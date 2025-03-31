@@ -1,43 +1,39 @@
 ---@meta
 
 ---@class ISCraftInputItems : ISBaseObject
----@field allItems any
----@field containers any
----@field nodes any
----@field oldNodes any
----@field player any
----@field recipe any
----@field recipeData any
----@field [any] any
+---@field allItems unknown
+---@field containers unknown?
+---@field nodes table
+---@field oldNodes table
+---@field player unknown
+---@field recipe unknown
+---@field recipeData unknown
 ISCraftInputItems = ISBaseObject:derive("ISCraftInputItems")
+ISCraftInputItems.Type = "ISCraftInputItems"
 
----@return any
+---@return unknown
 function ISCraftInputItems:getAllItems() end
 
----@return any
 function ISCraftInputItems:onRecipeChanged() end
 
----@return any
 function ISCraftInputItems:rebuildItemNodes() end
 
----@return any
 function ISCraftInputItems:updateContainers() end
 
 ---@return ISCraftInputItems
 function ISCraftInputItems:new(_player, _recipeData) end
 
 ---@class ISCraftInputItemNode : ISBaseObject
----@field expanded any
----@field items any
----@field name any
----@field recipe any
----@field scriptItem any
----@field textCol any
----@field width any
----@field [any] any
+---@field expanded boolean
+---@field items table
+---@field name unknown
+---@field recipe unknown
+---@field scriptItem unknown
+---@field textCol unknown
+---@field width number
 ISCraftInputItemNode = ISBaseObject:derive("ISCraftInputItemNode")
+ISCraftInputItemNode.Type = "ISCraftInputItemNode"
 
----@return any
 function ISCraftInputItemNode:reset() end
 
 ---@return ISCraftInputItemNode

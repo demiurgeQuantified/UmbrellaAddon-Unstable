@@ -1,27 +1,22 @@
 ---@meta
 
 ---@class ISCheckAnimalInsideTrailer : ISBaseTimedAction
----@field maxTime any
----@field vehicle any
----@field [any] any
+---@field vehicle unknown
 ISCheckAnimalInsideTrailer = ISBaseTimedAction:derive("ISCheckAnimalInsideTrailer")
+ISCheckAnimalInsideTrailer.Type = "ISCheckAnimalInsideTrailer"
 
----@return any
+---@return boolean
 function ISCheckAnimalInsideTrailer:isValid() end
 
----@return any
 function ISCheckAnimalInsideTrailer:perform() end
 
----@return any
 function ISCheckAnimalInsideTrailer:start() end
 
----@return any
 function ISCheckAnimalInsideTrailer:stop() end
 
----@return any
 function ISCheckAnimalInsideTrailer:update() end
 
----@return any
+---@return unknown
 function ISCheckAnimalInsideTrailer:waitToStart() end
 
 ---@return ISCheckAnimalInsideTrailer

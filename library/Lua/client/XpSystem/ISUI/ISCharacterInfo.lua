@@ -1,88 +1,79 @@
 ---@meta
 
 ---@class ISCharacterInfo : ISPanelJoypad
----@field arrow any
----@field arrowLeft any
----@field barWithTooltip any
----@field buttonList any
----@field char any
----@field collapse any
----@field disabledArrow any
----@field joypadIndex any
----@field lastLeveledUpPerk any
----@field lastLevelUpTime any
----@field nameToPerk any
----@field perks any
----@field playerNum any
----@field progressBarLoaded any
----@field progressBars any
----@field ProgressSkilMultiplier any
----@field reloadSkillBar any
----@field showingPassive any
----@field SkillBarSeparator any
----@field SkillPtsProgressBar any
----@field SkillPtsProgressBarEmpty any
----@field SkillPtsProgressBarStart any
----@field sorted any
----@field txtLen any
----@field yButton any
----@field [any] any
+---@field arrow unknown
+---@field arrowLeft unknown
+---@field barWithTooltip unknown?
+---@field buttonList table
+---@field char unknown
+---@field collapse table
+---@field disabledArrow unknown
+---@field joypadIndex number?
+---@field lastLeveledUpPerk unknown?
+---@field lastLevelUpTime number
+---@field nameToPerk table
+---@field perks table
+---@field playerNum number
+---@field progressBarLoaded boolean
+---@field progressBars table
+---@field ProgressSkilMultiplier unknown
+---@field reloadSkillBar boolean
+---@field showingPassive boolean
+---@field SkillBarSeparator unknown
+---@field SkillPtsProgressBar unknown
+---@field SkillPtsProgressBarEmpty unknown
+---@field SkillPtsProgressBarStart unknown
+---@field sorted table
+---@field txtLen number
+---@field yButton unknown
 ISCharacterInfo = ISPanelJoypad:derive("ISCharacterInfo")
+ISCharacterInfo.Type = "ISCharacterInfo"
 ISCharacterInfo.timerMultiplierAnim = 0
+ISCharacterInfo.animOffset = nil ---@type number?
+ISCharacterInfo.instance = nil ---@type ISCharacterInfo?
 
----@return any
+---@return table
 function ISCharacterInfo.loadPerk(self) end
 
----@return any
 function ISCharacterInfo.onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
 function ISCharacterInfo:collapseSection(button) end
 
----@return any
 function ISCharacterInfo:createChildren() end
 
----@return any
 function ISCharacterInfo:ensureVisible() end
 
----@return any
 function ISCharacterInfo:initialise() end
 
----@return any
 function ISCharacterInfo:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISCharacterInfo:onJoypadDirDown() end
 
----@return any
 function ISCharacterInfo:onJoypadDirLeft() end
 
----@return any
 function ISCharacterInfo:onJoypadDirRight() end
 
----@return any
 function ISCharacterInfo:onJoypadDirUp() end
 
----@return any
 function ISCharacterInfo:onJoypadDown(button) end
 
----@return any
 function ISCharacterInfo:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@return boolean
 function ISCharacterInfo:onMouseWheel(del) end
 
----@return any
 function ISCharacterInfo:prerender() end
 
----@return any
 function ISCharacterInfo:render() end
 
----@return any
 function ISCharacterInfo:setVisible(visible) end
 
----@return any
 function ISCharacterInfo:updateTooltipForJoypad() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param playerNum number
 ---@return ISCharacterInfo
 function ISCharacterInfo:new(x, y, width, height, playerNum) end

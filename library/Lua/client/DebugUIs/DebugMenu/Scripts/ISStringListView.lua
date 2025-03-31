@@ -1,129 +1,103 @@
 ---@meta
 
 ---@class ISStringListView : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field entryBox any
----@field greyCol any
----@field height any
----@field iconCollapse any
----@field iconExpand any
----@field infoList any
----@field labelWidth any
----@field listLabel any
----@field rootNode any
----@field searchText any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field entryBox ISTextEntryBox
+---@field greyCol table
+---@field iconCollapse unknown
+---@field iconExpand unknown
+---@field infoList ISScrollingListBox
+---@field labelWidth number
+---@field listLabel ISLabel
+---@field rootNode ISStringListViewNode
+---@field searchText string
 ISStringListView = ISPanel:derive("ISStringListView")
+ISStringListView.Type = "ISStringListView"
 
----@return any
 function ISStringListView.onTextChange(box) end
 
----@return any
 function ISStringListView:buildList() end
 
----@return any
 function ISStringListView:buildNodes(_lines) end
 
----@return any
 function ISStringListView:clear() end
 
----@return any
 function ISStringListView:createChildren() end
 
----@return any
+---@return number
 function ISStringListView:drawInfoList(y, item, alt) end
 
----@return any
 function ISStringListView:initialise() end
 
----@return any
 function ISStringListView:onInfoListSelected(_item) end
 
----@return any
 function ISStringListView:onResize() end
 
----@return any
 function ISStringListView:parseSearchText() end
 
----@return any
+---@param _lines unknown?
 function ISStringListView:populate(_lines) end
 
----@return any
 function ISStringListView:prerender() end
 
----@return any
 function ISStringListView:render() end
 
----@return any
 function ISStringListView:setExpandedAll() end
 
----@return any
 function ISStringListView:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISStringListView
 function ISStringListView:new(x, y, width, height) end
 
 ---@class ISStringListViewNode
----@field children any
----@field container any
----@field expanded any
----@field highlight any
----@field isNeedle any
----@field isRoot any
----@field key any
----@field keyCol any
----@field keyW any
----@field keyX any
----@field parent any
----@field text any
----@field val any
----@field valCol any
----@field valW any
----@field valX any
----@field width any
----@field [any] any
+---@field children table
+---@field container boolean
+---@field expanded boolean
+---@field highlight boolean
+---@field isNeedle boolean
+---@field isRoot boolean
+---@field key string
+---@field keyCol unknown
+---@field keyW number
+---@field keyX number
+---@field parent unknown
+---@field text unknown
+---@field val unknown?
+---@field valCol unknown
+---@field valW number
+---@field valX number
+---@field width number
 ISStringListViewNode = {}
 
----@return any
 function ISStringListViewNode:build(_list) end
 
----@return any
+---@return boolean
 function ISStringListViewNode:isContainer() end
 
----@return any
+---@return boolean
 function ISStringListViewNode:isDrawIcon() end
 
----@return any
 function ISStringListViewNode:preBuild() end
 
----@return any
 function ISStringListViewNode:reset() end
 
----@return any
 function ISStringListViewNode:resetHighlights() end
 
----@return any
 function ISStringListViewNode:search(_text, _col) end
 
----@return any
+---@param _b boolean
+---@param _noChildren boolean
 function ISStringListViewNode:setExpanded(_b, _noChildren) end
 
----@return any
 function ISStringListViewNode:setExpandedAll() end
 
----@return any
 function ISStringListViewNode:setHighlight(_col) end
 
----@return any
 function ISStringListViewNode:toggleExpand() end
 
+---@param _isRoot boolean
 ---@return ISStringListViewNode
 function ISStringListViewNode:new(_parent, _text, _isRoot) end

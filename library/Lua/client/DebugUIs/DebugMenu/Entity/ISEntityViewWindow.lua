@@ -1,64 +1,42 @@
 ---@meta
 
 ---@class ISEntityViewWindow : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field collapseCounter any
----@field drawFrame any
----@field entityPanel any
----@field entityPanelY any
----@field greyCol any
----@field height any
----@field instance any
----@field isCollapsed any
----@field minimumHeight any
----@field minimumWidth any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field entityPanel ISEntityViewPanel
+---@field entityPanelY number
+---@field greyCol table
+---@field player unknown
+---@field playerNum unknown
+---@field title string
 ISEntityViewWindow = ISCollapsableWindow:derive("ISEntityViewWindow")
-ISEntityViewWindow.instance = nil
-ISEntityViewWindow.coords = false
+ISEntityViewWindow.Type = "ISEntityViewWindow"
+ISEntityViewWindow.instance = nil ---@type ISEntityViewWindow?
+ISEntityViewWindow.coords = nil ---@type boolean | table
 
----@return any
+---@return ISEntityViewWindow?
 function ISEntityViewWindow.OnOpenPanel(_entity) end
 
----@return any
 function ISEntityViewWindow:close() end
 
----@return any
 function ISEntityViewWindow:createChildren() end
 
----@return any
 function ISEntityViewWindow:initialise() end
 
----@return any
 function ISEntityViewWindow:onResize() end
 
----@return any
 function ISEntityViewWindow:prerender() end
 
----@return any
 function ISEntityViewWindow:render() end
 
----@return any
 function ISEntityViewWindow:setEntity(_entity) end
 
----@return any
+---@param _title string
 function ISEntityViewWindow:setTitle(_title) end
 
----@return any
 function ISEntityViewWindow:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISEntityViewWindow
 function ISEntityViewWindow:new(x, y, width, height) end

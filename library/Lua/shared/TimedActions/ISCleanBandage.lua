@@ -1,40 +1,34 @@
 ---@meta
 
 ---@class ISCleanBandage : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field recipe any
----@field result any
----@field sound any
----@field waterObject any
----@field [any] any
+---@field item unknown
+---@field recipe unknown
+---@field result unknown
+---@field sound unknown
+---@field waterObject unknown
 ISCleanBandage = ISBaseTimedAction:derive("ISCleanBandage")
+ISCleanBandage.Type = "ISCleanBandage"
 
----@return any
+---@return boolean
 function ISCleanBandage:complete() end
 
----@return any
+---@return number
 function ISCleanBandage:getDuration() end
 
----@return any
+---@return boolean
 function ISCleanBandage:isValid() end
 
----@return any
 function ISCleanBandage:perform() end
 
----@return any
 function ISCleanBandage:start() end
 
----@return any
 function ISCleanBandage:stop() end
 
----@return any
 function ISCleanBandage:stopSound() end
 
----@return any
 function ISCleanBandage:update() end
 
----@return any
+---@return unknown
 function ISCleanBandage:waitToStart() end
 
 ---@return ISCleanBandage

@@ -1,37 +1,32 @@
 ---@meta
 
 ---@class ISSetKeybindDialog : ISPanel
----@field cancel any
----@field clear any
----@field default any
----@field isModBind any
----@field keybindName any
----@field [any] any
+---@field cancel ISButton
+---@field clear ISButton
+---@field default ISButton
+---@field isModBind boolean
+---@field keybindName string
 ISSetKeybindDialog = ISPanel:derive("ISSetKeybindDialog")
+ISSetKeybindDialog.Type = "ISSetKeybindDialog"
 
----@return any
 function ISSetKeybindDialog:createChildren() end
 
----@return any
 function ISSetKeybindDialog:destroy() end
 
----@return any
+---@return boolean
 function ISSetKeybindDialog:isKeyConsumed(key) end
 
----@return any
 function ISSetKeybindDialog:onCancel() end
 
----@return any
 function ISSetKeybindDialog:onClear() end
 
----@return any
 function ISSetKeybindDialog:onDefault() end
 
----@return any
 function ISSetKeybindDialog:onKeyRelease(key) end
 
----@return any
 function ISSetKeybindDialog:onMouseButtonDown(btn) end
 
+---@param keybindName string
+---@param isModBind boolean
 ---@return ISSetKeybindDialog
 function ISSetKeybindDialog:new(keybindName, isModBind) end

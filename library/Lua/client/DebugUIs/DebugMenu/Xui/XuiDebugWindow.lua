@@ -1,131 +1,122 @@
 ---@meta
 
 ---@class XuiDebugWindow : ISCollapsableWindow
----@field colors any
----@field defStyleColor any
----@field disableColor any
----@field elements any
----@field elementsLabel any
----@field headerColor any
----@field height any
----@field heightMod any
----@field instance any
----@field leftWidth any
----@field list any
----@field minimumHeight any
----@field minimumWidth any
----@field nullColor any
----@field player any
----@field playerNum any
----@field referenceColor any
----@field reloadButton any
----@field rh any
----@field rightWidth any
----@field scriptColor any
----@field scriptLabel any
----@field selectedElementItem any
----@field selectedScriptItem any
----@field styleColor any
----@field subLabel any
----@field tableColor any
----@field testCustomButton any
----@field testWindowButton any
----@field th any
----@field title any
----@field vars any
----@field varsLabel any
----@field viewScriptButton any
----@field width any
----@field [any] any
+---@field colors ISScrollingListBox
+---@field defStyleColor table
+---@field disableColor table
+---@field elements ISScrollingListBox
+---@field elementsLabel ISLabel
+---@field headerColor table
+---@field heightMod number
+---@field leftWidth number
+---@field list ISScrollingListBox
+---@field nullColor table
+---@field player unknown
+---@field playerNum unknown
+---@field referenceColor table
+---@field reloadButton ISButton
+---@field rh number
+---@field rightWidth number
+---@field scriptColor table
+---@field scriptLabel ISLabel
+---@field selectedElementItem boolean
+---@field selectedScriptItem boolean
+---@field styleColor table
+---@field subLabel ISLabel
+---@field tableColor table
+---@field testCustomButton ISButton
+---@field testWindowButton ISButton
+---@field th unknown
+---@field title string
+---@field vars ISScrollingListBox
+---@field varsLabel ISLabel
+---@field viewScriptButton ISButton
 XuiDebugWindow = ISCollapsableWindow:derive("XuiDebugWindow")
-XuiDebugWindow.instance = false
+XuiDebugWindow.Type = "XuiDebugWindow"
+XuiDebugWindow.instance = nil ---@type (boolean | XuiDebugWindow)?
 XuiDebugWindow.customTestWindow = {
-	instance = false,
-	x = false,
-	y = false,
+	instance = false, ---@type boolean?
+	x = false, ---@type boolean
+	y = false, ---@type boolean
 }
 XuiDebugWindow.testWindow = {
-	instance = false,
-	x = false,
-	y = false,
+	instance = false, ---@type unknown?
+	x = false, ---@type boolean
+	y = false, ---@type boolean
 }
 XuiDebugWindow.viewScriptWindow = {
-	instance = false,
-	x = false,
-	y = false,
+	instance = false, ---@type unknown?
+	x = false, ---@type boolean
+	y = false, ---@type boolean
 }
 
----@return any
+---@return (boolean | XuiDebugWindow)?
 function XuiDebugWindow.OnOpenPanel(_player) end
 
----@return any
+---@param _depth number
+---@param _color table?
 function XuiDebugWindow:addScriptElements(_script, _depth, _color) end
 
----@return any
 function XuiDebugWindow:close() end
 
----@return any
 function XuiDebugWindow:createChildren() end
 
----@return any
+---@param _name string
+---@param _value string
+---@param _order number
+---@param _var unknown?
+---@return table
 function XuiDebugWindow:createVarItem(_name, _value, _order, _var) end
 
----@return any
+---@return number
 function XuiDebugWindow:drawColorItem(y, item, alt) end
 
----@return any
+---@return number
 function XuiDebugWindow:drawConfigItem(y, item, alt) end
 
----@return any
+---@return number
 function XuiDebugWindow:drawElementItem(y, item, alt) end
 
----@return any
+---@return number
 function XuiDebugWindow:drawVarItem(y, item, alt) end
 
----@return any
 function XuiDebugWindow:initColors() end
 
----@return any
 function XuiDebugWindow:initialise() end
 
----@return any
 function XuiDebugWindow:onButtonClick(_button) end
 
----@return any
+---@param _window (boolean | XuiDebugLayoutWindow | ISScriptViewWindow)?
+---@param _closeIt boolean
 function XuiDebugWindow:onCloseSubWindow(_window, _closeIt) end
 
----@return any
 function XuiDebugWindow:onColorSelected(_item) end
 
----@return any
 function XuiDebugWindow:onConfigSelected(_item) end
 
----@return any
 function XuiDebugWindow:onElementSelected(_item) end
 
----@return any
+---@param _width number
+---@param _height number
 function XuiDebugWindow:onResize(_width, _height) end
 
----@return any
 function XuiDebugWindow:onVarSelected(_item) end
 
----@return any
 function XuiDebugWindow:populate() end
 
----@return any
 function XuiDebugWindow:populateElements() end
 
----@return any
 function XuiDebugWindow:populateVars() end
 
----@return any
 function XuiDebugWindow:positionSubWindow(_window) end
 
----@return any
 function XuiDebugWindow:prerender() end
 
----@return any
 function XuiDebugWindow:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return XuiDebugWindow
 function XuiDebugWindow:new(x, y, width, height, player) end

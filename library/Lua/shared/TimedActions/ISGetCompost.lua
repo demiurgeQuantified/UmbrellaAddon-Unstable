@@ -1,32 +1,28 @@
 ---@meta
 
 ---@class ISGetCompost : ISBaseTimedAction
----@field compost any
----@field item any
----@field maxTime any
----@field [any] any
+---@field compost unknown
+---@field item unknown
 ISGetCompost = ISBaseTimedAction:derive("ISGetCompost")
+ISGetCompost.Type = "ISGetCompost"
 
----@return any
+---@return boolean
 function ISGetCompost:complete() end
 
----@return any
+---@return number
 function ISGetCompost:getDuration() end
 
----@return any
+---@return boolean?
 function ISGetCompost:isValid() end
 
----@return any
 function ISGetCompost:perform() end
 
----@return any
 function ISGetCompost:start() end
 
----@return any
 function ISGetCompost:stop() end
 
----@return any
 function ISGetCompost:update() end
 
+---@param character unknown?
 ---@return ISGetCompost
 function ISGetCompost:new(character, compost, item) end

@@ -1,39 +1,35 @@
 ---@meta
 
 ---@class ISAddFuelAction : ISBaseTimedAction
----@field campfire any
----@field fuelAmt any
----@field item any
----@field maxTime any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field campfire unknown
+---@field fuelAmt number
+---@field item unknown?
+---@field sound unknown
 ISAddFuelAction = ISBaseTimedAction:derive("ISAddFuelAction")
+ISAddFuelAction.Type = "ISAddFuelAction"
 
----@return any
+---@return boolean
 function ISAddFuelAction:complete() end
 
----@return any
+---@return number
 function ISAddFuelAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISAddFuelAction:isValid() end
 
----@return any
 function ISAddFuelAction:perform() end
 
----@return any
 function ISAddFuelAction:start() end
 
----@return any
 function ISAddFuelAction:stop() end
 
----@return any
 function ISAddFuelAction:update() end
 
----@return any
+---@return unknown
 function ISAddFuelAction:waitToStart() end
 
+---@param character unknown?
+---@param item unknown?
+---@param fuelAmt number
 ---@return ISAddFuelAction
 function ISAddFuelAction:new(character, campfire, item, fuelAmt) end

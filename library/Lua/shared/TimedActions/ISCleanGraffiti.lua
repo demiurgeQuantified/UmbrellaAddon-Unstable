@@ -1,37 +1,31 @@
 ---@meta
 
 ---@class ISCleanGraffiti : ISBaseTimedAction
----@field caloriesModifier any
----@field cleaner any
----@field maxTime any
----@field object any
----@field sound any
----@field square any
----@field [any] any
+---@field cleaner unknown
+---@field object unknown
+---@field sound unknown
+---@field square unknown
 ISCleanGraffiti = ISBaseTimedAction:derive("ISCleanGraffiti")
+ISCleanGraffiti.Type = "ISCleanGraffiti"
 
----@return any
+---@return boolean
 function ISCleanGraffiti:complete() end
 
----@return any
+---@return number
 function ISCleanGraffiti:getDuration() end
 
----@return any
+---@return unknown
 function ISCleanGraffiti:isValid() end
 
----@return any
 function ISCleanGraffiti:perform() end
 
----@return any
 function ISCleanGraffiti:start() end
 
----@return any
 function ISCleanGraffiti:stop() end
 
----@return any
 function ISCleanGraffiti:update() end
 
----@return any
+---@return unknown
 function ISCleanGraffiti:waitToStart() end
 
 ---@return ISCleanGraffiti

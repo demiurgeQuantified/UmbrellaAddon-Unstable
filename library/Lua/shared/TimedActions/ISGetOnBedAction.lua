@@ -1,37 +1,29 @@
 ---@meta
 
 ---@class ISGetOnBedAction : ISBaseTimedAction
----@field bed any
----@field forceProgressBar any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field bed unknown?
+---@field forceProgressBar boolean
 ISGetOnBedAction = ISBaseTimedAction:derive("ISGetOnBedAction")
+ISGetOnBedAction.Type = "ISGetOnBedAction"
 
----@return any
+---@return boolean
 function ISGetOnBedAction:isValid() end
 
----@return any
 function ISGetOnBedAction:perform() end
 
----@return any
 function ISGetOnBedAction:setBeforeSitDirection() end
 
----@return any
 function ISGetOnBedAction:setWhileSittingDirection() end
 
----@return any
 function ISGetOnBedAction:start() end
 
----@return any
 function ISGetOnBedAction:stop() end
 
----@return any
 function ISGetOnBedAction:update() end
 
----@return any
+---@return unknown
 function ISGetOnBedAction:waitToStart() end
 
+---@param bed unknown?
 ---@return ISGetOnBedAction
 function ISGetOnBedAction:new(character, bed) end

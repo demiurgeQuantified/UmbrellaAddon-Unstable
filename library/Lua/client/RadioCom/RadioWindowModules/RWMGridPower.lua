@@ -1,60 +1,45 @@
 ---@meta
 
 ---@class RWMGridPower : RWMPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field led any
----@field toggleOnOffButton any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field led ISLedLight
+---@field toggleOnOffButton ISButton
 RWMGridPower = RWMPanel:derive("RWMGridPower")
+RWMGridPower.Type = "RWMGridPower"
 
----@return any
 function RWMGridPower:clear() end
 
----@return any
 function RWMGridPower:createChildren() end
 
----@return any
+---@return string?
 function RWMGridPower:getAPrompt() end
 
----@return any
+---@return unknown?
 function RWMGridPower:getBPrompt() end
 
----@return any
+---@return unknown?
 function RWMGridPower:getXPrompt() end
 
----@return any
+---@return unknown?
 function RWMGridPower:getYPrompt() end
 
----@return any
 function RWMGridPower:initialise() end
 
----@return any
 function RWMGridPower:onJoypadDown(button) end
 
----@return any
 function RWMGridPower:prerender() end
 
----@return any
+---@return boolean
 function RWMGridPower:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMGridPower:render() end
 
----@return any
 function RWMGridPower:toggleOnOff() end
 
----@return any
 function RWMGridPower:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RWMGridPower
 function RWMGridPower:new(x, y, width, height) end

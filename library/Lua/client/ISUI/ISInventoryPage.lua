@@ -1,315 +1,293 @@
 ---@meta
 
 ---@class ISInventoryPage : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field backpackChoice any
----@field backpacks any
----@field blinkAlpha any
----@field blinkAlphaContainer any
----@field blinkAlphaIncrease any
----@field blinkAlphaIncreaseContainer any
----@field blinkContainer any
----@field blinkContainerType any
----@field borderColor any
----@field buttonPool any
----@field buttonSize any
----@field capacity any
----@field closebutton any
----@field closeButton any
----@field collapsebutton any
----@field collapseButton any
----@field collapseCounter any
----@field coloredInv any
----@field conDefault any
----@field containerIconMaps any
----@field disableJoypadNavigation any
----@field downX any
----@field downY any
----@field floorContainer any
----@field forceSelectedContainer any
----@field forceSelectedContainerTime any
----@field height any
----@field highlightColors any
----@field infoBtn any
----@field infoButton any
----@field infoRichText any
----@field infoText any
----@field invbasic any
----@field inventory any
----@field inventoryPane any
----@field isCollapsed any
----@field lastDir any
----@field lastSquare any
----@field lookDir any
----@field lootAll any
----@field minimumHeight any
----@field minimumWidth any
----@field mouseOver any
----@field mouseOverButton any
----@field moving any
----@field onCharacter any
----@field pin any
----@field pinbutton any
----@field pinButton any
----@field removeAll any
----@field render3DItemRot any
----@field render3DItemXOffset any
----@field render3DItemYOffset any
----@field render3DItemZOffset any
----@field renderDirty any
----@field resizeimage any
----@field resizeWidget any
----@field resizeWidget2 any
----@field selectedButton any
----@field selectedSqDrop any
----@field statusbarbkg any
----@field title any
----@field titlebarbkg any
----@field titleFont any
----@field titleFontHgt any
----@field toggleStove any
----@field totalItems any
----@field totalWeight any
----@field transferAll any
----@field visibleFunction any
----@field visibleTarget any
----@field width any
----@field x any
----@field y any
----@field zoom any
----@field [any] any
+---@field backpackChoice number
+---@field backpacks table
+---@field blinkAlpha number
+---@field blinkAlphaContainer number
+---@field blinkAlphaIncrease boolean
+---@field blinkAlphaIncreaseContainer boolean
+---@field blinkContainer boolean
+---@field blinkContainerType unknown?
+---@field buttonPool table
+---@field buttonSize unknown
+---@field capacity unknown
+---@field closebutton unknown
+---@field closeButton ISButton
+---@field collapsebutton unknown
+---@field collapseButton ISButton
+---@field collapseCounter number
+---@field coloredInv unknown?
+---@field conDefault unknown
+---@field containerIconMaps ContainerButtonIcons
+---@field disableJoypadNavigation boolean
+---@field downX unknown
+---@field downY unknown
+---@field forceSelectedContainer unknown?
+---@field forceSelectedContainerTime number
+---@field highlightColors table
+---@field infoBtn unknown
+---@field infoButton ISButton
+---@field infoRichText ISModalRichText
+---@field infoText unknown
+---@field invbasic unknown
+---@field inventory unknown
+---@field inventoryPane ISInventoryPane
+---@field isCollapsed boolean
+---@field lastDir unknown
+---@field lastSquare unknown
+---@field lookDir unknown
+---@field lootAll ISButton
+---@field mouseOverButton unknown?
+---@field onCharacter boolean
+---@field pin boolean
+---@field pinbutton unknown
+---@field pinButton ISButton
+---@field removeAll ISButton
+---@field render3DItemRot number
+---@field render3DItemXOffset number
+---@field render3DItemYOffset number
+---@field render3DItemZOffset number
+---@field resizeimage unknown
+---@field resizeWidget ISResizeWidget
+---@field resizeWidget2 ISResizeWidget
+---@field selectedButton unknown
+---@field selectedSqDrop unknown
+---@field statusbarbkg unknown
+---@field title unknown?
+---@field titlebarbkg unknown
+---@field titleFont unknown
+---@field titleFontHgt unknown
+---@field toggleStove ISButton
+---@field totalItems number?
+---@field totalWeight number
+---@field transferAll ISButton
+---@field visibleFunction function
+---@field visibleTarget ISInventoryPage
+---@field zoom number
 ISInventoryPage = ISPanel:derive("ISInventoryPage")
+ISInventoryPage.Type = "ISInventoryPage"
 ISInventoryPage.bagSoundDelay = 2
 ISInventoryPage.bagSoundTime = 0
+ISInventoryPage.renderDirty = nil ---@type boolean?
+ISInventoryPage.floorContainer = nil ---@type table?
 
----@return any
 function ISInventoryPage.ContainerSizeChanged() end
 
----@return any
 function ISInventoryPage.dirtyUI() end
 
----@return any
+---@param playerNum number
+---@return unknown
 function ISInventoryPage.GetFloorContainer(playerNum) end
 
----@return any
+---@return number
 function ISInventoryPage.loadWeight(inv) end
 
----@return any
 function ISInventoryPage.OnContainerUpdate(object) end
 
----@return any
 function ISInventoryPage.ongamestart() end
 
----@return any
 function ISInventoryPage.onInventoryFontChanged() end
 
----@return any
 function ISInventoryPage.onKeyPressed(key) end
 
----@return any
+---@param playerNum number
+---@param isHighlighted boolean
 function ISInventoryPage.OnObjectHighlighted(playerNum, object, isHighlighted) end
 
----@return any
 function ISInventoryPage.toggleInventory() end
 
----@return any
+---@param texture unknown?
+---@param name string?
+---@param tooltip string?
+---@return ISButton
 function ISInventoryPage:addContainerButton(container, texture, name, tooltip) end
 
----@return any
+---@return boolean
 function ISInventoryPage:canPutIn() end
 
----@return any
 function ISInventoryPage:checkExplored(container, playerObj) end
 
----@return any
 function ISInventoryPage:close() end
 
----@return any
 function ISInventoryPage:collapse() end
 
----@return any
 function ISInventoryPage:createChildren() end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISInventoryPage:drawText(str, x, y, r, g, b, a, font) end
 
----@return any
+---@param str string
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISInventoryPage:drawTextRight(str, x, y, r, g, b, a, font) end
 
----@return any
+---@return boolean
 function ISInventoryPage:dropItemsInContainer(button) end
 
----@return any
 function ISInventoryPage:ensureVisible(index) end
 
----@return any
+---@return number
 function ISInventoryPage:getCurrentBackpackIndex() end
 
----@return any
 function ISInventoryPage:initialise() end
 
----@return any
+---@return unknown?
 function ISInventoryPage:isCycleContainerKeyDown() end
 
----@return any
+---@return boolean
 function ISInventoryPage:isRemoveButtonVisible() end
 
----@return any
 function ISInventoryPage:lootAll() end
 
----@return any
+---@param index number
+---@param wrap boolean
+---@return number
 function ISInventoryPage:nextUnlockedContainer(index, wrap) end
 
----@return any
 function ISInventoryPage:onBackpackClick(button) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onBackpackMouseDown(button, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onBackpackMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onBackpackRightMouseDown(x, y) end
 
----@return any
 function ISInventoryPage:onChangeFilter(selected) end
 
----@return any
 function ISInventoryPage:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISInventoryPage:onInfo() end
 
----@return any
 function ISInventoryPage:onInventoryContainerSizeChanged() end
 
----@return any
 function ISInventoryPage:onJoypadDirDown(joypadData) end
 
----@return any
 function ISInventoryPage:onJoypadDirLeft() end
 
----@return any
 function ISInventoryPage:onJoypadDirRight() end
 
----@return any
 function ISInventoryPage:onJoypadDirUp(joypadData) end
 
----@return any
 function ISInventoryPage:onJoypadDown(button) end
 
----@return any
 function ISInventoryPage:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISInventoryPage:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISInventoryPage:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onMouseOutButton(button, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onMouseOverButton(button, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function ISInventoryPage:onMouseWheel(del) end
 
----@return any
+---@param x number
+---@param y number
 function ISInventoryPage:onRightMouseDownOutside(x, y) end
 
----@return any
 function ISInventoryPage:onToggleVisible() end
 
----@return any
 function ISInventoryPage:prerender() end
 
----@return any
+---@param index number
+---@param wrap boolean
+---@return number
 function ISInventoryPage:prevUnlockedContainer(index, wrap) end
 
----@return any
 function ISInventoryPage:refreshBackpacks() end
 
----@return any
 function ISInventoryPage:refreshWeight() end
 
----@return any
 function ISInventoryPage:removeAll() end
 
----@return any
 function ISInventoryPage:render() end
 
----@return any
 function ISInventoryPage:render3DItemPreview() end
 
----@return any
+---@param name string
 function ISInventoryPage:RestoreLayout(name, layout) end
 
----@return any
+---@param name string
 function ISInventoryPage:SaveLayout(name, layout) end
 
----@return any
 function ISInventoryPage:selectButtonForContainer(container) end
 
----@return any
 function ISInventoryPage:selectContainer(button) end
 
----@return any
 function ISInventoryPage:selectNextContainer() end
 
----@return any
 function ISInventoryPage:selectPrevContainer() end
 
----@return any
 function ISInventoryPage:setBlinkingContainer(blinking, containerType) end
 
----@return any
 function ISInventoryPage:setForceSelectedContainer(container, ms) end
 
----@return any
 function ISInventoryPage:setInfo(text) end
 
----@return any
 function ISInventoryPage:setNewContainer(inventory) end
 
----@return any
 function ISInventoryPage:setPinned() end
 
----@return any
 function ISInventoryPage:syncToggleStove() end
 
----@return any
+---@return unknown
 function ISInventoryPage:titleBarHeight(selected) end
 
----@return any
 function ISInventoryPage:toggleStove() end
 
----@return any
 function ISInventoryPage:transferAll() end
 
----@return any
 function ISInventoryPage:update() end
 
----@return any
 function ISInventoryPage:updateContainerHighlight() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param onCharacter boolean
 ---@return ISInventoryPage
 function ISInventoryPage:new(x, y, width, height, inventory, onCharacter, zoom) end

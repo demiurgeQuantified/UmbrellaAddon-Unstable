@@ -1,64 +1,55 @@
 ---@meta
 
 ---@class ISPlayerStatsManageInvUI : ISPanel
----@field addItemBtn any
----@field backgroundColor any
----@field borderColor any
----@field capacityWeight any
----@field datas any
----@field equippedIcon any
----@field getItemBtn any
----@field height any
----@field instance any
----@field listHeaderColor any
----@field maxWeight any
----@field moveWithMouse any
----@field no any
----@field playerID any
----@field playerUsername any
----@field refreshBtn any
----@field removeBtn any
----@field selectedItem any
----@field width any
----@field [any] any
+---@field addItemBtn ISButton
+---@field capacityWeight number
+---@field datas ISScrollingListBox
+---@field equippedIcon unknown
+---@field getItemBtn ISButton
+---@field listHeaderColor table
+---@field maxWeight number
+---@field no ISButton
+---@field playerID number
+---@field playerUsername string
+---@field refreshBtn ISButton
+---@field removeBtn ISButton
+---@field selectedItem unknown?
 ISPlayerStatsManageInvUI = ISPanel:derive("ISPlayerStatsManageInvUI")
+ISPlayerStatsManageInvUI.Type = "ISPlayerStatsManageInvUI"
 ISPlayerStatsManageInvUI.messages = {}
+ISPlayerStatsManageInvUI.instance = nil ---@type ISPlayerStatsManageInvUI?
 
----@return any
 function ISPlayerStatsManageInvUI.Close() end
 
----@return any
+---@return ISPlayerStatsManageInvUI?
 function ISPlayerStatsManageInvUI.OnOpenPanel() end
 
----@return any
 function ISPlayerStatsManageInvUI.ReceiveItems(itemtable) end
 
----@return any
+---@return number
 function ISPlayerStatsManageInvUI:drawDatas(y, item, alt) end
 
----@return any
 function ISPlayerStatsManageInvUI:initialise() end
 
----@return any
 function ISPlayerStatsManageInvUI:onAddItem(button) end
 
----@return any
 function ISPlayerStatsManageInvUI:onClick(button) end
 
----@return any
 function ISPlayerStatsManageInvUI:populateList() end
 
----@return any
 function ISPlayerStatsManageInvUI:prerender() end
 
----@return any
 function ISPlayerStatsManageInvUI:removeSelectedItem() end
 
----@return any
 function ISPlayerStatsManageInvUI:render() end
 
----@return any
 function ISPlayerStatsManageInvUI:requestDatas() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param playerID number
+---@param playerUsername string
 ---@return ISPlayerStatsManageInvUI
 function ISPlayerStatsManageInvUI:new(x, y, width, height, playerID, playerUsername) end

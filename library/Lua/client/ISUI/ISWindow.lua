@@ -1,73 +1,70 @@
 ---@meta
 
 ---@class ISWindow : ISUIElement
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field hasClose any
----@field height any
----@field mDownX any
----@field mDownY any
----@field resizing any
----@field title any
----@field toolbars any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field hasClose boolean
+---@field mDownX number
+---@field mDownY number
+---@field resizing boolean
+---@field title string
+---@field toolbars table
 ISWindow = ISUIElement:derive("ISWindow")
+ISWindow.Type = "ISWindow"
 ISWindow.TitleBarHeight = 19
 ISWindow.SideMargin = 12
 ISWindow.BottomMargin = 12
 
----@return any
 function ISWindow:addToolbar(toolbar, height) end
 
----@return any
+---@return number
 function ISWindow:getClientBottom() end
 
----@return any
+---@return number
 function ISWindow:getClientHeight() end
 
----@return any
+---@return number
 function ISWindow:getClientLeft() end
 
----@return any
+---@return number
 function ISWindow:getClientRight() end
 
----@return any
+---@return number
 function ISWindow:getClientTop() end
 
----@return any
+---@return number
 function ISWindow:getClientWidth() end
 
----@return any
+---@return number
 function ISWindow:getNClientTop() end
 
----@return any
+---@return number
 function ISWindow:getTotalToolbarHeight() end
 
----@return any
 function ISWindow:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISWindow:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISWindow:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISWindow:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISWindow:onMouseUp(x, y) end
 
----@return any
 function ISWindow:removeToolbar(toolbar) end
 
----@return any
 function ISWindow:render() end
 
+---@param title string
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWindow
 function ISWindow:new(title, x, y, width, height) end

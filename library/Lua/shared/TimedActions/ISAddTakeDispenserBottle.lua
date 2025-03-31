@@ -1,36 +1,30 @@
 ---@meta
 
 ---@class ISAddTakeDispenserBottle : ISBaseTimedAction
----@field bottle any
----@field character any
----@field maxTime any
----@field square any
----@field waterdispenser any
----@field [any] any
+---@field bottle unknown
+---@field square unknown
+---@field waterdispenser unknown
 ISAddTakeDispenserBottle = ISBaseTimedAction:derive("ISAddTakeDispenserBottle")
+ISAddTakeDispenserBottle.Type = "ISAddTakeDispenserBottle"
 
----@return any
+---@return boolean
 function ISAddTakeDispenserBottle:complete() end
 
----@return any
+---@return number
 function ISAddTakeDispenserBottle:getDuration() end
 
----@return any
+---@return boolean
 function ISAddTakeDispenserBottle:isValid() end
 
----@return any
 function ISAddTakeDispenserBottle:perform() end
 
----@return any
 function ISAddTakeDispenserBottle:start() end
 
----@return any
 function ISAddTakeDispenserBottle:stop() end
 
----@return any
 function ISAddTakeDispenserBottle:update() end
 
----@return any
+---@return unknown
 function ISAddTakeDispenserBottle:waitToStart() end
 
 ---@return ISAddTakeDispenserBottle

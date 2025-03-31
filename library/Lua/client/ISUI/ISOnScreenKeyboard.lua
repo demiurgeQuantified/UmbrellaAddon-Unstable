@@ -1,226 +1,203 @@
 ---@meta
 
 ---@class ISOnScreenKeyboard : ISPanelJoypad
----@field bSelectDefaultKey any
----@field buttonPadY any
----@field capsLock any
----@field entry any
----@field isRTPressed any
----@field keepOnScreen any
----@field keyPanel any
----@field playerNum any
----@field setBlockMovement any
----@field shiftDown any
----@field textEntryBox any
----@field toggleButtonBG any
----@field transition any
----@field [any] any
+---@field bSelectDefaultKey boolean
+---@field buttonPadY number
+---@field capsLock boolean
+---@field entry OnScreenKeyboardEntry
+---@field isRTPressed boolean
+---@field keepOnScreen boolean
+---@field keyPanel OnScreenKeyboardPanel
+---@field playerNum number
+---@field setBlockMovement boolean
+---@field shiftDown boolean
+---@field textEntryBox unknown
+---@field toggleButtonBG table
+---@field transition number
 ISOnScreenKeyboard = ISPanelJoypad:derive("ISOnScreenKeyboard")
+ISOnScreenKeyboard.Type = "ISOnScreenKeyboard"
 
----@return any
 function ISOnScreenKeyboard:accept() end
 
----@return any
 function ISOnScreenKeyboard:checkRightTrigger(joypadData) end
 
----@return any
 function ISOnScreenKeyboard:createChildren() end
 
----@return any
 function ISOnScreenKeyboard:focusOnEntry(joypadData) end
 
----@return any
+---@return unknown
 function ISOnScreenKeyboard:getCurrentText() end
 
----@return any
 function ISOnScreenKeyboard:hide() end
 
----@return any
 function ISOnScreenKeyboard:KeyFunction_CapsLock() end
 
----@return any
 function ISOnScreenKeyboard:KeyFunction_Char(chLower, chUpper) end
 
----@return any
 function ISOnScreenKeyboard:KeyFunction_Enter() end
 
----@return any
 function ISOnScreenKeyboard:KeyFunction_Hide() end
 
----@return any
 function ISOnScreenKeyboard:KeyFunction_KeyCode(keyCode) end
 
----@return any
 function ISOnScreenKeyboard:KeyFunction_TogglePassword() end
 
----@return any
 function ISOnScreenKeyboard:onGainJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISOnScreenKeyboard:onMouseDownOutside(x, y) end
 
----@return any
 function ISOnScreenKeyboard:prerender() end
 
----@return any
 function ISOnScreenKeyboard:setButtonNames() end
 
----@return any
 function ISOnScreenKeyboard:setMultipleLine(multipleLine) end
 
----@return any
+---@param playerNum number
 function ISOnScreenKeyboard:show(playerNum, textEntryBox, joypadData) end
 
----@return any
 function ISOnScreenKeyboard:shrinkWrap(panel) end
 
----@return any
 function ISOnScreenKeyboard:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISOnScreenKeyboard
 function ISOnScreenKeyboard:new(x, y, width, height) end
 
 ---@class OnScreenKeyboardEntry : ISPanelJoypad
----@field backgroundColor any
----@field borderColor any
----@field javaObject any
----@field [any] any
 OnScreenKeyboardEntry = ISPanelJoypad:derive("OnScreenKeyboardEntry")
+OnScreenKeyboardEntry.Type = "OnScreenKeyboardEntry"
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:focus() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:getCursorLine() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:getCursorPos() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:getInternalText() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:getText() end
 
----@return any
 function OnScreenKeyboardEntry:instantiate() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:isFocused() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:isMasked() end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:isMultipleLine() end
 
----@return any
 function OnScreenKeyboardEntry:onJoypadDirDown(joypadData) end
 
----@return any
 function OnScreenKeyboardEntry:onJoypadDirLeft(joypadData) end
 
----@return any
 function OnScreenKeyboardEntry:onJoypadDirRight(joypadData) end
 
----@return any
 function OnScreenKeyboardEntry:onJoypadDirUp(joypadData) end
 
----@return any
 function OnScreenKeyboardEntry:onJoypadDown(button, joypadData) end
 
----@return any
 function OnScreenKeyboardEntry:render() end
 
----@return any
 function OnScreenKeyboardEntry:setCursorLine(line) end
 
----@return any
 function OnScreenKeyboardEntry:setCursorPos(charIndex) end
 
----@return any
+---@param masked boolean
 function OnScreenKeyboardEntry:setMasked(masked) end
 
----@return any
+---@param max number
 function OnScreenKeyboardEntry:setMaxLines(max) end
 
----@return any
 function OnScreenKeyboardEntry:setMultipleLine(multipleLine) end
 
----@return any
+---@param str string
 function OnScreenKeyboardEntry:setText(str) end
 
----@return any
+---@return unknown
 function OnScreenKeyboardEntry:unfocus() end
 
----@return any
 function OnScreenKeyboardEntry:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return OnScreenKeyboardEntry
 function OnScreenKeyboardEntry:new(x, y, width, height) end
 
 ---@class OnScreenKeyboardPanel : ISPanelJoypad
----@field backgroundColorPressed any
----@field buttonH any
----@field buttonPadX any
----@field buttonPadY any
----@field buttonW any
----@field buttonX any
----@field buttonY any
----@field defaultButton any
----@field joypadIndex any
----@field joypadIndexY any
----@field parent any
----@field rowOfButtons any
----@field [any] any
+---@field backgroundColorPressed table
+---@field buttonH number
+---@field buttonPadX number
+---@field buttonPadY number
+---@field buttonW number
+---@field buttonX number
+---@field buttonY number
+---@field defaultButton unknown
+---@field parent ISOnScreenKeyboard
+---@field rowOfButtons table
 OnScreenKeyboardPanel = ISPanelJoypad:derive("OnScreenKeyboardPanel")
+OnScreenKeyboardPanel.Type = "OnScreenKeyboardPanel"
 
----@return any
+---@return unknown
 function OnScreenKeyboardPanel:createButton(textLower, textUpper, keyFunction, arg1, arg2) end
 
----@return any
+---@return unknown
 function OnScreenKeyboardPanel:createButton_Char(chLower, chUpper) end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@return ISButton
 function OnScreenKeyboardPanel:createButton2(x, y, w, h, text, keyFunction, arg1, arg2) end
 
----@return any
 function OnScreenKeyboardPanel:createChildren() end
 
----@return any
 function OnScreenKeyboardPanel:onButtonPressed(button) end
 
----@return any
 function OnScreenKeyboardPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function OnScreenKeyboardPanel:onJoypadDirUp(joypadData) end
 
----@return any
 function OnScreenKeyboardPanel:onJoypadDown(button, joypadData) end
 
----@return any
 function OnScreenKeyboardPanel:render() end
 
----@return any
 function OnScreenKeyboardPanel:renderButton() end
 
+---@param x number
+---@param y number
+---@param parent ISOnScreenKeyboard
 ---@return OnScreenKeyboardPanel
 function OnScreenKeyboardPanel:new(x, y, parent) end
 
 ---@class OnScreenKeyboard
----@field instance any
----@field [any] any
 OnScreenKeyboard = {}
+OnScreenKeyboard.instance = nil ---@type ISOnScreenKeyboard?
 
----@return any
+---@return string
 function OnScreenKeyboard.GetCurrentText() end
 
----@return any
 function OnScreenKeyboard.Hide() end
 
----@return any
+---@return boolean
 function OnScreenKeyboard.IsVisible() end
 
----@return any
+---@param playerNum number
+---@param textEntryBox ISTextEntryBox
+---@return ISOnScreenKeyboard
 function OnScreenKeyboard.Show(playerNum, textEntryBox, joypadData) end

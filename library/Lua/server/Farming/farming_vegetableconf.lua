@@ -9,35 +9,43 @@ farming_vegetableconf.dyingSprite = {}
 farming_vegetableconf.deadSprite = {}
 farming_vegetableconf.trampledSprite = {}
 
----@return any
+---@return number
 function farming_vegetableconf.calcDisease(diseaseLvl) end
 
----@return any
+---@return number?
 function farming_vegetableconf.calcWater(waterMin, waterLvl) end
 
----@return any
+---@return string
 function farming_vegetableconf.getObjectName(plant) end
 
----@return any
+---@return string | boolean
 function farming_vegetableconf.getObjectPhase(plant) end
 
----@return any
+---@return string?
 function farming_vegetableconf.getSpriteName(plant) end
 
----@return any
+---@return unknown
 function farming_vegetableconf.grow(planting, nextGrowing, updateNbOfGrow) end
 
----@return any
+---@return number
 function getNbOfSeed(nbOfSeed, typeOfPlant, container) end
----@return any
+
+---@return number
 function getVegetablesNumber(min, max, minAutorized, maxAutorized, plant, skill) end
----@return any
+
+---@return number
 function randomGrowthOffset() end
----@return any
+
+---@param nextTime number
+---@return number
 function calcNextGrowing(nextGrowing, nextTime) end
----@return any
+
+---@return number
 function calcNextTimeFactor() end
----@return any
+
+---@param nameOfTile string
+---@param howManyTime number
+---@return unknown
 function growNext(planting, nameOfTile, nextGrowing, howManyTime) end
----@return any
+
 function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGrow) end

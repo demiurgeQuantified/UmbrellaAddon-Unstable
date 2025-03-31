@@ -1,32 +1,26 @@
 ---@meta
 
 ---@class ISVehicleConfirmBox : ISPanelJoypad
----@field backgroundColor any
----@field close any
----@field drawJoypadFocus any
----@field texSpiffoWarning any
----@field [any] any
+---@field close ISButton
+---@field drawJoypadFocus boolean
+---@field texSpiffoWarning unknown
 ISVehicleConfirmBox = ISPanelJoypad:derive("ISVehicleConfirmBox")
+ISVehicleConfirmBox.Type = "ISVehicleConfirmBox"
 
----@return any
 function ISVehicleConfirmBox:createChildren() end
 
----@return any
 function ISVehicleConfirmBox:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISVehicleConfirmBox:onJoypadDirDown() end
 
----@return any
 function ISVehicleConfirmBox:onJoypadDirUp() end
 
----@return any
 function ISVehicleConfirmBox:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISVehicleConfirmBox:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISVehicleConfirmBox:prerender() end
 
 ---@return ISVehicleConfirmBox
@@ -34,3 +28,4 @@ function ISVehicleConfirmBox:new() end
 
 ---@class ISVehiclePartListBox : ISScrollingListBox
 ISVehiclePartListBox = ISScrollingListBox:derive("ISVehiclePartListBox")
+ISVehiclePartListBox.Type = "ISVehiclePartListBox"

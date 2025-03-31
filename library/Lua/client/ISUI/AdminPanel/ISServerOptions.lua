@@ -1,55 +1,52 @@
 ---@meta
 
 ---@class ISServerOptions : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field cancel any
----@field changeBtn any
----@field datas any
----@field filterEntry any
----@field modifying any
----@field moveWithMouse any
----@field player any
----@field saveBtn any
----@field tooltip any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field buttonBorderColor table
+---@field cancel ISButton
+---@field changeBtn ISButton
+---@field datas ISScrollingListBox
+---@field filterEntry ISTextEntryBox
+---@field modifying boolean
+---@field player unknown
+---@field saveBtn ISButton
+---@field tooltip ISToolTip?
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISServerOptions = ISPanel:derive("ISServerOptions")
+ISServerOptions.Type = "ISServerOptions"
+ISServerOptions.instance = nil ---@type ISServerOptions?
 
----@return any
 function ISServerOptions:create() end
 
----@return any
+---@return number
 function ISServerOptions:drawDatas(y, item, alt) end
 
----@return any
 function ISServerOptions:hideTooltip() end
 
----@return any
 function ISServerOptions:initialise() end
 
----@return any
 function ISServerOptions:onConfirmLeave(button) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISServerOptions:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISServerOptions:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISServerOptions:onServerOptionChange(option, newValue) end
 
----@return any
 function ISServerOptions:populateList() end
 
----@return any
 function ISServerOptions:render() end
 
----@return any
+---@param visible boolean
 function ISServerOptions:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISServerOptions
 function ISServerOptions:new(x, y, width, height, player) end

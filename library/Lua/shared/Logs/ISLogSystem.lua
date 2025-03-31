@@ -1,27 +1,24 @@
 ---@meta
 
 ---@class ISLogSystem
----@field steamID any
----@field [any] any
 ISLogSystem = {}
+ISLogSystem.steamID = nil
 
----@return any
+---@return string
 function ISLogSystem.getGenericLogText(_character, _actionType) end
 
----@return any
+---@return string?
 function ISLogSystem.getObjectPosition(_object) end
 
----@return any
 function ISLogSystem.init() end
 
----@return any
+---@param _action ISBaseTimedAction | table
 function ISLogSystem.logAction(_action) end
 
----@return any
 function ISLogSystem.OnClientCommand(_module, _command, _plObj, _packet) end
 
----@return any
+---@param _loggerName string
+---@param _logText string
 function ISLogSystem.sendLog(_character, _loggerName, _logText) end
 
----@return any
 function ISLogSystem.writeLog(_character, _packet) end

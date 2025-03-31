@@ -1,226 +1,257 @@
 ---@meta
 
 ---@class SeamEditorUI : ISPanel
----@field animate any
----@field bottomPanel any
----@field buttonOptions any
----@field comboModID any
----@field currentSeamTile any
----@field modID any
----@field optionsPanel any
----@field scene any
----@field seamTileList any
----@field tilePicker any
----@field tilePicker2 any
----@field toolBar any
----@field [any] any
+---@field animate boolean
+---@field bottomPanel ISPanel
+---@field buttonOptions ISButton
+---@field comboModID ISComboBox
+---@field currentSeamTile string?
+---@field modID string?
+---@field optionsPanel SeamEditorUI_OptionsPanel
+---@field scene SeamEditorUI_Scene
+---@field seamTileList table
+---@field tilePicker SeamEditorUI_TilePicker
+---@field tilePicker2 SeamEditorUI_TilePicker2
+---@field toolBar ISPanel
 SeamEditorUI = ISPanel:derive("SeamEditorUI")
+SeamEditorUI.Type = "SeamEditorUI"
 
----@return any
+---@param tileName string
 function SeamEditorUI:assignBelowEastTile(tileName) end
 
----@return any
+---@param tileName string
 function SeamEditorUI:assignBelowSouthTile(tileName) end
 
----@return any
+---@param tileName string
 function SeamEditorUI:assignEastTile(tileName) end
 
----@return any
+---@param tileName string
 function SeamEditorUI:assignSouthTile(tileName) end
 
----@return any
 function SeamEditorUI:createChildren() end
 
----@return any
 function SeamEditorUI:createToolbar() end
 
----@return any
+---@return number
 function SeamEditorUI:indexOf(tbl, element) end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI:onExit(button, x, y) end
 
----@return any
 function SeamEditorUI:onKeyPress(key) end
 
----@return any
 function SeamEditorUI:onOptions() end
 
----@return any
 function SeamEditorUI:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI:onSave(button, x, y) end
 
----@return any
 function SeamEditorUI:onSelectModID() end
 
----@return any
 function SeamEditorUI:prerender() end
 
----@return any
 function SeamEditorUI:render() end
 
----@return any
 function SeamEditorUI:showUI() end
 
----@return any
 function SeamEditorUI:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return SeamEditorUI
 function SeamEditorUI:new(x, y, width, height) end
 
 ---@class SeamEditorUI_OptionsPanel : ISPanel
----@field tickBox any
----@field [any] any
+---@field tickBox ISTickBox
 SeamEditorUI_OptionsPanel = ISPanel:derive("SeamEditorUI_OptionsPanel")
+SeamEditorUI_OptionsPanel.Type = "SeamEditorUI_OptionsPanel"
 
----@return any
 function SeamEditorUI_OptionsPanel:createChildren() end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI_OptionsPanel:onMouseDownOutside(x, y) end
 
----@return any
 function SeamEditorUI_OptionsPanel:onTickBox(index, selected) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return SeamEditorUI_OptionsPanel
 function SeamEditorUI_OptionsPanel:new(x, y, width, height) end
 
 ---@class SeamEditorUI_Scene : ISPanel
----@field backgroundColor any
----@field editor any
----@field selectedTileName any
----@field [any] any
+---@field editor SeamEditorUI
+---@field selectedTileName unknown?
+---@field shiftX number
+---@field shiftY number
 SeamEditorUI_Scene = ISPanel:derive("SeamEditorUI_Scene")
+SeamEditorUI_Scene.Type = "SeamEditorUI_Scene"
 
----@return any
+---@return string?
+---@return unknown?
 function SeamEditorUI_Scene:getSelectedTile() end
 
----@return any
+---@return unknown?
 function SeamEditorUI_Scene:getSelectedTileName() end
 
----@return any
+---@return number
+---@return number
+---@return number
+---@return number
+---@return number
 function SeamEditorUI_Scene:getTileBoundsEtc() end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI_Scene:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function SeamEditorUI_Scene:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI_Scene:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI_Scene:onMouseUpOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function SeamEditorUI_Scene:onRightMouseDown(x, y) end
 
----@return any
 function SeamEditorUI_Scene:prerender() end
 
----@return any
 function SeamEditorUI_Scene:prerenderEditor() end
 
----@return any
 function SeamEditorUI_Scene:render() end
 
----@return any
 function SeamEditorUI_Scene:renderDraggedTile() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@param r number
+---@param g number
+---@param b number
 function SeamEditorUI_Scene:renderFloorBounds(x, y, z, r, g, b) end
 
----@return any
+---@param tileName string
 function SeamEditorUI_Scene:renderPixelGrid(tileName) end
 
----@return any
+---@param tileName string
 function SeamEditorUI_Scene:renderSelectedTile(tileName, texture) end
 
----@return any
 function SeamEditorUI_Scene:renderTextureOutline(sx, sy, sx2, sy2, pixelSize, texture) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function SeamEditorUI_Scene:renderTileAt(texture, x, y, z) end
 
----@return any
 function SeamEditorUI_Scene:renderTileBelowEast() end
 
----@return any
 function SeamEditorUI_Scene:renderTileBelowSouth() end
 
----@return any
 function SeamEditorUI_Scene:renderTileEast() end
 
----@return any
 function SeamEditorUI_Scene:renderTileName() end
 
----@return any
 function SeamEditorUI_Scene:renderTileSouth() end
 
----@return any
+---@param x number
+---@param y number
+---@return number
+---@return number
 function SeamEditorUI_Scene:snapToTilePixel(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return number
+---@return number
 function SeamEditorUI_Scene:uiToPixel(x, y) end
 
----@return any
+---@param screenX number
+---@param screenY number
+---@param z number
+---@return number
+---@return number
 function SeamEditorUI_Scene:uiToWorld(screenX, screenY, z) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param editor SeamEditorUI
 ---@return SeamEditorUI_Scene
 function SeamEditorUI_Scene:new(x, y, width, height, editor) end
 
 ---@class SeamEditorUI_TilePicker : ISPanel
----@field comboTileset any
----@field editor any
----@field listBox any
----@field [any] any
+---@field comboTileset ISComboBox
+---@field editor SeamEditorUI
+---@field listBox SeamEditorUI_TileList
 SeamEditorUI_TilePicker = ISPanel:derive("SeamEditorUI_TilePicker")
+SeamEditorUI_TilePicker.Type = "SeamEditorUI_TilePicker"
 
----@return any
 function SeamEditorUI_TilePicker:createChildren() end
 
----@return any
+---@return boolean
 function SeamEditorUI_TilePicker:onMouseWheel(del) end
 
----@return any
 function SeamEditorUI_TilePicker:onSelectTileset() end
 
----@return any
+---@param tileName string
+---@return unknown?
+---@return number?
 function SeamEditorUI_TilePicker:parseTileName(tileName) end
 
----@return any
+---@param tileName string
 function SeamEditorUI_TilePicker:selectTileByName(tileName) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param editor SeamEditorUI
 ---@return SeamEditorUI_TilePicker
 function SeamEditorUI_TilePicker:new(x, y, width, height, editor) end
 
 ---@class SeamEditorUI_TilePicker2 : ISPanel
----@field comboTileset any
----@field editor any
----@field listBox any
----@field [any] any
+---@field comboTileset ISComboBox
+---@field editor SeamEditorUI
+---@field listBox SeamEditorUI_TileList2
 SeamEditorUI_TilePicker2 = ISPanel:derive("SeamEditorUI_TilePicker2")
+SeamEditorUI_TilePicker2.Type = "SeamEditorUI_TilePicker2"
 
----@return any
 function SeamEditorUI_TilePicker2:createChildren() end
 
----@return any
+---@return boolean
 function SeamEditorUI_TilePicker2:onMouseWheel(del) end
 
----@return any
 function SeamEditorUI_TilePicker2:onSelectTileset() end
 
----@return any
+---@param tileName string
+---@return unknown?
+---@return number?
 function SeamEditorUI_TilePicker2:parseTileName(tileName) end
 
----@return any
+---@param tileName string
 function SeamEditorUI_TilePicker2:selectTileByName(tileName) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param editor SeamEditorUI
 ---@return SeamEditorUI_TilePicker2
 function SeamEditorUI_TilePicker2:new(x, y, width, height, editor) end
 
----@return any
 function SeamEditorUI_InitUI() end

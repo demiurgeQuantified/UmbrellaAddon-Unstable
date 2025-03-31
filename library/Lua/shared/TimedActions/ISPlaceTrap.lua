@@ -1,32 +1,28 @@
 ---@meta
 
 ---@class ISPlaceTrap : ISBaseTimedAction
----@field maxTime any
----@field square any
----@field weapon any
----@field [any] any
+---@field square unknown
+---@field weapon unknown
 ISPlaceTrap = ISBaseTimedAction:derive("ISPlaceTrap")
+ISPlaceTrap.Type = "ISPlaceTrap"
 
----@return any
+---@return boolean
 function ISPlaceTrap:complete() end
 
----@return any
+---@return number
 function ISPlaceTrap:getDuration() end
 
----@return any
+---@return unknown?
 function ISPlaceTrap:isValid() end
 
----@return any
 function ISPlaceTrap:perform() end
 
----@return any
 function ISPlaceTrap:start() end
 
----@return any
 function ISPlaceTrap:stop() end
 
----@return any
 function ISPlaceTrap:update() end
 
+---@param character unknown?
 ---@return ISPlaceTrap
 function ISPlaceTrap:new(character, weapon) end

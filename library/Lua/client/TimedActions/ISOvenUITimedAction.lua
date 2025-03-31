@@ -1,26 +1,23 @@
 ---@meta
 
 ---@class ISOvenUITimedAction : ISBaseTimedAction
----@field maxTime any
----@field mcwave any
----@field stove any
----@field [any] any
+---@field mcwave unknown?
+---@field stove unknown?
 ISOvenUITimedAction = ISBaseTimedAction:derive("ISOvenUITimedAction")
+ISOvenUITimedAction.Type = "ISOvenUITimedAction"
 
----@return any
+---@return boolean
 function ISOvenUITimedAction:isValid() end
 
----@return any
 function ISOvenUITimedAction:perform() end
 
----@return any
 function ISOvenUITimedAction:start() end
 
----@return any
 function ISOvenUITimedAction:stop() end
 
----@return any
 function ISOvenUITimedAction:update() end
 
+---@param stove unknown?
+---@param mcwave unknown?
 ---@return ISOvenUITimedAction
 function ISOvenUITimedAction:new(character, stove, mcwave) end

@@ -1,30 +1,25 @@
 ---@meta
 
 ---@class ISToggleClothingWasher : ISBaseTimedAction
----@field maxTime any
----@field object any
----@field [any] any
+---@field object unknown
 ISToggleClothingWasher = ISBaseTimedAction:derive("ISToggleClothingWasher")
+ISToggleClothingWasher.Type = "ISToggleClothingWasher"
 
----@return any
+---@return boolean
 function ISToggleClothingWasher:complete() end
 
----@return any
+---@return number
 function ISToggleClothingWasher:getDuration() end
 
----@return any
+---@return boolean
 function ISToggleClothingWasher:isValid() end
 
----@return any
 function ISToggleClothingWasher:perform() end
 
----@return any
 function ISToggleClothingWasher:start() end
 
----@return any
 function ISToggleClothingWasher:stop() end
 
----@return any
 function ISToggleClothingWasher:update() end
 
 ---@return ISToggleClothingWasher

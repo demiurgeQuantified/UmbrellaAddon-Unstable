@@ -1,36 +1,33 @@
 ---@meta
 
 ---@class ISPutOutFire : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field squares any
----@field usesPerSquare any
----@field [any] any
+---@field item unknown?
+---@field squares unknown
+---@field usesPerSquare number
 ISPutOutFire = ISBaseTimedAction:derive("ISPutOutFire")
+ISPutOutFire.Type = "ISPutOutFire"
 
----@return any
+---@return boolean
 function ISPutOutFire:complete() end
 
----@return any
+---@return number
 function ISPutOutFire:getDuration() end
 
----@return any
+---@return boolean?
 function ISPutOutFire:isValid() end
 
----@return any
 function ISPutOutFire:perform() end
 
----@return any
 function ISPutOutFire:start() end
 
----@return any
 function ISPutOutFire:stop() end
 
----@return any
 function ISPutOutFire:update() end
 
----@return any
+---@return boolean
 function ISPutOutFire:useItem() end
 
+---@param item unknown?
+---@param usesPerSquare number
 ---@return ISPutOutFire
 function ISPutOutFire:new(character, squares, item, usesPerSquare) end

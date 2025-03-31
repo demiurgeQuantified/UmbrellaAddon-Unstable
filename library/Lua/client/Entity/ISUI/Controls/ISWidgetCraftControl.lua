@@ -1,54 +1,47 @@
 ---@meta
 
 ---@class ISWidgetCraftControl : ISPanel
----@field autoFillContents any
----@field background any
----@field buttonStart any
----@field callbackTarget any
----@field component any
----@field entity any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field originalButtonHeight any
----@field originalButtonWidth any
----@field player any
----@field styleButton any
----@field [any] any
+---@field autoFillContents boolean
+---@field buttonStart unknown?
+---@field callbackTarget unknown
+---@field component unknown
+---@field entity unknown
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field margin number
+---@field originalButtonHeight unknown
+---@field originalButtonWidth unknown
+---@field player unknown
+---@field styleButton unknown
 ISWidgetCraftControl = ISPanel:derive("ISWidgetCraftControl")
+ISWidgetCraftControl.Type = "ISWidgetCraftControl"
 
----@return any
 function ISWidgetCraftControl:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetCraftControl:createChildren() end
 
----@return any
 function ISWidgetCraftControl:initialise() end
 
----@return any
 function ISWidgetCraftControl:onButtonClick(_button) end
 
----@return any
+---@return boolean
 function ISWidgetCraftControl:onGetIsStartEnabled() end
 
----@return any
 function ISWidgetCraftControl:onResize() end
 
----@return any
+---@return boolean
 function ISWidgetCraftControl:onStart() end
 
----@return any
 function ISWidgetCraftControl:prerender() end
 
----@return any
 function ISWidgetCraftControl:render() end
 
----@return any
 function ISWidgetCraftControl:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetCraftControl
 function ISWidgetCraftControl:new(x, y, width, height, player, entity, component, callbackTarget, _styleButton) end

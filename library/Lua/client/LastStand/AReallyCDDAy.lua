@@ -1,20 +1,16 @@
 ---@meta
 
 ---@class CDDA
----@field x any
----@field y any
----@field z any
----@field [any] any
 CDDA = {}
+CDDA.x = (36 * 300) + 21
+CDDA.y = (31 * 300) + 111
+CDDA.z = 0
 CDDA.id = "AReallyCDDAy"
 CDDA.completionText = "Survive a night to unlock next challenge."
 CDDA.image = "media/lua/client/LastStand/AReallyCDDAy.png"
 CDDA.video = "CDDA.bik"
 CDDA.gameMode = "A Really CD DA"
 CDDA.world = "Muldraugh, KY"
-CDDA.x = (36 * 300) + 21
-CDDA.y = (31 * 300) + 111
-CDDA.z = 0
 CDDA.spawns = {
 	{
 		x = 10788,
@@ -84,20 +80,15 @@ CDDA.spawns = {
 }
 CDDA.hourOfDay = 7
 
----@return any
 function CDDA.Add() end
 
----@return any
+---@param playerNum number
 function CDDA.AddPlayer(playerNum, playerObj) end
 
----@return any
 function CDDA.OnGameStart() end
 
----@return any
 function CDDA.OnInitWorld() end
 
----@return any
 function CDDA.RemovePlayer(p) end
 
----@return any
 function CDDA.Render() end

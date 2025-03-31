@@ -1,28 +1,22 @@
 ---@meta
 
 ---@class ISBackButtonWheel : ISRadialMenu
----@field playerNum any
----@field showPausedMessage any
----@field [any] any
+---@field showPausedMessage unknown
 ISBackButtonWheel = ISRadialMenu:derive("ISBackButtonWheel")
+ISBackButtonWheel.Type = "ISBackButtonWheel"
 
----@return any
 function ISBackButtonWheel:addCommands() end
 
----@return any
 function ISBackButtonWheel:center() end
 
----@return any
 function ISBackButtonWheel:onCommand(command) end
 
----@return any
 function ISBackButtonWheel:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISBackButtonWheel:onJoypadDown(button, joypadData) end
 
----@return any
 function ISBackButtonWheel:onLoseJoypadFocus(joypadData) end
 
+---@param playerNum number
 ---@return ISBackButtonWheel
 function ISBackButtonWheel:new(playerNum) end

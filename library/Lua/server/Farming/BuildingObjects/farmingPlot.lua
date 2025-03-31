@@ -1,30 +1,35 @@
 ---@meta
 
 ---@class farmingPlot : ISBuildingObject
----@field character any
----@field handItem any
----@field noNeedHammer any
----@field skipBuildAction any
----@field [any] any
+---@field character unknown?
+---@field handItem unknown
+---@field noNeedHammer boolean
+---@field skipBuildAction boolean
 farmingPlot = ISBuildingObject:derive("farmingPlot")
+farmingPlot.Type = "farmingPlot"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function farmingPlot:create(x, y, z, north, sprite) end
 
----@return any
+---@return string?
 function farmingPlot:getAPrompt() end
 
----@return any
+---@return unknown?
 function farmingPlot:getLBPrompt() end
 
----@return any
+---@return unknown?
 function farmingPlot:getRBPrompt() end
 
----@return any
+---@return boolean
 function farmingPlot:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function farmingPlot:render(x, y, z, square) end
 
+---@param character unknown?
 ---@return farmingPlot
 function farmingPlot:new(handItem, character) end

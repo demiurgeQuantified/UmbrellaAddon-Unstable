@@ -1,58 +1,60 @@
 ---@meta
 
 ---@class BrushToolTilePickerList : ISPanel
----@field character any
----@field imageName any
----@field posToTileNameTable any
----@field [any] any
+---@field character unknown
+---@field imageName unknown?
+---@field posToTileNameTable table
 BrushToolTilePickerList = ISPanel:derive("BrushToolTilePickerList")
+BrushToolTilePickerList.Type = "BrushToolTilePickerList"
 
----@return any
+---@param x number
+---@param y number
 function BrushToolTilePickerList:onMouseDown(x, y) end
 
----@return any
+---@return boolean
 function BrushToolTilePickerList:onMouseWheel(del) end
 
----@return any
 function BrushToolTilePickerList:render() end
 
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 ---@return BrushToolTilePickerList
 function BrushToolTilePickerList:new(x, y, w, h, character) end
 
 ---@class BrushToolChooseTileUI : ISCollapsableWindow
----@field character any
----@field imageList any
----@field instance any
----@field searchEntryBox any
----@field tilesList any
----@field title any
----@field [any] any
+---@field character unknown
+---@field imageList ISScrollingListBox
+---@field searchEntryBox ISTextEntryBox
+---@field tilesList BrushToolTilePickerList
+---@field title string
 BrushToolChooseTileUI = ISCollapsableWindow:derive("BrushToolChooseTileUI")
-BrushToolChooseTileUI.instance = nil
+BrushToolChooseTileUI.Type = "BrushToolChooseTileUI"
+BrushToolChooseTileUI.instance = nil ---@type BrushToolChooseTileUI?
 
----@return any
 function BrushToolChooseTileUI.OnKeyPressed(key) end
 
----@return any
 function BrushToolChooseTileUI.onSelectImage(_, item) end
 
----@return any
+---@param x number
+---@param y number
 function BrushToolChooseTileUI.openPanel(x, y, playerObj) end
 
----@return any
 function BrushToolChooseTileUI:close() end
 
----@return any
 function BrushToolChooseTileUI:createChildren() end
 
----@return any
+---@return number
 function BrushToolChooseTileUI:doDrawImageListItem(y, item, alt) end
 
----@return any
 function BrushToolChooseTileUI:onTextChange() end
 
----@return any
 function BrushToolChooseTileUI:populateList() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return BrushToolChooseTileUI
 function BrushToolChooseTileUI:new(x, y, width, height, character) end

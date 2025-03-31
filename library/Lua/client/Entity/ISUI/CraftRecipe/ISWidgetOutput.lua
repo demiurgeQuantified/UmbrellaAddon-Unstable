@@ -1,72 +1,65 @@
 ---@meta
 
 ---@class ISWidgetOutput : ISPanel
----@field amountWidth any
----@field amountWidth2 any
----@field arrow any
----@field autoFillContents any
----@field background any
----@field colBad any
----@field colPartial any
----@field createScript any
----@field doToolTip any
----@field editedLabels any
----@field iconBorderSizeX any
----@field iconBorderSizeY any
----@field iconCreate any
----@field iconMargin any
----@field iconSize any
----@field interactiveMode any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field labelIconSize any
----@field logic any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field normalBorderColor any
----@field outputScript any
----@field player any
----@field primary any
----@field secondary any
----@field textColor any
----@field textureConsumed any
----@field textureCreate any
----@field textureReturned any
----@field textureTool any
----@field [any] any
+---@field amountWidth unknown
+---@field amountWidth2 unknown
+---@field arrow unknown?
+---@field autoFillContents boolean
+---@field colBad table
+---@field colPartial table
+---@field createScript unknown
+---@field doToolTip boolean
+---@field editedLabels boolean
+---@field iconBorderSizeX number
+---@field iconBorderSizeY number
+---@field iconCreate unknown?
+---@field iconMargin number
+---@field iconSize number
+---@field interactiveMode boolean
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field labelIconSize number
+---@field logic unknown
+---@field margin number
+---@field normalBorderColor table
+---@field outputScript unknown
+---@field player unknown
+---@field primary table
+---@field secondary table
+---@field textColor table
+---@field textureConsumed unknown
+---@field textureCreate unknown
+---@field textureReturned unknown
+---@field textureTool unknown
 ISWidgetOutput = ISPanel:derive("ISWidgetOutput")
+ISWidgetOutput.Type = "ISWidgetOutput"
 
----@return any
 function ISWidgetOutput:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetOutput:createChildren() end
 
----@return any
+---@return table
 function ISWidgetOutput:createScriptValues(_script) end
 
----@return any
 function ISWidgetOutput:initialise() end
 
----@return any
 function ISWidgetOutput:onResize() end
 
----@return any
 function ISWidgetOutput:prerender() end
 
----@return any
 function ISWidgetOutput:render() end
 
----@return any
 function ISWidgetOutput:update() end
 
----@return any
+---@param _table table
 function ISWidgetOutput:updateScriptValues(_table) end
 
----@return any
 function ISWidgetOutput:updateValues() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetOutput
 function ISWidgetOutput:new(x, y, width, height, player, logic, outputScript) end

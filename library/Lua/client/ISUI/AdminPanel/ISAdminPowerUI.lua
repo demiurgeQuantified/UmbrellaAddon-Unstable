@@ -1,44 +1,36 @@
 ---@meta
 
 ---@class ISAdminPowerUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field moveWithMouse any
----@field ok any
----@field player any
----@field richText any
----@field setFunction any
----@field tickBox any
----@field width any
----@field [any] any
+---@field ok ISButton
+---@field player unknown
+---@field richText ISRichTextLayout
+---@field setFunction table
+---@field tickBox ISTickBox
 ISAdminPowerUI = ISPanel:derive("ISAdminPowerUI")
+ISAdminPowerUI.Type = "ISAdminPowerUI"
 ISAdminPowerUI.messages = {}
 ISAdminPowerUI.cheatTooltips = {}
+ISAdminPowerUI.instance = nil ---@type ISAdminPowerUI?
 
----@return any
 function ISAdminPowerUI.onGameStart() end
 
----@return any
 function ISAdminPowerUI:addAdminPowerOptions() end
 
----@return any
 function ISAdminPowerUI:addOption(text, selected, setFunction) end
 
----@return any
 function ISAdminPowerUI:initialise() end
 
----@return any
 function ISAdminPowerUI:onClick(button) end
 
----@return any
 function ISAdminPowerUI:onTicked(index, selected) end
 
----@return any
 function ISAdminPowerUI:prerender() end
 
----@return any
 function ISAdminPowerUI:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAdminPowerUI
 function ISAdminPowerUI:new(x, y, width, height, player) end

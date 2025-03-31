@@ -1,39 +1,33 @@
 ---@meta
 
 ---@class ISGarlicCataplasm : ISBaseTimedAction
----@field bandagedPlayerX any
----@field bandagedPlayerY any
----@field bodyPart any
----@field character any
----@field doctorLevel any
----@field item any
----@field maxTime any
----@field otherPlayer any
----@field [any] any
+---@field bandagedPlayerX unknown
+---@field bandagedPlayerY unknown
+---@field bodyPart unknown
+---@field doctorLevel number
+---@field item unknown
+---@field otherPlayer unknown
 ISGarlicCataplasm = ISBaseTimedAction:derive("ISGarlicCataplasm")
+ISGarlicCataplasm.Type = "ISGarlicCataplasm"
 
----@return any
+---@return boolean
 function ISGarlicCataplasm:complete() end
 
----@return any
+---@return number
 function ISGarlicCataplasm:getDuration() end
 
----@return any
+---@return boolean?
 function ISGarlicCataplasm:isValid() end
 
----@return any
 function ISGarlicCataplasm:perform() end
 
----@return any
 function ISGarlicCataplasm:start() end
 
----@return any
 function ISGarlicCataplasm:stop() end
 
----@return any
 function ISGarlicCataplasm:update() end
 
----@return any
+---@return boolean
 function ISGarlicCataplasm:waitToStart() end
 
 ---@return ISGarlicCataplasm

@@ -1,35 +1,28 @@
 ---@meta
 
 ---@class ISPickAxeGroundCoverItem : ISBaseTimedAction
----@field caloriesModifier any
----@field cornerCounter any
----@field item any
----@field maxTime any
----@field objectType any
----@field pickAxe any
----@field spriteFrame any
----@field [any] any
+---@field cornerCounter number
+---@field item unknown
+---@field objectType unknown?
+---@field pickAxe unknown
+---@field spriteFrame number
 ISPickAxeGroundCoverItem = ISBaseTimedAction:derive("ISPickAxeGroundCoverItem")
+ISPickAxeGroundCoverItem.Type = "ISPickAxeGroundCoverItem"
 
----@return any
 function ISPickAxeGroundCoverItem:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISPickAxeGroundCoverItem:isValid() end
 
----@return any
 function ISPickAxeGroundCoverItem:perform() end
 
----@return any
 function ISPickAxeGroundCoverItem:start() end
 
----@return any
 function ISPickAxeGroundCoverItem:stop() end
 
----@return any
 function ISPickAxeGroundCoverItem:update() end
 
----@return any
+---@return unknown
 function ISPickAxeGroundCoverItem:waitToStart() end
 
 ---@return ISPickAxeGroundCoverItem

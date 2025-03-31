@@ -1,61 +1,61 @@
 ---@meta
 
 ---@class ISGameSoundVolumeControl : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field dragging any
----@field fade any
----@field isSlider any
----@field joypadFocused any
----@field target any
----@field targetFunc any
----@field tooltip any
----@field tooltipUI any
----@field volume any
----@field [any] any
+---@field dragging boolean
+---@field fade unknown
+---@field isSlider boolean
+---@field joypadFocused unknown
+---@field targetFunc unknown
+---@field tooltip unknown?
+---@field tooltipUI ISToolTip
+---@field volume number
 ISGameSoundVolumeControl = ISPanel:derive("ISGameSoundVolumeControl")
+ISGameSoundVolumeControl.Type = "ISGameSoundVolumeControl"
+ISGameSoundVolumeControl.capture = nil ---@type ISGameSoundVolumeControl?
 
----@return any
+---@return unknown
 function ISGameSoundVolumeControl:getTooltip() end
 
----@return any
+---@return number
 function ISGameSoundVolumeControl:getVolume() end
 
----@return any
+---@return number
 function ISGameSoundVolumeControl:getVolumeAtX(x) end
 
----@return any
 function ISGameSoundVolumeControl:instantiate() end
 
----@return any
 function ISGameSoundVolumeControl:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISGameSoundVolumeControl:onJoypadDirRight(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISGameSoundVolumeControl:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISGameSoundVolumeControl:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISGameSoundVolumeControl:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISGameSoundVolumeControl:onMouseUpOutside(x, y) end
 
----@return any
 function ISGameSoundVolumeControl:prerender() end
 
----@return any
 function ISGameSoundVolumeControl:render() end
 
----@return any
 function ISGameSoundVolumeControl:setJoypadFocused(focused) end
 
----@return any
+---@param volume number
 function ISGameSoundVolumeControl:setVolume(volume) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISGameSoundVolumeControl
 function ISGameSoundVolumeControl:new(x, y, width, height, target, targetFunc) end

@@ -1,36 +1,31 @@
 ---@meta
 
 ---@class ISAttachTrailerToVehicle : ISBaseTimedAction
----@field attachmentA any
----@field attachmentB any
----@field hitchPos any
----@field maxTime any
----@field sound any
----@field vehicleA any
----@field vehicleB any
----@field [any] any
+---@field attachmentA unknown
+---@field attachmentB unknown
+---@field hitchPos unknown
+---@field sound unknown
+---@field vehicleA unknown
+---@field vehicleB unknown?
 ISAttachTrailerToVehicle = ISBaseTimedAction:derive("ISAttachTrailerToVehicle")
+ISAttachTrailerToVehicle.Type = "ISAttachTrailerToVehicle"
 
----@return any
+---@return boolean
 function ISAttachTrailerToVehicle:isValid() end
 
----@return any
 function ISAttachTrailerToVehicle:perform() end
 
----@return any
 function ISAttachTrailerToVehicle:start() end
 
----@return any
 function ISAttachTrailerToVehicle:stop() end
 
----@return any
 function ISAttachTrailerToVehicle:stopSound() end
 
----@return any
 function ISAttachTrailerToVehicle:update() end
 
----@return any
+---@return unknown
 function ISAttachTrailerToVehicle:waitToStart() end
 
+---@param vehicleB unknown?
 ---@return ISAttachTrailerToVehicle
 function ISAttachTrailerToVehicle:new(character, vehicleA, vehicleB, attachmentA, attachmentB) end

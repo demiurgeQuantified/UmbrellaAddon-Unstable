@@ -1,27 +1,22 @@
 ---@meta
 
 ---@class StatisticChartDiskOperations : StatisticChart
----@field instance any
----@field [any] any
 StatisticChartDiskOperations = StatisticChart:derive("StatisticChartDiskOperations")
+StatisticChartDiskOperations.Type = "StatisticChartDiskOperations"
 StatisticChartDiskOperations.instance = nil
 StatisticChartDiskOperations.shiftDown = 0
 StatisticChartDiskOperations.eventsAdded = false
 
----@return any
+---@return unknown?
 function StatisticChartDiskOperations.doInstance() end
 
----@return any
+---@return unknown?
 function StatisticChartDiskOperations.OnOpenPanel() end
 
----@return any
 function StatisticChartDiskOperations.OnServerStatisticReceived() end
 
----@return any
 function StatisticChartDiskOperations:createChildren() end
 
----@return any
 function StatisticChartDiskOperations:initVariables() end
 
----@return any
 function StatisticChartDiskOperations:updateValues() end

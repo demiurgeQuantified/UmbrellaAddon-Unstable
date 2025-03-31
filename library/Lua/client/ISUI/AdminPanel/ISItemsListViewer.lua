@@ -1,43 +1,35 @@
 ---@meta
 
 ---@class ISItemsListViewer : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field items any
----@field module any
----@field moveWithMouse any
----@field ok any
----@field panel any
----@field playerSelect any
----@field width any
----@field [any] any
+---@field items unknown
+---@field module table
+---@field ok ISButton
+---@field panel ISTabPanel
+---@field playerSelect ISComboBox
 ISItemsListViewer = ISPanel:derive("ISItemsListViewer")
+ISItemsListViewer.Type = "ISItemsListViewer"
 ISItemsListViewer.messages = {}
+ISItemsListViewer.instance = nil ---@type ISItemsListViewer?
 
----@return any
 function ISItemsListViewer.OnOpenPanel() end
 
----@return any
 function ISItemsListViewer:close() end
 
----@return any
 function ISItemsListViewer:initialise() end
 
----@return any
 function ISItemsListViewer:initList() end
 
----@return any
 function ISItemsListViewer:onClick(button) end
 
----@return any
 function ISItemsListViewer:onSelectPlayer() end
 
----@return any
 function ISItemsListViewer:prerender() end
 
----@return any
 function ISItemsListViewer:setKeyboardFocus() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISItemsListViewer
 function ISItemsListViewer:new(x, y, width, height) end

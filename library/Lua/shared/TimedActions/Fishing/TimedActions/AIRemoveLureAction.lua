@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class AIRemoveLureAction : ISBaseTimedAction
----@field maxTime any
----@field rod any
----@field sound any
----@field [any] any
+---@field rod unknown
+---@field sound unknown
 AIRemoveLureAction = ISBaseTimedAction:derive("AIRemoveLureAction")
+AIRemoveLureAction.Type = "AIRemoveLureAction"
 
----@return any
+---@return boolean
 function AIRemoveLureAction:complete() end
 
----@return any
+---@return number
 function AIRemoveLureAction:getDuration() end
 
----@return any
+---@return unknown?
 function AIRemoveLureAction:isValid() end
 
----@return any
 function AIRemoveLureAction:perform() end
 
----@return any
 function AIRemoveLureAction:start() end
 
----@return any
 function AIRemoveLureAction:stop() end
 
----@return any
 function AIRemoveLureAction:update() end
 
 ---@return AIRemoveLureAction

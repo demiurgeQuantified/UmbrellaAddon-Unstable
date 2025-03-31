@@ -1,33 +1,26 @@
 ---@meta
 
 ---@class ISHurricaneLanternExtinguish : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field started any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field item unknown
+---@field started boolean
 ISHurricaneLanternExtinguish = ISBaseTimedAction:derive("ISHurricaneLanternExtinguish")
+ISHurricaneLanternExtinguish.Type = "ISHurricaneLanternExtinguish"
 
----@return any
+---@return boolean
 function ISHurricaneLanternExtinguish:complete() end
 
----@return any
+---@return number
 function ISHurricaneLanternExtinguish:getDuration() end
 
----@return any
+---@return boolean
 function ISHurricaneLanternExtinguish:isValid() end
 
----@return any
 function ISHurricaneLanternExtinguish:perform() end
 
----@return any
 function ISHurricaneLanternExtinguish:start() end
 
----@return any
 function ISHurricaneLanternExtinguish:stop() end
 
----@return any
 function ISHurricaneLanternExtinguish:update() end
 
 ---@return ISHurricaneLanternExtinguish

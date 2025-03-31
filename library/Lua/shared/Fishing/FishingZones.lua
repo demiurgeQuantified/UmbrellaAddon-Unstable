@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class Fishing
-Fishing = Fishing or {}
+Fishing = {}
 Fishing.RiverZones = {
 	{
 		x1 = 0,
@@ -79,8 +79,12 @@ Fishing.NoFishZones = {
 	},
 }
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function Fishing.isNoFishZone(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function Fishing.isRiver(x, y) end

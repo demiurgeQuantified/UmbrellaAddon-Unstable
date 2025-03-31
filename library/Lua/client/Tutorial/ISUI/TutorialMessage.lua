@@ -1,58 +1,49 @@
 ---@meta
 
 ---@class TutorialMessage : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field clicktoSkip any
----@field clickToSkip any
----@field height any
----@field instance any
----@field message any
----@field richtext any
----@field test any
----@field timer any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field clicktoSkip boolean
+---@field clickToSkip unknown
+---@field message string?
+---@field richtext ISRichTextPanel
+---@field test unknown?
+---@field timer number
 TutorialMessage = ISPanelJoypad:derive("TutorialMessage")
+TutorialMessage.Type = "TutorialMessage"
+TutorialMessage.instance = nil ---@type TutorialMessage?
+TutorialMessage.spiffo = nil
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param target TutorialStep
+---@return TutorialMessage?
 function TutorialMessage.getInstance(x, y, w, h, message, clickToSkip, target, test) end
 
----@return any
 function TutorialMessage.onKeyPressed(key) end
 
----@return any
 function TutorialMessage:createChildren() end
 
----@return any
 function TutorialMessage:initialise() end
 
----@return any
 function TutorialMessage:onGainJoypadFocus(joypadData) end
 
----@return any
 function TutorialMessage:onJoypadDown(button) end
 
----@return any
+---@return boolean
 function TutorialMessage:onMouseWheel(del) end
 
----@return any
 function TutorialMessage:render() end
 
----@return any
 function TutorialMessage:setInfo(item) end
 
----@return any
 function TutorialMessage:update() end
 
----@return any
 function TutorialMessage:updateSize() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return TutorialMessage
 function TutorialMessage:new(x, y, width, height, clickToSkip, message) end

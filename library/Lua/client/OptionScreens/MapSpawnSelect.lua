@@ -1,223 +1,209 @@
 ---@meta
 
 ---@class MapSpawnSelect : ISPanelJoypad
----@field addY any
----@field backButton any
----@field checkExist any
----@field checkExistsName any
----@field ISButtonA any
----@field joyfocus any
----@field listbox any
----@field mapPanel any
----@field nextButton any
----@field notSortedList any
----@field previousScreen any
----@field randomButton any
----@field richText any
----@field seedLabel any
----@field seedPanel any
----@field seedTextBox any
----@field selectedMapIndex any
----@field selectedRegion any
----@field sortedList any
----@field startY any
----@field textEntry any
----@field textEntryLabel any
----@field [any] any
+---@field addY number
+---@field backButton ISButton
+---@field checkExist unknown
+---@field checkExistsName string
+---@field listbox unknown
+---@field mapPanel MapSpawnSelectImage
+---@field nextButton ISButton
+---@field notSortedList table
+---@field previousScreen string?
+---@field randomButton ISButton
+---@field richText unknown
+---@field seedLabel ISLabel
+---@field seedPanel ISPanel
+---@field seedTextBox ISTextEntryBox
+---@field selectedMapIndex unknown
+---@field selectedRegion table?
+---@field sortedList table
+---@field startY number
+---@field textEntry ISTextEntryBox
+---@field textEntryLabel ISLabel
 MapSpawnSelect = ISPanelJoypad:derive("MapSpawnSelect")
+MapSpawnSelect.Type = "MapSpawnSelect"
+MapSpawnSelect.instance = nil ---@type MapSpawnSelect?
 
----@return any
 function MapSpawnSelect:checkSeed() end
 
----@return any
 function MapSpawnSelect:checkSorted(item) end
 
----@return any
 function MapSpawnSelect:clickBack() end
 
----@return any
 function MapSpawnSelect:clickNext() end
 
----@return any
 function MapSpawnSelect:create() end
 
----@return any
 function MapSpawnSelect:discardGenParams() end
 
----@return any
+---@return number
 function MapSpawnSelect:doDrawItem(y, item, alt) end
 
----@return any
 function MapSpawnSelect:fillList() end
 
----@return any
 function MapSpawnSelect:generateNewSeed() end
 
----@return any
+---@return table?
 function MapSpawnSelect:getChallengeSpawnRegion() end
 
----@return any
+---@return table?
 function MapSpawnSelect:getFixedSpawnRegion() end
 
----@return any
+---@return table?
 function MapSpawnSelect:getSafehouseSpawnRegion() end
 
----@return any
+---@return table?
 function MapSpawnSelect:getSpawnRegions() end
 
----@return any
+---@return (table | boolean)?
 function MapSpawnSelect:hasChoices() end
 
----@return any
 function MapSpawnSelect:hideOrShowSaveName() end
 
----@return any
 function MapSpawnSelect:initialise() end
 
----@return any
 function MapSpawnSelect:onDblClick() end
 
----@return any
 function MapSpawnSelect:onGainJoypadFocus(joypadData) end
 
----@return any
 function MapSpawnSelect:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function MapSpawnSelect:onJoypadBeforeDeactivate_child(joypadData) end
 
----@return any
 function MapSpawnSelect:onJoypadDirDown_textEntry(joypadData) end
 
----@return any
 function MapSpawnSelect:onJoypadDown_textEntry(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function MapSpawnSelect:onOptionMouseDown(button, x, y) end
 
----@return any
 function MapSpawnSelect:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
 function MapSpawnSelect:prerender() end
 
----@return any
 function MapSpawnSelect:recalculateMapSize() end
 
----@return any
 function MapSpawnSelect:render() end
 
----@return any
 function MapSpawnSelect:saveGenParams() end
 
----@return any
+---@return table?
 function MapSpawnSelect:useDefaultSpawnRegion() end
 
----@return any
+---@param x number
+---@param y number
 function MapSpawnSelect:zoomMap(x, y, scale) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return MapSpawnSelect
 function MapSpawnSelect:new(x, y, width, height) end
 
 ---@class MapSpawnSelectImage : ISUIElement
----@field dragging any
----@field dragMoved any
----@field dragStartCX any
----@field dragStartCY any
----@field dragStartWorldX any
----@field dragStartWorldY any
----@field dragStartX any
----@field dragStartY any
----@field dragStartZoomF any
----@field hasResetView any
----@field javaObject any
----@field mapAPI any
----@field pyramidFileName any
----@field shownInitialLocation any
----@field [any] any
+---@field dragging boolean
+---@field dragMoved boolean
+---@field dragStartCX unknown
+---@field dragStartCY unknown
+---@field dragStartWorldX unknown
+---@field dragStartWorldY unknown
+---@field dragStartX number
+---@field dragStartY number
+---@field dragStartZoomF unknown
+---@field hasResetView boolean
+---@field mapAPI unknown
+---@field pyramidFileName string?
+---@field shownInitialLocation boolean
 MapSpawnSelectImage = ISUIElement:derive("MapSpawnSelectImage")
+MapSpawnSelectImage.Type = "MapSpawnSelectImage"
 
----@return any
 function MapSpawnSelectImage:clear() end
 
----@return any
+---@return boolean
 function MapSpawnSelectImage:hasSomethingToDisplay() end
 
----@return any
 function MapSpawnSelectImage:initMapData(directory) end
 
----@return any
 function MapSpawnSelectImage:instantiate() end
 
----@return any
+---@param x number
+---@param y number
 function MapSpawnSelectImage:onMouseDoubleClick(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MapSpawnSelectImage:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean?
 function MapSpawnSelectImage:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean?
 function MapSpawnSelectImage:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MapSpawnSelectImage:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MapSpawnSelectImage:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function MapSpawnSelectImage:onMouseWheel(del) end
 
----@return any
 function MapSpawnSelectImage:prerender() end
 
----@return any
+---@param fileName string
 function MapSpawnSelectImage:setImagePyramid(fileName) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return MapSpawnSelectImage
 function MapSpawnSelectImage:new(x, y, width, height) end
 
 ---@class MapSpawnSelectListBox : ISScrollingListBox
 MapSpawnSelectListBox = ISScrollingListBox:derive("MapSpawnSelectListBox")
+MapSpawnSelectListBox.Type = "MapSpawnSelectListBox"
 
----@return any
 function MapSpawnSelectListBox:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function MapSpawnSelectListBox:onJoypadDirRight(joypadData) end
 
----@return any
 function MapSpawnSelectListBox:onJoypadDirUp(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function MapSpawnSelectListBox:onMouseDown(x, y) end
 
----@return any
 function MapSpawnSelectListBox:render() end
 
 ---@class MapSpawnSelectInfoPanel : ISRichTextPanel
 MapSpawnSelectInfoPanel = ISRichTextPanel:derive("MapSpawnSelectInfoPanel")
+MapSpawnSelectInfoPanel.Type = "MapSpawnSelectInfoPanel"
 MapSpawnSelectInfoPanel.doRightJoystickScrolling = ISPanelJoypad.doRightJoystickScrolling
 
----@return any
 function MapSpawnSelectInfoPanel:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function MapSpawnSelectInfoPanel:onJoypadDirDown(joypadData) end
 
----@return any
 function MapSpawnSelectInfoPanel:onJoypadDirLeft(joypadData) end
 
----@return any
 function MapSpawnSelectInfoPanel:onJoypadDirUp(joypadData) end
 
----@return any
 function MapSpawnSelectInfoPanel:onJoypadDown(button, joypadData) end
 
----@return any
 function MapSpawnSelectInfoPanel:prerender() end
 
----@return any
 function MapSpawnSelectInfoPanel:render() end

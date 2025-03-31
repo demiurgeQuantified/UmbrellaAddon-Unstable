@@ -1,33 +1,31 @@
 ---@meta
 
 ---@class ISPlayerStatsWarningPointUI : ISPanel
----@field amount any
----@field backgroundColor any
----@field borderColor any
----@field cancel any
----@field moveWithMouse any
----@field ok any
----@field onclick any
----@field reason any
----@field target any
----@field variableColor any
----@field [any] any
+---@field amount ISTextEntryBox
+---@field cancel ISButton
+---@field ok ISButton
+---@field onclick unknown
+---@field reason ISTextEntryBox
+---@field variableColor table
 ISPlayerStatsWarningPointUI = ISPanel:derive("ISPlayerStatsWarningPointUI")
+ISPlayerStatsWarningPointUI.Type = "ISPlayerStatsWarningPointUI"
 
----@return any
 function ISPlayerStatsWarningPointUI:create() end
 
----@return any
 function ISPlayerStatsWarningPointUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsWarningPointUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISPlayerStatsWarningPointUI:render() end
 
----@return any
+---@param visible boolean
 function ISPlayerStatsWarningPointUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISPlayerStatsWarningPointUI
 function ISPlayerStatsWarningPointUI:new(x, y, width, height, target, onclick) end

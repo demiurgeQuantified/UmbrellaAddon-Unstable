@@ -1,76 +1,70 @@
 ---@meta
 
 ---@class InviteFriends : ISPanelJoypad
----@field allowButton any
----@field backButton any
----@field filterEntry any
----@field inviteButton any
----@field invited any
----@field inviteTime any
----@field isCoopHost any
----@field listbox any
----@field mouseOverButtonIndex any
----@field selectedFriend any
----@field statusLabel any
----@field [any] any
+---@field allowButton ISButton
+---@field backButton ISButton
+---@field filterEntry ISTextEntryBox
+---@field inviteButton ISButton
+---@field invited table
+---@field inviteTime unknown?
+---@field isCoopHost unknown
+---@field listbox ISScrollingListBox
+---@field mouseOverButtonIndex unknown
+---@field selectedFriend unknown?
+---@field statusLabel ISLabel
 InviteFriends = ISPanelJoypad:derive("InviteFriends")
+InviteFriends.Type = "InviteFriends"
+InviteFriends.instance = nil ---@type InviteFriends?
 
----@return any
 function InviteFriends.OnSteamFriendStatusChanged(steamID) end
 
----@return any
 function InviteFriends:clickBack() end
 
----@return any
 function InviteFriends:clickInvite() end
 
----@return any
 function InviteFriends:create() end
 
----@return any
+---@return number
 function InviteFriends:doDrawItem(y, item, alt) end
 
----@return any
 function InviteFriends:fillList() end
 
----@return any
 function InviteFriends:filter() end
 
----@return any
+---@return boolean
 function InviteFriends:hasChoices() end
 
----@return any
 function InviteFriends:initialise() end
 
----@return any
 function InviteFriends:loadInvitedFile() end
 
----@return any
 function InviteFriends:onDblClick() end
 
----@return any
 function InviteFriends:onGainJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function InviteFriends:onMouseDown_ListBox(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function InviteFriends:onOptionMouseDown(button, x, y) end
 
----@return any
 function InviteFriends:prerender() end
 
----@return any
 function InviteFriends:refreshList() end
 
----@return any
 function InviteFriends:render() end
 
----@return any
 function InviteFriends:saveInvitedFile() end
 
----@return any
 function InviteFriends:toggleAllowDeny(index) end
 
+function InviteFriends:update() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return InviteFriends
 function InviteFriends:new(x, y, width, height) end

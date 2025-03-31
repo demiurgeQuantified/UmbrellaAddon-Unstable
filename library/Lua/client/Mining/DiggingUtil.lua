@@ -3,10 +3,23 @@
 ---@class DiggingUtil
 DiggingUtil = {
 	excavatingStairs = false,
-	---@return any
 	tick = function() end,
-	---@return any
+
+	---@param x number
+	---@param y number
+	---@param z number
 	mining_drawStairsGuide = function(x, y, z, dir) end,
-	---@return any
+
+	---@return boolean
 	mining_floorCanDig = function(square) end,
 }
+
+---@param x number
+---@param y number
+---@param z number
+function DiggingUtil.mining_drawStairsGuide(x, y, z, dir) end
+
+---@return boolean
+function DiggingUtil.mining_floorCanDig(square) end
+
+function DiggingUtil.tick() end

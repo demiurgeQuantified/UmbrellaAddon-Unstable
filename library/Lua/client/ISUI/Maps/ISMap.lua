@@ -1,142 +1,137 @@
 ---@meta
 
 ---@class ISMap : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field character any
----@field cross any
----@field dragging any
----@field draggingStartingX any
----@field draggingStartingY any
----@field dragMoved any
----@field dragStartCX any
----@field dragStartCY any
----@field dragStartWorldX any
----@field dragStartWorldY any
----@field dragStartZoomF any
----@field editSymbolsBtn any
----@field getJoypadFocus any
----@field javaObject any
----@field LBumperZoom any
----@field mapAPI any
----@field mapKey any
----@field mapObj any
----@field ok any
----@field placeSymbBtn any
----@field playerNum any
----@field povXms any
----@field povYms any
----@field RBumperZoom any
----@field scaleBtn any
----@field selectedColor any
----@field setMapData any
----@field showMapKey any
----@field symbolsUI any
----@field symbolTexList any
----@field textCursor any
----@field updateMS any
----@field [any] any
+---@field character unknown
+---@field cross unknown
+---@field dragging boolean
+---@field draggingStartingX number
+---@field draggingStartingY number
+---@field dragMoved boolean
+---@field dragStartCX unknown
+---@field dragStartCY unknown
+---@field dragStartWorldX unknown
+---@field dragStartWorldY unknown
+---@field dragStartZoomF unknown
+---@field editSymbolsBtn ISButton
+---@field getJoypadFocus boolean
+---@field LBumperZoom number?
+---@field mapAPI unknown
+---@field mapKey ISWorldMapKey
+---@field mapObj unknown
+---@field ok ISButton
+---@field placeSymbBtn ISButton
+---@field playerNum number
+---@field povXms unknown?
+---@field povYms unknown?
+---@field RBumperZoom number?
+---@field scaleBtn ISButton
+---@field selectedColor unknown?
+---@field setMapData boolean
+---@field showMapKey ISButton
+---@field symbolsUI ISWorldMapSymbols
+---@field symbolTexList table
+---@field textCursor unknown
+---@field updateMS unknown
 ISMap = ISPanelJoypad:derive("ISMap")
+ISMap.Type = "ISMap"
 ISMap.SCALE = 0.666
 
----@return any
+---@return unknown
 function ISMap:canErase() end
 
----@return any
+---@return unknown
 function ISMap:canWrite() end
 
----@return any
 function ISMap:createChildren() end
 
----@return any
 function ISMap:destroy() end
 
----@return any
 function ISMap:initMapData() end
 
----@return any
 function ISMap:instantiate() end
 
----@return any
 function ISMap:onButtonClick(button) end
 
----@return any
 function ISMap:onConfirmRemove(button, note) end
 
----@return any
 function ISMap:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISMap:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISMap:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean?
 function ISMap:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISMap:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISMap:onMouseUp(x, y) end
 
----@return any
 function ISMap:onMouseUpOutside() end
 
----@return any
+---@return boolean
 function ISMap:onMouseWheel(del) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISMap:onRightMouseDown(x, y) end
 
----@return any
 function ISMap:prerender() end
 
----@return any
 function ISMap:render() end
 
----@return any
+---@return boolean
 function ISMap:renderJoypadIcons() end
 
----@return any
 function ISMap:update() end
 
----@return any
 function ISMap:updateButtons() end
 
----@return any
 function ISMap:updateJoypad() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param player number
 ---@return ISMap
 function ISMap:new(x, y, width, height, map, player) end
 
 ---@class ISMapWrapper : ISCollapsableWindow
 ISMapWrapper = ISCollapsableWindow:derive("ISMapWrapper")
+ISMapWrapper.Type = "ISMapWrapper"
 ISMapWrapper.__index = ISMapWrapper
 
----@return any
 function ISMapWrapper:close() end
 
----@return any
+---@return boolean
 function ISMapWrapper:isKeyConsumed(key) end
 
----@return any
 function ISMapWrapper:onKeyPress(key) end
 
----@return any
 function ISMapWrapper:onKeyRelease(key) end
 
----@return any
 function ISMapWrapper:prerender() end
 
----@return any
 function ISMapWrapper:render() end
 
----@return any
+---@param bVisible boolean
 function ISMapWrapper:setVisible(bVisible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISMapWrapper
 function ISMapWrapper:new(x, y, width, height) end

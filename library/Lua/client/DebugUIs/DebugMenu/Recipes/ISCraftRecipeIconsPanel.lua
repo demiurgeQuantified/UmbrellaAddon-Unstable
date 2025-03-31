@@ -1,40 +1,38 @@
 ---@meta
 
 ---@class ISCraftRecipeIconsPanel : ISPanel
----@field activeTooltip any
----@field iconPanel any
----@field player any
----@field playerNum any
----@field searchText any
----@field tooltipCounter any
----@field tooltipCounterTime any
----@field tooltipRecipe any
----@field [any] any
+---@field activeTooltip unknown?
+---@field iconPanel unknown?
+---@field player unknown
+---@field playerNum unknown
+---@field searchText string
+---@field tooltipCounter number
+---@field tooltipCounterTime number
+---@field tooltipRecipe unknown?
 ISCraftRecipeIconsPanel = ISPanel:derive("ISCraftRecipeIconsPanel")
+ISCraftRecipeIconsPanel.Type = "ISCraftRecipeIconsPanel"
 
----@return any
 function ISCraftRecipeIconsPanel:close() end
 
----@return any
 function ISCraftRecipeIconsPanel:createChildren() end
 
----@return any
 function ISCraftRecipeIconsPanel:deactivateTooltip() end
 
----@return any
 function ISCraftRecipeIconsPanel:initialise() end
 
----@return any
+---@param _width number
+---@param _height number
 function ISCraftRecipeIconsPanel:onResize(_width, _height) end
 
----@return any
 function ISCraftRecipeIconsPanel:prerender() end
 
----@return any
 function ISCraftRecipeIconsPanel:render() end
 
----@return any
 function ISCraftRecipeIconsPanel:updateTooltip() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCraftRecipeIconsPanel
 function ISCraftRecipeIconsPanel:new(x, y, width, height, player) end

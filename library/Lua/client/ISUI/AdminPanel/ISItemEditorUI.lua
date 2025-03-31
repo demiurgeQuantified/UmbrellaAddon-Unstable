@@ -1,45 +1,41 @@
 ---@meta
 
 ---@class ISItemEditorUI : ISPanel
----@field admin any
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field cancel any
----@field item any
----@field moveWithMouse any
----@field optionsPanel any
----@field save any
----@field title any
----@field titleText any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field admin unknown
+---@field buttonBorderColor table
+---@field cancel ISButton
+---@field item unknown
+---@field optionsPanel ISItemEditPanel
+---@field save ISButton
+---@field title ISLabel
+---@field titleText string
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISItemEditorUI = ISPanel:derive("ISItemEditorUI")
+ISItemEditorUI.Type = "ISItemEditorUI"
 
----@return any
+---@return boolean
 function ISItemEditorUI.onMouseWheel(self, del) end
 
----@return any
 function ISItemEditorUI.OpenPanel(_player, _item) end
 
----@return any
 function ISItemEditorUI:createChildren() end
 
----@return any
 function ISItemEditorUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISItemEditorUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISItemEditorUI:prerender() end
 
----@return any
 function ISItemEditorUI:render() end
 
----@return any
 function ISItemEditorUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISItemEditorUI
 function ISItemEditorUI:new(x, y, width, height, admin, item) end

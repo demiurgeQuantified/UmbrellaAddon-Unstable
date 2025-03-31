@@ -1,46 +1,40 @@
 ---@meta
 
 ---@class ISTakeFuel : ISBaseTimedAction
----@field amount any
----@field fuelStation any
----@field itemStart any
----@field itemTarget any
----@field maxTime any
----@field petrolCan any
----@field sound any
----@field square any
----@field [any] any
+---@field amount unknown
+---@field fuelStation unknown
+---@field itemStart unknown
+---@field itemTarget number
+---@field petrolCan unknown?
+---@field sound unknown
+---@field square unknown
 ISTakeFuel = ISBaseTimedAction:derive("ISTakeFuel")
+ISTakeFuel.Type = "ISTakeFuel"
 
----@return any
+---@return boolean
 function ISTakeFuel:complete() end
 
----@return any
+---@return number
 function ISTakeFuel:getDuration() end
 
----@return any
 function ISTakeFuel:init() end
 
----@return any
+---@return boolean
 function ISTakeFuel:isValid() end
 
----@return any
 function ISTakeFuel:perform() end
 
----@return any
 function ISTakeFuel:serverStart() end
 
----@return any
 function ISTakeFuel:start() end
 
----@return any
 function ISTakeFuel:stop() end
 
----@return any
 function ISTakeFuel:update() end
 
----@return any
+---@return unknown
 function ISTakeFuel:waitToStart() end
 
+---@param petrolCan unknown?
 ---@return ISTakeFuel
 function ISTakeFuel:new(character, fuelStation, petrolCan) end

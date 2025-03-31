@@ -2,7 +2,7 @@
 
 ---@class ProfessionVehicles
 ProfessionVehicles = {}
-ProfessionVehicles.OnCreateRegion = {}
+ProfessionVehicles.OnCreateRegion = nil ---@type table | function
 ProfessionVehicles.Louisville = {
 	"Base.StepVan_LouisvilleMotorShop",
 	"Base.StepVan_Jorgensen",
@@ -260,56 +260,7 @@ ProfessionVehicles.VanGardener = {
 		"Base.PickUpTruckLightsAirport",
 	},
 }
-ProfessionVehicles.VanMechanic = {
-	Louisville = {
-		"Base.StepVan_LouisvilleMotorShop",
-		"Base.VanMobileMechanics",
-	},
-	Muldraugh = {
-		"Base.VanKorshunovs",
-		"Base.VanMobileMechanics",
-	},
-	Riverside = {
-		"Base.VanBrewsterHarbin",
-		"Base.VanMobileMechanics",
-	},
-	Rosewood = {
-		"Base.StepVan_CompleteRepairShop",
-		"Base.VanPlattAuto",
-		"Base.VanMobileMechanics",
-	},
-	WestPoint = {
-		"Base.VanMooreMechanics",
-		"Base.VanMobileMechanics",
-	},
-	General = {
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.StepVan_CompleteRepairShop",
-		"Base.StepVan_LouisvilleMotorShop",
-		"Base.VanBrewsterHarbin",
-		"Base.VanMooreMechanics",
-		"Base.VanPlattAuto",
-	},
-	Alternate = {
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.StepVan_CompleteRepairShop",
-		"Base.StepVan_LouisvilleMotorShop",
-		"Base.VanBrewsterHarbin",
-		"Base.VanMooreMechanics",
-		"Base.VanPlattAuto",
-	},
-	LAA = {
-		"Base.VanMobileMechanics",
-	},
-}
+ProfessionVehicles.VanMechanic = nil ---@type table
 ProfessionVehicles.VanMeltingPointMetal = {
 	LAA = {
 		"Base.VanMeltingPointMetal",
@@ -398,56 +349,6 @@ ProfessionVehicles.VanSeats_Mural = {
 		"Base.VanSeats",
 	},
 }
-ProfessionVehicles.VanMechanic = {
-	Louisville = {
-		"Base.StepVan_LouisvilleMotorShop",
-		"Base.VanMobileMechanics",
-	},
-	Muldraugh = {
-		"Base.VanKorshunovs",
-		"Base.VanMobileMechanics",
-	},
-	Riverside = {
-		"Base.VanBrewsterHarbin",
-		"Base.VanMobileMechanics",
-	},
-	Rosewood = {
-		"Base.StepVan_CompleteRepairShop",
-		"Base.VanPlattAuto",
-		"Base.VanMobileMechanics",
-	},
-	WestPoint = {
-		"Base.VanMooreMechanics",
-		"Base.VanMobileMechanics",
-	},
-	General = {
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.StepVan_CompleteRepairShop",
-		"Base.StepVan_LouisvilleMotorShop",
-		"Base.VanBrewsterHarbin",
-		"Base.VanMooreMechanics",
-		"Base.VanPlattAuto",
-	},
-	Alternate = {
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.VanMobileMechanics",
-		"Base.StepVan_CompleteRepairShop",
-		"Base.StepVan_LouisvilleMotorShop",
-		"Base.VanBrewsterHarbin",
-		"Base.VanMooreMechanics",
-		"Base.VanPlattAuto",
-	},
-	LAA = {
-		"Base.VanMobileMechanics",
-	},
-}
 ProfessionVehicles.PickUpVanBuilder = ProfessionVehicles.VanBuilder
 ProfessionVehicles.PickUpVanLightsCarpenter = ProfessionVehicles.VanCarpenter
 ProfessionVehicles.PickUpVanMetalworker = ProfessionVehicles.VanMetalworker
@@ -471,8 +372,4 @@ ProfessionVehicles.UniqueVehicles = {
 	"Base.VanSeats_Valkyrie",
 }
 
----@return any
 function ProfessionVehicles.CheckSwap(vehicle) end
-
----@return any
-function ProfessionVehicles.OnCreateRegion(region, square, direction) end

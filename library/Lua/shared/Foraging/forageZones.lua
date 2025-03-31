@@ -23,7 +23,7 @@ forageZones = {
 		refillPercent = 5,
 		abundanceSetting = "NatureAbundance",
 		containsBiomes = {
-			["FarmLand"] = 1,
+			FarmLand = 1,
 		},
 	},
 	Forest = {
@@ -47,7 +47,7 @@ forageZones = {
 		refillPercent = 3,
 		abundanceSetting = "NatureAbundance",
 		containsBiomes = {
-			["ForagingNav"] = 1,
+			ForagingNav = 1,
 		},
 	},
 	TownZone = {
@@ -85,9 +85,9 @@ forageZones = {
 		refillPercent = 5,
 		abundanceSetting = "NatureAbundance",
 		containsBiomes = {
-			["PHForest"] = 0.75,
-			["Forest"] = 0.5,
-			["DeepForest"] = 0.15,
+			PHForest = 0.75,
+			Forest = 0.5,
+			DeepForest = 0.15,
 		},
 	},
 	PRForest = {
@@ -104,9 +104,9 @@ forageZones = {
 		refillPercent = 5,
 		abundanceSetting = "NatureAbundance",
 		containsBiomes = {
-			["Vegitation"] = 0.5,
-			["Farm"] = 0.15,
-			["Forest"] = 1,
+			Vegitation = 0.5,
+			Farm = 0.15,
+			Forest = 1,
 		},
 	},
 	FarmForest = {
@@ -116,9 +116,9 @@ forageZones = {
 		refillPercent = 5,
 		abundanceSetting = "NatureAbundance",
 		containsBiomes = {
-			["DeepForest"] = 0.5,
-			["Farm"] = 0.25,
-			["Forest"] = 1,
+			DeepForest = 0.5,
+			Farm = 0.25,
+			Forest = 1,
 		},
 	},
 	BirchForest = {
@@ -135,8 +135,8 @@ forageZones = {
 		refillPercent = 5,
 		abundanceSetting = "NatureAbundance",
 		containsBiomes = {
-			["BirchForest"] = 0.5,
-			["Forest"] = 1,
+			BirchForest = 0.5,
+			Forest = 1,
 		},
 	},
 	OrganicForest = {

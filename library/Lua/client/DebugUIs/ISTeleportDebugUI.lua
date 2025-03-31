@@ -1,71 +1,62 @@
 ---@meta
 
 ---@class ISTeleportDebugUI : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field downX any
----@field downY any
----@field entryX any
----@field entryY any
----@field entryZ any
----@field height any
----@field maxLines any
----@field mouseOver any
----@field moving any
----@field multipleLine any
----@field name any
----@field no any
----@field numLines any
----@field onclick any
----@field player any
----@field target any
----@field titlebarbkg any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field [any] any
+---@field entryX ISTextEntryBox
+---@field entryY ISTextEntryBox
+---@field entryZ ISTextEntryBox
+---@field maxLines number
+---@field multipleLine boolean
+---@field name unknown?
+---@field no ISButton
+---@field numLines number
+---@field onclick function
+---@field player unknown
+---@field target unknown?
+---@field titlebarbkg unknown
+---@field yes ISButton
 ISTeleportDebugUI = ISPanelJoypad:derive("ISTeleportDebugUI")
+ISTeleportDebugUI.Type = "ISTeleportDebugUI"
 
----@return any
 function ISTeleportDebugUI:destroy() end
 
----@return any
 function ISTeleportDebugUI:initialise() end
 
----@return any
 function ISTeleportDebugUI:onClick(button) end
 
----@return any
+---@param x number
+---@param y number
 function ISTeleportDebugUI:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTeleportDebugUI:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTeleportDebugUI:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISTeleportDebugUI:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISTeleportDebugUI:onMouseUpOutside(x, y) end
 
----@return any
 function ISTeleportDebugUI:prerender() end
 
----@return any
 function ISTeleportDebugUI:render() end
 
----@return any
+---@return number
 function ISTeleportDebugUI:titleBarHeight() end
 
----@return any
 function ISTeleportDebugUI:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target unknown?
+---@param onclick function
 ---@return ISTeleportDebugUI
 function ISTeleportDebugUI:new(x, y, width, height, player, target, onclick) end

@@ -1,40 +1,33 @@
 ---@meta
 
 ---@class ISCollapsableWindowJoypad : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field clearStentil any
----@field closeButtonTexture any
----@field collapseButtonTexture any
----@field collapseCounter any
----@field drawFrame any
----@field height any
----@field infoBtn any
----@field invbasic any
----@field isCollapsed any
----@field pin any
----@field pinButtonTexture any
----@field resizable any
----@field resizeimage any
----@field statusbarbkg any
----@field title any
----@field titlebarbkg any
----@field titleFont any
----@field titleFontHgt any
----@field viewList any
----@field widgetTextureColor any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field clearStentil boolean
+---@field closeButtonTexture unknown
+---@field collapseButtonTexture unknown
+---@field collapseCounter number
+---@field drawFrame boolean
+---@field infoBtn unknown
+---@field invbasic unknown
+---@field isCollapsed boolean
+---@field pin boolean
+---@field pinButtonTexture unknown
+---@field resizable boolean
+---@field resizeimage unknown
+---@field statusbarbkg unknown
+---@field title unknown?
+---@field titlebarbkg unknown
+---@field titleFont unknown
+---@field titleFontHgt unknown
+---@field viewList table
+---@field widgetTextureColor table
 ISCollapsableWindowJoypad = ISPanelJoypad:derive("ISCollapsableWindowJoypad")
+ISCollapsableWindowJoypad.Type = "ISCollapsableWindowJoypad"
 
----@return any
 function ISCollapsableWindowJoypad:initialise() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCollapsableWindowJoypad
 function ISCollapsableWindowJoypad:new(x, y, width, height) end

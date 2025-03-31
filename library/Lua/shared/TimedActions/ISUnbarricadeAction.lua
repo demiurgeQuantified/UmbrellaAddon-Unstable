@@ -1,35 +1,31 @@
 ---@meta
 
 ---@class ISUnbarricadeAction : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field item unknown
+---@field sound unknown?
 ISUnbarricadeAction = ISBaseTimedAction:derive("ISUnbarricadeAction")
+ISUnbarricadeAction.Type = "ISUnbarricadeAction"
 
----@return any
+---@return boolean
 function ISUnbarricadeAction:complete() end
 
----@return any
+---@return number
 function ISUnbarricadeAction:getDuration() end
 
----@return any
+---@return boolean
 function ISUnbarricadeAction:isValid() end
 
----@return any
 function ISUnbarricadeAction:perform() end
 
----@return any
 function ISUnbarricadeAction:start() end
 
----@return any
 function ISUnbarricadeAction:stop() end
 
----@return any
 function ISUnbarricadeAction:update() end
 
----@return any
+---@return unknown
 function ISUnbarricadeAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISUnbarricadeAction
 function ISUnbarricadeAction:new(character, item) end

@@ -1,50 +1,47 @@
 ---@meta
 
 ---@class ISMashingLogicPanel : ISBaseComponentPanel
----@field craftControl any
----@field craftControlDebug any
----@field craftProgress any
----@field fluidInputs any
----@field inputsGroupName any
----@field itemInputs any
----@field resourceFluidID any
----@field resourcesComponent any
----@field tableLayout any
----@field [any] any
+---@field craftControl unknown?
+---@field craftControlDebug unknown?
+---@field craftProgress unknown?
+---@field fluidInputs unknown?
+---@field inputsGroupName unknown
+---@field itemInputs unknown?
+---@field resourceFluidID unknown
+---@field resourcesComponent unknown
+---@field tableLayout unknown?
 ISMashingLogicPanel = ISBaseComponentPanel:derive("ISMashingLogicPanel")
+ISMashingLogicPanel.Type = "ISMashingLogicPanel"
 
----@return any
+---@return boolean?
 function ISMashingLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 
----@return any
 function ISMashingLogicPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISMashingLogicPanel:createChildren() end
 
----@return any
+---@return unknown?
 function ISMashingLogicPanel:createEnergySlotPanel(_style) end
 
----@return any
+---@return unknown?
 function ISMashingLogicPanel:createFluidSlotPanel(_style) end
 
----@return any
+---@return unknown?
 function ISMashingLogicPanel:createItemSlotPanel(_style) end
 
----@return any
 function ISMashingLogicPanel:initialise() end
 
----@return any
 function ISMashingLogicPanel:onResize() end
 
----@return any
 function ISMashingLogicPanel:prerender() end
 
----@return any
 function ISMashingLogicPanel:render() end
 
----@return any
 function ISMashingLogicPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISMashingLogicPanel
 function ISMashingLogicPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

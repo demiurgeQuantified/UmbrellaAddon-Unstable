@@ -1,57 +1,50 @@
 ---@meta
 
 ---@class ISZoneDisplay : ISPanel
----@field alpha any
----@field backgroundColor any
----@field blinkStep any
----@field borderColor any
----@field canSeeSky any
----@field character any
----@field climateManager any
----@field climateMoon any
----@field cloudIntensity any
----@field currentTip any
----@field currentZone any
----@field currentZones any
----@field dawn any
----@field dusk any
----@field fadeElements any
----@field fadeTarget any
----@field fadeTargets any
----@field flashNumber any
----@field flashNumberMax any
----@field flashTipButton any
----@field fogIntensity any
----@field fogStep any
----@field gameTime any
----@field height any
----@field infoBtn any
----@field manager any
----@field moonBright any
----@field moonPhase any
----@field moveWithMouse any
----@field nextBtn any
----@field noon any
----@field perkLevel any
----@field player any
----@field prevBtn any
----@field showBackground any
----@field showBorder any
----@field sunBright any
----@field timeOfDay any
----@field timeString any
----@field tipPanel any
----@field tooltip any
----@field updateTick any
----@field updateTickMax any
----@field visionBonuses any
----@field width any
----@field x any
----@field y any
----@field zdImages any
----@field zoneTitleString any
----@field [any] any
+---@field alpha number
+---@field blinkStep number
+---@field canSeeSky boolean?
+---@field character unknown
+---@field climateManager unknown
+---@field climateMoon unknown
+---@field cloudIntensity number
+---@field currentTip number
+---@field currentZone string
+---@field currentZones table
+---@field dawn number
+---@field dusk number
+---@field fadeElements table
+---@field fadeTarget string
+---@field fadeTargets table
+---@field flashNumber number
+---@field flashNumberMax number
+---@field flashTipButton boolean
+---@field fogIntensity number
+---@field fogStep number
+---@field gameTime unknown
+---@field infoBtn ISButton
+---@field manager unknown
+---@field moonBright number
+---@field moonPhase string
+---@field nextBtn ISButton
+---@field noon number
+---@field perkLevel unknown
+---@field player unknown
+---@field prevBtn ISButton
+---@field showBackground boolean
+---@field showBorder boolean
+---@field sunBright number
+---@field timeOfDay number
+---@field timeString string
+---@field tipPanel ISRichTextPanel
+---@field tooltip ISToolTip
+---@field updateTick number
+---@field updateTickMax number
+---@field visionBonuses table
+---@field zdImages table
+---@field zoneTitleString string
 ISZoneDisplay = ISPanel:derive("ISZoneDisplay")
+ISZoneDisplay.Type = "ISZoneDisplay"
 ISZoneDisplay.tips = {
 	{
 		level = 0,
@@ -157,95 +150,84 @@ ISZoneDisplay.tips = {
 	},
 }
 ISZoneDisplay.fuzzyChanceTable = {
-	[1] = {
+	{
 		text = getText("Sandbox_Rarity_option1"),
 		chance = 0,
 	},
-	[2] = {
+	{
 		text = getText("Sandbox_Rarity_option2"),
 		chance = 1,
 	},
-	[3] = {
+	{
 		text = getText("Sandbox_Rarity_option3"),
 		chance = 5,
 	},
-	[4] = {
+	{
 		text = getText("Sandbox_Rarity_option4"),
 		chance = 10,
 	},
-	[5] = {
+	{
 		text = getText("Sandbox_Rarity_option5"),
 		chance = 25,
 	},
-	[6] = {
+	{
 		text = getText("Sandbox_Rarity_option6"),
 		chance = 50,
 	},
-	[7] = {
+	{
 		text = getText("Sandbox_Rarity_option7"),
 		chance = 1000,
 	},
 }
 
----@return any
+---@return boolean?
 function ISZoneDisplay:canSeeOutside() end
 
----@return any
+---@return boolean
 function ISZoneDisplay:canSeeThroughObject(_object) end
 
----@return any
 function ISZoneDisplay:close() end
 
----@return any
+---@return string
 function ISZoneDisplay:getVisionTooltipText() end
 
----@return any
+---@return string
 function ISZoneDisplay:getZoneTooltipText() end
 
----@return any
 function ISZoneDisplay:initialise() end
 
----@return any
+---@param width number
+---@param height number
 function ISZoneDisplay:initialiseImages(imageTable, width, height, fade) end
 
----@return any
+---@param _yearNum number
+---@return boolean
 function ISZoneDisplay:isLeapYear(_yearNum) end
 
----@return any
 function ISZoneDisplay:showNextTip() end
 
----@return any
 function ISZoneDisplay:showPrevTip() end
 
----@return any
 function ISZoneDisplay:showTip(_tip, _force) end
 
----@return any
 function ISZoneDisplay:toggleTips() end
 
----@return any
 function ISZoneDisplay:update() end
 
----@return any
 function ISZoneDisplay:updateData() end
 
----@return any
 function ISZoneDisplay:updateLocation() end
 
----@return any
 function ISZoneDisplay:updateMoonPhase() end
 
----@return any
 function ISZoneDisplay:updateMoonPosition(_dawn, _dusk, _timeOfDay) end
 
----@return any
 function ISZoneDisplay:updateSunPosition(_dawn, _dusk, _timeOfDay) end
 
----@return any
 function ISZoneDisplay:updateTips() end
 
----@return any
 function ISZoneDisplay:updateTooltip() end
 
+---@param _parent ISSearchWindow
 ---@return ISZoneDisplay
 function ISZoneDisplay:new(_parent) end

@@ -1,97 +1,81 @@
 ---@meta
 
 ---@class ISWidgetRecipesPanel : ISPanel
----@field activeTooltip any
----@field callbackTarget any
----@field expandToFitTooltip any
----@field logic any
----@field player any
----@field recipeFilterPanel any
----@field recipeFilterPanelRow any
----@field recipeIconPanel any
----@field recipeIconPanelRow any
----@field recipeListMode any
----@field recipeListPanel any
----@field recipeListPanelRow any
----@field recipeTable any
----@field starSetTexture any
----@field starUnsetTexture any
----@field tooltipCounter any
----@field tooltipCounterTime any
----@field tooltipLogic any
----@field tooltipRecipe any
----@field wrapTooltipText any
----@field [any] any
+---@field activeTooltip unknown?
+---@field callbackTarget unknown
+---@field expandToFitTooltip boolean
+---@field logic unknown
+---@field player unknown
+---@field recipeFilterPanel unknown?
+---@field recipeFilterPanelRow unknown
+---@field recipeIconPanel unknown?
+---@field recipeIconPanelRow unknown
+---@field recipeListMode unknown
+---@field recipeListPanel unknown?
+---@field recipeListPanelRow unknown
+---@field recipeTable unknown?
+---@field starSetTexture unknown
+---@field starUnsetTexture unknown
+---@field tooltipCounter number
+---@field tooltipCounterTime number
+---@field tooltipLogic unknown
+---@field tooltipRecipe unknown?
+---@field wrapTooltipText boolean
 ISWidgetRecipesPanel = ISPanel:derive("ISWidgetRecipesPanel")
+ISWidgetRecipesPanel.Type = "ISWidgetRecipesPanel"
 
----@return any
 function ISWidgetRecipesPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetRecipesPanel:createChildren() end
 
----@return any
 function ISWidgetRecipesPanel:createRecipeFilterPanel(_parentTable) end
 
----@return any
 function ISWidgetRecipesPanel:createRecipeIconPanel(_parentTable) end
 
----@return any
 function ISWidgetRecipesPanel:createRecipeListPanel(_parentTable) end
 
----@return any
 function ISWidgetRecipesPanel:deactivateTooltip() end
 
----@return any
 function ISWidgetRecipesPanel:filterRecipeList() end
 
----@return any
+---@return unknown?
 function ISWidgetRecipesPanel:getActivePanel() end
 
----@return any
+---@return unknown
 function ISWidgetRecipesPanel:getLogic() end
 
----@return any
+---@return unknown
 function ISWidgetRecipesPanel:getPlayer() end
 
----@return any
 function ISWidgetRecipesPanel:initialise() end
 
----@return any
 function ISWidgetRecipesPanel:OnFilterAll(filter) end
 
----@return any
 function ISWidgetRecipesPanel:onRecipeChanged(_recipe) end
 
----@return any
 function ISWidgetRecipesPanel:onRecipeItemMouseHover(_item) end
 
----@return any
 function ISWidgetRecipesPanel:onRecipeListPanelScrolled() end
 
----@return any
 function ISWidgetRecipesPanel:onResize() end
 
----@return any
 function ISWidgetRecipesPanel:onUpdateRecipeList(_recipeList) end
 
----@return any
 function ISWidgetRecipesPanel:prerender() end
 
----@return any
 function ISWidgetRecipesPanel:render() end
 
----@return any
 function ISWidgetRecipesPanel:setRecipeListMode(_useListMode) end
 
----@return any
 function ISWidgetRecipesPanel:update() end
 
----@return any
 function ISWidgetRecipesPanel:updateContainers(_containers) end
 
----@return any
 function ISWidgetRecipesPanel:updateTooltip() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetRecipesPanel
 function ISWidgetRecipesPanel:new(x, y, width, height, player, craftBench, isoObject, logic, callbackTarget) end

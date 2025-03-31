@@ -1,35 +1,40 @@
 ---@meta
 
 ---@class ISRemovePlantCursor : ISBuildingObject
----@field character any
----@field isYButtonResetCursor any
----@field noNeedHammer any
----@field player any
----@field removeType any
----@field skipBuildAction any
----@field [any] any
+---@field character unknown
+---@field isYButtonResetCursor boolean
+---@field noNeedHammer boolean
+---@field player unknown
+---@field removeType string
+---@field skipBuildAction boolean
 ISRemovePlantCursor = ISBuildingObject:derive("ISRemovePlantCursor")
+ISRemovePlantCursor.Type = "ISRemovePlantCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISRemovePlantCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string?
 function ISRemovePlantCursor:getAPrompt() end
 
----@return any
+---@return unknown?
 function ISRemovePlantCursor:getLBPrompt() end
 
----@return any
+---@return unknown?
 function ISRemovePlantCursor:getRBPrompt() end
 
----@return any
+---@return unknown?
 function ISRemovePlantCursor:getRemovableObject(square) end
 
----@return any
+---@return boolean
 function ISRemovePlantCursor:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISRemovePlantCursor:render(x, y, z, square) end
 
+---@param removeType string
 ---@return ISRemovePlantCursor
 function ISRemovePlantCursor:new(character, removeType) end

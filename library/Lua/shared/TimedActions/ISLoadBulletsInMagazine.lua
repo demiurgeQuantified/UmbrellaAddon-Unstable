@@ -1,51 +1,41 @@
 ---@meta
 
 ---@class ISLoadBulletsInMagazine : ISBaseTimedAction
----@field ammoCount any
----@field ammoCountStart any
----@field loadFinished any
----@field magazine any
----@field maxTime any
----@field playedInsertAmmoStartSound any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field useProgressBar any
----@field [any] any
+---@field ammoCount number
+---@field ammoCountStart unknown
+---@field loadFinished boolean
+---@field magazine unknown
+---@field playedInsertAmmoStartSound boolean
+---@field useProgressBar boolean
 ISLoadBulletsInMagazine = ISBaseTimedAction:derive("ISLoadBulletsInMagazine")
+ISLoadBulletsInMagazine.Type = "ISLoadBulletsInMagazine"
 
----@return any
 function ISLoadBulletsInMagazine:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISLoadBulletsInMagazine:complete() end
 
----@return any
+---@return number
 function ISLoadBulletsInMagazine:getDuration() end
 
----@return any
 function ISLoadBulletsInMagazine:initVars() end
 
----@return any
+---@return boolean
 function ISLoadBulletsInMagazine:isLoadFinished() end
 
----@return any
+---@return unknown?
 function ISLoadBulletsInMagazine:isValid() end
 
----@return any
 function ISLoadBulletsInMagazine:perform() end
 
----@return any
 function ISLoadBulletsInMagazine:serverStart() end
 
----@return any
 function ISLoadBulletsInMagazine:start() end
 
----@return any
 function ISLoadBulletsInMagazine:stop() end
 
----@return any
 function ISLoadBulletsInMagazine:update() end
 
+---@param ammoCount number
 ---@return ISLoadBulletsInMagazine
 function ISLoadBulletsInMagazine:new(character, magazine, ammoCount) end

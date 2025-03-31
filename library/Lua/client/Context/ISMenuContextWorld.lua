@@ -1,37 +1,36 @@
 ---@meta
 
----@class ISMenuContextWorld
 ISMenuContextWorld = {}
 
----@return ISMenuContextWorld_Instance
+---@return ISMenuContextWorld
 function ISMenuContextWorld.new() end
 
----@class ISMenuContextWorld_Instance
----@field contextData any
----@field debug any
----@field [any] any
-local ISMenuContextWorld_Instance = {}
+---@class ISMenuContextWorld : ISMenuElement
+---@field contextData table
+---@field debug boolean
+local __ISMenuContextWorld = {}
 
----@return any
-function ISMenuContextWorld_Instance.createMenu(_playerNum, _object, _objects, _x, _y, _test) end
+---@param _playerNum number
+---@param _x number
+---@param _y number
+---@return boolean?
+function __ISMenuContextWorld.createMenu(_playerNum, _object, _objects, _x, _y, _test) end
 
----@return any
-function ISMenuContextWorld_Instance.getAllObjects(_data) end
+---@return unknown
+function __ISMenuContextWorld.getAllObjects(_data) end
 
----@return any
-function ISMenuContextWorld_Instance.getContextData(_playerNum) end
+---@param _playerNum number
+---@return unknown
+function __ISMenuContextWorld.getContextData(_playerNum) end
 
----@return any
-function ISMenuContextWorld_Instance.getObjectsSquare(_data, _sq) end
+function __ISMenuContextWorld.getObjectsSquare(_data, _sq) end
 
----@return any
-function ISMenuContextWorld_Instance.init() end
+function __ISMenuContextWorld.init() end
 
----@return any
-function ISMenuContextWorld_Instance.printDebug(_data) end
+function __ISMenuContextWorld.printDebug(_data) end
 
----@return any
-function ISMenuContextWorld_Instance.reset(_playerNum) end
+---@param _playerNum number?
+function __ISMenuContextWorld.reset(_playerNum) end
 
----@return any
-function ISMenuContextWorld_Instance.tableContains(_table, _item) end
+---@return boolean
+function __ISMenuContextWorld.tableContains(_table, _item) end

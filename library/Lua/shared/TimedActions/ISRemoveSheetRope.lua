@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISRemoveSheetRope : ISBaseTimedAction
----@field maxTime any
----@field window any
----@field [any] any
+---@field window unknown
 ISRemoveSheetRope = ISBaseTimedAction:derive("ISRemoveSheetRope")
+ISRemoveSheetRope.Type = "ISRemoveSheetRope"
 
----@return any
+---@return boolean
 function ISRemoveSheetRope:complete() end
 
----@return any
+---@return number
 function ISRemoveSheetRope:getDuration() end
 
----@return any
+---@return unknown
 function ISRemoveSheetRope:isValid() end
 
----@return any
 function ISRemoveSheetRope:perform() end
 
----@return any
 function ISRemoveSheetRope:start() end
 
----@return any
 function ISRemoveSheetRope:stop() end
 
----@return any
 function ISRemoveSheetRope:update() end
 
----@return any
+---@return unknown
 function ISRemoveSheetRope:waitToStart() end
 
 ---@return ISRemoveSheetRope

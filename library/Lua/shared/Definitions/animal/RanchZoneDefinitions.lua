@@ -1,232 +1,254 @@
 ---@meta
 
 ---@class RanchZoneDefinitions
-RanchZoneDefinitions = RanchZoneDefinitions or {}
-RanchZoneDefinitions.type = {}
-RanchZoneDefinitions.type["chicken"] = {}
-RanchZoneDefinitions.type["chicken"].type = "chicken"
-RanchZoneDefinitions.type["chicken"].globalName = "chicken"
-RanchZoneDefinitions.type["chicken"].chance = 20
-RanchZoneDefinitions.type["chicken"].femaleType = "hen"
-RanchZoneDefinitions.type["chicken"].maleType = "cockerel"
-RanchZoneDefinitions.type["chicken"].minFemaleNb = 4
-RanchZoneDefinitions.type["chicken"].maxFemaleNb = 10
-RanchZoneDefinitions.type["chicken"].minMaleNb = 1
-RanchZoneDefinitions.type["chicken"].maxMaleNb = 1
-RanchZoneDefinitions.type["chicken"].forcedBreed = nil
-RanchZoneDefinitions.type["chicken"].chanceForBaby = 15
-RanchZoneDefinitions.type["chicken"].maleChance = 100
-RanchZoneDefinitions.type["chickensmall"] = {}
-RanchZoneDefinitions.type["chickensmall"].type = "chickensmall"
-RanchZoneDefinitions.type["chickensmall"].globalName = "chicken"
-RanchZoneDefinitions.type["chickensmall"].chance = 20
-RanchZoneDefinitions.type["chickensmall"].femaleType = "hen"
-RanchZoneDefinitions.type["chickensmall"].maleType = "cockerel"
-RanchZoneDefinitions.type["chickensmall"].minFemaleNb = 1
-RanchZoneDefinitions.type["chickensmall"].maxFemaleNb = 5
-RanchZoneDefinitions.type["chickensmall"].minMaleNb = 0
-RanchZoneDefinitions.type["chickensmall"].maxMaleNb = 0
-RanchZoneDefinitions.type["chickensmall"].chanceForBaby = 5
-RanchZoneDefinitions.type["chickenbig"] = {}
-RanchZoneDefinitions.type["chickenbig"].type = "chickenbig"
-RanchZoneDefinitions.type["chickenbig"].globalName = "chicken"
-RanchZoneDefinitions.type["chickenbig"].chance = 20
-RanchZoneDefinitions.type["chickenbig"].femaleType = "hen"
-RanchZoneDefinitions.type["chickenbig"].maleType = "cockerel"
-RanchZoneDefinitions.type["chickenbig"].minFemaleNb = 10
-RanchZoneDefinitions.type["chickenbig"].maxFemaleNb = 20
-RanchZoneDefinitions.type["chickenbig"].minMaleNb = 1
-RanchZoneDefinitions.type["chickenbig"].maxMaleNb = 1
-RanchZoneDefinitions.type["chickenbig"].chanceForBaby = 10
-RanchZoneDefinitions.type["chickenbig"].maleChance = 100
-RanchZoneDefinitions.type["pig"] = {}
-RanchZoneDefinitions.type["pig"].type = "pig"
-RanchZoneDefinitions.type["pig"].globalName = "pig"
-RanchZoneDefinitions.type["pig"].chance = 5
-RanchZoneDefinitions.type["pig"].femaleType = "sow"
-RanchZoneDefinitions.type["pig"].maleType = "boar"
-RanchZoneDefinitions.type["pig"].minFemaleNb = 1
-RanchZoneDefinitions.type["pig"].maxFemaleNb = 5
-RanchZoneDefinitions.type["pig"].minMaleNb = 1
-RanchZoneDefinitions.type["pig"].maxMaleNb = 2
-RanchZoneDefinitions.type["pig"].chanceForBaby = 5
-RanchZoneDefinitions.type["pig"].maleChance = 100
-RanchZoneDefinitions.type["pigsmall"] = {}
-RanchZoneDefinitions.type["pigsmall"].type = "pigsmall"
-RanchZoneDefinitions.type["pigsmall"].globalName = "pig"
-RanchZoneDefinitions.type["pigsmall"].chance = 5
-RanchZoneDefinitions.type["pigsmall"].femaleType = "sow"
-RanchZoneDefinitions.type["pigsmall"].maleType = "boar"
-RanchZoneDefinitions.type["pigsmall"].minFemaleNb = 1
-RanchZoneDefinitions.type["pigsmall"].maxFemaleNb = 2
-RanchZoneDefinitions.type["pigsmall"].minMaleNb = 1
-RanchZoneDefinitions.type["pigsmall"].maxMaleNb = 0
-RanchZoneDefinitions.type["pigsmall"].chanceForBaby = 5
-RanchZoneDefinitions.type["pigsmall"].maleChance = 100
-RanchZoneDefinitions.type["piglarge"] = {}
-RanchZoneDefinitions.type["piglarge"].type = "piglarge"
-RanchZoneDefinitions.type["piglarge"].globalName = "pig"
-RanchZoneDefinitions.type["piglarge"].chance = 5
-RanchZoneDefinitions.type["piglarge"].femaleType = "sow"
-RanchZoneDefinitions.type["piglarge"].maleType = "boar"
-RanchZoneDefinitions.type["piglarge"].minFemaleNb = 3
-RanchZoneDefinitions.type["piglarge"].maxFemaleNb = 8
-RanchZoneDefinitions.type["piglarge"].minMaleNb = 1
-RanchZoneDefinitions.type["piglarge"].maxMaleNb = 2
-RanchZoneDefinitions.type["piglarge"].chanceForBaby = 5
-RanchZoneDefinitions.type["piglarge"].maleChance = 100
-RanchZoneDefinitions.type["pigonlyone"] = {}
-RanchZoneDefinitions.type["pigonlyone"].type = "pigonlyone"
-RanchZoneDefinitions.type["pigonlyone"].globalName = "pig"
-RanchZoneDefinitions.type["pigonlyone"].chance = 1
-RanchZoneDefinitions.type["pigonlyone"].femaleType = "sow"
-RanchZoneDefinitions.type["pigonlyone"].maleType = "boar"
-RanchZoneDefinitions.type["pigonlyone"].minFemaleNb = 1
-RanchZoneDefinitions.type["pigonlyone"].maxFemaleNb = 1
-RanchZoneDefinitions.type["pigonlyone"].minMaleNb = 0
-RanchZoneDefinitions.type["pigonlyone"].maxMaleNb = 0
-RanchZoneDefinitions.type["pigonlyone"].chanceForBaby = 0
-RanchZoneDefinitions.type["sheep"] = {}
-RanchZoneDefinitions.type["sheep"].type = "sheep"
-RanchZoneDefinitions.type["sheep"].globalName = "sheep"
-RanchZoneDefinitions.type["sheep"].chance = 7
-RanchZoneDefinitions.type["sheep"].femaleType = "ewe"
-RanchZoneDefinitions.type["sheep"].maleType = "ram"
-RanchZoneDefinitions.type["sheep"].minFemaleNb = 1
-RanchZoneDefinitions.type["sheep"].maxFemaleNb = 3
-RanchZoneDefinitions.type["sheep"].minMaleNb = 1
-RanchZoneDefinitions.type["sheep"].maxMaleNb = 1
-RanchZoneDefinitions.type["sheep"].chanceForBaby = 10
-RanchZoneDefinitions.type["sheep"].maleChance = 100
-RanchZoneDefinitions.type["sheepsmall"] = {}
-RanchZoneDefinitions.type["sheepsmall"].type = "sheepsmall"
-RanchZoneDefinitions.type["sheepsmall"].globalName = "sheep"
-RanchZoneDefinitions.type["sheepsmall"].chance = 7
-RanchZoneDefinitions.type["sheepsmall"].femaleType = "ewe"
-RanchZoneDefinitions.type["sheepsmall"].maleType = "ram"
-RanchZoneDefinitions.type["sheepsmall"].minFemaleNb = 1
-RanchZoneDefinitions.type["sheepsmall"].maxFemaleNb = 2
-RanchZoneDefinitions.type["sheepsmall"].minMaleNb = 1
-RanchZoneDefinitions.type["sheepsmall"].maxMaleNb = 0
-RanchZoneDefinitions.type["sheepsmall"].chanceForBaby = 10
-RanchZoneDefinitions.type["sheepsmall"].maleChance = 100
-RanchZoneDefinitions.type["sheeplarge"] = {}
-RanchZoneDefinitions.type["sheeplarge"].type = "sheeplarge"
-RanchZoneDefinitions.type["sheeplarge"].globalName = "sheep"
-RanchZoneDefinitions.type["sheeplarge"].chance = 7
-RanchZoneDefinitions.type["sheeplarge"].femaleType = "ewe"
-RanchZoneDefinitions.type["sheeplarge"].maleType = "ram"
-RanchZoneDefinitions.type["sheeplarge"].minFemaleNb = 3
-RanchZoneDefinitions.type["sheeplarge"].maxFemaleNb = 8
-RanchZoneDefinitions.type["sheeplarge"].minMaleNb = 1
-RanchZoneDefinitions.type["sheeplarge"].maxMaleNb = 1
-RanchZoneDefinitions.type["sheeplarge"].chanceForBaby = 10
-RanchZoneDefinitions.type["sheeplarge"].maleChance = 100
-RanchZoneDefinitions.type["cow"] = {}
-RanchZoneDefinitions.type["cow"].type = "cow"
-RanchZoneDefinitions.type["cow"].globalName = "cow"
-RanchZoneDefinitions.type["cow"].chance = 3
-RanchZoneDefinitions.type["cow"].femaleType = "cow"
-RanchZoneDefinitions.type["cow"].maleType = "bull"
-RanchZoneDefinitions.type["cow"].minFemaleNb = 1
-RanchZoneDefinitions.type["cow"].maxFemaleNb = 3
-RanchZoneDefinitions.type["cow"].minMaleNb = 1
-RanchZoneDefinitions.type["cow"].maxMaleNb = 1
-RanchZoneDefinitions.type["cow"].chanceForBaby = 5
-RanchZoneDefinitions.type["cow"].maleChance = 100
-RanchZoneDefinitions.type["cowlarge"] = {}
-RanchZoneDefinitions.type["cowlarge"].type = "cowlarge"
-RanchZoneDefinitions.type["cowlarge"].globalName = "cow"
-RanchZoneDefinitions.type["cowlarge"].chance = 3
-RanchZoneDefinitions.type["cowlarge"].femaleType = "cow"
-RanchZoneDefinitions.type["cowlarge"].maleType = "bull"
-RanchZoneDefinitions.type["cowlarge"].minFemaleNb = 3
-RanchZoneDefinitions.type["cowlarge"].maxFemaleNb = 8
-RanchZoneDefinitions.type["cowlarge"].minMaleNb = 1
-RanchZoneDefinitions.type["cowlarge"].maxMaleNb = 1
-RanchZoneDefinitions.type["cowlarge"].chanceForBaby = 5
-RanchZoneDefinitions.type["cowlarge"].maleChance = 100
-RanchZoneDefinitions.type["turkey"] = {}
-RanchZoneDefinitions.type["turkey"].type = "turkey"
-RanchZoneDefinitions.type["turkey"].globalName = "turkey"
-RanchZoneDefinitions.type["turkey"].chance = 5
-RanchZoneDefinitions.type["turkey"].femaleType = "turkeyhen"
-RanchZoneDefinitions.type["turkey"].maleType = "gobblers"
-RanchZoneDefinitions.type["turkey"].minFemaleNb = 3
-RanchZoneDefinitions.type["turkey"].maxFemaleNb = 8
-RanchZoneDefinitions.type["turkey"].minMaleNb = 1
-RanchZoneDefinitions.type["turkey"].maxMaleNb = 1
-RanchZoneDefinitions.type["turkey"].chanceForBaby = 12
-RanchZoneDefinitions.type["turkey"].maleChance = 100
-RanchZoneDefinitions.type["turkeylarge"] = {}
-RanchZoneDefinitions.type["turkeylarge"].type = "turkeylarge"
-RanchZoneDefinitions.type["turkeylarge"].globalName = "turkey"
-RanchZoneDefinitions.type["turkeylarge"].chance = 5
-RanchZoneDefinitions.type["turkeylarge"].femaleType = "turkeyhen"
-RanchZoneDefinitions.type["turkeylarge"].maleType = "gobblers"
-RanchZoneDefinitions.type["turkeylarge"].minFemaleNb = 6
-RanchZoneDefinitions.type["turkeylarge"].maxFemaleNb = 15
-RanchZoneDefinitions.type["turkeylarge"].minMaleNb = 1
-RanchZoneDefinitions.type["turkeylarge"].maxMaleNb = 1
-RanchZoneDefinitions.type["turkeylarge"].chanceForBaby = 12
-RanchZoneDefinitions.type["turkeylarge"].maleChance = 100
-RanchZoneDefinitions.type["turkeysmall"] = {}
-RanchZoneDefinitions.type["turkeysmall"].type = "turkeysmall"
-RanchZoneDefinitions.type["turkeysmall"].globalName = "turkey"
-RanchZoneDefinitions.type["turkeysmall"].chance = 5
-RanchZoneDefinitions.type["turkeysmall"].femaleType = "turkeyhen"
-RanchZoneDefinitions.type["turkeysmall"].maleType = "gobblers"
-RanchZoneDefinitions.type["turkeysmall"].minFemaleNb = 1
-RanchZoneDefinitions.type["turkeysmall"].maxFemaleNb = 4
-RanchZoneDefinitions.type["turkeysmall"].minMaleNb = 0
-RanchZoneDefinitions.type["turkeysmall"].maxMaleNb = 0
-RanchZoneDefinitions.type["turkeysmall"].chanceForBaby = 5
-RanchZoneDefinitions.type["rabbit"] = {}
-RanchZoneDefinitions.type["rabbit"].type = "rabbit"
-RanchZoneDefinitions.type["rabbit"].globalName = "rabbit"
-RanchZoneDefinitions.type["rabbit"].chance = 5
-RanchZoneDefinitions.type["rabbit"].femaleType = "rabdoe"
-RanchZoneDefinitions.type["rabbit"].maleType = "rabbuck"
-RanchZoneDefinitions.type["rabbit"].minFemaleNb = 3
-RanchZoneDefinitions.type["rabbit"].maxFemaleNb = 7
-RanchZoneDefinitions.type["rabbit"].minMaleNb = 1
-RanchZoneDefinitions.type["rabbit"].maxMaleNb = 1
-RanchZoneDefinitions.type["rabbit"].chanceForBaby = 100
-RanchZoneDefinitions.type["rabbit"].maleChance = 100
-RanchZoneDefinitions.type["rabbitsmall"] = {}
-RanchZoneDefinitions.type["rabbitsmall"].type = "rabbitsmall"
-RanchZoneDefinitions.type["rabbitsmall"].globalName = "rabbit"
-RanchZoneDefinitions.type["rabbitsmall"].chance = 5
-RanchZoneDefinitions.type["rabbitsmall"].femaleType = "rabdoe"
-RanchZoneDefinitions.type["rabbitsmall"].maleType = "rabbuck"
-RanchZoneDefinitions.type["rabbitsmall"].minFemaleNb = 1
-RanchZoneDefinitions.type["rabbitsmall"].maxFemaleNb = 4
-RanchZoneDefinitions.type["rabbitsmall"].minMaleNb = 0
-RanchZoneDefinitions.type["rabbitsmall"].maxMaleNb = 0
-RanchZoneDefinitions.type["rabbitsmall"].chanceForBaby = 0
-RanchZoneDefinitions.type["notchicken"] = {}
-RanchZoneDefinitions.type["notchicken"].type = "notchicken"
-RanchZoneDefinitions.type["notchicken"].possibleDef = {
-	"sheep",
-	"cow",
-	"pig",
-}
-RanchZoneDefinitions.type["notchickenlarge"] = {}
-RanchZoneDefinitions.type["notchickenlarge"].type = "notchickenlarge"
-RanchZoneDefinitions.type["notchickenlarge"].possibleDef = {
-	"sheeplarge",
-	"cowlarge",
-	"piglarge",
-}
-RanchZoneDefinitions.type["poultry"] = {}
-RanchZoneDefinitions.type["poultry"].type = "poultry"
-RanchZoneDefinitions.type["poultry"].possibleDef = {
-	"chicken",
-	"turkey",
-}
-RanchZoneDefinitions.type["poultrylarge"] = {}
-RanchZoneDefinitions.type["poultrylarge"].type = "poultrylarge"
-RanchZoneDefinitions.type["poultrylarge"].possibleDef = {
-	"chickenbig",
-	"turkeylarge",
+RanchZoneDefinitions = {}
+RanchZoneDefinitions.type = {
+	chicken = {
+		type = "chicken",
+		globalName = "chicken",
+		chance = 20,
+		femaleType = "hen",
+		maleType = "cockerel",
+		minFemaleNb = 4,
+		maxFemaleNb = 10,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		forcedBreed = nil,
+		chanceForBaby = 15,
+		maleChance = 100,
+	},
+	chickensmall = {
+		type = "chickensmall",
+		globalName = "chicken",
+		chance = 20,
+		femaleType = "hen",
+		maleType = "cockerel",
+		minFemaleNb = 1,
+		maxFemaleNb = 5,
+		minMaleNb = 0,
+		maxMaleNb = 0,
+		chanceForBaby = 5,
+	},
+	chickenbig = {
+		type = "chickenbig",
+		globalName = "chicken",
+		chance = 20,
+		femaleType = "hen",
+		maleType = "cockerel",
+		minFemaleNb = 10,
+		maxFemaleNb = 20,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 10,
+		maleChance = 100,
+	},
+	pig = {
+		type = "pig",
+		globalName = "pig",
+		chance = 5,
+		femaleType = "sow",
+		maleType = "boar",
+		minFemaleNb = 1,
+		maxFemaleNb = 5,
+		minMaleNb = 1,
+		maxMaleNb = 2,
+		chanceForBaby = 5,
+		maleChance = 100,
+	},
+	pigsmall = {
+		type = "pigsmall",
+		globalName = "pig",
+		chance = 5,
+		femaleType = "sow",
+		maleType = "boar",
+		minFemaleNb = 1,
+		maxFemaleNb = 2,
+		minMaleNb = 1,
+		maxMaleNb = 0,
+		chanceForBaby = 5,
+		maleChance = 100,
+	},
+	piglarge = {
+		type = "piglarge",
+		globalName = "pig",
+		chance = 5,
+		femaleType = "sow",
+		maleType = "boar",
+		minFemaleNb = 3,
+		maxFemaleNb = 8,
+		minMaleNb = 1,
+		maxMaleNb = 2,
+		chanceForBaby = 5,
+		maleChance = 100,
+	},
+	pigonlyone = {
+		type = "pigonlyone",
+		globalName = "pig",
+		chance = 1,
+		femaleType = "sow",
+		maleType = "boar",
+		minFemaleNb = 1,
+		maxFemaleNb = 1,
+		minMaleNb = 0,
+		maxMaleNb = 0,
+		chanceForBaby = 0,
+	},
+	sheep = {
+		type = "sheep",
+		globalName = "sheep",
+		chance = 7,
+		femaleType = "ewe",
+		maleType = "ram",
+		minFemaleNb = 1,
+		maxFemaleNb = 3,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 10,
+		maleChance = 100,
+	},
+	sheepsmall = {
+		type = "sheepsmall",
+		globalName = "sheep",
+		chance = 7,
+		femaleType = "ewe",
+		maleType = "ram",
+		minFemaleNb = 1,
+		maxFemaleNb = 2,
+		minMaleNb = 1,
+		maxMaleNb = 0,
+		chanceForBaby = 10,
+		maleChance = 100,
+	},
+	sheeplarge = {
+		type = "sheeplarge",
+		globalName = "sheep",
+		chance = 7,
+		femaleType = "ewe",
+		maleType = "ram",
+		minFemaleNb = 3,
+		maxFemaleNb = 8,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 10,
+		maleChance = 100,
+	},
+	cow = {
+		type = "cow",
+		globalName = "cow",
+		chance = 3,
+		femaleType = "cow",
+		maleType = "bull",
+		minFemaleNb = 1,
+		maxFemaleNb = 3,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 5,
+		maleChance = 100,
+	},
+	cowlarge = {
+		type = "cowlarge",
+		globalName = "cow",
+		chance = 3,
+		femaleType = "cow",
+		maleType = "bull",
+		minFemaleNb = 3,
+		maxFemaleNb = 8,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 5,
+		maleChance = 100,
+	},
+	turkey = {
+		type = "turkey",
+		globalName = "turkey",
+		chance = 5,
+		femaleType = "turkeyhen",
+		maleType = "gobblers",
+		minFemaleNb = 3,
+		maxFemaleNb = 8,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 12,
+		maleChance = 100,
+	},
+	turkeylarge = {
+		type = "turkeylarge",
+		globalName = "turkey",
+		chance = 5,
+		femaleType = "turkeyhen",
+		maleType = "gobblers",
+		minFemaleNb = 6,
+		maxFemaleNb = 15,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 12,
+		maleChance = 100,
+	},
+	turkeysmall = {
+		type = "turkeysmall",
+		globalName = "turkey",
+		chance = 5,
+		femaleType = "turkeyhen",
+		maleType = "gobblers",
+		minFemaleNb = 1,
+		maxFemaleNb = 4,
+		minMaleNb = 0,
+		maxMaleNb = 0,
+		chanceForBaby = 5,
+	},
+	rabbit = {
+		type = "rabbit",
+		globalName = "rabbit",
+		chance = 5,
+		femaleType = "rabdoe",
+		maleType = "rabbuck",
+		minFemaleNb = 3,
+		maxFemaleNb = 7,
+		minMaleNb = 1,
+		maxMaleNb = 1,
+		chanceForBaby = 100,
+		maleChance = 100,
+	},
+	rabbitsmall = {
+		type = "rabbitsmall",
+		globalName = "rabbit",
+		chance = 5,
+		femaleType = "rabdoe",
+		maleType = "rabbuck",
+		minFemaleNb = 1,
+		maxFemaleNb = 4,
+		minMaleNb = 0,
+		maxMaleNb = 0,
+		chanceForBaby = 0,
+	},
+	notchicken = {
+		type = "notchicken",
+		possibleDef = {
+			"sheep",
+			"cow",
+			"pig",
+		},
+	},
+	notchickenlarge = {
+		type = "notchickenlarge",
+		possibleDef = {
+			"sheeplarge",
+			"cowlarge",
+			"piglarge",
+		},
+	},
+	poultry = {
+		type = "poultry",
+		possibleDef = {
+			"chicken",
+			"turkey",
+		},
+	},
+	poultrylarge = {
+		type = "poultrylarge",
+		possibleDef = {
+			"chickenbig",
+			"turkeylarge",
+		},
+	},
 }

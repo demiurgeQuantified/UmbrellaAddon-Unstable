@@ -1,34 +1,29 @@
 ---@meta
 
 ---@class ISButcherAnimal : ISBaseTimedAction
----@field body any
----@field maxTime any
----@field perkLevel any
----@field [any] any
+---@field body unknown
+---@field perkLevel unknown
 ISButcherAnimal = ISBaseTimedAction:derive("ISButcherAnimal")
+ISButcherAnimal.Type = "ISButcherAnimal"
 
----@return any
+---@return boolean
 function ISButcherAnimal:complete() end
 
----@return any
+---@return number
 function ISButcherAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISButcherAnimal:isValid() end
 
----@return any
 function ISButcherAnimal:perform() end
 
----@return any
 function ISButcherAnimal:start() end
 
----@return any
 function ISButcherAnimal:stop() end
 
----@return any
 function ISButcherAnimal:update() end
 
----@return any
+---@return unknown
 function ISButcherAnimal:waitToStart() end
 
 ---@return ISButcherAnimal

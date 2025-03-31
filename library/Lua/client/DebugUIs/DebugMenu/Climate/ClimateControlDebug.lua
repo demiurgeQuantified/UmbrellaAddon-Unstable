@@ -2,13 +2,18 @@
 
 ---@class ClimateControlDebug : ISDebugPanelBase
 ClimateControlDebug = ISDebugPanelBase:derive("ClimateControlDebug")
+ClimateControlDebug.Type = "ClimateControlDebug"
 ClimateControlDebug.instance = nil
 
----@return any
+---@return unknown
 function ClimateControlDebug.OnOpenPanel() end
 
----@return any
 function ClimateControlDebug:initialise() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
 ---@return ClimateControlDebug
 function ClimateControlDebug:new(x, y, width, height, title) end

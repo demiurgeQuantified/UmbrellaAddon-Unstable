@@ -1,75 +1,88 @@
 ---@meta
 
 ---@class AnimalGenomeDefinitions
-AnimalGenomeDefinitions = AnimalGenomeDefinitions or {}
-AnimalGenomeDefinitions.genes = {}
-AnimalGenomeDefinitions.genes["maxSize"] = {}
-AnimalGenomeDefinitions.genes["maxSize"].minValue = 0.85
-AnimalGenomeDefinitions.genes["maxSize"].maxValue = 0.95
-AnimalGenomeDefinitions.genes["maxSize"].forcedValues = true
-AnimalGenomeDefinitions.genes["maxMilk"] = {}
-AnimalGenomeDefinitions.genes["maxMilk"].ratio = {}
-AnimalGenomeDefinitions.genes["maxMilk"].ratio["meatRatio"] = 0.6
-AnimalGenomeDefinitions.genes["meatRatio"] = {}
-AnimalGenomeDefinitions.genes["meatRatio"].minValue = 0.8
-AnimalGenomeDefinitions.genes["meatRatio"].maxValue = 1
-AnimalGenomeDefinitions.genes["ageToGrow"] = {}
-AnimalGenomeDefinitions.genes["ageToGrow"].minValue = 0.5
-AnimalGenomeDefinitions.genes["ageToGrow"].maxValue = 0.8
-AnimalGenomeDefinitions.genes["ageToGrow"].forcedValues = true
-AnimalGenomeDefinitions.genes["maxWool"] = {}
-AnimalGenomeDefinitions.genes["maxWool"].minValue = 0.5
-AnimalGenomeDefinitions.genes["maxWool"].maxValue = 0.8
-AnimalGenomeDefinitions.genes["maxWool"].forcedValues = true
-AnimalGenomeDefinitions.genes["maxWool"].ratio = {}
-AnimalGenomeDefinitions.genes["maxWool"].ratio["meatRatio"] = 0.6
-AnimalGenomeDefinitions.genes["maxWeight"] = {}
-AnimalGenomeDefinitions.genes["maxWeight"].minValue = 0.5
-AnimalGenomeDefinitions.genes["maxWeight"].maxValue = 0.8
-AnimalGenomeDefinitions.genes["lifeExpectancy"] = {}
-AnimalGenomeDefinitions.genes["lifeExpectancy"].minValue = 0.5
-AnimalGenomeDefinitions.genes["lifeExpectancy"].maxValue = 0.8
-AnimalGenomeDefinitions.genes["resistance"] = {}
-AnimalGenomeDefinitions.genes["strength"] = {}
-AnimalGenomeDefinitions.genes["fertility"] = {}
-AnimalGenomeDefinitions.genes["fertility"].minValue = 0.75
-AnimalGenomeDefinitions.genes["fertility"].maxValue = 0.95
-AnimalGenomeDefinitions.genes["aggressiveness"] = {}
-AnimalGenomeDefinitions.genes["thirstResistance"] = {}
-AnimalGenomeDefinitions.genes["hungerResistance"] = {}
-AnimalGenomeDefinitions.genes["milkInc"] = {}
-AnimalGenomeDefinitions.genes["woolInc"] = {}
-AnimalGenomeDefinitions.genes["eggSize"] = {}
-AnimalGenomeDefinitions.genes["stress"] = {}
-AnimalGenomeDefinitions.genes["eggClutch"] = {}
-AnimalGenomeDefinitions.genes["eggClutch"].minValue = 0.65
-AnimalGenomeDefinitions.genes["eggClutch"].maxValue = 0.95
-AnimalGenomeDefinitions.geneticDisorder = {}
-AnimalGenomeDefinitions.geneticDisorder["gluttonous"] = "gluttonous"
-AnimalGenomeDefinitions.geneticDisorder["highThirst"] = "highThirst"
-AnimalGenomeDefinitions.geneticDisorder["fidget"] = "fidget"
-AnimalGenomeDefinitions.geneticDisorder["bully"] = "bully"
-AnimalGenomeDefinitions.geneticDisorder["poorFertility"] = "poorFertility"
-AnimalGenomeDefinitions.geneticDisorder["sterile"] = "sterile"
-AnimalGenomeDefinitions.geneticDisorder["weak"] = "weak"
-AnimalGenomeDefinitions.geneticDisorder["dwarf"] = "dwarf"
-AnimalGenomeDefinitions.geneticDisorder["skinny"] = "skinny"
-AnimalGenomeDefinitions.geneticDisorder["bony"] = "bony"
-AnimalGenomeDefinitions.geneticDisorder["dieAtBirth"] = "dieAtBirth"
-AnimalGenomeDefinitions.geneticDisorder["poorLife"] = "poorLife"
-AnimalGenomeDefinitions.geneticDisorder["noEggs"] = "noEggs"
-AnimalGenomeDefinitions.geneticDisorder["smallEggs"] = "smallEggs"
-AnimalGenomeDefinitions.geneticDisorder["noWool"] = "noWool"
-AnimalGenomeDefinitions.geneticDisorder["poorWool"] = "poorWool"
-AnimalGenomeDefinitions.geneticDisorder["noMilk"] = "noMilk"
-AnimalGenomeDefinitions.geneticDisorder["poorMilk"] = "poorMilk"
-AnimalGenomeDefinitions.geneticDisorder["growSlow"] = "growSlow"
-AnimalGenomeDefinitions.geneticDisorder["slowWalking"] = "slowWalking"
-AnimalGenomeDefinitions.geneticDisorder["craven"] = "craven"
-AnimalGenomeDefinitions.geneticDisorder["brave"] = "brave"
-AnimalGenomeDefinitions.geneticDisorder["idiot"] = "idiot"
-AnimalGenomeDefinitions.geneticDisorder["feeble"] = "feeble"
-AnimalGenomeDefinitions.geneticDisorder["blind"] = "blind"
-AnimalGenomeDefinitions.geneticDisorder["highStress"] = "highStress"
-AnimalGenomeDefinitions.geneticDisorder["fertile"] = "fertile"
-AnimalGenomeDefinitions.geneticDisorder["strong"] = "strong"
+AnimalGenomeDefinitions = {}
+AnimalGenomeDefinitions.genes = {
+	maxSize = {
+		minValue = 0.85,
+		maxValue = 0.95,
+		forcedValues = true,
+	},
+	maxMilk = {
+		ratio = {
+			meatRatio = 0.6,
+		},
+	},
+	meatRatio = {
+		minValue = 0.8,
+		maxValue = 1,
+	},
+	ageToGrow = {
+		minValue = 0.5,
+		maxValue = 0.8,
+		forcedValues = true,
+	},
+	maxWool = {
+		minValue = 0.5,
+		maxValue = 0.8,
+		forcedValues = true,
+		ratio = {
+			meatRatio = 0.6,
+		},
+	},
+	maxWeight = {
+		minValue = 0.5,
+		maxValue = 0.8,
+	},
+	lifeExpectancy = {
+		minValue = 0.5,
+		maxValue = 0.8,
+	},
+	resistance = {},
+	strength = {},
+	fertility = {
+		minValue = 0.75,
+		maxValue = 0.95,
+	},
+	aggressiveness = {},
+	thirstResistance = {},
+	hungerResistance = {},
+	milkInc = {},
+	woolInc = {},
+	eggSize = {},
+	stress = {},
+	eggClutch = {
+		minValue = 0.65,
+		maxValue = 0.95,
+	},
+}
+AnimalGenomeDefinitions.geneticDisorder = {
+	gluttonous = "gluttonous",
+	highThirst = "highThirst",
+	fidget = "fidget",
+	bully = "bully",
+	poorFertility = "poorFertility",
+	sterile = "sterile",
+	weak = "weak",
+	dwarf = "dwarf",
+	skinny = "skinny",
+	bony = "bony",
+	dieAtBirth = "dieAtBirth",
+	poorLife = "poorLife",
+	noEggs = "noEggs",
+	smallEggs = "smallEggs",
+	noWool = "noWool",
+	poorWool = "poorWool",
+	noMilk = "noMilk",
+	poorMilk = "poorMilk",
+	growSlow = "growSlow",
+	slowWalking = "slowWalking",
+	craven = "craven",
+	brave = "brave",
+	idiot = "idiot",
+	feeble = "feeble",
+	blind = "blind",
+	highStress = "highStress",
+	fertile = "fertile",
+	strong = "strong",
+}

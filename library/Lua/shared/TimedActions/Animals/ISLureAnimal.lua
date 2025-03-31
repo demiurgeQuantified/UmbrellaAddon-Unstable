@@ -1,56 +1,46 @@
 ---@meta
 
 ---@class ISLureAnimal : ISBaseTimedAction
----@field animal any
----@field item any
----@field lastTimer any
----@field luringTick any
----@field maxTime any
----@field saidLine any
----@field saidLine2 any
----@field timer any
----@field timerCheck any
----@field useProgressBar any
----@field [any] any
+---@field animal unknown
+---@field item unknown
+---@field lastTimer number
+---@field luringTick number
+---@field saidLine boolean
+---@field saidLine2 boolean
+---@field timer number
+---@field timerCheck number
+---@field useProgressBar boolean
 ISLureAnimal = ISBaseTimedAction:derive("ISLureAnimal")
+ISLureAnimal.Type = "ISLureAnimal"
 
----@return any
 function ISLureAnimal:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISLureAnimal:complete() end
 
----@return any
+---@return number
 function ISLureAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISLureAnimal:isValid() end
 
----@return any
 function ISLureAnimal:luredAnimal(animal) end
 
----@return any
 function ISLureAnimal:perform() end
 
----@return any
 function ISLureAnimal:serverStart() end
 
----@return any
 function ISLureAnimal:serverStop() end
 
----@return any
 function ISLureAnimal:start() end
 
----@return any
 function ISLureAnimal:stop() end
 
----@return any
 function ISLureAnimal:stopSound() end
 
----@return any
 function ISLureAnimal:update() end
 
----@return any
+---@return unknown
 function ISLureAnimal:waitToStart() end
 
 ---@return ISLureAnimal

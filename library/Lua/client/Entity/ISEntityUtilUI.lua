@@ -3,14 +3,15 @@
 ---@class ISEntityUtilUI
 ISEntityUtilUI = {}
 
----@return any
+---@param _index number
+---@return unknown
 function ISEntityUtilUI.GetVendingAlphabeticalButtonTexture(_index) end
 
----@return any
+---@return unknown
 function ISEntityUtilUI.GetVendingAlphabeticalLabelTexture(_index) end
 
----@return any
+---@return table
 function ISEntityUtilUI.GetVendingInteriorTextures() end
 
----@return any
+---@return table
 function ISEntityUtilUI.GetVendingInteriorUnlitTextures() end

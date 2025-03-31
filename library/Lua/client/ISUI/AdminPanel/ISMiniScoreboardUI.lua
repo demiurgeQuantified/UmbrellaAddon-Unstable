@@ -1,54 +1,46 @@
 ---@meta
 
 ---@class ISMiniScoreboardUI : ISPanel
----@field admin any
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field moveWithMouse any
----@field no any
----@field playerList any
----@field scoreboard any
----@field selected any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field admin unknown
+---@field no ISButton
+---@field playerList ISScrollingListBox
+---@field scoreboard unknown?
+---@field selected unknown
 ISMiniScoreboardUI = ISPanel:derive("ISMiniScoreboardUI")
+ISMiniScoreboardUI.Type = "ISMiniScoreboardUI"
 ISMiniScoreboardUI.messages = {}
+ISMiniScoreboardUI.instance = nil ---@type ISMiniScoreboardUI?
 
----@return any
 function ISMiniScoreboardUI.OnMiniScoreboardUpdate() end
 
----@return any
 function ISMiniScoreboardUI.onScoreboardUpdate(usernames, displayNames, steamIDs) end
 
----@return any
 function ISMiniScoreboardUI:close() end
 
----@return any
+---@param x number
+---@param y number
 function ISMiniScoreboardUI:doPlayerListContextMenu(player, x, y) end
 
----@return any
+---@return number
 function ISMiniScoreboardUI:drawPlayers(y, item, alt) end
 
----@return any
 function ISMiniScoreboardUI:initialise() end
 
----@return any
 function ISMiniScoreboardUI:onClick(button) end
 
----@return any
 function ISMiniScoreboardUI:onCommand(player, command) end
 
----@return any
+---@param x number
+---@param y number
 function ISMiniScoreboardUI:onRightMousePlayerList(x, y) end
 
----@return any
 function ISMiniScoreboardUI:populateList() end
 
----@return any
 function ISMiniScoreboardUI:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISMiniScoreboardUI
 function ISMiniScoreboardUI:new(x, y, width, height, admin) end

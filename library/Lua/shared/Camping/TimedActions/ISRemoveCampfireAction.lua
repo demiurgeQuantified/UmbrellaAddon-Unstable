@@ -1,37 +1,32 @@
 ---@meta
 
 ---@class ISRemoveCampfireAction : ISBaseTimedAction
----@field campfire any
----@field character any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field campfire unknown
+---@field character unknown?
 ISRemoveCampfireAction = ISBaseTimedAction:derive("ISRemoveCampfireAction")
+ISRemoveCampfireAction.Type = "ISRemoveCampfireAction"
 
----@return any
+---@return boolean
 function ISRemoveCampfireAction:complete() end
 
----@return any
+---@return number
 function ISRemoveCampfireAction:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveCampfireAction:isValid() end
 
----@return any
 function ISRemoveCampfireAction:perform() end
 
----@return any
 function ISRemoveCampfireAction:start() end
 
----@return any
 function ISRemoveCampfireAction:stop() end
 
----@return any
 function ISRemoveCampfireAction:update() end
 
----@return any
+---@return unknown
 function ISRemoveCampfireAction:waitToStart() end
 
+---@param character unknown?
+---@param maxTime number
 ---@return ISRemoveCampfireAction
 function ISRemoveCampfireAction:new(character, campfire, maxTime) end

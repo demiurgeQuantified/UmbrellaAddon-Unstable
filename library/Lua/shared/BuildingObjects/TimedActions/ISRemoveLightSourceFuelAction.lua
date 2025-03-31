@@ -1,30 +1,25 @@
 ---@meta
 
 ---@class ISRemoveLightSourceFuelAction : ISBaseTimedAction
----@field lightSource any
----@field maxTime any
----@field [any] any
+---@field lightSource unknown
 ISRemoveLightSourceFuelAction = ISBaseTimedAction:derive("ISRemoveLightSourceFuelAction")
+ISRemoveLightSourceFuelAction.Type = "ISRemoveLightSourceFuelAction"
 
----@return any
+---@return boolean
 function ISRemoveLightSourceFuelAction:complete() end
 
----@return any
+---@return number
 function ISRemoveLightSourceFuelAction:getDuration() end
 
----@return any
+---@return unknown
 function ISRemoveLightSourceFuelAction:isValid() end
 
----@return any
 function ISRemoveLightSourceFuelAction:perform() end
 
----@return any
 function ISRemoveLightSourceFuelAction:start() end
 
----@return any
 function ISRemoveLightSourceFuelAction:stop() end
 
----@return any
 function ISRemoveLightSourceFuelAction:update() end
 
 ---@return ISRemoveLightSourceFuelAction

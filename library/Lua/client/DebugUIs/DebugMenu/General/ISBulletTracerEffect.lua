@@ -1,28 +1,26 @@
 ---@meta
 
 ---@class ISBulletTracerEffect : ISDebugSubPanelBase
----@field ignoreSlider any
----@field optionToSlider any
----@field [any] any
+---@field ignoreSlider boolean
+---@field optionToSlider table
 ISBulletTracerEffect = ISDebugSubPanelBase:derive("ISBulletTracerEffect")
+ISBulletTracerEffect.Type = "ISBulletTracerEffect"
 
----@return any
 function ISBulletTracerEffect:createChildren() end
 
----@return any
 function ISBulletTracerEffect:initialise() end
 
----@return any
 function ISBulletTracerEffect:onResetToDefault() end
 
----@return any
 function ISBulletTracerEffect:onSliderChange(_newval, _slider) end
 
----@return any
 function ISBulletTracerEffect:prerender() end
 
----@return any
 function ISBulletTracerEffect:setSliderValues() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISBulletTracerEffect
 function ISBulletTracerEffect:new(x, y, width, height, doStencil) end

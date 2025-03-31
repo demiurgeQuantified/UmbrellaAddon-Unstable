@@ -1,14 +1,11 @@
 ---@meta
 
 ---@class Tutorial1
----@field DeadMouse any
----@field DeadMouseContainer any
----@field joypad any
----@field marker any
----@field moveKeys any
----@field steps any
----@field [any] any
 Tutorial1 = {}
+Tutorial1.steps = nil ---@type LuaList?
+Tutorial1.moveKeys = nil ---@type string?
+Tutorial1.marker = nil
+Tutorial1.joypad = nil ---@type boolean?
 Tutorial1.cratePositions = {
 	{
 		"lootingStuff",
@@ -18,6 +15,8 @@ Tutorial1.cratePositions = {
 		0,
 	},
 }
+Tutorial1.DeadMouseContainer = nil
+Tutorial1.DeadMouse = nil
 Tutorial1.name = "Tutorial1"
 Tutorial1.image = "media/lua/LastStand/Challenge1.png"
 Tutorial1.world = "challengemaps/Tutorial"
@@ -25,71 +24,77 @@ Tutorial1.x = 157
 Tutorial1.y = 157
 Tutorial1.hourOfDay = 20
 
----@return any
 function Tutorial1.Add() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function Tutorial1.addBarricade(x, y, z) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return unknown?
 function Tutorial1.addMetalBarricade(x, y, z) end
 
----@return any
 function Tutorial1.AddPlayer(p) end
 
----@return any
 function Tutorial1.closeBothInv() end
 
----@return any
 function Tutorial1.closeInv() end
 
----@return any
 function Tutorial1.closeLoot() end
 
----@return any
 function Tutorial1.collapseInv(inv) end
 
----@return any
+---@param isInPlayerInventory boolean
+---@param x number
+---@param y number
+---@return unknown
 function Tutorial1.createInventoryContextMenu(player, isInPlayerInventory, items, x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function Tutorial1.createWorldContextMenu(player, worldobjects, x, y) end
 
----@return any
+---@return unknown
 function Tutorial1.createWorldContextMenuFromContext(context, worldobjects) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function Tutorial1.doubleClickInventory(inventoryPane, x, y, mouseOverOption) end
 
----@return any
 function Tutorial1.FillContainers() end
 
----@return any
 function Tutorial1.Init() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return unknown?
 function Tutorial1.lockDoor(x, y, z) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function Tutorial1.openDoor(x, y, z, north) end
 
----@return any
 function Tutorial1.PreloadInit() end
 
----@return any
 function Tutorial1.removeFences() end
 
----@return any
 function Tutorial1.Render() end
 
----@return any
 function Tutorial1.replaceFence(sq, north) end
 
----@return any
 function Tutorial1.SpawnZombies(count) end
 
----@return any
 function Tutorial1.Tick() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return unknown?
 function Tutorial1.unlockDoor(x, y, z) end

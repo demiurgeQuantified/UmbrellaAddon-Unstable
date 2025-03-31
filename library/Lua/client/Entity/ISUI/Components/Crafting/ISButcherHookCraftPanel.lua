@@ -1,33 +1,30 @@
 ---@meta
 
 ---@class ISButcherHookCraftPanel : ISBaseComponentPanel
----@field processorPanel any
----@field [any] any
+---@field processorPanel unknown?
 ISButcherHookCraftPanel = ISBaseComponentPanel:derive("ISButcherHookCraftPanel")
+ISButcherHookCraftPanel.Type = "ISButcherHookCraftPanel"
 
----@return any
+---@return boolean?
 function ISButcherHookCraftPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 
----@return any
 function ISButcherHookCraftPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISButcherHookCraftPanel:createChildren() end
 
----@return any
 function ISButcherHookCraftPanel:initialise() end
 
----@return any
 function ISButcherHookCraftPanel:onResize() end
 
----@return any
 function ISButcherHookCraftPanel:prerender() end
 
----@return any
 function ISButcherHookCraftPanel:render() end
 
----@return any
 function ISButcherHookCraftPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISButcherHookCraftPanel
 function ISButcherHookCraftPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

@@ -1,65 +1,53 @@
 ---@meta
 
 ---@class ISEatFoodAction : ISBaseTimedAction
----@field carLighter any
----@field character any
----@field eatAudio any
----@field eatSound any
----@field ignoreHandsWounds any
----@field isEating any
----@field item any
----@field maxTime any
----@field openFlame any
----@field percentage any
----@field playedScrapeSound any
----@field scrapeSound any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field useUtensil any
----@field [any] any
+---@field carLighter unknown
+---@field eatAudio number
+---@field eatSound string
+---@field ignoreHandsWounds boolean
+---@field isEating boolean
+---@field item unknown
+---@field openFlame boolean
+---@field percentage number
+---@field playedScrapeSound boolean
+---@field scrapeSound unknown
+---@field useUtensil boolean
 ISEatFoodAction = ISBaseTimedAction:derive("ISEatFoodAction")
+ISEatFoodAction.Type = "ISEatFoodAction"
 
----@return any
+---@return boolean
 function ISEatFoodAction:complete() end
 
----@return any
 function ISEatFoodAction:eat(food, percentage) end
 
----@return any
+---@return number
 function ISEatFoodAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISEatFoodAction:getRequiredItem() end
 
----@return any
 function ISEatFoodAction:getSecondItem() end
 
----@return any
+---@return boolean
 function ISEatFoodAction:isEatingRemaining(item) end
 
----@return any
+---@return unknown?
 function ISEatFoodAction:isValid() end
 
----@return any
+---@return boolean
 function ISEatFoodAction:isValidStart() end
 
----@return any
 function ISEatFoodAction:perform() end
 
----@return any
 function ISEatFoodAction:serverStop() end
 
----@return any
 function ISEatFoodAction:start() end
 
----@return any
 function ISEatFoodAction:stop() end
 
----@return any
 function ISEatFoodAction:update() end
 
----@return any
+---@return boolean
 function ISEatFoodAction:waitToStart() end
 
 ---@return ISEatFoodAction

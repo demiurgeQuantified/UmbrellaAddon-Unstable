@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISTakeEngineParts : ISBaseTimedAction
----@field item any
----@field jobType any
----@field maxTime any
----@field part any
----@field vehicle any
----@field [any] any
+---@field item unknown
+---@field jobType string
+---@field part unknown
+---@field vehicle unknown
 ISTakeEngineParts = ISBaseTimedAction:derive("ISTakeEngineParts")
+ISTakeEngineParts.Type = "ISTakeEngineParts"
 
----@return any
+---@return boolean
 function ISTakeEngineParts:complete() end
 
----@return any
+---@return number
 function ISTakeEngineParts:getDuration(maxTime) end
 
----@return any
+---@return table?
 function ISTakeEngineParts:getExtraLogData() end
 
----@return any
+---@return boolean
 function ISTakeEngineParts:isValid() end
 
----@return any
 function ISTakeEngineParts:perform() end
 
----@return any
 function ISTakeEngineParts:start() end
 
----@return any
 function ISTakeEngineParts:stop() end
 
----@return any
 function ISTakeEngineParts:update() end
 
+---@param maxTime number
 ---@return ISTakeEngineParts
 function ISTakeEngineParts:new(character, part, item, maxTime) end

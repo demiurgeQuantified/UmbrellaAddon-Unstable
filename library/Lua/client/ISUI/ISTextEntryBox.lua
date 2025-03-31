@@ -1,160 +1,147 @@
 ---@meta
 
 ---@class ISTextEntryBox : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field currentText any
----@field fade any
----@field font any
----@field javaObject any
----@field joypadFocused any
----@field keeplog any
----@field logIndex any
----@field mouseOver any
----@field title any
----@field tooltip any
----@field tooltipUI any
----@field [any] any
+---@field currentText string | ISTextEntryBox
+---@field fade unknown
+---@field font unknown
+---@field keeplog boolean
+---@field logIndex number
+---@field title string | ISTextEntryBox
+---@field tooltip unknown?
+---@field tooltipUI ISToolTip
 ISTextEntryBox = ISPanelJoypad:derive("ISTextEntryBox")
+ISTextEntryBox.Type = "ISTextEntryBox"
 
----@return any
 function ISTextEntryBox:clear() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:focus() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:getCursorPos() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:getFrameAlpha() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:getInternalText() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:getMaxLines() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:getText() end
 
----@return any
 function ISTextEntryBox:ignoreFirstInput() end
 
----@return any
 function ISTextEntryBox:initialise() end
 
----@return any
 function ISTextEntryBox:instantiate() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:isEditable() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:isFocused() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:isMultipleLine() end
 
----@return any
+---@return unknown
 function ISTextEntryBox:isSelectable() end
 
----@return any
 function ISTextEntryBox:onCommandEntered() end
 
----@return any
 function ISTextEntryBox:onJoypadDown(button, joypadData) end
 
----@return any
 function ISTextEntryBox:onLostFocus() end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTextEntryBox:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTextEntryBox:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@return boolean
 function ISTextEntryBox:onMouseWheel(del) end
 
----@return any
 function ISTextEntryBox:onPressDown() end
 
----@return any
 function ISTextEntryBox:onPressUp() end
 
----@return any
 function ISTextEntryBox:onTextChange() end
 
----@return any
 function ISTextEntryBox:prerender() end
 
----@return any
 function ISTextEntryBox:selectAll() end
 
----@return any
+---@param hasButton boolean
 function ISTextEntryBox:setClearButton(hasButton) end
 
----@return any
 function ISTextEntryBox:setCursorPos(charIndex) end
 
----@return any
+---@param editable boolean
 function ISTextEntryBox:setEditable(editable) end
 
----@return any
 function ISTextEntryBox:setFont(font) end
 
----@return any
 function ISTextEntryBox:setForceUpperCase(forceUpperCase) end
 
----@return any
+---@param alpha number
 function ISTextEntryBox:setFrameAlpha(alpha) end
 
----@return any
+---@param hasFrame boolean
 function ISTextEntryBox:setHasFrame(hasFrame) end
 
----@return any
+---@param focused boolean
+---@param joypadData unknown?
 function ISTextEntryBox:setJoypadFocused(focused, joypadData) end
 
----@return any
+---@param b boolean
+---@return unknown
 function ISTextEntryBox:setMasked(b) end
 
----@return any
+---@param max number
 function ISTextEntryBox:setMaxLines(max) end
 
----@return any
+---@param length number
 function ISTextEntryBox:setMaxTextLength(length) end
 
----@return any
+---@param multiple boolean
 function ISTextEntryBox:setMultipleLine(multiple) end
 
----@return any
+---@param onlyNumbers boolean
 function ISTextEntryBox:setOnlyNumbers(onlyNumbers) end
 
----@return any
+---@param onlyText boolean
 function ISTextEntryBox:setOnlyText(onlyText) end
 
----@return any
 function ISTextEntryBox:setSelectable(enable) end
 
----@return any
+---@param str string
 function ISTextEntryBox:setText(str) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISTextEntryBox:setTextRGBA(r, g, b, a) end
 
----@return any
+---@param text string?
 function ISTextEntryBox:setTooltip(text) end
 
----@return any
+---@param valid boolean
 function ISTextEntryBox:setValid(valid) end
 
----@return any
+---@return unknown
 function ISTextEntryBox:unfocus() end
 
+---@param title string | ISTextEntryBox
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISTextEntryBox
 function ISTextEntryBox:new(title, x, y, width, height) end

@@ -1,268 +1,254 @@
 ---@meta
 
 ---@class WorldMapOptions : ISCollapsableWindowJoypad
----@field backgroundColor any
----@field doubleBoxes any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field map any
----@field resizable any
----@field screenHeight any
----@field showAllOptions any
----@field tickBoxes any
----@field [any] any
+---@field doubleBoxes table
+---@field map ISWorldMap
+---@field screenHeight unknown
+---@field showAllOptions boolean
+---@field tickBoxes table
 WorldMapOptions = ISCollapsableWindowJoypad:derive("WorldMapOptions")
+WorldMapOptions.Type = "WorldMapOptions"
 
----@return any
 function WorldMapOptions:createChildren() end
 
----@return any
+---@return table
 function WorldMapOptions:getVisibleOptions() end
 
----@return any
+---@param optionName string
+---@return boolean
 function WorldMapOptions:isMultiplayerOption(optionName) end
 
----@return any
 function WorldMapOptions:onCommandEntered(entry, option) end
 
----@return any
 function WorldMapOptions:onGainJoypadFocus(joypadData) end
 
----@return any
 function WorldMapOptions:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function WorldMapOptions:onMouseDownOutside(x, y) end
 
----@return any
 function WorldMapOptions:onTickBox(index, selected, option) end
 
----@return any
 function WorldMapOptions:synchUI() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param map ISWorldMap
 ---@return WorldMapOptions
 function WorldMapOptions:new(x, y, width, height, map) end
 
 ---@class ISWorldMapButtonPanel : ISPanelJoypad
 ISWorldMapButtonPanel = ISPanelJoypad:derive("ISWorldMapButtonPanel")
+ISWorldMapButtonPanel.Type = "ISWorldMapButtonPanel"
 
----@return any
 function ISWorldMapButtonPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISWorldMapButtonPanel:onJoypadDown(button, joypadData) end
 
----@return any
 function ISWorldMapButtonPanel:onLoseJoypadFocus(joypadData) end
 
----@return any
 function ISWorldMapButtonPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWorldMapButtonPanel
 function ISWorldMapButtonPanel:new(x, y, width, height) end
 
 ---@class ISWorldMap : ISPanelJoypad
----@field anchorBottom any
----@field anchorRight any
----@field buttonPanel any
----@field centerBtn any
----@field character any
----@field closeBtn any
----@field cross any
----@field dragging any
----@field dragMoved any
----@field dragStartCX any
----@field dragStartCY any
----@field dragStartWorldX any
----@field dragStartWorldY any
----@field dragStartX any
----@field dragStartY any
----@field dragStartZoomF any
----@field forgetBtn any
----@field forgetUI any
----@field getJoypadFocus any
----@field hideUnvisitedAreas any
----@field isometric any
----@field javaObject any
----@field joypadPromptHgt any
----@field keyUI any
----@field LBumperZoom any
----@field mapAPI any
----@field optionBtn any
----@field optionsUI any
----@field perspectiveBtn any
----@field playerNum any
----@field povXms any
----@field povYms any
----@field prevFocus any
----@field pyramidBtn any
----@field RBumperZoom any
----@field showCellGrid any
----@field showPlayerNames any
----@field showPlayers any
----@field showRemotePlayers any
----@field showTileGrid any
----@field symbolsBtn any
----@field symbolsUI any
----@field texViewIsometric any
----@field texViewOrthographic any
----@field texViewPyramid any
----@field updateMS any
----@field zoomInButton any
----@field zoomOutButton any
----@field [any] any
+---@field buttonPanel ISWorldMapButtonPanel
+---@field centerBtn ISButton
+---@field character unknown?
+---@field closeBtn ISButton
+---@field cross unknown
+---@field dragging boolean
+---@field dragMoved boolean
+---@field dragStartCX unknown
+---@field dragStartCY unknown
+---@field dragStartWorldX unknown
+---@field dragStartWorldY unknown
+---@field dragStartX number
+---@field dragStartY number
+---@field dragStartZoomF unknown
+---@field forgetBtn ISButton
+---@field forgetUI ISModalRichText?
+---@field getJoypadFocus boolean
+---@field hideUnvisitedAreas boolean
+---@field isometric boolean
+---@field joypadPromptHgt unknown
+---@field keyUI ISWorldMapKey
+---@field LBumperZoom number?
+---@field mapAPI unknown
+---@field optionBtn ISButton
+---@field optionsUI WorldMapOptions
+---@field perspectiveBtn ISButton
+---@field playerNum number
+---@field povXms unknown?
+---@field povYms unknown?
+---@field prevFocus unknown?
+---@field pyramidBtn ISButton
+---@field RBumperZoom number?
+---@field showCellGrid boolean
+---@field showPlayerNames boolean
+---@field showPlayers boolean
+---@field showRemotePlayers boolean
+---@field showTileGrid boolean
+---@field symbolsBtn ISButton
+---@field symbolsUI ISWorldMapSymbols
+---@field texViewIsometric unknown
+---@field texViewOrthographic unknown
+---@field texViewPyramid unknown
+---@field updateMS unknown
+---@field zoomInButton ISButton
+---@field zoomOutButton ISButton
 ISWorldMap = ISPanelJoypad:derive("ISWorldMap")
+ISWorldMap.Type = "ISWorldMap"
 
----@return any
+---@return boolean
 function ISWorldMap.checkKey(key) end
 
----@return any
+---@param playerNum number
 function ISWorldMap.HideWorldMap(playerNum) end
 
----@return any
+---@return boolean
 function ISWorldMap.IsAllowed() end
 
----@return any
+---@return boolean
 function ISWorldMap.NeedsLight() end
 
----@return any
 function ISWorldMap.onKeyKeepPressed(key) end
 
----@return any
 function ISWorldMap.onKeyReleased(key) end
 
----@return any
 function ISWorldMap.onKeyStartPressed(key) end
 
----@return any
 function ISWorldMap.OnPlayerDeath(playerObj) end
 
----@return any
+---@param playerNum number
 function ISWorldMap.ShowWorldMap(playerNum, centerX, centerY, zoom) end
 
----@return any
+---@param playerNum number
 function ISWorldMap.ToggleWorldMap(playerNum) end
 
----@return any
 function ISWorldMap:close() end
 
----@return any
 function ISWorldMap:createChildren() end
 
----@return any
 function ISWorldMap:initDataAndStyle() end
 
----@return any
 function ISWorldMap:instantiate() end
 
----@return any
+---@return boolean
 function ISWorldMap:isKeyConsumed(key) end
 
----@return any
 function ISWorldMap:onCenterOnPlayer() end
 
----@return any
 function ISWorldMap:onChangeOptions(button) end
 
----@return any
 function ISWorldMap:onChangePerspective() end
 
----@return any
 function ISWorldMap:onConfirmForget(button) end
 
----@return any
 function ISWorldMap:onForget() end
 
----@return any
 function ISWorldMap:onJoypadDown(button, joypadData) end
 
----@return any
 function ISWorldMap:onKeyPress(key) end
 
----@return any
 function ISWorldMap:onKeyRelease(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMap:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean?
 function ISWorldMap:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean?
 function ISWorldMap:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMap:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMap:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function ISWorldMap:onMouseWheel(del) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMap:onRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISWorldMap:onRightMouseUp(x, y) end
 
----@return any
 function ISWorldMap:onTeleport(worldX, worldY) end
 
----@return any
 function ISWorldMap:onToggleLegend() end
 
----@return any
 function ISWorldMap:onTogglePyramid() end
 
----@return any
 function ISWorldMap:onToggleSymbols() end
 
----@return any
 function ISWorldMap:onZoomInButton() end
 
----@return any
 function ISWorldMap:onZoomOutButton() end
 
----@return any
 function ISWorldMap:prerender() end
 
----@return any
 function ISWorldMap:render() end
 
----@return any
+---@param x number
+---@param y number
 function ISWorldMap:renderJoypadPrompt(texture, text, x, y) end
 
----@return any
 function ISWorldMap:restoreSettings() end
 
----@return any
 function ISWorldMap:saveSettings() end
 
----@return any
+---@param hide boolean
 function ISWorldMap:setHideUnvisitedAreas(hide) end
 
----@return any
+---@param iso boolean
 function ISWorldMap:setIsometric(iso) end
 
----@return any
+---@param show boolean
 function ISWorldMap:setShowCellGrid(show) end
 
----@return any
+---@param show boolean
 function ISWorldMap:setShowPlayerNames(show) end
 
----@return any
+---@param show boolean
 function ISWorldMap:setShowPlayers(show) end
 
----@return any
+---@param show boolean
 function ISWorldMap:setShowRemotePlayers(show) end
 
----@return any
+---@param show boolean
 function ISWorldMap:setShowTileGrid(show) end
 
----@return any
 function ISWorldMap:updateJoypad() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWorldMap
 function ISWorldMap:new(x, y, width, height) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ZombiesZoneDefinition
-ZombiesZoneDefinition = ZombiesZoneDefinition or {}
+ZombiesZoneDefinition = {}
 ZombiesZoneDefinition.Wedding = {
 	chanceToSpawn = 50,
 	toSpawn = 1,
@@ -914,11 +914,6 @@ ZombiesZoneDefinition.CountryClub = {
 		chance = 150,
 		room = "ballroom",
 	},
-	Classy = {
-		name = "Classy",
-		chance = 150,
-		room = "ballroom",
-	},
 	Gaudy = {
 		name = "Gaudy",
 		chance = 5,
@@ -1482,18 +1477,6 @@ ZombiesZoneDefinition.Stripclub = {
 	},
 	PoliceStripper = {
 		name = "PoliceStripper",
-		chance = 1,
-	},
-	FiremanStripper = {
-		name = "StripperBlack",
-		chance = 1,
-	},
-	FiremanStripper = {
-		name = "StripperNaked",
-		chance = 1,
-	},
-	FiremanStripper = {
-		name = "StripperWhite",
 		chance = 1,
 	},
 	WaiterStripper = {

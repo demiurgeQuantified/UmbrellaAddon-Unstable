@@ -1,65 +1,70 @@
 ---@meta
 
 ---@class ISPaperCursor : ISBuildingObject
----@field action any
----@field character any
----@field currentSquare any
----@field isWallLike any
----@field newSprite any
----@field newSpriteSprite any
----@field noNeedHammer any
----@field objectIndex any
----@field paperType any
----@field player any
----@field renderFloorHelper any
----@field renderX any
----@field renderY any
----@field renderZ any
----@field skipBuildAction any
----@field skipWalk any
----@field [any] any
+---@field action unknown
+---@field character unknown
+---@field currentSquare unknown
+---@field newSprite unknown
+---@field newSpriteSprite unknown
+---@field noNeedHammer boolean
+---@field objectIndex number
+---@field paperType unknown
+---@field player unknown
+---@field renderFloorHelper boolean
+---@field renderX number
+---@field renderY number
+---@field renderZ number
+---@field skipBuildAction boolean
+---@field skipWalk boolean
 ISPaperCursor = ISBuildingObject:derive("ISPaperCursor")
+ISPaperCursor.Type = "ISPaperCursor"
 
----@return any
+---@return boolean
 function ISPaperCursor:_isDoorFrame(object) end
 
----@return any
+---@return boolean
 function ISPaperCursor:_isWall(object) end
 
----@return any
+---@return boolean
 function ISPaperCursor:canPaper(object) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPaperCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string
 function ISPaperCursor:getAPrompt() end
 
----@return any
+---@return string?
 function ISPaperCursor:getLBPrompt() end
 
----@return any
+---@return table
 function ISPaperCursor:getObjectList() end
 
----@return any
+---@return string?
 function ISPaperCursor:getRBPrompt() end
 
----@return any
+---@return boolean
 function ISPaperCursor:hasItems() end
 
----@return any
+---@return boolean
 function ISPaperCursor:isValid(square) end
 
----@return any
+---@return unknown?
 function ISPaperCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPaperCursor:render(x, y, z, square) end
 
----@return any
 function ISPaperCursor:rotateKey(key) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISPaperCursor:walkTo(x, y, z) end
 
 ---@return ISPaperCursor

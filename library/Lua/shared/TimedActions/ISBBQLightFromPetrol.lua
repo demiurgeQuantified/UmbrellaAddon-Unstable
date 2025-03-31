@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISBBQLightFromPetrol : ISBaseTimedAction
----@field bbq any
----@field lighter any
----@field maxTime any
----@field petrol any
----@field sound any
----@field [any] any
+---@field bbq unknown
+---@field lighter unknown
+---@field petrol unknown
+---@field sound unknown
 ISBBQLightFromPetrol = ISBaseTimedAction:derive("ISBBQLightFromPetrol")
+ISBBQLightFromPetrol.Type = "ISBBQLightFromPetrol"
 
----@return any
+---@return boolean?
 function ISBBQLightFromPetrol:complete() end
 
----@return any
+---@return number
 function ISBBQLightFromPetrol:getDuration() end
 
----@return any
+---@return boolean
 function ISBBQLightFromPetrol:isValid() end
 
----@return any
 function ISBBQLightFromPetrol:perform() end
 
----@return any
 function ISBBQLightFromPetrol:start() end
 
----@return any
 function ISBBQLightFromPetrol:stop() end
 
----@return any
 function ISBBQLightFromPetrol:update() end
 
----@return any
+---@return unknown
 function ISBBQLightFromPetrol:waitToStart() end
 
+---@param character unknown?
 ---@return ISBBQLightFromPetrol
 function ISBBQLightFromPetrol:new(character, bbq, lighter, petrol) end

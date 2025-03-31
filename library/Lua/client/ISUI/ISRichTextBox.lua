@@ -1,72 +1,53 @@
 ---@meta
 
 ---@class ISRichTextBox : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field chatText any
----@field defaultEntryText any
----@field entry any
----@field fontHgt any
----@field height any
----@field joypadButtons any
----@field name any
----@field no any
----@field onclick any
----@field param1 any
----@field param2 any
----@field param3 any
----@field param4 any
----@field player any
----@field target any
----@field text any
----@field validateArgs any
----@field validateFunc any
----@field validateTarget any
----@field validateTooltipText any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field [any] any
+---@field chatText ISRichTextPanel
+---@field defaultEntryText unknown
+---@field entry ISTextEntryBox
+---@field fontHgt unknown
+---@field name unknown?
+---@field no ISButton
+---@field onclick unknown
+---@field param1 unknown
+---@field param2 unknown
+---@field param3 unknown
+---@field param4 unknown
+---@field player unknown
+---@field text unknown
+---@field validateArgs table
+---@field validateFunc unknown
+---@field validateTarget unknown
+---@field validateTooltipText unknown
+---@field yes ISButton
 ISRichTextBox = ISPanelJoypad:derive("ISRichTextBox")
+ISRichTextBox.Type = "ISRichTextBox"
 
----@return any
 function ISRichTextBox:destroy() end
 
----@return any
 function ISRichTextBox:initialise() end
 
----@return any
 function ISRichTextBox:onClick(button) end
 
----@return any
 function ISRichTextBox:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISRichTextBox:onJoypadDown(button, joypadData) end
 
----@return any
 function ISRichTextBox:prerender() end
 
----@return any
 function ISRichTextBox:render() end
 
----@return any
 function ISRichTextBox:setOnlyNumbers(onlyNumbers) end
 
----@return any
 function ISRichTextBox:setValidateFunction(target, func, arg1, arg2) end
 
----@return any
 function ISRichTextBox:setValidateTooltipText(text) end
 
----@return any
 function ISRichTextBox:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISRichTextBox
 function ISRichTextBox:new(
 	x,

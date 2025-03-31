@@ -1,51 +1,52 @@
 ---@meta
 
 ---@class ISCharacterInfoWindow : ISCollapsableWindow
----@field characterView any
----@field charScreen any
----@field clothingView any
----@field healthView any
----@field isCollapsed any
----@field panel any
----@field playerNum any
----@field protectionView any
----@field visibleOnStartup any
----@field [any] any
+---@field characterView ISCharacterInfo
+---@field charScreen ISCharacterScreen
+---@field clothingView ISClothingInsPanel
+---@field healthView ISHealthPanel
+---@field panel ISTabPanel
+---@field playerNum number
+---@field protectionView ISCharacterProtection
+---@field visibleOnStartup boolean
 ISCharacterInfoWindow = ISCollapsableWindow:derive("ISCharacterInfoWindow")
+ISCharacterInfoWindow.Type = "ISCharacterInfoWindow"
 ISCharacterInfoWindow.view = {}
+ISCharacterInfoWindow.instance = nil ---@type ISCharacterInfoWindow?
 
----@return any
 function ISCharacterInfoWindow.OnClothingUpdated(chr) end
 
----@return any
 function ISCharacterInfoWindow:close() end
 
----@return any
 function ISCharacterInfoWindow:createChildren() end
 
----@return any
 function ISCharacterInfoWindow:initialise() end
 
----@return any
+---@param viewName string
+---@return boolean
 function ISCharacterInfoWindow:isActive(viewName) end
 
----@return any
 function ISCharacterInfoWindow:onJoypadDown(button) end
 
----@return any
+---@param view table
+---@param window ISCollapsableWindow
 function ISCharacterInfoWindow:onTabTornOff(view, window) end
 
----@return any
 function ISCharacterInfoWindow:render() end
 
----@return any
+---@param name string
 function ISCharacterInfoWindow:RestoreLayout(name, layout) end
 
----@return any
+---@param name string
 function ISCharacterInfoWindow:SaveLayout(name, layout) end
 
----@return any
+---@param viewName string
 function ISCharacterInfoWindow:toggleView(viewName) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param playerNum number
 ---@return ISCharacterInfoWindow
 function ISCharacterInfoWindow:new(x, y, width, height, playerNum) end

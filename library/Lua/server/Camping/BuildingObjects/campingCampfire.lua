@@ -1,36 +1,40 @@
 ---@meta
 
 ---@class campingCampfire : ISBuildingObject
----@field actionAnim any
----@field character any
----@field craftingBank any
----@field noNeedHammer any
----@field [any] any
+---@field actionAnim string
+---@field character unknown?
+---@field craftingBank string
+---@field noNeedHammer boolean
 campingCampfire = ISBuildingObject:derive("campingCampfire")
+campingCampfire.Type = "campingCampfire"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function campingCampfire:create(x, y, z, north, sprite) end
 
----@return any
+---@return string?
 function campingCampfire:getAPrompt() end
 
----@return any
+---@return unknown?
 function campingCampfire:getLBPrompt() end
 
----@return any
+---@return unknown?
 function campingCampfire:getRBPrompt() end
 
----@return any
+---@return boolean
 function campingCampfire:isSquareFree(square) end
 
----@return any
+---@return boolean
 function campingCampfire:isValid(square, north) end
 
----@return any
 function campingCampfire:onTimedActionStart(action) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function campingCampfire:render(x, y, z, square) end
 
+---@param character unknown?
 ---@return campingCampfire
 function campingCampfire:new(character) end

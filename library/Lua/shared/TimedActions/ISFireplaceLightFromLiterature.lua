@@ -1,38 +1,35 @@
 ---@meta
 
 ---@class ISFireplaceLightFromLiterature : ISBaseTimedAction
----@field fireplace any
----@field fuelAmt any
----@field item any
----@field lighter any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field fireplace unknown
+---@field fuelAmt number
+---@field item unknown?
+---@field lighter unknown
+---@field sound unknown
 ISFireplaceLightFromLiterature = ISBaseTimedAction:derive("ISFireplaceLightFromLiterature")
+ISFireplaceLightFromLiterature.Type = "ISFireplaceLightFromLiterature"
 
----@return any
+---@return boolean
 function ISFireplaceLightFromLiterature:complete() end
 
----@return any
+---@return number
 function ISFireplaceLightFromLiterature:getDuration() end
 
----@return any
+---@return boolean?
 function ISFireplaceLightFromLiterature:isValid() end
 
----@return any
 function ISFireplaceLightFromLiterature:perform() end
 
----@return any
 function ISFireplaceLightFromLiterature:start() end
 
----@return any
 function ISFireplaceLightFromLiterature:stop() end
 
----@return any
 function ISFireplaceLightFromLiterature:update() end
 
----@return any
+---@return unknown
 function ISFireplaceLightFromLiterature:waitToStart() end
 
+---@param character unknown?
+---@param item unknown?
 ---@return ISFireplaceLightFromLiterature
 function ISFireplaceLightFromLiterature:new(character, item, lighter, fireplace) end

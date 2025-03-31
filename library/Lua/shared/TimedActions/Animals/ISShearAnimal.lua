@@ -1,54 +1,43 @@
 ---@meta
 
 ---@class ISShearAnimal : ISBaseTimedAction
----@field animal any
----@field lastTimer any
----@field maxTime any
----@field shear any
----@field sound any
----@field stopOnAim any
----@field timePerLiter any
----@field timer any
----@field [any] any
+---@field animal unknown
+---@field lastTimer number
+---@field shear unknown
+---@field sound unknown
+---@field timePerLiter number
+---@field timer number
 ISShearAnimal = ISBaseTimedAction:derive("ISShearAnimal")
+ISShearAnimal.Type = "ISShearAnimal"
 
----@return any
 function ISShearAnimal:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISShearAnimal:complete() end
 
----@return any
 function ISShearAnimal:forceStop() end
 
----@return any
+---@return number
 function ISShearAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISShearAnimal:isValid() end
 
----@return any
 function ISShearAnimal:perform() end
 
----@return any
 function ISShearAnimal:serverStart() end
 
----@return any
 function ISShearAnimal:start() end
 
----@return any
 function ISShearAnimal:stop() end
 
----@return any
 function ISShearAnimal:stopSound() end
 
----@return any
 function ISShearAnimal:stress() end
 
----@return any
 function ISShearAnimal:update() end
 
----@return any
+---@return unknown
 function ISShearAnimal:waitToStart() end
 
 ---@return ISShearAnimal

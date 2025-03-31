@@ -1,54 +1,54 @@
 ---@meta
 
 ---@class ISMegaVolumeControl : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field dragging any
----@field fade any
----@field isSlider any
----@field joypadFocused any
----@field target any
----@field targetFunc any
----@field tooltipUI any
----@field volume any
----@field [any] any
+---@field dragging boolean
+---@field fade unknown
+---@field isSlider boolean
+---@field joypadFocused unknown
+---@field targetFunc unknown
+---@field tooltipUI ISToolTip
+---@field volume number
 ISMegaVolumeControl = ISPanel:derive("ISMegaVolumeControl")
+ISMegaVolumeControl.Type = "ISMegaVolumeControl"
 
----@return any
+---@return number
 function ISMegaVolumeControl:getVolume() end
 
----@return any
+---@return number
 function ISMegaVolumeControl:getVolumeAtX(x) end
 
----@return any
 function ISMegaVolumeControl:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISMegaVolumeControl:onJoypadDirRight(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISMegaVolumeControl:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISMegaVolumeControl:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISMegaVolumeControl:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISMegaVolumeControl:onMouseUpOutside(x, y) end
 
----@return any
 function ISMegaVolumeControl:prerender() end
 
----@return any
 function ISMegaVolumeControl:render() end
 
----@return any
 function ISMegaVolumeControl:setJoypadFocused(focused) end
 
----@return any
+---@param volume number
 function ISMegaVolumeControl:setVolume(volume) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISMegaVolumeControl
 function ISMegaVolumeControl:new(x, y, width, height, target, targetFunc) end

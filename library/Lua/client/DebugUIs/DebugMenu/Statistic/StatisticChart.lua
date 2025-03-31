@@ -1,108 +1,87 @@
 ---@meta
 
 ---@class StatisticChart : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field clearOnNextRun any
----@field collapseCounter any
----@field colTable any
----@field currentStage any
----@field currentTile any
----@field data any
----@field dayStamp any
----@field drawFrame any
----@field greyCol any
----@field height any
----@field historyM1 any
----@field hotKeyPanels any
----@field hourStamp any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field labels any
----@field monthStamp any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field richtext any
----@field subFocus any
----@field title any
----@field varInfo any
----@field width any
----@field x any
----@field y any
----@field year any
----@field [any] any
+---@field clearOnNextRun boolean
+---@field colTable table
+---@field currentStage unknown?
+---@field currentTile unknown?
+---@field data unknown
+---@field dayStamp number
+---@field greyCol table
+---@field historyM1 ValuePlotter
+---@field hotKeyPanels table
+---@field hourStamp number
+---@field isJoypadWindow boolean
+---@field labels table
+---@field monthStamp number
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field richtext unknown?
+---@field subFocus unknown?
+---@field title string
+---@field varInfo table
+---@field year number
 StatisticChart = ISCollapsableWindow:derive("StatisticChart")
-StatisticChart.instance = nil
+StatisticChart.Type = "StatisticChart"
+StatisticChart.instance = nil ---@type StatisticChart?
 StatisticChart.shiftDown = 0
 StatisticChart.eventsAdded = false
 
----@return any
 function StatisticChart.OnServerStatisticReceived() end
 
----@return any
+---@param _r number
+---@param _g number
+---@param _b number
 function StatisticChart:addColor(_r, _g, _b) end
 
----@return any
+---@param _title string
+---@return number
 function StatisticChart:addLabel(_curX, _curY, _labelID, _title) end
 
----@return any
+---@param _title string
+---@return number
 function StatisticChart:addLabelValue(_curX, _curY, _width, _type, _labelID, _title, _defaultVal) end
 
----@return any
+---@param _name string
 function StatisticChart:addVarInfo(_name, _desc, _min, _max, _func) end
 
----@return any
 function StatisticChart:clear() end
 
----@return any
 function StatisticChart:close() end
 
----@return any
 function StatisticChart:createChildren() end
 
----@return any
+---@return unknown?
 function StatisticChart:getTitleLabel(_labelID) end
 
----@return any
+---@return unknown?
 function StatisticChart:getValueLabel(_labelID) end
 
----@return any
 function StatisticChart:initialise() end
 
----@return any
 function StatisticChart:initVariables() end
 
----@return any
 function StatisticChart:onButtonToggle(_btn) end
 
----@return any
+---@return boolean
 function StatisticChart:onMouseWheel(del) end
 
----@return any
 function StatisticChart:onResize() end
 
----@return any
 function StatisticChart:prerender() end
 
----@return any
 function StatisticChart:render() end
 
----@return any
 function StatisticChart:stayOnSplitScreen() end
 
----@return any
 function StatisticChart:update() end
 
----@return any
 function StatisticChart:updateValues() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return StatisticChart
 function StatisticChart:new(x, y, width, height, player) end

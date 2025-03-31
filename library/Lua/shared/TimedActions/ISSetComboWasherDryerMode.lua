@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISSetComboWasherDryerMode : ISBaseTimedAction
----@field maxTime any
----@field mode any
----@field object any
----@field [any] any
+---@field mode unknown
+---@field object unknown
 ISSetComboWasherDryerMode = ISBaseTimedAction:derive("ISSetComboWasherDryerMode")
+ISSetComboWasherDryerMode.Type = "ISSetComboWasherDryerMode"
 
----@return any
+---@return boolean?
 function ISSetComboWasherDryerMode:complete() end
 
----@return any
+---@return number
 function ISSetComboWasherDryerMode:getDuration() end
 
----@return any
+---@return boolean
 function ISSetComboWasherDryerMode:isValid() end
 
----@return any
 function ISSetComboWasherDryerMode:perform() end
 
----@return any
 function ISSetComboWasherDryerMode:start() end
 
----@return any
 function ISSetComboWasherDryerMode:stop() end
 
----@return any
 function ISSetComboWasherDryerMode:update() end
 
 ---@return ISSetComboWasherDryerMode

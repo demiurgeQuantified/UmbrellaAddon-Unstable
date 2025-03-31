@@ -1,51 +1,51 @@
 ---@meta
 
 ---@class ISBaseComponentPanel : ISPanel
----@field componentHeader any
----@field [any] any
+---@field componentHeader unknown?
 ISBaseComponentPanel = ISPanel:derive("ISBaseComponentPanel")
+ISBaseComponentPanel.Type = "ISBaseComponentPanel"
 
----@return any
+---@return boolean?
 function ISBaseComponentPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiStyle) end
 
----@return any
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return unknown
 function ISBaseComponentPanel.table_constructor(o, x, y, width, height, player, entity, component, componentUiStyle) end
 
----@return any
 function ISBaseComponentPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISBaseComponentPanel:createChildren() end
 
----@return any
+---@param _styleName string
 function ISBaseComponentPanel:createComponentHeader(_xuiSkin, _styleName, _force, _styleIcon, _styleLabel) end
 
----@return any
+---@return string
 function ISBaseComponentPanel:getUiDisplayName() end
 
----@return any
+---@return unknown?
 function ISBaseComponentPanel:getUiIcon() end
 
----@return any
+---@return number
 function ISBaseComponentPanel:getUiOrderZ() end
 
----@return any
 function ISBaseComponentPanel:initialise() end
 
----@return any
 function ISBaseComponentPanel:onResize() end
 
----@return any
 function ISBaseComponentPanel:prerender() end
 
----@return any
 function ISBaseComponentPanel:removeComponentHeader() end
 
----@return any
 function ISBaseComponentPanel:render() end
 
----@return any
 function ISBaseComponentPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISBaseComponentPanel
 function ISBaseComponentPanel:new(x, y, width, height, player, entity, component, componentUiStyle) end

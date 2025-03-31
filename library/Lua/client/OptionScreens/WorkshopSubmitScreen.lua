@@ -1,48 +1,42 @@
 ---@meta
 
-local TEST = false
-
 ---@class WorkshopSubmitScreen : ISPanelJoypad
----@field page1 any
----@field page10 any
----@field page2 any
----@field page3 any
----@field page4 any
----@field page5 any
----@field page6 any
----@field page7 any
----@field page8 any
----@field page9 any
----@field [any] any
-WorkshopSubmitScreen = ISPanelJoypad:derive("WorkshopSubmitScreen")
-WorkshopSubmitScreen.TEST = TEST
+---@field page1 table
+---@field page10 table
+---@field page2 table
+---@field page3 table
+---@field page4 table
+---@field page5 table
+---@field page6 table
+---@field page7 table
+---@field page8 table
+---@field page9 table
+WorkshopSubmitScreen = ISPanelJoypad:derive("WorkshopSubmit")
+WorkshopSubmitScreen.Type = "WorkshopSubmit"
+WorkshopSubmitScreen.TEST = false
+WorkshopSubmitScreen.instance = nil ---@type WorkshopSubmitScreen?
 
----@return any
 function WorkshopSubmitScreen.OnSteamWorkshopItemCreated(itemID, bUserNeedsToAcceptWorkshopLegalAgreement) end
 
----@return any
 function WorkshopSubmitScreen.OnSteamWorkshopItemNotCreated(result) end
 
----@return any
 function WorkshopSubmitScreen.OnSteamWorkshopItemNotUpdated(result) end
 
----@return any
 function WorkshopSubmitScreen.OnSteamWorkshopItemUpdated(bUserNeedsToAcceptWorkshopLegalAgreement) end
 
----@return any
 function WorkshopSubmitScreen:create() end
 
----@return any
 function WorkshopSubmitScreen:fillList() end
 
----@return any
 function WorkshopSubmitScreen:onButtonBack() end
 
----@return any
 function WorkshopSubmitScreen:onGainJoypadFocus(joypadData) end
 
----@return any
 function WorkshopSubmitScreen:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return WorkshopSubmitScreen
 function WorkshopSubmitScreen:new(x, y, width, height) end

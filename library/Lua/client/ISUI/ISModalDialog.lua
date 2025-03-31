@@ -1,78 +1,74 @@
 ---@meta
 
 ---@class ISModalDialog : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field downX any
----@field downY any
----@field joypadButtons any
----@field mouseOver any
----@field moveWithMouse any
----@field moving any
----@field name any
----@field no any
----@field ok any
----@field onclick any
----@field param1 any
----@field param2 any
----@field player any
----@field target any
----@field text any
----@field x any
----@field y any
----@field yes any
----@field yesno any
----@field [any] any
+---@field name unknown?
+---@field no ISButton?
+---@field ok ISButton?
+---@field onclick function?
+---@field param1 (number | table)?
+---@field param2 unknown?
+---@field player number?
+---@field target table?
+---@field text string
+---@field yes ISButton?
+---@field yesno boolean
 ISModalDialog = ISPanelJoypad:derive("ISModalDialog")
+ISModalDialog.Type = "ISModalDialog"
 
----@return any
+---@param width number
+---@param height number
+---@return number
+---@return number
 function ISModalDialog.CalcSize(width, height, text) end
 
----@return any
 function ISModalDialog:destroy() end
 
----@return any
 function ISModalDialog:initialise() end
 
----@return any
 function ISModalDialog:onClick(button) end
 
----@return any
 function ISModalDialog:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISModalDialog:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function ISModalDialog:onJoypadDown(button) end
 
----@return any
 function ISModalDialog:onLoseJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISModalDialog:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISModalDialog:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISModalDialog:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISModalDialog:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISModalDialog:onMouseUpOutside(x, y) end
 
----@return any
 function ISModalDialog:prerender() end
 
----@return any
 function ISModalDialog:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param text string
+---@param yesno boolean
+---@param target table?
+---@param onclick function?
+---@param player number?
+---@param param1 (number | table)?
+---@param param2 unknown?
 ---@return ISModalDialog
 function ISModalDialog:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

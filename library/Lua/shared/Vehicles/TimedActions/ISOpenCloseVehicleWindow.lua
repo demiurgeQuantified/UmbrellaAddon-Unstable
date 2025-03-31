@@ -1,36 +1,29 @@
 ---@meta
 
 ---@class ISOpenCloseVehicleWindow : ISBaseTimedAction
----@field ignoreHandsWounds any
----@field maxTime any
----@field open any
----@field part any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field window any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field open unknown
+---@field part unknown
+---@field vehicle unknown
+---@field window unknown
 ISOpenCloseVehicleWindow = ISBaseTimedAction:derive("ISOpenCloseVehicleWindow")
+ISOpenCloseVehicleWindow.Type = "ISOpenCloseVehicleWindow"
 
----@return any
+---@return boolean?
 function ISOpenCloseVehicleWindow:complete() end
 
----@return any
+---@return number
 function ISOpenCloseVehicleWindow:getDuration() end
 
----@return any
+---@return boolean
 function ISOpenCloseVehicleWindow:isValid() end
 
----@return any
 function ISOpenCloseVehicleWindow:perform() end
 
----@return any
 function ISOpenCloseVehicleWindow:start() end
 
----@return any
 function ISOpenCloseVehicleWindow:stop() end
 
----@return any
 function ISOpenCloseVehicleWindow:update() end
 
 ---@return ISOpenCloseVehicleWindow

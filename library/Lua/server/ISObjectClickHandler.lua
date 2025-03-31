@@ -1,54 +1,71 @@
 ---@meta
 
 ---@class ISObjectClickHandler
----@field clickTime any
----@field downObject any
----@field rclickTime any
----@field rdownObject any
----@field [any] any
 ISObjectClickHandler = {}
+ISObjectClickHandler.isDoubleClick = nil ---@type boolean?
+ISObjectClickHandler.lastClickTime = nil
+ISObjectClickHandler.clickTime = nil ---@type number?
+ISObjectClickHandler.downx = nil ---@type number?
+ISObjectClickHandler.downy = nil ---@type number?
+ISObjectClickHandler.downObject = nil
+ISObjectClickHandler.lastRClickTime = nil
+ISObjectClickHandler.rclickTime = nil ---@type number?
+ISObjectClickHandler.rdownObject = nil
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.doClick(object, x, y) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function ISObjectClickHandler.doClickCurtain(object, playerNum, playerObj) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function ISObjectClickHandler.doClickDoor(object, playerNum, playerObj) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function ISObjectClickHandler.doClickLightSwitch(object, playerNum, playerObj) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function ISObjectClickHandler.doClickSpecificObject(object, playerNum, playerObj) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function ISObjectClickHandler.doClickThumpable(object, playerNum, playerObj) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function ISObjectClickHandler.doClickWindow(object, playerNum, playerObj) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.doDoubleClick(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.doRClick(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.doRDoubleClick(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.onObjectLeftMouseButtonDown(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.onObjectLeftMouseButtonUp(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.onObjectRightMouseButtonDown(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISObjectClickHandler.onObjectRightMouseButtonUp(object, x, y) end
 
----@return any
 function ISObjectClickHandler.onTick() end

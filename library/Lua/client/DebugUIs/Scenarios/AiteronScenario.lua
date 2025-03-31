@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class debugScenarios
-debugScenarios = debugScenarios or {}
+debugScenarios = {}
 debugScenarios.AiteronScenario = {
 	name = "Aiteron's Debug Scenario",
 	startLoc = {
@@ -9,8 +9,6 @@ debugScenarios.AiteronScenario = {
 		y = 9404,
 		z = 0,
 	},
-	---@return any
 	setSandbox = function() end,
-	---@return any
 	onStart = function() end,
 }

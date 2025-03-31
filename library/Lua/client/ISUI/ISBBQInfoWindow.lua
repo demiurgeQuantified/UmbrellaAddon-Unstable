@@ -1,35 +1,31 @@
 ---@meta
 
 ---@class ISBBQInfoWindow : ISCollapsableWindow
----@field character any
----@field drawJoypadFocus any
----@field fuelAmount any
----@field isLit any
----@field object any
----@field panel any
----@field playerNum any
----@field spriteName any
----@field [any] any
+---@field character unknown
+---@field drawJoypadFocus boolean
+---@field fuelAmount unknown
+---@field isLit unknown
+---@field object unknown
+---@field panel ISToolTip
+---@field playerNum unknown
+---@field spriteName unknown
 ISBBQInfoWindow = ISCollapsableWindow:derive("ISBBQInfoWindow")
+ISBBQInfoWindow.Type = "ISBBQInfoWindow"
 ISBBQInfoWindow.windows = {}
 
----@return any
 function ISBBQInfoWindow:close() end
 
----@return any
 function ISBBQInfoWindow:createChildren() end
 
----@return any
 function ISBBQInfoWindow:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISBBQInfoWindow:onJoypadDown(button) end
 
----@return any
 function ISBBQInfoWindow:setObject(bbq) end
 
----@return any
 function ISBBQInfoWindow:update() end
 
+---@param x number
+---@param y number
 ---@return ISBBQInfoWindow
 function ISBBQInfoWindow:new(x, y, character, bbq) end

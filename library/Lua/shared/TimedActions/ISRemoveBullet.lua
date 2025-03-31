@@ -1,43 +1,36 @@
 ---@meta
 
 ---@class ISRemoveBullet : ISBaseTimedAction
----@field bandagedPlayerX any
----@field bandagedPlayerY any
----@field bodyPart any
----@field character any
----@field doctor any
----@field doctorLevel any
----@field maxTime any
----@field otherPlayer any
----@field sound any
----@field [any] any
+---@field bandagedPlayerX unknown
+---@field bandagedPlayerY unknown
+---@field bodyPart unknown
+---@field doctor unknown
+---@field doctorLevel number
+---@field otherPlayer unknown
+---@field sound unknown
 ISRemoveBullet = ISBaseTimedAction:derive("ISRemoveBullet")
+ISRemoveBullet.Type = "ISRemoveBullet"
 
----@return any
+---@return boolean
 function ISRemoveBullet:complete() end
 
----@return any
+---@return number
 function ISRemoveBullet:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveBullet:isValid() end
 
----@return any
 function ISRemoveBullet:perform() end
 
----@return any
 function ISRemoveBullet:start() end
 
----@return any
 function ISRemoveBullet:stop() end
 
----@return any
 function ISRemoveBullet:stopSound() end
 
----@return any
 function ISRemoveBullet:update() end
 
----@return any
+---@return boolean
 function ISRemoveBullet:waitToStart() end
 
 ---@return ISRemoveBullet

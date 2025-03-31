@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISPlaceCarBatteryChargerAction : ISBaseTimedAction
----@field charger any
----@field maxTime any
----@field [any] any
+---@field charger unknown
 ISPlaceCarBatteryChargerAction = ISBaseTimedAction:derive("ISPlaceCarBatteryChargerAction")
+ISPlaceCarBatteryChargerAction.Type = "ISPlaceCarBatteryChargerAction"
 
----@return any
+---@return boolean
 function ISPlaceCarBatteryChargerAction:complete() end
 
----@return any
+---@return number
 function ISPlaceCarBatteryChargerAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISPlaceCarBatteryChargerAction:isValid() end
 
----@return any
 function ISPlaceCarBatteryChargerAction:perform() end
 
----@return any
 function ISPlaceCarBatteryChargerAction:start() end
 
----@return any
 function ISPlaceCarBatteryChargerAction:stop() end
 
----@return any
 function ISPlaceCarBatteryChargerAction:update() end
 
----@return any
+---@return unknown
 function ISPlaceCarBatteryChargerAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISPlaceCarBatteryChargerAction
 function ISPlaceCarBatteryChargerAction:new(character, charger) end

@@ -1,178 +1,180 @@
 ---@meta
 
 ---@class ISButton : ISPanel
----@field allowMouseUpProcessing any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field backgroundColorEnabled any
----@field backgroundColorMouseOver any
----@field backgroundColorPressed any
----@field blinkBGAlpha any
----@field blinkBGAlphaIncrease any
----@field blinkImageAlpha any
----@field blinkImageAlphaIncrease any
----@field borderColor any
----@field borderColorEnabled any
----@field displayBackground any
----@field enable any
----@field fade any
----@field font any
----@field forcedHeightImage any
----@field forcedWidthImage any
----@field height any
----@field image any
----@field isButton any
----@field isJoypad any
----@field joypadFocused any
----@field joypadTexture any
----@field joypadTextureWH any
----@field mouseOver any
----@field onclick any
----@field onClickArgs any
----@field onmousedown any
----@field onmouseoutfunction any
----@field onmouseover any
----@field originalHeight any
----@field originalWidth any
----@field overlayText any
----@field pressed any
----@field pressedTime any
----@field repeatWhilePressedFunc any
----@field repeatWhilePressedTimer any
----@field sounds any
----@field target any
----@field textColor any
----@field textureBackground any
----@field textureColor any
----@field title any
----@field tooltip any
----@field tooltipUI any
----@field width any
----@field x any
----@field y any
----@field yoffset any
----@field [any] any
+---@field allowMouseUpProcessing boolean?
+---@field backgroundColorEnabled table
+---@field backgroundColorMouseOver table
+---@field backgroundColorPressed table
+---@field blinkBGAlpha number
+---@field blinkBGAlphaIncrease boolean
+---@field blinkImageAlpha number
+---@field blinkImageAlphaIncrease boolean
+---@field borderColorEnabled table
+---@field displayBackground boolean
+---@field enable boolean
+---@field fade unknown
+---@field font unknown
+---@field forcedHeightImage number
+---@field forcedWidthImage number
+---@field image unknown
+---@field isButton boolean
+---@field isJoypad boolean
+---@field joypadTexture unknown?
+---@field joypadTextureWH number
+---@field onclick (ISButton | function)?
+---@field onClickArgs table
+---@field onmousedown function?
+---@field onmouseoutfunction unknown?
+---@field onmouseover unknown?
+---@field originalHeight number
+---@field originalWidth number
+---@field overlayText unknown
+---@field pressed boolean
+---@field pressedTime unknown?
+---@field repeatWhilePressedFunc unknown
+---@field repeatWhilePressedTimer number
+---@field sounds table
+---@field target table?
+---@field textColor table
+---@field textureBackground unknown?
+---@field textureColor table
+---@field title string
+---@field tooltip string?
+---@field tooltipUI ISToolTip
+---@field yoffset number
 ISButton = ISPanel:derive("ISButton")
+ISButton.Type = "ISButton"
 
----@return any
 function ISButton:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISButton:clearJoypadButton() end
 
----@return any
 function ISButton:enableAcceptColor() end
 
----@return any
 function ISButton:enableCancelColor() end
 
----@return any
+---@return unknown?
 function ISButton:forceClick() end
 
----@return any
+---@param width number
+---@param height number
 function ISButton:forceImageSize(width, height) end
 
----@return any
+---@return string
 function ISButton:getTitle() end
 
----@return any
 function ISButton:initialise() end
 
----@return any
+---@return boolean?
 function ISButton:isEnabled() end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown?
 function ISButton:onMouseDoubleClick(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISButton:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISButton:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISButton:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISButton:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISButton:onMouseUpOutside(x, y) end
 
----@return any
 function ISButton:prerender() end
 
----@return any
 function ISButton:render() end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISButton:setBackgroundColorMouseOverRGBA(r, g, b, a) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISButton:setBackgroundRGBA(r, g, b, a) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISButton:setBorderRGBA(r, g, b, a) end
 
----@return any
 function ISButton:setDisplayBackground(background) end
 
----@return any
+---@param bEnabled boolean
 function ISButton:setEnable(bEnabled) end
 
----@return any
 function ISButton:setFont(font) end
 
----@return any
 function ISButton:setImage(image) end
 
----@return any
 function ISButton:setJoypadButton(texture) end
 
----@return any
+---@param focused boolean
 function ISButton:setJoypadFocused(focused) end
 
----@return any
 function ISButton:setOnClick(func, arg1, arg2, arg3, arg4) end
 
----@return any
+---@param onmouseout unknown?
 function ISButton:setOnMouseOutFunction(onmouseout) end
 
----@return any
+---@param onmouseover unknown?
 function ISButton:setOnMouseOverFunction(onmouseover) end
 
----@return any
 function ISButton:setOverlayText(text) end
 
----@return any
 function ISButton:setRepeatWhilePressed(func) end
 
----@return any
+---@param which string
+---@param soundName string?
 function ISButton:setSound(which, soundName) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ISButton:setTextureRGBA(r, g, b, a) end
 
----@return any
+---@param title string
 function ISButton:setTitle(title) end
 
----@return any
+---@param tooltip string?
 function ISButton:setTooltip(tooltip) end
 
----@return any
+---@param minWidth number?
+---@param isJoypad boolean?
 function ISButton:setWidthToTitle(minWidth, isJoypad) end
 
----@return any
 function ISButton:toggleAcceptCancel(bEnabled) end
 
----@return any
 function ISButton:update() end
 
----@return any
 function ISButton:updateTooltip() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
+---@param clicktarget table?
+---@param onclick (ISButton | function)?
+---@param onmousedown function?
+---@param allowMouseUpProcessing boolean?
 ---@return ISButton
 function ISButton:new(x, y, width, height, title, clicktarget, onclick, onmousedown, allowMouseUpProcessing) end

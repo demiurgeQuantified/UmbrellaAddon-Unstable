@@ -1,41 +1,34 @@
 ---@meta
 
 ---@class ISEmptyRainBarrelAction : ISBaseTimedAction
----@field maxTime any
----@field object any
----@field sound any
----@field startAmount any
----@field [any] any
+---@field object unknown
+---@field sound unknown
+---@field startAmount unknown
 ISEmptyRainBarrelAction = ISBaseTimedAction:derive("ISEmptyRainBarrelAction")
+ISEmptyRainBarrelAction.Type = "ISEmptyRainBarrelAction"
 
----@return any
+---@return boolean
 function ISEmptyRainBarrelAction:complete() end
 
----@return any
+---@return number
 function ISEmptyRainBarrelAction:getDuration() end
 
----@return any
+---@return boolean
 function ISEmptyRainBarrelAction:isValid() end
 
----@return any
 function ISEmptyRainBarrelAction:perform() end
 
----@return any
 function ISEmptyRainBarrelAction:serverStop() end
 
----@return any
 function ISEmptyRainBarrelAction:start() end
 
----@return any
 function ISEmptyRainBarrelAction:stop() end
 
----@return any
 function ISEmptyRainBarrelAction:stopSound() end
 
----@return any
 function ISEmptyRainBarrelAction:update() end
 
----@return any
+---@return unknown
 function ISEmptyRainBarrelAction:waitToStart() end
 
 ---@return ISEmptyRainBarrelAction

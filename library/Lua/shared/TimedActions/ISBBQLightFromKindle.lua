@@ -1,44 +1,38 @@
 ---@meta
 
 ---@class ISBBQLightFromKindle : ISBaseTimedAction
----@field bbq any
----@field isOutdoorsMan any
----@field item any
----@field maxTime any
----@field plank any
----@field sound any
----@field [any] any
+---@field bbq unknown
+---@field isOutdoorsMan unknown
+---@field item unknown
+---@field plank unknown
+---@field sound unknown
 ISBBQLightFromKindle = ISBaseTimedAction:derive("ISBBQLightFromKindle")
+ISBBQLightFromKindle.Type = "ISBBQLightFromKindle"
 
----@return any
 function ISBBQLightFromKindle:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISBBQLightFromKindle:complete() end
 
----@return any
+---@return number
 function ISBBQLightFromKindle:getDuration() end
 
----@return any
+---@return boolean?
 function ISBBQLightFromKindle:isValid() end
 
----@return any
 function ISBBQLightFromKindle:perform() end
 
----@return any
 function ISBBQLightFromKindle:serverStart() end
 
----@return any
 function ISBBQLightFromKindle:start() end
 
----@return any
 function ISBBQLightFromKindle:stop() end
 
----@return any
 function ISBBQLightFromKindle:update() end
 
----@return any
+---@return unknown
 function ISBBQLightFromKindle:waitToStart() end
 
+---@param character unknown?
 ---@return ISBBQLightFromKindle
 function ISBBQLightFromKindle:new(character, plank, item, bbq) end

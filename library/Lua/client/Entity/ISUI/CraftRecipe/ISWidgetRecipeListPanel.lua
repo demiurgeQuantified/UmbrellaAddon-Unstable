@@ -1,46 +1,44 @@
 ---@meta
 
 ---@class ISWidgetRecipeListPanel : ISPanel
----@field callbackTarget any
----@field enabledShowAllFilter any
----@field expandToFitTooltip any
----@field largestTooltipWidth any
----@field logic any
----@field player any
----@field recipeListPanel any
----@field wrapTooltipText any
----@field [any] any
+---@field callbackTarget unknown
+---@field enabledShowAllFilter boolean
+---@field expandToFitTooltip boolean
+---@field largestTooltipWidth number
+---@field logic unknown
+---@field player unknown
+---@field recipeListPanel ISScrollingListBox
+---@field wrapTooltipText boolean
 ISWidgetRecipeListPanel = ISPanel:derive("ISWidgetRecipeListPanel")
+ISWidgetRecipeListPanel.Type = "ISWidgetRecipeListPanel"
 
----@return any
 function ISWidgetRecipeListPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetRecipeListPanel:createChildren() end
 
----@return any
 function ISWidgetRecipeListPanel:initialise() end
 
----@return any
 function ISWidgetRecipeListPanel:onResize() end
 
----@return any
 function ISWidgetRecipeListPanel:prerender() end
 
----@return any
 function ISWidgetRecipeListPanel:render() end
 
----@return any
 function ISWidgetRecipeListPanel:setDataList(_recipeList) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _width number
+---@param _height number
 function ISWidgetRecipeListPanel:setInternalDimensions(_x, _y, _width, _height) end
 
----@return any
 function ISWidgetRecipeListPanel:setSelectedData(_recipe) end
 
----@return any
 function ISWidgetRecipeListPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetRecipeListPanel
 function ISWidgetRecipeListPanel:new(x, y, width, height, player, logic, callbackTarget) end

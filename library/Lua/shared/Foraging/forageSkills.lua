@@ -9,15 +9,15 @@ forageSkills = {
 		weatherEffect = 33,
 		darknessEffect = 15,
 		specialisations = {
-			["Animals"] = 10,
-			["Berries"] = 20,
-			["Mushrooms"] = 10,
-			["MedicinalPlants"] = 75,
-			["WildPlants"] = 50,
-			["WildHerbs"] = 50,
-			["ForestRarities"] = 10,
-			["Trash"] = 5,
-			["Junk"] = 5,
+			Animals = 10,
+			Berries = 20,
+			Mushrooms = 10,
+			MedicinalPlants = 75,
+			WildPlants = 50,
+			WildHerbs = 50,
+			ForestRarities = 10,
+			Trash = 5,
+			Junk = 5,
 		},
 	},
 	veteran = {
@@ -27,12 +27,12 @@ forageSkills = {
 		weatherEffect = 33,
 		darknessEffect = 15,
 		specialisations = {
-			["Animals"] = 5,
-			["Ammunition"] = 50,
-			["MedicinalPlants"] = 20,
-			["WildPlants"] = 10,
-			["WildHerbs"] = 10,
-			["ForestRarities"] = 5,
+			Animals = 5,
+			Ammunition = 50,
+			MedicinalPlants = 20,
+			WildPlants = 10,
+			WildHerbs = 10,
+			ForestRarities = 5,
 		},
 	},
 	farmer = {
@@ -42,14 +42,14 @@ forageSkills = {
 		weatherEffect = 33,
 		darknessEffect = 10,
 		specialisations = {
-			["Animals"] = 10,
-			["Crops"] = 50,
-			["JunkFood"] = 5,
-			["MedicinalPlants"] = 5,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 15,
-			["Fruits"] = 10,
-			["Vegetables"] = 10,
+			Animals = 10,
+			Crops = 50,
+			JunkFood = 5,
+			MedicinalPlants = 5,
+			WildPlants = 5,
+			WildHerbs = 15,
+			Fruits = 10,
+			Vegetables = 10,
 		},
 	},
 	lumberjack = {
@@ -59,10 +59,10 @@ forageSkills = {
 		weatherEffect = 33,
 		darknessEffect = 15,
 		specialisations = {
-			["Firewood"] = 50,
-			["Mushrooms"] = 20,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			Firewood = 50,
+			Mushrooms = 20,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	chef = {
@@ -72,13 +72,13 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Animals"] = 10,
-			["Berries"] = 20,
-			["Mushrooms"] = 50,
-			["JunkFood"] = 15,
-			["MedicinalPlants"] = 15,
-			["WildPlants"] = 10,
-			["WildHerbs"] = 20,
+			Animals = 10,
+			Berries = 20,
+			Mushrooms = 50,
+			JunkFood = 15,
+			MedicinalPlants = 15,
+			WildPlants = 10,
+			WildHerbs = 20,
 		},
 	},
 	fisherman = {
@@ -88,8 +88,8 @@ forageSkills = {
 		weatherEffect = 40,
 		darknessEffect = 10,
 		specialisations = {
-			["Insects"] = 50,
-			["FishBait"] = 50,
+			Insects = 50,
+			FishBait = 50,
 		},
 	},
 	unemployed = {
@@ -99,12 +99,12 @@ forageSkills = {
 		weatherEffect = 10,
 		darknessEffect = 5,
 		specialisations = {
-			["MedicinalPlants"] = 5,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
-			["JunkFood"] = 10,
-			["Trash"] = 10,
-			["Junk"] = 10,
+			MedicinalPlants = 5,
+			WildPlants = 5,
+			WildHerbs = 5,
+			JunkFood = 10,
+			Trash = 10,
+			Junk = 10,
 		},
 	},
 	burgerflipper = {
@@ -114,11 +114,11 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Animals"] = 5,
-			["Berries"] = 5,
-			["Mushrooms"] = 15,
-			["JunkFood"] = 30,
-			["MedicinalPlants"] = 5,
+			Animals = 5,
+			Berries = 5,
+			Mushrooms = 15,
+			JunkFood = 30,
+			MedicinalPlants = 5,
 		},
 	},
 	doctor = {
@@ -128,8 +128,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Medical"] = 40,
-			["MedicinalPlants"] = 10,
+			Medical = 40,
+			MedicinalPlants = 10,
 		},
 	},
 	nurse = {
@@ -139,8 +139,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Medical"] = 40,
-			["MedicinalPlants"] = 10,
+			Medical = 40,
+			MedicinalPlants = 10,
 		},
 	},
 	fitnessInstructor = {
@@ -150,11 +150,11 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Medical"] = 5,
-			["JunkFood"] = 25,
-			["MedicinalPlants"] = 15,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			Medical = 5,
+			JunkFood = 25,
+			MedicinalPlants = 15,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	repairman = {
@@ -164,8 +164,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Trash"] = 33,
-			["Junk"] = 33,
+			Trash = 33,
+			Junk = 33,
 		},
 	},
 	mechanics = {
@@ -175,8 +175,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Trash"] = 33,
-			["Junk"] = 33,
+			Trash = 33,
+			Junk = 33,
 		},
 	},
 	electrician = {
@@ -186,8 +186,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Trash"] = 20,
-			["Junk"] = 20,
+			Trash = 20,
+			Junk = 20,
 		},
 	},
 	engineer = {
@@ -197,8 +197,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Trash"] = 10,
-			["Junk"] = 10,
+			Trash = 10,
+			Junk = 10,
 		},
 	},
 	metalworker = {
@@ -208,8 +208,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Trash"] = 10,
-			["Junk"] = 10,
+			Trash = 10,
+			Junk = 10,
 		},
 	},
 	constructionworker = {
@@ -219,8 +219,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Trash"] = 10,
-			["Junk"] = 10,
+			Trash = 10,
+			Junk = 10,
 		},
 	},
 	carpenter = {
@@ -230,8 +230,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Firewood"] = 30,
-			["Junk"] = 10,
+			Firewood = 30,
+			Junk = 10,
 		},
 	},
 	burglar = {
@@ -241,10 +241,10 @@ forageSkills = {
 		weatherEffect = 5,
 		darknessEffect = 15,
 		specialisations = {
-			["Trash"] = 10,
-			["Junk"] = 10,
-			["JunkWeapons"] = 10,
-			["Ammunition"] = 10,
+			Trash = 10,
+			Junk = 10,
+			JunkWeapons = 10,
+			Ammunition = 10,
 		},
 	},
 	securityguard = {
@@ -254,10 +254,10 @@ forageSkills = {
 		weatherEffect = 5,
 		darknessEffect = 10,
 		specialisations = {
-			["Trash"] = 10,
-			["Junk"] = 10,
-			["JunkWeapons"] = 10,
-			["Ammunition"] = 10,
+			Trash = 10,
+			Junk = 10,
+			JunkWeapons = 10,
+			Ammunition = 10,
 		},
 	},
 	policeofficer = {
@@ -267,10 +267,10 @@ forageSkills = {
 		weatherEffect = 5,
 		darknessEffect = 10,
 		specialisations = {
-			["Trash"] = 10,
-			["Junk"] = 10,
-			["JunkWeapons"] = 10,
-			["Ammunition"] = 10,
+			Trash = 10,
+			Junk = 10,
+			JunkWeapons = 10,
+			Ammunition = 10,
 		},
 	},
 	fireofficer = {
@@ -280,8 +280,8 @@ forageSkills = {
 		weatherEffect = 5,
 		darknessEffect = 10,
 		specialisations = {
-			["Firewood"] = 20,
-			["Junk"] = 10,
+			Firewood = 20,
+			Junk = 10,
 		},
 	},
 	Whittler = {
@@ -291,7 +291,7 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Firewood"] = 30,
+			Firewood = 30,
 		},
 	},
 	Mason = {
@@ -301,7 +301,7 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Stones"] = 30,
+			Stones = 30,
 		},
 	},
 	Unlucky = {
@@ -311,10 +311,10 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["ForestRarities"] = -5,
-			["Medical"] = -5,
-			["Ammunition"] = -5,
-			["JunkWeapons"] = -5,
+			ForestRarities = -5,
+			Medical = -5,
+			Ammunition = -5,
+			JunkWeapons = -5,
 		},
 	},
 	Lucky = {
@@ -324,10 +324,10 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["ForestRarities"] = 5,
-			["Medical"] = 5,
-			["Ammunition"] = 5,
-			["JunkWeapons"] = 5,
+			ForestRarities = 5,
+			Medical = 5,
+			Ammunition = 5,
+			JunkWeapons = 5,
 		},
 	},
 	Formerscout = {
@@ -337,8 +337,8 @@ forageSkills = {
 		weatherEffect = 13,
 		darknessEffect = 3,
 		specialisations = {
-			["MedicinalPlants"] = 5,
-			["Trash"] = 10,
+			MedicinalPlants = 5,
+			Trash = 10,
 		},
 	},
 	Hiker = {
@@ -348,9 +348,9 @@ forageSkills = {
 		weatherEffect = 13,
 		darknessEffect = 3,
 		specialisations = {
-			["MedicinalPlants"] = 3,
-			["Berries"] = 3,
-			["Mushrooms"] = 3,
+			MedicinalPlants = 3,
+			Berries = 3,
+			Mushrooms = 3,
 		},
 	},
 	Hunter = {
@@ -360,10 +360,10 @@ forageSkills = {
 		weatherEffect = 13,
 		darknessEffect = 5,
 		specialisations = {
-			["Animals"] = 5,
-			["Berries"] = 3,
-			["Mushrooms"] = 3,
-			["MedicinalPlants"] = 3,
+			Animals = 5,
+			Berries = 3,
+			Mushrooms = 3,
+			MedicinalPlants = 3,
 		},
 	},
 	EagleEyed = {
@@ -381,10 +381,10 @@ forageSkills = {
 		weatherEffect = 13,
 		darknessEffect = 0,
 		specialisations = {
-			["MedicinalPlants"] = 3,
-			["Crops"] = 5,
-			["Fruits"] = 5,
-			["Vegetables"] = 5,
+			MedicinalPlants = 3,
+			Crops = 5,
+			Fruits = 5,
+			Vegetables = 5,
 		},
 	},
 	Outdoorsman = {
@@ -394,12 +394,12 @@ forageSkills = {
 		weatherEffect = 13,
 		darknessEffect = 5,
 		specialisations = {
-			["Animals"] = 5,
-			["Berries"] = 5,
-			["Mushrooms"] = 5,
-			["MedicinalPlants"] = 5,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			Animals = 5,
+			Berries = 5,
+			Mushrooms = 5,
+			MedicinalPlants = 5,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	WildernessKnowledge = {
@@ -409,14 +409,14 @@ forageSkills = {
 		weatherEffect = 13,
 		darknessEffect = 5,
 		specialisations = {
-			["Animals"] = 5,
-			["Berries"] = 5,
-			["Mushrooms"] = 5,
-			["MedicinalPlants"] = 5,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
-			["Firewood"] = 5,
-			["Stones"] = 5,
+			Animals = 5,
+			Berries = 5,
+			Mushrooms = 5,
+			MedicinalPlants = 5,
+			WildPlants = 5,
+			WildHerbs = 5,
+			Firewood = 5,
+			Stones = 5,
 		},
 	},
 	Cook = {
@@ -426,13 +426,13 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Animals"] = 5,
-			["Berries"] = 5,
-			["Mushrooms"] = 5,
-			["JunkFood"] = 5,
-			["MedicinalPlants"] = 3,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			Animals = 5,
+			Berries = 5,
+			Mushrooms = 5,
+			JunkFood = 5,
+			MedicinalPlants = 3,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	Cook2 = {
@@ -442,13 +442,13 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Animals"] = 5,
-			["Berries"] = 5,
-			["Mushrooms"] = 5,
-			["JunkFood"] = 5,
-			["MedicinalPlants"] = 3,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			Animals = 5,
+			Berries = 5,
+			Mushrooms = 5,
+			JunkFood = 5,
+			MedicinalPlants = 3,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	NightVision = {
@@ -466,10 +466,10 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["JunkFood"] = 5,
-			["MedicinalPlants"] = 5,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			JunkFood = 5,
+			MedicinalPlants = 5,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	Nutritionist2 = {
@@ -479,10 +479,10 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["JunkFood"] = 5,
-			["MedicinalPlants"] = 5,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
+			JunkFood = 5,
+			MedicinalPlants = 5,
+			WildPlants = 5,
+			WildHerbs = 5,
 		},
 	},
 	Herbalist = {
@@ -492,12 +492,12 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["MedicinalPlants"] = 15,
-			["WildPlants"] = 5,
-			["WildHerbs"] = 5,
-			["Crops"] = 5,
-			["Berries"] = 5,
-			["Mushrooms"] = 5,
+			MedicinalPlants = 15,
+			WildPlants = 5,
+			WildHerbs = 5,
+			Crops = 5,
+			Berries = 5,
+			Mushrooms = 5,
 		},
 	},
 	Agoraphobic = {
@@ -515,10 +515,10 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Animals"] = 3,
-			["Berries"] = 3,
-			["Mushrooms"] = 3,
-			["JunkFood"] = 3,
+			Animals = 3,
+			Berries = 3,
+			Mushrooms = 3,
+			JunkFood = 3,
 		},
 	},
 	Marksman = {
@@ -528,7 +528,7 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Ammunition"] = 3,
+			Ammunition = 3,
 		},
 	},
 	FirstAid = {
@@ -538,7 +538,7 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Medical"] = 3,
+			Medical = 3,
 		},
 	},
 	Fishing = {
@@ -548,8 +548,8 @@ forageSkills = {
 		weatherEffect = 0,
 		darknessEffect = 0,
 		specialisations = {
-			["Insects"] = 5,
-			["FishBait"] = 5,
+			Insects = 5,
+			FishBait = 5,
 		},
 	},
 	ShortSighted = {

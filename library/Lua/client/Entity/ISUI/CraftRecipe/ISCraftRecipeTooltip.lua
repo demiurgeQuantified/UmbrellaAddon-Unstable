@@ -1,31 +1,35 @@
 ---@meta
 
 ---@class ISCraftRecipeTooltip : ISPanel
----@field autoFillContents any
----@field debugMode any
----@field dirtyLayout any
----@field followMouse any
----@field infoBox any
----@field ingredients any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field logic any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field player any
----@field playerNum any
----@field recipe any
----@field rootTable any
----@field titleOnly any
----@field titleOnlyAlpha any
----@field titleWidget any
----@field toolsWidget any
----@field [any] any
+---@field autoFillContents boolean
+---@field debugMode unknown
+---@field dirtyLayout boolean
+---@field followMouse unknown
+---@field infoBox unknown?
+---@field ingredients unknown?
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field logic unknown
+---@field margin number
+---@field player unknown
+---@field playerNum unknown
+---@field recipe unknown
+---@field rootTable unknown?
+---@field titleOnly boolean
+---@field titleOnlyAlpha number
+---@field titleWidget unknown?
+---@field toolsWidget unknown?
 ISCraftRecipeTooltip = ISPanel:derive("ISCraftRecipeTooltip")
+ISCraftRecipeTooltip.Type = "ISCraftRecipeTooltip"
 
----@return any
+---@param _parent unknown?
+---@param _recipe unknown?
+---@param _logic unknown?
+---@param _followMouse boolean
+---@param _titleOnly boolean
+---@param _debugMode boolean
+---@return unknown?
 function ISCraftRecipeTooltip.activateToolTipFor(
 	_parent,
 	_player,
@@ -37,44 +41,39 @@ function ISCraftRecipeTooltip.activateToolTipFor(
 )
 end
 
----@return any
+---@param _parent unknown?
+---@return boolean
 function ISCraftRecipeTooltip.deactivateToolTipFor(_parent) end
 
----@return any
+---@param _preferredWidth number
+---@param _preferredHeight number
 function ISCraftRecipeTooltip:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISCraftRecipeTooltip:createChildren() end
 
----@return any
 function ISCraftRecipeTooltip:createDynamicChildren() end
 
----@return any
 function ISCraftRecipeTooltip:initialise() end
 
----@return any
 function ISCraftRecipeTooltip:onResize() end
 
----@return any
 function ISCraftRecipeTooltip:position() end
 
----@return any
 function ISCraftRecipeTooltip:prerender() end
 
----@return any
 function ISCraftRecipeTooltip:render() end
 
----@return any
 function ISCraftRecipeTooltip:setRecipe(_recipe, _titleOnly) end
 
----@return any
 function ISCraftRecipeTooltip:setTitleOnly(_b) end
 
----@return any
 function ISCraftRecipeTooltip:update() end
 
----@return any
 function ISCraftRecipeTooltip:xuiRecalculateLayout() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCraftRecipeTooltip
 function ISCraftRecipeTooltip:new(x, y, width, height, player, recipe, logic, followMouse, debugMode) end

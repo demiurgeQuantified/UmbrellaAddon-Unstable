@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISRepairLightbar : ISBaseTimedAction
----@field item any
----@field jobType any
----@field maxTime any
----@field part any
----@field vehicle any
----@field [any] any
+---@field item unknown
+---@field jobType string
+---@field part unknown
+---@field vehicle unknown
 ISRepairLightbar = ISBaseTimedAction:derive("ISRepairLightbar")
+ISRepairLightbar.Type = "ISRepairLightbar"
 
----@return any
+---@return boolean
 function ISRepairLightbar:complete() end
 
----@return any
+---@return number
 function ISRepairLightbar:getDuration() end
 
----@return any
+---@return boolean
 function ISRepairLightbar:isValid() end
 
----@return any
 function ISRepairLightbar:perform() end
 
----@return any
 function ISRepairLightbar:start() end
 
----@return any
 function ISRepairLightbar:stop() end
 
----@return any
 function ISRepairLightbar:update() end
 
----@return any
+---@return unknown
 function ISRepairLightbar:waitToStart() end
 
+---@param maxTime number
 ---@return ISRepairLightbar
 function ISRepairLightbar:new(character, part, item, maxTime) end

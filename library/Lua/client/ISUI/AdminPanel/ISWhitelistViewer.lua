@@ -1,50 +1,45 @@
 ---@meta
 
 ---@class ISWhitelistViewer : ISPanel
----@field activeView any
----@field backgroundColor any
----@field buttonBorderColor any
----@field canModify any
----@field close any
----@field delete any
----@field modify any
----@field moveWithMouse any
----@field panel any
----@field refreshBtn any
----@field schema any
----@field [any] any
+---@field activeView table
+---@field buttonBorderColor table
+---@field canModify boolean
+---@field close ISButton
+---@field delete ISButton
+---@field modify ISButton
+---@field panel ISTabPanel
+---@field refreshBtn ISButton
+---@field schema table
 ISWhitelistViewer = ISPanel:derive("ISWhitelistViewer")
+ISWhitelistViewer.Type = "ISWhitelistViewer"
 ISWhitelistViewer.bottomInfoHeight = 40
+ISWhitelistViewer.instance = nil ---@type ISWhitelistViewer?
 
----@return any
 function ISWhitelistViewer.receiveDBSchema(schema) end
 
----@return any
 function ISWhitelistViewer:closeSelf() end
 
----@return any
 function ISWhitelistViewer:createChildren() end
 
----@return any
 function ISWhitelistViewer:initialise() end
 
----@return any
 function ISWhitelistViewer:onActivateView() end
 
----@return any
+---@param x number
+---@param y number
 function ISWhitelistViewer:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISWhitelistViewer:onRemove(button, view) end
 
----@return any
 function ISWhitelistViewer:refresh() end
 
----@return any
 function ISWhitelistViewer:refreshButtons() end
 
----@return any
 function ISWhitelistViewer:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWhitelistViewer
 function ISWhitelistViewer:new(x, y, width, height) end

@@ -1,160 +1,134 @@
 ---@meta
 
 ---@class ISButcherHookUI : ISCollapsableWindowJoypad
----@field actionText any
----@field addCorpseBtn any
----@field animal3D any
----@field animalPanel any
----@field animalSize any
----@field avatarHeight any
----@field avatarPanel any
----@field avatarWidth any
----@field avatarX any
----@field avatarY any
----@field backgroundColor any
----@field biggestLabelWidth any
----@field biggestWidth any
----@field blood any
----@field bloodInfoLabel any
----@field bloodLabel any
----@field borderColor any
----@field chr any
----@field configJoypadLater any
----@field corpse any
----@field doingAction any
----@field head any
----@field headInfoLabel any
----@field headLabel any
----@field hook any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field knife any
----@field leather any
----@field leatherInfoLabel any
----@field leatherLabel any
----@field meat any
----@field meatInfoLabel any
----@field meatLabel any
----@field noAnimalPanel any
----@field originalAnimalPanelHeight any
----@field playerNum any
----@field progress any
----@field progressBar any
----@field removeBloodBtn any
----@field removeCorpseBtn any
----@field removeHeadBtn any
----@field removeLeatherBtn any
----@field removeMeatBtn any
----@field [any] any
+---@field actionText string?
+---@field addCorpseBtn ISButton
+---@field animal3D unknown?
+---@field animalPanel ISPanel
+---@field animalSize unknown
+---@field avatarHeight number
+---@field avatarPanel ISCharacterScreenAvatar?
+---@field avatarWidth number
+---@field avatarX number
+---@field avatarY number
+---@field biggestLabelWidth number
+---@field biggestWidth number
+---@field blood number?
+---@field bloodInfoLabel ISLabel
+---@field bloodLabel ISLabel
+---@field chr unknown
+---@field configJoypadLater boolean
+---@field corpse unknown?
+---@field doingAction boolean
+---@field head boolean?
+---@field headInfoLabel ISLabel
+---@field headLabel ISLabel
+---@field hook unknown
+---@field knife unknown
+---@field leather unknown?
+---@field leatherInfoLabel ISLabel
+---@field leatherLabel ISLabel
+---@field meat unknown?
+---@field meatInfoLabel ISLabel
+---@field meatLabel ISLabel
+---@field noAnimalPanel ISPanel
+---@field originalAnimalPanelHeight unknown
+---@field playerNum unknown
+---@field progress number
+---@field progressBar ISProgressBar
+---@field removeBloodBtn ISButton
+---@field removeCorpseBtn ISButton
+---@field removeHeadBtn ISButton
+---@field removeLeatherBtn ISButton
+---@field removeMeatBtn ISButton
 ISButcherHookUI = ISCollapsableWindowJoypad:derive("ISButcherHookUI")
+ISButcherHookUI.Type = "ISButcherHookUI"
 ISButcherHookUI.ui = {}
 
----@return any
 function ISButcherHookUI.onReattachAnimal(hook, animal) end
 
----@return any
 function ISButcherHookUI.onStopBleedingAnimal(self) end
 
----@return any
 function ISButcherHookUI:addCorpseAction(corpse) end
 
----@return any
 function ISButcherHookUI:checkAnimalOnHook() end
 
----@return any
 function ISButcherHookUI:checkDistance() end
 
----@return any
 function ISButcherHookUI:close() end
 
----@return any
 function ISButcherHookUI:configJoypad() end
 
----@return any
 function ISButcherHookUI:create() end
 
----@return any
+---@return unknown
 function ISButcherHookUI:createCorpse(item) end
 
----@return any
+---@return unknown
 function ISButcherHookUI:getBuckets() end
 
----@return any
 function ISButcherHookUI:initialise() end
 
----@return any
+---@return boolean
 function ISButcherHookUI:isCorpseValid(corpse) end
 
----@return any
+---@return table
 function ISButcherHookUI:lookForCorpse() end
 
----@return any
+---@param corpse unknown?
+---@return unknown?
 function ISButcherHookUI:onAddedCorpse(corpse) end
 
----@return any
 function ISButcherHookUI:onBleedAnimal() end
 
----@return any
 function ISButcherHookUI:onClickAddCorpse() end
 
----@return any
+---@return unknown?
 function ISButcherHookUI:onClickRemoveCorpse() end
 
----@return any
 function ISButcherHookUI:onCutCorpse() end
 
----@return any
 function ISButcherHookUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISButcherHookUI:onJoypadDown(button, joypadData) end
 
----@return any
 function ISButcherHookUI:onRemoveBlood() end
 
----@return any
 function ISButcherHookUI:onRemoveHead() end
 
----@return any
 function ISButcherHookUI:onRemoveLeather() end
 
----@return any
 function ISButcherHookUI:onRemoveMeat() end
 
----@return any
 function ISButcherHookUI:onSelectBucketForBlood(bucket) end
 
----@return any
 function ISButcherHookUI:removeCorpseAction() end
 
----@return any
 function ISButcherHookUI:render() end
 
----@return any
+---@return number
 function ISButcherHookUI:renderDebugStuff(yoffset) end
 
----@return any
 function ISButcherHookUI:resetCorpse() end
 
----@return any
+---@param newModData unknown?
+---@param newCorpse unknown?
 function ISButcherHookUI:setAnimalAvatar(newModData, newCorpse) end
 
----@return any
 function ISButcherHookUI:setVisible(vis) end
 
----@return any
 function ISButcherHookUI:updateCorpseDatas() end
 
----@return any
 function ISButcherHookUI:updateLabelAndButtons() end
 
----@return any
+---@return number
 function ISButcherHookUI:updatePositions(test, button, label, infoLabel, yoffset) end
 
----@return any
 function ISButcherHookUI:updateProgressBar(progress) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISButcherHookUI
 function ISButcherHookUI:new(x, y, width, height, hook, player) end

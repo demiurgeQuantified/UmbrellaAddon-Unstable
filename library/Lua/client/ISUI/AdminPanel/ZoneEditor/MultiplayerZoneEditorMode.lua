@@ -1,39 +1,43 @@
 ---@meta
 
 ---@class MultiplayerZoneEditorMode : ISPanel
----@field editor any
----@field mapAPI any
----@field mapUI any
----@field styleAPI any
----@field symbolsAPI any
----@field [any] any
+---@field editor unknown
+---@field mapAPI unknown
+---@field mapUI unknown
+---@field styleAPI unknown
+---@field symbolsAPI unknown
 MultiplayerZoneEditorMode = ISPanel:derive("MultiplayerZoneEditorMode")
+MultiplayerZoneEditorMode.Type = "MultiplayerZoneEditorMode"
 
----@return any
 function MultiplayerZoneEditorMode:display() end
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode:isKeyConsumed(key) end
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode:onKeyPress(key) end
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode:onKeyRelease(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function MultiplayerZoneEditorMode:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function MultiplayerZoneEditorMode:onMouseUp(x, y) end
 
----@return any
+---@return boolean
 function MultiplayerZoneEditorMode:onMouseWheel(del) end
 
----@return any
 function MultiplayerZoneEditorMode:undisplay() end
 
 ---@return MultiplayerZoneEditorMode

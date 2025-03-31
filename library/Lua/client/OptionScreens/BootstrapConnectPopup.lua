@@ -1,32 +1,27 @@
 ---@meta
 
 ---@class BootstrapConnectPopup : ISPanelJoypad
----@field backBtn any
----@field connecting any
----@field connectLabel any
----@field host any
----@field port any
----@field serverPassword any
----@field [any] any
+---@field backBtn ISButton
+---@field connecting boolean
+---@field connectLabel ISLabel
+---@field host unknown
+---@field port number?
+---@field serverPassword string
 BootstrapConnectPopup = ISPanelJoypad:derive("BootstrapConnectPopup")
+BootstrapConnectPopup.Type = "BootstrapConnectPopup"
+BootstrapConnectPopup.instance = nil ---@type BootstrapConnectPopup?
 
----@return any
+---@param serverPassword string
 function BootstrapConnectPopup:connect(host, port, serverPassword) end
 
----@return any
 function BootstrapConnectPopup:create() end
 
----@return any
 function BootstrapConnectPopup:onBackButton() end
 
----@return any
 function BootstrapConnectPopup:onGainJoypadFocus(joypadData) end
 
----@return any
 function BootstrapConnectPopup:OnSteamServerFailedToRespond2(host, port) end
 
----@return any
 function BootstrapConnectPopup:OnSteamServerResponded2(host, port, server2) end
 
----@return any
 function BootstrapConnectPopup:prerender() end

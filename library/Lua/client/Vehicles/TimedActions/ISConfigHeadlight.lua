@@ -1,28 +1,23 @@
 ---@meta
 
 ---@class ISConfigHeadlight : ISBaseTimedAction
----@field character any
----@field dir any
----@field maxTime any
----@field part any
----@field vehicle any
----@field [any] any
+---@field dir unknown
+---@field part unknown
+---@field vehicle unknown
 ISConfigHeadlight = ISBaseTimedAction:derive("ISConfigHeadlight")
+ISConfigHeadlight.Type = "ISConfigHeadlight"
 
----@return any
+---@return boolean
 function ISConfigHeadlight:isValid() end
 
----@return any
 function ISConfigHeadlight:perform() end
 
----@return any
 function ISConfigHeadlight:start() end
 
----@return any
 function ISConfigHeadlight:stop() end
 
----@return any
 function ISConfigHeadlight:update() end
 
+---@param time number
 ---@return ISConfigHeadlight
 function ISConfigHeadlight:new(character, part, dir, time) end

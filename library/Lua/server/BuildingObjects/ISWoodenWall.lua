@@ -1,38 +1,44 @@
 ---@meta
 
 ---@class ISWoodenWall : ISBuildingObject
----@field canBarricade any
----@field corner any
----@field isWallLike any
----@field javaObject any
----@field name any
----@field sq any
----@field [any] any
+---@field corner unknown?
+---@field javaObject unknown
+---@field name string
+---@field sq unknown
 ISWoodenWall = ISBuildingObject:derive("ISWoodenWall")
+ISWoodenWall.Type = "ISWoodenWall"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenWall:addCorner(x, y, z, north) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenWall:checkCorner(x, y, z, north) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenWall:create(x, y, z, north, sprite) end
 
----@return any
+---@return number?
 function ISWoodenWall:getHealth() end
 
----@return any
+---@return number
 function ISWoodenWall:getObjectIndex() end
 
----@return any
+---@return boolean
 function ISWoodenWall:isValid(square) end
 
----@return any
 function ISWoodenWall:onTimedActionStart(action) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenWall:render(x, y, z, square) end
 
+---@param corner unknown?
 ---@return ISWoodenWall
 function ISWoodenWall:new(sprite, northSprite, corner) end

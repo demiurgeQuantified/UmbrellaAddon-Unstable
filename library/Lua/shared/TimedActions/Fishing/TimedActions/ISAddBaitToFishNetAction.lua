@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISAddBaitToFishNetAction : ISBaseTimedAction
----@field bait any
----@field fishNet any
----@field maxTime any
----@field [any] any
+---@field bait unknown
+---@field fishNet unknown
 ISAddBaitToFishNetAction = ISBaseTimedAction:derive("ISAddBaitToFishNetAction")
+ISAddBaitToFishNetAction.Type = "ISAddBaitToFishNetAction"
 
----@return any
+---@return boolean
 function ISAddBaitToFishNetAction:complete() end
 
----@return any
+---@return number
 function ISAddBaitToFishNetAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISAddBaitToFishNetAction:isValid() end
 
----@return any
 function ISAddBaitToFishNetAction:perform() end
 
----@return any
 function ISAddBaitToFishNetAction:start() end
 
----@return any
 function ISAddBaitToFishNetAction:stop() end
 
----@return any
 function ISAddBaitToFishNetAction:update() end
 
 ---@return ISAddBaitToFishNetAction

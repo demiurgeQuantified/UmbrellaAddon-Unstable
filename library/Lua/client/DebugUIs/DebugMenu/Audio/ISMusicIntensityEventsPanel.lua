@@ -1,29 +1,28 @@
 ---@meta
 
 ---@class ISMusicIntensityEventsPanel : ISDebugSubPanelBase
----@field buttonClear any
----@field buttonReload any
----@field eventList any
----@field [any] any
+---@field buttonClear ISButton
+---@field buttonReload ISButton
+---@field eventList ISScrollingListBox
 ISMusicIntensityEventsPanel = ISDebugSubPanelBase:derive("ISMusicIntensityEventsPanel")
+ISMusicIntensityEventsPanel.Type = "ISMusicIntensityEventsPanel"
 
----@return any
 function ISMusicIntensityEventsPanel:createChildren() end
 
----@return any
+---@return number
 function ISMusicIntensityEventsPanel:doDrawItem(y, item, alt) end
 
----@return any
 function ISMusicIntensityEventsPanel:onButtonClear() end
 
----@return any
 function ISMusicIntensityEventsPanel:onButtonReload() end
 
----@return any
 function ISMusicIntensityEventsPanel:populateEventList() end
 
----@return any
 function ISMusicIntensityEventsPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISMusicIntensityEventsPanel
 function ISMusicIntensityEventsPanel:new(x, y, width, height, doStencil) end

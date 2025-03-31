@@ -1,50 +1,52 @@
 ---@meta
 
 ---@class WorldMapEditorMode_Maps : WorldMapEditorMode
----@field listbox any
----@field [any] any
+---@field listbox ISScrollingListBox
 WorldMapEditorMode_Maps = WorldMapEditorMode:derive("WorldMapEditorMode_Maps")
+WorldMapEditorMode_Maps.Type = "WorldMapEditorMode_Maps"
 
----@return any
 function WorldMapEditorMode_Maps:createChildren() end
 
----@return any
 function WorldMapEditorMode_Maps:display() end
 
----@return any
 function WorldMapEditorMode_Maps:fillList() end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Maps:isKeyConsumed(key) end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Maps:onKeyPress(key) end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Maps:onKeyRelease(key) end
 
----@return any
+---@return boolean?
 function WorldMapEditorMode_Maps:onLoadMap() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Maps:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapEditorMode_Maps:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Maps:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Maps:onMouseUpOutside(x, y) end
 
----@return any
 function WorldMapEditorMode_Maps:prerender() end
 
----@return any
 function WorldMapEditorMode_Maps:render() end
 
----@return any
 function WorldMapEditorMode_Maps:undisplay() end
 
 ---@return WorldMapEditorMode_Maps

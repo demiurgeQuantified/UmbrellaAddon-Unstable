@@ -1,32 +1,25 @@
 ---@meta
 
 ---@class TutorialStep : ISBaseObject
----@field messages any
----@field [any] any
+---@field messages LuaList
 TutorialStep = ISBaseObject:derive("TutorialStep")
+TutorialStep.Type = "TutorialStep"
 
----@return any
+---@param x number
+---@param y number
 function TutorialStep:addMessage(text, x, y) end
 
----@return any
-function TutorialStep:addMessage(text, x, y, w, h, clickToSkip, test, focusx, focusy, focusw, focush) end
-
----@return any
 function TutorialStep:begin() end
 
----@return any
 function TutorialStep:doMessage() end
 
----@return any
 function TutorialStep:during() end
 
----@return any
 function TutorialStep:finish() end
 
----@return any
+---@return boolean
 function TutorialStep:isComplete() end
 
----@return any
 function TutorialStep:onClose(message) end
 
 ---@return TutorialStep

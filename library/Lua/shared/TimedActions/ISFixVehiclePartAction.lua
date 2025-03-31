@@ -1,38 +1,34 @@
 ---@meta
 
 ---@class ISFixVehiclePartAction : ISBaseTimedAction
----@field caloriesModifier any
----@field fixer any
----@field fixerNum any
----@field fixing any
----@field fixingNum any
----@field item any
----@field jobType any
----@field maxTime any
----@field vehiclePart any
----@field [any] any
+---@field fixer unknown
+---@field fixerNum number
+---@field fixing unknown
+---@field fixingNum number
+---@field item unknown
+---@field jobType string
+---@field vehiclePart unknown
 ISFixVehiclePartAction = ISBaseTimedAction:derive("ISFixVehiclePartAction")
+ISFixVehiclePartAction.Type = "ISFixVehiclePartAction"
 
----@return any
+---@return boolean
 function ISFixVehiclePartAction:complete() end
 
----@return any
+---@return number
 function ISFixVehiclePartAction:getDuration() end
 
----@return any
+---@return unknown
 function ISFixVehiclePartAction:isValid() end
 
----@return any
 function ISFixVehiclePartAction:perform() end
 
----@return any
 function ISFixVehiclePartAction:start() end
 
----@return any
 function ISFixVehiclePartAction:stop() end
 
----@return any
 function ISFixVehiclePartAction:update() end
 
+---@param fixingNum number
+---@param fixerNum number
 ---@return ISFixVehiclePartAction
 function ISFixVehiclePartAction:new(character, vehiclePart, fixingNum, fixerNum) end

@@ -5,11 +5,13 @@ PrintMediaEntries = {}
 PrintMediaEntries.useJoypad = false
 PrintMediaEntries.list = LuaList:new()
 
----@return any
+---@param index string
+---@param type string
 function PrintMediaEntries.addPrintMediaEntry(index, type) end
 
----@return any
+---@param num number
+---@return unknown
 function PrintMediaEntries.getEntry(num) end
 
----@return any
+---@return number
 function PrintMediaEntries.getEntryCount() end

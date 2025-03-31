@@ -1,56 +1,51 @@
 ---@meta
 
 ---@class ISFluidItemsViewPanel : ISPanel
----@field createItemButton any
----@field entryBox any
----@field itemScriptPanel any
----@field list any
----@field listLabel any
----@field player any
----@field playerNum any
----@field searchText any
----@field selectedItem any
----@field [any] any
+---@field createItemButton ISButton
+---@field entryBox ISTextEntryBox
+---@field itemScriptPanel ISScriptViewPanel
+---@field list ISScrollingListBox
+---@field listLabel ISLabel
+---@field player unknown
+---@field playerNum unknown
+---@field searchText string
+---@field selectedItem unknown
 ISFluidItemsViewPanel = ISPanel:derive("ISFluidItemsViewPanel")
+ISFluidItemsViewPanel.Type = "ISFluidItemsViewPanel"
 
----@return any
 function ISFluidItemsViewPanel.onTextChange(box) end
 
----@return any
 function ISFluidItemsViewPanel:addItem(item) end
 
----@return any
 function ISFluidItemsViewPanel:close() end
 
----@return any
 function ISFluidItemsViewPanel:createChildren() end
 
----@return any
+---@return number
 function ISFluidItemsViewPanel:drawListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISFluidItemsViewPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISFluidItemsViewPanel:initialise() end
 
----@return any
 function ISFluidItemsViewPanel:onButtonClick(_button) end
 
----@return any
 function ISFluidItemsViewPanel:onListSelected(_item) end
 
----@return any
+---@param _width number
+---@param _height number
 function ISFluidItemsViewPanel:onResize(_width, _height) end
 
----@return any
 function ISFluidItemsViewPanel:populate() end
 
----@return any
 function ISFluidItemsViewPanel:prerender() end
 
----@return any
 function ISFluidItemsViewPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFluidItemsViewPanel
 function ISFluidItemsViewPanel:new(x, y, width, height, player) end

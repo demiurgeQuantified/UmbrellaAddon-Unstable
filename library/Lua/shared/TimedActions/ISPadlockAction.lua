@@ -1,33 +1,30 @@
 ---@meta
 
 ---@class ISPadlockAction : ISBaseTimedAction
----@field lock any
----@field maxTime any
----@field padlock any
----@field thump any
----@field [any] any
+---@field lock boolean
+---@field padlock unknown?
+---@field thump unknown
 ISPadlockAction = ISBaseTimedAction:derive("ISPadlockAction")
+ISPadlockAction.Type = "ISPadlockAction"
 
----@return any
+---@return boolean
 function ISPadlockAction:complete() end
 
----@return any
+---@return number
 function ISPadlockAction:getDuration() end
 
----@return any
+---@return boolean
 function ISPadlockAction:isValid() end
 
----@return any
 function ISPadlockAction:perform() end
 
----@return any
 function ISPadlockAction:start() end
 
----@return any
 function ISPadlockAction:stop() end
 
----@return any
 function ISPadlockAction:update() end
 
+---@param padlock unknown?
+---@param lock boolean
 ---@return ISPadlockAction
 function ISPadlockAction:new(character, thump, padlock, lock) end

@@ -1,43 +1,41 @@
 ---@meta
 
 ---@class ISSleepingUI : ISPanel
----@field background any
----@field hourOfDay any
----@field playerIndex any
----@field [any] any
+---@field hourOfDay unknown
+---@field playerIndex unknown
 ISSleepingUI = ISPanel:derive("ISSleepingUI")
+ISSleepingUI.Type = "ISSleepingUI"
 
----@return any
 function ISSleepingUI.OnSleepingTick(playerIndex, hourOfDay) end
 
----@return any
 function ISSleepingUI:createChildren() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISSleepingUI:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function ISSleepingUI:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISSleepingUI:onMouseUp(x, y) end
 
----@return any
+---@return boolean
 function ISSleepingUI:onMouseWheel(del) end
 
----@return any
 function ISSleepingUI:onResolutionChange() end
 
----@return any
 function ISSleepingUI:onSleepingTick(hourOfDay) end
 
----@return any
 function ISSleepingUI:prerender() end
 
----@return any
 function ISSleepingUI:render() end
 
----@return any
 function ISSleepingUI:update() end
 
 ---@return ISSleepingUI

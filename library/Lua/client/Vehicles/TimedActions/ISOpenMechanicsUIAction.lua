@@ -1,30 +1,25 @@
 ---@meta
 
 ---@class ISOpenMechanicsUIAction : ISBaseTimedAction
----@field character any
----@field maxTime any
----@field usedHood any
----@field vehicle any
----@field [any] any
+---@field usedHood unknown?
+---@field vehicle unknown
 ISOpenMechanicsUIAction = ISBaseTimedAction:derive("ISOpenMechanicsUIAction")
+ISOpenMechanicsUIAction.Type = "ISOpenMechanicsUIAction"
 
----@return any
+---@return boolean
 function ISOpenMechanicsUIAction:isValid() end
 
----@return any
 function ISOpenMechanicsUIAction:perform() end
 
----@return any
 function ISOpenMechanicsUIAction:start() end
 
----@return any
 function ISOpenMechanicsUIAction:stop() end
 
----@return any
 function ISOpenMechanicsUIAction:update() end
 
----@return any
+---@return boolean
 function ISOpenMechanicsUIAction:waitToStart() end
 
+---@param usedHood unknown?
 ---@return ISOpenMechanicsUIAction
 function ISOpenMechanicsUIAction:new(character, vehicle, usedHood) end

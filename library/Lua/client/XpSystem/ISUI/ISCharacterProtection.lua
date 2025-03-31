@@ -1,46 +1,41 @@
 ---@meta
 
 ---@class ISCharacterProtection : ISPanelJoypad
----@field backgroundColor any
----@field bFemale any
----@field bodyOutline any
----@field bodyPartPanel any
----@field borderColor any
----@field bparts any
----@field bpPanelX any
----@field bpPanelY any
----@field cacheColor any
----@field char any
----@field colorScheme any
----@field maxLabelWidth any
----@field playerNum any
----@field sex any
----@field [any] any
+---@field bFemale unknown
+---@field bodyOutline unknown
+---@field bodyPartPanel ISBodyPartPanel
+---@field bparts table
+---@field bpPanelX number
+---@field bpPanelY number
+---@field cacheColor unknown
+---@field char unknown
+---@field colorScheme table
+---@field maxLabelWidth number
+---@field playerNum number
+---@field sex string
 ISCharacterProtection = ISPanelJoypad:derive("ISCharacterProtection")
+ISCharacterProtection.Type = "ISCharacterProtection"
 
----@return any
 function ISCharacterProtection:create() end
 
----@return any
 function ISCharacterProtection:createChildren() end
 
----@return any
 function ISCharacterProtection:initialise() end
 
----@return any
 function ISCharacterProtection:initTextures() end
 
----@return any
 function ISCharacterProtection:onJoypadDown(button) end
 
----@return any
 function ISCharacterProtection:prerender() end
 
----@return any
 function ISCharacterProtection:render() end
 
----@return any
 function ISCharacterProtection:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param playerNum number
 ---@return ISCharacterProtection
 function ISCharacterProtection:new(x, y, width, height, playerNum) end

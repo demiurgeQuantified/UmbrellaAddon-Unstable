@@ -1,5 +1,7 @@
 ---@meta
 
+---@class Traps
 Traps = {}
 
-TrapAnimals = TrapAnimals or {}
+---@class TrapAnimals
+TrapAnimals = {}

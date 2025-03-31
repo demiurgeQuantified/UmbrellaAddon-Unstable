@@ -142,5 +142,5 @@ campingLightFireCategory = {
 	Map = 5 / 20.0,
 }
 
----@return any
+---@return number
 function getCampingFuelMax() end

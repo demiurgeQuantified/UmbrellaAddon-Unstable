@@ -4,65 +4,75 @@
 buildUtil = {}
 buildUtil.cheat = false or getDebug()
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function buildUtil.addCorner(x, y, z, thumpable, item) end
 
----@return any
+---@param ISItem RainCollectorBarrel
 function buildUtil.addWoodXp(ISItem) end
 
----@return any
+---@param ISItem ISWoodenDoorFrame
+---@return boolean
 function buildUtil.canBePlace(ISItem, square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function buildUtil.checkCorner(x, y, z, north, thumpable, item) end
 
----@return any
+---@return table
 function buildUtil.checkMaterialOnGround(squareToCheck) end
 
----@return any
+---@param ISItem table
+---@return table
 function buildUtil.consumeMaterial(ISItem) end
 
----@return any
+---@return table
 function buildUtil.getDoubleDoorObjects(object) end
 
----@return any
+---@return table
 function buildUtil.getGarageDoorObjects(object) end
 
----@return any
+---@return table
 function buildUtil.getGraveObjects(object) end
 
----@return any
+---@return table
 function buildUtil.getMaterialOnGround(squareToCheck) end
 
----@return any
+---@param itemMap table
+---@return table
 function buildUtil.getMaterialOnGroundCounts(itemMap) end
 
----@return any
+---@return table
 function buildUtil.getMaterialOnGroundUses(itemMap) end
 
----@return any
+---@return table
 function buildUtil.getStairObjects(object, skipFloor) end
 
----@return any
+---@param ISItem table
+---@return number
 function buildUtil.getWoodHealth(ISItem) end
 
----@return any
+---@param ISItem table
+---@return table?
 function buildUtil.openNailsBox(ISItem) end
 
----@return any
+---@return boolean
 function buildUtil.predicateMaterial(item) end
 
----@return any
 function buildUtil.removeFromGround(square) end
 
----@return any
+---@param _hasConstruction boolean
 function buildUtil.setHaveConstruction(_square, _hasConstruction) end
 
----@return any
+---@param ISItem table
 function buildUtil.setInfo(javaObject, ISItem) end
 
----@return any
+---@param _doAdjacent boolean
+---@return boolean
 function buildUtil.stairIsBlockingPlacement(_square, _doAdjacent, _north) end
 
----@return any
+---@param uses number?
+---@return unknown
 function buildUtil.useDrainable(item, uses) end

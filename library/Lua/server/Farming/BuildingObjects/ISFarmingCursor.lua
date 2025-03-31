@@ -1,43 +1,45 @@
 ---@meta
 
 ---@class ISFarmingCursor : ISBuildingObject
----@field character any
----@field dragNilAfterPlace any
----@field noNeedHammer any
----@field player any
----@field renderX any
----@field renderY any
----@field renderZ any
----@field skipBuildAction any
----@field skipWalk any
----@field [any] any
+---@field character unknown
+---@field noNeedHammer boolean
+---@field player unknown
+---@field renderX number
+---@field renderY number
+---@field renderZ number
+---@field skipBuildAction boolean
+---@field skipWalk boolean
 ISFarmingCursor = ISBuildingObject:derive("ISFarmingCursor")
+ISFarmingCursor.Type = "ISFarmingCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISFarmingCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string?
 function ISFarmingCursor:getAPrompt() end
 
----@return any
+---@return unknown?
 function ISFarmingCursor:getLBPrompt() end
 
----@return any
+---@return table
 function ISFarmingCursor:getObjectList() end
 
----@return any
+---@return unknown?
 function ISFarmingCursor:getRBPrompt() end
 
----@return any
+---@return boolean
 function ISFarmingCursor:isValid(square) end
 
----@return any
+---@return unknown?
 function ISFarmingCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISFarmingCursor:render(x, y, z, square) end
 
----@return any
 function ISFarmingCursor:rotateKey(key) end
 
 ---@return ISFarmingCursor

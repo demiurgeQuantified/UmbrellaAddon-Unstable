@@ -1,24 +1,19 @@
 ---@meta
 
 ---@class ISClimbSheetRopeAction : ISBaseTimedAction
----@field down any
----@field maxTime any
----@field [any] any
+---@field down unknown
 ISClimbSheetRopeAction = ISBaseTimedAction:derive("ISClimbSheetRopeAction")
+ISClimbSheetRopeAction.Type = "ISClimbSheetRopeAction"
 
----@return any
+---@return unknown
 function ISClimbSheetRopeAction:isValid() end
 
----@return any
 function ISClimbSheetRopeAction:perform() end
 
----@return any
 function ISClimbSheetRopeAction:start() end
 
----@return any
 function ISClimbSheetRopeAction:stop() end
 
----@return any
 function ISClimbSheetRopeAction:update() end
 
 ---@return ISClimbSheetRopeAction

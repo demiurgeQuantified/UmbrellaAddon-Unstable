@@ -1,93 +1,95 @@
 ---@meta
 
 ---@class ISUI3DModel : ISUIElement
----@field animateWhilePaused any
----@field dragX any
----@field javaObject any
----@field mouseDown any
----@field [any] any
+---@field animateWhilePaused boolean
+---@field dragX number
+---@field mouseDown boolean
 ISUI3DModel = ISUIElement:derive("ISUI3DModel")
+ISUI3DModel.Type = "ISUI3DModel"
 
----@return any
 function ISUI3DModel:clearVariable(key) end
 
----@return any
 function ISUI3DModel:clearVariables() end
 
----@return any
+---@return unknown
 function ISUI3DModel:getCharacter() end
 
----@return any
+---@return unknown
 function ISUI3DModel:getDirection() end
 
----@return any
 function ISUI3DModel:getState() end
 
----@return any
+---@return unknown
 function ISUI3DModel:getVariable(key) end
 
----@return any
 function ISUI3DModel:instantiate() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISUI3DModel:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function ISUI3DModel:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISUI3DModel:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISUI3DModel:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISUI3DModel:onMouseUpOutside(x, y) end
 
----@return any
 function ISUI3DModel:prerender() end
 
----@return any
 function ISUI3DModel:reportEvent(event) end
 
----@return any
 function ISUI3DModel:setAnimateWhilePaused(animate) end
 
----@return any
 function ISUI3DModel:setAnimSetName(animSet) end
 
----@return any
 function ISUI3DModel:setCharacter(character) end
 
----@return any
 function ISUI3DModel:setDirection(dir) end
 
----@return any
+---@param doExt boolean
 function ISUI3DModel:setDoRandomExtAnimations(doExt) end
 
----@return any
+---@param iso boolean
 function ISUI3DModel:setIsometric(iso) end
 
----@return any
+---@param name string
+---@param female boolean
+---@param zombie boolean
 function ISUI3DModel:setOutfitName(name, female, zombie) end
 
----@return any
+---@param state string
 function ISUI3DModel:setState(state) end
 
----@return any
 function ISUI3DModel:setSurvivorDesc(survivorDesc) end
 
----@return any
 function ISUI3DModel:setVariable(key, value) end
 
----@return any
+---@param xoffset number
 function ISUI3DModel:setXOffset(xoffset) end
 
----@return any
+---@param yoffset number
 function ISUI3DModel:setYOffset(yoffset) end
 
----@return any
+---@param zoom number
 function ISUI3DModel:setZoom(zoom) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISUI3DModel
 function ISUI3DModel:new(x, y, width, height) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class TraitClothingSelectionDefinitions
-TraitClothingSelectionDefinitions = TraitClothingSelectionDefinitions or {}
+TraitClothingSelectionDefinitions = {}
 TraitClothingSelectionDefinitions.Gardener = {
 	Female = {
 		Hat = {

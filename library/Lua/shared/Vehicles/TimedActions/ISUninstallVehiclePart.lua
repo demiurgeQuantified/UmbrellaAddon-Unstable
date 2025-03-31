@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISUninstallVehiclePart : ISBaseTimedAction
----@field jobType any
----@field maxTime any
----@field part any
----@field vehicle any
----@field workTime any
----@field [any] any
+---@field jobType string
+---@field part unknown
+---@field vehicle unknown
+---@field workTime number?
 ISUninstallVehiclePart = ISBaseTimedAction:derive("ISUninstallVehiclePart")
+ISUninstallVehiclePart.Type = "ISUninstallVehiclePart"
 
----@return any
+---@return boolean
 function ISUninstallVehiclePart:complete() end
 
----@return any
+---@return number
 function ISUninstallVehiclePart:getDuration() end
 
----@return any
+---@return boolean
 function ISUninstallVehiclePart:isValid() end
 
----@return any
 function ISUninstallVehiclePart:perform() end
 
----@return any
 function ISUninstallVehiclePart:start() end
 
----@return any
 function ISUninstallVehiclePart:stop() end
 
----@return any
 function ISUninstallVehiclePart:update() end
 
----@return any
+---@return boolean
 function ISUninstallVehiclePart:waitToStart() end
 
+---@param workTime number?
 ---@return ISUninstallVehiclePart
 function ISUninstallVehiclePart:new(character, part, workTime) end

@@ -1,45 +1,39 @@
 ---@meta
 
 ---@class ISAddWaterFromItemAction : ISBaseTimedAction
----@field addUnits any
----@field itemFrom any
----@field itemFromEndingAmount any
----@field itemFromStartAmount any
----@field maxTime any
----@field objectTo any
----@field sound any
----@field [any] any
+---@field addUnits number
+---@field itemFrom unknown
+---@field itemFromEndingAmount number
+---@field itemFromStartAmount unknown
+---@field objectTo unknown
+---@field sound unknown
 ISAddWaterFromItemAction = ISBaseTimedAction:derive("ISAddWaterFromItemAction")
+ISAddWaterFromItemAction.Type = "ISAddWaterFromItemAction"
 
----@return any
+---@return boolean
 function ISAddWaterFromItemAction:complete() end
 
----@return any
+---@return number
 function ISAddWaterFromItemAction:getDuration() end
 
----@return any
+---@return boolean?
 function ISAddWaterFromItemAction:isValid() end
 
----@return any
 function ISAddWaterFromItemAction:perform() end
 
----@return any
 function ISAddWaterFromItemAction:serverStop() end
 
----@return any
 function ISAddWaterFromItemAction:start() end
 
----@return any
 function ISAddWaterFromItemAction:stop() end
 
----@return any
 function ISAddWaterFromItemAction:stopSound() end
 
----@return any
 function ISAddWaterFromItemAction:update() end
 
----@return any
+---@return unknown
 function ISAddWaterFromItemAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISAddWaterFromItemAction
 function ISAddWaterFromItemAction:new(character, itemFrom, objectTo) end

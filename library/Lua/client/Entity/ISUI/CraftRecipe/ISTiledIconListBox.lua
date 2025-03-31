@@ -1,127 +1,127 @@
 ---@meta
 
 ---@class ISTiledIconListBox : ISPanel
----@field autoFillContents any
----@field callbackTarget any
----@field columns any
----@field columnWidth any
----@field currentPage any
----@field dataArrayList any
----@field iconHeight any
----@field iconWidth any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field lastMouseOverTile any
----@field margin any
----@field minimumColumns any
----@field minimumHeight any
----@field minimumRows any
----@field minimumWidth any
----@field mouseOverTile any
----@field onClickTile any
----@field onHoverTile any
----@field onRenderTile any
----@field pages any
----@field rowHeight any
----@field rows any
----@field selectedTileData any
----@field tileCount any
----@field tileHeight any
----@field tileMarginX any
----@field tileMarginY any
----@field tilePadX any
----@field tilePadY any
----@field tileWidth any
----@field [any] any
+---@field autoFillContents boolean
+---@field callbackTarget boolean
+---@field columns unknown
+---@field columnWidth number
+---@field currentPage number
+---@field dataArrayList unknown
+---@field iconHeight number
+---@field iconWidth number
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field lastMouseOverTile number?
+---@field margin number
+---@field minimumColumns number
+---@field minimumRows number
+---@field mouseOverTile number?
+---@field onClickTile boolean
+---@field onHoverTile boolean
+---@field onRenderTile boolean
+---@field pages number
+---@field rowHeight number
+---@field rows unknown
+---@field selectedTileData boolean?
+---@field tileCount number
+---@field tileHeight number
+---@field tileMarginX number
+---@field tileMarginY number
+---@field tilePadX number
+---@field tilePadY number
+---@field tileWidth number
 ISTiledIconListBox = ISPanel:derive("ISTiledIconListBox")
+ISTiledIconListBox.Type = "ISTiledIconListBox"
 
----@return any
 function ISTiledIconListBox:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISTiledIconListBox:calculateTiles() end
 
----@return any
 function ISTiledIconListBox:createChildren() end
 
----@return any
 function ISTiledIconListBox:focusPageOnSelectedTile() end
 
----@return any
+---@return number
 function ISTiledIconListBox:getCurrentPage() end
 
----@return any
+---@return unknown?
 function ISTiledIconListBox:getDataElement(_index) end
 
----@return any
+---@param _tileData unknown?
+---@return number
+---@return number
 function ISTiledIconListBox:getDataElementColumnRow(_tileData) end
 
----@return any
+---@return number
 function ISTiledIconListBox:getPages() end
 
----@return any
+---@param _x number
+---@param _y number
+---@return unknown?
 function ISTiledIconListBox:getTileForCoordinate(_x, _y) end
 
----@return any
+---@param _x number
+---@param _y number
+---@return number?
 function ISTiledIconListBox:getTileIndexForCoordinate(_x, _y) end
 
----@return any
 function ISTiledIconListBox:initialise() end
 
----@return any
 function ISTiledIconListBox:onJoypadDirDown(joypadData) end
 
----@return any
 function ISTiledIconListBox:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISTiledIconListBox:onJoypadDirRight(joypadData) end
 
----@return any
 function ISTiledIconListBox:onJoypadDirUp(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISTiledIconListBox:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTiledIconListBox:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISTiledIconListBox:onMouseMoveOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISTiledIconListBox:onMouseUp(x, y) end
 
----@return any
+---@return boolean
 function ISTiledIconListBox:onMouseWheel(_del) end
 
----@return any
 function ISTiledIconListBox:onPageScrolled(_newPage) end
 
----@return any
 function ISTiledIconListBox:onResize() end
 
----@return any
 function ISTiledIconListBox:pageChanged() end
 
----@return any
 function ISTiledIconListBox:prerender() end
 
----@return any
 function ISTiledIconListBox:render() end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _width number
+---@param _height number
 function ISTiledIconListBox:renderTile(_tileData, _x, _y, _width, _height, _mouseover) end
 
----@return any
 function ISTiledIconListBox:setCurrentPage(_page) end
 
----@return any
+---@param _index number
+---@return unknown?
 function ISTiledIconListBox:trySelectDataElement(_index) end
 
----@return any
 function ISTiledIconListBox:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISTiledIconListBox
 function ISTiledIconListBox:new(x, y, width, height, dataList) end

@@ -1,64 +1,64 @@
 ---@meta
 
 ---@class ISCraftingCategoryUI : ISPanelJoypad
----@field character any
----@field craftingUI any
----@field favCheckedTex any
----@field favNotCheckedTex any
----@field favoriteStar any
----@field favPadX any
----@field favWidth any
----@field filterAll any
----@field filterEntry any
----@field filteringAll any
----@field filterLabel any
----@field lastText any
----@field recipes any
----@field selected any
----@field [any] any
+---@field character unknown
+---@field craftingUI ISCraftingUI
+---@field favCheckedTex unknown
+---@field favNotCheckedTex unknown
+---@field favoriteStar unknown
+---@field favPadX number
+---@field favWidth number
+---@field filterAll ISTickBox
+---@field filterEntry ISTextEntryBox
+---@field filteringAll boolean
+---@field filterLabel ISLabel
+---@field lastText unknown
+---@field recipes ISScrollingListBox
+---@field selected unknown
 ISCraftingCategoryUI = ISPanelJoypad:derive("ISCraftingCategoryUI")
-ISCraftingCategoryUI.instance = nil
+ISCraftingCategoryUI.Type = "ISCraftingCategoryUI"
+ISCraftingCategoryUI.instance = nil ---@type ISCraftingCategoryUI?
 ISCraftingCategoryUI.SMALL_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Small):getLineHeight()
 ISCraftingCategoryUI.MEDIUM_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Medium):getLineHeight()
 
----@return any
+---@param fromKeyboard boolean
 function ISCraftingCategoryUI:addToFavorite(fromKeyboard) end
 
----@return any
 function ISCraftingCategoryUI:create() end
 
----@return any
+---@return number
 function ISCraftingCategoryUI:drawRecipesMap(y, item, alt, _drawBasic) end
 
----@return any
 function ISCraftingCategoryUI:filter() end
 
----@return any
+---@return number
 function ISCraftingCategoryUI:getFavoriteX() end
 
----@return any
 function ISCraftingCategoryUI:initialise() end
 
----@return any
+---@return boolean
 function ISCraftingCategoryUI:isMouseOverFavorite(x) end
 
----@return any
 function ISCraftingCategoryUI:onFilterAll(index, selected) end
 
----@return any
+---@param x number
+---@param y number
 function ISCraftingCategoryUI:onMouseDoubleClick_Recipes(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISCraftingCategoryUI:onMouseDown_Recipes(x, y) end
 
----@return any
 function ISCraftingCategoryUI:prerender() end
 
----@return any
 function ISCraftingCategoryUI:syncAllFilters() end
 
----@return any
 function ISCraftingCategoryUI:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param craftingUI ISCraftingUI
 ---@return ISCraftingCategoryUI
 function ISCraftingCategoryUI:new(x, y, width, height, craftingUI) end

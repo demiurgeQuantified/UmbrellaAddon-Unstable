@@ -1,34 +1,42 @@
 ---@meta
 
 ---@class ISHutch : ISBuildingObject
----@field actionAnim any
----@field character any
----@field def any
----@field [any] any
+---@field actionAnim string
+---@field character unknown
+---@field def unknown
 ISHutch = ISBuildingObject:derive("ISHutch")
+ISHutch.Type = "ISHutch"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISHutch:create(x, y, z, north, sprite) end
 
----@return any
+---@return unknown
 function ISHutch:getSquare2(square, north) end
 
----@return any
+---@return number
+---@return number
+---@return unknown
 function ISHutch:getSquare2Pos(square, north) end
 
----@return any
+---@return boolean
 function ISHutch:isSquareFree(square) end
 
----@return any
+---@return boolean
 function ISHutch:isValid(square) end
 
----@return any
 function ISHutch:onTimedActionStart(action) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISHutch:render(x, y, z, square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean?
 function ISHutch:walkTo(x, y, z) end
 
 ---@return ISHutch

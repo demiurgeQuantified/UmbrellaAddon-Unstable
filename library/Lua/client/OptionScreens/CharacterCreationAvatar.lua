@@ -1,38 +1,36 @@
 ---@meta
 
 ---@class CharacterCreationAvatar : ISPanel
----@field animCombo any
----@field avatarBackgroundTexture any
----@field avatarPanel any
----@field direction any
----@field turnLeftButton any
----@field turnRightButton any
----@field [any] any
+---@field animCombo ISComboBox
+---@field avatarBackgroundTexture unknown
+---@field avatarPanel ISUI3DModel
+---@field direction unknown
+---@field turnLeftButton ISButton
+---@field turnRightButton ISButton
 CharacterCreationAvatar = ISPanel:derive("CharacterCreationAvatar")
+CharacterCreationAvatar.Type = "CharacterCreationAvatar"
 
----@return any
 function CharacterCreationAvatar:createChildren() end
 
----@return any
 function CharacterCreationAvatar:onAnimSelected(combo) end
 
----@return any
+---@param x number
+---@param y number
 function CharacterCreationAvatar:onTurnChar(button, x, y) end
 
----@return any
 function CharacterCreationAvatar:prerender() end
 
----@return any
 function CharacterCreationAvatar:rescaleAvatarViewer() end
 
----@return any
 function CharacterCreationAvatar:setCharacter(character) end
 
----@return any
 function CharacterCreationAvatar:setFacePreview(val) end
 
----@return any
 function CharacterCreationAvatar:setSurvivorDesc(survivorDesc) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return CharacterCreationAvatar
 function CharacterCreationAvatar:new(x, y, width, height) end

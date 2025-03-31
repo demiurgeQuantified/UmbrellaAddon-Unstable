@@ -1,25 +1,25 @@
 ---@meta
 
 ---@class LastStandData
----@field chosenChallenge any
----@field [any] any
 LastStandData = {}
 LastStandData.chosenChallenge = nil
 
----@return any
+---@return table?
 function LastStandData.getSpawnRegion() end
 
----@return any
 function preLoadLastStandInit() end
----@return any
+
 function doLastStandDraw() end
----@return any
+
 function doLastStandInit() end
----@return any
+
 function saveLastStandPlayerInFile(player) end
----@return any
+
+---@param playerNum number
 function doLastStandCreatePlayer(playerNum, playerObj) end
----@return any
+
 function doLastStandPlayerDeath(playerObj) end
----@return any
+
+---@param playerNum number
+---@param dir string
 function doLastStandBackButtonWheel(playerNum, dir) end

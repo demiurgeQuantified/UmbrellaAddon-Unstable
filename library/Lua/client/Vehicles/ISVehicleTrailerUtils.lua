@@ -3,11 +3,13 @@
 ---@class ISVehicleTrailerUtils
 ISVehicleTrailerUtils = {}
 
----@return any
+---@param attachmentA string
+---@param attachmentB string
+---@return unknown?
 function ISVehicleTrailerUtils.getTowableVehicleNear(square, ignoreVehicle, attachmentA, attachmentB) end
 
----@return any
 function ISVehicleTrailerUtils.onTrailerPathFail(playerObj) end
 
----@return any
+---@param nextAction ISAttachTrailerToVehicle | ISDetachTrailerFromVehicle
+---@return boolean
 function ISVehicleTrailerUtils.walkToTrailer(playerObj, vehicle, attachment, nextAction) end

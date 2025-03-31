@@ -1,98 +1,82 @@
 ---@meta
 
 ---@class ISFactionUI : ISPanel
----@field addPlayer any
----@field addPlayerUI any
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field changeOwnership any
----@field changeTag any
----@field changeTitle any
----@field colorPicker any
----@field faction any
----@field factionPvp any
----@field height any
----@field isAdmin any
----@field isOwner any
----@field moveWithMouse any
----@field no any
----@field owner any
----@field player any
----@field playerList any
----@field quitFaction any
----@field releaseFaction any
----@field removePlayer any
----@field selectedPlayer any
----@field showTag any
----@field tag any
----@field tagColor any
----@field tagColorBtn any
----@field width any
----@field [any] any
+---@field addPlayer ISButton
+---@field addPlayerUI ISFactionAddPlayerUI
+---@field buttonBorderColor table
+---@field changeOwnership ISButton
+---@field changeTag ISButton
+---@field changeTitle ISButton
+---@field colorPicker ISColorPicker
+---@field faction unknown
+---@field factionPvp ISTickBox
+---@field isAdmin unknown
+---@field isOwner unknown
+---@field no ISButton
+---@field owner ISLabel
+---@field player unknown
+---@field playerList ISScrollingListBox
+---@field quitFaction ISButton
+---@field releaseFaction ISButton
+---@field removePlayer ISButton
+---@field selectedPlayer unknown?
+---@field showTag ISTickBox
+---@field tag ISLabel
+---@field tagColor ISButton
+---@field tagColorBtn ISButton
 ISFactionUI = ISPanel:derive("ISFactionUI")
+ISFactionUI.Type = "ISFactionUI"
 ISFactionUI.messages = {}
 ISFactionUI.inviteDialogs = {}
+ISFactionUI.instance = nil ---@type ISFactionUI?
 
----@return any
+---@param factionName string
 function ISFactionUI.AcceptedFactionInvite(factionName, host) end
 
----@return any
+---@param factionName string
 function ISFactionUI.ReceiveFactionInvite(factionName, host) end
 
----@return any
+---@param factionName string
 function ISFactionUI.SyncFaction(factionName) end
 
----@return any
 function ISFactionUI:close() end
 
----@return any
+---@return number
 function ISFactionUI:drawPlayers(y, item, alt) end
 
----@return any
 function ISFactionUI:initialise() end
 
----@return any
 function ISFactionUI:onAnswerFactionInvite(button) end
 
----@return any
 function ISFactionUI:onChangeTag(button) end
 
----@return any
 function ISFactionUI:onChangeTitle(button) end
 
----@return any
 function ISFactionUI:onClick(button) end
 
----@return any
 function ISFactionUI:onClickFactionPvp(clickedOption, enabled) end
 
----@return any
 function ISFactionUI:onClickShowTag(clickedOption, enabled) end
 
----@return any
 function ISFactionUI:onPickedTagColor(color, mouseUp) end
 
----@return any
 function ISFactionUI:onQuitFaction(button) end
 
----@return any
 function ISFactionUI:onRemovePlayerFromFaction(button, player) end
 
----@return any
 function ISFactionUI:onTagColor(button) end
 
----@return any
 function ISFactionUI:populateList() end
 
----@return any
 function ISFactionUI:prerender() end
 
----@return any
 function ISFactionUI:render() end
 
----@return any
 function ISFactionUI:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFactionUI
 function ISFactionUI:new(x, y, width, height, faction, player) end

@@ -3,19 +3,29 @@
 ---@class LootZedTool
 LootZedTool = {}
 LootZedTool.SpawnItemCheckerList = {}
-LootZedTool.SpawnItemChecker = {}
+LootZedTool.SpawnItemChecker = {
+	forceForRooms = nil, ---@type string?
+	forceForTiles = nil, ---@type string?
+	forceForZones = nil, ---@type string?
+	forceForItems = nil, ---@type string?
+	containerType = nil, ---@type string?
+	roomName = nil, ---@type string?
+}
 
----@return any
+---@param _ number
+---@param isJunk boolean
 function LootZedTool.doRollItem_CalcChances(containerDist, _, _, character, _, isJunk, _) end
 
----@return any
 function LootZedTool.fillContainer_CalcChances(container, player) end
 
----@return any
+---@param roomDist table
+---@param roomName string?
 function LootZedTool.fillContainerType_CalcChances(roomDist, container, roomName, player) end
 
----@return any
+---@param containerDist unknown?
+---@param doItemContainer boolean
+---@param roomDist unknown?
 function LootZedTool.rollItem_CalcChances(containerDist, container, doItemContainer, player, roomDist) end
 
----@return any
+---@param _ number
 function LootZedTool.rollProceduralItem_CalcChances(proceduralItems, container, _, character, roomDist) end

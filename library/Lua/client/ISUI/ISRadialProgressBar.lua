@@ -1,31 +1,30 @@
 ---@meta
 
 ---@class ISRadialProgressBar : ISUIElement
----@field javaObject any
----@field texture any
----@field [any] any
+---@field texture unknown
 ISRadialProgressBar = ISUIElement:derive("ISRadialProgressBar")
+ISRadialProgressBar.Type = "ISRadialProgressBar"
 
----@return any
+---@return unknown?
 function ISRadialProgressBar:getTexture() end
 
----@return any
+---@return unknown?
 function ISRadialProgressBar:getValue() end
 
----@return any
 function ISRadialProgressBar:instantiate() end
 
----@return any
 function ISRadialProgressBar:prerender() end
 
----@return any
 function ISRadialProgressBar:render() end
 
----@return any
 function ISRadialProgressBar:setTexture(_tex) end
 
----@return any
 function ISRadialProgressBar:setValue(_val) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param texturePath unknown?
 ---@return ISRadialProgressBar
 function ISRadialProgressBar:new(x, y, width, height, texturePath) end

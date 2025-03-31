@@ -1,36 +1,33 @@
 ---@meta
 
 ---@class ISPlugGenerator : ISBaseTimedAction
----@field generator any
----@field maxTime any
----@field plug any
----@field sound any
----@field [any] any
+---@field generator unknown
+---@field plug boolean
+---@field sound unknown
 ISPlugGenerator = ISBaseTimedAction:derive("ISPlugGenerator")
+ISPlugGenerator.Type = "ISPlugGenerator"
 
----@return any
+---@return boolean
 function ISPlugGenerator:complete() end
 
----@return any
+---@return number
 function ISPlugGenerator:getDuration() end
 
----@return any
+---@return boolean
 function ISPlugGenerator:isValid() end
 
----@return any
 function ISPlugGenerator:perform() end
 
----@return any
 function ISPlugGenerator:start() end
 
----@return any
 function ISPlugGenerator:stop() end
 
----@return any
 function ISPlugGenerator:update() end
 
----@return any
+---@return unknown
 function ISPlugGenerator:waitToStart() end
 
+---@param character unknown?
+---@param plug boolean
 ---@return ISPlugGenerator
 function ISPlugGenerator:new(character, generator, plug) end

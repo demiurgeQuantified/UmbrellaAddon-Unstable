@@ -1,17 +1,15 @@
 ---@meta
 
 ---@class ISCampingInfoAction : ISBaseTimedAction
----@field campfire any
----@field campfireTable any
----@field maxTime any
----@field playerNum any
----@field [any] any
-ISCampingInfoAction = ISBaseTimedAction:derive("ISCampingInfoAction")
+---@field campfire unknown
+---@field campfireTable unknown
+---@field playerNum unknown
+ISCampingInfoAction = ISBaseTimedAction:derive("IsCampfireInfoAction")
+ISCampingInfoAction.Type = "IsCampfireInfoAction"
 
----@return any
+---@return boolean
 function ISCampingInfoAction:isValid() end
 
----@return any
 function ISCampingInfoAction:perform() end
 
 ---@return ISCampingInfoAction

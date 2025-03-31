@@ -5,50 +5,53 @@ WeatherChannel = {}
 WeatherChannel.channelUUID = "EMRG-711984"
 WeatherChannel.debugTestAll = false
 
----@return any
+---@param _c table
+---@param offset number
+---@param _len number
 function WeatherChannel.AddExtremesForecasting(_c, _bc, offset, _len) end
 
----@return any
+---@param _c table
+---@param _doFog boolean
 function WeatherChannel.AddForecast(_c, _bc, _forecast, _prefix, _doFog) end
 
----@return any
 function WeatherChannel.AddForecasting(_c, _bc, _hour) end
 
----@return any
+---@param _c table
+---@param _chance number
 function WeatherChannel.AddFuzz(_c, _bc, _chance) end
 
----@return any
+---@param _c table
+---@param _force boolean
 function WeatherChannel.AddPowerNotice(_c, _bc, _force) end
 
----@return any
+---@return unknown
 function WeatherChannel.CreateBroadcast(_gametime) end
 
----@return any
 function WeatherChannel.FillBroadcast(_gametime, _bc) end
 
----@return any
+---@return unknown?
 function WeatherChannel.GetDaySegmentForHour(_hour) end
 
----@return any
+---@return string
 function WeatherChannel.GetForecastString(_type, _forecast) end
 
----@return any
+---@param _c table
+---@param _doItThreshold number
+---@param _forceRand number
 function WeatherChannel.GetRandomString(_c, _bc, _doItThreshold, _forceRand) end
 
----@return any
 function WeatherChannel.Init() end
 
----@return any
 function WeatherChannel.OnEveryHour(_channel, _gametime, _radio) end
 
----@return any
 function WeatherChannel.OnLoadRadioScripts() end
 
----@return any
 function WeatherChannel.TestAll(_gametime, _bc) end
 
 ---@class ISDebugUtils
-ISDebugUtils = ISDebugUtils or {}
+ISDebugUtils = {}
 
----@return any
+---@param num number
+---@param numDecimalPlaces number
+---@return number
 function ISDebugUtils.roundNum(num, numDecimalPlaces) end

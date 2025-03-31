@@ -1,36 +1,32 @@
 ---@meta
 
 ---@class ISCampingInfoWindow : ISCollapsableWindow
----@field campfireTable any
----@field character any
----@field drawJoypadFocus any
----@field fuelAmount any
----@field isLit any
----@field object any
----@field panel any
----@field playerNum any
----@field spriteName any
----@field [any] any
+---@field campfireTable unknown
+---@field character unknown
+---@field drawJoypadFocus boolean
+---@field fuelAmount unknown
+---@field isLit boolean
+---@field object unknown
+---@field panel ISToolTip
+---@field playerNum unknown
+---@field spriteName unknown
 ISCampingInfoWindow = ISCollapsableWindow:derive("ISCampingInfoWindow")
+ISCampingInfoWindow.Type = "ISCampingInfoWindow"
 ISCampingInfoWindow.windows = {}
 
----@return any
 function ISCampingInfoWindow:close() end
 
----@return any
 function ISCampingInfoWindow:createChildren() end
 
----@return any
 function ISCampingInfoWindow:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISCampingInfoWindow:onJoypadDown(button) end
 
----@return any
 function ISCampingInfoWindow:setObject(campfireObject) end
 
----@return any
 function ISCampingInfoWindow:update() end
 
+---@param x number
+---@param y number
 ---@return ISCampingInfoWindow
 function ISCampingInfoWindow:new(x, y, character, campfireObject, campfireTable) end

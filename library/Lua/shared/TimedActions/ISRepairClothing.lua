@@ -1,37 +1,31 @@
 ---@meta
 
 ---@class ISRepairClothing : ISBaseTimedAction
----@field character any
----@field clothing any
----@field fabric any
----@field maxTime any
----@field needle any
----@field part any
----@field sound any
----@field started any
----@field thread any
----@field [any] any
+---@field clothing unknown
+---@field fabric unknown
+---@field needle unknown
+---@field part unknown
+---@field sound unknown
+---@field started boolean
+---@field thread unknown
 ISRepairClothing = ISBaseTimedAction:derive("ISRepairClothing")
+ISRepairClothing.Type = "ISRepairClothing"
 
----@return any
+---@return boolean
 function ISRepairClothing:complete() end
 
----@return any
+---@return number
 function ISRepairClothing:getDuration() end
 
----@return any
+---@return boolean?
 function ISRepairClothing:isValid() end
 
----@return any
 function ISRepairClothing:perform() end
 
----@return any
 function ISRepairClothing:start() end
 
----@return any
 function ISRepairClothing:stop() end
 
----@return any
 function ISRepairClothing:update() end
 
 ---@return ISRepairClothing

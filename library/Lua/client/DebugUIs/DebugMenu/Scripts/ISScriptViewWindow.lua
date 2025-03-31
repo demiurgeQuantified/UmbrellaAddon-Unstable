@@ -1,71 +1,49 @@
 ---@meta
 
 ---@class ISScriptViewWindow : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field collapseCounter any
----@field currentTile any
----@field drawFrame any
----@field greyCol any
----@field height any
----@field hotKeyPanels any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field minimumHeight any
----@field minimumWidth any
----@field monitorID any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field richtext any
----@field scriptPanel any
----@field scriptPanelY any
----@field subFocus any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field currentTile unknown?
+---@field greyCol table
+---@field hotKeyPanels table
+---@field isJoypadWindow boolean
+---@field monitorID number
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field richtext unknown?
+---@field scriptPanel ISScriptViewPanel
+---@field scriptPanelY number
+---@field subFocus unknown?
+---@field title string
 ISScriptViewWindow = ISCollapsableWindow:derive("ISScriptViewWindow")
-ISScriptViewWindow.instance = nil
-ISScriptViewWindow.coords = false
+ISScriptViewWindow.Type = "ISScriptViewWindow"
+ISScriptViewWindow.instance = nil ---@type ISScriptViewWindow?
+ISScriptViewWindow.coords = nil ---@type boolean | table
 
----@return any
+---@return ISScriptViewWindow?
 function ISScriptViewWindow.OnOpenPanel(_script) end
 
----@return any
 function ISScriptViewWindow:close() end
 
----@return any
 function ISScriptViewWindow:createChildren() end
 
----@return any
 function ISScriptViewWindow:initialise() end
 
----@return any
 function ISScriptViewWindow:onResize() end
 
----@return any
 function ISScriptViewWindow:prerender() end
 
----@return any
 function ISScriptViewWindow:render() end
 
----@return any
 function ISScriptViewWindow:setScript(_script) end
 
----@return any
+---@param _title string
 function ISScriptViewWindow:setTitle(_title) end
 
----@return any
 function ISScriptViewWindow:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISScriptViewWindow
 function ISScriptViewWindow:new(x, y, width, height) end

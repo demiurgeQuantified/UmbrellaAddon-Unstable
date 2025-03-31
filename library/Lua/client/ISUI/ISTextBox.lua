@@ -1,140 +1,122 @@
 ---@meta
 
 ---@class ISTextBox : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field colorBtn any
----@field colorPicker any
----@field currentColor any
----@field defaultEntryText any
----@field downX any
----@field downY any
----@field entry any
----@field errorMsg any
----@field fontHgt any
----@field height any
----@field ISButtonA any
----@field ISButtonB any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field maxLines any
----@field mouseOver any
----@field moving any
----@field multipleLine any
----@field name any
----@field no any
----@field numLines any
----@field onclick any
----@field param1 any
----@field param2 any
----@field param3 any
----@field param4 any
----@field player any
----@field showError any
----@field target any
----@field text any
----@field titlebarbkg any
----@field validateArgs any
----@field validateFunc any
----@field validateTarget any
----@field validateTooltipText any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field [any] any
+---@field colorBtn ISButton
+---@field colorPicker ISColorPicker
+---@field currentColor unknown
+---@field defaultEntryText string
+---@field entry ISTextEntryBox
+---@field errorMsg unknown
+---@field fontHgt unknown
+---@field maxLines number
+---@field multipleLine boolean
+---@field name unknown?
+---@field no ISButton
+---@field numLines number
+---@field onclick function
+---@field param1 unknown?
+---@field param2 unknown?
+---@field param3 unknown?
+---@field param4 unknown
+---@field player number?
+---@field showError unknown
+---@field target table?
+---@field text string
+---@field titlebarbkg unknown
+---@field validateArgs table
+---@field validateFunc function
+---@field validateTarget table
+---@field validateTooltipText unknown
+---@field yes ISButton
 ISTextBox = ISPanelJoypad:derive("ISTextBox")
+ISTextBox.Type = "ISTextBox"
 
----@return any
 function ISTextBox:close() end
 
----@return any
 function ISTextBox:destroy() end
 
----@return any
 function ISTextBox:enableColorPicker() end
 
----@return any
+---@return number
 function ISTextBox:getMaxLines() end
 
----@return any
 function ISTextBox:initialise() end
 
----@return any
 function ISTextBox:onClick(button) end
 
----@return any
 function ISTextBox:onColorPicker(button) end
 
----@return any
 function ISTextBox:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISTextBox:onJoypadDirDown(joypadData) end
 
----@return any
 function ISTextBox:onJoypadDirUp(joypadData) end
 
----@return any
 function ISTextBox:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISTextBox:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTextBox:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTextBox:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISTextBox:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISTextBox:onMouseUpOutside(x, y) end
 
----@return any
 function ISTextBox:onPickedColor(color, mouseUp) end
 
----@return any
 function ISTextBox:prerender() end
 
----@return any
 function ISTextBox:render() end
 
----@return any
+---@param max number
 function ISTextBox:setMaxLines(max) end
 
----@return any
+---@param multiple boolean
 function ISTextBox:setMultipleLine(multiple) end
 
----@return any
+---@param numLines number
 function ISTextBox:setNumberOfLines(numLines) end
 
----@return any
+---@param onlyNumbers boolean
 function ISTextBox:setOnlyNumbers(onlyNumbers) end
 
----@return any
+---@param target table
+---@param func function
 function ISTextBox:setValidateFunction(target, func, arg1, arg2) end
 
----@return any
 function ISTextBox:setValidateTooltipText(text) end
 
----@return any
 function ISTextBox:showErrorMessage(show, errorMsg) end
 
----@return any
+---@return number
 function ISTextBox:titleBarHeight() end
 
----@return any
 function ISTextBox:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param text string
+---@param defaultEntryText string
+---@param target table?
+---@param onclick function
+---@param player number?
+---@param param1 unknown?
+---@param param2 unknown?
+---@param param3 unknown?
 ---@return ISTextBox
 function ISTextBox:new(
 	x,
@@ -152,3 +134,10 @@ function ISTextBox:new(
 	param4
 )
 end
+
+---@class ISTextEntryBox
+---@field font unknown
+ISTextEntryBox = {}
+
+---@return unknown
+function ISTextEntryBox:isMultipleLine() end

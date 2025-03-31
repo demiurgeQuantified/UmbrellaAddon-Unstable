@@ -1,47 +1,40 @@
 ---@meta
 
 ---@class ISOpenAnimalInfo : ISBaseTimedAction
----@field animal any
----@field maxTime any
----@field player any
----@field playerNum any
----@field prevFocus any
----@field useProgressBar any
----@field [any] any
+---@field animal unknown
+---@field player unknown
+---@field playerNum unknown
+---@field prevFocus ISDesignationZoneAnimalZoneUI | ISVehicleAnimalUI
+---@field useProgressBar boolean
 ISOpenAnimalInfo = ISBaseTimedAction:derive("ISOpenAnimalInfo")
+ISOpenAnimalInfo.Type = "ISOpenAnimalInfo"
 
----@return any
 function ISOpenAnimalInfo:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISOpenAnimalInfo:complete() end
 
----@return any
 function ISOpenAnimalInfo:forceStop() end
 
----@return any
+---@return number
 function ISOpenAnimalInfo:getDuration() end
 
----@return any
+---@return boolean
 function ISOpenAnimalInfo:isValid() end
 
----@return any
 function ISOpenAnimalInfo:perform() end
 
----@return any
 function ISOpenAnimalInfo:serverStart() end
 
----@return any
 function ISOpenAnimalInfo:start() end
 
----@return any
 function ISOpenAnimalInfo:stop() end
 
----@return any
 function ISOpenAnimalInfo:update() end
 
----@return any
+---@return unknown
 function ISOpenAnimalInfo:waitToStart() end
 
+---@param prevFocus ISDesignationZoneAnimalZoneUI | ISVehicleAnimalUI
 ---@return ISOpenAnimalInfo
 function ISOpenAnimalInfo:new(character, animal, prevFocus) end

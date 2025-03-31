@@ -1,87 +1,71 @@
 ---@meta
 
 ---@class ISFitnessUI : ISPanelJoypad
----@field backgroundColor any
----@field barHgt any
----@field barY any
----@field borderColor any
----@field buttonBorderColor any
----@field cancel any
----@field clickedSquare any
----@field close any
----@field exeData any
----@field exercises any
----@field exeTime any
----@field fgBar any
----@field fgBarOrange any
----@field fgBarRed any
----@field fitness any
----@field height any
----@field ISButtonA any
----@field joypadButtons any
----@field joypadIndex any
----@field joypadIndexY any
----@field minusBtn any
----@field moveWithMouse any
----@field ok any
----@field player any
----@field plusBtn any
----@field regularityProgressBarWidth any
----@field selectedExe any
----@field timeLbl any
----@field titleY any
----@field tooltipLbl any
----@field width any
----@field zoneProgress any
----@field [any] any
+---@field barHgt number
+---@field barY number
+---@field buttonBorderColor table
+---@field cancel ISButton
+---@field clickedSquare unknown
+---@field close ISButton
+---@field exeData unknown
+---@field exercises ISRadioButtons
+---@field exeTime ISTextEntryBox
+---@field fgBar table
+---@field fgBarOrange table
+---@field fgBarRed table
+---@field fitness unknown
+---@field joypadButtons unknown
+---@field minusBtn ISButton
+---@field ok ISButton
+---@field player unknown
+---@field plusBtn ISButton
+---@field regularityProgressBarWidth number
+---@field selectedExe string
+---@field timeLbl ISLabel
+---@field titleY number
+---@field tooltipLbl ISRichTextPanel
+---@field zoneProgress number
 ISFitnessUI = ISPanelJoypad:derive("ISFitnessUI")
+ISFitnessUI.Type = "ISFitnessUI"
 ISFitnessUI.instance = {}
 ISFitnessUI.enduranceLevelTreshold = 2
 
----@return any
 function ISFitnessUI:addExerciseToList(type, data) end
 
----@return any
 function ISFitnessUI:clickedExe(buttons, index) end
 
----@return any
+---@return boolean
 function ISFitnessUI:equipItems() end
 
----@return any
+---@return number
 function ISFitnessUI:getCurrentRegularity() end
 
----@return any
 function ISFitnessUI:initialise() end
 
----@return any
 function ISFitnessUI:onClick(button) end
 
----@return any
 function ISFitnessUI:onClickTime(button) end
 
----@return any
 function ISFitnessUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISFitnessUI:onJoypadDown(button) end
 
----@return any
 function ISFitnessUI:prerender() end
 
----@return any
 function ISFitnessUI:render() end
 
----@return any
 function ISFitnessUI:selectedNewExercise() end
 
----@return any
+---@param bVisible boolean
 function ISFitnessUI:setVisible(bVisible) end
 
----@return any
 function ISFitnessUI:updateButtons(currentAction) end
 
----@return any
 function ISFitnessUI:updateExercises() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFitnessUI
 function ISFitnessUI:new(x, y, width, height, player, clickedSquare) end

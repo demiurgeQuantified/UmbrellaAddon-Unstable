@@ -1,47 +1,40 @@
 ---@meta
 
 ---@class ISRefuelFromGasPump : ISBaseTimedAction
----@field amountSent any
----@field fuelStation any
----@field maxTime any
----@field part any
----@field pumpStart any
----@field pumpTarget any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field tankStart any
----@field tankTarget any
----@field vehicle any
----@field [any] any
+---@field amountSent number
+---@field fuelStation unknown?
+---@field part unknown
+---@field pumpStart unknown
+---@field pumpTarget number
+---@field sound unknown
+---@field tankStart unknown
+---@field tankTarget number
+---@field vehicle unknown
 ISRefuelFromGasPump = ISBaseTimedAction:derive("ISRefuelFromGasPump")
+ISRefuelFromGasPump.Type = "ISRefuelFromGasPump"
 
----@return any
+---@return boolean
 function ISRefuelFromGasPump:complete() end
 
----@return any
+---@return number
 function ISRefuelFromGasPump:getDuration() end
 
----@return any
+---@return unknown
 function ISRefuelFromGasPump:isValid() end
 
----@return any
 function ISRefuelFromGasPump:perform() end
 
----@return any
 function ISRefuelFromGasPump:serverStop() end
 
----@return any
 function ISRefuelFromGasPump:start() end
 
----@return any
 function ISRefuelFromGasPump:stop() end
 
----@return any
 function ISRefuelFromGasPump:update() end
 
----@return any
+---@return unknown
 function ISRefuelFromGasPump:waitToStart() end
 
+---@param fuelStation unknown?
 ---@return ISRefuelFromGasPump
 function ISRefuelFromGasPump:new(character, part, fuelStation) end

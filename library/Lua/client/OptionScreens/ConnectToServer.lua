@@ -1,31 +1,38 @@
 ---@meta
 
 ---@class ConnectToServer : ISPanelJoypad
----@field animOffset any
----@field arrowBG any
----@field arrowFG any
----@field backBtn any
----@field connecting any
----@field connectLabel any
----@field failMessage any
----@field googleAuthButton any
----@field googleAuthEntry any
----@field googleAuthLabel any
----@field googleAuthPopup any
----@field isCoop any
----@field loadingBackground any
----@field previousScreen any
----@field richText any
----@field serverName any
----@field serverName1 any
----@field timerMultiplierAnim any
----@field title any
----@field userName any
----@field userName1 any
----@field [any] any
+---@field animOffset number
+---@field arrowBG unknown
+---@field arrowFG unknown
+---@field backBtn ISButton
+---@field connecting boolean
+---@field connectLabel ISLabel
+---@field failMessage string?
+---@field googleAuthButton ISButton
+---@field googleAuthEntry ISTextEntryBox
+---@field googleAuthLabel ISLabel
+---@field googleAuthPopup ISPanel
+---@field isCoop boolean
+---@field loadingBackground unknown?
+---@field previousScreen table
+---@field richText ISRichTextPanel
+---@field serverName ISLabel
+---@field serverName1 ISLabel
+---@field timerMultiplierAnim number
+---@field title ISLabel
+---@field userName ISLabel
+---@field userName1 ISLabel
 ConnectToServer = ISPanelJoypad:derive("ConnectToServer")
+ConnectToServer.Type = "ConnectToServer"
+ConnectToServer.instance = nil ---@type ConnectToServer?
 
----@return any
+---@param previousScreen table
+---@param serverName string
+---@param userName string
+---@param password string
+---@param localIP string
+---@param doHash boolean?
+---@param authType number?
 function ConnectToServer:connect(
 	previousScreen,
 	serverName,
@@ -41,38 +48,31 @@ function ConnectToServer:connect(
 )
 end
 
----@return any
+---@param previousScreen BootstrapConnectPopup
 function ConnectToServer:connectCoop(previousScreen, serverSteamID) end
 
----@return any
 function ConnectToServer:create() end
 
----@return any
 function ConnectToServer:onBackButton() end
 
----@return any
 function ConnectToServer:OnConnected() end
 
----@return any
+---@param message string
+---@param detail string
 function ConnectToServer:OnConnectFailed(message, detail) end
 
----@return any
 function ConnectToServer:OnConnectionStateChanged(state, message, arg) end
 
----@return any
 function ConnectToServer:onGainJoypadFocus(joypadData) end
 
----@return any
 function ConnectToServer:OnGoogleAuthRequest() end
 
----@return any
+---@param width number
+---@param height number
 function ConnectToServer:onResize(width, height) end
 
----@return any
 function ConnectToServer:onSendButton() end
 
----@return any
 function ConnectToServer:prerender() end
 
----@return any
 function ConnectToServer:render() end

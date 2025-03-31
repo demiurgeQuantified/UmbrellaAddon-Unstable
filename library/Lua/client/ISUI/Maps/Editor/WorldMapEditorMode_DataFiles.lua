@@ -1,46 +1,35 @@
 ---@meta
 
 ---@class WorldMapEditorMode_DataFiles : WorldMapEditorMode
----@field fileNameEntry any
----@field listbox any
----@field selectedItem any
----@field [any] any
+---@field fileNameEntry ISTextEntryBox
+---@field listbox WorldMapEditorListBox
+---@field selectedItem unknown
 WorldMapEditorMode_DataFiles = WorldMapEditorMode:derive("WorldMapEditorMode_DataFiles")
+WorldMapEditorMode_DataFiles.Type = "WorldMapEditorMode_DataFiles"
 
----@return any
 function WorldMapEditorMode_DataFiles:createChildren() end
 
----@return any
+---@return string
 function WorldMapEditorMode_DataFiles:generateLuaScript() end
 
----@return any
 function WorldMapEditorMode_DataFiles:loadSettingsFromMap() end
 
----@return any
 function WorldMapEditorMode_DataFiles:onAddFile() end
 
----@return any
 function WorldMapEditorMode_DataFiles:onFileNameEntered() end
 
----@return any
 function WorldMapEditorMode_DataFiles:onListboxButton(action, arg1) end
 
----@return any
 function WorldMapEditorMode_DataFiles:onMoveDown() end
 
----@return any
 function WorldMapEditorMode_DataFiles:onMoveUp() end
 
----@return any
 function WorldMapEditorMode_DataFiles:onRemoveFile() end
 
----@return any
 function WorldMapEditorMode_DataFiles:undisplay() end
 
----@return any
 function WorldMapEditorMode_DataFiles:update() end
 
----@return any
 function WorldMapEditorMode_DataFiles:updateData() end
 
 ---@return WorldMapEditorMode_DataFiles

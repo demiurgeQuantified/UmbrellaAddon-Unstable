@@ -1,37 +1,38 @@
 ---@meta
 
 ---@class ISJoypadListBox : ISScrollingListBox
----@field joypadData any
----@field playerNum any
----@field [any] any
+---@field joypadData unknown
+---@field playerNum number
+---@field selected number
 ISJoypadListBox = ISScrollingListBox:derive("ISJoypadListBox")
+ISJoypadListBox.Type = "ISJoypadListBox"
 
----@return any
+---@param playerNum number
+---@param joypadData unknown?
+---@return ISJoypadListBox
 function ISJoypadListBox.Create(playerNum, joypadData) end
 
----@return any
 function ISJoypadListBox:cmdAddNew() end
 
----@return any
 function ISJoypadListBox:cmdAddSaved(player) end
 
----@return any
 function ISJoypadListBox:cmdCancel() end
 
----@return any
+---@param playerNum number
 function ISJoypadListBox:cmdTakeOver(playerNum) end
 
----@return any
 function ISJoypadListBox:fill() end
 
----@return any
 function ISJoypadListBox:getUserNameCallback(button, playerObj) end
 
----@return any
 function ISJoypadListBox:invoke() end
 
----@return any
 function ISJoypadListBox:onJoypadDown(button, joypadData) end
 
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param playerNum number
 ---@return ISJoypadListBox
 function ISJoypadListBox:new(x, y, w, h, playerNum, joypadData) end

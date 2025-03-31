@@ -1,149 +1,148 @@
 ---@meta
 
 ---@class ISXuiTableLayoutColumn : ISBaseObject
----@field backgroundColor any
----@field borderColor any
----@field columnIndex any
----@field configWidth any
----@field isPercent any
----@field minimumWidth any
----@field temp any
----@field width any
----@field x any
----@field [any] any
+---@field backgroundColor table
+---@field borderColor table
+---@field columnIndex unknown
+---@field configWidth number
+---@field isPercent boolean
+---@field minimumWidth number
+---@field temp number
+---@field width number
+---@field x number
 ISXuiTableLayoutColumn = ISBaseObject:derive("ISXuiTableLayoutColumn")
+ISXuiTableLayoutColumn.Type = "ISXuiTableLayoutColumn"
 
+---@param _width number
+---@param _isPercent boolean
 ---@return ISXuiTableLayoutColumn
 function ISXuiTableLayoutColumn:new(_columnIndex, _width, _isPercent) end
 
 ---@class ISXuiTableLayoutRow : ISBaseObject
----@field backgroundColor any
----@field borderColor any
----@field configHeight any
----@field height any
----@field isPercent any
----@field minimumHeight any
----@field rowIndex any
----@field temp any
----@field y any
----@field [any] any
+---@field backgroundColor table
+---@field borderColor table
+---@field configHeight number
+---@field height number
+---@field isPercent boolean
+---@field minimumHeight number
+---@field rowIndex unknown
+---@field temp number
+---@field y number
 ISXuiTableLayoutRow = ISBaseObject:derive("ISXuiTableLayoutRow")
+ISXuiTableLayoutRow.Type = "ISXuiTableLayoutRow"
 
+---@param _height number
+---@param _isPercent boolean
 ---@return ISXuiTableLayoutRow
 function ISXuiTableLayoutRow:new(_rowIndex, _height, _isPercent) end
 
 ---@class ISXuiTableLayoutCell : ISBaseObject
----@field backgroundColor any
----@field borderColor any
----@field children any
----@field columnIndex any
----@field drawBackground any
----@field drawBorder any
----@field height any
----@field parent any
----@field rowIndex any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field backgroundColor table
+---@field borderColor table
+---@field children table
+---@field columnIndex unknown
+---@field drawBackground boolean
+---@field drawBorder boolean
+---@field height number?
+---@field parent ISXuiTableLayout
+---@field rowIndex unknown
+---@field width number?
+---@field x number
+---@field y number?
 ISXuiTableLayoutCell = ISBaseObject:derive("ISXuiTableLayoutCell")
+ISXuiTableLayoutCell.Type = "ISXuiTableLayoutCell"
 
----@return any
+---@param _child unknown?
 function ISXuiTableLayoutCell:addChild(_child) end
 
----@return any
+---@return number
 function ISXuiTableLayoutCell:getAbsoluteX() end
 
----@return any
+---@return number
 function ISXuiTableLayoutCell:getAbsoluteY() end
 
----@return any
+---@return number?
 function ISXuiTableLayoutCell:getHeight() end
 
----@return any
+---@return number?
 function ISXuiTableLayoutCell:getWidth() end
 
----@return any
+---@return number
 function ISXuiTableLayoutCell:getX() end
 
----@return any
+---@return number?
 function ISXuiTableLayoutCell:getY() end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
 function ISXuiTableLayoutCell:setRectangle(_x, _y, _w, _h) end
 
+---@param _parent ISXuiTableLayout
 ---@return ISXuiTableLayoutCell
 function ISXuiTableLayoutCell:new(_columnIndex, _rowIndex, _parent) end
 
 ---@class ISXuiTableLayout : ISUIElement
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field cells any
----@field columns any
----@field dirtyLayout any
----@field drawBackground any
----@field drawBorder any
----@field drawGrid any
----@field gridColor any
----@field height any
----@field rows any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field backgroundColor table
+---@field borderColor table
+---@field cells table
+---@field columns table
+---@field dirtyLayout boolean
+---@field drawBackground boolean
+---@field drawBorder boolean
+---@field drawGrid boolean
+---@field gridColor table
+---@field rows table
 ISXuiTableLayout = ISUIElement:derive("ISXuiTableLayout")
+ISXuiTableLayout.Type = "ISXuiTableLayout"
 
----@return any
 function ISXuiTableLayout:addElement(_column, _row, _element) end
 
----@return any
 function ISXuiTableLayout:calculateLayout() end
 
----@return any
+---@return unknown
 function ISXuiTableLayout:cell(_column, _row) end
 
----@return any
+---@return number
 function ISXuiTableLayout:cellCount() end
 
----@return any
+---@return unknown?
 function ISXuiTableLayout:cellGetFirst(_column, _row) end
 
----@return any
+---@return unknown
 function ISXuiTableLayout:column(_index) end
 
----@return any
+---@return number
 function ISXuiTableLayout:columnCount() end
 
----@return any
 function ISXuiTableLayout:createChildren() end
 
----@return any
+---@return ISXuiTableLayoutCell?
 function ISXuiTableLayout:ensureCell(_column, _row) end
 
----@return any
 function ISXuiTableLayout:initialise() end
 
----@return any
+---@return boolean
 function ISXuiTableLayout:isValidPos(_column, _row) end
 
----@return any
+---@param _width number
+---@param _height number
 function ISXuiTableLayout:onResize(_width, _height) end
 
----@return any
 function ISXuiTableLayout:prerender() end
 
----@return any
 function ISXuiTableLayout:render() end
 
----@return any
+---@return unknown
 function ISXuiTableLayout:row(_index) end
 
----@return any
+---@return number
 function ISXuiTableLayout:rowCount() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISXuiTableLayout
 function ISXuiTableLayout:new(x, y, width, height, columns, rows) end

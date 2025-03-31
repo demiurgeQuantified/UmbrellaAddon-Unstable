@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISBBQToggle : ISBaseTimedAction
----@field bbq any
----@field maxTime any
----@field [any] any
+---@field bbq unknown
 ISBBQToggle = ISBaseTimedAction:derive("ISBBQToggle")
+ISBBQToggle.Type = "ISBBQToggle"
 
----@return any
+---@return boolean
 function ISBBQToggle:complete() end
 
----@return any
+---@return number
 function ISBBQToggle:getDuration() end
 
----@return any
+---@return unknown
 function ISBBQToggle:isValid() end
 
----@return any
 function ISBBQToggle:perform() end
 
----@return any
 function ISBBQToggle:start() end
 
----@return any
 function ISBBQToggle:stop() end
 
----@return any
 function ISBBQToggle:update() end
 
----@return any
+---@return unknown
 function ISBBQToggle:waitToStart() end
 
+---@param character unknown?
 ---@return ISBBQToggle
 function ISBBQToggle:new(character, bbq) end

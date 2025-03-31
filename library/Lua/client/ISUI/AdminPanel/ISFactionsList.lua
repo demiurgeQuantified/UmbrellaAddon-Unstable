@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISFactionsList : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field datas any
----@field height any
----@field moveWithMouse any
----@field no any
----@field player any
----@field selectedFaction any
----@field viewBtn any
----@field width any
----@field [any] any
+---@field datas ISScrollingListBox
+---@field no ISButton
+---@field player unknown
+---@field selectedFaction unknown?
+---@field viewBtn ISButton
 ISFactionsList = ISPanel:derive("ISFactionsList")
+ISFactionsList.Type = "ISFactionsList"
 ISFactionsList.messages = {}
+ISFactionsList.instance = nil ---@type ISFactionsList?
 
----@return any
+---@return number
 function ISFactionsList:drawDatas(y, item, alt) end
 
----@return any
 function ISFactionsList:initialise() end
 
----@return any
 function ISFactionsList:onClick(button) end
 
----@return any
 function ISFactionsList:populateList() end
 
----@return any
 function ISFactionsList:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFactionsList
 function ISFactionsList:new(x, y, width, height, player) end

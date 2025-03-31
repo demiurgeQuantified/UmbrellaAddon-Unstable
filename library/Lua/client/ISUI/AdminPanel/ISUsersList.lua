@@ -1,67 +1,58 @@
 ---@meta
 
 ---@class ISUsersList : ISPanel
----@field add any
----@field backgroundColor any
----@field bannedIPs any
----@field borderColor any
----@field close any
----@field datas any
----@field height any
----@field moveWithMouse any
----@field player any
----@field searchEntry any
----@field width any
----@field [any] any
+---@field add ISButton
+---@field bannedIPs ISButton
+---@field close ISButton
+---@field datas ISScrollingListBox
+---@field player unknown
+---@field searchEntry ISTextEntryBox
 ISUsersList = ISPanel:derive("ISUsersList")
+ISUsersList.Type = "ISUsersList"
+ISUsersList.instance = nil ---@type ISUsersList?
 
----@return any
+---@param username string
 function ISUsersList.onAddWarningPoint(username, button, reason, amount) end
 
----@return any
 function ISUsersList:closeModal() end
 
----@return any
+---@param x number
+---@param y number
 function ISUsersList:doContextMenu(item, x, y) end
 
----@return any
 function ISUsersList:doSearch() end
 
----@return any
+---@return number
 function ISUsersList:drawDatas(y, item, alt) end
 
----@return any
 function ISUsersList:initialise() end
 
----@return any
 function ISUsersList:onAddUserClick(button) end
 
----@return any
 function ISUsersList:onClick(button) end
 
----@return any
 function ISUsersList:onClickOption(item, action) end
 
----@return any
 function ISUsersList:onDeleteModalClick(button) end
 
----@return any
+---@param x number
+---@param y number
 function ISUsersList:onRightMouse(x, y) end
 
----@return any
 function ISUsersList:onSelectUser(_item) end
 
----@return any
+---@param username string
 function ISUsersList:onSetPasswordClick(button, username) end
 
----@return any
 function ISUsersList:onSetRoleClickOption(item, role) end
 
----@return any
 function ISUsersList:populateList() end
 
----@return any
 function ISUsersList:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISUsersList
 function ISUsersList:new(x, y, width, height, player) end

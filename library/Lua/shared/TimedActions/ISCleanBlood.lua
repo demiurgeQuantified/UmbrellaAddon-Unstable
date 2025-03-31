@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISCleanBlood : ISBaseTimedAction
----@field caloriesModifier any
----@field cleaner any
----@field maxTime any
----@field sound any
----@field square any
----@field [any] any
+---@field cleaner unknown?
+---@field sound unknown
+---@field square unknown
 ISCleanBlood = ISBaseTimedAction:derive("ISCleanBlood")
+ISCleanBlood.Type = "ISCleanBlood"
 
----@return any
+---@return boolean
 function ISCleanBlood:complete() end
 
----@return any
+---@return number
 function ISCleanBlood:getDuration() end
 
----@return any
+---@return unknown
 function ISCleanBlood:isValid() end
 
----@return any
 function ISCleanBlood:perform() end
 
----@return any
 function ISCleanBlood:start() end
 
----@return any
 function ISCleanBlood:stop() end
 
----@return any
 function ISCleanBlood:update() end
 
----@return any
+---@return unknown
 function ISCleanBlood:waitToStart() end
 
+---@param character unknown?
+---@param cleaner unknown?
 ---@return ISCleanBlood
 function ISCleanBlood:new(character, square, cleaner) end

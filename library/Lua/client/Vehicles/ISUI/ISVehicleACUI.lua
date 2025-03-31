@@ -1,67 +1,45 @@
 ---@meta
 
 ---@class ISVehicleACUI : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field character any
----@field close any
----@field heater any
----@field height any
----@field joypadButtons any
----@field joypadIndex any
----@field joypadIndexY any
----@field knobTex any
----@field moveWithMouse any
----@field ok any
----@field playerNum any
----@field tempKnob any
----@field vehicle any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field character unknown
+---@field close ISButton
+---@field heater unknown
+---@field joypadButtons unknown
+---@field knobTex unknown
+---@field ok ISButton
+---@field playerNum unknown
+---@field tempKnob ISKnob
+---@field vehicle unknown
 ISVehicleACUI = ISPanelJoypad:derive("ISVehicleACUI")
+ISVehicleACUI.Type = "ISVehicleACUI"
 
----@return any
 function ISVehicleACUI:addKnobValues() end
 
----@return any
 function ISVehicleACUI:centerOnScreen() end
 
----@return any
 function ISVehicleACUI:changeKnob() end
 
----@return any
 function ISVehicleACUI:createChildren() end
 
----@return any
 function ISVehicleACUI:onClick(button) end
 
----@return any
 function ISVehicleACUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISVehicleACUI:onJoypadDown(button) end
 
----@return any
 function ISVehicleACUI:prerender() end
 
----@return any
 function ISVehicleACUI:render() end
 
----@return any
 function ISVehicleACUI:setVehicle(vehicle) end
 
----@return any
 function ISVehicleACUI:undisplay() end
 
----@return any
 function ISVehicleACUI:update() end
 
----@return any
 function ISVehicleACUI:updateButtons() end
 
+---@param x number
+---@param y number
 ---@return ISVehicleACUI
 function ISVehicleACUI:new(x, y, character) end

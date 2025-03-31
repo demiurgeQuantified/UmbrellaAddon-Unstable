@@ -1,134 +1,118 @@
 ---@meta
 
 ---@class ISHotbar : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field attachedItems any
----@field availableSlot any
----@field borderColor any
----@field character any
----@field chr any
----@field equippedItemIcon any
----@field font any
----@field height any
----@field margins any
----@field needsRefresh any
----@field playerNum any
----@field replacements any
----@field slotHeight any
----@field slotPad any
----@field slotWidth any
----@field textColor any
----@field width any
----@field wornItems any
----@field [any] any
+---@field attachedItems table
+---@field availableSlot table
+---@field character unknown
+---@field chr unknown
+---@field equippedItemIcon unknown
+---@field font unknown
+---@field margins number
+---@field needsRefresh boolean
+---@field playerNum unknown
+---@field replacements table
+---@field slotHeight number
+---@field slotPad number
+---@field slotWidth number
+---@field textColor table
+---@field wornItems table
 ISHotbar = ISPanelJoypad:derive("ISHotbar")
+ISHotbar.Type = "ISHotbar"
 
----@return any
+---@param playerNum number
+---@param item unknown?
 function ISHotbar.doMenuFromInventory(playerNum, item, context) end
 
----@return any
 function ISHotbar.onClothingUpdated(player) end
 
----@return any
 function ISHotbar.onKeyKeepPressed(key) end
 
----@return any
 function ISHotbar.onKeyPressed(key) end
 
----@return any
 function ISHotbar.onKeyStartPressed(key) end
 
----@return any
 function ISHotbar.onStopGrapple(player) end
 
----@return any
+---@param slotIndex number
 function ISHotbar:activateSlot(slotIndex) end
 
----@return any
+---@param slotIndex number?
+---@param doAnim boolean
 function ISHotbar:attachItem(item, slot, slotIndex, slotDef, doAnim) end
 
----@return any
+---@return boolean
 function ISHotbar:canBeAttached(slot, item) end
 
----@return any
+---@return boolean
 function ISHotbar:compareWornItems() end
 
----@return any
 function ISHotbar:doMenu(slotIndex) end
 
----@return any
 function ISHotbar:equipItem(item) end
 
----@return any
+---@return unknown
 function ISHotbar:getKeyForIndex(index) end
 
----@return any
+---@param slot string
+---@return unknown?
 function ISHotbar:getSlotDef(slot) end
 
----@return any
+---@return unknown
 function ISHotbar:getSlotDefReplacement(slot) end
 
----@return any
+---@return number
 function ISHotbar:getSlotForKey(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return number
 function ISHotbar:getSlotIndexAt(x, y) end
 
----@return any
+---@return unknown?
 function ISHotbar:getThisSlotIndex(slotType, list) end
 
----@return any
+---@param list table
+---@return boolean
 function ISHotbar:haveThisSlot(slotType, list) end
 
----@return any
+---@return boolean
 function ISHotbar:isAllowedToActivateSlot() end
 
----@return any
+---@return boolean
 function ISHotbar:isInHotbar(item) end
 
----@return any
+---@return boolean
 function ISHotbar:isItemAttached(item) end
 
----@return any
 function ISHotbar:loadPosition() end
 
----@return any
+---@param x number
+---@param y number
 function ISHotbar:onMouseUp(x, y) end
 
----@return any
 function ISHotbar:onRadialAttach(item, slotIndex, v) end
 
----@return any
 function ISHotbar:onRadialRemove(item) end
 
----@return any
+---@param x number
+---@param y number
 function ISHotbar:onRightMouseUp(x, y) end
 
----@return any
 function ISHotbar:refresh() end
 
----@return any
 function ISHotbar:reloadIcons() end
 
----@return any
+---@param doAnim boolean
 function ISHotbar:removeItem(item, doAnim) end
 
----@return any
 function ISHotbar:render() end
 
----@return any
 function ISHotbar:savePosition() end
 
----@return any
 function ISHotbar:setAttachAnim(item, slot) end
 
----@return any
 function ISHotbar:setSizeAndPosition() end
 
----@return any
 function ISHotbar:update() end
 
 ---@return ISHotbar

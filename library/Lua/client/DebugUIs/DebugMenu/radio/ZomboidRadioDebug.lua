@@ -1,72 +1,61 @@
 ---@meta
 
 ---@class ZomboidRadioDebug : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field broadcastList any
----@field buttonBorderColor any
----@field channelsList any
----@field channelsSize any
----@field currentChannel any
----@field infoList any
----@field instance any
----@field moveWithMouse any
----@field panelTitle any
----@field radio any
----@field scriptManager any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field broadcastList ISScrollingListBox
+---@field buttonBorderColor table
+---@field channelsList ISScrollingListBox
+---@field channelsSize unknown
+---@field currentChannel unknown
+---@field infoList ISScrollingListBox
+---@field panelTitle string
+---@field radio unknown
+---@field scriptManager unknown
+---@field variableColor table
+---@field zOffsetSmallFont number
 ZomboidRadioDebug = ISPanel:derive("ZomboidRadioDebug")
-ZomboidRadioDebug.instance = nil
+ZomboidRadioDebug.Type = "ZomboidRadioDebug"
+ZomboidRadioDebug.instance = nil ---@type ZomboidRadioDebug?
 
----@return any
+---@return ZomboidRadioDebug?
 function ZomboidRadioDebug.OnOpenPanel() end
 
----@return any
 function ZomboidRadioDebug:close() end
 
----@return any
 function ZomboidRadioDebug:createChildren() end
 
----@return any
+---@return number
 function ZomboidRadioDebug:drawBroadcastList(y, item, alt) end
 
----@return any
+---@return number
 function ZomboidRadioDebug:drawChannelList(y, item, alt) end
 
----@return any
+---@return number
 function ZomboidRadioDebug:drawInfoList(y, item, alt) end
 
----@return any
 function ZomboidRadioDebug:initialise() end
 
----@return any
 function ZomboidRadioDebug:onClickClose() end
 
----@return any
 function ZomboidRadioDebug:onClickRefresh() end
 
----@return any
 function ZomboidRadioDebug:OnDaysListMouseDown(item) end
 
----@return any
 function ZomboidRadioDebug:onViewScript() end
 
----@return any
 function ZomboidRadioDebug:populateBroadcastList(_radioChannel) end
 
----@return any
 function ZomboidRadioDebug:populateInfoList(_radioChannel) end
 
----@return any
 function ZomboidRadioDebug:populateList(_force) end
 
----@return any
 function ZomboidRadioDebug:prerender() end
 
----@return any
 function ZomboidRadioDebug:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
 ---@return ZomboidRadioDebug
 function ZomboidRadioDebug:new(x, y, width, height, title) end

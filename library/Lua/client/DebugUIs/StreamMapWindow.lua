@@ -1,56 +1,60 @@
 ---@meta
 
 ---@class StreamMapWindow : ISCollapsableWindow
----@field backgroundColor any
----@field level any
----@field objectView any
----@field panning any
----@field renderPanel any
----@field title any
----@field xpos any
----@field ypos any
----@field zoom any
----@field [any] any
+---@field level number
+---@field objectView ISScrollingListBox
+---@field panning boolean
+---@field renderPanel ISPanel
+---@field title string
+---@field xpos unknown
+---@field ypos unknown
+---@field zoom number
 StreamMapWindow = ISCollapsableWindow:derive("StreamMapWindow")
+StreamMapWindow.Type = "StreamMapWindow"
 
----@return any
 function StreamMapWindow:checkFontSize() end
 
----@return any
 function StreamMapWindow:createChildren() end
 
----@return any
+---@return number
 function StreamMapWindow:doDrawItem(y, item, alt) end
 
----@return any
 function StreamMapWindow:fillInfo() end
 
----@return any
 function StreamMapWindow:initialise() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function StreamMapWindow:onMapMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function StreamMapWindow:onMapMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function StreamMapWindow:onMapRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function StreamMapWindow:onMapRightMouseUp(x, y) end
 
----@return any
 function StreamMapWindow:onMouseDoubleClickOpenObject(item) end
 
----@return any
+---@return boolean
 function StreamMapWindow:onRenderMouseWheel(del) end
 
----@return any
 function StreamMapWindow:prerender() end
 
----@return any
 function StreamMapWindow:renderTex() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return StreamMapWindow
 function StreamMapWindow:new(x, y, width, height) end

@@ -1,59 +1,49 @@
 ---@meta
 
 ---@class ISReadABook : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field forceProgressBar any
----@field ignoreHandsWounds any
----@field isLiteratureRead any
----@field item any
----@field maxMultiplier any
----@field maxTime any
----@field minutesPerPage any
----@field pageTimer any
----@field playerNum any
----@field startPage any
----@field stats any
----@field [any] any
+---@field forceProgressBar boolean
+---@field ignoreHandsWounds boolean
+---@field isLiteratureRead unknown?
+---@field item unknown
+---@field maxMultiplier number
+---@field minutesPerPage number
+---@field pageTimer number
+---@field playerNum unknown
+---@field startPage unknown
+---@field stats table
 ISReadABook = ISBaseTimedAction:derive("ISReadABook")
+ISReadABook.Type = "ISReadABook"
 
----@return any
 function ISReadABook.checkLevel(character, item) end
 
----@return any
+---@param self ISReadABook
 function ISReadABook.checkMultiplier(self) end
 
----@return any
 function ISReadABook:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISReadABook:complete() end
 
----@return any
+---@return number
 function ISReadABook:getDuration() end
 
----@return any
+---@return boolean
 function ISReadABook:isBook(item) end
 
----@return any
+---@return boolean
 function ISReadABook:isUsingTimeout() end
 
----@return any
+---@return boolean?
 function ISReadABook:isValid() end
 
----@return any
 function ISReadABook:perform() end
 
----@return any
 function ISReadABook:serverStart() end
 
----@return any
 function ISReadABook:start() end
 
----@return any
 function ISReadABook:stop() end
 
----@return any
 function ISReadABook:update() end
 
 ---@return ISReadABook

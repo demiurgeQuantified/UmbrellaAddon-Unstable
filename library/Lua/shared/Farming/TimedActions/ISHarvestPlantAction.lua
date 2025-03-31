@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISHarvestPlantAction : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field maxTime any
----@field plant any
----@field sound any
----@field [any] any
+---@field character unknown?
+---@field plant unknown
+---@field sound unknown
 ISHarvestPlantAction = ISBaseTimedAction:derive("ISHarvestPlantAction")
+ISHarvestPlantAction.Type = "ISHarvestPlantAction"
 
----@return any
+---@return boolean
 function ISHarvestPlantAction:complete() end
 
----@return any
+---@return number
 function ISHarvestPlantAction:getDuration() end
 
----@return any
+---@return unknown
 function ISHarvestPlantAction:isValid() end
 
----@return any
 function ISHarvestPlantAction:perform() end
 
----@return any
 function ISHarvestPlantAction:start() end
 
----@return any
 function ISHarvestPlantAction:stop() end
 
----@return any
 function ISHarvestPlantAction:update() end
 
----@return any
+---@return unknown
 function ISHarvestPlantAction:waitToStart() end
 
+---@param character unknown?
+---@param maxTime number
 ---@return ISHarvestPlantAction
 function ISHarvestPlantAction:new(character, plant, maxTime) end

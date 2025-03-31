@@ -1,62 +1,47 @@
 ---@meta
 
 ---@class ISCollapsableModalRichText : ISCollapsableWindow
----@field backgroundColor any
----@field borderColor any
----@field chatText any
----@field height any
----@field name any
----@field no any
----@field ok any
----@field onclick any
----@field param1 any
----@field param2 any
----@field player any
----@field target any
----@field text any
----@field width any
----@field x any
----@field y any
----@field yes any
----@field yesno any
----@field [any] any
+---@field chatText ISRichTextPanel
+---@field name unknown?
+---@field no ISButton?
+---@field ok ISButton?
+---@field onclick unknown
+---@field param1 unknown
+---@field param2 unknown
+---@field player unknown
+---@field text unknown
+---@field yes ISButton?
+---@field yesno unknown
 ISCollapsableModalRichText = ISCollapsableWindow:derive("ISCollapsableModalRichText")
+ISCollapsableModalRichText.Type = "ISCollapsableModalRichText"
 
----@return any
 function ISCollapsableModalRichText:close() end
 
----@return any
 function ISCollapsableModalRichText:createChildren() end
 
----@return any
 function ISCollapsableModalRichText:destroy() end
 
----@return any
 function ISCollapsableModalRichText:initialise() end
 
----@return any
 function ISCollapsableModalRichText:onClick(button) end
 
----@return any
 function ISCollapsableModalRichText:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISCollapsableModalRichText:onJoypadDirLeft() end
 
----@return any
 function ISCollapsableModalRichText:onJoypadDirRight() end
 
----@return any
 function ISCollapsableModalRichText:onJoypadDown(button) end
 
----@return any
 function ISCollapsableModalRichText:prerender() end
 
----@return any
 function ISCollapsableModalRichText:update() end
 
----@return any
 function ISCollapsableModalRichText:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCollapsableModalRichText
 function ISCollapsableModalRichText:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

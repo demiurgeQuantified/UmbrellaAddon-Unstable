@@ -1,61 +1,78 @@
 ---@meta
 
 ---@class ISPickDungCursor : ISBuildingObject
----@field character any
----@field maxRadius any
----@field noNeedHammer any
----@field player any
----@field radius any
----@field rake any
----@field renderFloorHelper any
----@field skipBuildAction any
----@field skipWalk any
----@field [any] any
+---@field character unknown
+---@field maxRadius number
+---@field noNeedHammer boolean
+---@field player unknown
+---@field radius number
+---@field rake unknown
+---@field renderFloorHelper boolean
+---@field skipBuildAction boolean
+---@field skipWalk boolean
 ISPickDungCursor = ISBuildingObject:derive("ISPickDungCursor")
+ISPickDungCursor.Type = "ISPickDungCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPickDungCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string
 function ISPickDungCursor:getAPrompt() end
 
----@return any
+---@return unknown?
 function ISPickDungCursor:getClosestSquare(squares) end
 
----@return any
+---@return table
 function ISPickDungCursor:getGrassObject(square) end
 
----@return any
+---@return unknown?
 function ISPickDungCursor:getLBPrompt() end
 
----@return any
+---@return unknown?
 function ISPickDungCursor:getRBPrompt() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return table
 function ISPickDungCursor:getSquares(x, y, z) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return number
+---@return number
+---@return number
 function ISPickDungCursor:getTopLeftOfSquares(x, y, z) end
 
----@return any
+---@return ISTimedActionQueue | table
 function ISPickDungCursor:isRunningAction() end
 
----@return any
+---@return boolean
 function ISPickDungCursor:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISPickDungCursor:isValidArea(x, y, z) end
 
----@return any
+---@return unknown?
 function ISPickDungCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPickDungCursor:render(x, y, z, square) end
 
----@return any
 function ISPickDungCursor:rotateKey(key) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISPickDungCursor:walkTo(x, y, z) end
 
 ---@return ISPickDungCursor

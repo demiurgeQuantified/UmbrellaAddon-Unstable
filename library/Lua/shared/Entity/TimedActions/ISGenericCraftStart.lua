@@ -1,33 +1,25 @@
 ---@meta
 
 ---@class ISGenericCraftStart : ISBaseTimedAction
----@field character any
----@field component any
----@field entity any
----@field funcCanStart any
----@field funcStart any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field component unknown
+---@field entity unknown
+---@field funcCanStart unknown
+---@field funcStart unknown
 ISGenericCraftStart = ISBaseTimedAction:derive("ISGenericCraftStart")
+ISGenericCraftStart.Type = "ISGenericCraftStart"
 
----@return any
+---@return number
 function ISGenericCraftStart:getDuration() end
 
----@return any
+---@return boolean
 function ISGenericCraftStart:isValid() end
 
----@return any
 function ISGenericCraftStart:perform() end
 
----@return any
 function ISGenericCraftStart:start() end
 
----@return any
 function ISGenericCraftStart:stop() end
 
----@return any
 function ISGenericCraftStart:update() end
 
 ---@return ISGenericCraftStart

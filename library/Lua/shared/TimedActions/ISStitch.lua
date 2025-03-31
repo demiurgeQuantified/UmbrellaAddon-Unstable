@@ -1,46 +1,41 @@
 ---@meta
 
 ---@class ISStitch : ISBaseTimedAction
----@field bandagedPlayerX any
----@field bandagedPlayerY any
----@field bodyPart any
----@field character any
----@field doctor any
----@field doctorLevel any
----@field doIt any
----@field item any
----@field maxTime any
----@field otherPlayer any
----@field sound any
----@field [any] any
+---@field bandagedPlayerX unknown
+---@field bandagedPlayerY unknown
+---@field bodyPart unknown
+---@field doctor unknown
+---@field doctorLevel number
+---@field doIt boolean
+---@field item unknown?
+---@field otherPlayer unknown
+---@field sound unknown
 ISStitch = ISBaseTimedAction:derive("ISStitch")
+ISStitch.Type = "ISStitch"
 
----@return any
+---@return boolean
 function ISStitch:complete() end
 
----@return any
+---@return number
 function ISStitch:getDuration() end
 
----@return any
+---@return boolean?
 function ISStitch:isValid() end
 
----@return any
 function ISStitch:perform() end
 
----@return any
 function ISStitch:start() end
 
----@return any
 function ISStitch:stop() end
 
----@return any
 function ISStitch:stopSound() end
 
----@return any
 function ISStitch:update() end
 
----@return any
+---@return boolean
 function ISStitch:waitToStart() end
 
+---@param item unknown?
+---@param doIt boolean
 ---@return ISStitch
 function ISStitch:new(character, otherPlayer, item, bodyPart, doIt) end

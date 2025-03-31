@@ -2,11 +2,12 @@
 
 ---@class CTrapSystem : CGlobalObjectSystem
 CTrapSystem = CGlobalObjectSystem:derive("CTrapSystem")
+CTrapSystem.Type = "CTrapSystem"
 
----@return any
+---@return boolean
 function CTrapSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return CTrapGlobalObject
 function CTrapSystem:newLuaObject(globalObject) end
 
 ---@return CTrapSystem

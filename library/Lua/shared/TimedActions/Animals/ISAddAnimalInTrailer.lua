@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISAddAnimalInTrailer : ISBaseTimedAction
----@field animal any
----@field animalInventoryItem any
----@field fromHand any
----@field maxTime any
----@field vehicle any
----@field [any] any
+---@field animal unknown
+---@field animalInventoryItem unknown
+---@field fromHand boolean
+---@field vehicle unknown
 ISAddAnimalInTrailer = ISBaseTimedAction:derive("ISAddAnimalInTrailer")
+ISAddAnimalInTrailer.Type = "ISAddAnimalInTrailer"
 
----@return any
+---@return boolean
 function ISAddAnimalInTrailer:complete() end
 
----@return any
+---@return number
 function ISAddAnimalInTrailer:getDuration() end
 
----@return any
+---@return boolean?
 function ISAddAnimalInTrailer:isValid() end
 
----@return any
 function ISAddAnimalInTrailer:perform() end
 
----@return any
 function ISAddAnimalInTrailer:start() end
 
----@return any
 function ISAddAnimalInTrailer:stop() end
 
----@return any
 function ISAddAnimalInTrailer:update() end
 
----@return any
+---@return unknown
 function ISAddAnimalInTrailer:waitToStart() end
 
+---@param fromHand boolean
 ---@return ISAddAnimalInTrailer
 function ISAddAnimalInTrailer:new(character, vehicle, animal, fromHand) end

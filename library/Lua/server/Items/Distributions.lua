@@ -1,4 +1,13 @@
 ---@meta
 
 ---@class Distributions
-Distributions = Distributions or {}
+Distributions = {}
+
+---@class SuburbsDistributions
+SuburbsDistributions = {}
+
+---@class ClutterTables
+ClutterTables = {}
+
+---@class BagsAndContainers
+BagsAndContainers = {}

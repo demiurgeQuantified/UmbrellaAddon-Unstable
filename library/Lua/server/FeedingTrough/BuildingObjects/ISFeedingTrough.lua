@@ -1,41 +1,46 @@
 ---@meta
 
 ---@class ISFeedingTrough : ISBuildingObject
----@field actionAnim any
----@field character any
----@field def any
----@field doubleSprite any
----@field sprite2 any
----@field sq2 any
----@field troughSprite any
----@field [any] any
+---@field actionAnim string
+---@field character unknown
+---@field def unknown
+---@field doubleSprite boolean
+---@field sprite2 unknown
+---@field sq2 unknown
+---@field troughSprite table
 ISFeedingTrough = ISBuildingObject:derive("ISFeedingTrough")
+ISFeedingTrough.Type = "ISFeedingTrough"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISFeedingTrough:create(x, y, z, north, sprite) end
 
----@return any
+---@return unknown
 function ISFeedingTrough:getSquare2(square, north) end
 
----@return any
+---@return number
+---@return number
+---@return unknown
 function ISFeedingTrough:getSquare2Pos(square, north) end
 
----@return any
-function ISFeedingTrough:getSquare2Pos(square, north) end
-
----@return any
+---@return boolean
 function ISFeedingTrough:isSquareFree(square) end
 
----@return any
+---@return boolean
 function ISFeedingTrough:isValid(square) end
 
----@return any
 function ISFeedingTrough:onTimedActionStart(action) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISFeedingTrough:render(x, y, z, square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean?
 function ISFeedingTrough:walkTo(x, y, z) end
 
 ---@return ISFeedingTrough

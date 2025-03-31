@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISPutOutCampfireAction : ISBaseTimedAction
----@field campfire any
----@field maxTime any
----@field [any] any
+---@field campfire unknown
 ISPutOutCampfireAction = ISBaseTimedAction:derive("ISPutOutCampfireAction")
+ISPutOutCampfireAction.Type = "ISPutOutCampfireAction"
 
----@return any
+---@return boolean
 function ISPutOutCampfireAction:complete() end
 
----@return any
+---@return number
 function ISPutOutCampfireAction:getDuration() end
 
----@return any
+---@return boolean
 function ISPutOutCampfireAction:isValid() end
 
----@return any
 function ISPutOutCampfireAction:perform() end
 
----@return any
 function ISPutOutCampfireAction:start() end
 
----@return any
 function ISPutOutCampfireAction:stop() end
 
----@return any
 function ISPutOutCampfireAction:update() end
 
----@return any
+---@return unknown
 function ISPutOutCampfireAction:waitToStart() end
 
 ---@return ISPutOutCampfireAction

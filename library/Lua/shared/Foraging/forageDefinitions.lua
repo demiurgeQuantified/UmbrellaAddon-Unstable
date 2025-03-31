@@ -119,4 +119,5 @@ forageDefaultDefs = {
 	},
 }
 
+---@class forageDefs
 forageDefs = {}

@@ -1,53 +1,50 @@
 ---@meta
 
 ---@class ISEntityScriptsPanel : ISPanel
----@field buildButton any
----@field entryBox any
----@field list any
----@field listLabel any
----@field player any
----@field playerNum any
----@field scriptLabel any
----@field scriptPanel any
----@field searchText any
----@field selectedCanBuild any
----@field selectedEntityItem any
----@field subLabel any
----@field [any] any
+---@field buildButton ISButton
+---@field entryBox ISTextEntryBox
+---@field list ISScrollingListBox
+---@field listLabel ISLabel
+---@field player unknown
+---@field playerNum unknown
+---@field scriptLabel ISLabel
+---@field scriptPanel ISScriptViewPanel
+---@field searchText string
+---@field selectedCanBuild boolean
+---@field selectedEntityItem unknown
+---@field subLabel ISLabel
 ISEntityScriptsPanel = ISPanel:derive("ISEntityScriptsPanel")
+ISEntityScriptsPanel.Type = "ISEntityScriptsPanel"
 
----@return any
 function ISEntityScriptsPanel.onTextChange(box) end
 
----@return any
 function ISEntityScriptsPanel:createChildren() end
 
----@return any
+---@return number
 function ISEntityScriptsPanel:drawEntityListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISEntityScriptsPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISEntityScriptsPanel:initialise() end
 
----@return any
 function ISEntityScriptsPanel:onButtonClick(_button) end
 
----@return any
 function ISEntityScriptsPanel:onEntityListSelected(_item) end
 
----@return any
+---@param _width number
+---@param _height number
 function ISEntityScriptsPanel:onResize(_width, _height) end
 
----@return any
 function ISEntityScriptsPanel:populate() end
 
----@return any
 function ISEntityScriptsPanel:prerender() end
 
----@return any
 function ISEntityScriptsPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISEntityScriptsPanel
 function ISEntityScriptsPanel:new(x, y, width, height, player) end

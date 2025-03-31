@@ -1,103 +1,92 @@
 ---@meta
 
 ---@class ISVendorVendingLayout : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field anim any
----@field arrayList any
----@field background any
----@field backgroundColor any
----@field blueprintLogic any
----@field borderColor any
----@field buttonBorderColor any
----@field buttonBorderColorDisabled any
----@field buttonImg any
----@field buttons any
----@field frontImageOff any
----@field frontImageOn any
----@field glassPanel any
----@field glassPanelBorder any
----@field hackPane any
----@field height any
----@field interiorPanel any
----@field interiorTextures any
----@field interiorUnlitTextures any
----@field itemSlotMoney any
----@field itemSlotOutput any
----@field joypadMoveInterval any
----@field ledInvalidCol any
----@field ledValidCol any
----@field moneyLcd any
----@field mouseOverButtons any
----@field optionArea any
----@field parentPanel any
----@field parts any
----@field player any
----@field playerNum any
----@field productColumns any
----@field resourceMoney any
----@field resourceOutput any
----@field resources any
----@field texGlassBorder any
----@field texGlassPane any
----@field texSpiralBack any
----@field texSpiralFront any
----@field texVendingBar any
----@field trayImgs any
----@field trayPanel any
----@field vendingBarImgs any
----@field vendingBars any
----@field vendingOptions any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field anim table
+---@field arrayList unknown
+---@field blueprintLogic unknown
+---@field buttonBorderColor table
+---@field buttonBorderColorDisabled table
+---@field buttonImg table
+---@field buttons table
+---@field frontImageOff boolean
+---@field frontImageOn boolean
+---@field glassPanel ISImage
+---@field glassPanelBorder ISImage
+---@field hackPane ISPanel
+---@field interiorPanel IS9Patch
+---@field interiorTextures table
+---@field interiorUnlitTextures table
+---@field itemSlotMoney ISItemSlot
+---@field itemSlotOutput ISItemSlot
+---@field joypadMoveInterval number
+---@field ledInvalidCol table
+---@field ledValidCol table
+---@field moneyLcd ISLcdBar
+---@field mouseOverButtons boolean
+---@field optionArea table
+---@field parentPanel unknown
+---@field parts unknown
+---@field player unknown
+---@field playerNum unknown
+---@field productColumns number
+---@field resourceMoney unknown
+---@field resourceOutput unknown
+---@field resources unknown
+---@field texGlassBorder unknown
+---@field texGlassPane unknown
+---@field texSpiralBack unknown
+---@field texSpiralFront unknown
+---@field texVendingBar unknown
+---@field trayImgs table
+---@field trayPanel IS9Patch
+---@field vendingBarImgs table
+---@field vendingBars table
+---@field vendingOptions table
 ISVendorVendingLayout = ISPanel:derive("ISVendorVendingLayout")
+ISVendorVendingLayout.Type = "ISVendorVendingLayout"
 ISVendorVendingLayout.defaultJoypadMoveInterval = 20
 
----@return any
+---@param _x number
+---@param _y number
+---@return table
 function ISVendorVendingLayout:addVendingOption(_index, _x, _y, _resource) end
 
----@return any
 function ISVendorVendingLayout:createChildren() end
 
----@return any
+---@return unknown
 function ISVendorVendingLayout:getCredits() end
 
----@return any
+---@return unknown
 function ISVendorVendingLayout:getProductPrice(_productId) end
 
----@return any
+---@return unknown
 function ISVendorVendingLayout:getVendingOption(_index) end
 
----@return any
 function ISVendorVendingLayout:initialise() end
 
----@return any
+---@return unknown
 function ISVendorVendingLayout:isRunning() end
 
----@return any
+---@return unknown
 function ISVendorVendingLayout:isTurnedOn() end
 
----@return any
 function ISVendorVendingLayout:onButtonClick(_button) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISVendorVendingLayout:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISVendorVendingLayout:onMouseMoveOutside(dx, dy) end
 
----@return any
 function ISVendorVendingLayout:prerender() end
 
----@return any
 function ISVendorVendingLayout:render() end
 
----@return any
 function ISVendorVendingLayout:update() end
 
+---@param x number
+---@param y number
 ---@return ISVendorVendingLayout
 function ISVendorVendingLayout:new(x, y, _parentPanel, _blueprintLogic) end

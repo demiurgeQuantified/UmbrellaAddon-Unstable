@@ -3,41 +3,61 @@
 ---@class ISPlayerData
 ISPlayerData = {}
 
----@return any
+---@param id number
+---@return unknown
 function getPlayerData(id) end
----@return any
+
 function removeInventoryUI(id) end
----@return any
+
+---@return unknown?
 function getButtonPrompts(id) end
----@return any
+
+---@param id number
+---@return unknown?
 function getPlayerInventory(id) end
----@return any
+
+---@param id number
+---@return unknown?
 function getPlayerLoot(id) end
----@return any
+
+---@return unknown?
 function getPlayerContextMenu(id) end
----@return any
+
+---@param id number
+---@return unknown?
 function getPlayerHotbar(id) end
----@return any
+
+---@return unknown?
 function getPlayerInfoPanel(id) end
----@return any
+
+---@return unknown?
 function getPlayerBackButtonWheel(id) end
----@return any
+
+---@return unknown
 function getPlayerCraftingUI(id) end
----@return any
+
+---@return unknown
 function getPlayerZoneUI(id) end
----@return any
+
+---@return unknown
 function getPlayerMechanicsUI(id) end
----@return any
+
+---@return unknown?
 function getPlayerMiniMap(id) end
----@return any
+
+---@return unknown
 function getPlayerVehicleDashboard(id) end
----@return any
+
+---@param id number
+---@return unknown
 function getPlayerRadialMenu(id) end
----@return any
+
+---@return unknown
 function getPlayerSleepingUI(id) end
----@return any
+
+---@param id number
 function createPlayerData(id) end
----@return any
+
 function destroyPlayerData(playerObj) end
----@return any
+
 function destroyAllPlayerData() end

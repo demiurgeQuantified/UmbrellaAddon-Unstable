@@ -1,61 +1,54 @@
 ---@meta
 
 ---@class ISContextMenu : ISPanel
----@field addedDefaultOptions any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field arrowDown any
----@field arrowUp any
----@field backgroundColor any
----@field backgroundColorMouseOver any
----@field blinkAlpha any
----@field blinkAlphaIncrease any
----@field borderColor any
----@field currentOptionRect any
----@field font any
----@field fontHgt any
----@field forceVisible any
----@field height any
----@field highlightedOption any
----@field itemHgt any
----@field keepOnScreen any
----@field mouseOut any
----@field mouseOver any
----@field numOptions any
----@field optionPool any
----@field options any
----@field padTopBottom any
----@field padY any
----@field parent any
----@field player any
----@field scrollAreaHeight any
----@field scrollIndicatorHgt any
----@field slideGoalDY any
----@field slideGoalTime any
----@field slideGoalX any
----@field slideGoalY any
----@field subMenu any
----@field subOptionNums any
----@field tickTexture any
----@field toolTip any
----@field visibleCheck any
----@field width any
----@field x any
----@field y any
----@field zoom any
----@field [any] any
+---@field addedDefaultOptions boolean
+---@field arrowDown unknown
+---@field arrowUp unknown
+---@field backgroundColorMouseOver table
+---@field blinkAlpha number
+---@field blinkAlphaIncrease boolean
+---@field currentOptionRect table
+---@field font unknown
+---@field fontHgt unknown
+---@field forceVisible boolean
+---@field highlightedOption unknown?
+---@field itemHgt number
+---@field keepOnScreen boolean
+---@field mouseOut boolean
+---@field mouseOver number?
+---@field numOptions number
+---@field optionPool table
+---@field options table
+---@field padTopBottom number
+---@field padY number
+---@field parent table
+---@field player number
+---@field scrollAreaHeight number
+---@field scrollIndicatorHgt number
+---@field slideGoalDY number
+---@field slideGoalTime unknown
+---@field slideGoalX unknown?
+---@field slideGoalY unknown?
+---@field subMenu unknown?
+---@field subOptionNums number
+---@field tickTexture unknown
+---@field toolTip unknown?
+---@field visibleCheck boolean
+---@field zoom number?
 ISContextMenu = ISPanel:derive("ISContextMenu")
+ISContextMenu.Type = "ISContextMenu"
+ISContextMenu.globalPlayerContext = nil ---@type number?
 ISContextMenu.wantNoise = false
 
----@return any
+---@param player number
+---@param x number
+---@param y number
+---@return unknown?
 function ISContextMenu.get(player, x, y) end
 
----@return any
 function ISContextMenu.noise(msg) end
 
----@return any
+---@return unknown?
 function ISContextMenu:addActionsOption(
 	text,
 	getActionsFunction,
@@ -72,7 +65,8 @@ function ISContextMenu:addActionsOption(
 )
 end
 
----@return any
+---@param name string
+---@return unknown?
 function ISContextMenu:addColorBoxOption(
 	name,
 	target,
@@ -90,7 +84,8 @@ function ISContextMenu:addColorBoxOption(
 )
 end
 
----@return any
+---@param name string
+---@return unknown?
 function ISContextMenu:addDebugOption(
 	name,
 	target,
@@ -108,13 +103,14 @@ function ISContextMenu:addDebugOption(
 )
 end
 
----@return any
 function ISContextMenu:addDefaultOptions() end
 
----@return any
+---@return unknown?
 function ISContextMenu:addGetUpOption(text, target, onSelect, p2, p3, p4, p5, p6, p7, p8, p9, p10, ...) end
 
----@return any
+---@param name string
+---@param target ISContextMenu
+---@return unknown?
 function ISContextMenu:addOption(
 	name,
 	target,
@@ -132,7 +128,8 @@ function ISContextMenu:addOption(
 )
 end
 
----@return any
+---@param name string
+---@return unknown
 function ISContextMenu:addOptionOnTop(
 	name,
 	target,
@@ -150,10 +147,10 @@ function ISContextMenu:addOptionOnTop(
 )
 end
 
----@return any
 function ISContextMenu:addSubMenu(option, menu) end
 
----@return any
+---@param name string
+---@return unknown
 function ISContextMenu:allocOption(
 	name,
 	target,
@@ -171,79 +168,75 @@ function ISContextMenu:allocOption(
 )
 end
 
----@return any
 function ISContextMenu:calcHeight() end
 
----@return any
+---@return unknown
 function ISContextMenu:calcWidth() end
 
----@return any
+---@param isHighlighted boolean
 function ISContextMenu:callOptionHighlightFunction(option, isHighlighted) end
 
----@return any
 function ISContextMenu:clear() end
 
----@return any
 function ISContextMenu:closeAll() end
 
----@return any
 function ISContextMenu:displayAncestor(ancestor) end
 
----@return any
 function ISContextMenu:displaySubMenu(subMenu, option) end
 
----@return any
 function ISContextMenu:ensureVisible() end
 
----@return any
+---@return number
 function ISContextMenu:getDefaultOptionCount() end
 
----@return any
+---@param x number
+---@param y number
+---@return number
 function ISContextMenu:getIndexAt(x, y) end
 
----@return any
+---@return number
 function ISContextMenu:getIndexForSubMenu(subMenu) end
 
----@return any
+---@return number
 function ISContextMenu:getItemY(index) end
 
----@return any
+---@return table
 function ISContextMenu:getMenuOptionNames() end
 
----@return any
+---@return unknown
 function ISContextMenu:getNew(parentContext) end
 
----@return any
+---@param name string
+---@return unknown?
 function ISContextMenu:getOptionFromName(name) end
 
----@return any
+---@return unknown
 function ISContextMenu:getRootY() end
 
----@return any
+---@return number
 function ISContextMenu:getScrollAreaHeight() end
 
----@return any
+---@param num number
+---@return unknown
 function ISContextMenu:getSubInstance(num) end
 
----@return any
+---@param num number
+---@return unknown
 function ISContextMenu:getSubMenu(num) end
 
----@return any
 function ISContextMenu:hideAndChildren() end
 
----@return any
 function ISContextMenu:hideSelf() end
 
----@return any
 function ISContextMenu:hideSelfAndChildren2() end
 
----@return any
 function ISContextMenu:hideToolTip() end
 
----@return any
 function ISContextMenu:initialise() end
 
----@return any
+---@param prevOptionName string
+---@param name string
+---@return unknown?
 function ISContextMenu:insertOptionAfter(
 	prevOptionName,
 	name,
@@ -262,7 +255,9 @@ function ISContextMenu:insertOptionAfter(
 )
 end
 
----@return any
+---@param nextOptionName string
+---@param name string
+---@return unknown?
 function ISContextMenu:insertOptionBefore(
 	nextOptionName,
 	name,
@@ -281,98 +276,97 @@ function ISContextMenu:insertOptionBefore(
 )
 end
 
----@return any
+---@return boolean
 function ISContextMenu:isAnyVisible() end
 
----@return any
+---@return boolean
 function ISContextMenu:isEmpty() end
 
----@return any
+---@return boolean
 function ISContextMenu:isMouseOut() end
 
----@return any
+---@return unknown
 function ISContextMenu:isOptionSingleMenu() end
 
----@return any
+---@param x number
+---@param y number
 function ISContextMenu:onFocus(x, y) end
 
----@return any
 function ISContextMenu:onGetUpAndThen(onSelect, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, ...) end
 
----@return any
 function ISContextMenu:onJoypadDirDown() end
 
----@return any
 function ISContextMenu:onJoypadDirLeft() end
 
----@return any
 function ISContextMenu:onJoypadDirRight() end
 
----@return any
 function ISContextMenu:onJoypadDirUp() end
 
----@return any
 function ISContextMenu:onJoypadDown(button) end
 
----@return any
+---@param x number
+---@param y number
 function ISContextMenu:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISContextMenu:onMouseDownOutside(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISContextMenu:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISContextMenu:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISContextMenu:onMouseUp(x, y) end
 
----@return any
+---@return boolean
 function ISContextMenu:onMouseWheel(del) end
 
----@return any
 function ISContextMenu:prerender() end
 
----@return any
 function ISContextMenu:removeLastOption() end
 
----@return any
+---@param optName string
 function ISContextMenu:removeOptionByName(optName) end
 
----@return any
 function ISContextMenu:render() end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 function ISContextMenu:renderOptionTextureOrColor(option, x, y, w, h) end
 
----@return any
 function ISContextMenu:setFont(font) end
 
----@return any
 function ISContextMenu:setFontFromOption() end
 
----@return any
 function ISContextMenu:setOptionChecked(option, checked) end
 
----@return any
 function ISContextMenu:setSlideGoalX(startX, finalX) end
 
----@return any
 function ISContextMenu:setSlideGoalY(startY, finalY) end
 
----@return any
 function ISContextMenu:showTooltip(option) end
 
----@return any
+---@param x number
+---@param y number
+---@return ISContextMenu?
 function ISContextMenu:topmostMenuWithMouse(x, y) end
 
----@return any
 function ISContextMenu:updateSlideGoalX() end
 
----@return any
 function ISContextMenu:updateSlideGoalY() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param zoom number?
 ---@return ISContextMenu
 function ISContextMenu:new(x, y, width, height, zoom) end

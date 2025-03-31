@@ -1,34 +1,29 @@
 ---@meta
 
 ---@class ISHutchGrabAnimal : ISBaseTimedAction
----@field hutch any
----@field index any
----@field maxTime any
----@field [any] any
+---@field hutch unknown
+---@field index unknown
 ISHutchGrabAnimal = ISBaseTimedAction:derive("ISHutchGrabAnimal")
+ISHutchGrabAnimal.Type = "ISHutchGrabAnimal"
 
----@return any
+---@return boolean
 function ISHutchGrabAnimal:complete() end
 
----@return any
+---@return number
 function ISHutchGrabAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISHutchGrabAnimal:isValid() end
 
----@return any
 function ISHutchGrabAnimal:perform() end
 
----@return any
 function ISHutchGrabAnimal:start() end
 
----@return any
 function ISHutchGrabAnimal:stop() end
 
----@return any
 function ISHutchGrabAnimal:update() end
 
----@return any
+---@return unknown
 function ISHutchGrabAnimal:waitToStart() end
 
 ---@return ISHutchGrabAnimal

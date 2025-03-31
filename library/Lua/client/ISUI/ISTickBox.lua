@@ -1,115 +1,115 @@
 ---@meta
 
 ---@class ISTickBox : ISPanel
----@field _textColor any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field boxSize any
----@field changeOptionArgs any
----@field changeOptionMethod any
----@field changeOptionTarget any
----@field choicesColor any
----@field clickedOption any
----@field disabledOptions any
----@field enable any
----@field font any
----@field fontHgt any
----@field height any
----@field isTickBox any
----@field itemGap any
----@field itemHgt any
----@field joypadFocused any
----@field joypadIndex any
----@field leftMargin any
----@field mouseDownOverOption any
----@field mouseOverOption any
----@field name any
----@field optionCount any
----@field optionData any
----@field options any
----@field optionsIndex any
----@field selected any
----@field textGap any
----@field textures any
----@field tickTexture any
----@field tooltip any
----@field tooltipUI any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field _textColor table
+---@field boxSize number
+---@field changeOptionArgs table
+---@field changeOptionMethod function?
+---@field changeOptionTarget table?
+---@field choicesColor table
+---@field clickedOption number?
+---@field disabledOptions table
+---@field enable boolean
+---@field font unknown
+---@field fontHgt unknown
+---@field isTickBox boolean
+---@field itemGap number
+---@field itemHgt number
+---@field joypadIndex number
+---@field leftMargin number
+---@field mouseDownOverOption unknown?
+---@field mouseOverOption number
+---@field name string
+---@field optionCount number
+---@field optionData table
+---@field options table
+---@field optionsIndex table
+---@field selected table
+---@field textGap number
+---@field textures table
+---@field tickTexture unknown
+---@field tooltip unknown?
+---@field tooltipUI ISToolTip
 ISTickBox = ISPanel:derive("ISTickBox")
+ISTickBox.Type = "ISTickBox"
 
----@return any
+---@param name string?
+---@param data (string | number | table)?
+---@return number
 function ISTickBox:addOption(name, data, texture) end
 
----@return any
 function ISTickBox:clearOptions() end
 
----@return any
+---@param name string
+---@param disable boolean
 function ISTickBox:disableOption(name, disable) end
 
----@return any
 function ISTickBox:forceClick() end
 
----@return any
+---@return number
 function ISTickBox:getOptionCount() end
 
----@return any
+---@return unknown
 function ISTickBox:getOptionData(index) end
 
----@return any
 function ISTickBox:getTextColor(index, color) end
 
----@return any
 function ISTickBox:initialise() end
 
----@return any
+---@param index number
+---@return boolean
 function ISTickBox:isSelected(index) end
 
----@return any
 function ISTickBox:onJoypadDirDown(joypadData) end
 
----@return any
 function ISTickBox:onJoypadDirUp(joypadData) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISTickBox:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTickBox:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISTickBox:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISTickBox:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISTickBox:onMouseUpOutside(x, y) end
 
----@return any
 function ISTickBox:prerender() end
 
----@return any
 function ISTickBox:render() end
 
----@return any
 function ISTickBox:setFont(font) end
 
----@return any
+---@param focused boolean
 function ISTickBox:setJoypadFocused(focused) end
 
----@return any
+---@param index number
+---@param selected boolean
 function ISTickBox:setSelected(index, selected) end
 
----@return any
 function ISTickBox:setWidthToFit() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param name string
+---@param changeOptionTarget table?
+---@param changeOptionMethod function?
+---@param changeOptionArg1 unknown?
+---@param changeOptionArg2 unknown?
 ---@return ISTickBox
 function ISTickBox:new(
 	x,

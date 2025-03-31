@@ -1,33 +1,33 @@
 ---@meta
 
 ---@class ISSpinBox : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field fade any
----@field leftButton any
----@field options any
----@field rightButton any
----@field selected any
----@field target any
----@field targetFunc any
----@field tooltipUI any
----@field [any] any
+---@field fade unknown
+---@field leftButton ISButton
+---@field options table
+---@field rightButton ISButton
+---@field selected number
+---@field target ISRainPanel?
+---@field targetFunc unknown?
+---@field tooltipUI ISToolTip
 ISSpinBox = ISPanel:derive("ISSpinBox")
+ISSpinBox.Type = "ISSpinBox"
 
----@return any
+---@param option string
 function ISSpinBox:addOption(option) end
 
----@return any
 function ISSpinBox:createChildren() end
 
----@return any
 function ISSpinBox:onButton(button) end
 
----@return any
 function ISSpinBox:prerender() end
 
----@return any
 function ISSpinBox:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target ISRainPanel?
+---@param targetFunc unknown?
 ---@return ISSpinBox
 function ISSpinBox:new(x, y, width, height, target, targetFunc) end

@@ -1,44 +1,35 @@
 ---@meta
 
 ---@class ISWriteSomething : ISBaseTimedAction
----@field character any
----@field ignoreHandsWounds any
----@field item any
----@field maxTime any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field item unknown
 ISWriteSomething = ISBaseTimedAction:derive("ISWriteSomething")
+ISWriteSomething.Type = "ISWriteSomething"
 
----@return any
 function ISWriteSomething:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISWriteSomething:complete() end
 
----@return any
+---@return number
 function ISWriteSomething:getDuration() end
 
----@return any
+---@return boolean
 function ISWriteSomething:isBook(item) end
 
----@return any
+---@return boolean?
 function ISWriteSomething:isValid() end
 
----@return any
 function ISWriteSomething:perform() end
 
----@return any
 function ISWriteSomething:serverStart() end
 
----@return any
 function ISWriteSomething:serverStop() end
 
----@return any
 function ISWriteSomething:start() end
 
----@return any
 function ISWriteSomething:stop() end
 
----@return any
 function ISWriteSomething:update() end
 
 ---@return ISWriteSomething

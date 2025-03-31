@@ -1,48 +1,36 @@
 ---@meta
 
 ---@class ISInsertMagazine : ISBaseTimedAction
----@field gun any
----@field loadFinished any
----@field magazine any
----@field maxTime any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field useProgressBar any
----@field [any] any
+---@field gun unknown
+---@field loadFinished boolean
+---@field magazine unknown
+---@field useProgressBar boolean
 ISInsertMagazine = ISBaseTimedAction:derive("ISInsertMagazine")
+ISInsertMagazine.Type = "ISInsertMagazine"
 
----@return any
 function ISInsertMagazine:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISInsertMagazine:complete() end
 
----@return any
+---@return number
 function ISInsertMagazine:getDuration() end
 
----@return any
 function ISInsertMagazine:initVars() end
 
----@return any
+---@return boolean
 function ISInsertMagazine:isValid() end
 
----@return any
 function ISInsertMagazine:loadAmmo() end
 
----@return any
 function ISInsertMagazine:perform() end
 
----@return any
 function ISInsertMagazine:serverStart() end
 
----@return any
 function ISInsertMagazine:start() end
 
----@return any
 function ISInsertMagazine:stop() end
 
----@return any
 function ISInsertMagazine:update() end
 
 ---@return ISInsertMagazine

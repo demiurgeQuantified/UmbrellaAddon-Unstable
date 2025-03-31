@@ -1,42 +1,37 @@
 ---@meta
 
 ---@class ISTransferWaterAction : ISBaseTimedAction
----@field itemFrom any
----@field itemFromBeginDelta any
----@field itemFromEndingDelta any
----@field itemTo any
----@field itemToBeginDelta any
----@field itemToEndingDelta any
----@field maxTime any
----@field [any] any
+---@field itemFrom unknown
+---@field itemFromBeginDelta unknown
+---@field itemFromEndingDelta number
+---@field itemTo unknown
+---@field itemToBeginDelta number
+---@field itemToEndingDelta number
 ISTransferWaterAction = ISBaseTimedAction:derive("ISTransferWaterAction")
+ISTransferWaterAction.Type = "ISTransferWaterAction"
 
----@return any
+---@return boolean
 function ISTransferWaterAction:complete() end
 
----@return any
+---@return number
 function ISTransferWaterAction:getDuration() end
 
----@return any
+---@return boolean
 function ISTransferWaterAction:isValid() end
 
----@return any
 function ISTransferWaterAction:perform() end
 
----@return any
 function ISTransferWaterAction:serverStart() end
 
----@return any
 function ISTransferWaterAction:serverStop() end
 
----@return any
 function ISTransferWaterAction:start() end
 
----@return any
 function ISTransferWaterAction:stop() end
 
----@return any
 function ISTransferWaterAction:update() end
 
+---@param itemFromEndingDelta number
+---@param itemToEndingDelta number
 ---@return ISTransferWaterAction
 function ISTransferWaterAction:new(character, itemFrom, itemTo, itemFromEndingDelta, itemToEndingDelta) end

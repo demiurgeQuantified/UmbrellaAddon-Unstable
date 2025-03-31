@@ -1,47 +1,43 @@
 ---@meta
 
 ---@class CoopCharacterCreation : ISPanelJoypad
----@field charCreationMain any
----@field charCreationProfession any
----@field coopUserName any
----@field joypadData any
----@field joypadIndex any
----@field mapSpawnSelect any
----@field playerIndex any
----@field visibleUI any
----@field [any] any
+---@field charCreationMain CoopCharacterCreationMain
+---@field charCreationProfession CoopCharacterCreationProfession
+---@field coopUserName CoopUserName
+---@field joypadData unknown?
+---@field joypadIndex unknown?
+---@field mapSpawnSelect CoopMapSpawnSelect
+---@field playerIndex number
 CoopCharacterCreation = ISPanelJoypad:derive("CoopCharacterCreation")
-CoopCharacterCreation.visibleUI = {}
+CoopCharacterCreation.Type = "CoopCharacterCreation"
+CoopCharacterCreation.instance = nil ---@type CoopCharacterCreation?
+CoopCharacterCreation.visibleUI = nil ---@type table
 
----@return any
+---@return unknown?
 function CoopCharacterCreation.getJoypad() end
 
----@return any
 function CoopCharacterCreation.newPlayer(joypadIndex, joypadData) end
 
----@return any
+---@param visible boolean
 function CoopCharacterCreation.setVisibleAllUI(visible) end
 
----@return any
 function CoopCharacterCreation:accept() end
 
----@return any
+---@return boolean?
 function CoopCharacterCreation:accept1() end
 
----@return any
 function CoopCharacterCreation:cancel() end
 
----@return any
 function CoopCharacterCreation:createChildren() end
 
----@return any
 function CoopCharacterCreation:initPlayer() end
 
----@return any
 function CoopCharacterCreation:newPlayerMouse() end
 
----@return any
 function CoopCharacterCreation:OnJoypadBeforeDeactivate(index) end
 
+---@param joypadIndex unknown?
+---@param joypadData unknown?
+---@param playerIndex number
 ---@return CoopCharacterCreation
 function CoopCharacterCreation:new(joypadIndex, joypadData, playerIndex) end

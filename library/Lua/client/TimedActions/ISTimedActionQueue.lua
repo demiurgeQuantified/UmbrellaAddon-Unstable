@@ -1,43 +1,44 @@
 ---@meta
 
 ---@class ISTimedActionQueue : ISBaseObject
----@field character any
----@field current any
----@field queue any
----@field shouldResetGameSpeed any
----@field [any] any
+---@field character unknown
+---@field current unknown?
+---@field queue table
 ISTimedActionQueue = ISBaseObject:derive("ISTimedActionQueue")
+ISTimedActionQueue.Type = "ISTimedActionQueue"
 ISTimedActionQueue.IDMax = 1
 ISTimedActionQueue.queues = {}
+ISTimedActionQueue.shouldResetGameSpeed = nil ---@type boolean?
 
----@return any
+---@param action table
+---@return ISTimedActionQueue?
 function ISTimedActionQueue.add(action) end
 
----@return any
+---@return ISTimedActionQueue?
+---@return unknown?
 function ISTimedActionQueue.addAfter(previousAction, action) end
 
----@return any
+---@param action table
 function ISTimedActionQueue.addGetUpAndThen(character, action) end
 
----@return any
+---@return ISTimedActionQueue
 function ISTimedActionQueue.clear(character) end
 
----@return any
+---@return ISTimedActionQueue
 function ISTimedActionQueue.getTimedActionQueue(character) end
 
----@return any
+---@return boolean
 function ISTimedActionQueue.hasAction(action) end
 
----@return any
+---@return boolean
 function ISTimedActionQueue.hasActionType(character, type) end
 
----@return any
+---@return boolean
 function ISTimedActionQueue.isPlayerDoingAction(playerObj) end
 
----@return any
 function ISTimedActionQueue.onTick() end
 
----@return any
+---@return ISTimedActionQueue?
 function ISTimedActionQueue.queueActions(
 	character,
 	addActionsFunction,
@@ -54,34 +55,27 @@ function ISTimedActionQueue.queueActions(
 )
 end
 
----@return any
 function ISTimedActionQueue:addToQueue(action) end
 
----@return any
 function ISTimedActionQueue:cancelQueue() end
 
----@return any
 function ISTimedActionQueue:clearQueue() end
 
----@return any
+---@return number
 function ISTimedActionQueue:indexOf(action) end
 
----@return any
+---@return number
 function ISTimedActionQueue:indexOfType(type) end
 
----@return any
+---@return boolean
 function ISTimedActionQueue:isCurrentActionAddingOtherActions() end
 
----@return any
 function ISTimedActionQueue:onCompleted(action) end
 
----@return any
 function ISTimedActionQueue:removeFromQueue(action) end
 
----@return any
 function ISTimedActionQueue:resetQueue() end
 
----@return any
 function ISTimedActionQueue:tick() end
 
 ---@return ISTimedActionQueue

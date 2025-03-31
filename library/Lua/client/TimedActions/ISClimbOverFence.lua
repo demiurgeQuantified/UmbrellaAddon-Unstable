@@ -1,38 +1,29 @@
 ---@meta
 
 ---@class ISClimbOverFence : ISBaseTimedAction
----@field direction any
----@field isTallHoppable any
----@field item any
----@field maxTime any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field direction unknown
+---@field isTallHoppable unknown
+---@field item unknown
 ISClimbOverFence = ISBaseTimedAction:derive("ISClimbOverFence")
+ISClimbOverFence.Type = "ISClimbOverFence"
 
----@return any
 function ISClimbOverFence:getDeltaModifiers(deltas) end
 
----@return any
+---@return unknown
 function ISClimbOverFence:getFacingDirection() end
 
----@return any
+---@return boolean
 function ISClimbOverFence:isValid() end
 
----@return any
 function ISClimbOverFence:perform() end
 
----@return any
 function ISClimbOverFence:start() end
 
----@return any
 function ISClimbOverFence:stop() end
 
----@return any
 function ISClimbOverFence:update() end
 
----@return any
+---@return unknown
 function ISClimbOverFence:waitToStart() end
 
 ---@return ISClimbOverFence

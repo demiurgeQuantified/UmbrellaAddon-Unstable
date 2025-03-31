@@ -1,45 +1,51 @@
 ---@meta
 
 ---@class NewFogDebug : ISDebugSubPanelBase
----@field allOptions any
----@field bools any
----@field clim any
----@field colors any
----@field floatOptions any
----@field floats any
----@field newFogID any
----@field [any] any
+---@field allOptions table
+---@field bools table
+---@field clim unknown
+---@field colors table
+---@field floatOptions table
+---@field floats table
+---@field newFogID number
 NewFogDebug = ISDebugSubPanelBase:derive("NewFogDebug")
+NewFogDebug.Type = "NewFogDebug"
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function NewFogDebug:addBoolOption(_id, _x, _y, _w) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function NewFogDebug:addFloatOption(_id, _x, _y, _w, _min, _max, _stepsize) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _w number
+---@return number
 function NewFogDebug:addFloatOptionAuto(_id, _float, _x, _y, _w) end
 
----@return any
 function NewFogDebug:createChildren() end
 
----@return any
 function NewFogDebug:initialise() end
 
----@return any
 function NewFogDebug:onSliderChange(_newval, _slider) end
 
----@return any
 function NewFogDebug:onTicked(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function NewFogDebug:onTickedValue(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function NewFogDebug:prerender() end
 
----@return any
 function NewFogDebug:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return NewFogDebug
 function NewFogDebug:new(x, y, width, height, doStencil) end

@@ -1,50 +1,45 @@
 ---@meta
 
 ---@class ISForageAction : ISBaseTimedAction
----@field currentTime any
----@field discardItems any
----@field forageIcon any
----@field icon any
----@field iconID any
----@field itemCount any
----@field itemDef any
----@field itemType any
----@field manager any
----@field maxTime any
----@field started any
----@field stopOnRun any
----@field stopOnWalk any
----@field targetContainer any
----@field zoneData any
----@field [any] any
+---@field currentTime number
+---@field discardItems boolean
+---@field forageIcon ISForageIcon
+---@field icon ISForageIcon
+---@field iconID unknown
+---@field itemCount unknown
+---@field itemDef unknown
+---@field itemType unknown
+---@field manager unknown
+---@field maxTime number?
+---@field started boolean
+---@field targetContainer unknown
+---@field zoneData unknown
 ISForageAction = ISBaseTimedAction:derive("ISForageAction")
+ISForageAction.Type = "ISForageAction"
 
----@return any
+---@return boolean
 function ISForageAction:complete() end
 
----@return any
 function ISForageAction:forage() end
 
----@return any
+---@return number?
 function ISForageAction:getDuration() end
 
----@return any
+---@return boolean
 function ISForageAction:isValid() end
 
----@return any
 function ISForageAction:perform() end
 
----@return any
 function ISForageAction:start() end
 
----@return any
 function ISForageAction:stop() end
 
----@return any
 function ISForageAction:update() end
 
----@return any
+---@return unknown
 function ISForageAction:waitToStart() end
 
+---@param icon ISForageIcon
+---@param discardItems boolean
 ---@return ISForageAction
 function ISForageAction:new(character, icon, targetContainer, discardItems, itemType) end

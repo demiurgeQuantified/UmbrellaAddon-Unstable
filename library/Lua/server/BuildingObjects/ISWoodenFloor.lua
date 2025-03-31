@@ -1,20 +1,24 @@
 ---@meta
 
 ---@class ISWoodenFloor : ISBuildingObject
----@field buildLow any
----@field floor any
----@field javaObject any
----@field sq any
----@field [any] any
+---@field buildLow boolean
+---@field floor boolean
+---@field javaObject unknown
+---@field sq unknown
 ISWoodenFloor = ISBuildingObject:derive("ISWoodenFloor")
+ISWoodenFloor.Type = "ISWoodenFloor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenFloor:create(x, y, z, north, sprite) end
 
----@return any
+---@return boolean
 function ISWoodenFloor:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenFloor:render(x, y, z, square) end
 
 ---@return ISWoodenFloor

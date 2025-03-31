@@ -1,34 +1,26 @@
 ---@meta
 
 ---@class ModMoreInfo : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field javaObject any
----@field mainPanel any
----@field moreInfo any
----@field x any
----@field y any
----@field [any] any
+---@field mainPanel ISPanel
+---@field moreInfo ISRichTextPanel
 ModMoreInfo = ISPanel:derive("ModMoreInfo")
+ModMoreInfo.Type = "ModMoreInfo"
 
----@return any
+---@param x number
+---@param y number
 function ModMoreInfo.onOptionMouseDown(button, x, y) end
 
----@return any
 function ModMoreInfo:create(desc) end
 
----@return any
 function ModMoreInfo:initialise() end
 
----@return any
 function ModMoreInfo:instantiate() end
 
----@return any
 function ModMoreInfo:prerender() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ModMoreInfo
 function ModMoreInfo:new(x, y, width, height) end

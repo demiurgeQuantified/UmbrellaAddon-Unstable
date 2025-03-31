@@ -1,44 +1,44 @@
 ---@meta
 
 ---@class ISLayoutManager
----@field layouts any
----@field [any] any
 ISLayoutManager = {}
 ISLayoutManager.windows = {}
 ISLayoutManager.enableLog = false
+ISLayoutManager.layouts = nil ---@type table?
 
----@return any
+---@param name string
 function ISLayoutManager.CallRestoreLayout(name, layout) end
 
----@return any
+---@param name string
+---@param layout table?
 function ISLayoutManager.CallSaveLayout(name, layout) end
 
----@return any
+---@param window table
 function ISLayoutManager.DefaultRestoreWindow(window, layout) end
 
----@return any
+---@param window table
 function ISLayoutManager.DefaultSaveWindow(window, layout) end
 
----@return any
+---@return unknown?
 function ISLayoutManager.FindResizeWidget(window) end
 
----@return any
 function ISLayoutManager.OnPostSave() end
 
----@return any
 function ISLayoutManager.ReadIni() end
 
----@return any
+---@param name string
+---@param funcs table
+---@param target table
 function ISLayoutManager.RegisterWindow(name, funcs, target) end
 
----@return any
+---@param name string
 function ISLayoutManager.SaveLayout(name, window) end
 
----@return any
+---@param window ISTutorialPanel
 function ISLayoutManager.SaveWindowVisible(window, layout) end
 
----@return any
+---@param name string
+---@return unknown?
 function ISLayoutManager.TryRestore(name) end
 
----@return any
 function ISLayoutManager.WriteIni() end

@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISFireplaceExtinguish : ISBaseTimedAction
----@field fireplace any
----@field maxTime any
----@field [any] any
+---@field fireplace unknown
 ISFireplaceExtinguish = ISBaseTimedAction:derive("ISFireplaceExtinguish")
+ISFireplaceExtinguish.Type = "ISFireplaceExtinguish"
 
----@return any
+---@return boolean
 function ISFireplaceExtinguish:complete() end
 
----@return any
+---@return number
 function ISFireplaceExtinguish:getDuration() end
 
----@return any
+---@return boolean
 function ISFireplaceExtinguish:isValid() end
 
----@return any
 function ISFireplaceExtinguish:perform() end
 
----@return any
 function ISFireplaceExtinguish:start() end
 
----@return any
 function ISFireplaceExtinguish:stop() end
 
----@return any
 function ISFireplaceExtinguish:update() end
 
----@return any
+---@return unknown
 function ISFireplaceExtinguish:waitToStart() end
 
+---@param character unknown?
 ---@return ISFireplaceExtinguish
 function ISFireplaceExtinguish:new(character, fireplace) end

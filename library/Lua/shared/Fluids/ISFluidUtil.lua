@@ -5,20 +5,22 @@ ISFluidUtil = {}
 ISFluidUtil.isoPanelWalkToDist = 5
 ISFluidUtil.isoMaxPanelDist = 10
 
----@return any
+---@param _container ISFluidContainer
+---@return boolean?
 function ISFluidUtil.doWalkTo(_player, _container, _dist) end
 
----@return any
+---@return unknown?
 function ISFluidUtil.getContainerOwner(_container) end
 
----@return any
+---@return unknown
 function ISFluidUtil.getMinTransferActionTime() end
 
----@return any
+---@return unknown
 function ISFluidUtil.getTransferActionTimePerLiter() end
 
----@return any
+---@param _container ISFluidContainer?
+---@return boolean
 function ISFluidUtil.validateContainer(_container) end
 
----@return any
+---@return ISFluidContainer
 function ISFluidUtil:getLuaFluidContainer(container) end

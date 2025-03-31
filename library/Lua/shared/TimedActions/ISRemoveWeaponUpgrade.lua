@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISRemoveWeaponUpgrade : ISBaseTimedAction
----@field maxTime any
----@field partType any
----@field weapon any
----@field [any] any
+---@field partType unknown
+---@field weapon unknown
 ISRemoveWeaponUpgrade = ISBaseTimedAction:derive("ISRemoveWeaponUpgrade")
+ISRemoveWeaponUpgrade.Type = "ISRemoveWeaponUpgrade"
 
----@return any
+---@return boolean
 function ISRemoveWeaponUpgrade:complete() end
 
----@return any
+---@return number
 function ISRemoveWeaponUpgrade:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveWeaponUpgrade:isValid() end
 
----@return any
 function ISRemoveWeaponUpgrade:perform() end
 
----@return any
 function ISRemoveWeaponUpgrade:start() end
 
----@return any
 function ISRemoveWeaponUpgrade:stop() end
 
----@return any
 function ISRemoveWeaponUpgrade:update() end
 
 ---@return ISRemoveWeaponUpgrade

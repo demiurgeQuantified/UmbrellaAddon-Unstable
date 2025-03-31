@@ -1,94 +1,77 @@
 ---@meta
 
 ---@class IsoRegionDebug : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field buttonReset any
----@field buttonToggleGrid any
----@field buttonToggleInvalidRegions any
----@field buttonToggleLoadAllChunks any
----@field buttonToggleRegions any
----@field cam any
----@field canvasY any
----@field collapseCounter any
----@field currentTile any
----@field dayStamp any
----@field drawFrame any
----@field greyCol any
----@field height any
----@field hotKeyPanels any
----@field hourStamp any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field monthStamp any
----@field mouseInfo any
----@field overrideBPrompt any
----@field palpha any
----@field palphaUp any
----@field pin any
----@field player any
----@field playerNum any
----@field poi any
----@field regionMode any
----@field resizable any
----@field richtext any
----@field showGrid any
----@field showInvalidRegions any
----@field strikes any
----@field subFocus any
----@field title any
----@field width any
----@field x any
----@field y any
----@field year any
----@field [any] any
+---@field buttonReset ISButton
+---@field buttonToggleGrid ISButton
+---@field buttonToggleInvalidRegions ISButton
+---@field buttonToggleLoadAllChunks ISButton
+---@field buttonToggleRegions ISButton
+---@field cam table
+---@field canvasY number
+---@field currentTile unknown?
+---@field dayStamp number
+---@field greyCol table
+---@field hotKeyPanels table
+---@field hourStamp number
+---@field isJoypadWindow boolean
+---@field monthStamp number
+---@field mouseInfo table
+---@field overrideBPrompt boolean
+---@field palpha number
+---@field palphaUp boolean
+---@field player unknown
+---@field playerNum unknown
+---@field poi table
+---@field regionMode number
+---@field richtext unknown?
+---@field showGrid boolean
+---@field showInvalidRegions boolean
+---@field strikes table
+---@field subFocus unknown?
+---@field title string
+---@field year number
 IsoRegionDebug = ISCollapsableWindow:derive("IsoRegionDebug")
-IsoRegionDebug.instance = nil
+IsoRegionDebug.Type = "IsoRegionDebug"
+IsoRegionDebug.instance = nil ---@type IsoRegionDebug?
 IsoRegionDebug.shiftDown = 0
 
----@return any
+---@return IsoRegionDebug?
 function IsoRegionDebug.OnOpenPanel() end
 
----@return any
 function IsoRegionDebug:clear() end
 
----@return any
 function IsoRegionDebug:close() end
 
----@return any
+---@param _x number
+---@param _y number
+---@return number
+---@return number
 function IsoRegionDebug:convertCoords(_x, _y) end
 
----@return any
 function IsoRegionDebug:createChildren() end
 
----@return any
 function IsoRegionDebug:initialise() end
 
----@return any
 function IsoRegionDebug:onButton(_btn) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function IsoRegionDebug:onMouseDown(x, y) end
 
----@return any
 function IsoRegionDebug:onResize() end
 
----@return any
 function IsoRegionDebug:prerender() end
 
----@return any
 function IsoRegionDebug:render() end
 
----@return any
 function IsoRegionDebug:stayOnSplitScreen() end
 
----@return any
 function IsoRegionDebug:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return IsoRegionDebug
 function IsoRegionDebug:new(x, y, width, height, player) end

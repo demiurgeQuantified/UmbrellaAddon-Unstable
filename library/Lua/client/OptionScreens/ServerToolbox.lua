@@ -1,50 +1,48 @@
 ---@meta
 
 ---@class ServerToolbox : ISPanelJoypad
----@field allowButton any
----@field backButton any
----@field items any
----@field listbox any
----@field selectedItem any
----@field statusLabel any
----@field [any] any
+---@field allowButton ISButton
+---@field backButton ISButton
+---@field items table
+---@field listbox ISScrollingListBox
+---@field selectedItem unknown?
+---@field statusLabel ISLabel
 ServerToolbox = ISPanelJoypad:derive("ServerToolbox")
+ServerToolbox.Type = "ServerToolbox"
+ServerToolbox.instance = nil ---@type ServerToolbox?
 
----@return any
 function ServerToolbox:clickAllow() end
 
----@return any
 function ServerToolbox:clickBack() end
 
----@return any
 function ServerToolbox:create() end
 
----@return any
+---@return number
 function ServerToolbox:doDrawItem(y, item, alt) end
 
----@return any
 function ServerToolbox:fillList() end
 
----@return any
+---@return boolean
 function ServerToolbox:hasChoices() end
 
----@return any
 function ServerToolbox:initialise() end
 
----@return any
 function ServerToolbox:onDblClick() end
 
----@return any
 function ServerToolbox:onGainJoypadFocus(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ServerToolbox:onOptionMouseDown(button, x, y) end
 
----@return any
 function ServerToolbox:render() end
 
----@return any
+---@return unknown?
 function ServerToolbox:useDefaultSpawnRegion() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ServerToolbox
 function ServerToolbox:new(x, y, width, height) end

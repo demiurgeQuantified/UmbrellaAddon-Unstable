@@ -1,46 +1,28 @@
 ---@meta
 
 ---@class ISStorySoundsDebug : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field collapseCounter any
----@field drawFrame any
----@field eventTab any
----@field height any
----@field isCollapsed any
----@field managerTab any
----@field minimumHeight any
----@field minimumWidth any
----@field panels any
----@field pin any
----@field resizable any
----@field tabpanel any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field eventTab ISSLEvent | ISSLSounds
+---@field managerTab ISSLManager
+---@field panels table
+---@field tabpanel ISTabPanel
+---@field title string
 ISStorySoundsDebug = ISCollapsableWindow:derive("ISStorySoundsDebug")
-ISStorySoundsDebug.instance = nil
+ISStorySoundsDebug.Type = "ISStorySoundsDebug"
+ISStorySoundsDebug.instance = nil ---@type ISStorySoundsDebug?
 
----@return any
 function ISStorySoundsDebug:createChildren() end
 
----@return any
 function ISStorySoundsDebug:onResize() end
 
----@return any
 function ISStorySoundsDebug:prerender() end
 
----@return any
 function ISStorySoundsDebug:render() end
 
----@return any
 function ISStorySoundsDebug:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISStorySoundsDebug
 function ISStorySoundsDebug:new(x, y, width, height) end

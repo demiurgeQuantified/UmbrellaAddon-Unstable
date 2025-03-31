@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISItemSlotRemoveAction : ISBaseTimedAction
----@field entity any
----@field item any
----@field itemSlot any
----@field maxTime any
----@field resource any
----@field [any] any
+---@field entity unknown
+---@field item unknown
+---@field itemSlot unknown?
+---@field resource unknown
 ISItemSlotRemoveAction = ISBaseTimedAction:derive("ISItemSlotRemoveAction")
+ISItemSlotRemoveAction.Type = "ISItemSlotRemoveAction"
 
----@return any
+---@return boolean
 function ISItemSlotRemoveAction:complete() end
 
----@return any
+---@return number
 function ISItemSlotRemoveAction:getDuration() end
 
----@return any
+---@return boolean
 function ISItemSlotRemoveAction:isValid() end
 
----@return any
 function ISItemSlotRemoveAction:perform() end
 
----@return any
 function ISItemSlotRemoveAction:start() end
 
----@return any
 function ISItemSlotRemoveAction:stop() end
 
----@return any
 function ISItemSlotRemoveAction:update() end
 
 ---@return ISItemSlotRemoveAction

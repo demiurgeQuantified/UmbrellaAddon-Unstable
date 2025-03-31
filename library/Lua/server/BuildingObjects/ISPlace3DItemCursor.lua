@@ -1,117 +1,121 @@
 ---@meta
 
 ---@class ISPlace3DItemCursor : ISBuildingObject
----@field character any
----@field chr any
----@field dragNilAfterPlace any
----@field isPlace3DCursor any
----@field isYButtonResetCursor any
----@field items any
----@field itemSq any
----@field joypadPositionActive any
----@field joypadPositionX any
----@field joypadPositionY any
----@field keepOnSquare any
----@field keepOnSquareX any
----@field keepOnSquareY any
----@field noNeedHammer any
----@field placeAll any
----@field player any
----@field previousSq any
----@field render3DItemRot any
----@field render3DItemXOffset any
----@field render3DItemYOffset any
----@field render3DItemZOffset any
----@field rotatePressed any
----@field rotateReverse any
----@field rotateStart any
----@field rotating any
----@field selectedSqDrop any
----@field skipBuildAction any
----@field surfaceSelected any
----@field surfacesPossible any
----@field [any] any
+---@field character unknown
+---@field chr unknown
+---@field isPlace3DCursor boolean
+---@field isYButtonResetCursor boolean
+---@field items unknown
+---@field itemSq unknown?
+---@field joypadPositionActive boolean
+---@field joypadPositionX number
+---@field joypadPositionY number
+---@field keepOnSquare boolean
+---@field keepOnSquareX unknown
+---@field keepOnSquareY unknown
+---@field noNeedHammer boolean
+---@field placeAll boolean
+---@field player unknown
+---@field previousSq unknown?
+---@field render3DItemRot number
+---@field render3DItemXOffset number
+---@field render3DItemYOffset number
+---@field render3DItemZOffset number
+---@field rotatePressed boolean
+---@field rotateReverse unknown
+---@field rotateStart unknown
+---@field rotating boolean
+---@field selectedSqDrop unknown
+---@field skipBuildAction boolean
+---@field surfaceSelected number
+---@field surfacesPossible table
 ISPlace3DItemCursor = ISBuildingObject:derive("ISPlace3DItemCursor")
+ISPlace3DItemCursor.Type = "ISPlace3DItemCursor"
 
----@return any
 function ISPlace3DItemCursor:checkPositionJoypad() end
 
----@return any
 function ISPlace3DItemCursor:checkRotateJoypad() end
 
----@return any
 function ISPlace3DItemCursor:checkRotateKey() end
 
----@return any
 function ISPlace3DItemCursor:checkSelectSurfaceKey() end
 
----@return any
+---@param rot number
+---@return number
 function ISPlace3DItemCursor:clamp(rot) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPlace3DItemCursor:create(x, y, z, north, sprite) end
 
----@return any
 function ISPlace3DItemCursor:deactivate() end
 
----@return any
+---@param playerNum number
 function ISPlace3DItemCursor:drawPrompt(playerNum, ui) end
 
----@return any
+---@return string?
 function ISPlace3DItemCursor:getAPrompt() end
 
----@return any
+---@return string?
 function ISPlace3DItemCursor:getBPrompt() end
 
----@return any
+---@return string?
 function ISPlace3DItemCursor:getLBPrompt() end
 
----@return any
+---@return string?
 function ISPlace3DItemCursor:getRBPrompt() end
 
----@return any
+---@return number
 function ISPlace3DItemCursor:getSurface(square) end
 
----@return any
+---@return string?
 function ISPlace3DItemCursor:getXPrompt() end
 
----@return any
+---@return string
 function ISPlace3DItemCursor:getYPrompt() end
 
----@return any
 function ISPlace3DItemCursor:handleRotate(pressed, reverse) end
 
----@return any
+---@return boolean
 function ISPlace3DItemCursor:isValid(square) end
 
----@return any
+---@return unknown?
 function ISPlace3DItemCursor:onJoypadDirDown(joypadData) end
 
----@return any
+---@return unknown?
 function ISPlace3DItemCursor:onJoypadDirLeft(joypadData) end
 
----@return any
+---@return unknown?
 function ISPlace3DItemCursor:onJoypadDirRight(joypadData) end
 
----@return any
+---@return unknown?
 function ISPlace3DItemCursor:onJoypadDirUp(joypadData) end
 
----@return any
 function ISPlace3DItemCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISPlace3DItemCursor:onObjectLeftMouseButtonDown(object, x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPlace3DItemCursor:render(x, y, z, square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPlace3DItemCursor:renderOpaqueObjectsInWorld(x, y, z, square) end
 
----@return any
+---@return number
 function ISPlace3DItemCursor:rotateDelta() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISPlace3DItemCursor:walkTo(x, y, z) end
 
 ---@return ISPlace3DItemCursor

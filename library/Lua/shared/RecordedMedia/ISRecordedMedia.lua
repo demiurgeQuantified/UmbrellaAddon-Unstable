@@ -1,9 +1,9 @@
 ---@meta
 
-RecMedia = RecMedia or {}
+---@class RecMedia
+RecMedia = {}
 
 ---@class ISRecordedMedia
 ISRecordedMedia = {}
 
----@return any
 function ISRecordedMedia.init(_rc) end

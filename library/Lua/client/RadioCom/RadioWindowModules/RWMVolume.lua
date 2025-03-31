@@ -1,84 +1,69 @@
 ---@meta
 
 ---@class RWMVolume : RWMPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field earbudsTex any
----@field hasEnabledHeadphones any
----@field headphonesTex any
----@field height any
----@field isMute any
----@field itemDropBox any
----@field speakerButton any
----@field volume any
----@field volumeBar any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field earbudsTex unknown
+---@field hasEnabledHeadphones boolean
+---@field headphonesTex unknown
+---@field isMute boolean
+---@field itemDropBox ISItemDropBox
+---@field speakerButton ISSpeakerButton
+---@field volume number
+---@field volumeBar ISVolumeBar
 RWMVolume = RWMPanel:derive("RWMVolume")
+RWMVolume.Type = "RWMVolume"
 
----@return any
+---@param _items table
 function RWMVolume:addHeadphone(_items) end
 
----@return any
 function RWMVolume:clear() end
 
----@return any
 function RWMVolume:createChildren() end
 
----@return any
+---@return string
 function RWMVolume:getAPrompt() end
 
----@return any
+---@return string
 function RWMVolume:getBPrompt() end
 
----@return any
+---@return string?
 function RWMVolume:getXPrompt() end
 
----@return any
+---@return string?
 function RWMVolume:getYPrompt() end
 
----@return any
 function RWMVolume:initialise() end
 
----@return any
 function RWMVolume:onJoypadDown(button) end
 
----@return any
+---@param _ismute boolean
 function RWMVolume:onSpeakerButton(_ismute) end
 
----@return any
 function RWMVolume:onVolumeChange(_newVol) end
 
----@return any
 function RWMVolume:prerender() end
 
----@return any
+---@return boolean
 function RWMVolume:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMVolume:removeHeadphone() end
 
----@return any
 function RWMVolume:render() end
 
----@return any
+---@param num number
+---@return number
 function RWMVolume:round(num, idp) end
 
----@return any
+---@param enable boolean
 function RWMVolume:toggleHeaphoneSupport(enable) end
 
----@return any
 function RWMVolume:update() end
 
----@return any
+---@return boolean?
 function RWMVolume:verifyItem(_item) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RWMVolume
 function RWMVolume:new(x, y, width, height) end

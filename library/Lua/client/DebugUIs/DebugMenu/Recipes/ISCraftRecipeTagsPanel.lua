@@ -1,73 +1,62 @@
 ---@meta
 
 ---@class ISCraftRecipeTagsPanel : ISPanel
----@field activeTooltip any
----@field entryBox any
----@field list any
----@field listLabel any
----@field player any
----@field playerNum any
----@field recipeList any
----@field searchText any
----@field selectedTag any
----@field tooltipCounter any
----@field tooltipRecipe any
----@field [any] any
+---@field activeTooltip unknown?
+---@field entryBox ISTextEntryBox
+---@field list ISScrollingListBox
+---@field listLabel ISLabel
+---@field player unknown
+---@field playerNum unknown
+---@field recipeList ISScrollingListBox
+---@field searchText string
+---@field selectedTag unknown
+---@field tooltipCounter number
+---@field tooltipRecipe unknown?
 ISCraftRecipeTagsPanel = ISPanel:derive("ISCraftRecipeTagsPanel")
+ISCraftRecipeTagsPanel.Type = "ISCraftRecipeTagsPanel"
 
----@return any
 function ISCraftRecipeTagsPanel.onTextChange(box) end
 
----@return any
 function ISCraftRecipeTagsPanel:close() end
 
----@return any
-function ISCraftRecipeTagsPanel:close() end
-
----@return any
 function ISCraftRecipeTagsPanel:createChildren() end
 
----@return any
 function ISCraftRecipeTagsPanel:deactivateTooltip() end
 
----@return any
+---@return number
 function ISCraftRecipeTagsPanel:drawRecipeListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISCraftRecipeTagsPanel:drawTagListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISCraftRecipeTagsPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISCraftRecipeTagsPanel:initialise() end
 
----@return any
 function ISCraftRecipeTagsPanel:onButtonClick(_button) end
 
----@return any
+---@param _width number
+---@param _height number
 function ISCraftRecipeTagsPanel:onResize(_width, _height) end
 
----@return any
 function ISCraftRecipeTagsPanel:onTagSelected(_item) end
 
----@return any
 function ISCraftRecipeTagsPanel:populate() end
 
----@return any
 function ISCraftRecipeTagsPanel:populateRecipes() end
 
----@return any
 function ISCraftRecipeTagsPanel:prerender() end
 
----@return any
 function ISCraftRecipeTagsPanel:render() end
 
----@return any
 function ISCraftRecipeTagsPanel:update() end
 
----@return any
 function ISCraftRecipeTagsPanel:updateTooltip() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCraftRecipeTagsPanel
 function ISCraftRecipeTagsPanel:new(x, y, width, height, player) end

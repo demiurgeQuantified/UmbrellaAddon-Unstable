@@ -1,35 +1,29 @@
 ---@meta
 
 ---@class ISUnlockVehicleDoor : ISBaseTimedAction
----@field forceValid any
----@field maxTime any
----@field part any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field [any] any
+---@field forceValid boolean
+---@field part unknown?
+---@field vehicle unknown
 ISUnlockVehicleDoor = ISBaseTimedAction:derive("ISUnlockVehicleDoor")
+ISUnlockVehicleDoor.Type = "ISUnlockVehicleDoor"
 
----@return any
+---@return boolean?
 function ISUnlockVehicleDoor:complete() end
 
----@return any
+---@return number
 function ISUnlockVehicleDoor:getDuration() end
 
----@return any
+---@return boolean
 function ISUnlockVehicleDoor:isValid() end
 
----@return any
 function ISUnlockVehicleDoor:perform() end
 
----@return any
 function ISUnlockVehicleDoor:start() end
 
----@return any
 function ISUnlockVehicleDoor:stop() end
 
----@return any
 function ISUnlockVehicleDoor:update() end
 
+---@param part unknown?
 ---@return ISUnlockVehicleDoor
 function ISUnlockVehicleDoor:new(character, part) end

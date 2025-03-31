@@ -1,467 +1,463 @@
 ---@meta
 
 ---@class WorldMapEditorMode_Style : WorldMapEditorMode
----@field currentEditor any
----@field editors any
----@field layerNameEntry any
----@field layerType any
----@field listbox any
----@field zoomEntry any
----@field [any] any
+---@field currentEditor unknown?
+---@field editors table
+---@field layerNameEntry ISTextEntryBox
+---@field layerType ISComboBox
+---@field listbox WorldMapEditorListBox
+---@field zoomEntry ISTextEntryBox
 WorldMapEditorMode_Style = WorldMapEditorMode:derive("WorldMapEditorMode_Style")
+WorldMapEditorMode_Style.Type = "WorldMapEditorMode_Style"
 
----@return any
 function WorldMapEditorMode_Style:createChildren() end
 
----@return any
 function WorldMapEditorMode_Style:display() end
 
----@return any
 function WorldMapEditorMode_Style:fillList() end
 
----@return any
+---@return string
 function WorldMapEditorMode_Style:generateLuaScript() end
 
----@return any
+---@return string
 function WorldMapEditorMode_Style:generateLuaScript_FillStops(layer) end
 
----@return any
+---@return string
 function WorldMapEditorMode_Style:generateLuaScript_TextureStops(layer) end
 
----@return any
 function WorldMapEditorMode_Style:loadSettingsFromMap() end
 
----@return any
 function WorldMapEditorMode_Style:onAdd() end
 
----@return any
 function WorldMapEditorMode_Style:onChangeLayerType() end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Style:onKeyPress(key) end
 
----@return any
 function WorldMapEditorMode_Style:onLayerNameEntered() end
 
----@return any
 function WorldMapEditorMode_Style:onListboxEvent(action) end
 
----@return any
 function WorldMapEditorMode_Style:onMinZoomEntered() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Style:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapEditorMode_Style:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Style:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Style:onMouseUpOutside(x, y) end
 
----@return any
 function WorldMapEditorMode_Style:onMoveDown() end
 
----@return any
 function WorldMapEditorMode_Style:onMoveUp() end
 
----@return any
 function WorldMapEditorMode_Style:onRemove() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Style:onRightMouseDown(x, y) end
 
----@return any
 function WorldMapEditorMode_Style:onSelect() end
 
----@return any
 function WorldMapEditorMode_Style:render() end
 
----@return any
 function WorldMapEditorMode_Style:setCurrentEditor(layer) end
 
----@return any
 function WorldMapEditorMode_Style:undisplay() end
 
 ---@return WorldMapEditorMode_Style
 function WorldMapEditorMode_Style:new(editor) end
 
 ---@class WorldMapStyleEditor : ISPanel
----@field editorMode any
----@field layer any
----@field mapAPI any
----@field mapUI any
----@field styleAPI any
----@field [any] any
+---@field editorMode unknown
+---@field layer unknown?
+---@field mapAPI unknown
+---@field mapUI unknown
+---@field styleAPI unknown
 WorldMapStyleEditor = ISPanel:derive("WorldMapStyleEditor")
+WorldMapStyleEditor.Type = "WorldMapStyleEditor"
 
----@return any
 function WorldMapStyleEditor:display(layer) end
 
----@return any
+---@return boolean
 function WorldMapStyleEditor:onKeyPress(key) end
 
----@return any
 function WorldMapStyleEditor:shrinkWrap() end
 
----@return any
 function WorldMapStyleEditor:undisplay() end
 
 ---@return WorldMapStyleEditor
 function WorldMapStyleEditor:new(editorMode) end
 
 ---@class WorldMapStyleEditor_TabPanel : ISPanel
----@field editorMode any
----@field layer any
----@field mapAPI any
----@field mapUI any
----@field styleAPI any
----@field [any] any
+---@field editorMode unknown
+---@field layer unknown
+---@field mapAPI unknown
+---@field mapUI unknown
+---@field styleAPI unknown
 WorldMapStyleEditor_TabPanel = ISPanel:derive("WorldMapStyleEditor_TabPanel")
+WorldMapStyleEditor_TabPanel.Type = "WorldMapStyleEditor_TabPanel"
 
----@return any
+---@return number?
 function WorldMapStyleEditor_TabPanel:getEntryClamped(entry, min, max) end
 
----@return any
+---@return boolean
 function WorldMapStyleEditor_TabPanel:onKeyPress(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TabPanel:onMouseDownMap(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapStyleEditor_TabPanel:onMouseMoveMap(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TabPanel:onMouseUpMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TabPanel:onMouseUpOutsideMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TabPanel:onRightMouseDownMap(x, y) end
 
----@return any
 function WorldMapStyleEditor_TabPanel:populateList(layer) end
 
----@return any
 function WorldMapStyleEditor_TabPanel:undisplay() end
 
 ---@return WorldMapStyleEditor_TabPanel
 function WorldMapStyleEditor_TabPanel:new(width, editorMode) end
 
 ---@class WorldMapStyleEditor_FilterPanel : WorldMapStyleEditor_TabPanel
----@field keyEntry any
----@field valueEntry any
----@field [any] any
+---@field keyEntry ISTextEntryBox
+---@field valueEntry ISTextEntryBox
 WorldMapStyleEditor_FilterPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_FilterPanel")
+WorldMapStyleEditor_FilterPanel.Type = "WorldMapStyleEditor_FilterPanel"
 
----@return any
 function WorldMapStyleEditor_FilterPanel:createChildren() end
 
----@return any
 function WorldMapStyleEditor_FilterPanel:onKeyEntered() end
 
----@return any
 function WorldMapStyleEditor_FilterPanel:onValueEntered() end
 
----@return any
 function WorldMapStyleEditor_FilterPanel:populateList(layer) end
 
+---@param width number
 ---@return WorldMapStyleEditor_FilterPanel
 function WorldMapStyleEditor_FilterPanel:new(width, editorMode) end
 
 ---@class WorldMapStyleEditor_ColorStopsPanel : WorldMapStyleEditor_TabPanel
----@field alphaEntry any
----@field blueEntry any
----@field greenEntry any
----@field listbox any
----@field redEntry any
----@field zoomEntry any
----@field [any] any
+---@field alphaEntry ISTextEntryBox
+---@field blueEntry ISTextEntryBox
+---@field greenEntry ISTextEntryBox
+---@field listbox WorldMapEditorListBox
+---@field redEntry ISTextEntryBox
+---@field zoomEntry ISTextEntryBox
 WorldMapStyleEditor_ColorStopsPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_ColorStopsPanel")
+WorldMapStyleEditor_ColorStopsPanel.Type = "WorldMapStyleEditor_ColorStopsPanel"
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:createChildren() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedAlpha() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedBlue() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedGreen() end
 
----@return any
+---@return number?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedIndex() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedRed() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedZoom() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onAdd() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onAlphaEntered() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onBlueEntered() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onGreenEntered() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onListboxEvent(action) end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onMoveDown() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onMoveUp() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onRedEntered() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onRemove() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onSelect() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:onZoomEntered() end
 
----@return any
 function WorldMapStyleEditor_ColorStopsPanel:populateList(layer) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function WorldMapStyleEditor_ColorStopsPanel:setRGBA(r, g, b, a) end
 
+---@param width number
 ---@return WorldMapStyleEditor_ColorStopsPanel
 function WorldMapStyleEditor_ColorStopsPanel:new(width, editorMode) end
 
 ---@class WorldMapStyleEditor_TextureStopsPanel : WorldMapStyleEditor_TabPanel
----@field listbox any
----@field texturePathEntry any
----@field zoomEntry any
----@field [any] any
+---@field listbox WorldMapEditorListBox
+---@field texturePathEntry ISTextEntryBox
+---@field zoomEntry ISTextEntryBox
 WorldMapStyleEditor_TextureStopsPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_TextureStopsPanel")
+WorldMapStyleEditor_TextureStopsPanel.Type = "WorldMapStyleEditor_TextureStopsPanel"
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:createChildren() end
 
----@return any
+---@return number?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedIndex() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedTexture() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedTexturePath() end
 
----@return any
+---@return unknown?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedZoom() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onAdd() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onListboxEvent(action) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TextureStopsPanel:onMouseDownMap(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapStyleEditor_TextureStopsPanel:onMouseMoveMap(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TextureStopsPanel:onMouseUpMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_TextureStopsPanel:onMouseUpOutsideMap(x, y) end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onMoveDown() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onMoveUp() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onRemove() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onSelect() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onTexturePathEntered() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:onZoomEntered() end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:populateList(layer) end
 
----@return any
 function WorldMapStyleEditor_TextureStopsPanel:render() end
 
+---@param width number
 ---@return WorldMapStyleEditor_TextureStopsPanel
 function WorldMapStyleEditor_TextureStopsPanel:new(width, editorMode) end
 
 ---@class WorldMapStyleEditor_TexturePanel : WorldMapStyleEditor_TextureStopsPanel
----@field lockSize any
----@field mode any
----@field resizeMode any
----@field resizer any
----@field scaleEntry any
----@field sizeLocked any
----@field snapButtons any
----@field snapMode any
----@field textureMode any
----@field useWorldBounds any
----@field [any] any
+---@field lockSize ISTickBox
+---@field mode string?
+---@field resizeMode string?
+---@field resizer WorldMapEditorResizer
+---@field scaleEntry ISTextEntryBox
+---@field sizeLocked boolean
+---@field snapButtons table
+---@field snapMode string
+---@field textureMode ISComboBox
+---@field useWorldBounds ISTickBox
 WorldMapStyleEditor_TexturePanel = WorldMapStyleEditor_TextureStopsPanel:derive("WorldMapStyleEditor_TexturePanel")
+WorldMapStyleEditor_TexturePanel.Type = "WorldMapStyleEditor_TexturePanel"
 
----@return any
+---@return boolean
 function WorldMapStyleEditor_TexturePanel:cancelResize() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:createChildren() end
 
----@return any
+---@return number
+---@return number
 function WorldMapStyleEditor_TexturePanel:getSelectedTextureScale() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onBoundsFromTexture() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onChangeSizeLocked() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onChangeSnapMode(button) end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onChangeTextureMode() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onChangeUseWorldBounds() end
 
----@return any
+---@return boolean
 function WorldMapStyleEditor_TexturePanel:onKeyPress(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TexturePanel:onMouseDownMap(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapStyleEditor_TexturePanel:onMouseMoveMap(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapStyleEditor_TexturePanel:onMouseUpMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_TexturePanel:onMouseUpOutsideMap(x, y) end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onResizeToTexture() end
 
----@return any
+---@param x number
+---@param y number
 function WorldMapStyleEditor_TexturePanel:onRightMouseDownMap(x, y) end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onScaleEntered() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:onSelect() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:populateList(layer) end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:render() end
 
----@return any
 function WorldMapStyleEditor_TexturePanel:undisplay() end
 
+---@param width number
 ---@return WorldMapStyleEditor_TexturePanel
 function WorldMapStyleEditor_TexturePanel:new(width, editorMode) end
 
 ---@class WorldMapStyleEditor_PolygonLayerPanel : WorldMapStyleEditor
----@field fillPanel any
----@field filterPanel any
----@field tabs any
----@field texturePanel any
----@field [any] any
+---@field fillPanel WorldMapStyleEditor_ColorStopsPanel
+---@field filterPanel WorldMapStyleEditor_FilterPanel
+---@field tabs ISTabPanel
+---@field texturePanel WorldMapStyleEditor_TextureStopsPanel
 WorldMapStyleEditor_PolygonLayerPanel = WorldMapStyleEditor:derive("WorldMapStyleEditor_PolygonLayerPanel")
+WorldMapStyleEditor_PolygonLayerPanel.Type = "WorldMapStyleEditor_PolygonLayerPanel"
 
----@return any
 function WorldMapStyleEditor_PolygonLayerPanel:createChildren() end
 
----@return any
 function WorldMapStyleEditor_PolygonLayerPanel:display(layer) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseDownMap(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return unknown
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseMoveMap(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseUpMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseUpOutsideMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_PolygonLayerPanel:onRightMouseDownMap(x, y) end
 
----@return any
 function WorldMapStyleEditor_PolygonLayerPanel:render() end
 
----@return any
 function WorldMapStyleEditor_PolygonLayerPanel:undisplay() end
 
 ---@return WorldMapStyleEditor_PolygonLayerPanel
 function WorldMapStyleEditor_PolygonLayerPanel:new(editorMode) end
 
 ---@class WorldMapStyleEditor_TextureLayerPanel : WorldMapStyleEditor
----@field fillPanel any
----@field tabs any
----@field texturePanel any
----@field [any] any
+---@field fillPanel WorldMapStyleEditor_ColorStopsPanel
+---@field tabs ISTabPanel
+---@field texturePanel WorldMapStyleEditor_TexturePanel
 WorldMapStyleEditor_TextureLayerPanel = WorldMapStyleEditor:derive("WorldMapStyleEditor_TextureLayerPanel")
+WorldMapStyleEditor_TextureLayerPanel.Type = "WorldMapStyleEditor_TextureLayerPanel"
 
----@return any
 function WorldMapStyleEditor_TextureLayerPanel:createChildren() end
 
----@return any
 function WorldMapStyleEditor_TextureLayerPanel:display(layer) end
 
----@return any
+---@return unknown
 function WorldMapStyleEditor_TextureLayerPanel:onKeyPress(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_TextureLayerPanel:onMouseDownMap(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return unknown
 function WorldMapStyleEditor_TextureLayerPanel:onMouseMoveMap(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_TextureLayerPanel:onMouseUpMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_TextureLayerPanel:onMouseUpOutsideMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function WorldMapStyleEditor_TextureLayerPanel:onRightMouseDownMap(x, y) end
 
----@return any
 function WorldMapStyleEditor_TextureLayerPanel:render() end
 
----@return any
 function WorldMapStyleEditor_TextureLayerPanel:undisplay() end
 
 ---@return WorldMapStyleEditor_TextureLayerPanel

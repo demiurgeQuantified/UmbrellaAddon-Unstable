@@ -1,128 +1,112 @@
 ---@meta
 
 ---@class ISCollapsableWindow : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field clearStentil any
----@field closeButton any
----@field closeButtonTexture any
----@field collapseButton any
----@field collapseButtonTexture any
----@field collapseCounter any
----@field downX any
----@field downY any
----@field drawFrame any
----@field height any
----@field infoBtn any
----@field infoButton any
----@field infoRichText any
----@field infoText any
----@field invbasic any
----@field isCollapsed any
----@field mouseOver any
----@field moving any
----@field pin any
----@field pinButton any
----@field pinButtonTexture any
----@field resizable any
----@field resizeimage any
----@field resizeWidget any
----@field resizeWidget2 any
----@field statusbarbkg any
----@field title any
----@field titlebarbkg any
----@field titleFont any
----@field titleFontHgt any
----@field viewList any
----@field widgetTextureColor any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field background unknown
+---@field clearStentil boolean
+---@field closeButton ISButton
+---@field closeButtonTexture unknown
+---@field collapseButton ISButton
+---@field collapseButtonTexture unknown
+---@field collapseCounter number
+---@field drawFrame boolean
+---@field infoBtn unknown
+---@field infoButton ISButton
+---@field infoRichText ISModalRichText
+---@field infoText unknown
+---@field invbasic unknown
+---@field isCollapsed boolean
+---@field pin boolean
+---@field pinButton ISButton
+---@field pinButtonTexture unknown
+---@field resizable boolean
+---@field resizeimage unknown
+---@field resizeWidget ISResizeWidget
+---@field resizeWidget2 ISResizeWidget
+---@field statusbarbkg unknown
+---@field title string?
+---@field titlebarbkg unknown
+---@field titleFont unknown
+---@field titleFontHgt unknown
+---@field viewList table
+---@field widgetTextureColor table
 ISCollapsableWindow = ISPanel:derive("ISCollapsableWindow")
+ISCollapsableWindow.Type = "ISCollapsableWindow"
 
----@return any
+---@return unknown
 function ISCollapsableWindow.TitleBarHeight() end
 
----@return any
+---@param view table
 function ISCollapsableWindow:addView(view) end
 
----@return any
 function ISCollapsableWindow:close() end
 
----@return any
 function ISCollapsableWindow:collapse() end
 
----@return any
 function ISCollapsableWindow:createChildren() end
 
----@return any
+---@return string?
 function ISCollapsableWindow:getTitle() end
 
----@return any
+---@return table
 function ISCollapsableWindow:getViews() end
 
----@return any
 function ISCollapsableWindow:initialise() end
 
----@return any
 function ISCollapsableWindow:onInfo() end
 
----@return any
+---@param x number
+---@param y number
 function ISCollapsableWindow:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISCollapsableWindow:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISCollapsableWindow:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISCollapsableWindow:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISCollapsableWindow:onMouseUpOutside(x, y) end
 
----@return any
 function ISCollapsableWindow:pin() end
 
----@return any
 function ISCollapsableWindow:prerender() end
 
----@return any
 function ISCollapsableWindow:render() end
 
----@return any
+---@return number
 function ISCollapsableWindow:resizeWidgetHeight() end
 
----@return any
+---@param name string
 function ISCollapsableWindow:RestoreLayout(name, layout) end
 
----@return any
+---@param name string
 function ISCollapsableWindow:SaveLayout(name, layout) end
 
----@return any
 function ISCollapsableWindow:setDrawFrame(visible) end
 
----@return any
 function ISCollapsableWindow:setInfo(text) end
 
----@return any
+---@param resizable boolean
 function ISCollapsableWindow:setResizable(resizable) end
 
----@return any
+---@param title string
 function ISCollapsableWindow:setTitle(title) end
 
----@return any
+---@return unknown
 function ISCollapsableWindow:titleBarHeight() end
 
----@return any
 function ISCollapsableWindow:uncollapse() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCollapsableWindow
 function ISCollapsableWindow:new(x, y, width, height) end

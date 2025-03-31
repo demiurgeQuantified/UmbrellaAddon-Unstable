@@ -1,17 +1,18 @@
 ---@meta
 
 ---@class DamageModelDefinitions
-DamageModelDefinitions = DamageModelDefinitions or {}
+DamageModelDefinitions = {}
 DamageModelDefinitions.list = DamageModelDefinitions.list or {}
 
----@return any
+---@param texture string
+---@param damageCategories table
+---@param criticalHit boolean?
 function DamageModelDefinitions.addDefinition(texture, bodyPart, damageCategories, criticalHit) end
 
----@return any
+---@return boolean
 function DamageModelDefinitions.checkCategory(weapon, damageCategories) end
 
----@return any
+---@return boolean
 function DamageModelDefinitions.checkCrit(wielder, damage) end
 
----@return any
 function DamageModelDefinitions.OnHitZombie(zombie, wielder, bodyPart, weapon) end

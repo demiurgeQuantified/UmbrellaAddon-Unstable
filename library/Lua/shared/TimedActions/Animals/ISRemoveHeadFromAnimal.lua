@@ -1,39 +1,36 @@
 ---@meta
 
 ---@class ISRemoveHeadFromAnimal : ISBaseTimedAction
----@field animalDef any
----@field body any
----@field hook any
----@field luaHook any
----@field maxTime any
----@field perkLevel any
----@field xp any
----@field [any] any
+---@field animalDef unknown?
+---@field body unknown?
+---@field hook unknown
+---@field luaHook ISButcherHookUI
+---@field perkLevel unknown
+---@field xp unknown
 ISRemoveHeadFromAnimal = ISBaseTimedAction:derive("ISRemoveHeadFromAnimal")
+ISRemoveHeadFromAnimal.Type = "ISRemoveHeadFromAnimal"
 
----@return any
+---@return boolean
 function ISRemoveHeadFromAnimal:complete() end
 
----@return any
+---@return number
 function ISRemoveHeadFromAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveHeadFromAnimal:isValid() end
 
----@return any
 function ISRemoveHeadFromAnimal:perform() end
 
----@return any
 function ISRemoveHeadFromAnimal:start() end
 
----@return any
 function ISRemoveHeadFromAnimal:stop() end
 
----@return any
 function ISRemoveHeadFromAnimal:update() end
 
----@return any
+---@return unknown
 function ISRemoveHeadFromAnimal:waitToStart() end
 
+---@param body unknown?
+---@param luaHook ISButcherHookUI
 ---@return ISRemoveHeadFromAnimal
 function ISRemoveHeadFromAnimal:new(character, body, hook, luaHook) end

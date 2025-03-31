@@ -1,45 +1,45 @@
 ---@meta
 
 ---@class ISServerOptionsChange : ISPanel
----@field backgroundColor any
----@field booleanOption any
----@field borderColor any
----@field buttonBorderColor any
----@field cancel any
----@field defaultBool any
----@field defaultOption any
----@field defaultText any
----@field entry any
----@field enumOption any
----@field errorTxt any
----@field moveWithMouse any
----@field onclick any
----@field option any
----@field resetBtn any
----@field saveBtn any
----@field target any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field booleanOption ISComboBox
+---@field buttonBorderColor table
+---@field cancel ISButton
+---@field defaultBool number
+---@field defaultOption number
+---@field defaultText string
+---@field entry ISTextEntryBox
+---@field enumOption ISComboBox
+---@field errorTxt string?
+---@field onclick function
+---@field option unknown
+---@field resetBtn ISButton
+---@field saveBtn ISButton
+---@field target ISServerOptions
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISServerOptionsChange = ISPanel:derive("ISServerOptionsChange")
+ISServerOptionsChange.Type = "ISServerOptionsChange"
 
----@return any
 function ISServerOptionsChange:create() end
 
----@return any
 function ISServerOptionsChange:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISServerOptionsChange:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISServerOptionsChange:render() end
 
----@return any
+---@param visible boolean
 function ISServerOptionsChange:setVisible(visible) end
 
----@return any
 function ISServerOptionsChange:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target ISServerOptions
+---@param onclick function
 ---@return ISServerOptionsChange
 function ISServerOptionsChange:new(x, y, width, height, target, onclick, option) end

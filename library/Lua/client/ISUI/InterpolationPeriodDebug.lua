@@ -1,112 +1,92 @@
 ---@meta
 
 ---@class InterpolationPeriodDebug : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field clearOnNextRun any
----@field collapseCounter any
----@field colTable any
----@field currentStage any
----@field currentTile any
----@field dayStamp any
----@field drawFrame any
----@field greyCol any
----@field height any
----@field historyM1 any
----@field hotKeyPanels any
----@field hourStamp any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field labels any
----@field monthStamp any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field richtext any
----@field subFocus any
----@field title any
----@field varInfo any
----@field width any
----@field x any
----@field y any
----@field year any
----@field zombie any
----@field zombieInfo any
----@field [any] any
+---@field clearOnNextRun boolean
+---@field colTable table
+---@field currentStage unknown?
+---@field currentTile unknown?
+---@field dayStamp number
+---@field greyCol table
+---@field historyM1 ValuePlotter
+---@field hotKeyPanels table
+---@field hourStamp number
+---@field isJoypadWindow boolean
+---@field labels table
+---@field monthStamp number
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field richtext unknown?
+---@field subFocus unknown?
+---@field title string
+---@field varInfo table
+---@field year number
+---@field zombie unknown?
+---@field zombieInfo table
 InterpolationPeriodDebug = ISCollapsableWindow:derive("InterpolationPeriodDebug")
-InterpolationPeriodDebug.instance = nil
+InterpolationPeriodDebug.Type = "InterpolationPeriodDebug"
+InterpolationPeriodDebug.instance = nil ---@type InterpolationPeriodDebug?
 InterpolationPeriodDebug.shiftDown = 0
 InterpolationPeriodDebug.eventsAdded = false
 
----@return any
+---@return InterpolationPeriodDebug?
 function InterpolationPeriodDebug.OnOpenPanel(zombie) end
 
----@return any
+---@param _r number
+---@param _g number
+---@param _b number
 function InterpolationPeriodDebug:addColor(_r, _g, _b) end
 
----@return any
+---@param _title string
+---@return number
 function InterpolationPeriodDebug:addLabel(_curX, _curY, _labelID, _title) end
 
----@return any
+---@param _title string
+---@return number
 function InterpolationPeriodDebug:addLabelValue(_curX, _curY, _width, _type, _labelID, _title, _defaultVal) end
 
----@return any
+---@param _name string
 function InterpolationPeriodDebug:addVarInfo(_name, _desc, _min, _max, _func) end
 
----@return any
 function InterpolationPeriodDebug:clear() end
 
----@return any
 function InterpolationPeriodDebug:close() end
 
----@return any
 function InterpolationPeriodDebug:createChildren() end
 
----@return any
+---@return unknown?
 function InterpolationPeriodDebug:getTitleLabel(_labelID) end
 
----@return any
+---@param _labelID string
+---@return unknown?
 function InterpolationPeriodDebug:getValueLabel(_labelID) end
 
----@return any
 function InterpolationPeriodDebug:initialise() end
 
----@return any
 function InterpolationPeriodDebug:initVariables() end
 
----@return any
 function InterpolationPeriodDebug:onButtonToggle(_btn) end
 
----@return any
+---@return boolean
 function InterpolationPeriodDebug:onMouseWheel(del) end
 
----@return any
 function InterpolationPeriodDebug:onResize() end
 
----@return any
 function InterpolationPeriodDebug:prerender() end
 
----@return any
 function InterpolationPeriodDebug:render() end
 
----@return any
 function InterpolationPeriodDebug:setZombie(zombie) end
 
----@return any
 function InterpolationPeriodDebug:stayOnSplitScreen() end
 
----@return any
 function InterpolationPeriodDebug:update() end
 
----@return any
 function InterpolationPeriodDebug:updateValues() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return InterpolationPeriodDebug
 function InterpolationPeriodDebug:new(x, y, width, height, player) end

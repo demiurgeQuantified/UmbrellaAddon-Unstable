@@ -1,48 +1,45 @@
 ---@meta
 
 ---@class ISFirearmRadialMenu : ISBaseObject
----@field character any
----@field playerNum any
----@field [any] any
+---@field character unknown
+---@field playerNum unknown
 ISFirearmRadialMenu = ISBaseObject:derive("ISFirearmRadialMenu")
+ISFirearmRadialMenu.Type = "ISFirearmRadialMenu"
 
----@return any
+---@return boolean
 function ISFirearmRadialMenu.checkKey(key) end
 
----@return any
+---@return boolean
 function ISFirearmRadialMenu.checkWeapon(playerObj) end
 
----@return any
+---@param buttonPrompt ISButtonPrompt
+---@return boolean
 function ISFirearmRadialMenu.getBestLBButtonAction(buttonPrompt) end
 
----@return any
+---@param buttonPrompt ISButtonPrompt
+---@return boolean?
 function ISFirearmRadialMenu.getBestRBButtonAction(buttonPrompt) end
 
----@return any
+---@param buttonPrompt ISButtonPrompt
 function ISFirearmRadialMenu.onJoypadButtonReleased(buttonPrompt, button, joypadData) end
 
----@return any
 function ISFirearmRadialMenu.onKeyPressed(key) end
 
----@return any
 function ISFirearmRadialMenu.onKeyReleased(key) end
 
----@return any
 function ISFirearmRadialMenu.onKeyRepeat(key) end
 
----@return any
+---@param buttonPrompt ISButtonPrompt
+---@return boolean?
 function ISFirearmRadialMenu.onRepeatRBumper(buttonPrompt) end
 
----@return any
 function ISFirearmRadialMenu:center() end
 
----@return any
 function ISFirearmRadialMenu:display() end
 
----@return any
 function ISFirearmRadialMenu:fillMenu() end
 
----@return any
+---@return unknown?
 function ISFirearmRadialMenu:getWeapon() end
 
 ---@return ISFirearmRadialMenu

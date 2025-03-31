@@ -1,46 +1,46 @@
 ---@meta
 
 ---@class XuiDebugLayoutWindow : ISCollapsableWindow
----@field colMod any
----@field dAplha any
----@field heightMod any
----@field minimumHeight any
----@field minimumWidth any
----@field player any
----@field rh any
----@field selectColor any
----@field selectedUUID any
----@field selections any
----@field th any
----@field toggle any
----@field xuiPanel any
----@field xuiScript any
----@field [any] any
+---@field colMod number
+---@field dAplha number
+---@field heightMod number
+---@field player unknown
+---@field rh number
+---@field selectColor table
+---@field selectedUUID boolean?
+---@field selections table
+---@field th unknown
+---@field toggle boolean
+---@field xuiPanel unknown?
+---@field xuiScript unknown
 XuiDebugLayoutWindow = ISCollapsableWindow:derive("XuiDebugLayoutWindow")
+XuiDebugLayoutWindow.Type = "XuiDebugLayoutWindow"
 
----@return any
 function XuiDebugLayoutWindow:close() end
 
----@return any
 function XuiDebugLayoutWindow:createChildren() end
 
----@return any
+---@param _self XuiDebugLayoutWindow
+---@param _uuid unknown?
+---@param _list table
+---@return table
 function XuiDebugLayoutWindow:debugXuiFindAllUUID(_self, _uuid, _list) end
 
----@return any
 function XuiDebugLayoutWindow:initialise() end
 
----@return any
+---@param _width number
+---@param _height number
 function XuiDebugLayoutWindow:onResize(_width, _height) end
 
----@return any
 function XuiDebugLayoutWindow:prerender() end
 
----@return any
 function XuiDebugLayoutWindow:render() end
 
----@return any
 function XuiDebugLayoutWindow:selectUUID(_uuid) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return XuiDebugLayoutWindow
 function XuiDebugLayoutWindow:new(x, y, width, height, player, script) end

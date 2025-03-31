@@ -1,38 +1,37 @@
 ---@meta
 
 ---@class ISPlayerStatsChooseProfessionUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field cancel any
----@field chr any
----@field combo any
----@field comboList any
----@field moveWithMouse any
----@field ok any
----@field onclick any
----@field target any
----@field variableColor any
----@field zOffsetSmallFont any
----@field [any] any
+---@field cancel ISButton
+---@field chr unknown
+---@field combo ISComboBox
+---@field comboList table
+---@field ok ISButton
+---@field onclick unknown
+---@field target unknown?
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISPlayerStatsChooseProfessionUI = ISPanel:derive("ISPlayerStatsChooseProfessionUI")
+ISPlayerStatsChooseProfessionUI.Type = "ISPlayerStatsChooseProfessionUI"
 
----@return any
 function ISPlayerStatsChooseProfessionUI:create() end
 
----@return any
 function ISPlayerStatsChooseProfessionUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsChooseProfessionUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISPlayerStatsChooseProfessionUI:populateComboList() end
 
----@return any
 function ISPlayerStatsChooseProfessionUI:render() end
 
----@return any
+---@param visible boolean
 function ISPlayerStatsChooseProfessionUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target unknown?
 ---@return ISPlayerStatsChooseProfessionUI
 function ISPlayerStatsChooseProfessionUI:new(x, y, width, height, target, onclick, player) end

@@ -1,58 +1,55 @@
 ---@meta
 
 ---@class ISWidgetAutoToggle : ISPanel
----@field autoFillContents any
----@field background any
----@field doToolTip any
----@field hover any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field margin any
----@field minimumHeight any
----@field minimumWidth any
----@field onToggled any
----@field target any
----@field textureOff any
----@field textureOffOver any
----@field textureOn any
----@field textureOnOver any
----@field toggleState any
----@field [any] any
+---@field autoFillContents boolean
+---@field doToolTip boolean
+---@field hover boolean
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field margin number
+---@field onToggled unknown
+---@field textureOff unknown
+---@field textureOffOver unknown
+---@field textureOn unknown
+---@field textureOnOver unknown
+---@field toggleState boolean
 ISWidgetAutoToggle = ISPanel:derive("ISWidgetAutoToggle")
+ISWidgetAutoToggle.Type = "ISWidgetAutoToggle"
 
----@return any
 function ISWidgetAutoToggle:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetAutoToggle:createChildren() end
 
----@return any
 function ISWidgetAutoToggle:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISWidgetAutoToggle:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISWidgetAutoToggle:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISWidgetAutoToggle:onMouseMoveOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISWidgetAutoToggle:onMouseUp(x, y) end
 
----@return any
 function ISWidgetAutoToggle:onResize() end
 
----@return any
 function ISWidgetAutoToggle:prerender() end
 
----@return any
 function ISWidgetAutoToggle:render() end
 
----@return any
 function ISWidgetAutoToggle:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetAutoToggle
 function ISWidgetAutoToggle:new(x, y, width, height, doSmall, target, onToggled) end

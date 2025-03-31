@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISToggleLightSourceAction : ISBaseTimedAction
----@field ignoreHandsWounds any
----@field lightSource any
----@field maxTime any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field lightSource unknown
 ISToggleLightSourceAction = ISBaseTimedAction:derive("ISToggleLightSourceAction")
+ISToggleLightSourceAction.Type = "ISToggleLightSourceAction"
 
----@return any
+---@return boolean
 function ISToggleLightSourceAction:complete() end
 
----@return any
+---@return number
 function ISToggleLightSourceAction:getDuration() end
 
----@return any
+---@return unknown
 function ISToggleLightSourceAction:isValid() end
 
----@return any
 function ISToggleLightSourceAction:perform() end
 
----@return any
 function ISToggleLightSourceAction:start() end
 
----@return any
 function ISToggleLightSourceAction:stop() end
 
----@return any
 function ISToggleLightSourceAction:update() end
 
 ---@return ISToggleLightSourceAction

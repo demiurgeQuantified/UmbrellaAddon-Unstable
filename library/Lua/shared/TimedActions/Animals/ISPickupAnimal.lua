@@ -1,35 +1,30 @@
 ---@meta
 
 ---@class ISPickupAnimal : ISBaseTimedAction
----@field animal any
----@field maxTime any
----@field remove any
----@field sound any
----@field [any] any
+---@field animal unknown
+---@field remove unknown
+---@field sound unknown
 ISPickupAnimal = ISBaseTimedAction:derive("ISPickupAnimal")
+ISPickupAnimal.Type = "ISPickupAnimal"
 
----@return any
+---@return boolean
 function ISPickupAnimal:complete() end
 
----@return any
+---@return number
 function ISPickupAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISPickupAnimal:isValid() end
 
----@return any
 function ISPickupAnimal:perform() end
 
----@return any
 function ISPickupAnimal:start() end
 
----@return any
 function ISPickupAnimal:stop() end
 
----@return any
 function ISPickupAnimal:update() end
 
----@return any
+---@return unknown
 function ISPickupAnimal:waitToStart() end
 
 ---@return ISPickupAnimal

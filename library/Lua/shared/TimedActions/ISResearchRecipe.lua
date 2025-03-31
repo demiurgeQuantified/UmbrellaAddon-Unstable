@@ -1,42 +1,34 @@
 ---@meta
 
 ---@class ISResearchRecipe : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field forceProgressBar any
----@field ignoreHandsWounds any
----@field item any
----@field maxTime any
----@field pageTimer any
----@field scriptItem any
----@field [any] any
+---@field forceProgressBar boolean
+---@field ignoreHandsWounds boolean
+---@field item unknown
+---@field pageTimer number
+---@field scriptItem unknown
 ISResearchRecipe = ISBaseTimedAction:derive("ISResearchRecipe")
+ISResearchRecipe.Type = "ISResearchRecipe"
 
----@return any
 function ISResearchRecipe:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISResearchRecipe:complete() end
 
----@return any
+---@return number
 function ISResearchRecipe:getDuration() end
 
----@return any
+---@return boolean
 function ISResearchRecipe:isUsingTimeout() end
 
----@return any
+---@return boolean?
 function ISResearchRecipe:isValid() end
 
----@return any
 function ISResearchRecipe:perform() end
 
----@return any
 function ISResearchRecipe:start() end
 
----@return any
 function ISResearchRecipe:stop() end
 
----@return any
 function ISResearchRecipe:update() end
 
 ---@return ISResearchRecipe

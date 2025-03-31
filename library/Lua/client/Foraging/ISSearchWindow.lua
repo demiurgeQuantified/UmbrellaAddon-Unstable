@@ -1,123 +1,95 @@
 ---@meta
 
 ---@class ISSearchWindow : ISCollapsableWindow
----@field backgroundColor any
----@field borderColor any
----@field character any
----@field climateManager any
----@field drawJoypadFocus any
----@field gameTime any
----@field height any
----@field joypadMoveSpeed any
----@field manager any
----@field overrideBPrompt any
----@field player any
----@field searchFocus any
----@field searchFocusCategory any
----@field showBackground any
----@field showBorder any
----@field title any
----@field toggleSearchMode any
----@field tooltipForced any
----@field visibleFunction any
----@field visibleTarget any
----@field width any
----@field x any
----@field y any
----@field zoneDisplay any
----@field [any] any
+---@field character unknown
+---@field climateManager unknown
+---@field drawJoypadFocus boolean
+---@field gameTime unknown
+---@field joypadMoveSpeed number
+---@field manager unknown
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field searchFocus ISComboBox
+---@field searchFocusCategory string
+---@field showBackground boolean
+---@field showBorder boolean
+---@field title string
+---@field toggleSearchMode ISButton
+---@field tooltipForced string?
+---@field visibleFunction function
+---@field visibleTarget ISSearchWindow
+---@field zoneDisplay ISZoneDisplay
 ISSearchWindow = ISCollapsableWindow:derive("ISSearchWindow")
+ISSearchWindow.Type = "ISSearchWindow"
 ISSearchWindow.players = {}
 ISSearchWindow.showDebug = false
 
----@return any
 function ISSearchWindow.createUI(_player) end
 
----@return any
 function ISSearchWindow.destroyUI(_character) end
 
----@return any
+---@param _isSearchMode boolean
 function ISSearchWindow.onEnableSearchMode(_character, _isSearchMode) end
 
----@return any
 function ISSearchWindow.OnFillWorldObjectContextMenu(_player, _context) end
 
----@return any
 function ISSearchWindow.showWindow(_character) end
 
----@return any
 function ISSearchWindow.toggleWindow(_character) end
 
----@return any
 function ISSearchWindow:checkShowFirstTimeSearchTutorial() end
 
----@return any
 function ISSearchWindow:close() end
 
----@return any
+---@return string
 function ISSearchWindow:getAPrompt() end
 
----@return any
+---@return string
 function ISSearchWindow:getBPrompt() end
 
----@return any
+---@return string
 function ISSearchWindow:getLBPrompt() end
 
----@return any
+---@return string
 function ISSearchWindow:getRBPrompt() end
 
----@return any
+---@return string
 function ISSearchWindow:getXPrompt() end
 
----@return any
+---@return string
 function ISSearchWindow:getYPrompt() end
 
----@return any
 function ISSearchWindow:initialise() end
 
----@return any
+---@return unknown
 function ISSearchWindow:isValidPrompt() end
 
----@return any
 function ISSearchWindow:nextSearchFocus() end
 
----@return any
 function ISSearchWindow:onChangeSearchFocusCategory(_option) end
 
----@return any
 function ISSearchWindow:onGainJoypadFocus() end
 
----@return any
 function ISSearchWindow:onJoypadDirDown() end
 
----@return any
 function ISSearchWindow:onJoypadDirLeft() end
 
----@return any
 function ISSearchWindow:onJoypadDirRight() end
 
----@return any
 function ISSearchWindow:onJoypadDirUp() end
 
----@return any
 function ISSearchWindow:onJoypadDown(_button) end
 
----@return any
 function ISSearchWindow:onLoseJoypadFocus() end
 
----@return any
 function ISSearchWindow:onToggleVisible() end
 
----@return any
 function ISSearchWindow:toggleForceAreaTooltip() end
 
----@return any
 function ISSearchWindow:toggleForceVisionTooltip() end
 
----@return any
 function ISSearchWindow:update() end
 
----@return any
 function ISSearchWindow:updateSearchFocusCategories() end
 
 ---@return ISSearchWindow

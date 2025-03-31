@@ -1,34 +1,26 @@
 ---@meta
 
 ---@class ISTakePillAction : ISBaseTimedAction
----@field isEating any
----@field item any
----@field maxTime any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field isEating boolean
+---@field item unknown
 ISTakePillAction = ISBaseTimedAction:derive("ISTakePillAction")
+ISTakePillAction.Type = "ISTakePillAction"
 
----@return any
+---@return boolean
 function ISTakePillAction:complete() end
 
----@return any
+---@return number
 function ISTakePillAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISTakePillAction:isValid() end
 
----@return any
 function ISTakePillAction:perform() end
 
----@return any
 function ISTakePillAction:start() end
 
----@return any
 function ISTakePillAction:stop() end
 
----@return any
 function ISTakePillAction:update() end
 
 ---@return ISTakePillAction

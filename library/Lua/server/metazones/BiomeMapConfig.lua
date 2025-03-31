@@ -1,5 +1,6 @@
 ---@meta
 
+---@class biome_map_config
 biome_map_config = {
 	{
 		pixel = 0,

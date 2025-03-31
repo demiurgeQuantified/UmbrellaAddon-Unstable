@@ -1,30 +1,25 @@
 ---@meta
 
 ---@class ISInspectAnimalTrackAction : ISBaseTimedAction
----@field maxTime any
----@field track any
----@field [any] any
+---@field track unknown
 ISInspectAnimalTrackAction = ISBaseTimedAction:derive("ISInspectAnimalTrackAction")
+ISInspectAnimalTrackAction.Type = "ISInspectAnimalTrackAction"
 
----@return any
+---@return number
 function ISInspectAnimalTrackAction:getDuration() end
 
----@return any
+---@return boolean?
 function ISInspectAnimalTrackAction:isValid() end
 
----@return any
 function ISInspectAnimalTrackAction:perform() end
 
----@return any
 function ISInspectAnimalTrackAction:start() end
 
----@return any
 function ISInspectAnimalTrackAction:stop() end
 
----@return any
 function ISInspectAnimalTrackAction:update() end
 
----@return any
+---@return unknown
 function ISInspectAnimalTrackAction:waitToStart() end
 
 ---@return ISInspectAnimalTrackAction

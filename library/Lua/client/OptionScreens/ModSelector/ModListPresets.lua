@@ -1,60 +1,51 @@
 ---@meta
 
 ---@class ModListPresets : ISUIElement
----@field addPresetButton any
----@field childrenIndex any
----@field childrenLine any
----@field delPresetButton any
----@field joypadIndex any
----@field missedModsPanel any
----@field model any
----@field presetCombo any
----@field savePresetButton any
----@field sharePresetButton any
----@field [any] any
+---@field addPresetButton ISButton
+---@field childrenIndex number
+---@field childrenLine table
+---@field delPresetButton ISButton
+---@field joypadIndex unknown
+---@field missedModsPanel ModSelector.MissedModsWindow
+---@field model unknown
+---@field presetCombo ISComboBox
+---@field savePresetButton ISButton
+---@field sharePresetButton ISButton
 ModListPresets = ISUIElement:derive("ModListPresets")
+ModListPresets.Type = "ModListPresets"
 
----@return any
 function ModListPresets:addChild(child) end
 
----@return any
 function ModListPresets:addSharedPreset(button) end
 
----@return any
 function ModListPresets:choosePreset(combo) end
 
----@return any
 function ModListPresets:createChildren() end
 
----@return any
 function ModListPresets:onGainJoypadFocus(joypadData) end
 
----@return any
 function ModListPresets:onJoypadDirDown(joypadData) end
 
----@return any
 function ModListPresets:onJoypadDirLeft(joypadData) end
 
----@return any
 function ModListPresets:onJoypadDirRight(joypadData) end
 
----@return any
 function ModListPresets:onJoypadDirUp(joypadData) end
 
----@return any
 function ModListPresets:onJoypadDown(button, joypadData) end
 
----@return any
 function ModListPresets:onPresetButton(button) end
 
----@return any
 function ModListPresets:onSavePreset(button) end
 
----@return any
+---@return unknown
 function ModListPresets:onValidateSavePreset(text) end
 
----@return any
 function ModListPresets:updateView() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ModListPresets
 function ModListPresets:new(x, y, width, height, model) end

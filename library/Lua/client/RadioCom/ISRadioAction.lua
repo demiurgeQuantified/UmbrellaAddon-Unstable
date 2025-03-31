@@ -1,110 +1,91 @@
 ---@meta
 
 ---@class ISRadioAction : ISBaseTimedAction
----@field character any
----@field device any
----@field deviceData any
----@field ignoreHandsWounds any
----@field maxTime any
----@field mode any
----@field secondaryItem any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field device unknown
+---@field deviceData unknown
+---@field ignoreHandsWounds boolean
+---@field mode string
+---@field secondaryItem (boolean | number)?
 ISRadioAction = ISBaseTimedAction:derive("ISRadioAction")
+ISRadioAction.Type = "ISRadioAction"
 
----@return any
+---@return unknown?
 function ISRadioAction:isValid() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidAddBattery() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidAddHeadphones() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidAddMedia() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidMuteMicrophone() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidMuteVolume() end
 
----@return any
+---@return unknown
 function ISRadioAction:isValidRemoveBattery() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidRemoveHeadphones() end
 
----@return any
+---@return unknown
 function ISRadioAction:isValidRemoveMedia() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidSetChannel() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidSetVolume() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidToggleOnOff() end
 
----@return any
+---@return unknown
 function ISRadioAction:isValidTogglePlayMedia() end
 
----@return any
+---@return boolean
 function ISRadioAction:isValidUnMuteVolume() end
 
----@return any
 function ISRadioAction:perform() end
 
----@return any
 function ISRadioAction:performAddBattery() end
 
----@return any
 function ISRadioAction:performAddHeadphones() end
 
----@return any
 function ISRadioAction:performAddMedia() end
 
----@return any
 function ISRadioAction:performMuteMicrophone() end
 
----@return any
 function ISRadioAction:performMuteVolume() end
 
----@return any
 function ISRadioAction:performRemoveBattery() end
 
----@return any
 function ISRadioAction:performRemoveHeadphones() end
 
----@return any
 function ISRadioAction:performRemoveMedia() end
 
----@return any
 function ISRadioAction:performSetChannel() end
 
----@return any
 function ISRadioAction:performSetVolume() end
 
----@return any
 function ISRadioAction:performToggleOnOff() end
 
----@return any
 function ISRadioAction:performTogglePlayMedia() end
 
----@return any
 function ISRadioAction:performUnMuteVolume() end
 
----@return any
 function ISRadioAction:start() end
 
----@return any
 function ISRadioAction:startSetChannel() end
 
----@return any
 function ISRadioAction:update() end
 
+---@param mode string
+---@param secondaryItem (boolean | number)?
 ---@return ISRadioAction
 function ISRadioAction:new(mode, character, device, secondaryItem) end

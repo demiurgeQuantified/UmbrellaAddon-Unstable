@@ -1,27 +1,28 @@
 ---@meta
 
 ---@class ISPaintMenu
----@field player any
----@field [any] any
 ISPaintMenu = {}
+ISPaintMenu.player = nil
 
----@return any
+---@param name string
+---@param r number
+---@param g number
+---@param b number
 function ISPaintMenu.addSignOption(subMenuPaint, name, wall, painting, r, g, b) end
 
----@return any
+---@return boolean?
 function ISPaintMenu.doPaintMenu(player, context, worldobjects, test) end
 
----@return any
+---@return string?
 function ISPaintMenu.getWallType(obj) end
 
----@return any
 function ISPaintMenu.onPaint(worldobjects, player, thumpable, painting) end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
 function ISPaintMenu.onPaintSign(wall, player, painting, sign, r, g, b) end
 
----@return any
 function ISPaintMenu.onPaper(worldobjects, player, thumpable, papering, wallType) end
 
----@return any
 function ISPaintMenu.onPlaster(worldobjects, player, thumpable, square) end

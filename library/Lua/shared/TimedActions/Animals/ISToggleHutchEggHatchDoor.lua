@@ -1,31 +1,26 @@
 ---@meta
 
 ---@class ISToggleHutchEggHatchDoor : ISBaseTimedAction
----@field hutch any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field hutch unknown
+---@field sound unknown
 ISToggleHutchEggHatchDoor = ISBaseTimedAction:derive("ISToggleHutchEggHatchDoor")
+ISToggleHutchEggHatchDoor.Type = "ISToggleHutchEggHatchDoor"
 
----@return any
+---@return boolean
 function ISToggleHutchEggHatchDoor:complete() end
 
----@return any
+---@return number
 function ISToggleHutchEggHatchDoor:getDuration() end
 
----@return any
+---@return boolean
 function ISToggleHutchEggHatchDoor:isValid() end
 
----@return any
 function ISToggleHutchEggHatchDoor:perform() end
 
----@return any
 function ISToggleHutchEggHatchDoor:start() end
 
----@return any
 function ISToggleHutchEggHatchDoor:stop() end
 
----@return any
 function ISToggleHutchEggHatchDoor:update() end
 
 ---@return ISToggleHutchEggHatchDoor

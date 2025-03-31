@@ -1,39 +1,37 @@
 ---@meta
 
 ---@class ISBarricadeAction : ISBaseTimedAction
----@field caloriesModifier any
----@field isMetal any
----@field isMetalBar any
----@field isStarted any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field isMetal boolean
+---@field isMetalBar boolean
+---@field isStarted boolean
+---@field item unknown
+---@field maxTime number?
+---@field sound unknown?
 ISBarricadeAction = ISBaseTimedAction:derive("ISBarricadeAction")
+ISBarricadeAction.Type = "ISBarricadeAction"
 
----@return any
+---@return boolean?
 function ISBarricadeAction:complete() end
 
----@return any
+---@return number?
 function ISBarricadeAction:getDuration() end
 
----@return any
+---@return boolean
 function ISBarricadeAction:isValid() end
 
----@return any
 function ISBarricadeAction:perform() end
 
----@return any
 function ISBarricadeAction:start() end
 
----@return any
 function ISBarricadeAction:stop() end
 
----@return any
 function ISBarricadeAction:update() end
 
----@return any
+---@return unknown
 function ISBarricadeAction:waitToStart() end
 
+---@param character unknown?
+---@param isMetal boolean
+---@param isMetalBar boolean
 ---@return ISBarricadeAction
 function ISBarricadeAction:new(character, item, isMetal, isMetalBar) end

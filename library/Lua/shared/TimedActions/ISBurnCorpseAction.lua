@@ -1,33 +1,29 @@
 ---@meta
 
 ---@class ISBurnCorpseAction : ISBaseTimedAction
----@field corpse any
----@field lighter any
----@field maxTime any
----@field petrol any
----@field [any] any
+---@field corpse unknown
+---@field lighter unknown
+---@field petrol unknown
 ISBurnCorpseAction = ISBaseTimedAction:derive("ISBurnCorpseAction")
+ISBurnCorpseAction.Type = "ISBurnCorpseAction"
 
----@return any
+---@return boolean
 function ISBurnCorpseAction:complete() end
 
----@return any
+---@return number
 function ISBurnCorpseAction:getDuration() end
 
----@return any
+---@return boolean?
 function ISBurnCorpseAction:isValid() end
 
----@return any
 function ISBurnCorpseAction:perform() end
 
----@return any
 function ISBurnCorpseAction:start() end
 
----@return any
 function ISBurnCorpseAction:stop() end
 
----@return any
 function ISBurnCorpseAction:update() end
 
+---@param character unknown?
 ---@return ISBurnCorpseAction
 function ISBurnCorpseAction:new(character, corpse) end

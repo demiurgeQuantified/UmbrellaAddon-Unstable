@@ -1,36 +1,32 @@
 ---@meta
 
 ---@class ISAttachAnimalToPlayer : ISBaseTimedAction
----@field animal any
----@field maxTime any
----@field remove any
----@field sound any
----@field [any] any
+---@field animal unknown
+---@field remove boolean
+---@field sound unknown
 ISAttachAnimalToPlayer = ISBaseTimedAction:derive("ISAttachAnimalToPlayer")
+ISAttachAnimalToPlayer.Type = "ISAttachAnimalToPlayer"
 
----@return any
+---@return boolean
 function ISAttachAnimalToPlayer:complete() end
 
----@return any
+---@return number
 function ISAttachAnimalToPlayer:getDuration() end
 
----@return any
+---@return boolean
 function ISAttachAnimalToPlayer:isValid() end
 
----@return any
 function ISAttachAnimalToPlayer:perform() end
 
----@return any
 function ISAttachAnimalToPlayer:start() end
 
----@return any
 function ISAttachAnimalToPlayer:stop() end
 
----@return any
 function ISAttachAnimalToPlayer:update() end
 
----@return any
+---@return unknown
 function ISAttachAnimalToPlayer:waitToStart() end
 
+---@param remove boolean
 ---@return ISAttachAnimalToPlayer
 function ISAttachAnimalToPlayer:new(character, animal, remove) end

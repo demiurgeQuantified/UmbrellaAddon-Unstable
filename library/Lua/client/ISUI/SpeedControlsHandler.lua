@@ -1,10 +1,7 @@
 ---@meta
 
 ---@class SpeedControlsHandler
----@field previousSpeed any
----@field [any] any
 SpeedControlsHandler = {}
-SpeedControlsHandler.previousSpeed = 1
+SpeedControlsHandler.previousSpeed = nil ---@type number?
 
----@return any
 function SpeedControlsHandler.onKeyPressed(key) end

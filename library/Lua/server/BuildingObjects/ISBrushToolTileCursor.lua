@@ -1,22 +1,27 @@
 ---@meta
 
 ---@class ISBrushToolTileCursor : ISBuildingObject
----@field canBeAlwaysPlaced any
----@field character any
----@field isTileCursor any
----@field noNeedHammer any
----@field player any
----@field skipBuildAction any
----@field skipWalk2 any
----@field spriteName any
----@field [any] any
+---@field character unknown
+---@field isTileCursor boolean
+---@field noNeedHammer boolean
+---@field player unknown
+---@field skipBuildAction boolean
+---@field skipWalk2 boolean
+---@field spriteName string
 ISBrushToolTileCursor = ISBuildingObject:derive("ISBrushToolTileCursor")
+ISBrushToolTileCursor.Type = "ISBrushToolTileCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBrushToolTileCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBrushToolTileCursor:render(x, y, z, square) end
 
+---@param sprite string
+---@param northSprite string
 ---@return ISBrushToolTileCursor
 function ISBrushToolTileCursor:new(sprite, northSprite, character) end

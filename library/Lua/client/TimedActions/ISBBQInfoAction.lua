@@ -1,19 +1,17 @@
 ---@meta
 
 ---@class ISBBQInfoAction : ISBaseTimedAction
----@field bbq any
----@field maxTime any
----@field playerNum any
----@field [any] any
+---@field bbq unknown
+---@field playerNum unknown
 ISBBQInfoAction = ISBaseTimedAction:derive("ISBBQInfoAction")
+ISBBQInfoAction.Type = "ISBBQInfoAction"
 
----@return any
+---@return boolean
 function ISBBQInfoAction:isValid() end
 
----@return any
 function ISBBQInfoAction:perform() end
 
----@return any
+---@return unknown
 function ISBBQInfoAction:waitToStart() end
 
 ---@return ISBBQInfoAction

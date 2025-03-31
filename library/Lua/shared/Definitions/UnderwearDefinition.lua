@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UnderwearDefinition
-UnderwearDefinition = UnderwearDefinition or {}
+UnderwearDefinition = {}
 UnderwearDefinition.baseChance = 70
 UnderwearDefinition.FrillyBlack = {
 	chanceToSpawn = 5,

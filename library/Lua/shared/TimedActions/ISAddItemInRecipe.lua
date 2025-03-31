@@ -1,40 +1,33 @@
 ---@meta
 
 ---@class ISAddItemInRecipe : ISBaseTimedAction
----@field baseItem any
----@field jobType any
----@field maxTime any
----@field recipe any
----@field sound any
----@field usedItem any
----@field [any] any
+---@field baseItem unknown
+---@field jobType string
+---@field recipe unknown
+---@field sound unknown
+---@field usedItem unknown
 ISAddItemInRecipe = ISBaseTimedAction:derive("ISAddItemInRecipe")
+ISAddItemInRecipe.Type = "ISAddItemInRecipe"
 
----@return any
 function ISAddItemInRecipe.checkName(baseItem, recipe) end
 
----@return any
 function ISAddItemInRecipe.checkTemperature(baseItem, usedItem, recipe) end
 
----@return any
+---@return boolean
 function ISAddItemInRecipe:complete() end
 
----@return any
+---@return number
 function ISAddItemInRecipe:getDuration() end
 
----@return any
+---@return boolean?
 function ISAddItemInRecipe:isValid() end
 
----@return any
 function ISAddItemInRecipe:perform() end
 
----@return any
 function ISAddItemInRecipe:start() end
 
----@return any
 function ISAddItemInRecipe:stop() end
 
----@return any
 function ISAddItemInRecipe:update() end
 
 ---@return ISAddItemInRecipe

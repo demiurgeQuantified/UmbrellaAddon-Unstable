@@ -1,78 +1,65 @@
 ---@meta
 
 ---@class ModSelector : ISPanelJoypad
----@field acceptButton any
----@field backButton any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field helpButton any
----@field joypadIndex any
----@field mapOrderbtn any
----@field model any
----@field modInfoPanel any
----@field modListPanel any
----@field modOrderbtn any
----@field presetPanel any
----@field [any] any
+---@field acceptButton ISButton
+---@field backButton ISButton
+---@field helpButton ISButton
+---@field joypadIndex unknown
+---@field mapOrderbtn ISButton
+---@field model ModSelector.Model
+---@field modInfoPanel ModInfoPanel
+---@field modListPanel ModSelector.ModListPanel
+---@field modOrderbtn ISButton
+---@field presetPanel ModListPresets
 ModSelector = ISPanelJoypad:derive("ModSelector")
+ModSelector.Type = "ModSelector"
+ModSelector.instance = nil ---@type ModSelector?
 
----@return any
 function ModSelector.showNagPanel() end
 
----@return any
 function ModSelector:acceptChanges(button) end
 
----@return any
 function ModSelector:create() end
 
----@return any
 function ModSelector:onAccept() end
 
----@return any
 function ModSelector:onGainJoypadFocus(joypadData) end
 
----@return any
 function ModSelector:onJoypadDirDown(joypadData) end
 
----@return any
 function ModSelector:onJoypadDirLeft(joypadData) end
 
----@return any
 function ModSelector:onJoypadDirRight(joypadData) end
 
----@return any
 function ModSelector:onJoypadDirUp(joypadData) end
 
----@return any
 function ModSelector:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ModSelector:onOptionMouseDown(button, x, y) end
 
----@return any
 function ModSelector:onResolutionChange() end
 
----@return any
 function ModSelector:prerender() end
 
----@return any
 function ModSelector:reloadMods() end
 
----@return any
 function ModSelector:setExistingSavefile(folder) end
 
----@return any
 function ModSelector:setNewGame() end
 
----@return any
+---@param data table
+---@param finishFunc function
 function ModSelector:setServerSettingsMods(data, finishFunc) end
 
----@return any
 function ModSelector:updateView() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ModSelector
 function ModSelector:new(x, y, width, height) end
 
----@return any
 function ModSelector_onModsModified() end

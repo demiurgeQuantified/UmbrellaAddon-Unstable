@@ -1,53 +1,44 @@
 ---@meta
 
 ---@class ISSpawnPointsEditor : ISCollapsableWindow
----@field mapList any
----@field pointList any
----@field professionList any
----@field title any
----@field [any] any
+---@field mapList ISScrollingListBox
+---@field pointList ISScrollingListBox
+---@field professionList ISScrollingListBox
+---@field title string
 ISSpawnPointsEditor = ISCollapsableWindow:derive("ISSpawnPointsEditor")
+ISSpawnPointsEditor.Type = "ISSpawnPointsEditor"
 
----@return any
 function ISSpawnPointsEditor:close() end
 
----@return any
 function ISSpawnPointsEditor:createChildren() end
 
----@return any
+---@return number?
 function ISSpawnPointsEditor:doDrawPointListItem(y, item, alt) end
 
----@return any
 function ISSpawnPointsEditor:fillMapList() end
 
----@return any
+---@return boolean
 function ISSpawnPointsEditor:isSamePoint(point1, point2) end
 
----@return any
+---@return unknown
 function ISSpawnPointsEditor:normalizePoint(point) end
 
----@return any
 function ISSpawnPointsEditor:onCopyToClipboard() end
 
----@return any
 function ISSpawnPointsEditor:onMapSelected(directory) end
 
----@return any
 function ISSpawnPointsEditor:onPointDoubleClick(item) end
 
----@return any
 function ISSpawnPointsEditor:onPointSelected() end
 
----@return any
 function ISSpawnPointsEditor:onProfessionSelected() end
 
----@return any
 function ISSpawnPointsEditor:onRemovePoint(allProfessions) end
 
----@return any
 function ISSpawnPointsEditor:onSetPointToPlayerPosition(allProfessions) end
 
----@return any
+---@param x number
+---@param y number
 function ISSpawnPointsEditor:PointList_onRightMouseUp(x, y) end
 
 ---@return ISSpawnPointsEditor

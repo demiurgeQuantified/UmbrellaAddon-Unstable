@@ -1,46 +1,45 @@
 ---@meta
 
 ---@class ISMoveableCursor : ISBuildingObject
----@field cacheInvObjectIndex any
----@field cacheInvObjectSprite any
----@field cacheObject any
----@field cacheSquare any
----@field canCreate any
----@field canSeeCurrentSquare any
----@field character any
----@field colorMod any
----@field currentMoveProps any
----@field currentSquare any
----@field cursorFacing any
----@field isMoveableCursor any
----@field isWallLike any
----@field isYButtonResetCursor any
----@field joypadFacing any
----@field moveableMode any
----@field noNeedHammer any
----@field nSprite any
----@field objectIndex any
----@field objectListCache any
----@field objectSprite any
----@field origMoveProps any
----@field origSpriteName any
----@field player any
----@field renderFloorHelper any
----@field renderX any
----@field renderY any
----@field renderZ any
----@field skipBuildAction any
----@field skipWalk any
----@field subObjectIndex any
----@field tryInitialInvItem any
----@field xJoypad any
----@field yJoypad any
----@field yOffset any
----@field [any] any
+---@field cacheInvObjectIndex number
+---@field cacheInvObjectSprite string?
+---@field cacheObject unknown?
+---@field cacheSquare unknown
+---@field canCreate boolean?
+---@field canSeeCurrentSquare unknown
+---@field character unknown
+---@field colorMod table
+---@field currentMoveProps ISMoveableSpriteProps?
+---@field currentSquare unknown
+---@field cursorFacing number?
+---@field isMoveableCursor boolean
+---@field isYButtonResetCursor boolean
+---@field joypadFacing number?
+---@field moveableMode string
+---@field noNeedHammer boolean
+---@field objectIndex number
+---@field objectListCache (table | boolean)?
+---@field objectSprite string?
+---@field origMoveProps ISMoveableSpriteProps?
+---@field origSpriteName unknown?
+---@field player unknown
+---@field renderFloorHelper boolean
+---@field renderX number
+---@field renderY number
+---@field renderZ number
+---@field skipBuildAction boolean
+---@field skipWalk boolean
+---@field subObjectIndex number
+---@field tryInitialInvItem boolean?
+---@field xJoypad unknown
+---@field yJoypad unknown
+---@field yOffset number
 ISMoveableCursor = ISBuildingObject:derive("ISMoveableCursor")
-ISMoveableCursor.modes = {}
-ISMoveableCursor.modes.tags = {}
-ISMoveableCursor.modes.titles = {}
+ISMoveableCursor.Type = "ISMoveableCursor"
+ISMoveableCursor.modes = {
+	tags = {},
+	titles = {},
+}
 ISMoveableCursor.cursors = {}
 ISMoveableCursor.mode = {}
 ISMoveableCursor.cacheMode = {}
@@ -60,100 +59,105 @@ ISMoveableCursor.invalidColor = {
 	b = 0,
 }
 
----@return any
+---@param _key number
+---@param _playerNum number
+---@param _joyPadTriggered boolean
 function ISMoveableCursor.changeModeKey(_key, _playerNum, _joyPadTriggered) end
 
----@return any
 function ISMoveableCursor.clearCacheForAllPlayers() end
 
----@return any
 function ISMoveableCursor.exitCursorKey(_key) end
 
----@return any
 function ISMoveableCursor:clearCache() end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _z number
 function ISMoveableCursor:create(_x, _y, _z, _north, _sprite) end
 
----@return any
 function ISMoveableCursor:deactivate() end
 
----@return any
 function ISMoveableCursor:exitCursor() end
 
----@return any
+---@return string?
 function ISMoveableCursor:getAPrompt() end
 
----@return any
+---@return unknown
 function ISMoveableCursor:getDirectionFromItem(item) end
 
----@return any
+---@return unknown
 function ISMoveableCursor:getInfoPanel() end
 
----@return any
+---@return table
 function ISMoveableCursor:getInventoryObjectList() end
 
----@return any
+---@return string
 function ISMoveableCursor:getLBPrompt() end
 
----@return any
+---@return unknown
 function ISMoveableCursor:getMoveableMode() end
 
----@return any
+---@return table
 function ISMoveableCursor:getObjectList() end
 
----@return any
+---@return string?
 function ISMoveableCursor:getRBPrompt() end
 
----@return any
+---@return table
 function ISMoveableCursor:getRepairObjectList() end
 
----@return any
+---@return boolean | table
 function ISMoveableCursor:getRotateableObject() end
 
----@return any
+---@return table
 function ISMoveableCursor:getScrapObjectList() end
 
----@return any
+---@return string?
 function ISMoveableCursor:getXPrompt() end
 
----@return any
+---@return boolean
 function ISMoveableCursor:isValid(_square) end
 
----@return any
 function ISMoveableCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISMoveableCursor:onObjectLeftMouseButtonDown(object, x, y) end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _z number
 function ISMoveableCursor:render(_x, _y, _z, _square) end
 
----@return any
+---@param key number
+---@param _joypadTriggered boolean
 function ISMoveableCursor:rotateKey(key, _joypadTriggered) end
 
----@return any
+---@param x number
+---@param y number
 function ISMoveableCursor:rotateMouse(x, y) end
 
----@return any
 function ISMoveableCursor:rotateWhilePlacing() end
 
----@return any
 function ISMoveableCursor:setCursorFacing(facing) end
 
----@return any
+---@param _object unknown?
+---@param _moveProps ISMoveableSpriteProps?
+---@param _customTexture unknown?
+---@return unknown?
 function ISMoveableCursor:setInfoPanel(_square, _object, _moveProps, _customTexture) end
 
----@return any
 function ISMoveableCursor:setJoypadFocus(_window) end
 
----@return any
+---@param _mode string?
 function ISMoveableCursor:setMoveableMode(_mode) end
 
----@return any
+---@param moveProps ISMoveableSpriteProps
+---@return boolean
 function ISMoveableCursor:shouldAddObject(_obj, moveProps) end
 
----@return any
+---@param _item boolean
 function ISMoveableCursor:tryInitialItem(_item) end
 
 ---@return ISMoveableCursor

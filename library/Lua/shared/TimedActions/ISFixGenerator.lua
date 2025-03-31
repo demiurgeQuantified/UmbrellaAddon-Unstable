@@ -1,39 +1,33 @@
 ---@meta
 
 ---@class ISFixGenerator : ISBaseTimedAction
----@field caloriesModifier any
----@field generator any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field generator unknown
+---@field sound unknown
 ISFixGenerator = ISBaseTimedAction:derive("ISFixGenerator")
+ISFixGenerator.Type = "ISFixGenerator"
 
----@return any
+---@return boolean
 function ISFixGenerator:complete() end
 
----@return any
 function ISFixGenerator:continueFixing() end
 
----@return any
+---@return number
 function ISFixGenerator:getDuration() end
 
----@return any
+---@return boolean
 function ISFixGenerator:isValid() end
 
----@return any
 function ISFixGenerator:perform() end
 
----@return any
 function ISFixGenerator:start() end
 
----@return any
 function ISFixGenerator:stop() end
 
----@return any
 function ISFixGenerator:update() end
 
----@return any
+---@return unknown
 function ISFixGenerator:waitToStart() end
 
+---@param character unknown?
 ---@return ISFixGenerator
 function ISFixGenerator:new(character, generator) end

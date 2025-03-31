@@ -1,38 +1,26 @@
 ---@meta
 
 ---@class ISVendorSpiral : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field moveWithMouse any
----@field renderTarget any
----@field rotation any
----@field texture any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field renderTarget boolean
+---@field rotation number
+---@field texture unknown?
 ISVendorSpiral = ISPanel:derive("ISVendorSpiral")
+ISVendorSpiral.Type = "ISVendorSpiral"
 
----@return any
 function ISVendorSpiral:initialise() end
 
----@return any
 function ISVendorSpiral:prerender() end
 
----@return any
 function ISVendorSpiral:render() end
 
----@return any
 function ISVendorSpiral:renderToTarget(_target) end
 
----@return any
 function ISVendorSpiral:setRotation(_rot) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param texture unknown?
 ---@return ISVendorSpiral
 function ISVendorSpiral:new(x, y, width, height, texture) end

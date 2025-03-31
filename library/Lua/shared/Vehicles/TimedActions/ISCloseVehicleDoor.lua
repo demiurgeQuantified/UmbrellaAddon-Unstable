@@ -1,35 +1,29 @@
 ---@meta
 
 ---@class ISCloseVehicleDoor : ISBaseTimedAction
----@field maxTime any
----@field part any
----@field seat any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field [any] any
+---@field part unknown?
+---@field seat unknown
+---@field vehicle unknown
 ISCloseVehicleDoor = ISBaseTimedAction:derive("ISCloseVehicleDoor")
+ISCloseVehicleDoor.Type = "ISCloseVehicleDoor"
 
----@return any
+---@return boolean?
 function ISCloseVehicleDoor:complete() end
 
----@return any
+---@return number
 function ISCloseVehicleDoor:getDuration() end
 
----@return any
+---@return boolean
 function ISCloseVehicleDoor:isValid() end
 
----@return any
 function ISCloseVehicleDoor:perform() end
 
----@return any
 function ISCloseVehicleDoor:start() end
 
----@return any
 function ISCloseVehicleDoor:stop() end
 
----@return any
 function ISCloseVehicleDoor:update() end
 
+---@param part unknown?
 ---@return ISCloseVehicleDoor
 function ISCloseVehicleDoor:new(character, vehicle, part) end

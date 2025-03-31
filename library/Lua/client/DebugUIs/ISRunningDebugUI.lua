@@ -1,46 +1,34 @@
 ---@meta
 
 ---@class ISRunningDebugUI : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field character any
----@field chr any
----@field height any
----@field moveWithMouse any
----@field playerNum any
----@field previousSq any
----@field restoreEnd any
----@field start any
----@field startedTrip any
----@field startingEndurance any
----@field startTimer any
----@field stopTimer any
----@field title any
----@field totalDist any
----@field totalDistance any
----@field totalEndurance any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field character unknown
+---@field chr unknown
+---@field playerNum unknown
+---@field previousSq unknown
+---@field restoreEnd ISButton
+---@field start ISButton
+---@field startedTrip boolean
+---@field startingEndurance unknown
+---@field startTimer unknown
+---@field stopTimer unknown?
+---@field title string
+---@field totalDist number
+---@field totalDistance number
+---@field totalEndurance number
 ISRunningDebugUI = ISCollapsableWindow:derive("ISRunningDebugUI")
+ISRunningDebugUI.Type = "ISRunningDebugUI"
 
----@return any
 function ISRunningDebugUI:createChildren() end
 
----@return any
 function ISRunningDebugUI:render() end
 
----@return any
 function ISRunningDebugUI:restoreEndurance() end
 
----@return any
 function ISRunningDebugUI:startTrip() end
 
----@return any
 function ISRunningDebugUI:update() end
 
+---@param x number
+---@param y number
 ---@return ISRunningDebugUI
 function ISRunningDebugUI:new(x, y, character) end

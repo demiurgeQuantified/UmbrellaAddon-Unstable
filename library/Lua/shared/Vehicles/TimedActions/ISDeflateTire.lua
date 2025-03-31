@@ -1,41 +1,34 @@
 ---@meta
 
 ---@class ISDeflateTire : ISBaseTimedAction
----@field jobType any
----@field maxTime any
----@field part any
----@field psiSent any
----@field psiStart any
----@field psiTarget any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field [any] any
+---@field jobType string
+---@field part unknown
+---@field psiSent unknown
+---@field psiStart unknown
+---@field psiTarget number
+---@field vehicle unknown
 ISDeflateTire = ISBaseTimedAction:derive("ISDeflateTire")
+ISDeflateTire.Type = "ISDeflateTire"
 
----@return any
+---@return boolean
 function ISDeflateTire:complete() end
 
----@return any
+---@return number
 function ISDeflateTire:getDuration() end
 
----@return any
+---@return boolean
 function ISDeflateTire:isValid() end
 
----@return any
 function ISDeflateTire:perform() end
 
----@return any
 function ISDeflateTire:serverStop() end
 
----@return any
 function ISDeflateTire:start() end
 
----@return any
 function ISDeflateTire:stop() end
 
----@return any
 function ISDeflateTire:update() end
 
+---@param psiTarget number
 ---@return ISDeflateTire
 function ISDeflateTire:new(character, part, psiTarget) end

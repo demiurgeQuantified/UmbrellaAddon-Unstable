@@ -1,38 +1,34 @@
 ---@meta
 
 ---@class ISBBQLightFromLiterature : ISBaseTimedAction
----@field bbq any
----@field fuelAmt any
----@field item any
----@field lighter any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field bbq unknown
+---@field fuelAmt number
+---@field item unknown
+---@field lighter unknown
+---@field sound unknown
 ISBBQLightFromLiterature = ISBaseTimedAction:derive("ISBBQLightFromLiterature")
+ISBBQLightFromLiterature.Type = "ISBBQLightFromLiterature"
 
----@return any
+---@return boolean?
 function ISBBQLightFromLiterature:complete() end
 
----@return any
+---@return number
 function ISBBQLightFromLiterature:getDuration() end
 
----@return any
+---@return boolean?
 function ISBBQLightFromLiterature:isValid() end
 
----@return any
 function ISBBQLightFromLiterature:perform() end
 
----@return any
 function ISBBQLightFromLiterature:start() end
 
----@return any
 function ISBBQLightFromLiterature:stop() end
 
----@return any
 function ISBBQLightFromLiterature:update() end
 
----@return any
+---@return unknown
 function ISBBQLightFromLiterature:waitToStart() end
 
+---@param character unknown?
 ---@return ISBBQLightFromLiterature
 function ISBBQLightFromLiterature:new(character, item, lighter, bbq) end

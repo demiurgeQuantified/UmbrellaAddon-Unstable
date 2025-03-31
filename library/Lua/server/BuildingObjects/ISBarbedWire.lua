@@ -1,34 +1,34 @@
 ---@meta
 
 ---@class ISBarbedWire : ISBuildingObject
----@field canBarricade any
----@field hoppable any
----@field isWallLike any
----@field javaObject any
----@field name any
----@field sq any
----@field [any] any
+---@field javaObject unknown
+---@field name string
+---@field sq unknown
 ISBarbedWire = ISBuildingObject:derive("ISBarbedWire")
+ISBarbedWire.Type = "ISBarbedWire"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBarbedWire:create(x, y, z, north, sprite) end
 
----@return any
+---@return number
 function ISBarbedWire:getBarbedWire(square) end
 
----@return any
+---@return number
 function ISBarbedWire:getObjectIndex(square) end
 
----@return any
+---@return number
 function ISBarbedWire:getWoodenStake(square) end
 
----@return any
+---@return boolean
 function ISBarbedWire:isValid(square) end
 
----@return any
 function ISBarbedWire:onTimedActionStart(action) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISBarbedWire:render(x, y, z, square) end
 
 ---@return ISBarbedWire

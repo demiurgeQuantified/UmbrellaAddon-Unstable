@@ -1,53 +1,54 @@
 ---@meta
 
 ---@class ISResizeWidget : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field backgroundColorMouseOver any
----@field borderColor any
----@field downX any
----@field downY any
----@field height any
----@field mouseOver any
----@field resizeFunction any
----@field resizing any
----@field target any
----@field width any
----@field x any
----@field y any
----@field yonly any
----@field [any] any
+---@field backgroundColorMouseOver table
+---@field downX unknown
+---@field downY unknown
+---@field resizeFunction boolean
+---@field resizing boolean
+---@field target table
+---@field yonly boolean?
 ISResizeWidget = ISPanel:derive("ISResizeWidget")
+ISResizeWidget.Type = "ISResizeWidget"
 
----@return any
 function ISResizeWidget:initialise() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISResizeWidget:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISResizeWidget:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISResizeWidget:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISResizeWidget:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean?
 function ISResizeWidget:onMouseUpOutside(x, y) end
 
----@return any
 function ISResizeWidget:prerender() end
 
----@return any
 function ISResizeWidget:render() end
 
----@return any
+---@param dx number
+---@param dy number
 function ISResizeWidget:resize(dx, dy) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param resizeTarget table
+---@param yonly boolean?
 ---@return ISResizeWidget
 function ISResizeWidget:new(x, y, width, height, resizeTarget, yonly) end

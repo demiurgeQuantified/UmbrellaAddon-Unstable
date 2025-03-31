@@ -1,33 +1,26 @@
 ---@meta
 
 ---@class ISLitCandleExtinguish : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field started any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field item unknown
+---@field started boolean
 ISLitCandleExtinguish = ISBaseTimedAction:derive("ISLitCandleExtinguish")
+ISLitCandleExtinguish.Type = "ISLitCandleExtinguish"
 
----@return any
+---@return boolean
 function ISLitCandleExtinguish:complete() end
 
----@return any
+---@return number
 function ISLitCandleExtinguish:getDuration() end
 
----@return any
+---@return boolean
 function ISLitCandleExtinguish:isValid() end
 
----@return any
 function ISLitCandleExtinguish:perform() end
 
----@return any
 function ISLitCandleExtinguish:start() end
 
----@return any
 function ISLitCandleExtinguish:stop() end
 
----@return any
 function ISLitCandleExtinguish:update() end
 
 ---@return ISLitCandleExtinguish

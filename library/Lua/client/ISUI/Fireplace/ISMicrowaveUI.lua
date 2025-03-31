@@ -1,57 +1,40 @@
 ---@meta
 
 ---@class ISMicrowaveUI : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field character any
----@field close any
----@field height any
----@field joypadButtons any
----@field joypadIndex any
----@field joypadIndexY any
----@field moveWithMouse any
----@field ok any
----@field oven any
----@field tempKnob any
----@field timerKnob any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field character unknown
+---@field close ISButton
+---@field joypadButtons unknown
+---@field ok ISButton
+---@field oven unknown
+---@field tempKnob ISKnob
+---@field timerKnob ISKnob
 ISMicrowaveUI = ISPanelJoypad:derive("ISMicrowaveUI")
+ISMicrowaveUI.Type = "ISMicrowaveUI"
 ISMicrowaveUI.messages = {}
 
----@return any
 function ISMicrowaveUI:addKnobValues() end
 
----@return any
 function ISMicrowaveUI:ChangeKnob() end
 
----@return any
 function ISMicrowaveUI:initialise() end
 
----@return any
 function ISMicrowaveUI:onClick(button) end
 
----@return any
 function ISMicrowaveUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISMicrowaveUI:onJoypadDown(button) end
 
----@return any
 function ISMicrowaveUI:prerender() end
 
----@return any
 function ISMicrowaveUI:render() end
 
----@return any
 function ISMicrowaveUI:update() end
 
----@return any
 function ISMicrowaveUI:updateButtons() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISMicrowaveUI
 function ISMicrowaveUI:new(x, y, width, height, oven, character) end

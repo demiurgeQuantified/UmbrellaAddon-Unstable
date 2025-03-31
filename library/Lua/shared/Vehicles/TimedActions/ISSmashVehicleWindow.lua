@@ -1,37 +1,30 @@
 ---@meta
 
 ---@class ISSmashVehicleWindow : ISBaseTimedAction
----@field maxTime any
----@field part any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field window any
----@field [any] any
+---@field part unknown
+---@field vehicle unknown
+---@field window unknown
 ISSmashVehicleWindow = ISBaseTimedAction:derive("ISSmashVehicleWindow")
+ISSmashVehicleWindow.Type = "ISSmashVehicleWindow"
 
----@return any
+---@return boolean
 function ISSmashVehicleWindow:complete() end
 
----@return any
+---@return number
 function ISSmashVehicleWindow:getDuration() end
 
----@return any
+---@return unknown
 function ISSmashVehicleWindow:isValid() end
 
----@return any
 function ISSmashVehicleWindow:perform() end
 
----@return any
 function ISSmashVehicleWindow:start() end
 
----@return any
 function ISSmashVehicleWindow:stop() end
 
----@return any
 function ISSmashVehicleWindow:update() end
 
----@return any
+---@return unknown
 function ISSmashVehicleWindow:waitToStart() end
 
 ---@return ISSmashVehicleWindow

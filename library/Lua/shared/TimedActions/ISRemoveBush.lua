@@ -1,53 +1,48 @@
 ---@meta
 
 ---@class ISRemoveBush : ISBaseTimedAction
----@field character any
----@field maxTime any
----@field spriteFrame any
----@field square any
----@field wallVine any
----@field weapon any
----@field [any] any
+---@field character unknown?
+---@field spriteFrame number
+---@field square unknown
+---@field wallVine boolean?
+---@field weapon unknown
 ISRemoveBush = ISBaseTimedAction:derive("ISRemoveBush")
+ISRemoveBush.Type = "ISRemoveBush"
 
----@return any
 function ISRemoveBush:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISRemoveBush:complete() end
 
----@return any
+---@return unknown?
 function ISRemoveBush:getBushObject(square) end
 
----@return any
+---@return number
 function ISRemoveBush:getDuration() end
 
----@return any
+---@return unknown?
+---@return number?
 function ISRemoveBush:getWallVineObject(square) end
 
----@return any
+---@return boolean
 function ISRemoveBush:isValid() end
 
----@return any
 function ISRemoveBush:perform() end
 
----@return any
 function ISRemoveBush:serverStart() end
 
----@return any
 function ISRemoveBush:start() end
 
----@return any
 function ISRemoveBush:stop() end
 
----@return any
 function ISRemoveBush:update() end
 
----@return any
 function ISRemoveBush:useEndurance() end
 
----@return any
+---@return unknown
 function ISRemoveBush:waitToStart() end
 
+---@param character unknown?
+---@param wallVine boolean?
 ---@return ISRemoveBush
 function ISRemoveBush:new(character, square, wallVine) end

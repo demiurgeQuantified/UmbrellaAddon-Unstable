@@ -3,8 +3,7 @@
 ---@class TrapSystem
 TrapSystem = {}
 
----@return any
+---@return table
 function TrapSystem.getTrapZones(square) end
 
----@return any
 function TrapSystem.initObjectModData(isoObject, trapDef, north, player) end

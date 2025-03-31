@@ -1,37 +1,34 @@
 ---@meta
 
 ---@class DebugChunkState_ObjectAtCursorPanel : ISPanel
----@field combo any
----@field debugChunkState any
----@field sliderLevels any
----@field sliderScale any
----@field sliderWidth any
----@field [any] any
+---@field combo ISComboBox
+---@field debugChunkState DebugChunkStateUI
+---@field sliderLevels ISSliderPanel
+---@field sliderScale ISSliderPanel
+---@field sliderWidth ISSliderPanel
 DebugChunkState_ObjectAtCursorPanel = ISPanel:derive("DebugChunkState_ObjectAtCursorPanel")
+DebugChunkState_ObjectAtCursorPanel.Type = "DebugChunkState_ObjectAtCursorPanel"
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:createChildren() end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:onChangeObject() end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:onLevelsChanged(value, slider) end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:onScaleChanged(value, slider) end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:onWidthChanged(value, slider) end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:render() end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:syncUI() end
 
----@return any
 function DebugChunkState_ObjectAtCursorPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param debugChunkState DebugChunkStateUI
 ---@return DebugChunkState_ObjectAtCursorPanel
 function DebugChunkState_ObjectAtCursorPanel:new(x, y, width, height, debugChunkState) end

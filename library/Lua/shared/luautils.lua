@@ -3,95 +3,99 @@
 ---@class luautils
 luautils = {}
 
----@return any
+---@param _containerList table
+---@param _itemsNum number
+---@return number?
 function luautils.countItemsRecursive(_containerList, _itemsNum) end
 
----@return any
+---@return unknown
+---@return unknown
 function luautils.equipItems(_player, _primItemToEquip, _scndItemToEquip) end
 
----@return any
+---@return unknown
 function luautils.findRootInventory(_inventory) end
 
----@return any
+---@return table
 function luautils.getConditionRGB(condition) end
 
----@return any
+---@return unknown
 function luautils.getCorrectSquareForWall(playerObj, square) end
 
----@return any
+---@return table
 function luautils.getNextTiles(cell, startingGrid, range) end
 
----@return any
+---@return boolean?
 function luautils.haveToBeTransfered(player, item, dontWalk) end
 
----@return any
+---@return number
 function luautils.indexOf(table1, value) end
 
----@return any
+---@return number
 function luautils.isEquipped(_item, _player) end
 
----@return any
+---@return boolean
 function luautils.isSquareAdjacentToSquare(_square1, _square2) end
 
----@return any
+---@return number
 function luautils.lerp(_sourceValue, _destinationValue, _stepRate, _finalStepRatio) end
 
----@return any
+---@param _width number
+---@param _height number
 function luautils.okModal(_text, _centered, _width, _height, _posX, _posY) end
 
----@return any
+---@return boolean
 function luautils.roughlyEqual(_value, _value2, _delta) end
 
----@return any
+---@param num number
+---@return unknown
 function luautils.round(num, idp) end
 
----@return any
+---@return table
 function luautils.split(pString, pPattern) end
 
----@return any
-function luautils.split(inputstr, sep) end
-
----@return any
+---@return boolean
 function luautils.stringEnds(String, End) end
 
----@return any
+---@param Start string
+---@return boolean
 function luautils.stringStarts(String, Start) end
 
----@return any
+---@return boolean
 function luautils.tableContains(table2, value) end
 
----@return any
+---@param s string
+---@return unknown
 function luautils.trim(s) end
 
----@return any
 function luautils.updatePerksXp(perks, player) end
 
----@return any
+---@return boolean?
 function luautils.walk(playerObj, square, keepActions) end
 
----@return any
+---@param keepActions boolean?
+---@return boolean?
 function luautils.walkAdj(playerObj, square, keepActions, excludeList) end
 
----@return any
+---@return boolean?
 function luautils.walkAdjAltTest(playerObj, square, altSquare, keepActions) end
 
----@return any
+---@return boolean?
 function luautils.walkAdjFence(playerObj, square, object, keepActions) end
 
----@return any
+---@return boolean?
 function luautils.walkAdjTest(playerObj, square) end
 
----@return any
+---@return boolean?
 function luautils.walkAdjWall(playerObj, square, north, keepActions) end
 
----@return any
+---@return boolean?
 function luautils.walkAdjWindowOrDoor(playerObj, square, item, keepActions) end
 
----@return any
+---@param playerNum number
+---@return boolean
 function luautils.walkToContainer(container, playerNum) end
 
----@return any
+---@return boolean
 function luautils.walkToObject(_player, _object, _cancelTA) end
 
----@return any
 function luautils.weaponLowerCondition(_weapon, _character, _replace, _chance) end

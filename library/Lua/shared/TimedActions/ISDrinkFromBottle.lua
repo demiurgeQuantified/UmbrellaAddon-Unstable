@@ -1,42 +1,34 @@
 ---@meta
 
 ---@class ISDrinkFromBottle : ISBaseTimedAction
----@field eatAudio any
----@field eatSound any
----@field ignoreHandsWounds any
----@field isEating any
----@field item any
----@field maxTime any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field tick any
----@field uses any
----@field [any] any
+---@field eatAudio number
+---@field eatSound string
+---@field ignoreHandsWounds boolean
+---@field isEating boolean
+---@field item unknown
+---@field tick number
+---@field uses number
 ISDrinkFromBottle = ISBaseTimedAction:derive("ISDrinkFromBottle")
+ISDrinkFromBottle.Type = "ISDrinkFromBottle"
 
----@return any
+---@return boolean
 function ISDrinkFromBottle:complete() end
 
----@return any
+---@param percentage number
 function ISDrinkFromBottle:drink(food, percentage) end
 
----@return any
+---@return number
 function ISDrinkFromBottle:getDuration() end
 
----@return any
+---@return boolean?
 function ISDrinkFromBottle:isValid() end
 
----@return any
 function ISDrinkFromBottle:perform() end
 
----@return any
 function ISDrinkFromBottle:start() end
 
----@return any
 function ISDrinkFromBottle:stop() end
 
----@return any
 function ISDrinkFromBottle:update() end
 
 ---@return ISDrinkFromBottle

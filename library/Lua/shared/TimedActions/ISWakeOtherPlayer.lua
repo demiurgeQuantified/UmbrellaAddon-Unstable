@@ -1,30 +1,24 @@
 ---@meta
 
 ---@class ISWakeOtherPlayer : ISBaseTimedAction
----@field maxTime any
----@field otherPlayer any
----@field [any] any
+---@field otherPlayer unknown
 ISWakeOtherPlayer = ISBaseTimedAction:derive("ISWakeOtherPlayer")
+ISWakeOtherPlayer.Type = "ISWakeOtherPlayer"
 
----@return any
 function ISWakeOtherPlayer:complete() end
 
----@return any
+---@return number
 function ISWakeOtherPlayer:getDuration() end
 
----@return any
+---@return unknown
 function ISWakeOtherPlayer:isValid() end
 
----@return any
 function ISWakeOtherPlayer:perform() end
 
----@return any
 function ISWakeOtherPlayer:start() end
 
----@return any
 function ISWakeOtherPlayer:stop() end
 
----@return any
 function ISWakeOtherPlayer:update() end
 
 ---@return ISWakeOtherPlayer

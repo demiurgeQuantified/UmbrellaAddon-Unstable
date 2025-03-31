@@ -44,26 +44,19 @@ WinterIsComing.spawns = {
 }
 WinterIsComing.hourOfDay = 7
 
----@return any
 function WinterIsComing.Add() end
 
----@return any
+---@param playerNum number
 function WinterIsComing.AddPlayer(playerNum, playerObj) end
 
----@return any
 function WinterIsComing.EveryHours() end
 
----@return any
 function WinterIsComing.OnGameStart() end
 
----@return any
 function WinterIsComing.OnInitSeasons(_season) end
 
----@return any
 function WinterIsComing.OnInitWorld() end
 
----@return any
 function WinterIsComing.RemovePlayer(p) end
 
----@return any
 function WinterIsComing.Render() end

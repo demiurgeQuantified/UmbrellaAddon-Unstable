@@ -1,5 +1,6 @@
 ---@meta
 
+---@class animals_path_config
 animals_path_config = {
 	{
 		animal = "rabbit",

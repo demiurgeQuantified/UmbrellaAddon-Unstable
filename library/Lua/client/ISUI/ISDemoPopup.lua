@@ -1,51 +1,40 @@
 ---@meta
 
 ---@class ISDemoPopup : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field instance any
----@field richtext any
----@field timer any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field richtext ISRichTextPanel
+---@field timer number
 ISDemoPopup = ISPanel:derive("ISDemoPopup")
+ISDemoPopup.Type = "ISDemoPopup"
+ISDemoPopup.instance = nil ---@type ISDemoPopup?
 
----@return any
+---@return ISDemoPopup?
 function ISDemoPopup.getInstance() end
 
----@return any
 function ISDemoPopup.OnJoypadActivate(id) end
 
----@return any
 function ISDemoPopup:createChildren() end
 
----@return any
 function ISDemoPopup:initialise() end
 
----@return any
 function ISDemoPopup:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISDemoPopup:onMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISDemoPopup:onMouseDownOutside(x, y) end
 
----@return any
 function ISDemoPopup:removeSelf() end
 
----@return any
 function ISDemoPopup:setInfo(item) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISDemoPopup
 function ISDemoPopup:new(x, y, width, height) end
 
----@return any
 function DoDemoPopup() end

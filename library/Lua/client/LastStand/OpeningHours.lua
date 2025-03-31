@@ -1,10 +1,9 @@
 ---@meta
 
 ---@class OpeningHours
----@field dayCount any
----@field openTime any
----@field [any] any
 OpeningHours = {}
+OpeningHours.openTime = false
+OpeningHours.dayCount = 0
 OpeningHours.id = "OpeningHours"
 OpeningHours.image = "media/lua/client/LastStand/OpeningHours.png"
 OpeningHours.gameMode = "Opening Hours"
@@ -441,43 +440,32 @@ OpeningHours.metalGates = {
 		},
 	},
 }
-OpeningHours.dayCount = 0
 OpeningHours.hourOfDay = 21
-OpeningHours.openTime = false
 OpeningHours.dayToRespawn = 3
 
----@return any
 function OpeningHours.Add() end
 
----@return any
+---@param playerNum number
 function OpeningHours.AddPlayer(playerNum, playerObj) end
 
----@return any
+---@param regionName string
 function OpeningHours.CheckHordeSpawn(regionName, regionSpawn, regionSpawnX, regionSpawnY, regionSpawnZ) end
 
----@return any
 function OpeningHours.CheckMetalGates(area) end
 
----@return any
 function OpeningHours.EveryDays() end
 
----@return any
 function OpeningHours.EveryTenMinutes() end
 
----@return any
 function OpeningHours.OnGameStart() end
 
----@return any
 function OpeningHours.OnInitWorld() end
 
----@return any
 function OpeningHours.OnPlayerUpdate() end
 
----@return any
 function OpeningHours.RemovePlayer(p) end
 
----@return any
 function OpeningHours.Render() end
 
----@return any
+---@param area string
 function OpeningHours.ResetMetalGates(area) end

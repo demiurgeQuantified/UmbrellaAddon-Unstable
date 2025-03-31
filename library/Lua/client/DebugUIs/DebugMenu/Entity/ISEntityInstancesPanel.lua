@@ -1,60 +1,54 @@
 ---@meta
 
 ---@class ISEntityInstancesPanel : ISPanel
----@field entityPanel any
----@field entryBox any
----@field list any
----@field listLabel any
----@field player any
----@field playerNum any
----@field reloadButton any
----@field reloadScriptsButton any
----@field searchText any
----@field selectedEntityItem any
----@field [any] any
+---@field entityPanel ISEntityViewPanel
+---@field entryBox ISTextEntryBox
+---@field list ISScrollingListBox
+---@field listLabel ISLabel
+---@field player unknown
+---@field playerNum unknown
+---@field reloadButton ISButton
+---@field reloadScriptsButton ISButton
+---@field searchText string
+---@field selectedEntityItem boolean
 ISEntityInstancesPanel = ISPanel:derive("ISEntityInstancesPanel")
+ISEntityInstancesPanel.Type = "ISEntityInstancesPanel"
 
----@return any
 function ISEntityInstancesPanel.onTextChange(box) end
 
----@return any
 function ISEntityInstancesPanel:close() end
 
----@return any
 function ISEntityInstancesPanel:createChildren() end
 
----@return any
+---@return number
 function ISEntityInstancesPanel:drawEntityListItem(y, item, alt) end
 
----@return any
+---@return number
 function ISEntityInstancesPanel:incY(_y, _obj, _margin) end
 
----@return any
 function ISEntityInstancesPanel:initialise() end
 
----@return any
 function ISEntityInstancesPanel:onButtonClick(_button) end
 
----@return any
 function ISEntityInstancesPanel:onEntityDebugUI(_index, _selected, _arg1, _arg2, _tickbox) end
 
----@return any
 function ISEntityInstancesPanel:onEntityListSelected(_item) end
 
----@return any
 function ISEntityInstancesPanel:onReloadEntities() end
 
----@return any
+---@param _width number
+---@param _height number
 function ISEntityInstancesPanel:onResize(_width, _height) end
 
----@return any
 function ISEntityInstancesPanel:populate() end
 
----@return any
 function ISEntityInstancesPanel:prerender() end
 
----@return any
 function ISEntityInstancesPanel:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISEntityInstancesPanel
 function ISEntityInstancesPanel:new(x, y, width, height, player) end

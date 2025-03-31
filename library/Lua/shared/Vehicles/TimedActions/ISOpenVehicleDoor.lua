@@ -1,42 +1,35 @@
 ---@meta
 
 ---@class ISOpenVehicleDoor : ISBaseTimedAction
----@field ignoreHandsWounds any
----@field maxTime any
----@field part any
----@field seat any
----@field stopOnRun any
----@field stopOnWalk any
----@field vehicle any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field part unknown?
+---@field seat unknown
+---@field vehicle unknown
 ISOpenVehicleDoor = ISBaseTimedAction:derive("ISOpenVehicleDoor")
+ISOpenVehicleDoor.Type = "ISOpenVehicleDoor"
 
----@return any
+---@return boolean?
 function ISOpenVehicleDoor:complete() end
 
----@return any
+---@return number
 function ISOpenVehicleDoor:getDuration() end
 
----@return any
+---@return boolean
 function ISOpenVehicleDoor:isValid() end
 
----@return any
 function ISOpenVehicleDoor:perform() end
 
----@return any
 function ISOpenVehicleDoor:selectContainerInLootWindow() end
 
----@return any
 function ISOpenVehicleDoor:start() end
 
----@return any
 function ISOpenVehicleDoor:stop() end
 
----@return any
 function ISOpenVehicleDoor:update() end
 
----@return any
+---@return boolean
 function ISOpenVehicleDoor:waitToStart() end
 
+---@param part unknown?
 ---@return ISOpenVehicleDoor
 function ISOpenVehicleDoor:new(character, vehicle, part) end

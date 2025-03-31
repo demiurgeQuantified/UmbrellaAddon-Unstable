@@ -1,29 +1,31 @@
 ---@meta
 
 ---@class ISWoodenContainer : ISBuildingObject
----@field blockAllTheSquare any
----@field buildLow any
----@field canBeAlwaysPlaced any
----@field canBeLockedByPadlock any
----@field dismantable any
----@field isContainer any
----@field javaObject any
----@field name any
----@field sq any
----@field [any] any
+---@field buildLow boolean
+---@field canBeLockedByPadlock boolean
+---@field javaObject unknown
+---@field name string
+---@field sq unknown
 ISWoodenContainer = ISBuildingObject:derive("ISWoodenContainer")
+ISWoodenContainer.Type = "ISWoodenContainer"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenContainer:create(x, y, z, north, sprite) end
 
----@return any
+---@return number
 function ISWoodenContainer:getHealth() end
 
----@return any
+---@return boolean?
 function ISWoodenContainer:isValid(square) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISWoodenContainer:render(x, y, z, square) end
 
+---@param sprite string
+---@param northSprite string
 ---@return ISWoodenContainer
 function ISWoodenContainer:new(sprite, northSprite) end

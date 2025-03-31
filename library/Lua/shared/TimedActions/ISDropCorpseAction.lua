@@ -1,36 +1,30 @@
 ---@meta
 
 ---@class ISDropCorpseAction : ISBaseTimedAction
----@field forceProgressBar any
----@field maxTime any
----@field [any] any
+---@field forceProgressBar boolean
 ISDropCorpseAction = ISBaseTimedAction:derive("ISDropCorpseAction")
+ISDropCorpseAction.Type = "ISDropCorpseAction"
 
----@return any
+---@return boolean
 function ISDropCorpseAction:complete() end
 
----@return any
+---@return number
 function ISDropCorpseAction:getDuration() end
 
----@return any
+---@return unknown
 function ISDropCorpseAction:isValid() end
 
----@return any
 function ISDropCorpseAction:perform() end
 
----@return any
 function ISDropCorpseAction:start() end
 
----@return any
 function ISDropCorpseAction:stop() end
 
----@return any
 function ISDropCorpseAction:stopSound() end
 
----@return any
 function ISDropCorpseAction:update() end
 
----@return any
+---@return boolean
 function ISDropCorpseAction:waitToStart() end
 
 ---@return ISDropCorpseAction

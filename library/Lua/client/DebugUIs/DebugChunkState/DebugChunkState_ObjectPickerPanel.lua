@@ -1,21 +1,23 @@
 ---@meta
 
 ---@class DebugChunkState_ObjectPickerPanel : ISPanel
----@field addLineX any
----@field addLineY any
----@field debugChunkState any
----@field lastPicked any
----@field [any] any
+---@field addLineX number
+---@field addLineY number
+---@field debugChunkState DebugChunkStateUI
+---@field lastPicked unknown
 DebugChunkState_ObjectPickerPanel = ISPanel:derive("DebugChunkState_ObjectPickerPanel")
+DebugChunkState_ObjectPickerPanel.Type = "DebugChunkState_ObjectPickerPanel"
 
----@return any
 function DebugChunkState_ObjectPickerPanel:addLine(text, arg0, arg1, arg2, arg3, arg4) end
 
----@return any
 function DebugChunkState_ObjectPickerPanel:render() end
 
----@return any
 function DebugChunkState_ObjectPickerPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param debugChunkState DebugChunkStateUI
 ---@return DebugChunkState_ObjectPickerPanel
 function DebugChunkState_ObjectPickerPanel:new(x, y, width, height, debugChunkState) end

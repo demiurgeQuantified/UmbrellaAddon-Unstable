@@ -1,67 +1,68 @@
 ---@meta
 
 ---@class WorldMapEditorMode_Bounds : WorldMapEditorMode
----@field labelBounds any
----@field mode any
----@field resizeMode any
----@field resizer any
----@field snapButtons any
----@field snapMode any
----@field [any] any
+---@field labelBounds ISLabel
+---@field mode string?
+---@field resizeMode string?
+---@field resizer WorldMapEditorResizer
+---@field snapButtons table
+---@field snapMode string
 WorldMapEditorMode_Bounds = WorldMapEditorMode:derive("WorldMapEditorMode_Bounds")
+WorldMapEditorMode_Bounds.Type = "WorldMapEditorMode_Bounds"
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Bounds:cancelResize() end
 
----@return any
 function WorldMapEditorMode_Bounds:createChildren() end
 
----@return any
 function WorldMapEditorMode_Bounds:display() end
 
----@return any
+---@return string
 function WorldMapEditorMode_Bounds:generateLuaScript() end
 
----@return any
 function WorldMapEditorMode_Bounds:loadSettingsFromMap() end
 
----@return any
 function WorldMapEditorMode_Bounds:onChangeSnapMode(button) end
 
----@return any
 function WorldMapEditorMode_Bounds:onDrawBounds() end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Bounds:onKeyPress(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Bounds:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapEditorMode_Bounds:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Bounds:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Bounds:onMouseUpOutside(x, y) end
 
----@return any
 function WorldMapEditorMode_Bounds:onReset() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Bounds:onRightMouseDown(x, y) end
 
----@return any
 function WorldMapEditorMode_Bounds:render() end
 
----@return any
 function WorldMapEditorMode_Bounds:setBounds(x1, y1, x2, y2) end
 
----@return any
+---@return number
 function WorldMapEditorMode_Bounds:snap(xy) end
 
----@return any
 function WorldMapEditorMode_Bounds:undisplay() end
 
 ---@return WorldMapEditorMode_Bounds

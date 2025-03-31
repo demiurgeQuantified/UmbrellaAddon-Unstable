@@ -1,36 +1,33 @@
 ---@meta
 
 ---@class ISRemoveAnimalFromTrailer : ISBaseTimedAction
----@field animal any
----@field grab any
----@field maxTime any
----@field vehicle any
----@field [any] any
+---@field animal unknown?
+---@field grab boolean?
+---@field vehicle unknown
 ISRemoveAnimalFromTrailer = ISBaseTimedAction:derive("ISRemoveAnimalFromTrailer")
+ISRemoveAnimalFromTrailer.Type = "ISRemoveAnimalFromTrailer"
 
----@return any
+---@return boolean?
 function ISRemoveAnimalFromTrailer:complete() end
 
----@return any
+---@return number
 function ISRemoveAnimalFromTrailer:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveAnimalFromTrailer:isValid() end
 
----@return any
 function ISRemoveAnimalFromTrailer:perform() end
 
----@return any
 function ISRemoveAnimalFromTrailer:start() end
 
----@return any
 function ISRemoveAnimalFromTrailer:stop() end
 
----@return any
 function ISRemoveAnimalFromTrailer:update() end
 
----@return any
+---@return unknown
 function ISRemoveAnimalFromTrailer:waitToStart() end
 
+---@param animal unknown?
+---@param grab boolean?
 ---@return ISRemoveAnimalFromTrailer
 function ISRemoveAnimalFromTrailer:new(character, vehicle, animal, grab) end

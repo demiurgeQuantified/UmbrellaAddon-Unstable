@@ -52,6 +52,7 @@ ZombiePopulationMultiplier.Normal = "0.65"
 ZombiePopulationMultiplier.Low = "0.15"
 ZombiePopulationMultiplier.None = "0.0"
 
+---@class ZombiePopulationMultiplierTable
 ZombiePopulationMultiplierTable = {
 	"2.5",
 	"1.6",

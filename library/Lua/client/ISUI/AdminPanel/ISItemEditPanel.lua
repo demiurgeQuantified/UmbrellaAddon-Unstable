@@ -1,113 +1,91 @@
 ---@meta
 
 ---@class ISItemEditPanel : ISPanel
----@field admin any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field buttonBorderColor any
----@field elems any
----@field height any
----@field isDrainable any
----@field isFood any
----@field isWeapon any
----@field item any
----@field moveWithMouse any
----@field usedElems any
----@field variableColor any
----@field width any
----@field x any
----@field y any
----@field zOffsetSmallFont any
----@field [any] any
+---@field admin unknown
+---@field buttonBorderColor table
+---@field elems table
+---@field isDrainable unknown
+---@field isFood unknown
+---@field isWeapon unknown
+---@field item unknown
+---@field usedElems table
+---@field variableColor table
+---@field zOffsetSmallFont number
 ISItemEditPanel = ISPanel:derive("ISItemEditPanel")
+ISItemEditPanel.Type = "ISItemEditPanel"
 
----@return any
 function ISItemEditPanel:create() end
 
----@return any
 function ISItemEditPanel:createChildren() end
 
----@return any
+---@return unknown
 function ISItemEditPanel:getTextHeight(_s, _f) end
 
----@return any
+---@return unknown
 function ISItemEditPanel:getTextWidth(_s, _f) end
 
----@return any
 function ISItemEditPanel:initAttributes() end
 
----@return any
 function ISItemEditPanel:initElements() end
 
----@return any
 function ISItemEditPanel:initialise() end
 
----@return any
 function ISItemEditPanel:onColor(button) end
 
----@return any
 function ISItemEditPanel:onSaveColor() end
 
----@return any
 function ISItemEditPanel:onSaveCondition() end
 
----@return any
 function ISItemEditPanel:onSaveHunger() end
 
----@return any
 function ISItemEditPanel:onSaveWeight() end
 
----@return any
 function ISItemEditPanel:prerender() end
 
----@return any
+---@return table
 function ISItemEditPanel:registerAttributeBool(_attributeType, _attribute) end
 
----@return any
 function ISItemEditPanel:registerAttributeNumber(_attributeType, _attribute) end
 
----@return any
 function ISItemEditPanel:registerAttributeString(_attributeType, _attribute) end
 
----@return any
+---@return table
 function ISItemEditPanel:registerBoolean(_text, _funcGet, _funcSet, _canEdit) end
 
----@return any
+---@return table
 function ISItemEditPanel:registerColor(_text, _funcGet, _funcSet) end
 
----@return any
+---@return table
 function ISItemEditPanel:registerNumber(_text, _funcGet, _funcSet, _min, _max, _round) end
 
----@return any
+---@return table
 function ISItemEditPanel:registerString(_text, _funcGet, _funcSet, _canEdit) end
 
----@return any
 function ISItemEditPanel:render() end
 
----@return any
 function ISItemEditPanel:saveAll() end
 
----@return any
+---@return unknown
 function ISItemEditPanel:validateColor() end
 
----@return any
+---@return unknown
 function ISItemEditPanel:validateDrainable() end
 
----@return any
+---@return unknown
 function ISItemEditPanel:validateFood() end
 
----@return any
+---@return boolean
 function ISItemEditPanel:validateMinRange() end
 
----@return any
+---@return unknown
 function ISItemEditPanel:validateMinRangeRanged() end
 
----@return any
+---@return unknown
 function ISItemEditPanel:validateWeapon() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISItemEditPanel
 function ISItemEditPanel:new(x, y, width, height, admin, item) end

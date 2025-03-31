@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ClothingSelectionDefinitions
-ClothingSelectionDefinitions = ClothingSelectionDefinitions or {}
+ClothingSelectionDefinitions = {}
 ClothingSelectionDefinitions.default = {
 	Female = {
 		Hat = {

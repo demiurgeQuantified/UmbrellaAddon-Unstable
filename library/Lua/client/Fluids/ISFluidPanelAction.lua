@@ -1,27 +1,25 @@
 ---@meta
 
 ---@class ISFluidPanelAction : ISBaseTimedAction
----@field container any
----@field maxTime any
----@field panelClass any
----@field source any
----@field [any] any
+---@field container ISFluidContainer
+---@field panelClass ISFluidTransferUI | ISFluidInfoUI
+---@field source boolean?
 ISFluidPanelAction = ISBaseTimedAction:derive("ISFluidPanelAction")
+ISFluidPanelAction.Type = "ISFluidPanelAction"
 
----@return any
+---@return boolean?
 function ISFluidPanelAction:isValid() end
 
----@return any
 function ISFluidPanelAction:perform() end
 
----@return any
 function ISFluidPanelAction:start() end
 
----@return any
 function ISFluidPanelAction:stop() end
 
----@return any
 function ISFluidPanelAction:update() end
 
+---@param _container ISFluidContainer
+---@param _panelClass ISFluidTransferUI | ISFluidInfoUI
+---@param isSource boolean?
 ---@return ISFluidPanelAction
 function ISFluidPanelAction:new(character, _container, _panelClass, isSource) end

@@ -1,52 +1,45 @@
 ---@meta
 
 ---@class ISTakeGasolineFromVehicle : ISBaseTimedAction
----@field amountSent any
----@field fluidCont any
----@field item any
----@field itemStart any
----@field itemTarget any
----@field maxTime any
----@field part any
----@field sound any
----@field tankStart any
----@field tankTarget any
----@field vehicle any
----@field [any] any
+---@field amountSent number
+---@field fluidCont unknown
+---@field item unknown?
+---@field itemStart unknown
+---@field itemTarget number
+---@field part unknown
+---@field sound unknown
+---@field tankStart unknown
+---@field tankTarget number
+---@field vehicle unknown
 ISTakeGasolineFromVehicle = ISBaseTimedAction:derive("ISTakeGasolineFromVehicle")
+ISTakeGasolineFromVehicle.Type = "ISTakeGasolineFromVehicle"
 
----@return any
 function ISTakeGasolineFromVehicle:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISTakeGasolineFromVehicle:complete() end
 
----@return any
+---@return number
 function ISTakeGasolineFromVehicle:getDuration() end
 
----@return any
+---@return boolean
 function ISTakeGasolineFromVehicle:isValid() end
 
----@return any
 function ISTakeGasolineFromVehicle:perform() end
 
----@return any
 function ISTakeGasolineFromVehicle:serverStart() end
 
----@return any
 function ISTakeGasolineFromVehicle:serverStop() end
 
----@return any
 function ISTakeGasolineFromVehicle:start() end
 
----@return any
 function ISTakeGasolineFromVehicle:stop() end
 
----@return any
 function ISTakeGasolineFromVehicle:update() end
 
----@return any
+---@return unknown
 function ISTakeGasolineFromVehicle:waitToStart() end
 
+---@param item unknown?
 ---@return ISTakeGasolineFromVehicle
 function ISTakeGasolineFromVehicle:new(character, part, item) end

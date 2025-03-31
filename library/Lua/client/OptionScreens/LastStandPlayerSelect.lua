@@ -1,93 +1,68 @@
 ---@meta
 
 ---@class LastStandPlayerSelect : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backButton any
----@field backgroundColor any
----@field borderColor any
----@field deleteButton any
----@field height any
----@field itemheightoverride any
----@field javaObject any
----@field joyfocus any
----@field listbox any
----@field newButton any
----@field playButton any
----@field playersDesc any
----@field playerSelected any
----@field selected any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field backButton ISButton
+---@field deleteButton ISButton
+---@field listbox ISScrollingListBox
+---@field newButton ISButton
+---@field playButton ISButton
 LastStandPlayerSelect = ISPanelJoypad:derive("LastStandPlayerSelect")
+LastStandPlayerSelect.Type = "LastStandPlayerSelect"
 LastStandPlayerSelect.playerSelected = nil
+LastStandPlayerSelect.instance = nil ---@type (LastStandPlayerSelect | table | ISPanelJoypad)?
 
----@return any
 function LastStandPlayerSelect.clickPlay() end
 
----@return any
 function LastStandPlayerSelect.initWorld() end
 
----@return any
 function LastStandPlayerSelect.newGame(player, square) end
 
----@return any
 function LastStandPlayerSelect:create() end
 
----@return any
 function LastStandPlayerSelect:createPlayerList() end
 
----@return any
+---@param newPlayer unknown?
+---@return unknown
 function LastStandPlayerSelect:createSurvivorDescFromData(newPlayer) end
 
----@return any
+---@return number
 function LastStandPlayerSelect:drawMap(y, item, alt) end
 
----@return any
+---@return table
 function LastStandPlayerSelect:getAllSavedPlayers() end
 
----@return any
+---@return table
 function LastStandPlayerSelect:getColor(line) end
 
----@return any
 function LastStandPlayerSelect:initialise() end
 
----@return any
 function LastStandPlayerSelect:instantiate() end
 
----@return any
 function LastStandPlayerSelect:onDblClickPlayer() end
 
----@return any
 function LastStandPlayerSelect:onDeleteModalClick(button) end
 
----@return any
 function LastStandPlayerSelect:onGainJoypadFocus(joypadData) end
 
----@return any
 function LastStandPlayerSelect:onGainJoypadFocus_child(joypadData) end
 
----@return any
 function LastStandPlayerSelect:onJoypadBeforeDeactivate(joypadData) end
 
----@return any
 function LastStandPlayerSelect:onJoypadBeforeDeactivate_child(joypadData) end
 
----@return any
 function LastStandPlayerSelect:onLoseJoypadFocus_child(joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function LastStandPlayerSelect:onOptionMouseDown(button, x, y) end
 
----@return any
 function LastStandPlayerSelect:prerender() end
 
----@return any
 function LastStandPlayerSelect:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return LastStandPlayerSelect
 function LastStandPlayerSelect:new(x, y, width, height) end

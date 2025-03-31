@@ -1,23 +1,21 @@
 ---@meta
 
 ---@class CFarmingSystem : CGlobalObjectSystem
----@field hoursElapsed any
----@field [any] any
+---@field hoursElapsed unknown
 CFarmingSystem = CGlobalObjectSystem:derive("CFarmingSystem")
+CFarmingSystem.Type = "CFarmingSystem"
 
----@return any
 function CFarmingSystem:changePlayer(player) end
 
----@return any
+---@return unknown
 function CFarmingSystem:getXp(character) end
 
----@return any
+---@return boolean
 function CFarmingSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return CPlantGlobalObject
 function CFarmingSystem:newLuaObject(globalObject) end
 
----@return any
 function CFarmingSystem:OnServerCommand(command, args) end
 
 ---@return CFarmingSystem

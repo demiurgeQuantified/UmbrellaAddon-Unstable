@@ -1,59 +1,59 @@
 ---@meta
 
 ---@class ISTabPanelPaginated : ISTabPanel
----@field backwardView any
----@field blinkTabAlpha any
----@field blinkTabAlphaIncrease any
----@field forwardView any
----@field isDragging any
----@field mouseDownHook any
----@field pagesCount any
----@field shownViews any
----@field tooMuchViews any
----@field [any] any
+---@field backwardView table
+---@field forwardView table
+---@field isDragging unknown
+---@field mouseDownHook unknown?
+---@field pagesCount number
+---@field shownViews table
+---@field tooMuchViews boolean
 ISTabPanelPaginated = ISTabPanel:derive("ISTabPanelPaginated")
-ISTabPanelPaginated.tooMuchViews = false
+ISTabPanelPaginated.Type = "ISTabPanelPaginated"
 ISTabPanelPaginated.shownViewsCount = 5
-ISTabPanelPaginated.shownViews = {}
-ISTabPanelPaginated.forwardView = nil
-ISTabPanelPaginated.backwardView = nil
 ISTabPanelPaginated.forwardIndex = -2
 ISTabPanelPaginated.backwardIndex = -1
 ISTabPanelPaginated.tabSelected = getTexture("media/ui/XpSystemUI/tab_selected.png")
 ISTabPanelPaginated.tabUnSelected = getTexture("media/ui/XpSystemUI/tab_unselected.png")
 
----@return any
 function ISTabPanelPaginated.redoTab(self) end
 
----@return any
 function ISTabPanelPaginated:addForwardBackwardViews() end
 
----@return any
+---@return number
 function ISTabPanelPaginated:getPagesCount() end
 
----@return any
+---@return number
 function ISTabPanelPaginated:getTabIndexAtX(x, scrollX) end
 
----@return any
+---@return unknown?
 function ISTabPanelPaginated:getViewByIndex(index) end
 
----@return any
+---@return number
 function ISTabPanelPaginated:getWidthOfAllTabs() end
 
----@return any
 function ISTabPanelPaginated:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISTabPanelPaginated:onMouseDown(x, y) end
 
----@return any
 function ISTabPanelPaginated:render() end
 
----@return any
+---@param viewObject table?
+---@param tabDragSelected number
+---@param _x number
+---@param gap number
+---@return number
 function ISTabPanelPaginated:renderView(viewObject, tabDragSelected, _x, tabWidth, gap) end
 
----@return any
+---@param pagesCount number
 function ISTabPanelPaginated:setPagesCount(pagesCount) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param pagesCount number
 ---@return ISTabPanelPaginated
 function ISTabPanelPaginated:new(x, y, width, height, pagesCount) end

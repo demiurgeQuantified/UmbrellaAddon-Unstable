@@ -1,75 +1,60 @@
 ---@meta
 
 ---@class ISWidgetRecipeFilterPanel : ISPanelJoypad
----@field autoFillContents any
----@field backgroundColor any
----@field buttonGrid any
----@field buttonList any
----@field callbackTarget any
----@field entryBox any
----@field filterTypeCombo any
----@field isAutoFill any
----@field isAutoFillX any
----@field isAutoFillY any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field margin any
----@field marginBottom any
----@field marginLeft any
----@field marginRight any
----@field marginTop any
----@field paddingBottom any
----@field paddingLeft any
----@field paddingRight any
----@field paddingTop any
----@field searchHackLabel any
----@field tickbox any
----@field [any] any
+---@field autoFillContents boolean
+---@field buttonGrid unknown?
+---@field buttonList unknown?
+---@field callbackTarget unknown
+---@field entryBox unknown?
+---@field filterTypeCombo unknown?
+---@field isAutoFill boolean
+---@field isAutoFillX boolean
+---@field isAutoFillY boolean
+---@field margin number
+---@field marginBottom number
+---@field marginLeft number
+---@field marginRight number
+---@field marginTop number
+---@field paddingBottom number
+---@field paddingLeft number
+---@field paddingRight number
+---@field paddingTop number
+---@field searchHackLabel unknown?
+---@field tickbox unknown?
 ISWidgetRecipeFilterPanel = ISPanelJoypad:derive("ISWidgetRecipeFilterPanel")
+ISWidgetRecipeFilterPanel.Type = "ISWidgetRecipeFilterPanel"
 
----@return any
 function ISWidgetRecipeFilterPanel.onTextChange(box) end
 
----@return any
 function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISWidgetRecipeFilterPanel:createChildren() end
 
----@return any
 function ISWidgetRecipeFilterPanel:initialise() end
 
----@return any
 function ISWidgetRecipeFilterPanel:onButtonClick(_button) end
 
----@return any
 function ISWidgetRecipeFilterPanel:OnClickFilterType(box) end
 
----@return any
 function ISWidgetRecipeFilterPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISWidgetRecipeFilterPanel:onLoseJoypadFocus(joypadData) end
 
----@return any
 function ISWidgetRecipeFilterPanel:onResize() end
 
----@return any
 function ISWidgetRecipeFilterPanel:OnShowAllClick(clickedOption, enabled) end
 
----@return any
 function ISWidgetRecipeFilterPanel:populateComboList() end
 
----@return any
 function ISWidgetRecipeFilterPanel:prerender() end
 
----@return any
 function ISWidgetRecipeFilterPanel:render() end
 
----@return any
 function ISWidgetRecipeFilterPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISWidgetRecipeFilterPanel
 function ISWidgetRecipeFilterPanel:new(x, y, width, height, callbackTarget) end

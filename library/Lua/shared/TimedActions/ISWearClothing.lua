@@ -1,40 +1,34 @@
 ---@meta
 
 ---@class ISWearClothing : ISBaseTimedAction
----@field clothingAction any
----@field equipSound any
----@field fromHotbar any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field clothingAction boolean
+---@field equipSound unknown
+---@field fromHotbar boolean
+---@field item unknown
+---@field sound unknown
 ISWearClothing = ISBaseTimedAction:derive("ISWearClothing")
+ISWearClothing.Type = "ISWearClothing"
 
----@return any
+---@return boolean
 function ISWearClothing:complete() end
 
----@return any
+---@return number
 function ISWearClothing:getDuration() end
 
----@return any
+---@return boolean
 function ISWearClothing:isAlreadyEquipped(item) end
 
----@return any
+---@return boolean?
 function ISWearClothing:isValid() end
 
----@return any
 function ISWearClothing:perform() end
 
----@return any
 function ISWearClothing:start() end
 
----@return any
 function ISWearClothing:stop() end
 
----@return any
 function ISWearClothing:stopSound() end
 
----@return any
 function ISWearClothing:update() end
 
 ---@return ISWearClothing

@@ -1,53 +1,51 @@
 ---@meta
 
 ---@class ISWashClothing : ISBaseTimedAction
----@field bloodAmount any
----@field dirtAmount any
----@field forceProgressBar any
----@field item any
----@field maxTime any
----@field noSoap any
----@field sink any
----@field soaps any
----@field sound any
----@field [any] any
+---@field bloodAmount number
+---@field dirtAmount number
+---@field forceProgressBar boolean
+---@field item unknown
+---@field noSoap unknown
+---@field sink unknown
+---@field soaps unknown
+---@field sound unknown
 ISWashClothing = ISBaseTimedAction:derive("ISWashClothing")
+ISWashClothing.Type = "ISWashClothing"
 
----@return any
+---@return number
 function ISWashClothing.GetRequiredSoap(item) end
 
----@return any
+---@return unknown
 function ISWashClothing.GetRequiredWater(item) end
 
----@return any
+---@param soaps table
+---@return number
 function ISWashClothing.GetSoapRemaining(soaps) end
 
----@return any
+---@return boolean
 function ISWashClothing:complete() end
 
----@return any
+---@return number
 function ISWashClothing:getDuration() end
 
----@return any
+---@return boolean
 function ISWashClothing:isValid() end
 
----@return any
 function ISWashClothing:perform() end
 
----@return any
 function ISWashClothing:start() end
 
----@return any
 function ISWashClothing:stop() end
 
----@return any
 function ISWashClothing:stopSound() end
 
----@return any
 function ISWashClothing:update() end
 
----@return any
+---@param part unknown?
+---@return boolean
 function ISWashClothing:useSoap(item, part) end
 
+---@param bloodAmount number
+---@param dirtAmount number
 ---@return ISWashClothing
 function ISWashClothing:new(character, sink, soaps, item, bloodAmount, dirtAmount, noSoap) end

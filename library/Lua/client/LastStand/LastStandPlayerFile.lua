@@ -1,35 +1,35 @@
 ---@meta
 
 ---@class LastStandPlayerFile
----@field error any
----@field file any
----@field newPlayer any
----@field version any
----@field [any] any
+---@field error string?
+---@field file unknown?
+---@field newPlayer table?
+---@field version number?
 LastStandPlayerFile = {}
 
----@return any
+---@param fileName string
+---@return table?
 function LastStandPlayerFile:load(fileName) end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readBlockStart() end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readBonus() end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readClothing() end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readLine(line) end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readPlayer() end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readSkills() end
 
----@return any
+---@return boolean
 function LastStandPlayerFile:readTraits() end
 
 ---@return LastStandPlayerFile

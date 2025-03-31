@@ -1,20 +1,21 @@
 ---@meta
 
 ---@class ISDebugAnimationTextUI : ISCollapsableWindow
----@field character any
----@field textBox any
----@field title any
----@field [any] any
+---@field character unknown
+---@field textBox ISTextEntryBox
+---@field title string
 ISDebugAnimationTextUI = ISCollapsableWindow:derive("ISDebugAnimationTextUI")
+ISDebugAnimationTextUI.Type = "ISDebugAnimationTextUI"
 
----@return any
 function ISDebugAnimationTextUI:createChildren() end
 
----@return any
 function ISDebugAnimationTextUI:prerender() end
 
----@return any
 function ISDebugAnimationTextUI:setText() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISDebugAnimationTextUI
 function ISDebugAnimationTextUI:new(x, y, width, height, chr) end

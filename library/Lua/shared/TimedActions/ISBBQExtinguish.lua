@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISBBQExtinguish : ISBaseTimedAction
----@field bbq any
----@field maxTime any
----@field [any] any
+---@field bbq unknown
 ISBBQExtinguish = ISBaseTimedAction:derive("ISBBQExtinguish")
+ISBBQExtinguish.Type = "ISBBQExtinguish"
 
----@return any
+---@return boolean
 function ISBBQExtinguish:complete() end
 
----@return any
+---@return number
 function ISBBQExtinguish:getDuration() end
 
----@return any
+---@return boolean
 function ISBBQExtinguish:isValid() end
 
----@return any
 function ISBBQExtinguish:perform() end
 
----@return any
 function ISBBQExtinguish:start() end
 
----@return any
 function ISBBQExtinguish:stop() end
 
----@return any
 function ISBBQExtinguish:update() end
 
----@return any
+---@return unknown
 function ISBBQExtinguish:waitToStart() end
 
 ---@return ISBBQExtinguish

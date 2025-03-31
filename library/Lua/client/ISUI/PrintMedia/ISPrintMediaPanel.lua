@@ -1,83 +1,73 @@
 ---@meta
 
 ---@class ISPrintMediaPanel : ISCollapsableWindowJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field chapterList any
----@field content any
----@field panel any
----@field resizable any
----@field title any
----@field tutorialSetInfo any
----@field visibleFunction any
----@field visibleTarget any
----@field [any] any
+---@field chapterList ISPrintMediaListBox
+---@field content ISPanel
+---@field panel ISPrintMediaPage
+---@field title string
+---@field tutorialSetInfo ISPrintMediaSetInfo
+---@field visibleFunction function
+---@field visibleTarget ISPrintMediaPanel
 ISPrintMediaPanel = ISCollapsableWindowJoypad:derive("ISPrintMediaPanel")
+ISPrintMediaPanel.Type = "ISPrintMediaPanel"
 
----@return any
 function ISPrintMediaPanel:close() end
 
----@return any
 function ISPrintMediaPanel:createChildren() end
 
----@return any
 function ISPrintMediaPanel:fillChapterList() end
 
----@return any
 function ISPrintMediaPanel:initialise() end
 
----@return any
+---@return boolean
 function ISPrintMediaPanel:isKeyConsumed(key) end
 
----@return any
 function ISPrintMediaPanel:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISPrintMediaPanel:onKeyRelease(key) end
 
----@return any
 function ISPrintMediaPanel:onToggleVisible() end
 
----@return any
 function ISPrintMediaPanel:prerender() end
 
----@return any
 function ISPrintMediaPanel:reload() end
 
----@return any
 function ISPrintMediaPanel:render() end
 
----@return any
+---@param pageNum number
 function ISPrintMediaPanel:setPage(pageNum) end
 
----@return any
+---@param useJoypad boolean
 function ISPrintMediaPanel:setUseJoypad(useJoypad) end
 
----@return any
 function ISPrintMediaPanel:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISPrintMediaPanel
 function ISPrintMediaPanel:new(x, y, width, height) end
 
 ---@class ISPrintMediaListBox : ISScrollingListBox
+---@field selected number
 ISPrintMediaListBox = ISScrollingListBox:derive("ISPrintMediaListBox")
+ISPrintMediaListBox.Type = "ISPrintMediaListBox"
 
----@return any
+---@return number
 function ISPrintMediaListBox:doDrawItem(y, item, alt) end
 
----@return any
 function ISPrintMediaListBox:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISPrintMediaListBox:onJoypadDirRight(joypadData) end
 
----@return any
 function ISPrintMediaListBox:onJoypadDown(button, joypadData) end
 
----@return any
 function ISPrintMediaListBox:onLoseJoypadFocus(joypadData) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISPrintMediaListBox
 function ISPrintMediaListBox:new(x, y, width, height) end

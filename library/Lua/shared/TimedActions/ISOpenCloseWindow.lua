@@ -1,36 +1,32 @@
 ---@meta
 
 ---@class ISOpenCloseWindow : ISBaseTimedAction
----@field ignoreHandsWounds any
----@field maxTime any
----@field object any
----@field useProgressBar any
----@field [any] any
+---@field ignoreHandsWounds boolean
+---@field object unknown
+---@field useProgressBar boolean
 ISOpenCloseWindow = ISBaseTimedAction:derive("ISOpenCloseWindow")
+ISOpenCloseWindow.Type = "ISOpenCloseWindow"
 
----@return any
+---@return boolean
 function ISOpenCloseWindow:complete() end
 
----@return any
+---@return number
 function ISOpenCloseWindow:getDuration() end
 
----@return any
+---@return boolean
 function ISOpenCloseWindow:isValid() end
 
----@return any
 function ISOpenCloseWindow:perform() end
 
----@return any
 function ISOpenCloseWindow:start() end
 
----@return any
 function ISOpenCloseWindow:stop() end
 
----@return any
 function ISOpenCloseWindow:update() end
 
----@return any
+---@return unknown
 function ISOpenCloseWindow:waitToStart() end
 
+---@param character unknown?
 ---@return ISOpenCloseWindow
 function ISOpenCloseWindow:new(character, object) end

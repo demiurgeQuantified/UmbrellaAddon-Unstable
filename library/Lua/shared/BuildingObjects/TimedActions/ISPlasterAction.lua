@@ -1,34 +1,29 @@
 ---@meta
 
 ---@class ISPlasterAction : ISBaseTimedAction
----@field caloriesModifier any
----@field maxTime any
----@field plasterBucket any
----@field sound any
----@field thumpable any
----@field [any] any
+---@field plasterBucket unknown?
+---@field sound unknown
+---@field thumpable unknown
 ISPlasterAction = ISBaseTimedAction:derive("ISPlasterAction")
+ISPlasterAction.Type = "ISPlasterAction"
 
----@return any
+---@return boolean
 function ISPlasterAction:complete() end
 
----@return any
+---@return number
 function ISPlasterAction:getDuration() end
 
----@return any
+---@return boolean
 function ISPlasterAction:isValid() end
 
----@return any
 function ISPlasterAction:perform() end
 
----@return any
 function ISPlasterAction:start() end
 
----@return any
 function ISPlasterAction:stop() end
 
----@return any
 function ISPlasterAction:update() end
 
+---@param plasterBucket unknown?
 ---@return ISPlasterAction
 function ISPlasterAction:new(character, thumpable, plasterBucket) end

@@ -1,71 +1,62 @@
 ---@meta
 
 ---@class ISLootStreetTestUI : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field bathroomContainer any
----@field bedroomContainer any
----@field character any
----@field chr any
----@field close any
----@field height any
----@field houseNbr any
----@field houseType any
----@field kitchenContainer any
----@field kitchenProclist any
----@field lootType any
----@field moveWithMouse any
----@field onlyjunk any
----@field playerNum any
----@field richtext any
----@field shedContainer any
----@field start any
----@field title any
----@field totalList any
----@field town any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field bathroomContainer unknown
+---@field bedroomContainer unknown
+---@field character unknown
+---@field chr unknown
+---@field close ISButton
+---@field houseNbr ISTextEntryBox
+---@field houseType ISComboBox
+---@field kitchenContainer unknown
+---@field kitchenProclist table
+---@field lootType ISTickBox
+---@field onlyjunk ISTickBox
+---@field playerNum unknown
+---@field richtext ISRichTextPanel
+---@field shedContainer unknown
+---@field start ISButton
+---@field title string
+---@field totalList table
+---@field town ISComboBox
 ISLootStreetTestUI = ISCollapsableWindow:derive("ISLootStreetTestUI")
+ISLootStreetTestUI.Type = "ISLootStreetTestUI"
 
----@return any
 function ISLootStreetTestUI:close() end
 
----@return any
+---@return table
+---@return table
+---@return number
 function ISLootStreetTestUI:concatList(list) end
 
----@return any
 function ISLootStreetTestUI:createChildren() end
 
----@return any
+---@param roomName string
 function ISLootStreetTestUI:doRichTextList(container, roomName) end
 
----@return any
+---@param roomName string
+---@param contName string
+---@param procName string
 function ISLootStreetTestUI:doRoom(container, roomName, contName, procName) end
 
----@return any
 function ISLootStreetTestUI:generateBuilding() end
 
----@return any
+---@return number?
 function ISLootStreetTestUI:getLootDensity() end
 
----@return any
+---@return string?
 function ISLootStreetTestUI:getRandomKitchenCounter() end
 
----@return any
+---@return boolean
 function ISLootStreetTestUI:itemValidForList(item) end
 
----@return any
 function ISLootStreetTestUI:render() end
 
----@return any
 function ISLootStreetTestUI:startGenerate() end
 
----@return any
 function ISLootStreetTestUI:update() end
 
+---@param x number
+---@param y number
 ---@return ISLootStreetTestUI
 function ISLootStreetTestUI:new(x, y, character) end

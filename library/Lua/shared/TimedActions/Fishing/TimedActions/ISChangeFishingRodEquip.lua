@@ -1,32 +1,26 @@
 ---@meta
 
 ---@class ISChangeFishingRodEquip : ISBaseTimedAction
----@field character any
----@field item any
----@field maxTime any
----@field rod any
----@field [any] any
+---@field item unknown
+---@field rod unknown
 ISChangeFishingRodEquip = ISBaseTimedAction:derive("ISChangeFishingRodEquip")
+ISChangeFishingRodEquip.Type = "ISChangeFishingRodEquip"
 
----@return any
+---@return boolean
 function ISChangeFishingRodEquip:complete() end
 
----@return any
+---@return number
 function ISChangeFishingRodEquip:getDuration() end
 
----@return any
+---@return unknown?
 function ISChangeFishingRodEquip:isValid() end
 
----@return any
 function ISChangeFishingRodEquip:perform() end
 
----@return any
 function ISChangeFishingRodEquip:start() end
 
----@return any
 function ISChangeFishingRodEquip:stop() end
 
----@return any
 function ISChangeFishingRodEquip:update() end
 
 ---@return ISChangeFishingRodEquip

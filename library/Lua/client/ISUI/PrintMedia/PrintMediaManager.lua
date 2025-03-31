@@ -1,16 +1,14 @@
 ---@meta
 
 ---@class PrintMediaManager : ISBaseObject
----@field instance any
----@field panel any
----@field [any] any
+---@field panel ISPrintMediaPanel
 PrintMediaManager = ISBaseObject:derive("PrintMediaManager")
+PrintMediaManager.Type = "PrintMediaManager"
+PrintMediaManager.instance = nil ---@type PrintMediaManager?
 
----@return any
 function PrintMediaManager:update() end
 
 ---@return PrintMediaManager
 function PrintMediaManager:new() end
 
----@return any
 function doPrintMediaDebug() end

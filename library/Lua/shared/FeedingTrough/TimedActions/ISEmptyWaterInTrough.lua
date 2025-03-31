@@ -1,39 +1,31 @@
 ---@meta
 
 ---@class ISEmptyWaterInTrough : ISBaseTimedAction
----@field maxTime any
----@field objectTo any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field objectTo unknown
+---@field sound unknown
 ISEmptyWaterInTrough = ISBaseTimedAction:derive("ISEmptyWaterInTrough")
+ISEmptyWaterInTrough.Type = "ISEmptyWaterInTrough"
 
----@return any
+---@return boolean
 function ISEmptyWaterInTrough:complete() end
 
----@return any
+---@return number
 function ISEmptyWaterInTrough:getDuration() end
 
----@return any
+---@return boolean
 function ISEmptyWaterInTrough:isValid() end
 
----@return any
 function ISEmptyWaterInTrough:perform() end
 
----@return any
 function ISEmptyWaterInTrough:start() end
 
----@return any
 function ISEmptyWaterInTrough:stop() end
 
----@return any
 function ISEmptyWaterInTrough:stopSound() end
 
----@return any
 function ISEmptyWaterInTrough:update() end
 
----@return any
+---@return unknown
 function ISEmptyWaterInTrough:waitToStart() end
 
 ---@return ISEmptyWaterInTrough

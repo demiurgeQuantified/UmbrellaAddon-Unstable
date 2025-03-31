@@ -1,50 +1,35 @@
 ---@meta
 
 ---@class ISSLEvent : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field eventData any
----@field eventFrame any
----@field eventSoundList any
----@field height any
----@field storyEvent any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field eventData table
+---@field eventFrame ISSLFrame
+---@field eventSoundList ISScrollingListBox
+---@field storyEvent unknown
 ISSLEvent = ISPanel:derive("ISSLEvent")
+ISSLEvent.Type = "ISSLEvent"
 
----@return any
 function ISSLEvent:addEventSoundItem(_eventSound) end
 
----@return any
 function ISSLEvent:createChildren() end
 
----@return any
+---@return number
 function ISSLEvent:drawEventSoundItem(y, item, alt) end
 
----@return any
 function ISSLEvent:initialise() end
 
----@return any
 function ISSLEvent:onResize() end
 
----@return any
 function ISSLEvent:prerender() end
 
----@return any
 function ISSLEvent:render() end
 
----@return any
 function ISSLEvent:setEvent(_event) end
 
----@return any
 function ISSLEvent:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISSLEvent
 function ISSLEvent:new(x, y, width, height) end

@@ -1,97 +1,78 @@
 ---@meta
 
 ---@class ISMakeUpUI : ISCollapsableWindowJoypad
----@field add any
----@field addMakeupLbl any
----@field avatarBackgroundTexture any
----@field avatarHeight any
----@field avatarPanel any
----@field avatarWidth any
----@field avatarX any
----@field avatarY any
----@field character any
----@field comboMakeup any
----@field desc any
----@field drawJoypadFocus any
----@field item any
----@field joypadButtons any
----@field joypadIndex any
----@field joypadIndexY any
----@field leftPanel any
----@field location any
----@field makeUpSelected any
----@field needsUpdateAvatar any
----@field needsUpdateLayout any
----@field playerNum any
----@field previousMakeUp any
----@field remove any
----@field removeMakeupCombo any
----@field removeMakeupLbl any
----@field rightPanel any
----@field title any
----@field [any] any
+---@field add ISButton
+---@field addMakeupLbl ISLabel
+---@field avatarBackgroundTexture unknown
+---@field avatarHeight number
+---@field avatarPanel ISUI3DModel
+---@field avatarWidth number
+---@field avatarX number
+---@field avatarY number
+---@field character unknown
+---@field comboMakeup ISComboBox
+---@field desc unknown
+---@field drawJoypadFocus boolean
+---@field item unknown
+---@field joypadButtons unknown
+---@field leftPanel ISPanel
+---@field location ISComboBox
+---@field makeUpSelected unknown?
+---@field needsUpdateAvatar boolean
+---@field needsUpdateLayout boolean
+---@field playerNum unknown
+---@field previousMakeUp unknown?
+---@field remove ISButton
+---@field removeMakeupCombo ISComboBox
+---@field removeMakeupLbl ISLabel
+---@field rightPanel ISPanel
+---@field title string
 ISMakeUpUI = ISCollapsableWindowJoypad:derive("ISMakeUpUI")
+ISMakeUpUI.Type = "ISMakeUpUI"
 ISMakeUpUI.windows = {}
 
----@return any
 function ISMakeUpUI.OnPlayerDeath(playerObj) end
 
----@return any
 function ISMakeUpUI:close() end
 
----@return any
 function ISMakeUpUI:createChildren() end
 
----@return any
 function ISMakeUpUI:displayBodyPart(cat) end
 
----@return any
 function ISMakeUpUI:initLocationCombo() end
 
----@return any
 function ISMakeUpUI:initRemoveMakeUpCombo() end
 
----@return any
 function ISMakeUpUI:onApplyMakeUp() end
 
----@return any
 function ISMakeUpUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISMakeUpUI:onJoypadDown(button) end
 
----@return any
 function ISMakeUpUI:onRemoveMakeUp() end
 
----@return any
 function ISMakeUpUI:onSelectLocation() end
 
----@return any
 function ISMakeUpUI:onSelectMakeUp() end
 
----@return any
 function ISMakeUpUI:onSelectRemoveMakeUp() end
 
----@return any
 function ISMakeUpUI:prerender() end
 
----@return any
 function ISMakeUpUI:reinit() end
 
----@return any
 function ISMakeUpUI:reinitCombos() end
 
----@return any
+---@param minWidth number
 function ISMakeUpUI:setWidthToChildren(panel, minWidth) end
 
----@return any
 function ISMakeUpUI:update() end
 
----@return any
 function ISMakeUpUI:updateAvatar() end
 
----@return any
 function ISMakeUpUI:updateLayout() end
 
+---@param x number
+---@param y number
 ---@return ISMakeUpUI
 function ISMakeUpUI:new(x, y, item, character) end

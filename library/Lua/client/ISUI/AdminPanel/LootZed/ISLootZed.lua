@@ -1,82 +1,65 @@
 ---@meta
 
 ---@class ISLootZed : ISPanelJoypad
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field datas any
----@field downX any
----@field downY any
----@field height any
----@field mouseOver any
----@field moving any
----@field name any
----@field no any
----@field player any
----@field playerSelect any
----@field searchEntryBox any
----@field titlebarbkg any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field datas ISScrollingListBox
+---@field name unknown?
+---@field no ISButton
+---@field player unknown
+---@field playerSelect ISComboBox
+---@field searchEntryBox ISTextEntryBox
+---@field titlebarbkg unknown
 ISLootZed = ISPanelJoypad:derive("ISLootZed")
-ISLootZed.instance = nil
+ISLootZed.Type = "ISLootZed"
+ISLootZed.instance = nil ---@type ISLootZed?
 ISLootZed.cheat = false
 
----@return any
 function ISLootZed:destroy() end
 
----@return any
+---@return number
 function ISLootZed:drawDatas(y, item, alt) end
 
----@return any
 function ISLootZed:initialise() end
 
----@return any
 function ISLootZed:onClick(button) end
 
----@return any
+---@param x number
+---@param y number
 function ISLootZed:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISLootZed:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISLootZed:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISLootZed:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISLootZed:onMouseUpOutside(x, y) end
 
----@return any
 function ISLootZed:onSelectContainerType() end
 
----@return any
 function ISLootZed:onTextChange() end
 
----@return any
 function ISLootZed:prerender() end
 
----@return any
 function ISLootZed:render() end
 
----@return any
+---@return number
 function ISLootZed:titleBarHeight() end
 
----@return any
 function ISLootZed:update() end
 
----@return any
 function ISLootZed:updateButtons() end
 
----@return any
 function ISLootZed:updateContent() end
 
+---@param width number
+---@param height number
 ---@return ISLootZed
 function ISLootZed:new(width, height, player) end

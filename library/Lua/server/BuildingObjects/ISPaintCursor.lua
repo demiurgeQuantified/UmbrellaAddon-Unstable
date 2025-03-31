@@ -1,66 +1,73 @@
 ---@meta
 
 ---@class ISPaintCursor : ISBuildingObject
----@field action any
----@field args any
----@field character any
----@field currentSquare any
----@field isWallLike any
----@field noNeedHammer any
----@field objectIndex any
----@field plasterSprite any
----@field player any
----@field renderFloorHelper any
----@field renderX any
----@field renderY any
----@field renderZ any
----@field signSprite any
----@field skipBuildAction any
----@field skipWalk any
----@field [any] any
+---@field action string
+---@field args table?
+---@field character unknown
+---@field currentSquare unknown
+---@field noNeedHammer boolean
+---@field objectIndex number
+---@field plasterSprite unknown
+---@field player unknown
+---@field renderFloorHelper boolean
+---@field renderX number
+---@field renderY number
+---@field renderZ number
+---@field signSprite unknown
+---@field skipBuildAction boolean
+---@field skipWalk boolean
 ISPaintCursor = ISBuildingObject:derive("ISPaintCursor")
+ISPaintCursor.Type = "ISPaintCursor"
 
----@return any
+---@return boolean
 function ISPaintCursor:_isDoorFrame(object) end
 
----@return any
+---@return boolean
 function ISPaintCursor:_isWall(object) end
 
----@return any
+---@return boolean
 function ISPaintCursor:canPaint(object) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPaintCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return string?
 function ISPaintCursor:getAPrompt() end
 
----@return any
+---@return string?
 function ISPaintCursor:getLBPrompt() end
 
----@return any
+---@return table
 function ISPaintCursor:getObjectList() end
 
----@return any
+---@return string?
 function ISPaintCursor:getRBPrompt() end
 
----@return any
+---@return boolean?
 function ISPaintCursor:hasItems() end
 
----@return any
+---@return boolean
 function ISPaintCursor:isValid(square) end
 
----@return any
+---@return unknown?
 function ISPaintCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPaintCursor:render(x, y, z, square) end
 
----@return any
 function ISPaintCursor:rotateKey(key) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return boolean
 function ISPaintCursor:walkTo(x, y, z) end
 
+---@param action string
+---@param args table?
 ---@return ISPaintCursor
 function ISPaintCursor:new(character, action, args) end

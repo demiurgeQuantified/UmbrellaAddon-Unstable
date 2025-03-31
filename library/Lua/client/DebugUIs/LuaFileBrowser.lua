@@ -1,54 +1,48 @@
 ---@meta
 
 ---@class LuaFileBrowser : ISCollapsableWindow
----@field backgroundColor any
----@field buttonReload any
----@field buttonReloadRow any
----@field fileList any
----@field lastText any
----@field textEntry any
----@field title any
----@field [any] any
+---@field buttonReload ISButton
+---@field buttonReloadRow number
+---@field fileList unknown
+---@field lastText unknown
+---@field textEntry ISTextEntryBox
+---@field title string
 LuaFileBrowser = ISCollapsableWindow:derive("LuaFileBrowser")
+LuaFileBrowser.Type = "LuaFileBrowser"
 
----@return any
 function LuaFileBrowser:checkFontSize() end
 
----@return any
 function LuaFileBrowser:createChildren() end
 
----@return any
 function LuaFileBrowser:fill() end
 
----@return any
 function LuaFileBrowser:initialise() end
 
----@return any
 function LuaFileBrowser:onButtonReload() end
 
----@return any
 function LuaFileBrowser:onMouseDoubleClickFile(item) end
 
----@return any
 function LuaFileBrowser:prerender() end
 
----@return any
 function LuaFileBrowser:setListBoxItemHeight(listBox) end
 
----@return any
 function LuaFileBrowser:update() end
 
----@return any
 function LuaFileBrowser:updateReloadButton() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return LuaFileBrowser
 function LuaFileBrowser:new(x, y, width, height) end
 
 ---@class LuaFileBrowserList : ISScrollingListBox
 LuaFileBrowserList = ISScrollingListBox:derive("LuaFileBrowserList")
+LuaFileBrowserList.Type = "LuaFileBrowserList"
 
----@return any
+---@return number
 function LuaFileBrowserList:doDrawItem(y, item, alt) end
 
----@return any
+---@return boolean
 function LuaFileBrowserList:onMouseWheel(del) end

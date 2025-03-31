@@ -1,45 +1,36 @@
 ---@meta
 
 ---@class SGlobalObject : ISBaseObject
----@field globalObject any
----@field luaSystem any
----@field x any
----@field y any
----@field z any
----@field [any] any
+---@field globalObject unknown
+---@field luaSystem unknown
+---@field x unknown
+---@field y unknown
+---@field z unknown
 SGlobalObject = ISBaseObject:derive("SGlobalObject")
+SGlobalObject.Type = "SGlobalObject"
 
----@return any
 function SGlobalObject:aboutToRemoveFromSystem() end
 
----@return any
+---@return unknown
 function SGlobalObject:getIsoObject() end
 
----@return any
+---@return unknown
 function SGlobalObject:getSquare() end
 
----@return any
 function SGlobalObject:initNew() end
 
----@return any
 function SGlobalObject:noise(message) end
 
----@return any
 function SGlobalObject:OnIsoObjectChangedItself(isoObject) end
 
----@return any
 function SGlobalObject:OnModDataChangeItself(isoObject) end
 
----@return any
 function SGlobalObject:removeIsoObject() end
 
----@return any
 function SGlobalObject:stateFromIsoObject(isoObject) end
 
----@return any
 function SGlobalObject:stateToIsoObject(isoObject) end
 
----@return any
 function SGlobalObject:updateOnClient() end
 
 ---@return SGlobalObject

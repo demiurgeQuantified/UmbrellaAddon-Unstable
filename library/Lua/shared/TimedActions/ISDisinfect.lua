@@ -1,46 +1,37 @@
 ---@meta
 
 ---@class ISDisinfect : ISBaseTimedAction
----@field alcohol any
----@field bandagedPlayerX any
----@field bandagedPlayerY any
----@field bodyPart any
----@field character any
----@field doctor any
----@field doctorLevel any
----@field maxTime any
----@field otherPlayer any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field alcohol unknown
+---@field bandagedPlayerX unknown
+---@field bandagedPlayerY unknown
+---@field bodyPart unknown
+---@field doctor unknown
+---@field doctorLevel unknown
+---@field otherPlayer unknown
+---@field sound unknown
 ISDisinfect = ISBaseTimedAction:derive("ISDisinfect")
+ISDisinfect.Type = "ISDisinfect"
 
----@return any
+---@return boolean
 function ISDisinfect:complete() end
 
----@return any
+---@return number
 function ISDisinfect:getDuration() end
 
----@return any
+---@return boolean?
 function ISDisinfect:isValid() end
 
----@return any
 function ISDisinfect:perform() end
 
----@return any
 function ISDisinfect:start() end
 
----@return any
 function ISDisinfect:stop() end
 
----@return any
 function ISDisinfect:stopSound() end
 
----@return any
 function ISDisinfect:update() end
 
----@return any
+---@return boolean
 function ISDisinfect:waitToStart() end
 
 ---@return ISDisinfect

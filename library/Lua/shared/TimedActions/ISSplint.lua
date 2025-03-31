@@ -1,47 +1,43 @@
 ---@meta
 
 ---@class ISSplint : ISBaseTimedAction
----@field bandagedPlayerX any
----@field bandagedPlayerY any
----@field bodyPart any
----@field character any
----@field doctor any
----@field doctorLevel any
----@field doIt any
----@field maxTime any
----@field otherPlayer any
----@field plank any
----@field rippedSheet any
----@field sound any
----@field [any] any
+---@field bandagedPlayerX unknown
+---@field bandagedPlayerY unknown
+---@field bodyPart unknown
+---@field doctor unknown
+---@field doctorLevel number
+---@field doIt boolean
+---@field otherPlayer unknown
+---@field plank unknown?
+---@field rippedSheet unknown?
+---@field sound unknown
 ISSplint = ISBaseTimedAction:derive("ISSplint")
+ISSplint.Type = "ISSplint"
 
----@return any
+---@return boolean
 function ISSplint:complete() end
 
----@return any
+---@return number
 function ISSplint:getDuration() end
 
----@return any
+---@return boolean?
 function ISSplint:isValid() end
 
----@return any
 function ISSplint:perform() end
 
----@return any
 function ISSplint:start() end
 
----@return any
 function ISSplint:stop() end
 
----@return any
 function ISSplint:stopSound() end
 
----@return any
 function ISSplint:update() end
 
----@return any
+---@return boolean
 function ISSplint:waitToStart() end
 
+---@param rippedSheet unknown?
+---@param plank unknown?
+---@param doIt boolean
 ---@return ISSplint
 function ISSplint:new(character, otherPlayer, rippedSheet, plank, bodyPart, doIt) end

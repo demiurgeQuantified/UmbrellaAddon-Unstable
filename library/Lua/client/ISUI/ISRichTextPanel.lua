@@ -1,96 +1,99 @@
 ---@meta
 
 ---@class ISRichTextPanel : ISPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field autosetheight any
----@field b any
----@field backgroundColor any
----@field borderColor any
----@field clip any
----@field contentTransparency any
----@field currentLine any
----@field defaultFont any
----@field font any
----@field fonts any
----@field g any
----@field height any
----@field imageCount any
----@field imageH any
----@field images any
----@field imageW any
----@field imageX any
----@field imageY any
----@field indent any
----@field keybinds any
----@field lines any
----@field lineX any
----@field lineY any
----@field marginBottom any
----@field marginLeft any
----@field marginRight any
----@field marginTop any
----@field maxLines any
----@field orient any
----@field r any
----@field rgb any
----@field rgbCurrent any
----@field rgbStack any
----@field text any
----@field textB any
----@field textDirty any
----@field textG any
----@field textR any
----@field videoCount any
----@field videoH any
----@field videos any
----@field videoW any
----@field videoX any
----@field videoY any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field autosetheight boolean
+---@field b number
+---@field clip boolean
+---@field contentTransparency number
+---@field currentLine number
+---@field defaultFont unknown
+---@field font unknown
+---@field fonts table
+---@field g number
+---@field imageCount number
+---@field imageH table
+---@field images table
+---@field imageW table
+---@field imageX table
+---@field imageY table
+---@field indent number?
+---@field keybinds table
+---@field lines table
+---@field lineX table
+---@field lineY table
+---@field marginBottom number
+---@field marginLeft number
+---@field marginRight number
+---@field marginTop number
+---@field maxLines number
+---@field orient table
+---@field r number
+---@field rgb table
+---@field rgbCurrent table
+---@field rgbStack table
+---@field text string?
+---@field textB number
+---@field textDirty boolean
+---@field textG number
+---@field textR number
+---@field videoCount number
+---@field videoH table
+---@field videos table
+---@field videoW table
+---@field videoX table
+---@field videoY table
 ISRichTextPanel = ISPanel:derive("ISRichTextPanel")
+ISRichTextPanel.Type = "ISRichTextPanel"
 ISRichTextPanel.drawMargins = false
 
----@return any
+---@param dx number?
+---@param dy number?
 function ISRichTextPanel:doRightJoystickScrolling(joypadData, dx, dy) end
 
----@return any
 function ISRichTextPanel:initialise() end
 
----@return any
+---@return boolean
 function ISRichTextPanel:onMouseWheel(del) end
 
----@return any
 function ISRichTextPanel:onResize() end
 
----@return any
 function ISRichTextPanel:paginate() end
 
----@return any
+---@param x number?
+---@param y number
+---@param lineImageHeight number
+---@param lineHeight number
+---@return number?
+---@return number
+---@return number
 function ISRichTextPanel:processCommand(command, x, y, lineImageHeight, lineHeight) end
 
----@return any
 function ISRichTextPanel:render() end
 
----@return any
+---@param text string
+---@param offset number?
+---@return string
+---@return number?
 function ISRichTextPanel:replaceKeyName(text, offset) end
 
----@return any
+---@param text string
+---@return string
 function ISRichTextPanel:replaceKeyNames(text) end
 
----@return any
 function ISRichTextPanel:setContentTransparency(alpha) end
 
----@return any
+---@param left number
+---@param top number
+---@param right number
+---@param bottom number
 function ISRichTextPanel:setMargins(left, top, right, bottom) end
 
----@return any
+---@param text string?
 function ISRichTextPanel:setText(text) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISRichTextPanel
 function ISRichTextPanel:new(x, y, width, height) end

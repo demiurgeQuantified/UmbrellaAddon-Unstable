@@ -1,85 +1,63 @@
 ---@meta
 
 ---@class IsoRegionDetails : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field canvasY any
----@field collapseCounter any
----@field currentTile any
----@field drawFrame any
----@field greyCol any
----@field height any
----@field hotKeyPanels any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field richtext any
----@field subFocus any
----@field title any
----@field tmpTxt any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field canvasY number
+---@field currentTile unknown?
+---@field greyCol table
+---@field hotKeyPanels table
+---@field isJoypadWindow boolean
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field richtext ISRichTextPanel?
+---@field subFocus unknown?
+---@field title string
+---@field tmpTxt string
 IsoRegionDetails = ISCollapsableWindow:derive("IsoRegionDetails")
-IsoRegionDetails.instance = nil
+IsoRegionDetails.Type = "IsoRegionDetails"
+IsoRegionDetails.instance = nil ---@type IsoRegionDetails?
 IsoRegionDetails.shiftDown = 0
 IsoRegionDetails.lastX = false
 IsoRegionDetails.lastY = false
 
----@return any
+---@return IsoRegionDetails?
 function IsoRegionDetails.OnOpenPanel() end
 
----@return any
 function IsoRegionDetails:addLine(_prefix, _line) end
 
----@return any
 function IsoRegionDetails:addLineEnd() end
 
----@return any
+---@param _title string
 function IsoRegionDetails:addTitle(_title) end
 
----@return any
 function IsoRegionDetails:clear() end
 
----@return any
 function IsoRegionDetails:close() end
 
----@return any
 function IsoRegionDetails:createChildren() end
 
----@return any
 function IsoRegionDetails:initialise() end
 
----@return any
 function IsoRegionDetails:onButton(_btn) end
 
----@return any
 function IsoRegionDetails:onResize() end
 
----@return any
 function IsoRegionDetails:prerender() end
 
----@return any
+---@param _x number
+---@param _y number
+---@param _z number
 function IsoRegionDetails:readRegion(_x, _y, _z, _o) end
 
----@return any
 function IsoRegionDetails:render() end
 
----@return any
 function IsoRegionDetails:stayOnSplitScreen() end
 
----@return any
 function IsoRegionDetails:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return IsoRegionDetails
 function IsoRegionDetails:new(x, y, width, height, player) end

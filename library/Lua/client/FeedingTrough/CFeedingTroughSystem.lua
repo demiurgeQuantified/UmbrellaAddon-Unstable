@@ -2,14 +2,14 @@
 
 ---@class CFeedingTroughSystem : CGlobalObjectSystem
 CFeedingTroughSystem = CGlobalObjectSystem:derive("CFeedingTroughSystem")
+CFeedingTroughSystem.Type = "CFeedingTroughSystem"
 
----@return any
+---@return unknown
 function CFeedingTroughSystem:isValidIsoObject(isoObject) end
 
----@return any
+---@return CFeedingTroughGlobalObject
 function CFeedingTroughSystem:newLuaObject(globalObject) end
 
----@return any
 function CFeedingTroughSystem:OnLuaObjectUpdated(luaObject) end
 
 ---@return CFeedingTroughSystem

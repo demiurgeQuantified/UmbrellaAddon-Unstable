@@ -1,28 +1,26 @@
 ---@meta
 
 ---@class ISReadWorldMap : ISBaseTimedAction
----@field centerX any
----@field centerY any
----@field maxTime any
----@field playerNum any
----@field zoom any
----@field [any] any
+---@field centerX number
+---@field centerY number
+---@field playerNum unknown
+---@field zoom number
 ISReadWorldMap = ISBaseTimedAction:derive("ISReadWorldMap")
+ISReadWorldMap.Type = "ISReadWorldMap"
 
----@return any
+---@return boolean
 function ISReadWorldMap:isValid() end
 
----@return any
 function ISReadWorldMap:perform() end
 
----@return any
 function ISReadWorldMap:start() end
 
----@return any
 function ISReadWorldMap:stop() end
 
----@return any
 function ISReadWorldMap:update() end
 
+---@param centerX number
+---@param centerY number
+---@param zoom number
 ---@return ISReadWorldMap
 function ISReadWorldMap:new(character, centerX, centerY, zoom) end

@@ -3,5 +3,5 @@
 ---@class LastStandChallenge
 LastStandChallenge = {}
 
----@return any
+---@param challenge table
 function addChallenge(challenge) end

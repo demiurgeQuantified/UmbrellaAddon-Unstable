@@ -1,5 +1,6 @@
 ---@meta
 
+---@class voiceTable
 voiceTable = {
 	{
 		alias = "MaleZombieIdle",
@@ -73,6 +74,7 @@ voiceTable = {
 	},
 }
 
+---@class footStepTable
 footStepTable = {
 	{
 		alias = "zombie_m",
@@ -90,11 +92,13 @@ footStepTable = {
 	},
 }
 
+---@class baseSoundTable
 baseSoundTable = {}
 
+---@class ambientSoundTable
 ambientSoundTable = {}
 
+---@class globalSoundTable
 globalSoundTable = {}
 
----@return any
 function doLoadSoundbanks() end

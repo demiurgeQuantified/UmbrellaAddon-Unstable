@@ -1,16 +1,15 @@
 ---@meta
 
 ---@class ISInventoryPaneContextMenu
----@field placeItemCursor any
----@field toolRender any
----@field [any] any
 ISInventoryPaneContextMenu = {}
 ISInventoryPaneContextMenu.tooltipPool = {}
 ISInventoryPaneContextMenu.tooltipsUsed = {}
 ISInventoryPaneContextMenu.ghs = "<GHC>"
 ISInventoryPaneContextMenu.bhs = "<BHC>"
+ISInventoryPaneContextMenu.toolRender = nil ---@type ISToolTipInv?
+ISInventoryPaneContextMenu.ItemInstances = nil ---@type table?
+ISInventoryPaneContextMenu.placeItemCursor = nil ---@type ISPlace3DItemCursor?
 
----@return any
 function ISInventoryPaneContextMenu.addDynamicalContextMenu(
 	selectedItem,
 	context,
@@ -20,13 +19,13 @@ function ISInventoryPaneContextMenu.addDynamicalContextMenu(
 )
 end
 
----@return any
 function ISInventoryPaneContextMenu.addEatTooltip(option, items, percent) end
 
----@return any
 function ISInventoryPaneContextMenu.addFishRodOptions(fishingRod, haveLure, context, player) end
 
----@return any
+---@param fixingNum number
+---@param fixerNum number
+---@return unknown
 function ISInventoryPaneContextMenu.addFixerSubOption(
 	brokenObject,
 	player,
@@ -39,7 +38,8 @@ function ISInventoryPaneContextMenu.addFixerSubOption(
 )
 end
 
----@return any
+---@param evoItem unknown?
+---@param extraInfo string
 function ISInventoryPaneContextMenu.addItemInEvoRecipe(
 	subMenuRecipe,
 	baseItem,
@@ -50,10 +50,8 @@ function ISInventoryPaneContextMenu.addItemInEvoRecipe(
 )
 end
 
----@return any
 function ISInventoryPaneContextMenu.addLure(player, fishingRod, lure) end
 
----@return any
 function ISInventoryPaneContextMenu.addNewCraftingDynamicalContextMenu(
 	selectedItem,
 	context,
@@ -63,19 +61,16 @@ function ISInventoryPaneContextMenu.addNewCraftingDynamicalContextMenu(
 )
 end
 
----@return any
+---@return unknown
 function ISInventoryPaneContextMenu.addToolTip() end
 
----@return any
 function ISInventoryPaneContextMenu.applyBandage(item, bodyPart, player) end
 
----@return any
 function ISInventoryPaneContextMenu.AutoDrinkOff(waterContainer) end
 
----@return any
 function ISInventoryPaneContextMenu.AutoDrinkOn(waterContainer) end
 
----@return any
+---@param fixingNum number
 function ISInventoryPaneContextMenu.buildFixingMenu(
 	brokenObject,
 	player,
@@ -87,190 +82,164 @@ function ISInventoryPaneContextMenu.buildFixingMenu(
 )
 end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.canAddManyItems(recipe, selectedItem, playerObj) end
 
----@return any
+---@return unknown?
 function ISInventoryPaneContextMenu.canMoveTo(items, dest, player) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.canReplaceStoreWater(item) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.canReplaceStoreWater2(itemType) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.canRipItem(playerObj, item) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.canUnpack(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.changeHook(player, fishingRod, hook) end
 
----@return any
 function ISInventoryPaneContextMenu.changeLine(player, fishingRod, line) end
 
----@return any
 function ISInventoryPaneContextMenu.checkConsolidate(drainable, playerObj, context, previousPourInto) end
 
----@return any
+---@param isInPlayerInventory boolean
+---@param items table
+---@param x number
+---@param y number
+---@return unknown?
 function ISInventoryPaneContextMenu.createMenu(player, isInPlayerInventory, items, x, y, origin) end
 
----@return any
+---@param playerNum number
+---@param isLoot boolean
+---@param x number
+---@param y number
+---@return unknown?
 function ISInventoryPaneContextMenu.createMenuNoItems(playerNum, isLoot, x, y) end
 
----@return any
 function ISInventoryPaneContextMenu.doBandageMenu(context, items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.doBulletMenu(playerObj, weapon, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doChangeFireModeMenu(playerObj, weapon, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doClothingItemExtraMenu(context, clothingItemExtra, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.doClothingPatchMenu(player, clothing, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doDrinkFluidMenu(playerObj, fluidContainer, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doDrinkForThirstMenu(context, playerObj, waterContainer) end
 
----@return any
 function ISInventoryPaneContextMenu.doEatOption(context, cmd, items, player, playerObj, foodItems) end
 
----@return any
+---@param isWeapon boolean
 function ISInventoryPaneContextMenu.doEquipOption(context, playerObj, isWeapon, items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.doEvorecipeMenu(context, items, player, evorecipe, baseItem, containerList) end
 
----@return any
 function ISInventoryPaneContextMenu.doGrabMenu(context, items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.doLiteratureMenu(context, items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.doMagazineMenu(playerObj, magazine, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doMakeUpMenu(context, makeup, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.doPlace3DItemOption(items, player, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doReloadMenuForBullets(playerObj, bullet, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doReloadMenuForMagazine(playerObj, magazine, context) end
 
----@return any
 function ISInventoryPaneContextMenu.doReloadMenuForWeapon(playerObj, weapon, context) end
 
----@return any
+---@param playerNum number
 function ISInventoryPaneContextMenu.doStoveMenu(context, playerNum) end
 
----@return any
+---@param playerNum number
 function ISInventoryPaneContextMenu.doTrashCanMenu(context, playerNum) end
 
----@return any
 function ISInventoryPaneContextMenu.doWearClothingMenu(player, clothing, items, context) end
 
----@return any
+---@return table?
 function ISInventoryPaneContextMenu.doWearClothingTooltip(playerObj, newItem, currentItem, option) end
 
----@return any
 function ISInventoryPaneContextMenu.dropItem(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.dryMyself(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.eatItem(item, percentage, player) end
 
----@return any
 function ISInventoryPaneContextMenu.equipHeavyItem(playerObj, item) end
 
----@return any
+---@param primary boolean
+---@param twoHands boolean
 function ISInventoryPaneContextMenu.equipWeapon(weapon, primary, twoHands, player) end
 
----@return any
+---@return unknown?
 function ISInventoryPaneContextMenu.getContainers(character) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.getEatingMask(playerObj, removeMask) end
 
----@return any
+---@return table
 function ISInventoryPaneContextMenu.getEvoItemCategories(items, evorecipe) end
 
----@return any
+---@return unknown
 function ISInventoryPaneContextMenu.getItemInstance(type) end
 
----@return any
+---@param evoItem unknown?
+---@return unknown?
 function ISInventoryPaneContextMenu.getRealEvolvedItemUse(evoItem, evorecipe2, cookingLvl) end
 
----@return any
+---@return unknown
 function ISInventoryPaneContextMenu.hasOpenFlame(playerObj) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.hasRoomForAny(playerObj, container, items) end
 
----@return any
+---@return table
 function ISInventoryPaneContextMenu.haveDamagePart(playerId) end
 
----@return any
 function ISInventoryPaneContextMenu.hurricaneLanternExtinguish(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.information(item) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.isAllFav(items) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.isAllNoDropMoveable(items) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.isAnyAllowed(container, items) end
 
----@return any
 function ISInventoryPaneContextMenu.litCandleExtinguish(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onActivateItem(light, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onAddItemInEvoRecipe(recipe, baseItem, usedItem, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onApplyBandage(bandages, bodyPart, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onChangefiremode(playerObj, weapon, newfiremode) end
 
----@return any
 function ISInventoryPaneContextMenu.onCheckMap(map, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onClothingItemExtra(item, extra, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.onConsolidate(drainable, intoItem, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.onConsolidateAll(drainable, consolidateList, playerObj) end
 
----@return any
+---@param recipe unknown?
+---@param all boolean
 function ISInventoryPaneContextMenu.OnCraft(selectedItem, recipe, player, all) end
 
----@return any
 function ISInventoryPaneContextMenu.OnCraftComplete(
 	completedAction,
 	recipe,
@@ -282,227 +251,231 @@ function ISInventoryPaneContextMenu.OnCraftComplete(
 )
 end
 
----@return any
 function ISInventoryPaneContextMenu.onDrinkFluid(item, percent, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.onDrinkForThirst(waterContainer, playerObj, percent) end
 
----@return any
 function ISInventoryPaneContextMenu.onDropItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onDryMyself(towels, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onDumpContents(items, item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onDyeHair(hairDye, playerObj, beard) end
 
----@return any
 function ISInventoryPaneContextMenu.onEatItems(items, percentage, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onEditItem(items, player, item) end
 
----@return any
 function ISInventoryPaneContextMenu.onEjectMagazine(playerObj, weapon) end
 
----@return any
 function ISInventoryPaneContextMenu.onEmptyWaterContainer(items, waterSource, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onFavorite(items, item2, fav) end
 
----@return any
+---@param fixingNum number
+---@param fixerNum number
 function ISInventoryPaneContextMenu.onFix(brokenObject, player, fixingNum, fixerNum, vehiclePart) end
 
----@return any
 function ISInventoryPaneContextMenu.onGrabHalfItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onGrabItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onGrabOneItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onInformationItems(items) end
 
----@return any
 function ISInventoryPaneContextMenu.onInsertMagazine(playerObj, weapon, magazine) end
 
----@return any
 function ISInventoryPaneContextMenu.onInspectClothing(playerObj, clothing) end
 
----@return any
 function ISInventoryPaneContextMenu.onInspectClothingUI(player, clothing) end
 
----@return any
 function ISInventoryPaneContextMenu.onInspectTrack(player, track) end
 
----@return any
 function ISInventoryPaneContextMenu.OnLinkRemoteController(itemToLink, remoteController, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onLiteratureItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onLoadBulletsInMagazine(playerObj, magazine, ammoCount) end
 
----@return any
 function ISInventoryPaneContextMenu.onLoadBulletsIntoFirearm(playerObj, weapon) end
 
----@return any
 function ISInventoryPaneContextMenu.onMakeUp(makeup, playerObj) end
 
----@return any
+---@return unknown?
 function ISInventoryPaneContextMenu.onMoveItemsTo(items, dest, player) end
 
----@return any
 function ISInventoryPaneContextMenu.OnNewCraft(selectedItem, recipe, player, all) end
 
----@return any
 function ISInventoryPaneContextMenu.OnNewCraftComplete(logic) end
 
----@return any
 function ISInventoryPaneContextMenu.onPillsItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onPlaceCarBatteryCharger(playerObj, carBatteryCharger) end
 
----@return any
 function ISInventoryPaneContextMenu.onPlaceItemOnGround(items, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.onPlaceTrap(weapon, player) end
 
----@return any
 function ISInventoryPaneContextMenu.OnPrimaryWeapon(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onPutItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onRackGun(playerObj, weapon) end
 
----@return any
 function ISInventoryPaneContextMenu.onRemoveUpgradeWeapon(weapon, part, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.onRenameBag(bag, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onRenameFood(food, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onRenameMap(map, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onResearchRecipe(item, playerObj) end
 
----@return any
 function ISInventoryPaneContextMenu.OnResetRemoteControlID(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.OnSecondWeapon(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onSetAlarm(alarm, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onSetBombTimer(trap, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onStopAlarm(alarm, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onTeleportToKeyOrigin(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onTransferWater(items, itemFrom, itemTo, player) end
 
----@return any
 function ISInventoryPaneContextMenu.OnTriggerRemoteController(remoteController, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onTurnIntoSkeleton(animal) end
 
----@return any
 function ISInventoryPaneContextMenu.OnTwoHandsEquip(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onUnEquip(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onUnloadBulletsFromFirearm(playerObj, weapon) end
 
----@return any
 function ISInventoryPaneContextMenu.onUnloadBulletsFromMagazine(playerObj, magazine) end
 
----@return any
 function ISInventoryPaneContextMenu.onUpgradeWeapon(weapon, part, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onWearItems(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onWringClothing(items, player) end
 
----@return any
 function ISInventoryPaneContextMenu.onWriteSomething(notebook, editable, player) end
 
----@return any
 function ISInventoryPaneContextMenu.readItem(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.removeAllPatches(player, clothing, parts, needle) end
 
----@return any
 function ISInventoryPaneContextMenu.removeLure(player, fishingRod) end
 
----@return any
 function ISInventoryPaneContextMenu.removePatch(player, clothing, part, needle) end
 
----@return any
 function ISInventoryPaneContextMenu.removeToolTip() end
 
----@return any
 function ISInventoryPaneContextMenu.repairAllClothing(player, clothing, parts, fabric, thread, needle, onlyHoles) end
 
----@return any
 function ISInventoryPaneContextMenu.repairClothing(player, clothing, part, fabric, thread, needle) end
 
----@return any
+---@return boolean
 function ISInventoryPaneContextMenu.startWith(String, Start) end
 
----@return any
 function ISInventoryPaneContextMenu.takePill(item, player) end
 
----@return any
+---@return number
 function ISInventoryPaneContextMenu.transferBullets(playerObj, ammoType, currentAmmo, maxAmmo) end
 
----@return any
+---@param item boolean?
+---@param preventTransferWorldObjects boolean?
 function ISInventoryPaneContextMenu.transferIfNeeded(playerObj, item, preventTransferWorldObjects) end
 
----@return any
 function ISInventoryPaneContextMenu.transferItems(items, playerInv, player, dontWalk) end
 
----@return any
 function ISInventoryPaneContextMenu.unequipItem(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu.wearItem(item, player) end
 
----@return any
 function ISInventoryPaneContextMenu:onRenameBagClick(button, player, item) end
 
----@return any
 function ISInventoryPaneContextMenu:onRenameFoodClick(button, player, item) end
 
----@return any
 function ISInventoryPaneContextMenu:onSetBombTimerClick(button, player, item) end
 
----@return any
 function ISInventoryPaneContextMenu:onWriteSomethingClick(button) end
+
+---@class ISRecipeTooltip : ISToolTip
+---@field containerList unknown
+---@field contents table?
+---@field contentsHeight number
+---@field contentsWidth number
+---@field contentsX number
+---@field contentsY number
+---@field playerNum unknown
+---@field typesAvailable table
+ISRecipeTooltip = ISToolTip:derive("CraftTooltip")
+ISRecipeTooltip.Type = "CraftTooltip"
+ISRecipeTooltip.tooltipPool = {}
+ISRecipeTooltip.tooltipsUsed = {}
+
+---@return unknown
+function ISRecipeTooltip.addToolTip() end
+
+function ISRecipeTooltip.releaseAll() end
+
+---@param x number
+---@param y number
+---@param textureName string
+---@param r number
+---@param g number
+---@param b number
+function ISRecipeTooltip:addImage(x, y, textureName, r, g, b) end
+
+---@param x number
+---@param y number
+---@param r number
+---@param g number
+---@param b number
+function ISRecipeTooltip:addImageDirect(x, y, texture, r, g, b) end
+
+---@param x number
+---@param y number
+---@param text string
+---@param r number?
+---@param g number?
+---@param b number?
+function ISRecipeTooltip:addText(x, y, text, r, g, b) end
+
+function ISRecipeTooltip:getAvailableItemsType() end
+
+function ISRecipeTooltip:getContainers() end
+
+---@return string
+function ISRecipeTooltip:getSingleSourceText(source) end
+
+---@return boolean
+function ISRecipeTooltip:isExtraClothingItemOf(item1, item2) end
+
+---@param fluid unknown?
+---@return boolean
+function ISRecipeTooltip:isFluidSource(item, fluid, amount) end
+
+---@return boolean
+function ISRecipeTooltip:isWaterSource(item, count) end
+
+---@param x number
+---@param y number
+---@return number
+---@return number
+function ISRecipeTooltip:layoutContents(x, y) end
+
+function ISRecipeTooltip:renderContents() end
+
+function ISRecipeTooltip:reset() end
+
+---@return ISRecipeTooltip
+function ISRecipeTooltip:new() end

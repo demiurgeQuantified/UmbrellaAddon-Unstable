@@ -1,40 +1,31 @@
 ---@meta
 
 ---@class ISFeedAnimalFromHand : ISBaseTimedAction
----@field animal any
----@field food any
----@field maxTime any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field animal unknown
+---@field food unknown
+---@field sound unknown
 ISFeedAnimalFromHand = ISBaseTimedAction:derive("ISFeedAnimalFromHand")
+ISFeedAnimalFromHand.Type = "ISFeedAnimalFromHand"
 
----@return any
+---@return boolean
 function ISFeedAnimalFromHand:complete() end
 
----@return any
 function ISFeedAnimalFromHand:forceStop() end
 
----@return any
+---@return number
 function ISFeedAnimalFromHand:getDuration() end
 
----@return any
+---@return unknown
 function ISFeedAnimalFromHand:isValid() end
 
----@return any
 function ISFeedAnimalFromHand:perform() end
 
----@return any
 function ISFeedAnimalFromHand:start() end
 
----@return any
 function ISFeedAnimalFromHand:stop() end
 
----@return any
 function ISFeedAnimalFromHand:stopSound() end
 
----@return any
 function ISFeedAnimalFromHand:update() end
 
 ---@return ISFeedAnimalFromHand

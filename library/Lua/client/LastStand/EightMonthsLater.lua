@@ -1,10 +1,9 @@
 ---@meta
 
 ---@class EightMonthsLater
----@field wave any
----@field waveTime any
----@field [any] any
 EightMonthsLater = {}
+EightMonthsLater.wave = nil ---@type number?
+EightMonthsLater.waveTime = nil ---@type number?
 EightMonthsLater.name = "One Year Later"
 EightMonthsLater.description = "Nature has begun to reclaim the Earth. Can you survive in this dead world?"
 EightMonthsLater.completionText = "Survive a week to unlock the next challenge."
@@ -16,23 +15,18 @@ EightMonthsLater.y = (31 * 300) + 111
 EightMonthsLater.z = 0
 EightMonthsLater.hourOfDay = 7
 
----@return any
+---@param playerNum number
 function EightMonthsLater.AddPlayer(playerNum, playerObj) end
 
----@return any
 function EightMonthsLater.Init() end
 
----@return any
+---@param playerNum number
 function EightMonthsLater.onBackButtonWheel(playerNum, dir) end
 
----@return any
 function EightMonthsLater.PreloadInit() end
 
----@return any
 function EightMonthsLater.RemovePlayer(playerObj) end
 
----@return any
 function EightMonthsLater.Render() end
 
----@return any
 function EightMonthsLater.Tick() end

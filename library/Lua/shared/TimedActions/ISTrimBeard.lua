@@ -1,38 +1,31 @@
 ---@meta
 
 ---@class ISTrimBeard : ISBaseTimedAction
----@field beardStyle any
----@field item any
----@field maxTime any
----@field sound any
----@field [any] any
+---@field beardStyle string
+---@field item unknown
+---@field sound unknown
 ISTrimBeard = ISBaseTimedAction:derive("ISTrimBeard")
+ISTrimBeard.Type = "ISTrimBeard"
 
----@return any
 function ISTrimBeard:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISTrimBeard:complete() end
 
----@return any
+---@return number
 function ISTrimBeard:getDuration() end
 
----@return any
+---@return boolean?
 function ISTrimBeard:isValid() end
 
----@return any
 function ISTrimBeard:perform() end
 
----@return any
 function ISTrimBeard:start() end
 
----@return any
 function ISTrimBeard:stop() end
 
----@return any
 function ISTrimBeard:stopSound() end
 
----@return any
 function ISTrimBeard:update() end
 
 ---@return ISTrimBeard

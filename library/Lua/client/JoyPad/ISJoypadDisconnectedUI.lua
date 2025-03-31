@@ -1,26 +1,21 @@
 ---@meta
 
 ---@class ISJoypadDisconnectedUI : ISUIElement
----@field buttonKBM any
----@field label any
----@field playerNum any
----@field [any] any
+---@field buttonKBM ISButton
+---@field label ISLabel
 ISJoypadDisconnectedUI = ISUIElement:derive("ISJoypadDisconnectedUI")
+ISJoypadDisconnectedUI.Type = "ISJoypadDisconnectedUI"
 
----@return any
 function ISJoypadDisconnectedUI:createChildren() end
 
----@return any
 function ISJoypadDisconnectedUI:prerender() end
 
----@return any
 function ISJoypadDisconnectedUI:renderControllerDisconnected() end
 
----@return any
 function ISJoypadDisconnectedUI:update() end
 
----@return any
 function ISJoypadDisconnectedUI:useKeyboardMouse() end
 
+---@param playerNum number
 ---@return ISJoypadDisconnectedUI
 function ISJoypadDisconnectedUI:new(playerNum) end

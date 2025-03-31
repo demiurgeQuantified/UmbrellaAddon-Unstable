@@ -3,5 +3,6 @@
 ---@class StringReplacer
 StringReplacer = {}
 
----@return any
+---@param str string
+---@return string
 function StringReplacer.DoCharacter(str, desc) end

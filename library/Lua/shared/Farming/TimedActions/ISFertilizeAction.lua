@@ -1,37 +1,34 @@
 ---@meta
 
 ---@class ISFertilizeAction : ISBaseTimedAction
----@field character any
----@field item any
----@field maxTime any
----@field plant any
----@field sound any
----@field [any] any
+---@field character unknown?
+---@field item unknown
+---@field plant unknown
+---@field sound unknown
 ISFertilizeAction = ISBaseTimedAction:derive("ISFertilizeAction")
+ISFertilizeAction.Type = "ISFertilizeAction"
 
----@return any
+---@return boolean
 function ISFertilizeAction:complete() end
 
----@return any
+---@return number
 function ISFertilizeAction:getDuration() end
 
----@return any
+---@return boolean
 function ISFertilizeAction:isValid() end
 
----@return any
 function ISFertilizeAction:perform() end
 
----@return any
 function ISFertilizeAction:start() end
 
----@return any
 function ISFertilizeAction:stop() end
 
----@return any
 function ISFertilizeAction:update() end
 
----@return any
+---@return unknown
 function ISFertilizeAction:waitToStart() end
 
+---@param character unknown?
+---@param maxTime number
 ---@return ISFertilizeAction
 function ISFertilizeAction:new(character, item, plant, maxTime) end

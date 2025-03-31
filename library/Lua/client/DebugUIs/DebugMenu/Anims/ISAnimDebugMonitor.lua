@@ -1,112 +1,87 @@
 ---@meta
 
 ---@class ISAnimDebugMonitor : ISCollapsableWindow
----@field addVarAddButton any
----@field addVarComboType any
----@field addVarKey any
----@field addVarKeyLabel any
----@field addVarValue any
----@field addVarValueLabel any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field buttonActiveNodes any
----@field buttonAnimTracks any
----@field buttonClearVar any
----@field buttonLayers any
----@field buttonSetVar any
----@field buttonStamps any
----@field buttonToggleMonitor any
----@field buttonVariables any
----@field cGreen any
----@field clearText any
----@field collapseCounter any
----@field comboFloats any
----@field comboVars any
----@field cRed any
----@field currentTile any
----@field drawFrame any
----@field editEnabled any
----@field entryBoxValue any
----@field floatPlotter any
----@field greyCol any
----@field height any
----@field hotKeyPanels any
----@field init any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field labelFloat any
----@field labelFloatInfo any
----@field labelVars any
----@field monitor any
----@field oldNodesVal any
----@field oldTracksVal any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field resizable any
----@field richtext any
----@field selectedVar any
----@field subFocus any
----@field title any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field addVarAddButton unknown
+---@field addVarComboType unknown
+---@field addVarKey ISTextEntryBox
+---@field addVarKeyLabel ISLabel
+---@field addVarValue ISTextEntryBox
+---@field addVarValueLabel ISLabel
+---@field buttonActiveNodes unknown
+---@field buttonAnimTracks unknown
+---@field buttonClearVar unknown
+---@field buttonLayers unknown
+---@field buttonSetVar unknown
+---@field buttonStamps unknown
+---@field buttonToggleMonitor unknown
+---@field buttonVariables unknown
+---@field cGreen table
+---@field clearText string
+---@field comboFloats unknown
+---@field comboVars unknown
+---@field cRed table
+---@field currentTile unknown?
+---@field editEnabled boolean
+---@field entryBoxValue ISTextEntryBox
+---@field floatPlotter FloatArrayPlotter
+---@field greyCol table
+---@field hotKeyPanels table
+---@field init boolean
+---@field isJoypadWindow boolean
+---@field labelFloat ISLabel
+---@field labelFloatInfo ISLabel
+---@field labelVars ISLabel
+---@field monitor unknown?
+---@field oldNodesVal table
+---@field oldTracksVal table
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field richtext ISRichTextPanel?
+---@field selectedVar boolean
+---@field subFocus unknown?
+---@field title string
 ISAnimDebugMonitor = ISCollapsableWindow:derive("ISAnimDebugMonitor")
+ISAnimDebugMonitor.Type = "ISAnimDebugMonitor"
+ISAnimDebugMonitor.instance = nil ---@type ISAnimDebugMonitor?
 
----@return any
+---@return ISAnimDebugMonitor
 function ISAnimDebugMonitor.OnOpenPanel() end
 
----@return any
 function ISAnimDebugMonitor:clear() end
 
----@return any
 function ISAnimDebugMonitor:clearLog() end
 
----@return any
 function ISAnimDebugMonitor:close() end
 
----@return any
 function ISAnimDebugMonitor:colorButtons() end
 
----@return any
 function ISAnimDebugMonitor:createChildren() end
 
----@return any
 function ISAnimDebugMonitor:initialise() end
 
----@return any
 function ISAnimDebugMonitor:onClick(_button) end
 
----@return any
 function ISAnimDebugMonitor:onCombo(_combo) end
 
----@return any
 function ISAnimDebugMonitor:onResize() end
 
----@return any
 function ISAnimDebugMonitor:prerender() end
 
----@return any
 function ISAnimDebugMonitor:render() end
 
----@return any
 function ISAnimDebugMonitor:scrollToBottom() end
 
----@return any
 function ISAnimDebugMonitor:stayOnSplitScreen() end
 
----@return any
+---@param _b boolean
 function ISAnimDebugMonitor:toggleEditEnabled(_b) end
 
----@return any
 function ISAnimDebugMonitor:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAnimDebugMonitor
 function ISAnimDebugMonitor:new(x, y, width, height, player) end

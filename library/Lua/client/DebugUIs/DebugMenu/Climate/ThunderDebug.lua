@@ -1,94 +1,77 @@
 ---@meta
 
 ---@class ThunderDebug : ISCollapsableWindow
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backgroundColor any
----@field borderColor any
----@field collapseCounter any
----@field currentTile any
----@field dayStamp any
----@field drawFrame any
----@field eventsAdded any
----@field greyCol any
----@field height any
----@field hotKeyPanels any
----@field hourStamp any
----@field instance any
----@field isCollapsed any
----@field isJoypadWindow any
----@field labels any
----@field monthStamp any
----@field overrideBPrompt any
----@field pin any
----@field player any
----@field playerNum any
----@field poi any
----@field resizable any
----@field richtext any
----@field strikes any
----@field subFocus any
----@field thunderStorm any
----@field title any
----@field width any
----@field x any
----@field y any
----@field year any
----@field [any] any
+---@field currentTile unknown?
+---@field dayStamp number
+---@field greyCol table
+---@field hotKeyPanels table
+---@field hourStamp number
+---@field isJoypadWindow boolean
+---@field labels table
+---@field monthStamp number
+---@field overrideBPrompt boolean
+---@field player unknown
+---@field playerNum unknown
+---@field poi table
+---@field richtext unknown?
+---@field strikes table
+---@field subFocus unknown?
+---@field thunderStorm unknown
+---@field title string
+---@field year number
 ThunderDebug = ISCollapsableWindow:derive("ThunderDebug")
-ThunderDebug.instance = nil
+ThunderDebug.Type = "ThunderDebug"
+ThunderDebug.instance = nil ---@type ThunderDebug?
 ThunderDebug.shiftDown = 0
 ThunderDebug.eventsAdded = false
 
----@return any
 function ThunderDebug.OnClimateTickDebug(mgr) end
 
----@return any
+---@return ThunderDebug?
 function ThunderDebug.OnOpenPanel() end
 
----@return any
+---@param x number
+---@param y number
 function ThunderDebug.OnThunderEvent(x, y, strike, light, rumble) end
 
----@return any
+---@param _name string
+---@param _x number
+---@param _y number
 function ThunderDebug:addPoi(_name, _x, _y) end
 
----@return any
+---@param _x number
+---@param _y number
 function ThunderDebug:addThunderEvent(_x, _y, strike, light, rumble) end
 
----@return any
 function ThunderDebug:clear() end
 
----@return any
 function ThunderDebug:close() end
 
----@return any
+---@param _x number
+---@param _y number
+---@return number
+---@return number
 function ThunderDebug:convertCoords(_x, _y) end
 
----@return any
 function ThunderDebug:createChildren() end
 
----@return any
 function ThunderDebug:initialise() end
 
----@return any
 function ThunderDebug:onResize() end
 
----@return any
 function ThunderDebug:prerender() end
 
----@return any
 function ThunderDebug:render() end
 
----@return any
 function ThunderDebug:stayOnSplitScreen() end
 
----@return any
 function ThunderDebug:update() end
 
----@return any
 function ThunderDebug:updateValues(_mgr) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ThunderDebug
 function ThunderDebug:new(x, y, width, height, player) end

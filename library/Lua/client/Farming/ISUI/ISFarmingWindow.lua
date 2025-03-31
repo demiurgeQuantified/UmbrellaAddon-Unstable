@@ -1,21 +1,22 @@
 ---@meta
 
 ---@class ISFarmingWindow : ISCollapsableWindow
----@field character any
----@field farmingPanel any
----@field plant any
----@field title any
----@field [any] any
+---@field character unknown
+---@field farmingPanel ISFarmingInfo | table
+---@field plant unknown
+---@field title string
 ISFarmingWindow = ISCollapsableWindow:derive("ISFarmingWindow")
+ISFarmingWindow.Type = "ISFarmingWindow"
 
----@return any
 function ISFarmingWindow:createChildren() end
 
----@return any
 function ISFarmingWindow:initialise() end
 
----@return any
 function ISFarmingWindow:visible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISFarmingWindow
 function ISFarmingWindow:new(x, y, width, height, character, plant) end

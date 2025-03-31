@@ -1,49 +1,51 @@
 ---@meta
 
 ---@class ISPickCharacterCursor : ISBuildingObject
----@field character any
----@field currentSquare any
----@field noNeedHammer any
----@field objectIndex any
----@field player any
----@field skipBuildAction any
----@field squareX any
----@field squareY any
----@field squareZ any
----@field [any] any
+---@field character unknown
+---@field currentSquare unknown
+---@field noNeedHammer boolean
+---@field objectIndex number
+---@field player unknown
+---@field skipBuildAction boolean
+---@field squareX number
+---@field squareY number
+---@field squareZ number
 ISPickCharacterCursor = ISBuildingObject:derive("ISPickCharacterCursor")
+ISPickCharacterCursor.Type = "ISPickCharacterCursor"
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPickCharacterCursor:create(x, y, z, north, sprite) end
 
----@return any
+---@return unknown?
 function ISPickCharacterCursor:getHighlightedCharacter(square) end
 
----@return any
+---@return string?
 function ISPickCharacterCursor:getLBPrompt() end
 
----@return any
+---@param square unknown?
+---@return table
 function ISPickCharacterCursor:getObjectList(square) end
 
----@return any
+---@return string?
 function ISPickCharacterCursor:getRBPrompt() end
 
----@return any
+---@return boolean
 function ISPickCharacterCursor:isValid(square) end
 
----@return any
 function ISPickCharacterCursor:isValidCharacter(chr) end
 
----@return any
+---@return unknown?
 function ISPickCharacterCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
----@return any
 function ISPickCharacterCursor:onPickCharacter(chr) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function ISPickCharacterCursor:render(x, y, z, square) end
 
----@return any
 function ISPickCharacterCursor:rotateKey(key) end
 
 ---@return ISPickCharacterCursor

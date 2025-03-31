@@ -1,85 +1,76 @@
 ---@meta
 
 ---@class ISPanelJoypad : ISUIElement
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field downX any
----@field downY any
----@field height any
----@field ISButtonA any
----@field ISButtonB any
----@field ISButtonX any
----@field ISButtonY any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field mouseOver any
----@field moveWithMouse any
----@field moving any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field background boolean
+---@field backgroundColor table
+---@field borderColor table
+---@field downX number
+---@field downY number
+---@field ISButtonA unknown?
+---@field ISButtonB unknown?
+---@field ISButtonX unknown?
+---@field ISButtonY unknown?
+---@field joypadButtons table
+---@field joypadButtonsY table
+---@field joypadIndex number
+---@field joypadIndexY number
+---@field mouseOver boolean
+---@field moveWithMouse boolean
+---@field moving boolean
 ISPanelJoypad = ISUIElement:derive("ISPanelJoypad")
+ISPanelJoypad.Type = "ISPanelJoypad"
 
----@return any
 function ISPanelJoypad:clearISButtonA() end
 
----@return any
 function ISPanelJoypad:clearISButtonB() end
 
----@return any
 function ISPanelJoypad:clearISButtons() end
 
----@return any
 function ISPanelJoypad:clearISButtonX() end
 
----@return any
 function ISPanelJoypad:clearISButtonY() end
 
----@return any
 function ISPanelJoypad:clearJoypadFocus(joypadData) end
 
----@return any
 function ISPanelJoypad:close() end
 
----@return any
+---@param dx number
+---@param dy number
 function ISPanelJoypad:doRightJoystickScrolling(dx, dy) end
 
----@return any
 function ISPanelJoypad:ensureVisible() end
 
----@return any
+---@param children table
+---@param x number
+---@return number
 function ISPanelJoypad:getClosestChild(children, x) end
 
----@return any
+---@return unknown
 function ISPanelJoypad:getJoypadFocus() end
 
----@return any
+---@return number
 function ISPanelJoypad:getMaxVisibleRow() end
 
----@return any
+---@return number
 function ISPanelJoypad:getMinVisibleRow() end
 
----@return any
+---@param row number
+---@return number
 function ISPanelJoypad:getNextVisibleRow(row) end
 
----@return any
+---@param row number
+---@return number
 function ISPanelJoypad:getPrevVisibleRow(row) end
 
----@return any
+---@param joypadIndexY number
+---@return table
 function ISPanelJoypad:getVisibleChildren(joypadIndexY) end
 
----@return any
 function ISPanelJoypad:initialise() end
 
----@return any
+---@param button1 table
+---@param button2 ISButton?
+---@return table
 function ISPanelJoypad:insertNewLineOfButtons(
 	button1,
 	button2,
@@ -94,71 +85,67 @@ function ISPanelJoypad:insertNewLineOfButtons(
 )
 end
 
----@return any
 function ISPanelJoypad:insertNewListOfButtons(list) end
 
----@return any
+---@param list table
 function ISPanelJoypad:insertNewListOfButtonsList(list) end
 
----@return any
+---@return boolean
 function ISPanelJoypad:isFocusOnControl() end
 
----@return any
 function ISPanelJoypad:noBackground() end
 
----@return any
 function ISPanelJoypad:onJoypadDirDown(joypadData) end
 
----@return any
 function ISPanelJoypad:onJoypadDirLeft(joypadData) end
 
----@return any
 function ISPanelJoypad:onJoypadDirRight(joypadData) end
 
----@return any
 function ISPanelJoypad:onJoypadDirUp(joypadData) end
 
----@return any
+---@param joypadData unknown?
 function ISPanelJoypad:onJoypadDown(button, joypadData) end
 
----@return any
+---@param x number
+---@param y number
 function ISPanelJoypad:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number?
 function ISPanelJoypad:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISPanelJoypad:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISPanelJoypad:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISPanelJoypad:onMouseUpOutside(x, y) end
 
----@return any
 function ISPanelJoypad:prerender() end
 
----@return any
 function ISPanelJoypad:restoreJoypadFocus(joypadData) end
 
----@return any
 function ISPanelJoypad:setISButtonForA(button) end
 
----@return any
 function ISPanelJoypad:setISButtonForB(button) end
 
----@return any
 function ISPanelJoypad:setISButtonForX(button) end
 
----@return any
 function ISPanelJoypad:setISButtonForY(button) end
 
----@return any
 function ISPanelJoypad:setJoypadFocus(child, joypadData) end
 
----@return any
+---@param visible boolean
 function ISPanelJoypad:setVisible(visible, joypadData) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISPanelJoypad
 function ISPanelJoypad:new(x, y, width, height) end

@@ -1,35 +1,30 @@
 ---@meta
 
 ---@class ISRemoveBrokenGlass : ISBaseTimedAction
----@field caloriesModifier any
----@field maxTime any
----@field window any
----@field [any] any
+---@field window unknown
 ISRemoveBrokenGlass = ISBaseTimedAction:derive("ISRemoveBrokenGlass")
+ISRemoveBrokenGlass.Type = "ISRemoveBrokenGlass"
 
----@return any
+---@return boolean
 function ISRemoveBrokenGlass:complete() end
 
----@return any
+---@return number
 function ISRemoveBrokenGlass:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveBrokenGlass:isValid() end
 
----@return any
 function ISRemoveBrokenGlass:perform() end
 
----@return any
 function ISRemoveBrokenGlass:start() end
 
----@return any
 function ISRemoveBrokenGlass:stop() end
 
----@return any
 function ISRemoveBrokenGlass:update() end
 
----@return any
+---@return unknown
 function ISRemoveBrokenGlass:waitToStart() end
 
+---@param character unknown?
 ---@return ISRemoveBrokenGlass
 function ISRemoveBrokenGlass:new(character, window) end

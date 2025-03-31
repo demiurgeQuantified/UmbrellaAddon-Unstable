@@ -1,71 +1,77 @@
 ---@meta
 
 ---@class ZombiePopulationWindow : ISCollapsableWindow
----@field backgroundColor any
----@field instance any
----@field mouseDownX any
----@field mouseDownY any
----@field mouseMoved any
----@field panning any
----@field renderPanel any
----@field settingPath any
----@field title any
----@field xpos any
----@field ypos any
----@field zoom any
----@field [any] any
+---@field mouseDownX number
+---@field mouseDownY number
+---@field mouseMoved boolean
+---@field panning boolean
+---@field renderPanel ISPanel
+---@field settingPath boolean
+---@field title string
+---@field xpos unknown
+---@field ypos unknown
+---@field zoom number
 ZombiePopulationWindow = ISCollapsableWindow:derive("ZombiePopulationWindow")
+ZombiePopulationWindow.Type = "ZombiePopulationWindow"
+ZombiePopulationWindow.instance = nil ---@type ZombiePopulationWindow?
 
----@return any
 function ZombiePopulationWindow.OnOpenPanel() end
 
----@return any
 function ZombiePopulationWindow:close() end
 
----@return any
 function ZombiePopulationWindow:createChildren() end
 
----@return any
 function ZombiePopulationWindow:initialise() end
 
----@return any
 function ZombiePopulationWindow:onAddWorldSound(worldX, worldY) end
 
----@return any
 function ZombiePopulationWindow:onChangeOption(option) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ZombiePopulationWindow:onMapMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function ZombiePopulationWindow:onMapMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ZombiePopulationWindow:onMapMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ZombiePopulationWindow:onMapMouseUpOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ZombiePopulationWindow:onMapRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ZombiePopulationWindow:onMapRightMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ZombiePopulationWindow:onMapRightMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function ZombiePopulationWindow:onRenderMouseWheel(del) end
 
----@return any
 function ZombiePopulationWindow:onTeleport(worldX, worldY) end
 
----@return any
 function ZombiePopulationWindow:renderTex() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ZombiePopulationWindow
 function ZombiePopulationWindow:new(x, y, width, height) end
 
----@return any
 function newZombiePopulationWindow() end

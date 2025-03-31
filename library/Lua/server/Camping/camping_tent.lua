@@ -17,29 +17,32 @@ camping.tentSprites = {
 	},
 }
 
----@return any
+---@return unknown?
 function camping.addTent(grid, sprite) end
 
----@return any
 function camping.destroyTent(tent) end
 
----@return any
+---@return unknown?
 function camping.findTentObject(square) end
 
----@return any
+---@param sprite unknown?
+---@return unknown?
 function camping.findTentSprites(sprite) end
 
----@return any
+---@return unknown?
 function camping.getCurrentTent(grid) end
 
----@return any
+---@return table
 function camping.getTentObjects(tent) end
 
----@return any
+---@return boolean
 function camping.isTentObject(object) end
 
----@return any
+---@param tent unknown?
 function camping.removeTent(tent) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
+---@return unknown?
 function camping.tentAt(x, y, z) end

@@ -1,61 +1,46 @@
 ---@meta
 
 ---@class RWMMicrophone : RWMPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field fontheight any
----@field height any
----@field muteButton any
----@field muteState any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field fontheight number
+---@field muteButton ISButton
+---@field muteState boolean
 RWMMicrophone = RWMPanel:derive("RWMMicrophone")
+RWMMicrophone.Type = "RWMMicrophone"
 
----@return any
 function RWMMicrophone:createChildren() end
 
----@return any
+---@return string?
 function RWMMicrophone:getAPrompt() end
 
----@return any
+---@return unknown?
 function RWMMicrophone:getBPrompt() end
 
----@return any
+---@return unknown?
 function RWMMicrophone:getXPrompt() end
 
----@return any
+---@return unknown?
 function RWMMicrophone:getYPrompt() end
 
----@return any
 function RWMMicrophone:initialise() end
 
----@return any
 function RWMMicrophone:onJoypadDown(button) end
 
----@return any
 function RWMMicrophone:onMuteButton() end
 
----@return any
 function RWMMicrophone:prerender() end
 
----@return any
+---@return boolean
 function RWMMicrophone:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMMicrophone:render() end
 
----@return any
 function RWMMicrophone:setMuteButtonText() end
 
----@return any
 function RWMMicrophone:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RWMMicrophone
 function RWMMicrophone:new(x, y, width, height) end

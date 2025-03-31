@@ -1,54 +1,53 @@
 ---@meta
 
 ---@class ISMoveablesAction : ISBaseTimedAction
----@field cursorFacing any
----@field direction any
----@field item any
----@field maxTime any
----@field mode any
----@field moveCursor any
----@field moveProps any
----@field object any
----@field origSpriteName any
----@field playerNum any
----@field sound any
----@field spriteFrame any
----@field square any
----@field [any] any
+---@field cursorFacing number?
+---@field direction unknown
+---@field item unknown?
+---@field mode string
+---@field moveCursor ISMoveableCursor?
+---@field moveProps ISMoveableSpriteProps
+---@field object unknown?
+---@field origSpriteName string?
+---@field playerNum unknown
+---@field sound unknown?
+---@field spriteFrame number
+---@field square unknown
 ISMoveablesAction = ISBaseTimedAction:derive("ISMoveablesAction")
+ISMoveablesAction.Type = "ISMoveablesAction"
 
----@return any
+---@return boolean
 function ISMoveablesAction:complete() end
 
----@return any
+---@return number
 function ISMoveablesAction:getDuration() end
 
----@return any
+---@return boolean
 function ISMoveablesAction:isReachableObjectType() end
 
----@return any
+---@return boolean
 function ISMoveablesAction:isValid() end
 
----@return any
+---@return boolean
 function ISMoveablesAction:isValidObject() end
 
----@return any
 function ISMoveablesAction:perform() end
 
----@return any
 function ISMoveablesAction:setActionSound() end
 
----@return any
 function ISMoveablesAction:start() end
 
----@return any
 function ISMoveablesAction:stop() end
 
----@return any
 function ISMoveablesAction:update() end
 
----@return any
+---@return unknown
 function ISMoveablesAction:waitToStart() end
 
+---@param mode string
+---@param origSpriteName string?
+---@param object unknown?
+---@param item unknown?
+---@param moveCursor ISMoveableCursor?
 ---@return ISMoveablesAction
 function ISMoveablesAction:new(character, square, mode, origSpriteName, object, direction, item, moveCursor) end

@@ -1,87 +1,71 @@
 ---@meta
 
 ---@class RWMChannelTV : RWMPanel
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field background any
----@field backgroundColor any
----@field borderColor any
----@field comboBox any
----@field focusElement any
----@field fontheight any
----@field height any
----@field lastModeExpanded any
----@field parent any
----@field presets any
----@field selectedPreset any
----@field tuneInButton any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field comboBox ISComboBox
+---@field focusElement ISComboBox?
+---@field fontheight number
+---@field lastModeExpanded boolean
+---@field parent unknown?
+---@field presets unknown?
+---@field selectedPreset unknown
+---@field tuneInButton ISButton
 RWMChannelTV = RWMPanel:derive("RWMChannelTV")
+RWMChannelTV.Type = "RWMChannelTV"
 
----@return any
+---@param _name string
 function RWMChannelTV:addComboOption(_freq, _name) end
 
----@return any
 function RWMChannelTV:clear() end
 
----@return any
 function RWMChannelTV:comboChange() end
 
----@return any
 function RWMChannelTV:createChildren() end
 
----@return any
 function RWMChannelTV:doTuneInButton() end
 
----@return any
+---@return string?
 function RWMChannelTV:getAPrompt() end
 
----@return any
+---@return unknown?
 function RWMChannelTV:getBPrompt() end
 
----@return any
+---@return unknown?
 function RWMChannelTV:getParent() end
 
----@return any
+---@return string?
 function RWMChannelTV:getRBPrompt() end
 
----@return any
+---@return unknown?
 function RWMChannelTV:getXPrompt() end
 
----@return any
+---@return unknown?
 function RWMChannelTV:getYPrompt() end
 
----@return any
 function RWMChannelTV:initialise() end
 
----@return any
+---@return boolean?
 function RWMChannelTV:isValidPresets() end
 
----@return any
+---@return boolean
+---@return boolean
 function RWMChannelTV:onJoypadDown(button) end
 
----@return any
 function RWMChannelTV:prerender() end
 
----@return any
+---@return boolean
 function RWMChannelTV:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 
----@return any
 function RWMChannelTV:readPresets(_selected) end
 
----@return any
 function RWMChannelTV:render() end
 
----@return any
 function RWMChannelTV:setParent(_parent) end
 
----@return any
 function RWMChannelTV:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return RWMChannelTV
 function RWMChannelTV:new(x, y, width, height) end

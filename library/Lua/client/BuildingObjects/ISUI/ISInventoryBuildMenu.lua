@@ -3,17 +3,13 @@
 ---@class ISInventoryBuildMenu
 ISInventoryBuildMenu = {}
 
----@return any
+---@return boolean?
 function ISInventoryBuildMenu.doBuildMenu(player, context, worldobjects, test) end
 
----@return any
 function ISInventoryBuildMenu.onSpillDirt(playerObj) end
 
----@return any
 function ISInventoryBuildMenu.onSpillGravel(playerObj) end
 
----@return any
 function ISInventoryBuildMenu.onSpillSand(playerObj) end
 
----@return any
 function ISInventoryBuildMenu.onTakeThing(playerObj, groundType) end

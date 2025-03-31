@@ -1,56 +1,49 @@
 ---@meta
 
 ---@class ISCharacterDebugUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field btnClose any
----@field btnSave any
----@field height any
----@field instance any
----@field moveWithMouse any
----@field player any
----@field setFunctionAnimal any
----@field setFunctionDeadBody any
----@field setFunctionLocalPlayer any
----@field setFunctionRemotePlayer any
----@field setFunctionZombie any
----@field tcks any
----@field tickBoxAnimal any
----@field tickBoxDeadBody any
----@field tickBoxLocalPlayer any
----@field tickBoxRemotePlayer any
----@field tickBoxZombie any
----@field width any
----@field [any] any
+---@field btnClose ISButton
+---@field btnSave ISButton
+---@field player unknown
+---@field setFunctionAnimal table
+---@field setFunctionDeadBody table
+---@field setFunctionLocalPlayer table
+---@field setFunctionRemotePlayer table
+---@field setFunctionZombie table
+---@field tcks number
+---@field tickBoxAnimal ISTickBox
+---@field tickBoxDeadBody ISTickBox
+---@field tickBoxLocalPlayer ISTickBox
+---@field tickBoxRemotePlayer ISTickBox
+---@field tickBoxZombie ISTickBox
 ISCharacterDebugUI = ISPanel:derive("ISCharacterDebugUI")
-ISCharacterDebugUI.instance = nil
+ISCharacterDebugUI.Type = "ISCharacterDebugUI"
+ISCharacterDebugUI.instance = nil ---@type ISCharacterDebugUI?
 
----@return any
+---@return ISCharacterDebugUI?
 function ISCharacterDebugUI.OnOpenPanel() end
 
----@return any
+---@param text string
+---@param setFunction function
 function ISCharacterDebugUI:addOption(tickBox, text, selected, setFunction, tickSetFunction) end
 
----@return any
+---@param name string
 function ISCharacterDebugUI:addTickOptions(tickBox, tickSetFunction, name) end
 
----@return any
 function ISCharacterDebugUI:apply() end
 
----@return any
 function ISCharacterDebugUI:initialise() end
 
----@return any
 function ISCharacterDebugUI:onClick(button) end
 
----@return any
 function ISCharacterDebugUI:onTicked(index, selected) end
 
----@return any
 function ISCharacterDebugUI:prerender() end
 
----@return any
 function ISCharacterDebugUI:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCharacterDebugUI
 function ISCharacterDebugUI:new(x, y, width, height) end

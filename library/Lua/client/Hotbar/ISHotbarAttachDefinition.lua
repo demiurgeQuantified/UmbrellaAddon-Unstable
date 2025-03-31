@@ -1,5 +1,5 @@
 ---@meta
 
 ---@class ISHotbarAttachDefinition
-ISHotbarAttachDefinition = ISHotbarAttachDefinition or {}
+ISHotbarAttachDefinition = {}
 ISHotbarAttachDefinition.replacements = {}

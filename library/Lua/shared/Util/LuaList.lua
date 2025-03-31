@@ -1,51 +1,48 @@
 ---@meta
 
 ---@class LuaList : ISBaseObject
----@field count any
----@field items any
----@field [any] any
+---@field count number
+---@field items table
 LuaList = ISBaseObject:derive("LuaList")
+LuaList.Type = "LuaList"
 
----@return any
+---@param item table
 function LuaList:add(item) end
 
----@return any
 function LuaList:addAll(list) end
 
----@return any
 function LuaList:clear() end
 
----@return any
+---@return boolean
 function LuaList:contains(item) end
 
----@return any
 function LuaList:foreach(func, param1, param2, param3, param4) end
 
----@return any
+---@param index number
+---@return unknown
 function LuaList:get(index) end
 
----@return any
 function LuaList:initialise() end
 
----@return any
+---@return boolean
 function LuaList:isEmpty() end
 
----@return any
+---@return unknown?
 function LuaList:pop() end
 
----@return any
+---@return unknown?
 function LuaList:remove(item) end
 
----@return any
+---@param index number
+---@return unknown?
 function LuaList:removeAt(index) end
 
----@return any
+---@return unknown?
 function LuaList:removeRandom() end
 
----@return any
+---@return number
 function LuaList:size() end
 
----@return any
 function LuaList:sort(f) end
 
 ---@return LuaList

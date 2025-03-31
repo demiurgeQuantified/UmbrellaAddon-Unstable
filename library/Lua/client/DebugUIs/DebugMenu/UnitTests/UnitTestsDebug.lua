@@ -2,13 +2,18 @@
 
 ---@class UnitTestsDebug : ISDebugPanelBase
 UnitTestsDebug = ISDebugPanelBase:derive("UnitTestsDebug")
+UnitTestsDebug.Type = "UnitTestsDebug"
 UnitTestsDebug.instance = nil
 
----@return any
+---@return unknown
 function UnitTestsDebug.OnOpenPanel() end
 
----@return any
 function UnitTestsDebug:initialise() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param title string
 ---@return UnitTestsDebug
 function UnitTestsDebug:new(x, y, width, height, title) end

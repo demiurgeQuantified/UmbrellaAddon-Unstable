@@ -2,21 +2,25 @@
 
 ---@class ISTransferAction : ISBaseObject
 ISTransferAction = ISBaseObject:derive("ISTransferAction")
+ISTransferAction.Type = "ISTransferAction"
 
----@return any
+---@return number
+---@return number
+---@return number
 function ISTransferAction.GetDropItemOffset(character, square, item) end
 
----@return any
+---@return boolean
 function ISTransferAction:canDropOnFloor(square, character) end
 
----@return any
+---@return boolean
 function ISTransferAction:floorHasRoomFor(square, character, item, destContainer) end
 
----@return any
+---@return unknown?
 function ISTransferAction:getNotFullFloorSquare(character, item, destContainer) end
 
----@return any
+---@return boolean
 function ISTransferAction:removeItemOnCharacter(character, item) end
 
----@return any
+---@param dropSquare unknown?
+---@return unknown
 function ISTransferAction:transferItem(character, item, srcContainer, destContainer, dropSquare) end

@@ -1,56 +1,64 @@
 ---@meta
 
 ---@class ISWorldMapKey : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field character any
----@field iso any
----@field key any
----@field key1 any
----@field key2 any
----@field key3 any
----@field key4 any
----@field key5 any
----@field key6 any
----@field key7 any
----@field key8 any
----@field keyImagePath any
----@field playerNum any
----@field [any] any
+---@field character unknown?
+---@field iso boolean
+---@field key table
+---@field key1 string
+---@field key2 string
+---@field key3 string
+---@field key4 string
+---@field key5 string
+---@field key6 string
+---@field key7 string
+---@field key8 string
+---@field keyImagePath string
+---@field playerNum number
 ISWorldMapKey = ISPanel:derive("ISWorldMapKey")
+ISWorldMapKey.Type = "ISWorldMapKey"
 
----@return any
 function ISWorldMapKey:createChildren() end
 
----@return any
+---@return boolean
 function ISWorldMapKey:getIso() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMapKey:onMouseDownMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMapKey:onMouseMoveMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMapKey:onMouseUpMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMapKey:onRightMouseDownMap(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function ISWorldMapKey:onRightMouseUpMap(x, y) end
 
----@return any
 function ISWorldMapKey:prerender() end
 
----@return any
 function ISWorldMapKey:render() end
 
----@return any
 function ISWorldMapKey:setIso(bool) end
 
----@return any
 function ISWorldMapKey:undisplay() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param mapUI ISWorldMap
 ---@return ISWorldMapKey
 function ISWorldMapKey:new(x, y, width, height, mapUI) end

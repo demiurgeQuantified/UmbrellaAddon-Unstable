@@ -1,51 +1,57 @@
 ---@meta
 
 ---@class WorldMapEditorMode_Annotations : WorldMapEditorMode
----@field dragging any
----@field dragMoved any
----@field dragStartX any
----@field dragStartY any
----@field symbolsUI any
----@field [any] any
+---@field dragging boolean
+---@field dragMoved boolean
+---@field dragStartX number
+---@field dragStartY number
+---@field symbolsUI ISWorldMapSymbols
 WorldMapEditorMode_Annotations = WorldMapEditorMode:derive("WorldMapEditorMode_Annotations")
+WorldMapEditorMode_Annotations.Type = "WorldMapEditorMode_Annotations"
 
----@return any
 function WorldMapEditorMode_Annotations:createChildren() end
 
----@return any
+---@return string
 function WorldMapEditorMode_Annotations:generateLuaScript() end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Annotations:isKeyConsumed(key) end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Annotations:onKeyPress(key) end
 
----@return any
+---@return boolean
 function WorldMapEditorMode_Annotations:onKeyRelease(key) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Annotations:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function WorldMapEditorMode_Annotations:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Annotations:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Annotations:onMouseUpOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function WorldMapEditorMode_Annotations:onRightMouseDown(x, y) end
 
----@return any
 function WorldMapEditorMode_Annotations:prerender() end
 
----@return any
 function WorldMapEditorMode_Annotations:render() end
 
----@return any
 function WorldMapEditorMode_Annotations:undisplay() end
 
 ---@return WorldMapEditorMode_Annotations

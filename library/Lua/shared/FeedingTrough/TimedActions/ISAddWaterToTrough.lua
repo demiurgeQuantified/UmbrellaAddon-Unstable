@@ -1,56 +1,44 @@
 ---@meta
 
 ---@class ISAddWaterToTrough : ISBaseTimedAction
----@field all any
----@field itemFrom any
----@field lastTimer any
----@field maxTime any
----@field objectTo any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field timePerUse any
----@field timer any
----@field [any] any
+---@field all unknown
+---@field itemFrom unknown
+---@field lastTimer number
+---@field objectTo unknown
+---@field sound unknown
+---@field timePerUse number
+---@field timer number
 ISAddWaterToTrough = ISBaseTimedAction:derive("ISAddWaterToTrough")
+ISAddWaterToTrough.Type = "ISAddWaterToTrough"
 
----@return any
 function ISAddWaterToTrough:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISAddWaterToTrough:complete() end
 
----@return any
+---@return number
 function ISAddWaterToTrough:getDuration() end
 
----@return any
+---@return boolean
 function ISAddWaterToTrough:isValid() end
 
----@return any
 function ISAddWaterToTrough:perform() end
 
----@return any
 function ISAddWaterToTrough:relaunch() end
 
----@return any
 function ISAddWaterToTrough:serverStart() end
 
----@return any
 function ISAddWaterToTrough:start() end
 
----@return any
 function ISAddWaterToTrough:stop() end
 
----@return any
 function ISAddWaterToTrough:stopSound() end
 
----@return any
 function ISAddWaterToTrough:update() end
 
----@return any
 function ISAddWaterToTrough:updateAddingWater() end
 
----@return any
+---@return unknown
 function ISAddWaterToTrough:waitToStart() end
 
 ---@return ISAddWaterToTrough

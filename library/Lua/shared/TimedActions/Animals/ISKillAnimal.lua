@@ -1,37 +1,30 @@
 ---@meta
 
 ---@class ISKillAnimal : ISBaseTimedAction
----@field animal any
----@field character any
----@field maxTime any
----@field [any] any
+---@field animal unknown
 ISKillAnimal = ISBaseTimedAction:derive("ISKillAnimal")
+ISKillAnimal.Type = "ISKillAnimal"
 
----@return any
+---@return boolean
 function ISKillAnimal:complete() end
 
----@return any
+---@return number
 function ISKillAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISKillAnimal:isValid() end
 
----@return any
 function ISKillAnimal:kill() end
 
----@return any
 function ISKillAnimal:perform() end
 
----@return any
 function ISKillAnimal:start() end
 
----@return any
 function ISKillAnimal:stop() end
 
----@return any
 function ISKillAnimal:update() end
 
----@return any
+---@return unknown
 function ISKillAnimal:waitToStart() end
 
 ---@return ISKillAnimal

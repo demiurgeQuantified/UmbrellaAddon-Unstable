@@ -1,39 +1,31 @@
 ---@meta
 
 ---@class ISDumpContentsAction : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field sound any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field item unknown
+---@field sound unknown
 ISDumpContentsAction = ISBaseTimedAction:derive("ISDumpContentsAction")
+ISDumpContentsAction.Type = "ISDumpContentsAction"
 
----@return any
+---@return boolean
 function ISDumpContentsAction:complete() end
 
----@return any
+---@return unknown?
 function ISDumpContentsAction:finalItem(itemType) end
 
----@return any
+---@return number
 function ISDumpContentsAction:getDuration() end
 
----@return any
+---@return unknown?
 function ISDumpContentsAction:isValid() end
 
----@return any
 function ISDumpContentsAction:perform() end
 
----@return any
 function ISDumpContentsAction:start() end
 
----@return any
 function ISDumpContentsAction:stop() end
 
----@return any
 function ISDumpContentsAction:stopSound() end
 
----@return any
 function ISDumpContentsAction:update() end
 
 ---@return ISDumpContentsAction

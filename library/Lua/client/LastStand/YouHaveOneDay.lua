@@ -1,9 +1,8 @@
 ---@meta
 
 ---@class YouHaveOneDay
----@field hordeSpawned any
----@field [any] any
 YouHaveOneDay = {}
+YouHaveOneDay.hordeSpawned = false
 YouHaveOneDay.id = "YouHaveOneDay"
 YouHaveOneDay.image = "media/lua/client/LastStand/YouHaveOneDay.png"
 YouHaveOneDay.world = "challengemaps/KnoxCounty"
@@ -11,7 +10,6 @@ YouHaveOneDay.gameMode = "You Have One Day"
 YouHaveOneDay.x = 41
 YouHaveOneDay.y = 22
 YouHaveOneDay.z = 1
-YouHaveOneDay.hordeSpawned = false
 YouHaveOneDay.hordePark = {
 	x = 76,
 	y = 67,
@@ -55,35 +53,25 @@ YouHaveOneDay.hordes = {
 	YouHaveOneDay.hordeGasStation,
 }
 
----@return any
 function YouHaveOneDay.Add() end
 
----@return any
+---@param playerNum number
 function YouHaveOneDay.AddPlayer(playerNum, playerObj) end
 
----@return any
 function YouHaveOneDay.EveryDays() end
 
----@return any
 function YouHaveOneDay.EveryHours() end
 
----@return any
 function YouHaveOneDay.Init() end
 
----@return any
 function YouHaveOneDay.OnGameStart() end
 
----@return any
 function YouHaveOneDay.OnInitWorld() end
 
----@return any
 function YouHaveOneDay.OnPlayerUpdate(zombie) end
 
----@return any
 function YouHaveOneDay.OnZombieUpdate(zombie) end
 
----@return any
 function YouHaveOneDay.RemovePlayer(playerObj) end
 
----@return any
 function YouHaveOneDay.Render() end

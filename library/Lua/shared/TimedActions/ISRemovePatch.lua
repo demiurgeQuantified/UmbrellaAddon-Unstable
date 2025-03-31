@@ -1,38 +1,32 @@
 ---@meta
 
 ---@class ISRemovePatch : ISBaseTimedAction
----@field character any
----@field clothing any
----@field fabricType any
----@field maxTime any
----@field needle any
----@field part any
----@field sound any
----@field [any] any
+---@field clothing unknown
+---@field fabricType unknown?
+---@field needle unknown
+---@field part unknown
+---@field sound unknown
 ISRemovePatch = ISBaseTimedAction:derive("ISRemovePatch")
+ISRemovePatch.Type = "ISRemovePatch"
 
----@return any
+---@return number
 function ISRemovePatch.chanceToGetPatchBack(character) end
 
----@return any
+---@return boolean
 function ISRemovePatch:complete() end
 
----@return any
+---@return number
 function ISRemovePatch:getDuration() end
 
----@return any
+---@return boolean?
 function ISRemovePatch:isValid() end
 
----@return any
 function ISRemovePatch:perform() end
 
----@return any
 function ISRemovePatch:start() end
 
----@return any
 function ISRemovePatch:stop() end
 
----@return any
 function ISRemovePatch:update() end
 
 ---@return ISRemovePatch

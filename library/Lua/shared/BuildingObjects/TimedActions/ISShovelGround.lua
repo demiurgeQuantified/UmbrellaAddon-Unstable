@@ -1,44 +1,38 @@
 ---@meta
 
 ---@class ISShovelGround : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field emptyBag any
----@field item any
----@field maxTime any
----@field newBag any
----@field newSprite any
----@field sandTile any
----@field sound any
----@field [any] any
+---@field emptyBag unknown
+---@field item boolean
+---@field newBag unknown
+---@field newSprite string
+---@field sandTile unknown
+---@field sound unknown
 ISShovelGround = ISBaseTimedAction:derive("ISShovelGround")
+ISShovelGround.Type = "ISShovelGround"
 
----@return any
+---@return boolean
 function ISShovelGround:complete() end
 
----@return any
+---@return number
 function ISShovelGround:getDuration() end
 
----@return any
+---@return boolean?
 function ISShovelGround:isValid() end
 
----@return any
 function ISShovelGround:perform() end
 
----@return any
+---@return boolean
 function ISShovelGround:shovelGround(sq) end
 
----@return any
 function ISShovelGround:start() end
 
----@return any
 function ISShovelGround:stop() end
 
----@return any
 function ISShovelGround:update() end
 
----@return any
+---@return unknown
 function ISShovelGround:waitToStart() end
 
+---@param newSprite string
 ---@return ISShovelGround
 function ISShovelGround:new(character, emptyBag, sandTile, newSprite, newBag) end

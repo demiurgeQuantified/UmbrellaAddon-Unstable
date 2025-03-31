@@ -1,45 +1,47 @@
 ---@meta
 
 ---@class ISPlayerStatsSuspicionActivityUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field listHeaderColor any
----@field moveWithMouse any
----@field ok any
----@field onclick any
----@field points any
----@field suspicionActivity any
----@field target any
----@field username any
----@field variableColor any
----@field windows any
----@field zOffsetSmallFont any
----@field [any] any
+---@field listHeaderColor table
+---@field ok ISButton
+---@field onclick unknown
+---@field points ISScrollingListBox
+---@field suspicionActivity table
+---@field target unknown?
+---@field username string
+---@field variableColor table
+---@field windows table
+---@field zOffsetSmallFont number
 ISPlayerStatsSuspicionActivityUI = ISPanel:derive("ISPlayerStatsSuspicionActivityUI")
+ISPlayerStatsSuspicionActivityUI.Type = "ISPlayerStatsSuspicionActivityUI"
+ISPlayerStatsSuspicionActivityUI.instance = nil ---@type ISPlayerStatsSuspicionActivityUI?
 
----@return any
 function ISPlayerStatsSuspicionActivityUI.populate(self) end
 
----@return any
+---@param username string
 function ISPlayerStatsSuspicionActivityUI.receiveSuspicionActivity(username, userLog, suspiciousActivity) end
 
----@return any
 function ISPlayerStatsSuspicionActivityUI:create() end
 
----@return any
+---@return number
 function ISPlayerStatsSuspicionActivityUI:drawLog(y, item, alt) end
 
----@return any
 function ISPlayerStatsSuspicionActivityUI:initialise() end
 
----@return any
+---@param x number
+---@param y number
 function ISPlayerStatsSuspicionActivityUI:onOptionMouseDown(button, x, y) end
 
----@return any
 function ISPlayerStatsSuspicionActivityUI:render() end
 
----@return any
+---@param visible boolean
 function ISPlayerStatsSuspicionActivityUI:setVisible(visible) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param target unknown?
+---@param username string
+---@param suspicionActivity table
 ---@return ISPlayerStatsSuspicionActivityUI
 function ISPlayerStatsSuspicionActivityUI:new(x, y, width, height, target, onclick, username, suspicionActivity) end

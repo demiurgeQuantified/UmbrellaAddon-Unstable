@@ -1,33 +1,28 @@
 ---@meta
 
 ---@class ISTakeCarBatteryChargerAction : ISBaseTimedAction
----@field charger any
----@field maxTime any
----@field [any] any
+---@field charger unknown
 ISTakeCarBatteryChargerAction = ISBaseTimedAction:derive("ISTakeCarBatteryChargerAction")
+ISTakeCarBatteryChargerAction.Type = "ISTakeCarBatteryChargerAction"
 
----@return any
+---@return boolean?
 function ISTakeCarBatteryChargerAction:complete() end
 
----@return any
+---@return number
 function ISTakeCarBatteryChargerAction:getDuration() end
 
----@return any
+---@return boolean
 function ISTakeCarBatteryChargerAction:isValid() end
 
----@return any
 function ISTakeCarBatteryChargerAction:perform() end
 
----@return any
 function ISTakeCarBatteryChargerAction:start() end
 
----@return any
 function ISTakeCarBatteryChargerAction:stop() end
 
----@return any
 function ISTakeCarBatteryChargerAction:update() end
 
----@return any
+---@return unknown
 function ISTakeCarBatteryChargerAction:waitToStart() end
 
 ---@return ISTakeCarBatteryChargerAction

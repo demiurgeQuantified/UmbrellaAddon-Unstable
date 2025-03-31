@@ -1,60 +1,50 @@
 ---@meta
 
 ---@class ISMilkAnimal : ISBaseTimedAction
----@field all any
----@field animal any
----@field bucket any
----@field lastTimer any
----@field maxTime any
----@field milkAnim any
----@field sound any
----@field stopOnAim any
----@field timePerLiter any
----@field timer any
----@field [any] any
+---@field all unknown
+---@field animal unknown
+---@field bucket unknown
+---@field lastTimer number
+---@field milkAnim string
+---@field sound unknown
+---@field timePerLiter number
+---@field timer number
 ISMilkAnimal = ISBaseTimedAction:derive("ISMilkAnimal")
+ISMilkAnimal.Type = "ISMilkAnimal"
 
----@return any
 function ISMilkAnimal:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISMilkAnimal:complete() end
 
----@return any
 function ISMilkAnimal:forceStop() end
 
----@return any
+---@return number
 function ISMilkAnimal:getDuration() end
 
----@return any
+---@return boolean
 function ISMilkAnimal:isValid() end
 
----@return any
 function ISMilkAnimal:milk() end
 
----@return any
 function ISMilkAnimal:perform() end
 
----@return any
 function ISMilkAnimal:serverStart() end
 
----@return any
 function ISMilkAnimal:start() end
 
----@return any
 function ISMilkAnimal:stop() end
 
----@return any
 function ISMilkAnimal:stopSound() end
 
----@return any
+---@return boolean
 function ISMilkAnimal:stress() end
 
----@return any
 function ISMilkAnimal:update() end
 
----@return any
+---@return unknown
 function ISMilkAnimal:waitToStart() end
 
+---@param right boolean
 ---@return ISMilkAnimal
 function ISMilkAnimal:new(character, animal, bucket, right, all) end

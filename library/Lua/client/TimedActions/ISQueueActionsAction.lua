@@ -1,33 +1,24 @@
 ---@meta
 
 ---@class ISQueueActionsAction : ISBaseTimedAction
----@field addActionsFunction any
----@field args any
----@field character any
----@field isAddingActions any
----@field maxTime any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field addActionsFunction unknown
+---@field args table
+---@field isAddingActions boolean
 ISQueueActionsAction = ISBaseTimedAction:derive("ISQueueActionsAction")
+ISQueueActionsAction.Type = "ISQueueActionsAction"
 
----@return any
+---@return boolean
 function ISQueueActionsAction:isValid() end
 
----@return any
 function ISQueueActionsAction:perform() end
 
----@return any
 function ISQueueActionsAction:start() end
 
----@return any
 function ISQueueActionsAction:stop() end
 
----@return any
 function ISQueueActionsAction:update() end
 
----@return any
+---@return boolean
 function ISQueueActionsAction:waitToStart() end
 
 ---@return ISQueueActionsAction

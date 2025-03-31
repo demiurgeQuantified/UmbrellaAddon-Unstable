@@ -1,33 +1,31 @@
 ---@meta
 
 ---@class ISAnimalTracksUI : ISCollapsableWindow
----@field backgroundColor any
----@field borderColor any
----@field chr any
----@field isSprite any
----@field playerNum any
----@field refreshNeeded any
----@field texture any
----@field track any
----@field trackingLevel any
----@field xoffset any
----@field [any] any
+---@field chr unknown
+---@field isSprite unknown
+---@field playerNum unknown
+---@field refreshNeeded boolean
+---@field texture unknown?
+---@field track unknown
+---@field trackingLevel unknown
+---@field xoffset unknown
 ISAnimalTracksUI = ISCollapsableWindow:derive("ISAnimalTracksUI")
+ISAnimalTracksUI.Type = "ISAnimalTracksUI"
 
----@return any
 function ISAnimalTracksUI:create() end
 
----@return any
+---@return string?
 function ISAnimalTracksUI:getAnimalType() end
 
----@return any
 function ISAnimalTracksUI:initialise() end
 
----@return any
 function ISAnimalTracksUI:prerender() end
 
----@return any
 function ISAnimalTracksUI:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAnimalTracksUI
 function ISAnimalTracksUI:new(x, y, width, height, track, player) end

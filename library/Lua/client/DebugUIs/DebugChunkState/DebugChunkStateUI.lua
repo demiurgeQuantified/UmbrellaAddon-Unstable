@@ -1,130 +1,141 @@
 ---@meta
 
 ---@class DebugChunkStateUI : ISPanel
----@field buttonExit any
----@field buttonOptions any
----@field comboPlayerIndex any
----@field currentTool any
----@field dragCameraTool any
----@field gameState any
----@field mouseDown any
----@field mouseDownX any
----@field mouseDownY any
----@field mouseMoved any
----@field objectAtCursorPanel any
----@field objectList any
----@field objectListSquare any
----@field objectPickerPanel any
----@field objectSections any
----@field objPropsPanel any
----@field optionsPanel any
----@field selectedSquare any
----@field spritePopupPanel any
----@field squarePanel any
----@field toolBar any
----@field vehicleStoryPanel any
----@field zLevelSlider any
----@field [any] any
+---@field buttonExit ISButton
+---@field buttonOptions ISButton
+---@field comboPlayerIndex ISComboBox
+---@field currentTool DebugChunkStateUI_DragCameraTool
+---@field dragCameraTool DebugChunkStateUI_DragCameraTool
+---@field gameState unknown
+---@field mouseDown boolean
+---@field mouseDownX number
+---@field mouseDownY number
+---@field mouseMoved boolean
+---@field objectAtCursorPanel DebugChunkState_ObjectAtCursorPanel
+---@field objectList ISScrollingListBox
+---@field objectListSquare unknown
+---@field objectPickerPanel DebugChunkState_ObjectPickerPanel
+---@field objectSections ISSectionedPanel
+---@field objPropsPanel DebugChunkStateUI_ObjPropsPanel
+---@field optionsPanel DebugChunkStateUI_OptionsPanel
+---@field selectedSquare unknown?
+---@field spritePopupPanel DebugChunkStateUI_SpritePopupPanel
+---@field squarePanel DebugChunkStateUI_SquarePanel
+---@field toolBar ISPanel
+---@field vehicleStoryPanel DebugChunkState_VehicleStoryPanel
+---@field zLevelSlider ISSliderPanel
 DebugChunkStateUI = ISPanel:derive("DebugChunkStateUI")
+DebugChunkStateUI.Type = "DebugChunkStateUI"
 
----@return any
 function DebugChunkStateUI:createChildren() end
 
----@return any
+---@return number
 function DebugChunkStateUI:doDrawObjectListItem(y, item, alt) end
 
----@return any
+---@return boolean
 function DebugChunkStateUI:isMouseOverChild() end
 
----@return any
 function DebugChunkStateUI:onCamera() end
 
----@return any
 function DebugChunkStateUI:onChangePlayer() end
 
----@return any
 function DebugChunkStateUI:onChangeZLevel(value, slider) end
 
----@return any
 function DebugChunkStateUI:onExit() end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function DebugChunkStateUI:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function DebugChunkStateUI:onMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function DebugChunkStateUI:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function DebugChunkStateUI:onMouseUpOutside(x, y) end
 
----@return any
+---@return boolean
 function DebugChunkStateUI:onMouseWheel(del) end
 
----@return any
 function DebugChunkStateUI:onOptions() end
 
----@return any
 function DebugChunkStateUI:onResolutionChange(oldw, oldh, neww, newh) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
+---@return unknown
+---@return unknown
+---@return unknown
 function DebugChunkStateUI:pickSquare(x, y) end
 
----@return any
 function DebugChunkStateUI:prerender() end
 
----@return any
 function DebugChunkStateUI:render() end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function DebugChunkStateUI:setObjectList(square, x, y, z) end
 
----@return any
 function DebugChunkStateUI:showUI() end
 
----@return any
 function DebugChunkStateUI:update() end
 
----@return any
 function DebugChunkStateUI:updateObjectList() end
 
----@return any
 function DebugChunkStateUI:updateObjectProps() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return DebugChunkStateUI
 function DebugChunkStateUI:new(x, y, width, height, gameState) end
 
 ---@class DebugChunkStateUI_OptionsPanel : ISPanel
----@field gameState any
----@field tickBox any
----@field [any] any
+---@field gameState unknown
+---@field tickBox ISTickBox
 DebugChunkStateUI_OptionsPanel = ISPanel:derive("DebugChunkStateUI_OptionsPanel")
+DebugChunkStateUI_OptionsPanel.Type = "DebugChunkStateUI_OptionsPanel"
 
----@return any
 function DebugChunkStateUI_OptionsPanel:createChildren() end
 
----@return any
+---@param x number
+---@param y number
 function DebugChunkStateUI_OptionsPanel:onMouseDownOutside(x, y) end
 
----@return any
 function DebugChunkStateUI_OptionsPanel:onTickBox(index, selected) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return DebugChunkStateUI_OptionsPanel
 function DebugChunkStateUI_OptionsPanel:new(x, y, width, height, gameState) end
 
 ---@class DebugChunkStateUI_SpritePopupPanel : ISPanel
----@field backgroundColor any
----@field sprite any
----@field [any] any
+---@field keepOnScreen boolean
+---@field sprite unknown?
 DebugChunkStateUI_SpritePopupPanel = ISPanel:derive("DebugChunkStateUI_SpritePopupPanel")
+DebugChunkStateUI_SpritePopupPanel.Type = "DebugChunkStateUI_SpritePopupPanel"
 
----@return any
 function DebugChunkStateUI_SpritePopupPanel:render() end
 
+---@param x number
+---@param y number
+---@param w number
+---@param h number
 ---@return DebugChunkStateUI_SpritePopupPanel
 function DebugChunkStateUI_SpritePopupPanel:new(x, y, w, h) end
 
----@return any
 function DebugChunkState_InitUI(gameState) end

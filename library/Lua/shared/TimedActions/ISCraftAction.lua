@@ -1,48 +1,48 @@
 ---@meta
 
 ---@class ISCraftAction : ISBaseTimedAction
----@field container any
----@field containers any
----@field containersIn any
----@field craftSound any
----@field forceProgressBar any
----@field item any
----@field jobType any
----@field maxTime any
----@field onCompleteArgs any
----@field onCompleteFunc any
----@field recipe any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field container unknown
+---@field containers unknown?
+---@field containersIn unknown?
+---@field craftSound unknown
+---@field forceProgressBar boolean
+---@field item unknown?
+---@field jobType unknown
+---@field onCompleteArgs table
+---@field onCompleteFunc function
+---@field recipe unknown
+---@field stopOnRun unknown
+---@field stopOnWalk unknown
 ISCraftAction = ISBaseTimedAction:derive("ISCraftAction")
+ISCraftAction.Type = "ISCraftAction"
 
----@return any
+---@return boolean
 function ISCraftAction:complete() end
 
----@return any
+---@return number
 function ISCraftAction:getDuration() end
 
----@return any
+---@param propStr string
+---@return string?
 function ISCraftAction:getPropItemOrModel(propStr) end
 
----@return any
+---@return boolean
 function ISCraftAction:isValid() end
 
----@return any
 function ISCraftAction:perform() end
 
----@return any
+---@param func function
+---@param arg1 ISCraftingUI | ISCraftAction
+---@param arg2 ISCraftAction
+---@param arg5 unknown?
 function ISCraftAction:setOnComplete(func, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
----@return any
 function ISCraftAction:start() end
 
----@return any
 function ISCraftAction:stop() end
 
----@return any
 function ISCraftAction:update() end
 
+---@param containersIn unknown?
 ---@return ISCraftAction
 function ISCraftAction:new(character, item, recipe, container, containersIn) end

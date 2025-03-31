@@ -1,36 +1,30 @@
 ---@meta
 
 ---@class ISRemoveBaitAction : ISBaseTimedAction
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field trap any
----@field [any] any
+---@field trap unknown
 ISRemoveBaitAction = ISBaseTimedAction:derive("ISRemoveBaitAction")
+ISRemoveBaitAction.Type = "ISRemoveBaitAction"
 
----@return any
+---@return boolean
 function ISRemoveBaitAction:complete() end
 
----@return any
+---@return number
 function ISRemoveBaitAction:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveBaitAction:isValid() end
 
----@return any
 function ISRemoveBaitAction:perform() end
 
----@return any
 function ISRemoveBaitAction:start() end
 
----@return any
 function ISRemoveBaitAction:stop() end
 
----@return any
 function ISRemoveBaitAction:update() end
 
----@return any
+---@return unknown
 function ISRemoveBaitAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISRemoveBaitAction
 function ISRemoveBaitAction:new(character, trap) end

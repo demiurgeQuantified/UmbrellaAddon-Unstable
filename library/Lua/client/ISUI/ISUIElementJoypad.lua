@@ -1,116 +1,103 @@
 ---@meta
 
 ---@class ISUIElementJoypad : ISPanel
----@field __Class any
----@field playerNum any
----@field [any] any
+---@field __Class ISPanel
+---@field playerNum number
 ISUIElementJoypad = ISPanel:derive("ISUIElementJoypad")
+ISUIElementJoypad.Type = "ISUIElementJoypad"
 ISUIElementJoypad.defaultJoypadMoveInterval = 20
 
----@return any
+---@return unknown?
 function ISUIElementJoypad.Inject(_NewClass, _Class, ...) end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad.Wrap(_Class, ...) end
 
----@return any
 function ISUIElementJoypad:addChild(otherElement) end
 
----@return any
 function ISUIElementJoypad:clearChildren() end
 
----@return any
 function ISUIElementJoypad:focusFirstJoypadElement(joypadData) end
 
----@return any
 function ISUIElementJoypad:focusJoypadSelf() end
 
----@return any
+---@return boolean?
 function ISUIElementJoypad:focusNextJoypadElement(joypadData) end
 
----@return any
+---@return boolean?
 function ISUIElementJoypad:focusPreviousJoypadElement(joypadData) end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad:getAPrompt() end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad:getBPrompt() end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad:getLBPrompt() end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad:getRBPrompt() end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad:getXPrompt() end
 
----@return any
+---@return unknown?
 function ISUIElementJoypad:getYPrompt() end
 
----@return any
+---@return boolean
 function ISUIElementJoypad:hasJoypadFocus() end
 
----@return any
+---@param _functionName string
+---@return unknown?
 function ISUIElementJoypad:inheritingClassCall(_functionName, ...) end
 
----@return any
+---@return boolean?
 function ISUIElementJoypad:isValidPrompt() end
 
----@return any
 function ISUIElementJoypad:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISUIElementJoypad:onJoypadDirDown() end
 
----@return any
 function ISUIElementJoypad:onJoypadDirLeft() end
 
----@return any
 function ISUIElementJoypad:onJoypadDirRight() end
 
----@return any
 function ISUIElementJoypad:onJoypadDirUp() end
 
----@return any
 function ISUIElementJoypad:onJoypadDown(button) end
 
----@return any
 function ISUIElementJoypad:onLoseJoypadFocus(joypadData) end
 
----@return any
 function ISUIElementJoypad:orderJoypadChildren(_recursive) end
 
----@return any
 function ISUIElementJoypad:removeChild(otherElement) end
 
----@return any
 function ISUIElementJoypad:setBucket(_bool) end
 
----@return any
 function ISUIElementJoypad:setDefaultEventTarget(_target) end
 
----@return any
+---@param _name string
 function ISUIElementJoypad:setEventCallback(_name, _func, _target) end
 
----@return any
+---@param _name string
 function ISUIElementJoypad:setEventPromptText(_name, _text) end
 
----@return any
 function ISUIElementJoypad:setFocusJoypadSelf(_bool) end
 
----@return any
+---@param _num number
 function ISUIElementJoypad:setPlayerNum(_num) end
 
----@return any
 function ISUIElementJoypad:setZOrder(_z) end
 
----@return any
 function ISUIElementJoypad:unfocusJoypadSelf() end
 
----@return any
+---@param _playerNum number
 function ISUIElementJoypad:unfocusRecursive(_focus, _playerNum) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISUIElementJoypad
 function ISUIElementJoypad:new(x, y, width, height) end

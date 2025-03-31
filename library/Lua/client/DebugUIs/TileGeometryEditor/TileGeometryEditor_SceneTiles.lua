@@ -1,34 +1,42 @@
 ---@meta
 
 ---@class TileGeometryEditor_SceneTiles : ISBaseObject
----@field editor any
----@field javaObject any
----@field scene any
----@field tempExtentsMax any
----@field tempExtentsMin any
----@field tempRotate any
----@field tempTranslate any
----@field tiles any
----@field vector3f_1 any
----@field [any] any
+---@field editor TileGeometryEditor
+---@field javaObject unknown
+---@field scene TileGeometryEditor_Scene
+---@field tempExtentsMax unknown
+---@field tempExtentsMin unknown
+---@field tempRotate unknown
+---@field tempTranslate unknown
+---@field tiles table
+---@field vector3f_1 unknown
 TileGeometryEditor_SceneTiles = ISBaseObject:derive("TileGeometryEditor_SceneTiles")
+TileGeometryEditor_SceneTiles.Type = "TileGeometryEditor_SceneTiles"
 
----@return any
+---@param dx number
+---@param dy number
+---@param tileName string
 function TileGeometryEditor_SceneTiles:addTile(dx, dy, tileName) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return unknown
 function TileGeometryEditor_SceneTiles:getTile(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return number
 function TileGeometryEditor_SceneTiles:index(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function TileGeometryEditor_SceneTiles:removeTile(dx, dy) end
 
----@return any
 function TileGeometryEditor_SceneTiles:render() end
 
----@return any
+---@param r number
+---@param g number
+---@param b number
 function TileGeometryEditor_SceneTiles:renderBox3D(
 	tx,
 	ty,
@@ -48,11 +56,16 @@ function TileGeometryEditor_SceneTiles:renderBox3D(
 )
 end
 
----@return any
+---@param dx number
+---@param dy number
+---@param tileName string
 function TileGeometryEditor_SceneTiles:renderTile(dx, dy, tileName) end
 
----@return any
+---@param x number
+---@param y number
+---@return unknown
 function TileGeometryEditor_SceneTiles:uiToTileLocation(x, y) end
 
+---@param editor TileGeometryEditor
 ---@return TileGeometryEditor_SceneTiles
 function TileGeometryEditor_SceneTiles:new(editor) end

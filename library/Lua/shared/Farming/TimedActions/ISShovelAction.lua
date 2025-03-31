@@ -1,38 +1,34 @@
 ---@meta
 
 ---@class ISShovelAction : ISBaseTimedAction
----@field caloriesModifier any
----@field character any
----@field item any
----@field maxTime any
----@field plant any
----@field sound any
----@field [any] any
+---@field character unknown?
+---@field item unknown
+---@field plant unknown
+---@field sound unknown
 ISShovelAction = ISBaseTimedAction:derive("ISShovelAction")
+ISShovelAction.Type = "ISShovelAction"
 
----@return any
+---@return boolean
 function ISShovelAction:complete() end
 
----@return any
+---@return number
 function ISShovelAction:getDuration() end
 
----@return any
+---@return boolean
 function ISShovelAction:isValid() end
 
----@return any
 function ISShovelAction:perform() end
 
----@return any
 function ISShovelAction:start() end
 
----@return any
 function ISShovelAction:stop() end
 
----@return any
 function ISShovelAction:update() end
 
----@return any
+---@return unknown
 function ISShovelAction:waitToStart() end
 
+---@param character unknown?
+---@param maxTime number
 ---@return ISShovelAction
 function ISShovelAction:new(character, item, plant, maxTime) end

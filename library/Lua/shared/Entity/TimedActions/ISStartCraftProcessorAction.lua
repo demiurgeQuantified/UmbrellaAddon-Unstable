@@ -1,32 +1,24 @@
 ---@meta
 
 ---@class ISStartCraftProcessorAction : ISBaseTimedAction
----@field character any
----@field component any
----@field craftProcessor any
----@field entity any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field component unknown
+---@field craftProcessor unknown
+---@field entity unknown
 ISStartCraftProcessorAction = ISBaseTimedAction:derive("ISStartCraftProcessorAction")
+ISStartCraftProcessorAction.Type = "ISStartCraftProcessorAction"
 
----@return any
+---@return number
 function ISStartCraftProcessorAction:getDuration() end
 
----@return any
+---@return boolean
 function ISStartCraftProcessorAction:isValid() end
 
----@return any
 function ISStartCraftProcessorAction:perform() end
 
----@return any
 function ISStartCraftProcessorAction:start() end
 
----@return any
 function ISStartCraftProcessorAction:stop() end
 
----@return any
 function ISStartCraftProcessorAction:update() end
 
 ---@return ISStartCraftProcessorAction

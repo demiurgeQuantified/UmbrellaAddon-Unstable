@@ -1,44 +1,37 @@
 ---@meta
 
 ---@class ISUnequipAction : ISBaseTimedAction
----@field animSpeed any
----@field clothingAction any
----@field fromHotbar any
----@field hotbar any
----@field ignoreHandsWounds any
----@field item any
----@field maxTime any
----@field sound any
----@field stopOnAim any
----@field stopOnRun any
----@field stopOnWalk any
----@field useProgressBar any
----@field [any] any
+---@field animSpeed number
+---@field clothingAction boolean
+---@field fromHotbar boolean
+---@field hotbar unknown?
+---@field ignoreHandsWounds boolean
+---@field item boolean?
+---@field sound unknown
+---@field useProgressBar boolean
 ISUnequipAction = ISBaseTimedAction:derive("ISUnequipAction")
+ISUnequipAction.Type = "ISUnequipAction"
 
----@return any
 function ISUnequipAction:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISUnequipAction:complete() end
 
----@return any
+---@return number?
 function ISUnequipAction:getDuration() end
 
----@return any
+---@return boolean
 function ISUnequipAction:isValid() end
 
----@return any
 function ISUnequipAction:perform() end
 
----@return any
 function ISUnequipAction:start() end
 
----@return any
 function ISUnequipAction:stop() end
 
----@return any
 function ISUnequipAction:update() end
 
+---@param item boolean?
+---@param maxTime number
 ---@return ISUnequipAction
 function ISUnequipAction:new(character, item, maxTime) end

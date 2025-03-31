@@ -1,37 +1,33 @@
 ---@meta
 
 ---@class ISFireplaceLightFromPetrol : ISBaseTimedAction
----@field fireplace any
----@field lighter any
----@field maxTime any
----@field petrol any
----@field sound any
----@field [any] any
+---@field fireplace unknown
+---@field lighter unknown
+---@field petrol unknown
+---@field sound unknown
 ISFireplaceLightFromPetrol = ISBaseTimedAction:derive("ISFireplaceLightFromPetrol")
+ISFireplaceLightFromPetrol.Type = "ISFireplaceLightFromPetrol"
 
----@return any
+---@return boolean
 function ISFireplaceLightFromPetrol:complete() end
 
----@return any
+---@return number
 function ISFireplaceLightFromPetrol:getDuration() end
 
----@return any
+---@return boolean
 function ISFireplaceLightFromPetrol:isValid() end
 
----@return any
 function ISFireplaceLightFromPetrol:perform() end
 
----@return any
 function ISFireplaceLightFromPetrol:start() end
 
----@return any
 function ISFireplaceLightFromPetrol:stop() end
 
----@return any
 function ISFireplaceLightFromPetrol:update() end
 
----@return any
+---@return unknown
 function ISFireplaceLightFromPetrol:waitToStart() end
 
+---@param character unknown?
 ---@return ISFireplaceLightFromPetrol
 function ISFireplaceLightFromPetrol:new(character, fireplace, lighter, petrol) end

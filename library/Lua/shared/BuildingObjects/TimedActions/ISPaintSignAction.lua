@@ -1,38 +1,36 @@
 ---@meta
 
 ---@class ISPaintSignAction : ISBaseTimedAction
----@field b any
----@field caloriesModifier any
----@field g any
----@field maxTime any
----@field paintPot any
----@field r any
----@field sign any
----@field sound any
----@field wall any
----@field [any] any
+---@field b number
+---@field g number
+---@field paintPot unknown?
+---@field r number
+---@field sign number
+---@field sound unknown
+---@field wall unknown
 ISPaintSignAction = ISBaseTimedAction:derive("ISPaintSignAction")
+ISPaintSignAction.Type = "ISPaintSignAction"
 
----@return any
+---@return boolean
 function ISPaintSignAction:complete() end
 
----@return any
+---@return number
 function ISPaintSignAction:getDuration() end
 
----@return any
+---@return boolean
 function ISPaintSignAction:isValid() end
 
----@return any
 function ISPaintSignAction:perform() end
 
----@return any
 function ISPaintSignAction:start() end
 
----@return any
 function ISPaintSignAction:stop() end
 
----@return any
 function ISPaintSignAction:update() end
 
+---@param paintPot unknown?
+---@param r number
+---@param g number
+---@param b number
 ---@return ISPaintSignAction
 function ISPaintSignAction:new(character, wall, paintPot, sign, r, g, b) end

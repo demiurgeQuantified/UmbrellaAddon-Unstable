@@ -1,33 +1,27 @@
 ---@meta
 
 ---@class ISCheckTrapAction : ISBaseTimedAction
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field trap any
----@field [any] any
+---@field trap unknown
 ISCheckTrapAction = ISBaseTimedAction:derive("ISCheckTrapAction")
+ISCheckTrapAction.Type = "ISCheckTrapAction"
 
----@return any
+---@return boolean
 function ISCheckTrapAction:complete() end
 
----@return any
+---@return number
 function ISCheckTrapAction:getDuration() end
 
----@return any
+---@return boolean
 function ISCheckTrapAction:isValid() end
 
----@return any
 function ISCheckTrapAction:perform() end
 
----@return any
 function ISCheckTrapAction:start() end
 
----@return any
 function ISCheckTrapAction:stop() end
 
----@return any
 function ISCheckTrapAction:update() end
 
+---@param character unknown?
 ---@return ISCheckTrapAction
 function ISCheckTrapAction:new(character, trap) end

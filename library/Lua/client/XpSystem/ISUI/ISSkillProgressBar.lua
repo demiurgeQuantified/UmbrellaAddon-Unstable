@@ -1,59 +1,60 @@
 ---@meta
 
 ---@class ISSkillProgressBar : ISPanel
----@field alpha any
----@field char any
----@field level any
----@field message any
----@field parent any
----@field perk any
----@field playerNum any
----@field SkillUnitBorder any
----@field SkillUnitFilled any
----@field tooltip any
----@field upAlpha any
----@field xp any
----@field xpForLvl any
----@field [any] any
+---@field char unknown
+---@field level unknown
+---@field message string?
+---@field parent ISCharacterInfo
+---@field perk unknown
+---@field playerNum number
+---@field SkillUnitBorder unknown
+---@field SkillUnitFilled unknown
+---@field tooltip ISToolTip?
+---@field xp number
+---@field xpForLvl unknown
 ISSkillProgressBar = ISPanel:derive("ISSkillProgressBar")
+ISSkillProgressBar.Type = "ISSkillProgressBar"
 ISSkillProgressBar.alpha = 0.0
 ISSkillProgressBar.upAlpha = true
 
----@return any
+---@return number
 function ISSkillProgressBar.getPerkXp(self) end
 
----@return any
+---@return number
 function ISSkillProgressBar.getPreviousXpLvl(perk, level) end
 
----@return any
+---@return unknown
 function ISSkillProgressBar.getXpForLvl(perk, level) end
 
----@return any
 function ISSkillProgressBar.updateAlpha() end
 
----@return any
 function ISSkillProgressBar:activate() end
 
----@return any
 function ISSkillProgressBar:initialise() end
 
----@return any
+---@param dx number
+---@param dy number
 function ISSkillProgressBar:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISSkillProgressBar:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISSkillProgressBar:onMouseUp(x, y) end
 
----@return any
 function ISSkillProgressBar:render() end
 
----@return any
 function ISSkillProgressBar:renderPerkRect() end
 
----@return any
 function ISSkillProgressBar:updateTooltip(lvlSelected) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param playerNum number
+---@param parent ISCharacterInfo
 ---@return ISSkillProgressBar
 function ISSkillProgressBar:new(x, y, width, height, playerNum, perk, parent) end

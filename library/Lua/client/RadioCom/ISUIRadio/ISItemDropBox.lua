@@ -1,122 +1,133 @@
 ---@meta
 
 ---@class ISItemDropBox : ISPanel
----@field allowDropAlways any
----@field anchorBottom any
----@field anchorLeft any
----@field anchorRight any
----@field anchorTop any
----@field backDropTex any
----@field backDropTexCol any
----@field background any
----@field backgroundColor any
----@field backgroundColorHL any
----@field backgroundColorHLInv any
----@field backgroundColorHLVal any
----@field borderColor any
----@field borderColorHL any
----@field borderColorHLInv any
----@field borderColorHLVal any
----@field boxOccupied any
----@field doBackDropTex any
----@field doHighlight any
----@field doInvalidHighlight any
----@field doToolTip any
----@field doValidHighlight any
----@field functionTarget any
----@field height any
----@field isLocked any
----@field mouseEnabled any
----@field mouseOverState any
----@field onDragSelf any
----@field onItemDropped any
----@field onItemRemove any
----@field onVerifyItem any
----@field storedItem any
----@field storedItemTex any
----@field storeItem any
----@field toolTip any
----@field toolTipText any
----@field toolTipTextItem any
----@field toolTipTextLocked any
----@field width any
----@field x any
----@field y any
----@field [any] any
+---@field allowDropAlways boolean
+---@field backDropTex unknown?
+---@field backDropTexCol table
+---@field backgroundColorHL table
+---@field backgroundColorHLInv table
+---@field backgroundColorHLVal table
+---@field borderColorHL table
+---@field borderColorHLInv table
+---@field borderColorHLVal table
+---@field boxOccupied boolean
+---@field doBackDropTex boolean
+---@field doHighlight number | boolean
+---@field doInvalidHighlight number | boolean
+---@field doToolTip boolean
+---@field doValidHighlight number | boolean
+---@field functionTarget table
+---@field isLocked boolean
+---@field mouseEnabled boolean
+---@field mouseOverState number
+---@field onDragSelf unknown?
+---@field onItemDropped unknown?
+---@field onItemRemove unknown?
+---@field onVerifyItem unknown
+---@field storedItem unknown?
+---@field storedItemTex unknown?
+---@field storeItem boolean
+---@field toolTip ISToolTip?
+---@field toolTipText string
+---@field toolTipTextItem boolean
+---@field toolTipTextLocked boolean
 ISItemDropBox = ISPanel:derive("ISItemDropBox")
+ISItemDropBox.Type = "ISItemDropBox"
 
----@return any
 function ISItemDropBox:activateToolTip() end
 
----@return any
 function ISItemDropBox:createChildren() end
 
----@return any
 function ISItemDropBox:deactivateToolTip() end
 
----@return any
+---@return boolean
 function ISItemDropBox:defaultVerifyItem(_item) end
 
----@return any
+---@return table
 function ISItemDropBox:getValidItems() end
 
----@return any
+---@return boolean?
 function ISItemDropBox:hasValidItemInDrag() end
 
----@return any
 function ISItemDropBox:initialise() end
 
----@return any
 function ISItemDropBox:itemDropped(_items) end
 
----@return any
 function ISItemDropBox:onDropItem(item) end
 
----@return any
+---@param x number
+---@param y number
 function ISItemDropBox:onMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISItemDropBox:onMouseMove(dx, dy) end
 
----@return any
+---@param dx number
+---@param dy number
 function ISItemDropBox:onMouseMoveOutside(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function ISItemDropBox:onMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function ISItemDropBox:onRightMouseUp(x, y) end
 
----@return any
 function ISItemDropBox:prerender() end
 
----@return any
 function ISItemDropBox:render() end
 
----@return any
+---@param _a number
+---@param _r number
+---@param _g number
+---@param _b number
 function ISItemDropBox:setBackDropTex(_tex, _a, _r, _g, _b) end
 
----@return any
+---@param _b boolean
 function ISItemDropBox:setDoBackDropTex(_b) end
 
----@return any
+---@param _b number
+---@param _a number
+---@param _r number
+---@param _g number
+---@param _b number
 function ISItemDropBox:setHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
----@return any
+---@param _b number
+---@param _a number
+---@param _r number
+---@param _g number
+---@param _b number
 function ISItemDropBox:setInvalidHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
----@return any
+---@param _item unknown?
 function ISItemDropBox:setStoredItem(_item) end
 
----@return any
+---@param _itemTex unknown?
 function ISItemDropBox:setStoredItemFake(_itemTex) end
 
----@return any
+---@param _b boolean
+---@param _text string
 function ISItemDropBox:setToolTip(_b, _text) end
 
----@return any
+---@param _b number
+---@param _a number
+---@param _r number
+---@param _g number
+---@param _b number
 function ISItemDropBox:setValidHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param storeItem boolean
+---@param target table
+---@param onItemDropped unknown?
+---@param onItemRemove unknown?
+---@param onDragSelf unknown?
 ---@return ISItemDropBox
 function ISItemDropBox:new(
 	x,

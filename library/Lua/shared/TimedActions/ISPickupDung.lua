@@ -1,37 +1,29 @@
 ---@meta
 
 ---@class ISPickupDung : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field radius any
----@field sq any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field item unknown
+---@field radius unknown
+---@field sq unknown
 ISPickupDung = ISBaseTimedAction:derive("ISPickupDung")
+ISPickupDung.Type = "ISPickupDung"
 
----@return any
+---@return boolean
 function ISPickupDung:complete() end
 
----@return any
+---@return number
 function ISPickupDung:getDuration() end
 
----@return any
+---@return boolean
 function ISPickupDung:isValid() end
 
----@return any
 function ISPickupDung:perform() end
 
----@return any
 function ISPickupDung:pickUpDung(sq) end
 
----@return any
 function ISPickupDung:start() end
 
----@return any
 function ISPickupDung:stop() end
 
----@return any
 function ISPickupDung:update() end
 
 ---@return ISPickupDung

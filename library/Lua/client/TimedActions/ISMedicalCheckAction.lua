@@ -1,34 +1,29 @@
 ---@meta
 
 ---@class ISMedicalCheckAction : ISBaseTimedAction
----@field forceProgressBar any
----@field maxTime any
----@field otherPlayer any
----@field otherPlayerX any
----@field otherPlayerY any
----@field [any] any
+---@field forceProgressBar boolean
+---@field otherPlayer unknown
+---@field otherPlayerX unknown
+---@field otherPlayerY unknown
 ISMedicalCheckAction = ISBaseTimedAction:derive("ISMedicalCheckAction")
+ISMedicalCheckAction.Type = "ISMedicalCheckAction"
 ISMedicalCheckAction.HealthWindows = {}
 
----@return any
+---@return unknown
 function ISMedicalCheckAction.getHealthWindowForPlayer(playerObj) end
 
----@return any
+---@return boolean
 function ISMedicalCheckAction:isValid() end
 
----@return any
 function ISMedicalCheckAction:perform() end
 
----@return any
 function ISMedicalCheckAction:start() end
 
----@return any
 function ISMedicalCheckAction:stop() end
 
----@return any
 function ISMedicalCheckAction:update() end
 
----@return any
+---@return boolean
 function ISMedicalCheckAction:waitToStart() end
 
 ---@return ISMedicalCheckAction

@@ -1,44 +1,34 @@
 ---@meta
 
 ---@class ISAttachItemHotbar : ISBaseTimedAction
----@field animSpeed any
----@field character any
----@field fromHotbar any
----@field hotbar any
----@field ignoreHandsWounds any
----@field item any
----@field maxTime any
----@field slot any
----@field slotDef any
----@field slotIndex any
----@field stopOnRun any
----@field stopOnWalk any
----@field useProgressBar any
----@field [any] any
+---@field animSpeed number
+---@field fromHotbar boolean
+---@field hotbar unknown?
+---@field ignoreHandsWounds boolean
+---@field item unknown
+---@field slot unknown
+---@field slotDef unknown
+---@field slotIndex unknown
+---@field useProgressBar boolean
 ISAttachItemHotbar = ISBaseTimedAction:derive("ISAttachItemHotbar")
+ISAttachItemHotbar.Type = "ISAttachItemHotbar"
 
----@return any
 function ISAttachItemHotbar:animEvent(event, parameter) end
 
----@return any
+---@return boolean
 function ISAttachItemHotbar:complete() end
 
----@return any
+---@return unknown?
 function ISAttachItemHotbar:isValid() end
 
----@return any
 function ISAttachItemHotbar:perform() end
 
----@return any
 function ISAttachItemHotbar:serverStart() end
 
----@return any
 function ISAttachItemHotbar:start() end
 
----@return any
 function ISAttachItemHotbar:stop() end
 
----@return any
 function ISAttachItemHotbar:update() end
 
 ---@return ISAttachItemHotbar

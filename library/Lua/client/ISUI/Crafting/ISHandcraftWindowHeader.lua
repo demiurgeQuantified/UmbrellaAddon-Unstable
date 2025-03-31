@@ -1,51 +1,47 @@
 ---@meta
 
 ---@class ISHandcraftWindowHeader : ISPanel
----@field buttonInfo any
----@field enableIcon any
----@field enableInfoButton any
----@field icon any
----@field iconSize any
----@field marginBottom any
----@field marginLeft any
----@field marginRight any
----@field marginTop any
----@field paddingBottom any
----@field paddingLeft any
----@field paddingRight any
----@field paddingTop any
----@field player any
----@field styleButton any
----@field styleIcon any
----@field styleLabel any
----@field title any
----@field titleStr any
----@field [any] any
+---@field buttonInfo unknown?
+---@field enableIcon boolean
+---@field enableInfoButton boolean
+---@field icon unknown?
+---@field iconSize number
+---@field marginBottom number
+---@field marginLeft number
+---@field marginRight number
+---@field marginTop number
+---@field paddingBottom number
+---@field paddingLeft number
+---@field paddingRight number
+---@field paddingTop number
+---@field player unknown
+---@field styleButton unknown
+---@field styleIcon unknown
+---@field styleLabel unknown
+---@field title unknown?
+---@field titleStr boolean
 ISHandcraftWindowHeader = ISPanel:derive("ISHandcraftWindowHeader")
+ISHandcraftWindowHeader.Type = "ISHandcraftWindowHeader"
 
----@return any
 function ISHandcraftWindowHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
----@return any
 function ISHandcraftWindowHeader:createChildren() end
 
----@return any
 function ISHandcraftWindowHeader:initialise() end
 
----@return any
 function ISHandcraftWindowHeader:onButtonClick(_button) end
 
----@return any
 function ISHandcraftWindowHeader:onResize() end
 
----@return any
 function ISHandcraftWindowHeader:prerender() end
 
----@return any
 function ISHandcraftWindowHeader:render() end
 
----@return any
 function ISHandcraftWindowHeader:update() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISHandcraftWindowHeader
 function ISHandcraftWindowHeader:new(x, y, width, height, player, _styleIcon, _styleLabel, _styleButton) end

@@ -1,34 +1,30 @@
 ---@meta
 
 ---@class ISRemoveSheetAction : ISBaseTimedAction
----@field item any
----@field maxTime any
----@field [any] any
+---@field item unknown
 ISRemoveSheetAction = ISBaseTimedAction:derive("ISRemoveSheetAction")
+ISRemoveSheetAction.Type = "ISRemoveSheetAction"
 
----@return any
+---@return boolean
 function ISRemoveSheetAction:complete() end
 
----@return any
+---@return number
 function ISRemoveSheetAction:getDuration() end
 
----@return any
+---@return boolean
 function ISRemoveSheetAction:isValid() end
 
----@return any
 function ISRemoveSheetAction:perform() end
 
----@return any
 function ISRemoveSheetAction:start() end
 
----@return any
 function ISRemoveSheetAction:stop() end
 
----@return any
 function ISRemoveSheetAction:update() end
 
----@return any
+---@return unknown
 function ISRemoveSheetAction:waitToStart() end
 
+---@param character unknown?
 ---@return ISRemoveSheetAction
 function ISRemoveSheetAction:new(character, item) end

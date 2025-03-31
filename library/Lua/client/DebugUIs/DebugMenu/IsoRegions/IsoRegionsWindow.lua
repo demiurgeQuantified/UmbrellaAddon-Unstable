@@ -1,92 +1,91 @@
 ---@meta
 
 ---@class IsoRegionsWindow : ISCollapsableWindow
----@field backgroundColor any
----@field instance any
----@field mouseDownX any
----@field mouseDownY any
----@field mouseMoved any
----@field panning any
----@field renderPanel any
----@field settingPath any
----@field title any
----@field xpos any
----@field ypos any
----@field zoom any
----@field [any] any
+---@field mouseDownX number
+---@field mouseDownY number
+---@field mouseMoved boolean
+---@field panning boolean
+---@field renderPanel ISPanel
+---@field settingPath boolean
+---@field title string
+---@field xpos unknown
+---@field ypos unknown
+---@field zoom number
 IsoRegionsWindow = ISCollapsableWindow:derive("IsoRegionsWindow")
+IsoRegionsWindow.Type = "IsoRegionsWindow"
+IsoRegionsWindow.instance = nil ---@type IsoRegionsWindow?
 
----@return any
 function IsoRegionsWindow.onKeyStartPressed(_key) end
 
----@return any
 function IsoRegionsWindow.OnOpenPanel() end
 
----@return any
 function IsoRegionsWindow:close() end
 
----@return any
 function IsoRegionsWindow:createChildren() end
 
----@return any
 function IsoRegionsWindow:initialise() end
 
----@return any
 function IsoRegionsWindow:onChangeEditOption(option) end
 
----@return any
 function IsoRegionsWindow:onChangeOption(option) end
 
----@return any
 function IsoRegionsWindow:onChangeZLevelOption(option) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function IsoRegionsWindow:onMapMouseDown(x, y) end
 
----@return any
+---@param dx number
+---@param dy number
+---@return boolean
 function IsoRegionsWindow:onMapMouseMove(dx, dy) end
 
----@return any
+---@param x number
+---@param y number
 function IsoRegionsWindow:onMapMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
 function IsoRegionsWindow:onMapMouseUpOutside(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function IsoRegionsWindow:onMapRightMouseDown(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function IsoRegionsWindow:onMapRightMouseUp(x, y) end
 
----@return any
+---@param x number
+---@param y number
+---@return boolean
 function IsoRegionsWindow:onMapRightMouseUpOutside(x, y) end
 
----@return any
 function IsoRegionsWindow:onOpenLogs() end
 
----@return any
 function IsoRegionsWindow:onRecalcChunks() end
 
----@return any
+---@return boolean
 function IsoRegionsWindow:onRenderMouseWheel(del) end
 
----@return any
 function IsoRegionsWindow:onSquareDetails(worldX, worldY) end
 
----@return any
 function IsoRegionsWindow:onTeleport(worldX, worldY) end
 
----@return any
 function IsoRegionsWindow:onUnsetSelect(worldX, worldY) end
 
----@return any
 function IsoRegionsWindow:renderTex() end
 
----@return any
 function IsoRegionsWindow:rotate() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return IsoRegionsWindow
 function IsoRegionsWindow:new(x, y, width, height) end
 
----@return any
 function newIsoRegionsWindow() end

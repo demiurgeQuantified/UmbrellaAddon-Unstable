@@ -1,96 +1,81 @@
 ---@meta
 
 ---@class ISAnimalUI : ISCollapsableWindowJoypad
----@field ageBtn any
----@field animal any
----@field animalName any
----@field avatarBackgroundTexture any
----@field avatarDefinition any
----@field avatarHeight any
----@field avatarPanel any
----@field avatarWidth any
----@field avatarX any
----@field avatarY any
----@field backgroundColor any
----@field borderColor any
----@field chr any
----@field feedBtn any
----@field genderBtn any
----@field joypadButtons any
----@field joypadButtonsY any
----@field joypadIndex any
----@field joypadIndexY any
----@field milkAnimalBtn any
----@field playerNum any
----@field prevFocus any
----@field refreshNeeded any
----@field renameBtn any
----@field skillLvl any
----@field xOffset any
----@field [any] any
+---@field ageBtn ISButton
+---@field animal unknown
+---@field animalName string
+---@field avatarBackgroundTexture unknown
+---@field avatarDefinition unknown
+---@field avatarHeight number
+---@field avatarPanel ISCharacterScreenAvatar
+---@field avatarWidth number
+---@field avatarX number
+---@field avatarY number
+---@field chr unknown
+---@field feedBtn ISButton
+---@field genderBtn ISButton
+---@field milkAnimalBtn ISButton
+---@field playerNum unknown
+---@field prevFocus unknown?
+---@field refreshNeeded boolean
+---@field renameBtn ISButton
+---@field skillLvl unknown
+---@field xOffset number
 ISAnimalUI = ISCollapsableWindowJoypad:derive("ISAnimalUI")
+ISAnimalUI.Type = "ISAnimalUI"
 ISAnimalUI.maxDist = 5
 ISAnimalUI.btnOffset = 210
 
----@return any
 function ISAnimalUI:attachAnimal() end
 
----@return any
 function ISAnimalUI:close() end
 
----@return any
 function ISAnimalUI:create() end
 
----@return any
+---@return string?
 function ISAnimalUI:getClutchSizeText() end
 
----@return any
+---@return string?
 function ISAnimalUI:getPregnantText() end
 
----@return any
+---@return string
 function ISAnimalUI:getUdderText() end
 
----@return any
+---@return string?
 function ISAnimalUI:getWoolText() end
 
----@return any
 function ISAnimalUI:initialise() end
 
----@return any
+---@return unknown
 function ISAnimalUI:maxTextWidth(font, text, maxWidth) end
 
----@return any
 function ISAnimalUI:onChangeGender() end
 
----@return any
 function ISAnimalUI:onGainJoypadFocus(joypadData) end
 
----@return any
 function ISAnimalUI:onJoypadDown(button, joypadData) end
 
----@return any
 function ISAnimalUI:onMilkAnimal() end
 
----@return any
 function ISAnimalUI:onRenameAnimalClick(button, animal) end
 
----@return any
 function ISAnimalUI:onSetAge() end
 
----@return any
 function ISAnimalUI:prerender() end
 
----@return any
 function ISAnimalUI:renameAnimal() end
 
----@return any
 function ISAnimalUI:render() end
 
----@return any
 function ISAnimalUI:updateAvatar() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISAnimalUI
 function ISAnimalUI:new(x, y, width, height, animal, player) end
 
 ---@class ISAnimalAvatar : ISUI3DModel
 ISAnimalAvatar = ISUI3DModel:derive("ISAnimalAvatar")
+ISAnimalAvatar.Type = "ISAnimalAvatar"

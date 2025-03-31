@@ -1,44 +1,47 @@
 ---@meta
 
 ---@class ModInfoPanel : ISPanelJoypad
----@field dependenciesPanel any
----@field descPanel any
----@field incompatiblePanel any
----@field joypadFocused any
----@field modInfo any
----@field modInfoParams any
----@field thumbnailPanel any
----@field thumbnailPreviewImage any
----@field titlePanel any
----@field [any] any
+---@field dependenciesPanel ModInfoPanel.InteractionParam
+---@field descPanel ModInfoPanel.Desc
+---@field incompatiblePanel ModInfoPanel.InteractionParam
+---@field joypadFocused unknown
+---@field modInfo unknown
+---@field modInfoParams table
+---@field thumbnailPanel ModInfoPanel.Thumbnail
+---@field thumbnailPreviewImage unknown?
+---@field titlePanel ModInfoPanel.Title
 ModInfoPanel = ISPanelJoypad:derive("ModInfoPanel")
+ModInfoPanel.Type = "ModInfoPanel"
 
----@return any
 function ModInfoPanel:createChildren() end
 
----@return any
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@param r number
+---@param g number
+---@param b number
+---@param a number
 function ModInfoPanel:drawCustomRectBorder(x, y, w, h, r, g, b, a) end
 
----@return any
 function ModInfoPanel:onJoypadDirDown(joypadData) end
 
----@return any
 function ModInfoPanel:onJoypadDirUp(joypadData) end
 
----@return any
 function ModInfoPanel:onJoypadDown(button, joypadData) end
 
----@return any
 function ModInfoPanel:recalcSize() end
 
----@return any
 function ModInfoPanel:render() end
 
----@return any
 function ModInfoPanel:setJoypadFocused(val, joypadData) end
 
----@return any
 function ModInfoPanel:updateView(modInfo) end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ModInfoPanel
 function ModInfoPanel:new(x, y, width, height) end

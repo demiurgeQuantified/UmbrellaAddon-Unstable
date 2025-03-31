@@ -3,26 +3,28 @@
 ---@class FireFighting
 FireFighting = {}
 
----@return any
+---@return unknown?
 function FireFighting.getExtinguisher(playerObj) end
 
----@return any
+---@param item unknown?
+---@return number
 function FireFighting.getExtinguisherUses(item) end
 
----@return any
+---@return number
 function FireFighting.getFluidContainerMillilitresPerUse() end
 
----@return any
+---@return unknown?
 function FireFighting.getSquareToExtinguish(square) end
 
----@return any
+---@return number
 function FireFighting.getWaterUsesFloat(item) end
 
----@return any
+---@return number
 function FireFighting.getWaterUsesInteger(item) end
 
----@return any
+---@param item unknown?
+---@return boolean
 function FireFighting.isExtinguisher(item) end
 
----@return any
+---@return boolean
 function FireFighting.isSquareToExtinguish(square) end

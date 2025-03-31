@@ -685,8 +685,7 @@ forageCategories = {
 		},
 		zoneChance = {
 			BirchForest = 0,
-			DeepForest = 0,
-			DeepForest = 0,
+			DeepForest = 0, ---@type number
 			FarmLand = 0,
 			ForagingNav = 1,
 			Forest = 0,

@@ -1,27 +1,19 @@
 ---@meta
 
 ---@class ISSitOnChairAction : ISBaseTimedAction
----@field character any
----@field item any
----@field maxTime any
----@field stopOnRun any
----@field stopOnWalk any
----@field [any] any
+---@field item unknown
 ISSitOnChairAction = ISBaseTimedAction:derive("ISSitOnChairAction")
+ISSitOnChairAction.Type = "ISSitOnChairAction"
 
----@return any
+---@return boolean
 function ISSitOnChairAction:isValid() end
 
----@return any
 function ISSitOnChairAction:perform() end
 
----@return any
 function ISSitOnChairAction:start() end
 
----@return any
 function ISSitOnChairAction:stop() end
 
----@return any
 function ISSitOnChairAction:update() end
 
 ---@return ISSitOnChairAction

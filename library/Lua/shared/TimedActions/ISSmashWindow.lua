@@ -1,39 +1,34 @@
 ---@meta
 
 ---@class ISSmashWindow : ISBaseTimedAction
----@field maxTime any
----@field useProgressBar any
----@field vehiclePart any
----@field window any
----@field [any] any
+---@field useProgressBar boolean
+---@field vehiclePart unknown?
+---@field window unknown
 ISSmashWindow = ISBaseTimedAction:derive("ISSmashWindow")
+ISSmashWindow.Type = "ISSmashWindow"
 
----@return any
+---@return boolean
 function ISSmashWindow:complete() end
 
----@return any
+---@return number
 function ISSmashWindow:getDuration() end
 
----@return any
+---@return boolean
 function ISSmashWindow:isValid() end
 
----@return any
 function ISSmashWindow:perform() end
 
----@return any
 function ISSmashWindow:serverStart() end
 
----@return any
 function ISSmashWindow:start() end
 
----@return any
 function ISSmashWindow:stop() end
 
----@return any
 function ISSmashWindow:update() end
 
----@return any
+---@return unknown
 function ISSmashWindow:waitToStart() end
 
+---@param vehiclePart unknown?
 ---@return ISSmashWindow
 function ISSmashWindow:new(character, window, vehiclePart) end

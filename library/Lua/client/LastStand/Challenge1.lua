@@ -1,15 +1,13 @@
 ---@meta
 
 ---@class Challenge1
----@field alphaTxt any
----@field lastWaveTime any
----@field wave any
----@field waveTime any
----@field zombiesSpawned any
----@field [any] any
 Challenge1 = {}
 Challenge1.zombiesSpawned = 0
 Challenge1.deadZombie = 0
+Challenge1.wave = 0
+Challenge1.waveTime = 0
+Challenge1.alphaTxt = 0
+Challenge1.lastWaveTime = 0
 Challenge1.id = "Challenge1"
 Challenge1.image = "media/lua/client/LastStand/Challenge1.png"
 Challenge1.world = "challengemaps/Challenge1"
@@ -86,11 +84,7 @@ Challenge1.spawnCount = {
 	58,
 	64,
 }
-Challenge1.wave = 0
 Challenge1.hourOfDay = 3
-Challenge1.alphaTxt = 0
-Challenge1.waveTime = 0
-Challenge1.lastWaveTime = 0
 Challenge1.zombieSpawnsRect = {
 	x = 114,
 	y = 119,
@@ -98,32 +92,24 @@ Challenge1.zombieSpawnsRect = {
 	y2 = 200,
 }
 
----@return any
 function Challenge1.Add() end
 
----@return any
+---@param playerNum number
 function Challenge1.AddPlayer(playerNum, playerObj) end
 
----@return any
 function Challenge1.FillContainers() end
 
----@return any
 function Challenge1.Init() end
 
----@return any
+---@param playerNum number
 function Challenge1.onBackButtonWheel(playerNum, dir) end
 
----@return any
 function Challenge1.OnInitWorld() end
 
----@return any
 function Challenge1.RemovePlayer(playerObj) end
 
----@return any
 function Challenge1.Render() end
 
----@return any
 function Challenge1.SpawnZombies(count) end
 
----@return any
 function Challenge1.Tick() end

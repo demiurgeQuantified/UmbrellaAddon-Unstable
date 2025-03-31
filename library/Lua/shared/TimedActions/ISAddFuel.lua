@@ -1,37 +1,34 @@
 ---@meta
 
 ---@class ISAddFuel : ISBaseTimedAction
----@field fluidCont any
----@field generator any
----@field maxTime any
----@field petrol any
----@field sound any
----@field [any] any
+---@field fluidCont unknown
+---@field generator unknown
+---@field petrol unknown
+---@field sound unknown
 ISAddFuel = ISBaseTimedAction:derive("ISAddFuel")
+ISAddFuel.Type = "ISAddFuel"
 
----@return any
+---@return boolean
 function ISAddFuel:complete() end
 
----@return any
+---@return number
 function ISAddFuel:getDuration() end
 
----@return any
+---@return unknown
 function ISAddFuel:isValid() end
 
----@return any
 function ISAddFuel:perform() end
 
----@return any
 function ISAddFuel:start() end
 
----@return any
 function ISAddFuel:stop() end
 
----@return any
 function ISAddFuel:update() end
 
----@return any
+---@return unknown
 function ISAddFuel:waitToStart() end
 
+---@param character unknown?
+---@param maxTime number?
 ---@return ISAddFuel
 function ISAddFuel:new(character, generator, petrol, maxTime) end

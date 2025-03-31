@@ -1,47 +1,37 @@
 ---@meta
 
 ---@class ISCheatPanelUI : ISPanel
----@field backgroundColor any
----@field borderColor any
----@field height any
----@field instance any
----@field moveWithMouse any
----@field ok any
----@field player any
----@field setFunction any
----@field tickBox any
----@field width any
----@field [any] any
+---@field ok ISButton
+---@field player unknown
+---@field setFunction table
+---@field tickBox ISTickBox
 ISCheatPanelUI = ISPanel:derive("ISCheatPanelUI")
-ISCheatPanelUI.instance = nil
+ISCheatPanelUI.Type = "ISCheatPanelUI"
+ISCheatPanelUI.instance = nil ---@type ISCheatPanelUI?
 ISCheatPanelUI.cheatTooltips = {}
 
----@return any
 function ISCheatPanelUI.EnableCheats() end
 
----@return any
+---@return ISCheatPanelUI?
 function ISCheatPanelUI.OnOpenPanel() end
 
----@return any
 function ISCheatPanelUI:addAdminPowerOptions() end
 
----@return any
 function ISCheatPanelUI:addOption(text, selected, setFunction) end
 
----@return any
 function ISCheatPanelUI:initialise() end
 
----@return any
 function ISCheatPanelUI:onClick(button) end
 
----@return any
 function ISCheatPanelUI:onTicked(index, selected) end
 
----@return any
 function ISCheatPanelUI:prerender() end
 
----@return any
 function ISCheatPanelUI:render() end
 
+---@param x number
+---@param y number
+---@param width number
+---@param height number
 ---@return ISCheatPanelUI
 function ISCheatPanelUI:new(x, y, width, height, player) end

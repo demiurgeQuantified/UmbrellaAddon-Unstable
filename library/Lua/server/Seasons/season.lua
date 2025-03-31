@@ -24,41 +24,28 @@ season.moonAmbient = 0.0
 season.rainToday = 0
 season.wantNoise = getDebug()
 
----@return any
 function season.EveryTenMinutes() end
 
----@return any
 function season.load() end
 
----@return any
 function season.OnGameStart() end
 
----@return any
 function season.OnGameTimeLoaded() end
 
----@return any
 function season.save() end
 
----@return any
 function season.startRain() end
 
----@return any
 function season.updateAmbient() end
 
----@return any
 function season.updateBodyTemperature() end
 
----@return any
 function season.updateMoonPhase() end
 
----@return any
 function season.updateMoonState(currentHour, month) end
 
----@return any
 function season.updateRain() end
 
----@return any
 function season.updateWeather(month, currentHour) end
 
----@return any
 function season.updateWeatherIcon() end

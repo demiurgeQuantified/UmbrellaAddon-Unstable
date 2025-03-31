@@ -1,36 +1,35 @@
 ---@meta
 
 ---@class fishingNet : ISBuildingObject
----@field character any
----@field item any
----@field player any
----@field skipBuildAction any
----@field skipWalk any
----@field [any] any
+---@field character unknown
+---@field item unknown
+---@field player unknown
+---@field skipBuildAction boolean
+---@field skipWalk boolean
 fishingNet = ISBuildingObject:derive("fishingNet")
+fishingNet.Type = "fishingNet"
 
----@return any
 function fishingNet.checkTrap(player, trap, hours) end
 
----@return any
 function fishingNet.doTimestamp(net) end
 
----@return any
 function fishingNet.remove(net, player) end
 
----@return any
 function fishingNet.setBait(net, baitForce) end
 
----@return any
 function fishingNet.updateBait(net) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function fishingNet:create(x, y, z, north, sprite) end
 
----@return any
+---@return boolean
 function fishingNet:isValid(square, north) end
 
----@return any
+---@param x number
+---@param y number
+---@param z number
 function fishingNet:render(x, y, z, square) end
 
 ---@return fishingNet

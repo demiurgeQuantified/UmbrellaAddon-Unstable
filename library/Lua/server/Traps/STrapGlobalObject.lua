@@ -1,106 +1,90 @@
 ---@meta
 
 ---@class STrapGlobalObject : SGlobalObject
----@field animal any
----@field animalAliveHour any
----@field animalHour any
----@field bait any
----@field baitAmountMulti any
----@field closedSprite any
----@field def any
----@field destroyed any
----@field lastUpdate any
----@field openSprite any
----@field player any
----@field trapBait any
----@field trapBaitDay any
----@field trappingSkill any
----@field trapType any
----@field zone any
----@field zones any
----@field [any] any
+---@field animal table
+---@field animalAliveHour number
+---@field animalHour number
+---@field bait string?
+---@field baitAmountMulti number
+---@field closedSprite string
+---@field def unknown
+---@field destroyed boolean
+---@field lastUpdate number
+---@field openSprite string
+---@field player string
+---@field trapBait string
+---@field trapBaitDay number
+---@field trappingSkill number
+---@field trapType string
+---@field zone string
+---@field zones table
 STrapGlobalObject = SGlobalObject:derive("STrapGlobalObject")
+STrapGlobalObject.Type = "STrapGlobalObject"
 
----@return any
 function STrapGlobalObject.SpawnDestroyItems(trapType, square, object) end
 
----@return any
+---@return unknown?
 function STrapGlobalObject:addAliveAnimal(character) end
 
----@return any
 function STrapGlobalObject:addBait(bait, age, baitAmountMulti, player) end
 
----@return any
 function STrapGlobalObject:addSound(square) end
 
----@return any
 function STrapGlobalObject:calculTrap(square) end
 
----@return any
+---@return unknown
 function STrapGlobalObject:checkBaitFreshness() end
 
----@return any
 function STrapGlobalObject:checkDestroy(square) end
 
----@return any
 function STrapGlobalObject:checkForAnimal(square) end
 
----@return any
+---@return boolean
 function STrapGlobalObject:checkForWallExploit(square) end
 
----@return any
+---@return boolean?
 function STrapGlobalObject:checkTime(animal) end
 
----@return any
 function STrapGlobalObject:fromModData(modData) end
 
----@return any
 function STrapGlobalObject:initNew() end
 
----@return any
+---@return boolean
 function STrapGlobalObject:isMetalTrap() end
 
----@return any
+---@return boolean
 function STrapGlobalObject:isWoodenTrap() end
 
----@return any
 function STrapGlobalObject:reinitModData(square) end
 
----@return any
+---@return unknown?
 function STrapGlobalObject:removeAnimal(character) end
 
----@return any
 function STrapGlobalObject:removeBait(character) end
 
----@return any
+---@param soundName string
 function STrapGlobalObject:sendSound(soundName, square) end
 
----@return any
 function STrapGlobalObject:setAnimal(animal) end
 
----@return any
 function STrapGlobalObject:setDef() end
 
----@return any
 function STrapGlobalObject:setZones(square) end
 
----@return any
 function STrapGlobalObject:spawnDestroyItems(square, object) end
 
----@return any
 function STrapGlobalObject:stateFromIsoObject(isoObject) end
 
----@return any
 function STrapGlobalObject:stateToIsoObject(isoObject) end
 
----@return any
+---@param zoneType string
+---@param animalsList table
 function STrapGlobalObject:testForAnimal(zoneType, animalsList) end
 
----@return any
 function STrapGlobalObject:toModData(modData) end
 
----@return any
 function STrapGlobalObject:toObject(object, transmitData) end
 
+---@param luaSystem STrapSystem
 ---@return STrapGlobalObject
 function STrapGlobalObject:new(luaSystem, globalObject) end
