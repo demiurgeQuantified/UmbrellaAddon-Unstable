@@ -2,12 +2,20 @@
 
 ---@class CraftRecipeCode
 CraftRecipeCode = {}
-CraftRecipeCode.test = {
-	---@return boolean
-	OnTest = function(_craftProcessor) end,
-	OnStart = function(_craftProcessor) end,
-	OnUpdate = function(_craftProcessor) end,
-	OnCreate = function(_craftProcessor) end,
-	OnFailed = function(_craftProcessor) end,
-	moreDebugPrints = function(_craftProcessor) end,
-}
+CraftRecipeCode.test = nil ---@type CraftRecipeCode.test
+
+---@class CraftRecipeCode.test
+local __craftRecipeCode_test = {}
+
+function __craftRecipeCode_test.moreDebugPrints(_craftProcessor) end
+
+function __craftRecipeCode_test.OnCreate(_craftProcessor) end
+
+function __craftRecipeCode_test.OnFailed(_craftProcessor) end
+
+function __craftRecipeCode_test.OnStart(_craftProcessor) end
+
+---@return boolean
+function __craftRecipeCode_test.OnTest(_craftProcessor) end
+
+function __craftRecipeCode_test.OnUpdate(_craftProcessor) end

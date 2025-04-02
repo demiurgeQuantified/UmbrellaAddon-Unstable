@@ -2,9 +2,9 @@
 
 ---@class Fishing
 Fishing = {}
-Fishing.FishingManager = nil ---@type FishingManager
+Fishing.FishingManager = nil ---@type Fishing.FishingManager
 
----@class FishingManager
+---@class Fishing.FishingManager
 ---@field fishingRod unknown?
 ---@field joypad unknown
 ---@field onSave function
@@ -13,30 +13,30 @@ Fishing.FishingManager = nil ---@type FishingManager
 ---@field state Fishing.States.None?
 ---@field states table
 ---@field tensionUI Fishing.ISTensionUI
-local __fishingManager = {}
+local __fishing_FishingManager = {}
 
-function __fishingManager.onFishingActionMPUpdate(data) end
+function __fishing_FishingManager.onFishingActionMPUpdate(data) end
 
 ---@param stateName string
-function __fishingManager:changeState(stateName) end
+function __fishing_FishingManager:changeState(stateName) end
 
-function __fishingManager:destroy() end
+function __fishing_FishingManager:destroy() end
 
-function __fishingManager:disable() end
+function __fishing_FishingManager:disable() end
 
-function __fishingManager:eventHooks() end
+function __fishing_FishingManager:eventHooks() end
 
-function __fishingManager:initStates() end
+function __fishing_FishingManager:initStates() end
 
-function __fishingManager:initTensionUI() end
+function __fishing_FishingManager:initTensionUI() end
 
-function __fishingManager:removeEventHooks() end
+function __fishing_FishingManager:removeEventHooks() end
 
-function __fishingManager:update() end
+function __fishing_FishingManager:update() end
 
-function __fishingManager:updateAnim() end
+function __fishing_FishingManager:updateAnim() end
 
-function __fishingManager:updateTensionUI() end
+function __fishing_FishingManager:updateTensionUI() end
 
----@return FishingManager
-function __fishingManager:new(player, joypad) end
+---@return Fishing.FishingManager
+function __fishing_FishingManager:new(player, joypad) end

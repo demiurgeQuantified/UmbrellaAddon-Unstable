@@ -2,6 +2,7 @@
 
 ---@class SpecialLootSpawns
 SpecialLootSpawns = {}
+SpecialLootSpawns.OnCreateRegion = nil ---@type SpecialLootSpawns.OnCreateRegion
 
 ---@param list table
 ---@param multipleChance number
@@ -317,3 +318,10 @@ function SpecialLootSpawns.OnCreateTVMagazine(item) end
 function SpecialLootSpawns.OnCreateWaterBottle(item) end
 
 function SpecialLootSpawns.OnCreateWesternBook(item) end
+
+---@class SpecialLootSpawns.OnCreateRegion
+local __specialLootSpawns_OnCreateRegion = {}
+
+function __specialLootSpawns_OnCreateRegion.Newspaper_New(item, region) end
+
+function __specialLootSpawns_OnCreateRegion.Newspaper_Recent(item, region) end

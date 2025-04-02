@@ -12,6 +12,6 @@ function __UI_ImageButton:onHover(state) end
 
 function __UI_ImageButton:onLeftClick() end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.ImageButton = nil ---@type UI.ImageButton
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.ImageButton = nil ---@type UI.ImageButton

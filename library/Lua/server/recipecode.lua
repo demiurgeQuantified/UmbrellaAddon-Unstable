@@ -2,301 +2,12 @@
 
 ---@class Recipe
 Recipe = {}
-Recipe.GetItemTypes = {
-	AnimalBrain = function(scriptItems) end,
-	MeatCleaver = function(scriptItems) end,
-	MixingUtensil = function(scriptItems) end,
-	AnimalHead = function(scriptItems) end,
-	CraftLogStack = function(scriptItems) end,
-	FishingLine = function(scriptItems) end,
-	CraftSheetRope = function(scriptItems) end,
-	DismantleDigitalWatch = function(scriptItems) end,
-}
-Recipe.OnCanPerform = {
-	---@return boolean
-	Uncooked = function(recipe, playerObj, item) end,
-
-	---@return boolean
-	HalloweenPumpkin = function(recipe, playerObj, item) end,
-
-	---@return boolean
-	SliceCooked = function(recipe, playerObj, item) end,
-
-	---@return boolean
-	HockeyMaskSmashBottle = function(recipe, playerObj) end,
-
-	---@return boolean
-	CleanMuffin = function(recipe, playerObj, item) end,
-
-	---@return unknown
-	GetBiscuit = function(recipe, playerObj, item) end,
-
-	---@return boolean
-	SlicePizza = function(recipe, playerObj, item) end,
-
-	---@return boolean?
-	RipClothing = function(recipe, playerObj, item) end,
-
-	---@return boolean?
-	OpenFire = function(recipe) end,
-}
-Recipe.OnCreate = {
-	HotCuppa = function(craftRecipeData, character) end,
-	RefillBlowTorch = function(craftRecipeData, character) end,
-	RefillLighter = function(craftRecipeData, character) end,
-	SetEcruColor = function(craftRecipeData, character) end,
-	TorchBatteryRemoval = function(craftRecipeData, character) end,
-	TorchBatteryInsert = function(craftRecipeData, character) end,
-	DismantleFlashlight = function(craftRecipeData, character) end,
-	InheritColorFromMaterial = function(craftRecipeData, character) end,
-	InheritTextureVariation = function(craftRecipeData, character) end,
-	ShotgunSawnoff = function(craftRecipeData, character) end,
-	CleanTaintedFood = function(craftRecipeData, character) end,
-	AddBaseIngredientToCookingVessel = function(craftRecipeData, character) end,
-	Make4Bowls = function(craftRecipeData, character) end,
-	Make2Bowls = function(craftRecipeData, character) end,
-	Slice3 = function(craftRecipeData, character) end,
-	Slice5 = function(craftRecipeData, character) end,
-	CutFish = function(craftRecipeData, character) end,
-	CutFillet = function(craftRecipeData, character) end,
-	CutAnimal = function(craftRecipeData, character) end,
-	CannedFood = function(craftRecipeData, character) end,
-	OpenCannedFood = function(craftRecipeData, character) end,
-	CreateLogStack = function(craftRecipeData, character) end,
-	SplitLogStack = function(craftRecipeData, character) end,
-	SplitFirewoodBundle = function(craftRecipeData, character) end,
-	Dismantle2 = function(craftRecipeData, character) end,
-	DismantleMiscElectronics = function(craftRecipeData, character) end,
-	SpikedBat = function(craftRecipeData, character) end,
-	FixFishingRod = function(craftRecipeData, character) end,
-	CreateFishingRod = function(craftRecipeData, character) end,
-	OpenEggCarton = function(craftRecipeData, character) end,
-	PutEggsInCarton = function(craftRecipeData, character) end,
-	DismantleRadioSpecial = function(craftRecipeData, character) end,
-	DismantleRadioTwoWay = function(craftRecipeData, character) end,
-	DismantleRadio = function(craftRecipeData, character) end,
-	DismantleRadioTV = function(craftRecipeData, character) end,
-	RadioCraft = function(craftRecipeData, character) end,
-	RipClothing = function(craftRecipeData, character) end,
-	PickThread = function(craftRecipeData, character) end,
-	GatherGunpowder = function(craftRecipeData, character) end,
-	WashClothing = function(craftRecipeData, character) end,
-	PurifyWater = function(craftRecipeData, character) end,
-	CarveSpear = function(craftRecipeData, character) end,
-	FireHardenSpear = function(craftRecipeData, character) end,
-	UpgradeSpear = function(craftRecipeData, character) end,
-	DismantleSpear = function(craftRecipeData, character) end,
-	SliceWatermelon = function(craftRecipeData, character) end,
-	SliceHam = function(craftRecipeData, character) end,
-	SliceSalami = function(craftRecipeData, character) end,
-	OpenCan = function(craftRecipeData, character) end,
-	OpenMysteryCan = function(craftRecipeData, character) end,
-	OpenMysteryCanKnife = function(craftRecipeData, character) end,
-	OpenWaterCan = function(craftRecipeData, character) end,
-	OpenWaterCanKnife = function(craftRecipeData, character) end,
-	OpenDentedCan = function(craftRecipeData, character) end,
-	OpenDentedCanKnife = function(items, result, player, selectedItem) end,
-	CloseUmbrella = function(craftRecipeData, character) end,
-	GetMuffin = function(craftRecipeData, character) end,
-	GetBiscuit = function(craftRecipeData, character) end,
-	GetCookies = function(craftRecipeData, character) end,
-	SlicePizza = function(craftRecipeData, character) end,
-	DynamicMovable = function(items, result, player, selectedItem) end,
-	OpenSackProduce = function(craftRecipeData, character) end,
-	BeanBowl = function(craftRecipeData, character) end,
-	MakeOatmeal = function(craftRecipeData, character) end,
-	MakeCooked = function(craftRecipeData, character) end,
-	CarvePumpkin = function(craftRecipeData, character) end,
-	SliceOnion = function(craftRecipeData, character) end,
-	OpenBeer = function(craftRecipeData, character) end,
-	OpenChampagne = function(craftRecipeData, character) end,
-	OpenBagFrozenFood = function(craftRecipeData, character) end,
-	AddToPack = function(craftRecipeData, character) end,
-	DrawRandomCard = function(craftRecipeData, character) end,
-	RollOneDice = function(craftRecipeData, character) end,
-	RollDice = function(craftRecipeData, character) end,
-	Roll3d6 = function(craftRecipeData, character) end,
-	Rolld100 = function(craftRecipeData, character) end,
-	Propane_RefillRemoval = function(craftRecipeData, character) end,
-	Propane_RefillInsert = function(craftRecipeData, character) end,
-	LightHurricaneLantern = function(craftRecipeData, character) end,
-	ExtinguishHurricaneLantern = function(craftRecipeData, character) end,
-	RefillHurricaneLantern = function(craftRecipeData, character) end,
-	ScratchTicket = function(craftRecipeData, character) end,
-	MeatPatty = function(craftRecipeData, character) end,
-	CreateUnpack = function(craftRecipeData, character) end,
-	MakeWireFromBarbedWire = function(craftRecipeData, character) end,
-	GasmaskFilterRemoval = function(craftRecipeData, character) end,
-	GasmaskFilterInsert = function(craftRecipeData, character) end,
-	WornGasmaskFilterInsert = function(craftRecipeData, character) end,
-	OxygenTankRemoval = function(craftRecipeData, character) end,
-	OxygenTankAttach = function(craftRecipeData, character) end,
-	ScrapJewellery = function(craftRecipeData, character) end,
-	Blacksmith1 = function(entity) end,
-	Blacksmith10 = function(entity) end,
-	Blacksmith20 = function(entity) end,
-	Blacksmith25 = function(entity) end,
-	Blacksmith1_NoProductCondition = function(entity) end,
-	Blacksmith10_NoProductCondition = function(entity) end,
-	Blacksmith20_NoProductCondition = function(entity) end,
-	Blacksmith25_NoProductCondition = function(entity) end,
-	BlacksmithGeneral = function(entity) end,
-	BreakOnSmith = function(entity) end,
-	ChangeSawblade = function(craftRecipeData, character) end,
-	BasicCarving = function(craftRecipeData, character) end,
-	MinorCarving = function(craftRecipeData, character) end,
-	BasicKnapping = function(craftRecipeData, character) end,
-	MinorKnapping = function(craftRecipeData, character) end,
-	MinorMasonry = function(craftRecipeData, character) end,
-	BasicCondition = function(craftRecipeData, character, characterSkill) end,
-	MinorCondition = function(craftRecipeData, character, characterSkill) end,
-	MakeBlunt = function(craftRecipeData, character) end,
-	BasicSawMetal = function(craftRecipeData, character) end,
-	BasicGrindMetal = function(craftRecipeData, character) end,
-	SharpenBlade = function(craftRecipeData, player) end,
-	SharpenBladePoor = function(craftRecipeData, player) end,
-	SharpenBladeWithGrindstone = function(craftRecipeData, player) end,
-	RepairBladeWithGrindstone = function(craftRecipeData, player) end,
-	GenericSharpen = function(player, item, skill, factor) end,
-	DismantleBlade = function(entity) end,
-	RemoveGem = function(craftRecipeData, character) end,
-	SliceAnimalHead = function(craftRecipeData, character) end,
-	HollowBook = function(craftRecipeData, character) end,
-	CutChicken = function(craftRecipeData, character) end,
-	EmptyDrainable = function(craftRecipeData, character) end,
-	PlaceInBox = function(craftRecipeData, character) end,
-	UnpackBox = function(craftRecipeData, character) end,
-	KnappFlake = function(craftRecipeData, character) end,
-	SlightlyMoreDurable = function(craftRecipeData, character) end,
-	UntieHeadband = function(craftRecipeData, character) end,
-}
-Recipe.OnGiveXP = {
-	Default = function(recipe, ingredients, result, player) end,
-	DismantleElectronics = function(recipe, ingredients, result, player) end,
-	SawLogs = function(recipe, ingredients, result, player) end,
-	DismantleRadio = function(recipe, ingredients, result, player) end,
-	RadioCraft = function(recipe, ingredients, result, player) end,
-	DynamicMovable = function(recipe, ingredients, result, player) end,
-}
-Recipe.OnTest = {
-	---@return boolean
-	BottleNotOpened = function(item) end,
-
-	---@return boolean
-	BottleNotOpenedNotTainted = function(item) end,
-
-	---@return boolean
-	BreakGlass = function(item) end,
-
-	---@return boolean
-	HotFluidContainer = function(item) end,
-
-	---@return boolean
-	TaintedFood = function(item) end,
-
-	---@return boolean
-	WholeBreadSlices = function(item) end,
-
-	---@return boolean
-	FullPetrolBottle = function(item) end,
-
-	---@return boolean
-	NotTaintedWater = function(item) end,
-
-	---@return boolean
-	SliceBreadDough = function(sourceItem, result) end,
-
-	---@return boolean
-	CutFish = function(sourceItem, result) end,
-
-	---@return boolean
-	CutFillet = function(sourceItem, result) end,
-
-	---@return boolean?
-	WashClothing = function(sourceItem, result) end,
-
-	---@return boolean?
-	PurifyWater = function(sourceItem, result) end,
-
-	---@return boolean
-	CanAddToPack = function(item) end,
-
-	---@return boolean
-	IsFull = function(sourceItem) end,
-
-	---@return boolean
-	Propane_RefillRemoval = function(item) end,
-
-	---@return boolean
-	Propane_RefillInsert = function(sourceItem, result) end,
-
-	---@return boolean
-	RefillHurricaneLantern = function(item) end,
-
-	---@return boolean
-	ScratchTicket = function(sourceItem, result) end,
-
-	---@return unknown
-	EmptyBag = function(sourceItem, result) end,
-
-	---@return boolean
-	FullRoll = function(sourceItem, result) end,
-
-	---@return boolean
-	GasmaskFilterRemoval = function(sourceItem, result) end,
-
-	---@return boolean
-	GasmaskFilterCraftedRemoval = function(sourceItem, result) end,
-
-	---@return boolean
-	RespiratorFilterRemoval = function(item) end,
-
-	---@return boolean
-	RespiratorFilterRechargedRemoval = function(sourceItem, result) end,
-
-	---@return boolean
-	GasmaskFilterInsert = function(sourceItem, result) end,
-
-	---@return boolean
-	WornGasmaskFilterInsert = function(sourceItem, result) end,
-
-	---@return boolean
-	GasmaskFilterNotFull = function(sourceItem, result) end,
-
-	---@return boolean
-	RespiratorFilterNotFull = function(sourceItem, result) end,
-
-	---@return boolean
-	OxygenTankRemoval = function(sourceItem, result) end,
-
-	---@return boolean
-	OxygenTankAttach = function(sourceItem, result) end,
-
-	---@return boolean
-	OnlyBrokenHandle = function(sourceItem, result) end,
-
-	---@return boolean
-	OnlyBrokenSaw = function(sourceItem, result) end,
-
-	---@return boolean?
-	EntityRepairFull = function(entity) end,
-
-	---@return boolean
-	NotTainted = function(item) end,
-
-	---@return boolean?
-	GenericPacking = function(item, result) end,
-
-	---@return boolean
-	NormalGoodFullFood = function(item, result) end,
-
-	---@return boolean
-	NotWornLowerBody = function(item, result) end,
-}
-Recipe.WeaponParts = {
-	---@return boolean
-	hasScrewdriver = function(character, weapon, weaponPart) end,
-}
+Recipe.GetItemTypes = nil ---@type Recipe.GetItemTypes
+Recipe.OnCanPerform = nil ---@type Recipe.OnCanPerform
+Recipe.OnCreate = nil ---@type Recipe.OnCreate
+Recipe.OnGiveXP = nil ---@type Recipe.OnGiveXP
+Recipe.OnTest = nil ---@type Recipe.OnTest
+Recipe.WeaponParts = nil ---@type Recipe.WeaponParts
 Recipe.MysteryCans = {
 	"Base.CannedBologneseOpen",
 	"Base.CannedCarrotsOpen",
@@ -469,6 +180,452 @@ Recipe.JewelTable = {
 		bonusItem = "Base.BellyButton_StudSilver",
 	},
 }
+
+---@class Recipe.OnCreate
+local __recipe_OnCreate = {}
+
+function __recipe_OnCreate.AddBaseIngredientToCookingVessel(craftRecipeData, character) end
+
+function __recipe_OnCreate.AddToPack(craftRecipeData, character) end
+
+function __recipe_OnCreate.BasicCarving(craftRecipeData, character) end
+
+function __recipe_OnCreate.BasicCondition(craftRecipeData, character, characterSkill) end
+
+function __recipe_OnCreate.BasicGrindMetal(craftRecipeData, character) end
+
+function __recipe_OnCreate.BasicKnapping(craftRecipeData, character) end
+
+function __recipe_OnCreate.BasicSawMetal(craftRecipeData, character) end
+
+function __recipe_OnCreate.BeanBowl(craftRecipeData, character) end
+
+function __recipe_OnCreate.Blacksmith1(entity) end
+
+function __recipe_OnCreate.Blacksmith1_NoProductCondition(entity) end
+
+function __recipe_OnCreate.Blacksmith10(entity) end
+
+function __recipe_OnCreate.Blacksmith10_NoProductCondition(entity) end
+
+function __recipe_OnCreate.Blacksmith20(entity) end
+
+function __recipe_OnCreate.Blacksmith20_NoProductCondition(entity) end
+
+function __recipe_OnCreate.Blacksmith25(entity) end
+
+function __recipe_OnCreate.Blacksmith25_NoProductCondition(entity) end
+
+function __recipe_OnCreate.BlacksmithGeneral(entity) end
+
+function __recipe_OnCreate.BreakOnSmith(entity) end
+
+function __recipe_OnCreate.CannedFood(craftRecipeData, character) end
+
+function __recipe_OnCreate.CarvePumpkin(craftRecipeData, character) end
+
+function __recipe_OnCreate.CarveSpear(craftRecipeData, character) end
+
+function __recipe_OnCreate.ChangeSawblade(craftRecipeData, character) end
+
+function __recipe_OnCreate.CleanTaintedFood(craftRecipeData, character) end
+
+function __recipe_OnCreate.CloseUmbrella(craftRecipeData, character) end
+
+function __recipe_OnCreate.CreateFishingRod(craftRecipeData, character) end
+
+function __recipe_OnCreate.CreateLogStack(craftRecipeData, character) end
+
+function __recipe_OnCreate.CreateUnpack(craftRecipeData, character) end
+
+function __recipe_OnCreate.CutAnimal(craftRecipeData, character) end
+
+function __recipe_OnCreate.CutChicken(craftRecipeData, character) end
+
+function __recipe_OnCreate.CutFillet(craftRecipeData, character) end
+
+function __recipe_OnCreate.CutFish(craftRecipeData, character) end
+
+function __recipe_OnCreate.Dismantle2(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleBlade(entity) end
+
+function __recipe_OnCreate.DismantleFlashlight(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleMiscElectronics(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleRadio(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleRadioSpecial(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleRadioTV(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleRadioTwoWay(craftRecipeData, character) end
+
+function __recipe_OnCreate.DismantleSpear(craftRecipeData, character) end
+
+function __recipe_OnCreate.DrawRandomCard(craftRecipeData, character) end
+
+function __recipe_OnCreate.DynamicMovable(items, result, player, selectedItem) end
+
+function __recipe_OnCreate.EmptyDrainable(craftRecipeData, character) end
+
+function __recipe_OnCreate.ExtinguishHurricaneLantern(craftRecipeData, character) end
+
+function __recipe_OnCreate.FireHardenSpear(craftRecipeData, character) end
+
+function __recipe_OnCreate.FixFishingRod(craftRecipeData, character) end
+
+function __recipe_OnCreate.GasmaskFilterInsert(craftRecipeData, character) end
+
+function __recipe_OnCreate.GasmaskFilterRemoval(craftRecipeData, character) end
+
+function __recipe_OnCreate.GatherGunpowder(craftRecipeData, character) end
+
+function __recipe_OnCreate.GenericSharpen(player, item, skill, factor) end
+
+function __recipe_OnCreate.GetBiscuit(craftRecipeData, character) end
+
+function __recipe_OnCreate.GetCookies(craftRecipeData, character) end
+
+function __recipe_OnCreate.GetMuffin(craftRecipeData, character) end
+
+function __recipe_OnCreate.HollowBook(craftRecipeData, character) end
+
+function __recipe_OnCreate.HotCuppa(craftRecipeData, character) end
+
+function __recipe_OnCreate.InheritColorFromMaterial(craftRecipeData, character) end
+
+function __recipe_OnCreate.InheritTextureVariation(craftRecipeData, character) end
+
+function __recipe_OnCreate.KnappFlake(craftRecipeData, character) end
+
+function __recipe_OnCreate.LightHurricaneLantern(craftRecipeData, character) end
+
+function __recipe_OnCreate.Make2Bowls(craftRecipeData, character) end
+
+function __recipe_OnCreate.Make4Bowls(craftRecipeData, character) end
+
+function __recipe_OnCreate.MakeBlunt(craftRecipeData, character) end
+
+function __recipe_OnCreate.MakeCooked(craftRecipeData, character) end
+
+function __recipe_OnCreate.MakeOatmeal(craftRecipeData, character) end
+
+function __recipe_OnCreate.MakeWireFromBarbedWire(craftRecipeData, character) end
+
+function __recipe_OnCreate.MeatPatty(craftRecipeData, character) end
+
+function __recipe_OnCreate.MinorCarving(craftRecipeData, character) end
+
+function __recipe_OnCreate.MinorCondition(craftRecipeData, character, characterSkill) end
+
+function __recipe_OnCreate.MinorKnapping(craftRecipeData, character) end
+
+function __recipe_OnCreate.MinorMasonry(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenBagFrozenFood(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenBeer(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenCan(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenCannedFood(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenChampagne(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenDentedCan(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenDentedCanKnife(items, result, player, selectedItem) end
+
+function __recipe_OnCreate.OpenEggCarton(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenMysteryCan(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenMysteryCanKnife(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenSackProduce(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenWaterCan(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenWaterCanKnife(craftRecipeData, character) end
+
+function __recipe_OnCreate.OxygenTankAttach(craftRecipeData, character) end
+
+function __recipe_OnCreate.OxygenTankRemoval(craftRecipeData, character) end
+
+function __recipe_OnCreate.PickThread(craftRecipeData, character) end
+
+function __recipe_OnCreate.PlaceInBox(craftRecipeData, character) end
+
+function __recipe_OnCreate.Propane_RefillInsert(craftRecipeData, character) end
+
+function __recipe_OnCreate.Propane_RefillRemoval(craftRecipeData, character) end
+
+function __recipe_OnCreate.PurifyWater(craftRecipeData, character) end
+
+function __recipe_OnCreate.PutEggsInCarton(craftRecipeData, character) end
+
+function __recipe_OnCreate.RadioCraft(craftRecipeData, character) end
+
+function __recipe_OnCreate.RefillBlowTorch(craftRecipeData, character) end
+
+function __recipe_OnCreate.RefillHurricaneLantern(craftRecipeData, character) end
+
+function __recipe_OnCreate.RefillLighter(craftRecipeData, character) end
+
+function __recipe_OnCreate.RemoveGem(craftRecipeData, character) end
+
+function __recipe_OnCreate.RepairBladeWithGrindstone(craftRecipeData, player) end
+
+function __recipe_OnCreate.RipClothing(craftRecipeData, character) end
+
+function __recipe_OnCreate.Roll3d6(craftRecipeData, character) end
+
+function __recipe_OnCreate.Rolld100(craftRecipeData, character) end
+
+function __recipe_OnCreate.RollDice(craftRecipeData, character) end
+
+function __recipe_OnCreate.RollOneDice(craftRecipeData, character) end
+
+function __recipe_OnCreate.ScrapJewellery(craftRecipeData, character) end
+
+function __recipe_OnCreate.ScratchTicket(craftRecipeData, character) end
+
+function __recipe_OnCreate.SetEcruColor(craftRecipeData, character) end
+
+function __recipe_OnCreate.SharpenBlade(craftRecipeData, player) end
+
+function __recipe_OnCreate.SharpenBladePoor(craftRecipeData, player) end
+
+function __recipe_OnCreate.SharpenBladeWithGrindstone(craftRecipeData, player) end
+
+function __recipe_OnCreate.ShotgunSawnoff(craftRecipeData, character) end
+
+function __recipe_OnCreate.Slice3(craftRecipeData, character) end
+
+function __recipe_OnCreate.Slice5(craftRecipeData, character) end
+
+function __recipe_OnCreate.SliceAnimalHead(craftRecipeData, character) end
+
+function __recipe_OnCreate.SliceHam(craftRecipeData, character) end
+
+function __recipe_OnCreate.SliceOnion(craftRecipeData, character) end
+
+function __recipe_OnCreate.SlicePizza(craftRecipeData, character) end
+
+function __recipe_OnCreate.SliceSalami(craftRecipeData, character) end
+
+function __recipe_OnCreate.SliceWatermelon(craftRecipeData, character) end
+
+function __recipe_OnCreate.SlightlyMoreDurable(craftRecipeData, character) end
+
+function __recipe_OnCreate.SpikedBat(craftRecipeData, character) end
+
+function __recipe_OnCreate.SplitFirewoodBundle(craftRecipeData, character) end
+
+function __recipe_OnCreate.SplitLogStack(craftRecipeData, character) end
+
+function __recipe_OnCreate.TorchBatteryInsert(craftRecipeData, character) end
+
+function __recipe_OnCreate.TorchBatteryRemoval(craftRecipeData, character) end
+
+function __recipe_OnCreate.UnpackBox(craftRecipeData, character) end
+
+function __recipe_OnCreate.UntieHeadband(craftRecipeData, character) end
+
+function __recipe_OnCreate.UpgradeSpear(craftRecipeData, character) end
+
+function __recipe_OnCreate.WashClothing(craftRecipeData, character) end
+
+function __recipe_OnCreate.WornGasmaskFilterInsert(craftRecipeData, character) end
+
+---@class Recipe.GetItemTypes
+local __recipe_GetItemTypes = {}
+
+function __recipe_GetItemTypes.AnimalBrain(scriptItems) end
+
+function __recipe_GetItemTypes.AnimalHead(scriptItems) end
+
+function __recipe_GetItemTypes.CraftLogStack(scriptItems) end
+
+function __recipe_GetItemTypes.CraftSheetRope(scriptItems) end
+
+function __recipe_GetItemTypes.DismantleDigitalWatch(scriptItems) end
+
+function __recipe_GetItemTypes.FishingLine(scriptItems) end
+
+function __recipe_GetItemTypes.MeatCleaver(scriptItems) end
+
+function __recipe_GetItemTypes.MixingUtensil(scriptItems) end
+
+---@class Recipe.OnTest
+local __recipe_OnTest = {}
+
+---@return boolean
+function __recipe_OnTest.BottleNotOpened(item) end
+
+---@return boolean
+function __recipe_OnTest.BottleNotOpenedNotTainted(item) end
+
+---@return boolean
+function __recipe_OnTest.BreakGlass(item) end
+
+---@return boolean
+function __recipe_OnTest.CanAddToPack(item) end
+
+---@return boolean
+function __recipe_OnTest.CutFillet(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.CutFish(sourceItem, result) end
+
+---@return unknown
+function __recipe_OnTest.EmptyBag(sourceItem, result) end
+
+---@return boolean?
+function __recipe_OnTest.EntityRepairFull(entity) end
+
+---@return boolean
+function __recipe_OnTest.FullPetrolBottle(item) end
+
+---@return boolean
+function __recipe_OnTest.FullRoll(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.GasmaskFilterCraftedRemoval(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.GasmaskFilterInsert(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.GasmaskFilterNotFull(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.GasmaskFilterRemoval(sourceItem, result) end
+
+---@return boolean?
+function __recipe_OnTest.GenericPacking(item, result) end
+
+---@return boolean
+function __recipe_OnTest.HotFluidContainer(item) end
+
+---@return boolean
+function __recipe_OnTest.IsFull(sourceItem) end
+
+---@return boolean
+function __recipe_OnTest.NormalGoodFullFood(item, result) end
+
+---@return boolean
+function __recipe_OnTest.NotTainted(item) end
+
+---@return boolean
+function __recipe_OnTest.NotTaintedWater(item) end
+
+---@return boolean
+function __recipe_OnTest.NotWornLowerBody(item, result) end
+
+---@return boolean
+function __recipe_OnTest.OnlyBrokenHandle(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.OnlyBrokenSaw(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.OxygenTankAttach(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.OxygenTankRemoval(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.Propane_RefillInsert(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.Propane_RefillRemoval(item) end
+
+---@return boolean?
+function __recipe_OnTest.PurifyWater(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.RefillHurricaneLantern(item) end
+
+---@return boolean
+function __recipe_OnTest.RespiratorFilterNotFull(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.RespiratorFilterRechargedRemoval(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.RespiratorFilterRemoval(item) end
+
+---@return boolean
+function __recipe_OnTest.ScratchTicket(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.SliceBreadDough(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.TaintedFood(item) end
+
+---@return boolean?
+function __recipe_OnTest.WashClothing(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.WholeBreadSlices(item) end
+
+---@return boolean
+function __recipe_OnTest.WornGasmaskFilterInsert(sourceItem, result) end
+
+---@class Recipe.OnGiveXP
+local __recipe_OnGiveXP = {}
+
+function __recipe_OnGiveXP.Default(recipe, ingredients, result, player) end
+
+function __recipe_OnGiveXP.DismantleElectronics(recipe, ingredients, result, player) end
+
+function __recipe_OnGiveXP.DismantleRadio(recipe, ingredients, result, player) end
+
+function __recipe_OnGiveXP.DynamicMovable(recipe, ingredients, result, player) end
+
+function __recipe_OnGiveXP.RadioCraft(recipe, ingredients, result, player) end
+
+function __recipe_OnGiveXP.SawLogs(recipe, ingredients, result, player) end
+
+---@class Recipe.OnCanPerform
+local __recipe_OnCanPerform = {}
+
+---@return boolean
+function __recipe_OnCanPerform.CleanMuffin(recipe, playerObj, item) end
+
+---@return unknown
+function __recipe_OnCanPerform.GetBiscuit(recipe, playerObj, item) end
+
+---@return boolean
+function __recipe_OnCanPerform.HalloweenPumpkin(recipe, playerObj, item) end
+
+---@return boolean
+function __recipe_OnCanPerform.HockeyMaskSmashBottle(recipe, playerObj) end
+
+---@return boolean?
+function __recipe_OnCanPerform.OpenFire(recipe) end
+
+---@return boolean?
+function __recipe_OnCanPerform.RipClothing(recipe, playerObj, item) end
+
+---@return boolean
+function __recipe_OnCanPerform.SliceCooked(recipe, playerObj, item) end
+
+---@return boolean
+function __recipe_OnCanPerform.SlicePizza(recipe, playerObj, item) end
+
+---@return boolean
+function __recipe_OnCanPerform.Uncooked(recipe, playerObj, item) end
+
+---@class Recipe.WeaponParts
+local __recipe_WeaponParts = {}
+
+---@return boolean
+function __recipe_WeaponParts.hasScrewdriver(character, weapon, weaponPart) end
 
 function BSItem_OnCreate(items, result, player) end
 

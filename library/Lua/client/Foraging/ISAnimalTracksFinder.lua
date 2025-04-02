@@ -2,7 +2,7 @@
 
 ---@class ISAnimalTracksFinder
 ISAnimalTracksFinder = {}
-ISAnimalTracksFinder.tracks = nil ---@type table
+ISAnimalTracksFinder.tracks = {}
 ISAnimalTracksFinder.tick = 0
 
 function ISAnimalTracksFinder.getAnimalTracks(chr, tracks) end

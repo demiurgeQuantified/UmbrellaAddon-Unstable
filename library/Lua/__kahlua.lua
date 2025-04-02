@@ -30,7 +30,6 @@ function table.isempty(table) end
 ---@param table table
 function table.wipe(table) end
 
----@param ... unknown
 ---@return table
 ---@overload fun(table: table): table
 function table.newarray(...) end
@@ -50,7 +49,6 @@ function __random:random(m, n) end
 ---@param value unknown?
 function __random:seed(value) end
 
----@param value unknown
 ---@param multiline string?
 ---@param indent string?
 ---@return string
@@ -60,7 +58,6 @@ function serialize(value, multiline, indent) end
 ---@return unknown
 function deserialize(s) end
 
----@param value unknown
 ---@return string
 function pp(value) end
 

@@ -4,19 +4,6 @@
 MusicChoices = {
 	drama = 0,
 	last = "",
-
-	---@return boolean?
-	compareByDrama = function(a, b) end,
-
-	---@return boolean?
-	compareByAmbientDrama = function(a, b) end,
-
-	---@param drama number
-	---@return unknown
-	get = function(drama) end,
-
-	---@return unknown
-	getAmbient = function(drama) end,
 	choices = {
 		{
 			file = "OldMusic_alone",

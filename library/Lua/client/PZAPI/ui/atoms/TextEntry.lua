@@ -19,6 +19,6 @@ function __UI_TextEntry:setText(text) end
 
 function __UI_TextEntry:unfocus() end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.TextEntry = nil ---@type UI.TextEntry
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.TextEntry = nil ---@type UI.TextEntry

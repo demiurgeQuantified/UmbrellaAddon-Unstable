@@ -26,9 +26,11 @@ function ISShovelGroundCursor.GetEmptyItemCounts(playerObj) end
 function ISShovelGroundCursor:create(x, y, z, north, sprite) end
 
 ---@return string?
+---@return unknown?
 function ISShovelGroundCursor:getDirtGravelSand(square) end
 
 ---@return string
+---@return unknown
 function ISShovelGroundCursor:getEmptyItem() end
 
 ---@return boolean

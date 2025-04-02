@@ -3,11 +3,16 @@
 ---@class Fishing
 Fishing = {}
 Fishing.ManagerInstances = {}
-Fishing.Handler = {
-	OnGameStart = function() end,
-	onEquipPrimary = function(player, inventoryItem) end,
-	handleFishing = function(player, primaryHandItem) end,
+Fishing.Handler = nil ---@type Fishing.Handler
 
-	---@return boolean
-	isFishingValid = function(primaryHandItem) end,
-}
+---@class Fishing.Handler
+local __fishing_Handler = {}
+
+function __fishing_Handler.handleFishing(player, primaryHandItem) end
+
+---@return boolean
+function __fishing_Handler.isFishingValid(primaryHandItem) end
+
+function __fishing_Handler.onEquipPrimary(player, inventoryItem) end
+
+function __fishing_Handler.OnGameStart() end

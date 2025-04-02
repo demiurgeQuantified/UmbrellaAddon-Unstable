@@ -22,6 +22,6 @@ function __UI_Texture:setSlice9(sliceLeft, sliceRight, sliceTop, sliceDown) end
 
 function __UI_Texture:setTexture(texture) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.Texture = nil ---@type UI.Texture
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.Texture = nil ---@type UI.Texture

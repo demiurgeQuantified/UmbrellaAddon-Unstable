@@ -223,7 +223,7 @@ AttachedWeaponDefinitions.knifeBack_Special = {
 		"Base.Screwdriver_Improvised",
 	},
 }
-AttachedWeaponDefinitions.knifeLowQualityLeftLeg = nil ---@type table
+AttachedWeaponDefinitions.knifeLowQualityLeftLeg = {}
 AttachedWeaponDefinitions.huntingKnifeLeftLeg = {
 	chance = 5,
 	weaponLocation = {

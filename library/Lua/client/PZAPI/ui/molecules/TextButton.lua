@@ -12,6 +12,6 @@ function __UI_TextButton:onHover(state) end
 
 function __UI_TextButton:onLeftClick() end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.TextButton = nil ---@type UI.TextButton
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.TextButton = nil ---@type UI.TextButton

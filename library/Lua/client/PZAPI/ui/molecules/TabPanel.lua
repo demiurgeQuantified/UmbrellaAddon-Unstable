@@ -16,6 +16,6 @@ function __UI_TabPanel:onResize() end
 
 function __UI_TabPanel:select(id) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.TabPanel = nil ---@type UI.TabPanel
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.TabPanel = nil ---@type UI.TabPanel

@@ -2,10 +2,10 @@
 
 ---@class Fishing
 Fishing = {}
-Fishing.FishingRod = nil ---@type FishingRod
+Fishing.FishingRod = nil ---@type Fishing.FishingRod
 
----@class FishingRod
----@field bobber Bobber?
+---@class Fishing.FishingRod
+---@field bobber Fishing.Bobber?
 ---@field currentLineStatus string?
 ---@field highTensionTimer number
 ---@field isFirstFishing boolean
@@ -25,64 +25,64 @@ Fishing.FishingRod = nil ---@type FishingRod
 ---@field spawnBobberY number
 ---@field strengthSkill unknown
 ---@field tensionLimit number
-local __fishingRod = {}
+local __fishing_FishingRod = {}
 
-function __fishingRod:brokeLine() end
+function __fishing_FishingRod:brokeLine() end
 
-function __fishingRod:cast() end
+function __fishing_FishingRod:cast() end
 
 ---@param isTrash boolean
-function __fishingRod:consumeLure(isTrash) end
+function __fishing_FishingRod:consumeLure(isTrash) end
 
-function __fishingRod:damageLine() end
+function __fishing_FishingRod:damageLine() end
 
-function __fishingRod:destroy() end
-
----@return number?
-function __fishingRod:getLineTypeCoeff() end
-
----@return number
----@return number
-function __fishingRod:getRodDxDy() end
-
----@return number
----@return number
-function __fishingRod:getRodEndXY() end
-
----@return number
----@return number
-function __fishingRod:getSpawnBobberCoords() end
+function __fishing_FishingRod:destroy() end
 
 ---@return number?
-function __fishingRod:getTension() end
+function __fishing_FishingRod:getLineTypeCoeff() end
+
+---@return number
+---@return number
+function __fishing_FishingRod:getRodDxDy() end
+
+---@return number
+---@return number
+function __fishing_FishingRod:getRodEndXY() end
+
+---@return number
+---@return number
+function __fishing_FishingRod:getSpawnBobberCoords() end
+
+---@return number?
+function __fishing_FishingRod:getTension() end
 
 ---@return boolean
-function __fishingRod:isPickupBobber() end
+function __fishing_FishingRod:isPickupBobber() end
 
 ---@return boolean
-function __fishingRod:isReel() end
+function __fishing_FishingRod:isReel() end
 
 ---@return unknown
-function __fishingRod:isReleaseLine() end
+function __fishing_FishingRod:isReleaseLine() end
 
 ---@return boolean
-function __fishingRod:isRodMove() end
+function __fishing_FishingRod:isRodMove() end
 
-function __fishingRod:missFish() end
+function __fishing_FishingRod:missFish() end
 
-function __fishingRod:reel() end
+function __fishing_FishingRod:reel() end
 
-function __fishingRod:releaseLine() end
+function __fishing_FishingRod:releaseLine() end
 
-function __fishingRod:resetItemModel() end
-
----@return boolean
-function __fishingRod:update() end
+function __fishing_FishingRod:resetItemModel() end
 
 ---@return boolean
-function __fishingRod:updateLine() end
+function __fishing_FishingRod:update() end
 
-function __fishingRod:updateLineMoveCoeff() end
+---@return boolean
+function __fishing_FishingRod:updateLine() end
 
----@return FishingRod
-function __fishingRod:new(player) end
+function __fishing_FishingRod:updateLineMoveCoeff() end
+
+---@return Fishing.FishingRod
+function __fishing_FishingRod:new(player) end

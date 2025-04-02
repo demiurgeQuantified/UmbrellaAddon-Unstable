@@ -1,8 +1,5 @@
 ---@meta
 
----@class RecMedia
-RecMedia = {}
-
 ---@class ISRecordedMedia
 ISRecordedMedia = {}
 

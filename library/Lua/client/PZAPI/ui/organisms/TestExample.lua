@@ -9,6 +9,6 @@ __UI_TestExample.y = 100
 __UI_TestExample.width = 350
 __UI_TestExample.height = 350
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.TestExample = nil ---@type UI.TestExample
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.TestExample = nil ---@type UI.TestExample

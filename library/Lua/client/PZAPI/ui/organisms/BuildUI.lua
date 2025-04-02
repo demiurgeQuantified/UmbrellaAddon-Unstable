@@ -14,6 +14,6 @@ function __UI_BuildUI:getRecipes() end
 
 function __UI_BuildUI:init() end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.BuildUI = nil ---@type UI.BuildUI
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.BuildUI = nil ---@type UI.BuildUI

@@ -37,8 +37,8 @@
 ---@field targetColor unknown
 MainOptions = ISPanelJoypad:derive("MainOptions")
 MainOptions.Type = "MainOptions"
-MainOptions.keys = nil ---@type table
-MainOptions.keyText = nil ---@type table
+MainOptions.keys = {}
+MainOptions.keyText = {}
 MainOptions.setKeybindDialog = nil ---@type ISSetKeybindDialog?
 MainOptions.keyBindingLength = 0
 MainOptions.translatorPane = nil ---@type ISRichTextPanel?

@@ -1,9 +1,13 @@
 ---@meta
 
+---@class TESTUI
+local __TESTUI = {}
+__TESTUI.element = nil
+
+function __TESTUI.show() end
+
+function __TESTUI.show2() end
+
 ---@class PZAPI
 PZAPI = {}
-PZAPI.TESTUI = PZAPI.TESTUI or {
-	element = nil,
-	show = function() end,
-	show2 = function() end,
-}
+PZAPI.TESTUI = nil ---@type TESTUI

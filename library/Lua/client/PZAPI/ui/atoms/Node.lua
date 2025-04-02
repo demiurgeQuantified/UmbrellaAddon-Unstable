@@ -66,6 +66,6 @@ function __UI_Node:setX(value) end
 
 function __UI_Node:setY(value) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.Node = nil ---@type UI.Node
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.Node = nil ---@type UI.Node

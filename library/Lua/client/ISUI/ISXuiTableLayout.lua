@@ -43,12 +43,12 @@ function ISXuiTableLayoutRow:new(_rowIndex, _height, _isPercent) end
 ---@field columnIndex unknown
 ---@field drawBackground boolean
 ---@field drawBorder boolean
----@field height number?
+---@field height number
 ---@field parent ISXuiTableLayout
 ---@field rowIndex unknown
----@field width number?
+---@field width number
 ---@field x number
----@field y number?
+---@field y number
 ISXuiTableLayoutCell = ISBaseObject:derive("ISXuiTableLayoutCell")
 ISXuiTableLayoutCell.Type = "ISXuiTableLayoutCell"
 
@@ -61,16 +61,16 @@ function ISXuiTableLayoutCell:getAbsoluteX() end
 ---@return number
 function ISXuiTableLayoutCell:getAbsoluteY() end
 
----@return number?
+---@return number
 function ISXuiTableLayoutCell:getHeight() end
 
----@return number?
+---@return number
 function ISXuiTableLayoutCell:getWidth() end
 
 ---@return number
 function ISXuiTableLayoutCell:getX() end
 
----@return number?
+---@return number
 function ISXuiTableLayoutCell:getY() end
 
 ---@param _x number

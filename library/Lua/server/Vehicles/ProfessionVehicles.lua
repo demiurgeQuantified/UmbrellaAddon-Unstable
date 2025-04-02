@@ -260,7 +260,7 @@ ProfessionVehicles.VanGardener = {
 		"Base.PickUpTruckLightsAirport",
 	},
 }
-ProfessionVehicles.VanMechanic = nil ---@type table
+ProfessionVehicles.VanMechanic = {}
 ProfessionVehicles.VanMeltingPointMetal = {
 	LAA = {
 		"Base.VanMeltingPointMetal",

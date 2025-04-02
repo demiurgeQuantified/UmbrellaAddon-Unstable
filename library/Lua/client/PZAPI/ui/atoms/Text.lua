@@ -12,6 +12,6 @@ function __UI_Text:setFont(uiFont) end
 
 function __UI_Text:setText(text) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.Text = nil ---@type UI.Text
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.Text = nil ---@type UI.Text

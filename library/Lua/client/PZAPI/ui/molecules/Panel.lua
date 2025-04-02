@@ -17,6 +17,6 @@ function __UI_Panel:init() end
 ---@param a number
 function __UI_Panel:setBorderColor(r, g, b, a) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.Panel = nil ---@type UI.Panel
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.Panel = nil ---@type UI.Panel

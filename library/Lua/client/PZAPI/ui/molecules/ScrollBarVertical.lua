@@ -17,6 +17,6 @@ function __UI_ScrollBarVertical:setBarSize(sizeCoeff) end
 
 function __UI_ScrollBarVertical:updateBar(percent) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.ScrollBarVertical = nil ---@type UI.ScrollBarVertical
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.ScrollBarVertical = nil ---@type UI.ScrollBarVertical

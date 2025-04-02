@@ -13,6 +13,6 @@ function __UI_Window:renderUpdate() end
 
 function __UI_Window:setCollapsed(collapsed) end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.Window = nil ---@type UI.Window
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.Window = nil ---@type UI.Window

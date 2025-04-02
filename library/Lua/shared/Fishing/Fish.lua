@@ -2,9 +2,9 @@
 
 ---@class Fishing
 Fishing = {}
-Fishing.Fish = nil ---@type Fish
+Fishing.Fish = nil ---@type Fishing.Fish
 
----@class Fish
+---@class Fishing.Fish
 ---@field character unknown
 ---@field dx number
 ---@field dy number
@@ -19,23 +19,23 @@ Fishing.Fish = nil ---@type Fish
 ---@field timer number
 ---@field x number
 ---@field y number
-local __fish = {}
+local __fishing_Fish = {}
 
 ---@param fishConfig unknown?
 ---@return unknown
-function __fish:createFish(fishConfig) end
+function __fishing_Fish:createFish(fishConfig) end
 
-function __fish:getFish() end
+function __fishing_Fish:getFish() end
 
 ---@return unknown?
 ---@return boolean?
-function __fish:getFishByLure() end
+function __fishing_Fish:getFishByLure() end
 
 ---@param x number
 ---@param y number
-function __fish:update(x, y) end
+function __fishing_Fish:update(x, y) end
 
 ---@param x number
 ---@param y number
----@return Fish
-function __fish:new(character, lure, x, y) end
+---@return Fishing.Fish
+function __fishing_Fish:new(character, lure, x, y) end

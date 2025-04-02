@@ -10,7 +10,7 @@ local __UI_playerInventory = {}
 ---@field super UI.Node
 local __UI_Inventory = {}
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.playerInventory = nil ---@type UI.playerInventory
-PZAPI.UI.Inventory = nil ---@type UI.Inventory
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.playerInventory = nil ---@type UI.playerInventory
+__PZAPI_UI.Inventory = nil ---@type UI.Inventory

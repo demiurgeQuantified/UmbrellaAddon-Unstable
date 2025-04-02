@@ -21,153 +21,294 @@ function MapUtils.revealKnownArea(mapUI) end
 
 ---@class LootMaps
 LootMaps = {}
-LootMaps.Init = {
-	MarchRidgeMap = function(mapUI) end,
-	LouisvilleMap1 = function(mapUI) end,
-	LouisvilleMap2 = function(mapUI) end,
-	LouisvilleMap3 = function(mapUI) end,
-	LouisvilleMap4 = function(mapUI) end,
-	LouisvilleMap5 = function(mapUI) end,
-	LouisvilleMap6 = function(mapUI) end,
-	LouisvilleMap7 = function(mapUI) end,
-	LouisvilleMap8 = function(mapUI) end,
-	LouisvilleMap9 = function(mapUI) end,
-	MuldraughMap = function(mapUI) end,
-	RosewoodMap = function(mapUI) end,
-	RiversideMap = function(mapUI) end,
-	WestpointMap = function(mapUI) end,
-	MulStashMap1 = function(mapUI) end,
-	MulStashMap2 = function(mapUI) end,
-	MulStashMap3 = function(mapUI) end,
-	MulStashMap4 = function(mapUI) end,
-	MulStashMap5 = function(mapUI) end,
-	MulStashMap6 = function(mapUI) end,
-	MulStashMap7 = function(mapUI) end,
-	MulStashMap8 = function(mapUI) end,
-	MulStashMap9 = function(mapUI) end,
-	MulStashMap10 = function(mapUI) end,
-	MulStashMap11 = function(mapUI) end,
-	MulStashMap12 = function(mapUI) end,
-	MulStashMap13 = function(mapUI) end,
-	MulStashMap14 = function(mapUI) end,
-	MulStashMap15 = function(mapUI) end,
-	MulStashMap16 = function(mapUI) end,
-	MulStashMap17 = function(mapUI) end,
-	MulStashMap18 = function(mapUI) end,
-	MulStashMap19 = function(mapUI) end,
-	LouisvilleStashMap1 = function(mapUI) end,
-	LouisvilleStashMap2 = function(mapUI) end,
-	LouisvilleStashMap3 = function(mapUI) end,
-	LouisvilleStashMap4 = function(mapUI) end,
-	LouisvilleStashMap5 = function(mapUI) end,
-	LouisvilleStashMap6 = function(mapUI) end,
-	LouisvilleStashMap7 = function(mapUI) end,
-	LouisvilleStashMap8 = function(mapUI) end,
-	LouisvilleStashMap9 = function(mapUI) end,
-	LouisvilleStashMap10 = function(mapUI) end,
-	LouisvilleStashMap11 = function(mapUI) end,
-	LouisvilleStashMap12 = function(mapUI) end,
-	LouisvilleStashMap13 = function(mapUI) end,
-	LouisvilleStashMap14 = function(mapUI) end,
-	LouisvilleStashMap15 = function(mapUI) end,
-	LouisvilleStashMap16 = function(mapUI) end,
-	MarchRidgeStashMap1 = function(mapUI) end,
-	MarchRidgeStashMap2 = function(mapUI) end,
-	MarchRidgeStashMap3 = function(mapUI) end,
-	MarchRidgeStashMap4 = function(mapUI) end,
-	MarchRidgeStashMap5 = function(mapUI) end,
-	MarchRidgeStashMap6 = function(mapUI) end,
-	MarchRidgeStashMap7 = function(mapUI) end,
-	MarchRidgeStashMap8 = function(mapUI) end,
-	MarchRidgeStashMap9 = function(mapUI) end,
-	MarchRidgeStashMap10 = function(mapUI) end,
-	RiversideStashMap1 = function(mapUI) end,
-	RiversideStashMap2 = function(mapUI) end,
-	RiversideStashMap3 = function(mapUI) end,
-	RiversideStashMap4 = function(mapUI) end,
-	RiversideStashMap5 = function(mapUI) end,
-	RiversideStashMap6 = function(mapUI) end,
-	RiversideStashMap7 = function(mapUI) end,
-	RiversideStashMap8 = function(mapUI) end,
-	RiversideStashMap9 = function(mapUI) end,
-	RiversideStashMap10 = function(mapUI) end,
-	RosewoodStashMap1 = function(mapUI) end,
-	RosewoodStashMap2 = function(mapUI) end,
-	RosewoodStashMap3 = function(mapUI) end,
-	RosewoodStashMap4 = function(mapUI) end,
-	RosewoodStashMap5 = function(mapUI) end,
-	WpStashMap1 = function(mapUI) end,
-	WpStashMap2 = function(mapUI) end,
-	WpStashMap3 = function(mapUI) end,
-	WpStashMap4 = function(mapUI) end,
-	WpStashMap5 = function(mapUI) end,
-	WpStashMap6 = function(mapUI) end,
-	WpStashMap7 = function(mapUI) end,
-	WpStashMap8 = function(mapUI) end,
-	WpStashMap9 = function(mapUI) end,
-	WpStashMap10 = function(mapUI) end,
-	WpStashMap11 = function(mapUI) end,
-	WpStashMap12 = function(mapUI) end,
-	WpStashMap13 = function(mapUI) end,
-	WpStashMap14 = function(mapUI) end,
-	WpStashMap15 = function(mapUI) end,
-	WpStashMap16 = function(mapUI) end,
-	BBurgStashMap1 = function(mapUI) end,
-	BBurgStashMap2 = function(mapUI) end,
-	BBurgStashMap3 = function(mapUI) end,
-	BBurgStashMap4 = function(mapUI) end,
-	BBurgStashMap5 = function(mapUI) end,
-	BBurgStashMap6 = function(mapUI) end,
-	BBurgStashMap7 = function(mapUI) end,
-	BBurgStashMap8 = function(mapUI) end,
-	EkronStashMap1 = function(mapUI) end,
-	EkronStashMap2 = function(mapUI) end,
-	EkronStashMap3 = function(mapUI) end,
-	EkronStashMap4 = function(mapUI) end,
-	EkronStashMap5 = function(mapUI) end,
-	EkronStashMap6 = function(mapUI) end,
-	EkronStashMap7 = function(mapUI) end,
-	EkronStashMap8 = function(mapUI) end,
-	IrvingtonStashMap1 = function(mapUI) end,
-	IrvingtonStashMap2 = function(mapUI) end,
-	IrvingtonStashMap3 = function(mapUI) end,
-	IrvingtonStashMap4 = function(mapUI) end,
-	IrvingtonStashMap5 = function(mapUI) end,
-	IrvingtonStashMap6 = function(mapUI) end,
-	IrvingtonStashMap7 = function(mapUI) end,
-	IrvingtonStashMap8 = function(mapUI) end,
-	IrvingtonStashMap9 = function(mapUI) end,
-	IrvingtonStashMap10 = function(mapUI) end,
-	WorldStashMap1 = function(mapUI) end,
-	WorldStashMap2 = function(mapUI) end,
-	WorldStashMap3 = function(mapUI) end,
-	WorldStashMap4 = function(mapUI) end,
-	WorldStashMap5 = function(mapUI) end,
-	WorldStashMap6 = function(mapUI) end,
-	WorldStashMap7 = function(mapUI) end,
-	WorldStashMap8 = function(mapUI) end,
-	WorldStashMap9 = function(mapUI) end,
-	WorldStashMap10 = function(mapUI) end,
-	WorldStashMap11 = function(mapUI) end,
-	WorldStashMap12 = function(mapUI) end,
-	WorldStashMap13 = function(mapUI) end,
-	WorldStashMap14 = function(mapUI) end,
-	WorldStashMap15 = function(mapUI) end,
-	WorldStashMap16 = function(mapUI) end,
-	WorldStashMap17 = function(mapUI) end,
-	WorldStashMap18 = function(mapUI) end,
-	WorldStashMap19 = function(mapUI) end,
-	WorldStashMap20 = function(mapUI) end,
-	WorldStashMap21 = function(mapUI) end,
-	WorldStashMap22 = function(mapUI) end,
-	WorldStashMap23 = function(mapUI) end,
-}
+LootMaps.Init = nil ---@type LootMaps.Init
 LootMaps.DEFAULT_MAP_DIRECTORY = "media/maps/Muldraugh, KY"
 
 ---@param functionName string
 ---@param mapUI ISMap
 ---@return unknown?
 function LootMaps.callLua(functionName, mapUI, arg1, arg2, arg3, arg4) end
+
+---@class LootMaps.Init
+local __lootMaps_Init = {}
+
+function __lootMaps_Init.BBurgStashMap1(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap2(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap3(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap4(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap5(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap6(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap7(mapUI) end
+
+function __lootMaps_Init.BBurgStashMap8(mapUI) end
+
+function __lootMaps_Init.EkronStashMap1(mapUI) end
+
+function __lootMaps_Init.EkronStashMap2(mapUI) end
+
+function __lootMaps_Init.EkronStashMap3(mapUI) end
+
+function __lootMaps_Init.EkronStashMap4(mapUI) end
+
+function __lootMaps_Init.EkronStashMap5(mapUI) end
+
+function __lootMaps_Init.EkronStashMap6(mapUI) end
+
+function __lootMaps_Init.EkronStashMap7(mapUI) end
+
+function __lootMaps_Init.EkronStashMap8(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap1(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap10(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap2(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap3(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap4(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap5(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap6(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap7(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap8(mapUI) end
+
+function __lootMaps_Init.IrvingtonStashMap9(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap1(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap2(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap3(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap4(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap5(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap6(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap7(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap8(mapUI) end
+
+function __lootMaps_Init.LouisvilleMap9(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap1(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap10(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap11(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap12(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap13(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap14(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap15(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap16(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap2(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap3(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap4(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap5(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap6(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap7(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap8(mapUI) end
+
+function __lootMaps_Init.LouisvilleStashMap9(mapUI) end
+
+function __lootMaps_Init.MarchRidgeMap(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap1(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap10(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap2(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap3(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap4(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap5(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap6(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap7(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap8(mapUI) end
+
+function __lootMaps_Init.MarchRidgeStashMap9(mapUI) end
+
+function __lootMaps_Init.MuldraughMap(mapUI) end
+
+function __lootMaps_Init.MulStashMap1(mapUI) end
+
+function __lootMaps_Init.MulStashMap10(mapUI) end
+
+function __lootMaps_Init.MulStashMap11(mapUI) end
+
+function __lootMaps_Init.MulStashMap12(mapUI) end
+
+function __lootMaps_Init.MulStashMap13(mapUI) end
+
+function __lootMaps_Init.MulStashMap14(mapUI) end
+
+function __lootMaps_Init.MulStashMap15(mapUI) end
+
+function __lootMaps_Init.MulStashMap16(mapUI) end
+
+function __lootMaps_Init.MulStashMap17(mapUI) end
+
+function __lootMaps_Init.MulStashMap18(mapUI) end
+
+function __lootMaps_Init.MulStashMap19(mapUI) end
+
+function __lootMaps_Init.MulStashMap2(mapUI) end
+
+function __lootMaps_Init.MulStashMap3(mapUI) end
+
+function __lootMaps_Init.MulStashMap4(mapUI) end
+
+function __lootMaps_Init.MulStashMap5(mapUI) end
+
+function __lootMaps_Init.MulStashMap6(mapUI) end
+
+function __lootMaps_Init.MulStashMap7(mapUI) end
+
+function __lootMaps_Init.MulStashMap8(mapUI) end
+
+function __lootMaps_Init.MulStashMap9(mapUI) end
+
+function __lootMaps_Init.RiversideMap(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap1(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap10(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap2(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap3(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap4(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap5(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap6(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap7(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap8(mapUI) end
+
+function __lootMaps_Init.RiversideStashMap9(mapUI) end
+
+function __lootMaps_Init.RosewoodMap(mapUI) end
+
+function __lootMaps_Init.RosewoodStashMap1(mapUI) end
+
+function __lootMaps_Init.RosewoodStashMap2(mapUI) end
+
+function __lootMaps_Init.RosewoodStashMap3(mapUI) end
+
+function __lootMaps_Init.RosewoodStashMap4(mapUI) end
+
+function __lootMaps_Init.RosewoodStashMap5(mapUI) end
+
+function __lootMaps_Init.WestpointMap(mapUI) end
+
+function __lootMaps_Init.WorldStashMap1(mapUI) end
+
+function __lootMaps_Init.WorldStashMap10(mapUI) end
+
+function __lootMaps_Init.WorldStashMap11(mapUI) end
+
+function __lootMaps_Init.WorldStashMap12(mapUI) end
+
+function __lootMaps_Init.WorldStashMap13(mapUI) end
+
+function __lootMaps_Init.WorldStashMap14(mapUI) end
+
+function __lootMaps_Init.WorldStashMap15(mapUI) end
+
+function __lootMaps_Init.WorldStashMap16(mapUI) end
+
+function __lootMaps_Init.WorldStashMap17(mapUI) end
+
+function __lootMaps_Init.WorldStashMap18(mapUI) end
+
+function __lootMaps_Init.WorldStashMap19(mapUI) end
+
+function __lootMaps_Init.WorldStashMap2(mapUI) end
+
+function __lootMaps_Init.WorldStashMap20(mapUI) end
+
+function __lootMaps_Init.WorldStashMap21(mapUI) end
+
+function __lootMaps_Init.WorldStashMap22(mapUI) end
+
+function __lootMaps_Init.WorldStashMap23(mapUI) end
+
+function __lootMaps_Init.WorldStashMap3(mapUI) end
+
+function __lootMaps_Init.WorldStashMap4(mapUI) end
+
+function __lootMaps_Init.WorldStashMap5(mapUI) end
+
+function __lootMaps_Init.WorldStashMap6(mapUI) end
+
+function __lootMaps_Init.WorldStashMap7(mapUI) end
+
+function __lootMaps_Init.WorldStashMap8(mapUI) end
+
+function __lootMaps_Init.WorldStashMap9(mapUI) end
+
+function __lootMaps_Init.WpStashMap1(mapUI) end
+
+function __lootMaps_Init.WpStashMap10(mapUI) end
+
+function __lootMaps_Init.WpStashMap11(mapUI) end
+
+function __lootMaps_Init.WpStashMap12(mapUI) end
+
+function __lootMaps_Init.WpStashMap13(mapUI) end
+
+function __lootMaps_Init.WpStashMap14(mapUI) end
+
+function __lootMaps_Init.WpStashMap15(mapUI) end
+
+function __lootMaps_Init.WpStashMap16(mapUI) end
+
+function __lootMaps_Init.WpStashMap2(mapUI) end
+
+function __lootMaps_Init.WpStashMap3(mapUI) end
+
+function __lootMaps_Init.WpStashMap4(mapUI) end
+
+function __lootMaps_Init.WpStashMap5(mapUI) end
+
+function __lootMaps_Init.WpStashMap6(mapUI) end
+
+function __lootMaps_Init.WpStashMap7(mapUI) end
+
+function __lootMaps_Init.WpStashMap8(mapUI) end
+
+function __lootMaps_Init.WpStashMap9(mapUI) end
 
 ---@class PrintMediaMaps
 PrintMediaMaps = {}

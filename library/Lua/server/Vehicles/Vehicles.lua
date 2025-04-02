@@ -2,104 +2,17 @@
 
 ---@class Vehicles
 Vehicles = {}
-Vehicles.CheckEngine = {
-	---@return boolean
-	GasTank = function(vehicle, part) end,
-
-	---@return boolean
-	Engine = function(vehicle, part) end,
-}
-Vehicles.CheckOperate = {
-	---@return boolean
-	Tire = function(vehicle, part) end,
-}
-Vehicles.ContainerAccess = {
-	---@return boolean
-	TruckBed = function(vehicle, part, chr) end,
-
-	---@return boolean
-	TruckBedOpen = function(vehicle, part, chr) end,
-
-	---@return boolean
-	TruckBedOpenInside = function(vehicle, part, chr) end,
-
-	---@return boolean?
-	Seat = function(vehicle, part, chr) end,
-
-	---@return boolean?
-	GloveBox = function(vehicle, part, chr) end,
-
-	---@return boolean
-	GasTank = function(vehicle, part, chr) end,
-}
-Vehicles.Create = {
-	Battery = function(vehicle, part) end,
-	Door = function(vehicle, part) end,
-	TrunkDoorOpen = function(vehicle, part) end,
-	TrunkDoor = function(vehicle, part) end,
-	GasTank = function(vehicle, part) end,
-	Engine = function(vehicle, part) end,
-	Headlight = function(vehicle, part) end,
-	Radio = function(vehicle, part) end,
-	Radio_HAM = function(vehicle, part) end,
-	Default = function(vehicle, part) end,
-	Tire = function(vehicle, part) end,
-	Brake = function(vehicle, part) end,
-	Window = function(vehicle, part) end,
-}
-Vehicles.Init = {
-	Door = function(vehicle, part) end,
-	Headlight = function(vehicle, part) end,
-	Tire = function(vehicle, part) end,
-	Window = function(vehicle, part) end,
-}
-Vehicles.InstallComplete = {
-	Radio = function(vehicle, part) end,
-	Door = function(vehicle, part) end,
-	Tire = function(vehicle, part) end,
-	Window = function(vehicle, part) end,
-	Default = function(vehicle, part) end,
-}
-Vehicles.InstallTest = {
-	---@return boolean
-	Default = function(vehicle, part, chr) end,
-}
-Vehicles.UninstallComplete = {
-	Radio = function(vehicle, part, item) end,
-	Door = function(vehicle, part, item) end,
-	Tire = function(vehicle, part, item) end,
-	Default = function(vehicle, part, item) end,
-}
-Vehicles.UninstallTest = {
-	---@return boolean
-	Battery = function(vehicle, part, chr) end,
-
-	---@return boolean
-	Default = function(vehicle, part, chr) end,
-}
-Vehicles.Update = {
-	EngineDoor = function(vehicle, part, elapsedMinutes) end,
-	TrailerAnimalFood = function(vehicle, part, elapsedMinutes) end,
-	GasTank = function(vehicle, part, elapsedMinutes) end,
-	Battery = function(vehicle, part, elapsedMinutes) end,
-	Engine = function(vehicle, part, elapsedMinutes) end,
-	Headlight = function(vehicle, part, elapsedMinutes) end,
-	Heater = function(vehicle, part, elapsedMinutes) end,
-	Lightbar = function(vehicle, part, elapsedMinutes) end,
-	PassengerCompartment = function(vehicle, part, elapsedMinutes) end,
-	Radio = function(vehicle, part, elapsedMinutes) end,
-	Brakes = function(vehicle, part, elapsedMinutes) end,
-	Suspension = function(vehicle, part, elapsedMinutes) end,
-	Muffler = function(vehicle, part, elapsedMinutes) end,
-	Tire = function(vehicle, part, elapsedMinutes) end,
-	TrunkDoor = function(vehicle, part, elapsedMinutes) end,
-}
-Vehicles.Use = {
-	Door = function(vehicle, part, character) end,
-	EngineDoor = function(vehicle, part, character) end,
-	TrunkDoorOpen = function(vehicle, part, character) end,
-	TrunkDoor = function(vehicle, part, character) end,
-}
+Vehicles.CheckEngine = nil ---@type Vehicles.CheckEngine
+Vehicles.CheckOperate = nil ---@type Vehicles.CheckOperate
+Vehicles.ContainerAccess = nil ---@type Vehicles.ContainerAccess
+Vehicles.Create = nil ---@type Vehicles.Create
+Vehicles.Init = nil ---@type Vehicles.Init
+Vehicles.InstallComplete = nil ---@type Vehicles.InstallComplete
+Vehicles.InstallTest = nil ---@type Vehicles.InstallTest
+Vehicles.UninstallComplete = nil ---@type Vehicles.UninstallComplete
+Vehicles.UninstallTest = nil ---@type Vehicles.UninstallTest
+Vehicles.Update = nil ---@type Vehicles.Update
+Vehicles.Use = nil ---@type Vehicles.Use
 Vehicles.elaspedMinutesForHeater = {}
 Vehicles.elaspedMinutesForEngine = {}
 Vehicles.JerryCanLitres = 10
@@ -107,6 +20,165 @@ Vehicles.newSystemConditionLowerMult = 4
 
 ---@return number
 function Vehicles.LowerCondition(vehicle, part, elapsedMinutes) end
+
+---@class Vehicles.ContainerAccess
+local __vehicles_ContainerAccess = {}
+
+---@return boolean
+function __vehicles_ContainerAccess.GasTank(vehicle, part, chr) end
+
+---@return boolean?
+function __vehicles_ContainerAccess.GloveBox(vehicle, part, chr) end
+
+---@return boolean?
+function __vehicles_ContainerAccess.Seat(vehicle, part, chr) end
+
+---@return boolean
+function __vehicles_ContainerAccess.TruckBed(vehicle, part, chr) end
+
+---@return boolean
+function __vehicles_ContainerAccess.TruckBedOpen(vehicle, part, chr) end
+
+---@return boolean
+function __vehicles_ContainerAccess.TruckBedOpenInside(vehicle, part, chr) end
+
+---@class Vehicles.Create
+local __vehicles_Create = {}
+
+function __vehicles_Create.Battery(vehicle, part) end
+
+function __vehicles_Create.Brake(vehicle, part) end
+
+function __vehicles_Create.Default(vehicle, part) end
+
+function __vehicles_Create.Door(vehicle, part) end
+
+function __vehicles_Create.Engine(vehicle, part) end
+
+function __vehicles_Create.GasTank(vehicle, part) end
+
+function __vehicles_Create.Headlight(vehicle, part) end
+
+function __vehicles_Create.Radio(vehicle, part) end
+
+function __vehicles_Create.Radio_HAM(vehicle, part) end
+
+function __vehicles_Create.Tire(vehicle, part) end
+
+function __vehicles_Create.TrunkDoor(vehicle, part) end
+
+function __vehicles_Create.TrunkDoorOpen(vehicle, part) end
+
+function __vehicles_Create.Window(vehicle, part) end
+
+---@class Vehicles.InstallComplete
+local __vehicles_InstallComplete = {}
+
+function __vehicles_InstallComplete.Default(vehicle, part) end
+
+function __vehicles_InstallComplete.Door(vehicle, part) end
+
+function __vehicles_InstallComplete.Radio(vehicle, part) end
+
+function __vehicles_InstallComplete.Tire(vehicle, part) end
+
+function __vehicles_InstallComplete.Window(vehicle, part) end
+
+---@class Vehicles.UninstallComplete
+local __vehicles_UninstallComplete = {}
+
+function __vehicles_UninstallComplete.Default(vehicle, part, item) end
+
+function __vehicles_UninstallComplete.Door(vehicle, part, item) end
+
+function __vehicles_UninstallComplete.Radio(vehicle, part, item) end
+
+function __vehicles_UninstallComplete.Tire(vehicle, part, item) end
+
+---@class Vehicles.Init
+local __vehicles_Init = {}
+
+function __vehicles_Init.Door(vehicle, part) end
+
+function __vehicles_Init.Headlight(vehicle, part) end
+
+function __vehicles_Init.Tire(vehicle, part) end
+
+function __vehicles_Init.Window(vehicle, part) end
+
+---@class Vehicles.Update
+local __vehicles_Update = {}
+
+function __vehicles_Update.Battery(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Brakes(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Engine(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.EngineDoor(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.GasTank(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Headlight(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Heater(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Lightbar(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Muffler(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.PassengerCompartment(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Radio(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Suspension(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.Tire(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.TrailerAnimalFood(vehicle, part, elapsedMinutes) end
+
+function __vehicles_Update.TrunkDoor(vehicle, part, elapsedMinutes) end
+
+---@class Vehicles.Use
+local __vehicles_Use = {}
+
+function __vehicles_Use.Door(vehicle, part, character) end
+
+function __vehicles_Use.EngineDoor(vehicle, part, character) end
+
+function __vehicles_Use.TrunkDoor(vehicle, part, character) end
+
+function __vehicles_Use.TrunkDoorOpen(vehicle, part, character) end
+
+---@class Vehicles.CheckEngine
+local __vehicles_CheckEngine = {}
+
+---@return boolean
+function __vehicles_CheckEngine.Engine(vehicle, part) end
+
+---@return boolean
+function __vehicles_CheckEngine.GasTank(vehicle, part) end
+
+---@class Vehicles.CheckOperate
+local __vehicles_CheckOperate = {}
+
+---@return boolean
+function __vehicles_CheckOperate.Tire(vehicle, part) end
+
+---@class Vehicles.InstallTest
+local __vehicles_InstallTest = {}
+
+---@return boolean
+function __vehicles_InstallTest.Default(vehicle, part, chr) end
+
+---@class Vehicles.UninstallTest
+local __vehicles_UninstallTest = {}
+
+---@return boolean
+function __vehicles_UninstallTest.Battery(vehicle, part, chr) end
+
+---@return boolean
+function __vehicles_UninstallTest.Default(vehicle, part, chr) end
 
 ---@class VehicleUtils
 VehicleUtils = {}

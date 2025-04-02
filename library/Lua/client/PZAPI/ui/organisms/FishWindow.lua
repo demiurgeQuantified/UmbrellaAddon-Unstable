@@ -10,6 +10,6 @@ __UI_FishWindow.isPin = false
 
 function __UI_FishWindow:init() end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.FishWindow = nil ---@type UI.FishWindow
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.FishWindow = nil ---@type UI.FishWindow

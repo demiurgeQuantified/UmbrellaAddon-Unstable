@@ -11,7 +11,7 @@
 CoopCharacterCreation = ISPanelJoypad:derive("CoopCharacterCreation")
 CoopCharacterCreation.Type = "CoopCharacterCreation"
 CoopCharacterCreation.instance = nil ---@type CoopCharacterCreation?
-CoopCharacterCreation.visibleUI = nil ---@type table
+CoopCharacterCreation.visibleUI = {}
 
 ---@return unknown?
 function CoopCharacterCreation.getJoypad() end

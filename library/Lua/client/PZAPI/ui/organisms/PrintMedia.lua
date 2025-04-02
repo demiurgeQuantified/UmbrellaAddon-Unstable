@@ -23,6 +23,6 @@ function __UI_PrintMedia:setCollapsed(collapsed) end
 
 function __UI_PrintMedia:updateSize() end
 
----@class PZAPI
-PZAPI = {}
-PZAPI.UI.PrintMedia = nil ---@type UI.PrintMedia
+---@class PZAPI.UI
+local __PZAPI_UI = {}
+__PZAPI_UI.PrintMedia = nil ---@type UI.PrintMedia

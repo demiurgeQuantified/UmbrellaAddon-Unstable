@@ -3,7 +3,7 @@
 ---@class ISEntityBuildMenu
 ISEntityBuildMenu = {}
 ISEntityBuildMenu.buildables = nil ---@type boolean | table
-ISEntityBuildMenu.items = nil ---@type table
+ISEntityBuildMenu.items = {}
 
 ---@return unknown
 function ISEntityBuildMenu.addToolTip() end
