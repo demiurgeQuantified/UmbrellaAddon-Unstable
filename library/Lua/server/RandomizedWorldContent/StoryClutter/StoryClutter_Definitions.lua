@@ -203,6 +203,8 @@ StoryClutter.DeadEndClutter = {
 	"Base.Passport",
 	"Base.DogTag_Pet",
 	"Base.ChildsPictureBook",
+	"Base.Hat_Cowboy_Plastic",
+	"Base.HobbyHorse",
 }
 StoryClutter.DormClutter = {
 	"Base.PlasticCup",
@@ -292,6 +294,7 @@ StoryClutter.DormClutter = {
 	"Base.Glasses_SunCheap",
 	"Base.BeerEmpty",
 	"Base.BeerCanEmpty",
+	"Base.Hat_Cowboy_Plastic",
 }
 StoryClutter.FarmStorageClutter = {
 	"Base.Lantern_Hurricane",
@@ -777,13 +780,14 @@ StoryClutter.KidClutter = {
 	"Base.KnifePocket",
 	"Base.Handiknife",
 	"Base.Hat_ArmyWWII",
-	"Base.Hat_Cowboy",
+	"Base.Hat_Cowboy_Plastic",
 	"Base.Hat_Pirate",
 	"Base.Hat_FishermanRainHat",
 	"Base.MagazineWordsearch",
 	"Base.Clitter",
 	"Base.GuitarPick",
 	"Base.Glasses_SunCheap",
+	"Base.HobbyHorse",
 }
 StoryClutter.KitchenCounterClutter = {
 	"Base.Dogfood",
@@ -1286,6 +1290,8 @@ StoryClutter.SadCampsiteClutter = {
 	"Base.ScoutCookies",
 	"Base.PhotoAlbum",
 	"Base.Newspaper_Recent",
+	"Base.Hat_Cowboy_Plastic",
+	"Base.HobbyHorse",
 }
 StoryClutter.SidetableClutter = {
 	"Base.AlarmClock2",

@@ -6,6 +6,7 @@
 ---@field bonusHealth unknown
 ---@field buildLow boolean
 ---@field buildPanelLogic unknown?
+---@field canBeLockedByPadlock unknown
 ---@field character unknown
 ---@field completionSound unknown
 ---@field containers unknown?
@@ -16,6 +17,7 @@
 ---@field face unknown
 ---@field hoppable unknown
 ---@field isFloor unknown
+---@field isPole boolean
 ---@field isStairs boolean
 ---@field isWallLike unknown
 ---@field maxTime unknown
@@ -69,6 +71,9 @@ function ISBuildIsoEntity:getOccupiedTiles(square) end
 
 ---@return unknown
 function ISBuildIsoEntity:getOpenFace(_north) end
+
+---@return boolean
+function ISBuildIsoEntity:isObjectSpriteBlockingWallPlacement(_sprite, _north) end
 
 ---@return boolean
 function ISBuildIsoEntity:isValid(square) end

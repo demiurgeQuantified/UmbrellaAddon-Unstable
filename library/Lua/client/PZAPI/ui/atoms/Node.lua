@@ -30,6 +30,9 @@ __UI_Node.alwaysBack = false
 __UI_Node.alwaysOnTop = false
 __UI_Node.isStencil = false
 
+---@param playerNum number
+function __UI_Node:centerOnScreen(playerNum) end
+
 function __UI_Node:setAlwaysBack(value) end
 
 function __UI_Node:setAlwaysOnTop(value) end

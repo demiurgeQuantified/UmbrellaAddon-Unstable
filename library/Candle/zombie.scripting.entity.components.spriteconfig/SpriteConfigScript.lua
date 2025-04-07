@@ -30,6 +30,10 @@ function SpriteConfigScript:getBonusHealth() end
 function SpriteConfigScript:getBreakSound() end
 
 --- @public
+--- @return boolean
+function SpriteConfigScript:getCanBePadlocked() end
+
+--- @public
 --- @return string
 function SpriteConfigScript:getCornerSprite() end
 
@@ -102,6 +106,10 @@ function SpriteConfigScript:getVersion(arg0) end
 --- @public
 --- @return boolean
 function SpriteConfigScript:isMultiTile() end
+
+--- @public
+--- @return boolean
+function SpriteConfigScript:isPole() end
 
 --- @public
 --- @return boolean

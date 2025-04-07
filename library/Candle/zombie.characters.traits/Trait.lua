@@ -80,6 +80,11 @@ function Trait:getXPBoostMap() end
 function Trait:isFree() end
 
 --- @public
+--- @param arg0 Trait
+--- @return boolean
+function Trait:isMututallyExclusive(arg0) end
+
+--- @public
 --- @return boolean
 function Trait:isRemoveInMP() end
 

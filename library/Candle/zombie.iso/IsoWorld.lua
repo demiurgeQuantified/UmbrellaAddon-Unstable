@@ -17,6 +17,7 @@
 --- @field public WorldVersion_AlarmDecay integer
 --- @field public WorldVersion_AnimalHutch integer
 --- @field public WorldVersion_AnimalRottingTexture integer
+--- @field public WorldVersion_BodyDamageSavePoulticeValues integer
 --- @field public WorldVersion_CharacterDiscomfort integer
 --- @field public WorldVersion_CharacterVoiceOptions integer
 --- @field public WorldVersion_CharacterVoiceType integer
@@ -40,6 +41,7 @@
 --- @field public WorldVersion_SafeHouseHitPoints integer
 --- @field public WorldVersion_SquareSeen integer
 --- @field public WorldVersion_Stats_Idleness integer
+--- @field public WorldVersion_TeachedRecipes integer
 --- @field public WorldVersion_TrapExplosionDuration integer
 --- @field public WorldVersion_VariableHeight integer
 --- @field public WorldVersion_ZoneIDisUUID integer

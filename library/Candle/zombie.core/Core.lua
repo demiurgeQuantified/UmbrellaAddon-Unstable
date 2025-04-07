@@ -1074,6 +1074,10 @@ function Core:getSelectedMap() end
 function Core:getServerVOIPEnable() end
 
 --- @public
+--- @return number
+function Core:getShownWelcomeMessageVersion() end
+
+--- @public
 --- @return string
 function Core:getSteamServerVersion() end
 
@@ -2167,6 +2171,11 @@ function Core:setShowPing(showPing) end
 --- @param showYourUsername boolean
 --- @return nil
 function Core:setShowYourUsername(showYourUsername) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function Core:setShownWelcomeMessageVersion(arg0) end
 
 --- @public
 --- @param arg0 ColorInfo

@@ -3,6 +3,7 @@
 ---@class ISButcherAnimal : ISBaseTimedAction
 ---@field body unknown
 ---@field perkLevel unknown
+---@field sound unknown
 ISButcherAnimal = ISBaseTimedAction:derive("ISButcherAnimal")
 ISButcherAnimal.Type = "ISButcherAnimal"
 
@@ -20,6 +21,8 @@ function ISButcherAnimal:perform() end
 function ISButcherAnimal:start() end
 
 function ISButcherAnimal:stop() end
+
+function ISButcherAnimal:stopSound() end
 
 function ISButcherAnimal:update() end
 

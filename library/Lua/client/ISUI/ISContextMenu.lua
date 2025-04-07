@@ -203,6 +203,7 @@ function ISContextMenu:getItemY(index) end
 ---@return table
 function ISContextMenu:getMenuOptionNames() end
 
+---@param parentContext unknown?
 ---@return unknown
 function ISContextMenu:getNew(parentContext) end
 

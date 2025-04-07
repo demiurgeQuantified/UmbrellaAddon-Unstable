@@ -3,7 +3,7 @@
 ---@class ISWaterPlantAction : ISBaseTimedAction
 ---@field character unknown?
 ---@field deltaPerUse number
----@field item unknown
+---@field item unknown?
 ---@field sound unknown
 ---@field sq unknown
 ---@field uses number
@@ -34,6 +34,7 @@ function ISWaterPlantAction:useItemOneUnit() end
 function ISWaterPlantAction:waitToStart() end
 
 ---@param character unknown?
+---@param item unknown?
 ---@param uses number
 ---@param maxTime number
 ---@return ISWaterPlantAction

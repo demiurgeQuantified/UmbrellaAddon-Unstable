@@ -20,6 +20,8 @@ function ISComponentsListPanel:createChildren() end
 
 function ISComponentsListPanel:initialise() end
 
+function ISComponentsListPanel:OnCloseWindow() end
+
 function ISComponentsListPanel:onResize() end
 
 function ISComponentsListPanel:prerender() end

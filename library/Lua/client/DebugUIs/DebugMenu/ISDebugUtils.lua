@@ -6,7 +6,7 @@ ISDebugUtils.FONT_HGT_MED = getTextManager():getFontHeight(UIFont.Medium)
 ISDebugUtils.FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.Small)
 
 ---@param _self table
----@param _data (table | string)?
+---@param _data (string | table)?
 ---@param _x number
 ---@param _y number
 ---@param _w number
@@ -32,7 +32,7 @@ function ISDebugUtils.addComboBox(_self, _data, _x, _y, _w, _font, _func) end
 function ISDebugUtils.addHorzBar(_self, _y) end
 
 ---@param _self table
----@param _data table | string
+---@param _data string | table
 ---@param _x number
 ---@param _y number
 ---@param _title string
@@ -41,6 +41,15 @@ function ISDebugUtils.addHorzBar(_self, _y) end
 ---@return number
 ---@return ISLabel
 function ISDebugUtils.addLabel(_self, _data, _x, _y, _title, _font, _bLeft) end
+
+---@param _self ISSpawnHordeUI
+---@param _data string
+---@param _x number
+---@param _y number
+---@param _title string
+---@param _bLeft boolean
+---@return ISLabel
+function ISDebugUtils.addLabelNoReturnOffset(_self, _data, _x, _y, _title, _font, _bLeft) end
 
 ---@param _self table
 ---@param _data string
@@ -51,6 +60,15 @@ function ISDebugUtils.addLabel(_self, _data, _x, _y, _title, _font, _bLeft) end
 ---@return number
 ---@return ISSliderPanel
 function ISDebugUtils.addSlider(_self, _data, _x, _y, _w, _h, _func) end
+
+---@param _self ISSpawnHordeUI
+---@param _data string
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@return ISSliderPanel
+function ISDebugUtils.addSliderNoReturnOffset(_self, _data, _x, _y, _w, _h, _func) end
 
 ---@param _self ISAnimDebugMonitor | WorldFlaresDebug
 ---@param _data string | table

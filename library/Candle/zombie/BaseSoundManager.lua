@@ -335,14 +335,16 @@ function BaseSoundManager:playDestructionSound(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
+--- @param arg1 string
 --- @return nil
-function BaseSoundManager:playImpactSound(arg0) end
+function BaseSoundManager:playImpactSound(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGridSquare
---- @param arg1 MaterialType
+--- @param arg1 string
+--- @param arg2 MaterialType
 --- @return nil
-function BaseSoundManager:playImpactSound(arg0, arg1) end
+function BaseSoundManager:playImpactSound(arg0, arg1, arg2) end
 
 --- @public
 --- @param name string

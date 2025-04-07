@@ -4,7 +4,7 @@
 ---@field animal unknown
 ---@field player unknown
 ---@field playerNum unknown
----@field prevFocus ISDesignationZoneAnimalZoneUI | ISVehicleAnimalUI
+---@field prevFocus table
 ---@field useProgressBar boolean
 ISOpenAnimalInfo = ISBaseTimedAction:derive("ISOpenAnimalInfo")
 ISOpenAnimalInfo.Type = "ISOpenAnimalInfo"
@@ -32,9 +32,9 @@ function ISOpenAnimalInfo:stop() end
 
 function ISOpenAnimalInfo:update() end
 
----@return unknown
+---@return boolean
 function ISOpenAnimalInfo:waitToStart() end
 
----@param prevFocus ISDesignationZoneAnimalZoneUI | ISVehicleAnimalUI
+---@param prevFocus table
 ---@return ISOpenAnimalInfo
 function ISOpenAnimalInfo:new(character, animal, prevFocus) end

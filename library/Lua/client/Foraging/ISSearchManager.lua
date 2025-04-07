@@ -6,6 +6,11 @@
 ---@field activeIcons table
 ---@field activeZoneRadius number
 ---@field activeZones table
+---@field affinityCooldown number
+---@field affinityCooldownMax number
+---@field affinityCooldownMin number
+---@field affinityCooldownStep number
+---@field affinityCooldownTick number
 ---@field aimBonusTick number
 ---@field aimBonusTickMax number
 ---@field aimMulti number
@@ -288,6 +293,8 @@ function ISSearchManager:spotIcon(_icon) end
 function ISSearchManager:toggleSearchMode(_isSearchMode) end
 
 function ISSearchManager:update() end
+
+function ISSearchManager:updateAffinityCooldown() end
 
 function ISSearchManager:updateAlpha() end
 

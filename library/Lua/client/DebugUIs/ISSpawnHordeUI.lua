@@ -9,9 +9,9 @@
 ---@field closeButton2 ISButton
 ---@field cursor ISSelectCursor?
 ---@field femaleOutfits unknown
----@field healthSlider ISSliderPanel
----@field healthSliderLabel ISLabel
----@field healthSliderTitle ISLabel
+---@field healthSlider unknown
+---@field healthSliderLabel unknown
+---@field healthSliderTitle unknown
 ---@field maleOutfits unknown
 ---@field marker unknown?
 ---@field outfit ISComboBox

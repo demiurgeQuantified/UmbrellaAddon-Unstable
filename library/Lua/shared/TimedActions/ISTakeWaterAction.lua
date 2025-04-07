@@ -5,6 +5,7 @@
 ---@field item unknown?
 ---@field maxTime number?
 ---@field sound unknown
+---@field startThirst number
 ---@field startUsedAmount number
 ---@field waterObject unknown
 ---@field waterTaintedCL unknown
@@ -31,10 +32,12 @@ function ISTakeWaterAction:stop() end
 
 function ISTakeWaterAction:stopSound() end
 
----@param _amount number
 function ISTakeWaterAction:transferFluid(_amount) end
 
 function ISTakeWaterAction:update() end
+
+---@param targetDelta number
+function ISTakeWaterAction:updateUse(targetDelta) end
 
 ---@return unknown
 function ISTakeWaterAction:waitToStart() end

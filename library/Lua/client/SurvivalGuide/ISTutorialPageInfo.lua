@@ -25,7 +25,6 @@ ISTutorialSetInfo.Type = "ISTutorialSetInfo"
 ---@param pagetitle string
 function ISTutorialSetInfo:addPage(pagetitle, pagetext, moreTextInfo, pagenextcondition) end
 
----@param tutorialPanel ISRichTextPanel
 function ISTutorialSetInfo:applyPageToRichTextPanel(tutorialPanel) end
 
 ---@return unknown

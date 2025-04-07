@@ -7,7 +7,7 @@
 ---@field character unknown?
 ---@field doctorLevel number
 ---@field doIt number | boolean
----@field item unknown
+---@field item unknown?
 ---@field otherPlayer unknown?
 ---@field sound unknown
 ---@field sound2 unknown
@@ -38,6 +38,7 @@ function ISApplyBandage:waitToStart() end
 
 ---@param character unknown?
 ---@param otherPlayer unknown?
----@param doIt number | boolean
+---@param item unknown?
+---@param doIt boolean | number
 ---@return ISApplyBandage
 function ISApplyBandage:new(character, otherPlayer, item, bodyPart, doIt) end

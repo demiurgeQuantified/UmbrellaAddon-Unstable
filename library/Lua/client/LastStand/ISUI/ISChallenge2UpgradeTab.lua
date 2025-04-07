@@ -3,7 +3,7 @@
 ---@class ISChallenge2UpgradeTab : ISCollapsableWindow
 ---@field itemScreen ISChallenge2VariousItemWindow
 ---@field panel ISTabPanel
----@field playerId unknown
+---@field playerId number
 ---@field playerScreen ISChallenge2PlayerUpWindow
 ---@field repairScreen ISChallenge2WeaponRepairWindow
 ---@field weaponScreen ISChallenge2WeaponUpWindow
@@ -29,5 +29,6 @@ function ISChallenge2UpgradeTab:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player number
 ---@return ISChallenge2UpgradeTab
 function ISChallenge2UpgradeTab:new(x, y, width, height, player) end

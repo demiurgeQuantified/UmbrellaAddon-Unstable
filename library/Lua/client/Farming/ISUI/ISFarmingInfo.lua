@@ -37,7 +37,7 @@ function ISFarmingInfo.getLastWatedHour(plant) end
 ---@return string
 function ISFarmingInfo.getNextGrowingPhase(info) end
 
----@return nowateredsince_rgb
+---@return table
 function ISFarmingInfo.getNoWateredSinceColor(plant, lastWatedHour, farmingLevel) end
 
 ---@return table
@@ -51,7 +51,7 @@ function ISFarmingInfo.getWaterLvl(plant, farmingLevel) end
 
 function ISFarmingInfo.getWaterLvlBarColor(info, farmingLevel) end
 
----@return water_rgb
+---@return table
 function ISFarmingInfo.getWaterLvlColor(plant, farmingLevel) end
 
 ---@return boolean
@@ -104,62 +104,3 @@ function ISFarmingInfo:update() end
 ---@param height number
 ---@return ISFarmingInfo
 function ISFarmingInfo:new(x, y, width, height, character, plant) end
-
----@class water_rgb
-water_rgb = {
-	["r"] = 255.0,
-	["g"] = 255.0,
-	["b"] = 255.0,
-}
-
----@class waterbar_rgb
-waterbar_rgb = {
-	["r"] = 0.15,
-	["g"] = 0.3,
-	["b"] = 0.63,
-}
-
----@class fertilizer_rgb
-fertilizer_rgb = {
-	["r"] = 0.0,
-	["g"] = 0.0,
-	["b"] = 0.0,
-}
-
----@class compost_rgb
-compost_rgb = {
-	["r"] = 0.0,
-	["g"] = 0.0,
-	["b"] = 0.0,
-}
-
----@class health_rgb
-health_rgb = {
-	["r"] = 0.0,
-	["g"] = 0.0,
-	["b"] = 0.0,
-}
-
----@class nowateredsince_rgb
-nowateredsince_rgb = {
-	["r"] = 255.0,
-	["g"] = 255.0,
-	["b"] = 255.0,
-}
-
----@class disease_rgb
-disease_rgb = {
-	["0r"] = 255.0,
-	["0g"] = 255.0,
-	["0b"] = 255.0,
-}
-
----@class disease
-disease = {}
-
----@class title_rgb
-title_rgb = {
-	["r"] = 1.0,
-	["g"] = 1.0,
-	["b"] = 1.0,
-}

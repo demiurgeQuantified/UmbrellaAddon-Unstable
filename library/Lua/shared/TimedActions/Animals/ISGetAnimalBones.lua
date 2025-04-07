@@ -2,6 +2,7 @@
 
 ---@class ISGetAnimalBones : ISBaseTimedAction
 ---@field body unknown
+---@field sound unknown
 ISGetAnimalBones = ISBaseTimedAction:derive("ISGetAnimalBones")
 ISGetAnimalBones.Type = "ISGetAnimalBones"
 
@@ -19,6 +20,8 @@ function ISGetAnimalBones:perform() end
 function ISGetAnimalBones:start() end
 
 function ISGetAnimalBones:stop() end
+
+function ISGetAnimalBones:stopSound() end
 
 function ISGetAnimalBones:update() end
 

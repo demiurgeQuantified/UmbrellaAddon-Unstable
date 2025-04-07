@@ -83,6 +83,7 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field keyUI ISWorldMapKey
 ---@field LBumperZoom number?
 ---@field mapAPI unknown
+---@field mouseOverPrintMedia table?
 ---@field optionBtn ISButton
 ---@field optionsUI WorldMapOptions
 ---@field perspectiveBtn ISButton
@@ -90,11 +91,14 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field povXms unknown?
 ---@field povYms unknown?
 ---@field prevFocus unknown?
+---@field printMedia unknown?
+---@field printMediaBtn ISButton
 ---@field pyramidBtn ISButton
 ---@field RBumperZoom number?
 ---@field showCellGrid boolean
 ---@field showPlayerNames boolean
 ---@field showPlayers boolean
+---@field showPrintMedia boolean
 ---@field showRemotePlayers boolean
 ---@field showTileGrid boolean
 ---@field symbolsBtn ISButton
@@ -135,6 +139,8 @@ function ISWorldMap.ShowWorldMap(playerNum, centerX, centerY, zoom) end
 function ISWorldMap.ToggleWorldMap(playerNum) end
 
 function ISWorldMap:close() end
+
+function ISWorldMap:closePrintMedia() end
 
 function ISWorldMap:createChildren() end
 
@@ -186,6 +192,8 @@ function ISWorldMap:onMouseUp(x, y) end
 ---@return boolean
 function ISWorldMap:onMouseUpOutside(x, y) end
 
+function ISWorldMap:onMouseUpPrintMedia() end
+
 ---@return boolean
 function ISWorldMap:onMouseWheel(del) end
 
@@ -203,6 +211,8 @@ function ISWorldMap:onTeleport(worldX, worldY) end
 
 function ISWorldMap:onToggleLegend() end
 
+function ISWorldMap:onTogglePrintMedia() end
+
 function ISWorldMap:onTogglePyramid() end
 
 function ISWorldMap:onToggleSymbols() end
@@ -218,6 +228,8 @@ function ISWorldMap:render() end
 ---@param x number
 ---@param y number
 function ISWorldMap:renderJoypadPrompt(texture, text, x, y) end
+
+function ISWorldMap:renderPrintMedia() end
 
 function ISWorldMap:restoreSettings() end
 

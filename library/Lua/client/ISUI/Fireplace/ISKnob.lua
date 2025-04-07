@@ -4,6 +4,7 @@
 ---@field amplitude number
 ---@field dragging boolean
 ---@field draggingX unknown
+---@field height unknown
 ---@field isKnob boolean
 ---@field lastValue number
 ---@field originalX unknown
@@ -14,6 +15,7 @@
 ---@field title string
 ---@field values table
 ---@field valuesBg unknown
+---@field width unknown
 ISKnob = ISUIElement:derive("ISKnob")
 ISKnob.Type = "ISKnob"
 ISKnob.messages = {}

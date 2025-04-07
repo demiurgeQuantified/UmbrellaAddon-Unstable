@@ -36,9 +36,6 @@ function ISVehicleMenu.getVehicleToInteractWith(playerObj) end
 ---@return boolean
 function ISVehicleMenu.moveItemsFromSeat(playerObj, vehicle, seat, moveThem, doEnter) end
 
----@return number
-function ISVehicleMenu.moveItemsOnSeat(seat, newSeat, playerObj, moveThem, itemListIndex) end
-
 function ISVehicleMenu.onAddAnimalFromHandsInTrailer(playerObj, animal, vehicle) end
 
 function ISVehicleMenu.onAddAnimalInTrailer(playerObj, animal, vehicle) end
@@ -146,7 +143,7 @@ function ISVehicleMenu.showRadialMenu(playerObj) end
 
 function ISVehicleMenu.showRadialMenuOutside(playerObj) end
 
----@param seatTo string
----@param itemListIndex number
+---@param desiredWeight number
+---@param testOnly boolean
 ---@return number
-function ISVehicleMenu.tryMoveItemsFromSeat(playerObj, vehicle, seat, moveThem, doEnter, seatTo, itemListIndex) end
+function ISVehicleMenu.transferSeatItems(player, vehicle, part, otherPart, desiredWeight, testOnly) end

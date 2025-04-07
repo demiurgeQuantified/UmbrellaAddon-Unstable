@@ -251,6 +251,8 @@ function ISInventoryPaneContextMenu.OnCraftComplete(
 )
 end
 
+function ISInventoryPaneContextMenu.onDebugCloneItem(item, player) end
+
 function ISInventoryPaneContextMenu.onDrinkFluid(item, percent, playerObj) end
 
 function ISInventoryPaneContextMenu.onDrinkForThirst(waterContainer, playerObj, percent) end

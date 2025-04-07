@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISDestroyStuffAction : ISBaseTimedAction
----@field cornerCounter number
----@field item unknown
+---@field cornerCounter number?
+---@field item unknown?
 ---@field sledge unknown
 ---@field spriteFrame number
 ISDestroyStuffAction = ISBaseTimedAction:derive("ISDestroyStuffAction")
@@ -33,5 +33,8 @@ function ISDestroyStuffAction:update() end
 ---@return unknown
 function ISDestroyStuffAction:waitToStart() end
 
+---@param character unknown?
+---@param item unknown?
+---@param cornerCounter unknown?
 ---@return ISDestroyStuffAction
 function ISDestroyStuffAction:new(character, item, cornerCounter) end

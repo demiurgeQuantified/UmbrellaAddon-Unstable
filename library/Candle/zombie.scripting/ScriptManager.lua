@@ -130,6 +130,10 @@ function ScriptManager:ReloadScripts(arg0) end
 function ScriptManager:Reset() end
 
 --- @public
+--- @return nil
+function ScriptManager:VerifyAllCraftRecipesAreLearnable() end
+
+--- @public
 --- @param arg0 ModelScript
 --- @return nil
 function ScriptManager:addModelScript(arg0) end

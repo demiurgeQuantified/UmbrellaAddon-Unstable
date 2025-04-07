@@ -2,7 +2,7 @@
 
 ---@class ISPickUpGroundCoverItem : ISBaseTimedAction
 ---@field object unknown
----@field objectType unknown?
+---@field objectType string?
 ---@field spriteFrame number
 ---@field square unknown
 ISPickUpGroundCoverItem = ISBaseTimedAction:derive("ISPickUpGroundCoverItem")
@@ -19,7 +19,7 @@ function ISPickUpGroundCoverItem:complete() end
 ---@return number
 function ISPickUpGroundCoverItem:getDuration() end
 
----@return boolean
+---@return unknown
 function ISPickUpGroundCoverItem:isValid() end
 
 function ISPickUpGroundCoverItem:perform() end

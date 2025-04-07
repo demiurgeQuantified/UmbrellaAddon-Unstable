@@ -1437,25 +1437,55 @@ ZombiesZoneDefinition.Cowboy = {
 		name = "CostumeWildWestOutlaw",
 		toSpawn = 10,
 	},
-	Young = {
-		name = "Young",
+	Retiree = {
+		name = "Retiree",
 		chance = 10,
 	},
 	Student = {
 		name = "Student",
 		chance = 10,
 	},
+	Tourist = {
+		name = "Tourist",
+		chance = 10,
+	},
 	Varsity = {
 		name = "Varsity",
 		chance = 1,
+	},
+	Young = {
+		name = "Young",
+		chance = 10,
+	},
+	YoungCowpoke = {
+		name = "YoungCowpoke",
+		chance = 5,
+	},
+}
+ZombiesZoneDefinition.PonyRoama = {
+	CostumeWildWestCowpoke = {
+		name = "CostumeWildWestCowpoke",
+		chance = 5,
+	},
+	Student = {
+		name = "Student",
+		chance = 10,
 	},
 	Tourist = {
 		name = "Tourist",
 		chance = 10,
 	},
-	Retiree = {
-		name = "Retiree",
+	Varsity = {
+		name = "Varsity",
+		chance = 1,
+	},
+	Young = {
+		name = "Young",
 		chance = 10,
+	},
+	YoungCowpoke = {
+		name = "YoungCowpoke",
+		chance = 25,
 	},
 }
 ZombiesZoneDefinition.Stripclub = {

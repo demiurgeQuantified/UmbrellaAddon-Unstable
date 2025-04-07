@@ -74,6 +74,14 @@ function DesignationZoneAnimal.getZone(arg0, arg1, arg2) end
 
 --- @public
 --- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return DesignationZoneAnimal
+function DesignationZoneAnimal.getZoneF(arg0, arg1, arg2) end
+
+--- @public
+--- @static
 --- @param arg0 IsoWorldInventoryObject
 --- @return boolean
 function DesignationZoneAnimal.isItemDung(arg0) end
@@ -105,6 +113,11 @@ function DesignationZoneAnimal.removeZone(arg0) end
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
+
+--- @public
+--- @param arg0 IsoAnimal
+--- @return nil
+function DesignationZoneAnimal:addAnimal(arg0) end
 
 --- @public
 --- @param arg0 IsoWorldInventoryObject

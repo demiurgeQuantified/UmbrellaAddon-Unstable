@@ -69,7 +69,7 @@ function ISPanelJoypad:getVisibleChildren(joypadIndexY) end
 function ISPanelJoypad:initialise() end
 
 ---@param button1 table
----@param button2 ISButton?
+---@param button2 (ISButton | ISComboBox)?
 ---@return table
 function ISPanelJoypad:insertNewLineOfButtons(
 	button1,

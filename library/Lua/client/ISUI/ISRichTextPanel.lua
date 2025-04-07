@@ -31,7 +31,7 @@
 ---@field rgb table
 ---@field rgbCurrent table
 ---@field rgbStack table
----@field text string?
+---@field text string
 ---@field textB number
 ---@field textDirty boolean
 ---@field textG number
@@ -46,8 +46,8 @@ ISRichTextPanel = ISPanel:derive("ISRichTextPanel")
 ISRichTextPanel.Type = "ISRichTextPanel"
 ISRichTextPanel.drawMargins = false
 
----@param dx number?
----@param dy number?
+---@param dx number
+---@param dy number
 function ISRichTextPanel:doRightJoystickScrolling(joypadData, dx, dy) end
 
 function ISRichTextPanel:initialise() end
@@ -88,7 +88,7 @@ function ISRichTextPanel:setContentTransparency(alpha) end
 ---@param bottom number
 function ISRichTextPanel:setMargins(left, top, right, bottom) end
 
----@param text string?
+---@param text string
 function ISRichTextPanel:setText(text) end
 
 ---@param x number

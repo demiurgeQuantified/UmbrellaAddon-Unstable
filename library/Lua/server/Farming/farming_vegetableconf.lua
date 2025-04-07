@@ -49,3 +49,7 @@ function calcNextTimeFactor() end
 function growNext(planting, nameOfTile, nextGrowing, howManyTime) end
 
 function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGrow) end
+
+---@param recipeName string
+---@return boolean
+function doesSeasonRecipeExist(recipeName) end

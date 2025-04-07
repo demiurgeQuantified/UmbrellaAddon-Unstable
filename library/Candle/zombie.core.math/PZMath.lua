@@ -310,6 +310,15 @@ function PZMath.lerp(src, dest, alpha) end
 
 --- @public
 --- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 LerpType
+--- @return number
+function PZMath.lerp(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
 --- @param out Vector3f
 --- @param a Vector3f
 --- @param b Vector3f

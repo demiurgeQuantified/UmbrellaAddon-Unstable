@@ -34,6 +34,11 @@ function IsoButcherHook:load(arg0, arg1, arg2) end
 --- @public
 --- @param arg0 IsoAnimal
 --- @return nil
+function IsoButcherHook:playPutDownCorpseSound(arg0) end
+
+--- @public
+--- @param arg0 IsoAnimal
+--- @return nil
 function IsoButcherHook:reattachAnimal(arg0) end
 
 --- @public
@@ -54,6 +59,11 @@ function IsoButcherHook:save(arg0, arg1) end
 --- @param arg0 IsoAnimal
 --- @return nil
 function IsoButcherHook:setAnimal(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoButcherHook:setPlayRemovingBloodSound(arg0) end
 
 --- @public
 --- @param arg0 table

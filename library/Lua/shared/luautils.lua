@@ -12,6 +12,8 @@ function luautils.countItemsRecursive(_containerList, _itemsNum) end
 ---@return unknown
 function luautils.equipItems(_player, _primItemToEquip, _scndItemToEquip) end
 
+function luautils.exportGlobals(_print, _save, _test) end
+
 ---@return unknown
 function luautils.findRootInventory(_inventory) end
 
@@ -50,8 +52,13 @@ function luautils.roughlyEqual(_value, _value2, _delta) end
 ---@return unknown
 function luautils.round(num, idp) end
 
+---@param inputstr string
+---@param sep string
 ---@return table
-function luautils.split(pString, pPattern) end
+function luautils.split(inputstr, sep) end
+
+---@return table
+function luautils.splitJavaStyle(pString, pPattern) end
 
 ---@return boolean
 function luautils.stringEnds(String, End) end

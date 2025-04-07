@@ -5,6 +5,7 @@
 ---@field hook unknown
 ---@field luaHook ISButcherHookUI
 ---@field perkLevel unknown
+---@field sound unknown
 ISPutAnimalOnHook = ISBaseTimedAction:derive("ISPutAnimalOnHook")
 ISPutAnimalOnHook.Type = "ISPutAnimalOnHook"
 
@@ -22,6 +23,8 @@ function ISPutAnimalOnHook:perform() end
 function ISPutAnimalOnHook:start() end
 
 function ISPutAnimalOnHook:stop() end
+
+function ISPutAnimalOnHook:stopSound() end
 
 function ISPutAnimalOnHook:update() end
 

@@ -20,13 +20,13 @@
 --- @field public SPEED_SHAMBLER integer
 --- @field public SPEED_SPRINTER integer
 --- @field public SPRINTER_FIXES boolean
+--- @field public THUMP_FLAG_CHAINLINK_FENCE integer
 --- @field public THUMP_FLAG_GARAGE_DOOR integer
 --- @field public THUMP_FLAG_GENERIC integer
 --- @field public THUMP_FLAG_METAL integer
 --- @field public THUMP_FLAG_METAL_POLE_GATE integer
 --- @field public THUMP_FLAG_WINDOW integer
 --- @field public THUMP_FLAG_WINDOW_EXTRA integer
---- @field public THUMP_FLAG_WIRE_FENCE integer
 IsoZombie = {}
 
 ------------------------------------

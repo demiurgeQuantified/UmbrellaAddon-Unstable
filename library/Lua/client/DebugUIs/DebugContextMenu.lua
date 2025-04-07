@@ -7,7 +7,7 @@ DebugContextMenu.stagTime = 0
 DebugContextMenu.ticked = false
 DebugContextMenu.selectedZombie = nil
 
-function DebugContextMenu.AddAnimal(type, breed, square, skeleton) end
+function DebugContextMenu.AddAnimal(type, breed, square, skeleton, playerObj) end
 
 function DebugContextMenu.addRBDebugMenu(context, building) end
 

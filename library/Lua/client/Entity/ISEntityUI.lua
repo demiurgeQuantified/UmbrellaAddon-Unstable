@@ -71,7 +71,7 @@ function ISEntityUI.ItemSlotRemoveItems(_player, _entity, _itemSlot) end
 
 function ISEntityUI.ItemSlotRemoveSingleItem(_player, _entity, _itemSlot, _item) end
 
----@param _window ISBaseEntityWindow
+---@param _window ISBuildWindow | ISBaseEntityWindow
 function ISEntityUI.OnCloseWindow(_window) end
 
 ---@param _isoObject unknown?

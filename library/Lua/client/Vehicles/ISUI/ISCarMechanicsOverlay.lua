@@ -1537,11 +1537,11 @@ ISCarMechanicsOverlay.PartList = {
 		},
 	},
 	TrailerAnimalFood = {
-		img = "storage_eggcompartment",
+		img = "storage_foodcompartment",
 		vehicles = {},
 	},
 	TrailerAnimalEggs = {
-		img = "storage_foodcompartment",
+		img = "storage_eggcompartment",
 		vehicles = {},
 	},
 }

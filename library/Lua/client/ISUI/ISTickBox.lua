@@ -34,7 +34,7 @@ ISTickBox = ISPanel:derive("ISTickBox")
 ISTickBox.Type = "ISTickBox"
 
 ---@param name string?
----@param data (string | number | table)?
+---@param data (number | string | table)?
 ---@return number
 function ISTickBox:addOption(name, data, texture) end
 

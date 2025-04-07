@@ -745,6 +745,15 @@ function BaseVehicle:flipUpright() end
 function BaseVehicle:forceVehicleDistribution(arg0) end
 
 --- @public
+--- @return ArrayList
+function BaseVehicle:getAllSeatParts() end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return ArrayList
+function BaseVehicle:getAllSeatParts(arg0) end
+
+--- @public
 --- @return number
 function BaseVehicle:getAngleX() end
 
@@ -1101,6 +1110,11 @@ function BaseVehicle:getPartCount() end
 --- @param seat integer
 --- @return VehiclePart
 function BaseVehicle:getPartForSeatContainer(seat) end
+
+--- @public
+--- @param arg0 string
+--- @return integer
+function BaseVehicle:getPartIndex(arg0) end
 
 --- @public
 --- @param seat integer
@@ -1750,6 +1764,16 @@ function BaseVehicle:isRegulator() end
 --- @public
 --- @return boolean
 function BaseVehicle:isRemovedFromWorld() end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function BaseVehicle:isSeatHoldingItems(arg0) end
+
+--- @public
+--- @param arg0 VehiclePart
+--- @return boolean
+function BaseVehicle:isSeatHoldingItems(arg0) end
 
 --- @public
 --- @param seat integer

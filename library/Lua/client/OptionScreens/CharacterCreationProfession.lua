@@ -60,6 +60,9 @@ function CharacterCreationProfession:deleteBuildStep1() end
 
 function CharacterCreationProfession:deleteBuildStep2(button, joypadData) end
 
+---@param isRemovingTrait boolean
+function CharacterCreationProfession:doTestForMutuallyExclusiveTraits(trait, isRemovingTrait) end
+
 ---@return number
 function CharacterCreationProfession:drawProfessionMap(y, item, alt) end
 
@@ -78,9 +81,6 @@ function CharacterCreationProfession:instantiate() end
 
 ---@return boolean
 function CharacterCreationProfession:isTraitExcluded(trait) end
-
----@param bAdd boolean
-function CharacterCreationProfession:mutualyExclusive(trait, bAdd) end
 
 ---@return number
 function CharacterCreationProfession:negativeTraitOffset() end
@@ -169,13 +169,8 @@ BCRC.savefile = "saved_builds.txt"
 ---@return string?
 function BCRC.dump(o, lvl) end
 
----@param _centered boolean
----@param _width number?
----@param _height number?
----@param _posX unknown?
----@param _posY unknown?
----@param _text string
----@param target CharacterCreationMain
+---@param _width number
+---@param _height number
 ---@return ISTextBox
 function BCRC.inputModal(_centered, _width, _height, _posX, _posY, _text, _onclick, target, param1, param2) end
 
@@ -185,3 +180,16 @@ function BCRC.pline(text) end
 function BCRC.readSaveFile() end
 
 function BCRC.writeSaveFile(options) end
+
+---@class CharacterCreationMain
+CharacterCreationMain = {}
+
+function CharacterCreationMain.invertSort(list) end
+
+function CharacterCreationMain.sort(list) end
+
+---@return boolean
+function CharacterCreationMain.sortByCost(a, b) end
+
+---@return boolean
+function CharacterCreationMain.sortByInvertCost(a, b) end

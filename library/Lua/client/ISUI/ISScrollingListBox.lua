@@ -13,11 +13,13 @@
 ---@field items table
 ---@field listHeaderColor table
 ---@field listHeight number
+---@field mouseOverHighlightColor table
 ---@field mouseoverselected number
 ---@field onmousedblclick function
 ---@field onmousedown unknown
 ---@field selected number?
 ---@field selectedBeforeReset number?
+---@field selectionColor table
 ---@field smoothScrollTargetY number?
 ---@field smoothScrollY number?
 ---@field stopPrerender boolean
@@ -32,6 +34,7 @@ ISScrollingListBox.nextVisibleIndex = ISScrollingListBox.nextVisibleItem
 function ISScrollingListBox.sortByName(a, b) end
 
 ---@param columnName string
+---@param size number
 function ISScrollingListBox:addColumn(columnName, size) end
 
 ---@param name string
@@ -39,12 +42,31 @@ function ISScrollingListBox:addColumn(columnName, size) end
 ---@return table
 function ISScrollingListBox:addItem(name, item) end
 
+---@param name string
+---@return table?
+function ISScrollingListBox:addUniqueItem(name, item) end
+
 function ISScrollingListBox:clear() end
+
+---@return boolean
+function ISScrollingListBox:contains(itemText) end
 
 ---@param y number
 ---@param alt boolean
 ---@return number
 function ISScrollingListBox:doDrawItem(y, item, alt) end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+function ISScrollingListBox:drawMouseOverHighlight(x, y, width, height) end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+function ISScrollingListBox:drawSelection(x, y, width, height) end
 
 function ISScrollingListBox:ensureVisible(index) end
 
@@ -119,6 +141,10 @@ function ISScrollingListBox:removeItem(itemText) end
 
 ---@return unknown?
 function ISScrollingListBox:removeItemByIndex(itemIndex) end
+
+---@return boolean
+---@return table
+function ISScrollingListBox:removeMatchingItems(itemText) end
 
 function ISScrollingListBox:render() end
 

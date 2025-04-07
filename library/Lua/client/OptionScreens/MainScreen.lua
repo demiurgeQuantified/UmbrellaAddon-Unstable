@@ -251,4 +251,4 @@ function LoadMainScreenPanelInt(ingame) end
 
 function MainScreenPanelJoinSteam() end
 
-function MainScreenPanelJoinSteam_onConfirmLeaveGame(this, button, player, bed) end
+function MainScreenPanelJoinSteam_onConfirmLeaveGame(this, button, player) end

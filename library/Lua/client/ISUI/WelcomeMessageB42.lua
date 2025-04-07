@@ -1,9 +1,9 @@
 ---@meta
 
----@class WelcomeMessageB42
-WelcomeMessageB42 = {}
+---@class WelcomeMessages
+WelcomeMessages = {}
 
-function WelcomeMessageB42.doMsg() end
+function WelcomeMessages.doMsg() end
 
 ---@class WelcomeMessageUI : ISCollapsableWindow
 ---@field changeLabel ISLabel

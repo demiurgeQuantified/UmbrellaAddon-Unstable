@@ -35,6 +35,7 @@
 ---@field textColor table
 ---@field textureList table
 ---@field title string
+---@field width unknown
 ISFluidContainerPanel = ISPanel:derive("ISFluidContainerPanel")
 ISFluidContainerPanel.Type = "ISFluidContainerPanel"
 

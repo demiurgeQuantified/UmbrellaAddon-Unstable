@@ -38,7 +38,7 @@
 ---@field textColor table
 ---@field textureBackground unknown?
 ---@field textureColor table
----@field title string
+---@field title string?
 ---@field tooltip string?
 ---@field tooltipUI ISToolTip
 ---@field yoffset number
@@ -60,7 +60,7 @@ function ISButton:forceClick() end
 ---@param height number
 function ISButton:forceImageSize(width, height) end
 
----@return string
+---@return string?
 function ISButton:getTitle() end
 
 function ISButton:initialise() end
@@ -171,7 +171,7 @@ function ISButton:updateTooltip() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param title string
+---@param title string?
 ---@param clicktarget table?
 ---@param onclick (ISButton | function)?
 ---@param onmousedown function?

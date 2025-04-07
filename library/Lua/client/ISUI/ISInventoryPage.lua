@@ -284,6 +284,8 @@ function ISInventoryPage:update() end
 
 function ISInventoryPage:updateContainerHighlight() end
 
+function ISInventoryPage:updateItemCount() end
+
 ---@param x number
 ---@param y number
 ---@param width number

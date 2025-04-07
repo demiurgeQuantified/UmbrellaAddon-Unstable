@@ -26,7 +26,6 @@
 ---@field playerNum unknown
 ---@field previousPage ISButton
 ---@field target unknown?
----@field text string
 ---@field title ISTextEntryBox | string
 ---@field yes ISButton
 ISUIWriteJournal = ISCollapsableWindowJoypad:derive("ISUIWriteJournal")

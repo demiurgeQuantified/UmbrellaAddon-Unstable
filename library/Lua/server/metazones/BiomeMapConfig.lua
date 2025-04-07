@@ -25,6 +25,11 @@ biome_map_config = {
 		zone = "ForagingNav",
 	},
 	{
+		pixel = 96,
+		biome = "$random",
+		zone = "DeepForest",
+	},
+	{
 		pixel = 102,
 		zone = "TrailerPark",
 	},

@@ -385,6 +385,10 @@ function IsoAnimal:getBloodQuantity() end
 function IsoAnimal:getBreed() end
 
 --- @public
+--- @return ArrayList
+function IsoAnimal:getConnectedDZone() end
+
+--- @public
 --- @return number
 function IsoAnimal:getCorpseLength() end
 
@@ -509,6 +513,10 @@ function IsoAnimal:getMinClutchSize() end
 --- @public
 --- @return IsoAnimal
 function IsoAnimal:getMother() end
+
+--- @public
+--- @return integer
+function IsoAnimal:getNestBoxIndex() end
 
 --- @public
 --- @return string
@@ -859,6 +867,11 @@ function IsoAnimal:setAttackedBy(arg0) end
 --- @param arg0 string
 --- @return nil
 function IsoAnimal:setCustomName(arg0) end
+
+--- @public
+--- @param arg0 DesignationZoneAnimal
+--- @return nil
+function IsoAnimal:setDZone(arg0) end
 
 --- @public
 --- @param arg0 AnimalData

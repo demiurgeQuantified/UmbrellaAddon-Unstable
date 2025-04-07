@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISAddWaterFromItemAction : ISBaseTimedAction
----@field addUnits number
+---@field addUnits unknown
 ---@field itemFrom unknown
 ---@field itemFromEndingAmount number
 ---@field itemFromStartAmount unknown
@@ -20,8 +20,6 @@ function ISAddWaterFromItemAction:getDuration() end
 function ISAddWaterFromItemAction:isValid() end
 
 function ISAddWaterFromItemAction:perform() end
-
-function ISAddWaterFromItemAction:serverStop() end
 
 function ISAddWaterFromItemAction:start() end
 

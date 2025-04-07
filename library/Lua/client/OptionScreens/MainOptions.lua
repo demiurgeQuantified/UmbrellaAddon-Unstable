@@ -4,7 +4,7 @@
 ---@field acceptButton ISButton
 ---@field addY number
 ---@field backButton ISButton
----@field badHighColor unknown
+---@field badHighColor ISButton
 ---@field btnJoypadSensitivityM ISButton
 ---@field btnJoypadSensitivityP ISButton
 ---@field colorPicker ISColorPicker
@@ -17,7 +17,7 @@
 ---@field cover ISPanel
 ---@field gameOptions table
 ---@field gameSounds ISGameSounds
----@field goodHighColor unknown
+---@field goodHighColor ISButton
 ---@field joypadButtons unknown
 ---@field keyButtonWidth number
 ---@field keyTickBoxes table
@@ -25,16 +25,16 @@
 ---@field mainPanel ISPanelJoypad
 ---@field modal (ISModalDialog | ISConfirmMonitorSettingsDialog)?
 ---@field monitorSettings table
----@field mpColor unknown
----@field noTargetColor unknown
----@field objHighColor unknown
+---@field mpColor ISButton
+---@field noTargetColor ISButton
+---@field objHighColor ISButton
 ---@field resetLua boolean
 ---@field restartRequired boolean
 ---@field saveButton ISButton
 ---@field sprintBtn ISButton
 ---@field stuffBelowControllerTickbox ISPanel
 ---@field tabs ISTabPanel
----@field targetColor unknown
+---@field targetColor ISButton
 MainOptions = ISPanelJoypad:derive("MainOptions")
 MainOptions.Type = "MainOptions"
 MainOptions.keys = {}

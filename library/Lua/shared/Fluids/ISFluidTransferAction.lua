@@ -1,11 +1,12 @@
 ---@meta
 
 ---@class ISFluidTransferAction : ISBaseTimedAction
----@field amount number
+---@field amount unknown
 ---@field sound unknown
 ---@field source ISFluidContainer?
 ---@field sourceFluidObject unknown?
 ---@field sourceOwner unknown?
+---@field sourceStartAmount unknown
 ---@field target ISFluidContainer?
 ---@field targetFluidObject unknown?
 ---@field targetOwner unknown?

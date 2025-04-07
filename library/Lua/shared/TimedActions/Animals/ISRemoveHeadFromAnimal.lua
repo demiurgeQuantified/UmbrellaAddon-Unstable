@@ -6,6 +6,7 @@
 ---@field hook unknown
 ---@field luaHook ISButcherHookUI
 ---@field perkLevel unknown
+---@field sound unknown
 ---@field xp unknown
 ISRemoveHeadFromAnimal = ISBaseTimedAction:derive("ISRemoveHeadFromAnimal")
 ISRemoveHeadFromAnimal.Type = "ISRemoveHeadFromAnimal"
@@ -24,6 +25,8 @@ function ISRemoveHeadFromAnimal:perform() end
 function ISRemoveHeadFromAnimal:start() end
 
 function ISRemoveHeadFromAnimal:stop() end
+
+function ISRemoveHeadFromAnimal:stopSound() end
 
 function ISRemoveHeadFromAnimal:update() end
 

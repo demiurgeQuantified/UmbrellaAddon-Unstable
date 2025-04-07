@@ -25,13 +25,19 @@ ISWorldObjectContextMenu.fetchVars = {
 	tileObj = nil,
 	survivor = nil,
 	compost = nil,
+	hoppableN_2 = nil,
 	hoppableN = nil,
+	hoppableW_2 = nil,
 	hoppableW = nil,
 	thump = nil,
 	padlockThump = nil,
 	padlockedThump = nil,
 	digitalPadlockedThump = nil,
 	thumpableWindow = nil,
+	thumpableWindowN_2 = nil,
+	thumpableWindowN = nil,
+	thumpableWindowW_2 = nil,
+	thumpableWindowW = nil,
 	rainCollectorBarrel = nil,
 	tree = nil,
 	attachAnimalTo = nil,
@@ -186,7 +192,7 @@ function ISWorldObjectContextMenu.doFillFuelMenu(source, playerNum, context) end
 
 function ISWorldObjectContextMenu.doFishNetOptions(context, playerObj, square) end
 
----@return boolean
+---@return unknown
 function ISWorldObjectContextMenu.doFluidContainerMenu(context, object, player) end
 
 ---@return boolean
@@ -203,6 +209,19 @@ function ISWorldObjectContextMenu.doRecipeUsingWaterMenu(waterObject, playerNum,
 function ISWorldObjectContextMenu.doRemoveGrass(playerObj, square) end
 
 function ISWorldObjectContextMenu.doRemovePlant(playerObj, square, wallVine) end
+
+---@return boolean?
+function ISWorldObjectContextMenu.doSheetRopeOptions(
+	_context,
+	_object,
+	_worldobjects,
+	_player,
+	_playerObj,
+	_playerInv,
+	_hasHammer,
+	_test
+)
+end
 
 function ISWorldObjectContextMenu.doSleepOption(context, bed, player, playerObj) end
 
@@ -229,6 +248,8 @@ function ISWorldObjectContextMenu.equip2(player, handItem, item, primary) end
 
 ---@param doSquare boolean
 function ISWorldObjectContextMenu.fetch(v, player, doSquare) end
+
+function ISWorldObjectContextMenu.fetchPickupItems(v, props, playerInv) end
 
 ---@return string
 function ISWorldObjectContextMenu.getBedQuality(bed) end
@@ -316,8 +337,6 @@ function ISWorldObjectContextMenu.isThumpDoor(thumpable) end
 
 ---@return boolean
 function ISWorldObjectContextMenu.isTrappedAdjacentToWindow(player, window) end
-
-function ISWorldObjectContextMenu.localVariableOverflow(v, props, playerInv) end
 
 function ISWorldObjectContextMenu.onActivateGenerator(worldobjects, enable, generator, player) end
 
@@ -596,13 +615,10 @@ function ISWorldObjectContextMenu.restoreDoor(playerObj, door, isOpen) end
 ---@return boolean
 function ISWorldObjectContextMenu.setTest() end
 
----@return boolean?
 function ISWorldObjectContextMenu.toggleClothingDryer(context, playerId, object) end
 
----@return boolean?
 function ISWorldObjectContextMenu.toggleClothingWasher(context, worldobjects, playerId, object) end
 
----@return boolean?
 function ISWorldObjectContextMenu.toggleComboWasherDryer(context, playerObj, object) end
 
 ---@param item unknown?

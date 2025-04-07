@@ -1083,6 +1083,10 @@ VehicleZoneDistribution.business = {
 			index = -1,
 			spawnChance = 2,
 		},
+		["Base.StepVan_SmartKut"] = {
+			index = -1,
+			spawnChance = 2,
+		},
 		["Base.StepVan_SouthEasternHosp"] = {
 			index = -1,
 			spawnChance = 4,
@@ -1139,13 +1143,17 @@ VehicleZoneDistribution.business = {
 			index = -1,
 			spawnChance = 4,
 		},
-		["Base.Van_Perfick_Potato"] = {
-			index = -1,
-			spawnChance = 4,
-		},
 		["Base.Van_Charlemange_Beer"] = {
 			index = -1,
 			spawnChance = 2,
+		},
+		["Base.Van_HeritageTailors"] = {
+			index = -1,
+			spawnChance = 2,
+		},
+		["Base.Van_Perfick_Potato"] = {
+			index = -1,
+			spawnChance = 4,
 		},
 		["Base.VanSeats_Mural"] = {
 			index = -1,

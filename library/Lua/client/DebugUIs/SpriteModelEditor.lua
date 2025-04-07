@@ -286,7 +286,7 @@ function SpriteModelEditor_Scene:new(x, y, width, height, editor) end
 ---@field editor SpriteModelEditor
 ---@field picker SpriteModelEditor_TilePicker
 ---@field selected table?
----@field tileset string
+---@field tileset string?
 SpriteModelEditor_TileList = ISPanel:derive("SpriteModelEditor_TileList")
 SpriteModelEditor_TileList.Type = "SpriteModelEditor_TileList"
 
@@ -313,7 +313,7 @@ function SpriteModelEditor_TileList:onRightMouseDown(x, y) end
 
 function SpriteModelEditor_TileList:render() end
 
----@param tilesetName string
+---@param tilesetName string?
 function SpriteModelEditor_TileList:setTileset(tilesetName) end
 
 ---@param x number

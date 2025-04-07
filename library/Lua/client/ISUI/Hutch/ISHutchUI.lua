@@ -270,6 +270,10 @@ function ISHutchUI:render() end
 
 function ISHutchUI:setVisible(vis) end
 
+function ISHutchUI:showNestBoxes() end
+
+function ISHutchUI:showRoosts() end
+
 ---@param x number
 ---@param y number
 ---@param width number

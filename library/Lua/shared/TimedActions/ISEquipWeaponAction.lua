@@ -5,7 +5,7 @@
 ---@field fromHotbar unknown?
 ---@field hotbar unknown?
 ---@field ignoreHandsWounds boolean
----@field item unknown
+---@field item unknown?
 ---@field jobType string
 ---@field primary boolean
 ---@field sound unknown
@@ -36,6 +36,7 @@ function ISEquipWeaponAction:stop() end
 
 function ISEquipWeaponAction:update() end
 
+---@param item unknown?
 ---@param maxTime number
 ---@param primary boolean
 ---@param twoHands boolean?

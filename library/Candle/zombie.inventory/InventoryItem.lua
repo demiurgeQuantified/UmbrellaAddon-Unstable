@@ -244,6 +244,10 @@ function InventoryItem:copyTimesRepairedTo(arg0) end
 function InventoryItem:createAndStoreDefaultDeadBody(arg0) end
 
 --- @public
+--- @return InventoryItem
+function InventoryItem:createCloneItem() end
+
+--- @public
 --- @return boolean
 function InventoryItem:damageCheck() end
 

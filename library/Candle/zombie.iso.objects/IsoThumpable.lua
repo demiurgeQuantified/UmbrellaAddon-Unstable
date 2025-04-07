@@ -505,6 +505,14 @@ function IsoThumpable:isThumpable() end
 function IsoThumpable:isWindow() end
 
 --- @public
+--- @return boolean
+function IsoThumpable:isWindowN() end
+
+--- @public
+--- @return boolean
+function IsoThumpable:isWindowW() end
+
+--- @public
 --- @param input ByteBuffer
 --- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean

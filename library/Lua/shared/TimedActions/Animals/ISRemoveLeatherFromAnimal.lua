@@ -6,6 +6,7 @@
 ---@field hook unknown
 ---@field luaHook ISButcherHookUI
 ---@field perkLevel unknown
+---@field sound unknown
 ---@field xp unknown
 ISRemoveLeatherFromAnimal = ISBaseTimedAction:derive("ISRemoveLeatherFromAnimal")
 ISRemoveLeatherFromAnimal.Type = "ISRemoveLeatherFromAnimal"
@@ -24,6 +25,8 @@ function ISRemoveLeatherFromAnimal:perform() end
 function ISRemoveLeatherFromAnimal:start() end
 
 function ISRemoveLeatherFromAnimal:stop() end
+
+function ISRemoveLeatherFromAnimal:stopSound() end
 
 function ISRemoveLeatherFromAnimal:update() end
 

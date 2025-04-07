@@ -14,6 +14,8 @@ function ISCraftBenchPanel:createChildren() end
 
 function ISCraftBenchPanel:initialise() end
 
+function ISCraftBenchPanel:OnCloseWindow() end
+
 function ISCraftBenchPanel:onGainJoypadFocus(joypadData) end
 
 function ISCraftBenchPanel:onJoypadDown(button, joypadData) end

@@ -8,14 +8,16 @@
 ---@field infoBtn ISButton
 ---@field itemHgt number
 ---@field itemPadY number
----@field nbOfAnimals unknown
+---@field nbOfAnimals number
 ---@field ok ISButton
 ---@field reloadBtn ISButton
 ---@field updateTick number
----@field zOffsetAfterAnimal unknown
----@field zOffsetBeforeAnimal number
 ISDesignationZoneAnimalZoneUI = ISPanelJoypad:derive("ISDesignationZoneAnimalZoneUI")
 ISDesignationZoneAnimalZoneUI.Type = "ISDesignationZoneAnimalZoneUI"
+
+function ISDesignationZoneAnimalZoneUI.queueCheckHutchDoor(playerObj, self, hutch, animal) end
+
+function ISDesignationZoneAnimalZoneUI.queueOpenAnimalInfo(playerObj, self, hutch, animal) end
 
 ---@return number
 function ISDesignationZoneAnimalZoneUI:calcFood() end
@@ -65,9 +67,13 @@ function ISDesignationZoneAnimalZoneUI:new(x, y, width, height, player, zone) en
 
 ---@class ISDesignationZoneAnimalZoneUI_AnimalsPanel : ISPanelJoypad
 ---@field selected number
+---@field smoothScrollTargetY number?
+---@field smoothScrollY number?
 ---@field ui ISDesignationZoneAnimalZoneUI
 ISDesignationZoneAnimalZoneUI_AnimalsPanel = ISPanelJoypad:derive("ISDesignationZoneAnimalZoneUI_AnimalsPanel")
 ISDesignationZoneAnimalZoneUI_AnimalsPanel.Type = "ISDesignationZoneAnimalZoneUI_AnimalsPanel"
+
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:ensureVisible(index) end
 
 function ISDesignationZoneAnimalZoneUI_AnimalsPanel:onGainJoypadFocus(joypadData) end
 
@@ -88,6 +94,8 @@ function ISDesignationZoneAnimalZoneUI_AnimalsPanel:render() end
 
 ---@return number
 function ISDesignationZoneAnimalZoneUI_AnimalsPanel:size() end
+
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:updateSmoothScrolling() end
 
 ---@param x number
 ---@param y number

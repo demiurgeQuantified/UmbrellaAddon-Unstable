@@ -23,6 +23,9 @@ function ISFarmingMenu.canPlow(seedAvailable, typeOfSeed, option, seedName, play
 ---@return boolean?
 function ISFarmingMenu.doFarmingMenu(player, context, worldobjects, test) end
 
+---@param context unknown?
+---@param worldobjects table
+---@param test boolean
 ---@return boolean?
 function ISFarmingMenu.doFarmingMenu2(player, context, worldobjects, test) end
 
@@ -42,13 +45,27 @@ function ISFarmingMenu.getWaterUsesFloat(item) end
 ---@return number
 function ISFarmingMenu.getWaterUsesInteger(item) end
 
+---@return boolean?
+function ISFarmingMenu.isAphidCureValid() end
+
+---@return boolean?
+function ISFarmingMenu.isFliesCureValid() end
+
+---@return boolean?
+function ISFarmingMenu.isMildewCureValid() end
+
+---@return boolean?
+function ISFarmingMenu.isSlugsCureValid() end
+
 ---@return boolean
 function ISFarmingMenu.isValidPlant(plant) end
 
 ---@return boolean
 function ISFarmingMenu.itemSortByName(a, b) end
 
-function ISFarmingMenu.onAphidsCure(worldobjects, uses, sq, playerObj) end
+function ISFarmingMenu.onAphidsCure(worldobjects, uses, sq, playerObj, context) end
+
+function ISFarmingMenu.onAphidsCureSquareSelected() end
 
 function ISFarmingMenu.onCheat(worldobjects, plant, args) end
 
@@ -62,24 +79,28 @@ function ISFarmingMenu.onFertilize(worldobjects, handItem, plant, sq, playerObj)
 
 function ISFarmingMenu.onFliesCure(worldobjects, uses, sq, playerObj) end
 
+function ISFarmingMenu.onFliesCureSquareSelected() end
+
 function ISFarmingMenu.onHarvest(worldobjects, plantToharvest, sq, playerObj) end
 
 function ISFarmingMenu.onInfo(worldobjects, plant, sq, playerObj) end
 
-function ISFarmingMenu.onJoypadFarming(square, player) end
-
 function ISFarmingMenu.onMildewCure(worldobjects, uses, sq, playerObj) end
 
-function ISFarmingMenu.onPlow(worldobjects, player, handItem) end
+function ISFarmingMenu.onMildewCureSquareSelected() end
+
+function ISFarmingMenu.onPlow(worldobjects, playerObj, handItem) end
 
 ---@param seedName string
 function ISFarmingMenu.onSeed(playerObj, typeOfSeed, plant, sq, seedName) end
 
-function ISFarmingMenu.onShovel(worldobjects, plant, player, sq) end
+function ISFarmingMenu.onShovel(worldobjects, plant, playerObj, sq) end
 
 function ISFarmingMenu.onSlugsCure(worldobjects, uses, sq, playerObj) end
 
-function ISFarmingMenu.onWater(worldobjects, uses, handItem, playerObj, plant, sq) end
+function ISFarmingMenu.onSlugsCureSquareSelected() end
+
+function ISFarmingMenu.onWater(worldobjects, uses, handItem, playerObj, plant, sq, context) end
 
 ---@return string
 function ISFarmingMenu.plantInfo(prop) end
@@ -105,6 +126,9 @@ function ISFarmingMenu:isInfoValid() end
 function ISFarmingMenu:isSeedValid() end
 
 ---@return boolean
+function ISFarmingMenu:isShovelValid() end
+
+---@return boolean
 function ISFarmingMenu:isWaterValid() end
 
 function ISFarmingMenu:onCompostSquareSelected() end
@@ -116,5 +140,7 @@ function ISFarmingMenu:onHarvestSquareSelected() end
 function ISFarmingMenu:onInfoSquareSelected() end
 
 function ISFarmingMenu:onSeedSquareSelected() end
+
+function ISFarmingMenu:onShovelSquareSelected() end
 
 function ISFarmingMenu:onWaterSquareSelected() end

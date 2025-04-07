@@ -3,6 +3,7 @@
 ---@class ISJoypadDisconnectedUI : ISUIElement
 ---@field buttonKBM ISButton
 ---@field label ISLabel
+---@field playerNum number
 ISJoypadDisconnectedUI = ISUIElement:derive("ISJoypadDisconnectedUI")
 ISJoypadDisconnectedUI.Type = "ISJoypadDisconnectedUI"
 

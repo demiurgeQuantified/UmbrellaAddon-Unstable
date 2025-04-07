@@ -8,6 +8,7 @@ PrintMediaDefinitions.Brochures = {
 	"CardinalPlaza",
 	"ColdWarBunker",
 	"CrossRoadsMall",
+	"DarkwallowGuestHouse",
 	"DinerInTheWoods",
 	"FossoilField",
 	"GrandOhioMall",
@@ -22,10 +23,12 @@ PrintMediaDefinitions.Brochures = {
 	"SunstarMotel",
 	"WellingtonHeightsGolfClub",
 	"WestMapleCountryClub",
+	"Delilah",
 }
 PrintMediaDefinitions.Fliers = {
 	"AMZSteel",
 	"AlsAutoShop",
+	"AmericanTire",
 	"BeefChunk",
 	"BensCabin",
 	"BrandenburgFD",
@@ -34,6 +37,7 @@ PrintMediaDefinitions.Fliers = {
 	"CabinforRentDixie",
 	"CatonaHotTinGrill",
 	"CircuitalHealing",
+	"DragRacingTrack",
 	"DuCaseApartments",
 	"EPToolsLV",
 	"EkronCollege",
@@ -86,6 +90,7 @@ PrintMediaDefinitions.Fliers = {
 	"LVPDHQ",
 	"LeafhillHeights",
 	"LectromaxManufacturingJobAd",
+	"LennysCarRepair",
 	"LouisvilleBruiser",
 	"LoveDuet",
 	"LowryCourt",
@@ -98,6 +103,7 @@ PrintMediaDefinitions.Fliers = {
 	"MuldraughPD",
 	"MusicFest93",
 	"NailsAndNuts",
+	"NolansUsedCars",
 	"OldCGECorpBuilding",
 	"OnyxDriveinTheater",
 	"OvoFarms",
@@ -307,7 +313,7 @@ PrintMediaDefinitions.MiscDetails = {
 			},
 		},
 	},
-	YoureWelcomeAboardtheDelilah = {
+	Delilah = {
 		location1 = {
 			{
 				x1 = 2020,

@@ -14,6 +14,7 @@
 ---@field dragStartZoomF unknown
 ---@field editSymbolsBtn ISButton
 ---@field getJoypadFocus boolean
+---@field joypadPromptHgt unknown
 ---@field LBumperZoom number?
 ---@field mapAPI unknown
 ---@field mapKey ISWorldMapKey
@@ -91,7 +92,11 @@ function ISMap:prerender() end
 
 function ISMap:render() end
 
----@return boolean
+---@param x number
+---@param y number
+---@return number
+function ISMap:renderButtonTextureAndText(texture, text, x, y) end
+
 function ISMap:renderJoypadIcons() end
 
 function ISMap:update() end
@@ -114,6 +119,8 @@ ISMapWrapper.Type = "ISMapWrapper"
 ISMapWrapper.__index = ISMapWrapper
 
 function ISMapWrapper:close() end
+
+function ISMapWrapper:instantiate() end
 
 ---@return boolean
 function ISMapWrapper:isKeyConsumed(key) end

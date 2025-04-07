@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class ISPaperCursor : ISBuildingObject
----@field action unknown
 ---@field character unknown
 ---@field currentSquare unknown
 ---@field newSprite unknown

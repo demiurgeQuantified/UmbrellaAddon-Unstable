@@ -132,6 +132,12 @@ function ISInventoryPane:expandAll(button) end
 function ISInventoryPane:findItemForWorldObjectHighlight(_itemTest) end
 
 ---@return number
+function ISInventoryPane:getProgressBarHeight() end
+
+---@return number
+function ISInventoryPane:getProgressBarWidth() end
+
+---@return number
 function ISInventoryPane:getScrollAreaHeight() end
 
 function ISInventoryPane:hideButtons() end

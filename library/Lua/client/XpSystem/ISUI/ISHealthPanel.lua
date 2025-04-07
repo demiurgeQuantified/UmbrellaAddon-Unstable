@@ -47,9 +47,6 @@ function ISHealthPanel.onCheatItem(itemType, playerObj) end
 
 function ISHealthPanel.onCheatOtherPlayer(bodyPart, action, player, otherPlayer) end
 
----@param action ISApplyBandage?
----@param jobType string?
----@param args table?
 function ISHealthPanel.setBodyPartActionForPlayer(playerObj, bodyPart, action, jobType, args) end
 
 function ISHealthPanel:checkContainerItems(container, childContainers, handlers) end

@@ -909,6 +909,11 @@ function IsoGridSquare:getAnimalTrack() end
 function IsoGridSquare:getAnimals() end
 
 --- @public
+--- @param arg0 ArrayList
+--- @return ArrayList
+function IsoGridSquare:getAnimals(arg0) end
+
+--- @public
 --- @param dx number
 --- @param dy number
 --- @return number

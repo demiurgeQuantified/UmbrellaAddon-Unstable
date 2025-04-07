@@ -82,6 +82,10 @@ function IsoFeedingTrough:getLinkedX() end
 function IsoFeedingTrough:getLinkedY() end
 
 --- @public
+--- @return IsoFeedingTrough
+function IsoFeedingTrough:getMasterTrough() end
+
+--- @public
 --- @return integer
 function IsoFeedingTrough:getMaxFeed() end
 

@@ -58,6 +58,14 @@ function ISWidgetInput:createScriptValues(_script, isSecondary) end
 
 function ISWidgetInput:initialise() end
 
+---@param x number
+---@param y number
+function ISWidgetInput:onMouseDown(x, y) end
+
+---@param x number
+---@param y number
+function ISWidgetInput:onMouseDownOutside(x, y) end
+
 function ISWidgetInput:onRebuildItemNodes(_inputItems) end
 
 function ISWidgetInput:onResize() end

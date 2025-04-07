@@ -9,6 +9,13 @@ Position3D = {}
 ------------------------------------
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return Position3D
+function Position3D:set(arg0, arg1, arg2) end
+
+--- @public
 --- @return number
 function Position3D:x() end
 
@@ -29,8 +36,8 @@ function Position3D:z() end
 function Position3D.new() end
 
 --- @public
---- @param arg0 integer
---- @param arg1 integer
---- @param arg2 integer
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
 --- @return Position3D
 function Position3D.new(arg0, arg1, arg2) end

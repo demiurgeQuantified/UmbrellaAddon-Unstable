@@ -57,7 +57,7 @@ function AnimalContextMenu.onButcherAnimalFromInv(body, chr, knife) end
 
 function AnimalContextMenu.onCheckZone(zone, playerObj) end
 
-function AnimalContextMenu.onDebugForceEgg(animal) end
+function AnimalContextMenu.onDebugForceEgg(animal, playerObj) end
 
 function AnimalContextMenu.onDebugForceHutch(animal, playerObj) end
 
@@ -102,7 +102,7 @@ function AnimalContextMenu.onPetAnimal(animal, chr) end
 
 function AnimalContextMenu.onPickupAnimal(animal, chr) end
 
-function AnimalContextMenu.onRandomHappyAnim(animal) end
+function AnimalContextMenu.onRandomHappyAnim(animal, playerObj) end
 
 function AnimalContextMenu.onRandomIdleAnim(animal) end
 

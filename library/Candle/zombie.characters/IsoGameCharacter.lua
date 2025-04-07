@@ -798,18 +798,18 @@ function IsoGameCharacter:addBodyVisualFromItemType(arg0) end
 function IsoGameCharacter:addBothArmMuscleStrain(arg0) end
 
 --- @public
---- @param arg0 HandWeapon
+--- @param arg0 InventoryItem
 --- @return nil
 function IsoGameCharacter:addCombatMuscleStrain(arg0) end
 
 --- @public
---- @param arg0 HandWeapon
+--- @param arg0 InventoryItem
 --- @param arg1 integer
 --- @return nil
 function IsoGameCharacter:addCombatMuscleStrain(arg0, arg1) end
 
 --- @public
---- @param arg0 HandWeapon
+--- @param arg0 InventoryItem
 --- @param arg1 integer
 --- @param arg2 number
 --- @return nil
@@ -2157,11 +2157,11 @@ function IsoGameCharacter:getGameVariables() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return IAnimationVariableSource
+--- @return AnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
---- @return AnimationVariableSource
+--- @return IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
@@ -3235,11 +3235,11 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return IGrappleable
+--- @return BaseGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
---- @return BaseGrappleable
+--- @return IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public

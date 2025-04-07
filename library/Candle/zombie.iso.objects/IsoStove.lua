@@ -2,13 +2,7 @@
 
 --- @class IsoStove: IsoObject, Activatable
 --- @field public class any
---- @field public BaseTemperature number
---- @field public FireStartingEnergy integer
 --- @field public LitTemperature number
---- @field public MaximumMicrowaveTemperature number
---- @field public MaximumStoveTemperature number
---- @field public MinimumTemperatureIncrease number
---- @field public TemperatureAdjustmentDivisor number
 --- @field public UnlitTemperature number
 IsoStove = {}
 

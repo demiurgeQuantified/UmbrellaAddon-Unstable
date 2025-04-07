@@ -3,6 +3,7 @@
 --- @class IsoChunk
 --- @field public class any
 --- @field public bDoServerRequests boolean
+--- @field public BLOCK_SIZE integer
 --- @field public LB_PATHFIND short
 --- @field public loadGridSquare ConcurrentLinkedQueue
 --- @field public renderByIndex byte[][]
@@ -51,6 +52,14 @@ function IsoChunk.Reset() end
 --- @param bb ByteBuffer
 --- @return ByteBuffer
 function IsoChunk.SafeRead(prefix, wx, wy, bb) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 ByteBuffer
+--- @return nil
+function IsoChunk.SafeWrite(arg0, arg1, arg2) end
 
 --- @public
 --- @static

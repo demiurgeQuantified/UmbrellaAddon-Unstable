@@ -24,8 +24,8 @@
 ---@field text string
 ---@field titlebarbkg unknown
 ---@field validateArgs table
----@field validateFunc function
----@field validateTarget table
+---@field validateFunc unknown
+---@field validateTarget ModListPresets | SandboxOptionsScreen
 ---@field validateTooltipText unknown
 ---@field yes ISButton
 ISTextBox = ISPanelJoypad:derive("ISTextBox")
@@ -92,8 +92,7 @@ function ISTextBox:setNumberOfLines(numLines) end
 ---@param onlyNumbers boolean
 function ISTextBox:setOnlyNumbers(onlyNumbers) end
 
----@param target table
----@param func function
+---@param target ModListPresets | SandboxOptionsScreen
 function ISTextBox:setValidateFunction(target, func, arg1, arg2) end
 
 function ISTextBox:setValidateTooltipText(text) end

@@ -43,16 +43,7 @@ CustomTileProps_SetPair.crafted_05_72 = {
 	Material = "Wood",
 	Material2 = "Nails",
 }
-CustomTileProps_SetPair.crafted_04_34 = {
-	CanScrap = "",
-	Material = "Stone",
-}
 CustomTileProps_SetPair.crafted_01_73 = {
-	CanScrap = "",
-	Material = "Wood",
-	Material2 = "Nails",
-}
-CustomTileProps_SetPair.crafted_01_123 = {
 	CanScrap = "",
 	Material = "Wood",
 	Material2 = "Nails",
@@ -62,7 +53,7 @@ CustomTileProps_SetPair.vegetation_drying_01_8 = {
 	Material = "Wood",
 	Material2 = "Nails",
 }
-CustomTileProps_SetPair.vegetation_drying_01_9wddddwaw = {
+CustomTileProps_SetPair.vegetation_drying_01_9 = {
 	CanScrap = "",
 	Material = "Wood",
 	Material2 = "Nails",
@@ -99,6 +90,102 @@ CustomTileProps_SetPair.crafted_02_40 = {
 }
 CustomTileProps_SetPair.camping_01_6 = {
 	ContainerCapacity = "15",
+}
+CustomTileProps_SetPair.crafted_01_68 = {
+	CanBreak = "",
+	IsLow = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+	PickUpTool = "Hammer",
+	PlaceTool = "Hammer",
+}
+CustomTileProps_SetPair.crafted_01_69 = {
+	CanBreak = "",
+	IsLow = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+	PickUpTool = "Hammer",
+	PlaceTool = "Hammer",
+}
+CustomTileProps_SetPair.crafted_01_70 = {
+	CanBreak = "",
+	IsLow = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+	PickUpTool = "Hammer",
+	PlaceTool = "Hammer",
+}
+CustomTileProps_SetPair.crafted_01_71 = {
+	CanBreak = "",
+	IsLow = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+	PickUpTool = "Hammer",
+	PlaceTool = "Hammer",
+}
+CustomTileProps_SetPair.crafted_01_120 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+}
+CustomTileProps_SetPair.crafted_01_121 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+}
+CustomTileProps_SetPair.crafted_01_122 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+}
+CustomTileProps_SetPair.crafted_01_123 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Wood",
+	Material2 = "Nails",
+}
+CustomTileProps_SetPair.crafted_04_32 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Stone",
+}
+CustomTileProps_SetPair.crafted_04_33 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Stone",
+}
+CustomTileProps_SetPair.crafted_04_34 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Stone",
+}
+CustomTileProps_SetPair.crafted_04_35 = {
+	CanScrap = "",
+	IsMoveAble = "",
+	Material = "Stone",
+}
+CustomTileProps_SetPair.fixtures_bathroom_01_52 = {
+	waterAmount = "100",
+	waterMaxAmount = "100",
+}
+CustomTileProps_SetPair.fixtures_bathroom_01_53 = {
+	waterAmount = "100",
+	waterMaxAmount = "100",
+}
+CustomTileProps_SetPair.fixtures_bathroom_01_54 = {
+	waterAmount = "100",
+	waterMaxAmount = "100",
+}
+CustomTileProps_SetPair.fixtures_bathroom_01_55 = {
+	waterAmount = "100",
+	waterMaxAmount = "100",
 }
 
 ---@class CustomTileProps_RemovePair
@@ -138,4 +225,31 @@ CustomTileProps_RemovePair.crafted_04_126 = {
 }
 CustomTileProps_RemovePair.crafted_04_127 = {
 	"BlocksPlacement",
+}
+
+---@class CustomTileProps_SetFlag
+CustomTileProps_SetFlag = {}
+CustomTileProps_SetFlag.crafted_01_120 = {
+	IsoFlagType.solidtrans,
+}
+CustomTileProps_SetFlag.crafted_01_121 = {
+	IsoFlagType.solidtrans,
+}
+CustomTileProps_SetFlag.crafted_01_122 = {
+	IsoFlagType.solidtrans,
+}
+CustomTileProps_SetFlag.crafted_01_123 = {
+	IsoFlagType.solidtrans,
+}
+CustomTileProps_SetFlag.fixtures_bathroom_01_52 = {
+	IsoFlagType.waterPiped,
+}
+CustomTileProps_SetFlag.fixtures_bathroom_01_53 = {
+	IsoFlagType.waterPiped,
+}
+CustomTileProps_SetFlag.fixtures_bathroom_01_54 = {
+	IsoFlagType.waterPiped,
+}
+CustomTileProps_SetFlag.fixtures_bathroom_01_55 = {
+	IsoFlagType.waterPiped,
 }

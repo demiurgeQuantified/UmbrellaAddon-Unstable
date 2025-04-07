@@ -3,11 +3,12 @@
 ---@class ISPacketCounts : ISPanel
 ---@field category ISComboBox
 ---@field close ISButton
+---@field currentCounts table
 ---@field listbox ISPacketCountsList
 ---@field update ISButton
 ISPacketCounts = ISPanel:derive("ISPacketCounts")
 ISPacketCounts.Type = "ISPacketCounts"
-ISPacketCounts.instance = nil ---@type table?
+ISPacketCounts.instance = nil ---@type ISPacketCounts?
 
 function ISPacketCounts:closeSelf() end
 
