@@ -10,12 +10,14 @@ ISTimedActionQueue.IDMax = 1
 ISTimedActionQueue.queues = {}
 ISTimedActionQueue.shouldResetGameSpeed = nil ---@type boolean?
 
----@param action table
+---@param action (boolean | table)?
 ---@return ISTimedActionQueue?
 function ISTimedActionQueue.add(action) end
 
+---@param previousAction table
+---@param action table
 ---@return ISTimedActionQueue?
----@return unknown?
+---@return table?
 function ISTimedActionQueue.addAfter(previousAction, action) end
 
 ---@param action table
@@ -27,9 +29,11 @@ function ISTimedActionQueue.clear(character) end
 ---@return ISTimedActionQueue
 function ISTimedActionQueue.getTimedActionQueue(character) end
 
+---@param action boolean
 ---@return boolean
 function ISTimedActionQueue.hasAction(action) end
 
+---@param type string
 ---@return boolean
 function ISTimedActionQueue.hasActionType(character, type) end
 
@@ -38,6 +42,10 @@ function ISTimedActionQueue.isPlayerDoingAction(playerObj) end
 
 function ISTimedActionQueue.onTick() end
 
+---@param addActionsFunction function
+---@param arg1 ISDesignationZoneAnimalZoneUI
+---@param arg2 unknown?
+---@param arg3 unknown?
 ---@return ISTimedActionQueue?
 function ISTimedActionQueue.queueActions(
 	character,
@@ -61,9 +69,11 @@ function ISTimedActionQueue:cancelQueue() end
 
 function ISTimedActionQueue:clearQueue() end
 
+---@param action ISInventoryTransferAction
 ---@return number
 function ISTimedActionQueue:indexOf(action) end
 
+---@param type string
 ---@return number
 function ISTimedActionQueue:indexOfType(type) end
 

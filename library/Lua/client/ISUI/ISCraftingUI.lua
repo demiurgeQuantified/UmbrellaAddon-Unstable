@@ -67,6 +67,12 @@ function ISCraftingUI.onPressKey(key) end
 ---@param items table
 function ISCraftingUI.ReturnItemsToOriginalContainer(playerObj, items) end
 
+---@param item boolean?
+---@param cont unknown?
+function ISCraftingUI.ReturnItemToContainer(playerObj, item, cont) end
+
+function ISCraftingUI.ReturnItemToOriginalContainer(playerObj, item) end
+
 ---@return unknown
 function ISCraftingUI.sortByName(a, b) end
 

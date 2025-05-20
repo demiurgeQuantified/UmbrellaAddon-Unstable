@@ -18,10 +18,12 @@ function ClimbOverWallState.instance() end
 ------------------------------------
 
 --- @public
---- @param owner IsoGameCharacter
---- @param event AnimEvent
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function ClimbOverWallState:animEvent(owner, event) end
+function ClimbOverWallState:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param owner IsoGameCharacter

@@ -242,6 +242,8 @@ function Fishing.onCreateFishingRod(item) end
 ---@field maxLength unknown
 ---@field maxWeight number
 ---@field minLength number
+---@field trophyLength unknown
+---@field trophyWeight number
 local __fishing_FishConfig = {}
 
 ---@param itemTable table
@@ -267,6 +269,12 @@ function __fishing_FishConfig:setMaxLength(length) end
 
 ---@param weight number
 function __fishing_FishConfig:setMaxWeight(weight) end
+
+---@param length number
+function __fishing_FishConfig:setTrophyLength(length) end
+
+---@param weight number
+function __fishing_FishConfig:setTrophyWeight(weight) end
 
 ---@param itemType string
 ---@return Fishing.FishConfig

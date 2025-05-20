@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoGameCharacter: IsoMovingObject, Talker, ChatElementOwner, IAnimatable, IAnimationVariableMap, IAnimationVariableSourceContainer, IClothingItemListener, IActionStateChanged, IAnimEventCallback, IAnimEventWrappedBroadcaster, IFMODParameterUpdater, IGrappleableWrapper, ILuaVariableSource, ILuaGameCharacter
+--- @class IsoGameCharacter: IsoMovingObject, Talker, ChatElementOwner, IAnimatable, IAnimationVariableMap, IAnimationVariableRegistry, IClothingItemListener, IActionStateChanged, IAnimEventCallback, IAnimEventWrappedBroadcaster, IFMODParameterUpdater, IGrappleableWrapper, ILuaVariableSource, ILuaGameCharacter
 --- @field public class any
 --- @field public AwkwardGlovesStrengthDivisor integer
 --- @field public GlovesStrengthBonus integer
@@ -451,16 +451,18 @@ function IsoGameCharacter:NPCSetMelee(newvalue) end
 function IsoGameCharacter:NPCSetRunning(newvalue) end
 
 --- @public
---- @param sender AnimLayer
---- @param event AnimEvent
+--- @param arg0 AnimLayer
+--- @param arg1 AnimationTrack
+--- @param arg2 AnimEvent
 --- @return nil
-function IsoGameCharacter:OnAnimEvent(sender, event) end
+function IsoGameCharacter:OnAnimEvent(arg0, arg1, arg2) end
 
 --- @public
---- @param sender AnimLayer
---- @param event AnimEvent
+--- @param arg0 AnimLayer
+--- @param arg1 AnimationTrack
+--- @param arg2 AnimEvent
 --- @return nil
-function IsoGameCharacter:OnAnimEvent(sender, event) end
+function IsoGameCharacter:OnAnimEvent(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
@@ -755,6 +757,18 @@ function IsoGameCharacter:addAnimEventListener(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrack
+--- @return nil
+function IsoGameCharacter:addAnimEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrackString
+--- @return nil
+function IsoGameCharacter:addAnimEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
 --- @param arg1 IAnimEventListenerString
 --- @return nil
 function IsoGameCharacter:addAnimEventListener(arg0, arg1) end
@@ -998,9 +1012,11 @@ function IsoGameCharacter:allowsTwist() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function IsoGameCharacter:animEvent(arg0, arg1) end
+function IsoGameCharacter:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 number
@@ -1374,11 +1390,6 @@ function IsoGameCharacter:clothingItemChanged(itemGuid) end
 function IsoGameCharacter:compareMovePriority(other) end
 
 --- @public
---- @param name string
---- @return boolean
-function IsoGameCharacter:containsVariable(name) end
-
---- @public
 --- @return InventoryItem
 function IsoGameCharacter:createKeyRing() end
 
@@ -1414,6 +1425,11 @@ function IsoGameCharacter:dbgGetAnimTrackWeight(layerIdx, trackIdx) end
 --- @public
 --- @return nil
 function IsoGameCharacter:die() end
+
+--- @public
+--- @param arg0 Vector2
+--- @return nil
+function IsoGameCharacter:doDeferredMovementFromRagdoll(arg0) end
 
 --- @public
 --- @param baseVehicle BaseVehicle
@@ -1571,6 +1587,10 @@ function IsoGameCharacter:fallenOnKnees() end
 --- @param arg0 boolean
 --- @return nil
 function IsoGameCharacter:fallenOnKnees(arg0) end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:flagForHotSave() end
 
 --- @public
 --- @return nil
@@ -2029,6 +2049,10 @@ function IsoGameCharacter:getDieCount() end
 function IsoGameCharacter:getDirectionAngle() end
 
 --- @public
+--- @return number
+function IsoGameCharacter:getDirectionAngleRadians() end
+
+--- @public
 --- @return boolean
 function IsoGameCharacter:getDoRender() end
 
@@ -2123,12 +2147,21 @@ function IsoGameCharacter:getForceWakeUpTime() end
 
 --- @public
 --- @return Vector2 _ the character's forward direction vector
+--- @deprecated
 function IsoGameCharacter:getForwardDirection() end
 
 --- @public
 --- @param arg0 Vector2
 --- @return Vector2
 function IsoGameCharacter:getForwardDirection(arg0) end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getForwardDirectionX() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getForwardDirectionY() end
 
 --- @public
 --- @return string
@@ -2150,11 +2183,8 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
----
---- Description copied from interface: IAnimationVariableSource
----
---- @return Iterable
-function IsoGameCharacter:getGameVariables() end
+--- @return IAnimationVariableSource
+function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
 --- @return AnimationVariableSource
@@ -2165,7 +2195,7 @@ function IsoGameCharacter:getGameVariablesInternal() end
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
---- @return IAnimationVariableSource
+--- @return AnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
@@ -2234,6 +2264,18 @@ function IsoGameCharacter:getHammerSoundMod() end
 --- @public
 --- @return number
 function IsoGameCharacter:getHammerSoundMod() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getHeadLookAngleMax() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getHeadLookHorizontal() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getHeadLookVertical() end
 
 --- @public
 --- @return number _ the Health
@@ -2449,6 +2491,14 @@ function IsoGameCharacter:getLocalRelevantEnemyList() end
 --- @public
 --- @return number
 function IsoGameCharacter:getLookAngleRadians() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getLookDirectionX() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getLookDirectionY() end
 
 --- @public
 --- @param vector2 Vector2
@@ -3091,60 +3141,9 @@ function IsoGameCharacter:getUserNameHeight() end
 ---
 --- Description copied from interface: IAnimationVariableSource
 ---
---- @param key string
---- @return IAnimationVariableSlot
-function IsoGameCharacter:getVariable(key) end
-
---- @public
----
---- Description copied from interface: IAnimationVariableSource
----
 --- @param handle AnimationVariableHandle
 --- @return IAnimationVariableSlot
 function IsoGameCharacter:getVariable(handle) end
-
---- @public
----
---- Description copied from interface: IAnimationVariableSource
----
---- @param handle AnimationVariableHandle
---- @return IAnimationVariableSlot
-function IsoGameCharacter:getVariable(handle) end
-
---- @public
----
---- Description copied from interface: IAnimationVariableSource
----
---- @param name string
---- @return boolean
-function IsoGameCharacter:getVariableBoolean(name) end
-
---- @public
----
---- Returns the specified variable, as a boolean.  Attempts to convert the string
---- to a boolean.  If that fails, or if variable not found, returns defaultVal
----
---- @param key string
---- @param defaultVal boolean
---- @return boolean
-function IsoGameCharacter:getVariableBoolean(key, defaultVal) end
-
---- @public
----
---- Description copied from interface: IAnimationVariableSource
----
---- @param name string
---- @param defaultVal number
---- @return number
-function IsoGameCharacter:getVariableFloat(name, defaultVal) end
-
---- @public
----
---- Description copied from interface: IAnimationVariableSource
----
---- @param name string
---- @return string
-function IsoGameCharacter:getVariableString(name) end
 
 --- @public
 --- @return BaseVehicle
@@ -3727,6 +3726,10 @@ function IsoGameCharacter:isGrappleThrowOutWindow() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isGrappleThrowOverFence() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isGrappling() end
 
 --- @public
@@ -3743,6 +3746,10 @@ function IsoGameCharacter:isHandItem(item) end
 --- @param item InventoryItem
 --- @return boolean
 function IsoGameCharacter:isHandItem(item) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isHeadLookAround() end
 
 --- @public
 --- @return boolean
@@ -4299,16 +4306,6 @@ function IsoGameCharacter:isUpright() end
 function IsoGameCharacter:isUsingWornItems() end
 
 --- @public
----
---- Compares (ignoring case) the value of the specified variable.  Returns TRUE if
---- match.
----
---- @param name string
---- @param val string
---- @return boolean
-function IsoGameCharacter:isVariable(name, val) end
-
---- @public
 --- @return boolean
 function IsoGameCharacter:isVehicleCollision() end
 
@@ -4434,6 +4431,10 @@ function IsoGameCharacter:onDeath_ShouldDoSplatterAndSounds(arg0, arg1, arg2) en
 --- @param y integer
 --- @return boolean
 function IsoGameCharacter:onMouseLeftClick(x, y) end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:onRagdollSimulationStarted() end
 
 --- @public
 --- @return nil
@@ -5082,16 +5083,6 @@ function IsoGameCharacter:setDescriptor(descriptor) end
 function IsoGameCharacter:setDieCount(DieCount) end
 
 --- @public
---- @param directions IsoDirections the dir to set
---- @return nil
-function IsoGameCharacter:setDir(directions) end
-
---- @public
---- @param directions IsoDirections the dir to set
---- @return nil
-function IsoGameCharacter:setDir(directions) end
-
---- @public
 --- @param angleDegrees number
 --- @return nil
 function IsoGameCharacter:setDirectionAngle(angleDegrees) end
@@ -5213,6 +5204,19 @@ function IsoGameCharacter:setForwardDirection(dir) end
 function IsoGameCharacter:setForwardDirection(x, y) end
 
 --- @public
+--- @return nil
+function IsoGameCharacter:setForwardDirectionFromAnimAngle() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:setForwardDirectionFromIsoDirection() end
+
+--- @public
+--- @param arg0 IsoDirections
+--- @return nil
+function IsoGameCharacter:setForwardIsoDirection(arg0) end
+
+--- @public
 --- @param b boolean
 --- @return nil
 function IsoGameCharacter:setGodMod(b) end
@@ -5248,6 +5252,11 @@ function IsoGameCharacter:setGrappleRotOffsetYaw(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function IsoGameCharacter:setGrappleThrowOutWindow(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setGrappleThrowOverFence(arg0) end
 
 --- @public
 --- @param arg0 GrappleOffsetBehaviour
@@ -5293,6 +5302,17 @@ function IsoGameCharacter:setHaloNote(str, r, g, b, dispTime) end
 --- @param dispTime number
 --- @return nil
 function IsoGameCharacter:setHaloNote(str, r, g, b, dispTime) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setHeadLookAround(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+function IsoGameCharacter:setHeadLookAroundDirection(arg0, arg1) end
 
 --- @public
 --- @param Health number the Health to set
@@ -5388,11 +5408,6 @@ function IsoGameCharacter:setIsAnimal(arg0) end
 --- @param isAI boolean
 --- @return nil
 function IsoGameCharacter:setIsNPC(isAI) end
-
---- @public
---- @param arg0 boolean
---- @return nil
-function IsoGameCharacter:setIsRagdoll(arg0) end
 
 --- @public
 --- @param arg0 boolean
@@ -5979,14 +5994,16 @@ function IsoGameCharacter:setStateMachineLocked(val) end
 function IsoGameCharacter:setSurvivorKills(survivorKills) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IsoGameCharacter:setTargetAndCurrentDirection(arg0) end
+function IsoGameCharacter:setTargetAndCurrentDirection(arg0, arg1) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IsoGameCharacter:setTargetAndCurrentDirection(arg0) end
+function IsoGameCharacter:setTargetAndCurrentDirection(arg0, arg1) end
 
 --- @public
 --- @param arg0 number
@@ -6138,138 +6155,130 @@ function IsoGameCharacter:setVariable(key, value) end
 --- @public
 --- @param arg0 string
 --- @param arg1 CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(arg0, arg1) end
-
---- @public
---- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(arg0, arg1) end
-
---- @public
---- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(arg0, arg1) end
-
---- @public
---- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(arg0, arg1) end
-
---- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal boolean
---- @param callbackGet CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet) end
-
---- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal number
---- @param callbackGet CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet) end
-
---- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal integer
---- @param callbackGet CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet) end
-
---- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal string
---- @param callbackGet CallbackGetStrongTyped
---- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet) end
-
---- @public
---- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
---- @param arg2 CallbackSetStrongTyped
+--- @param arg2 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 CallbackGetStrongTyped
---- @param arg2 CallbackSetStrongTyped
+--- @param arg2 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 CallbackGetStrongTyped
---- @param arg2 CallbackSetStrongTyped
+--- @param arg2 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
 --- @param arg1 CallbackGetStrongTyped
---- @param arg2 CallbackSetStrongTyped
+--- @param arg2 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2) end
 
 --- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal boolean
---- @param callbackGet CallbackGetStrongTyped
---- @param callbackSet CallbackSetStrongTyped
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet, callbackSet) end
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
 
 --- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal number
---- @param callbackGet CallbackGetStrongTyped
---- @param callbackSet CallbackSetStrongTyped
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet, callbackSet) end
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
 
 --- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal integer
---- @param callbackGet CallbackGetStrongTyped
---- @param callbackSet CallbackSetStrongTyped
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet, callbackSet) end
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
 
 --- @public
----
---- Strong-typed utility function.
----
---- @param key string
---- @param defaultVal string
---- @param callbackGet CallbackGetStrongTyped
---- @param callbackSet CallbackSetStrongTyped
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
-function IsoGameCharacter:setVariable(key, defaultVal, callbackGet, callbackSet) end
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 CallbackGetStrongTyped
+--- @param arg2 CallbackSetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 CallbackGetStrongTyped
+--- @param arg2 CallbackSetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 CallbackGetStrongTyped
+--- @param arg2 CallbackSetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 CallbackGetStrongTyped
+--- @param arg2 CallbackSetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 CallbackSetStrongTyped
+--- @param arg4 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 CallbackSetStrongTyped
+--- @param arg4 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 integer
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 CallbackSetStrongTyped
+--- @param arg4 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 CallbackGetStrongTyped
+--- @param arg3 CallbackSetStrongTyped
+--- @param arg4 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 string
@@ -6536,6 +6545,12 @@ function IsoGameCharacter:testDotSide(target) end
 
 --- @public
 --- @param arg0 IsoObject
+--- @param arg1 IsoDirections
+--- @return nil
+function IsoGameCharacter:throwGrappledOverFence(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoObject
 --- @return nil
 function IsoGameCharacter:throwGrappledTargetOutWindow(arg0) end
 
@@ -6700,15 +6715,7 @@ function IsoGameCharacter:updateWornItemsVisionModifier() end
 
 --- @public
 --- @return boolean
-function IsoGameCharacter:useBallistics() end
-
---- @public
---- @return boolean
 function IsoGameCharacter:usePhysicHitReaction() end
-
---- @public
---- @return boolean
-function IsoGameCharacter:useRagdoll() end
 
 --- @public
 --- @return boolean

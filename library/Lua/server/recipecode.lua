@@ -290,6 +290,8 @@ function __recipe_OnCreate.GetCookies(craftRecipeData, character) end
 
 function __recipe_OnCreate.GetMuffin(craftRecipeData, character) end
 
+function __recipe_OnCreate.HarvestRoe(craftRecipeData, character) end
+
 function __recipe_OnCreate.HollowBook(craftRecipeData, character) end
 
 function __recipe_OnCreate.HotCuppa(craftRecipeData, character) end
@@ -310,7 +312,13 @@ function __recipe_OnCreate.MakeBlunt(craftRecipeData, character) end
 
 function __recipe_OnCreate.MakeCooked(craftRecipeData, character) end
 
+function __recipe_OnCreate.MakeMilkFromPowder(craftRecipeData, character) end
+
 function __recipe_OnCreate.MakeOatmeal(craftRecipeData, character) end
+
+function __recipe_OnCreate.MakeOmelette(craftRecipeData, character) end
+
+function __recipe_OnCreate.MakeSushi(craftRecipeData, character) end
 
 function __recipe_OnCreate.MakeWireFromBarbedWire(craftRecipeData, character) end
 
@@ -343,6 +351,8 @@ function __recipe_OnCreate.OpenEggCarton(craftRecipeData, character) end
 function __recipe_OnCreate.OpenMysteryCan(craftRecipeData, character) end
 
 function __recipe_OnCreate.OpenMysteryCanKnife(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenRoeJar(craftRecipeData, character) end
 
 function __recipe_OnCreate.OpenSackProduce(craftRecipeData, character) end
 
@@ -379,6 +389,8 @@ function __recipe_OnCreate.RemoveGem(craftRecipeData, character) end
 function __recipe_OnCreate.RepairBladeWithGrindstone(craftRecipeData, player) end
 
 function __recipe_OnCreate.RipClothing(craftRecipeData, character) end
+
+function __recipe_OnCreate.RoeJar(craftRecipeData, character) end
 
 function __recipe_OnCreate.Roll3d6(craftRecipeData, character) end
 
@@ -512,6 +524,9 @@ function __recipe_OnTest.HotFluidContainer(item) end
 
 ---@return boolean
 function __recipe_OnTest.IsFull(sourceItem) end
+
+---@return boolean?
+function __recipe_OnTest.MakeMilkFromPowder(sourceItem) end
 
 ---@return boolean
 function __recipe_OnTest.NormalGoodFullFood(item, result) end

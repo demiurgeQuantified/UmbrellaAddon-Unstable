@@ -488,6 +488,10 @@ function Core:getKeyMaps() end
 
 --- @public
 --- @return integer
+function Core:getMaxActiveRagdolls() end
+
+--- @public
+--- @return integer
 function Core:getMaxTextureSize() end
 
 --- @public
@@ -955,6 +959,10 @@ function Core:getOptionUpdateSneakButton() end
 
 --- @public
 --- @return boolean
+function Core:getOptionUsePhysicsHitReaction() end
+
+--- @public
+--- @return boolean
 function Core:getOptionVSync() end
 
 --- @public
@@ -996,6 +1004,10 @@ function Core:getOptionVoiceVolumeMic() end
 --- @public
 --- @return integer
 function Core:getOptionVoiceVolumePlayers() end
+
+--- @public
+--- @return number
+function Core:getOptionWorldMapBrightness() end
 
 --- @public
 --- @return boolean
@@ -1108,6 +1120,10 @@ function Core:getVersionNumber() end
 --- @public
 --- @return integer
 function Core:getVidMem() end
+
+--- @public
+--- @return ColorInfo
+function Core:getWorldItemHighlightColor() end
 
 --- @public
 --- @param width integer
@@ -1479,6 +1495,11 @@ function Core:setKeyMaps(keyMaps) end
 --- @param fbo TextureFBO
 --- @return nil
 function Core:setLastRenderedFBO(fbo) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function Core:setMaxActiveRagdolls(arg0) end
 
 --- @public
 --- @param done boolean
@@ -1999,6 +2020,11 @@ function Core:setOptionUIRenderFPS(fps) end
 function Core:setOptionUpdateSneakButton(b) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function Core:setOptionUsePhysicsHitReaction(arg0) end
+
+--- @public
 --- @param sync boolean
 --- @return nil
 function Core:setOptionVSync(sync) end
@@ -2058,6 +2084,11 @@ function Core:setOptionVoiceVolumeMic(option) end
 --- @param option integer
 --- @return nil
 function Core:setOptionVoiceVolumePlayers(option) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function Core:setOptionWorldMapBrightness(arg0) end
 
 --- @public
 --- @param zoom boolean
@@ -2231,6 +2262,11 @@ function Core:setVidMem(mem) end
 --- @param b boolean
 --- @return nil
 function Core:setWindowed(b) end
+
+--- @public
+--- @param arg0 ColorInfo
+--- @return nil
+function Core:setWorldItemHighlightColor(arg0) end
 
 --- @public
 --- @param zombieGroupSound boolean

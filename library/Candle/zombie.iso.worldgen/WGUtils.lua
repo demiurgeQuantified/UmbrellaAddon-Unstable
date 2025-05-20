@@ -26,6 +26,22 @@ function WGUtils:displayTable(arg0) end
 function WGUtils:displayTable(arg0) end
 
 --- @public
+--- @param arg0 IsoCell
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return IsoObject
+function WGUtils:doesFloorExit(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 IsoChunk
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return IsoObject
+function WGUtils:doesFloorExit(arg0, arg1, arg2, arg3) end
+
+--- @public
 --- @return string
 function WGUtils:generateSeed() end
 

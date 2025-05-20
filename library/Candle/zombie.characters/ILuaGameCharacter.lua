@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class ILuaGameCharacter: ILuaVariableSource, ILuaGameCharacterAttachedItems, ILuaGameCharacterDamage, ILuaGameCharacterClothing, ILuaGameCharacterHealth ILuaGameCharacter  Provides the functions expected by LUA when dealing with objects of this type.
+--- @class ILuaGameCharacter: ILuaIsoObject, ILuaVariableSource, ILuaGameCharacterAttachedItems, ILuaGameCharacterDamage, ILuaGameCharacterClothing, ILuaGameCharacterHealth ILuaGameCharacter  Provides the functions expected by LUA when dealing with objects of this type.
 --- @field public class any
 ILuaGameCharacter = {}
 
@@ -996,6 +996,11 @@ function ILuaGameCharacter:setFishingCheat(arg0) end
 --- @param ForceWakeUpTime number
 --- @return nil
 function ILuaGameCharacter:setForceWakeUpTime(ForceWakeUpTime) end
+
+--- @public
+--- @param arg0 IsoDirections
+--- @return nil
+function ILuaGameCharacter:setForwardIsoDirection(arg0) end
 
 --- @public
 --- @param b boolean

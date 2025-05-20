@@ -82,7 +82,7 @@ function Trait:isFree() end
 --- @public
 --- @param arg0 Trait
 --- @return boolean
-function Trait:isMututallyExclusive(arg0) end
+function Trait:isMutuallyExclusive(arg0) end
 
 --- @public
 --- @return boolean

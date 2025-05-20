@@ -14,6 +14,11 @@ ColorInfo = {}
 function ColorInfo:desaturate(s) end
 
 --- @public
+--- @param arg0 any
+--- @return boolean
+function ColorInfo:equals(arg0) end
+
+--- @public
 --- @return number
 function ColorInfo:getA() end
 

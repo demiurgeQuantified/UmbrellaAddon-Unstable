@@ -122,6 +122,8 @@ function ISMiniMapInner:onRightMouseUpOutside(x, y) end
 
 function ISMiniMapInner:onTeleport(worldX, worldY) end
 
+function ISMiniMapInner:prerender() end
+
 function ISMiniMapInner:prerenderHack() end
 
 ---@param x number

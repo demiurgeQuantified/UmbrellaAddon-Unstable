@@ -51,6 +51,16 @@ function IsoWorldInventoryObject:addFluid(arg0, arg1) end
 function IsoWorldInventoryObject:addToWorld() end
 
 --- @public
+--- @param arg0 FluidContainer
+--- @return boolean
+function IsoWorldInventoryObject:canTransferFluidFrom(arg0) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @return boolean
+function IsoWorldInventoryObject:canTransferFluidTo(arg0) end
+
+--- @public
 --- @return nil
 function IsoWorldInventoryObject:emptyFluid() end
 
@@ -126,7 +136,7 @@ function IsoWorldInventoryObject:hasWater() end
 
 --- @public
 --- @return boolean
-function IsoWorldInventoryObject:isHighlighted() end
+function IsoWorldInventoryObject:isFluidInputLocked() end
 
 --- @public
 --- @return boolean
@@ -201,9 +211,11 @@ function IsoWorldInventoryObject:save(output, IS_DEBUG_SAVE) end
 function IsoWorldInventoryObject:saveChange(change, tbl, bb) end
 
 --- @public
---- @param arg0 boolean
+--- @param arg0 integer
+--- @param arg1 boolean
+--- @param arg2 boolean
 --- @return nil
-function IsoWorldInventoryObject:setHighlighted(arg0) end
+function IsoWorldInventoryObject:setHighlighted(arg0, arg1, arg2) end
 
 --- @public
 --- @param b boolean

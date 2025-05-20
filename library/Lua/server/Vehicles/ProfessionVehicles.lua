@@ -312,14 +312,14 @@ ProfessionVehicles.VanMetalworker = {
 		"Base.VanMeltingPointMetal",
 	},
 }
-ProfessionVehicles.PickUpTruck = {
+ProfessionVehicles.PickUpTruck_Camo = {
 	Louisville = {
-		"Base.PickUpTruck_Camo",
+		"Base.PickUpTruck",
 	},
 }
-ProfessionVehicles.PickUpVan = {
+ProfessionVehicles.PickUpVan_Camo = {
 	Louisville = {
-		"Base.PickUpVan_Camo",
+		"Base.PickUpVan",
 	},
 }
 ProfessionVehicles.VanSeats_Mural = {

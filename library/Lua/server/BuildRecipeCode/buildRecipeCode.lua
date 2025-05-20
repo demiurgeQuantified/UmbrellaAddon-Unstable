@@ -5,6 +5,7 @@ BuildRecipeCode = {}
 BuildRecipeCode.canBePlastered = nil ---@type BuildRecipeCode.canBePlastered
 BuildRecipeCode.stairs = nil ---@type BuildRecipeCode.stairs
 BuildRecipeCode.floor = nil ---@type BuildRecipeCode.floor
+BuildRecipeCode.doorFrame = nil ---@type BuildRecipeCode.doorFrame
 BuildRecipeCode.butcheringHook = nil ---@type BuildRecipeCode.butcheringHook
 BuildRecipeCode.chickenHutch = nil ---@type BuildRecipeCode.chickenHutch
 BuildRecipeCode.feedingTrough = nil ---@type BuildRecipeCode.feedingTrough
@@ -33,6 +34,12 @@ function __buildRecipeCode_floor.OnCreate(thumpable) end
 
 ---@return boolean
 function __buildRecipeCode_floor.OnIsValid(params) end
+
+---@class BuildRecipeCode.doorFrame
+local __buildRecipeCode_doorFrame = {}
+
+---@return boolean
+function __buildRecipeCode_doorFrame.OnIsValid(params) end
 
 ---@class BuildRecipeCode.butcheringHook
 local __buildRecipeCode_butcheringHook = {}

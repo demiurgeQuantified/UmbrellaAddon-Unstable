@@ -46,6 +46,10 @@
 --- @field public DoubleDoor2 IsoFlagType
 --- @field public EntityScript IsoFlagType
 --- @field public exterior IsoFlagType
+--- @field public FloorAttachmentE IsoFlagType
+--- @field public FloorAttachmentN IsoFlagType
+--- @field public FloorAttachmentS IsoFlagType
+--- @field public FloorAttachmentW IsoFlagType
 --- @field public floorE IsoFlagType
 --- @field public FloorHeightOneThird IsoFlagType
 --- @field public FloorHeightTwoThirds IsoFlagType
@@ -62,6 +66,7 @@
 --- @field public HoppableW IsoFlagType
 --- @field public invisible IsoFlagType
 --- @field public isEave IsoFlagType
+--- @field public IsFloorAttached IsoFlagType
 --- @field public makeWindowInvincible IsoFlagType
 --- @field public MAX IsoFlagType
 --- @field public NeverCutaway IsoFlagType

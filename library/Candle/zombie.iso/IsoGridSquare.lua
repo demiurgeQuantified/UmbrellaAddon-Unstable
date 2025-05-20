@@ -252,6 +252,26 @@ function IsoGridSquare:AddWorldInventoryItem(String, x, y, height, nbr) end
 function IsoGridSquare:AddWorldInventoryItem(item, x, y, height, transmit) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 boolean
+--- @param arg5 boolean
+--- @return InventoryItem
+function IsoGridSquare:AddWorldInventoryItem(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 boolean
+--- @param arg5 boolean
+--- @return InventoryItem
+function IsoGridSquare:AddWorldInventoryItem(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
 --- @return nil
 function IsoGridSquare:Burn() end
 
@@ -623,6 +643,12 @@ function IsoGridSquare:RecalcPropertiesIfNeeded() end
 function IsoGridSquare:RemoveTileObject(obj) end
 
 --- @public
+--- @param arg0 IsoObject
+--- @param arg1 boolean
+--- @return integer
+function IsoGridSquare:RemoveTileObject(arg0, arg1) end
+
+--- @public
 --- @param obj IsoObject
 --- @return integer
 function IsoGridSquare:RemoveTileObjectErosionNoRecalc(obj) end
@@ -656,6 +682,41 @@ function IsoGridSquare:SetGLightLevel(arg0) end
 --- @param arg0 integer
 --- @return nil
 function IsoGridSquare:SetRLightLevel(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return InventoryItem
+function IsoGridSquare:SpawnWorldInventoryItem(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 boolean
+--- @return InventoryItem
+function IsoGridSquare:SpawnWorldInventoryItem(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 integer
+--- @return nil
+function IsoGridSquare:SpawnWorldInventoryItem(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 boolean
+--- @return InventoryItem
+function IsoGridSquare:SpawnWorldInventoryItem(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @return nil
@@ -889,6 +950,10 @@ function IsoGridSquare:explosion(trap) end
 --- @public
 --- @return nil
 function IsoGridSquare:fixPlacedItemRenderOffsets() end
+
+--- @public
+--- @return nil
+function IsoGridSquare:flagForHotSave() end
 
 --- @public
 --- @param dir IsoDirections
@@ -1222,10 +1287,6 @@ function IsoGridSquare:getLightLevel(playerIndex) end
 function IsoGridSquare:getLightLevel2() end
 
 --- @public
---- @return PZArrayList
-function IsoGridSquare:getLocalTemporaryObjects() end
-
---- @public
 --- @return string
 function IsoGridSquare:getLootZone() end
 
@@ -1343,6 +1404,10 @@ function IsoGridSquare:getRoom() end
 --- @public
 --- @return integer
 function IsoGridSquare:getRoomID() end
+
+--- @public
+--- @return string
+function IsoGridSquare:getRoomIDString() end
 
 --- @public
 --- @return integer
@@ -1689,6 +1754,15 @@ function IsoGridSquare:hasGrassLike() end
 function IsoGridSquare:hasGrave() end
 
 --- @public
+--- @return boolean
+function IsoGridSquare:hasGridPower() end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function IsoGridSquare:hasGridPower(arg0) end
+
+--- @public
 --- @param arg0 IsoGridSquare
 --- @return boolean
 function IsoGridSquare:hasIdenticalSlopedSurface(arg0) end
@@ -1865,6 +1939,10 @@ function IsoGridSquare:isCommonGrass() end
 function IsoGridSquare:isCouldSee(playerIndex) end
 
 --- @public
+--- @return boolean
+function IsoGridSquare:isDerelict() end
+
+--- @public
 --- @param other IsoGridSquare
 --- @return boolean
 function IsoGridSquare:isDoorBlockedTo(other) end
@@ -1940,6 +2018,14 @@ function IsoGridSquare:isInsideRectangle(arg0, arg1, arg2, arg3) end
 --- @public
 --- @return boolean
 function IsoGridSquare:isNoGas() end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:isNoPower() end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:isNoWater() end
 
 --- @public
 --- @param bCountOtherCharacters boolean

@@ -35,6 +35,7 @@
 --- @field public WorldVersion_IsoCompostHealthValues integer
 --- @field public WorldVersion_ObjectID integer
 --- @field public WorldVersion_PlayerExtraInfoFlags integer
+--- @field public WorldVersion_PlayerSaveCraftingHistory integer
 --- @field public WorldVersion_PreviouslyMoved integer
 --- @field public WorldVersion_PrintMediaRottingCorpsesBodyDamage integer
 --- @field public WorldVersion_SafeHouseCreatedTimeAndLocation integer

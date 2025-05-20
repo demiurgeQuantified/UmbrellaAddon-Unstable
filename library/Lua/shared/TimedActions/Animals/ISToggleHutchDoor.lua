@@ -3,6 +3,7 @@
 ---@class ISToggleHutchDoor : ISBaseTimedAction
 ---@field hutch unknown
 ---@field ignoreHandsWounds boolean
+---@field retriggerLastAction boolean
 ---@field sound unknown
 ISToggleHutchDoor = ISBaseTimedAction:derive("ISToggleHutchDoor")
 ISToggleHutchDoor.Type = "ISToggleHutchDoor"

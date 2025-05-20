@@ -39,12 +39,13 @@ function ISScrollingListBox:addColumn(columnName, size) end
 
 ---@param name string
 ---@param item table
+---@param tooltip unknown?
 ---@return table
-function ISScrollingListBox:addItem(name, item) end
+function ISScrollingListBox:addItem(name, item, tooltip) end
 
 ---@param name string
 ---@return table?
-function ISScrollingListBox:addUniqueItem(name, item) end
+function ISScrollingListBox:addUniqueItem(name, item, tooltip) end
 
 function ISScrollingListBox:clear() end
 
@@ -69,6 +70,12 @@ function ISScrollingListBox:drawMouseOverHighlight(x, y, width, height) end
 function ISScrollingListBox:drawSelection(x, y, width, height) end
 
 function ISScrollingListBox:ensureVisible(index) end
+
+---@return number
+function ISScrollingListBox:getIndexOf(itemText) end
+
+---@return unknown
+function ISScrollingListBox:getItem(index) end
 
 function ISScrollingListBox:initialise() end
 

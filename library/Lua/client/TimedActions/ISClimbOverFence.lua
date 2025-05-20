@@ -4,6 +4,7 @@
 ---@field direction unknown
 ---@field isTallHoppable unknown
 ---@field item unknown
+---@field retriggerLastAction boolean
 ISClimbOverFence = ISBaseTimedAction:derive("ISClimbOverFence")
 ISClimbOverFence.Type = "ISClimbOverFence"
 

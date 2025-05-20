@@ -133,6 +133,10 @@ function IsoRoom:hasLightSwitches() end
 function IsoRoom:hasWater() end
 
 --- @public
+--- @return boolean
+function IsoRoom:isDerelict() end
+
+--- @public
 --- @param x integer
 --- @param y integer
 --- @param z integer

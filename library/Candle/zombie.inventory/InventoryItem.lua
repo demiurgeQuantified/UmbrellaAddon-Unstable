@@ -127,10 +127,18 @@ function InventoryItem:OnAddedToContainer(arg0) end
 function InventoryItem:OnBeforeRemoveFromContainer(arg0) end
 
 --- @public
+--- @return nil
+function InventoryItem:Remove() end
+
+--- @public
 --- @param x integer
 --- @param y integer
 --- @return nil
 function InventoryItem:SetContainerPosition(x, y) end
+
+--- @public
+--- @return nil
+function InventoryItem:SynchSpawn() end
 
 --- @public
 --- @return nil
@@ -313,6 +321,10 @@ function InventoryItem:getActualWeight() end
 --- @public
 --- @return number _ the Age
 function InventoryItem:getAge() end
+
+--- @public
+--- @return string
+function InventoryItem:getAimReleaseSound() end
 
 --- @public
 --- @return number
@@ -660,6 +672,10 @@ function InventoryItem:getFillFromToiletSound() end
 --- @public
 --- @return number
 function InventoryItem:getFireFuelRatio() end
+
+--- @public
+--- @return FluidContainer
+function InventoryItem:getFluidContainerFromSelfOrWorldItem() end
 
 --- @public
 --- @return string
@@ -1236,6 +1252,10 @@ function InventoryItem:getWithoutDrainable() end
 function InventoryItem:getWorker() end
 
 --- @public
+--- @return number
+function InventoryItem:getWorldAlpha() end
+
+--- @public
 --- @return IsoWorldInventoryObject
 function InventoryItem:getWorldItem() end
 
@@ -1485,6 +1505,11 @@ function InventoryItem:isFakeEquipped(arg0) end
 --- @public
 --- @return boolean
 function InventoryItem:isFavorite() end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function InventoryItem:isFavouriteRecipeInput(arg0) end
 
 --- @public
 --- @return boolean
@@ -2476,6 +2501,11 @@ function InventoryItem:setWheelFriction(wheelFriction) end
 --- @param worker string
 --- @return nil
 function InventoryItem:setWorker(worker) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function InventoryItem:setWorldAlpha(arg0) end
 
 --- @public
 --- @param w IsoWorldInventoryObject

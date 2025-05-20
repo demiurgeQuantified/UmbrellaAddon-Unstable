@@ -9,6 +9,11 @@ Stash = {}
 ------------------------------------
 
 --- @public
+--- @param arg0 UIWorldMap
+--- @return nil
+function Stash:applyAnnotations(arg0) end
+
+--- @public
 --- @return integer
 function Stash:getBuildingX() end
 

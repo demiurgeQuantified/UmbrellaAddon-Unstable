@@ -2,6 +2,7 @@
 
 ---@class ISDebugAnimationTextUI : ISCollapsableWindow
 ---@field character unknown
+---@field isHighlighted boolean
 ---@field textBox ISTextEntryBox
 ---@field title string
 ISDebugAnimationTextUI = ISCollapsableWindow:derive("ISDebugAnimationTextUI")

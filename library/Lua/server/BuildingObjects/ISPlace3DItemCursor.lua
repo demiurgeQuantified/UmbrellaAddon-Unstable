@@ -3,6 +3,7 @@
 ---@class ISPlace3DItemCursor : ISBuildingObject
 ---@field character unknown
 ---@field chr unknown
+---@field dontLockItemToSquare boolean
 ---@field isPlace3DCursor boolean
 ---@field isYButtonResetCursor boolean
 ---@field items unknown

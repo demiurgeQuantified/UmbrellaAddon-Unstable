@@ -13,7 +13,6 @@
 --- @field public DontRecordInput InputFlag
 --- @field public DontReplace InputFlag
 --- @field public FakeOutput InputFlag
---- @field public FullOfWater InputFlag
 --- @field public HandcraftOnly InputFlag
 --- @field public InheritAmmunition InputFlag
 --- @field public InheritColor InputFlag
@@ -23,6 +22,7 @@
 --- @field public InheritFood InputFlag
 --- @field public InheritFoodAge InputFlag
 --- @field public InheritHeadCondition InputFlag
+--- @field public InheritModelVariation InputFlag
 --- @field public InheritSharpness InputFlag
 --- @field public InheritUses InputFlag
 --- @field public IsCookedFoodItem InputFlag
@@ -46,7 +46,7 @@
 --- @field public MayDegrade InputFlag
 --- @field public MayDegradeHeavy InputFlag
 --- @field public MayDegradeLight InputFlag
---- @field public MostlyFullOfWater InputFlag
+--- @field public MayDegradeVeryLight InputFlag
 --- @field public NoBrokenItems InputFlag
 --- @field public NotEmpty InputFlag
 --- @field public NotFull InputFlag

@@ -5,7 +5,7 @@ SFeedingTroughSystem = SGlobalObjectSystem:derive("SFeedingTroughSystem")
 SFeedingTroughSystem.Type = "SFeedingTroughSystem"
 
 ---@return unknown?
-function SFeedingTroughSystem:addTrough(grid, def, north, slave) end
+function SFeedingTroughSystem:addTrough(grid, def, north, spriteGridX, spriteGridY) end
 
 function SFeedingTroughSystem:initSystem() end
 

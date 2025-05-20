@@ -32,7 +32,7 @@ ConnectToServer.instance = nil ---@type ConnectToServer?
 ---@param password string
 ---@param localIP string
 ---@param doHash boolean?
----@param authType number?
+---@param authType unknown?
 function ConnectToServer:connect(
 	previousScreen,
 	serverName,

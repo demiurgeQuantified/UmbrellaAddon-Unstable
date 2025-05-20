@@ -3,7 +3,7 @@
 ---@class ISFireplaceLightFromLiterature : ISBaseTimedAction
 ---@field fireplace unknown
 ---@field fuelAmt number
----@field item unknown?
+---@field item unknown
 ---@field lighter unknown
 ---@field sound unknown
 ISFireplaceLightFromLiterature = ISBaseTimedAction:derive("ISFireplaceLightFromLiterature")
@@ -30,6 +30,5 @@ function ISFireplaceLightFromLiterature:update() end
 function ISFireplaceLightFromLiterature:waitToStart() end
 
 ---@param character unknown?
----@param item unknown?
 ---@return ISFireplaceLightFromLiterature
 function ISFireplaceLightFromLiterature:new(character, item, lighter, fireplace) end

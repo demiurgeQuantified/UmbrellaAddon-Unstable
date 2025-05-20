@@ -3,7 +3,7 @@
 ---@class ISAddFuelAction : ISBaseTimedAction
 ---@field campfire unknown
 ---@field fuelAmt number
----@field item unknown?
+---@field item unknown
 ---@field sound unknown
 ISAddFuelAction = ISBaseTimedAction:derive("ISAddFuelAction")
 ISAddFuelAction.Type = "ISAddFuelAction"
@@ -29,7 +29,6 @@ function ISAddFuelAction:update() end
 function ISAddFuelAction:waitToStart() end
 
 ---@param character unknown?
----@param item unknown?
 ---@param fuelAmt number
 ---@return ISAddFuelAction
 function ISAddFuelAction:new(character, campfire, item, fuelAmt) end

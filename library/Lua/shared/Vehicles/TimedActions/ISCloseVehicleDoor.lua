@@ -7,6 +7,8 @@
 ISCloseVehicleDoor = ISBaseTimedAction:derive("ISCloseVehicleDoor")
 ISCloseVehicleDoor.Type = "ISCloseVehicleDoor"
 
+function ISCloseVehicleDoor:collapseLootWindow() end
+
 ---@return boolean?
 function ISCloseVehicleDoor:complete() end
 

@@ -188,6 +188,9 @@ function ISZoneDisplay:canSeeThroughObject(_object) end
 
 function ISZoneDisplay:close() end
 
+---@return number
+function ISZoneDisplay:getHoursBetween(_start, _finish) end
+
 ---@return string
 function ISZoneDisplay:getVisionTooltipText() end
 
@@ -220,9 +223,9 @@ function ISZoneDisplay:updateLocation() end
 
 function ISZoneDisplay:updateMoonPhase() end
 
-function ISZoneDisplay:updateMoonPosition(_dawn, _dusk, _timeOfDay) end
+function ISZoneDisplay:updateMoonPosition() end
 
-function ISZoneDisplay:updateSunPosition(_dawn, _dusk, _timeOfDay) end
+function ISZoneDisplay:updateSunPosition() end
 
 function ISZoneDisplay:updateTips() end
 

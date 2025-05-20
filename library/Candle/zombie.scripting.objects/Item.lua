@@ -101,6 +101,10 @@ function Item:getAcceptItemFunction() end
 function Item:getActualWeight() end
 
 --- @public
+--- @return string
+function Item:getAimReleaseSound() end
+
+--- @public
 --- @return string _ the AmmoType
 function Item:getAmmoType() end
 
@@ -697,6 +701,15 @@ function Item:getUseDelta() end
 
 --- @public
 --- @return ArrayList
+function Item:getUsedInRecipes() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return ArrayList
+function Item:getUsedInRecipes(arg0) end
+
+--- @public
+--- @return ArrayList
 function Item:getVehiclePartModels() end
 
 --- @public
@@ -830,6 +843,11 @@ function Item:isDisappearOnUse() end
 function Item:isFarmingLoot() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function Item:isFavouriteRecipeInput(arg0) end
+
+--- @public
 --- @return boolean
 function Item:isHidden() end
 
@@ -920,6 +938,10 @@ function Item:isUseWhileEquipped() end
 --- @public
 --- @return boolean _ the UseWhileUnequipped
 function Item:isUseWhileUnequipped() end
+
+--- @public
+--- @return boolean
+function Item:isUsedInRecipes() end
 
 --- @public
 --- @return boolean

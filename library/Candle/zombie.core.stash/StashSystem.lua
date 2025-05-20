@@ -48,6 +48,16 @@ function StashSystem.doStashItem(stash, item) end
 --- @public
 --- @static
 --- @return ArrayList
+function StashSystem.getAllStashes() end
+
+--- @public
+--- @static
+--- @return ArrayList
+function StashSystem.getAlreadyReadMap() end
+
+--- @public
+--- @static
+--- @return ArrayList
 function StashSystem.getPossibleStashes() end
 
 --- @public

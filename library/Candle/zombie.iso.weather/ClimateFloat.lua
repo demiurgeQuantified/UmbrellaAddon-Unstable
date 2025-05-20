@@ -103,6 +103,11 @@ function ClimateFloat:setModdedValue(f) end
 --- @return nil
 function ClimateFloat:setOverride(targ, inter) end
 
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function ClimateFloat:setOverrideValue(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

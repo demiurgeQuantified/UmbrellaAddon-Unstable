@@ -12,7 +12,7 @@ SFeedingTroughGlobalObject.Type = "SFeedingTroughGlobalObject"
 
 function SFeedingTroughGlobalObject:addFeed(type, feedAmount) end
 
-function SFeedingTroughGlobalObject:addObject(def, north, slave) end
+function SFeedingTroughGlobalObject:addObject(def, north, spriteGridX, spriteGridY) end
 
 function SFeedingTroughGlobalObject:addWater(amount) end
 
@@ -20,16 +20,6 @@ function SFeedingTroughGlobalObject:emptyWater() end
 
 ---@return unknown
 function SFeedingTroughGlobalObject:getObject() end
-
----@return number
----@return number
----@return unknown
-function SFeedingTroughGlobalObject:getSquare2Pos(square, north) end
-
----@return number
----@return number
----@return unknown
-function SFeedingTroughGlobalObject:getSquare2PosReverse(square, north) end
 
 function SFeedingTroughGlobalObject:initNew() end
 

@@ -6,6 +6,9 @@
 --- @field public AutomationOnly OutputFlag
 --- @field public ForceEmpty OutputFlag
 --- @field public HandcraftOnly OutputFlag
+--- @field public HasNoUses OutputFlag
+--- @field public HasOneUse OutputFlag
+--- @field public IsBlunt OutputFlag
 --- @field public IsEmpty OutputFlag
 --- @field public RespectCapacity OutputFlag
 OutputFlag = {}

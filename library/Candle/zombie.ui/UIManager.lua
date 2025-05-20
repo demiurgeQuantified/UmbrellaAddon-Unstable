@@ -390,12 +390,22 @@ function UIManager.isMouseOverInventory() end
 --- @public
 --- @static
 --- @return boolean
+function UIManager.isRendering() end
+
+--- @public
+--- @static
+--- @return boolean
 function UIManager.isShowLuaDebuggerOnError() end
 
 --- @public
 --- @static
 --- @return boolean
 function UIManager.isShowPausedMessage() end
+
+--- @public
+--- @static
+--- @return boolean
+function UIManager.isUpdating() end
 
 --- @public
 --- @static

@@ -76,6 +76,10 @@ function RoomDef:getH() end
 function RoomDef:getID() end
 
 --- @public
+--- @return string
+function RoomDef:getIDString() end
+
+--- @public
 --- @return IsoRoom
 function RoomDef:getIsoRoom() end
 

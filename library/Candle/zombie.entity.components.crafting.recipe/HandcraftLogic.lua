@@ -108,14 +108,6 @@ function HandcraftLogic:getManualInputsFor(arg0, arg1) end
 function HandcraftLogic:getManualSelectInputScriptFilter() end
 
 --- @public
---- @return string
-function HandcraftLogic:getModelHandOne() end
-
---- @public
---- @return string
-function HandcraftLogic:getModelHandTwo() end
-
---- @public
 --- @return ArrayList
 function HandcraftLogic:getMulticraftConsumedItems() end
 
@@ -151,6 +143,10 @@ function HandcraftLogic:getRecipeData() end
 function HandcraftLogic:getRecipeList() end
 
 --- @public
+--- @return string
+function HandcraftLogic:getRecipeSortMode() end
+
+--- @public
 --- @param arg0 InputScript
 --- @return number
 function HandcraftLogic:getResidualFluidFromInput(arg0) end
@@ -173,6 +169,10 @@ function HandcraftLogic:getSatisfiedInputInventoryItems(arg0) end
 --- @param arg0 InputScript
 --- @return List
 function HandcraftLogic:getSatisfiedInputItems(arg0) end
+
+--- @public
+--- @return string
+function HandcraftLogic:getSelectedRecipeStyle() end
 
 --- @public
 --- @return ArrayList
@@ -272,9 +272,19 @@ function HandcraftLogic:setRecipe(arg0) end
 function HandcraftLogic:setRecipeFromContextClick(arg0, arg1) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function HandcraftLogic:setRecipeSortMode(arg0) end
+
+--- @public
 --- @param arg0 List
 --- @return nil
 function HandcraftLogic:setRecipes(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function HandcraftLogic:setSelectedRecipeStyle(arg0) end
 
 --- @public
 --- @param arg0 boolean

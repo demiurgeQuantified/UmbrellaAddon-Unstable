@@ -87,6 +87,10 @@ function AnimalDefinitions:getMinBaby() end
 function AnimalDefinitions:getRandomBreed() end
 
 --- @public
+--- @return number
+function AnimalDefinitions:getWildFleeTimeUntilDeadTimer() end
+
+--- @public
 --- @param arg0 integer
 --- @return boolean
 function AnimalDefinitions:isInsideHutchTime(arg0) end

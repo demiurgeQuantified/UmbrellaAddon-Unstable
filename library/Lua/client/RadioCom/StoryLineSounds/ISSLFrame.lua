@@ -83,7 +83,3 @@ function ISSLFrame:updateVisualGrid() end
 ---@param height number
 ---@return ISSLFrame
 function ISSLFrame:new(x, y, width, height) end
-
----@param num number
----@return number
-function round(num, idp) end

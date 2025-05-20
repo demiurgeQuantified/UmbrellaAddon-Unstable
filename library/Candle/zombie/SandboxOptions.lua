@@ -40,6 +40,15 @@ function SandboxOptions:copyValuesFrom(other) end
 
 --- @public
 --- @return boolean
+function SandboxOptions:doesPowerGridExist() end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function SandboxOptions:doesPowerGridExist(arg0) end
+
+--- @public
+--- @return boolean
 function SandboxOptions:getAllClothesUnlocked() end
 
 --- @public

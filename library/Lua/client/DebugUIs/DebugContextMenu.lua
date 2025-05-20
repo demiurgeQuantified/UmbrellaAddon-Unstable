@@ -104,12 +104,6 @@ function DebugContextMenu.OnMannequinCreateItem(script) end
 
 function DebugContextMenu.OnMannequinSetScript(obj, script) end
 
-function DebugContextMenu.OnMetalDrumZeroWater(obj) end
-
-function DebugContextMenu.OnRainBarrelSetWater(obj) end
-
-function DebugContextMenu.OnRainBarrelZeroWater(obj) end
-
 function DebugContextMenu.OnReanimateCorpse(body) end
 
 function DebugContextMenu.OnRemoveAllAnimals(zombie) end

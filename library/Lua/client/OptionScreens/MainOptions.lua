@@ -4,7 +4,7 @@
 ---@field acceptButton ISButton
 ---@field addY number
 ---@field backButton ISButton
----@field badHighColor ISButton
+---@field badHighColor unknown
 ---@field btnJoypadSensitivityM ISButton
 ---@field btnJoypadSensitivityP ISButton
 ---@field colorPicker ISColorPicker
@@ -17,7 +17,7 @@
 ---@field cover ISPanel
 ---@field gameOptions table
 ---@field gameSounds ISGameSounds
----@field goodHighColor ISButton
+---@field goodHighColor unknown
 ---@field joypadButtons unknown
 ---@field keyButtonWidth number
 ---@field keyTickBoxes table
@@ -25,16 +25,17 @@
 ---@field mainPanel ISPanelJoypad
 ---@field modal (ISModalDialog | ISConfirmMonitorSettingsDialog)?
 ---@field monitorSettings table
----@field mpColor ISButton
----@field noTargetColor ISButton
----@field objHighColor ISButton
+---@field mpColor unknown
+---@field noTargetColor unknown
+---@field objHighColor unknown
 ---@field resetLua boolean
 ---@field restartRequired boolean
 ---@field saveButton ISButton
 ---@field sprintBtn ISButton
 ---@field stuffBelowControllerTickbox ISPanel
 ---@field tabs ISTabPanel
----@field targetColor ISButton
+---@field targetColor unknown
+---@field worldItemHighlightColor unknown
 MainOptions = ISPanelJoypad:derive("MainOptions")
 MainOptions.Type = "MainOptions"
 MainOptions.keys = {}
@@ -282,6 +283,8 @@ function MainOptions:onTabsActivateView(tabs) end
 
 function MainOptions:onTargetColor(button) end
 
+function MainOptions:onWorldItemHighlightColor(button) end
+
 function MainOptions:pickedBadHighlightColor(color, mouseUp) end
 
 function MainOptions:pickedGoodHighlightColor(color, mouseUp) end
@@ -295,6 +298,8 @@ function MainOptions:pickedNoTargetColor(color, mouseUp) end
 function MainOptions:pickedObjHighlightColor(color, mouseUp) end
 
 function MainOptions:pickedTargetColor(color, mouseUp) end
+
+function MainOptions:pickedWorldItemHighlightColor(color, mouseUp) end
 
 function MainOptions:prerender() end
 

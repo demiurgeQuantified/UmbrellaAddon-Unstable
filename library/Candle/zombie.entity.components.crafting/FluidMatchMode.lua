@@ -4,6 +4,7 @@
 --- @field public class any
 --- @field public Anything FluidMatchMode
 --- @field public Exact FluidMatchMode
+--- @field public Mixture FluidMatchMode
 --- @field public Primary FluidMatchMode
 FluidMatchMode = {}
 

@@ -39,21 +39,37 @@ function IAnimEventWrappedBroadcaster:addAnimEventListener(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrack
+--- @return nil
+function IAnimEventWrappedBroadcaster:addAnimEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrackString
+--- @return nil
+function IAnimEventWrappedBroadcaster:addAnimEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
 --- @param arg1 IAnimEventListenerString
 --- @return nil
 function IAnimEventWrappedBroadcaster:addAnimEventListener(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function IAnimEventWrappedBroadcaster:animEvent(arg0, arg1) end
+function IAnimEventWrappedBroadcaster:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function IAnimEventWrappedBroadcaster:animEvent(arg0, arg1) end
+function IAnimEventWrappedBroadcaster:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return AnimEventBroadcaster

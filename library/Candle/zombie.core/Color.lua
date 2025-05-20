@@ -240,6 +240,11 @@ function Color:darker() end
 function Color:darker(scale) end
 
 --- @public
+--- @param arg0 Color
+--- @return boolean
+function Color:equalBytes(arg0) end
+
+--- @public
 --- @param other any
 --- @return boolean
 function Color:equals(other) end

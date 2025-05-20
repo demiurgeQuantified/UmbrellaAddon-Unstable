@@ -18,10 +18,12 @@ function IdleState.instance() end
 ------------------------------------
 
 --- @public
---- @param owner IsoGameCharacter
---- @param event AnimEvent
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function IdleState:animEvent(owner, event) end
+function IdleState:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 IsoGameCharacter

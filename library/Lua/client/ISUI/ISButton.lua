@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISButton : ISPanel
----@field allowMouseUpProcessing boolean?
+---@field allowMouseUpProcessing unknown
 ---@field backgroundColorEnabled table
 ---@field backgroundColorMouseOver table
 ---@field backgroundColorPressed table
@@ -23,9 +23,9 @@
 ---@field joypadTextureWH number
 ---@field onclick (ISButton | function)?
 ---@field onClickArgs table
----@field onmousedown function?
----@field onmouseoutfunction unknown?
----@field onmouseover unknown?
+---@field onmousedown unknown
+---@field onmouseoutfunction unknown
+---@field onmouseover unknown
 ---@field originalHeight number
 ---@field originalWidth number
 ---@field overlayText unknown
@@ -39,7 +39,7 @@
 ---@field textureBackground unknown?
 ---@field textureColor table
 ---@field title string?
----@field tooltip string?
+---@field tooltip unknown?
 ---@field tooltipUI ISToolTip
 ---@field yoffset number
 ISButton = ISPanel:derive("ISButton")
@@ -131,18 +131,15 @@ function ISButton:setJoypadFocused(focused) end
 
 function ISButton:setOnClick(func, arg1, arg2, arg3, arg4) end
 
----@param onmouseout unknown?
 function ISButton:setOnMouseOutFunction(onmouseout) end
 
----@param onmouseover unknown?
 function ISButton:setOnMouseOverFunction(onmouseover) end
 
 function ISButton:setOverlayText(text) end
 
 function ISButton:setRepeatWhilePressed(func) end
 
----@param which string
----@param soundName string?
+---@param soundName string
 function ISButton:setSound(which, soundName) end
 
 ---@param r number
@@ -154,7 +151,6 @@ function ISButton:setTextureRGBA(r, g, b, a) end
 ---@param title string
 function ISButton:setTitle(title) end
 
----@param tooltip string?
 function ISButton:setTooltip(tooltip) end
 
 ---@param minWidth number?
@@ -174,7 +170,5 @@ function ISButton:updateTooltip() end
 ---@param title string?
 ---@param clicktarget table?
 ---@param onclick (ISButton | function)?
----@param onmousedown function?
----@param allowMouseUpProcessing boolean?
 ---@return ISButton
 function ISButton:new(x, y, width, height, title, clicktarget, onclick, onmousedown, allowMouseUpProcessing) end

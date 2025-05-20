@@ -9,7 +9,7 @@
 ---@field cost number
 ---@field deleteBuildButton ISButton
 ---@field fontHgt unknown
----@field freeTraits table
+---@field freeTraits unknown
 ---@field infoBtn ISButton
 ---@field infoRichText ISModalRichText?
 ---@field inputModal ISTextBox
@@ -48,7 +48,11 @@ function CharacterCreationProfession.initWorld() end
 ---@param self CharacterCreationProfession
 function CharacterCreationProfession.loadBuild(self, box) end
 
-function CharacterCreationProfession:addTrait(bad) end
+function CharacterCreationProfession:addBadTrait() end
+
+function CharacterCreationProfession:addGoodTrait() end
+
+function CharacterCreationProfession:addTrait(trait) end
 
 function CharacterCreationProfession:changeClothes() end
 
@@ -71,6 +75,9 @@ function CharacterCreationProfession:drawTraitMap(y, item, alt) end
 
 ---@return number
 function CharacterCreationProfession:drawXpBoostMap(y, item, alt) end
+
+---@return unknown
+function CharacterCreationProfession:getSelectedProf() end
 
 ---@return table
 function CharacterCreationProfession:getTraitColor(trait) end
@@ -134,9 +141,12 @@ function CharacterCreationProfession:presetExists(findText) end
 
 function CharacterCreationProfession:randomizeTraits() end
 
-function CharacterCreationProfession:removeTrait() end
+---@param index number
+function CharacterCreationProfession:removeTrait(index) end
 
 function CharacterCreationProfession:render() end
+
+function CharacterCreationProfession:repopulateTraitLists() end
 
 function CharacterCreationProfession:resetBuild() end
 
@@ -169,8 +179,13 @@ BCRC.savefile = "saved_builds.txt"
 ---@return string?
 function BCRC.dump(o, lvl) end
 
----@param _width number
----@param _height number
+---@param _centered boolean
+---@param _width number?
+---@param _height number?
+---@param _posX unknown?
+---@param _posY unknown?
+---@param _text string
+---@param target CharacterCreationMain
 ---@return ISTextBox
 function BCRC.inputModal(_centered, _width, _height, _posX, _posY, _text, _onclick, target, param1, param2) end
 
@@ -180,16 +195,3 @@ function BCRC.pline(text) end
 function BCRC.readSaveFile() end
 
 function BCRC.writeSaveFile(options) end
-
----@class CharacterCreationMain
-CharacterCreationMain = {}
-
-function CharacterCreationMain.invertSort(list) end
-
-function CharacterCreationMain.sort(list) end
-
----@return boolean
-function CharacterCreationMain.sortByCost(a, b) end
-
----@return boolean
-function CharacterCreationMain.sortByInvertCost(a, b) end

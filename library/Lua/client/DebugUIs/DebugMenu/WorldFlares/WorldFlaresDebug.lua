@@ -7,9 +7,9 @@
 ---@field colExtBoxY number
 ---@field colInt table
 ---@field colIntBoxY number
----@field entryBoxLifeTime ISTextEntryBox
----@field entryBoxRange ISTextEntryBox
----@field entryBoxWindspeed ISTextEntryBox
+---@field entryBoxLifeTime unknown
+---@field entryBoxRange unknown
+---@field entryBoxWindspeed unknown
 ---@field flareCount boolean
 ---@field flareID number
 ---@field flaresList ISScrollingListBox

@@ -101,6 +101,11 @@ function Literature:getTeachedRecipes() end
 function Literature:getUnhappyChange() end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+function Literature:hasRecipe(arg0) end
+
+--- @public
 --- @return boolean
 function Literature:isEmptyPages() end
 

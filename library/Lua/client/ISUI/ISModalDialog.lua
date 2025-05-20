@@ -5,9 +5,9 @@
 ---@field no ISButton?
 ---@field ok ISButton?
 ---@field onclick function?
----@field param1 table?
+---@field param1 unknown?
 ---@field param2 unknown?
----@field player number?
+---@field player unknown?
 ---@field target table?
 ---@field text string
 ---@field yes ISButton?
@@ -67,8 +67,8 @@ function ISModalDialog:render() end
 ---@param yesno boolean
 ---@param target table?
 ---@param onclick function?
----@param player number?
----@param param1 table?
+---@param player unknown?
+---@param param1 unknown?
 ---@param param2 unknown?
 ---@return ISModalDialog
 function ISModalDialog:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

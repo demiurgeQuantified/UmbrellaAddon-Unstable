@@ -55,7 +55,6 @@
 ---@field onMouseDoubleClick function
 ---@field onSquareDistance number
 ---@field perkLevel number
----@field pinAlpha number
 ---@field pinOffset number
 ---@field player unknown
 ---@field posChanges number

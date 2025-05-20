@@ -208,15 +208,21 @@ function IsoPlayer:IsUsingAimWeapon() end
 function IsoPlayer:Kill(killer) end
 
 --- @public
+--- @param arg0 Vector2
+--- @return nil
+function IsoPlayer:Move(arg0) end
+
+--- @public
 --- @param dir Vector2
 --- @return nil
 function IsoPlayer:MoveUnmodded(dir) end
 
 --- @public
---- @param sender AnimLayer
---- @param event AnimEvent
+--- @param arg0 AnimLayer
+--- @param arg1 AnimationTrack
+--- @param arg2 AnimEvent
 --- @return nil
-function IsoPlayer:OnAnimEvent(sender, event) end
+function IsoPlayer:OnAnimEvent(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
@@ -647,6 +653,10 @@ function IsoPlayer:getPlayerClothingInsulation() end
 function IsoPlayer:getPlayerClothingTemperature() end
 
 --- @public
+--- @return PlayerCraftHistory
+function IsoPlayer:getPlayerCraftHistory() end
+
+--- @public
 --- @return Vector2
 function IsoPlayer:getPlayerMoveDir() end
 
@@ -720,6 +730,10 @@ function IsoPlayer:getTimeSurvived() end
 --- @public
 --- @return number
 function IsoPlayer:getTimedActionTimeModifier() end
+
+--- @public
+--- @return LuaTimedActionNew
+function IsoPlayer:getTimedActionToRetrigger() end
 
 --- @public
 --- @return number
@@ -903,6 +917,16 @@ function IsoPlayer:isFactionPvp() end
 function IsoPlayer:isFarming() end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+function IsoPlayer:isFavouriteRecipe(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipe
+--- @return boolean
+function IsoPlayer:isFavouriteRecipe(arg0) end
+
+--- @public
 --- @return boolean
 function IsoPlayer:isFemale() end
 
@@ -1021,6 +1045,11 @@ function IsoPlayer:isPickingUpBody() end
 --- @public
 --- @return boolean
 function IsoPlayer:isPlayerMoving() end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+function IsoPlayer:isPlayingAttackLoopSound(arg0) end
 
 --- @public
 --- @return boolean
@@ -1679,6 +1708,11 @@ function IsoPlayer:setTicksSinceSeenZombie(TicksSinceSeenZombie) end
 function IsoPlayer:setTimeSinceLastStab(timeSinceLastStab) end
 
 --- @public
+--- @param arg0 LuaTimedActionNew
+--- @return nil
+function IsoPlayer:setTimedActionToRetrigger(arg0) end
+
+--- @public
 --- @param newUsername string
 --- @return nil
 function IsoPlayer:setUsername(newUsername) end
@@ -1735,6 +1769,11 @@ function IsoPlayer:shouldBeTurning() end
 --- @public
 --- @return boolean
 function IsoPlayer:shouldDoInventory() end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function IsoPlayer:startAttackLoopSound(arg0) end
 
 --- @public
 --- @param other IsoPlayer

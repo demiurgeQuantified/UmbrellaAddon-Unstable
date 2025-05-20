@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class WorldMapOptions : ISCollapsableWindowJoypad
+---@field darkModeLabel ISLabel
+---@field darkModeSlider ISSliderPanel
 ---@field doubleBoxes table
 ---@field map ISWorldMap
 ---@field screenHeight unknown
@@ -19,6 +21,8 @@ function WorldMapOptions:getVisibleOptions() end
 function WorldMapOptions:isMultiplayerOption(optionName) end
 
 function WorldMapOptions:onCommandEntered(entry, option) end
+
+function WorldMapOptions:onDarkModeChanged(value, slider) end
 
 function WorldMapOptions:onGainJoypadFocus(joypadData) end
 
@@ -84,6 +88,7 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field LBumperZoom number?
 ---@field mapAPI unknown
 ---@field mouseOverPrintMedia table?
+---@field mouseOverStashMap table?
 ---@field optionBtn ISButton
 ---@field optionsUI WorldMapOptions
 ---@field perspectiveBtn ISButton
@@ -101,6 +106,9 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field showPrintMedia boolean
 ---@field showRemotePlayers boolean
 ---@field showTileGrid boolean
+---@field stashMapBounds table
+---@field stashMapBoundsUI table
+---@field stashMapUI AnnotatedMapOverlay
 ---@field symbolsBtn ISButton
 ---@field symbolsUI ISWorldMapSymbols
 ---@field texViewIsometric unknown
@@ -142,7 +150,15 @@ function ISWorldMap:close() end
 
 function ISWorldMap:closePrintMedia() end
 
+function ISWorldMap:closeStashMap() end
+
 function ISWorldMap:createChildren() end
+
+function ISWorldMap:drawMapRect(bounds) end
+
+---@param stashName string
+---@return table
+function ISWorldMap:getStashMapBounds(stashName) end
 
 function ISWorldMap:initDataAndStyle() end
 
@@ -195,6 +211,9 @@ function ISWorldMap:onMouseUpOutside(x, y) end
 function ISWorldMap:onMouseUpPrintMedia() end
 
 ---@return boolean
+function ISWorldMap:onMouseUpStashMap() end
+
+---@return boolean
 function ISWorldMap:onMouseWheel(del) end
 
 ---@param x number
@@ -221,6 +240,8 @@ function ISWorldMap:onZoomInButton() end
 
 function ISWorldMap:onZoomOutButton() end
 
+function ISWorldMap:positionStashMap() end
+
 function ISWorldMap:prerender() end
 
 function ISWorldMap:render() end
@@ -230,6 +251,8 @@ function ISWorldMap:render() end
 function ISWorldMap:renderJoypadPrompt(texture, text, x, y) end
 
 function ISWorldMap:renderPrintMedia() end
+
+function ISWorldMap:renderStashMaps() end
 
 function ISWorldMap:restoreSettings() end
 
@@ -264,3 +287,34 @@ function ISWorldMap:updateJoypad() end
 ---@param height number
 ---@return ISWorldMap
 function ISWorldMap:new(x, y, width, height) end
+
+---@class AnnotatedMapOverlay : ISPanel
+---@field mapAPI unknown
+AnnotatedMapOverlay = ISPanel:derive("AnnotatedMapOverlay")
+AnnotatedMapOverlay.Type = "AnnotatedMapOverlay"
+
+function AnnotatedMapOverlay:instantiate() end
+
+---@param x number
+---@param y number
+---@return boolean
+function AnnotatedMapOverlay:onMouseDown(x, y) end
+
+---@param dx number
+---@param dy number
+---@return boolean
+function AnnotatedMapOverlay:onMouseMove(dx, dy) end
+
+---@param x number
+---@param y number
+---@return boolean
+function AnnotatedMapOverlay:onMouseUp(x, y) end
+
+function AnnotatedMapOverlay:prerender() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return AnnotatedMapOverlay
+function AnnotatedMapOverlay:new(x, y, width, height) end

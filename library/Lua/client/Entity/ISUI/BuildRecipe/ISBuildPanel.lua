@@ -88,6 +88,10 @@ function ISBuildPanel:setRecipeListMode(_useListMode) end
 
 function ISBuildPanel:setRecipes(_recipeQuery) end
 
+function ISBuildPanel:setSortMode(_sortMode) end
+
+function ISBuildPanel:sortRecipeList() end
+
 function ISBuildPanel:update() end
 
 function ISBuildPanel:updateContainers() end

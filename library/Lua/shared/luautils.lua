@@ -49,7 +49,7 @@ function luautils.okModal(_text, _centered, _width, _height, _posX, _posY) end
 function luautils.roughlyEqual(_value, _value2, _delta) end
 
 ---@param num number
----@return unknown
+---@return number
 function luautils.round(num, idp) end
 
 ---@param inputstr string
@@ -79,7 +79,6 @@ function luautils.updatePerksXp(perks, player) end
 ---@return boolean?
 function luautils.walk(playerObj, square, keepActions) end
 
----@param keepActions boolean?
 ---@return boolean?
 function luautils.walkAdj(playerObj, square, keepActions, excludeList) end
 
@@ -106,3 +105,7 @@ function luautils.walkToContainer(container, playerNum) end
 function luautils.walkToObject(_player, _object, _cancelTA) end
 
 function luautils.weaponLowerCondition(_weapon, _character, _replace, _chance) end
+
+---@param num number
+---@return number
+function round(num, idp) end

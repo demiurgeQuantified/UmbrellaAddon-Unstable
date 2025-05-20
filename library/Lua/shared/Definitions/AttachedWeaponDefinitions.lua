@@ -742,7 +742,7 @@ AttachedWeaponDefinitions.handgunHolsterDetective = {
 	},
 }
 AttachedWeaponDefinitions.handgunHolsterArmy = {
-	id = "handgunHolsterPolice",
+	id = "handgunHolsterArmy",
 	chance = 50,
 	outfit = {
 		"ArmyCamoDesert",
@@ -834,6 +834,59 @@ AttachedWeaponDefinitions.handgunHolsterGhillie = {
 	weapons = {
 		"Base.Pistol",
 		"Base.Revolver_Long",
+	},
+}
+AttachedWeaponDefinitions.handgunHolsterWildWest = {
+	id = "handgunHolsterWildWest",
+	chance = 50,
+	outfit = {
+		"CostumeWildWestLawman",
+		"CostumeWildWestOutlaw",
+	},
+	weaponLocation = {
+		"Holster Right",
+	},
+	bloodLocations = nil,
+	addHoles = false,
+	daySurvived = 0,
+	ensureItem = "Base.HolsterSimple_Brown",
+	weapons = {
+		"Base.Revolver_CapGun",
+	},
+}
+AttachedWeaponDefinitions.handgunHolsterLeftWildWest = {
+	id = "handgunHolsterLeftWildWest",
+	chance = 50,
+	outfit = {
+		"CostumeWildWestLawman",
+		"CostumeWildWestOutlaw",
+	},
+	weaponLocation = {
+		"Holster Left",
+	},
+	bloodLocations = nil,
+	addHoles = false,
+	daySurvived = 0,
+	ensureItem = "Base.HolsterDouble",
+	weapons = {
+		"Base.Revolver_CapGun",
+	},
+}
+AttachedWeaponDefinitions.rifleWildWest = {
+	id = "shotgunPolice",
+	chance = 30,
+	outfit = {
+		"CostumeWildWestLawman",
+		"CostumeWildWestOutlaw",
+	},
+	weaponLocation = {
+		"Rifle On Back",
+	},
+	bloodLocations = nil,
+	addHoles = false,
+	daySurvived = 0,
+	weapons = {
+		"Base.Rifle_CapGun",
 	},
 }
 AttachedWeaponDefinitions.shotgunPolice = {
@@ -2331,6 +2384,16 @@ AttachedWeaponDefinitions.attachedWeaponCustomOutfit = {
 			AttachedWeaponDefinitions.dean,
 		},
 	},
+	CostumeWildWestLawman = {
+		chance = 50,
+		maxitem = 3,
+		weapons = {
+			AttachedWeaponDefinitions.handgunHolsterWildWest,
+			AttachedWeaponDefinitions.handgunHolsterLeftWildWest,
+			AttachedWeaponDefinitions.rifleWildWest,
+		},
+	},
+	CostumeWildWestOutlaw = AttachedWeaponDefinitions.attachedWeaponCustomOutfit.CostumeWildWestLawman,
 	Bandit = {
 		chance = 50,
 		maxitem = 1,

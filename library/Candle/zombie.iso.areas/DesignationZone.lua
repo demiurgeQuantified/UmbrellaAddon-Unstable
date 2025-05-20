@@ -126,6 +126,18 @@ function DesignationZone:getRandomSquare() end
 function DesignationZone:getW() end
 
 --- @public
+--- @return integer
+function DesignationZone:getX() end
+
+--- @public
+--- @return integer
+function DesignationZone:getY() end
+
+--- @public
+--- @return integer
+function DesignationZone:getZ() end
+
+--- @public
 --- @param arg0 number
 --- @return DesignationZone
 function DesignationZone:getZoneById(arg0) end

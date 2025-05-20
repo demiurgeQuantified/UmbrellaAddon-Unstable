@@ -137,6 +137,10 @@ function InputScript:getItemApplyMode() end
 function InputScript:getOriginalLine() end
 
 --- @public
+--- @return InputScript
+function InputScript:getParentScript() end
+
+--- @public
 --- @return ArrayList
 function InputScript:getPossibleInputEnergies() end
 
@@ -179,6 +183,10 @@ function InputScript:hasCreateToItem() end
 --- @param arg0 InputFlag
 --- @return boolean
 function InputScript:hasFlag(arg0) end
+
+--- @public
+--- @return boolean
+function InputScript:hasParentScript() end
 
 --- @public
 --- @return boolean
@@ -270,6 +278,10 @@ function InputScript:isFluidExact() end
 --- @param arg0 FluidContainer
 --- @return boolean
 function InputScript:isFluidMatch(arg0) end
+
+--- @public
+--- @return boolean
+function InputScript:isFluidMixture() end
 
 --- @public
 --- @return boolean
@@ -368,6 +380,10 @@ function InputScript:mayDegradeHeavy() end
 --- @public
 --- @return boolean
 function InputScript:mayDegradeLight() end
+
+--- @public
+--- @return boolean
+function InputScript:mayDegradeVeryLight() end
 
 --- @public
 --- @return boolean

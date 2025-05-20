@@ -276,9 +276,13 @@ function SpecialLootSpawns.OnCreateSealedParcel(item) end
 
 function SpecialLootSpawns.OnCreateSelfHelpBook(item) end
 
+function SpecialLootSpawns.OnCreateSewingPattern(item) end
+
 function SpecialLootSpawns.OnCreateSexyBook(item) end
 
 function SpecialLootSpawns.OnCreateSkeletonDisplay(item) end
+
+function SpecialLootSpawns.OnCreateSnowGlobe(item) end
 
 function SpecialLootSpawns.OnCreateSodaCan(item) end
 

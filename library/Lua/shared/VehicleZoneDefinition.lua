@@ -1083,6 +1083,10 @@ VehicleZoneDistribution.business = {
 			index = -1,
 			spawnChance = 2,
 		},
+		["Base.StepVan_Propane"] = {
+			index = -1,
+			spawnChance = 4,
+		},
 		["Base.StepVan_SmartKut"] = {
 			index = -1,
 			spawnChance = 2,

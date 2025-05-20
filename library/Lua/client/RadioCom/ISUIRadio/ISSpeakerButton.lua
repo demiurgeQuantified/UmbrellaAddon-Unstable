@@ -6,7 +6,7 @@
 ---@field isMute boolean
 ---@field muteTexture unknown
 ---@field onclick unknown
----@field onclickTarget RWMVolume | ISGameSounds
+---@field onclickTarget ISGameSounds | RWMVolume
 ---@field speakerTexture unknown
 ISSpeakerButton = ISPanel:derive("ISSpeakerButton")
 ISSpeakerButton.Type = "ISSpeakerButton"
@@ -40,6 +40,6 @@ function ISSpeakerButton:setEnableControls(_b) end
 ---@param y number
 ---@param width number
 ---@param height number
----@param onclickTarget RWMVolume | ISGameSounds
+---@param onclickTarget ISGameSounds | RWMVolume
 ---@return ISSpeakerButton
 function ISSpeakerButton:new(x, y, width, height, onclick, onclickTarget) end

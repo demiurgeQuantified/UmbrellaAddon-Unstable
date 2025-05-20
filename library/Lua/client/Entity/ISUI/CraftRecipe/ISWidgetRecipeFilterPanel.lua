@@ -20,6 +20,7 @@
 ---@field paddingRight number
 ---@field paddingTop number
 ---@field searchHackLabel unknown?
+---@field sortCombo unknown?
 ---@field tickbox unknown?
 ISWidgetRecipeFilterPanel = ISPanelJoypad:derive("ISWidgetRecipeFilterPanel")
 ISWidgetRecipeFilterPanel.Type = "ISWidgetRecipeFilterPanel"
@@ -36,6 +37,8 @@ function ISWidgetRecipeFilterPanel:onButtonClick(_button) end
 
 function ISWidgetRecipeFilterPanel:OnClickFilterType(box) end
 
+function ISWidgetRecipeFilterPanel:OnClickSortType(box) end
+
 function ISWidgetRecipeFilterPanel:onGainJoypadFocus(joypadData) end
 
 function ISWidgetRecipeFilterPanel:onLoseJoypadFocus(joypadData) end
@@ -45,6 +48,8 @@ function ISWidgetRecipeFilterPanel:onResize() end
 function ISWidgetRecipeFilterPanel:OnShowAllClick(clickedOption, enabled) end
 
 function ISWidgetRecipeFilterPanel:populateComboList() end
+
+function ISWidgetRecipeFilterPanel:populateSortList() end
 
 function ISWidgetRecipeFilterPanel:prerender() end
 

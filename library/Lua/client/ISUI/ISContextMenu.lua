@@ -110,6 +110,7 @@ function ISContextMenu:addGetUpOption(text, target, onSelect, p2, p3, p4, p5, p6
 
 ---@param name string
 ---@param target ISContextMenu
+---@param onSelect function
 ---@return unknown?
 function ISContextMenu:addOption(
 	name,
@@ -175,6 +176,9 @@ function ISContextMenu:calcWidth() end
 
 ---@param isHighlighted boolean
 function ISContextMenu:callOptionHighlightFunction(option, isHighlighted) end
+
+---@param option unknown?
+function ISContextMenu:checkHighlightedOption(option) end
 
 function ISContextMenu:clear() end
 
@@ -349,8 +353,10 @@ function ISContextMenu:setFontFromOption() end
 
 function ISContextMenu:setOptionChecked(option, checked) end
 
+---@param startX number
 function ISContextMenu:setSlideGoalX(startX, finalX) end
 
+---@param startY number
 function ISContextMenu:setSlideGoalY(startY, finalY) end
 
 function ISContextMenu:showTooltip(option) end

@@ -24,6 +24,8 @@ function ISReadABook:animEvent(event, parameter) end
 ---@return boolean
 function ISReadABook:complete() end
 
+function ISReadABook:displayPrintMedia() end
+
 ---@return number
 function ISReadABook:getDuration() end
 
@@ -41,6 +43,8 @@ function ISReadABook:perform() end
 function ISReadABook:serverStart() end
 
 function ISReadABook:start() end
+
+function ISReadABook:startLoadingPrintMediaTextures() end
 
 function ISReadABook:stop() end
 

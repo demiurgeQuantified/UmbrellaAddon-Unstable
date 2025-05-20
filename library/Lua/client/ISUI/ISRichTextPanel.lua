@@ -82,13 +82,8 @@ function ISRichTextPanel:replaceKeyNames(text) end
 
 function ISRichTextPanel:setContentTransparency(alpha) end
 
----@param left number
----@param top number
----@param right number
----@param bottom number
 function ISRichTextPanel:setMargins(left, top, right, bottom) end
 
----@param text string
 function ISRichTextPanel:setText(text) end
 
 ---@param x number

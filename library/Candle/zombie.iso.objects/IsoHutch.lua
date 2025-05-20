@@ -32,6 +32,12 @@ function IsoHutch:addAnimalInside(arg0) end
 
 --- @public
 --- @param arg0 IsoAnimal
+--- @param arg1 boolean
+--- @return boolean
+function IsoHutch:addAnimalInside(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoAnimal
 --- @return nil
 function IsoHutch:addAnimalOutside(arg0) end
 

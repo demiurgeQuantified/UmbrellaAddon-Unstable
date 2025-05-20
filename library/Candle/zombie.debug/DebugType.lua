@@ -48,6 +48,7 @@
 --- @field public Physics DebugType
 --- @field public PZBullet DebugType
 --- @field public Radio DebugType
+--- @field public Ragdoll DebugType
 --- @field public Recipe DebugType
 --- @field public Saving DebugType
 --- @field public Script DebugType

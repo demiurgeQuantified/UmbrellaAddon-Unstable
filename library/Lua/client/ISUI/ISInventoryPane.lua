@@ -27,6 +27,7 @@
 ---@field equippedItemIcon unknown
 ---@field expandAll ISButton
 ---@field expandicon unknown
+---@field favoriteRecipeInputStar unknown
 ---@field favoriteStar unknown
 ---@field filtericon unknown
 ---@field filterMenu ISButton

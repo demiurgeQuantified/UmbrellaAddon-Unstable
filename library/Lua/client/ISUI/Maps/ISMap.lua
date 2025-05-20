@@ -25,6 +25,7 @@
 ---@field povXms unknown?
 ---@field povYms unknown?
 ---@field RBumperZoom number?
+---@field revealBtn ISButton
 ---@field scaleBtn ISButton
 ---@field selectedColor unknown?
 ---@field setMapData boolean
@@ -42,6 +43,8 @@ function ISMap:canErase() end
 
 ---@return unknown
 function ISMap:canWrite() end
+
+function ISMap:copySymbolsToWorldMap() end
 
 function ISMap:createChildren() end
 
@@ -98,6 +101,8 @@ function ISMap:render() end
 function ISMap:renderButtonTextureAndText(texture, text, x, y) end
 
 function ISMap:renderJoypadIcons() end
+
+function ISMap:revealOnWorldMap() end
 
 function ISMap:update() end
 

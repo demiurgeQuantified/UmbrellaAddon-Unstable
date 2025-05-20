@@ -862,6 +862,27 @@ function BaseVehicle:getChoosenParts() end
 function BaseVehicle:getClientForce() end
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 Vector2f
+--- @return number
+function BaseVehicle:getClosestPointOnExtents(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 Vector2f
+--- @return number
+function BaseVehicle:getClosestPointOnPoly(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 BaseVehicle
+--- @param arg1 Vector2f
+--- @param arg2 Vector2f
+--- @return number
+function BaseVehicle:getClosestPointOnPoly(arg0, arg1, arg2) end
+
+--- @public
 --- @param chr IsoGameCharacter
 --- @return VehiclePart
 function BaseVehicle:getClosestWindow(chr) end
@@ -929,6 +950,13 @@ function BaseVehicle:getEngineQuality() end
 --- @public
 --- @return number
 function BaseVehicle:getEngineSpeed() end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return number
+function BaseVehicle:getEnterSeatDistance(arg0, arg1, arg2) end
 
 --- @public
 --- @return FMODParameterList
@@ -1516,6 +1544,25 @@ function BaseVehicle:hitCharacter(arg0) end
 function BaseVehicle:hitCharacter(character, vars) end
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 Vector2f
+--- @return boolean
+function BaseVehicle:intersectLineWithExtents(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 Vector2f
+--- @return boolean
+function BaseVehicle:intersectLineWithPoly(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
 --- @return boolean
 function BaseVehicle:isAlarmed() end
 
@@ -1742,6 +1789,12 @@ function BaseVehicle:isOperational() end
 --- @param seat integer
 --- @return boolean
 function BaseVehicle:isPassengerUseDoor2(chr, seat) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return boolean
+function BaseVehicle:isPointLeftOfCenter(arg0, arg1) end
 
 --- @public
 --- @param x number
@@ -2160,6 +2213,11 @@ function BaseVehicle:setCurrentSteering(currentSteering) end
 --- @param arg0 number
 --- @return nil
 function BaseVehicle:setCurrentTotalAnimalSize(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseVehicle:setDebugPhysicsRender(arg0) end
 
 --- @public
 --- @param z number

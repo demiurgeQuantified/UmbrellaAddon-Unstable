@@ -166,6 +166,14 @@ function ErosionSeason:init(_lat, _tempMax, _tempMin, _tempDiff, _seasonLag, _no
 
 --- @public
 --- @return boolean
+function ErosionSeason:isEndlessDay() end
+
+--- @public
+--- @return boolean
+function ErosionSeason:isEndlessNight() end
+
+--- @public
+--- @return boolean
 function ErosionSeason:isRainDay() end
 
 --- @public

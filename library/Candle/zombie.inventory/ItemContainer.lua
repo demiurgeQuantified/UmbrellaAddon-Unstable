@@ -41,6 +41,13 @@ function ItemContainer:AddItem(item) end
 function ItemContainer:AddItem(type, useDelta) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @param arg2 boolean
+--- @return boolean
+function ItemContainer:AddItem(arg0, arg1, arg2) end
+
+--- @public
 --- @param item InventoryItem
 --- @return InventoryItem
 function ItemContainer:AddItemBlind(item) end
@@ -178,6 +185,22 @@ function ItemContainer:RemoveOneOf(String) end
 --- @param insideInv boolean
 --- @return InventoryItem
 function ItemContainer:RemoveOneOf(String, insideInv) end
+
+--- @public
+--- @param arg0 string
+--- @return InventoryItem
+function ItemContainer:SpawnItem(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return nil
+function ItemContainer:SpawnItem(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 number
+--- @return boolean
+function ItemContainer:SpawnItem(arg0, arg1) end
 
 --- @public
 --- @param item InventoryItem
@@ -320,6 +343,11 @@ function ItemContainer:containsWithModule(moduleType) end
 --- @param withDeltaLeft boolean
 --- @return boolean
 function ItemContainer:containsWithModule(moduleType, withDeltaLeft) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return nil
+function ItemContainer:dumpContentsInSquare(arg0) end
 
 --- @public
 --- @return nil
@@ -1025,6 +1053,22 @@ function ItemContainer:getItemCountFromTypeRecurse(type) end
 function ItemContainer:getItemCountRecurse(type) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @return InventoryItem
+function ItemContainer:getItemFromTag(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoGameCharacter
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @param arg4 boolean
+--- @return InventoryItem
+function ItemContainer:getItemFromTag(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
 --- @param type string
 --- @return InventoryItem
 function ItemContainer:getItemFromType(type) end
@@ -1456,6 +1500,13 @@ function ItemContainer:getWaterContainerCount() end
 --- @public
 --- @return integer
 function ItemContainer:getWeightReduction() end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoGameCharacter
+--- @param arg2 boolean
+--- @return boolean
+function ItemContainer:hasRecipe(arg0, arg1, arg2) end
 
 --- @public
 --- @param chr IsoGameCharacter

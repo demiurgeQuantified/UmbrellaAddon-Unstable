@@ -6,6 +6,7 @@
 --- @field public Alcohol FluidType
 --- @field public AnimalBlood FluidType
 --- @field public AnimalGrease FluidType
+--- @field public AnimalMilk FluidType
 --- @field public Beer FluidType
 --- @field public Bleach FluidType
 --- @field public Blood FluidType

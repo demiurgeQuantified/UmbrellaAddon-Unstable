@@ -4,6 +4,7 @@
 ---@field carLighter unknown
 ---@field eatAudio number
 ---@field eatSound string
+---@field fork unknown
 ---@field ignoreHandsWounds boolean
 ---@field isEating boolean
 ---@field item unknown
@@ -11,6 +12,7 @@
 ---@field percentage number
 ---@field playedScrapeSound boolean
 ---@field scrapeSound unknown
+---@field spoon unknown
 ---@field useUtensil boolean
 ISEatFoodAction = ISBaseTimedAction:derive("ISEatFoodAction")
 ISEatFoodAction.Type = "ISEatFoodAction"
@@ -26,6 +28,7 @@ function ISEatFoodAction:getDuration() end
 ---@return unknown?
 function ISEatFoodAction:getRequiredItem() end
 
+---@return unknown?
 function ISEatFoodAction:getSecondItem() end
 
 ---@return boolean

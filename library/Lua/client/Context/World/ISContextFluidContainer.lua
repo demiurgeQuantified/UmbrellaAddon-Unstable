@@ -9,6 +9,8 @@ function ISWorldMenuElements.ContextFluidContainer() end
 ---@class ISContextFluidContainer : ISMenuElement
 local __ISContextFluidContainer = {}
 
+function __ISContextFluidContainer.addDebugFluid(_data, cont, fluid) end
+
 function __ISContextFluidContainer.addPetrol(_data, _obj) end
 
 function __ISContextFluidContainer.addWater(_data, _obj) end

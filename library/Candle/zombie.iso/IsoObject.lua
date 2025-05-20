@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoObject: GameEntity, Serializable, Thumpable
+--- @class IsoObject: GameEntity, Serializable, ILuaIsoObject, Thumpable
 --- @field public class any
 --- @field public bmod number
 --- @field public gmod number
@@ -375,6 +375,16 @@ function IsoObject:afterRotated() end
 function IsoObject:canAddSheetRope() end
 
 --- @public
+--- @param arg0 FluidContainer
+--- @return boolean
+function IsoObject:canTransferFluidFrom(arg0) end
+
+--- @public
+--- @param arg0 FluidContainer
+--- @return boolean
+function IsoObject:canTransferFluidTo(arg0) end
+
+--- @public
 --- @return nil
 function IsoObject:checkAmbientSound() end
 
@@ -429,7 +439,15 @@ function IsoObject:doFindExternalWaterSource() end
 
 --- @public
 --- @return nil
+function IsoObject:dumpContentsInSquare() end
+
+--- @public
+--- @return nil
 function IsoObject:emptyFluid() end
+
+--- @public
+--- @return nil
+function IsoObject:flagForHotSave() end
 
 --- @public
 --- @return number _ the alpha
@@ -538,6 +556,10 @@ function IsoObject:getFluidCapacity() end
 --- @public
 --- @return string
 function IsoObject:getFluidUiName() end
+
+--- @public
+--- @return IsoDirections
+function IsoObject:getForwardIsoDirection() end
 
 --- @public
 --- @return GameEntityType
@@ -840,6 +862,10 @@ function IsoObject:hasFluid() end
 
 --- @public
 --- @return boolean
+function IsoObject:hasGridPower() end
+
+--- @public
+--- @return boolean
 function IsoObject:hasModData() end
 
 --- @public
@@ -948,6 +974,10 @@ function IsoObject:isFascia() end
 --- @public
 --- @return boolean
 function IsoObject:isFloor() end
+
+--- @public
+--- @return boolean
+function IsoObject:isFluidInputLocked() end
 
 --- @public
 --- @return boolean
@@ -1456,6 +1486,21 @@ function IsoObject:setDir(dir) end
 --- @param arg0 boolean
 --- @return nil
 function IsoObject:setExplored(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoObject:setForwardIsoDirection(arg0) end
+
+--- @public
+--- @param arg0 IsoDirections
+--- @return nil
+function IsoObject:setForwardIsoDirection(arg0) end
+
+--- @public
+--- @param arg0 IsoDirections
+--- @return nil
+function IsoObject:setForwardIsoDirection(arg0) end
 
 --- @public
 --- @param highlightColor ColorInfo

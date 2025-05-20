@@ -1926,6 +1926,9 @@ function isKeyPressed(key) end
 --- @return boolean
 function isKeyPressed(arg0) end
 
+--- @return boolean
+function isMetaKeyDown() end
+
 --- @param mod Mod
 --- @return boolean
 function isModActive(mod) end

@@ -83,6 +83,10 @@ function ISHandCraftPanel:setRecipeListMode(_useListMode) end
 
 function ISHandCraftPanel:setRecipes(_recipeQuery) end
 
+function ISHandCraftPanel:setSortMode(_sortMode) end
+
+function ISHandCraftPanel:sortRecipeList() end
+
 function ISHandCraftPanel:update() end
 
 function ISHandCraftPanel:updateContainers() end

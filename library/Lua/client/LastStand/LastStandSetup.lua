@@ -21,5 +21,4 @@ function doLastStandCreatePlayer(playerNum, playerObj) end
 function doLastStandPlayerDeath(playerObj) end
 
 ---@param playerNum number
----@param dir string
 function doLastStandBackButtonWheel(playerNum, dir) end

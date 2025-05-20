@@ -180,6 +180,34 @@ function PZMath.clamp_01(val) end
 --- @param arg4 number
 --- @param arg5 number
 --- @param arg6 number
+--- @param arg7 Vector2f
+--- @return number
+function PZMath.closestPointOnLineSegment(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 Vector2f
+--- @param arg9 Vector2f
+--- @return number
+function PZMath.closestPointsOnLineSegments(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
 --- @param arg7 number
 --- @param arg8 number
 --- @return Vector3
@@ -299,6 +327,31 @@ function PZMath.getClosestAngle(in_radsA, in_radsB) end
 --- @param in_degsB number
 --- @return number
 function PZMath.getClosestAngleDegrees(in_degsA, in_degsB) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 Vector2f
+--- @return boolean
+function PZMath.intersectLineSegments(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return number
+function PZMath.isLeft(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
@@ -552,6 +605,39 @@ function PZMath.pow(arg0, arg1) end
 --- @param radians number
 --- @return number
 function PZMath.radToDeg(radians) end
+
+--- @public
+--- @static
+--- @param arg0 Vector3f
+--- @param arg1 Quaternion
+--- @param arg2 Vector3f
+--- @return Vector3f
+function PZMath.rotateVector(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 Vector2
+--- @return Vector2
+function PZMath.rotateVector(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @static
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 Vector3f
+--- @return Vector3f
+function PZMath.rotateVector(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @static

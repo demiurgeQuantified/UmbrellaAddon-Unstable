@@ -6,7 +6,7 @@
 ---@field fromHotbar boolean
 ---@field hotbar unknown?
 ---@field ignoreHandsWounds boolean
----@field item boolean?
+---@field item boolean
 ---@field sound unknown
 ---@field useProgressBar boolean
 ISUnequipAction = ISBaseTimedAction:derive("ISUnequipAction")
@@ -31,7 +31,7 @@ function ISUnequipAction:stop() end
 
 function ISUnequipAction:update() end
 
----@param item boolean?
+---@param item boolean
 ---@param maxTime number
 ---@return ISUnequipAction
 function ISUnequipAction:new(character, item, maxTime) end

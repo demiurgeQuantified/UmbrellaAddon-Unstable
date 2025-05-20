@@ -1,8 +1,9 @@
 ---@meta
 
----@class forageCategories
-forageCategories = {
-	["Tracks"] = {
+---@class forageSystem
+forageSystem = {}
+forageSystem.categoryDefinitions = {
+	Tracks = {
 		name = "Tracks",
 		typeCategory = "Tracks",
 		identifyCategoryPerk = "PlantScavenging",
@@ -11,7 +12,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 0,
 			DeepForest = 0,
 			FarmLand = 0,
@@ -29,7 +30,7 @@ forageCategories = {
 		focusChanceMin = 0,
 		focusChanceMax = 0,
 	},
-	["Animals"] = {
+	Animals = {
 		name = "Animals",
 		typeCategory = "Animals",
 		identifyCategoryPerk = "PlantScavenging",
@@ -38,7 +39,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 15,
 			DeepForest = 15,
 			FarmLand = 20,
@@ -57,7 +58,7 @@ forageCategories = {
 		focusChanceMin = 5.0,
 		focusChanceMax = 15.0,
 	},
-	["DeadAnimals"] = {
+	DeadAnimals = {
 		name = "DeadAnimals",
 		typeCategory = "Animals",
 		identifyCategoryPerk = "PlantScavenging",
@@ -66,7 +67,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 3,
 			DeepForest = 3,
 			FarmLand = 2,
@@ -80,7 +81,7 @@ forageCategories = {
 			Vegitation = 2,
 		},
 	},
-	["Berries"] = {
+	Berries = {
 		name = "Berries",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -90,7 +91,7 @@ forageCategories = {
 			"floors_exterior_natural",
 			"blends_natural",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 20,
 			DeepForest = 30,
 			FarmLand = 15,
@@ -106,7 +107,7 @@ forageCategories = {
 		focusChanceMin = 20.0,
 		focusChanceMax = 33.3,
 	},
-	["Fruits"] = {
+	Fruits = {
 		name = "Fruits",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -116,7 +117,7 @@ forageCategories = {
 			"floors_exterior_natural",
 			"blends_natural",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 2,
 			DeepForest = 15,
 			FarmLand = 25,
@@ -135,7 +136,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 20.0,
 	},
-	["Vegetables"] = {
+	Vegetables = {
 		name = "Vegetables",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -145,7 +146,7 @@ forageCategories = {
 			"floors_exterior_natural",
 			"blends_natural",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 3,
 			DeepForest = 10,
 			FarmLand = 15,
@@ -164,7 +165,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 20.0,
 	},
-	["Crops"] = {
+	Crops = {
 		name = "Crops",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -174,7 +175,7 @@ forageCategories = {
 			"floors_exterior_natural",
 			"blends_natural",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 1,
 			DeepForest = 5,
 			FarmLand = 25,
@@ -193,7 +194,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 20.0,
 	},
-	["Mushrooms"] = {
+	Mushrooms = {
 		name = "Mushrooms",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -206,7 +207,7 @@ forageCategories = {
 		rainChance = 20,
 		hasRainedChance = 50,
 		nightChance = 20,
-		zoneChance = {
+		zones = {
 			BirchForest = 40,
 			DeepForest = 30,
 			FarmLand = 15,
@@ -225,7 +226,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 33.3,
 	},
-	["FishBait"] = {
+	FishBait = {
 		name = "FishBait",
 		typeCategory = "Animals",
 		identifyCategoryPerk = "PlantScavenging",
@@ -238,7 +239,7 @@ forageCategories = {
 		rainChance = 50,
 		hasRainedChance = 50,
 		nightChance = 100,
-		zoneChance = {
+		zones = {
 			BirchForest = 30,
 			DeepForest = 10,
 			FarmLand = 20,
@@ -255,7 +256,7 @@ forageCategories = {
 		chanceToMoveIcon = 10.0,
 		chanceToCreateIcon = 10.0,
 	},
-	["ForestGoods"] = {
+	ForestGoods = {
 		name = "ForestGoods",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -264,7 +265,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 0,
 			DeepForest = 0,
 			FarmLand = 0,
@@ -278,7 +279,7 @@ forageCategories = {
 			Vegitation = 0,
 		},
 	},
-	["ForestRarities"] = {
+	ForestRarities = {
 		name = "ForestRarities",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -287,7 +288,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 1,
 			DeepForest = 1,
 			FarmLand = 0,
@@ -301,7 +302,7 @@ forageCategories = {
 			Vegitation = 0,
 		},
 	},
-	["Insects"] = {
+	Insects = {
 		name = "Insects",
 		typeCategory = "Animals",
 		identifyCategoryPerk = "PlantScavenging",
@@ -311,7 +312,7 @@ forageCategories = {
 			"ANY",
 		},
 		nightChance = 100,
-		zoneChance = {
+		zones = {
 			BirchForest = 35,
 			DeepForest = 25,
 			FarmLand = 15,
@@ -330,7 +331,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 33.3,
 	},
-	["MedicinalPlants"] = {
+	MedicinalPlants = {
 		name = "MedicinalPlants",
 		typeCategory = "Medicinal",
 		identifyCategoryPerk = "PlantScavenging",
@@ -344,7 +345,7 @@ forageCategories = {
 		hasRainedChance = 25,
 		snowChance = -50,
 		nightChance = 100,
-		zoneChance = {
+		zones = {
 			BirchForest = 25,
 			DeepForest = 30,
 			FarmLand = 15,
@@ -357,13 +358,13 @@ forageCategories = {
 			TrailerPark = 0,
 			Vegitation = 15,
 		},
-		spriteAffinities = forageSystem.spriteAffinities.specialPlants,
+		spriteAffinities = forageSystem.spriteAffinities.genericPlants,
 		chanceToMoveIcon = 10.0,
 		chanceToCreateIcon = 5.0,
 		focusChanceMin = 10.0,
 		focusChanceMax = 33.3,
 	},
-	["WildPlants"] = {
+	WildPlants = {
 		name = "WildPlants",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -377,7 +378,7 @@ forageCategories = {
 		hasRainedChance = 25,
 		snowChance = -50,
 		nightChance = 50,
-		zoneChance = {
+		zones = {
 			BirchForest = 35,
 			DeepForest = 20,
 			FarmLand = 15,
@@ -396,7 +397,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 33.3,
 	},
-	["WildHerbs"] = {
+	WildHerbs = {
 		name = "WildHerbs",
 		typeCategory = "Food",
 		identifyCategoryPerk = "PlantScavenging",
@@ -410,7 +411,7 @@ forageCategories = {
 		hasRainedChance = 25,
 		snowChance = -50,
 		nightChance = 50,
-		zoneChance = {
+		zones = {
 			BirchForest = 15,
 			DeepForest = 10,
 			FarmLand = 5.0,
@@ -429,7 +430,7 @@ forageCategories = {
 		focusChanceMin = 10.0,
 		focusChanceMax = 33.3,
 	},
-	["Firewood"] = {
+	Firewood = {
 		name = "Firewood",
 		typeCategory = "Materials",
 		identifyCategoryPerk = "PlantScavenging",
@@ -438,7 +439,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 80,
 			DeepForest = 80,
 			FarmLand = 35,
@@ -457,7 +458,7 @@ forageCategories = {
 		focusChanceMin = 25.0,
 		focusChanceMax = 40.0,
 	},
-	["Stones"] = {
+	Stones = {
 		name = "Stones",
 		typeCategory = "Materials",
 		identifyCategoryPerk = "PlantScavenging",
@@ -466,7 +467,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 10,
 			DeepForest = 10,
 			FarmLand = 10,
@@ -485,7 +486,7 @@ forageCategories = {
 		focusChanceMin = 25.0,
 		focusChanceMax = 40.0,
 	},
-	["CraftingMaterials"] = {
+	CraftingMaterials = {
 		name = "CraftingMaterials",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -494,7 +495,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 5,
 			DeepForest = 5,
 			FarmLand = 7,
@@ -508,7 +509,7 @@ forageCategories = {
 			Vegitation = 13,
 		},
 	},
-	["Bones"] = {
+	Bones = {
 		name = "Bones",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -517,7 +518,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 20,
 			DeepForest = 20,
 			FarmLand = 20,
@@ -531,7 +532,7 @@ forageCategories = {
 			Vegitation = 20,
 		},
 	},
-	["Artifacts"] = {
+	Artifacts = {
 		name = "Artifacts",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -540,7 +541,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 1,
 			DeepForest = 1,
 			FarmLand = 1,
@@ -554,7 +555,35 @@ forageCategories = {
 			Vegitation = 1,
 		},
 	},
-	["Junk"] = {
+	Trash = {
+		name = "Trash",
+		typeCategory = "Other",
+		identifyCategoryPerk = "PlantScavenging",
+		identifyCategoryLevel = 4,
+		categoryHidden = false,
+		validFloors = {
+			"ANY",
+		},
+		zones = {
+			BirchForest = 3,
+			DeepForest = 5,
+			FarmLand = 8,
+			ForagingNav = 35,
+			Forest = 5,
+			OrganicForest = 1,
+			PHForest = 3,
+			PRForest = 3,
+			TownZone = 45,
+			TrailerPark = 45,
+			Vegitation = 15,
+		},
+		spriteAffinities = forageSystem.spriteAffinities.trash,
+		chanceToMoveIcon = 30.0,
+		chanceToCreateIcon = 20.0,
+		focusChanceMin = 5.0,
+		focusChanceMax = 25.0,
+	},
+	Junk = {
 		name = "Junk",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -563,7 +592,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 3,
 			DeepForest = 3,
 			FarmLand = 3,
@@ -582,7 +611,7 @@ forageCategories = {
 		focusChanceMin = 5.0,
 		focusChanceMax = 10.0,
 	},
-	["JunkFood"] = {
+	JunkFood = {
 		name = "JunkFood",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -591,7 +620,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 0,
 			DeepForest = 1,
 			FarmLand = 3,
@@ -605,7 +634,7 @@ forageCategories = {
 			Vegitation = 1,
 		},
 	},
-	["Clothing"] = {
+	Clothing = {
 		name = "Clothing",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -614,7 +643,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 0,
 			DeepForest = 0,
 			FarmLand = 0,
@@ -628,7 +657,7 @@ forageCategories = {
 			Vegitation = 1,
 		},
 	},
-	["JunkWeapons"] = {
+	JunkWeapons = {
 		name = "JunkWeapons",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -637,7 +666,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 1,
 			DeepForest = 1,
 			FarmLand = 1,
@@ -651,7 +680,7 @@ forageCategories = {
 			Vegitation = 1,
 		},
 	},
-	["Ammunition"] = {
+	Ammunition = {
 		name = "Ammunition",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -660,7 +689,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 0,
 			DeepForest = 0,
 			FarmLand = 0,
@@ -674,7 +703,7 @@ forageCategories = {
 			Vegitation = 0,
 		},
 	},
-	["Medical"] = {
+	Medical = {
 		name = "Medical",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -683,7 +712,7 @@ forageCategories = {
 		validFloors = {
 			"ANY",
 		},
-		zoneChance = {
+		zones = {
 			BirchForest = 0,
 			DeepForest = 0, ---@type number
 			FarmLand = 0,
@@ -696,33 +725,5 @@ forageCategories = {
 			TrailerPark = 3,
 			Vegitation = 1,
 		},
-	},
-	["Trash"] = {
-		name = "Trash",
-		typeCategory = "Other",
-		identifyCategoryPerk = "PlantScavenging",
-		identifyCategoryLevel = 4,
-		categoryHidden = false,
-		validFloors = {
-			"ANY",
-		},
-		zoneChance = {
-			BirchForest = 3,
-			DeepForest = 5,
-			FarmLand = 8,
-			ForagingNav = 35,
-			Forest = 5,
-			OrganicForest = 1,
-			PHForest = 3,
-			PRForest = 3,
-			TownZone = 45,
-			TrailerPark = 45,
-			Vegitation = 15,
-		},
-		spriteAffinities = forageSystem.spriteAffinities.trash,
-		chanceToMoveIcon = 30.0,
-		chanceToCreateIcon = 20.0,
-		focusChanceMin = 15.0,
-		focusChanceMax = 30.0,
 	},
 }

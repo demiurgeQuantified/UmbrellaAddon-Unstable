@@ -6,6 +6,7 @@ PrintMediaDefinitions.Brochures = {
 	"Airport",
 	"ArtGalleryofLouisville",
 	"CardinalPlaza",
+	"Coalfield",
 	"ColdWarBunker",
 	"CrossRoadsMall",
 	"DarkwallowGuestHouse",
@@ -26,6 +27,7 @@ PrintMediaDefinitions.Brochures = {
 	"Delilah",
 }
 PrintMediaDefinitions.Fliers = {
+	"A1Hay",
 	"AMZSteel",
 	"AlsAutoShop",
 	"AmericanTire",
@@ -35,6 +37,7 @@ PrintMediaDefinitions.Fliers = {
 	"BrooksLibrary",
 	"BrottAuction",
 	"CabinforRentDixie",
+	"CarFixation",
 	"CatonaHotTinGrill",
 	"CircuitalHealing",
 	"DragRacingTrack",
@@ -132,6 +135,7 @@ PrintMediaDefinitions.Fliers = {
 	"UStoreItLouisville",
 	"UStoreItMuldraugh",
 	"UStoreItRiverside",
+	"UpscaleMobility",
 	"WPDIY",
 	"WPTownHall",
 	"YourLocalShelterBrandenburg",

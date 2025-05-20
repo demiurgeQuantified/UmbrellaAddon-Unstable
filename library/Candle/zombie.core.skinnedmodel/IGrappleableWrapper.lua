@@ -399,9 +399,10 @@ function IGrappleableWrapper:setDoGrappleLetGo() end
 function IGrappleableWrapper:setFallOnFront(arg0) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IGrappleableWrapper:setForwardDirection(arg0) end
+function IGrappleableWrapper:setForwardDirection(arg0, arg1) end
 
 --- @public
 --- @param arg0 Vector3f
@@ -535,14 +536,16 @@ function IGrappleableWrapper:setSharedGrappleType(arg0) end
 function IGrappleableWrapper:setSharedGrappleType(arg0) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IGrappleableWrapper:setTargetAndCurrentDirection(arg0) end
+function IGrappleableWrapper:setTargetAndCurrentDirection(arg0, arg1) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IGrappleableWrapper:setTargetAndCurrentDirection(arg0) end
+function IGrappleableWrapper:setTargetAndCurrentDirection(arg0, arg1) end
 
 --- @public
 --- @param arg0 Vector3f

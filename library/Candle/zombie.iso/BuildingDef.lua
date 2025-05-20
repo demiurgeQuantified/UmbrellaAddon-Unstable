@@ -86,6 +86,10 @@ function BuildingDef:getH() end
 function BuildingDef:getID() end
 
 --- @public
+--- @return string
+function BuildingDef:getIDString() end
+
+--- @public
 --- @return integer
 function BuildingDef:getKeyId() end
 

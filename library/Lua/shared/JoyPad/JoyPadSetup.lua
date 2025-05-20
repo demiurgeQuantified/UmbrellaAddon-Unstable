@@ -265,8 +265,8 @@ function getJoypadData(playerID) end
 ---@return unknown?
 function getJoypadFocus(playerID) end
 
----@param playerID number?
----@param control table?
+---@param playerID number
+---@param control (ISServerDisconnectUI | ISUIElementJoypad)?
 function setJoypadFocus(playerID, control) end
 
 function setPrevFocusForPlayer(playerID) end

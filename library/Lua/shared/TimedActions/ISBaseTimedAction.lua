@@ -69,6 +69,8 @@ function ISBaseTimedAction:setAnimVariable(_key, _val) end
 
 function ISBaseTimedAction:setCurrentTime(time) end
 
+function ISBaseTimedAction:setJobDelta(delta) end
+
 function ISBaseTimedAction:setOverrideHandModels(_primaryHand, _secondaryHand, _resetModel) end
 
 function ISBaseTimedAction:setOverrideHandModelsString(_primaryHand, _secondaryHand, _resetModel) end

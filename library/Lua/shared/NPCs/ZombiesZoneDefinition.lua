@@ -337,8 +337,8 @@ ZombiesZoneDefinition.StreetPoor = {
 		chance = 15,
 		beardStyles = "Long:10;Chops:10;Goatee:10;Moustache:10;Full:10;BeardOnly:10",
 	},
-	Bandit = {
-		name = "Bandit",
+	Bandit_Early = {
+		name = "Bandit_Early",
 		chance = 5,
 	},
 	Backpacker = {
@@ -1419,7 +1419,7 @@ ZombiesZoneDefinition.Cowboy = {
 	},
 	CostumeWildWestCowpoke = {
 		name = "CostumeWildWestCowpoke",
-		chance = 10,
+		chance = 5,
 	},
 	CostumeWildWestFancy = {
 		name = "CostumeWildWestFancy",

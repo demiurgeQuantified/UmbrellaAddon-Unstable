@@ -23,6 +23,11 @@ function ClimbOverFenceState.instance() end
 ------------------------------------
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function ClimbOverFenceState:canRagdoll(arg0) end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @return nil
 function ClimbOverFenceState:enter(owner) end

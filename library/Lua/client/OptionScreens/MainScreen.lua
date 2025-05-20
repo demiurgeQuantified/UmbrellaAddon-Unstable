@@ -207,7 +207,6 @@ function MainScreen:render() end
 
 function MainScreen:setBeginnerPreset() end
 
----@param visible boolean
 function MainScreen:setBottomPanelVisible(visible) end
 
 function MainScreen:setDefaultSandboxVars() end
@@ -241,7 +240,8 @@ function isPlayerDoingActionThatCanBeCancelled(playerObj) end
 function stopDoingActionThatCanBeCancelled(playerObj) end
 
 ---@param playerNum number
-function CancelAction(playerNum) end
+---@param addPreviousToRetrigger boolean
+function CancelAction(playerNum, addPreviousToRetrigger) end
 
 function ToggleEscapeMenu(key) end
 

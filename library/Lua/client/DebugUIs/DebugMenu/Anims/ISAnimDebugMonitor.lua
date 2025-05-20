@@ -3,9 +3,9 @@
 ---@class ISAnimDebugMonitor : ISCollapsableWindow
 ---@field addVarAddButton unknown
 ---@field addVarComboType unknown
----@field addVarKey ISTextEntryBox
+---@field addVarKey unknown
 ---@field addVarKeyLabel ISLabel
----@field addVarValue ISTextEntryBox
+---@field addVarValue unknown
 ---@field addVarValueLabel ISLabel
 ---@field buttonActiveNodes unknown
 ---@field buttonAnimTracks unknown
@@ -22,7 +22,7 @@
 ---@field cRed table
 ---@field currentTile unknown?
 ---@field editEnabled boolean
----@field entryBoxValue ISTextEntryBox
+---@field entryBoxValue unknown
 ---@field floatPlotter FloatArrayPlotter
 ---@field greyCol table
 ---@field hotKeyPanels table

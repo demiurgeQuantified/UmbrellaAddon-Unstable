@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class CreateChumFromGroundSandAction : ISBaseTimedAction
+---@field sound unknown
 ---@field square unknown
 CreateChumFromGroundSandAction = ISBaseTimedAction:derive("CreateChumFromGroundSandAction")
 CreateChumFromGroundSandAction.Type = "CreateChumFromGroundSandAction"
@@ -19,6 +20,8 @@ function CreateChumFromGroundSandAction:perform() end
 function CreateChumFromGroundSandAction:start() end
 
 function CreateChumFromGroundSandAction:stop() end
+
+function CreateChumFromGroundSandAction:stopSound() end
 
 function CreateChumFromGroundSandAction:update() end
 

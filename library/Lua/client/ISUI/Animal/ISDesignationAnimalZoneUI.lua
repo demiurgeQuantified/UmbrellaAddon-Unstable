@@ -66,6 +66,7 @@ function ISDesignationZoneAnimalZoneUI:updateAnimals() end
 function ISDesignationZoneAnimalZoneUI:new(x, y, width, height, player, zone) end
 
 ---@class ISDesignationZoneAnimalZoneUI_AnimalsPanel : ISPanelJoypad
+---@field mouseOverAnimal unknown?
 ---@field selected number
 ---@field smoothScrollTargetY number?
 ---@field smoothScrollY number?
@@ -74,6 +75,8 @@ ISDesignationZoneAnimalZoneUI_AnimalsPanel = ISPanelJoypad:derive("ISDesignation
 ISDesignationZoneAnimalZoneUI_AnimalsPanel.Type = "ISDesignationZoneAnimalZoneUI_AnimalsPanel"
 
 function ISDesignationZoneAnimalZoneUI_AnimalsPanel:ensureVisible(index) end
+
+function ISDesignationZoneAnimalZoneUI_AnimalsPanel:highlightAnimal() end
 
 function ISDesignationZoneAnimalZoneUI_AnimalsPanel:onGainJoypadFocus(joypadData) end
 

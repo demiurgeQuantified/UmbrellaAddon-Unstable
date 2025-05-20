@@ -6,6 +6,7 @@
 ---@field catDef unknown
 ---@field isMover boolean
 ---@field itemDef unknown
+---@field itemType unknown?
 ---@field onClickContext function
 ---@field render3DTexture unknown
 ---@field renderWorldIcon unknown

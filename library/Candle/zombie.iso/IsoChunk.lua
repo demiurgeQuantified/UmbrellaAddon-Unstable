@@ -170,10 +170,11 @@ function IsoChunk:RandomizeModel(v, zone, name, type) end
 function IsoChunk:Save(bSaveQuit) end
 
 --- @public
---- @param bb ByteBuffer
---- @param crc CRC32
+--- @param arg0 ByteBuffer
+--- @param arg1 CRC32
+--- @param arg2 boolean
 --- @return ByteBuffer
-function IsoChunk:Save(bb, crc) end
+function IsoChunk:Save(arg0, arg1, arg2) end
 
 --- @public
 --- @param ccrc Chunk
@@ -267,6 +268,11 @@ function IsoChunk:checkLightingLater_OnePlayer_OneLevel(arg0, arg1) end
 function IsoChunk:checkPhysicsLater(arg0) end
 
 --- @public
+--- @param arg0 IsoChunkLevel
+--- @return nil
+function IsoChunk:checkPhysicsLaterForActiveRagdoll(arg0) end
+
+--- @public
 --- @param arg0 number
 --- @param arg1 number
 --- @return boolean
@@ -279,6 +285,10 @@ function IsoChunk:doLoadGridsquare() end
 --- @public
 --- @return nil
 function IsoChunk:doReuseGridsquares() end
+
+--- @public
+--- @return nil
+function IsoChunk:flagForHotSave() end
 
 --- @public
 --- @param arg0 integer

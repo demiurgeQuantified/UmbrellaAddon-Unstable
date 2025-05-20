@@ -86,6 +86,7 @@ CustomTileProps_SetPair.crafted_05_73 = {
 }
 CustomTileProps_SetPair.crafted_02_40 = {
 	CanScrap = "",
+	BlocksPlacement = "",
 	Material = "Stone",
 }
 CustomTileProps_SetPair.camping_01_6 = {
@@ -239,6 +240,9 @@ CustomTileProps_SetFlag.crafted_01_122 = {
 	IsoFlagType.solidtrans,
 }
 CustomTileProps_SetFlag.crafted_01_123 = {
+	IsoFlagType.solidtrans,
+}
+CustomTileProps_SetFlag.crafted_02_40 = {
 	IsoFlagType.solidtrans,
 }
 CustomTileProps_SetFlag.fixtures_bathroom_01_52 = {

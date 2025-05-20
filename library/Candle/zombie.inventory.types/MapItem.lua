@@ -26,6 +26,12 @@ function MapItem.SaveWorldMap() end
 
 --- @public
 --- @static
+--- @param arg0 SaveBufferMap
+--- @return nil
+function MapItem.SaveWorldMapToBufferMap(arg0) end
+
+--- @public
+--- @static
 --- @return MapItem
 function MapItem.getSingleton() end
 

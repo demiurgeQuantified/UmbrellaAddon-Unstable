@@ -177,6 +177,10 @@ function IsoAnimal:canHaveEggs() end
 function IsoAnimal:canPoop() end
 
 --- @public
+--- @return boolean
+function IsoAnimal:canRagdoll() end
+
+--- @public
 --- @return nil
 function IsoAnimal:cancelLuring() end
 
@@ -312,6 +316,10 @@ function IsoAnimal:getAllPossibleFoodFromInv(arg0) end
 --- @public
 --- @return integer
 function IsoAnimal:getAnimalID() end
+
+--- @public
+--- @return number
+function IsoAnimal:getAnimalOriginalSize() end
 
 --- @public
 --- @return number
@@ -890,11 +898,6 @@ function IsoAnimal:setDebugAcceptance(arg0, arg1) end
 function IsoAnimal:setDebugStress(arg0) end
 
 --- @public
---- @param arg0 IsoDirections
---- @return nil
-function IsoAnimal:setDir(arg0) end
-
---- @public
 --- @param arg0 boolean
 --- @return nil
 function IsoAnimal:setExtraValues(arg0) end
@@ -1077,10 +1080,6 @@ function IsoAnimal:updateVocalProperties() end
 --- @public
 --- @return nil
 function IsoAnimal:updateWalkLoopingSound() end
-
---- @public
---- @return boolean
-function IsoAnimal:useRagdoll() end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

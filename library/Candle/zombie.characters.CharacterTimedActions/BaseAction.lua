@@ -71,6 +71,10 @@ function BaseAction:hasStalled() end
 
 --- @public
 --- @return boolean
+function BaseAction:isForceComplete() end
+
+--- @public
+--- @return boolean
 function BaseAction:isPathfinding() end
 
 --- @public
@@ -123,6 +127,11 @@ function BaseAction:setAnimVariable(key, val) end
 --- @param block boolean
 --- @return nil
 function BaseAction:setBlockMovementEtc(block) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function BaseAction:setJobDelta(arg0) end
 
 --- @public
 --- @param looped boolean

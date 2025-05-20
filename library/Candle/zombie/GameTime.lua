@@ -339,6 +339,22 @@ function GameTime:getZombieKilledText(playerObj) end
 function GameTime:init() end
 
 --- @public
+--- @return boolean
+function GameTime:isDay() end
+
+--- @public
+--- @return boolean
+function GameTime:isEndlessDay() end
+
+--- @public
+--- @return boolean
+function GameTime:isEndlessNight() end
+
+--- @public
+--- @return boolean
+function GameTime:isNight() end
+
+--- @public
 --- @return boolean _ the RainingToday
 function GameTime:isRainingToday() end
 
@@ -373,6 +389,11 @@ function GameTime:save(output) end
 --- @param output ByteBuffer
 --- @return nil
 function GameTime:save(output) end
+
+--- @public
+--- @param arg0 SaveBufferMap
+--- @return nil
+function GameTime:saveToBufferMap(arg0) end
 
 --- @public
 --- @param bb ByteBuffer

@@ -10,88 +10,40 @@ IsoMarkers = {}
 ------------------------------------
 
 --- @public
---- @param gs IsoGridSquare
---- @param r number
---- @param g number
---- @param b number
---- @param a number
---- @return CircleIsoMarker
-function IsoMarkers:addCircleIsoMarker(gs, r, g, b, a) end
-
---- @public
---- @param spriteName string
---- @param gs IsoGridSquare
---- @param r number
---- @param g number
---- @param b number
---- @param doAlpha boolean
---- @param doIsoObject boolean
+--- @param arg0 string
+--- @param arg1 IsoGridSquare
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
 --- @return IsoMarker
-function IsoMarkers:addIsoMarker(spriteName, gs, r, g, b, doAlpha, doIsoObject) end
+function IsoMarkers:addIsoMarker(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @param textureTable table
---- @param textureOverlayTable table
---- @param gs IsoGridSquare
---- @param r number
---- @param g number
---- @param b number
---- @param doAlpha boolean
---- @param doIsoObject boolean
+--- @param arg0 table
+--- @param arg1 IsoGridSquare
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
 --- @return IsoMarker
-function IsoMarkers:addIsoMarker(textureTable, textureOverlayTable, gs, r, g, b, doAlpha, doIsoObject) end
+function IsoMarkers:addIsoMarker(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @param textureTable table
---- @param textureOverlayTable table
---- @param gs IsoGridSquare
---- @param r number
---- @param g number
---- @param b number
---- @param doAlpha boolean
---- @param doIsoObject boolean
---- @param fadeSpeed number
---- @param fadeMin number
---- @param fadeMax number
+--- @param arg0 InventoryItem
+--- @param arg1 IsoGridSquare
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
 --- @return IsoMarker
-function IsoMarkers:addIsoMarker(
-	textureTable,
-	textureOverlayTable,
-	gs,
-	r,
-	g,
-	b,
-	doAlpha,
-	doIsoObject,
-	fadeSpeed,
-	fadeMin,
-	fadeMax
-)
-end
-
---- @public
---- @param id integer
---- @return CircleIsoMarker
-function IsoMarkers:getCircleIsoMarker(id) end
+function IsoMarkers:addIsoMarker(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @param id integer
 --- @return IsoMarker
 function IsoMarkers:getIsoMarker(id) end
-
---- @public
---- @return nil
-function IsoMarkers:init() end
-
---- @public
---- @param id integer
---- @return boolean
-function IsoMarkers:removeCircleIsoMarker(id) end
-
---- @public
---- @param marker CircleIsoMarker
---- @return boolean
-function IsoMarkers:removeCircleIsoMarker(marker) end
 
 --- @public
 --- @param id integer
@@ -112,28 +64,7 @@ function IsoMarkers:render() end
 --- @param zLayer integer
 --- @param playerIndex integer
 --- @return nil
-function IsoMarkers:renderCircleIsoMarkers(perPlayerRender, zLayer, playerIndex) end
-
---- @public
---- @param perPlayerRender PerPlayerRender
---- @param zLayer integer
---- @param playerIndex integer
---- @return nil
 function IsoMarkers:renderIsoMarkers(perPlayerRender, zLayer, playerIndex) end
-
---- @public
---- @param perPlayerRender PerPlayerRender
---- @param zLayer integer
---- @param playerIndex integer
---- @return nil
-function IsoMarkers:renderIsoMarkersDeferred(perPlayerRender, zLayer, playerIndex) end
-
---- @public
---- @param perPlayerRender PerPlayerRender
---- @param zLayer integer
---- @param playerIndex integer
---- @return nil
-function IsoMarkers:renderIsoMarkersOnSquare(perPlayerRender, zLayer, playerIndex) end
 
 --- @public
 --- @return nil

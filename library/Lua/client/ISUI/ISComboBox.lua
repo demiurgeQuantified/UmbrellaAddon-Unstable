@@ -17,7 +17,7 @@
 ---@field options table
 ---@field popup ISComboBoxPopup
 ---@field sawMouseDown boolean
----@field selected number?
+---@field selected number
 ---@field target table?
 ---@field textColor table
 ---@field tooltip table?
@@ -30,7 +30,7 @@ ISComboBox.SharedPopup = nil ---@type ISComboBoxPopup?
 function ISComboBox:addOption(option) end
 
 ---@param option string
----@param data (number | table | string)?
+---@param data (table | string)?
 function ISComboBox:addOptionWithData(option, data) end
 
 function ISComboBox:clear() end
@@ -51,18 +51,18 @@ function ISComboBox:getFilterText() end
 ---@return number
 function ISComboBox:getOptionCount() end
 
----@param index number?
+---@param index number
 ---@return unknown?
 function ISComboBox:getOptionData(index) end
 
----@param index number?
+---@param index number
 ---@return unknown?
 function ISComboBox:getOptionText(index) end
 
----@return string?
+---@return unknown?
 function ISComboBox:getOptionTooltip(index) end
 
----@return number?
+---@return number
 function ISComboBox:getSelected() end
 
 ---@return unknown?
@@ -130,10 +130,8 @@ function ISComboBox:setFilterText(text) end
 ---@param focused boolean
 function ISComboBox:setJoypadFocused(focused) end
 
----@param value number
 function ISComboBox:setSelected(value) end
 
----@param tooltipmap table
 function ISComboBox:setToolTipMap(tooltipmap) end
 
 ---@param minWidth number?
@@ -170,6 +168,7 @@ function ISComboBoxEditor:new(x, y, width, height, comboBox) end
 
 ---@class ISComboBoxPopup : ISScrollingListBox
 ---@field parentCombo ISComboBox?
+---@field selected number
 ---@field tooWide unknown?
 ---@field tooWideY number
 ISComboBoxPopup = ISScrollingListBox:derive("ISComboBoxPopup")

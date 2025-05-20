@@ -107,6 +107,9 @@ function __fishing_Utils.getTimeParams() end
 ---@return table
 function __fishing_Utils.getWeatherParams() end
 
+---@return boolean
+function __fishing_Utils.isAccessibleAimDist(player) end
+
 ---@return unknown?
 function __fishing_Utils.isCastButtonPressed(joypad) end
 

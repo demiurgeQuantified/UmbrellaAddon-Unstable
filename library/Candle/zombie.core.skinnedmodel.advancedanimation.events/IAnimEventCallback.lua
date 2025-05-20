@@ -10,6 +10,7 @@ IAnimEventCallback = {}
 
 --- @public
 --- @param arg0 AnimLayer
---- @param arg1 AnimEvent
+--- @param arg1 AnimationTrack
+--- @param arg2 AnimEvent
 --- @return nil
-function IAnimEventCallback:OnAnimEvent(arg0, arg1) end
+function IAnimEventCallback:OnAnimEvent(arg0, arg1, arg2) end

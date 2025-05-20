@@ -86,6 +86,11 @@ function CraftRecipe:canBeDoneInDark() end
 function CraftRecipe:canBeResearched() end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function CraftRecipe:canBenefitFromRecipeAtHand(arg0) end
+
+--- @public
 --- @param arg0 InventoryItem
 --- @return boolean
 function CraftRecipe:canOutputItem(arg0) end
@@ -163,6 +168,11 @@ function CraftRecipe:clearRequiredSkills() end
 function CraftRecipe:containsIO(arg0) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function CraftRecipe:couldBenefitFromRecipeAtHand(arg0) end
+
+--- @public
 --- @return string
 function CraftRecipe:generateDebugText() end
 
@@ -208,6 +218,11 @@ function CraftRecipe:getCategory() end
 --- @public
 --- @return boolean
 function CraftRecipe:getExistsAsVanilla() end
+
+--- @public
+--- @param arg0 CraftRecipe
+--- @return string
+function CraftRecipe:getFavouriteModDataString(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -399,6 +414,11 @@ function CraftRecipe:hasOnTickInputs() end
 function CraftRecipe:hasOnTickOutputs() end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function CraftRecipe:hasRecipeAtHand(arg0) end
+
+--- @public
 --- @param arg0 string
 --- @return boolean
 function CraftRecipe:hasTag(arg0) end
@@ -434,6 +454,11 @@ function CraftRecipe:isCanWalk() end
 --- @return boolean
 --- @deprecated
 function CraftRecipe:isConsumeOnFinish() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function CraftRecipe:isFavourite(arg0) end
 
 --- @public
 --- @return boolean
@@ -503,6 +528,11 @@ function CraftRecipe:setProp2(arg0) end
 --- @param arg0 integer
 --- @return nil
 function CraftRecipe:setResearchSkillLevel(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function CraftRecipe:validateBenefitFromRecipeAtHand(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

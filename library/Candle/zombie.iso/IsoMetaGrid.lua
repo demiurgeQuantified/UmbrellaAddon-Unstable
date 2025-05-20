@@ -522,11 +522,31 @@ function IsoMetaGrid:save(output) end
 function IsoMetaGrid:saveAnimalZones(arg0) end
 
 --- @public
+--- @param arg0 SaveBufferMap
+--- @param arg1 string
+--- @param arg2 string
+--- @param arg3 BiConsumer
+--- @return nil
+function IsoMetaGrid:saveCellsToSaveBufferMap(arg0, arg1, arg2, arg3) end
+
+--- @public
 --- @param output ByteBuffer
 --- @param part integer
 --- @param fromServer boolean
 --- @return nil
 function IsoMetaGrid:savePart(output, part, fromServer) end
+
+--- @public
+--- @param arg0 SaveBufferMap
+--- @return nil
+function IsoMetaGrid:saveToBufferMap(arg0) end
+
+--- @public
+--- @param arg0 SaveBufferMap
+--- @param arg1 string
+--- @param arg2 Consumer
+--- @return nil
+function IsoMetaGrid:saveToSaveBufferMap(arg0, arg1, arg2) end
 
 --- @public
 --- @param output ByteBuffer

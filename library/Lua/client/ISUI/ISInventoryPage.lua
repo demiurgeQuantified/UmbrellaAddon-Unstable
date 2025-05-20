@@ -137,6 +137,10 @@ function ISInventoryPage:dropItemsInContainer(button) end
 
 function ISInventoryPage:ensureVisible(index) end
 
+---@param container unknown?
+---@return unknown?
+function ISInventoryPage:getContainerParent(container) end
+
 ---@return number
 function ISInventoryPage:getCurrentBackpackIndex() end
 

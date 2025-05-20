@@ -207,6 +207,10 @@ function AnimalData:getMinSize() end
 function AnimalData:getMinWeight() end
 
 --- @public
+--- @return number
+function AnimalData:getOriginalSize() end
+
+--- @public
 --- @return integer
 function AnimalData:getPreferredHutchPosition() end
 

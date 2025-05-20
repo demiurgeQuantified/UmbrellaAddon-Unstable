@@ -10,6 +10,8 @@ IAnimEventListener = {}
 
 --- @public
 --- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function IAnimEventListener:animEvent(arg0, arg1) end
+function IAnimEventListener:animEvent(arg0, arg1, arg2, arg3) end

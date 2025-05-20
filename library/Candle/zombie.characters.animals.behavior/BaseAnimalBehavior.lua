@@ -93,9 +93,17 @@ function BaseAnimalBehavior:getNearestWaterSquare(arg0) end
 function BaseAnimalBehavior:getRandomTroughList() end
 
 --- @public
+--- @return number
+function BaseAnimalBehavior:getWildDropDeadTimer() end
+
+--- @public
 --- @param arg0 IsoGameCharacter
 --- @return nil
 function BaseAnimalBehavior:goAttack(arg0) end
+
+--- @public
+--- @return boolean
+function BaseAnimalBehavior:isWildAndHurt() end
 
 --- @public
 --- @return number
@@ -119,6 +127,16 @@ function BaseAnimalBehavior:setDoingBehavior(arg0) end
 --- @param arg0 integer
 --- @return nil
 function BaseAnimalBehavior:setHourBeforeLeavingHutch(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseAnimalBehavior:setWildAndHurt(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function BaseAnimalBehavior:setWildDropDeadTimer(arg0) end
 
 --- @public
 --- @param arg0 IsoMovingObject

@@ -287,6 +287,11 @@ function IsoMovingObject:getPathFindIndex() end
 function IsoMovingObject:getPosition(arg0) end
 
 --- @public
+--- @param arg0 Vector2
+--- @return Vector2
+function IsoMovingObject:getPosition(arg0) end
+
+--- @public
 ---
 --- Get the object's position. Stored in the supplied parameter.
 ---

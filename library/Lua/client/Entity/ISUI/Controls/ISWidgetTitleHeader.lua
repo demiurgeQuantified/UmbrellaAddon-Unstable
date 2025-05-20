@@ -29,6 +29,7 @@
 ---@field player unknown
 ---@field propertyIconSize number
 ---@field recipe unknown
+---@field recipeBenefitLabel unknown?
 ---@field requiredSkillList table
 ---@field requiresSurface boolean
 ---@field requiresSurfaceIcon unknown?

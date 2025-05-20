@@ -86,6 +86,10 @@ function TileGeometryManager:initModData(arg0) end
 function TileGeometryManager:initSpriteProperties() end
 
 --- @public
+--- @return nil
+function TileGeometryManager:loadedTileDefinitions() end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 integer

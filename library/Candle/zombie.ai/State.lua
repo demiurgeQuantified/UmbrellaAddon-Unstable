@@ -39,27 +39,50 @@ function State:addAnimEventListener(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrack
+--- @return nil
+function State:addAnimEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrackString
+--- @return nil
+function State:addAnimEventListener(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
 --- @param arg1 IAnimEventListenerString
 --- @return nil
 function State:addAnimEventListener(arg0, arg1) end
 
 --- @public
---- @param owner IsoGameCharacter
---- @param event AnimEvent
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function State:animEvent(owner, event) end
+function State:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param owner IsoGameCharacter
---- @param event AnimEvent
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function State:animEvent(owner, event) end
+function State:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param owner IsoGameCharacter
---- @param event AnimEvent
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function State:animEvent(owner, event) end
+function State:animEvent(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function State:canRagdoll(arg0) end
 
 --- @public
 --- @param owner IsoGameCharacter

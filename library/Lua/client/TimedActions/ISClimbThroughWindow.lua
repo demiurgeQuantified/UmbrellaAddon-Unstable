@@ -2,6 +2,7 @@
 
 ---@class ISClimbThroughWindow : ISBaseTimedAction
 ---@field item unknown
+---@field retriggerLastAction boolean
 ISClimbThroughWindow = ISBaseTimedAction:derive("ISClimbThroughWindow")
 ISClimbThroughWindow.Type = "ISClimbThroughWindow"
 

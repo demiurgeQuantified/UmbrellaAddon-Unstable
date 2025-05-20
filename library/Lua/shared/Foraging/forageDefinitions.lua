@@ -1,7 +1,8 @@
 ---@meta
 
----@class forageDefaultDefs
-forageDefaultDefs = {
+---@class forageSystem
+forageSystem = {}
+forageSystem.defaultDefinitions = {
 	defaultItemDef = {
 		type = "Base.MissingItemType",
 		minCount = 1,
@@ -47,6 +48,7 @@ forageDefaultDefs = {
 			11,
 			12,
 		},
+		validMonths = {},
 		bonusMonths = {},
 		malusMonths = {},
 		spawnFuncs = {},
@@ -54,7 +56,6 @@ forageDefaultDefs = {
 		isOnWater = false,
 		forceOnWater = false,
 		canBeAboveFloor = false,
-		doIsoMarkerObject = false,
 		doIsoMarkerSprite = nil,
 		canBeOnTreeSquare = true,
 		poisonChance = 0,
@@ -73,7 +74,7 @@ forageDefaultDefs = {
 		containsBiomes = {},
 	},
 	defaultCatDef = {
-		chance = 1,
+		chance = 0,
 		name = "Unknown",
 		typeCategory = "Other",
 		identifyCategoryPerk = "PlantScavenging",
@@ -83,24 +84,27 @@ forageDefaultDefs = {
 			"ANY",
 		},
 		validFunc = nil,
+		validMonths = {},
+		bonusMonths = {},
+		malusMonths = {},
 		rainChance = 0,
 		hasRainedChance = 0,
 		snowChance = 0,
 		dayChance = 0,
 		nightChance = 0,
-		zoneChance = {
-			Forest = 1,
-			DeepForest = 1,
-			Vegitation = 1,
-			FarmLand = 1,
-			Farm = 1,
-			TrailerPark = 1,
-			TownZone = 1,
-			ForagingNav = 1,
-			PHForest = 1,
-			PRForest = 1,
-			OrganicForest = 1,
-			BirchForest = 1,
+		zones = {
+			Forest = 0,
+			DeepForest = 0,
+			Vegitation = 0,
+			FarmLand = 0,
+			Farm = 0,
+			TrailerPark = 0,
+			TownZone = 0,
+			ForagingNav = 0,
+			PHForest = 0,
+			PRForest = 0,
+			OrganicForest = 0,
+			BirchForest = 0,
 		},
 		spriteAffinities = {},
 		chanceToMoveIcon = 0.0,
@@ -118,6 +122,3 @@ forageDefaultDefs = {
 		testFuncs = {},
 	},
 }
-
----@class forageDefs
-forageDefs = {}

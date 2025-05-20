@@ -30,3 +30,5 @@ function BaseGameCharacterDetails.SetProfessionDescription(prof) end
 function BaseGameCharacterDetails.SetTraitDescription(trait) end
 
 function doMetalWorkerRecipes(metalworker) end
+
+function doTailorRecipes(tailor) end

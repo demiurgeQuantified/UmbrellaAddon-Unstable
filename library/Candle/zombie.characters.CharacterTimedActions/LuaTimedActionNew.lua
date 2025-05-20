@@ -65,6 +65,10 @@ function LuaTimedActionNew:getName() end
 function LuaTimedActionNew:getName() end
 
 --- @public
+--- @return table
+function LuaTimedActionNew:getTable() end
+
+--- @public
 --- @return integer
 function LuaTimedActionNew:getTime() end
 

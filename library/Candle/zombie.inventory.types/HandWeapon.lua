@@ -231,6 +231,10 @@ function HandWeapon:getCritDmgMultiplier() end
 function HandWeapon:getCriticalChance() end
 
 --- @public
+--- @return number
+function HandWeapon:getCyclicRateMultiplier() end
+
+--- @public
 --- @return string
 function HandWeapon:getDamageCategory() end
 
@@ -798,6 +802,10 @@ function HandWeapon:randomizeBullets() end
 
 --- @public
 --- @return nil
+function HandWeapon:randomizeFirearmAsLoot() end
+
+--- @public
+--- @return nil
 function HandWeapon:render() end
 
 --- @public
@@ -943,6 +951,11 @@ function HandWeapon:setCritDmgMultiplier(critDmgMultiplier) end
 --- @param criticalChance number
 --- @return nil
 function HandWeapon:setCriticalChance(criticalChance) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function HandWeapon:setCyclicRateMultiplier(arg0) end
 
 --- @public
 --- @param damageCategory string

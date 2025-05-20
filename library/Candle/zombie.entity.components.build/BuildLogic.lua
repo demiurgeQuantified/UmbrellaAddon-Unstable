@@ -33,6 +33,10 @@ function BuildLogic:getRecipeData() end
 function BuildLogic:getRecipeList() end
 
 --- @public
+--- @return string
+function BuildLogic:getRecipeSortMode() end
+
+--- @public
 --- @param arg0 InputScript
 --- @return List
 function BuildLogic:getSatisfiedInputItems(arg0) end
@@ -40,6 +44,10 @@ function BuildLogic:getSatisfiedInputItems(arg0) end
 --- @public
 --- @return ObjectInfo
 function BuildLogic:getSelectedBuildObject() end
+
+--- @public
+--- @return string
+function BuildLogic:getSelectedRecipeStyle() end
 
 --- @public
 --- @return boolean
@@ -75,6 +83,16 @@ function BuildLogic:setContainers(arg0) end
 --- @param arg0 CraftRecipe
 --- @return nil
 function BuildLogic:setRecipe(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function BuildLogic:setRecipeSortMode(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function BuildLogic:setSelectedRecipeStyle(arg0) end
 
 --- @public
 --- @return boolean

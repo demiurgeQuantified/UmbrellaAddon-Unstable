@@ -14,12 +14,16 @@ ISPathFindAction.Type = "ISPathFindAction"
 ---@return boolean
 function ISPathFindAction:isValid() end
 
+---@param targetX number
+---@param targetY number
 ---@return ISPathFindAction
 function ISPathFindAction:pathToLocationF(character, targetX, targetY, targetZ) end
 
+---@param locations table
 ---@return ISPathFindAction
 function ISPathFindAction:pathToNearest(character, locations) end
 
+---@param bAnySpriteGridObject boolean
 ---@return ISPathFindAction
 function ISPathFindAction:pathToSitOnFurniture(character, bed, bAnySpriteGridObject) end
 
@@ -34,8 +38,11 @@ function ISPathFindAction:pathToVehicleSeat(character, vehicle, seat) end
 
 function ISPathFindAction:perform() end
 
+---@param arg2 ISPathFindAction
 function ISPathFindAction:setOnComplete(func, arg1, arg2, arg3, arg4) end
 
+---@param arg2 unknown?
+---@param arg3 ISPathFindAction?
 function ISPathFindAction:setOnFail(func, arg1, arg2, arg3, arg4) end
 
 function ISPathFindAction:setRunActionsAfterFailing(b) end

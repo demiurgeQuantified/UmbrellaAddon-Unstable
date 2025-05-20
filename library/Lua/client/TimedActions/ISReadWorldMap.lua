@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISReadWorldMap : ISBaseTimedAction
----@field centerX number
----@field centerY number
+---@field centerX number?
+---@field centerY number?
 ---@field playerNum unknown
----@field zoom number
+---@field zoom number?
 ISReadWorldMap = ISBaseTimedAction:derive("ISReadWorldMap")
 ISReadWorldMap.Type = "ISReadWorldMap"
 
@@ -19,8 +19,8 @@ function ISReadWorldMap:stop() end
 
 function ISReadWorldMap:update() end
 
----@param centerX number
----@param centerY number
----@param zoom number
+---@param centerX number?
+---@param centerY number?
+---@param zoom number?
 ---@return ISReadWorldMap
 function ISReadWorldMap:new(character, centerX, centerY, zoom) end

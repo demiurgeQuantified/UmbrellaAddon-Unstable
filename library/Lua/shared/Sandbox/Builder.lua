@@ -64,6 +64,8 @@ return {
 	SleepingEvent = 1,
 	GeneratorSpawning = 4,
 	GeneratorFuelConsumption = 1.0,
+	GeneratorTileRange = 40,
+	GeneratorVerticalPowerRange = 8,
 	SurvivorHouseChance = 3,
 	VehicleStoryChance = 3,
 	ZoneStoryChance = 3,

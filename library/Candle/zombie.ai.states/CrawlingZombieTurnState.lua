@@ -25,10 +25,12 @@ function CrawlingZombieTurnState.instance() end
 ------------------------------------
 
 --- @public
---- @param owner IsoGameCharacter
---- @param event AnimEvent
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimLayer
+--- @param arg2 AnimationTrack
+--- @param arg3 AnimEvent
 --- @return nil
-function CrawlingZombieTurnState:animEvent(owner, event) end
+function CrawlingZombieTurnState:animEvent(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param owner IsoGameCharacter

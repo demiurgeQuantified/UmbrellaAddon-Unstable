@@ -187,6 +187,10 @@ function IsoDeadBody:getAnimalVisual() end
 function IsoDeadBody:getAnimatable() end
 
 --- @public
+--- @return BodyTexture
+function IsoDeadBody:getAtlasTexture() end
+
+--- @public
 --- @return AttachedItems
 function IsoDeadBody:getAttachedItems() end
 
@@ -678,9 +682,10 @@ function IsoDeadBody:setFakeDead(fakeDead) end
 function IsoDeadBody:setFallOnFront(fallOnFront) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IsoDeadBody:setForwardDirection(arg0) end
+function IsoDeadBody:setForwardDirection(arg0, arg1) end
 
 --- @public
 --- @param arg0 number
@@ -765,9 +770,10 @@ function IsoDeadBody:setSharedGrappleAnimTime(arg0) end
 function IsoDeadBody:setSharedGrappleType(arg0) end
 
 --- @public
---- @param arg0 Vector2
+--- @param arg0 number
+--- @param arg1 number
 --- @return nil
-function IsoDeadBody:setTargetAndCurrentDirection(arg0) end
+function IsoDeadBody:setTargetAndCurrentDirection(arg0, arg1) end
 
 --- @public
 --- @param arg0 number

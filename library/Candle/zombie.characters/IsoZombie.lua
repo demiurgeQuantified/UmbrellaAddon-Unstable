@@ -3,7 +3,6 @@
 --- @class IsoZombie: IsoGameCharacter, IHumanVisual
 --- @field public class any
 --- @field public AllowRepathDelayMax integer
---- @field public AttackAnimTimeMax integer
 --- @field public CRAWLER_DAMAGE_DOT number
 --- @field public CRAWLER_DAMAGE_RANGE number
 --- @field public EAT_BODY_DIST number

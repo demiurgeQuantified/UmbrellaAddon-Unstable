@@ -35,6 +35,10 @@ function IsoPuddles:applyPuddlesQuality() end
 function IsoPuddles:clearThreadData() end
 
 --- @public
+--- @return nil
+function IsoPuddles:freeHMTextureBuffer() end
+
+--- @public
 --- @return integer
 function IsoPuddles:getBoolMax() end
 
@@ -45,6 +49,10 @@ function IsoPuddles:getFloatMax() end
 --- @public
 --- @return ITexture
 function IsoPuddles:getHMTexture() end
+
+--- @public
+--- @return ByteBuffer
+function IsoPuddles:getHMTextureBuffer() end
 
 --- @public
 --- @param id integer
@@ -119,6 +127,10 @@ function IsoPuddles:shouldRenderPuddles() end
 --- @param cm ClimateManager
 --- @return nil
 function IsoPuddles:update(cm) end
+
+--- @public
+--- @return nil
+function IsoPuddles:updateHMTextureBuffer() end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

@@ -3,6 +3,7 @@
 ---@class ISOpenCloseCurtain : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
 ---@field item unknown
+---@field retriggerLastAction boolean
 ISOpenCloseCurtain = ISBaseTimedAction:derive("ISOpenCloseCurtain")
 ISOpenCloseCurtain.Type = "ISOpenCloseCurtain"
 

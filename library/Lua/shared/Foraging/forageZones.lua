@@ -1,7 +1,8 @@
 ---@meta
 
----@class forageZones
-forageZones = {
+---@class forageSystem
+forageSystem = {}
+forageSystem.zoneDefinitions = {
 	DeepForest = {
 		name = "DeepForest",
 		densityMin = 8,

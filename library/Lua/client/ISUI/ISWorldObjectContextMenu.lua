@@ -10,9 +10,10 @@ ISWorldObjectContextMenu.fetchVars = {
 	canAddChum = nil, ---@type boolean?
 	canTrapFish = nil, ---@type boolean?
 	clickedAnimals = nil, ---@type table?
+	storeWater = nil, ---@type table?
+	fluidcontainer = nil, ---@type table?
 	worldItem = nil,
 	building = nil,
-	storeWater = nil,
 	curtain = nil,
 	window = nil,
 	door = nil,
@@ -73,7 +74,6 @@ ISWorldObjectContextMenu.fetchVars = {
 	haveFuel = nil,
 	haveFuelDebug = nil,
 	fuelPump = nil,
-	fluidcontainer = nil,
 	thumpableLightSource = nil,
 	safehouse = nil,
 	safehouseAllowInteract = nil,
@@ -117,7 +117,11 @@ ISWorldObjectContextMenu.chairCheckList = {
 	},
 }
 
+function ISWorldObjectContextMenu.addFluidFromItem(test, context, pourFluidInto, worldobjects, playerObj, playerInv) end
+
 function ISWorldObjectContextMenu.addGarderingOptions(context, wobjs, player) end
+
+function ISWorldObjectContextMenu.addGrabCorpseSubmenuOption(player, worldobjects, subMenuGrab, corpse) end
 
 ---@return unknown?
 function ISWorldObjectContextMenu.addRemoveCurtainOption(context, worldobjects, curtain, player) end
@@ -127,8 +131,10 @@ function ISWorldObjectContextMenu.addTileDebugInfo(context, fetch) end
 ---@return unknown
 function ISWorldObjectContextMenu.addToolTip() end
 
----@return boolean?
-function ISWorldObjectContextMenu.addWaterFromItem(test, context, worldobjects, playerObj, playerInv) end
+---@param washList table
+---@return number
+---@return number
+function ISWorldObjectContextMenu.calculateSoapAndWaterRequired(washList) end
 
 ---@return boolean
 function ISWorldObjectContextMenu.canCleanBlood(playerObj, square) end
@@ -252,7 +258,7 @@ function ISWorldObjectContextMenu.fetch(v, player, doSquare) end
 function ISWorldObjectContextMenu.fetchPickupItems(v, props, playerInv) end
 
 ---@return string
-function ISWorldObjectContextMenu.getBedQuality(bed) end
+function ISWorldObjectContextMenu.getBedQuality(playerObj, bed) end
 
 ---@return unknown
 function ISWorldObjectContextMenu.getChum(playerObj) end
@@ -313,6 +319,9 @@ function ISWorldObjectContextMenu.handleCarBatteryCharger(test, context, worldob
 ---@return boolean
 function ISWorldObjectContextMenu.handleCompost(test, context, worldobjects, playerObj, playerInv) end
 
+---@return boolean
+function ISWorldObjectContextMenu.handleGrabCorpseSubmenu(playerObj, worldobjects, subMenuGrab) end
+
 ---@param x number
 ---@param y number
 ---@return boolean?
@@ -346,6 +355,8 @@ function ISWorldObjectContextMenu.onAddBaitToWater(playerObj, chum, square) end
 
 function ISWorldObjectContextMenu.onAddCompost(compost, item, playerObj) end
 
+function ISWorldObjectContextMenu.onAddFluidFromItem(worldobjects, fluidObject, fluidItem, playerObj) end
+
 function ISWorldObjectContextMenu.onAddFuel(worldobjects, petrolCan, generator, player) end
 
 function ISWorldObjectContextMenu.onAddFuelGenerator(worldobjects, petrolCan, generator, player, context) end
@@ -355,8 +366,6 @@ function ISWorldObjectContextMenu.onAddPlayerToSafehouse(worldobjects, safehouse
 function ISWorldObjectContextMenu.onAddSheet(worldobjects, window, player) end
 
 function ISWorldObjectContextMenu.onAddSheetRope(worldobjects, window, player, sheetRope) end
-
-function ISWorldObjectContextMenu.onAddWaterFromItem(worldobjects, waterObject, waterItem, playerObj) end
 
 function ISWorldObjectContextMenu.onAttachAnimalToTree(animal, player, tree) end
 
@@ -614,6 +623,11 @@ function ISWorldObjectContextMenu.restoreDoor(playerObj, door, isOpen) end
 
 ---@return boolean
 function ISWorldObjectContextMenu.setTest() end
+
+---@param soapRemaining number
+---@param washList table
+---@param option unknown?
+function ISWorldObjectContextMenu.setWashClothingTooltip(soapRemaining, waterRemaining, washList, option) end
 
 function ISWorldObjectContextMenu.toggleClothingDryer(context, playerId, object) end
 

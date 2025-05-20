@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISTextEntryBox : ISPanelJoypad
----@field currentText string | ISTextEntryBox
+---@field currentText string
 ---@field fade unknown
 ---@field font unknown
 ---@field keeplog boolean
 ---@field logIndex number
----@field title string | ISTextEntryBox
+---@field title string
 ---@field tooltip unknown?
 ---@field tooltipUI ISToolTip
 ISTextEntryBox = ISPanelJoypad:derive("ISTextEntryBox")
@@ -89,24 +89,18 @@ function ISTextEntryBox:setFont(font) end
 
 function ISTextEntryBox:setForceUpperCase(forceUpperCase) end
 
----@param alpha number
 function ISTextEntryBox:setFrameAlpha(alpha) end
 
----@param hasFrame boolean
 function ISTextEntryBox:setHasFrame(hasFrame) end
 
 ---@param focused boolean
----@param joypadData unknown?
 function ISTextEntryBox:setJoypadFocused(focused, joypadData) end
 
----@param b boolean
 ---@return unknown
 function ISTextEntryBox:setMasked(b) end
 
----@param max number
 function ISTextEntryBox:setMaxLines(max) end
 
----@param length number
 function ISTextEntryBox:setMaxTextLength(length) end
 
 ---@param multiple boolean
@@ -115,7 +109,6 @@ function ISTextEntryBox:setMultipleLine(multiple) end
 ---@param onlyNumbers boolean
 function ISTextEntryBox:setOnlyNumbers(onlyNumbers) end
 
----@param onlyText boolean
 function ISTextEntryBox:setOnlyText(onlyText) end
 
 function ISTextEntryBox:setSelectable(enable) end
@@ -129,16 +122,14 @@ function ISTextEntryBox:setText(str) end
 ---@param a number
 function ISTextEntryBox:setTextRGBA(r, g, b, a) end
 
----@param text string?
 function ISTextEntryBox:setTooltip(text) end
 
----@param valid boolean
 function ISTextEntryBox:setValid(valid) end
 
 ---@return unknown
 function ISTextEntryBox:unfocus() end
 
----@param title string | ISTextEntryBox
+---@param title string
 ---@param x number
 ---@param y number
 ---@param width number
