@@ -27,6 +27,22 @@ function ZombieGetUpState:enter(owner) end
 --- @return nil
 function ZombieGetUpState:exit(owner) end
 
+--- @public
+--- @return boolean
+function ZombieGetUpState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ZombieGetUpState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ZombieGetUpState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ZombieGetUpState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

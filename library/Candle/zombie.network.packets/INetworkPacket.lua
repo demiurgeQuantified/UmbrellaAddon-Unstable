@@ -10,10 +10,10 @@ INetworkPacket = {}
 
 --- @public
 --- @static
---- @param arg0 PacketType
---- @param arg1 Object[]
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
 --- @return INetworkPacket
-function INetworkPacket.createPacket(arg0, arg1) end
+function INetworkPacket.getPacket(arg0, arg1) end
 
 --- @public
 --- @static
@@ -21,6 +21,7 @@ function INetworkPacket.createPacket(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
+--- @deprecated
 function INetworkPacket.processPacketOnServer(arg0, arg1, arg2) end
 
 --- @public
@@ -57,6 +58,13 @@ function INetworkPacket.send(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 PacketType
+--- @param arg1 Object[]
+--- @return nil
+function INetworkPacket.sendToAll(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 PacketType
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
@@ -81,15 +89,6 @@ function INetworkPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @return nil
 function INetworkPacket.sendToRelative(arg0, arg1, arg2, arg3, arg4) end
 
---- @public
---- @static
---- @param arg0 PacketType
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 Object[]
---- @return nil
-function INetworkPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -104,10 +103,8 @@ function INetworkPacket:getPacketSizeBytes() end
 function INetworkPacket:isConsistent(arg0) end
 
 --- @public
---- @param b ByteBuffer
---- @param connection UdpConnection
---- @return nil
-function INetworkPacket:parse(b, connection) end
+--- @return boolean
+function INetworkPacket:isPostponed() end
 
 --- @public
 --- @param b ByteBuffer
@@ -132,6 +129,10 @@ function INetworkPacket:parseClientLoading(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @return nil
 function INetworkPacket:parseServer(arg0, arg1) end
+
+--- @public
+--- @return nil
+function INetworkPacket:postpone() end
 
 --- @public
 --- @param arg0 UdpConnection
@@ -190,10 +191,6 @@ function INetworkPacket:setData(arg0) end
 --- @param arg1 UdpConnection
 --- @return nil
 function INetworkPacket:sync(arg0, arg1) end
-
---- @public
---- @return boolean
-function INetworkPacket:tryProcessInternal() end
 
 --- @public
 --- @param b ByteBufferWriter

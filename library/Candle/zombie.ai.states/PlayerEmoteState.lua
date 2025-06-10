@@ -46,6 +46,10 @@ function PlayerEmoteState:isDoingActionThatCanBeCancelled() end
 
 --- @public
 --- @return boolean
+function PlayerEmoteState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerEmoteState:isSyncOnEnter() end
 
 --- @public
@@ -58,8 +62,9 @@ function PlayerEmoteState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerEmoteState:setParams(arg0) end
+function PlayerEmoteState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

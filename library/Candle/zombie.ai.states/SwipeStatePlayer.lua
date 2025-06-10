@@ -2,6 +2,7 @@
 
 --- @class SwipeStatePlayer: State
 --- @field public class any
+--- @field public MaxStompDistance number
 SwipeStatePlayer = {}
 
 ------------------------------------
@@ -43,6 +44,10 @@ function SwipeStatePlayer:exit(owner) end
 
 --- @public
 --- @return boolean
+function SwipeStatePlayer:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function SwipeStatePlayer:isSyncOnEnter() end
 
 --- @public
@@ -55,8 +60,9 @@ function SwipeStatePlayer:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function SwipeStatePlayer:setParams(arg0) end
+function SwipeStatePlayer:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

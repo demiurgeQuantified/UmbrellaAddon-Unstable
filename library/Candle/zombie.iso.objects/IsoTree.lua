@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoTree: IsoObject
+--- @class IsoTree: IsoObject, IHasHealth
 --- @field public class any
 --- @field public MAX_SIZE integer
 IsoTree = {}
@@ -75,7 +75,15 @@ function IsoTree:getHealth() end
 
 --- @public
 --- @return integer
+function IsoTree:getHealth() end
+
+--- @public
+--- @return integer
 function IsoTree:getLogYield() end
+
+--- @public
+--- @return integer
+function IsoTree:getMaxHealth() end
 
 --- @public
 --- @return integer

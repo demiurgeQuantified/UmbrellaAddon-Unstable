@@ -28,7 +28,6 @@
 ---@field inGame unknown
 ---@field inviteFriends InviteFriends
 ---@field inviteOption ISLabel
----@field joinPublicServer PublicServerList
 ---@field joypadButtons unknown
 ---@field joypadIndexY unknown
 ---@field lastStandPlayerSelect LastStandPlayerSelect
@@ -43,7 +42,6 @@
 ---@field modSelect ModSelector
 ---@field modsOption ISLabel
 ---@field MouseEnterMainMenuItem unknown?
----@field multiplayer MultiplayerScreen
 ---@field onlineCoopScreen CoopOptionsScreen
 ---@field optionsOption ISLabel
 ---@field overBottomPanelButton unknown?
@@ -57,7 +55,6 @@
 ---@field scoreOption ISLabel
 ---@field seedLabel ISLabel
 ---@field serverConnectPopup ServerConnectPopup
----@field serverList ServerList
 ---@field serverSettingsScreen ServerSettingsScreen
 ---@field serverWorkshopItem ServerWorkshopItemScreen
 ---@field soloScreen NewGameScreen

@@ -7,6 +7,7 @@
 --- @field public InventoryContainer ContainerType
 --- @field public IsoObject ContainerType
 --- @field public ObjectContainer ContainerType
+--- @field public ObjectInVehicle ContainerType
 --- @field public PlayerInventory ContainerType
 --- @field public Undefined ContainerType
 --- @field public Vehicle ContainerType

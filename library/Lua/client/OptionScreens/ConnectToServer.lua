@@ -14,7 +14,7 @@
 ---@field googleAuthPopup ISPanel
 ---@field isCoop boolean
 ---@field loadingBackground unknown?
----@field previousScreen table
+---@field previousScreen ServerConnectPopup | BootstrapConnectPopup
 ---@field richText ISRichTextPanel
 ---@field serverName ISLabel
 ---@field serverName1 ISLabel
@@ -26,13 +26,13 @@ ConnectToServer = ISPanelJoypad:derive("ConnectToServer")
 ConnectToServer.Type = "ConnectToServer"
 ConnectToServer.instance = nil ---@type ConnectToServer?
 
----@param previousScreen table
+---@param previousScreen ServerConnectPopup
 ---@param serverName string
 ---@param userName string
----@param password string
 ---@param localIP string
----@param doHash boolean?
----@param authType unknown?
+---@param useSteamRelay boolean
+---@param doHash boolean
+---@param authType number
 function ConnectToServer:connect(
 	previousScreen,
 	serverName,

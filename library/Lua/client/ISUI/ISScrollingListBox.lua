@@ -25,6 +25,7 @@
 ---@field stopPrerender boolean
 ---@field target table
 ---@field tooltipUI ISToolTip
+---@field useStencilForChildren boolean
 ISScrollingListBox = ISPanelJoypad:derive("ISScrollingListBox")
 ISScrollingListBox.Type = "ISScrollingListBox"
 ISScrollingListBox.joypadListIndex = 1
@@ -173,7 +174,7 @@ function ISScrollingListBox:setJoypadFocused(focused, joypadData) end
 ---@param onmousedblclick function
 function ISScrollingListBox:setOnMouseDoubleClick(target, onmousedblclick) end
 
----@param target table
+---@param target ISSpawnPointsEditor | table
 function ISScrollingListBox:setOnMouseDownFunction(target, onmousedown) end
 
 ---@return number

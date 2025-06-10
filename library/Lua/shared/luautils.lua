@@ -29,6 +29,9 @@ function luautils.getNextTiles(cell, startingGrid, range) end
 ---@return boolean?
 function luautils.haveToBeTransfered(player, item, dontWalk) end
 
+---@return boolean?
+function luautils.haveToBeTransferedWhileTrading(player, item, dontWalk) end
+
 ---@return number
 function luautils.indexOf(table1, value) end
 

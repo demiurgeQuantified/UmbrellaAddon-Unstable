@@ -222,6 +222,11 @@ function InventoryItem:copyClothing(arg0) end
 function InventoryItem:copyConditionModData(other) end
 
 --- @public
+--- @param arg0 InventoryItem
+--- @return nil
+function InventoryItem:copyConditionStatesFrom(arg0) end
+
+--- @public
 --- @param modData table
 --- @return nil
 function InventoryItem:copyModData(modData) end
@@ -418,6 +423,10 @@ function InventoryItem:getBreakSound() end
 --- @public
 --- @return string
 function InventoryItem:getBringToBearSound() end
+
+--- @public
+--- @return string
+function InventoryItem:getBulletHitArmourSound() end
 
 --- @public
 --- @return string _ the BurntString
@@ -652,6 +661,10 @@ function InventoryItem:getFabricType() end
 --- @public
 --- @return number
 function InventoryItem:getFatigueChange() end
+
+--- @public
+--- @return string
+function InventoryItem:getFileName() end
 
 --- @public
 --- @return string
@@ -1218,6 +1231,10 @@ function InventoryItem:getVisionModifier() end
 --- @public
 --- @return ItemVisual
 function InventoryItem:getVisual() end
+
+--- @public
+--- @return string
+function InventoryItem:getWeaponHitArmourSound() end
 
 --- @public
 --- @return integer

@@ -32,6 +32,22 @@ function PlayerOnGroundState:execute(owner) end
 --- @return nil
 function PlayerOnGroundState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerOnGroundState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerOnGroundState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerOnGroundState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerOnGroundState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

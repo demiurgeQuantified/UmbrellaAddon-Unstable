@@ -32,13 +32,6 @@ IsoGridSquare = {}
 
 --- @public
 --- @static
---- @param username string
---- @param pw char[]
---- @return boolean
-function IsoGridSquare.auth(username, pw) end
-
---- @public
---- @static
 --- @return number _ the darkStep
 function IsoGridSquare.getDarkStep() end
 
@@ -1721,6 +1714,14 @@ function IsoGridSquare:hasFarmingPlant() end
 
 --- @public
 --- @return boolean
+function IsoGridSquare:hasFence() end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:hasFenceInVicinty() end
+
+--- @public
+--- @return boolean
 function IsoGridSquare:hasFireObject() end
 
 --- @public
@@ -2043,6 +2044,10 @@ function IsoGridSquare:isOverlayDone() end
 --- @public
 --- @return boolean
 function IsoGridSquare:isRural() end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:isRuralExtraFussy() end
 
 --- @public
 --- @return boolean
@@ -2540,6 +2545,10 @@ function IsoGridSquare:setY(y) end
 --- @param z integer the z to set
 --- @return nil
 function IsoGridSquare:setZ(z) end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:shouldNotSpawnActivatedRadiosOrTvs() end
 
 --- @public
 --- @param arg0 integer

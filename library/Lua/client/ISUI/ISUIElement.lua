@@ -389,7 +389,7 @@ function ISUIElement:getMouseX() end
 ---@return number
 function ISUIElement:getMouseY() end
 
----@return unknown
+---@return ISTabPanelPaginated
 function ISUIElement:getParent() end
 
 ---@return unknown
@@ -653,11 +653,19 @@ function ISUIElement:setScrollWithParent(b) end
 ---@param w number
 ---@param h number
 ---@return unknown
+function ISUIElement:setStencilCircle(x, y, w, h) end
+
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@return unknown
 function ISUIElement:setStencilRect(x, y, w, h) end
 
 ---@param name string
 function ISUIElement:setUIName(name) end
 
+---@param bVisible boolean
 function ISUIElement:setVisible(bVisible) end
 
 function ISUIElement:setWantExtraMouseEvents(want) end

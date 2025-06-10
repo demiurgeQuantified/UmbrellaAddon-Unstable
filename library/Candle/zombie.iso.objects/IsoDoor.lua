@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoDoor: IsoObject, BarricadeAble, Thumpable
+--- @class IsoDoor: IsoObject, BarricadeAble, Thumpable, IHasHealth, ILockableDoor, ICurtain
 --- @field public class any
 --- @field public tempo Vector2
 IsoDoor = {}
@@ -89,8 +89,20 @@ function IsoDoor.toggleGarageDoor(oneOfThree, doSync) end
 ------------------------------------
 
 --- @public
+--- @return ICurtain
+function IsoDoor:HasCurtains() end
+
+--- @public
 --- @return IsoDoor
 function IsoDoor:HasCurtains() end
+
+--- @public
+--- @return ICurtain
+function IsoDoor:HasCurtains() end
+
+--- @public
+--- @return boolean
+function IsoDoor:IsOpen() end
 
 --- @public
 --- @return boolean
@@ -180,6 +192,15 @@ function IsoDoor:addToWorld() end
 function IsoDoor:canAddCurtain() end
 
 --- @public
+--- @return boolean
+function IsoDoor:canAddCurtain() end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return boolean
+function IsoDoor:canClimbOver(chr) end
+
+--- @public
 --- @param chr IsoGameCharacter
 --- @return boolean
 function IsoDoor:canClimbOver(chr) end
@@ -267,7 +288,19 @@ function IsoDoor:getHealth() end
 
 --- @public
 --- @return integer
+function IsoDoor:getHealth() end
+
+--- @public
+--- @return integer
 function IsoDoor:getKeyId() end
+
+--- @public
+--- @return integer
+function IsoDoor:getKeyId() end
+
+--- @public
+--- @return integer
+function IsoDoor:getMaxHealth() end
 
 --- @public
 --- @return integer
@@ -388,6 +421,10 @@ function IsoDoor:isCurtainOpen() end
 
 --- @public
 --- @return boolean
+function IsoDoor:isCurtainOpen() end
+
+--- @public
+--- @return boolean
 function IsoDoor:isDestroyed() end
 
 --- @public
@@ -416,6 +453,10 @@ function IsoDoor:isHoppable() end
 --- @public
 --- @return boolean
 function IsoDoor:isLocked() end
+
+--- @public
+--- @return boolean
+function IsoDoor:isLockedByKey() end
 
 --- @public
 --- @return boolean
@@ -526,6 +567,11 @@ function IsoDoor:setIsLocked(lock) end
 function IsoDoor:setKeyId(keyId) end
 
 --- @public
+--- @param keyId integer
+--- @return nil
+function IsoDoor:setKeyId(keyId) end
+
+--- @public
 --- @param bLocked boolean
 --- @return nil
 function IsoDoor:setLocked(bLocked) end
@@ -536,14 +582,14 @@ function IsoDoor:setLocked(bLocked) end
 function IsoDoor:setLockedByKey(lockedByKey) end
 
 --- @public
+--- @param lockedByKey boolean
+--- @return nil
+function IsoDoor:setLockedByKey(lockedByKey) end
+
+--- @public
 --- @param sprite IsoSprite
 --- @return nil
 function IsoDoor:setOpenSprite(sprite) end
-
---- @public
---- @param arg0 ArrayList
---- @return nil
-function IsoDoor:syncDoorGarage(arg0) end
 
 --- @public
 --- @return nil

@@ -35,11 +35,13 @@
 --- @field public DebugConsole Capability
 --- @field public DisplayServerMessage Capability
 --- @field public EditItem Capability
+--- @field public EmptyLinesInChat Capability
 --- @field public FactionCheat Capability
 --- @field public GeneralCheats Capability
 --- @field public GetStatistic Capability
 --- @field public GetSteamScoreboard Capability
 --- @field public HideFromSteamUserList Capability
+--- @field public IgnoreChatSlowMode Capability
 --- @field public InspectPlayerInventory Capability
 --- @field public KickUser Capability
 --- @field public LoginOnServer Capability
@@ -48,7 +50,6 @@
 --- @field public ManipulateVehicle Capability
 --- @field public ManipulateWhitelist Capability
 --- @field public ManipulateZombie Capability
---- @field public ModifyDB Capability
 --- @field public ModifyNetworkUsers Capability
 --- @field public None Capability
 --- @field public PopmanManage Capability
@@ -61,7 +62,6 @@
 --- @field public RolesWrite Capability
 --- @field public SandboxOptions Capability
 --- @field public SaveWorld Capability
---- @field public SeeDB Capability
 --- @field public SeeNetworkUsers Capability
 --- @field public SeePlayersConnected Capability
 --- @field public SeePublicServerOptions Capability
@@ -76,8 +76,10 @@
 --- @field public ToggleInvincibleHimself Capability
 --- @field public ToggleInvisibleEveryone Capability
 --- @field public ToggleInvisibleHimself Capability
+--- @field public ToggleKnowAllRecipes Capability
 --- @field public ToggleNoclipEveryone Capability
 --- @field public ToggleNoclipHimself Capability
+--- @field public ToggleUnlimitedAmmo Capability
 --- @field public ToggleUnlimitedCarry Capability
 --- @field public ToggleUnlimitedEndurance Capability
 --- @field public ToggleWriteRoleNameAbove Capability
@@ -88,6 +90,7 @@
 --- @field public UseFastMoveCheat Capability
 --- @field public UseFishingCheat Capability
 --- @field public UseHealthCheat Capability
+--- @field public UseLootTool Capability
 --- @field public UseMechanicsCheat Capability
 --- @field public UseMovablesCheat Capability
 --- @field public UseTimedActionInstantCheat Capability

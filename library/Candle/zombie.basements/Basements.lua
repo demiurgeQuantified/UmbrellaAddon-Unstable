@@ -36,6 +36,11 @@ function Basements:beforeLoadMetaGrid() end
 function Basements:beforeOnLoadMapZones() end
 
 --- @public
+--- @param arg0 IsoChunk
+--- @return boolean
+function Basements:chunkHasBasement(arg0) end
+
+--- @public
 --- @param arg0 string
 --- @return BasementsPerMap
 function Basements:getOrCreatePerMap(arg0) end

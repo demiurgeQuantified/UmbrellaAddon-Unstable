@@ -120,7 +120,7 @@ function NetworkUser.new() end
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 string
---- @param arg3 string
+--- @param arg3 Role
 --- @param arg4 integer
 --- @param arg5 string
 --- @param arg6 string

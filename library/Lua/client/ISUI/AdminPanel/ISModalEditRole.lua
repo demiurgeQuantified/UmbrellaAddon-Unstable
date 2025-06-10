@@ -33,6 +33,8 @@ function ISModalEditRole:onClick(button) end
 
 function ISModalEditRole:onColor(button) end
 
+function ISModalEditRole:onFilterTextChange() end
+
 function ISModalEditRole:onPickedTagColor(color, mouseUp) end
 
 function ISModalEditRole:onSelectRole(_item) end

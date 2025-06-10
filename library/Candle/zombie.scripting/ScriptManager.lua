@@ -438,6 +438,10 @@ function ScriptManager:getPhysicsShape(arg0) end
 function ScriptManager:getRagdollScript(arg0) end
 
 --- @public
+--- @return VehicleScript
+function ScriptManager:getRandomVehicleScript() end
+
+--- @public
 --- @param name string
 --- @return Recipe
 function ScriptManager:getRecipe(name) end

@@ -68,6 +68,10 @@ function IsoMannequin:getAnimSetName() end
 function IsoMannequin:getAnimStateName() end
 
 --- @public
+--- @return BodyTexture
+function IsoMannequin:getAtlasTexture() end
+
+--- @public
 --- @param item InventoryItem
 --- @return nil
 function IsoMannequin:getCustomSettingsFromItem(item) end

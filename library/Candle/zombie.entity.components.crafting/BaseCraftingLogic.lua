@@ -86,6 +86,10 @@ function BaseCraftingLogic:addEventListener(arg0, arg1) end
 function BaseCraftingLogic:addEventListener(arg0, arg1, arg2) end
 
 --- @public
+--- @return boolean
+function BaseCraftingLogic:areAllInputItemsSatisfied() end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 string
 --- @return nil
@@ -125,6 +129,15 @@ function BaseCraftingLogic:getModelHandTwo() end
 
 --- @public
 --- @return boolean
+function BaseCraftingLogic:isCharacterInRangeOfWorkbench() end
+
+--- @public
+--- @param arg0 List
+--- @return boolean
+function BaseCraftingLogic:isContainersAccessible(arg0) end
+
+--- @public
+--- @return boolean
 function BaseCraftingLogic:isCraftCheat() end
 
 --- @public
@@ -135,6 +148,11 @@ function BaseCraftingLogic:setRecipes(arg0) end
 --- @public
 --- @return nil
 function BaseCraftingLogic:sortRecipeList() end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return nil
+function BaseCraftingLogic:updateFloorContainer(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

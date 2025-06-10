@@ -14,6 +14,8 @@
 --- @field public EnduranceClimbingPenaltyMultiplier number
 --- @field public GymnastClimbingBonus number
 --- @field public GymnastStrengthBonus integer
+--- @field public HealthReductionMultiplierModerate number
+--- @field public HealthReductionMultiplierSevere number
 --- @field public HeavyLoadClimbingPenaltyMultiplier number
 --- @field public ObeseClimbingPenalty number
 --- @field public ObeseStrengthPenalty integer

@@ -32,6 +32,22 @@ function ZombieSittingState:execute(owner) end
 --- @return nil
 function ZombieSittingState:exit(owner) end
 
+--- @public
+--- @return boolean
+function ZombieSittingState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ZombieSittingState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ZombieSittingState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ZombieSittingState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

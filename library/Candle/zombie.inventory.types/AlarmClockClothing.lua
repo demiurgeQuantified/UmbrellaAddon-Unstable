@@ -168,6 +168,10 @@ function AlarmClockClothing:syncStopRinging() end
 function AlarmClockClothing:update() end
 
 --- @public
+--- @return nil
+function AlarmClockClothing:update() end
+
+--- @public
 --- @param emitter BaseSoundEmitter
 --- @return nil
 function AlarmClockClothing:updateSound(emitter) end

@@ -58,8 +58,9 @@ function PlayerExtState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerExtState:setParams(arg0) end
+function PlayerExtState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

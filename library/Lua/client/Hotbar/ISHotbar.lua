@@ -31,8 +31,6 @@ function ISHotbar.onKeyPressed(key) end
 
 function ISHotbar.onKeyStartPressed(key) end
 
-function ISHotbar.onStopGrapple(player) end
-
 ---@param slotIndex number
 function ISHotbar:activateSlot(slotIndex) end
 

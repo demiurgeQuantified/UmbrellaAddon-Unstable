@@ -363,6 +363,14 @@ function GameTime:isRainingToday() end
 function GameTime:isThunderDay() end
 
 --- @public
+--- @return boolean
+function GameTime:isZombieActivityPhase() end
+
+--- @public
+--- @return boolean
+function GameTime:isZombieInactivityPhase() end
+
+--- @public
 --- @return nil
 function GameTime:load() end
 

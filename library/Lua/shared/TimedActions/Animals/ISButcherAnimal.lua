@@ -14,6 +14,9 @@ function ISButcherAnimal:complete() end
 function ISButcherAnimal:getDuration() end
 
 ---@return boolean
+function ISButcherAnimal:isLargeAnimal(corpse) end
+
+---@return boolean
 function ISButcherAnimal:isValid() end
 
 function ISButcherAnimal:perform() end

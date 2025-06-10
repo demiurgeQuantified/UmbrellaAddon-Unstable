@@ -423,6 +423,10 @@ function IsoMovingObject:isCollidedWithDoor() end
 function IsoMovingObject:isCollidedWithVehicle() end
 
 --- @public
+--- @return boolean
+function IsoMovingObject:isCrawling() end
+
+--- @public
 --- @return boolean _ the destroyed
 function IsoMovingObject:isDestroyed() end
 
@@ -441,7 +445,15 @@ function IsoMovingObject:isFirstUpdate() end
 
 --- @public
 --- @return boolean
+function IsoMovingObject:isGettingUp() end
+
+--- @public
+--- @return boolean
 function IsoMovingObject:isOnFloor() end
+
+--- @public
+--- @return boolean
+function IsoMovingObject:isProne() end
 
 --- @public
 --- @return boolean
@@ -466,7 +478,7 @@ function IsoMovingObject:isSolidForSeparate() end
 
 --- @public
 --- @return boolean
-function IsoMovingObject:isZombiesDontAttack() end
+function IsoMovingObject:isStanding() end
 
 --- @public
 --- @return boolean _ the bAltCollide
@@ -803,11 +815,6 @@ function IsoMovingObject:setY(y) end
 --- @param z number the z to set
 --- @return number
 function IsoMovingObject:setZ(z) end
-
---- @public
---- @param b boolean
---- @return nil
-function IsoMovingObject:setZombiesDontAttack(b) end
 
 --- @public
 --- @param bAltCollide boolean the bAltCollide to set

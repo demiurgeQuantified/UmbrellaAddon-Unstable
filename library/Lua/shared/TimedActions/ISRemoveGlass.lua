@@ -35,5 +35,6 @@ function ISRemoveGlass:update() end
 ---@return boolean
 function ISRemoveGlass:waitToStart() end
 
+---@param handPain boolean
 ---@return ISRemoveGlass
-function ISRemoveGlass:new(character, otherPlayer, bodyPart) end
+function ISRemoveGlass:new(character, otherPlayer, bodyPart, handPain) end

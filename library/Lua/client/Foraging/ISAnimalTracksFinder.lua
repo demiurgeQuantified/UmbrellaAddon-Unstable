@@ -5,7 +5,7 @@ ISAnimalTracksFinder = {}
 ISAnimalTracksFinder.tracks = {}
 ISAnimalTracksFinder.tick = 0
 
-function ISAnimalTracksFinder.getAnimalTracks(chr, tracks) end
+function ISAnimalTracksFinder.getAnimalTracks(chr, track) end
 
 ---@return boolean
 function ISAnimalTracksFinder.isTrack(worldObject) end

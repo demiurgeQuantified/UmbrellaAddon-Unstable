@@ -23,6 +23,7 @@
 ---@field rootTable unknown?
 ISBuildPanel = ISPanel:derive("ISBuildPanel")
 ISBuildPanel.Type = "ISBuildPanel"
+ISBuildPanel.drawDirty = nil ---@type boolean?
 
 ---@param playerNum number
 function ISBuildPanel.SetDragItem(item, playerNum) end

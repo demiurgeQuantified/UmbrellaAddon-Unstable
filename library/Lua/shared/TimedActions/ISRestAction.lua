@@ -10,6 +10,8 @@
 ISRestAction = ISBaseTimedAction:derive("ISRestAction")
 ISRestAction.Type = "ISRestAction"
 
+function ISRestAction:animEvent(event, parameter) end
+
 ---@return unknown
 ---@return unknown?
 function ISRestAction:calculateSitOnFurnitureDirection(character, bed) end
@@ -27,6 +29,12 @@ function ISRestAction:getDuration() end
 function ISRestAction:isValid() end
 
 function ISRestAction:perform() end
+
+function ISRestAction:resetResting() end
+
+function ISRestAction:serverStart() end
+
+function ISRestAction:serverStop() end
 
 function ISRestAction:setBeforeSitDirection() end
 

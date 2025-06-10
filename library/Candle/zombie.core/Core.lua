@@ -399,6 +399,10 @@ function Core:doZoomScroll(playerIndex, del) end
 function Core:exitToMenu() end
 
 --- @public
+--- @return Account
+function Core:getAccountUsed() end
+
+--- @public
 --- @param arg0 string
 --- @return integer
 function Core:getAltKey(arg0) end
@@ -857,6 +861,10 @@ function Core:getOptionReticleMode() end
 function Core:getOptionReticleTextureIndex() end
 
 --- @public
+--- @return string
+function Core:getOptionScreenFilter() end
+
+--- @public
 --- @return integer
 function Core:getOptionSearchModeOverlayEffect() end
 
@@ -895,6 +903,10 @@ function Core:getOptionShowSurvivalGuide() end
 --- @public
 --- @return boolean
 function Core:getOptionShowValidTargetReticleTexture() end
+
+--- @public
+--- @return boolean
+function Core:getOptionShowWelcomeMessage() end
 
 --- @public
 --- @return integer
@@ -1060,6 +1072,10 @@ function Core:getRealOptionSoundVolume() end
 --- @public
 --- @return string
 function Core:getSaveFolder() end
+
+--- @public
+--- @return integer
+function Core:getScreenFilter() end
 
 --- @public
 --- @return integer
@@ -1374,6 +1390,11 @@ function Core:saveOptions() end
 --- @public
 --- @return nil
 function Core:saveOptions_OLD() end
+
+--- @public
+--- @param arg0 Account
+--- @return nil
+function Core:setAccountUsed(arg0) end
 
 --- @public
 --- @param done boolean
@@ -1889,6 +1910,11 @@ function Core:setOptionReticleMode(arg0) end
 function Core:setOptionReticleTextureIndex(arg0) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function Core:setOptionScreenFilter(arg0) end
+
+--- @public
 --- @param v integer
 --- @return nil
 function Core:setOptionSearchModeOverlayEffect(v) end
@@ -1947,6 +1973,11 @@ function Core:setOptionShowSurvivalGuide(b) end
 --- @param arg0 boolean
 --- @return nil
 function Core:setOptionShowValidTargetReticleTexture(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function Core:setOptionShowWelcomeMessage(arg0) end
 
 --- @public
 --- @param arg0 integer

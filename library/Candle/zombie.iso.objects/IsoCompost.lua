@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoCompost: IsoObject, Thumpable
+--- @class IsoCompost: IsoObject, Thumpable, IHasHealth
 --- @field public class any
 IsoCompost = {}
 
@@ -46,6 +46,14 @@ function IsoCompost:getCompost() end
 --- @public
 --- @return integer
 function IsoCompost:getHealth() end
+
+--- @public
+--- @return integer
+function IsoCompost:getHealth() end
+
+--- @public
+--- @return integer
+function IsoCompost:getMaxHealth() end
 
 --- @public
 --- @return integer

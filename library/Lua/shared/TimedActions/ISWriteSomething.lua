@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISWriteSomething : ISBaseTimedAction
+---@field container unknown
 ---@field ignoreHandsWounds boolean
 ---@field item unknown
 ISWriteSomething = ISBaseTimedAction:derive("ISWriteSomething")

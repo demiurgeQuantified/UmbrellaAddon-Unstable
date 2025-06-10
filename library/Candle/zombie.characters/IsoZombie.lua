@@ -26,6 +26,7 @@
 --- @field public THUMP_FLAG_METAL_POLE_GATE integer
 --- @field public THUMP_FLAG_WINDOW integer
 --- @field public THUMP_FLAG_WINDOW_EXTRA integer
+--- @field public THUMP_FLAG_WOOD integer
 IsoZombie = {}
 
 ------------------------------------
@@ -111,6 +112,19 @@ function IsoZombie:Kill(killer) end
 function IsoZombie:Kill(killer, bGory) end
 
 --- @public
+--- @param arg0 HandWeapon
+--- @param arg1 IsoGameCharacter
+--- @return nil
+function IsoZombie:Kill(arg0, arg1) end
+
+--- @public
+--- @param arg0 HandWeapon
+--- @param arg1 IsoGameCharacter
+--- @param arg2 boolean
+--- @return nil
+function IsoZombie:Kill(arg0, arg1, arg2) end
+
+--- @public
 --- @param dir Vector2
 --- @return nil
 function IsoZombie:Move(dir) end
@@ -194,7 +208,7 @@ function IsoZombie:allowsTwist() end
 function IsoZombie:applyDamageFromVehicle(vehicleSpeed, damage) end
 
 --- @public
---- @return nil
+--- @return IsoDeadBody
 function IsoZombie:becomeCorpse() end
 
 --- @public
@@ -507,6 +521,10 @@ function IsoZombie:isForceEatingAnimation() end
 --- @public
 --- @return boolean
 function IsoZombie:isForceFakeDead() end
+
+--- @public
+--- @return boolean
+function IsoZombie:isGettingUp() end
 
 --- @public
 --- @return boolean
@@ -864,6 +882,16 @@ function IsoZombie:setNoTeeth(noTeeth) end
 function IsoZombie:setOnlyJawStab(onlyJawStab) end
 
 --- @public
+--- @param arg0 UdpConnection
+--- @return nil
+function IsoZombie:setOwner(arg0) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return nil
+function IsoZombie:setOwnerPlayer(arg0) end
+
+--- @public
 --- @param playerAttackPosition string
 --- @return nil
 function IsoZombie:setPlayerAttackPosition(playerAttackPosition) end
@@ -966,10 +994,6 @@ function IsoZombie:shouldDoFenceLunge() end
 
 --- @public
 --- @return boolean
-function IsoZombie:shouldDoInventory() end
-
---- @public
---- @return boolean
 function IsoZombie:shouldDressInRandomOutfit() end
 
 --- @public
@@ -1033,11 +1057,6 @@ function IsoZombie:useDescriptor(sharedDesc) end
 --- @public
 --- @return boolean
 function IsoZombie:wasFakeDead() end
-
---- @public
---- @param b ByteBuffer
---- @return nil
-function IsoZombie:writeInventory(b) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

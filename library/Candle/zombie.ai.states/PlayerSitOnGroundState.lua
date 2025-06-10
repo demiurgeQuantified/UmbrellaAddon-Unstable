@@ -58,8 +58,9 @@ function PlayerSitOnGroundState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerSitOnGroundState:setParams(arg0) end
+function PlayerSitOnGroundState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

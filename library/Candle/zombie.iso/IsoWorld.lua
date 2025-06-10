@@ -38,13 +38,16 @@
 --- @field public WorldVersion_PlayerSaveCraftingHistory integer
 --- @field public WorldVersion_PreviouslyMoved integer
 --- @field public WorldVersion_PrintMediaRottingCorpsesBodyDamage integer
+--- @field public WorldVersion_RecipesAndAmmoCheats integer
 --- @field public WorldVersion_SafeHouseCreatedTimeAndLocation integer
 --- @field public WorldVersion_SafeHouseHitPoints integer
+--- @field public WorldVersion_SavePlayerCheats integer
 --- @field public WorldVersion_SquareSeen integer
 --- @field public WorldVersion_Stats_Idleness integer
 --- @field public WorldVersion_TeachedRecipes integer
 --- @field public WorldVersion_TrapExplosionDuration integer
 --- @field public WorldVersion_VariableHeight integer
+--- @field public WorldVersion_VehicleAlarm integer
 --- @field public WorldVersion_ZoneIDisUUID integer
 IsoWorld = {}
 
@@ -368,6 +371,10 @@ function IsoWorld:getWorldSquareX() end
 function IsoWorld:getWorldSquareY() end
 
 --- @public
+--- @return List
+function IsoWorld:getZombieVoronois() end
+
+--- @public
 --- @return ZoneGenerator
 function IsoWorld:getZoneGenerator() end
 
@@ -610,6 +617,11 @@ function IsoWorld:setWgChunk(arg0) end
 --- @param world string
 --- @return nil
 function IsoWorld:setWorld(world) end
+
+--- @public
+--- @param arg0 List
+--- @return nil
+function IsoWorld:setZombieVoronois(arg0) end
 
 --- @public
 --- @param arg0 ZoneGenerator

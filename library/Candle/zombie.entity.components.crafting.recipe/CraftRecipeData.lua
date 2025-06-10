@@ -84,8 +84,9 @@ function CraftRecipeData:canOfferInputItem(arg0, arg1, arg2) end
 --- @param arg1 List
 --- @param arg2 List
 --- @param arg3 boolean
+--- @param arg4 ArrayList
 --- @return boolean
-function CraftRecipeData:canPerform(arg0, arg1, arg2, arg3) end
+function CraftRecipeData:canPerform(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @param arg0 List
@@ -140,6 +141,13 @@ function CraftRecipeData:getAllConsumedItems(arg0) end
 function CraftRecipeData:getAllConsumedItems(arg0, arg1) end
 
 --- @public
+--- @param arg0 ArrayList
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @return ArrayList
+function CraftRecipeData:getAllConsumedItems(arg0, arg1, arg2) end
+
+--- @public
 --- @return ArrayList
 function CraftRecipeData:getAllCreatedItems() end
 
@@ -179,6 +187,15 @@ function CraftRecipeData:getAllNotKeepInputItems() end
 function CraftRecipeData:getAllPutBackInputItems() end
 
 --- @public
+--- @return ArrayList
+function CraftRecipeData:getAllRecordedConsumedItems() end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return ArrayList
+function CraftRecipeData:getAllRecordedConsumedItems(arg0) end
+
+--- @public
 --- @param arg0 InputScript
 --- @return InputScriptData
 function CraftRecipeData:getDataForInputScript(arg0) end
@@ -186,6 +203,11 @@ function CraftRecipeData:getDataForInputScript(arg0) end
 --- @public
 --- @return InventoryItem
 function CraftRecipeData:getFirstCreatedItem() end
+
+--- @public
+--- @param arg0 string
+--- @return FluidSample
+function CraftRecipeData:getFirstInputFluidWithFlag(arg0) end
 
 --- @public
 --- @param arg0 string

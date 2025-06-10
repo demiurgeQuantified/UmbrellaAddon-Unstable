@@ -110,6 +110,30 @@ Events.EveryTenMinutes = {
 	Remove = function(callback) end,
 }
 
+---
+---@alias Callback_GrappleGrabCollisionCheck fun(character:IsoGameCharacter,weapon:HandWeapon)
+
+---GrappleGrabCollisionCheck:
+---<br><br>
+Events.GrappleGrabCollisionCheck = {
+	---@param callback Callback_GrappleGrabCollisionCheck
+	Add = function(callback) end,
+	---@param callback Callback_GrappleGrabCollisionCheck
+	Remove = function(callback) end,
+}
+
+---character - The grappler.<br>result - The reason the grapple ended. 'Aborted' means the grapple was cancelled.<br>
+---@alias Callback_GrapplerLetGo fun(character:IsoGameCharacter,result:string)
+
+---GrapplerLetGo: Triggered when a grappler lets go of their grappled target.
+---<br><br>character - The grappler.<br>result - The reason the grapple ended. 'Aborted' means the grapple was cancelled.<br>
+Events.GrapplerLetGo = {
+	---@param callback Callback_GrapplerLetGo
+	Add = function(callback) end,
+	---@param callback Callback_GrapplerLetGo
+	Remove = function(callback) end,
+}
+
 ---character - The character whose perk level changed.<br>perk - The perk that changed level.<br>level - The new level of the perk.<br>increased - True if the level increased, false if it decreased.<br>
 ---@alias Callback_LevelPerk fun(character:IsoGameCharacter,perk:PerkFactory.Perk,level:integer,increased:boolean)
 
@@ -119,6 +143,18 @@ Events.LevelPerk = {
 	---@param callback Callback_LevelPerk
 	Add = function(callback) end,
 	---@param callback Callback_LevelPerk
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_LoadChunk fun(chunk:IsoChunk)
+
+---LoadChunk:
+---<br><br>
+Events.LoadChunk = {
+	---@param callback Callback_LoadChunk
+	Add = function(callback) end,
+	---@param callback Callback_LoadChunk
 	Remove = function(callback) end,
 }
 
@@ -222,20 +258,8 @@ Events.OnAddBuilding = {
 	Remove = function(callback) end,
 }
 
----forageSystem - The foraging system.<br>
----@alias Callback_onAddForageDefs fun(forageSystem:forageSystem)
-
----onAddForageDefs: Fires after the foraging item definitions are created.
----<br><br>forageSystem - The foraging system.<br>
-Events.onAddForageDefs = {
-	---@param callback Callback_onAddForageDefs
-	Add = function(callback) end,
-	---@param callback Callback_onAddForageDefs
-	Remove = function(callback) end,
-}
-
 ---message - The message that was added.<br>tabId - The ID of the tab the message was added to.<br>
----@alias Callback_OnAddMessage fun(message:ChatMessage,tabId:number)
+---@alias Callback_OnAddMessage fun(message:ChatMessage,tabId:integer)
 
 ---(Multiplayer) (Client) OnAddMessage: Fires when a message is added to chat.
 ---<br><br>message - The message that was added.<br>tabId - The ID of the tab the message was added to.<br>
@@ -258,15 +282,39 @@ Events.OnAdminMessage = {
 	Remove = function(callback) end,
 }
 
----x - World X co-ordinate of the sound.<br>y - World Y co-ordinate of the sound.<br>z - World Z co-ordinate of the sound.<br>
----@alias Callback_OnAmbientSound fun(x:number,y:number,z:number)
+---message - The message that was added.<br>tabId - The ID of the tab the message was added to.<br>
+---@alias Callback_OnAlertMessage fun(message:ChatMessage,tabId:integer)
+
+---OnAlertMessage: See OnAddMessage
+---<br><br>message - The message that was added.<br>tabId - The ID of the tab the message was added to.<br>
+Events.OnAlertMessage = {
+	---@param callback Callback_OnAlertMessage
+	Add = function(callback) end,
+	---@param callback Callback_OnAlertMessage
+	Remove = function(callback) end,
+}
+
+---name - Name of the sound script played.<br>x - World X co-ordinate of the sound.<br>y - World Y co-ordinate of the sound.<br>
+---@alias Callback_OnAmbientSound fun(name:string,x:number,y:number)
 
 ---OnAmbientSound: Fires whenever a sound meta event or building alarm is triggered.
----<br><br>x - World X co-ordinate of the sound.<br>y - World Y co-ordinate of the sound.<br>z - World Z co-ordinate of the sound.<br>
+---<br><br>name - Name of the sound script played.<br>x - World X co-ordinate of the sound.<br>y - World Y co-ordinate of the sound.<br>
 Events.OnAmbientSound = {
 	---@param callback Callback_OnAmbientSound
 	Add = function(callback) end,
 	---@param callback Callback_OnAmbientSound
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnAnimalTracks fun(player:IsoPlayer,tracks:ArrayList)
+
+---OnAnimalTracks:
+---<br><br>
+Events.OnAnimalTracks = {
+	---@param callback Callback_OnAnimalTracks
+	Add = function(callback) end,
+	---@param callback Callback_OnAnimalTracks
 	Remove = function(callback) end,
 }
 
@@ -348,7 +396,7 @@ Events.OnCharacterCreateStats = {
 ---character - The character who died.<br>
 ---@alias Callback_OnCharacterDeath fun(character:IsoGameCharacter)
 
----OnCharacterDeath: Fires when any character dies, including zombies and players regardless of whether they are local.
+---OnCharacterDeath: Fires when any character dies, including zombies, players and animals.
 ---<br><br>character - The character who died.<br>
 Events.OnCharacterDeath = {
 	---@param callback Callback_OnCharacterDeath
@@ -382,8 +430,20 @@ Events.OnChatWindowInit = {
 	Remove = function(callback) end,
 }
 
+---
+---@alias Callback_OnClickedAnimalForContext fun(playerNum:integer,context:ISContextMenu,animals:IsoAnimal[],test:boolean)
+
+---OnClickedAnimalForContext:
+---<br><br>
+Events.OnClickedAnimalForContext = {
+	---@param callback Callback_OnClickedAnimalForContext
+	Add = function(callback) end,
+	---@param callback Callback_OnClickedAnimalForContext
+	Remove = function(callback) end,
+}
+
 ---module - The module the command was sent with.<br>command - The command the command was sent with.<br>player - The player who sent the command.<br>args - The arguments table the command was sent with. If the table was empty, nil is passed instead.<br>
----@alias Callback_OnClientCommand fun(module:string,command:string,player:IsoPlayer,args:table?)
+---@alias Callback_OnClientCommand fun(module:string,command:string,player:IsoPlayer,args:table | nil)
 
 ---(Server) OnClientCommand: Fires when a client command sent through sendClientCommand is received by the server.
 ---<br><br>module - The module the command was sent with.<br>command - The command the command was sent with.<br>player - The player who sent the command.<br>args - The arguments table the command was sent with. If the table was empty, nil is passed instead.<br>
@@ -467,7 +527,7 @@ Events.OnConnected = {
 }
 
 ---
----@alias Callback_OnConnectionStateChanged fun(state:string,message:string,place:integer?)
+---@alias Callback_OnConnectionStateChanged fun(state:string,message:string)
 
 ---(Multiplayer) (Client) OnConnectionStateChanged: Fires when the client's connection state is updated while trying to connect to a server.
 ---<br><br>
@@ -487,6 +547,18 @@ Events.OnContainerUpdate = {
 	---@param callback Callback_OnContainerUpdate
 	Add = function(callback) end,
 	---@param callback Callback_OnContainerUpdate
+	Remove = function(callback) end,
+}
+
+---player - The player pressing the context key.<br>timeMs - How long, in milliseconds, the context key has been held for.<br>
+---@alias Callback_OnContextKey fun(player:IsoPlayer,timeMs:number)
+
+---(Client) OnContextKey: Triggered while the player is holding the context key.
+---<br><br>player - The player pressing the context key.<br>timeMs - How long, in milliseconds, the context key has been held for.<br>
+Events.OnContextKey = {
+	---@param callback Callback_OnContextKey
+	Add = function(callback) end,
+	---@param callback Callback_OnContextKey
 	Remove = function(callback) end,
 }
 
@@ -575,18 +647,6 @@ Events.OnCustomUIKey = {
 }
 
 ---key - Key code of the key that was pressed.<br>
----@alias Callback_OnCustomUIKeyReleased fun(key:integer)
-
----(Client) OnCustomUIKeyReleased: Fires when a key that is not used by vanilla UI is released.
----<br><br>key - Key code of the key that was pressed.<br>
-Events.OnCustomUIKeyReleased = {
-	---@param callback Callback_OnCustomUIKeyReleased
-	Add = function(callback) end,
-	---@param callback Callback_OnCustomUIKeyReleased
-	Remove = function(callback) end,
-}
-
----key - Key code of the key that was pressed.<br>
 ---@alias Callback_OnCustomUIKeyPressed fun(key:integer)
 
 ---(Client) OnCustomUIKeyPressed: Fires when a key that is not used by vanilla UI is pressed.
@@ -595,6 +655,18 @@ Events.OnCustomUIKeyPressed = {
 	---@param callback Callback_OnCustomUIKeyPressed
 	Add = function(callback) end,
 	---@param callback Callback_OnCustomUIKeyPressed
+	Remove = function(callback) end,
+}
+
+---key - Key code of the key that was pressed.<br>
+---@alias Callback_OnCustomUIKeyReleased fun(key:integer)
+
+---(Client) OnCustomUIKeyReleased: Fires when a key that is not used by vanilla UI is released.
+---<br><br>key - Key code of the key that was pressed.<br>
+Events.OnCustomUIKeyReleased = {
+	---@param callback Callback_OnCustomUIKeyReleased
+	Add = function(callback) end,
+	---@param callback Callback_OnCustomUIKeyReleased
 	Remove = function(callback) end,
 }
 
@@ -611,11 +683,23 @@ Events.OnDawn = {
 	Remove = function(callback) end,
 }
 
----object - The thumpable that was destroyed.<br>
----@alias Callback_OnDestroyIsoThumpable fun(object:IsoThumpable)
+---body - The dead body being spawned.<br>
+---@alias Callback_OnDeadBodySpawn fun(body:IsoDeadBody)
+
+---OnDeadBodySpawn: Fires when spawning a dead body.
+---<br><br>body - The dead body being spawned.<br>
+Events.OnDeadBodySpawn = {
+	---@param callback Callback_OnDeadBodySpawn
+	Add = function(callback) end,
+	---@param callback Callback_OnDeadBodySpawn
+	Remove = function(callback) end,
+}
+
+---object - The thumpable that was destroyed.<br>player - Purpose unknown: always nil.<br>
+---@alias Callback_OnDestroyIsoThumpable fun(object:IsoThumpable,player:nil)
 
 ---OnDestroyIsoThumpable: Fires when an IsoThumpable object is destroyed by damage.
----<br><br>object - The thumpable that was destroyed.<br>
+---<br><br>object - The thumpable that was destroyed.<br>player - Purpose unknown: always nil.<br>
 Events.OnDestroyIsoThumpable = {
 	---@param callback Callback_OnDestroyIsoThumpable
 	Add = function(callback) end,
@@ -623,11 +707,11 @@ Events.OnDestroyIsoThumpable = {
 	Remove = function(callback) end,
 }
 
----guid - GUID of the line being displayed.<br>codes - Codes of the line being displayed. These typically contain perk/stat changes, but can be used to associate any arbitrary data with a line.<br>x - World X co-ordinate where the line is being displayed.<br>y - World Y co-ordinate where the line is being displayed.<br>z - World Z co-ordinate where the line is being displayed.<br>text - The displayed, translated text of the line.<br>device - The device playing the line.<br>
----@alias Callback_OnDeviceText fun(guid:string,codes:string,x:number,y:number,z:number,text:string,device:WaveSignalDevice)
+---guid - GUID of the line being displayed.<br>codes - Codes of the line being displayed. These typically contain perk/stat changes, but can be used to associate any arbitrary data with a line.<br>x - World X co-ordinate where the line is being displayed.<br>y - World Y co-ordinate where the line is being displayed.<br>z - World Z co-ordinate where the line is being displayed.<br>text - The displayed, translated text of the line, or the chat message being displayed.<br>device - The device playing the line.<br>
+---@alias Callback_OnDeviceText fun(guid:string,codes:string,x:number,y:number,z:number,text:string | ChatMessage,device:WaveSignalDevice)
 
 ---(Client) OnDeviceText: Fires whenever a radio displays text.
----<br><br>guid - GUID of the line being displayed.<br>codes - Codes of the line being displayed. These typically contain perk/stat changes, but can be used to associate any arbitrary data with a line.<br>x - World X co-ordinate where the line is being displayed.<br>y - World Y co-ordinate where the line is being displayed.<br>z - World Z co-ordinate where the line is being displayed.<br>text - The displayed, translated text of the line.<br>device - The device playing the line.<br>
+---<br><br>guid - GUID of the line being displayed.<br>codes - Codes of the line being displayed. These typically contain perk/stat changes, but can be used to associate any arbitrary data with a line.<br>x - World X co-ordinate where the line is being displayed.<br>y - World Y co-ordinate where the line is being displayed.<br>z - World Z co-ordinate where the line is being displayed.<br>text - The displayed, translated text of the line, or the chat message being displayed.<br>device - The device playing the line.<br>
 Events.OnDeviceText = {
 	---@param callback Callback_OnDeviceText
 	Add = function(callback) end,
@@ -644,18 +728,6 @@ Events.OnDisconnect = {
 	---@param callback Callback_OnDisconnect
 	Add = function(callback) end,
 	---@param callback Callback_OnDisconnect
-	Remove = function(callback) end,
-}
-
----character - The character disabling search mode.<br>isSearchMode - Always false.<br>
----@alias Callback_onDisableSearchMode fun(character:IsoPlayer,isSearchMode:false)
-
----(Client) onDisableSearchMode: Fires when a local player disables search mode.
----<br><br>character - The character disabling search mode.<br>isSearchMode - Always false.<br>
-Events.onDisableSearchMode = {
-	---@param callback Callback_onDisableSearchMode
-	Add = function(callback) end,
-	---@param callback Callback_onDisableSearchMode
 	Remove = function(callback) end,
 }
 
@@ -685,7 +757,7 @@ Events.OnDoTileBuilding = {
 }
 
 ---cursor - The build cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
----@alias Callback_OnDoTileBuilding2 fun(cursor:ISBuildingObject,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare?)
+---@alias Callback_OnDoTileBuilding2 fun(cursor:ISBuildingObject,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare | nil)
 
 ---(Client) OnDoTileBuilding2: Fires every tick while the local mouse and keyboard player has a build cursor (or other drag).
 ---<br><br>cursor - The build cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
@@ -696,11 +768,11 @@ Events.OnDoTileBuilding2 = {
 	Remove = function(callback) end,
 }
 
----cursor - The cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
----@alias Callback_OnDoTileBuilding3 fun(cursor:ISBuildingObject,bRender:boolean,x:integer,y:integer,z:integer,square:IsoGridSquare?)
+---cursor - The cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>
+---@alias Callback_OnDoTileBuilding3 fun(cursor:ISBuildingObject,bRender:boolean,x:integer,y:integer,z:integer)
 
 ---(Client) OnDoTileBuilding3: Fires every tick while a controller player has a build cursor (or other drag).
----<br><br>cursor - The cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>square - The square the build cursor is over.<br>
+---<br><br>cursor - The cursor object the player is dragging.<br>bRender - Whether the preview should be rendered.<br>x - World X co-ordinate of the square the build cursor is over.<br>y - World Y co-ordinate of the square the build cursor is over.<br>z - World Z co-ordinate of the square the build cursor is over.<br>
 Events.OnDoTileBuilding3 = {
 	---@param callback Callback_OnDoTileBuilding3
 	Add = function(callback) end,
@@ -733,18 +805,6 @@ Events.OnDynamicMovableRecipe = {
 	Remove = function(callback) end,
 }
 
----character - The character disabling search mode.<br>isSearchMode - Always true.<br>
----@alias Callback_onEnableSearchMode fun(character:IsoPlayer,isSearchMode:true)
-
----(Client) onEnableSearchMode: Fires when a local player enables search mode.
----<br><br>character - The character disabling search mode.<br>isSearchMode - Always true.<br>
-Events.onEnableSearchMode = {
-	---@param callback Callback_onEnableSearchMode
-	Add = function(callback) end,
-	---@param callback Callback_onEnableSearchMode
-	Remove = function(callback) end,
-}
-
 ---character - The character that entered the vehicle.<br>
 ---@alias Callback_OnEnterVehicle fun(character:IsoGameCharacter)
 
@@ -758,7 +818,7 @@ Events.OnEnterVehicle = {
 }
 
 ---character - The character that equipped the item.<br>item - The newly equipped item.<br>
----@alias Callback_OnEquipPrimary fun(character:IsoGameCharacter,item:InventoryItem?)
+---@alias Callback_OnEquipPrimary fun(character:IsoGameCharacter,item:InventoryItem | nil)
 
 ---OnEquipPrimary: Triggered when a character changes the item in their primary equip slot.
 ---<br><br>character - The character that equipped the item.<br>item - The newly equipped item.<br>
@@ -770,7 +830,7 @@ Events.OnEquipPrimary = {
 }
 
 ---character - The character that equipped the item.<br>item - The newly equipped item.<br>
----@alias Callback_OnEquipSecondary fun(character:IsoGameCharacter,item:InventoryItem?)
+---@alias Callback_OnEquipSecondary fun(character:IsoGameCharacter,item:InventoryItem | nil)
 
 ---OnEquipSecondary: Triggered when a character changes the item in their secondary equip slot.
 ---<br><br>character - The character that equipped the item.<br>item - The newly equipped item.<br>
@@ -793,11 +853,11 @@ Events.OnExitVehicle = {
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnFETick function
+---unknown - Purpose unknown: always 0.<br>
+---@alias Callback_OnFETick fun(unknown:0)
 
 ---(Client) OnFETick: Fires every tick while on the main menu.
----<br><br>
+---<br><br>unknown - Purpose unknown: always 0.<br>
 Events.OnFETick = {
 	---@param callback Callback_OnFETick
 	Add = function(callback) end,
@@ -806,7 +866,7 @@ Events.OnFETick = {
 }
 
 ---roomType - Distribution type of the room the container is in, or the type of the vehicle.<br>containerType - The type of the container that was filled.<br>container - The container that was filled. An ItemPickerContainer is sometimes passed when a sub-container is spawned and filled, and is probably a bug.<br>
----@alias Callback_OnFillContainer fun(roomType:string,containerType:string,container:ItemContainer|ItemPickerContainer)
+---@alias Callback_OnFillContainer fun(roomType:string,containerType:string,container:ItemContainer | ItemPickerContainer)
 
 ---(Server) OnFillContainer: Fires whenever a container is first filled with loot, or when loot respawns.
 ---<br><br>roomType - Distribution type of the room the container is in, or the type of the vehicle.<br>containerType - The type of the container that was filled.<br>container - The container that was filled. An ItemPickerContainer is sometimes passed when a sub-container is spawned and filled, and is probably a bug.<br>
@@ -818,7 +878,7 @@ Events.OnFillContainer = {
 }
 
 ---playerNum - The number of the player whose context menu has been filled.<br>context - The context menu that was filled.<br>items - The items that were selected to fill the context menu. If only full stacks are selected, a table of ContextMenuItemStacks is passed. Otherwise it is a table of InventoryItems.<br>
----@alias Callback_OnFillInventoryObjectContextMenu fun(playerNum:integer,context:ISContextMenu,items:InventoryItem[]|umbrella.ContextMenuItemStack[])
+---@alias Callback_OnFillInventoryObjectContextMenu fun(playerNum:integer,context:ISContextMenu,items:InventoryItem[] | umbrella.ContextMenuItemStack[])
 
 ---(Client) OnFillInventoryObjectContextMenu: Fires after the context menu for an inventory item is filled.
 ---<br><br>playerNum - The number of the player whose context menu has been filled.<br>context - The context menu that was filled.<br>items - The items that were selected to fill the context menu. If only full stacks are selected, a table of ContextMenuItemStacks is passed. Otherwise it is a table of InventoryItems.<br>
@@ -826,18 +886,6 @@ Events.OnFillInventoryObjectContextMenu = {
 	---@param callback Callback_OnFillInventoryObjectContextMenu
 	Add = function(callback) end,
 	---@param callback Callback_OnFillInventoryObjectContextMenu
-	Remove = function(callback) end,
-}
-
----context - The foraging context menu.<br>icon - The foraging icon the context menu was created for.<br>
----@alias Callback_onFillSearchIconContextMenu fun(context:ISContextMenu,icon:ISBaseIcon)
-
----(Client) onFillSearchIconContextMenu: Fires when opening the context menu for a foraging item.
----<br><br>context - The foraging context menu.<br>icon - The foraging icon the context menu was created for.<br>
-Events.onFillSearchIconContextMenu = {
-	---@param callback Callback_onFillSearchIconContextMenu
-	Add = function(callback) end,
-	---@param callback Callback_onFillSearchIconContextMenu
 	Remove = function(callback) end,
 }
 
@@ -850,6 +898,19 @@ Events.OnFillWorldObjectContextMenu = {
 	---@param callback Callback_OnFillWorldObjectContextMenu
 	Add = function(callback) end,
 	---@param callback Callback_OnFillWorldObjectContextMenu
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnFishingActionMPUpdate function
+
+---@deprecated
+---(Deprecated) OnFishingActionMPUpdate:
+---<br><br>
+Events.OnFishingActionMPUpdate = {
+	---@param callback Callback_OnFishingActionMPUpdate
+	Add = function(callback) end,
+	---@param callback Callback_OnFishingActionMPUpdate
 	Remove = function(callback) end,
 }
 
@@ -878,9 +939,9 @@ Events.OnGameStart = {
 }
 
 ---
----@alias Callback_OnGameStateEnter fun(state:State)
+---@alias Callback_OnGameStateEnter fun(state:GameState)
 
----(Client) OnGameStateEnter: Fires upon entering the Terms Of Service game state.
+---(Client) OnGameStateEnter: Triggers upon entering the Terms Of Service GameState. Probably meant to trigger for other GameStates too, but it doesn't.
 ---<br><br>
 Events.OnGameStateEnter = {
 	---@param callback Callback_OnGameStateEnter
@@ -946,6 +1007,19 @@ Events.OnGetTableResult = {
 	---@param callback Callback_OnGetTableResult
 	Add = function(callback) end,
 	---@param callback Callback_OnGetTableResult
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnGoogleAuthRequest function
+
+---@deprecated
+---(Deprecated) OnGoogleAuthRequest:
+---<br><br>
+Events.OnGoogleAuthRequest = {
+	---@param callback Callback_OnGoogleAuthRequest
+	Add = function(callback) end,
+	---@param callback Callback_OnGoogleAuthRequest
 	Remove = function(callback) end,
 }
 
@@ -1060,14 +1134,14 @@ Events.OnIsoThumpableSave = {
 }
 
 ---
----@alias Callback_onItemFall function
+---@alias Callback_OnItemFound fun(player:IsoPlayer,itemType:string,amount:number)
 
----(Client) onItemFall: Fires when a local character is forced to drop the items in their hands.
+---OnItemFound:
 ---<br><br>
-Events.onItemFall = {
-	---@param callback Callback_onItemFall
+Events.OnItemFound = {
+	---@param callback Callback_OnItemFound
 	Add = function(callback) end,
-	---@param callback Callback_onItemFall
+	---@param callback Callback_OnItemFound
 	Remove = function(callback) end,
 }
 
@@ -1204,30 +1278,6 @@ Events.OnLoad = {
 }
 
 ---
----@alias Callback_OnLoadedMapZones function
-
----OnLoadedMapZones: Fires after loading the map zones.
----<br><br>
-Events.OnLoadedMapZones = {
-	---@param callback Callback_OnLoadedMapZones
-	Add = function(callback) end,
-	---@param callback Callback_OnLoadedMapZones
-	Remove = function(callback) end,
-}
-
----spriteManager - The sprite manager.<br>
----@alias Callback_OnLoadedTileDefinitions fun(spriteManager:IsoSpriteManager)
-
----OnLoadedTileDefinitions: Fires after loading the tile definitions.
----<br><br>spriteManager - The sprite manager.<br>
-Events.OnLoadedTileDefinitions = {
-	---@param callback Callback_OnLoadedTileDefinitions
-	Add = function(callback) end,
-	---@param callback Callback_OnLoadedTileDefinitions
-	Remove = function(callback) end,
-}
-
----
 ---@alias Callback_OnLoadMapZones function
 
 ---OnLoadMapZones: Fires before loading the map zones.
@@ -1236,18 +1286,6 @@ Events.OnLoadMapZones = {
 	---@param callback Callback_OnLoadMapZones
 	Add = function(callback) end,
 	---@param callback Callback_OnLoadMapZones
-	Remove = function(callback) end,
-}
-
----square - The square that had its mod data updated.<br>
----@alias Callback_onLoadModDataFromServer fun(square:IsoGridSquare)
-
----(Multiplayer) onLoadModDataFromServer: Fires when the server sends a square's mod data to the clients, or when the client receives it.
----<br><br>square - The square that had its mod data updated.<br>
-Events.onLoadModDataFromServer = {
-	---@param callback Callback_onLoadModDataFromServer
-	Add = function(callback) end,
-	---@param callback Callback_onLoadModDataFromServer
 	Remove = function(callback) end,
 }
 
@@ -1272,6 +1310,30 @@ Events.OnLoadSoundBanks = {
 	---@param callback Callback_OnLoadSoundBanks
 	Add = function(callback) end,
 	---@param callback Callback_OnLoadSoundBanks
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnLoadedMapZones function
+
+---OnLoadedMapZones: Fires after loading the map zones.
+---<br><br>
+Events.OnLoadedMapZones = {
+	---@param callback Callback_OnLoadedMapZones
+	Add = function(callback) end,
+	---@param callback Callback_OnLoadedMapZones
+	Remove = function(callback) end,
+}
+
+---spriteManager - The sprite manager.<br>
+---@alias Callback_OnLoadedTileDefinitions fun(spriteManager:IsoSpriteManager)
+
+---OnLoadedTileDefinitions: Fires after loading the tile definitions.
+---<br><br>spriteManager - The sprite manager.<br>
+Events.OnLoadedTileDefinitions = {
+	---@param callback Callback_OnLoadedTileDefinitions
+	Add = function(callback) end,
+	---@param callback Callback_OnLoadedTileDefinitions
 	Remove = function(callback) end,
 }
 
@@ -1339,11 +1401,11 @@ Events.OnMapLoadCreateIsoObject = {
 	Remove = function(callback) end,
 }
 
----character - The character who performed the action.<br>success - Whether the action succeeded.<br>vehicleId - The ID of the vehicle that was operated on.<br>partType - The type of the part that was operated on.<br>
----@alias Callback_OnMechanicActionDone fun(character:IsoGameCharacter,success:boolean,vehicleId:integer,partType:string,itemId:number,installing:boolean)
+---character - The character who performed the action.<br>success - Whether the action succeeded.<br>
+---@alias Callback_OnMechanicActionDone fun(character:IsoGameCharacter,success:boolean)
 
 ---OnMechanicActionDone: Fires after a character completes a mechanic action on a vehicle.
----<br><br>character - The character who performed the action.<br>success - Whether the action succeeded.<br>vehicleId - The ID of the vehicle that was operated on.<br>partType - The type of the part that was operated on.<br>
+---<br><br>character - The character who performed the action.<br>success - Whether the action succeeded.<br>
 Events.OnMechanicActionDone = {
 	---@param callback Callback_OnMechanicActionDone
 	Add = function(callback) end,
@@ -1388,7 +1450,7 @@ Events.OnMouseDown = {
 }
 
 ---x - Screen X co-ordinate of the click.<br>y - Screen Y co-ordinate of the click.<br>xMultiplied - Screen X co-ordinate of the click multiplied by zoom level.<br>yMultiplied - Screen Y co-ordinate of the click multiplied by zoom level.<br>
----@alias Callback_OnMouseMove fun(x:integer,y:integer,xMultiplied:integer,yMultiplied:integer)
+---@alias Callback_OnMouseMove fun(x:number,y:number,xMultiplied:number,yMultiplied:number)
 
 ---(Client) OnMouseMove: Fires every frame, unless mouse movement is eaten by something else.
 ---<br><br>x - Screen X co-ordinate of the click.<br>y - Screen Y co-ordinate of the click.<br>xMultiplied - Screen X co-ordinate of the click multiplied by zoom level.<br>yMultiplied - Screen Y co-ordinate of the click multiplied by zoom level.<br>
@@ -1412,6 +1474,31 @@ Events.OnMouseUp = {
 }
 
 ---
+---@alias Callback_OnMouseWheel fun(wheel:number)
+
+---OnMouseWheel:
+---<br><br>
+Events.OnMouseWheel = {
+	---@param callback Callback_OnMouseWheel
+	Add = function(callback) end,
+	---@param callback Callback_OnMouseWheel
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnMovingObjectCrop function
+
+---@deprecated
+---(Deprecated) OnMovingObjectCrop:
+---<br><br>
+Events.OnMovingObjectCrop = {
+	---@param callback Callback_OnMovingObjectCrop
+	Add = function(callback) end,
+	---@param callback Callback_OnMovingObjectCrop
+	Remove = function(callback) end,
+}
+
+---
 ---@alias Callback_OnMultiTriggerNPCEvent fun(type:string,data:table,def:BuildingDef)
 
 ---OnMultiTriggerNPCEvent: Fires when the player triggers an NPC event.
@@ -1420,6 +1507,32 @@ Events.OnMultiTriggerNPCEvent = {
 	---@param callback Callback_OnMultiTriggerNPCEvent
 	Add = function(callback) end,
 	---@param callback Callback_OnMultiTriggerNPCEvent
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnNPCSurvivorUpdate function
+
+---@deprecated
+---(Deprecated) OnNPCSurvivorUpdate:
+---<br><br>
+Events.OnNPCSurvivorUpdate = {
+	---@param callback Callback_OnNPCSurvivorUpdate
+	Add = function(callback) end,
+	---@param callback Callback_OnNPCSurvivorUpdate
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnNetworkUsersReceived function
+
+---@deprecated
+---(Deprecated) OnNetworkUsersReceived:
+---<br><br>
+Events.OnNetworkUsersReceived = {
+	---@param callback Callback_OnNetworkUsersReceived
+	Add = function(callback) end,
+	---@param callback Callback_OnNetworkUsersReceived
 	Remove = function(callback) end,
 }
 
@@ -1457,19 +1570,6 @@ Events.OnNewSurvivorGroup = {
 	---@param callback Callback_OnNewSurvivorGroup
 	Add = function(callback) end,
 	---@param callback Callback_OnNewSurvivorGroup
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnNPCSurvivorUpdate function
-
----@deprecated
----(Deprecated) OnNPCSurvivorUpdate:
----<br><br>
-Events.OnNPCSurvivorUpdate = {
-	---@param callback Callback_OnNPCSurvivorUpdate
-	Add = function(callback) end,
-	---@param callback Callback_OnNPCSurvivorUpdate
 	Remove = function(callback) end,
 }
 
@@ -1557,6 +1657,19 @@ Events.OnObjectRightMouseButtonUp = {
 	Remove = function(callback) end,
 }
 
+---
+---@alias Callback_OnOverrideSearchManager function
+
+---@deprecated
+---(Deprecated) OnOverrideSearchManager:
+---<br><br>
+Events.OnOverrideSearchManager = {
+	---@param callback Callback_OnOverrideSearchManager
+	Add = function(callback) end,
+	---@param callback Callback_OnOverrideSearchManager
+	Remove = function(callback) end,
+}
+
 ---player - The player who attacked.<br>weapon - The weapon the player attacked with.<br>
 ---@alias Callback_OnPlayerAttackFinished fun(player:IsoPlayer,weapon:HandWeapon)
 
@@ -1582,7 +1695,7 @@ Events.OnPlayerDeath = {
 }
 
 ---character - The character who took damage.<br>damageType - The type of damage the character took.<br>damage - The damage that was taken.<br>
----@alias Callback_OnPlayerGetDamage fun(character:IsoGameCharacter,damageType:"POISON"|"HUNGRY"|"SICK"|"BLEEDING"|"THIRST"|"HEAVYLOAD"|"INFECTION"|"LOWWEIGHT"|"FALLDOWN"|"WEAPONHIT"|"CARHITDAMAGE"|"CARCRASHDAMAGE",damage:number)
+---@alias Callback_OnPlayerGetDamage fun(character:IsoGameCharacter,damageType:"POISON" | "HUNGRY" | "SICK" | "BLEEDING" | "THIRST" | "HEAVYLOAD" | "INFECTION" | "LOWWEIGHT" | "FALLDOWN" | "WEAPONHIT" | "CARHITDAMAGE" | "CARCRASHDAMAGE",damage:number)
 
 ---OnPlayerGetDamage: Fires every time a local player takes damage. Bleeding bodyparts fire the event once per frame each. It also fires when zombies are hit by weapons: this is the only case in which the event fires on the server.
 ---<br><br>character - The character who took damage.<br>damageType - The type of damage the character took.<br>damage - The damage that was taken.<br>
@@ -1780,7 +1893,7 @@ Events.OnPreDistributionMerge = {
 }
 
 ---playerNum - The number of the player whose context menu has been created.<br>context - The context menu that was created.<br>items - The items that were selected to fill the context menu. If only full stacks are selected, a table of ContextMenuItemStacks is passed. Otherwise it is a table of InventoryItems.<br>
----@alias Callback_OnPreFillInventoryObjectContextMenu fun(playerNum:integer,context:ISContextMenu,items:InventoryItem[]|umbrella.ContextMenuItemStack[])
+---@alias Callback_OnPreFillInventoryObjectContextMenu fun(playerNum:integer,context:ISContextMenu,items:InventoryItem[] | umbrella.ContextMenuItemStack[])
 
 ---(Client) OnPreFillInventoryObjectContextMenu: Fires when the context menu for an inventory item is created, before it is filled.
 ---<br><br>playerNum - The number of the player whose context menu has been created.<br>context - The context menu that was created.<br>items - The items that were selected to fill the context menu. If only full stacks are selected, a table of ContextMenuItemStacks is passed. Otherwise it is a table of InventoryItems.<br>
@@ -1828,11 +1941,23 @@ Events.OnPreMapLoad = {
 	Remove = function(callback) end,
 }
 
----player - The player attempting to rack.<br>weapon - The weapon they are attempting to rack.<br>
----@alias Callback_OnPressRackButton fun(player:IsoPlayer,weapon:HandWeapon)
+---
+---@alias Callback_OnPreUIDraw function
+
+---(Client) OnPreUIDraw: Fires before every UI render frame
+---<br><br>
+Events.OnPreUIDraw = {
+	---@param callback Callback_OnPreUIDraw
+	Add = function(callback) end,
+	---@param callback Callback_OnPreUIDraw
+	Remove = function(callback) end,
+}
+
+---player - The player attempting to rack.<br>weapon - The weapon they are attempting to rack.<br>shift - Unknown purpose: always false. Added at some point during B42.<br>
+---@alias Callback_OnPressRackButton fun(player:IsoPlayer,weapon:HandWeapon,shift:false)
 
 ---(Client) OnPressRackButton: Fires when a local player has a gun and presses the button to rack it.
----<br><br>player - The player attempting to rack.<br>weapon - The weapon they are attempting to rack.<br>
+---<br><br>player - The player attempting to rack.<br>weapon - The weapon they are attempting to rack.<br>shift - Unknown purpose: always false. Added at some point during B42.<br>
 Events.OnPressRackButton = {
 	---@param callback Callback_OnPressRackButton
 	Add = function(callback) end,
@@ -1865,14 +1990,39 @@ Events.OnPressWalkTo = {
 }
 
 ---
----@alias Callback_OnPreUIDraw function
+---@alias Callback_OnProcessAction fun(action:"build",character:IsoPlayer,args:table)
 
----(Client) OnPreUIDraw: Fires before every UI render frame
+---(Multiplayer) (Server) OnProcessAction:
 ---<br><br>
-Events.OnPreUIDraw = {
-	---@param callback Callback_OnPreUIDraw
+Events.OnProcessAction = {
+	---@param callback Callback_OnProcessAction
 	Add = function(callback) end,
-	---@param callback Callback_OnPreUIDraw
+	---@param callback Callback_OnProcessAction
+	Remove = function(callback) end,
+}
+
+---args - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
+---@alias Callback_OnProcessTransaction fun(action:"scrapMoveable" | "pickUpMoveable" | "rotateMoveable" | "placeMoveable" | "dropOnFloor",character:IsoPlayer,item:InventoryItem | nil,source:ContainerID,destination:ContainerID,args:table | nil)
+
+---(Multiplayer) (Server) OnProcessTransaction:
+---<br><br>args - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
+Events.OnProcessTransaction = {
+	---@param callback Callback_OnProcessTransaction
+	Add = function(callback) end,
+	---@param callback Callback_OnProcessTransaction
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnQRReceived function
+
+---@deprecated
+---(Deprecated) OnQRReceived:
+---<br><br>
+Events.OnQRReceived = {
+	---@param callback Callback_OnQRReceived
+	Add = function(callback) end,
+	---@param callback Callback_OnQRReceived
 	Remove = function(callback) end,
 }
 
@@ -1916,7 +2066,7 @@ Events.OnRainStop = {
 }
 
 ---key - The key of the mod data table that was requested.<br>data - The mod data table that was returned. False if there was no mod data table by that key.<br>
----@alias Callback_OnReceiveGlobalModData fun(key:string,data:table|false)
+---@alias Callback_OnReceiveGlobalModData fun(key:string,data:table | false)
 
 ---(Multiplayer) OnReceiveGlobalModData: Fires when receiving a global mod data table.
 ---<br><br>key - The key of the mod data table that was requested.<br>data - The mod data table that was returned. False if there was no mod data table by that key.<br>
@@ -1928,7 +2078,7 @@ Events.OnReceiveGlobalModData = {
 }
 
 ---sender - The player who sent the item list. Nil if it was sent by the server.<br>items - The list of items.<br>receiver - The specific local player the list was sent to. Nil if it was sent by a client to the server, or by the server to all clients.<br>transferID - Arbitrary string associated with the message. Defaults to -1 if none was given.<br>custom - Arbitrary string associated with the message. Nil if none was given.<br>
----@alias Callback_OnReceiveItemListNet fun(sender:IsoPlayer?,items:ArrayList,receiver:IsoPlayer?,transferID:string,custom:string?)
+---@alias Callback_OnReceiveItemListNet fun(sender:IsoPlayer | nil,items:ArrayList,receiver:IsoPlayer | nil,transferID:string,custom:string | nil)
 
 ---(Multiplayer) OnReceiveItemListNet: Fires when receiving a list of items sent with sendItemListNet. This is not used by vanilla, it is provided for mods to use. Item lists sent by clients cannot be longer than 50 items and all of the items must be in the player's inventory.
 ---<br><br>sender - The player who sent the item list. Nil if it was sent by the server.<br>items - The list of items.<br>receiver - The specific local player the list was sent to. Nil if it was sent by a client to the server, or by the server to all clients.<br>transferID - Arbitrary string associated with the message. Defaults to -1 if none was given.<br>custom - Arbitrary string associated with the message. Nil if none was given.<br>
@@ -2037,6 +2187,31 @@ Events.OnRightMouseUp = {
 }
 
 ---
+---@alias Callback_OnRolesReceived function
+
+---@deprecated
+---(Deprecated) OnRolesReceived:
+---<br><br>
+Events.OnRolesReceived = {
+	---@param callback Callback_OnRolesReceived
+	Add = function(callback) end,
+	---@param callback Callback_OnRolesReceived
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnSGlobalObjectSystemInit function
+
+---(Server) OnSGlobalObjectSystemInit: Fires when the server GlobalObject system has been initialised.
+---<br><br>
+Events.OnSGlobalObjectSystemInit = {
+	---@param callback Callback_OnSGlobalObjectSystemInit
+	Add = function(callback) end,
+	---@param callback Callback_OnSGlobalObjectSystemInit
+	Remove = function(callback) end,
+}
+
+---
 ---@alias Callback_OnSafehousesChanged function
 
 ---(Multiplayer) (Client) OnSafehousesChanged: Fires every time a safehouse is added, removed or changed.
@@ -2085,7 +2260,7 @@ Events.OnSeeNewRoom = {
 }
 
 ---module - The module the command was sent with.<br>command - The command the command was sent with.<br>args - The arguments table the command was sent with. If the table was empty, nil is passed instead.<br>
----@alias Callback_OnServerCommand fun(module:string,command:string,args:table?)
+---@alias Callback_OnServerCommand fun(module:string,command:string,args:table | nil)
 
 ---(Multiplayer) (Client) OnServerCommand: Fires when a server command sent through sendServerCommand is received by the client.
 ---<br><br>module - The module the command was sent with.<br>command - The command the command was sent with.<br>args - The arguments table the command was sent with. If the table was empty, nil is passed instead.<br>
@@ -2093,6 +2268,19 @@ Events.OnServerCommand = {
 	---@param callback Callback_OnServerCommand
 	Add = function(callback) end,
 	---@param callback Callback_OnServerCommand
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnServerCustomizationDataReceived function
+
+---@deprecated
+---(Deprecated) OnServerCustomizationDataReceived:
+---<br><br>
+Events.OnServerCustomizationDataReceived = {
+	---@param callback Callback_OnServerCustomizationDataReceived
+	Add = function(callback) end,
+	---@param callback Callback_OnServerCustomizationDataReceived
 	Remove = function(callback) end,
 }
 
@@ -2109,18 +2297,6 @@ Events.OnServerFinishSaving = {
 }
 
 ---
----@alias Callback_OnServerStarted function
-
----(Multiplayer) (Server) OnServerStarted: Fires when the server has started and can now be connected to.
----<br><br>
-Events.OnServerStarted = {
-	---@param callback Callback_OnServerStarted
-	Add = function(callback) end,
-	---@param callback Callback_OnServerStarted
-	Remove = function(callback) end,
-}
-
----
 ---@alias Callback_OnServerStartSaving function
 
 ---(Multiplayer) (Server) OnServerStartSaving: Fires when the server has paused the game to save.
@@ -2129,6 +2305,18 @@ Events.OnServerStartSaving = {
 	---@param callback Callback_OnServerStartSaving
 	Add = function(callback) end,
 	---@param callback Callback_OnServerStartSaving
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnServerStarted function
+
+---(Multiplayer) (Server) OnServerStarted: Fires when the server has started and can now be connected to.
+---<br><br>
+Events.OnServerStarted = {
+	---@param callback Callback_OnServerStarted
+	Add = function(callback) end,
+	---@param callback Callback_OnServerStarted
 	Remove = function(callback) end,
 }
 
@@ -2145,9 +2333,9 @@ Events.OnServerStatisticReceived = {
 }
 
 ---
----@alias Callback_OnServerWorkshopItems fun(type:string)
+---@alias Callback_OnServerWorkshopItems fun(type:string,items:ArrayList | string | integer | nil,error:string | integer | nil,maxSize:integer | nil)
 
----(Multiplayer) (Client) OnServerWorkshopItems: Fires when receiving an update about the server's Steam Workshop items while connecting.
+---(Multiplayer) (Client) OnServerWorkshopItems: Fires when receiving an update about the server's Steam Workshop items while connecting. Has a very variable signature depending on the type.
 ---<br><br>
 Events.OnServerWorkshopItems = {
 	---@param callback Callback_OnServerWorkshopItems
@@ -2169,14 +2357,26 @@ Events.OnSetDefaultTab = {
 }
 
 ---
----@alias Callback_OnSGlobalObjectSystemInit function
+---@alias Callback_OnSleepingTick fun(playerNum:number,timeOfDay:number)
 
----(Server) OnSGlobalObjectSystemInit: Fires when the server GlobalObject system has been initialised.
+---OnSleepingTick:
 ---<br><br>
-Events.OnSGlobalObjectSystemInit = {
-	---@param callback Callback_OnSGlobalObjectSystemInit
+Events.OnSleepingTick = {
+	---@param callback Callback_OnSleepingTick
 	Add = function(callback) end,
-	---@param callback Callback_OnSGlobalObjectSystemInit
+	---@param callback Callback_OnSleepingTick
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnSourceWindowFileReload function
+
+---OnSourceWindowFileReload: Triggered when a file is reloaded from the debug source viewer.
+---<br><br>
+Events.OnSourceWindowFileReload = {
+	---@param callback Callback_OnSourceWindowFileReload
+	Add = function(callback) end,
+	---@param callback Callback_OnSourceWindowFileReload
 	Remove = function(callback) end,
 }
 
@@ -2189,6 +2389,30 @@ Events.OnSpawnRegionsLoaded = {
 	---@param callback Callback_OnSpawnRegionsLoaded
 	Add = function(callback) end,
 	---@param callback Callback_OnSpawnRegionsLoaded
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnSpawnVehicleEnd fun(vehicle:BaseVehicle)
+
+---OnSpawnVehicleEnd:
+---<br><br>
+Events.OnSpawnVehicleEnd = {
+	---@param callback Callback_OnSpawnVehicleEnd
+	Add = function(callback) end,
+	---@param callback Callback_OnSpawnVehicleEnd
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnSpawnVehicleStart fun(vehicle:BaseVehicle)
+
+---OnSpawnVehicleStart:
+---<br><br>
+Events.OnSpawnVehicleStart = {
+	---@param callback Callback_OnSpawnVehicleStart
+	Add = function(callback) end,
+	---@param callback Callback_OnSpawnVehicleStart
 	Remove = function(callback) end,
 }
 
@@ -2229,7 +2453,7 @@ Events.OnSteamRefreshInternetServers = {
 }
 
 ---rules - Table of information about the server TODO: investigate what this actually is, class definition?<br>
----@alias Callback_OnSteamRulesRefreshComplete fun(address:string,port:integer,rules:table)
+---@alias Callback_OnSteamRulesRefreshComplete fun(address:string,port:number,rules:table)
 
 ---(Client) OnSteamRulesRefreshComplete: Fires after a server's rules are retrieved.
 ---<br><br>rules - Table of information about the server TODO: investigate what this actually is, class definition?<br>
@@ -2237,6 +2461,18 @@ Events.OnSteamRulesRefreshComplete = {
 	---@param callback Callback_OnSteamRulesRefreshComplete
 	Add = function(callback) end,
 	---@param callback Callback_OnSteamRulesRefreshComplete
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_OnSteamServerFailedToRespond2 fun(host:string,port:number)
+
+---OnSteamServerFailedToRespond2:
+---<br><br>
+Events.OnSteamServerFailedToRespond2 = {
+	---@param callback Callback_OnSteamServerFailedToRespond2
+	Add = function(callback) end,
+	---@param callback Callback_OnSteamServerFailedToRespond2
 	Remove = function(callback) end,
 }
 
@@ -2253,7 +2489,7 @@ Events.OnSteamServerResponded = {
 }
 
 ---
----@alias Callback_OnSteamServerResponded2 fun(address:string,port:integer,server:Server)
+---@alias Callback_OnSteamServerResponded2 fun(address:string,port:number,server:Server)
 
 ---(Client) OnSteamServerResponded2: Fires when receiving a server for the favourite server list.
 ---<br><br>
@@ -2312,6 +2548,18 @@ Events.OnSteamWorkshopItemUpdated = {
 	Remove = function(callback) end,
 }
 
+---player - The player who stopped grappling.<br>
+---@alias Callback_OnStopGrapple fun(player:IsoPlayer)
+
+---(Client) OnStopGrapple: Triggered when a local player stops grappling.
+---<br><br>player - The player who stopped grappling.<br>
+Events.OnStopGrapple = {
+	---@param callback Callback_OnStopGrapple
+	Add = function(callback) end,
+	---@param callback Callback_OnStopGrapple
+	Remove = function(callback) end,
+}
+
 ---character - The character who moved seats.<br>
 ---@alias Callback_OnSwitchVehicleSeat fun(character:IsoGameCharacter)
 
@@ -2325,7 +2573,7 @@ Events.OnSwitchVehicleSeat = {
 }
 
 ---
----@alias Callback_OnTabAdded fun(title:string,tabID:number)
+---@alias Callback_OnTabAdded fun(title:string,tabID:integer)
 
 ---(Multiplayer) (Client) OnTabAdded: Fires when a tab is added to the chat.
 ---<br><br>
@@ -2337,7 +2585,7 @@ Events.OnTabAdded = {
 }
 
 ---
----@alias Callback_OnTabRemoved fun(title:string,tabID:number)
+---@alias Callback_OnTabRemoved fun(title:string,tabID:integer)
 
 ---(Multiplayer) (Client) OnTabRemoved: Fires when a tab is removed from the chat.
 ---<br><br>
@@ -2420,18 +2668,6 @@ Events.OnTileRemoved = {
 	Remove = function(callback) end,
 }
 
----character - The character toggling search mode.<br>isSearchMode - Whether search mode is now on or off.<br>
----@alias Callback_onToggleSearchMode fun(character:IsoPlayer,isSearchMode:boolean)
-
----(Client) onToggleSearchMode: Fires when a local player toggles search mode.
----<br><br>character - The character toggling search mode.<br>isSearchMode - Whether search mode is now on or off.<br>
-Events.onToggleSearchMode = {
-	---@param callback Callback_onToggleSearchMode
-	Add = function(callback) end,
-	---@param callback Callback_onToggleSearchMode
-	Remove = function(callback) end,
-}
-
 ---
 ---@alias Callback_OnTriggerNPCEvent fun(type:string,data:table,def:BuildingDef)
 
@@ -2441,18 +2677,6 @@ Events.OnTriggerNPCEvent = {
 	---@param callback Callback_OnTriggerNPCEvent
 	Add = function(callback) end,
 	---@param callback Callback_OnTriggerNPCEvent
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_onUpdateIcon fun(zoneData:table,iconID:string,icon:ISForageIcon)
-
----(Client) onUpdateIcon: Fires when an ISForageIcon is moved or removed.
----<br><br>
-Events.onUpdateIcon = {
-	---@param callback Callback_onUpdateIcon
-	Add = function(callback) end,
-	---@param callback Callback_onUpdateIcon
 	Remove = function(callback) end,
 }
 
@@ -2468,11 +2692,11 @@ Events.OnUpdateModdedWeatherStage = {
 	Remove = function(callback) end,
 }
 
----character - The character using the vehicle.<br>vehicle - The vehicle being used.<br>pressedNotTapped - True if the button was held for a short duration, false if the button was tapped.<br>
----@alias Callback_OnUseVehicle fun(character:IsoGameCharacter,vehicle:BaseVehicle,pressedNotTapped:boolean)
+---player - The player using the vehicle.<br>vehicle - The vehicle being used.<br>pressedNotTapped - True if the button was held for a short duration, false if the button was tapped.<br>
+---@alias Callback_OnUseVehicle fun(player:IsoPlayer,vehicle:BaseVehicle,pressedNotTapped:boolean)
 
 ---(Client) OnUseVehicle: Fires when a local character enters or exits a vehicle.
----<br><br>character - The character using the vehicle.<br>vehicle - The vehicle being used.<br>pressedNotTapped - True if the button was held for a short duration, false if the button was tapped.<br>
+---<br><br>player - The player using the vehicle.<br>vehicle - The vehicle being used.<br>pressedNotTapped - True if the button was held for a short duration, false if the button was tapped.<br>
 Events.OnUseVehicle = {
 	---@param callback Callback_OnUseVehicle
 	Add = function(callback) end,
@@ -2505,11 +2729,24 @@ Events.OnVehicleHorn = {
 	Remove = function(callback) end,
 }
 
----object - The object which has gained/lost water.<br>previousAmount - The amount of water the object had before the change.<br>
----@alias Callback_OnWaterAmountChange fun(object:IsoObject,previousAmount:integer)
+---
+---@alias Callback_OnWarUpdate function
 
----OnWaterAmountChange: Fires when the amount of water in an object changes.
----<br><br>object - The object which has gained/lost water.<br>previousAmount - The amount of water the object had before the change.<br>
+---@deprecated
+---(Deprecated) OnWarUpdate:
+---<br><br>
+Events.OnWarUpdate = {
+	---@param callback Callback_OnWarUpdate
+	Add = function(callback) end,
+	---@param callback Callback_OnWarUpdate
+	Remove = function(callback) end,
+}
+
+---object - The object which has gained/lost fluid.<br>previousAmount - The amount of fluid the object had before the change.<br>
+---@alias Callback_OnWaterAmountChange fun(object:IsoObject,previousAmount:number)
+
+---OnWaterAmountChange: Fires when the amount of fluid (not just water) in an object changes.
+---<br><br>object - The object which has gained/lost fluid.<br>previousAmount - The amount of fluid the object had before the change.<br>
 Events.OnWaterAmountChange = {
 	---@param callback Callback_OnWaterAmountChange
 	Add = function(callback) end,
@@ -2530,9 +2767,9 @@ Events.OnWeaponHitCharacter = {
 }
 
 ---attacker - The character attacking the object.<br>weapon - The weapon the object was attacked with.<br>object - The object that was attacked.<br>
----@alias Callback_OnWeaponHitThumpable fun(attacker:IsoGameCharacter,weapon:HandWeapon,object:IsoThumpable)
+---@alias Callback_OnWeaponHitThumpable fun(attacker:IsoGameCharacter,weapon:HandWeapon,object:Thumpable)
 
----(Server) OnWeaponHitThumpable: Fires when an IsoThumpable is hit by an attack.
+---(Server) OnWeaponHitThumpable: Fires when a Thumpable is hit by an attack.
 ---<br><br>attacker - The character attacking the object.<br>weapon - The weapon the object was attacked with.<br>object - The object that was attacked.<br>
 Events.OnWeaponHitThumpable = {
 	---@param callback Callback_OnWeaponHitThumpable
@@ -2553,11 +2790,11 @@ Events.OnWeaponHitTree = {
 	Remove = function(callback) end,
 }
 
----attacker - The character who attacked.<br>weapon - The weapon the character attacked with.<br>target - The target of the attack.<br>damage - The damage of the attack.<br>
----@alias Callback_OnWeaponHitXp fun(attacker:IsoGameCharacter,weapon:HandWeapon,target:IsoMovingObject,damage:number)
+---attacker - The character who attacked.<br>weapon - The weapon the character attacked with.<br>target - The target of the attack.<br>damage - The damage of the attack.<br>hitcount - Unknown purpose: always 1. Added at some point in B42.<br>
+---@alias Callback_OnWeaponHitXp fun(attacker:IsoGameCharacter,weapon:HandWeapon,target:IsoMovingObject,damage:number,hitcount:1)
 
 ---OnWeaponHitXp: Fires when XP is being granted for an attack.
----<br><br>attacker - The character who attacked.<br>weapon - The weapon the character attacked with.<br>target - The target of the attack.<br>damage - The damage of the attack.<br>
+---<br><br>attacker - The character who attacked.<br>weapon - The weapon the character attacked with.<br>target - The target of the attack.<br>damage - The damage of the attack.<br>hitcount - Unknown purpose: always 1. Added at some point in B42.<br>
 Events.OnWeaponHitXp = {
 	---@param callback Callback_OnWeaponHitXp
 	Add = function(callback) end,
@@ -2662,6 +2899,18 @@ Events.OnWorldSound = {
 	Remove = function(callback) end,
 }
 
+---zombie - The zombie being spawned.<br>
+---@alias Callback_OnZombieCreate fun(zombie:IsoZombie)
+
+---OnZombieCreate: Fires when a zombie is being spawned.
+---<br><br>zombie - The zombie being spawned.<br>
+Events.OnZombieCreate = {
+	---@param callback Callback_OnZombieCreate
+	Add = function(callback) end,
+	---@param callback Callback_OnZombieCreate
+	Remove = function(callback) end,
+}
+
 ---zombie - The zombie that died.<br>
 ---@alias Callback_OnZombieDead fun(zombie:IsoZombie)
 
@@ -2686,66 +2935,6 @@ Events.OnZombieUpdate = {
 	Remove = function(callback) end,
 }
 
----system - The foraging system.<br>
----@alias Callback_preAddCatDefs fun(system:forageSystem)
-
----preAddCatDefs: Fires before the foraging system processes item category definitions.
----<br><br>system - The foraging system.<br>
-Events.preAddCatDefs = {
-	---@param callback Callback_preAddCatDefs
-	Add = function(callback) end,
-	---@param callback Callback_preAddCatDefs
-	Remove = function(callback) end,
-}
-
----system - The foraging system.<br>
----@alias Callback_preAddForageDefs fun(system:forageSystem)
-
----preAddForageDefs: Fires before the foraging system processes any definitions.
----<br><br>system - The foraging system.<br>
-Events.preAddForageDefs = {
-	---@param callback Callback_preAddForageDefs
-	Add = function(callback) end,
-	---@param callback Callback_preAddForageDefs
-	Remove = function(callback) end,
-}
-
----system - The foraging system.<br>
----@alias Callback_preAddItemDefs fun(system:forageSystem)
-
----preAddItemDefs: Fires before the foraging system processes item definitions.
----<br><br>system - The foraging system.<br>
-Events.preAddItemDefs = {
-	---@param callback Callback_preAddItemDefs
-	Add = function(callback) end,
-	---@param callback Callback_preAddItemDefs
-	Remove = function(callback) end,
-}
-
----system - The foraging system.<br>
----@alias Callback_preAddSkillDefs fun(system:forageSystem)
-
----preAddSkillDefs: Fires before the foraging system processes trait and profession definitions.
----<br><br>system - The foraging system.<br>
-Events.preAddSkillDefs = {
-	---@param callback Callback_preAddSkillDefs
-	Add = function(callback) end,
-	---@param callback Callback_preAddSkillDefs
-	Remove = function(callback) end,
-}
-
----system - The foraging system.<br>
----@alias Callback_preAddZoneDefs fun(system:forageSystem)
-
----preAddZoneDefs: Fires before the foraging system processes zone definitions.
----<br><br>system - The foraging system.<br>
-Events.preAddZoneDefs = {
-	---@param callback Callback_preAddZoneDefs
-	Add = function(callback) end,
-	---@param callback Callback_preAddZoneDefs
-	Remove = function(callback) end,
-}
-
 ---
 ---@alias Callback_ReceiveFactionInvite fun(factionName:string,hostUsername:string)
 
@@ -2767,6 +2956,31 @@ Events.ReceiveSafehouseInvite = {
 	---@param callback Callback_ReceiveSafehouseInvite
 	Add = function(callback) end,
 	---@param callback Callback_ReceiveSafehouseInvite
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_RefreshCheats function
+
+---@deprecated
+---(Deprecated) RefreshCheats:
+---<br><br>
+Events.RefreshCheats = {
+	---@param callback Callback_RefreshCheats
+	Add = function(callback) end,
+	---@param callback Callback_RefreshCheats
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_RenderOpaqueObjectsInWorld fun(playerNum:integer,x:integer,y:integer,z:integer,square:IsoGridSquare)
+
+---RenderOpaqueObjectsInWorld:
+---<br><br>
+Events.RenderOpaqueObjectsInWorld = {
+	---@param callback Callback_RenderOpaqueObjectsInWorld
+	Add = function(callback) end,
+	---@param callback Callback_RenderOpaqueObjectsInWorld
 	Remove = function(callback) end,
 }
 
@@ -2815,6 +3029,18 @@ Events.ServerPinged = {
 	---@param callback Callback_ServerPinged
 	Add = function(callback) end,
 	---@param callback Callback_ServerPinged
+	Remove = function(callback) end,
+}
+
+---item - The drag item being set.<br>playerNum - The index of the player whose drag item is being set.<br>
+---@alias Callback_SetDragItem fun(item:table,playerNum:integer)
+
+---(Client) SetDragItem: Fires before a local player's drag item (typically a build cursor) is set.
+---<br><br>item - The drag item being set.<br>playerNum - The index of the player whose drag item is being set.<br>
+Events.SetDragItem = {
+	---@param callback Callback_SetDragItem
+	Add = function(callback) end,
+	---@param callback Callback_SetDragItem
 	Remove = function(callback) end,
 }
 
@@ -2878,6 +3104,18 @@ Events.TradingUIUpdateState = {
 	Remove = function(callback) end,
 }
 
+---bannedIPs - List of banned ip database entries.<br>
+---@alias Callback_ViewBannedIPs fun(bannedIPs:ArrayList)
+
+---(Multiplayer) (Client) ViewBannedIPs: Triggered when receiving the response to a request from getBannedIPs().
+---<br><br>bannedIPs - List of banned ip database entries.<br>
+Events.ViewBannedIPs = {
+	---@param callback Callback_ViewBannedIPs
+	Add = function(callback) end,
+	---@param callback Callback_ViewBannedIPs
+	Remove = function(callback) end,
+}
+
 ---
 ---@alias Callback_ViewTickets fun(tickets:ArrayList)
 
@@ -2890,397 +3128,159 @@ Events.ViewTickets = {
 	Remove = function(callback) end,
 }
 
----player - The player pressing the context key.<br>timeMs - How long, in milliseconds, the context key has been held for.<br>
----@alias Callback_OnContextKey fun(player:IsoPlayer,timeMs:number)
+---forageSystem - The foraging system.<br>
+---@alias Callback_onAddForageDefs fun(forageSystem:forageSystem)
 
----(Client) OnContextKey: Triggered while the player is holding the context key.
----<br><br>player - The player pressing the context key.<br>timeMs - How long, in milliseconds, the context key has been held for.<br>
-Events.OnContextKey = {
-	---@param callback Callback_OnContextKey
+---onAddForageDefs: Fires after the foraging item definitions are created.
+---<br><br>forageSystem - The foraging system.<br>
+Events.onAddForageDefs = {
+	---@param callback Callback_onAddForageDefs
 	Add = function(callback) end,
-	---@param callback Callback_OnContextKey
+	---@param callback Callback_onAddForageDefs
 	Remove = function(callback) end,
 }
 
----zombie - The zombie being spawned.<br>
----@alias Callback_OnZombieCreate fun(zombie:IsoZombie)
+---character - The character disabling search mode.<br>isSearchMode - Always false.<br>
+---@alias Callback_onDisableSearchMode fun(character:IsoPlayer,isSearchMode:false)
 
----OnZombieCreate: Fires when a zombie is being spawned.
----<br><br>zombie - The zombie being spawned.<br>
-Events.OnZombieCreate = {
-	---@param callback Callback_OnZombieCreate
+---(Client) onDisableSearchMode: Fires when a local player disables search mode.
+---<br><br>character - The character disabling search mode.<br>isSearchMode - Always false.<br>
+Events.onDisableSearchMode = {
+	---@param callback Callback_onDisableSearchMode
 	Add = function(callback) end,
-	---@param callback Callback_OnZombieCreate
+	---@param callback Callback_onDisableSearchMode
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnClickedAnimalForContext fun(playerNum:integer,context:ISContextMenu,animals:IsoAnimal[],test:boolean)
+---character - The character disabling search mode.<br>isSearchMode - Always true.<br>
+---@alias Callback_onEnableSearchMode fun(character:IsoPlayer,isSearchMode:true)
 
----OnClickedAnimalForContext:
----<br><br>
-Events.OnClickedAnimalForContext = {
-	---@param callback Callback_OnClickedAnimalForContext
+---(Client) onEnableSearchMode: Fires when a local player enables search mode.
+---<br><br>character - The character disabling search mode.<br>isSearchMode - Always true.<br>
+Events.onEnableSearchMode = {
+	---@param callback Callback_onEnableSearchMode
 	Add = function(callback) end,
-	---@param callback Callback_OnClickedAnimalForContext
+	---@param callback Callback_onEnableSearchMode
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_RenderOpaqueObjectsInWorld fun(playerNum:integer,x:integer,y:integer,z:integer,square:IsoGridSquare)
+---context - The foraging context menu.<br>icon - The foraging icon the context menu was created for.<br>
+---@alias Callback_onFillSearchIconContextMenu fun(context:ISContextMenu,icon:ISBaseIcon)
 
----RenderOpaqueObjectsInWorld:
----<br><br>
-Events.RenderOpaqueObjectsInWorld = {
-	---@param callback Callback_RenderOpaqueObjectsInWorld
+---(Client) onFillSearchIconContextMenu: Fires when opening the context menu for a foraging item.
+---<br><br>context - The foraging context menu.<br>icon - The foraging icon the context menu was created for.<br>
+Events.onFillSearchIconContextMenu = {
+	---@param callback Callback_onFillSearchIconContextMenu
 	Add = function(callback) end,
-	---@param callback Callback_RenderOpaqueObjectsInWorld
+	---@param callback Callback_onFillSearchIconContextMenu
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnQRReceived function
+---item - The item that fell.<br>
+---@alias Callback_onItemFall fun(item:InventoryItem)
 
----@deprecated
----(Deprecated) OnQRReceived:
----<br><br>
-Events.OnQRReceived = {
-	---@param callback Callback_OnQRReceived
+---(Client) onItemFall: Fires when a local character is forced to drop the items in their hands.
+---<br><br>item - The item that fell.<br>
+Events.onItemFall = {
+	---@param callback Callback_onItemFall
 	Add = function(callback) end,
-	---@param callback Callback_OnQRReceived
+	---@param callback Callback_onItemFall
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnGoogleAuthRequest function
+---square - The square that had its mod data updated.<br>
+---@alias Callback_onLoadModDataFromServer fun(square:IsoGridSquare)
 
----@deprecated
----(Deprecated) OnGoogleAuthRequest:
----<br><br>
-Events.OnGoogleAuthRequest = {
-	---@param callback Callback_OnGoogleAuthRequest
+---(Multiplayer) onLoadModDataFromServer: Fires when the server sends a square's mod data to the clients, or when the client receives it.
+---<br><br>square - The square that had its mod data updated.<br>
+Events.onLoadModDataFromServer = {
+	---@param callback Callback_onLoadModDataFromServer
 	Add = function(callback) end,
-	---@param callback Callback_OnGoogleAuthRequest
+	---@param callback Callback_onLoadModDataFromServer
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnMouseWheel fun(wheel:integer)
+---character - The character toggling search mode.<br>isSearchMode - Whether search mode is now on or off.<br>
+---@alias Callback_onToggleSearchMode fun(character:IsoPlayer,isSearchMode:boolean)
 
----OnMouseWheel:
----<br><br>
-Events.OnMouseWheel = {
-	---@param callback Callback_OnMouseWheel
+---(Client) onToggleSearchMode: Fires when a local player toggles search mode.
+---<br><br>character - The character toggling search mode.<br>isSearchMode - Whether search mode is now on or off.<br>
+Events.onToggleSearchMode = {
+	---@param callback Callback_onToggleSearchMode
 	Add = function(callback) end,
-	---@param callback Callback_OnMouseWheel
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_LoadChunk fun(chunk:IsoChunk)
-
----LoadChunk:
----<br><br>
-Events.LoadChunk = {
-	---@param callback Callback_LoadChunk
-	Add = function(callback) end,
-	---@param callback Callback_LoadChunk
-	Remove = function(callback) end,
-}
-
----args - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
----@alias Callback_OnProcessTransaction fun(action:"scrapMoveable"|"pickUpMoveable"|"rotateMoveable"|"placeMoveable"|"dropOnFloor",character:IsoPlayer,item:InventoryItem,source:ContainerID,destination:ContainerID,args:table)
-
----(Multiplayer) (Server) OnProcessTransaction:
----<br><br>args - When type is "dropOnFloor", has field IsoGridSquare "square". When type is "rotateMoveable" or "placeMoveable", has field string "direction"<br>
-Events.OnProcessTransaction = {
-	---@param callback Callback_OnProcessTransaction
-	Add = function(callback) end,
-	---@param callback Callback_OnProcessTransaction
+	---@param callback Callback_onToggleSearchMode
 	Remove = function(callback) end,
 }
 
 ---
----@alias Callback_OnProcessAction fun(action:"build",character:IsoPlayer,args:table)
+---@alias Callback_onUpdateIcon fun(zoneData:table,iconID:string,icon:ISForageIcon)
 
----(Multiplayer) (Server) OnProcessAction:
+---(Client) onUpdateIcon: Fires when an ISForageIcon is moved or removed.
 ---<br><br>
-Events.OnProcessAction = {
-	---@param callback Callback_OnProcessAction
+Events.onUpdateIcon = {
+	---@param callback Callback_onUpdateIcon
 	Add = function(callback) end,
-	---@param callback Callback_OnProcessAction
+	---@param callback Callback_onUpdateIcon
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_RefreshCheats function
+---system - The foraging system.<br>
+---@alias Callback_preAddCatDefs fun(system:forageSystem)
 
----@deprecated
----(Deprecated) RefreshCheats:
----<br><br>
-Events.RefreshCheats = {
-	---@param callback Callback_RefreshCheats
+---preAddCatDefs: Fires before the foraging system processes item category definitions.
+---<br><br>system - The foraging system.<br>
+Events.preAddCatDefs = {
+	---@param callback Callback_preAddCatDefs
 	Add = function(callback) end,
-	---@param callback Callback_RefreshCheats
+	---@param callback Callback_preAddCatDefs
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnWarUpdate function
+---system - The foraging system.<br>
+---@alias Callback_preAddForageDefs fun(system:forageSystem)
 
----@deprecated
----(Deprecated) OnWarUpdate:
----<br><br>
-Events.OnWarUpdate = {
-	---@param callback Callback_OnWarUpdate
+---preAddForageDefs: Fires before the foraging system processes any definitions.
+---<br><br>system - The foraging system.<br>
+Events.preAddForageDefs = {
+	---@param callback Callback_preAddForageDefs
 	Add = function(callback) end,
-	---@param callback Callback_OnWarUpdate
+	---@param callback Callback_preAddForageDefs
 	Remove = function(callback) end,
 }
 
----message - The message that was added.<br>tabId - The ID of the tab the message was added to.<br>
----@alias Callback_OnAlertMessage fun(message:ChatMessage,tabId:number)
+---system - The foraging system.<br>
+---@alias Callback_preAddItemDefs fun(system:forageSystem)
 
----OnAlertMessage: See OnAddMessage
----<br><br>message - The message that was added.<br>tabId - The ID of the tab the message was added to.<br>
-Events.OnAlertMessage = {
-	---@param callback Callback_OnAlertMessage
+---preAddItemDefs: Fires before the foraging system processes item definitions.
+---<br><br>system - The foraging system.<br>
+Events.preAddItemDefs = {
+	---@param callback Callback_preAddItemDefs
 	Add = function(callback) end,
-	---@param callback Callback_OnAlertMessage
+	---@param callback Callback_preAddItemDefs
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnFishingActionMPUpdate function
+---system - The foraging system.<br>
+---@alias Callback_preAddSkillDefs fun(system:forageSystem)
 
----@deprecated
----(Deprecated) OnFishingActionMPUpdate:
----<br><br>
-Events.OnFishingActionMPUpdate = {
-	---@param callback Callback_OnFishingActionMPUpdate
+---preAddSkillDefs: Fires before the foraging system processes trait and profession definitions.
+---<br><br>system - The foraging system.<br>
+Events.preAddSkillDefs = {
+	---@param callback Callback_preAddSkillDefs
 	Add = function(callback) end,
-	---@param callback Callback_OnFishingActionMPUpdate
+	---@param callback Callback_preAddSkillDefs
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_OnSourceWindowFileReload function
+---system - The foraging system.<br>
+---@alias Callback_preAddZoneDefs fun(system:forageSystem)
 
----OnSourceWindowFileReload: Triggered when a file is reloaded from the debug source viewer.
----<br><br>
-Events.OnSourceWindowFileReload = {
-	---@param callback Callback_OnSourceWindowFileReload
+---preAddZoneDefs: Fires before the foraging system processes zone definitions.
+---<br><br>system - The foraging system.<br>
+Events.preAddZoneDefs = {
+	---@param callback Callback_preAddZoneDefs
 	Add = function(callback) end,
-	---@param callback Callback_OnSourceWindowFileReload
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnSpawnVehicleStart fun(vehicle:BaseVehicle)
-
----OnSpawnVehicleStart:
----<br><br>
-Events.OnSpawnVehicleStart = {
-	---@param callback Callback_OnSpawnVehicleStart
-	Add = function(callback) end,
-	---@param callback Callback_OnSpawnVehicleStart
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnSpawnVehicleEnd fun(vehicle:BaseVehicle)
-
----OnSpawnVehicleEnd:
----<br><br>
-Events.OnSpawnVehicleEnd = {
-	---@param callback Callback_OnSpawnVehicleEnd
-	Add = function(callback) end,
-	---@param callback Callback_OnSpawnVehicleEnd
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnMovingObjectCrop function
-
----@deprecated
----(Deprecated) OnMovingObjectCrop:
----<br><br>
-Events.OnMovingObjectCrop = {
-	---@param callback Callback_OnMovingObjectCrop
-	Add = function(callback) end,
-	---@param callback Callback_OnMovingObjectCrop
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnOverrideSearchManager function
-
----@deprecated
----(Deprecated) OnOverrideSearchManager:
----<br><br>
-Events.OnOverrideSearchManager = {
-	---@param callback Callback_OnOverrideSearchManager
-	Add = function(callback) end,
-	---@param callback Callback_OnOverrideSearchManager
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnSleepingTick fun(playerNum:integer,timeOfDay:number)
-
----OnSleepingTick:
----<br><br>
-Events.OnSleepingTick = {
-	---@param callback Callback_OnSleepingTick
-	Add = function(callback) end,
-	---@param callback Callback_OnSleepingTick
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnRolesReceived function
-
----@deprecated
----(Deprecated) OnRolesReceived:
----<br><br>
-Events.OnRolesReceived = {
-	---@param callback Callback_OnRolesReceived
-	Add = function(callback) end,
-	---@param callback Callback_OnRolesReceived
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnNetworkUsersReceived function
-
----@deprecated
----(Deprecated) OnNetworkUsersReceived:
----<br><br>
-Events.OnNetworkUsersReceived = {
-	---@param callback Callback_OnNetworkUsersReceived
-	Add = function(callback) end,
-	---@param callback Callback_OnNetworkUsersReceived
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnServerCustomizationDataReceived function
-
----@deprecated
----(Deprecated) OnServerCustomizationDataReceived:
----<br><br>
-Events.OnServerCustomizationDataReceived = {
-	---@param callback Callback_OnServerCustomizationDataReceived
-	Add = function(callback) end,
-	---@param callback Callback_OnServerCustomizationDataReceived
-	Remove = function(callback) end,
-}
-
----body - The dead body being spawned.<br>
----@alias Callback_OnDeadBodySpawn fun(body:IsoDeadBody)
-
----OnDeadBodySpawn: Fires when spawning a dead body.
----<br><br>body - The dead body being spawned.<br>
-Events.OnDeadBodySpawn = {
-	---@param callback Callback_OnDeadBodySpawn
-	Add = function(callback) end,
-	---@param callback Callback_OnDeadBodySpawn
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnAnimalTracks fun(player:IsoPlayer,tracks:ArrayList)
-
----OnAnimalTracks:
----<br><br>
-Events.OnAnimalTracks = {
-	---@param callback Callback_OnAnimalTracks
-	Add = function(callback) end,
-	---@param callback Callback_OnAnimalTracks
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnItemFound fun(player:IsoPlayer,itemType:string,amount:number)
-
----OnItemFound:
----<br><br>
-Events.OnItemFound = {
-	---@param callback Callback_OnItemFound
-	Add = function(callback) end,
-	---@param callback Callback_OnItemFound
-	Remove = function(callback) end,
-}
-
----item - The drag item being set.<br>playerNum - The index of the player whose drag item is being set.<br>
----@alias Callback_SetDragItem fun(item:table,playerNum:integer)
-
----(Client) SetDragItem: Fires before a local player's drag item (typically a build cursor) is set.
----<br><br>item - The drag item being set.<br>playerNum - The index of the player whose drag item is being set.<br>
-Events.SetDragItem = {
-	---@param callback Callback_SetDragItem
-	Add = function(callback) end,
-	---@param callback Callback_SetDragItem
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_OnSteamServerFailedToRespond2 fun(host:string,port:integer)
-
----OnSteamServerFailedToRespond2:
----<br><br>
-Events.OnSteamServerFailedToRespond2 = {
-	---@param callback Callback_OnSteamServerFailedToRespond2
-	Add = function(callback) end,
-	---@param callback Callback_OnSteamServerFailedToRespond2
-	Remove = function(callback) end,
-}
-
----character - The grappler.<br>result - The reason the grapple ended. 'Aborted' means the grapple was cancelled.<br>
----@alias Callback_GrapplerLetGo fun(character:IsoGameCharacter,result:string)
-
----GrapplerLetGo: Triggered when a grappler lets go of their grappled target.
----<br><br>character - The grappler.<br>result - The reason the grapple ended. 'Aborted' means the grapple was cancelled.<br>
-Events.GrapplerLetGo = {
-	---@param callback Callback_GrapplerLetGo
-	Add = function(callback) end,
-	---@param callback Callback_GrapplerLetGo
-	Remove = function(callback) end,
-}
-
----
----@alias Callback_GrappleGrabCollisionCheck fun(character:IsoGameCharacter,weapon:HandWeapon)
-
----GrappleGrabCollisionCheck:
----<br><br>
-Events.GrappleGrabCollisionCheck = {
-	---@param callback Callback_GrappleGrabCollisionCheck
-	Add = function(callback) end,
-	---@param callback Callback_GrappleGrabCollisionCheck
-	Remove = function(callback) end,
-}
-
----player - The player who stopped grappling.<br>
----@alias Callback_OnStopGrapple fun(player:IsoPlayer)
-
----(Client) OnStopGrapple: Triggered when a local player stops grappling.
----<br><br>player - The player who stopped grappling.<br>
-Events.OnStopGrapple = {
-	---@param callback Callback_OnStopGrapple
-	Add = function(callback) end,
-	---@param callback Callback_OnStopGrapple
-	Remove = function(callback) end,
-}
-
----bannedIPs - List of banned ip database entries.<br>
----@alias Callback_ViewBannedIPs fun(bannedIPs:ArrayList)
-
----(Multiplayer) (Client) ViewBannedIPs: Triggered when receiving the response to a request from getBannedIPs().
----<br><br>bannedIPs - List of banned ip database entries.<br>
-Events.ViewBannedIPs = {
-	---@param callback Callback_ViewBannedIPs
-	Add = function(callback) end,
-	---@param callback Callback_ViewBannedIPs
+	---@param callback Callback_preAddZoneDefs
 	Remove = function(callback) end,
 }
 
@@ -3319,6 +3319,18 @@ Hook.CalculateStats = {
 	---@param callback Callback_CalculateStats
 	Add = function(callback) end,
 	---@param callback Callback_CalculateStats
+	Remove = function(callback) end,
+}
+
+---
+---@alias Callback_ContextualAction fun(actionType:string,character:IsoGameCharacter,object:any,arg1:any,arg2:any,arg3:any)
+
+---ContextualAction:
+---<br><br>
+Hook.ContextualAction = {
+	---@param callback Callback_ContextualAction
+	Add = function(callback) end,
+	---@param callback Callback_ContextualAction
 	Remove = function(callback) end,
 }
 
@@ -3372,50 +3384,44 @@ Hook.WeaponSwingHitPoint = {
 	Remove = function(callback) end,
 }
 
----
----@alias Callback_ContextualAction fun(actionType:string,character:IsoGameCharacter,object:any,arg1:any,arg2:any,arg3:any)
-
----ContextualAction:
----<br><br>
-Hook.ContextualAction = {
-	---@param callback Callback_ContextualAction
-	Add = function(callback) end,
-	---@param callback Callback_ContextualAction
-	Remove = function(callback) end,
-}
-
----Called when the item is first created, before it is placed into its container. Generally used to initialise items.<br><br>item - The item being created<br>
----@alias umbrella.Item_OnCreate fun(item:InventoryItem)
-
----Called when the item is cooked. Does not fire if the item has a ReplaceOnCooked as the item is destroyed. OnCooked functions *cannot* be inside tables or the game will not find them.<br><br>item - The item being cooked<br>
----@alias umbrella.Item_OnCooked fun(item:InventoryItem)
-
----Called when a player eats the item. Called on the client eating the item only.<br><br>item - The item being eaten<br>character - The character eating the item<br>amount - The fraction of the item that was eaten.<br>
----@alias umbrella.Item_OnEat fun(item:InventoryItem,character:IsoGameCharacter,amount:number)
-
----Called when checking if an item is allowed inside a container with this function assigned. The container's OnlyAcceptCategory will be checked first if it has one.<br><br>container - The container the item is being added to<br>item - The item being added to the container<br><br>boolean acceptItem - Whether to allow the item in the container
----@alias umbrella.Item_AcceptItemFunction fun(container:ItemContainer,item:InventoryItem):acceptItem:boolean
-
----Called when checking if an item can be used in the recipe.<br><br>item - The item being tested.<br><br>boolean test - Whether to allow the item in the recipe.
----@alias umbrella.CraftRecipe_OnTest fun(item:InventoryItem):test:boolean
-
----Called at the start of crafting the recipe.<br><br>character - The character crafting the recipe. Recipes started by a workstation will pass nil.<br>
----@alias umbrella.CraftRecipe_OnStart fun(recipeData:CraftRecipeData,character:IsoGameCharacter?)
-
----Called every tick while crafting the recipe.<br><br>
----@alias umbrella.CraftRecipe_OnUpdate fun(recipeData:CraftRecipeData)
-
 ---Called when successfully crafting the recipe.<br><br>character - The character who crafted the recipe. Recipes started by a workstation wil pass nil.<br>
----@alias umbrella.CraftRecipe_OnCreate fun(recipeData:CraftRecipeData,character:IsoGameCharacter?)
+---@alias umbrella.CraftRecipe_OnCreate fun(recipeData:CraftRecipeData,character:IsoGameCharacter | nil)
 
 ---Called when failing to craft the recipe.<br><br>
 ---@alias umbrella.CraftRecipe_OnFailed fun(recipeData:CraftRecipeData)
 
----Called when checking if a character is able to perform the recipe - before showing the option to craft it, and every tick during crafting.<br><br>recipe - The recipe being checked<br>character - The character the recipe is being checked for<br>item - The item the player right clicked to see this recipe. Null when checking whether to show the recipe in the crafting menu, but will be checked with the item set during crafting.<br><br>boolean canPerform - Whether to allow the character to craft the recipe
----@alias umbrella.Recipe_OnCanPerform fun(recipe:Recipe,character:IsoGameCharacter,item:InventoryItem?):canPerform:boolean
+---Called at the start of crafting the recipe.<br><br>character - The character crafting the recipe. Recipes started by a workstation will pass nil.<br>
+---@alias umbrella.CraftRecipe_OnStart fun(recipeData:CraftRecipeData,character:IsoGameCharacter | nil)
 
----Called when checking if an item is allowed to be used in a recipe.<br><br>item - The item being checked<br>result - The result of the recipe<br><br>boolean test - Whether to allow the item into the recipe
----@alias umbrella.Recipe_OnTest fun(item:InventoryItem,result:Recipe.Result):test:boolean
+---Called when checking if an item can be used in the recipe.<br><br>item - The item being tested.<br><br>boolean test - Whether to allow the item in the recipe.
+---@alias umbrella.CraftRecipe_OnTest fun(item:InventoryItem):test:boolean
+
+---Called every tick while crafting the recipe.<br><br>
+---@alias umbrella.CraftRecipe_OnUpdate fun(recipeData:CraftRecipeData)
+
+---Used by the getBest methods in ItemContainer. These methods will sort all matches using this function, and return the item in first place.<br><br>a - The first item being tested.<br>b - The second item being tested.<br><br>number  - This should be positive if a should be prioritised over b, and negative if b should be prioritised.
+---@alias umbrella.ItemContainer_Comparator fun(a:InventoryItem,b:InventoryItem):number
+
+---Used by the -Eval methods in ItemContainer. These methods will only consider items that this function returns true for.<br><br>item - The item being tested.<br><br>boolean allowItem - Whether the item is a valid match.
+---@alias umbrella.ItemContainer_Predicate fun(item:InventoryItem):allowItem:boolean
+
+---Called when checking if an item is allowed inside a container with this function assigned. The container's OnlyAcceptCategory will be checked first if it has one.<br><br>container - The container the item is being added to<br>item - The item being added to the container<br><br>boolean acceptItem - Whether to allow the item in the container
+---@alias umbrella.Item_AcceptItemFunction fun(container:ItemContainer,item:InventoryItem):acceptItem:boolean
+
+---Called when the item is cooked. Does not fire if the item has a ReplaceOnCooked as the item is destroyed. OnCooked functions *cannot* be inside tables or the game will not find them.<br><br>item - The item being cooked<br>
+---@alias umbrella.Item_OnCooked fun(item:InventoryItem)
+
+---Called when the item is first created, before it is placed into its container. Generally used to initialise items.<br><br>item - The item being created<br>
+---@alias umbrella.Item_OnCreate fun(item:InventoryItem)
+
+---Called when a player eats the item. Called on the client eating the item only.<br><br>item - The item being eaten<br>character - The character eating the item<br>amount - The fraction of the item that was eaten.<br>
+---@alias umbrella.Item_OnEat fun(item:InventoryItem,character:IsoGameCharacter,amount:number)
+
+---Called by the recipe manager for every recipe source after the lua/server/ folder loads. The ArrayList should be filled with Item objects to include as part of the recipe source.<br><br>outItems - An empty ArrayList to be filled with items.<br>
+---@alias umbrella.Recipe_GetItemTypes fun(outItems:ArrayList)
+
+---Called when checking if a character is able to perform the recipe - before showing the option to craft it, and every tick during crafting.<br><br>recipe - The recipe being checked<br>character - The character the recipe is being checked for<br>item - The item the player right clicked to see this recipe. Null when checking whether to show the recipe in the crafting menu, but will be checked with the item set during crafting.<br><br>boolean canPerform - Whether to allow the character to craft the recipe
+---@alias umbrella.Recipe_OnCanPerform fun(recipe:Recipe,character:IsoGameCharacter,item:InventoryItem | nil):canPerform:boolean
 
 ---Called after crafting the recipe.<br><br>sources - The items used to craft the recipe<br>result - The item crafted by the recipe. Passed even if RemoveResultItem is set<br>character - The character who crafted the recipe<br>item - The item used in the crafting action. This is either the item that was right clicked to start the crafting, or the first source item if it was crafted from the recipe menu.<br>isPrimaryHandItem - True if item is equipped in the player's primary hand<br>isSecondaryHandItem - True if item is equipped in the player's secondary hand<br>
 ---@alias umbrella.Recipe_OnCreate fun(sources:ArrayList,result:InventoryItem,character:IsoGameCharacter,item:InventoryItem,isPrimaryHandItem:boolean,isSecondaryHandItem:boolean)
@@ -3423,14 +3429,20 @@ Hook.ContextualAction = {
 ---Called after crafting the recipe.<br><br>recipe - The recipe that was crafted<br>sources - The items used to craft the recipe<br>result - The item crafted by the recipe. Passed even if RemoveResultItem is set<br>character - The character who crafted the recipe<br>
 ---@alias umbrella.Recipe_OnGiveXP fun(recipe:Recipe,sources:ArrayList,result:InventoryItem,character:IsoGameCharacter)
 
----Called by the recipe manager for every recipe source after the lua/server/ folder loads. The ArrayList should be filled with Item objects to include as part of the recipe source.<br><br>outItems - An empty ArrayList to be filled with items.<br>
----@alias umbrella.Recipe_GetItemTypes fun(outItems:ArrayList)
+---Called when checking if an item is allowed to be used in a recipe.<br><br>item - The item being checked<br>result - The result of the recipe<br><br>boolean test - Whether to allow the item into the recipe
+---@alias umbrella.Recipe_OnTest fun(item:InventoryItem,result:Recipe.Result):test:boolean
 
----Called every time the part loads in or is reset.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being initialised<br>
----@alias umbrella.VehiclePart_init fun(vehicle:BaseVehicle,part:VehiclePart)
+---Called after the part is successfully installed.<br><br>vehicle - The vehicle the part belongs to<br>part - The part that was installed<br>
+---@alias umbrella.VehiclePart_Install_complete fun(vehicle:BaseVehicle,part:VehiclePart)
 
----Called when the part is spawned for the first time.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being created<br>
----@alias umbrella.VehiclePart_create fun(vehicle:BaseVehicle,part:VehiclePart)
+---Called when testing if the part can be installed.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being tested<br>character - The character using the part<br><br>boolean test - Whether the part can be installed
+---@alias umbrella.VehiclePart_Install_test fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter):test:boolean
+
+---Called after the part is successfully uninstalled.<br><br>vehicle - The vehicle the part belongs to<br>part - The part that was uninstalled<br>item - The item that was removed<br>
+---@alias umbrella.VehiclePart_Uninstall_complete fun(vehicle:BaseVehicle,part:VehiclePart,item:InventoryItem)
+
+---Called when testing if the part can be uninstalled.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being tested<br>character - The character using the part<br><br>boolean test - Whether the part can be uninstalled
+---@alias umbrella.VehiclePart_Uninstall_test fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter):test:boolean
 
 ---Called every tick while the engine is running. If any part returns false the engine will immediately shut off.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being checked<br><br>boolean working - Whether the engine should be working
 ---@alias umbrella.VehiclePart_checkEngine fun(vehicle:BaseVehicle,part:VehiclePart):working:boolean
@@ -3438,26 +3450,14 @@ Hook.ContextualAction = {
 ---Called every tick while a player is in the driver's seat and able to drive. If any part returns false the player will not be able to control the vehicle.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being checked<br><br>boolean operable - Whether the vehicle is operable
 ---@alias umbrella.VehiclePart_checkOperate fun(vehicle:BaseVehicle,part:VehiclePart):operable:boolean
 
+---Called when the part is spawned for the first time.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being created<br>
+---@alias umbrella.VehiclePart_create fun(vehicle:BaseVehicle,part:VehiclePart)
+
+---Called every time the part loads in or is reset.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being initialised<br>
+---@alias umbrella.VehiclePart_init fun(vehicle:BaseVehicle,part:VehiclePart)
+
 ---Called regularly to update the part, targeting a rate of every half an in-game minute (1.25 seconds on 1 hour days).<br><br>vehicle - The vehicle the part belongs to<br>part - The part being updated<br>deltaMinutes - The number of minutes since the last update<br>
 ---@alias umbrella.VehiclePart_update fun(vehicle:BaseVehicle,part:VehiclePart,deltaMinutes:number)
 
 ---Called when a character interacts with the vehicle while in the part's area.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being used<br>character - The character using the part<br>
 ---@alias umbrella.VehiclePart_use fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter)
-
----Called when testing if the part can be installed.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being tested<br>character - The character using the part<br><br>boolean test - Whether the part can be installed
----@alias umbrella.VehiclePart_Install_test fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter):test:boolean
-
----Called after the part is successfully installed.<br><br>vehicle - The vehicle the part belongs to<br>part - The part that was installed<br>
----@alias umbrella.VehiclePart_Install_complete fun(vehicle:BaseVehicle,part:VehiclePart)
-
----Called when testing if the part can be uninstalled.<br><br>vehicle - The vehicle the part belongs to<br>part - The part being tested<br>character - The character using the part<br><br>boolean test - Whether the part can be uninstalled
----@alias umbrella.VehiclePart_Uninstall_test fun(vehicle:BaseVehicle,part:VehiclePart,character:IsoGameCharacter):test:boolean
-
----Called after the part is successfully uninstalled.<br><br>vehicle - The vehicle the part belongs to<br>part - The part that was uninstalled<br>item - The item that was removed<br>
----@alias umbrella.VehiclePart_Uninstall_complete fun(vehicle:BaseVehicle,part:VehiclePart,item:InventoryItem)
-
----Used by the -Eval methods in ItemContainer. These methods will only consider items that this function returns true for.<br><br>item - The item being tested.<br><br>boolean allowItem - Whether the item is a valid match.
----@alias umbrella.ItemContainer_Predicate fun(item:InventoryItem):allowItem:boolean
-
----Used by the getBest methods in ItemContainer. These methods will sort all matches using this function, and return the item in first place.<br><br>a - The first item being tested.<br>b - The second item being tested.<br><br>number  - This should be positive if a should be prioritised over b, and negative if b should be prioritised.
----@alias umbrella.ItemContainer_Comparator fun(a:InventoryItem,b:InventoryItem):number

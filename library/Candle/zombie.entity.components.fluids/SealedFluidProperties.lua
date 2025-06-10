@@ -64,6 +64,10 @@ function SealedFluidProperties:getPainReduction() end
 
 --- @public
 --- @return number
+function SealedFluidProperties:getPoison() end
+
+--- @public
+--- @return number
 function SealedFluidProperties:getProteins() end
 
 --- @public

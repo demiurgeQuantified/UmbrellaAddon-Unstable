@@ -58,8 +58,9 @@ function FitnessState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function FitnessState:setParams(arg0) end
+function FitnessState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

@@ -1,17 +1,21 @@
 ---@meta
 
 ---@class ISExtendedPlacementUI : ISCollapsableWindow
----@field btnmode ISButton
 ---@field character unknown
 ---@field closeBtn ISButton
 ---@field drawJoypadFocus boolean
 ---@field font unknown
+---@field fontsmall unknown
+---@field ignoreSliderValueChange boolean
 ---@field item unknown
----@field labelaxisx ISLabel
----@field labelaxisy ISLabel
----@field labelaxisz ISLabel
----@field labelmode ISLabel
----@field mode string
+---@field labelmov ISLabel
+---@field labelrot ISLabel
+---@field labelxmov ISLabel
+---@field labelxrot ISLabel
+---@field labelymov ISLabel
+---@field labelyrot ISLabel
+---@field labelzmov ISLabel
+---@field labelzrot ISLabel
 ---@field originalMovX number
 ---@field originalMovY number
 ---@field originalMovZ number
@@ -22,16 +26,19 @@
 ---@field pressedMaxTime number
 ---@field pressedTime number
 ---@field revertBtn ISButton
----@field slideraxisxmov ISSliderPanel
----@field slideraxisxrot ISSliderPanel
----@field slideraxisymov ISSliderPanel
----@field slideraxisyrot ISSliderPanel
----@field slideraxiszmov ISSliderPanel
----@field slideraxiszrot ISSliderPanel
+---@field sliderxmov ISSliderPanel
+---@field sliderxrot ISSliderPanel
+---@field sliderymov ISSliderPanel
+---@field slideryrot ISSliderPanel
+---@field sliderzmov ISSliderPanel
+---@field sliderzrot ISSliderPanel
 ---@field title unknown
----@field txtboxaxisx ISTextEntryBox
----@field txtboxaxisy ISTextEntryBox
----@field txtboxaxisz ISTextEntryBox
+---@field txtboxxmov ISTextEntryBox
+---@field txtboxxrot ISTextEntryBox
+---@field txtboxymov ISTextEntryBox
+---@field txtboxyrot ISTextEntryBox
+---@field txtboxzmov ISTextEntryBox
+---@field txtboxzrot ISTextEntryBox
 ---@field wasPressing boolean
 ---@field worlditem unknown
 ISExtendedPlacementUI = ISCollapsableWindow:derive("ISExtendedPlacementUI")
@@ -50,8 +57,6 @@ function ISExtendedPlacementUI:initialise() end
 
 ---@return boolean
 function ISExtendedPlacementUI:isKeyConsumed(key) end
-
-function ISExtendedPlacementUI:modeChange() end
 
 function ISExtendedPlacementUI:onAxisSliderChange(value, slider) end
 

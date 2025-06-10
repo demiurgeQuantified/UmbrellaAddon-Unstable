@@ -45,6 +45,22 @@ function ThumpState:execute(owner) end
 --- @return nil
 function ThumpState:exit(owner) end
 
+--- @public
+--- @return boolean
+function ThumpState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ThumpState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ThumpState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ThumpState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

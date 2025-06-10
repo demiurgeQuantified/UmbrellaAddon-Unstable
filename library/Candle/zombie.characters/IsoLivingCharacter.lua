@@ -40,7 +40,15 @@ function IsoLivingCharacter:isDoShove() end
 
 --- @public
 --- @return boolean
+function IsoLivingCharacter:isDoStomp() end
+
+--- @public
+--- @return boolean
 function IsoLivingCharacter:isGrapplingWhileAiming() end
+
+--- @public
+--- @return boolean
+function IsoLivingCharacter:isShoving() end
 
 --- @public
 --- @return boolean

@@ -43,3 +43,7 @@ function IAlarmClock:setMinute(arg0) end
 --- @public
 --- @return nil
 function IAlarmClock:stopRinging() end
+
+--- @public
+--- @return nil
+function IAlarmClock:update() end

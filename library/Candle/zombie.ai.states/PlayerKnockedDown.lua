@@ -40,6 +40,22 @@ function PlayerKnockedDown:execute(owner) end
 --- @return nil
 function PlayerKnockedDown:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerKnockedDown:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerKnockedDown:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerKnockedDown:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerKnockedDown:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

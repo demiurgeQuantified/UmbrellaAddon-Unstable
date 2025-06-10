@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoPlayer: IsoLivingCharacter, IAnimalVisual, IHumanVisual
+--- @class IsoPlayer: IsoLivingCharacter, IAnimalVisual, IHumanVisual, IPositional
 --- @field public class any
 --- @field public assumedPlayer integer
 --- @field public DEATH_MUSIC_NAME string
@@ -162,11 +162,10 @@ function IsoPlayer:AttemptAttack() end
 function IsoPlayer:DoAttack(chargeDelta) end
 
 --- @public
---- @param chargeDelta number
---- @param forceShove boolean
---- @param clickSound string
+--- @param arg0 number
+--- @param arg1 string
 --- @return boolean
-function IsoPlayer:DoAttack(chargeDelta, forceShove, clickSound) end
+function IsoPlayer:DoAttack(arg0, arg1) end
 
 --- @public
 --- @param type string
@@ -272,7 +271,7 @@ function IsoPlayer:addWorldSoundUnlessInvisible(radius, volume, bStressHumans) e
 function IsoPlayer:allowsTwist() end
 
 --- @public
---- @return nil
+--- @return IsoDeadBody
 function IsoPlayer:becomeCorpse() end
 
 --- @public
@@ -291,7 +290,15 @@ function IsoPlayer:canClimbOverWall(dir) end
 
 --- @public
 --- @return boolean
+function IsoPlayer:canHearAll() end
+
+--- @public
+--- @return boolean
 function IsoPlayer:canPerformHandToHandCombat() end
+
+--- @public
+--- @return boolean
+function IsoPlayer:canSeeAll() end
 
 --- @public
 --- @return nil
@@ -312,12 +319,16 @@ function IsoPlayer:checkCanSeeClient(remoteConnection) end
 function IsoPlayer:checkWalkTo() end
 
 --- @public
---- @return nil
-function IsoPlayer:clearHandToHandAttack() end
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return boolean
+function IsoPlayer:checkZonesInterception(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return nil
-function IsoPlayer:clearNetworkEvents() end
+function IsoPlayer:clearHandToHandAttack() end
 
 --- @public
 --- @param dir IsoDirections
@@ -486,10 +497,6 @@ function IsoPlayer:getFitness() end
 --- @public
 --- @return integer
 function IsoPlayer:getFollowID() end
-
---- @public
---- @return string
-function IsoPlayer:getForname() end
 
 --- @public
 --- @param bDoNoises boolean
@@ -704,10 +711,6 @@ function IsoPlayer:getSpottedList() end
 function IsoPlayer:getSteamID() end
 
 --- @public
---- @return string
-function IsoPlayer:getSurname() end
-
---- @public
 --- @return ColorInfo
 function IsoPlayer:getTagColor() end
 
@@ -781,6 +784,18 @@ function IsoPlayer:getVoicePitch() end
 --- @public
 --- @return integer
 function IsoPlayer:getVoiceType() end
+
+--- @public
+--- @return number
+function IsoPlayer:getX() end
+
+--- @public
+--- @return number
+function IsoPlayer:getY() end
+
+--- @public
+--- @return number
+function IsoPlayer:getZ() end
 
 --- @public
 --- @param z IsoZombie
@@ -877,14 +892,6 @@ function IsoPlayer:isBlockMovement() end
 
 --- @public
 --- @return boolean
-function IsoPlayer:isCanHearAll() end
-
---- @public
---- @return boolean
-function IsoPlayer:isCanSeeAll() end
-
---- @public
---- @return boolean
 function IsoPlayer:isCheatPlayerSeeEveryone() end
 
 --- @public
@@ -971,9 +978,19 @@ function IsoPlayer:isIgnoreContextKey() end
 function IsoPlayer:isIgnoreInputsForDirection() end
 
 --- @public
+--- @param arg0 IPositional
+--- @param arg1 number
+--- @return boolean
+function IsoPlayer:isInRange(arg0, arg1) end
+
+--- @public
 --- @param ignoreBush boolean
 --- @return boolean
 function IsoPlayer:isInTrees2(ignoreBush) end
+
+--- @public
+--- @return boolean
+function IsoPlayer:isInitiateAttack() end
 
 --- @public
 --- @return boolean
@@ -1468,11 +1485,6 @@ function IsoPlayer:setForceRun(forceRun) end
 function IsoPlayer:setForceSprint(forceSprint) end
 
 --- @public
---- @param Forname string
---- @return nil
-function IsoPlayer:setForname(Forname) end
-
---- @public
 --- @param aGhostMode boolean
 --- @return nil
 function IsoPlayer:setGhostMode(aGhostMode) end
@@ -1683,11 +1695,6 @@ function IsoPlayer:setSleepingPillsTaken(sleepingPillsTaken) end
 function IsoPlayer:setSteamID(steamID) end
 
 --- @public
---- @param Surname string
---- @return nil
-function IsoPlayer:setSurname(Surname) end
-
---- @public
 --- @param tagColor ColorInfo
 --- @return nil
 function IsoPlayer:setTagColor(tagColor) end
@@ -1767,10 +1774,6 @@ function IsoPlayer:setbSeenThisFrame(bSeenThisFrame) end
 function IsoPlayer:shouldBeTurning() end
 
 --- @public
---- @return boolean
-function IsoPlayer:shouldDoInventory() end
-
---- @public
 --- @param arg0 string
 --- @return nil
 function IsoPlayer:startAttackLoopSound(arg0) end
@@ -1810,6 +1813,11 @@ function IsoPlayer:toggleForceSprint() end
 --- @public
 --- @return boolean
 function IsoPlayer:tooDarkToRead() end
+
+--- @public
+--- @param arg0 string
+--- @return integer
+function IsoPlayer:transmitPlayerVoiceSound(arg0) end
 
 --- @public
 --- @param arg0 string

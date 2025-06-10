@@ -361,6 +361,12 @@ function IsoGameCharacter:IsSpeakingNPC() end
 function IsoGameCharacter:Kill(killer) end
 
 --- @public
+--- @param arg0 HandWeapon
+--- @param arg1 IsoGameCharacter
+--- @return nil
+function IsoGameCharacter:Kill(arg0, arg1) end
+
+--- @public
 --- @param arg0 string
 --- @return nil
 function IsoGameCharacter:LetGoOfGrappled(arg0) end
@@ -1042,7 +1048,7 @@ function IsoGameCharacter:autoDrink() end
 function IsoGameCharacter:avoidDamage() end
 
 --- @public
---- @return nil
+--- @return IsoDeadBody
 function IsoGameCharacter:becomeCorpse() end
 
 --- @public
@@ -1207,6 +1213,10 @@ function IsoGameCharacter:canTransitionToState(arg0) end
 --- @param arg0 IsoObject
 --- @return boolean
 function IsoGameCharacter:canUseAsGenericCraftingSurface(arg0) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:canUseLootTool() end
 
 --- @public
 --- @param arg0 Vector2
@@ -1875,6 +1885,10 @@ function IsoGameCharacter:getCharacterTraits() end
 function IsoGameCharacter:getChatElement() end
 
 --- @public
+--- @return PlayerCheats
+function IsoGameCharacter:getCheats() end
+
+--- @public
 --- @return number
 function IsoGameCharacter:getChopTreeSpeed() end
 
@@ -1936,6 +1950,10 @@ function IsoGameCharacter:getClothingItem_Torso() end
 function IsoGameCharacter:getClothingWetness() end
 
 --- @public
+--- @return ArrayList
+function IsoGameCharacter:getContainers() end
+
+--- @public
 --- @return number
 function IsoGameCharacter:getCorpseSicknessDefense() end
 
@@ -1981,6 +1999,10 @@ function IsoGameCharacter:getCurrentState() end
 --- @public
 --- @return string
 function IsoGameCharacter:getCurrentStateName() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getCurrentVerticalAimAngle() end
 
 --- @public
 --- @return number _ the dangerLevels
@@ -3055,6 +3077,10 @@ function IsoGameCharacter:getTargetGrappleRotation(arg0) end
 function IsoGameCharacter:getTargetTwist() end
 
 --- @public
+--- @return number
+function IsoGameCharacter:getTargetVerticalAimAngle() end
+
+--- @public
 --- @return NetworkTeleport
 function IsoGameCharacter:getTeleport() end
 
@@ -3152,10 +3178,6 @@ function IsoGameCharacter:getVehicle() end
 --- @public
 --- @return BaseVehicle
 function IsoGameCharacter:getVehicle() end
-
---- @public
---- @return number
-function IsoGameCharacter:getVerticalAimAngle() end
 
 --- @public
 --- @return ArrayList _ the VeryCloseEnemyList
@@ -3352,6 +3374,11 @@ function IsoGameCharacter:hasItems(type, count) end
 --- @public
 --- @return boolean
 function IsoGameCharacter:hasPath() end
+
+--- @public
+--- @param arg0 CraftRecipe
+--- @return boolean
+function IsoGameCharacter:hasRecipeAtHand(arg0) end
 
 --- @public
 --- @return boolean
@@ -3617,6 +3644,10 @@ function IsoGameCharacter:isDoGrapple() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isDoStomp() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isDoingActionThatCanBeCancelled() end
 
 --- @public
@@ -3707,10 +3738,6 @@ function IsoGameCharacter:isFishingCheat() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isFishingCheat() end
-
---- @public
---- @return boolean
-function IsoGameCharacter:isForceShove() end
 
 --- @public
 --- @return boolean
@@ -3843,6 +3870,10 @@ function IsoGameCharacter:isKilledBySlicingWeapon() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isKnockedDown() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isKnowAllRecipes() end
 
 --- @public
 --- @param guid string
@@ -4054,10 +4085,6 @@ function IsoGameCharacter:isPrintMediaRead(arg0) end
 
 --- @public
 --- @return boolean
-function IsoGameCharacter:isProne() end
-
---- @public
---- @return boolean
 function IsoGameCharacter:isProtectedFromToxic() end
 
 --- @public
@@ -4185,6 +4212,10 @@ function IsoGameCharacter:isSecondaryHandItem(item) end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isShoveStompAnim() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isShoving() end
 
 --- @public
@@ -4227,10 +4258,6 @@ function IsoGameCharacter:isSpeaking() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isSprinting() end
-
---- @public
---- @return boolean
-function IsoGameCharacter:isStomping() end
 
 --- @public
 --- @return boolean
@@ -4284,6 +4311,10 @@ function IsoGameCharacter:isUnderVehicle() end
 --- @param arg0 number
 --- @return boolean
 function IsoGameCharacter:isUnderVehicleRadius(arg0) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isUnlimitedAmmo() end
 
 --- @public
 --- @return boolean
@@ -4359,6 +4390,10 @@ function IsoGameCharacter:isZombieAttacking() end
 --- @param other IsoMovingObject
 --- @return boolean
 function IsoGameCharacter:isZombieAttacking(other) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isZombiesDontAttack() end
 
 --- @public
 --- @return boolean _ the bDoDefer
@@ -4538,6 +4573,12 @@ function IsoGameCharacter:playSoundLocal(file) end
 function IsoGameCharacter:playSoundLocal(file) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 boolean
+--- @return integer
+function IsoGameCharacter:playWeaponHitArmourSound(arg0, arg1) end
+
+--- @public
 --- @return ActionStateSnapshot
 function IsoGameCharacter:playbackRecordCurrentStateSnapshot() end
 
@@ -4573,7 +4614,7 @@ function IsoGameCharacter:processHitDamage(weapon, wielder, damageSplit, bIgnore
 
 --- @public
 --- @param b ByteBuffer
---- @return string
+--- @return nil
 function IsoGameCharacter:readInventory(b) end
 
 --- @public
@@ -4746,12 +4787,6 @@ function IsoGameCharacter:saveChange(change, tbl, bb) end
 --- @param age integer
 --- @return nil
 function IsoGameCharacter:setAge(age) end
-
---- @public
---- @param arg0 number
---- @param arg1 number
---- @return nil
-function IsoGameCharacter:setAimAngles(arg0, arg1) end
 
 --- @public
 --- @param b boolean
@@ -4964,6 +4999,11 @@ function IsoGameCharacter:setCanShout(canShout) end
 function IsoGameCharacter:setCanUseBrushTool(arg0) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setCanUseLootTool(arg0) end
+
+--- @public
 --- @param clickSound string
 --- @return nil
 function IsoGameCharacter:setClickSound(clickSound) end
@@ -5017,6 +5057,11 @@ function IsoGameCharacter:setCorpseSicknessRate(arg0) end
 --- @param isCrit boolean
 --- @return nil
 function IsoGameCharacter:setCriticalHit(isCrit) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setCurrentVerticalAimAngle(arg0) end
 
 --- @public
 --- @param dangerLevels number the dangerLevels to set
@@ -5176,11 +5221,6 @@ function IsoGameCharacter:setFishingCheat(arg0) end
 --- @param FollowingTarget IsoGameCharacter the FollowingTarget to set
 --- @return nil
 function IsoGameCharacter:setFollowingTarget(FollowingTarget) end
-
---- @public
---- @param forceShove boolean
---- @return nil
-function IsoGameCharacter:setForceShove(forceShove) end
 
 --- @public
 --- @param ForceWakeUpTime number the ForceWakeUpTime to set
@@ -5430,6 +5470,11 @@ function IsoGameCharacter:setKilledByFall(arg0) end
 function IsoGameCharacter:setKnockedDown(bKnockedDown) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setKnowAllRecipes(arg0) end
+
+--- @public
 --- @param lastBump integer
 --- @return nil
 function IsoGameCharacter:setLastBump(lastBump) end
@@ -5649,6 +5694,16 @@ function IsoGameCharacter:setOnFloor(arg0) end
 --- @param done boolean
 --- @return nil
 function IsoGameCharacter:setOnKillDone(done) end
+
+--- @public
+--- @param arg0 UdpConnection
+--- @return nil
+function IsoGameCharacter:setOwner(arg0) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return nil
+function IsoGameCharacter:setOwnerPlayer(arg0) end
 
 --- @public
 --- @param PainDelta number the PainDelta to set
@@ -5889,6 +5944,11 @@ function IsoGameCharacter:setSharedGrappleAnimTime(arg0) end
 function IsoGameCharacter:setSharedGrappleType(arg0) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setShoveStompAnim(arg0) end
+
+--- @public
 --- @param showAdminTag boolean
 --- @return nil
 function IsoGameCharacter:setShowAdminTag(showAdminTag) end
@@ -6026,6 +6086,11 @@ function IsoGameCharacter:setTargetGrapplePos(arg0, arg1, arg2) end
 function IsoGameCharacter:setTargetGrappleRotation(arg0, arg1) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setTargetVerticalAimAngle(arg0) end
+
+--- @public
 --- @param _teleport NetworkTeleport
 --- @return nil
 function IsoGameCharacter:setTeleport(_teleport) end
@@ -6074,6 +6139,11 @@ function IsoGameCharacter:setTimedActionInstantCheat(b) end
 --- @param m_turnDelta number
 --- @return nil
 function IsoGameCharacter:setTurnDelta(m_turnDelta) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setUnlimitedAmmo(arg0) end
 
 --- @public
 --- @param unlimitedCarry boolean
@@ -6308,11 +6378,6 @@ function IsoGameCharacter:setVehicle(v) end
 function IsoGameCharacter:setVehicleCollision(arg0) end
 
 --- @public
---- @param arg0 number
---- @return nil
-function IsoGameCharacter:setVerticalAimAngle(arg0) end
-
---- @public
 --- @param VisibleToNPCs boolean the VisibleToNPCs to set
 --- @return nil
 function IsoGameCharacter:setVisibleToNPCs(VisibleToNPCs) end
@@ -6345,6 +6410,11 @@ function IsoGameCharacter:setXp(xp) end
 --- @param ZombieKills integer the ZombieKills to set
 --- @return nil
 function IsoGameCharacter:setZombieKills(ZombieKills) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setZombiesDontAttack(arg0) end
 
 --- @public
 --- @param bClimbing boolean the bClimbing to set
@@ -6390,15 +6460,7 @@ function IsoGameCharacter:shouldBeTurningAround() end
 
 --- @public
 --- @return boolean
-function IsoGameCharacter:shouldBecomeCorpse() end
-
---- @public
---- @return boolean
 function IsoGameCharacter:shouldBecomeZombieAfterDeath() end
-
---- @public
---- @return boolean
-function IsoGameCharacter:shouldDoInventory() end
 
 --- @public
 --- @param arg0 IsoGridSquare
@@ -6679,6 +6741,10 @@ function IsoGameCharacter:updateEvent(eventInstance, clip) end
 
 --- @public
 --- @return nil
+function IsoGameCharacter:updateForServerGui() end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:updateHandEquips() end
 
 --- @public
@@ -6724,11 +6790,6 @@ function IsoGameCharacter:useRagdollVehicleCollision() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:wasLocal() end
-
---- @public
---- @param b ByteBuffer
---- @return nil
-function IsoGameCharacter:writeInventory(b) end
 
 --- @public
 --- @return nil

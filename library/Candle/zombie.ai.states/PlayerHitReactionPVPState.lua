@@ -40,6 +40,22 @@ function PlayerHitReactionPVPState:execute(owner) end
 --- @return nil
 function PlayerHitReactionPVPState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerHitReactionPVPState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerHitReactionPVPState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerHitReactionPVPState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerHitReactionPVPState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

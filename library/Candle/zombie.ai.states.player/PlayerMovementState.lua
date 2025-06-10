@@ -29,6 +29,10 @@ function PlayerMovementState:exit(arg0) end
 
 --- @public
 --- @return boolean
+function PlayerMovementState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerMovementState:isSyncOnEnter() end
 
 --- @public
@@ -41,8 +45,9 @@ function PlayerMovementState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerMovementState:setParams(arg0) end
+function PlayerMovementState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

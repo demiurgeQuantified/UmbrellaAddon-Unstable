@@ -24,11 +24,14 @@
 ---@field prevBtnTxt unknown
 ---@field servermsg string
 ---@field servermsgTimer number
+---@field showSlowModeFeedback boolean
 ---@field showTimestamp boolean
 ---@field showTitle boolean
+---@field slowTimeRemainingRatio number
 ---@field tabCnt number
 ---@field tabs table
 ---@field textEntry ISTextEntryBox
+---@field timerMessageSlowMode number
 ---@field timerTextEntry number
 ISChat = ISCollapsableWindow:derive("ISChat")
 ISChat.Type = "ISChat"

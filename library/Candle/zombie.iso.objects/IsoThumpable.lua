@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoThumpable: IsoObject, BarricadeAble, Thumpable
+--- @class IsoThumpable: IsoObject, BarricadeAble, Thumpable, IHasHealth, ILockableDoor
 --- @field public class any
 --- @field public tempo Vector2
 IsoThumpable = {}
@@ -31,8 +31,20 @@ function IsoThumpable.GetBreakFurnitureSound(arg0) end
 function IsoThumpable:Damage(arg0) end
 
 --- @public
+--- @return ICurtain
+function IsoThumpable:HasCurtains() end
+
+--- @public
 --- @return IsoCurtain
 function IsoThumpable:HasCurtains() end
+
+--- @public
+--- @return ICurtain
+function IsoThumpable:HasCurtains() end
+
+--- @public
+--- @return boolean
+function IsoThumpable:IsOpen() end
 
 --- @public
 --- @return boolean
@@ -120,6 +132,14 @@ function IsoThumpable:animalHit(arg0) end
 
 --- @public
 --- @return boolean
+function IsoThumpable:canAddCurtain() end
+
+--- @public
+--- @return boolean
+function IsoThumpable:canAddCurtain() end
+
+--- @public
+--- @return boolean
 function IsoThumpable:canAddSheetRope() end
 
 --- @public
@@ -129,6 +149,11 @@ function IsoThumpable:canBeLockByPadlock() end
 --- @public
 --- @return boolean
 function IsoThumpable:canBePlastered() end
+
+--- @public
+--- @param chr IsoGameCharacter
+--- @return boolean
+function IsoThumpable:canClimbOver(chr) end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -245,12 +270,20 @@ function IsoThumpable:getFacingPosition(pos) end
 function IsoThumpable:getHealth() end
 
 --- @public
+--- @return integer
+function IsoThumpable:getHealth() end
+
+--- @public
 --- @return IsoGridSquare
 function IsoThumpable:getIndoorSquare() end
 
 --- @public
 --- @return IsoGridSquare
 function IsoThumpable:getInsideSquare() end
+
+--- @public
+--- @return integer
+function IsoThumpable:getKeyId() end
 
 --- @public
 --- @return integer
@@ -291,6 +324,10 @@ function IsoThumpable:getLightSourceYOffset() end
 --- @public
 --- @return integer
 function IsoThumpable:getLockedByCode() end
+
+--- @public
+--- @return integer
+function IsoThumpable:getMaxHealth() end
 
 --- @public
 --- @return integer
@@ -466,6 +503,10 @@ function IsoThumpable:isLightSourceOn() end
 --- @public
 --- @return boolean
 function IsoThumpable:isLocked() end
+
+--- @public
+--- @return boolean
+function IsoThumpable:isLockedByKey() end
 
 --- @public
 --- @return boolean
@@ -705,6 +746,11 @@ function IsoThumpable:setKeyId(keyId) end
 
 --- @public
 --- @param keyId integer
+--- @return nil
+function IsoThumpable:setKeyId(keyId) end
+
+--- @public
+--- @param keyId integer
 --- @param doNetwork boolean
 --- @return nil
 function IsoThumpable:setKeyId(keyId, doNetwork) end
@@ -758,6 +804,11 @@ function IsoThumpable:setLightSourceYOffset(lightSourceYOffset) end
 --- @param lockedByCode integer
 --- @return nil
 function IsoThumpable:setLockedByCode(lockedByCode) end
+
+--- @public
+--- @param lockedByKey boolean
+--- @return nil
+function IsoThumpable:setLockedByKey(lockedByKey) end
 
 --- @public
 --- @param lockedByKey boolean

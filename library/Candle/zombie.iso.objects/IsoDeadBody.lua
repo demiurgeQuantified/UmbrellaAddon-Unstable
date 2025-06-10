@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoDeadBody: IsoMovingObject, Talker, IAnimalVisual, IHumanVisual, IIdentifiable, IGrappleableWrapper
+--- @class IsoDeadBody: IsoMovingObject, Talker, IAnimalVisual, IHumanVisual, IIdentifiable, IGrappleableWrapper, IItemProvider, IPositional
 --- @field public class any
 --- @field public MAX_ROT_STAGES integer
 --- @field public MAX_ROT_STAGES_ANIMALS integer
@@ -20,6 +20,12 @@ function IsoDeadBody.Reset() end
 --- @param id short
 --- @return boolean
 function IsoDeadBody.isDead(id) end
+
+--- @public
+--- @static
+--- @param arg0 UdpConnection
+--- @return nil
+function IsoDeadBody.removeDeadBodies(arg0) end
 
 --- @public
 --- @static
@@ -223,6 +229,10 @@ function IsoDeadBody:getCorpseItem() end
 function IsoDeadBody:getCustomName() end
 
 --- @public
+--- @return string
+function IsoDeadBody:getDescription() end
+
+--- @public
 --- @return SurvivorDesc
 function IsoDeadBody:getDescriptor() end
 
@@ -303,6 +313,10 @@ function IsoDeadBody:getInventoryWeight() end
 function IsoDeadBody:getItem() end
 
 --- @public
+--- @return InventoryItem
+function IsoDeadBody:getItem() end
+
+--- @public
 --- @param itemVisuals ItemVisuals
 --- @return nil
 function IsoDeadBody:getItemVisuals(itemVisuals) end
@@ -311,6 +325,10 @@ function IsoDeadBody:getItemVisuals(itemVisuals) end
 --- @param itemVisuals ItemVisuals
 --- @return nil
 function IsoDeadBody:getItemVisuals(itemVisuals) end
+
+--- @public
+--- @return IsoGameCharacter
+function IsoDeadBody:getKilledBy() end
 
 --- @public
 --- @return ObjectID
@@ -416,6 +434,18 @@ function IsoDeadBody:getWrappedGrappleable() end
 function IsoDeadBody:getWrappedGrappleable() end
 
 --- @public
+--- @return number
+function IsoDeadBody:getX() end
+
+--- @public
+--- @return number
+function IsoDeadBody:getY() end
+
+--- @public
+--- @return number
+function IsoDeadBody:getZ() end
+
+--- @public
 --- @return boolean
 function IsoDeadBody:hasAnimalParts() end
 
@@ -498,6 +528,12 @@ function IsoDeadBody:isGrapplingTarget(arg0) end
 function IsoDeadBody:isHandItem(arg0) end
 
 --- @public
+--- @param arg0 IPositional
+--- @param arg1 number
+--- @return boolean
+function IsoDeadBody:isInRange(arg0, arg1) end
+
+--- @public
 --- @return boolean
 function IsoDeadBody:isKilledByFall() end
 
@@ -510,6 +546,10 @@ function IsoDeadBody:isMouseOver(screenX, screenY) end
 --- @public
 --- @return boolean
 function IsoDeadBody:isOnFloor() end
+
+--- @public
+--- @return boolean
+function IsoDeadBody:isOnHook() end
 
 --- @public
 --- @return boolean
@@ -725,6 +765,11 @@ function IsoDeadBody:setGrappleoffsetBehaviour(arg0) end
 function IsoDeadBody:setInvalidateNextRender(arg0) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IsoDeadBody:setKilledBy(arg0) end
+
+--- @public
 --- @param arg0 boolean
 --- @return nil
 function IsoDeadBody:setKilledByFall(arg0) end
@@ -733,6 +778,11 @@ function IsoDeadBody:setKilledByFall(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function IsoDeadBody:setOnFloor(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoDeadBody:setOnHook(arg0) end
 
 --- @public
 --- @param arg0 boolean
@@ -804,6 +854,11 @@ function IsoDeadBody:toString() end
 --- @public
 --- @return nil
 function IsoDeadBody:update() end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function IsoDeadBody:writeInventory(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

@@ -19,7 +19,7 @@ function ISReloadWeaponAction.BeginAutomaticReload(playerObj, gun) end
 function ISReloadWeaponAction.canRack(weapon) end
 
 ---@return boolean
-function ISReloadWeaponAction.canShoot(weapon) end
+function ISReloadWeaponAction.canShoot(player, weapon) end
 
 function ISReloadWeaponAction.OnPlayerAttackFinished(playerObj, weapon) end
 

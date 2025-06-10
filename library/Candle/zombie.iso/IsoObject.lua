@@ -3,6 +3,7 @@
 --- @class IsoObject: GameEntity, Serializable, ILuaIsoObject, Thumpable
 --- @field public class any
 --- @field public bmod number
+--- @field public fireColor ColorInfo
 --- @field public gmod number
 --- @field public lastRendered IsoObject
 --- @field public lastRenderedRendered IsoObject
@@ -99,12 +100,6 @@ function IsoObject.getNew() end
 --- @param bShareTilesWithMap boolean
 --- @return IsoObject
 function IsoObject.getNew(sq, spriteName, name, bShareTilesWithMap) end
-
---- @public
---- @static
---- @param i integer
---- @return nil
-function IsoObject.setDefaultCondition(i) end
 
 --- @public
 --- @static
@@ -642,10 +637,6 @@ function IsoObject:getOffsetY() end
 function IsoObject:getOnOverlay() end
 
 --- @public
---- @return integer
-function IsoObject:getOutlineHighlightCol() end
-
---- @public
 --- @param playerIndex integer
 --- @return integer
 function IsoObject:getOutlineHighlightCol(playerIndex) end
@@ -665,6 +656,16 @@ function IsoObject:getOverlaySpriteColor() end
 --- @public
 --- @return integer
 function IsoObject:getPipedFuelAmount() end
+
+--- @public
+--- @param arg0 Vector3f
+--- @return Vector3f
+function IsoObject:getPosition(arg0) end
+
+--- @public
+--- @param arg0 Vector3
+--- @return Vector3
+function IsoObject:getPosition(arg0) end
 
 --- @public
 --- @return PropertyContainer
@@ -1827,6 +1828,16 @@ function IsoObject:softReset() end
 --- @public
 --- @return nil
 function IsoObject:sync() end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function IsoObject:syncFluidContainerReceive(arg0) end
+
+--- @public
+--- @param arg0 ByteBufferWriter
+--- @return nil
+function IsoObject:syncFluidContainerSend(arg0) end
 
 --- @public
 --- @param bRemote boolean

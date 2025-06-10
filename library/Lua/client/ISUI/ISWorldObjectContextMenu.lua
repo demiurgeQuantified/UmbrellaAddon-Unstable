@@ -88,6 +88,8 @@ ISWorldObjectContextMenu.fetchVars = {
 ISWorldObjectContextMenu.fetchSquares = {}
 ISWorldObjectContextMenu.tooltipPool = {}
 ISWorldObjectContextMenu.tooltipsUsed = {}
+ISWorldObjectContextMenu.useJavaFetchLogic = true
+ISWorldObjectContextMenu.useJavaCreateMenuLogic = true
 ISWorldObjectContextMenu.Test = nil ---@type boolean?
 ISWorldObjectContextMenu.sleepDialog = nil ---@type ISModalDialog?
 ISWorldObjectContextMenu.chairCheckList = {
@@ -116,6 +118,8 @@ ISWorldObjectContextMenu.chairCheckList = {
 		"Yellow Modern",
 	},
 }
+
+function ISWorldObjectContextMenu.activateRadio(pl, obj) end
 
 function ISWorldObjectContextMenu.addFluidFromItem(test, context, pourFluidInto, worldobjects, playerObj, playerInv) end
 
@@ -165,6 +169,23 @@ function ISWorldObjectContextMenu.compareClothingBlood(item1, item2) end
 ---@return boolean?
 function ISWorldObjectContextMenu.createMenu(player, worldobjects, x, y, test) end
 
+---@param x number
+---@param y number
+---@return boolean
+function ISWorldObjectContextMenu.createMenuEntries(
+	fetch,
+	context,
+	player,
+	playerObj,
+	playerInv,
+	pickedCorpse,
+	worldobjects,
+	x,
+	y,
+	test
+)
+end
+
 function ISWorldObjectContextMenu.doAddFuelGenerator(
 	worldobjects,
 	generator,
@@ -187,6 +208,8 @@ function ISWorldObjectContextMenu.doCleanBlood(playerObj, square) end
 function ISWorldObjectContextMenu.doCleanGraffiti(playerObj, square) end
 
 function ISWorldObjectContextMenu.doCreateChumOptions(context, playerObj, square) end
+
+function ISWorldObjectContextMenu.doCreateChumOptions_makeChum(pl, square) end
 
 function ISWorldObjectContextMenu.doDrinkWaterMenu(object, player, context) end
 
@@ -327,6 +350,14 @@ function ISWorldObjectContextMenu.handleGrabCorpseSubmenu(playerObj, worldobject
 ---@return boolean?
 function ISWorldObjectContextMenu.handleGrabWorldItem(x, y, test, context, worldobjects, playerObj, playerInv) end
 
+function ISWorldObjectContextMenu.handleGrabWorldItem_onDropCorpse(playerObj) end
+
+---@param _isHighlighted boolean
+function ISWorldObjectContextMenu.handleGrabWorldItem_onHighlight(_option, _menu, _isHighlighted, _object) end
+
+---@param _isHighlighted boolean
+function ISWorldObjectContextMenu.handleGrabWorldItem_onHighlightMultiple(_option, _menu, _isHighlighted, _objects) end
+
 ---@param x number
 ---@param y number
 ---@return boolean?
@@ -337,6 +368,8 @@ function ISWorldObjectContextMenu.handleRainCollector(test, context, worldobject
 
 ---@return unknown?
 function ISWorldObjectContextMenu.haveWaterContainer(playerId) end
+
+function ISWorldObjectContextMenu.initWorldItemHighlightOption(option, object) end
 
 ---@return boolean
 function ISWorldObjectContextMenu.isSomethingTo(item, player) end
@@ -375,9 +408,6 @@ function ISWorldObjectContextMenu.onBedAnim(playerObj, anim) end
 
 function ISWorldObjectContextMenu.onBurnCorpse(worldobjects, player, corpse) end
 
-function ISWorldObjectContextMenu.onBuryAnimalCorpse(grave, playerObj, animal) end
-
----@return unknown?
 function ISWorldObjectContextMenu.onBuryCorpse(grave, player, primaryHandItem) end
 
 function ISWorldObjectContextMenu.onButcherHook(hook, playerObj) end
@@ -637,8 +667,6 @@ function ISWorldObjectContextMenu.toggleComboWasherDryer(context, playerObj, obj
 
 ---@param item unknown?
 function ISWorldObjectContextMenu.transferIfNeeded(playerObj, item) end
-
-function ISWorldObjectContextMenu.updateGrave(grave) end
 
 function ISWorldObjectContextMenu:onCheckDigitalCode(button, playerObj, padlock, thump) end
 

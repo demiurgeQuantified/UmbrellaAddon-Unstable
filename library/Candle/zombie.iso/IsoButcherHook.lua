@@ -32,6 +32,10 @@ function IsoButcherHook:isRemovingBlood() end
 function IsoButcherHook:load(arg0, arg1, arg2) end
 
 --- @public
+--- @return nil
+function IsoButcherHook:onReceivedNetUpdate() end
+
+--- @public
 --- @param arg0 IsoAnimal
 --- @return nil
 function IsoButcherHook:playPutDownCorpseSound(arg0) end
@@ -61,6 +65,11 @@ function IsoButcherHook:save(arg0, arg1) end
 function IsoButcherHook:setAnimal(arg0) end
 
 --- @public
+--- @param arg0 table
+--- @return nil
+function IsoButcherHook:setLuaHook(arg0) end
+
+--- @public
 --- @param arg0 boolean
 --- @return nil
 function IsoButcherHook:setPlayRemovingBloodSound(arg0) end
@@ -75,8 +84,22 @@ function IsoButcherHook:startRemovingBlood(arg0) end
 function IsoButcherHook:stopRemovingBlood() end
 
 --- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function IsoButcherHook:syncIsoObjectReceive(arg0) end
+
+--- @public
+--- @param arg0 ByteBufferWriter
+--- @return nil
+function IsoButcherHook:syncIsoObjectSend(arg0) end
+
+--- @public
 --- @return nil
 function IsoButcherHook:update() end
+
+--- @public
+--- @return nil
+function IsoButcherHook:updateAnimalModel() end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

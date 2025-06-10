@@ -32,6 +32,22 @@ function FakeDeadZombieState:execute(owner) end
 --- @return nil
 function FakeDeadZombieState:exit(owner) end
 
+--- @public
+--- @return boolean
+function FakeDeadZombieState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function FakeDeadZombieState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function FakeDeadZombieState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function FakeDeadZombieState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

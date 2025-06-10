@@ -310,6 +310,8 @@ function __recipe_OnCreate.Make4Bowls(craftRecipeData, character) end
 
 function __recipe_OnCreate.MakeBlunt(craftRecipeData, character) end
 
+function __recipe_OnCreate.MakeCoffee(craftRecipeData, character) end
+
 function __recipe_OnCreate.MakeCooked(craftRecipeData, character) end
 
 function __recipe_OnCreate.MakeMilkFromPowder(craftRecipeData, character) end
@@ -364,6 +366,8 @@ function __recipe_OnCreate.OxygenTankAttach(craftRecipeData, character) end
 
 function __recipe_OnCreate.OxygenTankRemoval(craftRecipeData, character) end
 
+function __recipe_OnCreate.PickAramidThread(craftRecipeData, character) end
+
 function __recipe_OnCreate.PickThread(craftRecipeData, character) end
 
 function __recipe_OnCreate.PlaceInBox(craftRecipeData, character) end
@@ -406,6 +410,8 @@ function __recipe_OnCreate.ScratchTicket(craftRecipeData, character) end
 
 function __recipe_OnCreate.SetEcruColor(craftRecipeData, character) end
 
+function __recipe_OnCreate.SewHideJacket(craftRecipeData, character) end
+
 function __recipe_OnCreate.SharpenBlade(craftRecipeData, player) end
 
 function __recipe_OnCreate.SharpenBladePoor(craftRecipeData, player) end
@@ -431,6 +437,18 @@ function __recipe_OnCreate.SliceSalami(craftRecipeData, character) end
 function __recipe_OnCreate.SliceWatermelon(craftRecipeData, character) end
 
 function __recipe_OnCreate.SlightlyMoreDurable(craftRecipeData, character) end
+
+function __recipe_OnCreate.SmeltIronOrSteel(craftRecipeData, add) end
+
+function __recipe_OnCreate.SmeltIronOrSteelIngot(craftRecipeData) end
+
+function __recipe_OnCreate.SmeltIronOrSteelLarge(craftRecipeData) end
+
+function __recipe_OnCreate.SmeltIronOrSteelMedium(craftRecipeData) end
+
+function __recipe_OnCreate.SmeltIronOrSteelMediumPlus(craftRecipeData) end
+
+function __recipe_OnCreate.SmeltIronOrSteelSmall(craftRecipeData) end
 
 function __recipe_OnCreate.SpikedBat(craftRecipeData, character) end
 
@@ -578,6 +596,24 @@ function __recipe_OnTest.ScratchTicket(sourceItem, result) end
 
 ---@return boolean
 function __recipe_OnTest.SliceBreadDough(sourceItem, result) end
+
+---@return boolean
+function __recipe_OnTest.SmeltIronOrSteel(craftRecipeData, add) end
+
+---@return boolean
+function __recipe_OnTest.SmeltIronOrSteelIngot(craftRecipeData) end
+
+---@return boolean
+function __recipe_OnTest.SmeltIronOrSteelLarge(craftRecipeData) end
+
+---@return boolean
+function __recipe_OnTest.SmeltIronOrSteelMedium(craftRecipeData) end
+
+---@return boolean
+function __recipe_OnTest.SmeltIronOrSteelMediumPlus(craftRecipeData) end
+
+---@return boolean
+function __recipe_OnTest.SmeltIronOrSteelSmall(craftRecipeData) end
 
 ---@return boolean
 function __recipe_OnTest.TaintedFood(item) end

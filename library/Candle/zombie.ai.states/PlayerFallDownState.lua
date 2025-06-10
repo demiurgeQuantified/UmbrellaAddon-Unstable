@@ -40,6 +40,28 @@ function PlayerFallDownState:execute(owner) end
 --- @return nil
 function PlayerFallDownState:exit(owner) end
 
+--- @public
+--- @return boolean
+function PlayerFallDownState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PlayerFallDownState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PlayerFallDownState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PlayerFallDownState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
+--- @return nil
+function PlayerFallDownState:setParams(arg0, arg1) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

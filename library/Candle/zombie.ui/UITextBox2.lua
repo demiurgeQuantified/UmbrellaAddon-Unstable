@@ -67,6 +67,10 @@ function UITextBox2:getFrame() end
 function UITextBox2:getFrameAlpha() end
 
 --- @public
+--- @return boolean
+function UITextBox2:getHasFrame() end
+
+--- @public
 --- @return integer
 function UITextBox2:getInset() end
 

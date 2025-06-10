@@ -12,7 +12,7 @@ ISRepairEngine.Type = "ISRepairEngine"
 function ISRepairEngine:complete() end
 
 ---@return number
-function ISRepairEngine:getDuration(maxTime) end
+function ISRepairEngine:getDuration() end
 
 ---@return boolean
 function ISRepairEngine:isValid() end

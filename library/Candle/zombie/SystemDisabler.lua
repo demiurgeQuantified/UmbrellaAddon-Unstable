@@ -11,7 +11,6 @@
 --- @field public doVehiclesWithoutTextures boolean
 --- @field public doWorldSyncEnable boolean
 --- @field public doZombieCreation boolean
---- @field public useNetworkCharacter boolean
 --- @field public zombiesDontAttack boolean
 SystemDisabler = {}
 

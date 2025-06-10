@@ -12,7 +12,7 @@ ISTakeEngineParts.Type = "ISTakeEngineParts"
 function ISTakeEngineParts:complete() end
 
 ---@return number
-function ISTakeEngineParts:getDuration(maxTime) end
+function ISTakeEngineParts:getDuration() end
 
 ---@return table?
 function ISTakeEngineParts:getExtraLogData() end

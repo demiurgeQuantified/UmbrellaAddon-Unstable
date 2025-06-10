@@ -5,34 +5,30 @@
 ---@field addCorpseBtn ISButton
 ---@field animal3D unknown?
 ---@field animalPanel ISPanel
----@field animalSize unknown
 ---@field avatarHeight number
 ---@field avatarPanel ISCharacterScreenAvatar?
----@field avatarWidth number
+---@field avatarWidth unknown
 ---@field avatarX number
 ---@field avatarY number
 ---@field biggestLabelWidth number
 ---@field biggestWidth number
----@field blood number?
 ---@field bloodInfoLabel ISLabel
 ---@field bloodLabel ISLabel
 ---@field chr unknown
 ---@field configJoypadLater boolean
 ---@field corpse unknown?
 ---@field doingAction boolean
----@field head boolean?
 ---@field headInfoLabel ISLabel
 ---@field headLabel ISLabel
 ---@field hook unknown
 ---@field knife unknown
----@field leather unknown?
 ---@field leatherInfoLabel ISLabel
 ---@field leatherLabel ISLabel
----@field meat unknown?
 ---@field meatInfoLabel ISLabel
 ---@field meatLabel ISLabel
 ---@field noAnimalPanel ISPanel
----@field originalAnimalPanelHeight unknown
+---@field originalHeight unknown
+---@field originalWidth unknown
 ---@field playerNum unknown
 ---@field progress number
 ---@field progressBar ISProgressBar
@@ -44,6 +40,8 @@
 ISButcherHookUI = ISCollapsableWindowJoypad:derive("ISButcherHookUI")
 ISButcherHookUI.Type = "ISButcherHookUI"
 ISButcherHookUI.ui = {}
+
+function ISButcherHookUI.onHookReceivedNetUpdate(self) end
 
 function ISButcherHookUI.onReattachAnimal(hook, animal) end
 
@@ -64,6 +62,9 @@ function ISButcherHookUI:create() end
 ---@return unknown
 function ISButcherHookUI:createCorpse(item) end
 
+---@return unknown?
+function ISButcherHookUI:getAnimalCorpseItemTexture(itemOrCorpse) end
+
 ---@return unknown
 function ISButcherHookUI:getBuckets() end
 
@@ -75,7 +76,6 @@ function ISButcherHookUI:isCorpseValid(corpse) end
 ---@return table
 function ISButcherHookUI:lookForCorpse() end
 
----@param corpse unknown?
 ---@return unknown?
 function ISButcherHookUI:onAddedCorpse(corpse) end
 

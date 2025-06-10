@@ -29,6 +29,10 @@ function PlayerShearAnimalState:exit(arg0) end
 
 --- @public
 --- @return boolean
+function PlayerShearAnimalState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerShearAnimalState:isSyncOnEnter() end
 
 --- @public
@@ -41,8 +45,9 @@ function PlayerShearAnimalState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerShearAnimalState:setParams(arg0) end
+function PlayerShearAnimalState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

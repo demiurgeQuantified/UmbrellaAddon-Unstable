@@ -22,6 +22,10 @@ function ISRemoveAnimalFromHook:isValid() end
 
 function ISRemoveAnimalFromHook:perform() end
 
+function ISRemoveAnimalFromHook:serverStart() end
+
+function ISRemoveAnimalFromHook:serverStop() end
+
 function ISRemoveAnimalFromHook:start() end
 
 function ISRemoveAnimalFromHook:stop() end
@@ -34,6 +38,6 @@ function ISRemoveAnimalFromHook:update() end
 function ISRemoveAnimalFromHook:waitToStart() end
 
 ---@param body unknown?
----@param luaHook ISButcherHookUI
+---@param luaHookUI ISButcherHookUI
 ---@return ISRemoveAnimalFromHook
-function ISRemoveAnimalFromHook:new(character, body, hook, luaHook) end
+function ISRemoveAnimalFromHook:new(character, body, hook, luaHookUI) end

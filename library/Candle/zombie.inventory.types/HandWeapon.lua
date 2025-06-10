@@ -2,16 +2,12 @@
 
 --- @class HandWeapon: InventoryItem, IUpdater
 --- @field public class any
+--- @field public MAX_ATTACHMENT_COUNT integer
 HandWeapon = {}
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
-
---- @public
---- @param item InventoryItem
---- @return boolean
-function HandWeapon:CanStack(item) end
 
 --- @public
 --- @param tooltipUI ObjectTooltip
@@ -177,6 +173,11 @@ function HandWeapon:getAmmoBox() end
 --- @public
 --- @return integer
 function HandWeapon:getAmmoPerShoot() end
+
+--- @public
+--- @param arg0 Vector3
+--- @return IsoGridSquare
+function HandWeapon:getAttackTargetSquare(arg0) end
 
 --- @public
 --- @return number
@@ -562,6 +563,12 @@ function HandWeapon:getSplatNumber() end
 function HandWeapon:getSplatSize() end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 IsoGameCharacter
+--- @return number
+function HandWeapon:getStaggerBackTimeMod(arg0, arg1) end
+
+--- @public
 --- @return string
 function HandWeapon:getStaticModel() end
 
@@ -702,6 +709,10 @@ function HandWeapon:isDamageMakeHole() end
 
 --- @public
 --- @return boolean
+function HandWeapon:isExplosive() end
+
+--- @public
+--- @return boolean
 function HandWeapon:isInsertAllBulletsReload() end
 
 --- @public
@@ -719,6 +730,10 @@ function HandWeapon:isKnockBackOnNoDeath() end
 --- @public
 --- @return boolean
 function HandWeapon:isManuallyRemoveSpentRounds() end
+
+--- @public
+--- @return boolean
+function HandWeapon:isMelee() end
 
 --- @public
 --- @return boolean _ the MultipleHitConditionAffected
@@ -881,6 +896,11 @@ function HandWeapon:setAmmoPerShoot(ammoPerShoot) end
 --- @param angleFalloff boolean the angleFalloff to set
 --- @return nil
 function HandWeapon:setAngleFalloff(angleFalloff) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return nil
+function HandWeapon:setAttackTargetSquare(arg0) end
 
 --- @public
 --- @param baseSpeed number
@@ -1246,6 +1266,11 @@ function HandWeapon:setReloadTime(reloadTime) end
 --- @param roundChambered boolean
 --- @return nil
 function HandWeapon:setRoundChambered(roundChambered) end
+
+--- @public
+--- @param arg0 Item
+--- @return nil
+function HandWeapon:setScriptItem(arg0) end
 
 --- @public
 --- @param sensorRange integer

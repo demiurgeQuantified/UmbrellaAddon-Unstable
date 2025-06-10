@@ -21,7 +21,6 @@
 ---@field loseLvlBtn ISButton
 ---@field mainPanel ISPanel
 ---@field manageInvBtn ISButton
----@field muteAllBtn ISButton
 ---@field perks table
 ---@field perksAddXPButtons table
 ---@field selectedPerk unknown?

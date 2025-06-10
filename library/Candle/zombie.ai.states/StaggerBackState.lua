@@ -45,6 +45,22 @@ function StaggerBackState:exit(owner) end
 --- @return number
 function StaggerBackState:getMaxStaggerTime(arg0) end
 
+--- @public
+--- @return boolean
+function StaggerBackState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function StaggerBackState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function StaggerBackState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function StaggerBackState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

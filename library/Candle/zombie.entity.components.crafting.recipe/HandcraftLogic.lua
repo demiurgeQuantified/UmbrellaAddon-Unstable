@@ -9,10 +9,6 @@ HandcraftLogic = {}
 ------------------------------------
 
 --- @public
---- @return boolean
-function HandcraftLogic:areAllInputItemsSatisfied() end
-
---- @public
 --- @return nil
 function HandcraftLogic:autoPopulateInputs() end
 
@@ -179,6 +175,10 @@ function HandcraftLogic:getSelectedRecipeStyle() end
 function HandcraftLogic:getSourceResources() end
 
 --- @public
+--- @return InventoryItem
+function HandcraftLogic:getUsingRecipeAtHandItem() end
+
+--- @public
 --- @return boolean
 function HandcraftLogic:isCharacterInRangeOfWorkbench() end
 
@@ -200,9 +200,17 @@ function HandcraftLogic:isInputSatisfied(arg0) end
 function HandcraftLogic:isManualSelectInputs() end
 
 --- @public
+--- @return boolean
+function HandcraftLogic:isRecipeAtHand() end
+
+--- @public
 --- @param arg0 CraftRecipe
 --- @return boolean
 function HandcraftLogic:isRecipeAvailableForCharacter(arg0) end
+
+--- @public
+--- @return boolean
+function HandcraftLogic:isUsingRecipeAtHandBenefit() end
 
 --- @public
 --- @param arg0 CraftRecipe

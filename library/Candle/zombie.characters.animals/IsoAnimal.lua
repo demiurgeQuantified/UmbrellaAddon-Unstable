@@ -113,7 +113,7 @@ function IsoAnimal:applyDamageFromVehicle(arg0, arg1) end
 function IsoAnimal:attackOtherMales() end
 
 --- @public
---- @return nil
+--- @return IsoDeadBody
 function IsoAnimal:becomeCorpse() end
 
 --- @public
@@ -801,6 +801,10 @@ function IsoAnimal:readyToBeSheared() end
 
 --- @public
 --- @return nil
+function IsoAnimal:reattachBackToHook() end
+
+--- @public
+--- @return nil
 function IsoAnimal:remove() end
 
 --- @public
@@ -996,10 +1000,6 @@ function IsoAnimal:shouldBreakObstaclesDuringPathfinding() end
 --- @public
 --- @return boolean
 function IsoAnimal:shouldCreateZone() end
-
---- @public
---- @return boolean
-function IsoAnimal:shouldDoInventory() end
 
 --- @public
 --- @return boolean

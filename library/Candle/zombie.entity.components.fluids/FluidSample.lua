@@ -64,6 +64,10 @@ function FluidSample:copy() end
 function FluidSample:getAmount() end
 
 --- @public
+--- @return Color
+function FluidSample:getColor() end
+
+--- @public
 --- @param arg0 integer
 --- @return Fluid
 function FluidSample:getFluid(arg0) end

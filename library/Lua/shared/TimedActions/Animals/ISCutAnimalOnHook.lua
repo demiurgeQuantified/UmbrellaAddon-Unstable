@@ -22,6 +22,10 @@ function ISCutAnimalOnHook:isValid() end
 
 function ISCutAnimalOnHook:perform() end
 
+function ISCutAnimalOnHook:serverStart() end
+
+function ISCutAnimalOnHook:serverStop() end
+
 function ISCutAnimalOnHook:start() end
 
 function ISCutAnimalOnHook:stop() end
@@ -32,6 +36,6 @@ function ISCutAnimalOnHook:update() end
 function ISCutAnimalOnHook:waitToStart() end
 
 ---@param body unknown?
----@param luaHook ISButcherHookUI
+---@param luaHookUI ISButcherHookUI
 ---@return ISCutAnimalOnHook
-function ISCutAnimalOnHook:new(character, body, hook, luaHook, bucket) end
+function ISCutAnimalOnHook:new(character, body, hook, luaHookUI, bucket) end

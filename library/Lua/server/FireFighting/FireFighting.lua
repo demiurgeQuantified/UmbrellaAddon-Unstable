@@ -10,9 +10,6 @@ function FireFighting.getExtinguisher(playerObj) end
 ---@return number
 function FireFighting.getExtinguisherUses(item) end
 
----@return number
-function FireFighting.getFluidContainerMillilitresPerUse() end
-
 ---@return unknown?
 function FireFighting.getSquareToExtinguish(square) end
 

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class BaseVehicle: IsoMovingObject, Thumpable, IFMODParameterUpdater
+--- @class BaseVehicle: IsoMovingObject, Thumpable, IFMODParameterUpdater, IPositional
 --- @field public class any
 --- @field public CENTER_OF_MASS_MAGIC number
 --- @field public FADE_DISTANCE integer
@@ -563,6 +563,10 @@ function BaseVehicle:checkZombieKeyForVehicle(arg0) end
 --- @param arg1 string
 --- @return boolean
 function BaseVehicle:checkZombieKeyForVehicle(arg0, arg1) end
+
+--- @public
+--- @return nil
+function BaseVehicle:chooseAlarmSound() end
 
 --- @public
 --- @param target IsoGameCharacter
@@ -1470,6 +1474,18 @@ function BaseVehicle:getWorldPos(localX, localY, localZ, worldPos, script) end
 function BaseVehicle:getWorldTransform(out) end
 
 --- @public
+--- @return number
+function BaseVehicle:getX() end
+
+--- @public
+--- @return number
+function BaseVehicle:getY() end
+
+--- @public
+--- @return number
+function BaseVehicle:getZ() end
+
+--- @public
 --- @return ArrayList
 function BaseVehicle:getZombieType() end
 
@@ -1509,6 +1525,10 @@ function BaseVehicle:hasLighter() end
 --- @public
 --- @return boolean
 function BaseVehicle:hasLiveBattery() end
+
+--- @public
+--- @return boolean
+function BaseVehicle:hasPassenger() end
 
 --- @public
 --- @param seat integer
@@ -1702,6 +1722,12 @@ function BaseVehicle:isInBounds(worldX, worldY) end
 --- @public
 --- @return boolean
 function BaseVehicle:isInForest() end
+
+--- @public
+--- @param arg0 IPositional
+--- @param arg1 number
+--- @return boolean
+function BaseVehicle:isInRange(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -2005,9 +2031,10 @@ function BaseVehicle:postupdate() end
 function BaseVehicle:processHit(arg0, arg1, arg2) end
 
 --- @public
---- @param key InventoryItem
+--- @param arg0 InventoryItem
+--- @param arg1 integer
 --- @return nil
-function BaseVehicle:putKeyInIgnition(key) end
+function BaseVehicle:putKeyInIgnition(arg0, arg1) end
 
 --- @public
 --- @param key InventoryItem
@@ -2179,6 +2206,11 @@ function BaseVehicle:setCharacterPosition(chr, seat, positionId) end
 --- @param animId string
 --- @return nil
 function BaseVehicle:setCharacterPositionToAnim(chr, seat, animId) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function BaseVehicle:setChosenAlarmSound(arg0) end
 
 --- @public
 --- @param force number

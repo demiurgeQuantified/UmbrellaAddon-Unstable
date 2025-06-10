@@ -90,6 +90,10 @@ function AnimalTracks:getFreshnessString(arg0) end
 function AnimalTracks:getIsoAnimalTrack() end
 
 --- @public
+--- @return InventoryItem
+function AnimalTracks:getItem() end
+
+--- @public
 --- @return integer
 function AnimalTracks:getMinSkill() end
 
@@ -132,10 +136,6 @@ function AnimalTracks:isAddedToWorld() end
 
 --- @public
 --- @return boolean
-function AnimalTracks:isDiscovered() end
-
---- @public
---- @return boolean
 function AnimalTracks:isItem() end
 
 --- @public
@@ -155,9 +155,9 @@ function AnimalTracks:save(arg0) end
 function AnimalTracks:setAddedToWorld(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param arg0 InventoryItem
 --- @return nil
-function AnimalTracks:setDiscovered(arg0) end
+function AnimalTracks:setItem(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

@@ -29,6 +29,10 @@ function PlayerPetAnimalState:exit(arg0) end
 
 --- @public
 --- @return boolean
+function PlayerPetAnimalState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerPetAnimalState:isSyncOnEnter() end
 
 --- @public
@@ -41,8 +45,9 @@ function PlayerPetAnimalState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerPetAnimalState:setParams(arg0) end
+function PlayerPetAnimalState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

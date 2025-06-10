@@ -8,7 +8,7 @@
 ISGrabCorpseAction = ISBaseTimedAction:derive("ISGrabCorpseAction")
 ISGrabCorpseAction.Type = "ISGrabCorpseAction"
 
----@return boolean?
+---@return boolean
 function ISGrabCorpseAction:complete() end
 
 ---@return number

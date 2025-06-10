@@ -30,6 +30,9 @@ function MultiplayerZoneEditorMode_NonPVP:getSelectedZone() end
 function MultiplayerZoneEditorMode_NonPVP:isNewZoneValid(x1, y1, x2, y2) end
 
 ---@return boolean
+function MultiplayerZoneEditorMode_NonPVP:isResizedZoneValid(x1, y1, x2, y2, index) end
+
+---@return boolean
 function MultiplayerZoneEditorMode_NonPVP:isZoneSizeValid(x1, y1, x2, y2) end
 
 function MultiplayerZoneEditorMode_NonPVP:onAddZone() end

@@ -24,6 +24,9 @@ function ISTextEntryBox:getCursorPos() end
 function ISTextEntryBox:getFrameAlpha() end
 
 ---@return unknown
+function ISTextEntryBox:getHasFrame() end
+
+---@return unknown
 function ISTextEntryBox:getInternalText() end
 
 ---@return unknown
@@ -43,6 +46,9 @@ function ISTextEntryBox:isEditable() end
 
 ---@return unknown
 function ISTextEntryBox:isFocused() end
+
+---@return unknown
+function ISTextEntryBox:isMasked() end
 
 ---@return unknown
 function ISTextEntryBox:isMultipleLine() end

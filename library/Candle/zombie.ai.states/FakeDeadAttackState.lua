@@ -40,6 +40,22 @@ function FakeDeadAttackState:execute(owner) end
 --- @return nil
 function FakeDeadAttackState:exit(owner) end
 
+--- @public
+--- @return boolean
+function FakeDeadAttackState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function FakeDeadAttackState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function FakeDeadAttackState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function FakeDeadAttackState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

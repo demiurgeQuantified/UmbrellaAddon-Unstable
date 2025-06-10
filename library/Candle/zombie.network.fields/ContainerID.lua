@@ -19,6 +19,10 @@ function ContainerID:copy(arg0) end
 function ContainerID:equals(arg0) end
 
 --- @public
+--- @return nil
+function ContainerID:findObject() end
+
+--- @public
 --- @return ItemContainer
 function ContainerID:getContainer() end
 
@@ -37,6 +41,10 @@ function ContainerID:getPacketSizeBytes() end
 --- @public
 --- @return VehiclePart
 function ContainerID:getPart() end
+
+--- @public
+--- @return BaseVehicle
+function ContainerID:getVehicle() end
 
 --- @public
 --- @return integer
@@ -94,6 +102,14 @@ function ContainerID:setInventoryContainer(arg0, arg1) end
 --- @param arg2 IsoGridSquare
 --- @return nil
 function ContainerID:setObject(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 ItemContainer
+--- @param arg1 IsoObject
+--- @param arg2 IsoGridSquare
+--- @param arg3 ItemContainer
+--- @return nil
+function ContainerID:setObjectInVehicle(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return string

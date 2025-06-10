@@ -34,6 +34,10 @@ function PlayerFallingState:exit(owner) end
 
 --- @public
 --- @return boolean
+function PlayerFallingState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerFallingState:isSyncOnEnter() end
 
 --- @public
@@ -46,8 +50,9 @@ function PlayerFallingState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerFallingState:setParams(arg0) end
+function PlayerFallingState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

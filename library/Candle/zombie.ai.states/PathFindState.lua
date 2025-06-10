@@ -14,6 +14,26 @@ PathFindState = {}
 function PathFindState.instance() end
 
 ------------------------------------
+------------- METHODS --------------
+------------------------------------
+
+--- @public
+--- @return boolean
+function PathFindState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function PathFindState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function PathFindState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function PathFindState:isSyncOnSquare() end
+
+------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------
 

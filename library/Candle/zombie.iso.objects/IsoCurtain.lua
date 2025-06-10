@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoCurtain: IsoObject
+--- @class IsoCurtain: IsoObject, ICurtain
 --- @field public class any
 IsoCurtain = {}
 
@@ -77,6 +77,14 @@ function IsoCurtain:isAdjacentToSquare(square2) end
 --- @param square2 IsoGridSquare
 --- @return boolean
 function IsoCurtain:isAdjacentToSquare(square1, square2) end
+
+--- @public
+--- @return boolean
+function IsoCurtain:isCurtainOpen() end
+
+--- @public
+--- @return boolean
+function IsoCurtain:isCurtainOpen() end
 
 --- @public
 --- @param input ByteBuffer

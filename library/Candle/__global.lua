@@ -72,8 +72,9 @@ function acceptFactionInvite(faction, host) end
 --- @param arg0 SafeHouse
 --- @param arg1 string
 --- @param arg2 IsoPlayer
+--- @param arg3 boolean
 --- @return nil
-function acceptSafehouseInvite(arg0, arg1, arg2) end
+function acceptSafehouseInvite(arg0, arg1, arg2, arg3) end
 
 --- @param you IsoPlayer
 --- @param other IsoPlayer
@@ -97,6 +98,11 @@ function activateSteamOverlayToWorkshopItem(itemID) end
 
 --- @return nil
 function activateSteamOverlayToWorkshopUser() end
+
+--- @param arg0 Server
+--- @param arg1 Account
+--- @return nil
+function addAccountToAccountList(arg0, arg1) end
 
 --- @return nil
 function addAllBurntVehicles() end
@@ -176,6 +182,10 @@ function addPhysicsObject() end
 --- @param arg0 string
 --- @return nil
 function addRole(arg0) end
+
+--- @param arg0 Server
+--- @return nil
+function addServerToAccountList(arg0) end
 
 --- @param source IsoObject
 --- @param x integer
@@ -332,6 +342,12 @@ function attachTrailerToPlayerVehicle(playerIndex) end
 --- @return nil
 function backToSinglePlayer() end
 
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
+function banUnbanUserAction(arg0, arg1, arg2) end
+
 --- @return nil
 function breakpoint() end
 
@@ -413,6 +429,12 @@ function checkStringPattern(pattern) end
 
 --- @return nil
 function clearPVPEvents() end
+
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function clearPacketCounts(arg0, arg1, arg2) end
 
 --- @param newName string
 --- @param oldName string
@@ -557,6 +579,10 @@ function debugLuaTable(param, depth) end
 --- @return nil
 function debugSetRoomType(roomType) end
 
+--- @param arg0 Account
+--- @return nil
+function deleteAccountToAccountList(arg0) end
+
 --- @param gameMode string
 --- @return nil
 function deleteAllGameModeSaves(gameMode) end
@@ -582,6 +608,14 @@ function deleteSandboxPreset(name) end
 --- @param file string
 --- @return nil
 function deleteSave(file) end
+
+--- @param arg0 Server
+--- @return nil
+function deleteServerToAccountList(arg0) end
+
+--- @param arg0 string
+--- @return boolean
+function detectBadWords(arg0) end
 
 --- @return nil
 function disconnect() end
@@ -640,11 +674,6 @@ function endHelicopter() end
 --- @return nil
 function endTextFileInput() end
 
---- @param query string
---- @param params table
---- @return nil
-function executeQuery(query, params) end
-
 --- @param arg0 number
 --- @return number
 function fastfloor(arg0) end
@@ -667,9 +696,8 @@ function forceDisconnect() end
 --- @return nil
 function forceSnowCheck() end
 
---- @param arg0 string
 --- @return string
-function generateSecretKey(arg0) end
+function generateSecretKey() end
 
 --- @param f string
 --- @return string
@@ -751,6 +779,9 @@ function getAverageFPS() end
 
 --- @return nil
 function getBannedIPs() end
+
+--- @return nil
+function getBannedSteamIDs() end
 
 --- @return BaseSoundBank
 function getBaseSoundBank() end
@@ -922,9 +953,6 @@ function getCurrentUserSteamID() end
 --- @return nil
 function getCustomizationData(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
---- @return nil
-function getDBSchema() end
-
 --- @return boolean
 function getDebug() end
 
@@ -1025,6 +1053,10 @@ function getGametimeTimestamp() end
 
 --- @return HairStyles
 function getHairStylesInstance() end
+
+--- @param arg0 string
+--- @return string
+function getHostByName(arg0) end
 
 --- @return string
 function getHourMinute() end
@@ -1326,9 +1358,14 @@ function getOnlinePlayers() end
 --- @return string
 function getOnlineUsername() end
 
---- @param category integer
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
 --- @return table
-function getPacketCounts(category) end
+function getPacketCounts(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @return PerformanceSettings
 function getPerformance() end
@@ -1459,6 +1496,7 @@ function getServerIP() end
 function getServerList() end
 
 --- @return string
+--- @deprecated
 function getServerListFile() end
 
 --- @return nil
@@ -1562,11 +1600,6 @@ function getSteamWorkshopStagedItems() end
 --- @return boolean
 function getStreamModeActive() end
 
---- @param tableName string
---- @param numberPerPages integer
---- @return nil
-function getTableResult(tableName, numberPerPages) end
-
 --- @param txt string
 --- @return string
 function getText(txt) end
@@ -1665,6 +1698,10 @@ function getTimestampMs() end
 --- @param language Language
 --- @return ArrayList
 function getTranslatorCredits(language) end
+
+--- @param arg0 string
+--- @return string
+function getTwoLetters(arg0) end
 
 --- @return ArrayList
 function getUsers() end
@@ -2087,6 +2124,11 @@ function manipulateSavefile(folder, action) end
 --- @return string
 function moduleDotType(module, type) end
 
+--- @param arg0 integer
+--- @param arg1 string
+--- @return nil
+function moveRole(arg0, arg1) end
+
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 string
@@ -2140,6 +2182,10 @@ function processSayMessage(message) end
 --- @param message string
 --- @return nil
 function processShoutMessage(message) end
+
+--- @param arg0 string
+--- @return boolean
+function profanityFilterCheck(arg0) end
 
 --- @param itemIDs ArrayList
 --- @param functionObj function
@@ -2224,6 +2270,10 @@ function reloadXui() end
 --- @return nil
 function removeAction(arg0, arg1) end
 
+--- @param arg0 IsoPlayer
+--- @return nil
+function removeAllVehicles(arg0) end
+
 --- @param arg0 integer
 --- @return nil
 function removeAnimal(arg0) end
@@ -2242,6 +2292,11 @@ function removeTicket(ticketID) end
 --- @param text string
 --- @return nil
 function removeUserlog(user, type, text) end
+
+--- @param arg0 IsoPlayer
+--- @param arg1 BaseVehicle
+--- @return nil
+function removeVehicle(arg0, arg1) end
 
 --- @param gameMode string
 --- @param oldName string
@@ -2300,9 +2355,6 @@ function replaceWith(toReplace, regex, by) end
 
 --- @return nil
 function requestPVPEvents() end
-
---- @return nil
-function requestPacketCounts() end
 
 --- @return nil
 function requestRoles() end
@@ -2432,6 +2484,12 @@ function sendAttachAnimalToPlayer(arg0, arg1, arg2, arg3) end
 --- @return nil
 function sendAttachAnimalToTree(arg0, arg1, arg2, arg3) end
 
+--- @param arg0 IsoGameCharacter
+--- @param arg1 string
+--- @param arg2 InventoryItem
+--- @return nil
+function sendAttachedItem(arg0, arg1, arg2) end
+
 --- @param arg0 IsoDeadBody
 --- @param arg1 IsoPlayer
 --- @return nil
@@ -2463,6 +2521,10 @@ function sendClientCommandV(arg0, arg1, arg2, arg3) end
 --- @return nil
 function sendClothing(arg0, arg1, arg2) end
 
+--- @param arg0 IsoDeadBody
+--- @return nil
+function sendCorpse(arg0) end
+
 --- @param arg0 IsoPlayer
 --- @return nil
 function sendDamage(arg0) end
@@ -2476,11 +2538,6 @@ function sendDebugStory(arg0, arg1, arg2) end
 --- @param arg0 IsoPlayer
 --- @return nil
 function sendEquip(arg0) end
-
---- @param arg0 IsoPlayer
---- @param arg1 string
---- @return nil
-function sendEvent(arg0, arg1) end
 
 --- @param faction Faction
 --- @param host IsoPlayer
@@ -2498,17 +2555,6 @@ function sendFeedAnimalFromHand(arg0, arg1, arg2) end
 --- @param arg1 string
 --- @return nil
 function sendGoogleAuth(arg0, arg1) end
-
---- @param arg0 IsoPlayer
---- @param arg1 string
---- @param arg2 string
---- @param arg3 string
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 boolean
---- @param arg7 boolean
---- @return nil
-function sendHitPlayer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @param arg0 IsoGameCharacter
 --- @param arg1 string
@@ -2687,12 +2733,13 @@ function sendSafezoneClaim(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 string
---- @param arg3 string
---- @param arg4 boolean
---- @param arg5 integer
---- @param arg6 string
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 boolean
+--- @param arg6 integer
+--- @param arg7 string
 --- @return nil
-function sendSecretKey(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function sendSecretKey(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @param module string
 --- @param command string
@@ -2933,6 +2980,12 @@ function showWrongChatTabMessage(actualTabID, rightTabID, chatCommand) end
 --- @return nil
 function sledgeDestroy(object) end
 
+--- @param arg0 table
+--- @param arg1 string
+--- @param arg2 boolean
+--- @return table
+function sortBrowserList(arg0, arg1, arg2) end
+
 --- @param x number
 --- @param y number
 --- @param x2 number
@@ -2947,6 +3000,11 @@ function spawnHorde(x, y, x2, y2, z, count) end
 --- @return boolean
 function spawnpointsExistsForMod(modID, mapFolder) end
 
+--- @param arg0 string
+--- @param arg1 integer
+--- @return table
+function splitString(arg0, arg1) end
+
 --- @param arg0 IsoPlayer
 --- @param arg1 InventoryItem
 --- @param arg2 IsoGridSquare
@@ -2958,11 +3016,11 @@ function startFishingAction(arg0, arg1, arg2, arg3) end
 --- @return Server
 function steamGetInternetServerDetails(index) end
 
---- @return integer
-function steamGetInternetServersCount() end
-
 --- @return nil
 function steamReleaseInternetServersRequest() end
+
+--- @return integer
+function steamRequestInternetServersCount() end
 
 --- @return nil
 function steamRequestInternetServersList() end
@@ -3034,6 +3092,22 @@ function takeScreenshot() end
 --- @param fileName string
 --- @return nil
 function takeScreenshot(fileName) end
+
+--- @param arg0 IsoPlayer
+--- @return nil
+function teleportPlayers(arg0) end
+
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
+function teleportToHimUserAction(arg0, arg1, arg2) end
+
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 string
+--- @return nil
+function teleportUserAction(arg0, arg1, arg2) end
 
 --- @return nil
 function testHelicopter() end
@@ -3164,6 +3238,10 @@ function triggerEvent(event, param, param2, param3, param4) end
 --- @return Texture
 function tryGetTexture(arg0) end
 
+--- @param arg0 Account
+--- @return nil
+function updateAccountToAccountList(arg0) end
+
 --- @param fontSize string
 --- @param showTimestamp boolean
 --- @param showTitle boolean
@@ -3173,6 +3251,10 @@ function updateChatSettings(fontSize, showTimestamp, showTitle) end
 --- @return nil
 function updateFire() end
 
+--- @param arg0 Server
+--- @return nil
+function updateServerToAccountList(arg0) end
+
 --- @param use boolean
 --- @return nil
 function useStaticErosionRand(use) end
@@ -3180,6 +3262,11 @@ function useStaticErosionRand(use) end
 --- @param bUse boolean
 --- @return nil
 function useTextureFiltering(bUse) end
+
+--- @param arg0 string
+--- @param arg1 integer
+--- @return nil
+function viewedTicket(arg0, arg1) end
 
 --- @param key integer
 --- @return boolean

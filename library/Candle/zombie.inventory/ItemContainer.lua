@@ -1194,6 +1194,13 @@ function ItemContainer:getParent() end
 function ItemContainer:getPutSound() end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 IsoGameCharacter
+--- @param arg2 boolean
+--- @return InventoryItem
+function ItemContainer:getRecipeItem(arg0, arg1, arg2) end
+
+--- @public
 --- @param predicate Predicate
 --- @param count integer
 --- @param result ArrayList
@@ -1500,6 +1507,12 @@ function ItemContainer:getWaterContainerCount() end
 --- @public
 --- @return integer
 function ItemContainer:getWeightReduction() end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IsoGameCharacter
+--- @return boolean
+function ItemContainer:hasRecipe(arg0, arg1) end
 
 --- @public
 --- @param arg0 string

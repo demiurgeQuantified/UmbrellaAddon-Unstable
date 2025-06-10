@@ -15,7 +15,7 @@ function OnBreak.BaseballBat_Nails(item, player) end
 
 function OnBreak.BaseballBat_RailSpike(item, player) end
 
-function OnBreak.BaseballBat_Rakehead(item, player) end
+function OnBreak.BaseballBat_RakeHead(item, player) end
 
 function OnBreak.BaseballBat_Sawblade(item, player) end
 

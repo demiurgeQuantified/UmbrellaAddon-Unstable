@@ -5,7 +5,7 @@
 ---@field forwardView table
 ---@field isDragging unknown
 ---@field mouseDownHook unknown?
----@field pagesCount number
+---@field pagesCount unknown
 ---@field shownViews table
 ---@field tooMuchViews boolean
 ISTabPanelPaginated = ISTabPanel:derive("ISTabPanelPaginated")
@@ -20,7 +20,7 @@ function ISTabPanelPaginated.redoTab(self) end
 
 function ISTabPanelPaginated:addForwardBackwardViews() end
 
----@return number
+---@return unknown
 function ISTabPanelPaginated:getPagesCount() end
 
 ---@return number
@@ -47,13 +47,11 @@ function ISTabPanelPaginated:render() end
 ---@return number
 function ISTabPanelPaginated:renderView(viewObject, tabDragSelected, _x, tabWidth, gap) end
 
----@param pagesCount number
 function ISTabPanelPaginated:setPagesCount(pagesCount) end
 
 ---@param x number
 ---@param y number
 ---@param width number
 ---@param height number
----@param pagesCount number
 ---@return ISTabPanelPaginated
 function ISTabPanelPaginated:new(x, y, width, height, pagesCount) end

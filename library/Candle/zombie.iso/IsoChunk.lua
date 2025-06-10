@@ -384,6 +384,10 @@ function IsoChunk:getVispolyDataForLevel(arg0) end
 function IsoChunk:hasAttachmentsPartial(arg0) end
 
 --- @public
+--- @return boolean
+function IsoChunk:hasFence() end
+
+--- @public
 --- @param object IsoObject
 --- @return boolean
 function IsoChunk:hasObjectAmbientEmitter(object) end

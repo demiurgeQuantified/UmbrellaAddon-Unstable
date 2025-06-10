@@ -7,6 +7,7 @@
 ---@field delete ISButton
 ---@field edit ISButton
 ---@field player unknown
+---@field tooltipUI ISToolTip
 ISRolesList = ISPanel:derive("ISRolesList")
 ISRolesList.Type = "ISRolesList"
 ISRolesList.instance = nil ---@type ISRolesList?
@@ -29,6 +30,14 @@ function ISRolesList:onClick(button) end
 function ISRolesList:onClickOption(item, action) end
 
 function ISRolesList:onDeleteModalClick(button) end
+
+---@param dx number
+---@param dy number
+function ISRolesList:onMouseMove(dx, dy) end
+
+---@param dx number
+---@param dy number
+function ISRolesList:onMouseMoveOutside(dx, dy) end
 
 ---@param x number
 ---@param y number

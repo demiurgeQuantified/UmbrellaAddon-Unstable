@@ -47,6 +47,22 @@ function CrawlingZombieTurnState:execute(owner) end
 --- @return nil
 function CrawlingZombieTurnState:exit(owner) end
 
+--- @public
+--- @return boolean
+function CrawlingZombieTurnState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function CrawlingZombieTurnState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function CrawlingZombieTurnState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function CrawlingZombieTurnState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

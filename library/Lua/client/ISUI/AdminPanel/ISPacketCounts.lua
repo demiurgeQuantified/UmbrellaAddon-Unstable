@@ -2,10 +2,19 @@
 
 ---@class ISPacketCounts : ISPanel
 ---@field category ISComboBox
+---@field clear ISButton
 ---@field close ISButton
----@field currentCounts table
 ---@field listbox ISPacketCountsList
----@field update ISButton
+---@field minusBtn ISButton
+---@field ordering number
+---@field period ISTextEntryBox
+---@field plusBtn ISButton
+---@field priority number
+---@field reliability number
+---@field tickBoxOrdering ISTickBox
+---@field tickBoxPriority ISTickBox
+---@field tickBoxReliability ISTickBox
+---@field type ISComboBox
 ISPacketCounts = ISPanel:derive("ISPacketCounts")
 ISPacketCounts.Type = "ISPacketCounts"
 ISPacketCounts.instance = nil ---@type ISPacketCounts?
@@ -14,11 +23,19 @@ function ISPacketCounts:closeSelf() end
 
 function ISPacketCounts:createChildren() end
 
+function ISPacketCounts:onClear() end
+
+function ISPacketCounts:onClickMinus() end
+
+function ISPacketCounts:onClickPlus() end
+
 function ISPacketCounts:onClose() end
 
 function ISPacketCounts:onSelectCategory() end
 
-function ISPacketCounts:onUpdate() end
+function ISPacketCounts:onSelectType() end
+
+function ISPacketCounts:onTicked(index, selected) end
 
 function ISPacketCounts:render() end
 

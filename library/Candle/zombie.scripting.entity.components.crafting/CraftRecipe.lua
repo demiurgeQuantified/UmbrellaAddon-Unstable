@@ -416,7 +416,18 @@ function CraftRecipe:hasOnTickOutputs() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @return boolean
+function CraftRecipe:hasPlayerLearned(arg0) end
+
+--- @public
+--- @param arg0 HandcraftLogic
+--- @return boolean
 function CraftRecipe:hasRecipeAtHand(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @return boolean
+function CraftRecipe:hasRecipeAtHand(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
@@ -530,9 +541,15 @@ function CraftRecipe:setProp2(arg0) end
 function CraftRecipe:setResearchSkillLevel(arg0) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param arg0 HandcraftLogic
 --- @return boolean
 function CraftRecipe:validateBenefitFromRecipeAtHand(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @return boolean
+function CraftRecipe:validateBenefitFromRecipeAtHand(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

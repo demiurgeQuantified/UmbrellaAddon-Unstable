@@ -52,10 +52,10 @@ BodyPartSyncPacket = {}
 
 --- @public
 --- @static
---- @param arg0 PacketType
---- @param arg1 Object[]
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
 --- @return INetworkPacket
-function BodyPartSyncPacket.createPacket(arg0, arg1) end
+function BodyPartSyncPacket.getPacket(arg0, arg1) end
 
 --- @public
 --- @static
@@ -63,6 +63,7 @@ function BodyPartSyncPacket.createPacket(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
+--- @deprecated
 function BodyPartSyncPacket.processPacketOnServer(arg0, arg1, arg2) end
 
 --- @public
@@ -99,6 +100,13 @@ function BodyPartSyncPacket.send(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 PacketType
+--- @param arg1 Object[]
+--- @return nil
+function BodyPartSyncPacket.sendToAll(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 PacketType
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
@@ -123,24 +131,13 @@ function BodyPartSyncPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @return nil
 function BodyPartSyncPacket.sendToRelative(arg0, arg1, arg2, arg3, arg4) end
 
---- @public
---- @static
---- @param arg0 PacketType
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 Object[]
---- @return nil
-function BodyPartSyncPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
---- @return nil
-function BodyPartSyncPacket:parse(arg0, arg1) end
+--- @return boolean
+function BodyPartSyncPacket:isPostponed() end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -165,6 +162,10 @@ function BodyPartSyncPacket:parseClientLoading(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @return nil
 function BodyPartSyncPacket:parseServer(arg0, arg1) end
+
+--- @public
+--- @return nil
+function BodyPartSyncPacket:postpone() end
 
 --- @public
 --- @param arg0 UdpConnection
@@ -223,10 +224,6 @@ function BodyPartSyncPacket:setData(arg0) end
 --- @param arg1 UdpConnection
 --- @return nil
 function BodyPartSyncPacket:sync(arg0, arg1) end
-
---- @public
---- @return boolean
-function BodyPartSyncPacket:tryProcessInternal() end
 
 --- @public
 --- @param arg0 ByteBufferWriter

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoWorldInventoryObject: IsoObject
+--- @class IsoWorldInventoryObject: IsoObject, IItemProvider
 --- @field public class any
 IsoWorldInventoryObject = {}
 
@@ -89,6 +89,10 @@ function IsoWorldInventoryObject:getFluidUiName() end
 function IsoWorldInventoryObject:getItem() end
 
 --- @public
+--- @return InventoryItem
+function IsoWorldInventoryObject:getItem() end
+
+--- @public
 --- @return string
 function IsoWorldInventoryObject:getObjectName() end
 
@@ -133,6 +137,10 @@ function IsoWorldInventoryObject:getWorldPosZ() end
 --- @public
 --- @return boolean
 function IsoWorldInventoryObject:hasWater() end
+
+--- @public
+--- @return boolean
+function IsoWorldInventoryObject:isExtendedPlacement() end
 
 --- @public
 --- @return boolean
@@ -209,6 +217,11 @@ function IsoWorldInventoryObject:save(output, IS_DEBUG_SAVE) end
 --- @param bb ByteBuffer
 --- @return nil
 function IsoWorldInventoryObject:saveChange(change, tbl, bb) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoWorldInventoryObject:setExtendedPlacement(arg0) end
 
 --- @public
 --- @param arg0 integer

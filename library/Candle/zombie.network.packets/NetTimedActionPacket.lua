@@ -10,10 +10,10 @@ NetTimedActionPacket = {}
 
 --- @public
 --- @static
---- @param arg0 PacketType
---- @param arg1 Object[]
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
 --- @return INetworkPacket
-function NetTimedActionPacket.createPacket(arg0, arg1) end
+function NetTimedActionPacket.getPacket(arg0, arg1) end
 
 --- @public
 --- @static
@@ -21,6 +21,7 @@ function NetTimedActionPacket.createPacket(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
+--- @deprecated
 function NetTimedActionPacket.processPacketOnServer(arg0, arg1, arg2) end
 
 --- @public
@@ -57,6 +58,13 @@ function NetTimedActionPacket.send(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 PacketType
+--- @param arg1 Object[]
+--- @return nil
+function NetTimedActionPacket.sendToAll(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 PacketType
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
@@ -81,24 +89,13 @@ function NetTimedActionPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @return nil
 function NetTimedActionPacket.sendToRelative(arg0, arg1, arg2, arg3, arg4) end
 
---- @public
---- @static
---- @param arg0 PacketType
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 Object[]
---- @return nil
-function NetTimedActionPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
---- @return nil
-function NetTimedActionPacket:parse(arg0, arg1) end
+--- @return boolean
+function NetTimedActionPacket:isPostponed() end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -123,6 +120,10 @@ function NetTimedActionPacket:parseClientLoading(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @return nil
 function NetTimedActionPacket:parseServer(arg0, arg1) end
+
+--- @public
+--- @return nil
+function NetTimedActionPacket:postpone() end
 
 --- @public
 --- @param arg0 UdpConnection
@@ -181,10 +182,6 @@ function NetTimedActionPacket:setData(arg0) end
 --- @param arg1 UdpConnection
 --- @return nil
 function NetTimedActionPacket:sync(arg0, arg1) end
-
---- @public
---- @return boolean
-function NetTimedActionPacket:tryProcessInternal() end
 
 --- @public
 --- @param arg0 ByteBufferWriter

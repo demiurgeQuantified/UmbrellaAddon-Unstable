@@ -134,6 +134,10 @@ function Item:getBringToBearSound() end
 
 --- @public
 --- @return string
+function Item:getBulletHitArmourSound() end
+
+--- @public
+--- @return string
 function Item:getBulletOutSound() end
 
 --- @public
@@ -288,6 +292,10 @@ function Item:getExplosionSound() end
 --- @public
 --- @return string
 function Item:getFabricType() end
+
+--- @public
+--- @return string
+function Item:getFileName() end
 
 --- @public
 --- @return string
@@ -719,6 +727,10 @@ function Item:getVisionModifier() end
 --- @public
 --- @return number
 function Item:getWaterresist() end
+
+--- @public
+--- @return string
+function Item:getWeaponHitArmourSound() end
 
 --- @public
 --- @return string _ the WeaponSprite

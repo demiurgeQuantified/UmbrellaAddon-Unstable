@@ -48,6 +48,22 @@ function AttackState:exit(owner) end
 --- @return boolean
 function AttackState:isAttacking(owner) end
 
+--- @public
+--- @return boolean
+function AttackState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function AttackState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function AttackState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function AttackState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

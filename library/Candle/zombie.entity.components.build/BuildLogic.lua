@@ -10,6 +10,14 @@ BuildLogic = {}
 
 --- @public
 --- @return boolean
+function BuildLogic:areAllInputItemsSatisfied() end
+
+--- @public
+--- @return boolean
+function BuildLogic:cachedCanPerformCurrentRecipe() end
+
+--- @public
+--- @return boolean
 function BuildLogic:canPerformCurrentRecipe() end
 
 --- @public
@@ -19,6 +27,10 @@ function BuildLogic:getAllBuildableRecipes() end
 --- @public
 --- @return ArrayList
 function BuildLogic:getAllConsumedItems() end
+
+--- @public
+--- @return ArrayList
+function BuildLogic:getContainers() end
 
 --- @public
 --- @return CraftRecipe
@@ -106,6 +118,10 @@ function BuildLogic:startCraftAction(arg0) end
 --- @public
 --- @return nil
 function BuildLogic:stopCraftAction() end
+
+--- @public
+--- @return nil
+function BuildLogic:updateFloorContainer() end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

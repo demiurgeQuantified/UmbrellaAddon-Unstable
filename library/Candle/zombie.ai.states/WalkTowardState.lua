@@ -54,6 +54,22 @@ function WalkTowardState:exit(owner) end
 --- @return boolean
 function WalkTowardState:isMoving(owner) end
 
+--- @public
+--- @return boolean
+function WalkTowardState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function WalkTowardState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function WalkTowardState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function WalkTowardState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

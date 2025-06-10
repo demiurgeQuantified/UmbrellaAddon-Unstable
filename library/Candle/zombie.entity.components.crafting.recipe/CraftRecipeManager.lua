@@ -160,8 +160,9 @@ function CraftRecipeManager.isItemValidForRecipe(arg0, arg1) end
 --- @param arg0 CraftRecipe
 --- @param arg1 IsoGameCharacter
 --- @param arg2 CraftRecipeMonitor
+--- @param arg3 ArrayList
 --- @return boolean
-function CraftRecipeManager.isValidRecipeForCharacter(arg0, arg1, arg2) end
+function CraftRecipeManager.isValidRecipeForCharacter(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static

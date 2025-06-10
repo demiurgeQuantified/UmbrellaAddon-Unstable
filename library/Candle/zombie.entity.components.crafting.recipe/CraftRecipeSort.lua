@@ -20,8 +20,9 @@ function CraftRecipeSort.alphaNumeric(arg0) end
 --- @param arg1 IsoGameCharacter
 --- @param arg2 ArrayList
 --- @param arg3 ArrayList
+--- @param arg4 ArrayList
 --- @return List
-function CraftRecipeSort.canPerformAndValidRecipes(arg0, arg1, arg2, arg3) end
+function CraftRecipeSort.canPerformAndValidRecipes(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @static

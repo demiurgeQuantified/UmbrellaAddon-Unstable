@@ -73,7 +73,7 @@ function MainOptions.sortModes(a, b) end
 
 ---@param name string
 ---@param key number?
----@param version number
+---@param version number?
 ---@return number?
 function MainOptions.upgradeKeysIni(name, key, defaultKey, version) end
 

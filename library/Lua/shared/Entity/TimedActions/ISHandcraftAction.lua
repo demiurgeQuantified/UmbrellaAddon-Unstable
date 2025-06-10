@@ -15,6 +15,7 @@
 ---@field onCompleteTarget unknown
 ---@field onStartFunc unknown
 ---@field onStartTarget unknown
+---@field recipeItem unknown
 ---@field sound unknown
 ISHandcraftAction = ISBaseTimedAction:derive("ISHandcraftAction")
 ISHandcraftAction.Type = "ISHandcraftAction"
@@ -56,4 +57,14 @@ function ISHandcraftAction:stop() end
 function ISHandcraftAction:update() end
 
 ---@return ISHandcraftAction
-function ISHandcraftAction:new(character, craftRecipe, containers, isoObject, craftBench, manualInputs, items) end
+function ISHandcraftAction:new(
+	character,
+	craftRecipe,
+	containers,
+	isoObject,
+	craftBench,
+	manualInputs,
+	items,
+	recipeItem
+)
+end

@@ -40,6 +40,22 @@ function ZombieReanimateState:execute(owner) end
 --- @return nil
 function ZombieReanimateState:exit(owner) end
 
+--- @public
+--- @return boolean
+function ZombieReanimateState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ZombieReanimateState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ZombieReanimateState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ZombieReanimateState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

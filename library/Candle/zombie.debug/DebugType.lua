@@ -4,6 +4,7 @@
 --- @field public class any
 --- @field public Action DebugType
 --- @field public ActionSystem DebugType
+--- @field public ActionSystemEvents DebugType
 --- @field public Animal DebugType
 --- @field public Animation DebugType
 --- @field public AnimationDetailed DebugType
@@ -14,6 +15,7 @@
 --- @field public Checksum DebugType
 --- @field public Clothing DebugType
 --- @field public Combat DebugType
+--- @field public Corpse DebugType
 --- @field public CraftLogic DebugType
 --- @field public Damage DebugType
 --- @field public Death DebugType

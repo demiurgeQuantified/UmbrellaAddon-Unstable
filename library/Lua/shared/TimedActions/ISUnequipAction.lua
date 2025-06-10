@@ -20,7 +20,7 @@ function ISUnequipAction:complete() end
 ---@return number?
 function ISUnequipAction:getDuration() end
 
----@return boolean
+---@return boolean?
 function ISUnequipAction:isValid() end
 
 function ISUnequipAction:perform() end

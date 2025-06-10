@@ -31,5 +31,6 @@ function ISLightFromLiterature:waitToStart() end
 
 ---@param character unknown?
 ---@param item unknown?
+---@param fuelAmt number
 ---@return ISLightFromLiterature
-function ISLightFromLiterature:new(character, item, lighter, campfire) end
+function ISLightFromLiterature:new(character, item, lighter, campfire, fuelAmt) end

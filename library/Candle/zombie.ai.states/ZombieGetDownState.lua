@@ -46,6 +46,22 @@ function ZombieGetDownState:exit(owner) end
 function ZombieGetDownState:isNearStartXY(owner) end
 
 --- @public
+--- @return boolean
+function ZombieGetDownState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ZombieGetDownState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ZombieGetDownState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ZombieGetDownState:isSyncOnSquare() end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @return nil
 function ZombieGetDownState:setParams(owner) end

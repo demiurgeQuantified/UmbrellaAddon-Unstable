@@ -42,6 +42,8 @@ function ISBuildRecipePanel:setOverlayVisible(_b) end
 
 function ISBuildRecipePanel:update() end
 
+function ISBuildRecipePanel:updateContainers(containers) end
+
 ---@param x number
 ---@param y number
 ---@param width number

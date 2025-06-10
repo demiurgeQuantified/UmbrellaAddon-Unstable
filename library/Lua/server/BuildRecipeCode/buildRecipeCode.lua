@@ -2,6 +2,7 @@
 
 ---@class BuildRecipeCode
 BuildRecipeCode = {}
+BuildRecipeCode.barricade = nil ---@type BuildRecipeCode.barricade
 BuildRecipeCode.canBePlastered = nil ---@type BuildRecipeCode.canBePlastered
 BuildRecipeCode.stairs = nil ---@type BuildRecipeCode.stairs
 BuildRecipeCode.floor = nil ---@type BuildRecipeCode.floor
@@ -13,6 +14,14 @@ BuildRecipeCode.campfire = nil ---@type BuildRecipeCode.campfire
 BuildRecipeCode.composter = nil ---@type BuildRecipeCode.composter
 BuildRecipeCode.windowGlass = nil ---@type BuildRecipeCode.windowGlass
 BuildRecipeCode.woodLampPillar = nil ---@type BuildRecipeCode.woodLampPillar
+
+---@class BuildRecipeCode.barricade
+local __buildRecipeCode_barricade = {}
+
+function __buildRecipeCode_barricade.OnCreate(thumpable, craftRecipeData, character) end
+
+---@return boolean
+function __buildRecipeCode_barricade.OnIsValid(params) end
 
 ---@class BuildRecipeCode.stairs
 local __buildRecipeCode_stairs = {}
@@ -56,6 +65,7 @@ function __buildRecipeCode_chickenHutch.OnCreate(thumpable) end
 ---@class BuildRecipeCode.feedingTrough
 local __buildRecipeCode_feedingTrough = {}
 
+---@return table
 function __buildRecipeCode_feedingTrough.OnCreate(thumpable) end
 
 ---@class BuildRecipeCode.campfire

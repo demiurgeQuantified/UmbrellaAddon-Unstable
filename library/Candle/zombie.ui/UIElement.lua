@@ -580,11 +580,11 @@ function UIElement:getMaxDrawHeight() end
 function UIElement:getMaxDrawHeight() end
 
 --- @public
---- @return UIElementInterface _ the Parent
+--- @return UIElement _ the Parent
 function UIElement:getParent() end
 
 --- @public
---- @return UIElement _ the Parent
+--- @return UIElementInterface _ the Parent
 function UIElement:getParent() end
 
 --- @public
@@ -1167,6 +1167,14 @@ function UIElement:setScrollHeight(h) end
 --- @param bScroll boolean
 --- @return nil
 function UIElement:setScrollWithParent(bScroll) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
+function UIElement:setStencilCircle(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param x number

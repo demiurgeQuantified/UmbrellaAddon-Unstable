@@ -23,6 +23,8 @@ function ISTeleportDebugUI:initialise() end
 
 function ISTeleportDebugUI:onClick(button) end
 
+function ISTeleportDebugUI:onCommandEntered() end
+
 ---@param x number
 ---@param y number
 function ISTeleportDebugUI:onMouseDown(x, y) end
@@ -42,6 +44,8 @@ function ISTeleportDebugUI:onMouseUp(x, y) end
 ---@param x number
 ---@param y number
 function ISTeleportDebugUI:onMouseUpOutside(x, y) end
+
+function ISTeleportDebugUI:onOtherKey(key) end
 
 function ISTeleportDebugUI:prerender() end
 

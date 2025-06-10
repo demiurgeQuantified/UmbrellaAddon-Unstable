@@ -72,3 +72,11 @@ function DBTicket:setViewed(viewed) end
 --- @param ticketID integer
 --- @return DBTicket
 function DBTicket.new(author, message, ticketID) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 boolean
+--- @return DBTicket
+function DBTicket.new(arg0, arg1, arg2, arg3) end

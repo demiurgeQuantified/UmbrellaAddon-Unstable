@@ -7,10 +7,6 @@ biome_map_config = {
 		zone = "Water",
 	},
 	{
-		pixel = 45,
-		zone = "WaterNoFish",
-	},
-	{
 		pixel = 59,
 		biome = "clay_shore",
 		zone = "Forest",
@@ -49,20 +45,9 @@ biome_map_config = {
 		zone = "FarmLand",
 	},
 	{
-		pixel = 171,
-		biome = "vegitation",
-		zone = "Vegitation",
-	},
-	{
 		pixel = 153,
 		biome = "ph_forest",
 		zone = "PHForest",
-	},
-	{
-		pixel = 166,
-		biome = "phmix_forest",
-		ore = "map_forest",
-		zone = "PHMixForest",
 	},
 	{
 		pixel = 179,

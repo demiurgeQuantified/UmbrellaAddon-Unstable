@@ -234,6 +234,8 @@ function VehicleUtils.getItemScripts(items) end
 ---@return table
 function VehicleUtils.getPerksTableForChr(perks, chr) end
 
+function VehicleUtils.initHeadlight(vehicle, part) end
+
 function VehicleUtils.InstallPart(part, item, chr) end
 
 function VehicleUtils.lowerUninstalledItemCondition(part, item, mechanicSkill, chr) end

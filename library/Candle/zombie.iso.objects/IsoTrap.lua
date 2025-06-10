@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoTrap: IsoObject
+--- @class IsoTrap: IsoObject, IItemProvider
 --- @field public class any
 IsoTrap = {}
 
@@ -23,6 +23,10 @@ function IsoTrap.triggerRemote(player, remoteID, range) end
 --- @public
 --- @return nil
 function IsoTrap:addToWorld() end
+
+--- @public
+--- @return IsoGameCharacter
+function IsoTrap:getAttacker() end
 
 --- @public
 --- @return string
@@ -55,6 +59,14 @@ function IsoTrap:getFirePower() end
 --- @public
 --- @return integer
 function IsoTrap:getFireRange() end
+
+--- @public
+--- @return HandWeapon
+function IsoTrap:getHandWeapon() end
+
+--- @public
+--- @return InventoryItem
+function IsoTrap:getItem() end
 
 --- @public
 --- @return InventoryItem
@@ -231,3 +243,11 @@ function IsoTrap.new(cell) end
 --- @param sq IsoGridSquare
 --- @return IsoTrap
 function IsoTrap.new(weapon, cell, sq) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 HandWeapon
+--- @param arg2 IsoCell
+--- @param arg3 IsoGridSquare
+--- @return IsoTrap
+function IsoTrap.new(arg0, arg1, arg2, arg3) end

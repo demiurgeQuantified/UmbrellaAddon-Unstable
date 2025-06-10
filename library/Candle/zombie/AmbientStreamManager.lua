@@ -69,6 +69,11 @@ function AmbientStreamManager:addDaytimeAmbientEmitter(x, y, z, name) end
 function AmbientStreamManager:addRandomAmbient() end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function AmbientStreamManager:addRandomAmbient(arg0) end
+
+--- @public
 --- @return nil
 function AmbientStreamManager:checkHaveElectricity() end
 

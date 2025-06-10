@@ -26,10 +26,10 @@ SyncPlayerStatsPacket = {}
 
 --- @public
 --- @static
---- @param arg0 PacketType
---- @param arg1 Object[]
+--- @param arg0 UdpConnection
+--- @param arg1 PacketType
 --- @return INetworkPacket
-function SyncPlayerStatsPacket.createPacket(arg0, arg1) end
+function SyncPlayerStatsPacket.getPacket(arg0, arg1) end
 
 --- @public
 --- @static
@@ -37,6 +37,7 @@ function SyncPlayerStatsPacket.createPacket(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
+--- @deprecated
 function SyncPlayerStatsPacket.processPacketOnServer(arg0, arg1, arg2) end
 
 --- @public
@@ -73,6 +74,13 @@ function SyncPlayerStatsPacket.send(arg0, arg1, arg2) end
 --- @public
 --- @static
 --- @param arg0 PacketType
+--- @param arg1 Object[]
+--- @return nil
+function SyncPlayerStatsPacket.sendToAll(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 PacketType
 --- @param arg1 UdpConnection
 --- @param arg2 Object[]
 --- @return nil
@@ -97,24 +105,13 @@ function SyncPlayerStatsPacket.sendToRelative(arg0, arg1, arg2, arg3) end
 --- @return nil
 function SyncPlayerStatsPacket.sendToRelative(arg0, arg1, arg2, arg3, arg4) end
 
---- @public
---- @static
---- @param arg0 PacketType
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 Object[]
---- @return nil
-function SyncPlayerStatsPacket.sendToRelativeAndProcess(arg0, arg1, arg2, arg3) end
-
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
---- @return nil
-function SyncPlayerStatsPacket:parse(arg0, arg1) end
+--- @return boolean
+function SyncPlayerStatsPacket:isPostponed() end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -139,6 +136,10 @@ function SyncPlayerStatsPacket:parseClientLoading(arg0, arg1) end
 --- @param arg1 UdpConnection
 --- @return nil
 function SyncPlayerStatsPacket:parseServer(arg0, arg1) end
+
+--- @public
+--- @return nil
+function SyncPlayerStatsPacket:postpone() end
 
 --- @public
 --- @param arg0 UdpConnection
@@ -197,10 +198,6 @@ function SyncPlayerStatsPacket:setData(arg0) end
 --- @param arg1 UdpConnection
 --- @return nil
 function SyncPlayerStatsPacket:sync(arg0, arg1) end
-
---- @public
---- @return boolean
-function SyncPlayerStatsPacket:tryProcessInternal() end
 
 --- @public
 --- @param arg0 ByteBufferWriter

@@ -34,6 +34,10 @@ function PlayerGetUpState:exit(owner) end
 
 --- @public
 --- @return boolean
+function PlayerGetUpState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerGetUpState:isSyncOnEnter() end
 
 --- @public
@@ -46,8 +50,9 @@ function PlayerGetUpState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerGetUpState:setParams(arg0) end
+function PlayerGetUpState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

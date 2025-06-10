@@ -40,6 +40,22 @@ function ZombieFallDownState:execute(owner) end
 --- @return nil
 function ZombieFallDownState:exit(owner) end
 
+--- @public
+--- @return boolean
+function ZombieFallDownState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function ZombieFallDownState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function ZombieFallDownState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function ZombieFallDownState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

@@ -135,6 +135,11 @@ function GameWindow.getUpdateTime() end
 
 --- @public
 --- @static
+--- @return nil
+function GameWindow.initFonts() end
+
+--- @public
+--- @static
 --- @return boolean
 function GameWindow.isIngameState() end
 

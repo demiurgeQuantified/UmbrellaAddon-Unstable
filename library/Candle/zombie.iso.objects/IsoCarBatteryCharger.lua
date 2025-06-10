@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoCarBatteryCharger: IsoObject
+--- @class IsoCarBatteryCharger: IsoObject, IItemProvider
 --- @field public class any
 IsoCarBatteryCharger = {}
 
@@ -19,6 +19,10 @@ function IsoCarBatteryCharger:getBattery() end
 --- @public
 --- @return number
 function IsoCarBatteryCharger:getChargeRate() end
+
+--- @public
+--- @return InventoryItem
+function IsoCarBatteryCharger:getItem() end
 
 --- @public
 --- @return InventoryItem

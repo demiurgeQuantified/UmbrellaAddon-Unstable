@@ -11,9 +11,9 @@ function DebugContextMenu.AddAnimal(type, breed, square, skeleton, playerObj) en
 
 function DebugContextMenu.addRBDebugMenu(context, building) end
 
-function DebugContextMenu.addRVSDebugMenu(context, square) end
+function DebugContextMenu.addRVSDebugMenu(context, square, playerObj) end
 
-function DebugContextMenu.addRZSDebugMenu(context, square) end
+function DebugContextMenu.addRZSDebugMenu(context, square, playerObj) end
 
 function DebugContextMenu.do3DItem() end
 
@@ -30,7 +30,11 @@ function DebugContextMenu.doDebugMenu(player, context, worldobjects, test) end
 ---@return boolean?
 function DebugContextMenu.doDebugObjectMenu(player, context, worldobjects, test) end
 
-function DebugContextMenu.doDebugZombieMenu(player, context, worldobjects, test) end
+function DebugContextMenu.doDebugPlayerMenu(playerObj, context, worldobjects) end
+
+function DebugContextMenu.doDebugVehicleMenu(playerObj, context, worldobjects) end
+
+function DebugContextMenu.doDebugZombieMenu(player, context, worldobjects, test, square) end
 
 function DebugContextMenu.doForageMenu(player, context, worldobjects, test) end
 
@@ -49,6 +53,8 @@ function DebugContextMenu.doSurvivorSwapMenu(player, context, worldobjects, test
 function DebugContextMenu.onAddDesignationZone(playerObj) end
 
 function DebugContextMenu.onAddEnclosure(playerObj) end
+
+function DebugContextMenu.onAddVehicle(playerObj) end
 
 function DebugContextMenu.OnAddZombieClient(player) end
 
@@ -110,11 +116,15 @@ function DebugContextMenu.OnRemoveAllAnimals(zombie) end
 
 function DebugContextMenu.OnRemoveAllAnimalsClient(zombie) end
 
+function DebugContextMenu.onRemoveAllVehicles(playerObj) end
+
 function DebugContextMenu.OnRemoveAllZombies(zombie) end
 
 function DebugContextMenu.OnRemoveAllZombiesClient(zombie) end
 
 function DebugContextMenu.onRemoveItemTool(playerObj) end
+
+function DebugContextMenu.onRemoveVehicle(playerObj, vehicle) end
 
 function DebugContextMenu.onRemoveVehicles(zone) end
 
@@ -164,6 +174,8 @@ function DebugContextMenu.onSpawnPoints(square, player) end
 function DebugContextMenu.onSpawnSurvivorHorde(playerObj) end
 
 function DebugContextMenu.onSpawnVehicle(playerObj) end
+
+function DebugContextMenu.onTeleportPlayers(playerObj) end
 
 function DebugContextMenu.onTeleportUI(playerObj) end
 

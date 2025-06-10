@@ -29,6 +29,10 @@ function PlayerMilkAnimalState:exit(arg0) end
 
 --- @public
 --- @return boolean
+function PlayerMilkAnimalState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerMilkAnimalState:isSyncOnEnter() end
 
 --- @public
@@ -41,8 +45,9 @@ function PlayerMilkAnimalState:isSyncOnSquare() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
 --- @return nil
-function PlayerMilkAnimalState:setParams(arg0) end
+function PlayerMilkAnimalState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

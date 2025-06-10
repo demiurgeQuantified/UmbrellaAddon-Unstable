@@ -42,6 +42,10 @@ function PlayerActionsState:exit(owner) end
 
 --- @public
 --- @return boolean
+function PlayerActionsState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function PlayerActionsState:isSyncOnEnter() end
 
 --- @public
@@ -51,6 +55,12 @@ function PlayerActionsState:isSyncOnExit() end
 --- @public
 --- @return boolean
 function PlayerActionsState:isSyncOnSquare() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 Stage
+--- @return nil
+function PlayerActionsState:setParams(arg0, arg1) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

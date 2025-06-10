@@ -3,12 +3,12 @@
 ---@class ISForageAction : ISBaseTimedAction
 ---@field currentTime number
 ---@field discardItems boolean
----@field forageIcon ISForageIcon
----@field icon ISForageIcon
+---@field forageIcon unknown
 ---@field iconID unknown
 ---@field itemCount unknown
 ---@field itemDef unknown
 ---@field itemType unknown
+---@field itemTypeList table
 ---@field manager unknown
 ---@field maxTime number?
 ---@field started boolean
@@ -39,7 +39,7 @@ function ISForageAction:update() end
 ---@return unknown
 function ISForageAction:waitToStart() end
 
----@param icon ISForageIcon
+---@param itemTypeList table
 ---@param discardItems boolean
 ---@return ISForageAction
-function ISForageAction:new(character, icon, targetContainer, discardItems, itemType) end
+function ISForageAction:new(character, iconID, itemTypeList, targetContainer, discardItems, itemType) end

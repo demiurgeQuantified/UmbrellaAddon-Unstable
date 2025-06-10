@@ -34,8 +34,9 @@ function FluidProperties:setCarbohydrates(arg0) end
 --- @param arg3 number
 --- @param arg4 number
 --- @param arg5 number
+--- @param arg6 number
 --- @return nil
-function FluidProperties:setEffects(arg0, arg1, arg2, arg3, arg4, arg5) end
+function FluidProperties:setEffects(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @param arg0 number

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoBarricade: IsoObject, Thumpable
+--- @class IsoBarricade: IsoObject, Thumpable, IHasHealth
 --- @field public class any
 --- @field public MAX_PLANKS integer
 --- @field public METAL_BAR_HEALTH integer
@@ -151,6 +151,14 @@ function IsoBarricade:getHealth() end
 
 --- @public
 --- @return integer
+function IsoBarricade:getHealth() end
+
+--- @public
+--- @return integer
+function IsoBarricade:getMaxHealth() end
+
+--- @public
+--- @return integer
 function IsoBarricade:getMaxHealth() end
 
 --- @public
@@ -255,6 +263,24 @@ function IsoBarricade:saveChange(change, tbl, bb) end
 --- @param arg0 integer
 --- @return nil
 function IsoBarricade:setHealth(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 integer
+--- @param arg2 UdpConnection
+--- @param arg3 ByteBuffer
+--- @return nil
+function IsoBarricade:syncIsoObject(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function IsoBarricade:syncIsoObjectReceive(arg0) end
+
+--- @public
+--- @param arg0 ByteBufferWriter
+--- @return nil
+function IsoBarricade:syncIsoObjectSend(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

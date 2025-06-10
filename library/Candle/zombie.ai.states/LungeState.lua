@@ -40,6 +40,22 @@ function LungeState:exit(chr) end
 --- @return boolean
 function LungeState:isMoving(owner) end
 
+--- @public
+--- @return boolean
+function LungeState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
+function LungeState:isSyncOnEnter() end
+
+--- @public
+--- @return boolean
+function LungeState:isSyncOnExit() end
+
+--- @public
+--- @return boolean
+function LungeState:isSyncOnSquare() end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

@@ -6,6 +6,9 @@ ISKillAnimal = ISBaseTimedAction:derive("ISKillAnimal")
 ISKillAnimal.Type = "ISKillAnimal"
 
 ---@return boolean
+function ISKillAnimal:canKillAnimal() end
+
+---@return boolean
 function ISKillAnimal:complete() end
 
 ---@return number

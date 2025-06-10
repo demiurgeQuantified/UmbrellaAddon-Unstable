@@ -6,6 +6,7 @@
 ---@field defineStartingPointBtn ISButton
 ---@field endX unknown
 ---@field endY unknown
+---@field interception boolean
 ---@field ok ISButton
 ---@field player unknown
 ---@field size unknown

@@ -4,6 +4,7 @@
 --- @field public class any
 --- @field public AlwaysFill OutputFlag
 --- @field public AutomationOnly OutputFlag
+--- @field public DontInheritCondition OutputFlag
 --- @field public ForceEmpty OutputFlag
 --- @field public HandcraftOnly OutputFlag
 --- @field public HasNoUses OutputFlag

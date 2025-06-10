@@ -64,6 +64,10 @@ function ClimbOverFenceState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, to
 
 --- @public
 --- @return boolean
+function ClimbOverFenceState:isSyncInIdle() end
+
+--- @public
+--- @return boolean
 function ClimbOverFenceState:isSyncOnEnter() end
 
 --- @public

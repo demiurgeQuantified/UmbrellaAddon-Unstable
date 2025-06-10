@@ -51,8 +51,9 @@ function AnimalData:checkFertilizedTime() end
 
 --- @public
 --- @param arg0 boolean
+--- @param arg1 boolean
 --- @return InventoryItem
-function AnimalData:checkPoop(arg0) end
+function AnimalData:checkPoop(arg0, arg1) end
 
 --- @public
 --- @return nil

@@ -9,7 +9,26 @@ Server = {}
 ------------------------------------
 
 --- @public
+--- @param arg0 Account
+--- @return nil
+function Server:addAccount(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @param arg4 integer
+--- @return nil
+function Server:addAccount(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @return ArrayList
+function Server:getAccounts() end
+
+--- @public
 --- @return integer
+--- @deprecated
 function Server:getAuthType() end
 
 --- @public
@@ -17,8 +36,24 @@ function Server:getAuthType() end
 function Server:getDescription() end
 
 --- @public
+--- @return integer
+function Server:getID() end
+
+--- @public
 --- @return string
 function Server:getIp() end
+
+--- @public
+--- @return string
+function Server:getIp2() end
+
+--- @public
+--- @return LocalDateTime
+function Server:getLastDataUpdate() end
+
+--- @public
+--- @return LocalDateTime
+function Server:getLastOnline() end
 
 --- @public
 --- @return integer
@@ -27,6 +62,10 @@ function Server:getLastUpdate() end
 --- @public
 --- @return string
 function Server:getLocalIP() end
+
+--- @public
+--- @return string
+function Server:getMapName() end
 
 --- @public
 --- @return string
@@ -53,11 +92,12 @@ function Server:getPing() end
 function Server:getPlayers() end
 
 --- @public
---- @return string
+--- @return integer
 function Server:getPort() end
 
 --- @public
 --- @return string
+--- @deprecated
 function Server:getPwd() end
 
 --- @public
@@ -90,15 +130,21 @@ function Server:getTimeFromServerCustomizationLastUpdate() end
 
 --- @public
 --- @return boolean
+--- @deprecated
 function Server:getUseSteamRelay() end
 
 --- @public
 --- @return string
+--- @deprecated
 function Server:getUserName() end
 
 --- @public
 --- @return string
 function Server:getVersion() end
+
+--- @public
+--- @return boolean
+function Server:isFeatured() end
 
 --- @public
 --- @return boolean
@@ -118,11 +164,22 @@ function Server:isPublic() end
 
 --- @public
 --- @return boolean
+function Server:isResponded() end
+
+--- @public
+--- @return boolean
+--- @deprecated
 function Server:isSavePwd() end
+
+--- @public
+--- @param arg0 Account
+--- @return nil
+function Server:removeAccount(arg0) end
 
 --- @public
 --- @param arg0 integer
 --- @return nil
+--- @deprecated
 function Server:setAuthType(arg0) end
 
 --- @public
@@ -131,14 +188,42 @@ function Server:setAuthType(arg0) end
 function Server:setDescription(description) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function Server:setFeatured(arg0) end
+
+--- @public
 --- @param hosted boolean
 --- @return nil
 function Server:setHosted(hosted) end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function Server:setID(arg0) end
+
+--- @public
 --- @param ip string
 --- @return nil
 function Server:setIp(ip) end
+
+--- @public
+--- @param arg0 LocalDateTime
+--- @return nil
+function Server:setLastDataUpdate(arg0) end
+
+--- @public
+--- @return nil
+function Server:setLastDataUpdateNow() end
+
+--- @public
+--- @param arg0 LocalDateTime
+--- @return nil
+function Server:setLastOnline(arg0) end
+
+--- @public
+--- @return nil
+function Server:setLastOnlineNow() end
 
 --- @public
 --- @param lastUpdate integer
@@ -149,6 +234,11 @@ function Server:setLastUpdate(lastUpdate) end
 --- @param ip string
 --- @return nil
 function Server:setLocalIP(ip) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function Server:setMapName(arg0) end
 
 --- @public
 --- @param maxPlayers string
@@ -191,9 +281,9 @@ function Server:setPing(ping) end
 function Server:setPlayers(players) end
 
 --- @public
---- @param port string
+--- @param arg0 integer
 --- @return nil
-function Server:setPort(port) end
+function Server:setPort(arg0) end
 
 --- @public
 --- @param bPublic boolean
@@ -203,6 +293,7 @@ function Server:setPublic(bPublic) end
 --- @public
 --- @param pwd string
 --- @return nil
+--- @deprecated
 function Server:setPwd(pwd) end
 
 --- @public
@@ -214,6 +305,12 @@ function Server:setPwd(arg0, arg1) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
+function Server:setResponded(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+--- @deprecated
 function Server:setSavePwd(arg0) end
 
 --- @public
@@ -249,11 +346,13 @@ function Server:setSteamId(steamId) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
+--- @deprecated
 function Server:setUseSteamRelay(arg0) end
 
 --- @public
 --- @param userName string
 --- @return nil
+--- @deprecated
 function Server:setUserName(userName) end
 
 --- @public

@@ -25,6 +25,8 @@ function ISResearchRecipe:isValid() end
 
 function ISResearchRecipe:perform() end
 
+function ISResearchRecipe:sendShowText() end
+
 function ISResearchRecipe:start() end
 
 function ISResearchRecipe:stop() end

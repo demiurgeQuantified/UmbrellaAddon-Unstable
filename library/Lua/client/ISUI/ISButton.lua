@@ -16,6 +16,10 @@
 ---@field font unknown
 ---@field forcedHeightImage number
 ---@field forcedWidthImage number
+---@field iconRight unknown?
+---@field iconRightColor table
+---@field iconRightHeight number
+---@field iconRightWidth number
 ---@field image unknown
 ---@field isButton boolean
 ---@field isJoypad boolean
@@ -39,6 +43,7 @@
 ---@field textureBackground unknown?
 ---@field textureColor table
 ---@field title string?
+---@field titleLeft boolean
 ---@field tooltip unknown?
 ---@field tooltipUI ISToolTip
 ---@field yoffset number
