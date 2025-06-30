@@ -3,6 +3,7 @@
 --- @class ScriptType: Enum
 --- @field public class any
 --- @field public AnimationMesh ScriptType
+--- @field public Clock ScriptType
 --- @field public CraftRecipe ScriptType
 --- @field public EnergyDefinition ScriptType
 --- @field public Entity ScriptType

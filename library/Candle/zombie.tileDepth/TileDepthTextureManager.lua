@@ -32,6 +32,10 @@ function TileDepthTextureManager:finishedLoadTask() end
 
 --- @public
 --- @return TileDepthTexture
+function TileDepthTextureManager:getBillboardDepthTexture() end
+
+--- @public
+--- @return TileDepthTexture
 function TileDepthTextureManager:getDefaultDepthTexture() end
 
 --- @public

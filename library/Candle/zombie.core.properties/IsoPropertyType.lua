@@ -3,11 +3,16 @@
 --- @class IsoPropertyType
 --- @field public class any
 --- @field public BlueLight string
+--- @field public CanAttachAnimal string
 --- @field public ConnectX string
 --- @field public ConnectY string
 --- @field public Container string
 --- @field public ContainerCapacity string
+--- @field public ContainerCloseSound string
+--- @field public ContainerOpenSound string
 --- @field public ContainerPosition string
+--- @field public ContainerPutSound string
+--- @field public ContainerTakeSound string
 --- @field public CustomName string
 --- @field public DamagedSprite string
 --- @field public DoubleDoor string

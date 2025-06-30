@@ -52,6 +52,10 @@ function IsoFireplace:hasFuel() end
 
 --- @public
 --- @return boolean
+function IsoFireplace:isFireSpriteUsingOurDepthTexture() end
+
+--- @public
+--- @return boolean
 function IsoFireplace:isLit() end
 
 --- @public

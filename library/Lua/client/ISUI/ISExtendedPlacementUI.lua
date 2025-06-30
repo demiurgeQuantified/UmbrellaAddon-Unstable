@@ -6,6 +6,7 @@
 ---@field drawJoypadFocus boolean
 ---@field font unknown
 ---@field fontsmall unknown
+---@field gizmo string
 ---@field ignoreSliderValueChange boolean
 ---@field item unknown
 ---@field labelmov ISLabel
@@ -45,6 +46,9 @@ ISExtendedPlacementUI = ISCollapsableWindow:derive("ISExtendedPlacementUI")
 ISExtendedPlacementUI.Type = "ISExtendedPlacementUI"
 ISExtendedPlacementUI.windows = {}
 
+---@return unknown
+function ISExtendedPlacementUI.GetWindowForPlayer(playerIndex) end
+
 function ISExtendedPlacementUI:adjust() end
 
 function ISExtendedPlacementUI:clickedButton(button) end
@@ -67,6 +71,10 @@ function ISExtendedPlacementUI:onGainJoypadFocus(joypadData) end
 function ISExtendedPlacementUI:onJoypadDown(button) end
 
 function ISExtendedPlacementUI:onKeyRelease(key) end
+
+function ISExtendedPlacementUI:onRotateGizmo(vector3) end
+
+function ISExtendedPlacementUI:onTranslateGizmo(vector3) end
 
 function ISExtendedPlacementUI:prerender() end
 

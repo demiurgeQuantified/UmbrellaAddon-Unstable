@@ -467,6 +467,10 @@ function Item:getNumLevelsTrained() end
 
 --- @public
 --- @return integer
+function Item:getNumSpawned() end
+
+--- @public
+--- @return integer
 function Item:getNumberOfPages() end
 
 --- @public

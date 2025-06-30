@@ -34,6 +34,10 @@ function IsoCarBatteryCharger:getObjectName() end
 
 --- @public
 --- @return boolean
+function IsoCarBatteryCharger:hasAnimatedAttachments() end
+
+--- @public
+--- @return boolean
 function IsoCarBatteryCharger:isActivated() end
 
 --- @public
@@ -57,6 +61,14 @@ function IsoCarBatteryCharger:removeFromWorld() end
 --- @param shader Shader
 --- @return nil
 function IsoCarBatteryCharger:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 ColorInfo
+--- @return nil
+function IsoCarBatteryCharger:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param x number

@@ -9,12 +9,17 @@ Fishing.FishingRod = nil ---@type Fishing.FishingRod
 ---@field currentLineStatus string?
 ---@field highTensionTimer number
 ---@field isFirstFishing boolean
+---@field isGamepadReel boolean?
+---@field isGamepadRelease boolean?
+---@field joypad unknown
 ---@field lineLen number?
 ---@field lineMoveCoeff number
 ---@field lowTensionTimer number
 ---@field mpAimX number
 ---@field mpAimY number
 ---@field player unknown
+---@field prevReelValue number
+---@field reelDelta number
 ---@field rodCoeff number
 ---@field rodItem unknown?
 ---@field rodItemType unknown
@@ -59,10 +64,10 @@ function __fishing_FishingRod:getTension() end
 ---@return boolean
 function __fishing_FishingRod:isPickupBobber() end
 
----@return boolean
+---@return boolean?
 function __fishing_FishingRod:isReel() end
 
----@return unknown
+---@return boolean?
 function __fishing_FishingRod:isReleaseLine() end
 
 ---@return boolean
@@ -85,4 +90,4 @@ function __fishing_FishingRod:updateLine() end
 function __fishing_FishingRod:updateLineMoveCoeff() end
 
 ---@return Fishing.FishingRod
-function __fishing_FishingRod:new(player) end
+function __fishing_FishingRod:new(player, joypad) end

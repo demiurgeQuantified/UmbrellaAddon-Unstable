@@ -3117,6 +3117,18 @@ Events.ViewBannedIPs = {
 }
 
 ---
+---@alias Callback_ViewBannedSteamIDs function
+
+---ViewBannedSteamIDs:
+---<br><br>
+Events.ViewBannedSteamIDs = {
+	---@param callback Callback_ViewBannedSteamIDs
+	Add = function(callback) end,
+	---@param callback Callback_ViewBannedSteamIDs
+	Remove = function(callback) end,
+}
+
+---
 ---@alias Callback_ViewTickets fun(tickets:ArrayList)
 
 ---(Multiplayer) (Client) ViewTickets: Fires when receiving the list of tickets from the server.

@@ -1464,6 +1464,10 @@ function ItemContainer:getSourceGrid() end
 function ItemContainer:getSquare() end
 
 --- @public
+--- @return string
+function ItemContainer:getTakeSound() end
+
+--- @public
 --- @return number
 function ItemContainer:getTemprature() end
 
@@ -1766,6 +1770,11 @@ function ItemContainer:setPutSound(putSound) end
 --- @param SourceGrid IsoGridSquare the SourceGrid to set
 --- @return nil
 function ItemContainer:setSourceGrid(SourceGrid) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function ItemContainer:setTakeSound(arg0) end
 
 --- @public
 --- @param type string the type to set

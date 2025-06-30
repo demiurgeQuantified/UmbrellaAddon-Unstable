@@ -48,6 +48,11 @@ function luautils.lerp(_sourceValue, _destinationValue, _stepRate, _finalStepRat
 ---@param _height number
 function luautils.okModal(_text, _centered, _width, _height, _posX, _posY) end
 
+---@param stringTable table
+---@param sep string
+---@return string?
+function luautils.packString(stringTable, sep) end
+
 ---@return boolean
 function luautils.roughlyEqual(_value, _value2, _delta) end
 
@@ -76,6 +81,10 @@ function luautils.tableContains(table2, value) end
 ---@param s string
 ---@return unknown
 function luautils.trim(s) end
+
+---@param sep string
+---@return unknown
+function luautils.unpackString(text, sep) end
 
 function luautils.updatePerksXp(perks, player) end
 

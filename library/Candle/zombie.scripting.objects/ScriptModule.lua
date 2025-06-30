@@ -41,6 +41,11 @@ function ScriptModule:getAnimationsMesh(arg0) end
 
 --- @public
 --- @param arg0 string
+--- @return ClockScript
+function ScriptModule:getClockScript(arg0) end
+
+--- @public
+--- @param arg0 string
 --- @return CraftRecipe
 function ScriptModule:getCraftRecipe(arg0) end
 

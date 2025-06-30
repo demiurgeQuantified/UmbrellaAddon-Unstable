@@ -233,6 +233,10 @@ function VehiclePart:getLightIntensity() end
 function VehiclePart:getLuaFunction(name) end
 
 --- @public
+--- @return string
+function VehiclePart:getMechanicArea() end
+
+--- @public
 --- @return integer
 function VehiclePart:getMechanicSkillInstaller() end
 

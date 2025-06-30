@@ -139,6 +139,12 @@ function composterLvl1Test(param) end
 function composterLvl2Test(param) end
 
 ---@return boolean
+function metalDoorLvl1Test(param) end
+
+---@return boolean
+function metalDoorLvl2Test(param) end
+
+---@return boolean
 function metalWallLvl1Test(param) end
 
 ---@return boolean

@@ -41,6 +41,10 @@ function BuildLogic:getRecipe() end
 function BuildLogic:getRecipeData() end
 
 --- @public
+--- @return CraftRecipeData
+function BuildLogic:getRecipeDataInProgress() end
+
+--- @public
 --- @return ArrayList
 function BuildLogic:getRecipeList() end
 

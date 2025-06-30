@@ -3,6 +3,7 @@
 --- @class IsoAnimal: IsoPlayer, IAnimalVisual
 --- @field public class any
 --- @field public DISPLAY_EXTRA_VALUES boolean
+--- @field public INVALID_SQUARE_XY integer
 --- @field public tempVector2 Vector2
 IsoAnimal = {}
 
@@ -744,6 +745,11 @@ function IsoAnimal:onPlayBreedSoundEvent(arg0) end
 --- @public
 --- @return nil
 function IsoAnimal:pathFailed() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IsoAnimal:pathToCharacter(arg0) end
 
 --- @public
 --- @param arg0 integer

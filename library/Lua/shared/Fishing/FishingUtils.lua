@@ -15,6 +15,19 @@ __fishing_Utils.stopFishingKeysKeyboard = {
 	"CancelAction",
 }
 __fishing_Utils.tempVec2 = Vector2.new()
+__fishing_Utils.skillSizeLimit = {
+	[0] = 0.5,
+	0.9,
+	1,
+	1.4,
+	1.8,
+	2.3,
+	4.5,
+	9,
+	27,
+	32,
+	45,
+}
 __fishing_Utils.fishSizeChancesBySkillLevel = {
 	[0] = {
 		95,
@@ -79,8 +92,8 @@ function __fishing_Utils.facePlayerToAim(player) end
 ---@param y number
 function __fishing_Utils.FacePlayerToBobber(player, x, y) end
 
----@return unknown?
----@return unknown?
+---@return number?
+---@return number?
 function __fishing_Utils.getAimCoords(player) end
 
 ---@param x number
@@ -112,6 +125,12 @@ function __fishing_Utils.isAccessibleAimDist(player) end
 
 ---@return unknown?
 function __fishing_Utils.isCastButtonPressed(joypad) end
+
+---@return number
+---@return number
+---@return boolean?
+---@return boolean?
+function __fishing_Utils.isGamepadReelMove(joypad, prevValue) end
 
 ---@param x number
 ---@param y number

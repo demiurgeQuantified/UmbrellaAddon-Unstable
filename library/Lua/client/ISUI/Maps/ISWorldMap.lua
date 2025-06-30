@@ -101,6 +101,7 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field pyramidBtn ISButton
 ---@field RBumperZoom number?
 ---@field showCellGrid boolean
+---@field showImagePyramid boolean
 ---@field showPlayerNames boolean
 ---@field showPlayers boolean
 ---@field showPrintMedia boolean
@@ -239,6 +240,8 @@ function ISWorldMap:onToggleSymbols() end
 function ISWorldMap:onZoomInButton() end
 
 function ISWorldMap:onZoomOutButton() end
+
+function ISWorldMap:pickMouseOverStreet() end
 
 function ISWorldMap:positionStashMap() end
 

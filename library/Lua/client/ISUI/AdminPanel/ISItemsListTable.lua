@@ -47,6 +47,9 @@ function ISItemsListTable:filterLootCategory(widget, scriptItem) end
 ---@return unknown
 function ISItemsListTable:filterName(widget, scriptItem) end
 
+---@return boolean
+function ISItemsListTable:filterSpawned(widget, scriptItem) end
+
 ---@return unknown
 function ISItemsListTable:filterType(widget, scriptItem) end
 

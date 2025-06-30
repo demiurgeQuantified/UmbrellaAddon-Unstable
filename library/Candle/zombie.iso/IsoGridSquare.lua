@@ -1447,6 +1447,10 @@ function IsoGridSquare:getSlopedSurfaceHeightMin() end
 function IsoGridSquare:getSpecialObjects() end
 
 --- @public
+--- @return IsoGridSquare
+function IsoGridSquare:getSquareAbove() end
+
+--- @public
 --- @return string
 function IsoGridSquare:getSquareRegion() end
 
@@ -1781,6 +1785,11 @@ function IsoGridSquare:hasModData() end
 function IsoGridSquare:hasNaturalFloor() end
 
 --- @public
+--- @param arg0 boolean
+--- @return boolean
+function IsoGridSquare:hasNonHoppableWall(arg0) end
+
+--- @public
 --- @param arg0 IsoDirections
 --- @return boolean
 function IsoGridSquare:hasOpenDoorOnEdge(arg0) end
@@ -2040,6 +2049,12 @@ function IsoGridSquare:isOutside() end
 --- @public
 --- @return boolean
 function IsoGridSquare:isOverlayDone() end
+
+--- @public
+--- @param arg0 IsoDirections
+--- @param arg1 IsoGridSquare
+--- @return boolean
+function IsoGridSquare:isPlayerAbleToHopWallTo(arg0, arg1) end
 
 --- @public
 --- @return boolean

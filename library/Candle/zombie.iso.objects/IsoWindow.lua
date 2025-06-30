@@ -149,6 +149,13 @@ function IsoWindow:WeaponHit(owner, weapon) end
 function IsoWindow:addBarricadesDebug(numPlanks, metal) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @param arg2 boolean
+--- @return IsoBarricade
+function IsoWindow:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
+
+--- @public
 --- @param onOppositeSquare boolean
 --- @return nil
 function IsoWindow:addBrokenGlass(onOppositeSquare) end

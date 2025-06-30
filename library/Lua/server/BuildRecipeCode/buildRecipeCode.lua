@@ -18,15 +18,18 @@ BuildRecipeCode.woodLampPillar = nil ---@type BuildRecipeCode.woodLampPillar
 ---@class BuildRecipeCode.barricade
 local __buildRecipeCode_barricade = {}
 
-function __buildRecipeCode_barricade.OnCreate(thumpable, craftRecipeData, character) end
+function __buildRecipeCode_barricade.OnCreate(params) end
 
 ---@return boolean
 function __buildRecipeCode_barricade.OnIsValid(params) end
 
+---@return boolean
+function __buildRecipeCode_barricade.OnIsValidPlanks(params) end
+
 ---@class BuildRecipeCode.stairs
 local __buildRecipeCode_stairs = {}
 
-function __buildRecipeCode_stairs.OnCreate(thumpable) end
+function __buildRecipeCode_stairs.OnCreate(params) end
 
 ---@return boolean
 function __buildRecipeCode_stairs.OnIsValid(params) end
@@ -34,12 +37,12 @@ function __buildRecipeCode_stairs.OnIsValid(params) end
 ---@class BuildRecipeCode.canBePlastered
 local __buildRecipeCode_canBePlastered = {}
 
-function __buildRecipeCode_canBePlastered.OnCreate(thumpable) end
+function __buildRecipeCode_canBePlastered.OnCreate(params) end
 
 ---@class BuildRecipeCode.floor
 local __buildRecipeCode_floor = {}
 
-function __buildRecipeCode_floor.OnCreate(thumpable) end
+function __buildRecipeCode_floor.OnCreate(params) end
 
 ---@return boolean
 function __buildRecipeCode_floor.OnIsValid(params) end
@@ -54,24 +57,24 @@ function __buildRecipeCode_doorFrame.OnIsValid(params) end
 local __buildRecipeCode_butcheringHook = {}
 
 ---@return table
-function __buildRecipeCode_butcheringHook.OnCreate(thumpable) end
+function __buildRecipeCode_butcheringHook.OnCreate(params) end
 
 ---@class BuildRecipeCode.chickenHutch
 local __buildRecipeCode_chickenHutch = {}
 
 ---@return table
-function __buildRecipeCode_chickenHutch.OnCreate(thumpable) end
+function __buildRecipeCode_chickenHutch.OnCreate(params) end
 
 ---@class BuildRecipeCode.feedingTrough
 local __buildRecipeCode_feedingTrough = {}
 
 ---@return table
-function __buildRecipeCode_feedingTrough.OnCreate(thumpable) end
+function __buildRecipeCode_feedingTrough.OnCreate(params) end
 
 ---@class BuildRecipeCode.campfire
 local __buildRecipeCode_campfire = {}
 
-function __buildRecipeCode_campfire.OnCreate(thumpable) end
+function __buildRecipeCode_campfire.OnCreate(params) end
 
 ---@return boolean
 function __buildRecipeCode_campfire.OnIsValid(params) end
@@ -79,14 +82,14 @@ function __buildRecipeCode_campfire.OnIsValid(params) end
 ---@class BuildRecipeCode.composter
 local __buildRecipeCode_composter = {}
 
-function __buildRecipeCode_composter.OnCreate(thumpable) end
+function __buildRecipeCode_composter.OnCreate(params) end
 
 ---@class BuildRecipeCode.windowGlass
 local __buildRecipeCode_windowGlass = {}
 
-function __buildRecipeCode_windowGlass.OnCreate(thumpable) end
+function __buildRecipeCode_windowGlass.OnCreate(params) end
 
 ---@class BuildRecipeCode.woodLampPillar
 local __buildRecipeCode_woodLampPillar = {}
 
-function __buildRecipeCode_woodLampPillar.OnCreate(thumpable, craftRecipeData, character) end
+function __buildRecipeCode_woodLampPillar.OnCreate(params) end

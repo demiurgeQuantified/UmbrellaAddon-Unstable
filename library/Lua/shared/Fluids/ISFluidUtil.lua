@@ -2,8 +2,8 @@
 
 ---@class ISFluidUtil
 ISFluidUtil = {}
-ISFluidUtil.isoPanelWalkToDist = 5
-ISFluidUtil.isoMaxPanelDist = 3
+ISFluidUtil.isoPanelWalkToDist = 2
+ISFluidUtil.isoMaxPanelDist = 2
 
 ---@param _container ISFluidContainer
 ---@return boolean?

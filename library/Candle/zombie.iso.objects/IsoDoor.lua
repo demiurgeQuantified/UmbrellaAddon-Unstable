@@ -36,6 +36,12 @@ function IsoDoor.getDoubleDoorObject(oneOfFour, index) end
 
 --- @public
 --- @static
+--- @param arg0 integer
+--- @return integer
+function IsoDoor.getDoubleDoorPartnerIndex(arg0) end
+
+--- @public
+--- @static
 --- @param oneOfThree IsoObject
 --- @return IsoObject
 function IsoDoor.getGarageDoorFirst(oneOfThree) end
@@ -167,6 +173,13 @@ function IsoDoor:WeaponHit(owner, weapon) end
 --- @param weapon HandWeapon
 --- @return nil
 function IsoDoor:WeaponHit(owner, weapon) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @param arg2 boolean
+--- @return IsoBarricade
+function IsoDoor:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil

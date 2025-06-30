@@ -457,8 +457,14 @@ function ISUIElement:isFollowGameWorld() end
 ---@return unknown
 function ISUIElement:isMouseOver() end
 
+---@return boolean
+function ISUIElement:isMouseOverChild() end
+
 ---@return unknown
 function ISUIElement:isPointOver(screenX, screenY) end
+
+---@return boolean
+function ISUIElement:isPointOverChild(screenX, screenY) end
 
 ---@return unknown
 function ISUIElement:isReallyVisible() end

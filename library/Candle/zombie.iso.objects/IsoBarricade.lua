@@ -109,6 +109,12 @@ function IsoBarricade:WeaponHit(owner, weapon) end
 function IsoBarricade:WeaponHit(owner, weapon) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @return nil
+function IsoBarricade:addFromCraftRecipe(arg0, arg1) end
+
+--- @public
 --- @param chr IsoGameCharacter
 --- @param metal InventoryItem
 --- @return nil

@@ -6,12 +6,21 @@ MapUtils = {}
 ---@param mapUI ISWorldMap
 function MapUtils.initDefaultMapData(mapUI) end
 
+---@param mapUI ISWorldMap
+function MapUtils.initDefaultStreetData(mapUI) end
+
 ---@param mapUI table
 function MapUtils.initDefaultStyleV1(mapUI) end
+
+---@param mapUI ISWorldMap
+function MapUtils.initDefaultStyleV3(mapUI) end
 
 ---@param mapUI ISWorldMap | MapSpawnSelectImage
 ---@param directory string
 function MapUtils.initDirectoryMapData(mapUI, directory) end
+
+---@param directory string
+function MapUtils.initDirectoryStreetData(mapUI, directory) end
 
 ---@param mapUI table
 function MapUtils.overlayPaper(mapUI) end

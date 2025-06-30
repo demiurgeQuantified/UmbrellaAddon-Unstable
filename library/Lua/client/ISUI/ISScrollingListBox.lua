@@ -39,7 +39,7 @@ function ISScrollingListBox.sortByName(a, b) end
 function ISScrollingListBox:addColumn(columnName, size) end
 
 ---@param name string
----@param item table
+---@param item table?
 ---@param tooltip unknown?
 ---@return table
 function ISScrollingListBox:addItem(name, item, tooltip) end

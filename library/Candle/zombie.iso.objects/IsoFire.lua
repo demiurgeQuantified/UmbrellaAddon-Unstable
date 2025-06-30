@@ -4,6 +4,8 @@
 --- @field public class any
 --- @field public MaxLife integer
 --- @field public MinLife integer
+--- @field public NUM_FRAMES_FIRE integer
+--- @field public NUM_FRAMES_SMOKE integer
 IsoFire = {}
 
 ------------------------------------

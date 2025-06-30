@@ -172,6 +172,10 @@ function InputScript:getResourceType() end
 function InputScript:getShapedIndex() end
 
 --- @public
+--- @return ArrayList
+function InputScript:getTags() end
+
+--- @public
 --- @return boolean
 function InputScript:hasConsumeFromItem() end
 

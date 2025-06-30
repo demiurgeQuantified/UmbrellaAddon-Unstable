@@ -225,6 +225,10 @@ function CraftRecipe:getExistsAsVanilla() end
 function CraftRecipe:getFavouriteModDataString(arg0) end
 
 --- @public
+--- @return Perk
+function CraftRecipe:getHighestPerkRequirement() end
+
+--- @public
 --- @param arg0 IsoGameCharacter
 --- @return Perk
 function CraftRecipe:getHighestRelevantSkill(arg0) end

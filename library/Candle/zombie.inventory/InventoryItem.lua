@@ -1297,15 +1297,15 @@ function InventoryItem:getWorldStaticModelsByIndex() end
 function InventoryItem:getWorldTexture() end
 
 --- @public
---- @return integer
+--- @return number
 function InventoryItem:getWorldXRotation() end
 
 --- @public
---- @return integer
+--- @return number
 function InventoryItem:getWorldYRotation() end
 
 --- @public
---- @return integer
+--- @return number
 function InventoryItem:getWorldZRotation() end
 
 --- @public
@@ -1485,6 +1485,10 @@ function InventoryItem:isDamaged() end
 --- @public
 --- @return boolean _ the DisappearOnUse
 function InventoryItem:isDisappearOnUse() end
+
+--- @public
+--- @return boolean
+function InventoryItem:isDoingExtendedPlacement() end
 
 --- @public
 --- @return boolean
@@ -2045,6 +2049,11 @@ function InventoryItem:setDirt(bodyPartType, amount) end
 function InventoryItem:setDisplayCategory(displayCategory) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function InventoryItem:setDoingExtendedPlacement(arg0) end
+
+--- @public
 --- @param arg0 number
 --- @return nil
 function InventoryItem:setDurability(arg0) end
@@ -2555,19 +2564,19 @@ function InventoryItem:setWorldStaticModelsByIndex(arg0) end
 function InventoryItem:setWorldTexture(WorldTexture) end
 
 --- @public
---- @param arg0 integer
+--- @param arg0 number
 --- @return nil
 function InventoryItem:setWorldXRotation(arg0) end
 
 --- @public
---- @param arg0 integer
+--- @param arg0 number
 --- @return nil
 function InventoryItem:setWorldYRotation(arg0) end
 
 --- @public
---- @param rot integer
+--- @param arg0 number
 --- @return nil
-function InventoryItem:setWorldZRotation(rot) end
+function InventoryItem:setWorldZRotation(arg0) end
 
 --- @public
 --- @return boolean

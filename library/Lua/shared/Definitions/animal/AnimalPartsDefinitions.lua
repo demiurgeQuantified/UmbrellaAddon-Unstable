@@ -307,9 +307,9 @@ AnimalPartsDefinitions.animals = AnimalPartsDefinitions.animals
 			xpPerItem = 7,
 		},
 		rabbuckswamp = AnimalPartsDefinitions.animals["rabbuckswamp"] or rabdoeswamp,
-		rabkitten = AnimalPartsDefinitions.animals["rabkitten"] or {
-			parts = rabkitten.parts or {},
-			bones = rabkitten.bones or {},
+		rabkittenswamp = AnimalPartsDefinitions.animals["rabkittenswamp"] or {
+			parts = rabkittenswamp.parts or {},
+			bones = rabkittenswamp.bones or {},
 			head = "Base.Rabbit_Kitten_Head_Swamp",
 			skull = "Base.Rabbit_KittenSkull",
 			xpPerItem = 3,

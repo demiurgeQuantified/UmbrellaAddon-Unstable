@@ -11,8 +11,35 @@ UI3DScene = {}
 
 --- @public
 --- @static
+--- @return Plane
+function UI3DScene.allocPlane() end
+
+--- @public
+--- @static
 --- @return Ray
 function UI3DScene.allocRay() end
+
+--- @public
+--- @static
+--- @param arg0 Ray
+--- @param arg1 Ray
+--- @return number
+function UI3DScene.closest_distance_between_lines(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 Ray
+--- @param arg1 Circle
+--- @param arg2 Vector3f
+--- @return number
+function UI3DScene.closest_distance_line_circle(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 Vector3f
+--- @param arg1 Ray
+--- @return number
+function UI3DScene.distance_between_point_ray(arg0, arg1) end
 
 --- @public
 --- @static
@@ -21,6 +48,12 @@ function UI3DScene.allocRay() end
 --- @param out Vector3f
 --- @return integer
 function UI3DScene.intersect_ray_plane(Pn, S, out) end
+
+--- @public
+--- @static
+--- @param arg0 Plane
+--- @return nil
+function UI3DScene.releasePlane(arg0) end
 
 --- @public
 --- @static

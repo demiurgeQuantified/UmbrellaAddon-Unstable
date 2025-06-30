@@ -129,7 +129,7 @@ function IsoObject.setLastRenderedRendered(aLastRenderedRendered) end
 --- @param DeleteWhenFinished boolean
 --- @param zBias number
 --- @param TintMod ColorInfo
---- @return nil
+--- @return IsoSpriteInstance
 function IsoObject:AttachAnim(
 	ObjectName,
 	AnimName,
@@ -144,6 +144,22 @@ function IsoObject:AttachAnim(
 	TintMod
 )
 end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @param arg2 integer
+--- @param arg3 number
+--- @param arg4 integer
+--- @param arg5 integer
+--- @param arg6 boolean
+--- @param arg7 integer
+--- @param arg8 boolean
+--- @param arg9 number
+--- @param arg10 ColorInfo
+--- @param arg11 boolean
+--- @return IsoSpriteInstance
+function IsoObject:AttachAnim(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
 
 --- @public
 --- @param spr IsoSprite
@@ -345,6 +361,13 @@ function IsoObject:addItemToObjectSurface(arg0) end
 --- @param arg1 boolean
 --- @return InventoryItem
 function IsoObject:addItemToObjectSurface(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @return InventoryItem
+function IsoObject:addItemToObjectSurface(arg0, arg1, arg2) end
 
 --- @public
 --- @param container ItemContainer
@@ -1824,6 +1847,17 @@ function IsoObject:shouldShowOnOverlay() end
 --- @public
 --- @return nil
 function IsoObject:softReset() end
+
+--- @public
+--- @param arg0 string
+--- @return InventoryItem
+function IsoObject:spawnItemToObjectSurface(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return InventoryItem
+function IsoObject:spawnItemToObjectSurface(arg0, arg1) end
 
 --- @public
 --- @return nil

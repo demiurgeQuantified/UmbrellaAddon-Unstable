@@ -236,6 +236,7 @@ function Fishing.onCreateFishingRod(item) end
 ---@field fishesSizeData table
 ---@field isHaveDifferentSizes boolean
 ---@field isLake boolean
+---@field isPredator boolean
 ---@field isRiver boolean
 ---@field itemType string
 ---@field lure table
@@ -269,6 +270,9 @@ function __fishing_FishConfig:setMaxLength(length) end
 
 ---@param weight number
 function __fishing_FishConfig:setMaxWeight(weight) end
+
+---@param isPredator boolean
+function __fishing_FishConfig:setPredator(isPredator) end
 
 ---@param length number
 function __fishing_FishConfig:setTrophyLength(length) end

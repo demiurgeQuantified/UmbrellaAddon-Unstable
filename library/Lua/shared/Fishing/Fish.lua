@@ -9,6 +9,7 @@ Fishing.Fish = nil ---@type Fishing.Fish
 ---@field dx number
 ---@field dy number
 ---@field fishingLvl unknown
+---@field fishingRod unknown
 ---@field fishItem unknown
 ---@field fishSize number
 ---@field fishSizeLen number
@@ -38,4 +39,4 @@ function __fishing_Fish:update(x, y) end
 ---@param x number
 ---@param y number
 ---@return Fishing.Fish
-function __fishing_Fish:new(character, lure, x, y) end
+function __fishing_Fish:new(character, lure, fishingRod, x, y) end

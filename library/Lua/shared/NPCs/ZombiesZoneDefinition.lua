@@ -244,7 +244,7 @@ ZombiesZoneDefinition.PileOCrepe = {
 		room = "restaurantkitchen",
 	},
 }
-ZombiesZoneDefinition.Coffeeshop = {
+ZombiesZoneDefinition.CoffeeShop = {
 	Waiter_RestaurantM = {
 		name = "Waiter_Restaurant",
 		toSpawn = 1,
@@ -266,6 +266,8 @@ ZombiesZoneDefinition.Coffeeshop = {
 		room = "restaurantkitchen",
 	},
 }
+ZombiesZoneDefinition.Coffeshop = ZombiesZoneDefinition.CoffeeShop
+ZombiesZoneDefinition.Coffeeshop = ZombiesZoneDefinition.CoffeeShop
 ZombiesZoneDefinition.SeaHorse = {
 	Waiter_RestaurantM = {
 		name = "Waiter_Restaurant",
@@ -288,6 +290,8 @@ ZombiesZoneDefinition.SeaHorse = {
 		room = "restaurantkitchen",
 	},
 }
+ZombiesZoneDefinition.SeaHorses = ZombiesZoneDefinition.SeaHorse
+ZombiesZoneDefinition.Seahorse = ZombiesZoneDefinition.SeaHorse
 ZombiesZoneDefinition.Restaurant = {
 	Waiter_RestaurantM = {
 		name = "Waiter_Restaurant",
@@ -453,6 +457,7 @@ ZombiesZoneDefinition.Rich = {
 		chance = 20,
 	},
 }
+ZombiesZoneDefinition.StreetRich = ZombiesZoneDefinition.Rich
 ZombiesZoneDefinition.HotelRich = {
 	Tourist = {
 		name = "Tourist",
@@ -861,6 +866,7 @@ ZombiesZoneDefinition.SwimmingPool = {
 		chance = 100,
 	},
 }
+ZombiesZoneDefinition.Swimmer = ZombiesZoneDefinition.SwimmingPool
 ZombiesZoneDefinition.FancyHotel = {
 	Tourist = {
 		name = "Tourist",
@@ -1374,7 +1380,7 @@ ZombiesZoneDefinition.Nav = {
 		chance = 0.25,
 	},
 }
-ZombiesZoneDefinition.CornMaze = {
+ZombiesZoneDefinition.cornmaze = {
 	HonorStudent = {
 		name = "HonorStudent",
 		chance = 5,
@@ -1408,6 +1414,7 @@ ZombiesZoneDefinition.CornMaze = {
 		chance = 10,
 	},
 }
+ZombiesZoneDefinition.CornMaze = ZombiesZoneDefinition.cornmaze
 ZombiesZoneDefinition.Cowboy = {
 	CostumeWildWestBoss = {
 		name = "CostumeWildWestBoss",

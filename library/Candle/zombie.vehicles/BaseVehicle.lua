@@ -44,6 +44,7 @@
 --- @field public TL_transform_pool ThreadLocal
 --- @field public TL_vector2_pool ThreadLocal
 --- @field public TL_vector2f_pool ThreadLocal
+--- @field public TL_vector3_pool ThreadLocal
 --- @field public TL_vector3f_pool ThreadLocal
 --- @field public TL_vector4f_pool ThreadLocal
 --- @field public vehicleShadow Texture
@@ -105,6 +106,11 @@ function BaseVehicle.allocVector2f() end
 
 --- @public
 --- @static
+--- @return Vector3
+function BaseVehicle.allocVector3() end
+
+--- @public
+--- @static
 --- @return Vector3f
 function BaseVehicle.allocVector3f() end
 
@@ -154,6 +160,12 @@ function BaseVehicle.releaseVector2(v) end
 --- @param arg0 Vector2f
 --- @return nil
 function BaseVehicle.releaseVector2f(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 Vector3
+--- @return nil
+function BaseVehicle.releaseVector3(arg0) end
 
 --- @public
 --- @static

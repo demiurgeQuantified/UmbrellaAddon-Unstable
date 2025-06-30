@@ -19,6 +19,8 @@ function ISFarmingInfo.getDisease(diseaseLvl, farmingLevel, disease, info, index
 ---@return table
 function ISFarmingInfo.getDiseaseName(info) end
 
+function ISFarmingInfo.getDiseaseStats(info) end
+
 ---@param diseaseLvl ISFarmingInfo
 ---@return string
 function ISFarmingInfo.getDiseaseString(diseaseLvl, farmingLevel) end

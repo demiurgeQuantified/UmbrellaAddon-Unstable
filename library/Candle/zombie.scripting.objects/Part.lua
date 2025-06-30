@@ -22,6 +22,10 @@ function Part:getDurability() end
 function Part:getId() end
 
 --- @public
+--- @return string
+function Part:getMechanicArea() end
+
+--- @public
 --- @param arg0 integer
 --- @return Model
 function Part:getModel(arg0) end

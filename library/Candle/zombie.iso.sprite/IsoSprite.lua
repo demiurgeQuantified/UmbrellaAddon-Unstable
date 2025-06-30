@@ -267,6 +267,10 @@ function IsoSprite:getFacing() end
 
 --- @public
 --- @return integer
+function IsoSprite:getFrameCount() end
+
+--- @public
+--- @return integer
 function IsoSprite:getID() end
 
 --- @public

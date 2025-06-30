@@ -18,14 +18,6 @@ function PlayerEmoteState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimLayer
---- @param arg2 AnimationTrack
---- @param arg3 AnimEvent
---- @return nil
-function PlayerEmoteState:animEvent(arg0, arg1, arg2, arg3) end
-
---- @public
 --- @param owner IsoGameCharacter
 --- @return nil
 function PlayerEmoteState:enter(owner) end
@@ -65,11 +57,3 @@ function PlayerEmoteState:isSyncOnSquare() end
 --- @param arg1 Stage
 --- @return nil
 function PlayerEmoteState:setParams(arg0, arg1) end
-
-------------------------------------
------------ CONSTRUCTORS -----------
-------------------------------------
-
---- @public
---- @return PlayerEmoteState
-function PlayerEmoteState.new() end

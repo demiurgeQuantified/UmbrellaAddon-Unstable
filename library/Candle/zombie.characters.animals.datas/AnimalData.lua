@@ -114,6 +114,14 @@ function AnimalData:getAttachedPlayer() end
 function AnimalData:getAttachedTree() end
 
 --- @public
+--- @return integer
+function AnimalData:getAttachedTreeX() end
+
+--- @public
+--- @return integer
+function AnimalData:getAttachedTreeY() end
+
+--- @public
 --- @return AnimalBreed
 function AnimalData:getBreed() end
 

@@ -103,6 +103,13 @@ function IsoWindowFrame:HasCurtains() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @param arg2 boolean
+--- @return IsoBarricade
+function IsoWindowFrame:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
 --- @return nil
 function IsoWindowFrame:addSheet(arg0) end
 

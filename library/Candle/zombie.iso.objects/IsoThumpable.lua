@@ -31,11 +31,11 @@ function IsoThumpable.GetBreakFurnitureSound(arg0) end
 function IsoThumpable:Damage(arg0) end
 
 --- @public
---- @return ICurtain
+--- @return IsoCurtain
 function IsoThumpable:HasCurtains() end
 
 --- @public
---- @return IsoCurtain
+--- @return ICurtain
 function IsoThumpable:HasCurtains() end
 
 --- @public
@@ -109,6 +109,13 @@ function IsoThumpable:WeaponHit(owner, weapon) end
 --- @param weapon HandWeapon
 --- @return nil
 function IsoThumpable:WeaponHit(owner, weapon) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @param arg2 boolean
+--- @return IsoBarricade
+function IsoThumpable:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
 
 --- @public
 --- @param chr IsoGameCharacter

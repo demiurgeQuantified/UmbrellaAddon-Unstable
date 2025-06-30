@@ -2205,11 +2205,11 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return IAnimationVariableSource
+--- @return AnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
---- @return AnimationVariableSource
+--- @return IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
@@ -2962,6 +2962,10 @@ function IsoGameCharacter:getSlowTimer() end
 
 --- @public
 --- @return number
+function IsoGameCharacter:getSneakLimpSpeedScale() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getSneakSpotMod() end
 
 --- @public
@@ -3256,11 +3260,11 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return BaseGrappleable
+--- @return IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
---- @return IGrappleable
+--- @return BaseGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
@@ -4440,6 +4444,18 @@ function IsoGameCharacter:load(input, WorldVersion, IS_DEBUG_SAVE) end
 --- @param bb ByteBuffer
 --- @return nil
 function IsoGameCharacter:loadChange(change, bb) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return nil
+function IsoGameCharacter:modifyTraitXPBoost(arg0, arg1) end
+
+--- @public
+--- @param arg0 Trait
+--- @param arg1 boolean
+--- @return nil
+function IsoGameCharacter:modifyTraitXPBoost(arg0, arg1) end
 
 --- @public
 --- @return number
@@ -5997,6 +6013,11 @@ function IsoGameCharacter:setSlowFactor(slowFactor) end
 --- @param slowTimer number the slowTimer to set
 --- @return nil
 function IsoGameCharacter:setSlowTimer(slowTimer) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setSneakLimpSpeedScale(arg0) end
 
 --- @public
 --- @param bSneaking boolean
