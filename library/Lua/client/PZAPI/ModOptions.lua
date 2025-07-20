@@ -20,89 +20,101 @@ PZAPI = {}
 PZAPI.ModOptions = nil ---@type PZAPI.ModOptions
 
 ---@class PZAPI.ModOptions.Options
----@field data umbrella.ModOptions.Element[]
----@field dict table<string, umbrella.ModOptions.OptionElement>
----@field modOptionsID string
----@field name string
+---@field data umbrella.ModOptions.Element[] Array of option objects
+---@field dict table<string, umbrella.ModOptions.OptionElement> Dictionary of options by ID
+---@field modOptionsID string Unique identifier for this options set
+---@field name string Display name for this options set
 local __PZAPI_ModOptions_Options = {}
 
----@param id string
----@param name string
----@param tooltip string?
----@param onclickfunc umbrella.ISButton.OnClick?
----@param target unknown?
----@param arg1 unknown?
----@param arg2 unknown?
----@param arg3 unknown?
----@param arg4 unknown?
----@return umbrella.ModOptions.Button
+---Add a button option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param tooltip string? Optional tooltip text
+---@param onclickfunc umbrella.ISButton.OnClick? Function to call when button is clicked
+---@param target unknown? Optional target object for the onclick function
+---@param arg1 unknown? Optional first argument for the onclick function
+---@param arg2 unknown? Optional second argument for the onclick function
+---@param arg3 unknown? Optional third argument for the onclick function
+---@param arg4 unknown? Optional fourth argument for the onclick function
+---@return umbrella.ModOptions.Button option Object representing the button
 function __PZAPI_ModOptions_Options:addButton(id, name, tooltip, onclickfunc, target, arg1, arg2, arg3, arg4) end
 
----@param id string
----@param name string
----@param r number
----@param g number
----@param b number
----@param a number
----@param _tooltip string?
----@return umbrella.ModOptions.ColorPicker
+---Add a color picker option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param r number Red component (0-1)
+---@param g number Green component (0-1)
+---@param b number Blue component (0-1)
+---@param a number Alpha component (0-1)
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.ColorPicker option The created option
 function __PZAPI_ModOptions_Options:addColorPicker(id, name, r, g, b, a, _tooltip) end
 
----@param id string
----@param name string
----@param _tooltip string?
----@return umbrella.ModOptions.ComboBox
+---Add a combo box option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.ComboBox option Object representing the combo box
 function __PZAPI_ModOptions_Options:addComboBox(id, name, _tooltip) end
 
----@param text string
+---Add a description to the options
+---@param text string The description text (will be processed by getText)
 function __PZAPI_ModOptions_Options:addDescription(text) end
 
----@param id string
----@param name string
----@param key integer
----@param _tooltip string?
----@return umbrella.ModOptions.Keybind
+---Add a key bind option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param key integer Initial key code
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.Keybind option Object representing the key bind
 function __PZAPI_ModOptions_Options:addKeyBind(id, name, key, _tooltip) end
 
----@param id string
----@param name string
----@param _tooltip string?
----@return umbrella.ModOptions.MultipleTickBox
+---Add a multiple tick box option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.MultipleTickBox option Object representing the multiple tick box
 function __PZAPI_ModOptions_Options:addMultipleTickBox(id, name, _tooltip) end
 
 function __PZAPI_ModOptions_Options:addSeparator() end
 
----@param id string
----@param name string
----@param min number
----@param max number
----@param step number
----@param value number
----@param _tooltip string?
----@return umbrella.ModOptions.Slider
+---Add a slider option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param min number Minimum value
+---@param max number Maximum value
+---@param step number Step size
+---@param value number Initial value
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.Slider option Object representing the slider
 function __PZAPI_ModOptions_Options:addSlider(id, name, min, max, step, value, _tooltip) end
 
----@param id string
----@param name string
----@param value string
----@param _tooltip string?
----@return umbrella.ModOptions.TextEntry
+---Add a text entry option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param value string Initial value
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.TextEntry option Object representing the text entry
 function __PZAPI_ModOptions_Options:addTextEntry(id, name, value, _tooltip) end
 
----@param id string
----@param name string
----@param value boolean
----@param _tooltip string?
----@return umbrella.ModOptions.TickBox
+---Add a tick box (checkbox) option
+---@param id string Unique identifier for this option
+---@param name string Display name for this option
+---@param value boolean Initial value
+---@param _tooltip string? Optional tooltip text
+---@return umbrella.ModOptions.TickBox option Object representing the tick box
 function __PZAPI_ModOptions_Options:addTickBox(id, name, value, _tooltip) end
 
----@param name string
+---Add a title to the options
+---@param name string The title text
 function __PZAPI_ModOptions_Options:addTitle(name) end
 
+---Apply the options (placeholder function)
 function __PZAPI_ModOptions_Options:apply() end
 
----@param id string
----@return umbrella.ModOptions.OptionElement?
+---Get an option by ID
+---@param id string The option ID
+---@return umbrella.ModOptions.OptionElement? #The option or nil if not found
 function __PZAPI_ModOptions_Options:getOption(id) end
 
 ---@param modOptionsID string
@@ -110,24 +122,37 @@ function __PZAPI_ModOptions_Options:getOption(id) end
 ---@return PZAPI.ModOptions.Options
 function __PZAPI_ModOptions_Options:new(modOptionsID, name) end
 
+---ModOptions module for managing mod configuration options
 ---@class PZAPI.ModOptions
 local __PZAPI_ModOptions = {}
+
+---List of all mod options
 __PZAPI_ModOptions.Data = nil ---@type PZAPI.ModOptions.Options[]
+
+---Dictionary of mod options by ID
 __PZAPI_ModOptions.Dict = {} ---@type table<string, PZAPI.ModOptions.Options>
+
+---Other options not managed by this module
 __PZAPI_ModOptions.OtherOptions = {}
+
+---Options class
 __PZAPI_ModOptions.Options = nil ---@type PZAPI.ModOptions.Options
 
----@param modOptionsID string
----@param name string?
----@return PZAPI.ModOptions.Options
+---Creates a new mod options instance
+---@param modOptionsID string Unique identifier for the mod options
+---@param name string? Optional display name for the mod options. Defaults to the modOptionsID if not provided.
+---@return PZAPI.ModOptions.Options options The created options instance
 function __PZAPI_ModOptions:create(modOptionsID, name) end
 
----@param modOptionsID string
----@return PZAPI.ModOptions.Options?
+---Gets an existing mod options instance by ID
+---@param modOptionsID string Unique identifier for the mod options
+---@return PZAPI.ModOptions.Options? #The options instance or nil if not found
 function __PZAPI_ModOptions:getOptions(modOptionsID) end
 
+---Loads all mod options from ModOptions.ini
 function __PZAPI_ModOptions:load() end
 
+---Saves all mod options to ModOptions.ini
 function __PZAPI_ModOptions:save() end
 
 ---@class umbrella.ModOptions.Title
@@ -146,9 +171,9 @@ umbrella_ModOptions_Separator = {}
 
 ---@class umbrella.ModOptions.BaseOption
 ---@field element table?
----@field id string
----@field name string
----@field tooltip string?
+---@field id string Unique identifier for the option
+---@field name string Display name for the option
+---@field tooltip string? Optional tooltip text
 umbrella_ModOptions_BaseOption = {}
 
 ---@param bool string
