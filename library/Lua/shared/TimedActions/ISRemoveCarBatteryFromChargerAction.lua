@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISRemoveCarBatteryFromChargerAction : ISBaseTimedAction
----@field charger unknown
+---@field charger IsoCarBatteryCharger
 ISRemoveCarBatteryFromChargerAction = ISBaseTimedAction:derive("ISRemoveCarBatteryFromChargerAction")
 ISRemoveCarBatteryFromChargerAction.Type = "ISRemoveCarBatteryFromChargerAction"
 
@@ -22,8 +22,10 @@ function ISRemoveCarBatteryFromChargerAction:stop() end
 
 function ISRemoveCarBatteryFromChargerAction:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveCarBatteryFromChargerAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param charger IsoCarBatteryCharger
 ---@return ISRemoveCarBatteryFromChargerAction
 function ISRemoveCarBatteryFromChargerAction:new(character, charger) end

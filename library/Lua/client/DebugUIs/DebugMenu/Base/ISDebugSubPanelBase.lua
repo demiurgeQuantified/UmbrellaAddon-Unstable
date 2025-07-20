@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISDebugSubPanelBase : ISPanel
----@field buttonBorderColor table
----@field doStencilRender unknown?
----@field variableColor table
+---@field buttonBorderColor umbrella.RGBA
+---@field doStencilRender boolean?
+---@field variableColor umbrella.RGBA
 ISDebugSubPanelBase = ISPanel:derive("ISDebugSubPanelBase")
 ISDebugSubPanelBase.Type = "ISDebugSubPanelBase"
 
@@ -21,6 +21,6 @@ function ISDebugSubPanelBase:render() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param doStencil unknown?
+---@param doStencil boolean?
 ---@return ISDebugSubPanelBase
 function ISDebugSubPanelBase:new(x, y, width, height, doStencil) end

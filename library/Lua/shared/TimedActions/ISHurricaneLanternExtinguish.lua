@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISHurricaneLanternExtinguish : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ---@field started boolean
 ISHurricaneLanternExtinguish = ISBaseTimedAction:derive("ISHurricaneLanternExtinguish")
 ISHurricaneLanternExtinguish.Type = "ISHurricaneLanternExtinguish"
@@ -23,5 +23,7 @@ function ISHurricaneLanternExtinguish:stop() end
 
 function ISHurricaneLanternExtinguish:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISHurricaneLanternExtinguish
 function ISHurricaneLanternExtinguish:new(character, item) end

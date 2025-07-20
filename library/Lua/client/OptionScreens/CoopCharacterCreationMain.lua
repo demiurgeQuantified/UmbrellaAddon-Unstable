@@ -4,6 +4,7 @@
 CoopCharacterCreationMain = CharacterCreationMain:derive("CoopCharacterCreationMain")
 CoopCharacterCreationMain.Type = "CoopCharacterCreationMain"
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function CoopCharacterCreationMain:onOptionMouseDown(button, x, y) end

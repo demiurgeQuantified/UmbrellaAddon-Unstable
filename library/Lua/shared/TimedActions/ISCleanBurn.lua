@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISCleanBurn : ISBaseTimedAction
----@field bandage unknown
----@field bandagedPlayerX unknown
----@field bandagedPlayerY unknown
----@field bodyPart unknown
+---@field bandage InventoryItem
+---@field bandagedPlayerX number
+---@field bandagedPlayerY number
+---@field bodyPart BodyPart
 ---@field doctorLevel number
----@field otherPlayer unknown
----@field sound unknown
+---@field otherPlayer IsoPlayer
+---@field sound integer?
 ISCleanBurn = ISBaseTimedAction:derive("ISCleanBurn")
 ISCleanBurn.Type = "ISCleanBurn"
 
@@ -33,5 +33,9 @@ function ISCleanBurn:update() end
 ---@return boolean
 function ISCleanBurn:waitToStart() end
 
+---@param character IsoPlayer
+---@param otherPlayer IsoPlayer
+---@param bandage InventoryItem
+---@param bodyPart BodyPart
 ---@return ISCleanBurn
 function ISCleanBurn:new(character, otherPlayer, bandage, bodyPart) end

@@ -6,9 +6,9 @@
 ---@field name unknown?
 ---@field no ISButton?
 ---@field ok ISButton?
----@field onclick unknown?
----@field param1 unknown
----@field param2 unknown
+---@field onclick umbrella.ISButton.OnClick?
+---@field param1 unknown?
+---@field param2 unknown?
 ---@field player number?
 ---@field target unknown?
 ---@field text string
@@ -21,12 +21,16 @@ function ISModalRichText:destroy() end
 
 function ISModalRichText:initialise() end
 
+---@param button ISButton
 function ISModalRichText:onClick(button) end
 
+---@param joypadData JoypadData
 function ISModalRichText:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function ISModalRichText:onJoypadDown(button) end
 
+---@param joypadData JoypadData
 function ISModalRichText:onLoseJoypadFocus(joypadData) end
 
 ---@param x number
@@ -49,7 +53,9 @@ function ISModalRichText:updateButtons() end
 ---@param text string
 ---@param yesno boolean
 ---@param target unknown?
----@param onclick unknown?
----@param player number?
+---@param onclick umbrella.ISButton.OnClick?
+---@param player integer?
+---@param param1 unknown?
+---@param param2 unknown?
 ---@return ISModalRichText
 function ISModalRichText:new(x, y, width, height, text, yesno, target, onclick, player, param1, param2) end

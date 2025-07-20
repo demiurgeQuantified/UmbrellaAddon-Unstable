@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISToggleClothingDryer : ISBaseTimedAction
----@field object unknown
+---@field object IsoClothingDryer
 ISToggleClothingDryer = ISBaseTimedAction:derive("ISToggleClothingDryer")
 ISToggleClothingDryer.Type = "ISToggleClothingDryer"
 
@@ -22,5 +22,7 @@ function ISToggleClothingDryer:stop() end
 
 function ISToggleClothingDryer:update() end
 
+---@param character IsoPlayer
+---@param object IsoClothingDryer
 ---@return ISToggleClothingDryer
 function ISToggleClothingDryer:new(character, object) end

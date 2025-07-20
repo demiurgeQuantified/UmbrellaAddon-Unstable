@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISUnbarricadeAction : ISBaseTimedAction
----@field item unknown
----@field sound unknown?
+---@field item BarricadeAble
+---@field sound integer?
 ISUnbarricadeAction = ISBaseTimedAction:derive("ISUnbarricadeAction")
 ISUnbarricadeAction.Type = "ISUnbarricadeAction"
 
@@ -23,9 +23,10 @@ function ISUnbarricadeAction:stop() end
 
 function ISUnbarricadeAction:update() end
 
----@return unknown
+---@return boolean
 function ISUnbarricadeAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item BarricadeAble
 ---@return ISUnbarricadeAction
 function ISUnbarricadeAction:new(character, item) end

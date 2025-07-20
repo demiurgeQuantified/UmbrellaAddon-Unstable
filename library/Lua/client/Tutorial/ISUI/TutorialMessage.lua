@@ -3,7 +3,7 @@
 ---@class TutorialMessage : ISPanelJoypad
 ---@field clicktoSkip boolean
 ---@field clickToSkip unknown
----@field message string
+---@field message string?
 ---@field richtext ISRichTextPanel
 ---@field test unknown?
 ---@field timer number
@@ -16,20 +16,23 @@ TutorialMessage.spiffo = nil
 ---@param y number
 ---@param w number
 ---@param h number
----@param target TutorialStep
 ---@return TutorialMessage?
 function TutorialMessage.getInstance(x, y, w, h, message, clickToSkip, target, test) end
 
+---@param key integer
 function TutorialMessage.onKeyPressed(key) end
 
 function TutorialMessage:createChildren() end
 
 function TutorialMessage:initialise() end
 
+---@param joypadData JoypadData
 function TutorialMessage:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function TutorialMessage:onJoypadDown(button) end
 
+---@param del number
 ---@return boolean
 function TutorialMessage:onMouseWheel(del) end
 

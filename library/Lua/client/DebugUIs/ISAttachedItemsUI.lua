@@ -2,15 +2,15 @@
 
 ---@class ISAttachedItemsUI : ISCollapsableWindow
 ---@field add ISButton
----@field character unknown
----@field chr unknown
+---@field character IsoPlayer
+---@field chr IsoPlayer
 ---@field datas ISScrollingListBox
 ---@field itemType ISTextEntryBox
 ---@field itemTypeLabel ISLabel
 ---@field location ISComboBox
 ---@field locationLabel ISLabel
 ---@field onzombie ISButton
----@field playerNum unknown
+---@field playerNum integer
 ---@field remove ISButton
 ---@field removeZombie ISButton
 ---@field title string
@@ -21,9 +21,13 @@ function ISAttachedItemsUI:close() end
 
 function ISAttachedItemsUI:createChildren() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISAttachedItemsUI:drawDatas(y, item, alt) end
 
+---@param char IsoPlayer
 function ISAttachedItemsUI:onAdd(char) end
 
 function ISAttachedItemsUI:onAddOnChar() end
@@ -42,5 +46,6 @@ function ISAttachedItemsUI:update() end
 
 ---@param x number
 ---@param y number
+---@param character IsoPlayer
 ---@return ISAttachedItemsUI
 function ISAttachedItemsUI:new(x, y, character) end

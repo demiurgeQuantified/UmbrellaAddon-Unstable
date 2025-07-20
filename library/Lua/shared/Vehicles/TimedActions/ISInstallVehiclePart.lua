@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISInstallVehiclePart : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ---@field jobType string
----@field part unknown
----@field vehicle unknown
+---@field part VehiclePart
+---@field vehicle BaseVehicle
 ISInstallVehiclePart = ISBaseTimedAction:derive("ISInstallVehiclePart")
 ISInstallVehiclePart.Type = "ISInstallVehiclePart"
 
@@ -28,6 +28,9 @@ function ISInstallVehiclePart:update() end
 ---@return boolean
 function ISInstallVehiclePart:waitToStart() end
 
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param item InventoryItem
 ---@param maxTime number
 ---@return ISInstallVehiclePart
 function ISInstallVehiclePart:new(character, part, item, maxTime) end

@@ -14,6 +14,10 @@ ISOptionPanel = ISPanel:derive("ISOptionPanel")
 ISOptionPanel.Type = "ISOptionPanel"
 
 ---@param name string
+---@param options string[]
+---@param selected integer
+---@param target unknown?
+---@param onchange umbrella.ISComboBox.OnChange?
 function ISOptionPanel:addCombo(name, options, selected, target, onchange) end
 
 function ISOptionPanel:initialise() end
@@ -27,4 +31,6 @@ function ISOptionPanel:prerender() end
 ---@return ISOptionPanel
 function ISOptionPanel:new(x, y, width, height) end
 
+---@param target unknown?
+---@param box ISComboBox
 function testResolutionChange(target, box) end

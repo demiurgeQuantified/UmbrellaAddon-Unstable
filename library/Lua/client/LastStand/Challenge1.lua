@@ -94,22 +94,26 @@ Challenge1.zombieSpawnsRect = {
 
 function Challenge1.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function Challenge1.AddPlayer(playerNum, playerObj) end
 
 function Challenge1.FillContainers() end
 
 function Challenge1.Init() end
 
----@param playerNum number
+---@param playerNum integer
+---@param dir string
 function Challenge1.onBackButtonWheel(playerNum, dir) end
 
 function Challenge1.OnInitWorld() end
 
+---@param playerObj IsoPlayer
 function Challenge1.RemovePlayer(playerObj) end
 
 function Challenge1.Render() end
 
+---@param count integer
 function Challenge1.SpawnZombies(count) end
 
 function Challenge1.Tick() end

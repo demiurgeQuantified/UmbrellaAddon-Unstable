@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISCheckTrapAction : ISBaseTimedAction
----@field trap unknown
+---@field trap CTrapGlobalObject
 ISCheckTrapAction = ISBaseTimedAction:derive("ISCheckTrapAction")
 ISCheckTrapAction.Type = "ISCheckTrapAction"
 
@@ -22,6 +22,7 @@ function ISCheckTrapAction:stop() end
 
 function ISCheckTrapAction:update() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param trap CTrapGlobalObject
 ---@return ISCheckTrapAction
 function ISCheckTrapAction:new(character, trap) end

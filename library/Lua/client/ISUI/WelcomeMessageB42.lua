@@ -9,7 +9,7 @@ function WelcomeMessages.doMsg() end
 ---@field changeLabel ISLabel
 ---@field refreshNeeded boolean
 ---@field rich ISRichTextPanel
----@field screenshot unknown
+---@field screenshot Texture
 ---@field titleLabel ISLabel
 WelcomeMessageUI = ISCollapsableWindow:derive("WelcomeMessageUI")
 WelcomeMessageUI.Type = "WelcomeMessageUI"

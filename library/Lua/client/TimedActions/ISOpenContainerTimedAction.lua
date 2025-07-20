@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISOpenContainerTimedAction : ISBaseTimedAction
----@field container unknown
----@field maxTime unknown
+---@field container ItemContainer
+---@field maxTime number
 ---@field x number
 ---@field y number
 ISOpenContainerTimedAction = ISBaseTimedAction:derive("ISOpenContainerTimedAction")
@@ -19,6 +19,9 @@ function ISOpenContainerTimedAction:stop() end
 
 function ISOpenContainerTimedAction:update() end
 
+---@param character IsoPlayer
+---@param container ItemContainer
+---@param time number
 ---@param x number
 ---@param y number
 ---@return ISOpenContainerTimedAction

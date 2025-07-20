@@ -4,7 +4,7 @@
 ---@field acceptButton ISButton
 ---@field backButton ISButton
 ---@field helpButton ISButton
----@field joypadIndex unknown
+---@field joypadIndex integer?
 ---@field mapOrderbtn ISButton
 ---@field model ModSelector.Model
 ---@field modInfoPanel ModInfoPanel
@@ -17,24 +17,33 @@ ModSelector.instance = nil ---@type ModSelector?
 
 function ModSelector.showNagPanel() end
 
+---@param button ISButton
 function ModSelector:acceptChanges(button) end
 
 function ModSelector:create() end
 
 function ModSelector:onAccept() end
 
+---@param joypadData JoypadData
 function ModSelector:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ModSelector:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ModSelector:onJoypadDirLeft(joypadData) end
 
+---@param joypadData JoypadData
 function ModSelector:onJoypadDirRight(joypadData) end
 
+---@param joypadData JoypadData
 function ModSelector:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ModSelector:onJoypadDown(button, joypadData) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ModSelector:onOptionMouseDown(button, x, y) end
@@ -45,12 +54,13 @@ function ModSelector:prerender() end
 
 function ModSelector:reloadMods() end
 
+---@param folder string
 function ModSelector:setExistingSavefile(folder) end
 
 function ModSelector:setNewGame() end
 
----@param data table
----@param finishFunc function
+---@param data umbrella.ModSelector.FinalizedData[]
+---@param finishFunc umbrella.ModSelector.FinalFunction
 function ModSelector:setServerSettingsMods(data, finishFunc) end
 
 function ModSelector:updateView() end

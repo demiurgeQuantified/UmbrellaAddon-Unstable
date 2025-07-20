@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISBBQLightFromPetrol : ISBaseTimedAction
----@field bbq unknown
----@field lighter unknown
----@field petrol unknown
----@field sound unknown
+---@field bbq IsoBarbecue
+---@field lighter InventoryItem
+---@field petrol InventoryItem
+---@field sound integer?
 ISBBQLightFromPetrol = ISBaseTimedAction:derive("ISBBQLightFromPetrol")
 ISBBQLightFromPetrol.Type = "ISBBQLightFromPetrol"
 
@@ -25,9 +25,12 @@ function ISBBQLightFromPetrol:stop() end
 
 function ISBBQLightFromPetrol:update() end
 
----@return unknown
+---@return boolean
 function ISBBQLightFromPetrol:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param bbq IsoBarbecue
+---@param lighter InventoryItem
+---@param petrol InventoryItem
 ---@return ISBBQLightFromPetrol
 function ISBBQLightFromPetrol:new(character, bbq, lighter, petrol) end

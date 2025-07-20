@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISInflateTire : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ---@field jobType string
----@field part unknown
----@field psiSent unknown
----@field psiStart unknown
+---@field part VehiclePart
+---@field psiSent number?
+---@field psiStart number
 ---@field psiTarget number
 ---@field totalPsi number
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISInflateTire = ISBaseTimedAction:derive("ISInflateTire")
 ISInflateTire.Type = "ISInflateTire"
 
@@ -32,6 +32,9 @@ function ISInflateTire:stop() end
 ---@return boolean?
 function ISInflateTire:update() end
 
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param item InventoryItem
 ---@param psiTarget number
 ---@return ISInflateTire
 function ISInflateTire:new(character, part, item, psiTarget) end

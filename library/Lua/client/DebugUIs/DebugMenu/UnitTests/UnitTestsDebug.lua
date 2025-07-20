@@ -3,9 +3,9 @@
 ---@class UnitTestsDebug : ISDebugPanelBase
 UnitTestsDebug = ISDebugPanelBase:derive("UnitTestsDebug")
 UnitTestsDebug.Type = "UnitTestsDebug"
-UnitTestsDebug.instance = nil
+UnitTestsDebug.instance = nil ---@type UnitTestsDebug?
 
----@return unknown
+---@return UnitTestsDebug
 function UnitTestsDebug.OnOpenPanel() end
 
 function UnitTestsDebug:initialise() end

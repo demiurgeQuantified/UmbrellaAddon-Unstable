@@ -2,8 +2,8 @@
 
 ---@class ISStatisticsUI : ISCollapsableWindow
 ---@field panel ISStatisticsPanel
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field showAnimals boolean
 ---@field showChunks boolean
 ---@field showCPU boolean
@@ -30,10 +30,16 @@ function ISStatisticsUI:createChildren() end
 
 function ISStatisticsUI:initialise() end
 
+---@param index integer
+---@param selected boolean
 function ISStatisticsUI:onTickedCenter(index, selected) end
 
+---@param index integer
+---@param selected boolean
 function ISStatisticsUI:onTickedLeft(index, selected) end
 
+---@param index integer
+---@param selected boolean
 function ISStatisticsUI:onTickedRight(index, selected) end
 
 function ISStatisticsUI:prerender() end
@@ -42,22 +48,32 @@ function ISStatisticsUI:render() end
 
 ---@param x number
 ---@param y number
+---@param player IsoPlayer
 ---@return ISStatisticsUI
 function ISStatisticsUI:new(x, y, player) end
 
 ---@class ISStatisticsPanel : ISPanel
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ISStatisticsPanel = ISPanel:derive("ISStatisticsPanel")
 ISStatisticsPanel.Type = "ISStatisticsPanel"
 
+---@param l string
+---@param lC number
+---@param c string
+---@param cC number
+---@param s string
+---@param sC number
+---@param y number
 ---@param r number
 ---@param g number
 ---@param b number
 ---@param a number
+---@param background boolean
 ---@return number
 function ISStatisticsPanel:drawRow(l, lC, c, cC, s, sC, y, r, g, b, a, background) end
 
+---@param del number
 ---@return boolean
 function ISStatisticsPanel:onMouseWheel(del) end
 

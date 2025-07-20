@@ -2,14 +2,14 @@
 
 ---@class TileGeometryEditor_SceneTiles : ISBaseObject
 ---@field editor TileGeometryEditor
----@field javaObject unknown
+---@field javaObject UI3DScene
 ---@field scene TileGeometryEditor_Scene
----@field tempExtentsMax unknown
----@field tempExtentsMin unknown
----@field tempRotate unknown
----@field tempTranslate unknown
----@field tiles table
----@field vector3f_1 unknown
+---@field tempExtentsMax Vector3f
+---@field tempExtentsMin Vector3f
+---@field tempRotate Vector3f
+---@field tempTranslate Vector3f
+---@field tiles table<integer, table>
+---@field vector3f_1 Vector3f
 TileGeometryEditor_SceneTiles = ISBaseObject:derive("TileGeometryEditor_SceneTiles")
 TileGeometryEditor_SceneTiles.Type = "TileGeometryEditor_SceneTiles"
 
@@ -20,7 +20,7 @@ function TileGeometryEditor_SceneTiles:addTile(dx, dy, tileName) end
 
 ---@param dx number
 ---@param dy number
----@return unknown
+---@return table
 function TileGeometryEditor_SceneTiles:getTile(dx, dy) end
 
 ---@param dx number
@@ -34,6 +34,18 @@ function TileGeometryEditor_SceneTiles:removeTile(dx, dy) end
 
 function TileGeometryEditor_SceneTiles:render() end
 
+---@param tx number
+---@param ty number
+---@param tz number
+---@param rx number
+---@param ry number
+---@param rz number
+---@param minX number
+---@param minY number
+---@param minZ number
+---@param maxX number
+---@param maxY number
+---@param maxZ number
 ---@param r number
 ---@param g number
 ---@param b number
@@ -63,7 +75,7 @@ function TileGeometryEditor_SceneTiles:renderTile(dx, dy, tileName) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return Vector3f
 function TileGeometryEditor_SceneTiles:uiToTileLocation(x, y) end
 
 ---@param editor TileGeometryEditor

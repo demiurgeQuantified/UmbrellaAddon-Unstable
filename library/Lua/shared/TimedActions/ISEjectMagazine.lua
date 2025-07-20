@@ -1,11 +1,13 @@
 ---@meta
 
 ---@class ISEjectMagazine : ISBaseTimedAction
----@field gun unknown
+---@field gun HandWeapon
 ---@field useProgressBar boolean
 ISEjectMagazine = ISBaseTimedAction:derive("ISEjectMagazine")
 ISEjectMagazine.Type = "ISEjectMagazine"
 
+---@param event string
+---@param parameter string
 function ISEjectMagazine:animEvent(event, parameter) end
 
 ---@return boolean
@@ -31,5 +33,7 @@ function ISEjectMagazine:unloadAmmo() end
 
 function ISEjectMagazine:update() end
 
+---@param character IsoPlayer
+---@param gun HandWeapon
 ---@return ISEjectMagazine
 function ISEjectMagazine:new(character, gun) end

@@ -1,24 +1,29 @@
 ---@meta
 
+---@alias umbrella.RWMSubEditPreset.OnSave fun(target: unknown?, value: number, text: string)
+
 ---@class RWMSubEditPreset : ISPanel
 ---@field entryName ISTextEntryBox
 ---@field frequencySlider ISSliderPanel
----@field joypadStepIndex number
----@field joypadSteps table
+---@field joypadStepIndex integer
+---@field joypadSteps integer[]
 ---@field lineHeight number
 ---@field linePadding number
----@field linePairs table
+---@field linePairs umbrella.RWMSubEditPreset.LinePair[]
 ---@field lineSplit number
----@field onSave unknown
+---@field onSave umbrella.RWMSubEditPreset.OnSave?
 ---@field saveButton ISButton
----@field target RWMChannel
+---@field target unknown?
 RWMSubEditPreset = ISPanel:derive("RWMSubEditPreset")
 RWMSubEditPreset.Type = "RWMSubEditPreset"
 
+---@param _text string
+---@param _UIelement ISUIElement
 function RWMSubEditPreset:addLinePair(_text, _UIelement) end
 
 function RWMSubEditPreset:calcLinePairs() end
 
+---@param joypadData JoypadData
 function RWMSubEditPreset:clearJoypadFocus(joypadData) end
 
 function RWMSubEditPreset:createChildren() end
@@ -39,10 +44,12 @@ function RWMSubEditPreset:getYPrompt() end
 
 function RWMSubEditPreset:initialise() end
 
+---@param button integer
 ---@return boolean
 ---@return boolean
 function RWMSubEditPreset:onJoypadDown(button) end
 
+---@param value number
 function RWMSubEditPreset:onSliderChange(value) end
 
 function RWMSubEditPreset:prerender() end
@@ -61,6 +68,13 @@ function RWMSubEditPreset:setValues(name, freq, min, max, step, shift) end
 ---@param y number
 ---@param width number
 ---@param height number
----@param target RWMChannel
+---@param target unknown?
+---@param onSave umbrella.RWMSubEditPreset.OnSave?
 ---@return RWMSubEditPreset
 function RWMSubEditPreset:new(x, y, width, height, target, onSave) end
+
+---@class umbrella.RWMSubEditPreset.LinePair
+---@field text string?
+---@field textLen number?
+---@field ui ISUIElement
+umbrella_RWMSubEditPreset_LinePair = {}

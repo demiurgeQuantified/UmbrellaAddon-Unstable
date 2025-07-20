@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISBBQInfoAction : ISBaseTimedAction
----@field bbq unknown
----@field playerNum unknown
+---@field bbq IsoBarbecue
+---@field playerNum integer
 ISBBQInfoAction = ISBaseTimedAction:derive("ISBBQInfoAction")
 ISBBQInfoAction.Type = "ISBBQInfoAction"
 
@@ -11,8 +11,10 @@ function ISBBQInfoAction:isValid() end
 
 function ISBBQInfoAction:perform() end
 
----@return unknown
+---@return boolean
 function ISBBQInfoAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param bbq IsoBarbecue
 ---@return ISBBQInfoAction
 function ISBBQInfoAction:new(character, bbq) end

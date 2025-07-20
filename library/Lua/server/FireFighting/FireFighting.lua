@@ -3,25 +3,33 @@
 ---@class FireFighting
 FireFighting = {}
 
----@return unknown?
+---@param playerObj IsoPlayer
+---@return InventoryItem?
 function FireFighting.getExtinguisher(playerObj) end
 
----@param item unknown?
+---@param item InventoryItem?
 ---@return number
 function FireFighting.getExtinguisherUses(item) end
 
----@return unknown?
+---@return integer
+function FireFighting.getFluidContainerMillilitresPerUse() end
+
+---@param square IsoGridSquare
+---@return IsoGridSquare?
 function FireFighting.getSquareToExtinguish(square) end
 
+---@param item InventoryItem
 ---@return number
 function FireFighting.getWaterUsesFloat(item) end
 
----@return number
+---@param item InventoryItem
+---@return integer
 function FireFighting.getWaterUsesInteger(item) end
 
----@param item unknown?
+---@param item InventoryItem?
 ---@return boolean
 function FireFighting.isExtinguisher(item) end
 
+---@param square IsoGridSquare
 ---@return boolean
 function FireFighting.isSquareToExtinguish(square) end

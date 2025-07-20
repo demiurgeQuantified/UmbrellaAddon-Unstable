@@ -11,12 +11,15 @@ function WorldMapEditorMode_Maps:display() end
 
 function WorldMapEditorMode_Maps:fillList() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Maps:isKeyConsumed(key) end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Maps:onKeyPress(key) end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Maps:onKeyRelease(key) end
 
@@ -49,5 +52,6 @@ function WorldMapEditorMode_Maps:render() end
 
 function WorldMapEditorMode_Maps:undisplay() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorMode_Maps
 function WorldMapEditorMode_Maps:new(editor) end

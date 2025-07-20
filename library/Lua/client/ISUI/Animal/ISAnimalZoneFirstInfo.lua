@@ -2,7 +2,7 @@
 
 ---@class ISAnimalZoneFirstInfo : ISPanelJoypad
 ---@field okBtn ISButton
----@field playerNum number
+---@field playerNum integer
 ---@field rich ISRichTextPanel
 ISAnimalZoneFirstInfo = ISPanelJoypad:derive("ISAnimalZoneFirstInfo")
 ISAnimalZoneFirstInfo.Type = "ISAnimalZoneFirstInfo"
@@ -15,6 +15,7 @@ function ISAnimalZoneFirstInfo:initialise() end
 
 function ISAnimalZoneFirstInfo:onClickOk() end
 
+---@param joypadData JoypadData
 function ISAnimalZoneFirstInfo:onGainJoypadFocus(joypadData) end
 
 function ISAnimalZoneFirstInfo:prerender() end

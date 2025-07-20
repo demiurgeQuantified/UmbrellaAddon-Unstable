@@ -1,20 +1,20 @@
 ---@meta
 
 ---@class ISAlarmClockDialog : ISPanelJoypad
----@field alarm unknown
+---@field alarm AlarmClock
 ---@field button1m ISButton
 ---@field button1p ISButton
 ---@field button2m ISButton
 ---@field button2p ISButton
----@field character unknown?
+---@field character IsoPlayer?
 ---@field hours ISTextEntryBox
----@field joypadButtons unknown
+---@field joypadButtons ISButton[]
 ---@field mins ISTextEntryBox
 ---@field name unknown?
 ---@field ok ISButton
----@field player unknown
----@field playerX unknown
----@field playerY unknown
+---@field player integer
+---@field playerX number
+---@field playerY number
 ---@field setAlarm ISTickBox
 ISAlarmClockDialog = ISPanelJoypad:derive("ISAlarmClockDialog")
 ISAlarmClockDialog.Type = "ISAlarmClockDialog"
@@ -38,10 +38,13 @@ function ISAlarmClockDialog:incrementMin(number) end
 
 function ISAlarmClockDialog:initialise() end
 
+---@param button ISButton
 function ISAlarmClockDialog:onClick(button) end
 
+---@param joypadData JoypadData
 function ISAlarmClockDialog:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function ISAlarmClockDialog:onJoypadDown(button) end
 
 function ISAlarmClockDialog:prerender() end
@@ -54,5 +57,7 @@ function ISAlarmClockDialog:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player integer
+---@param alarm AlarmClock
 ---@return ISAlarmClockDialog
 function ISAlarmClockDialog:new(x, y, width, height, player, alarm) end

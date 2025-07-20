@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISSearchWindow : ISCollapsableWindow
----@field character unknown
----@field climateManager unknown
+---@field character IsoPlayer
+---@field climateManager ClimateManager
 ---@field drawJoypadFocus boolean
----@field gameTime unknown
+---@field gameTime GameTime
 ---@field joypadMoveSpeed number
----@field manager unknown
+---@field manager ISSearchManager
 ---@field overrideBPrompt boolean
----@field player unknown
+---@field player integer
 ---@field searchFocus ISComboBox
 ---@field searchFocusCategory string
 ---@field showBackground boolean
@@ -17,24 +17,31 @@
 ---@field toggleSearchMode ISButton
 ---@field tooltipForced string?
 ---@field visibleFunction function
----@field visibleTarget ISSearchWindow
+---@field visibleTarget unknown?
 ---@field zoneDisplay ISZoneDisplay
 ISSearchWindow = ISCollapsableWindow:derive("ISSearchWindow")
 ISSearchWindow.Type = "ISSearchWindow"
-ISSearchWindow.players = {}
+ISSearchWindow.players = {} ---@type table<IsoPlayer, ISSearchWindow>
 ISSearchWindow.showDebug = false
 
+---@param _player integer
 function ISSearchWindow.createUI(_player) end
 
+---@param _character IsoPlayer
 function ISSearchWindow.destroyUI(_character) end
 
+---@param _character IsoPlayer
 ---@param _isSearchMode boolean
 function ISSearchWindow.onEnableSearchMode(_character, _isSearchMode) end
 
+---@param _player integer
+---@param _context ISContextMenu
 function ISSearchWindow.OnFillWorldObjectContextMenu(_player, _context) end
 
+---@param _character IsoPlayer
 function ISSearchWindow.showWindow(_character) end
 
+---@param _character IsoPlayer
 function ISSearchWindow.toggleWindow(_character) end
 
 function ISSearchWindow:checkShowFirstTimeSearchTutorial() end
@@ -61,11 +68,12 @@ function ISSearchWindow:getYPrompt() end
 
 function ISSearchWindow:initialise() end
 
----@return unknown
+---@return boolean
 function ISSearchWindow:isValidPrompt() end
 
 function ISSearchWindow:nextSearchFocus() end
 
+---@param _option ISComboBox
 function ISSearchWindow:onChangeSearchFocusCategory(_option) end
 
 function ISSearchWindow:onGainJoypadFocus() end
@@ -78,6 +86,7 @@ function ISSearchWindow:onJoypadDirRight() end
 
 function ISSearchWindow:onJoypadDirUp() end
 
+---@param _button ISButton
 function ISSearchWindow:onJoypadDown(_button) end
 
 function ISSearchWindow:onLoseJoypadFocus() end
@@ -92,5 +101,6 @@ function ISSearchWindow:update() end
 
 function ISSearchWindow:updateSearchFocusCategories() end
 
+---@param _manager ISSearchManager
 ---@return ISSearchWindow
 function ISSearchWindow:new(_manager) end

@@ -14,7 +14,7 @@ SadisticMusicDirector.instance = SadisticMusicDirector:new()
 
 function SadisticMusicDirector:changeTrack() end
 
----@param num number
+---@param num integer
 function SadisticMusicDirector:seenZombies(num) end
 
 ---@return boolean

@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISGenericCraftStart : ISBaseTimedAction
----@field component unknown
----@field entity unknown
----@field funcCanStart unknown
----@field funcStart unknown
+---@field component Component
+---@field entity IsoObject
+---@field funcCanStart umbrella.ISEntityUI.CraftCanStart
+---@field funcStart umbrella.ISEntityUI.CraftStart
 ISGenericCraftStart = ISBaseTimedAction:derive("ISGenericCraftStart")
 ISGenericCraftStart.Type = "ISGenericCraftStart"
 
@@ -22,5 +22,10 @@ function ISGenericCraftStart:stop() end
 
 function ISGenericCraftStart:update() end
 
+---@param character IsoPlayer
+---@param entity IsoObject
+---@param component Component
+---@param funcCanStart umbrella.ISEntityUI.CraftCanStart
+---@param funcStart umbrella.ISEntityUI.CraftStart
 ---@return ISGenericCraftStart
 function ISGenericCraftStart:new(character, entity, component, funcCanStart, funcStart) end

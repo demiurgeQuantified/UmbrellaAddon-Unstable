@@ -3,17 +3,17 @@
 ---@class ISImage : ISPanel
 ---@field autoScale boolean
 ---@field doBorder boolean
----@field font unknown
+---@field font UIFont
 ---@field mouseover boolean
----@field mouseovertext unknown
+---@field mouseovertext string?
 ---@field noAspect boolean
----@field texture (boolean | string)?
----@field textureOverride unknown?
+---@field texture Texture?
+---@field textureOverride Texture?
 ---@field tooltipUI ISToolTip
 ISImage = ISPanel:derive("ISImage")
 ISImage.Type = "ISImage"
 
----@return (boolean | string)?
+---@return Texture?
 function ISImage:getTexture() end
 
 function ISImage:initialise() end
@@ -37,6 +37,7 @@ function ISImage:prerender() end
 ---@param b number
 function ISImage:setColor(r, g, b) end
 
+---@param text string?
 function ISImage:setMouseOverText(text) end
 
 function ISImage:updateTooltip() end
@@ -45,6 +46,6 @@ function ISImage:updateTooltip() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param texture (boolean | string)?
+---@param texture Texture?
 ---@return ISImage
 function ISImage:new(x, y, width, height, texture) end

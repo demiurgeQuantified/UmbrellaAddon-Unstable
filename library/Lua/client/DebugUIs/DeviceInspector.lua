@@ -5,8 +5,8 @@
 ---@field hotKeyPanels table
 ---@field isJoypadWindow boolean
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field richtext ISRichTextPanel?
 ---@field subFocus unknown?
 ---@field title string
@@ -15,11 +15,13 @@ DeviceInspector = ISCollapsableWindow:derive("DeviceInspector")
 DeviceInspector.Type = "DeviceInspector"
 DeviceInspector.instance = nil ---@type DeviceInspector?
 
+---@param _object IsoObject
 ---@param _x number
 ---@param _y number
----@return DeviceInspector?
+---@return DeviceInspector
 function DeviceInspector.onMouseButtonUp(_object, _x, _y) end
 
+---@param _line unknown?
 function DeviceInspector:addLine(_prefix, _line) end
 
 function DeviceInspector:addLineEnd() end
@@ -39,6 +41,7 @@ function DeviceInspector:onResize() end
 
 function DeviceInspector:prerender() end
 
+---@param _object IsoObject
 function DeviceInspector:readObject(_object) end
 
 function DeviceInspector:render() end
@@ -51,5 +54,6 @@ function DeviceInspector:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return DeviceInspector
 function DeviceInspector:new(x, y, width, height, player) end

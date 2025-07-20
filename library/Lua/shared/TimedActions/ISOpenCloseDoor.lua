@@ -2,7 +2,7 @@
 
 ---@class ISOpenCloseDoor : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field item unknown
+---@field item IsoDoor | IsoThumpable
 ---@field retriggerLastAction boolean
 ISOpenCloseDoor = ISBaseTimedAction:derive("ISOpenCloseDoor")
 ISOpenCloseDoor.Type = "ISOpenCloseDoor"
@@ -24,6 +24,7 @@ function ISOpenCloseDoor:stop() end
 
 function ISOpenCloseDoor:update() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item IsoDoor | IsoThumpable
 ---@return ISOpenCloseDoor
 function ISOpenCloseDoor:new(character, item) end

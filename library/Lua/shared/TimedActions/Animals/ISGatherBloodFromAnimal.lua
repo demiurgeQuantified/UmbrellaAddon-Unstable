@@ -1,18 +1,18 @@
 ---@meta
 
 ---@class ISGatherBloodFromAnimal : ISBaseTimedAction
----@field animalDef unknown?
----@field body unknown?
----@field bucket unknown
----@field hook unknown
+---@field animalDef umbrella.AnimalPartsDefinition
+---@field body IsoAnimal
+---@field bucket InventoryItem?
+---@field hook IsoButcherHook
 ---@field lastTimer number
 ---@field literPerTick number
 ---@field luaHook ISButcherHookUI
----@field perkLevel unknown
+---@field perkLevel integer
 ---@field started boolean
 ---@field timePerLiter number
 ---@field timer number
----@field xp unknown
+---@field xp integer
 ISGatherBloodFromAnimal = ISBaseTimedAction:derive("ISGatherBloodFromAnimal")
 ISGatherBloodFromAnimal.Type = "ISGatherBloodFromAnimal"
 
@@ -43,10 +43,12 @@ function ISGatherBloodFromAnimal:update() end
 
 function ISGatherBloodFromAnimal:updateBucket() end
 
----@return unknown
+---@return boolean
 function ISGatherBloodFromAnimal:waitToStart() end
 
----@param body unknown?
----@param luaHookUI ISButcherHookUI
+---@param character IsoPlayer
+---@param body IsoAnimal
+---@param luaHook ISButcherHookUI
+---@param bucket InventoryItem?
 ---@return ISGatherBloodFromAnimal
-function ISGatherBloodFromAnimal:new(character, body, hook, luaHookUI, bucket) end
+function ISGatherBloodFromAnimal:new(character, body, hook, luaHook, bucket) end

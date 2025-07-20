@@ -10,12 +10,12 @@
 ---@field name unknown?
 ---@field no ISButton
 ---@field numLines number
----@field onclick function
+---@field onclick (fun(target: unknown?, x: string, y: string, z: string))?
 ---@field paste ISButton
----@field player unknown
+---@field player IsoPlayer
 ---@field refresh ISButton
 ---@field target unknown?
----@field titlebarbkg unknown
+---@field titlebarbkg Texture
 ---@field yes ISButton
 ISTeleportDebugUI = ISPanelJoypad:derive("ISTeleportDebugUI")
 ISTeleportDebugUI.Type = "ISTeleportDebugUI"
@@ -39,6 +39,7 @@ function ISTeleportDebugUI:initialise() end
 ---@return boolean
 function ISTeleportDebugUI:isValidClipboardCoords() end
 
+---@param button ISButton
 function ISTeleportDebugUI:onClick(button) end
 
 function ISTeleportDebugUI:onCommandEntered() end
@@ -87,7 +88,8 @@ function ISTeleportDebugUI:updateButtons() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@param target unknown?
----@param onclick function
+---@param onclick (fun(target: unknown?, x: string, y: string, z: string))?
 ---@return ISTeleportDebugUI
 function ISTeleportDebugUI:new(x, y, width, height, player, target, onclick) end

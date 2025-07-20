@@ -25,5 +25,6 @@ function ISSitOnGround:update() end
 ---@return boolean
 function ISSitOnGround:waitToStart() end
 
+---@param character IsoPlayer
 ---@return ISSitOnGround
 function ISSitOnGround:new(character) end

@@ -17,18 +17,18 @@ Fishing.FishingRod = nil ---@type Fishing.FishingRod
 ---@field lowTensionTimer number
 ---@field mpAimX number
 ---@field mpAimY number
----@field player unknown
+---@field player IsoPlayer
 ---@field prevReelValue number
 ---@field reelDelta number
 ---@field rodCoeff number
----@field rodItem unknown?
----@field rodItemType unknown
+---@field rodItem InventoryItem
+---@field rodItemType string
 ---@field rodItemTypeBend string
----@field skillLevel unknown
+---@field skillLevel integer
 ---@field spawnBobberDelayTimer number
 ---@field spawnBobberX number
 ---@field spawnBobberY number
----@field strengthSkill unknown
+---@field strengthSkill integer
 ---@field tensionLimit number
 local __fishing_FishingRod = {}
 
@@ -43,7 +43,7 @@ function __fishing_FishingRod:damageLine() end
 
 function __fishing_FishingRod:destroy() end
 
----@return number?
+---@return number
 function __fishing_FishingRod:getLineTypeCoeff() end
 
 ---@return number
@@ -58,16 +58,16 @@ function __fishing_FishingRod:getRodEndXY() end
 ---@return number
 function __fishing_FishingRod:getSpawnBobberCoords() end
 
----@return number?
+---@return number
 function __fishing_FishingRod:getTension() end
 
 ---@return boolean
 function __fishing_FishingRod:isPickupBobber() end
 
----@return boolean?
+---@return boolean
 function __fishing_FishingRod:isReel() end
 
----@return boolean?
+---@return boolean
 function __fishing_FishingRod:isReleaseLine() end
 
 ---@return boolean
@@ -89,5 +89,6 @@ function __fishing_FishingRod:updateLine() end
 
 function __fishing_FishingRod:updateLineMoveCoeff() end
 
+---@param player IsoPlayer
 ---@return Fishing.FishingRod
-function __fishing_FishingRod:new(player, joypad) end
+function __fishing_FishingRod:new(player) end

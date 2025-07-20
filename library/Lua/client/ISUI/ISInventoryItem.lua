@@ -3,8 +3,8 @@
 ---@class ISInventoryItem
 ISInventoryItem = {}
 
----@param self table
----@param _item boolean
+---@param self ISUIElement
+---@param _item InventoryItem | false
 ---@param _x number
 ---@param _y number
 ---@param _alpha number?
@@ -12,7 +12,8 @@ ISInventoryItem = {}
 ---@param _h number?
 function ISInventoryItem.renderItemIcon(self, _item, _x, _y, _alpha, _w, _h) end
 
----@param self ISCraftInventoryPanel | ISFluidItemsViewPanel
+---@param self ISUIElement
+---@param _scriptItem Item
 ---@param _x number
 ---@param _y number
 ---@param _alpha number

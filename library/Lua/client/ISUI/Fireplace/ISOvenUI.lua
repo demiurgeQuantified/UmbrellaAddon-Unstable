@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISOvenUI : ISPanelJoypad
----@field character unknown
+---@field character IsoPlayer
 ---@field close ISButton
----@field joypadButtons unknown
----@field knobTex unknown
+---@field joypadButtons ISButton[]
+---@field knobTex Texture
 ---@field ok ISButton
----@field oven unknown
+---@field oven IsoStove
 ---@field tempKnob ISKnob
 ---@field tempType ISTickBox
 ---@field timerKnob ISKnob
@@ -22,12 +22,17 @@ function ISOvenUI:changeTempType() end
 
 function ISOvenUI:initialise() end
 
+---@param clickedOption integer
+---@param enabled boolean
 function ISOvenUI:onChangeTempType(clickedOption, enabled) end
 
+---@param button ISButton
 function ISOvenUI:onClick(button) end
 
+---@param joypadData JoypadData
 function ISOvenUI:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function ISOvenUI:onJoypadDown(button) end
 
 function ISOvenUI:prerender() end
@@ -42,5 +47,7 @@ function ISOvenUI:updateButtons() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param oven IsoStove
+---@param character IsoPlayer
 ---@return ISOvenUI
 function ISOvenUI:new(x, y, width, height, oven, character) end

@@ -4,7 +4,7 @@
 ---@field buildingXEntry ISTextEntryBox
 ---@field buildingYEntry ISTextEntryBox
 ---@field listbox ISScrollingListBox
----@field loadedStash table?
+---@field loadedStash umbrella.StashUtil.Stash?
 ---@field locationControl WorldMapEditorLocationControl
 ---@field mode string?
 WorldMapEditorMode_Stashes = WorldMapEditorMode:derive("WorldMapEditorMode_Stashes")
@@ -17,9 +17,10 @@ function WorldMapEditorMode_Stashes:createChildren() end
 
 function WorldMapEditorMode_Stashes:display() end
 
----@return unknown
+---@return string
 function WorldMapEditorMode_Stashes:generateLuaScript() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Stashes:isKeyConsumed(key) end
 
@@ -31,9 +32,11 @@ function WorldMapEditorMode_Stashes:onBuildingXEntered() end
 
 function WorldMapEditorMode_Stashes:onBuildingYEntered() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Stashes:onKeyPress(key) end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Stashes:onKeyRelease(key) end
 
@@ -70,5 +73,6 @@ function WorldMapEditorMode_Stashes:render() end
 
 function WorldMapEditorMode_Stashes:undisplay() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorMode_Stashes
 function WorldMapEditorMode_Stashes:new(editor) end

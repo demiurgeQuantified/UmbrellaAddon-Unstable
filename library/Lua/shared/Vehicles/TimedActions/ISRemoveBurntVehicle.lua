@@ -1,12 +1,14 @@
 ---@meta
 
 ---@class ISRemoveBurntVehicle : ISBaseTimedAction
----@field item unknown
----@field sound unknown
----@field vehicle unknown
+---@field item InventoryItem
+---@field sound integer?
+---@field vehicle BaseVehicle
 ISRemoveBurntVehicle = ISBaseTimedAction:derive("ISRemoveBurntVehicle")
 ISRemoveBurntVehicle.Type = "ISRemoveBurntVehicle"
 
+---@param item InventoryItem
+---@param baseChance integer
 ---@return boolean
 function ISRemoveBurntVehicle:checkAddItem(item, baseChance) end
 
@@ -29,5 +31,7 @@ function ISRemoveBurntVehicle:stop() end
 
 function ISRemoveBurntVehicle:update() end
 
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
 ---@return ISRemoveBurntVehicle
 function ISRemoveBurntVehicle:new(character, vehicle) end

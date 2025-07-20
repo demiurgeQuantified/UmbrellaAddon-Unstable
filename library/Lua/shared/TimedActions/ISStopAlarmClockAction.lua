@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISStopAlarmClockAction : ISBaseTimedAction
----@field alarm unknown
----@field stopOnWalk unknown
+---@field alarm AlarmClock | AlarmClock | IsoWorldInventoryObject
+---@field stopOnWalk boolean
 ISStopAlarmClockAction = ISBaseTimedAction:derive("ISStopAlarmClockAction")
 ISStopAlarmClockAction.Type = "ISStopAlarmClockAction"
 
@@ -23,5 +23,7 @@ function ISStopAlarmClockAction:stop() end
 
 function ISStopAlarmClockAction:update() end
 
+---@param character IsoPlayer
+---@param alarm AlarmClock | AlarmClock | IsoWorldInventoryObject
 ---@return ISStopAlarmClockAction
 function ISStopAlarmClockAction:new(character, alarm) end

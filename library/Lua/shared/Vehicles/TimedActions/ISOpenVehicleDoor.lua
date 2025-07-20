@@ -2,9 +2,9 @@
 
 ---@class ISOpenVehicleDoor : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field part unknown?
----@field seat unknown
----@field vehicle unknown
+---@field part VehiclePart
+---@field seat integer
+---@field vehicle BaseVehicle
 ISOpenVehicleDoor = ISBaseTimedAction:derive("ISOpenVehicleDoor")
 ISOpenVehicleDoor.Type = "ISOpenVehicleDoor"
 
@@ -30,6 +30,8 @@ function ISOpenVehicleDoor:update() end
 ---@return boolean
 function ISOpenVehicleDoor:waitToStart() end
 
----@param part unknown?
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
+---@param part VehiclePart
 ---@return ISOpenVehicleDoor
 function ISOpenVehicleDoor:new(character, vehicle, part) end

@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISLockDoors : ISBaseTimedAction
----@field locked unknown
----@field vehicle unknown
+---@field locked boolean
+---@field vehicle BaseVehicle
 ISLockDoors = ISBaseTimedAction:derive("ISLockDoors")
 ISLockDoors.Type = "ISLockDoors"
 
@@ -23,5 +23,8 @@ function ISLockDoors:stop() end
 
 function ISLockDoors:update() end
 
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
+---@param locked boolean
 ---@return ISLockDoors
 function ISLockDoors:new(character, vehicle, locked) end

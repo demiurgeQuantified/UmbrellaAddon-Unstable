@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISGetOnBedAction : ISBaseTimedAction
----@field bed unknown?
+---@field bed IsoObject
 ---@field forceProgressBar boolean
 ISGetOnBedAction = ISBaseTimedAction:derive("ISGetOnBedAction")
 ISGetOnBedAction.Type = "ISGetOnBedAction"
@@ -21,9 +21,10 @@ function ISGetOnBedAction:stop() end
 
 function ISGetOnBedAction:update() end
 
----@return unknown
+---@return boolean
 function ISGetOnBedAction:waitToStart() end
 
----@param bed unknown?
+---@param character IsoPlayer
+---@param bed IsoObject
 ---@return ISGetOnBedAction
 function ISGetOnBedAction:new(character, bed) end

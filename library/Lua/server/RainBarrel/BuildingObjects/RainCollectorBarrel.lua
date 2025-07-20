@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class RainCollectorBarrel : ISBuildingObject
----@field javaObject unknown
+---@field javaObject IsoThumpable?
 ---@field name string
 ---@field player number
----@field sq unknown
+---@field sq IsoGridSquare
 ---@field waterMax number
 RainCollectorBarrel = ISBuildingObject:derive("RainCollectorBarrel")
 RainCollectorBarrel.Type = "RainCollectorBarrel"
@@ -22,12 +22,14 @@ function RainCollectorBarrel:create(x, y, z, north, sprite) end
 ---@return number
 function RainCollectorBarrel:getHealth() end
 
+---@param square IsoGridSquare
 ---@return boolean
 function RainCollectorBarrel:isValid(square) end
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param square IsoGridSquare
 function RainCollectorBarrel:render(x, y, z, square) end
 
 ---@param player number

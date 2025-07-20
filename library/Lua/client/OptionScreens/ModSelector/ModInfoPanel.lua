@@ -4,11 +4,11 @@
 ---@field dependenciesPanel ModInfoPanel.InteractionParam
 ---@field descPanel ModInfoPanel.Desc
 ---@field incompatiblePanel ModInfoPanel.InteractionParam
----@field joypadFocused unknown
----@field modInfo unknown
----@field modInfoParams table
+---@field joypadFocused boolean?
+---@field modInfo ChooseGameInfo.Mod
+---@field modInfoParams string[]
 ---@field thumbnailPanel ModInfoPanel.Thumbnail
----@field thumbnailPreviewImage unknown?
+---@field thumbnailPreviewImage Texture?
 ---@field titlePanel ModInfoPanel.Title
 ModInfoPanel = ISPanelJoypad:derive("ModInfoPanel")
 ModInfoPanel.Type = "ModInfoPanel"
@@ -25,18 +25,25 @@ function ModInfoPanel:createChildren() end
 ---@param a number
 function ModInfoPanel:drawCustomRectBorder(x, y, w, h, r, g, b, a) end
 
+---@param joypadData JoypadData
 function ModInfoPanel:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ModInfoPanel:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ModInfoPanel:onJoypadDown(button, joypadData) end
 
 function ModInfoPanel:recalcSize() end
 
 function ModInfoPanel:render() end
 
+---@param val boolean
+---@param joypadData JoypadData
 function ModInfoPanel:setJoypadFocused(val, joypadData) end
 
+---@param modInfo ChooseGameInfo.Mod
 function ModInfoPanel:updateView(modInfo) end
 
 ---@param x number

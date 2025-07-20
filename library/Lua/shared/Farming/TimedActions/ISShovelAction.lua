@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISShovelAction : ISBaseTimedAction
----@field character unknown?
----@field item unknown
----@field plant unknown
----@field sound unknown
+---@field character IsoPlayer
+---@field item InventoryItem
+---@field plant CPlantGlobalObject
+---@field sound integer?
 ISShovelAction = ISBaseTimedAction:derive("ISShovelAction")
 ISShovelAction.Type = "ISShovelAction"
 
@@ -25,10 +25,12 @@ function ISShovelAction:stop() end
 
 function ISShovelAction:update() end
 
----@return unknown
+---@return boolean
 function ISShovelAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param plant CPlantGlobalObject
 ---@param maxTime number
 ---@return ISShovelAction
 function ISShovelAction:new(character, item, plant, maxTime) end

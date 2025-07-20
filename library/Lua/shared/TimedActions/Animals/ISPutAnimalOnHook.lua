@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISPutAnimalOnHook : ISBaseTimedAction
----@field body unknown
----@field hook unknown
+---@field body IsoDeadBody | AnimalInventoryItem
+---@field hook IsoButcherHook
 ---@field luaHook ISButcherHookUI
----@field perkLevel unknown
----@field sound unknown
+---@field perkLevel integer
+---@field sound integer
 ISPutAnimalOnHook = ISBaseTimedAction:derive("ISPutAnimalOnHook")
 ISPutAnimalOnHook.Type = "ISPutAnimalOnHook"
 
@@ -32,9 +32,12 @@ function ISPutAnimalOnHook:stopSound() end
 
 function ISPutAnimalOnHook:update() end
 
----@return unknown
+---@return boolean
 function ISPutAnimalOnHook:waitToStart() end
 
----@param luaHookUI ISButcherHookUI
+---@param character IsoPlayer
+---@param body IsoDeadBody | AnimalInventoryItem
+---@param hook IsoButcherHook
+---@param luaHook ISButcherHookUI
 ---@return ISPutAnimalOnHook
-function ISPutAnimalOnHook:new(character, body, hook, luaHookUI) end
+function ISPutAnimalOnHook:new(character, body, hook, luaHook) end

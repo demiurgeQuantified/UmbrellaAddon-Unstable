@@ -2,10 +2,10 @@
 
 ---@class ISOpenCloseVehicleWindow : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field open unknown
----@field part unknown
----@field vehicle unknown
----@field window unknown
+---@field open boolean
+---@field part VehiclePart
+---@field vehicle BaseVehicle
+---@field window VehicleWindow
 ISOpenCloseVehicleWindow = ISBaseTimedAction:derive("ISOpenCloseVehicleWindow")
 ISOpenCloseVehicleWindow.Type = "ISOpenCloseVehicleWindow"
 
@@ -26,5 +26,8 @@ function ISOpenCloseVehicleWindow:stop() end
 
 function ISOpenCloseVehicleWindow:update() end
 
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param open boolean
 ---@return ISOpenCloseVehicleWindow
 function ISOpenCloseVehicleWindow:new(character, part, open) end

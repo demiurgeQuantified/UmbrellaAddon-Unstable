@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISApplyMakeUp : ISBaseTimedAction
----@field item unknown
----@field type unknown
+---@field item InventoryItem
+---@field type string
 ISApplyMakeUp = ISBaseTimedAction:derive("ISApplyMakeUp")
 ISApplyMakeUp.Type = "ISApplyMakeUp"
 
@@ -23,5 +23,8 @@ function ISApplyMakeUp:stop() end
 
 function ISApplyMakeUp:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param type string
 ---@return ISApplyMakeUp
 function ISApplyMakeUp:new(character, item, type) end

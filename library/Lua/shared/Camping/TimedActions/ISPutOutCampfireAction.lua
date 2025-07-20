@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISPutOutCampfireAction : ISBaseTimedAction
----@field campfire unknown
+---@field campfire SCampfireGlobalObject
 ISPutOutCampfireAction = ISBaseTimedAction:derive("ISPutOutCampfireAction")
 ISPutOutCampfireAction.Type = "ISPutOutCampfireAction"
 
@@ -22,8 +22,10 @@ function ISPutOutCampfireAction:stop() end
 
 function ISPutOutCampfireAction:update() end
 
----@return unknown
+---@return boolean
 function ISPutOutCampfireAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param campfire SCampfireGlobalObject
 ---@return ISPutOutCampfireAction
 function ISPutOutCampfireAction:new(character, campfire) end

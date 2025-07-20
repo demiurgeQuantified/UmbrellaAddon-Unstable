@@ -2,28 +2,30 @@
 
 ---@class ISBuildRecipePanel : ISPanel
 ---@field autoFillContents boolean
----@field craftControl unknown?
----@field inputs unknown?
+---@field craftControl ISWidgetBuildControl?
+---@field inputs ISBuildWidgetIngredientsInputs?
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
----@field logic unknown
+---@field logic BuildLogic
 ---@field margin number
----@field outputs unknown?
+---@field outputs ISWidgetIngredientsOutputs?
 ---@field overlayPanel ISPanel
----@field player unknown
----@field rootTable unknown?
----@field titleWidget unknown?
+---@field player IsoPlayer
+---@field rootTable ISTableLayout?
+---@field titleWidget ISWidgetTitleHeader?
 ISBuildRecipePanel = ISPanel:derive("ISBuildRecipePanel")
 ISBuildRecipePanel.Type = "ISBuildRecipePanel"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISBuildRecipePanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISBuildRecipePanel:createChildren() end
 
 function ISBuildRecipePanel:createDynamicChildren() end
 
----@return unknown
+---@return CraftRecipe
 function ISBuildRecipePanel:getRecipe() end
 
 function ISBuildRecipePanel:initialise() end
@@ -38,6 +40,7 @@ function ISBuildRecipePanel:prerender() end
 
 function ISBuildRecipePanel:render() end
 
+---@param _b boolean
 function ISBuildRecipePanel:setOverlayVisible(_b) end
 
 function ISBuildRecipePanel:update() end
@@ -48,5 +51,10 @@ function ISBuildRecipePanel:updateContainers(containers) end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param logic BuildLogic
+---@param recipeData CraftRecipeData?
+---@param craftBench CraftBench?
+---@param isoObject IsoObject?
 ---@return ISBuildRecipePanel
 function ISBuildRecipePanel:new(x, y, width, height, player, logic, recipeData, craftBench, isoObject) end

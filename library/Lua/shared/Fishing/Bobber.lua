@@ -3,21 +3,21 @@
 ---@class Fishing
 Fishing = {}
 Fishing.Bobber = nil ---@type Fishing.Bobber
-Fishing.ServerBobberManager = {}
+Fishing.ServerBobberManager = {} ---@type table<integer, Fishing.Bobber>
 
 ---@class Fishing.Bobber
----@field attractTimer number?
+---@field attractTimer integer
 ---@field dx number
 ---@field dy number
 ---@field fish Fishing.Fish?
----@field fishingLvl unknown
+---@field fishingLvl integer
 ---@field fishingRod Fishing.FishingRod
----@field id unknown
----@field item unknown
----@field lure unknown
----@field nibbleTimer number
----@field player unknown
----@field sq unknown
+---@field id integer
+---@field item InventoryItem
+---@field lure string
+---@field nibbleTimer integer
+---@field player IsoPlayer
+---@field sq IsoGridSquare
 ---@field z number
 local __fishing_Bobber = {}
 
@@ -32,7 +32,7 @@ function __fishing_Bobber:destroy() end
 ---@return number
 function __fishing_Bobber:getFreeWaterDirection() end
 
----@return number?
+---@return integer
 function __fishing_Bobber:getNibbleTime() end
 
 ---@return number
@@ -44,7 +44,7 @@ function __fishing_Bobber:getY() end
 ---@return number
 function __fishing_Bobber:getZ() end
 
----@return unknown?
+---@return InventoryItem?
 function __fishing_Bobber:grabFish() end
 
 ---@return boolean
@@ -56,8 +56,23 @@ function __fishing_Bobber:move(dx, dy) end
 
 function __fishing_Bobber:update() end
 
+---@param player IsoPlayer
 ---@param fishingRod Fishing.FishingRod
 ---@param x number
 ---@param y number
 ---@return Fishing.Bobber
 function __fishing_Bobber:new(player, fishingRod, x, y) end
+
+---@class umbrella.FishingActionUpdateData
+---@field bobberItem InventoryItem?
+---@field bobberX string?
+---@field bobberY string?
+---@field CreateBobber boolean
+---@field DestroyBobber boolean
+---@field fish Fishing.Fish?
+---@field fishItem InventoryItem?
+---@field player IsoPlayer
+---@field Reject boolean
+---@field UpdateBobberParameters boolean
+---@field UpdateFish boolean
+umbrella_FishingActionUpdateData = {}

@@ -1,16 +1,16 @@
 ---@meta
 
 ---@class ISApplyBandage : ISBaseTimedAction
----@field bandagedPlayerX unknown
----@field bandagedPlayerY unknown
----@field bodyPart unknown
----@field character unknown?
+---@field bandagedPlayerX number
+---@field bandagedPlayerY number
+---@field bodyPart BodyPart
+---@field character IsoPlayer
 ---@field doctorLevel number
----@field doIt number | boolean
----@field item unknown?
----@field otherPlayer unknown?
----@field sound unknown
----@field sound2 unknown
+---@field doIt boolean
+---@field item InventoryItem
+---@field otherPlayer IsoPlayer
+---@field sound integer?
+---@field sound2 integer?
 ISApplyBandage = ISBaseTimedAction:derive("ISApplyBandage")
 ISApplyBandage.Type = "ISApplyBandage"
 
@@ -20,7 +20,7 @@ function ISApplyBandage:complete() end
 ---@return number
 function ISApplyBandage:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISApplyBandage:isValid() end
 
 function ISApplyBandage:perform() end
@@ -36,9 +36,10 @@ function ISApplyBandage:update() end
 ---@return boolean
 function ISApplyBandage:waitToStart() end
 
----@param character unknown?
----@param otherPlayer unknown?
----@param item unknown?
----@param doIt boolean | number
+---@param character IsoPlayer
+---@param otherPlayer IsoPlayer
+---@param item InventoryItem
+---@param bodyPart BodyPart
+---@param doIt boolean
 ---@return ISApplyBandage
 function ISApplyBandage:new(character, otherPlayer, item, bodyPart, doIt) end

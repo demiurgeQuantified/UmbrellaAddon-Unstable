@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class XuiTestWindow : ISCollapsableWindow
----@field buttonHello unknown
+---@field buttonHello ISButton?
 ---@field heightMod number
----@field panelButton unknown
----@field player unknown
----@field th unknown
----@field xuiPanel unknown?
----@field xuiScript unknown
+---@field panelButton ISUIElement
+---@field player IsoPlayer
+---@field th number
+---@field xuiPanel ISUIElement?
+---@field xuiScript XuiScript
 XuiTestWindow = ISCollapsableWindow:derive("XuiTestWindow")
 XuiTestWindow.Type = "XuiTestWindow"
 
@@ -17,6 +17,7 @@ function XuiTestWindow:createChildren() end
 
 function XuiTestWindow:initialise() end
 
+---@param _button ISButton
 function XuiTestWindow:onButtonClick(_button) end
 
 ---@param _width number
@@ -31,5 +32,7 @@ function XuiTestWindow:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param script XuiScript
 ---@return XuiTestWindow
 function XuiTestWindow:new(x, y, width, height, player, script) end

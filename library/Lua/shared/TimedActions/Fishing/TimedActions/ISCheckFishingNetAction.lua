@@ -1,16 +1,16 @@
 ---@meta
 
 ---@class ISCheckFishingNetAction : ISBaseTimedAction
----@field hours unknown
+---@field hours integer
 ---@field maxTime number?
----@field trap unknown
+---@field trap IsoObject
 ISCheckFishingNetAction = ISBaseTimedAction:derive("ISCheckFishingNetAction")
 ISCheckFishingNetAction.Type = "ISCheckFishingNetAction"
 
 ---@return boolean
 function ISCheckFishingNetAction:complete() end
 
----@return number?
+---@return number
 function ISCheckFishingNetAction:getDuration() end
 
 ---@return boolean
@@ -24,5 +24,8 @@ function ISCheckFishingNetAction:stop() end
 
 function ISCheckFishingNetAction:update() end
 
+---@param character IsoPlayer
+---@param trap IsoObject
+---@param hours integer
 ---@return ISCheckFishingNetAction
 function ISCheckFishingNetAction:new(character, trap, hours) end

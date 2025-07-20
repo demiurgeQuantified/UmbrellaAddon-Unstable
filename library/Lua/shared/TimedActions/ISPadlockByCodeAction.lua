@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISPadlockByCodeAction : ISBaseTimedAction
----@field code unknown
+---@field code integer
 ---@field lock boolean
----@field padlock unknown
----@field thump unknown
+---@field padlock InventoryItem
+---@field thump IsoThumpable
 ISPadlockByCodeAction = ISBaseTimedAction:derive("ISPadlockByCodeAction")
 ISPadlockByCodeAction.Type = "ISPadlockByCodeAction"
 
@@ -25,6 +25,10 @@ function ISPadlockByCodeAction:stop() end
 
 function ISPadlockByCodeAction:update() end
 
+---@param character IsoPlayer
+---@param thump IsoThumpable
+---@param padlock InventoryItem
 ---@param lock boolean
+---@param code integer
 ---@return ISPadlockByCodeAction
 function ISPadlockByCodeAction:new(character, thump, padlock, lock, code) end

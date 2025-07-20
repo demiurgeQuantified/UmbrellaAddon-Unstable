@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISDetachTrailerFromVehicle : ISBaseTimedAction
----@field attachment unknown
----@field hitchPos unknown
+---@field attachment string
+---@field hitchPos Vector3f
 ---@field sound unknown
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISDetachTrailerFromVehicle = ISBaseTimedAction:derive("ISDetachTrailerFromVehicle")
 ISDetachTrailerFromVehicle.Type = "ISDetachTrailerFromVehicle"
 
@@ -21,8 +21,11 @@ function ISDetachTrailerFromVehicle:stopSound() end
 
 function ISDetachTrailerFromVehicle:update() end
 
----@return unknown
+---@return boolean
 function ISDetachTrailerFromVehicle:waitToStart() end
 
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
+---@param attachment string
 ---@return ISDetachTrailerFromVehicle
 function ISDetachTrailerFromVehicle:new(character, vehicle, attachment) end

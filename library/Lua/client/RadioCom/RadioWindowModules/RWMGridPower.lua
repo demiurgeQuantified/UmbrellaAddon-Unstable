@@ -13,21 +13,26 @@ function RWMGridPower:createChildren() end
 ---@return string?
 function RWMGridPower:getAPrompt() end
 
----@return unknown?
+---@return string?
 function RWMGridPower:getBPrompt() end
 
----@return unknown?
+---@return string?
 function RWMGridPower:getXPrompt() end
 
----@return unknown?
+---@return string?
 function RWMGridPower:getYPrompt() end
 
 function RWMGridPower:initialise() end
 
+---@param button integer
 function RWMGridPower:onJoypadDown(button) end
 
 function RWMGridPower:prerender() end
 
+---@param _player IsoPlayer
+---@param _deviceObject InventoryItem | IsoObject | VehiclePart
+---@param _deviceData DeviceData
+---@param _deviceType string
 ---@return boolean
 function RWMGridPower:readFromObject(_player, _deviceObject, _deviceData, _deviceType) end
 

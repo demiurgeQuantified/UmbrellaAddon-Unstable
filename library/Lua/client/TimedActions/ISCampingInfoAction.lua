@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISCampingInfoAction : ISBaseTimedAction
----@field campfire unknown
----@field campfireTable unknown
----@field playerNum unknown
+---@field campfire IsoObject
+---@field campfireTable CCampfireGlobalObject
+---@field playerNum integer
 ISCampingInfoAction = ISBaseTimedAction:derive("IsCampfireInfoAction")
 ISCampingInfoAction.Type = "IsCampfireInfoAction"
 
@@ -12,5 +12,8 @@ function ISCampingInfoAction:isValid() end
 
 function ISCampingInfoAction:perform() end
 
+---@param character IsoPlayer
+---@param campfireObject IsoObject
+---@param campfire CCampfireGlobalObject
 ---@return ISCampingInfoAction
 function ISCampingInfoAction:new(character, campfireObject, campfire) end

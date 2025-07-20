@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISCheckAnimalInsideTrailer : ISBaseTimedAction
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISCheckAnimalInsideTrailer = ISBaseTimedAction:derive("ISCheckAnimalInsideTrailer")
 ISCheckAnimalInsideTrailer.Type = "ISCheckAnimalInsideTrailer"
 
@@ -16,8 +16,10 @@ function ISCheckAnimalInsideTrailer:stop() end
 
 function ISCheckAnimalInsideTrailer:update() end
 
----@return unknown
+---@return boolean
 function ISCheckAnimalInsideTrailer:waitToStart() end
 
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
 ---@return ISCheckAnimalInsideTrailer
 function ISCheckAnimalInsideTrailer:new(character, vehicle) end

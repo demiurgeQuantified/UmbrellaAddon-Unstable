@@ -3,19 +3,19 @@
 ---@class ISKnob : ISUIElement
 ---@field amplitude number
 ---@field dragging boolean
----@field draggingX unknown
----@field height unknown
+---@field draggingX number
+---@field height number
 ---@field isKnob boolean
 ---@field lastValue number
----@field originalX unknown
----@field player unknown
----@field selected number
+---@field originalX number
+---@field player IsoPlayer
+---@field selected integer
 ---@field switchSound string
----@field tex unknown
+---@field tex Texture
 ---@field title string
----@field values table
----@field valuesBg unknown
----@field width unknown
+---@field values umbrella.ISKnob.ValueTable[]
+---@field valuesBg Texture
+---@field width number
 ISKnob = ISUIElement:derive("ISKnob")
 ISKnob.Type = "ISKnob"
 ISKnob.messages = {}
@@ -26,13 +26,15 @@ function ISKnob:addValue(angle, value) end
 
 function ISKnob:forceClick() end
 
----@return unknown
+---@return number
 function ISKnob:getValue() end
 
 function ISKnob:initialise() end
 
+---@param joypadData JoypadData
 function ISKnob:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISKnob:onJoypadDirUp(joypadData) end
 
 ---@param x number
@@ -61,6 +63,7 @@ function ISKnob:prerender() end
 
 function ISKnob:render() end
 
+---@param focused boolean
 function ISKnob:setJoypadFocused(focused) end
 
 ---@param value number
@@ -68,6 +71,14 @@ function ISKnob:setKnobPosition(value) end
 
 ---@param x number
 ---@param y number
+---@param tex Texture
+---@param valuesBg Texture
 ---@param title string
+---@param player IsoPlayer
 ---@return ISKnob
 function ISKnob:new(x, y, tex, valuesBg, title, player) end
+
+---@class umbrella.ISKnob.ValueTable
+---@field angle number
+---@field value number
+umbrella_ISKnob_ValueTable = {}

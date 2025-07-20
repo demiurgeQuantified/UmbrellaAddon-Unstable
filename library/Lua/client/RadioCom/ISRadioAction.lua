@@ -1,15 +1,15 @@
 ---@meta
 
 ---@class ISRadioAction : ISBaseTimedAction
----@field device unknown
----@field deviceData unknown
+---@field device InventoryItem | IsoObject | VehiclePart
+---@field deviceData DeviceData
 ---@field ignoreHandsWounds boolean
 ---@field mode string
----@field secondaryItem (boolean | number)?
+---@field secondaryItem (InventoryItem | boolean | number)?
 ISRadioAction = ISBaseTimedAction:derive("ISRadioAction")
 ISRadioAction.Type = "ISRadioAction"
 
----@return unknown?
+---@return boolean?
 function ISRadioAction:isValid() end
 
 ---@return boolean
@@ -27,13 +27,13 @@ function ISRadioAction:isValidMuteMicrophone() end
 ---@return boolean
 function ISRadioAction:isValidMuteVolume() end
 
----@return unknown
+---@return boolean
 function ISRadioAction:isValidRemoveBattery() end
 
 ---@return boolean
 function ISRadioAction:isValidRemoveHeadphones() end
 
----@return unknown
+---@return boolean
 function ISRadioAction:isValidRemoveMedia() end
 
 ---@return boolean
@@ -45,7 +45,7 @@ function ISRadioAction:isValidSetVolume() end
 ---@return boolean
 function ISRadioAction:isValidToggleOnOff() end
 
----@return unknown
+---@return boolean
 function ISRadioAction:isValidTogglePlayMedia() end
 
 ---@return boolean
@@ -86,6 +86,8 @@ function ISRadioAction:startSetChannel() end
 function ISRadioAction:update() end
 
 ---@param mode string
----@param secondaryItem (boolean | number)?
+---@param character IsoPlayer
+---@param device InventoryItem | IsoObject | VehiclePart
+---@param secondaryItem (InventoryItem | boolean | number)?
 ---@return ISRadioAction
 function ISRadioAction:new(mode, character, device, secondaryItem) end

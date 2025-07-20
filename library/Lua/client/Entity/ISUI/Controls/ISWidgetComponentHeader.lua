@@ -1,22 +1,24 @@
 ---@meta
 
 ---@class ISWidgetComponentHeader : ISPanel
----@field component unknown
----@field componentUiStyle unknown
+---@field component Component
+---@field componentUiStyle XuiSkin.ComponentUiStyle
 ---@field enableIcon boolean
----@field entity unknown
----@field icon unknown?
+---@field entity GameEntity
+---@field icon ISImage?
 ---@field iconSize number
 ---@field margin number
 ---@field padding number
----@field player unknown
----@field styleIcon unknown
----@field styleLabel unknown
----@field textureBackground unknown?
----@field title unknown?
+---@field player IsoPlayer
+---@field styleIcon string?
+---@field styleLabel string?
+---@field textureBackground Texture?
+---@field title ISLabel?
 ISWidgetComponentHeader = ISPanel:derive("ISWidgetComponentHeader")
 ISWidgetComponentHeader.Type = "ISWidgetComponentHeader"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISWidgetComponentHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetComponentHeader:createChildren() end
@@ -35,6 +37,12 @@ function ISWidgetComponentHeader:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param entity GameEntity
+---@param component Component
+---@param componentUiStyle XuiSkin.ComponentUiStyle
+---@param _styleIcon string?
+---@param _styleLabel string?
 ---@return ISWidgetComponentHeader
 function ISWidgetComponentHeader:new(
 	x,

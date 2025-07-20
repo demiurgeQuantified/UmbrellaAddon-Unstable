@@ -5,7 +5,7 @@ DebugRagdollPanel = ISDebugPanelBase:derive("DebugRagdollPanel")
 DebugRagdollPanel.Type = "DebugRagdollPanel"
 DebugRagdollPanel.instance = nil
 
----@return unknown
+---@return DebugRagdollPanel
 function DebugRagdollPanel.OnOpenPanel() end
 
 function DebugRagdollPanel:initialise() end

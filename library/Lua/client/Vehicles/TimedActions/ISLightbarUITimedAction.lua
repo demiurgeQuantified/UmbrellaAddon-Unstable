@@ -15,5 +15,6 @@ function ISLightbarUITimedAction:stop() end
 
 function ISLightbarUITimedAction:update() end
 
+---@param character IsoPlayer
 ---@return ISLightbarUITimedAction
 function ISLightbarUITimedAction:new(character) end

@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISCutAnimalOnHook : ISBaseTimedAction
----@field animalDef unknown?
----@field body unknown?
----@field bucket unknown
----@field hook unknown
+---@field animalDef umbrella.AnimalPartsDefinition
+---@field body IsoAnimal
+---@field bucket InventoryItem?
+---@field hook IsoButcherHook
 ---@field luaHook ISButcherHookUI
----@field perkLevel unknown
----@field xp unknown
+---@field perkLevel integer
+---@field xp integer
 ISCutAnimalOnHook = ISBaseTimedAction:derive("ISCutAnimalOnHook")
 ISCutAnimalOnHook.Type = "ISCutAnimalOnHook"
 
@@ -35,7 +35,9 @@ function ISCutAnimalOnHook:update() end
 ---@return unknown
 function ISCutAnimalOnHook:waitToStart() end
 
----@param body unknown?
----@param luaHookUI ISButcherHookUI
+---@param body IsoAnimal
+---@param hook IsoButcherHook
+---@param luaHook ISButcherHookUI
+---@param bucket InventoryItem?
 ---@return ISCutAnimalOnHook
-function ISCutAnimalOnHook:new(character, body, hook, luaHookUI, bucket) end
+function ISCutAnimalOnHook:new(character, body, hook, luaHook, bucket) end

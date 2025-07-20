@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISRemoveCampfireAction : ISBaseTimedAction
----@field campfire unknown
----@field character unknown?
+---@field campfire SCampfireGlobalObject
+---@field character IsoPlayer
 ISRemoveCampfireAction = ISBaseTimedAction:derive("ISRemoveCampfireAction")
 ISRemoveCampfireAction.Type = "ISRemoveCampfireAction"
 
@@ -26,7 +26,8 @@ function ISRemoveCampfireAction:update() end
 ---@return unknown
 function ISRemoveCampfireAction:waitToStart() end
 
----@param character unknown?
----@param maxTime number
+---@param character IsoPlayer
+---@param campfire SCampfireGlobalObject
+---@param maxTime integer
 ---@return ISRemoveCampfireAction
 function ISRemoveCampfireAction:new(character, campfire, maxTime) end

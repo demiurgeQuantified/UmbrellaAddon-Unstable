@@ -2,8 +2,8 @@
 
 ---@class FishingDebugWindow : ISPanelJoypad
 ---@field name unknown?
----@field player unknown
----@field titlebarbkg unknown
+---@field player IsoPlayer
+---@field titlebarbkg Texture
 FishingDebugWindow = ISPanelJoypad:derive("FishingDebugWindow")
 FishingDebugWindow.Type = "FishingDebugWindow"
 
@@ -11,6 +11,7 @@ function FishingDebugWindow:destroy() end
 
 function FishingDebugWindow:initialise() end
 
+---@param button ISButton
 function FishingDebugWindow:onClick(button) end
 
 ---@param x number
@@ -44,5 +45,6 @@ function FishingDebugWindow:render() end
 ---@return number
 function FishingDebugWindow:titleBarHeight() end
 
+---@param player IsoPlayer
 ---@return FishingDebugWindow
 function FishingDebugWindow:new(player) end

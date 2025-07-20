@@ -4,18 +4,20 @@
 ---@field charCreationMain CoopCharacterCreationMain
 ---@field charCreationProfession CoopCharacterCreationProfession
 ---@field coopUserName CoopUserName
----@field joypadData unknown?
----@field joypadIndex unknown?
+---@field joypadData JoypadData?
+---@field joypadIndex integer?
 ---@field mapSpawnSelect CoopMapSpawnSelect
----@field playerIndex number
+---@field playerIndex integer
 CoopCharacterCreation = ISPanelJoypad:derive("CoopCharacterCreation")
 CoopCharacterCreation.Type = "CoopCharacterCreation"
 CoopCharacterCreation.instance = nil ---@type CoopCharacterCreation?
-CoopCharacterCreation.visibleUI = {}
+CoopCharacterCreation.visibleUI = nil ---@type ISUIElement[]
 
----@return unknown?
+---@return JoypadData?
 function CoopCharacterCreation.getJoypad() end
 
+---@param joypadIndex integer
+---@param joypadData JoypadData
 function CoopCharacterCreation.newPlayer(joypadIndex, joypadData) end
 
 ---@param visible boolean
@@ -34,10 +36,11 @@ function CoopCharacterCreation:initPlayer() end
 
 function CoopCharacterCreation:newPlayerMouse() end
 
+---@param index integer
 function CoopCharacterCreation:OnJoypadBeforeDeactivate(index) end
 
----@param joypadIndex unknown?
----@param joypadData unknown?
----@param playerIndex number
+---@param joypadIndex integer?
+---@param joypadData JoypadData?
+---@param playerIndex integer
 ---@return CoopCharacterCreation
 function CoopCharacterCreation:new(joypadIndex, joypadData, playerIndex) end

@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISGrabCorpseAction : ISBaseTimedAction
----@field corpse unknown
----@field corpseBody unknown?
+---@field corpse InventoryItem
+---@field corpseBody IsoDeadBody
 ---@field forceProgressBar boolean
----@field sound unknown
+---@field sound integer?
 ISGrabCorpseAction = ISBaseTimedAction:derive("ISGrabCorpseAction")
 ISGrabCorpseAction.Type = "ISGrabCorpseAction"
 
----@return boolean
+---@return boolean?
 function ISGrabCorpseAction:complete() end
 
 ---@return number
@@ -27,10 +27,10 @@ function ISGrabCorpseAction:stopSound() end
 
 function ISGrabCorpseAction:update() end
 
----@return unknown
+---@return boolean
 function ISGrabCorpseAction:waitToStart() end
 
----@param character unknown?
----@param corpseBody unknown?
+---@param character IsoPlayer
+---@param corpseBody IsoDeadBody
 ---@return ISGrabCorpseAction
 function ISGrabCorpseAction:new(character, corpseBody) end

@@ -3,12 +3,12 @@
 ---@class IsoRegionDetails : ISCollapsableWindow
 ---@field canvasY number
 ---@field currentTile unknown?
----@field greyCol table
+---@field greyCol umbrella.RGBA
 ---@field hotKeyPanels table
 ---@field isJoypadWindow boolean
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field richtext ISRichTextPanel?
 ---@field subFocus unknown?
 ---@field title string
@@ -23,6 +23,7 @@ IsoRegionDetails.lastY = false
 ---@return IsoRegionDetails?
 function IsoRegionDetails.OnOpenPanel() end
 
+---@param _prefix string
 function IsoRegionDetails:addLine(_prefix, _line) end
 
 function IsoRegionDetails:addLineEnd() end
@@ -38,6 +39,7 @@ function IsoRegionDetails:createChildren() end
 
 function IsoRegionDetails:initialise() end
 
+---@param _btn ISButton
 function IsoRegionDetails:onButton(_btn) end
 
 function IsoRegionDetails:onResize() end
@@ -47,6 +49,7 @@ function IsoRegionDetails:prerender() end
 ---@param _x number
 ---@param _y number
 ---@param _z number
+---@param _o IsoChunkRegion?
 function IsoRegionDetails:readRegion(_x, _y, _z, _o) end
 
 function IsoRegionDetails:render() end
@@ -59,5 +62,6 @@ function IsoRegionDetails:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return IsoRegionDetails
 function IsoRegionDetails:new(x, y, width, height, player) end

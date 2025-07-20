@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISAttachAnimalToTree : ISBaseTimedAction
----@field animal unknown
+---@field animal IsoAnimal
 ---@field remove boolean
----@field sound unknown
----@field tree unknown
+---@field sound integer?
+---@field tree IsoObject
 ISAttachAnimalToTree = ISBaseTimedAction:derive("ISAttachAnimalToTree")
 ISAttachAnimalToTree.Type = "ISAttachAnimalToTree"
 
@@ -25,9 +25,12 @@ function ISAttachAnimalToTree:stop() end
 
 function ISAttachAnimalToTree:update() end
 
----@return unknown
+---@return boolean
 function ISAttachAnimalToTree:waitToStart() end
 
+---@param character IsoPlayer
+---@param animal IsoAnimal
+---@param tree IsoObject
 ---@param remove boolean
 ---@return ISAttachAnimalToTree
 function ISAttachAnimalToTree:new(character, animal, tree, remove) end

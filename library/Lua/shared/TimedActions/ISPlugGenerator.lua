@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISPlugGenerator : ISBaseTimedAction
----@field generator unknown
+---@field generator IsoGenerator
 ---@field plug boolean
----@field sound unknown
+---@field sound integer?
 ISPlugGenerator = ISBaseTimedAction:derive("ISPlugGenerator")
 ISPlugGenerator.Type = "ISPlugGenerator"
 
@@ -24,10 +24,11 @@ function ISPlugGenerator:stop() end
 
 function ISPlugGenerator:update() end
 
----@return unknown
+---@return boolean
 function ISPlugGenerator:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param generator IsoGenerator
 ---@param plug boolean
 ---@return ISPlugGenerator
 function ISPlugGenerator:new(character, generator, plug) end

@@ -2,10 +2,11 @@
 
 ---@class ISAdminPanelUI : ISPanel
 ---@field adminPowerBtn ISButton
----@field buttonBorderColor table
+---@field buttonBorderColor umbrella.RGBA
 ---@field cancel ISButton
 ---@field checkStatsBtn ISButton
 ---@field climateOptionsBtn ISButton
+---@field dbBtn ISButton
 ---@field itemListBtn ISButton
 ---@field miniScoreboardBtn ISButton
 ---@field nonpvpzoneBtn ISButton
@@ -20,7 +21,7 @@
 ---@field seeTicketsBtn ISButton
 ---@field seeUsersBtn ISButton
 ---@field showStatisticsBtn ISButton
----@field variableColor table
+---@field variableColor umbrella.RGBA
 ---@field zOffsetSmallFont number
 ---@field zoneEditor ISButton
 ISAdminPanelUI = ISPanel:derive("ISAdminPanelUI")
@@ -39,6 +40,7 @@ function ISAdminPanelUI:create() end
 
 function ISAdminPanelUI:initialise() end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ISAdminPanelUI:onOptionMouseDown(button, x, y) end

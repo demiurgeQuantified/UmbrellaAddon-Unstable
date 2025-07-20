@@ -5,22 +5,23 @@
 ---@field close ISButton
 ---@field getKey ISButton
 ---@field name unknown?
----@field player unknown
+---@field player IsoPlayer
 ---@field repair ISButton
 ---@field spawn ISButton
----@field titlebarbkg unknown
----@field vehicle unknown
+---@field titlebarbkg Texture
+---@field vehicle BaseVehicle
 ---@field vehicleComboBox ISComboBox
 ISSpawnVehicleUI = ISPanelJoypad:derive("ISSpawnVehicleUI")
 ISSpawnVehicleUI.Type = "ISSpawnVehicleUI"
 
 function ISSpawnVehicleUI:destroy() end
 
----@return unknown
+---@return string
 function ISSpawnVehicleUI:getVehicle() end
 
 function ISSpawnVehicleUI:initialise() end
 
+---@param button ISButton
 function ISSpawnVehicleUI:onClick(button) end
 
 ---@param x number
@@ -60,5 +61,6 @@ function ISSpawnVehicleUI:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ISSpawnVehicleUI
 function ISSpawnVehicleUI:new(x, y, width, height, player) end

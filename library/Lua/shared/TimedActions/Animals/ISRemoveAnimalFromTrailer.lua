@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISRemoveAnimalFromTrailer : ISBaseTimedAction
----@field animal unknown?
+---@field animal IsoAnimal?
 ---@field grab boolean?
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISRemoveAnimalFromTrailer = ISBaseTimedAction:derive("ISRemoveAnimalFromTrailer")
 ISRemoveAnimalFromTrailer.Type = "ISRemoveAnimalFromTrailer"
 
@@ -24,10 +24,12 @@ function ISRemoveAnimalFromTrailer:stop() end
 
 function ISRemoveAnimalFromTrailer:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveAnimalFromTrailer:waitToStart() end
 
----@param animal unknown?
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
+---@param animal IsoAnimal?
 ---@param grab boolean?
 ---@return ISRemoveAnimalFromTrailer
 function ISRemoveAnimalFromTrailer:new(character, vehicle, animal, grab) end

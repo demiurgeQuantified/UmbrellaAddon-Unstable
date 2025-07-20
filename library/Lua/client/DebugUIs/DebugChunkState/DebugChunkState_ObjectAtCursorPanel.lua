@@ -13,10 +13,16 @@ function DebugChunkState_ObjectAtCursorPanel:createChildren() end
 
 function DebugChunkState_ObjectAtCursorPanel:onChangeObject() end
 
+---@param value number
+---@param slider ISSliderPanel
 function DebugChunkState_ObjectAtCursorPanel:onLevelsChanged(value, slider) end
 
+---@param value number
+---@param slider ISSliderPanel
 function DebugChunkState_ObjectAtCursorPanel:onScaleChanged(value, slider) end
 
+---@param value number
+---@param slider ISSliderPanel
 function DebugChunkState_ObjectAtCursorPanel:onWidthChanged(value, slider) end
 
 function DebugChunkState_ObjectAtCursorPanel:render() end

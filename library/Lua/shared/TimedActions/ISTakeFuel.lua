@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISTakeFuel : ISBaseTimedAction
----@field amount unknown
----@field fuelStation unknown
----@field itemStart unknown
+---@field amount number
+---@field fuelStation IsoObject
+---@field itemStart number
 ---@field itemTarget number
----@field petrolCan unknown?
----@field sound unknown
----@field square unknown
+---@field petrolCan InventoryItem
+---@field sound integer?
+---@field square IsoGridSquare
 ISTakeFuel = ISBaseTimedAction:derive("ISTakeFuel")
 ISTakeFuel.Type = "ISTakeFuel"
 
@@ -32,9 +32,11 @@ function ISTakeFuel:stop() end
 
 function ISTakeFuel:update() end
 
----@return unknown
+---@return boolean
 function ISTakeFuel:waitToStart() end
 
----@param petrolCan unknown?
+---@param character IsoPlayer
+---@param fuelStation IsoObject
+---@param petrolCan InventoryItem
 ---@return ISTakeFuel
 function ISTakeFuel:new(character, fuelStation, petrolCan) end

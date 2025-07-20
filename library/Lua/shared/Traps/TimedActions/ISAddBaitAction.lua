@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISAddBaitAction : ISBaseTimedAction
----@field bait unknown
----@field trap unknown
+---@field bait Food
+---@field trap CTrapGlobalObject
 ISAddBaitAction = ISBaseTimedAction:derive("ISAddBaitAction")
 ISAddBaitAction.Type = "ISAddBaitAction"
 
@@ -23,9 +23,11 @@ function ISAddBaitAction:stop() end
 
 function ISAddBaitAction:update() end
 
----@return unknown
+---@return boolean
 function ISAddBaitAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param bait Food
+---@param trap CTrapGlobalObject
 ---@return ISAddBaitAction
 function ISAddBaitAction:new(character, bait, trap) end

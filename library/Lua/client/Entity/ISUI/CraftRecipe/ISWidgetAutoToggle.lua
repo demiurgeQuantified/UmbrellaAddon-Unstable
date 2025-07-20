@@ -1,5 +1,7 @@
 ---@meta
 
+---@alias umbrella.ISWidgetAutoToggle.OnToggled fun(target: unknown, state: boolean)
+
 ---@class ISWidgetAutoToggle : ISPanel
 ---@field autoFillContents boolean
 ---@field doToolTip boolean
@@ -8,15 +10,17 @@
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
 ---@field margin number
----@field onToggled unknown
----@field textureOff unknown
----@field textureOffOver unknown
----@field textureOn unknown
----@field textureOnOver unknown
+---@field onToggled umbrella.ISWidgetAutoToggle.OnToggled?
+---@field textureOff Texture
+---@field textureOffOver Texture
+---@field textureOn Texture
+---@field textureOnOver Texture
 ---@field toggleState boolean
 ISWidgetAutoToggle = ISPanel:derive("ISWidgetAutoToggle")
 ISWidgetAutoToggle.Type = "ISWidgetAutoToggle"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISWidgetAutoToggle:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetAutoToggle:createChildren() end
@@ -51,5 +55,8 @@ function ISWidgetAutoToggle:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param doSmall boolean?
+---@param target unknown?
+---@param onToggled umbrella.ISWidgetAutoToggle.OnToggled?
 ---@return ISWidgetAutoToggle
 function ISWidgetAutoToggle:new(x, y, width, height, doSmall, target, onToggled) end

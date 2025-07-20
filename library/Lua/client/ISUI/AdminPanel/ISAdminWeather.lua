@@ -3,9 +3,9 @@
 ---@class ISAdminWeather : ISDebugPanelBase
 ISAdminWeather = ISDebugPanelBase:derive("ISAdminWeather")
 ISAdminWeather.Type = "ISAdminWeather"
-ISAdminWeather.instance = nil
+ISAdminWeather.instance = nil ---@type ISAdminWeather?
 
----@return unknown
+---@return ISAdminWeather
 function ISAdminWeather.OnOpenPanel() end
 
 function ISAdminWeather:initialise() end

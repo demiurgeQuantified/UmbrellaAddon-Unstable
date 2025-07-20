@@ -2,10 +2,10 @@
 
 ---@class ISWearClothing : ISBaseTimedAction
 ---@field clothingAction boolean
----@field equipSound unknown
+---@field equipSound integer?
 ---@field fromHotbar boolean
----@field item unknown
----@field sound unknown
+---@field item InventoryItem
+---@field sound integer?
 ISWearClothing = ISBaseTimedAction:derive("ISWearClothing")
 ISWearClothing.Type = "ISWearClothing"
 
@@ -15,10 +15,11 @@ function ISWearClothing:complete() end
 ---@return number
 function ISWearClothing:getDuration() end
 
+---@param item InventoryItem
 ---@return boolean
 function ISWearClothing:isAlreadyEquipped(item) end
 
----@return boolean?
+---@return boolean
 function ISWearClothing:isValid() end
 
 function ISWearClothing:perform() end
@@ -31,6 +32,8 @@ function ISWearClothing:stopSound() end
 
 function ISWearClothing:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISWearClothing
 function ISWearClothing:new(character, item) end
 
@@ -60,3 +63,4 @@ WearClothingAnimations.Shirt = "Jacket"
 WearClothingAnimations.ShortSleeveShirt = "Jacket"
 WearClothingAnimations.TankTop = "Pullover"
 WearClothingAnimations.Tshirt = "Pullover"
+WearClothingAnimations[string] = nil ---@type string

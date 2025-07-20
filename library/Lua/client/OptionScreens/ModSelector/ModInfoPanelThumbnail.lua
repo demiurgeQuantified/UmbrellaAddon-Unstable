@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ModInfoPanel.Thumbnail : ISPanelJoypad
----@field index number
----@field modInfo unknown
+---@field index integer
+---@field modInfo ChooseGameInfo.Mod
 ---@field padX number
 ---@field padY number
----@field posterCount number
+---@field posterCount integer
 ---@field thumbnailHeight number
 ---@field thumbnailWidth number
 local __modInfoPanel_Thumbnail = ISPanelJoypad:derive("ModInfoPanelThumbnail")
@@ -13,11 +13,12 @@ __modInfoPanel_Thumbnail.Type = "ModInfoPanelThumbnail"
 
 ---@param x number
 ---@param y number
----@return number
+---@return integer
 function __modInfoPanel_Thumbnail:getIndexAt(x, y) end
 
 function __modInfoPanel_Thumbnail:render() end
 
+---@param modInfo ChooseGameInfo.Mod
 function __modInfoPanel_Thumbnail:setModInfo(modInfo) end
 
 ---@param x number

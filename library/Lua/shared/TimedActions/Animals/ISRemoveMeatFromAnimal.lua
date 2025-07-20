@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISRemoveMeatFromAnimal : ISBaseTimedAction
----@field body unknown?
----@field hook unknown
+---@field body IsoAnimal
+---@field hook IsoButcherHook
 ---@field luaHook ISButcherHookUI
----@field perkLevel unknown
----@field sound unknown
+---@field perkLevel integer
+---@field sound integer
 ---@field started boolean
 ISRemoveMeatFromAnimal = ISBaseTimedAction:derive("ISRemoveMeatFromAnimal")
 ISRemoveMeatFromAnimal.Type = "ISRemoveMeatFromAnimal"
@@ -36,10 +36,12 @@ function ISRemoveMeatFromAnimal:stopSound() end
 
 function ISRemoveMeatFromAnimal:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveMeatFromAnimal:waitToStart() end
 
----@param body unknown?
----@param luaHookUI ISButcherHookUI
+---@param character IsoPlayer
+---@param body IsoAnimal
+---@param hook IsoButcherHook
+---@param luaHook ISButcherHookUI
 ---@return ISRemoveMeatFromAnimal
-function ISRemoveMeatFromAnimal:new(character, body, hook, luaHookUI) end
+function ISRemoveMeatFromAnimal:new(character, body, hook, luaHook) end

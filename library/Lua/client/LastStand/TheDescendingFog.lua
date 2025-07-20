@@ -45,17 +45,20 @@ TheDescendingFog.hourOfDay = 7
 
 function TheDescendingFog.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function TheDescendingFog.AddPlayer(playerNum, playerObj) end
 
 function TheDescendingFog.EveryTenMinutes() end
 
 function TheDescendingFog.OnGameStart() end
 
+---@param _season ErosionSeason
 function TheDescendingFog.OnInitSeasons(_season) end
 
 function TheDescendingFog.OnInitWorld() end
 
+---@param p IsoPlayer
 function TheDescendingFog.RemovePlayer(p) end
 
 function TheDescendingFog.Render() end

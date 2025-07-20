@@ -2,7 +2,7 @@
 
 ---@class ISMiniMapOuter : ISPanelJoypad
 ---@field borderSize number
----@field bottomHeight unknown
+---@field bottomHeight number
 ---@field bottomPanel ISPanel
 ---@field button1 ISButton
 ---@field button2 ISButton
@@ -12,7 +12,7 @@
 ---@field button6 ISButton
 ---@field hideInventoryX unknown?
 ---@field inner ISMiniMapInner
----@field playerNum number
+---@field playerNum integer
 ---@field titleBar ISMiniMapTitleBar
 ---@field userPosition boolean
 ISMiniMapOuter = ISPanelJoypad:derive("ISMiniMapOuter")
@@ -32,10 +32,14 @@ function ISMiniMapOuter:onButton5() end
 
 function ISMiniMapOuter:onButton6() end
 
+---@param joypadData JoypadData
 function ISMiniMapOuter:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISMiniMapOuter:onJoypadDown(button, joypadData) end
 
+---@param joypadData JoypadData
 function ISMiniMapOuter:onLoseJoypadFocus(joypadData) end
 
 function ISMiniMapOuter:prerender() end
@@ -43,15 +47,18 @@ function ISMiniMapOuter:prerender() end
 function ISMiniMapOuter:render() end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISMiniMapOuter:RestoreLayout(name, layout) end
 
 function ISMiniMapOuter:restoreSettings() end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISMiniMapOuter:SaveLayout(name, layout) end
 
 function ISMiniMapOuter:saveSettings() end
 
+---@param visible boolean
 function ISMiniMapOuter:setAdornmentsVisible(visible) end
 
 function ISMiniMapOuter:setPosition() end
@@ -60,22 +67,23 @@ function ISMiniMapOuter:setPosition() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param playerNum number
+---@param playerNum integer
 ---@return ISMiniMapOuter
 function ISMiniMapOuter:new(x, y, width, height, playerNum) end
 
 ---@class ISMiniMapInner : ISUIElement
 ---@field dragging boolean
 ---@field dragMoved boolean
----@field dragStartCX unknown
----@field dragStartCY unknown
----@field dragStartWorldX unknown
----@field dragStartWorldY unknown
+---@field dragStartCX number
+---@field dragStartCY number
+---@field dragStartWorldX number
+---@field dragStartWorldY number
 ---@field dragStartX number
 ---@field dragStartY number
----@field dragStartZoomF unknown
----@field mapAPI unknown
----@field playerNum number
+---@field dragStartZoomF number
+---@field javaObject UIWorldMap
+---@field mapAPI UIWorldMapV1
+---@field playerNum integer
 ---@field rightMouseDown boolean
 ISMiniMapInner = ISUIElement:derive("ISMiniMapInner")
 ISMiniMapInner.Type = "ISMiniMapInner"
@@ -105,6 +113,7 @@ function ISMiniMapInner:onMouseUp(x, y) end
 ---@param y number
 function ISMiniMapInner:onMouseUpOutside(x, y) end
 
+---@param del number
 ---@return boolean
 function ISMiniMapInner:onMouseWheel(del) end
 
@@ -120,6 +129,8 @@ function ISMiniMapInner:onRightMouseUp(x, y) end
 ---@param y number
 function ISMiniMapInner:onRightMouseUpOutside(x, y) end
 
+---@param worldX number
+---@param worldY number
 function ISMiniMapInner:onTeleport(worldX, worldY) end
 
 function ISMiniMapInner:prerender() end
@@ -130,20 +141,20 @@ function ISMiniMapInner:prerenderHack() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param playerNum number
+---@param playerNum integer
 ---@return ISMiniMapInner
 function ISMiniMapInner:new(x, y, width, height, playerNum) end
 
 ---@class ISMiniMapTitleBar : ISPanel
----@field downX unknown
----@field downY unknown
+---@field downX number
+---@field downY number
 ---@field dragging boolean
 ---@field miniMap ISMiniMapOuter
----@field titlebarbkg unknown
+---@field titlebarbkg Texture
 ISMiniMapTitleBar = ISPanel:derive("ISMiniMapTitleBar")
 ISMiniMapTitleBar.Type = "ISMiniMapTitleBar"
 
----@return unknown
+---@return number
 function ISMiniMapTitleBar.TitleBarHeight() end
 
 ---@param x number
@@ -171,7 +182,7 @@ function ISMiniMapTitleBar:onMouseUpOutside(x, y) end
 
 function ISMiniMapTitleBar:prerender() end
 
----@return unknown
+---@return number
 function ISMiniMapTitleBar:titleBarHeight() end
 
 ---@param miniMap ISMiniMapOuter
@@ -181,10 +192,10 @@ function ISMiniMapTitleBar:new(miniMap) end
 ---@class ISMiniMap
 ISMiniMap = {}
 
----@param playerNum number
+---@param playerNum integer
 function ISMiniMap.FocusMiniMap(playerNum) end
 
----@param playerNum number
+---@param playerNum integer
 ---@return ISMiniMapOuter
 function ISMiniMap.InitPlayer(playerNum) end
 
@@ -194,8 +205,8 @@ function ISMiniMap.IsAllowed() end
 ---@return boolean?
 function ISMiniMap.NeedsLight() end
 
----@param playerNum number
+---@param playerNum integer
 function ISMiniMap.Recreate(playerNum) end
 
----@param playerNum number
+---@param playerNum integer
 function ISMiniMap.ToggleMiniMap(playerNum) end

@@ -4,32 +4,32 @@
 ---@field alpha number
 ---@field blinkStep number
 ---@field canSeeSky boolean?
----@field character unknown
----@field climateManager unknown
----@field climateMoon unknown
+---@field character IsoPlayer
+---@field climateManager ClimateManager
+---@field climateMoon ClimateMoon
 ---@field cloudIntensity number
 ---@field currentTip number
 ---@field currentZone string
----@field currentZones table
+---@field currentZones table<string, string>
 ---@field dawn number
 ---@field dusk number
----@field fadeElements table
+---@field fadeElements table<string, ISPanel>
 ---@field fadeTarget string
----@field fadeTargets table
+---@field fadeTargets string[]
 ---@field flashNumber number
 ---@field flashNumberMax number
 ---@field flashTipButton boolean
 ---@field fogIntensity number
 ---@field fogStep number
----@field gameTime unknown
+---@field gameTime GameTime
 ---@field infoBtn ISButton
----@field manager unknown
+---@field manager ISSearchManager
 ---@field moonBright number
 ---@field moonPhase string
 ---@field nextBtn ISButton
 ---@field noon number
----@field perkLevel unknown
----@field player unknown
+---@field perkLevel number
+---@field player integer
 ---@field prevBtn ISButton
 ---@field showBackground boolean
 ---@field showBorder boolean
@@ -40,8 +40,8 @@
 ---@field tooltip ISToolTip
 ---@field updateTick number
 ---@field updateTickMax number
----@field visionBonuses table
----@field zdImages table
+---@field visionBonuses ISPanel
+---@field zdImages table<string, ISPanel>
 ---@field zoneTitleString string
 ISZoneDisplay = ISPanel:derive("ISZoneDisplay")
 ISZoneDisplay.Type = "ISZoneDisplay"
@@ -183,6 +183,7 @@ ISZoneDisplay.fuzzyChanceTable = {
 ---@return boolean?
 function ISZoneDisplay:canSeeOutside() end
 
+---@param _object IsoObject
 ---@return boolean
 function ISZoneDisplay:canSeeThroughObject(_object) end
 
@@ -199,8 +200,10 @@ function ISZoneDisplay:getZoneTooltipText() end
 
 function ISZoneDisplay:initialise() end
 
+---@param imageTable table<string, Texture>
 ---@param width number
 ---@param height number
+---@param fade boolean?
 function ISZoneDisplay:initialiseImages(imageTable, width, height, fade) end
 
 ---@param _yearNum number
@@ -211,6 +214,8 @@ function ISZoneDisplay:showNextTip() end
 
 function ISZoneDisplay:showPrevTip() end
 
+---@param _tip umbrella.ISZoneDisplay.Tip
+---@param _force boolean?
 function ISZoneDisplay:showTip(_tip, _force) end
 
 function ISZoneDisplay:toggleTips() end
@@ -223,9 +228,15 @@ function ISZoneDisplay:updateLocation() end
 
 function ISZoneDisplay:updateMoonPhase() end
 
-function ISZoneDisplay:updateMoonPosition() end
+---@param _dawn number
+---@param _dusk number
+---@param _timeOfDay number
+function ISZoneDisplay:updateMoonPosition(_dawn, _dusk, _timeOfDay) end
 
-function ISZoneDisplay:updateSunPosition() end
+---@param _dawn number
+---@param _dusk number
+---@param _timeOfDay number
+function ISZoneDisplay:updateSunPosition(_dawn, _dusk, _timeOfDay) end
 
 function ISZoneDisplay:updateTips() end
 
@@ -234,3 +245,10 @@ function ISZoneDisplay:updateTooltip() end
 ---@param _parent ISSearchWindow
 ---@return ISZoneDisplay
 function ISZoneDisplay:new(_parent) end
+
+---@class umbrella.ISZoneDisplay.Tip
+---@field level integer
+---@field shown boolean
+---@field text string
+---@field title string
+umbrella_ISZoneDisplay_Tip = {}

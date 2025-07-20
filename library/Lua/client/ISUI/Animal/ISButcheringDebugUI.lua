@@ -3,9 +3,9 @@
 ---@class ISButcheringDebugUI : ISCollapsableWindow
 ---@field butcherBtn ISButton
 ---@field butcherText string?
----@field carcass unknown
----@field chr unknown
----@field playerNum unknown
+---@field carcass IsoDeadBody
+---@field chr IsoPlayer
+---@field playerNum integer
 ---@field refreshNeeded boolean
 ISButcheringDebugUI = ISCollapsableWindow:derive("ISButcheringDebugUI")
 ISButcheringDebugUI.Type = "ISButcheringDebugUI"
@@ -24,5 +24,7 @@ function ISButcheringDebugUI:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param carcass IsoDeadBody
+---@param player IsoPlayer
 ---@return ISButcheringDebugUI
 function ISButcheringDebugUI:new(x, y, width, height, carcass, player) end

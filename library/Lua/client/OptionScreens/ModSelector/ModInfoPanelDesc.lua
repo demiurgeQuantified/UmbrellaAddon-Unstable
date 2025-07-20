@@ -2,7 +2,7 @@
 
 ---@class ModInfoPanel.Desc : ISPanelJoypad
 ---@field richText ISRichTextPanel
----@field tex unknown
+---@field tex Texture
 local __modInfoPanel_Desc = ISPanelJoypad:derive("ModInfoPanelDesc")
 __modInfoPanel_Desc.Type = "ModInfoPanelDesc"
 
@@ -10,6 +10,7 @@ function __modInfoPanel_Desc:createChildren() end
 
 function __modInfoPanel_Desc:render() end
 
+---@param modInfo ChooseGameInfo.Mod
 function __modInfoPanel_Desc:setModInfo(modInfo) end
 
 ---@param x number

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISRemoveSheetAction : ISBaseTimedAction
----@field item unknown
+---@field item IsoCurtain | IsoDoor
 ISRemoveSheetAction = ISBaseTimedAction:derive("ISRemoveSheetAction")
 ISRemoveSheetAction.Type = "ISRemoveSheetAction"
 
@@ -22,9 +22,10 @@ function ISRemoveSheetAction:stop() end
 
 function ISRemoveSheetAction:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveSheetAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item IsoCurtain | IsoDoor
 ---@return ISRemoveSheetAction
 function ISRemoveSheetAction:new(character, item) end

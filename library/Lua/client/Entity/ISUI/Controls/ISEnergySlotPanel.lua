@@ -1,15 +1,23 @@
 ---@meta
 
 ---@class ISEnergySlotPanel : ISGroupBox
----@field entity unknown
+---@field entity GameEntity
 ---@field isVertical boolean
----@field player unknown
+---@field player IsoPlayer
 ---@field tableLayout unknown?
 ISEnergySlotPanel = ISGroupBox:derive("ISEnergySlotPanel")
 ISEnergySlotPanel.Type = "ISEnergySlotPanel"
 
+---@param _resourceEnergy ResourceEnergy
+---@param _styleEnergySlot string?
+---@param _styleIcon string?
+---@param _styleBar string?
 function ISEnergySlotPanel:addResource(_resourceEnergy, _styleEnergySlot, _styleIcon, _styleBar) end
 
+---@param _resources ArrayList<Resource>
+---@param _styleEnergySlot string?
+---@param _styleIcon string?
+---@param _styleBar string?
 function ISEnergySlotPanel:addResources(_resources, _styleEnergySlot, _styleIcon, _styleBar) end
 
 function ISEnergySlotPanel:createChildren() end
@@ -28,5 +36,8 @@ function ISEnergySlotPanel:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param entity GameEntity
+---@param _styleLabel string?
 ---@return ISEnergySlotPanel
 function ISEnergySlotPanel:new(x, y, width, height, player, entity, _styleLabel) end

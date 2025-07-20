@@ -3,22 +3,25 @@
 ---@class ISUI3DModel : ISUIElement
 ---@field animateWhilePaused boolean
 ---@field dragX number
+---@field javaObject UI3DModel
 ---@field mouseDown boolean
 ISUI3DModel = ISUIElement:derive("ISUI3DModel")
 ISUI3DModel.Type = "ISUI3DModel"
 
+---@param key string
 function ISUI3DModel:clearVariable(key) end
 
 function ISUI3DModel:clearVariables() end
 
----@return unknown
+---@return IsoGameCharacter
 function ISUI3DModel:getCharacter() end
 
----@return unknown
+---@return IsoDirections
 function ISUI3DModel:getDirection() end
 
 function ISUI3DModel:getState() end
 
+---@param key string
 ---@return unknown
 function ISUI3DModel:getVariable(key) end
 
@@ -50,14 +53,19 @@ function ISUI3DModel:onMouseUpOutside(x, y) end
 
 function ISUI3DModel:prerender() end
 
+---@param event string
 function ISUI3DModel:reportEvent(event) end
 
+---@param animate boolean
 function ISUI3DModel:setAnimateWhilePaused(animate) end
 
+---@param animSet string
 function ISUI3DModel:setAnimSetName(animSet) end
 
+---@param character IsoGameCharacter
 function ISUI3DModel:setCharacter(character) end
 
+---@param dir IsoDirections
 function ISUI3DModel:setDirection(dir) end
 
 ---@param doExt boolean
@@ -74,8 +82,11 @@ function ISUI3DModel:setOutfitName(name, female, zombie) end
 ---@param state string
 function ISUI3DModel:setState(state) end
 
+---@param survivorDesc SurvivorDesc
 function ISUI3DModel:setSurvivorDesc(survivorDesc) end
 
+---@param key string
+---@param value string
 function ISUI3DModel:setVariable(key, value) end
 
 ---@param xoffset number

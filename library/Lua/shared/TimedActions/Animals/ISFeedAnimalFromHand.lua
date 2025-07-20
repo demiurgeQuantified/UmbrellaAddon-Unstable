@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISFeedAnimalFromHand : ISBaseTimedAction
----@field animal unknown
----@field food unknown
----@field sound unknown
+---@field animal IsoAnimal
+---@field food InventoryItem
+---@field sound integer?
 ISFeedAnimalFromHand = ISBaseTimedAction:derive("ISFeedAnimalFromHand")
 ISFeedAnimalFromHand.Type = "ISFeedAnimalFromHand"
 
@@ -15,7 +15,7 @@ function ISFeedAnimalFromHand:forceStop() end
 ---@return number
 function ISFeedAnimalFromHand:getDuration() end
 
----@return unknown
+---@return boolean
 function ISFeedAnimalFromHand:isValid() end
 
 function ISFeedAnimalFromHand:perform() end
@@ -28,5 +28,7 @@ function ISFeedAnimalFromHand:stopSound() end
 
 function ISFeedAnimalFromHand:update() end
 
+---@param animal IsoAnimal
+---@param food InventoryItem
 ---@return ISFeedAnimalFromHand
 function ISFeedAnimalFromHand:new(character, animal, food) end

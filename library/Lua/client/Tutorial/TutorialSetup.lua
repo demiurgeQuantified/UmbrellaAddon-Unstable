@@ -12,4 +12,5 @@ function doTutorialInit() end
 
 function savePlayerInFile(player) end
 
+---@param id integer
 function doTutorialCreatePlayer(id) end

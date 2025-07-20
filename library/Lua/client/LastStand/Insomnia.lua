@@ -20,16 +20,19 @@ InsomniaChallenge.hourOfDay = 7
 
 function InsomniaChallenge.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function InsomniaChallenge.AddPlayer(playerNum, playerObj) end
 
 function InsomniaChallenge.Init() end
 
----@param playerNum number
+---@param playerNum integer
+---@param dir string
 function InsomniaChallenge.onBackButtonWheel(playerNum, dir) end
 
 function InsomniaChallenge.PreloadInit() end
 
+---@param playerObj IsoPlayer
 function InsomniaChallenge.RemovePlayer(playerObj) end
 
 function InsomniaChallenge.Render() end

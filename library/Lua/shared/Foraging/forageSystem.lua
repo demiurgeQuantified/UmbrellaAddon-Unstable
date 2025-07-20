@@ -1,21 +1,28 @@
 ---@meta
 
+---@alias umbrella.Foraging.TestFunction fun(character: IsoPlayer, skillDef: umbrella.Foraging.SkillDefinition, bonusEffect: string)
+
 ---@class forageSystem
 forageSystem = {
 	isInitialised = false,
+
+	---@type table<string, umbrella.Foraging.ItemDefinition>
 	itemDefs = {},
+
+	---@type table<string, umbrella.Foraging.CategoryDefinition>
 	catDefs = {},
+
+	---@type table<string, umbrella.Foraging.ZoneDefinition>
 	zoneDefs = {},
-	skillDefs = {
-		occupation = {},
-		trait = {},
-	},
+
+	---@type table<"occupation" | "trait", table<string, umbrella.Foraging.SkillDefinition>>
+	skillDefs = {},
 	forageDefinitions = {},
 	zoneDefinitions = {},
 	categoryDefinitions = {},
 	defaultDefinitions = {},
 	lootTable = {},
-	lootTableMonth = 1,
+	lootTableMonth = nil, ---@type integer?
 	processedEntries = {},
 	currentMonth = 0,
 	currentTime = "isDay",
@@ -800,30 +807,48 @@ forageSystem = {
 		},
 	},
 }
-forageSystem.itemBlacklist = nil
+forageSystem.itemBlacklist = nil ---@type ArrayList<string>?
+forageSystem.lootTables = {} ---@type table<string, table<integer, table<string, table<string, umbrella.Foraging.LootTable>>>>
+forageSystem.affinityCooldownMin = 5
+forageSystem.affinityCooldownMax = 15
+forageSystem.statisticsTable = nil ---@type table<"zones", table<string, table<integer, table<string, table<string, table<string, umbrella.Foraging.StatisticsTableItem>>>>>>?
 
+---@param _catDef table
+---@param _overwrite boolean?
 function forageSystem.addCatDef(_catDef, _overwrite) end
 
+---@param _itemType string
 ---@param _forageDef table
 function forageSystem.addForageDef(_itemType, _forageDef) end
 
----@return unknown?
+---@param _itemDef table
+---@return string?
 ---@return boolean?
 function forageSystem.addItemDef(_itemDef) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _items ArrayList<InventoryItem>
+---@param _discardItems boolean?
+---@return ArrayList<InventoryItem>
 function forageSystem.addOrDropItems(_character, _inventory, _items, _discardItems) end
 
+---@param _skillDef table
+---@param _overwrite boolean?
 function forageSystem.addSkillDef(_skillDef, _overwrite) end
 
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
+---@param _overwrite boolean?
 function forageSystem.addZoneDef(_zoneDef, _overwrite) end
 
 ---@return boolean
 function forageSystem.checkIfRecreateIcons() end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 ---@return boolean
 function forageSystem.checkMetaZone(_zoneData) end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 function forageSystem.checkRefillZone(_zoneData) end
 
 ---@param _month number
@@ -831,263 +856,413 @@ function forageSystem.clearLastMonthLootEntries(_month) end
 
 function forageSystem.clearTables() end
 
----@return table
+---@param _doItemStats boolean?
+function forageSystem.createDebugLog(_doItemStats) end
+
+---@param _zoneData umbrella.Foraging.ZoneData
+---@param _recreate boolean?
+---@param _count integer?
+---@return umbrella.Foraging.ZoneIconData[]
 function forageSystem.createForageIcons(_zoneData, _recreate, _count) end
 
 ---@param _x number
 ---@param _y number
----@return boolean | table
+---@param _defZone Zone?
+---@return umbrella.Foraging.ZoneData
 function forageSystem.createForageZone(_x, _y, _defZone) end
 
----@return table
+---@param _forageZone Zone
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
+---@return umbrella.Foraging.ZoneData
 function forageSystem.createZoneData(_forageZone, _zoneDef) end
 
 function forageSystem.debugRefreshAllZones() end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 function forageSystem.debugRefreshZone(_zoneData) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doClothingItemSpawn(_character, _inventory, _itemDef, _items) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doDeadTrapAnimalSpawn(_character, _inventory, _itemDef, _items) end
 
+---@param _character IsoPlayer
+---@param _amount number
 ---@return number
 function forageSystem.doEndurancePenalty(_character, _amount) end
 
+---@param _character IsoPlayer
+---@param _amount number
 ---@return number
 function forageSystem.doFatiguePenalty(_character, _amount) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doGenericItemSpawn(_character, _inventory, _itemDef, _items) end
 
+---@param _character IsoPlayer
+---@param _skillDef umbrella.Foraging.SkillDefinition
+---@param _bonusEffect string
 ---@return boolean
 function forageSystem.doGlassesCheck(_character, _skillDef, _bonusEffect) end
 
+---@param _doItemFile boolean?
 function forageSystem.doItemDefCheck(_doItemFile) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doJunkWeaponSpawn(_character, _inventory, _itemDef, _items) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doPoisonItemSpawn(_character, _inventory, _itemDef, _items) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doRandomAgeSpawn(_character, _inventory, _itemDef, _items) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doWildCropSpawn(_character, _inventory, _itemDef, _items) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doWildFoodSpawn(_character, _inventory, _itemDef, _items) end
 
----@return unknown
+---@param _character IsoPlayer
+---@param _inventory ItemContainer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _items ArrayList<InventoryItem>
+---@return ArrayList<InventoryItem>
 function forageSystem.doWorldAgeSpawn(_character, _inventory, _itemDef, _items) end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 function forageSystem.fillZone(_zoneData) end
 
 function forageSystem.generateLootTable() end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getAimVisionBonus(_character) end
 
----@return unknown
+---@param _character IsoPlayer
+---@return number
 function forageSystem.getBodyPenalty(_character) end
 
+---@param _character IsoPlayer
+---@param _catDef umbrella.Foraging.CategoryDefinition
 ---@return number
 function forageSystem.getCategoryBonus(_character, _catDef) end
 
----@return unknown
+---@param _character IsoPlayer
+---@return number
 function forageSystem.getClothingPenalty(_character) end
 
 ---@param _zoneName string
 ---@return unknown
 function forageSystem.getCurrentLootEntries(_zoneName) end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getDarknessEffectReduction(_character) end
 
 ---@param _x number
 ---@param _y number
----@return boolean
----@return boolean
+---@return umbrella.Foraging.ZoneDefinition | false
+---@return Zone | false
 function forageSystem.getDefinedZoneAt(_x, _y) end
 
+---@param _perkLevel integer
 ---@return number
 function forageSystem.getDifficultyPenalty(_perkLevel) end
 
----@return unknown
+---@param _character IsoPlayer
+---@return number
 function forageSystem.getExhaustionPenalty(_character) end
 
 ---@param _x number
 ---@param _y number
----@return (table | boolean)?
+---@return umbrella.Foraging.ZoneData?
 function forageSystem.getForageZoneAt(_x, _y) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@return number
 function forageSystem.getHungerBonus(_character, _itemDef) end
 
+---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@return number
 function forageSystem.getItemDefSize(_itemDef) end
 
+---@param _itemSize number
 ---@return number
 function forageSystem.getItemSizePenalty(_itemSize) end
 
+---@param _perkLevel integer
 ---@return number
 function forageSystem.getLevelVisionBonus(_perkLevel) end
 
+---@param _character IsoPlayer
+---@param _square IsoGridSquare
+---@param _doReduction boolean
 ---@return number
 function forageSystem.getLightLevelPenalty(_character, _square, _doReduction) end
+
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _month integer
+---@param _monthBonus integer
+---@param _monthMalus integer
+---@return number
+function forageSystem.getMonthBonus(_itemDef, _month, _monthBonus, _monthMalus) end
 
 ---@return number
 function forageSystem.getMonthMulti(_itemDef, _month) end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getMovementVisionPenalty(_character) end
 
----@return unknown
+---@param _character IsoPlayer
+---@return number
 function forageSystem.getPanicPenalty(_character) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@return number
 function forageSystem.getPerkLevel(_character, _itemDef) end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getProfessionVisionBonus(_character) end
 
----@return number
----@return number
+---@param _x1 integer
+---@param _x2 integer
+---@param _y1 integer
+---@param _y2 integer
+---@return integer
+---@return integer
 function forageSystem.getRandomCoord(_x1, _x2, _y1, _y2) end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 ---@return number
 function forageSystem.getRefillBonus(_zoneData) end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getSneakVisionBonus(_character) end
 
 ---@return string
 function forageSystem.getTimeOfDay() end
 
+---@param _def umbrella.Foraging.ItemDefinition | umbrella.Foraging.CategoryDefinition
 ---@param _isDay boolean?
----@return number?
+---@return number
 function forageSystem.getTimeOfDayBonus(_def, _isDay) end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getTraitVisionBonus(_character) end
 
+---@param _def umbrella.Foraging.ItemDefinition | umbrella.Foraging.CategoryDefinition
 ---@param _isRaining boolean?
 ---@param _isSnowing boolean?
+---@param _hasRained boolean?
 ---@return number
 function forageSystem.getWeatherBonus(_def, _isRaining, _isSnowing, _hasRained) end
 
+---@param _character IsoPlayer
 ---@return number
 function forageSystem.getWeatherEffectReduction(_character) end
 
 ---@return number
 function forageSystem.getWeatherMulti(_def, _rainAmount, _puddleAmount, _snowAmount) end
 
+---@param _character IsoPlayer
+---@param _square IsoGridSquare
 ---@return number
 function forageSystem.getWeatherPenalty(_character, _square) end
 
 ---@return string
 function forageSystem.getWeatherType() end
 
----@return unknown
+---@return integer
 function forageSystem.getWorldAge() end
 
+---@param _forageZone Zone
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@param _x number
 ---@param _y number
----@return table?
+---@return umbrella.Foraging.ZoneData?
 function forageSystem.getZoneData(_forageZone, _zoneDef, _x, _y) end
 
----@return unknown
+---@param _definedZone Zone
+---@return umbrella.Foraging.ZoneDefinition
 function forageSystem.getZoneDef(_definedZone) end
 
 ---@param _zoneName string
----@return unknown
+---@return umbrella.Foraging.ZoneDefinition
 function forageSystem.getZoneDefByType(_zoneName) end
 
----@return number
----@return number
+---@param _zoneData umbrella.Foraging.ZoneData
+---@return integer
+---@return integer
 function forageSystem.getZoneRandomCoord(_zoneData) end
 
+---@param _zoneData umbrella.Foraging.ZoneData
+---@param _minDist number
 ---@param _x number
 ---@param _y number
 ---@return number
 ---@return number
 function forageSystem.getZoneRandomCoordNearPoint(_zoneData, _minDist, _x, _y) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _amount number
 function forageSystem.giveItemXP(_character, _itemDef, _amount) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@return boolean
 function forageSystem.hasNeededPerks(_character, _itemDef, _zoneDef) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@return boolean
 function forageSystem.hasNeededRecipes(_character, _itemDef) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@return boolean
 function forageSystem.hasNeededTraits(_character, _itemDef) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@return boolean
 function forageSystem.hasRequiredItems(_character, _itemDef) end
 
----@return unknown
+---@param _def table
+---@param _defaultDef table
+---@return table
 function forageSystem.importDef(_def, _defaultDef) end
 
 function forageSystem.init() end
 
 function forageSystem.integrityCheck() end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@return boolean
 function forageSystem.isForageable(_character, _itemDef, _zoneDef) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@return boolean
 function forageSystem.isItemExist(_character, _itemDef, _zoneDef) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@return boolean
 function forageSystem.isItemInZone(_character, _itemDef, _zoneDef) end
 
+---@param _character IsoPlayer
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@return boolean
 function forageSystem.isItemScriptValid(_character, _itemDef, _zoneDef) end
 
+---@param _itemType string
 ---@return boolean
 function forageSystem.isItemTypeExist(_itemType) end
 
+---@param _square IsoGridSquare
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _catDef umbrella.Foraging.CategoryDefinition
 ---@return boolean
 function forageSystem.isValidFloor(_square, _itemDef, _catDef) end
 
----@return unknown
-function forageSystem.isValidMonth(_def, _month) end
+---@param _ unknown?
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _zoneDef umbrella.Foraging.ZoneDefinition
+---@param _month integer
+---@return boolean
+function forageSystem.isValidMonth(_, _itemDef, _zoneDef, _month) end
 
 ---@return unknown
 function forageSystem.isValidMonthInternal(_character, _itemDef, _zoneDef, _month) end
 
+---@param _character IsoPlayer
+---@param _skillDef umbrella.Foraging.SkillDefinition
+---@param _bonusEffect string
 ---@return boolean
 function forageSystem.isValidSkillDefEffect(_character, _skillDef, _bonusEffect) end
 
+---@param _square IsoGridSquare
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _catDef umbrella.Foraging.CategoryDefinition
 ---@return boolean
 function forageSystem.isValidSquare(_square, _itemDef, _catDef) end
 
+---@param _character IsoPlayer
+---@param _itemType string
+---@param _amount number
 function forageSystem.itemFound(_character, _itemType, _amount) end
 
 function forageSystem.lootTableUpdate() end
 
+---@param _itemDef table
 function forageSystem.modifyItemDef(_itemDef) end
 
----@param _zoneName string
----@return unknown?
----@return unknown?
-function forageSystem.pickRandomItemType(_zoneName, _rolledCategory) end
+---@param _lootTable umbrella.Foraging.LootTable
+---@return string?
+---@return string?
+function forageSystem.pickRandomItemType(_lootTable) end
 
+---@param _catDefs umbrella.Foraging.CategoryDefinition[]?
 function forageSystem.populateCatDefs(_catDefs) end
 
+---@param _itemDefs umbrella.Foraging.ItemDefinition[]
 function forageSystem.populateItemDefs(_itemDefs) end
 
 function forageSystem.populateMixedZoneCategories() end
 
 function forageSystem.populateScavengeDefs() end
 
+---@param _skillDefs table?
 function forageSystem.populateSkillDefs(_skillDefs) end
 
+---@param _zoneDefs umbrella.Foraging.ZoneDefinition[]?
 function forageSystem.populateZoneDefs(_zoneDefs) end
 
 ---@param _zoneName string
@@ -1097,26 +1272,37 @@ function forageSystem.processEntries(_zoneName, _lootTable) end
 
 function forageSystem.recreateIcons() end
 
+---@param _itemDef table
 function forageSystem.removeItemDef(_itemDef) end
 
 function forageSystem.setOptionValues() end
 
+---@param _itemDef umbrella.Foraging.ItemDefinition
+---@param _scriptItem Item
 function forageSystem.setScriptItemFocusCategories(_itemDef, _scriptItem) end
 
+---@param _createDebugLog boolean?
+---@param _doItemStats boolean?
+function forageSystem.statisticsDebug(_createDebugLog, _doItemStats) end
+
+---@param _zoneData umbrella.Foraging.ZoneData
 ---@param _number number
----@return unknown
+---@return integer
 function forageSystem.takeItem(_zoneData, _number) end
 
 function forageSystem.updateTimeValues() end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 function forageSystem.updateZone(_zoneData) end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 ---@param _x number
 ---@param _y number
 ---@param _z number
 ---@return boolean
 function forageSystem.zoneContains(_zoneData, _x, _y, _z) end
 
+---@param _zoneData umbrella.Foraging.ZoneData
 ---@param _x number
 ---@param _y number
 ---@param _z number
@@ -1124,3 +1310,111 @@ function forageSystem.zoneContains(_zoneData, _x, _y, _z) end
 ---@param _h number
 ---@return boolean
 function forageSystem.zoneIntersects(_zoneData, _x, _y, _z, _w, _h) end
+
+---@class umbrella.Foraging.ItemDefinition
+---@field altWorldTexture (string | string[] | Texture)?
+---@field bonusMonths integer[]
+---@field canBeAboveFloor boolean
+---@field canBeOnTreeSquare boolean
+---@field categories string[]
+---@field dayChance number
+---@field doIsoMarkerObject boolean
+---@field doIsoMarkerSprite boolean
+---@field forceOnWater boolean
+---@field forceOutside boolean
+---@field hasRainedChance number
+---@field isItemOverrideSize boolean
+---@field isMover boolean
+---@field isOnWater boolean
+---@field itemSizeModifier number
+---@field itemTags string[]
+---@field malusMonths integer[]
+---@field maxCount integer
+---@field minCount integer
+---@field months integer[]
+---@field nightChance number
+---@field perks string[]
+---@field poisonChance number
+---@field poisonDetectionLevel number
+---@field poisonPowerMax number
+---@field poisonPowerMin number
+---@field rainChance number
+---@field recipes string[]
+---@field skill number
+---@field snowChance number
+---@field spawnFuncs umbrella.Foraging.SpawnFunction[]
+---@field traits string[]
+---@field type string
+---@field xp number
+---@field zones table<string, integer>
+umbrella_Foraging_ItemDefinition = {}
+
+---@class umbrella.Foraging.LootTable
+---@field categories table<string, umbrella.Foraging.LootTableCategory>
+---@field categoriesIndexed umbrella.Foraging.LootTableIndexedCategoryEntry[]
+---@field totalChance number
+umbrella_Foraging_LootTable = {}
+
+---@class umbrella.Foraging.LootTableCategory
+---@field category string
+---@field chance number
+---@field items umbrella.Foraging.LootTableItem[]
+---@field totalChance number
+umbrella_Foraging_LootTableCategory = {}
+
+---@class umbrella.Foraging.LootTableIndexedCategoryEntry
+---@field catName string
+---@field chance number
+---@field items umbrella.Foraging.LootTableItem[]
+---@field totalChance number
+umbrella_Foraging_LootTableIndexedCategoryEntry = {}
+
+---@class umbrella.Foraging.LootTableItem
+---@field chance number
+---@field itemType string
+umbrella_Foraging_LootTableItem = {}
+
+---@class umbrella.Foraging.SkillDefinition
+---@field darknessEffect number
+---@field name string
+---@field specialisations table<string, integer>
+---@field testFuncs umbrella.Foraging.TestFunction[]?
+---@field type "occupation" | "trait"
+---@field visionBonus number
+---@field weatherEffect number
+umbrella_Foraging_SkillDefinition = {}
+
+---@class umbrella.Foraging.StatisticsTableItem
+---@field chance number
+---@field items table<umbrella.Foraging.LootTableItem, integer>
+umbrella_Foraging_StatisticsTableItem = {}
+
+---@class umbrella.Foraging.ZoneData
+---@field bounds umbrella.Foraging.ZoneDataBounds
+---@field forageIcons table<string, umbrella.Foraging.ZoneIconData>
+---@field id string
+---@field itemsLeft number
+---@field itemsTotal number
+---@field lastAction integer?
+---@field metaZone Zone?
+---@field name string
+---@field size number
+---@field x number
+---@field y number
+---@field z number
+umbrella_Foraging_ZoneData = {}
+
+---@class umbrella.Foraging.ZoneDataBounds
+---@field x1 number
+---@field x2 number
+---@field y1 number
+---@field y2 number
+umbrella_Foraging_ZoneDataBounds = {}
+
+---@class umbrella.Foraging.ZoneDefinition
+---@field abundanceSetting string
+---@field densityMax number
+---@field densityMin number
+---@field name string
+---@field refillPercent number
+umbrella_Foraging_ZoneDefinition = {}

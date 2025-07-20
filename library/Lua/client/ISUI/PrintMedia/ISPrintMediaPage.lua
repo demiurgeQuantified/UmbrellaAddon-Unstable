@@ -3,10 +3,10 @@
 ---@class ISPrintMediaPage : ISCollapsableWindowJoypad
 ---@field centerText ISPrintMediaRichText
 ---@field content ISPanel
----@field index unknown
----@field item unknown?
----@field player unknown?
----@field title unknown
+---@field index string
+---@field item InventoryItem?
+---@field player IsoPlayer?
+---@field title string?
 ---@field visibleFunction function
 ---@field visibleTarget ISPrintMediaPage
 ISPrintMediaPage = ISCollapsableWindowJoypad:derive("ISPrintMediaPage")
@@ -18,11 +18,14 @@ function ISPrintMediaPage:createChildren() end
 
 function ISPrintMediaPage:initialise() end
 
+---@param key integer
 ---@return boolean
 function ISPrintMediaPage:isKeyConsumed(key) end
 
+---@param joypadData JoypadData
 function ISPrintMediaPage:onGainJoypadFocus(joypadData) end
 
+---@param key integer
 function ISPrintMediaPage:onKeyRelease(key) end
 
 function ISPrintMediaPage:onToggleVisible() end
@@ -33,8 +36,9 @@ function ISPrintMediaPage:render() end
 
 ---@param x number
 ---@param y number
----@param player unknown?
----@param item unknown?
+---@param index string
+---@param player IsoPlayer?
+---@param item InventoryItem?
 ---@return ISPrintMediaPage
 function ISPrintMediaPage:new(x, y, index, player, item) end
 
@@ -47,14 +51,20 @@ ISPrintMediaRichText = ISPrintMediaTextPanel:derive("ISPrintMediaRichText")
 ISPrintMediaRichText.Type = "ISPrintMediaRichText"
 ISPrintMediaRichText.doRightJoystickScrolling = ISPanelJoypad.doRightJoystickScrolling
 
+---@param joypadData JoypadData
 function ISPrintMediaRichText:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISPrintMediaRichText:onJoypadDirLeft(joypadData) end
 
+---@param joypadData JoypadData
 function ISPrintMediaRichText:onJoypadDirRight(joypadData) end
 
+---@param joypadData JoypadData
 function ISPrintMediaRichText:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISPrintMediaRichText:onJoypadDown(button, joypadData) end
 
 ---@param del number

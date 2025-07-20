@@ -1,29 +1,29 @@
 ---@meta
 
 ---@class ISUIWriteJournal : ISCollapsableWindowJoypad
----@field character unknown
----@field currentPage number
+---@field character IsoPlayer
+---@field currentPage integer
 ---@field defaultEntryText string
 ---@field deleteButton ISButton
----@field editable unknown
+---@field editable boolean
 ---@field entry ISTextEntryBox
----@field fontHgt unknown
+---@field fontHgt number
 ---@field isUnlocked boolean
----@field joypadButtons unknown
----@field joypadIndex unknown
----@field lineNumber number
+---@field joypadButtons ISButton[]
+---@field joypadIndex integer
+---@field lineNumber integer
 ---@field lockButton ISButton
 ---@field locked boolean
----@field maxTextLength number
+---@field maxTextLength integer
 ---@field name unknown?
 ---@field newPage table
 ---@field nextPage ISButton
 ---@field no ISButton
----@field notebook unknown
----@field numberOfPages number
----@field onclick unknown
+---@field notebook Literature
+---@field numberOfPages integer
+---@field onclick umbrella.ISButton.OnClick?
 ---@field pageLabel ISLabel
----@field playerNum unknown
+---@field playerNum integer
 ---@field previousPage ISButton
 ---@field target unknown?
 ---@field title ISTextEntryBox | string
@@ -37,20 +37,27 @@ function ISUIWriteJournal:destroy() end
 
 function ISUIWriteJournal:initialise() end
 
+---@param button ISButton
 function ISUIWriteJournal:onClick(button) end
 
+---@param joypadData JoypadData
 function ISUIWriteJournal:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISUIWriteJournal:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISUIWriteJournal:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISUIWriteJournal:onJoypadDown(button, joypadData) end
 
 function ISUIWriteJournal:prerender() end
 
 function ISUIWriteJournal:render() end
 
+---@param joypadData JoypadData
 function ISUIWriteJournal:setJoypadButtons(joypadData) end
 
 ---@param x number
@@ -58,8 +65,13 @@ function ISUIWriteJournal:setJoypadButtons(joypadData) end
 ---@param width number
 ---@param height number
 ---@param target unknown?
+---@param onclick umbrella.ISButton.OnClick?
+---@param character IsoPlayer
+---@param notebook Literature
+---@param defaultEntryText string?
 ---@param title string
----@param lineNumber number
+---@param lineNumber integer
+---@param editable boolean
 ---@param numberOfPages number
 ---@return ISUIWriteJournal
 function ISUIWriteJournal:new(

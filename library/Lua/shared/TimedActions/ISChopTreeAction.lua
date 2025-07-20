@@ -1,13 +1,15 @@
 ---@meta
 
 ---@class ISChopTreeAction : ISBaseTimedAction
----@field axe unknown
+---@field axe InventoryItem?
 ---@field forceProgressBar boolean
 ---@field spriteFrame number
----@field tree unknown
+---@field tree IsoTree
 ISChopTreeAction = ISBaseTimedAction:derive("ISChopTreeAction")
 ISChopTreeAction.Type = "ISChopTreeAction"
 
+---@param event string
+---@param parameter string
 function ISChopTreeAction:animEvent(event, parameter) end
 
 ---@return boolean
@@ -31,9 +33,10 @@ function ISChopTreeAction:update() end
 
 function ISChopTreeAction:useEndurance() end
 
----@return unknown
+---@return boolean
 function ISChopTreeAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param tree IsoTree
 ---@return ISChopTreeAction
 function ISChopTreeAction:new(character, tree) end

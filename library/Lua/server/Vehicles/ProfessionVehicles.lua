@@ -2,7 +2,7 @@
 
 ---@class ProfessionVehicles
 ProfessionVehicles = {}
-ProfessionVehicles.OnCreateRegion = nil ---@type table | function
+ProfessionVehicles.OnCreateRegion = nil ---@type fun(region: string, square: IsoGridSquare, direction: IsoDirections)
 ProfessionVehicles.Louisville = {
 	"Base.StepVan_LouisvilleMotorShop",
 	"Base.StepVan_Jorgensen",
@@ -371,5 +371,8 @@ ProfessionVehicles.UniqueVehicles = {
 	"Base.VanSeats_Trippy",
 	"Base.VanSeats_Valkyrie",
 }
+ProfessionVehicles.PickUpTruck = nil ---@type unknown
+ProfessionVehicles.PickUpVan = nil ---@type unknown
 
+---@param vehicle BaseVehicle
 function ProfessionVehicles.CheckSwap(vehicle) end

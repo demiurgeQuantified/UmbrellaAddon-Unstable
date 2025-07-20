@@ -409,3 +409,23 @@ AnimalAvatarDefinition.raccoonsow = {
 	trailerXoffset = 0,
 	trailerYoffset = -0.2,
 }
+
+---@class umbrella.AnimalAvatarDefinition
+---@field animalPositionSize number?
+---@field animalPositionX number?
+---@field animalPositionY number?
+---@field animalPositionZ number?
+---@field avatarDir IsoDirections
+---@field avatarWidth integer
+---@field butcherHookXoffset number?
+---@field butcherHookYoffset number?
+---@field butcherHookZoom integer?
+---@field hook boolean?
+---@field trailerDir IsoDirections
+---@field trailerXoffset number
+---@field trailerYoffset number
+---@field trailerZoom number
+---@field xoffset number
+---@field yoffset number
+---@field zoom integer
+umbrella_AnimalAvatarDefinition = {}

@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISExtAnimListDebugUI : ISCollapsableWindow
----@field character unknown
----@field chr unknown
+---@field character IsoPlayer
+---@field chr IsoPlayer
 ---@field closeBtn ISButton
 ---@field combo ISComboBox
----@field extList table
----@field playerNum unknown
+---@field extList string[]
+---@field playerNum integer
 ---@field start ISButton
 ---@field title string
 ISExtAnimListDebugUI = ISCollapsableWindow:derive("ISExtAnimListDebugUI")
@@ -26,5 +26,6 @@ function ISExtAnimListDebugUI:update() end
 
 ---@param x number
 ---@param y number
+---@param character IsoPlayer
 ---@return ISExtAnimListDebugUI
 function ISExtAnimListDebugUI:new(x, y, character) end

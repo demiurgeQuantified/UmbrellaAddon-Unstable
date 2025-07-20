@@ -10,7 +10,7 @@
 ---@field canvasY number
 ---@field currentTile unknown?
 ---@field dayStamp number
----@field greyCol table
+---@field greyCol umbrella.RGBA
 ---@field hotKeyPanels table
 ---@field hourStamp number
 ---@field isJoypadWindow boolean
@@ -19,8 +19,8 @@
 ---@field overrideBPrompt boolean
 ---@field palpha number
 ---@field palphaUp boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field poi table
 ---@field regionMode number
 ---@field richtext unknown?
@@ -52,6 +52,7 @@ function IsoRegionDebug:createChildren() end
 
 function IsoRegionDebug:initialise() end
 
+---@param _btn ISButton
 function IsoRegionDebug:onButton(_btn) end
 
 ---@param x number
@@ -73,5 +74,6 @@ function IsoRegionDebug:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return IsoRegionDebug
 function IsoRegionDebug:new(x, y, width, height, player) end

@@ -2,21 +2,23 @@
 
 ---@class ISEnergySlot : ISPanel
 ---@field enableIcon boolean
----@field energy unknown
----@field energyBar unknown?
----@field energyBorderColorOrig unknown
+---@field energy Energy
+---@field energyBar ISEnergyBar
+---@field energyBorderColorOrig umbrella.RGBA
 ---@field equalSpacing boolean
----@field icon unknown?
+---@field icon ISImage?
 ---@field isVertical boolean
 ---@field margin number
 ---@field minimumBarSize number
----@field player unknown
----@field resource unknown
----@field styleBar unknown
----@field styleIcon unknown
+---@field player IsoPlayer
+---@field resource ResourceEnergy
+---@field styleBar string?
+---@field styleIcon string?
 ISEnergySlot = ISPanel:derive("ISEnergySlot")
 ISEnergySlot.Type = "ISEnergySlot"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISEnergySlot:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISEnergySlot:createChildren() end
@@ -27,6 +29,7 @@ function ISEnergySlot:prerender() end
 
 function ISEnergySlot:render() end
 
+---@param _resource ResourceEnergy
 function ISEnergySlot:setResource(_resource) end
 
 function ISEnergySlot:update() end
@@ -35,5 +38,9 @@ function ISEnergySlot:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param resource ResourceEnergy
+---@param styleIcon string?
+---@param styleBar string?
 ---@return ISEnergySlot
 function ISEnergySlot:new(x, y, width, height, player, resource, styleIcon, styleBar) end

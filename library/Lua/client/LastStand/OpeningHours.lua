@@ -445,12 +445,18 @@ OpeningHours.dayToRespawn = 3
 
 function OpeningHours.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function OpeningHours.AddPlayer(playerNum, playerObj) end
 
 ---@param regionName string
+---@param regionSpawn umbrella.OpeningHours.Spawn
+---@param regionSpawnX integer
+---@param regionSpawnY integer
+---@param regionSpawnZ integer
 function OpeningHours.CheckHordeSpawn(regionName, regionSpawn, regionSpawnX, regionSpawnY, regionSpawnZ) end
 
+---@param area string
 function OpeningHours.CheckMetalGates(area) end
 
 function OpeningHours.EveryDays() end
@@ -463,9 +469,17 @@ function OpeningHours.OnInitWorld() end
 
 function OpeningHours.OnPlayerUpdate() end
 
+---@param p IsoPlayer
 function OpeningHours.RemovePlayer(p) end
 
 function OpeningHours.Render() end
 
 ---@param area string
 function OpeningHours.ResetMetalGates(area) end
+
+---@class umbrella.OpeningHours.Spawn
+---@field x integer
+---@field x2 integer
+---@field y integer
+---@field y2 integer
+umbrella_OpeningHours_Spawn = {}

@@ -21,5 +21,10 @@ function ISCraftAnimAction:stop() end
 
 function ISCraftAnimAction:update() end
 
+---@param character IsoPlayer
+---@param entity IsoObject
+---@param component Component
+---@param craftProcessor CraftLogic
+---@param recipe CraftRecipe
 ---@return ISCraftAnimAction
 function ISCraftAnimAction:new(character, entity, component, craftProcessor, recipe) end

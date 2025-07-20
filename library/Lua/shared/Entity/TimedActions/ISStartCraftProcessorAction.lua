@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISStartCraftProcessorAction : ISBaseTimedAction
----@field component unknown
----@field craftProcessor unknown
----@field entity unknown
+---@field component Component
+---@field craftProcessor CraftLogic
+---@field entity IsoObject
 ISStartCraftProcessorAction = ISBaseTimedAction:derive("ISStartCraftProcessorAction")
 ISStartCraftProcessorAction.Type = "ISStartCraftProcessorAction"
 
@@ -21,5 +21,9 @@ function ISStartCraftProcessorAction:stop() end
 
 function ISStartCraftProcessorAction:update() end
 
+---@param character IsoPlayer
+---@param entity IsoObject
+---@param component Component
+---@param craftProcessor CraftLogic
 ---@return ISStartCraftProcessorAction
 function ISStartCraftProcessorAction:new(character, entity, component, craftProcessor) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISMoveablesIconToolTip : ISPanel
----@field fontheight unknown
+---@field fontheight number
 ---@field marginOffset number
 ---@field subText string
 ISMoveablesIconToolTip = ISPanel:derive("ISMoveablesIconToolTip")
@@ -19,5 +19,6 @@ function ISMoveablesIconToolTip:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param marginOffset number?
 ---@return ISMoveablesIconToolTip
 function ISMoveablesIconToolTip:new(x, y, width, height, marginOffset) end

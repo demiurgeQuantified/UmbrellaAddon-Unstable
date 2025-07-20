@@ -3,9 +3,9 @@
 ---@class ClimateControlDebug : ISDebugPanelBase
 ClimateControlDebug = ISDebugPanelBase:derive("ClimateControlDebug")
 ClimateControlDebug.Type = "ClimateControlDebug"
-ClimateControlDebug.instance = nil
+ClimateControlDebug.instance = nil ---@type ClimateControlDebug?
 
----@return unknown
+---@return ClimateControlDebug
 function ClimateControlDebug.OnOpenPanel() end
 
 function ClimateControlDebug:initialise() end

@@ -3,15 +3,16 @@
 ---@class ISEntityViewWindow : ISCollapsableWindow
 ---@field entityPanel ISEntityViewPanel
 ---@field entityPanelY number
----@field greyCol table
----@field player unknown
----@field playerNum unknown
+---@field greyCol umbrella.RGBA
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field title string
 ISEntityViewWindow = ISCollapsableWindow:derive("ISEntityViewWindow")
 ISEntityViewWindow.Type = "ISEntityViewWindow"
 ISEntityViewWindow.instance = nil ---@type ISEntityViewWindow?
-ISEntityViewWindow.coords = nil ---@type boolean | table
+ISEntityViewWindow.coords = nil ---@type number[] | false
 
+---@param _entity GameEntity
 ---@return ISEntityViewWindow?
 function ISEntityViewWindow.OnOpenPanel(_entity) end
 
@@ -27,6 +28,7 @@ function ISEntityViewWindow:prerender() end
 
 function ISEntityViewWindow:render() end
 
+---@param _entity GameEntity
 function ISEntityViewWindow:setEntity(_entity) end
 
 ---@param _title string

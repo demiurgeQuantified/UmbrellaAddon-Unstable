@@ -1,14 +1,16 @@
 ---@meta
 
 ---@class ISUnloadBulletsFromFirearm : ISBaseTimedAction
----@field ammoCountStart unknown
----@field gun unknown
+---@field ammoCountStart integer?
+---@field gun HandWeapon
 ---@field playedEjectAmmoStartSound boolean
 ---@field unloadFinished boolean
 ---@field useProgressBar boolean
 ISUnloadBulletsFromFirearm = ISBaseTimedAction:derive("ISUnloadBulletsFromFirearm")
 ISUnloadBulletsFromFirearm.Type = "ISUnloadBulletsFromFirearm"
 
+---@param event string
+---@param parameter string
 function ISUnloadBulletsFromFirearm:animEvent(event, parameter) end
 
 ---@return boolean
@@ -32,5 +34,7 @@ function ISUnloadBulletsFromFirearm:stop() end
 
 function ISUnloadBulletsFromFirearm:update() end
 
+---@param character IsoPlayer
+---@param gun HandWeapon
 ---@return ISUnloadBulletsFromFirearm
 function ISUnloadBulletsFromFirearm:new(character, gun) end

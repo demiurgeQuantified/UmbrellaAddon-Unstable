@@ -3,33 +3,39 @@
 ---@class ISButcherHookUI : ISCollapsableWindowJoypad
 ---@field actionText string?
 ---@field addCorpseBtn ISButton
----@field animal3D unknown?
+---@field animal3D IsoAnimal?
 ---@field animalPanel ISPanel
+---@field animalSize number
 ---@field avatarHeight number
 ---@field avatarPanel ISCharacterScreenAvatar?
----@field avatarWidth unknown
+---@field avatarWidth number
 ---@field avatarX number
 ---@field avatarY number
 ---@field biggestLabelWidth number
 ---@field biggestWidth number
+---@field blood number?
 ---@field bloodInfoLabel ISLabel
 ---@field bloodLabel ISLabel
----@field chr unknown
+---@field chr IsoPlayer
 ---@field configJoypadLater boolean
 ---@field corpse unknown?
 ---@field doingAction boolean
+---@field head boolean?
 ---@field headInfoLabel ISLabel
 ---@field headLabel ISLabel
----@field hook unknown
----@field knife unknown
+---@field hook IsoButcherHook
+---@field knife InventoryItem?
+---@field leather boolean?
 ---@field leatherInfoLabel ISLabel
 ---@field leatherLabel ISLabel
+---@field meat boolean?
 ---@field meatInfoLabel ISLabel
 ---@field meatLabel ISLabel
 ---@field noAnimalPanel ISPanel
+---@field originalAnimalPanelHeight number
 ---@field originalHeight unknown
 ---@field originalWidth unknown
----@field playerNum unknown
+---@field playerNum integer
 ---@field progress number
 ---@field progressBar ISProgressBar
 ---@field removeBloodBtn ISButton
@@ -39,14 +45,18 @@
 ---@field removeMeatBtn ISButton
 ISButcherHookUI = ISCollapsableWindowJoypad:derive("ISButcherHookUI")
 ISButcherHookUI.Type = "ISButcherHookUI"
-ISButcherHookUI.ui = {}
+ISButcherHookUI.ui = nil ---@type ISButcherHookUI?
 
 function ISButcherHookUI.onHookReceivedNetUpdate(self) end
 
+---@param hook IsoButcherHook
+---@param animal IsoAnimal
 function ISButcherHookUI.onReattachAnimal(hook, animal) end
 
+---@param self ISButcherHookUI
 function ISButcherHookUI.onStopBleedingAnimal(self) end
 
+---@param corpse IsoDeadBody | InventoryItem
 function ISButcherHookUI:addCorpseAction(corpse) end
 
 function ISButcherHookUI:checkAnimalOnHook() end
@@ -59,37 +69,43 @@ function ISButcherHookUI:configJoypad() end
 
 function ISButcherHookUI:create() end
 
----@return unknown
+---@param item IsoAnimal | IsoDeadBody | InventoryItem
+---@return (IsoAnimal | IsoDeadBody)?
 function ISButcherHookUI:createCorpse(item) end
 
 ---@return unknown?
 function ISButcherHookUI:getAnimalCorpseItemTexture(itemOrCorpse) end
 
----@return unknown
+---@return ArrayList<InventoryItem>
 function ISButcherHookUI:getBuckets() end
 
 function ISButcherHookUI:initialise() end
 
+---@param corpse IsoDeadBody | InventoryItem
 ---@return boolean
 function ISButcherHookUI:isCorpseValid(corpse) end
 
----@return table
+---@return (IsoDeadBody | InventoryItem)[]
 function ISButcherHookUI:lookForCorpse() end
 
----@return unknown?
+---@param corpse (IsoAnimal | IsoDeadBody)?
+---@return (IsoAnimal | IsoDeadBody)?
 function ISButcherHookUI:onAddedCorpse(corpse) end
 
 function ISButcherHookUI:onBleedAnimal() end
 
 function ISButcherHookUI:onClickAddCorpse() end
 
----@return unknown?
+---@return IsoDeadBody?
 function ISButcherHookUI:onClickRemoveCorpse() end
 
 function ISButcherHookUI:onCutCorpse() end
 
+---@param joypadData JoypadData
 function ISButcherHookUI:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISButcherHookUI:onJoypadDown(button, joypadData) end
 
 function ISButcherHookUI:onRemoveBlood() end
@@ -100,35 +116,46 @@ function ISButcherHookUI:onRemoveLeather() end
 
 function ISButcherHookUI:onRemoveMeat() end
 
+---@param bucket InventoryItem
 function ISButcherHookUI:onSelectBucketForBlood(bucket) end
 
 function ISButcherHookUI:removeCorpseAction() end
 
 function ISButcherHookUI:render() end
 
+---@param yoffset number
 ---@return number
 function ISButcherHookUI:renderDebugStuff(yoffset) end
 
 function ISButcherHookUI:resetCorpse() end
 
----@param newModData unknown?
----@param newCorpse unknown?
+---@param newModData table?
+---@param newCorpse (IsoAnimal | IsoDeadBody)?
 function ISButcherHookUI:setAnimalAvatar(newModData, newCorpse) end
 
+---@param vis boolean
 function ISButcherHookUI:setVisible(vis) end
 
 function ISButcherHookUI:updateCorpseDatas() end
 
 function ISButcherHookUI:updateLabelAndButtons() end
 
+---@param test boolean
+---@param button ISButton
+---@param label ISLabel
+---@param infoLabel ISLabel
+---@param yoffset number
 ---@return number
 function ISButcherHookUI:updatePositions(test, button, label, infoLabel, yoffset) end
 
+---@param progress number
 function ISButcherHookUI:updateProgressBar(progress) end
 
 ---@param x number
 ---@param y number
 ---@param width number
 ---@param height number
+---@param hook IsoButcherHook
+---@param player IsoPlayer
 ---@return ISButcherHookUI
 function ISButcherHookUI:new(x, y, width, height, hook, player) end

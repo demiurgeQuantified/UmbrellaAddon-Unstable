@@ -1,16 +1,19 @@
 ---@meta
 
 ---@class DebugGlobalObjectStateUI_Tool : ISBaseObject
----@field ui unknown
+---@field ui DebugGlobalObjectStateUI
 DebugGlobalObjectStateUI_Tool = ISBaseObject:derive("DebugGlobalObjectStateUI_Tool")
 DebugGlobalObjectStateUI_Tool.Type = "DebugGlobalObjectStateUI_Tool"
 
+---@param func string
 ---@return unknown
 function DebugGlobalObjectStateUI_Tool:java0(func) end
 
+---@param func string
 ---@return unknown
 function DebugGlobalObjectStateUI_Tool:java1(func, arg0) end
 
+---@param func string
 ---@return unknown
 function DebugGlobalObjectStateUI_Tool:java2(func, arg0, arg1) end
 
@@ -26,13 +29,14 @@ function DebugGlobalObjectStateUI_Tool:onMouseMove(dx, dy) end
 ---@param y number
 function DebugGlobalObjectStateUI_Tool:onMouseUp(x, y) end
 
+---@param ui DebugGlobalObjectStateUI
 ---@return DebugGlobalObjectStateUI_Tool
 function DebugGlobalObjectStateUI_Tool:new(ui) end
 
 ---@class DebugGlobalObjectStateUI_DragCameraTool : DebugGlobalObjectStateUI_Tool
 ---@field mouseDown boolean
----@field startDragX unknown
----@field startDragY unknown
+---@field startDragX number
+---@field startDragY number
 ---@field startScreenX number
 ---@field startScreenY number
 DebugGlobalObjectStateUI_DragCameraTool =

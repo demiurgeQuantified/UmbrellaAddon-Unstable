@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISMicrowaveUI : ISPanelJoypad
----@field character unknown
+---@field character IsoPlayer
 ---@field close ISButton
----@field joypadButtons unknown
+---@field joypadButtons ISButton[]
 ---@field ok ISButton
----@field oven unknown
+---@field oven IsoStove
 ---@field tempKnob ISKnob
 ---@field timerKnob ISKnob
 ISMicrowaveUI = ISPanelJoypad:derive("ISMicrowaveUI")
@@ -18,10 +18,13 @@ function ISMicrowaveUI:ChangeKnob() end
 
 function ISMicrowaveUI:initialise() end
 
+---@param button ISButton
 function ISMicrowaveUI:onClick(button) end
 
+---@param joypadData JoypadData
 function ISMicrowaveUI:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function ISMicrowaveUI:onJoypadDown(button) end
 
 function ISMicrowaveUI:prerender() end
@@ -36,5 +39,7 @@ function ISMicrowaveUI:updateButtons() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param oven IsoStove
+---@param character IsoPlayer
 ---@return ISMicrowaveUI
 function ISMicrowaveUI:new(x, y, width, height, oven, character) end

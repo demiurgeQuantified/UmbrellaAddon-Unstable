@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISClearAshes : ISBaseTimedAction
----@field ashes unknown?
----@field character unknown?
+---@field ashes IsoObject
+---@field character IsoPlayer
 ---@field spriteFrame number
 ISClearAshes = ISBaseTimedAction:derive("ISClearAshes")
 ISClearAshes.Type = "ISClearAshes"
@@ -24,10 +24,10 @@ function ISClearAshes:stop() end
 
 function ISClearAshes:update() end
 
----@return unknown
+---@return boolean
 function ISClearAshes:waitToStart() end
 
----@param character unknown?
----@param ashes unknown?
+---@param character IsoPlayer
+---@param ashes IsoObject
 ---@return ISClearAshes
 function ISClearAshes:new(character, ashes) end

@@ -1,42 +1,42 @@
 ---@meta
 
 ---@class ISAnimDebugMonitor : ISCollapsableWindow
----@field addVarAddButton unknown
----@field addVarComboType unknown
----@field addVarKey unknown
+---@field addVarAddButton ISButton
+---@field addVarComboType ISComboBox
+---@field addVarKey ISTextEntryBox
 ---@field addVarKeyLabel ISLabel
----@field addVarValue unknown
+---@field addVarValue ISTextEntryBox
 ---@field addVarValueLabel ISLabel
----@field buttonActiveNodes unknown
----@field buttonAnimTracks unknown
----@field buttonClearVar unknown
----@field buttonLayers unknown
----@field buttonSetVar unknown
----@field buttonStamps unknown
----@field buttonToggleMonitor unknown
----@field buttonVariables unknown
----@field cGreen table
+---@field buttonActiveNodes ISButton
+---@field buttonAnimTracks ISButton
+---@field buttonClearVar ISButton
+---@field buttonLayers ISButton
+---@field buttonSetVar ISButton
+---@field buttonStamps ISButton
+---@field buttonToggleMonitor ISButton
+---@field buttonVariables ISButton
+---@field cGreen umbrella.RGBA
 ---@field clearText string
----@field comboFloats unknown
----@field comboVars unknown
----@field cRed table
+---@field comboFloats ISComboBox
+---@field comboVars ISComboBox
+---@field cRed umbrella.RGBA
 ---@field currentTile unknown?
 ---@field editEnabled boolean
----@field entryBoxValue unknown
+---@field entryBoxValue ISTextEntryBox
 ---@field floatPlotter FloatArrayPlotter
----@field greyCol table
+---@field greyCol umbrella.RGBA
 ---@field hotKeyPanels table
 ---@field init boolean
 ---@field isJoypadWindow boolean
 ---@field labelFloat ISLabel
 ---@field labelFloatInfo ISLabel
 ---@field labelVars ISLabel
----@field monitor unknown?
----@field oldNodesVal table
----@field oldTracksVal table
+---@field monitor AnimatorDebugMonitor?
+---@field oldNodesVal [boolean]?
+---@field oldTracksVal [boolean]?
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field richtext ISRichTextPanel?
 ---@field selectedVar boolean
 ---@field subFocus unknown?
@@ -60,8 +60,10 @@ function ISAnimDebugMonitor:createChildren() end
 
 function ISAnimDebugMonitor:initialise() end
 
+---@param _button ISButton
 function ISAnimDebugMonitor:onClick(_button) end
 
+---@param _combo ISComboBox
 function ISAnimDebugMonitor:onCombo(_combo) end
 
 function ISAnimDebugMonitor:onResize() end
@@ -83,5 +85,6 @@ function ISAnimDebugMonitor:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ISAnimDebugMonitor
 function ISAnimDebugMonitor:new(x, y, width, height, player) end

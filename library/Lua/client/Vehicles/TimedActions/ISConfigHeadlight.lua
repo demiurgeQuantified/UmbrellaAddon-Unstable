@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISConfigHeadlight : ISBaseTimedAction
----@field dir unknown
----@field part unknown
----@field vehicle unknown
+---@field dir integer
+---@field part VehiclePart
+---@field vehicle BaseVehicle
 ISConfigHeadlight = ISBaseTimedAction:derive("ISConfigHeadlight")
 ISConfigHeadlight.Type = "ISConfigHeadlight"
 
@@ -18,6 +18,9 @@ function ISConfigHeadlight:stop() end
 
 function ISConfigHeadlight:update() end
 
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param dir integer
 ---@param time number
 ---@return ISConfigHeadlight
 function ISConfigHeadlight:new(character, part, dir, time) end

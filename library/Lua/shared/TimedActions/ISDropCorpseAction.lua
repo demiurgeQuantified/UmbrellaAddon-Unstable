@@ -11,7 +11,7 @@ function ISDropCorpseAction:complete() end
 ---@return number
 function ISDropCorpseAction:getDuration() end
 
----@return unknown
+---@return boolean
 function ISDropCorpseAction:isValid() end
 
 function ISDropCorpseAction:perform() end
@@ -27,5 +27,7 @@ function ISDropCorpseAction:update() end
 ---@return boolean
 function ISDropCorpseAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param targetSquare unknown?
 ---@return ISDropCorpseAction
 function ISDropCorpseAction:new(character, targetSquare) end

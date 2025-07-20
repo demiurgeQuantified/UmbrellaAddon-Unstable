@@ -21,5 +21,6 @@ function ISShutOffVehicleEngine:stop() end
 
 function ISShutOffVehicleEngine:update() end
 
+---@param character IsoPlayer
 ---@return ISShutOffVehicleEngine
 function ISShutOffVehicleEngine:new(character) end

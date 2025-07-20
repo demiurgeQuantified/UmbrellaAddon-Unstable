@@ -10,11 +10,13 @@ __UI_TextEntry.text = ""
 
 function __UI_TextEntry:focus() end
 
----@return unknown
+---@return string
 function __UI_TextEntry:getText() end
 
+---@param uiFont UIFont
 function __UI_TextEntry:setFont(uiFont) end
 
+---@param text string
 function __UI_TextEntry:setText(text) end
 
 function __UI_TextEntry:unfocus() end

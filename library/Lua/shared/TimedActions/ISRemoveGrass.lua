@@ -2,7 +2,7 @@
 
 ---@class ISRemoveGrass : ISBaseTimedAction
 ---@field spriteFrame number
----@field square unknown
+---@field square IsoGridSquare
 ISRemoveGrass = ISBaseTimedAction:derive("ISRemoveGrass")
 ISRemoveGrass.Type = "ISRemoveGrass"
 
@@ -23,9 +23,10 @@ function ISRemoveGrass:stop() end
 
 function ISRemoveGrass:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveGrass:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param square IsoGridSquare
 ---@return ISRemoveGrass
 function ISRemoveGrass:new(character, square) end

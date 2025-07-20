@@ -2,13 +2,13 @@
 
 ---@class ISUI3DScene : ISUIElement
 ---@field background boolean
----@field backgroundColor table
----@field borderColor table
+---@field backgroundColor umbrella.RGBA
+---@field borderColor umbrella.RGBA
 ---@field mouseDown boolean
 ISUI3DScene = ISUIElement:derive("ISUI3DScene")
 ISUI3DScene.Type = "ISUI3DScene"
 
----@return unknown
+---@return string
 function ISUI3DScene:getView() end
 
 function ISUI3DScene:instantiate() end
@@ -29,6 +29,7 @@ function ISUI3DScene:onMouseUp(x, y) end
 ---@param y number
 function ISUI3DScene:onMouseUpOutside(x, y) end
 
+---@param del number
 ---@return boolean
 function ISUI3DScene:onMouseWheel(del) end
 

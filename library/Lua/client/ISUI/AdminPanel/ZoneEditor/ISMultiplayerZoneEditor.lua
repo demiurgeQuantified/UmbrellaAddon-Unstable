@@ -2,33 +2,34 @@
 
 ---@class ISMultiplayerZoneEditor : ISPanelJoypad
 ---@field buttonPanel ISMultiplayerZoneEditor_ButtonPanel
----@field character unknown?
----@field cross unknown
+---@field character IsoPlayer?
+---@field cross Texture
 ---@field currentMode string
 ---@field dragging boolean
 ---@field dragMoved boolean
----@field dragStartCX unknown
----@field dragStartCY unknown
----@field dragStartWorldX unknown
----@field dragStartWorldY unknown
+---@field dragStartCX number
+---@field dragStartCY number
+---@field dragStartWorldX number
+---@field dragStartWorldY number
 ---@field dragStartX number
 ---@field dragStartY number
----@field dragStartZoomF unknown
+---@field dragStartZoomF number
 ---@field getJoypadFocus boolean
 ---@field hideUnvisitedAreas boolean
 ---@field isometric boolean
----@field mapAPI unknown
----@field mode table
+---@field javaObject UIWorldMap
+---@field mapAPI UIWorldMapV3
+---@field mode table<string, MultiplayerZoneEditorMode>
 ---@field modeCombo ISComboBox
----@field playerNum number
+---@field playerNum integer
 ---@field showCellGrid boolean
 ---@field showPlayerNames boolean
 ---@field showPlayers boolean
 ---@field showRemotePlayers boolean
 ---@field showTileGrid boolean
----@field texViewIsometric unknown
----@field texViewOrthographic unknown
----@field texViewPyramid unknown
+---@field texViewIsometric Texture
+---@field texViewOrthographic Texture
+---@field texViewPyramid Texture
 ISMultiplayerZoneEditor = ISPanelJoypad:derive("ISMultiplayerZoneEditor")
 ISMultiplayerZoneEditor.Type = "ISMultiplayerZoneEditor"
 
@@ -53,19 +54,23 @@ function ISMultiplayerZoneEditor:initDirectoryMapData(directory) end
 
 function ISMultiplayerZoneEditor:instantiate() end
 
+---@param key integer
 ---@return boolean
 function ISMultiplayerZoneEditor:isKeyConsumed(key) end
 
 function ISMultiplayerZoneEditor:onCenterOnPlayer() end
 
+---@param button ISButton
 function ISMultiplayerZoneEditor:onChangeOptions(button) end
 
 function ISMultiplayerZoneEditor:onChangePerspective() end
 
 function ISMultiplayerZoneEditor:onComboChangeMode() end
 
+---@param key integer
 function ISMultiplayerZoneEditor:onKeyPress(key) end
 
+---@param key integer
 function ISMultiplayerZoneEditor:onKeyRelease(key) end
 
 ---@param x number
@@ -93,6 +98,7 @@ function ISMultiplayerZoneEditor:onMouseUp(x, y) end
 ---@return boolean
 function ISMultiplayerZoneEditor:onMouseUpOutside(x, y) end
 
+---@param del number
 ---@return boolean
 function ISMultiplayerZoneEditor:onMouseWheel(del) end
 
@@ -148,10 +154,14 @@ ISMultiplayerZoneEditor_ButtonPanel.Type = "ISMultiplayerZoneEditor_ButtonPanel"
 
 function ISMultiplayerZoneEditor_ButtonPanel:createChildren() end
 
+---@param joypadData JoypadData
 function ISMultiplayerZoneEditor_ButtonPanel:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISMultiplayerZoneEditor_ButtonPanel:onJoypadDown(button, joypadData) end
 
+---@param joypadData JoypadData
 function ISMultiplayerZoneEditor_ButtonPanel:onLoseJoypadFocus(joypadData) end
 
 function ISMultiplayerZoneEditor_ButtonPanel:render() end

@@ -2,27 +2,32 @@
 
 ---@class ModSelector.ModListBox : ISScrollingListBox
 ---@field boxSize number
----@field cantTexture unknown
----@field joypadFocused unknown
----@field joypadStarButtonTex unknown
----@field model unknown
----@field mouseOverFavoriteButton unknown?
----@field mouseOverTickBox unknown?
----@field selectedBeforeReset unknown?
----@field starSetTexture unknown
----@field starUnsetTexture unknown
----@field tickTexture unknown
+---@field cantTexture Texture
+---@field joypadFocused boolean?
+---@field joypadStarButtonTex Texture
+---@field model ModSelector.Model
+---@field mouseOverFavoriteButton umbrella.ISScrollingListBox.Item?
+---@field mouseOverTickBox umbrella.ISScrollingListBox.Item?
+---@field selectedBeforeReset integer?
+---@field starSetTexture Texture
+---@field starUnsetTexture Texture
+---@field tickTexture Texture
 local __modSelector_ModListBox = ISScrollingListBox:derive("ModListBox")
 __modSelector_ModListBox.Type = "ModListBox"
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function __modSelector_ModListBox:doDrawItem(y, item, alt) end
 
 function __modSelector_ModListBox:enableTickMod() end
 
----@return unknown?
+---@return umbrella.ModSelector.ModData?
 function __modSelector_ModListBox:getSelectedModData() end
 
+---@param button integer
+---@param joypadData JoypadData
 function __modSelector_ModListBox:onJoypadDown(button, joypadData) end
 
 ---@param x number
@@ -31,6 +36,8 @@ function __modSelector_ModListBox:onMouseDown(x, y) end
 
 function __modSelector_ModListBox:prerender() end
 
+---@param focused boolean
+---@param joypadData JoypadData?
 function __modSelector_ModListBox:setJoypadFocused(focused, joypadData) end
 
 function __modSelector_ModListBox:sort() end
@@ -39,6 +46,7 @@ function __modSelector_ModListBox:sort() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param model ModSelector.Model
 ---@return ModSelector.ModListBox
 function __modSelector_ModListBox:new(x, y, width, height, model) end
 

@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISToggleHutchDoor : ISBaseTimedAction
----@field hutch unknown
+---@field hutch IsoHutch
 ---@field ignoreHandsWounds boolean
 ---@field retriggerLastAction boolean
----@field sound unknown
+---@field sound integer?
 ISToggleHutchDoor = ISBaseTimedAction:derive("ISToggleHutchDoor")
 ISToggleHutchDoor.Type = "ISToggleHutchDoor"
 
@@ -25,5 +25,7 @@ function ISToggleHutchDoor:stop() end
 
 function ISToggleHutchDoor:update() end
 
+---@param character IsoPlayer
+---@param hutch IsoHutch
 ---@return ISToggleHutchDoor
 function ISToggleHutchDoor:new(character, hutch) end

@@ -20,7 +20,7 @@
 ---@field parentPanel unknown
 ---@field parts unknown
 ---@field player unknown
----@field playerNum unknown
+---@field playerNum integer
 ---@field resourceMoney unknown
 ---@field resourceOutput unknown
 ---@field resources unknown
@@ -55,6 +55,7 @@ function ISBaseVendingLayout:isRunning() end
 ---@return unknown
 function ISBaseVendingLayout:isTurnedOn() end
 
+---@param _button ISButton
 function ISBaseVendingLayout:onButtonClick(_button) end
 
 ---@param dx number

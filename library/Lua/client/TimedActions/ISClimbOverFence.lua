@@ -1,16 +1,17 @@
 ---@meta
 
 ---@class ISClimbOverFence : ISBaseTimedAction
----@field direction unknown
----@field isTallHoppable unknown
----@field item unknown
+---@field direction IsoDirections
+---@field isTallHoppable boolean
+---@field item IsoThumpable
 ---@field retriggerLastAction boolean
 ISClimbOverFence = ISBaseTimedAction:derive("ISClimbOverFence")
 ISClimbOverFence.Type = "ISClimbOverFence"
 
+---@param deltas MoveDeltaModifiers
 function ISClimbOverFence:getDeltaModifiers(deltas) end
 
----@return unknown
+---@return IsoDirections
 function ISClimbOverFence:getFacingDirection() end
 
 ---@return boolean
@@ -24,8 +25,11 @@ function ISClimbOverFence:stop() end
 
 function ISClimbOverFence:update() end
 
----@return unknown
+---@return boolean
 function ISClimbOverFence:waitToStart() end
 
+---@param character IsoPlayer
+---@param item IsoThumpable
+---@param direction IsoDirections
 ---@return ISClimbOverFence
 function ISClimbOverFence:new(character, item, direction) end

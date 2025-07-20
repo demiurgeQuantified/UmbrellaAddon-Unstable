@@ -9,7 +9,7 @@
 ---@field modID string?
 ---@field optionsPanel SeamEditorUI_OptionsPanel
 ---@field scene SeamEditorUI_Scene
----@field seamTileList table
+---@field seamTileList table<string, SeamEditorUI_SeamTileList>
 ---@field tilePicker SeamEditorUI_TilePicker
 ---@field tilePicker2 SeamEditorUI_TilePicker2
 ---@field toolBar ISPanel
@@ -32,19 +32,27 @@ function SeamEditorUI:createChildren() end
 
 function SeamEditorUI:createToolbar() end
 
+---@param tbl table
 ---@return number
 function SeamEditorUI:indexOf(tbl, element) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function SeamEditorUI:onExit(button, x, y) end
 
+---@param key integer
 function SeamEditorUI:onKeyPress(key) end
 
 function SeamEditorUI:onOptions() end
 
+---@param oldw number
+---@param oldh number
+---@param neww number
+---@param newh number
 function SeamEditorUI:onResolutionChange(oldw, oldh, neww, newh) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function SeamEditorUI:onSave(button, x, y) end
@@ -77,6 +85,8 @@ function SeamEditorUI_OptionsPanel:createChildren() end
 ---@param y number
 function SeamEditorUI_OptionsPanel:onMouseDownOutside(x, y) end
 
+---@param index integer
+---@param selected boolean
 function SeamEditorUI_OptionsPanel:onTickBox(index, selected) end
 
 ---@param x number
@@ -95,10 +105,10 @@ SeamEditorUI_Scene = ISPanel:derive("SeamEditorUI_Scene")
 SeamEditorUI_Scene.Type = "SeamEditorUI_Scene"
 
 ---@return string?
----@return unknown?
+---@return integer?
 function SeamEditorUI_Scene:getSelectedTile() end
 
----@return unknown?
+---@return string?
 function SeamEditorUI_Scene:getSelectedTileName() end
 
 ---@return number
@@ -148,10 +158,18 @@ function SeamEditorUI_Scene:renderFloorBounds(x, y, z, r, g, b) end
 function SeamEditorUI_Scene:renderPixelGrid(tileName) end
 
 ---@param tileName string
+---@param texture Texture
 function SeamEditorUI_Scene:renderSelectedTile(tileName, texture) end
 
+---@param sx number
+---@param sy number
+---@param sx2 number
+---@param sy2 number
+---@param pixelSize number
+---@param texture Texture
 function SeamEditorUI_Scene:renderTextureOutline(sx, sy, sx2, sy2, pixelSize, texture) end
 
+---@param texture Texture
 ---@param x number
 ---@param y number
 ---@param z number
@@ -203,13 +221,14 @@ SeamEditorUI_TilePicker.Type = "SeamEditorUI_TilePicker"
 
 function SeamEditorUI_TilePicker:createChildren() end
 
+---@param del number
 ---@return boolean
 function SeamEditorUI_TilePicker:onMouseWheel(del) end
 
 function SeamEditorUI_TilePicker:onSelectTileset() end
 
 ---@param tileName string
----@return unknown?
+---@return string?
 ---@return number?
 function SeamEditorUI_TilePicker:parseTileName(tileName) end
 
@@ -233,13 +252,14 @@ SeamEditorUI_TilePicker2.Type = "SeamEditorUI_TilePicker2"
 
 function SeamEditorUI_TilePicker2:createChildren() end
 
+---@param del number
 ---@return boolean
 function SeamEditorUI_TilePicker2:onMouseWheel(del) end
 
 function SeamEditorUI_TilePicker2:onSelectTileset() end
 
 ---@param tileName string
----@return unknown?
+---@return string?
 ---@return number?
 function SeamEditorUI_TilePicker2:parseTileName(tileName) end
 

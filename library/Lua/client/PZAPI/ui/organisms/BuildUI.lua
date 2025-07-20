@@ -9,7 +9,7 @@ __UI_BuildUI.y = 100
 __UI_BuildUI.width = 464
 __UI_BuildUI.height = 482
 
----@return unknown
+---@return CraftRecipe[]
 function __UI_BuildUI:getRecipes() end
 
 function __UI_BuildUI:init() end

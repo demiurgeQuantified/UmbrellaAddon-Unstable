@@ -1,19 +1,22 @@
 ---@meta
 
 ---@class ISDestroyStuffAction : ISBaseTimedAction
----@field cornerCounter number?
----@field item unknown?
----@field sledge unknown
+---@field cornerCounter integer
+---@field item IsoObject
+---@field sledge InventoryItem?
 ---@field spriteFrame number
 ISDestroyStuffAction = ISBaseTimedAction:derive("ISDestroyStuffAction")
 ISDestroyStuffAction.Type = "ISDestroyStuffAction"
 
+---@param event string
+---@param parameter string
 function ISDestroyStuffAction:animEvent(event, parameter) end
 
 ---@return boolean?
 function ISDestroyStuffAction:complete() end
 
----@return unknown?
+---@param wallSprite IsoSprite
+---@return string?
 function ISDestroyStuffAction:getCornerWallSprite(wallSprite) end
 
 ---@return number
@@ -30,11 +33,11 @@ function ISDestroyStuffAction:stop() end
 
 function ISDestroyStuffAction:update() end
 
----@return unknown
+---@return boolean
 function ISDestroyStuffAction:waitToStart() end
 
----@param character unknown?
----@param item unknown?
----@param cornerCounter unknown?
+---@param character IsoPlayer
+---@param item IsoObject
+---@param cornerCounter integer
 ---@return ISDestroyStuffAction
 function ISDestroyStuffAction:new(character, item, cornerCounter) end

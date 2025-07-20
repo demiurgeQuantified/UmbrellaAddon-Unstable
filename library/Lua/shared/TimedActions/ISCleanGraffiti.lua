@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISCleanGraffiti : ISBaseTimedAction
----@field cleaner unknown
----@field object unknown
----@field sound unknown
----@field square unknown
+---@field cleaner InventoryItem?
+---@field object IsoObject
+---@field sound integer?
+---@field square IsoGridSquare
 ISCleanGraffiti = ISBaseTimedAction:derive("ISCleanGraffiti")
 ISCleanGraffiti.Type = "ISCleanGraffiti"
 
@@ -14,7 +14,7 @@ function ISCleanGraffiti:complete() end
 ---@return number
 function ISCleanGraffiti:getDuration() end
 
----@return unknown
+---@return boolean
 function ISCleanGraffiti:isValid() end
 
 function ISCleanGraffiti:perform() end
@@ -25,8 +25,11 @@ function ISCleanGraffiti:stop() end
 
 function ISCleanGraffiti:update() end
 
----@return unknown
+---@return boolean
 function ISCleanGraffiti:waitToStart() end
 
+---@param character IsoPlayer
+---@param square IsoGridSquare
+---@param cleaner InventoryItem?
 ---@return ISCleanGraffiti
 function ISCleanGraffiti:new(character, square, cleaner) end

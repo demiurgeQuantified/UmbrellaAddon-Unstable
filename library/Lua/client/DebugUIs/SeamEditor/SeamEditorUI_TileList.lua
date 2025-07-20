@@ -16,18 +16,20 @@ function SeamEditorUI_TileList:calculateSelectionBounds() end
 ---@return number
 function SeamEditorUI_TileList:getColRowAt(x, y) end
 
----@return unknown?
+---@return table?
 function SeamEditorUI_TileList:getFirstSelectedTile() end
 
 ---@return table
 function SeamEditorUI_TileList:getSelection() end
 
----@return unknown?
+---@return table?
 function SeamEditorUI_TileList:getSingleSelectedTile() end
 
 ---@return boolean
 function SeamEditorUI_TileList:isSelectionEmpty() end
 
+---@param col number
+---@param row number
 ---@return boolean
 function SeamEditorUI_TileList:isValidColRow(col, row) end
 
@@ -37,6 +39,7 @@ function SeamEditorUI_TileList:onClearMaster() end
 ---@param y number
 function SeamEditorUI_TileList:onMouseDown(x, y) end
 
+---@param del number
 function SeamEditorUI_TileList:onMouseWheel(del) end
 
 ---@param x number
@@ -54,6 +57,10 @@ function SeamEditorUI_TileList:onSwapTilesets(tileName) end
 
 function SeamEditorUI_TileList:render() end
 
+---@param xIndent number
+---@param yIndent number
+---@param texW number
+---@param texH number
 function SeamEditorUI_TileList:renderGrid(xIndent, yIndent, texW, texH) end
 
 ---@param col number
@@ -62,11 +69,17 @@ function SeamEditorUI_TileList:selectionAdd(col, row) end
 
 function SeamEditorUI_TileList:selectionClear() end
 
+---@param col number
+---@param row number
 ---@return number
 function SeamEditorUI_TileList:selectionIndexOf(col, row) end
 
+---@param col number
+---@param row number
 function SeamEditorUI_TileList:selectionRemove(col, row) end
 
+---@param col number
+---@param row number
 function SeamEditorUI_TileList:selectionToggle(col, row) end
 
 ---@param tilesetName string?

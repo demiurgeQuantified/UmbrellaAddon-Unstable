@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISHorn : ISBaseTimedAction
----@field t unknown
+---@field t number
 ISHorn = ISBaseTimedAction:derive("ISHorn")
 ISHorn.Type = "ISHorn"
 
@@ -16,5 +16,6 @@ function ISHorn:stop() end
 
 function ISHorn:update() end
 
+---@param character IsoPlayer
 ---@return ISHorn
 function ISHorn:new(character) end

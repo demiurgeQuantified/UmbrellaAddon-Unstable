@@ -10,11 +10,14 @@ ISFastTeleportMove.isAdded = false
 ---@param dy number
 function ISFastTeleportMove.moveXY(player, dx, dy) end
 
+---@param player IsoPlayer
 ---@param dz number
 function ISFastTeleportMove.moveZ(player, dz) end
 
+---@param key integer
 function ISFastTeleportMove.OnKeyKeepPressed(key) end
 
+---@param key integer
 function ISFastTeleportMove.OnKeyStartPressed(key) end
 
 function ISFastTeleportMove.OnTick() end

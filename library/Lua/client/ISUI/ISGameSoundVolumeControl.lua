@@ -1,11 +1,13 @@
 ---@meta
 
+---@alias umbrella.ISGameSoundVolumeControl.TargetFunction fun(target: unknown, control: ISGameSoundVolumeControl, volume: number)
+
 ---@class ISGameSoundVolumeControl : ISPanel
 ---@field dragging boolean
----@field fade unknown
+---@field fade UITransition
 ---@field isSlider boolean
----@field joypadFocused unknown
----@field targetFunc unknown
+---@field joypadFocused boolean?
+---@field targetFunc umbrella.ISGameSoundVolumeControl.TargetFunction?
 ---@field tooltip unknown?
 ---@field tooltipUI ISToolTip
 ---@field volume number
@@ -13,19 +15,22 @@ ISGameSoundVolumeControl = ISPanel:derive("ISGameSoundVolumeControl")
 ISGameSoundVolumeControl.Type = "ISGameSoundVolumeControl"
 ISGameSoundVolumeControl.capture = nil ---@type ISGameSoundVolumeControl?
 
----@return unknown
+---@return string
 function ISGameSoundVolumeControl:getTooltip() end
 
 ---@return number
 function ISGameSoundVolumeControl:getVolume() end
 
+---@param x number
 ---@return number
 function ISGameSoundVolumeControl:getVolumeAtX(x) end
 
 function ISGameSoundVolumeControl:instantiate() end
 
+---@param joypadData JoypadData
 function ISGameSoundVolumeControl:onJoypadDirLeft(joypadData) end
 
+---@param joypadData JoypadData
 function ISGameSoundVolumeControl:onJoypadDirRight(joypadData) end
 
 ---@param x number
@@ -48,6 +53,7 @@ function ISGameSoundVolumeControl:prerender() end
 
 function ISGameSoundVolumeControl:render() end
 
+---@param focused boolean
 function ISGameSoundVolumeControl:setJoypadFocused(focused) end
 
 ---@param volume number
@@ -57,5 +63,7 @@ function ISGameSoundVolumeControl:setVolume(volume) end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param target unknown?
+---@param targetFunc umbrella.ISGameSoundVolumeControl.TargetFunction?
 ---@return ISGameSoundVolumeControl
 function ISGameSoundVolumeControl:new(x, y, width, height, target, targetFunc) end

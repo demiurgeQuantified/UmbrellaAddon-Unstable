@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISPutAnimalInHutch : ISBaseTimedAction
----@field hutch unknown
+---@field hutch IsoHutch
 ISPutAnimalInHutch = ISBaseTimedAction:derive("ISPutAnimalInHutch")
 ISPutAnimalInHutch.Type = "ISPutAnimalInHutch"
 
@@ -22,8 +22,10 @@ function ISPutAnimalInHutch:stop() end
 
 function ISPutAnimalInHutch:update() end
 
----@return unknown
+---@return boolean
 function ISPutAnimalInHutch:waitToStart() end
 
+---@param character IsoPlayer
+---@param hutch IsoHutch
 ---@return ISPutAnimalInHutch
 function ISPutAnimalInHutch:new(character, hutch) end

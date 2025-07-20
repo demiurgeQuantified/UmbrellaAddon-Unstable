@@ -2,15 +2,15 @@
 
 ---@class ZomboidRadioDebug : ISPanel
 ---@field broadcastList ISScrollingListBox
----@field buttonBorderColor table
+---@field buttonBorderColor umbrella.RGBA
 ---@field channelsList ISScrollingListBox
----@field channelsSize unknown
----@field currentChannel unknown
+---@field channelsSize number
+---@field currentChannel RadioChannel
 ---@field infoList ISScrollingListBox
 ---@field panelTitle string
----@field radio unknown
----@field scriptManager unknown
----@field variableColor table
+---@field radio ZomboidRadio
+---@field scriptManager RadioScriptManager
+---@field variableColor umbrella.RGBA
 ---@field zOffsetSmallFont number
 ZomboidRadioDebug = ISPanel:derive("ZomboidRadioDebug")
 ZomboidRadioDebug.Type = "ZomboidRadioDebug"
@@ -23,12 +23,21 @@ function ZomboidRadioDebug:close() end
 
 function ZomboidRadioDebug:createChildren() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ZomboidRadioDebug:drawBroadcastList(y, item, alt) end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ZomboidRadioDebug:drawChannelList(y, item, alt) end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ZomboidRadioDebug:drawInfoList(y, item, alt) end
 
@@ -38,14 +47,18 @@ function ZomboidRadioDebug:onClickClose() end
 
 function ZomboidRadioDebug:onClickRefresh() end
 
+---@param item RadioChannel
 function ZomboidRadioDebug:OnDaysListMouseDown(item) end
 
 function ZomboidRadioDebug:onViewScript() end
 
+---@param _radioChannel RadioChannel
 function ZomboidRadioDebug:populateBroadcastList(_radioChannel) end
 
+---@param _radioChannel RadioChannel
 function ZomboidRadioDebug:populateInfoList(_radioChannel) end
 
+---@param _force boolean?
 function ZomboidRadioDebug:populateList(_force) end
 
 function ZomboidRadioDebug:prerender() end

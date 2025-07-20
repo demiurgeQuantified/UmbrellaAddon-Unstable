@@ -3,14 +3,14 @@
 ---@class StatisticChartDiskOperations : StatisticChart
 StatisticChartDiskOperations = StatisticChart:derive("StatisticChartDiskOperations")
 StatisticChartDiskOperations.Type = "StatisticChartDiskOperations"
-StatisticChartDiskOperations.instance = nil
+StatisticChartDiskOperations.instance = nil ---@type StatisticChartDiskOperations?
 StatisticChartDiskOperations.shiftDown = 0
 StatisticChartDiskOperations.eventsAdded = false
 
----@return unknown?
+---@return StatisticChartDiskOperations?
 function StatisticChartDiskOperations.doInstance() end
 
----@return unknown?
+---@return StatisticChartDiskOperations?
 function StatisticChartDiskOperations.OnOpenPanel() end
 
 function StatisticChartDiskOperations.OnServerStatisticReceived() end

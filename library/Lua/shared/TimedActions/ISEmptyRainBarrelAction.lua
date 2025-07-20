@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISEmptyRainBarrelAction : ISBaseTimedAction
----@field object unknown
----@field sound unknown
----@field startAmount unknown
+---@field object IsoObject
+---@field sound integer
+---@field startAmount number
 ISEmptyRainBarrelAction = ISBaseTimedAction:derive("ISEmptyRainBarrelAction")
 ISEmptyRainBarrelAction.Type = "ISEmptyRainBarrelAction"
 
@@ -28,8 +28,10 @@ function ISEmptyRainBarrelAction:stopSound() end
 
 function ISEmptyRainBarrelAction:update() end
 
----@return unknown
+---@return boolean
 function ISEmptyRainBarrelAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param object IsoObject
 ---@return ISEmptyRainBarrelAction
 function ISEmptyRainBarrelAction:new(character, object) end

@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISExitVehicle : ISBaseTimedAction
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISExitVehicle = ISBaseTimedAction:derive("ISExitVehicle")
 ISExitVehicle.Type = "ISExitVehicle"
 
----@return table?
+---@return string[]?
 function ISExitVehicle:getExtraLogData() end
 
 ---@return boolean
@@ -19,5 +19,6 @@ function ISExitVehicle:stop() end
 
 function ISExitVehicle:update() end
 
+---@param character IsoPlayer
 ---@return ISExitVehicle
 function ISExitVehicle:new(character) end

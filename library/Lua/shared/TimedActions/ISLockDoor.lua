@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISLockDoor : ISBaseTimedAction
----@field door unknown
+---@field door IsoDoor | IsoThumpable
 ---@field lock boolean
 ISLockDoor = ISBaseTimedAction:derive("ISLockDoor")
 ISLockDoor.Type = "ISLockDoor"
@@ -26,6 +26,8 @@ function ISLockDoor:stop() end
 
 function ISLockDoor:update() end
 
+---@param character IsoPlayer
+---@param door IsoDoor | IsoThumpable
 ---@param lock boolean
 ---@return ISLockDoor
 function ISLockDoor:new(character, door, lock) end

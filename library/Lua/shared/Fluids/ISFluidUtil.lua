@@ -2,20 +2,23 @@
 
 ---@class ISFluidUtil
 ISFluidUtil = {}
-ISFluidUtil.isoPanelWalkToDist = 2
-ISFluidUtil.isoMaxPanelDist = 2
+ISFluidUtil.isoPanelWalkToDist = 5
+ISFluidUtil.isoMaxPanelDist = 10
 
+---@param _player IsoPlayer
 ---@param _container ISFluidContainer
----@return boolean?
+---@param _dist number
+---@return boolean
 function ISFluidUtil.doWalkTo(_player, _container, _dist) end
 
----@return unknown?
+---@param _container FluidContainer | ResourceFluid
+---@return GameEntity
 function ISFluidUtil.getContainerOwner(_container) end
 
----@return unknown
+---@return number
 function ISFluidUtil.getMinTransferActionTime() end
 
----@return unknown
+---@return number
 function ISFluidUtil.getTransferActionTimePerLiter() end
 
 ---@param _container ISFluidContainer?

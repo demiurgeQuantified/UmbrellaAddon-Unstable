@@ -2,13 +2,13 @@
 
 ---@class ISEnterVehicle : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field seat unknown
+---@field seat integer
 ---@field started boolean
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISEnterVehicle = ISBaseTimedAction:derive("ISEnterVehicle")
 ISEnterVehicle.Type = "ISEnterVehicle"
 
----@return table?
+---@return string[]?
 function ISEnterVehicle:getExtraLogData() end
 
 ---@return boolean
@@ -22,5 +22,8 @@ function ISEnterVehicle:stop() end
 
 function ISEnterVehicle:update() end
 
+---@param character IsoPlayer
+---@param vehicle BaseVehicle
+---@param seat integer
 ---@return ISEnterVehicle
 function ISEnterVehicle:new(character, vehicle, seat) end

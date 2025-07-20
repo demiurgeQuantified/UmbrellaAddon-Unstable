@@ -22,10 +22,12 @@ function WorldMapEditorMode_Bounds:generateLuaScript() end
 
 function WorldMapEditorMode_Bounds:loadSettingsFromMap() end
 
+---@param button ISButton
 function WorldMapEditorMode_Bounds:onChangeSnapMode(button) end
 
 function WorldMapEditorMode_Bounds:onDrawBounds() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Bounds:onKeyPress(key) end
 
@@ -58,12 +60,18 @@ function WorldMapEditorMode_Bounds:onRightMouseDown(x, y) end
 
 function WorldMapEditorMode_Bounds:render() end
 
+---@param x1 number
+---@param y1 number
+---@param x2 number
+---@param y2 number
 function WorldMapEditorMode_Bounds:setBounds(x1, y1, x2, y2) end
 
+---@param xy number
 ---@return number
 function WorldMapEditorMode_Bounds:snap(xy) end
 
 function WorldMapEditorMode_Bounds:undisplay() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorMode_Bounds
 function WorldMapEditorMode_Bounds:new(editor) end

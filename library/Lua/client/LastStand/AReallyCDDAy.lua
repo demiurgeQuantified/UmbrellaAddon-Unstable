@@ -82,13 +82,15 @@ CDDA.hourOfDay = 7
 
 function CDDA.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function CDDA.AddPlayer(playerNum, playerObj) end
 
 function CDDA.OnGameStart() end
 
 function CDDA.OnInitWorld() end
 
+---@param p IsoPlayer
 function CDDA.RemovePlayer(p) end
 
 function CDDA.Render() end

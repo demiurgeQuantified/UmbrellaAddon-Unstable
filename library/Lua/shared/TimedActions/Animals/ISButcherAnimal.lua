@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISButcherAnimal : ISBaseTimedAction
----@field body unknown
----@field perkLevel unknown
----@field sound unknown
+---@field body IsoDeadBody
+---@field perkLevel integer
+---@field sound integer
 ISButcherAnimal = ISBaseTimedAction:derive("ISButcherAnimal")
 ISButcherAnimal.Type = "ISButcherAnimal"
 
@@ -29,8 +29,10 @@ function ISButcherAnimal:stopSound() end
 
 function ISButcherAnimal:update() end
 
----@return unknown
+---@return boolean
 function ISButcherAnimal:waitToStart() end
 
+---@param character IsoPlayer
+---@param body IsoDeadBody
 ---@return ISButcherAnimal
 function ISButcherAnimal:new(character, body) end

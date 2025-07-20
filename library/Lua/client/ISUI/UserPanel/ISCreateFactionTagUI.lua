@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISCreateFactionTagUI : ISPanel
----@field buttonBorderColor table
+---@field buttonBorderColor umbrella.RGBA
 ---@field entry ISTextEntryBox
----@field faction unknown
+---@field faction Faction
 ---@field no ISButton
 ---@field ok ISButton
----@field player unknown
+---@field player IsoPlayer
 ISCreateFactionTagUI = ISPanel:derive("ISCreateFactionTagUI")
 ISCreateFactionTagUI.Type = "ISCreateFactionTagUI"
 ISCreateFactionTagUI.messages = {}
@@ -14,6 +14,7 @@ ISCreateFactionTagUI.instance = nil ---@type ISCreateFactionTagUI?
 
 function ISCreateFactionTagUI:initialise() end
 
+---@param button ISButton
 function ISCreateFactionTagUI:onClick(button) end
 
 function ISCreateFactionTagUI:prerender() end
@@ -26,5 +27,7 @@ function ISCreateFactionTagUI:updateButtons() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param faction Faction
 ---@return ISCreateFactionTagUI
 function ISCreateFactionTagUI:new(x, y, width, height, player, faction) end

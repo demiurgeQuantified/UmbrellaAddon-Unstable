@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class AddChumToWaterAction : ISBaseTimedAction
----@field chum unknown
----@field square unknown
+---@field chum Food
+---@field square IsoGridSquare
 AddChumToWaterAction = ISBaseTimedAction:derive("AddChumToWaterAction")
 AddChumToWaterAction.Type = "AddChumToWaterAction"
 
@@ -12,7 +12,7 @@ function AddChumToWaterAction:complete() end
 ---@return number
 function AddChumToWaterAction:getDuration() end
 
----@return unknown?
+---@return boolean
 function AddChumToWaterAction:isValid() end
 
 function AddChumToWaterAction:perform() end
@@ -23,5 +23,8 @@ function AddChumToWaterAction:stop() end
 
 function AddChumToWaterAction:update() end
 
+---@param character IsoPlayer
+---@param chum Food
+---@param square IsoGridSquare
 ---@return AddChumToWaterAction
 function AddChumToWaterAction:new(character, chum, square) end

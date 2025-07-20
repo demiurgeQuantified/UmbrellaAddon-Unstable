@@ -3,7 +3,7 @@
 ---@class ISResizableButton : ISButton
 ---@field maximumWidth unknown?
 ---@field mouseOverResize boolean
----@field onresize unknown?
+---@field onresize table?
 ---@field resizeLeft boolean
 ---@field resizing boolean
 ISResizableButton = ISButton:derive("ISResizableButton")
@@ -29,6 +29,7 @@ function ISResizableButton:onMouseUp(x, y) end
 ---@param y number
 function ISResizableButton:onMouseUpOutside(x, y) end
 
+---@param width number
 function ISResizableButton:resize(width) end
 
 ---@param x number
@@ -36,7 +37,10 @@ function ISResizableButton:resize(width) end
 ---@param width number
 ---@param height number
 ---@param title string
----@param clicktarget ISInventoryPane
+---@param clicktarget unknown?
+---@param onclick umbrella.ISButton.OnClick?
+---@param onmousedown umbrella.ISButton.MouseCallback?
+---@param allowMouseUpProcessing boolean?
 ---@return ISResizableButton
 function ISResizableButton:new(
 	x,

@@ -35,6 +35,8 @@ function DebugToolstrip:onOptionsClick() end
 
 function DebugToolstrip:onShowErrors() end
 
+---@param index integer
+---@param selected boolean
 function DebugToolstrip:onToggleBreak(index, selected) end
 
 function DebugToolstrip:prerender() end

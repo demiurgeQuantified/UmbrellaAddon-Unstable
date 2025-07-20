@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISExtinguishCursor : ISBuildingObject
----@field character unknown
----@field extinguisher unknown?
+---@field character IsoPlayer
+---@field extinguisher InventoryItem?
 ---@field noNeedHammer boolean
----@field player unknown
+---@field player integer
 ---@field renderFloorHelper boolean
 ---@field skipBuildAction boolean
 ---@field skipWalk boolean
@@ -15,27 +15,31 @@ ISExtinguishCursor._colorInfo = nil
 ---@param x number
 ---@param y number
 ---@param z number
+---@param north boolean
+---@param sprite string
 function ISExtinguishCursor:create(x, y, z, north, sprite) end
 
 ---@return string?
 function ISExtinguishCursor:getAPrompt() end
 
----@return unknown?
+---@param squares IsoGridSquare[]
+---@return number?
 function ISExtinguishCursor:getClosestSquare(squares) end
 
----@return table
+---@param square IsoGridSquare
+---@return IsoFire[]
 function ISExtinguishCursor:getFireObjects(square) end
 
----@return unknown?
+---@return string?
 function ISExtinguishCursor:getLBPrompt() end
 
----@return unknown?
+---@return string?
 function ISExtinguishCursor:getRBPrompt() end
 
 ---@param x number
 ---@param y number
 ---@param z number
----@return table
+---@return IsoGridSquare[]
 function ISExtinguishCursor:getSquares(x, y, z) end
 
 ---@param x number
@@ -46,9 +50,10 @@ function ISExtinguishCursor:getSquares(x, y, z) end
 ---@return number
 function ISExtinguishCursor:getTopLeftOfSquares(x, y, z) end
 
----@return ISTimedActionQueue | table
+---@return ISBaseTimedAction?
 function ISExtinguishCursor:isRunningAction() end
 
+---@param square IsoGridSquare
 ---@return boolean
 function ISExtinguishCursor:isValid(square) end
 
@@ -58,12 +63,16 @@ function ISExtinguishCursor:isValid(square) end
 ---@return boolean
 function ISExtinguishCursor:isValidArea(x, y, z) end
 
+---@param joypadIndex integer
+---@param joypadData JoypadData
+---@param button integer
 ---@return unknown?
 function ISExtinguishCursor:onJoypadPressButton(joypadIndex, joypadData, button) end
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param square IsoGridSquare
 function ISExtinguishCursor:render(x, y, z, square) end
 
 ---@param x number
@@ -72,5 +81,7 @@ function ISExtinguishCursor:render(x, y, z, square) end
 ---@return boolean
 function ISExtinguishCursor:walkTo(x, y, z) end
 
+---@param character IsoPlayer
+---@param extinguisher InventoryItem
 ---@return ISExtinguishCursor
 function ISExtinguishCursor:new(character, extinguisher) end

@@ -2,20 +2,20 @@
 
 ---@class ISScrollBar : ISUIElement
 ---@field background boolean
----@field backgroundColor table
+---@field backgroundColor umbrella.RGBA
 ---@field barheight number
 ---@field barwidth number
 ---@field barx number
 ---@field bary number
----@field borderColor table
----@field bottex unknown
----@field downtex unknown
----@field midtex unknown
+---@field borderColor umbrella.RGBA
+---@field bottex Texture
+---@field downtex Texture
+---@field midtex Texture
 ---@field parent ISUIElement
 ---@field pos number
 ---@field scrolling boolean
----@field toptex unknown
----@field uptex unknown
+---@field toptex Texture
+---@field uptex Texture
 ---@field vertical boolean
 ISScrollBar = ISUIElement:derive("ISScrollBar")
 ISScrollBar.Type = "ISScrollBar"
@@ -42,12 +42,16 @@ function ISScrollBar:onClickArrowRight() end
 
 function ISScrollBar:onClickArrowUp() end
 
+---@param y number
 function ISScrollBar:onClickTrackDown(y) end
 
+---@param x number
 function ISScrollBar:onClickTrackLeft(x) end
 
+---@param x number
 function ISScrollBar:onClickTrackRight(x) end
 
+---@param y number
 function ISScrollBar:onClickTrackUp(y) end
 
 ---@param x number

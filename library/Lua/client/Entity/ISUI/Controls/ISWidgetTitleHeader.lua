@@ -2,45 +2,47 @@
 
 ---@class ISWidgetTitleHeader : ISPanel
 ---@field canBeDoneInDark boolean
----@field canBeDoneInDarkIcon unknown?
----@field colBad table
----@field colGood table
----@field colWhite table
+---@field canBeDoneInDarkIcon ISImage?
+---@field colBad umbrella.RGBA
+---@field colGood umbrella.RGBA
+---@field colWhite umbrella.RGBA
 ---@field enableIcon boolean
----@field errorLabel unknown?
----@field favouritesIcon unknown?
----@field icon unknown?
+---@field errorLabel ISLabel?
+---@field favouritesIcon ISButton?
+---@field icon ISImage?
 ---@field iconSize number
----@field iconTex unknown
+---@field iconTex Texture?
 ---@field isCanWalk boolean
----@field isCanWalkIcon unknown?
+---@field isCanWalkIcon ISImage?
 ---@field isFavourite boolean
----@field logic unknown
+---@field logic HandcraftLogic?
 ---@field marginBottom number
 ---@field marginLeft number
 ---@field marginRight number
 ---@field marginTop number
 ---@field needToBeLearn boolean
----@field needToBeLearnIcon unknown?
+---@field needToBeLearnIcon ISImage?
 ---@field paddingBottom number
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
----@field player unknown
+---@field player IsoPlayer
 ---@field propertyIconSize number
----@field recipe unknown
+---@field recipe CraftRecipe
 ---@field recipeBenefitLabel unknown?
----@field requiredSkillList table
+---@field requiredSkillList ISLabel[]
 ---@field requiresSurface boolean
----@field requiresSurfaceIcon unknown?
+---@field requiresSurfaceIcon ISImage?
 ---@field showPropertyIcons boolean
----@field timeIcon unknown?
+---@field timeIcon ISImage?
 ---@field title string
----@field titleLabel unknown?
----@field tooltipLabel unknown?
+---@field titleLabel ISLabel?
+---@field tooltipLabel ISLabel?
 ISWidgetTitleHeader = ISPanel:derive("ISWidgetTitleHeader")
 ISWidgetTitleHeader.Type = "ISWidgetTitleHeader"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISWidgetTitleHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetTitleHeader:createChildren() end
@@ -65,6 +67,9 @@ function ISWidgetTitleHeader:updatePropertyIcons() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param isFavourite boolean
+---@param recipe CraftRecipe
+---@param player IsoPlayer
+---@param logic HandcraftLogic?
+---@param isFavourite boolean?
 ---@return ISWidgetTitleHeader
 function ISWidgetTitleHeader:new(x, y, width, height, recipe, player, logic, isFavourite) end

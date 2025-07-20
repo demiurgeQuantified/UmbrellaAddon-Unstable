@@ -66,3 +66,14 @@ FitnessExercises.exercisesType = {
 		xpMod = 1.8,
 	},
 }
+
+---@class umbrella.FitnessExercises.Exercise
+---@field item string?
+---@field metabolics Metabolics
+---@field name string
+---@field prop string?
+---@field stiffness string
+---@field tooltip string
+---@field type string
+---@field xpMod number
+umbrella_FitnessExercises_Exercise = {}

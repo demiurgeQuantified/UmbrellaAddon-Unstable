@@ -5,11 +5,11 @@
 ---@field eatAudio number
 ---@field eatSound string
 ---@field endRatio number
----@field fluidContainer unknown
+---@field fluidContainer FluidContainer
 ---@field ignoreHandsWounds boolean
----@field item unknown
+---@field item InventoryItem
 ---@field percentage number
----@field startRatio unknown
+---@field startRatio number
 ---@field targetConsumedRatio number
 ---@field useUtensil boolean
 ISDrinkFluidAction = ISBaseTimedAction:derive("ISDrinkFluidAction")
@@ -21,7 +21,7 @@ function ISDrinkFluidAction:complete() end
 ---@return number
 function ISDrinkFluidAction:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISDrinkFluidAction:isValid() end
 
 ---@return boolean
@@ -35,10 +35,14 @@ function ISDrinkFluidAction:stop() end
 
 function ISDrinkFluidAction:update() end
 
+---@param delta number
 function ISDrinkFluidAction:updateEat(delta) end
 
 ---@return boolean
 function ISDrinkFluidAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param item InventoryItem | IsoWorldInventoryObject
+---@param percentage number
 ---@return ISDrinkFluidAction
 function ISDrinkFluidAction:new(character, item, percentage) end

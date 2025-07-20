@@ -2,16 +2,17 @@
 
 ---@class ISMediaInfo : ISCollapsableWindowJoypad
 ---@field buttonOK ISButton
----@field fontHgt unknown
+---@field fontHgt number
 ---@field name unknown?
----@field playerNum number
+---@field playerNum integer
 ---@field richText ISRichTextPanel
----@field text unknown
+---@field text string
 ISMediaInfo = ISCollapsableWindowJoypad:derive("ISMediaInfo")
 ISMediaInfo.Type = "ISMediaInfo"
 ISMediaInfo.instance = nil ---@type ISMediaInfo?
 
----@param _playerNum number
+---@param _playerNum integer
+---@param _text string
 ---@return ISMediaInfo?
 function ISMediaInfo.openPanel(_playerNum, _text) end
 
@@ -23,10 +24,13 @@ function ISMediaInfo:destroy() end
 
 function ISMediaInfo:initialise() end
 
+---@param button ISButton
 function ISMediaInfo:onClick(button) end
 
+---@param joypadData JoypadData
 function ISMediaInfo:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function ISMediaInfo:onJoypadDown(button) end
 
 function ISMediaInfo:prerender() end
@@ -37,6 +41,7 @@ function ISMediaInfo:render() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param playerNum number
+---@param playerNum integer
+---@param text string
 ---@return ISMediaInfo
 function ISMediaInfo:new(x, y, width, height, playerNum, text) end

@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISFireplaceInfoAction : ISBaseTimedAction
----@field fireplace unknown
----@field playerNum unknown
+---@field fireplace IsoFireplace
+---@field playerNum integer
 ISFireplaceInfoAction = ISBaseTimedAction:derive("ISFireplaceInfoAction")
 ISFireplaceInfoAction.Type = "ISFireplaceInfoAction"
 
@@ -11,5 +11,7 @@ function ISFireplaceInfoAction:isValid() end
 
 function ISFireplaceInfoAction:perform() end
 
+---@param character IsoPlayer
+---@param fireplace IsoFireplace
 ---@return ISFireplaceInfoAction
 function ISFireplaceInfoAction:new(character, fireplace) end

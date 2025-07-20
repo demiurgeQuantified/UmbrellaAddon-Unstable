@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class AIAttachLureAction : ISBaseTimedAction
----@field lure unknown
----@field rod unknown
----@field sound unknown
+---@field lure InventoryItem
+---@field rod InventoryItem
+---@field sound integer?
 AIAttachLureAction = ISBaseTimedAction:derive("AIAttachLureAction")
 AIAttachLureAction.Type = "AIAttachLureAction"
 
@@ -13,7 +13,7 @@ function AIAttachLureAction:complete() end
 ---@return number
 function AIAttachLureAction:getDuration() end
 
----@return unknown?
+---@return boolean
 function AIAttachLureAction:isValid() end
 
 function AIAttachLureAction:perform() end
@@ -26,5 +26,8 @@ function AIAttachLureAction:stopSound() end
 
 function AIAttachLureAction:update() end
 
+---@param character IsoPlayer
+---@param rod InventoryItem
+---@param lure InventoryItem
 ---@return AIAttachLureAction
 function AIAttachLureAction:new(character, rod, lure) end

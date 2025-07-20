@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISSwitchVehicleSeat : ISBaseTimedAction
----@field seatFrom unknown?
----@field seatTo number?
+---@field seatFrom integer?
+---@field seatTo integer
 ISSwitchVehicleSeat = ISBaseTimedAction:derive("ISSwitchVehicleSeat")
 ISSwitchVehicleSeat.Type = "ISSwitchVehicleSeat"
 
@@ -17,7 +17,8 @@ function ISSwitchVehicleSeat:stop() end
 
 function ISSwitchVehicleSeat:update() end
 
----@param seatTo number?
----@param seatFrom unknown?
+---@param character IsoPlayer
+---@param seatTo integer
+---@param seatFrom integer?
 ---@return ISSwitchVehicleSeat
 function ISSwitchVehicleSeat:new(character, seatTo, seatFrom) end

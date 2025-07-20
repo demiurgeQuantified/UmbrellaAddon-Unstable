@@ -13,7 +13,7 @@ campingCampfire.Type = "campingCampfire"
 ---@param z number
 function campingCampfire:create(x, y, z, north, sprite) end
 
----@return string?
+---@return unknown?
 function campingCampfire:getAPrompt() end
 
 ---@return unknown?
@@ -22,9 +22,11 @@ function campingCampfire:getLBPrompt() end
 ---@return unknown?
 function campingCampfire:getRBPrompt() end
 
+---@param square IsoGridSquare
 ---@return boolean
 function campingCampfire:isSquareFree(square) end
 
+---@param square IsoGridSquare
 ---@return boolean
 function campingCampfire:isValid(square, north) end
 
@@ -33,6 +35,7 @@ function campingCampfire:onTimedActionStart(action) end
 ---@param x number
 ---@param y number
 ---@param z number
+---@param square IsoGridSquare
 function campingCampfire:render(x, y, z, square) end
 
 ---@param character unknown?

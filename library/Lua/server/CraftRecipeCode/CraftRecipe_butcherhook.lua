@@ -14,12 +14,13 @@ CraftRecipeCode.COLUMN_BLOOD = 5
 CraftRecipeCode.COLUMN_GREASE = 6
 CraftRecipeCode.DUMMY_ITEM = "Base.Animal_Item_Dummy"
 
----@return unknown?
+---@param _craftRecipeData CraftRecipeData
+---@return InventoryItem?
 function CraftRecipeCode.getAnimalBody(_craftRecipeData) end
 
 ---@param name string
----@return unknown?
----@return unknown?
+---@return InventoryItem?
+---@return integer?
 function CraftRecipeCode.getOutputResourceInProcessor(_craftProcessor, name) end
 
 ---@class CraftRecipeCode.removeFeather
@@ -41,8 +42,10 @@ function __craftRecipeCode_removeParts.OnTest(_craftProcessor) end
 ---@class CraftRecipeCode.removeLeather
 local __craftRecipeCode_removeLeather = {}
 
+---@param _craftRecipeData CraftRecipeData
 function __craftRecipeCode_removeLeather.OnCreate(_craftRecipeData) end
 
+---@param _craftRecipeData CraftRecipeData
 ---@return boolean
 function __craftRecipeCode_removeLeather.OnTest(_craftRecipeData) end
 
@@ -65,13 +68,17 @@ function __craftRecipeCode_removeBlood.OnTest(_craftProcessor) end
 ---@class CraftRecipeCode.butcherHook
 local __craftRecipeCode_butcherHook = {}
 
+---@param item string
+---@param nb number
 function __craftRecipeCode_butcherHook.createItem(_craftProcessor, item, nb) end
 
----@return unknown?
----@return unknown?
----@return unknown?
+---@param _craftRecipeData CraftRecipeData
+---@return umbrella.AnimalPartsDefinition?
+---@return table?
+---@return InventoryItem?
 function __craftRecipeCode_butcherHook.getAnimalPartDef(_craftRecipeData) end
 
+---@param _craftRecipeData CraftRecipeData
 ---@return boolean
 function __craftRecipeCode_butcherHook.OnTest(_craftRecipeData) end
 
@@ -79,4 +86,5 @@ function __craftRecipeCode_butcherHook.OnTest(_craftRecipeData) end
 ---@return unknown?
 function __craftRecipeCode_butcherHook.OnTestModData(_craftProcessor, name) end
 
+---@param _craftRecipeData CraftRecipeData
 function __craftRecipeCode_butcherHook.removeDummyItem(_craftRecipeData) end

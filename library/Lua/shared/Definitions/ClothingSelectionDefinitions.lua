@@ -1,5 +1,7 @@
 ---@meta
 
+---@alias umbrella.ClothingSelectionDefinition table<string, umbrella.ClothingSelectionDefinitionTable>
+
 ---@class ClothingSelectionDefinitions
 ClothingSelectionDefinitions = {}
 ClothingSelectionDefinitions.default = {
@@ -815,3 +817,8 @@ ClothingSelectionDefinitions.mechanics = {
 		},
 	},
 }
+
+---@class umbrella.ClothingSelectionDefinitionTable
+---@field chance integer
+---@field items string[]
+umbrella_ClothingSelectionDefinitionTable = {}

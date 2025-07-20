@@ -41,8 +41,8 @@
 ---@field LightColorPanel ISPanel
 ---@field NightStrengthSlider ISVolumeControl
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field precipitationSlider ISVolumeControl
 ---@field richtext unknown?
 ---@field subFocus unknown?
@@ -56,7 +56,7 @@ WeatherFXDebug.Type = "WeatherFXDebug"
 WeatherFXDebug.instance = nil ---@type WeatherFXDebug?
 WeatherFXDebug.shiftDown = 0
 WeatherFXDebug.eventAdded = false
-WeatherFXDebug.fx = nil
+WeatherFXDebug.fx = nil ---@type IsoWeatherFX?
 
 ---@return WeatherFXDebug?
 function WeatherFXDebug.OnOpenPanel() end
@@ -69,46 +69,78 @@ function WeatherFXDebug:createChildren() end
 
 function WeatherFXDebug:initialise() end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onAmbientChange(_slider, _value) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonClimate(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonDebugBounds(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonDoBlizzard(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonDoStorm(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonDoTropical(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonGodMode(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonLaunchFlare(_btn) end
 
+---@param _btn ISButton
 function WeatherFXDebug:onButtonNightVision(_btn) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onCloudIntensityChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onDayLightStrengthChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onDesaturationChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onFogIntensityChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onLightColorChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onLightIntensityChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onNightStrengthChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onPrecipitationChange(_slider, _value) end
 
 function WeatherFXDebug:onResize() end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onViewDistanceChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onWindAngleChange(_slider, _value) end
 
+---@param _slider ISVolumeControl
+---@param _value number
 function WeatherFXDebug:onWindIntensityChange(_slider, _value) end
 
 function WeatherFXDebug:prerender() end
@@ -117,6 +149,8 @@ function WeatherFXDebug:render() end
 
 function WeatherFXDebug:stayOnSplitScreen() end
 
+---@param _optionIndex integer
+---@param _value boolean
 function WeatherFXDebug:tickBoxIsSnowChange(_optionIndex, _value) end
 
 function WeatherFXDebug:update() end
@@ -125,5 +159,6 @@ function WeatherFXDebug:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return WeatherFXDebug
 function WeatherFXDebug:new(x, y, width, height, player) end

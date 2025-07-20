@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISRemoveBrokenGlass : ISBaseTimedAction
----@field window unknown
+---@field window IsoWindow
 ISRemoveBrokenGlass = ISBaseTimedAction:derive("ISRemoveBrokenGlass")
 ISRemoveBrokenGlass.Type = "ISRemoveBrokenGlass"
 
@@ -22,9 +22,10 @@ function ISRemoveBrokenGlass:stop() end
 
 function ISRemoveBrokenGlass:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveBrokenGlass:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param window IsoWindow
 ---@return ISRemoveBrokenGlass
 function ISRemoveBrokenGlass:new(character, window) end

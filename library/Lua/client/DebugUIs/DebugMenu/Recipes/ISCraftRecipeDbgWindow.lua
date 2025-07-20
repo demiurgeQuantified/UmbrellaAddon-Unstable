@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISCraftRecipeDbgWindow : ISCollapsableWindow
----@field height unknown
+---@field height number
 ---@field heightMod number
 ---@field panel ISTabPanel
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field recipeIconsScreen ISCraftRecipeIconsPanel
 ---@field recipeOverviewScreen ISCraftRecipeOverviewPanel
 ---@field recipeQueriesScreen ISCraftRecipeQueriesPanel
@@ -13,14 +13,15 @@
 ---@field recipeTagsScreen ISCraftRecipeTagsPanel
 ---@field rh number
 ---@field searchText string
----@field th unknown
+---@field th number
 ---@field title string
----@field width unknown
+---@field width number
 ISCraftRecipeDbgWindow = ISCollapsableWindow:derive("ISCraftRecipeDbgWindow")
 ISCraftRecipeDbgWindow.Type = "ISCraftRecipeDbgWindow"
-ISCraftRecipeDbgWindow.coords = nil ---@type boolean | table
+ISCraftRecipeDbgWindow.coords = nil ---@type number[] | false
 ISCraftRecipeDbgWindow.instance = nil ---@type ISCraftRecipeDbgWindow?
 
+---@param _player IsoPlayer?
 ---@return ISCraftRecipeDbgWindow?
 function ISCraftRecipeDbgWindow.OnOpenPanel(_player) end
 
@@ -28,6 +29,9 @@ function ISCraftRecipeDbgWindow:close() end
 
 function ISCraftRecipeDbgWindow:createChildren() end
 
+---@param _y number
+---@param _obj ISUIElement
+---@param _margin number?
 ---@return number
 function ISCraftRecipeDbgWindow:incY(_y, _obj, _margin) end
 
@@ -45,5 +49,6 @@ function ISCraftRecipeDbgWindow:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ISCraftRecipeDbgWindow
 function ISCraftRecipeDbgWindow:new(x, y, width, height, player) end

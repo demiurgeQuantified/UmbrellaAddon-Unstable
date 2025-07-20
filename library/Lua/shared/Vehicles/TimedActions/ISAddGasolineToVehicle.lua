@@ -2,18 +2,20 @@
 
 ---@class ISAddGasolineToVehicle : ISBaseTimedAction
 ---@field amountSent number
----@field fluidCont unknown
----@field item unknown?
----@field itemStart unknown
+---@field fluidCont FluidContainer
+---@field item InventoryItem
+---@field itemStart number?
 ---@field itemTarget number
----@field part unknown
----@field sound unknown
----@field tankStart unknown
+---@field part VehiclePart
+---@field sound integer?
+---@field tankStart number?
 ---@field tankTarget number
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISAddGasolineToVehicle = ISBaseTimedAction:derive("ISAddGasolineToVehicle")
 ISAddGasolineToVehicle.Type = "ISAddGasolineToVehicle"
 
+---@param event string
+---@param parameter string
 function ISAddGasolineToVehicle:animEvent(event, parameter) end
 
 ---@return boolean
@@ -37,9 +39,11 @@ function ISAddGasolineToVehicle:stop() end
 
 function ISAddGasolineToVehicle:update() end
 
----@return unknown
+---@return boolean
 function ISAddGasolineToVehicle:waitToStart() end
 
----@param item unknown?
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param item InventoryItem
 ---@return ISAddGasolineToVehicle
 function ISAddGasolineToVehicle:new(character, part, item) end

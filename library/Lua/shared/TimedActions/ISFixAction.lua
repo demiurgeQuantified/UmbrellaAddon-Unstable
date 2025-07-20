@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISFixAction : ISBaseTimedAction
----@field fixer unknown
+---@field fixer Fixing.Fixer
 ---@field fixerNum number
----@field fixing unknown
+---@field fixing Fixing
 ---@field fixingNum number
----@field item unknown
+---@field item InventoryItem
 ---@field jobType string
 ISFixAction = ISBaseTimedAction:derive("ISFixAction")
 ISFixAction.Type = "ISFixAction"
@@ -16,7 +16,7 @@ function ISFixAction:complete() end
 ---@return number
 function ISFixAction:getDuration() end
 
----@return unknown
+---@return boolean
 function ISFixAction:isValid() end
 
 function ISFixAction:perform() end
@@ -27,6 +27,8 @@ function ISFixAction:stop() end
 
 function ISFixAction:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@param fixingNum number
 ---@param fixerNum number
 ---@return ISFixAction

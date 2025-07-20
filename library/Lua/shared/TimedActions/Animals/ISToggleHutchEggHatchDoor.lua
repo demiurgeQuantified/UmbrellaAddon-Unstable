@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISToggleHutchEggHatchDoor : ISBaseTimedAction
----@field hutch unknown
----@field sound unknown
+---@field hutch IsoHutch
+---@field sound integer?
 ISToggleHutchEggHatchDoor = ISBaseTimedAction:derive("ISToggleHutchEggHatchDoor")
 ISToggleHutchEggHatchDoor.Type = "ISToggleHutchEggHatchDoor"
 
@@ -23,5 +23,7 @@ function ISToggleHutchEggHatchDoor:stop() end
 
 function ISToggleHutchEggHatchDoor:update() end
 
+---@param character IsoPlayer
+---@param hutch IsoHutch
 ---@return ISToggleHutchEggHatchDoor
 function ISToggleHutchEggHatchDoor:new(character, hutch) end

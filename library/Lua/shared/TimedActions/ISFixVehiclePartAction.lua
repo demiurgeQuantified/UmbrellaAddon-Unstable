@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISFixVehiclePartAction : ISBaseTimedAction
----@field fixer unknown
+---@field fixer Fixing.Fixer
 ---@field fixerNum number
----@field fixing unknown
+---@field fixing Fixing
 ---@field fixingNum number
----@field item unknown
+---@field item InventoryItem
 ---@field jobType string
----@field vehiclePart unknown
+---@field vehiclePart VehiclePart
 ISFixVehiclePartAction = ISBaseTimedAction:derive("ISFixVehiclePartAction")
 ISFixVehiclePartAction.Type = "ISFixVehiclePartAction"
 
@@ -17,7 +17,7 @@ function ISFixVehiclePartAction:complete() end
 ---@return number
 function ISFixVehiclePartAction:getDuration() end
 
----@return unknown
+---@return boolean
 function ISFixVehiclePartAction:isValid() end
 
 function ISFixVehiclePartAction:perform() end
@@ -28,6 +28,8 @@ function ISFixVehiclePartAction:stop() end
 
 function ISFixVehiclePartAction:update() end
 
+---@param character IsoPlayer
+---@param vehiclePart VehiclePart
 ---@param fixingNum number
 ---@param fixerNum number
 ---@return ISFixVehiclePartAction

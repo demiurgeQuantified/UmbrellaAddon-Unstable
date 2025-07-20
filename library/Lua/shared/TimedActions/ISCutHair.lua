@@ -2,9 +2,9 @@
 
 ---@class ISCutHair : ISBaseTimedAction
 ---@field hairStyle string
----@field item unknown
+---@field item InventoryItem?
 ---@field maxTime unknown
----@field sound unknown
+---@field sound integer?
 ISCutHair = ISBaseTimedAction:derive("ISCutHair")
 ISCutHair.Type = "ISCutHair"
 
@@ -12,7 +12,7 @@ ISCutHair.Type = "ISCutHair"
 function ISCutHair:complete() end
 
 ---@return number
-function ISCutHair:getDuration() end
+function ISCutHair:getDuration(maxTime) end
 
 ---@return boolean
 function ISCutHair:isValid() end
@@ -27,5 +27,9 @@ function ISCutHair:stopSound() end
 
 function ISCutHair:update() end
 
+---@param character IsoPlayer
+---@param hairStyle string
+---@param item InventoryItem?
+---@param maxTime number
 ---@return ISCutHair
 function ISCutHair:new(character, hairStyle, item, maxTime) end

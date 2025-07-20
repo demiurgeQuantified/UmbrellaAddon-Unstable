@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISFireplaceExtinguish : ISBaseTimedAction
----@field fireplace unknown
+---@field fireplace IsoFireplace
 ISFireplaceExtinguish = ISBaseTimedAction:derive("ISFireplaceExtinguish")
 ISFireplaceExtinguish.Type = "ISFireplaceExtinguish"
 
@@ -22,9 +22,10 @@ function ISFireplaceExtinguish:stop() end
 
 function ISFireplaceExtinguish:update() end
 
----@return unknown
+---@return boolean
 function ISFireplaceExtinguish:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param fireplace IsoFireplace
 ---@return ISFireplaceExtinguish
 function ISFireplaceExtinguish:new(character, fireplace) end

@@ -625,3 +625,51 @@ forageSystem.forageSkillDefinitions = {
 		},
 	},
 }
+
+---@class forageSkills
+forageSkills = {}
+forageSkills.parkranger = nil ---@type unknown
+forageSkills.veteran = nil ---@type unknown
+forageSkills.farmer = nil ---@type unknown
+forageSkills.lumberjack = nil ---@type unknown
+forageSkills.chef = nil ---@type unknown
+forageSkills.fisherman = nil ---@type unknown
+forageSkills.unemployed = nil ---@type unknown
+forageSkills.burgerflipper = nil ---@type unknown
+forageSkills.doctor = nil ---@type unknown
+forageSkills.nurse = nil ---@type unknown
+forageSkills.fitnessInstructor = nil ---@type unknown
+forageSkills.repairman = nil ---@type unknown
+forageSkills.mechanics = nil ---@type unknown
+forageSkills.electrician = nil ---@type unknown
+forageSkills.engineer = nil ---@type unknown
+forageSkills.metalworker = nil ---@type unknown
+forageSkills.constructionworker = nil ---@type unknown
+forageSkills.carpenter = nil ---@type unknown
+forageSkills.burglar = nil ---@type unknown
+forageSkills.securityguard = nil ---@type unknown
+forageSkills.policeofficer = nil ---@type unknown
+forageSkills.fireofficer = nil ---@type unknown
+forageSkills.Whittler = nil ---@type unknown
+forageSkills.Mason = nil ---@type unknown
+forageSkills.Unlucky = nil ---@type unknown
+forageSkills.Lucky = nil ---@type unknown
+forageSkills.Formerscout = nil ---@type unknown
+forageSkills.Hiker = nil ---@type unknown
+forageSkills.Hunter = nil ---@type unknown
+forageSkills.EagleEyed = nil ---@type unknown
+forageSkills.Gardener = nil ---@type unknown
+forageSkills.Outdoorsman = nil ---@type unknown
+forageSkills.WildernessKnowledge = nil ---@type unknown
+forageSkills.Cook = nil ---@type unknown
+forageSkills.Cook2 = nil ---@type unknown
+forageSkills.NightVision = nil ---@type unknown
+forageSkills.Nutritionist = nil ---@type unknown
+forageSkills.Nutritionist2 = nil ---@type unknown
+forageSkills.Herbalist = nil ---@type unknown
+forageSkills.Agoraphobic = nil ---@type unknown
+forageSkills.HeartyAppetite = nil ---@type unknown
+forageSkills.Marksman = nil ---@type unknown
+forageSkills.FirstAid = nil ---@type unknown
+forageSkills.Fishing = nil ---@type unknown
+forageSkills.ShortSighted = nil ---@type unknown

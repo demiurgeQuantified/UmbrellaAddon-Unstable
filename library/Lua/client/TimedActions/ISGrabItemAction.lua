@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISGrabItemAction : ISBaseTimedAction
----@field destContainer unknown
+---@field destContainer ItemContainer
 ---@field ignoreAction boolean
----@field item unknown
+---@field item IsoWorldInventoryObject
 ---@field loopedAction boolean
----@field queueList table
----@field sourceContainer unknown
+---@field queueList umbrella.ISGrabItemAction.QueueItem[]
+---@field sourceContainer ItemContainer?
 ---@field started boolean
 ---@field transactionId number
 ISGrabItemAction = ISBaseTimedAction:derive("ISGrabItemAction")
@@ -23,10 +23,19 @@ function ISGrabItemAction:start() end
 
 function ISGrabItemAction:stop() end
 
+---@param item IsoWorldInventoryObject
 function ISGrabItemAction:transferItem(item) end
 
 function ISGrabItemAction:update() end
 
+---@param character IsoPlayer
+---@param item IsoWorldInventoryObject
 ---@param time number
 ---@return ISGrabItemAction
 function ISGrabItemAction:new(character, item, time) end
+
+---@class umbrella.ISGrabItemAction.QueueItem
+---@field items IsoWorldInventoryObject[]
+---@field time number
+---@field type string
+umbrella_ISGrabItemAction_QueueItem = {}

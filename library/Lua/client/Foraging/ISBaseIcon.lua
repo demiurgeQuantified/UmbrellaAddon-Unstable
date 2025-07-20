@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISBaseIcon : ISPanel
----@field adjacentSquares table
+---@field adjacentSquares table<"north" | "south" | "east" | "west", IsoGridSquare>
 ---@field alphaTarget number
----@field altWorldTexture table
+---@field altWorldTexture Texture[]
 ---@field baseHeight number
 ---@field baseWidth number
 ---@field bounce boolean
@@ -13,15 +13,15 @@
 ---@field bounceStep number
 ---@field canMoveVertical boolean
 ---@field canRollForSearchFocus boolean
----@field character unknown
+---@field character IsoPlayer
 ---@field currentTimestamp number
 ---@field darkVisionRadius number
 ---@field distanceToPlayer number
 ---@field expandView number
 ---@field expandViewStep number
----@field icon table
+---@field icon umbrella.Foraging.IconData
 ---@field iconClass string
----@field iconID unknown
+---@field iconID string
 ---@field identified boolean
 ---@field identifyDistance number
 ---@field isBeingRemoved boolean
@@ -30,54 +30,55 @@
 ---@field isForageable boolean
 ---@field isKnownPoison boolean
 ---@field isNoticed boolean
----@field isoMarker unknown?
+---@field isoMarker IsoMarker?
 ---@field isSeen boolean
 ---@field isSeenThisUpdate boolean
 ---@field itemCount number
----@field itemList unknown?
----@field itemObj unknown
----@field itemRotation unknown
+---@field itemList ArrayList<InventoryItem>?
+---@field itemObj InventoryItem?
+---@field itemRotation integer
 ---@field itemSize number
----@field itemTexture unknown
----@field itemType unknown
+---@field itemTexture Texture?
+---@field itemType string
 ---@field lastSeenHours number
 ---@field lastTimestamp number
----@field managedMarkers table
+---@field managedMarkers table<string, string>
 ---@field manager ISSearchManager
 ---@field maxPosChanges number
 ---@field maxRadius number
 ---@field maxRadiusCap number
 ---@field minRadius number
----@field modifiers table
+---@field modifiers umbrella.Foraging.Modifiers
 ---@field moveState string
 ---@field moveTargetX number
 ---@field moveTargetY number
 ---@field onMouseDoubleClick function
 ---@field onSquareDistance number
 ---@field perkLevel number
+---@field pinAlpha number
 ---@field pinOffset number
----@field player unknown
+---@field player integer
 ---@field posChanges number
 ---@field renderItemTexture boolean
 ---@field spotTimer number
 ---@field spotTimerMax number
----@field square unknown?
----@field stareVal unknown
----@field texture unknown
+---@field square IsoGridSquare?
+---@field stareVal number?
+---@field texture Texture
 ---@field textureCenter number
----@field textureColor table
+---@field textureColor umbrella.RGBA
 ---@field timeDelta number
----@field updateEvents table
+---@field updateEvents umbrella.Foraging.UpdateEvent[]
 ---@field updateTick number
 ---@field updateTickMax number
 ---@field viewAngle number
 ---@field viewDistance number
 ---@field visionData table
----@field worldMarker unknown?
+---@field worldMarker WorldMarkers.PlayerHomingPoint?
 ---@field xCoord number
 ---@field yCoord number
 ---@field zCoord number
----@field zoom unknown
+---@field zoom number
 ---@field zSize number
 ISBaseIcon = ISPanel:derive("ISBaseIcon")
 ISBaseIcon.Type = "ISBaseIcon"
@@ -91,14 +92,18 @@ function ISBaseIcon:checkForPoison() end
 ---@return boolean
 function ISBaseIcon:checkIsForageable() end
 
----@return unknown
+---@return boolean
 function ISBaseIcon:checkIsPlayerRunning() end
 
 function ISBaseIcon:checkIsSpotted() end
 
+---@param _context ISContextMenu?
 ---@return boolean?
 function ISBaseIcon:doContextMenu(_context) end
 
+---@param _context ISContextMenu
+---@param _contextOption umbrella.ISContextMenu.Option
+---@param _inventory ItemContainer
 function ISBaseIcon:doGrabSubMenu(_context, _contextOption, _inventory) end
 
 ---@return boolean
@@ -106,9 +111,10 @@ function ISBaseIcon:doPickup() end
 
 function ISBaseIcon:doSearchFocusCheck() end
 
+---@param _force boolean?
 function ISBaseIcon:doUpdateEvents(_force) end
 
----@return unknown
+---@return number
 function ISBaseIcon:doVisionCheck() end
 
 function ISBaseIcon:findPinOffset() end
@@ -118,25 +124,37 @@ function ISBaseIcon:findTextureCenter() end
 ---@return number
 function ISBaseIcon:getAlpha() end
 
----@return unknown
+---@param _x1 number
+---@param _y1 number
+---@param _x2 number
+---@param _y2 number
+---@return number
 function ISBaseIcon:getAngle2D(_x1, _y1, _x2, _y2) end
 
+---@param _angle1 number
+---@param _angle2 number
 ---@return number
 function ISBaseIcon:getAngleOffset2D(_angle1, _angle2) end
 
 ---@return boolean
 function ISBaseIcon:getCanSeeThisUpdate() end
 
----@return table
+---@return umbrella.RGBA
 function ISBaseIcon:getColor() end
 
+---@param _x1 number
+---@param _y1 number
+---@param _z1 number
+---@param _x2 number
+---@param _y2 number
+---@param _z2 number
 ---@return number
 function ISBaseIcon:getDistance3D(_x1, _y1, _z1, _x2, _y2, _z2) end
 
 ---@return number
 function ISBaseIcon:getGameSpeed() end
 
----@return boolean
+---@return IsoGridSquare | false
 function ISBaseIcon:getGridSquare() end
 
 ---@return boolean
@@ -178,6 +196,7 @@ function ISBaseIcon:isCenterView(_bonusAngle) end
 ---@return boolean
 function ISBaseIcon:isInRangeForUpdate() end
 
+---@param _range number
 ---@return boolean
 function ISBaseIcon:isInRangeOfPlayer(_range) end
 
@@ -220,6 +239,7 @@ function ISBaseIcon:resetBounce() end
 ---@param _a number
 function ISBaseIcon:setAlpha(_a) end
 
+---@param _rgba umbrella.RGBA
 function ISBaseIcon:setColor(_rgba) end
 
 ---@param _isBeingRemoved boolean
@@ -274,6 +294,47 @@ function ISBaseIcon:updateWorldMarker() end
 function ISBaseIcon:updateZoom() end
 
 ---@param _manager ISSearchManager
----@param _icon table
+---@param _icon umbrella.Foraging.IconData
 ---@return ISBaseIcon
 function ISBaseIcon:new(_manager, _icon) end
+
+---@class umbrella.Foraging.BaseIconData
+---@field id string
+---@field isBonusIcon boolean
+---@field itemType string
+---@field x number
+---@field y number
+---@field z number
+umbrella_Foraging_BaseIconData = {}
+
+---@class umbrella.Foraging.Modifiers
+---@field body number
+---@field categoryBonus number
+---@field clothing number
+---@field difficulty number
+---@field exhaustion number
+---@field hungerBonus number
+---@field levelBonus number
+---@field panic number
+---@field professionBonus number
+---@field size number
+---@field traitBonus number
+---@field weather number
+umbrella_Foraging_Modifiers = {}
+
+---@class umbrella.Foraging.IconData : umbrella.Foraging.BaseIconData
+---@field itemObj InventoryItem
+---@field zoneid string
+umbrella_Foraging_IconData = {}
+
+---@class umbrella.Foraging.WorldIconData : umbrella.Foraging.BaseIconData
+---@field canRollForSearchFocus boolean
+---@field isTrack boolean
+---@field itemObj InventoryItem
+---@field itemObjTable table<InventoryItem, InventoryItem>
+umbrella_Foraging_WorldIconData = {}
+
+---@class umbrella.Foraging.ZoneIconData : umbrella.Foraging.BaseIconData
+---@field catName string
+---@field zoneid string
+umbrella_Foraging_ZoneIconData = {}

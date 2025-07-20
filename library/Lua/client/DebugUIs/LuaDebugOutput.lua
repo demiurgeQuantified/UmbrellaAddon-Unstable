@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class LuaDebugOutput : ISPanel
----@field cat table
+---@field cat table<string, boolean>
 ---@field outputListbox ISScrollingListBox
 LuaDebugOutput = ISPanel:derive("LuaDebugOutput")
 LuaDebugOutput.Type = "LuaDebugOutput"
@@ -11,11 +11,16 @@ function LuaDebugOutput:clear() end
 
 function LuaDebugOutput:createChildren() end
 
+---@param text string
 function LuaDebugOutput:debug(text) end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function LuaDebugOutput:doDrawItem(y, item, alt) end
 
+---@param text string
 function LuaDebugOutput:error(text) end
 
 ---@param x number
@@ -25,6 +30,8 @@ function LuaDebugOutput:error(text) end
 ---@return LuaDebugOutput
 function LuaDebugOutput:new(x, y, width, height) end
 
+---@param text string
+---@param cat string?
 function pzerror(text, cat) end
 
 ---@param cat string
@@ -32,7 +39,7 @@ function pzerror(text, cat) end
 function pzdebugenabled(cat, enabled) end
 
 ---@param text string
----@param cat unknown?
+---@param cat string?
 function pzdebug(text, cat) end
 
 function DoTickDebugLuaDebugOutputWindow() end

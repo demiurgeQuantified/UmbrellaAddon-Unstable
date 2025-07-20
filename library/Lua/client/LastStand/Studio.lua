@@ -14,7 +14,8 @@ Studio.zombiesMaxPerChunk = (12 * 0.64) * 0.66
 
 function Studio.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function Studio.AddPlayer(playerNum, playerObj) end
 
 function Studio.Init() end
@@ -25,6 +26,7 @@ function Studio.OnInitWorld() end
 
 function Studio.OnNewGame() end
 
+---@param playerObj IsoPlayer
 function Studio.RemovePlayer(playerObj) end
 
 function Studio.Render() end

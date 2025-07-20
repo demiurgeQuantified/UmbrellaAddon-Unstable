@@ -1,15 +1,17 @@
 ---@meta
 
 ---@class ISHutchGrabEgg : ISBaseTimedAction
----@field hutch unknown
+---@field hutch IsoHutch
 ---@field lastTimer number
----@field nestbox unknown
----@field sound unknown
+---@field nestbox IsoHutch.NestBox
+---@field sound integer?
 ---@field timePerEgg number
 ---@field timer number
 ISHutchGrabEgg = ISBaseTimedAction:derive("ISHutchGrabEgg")
 ISHutchGrabEgg.Type = "ISHutchGrabEgg"
 
+---@param event string
+---@param parameter string
 function ISHutchGrabEgg:animEvent(event, parameter) end
 
 ---@return boolean
@@ -33,8 +35,11 @@ function ISHutchGrabEgg:stopSound() end
 
 function ISHutchGrabEgg:update() end
 
----@return unknown
+---@return boolean
 function ISHutchGrabEgg:waitToStart() end
 
+---@param character IsoPlayer
+---@param nestbox IsoHutch.NestBox | integer
+---@param hutch IsoHutch
 ---@return ISHutchGrabEgg
 function ISHutchGrabEgg:new(character, nestbox, hutch) end

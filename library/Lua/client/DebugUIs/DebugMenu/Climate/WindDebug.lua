@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class WindDebug : ISCollapsableWindow
----@field chartLabelsLeft table
----@field chartLabelsLeftTxt table
----@field chartLabelsRight table
----@field chartLabelsRightTxt table
----@field charts table
----@field colTable table
+---@field chartLabelsLeft ISLabel[]
+---@field chartLabelsLeftTxt string[]
+---@field chartLabelsRight ISLabel[]
+---@field chartLabelsRightTxt string[]
+---@field charts ValuePlotter[]
+---@field colTable umbrella.RGBA[]
 ---@field currentTile unknown?
 ---@field dayStamp number
 ---@field greyCol table
@@ -16,12 +16,12 @@
 ---@field isJoypadWindow boolean
 ---@field monthStamp number
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field richtext unknown?
 ---@field subFocus unknown?
 ---@field title string
----@field varInfo table
+---@field varInfo table[]
 ---@field year number
 WindDebug = ISCollapsableWindow:derive("WindDebug")
 WindDebug.Type = "WindDebug"
@@ -37,6 +37,10 @@ function WindDebug.OnOpenPanel() end
 function WindDebug:addColor(_r, _g, _b) end
 
 ---@param _name string
+---@param _desc string
+---@param _min number
+---@param _max number
+---@param _func string
 function WindDebug:addVarInfo(_name, _desc, _min, _max, _func) end
 
 function WindDebug:clear() end
@@ -49,8 +53,10 @@ function WindDebug:initialise() end
 
 function WindDebug:initVariables() end
 
+---@param _btn ISButton
 function WindDebug:onButton(_btn) end
 
+---@param _btn ISButton
 function WindDebug:onButtonToggle(_btn) end
 
 function WindDebug:onResize() end
@@ -67,5 +73,6 @@ function WindDebug:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return WindDebug
 function WindDebug:new(x, y, width, height, player) end

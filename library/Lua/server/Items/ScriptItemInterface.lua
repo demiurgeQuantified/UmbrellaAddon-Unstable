@@ -10,12 +10,15 @@ ScriptItemInterface.types = {
 
 ---@param newName string
 ---@param originalFullName string
----@return unknown
+---@return Item?
 function ScriptItemInterface.cloneItemType(newName, originalFullName) end
 
+---@param item string
 function ScriptItemInterface.instanceItemType(item) end
 
 ---@param name string
 ---@param displayname string
----@return unknown
+---@param type string
+---@param inventoryIcon string
+---@return Item?
 function ScriptItemInterface.newItemType(name, displayname, type, inventoryIcon) end

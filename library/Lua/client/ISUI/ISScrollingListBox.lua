@@ -1,29 +1,31 @@
 ---@meta
 
+---@alias umbrella.ISScrollingListBox.MouseCallback fun(target: unknown, item: unknown)
+
 ---@class ISScrollingListBox : ISPanelJoypad
----@field altBgColor table?
----@field columns table
+---@field altBgColor umbrella.RGBA?
+---@field columns umbrella.ISScrollingListBox.Column[]
 ---@field count number
 ---@field drawBorder boolean
----@field font string
----@field fontHgt unknown
+---@field font UIFont
+---@field fontHgt number
 ---@field itemheight number
 ---@field itemheightoverride table
----@field itemPadY number?
----@field items table
----@field listHeaderColor table
+---@field itemPadY number
+---@field items umbrella.ISScrollingListBox.Item[]
+---@field listHeaderColor umbrella.RGBA
 ---@field listHeight number
----@field mouseOverHighlightColor table
+---@field mouseOverHighlightColor umbrella.RGBA
 ---@field mouseoverselected number
----@field onmousedblclick function
----@field onmousedown unknown
----@field selected number?
+---@field onmousedblclick umbrella.ISScrollingListBox.MouseCallback
+---@field onmousedown umbrella.ISScrollingListBox.MouseCallback
+---@field selected integer?
 ---@field selectedBeforeReset number?
----@field selectionColor table
+---@field selectionColor umbrella.RGBA
 ---@field smoothScrollTargetY number?
 ---@field smoothScrollY number?
 ---@field stopPrerender boolean
----@field target table
+---@field target unknown?
 ---@field tooltipUI ISToolTip
 ---@field useStencilForChildren boolean
 ISScrollingListBox = ISPanelJoypad:derive("ISScrollingListBox")
@@ -31,6 +33,8 @@ ISScrollingListBox.Type = "ISScrollingListBox"
 ISScrollingListBox.joypadListIndex = 1
 ISScrollingListBox.nextVisibleIndex = ISScrollingListBox.nextVisibleItem
 
+---@param a umbrella.ISScrollingListBox.Item
+---@param b umbrella.ISScrollingListBox.Item
 ---@return boolean
 function ISScrollingListBox.sortByName(a, b) end
 
@@ -39,21 +43,22 @@ function ISScrollingListBox.sortByName(a, b) end
 function ISScrollingListBox:addColumn(columnName, size) end
 
 ---@param name string
----@param item table?
----@param tooltip unknown?
----@return table
-function ISScrollingListBox:addItem(name, item, tooltip) end
+---@param item unknown?
+---@return umbrella.ISScrollingListBox.Item
+function ISScrollingListBox:addItem(name, item) end
 
 ---@param name string
----@return table?
-function ISScrollingListBox:addUniqueItem(name, item, tooltip) end
+---@return umbrella.ISScrollingListBox.Item?
+function ISScrollingListBox:addUniqueItem(name, item) end
 
 function ISScrollingListBox:clear() end
 
+---@param itemText string
 ---@return boolean
 function ISScrollingListBox:contains(itemText) end
 
 ---@param y number
+---@param item umbrella.ISScrollingListBox.Item
 ---@param alt boolean
 ---@return number
 function ISScrollingListBox:doDrawItem(y, item, alt) end
@@ -70,6 +75,7 @@ function ISScrollingListBox:drawMouseOverHighlight(x, y, width, height) end
 ---@param height number
 function ISScrollingListBox:drawSelection(x, y, width, height) end
 
+---@param index integer
 function ISScrollingListBox:ensureVisible(index) end
 
 ---@return number
@@ -80,29 +86,36 @@ function ISScrollingListBox:getItem(index) end
 
 function ISScrollingListBox:initialise() end
 
+---@param index integer
 ---@param name string
----@return table
+---@param item unknown?
+---@return umbrella.ISScrollingListBox.Item
 function ISScrollingListBox:insertItem(index, name, item) end
 
 function ISScrollingListBox:instantiate() end
 
----@return unknown
+---@return boolean
 function ISScrollingListBox:isMouseOverScrollBar() end
 
----@param index number?
----@return number
+---@param index integer
+---@return integer
 function ISScrollingListBox:nextVisibleItem(index) end
 
 function ISScrollingListBox:onJoypadDirDown() end
 
+---@param joypadData JoypadData
 function ISScrollingListBox:onJoypadDirLeft(joypadData) end
 
+---@param joypadData JoypadData
 function ISScrollingListBox:onJoypadDirRight(joypadData) end
 
 function ISScrollingListBox:onJoypadDirUp() end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISScrollingListBox:onJoypadDown(button, joypadData) end
 
+---@param joypadData JoypadData
 function ISScrollingListBox:onLoseJoypadFocus(joypadData) end
 
 ---@param x number
@@ -130,6 +143,7 @@ function ISScrollingListBox:onMouseUp(x, y) end
 ---@param y number
 function ISScrollingListBox:onMouseUpOutside(x, y) end
 
+---@param del number
 ---@return boolean
 function ISScrollingListBox:onMouseWheel(del) end
 
@@ -138,52 +152,57 @@ function ISScrollingListBox:parentsHaveScrollChildren() end
 
 function ISScrollingListBox:prerender() end
 
----@param index number?
----@return number
+---@param index integer
+---@return integer
 function ISScrollingListBox:prevVisibleIndex(index) end
 
 function ISScrollingListBox:removeFirst() end
 
----@return unknown?
+---@param itemText string
+---@return umbrella.ISScrollingListBox.Item?
 function ISScrollingListBox:removeItem(itemText) end
 
----@return unknown?
+---@param itemIndex integer
+---@return umbrella.ISScrollingListBox.Item?
 function ISScrollingListBox:removeItemByIndex(itemIndex) end
 
+---@param itemText string
 ---@return boolean
----@return table
+---@return unknown[]
 function ISScrollingListBox:removeMatchingItems(itemText) end
 
 function ISScrollingListBox:render() end
 
 ---@param x number
 ---@param y number
----@return number
+---@return integer
 function ISScrollingListBox:rowAt(x, y) end
 
 function ISScrollingListBox:scrollToSelected() end
 
----@param font string
+---@param font UIFont | string
 ---@param padY number?
 function ISScrollingListBox:setFont(font, padY) end
 
 ---@param focused boolean
+---@param joypadData JoypadData
 function ISScrollingListBox:setJoypadFocused(focused, joypadData) end
 
----@param target table
----@param onmousedblclick function
+---@param target unknown?
+---@param onmousedblclick umbrella.ISScrollingListBox.MouseCallback?
 function ISScrollingListBox:setOnMouseDoubleClick(target, onmousedblclick) end
 
----@param target ISSpawnPointsEditor | table
+---@param target unknown?
+---@param onmousedown umbrella.ISScrollingListBox.MouseCallback?
 function ISScrollingListBox:setOnMouseDownFunction(target, onmousedown) end
 
----@return number
+---@return integer
 function ISScrollingListBox:size() end
 
 function ISScrollingListBox:sort() end
 
----@param index number
----@return number
+---@param index integer
+---@return integer
 function ISScrollingListBox:topOfItem(index) end
 
 function ISScrollingListBox:updateSmoothScrolling() end
@@ -196,3 +215,17 @@ function ISScrollingListBox:updateTooltip() end
 ---@param height number
 ---@return ISScrollingListBox
 function ISScrollingListBox:new(x, y, width, height) end
+
+---@class umbrella.ISScrollingListBox.Column
+---@field name string
+---@field size number
+umbrella_ISScrollingListBox_Column = {}
+
+---@class umbrella.ISScrollingListBox.Item
+---@field height number
+---@field index integer?
+---@field item unknown?
+---@field itemindex integer
+---@field text string
+---@field tooltip string?
+umbrella_ISScrollingListBox_Item = {}

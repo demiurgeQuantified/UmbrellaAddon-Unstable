@@ -2,10 +2,10 @@
 
 ---@class ISPaintAction : ISBaseTimedAction
 ---@field isThump boolean
----@field painting unknown
----@field paintPot unknown?
----@field sound unknown
----@field thumpable unknown
+---@field painting string
+---@field paintPot InventoryItem
+---@field sound integer?
+---@field thumpable IsoThumpable
 ISPaintAction = ISBaseTimedAction:derive("ISPaintAction")
 ISPaintAction.Type = "ISPaintAction"
 
@@ -26,9 +26,12 @@ function ISPaintAction:stop() end
 
 function ISPaintAction:update() end
 
----@return unknown
+---@return boolean
 function ISPaintAction:waitToStart() end
 
----@param paintPot unknown?
+---@param character IsoPlayer
+---@param thumpable IsoThumpable
+---@param paintPot InventoryItem
+---@param painting string
 ---@return ISPaintAction
 function ISPaintAction:new(character, thumpable, paintPot, painting) end

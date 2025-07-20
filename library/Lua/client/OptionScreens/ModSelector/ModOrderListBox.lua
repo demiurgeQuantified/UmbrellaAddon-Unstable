@@ -2,15 +2,19 @@
 
 ---@class ModSelector.ModOrderListBox : ISScrollingListBox
 ---@field boxSize number
----@field dragItem unknown?
----@field dragTexture unknown
----@field mouseOverDragIcon unknown?
----@field selected number
+---@field dragItem umbrella.ModSelector.ModLoadOrderData?
+---@field dragTexture Texture
+---@field mouseOverDragIcon umbrella.ISScrollingListBox.Item?
+---@field selected integer
 local __modSelector_ModOrderListBox = ISScrollingListBox:derive("ModOrderListBox")
 __modSelector_ModOrderListBox.Type = "ModOrderListBox"
 
+---@param self ISToolTip
 function __modSelector_ModOrderListBox.tooltipRender(self) end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function __modSelector_ModOrderListBox:doDrawItem(y, item, alt) end
 

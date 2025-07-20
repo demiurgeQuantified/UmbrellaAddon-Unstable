@@ -2,13 +2,13 @@
 
 ---@class ISScriptViewWindow : ISCollapsableWindow
 ---@field currentTile unknown?
----@field greyCol table
+---@field greyCol umbrella.RGBA
 ---@field hotKeyPanels table
 ---@field isJoypadWindow boolean
 ---@field monitorID number
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field richtext unknown?
 ---@field scriptPanel ISScriptViewPanel
 ---@field scriptPanelY number
@@ -17,8 +17,9 @@
 ISScriptViewWindow = ISCollapsableWindow:derive("ISScriptViewWindow")
 ISScriptViewWindow.Type = "ISScriptViewWindow"
 ISScriptViewWindow.instance = nil ---@type ISScriptViewWindow?
-ISScriptViewWindow.coords = nil ---@type boolean | table
+ISScriptViewWindow.coords = nil ---@type number[] | false
 
+---@param _script BaseScriptObject
 ---@return ISScriptViewWindow?
 function ISScriptViewWindow.OnOpenPanel(_script) end
 
@@ -34,6 +35,7 @@ function ISScriptViewWindow:prerender() end
 
 function ISScriptViewWindow:render() end
 
+---@param _script BaseScriptObject
 function ISScriptViewWindow:setScript(_script) end
 
 ---@param _title string

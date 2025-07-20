@@ -3,9 +3,9 @@
 ---@class ISAudioDebugPanel : ISDebugPanelBase
 ISAudioDebugPanel = ISDebugPanelBase:derive("ISAudioDebugPanel")
 ISAudioDebugPanel.Type = "ISAudioDebugPanel"
-ISAudioDebugPanel.instance = nil
+ISAudioDebugPanel.instance = nil ---@type ISAudioDebugPanel?
 
----@return unknown
+---@return ISAudioDebugPanel
 function ISAudioDebugPanel.OnOpenPanel() end
 
 function ISAudioDebugPanel:initialise() end

@@ -2,10 +2,10 @@
 
 ---@class ISCurePlantAction : ISBaseTimedAction
 ---@field cure string
----@field item unknown?
----@field plant unknown
----@field sound unknown
----@field uses number
+---@field item InventoryItem
+---@field plant CPlantGlobalObject
+---@field sound integer?
+---@field uses integer
 ISCurePlantAction = ISBaseTimedAction:derive("ISCurePlantAction")
 ISCurePlantAction.Type = "ISCurePlantAction"
 
@@ -26,11 +26,13 @@ function ISCurePlantAction:stop() end
 
 function ISCurePlantAction:update() end
 
----@return unknown
+---@return boolean
 function ISCurePlantAction:waitToStart() end
 
----@param item unknown?
----@param uses number
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param uses integer
+---@param plant CPlantGlobalObject
 ---@param maxTime number
 ---@param cure string
 ---@return ISCurePlantAction

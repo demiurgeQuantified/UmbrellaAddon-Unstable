@@ -2,9 +2,9 @@
 
 ---@class ISWringClothing : ISBaseTimedAction
 ---@field forceProgressBar boolean
----@field item unknown
----@field maxTime unknown
----@field sound unknown
+---@field item InventoryItem
+---@field maxTime number
+---@field sound integer?
 ISWringClothing = ISBaseTimedAction:derive("ISWringClothing")
 ISWringClothing.Type = "ISWringClothing"
 
@@ -27,5 +27,7 @@ function ISWringClothing:stopSound() end
 
 function ISWringClothing:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISWringClothing
 function ISWringClothing:new(character, item) end

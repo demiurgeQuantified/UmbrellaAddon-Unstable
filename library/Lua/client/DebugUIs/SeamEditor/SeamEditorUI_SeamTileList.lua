@@ -9,16 +9,18 @@ SeamEditorUI_SeamTileList.Type = "SeamEditorUI_SeamTileList"
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return integer
 function SeamEditorUI_SeamTileList:getRowAt(x, y) end
 
----@return unknown?
+---@return ArrayList<string>?
 function SeamEditorUI_SeamTileList:getTileNameList() end
 
 ---@param x number
 ---@param y number
 function SeamEditorUI_SeamTileList:onMouseDown(x, y) end
 
+---@param tiles ArrayList<string>
+---@param index integer
 function SeamEditorUI_SeamTileList:onRemoveTile(tiles, index) end
 
 ---@param x number

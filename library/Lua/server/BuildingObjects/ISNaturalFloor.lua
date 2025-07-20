@@ -1,36 +1,42 @@
 ---@meta
 
 ---@class ISNaturalFloor : ISBuildingObject
----@field actionAnim unknown
----@field character unknown
+---@field actionAnim CharacterActionAnims
+---@field character IsoPlayer
 ---@field craftingBank string
 ---@field floorType string?
----@field item unknown
----@field itemType unknown
----@field javaObject unknown
+---@field item InventoryItem
+---@field itemType string
+---@field javaObject IsoObject?
 ---@field noNeedHammer boolean
----@field player unknown
----@field sq unknown
+---@field player integer
+---@field sq IsoGridSquare
 ISNaturalFloor = ISBuildingObject:derive("ISNaturalFloor")
 ISNaturalFloor.Type = "ISNaturalFloor"
 
----@return table
+---@param square IsoGridSquare
+---@return string[]
 function ISNaturalFloor.getFloorSpriteNames(square) end
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param north boolean
+---@param sprite string
 function ISNaturalFloor:create(x, y, z, north, sprite) end
 
+---@param item InventoryItem
 ---@return string?
 function ISNaturalFloor:getFloorType(item) end
 
+---@param square IsoGridSquare
 ---@return boolean
 function ISNaturalFloor:isValid(square) end
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param square IsoGridSquare
 function ISNaturalFloor:render(x, y, z, square) end
 
 ---@param x number
@@ -41,5 +47,7 @@ function ISNaturalFloor:walkTo(x, y, z) end
 
 ---@param sprite string
 ---@param northSprite string
+---@param item InventoryItem
+---@param character IsoPlayer
 ---@return ISNaturalFloor
 function ISNaturalFloor:new(sprite, northSprite, item, character) end

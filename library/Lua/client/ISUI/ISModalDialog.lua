@@ -4,11 +4,11 @@
 ---@field name unknown?
 ---@field no ISButton?
 ---@field ok ISButton?
----@field onclick function?
+---@field onclick umbrella.ISButton.OnClick?
 ---@field param1 unknown?
 ---@field param2 unknown?
----@field player unknown?
----@field target table?
+---@field player integer?
+---@field target unknown?
 ---@field text string
 ---@field yes ISButton?
 ---@field yesno boolean
@@ -17,6 +17,7 @@ ISModalDialog.Type = "ISModalDialog"
 
 ---@param width number
 ---@param height number
+---@param text string
 ---@return number
 ---@return number
 function ISModalDialog.CalcSize(width, height, text) end
@@ -25,14 +26,19 @@ function ISModalDialog:destroy() end
 
 function ISModalDialog:initialise() end
 
+---@param button ISButton
 function ISModalDialog:onClick(button) end
 
+---@param joypadData JoypadData
 function ISModalDialog:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISModalDialog:onJoypadBeforeDeactivate(joypadData) end
 
+---@param button integer
 function ISModalDialog:onJoypadDown(button) end
 
+---@param joypadData JoypadData
 function ISModalDialog:onLoseJoypadFocus(joypadData) end
 
 ---@param x number
@@ -65,9 +71,9 @@ function ISModalDialog:render() end
 ---@param height number
 ---@param text string
 ---@param yesno boolean
----@param target table?
----@param onclick function?
----@param player unknown?
+---@param target unknown?
+---@param onclick umbrella.ISButton.OnClick?
+---@param player integer?
 ---@param param1 unknown?
 ---@param param2 unknown?
 ---@return ISModalDialog

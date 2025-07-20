@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISRemoveBaitAction : ISBaseTimedAction
----@field trap unknown
+---@field trap CTrapGlobalObject
 ISRemoveBaitAction = ISBaseTimedAction:derive("ISRemoveBaitAction")
 ISRemoveBaitAction.Type = "ISRemoveBaitAction"
 
@@ -22,9 +22,10 @@ function ISRemoveBaitAction:stop() end
 
 function ISRemoveBaitAction:update() end
 
----@return unknown
+---@return boolean
 function ISRemoveBaitAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param trap CTrapGlobalObject
 ---@return ISRemoveBaitAction
 function ISRemoveBaitAction:new(character, trap) end

@@ -11,4 +11,5 @@ local __ISMenuContext = {}
 
 function __ISMenuContext.createMenu() end
 
+---@param _targetTable table<string, fun(): ISMenuElement>
 function __ISMenuContext.loadElements(_targetTable) end

@@ -1,5 +1,7 @@
 ---@meta
 
+---@alias umbrella.Foraging.SpawnFunction fun(character: IsoPlayer, inventory: ItemContainer, itemDef: umbrella.Foraging.ItemDefinition, itemList: ArrayList<InventoryItem>)
+
 ---@class forageSystem
 forageSystem = {}
 forageSystem.defaultDefinitions = {
@@ -122,3 +124,13 @@ forageSystem.defaultDefinitions = {
 		testFuncs = {},
 	},
 }
+
+---@class forageDefaultDefs
+forageDefaultDefs = {}
+forageDefaultDefs.defaultItemDef = nil ---@type unknown
+forageDefaultDefs.defaultZoneDef = nil ---@type unknown
+forageDefaultDefs.defaultCatDef = nil ---@type unknown
+forageDefaultDefs.defaultSkillDef = nil ---@type unknown
+
+---@class forageDefs
+forageDefs = {}

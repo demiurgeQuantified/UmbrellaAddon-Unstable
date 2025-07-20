@@ -2,8 +2,8 @@
 
 ---@class ConnectToServer : ISPanelJoypad
 ---@field animOffset number
----@field arrowBG unknown
----@field arrowFG unknown
+---@field arrowBG Texture
+---@field arrowFG Texture
 ---@field backBtn ISButton
 ---@field connecting boolean
 ---@field connectLabel ISLabel
@@ -13,8 +13,8 @@
 ---@field googleAuthLabel ISLabel
 ---@field googleAuthPopup ISPanel
 ---@field isCoop boolean
----@field loadingBackground unknown?
----@field previousScreen ServerConnectPopup | BootstrapConnectPopup
+---@field loadingBackground Texture?
+---@field previousScreen ISUIElement
 ---@field richText ISRichTextPanel
 ---@field serverName ISLabel
 ---@field serverName1 ISLabel
@@ -26,13 +26,17 @@ ConnectToServer = ISPanelJoypad:derive("ConnectToServer")
 ConnectToServer.Type = "ConnectToServer"
 ConnectToServer.instance = nil ---@type ConnectToServer?
 
----@param previousScreen ServerConnectPopup
+---@param previousScreen ISUIElement
 ---@param serverName string
 ---@param userName string
+---@param password string
+---@param IP string
 ---@param localIP string
+---@param port string
+---@param serverPassword string
 ---@param useSteamRelay boolean
 ---@param doHash boolean
----@param authType number
+---@param authType integer
 function ConnectToServer:connect(
 	previousScreen,
 	serverName,
@@ -48,7 +52,8 @@ function ConnectToServer:connect(
 )
 end
 
----@param previousScreen BootstrapConnectPopup
+---@param previousScreen ISUIElement
+---@param serverSteamID string
 function ConnectToServer:connectCoop(previousScreen, serverSteamID) end
 
 function ConnectToServer:create() end
@@ -61,8 +66,12 @@ function ConnectToServer:OnConnected() end
 ---@param detail string
 function ConnectToServer:OnConnectFailed(message, detail) end
 
+---@param state string
+---@param message string
+---@param arg integer?
 function ConnectToServer:OnConnectionStateChanged(state, message, arg) end
 
+---@param joypadData JoypadData
 function ConnectToServer:onGainJoypadFocus(joypadData) end
 
 function ConnectToServer:OnGoogleAuthRequest() end

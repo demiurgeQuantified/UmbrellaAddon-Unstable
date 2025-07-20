@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISSetComboWasherDryerMode : ISBaseTimedAction
----@field mode unknown
----@field object unknown
+---@field mode "dryer" | "washer"
+---@field object IsoCombinationWasherDryer
 ISSetComboWasherDryerMode = ISBaseTimedAction:derive("ISSetComboWasherDryerMode")
 ISSetComboWasherDryerMode.Type = "ISSetComboWasherDryerMode"
 
@@ -23,5 +23,8 @@ function ISSetComboWasherDryerMode:stop() end
 
 function ISSetComboWasherDryerMode:update() end
 
+---@param character IsoPlayer
+---@param object IsoCombinationWasherDryer
+---@param mode "dryer" | "washer"
 ---@return ISSetComboWasherDryerMode
 function ISSetComboWasherDryerMode:new(character, object, mode) end

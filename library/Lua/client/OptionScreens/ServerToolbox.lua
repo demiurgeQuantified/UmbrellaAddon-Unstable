@@ -17,6 +17,9 @@ function ServerToolbox:clickBack() end
 
 function ServerToolbox:create() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ServerToolbox:doDrawItem(y, item, alt) end
 
@@ -29,8 +32,10 @@ function ServerToolbox:initialise() end
 
 function ServerToolbox:onDblClick() end
 
+---@param joypadData JoypadData
 function ServerToolbox:onGainJoypadFocus(joypadData) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ServerToolbox:onOptionMouseDown(button, x, y) end

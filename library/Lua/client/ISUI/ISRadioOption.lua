@@ -1,16 +1,18 @@
 ---@meta
 
+---@alias umbrella.ISRadioOption.OnChange fun(target: unknown, selected: integer)
+
 ---@class ISRadioOption : ISPanel
----@field changeOptionMethod unknown
----@field changeOptionTarget unknown
----@field choicesColor table
+---@field changeOptionMethod umbrella.ISRadioOption.OnChange?
+---@field changeOptionTarget unknown?
+---@field choicesColor umbrella.RGBA
 ---@field leftMargin number
 ---@field mouseOverOption number
 ---@field name string
 ---@field optionCount number
----@field options table
+---@field options string[]
 ---@field selected number
----@field tickTexture unknown
+---@field tickTexture Texture
 ISRadioOption = ISPanel:derive("ISRadioOption")
 ISRadioOption.Type = "ISRadioOption"
 
@@ -46,5 +48,7 @@ function ISRadioOption:render() end
 ---@param width number
 ---@param height number
 ---@param name string
+---@param changeOptionTarget unknown?
+---@param changeOptionMethod umbrella.ISRadioOption.OnChange?
 ---@return ISRadioOption
 function ISRadioOption:new(x, y, width, height, name, changeOptionTarget, changeOptionMethod) end

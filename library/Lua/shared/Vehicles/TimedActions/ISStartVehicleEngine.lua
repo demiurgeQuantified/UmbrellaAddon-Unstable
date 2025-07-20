@@ -21,5 +21,6 @@ function ISStartVehicleEngine:stop() end
 
 function ISStartVehicleEngine:update() end
 
+---@param character IsoPlayer
 ---@return ISStartVehicleEngine
 function ISStartVehicleEngine:new(character) end

@@ -46,17 +46,20 @@ WinterIsComing.hourOfDay = 7
 
 function WinterIsComing.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function WinterIsComing.AddPlayer(playerNum, playerObj) end
 
 function WinterIsComing.EveryHours() end
 
 function WinterIsComing.OnGameStart() end
 
+---@param _season ErosionSeason
 function WinterIsComing.OnInitSeasons(_season) end
 
 function WinterIsComing.OnInitWorld() end
 
+---@param p IsoPlayer
 function WinterIsComing.RemovePlayer(p) end
 
 function WinterIsComing.Render() end

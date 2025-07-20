@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISFeedingTroughUI : ISCollapsableWindow
----@field chr unknown
----@field item unknown
----@field playerNum unknown
+---@field chr IsoPlayer
+---@field item IsoFeedingTrough
+---@field playerNum integer
 ---@field refreshNeeded boolean
 ISFeedingTroughUI = ISCollapsableWindow:derive("ISFeedingTroughUI")
 ISFeedingTroughUI.Type = "ISFeedingTroughUI"
@@ -20,5 +20,7 @@ function ISFeedingTroughUI:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param trough IsoFeedingTrough
+---@param player IsoPlayer
 ---@return ISFeedingTroughUI
 function ISFeedingTroughUI:new(x, y, width, height, trough, player) end

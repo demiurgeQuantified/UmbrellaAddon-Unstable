@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISSeedActionNew : ISBaseTimedAction
----@field character unknown?
+---@field character IsoPlayer
 ---@field plant string
----@field seed table
----@field sound unknown
----@field typeOfSeed unknown
+---@field seed InventoryItem
+---@field sound integer?
+---@field typeOfSeed string
 ISSeedActionNew = ISBaseTimedAction:derive("ISSeedActionNew")
 ISSeedActionNew.Type = "ISSeedActionNew"
 
@@ -26,11 +26,12 @@ function ISSeedActionNew:stop() end
 
 function ISSeedActionNew:update() end
 
----@return unknown
+---@return boolean
 function ISSeedActionNew:waitToStart() end
 
----@param character unknown?
----@param seed table
----@param plant string
+---@param character IsoPlayer
+---@param seed InventoryItem
+---@param typeOfSeed string
+---@param plant CPlantGlobalObject
 ---@return ISSeedActionNew
 function ISSeedActionNew:new(character, seed, typeOfSeed, plant) end

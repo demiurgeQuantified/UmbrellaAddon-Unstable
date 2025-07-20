@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISFertilizeAction : ISBaseTimedAction
----@field character unknown?
----@field item unknown
----@field plant unknown
----@field sound unknown
+---@field character IsoPlayer
+---@field item InventoryItem
+---@field plant CPlantGlobalObject
+---@field sound integer?
 ISFertilizeAction = ISBaseTimedAction:derive("ISFertilizeAction")
 ISFertilizeAction.Type = "ISFertilizeAction"
 
@@ -25,10 +25,12 @@ function ISFertilizeAction:stop() end
 
 function ISFertilizeAction:update() end
 
----@return unknown
+---@return boolean
 function ISFertilizeAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param plant CPlantGlobalObject
 ---@param maxTime number
 ---@return ISFertilizeAction
 function ISFertilizeAction:new(character, item, plant, maxTime) end

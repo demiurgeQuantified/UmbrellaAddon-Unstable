@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class WorldMapEditorMode_Style : WorldMapEditorMode
----@field currentEditor unknown?
----@field editors table
+---@field currentEditor WorldMapStyleEditor?
+---@field editors table<string, WorldMapStyleEditor>
 ---@field layerNameEntry ISTextEntryBox
 ---@field layerType ISComboBox
 ---@field listbox WorldMapEditorListBox
@@ -19,9 +19,11 @@ function WorldMapEditorMode_Style:fillList() end
 ---@return string
 function WorldMapEditorMode_Style:generateLuaScript() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 ---@return string
 function WorldMapEditorMode_Style:generateLuaScript_FillStops(layer) end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 ---@return string
 function WorldMapEditorMode_Style:generateLuaScript_TextureStops(layer) end
 
@@ -31,11 +33,13 @@ function WorldMapEditorMode_Style:onAdd() end
 
 function WorldMapEditorMode_Style:onChangeLayerType() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Style:onKeyPress(key) end
 
 function WorldMapEditorMode_Style:onLayerNameEntered() end
 
+---@param action string
 function WorldMapEditorMode_Style:onListboxEvent(action) end
 
 function WorldMapEditorMode_Style:onMinZoomEntered() end
@@ -75,24 +79,28 @@ function WorldMapEditorMode_Style:onSelect() end
 
 function WorldMapEditorMode_Style:render() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1?
 function WorldMapEditorMode_Style:setCurrentEditor(layer) end
 
 function WorldMapEditorMode_Style:undisplay() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorMode_Style
 function WorldMapEditorMode_Style:new(editor) end
 
 ---@class WorldMapStyleEditor : ISPanel
----@field editorMode unknown
----@field layer unknown?
----@field mapAPI unknown
----@field mapUI unknown
----@field styleAPI unknown
+---@field editorMode WorldMapEditorMode_Style
+---@field layer WorldMapStyleV1.WorldMapStyleLayerV1?
+---@field mapAPI UIWorldMapV1
+---@field mapUI WorldMapEditor
+---@field styleAPI WorldMapStyleV1
 WorldMapStyleEditor = ISPanel:derive("WorldMapStyleEditor")
 WorldMapStyleEditor.Type = "WorldMapStyleEditor"
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor:display(layer) end
 
+---@param key integer
 ---@return boolean
 function WorldMapStyleEditor:onKeyPress(key) end
 
@@ -100,21 +108,26 @@ function WorldMapStyleEditor:shrinkWrap() end
 
 function WorldMapStyleEditor:undisplay() end
 
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor
 function WorldMapStyleEditor:new(editorMode) end
 
 ---@class WorldMapStyleEditor_TabPanel : ISPanel
----@field editorMode unknown
----@field layer unknown
----@field mapAPI unknown
----@field mapUI unknown
----@field styleAPI unknown
+---@field editorMode WorldMapEditorMode_Style
+---@field layer WorldMapStyleV1.WorldMapStyleLayerV1?
+---@field mapAPI UIWorldMapV1
+---@field mapUI WorldMapEditor
+---@field styleAPI WorldMapStyleV1
 WorldMapStyleEditor_TabPanel = ISPanel:derive("WorldMapStyleEditor_TabPanel")
 WorldMapStyleEditor_TabPanel.Type = "WorldMapStyleEditor_TabPanel"
 
----@return number?
+---@param entry ISTextEntryBox
+---@param min number
+---@param max number
+---@return number
 function WorldMapStyleEditor_TabPanel:getEntryClamped(entry, min, max) end
 
+---@param key integer
 ---@return boolean
 function WorldMapStyleEditor_TabPanel:onKeyPress(key) end
 
@@ -143,6 +156,7 @@ function WorldMapStyleEditor_TabPanel:onMouseUpOutsideMap(x, y) end
 ---@return boolean
 function WorldMapStyleEditor_TabPanel:onRightMouseDownMap(x, y) end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_TabPanel:populateList(layer) end
 
 function WorldMapStyleEditor_TabPanel:undisplay() end
@@ -162,9 +176,11 @@ function WorldMapStyleEditor_FilterPanel:onKeyEntered() end
 
 function WorldMapStyleEditor_FilterPanel:onValueEntered() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_FilterPanel:populateList(layer) end
 
 ---@param width number
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor_FilterPanel
 function WorldMapStyleEditor_FilterPanel:new(width, editorMode) end
 
@@ -180,22 +196,22 @@ WorldMapStyleEditor_ColorStopsPanel.Type = "WorldMapStyleEditor_ColorStopsPanel"
 
 function WorldMapStyleEditor_ColorStopsPanel:createChildren() end
 
----@return unknown?
+---@return integer?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedAlpha() end
 
----@return unknown?
+---@return integer?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedBlue() end
 
----@return unknown?
+---@return integer?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedGreen() end
 
----@return number?
+---@return integer?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedIndex() end
 
----@return unknown?
+---@return integer?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedRed() end
 
----@return unknown?
+---@return number?
 function WorldMapStyleEditor_ColorStopsPanel:getSelectedZoom() end
 
 function WorldMapStyleEditor_ColorStopsPanel:onAdd() end
@@ -206,6 +222,7 @@ function WorldMapStyleEditor_ColorStopsPanel:onBlueEntered() end
 
 function WorldMapStyleEditor_ColorStopsPanel:onGreenEntered() end
 
+---@param action string
 function WorldMapStyleEditor_ColorStopsPanel:onListboxEvent(action) end
 
 function WorldMapStyleEditor_ColorStopsPanel:onMoveDown() end
@@ -220,15 +237,17 @@ function WorldMapStyleEditor_ColorStopsPanel:onSelect() end
 
 function WorldMapStyleEditor_ColorStopsPanel:onZoomEntered() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_ColorStopsPanel:populateList(layer) end
 
----@param r number
----@param g number
----@param b number
----@param a number
+---@param r integer
+---@param g integer
+---@param b integer
+---@param a integer
 function WorldMapStyleEditor_ColorStopsPanel:setRGBA(r, g, b, a) end
 
 ---@param width number
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor_ColorStopsPanel
 function WorldMapStyleEditor_ColorStopsPanel:new(width, editorMode) end
 
@@ -241,20 +260,21 @@ WorldMapStyleEditor_TextureStopsPanel.Type = "WorldMapStyleEditor_TextureStopsPa
 
 function WorldMapStyleEditor_TextureStopsPanel:createChildren() end
 
----@return number?
+---@return integer?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedIndex() end
 
----@return unknown?
+---@return Texture?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedTexture() end
 
----@return unknown?
+---@return string?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedTexturePath() end
 
----@return unknown?
+---@return number?
 function WorldMapStyleEditor_TextureStopsPanel:getSelectedZoom() end
 
 function WorldMapStyleEditor_TextureStopsPanel:onAdd() end
 
+---@param action string
 function WorldMapStyleEditor_TextureStopsPanel:onListboxEvent(action) end
 
 ---@param x number
@@ -289,11 +309,13 @@ function WorldMapStyleEditor_TextureStopsPanel:onTexturePathEntered() end
 
 function WorldMapStyleEditor_TextureStopsPanel:onZoomEntered() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_TextureStopsPanel:populateList(layer) end
 
 function WorldMapStyleEditor_TextureStopsPanel:render() end
 
 ---@param width number
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor_TextureStopsPanel
 function WorldMapStyleEditor_TextureStopsPanel:new(width, editorMode) end
 
@@ -304,7 +326,7 @@ function WorldMapStyleEditor_TextureStopsPanel:new(width, editorMode) end
 ---@field resizer WorldMapEditorResizer
 ---@field scaleEntry ISTextEntryBox
 ---@field sizeLocked boolean
----@field snapButtons table
+---@field snapButtons table<string, ISButton>
 ---@field snapMode string
 ---@field textureMode ISComboBox
 ---@field useWorldBounds ISTickBox
@@ -324,12 +346,14 @@ function WorldMapStyleEditor_TexturePanel:onBoundsFromTexture() end
 
 function WorldMapStyleEditor_TexturePanel:onChangeSizeLocked() end
 
+---@param button ISButton
 function WorldMapStyleEditor_TexturePanel:onChangeSnapMode(button) end
 
 function WorldMapStyleEditor_TexturePanel:onChangeTextureMode() end
 
 function WorldMapStyleEditor_TexturePanel:onChangeUseWorldBounds() end
 
+---@param key integer
 ---@return boolean
 function WorldMapStyleEditor_TexturePanel:onKeyPress(key) end
 
@@ -363,6 +387,7 @@ function WorldMapStyleEditor_TexturePanel:onScaleEntered() end
 
 function WorldMapStyleEditor_TexturePanel:onSelect() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_TexturePanel:populateList(layer) end
 
 function WorldMapStyleEditor_TexturePanel:render() end
@@ -370,6 +395,7 @@ function WorldMapStyleEditor_TexturePanel:render() end
 function WorldMapStyleEditor_TexturePanel:undisplay() end
 
 ---@param width number
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor_TexturePanel
 function WorldMapStyleEditor_TexturePanel:new(width, editorMode) end
 
@@ -383,37 +409,39 @@ WorldMapStyleEditor_PolygonLayerPanel.Type = "WorldMapStyleEditor_PolygonLayerPa
 
 function WorldMapStyleEditor_PolygonLayerPanel:createChildren() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_PolygonLayerPanel:display(layer) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseDownMap(x, y) end
 
 ---@param dx number
 ---@param dy number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseMoveMap(dx, dy) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseUpMap(x, y) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_PolygonLayerPanel:onMouseUpOutsideMap(x, y) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_PolygonLayerPanel:onRightMouseDownMap(x, y) end
 
 function WorldMapStyleEditor_PolygonLayerPanel:render() end
 
 function WorldMapStyleEditor_PolygonLayerPanel:undisplay() end
 
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor_PolygonLayerPanel
 function WorldMapStyleEditor_PolygonLayerPanel:new(editorMode) end
 
@@ -426,39 +454,42 @@ WorldMapStyleEditor_TextureLayerPanel.Type = "WorldMapStyleEditor_TextureLayerPa
 
 function WorldMapStyleEditor_TextureLayerPanel:createChildren() end
 
+---@param layer WorldMapStyleV1.WorldMapStyleLayerV1
 function WorldMapStyleEditor_TextureLayerPanel:display(layer) end
 
----@return unknown
+---@param key integer
+---@return unknown?
 function WorldMapStyleEditor_TextureLayerPanel:onKeyPress(key) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_TextureLayerPanel:onMouseDownMap(x, y) end
 
 ---@param dx number
 ---@param dy number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_TextureLayerPanel:onMouseMoveMap(dx, dy) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_TextureLayerPanel:onMouseUpMap(x, y) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_TextureLayerPanel:onMouseUpOutsideMap(x, y) end
 
 ---@param x number
 ---@param y number
----@return unknown
+---@return unknown?
 function WorldMapStyleEditor_TextureLayerPanel:onRightMouseDownMap(x, y) end
 
 function WorldMapStyleEditor_TextureLayerPanel:render() end
 
 function WorldMapStyleEditor_TextureLayerPanel:undisplay() end
 
+---@param editorMode WorldMapEditorMode_Style
 ---@return WorldMapStyleEditor_TextureLayerPanel
 function WorldMapStyleEditor_TextureLayerPanel:new(editorMode) end

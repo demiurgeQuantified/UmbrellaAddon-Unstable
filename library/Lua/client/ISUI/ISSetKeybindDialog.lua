@@ -13,6 +13,7 @@ function ISSetKeybindDialog:createChildren() end
 
 function ISSetKeybindDialog:destroy() end
 
+---@param key integer
 ---@return boolean
 function ISSetKeybindDialog:isKeyConsumed(key) end
 
@@ -22,8 +23,10 @@ function ISSetKeybindDialog:onClear() end
 
 function ISSetKeybindDialog:onDefault() end
 
+---@param key integer
 function ISSetKeybindDialog:onKeyRelease(key) end
 
+---@param btn ISButton
 function ISSetKeybindDialog:onMouseButtonDown(btn) end
 
 ---@param keybindName string

@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISCraftRecipeIconsPanel : ISPanel
----@field activeTooltip unknown?
----@field iconPanel unknown?
----@field player unknown
----@field playerNum unknown
+---@field activeTooltip ISCraftRecipeTooltip?
+---@field iconPanel ISTiledIconPanel?
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field searchText string
 ---@field tooltipCounter number
 ---@field tooltipCounterTime number
----@field tooltipRecipe unknown?
+---@field tooltipRecipe CraftRecipe?
 ISCraftRecipeIconsPanel = ISPanel:derive("ISCraftRecipeIconsPanel")
 ISCraftRecipeIconsPanel.Type = "ISCraftRecipeIconsPanel"
 
@@ -34,5 +34,6 @@ function ISCraftRecipeIconsPanel:updateTooltip() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ISCraftRecipeIconsPanel
 function ISCraftRecipeIconsPanel:new(x, y, width, height, player) end

@@ -2,12 +2,12 @@
 
 ---@class ISProgressBar : ISUIElement
 ---@field background boolean
----@field backgroundColor table
----@field borderColor table
+---@field backgroundColor umbrella.RGBA
+---@field borderColor umbrella.RGBA
 ---@field doRenderTexture boolean
 ---@field doTextBackdrop boolean
----@field font unknown
----@field horizontalTexture unknown
+---@field font UIFont
+---@field horizontalTexture Texture
 ---@field isVertical boolean
 ---@field moveWithMouse boolean
 ---@field paddingBottom number
@@ -15,17 +15,17 @@
 ---@field paddingRight number
 ---@field paddingTop number
 ---@field progress number
----@field progressColor table
----@field text string
----@field textBackColor table
----@field textColor table
----@field textH unknown
----@field textW unknown
----@field verticalTexture unknown
+---@field progressColor umbrella.RGBA
+---@field text string?
+---@field textBackColor umbrella.RGBA
+---@field textColor umbrella.RGBA
+---@field textH number?
+---@field textW number?
+---@field verticalTexture Texture
 ISProgressBar = ISUIElement:derive("ISProgressBar")
 ISProgressBar.Type = "ISProgressBar"
 
----@return unknown?
+---@return Texture?
 function ISProgressBar:getRenderTexture() end
 
 function ISProgressBar:initialise() end
@@ -38,18 +38,20 @@ function ISProgressBar:prerender() end
 ---@param _y number
 ---@param _w number
 ---@param _h number
+---@param _vertical boolean
 function ISProgressBar:renderTexture(_x, _y, _w, _h, _vertical) end
 
 ---@param _p number
 function ISProgressBar:setProgress(_p) end
 
----@param _text string
+---@param _text string?
 function ISProgressBar:setText(_text) end
 
 ---@param x number
 ---@param y number
 ---@param width number
 ---@param height number
----@param text string | boolean
+---@param text string?
+---@param font UIFont?
 ---@return ISProgressBar
 function ISProgressBar:new(x, y, width, height, text, font) end

@@ -2,11 +2,11 @@
 
 ---@class ISWidgetRecipeFilterPanel : ISPanelJoypad
 ---@field autoFillContents boolean
----@field buttonGrid unknown?
----@field buttonList unknown?
----@field callbackTarget unknown
----@field entryBox unknown?
----@field filterTypeCombo unknown?
+---@field buttonGrid ISButton
+---@field buttonList ISButton
+---@field callbackTarget unknown?
+---@field entryBox ISTextEntryBox
+---@field filterTypeCombo ISComboBox?
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
@@ -19,32 +19,41 @@
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
----@field searchHackLabel unknown?
+---@field searchHackLabel ISLabel
 ---@field sortCombo unknown?
----@field tickbox unknown?
+---@field tickbox ISTickBox?
 ISWidgetRecipeFilterPanel = ISPanelJoypad:derive("ISWidgetRecipeFilterPanel")
 ISWidgetRecipeFilterPanel.Type = "ISWidgetRecipeFilterPanel"
 
+---@param box ISTextEntryBox
 function ISWidgetRecipeFilterPanel.onTextChange(box) end
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetRecipeFilterPanel:createChildren() end
 
 function ISWidgetRecipeFilterPanel:initialise() end
 
+---@param _button ISButton
 function ISWidgetRecipeFilterPanel:onButtonClick(_button) end
 
+---@param box ISTextEntryBox
 function ISWidgetRecipeFilterPanel:OnClickFilterType(box) end
 
 function ISWidgetRecipeFilterPanel:OnClickSortType(box) end
 
+---@param joypadData JoypadData
 function ISWidgetRecipeFilterPanel:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISWidgetRecipeFilterPanel:onLoseJoypadFocus(joypadData) end
 
 function ISWidgetRecipeFilterPanel:onResize() end
 
+---@param clickedOption integer
+---@param enabled boolean
 function ISWidgetRecipeFilterPanel:OnShowAllClick(clickedOption, enabled) end
 
 function ISWidgetRecipeFilterPanel:populateComboList() end
@@ -61,5 +70,6 @@ function ISWidgetRecipeFilterPanel:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param callbackTarget unknown?
 ---@return ISWidgetRecipeFilterPanel
 function ISWidgetRecipeFilterPanel:new(x, y, width, height, callbackTarget) end

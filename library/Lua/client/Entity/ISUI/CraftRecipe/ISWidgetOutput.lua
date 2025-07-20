@@ -1,18 +1,18 @@
 ---@meta
 
 ---@class ISWidgetOutput : ISPanel
----@field amountWidth unknown
----@field amountWidth2 unknown
----@field arrow unknown?
+---@field amountWidth number
+---@field amountWidth2 number
+---@field arrow ISImage?
 ---@field autoFillContents boolean
----@field colBad table
----@field colPartial table
----@field createScript unknown
+---@field colBad umbrella.RGBA
+---@field colPartial umbrella.RGBA
+---@field createScript OutputScript?
 ---@field doToolTip boolean
 ---@field editedLabels boolean
 ---@field iconBorderSizeX number
 ---@field iconBorderSizeY number
----@field iconCreate unknown?
+---@field iconCreate ISImage
 ---@field iconMargin number
 ---@field iconSize number
 ---@field interactiveMode boolean
@@ -20,26 +20,29 @@
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
 ---@field labelIconSize number
----@field logic unknown
+---@field logic BaseCraftingLogic
 ---@field margin number
 ---@field normalBorderColor table
----@field outputScript unknown
----@field player unknown
----@field primary table
----@field secondary table
----@field textColor table
----@field textureConsumed unknown
----@field textureCreate unknown
----@field textureReturned unknown
----@field textureTool unknown
+---@field outputScript OutputScript
+---@field player IsoPlayer
+---@field primary umbrella.ISWidgetInput.ScriptValues
+---@field secondary umbrella.ISWidgetInput.ScriptValues?
+---@field textColor umbrella.RGBA
+---@field textureConsumed Texture
+---@field textureCreate Texture
+---@field textureReturned Texture
+---@field textureTool Texture
 ISWidgetOutput = ISPanel:derive("ISWidgetOutput")
 ISWidgetOutput.Type = "ISWidgetOutput"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISWidgetOutput:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetOutput:createChildren() end
 
----@return table
+---@param _script OutputScript
+---@return umbrella.ISWidgetInput.ScriptValues
 function ISWidgetOutput:createScriptValues(_script) end
 
 function ISWidgetOutput:initialise() end
@@ -52,7 +55,7 @@ function ISWidgetOutput:render() end
 
 function ISWidgetOutput:update() end
 
----@param _table table
+---@param _table umbrella.ISWidgetInput.ScriptValues
 function ISWidgetOutput:updateScriptValues(_table) end
 
 function ISWidgetOutput:updateValues() end
@@ -61,5 +64,8 @@ function ISWidgetOutput:updateValues() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param logic BaseCraftingLogic
+---@param outputScript OutputScript
 ---@return ISWidgetOutput
 function ISWidgetOutput:new(x, y, width, height, player, logic, outputScript) end

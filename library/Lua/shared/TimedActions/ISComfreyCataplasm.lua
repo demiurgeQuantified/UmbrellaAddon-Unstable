@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISComfreyCataplasm : ISBaseTimedAction
----@field bandagedPlayerX unknown
----@field bandagedPlayerY unknown
----@field bodyPart unknown
+---@field bandagedPlayerX number
+---@field bandagedPlayerY number
+---@field bodyPart BodyPart
 ---@field doctorLevel number
----@field item unknown
----@field otherPlayer unknown
+---@field item InventoryItem
+---@field otherPlayer IsoPlayer
 ISComfreyCataplasm = ISBaseTimedAction:derive("ISComfreyCataplasm")
 ISComfreyCataplasm.Type = "ISComfreyCataplasm"
 
@@ -16,7 +16,7 @@ function ISComfreyCataplasm:complete() end
 ---@return number
 function ISComfreyCataplasm:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISComfreyCataplasm:isValid() end
 
 function ISComfreyCataplasm:perform() end
@@ -30,5 +30,9 @@ function ISComfreyCataplasm:update() end
 ---@return boolean
 function ISComfreyCataplasm:waitToStart() end
 
+---@param character IsoPlayer
+---@param otherPlayer IsoPlayer
+---@param item InventoryItem
+---@param bodyPart BodyPart
 ---@return ISComfreyCataplasm
 function ISComfreyCataplasm:new(character, otherPlayer, item, bodyPart) end

@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISChangeFishingRodEquip : ISBaseTimedAction
----@field item unknown
----@field rod unknown
+---@field item InventoryItem
+---@field rod InventoryItem
 ISChangeFishingRodEquip = ISBaseTimedAction:derive("ISChangeFishingRodEquip")
 ISChangeFishingRodEquip.Type = "ISChangeFishingRodEquip"
 
@@ -12,7 +12,7 @@ function ISChangeFishingRodEquip:complete() end
 ---@return number
 function ISChangeFishingRodEquip:getDuration() end
 
----@return unknown?
+---@return boolean
 function ISChangeFishingRodEquip:isValid() end
 
 function ISChangeFishingRodEquip:perform() end
@@ -23,5 +23,8 @@ function ISChangeFishingRodEquip:stop() end
 
 function ISChangeFishingRodEquip:update() end
 
+---@param character IsoPlayer
+---@param rod InventoryItem
+---@param item InventoryItem
 ---@return ISChangeFishingRodEquip
 function ISChangeFishingRodEquip:new(character, rod, item) end

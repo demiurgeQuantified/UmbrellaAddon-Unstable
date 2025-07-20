@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISBBQRemovePropaneTank : ISBaseTimedAction
----@field bbq unknown
----@field sound unknown
+---@field bbq IsoBarbecue
+---@field sound integer?
 ISBBQRemovePropaneTank = ISBaseTimedAction:derive("ISBBQRemovePropaneTank")
 ISBBQRemovePropaneTank.Type = "ISBBQRemovePropaneTank"
 
@@ -23,9 +23,10 @@ function ISBBQRemovePropaneTank:stop() end
 
 function ISBBQRemovePropaneTank:update() end
 
----@return unknown
+---@return boolean
 function ISBBQRemovePropaneTank:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param bbq IsoBarbecue
 ---@return ISBBQRemovePropaneTank
 function ISBBQRemovePropaneTank:new(character, bbq) end

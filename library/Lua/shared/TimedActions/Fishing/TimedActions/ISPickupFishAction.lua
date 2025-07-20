@@ -5,19 +5,21 @@
 ---@field fishInArm boolean
 ---@field fishInInv boolean
 ---@field isFish boolean
----@field item unknown
----@field maxTime number?
----@field rod unknown
+---@field item InventoryItem
+---@field maxTime number
+---@field rod InventoryItem
 ---@field startShowModel number
 ISPickupFishAction = ISBaseTimedAction:derive("ISPickupFishAction")
 ISPickupFishAction.Type = "ISPickupFishAction"
 
+---@param event string
+---@param parameter string
 function ISPickupFishAction:animEvent(event, parameter) end
 
 ---@return boolean
 function ISPickupFishAction:complete() end
 
----@return number?
+---@return number
 function ISPickupFishAction:getDuration() end
 
 ---@return boolean
@@ -35,5 +37,8 @@ function ISPickupFishAction:stop() end
 
 function ISPickupFishAction:update() end
 
+---@param character IsoPlayer
+---@param rod InventoryItem
+---@param fish InventoryItem
 ---@return ISPickupFishAction
 function ISPickupFishAction:new(character, rod, fish) end

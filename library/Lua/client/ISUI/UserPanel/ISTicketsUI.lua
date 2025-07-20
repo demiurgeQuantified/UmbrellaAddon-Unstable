@@ -17,6 +17,9 @@ function ISTicketsUI.gotTickets(tickets) end
 
 function ISTicketsUI:close() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISTicketsUI:drawDatas(y, item, alt) end
 
@@ -24,8 +27,10 @@ function ISTicketsUI:getTickets() end
 
 function ISTicketsUI:initialise() end
 
+---@param button ISButton
 function ISTicketsUI:onAddTicket(button) end
 
+---@param button ISButton
 function ISTicketsUI:onClick(button) end
 
 function ISTicketsUI:populateList() end

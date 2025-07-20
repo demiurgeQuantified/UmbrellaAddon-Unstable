@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISRemoveBullet : ISBaseTimedAction
----@field bandagedPlayerX unknown
----@field bandagedPlayerY unknown
----@field bodyPart unknown
----@field doctor unknown
----@field doctorLevel number
----@field otherPlayer unknown
----@field sound unknown
+---@field bandagedPlayerX number
+---@field bandagedPlayerY number
+---@field bodyPart BodyPart
+---@field doctor IsoPlayer
+---@field doctorLevel integer
+---@field otherPlayer IsoPlayer
+---@field sound integer?
 ISRemoveBullet = ISBaseTimedAction:derive("ISRemoveBullet")
 ISRemoveBullet.Type = "ISRemoveBullet"
 
@@ -33,5 +33,8 @@ function ISRemoveBullet:update() end
 ---@return boolean
 function ISRemoveBullet:waitToStart() end
 
+---@param character IsoPlayer
+---@param otherPlayer IsoPlayer
+---@param bodyPart BodyPart
 ---@return ISRemoveBullet
 function ISRemoveBullet:new(character, otherPlayer, bodyPart) end

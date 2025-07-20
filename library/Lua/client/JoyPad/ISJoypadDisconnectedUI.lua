@@ -3,7 +3,7 @@
 ---@class ISJoypadDisconnectedUI : ISUIElement
 ---@field buttonKBM ISButton
 ---@field label ISLabel
----@field playerNum number
+---@field playerNum integer
 ISJoypadDisconnectedUI = ISUIElement:derive("ISJoypadDisconnectedUI")
 ISJoypadDisconnectedUI.Type = "ISJoypadDisconnectedUI"
 
@@ -17,6 +17,6 @@ function ISJoypadDisconnectedUI:update() end
 
 function ISJoypadDisconnectedUI:useKeyboardMouse() end
 
----@param playerNum number
+---@param playerNum integer
 ---@return ISJoypadDisconnectedUI
 function ISJoypadDisconnectedUI:new(playerNum) end

@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISGetCompost : ISBaseTimedAction
----@field compost unknown
----@field item unknown
+---@field compost IsoCompost
+---@field item InventoryItem
 ISGetCompost = ISBaseTimedAction:derive("ISGetCompost")
 ISGetCompost.Type = "ISGetCompost"
 
@@ -12,7 +12,7 @@ function ISGetCompost:complete() end
 ---@return number
 function ISGetCompost:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISGetCompost:isValid() end
 
 function ISGetCompost:perform() end
@@ -23,6 +23,8 @@ function ISGetCompost:stop() end
 
 function ISGetCompost:update() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param compost IsoCompost
+---@param item InventoryItem
 ---@return ISGetCompost
 function ISGetCompost:new(character, compost, item) end

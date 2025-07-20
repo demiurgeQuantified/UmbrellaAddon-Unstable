@@ -2,7 +2,7 @@
 
 ---@class ISActivateGenerator : ISBaseTimedAction
 ---@field activate boolean
----@field generator unknown
+---@field generator IsoGenerator
 ISActivateGenerator = ISBaseTimedAction:derive("ISActivateGenerator")
 ISActivateGenerator.Type = "ISActivateGenerator"
 
@@ -23,10 +23,11 @@ function ISActivateGenerator:stop() end
 
 function ISActivateGenerator:update() end
 
----@return unknown
+---@return boolean
 function ISActivateGenerator:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param generator IsoGenerator
 ---@param activate boolean
 ---@return ISActivateGenerator
 function ISActivateGenerator:new(character, generator, activate) end

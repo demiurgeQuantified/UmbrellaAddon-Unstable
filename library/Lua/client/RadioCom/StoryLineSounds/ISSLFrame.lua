@@ -3,24 +3,28 @@
 ---@class ISSLFrame : ISPanel
 ---@field doGridLines boolean
 ---@field dragInside boolean
----@field eventData table
+---@field eventData umbrella.ISSSLEvent.EventDataTable[]
 ---@field fontheight number
----@field gridColor table
----@field gridData table
+---@field gridColor umbrella.RGBA
+---@field gridData umbrella.ISSLFrame.GridData[]
 ---@field gridHorzSpacing number
----@field gridPadding table
----@field gridRectangle table
+---@field gridPadding umbrella.ISSLFrame.Padding
+---@field gridRectangle umbrella.ISSLFrame.Rect
 ---@field gridVertSpacing number
----@field storyEvent unknown
+---@field storyEvent StorySoundEvent
 ---@field visualGrid table
 ISSLFrame = ISPanel:derive("ISSLFrame")
 ISSLFrame.Type = "ISSLFrame"
 
 ---@param _name string
+---@param _col Color
+---@param _t umbrella.ISSLFrame.GridData.DataPoint[]
 function ISSLFrame:addGridData(_name, _col, _t) end
 
 function ISSLFrame:createChildren() end
 
+---@param _t number
+---@param _i number
 ---@return number
 ---@return number
 function ISSLFrame:dataToGrid(_t, _i) end
@@ -68,11 +72,12 @@ function ISSLFrame:prerender() end
 
 function ISSLFrame:render() end
 
+---@param _event StorySoundEvent
 function ISSLFrame:setStoryEvent(_event) end
 
 function ISSLFrame:update() end
 
----@return table
+---@return umbrella.ISSLFrame.Rect
 function ISSLFrame:updateGridRectangle() end
 
 function ISSLFrame:updateVisualGrid() end
@@ -83,3 +88,35 @@ function ISSLFrame:updateVisualGrid() end
 ---@param height number
 ---@return ISSLFrame
 function ISSLFrame:new(x, y, width, height) end
+
+---@class umbrella.ISSLFrame.Rect
+---@field h number
+---@field w number
+---@field x number
+---@field x2 number
+---@field y number
+---@field y2 number
+umbrella_ISSLFrame_Rect = {}
+
+---@class umbrella.ISSLFrame.Padding
+---@field bot number
+---@field left number
+---@field right number
+---@field top number
+umbrella_ISSLFrame_Padding = {}
+
+---@class umbrella.ISSLFrame.GridData
+---@field color Color
+---@field dataPoints umbrella.ISSLFrame.GridData.DataPoint[]
+---@field name string
+umbrella_ISSLFrame_GridData = {}
+
+---@class umbrella.ISSLFrame.GridData.DataPoint
+---@field i number
+---@field t number
+umbrella_ISSLFrame_GridData_DataPoint = {}
+
+---@param num number
+---@param idp integer
+---@return number
+function round(num, idp) end

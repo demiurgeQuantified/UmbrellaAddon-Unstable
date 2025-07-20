@@ -18,6 +18,7 @@ function ISFluidPanelAction:stop() end
 
 function ISFluidPanelAction:update() end
 
+---@param character IsoPlayer
 ---@param _container ISFluidContainer
 ---@param _panelClass ISFluidTransferUI | ISFluidInfoUI
 ---@param isSource boolean?

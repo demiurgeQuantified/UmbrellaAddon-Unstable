@@ -3,7 +3,9 @@
 ---@class ISBuryCorpse : ISBaseTimedAction
 ---@field bodySquare unknown?
 ---@field grave unknown
+---@field graves IsoThumpable
 ---@field primaryHandItem unknown
+---@field shovel InventoryItem
 ISBuryCorpse = ISBaseTimedAction:derive("ISBuryCorpse")
 ISBuryCorpse.Type = "ISBuryCorpse"
 
@@ -12,6 +14,9 @@ function ISBuryCorpse:complete() end
 
 ---@return number
 function ISBuryCorpse:getDuration() end
+
+---@param square IsoGridSquare
+function ISBuryCorpse:increaseCorpse(square) end
 
 ---@return boolean
 function ISBuryCorpse:isValid() end
@@ -27,10 +32,11 @@ function ISBuryCorpse:stop() end
 
 function ISBuryCorpse:update() end
 
----@return unknown
+---@return boolean
 function ISBuryCorpse:waitToStart() end
 
----@param character unknown?
----@param bodySquare unknown?
+---@param character IsoPlayer
+---@param graves IsoThumpable
+---@param shovel InventoryItem
 ---@return ISBuryCorpse
-function ISBuryCorpse:new(character, grave, primaryHandItem, bodySquare) end
+function ISBuryCorpse:new(character, graves, shovel) end

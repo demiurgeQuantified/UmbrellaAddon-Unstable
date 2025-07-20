@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISPlantInfoAction : ISBaseTimedAction
----@field plant unknown
----@field playerNum unknown
+---@field plant CPlantGlobalObject
+---@field playerNum integer
 ISPlantInfoAction = ISBaseTimedAction:derive("ISPlantInfoAction")
 ISPlantInfoAction.Type = "ISPlantInfoAction"
 
@@ -17,8 +17,10 @@ function ISPlantInfoAction:stop() end
 
 function ISPlantInfoAction:update() end
 
----@return unknown
+---@return boolean
 function ISPlantInfoAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param plant CPlantGlobalObject
 ---@return ISPlantInfoAction
 function ISPlantInfoAction:new(character, plant) end

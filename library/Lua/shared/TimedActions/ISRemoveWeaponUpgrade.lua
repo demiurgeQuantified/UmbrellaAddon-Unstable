@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISRemoveWeaponUpgrade : ISBaseTimedAction
----@field partType unknown
----@field weapon unknown
+---@field partType string
+---@field weapon HandWeapon
 ISRemoveWeaponUpgrade = ISBaseTimedAction:derive("ISRemoveWeaponUpgrade")
 ISRemoveWeaponUpgrade.Type = "ISRemoveWeaponUpgrade"
 
@@ -23,5 +23,8 @@ function ISRemoveWeaponUpgrade:stop() end
 
 function ISRemoveWeaponUpgrade:update() end
 
+---@param character IsoPlayer
+---@param weapon HandWeapon
+---@param partType string
 ---@return ISRemoveWeaponUpgrade
 function ISRemoveWeaponUpgrade:new(character, weapon, partType) end

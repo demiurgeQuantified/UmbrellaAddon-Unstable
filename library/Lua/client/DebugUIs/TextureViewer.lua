@@ -2,8 +2,8 @@
 
 ---@class TextureWindow : ISCollapsableWindow
 ---@field renderPanel ISPanel
----@field tex unknown
----@field title unknown
+---@field tex Texture
+---@field title string
 TextureWindow = ISCollapsableWindow:derive("TextureWindow")
 TextureWindow.Type = "TextureWindow"
 
@@ -17,5 +17,6 @@ function TextureWindow:renderTex() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param tex Texture
 ---@return TextureWindow
 function TextureWindow:new(x, y, width, height, tex) end

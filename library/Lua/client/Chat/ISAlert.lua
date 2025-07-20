@@ -8,6 +8,8 @@ ISAlert.Type = "ISAlert"
 ISAlert.instance = nil ---@type ISAlert?
 ISAlert.alert = nil ---@type ISAlert?
 
+---@param message ChatMessage
+---@param tabID integer
 function ISAlert.getAlert(message, tabID) end
 
 function ISAlert.setupAlerts() end

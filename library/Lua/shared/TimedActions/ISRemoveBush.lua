@@ -1,27 +1,31 @@
 ---@meta
 
 ---@class ISRemoveBush : ISBaseTimedAction
----@field character unknown?
+---@field character IsoPlayer
 ---@field spriteFrame number
----@field square unknown
+---@field square IsoGridSquare
 ---@field wallVine boolean?
----@field weapon unknown
+---@field weapon InventoryItem?
 ISRemoveBush = ISBaseTimedAction:derive("ISRemoveBush")
 ISRemoveBush.Type = "ISRemoveBush"
 
+---@param event string
+---@param parameter string
 function ISRemoveBush:animEvent(event, parameter) end
 
 ---@return boolean
 function ISRemoveBush:complete() end
 
----@return unknown?
+---@param square IsoGridSquare
+---@return IsoObject?
 function ISRemoveBush:getBushObject(square) end
 
 ---@return number
 function ISRemoveBush:getDuration() end
 
----@return unknown?
----@return number?
+---@param square IsoGridSquare
+---@return IsoObject?
+---@return integer?
 function ISRemoveBush:getWallVineObject(square) end
 
 ---@return boolean
@@ -39,10 +43,11 @@ function ISRemoveBush:update() end
 
 function ISRemoveBush:useEndurance() end
 
----@return unknown
+---@return boolean
 function ISRemoveBush:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param square IsoGridSquare
 ---@param wallVine boolean?
 ---@return ISRemoveBush
 function ISRemoveBush:new(character, square, wallVine) end

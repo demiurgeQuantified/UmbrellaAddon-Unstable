@@ -2,14 +2,14 @@
 
 ---@class ISRefuelFromGasPump : ISBaseTimedAction
 ---@field amountSent number
----@field fuelStation unknown?
----@field part unknown
----@field pumpStart unknown
----@field pumpTarget number
----@field sound unknown
----@field tankStart unknown
----@field tankTarget number
----@field vehicle unknown
+---@field fuelStation IsoObject
+---@field part VehiclePart
+---@field pumpStart number?
+---@field pumpTarget number?
+---@field sound integer?
+---@field tankStart number?
+---@field tankTarget number?
+---@field vehicle BaseVehicle
 ISRefuelFromGasPump = ISBaseTimedAction:derive("ISRefuelFromGasPump")
 ISRefuelFromGasPump.Type = "ISRefuelFromGasPump"
 
@@ -19,7 +19,7 @@ function ISRefuelFromGasPump:complete() end
 ---@return number
 function ISRefuelFromGasPump:getDuration() end
 
----@return unknown
+---@return boolean
 function ISRefuelFromGasPump:isValid() end
 
 function ISRefuelFromGasPump:perform() end
@@ -32,9 +32,11 @@ function ISRefuelFromGasPump:stop() end
 
 function ISRefuelFromGasPump:update() end
 
----@return unknown
+---@return boolean
 function ISRefuelFromGasPump:waitToStart() end
 
----@param fuelStation unknown?
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param fuelStation IsoObject
 ---@return ISRefuelFromGasPump
 function ISRefuelFromGasPump:new(character, part, fuelStation) end

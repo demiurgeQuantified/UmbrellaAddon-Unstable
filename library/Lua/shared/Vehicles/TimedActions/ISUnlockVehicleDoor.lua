@@ -2,8 +2,8 @@
 
 ---@class ISUnlockVehicleDoor : ISBaseTimedAction
 ---@field forceValid boolean
----@field part unknown?
----@field vehicle unknown
+---@field part VehiclePart
+---@field vehicle BaseVehicle
 ISUnlockVehicleDoor = ISBaseTimedAction:derive("ISUnlockVehicleDoor")
 ISUnlockVehicleDoor.Type = "ISUnlockVehicleDoor"
 
@@ -24,6 +24,7 @@ function ISUnlockVehicleDoor:stop() end
 
 function ISUnlockVehicleDoor:update() end
 
----@param part unknown?
+---@param character IsoPlayer
+---@param part VehiclePart
 ---@return ISUnlockVehicleDoor
 function ISUnlockVehicleDoor:new(character, part) end

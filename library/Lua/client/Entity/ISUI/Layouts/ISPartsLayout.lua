@@ -17,7 +17,7 @@
 ---@field parentPanel unknown
 ---@field parts unknown
 ---@field player unknown
----@field playerNum unknown
+---@field playerNum integer
 ---@field tagColor table
 ---@field textBroken string
 ---@field textColor table
@@ -33,6 +33,7 @@ function ISPartsLayout:createChildren() end
 
 function ISPartsLayout:initialise() end
 
+---@param _button ISButton
 function ISPartsLayout:onButtonClick(_button) end
 
 function ISPartsLayout:prerender() end

@@ -18,7 +18,7 @@
 ---@field parentPanel unknown
 ---@field parts unknown
 ---@field player unknown
----@field playerNum unknown
+---@field playerNum integer
 ---@field productColumns number
 ---@field productPanelHeight number
 ---@field productPanelWidth number
@@ -56,6 +56,7 @@ function ISBaseStockingLayout:isRunning() end
 ---@return unknown
 function ISBaseStockingLayout:isTurnedOn() end
 
+---@param _button ISButton
 function ISBaseStockingLayout:onButtonClick(_button) end
 
 function ISBaseStockingLayout:prerender() end

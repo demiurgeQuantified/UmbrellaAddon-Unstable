@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISTakeCarBatteryChargerAction : ISBaseTimedAction
----@field charger unknown
+---@field charger IsoCarBatteryCharger
 ISTakeCarBatteryChargerAction = ISBaseTimedAction:derive("ISTakeCarBatteryChargerAction")
 ISTakeCarBatteryChargerAction.Type = "ISTakeCarBatteryChargerAction"
 
@@ -22,8 +22,10 @@ function ISTakeCarBatteryChargerAction:stop() end
 
 function ISTakeCarBatteryChargerAction:update() end
 
----@return unknown
+---@return boolean
 function ISTakeCarBatteryChargerAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param charger IsoCarBatteryCharger
 ---@return ISTakeCarBatteryChargerAction
 function ISTakeCarBatteryChargerAction:new(character, charger) end

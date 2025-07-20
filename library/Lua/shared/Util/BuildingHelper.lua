@@ -3,11 +3,15 @@
 ---@class BuildingHelper
 BuildingHelper = {}
 
----@return unknown?
+---@param building BuildingDef
+---@return IsoGridSquare?
 function BuildingHelper.getFreeTileFromBuilding(building) end
 
----@return table
+---@param building BuildingDef
+---@param count integer
+---@return IsoGridSquare[]
 function BuildingHelper.getFreeTilesFromRandomRoomInBuilding(building, count) end
 
----@return unknown?
+---@param item InventoryItem
+---@return CharacterActionAnims?
 function BuildingHelper.getShovelAnim(item) end

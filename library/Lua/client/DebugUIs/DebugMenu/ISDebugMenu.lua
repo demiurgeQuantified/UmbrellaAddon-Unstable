@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISDebugMenu : ISPanel
----@field buttonBorderColor table
----@field buttons table
+---@field buttonBorderColor umbrella.RGBA
+---@field buttons { title: string, func: function, tab: string, marginTop: number? }[]
 ---@field devButton ISButton
----@field devTab table
+---@field devTab { _y: number, _buttons: ISButton[] }
 ---@field mainButton ISButton
----@field mainTab table
----@field variableColor table
+---@field mainTab { _y: number, _buttons: ISButton[] }
+---@field variableColor umbrella.RGBA
 ---@field zOffsetSmallFont number
 ISDebugMenu = ISPanel:derive("ISDebugMenu")
 ISDebugMenu.Type = "ISDebugMenu"
@@ -15,20 +15,25 @@ ISDebugMenu.instance = nil ---@type ISDebugMenu?
 ISDebugMenu.forceEnable = false
 ISDebugMenu.shiftDown = 0
 ISDebugMenu.tab = "MAIN"
-ISDebugMenu.classes = {}
+ISDebugMenu.classes = nil ---@type ISUIElement[]
 
 ---@return ISDebugMenu?
 function ISDebugMenu.OnOpenPanel() end
 
+---@param playerObj IsoPlayer
 function ISDebugMenu.OnPlayerDeath(playerObj) end
 
----@param _class table
+---@param _class ISUIElement
 function ISDebugMenu.RegisterClass(_class) end
 
 ---@param _title string
----@return table
+---@param _func function
+---@param _tab string
+---@param _marginTop number?
+---@return { title: string, func: function, tab: string, marginTop: number? }
 function ISDebugMenu:addButtonInfo(_title, _func, _tab, _marginTop) end
 
+---@param _buttonInfo table
 function ISDebugMenu:bringToTop(_buttonInfo) end
 
 function ISDebugMenu:close() end
@@ -37,6 +42,7 @@ function ISDebugMenu:createChildren() end
 
 function ISDebugMenu:initialise() end
 
+---@param _button ISButton
 function ISDebugMenu:onClick(_button) end
 
 function ISDebugMenu:onClick_Dev() end

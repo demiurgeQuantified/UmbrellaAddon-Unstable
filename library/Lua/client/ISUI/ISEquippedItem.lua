@@ -2,22 +2,22 @@
 
 ---@class ISEquippedItem : ISPanel
 ---@field adminBtn ISButton
----@field adminIcon unknown
----@field adminIconOn unknown
+---@field adminIcon Texture
+---@field adminIconOn Texture
 ---@field buildBtn ISButton
----@field chr unknown
+---@field chr IsoPlayer
 ---@field clientBtn ISButton
----@field clientIcon unknown
----@field clientIconOn unknown
+---@field clientIcon Texture
+---@field clientIconOn Texture
 ---@field craftingBtn ISButton
----@field craftingIcon unknown
----@field craftingIconOn unknown
+---@field craftingIcon Texture
+---@field craftingIconOn Texture
 ---@field debugBtn ISButton
----@field debugIcon unknown
----@field debugIconOn unknown
----@field disableTexture unknown
----@field handMainTexture unknown
----@field HandSecondaryTexture unknown
+---@field debugIcon Texture
+---@field debugIconOn Texture
+---@field disableTexture Texture
+---@field handMainTexture Texture
+---@field HandSecondaryTexture Texture
 ---@field healthBtn ISButton
 ---@field healthIconOscillator number
 ---@field healthIconOscillatorDecelerator number
@@ -26,66 +26,68 @@
 ---@field healthIconOscillatorScalar number
 ---@field healthIconOscillatorStartLevel number
 ---@field healthIconOscillatorStep number
----@field heartIcon unknown
----@field heartIconOn unknown
+---@field heartIcon Texture
+---@field heartIconOn Texture
 ---@field infopanel unknown?
 ---@field invBtn ISButton
 ---@field inventory unknown?
----@field inventoryTexture unknown
----@field inventoryTextureOn unknown
----@field lockTexture unknown
+---@field inventoryTexture Texture
+---@field inventoryTextureOn Texture
+---@field lockTexture Texture
 ---@field loot unknown?
 ---@field mainHand ISImage
 ---@field mapBtn ISButton
----@field mapIconOff unknown
----@field mapIconOn unknown
+---@field mapIconOff Texture
+---@field mapIconOn Texture
 ---@field mapPopup ISMapPopup
----@field mouseOverList table
+---@field mouseOverList umbrella.ISEquippedItem.MouseOverItem[]
 ---@field movableBtn ISButton
----@field movableIcon unknown
----@field movableIconOff unknown
----@field movableIconPickup unknown
----@field movableIconPlace unknown
----@field movableIconRotate unknown
----@field movableIconScrap unknown
+---@field movableIcon Texture
+---@field movableIconOff Texture
+---@field movableIconPickup Texture
+---@field movableIconPlace Texture
+---@field movableIconRotate Texture
+---@field movableIconScrap Texture
 ---@field movablePopup ISMoveablesIconPopup
 ---@field movableTooltip ISMoveablesIconToolTip
----@field moveableIconBuild unknown
----@field moveableIconBuildOn unknown
----@field moveableIconRepair unknown
+---@field moveableIconBuild Texture
+---@field moveableIconBuildOn Texture
+---@field moveableIconRepair Texture
 ---@field offHand ISImage
----@field offTexture unknown
----@field onTexture unknown
----@field playerNum unknown
+---@field offTexture Texture
+---@field onTexture Texture
+---@field playerNum integer
 ---@field previousHealth number
 ---@field radialIcon ISRadialProgressBar
----@field safety unknown
+---@field safety Safety
 ---@field safetyBtn ISButton
 ---@field searchBtn ISButton
----@field searchIcon unknown
----@field searchIconOn unknown
----@field sidebarSizeOption unknown
+---@field searchIcon Texture
+---@field searchIconOn Texture
+---@field sidebarSizeOption integer
 ---@field toolTip ISToolTip
----@field warActive unknown
----@field warInactive unknown
+---@field warActive Texture
+---@field warInactive Texture
 ---@field warManagerBtn ISButton
 ---@field warManagerBtnX number
 ---@field warManagerBtnY number
----@field warSoon unknown
+---@field warSoon Texture
 ---@field zoneBtn ISButton
----@field zoneIcon unknown
----@field zoneIconOn unknown
+---@field zoneIcon Texture
+---@field zoneIconOn Texture
 ISEquippedItem = ISPanel:derive("ISEquippedItem")
 ISEquippedItem.Type = "ISEquippedItem"
 ISEquippedItem.text = nil ---@type string?
 ISEquippedItem.instance = nil ---@type ISEquippedItem?
 
+---@param key integer
 function ISEquippedItem.onKeyPressed(key) end
 
 ---@param _object table
 ---@param _displayString string
 function ISEquippedItem:addMouseOverToolTipItem(_object, _displayString) end
 
+---@param _boundsItem table
 ---@param _x number
 ---@param _y number
 ---@return boolean
@@ -95,13 +97,15 @@ function ISEquippedItem:checkSidebarSizeOption() end
 
 function ISEquippedItem:checkToolTip() end
 
+---@param _state boolean
+---@param _text string
 function ISEquippedItem:doToolTip(_state, _text) end
 
----@return unknown?
+---@return InventoryItem?
 function ISEquippedItem:getDraggedEquippableItem() end
 
----@return unknown?
----@return unknown?
+---@return InventoryItem?
+---@return InventoryItem?
 function ISEquippedItem:getDraggedEquippableItems() end
 
 function ISEquippedItem:initialise() end
@@ -120,6 +124,7 @@ function ISEquippedItem:onMouseUpPrimary(x, y) end
 ---@return unknown?
 function ISEquippedItem:onMouseUpSecondary(x, y) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ISEquippedItem:onOptionMouseDown(button, x, y) end
@@ -148,6 +153,7 @@ function ISEquippedItem:toggleSafety() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param chr IsoPlayer
 ---@return ISEquippedItem
 function ISEquippedItem:new(x, y, width, height, chr) end
 
@@ -177,8 +183,8 @@ function ISMoveablesIconPopup:render() end
 function ISMoveablesIconPopup:new(x, y, width, height) end
 
 ---@class ISMapPopup : ISPanel
----@field texMap unknown
----@field texMiniMap unknown
+---@field texMap Texture
+---@field texMiniMap Texture
 ISMapPopup = ISPanel:derive("ISMapPopup")
 ISMapPopup.Type = "ISMapPopup"
 
@@ -203,5 +209,11 @@ function ISMapPopup:render() end
 ---@return ISMapPopup
 function ISMapPopup:new(x, y, width, height) end
 
+---@class umbrella.ISEquippedItem.MouseOverItem
+---@field displayString string
+---@field object table
+umbrella_ISEquippedItem_MouseOverItem = {}
+
+---@param playerObj IsoPlayer
 ---@return ISEquippedItem
 function launchEquippedItem(playerObj) end

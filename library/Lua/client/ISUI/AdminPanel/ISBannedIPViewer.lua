@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISBannedIPViewer : ISPanel
----@field bannedIPs unknown?
+---@field bannedIPs ArrayList<DBBannedIP>?
 ---@field datas ISScrollingListBox
----@field listHeaderColor table
+---@field listHeaderColor umbrella.RGBA
 ---@field no ISButton
 ---@field player unknown
 ---@field refreshBtn ISButton
@@ -16,10 +16,14 @@ ISBannedIPViewer.Type = "ISBannedIPViewer"
 ISBannedIPViewer.messages = {}
 ISBannedIPViewer.instance = nil ---@type ISBannedIPViewer?
 
+---@param bannedIPs ArrayList<DBBannedIP>
 function ISBannedIPViewer.gotBannedIPs(bannedIPs) end
 
 function ISBannedIPViewer:doSearch() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISBannedIPViewer:drawDatas(y, item, alt) end
 
@@ -27,8 +31,10 @@ function ISBannedIPViewer:getBannedIPs() end
 
 function ISBannedIPViewer:initialise() end
 
+---@param button ISButton
 function ISBannedIPViewer:onClick(button) end
 
+---@param button ISButton
 function ISBannedIPViewer:onUnbanIP(button) end
 
 function ISBannedIPViewer:populateList() end

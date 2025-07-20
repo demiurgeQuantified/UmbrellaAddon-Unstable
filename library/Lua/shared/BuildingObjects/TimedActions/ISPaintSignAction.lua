@@ -3,11 +3,11 @@
 ---@class ISPaintSignAction : ISBaseTimedAction
 ---@field b number
 ---@field g number
----@field paintPot unknown?
+---@field paintPot InventoryItem?
 ---@field r number
----@field sign number
----@field sound unknown
----@field wall unknown
+---@field sign integer
+---@field sound integer?
+---@field wall IsoObject
 ISPaintSignAction = ISBaseTimedAction:derive("ISPaintSignAction")
 ISPaintSignAction.Type = "ISPaintSignAction"
 
@@ -28,7 +28,10 @@ function ISPaintSignAction:stop() end
 
 function ISPaintSignAction:update() end
 
----@param paintPot unknown?
+---@param character IsoPlayer
+---@param wall IsoObject
+---@param paintPot InventoryItem?
+---@param sign integer
 ---@param r number
 ---@param g number
 ---@param b number

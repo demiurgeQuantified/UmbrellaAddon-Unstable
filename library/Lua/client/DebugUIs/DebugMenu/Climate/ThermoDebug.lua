@@ -5,8 +5,8 @@
 ---@field hotKeyPanels table
 ---@field isJoypadWindow boolean
 ---@field overrideBPrompt boolean
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field richtext ISRichTextPanel?
 ---@field subFocus unknown?
 ---@field title string
@@ -18,6 +18,7 @@ ThermoDebug.instance = nil ---@type ThermoDebug?
 ---@return ThermoDebug?
 function ThermoDebug.OnOpenPanel() end
 
+---@param _prefix string
 function ThermoDebug:addLine(_prefix, _line) end
 
 function ThermoDebug:addLineEnd() end
@@ -31,6 +32,7 @@ function ThermoDebug:createChildren() end
 
 function ThermoDebug:initialise() end
 
+---@param _btn ISButton
 function ThermoDebug:onButton(_btn) end
 
 function ThermoDebug:onResize() end
@@ -49,5 +51,6 @@ function ThermoDebug:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ThermoDebug
 function ThermoDebug:new(x, y, width, height, player) end

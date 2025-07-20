@@ -2,7 +2,7 @@
 
 ---@class ISActivateCarBatteryChargerAction : ISBaseTimedAction
 ---@field activate boolean
----@field charger unknown
+---@field charger IsoCarBatteryCharger
 ISActivateCarBatteryChargerAction = ISBaseTimedAction:derive("ISActivateCarBatteryChargerAction")
 ISActivateCarBatteryChargerAction.Type = "ISActivateCarBatteryChargerAction"
 
@@ -23,10 +23,11 @@ function ISActivateCarBatteryChargerAction:stop() end
 
 function ISActivateCarBatteryChargerAction:update() end
 
----@return unknown
+---@return boolean
 function ISActivateCarBatteryChargerAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param charger IsoCarBatteryCharger
 ---@param activate boolean
 ---@return ISActivateCarBatteryChargerAction
 function ISActivateCarBatteryChargerAction:new(character, charger, activate) end

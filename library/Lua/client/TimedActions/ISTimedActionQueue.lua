@@ -1,51 +1,64 @@
 ---@meta
 
 ---@class ISTimedActionQueue : ISBaseObject
----@field character unknown
----@field current unknown?
----@field queue table
+---@field character IsoPlayer
+---@field current ISBaseTimedAction?
+---@field queue ISBaseTimedAction[]
 ISTimedActionQueue = ISBaseObject:derive("ISTimedActionQueue")
 ISTimedActionQueue.Type = "ISTimedActionQueue"
 ISTimedActionQueue.IDMax = 1
-ISTimedActionQueue.queues = {}
+ISTimedActionQueue.queues = {} ---@type table<IsoPlayer, ISTimedActionQueue>
 ISTimedActionQueue.shouldResetGameSpeed = nil ---@type boolean?
 
----@param action (boolean | table)?
+---@param action ISBaseTimedAction
 ---@return ISTimedActionQueue?
 function ISTimedActionQueue.add(action) end
 
----@param previousAction table
----@param action table
+---@param previousAction ISBaseTimedAction
+---@param action ISBaseTimedAction
 ---@return ISTimedActionQueue?
----@return table?
+---@return ISBaseTimedAction?
 function ISTimedActionQueue.addAfter(previousAction, action) end
 
----@param action table
+---@param character IsoPlayer
+---@param action ISBaseTimedAction
 function ISTimedActionQueue.addGetUpAndThen(character, action) end
 
+---@param character IsoPlayer
 ---@return ISTimedActionQueue
 function ISTimedActionQueue.clear(character) end
 
+---@param character IsoPlayer
 ---@return ISTimedActionQueue
 function ISTimedActionQueue.getTimedActionQueue(character) end
 
----@param action boolean
+---@param action ISBaseTimedAction
 ---@return boolean
 function ISTimedActionQueue.hasAction(action) end
 
+---@param character IsoPlayer
 ---@param type string
 ---@return boolean
 function ISTimedActionQueue.hasActionType(character, type) end
 
+---@param playerObj IsoPlayer
 ---@return boolean
 function ISTimedActionQueue.isPlayerDoingAction(playerObj) end
 
 function ISTimedActionQueue.onTick() end
 
----@param addActionsFunction function
----@param arg1 ISDesignationZoneAnimalZoneUI
+---@param character IsoPlayer
+---@param addActionsFunction umbrella.ISQueueActionsAction.AddActionsFunction
+---@param arg1 unknown?
 ---@param arg2 unknown?
 ---@param arg3 unknown?
+---@param arg4 unknown?
+---@param arg5 unknown?
+---@param arg6 unknown?
+---@param arg7 unknown?
+---@param arg8 unknown?
+---@param arg9 unknown?
+---@param arg10 unknown?
 ---@return ISTimedActionQueue?
 function ISTimedActionQueue.queueActions(
 	character,
@@ -63,30 +76,34 @@ function ISTimedActionQueue.queueActions(
 )
 end
 
+---@param action ISBaseTimedAction
 function ISTimedActionQueue:addToQueue(action) end
 
 function ISTimedActionQueue:cancelQueue() end
 
 function ISTimedActionQueue:clearQueue() end
 
----@param action ISInventoryTransferAction
----@return number
+---@param action ISBaseTimedAction
+---@return integer
 function ISTimedActionQueue:indexOf(action) end
 
 ---@param type string
----@return number
+---@return integer
 function ISTimedActionQueue:indexOfType(type) end
 
 ---@return boolean
 function ISTimedActionQueue:isCurrentActionAddingOtherActions() end
 
+---@param action ISBaseTimedAction
 function ISTimedActionQueue:onCompleted(action) end
 
+---@param action ISBaseTimedAction
 function ISTimedActionQueue:removeFromQueue(action) end
 
 function ISTimedActionQueue:resetQueue() end
 
 function ISTimedActionQueue:tick() end
 
+---@param character IsoPlayer
 ---@return ISTimedActionQueue
 function ISTimedActionQueue:new(character) end

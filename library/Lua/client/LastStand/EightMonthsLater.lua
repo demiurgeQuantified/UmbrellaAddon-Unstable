@@ -15,16 +15,19 @@ EightMonthsLater.y = (31 * 300) + 111
 EightMonthsLater.z = 0
 EightMonthsLater.hourOfDay = 7
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function EightMonthsLater.AddPlayer(playerNum, playerObj) end
 
 function EightMonthsLater.Init() end
 
----@param playerNum number
+---@param playerNum integer
+---@param dir string
 function EightMonthsLater.onBackButtonWheel(playerNum, dir) end
 
 function EightMonthsLater.PreloadInit() end
 
+---@param playerObj IsoPlayer
 function EightMonthsLater.RemovePlayer(playerObj) end
 
 function EightMonthsLater.Render() end

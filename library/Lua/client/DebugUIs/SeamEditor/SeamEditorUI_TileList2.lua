@@ -10,6 +10,8 @@
 SeamEditorUI_TileList2 = ISPanel:derive("SeamEditorUI_TileList2")
 SeamEditorUI_TileList2.Type = "SeamEditorUI_TileList2"
 
+---@param col number
+---@param row number
 function SeamEditorUI_TileList2:assignMasterSprites(col, row) end
 
 function SeamEditorUI_TileList2:calculateSelectionBounds() end
@@ -20,19 +22,23 @@ function SeamEditorUI_TileList2:calculateSelectionBounds() end
 ---@return number
 function SeamEditorUI_TileList2:getColRowAt(x, y) end
 
----@return unknown?
+---@return string?
 function SeamEditorUI_TileList2:getDraggedTileName() end
 
 ---@return table
 function SeamEditorUI_TileList2:getSelection() end
 
----@return unknown?
+---@return table?
 function SeamEditorUI_TileList2:getSingleSelectedTile() end
 
----@return unknown
+---@param col number
+---@param row number
+---@return string?
 function SeamEditorUI_TileList2:getTextureAt(col, row) end
 
----@return unknown
+---@param col number
+---@param row number
+---@return string
 function SeamEditorUI_TileList2:getTextureNameAt(col, row) end
 
 ---@return boolean
@@ -65,6 +71,7 @@ function SeamEditorUI_TileList2:onMouseUp(x, y) end
 ---@return unknown?
 function SeamEditorUI_TileList2:onMouseUpOutside(x, y) end
 
+---@param del number
 function SeamEditorUI_TileList2:onMouseWheel(del) end
 
 ---@param x number
@@ -81,8 +88,18 @@ function SeamEditorUI_TileList2:render() end
 
 function SeamEditorUI_TileList2:renderDraggedTile() end
 
+---@param xIndent number
+---@param yIndent number
+---@param texW number
+---@param texH number
 function SeamEditorUI_TileList2:renderGrid(xIndent, yIndent, texW, texH) end
 
+---@param xIndent number
+---@param yIndent number
+---@param texW number
+---@param texH number
+---@param col number
+---@param row number
 function SeamEditorUI_TileList2:renderTilesToAssign(xIndent, yIndent, texW, texH, col, row) end
 
 ---@param col number
@@ -91,11 +108,17 @@ function SeamEditorUI_TileList2:selectionAdd(col, row) end
 
 function SeamEditorUI_TileList2:selectionClear() end
 
+---@param col number
+---@param row number
 ---@return number
 function SeamEditorUI_TileList2:selectionIndexOf(col, row) end
 
+---@param col number
+---@param row number
 function SeamEditorUI_TileList2:selectionRemove(col, row) end
 
+---@param col number
+---@param row number
 function SeamEditorUI_TileList2:selectionToggle(col, row) end
 
 ---@param tilesetName string?

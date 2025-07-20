@@ -1,29 +1,34 @@
 ---@meta
 
+---@alias umbrella.MapUI
+---| umbrella.MapUI.WithMapObj
+---| umbrella.MapUI.WithMapItem
+
 ---@class ISMap : ISPanelJoypad
----@field character unknown
----@field cross unknown
+---@field character IsoPlayer
+---@field cross Texture
 ---@field dragging boolean
 ---@field draggingStartingX number
 ---@field draggingStartingY number
 ---@field dragMoved boolean
----@field dragStartCX unknown
----@field dragStartCY unknown
----@field dragStartWorldX unknown
----@field dragStartWorldY unknown
----@field dragStartZoomF unknown
+---@field dragStartCX number
+---@field dragStartCY number
+---@field dragStartWorldX number
+---@field dragStartWorldY number
+---@field dragStartZoomF number
 ---@field editSymbolsBtn ISButton
 ---@field getJoypadFocus boolean
----@field joypadPromptHgt unknown
+---@field javaObject UIWorldMap
+---@field joypadPromptHgt number
 ---@field LBumperZoom number?
----@field mapAPI unknown
+---@field mapAPI UIWorldMapV1
 ---@field mapKey ISWorldMapKey
----@field mapObj unknown
+---@field mapObj MapItem
 ---@field ok ISButton
 ---@field placeSymbBtn ISButton
----@field playerNum number
----@field povXms unknown?
----@field povYms unknown?
+---@field playerNum integer
+---@field povXms number?
+---@field povYms number?
 ---@field RBumperZoom number?
 ---@field revealBtn ISButton
 ---@field scaleBtn ISButton
@@ -32,16 +37,16 @@
 ---@field showMapKey ISButton
 ---@field symbolsUI ISWorldMapSymbols
 ---@field symbolTexList table
----@field textCursor unknown
----@field updateMS unknown
+---@field textCursor Texture
+---@field updateMS number
 ISMap = ISPanelJoypad:derive("ISMap")
 ISMap.Type = "ISMap"
 ISMap.SCALE = 0.666
 
----@return unknown
+---@return boolean
 function ISMap:canErase() end
 
----@return unknown
+---@return boolean
 function ISMap:canWrite() end
 
 function ISMap:copySymbolsToWorldMap() end
@@ -54,12 +59,18 @@ function ISMap:initMapData() end
 
 function ISMap:instantiate() end
 
+---@param button ISButton
 function ISMap:onButtonClick(button) end
 
+---@param button ISButton
+---@param note integer
 function ISMap:onConfirmRemove(button, note) end
 
+---@param joypadData JoypadData
 function ISMap:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISMap:onJoypadDown(button, joypadData) end
 
 ---@param x number
@@ -83,6 +94,7 @@ function ISMap:onMouseUp(x, y) end
 
 function ISMap:onMouseUpOutside() end
 
+---@param del number
 ---@return boolean
 function ISMap:onMouseWheel(del) end
 
@@ -95,6 +107,8 @@ function ISMap:prerender() end
 
 function ISMap:render() end
 
+---@param texture Texture
+---@param text string
 ---@param x number
 ---@param y number
 ---@return number
@@ -114,7 +128,8 @@ function ISMap:updateJoypad() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param player number
+---@param map MapItem
+---@param player integer
 ---@return ISMap
 function ISMap:new(x, y, width, height, map, player) end
 
@@ -127,11 +142,14 @@ function ISMapWrapper:close() end
 
 function ISMapWrapper:instantiate() end
 
+---@param key integer
 ---@return boolean
 function ISMapWrapper:isKeyConsumed(key) end
 
+---@param key integer
 function ISMapWrapper:onKeyPress(key) end
 
+---@param key integer
 function ISMapWrapper:onKeyRelease(key) end
 
 function ISMapWrapper:prerender() end
@@ -147,3 +165,13 @@ function ISMapWrapper:setVisible(bVisible) end
 ---@param height number
 ---@return ISMapWrapper
 function ISMapWrapper:new(x, y, width, height) end
+
+---@class umbrella.MapUI.WithMapItem : ISUIElement
+---@field javaObject UIWorldMap
+---@field mapItem MapItem
+umbrella_MapUI_WithMapItem = {}
+
+---@class umbrella.MapUI.WithMapObj : ISUIElement
+---@field javaObject UIWorldMap
+---@field mapItem MapItem
+umbrella_MapUI_WithMapObj = {}

@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISPlasterAction : ISBaseTimedAction
----@field plasterBucket unknown?
----@field sound unknown
----@field thumpable unknown
+---@field plasterBucket InventoryItem?
+---@field sound integer?
+---@field thumpable IsoThumpable
 ISPlasterAction = ISBaseTimedAction:derive("ISPlasterAction")
 ISPlasterAction.Type = "ISPlasterAction"
 
@@ -24,6 +24,8 @@ function ISPlasterAction:stop() end
 
 function ISPlasterAction:update() end
 
----@param plasterBucket unknown?
+---@param character IsoPlayer
+---@param thumpable IsoThumpable
+---@param plasterBucket InventoryItem?
 ---@return ISPlasterAction
 function ISPlasterAction:new(character, thumpable, plasterBucket) end

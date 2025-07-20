@@ -4,34 +4,40 @@
 ---@field buttonExit ISButton
 ---@field buttonQuit ISButton
 ---@field buttonRespawn ISButton
----@field lines table
----@field playerIndex unknown
+---@field lines string[]
+---@field playerIndex integer
 ---@field quitToDesktopDialog ISModalDialog?
----@field screenHeight unknown
----@field screenWidth unknown
----@field screenX unknown
----@field screenY unknown
+---@field screenHeight number
+---@field screenWidth number
+---@field screenX number
+---@field screenY number
 ---@field textY number
----@field timeOfDeath unknown
+---@field timeOfDeath number
 ---@field waitOver boolean
 ISPostDeathUI = ISPanelJoypad:derive("ISPostDeathUI")
 ISPostDeathUI.Type = "ISPostDeathUI"
-ISPostDeathUI.instance = {}
+ISPostDeathUI.instance = {} ---@type table<integer, ISPostDeathUI>
 
+---@param playerObj IsoPlayer
 function ISPostDeathUI.OnPlayerDeath(playerObj) end
 
+---@param button ISButton
 function ISPostDeathUI:configButton(button) end
 
 function ISPostDeathUI:createChildren() end
 
+---@param button ISButton
 function ISPostDeathUI:onConfirmQuitToDesktop(button) end
 
 function ISPostDeathUI:onExit() end
 
+---@param joypadData JoypadData
 function ISPostDeathUI:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISPostDeathUI:onJoypadBeforeDeactivate(joypadData) end
 
+---@param joypadData JoypadData
 function ISPostDeathUI:onJoypadReactivate(joypadData) end
 
 ---@param x number
@@ -49,6 +55,7 @@ function ISPostDeathUI:onMouseMove(dx, dy) end
 ---@return boolean
 function ISPostDeathUI:onMouseUp(x, y) end
 
+---@param del number
 ---@return boolean
 function ISPostDeathUI:onMouseWheel(del) end
 
@@ -60,5 +67,6 @@ function ISPostDeathUI:prerender() end
 
 function ISPostDeathUI:render() end
 
+---@param playerIndex integer
 ---@return ISPostDeathUI
 function ISPostDeathUI:new(playerIndex) end

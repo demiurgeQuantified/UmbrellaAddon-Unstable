@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISGradientBar : ISPanel
----@field gradientTex unknown
----@field highlightTex unknown
----@field highlightTex_L unknown
----@field highlightTex_R unknown
----@field settings table
+---@field gradientTex Texture
+---@field highlightTex Texture
+---@field highlightTex_L Texture
+---@field highlightTex_R Texture
+---@field settings umbrella.ISGradientBar.Settings
 ---@field value number
 ISGradientBar = ISPanel:derive("ISGradientBar")
 ISGradientBar.Type = "ISGradientBar"
@@ -36,6 +36,7 @@ function ISGradientBar:setDarkAlpha(_alpha) end
 ---@param _b boolean
 function ISGradientBar:setDoKnob(_b) end
 
+---@param _tex Texture
 function ISGradientBar:setGradientTexture(_tex) end
 
 ---@param _rad number
@@ -50,3 +51,11 @@ function ISGradientBar:setValue(_v) end
 ---@param height number
 ---@return ISGradientBar
 function ISGradientBar:new(x, y, width, height) end
+
+---@class umbrella.ISGradientBar.Settings
+---@field colBorder umbrella.RGBA
+---@field colBorderInner umbrella.RGBA
+---@field darkAlpha number
+---@field doKnob boolean
+---@field radius integer
+umbrella_ISGradientBar_Settings = {}

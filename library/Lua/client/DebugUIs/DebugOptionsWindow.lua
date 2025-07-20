@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class DebugOptionsWindow : ISCollapsableWindow
----@field categoryList unknown
----@field categoryMap table
----@field tickBoxes table
+---@field categoryList ISScrollingListBox
+---@field categoryMap table<string, BooleanDebugOption[]>
+---@field tickBoxes ISTickBox[]
 DebugOptionsWindow = ISCollapsableWindow:derive("DebugOptionsWindow")
 DebugOptionsWindow.Type = "DebugOptionsWindow"
 
@@ -13,12 +13,16 @@ function DebugOptionsWindow:calcTickBoxBounds() end
 
 function DebugOptionsWindow:createChildren() end
 
+---@param category string
 function DebugOptionsWindow:onCategorySelected(category) end
 
 ---@param x number
 ---@param y number
 function DebugOptionsWindow:onMouseDownOutside(x, y) end
 
+---@param index integer
+---@param selected boolean
+---@param option BooleanDebugOption
 function DebugOptionsWindow:onTickBox(index, selected, option) end
 
 ---@param x number

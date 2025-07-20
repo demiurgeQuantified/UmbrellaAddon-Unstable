@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISScything : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ---@field radius number
----@field sound unknown
----@field sq unknown
+---@field sound integer
+---@field sq IsoGridSquare
 ISScything = ISBaseTimedAction:derive("ISScything")
 ISScything.Type = "ISScything"
 
@@ -14,6 +14,7 @@ function ISScything:complete() end
 ---@return number
 function ISScything:getDuration() end
 
+---@param sq IsoGridSquare
 function ISScything:getGrass(sq) end
 
 ---@return boolean
@@ -29,6 +30,9 @@ function ISScything:stopSound() end
 
 function ISScything:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param sq IsoGridSquare
 ---@param radius number
 ---@return ISScything
 function ISScything:new(character, item, sq, radius) end

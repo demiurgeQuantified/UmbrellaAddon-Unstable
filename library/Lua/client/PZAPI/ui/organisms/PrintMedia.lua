@@ -14,11 +14,13 @@ function __UI_PrintMedia:onClickMapButton() end
 
 function __UI_PrintMedia:onClickNewspaperButton() end
 
+---@param key integer
 ---@return boolean
 function __UI_PrintMedia:onKeyRelease(key) end
 
 function __UI_PrintMedia:onResize() end
 
+---@param collapsed boolean
 function __UI_PrintMedia:setCollapsed(collapsed) end
 
 function __UI_PrintMedia:updateSize() end

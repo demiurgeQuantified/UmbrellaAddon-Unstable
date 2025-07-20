@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISLightFromPetrol : ISBaseTimedAction
----@field campfire unknown
----@field lighter unknown
----@field petrol unknown
+---@field campfire SCampfireGlobalObject
+---@field lighter InventoryItem
+---@field petrol InventoryItem
 ISLightFromPetrol = ISBaseTimedAction:derive("ISLightFromPetrol")
 ISLightFromPetrol.Type = "ISLightFromPetrol"
 
@@ -24,10 +24,13 @@ function ISLightFromPetrol:stop() end
 
 function ISLightFromPetrol:update() end
 
----@return unknown
+---@return boolean
 function ISLightFromPetrol:waitToStart() end
 
----@param character unknown?
----@param maxTime number
+---@param character IsoPlayer
+---@param campfire SCampfireGlobalObject
+---@param lighter InventoryItem
+---@param petrol InventoryItem
+---@param maxTime integer
 ---@return ISLightFromPetrol
 function ISLightFromPetrol:new(character, campfire, lighter, petrol, maxTime) end

@@ -4,7 +4,7 @@
 ---@field datas ISScrollingListBox
 ---@field no ISButton
 ---@field reinitBtn ISButton
----@field selectedStash unknown?
+---@field selectedStash Stash?
 ---@field viewBtn ISButton
 StashDebug = ISPanel:derive("StashDebug")
 StashDebug.Type = "StashDebug"
@@ -12,11 +12,15 @@ StashDebug.instance = nil ---@type StashDebug?
 
 function StashDebug.OnOpenPanel() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function StashDebug:drawDatas(y, item, alt) end
 
 function StashDebug:initialise() end
 
+---@param button ISButton
 function StashDebug:onClick(button) end
 
 function StashDebug:populateList() end

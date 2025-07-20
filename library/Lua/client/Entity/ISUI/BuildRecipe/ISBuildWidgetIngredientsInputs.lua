@@ -3,8 +3,8 @@
 ---@class ISBuildWidgetIngredientsInputs : ISPanelJoypad
 ---@field autoFillContents boolean
 ---@field doToolTip boolean
----@field inputs table
----@field inputsLabel unknown?
+---@field inputs ISWidgetInput[]
+---@field inputsLabel ISLabel?
 ---@field interactiveMode boolean
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
@@ -12,25 +12,30 @@
 ---@field itemMargin number
 ---@field itemNameMaxLines number
 ---@field itemSpacing number
----@field joypadIndex unknown
----@field joypadIndexY unknown
----@field logic unknown
+---@field joypadIndex integer
+---@field joypadIndexY integer
+---@field logic BuildLogic
 ---@field margin number
----@field player unknown
----@field textureLink unknown
+---@field player IsoPlayer
+---@field textureLink Texture
 ISBuildWidgetIngredientsInputs = ISPanelJoypad:derive("ISBuildWidgetIngredientsInputs")
 ISBuildWidgetIngredientsInputs.Type = "ISBuildWidgetIngredientsInputs"
 
+---@param _inputScript InputScript
 function ISBuildWidgetIngredientsInputs:addInput(_inputScript) end
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISBuildWidgetIngredientsInputs:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISBuildWidgetIngredientsInputs:createChildren() end
 
 function ISBuildWidgetIngredientsInputs:initialise() end
 
+---@param joypadData JoypadData
 function ISBuildWidgetIngredientsInputs:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISBuildWidgetIngredientsInputs:onLoseJoypadFocus(joypadData) end
 
 function ISBuildWidgetIngredientsInputs:onRebuildItemNodes(_inputItems) end
@@ -49,5 +54,7 @@ function ISBuildWidgetIngredientsInputs:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param logic BuildLogic
 ---@return ISBuildWidgetIngredientsInputs
 function ISBuildWidgetIngredientsInputs:new(x, y, width, height, player, logic) end

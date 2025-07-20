@@ -3,33 +3,33 @@
 ---@class ISChat : ISCollapsableWindow
 ---@field btnHeight number
 ---@field chatFont string
----@field chatLockedButtonTexture unknown
----@field chatText table?
----@field chatUnLockedButtonTexture unknown
----@field currentTabID number
----@field defaultTab unknown?
----@field fade unknown
+---@field chatLockedButtonTexture Texture
+---@field chatText ISRichTextPanel?
+---@field chatUnLockedButtonTexture Texture
+---@field currentTabID integer
+---@field defaultTab ISRichTextPanel?
+---@field fade UITransition
 ---@field fadeTime number
----@field fontHgt unknown
+---@field fontHgt number
 ---@field gearButton ISButton
 ---@field inset number
 ---@field lockButton ISButton
 ---@field locked boolean
 ---@field maxOpaque number
 ---@field minOpaque number
----@field mutedUsers table
----@field nextBtnTxt unknown
+---@field mutedUsers table<string, true?>
+---@field nextBtnTxt Texture
 ---@field opaqueOnFocus boolean
 ---@field panel ISTabPanel
----@field prevBtnTxt unknown
+---@field prevBtnTxt Texture
 ---@field servermsg string
 ---@field servermsgTimer number
 ---@field showSlowModeFeedback boolean
 ---@field showTimestamp boolean
 ---@field showTitle boolean
 ---@field slowTimeRemainingRatio number
----@field tabCnt number
----@field tabs table
+---@field tabCnt integer
+---@field tabs ISRichTextPanel[]
 ---@field textEntry ISTextEntryBox
 ---@field timerMessageSlowMode number
 ---@field timerTextEntry number
@@ -102,34 +102,50 @@ ISChat.windowName = "chat window"
 ISChat.instance = nil ---@type ISChat?
 ISChat.chat = nil ---@type ISChat?
 
+---@param message ChatMessage
+---@param tabID integer
 function ISChat.addLineInChat(message, tabID) end
 
 function ISChat.createChat() end
 
 function ISChat.initChat() end
 
+---@param target ISTabPanel
 ---@param x number
 ---@param y number
 ---@return boolean
 function ISChat.ISTabPanelOnMouseDown(target, x, y) end
 
+---@param target ISChat
+---@param value number
 function ISChat.onFadeTimeChange(target, value) end
 
+---@param target ISChat
+---@param value number
 function ISChat.onFocusOpaqueChange(target, value) end
 
+---@param target ISChat
+---@param value string
 function ISChat.onFontSizeChange(target, value) end
 
+---@param key integer
 function ISChat.onKeyKeepPressed(key) end
 
+---@param target ISChat
+---@param value number
 function ISChat.onMaxOpaqueChange(target, value) end
 
+---@param target ISChat
+---@param value number
 function ISChat.onMinOpaqueChange(target, value) end
 
+---@param target ISUIElement
 ---@param x number
 ---@param y number
 ---@return boolean
 function ISChat.onMouseDown(target, x, y) end
 
+---@param target ISUIElement
 ---@param x number
 ---@param y number
 ---@return boolean
@@ -141,15 +157,18 @@ function ISChat.onSetDefaultTab(defaultTabTitle) end
 function ISChat.onSwitchStream() end
 
 ---@param tabTitle string
+---@param tabID integer
 function ISChat.onTabAdded(tabTitle, tabID) end
 
 ---@param tabTitle string
+---@param tabID integer
 function ISChat.onTabRemoved(tabTitle, tabID) end
 
 function ISChat.onTextChange() end
 
 function ISChat.ontick() end
 
+---@param key integer
 function ISChat.onToggleChatBox(key) end
 
 function ISChat.onToggleTagPrefix() end
@@ -160,13 +179,14 @@ function ISChat.unfocusEvent() end
 
 ---@param defaultMin number
 ---@param defaultMax number
+---@param fraction number
 ---@return number
 function ISChat:calcAlpha(defaultMin, defaultMax, fraction) end
 
----@return table?
+---@return { x: number, y: number }
 function ISChat:calcTabPos() end
 
----@return table?
+---@return { width: number, height: number }
 function ISChat:calcTabSize() end
 
 function ISChat:close() end
@@ -180,6 +200,7 @@ function ISChat:createTab() end
 
 function ISChat:focus() end
 
+---@param durationInS number
 function ISChat:initFade(durationInS) end
 
 function ISChat:initialise() end
@@ -193,8 +214,10 @@ function ISChat:isCursorOnTitlebar(x, y) end
 ---@return boolean
 function ISChat:isMuted(username) end
 
+---@param command string
 function ISChat:logChatCommand(command) end
 
+---@param fraction number
 function ISChat:makeFade(fraction) end
 
 ---@param username string
@@ -208,6 +231,7 @@ function ISChat:onContextClear() end
 
 function ISChat:onGearButtonClick() end
 
+---@param key integer
 function ISChat:onOtherKey(key) end
 
 function ISChat:onPressDown() end
@@ -233,9 +257,11 @@ function ISChat:render() end
 function ISChat:render_chatText() end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISChat:RestoreLayout(name, layout) end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISChat:SaveLayout(name, layout) end
 
 ---@param visible boolean

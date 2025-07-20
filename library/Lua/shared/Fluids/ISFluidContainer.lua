@@ -1,29 +1,30 @@
 ---@meta
 
 ---@class ISFluidContainer : ISBaseObject
----@field fluidContainer unknown?
----@field fluidResource unknown?
+---@field fluidContainer FluidContainer?
+---@field fluidResource ResourceFluid?
 ---@field isFluidResource boolean
 ---@field isInventoryItem boolean
 ---@field isoPanel boolean
 ISFluidContainer = ISBaseObject:derive("ISFluidContainer")
 ISFluidContainer.Type = "ISFluidContainer"
 
----@return ISFluidContainer?
+---@return ISFluidContainer
 function ISFluidContainer:copy() end
 
----@return unknown?
+---@return FluidContainer?
 function ISFluidContainer:getFluidContainer() end
 
----@return unknown?
+---@return (FluidContainer | ResourceFluid)?
 function ISFluidContainer:getFluidObject() end
 
----@return unknown?
+---@return ResourceFluid?
 function ISFluidContainer:getFluidResource() end
 
----@return unknown?
+---@return GameEntity?
 function ISFluidContainer:getOwner() end
 
+---@param _fluidObject FluidContainer | ResourceFluid
 function ISFluidContainer:initFromObject(_fluidObject) end
 
 ---@return boolean
@@ -42,6 +43,6 @@ function ISFluidContainer:resetObject() end
 
 function ISFluidContainer:sync() end
 
----@param _fluidObject unknown?
+---@param _fluidObject FluidContainer | ResourceFluid
 ---@return ISFluidContainer
 function ISFluidContainer:new(_fluidObject) end

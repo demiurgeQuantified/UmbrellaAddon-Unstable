@@ -45,17 +45,20 @@ AStormIsComing.hourOfDay = 7
 
 function AStormIsComing.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function AStormIsComing.AddPlayer(playerNum, playerObj) end
 
 function AStormIsComing.EveryTenMinutes() end
 
 function AStormIsComing.OnGameStart() end
 
+---@param _season ErosionSeason
 function AStormIsComing.OnInitSeasons(_season) end
 
 function AStormIsComing.OnInitWorld() end
 
+---@param p IsoPlayer
 function AStormIsComing.RemovePlayer(p) end
 
 function AStormIsComing.Render() end

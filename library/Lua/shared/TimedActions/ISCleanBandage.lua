@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISCleanBandage : ISBaseTimedAction
----@field item unknown
----@field recipe unknown
----@field result unknown
----@field sound unknown
----@field waterObject unknown
+---@field item InventoryItem
+---@field recipe Recipe
+---@field result string
+---@field sound integer?
+---@field waterObject IsoObject
 ISCleanBandage = ISBaseTimedAction:derive("ISCleanBandage")
 ISCleanBandage.Type = "ISCleanBandage"
 
@@ -28,8 +28,12 @@ function ISCleanBandage:stopSound() end
 
 function ISCleanBandage:update() end
 
----@return unknown
+---@return boolean
 function ISCleanBandage:waitToStart() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param waterObject IsoObject
+---@param recipe Recipe
 ---@return ISCleanBandage
 function ISCleanBandage:new(character, item, waterObject, recipe) end

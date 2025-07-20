@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISAddTakeDispenserBottle : ISBaseTimedAction
----@field bottle unknown
----@field square unknown
----@field waterdispenser unknown
+---@field bottle InventoryItem
+---@field square IsoGridSquare
+---@field waterdispenser IsoObject
 ISAddTakeDispenserBottle = ISBaseTimedAction:derive("ISAddTakeDispenserBottle")
 ISAddTakeDispenserBottle.Type = "ISAddTakeDispenserBottle"
 
@@ -24,8 +24,11 @@ function ISAddTakeDispenserBottle:stop() end
 
 function ISAddTakeDispenserBottle:update() end
 
----@return unknown
+---@return boolean
 function ISAddTakeDispenserBottle:waitToStart() end
 
+---@param character IsoPlayer
+---@param waterdispenser IsoObject
+---@param bottle InventoryItem
 ---@return ISAddTakeDispenserBottle
 function ISAddTakeDispenserBottle:new(character, waterdispenser, bottle) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISEquipHeavyItem : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ISEquipHeavyItem = ISBaseTimedAction:derive("ISEquipHeavyItem")
 ISEquipHeavyItem.Type = "ISEquipHeavyItem"
 
@@ -11,6 +11,7 @@ function ISEquipHeavyItem:complete() end
 ---@return number
 function ISEquipHeavyItem:getDuration() end
 
+---@param item InventoryItem
 ---@return boolean
 function ISEquipHeavyItem:isAlreadyTransferred(item) end
 
@@ -25,8 +26,10 @@ function ISEquipHeavyItem:stop() end
 
 function ISEquipHeavyItem:update() end
 
----@return unknown
+---@return boolean
 function ISEquipHeavyItem:waitToStart() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISEquipHeavyItem
 function ISEquipHeavyItem:new(character, item) end

@@ -1,26 +1,26 @@
 ---@meta
 
----@class ISCollapsableWindowJoypad : ISPanelJoypad
+---@class ISCollapsableWindowJoypad : ISPanelJoypad, ISCollapsableWindow
 ---@field clearStentil boolean
----@field closeButtonTexture unknown
----@field collapseButtonTexture unknown
+---@field closeButtonTexture Texture
+---@field collapseButtonTexture Texture
 ---@field collapseCounter number
 ---@field drawFrame boolean
----@field infoBtn unknown
----@field invbasic unknown
+---@field infoBtn Texture
+---@field invbasic Texture
 ---@field isCollapsed boolean
 ---@field pin boolean
----@field pinButtonTexture unknown
+---@field pinButtonTexture Texture
 ---@field resizable boolean
----@field resizeimage unknown
----@field statusbarbkg unknown
+---@field resizeimage Texture
+---@field statusbarbkg Texture
 ---@field title unknown?
----@field titlebarbkg unknown
----@field titleFont unknown
----@field titleFontHgt unknown
----@field viewList table
----@field widgetTextureColor table
-ISCollapsableWindowJoypad = ISPanelJoypad:derive("ISCollapsableWindowJoypad")
+---@field titlebarbkg Texture
+---@field titleFont UIFont
+---@field titleFontHgt number
+---@field viewList ISUIElement[]
+---@field widgetTextureColor umbrella.RGBA
+ISCollapsableWindowJoypad = {}
 ISCollapsableWindowJoypad.Type = "ISCollapsableWindowJoypad"
 
 function ISCollapsableWindowJoypad:initialise() end

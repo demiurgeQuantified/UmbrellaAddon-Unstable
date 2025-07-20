@@ -12,8 +12,9 @@
 ---@field yes ISButton?
 ISAdminMessage = ISPanel:derive("ISAdminMessage")
 ISAdminMessage.Type = "ISAdminMessage"
-ISAdminMessage.messages = {}
+ISAdminMessage.messages = nil ---@type ISAdminMessage[]
 
+---@param message string
 ---@param x number
 ---@param y number
 ---@param z number
@@ -25,6 +26,7 @@ function ISAdminMessage:destroy() end
 
 function ISAdminMessage:initialise() end
 
+---@param button ISButton
 function ISAdminMessage:onClick(button) end
 
 ---@param x number

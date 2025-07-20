@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISWaterPlantAction : ISBaseTimedAction
----@field character unknown?
+---@field character IsoPlayer
 ---@field deltaPerUse number
----@field item unknown?
----@field sound unknown
----@field sq unknown
----@field uses number
+---@field item InventoryItem
+---@field sound integer?
+---@field sq IsoGridSquare
+---@field uses integer
 ---@field usesUsed number
 ISWaterPlantAction = ISBaseTimedAction:derive("ISWaterPlantAction")
 ISWaterPlantAction.Type = "ISWaterPlantAction"
@@ -30,12 +30,13 @@ function ISWaterPlantAction:update() end
 
 function ISWaterPlantAction:useItemOneUnit() end
 
----@return unknown
+---@return boolean
 function ISWaterPlantAction:waitToStart() end
 
----@param character unknown?
----@param item unknown?
----@param uses number
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param uses integer
+---@param sq IsoGridSquare
 ---@param maxTime number
 ---@return ISWaterPlantAction
 function ISWaterPlantAction:new(character, item, uses, sq, maxTime) end

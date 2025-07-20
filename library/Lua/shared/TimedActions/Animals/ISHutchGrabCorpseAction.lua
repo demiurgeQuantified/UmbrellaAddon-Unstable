@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISHutchGrabCorpseAction : ISBaseTimedAction
----@field animal unknown
----@field corpse unknown
+---@field animal IsoAnimal
+---@field corpse InventoryItem
 ---@field forceProgressBar boolean
----@field hutch unknown
+---@field hutch IsoHutch
 ---@field ignoreHandsWounds boolean
----@field index unknown
+---@field index integer
 ISHutchGrabCorpseAction = ISBaseTimedAction:derive("ISHutchGrabCorpseAction")
 ISHutchGrabCorpseAction.Type = "ISHutchGrabCorpseAction"
 
@@ -30,5 +30,8 @@ function ISHutchGrabCorpseAction:update() end
 ---@return unknown
 function ISHutchGrabCorpseAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param index integer
+---@param hutch IsoHutch
 ---@return ISHutchGrabCorpseAction
 function ISHutchGrabCorpseAction:new(character, index, hutch) end

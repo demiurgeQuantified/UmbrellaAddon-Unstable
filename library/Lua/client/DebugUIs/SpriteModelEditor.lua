@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class SpriteModelEditor : ISPanel
----@field animationComboModelScriptName unknown?
----@field animationComboTileProperties unknown?
+---@field animationComboModelScriptName string?
+---@field animationComboTileProperties SpriteModel?
 ---@field belowList ISPanel
 ---@field bottomPanel ISPanel
 ---@field button1 ISButton
@@ -11,17 +11,17 @@
 ---@field comboChooseAnimation ISComboBox
 ---@field comboChooseModel ISComboBox
 ---@field comboModID ISComboBox
----@field currentModelScriptName unknown?
+---@field currentModelScriptName string?
 ---@field listBox SpriteModelEditor_ListBox
 ---@field modID string
 ---@field optionsPanel SpriteModelEditor_OptionsPanel
 ---@field runtimeEntry ISTextEntryBox
----@field runtimeEntryProperties unknown?
+---@field runtimeEntryProperties SpriteModel?
 ---@field scene SpriteModelEditor_Scene
----@field selectedTileProperties unknown?
+---@field selectedTileProperties SpriteModel?
 ---@field sliderAnimationTime ISSliderPanel
----@field tempExtents unknown
----@field tempTranslate unknown
+---@field tempExtents Vector3f
+---@field tempTranslate Vector3f
 ---@field tilePicker SpriteModelEditor_TilePicker
 ---@field toolBar ISPanel
 SpriteModelEditor = ISPanel:derive("SpriteModelEditor")
@@ -31,36 +31,47 @@ function SpriteModelEditor:createChildren() end
 
 function SpriteModelEditor:createToolbar() end
 
----@return unknown?
+---@return SpriteModel?
 function SpriteModelEditor:getOrCreateTileProperties() end
 
----@return unknown?
+---@return SpriteModel?
 function SpriteModelEditor:getTileProperties() end
 
+---@param time number
+---@param slider ISSliderPanel
 function SpriteModelEditor:onAnimationTimeChanged(time, slider) end
 
 function SpriteModelEditor:onComboChooseAnimation() end
 
 function SpriteModelEditor:onComboChooseModel() end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function SpriteModelEditor:onCreateTilesetImage(button, x, y) end
 
+---@param button ISButton
 function SpriteModelEditor:onCreateTilesetImage2(button) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function SpriteModelEditor:onExit(button, x, y) end
 
+---@param key integer
 function SpriteModelEditor:onKeyPress(key) end
 
 function SpriteModelEditor:onOptions() end
 
+---@param oldw number
+---@param oldh number
+---@param neww number
+---@param newh number
 function SpriteModelEditor:onResolutionChange(oldw, oldh, neww, newh) end
 
 function SpriteModelEditor:onRuntimeEntered() end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function SpriteModelEditor:onSave(button, x, y) end
@@ -73,7 +84,7 @@ function SpriteModelEditor:render() end
 
 function SpriteModelEditor:resetView() end
 
----@param animationName string
+---@param animationName string?
 function SpriteModelEditor:setSelectedAnimation(animationName) end
 
 function SpriteModelEditor:showUI() end
@@ -101,10 +112,14 @@ function SpriteModelEditor:new(x, y, width, height) end
 SpriteModelEditor_ListBox = ISScrollingListBox:derive("SpriteModelEditor_ListBox")
 SpriteModelEditor_ListBox.Type = "SpriteModelEditor_ListBox"
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function SpriteModelEditor_ListBox:doDrawItem(y, item, alt) end
 
----@return number
+---@param text string
+---@return integer
 function SpriteModelEditor_ListBox:indexOf(text) end
 
 ---@param x number
@@ -131,6 +146,8 @@ function SpriteModelEditor_OptionsPanel:createChildren() end
 ---@param y number
 function SpriteModelEditor_OptionsPanel:onMouseDownOutside(x, y) end
 
+---@param index integer
+---@param selected boolean
 function SpriteModelEditor_OptionsPanel:onTickBox(index, selected) end
 
 ---@param x number
@@ -141,73 +158,60 @@ function SpriteModelEditor_OptionsPanel:onTickBox(index, selected) end
 function SpriteModelEditor_OptionsPanel:new(x, y, width, height) end
 
 ---@class SpriteModelEditor_Scene : ISUI3DScene
----@field dragPointIndex number
+---@field dragPointIndex integer
 ---@field editor SpriteModelEditor
 ---@field gizmo string
 ---@field gizmoAxis string
----@field gizmoClickScenePos unknown
----@field gizmoStartScenePos unknown
----@field originalRotate table
----@field originalScale table
----@field originalTranslate table
+---@field gizmoClickScenePos Vector3f
+---@field gizmoStartScenePos Vector3f
+---@field originalRotate table<string, Vector3f>
+---@field originalScale table<string, Vector3f>
+---@field originalTranslate table<string, Vector3f>
 ---@field rotate boolean
 ---@field sceneModelName string
----@field selectedTileName unknown
----@field tempExtentsMax unknown
----@field tempExtentsMin unknown
----@field tempRotate unknown
----@field tempTranslate unknown
----@field zeroVector unknown
+---@field selectedTileName string
+---@field tempExtentsMax Vector3f
+---@field tempExtentsMin Vector3f
+---@field tempRotate Vector3f
+---@field tempTranslate Vector3f
+---@field zeroVector Vector3f
 SpriteModelEditor_Scene = ISUI3DScene:derive("SpriteModelEditor_Scene")
 SpriteModelEditor_Scene.Type = "SpriteModelEditor_Scene"
 
+---@param func string
 ---@return unknown
 function SpriteModelEditor_Scene:java0(func) end
 
 ---@param func string
----@param arg0 number | boolean | string
 ---@return unknown
 function SpriteModelEditor_Scene:java1(func, arg0) end
 
 ---@param func string
----@param arg0 number | string
----@param arg1 (number | string | boolean)?
+---@param arg1 unknown?
 ---@return unknown
 function SpriteModelEditor_Scene:java2(func, arg0, arg1) end
 
 ---@param func string
----@param arg0 number
----@param arg1 number
----@param arg2 number
 ---@return unknown
 function SpriteModelEditor_Scene:java3(func, arg0, arg1, arg2) end
 
+---@param func string
 ---@return unknown
 function SpriteModelEditor_Scene:java4(func, arg0, arg1, arg2, arg3) end
 
+---@param func string
 ---@return unknown
 function SpriteModelEditor_Scene:java5(func, arg0, arg1, arg2, arg3, arg4) end
 
 ---@param func string
----@param arg3 number
----@param arg4 number
----@param arg5 number
 ---@return unknown
 function SpriteModelEditor_Scene:java6(func, arg0, arg1, arg2, arg3, arg4, arg5) end
 
+---@param func string
 ---@return unknown
 function SpriteModelEditor_Scene:java7(func, arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 ---@param func string
----@param arg0 number
----@param arg1 number
----@param arg2 number
----@param arg3 number
----@param arg4 number
----@param arg5 number
----@param arg6 number
----@param arg7 number
----@param arg8 number
 ---@return unknown
 function SpriteModelEditor_Scene:java9(func, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
@@ -215,6 +219,7 @@ function SpriteModelEditor_Scene:onGizmoAccept() end
 
 function SpriteModelEditor_Scene:onGizmoCancel() end
 
+---@param delta number
 function SpriteModelEditor_Scene:onGizmoChanged(delta) end
 
 function SpriteModelEditor_Scene:onGizmoStart() end
@@ -285,8 +290,8 @@ function SpriteModelEditor_Scene:new(x, y, width, height, editor) end
 ---@class SpriteModelEditor_TileList : ISPanel
 ---@field editor SpriteModelEditor
 ---@field picker SpriteModelEditor_TilePicker
----@field selected table?
----@field tileset string?
+---@field selected { col: number, row: number }?
+---@field tileset string
 SpriteModelEditor_TileList = ISPanel:derive("SpriteModelEditor_TileList")
 SpriteModelEditor_TileList.Type = "SpriteModelEditor_TileList"
 
@@ -296,6 +301,8 @@ SpriteModelEditor_TileList.Type = "SpriteModelEditor_TileList"
 ---@return number
 function SpriteModelEditor_TileList:getColRowAt(x, y) end
 
+---@param col number
+---@param row number
 ---@return boolean
 function SpriteModelEditor_TileList:isValidColRow(col, row) end
 
@@ -305,6 +312,7 @@ function SpriteModelEditor_TileList:onClearSelectedTiles() end
 ---@param y number
 function SpriteModelEditor_TileList:onMouseDown(x, y) end
 
+---@param del number
 function SpriteModelEditor_TileList:onMouseWheel(del) end
 
 ---@param x number
@@ -313,7 +321,7 @@ function SpriteModelEditor_TileList:onRightMouseDown(x, y) end
 
 function SpriteModelEditor_TileList:render() end
 
----@param tilesetName string?
+---@param tilesetName string
 function SpriteModelEditor_TileList:setTileset(tilesetName) end
 
 ---@param x number
@@ -333,6 +341,7 @@ SpriteModelEditor_TilePicker.Type = "SpriteModelEditor_TilePicker"
 
 function SpriteModelEditor_TilePicker:createChildren() end
 
+---@param del number
 ---@return boolean
 function SpriteModelEditor_TilePicker:onMouseWheel(del) end
 

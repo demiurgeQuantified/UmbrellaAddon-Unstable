@@ -5,9 +5,9 @@
 ---@field connectBtn ISButton
 ---@field connectTypeEntry ISTickBox
 ---@field connectTypeLabel ISLabel
----@field ip unknown
+---@field ip string
 ---@field itemheightoverride table
----@field joypadButtons unknown
+---@field joypadButtons ISButton[]
 ---@field NoLabel boolean
 ---@field passwordEntry ISTextEntryBox
 ---@field passwordLabel ISLabel
@@ -28,20 +28,27 @@ function ServerConnectPopup:initialise() end
 
 function ServerConnectPopup:instantiate() end
 
+---@param joypadData JoypadData
 function ServerConnectPopup:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ServerConnectPopup:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ServerConnectPopup:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ServerConnectPopup:onJoypadDown(button, joypadData) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ServerConnectPopup:onOptionMouseDown(button, x, y) end
 
 function ServerConnectPopup:prerender() end
 
+---@param ip string
 ---@param port string
 ---@param passwordStr string
 function ServerConnectPopup:setServer(ip, port, passwordStr) end

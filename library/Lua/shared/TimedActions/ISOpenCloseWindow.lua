@@ -2,7 +2,7 @@
 
 ---@class ISOpenCloseWindow : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field object unknown
+---@field object IsoWindow
 ---@field useProgressBar boolean
 ISOpenCloseWindow = ISBaseTimedAction:derive("ISOpenCloseWindow")
 ISOpenCloseWindow.Type = "ISOpenCloseWindow"
@@ -24,9 +24,10 @@ function ISOpenCloseWindow:stop() end
 
 function ISOpenCloseWindow:update() end
 
----@return unknown
+---@return boolean
 function ISOpenCloseWindow:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param object IsoWindow
 ---@return ISOpenCloseWindow
 function ISOpenCloseWindow:new(character, object) end

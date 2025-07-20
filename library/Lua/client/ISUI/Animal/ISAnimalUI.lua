@@ -2,24 +2,24 @@
 
 ---@class ISAnimalUI : ISCollapsableWindowJoypad
 ---@field ageBtn ISButton
----@field animal unknown
+---@field animal IsoAnimal
 ---@field animalName string
----@field avatarBackgroundTexture unknown
----@field avatarDefinition unknown
+---@field avatarBackgroundTexture Texture
+---@field avatarDefinition umbrella.AnimalAvatarDefinition
 ---@field avatarHeight number
 ---@field avatarPanel ISCharacterScreenAvatar
 ---@field avatarWidth number
 ---@field avatarX number
 ---@field avatarY number
----@field chr unknown
+---@field chr IsoPlayer
 ---@field feedBtn ISButton
 ---@field genderBtn ISButton
 ---@field milkAnimalBtn ISButton
----@field playerNum unknown
+---@field playerNum integer
 ---@field prevFocus unknown?
 ---@field refreshNeeded boolean
 ---@field renameBtn ISButton
----@field skillLvl unknown
+---@field skillLvl integer
 ---@field xOffset number
 ISAnimalUI = ISCollapsableWindowJoypad:derive("ISAnimalUI")
 ISAnimalUI.Type = "ISAnimalUI"
@@ -32,31 +32,38 @@ function ISAnimalUI:close() end
 
 function ISAnimalUI:create() end
 
----@return string?
+---@return unknown
 function ISAnimalUI:getClutchSizeText() end
 
----@return string?
+---@return string
 function ISAnimalUI:getPregnantText() end
 
 ---@return string
 function ISAnimalUI:getUdderText() end
 
----@return string?
+---@return string
 function ISAnimalUI:getWoolText() end
 
 function ISAnimalUI:initialise() end
 
----@return unknown
+---@param font UIFont
+---@param text string
+---@param maxWidth number
+---@return number
 function ISAnimalUI:maxTextWidth(font, text, maxWidth) end
 
 function ISAnimalUI:onChangeGender() end
 
+---@param joypadData JoypadData
 function ISAnimalUI:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISAnimalUI:onJoypadDown(button, joypadData) end
 
 function ISAnimalUI:onMilkAnimal() end
 
+---@param button ISButton
 function ISAnimalUI:onRenameAnimalClick(button, animal) end
 
 function ISAnimalUI:onSetAge() end
@@ -73,6 +80,8 @@ function ISAnimalUI:updateAvatar() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param animal IsoAnimal
+---@param player IsoPlayer
 ---@return ISAnimalUI
 function ISAnimalUI:new(x, y, width, height, animal, player) end
 

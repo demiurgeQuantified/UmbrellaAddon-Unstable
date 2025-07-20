@@ -2,16 +2,17 @@
 
 ---@class ISSectionedPanel : ISPanel
 ---@field maintainHeight boolean
----@field sections table
+---@field sections ISSectionedPanel_Section[]
 ISSectionedPanel = ISPanel:derive("ISSectionedPanel")
 ISSectionedPanel.Type = "ISSectionedPanel"
 
----@param panel ISScrollingListBox | DebugChunkStateUI_ObjPropsPanel
+---@param panel ISPanel
 ---@param title string
 function ISSectionedPanel:addSection(panel, title) end
 
 function ISSectionedPanel:clear() end
 
+---@param del number
 ---@return boolean
 function ISSectionedPanel:onMouseWheel(del) end
 
@@ -30,8 +31,8 @@ function ISSectionedPanel:new(x, y, width, height) end
 ---@field enabled boolean
 ---@field expanded boolean
 ---@field headerButton ISButton
----@field panel unknown
----@field panelHeight unknown
+---@field panel ISPanel
+---@field panelHeight number
 ---@field title string
 ISSectionedPanel_Section = ISPanel:derive("ISSectionedPanel_Section")
 ISSectionedPanel_Section.Type = "ISSectionedPanel_Section"
@@ -52,6 +53,7 @@ function ISSectionedPanel_Section:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param panel ISPanel
 ---@param title string
 ---@return ISSectionedPanel_Section
 function ISSectionedPanel_Section:new(x, y, width, height, panel, title) end

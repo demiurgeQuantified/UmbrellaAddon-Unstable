@@ -16,5 +16,6 @@ function ISSitOnChairAction:stop() end
 
 function ISSitOnChairAction:update() end
 
+---@param character IsoPlayer
 ---@return ISSitOnChairAction
 function ISSitOnChairAction:new(character, item) end

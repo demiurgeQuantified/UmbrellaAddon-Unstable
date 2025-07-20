@@ -5,6 +5,7 @@
 TutorialStep = ISBaseObject:derive("TutorialStep")
 TutorialStep.Type = "TutorialStep"
 
+---@param text string
 ---@param x number
 ---@param y number
 function TutorialStep:addMessage(text, x, y) end
@@ -22,5 +23,6 @@ function TutorialStep:isComplete() end
 
 function TutorialStep:onClose(message) end
 
+---@param type table
 ---@return TutorialStep
 function TutorialStep:new(type) end

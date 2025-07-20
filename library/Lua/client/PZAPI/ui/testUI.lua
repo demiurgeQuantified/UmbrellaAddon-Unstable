@@ -2,7 +2,7 @@
 
 ---@class TESTUI
 local __TESTUI = {}
-__TESTUI.element = nil
+__TESTUI.element = nil ---@type UI.Node?
 
 function __TESTUI.show() end
 

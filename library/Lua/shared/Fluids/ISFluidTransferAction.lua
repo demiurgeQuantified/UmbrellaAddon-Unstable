@@ -1,15 +1,15 @@
 ---@meta
 
 ---@class ISFluidTransferAction : ISBaseTimedAction
----@field amount unknown
----@field sound unknown
+---@field amount number
+---@field sound integer?
 ---@field source ISFluidContainer?
----@field sourceFluidObject unknown?
----@field sourceOwner unknown?
----@field sourceStartAmount unknown
----@field target ISFluidContainer?
----@field targetFluidObject unknown?
----@field targetOwner unknown?
+---@field sourceFluidObject (FluidContainer | ResourceFluid)?
+---@field sourceOwner GameEntity?
+---@field sourceStartAmount number
+---@field target unknown?
+---@field targetFluidObject (FluidContainer | ResourceFluid)?
+---@field targetOwner GameEntity?
 ISFluidTransferAction = ISBaseTimedAction:derive("ISFluidTransferAction")
 ISFluidTransferAction.Type = "ISFluidTransferAction"
 
@@ -27,10 +27,12 @@ function ISFluidTransferAction:stop() end
 
 function ISFluidTransferAction:update() end
 
+---@param character IsoPlayer
 ---@param sourceContainer ISFluidContainer?
----@param sourceFluidObject unknown?
+---@param sourceFluidObject FluidContainer | ResourceFluid
 ---@param targetContainer ISFluidContainer?
----@param targetFluidObject unknown?
+---@param targetFluidObject FluidContainer | ResourceFluid
+---@param amount number
 ---@return ISFluidTransferAction
 function ISFluidTransferAction:new(
 	character,

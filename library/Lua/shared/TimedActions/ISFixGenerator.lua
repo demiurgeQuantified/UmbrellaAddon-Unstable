@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISFixGenerator : ISBaseTimedAction
----@field generator unknown
----@field sound unknown
+---@field generator IsoGenerator
+---@field sound integer?
 ISFixGenerator = ISBaseTimedAction:derive("ISFixGenerator")
 ISFixGenerator.Type = "ISFixGenerator"
 
@@ -25,9 +25,10 @@ function ISFixGenerator:stop() end
 
 function ISFixGenerator:update() end
 
----@return unknown
+---@return boolean
 function ISFixGenerator:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param generator IsoGenerator
 ---@return ISFixGenerator
 function ISFixGenerator:new(character, generator) end

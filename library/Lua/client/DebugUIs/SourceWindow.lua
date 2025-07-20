@@ -5,15 +5,17 @@
 ---@field keepOnScreen boolean
 ---@field reloadBtn ISButton
 ---@field sourceView ISScrollingListBox
----@field title unknown
+---@field title string
 SourceWindow = ISCollapsableWindow:derive("SourceWindow")
 SourceWindow.Type = "SourceWindow"
-SourceWindow.map = {}
+SourceWindow.map = {} ---@type table<string, SourceWindow>
 
 function SourceWindow:checkFontSize() end
 
 function SourceWindow:createChildren() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
 ---@return number
 function SourceWindow:doDrawItem(y, item) end
 
@@ -21,21 +23,26 @@ function SourceWindow:fill() end
 
 function SourceWindow:initialise() end
 
+---@param item string
 function SourceWindow:onMouseDoubleClickBreakpointToggle(item) end
 
+---@param self ISScrollingListBox
+---@param del number
 ---@return boolean
-function SourceWindow:onSourceMouseWheel(del) end
+function SourceWindow:onSourceMouseWheel(self, del) end
 
 function SourceWindow:prerender() end
 
 ---@return boolean
 function SourceWindow:reloadFile() end
 
-function SourceWindow:renderSrc() end
+---@param self ISScrollingListBox
+function SourceWindow:renderSrc(self) end
 
 ---@param line number
 function SourceWindow:scrollToLine(line) end
 
+---@param listBox ISScrollingListBox
 function SourceWindow:setListBoxItemHeight(listBox) end
 
 ---@param x number

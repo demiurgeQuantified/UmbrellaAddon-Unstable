@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISHotwireVehicle : ISBaseTimedAction
----@field sound unknown
+---@field sound integer?
 ISHotwireVehicle = ISBaseTimedAction:derive("ISHotwireVehicle")
 ISHotwireVehicle.Type = "ISHotwireVehicle"
 
@@ -24,5 +24,6 @@ function ISHotwireVehicle:stopSound() end
 
 function ISHotwireVehicle:update() end
 
+---@param character IsoPlayer
 ---@return ISHotwireVehicle
 function ISHotwireVehicle:new(character) end

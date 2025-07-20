@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class IsoRegionLogWindow : ISPanel
----@field buttonBorderColor table
+---@field buttonBorderColor umbrella.RGBA
 ---@field firstTableName boolean
 ---@field panelTitle string
 ---@field tableNamesList ISScrollingListBox
----@field variableColor table
+---@field variableColor umbrella.RGBA
 ---@field zOffsetSmallFont number
 IsoRegionLogWindow = ISPanel:derive("IsoRegionLogWindow")
 IsoRegionLogWindow.Type = "IsoRegionLogWindow"
@@ -18,6 +18,9 @@ function IsoRegionLogWindow:close() end
 
 function IsoRegionLogWindow:createChildren() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function IsoRegionLogWindow:drawTableNameList(y, item, alt) end
 
@@ -25,6 +28,7 @@ function IsoRegionLogWindow:initialise() end
 
 function IsoRegionLogWindow:onClickClose() end
 
+---@param item table
 function IsoRegionLogWindow:OnTableNamesListMouseDown(item) end
 
 function IsoRegionLogWindow:populateList() end

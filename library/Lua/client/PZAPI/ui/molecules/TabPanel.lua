@@ -14,6 +14,7 @@ function __UI_TabPanel:init() end
 
 function __UI_TabPanel:onResize() end
 
+---@param id string
 function __UI_TabPanel:select(id) end
 
 ---@class PZAPI.UI

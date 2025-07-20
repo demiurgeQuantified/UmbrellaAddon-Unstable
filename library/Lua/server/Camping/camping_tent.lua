@@ -17,32 +17,46 @@ camping.tentSprites = {
 	},
 }
 
----@return unknown?
+---@param grid IsoGridSquare
+---@param sprite string
+---@return IsoThumpable
 function camping.addTent(grid, sprite) end
 
+---@param tent IsoObject
 function camping.destroyTent(tent) end
 
----@return unknown?
+---@param square IsoGridSquare
+---@return IsoObject?
 function camping.findTentObject(square) end
 
----@param sprite unknown?
----@return unknown?
+---@param sprite string
+---@return umbrella.Camping.TentSprites?
 function camping.findTentSprites(sprite) end
 
----@return unknown?
+---@param grid IsoGridSquare
+---@return IsoObject?
 function camping.getCurrentTent(grid) end
 
----@return table
+---@param tent IsoObject
+---@return IsoObject[]
 function camping.getTentObjects(tent) end
 
+---@param object IsoObject
 ---@return boolean
 function camping.isTentObject(object) end
 
----@param tent unknown?
+---@param tent IsoObject?
 function camping.removeTent(tent) end
 
 ---@param x number
 ---@param y number
 ---@param z number
----@return unknown?
+---@return IsoObject?
 function camping.tentAt(x, y, z) end
+
+---@class umbrella.Camping.TentSprites
+---@field backLeft string
+---@field backRight string
+---@field frontLeft string
+---@field frontRight string
+umbrella_Camping_TentSprites = {}

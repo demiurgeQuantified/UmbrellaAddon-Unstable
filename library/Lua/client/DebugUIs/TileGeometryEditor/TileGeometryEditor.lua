@@ -6,19 +6,19 @@
 ---@field buttonOptions ISButton
 ---@field comboMode ISComboBox
 ---@field comboModID ISComboBox
----@field editMode table
+---@field editMode table<string, TileGeometryEditor_EditMode>
 ---@field modID string?
 ---@field optionsPanel TileGeometryEditor_OptionsPanel
----@field polygonPoint2D unknown
+---@field polygonPoint2D Vector2f
 ---@field scene TileGeometryEditor_Scene
 ---@field sceneTiles TileGeometryEditor_SceneTiles
 ---@field switchViewPanel ISPanel
 ---@field tilePicker TileGeometryEditor_TilePicker
 ---@field tilePicker2 TileGeometryEditor_TilePicker2
 ---@field toolBar ISPanel
----@field uiPoint unknown
----@field views table
----@field zeroVector unknown
+---@field uiPoint Vector2f
+---@field views table[]
+---@field zeroVector Vector3f
 TileGeometryEditor = ISPanel:derive("TileGeometryEditor")
 TileGeometryEditor.Type = "TileGeometryEditor"
 
@@ -28,27 +28,36 @@ function TileGeometryEditor:createChildren() end
 
 function TileGeometryEditor:createToolbar() end
 
----@return table
+---@return string[]
 function TileGeometryEditor:getValidGizmos() end
 
+---@param tbl table
 ---@param element string
 ---@return number
 function TileGeometryEditor:indexOf(tbl, element) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function TileGeometryEditor:onExit(button, x, y) end
 
+---@param key integer
 function TileGeometryEditor:onKeyPress(key) end
 
 function TileGeometryEditor:onOptions() end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function TileGeometryEditor:onReloadTexture(button, x, y) end
 
+---@param oldw number
+---@param oldh number
+---@param neww number
+---@param newh number
 function TileGeometryEditor:onResolutionChange(oldw, oldh, neww, newh) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function TileGeometryEditor:onSave(button, x, y) end
@@ -63,7 +72,7 @@ function TileGeometryEditor:render() end
 
 function TileGeometryEditor:resetView() end
 
----@param mode table
+---@param mode TileGeometryEditor_EditMode
 function TileGeometryEditor:setEditMode(mode) end
 
 function TileGeometryEditor:setGeometryList() end
@@ -74,6 +83,7 @@ function TileGeometryEditor:update() end
 
 function TileGeometryEditor:updateGeometryFile() end
 
+---@param selectedTile table
 function TileGeometryEditor:updateGeometryFile2(selectedTile) end
 
 ---@param x number
@@ -100,6 +110,7 @@ function TileGeometryEditor_SwitchView:onMouseMove(dx, dy) end
 ---@param dy number
 function TileGeometryEditor_SwitchView:onMouseMoveOutside(dx, dy) end
 
+---@param del number
 ---@return boolean
 function TileGeometryEditor_SwitchView:onMouseWheel(del) end
 
@@ -124,6 +135,8 @@ function TileGeometryEditor_OptionsPanel:createChildren() end
 ---@param y number
 function TileGeometryEditor_OptionsPanel:onMouseDownOutside(x, y) end
 
+---@param index integer
+---@param selected boolean
 function TileGeometryEditor_OptionsPanel:onTickBox(index, selected) end
 
 ---@param x number
@@ -140,23 +153,23 @@ function TileGeometryEditor_OptionsPanel:new(x, y, width, height) end
 ---@field editPoints boolean
 ---@field gizmo string
 ---@field gizmoAxis string
----@field mouseAction unknown?
----@field selectedObjectName unknown
----@field selectedTileName unknown?
----@field tempExtentsMax unknown
----@field tempExtentsMin unknown
----@field tempRotate unknown
----@field tempTranslate unknown
+---@field mouseAction string?
+---@field selectedObjectName string
+---@field selectedTileName string?
+---@field tempExtentsMax Vector3f
+---@field tempExtentsMin Vector3f
+---@field tempRotate Vector3f
+---@field tempTranslate Vector3f
 ---@field tools table
----@field zeroVector unknown
+---@field zeroVector Vector3f
 TileGeometryEditor_Scene = ISUI3DScene:derive("TileGeometryEditor_Scene")
 TileGeometryEditor_Scene.Type = "TileGeometryEditor_Scene"
 
 ---@return string?
----@return unknown?
+---@return integer?
 function TileGeometryEditor_Scene:getSelectedTile() end
 
----@return unknown?
+---@return string?
 function TileGeometryEditor_Scene:getSelectedTileName() end
 
 ---@param dx number
@@ -176,6 +189,7 @@ function TileGeometryEditor_Scene:getTileBounds2(dx, dy, dz) end
 ---@return number
 function TileGeometryEditor_Scene:getTileBoundsEtc() end
 
+---@param objectId string
 ---@return boolean
 function TileGeometryEditor_Scene:isPolygonObject(objectId) end
 
@@ -187,50 +201,40 @@ function TileGeometryEditor_Scene:isViewUserDefined() end
 function TileGeometryEditor_Scene:java0(func) end
 
 ---@param func string
----@param arg0 number | boolean | string
 ---@return unknown
 function TileGeometryEditor_Scene:java1(func, arg0) end
 
 ---@param func string
----@param arg0 number | string
----@param arg1 number | boolean | string
 ---@return unknown
 function TileGeometryEditor_Scene:java2(func, arg0, arg1) end
 
 ---@param func string
----@param arg0 number
----@param arg1 number
----@param arg2 number
 ---@return unknown
 function TileGeometryEditor_Scene:java3(func, arg0, arg1, arg2) end
 
 ---@param func string
 ---@param arg0 unknown?
----@param arg1 (number | string)?
----@param arg2 number
----@param arg3 number
+---@param arg1 unknown?
 ---@return unknown
 function TileGeometryEditor_Scene:java4(func, arg0, arg1, arg2, arg3) end
 
+---@param func string
 ---@return unknown
 function TileGeometryEditor_Scene:java5(func, arg0, arg1, arg2, arg3, arg4) end
 
+---@param func string
 ---@return unknown
 function TileGeometryEditor_Scene:java6(func, arg0, arg1, arg2, arg3, arg4, arg5) end
 
 ---@param func string
----@param arg0 string
----@param arg2 number
----@param arg3 number
----@param arg4 number
----@param arg5 number
----@param arg6 number
 ---@return unknown
 function TileGeometryEditor_Scene:java7(func, arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
+---@param func string
 ---@return unknown
 function TileGeometryEditor_Scene:java9(func, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
+---@param delta number
 function TileGeometryEditor_Scene:onGizmoChanged(delta) end
 
 ---@param x number
@@ -283,9 +287,15 @@ function TileGeometryEditor_Scene:renderNorthWall() end
 ---@param tileName string
 function TileGeometryEditor_Scene:renderPixelGrid(tileName) end
 
+---@param sx number
+---@param sy number
+---@param sx2 number
+---@param sy2 number
+---@param pixelSize number
 function TileGeometryEditor_Scene:renderPixelGrid2(sx, sy, sx2, sy2, pixelSize) end
 
 ---@param tileName string
+---@param texture Texture
 function TileGeometryEditor_Scene:renderSelectedTile(tileName, texture) end
 
 ---@param tx number
@@ -326,6 +336,11 @@ end
 
 function TileGeometryEditor_Scene:renderSolidSquareBox() end
 
+---@param sx number
+---@param sy number
+---@param sx2 number
+---@param sy2 number
+---@param pixelSize number
 ---@param tileName string
 function TileGeometryEditor_Scene:renderSpriteGridTextureMask(sx, sy, sx2, sy2, pixelSize, tileName) end
 
@@ -337,13 +352,26 @@ function TileGeometryEditor_Scene:renderSquareBox() end
 
 function TileGeometryEditor_Scene:renderSurfaceOffset() end
 
+---@param value integer
 ---@param r number
 ---@param g number
 ---@param b number
 function TileGeometryEditor_Scene:renderSurfaceOffsetAux(value, r, g, b) end
 
+---@param sx number
+---@param sy number
+---@param sx2 number
+---@param sy2 number
+---@param pixelSize number
+---@param texture Texture
 function TileGeometryEditor_Scene:renderTextureMask(sx, sy, sx2, sy2, pixelSize, texture) end
 
+---@param sx number
+---@param sy number
+---@param sx2 number
+---@param sy2 number
+---@param pixelSize number
+---@param texture Texture
 function TileGeometryEditor_Scene:renderTextureOutline(sx, sy, sx2, sy2, pixelSize, texture) end
 
 function TileGeometryEditor_Scene:renderTileName() end
@@ -382,6 +410,7 @@ TileGeometryEditor_TilePicker.Type = "TileGeometryEditor_TilePicker"
 
 function TileGeometryEditor_TilePicker:createChildren() end
 
+---@param del number
 ---@return boolean
 function TileGeometryEditor_TilePicker:onMouseWheel(del) end
 
@@ -407,6 +436,7 @@ TileGeometryEditor_TilePicker2.Type = "TileGeometryEditor_TilePicker2"
 
 function TileGeometryEditor_TilePicker2:createChildren() end
 
+---@param del number
 ---@return boolean
 function TileGeometryEditor_TilePicker2:onMouseWheel(del) end
 

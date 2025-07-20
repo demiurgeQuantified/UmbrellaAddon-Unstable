@@ -2,15 +2,15 @@
 
 ---@class IS9Patch : ISUIElement
 ---@field background boolean
----@field backgroundColor table
+---@field backgroundColor umbrella.RGBA
 ---@field border boolean
----@field borderColor table
----@field colWidthLeft unknown
----@field colWidthRight unknown
+---@field borderColor umbrella.RGBA
+---@field colWidthLeft number
+---@field colWidthRight number
 ---@field drawOnPrerender boolean
----@field img table
----@field rowHeightBot unknown
----@field rowHeightTop unknown
+---@field img Texture[]
+---@field rowHeightBot number
+---@field rowHeightTop number
 IS9Patch = ISUIElement:derive("IS9Patch")
 IS9Patch.Type = "IS9Patch"
 
@@ -26,5 +26,6 @@ function IS9Patch:renderInternal() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param _images Texture[]
 ---@return IS9Patch
 function IS9Patch:new(x, y, width, height, _images) end

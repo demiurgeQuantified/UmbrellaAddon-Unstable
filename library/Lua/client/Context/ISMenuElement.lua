@@ -7,7 +7,7 @@ function ISMenuElement.new() end
 
 ---@class ISMenuElement : ISMenuContext
 ---@field name string
----@field parentMenu unknown?
+---@field parentMenu ISMenuContext?
 ---@field zIndex number
 local __ISMenuElement = {}
 

@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISHutchGrabAnimal : ISBaseTimedAction
----@field hutch unknown
----@field index unknown
+---@field hutch IsoHutch
+---@field index integer
 ISHutchGrabAnimal = ISBaseTimedAction:derive("ISHutchGrabAnimal")
 ISHutchGrabAnimal.Type = "ISHutchGrabAnimal"
 
@@ -23,8 +23,11 @@ function ISHutchGrabAnimal:stop() end
 
 function ISHutchGrabAnimal:update() end
 
----@return unknown
+---@return boolean
 function ISHutchGrabAnimal:waitToStart() end
 
+---@param character IsoPlayer
+---@param index integer
+---@param hutch IsoHutch
 ---@return ISHutchGrabAnimal
 function ISHutchGrabAnimal:new(character, index, hutch) end

@@ -5,21 +5,22 @@
 ---@field fluidItemsScreen ISFluidItemsViewPanel
 ---@field fluidMixerScreen ISFluidMixerViewPanel
 ---@field fluidOverviewScreen ISFluidOverviewPanel
----@field height unknown
+---@field height number
 ---@field heightMod number
 ---@field panel ISTabPanel
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field rh number
 ---@field searchText string
----@field th unknown
+---@field th number
 ---@field title string
----@field width unknown
+---@field width number
 ISFluidDebugWindow = ISCollapsableWindow:derive("ISFluidDebugWindow")
 ISFluidDebugWindow.Type = "ISFluidDebugWindow"
-ISFluidDebugWindow.coords = nil ---@type boolean | table
+ISFluidDebugWindow.coords = nil ---@type number[] | false
 ISFluidDebugWindow.instance = nil ---@type ISFluidDebugWindow?
 
+---@param _player IsoPlayer
 ---@return ISFluidDebugWindow?
 function ISFluidDebugWindow.OnOpenPanel(_player) end
 
@@ -27,6 +28,9 @@ function ISFluidDebugWindow:close() end
 
 function ISFluidDebugWindow:createChildren() end
 
+---@param _y number
+---@param _obj ISUIElement
+---@param _margin number?
 ---@return number
 function ISFluidDebugWindow:incY(_y, _obj, _margin) end
 
@@ -44,5 +48,6 @@ function ISFluidDebugWindow:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ISFluidDebugWindow
 function ISFluidDebugWindow:new(x, y, width, height, player) end

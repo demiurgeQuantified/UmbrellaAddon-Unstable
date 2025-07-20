@@ -14,7 +14,8 @@ Kingsmouth.zombiesMaxPerChunk = (12 * 0.64) * 0.66
 
 function Kingsmouth.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function Kingsmouth.AddPlayer(playerNum, playerObj) end
 
 function Kingsmouth.Init() end
@@ -23,6 +24,7 @@ function Kingsmouth.OnGameStart() end
 
 function Kingsmouth.OnInitWorld() end
 
+---@param playerObj IsoPlayer
 function Kingsmouth.RemovePlayer(playerObj) end
 
 function Kingsmouth.Render() end

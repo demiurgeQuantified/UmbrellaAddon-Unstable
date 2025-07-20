@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISTakeGenerator : ISBaseTimedAction
----@field generator unknown
+---@field generator IsoGenerator
 ISTakeGenerator = ISBaseTimedAction:derive("ISTakeGenerator")
 ISTakeGenerator.Type = "ISTakeGenerator"
 
@@ -22,9 +22,10 @@ function ISTakeGenerator:stop() end
 
 function ISTakeGenerator:update() end
 
----@return unknown
+---@return boolean
 function ISTakeGenerator:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param generator IsoGenerator
 ---@return ISTakeGenerator
 function ISTakeGenerator:new(character, generator) end

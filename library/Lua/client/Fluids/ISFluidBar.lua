@@ -2,26 +2,26 @@
 
 ---@class ISFluidBar : ISPanel
 ---@field bubblesAlpha number
----@field bubblesTex unknown
+---@field bubblesTex Texture
 ---@field container unknown?
 ---@field containerAdd unknown?
 ---@field containerMixed unknown?
----@field detailInnerColor table
+---@field detailInnerColor umbrella.RGBA
 ---@field differenceAlpha number
 ---@field doToolTip boolean
 ---@field drawMeasures boolean
----@field fluidAddColor table
----@field fluidColor table
+---@field fluidAddColor umbrella.RGBA
+---@field fluidColor umbrella.RGBA
 ---@field gradientAlpha number
----@field gradientTex unknown
+---@field gradientTex Texture
 ---@field innerH number
 ---@field innerW number
 ---@field innerX number
 ---@field innerY number
----@field player unknown
+---@field player IsoPlayer
 ---@field ratioNew number
 ---@field ratioOrig number
----@field resource unknown?
+---@field resource ResourceFluid?
 ---@field showMixed boolean?
 ---@field toolTip ISToolTipInv?
 ---@field triangleWidth number
@@ -34,19 +34,26 @@ function ISFluidBar:createChildren() end
 
 function ISFluidBar:deactivateToolTip() end
 
+---@param _y number
 function ISFluidBar:drawAmountLine(_y) end
 
 ---@param _x number
 ---@param _y number
 ---@param _w number
 ---@param _h number
+---@param _alpha number
 function ISFluidBar:drawBubbles(_x, _y, _w, _h, _alpha) end
 
+---@param _size number
+---@param _sx number
+---@param _y number
+---@param _col umbrella.RGBA
+---@param _xmod number
 function ISFluidBar:drawTriangle(_size, _sx, _y, _col, _xmod) end
 
 ---@param _ratio number
 ---@return number
----@return unknown
+---@return number
 function ISFluidBar:getRatioY(_ratio) end
 
 function ISFluidBar:initialise() end
@@ -65,13 +72,13 @@ function ISFluidBar:render() end
 
 function ISFluidBar:resetRatioNew() end
 
----@param _fluidContainer unknown?
+---@param _fluidContainer FluidContainer?
 function ISFluidBar:setContainer(_fluidContainer) end
 
----@param _fluidContainer unknown?
+---@param _fluidContainer FluidContainer?
 function ISFluidBar:setContainerAdd(_fluidContainer) end
 
----@param _fluidContainer unknown?
+---@param _fluidContainer FluidContainer?
 ---@param _showMixed boolean?
 function ISFluidBar:setContainerMixed(_fluidContainer, _showMixed) end
 
@@ -82,6 +89,7 @@ function ISFluidBar:setRatioNew(_ratio) end
 ---@param y number
 ---@param width number
 ---@param height number
----@param _resource unknown?
+---@param _player IsoPlayer
+---@param _resource ResourceFluid?
 ---@return ISFluidBar
 function ISFluidBar:new(x, y, width, height, _player, _resource) end

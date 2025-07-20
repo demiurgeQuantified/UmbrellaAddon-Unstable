@@ -2,11 +2,13 @@
 
 ---@class ISTrimBeard : ISBaseTimedAction
 ---@field beardStyle string
----@field item unknown
----@field sound unknown
+---@field item InventoryItem?
+---@field sound integer?
 ISTrimBeard = ISBaseTimedAction:derive("ISTrimBeard")
 ISTrimBeard.Type = "ISTrimBeard"
 
+---@param event string
+---@param parameter string
 function ISTrimBeard:animEvent(event, parameter) end
 
 ---@return boolean
@@ -28,5 +30,8 @@ function ISTrimBeard:stopSound() end
 
 function ISTrimBeard:update() end
 
+---@param character IsoPlayer
+---@param beardStyle string
+---@param item InventoryItem?
 ---@return ISTrimBeard
 function ISTrimBeard:new(character, beardStyle, item) end

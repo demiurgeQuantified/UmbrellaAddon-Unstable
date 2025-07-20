@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISWorldMapKey : ISPanel
----@field character unknown?
+---@field character IsoPlayer?
 ---@field iso boolean
----@field key table
+---@field key string[]
 ---@field key1 string
 ---@field key2 string
 ---@field key3 string
@@ -13,7 +13,7 @@
 ---@field key7 string
 ---@field key8 string
 ---@field keyImagePath string
----@field playerNum number
+---@field playerNum integer
 ISWorldMapKey = ISPanel:derive("ISWorldMapKey")
 ISWorldMapKey.Type = "ISWorldMapKey"
 
@@ -51,6 +51,7 @@ function ISWorldMapKey:prerender() end
 
 function ISWorldMapKey:render() end
 
+---@param bool boolean
 function ISWorldMapKey:setIso(bool) end
 
 function ISWorldMapKey:undisplay() end

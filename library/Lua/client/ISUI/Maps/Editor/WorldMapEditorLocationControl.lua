@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class WorldMapEditorLocationControl : ISBaseObject
----@field editor unknown
----@field mapAPI unknown
----@field mapUI unknown
+---@field editor WorldMapEditor
+---@field mapAPI UIWorldMapV1
+---@field mapUI WorldMapEditor
 ---@field originalX number
 ---@field originalY number
 ---@field snapMode string
@@ -19,6 +19,8 @@ function WorldMapEditorLocationControl:cancelDrag() end
 ---@return boolean
 function WorldMapEditorLocationControl:hitTest(x, y) end
 
+---@param mx number
+---@param my number
 function WorldMapEditorLocationControl:onMouseMove(mx, my) end
 
 function WorldMapEditorLocationControl:render() end
@@ -27,10 +29,12 @@ function WorldMapEditorLocationControl:render() end
 ---@param y number
 function WorldMapEditorLocationControl:setLocation(x, y) end
 
+---@param xy number
 ---@return number
 function WorldMapEditorLocationControl:snap(xy) end
 
 function WorldMapEditorLocationControl:startDrag() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorLocationControl
 function WorldMapEditorLocationControl:new(editor) end

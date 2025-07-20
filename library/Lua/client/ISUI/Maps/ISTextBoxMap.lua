@@ -1,31 +1,33 @@
 ---@meta
 
+---@alias umbrella.ISTextBoxMap.Target { mapUI: umbrella.MapUI, symbolsUI: ISWorldMapSymbols }
+
 ---@class ISTextBoxMap : ISCollapsableWindowJoypad
----@field blackColor unknown
----@field character unknown?
----@field colorButtonInfo table
----@field colorButtons table
----@field currentColor unknown
+---@field blackColor ColorInfo
+---@field character IsoPlayer?
+---@field colorButtonInfo umbrella.ISTextBoxMap.ColorButtonInfo[]
+---@field colorButtons ISButton[]
+---@field currentColor ColorInfo
 ---@field defaultEntryText string
 ---@field entry ISTextEntryBox
----@field fontHgt unknown
----@field mapUI unknown
+---@field fontHgt number
+---@field mapUI umbrella.MapUI
 ---@field name unknown?
 ---@field no ISButton
----@field onclick unknown
----@field param1 unknown
----@field param2 unknown
----@field param3 unknown
----@field param4 unknown
----@field player unknown?
----@field symbolsUI unknown
----@field target ISWorldMapSymbolTool_AddNote | ISWorldMapSymbolTool_EditNote
+---@field onclick umbrella.ISButton.OnClick?
+---@field param1 unknown?
+---@field param2 unknown?
+---@field param3 unknown?
+---@field param4 unknown?
+---@field player integer?
+---@field symbolsUI ISWorldMapSymbols
+---@field target umbrella.ISTextBoxMap.Target
 ---@field text string
 ---@field tickBox ISTickBox
----@field validateArgs table
----@field validateFunc unknown
----@field validateTarget unknown
----@field validateTooltipText unknown
+---@field validateArgs table?
+---@field validateFunc umbrella.ISTextBox.ValidateFunction?
+---@field validateTarget unknown?
+---@field validateTooltipText string?
 ---@field yes ISButton
 ISTextBoxMap = ISCollapsableWindowJoypad:derive("ISTextBoxMap")
 ISTextBoxMap.Type = "ISTextBoxMap"
@@ -39,18 +41,25 @@ function ISTextBoxMap:destroy() end
 ---@return boolean
 function ISTextBoxMap:isTranslation() end
 
+---@param button ISButton
 function ISTextBoxMap:onClick(button) end
 
 function ISTextBoxMap:onCommandEntered() end
 
+---@param joypadData JoypadData
 function ISTextBoxMap:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISTextBoxMap:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISTextBoxMap:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISTextBoxMap:onJoypadDown(button, joypadData) end
 
+---@param key integer
 function ISTextBoxMap:onOtherKey(key) end
 
 function ISTextBoxMap:prerender() end
@@ -62,10 +71,16 @@ function ISTextBoxMap:render() end
 ---@param b number
 function ISTextBoxMap:selectColor(r, g, b) end
 
+---@param onlyNumbers boolean
 function ISTextBoxMap:setOnlyNumbers(onlyNumbers) end
 
+---@param target unknown?
+---@param func umbrella.ISTextBox.ValidateFunction?
+---@param arg1 unknown?
+---@param arg2 unknown?
 function ISTextBoxMap:setValidateFunction(target, func, arg1, arg2) end
 
+---@param text string?
 function ISTextBoxMap:setValidateTooltipText(text) end
 
 ---@param isTranslation boolean
@@ -79,8 +94,13 @@ function ISTextBoxMap:updateButtons() end
 ---@param height number
 ---@param text string
 ---@param defaultEntryText string
----@param target ISWorldMapSymbolTool_AddNote | ISWorldMapSymbolTool_EditNote
----@param player unknown?
+---@param target umbrella.ISTextBoxMap.Target
+---@param onclick umbrella.ISButton.OnClick?
+---@param player integer?
+---@param param1 unknown?
+---@param param2 unknown?
+---@param param3 unknown?
+---@param param4 unknown?
 ---@return ISTextBoxMap
 function ISTextBoxMap:new(
 	x,
@@ -98,3 +118,9 @@ function ISTextBoxMap:new(
 	param4
 )
 end
+
+---@class umbrella.ISTextBoxMap.ColorButtonInfo
+---@field colorInfo ColorInfo
+---@field item string
+---@field tooltip string
+umbrella_ISTextBoxMap_ColorButtonInfo = {}

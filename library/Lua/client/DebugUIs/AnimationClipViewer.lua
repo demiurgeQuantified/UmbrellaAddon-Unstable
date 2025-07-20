@@ -1,16 +1,16 @@
 ---@meta
 
 ---@class AnimationClipViewer : ISPanel
----@field animalScriptByModelScript table
----@field animalScriptByName table
+---@field animalScriptByModelScript table<ModelScript, ModelScript>
+---@field animalScriptByName table<string, ModelScript>
 ---@field animate boolean
 ---@field bottomPanel ISPanel
 ---@field buttonOptions ISButton
 ---@field comboAnimal ISComboBox
----@field currentAnimalScript unknown
+---@field currentAnimalScript ModelScript?
 ---@field currentObjectName string
 ---@field filter ISTextEntryBox
----@field filterText unknown
+---@field filterText string?
 ---@field listBox AnimationClipViewer_ListBox
 ---@field optionsPanel AnimationClipViewer_OptionsPanel
 ---@field scene AnimationClipViewer_Scene
@@ -45,42 +45,58 @@ function AnimationClipViewer:getLastFrame() end
 
 function AnimationClipViewer:initAnimalModelScripts() end
 
----@return unknown
+---@param func string
+---@return unknown?
 function AnimationClipViewer:java0(func) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java1(func, arg0) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java2(func, arg0, arg1) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java3(func, arg0, arg1, arg2) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java4(func, arg0, arg1, arg2, arg3) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java5(func, arg0, arg1, arg2, arg3, arg4) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java6(func, arg0, arg1, arg2, arg3, arg4, arg5) end
 
+---@param func string
 ---@return unknown
 function AnimationClipViewer:java9(func, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 function AnimationClipViewer:onComboAnimalModel() end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function AnimationClipViewer:onExit(button, x, y) end
 
+---@param key integer
 function AnimationClipViewer:onKeyPress(key) end
 
 function AnimationClipViewer:onOptions() end
 
+---@param oldw number
+---@param oldh number
+---@param neww number
+---@param newh number
 function AnimationClipViewer:onResolutionChange(oldw, oldh, neww, newh) end
 
+---@param speed number
+---@param slider ISSliderPanel
 function AnimationClipViewer:onSpeedScaleChanged(speed, slider) end
 
 function AnimationClipViewer:prerender() end
@@ -103,13 +119,17 @@ function AnimationClipViewer:update() end
 function AnimationClipViewer:new(x, y, width, height) end
 
 ---@class AnimationClipViewer_ListBox : ISScrollingListBox
----@field selectedClipName unknown
+---@field selectedClipName string
 AnimationClipViewer_ListBox = ISScrollingListBox:derive("AnimationClipViewer_ListBox")
 AnimationClipViewer_ListBox.Type = "AnimationClipViewer_ListBox"
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function AnimationClipViewer_ListBox:doDrawItem(y, item, alt) end
 
+---@param text string
 ---@return number
 function AnimationClipViewer_ListBox:indexOf(text) end
 
@@ -130,10 +150,11 @@ function AnimationClipViewer_ListBox:new(x, y, width, height) end
 ---@field dragIndex number
 ---@field mouseDown boolean
 ---@field prevFraction number
----@field soundList table
+---@field soundList umbrella.AnimationClipViewer.Sound[]
 AnimationClipViewer_SoundBar = ISPanel:derive("AnimationClipViewer_SoundBar")
 AnimationClipViewer_SoundBar.Type = "AnimationClipViewer_SoundBar"
 
+---@param sound umbrella.AnimationClipViewer.Sound
 ---@return number
 ---@return number
 ---@return number
@@ -165,6 +186,7 @@ function AnimationClipViewer_SoundBar:onMouseUp(x, y) end
 ---@param y number
 function AnimationClipViewer_SoundBar:onMouseUpOutside(x, y) end
 
+---@param index integer
 ---@param soundName string
 function AnimationClipViewer_SoundBar:playSound(index, soundName) end
 
@@ -172,8 +194,11 @@ function AnimationClipViewer_SoundBar:playSounds() end
 
 function AnimationClipViewer_SoundBar:render() end
 
+---@param index integer
+---@param sound umbrella.AnimationClipViewer.Sound
 function AnimationClipViewer_SoundBar:renderSound(index, sound) end
 
+---@param index integer
 function AnimationClipViewer_SoundBar:stopSound(index) end
 
 ---@param x number
@@ -185,20 +210,27 @@ function AnimationClipViewer_SoundBar:new(x, y, width, height) end
 
 ---@class AnimationClipViewer_SoundPanel : ISPanel
 ---@field comboHgt number
----@field soundCombos table
----@field soundTickBoxes table
+---@field soundCombos ISComboBox[]
+---@field soundTickBoxes ISTickBox[]
 AnimationClipViewer_SoundPanel = ISPanel:derive("AnimationClipViewer_SoundPanel")
 AnimationClipViewer_SoundPanel.Type = "AnimationClipViewer_SoundPanel"
 
 function AnimationClipViewer_SoundPanel:createChildren() end
 
+---@param index integer
+---@param y number
 ---@return ISComboBox
 function AnimationClipViewer_SoundPanel:createSoundCombo(index, y) end
 
+---@param combo ISComboBox
 function AnimationClipViewer_SoundPanel:fillSoundCombo(combo) end
 
+---@param combo ISComboBox
 function AnimationClipViewer_SoundPanel:onSoundComboSelected(combo) end
 
+---@param index integer
+---@param selected boolean
+---@param soundIndex integer
 function AnimationClipViewer_SoundPanel:onTickBox(index, selected, soundIndex) end
 
 ---@param x number
@@ -219,6 +251,8 @@ function AnimationClipViewer_OptionsPanel:createChildren() end
 ---@param y number
 function AnimationClipViewer_OptionsPanel:onMouseDownOutside(x, y) end
 
+---@param index integer
+---@param selected boolean
 function AnimationClipViewer_OptionsPanel:onTickBox(index, selected) end
 
 ---@param x number
@@ -266,9 +300,9 @@ function AnimationClipViewer_Scene:prerenderEditor() end
 function AnimationClipViewer_Scene:new(x, y, width, height) end
 
 ---@class AnimationClipViewer_Timeline : ISPanel
----@field dragging boolean
----@field keyframeTimes unknown
----@field selectedClipName unknown
+---@field dragging boolean?
+---@field keyframeTimes ArrayList<number>?
+---@field selectedClipName string
 AnimationClipViewer_Timeline = ISPanel:derive("AnimationClipViewer_Timeline")
 AnimationClipViewer_Timeline.Type = "AnimationClipViewer_Timeline"
 
@@ -300,5 +334,11 @@ function AnimationClipViewer_Timeline:render() end
 ---@param height number
 ---@return AnimationClipViewer_Timeline
 function AnimationClipViewer_Timeline:new(x, y, width, height) end
+
+---@class umbrella.AnimationClipViewer.Sound
+---@field enabled boolean
+---@field eventInstance integer?
+---@field fraction number
+umbrella_AnimationClipViewer_Sound = {}
 
 function AnimationViewerState_InitUI() end

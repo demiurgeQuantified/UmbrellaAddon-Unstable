@@ -1,40 +1,42 @@
 ---@meta
 
+---@alias umbrella.ISVolumeBar.OnVolumeChange fun(target: unknown?, hoverVolume: integer)
+
 ---@class ISVolumeBar : ISPanel
 ---@field dimChange boolean
 ---@field dragInside boolean
----@field elBackgroundColor table
----@field elBorderColor table
----@field elBorderHighlightColor table
----@field elHighlightColor table
----@field elHoverColor table
+---@field elBackgroundColor umbrella.RGBA
+---@field elBorderColor umbrella.RGBA
+---@field elBorderHighlightColor umbrella.RGBA
+---@field elHighlightColor umbrella.RGBA
+---@field elHoverColor umbrella.RGBA
 ---@field enableControls boolean
 ---@field fontheight number
----@field greyCol table
----@field hoverVolume number
+---@field greyCol umbrella.RGBA
+---@field hoverVolume integer
 ---@field innerMargin number
----@field joyMeter number
+---@field joyMeter integer
 ---@field mouseEnabled boolean
----@field onVolumeChange unknown
----@field onVolumeChangeTarget RWMVolume
+---@field onVolumeChange umbrella.ISVolumeBar.OnVolumeChange?
+---@field onVolumeChangeTarget unknown?
 ---@field posChange boolean
----@field volume number
----@field volumeSteps number
+---@field volume integer
+---@field volumeSteps integer
 ISVolumeBar = ISPanel:derive("ISVolumeBar")
 ISVolumeBar.Type = "ISVolumeBar"
 
 function ISVolumeBar:createChildren() end
 
----@return number
+---@return integer
 function ISVolumeBar:getHoverVolume() end
 
----@return number
+---@return integer
 function ISVolumeBar:getVolume() end
 
----@return number
+---@return integer
 function ISVolumeBar:getVolumeFromXPosition(_x) end
 
----@return number
+---@return integer
 function ISVolumeBar:getVolumeSteps() end
 
 function ISVolumeBar:initialise() end
@@ -71,22 +73,28 @@ function ISVolumeBar:resetHoverVolume() end
 ---@param b boolean
 function ISVolumeBar:setEnableControls(b) end
 
+---@param h number
 function ISVolumeBar:setHeight(h) end
 
+---@param _vol integer
 function ISVolumeBar:setHoverVolume(_vol) end
 
+---@param vol integer
 function ISVolumeBar:setVolume(vol) end
 
 ---@param _up boolean
 function ISVolumeBar:setVolumeJoypad(_up) end
 
+---@param vol integer
 function ISVolumeBar:setVolumeSteps(vol) end
 
 ---@param w number
 function ISVolumeBar:setWidth(w) end
 
+---@param x number
 function ISVolumeBar:setX(x) end
 
+---@param y number
 function ISVolumeBar:setY(y) end
 
 function ISVolumeBar:update() end
@@ -95,6 +103,7 @@ function ISVolumeBar:update() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param onVolumeChangeTarget RWMVolume
+---@param onVolumeChange umbrella.ISVolumeBar.OnVolumeChange?
+---@param onVolumeChangeTarget unknown?
 ---@return ISVolumeBar
 function ISVolumeBar:new(x, y, width, height, onVolumeChange, onVolumeChangeTarget) end

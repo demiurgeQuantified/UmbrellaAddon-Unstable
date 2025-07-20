@@ -3,14 +3,14 @@
 ---@class StatisticChartMemory : StatisticChart
 StatisticChartMemory = StatisticChart:derive("StatisticChartMemory")
 StatisticChartMemory.Type = "StatisticChartMemory"
-StatisticChartMemory.instance = nil
+StatisticChartMemory.instance = nil ---@type StatisticChartMemory?
 StatisticChartMemory.shiftDown = 0
 StatisticChartMemory.eventsAdded = false
 
----@return unknown?
+---@return StatisticChartMemory?
 function StatisticChartMemory.doInstance() end
 
----@return unknown?
+---@return StatisticChartMemory?
 function StatisticChartMemory.OnOpenPanel() end
 
 function StatisticChartMemory.OnServerStatisticReceived() end

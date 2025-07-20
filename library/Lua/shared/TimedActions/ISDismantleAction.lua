@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISDismantleAction : ISBaseTimedAction
----@field thumpable unknown
+---@field thumpable IsoThumpable
 ISDismantleAction = ISBaseTimedAction:derive("ISDismantleAction")
 ISDismantleAction.Type = "ISDismantleAction"
 
@@ -22,9 +22,10 @@ function ISDismantleAction:stop() end
 
 function ISDismantleAction:update() end
 
----@return unknown
+---@return boolean
 function ISDismantleAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param thumpable IsoThumpable
 ---@return ISDismantleAction
 function ISDismantleAction:new(character, thumpable) end

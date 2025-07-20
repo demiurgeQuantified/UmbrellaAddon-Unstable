@@ -3,14 +3,14 @@
 ---@class StatisticChartPackets : StatisticChart
 StatisticChartPackets = StatisticChart:derive("StatisticChartPackets")
 StatisticChartPackets.Type = "StatisticChartPackets"
-StatisticChartPackets.instance = nil
+StatisticChartPackets.instance = nil ---@type StatisticChartPackets?
 StatisticChartPackets.shiftDown = 0
 StatisticChartPackets.eventsAdded = false
 
----@return unknown?
+---@return StatisticChartPackets?
 function StatisticChartPackets.doInstance() end
 
----@return unknown?
+---@return StatisticChartPackets?
 function StatisticChartPackets.OnOpenPanel() end
 
 function StatisticChartPackets.OnServerStatisticReceived() end

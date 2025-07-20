@@ -6,9 +6,9 @@
 LuaList = ISBaseObject:derive("LuaList")
 LuaList.Type = "LuaList"
 
----@param item table
 function LuaList:add(item) end
 
+---@param list LuaList
 function LuaList:addAll(list) end
 
 function LuaList:clear() end
@@ -16,9 +16,14 @@ function LuaList:clear() end
 ---@return boolean
 function LuaList:contains(item) end
 
+---@param func function
+---@param param1 unknown?
+---@param param2 unknown?
+---@param param3 unknown?
+---@param param4 unknown?
 function LuaList:foreach(func, param1, param2, param3, param4) end
 
----@param index number
+---@param index integer
 ---@return unknown
 function LuaList:get(index) end
 
@@ -33,16 +38,17 @@ function LuaList:pop() end
 ---@return unknown?
 function LuaList:remove(item) end
 
----@param index number
+---@param index integer
 ---@return unknown?
 function LuaList:removeAt(index) end
 
 ---@return unknown?
 function LuaList:removeRandom() end
 
----@return number
+---@return integer
 function LuaList:size() end
 
+---@param f fun(a: unknown, b: unknown): boolean
 function LuaList:sort(f) end
 
 ---@return LuaList

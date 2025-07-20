@@ -5,7 +5,7 @@ ISGeneralDebug = ISDebugPanelBase:derive("ISGeneralDebug")
 ISGeneralDebug.Type = "ISGeneralDebug"
 ISGeneralDebug.instance = nil
 
----@return unknown
+---@return ISGeneralDebug
 function ISGeneralDebug.OnOpenPanel() end
 
 function ISGeneralDebug:initialise() end

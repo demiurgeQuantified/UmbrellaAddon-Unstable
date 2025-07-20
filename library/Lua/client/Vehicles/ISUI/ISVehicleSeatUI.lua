@@ -62,16 +62,16 @@ SeatOffsetY["Base.SUV"] = -2
 SeatOffsetY["Base.OffRoad"] = 30
 
 ---@class ISVehicleSeatUI : ISPanelJoypad
----@field character unknown
+---@field character IsoPlayer
 ---@field characterSeat unknown?
 ---@field close ISButton
----@field joypadSeat number
+---@field joypadSeat integer
 ---@field mouseOverExit number?
 ---@field mouseOverSeat number?
----@field playerNum unknown
+---@field playerNum integer
 ---@field richText ISRichTextLayout
 ---@field seatText string?
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISVehicleSeatUI = ISPanelJoypad:derive("ISVehicleSeatUI")
 ISVehicleSeatUI.Type = "ISVehicleSeatUI"
 
@@ -81,15 +81,18 @@ function ISVehicleSeatUI:closeSelf() end
 
 function ISVehicleSeatUI:createChildren() end
 
----@param seat number
+---@param seat integer
 function ISVehicleSeatUI:exitSeat(seat) end
 
+---@param key integer
 ---@return boolean
 function ISVehicleSeatUI:isKeyConsumed(key) end
 
+---@param seat integer
 ---@return boolean
 function ISVehicleSeatUI:isSeatInstalled(seat) end
 
+---@param joypadData JoypadData
 function ISVehicleSeatUI:onGainJoypadFocus(joypadData) end
 
 function ISVehicleSeatUI:onJoypadDirDown() end
@@ -100,10 +103,13 @@ function ISVehicleSeatUI:onJoypadDirRight() end
 
 function ISVehicleSeatUI:onJoypadDirUp() end
 
+---@param button integer
 function ISVehicleSeatUI:onJoypadDown(button) end
 
+---@param key integer
 function ISVehicleSeatUI:onKeyPress(key) end
 
+---@param key integer
 function ISVehicleSeatUI:onKeyRelease(key) end
 
 ---@param x number
@@ -118,14 +124,16 @@ function ISVehicleSeatUI:prerender() end
 
 function ISVehicleSeatUI:render() end
 
+---@param vehicle BaseVehicle
 function ISVehicleSeatUI:setVehicle(vehicle) end
 
 function ISVehicleSeatUI:update() end
 
----@param seat number
+---@param seat integer
 function ISVehicleSeatUI:useSeat(seat) end
 
 ---@param x number
 ---@param y number
+---@param character IsoPlayer
 ---@return ISVehicleSeatUI
 function ISVehicleSeatUI:new(x, y, character) end

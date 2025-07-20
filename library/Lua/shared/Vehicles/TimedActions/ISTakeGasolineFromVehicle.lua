@@ -2,18 +2,20 @@
 
 ---@class ISTakeGasolineFromVehicle : ISBaseTimedAction
 ---@field amountSent number
----@field fluidCont unknown
----@field item unknown?
----@field itemStart unknown
+---@field fluidCont FluidContainer
+---@field item InventoryItem
+---@field itemStart number
 ---@field itemTarget number
----@field part unknown
----@field sound unknown
----@field tankStart unknown
+---@field part VehiclePart
+---@field sound integer?
+---@field tankStart number
 ---@field tankTarget number
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISTakeGasolineFromVehicle = ISBaseTimedAction:derive("ISTakeGasolineFromVehicle")
 ISTakeGasolineFromVehicle.Type = "ISTakeGasolineFromVehicle"
 
+---@param event string
+---@param parameter string
 function ISTakeGasolineFromVehicle:animEvent(event, parameter) end
 
 ---@return boolean
@@ -37,9 +39,11 @@ function ISTakeGasolineFromVehicle:stop() end
 
 function ISTakeGasolineFromVehicle:update() end
 
----@return unknown
+---@return boolean
 function ISTakeGasolineFromVehicle:waitToStart() end
 
----@param item unknown?
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param item InventoryItem
 ---@return ISTakeGasolineFromVehicle
 function ISTakeGasolineFromVehicle:new(character, part, item) end

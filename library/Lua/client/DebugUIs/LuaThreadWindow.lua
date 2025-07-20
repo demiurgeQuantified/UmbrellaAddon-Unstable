@@ -13,6 +13,9 @@ function LuaThreadWindow:checkFontSize() end
 
 function LuaThreadWindow:createChildren() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function LuaThreadWindow:doDrawItem(y, item, alt) end
 
@@ -20,6 +23,7 @@ function LuaThreadWindow:fill() end
 
 function LuaThreadWindow:initialise() end
 
+---@param item { call: LuaCallFrame, line: integer }
 function LuaThreadWindow:onMouseDoubleClickCallframe(item) end
 
 function LuaThreadWindow:onMouseDoubleClickMeta(item) end

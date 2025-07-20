@@ -1,22 +1,22 @@
 ---@meta
 
 ---@class ISRemoveGlass : ISBaseTimedAction
----@field bandagedPlayerX unknown
----@field bandagedPlayerY unknown
----@field bodyPart unknown
----@field doctor unknown
+---@field bandagedPlayerX number
+---@field bandagedPlayerY number
+---@field bodyPart BodyPart
+---@field doctor IsoPlayer
 ---@field doctorLevel number
 ---@field handPain boolean
----@field maxTime number?
----@field otherPlayer unknown
----@field sound unknown
+---@field maxTime number
+---@field otherPlayer IsoPlayer
+---@field sound integer?
 ISRemoveGlass = ISBaseTimedAction:derive("ISRemoveGlass")
 ISRemoveGlass.Type = "ISRemoveGlass"
 
 ---@return boolean
 function ISRemoveGlass:complete() end
 
----@return number?
+---@return number
 function ISRemoveGlass:getDuration() end
 
 ---@return boolean
@@ -35,6 +35,8 @@ function ISRemoveGlass:update() end
 ---@return boolean
 function ISRemoveGlass:waitToStart() end
 
----@param handPain boolean
+---@param character IsoPlayer
+---@param otherPlayer IsoPlayer
+---@param bodyPart BodyPart
 ---@return ISRemoveGlass
-function ISRemoveGlass:new(character, otherPlayer, bodyPart, handPain) end
+function ISRemoveGlass:new(character, otherPlayer, bodyPart) end

@@ -25,7 +25,7 @@ function TileGeometryEditor_TileList2:getColRowAt(x, y) end
 ---@return table
 function TileGeometryEditor_TileList2:getSelection() end
 
----@return unknown?
+---@return table?
 function TileGeometryEditor_TileList2:getSingleSelectedTile() end
 
 ---@return boolean
@@ -56,6 +56,7 @@ function TileGeometryEditor_TileList2:onMouseUp(x, y) end
 ---@param y number
 function TileGeometryEditor_TileList2:onMouseUpOutside(x, y) end
 
+---@param del number
 function TileGeometryEditor_TileList2:onMouseWheel(del) end
 
 ---@param x number
@@ -72,25 +73,43 @@ function TileGeometryEditor_TileList2:onSelectInOtherList(tileName) end
 function TileGeometryEditor_TileList2:onSwapTilesets(tileName) end
 
 ---@param tileName string
----@return unknown?
+---@return string?
 ---@return number?
 function TileGeometryEditor_TileList2:parseTileName(tileName) end
 
 function TileGeometryEditor_TileList2:render() end
 
+---@param xIndent number
+---@param yIndent number
+---@param texW number
+---@param texH number
 function TileGeometryEditor_TileList2:renderGrid(xIndent, yIndent, texW, texH) end
 
+---@param xIndent number
+---@param yIndent number
+---@param texW number
+---@param texH number
+---@param col number
+---@param row number
 function TileGeometryEditor_TileList2:renderTilesToAssign(xIndent, yIndent, texW, texH, col, row) end
 
+---@param col number
+---@param row number
 function TileGeometryEditor_TileList2:selectionAdd(col, row) end
 
 function TileGeometryEditor_TileList2:selectionClear() end
 
+---@param col number
+---@param row number
 ---@return number
 function TileGeometryEditor_TileList2:selectionIndexOf(col, row) end
 
+---@param col number
+---@param row number
 function TileGeometryEditor_TileList2:selectionRemove(col, row) end
 
+---@param col number
+---@param row number
 function TileGeometryEditor_TileList2:selectionToggle(col, row) end
 
 ---@param tilesetName string?

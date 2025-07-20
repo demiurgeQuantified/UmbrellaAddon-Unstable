@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISAttachAnimalToPlayer : ISBaseTimedAction
----@field animal unknown
+---@field animal IsoAnimal
 ---@field remove boolean
----@field sound unknown
+---@field sound integer?
 ISAttachAnimalToPlayer = ISBaseTimedAction:derive("ISAttachAnimalToPlayer")
 ISAttachAnimalToPlayer.Type = "ISAttachAnimalToPlayer"
 
@@ -24,9 +24,11 @@ function ISAttachAnimalToPlayer:stop() end
 
 function ISAttachAnimalToPlayer:update() end
 
----@return unknown
+---@return boolean
 function ISAttachAnimalToPlayer:waitToStart() end
 
+---@param character IsoPlayer
+---@param animal IsoAnimal
 ---@param remove boolean
 ---@return ISAttachAnimalToPlayer
 function ISAttachAnimalToPlayer:new(character, animal, remove) end

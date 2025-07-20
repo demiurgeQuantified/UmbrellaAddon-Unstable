@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISRemoveLeatherFromAnimal : ISBaseTimedAction
----@field animalDef unknown?
----@field body unknown?
----@field hook unknown
+---@field animalDef umbrella.AnimalPartsDefinition
+---@field body IsoAnimal
+---@field hook IsoButcherHook
 ---@field luaHook ISButcherHookUI
----@field perkLevel unknown
----@field sound unknown
+---@field perkLevel integer
+---@field sound integer
 ---@field started boolean
----@field xp unknown
+---@field xp integer
 ISRemoveLeatherFromAnimal = ISBaseTimedAction:derive("ISRemoveLeatherFromAnimal")
 ISRemoveLeatherFromAnimal.Type = "ISRemoveLeatherFromAnimal"
 
@@ -37,10 +37,12 @@ function ISRemoveLeatherFromAnimal:update() end
 
 function ISRemoveLeatherFromAnimal:updateCorpse() end
 
----@return unknown
+---@return boolean
 function ISRemoveLeatherFromAnimal:waitToStart() end
 
----@param body unknown?
----@param luaHookUI ISButcherHookUI
+---@param character IsoPlayer
+---@param body IsoAnimal
+---@param hook IsoButcherHook
+---@param luaHook ISButcherHookUI
 ---@return ISRemoveLeatherFromAnimal
-function ISRemoveLeatherFromAnimal:new(character, body, hook, luaHookUI) end
+function ISRemoveLeatherFromAnimal:new(character, body, hook, luaHook) end

@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class ISControllerTestPanel : ISPanel
----@field axisLabelWid unknown
+---@field axisLabelWid number?
 ---@field axisY table
 ---@field buttonX number
 ---@field combo ISComboBox
 ---@field label ISLabel
 ---@field selectedController unknown?
----@field smallFontHgt unknown
+---@field smallFontHgt number
 ISControllerTestPanel = ISPanel:derive("ControllerTest")
 ISControllerTestPanel.Type = "ControllerTest"
 
@@ -23,6 +23,10 @@ function ISControllerTestPanel:OnGamepadConnect(index) end
 
 function ISControllerTestPanel:OnGamepadDisconnect(index) end
 
+---@param oldw number
+---@param oldh number
+---@param neww number
+---@param newh number
 function ISControllerTestPanel:onResolutionChange(oldw, oldh, neww, newh) end
 
 function ISControllerTestPanel:render() end

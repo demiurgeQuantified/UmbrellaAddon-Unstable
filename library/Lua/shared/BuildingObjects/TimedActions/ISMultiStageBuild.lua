@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISMultiStageBuild : ISBaseTimedAction
----@field item unknown
+---@field item IsoObject
 ---@field sound unknown?
----@field stage unknown
+---@field stage MultiStageBuilding.Stage
 ISMultiStageBuild = ISBaseTimedAction:derive("ISMultiStageBuild")
 ISMultiStageBuild.Type = "ISMultiStageBuild"
 
@@ -26,8 +26,11 @@ function ISMultiStageBuild:stop() end
 
 function ISMultiStageBuild:update() end
 
----@return unknown
+---@return boolean
 function ISMultiStageBuild:waitToStart() end
 
+---@param character IsoPlayer
+---@param stage MultiStageBuilding.Stage
+---@param item IsoObject
 ---@return ISMultiStageBuild
 function ISMultiStageBuild:new(character, stage, item) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISBBQToggle : ISBaseTimedAction
----@field bbq unknown
+---@field bbq IsoBarbecue
 ISBBQToggle = ISBaseTimedAction:derive("ISBBQToggle")
 ISBBQToggle.Type = "ISBBQToggle"
 
@@ -11,7 +11,7 @@ function ISBBQToggle:complete() end
 ---@return number
 function ISBBQToggle:getDuration() end
 
----@return unknown
+---@return boolean
 function ISBBQToggle:isValid() end
 
 function ISBBQToggle:perform() end
@@ -22,9 +22,10 @@ function ISBBQToggle:stop() end
 
 function ISBBQToggle:update() end
 
----@return unknown
+---@return boolean
 function ISBBQToggle:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param bbq IsoBarbecue
 ---@return ISBBQToggle
 function ISBBQToggle:new(character, bbq) end

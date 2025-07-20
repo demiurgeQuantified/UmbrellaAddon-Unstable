@@ -2,7 +2,7 @@
 
 ---@class CreateChumFromGroundSandAction : ISBaseTimedAction
 ---@field sound unknown
----@field square unknown
+---@field square IsoGridSquare
 CreateChumFromGroundSandAction = ISBaseTimedAction:derive("CreateChumFromGroundSandAction")
 CreateChumFromGroundSandAction.Type = "CreateChumFromGroundSandAction"
 
@@ -25,5 +25,7 @@ function CreateChumFromGroundSandAction:stopSound() end
 
 function CreateChumFromGroundSandAction:update() end
 
+---@param character IsoPlayer
+---@param square IsoGridSquare
 ---@return CreateChumFromGroundSandAction
 function CreateChumFromGroundSandAction:new(character, square) end

@@ -1,14 +1,16 @@
 ---@meta
 
 ---@class ISOpenAnimalInfo : ISBaseTimedAction
----@field animal unknown
----@field player unknown
----@field playerNum unknown
----@field prevFocus table
+---@field animal IsoAnimal
+---@field player IsoPlayer
+---@field playerNum integer
+---@field prevFocus ISUIElement?
 ---@field useProgressBar boolean
 ISOpenAnimalInfo = ISBaseTimedAction:derive("ISOpenAnimalInfo")
 ISOpenAnimalInfo.Type = "ISOpenAnimalInfo"
 
+---@param event string
+---@param parameter string
 function ISOpenAnimalInfo:animEvent(event, parameter) end
 
 ---@return boolean
@@ -35,6 +37,8 @@ function ISOpenAnimalInfo:update() end
 ---@return boolean
 function ISOpenAnimalInfo:waitToStart() end
 
----@param prevFocus table
+---@param character IsoPlayer
+---@param animal IsoAnimal
+---@param prevFocus ISUIElement?
 ---@return ISOpenAnimalInfo
 function ISOpenAnimalInfo:new(character, animal, prevFocus) end

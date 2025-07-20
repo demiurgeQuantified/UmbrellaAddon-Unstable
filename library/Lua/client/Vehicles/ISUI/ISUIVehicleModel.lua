@@ -2,13 +2,13 @@
 
 ---@class ISUIVehicleModel : ISUIElement
 ---@field background boolean
----@field backgroundColor table
----@field borderColor table
+---@field backgroundColor umbrella.RGBA
+---@field borderColor umbrella.RGBA
 ---@field mouseDown boolean
 ISUIVehicleModel = ISUIElement:derive("ISUIVehicleModel")
 ISUIVehicleModel.Type = "ISUIVehicleModel"
 
----@return unknown
+---@return string
 function ISUIVehicleModel:getView() end
 
 function ISUIVehicleModel:instantiate() end
@@ -29,11 +29,13 @@ function ISUIVehicleModel:onMouseUp(x, y) end
 ---@param y number
 function ISUIVehicleModel:onMouseUpOutside(x, y) end
 
+---@param del number
 ---@return boolean
 function ISUIVehicleModel:onMouseWheel(del) end
 
 function ISUIVehicleModel:prerender() end
 
+---@param vehicle BaseVehicle
 function ISUIVehicleModel:setVehicle(vehicle) end
 
 ---@param name string

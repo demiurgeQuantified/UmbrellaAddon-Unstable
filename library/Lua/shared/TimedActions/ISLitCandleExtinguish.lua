@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISLitCandleExtinguish : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ---@field started boolean
 ISLitCandleExtinguish = ISBaseTimedAction:derive("ISLitCandleExtinguish")
 ISLitCandleExtinguish.Type = "ISLitCandleExtinguish"
@@ -23,5 +23,7 @@ function ISLitCandleExtinguish:stop() end
 
 function ISLitCandleExtinguish:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISLitCandleExtinguish
 function ISLitCandleExtinguish:new(character, item) end

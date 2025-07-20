@@ -1,41 +1,41 @@
 ---@meta
 
 ---@class ISCollapsableWindow : ISPanel
----@field background unknown
+---@field background boolean
 ---@field clearStentil boolean
 ---@field closeButton ISButton
----@field closeButtonTexture unknown
+---@field closeButtonTexture Texture
 ---@field collapseButton ISButton
----@field collapseButtonTexture unknown
+---@field collapseButtonTexture Texture
 ---@field collapseCounter number
 ---@field drawFrame boolean
----@field infoBtn unknown
+---@field infoBtn Texture
 ---@field infoButton ISButton
----@field infoRichText ISModalRichText
----@field infoText unknown
----@field invbasic unknown
+---@field infoRichText ISModalRichText?
+---@field infoText string?
+---@field invbasic Texture
 ---@field isCollapsed boolean
 ---@field pin boolean
 ---@field pinButton ISButton
----@field pinButtonTexture unknown
+---@field pinButtonTexture Texture
 ---@field resizable boolean
----@field resizeimage unknown
+---@field resizeimage Texture
 ---@field resizeWidget ISResizeWidget
 ---@field resizeWidget2 ISResizeWidget
----@field statusbarbkg unknown
+---@field statusbarbkg Texture
 ---@field title string?
----@field titlebarbkg unknown
----@field titleFont unknown
----@field titleFontHgt unknown
----@field viewList table
----@field widgetTextureColor table
+---@field titlebarbkg Texture
+---@field titleFont UIFont
+---@field titleFontHgt number
+---@field viewList ISUIElement[]
+---@field widgetTextureColor umbrella.RGBA
 ISCollapsableWindow = ISPanel:derive("ISCollapsableWindow")
 ISCollapsableWindow.Type = "ISCollapsableWindow"
 
----@return unknown
+---@return number
 function ISCollapsableWindow.TitleBarHeight() end
 
----@param view table
+---@param view ISUIElement
 function ISCollapsableWindow:addView(view) end
 
 function ISCollapsableWindow:close() end
@@ -47,7 +47,7 @@ function ISCollapsableWindow:createChildren() end
 ---@return string?
 function ISCollapsableWindow:getTitle() end
 
----@return table
+---@return ISUIElement[]
 function ISCollapsableWindow:getViews() end
 
 function ISCollapsableWindow:initialise() end
@@ -84,13 +84,17 @@ function ISCollapsableWindow:render() end
 function ISCollapsableWindow:resizeWidgetHeight() end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISCollapsableWindow:RestoreLayout(name, layout) end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISCollapsableWindow:SaveLayout(name, layout) end
 
+---@param visible boolean
 function ISCollapsableWindow:setDrawFrame(visible) end
 
+---@param text unknown?
 function ISCollapsableWindow:setInfo(text) end
 
 ---@param resizable boolean
@@ -99,7 +103,7 @@ function ISCollapsableWindow:setResizable(resizable) end
 ---@param title string
 function ISCollapsableWindow:setTitle(title) end
 
----@return unknown
+---@return number
 function ISCollapsableWindow:titleBarHeight() end
 
 function ISCollapsableWindow:uncollapse() end

@@ -1,32 +1,34 @@
 ---@meta
 
+---@alias umbrella.ISTextBox.ValidateFunction fun(target: unknown, text: string, ...: unknown)
+
 ---@class ISTextBox : ISPanelJoypad
 ---@field colorBtn ISButton
 ---@field colorPicker ISColorPicker
----@field currentColor unknown
+---@field currentColor ColorInfo
 ---@field defaultEntryText string
 ---@field entry ISTextEntryBox
----@field errorMsg unknown
----@field fontHgt unknown
+---@field errorMsg string?
+---@field fontHgt number
 ---@field maxLines number
 ---@field multipleLine boolean
 ---@field name unknown?
 ---@field no ISButton
 ---@field numLines number
----@field onclick function
+---@field onclick umbrella.ISButton.OnClick?
 ---@field param1 unknown?
 ---@field param2 unknown?
 ---@field param3 unknown?
----@field param4 unknown
----@field player number?
----@field showError unknown
----@field target table?
+---@field param4 unknown?
+---@field player integer?
+---@field showError boolean?
+---@field target unknown?
 ---@field text string
----@field titlebarbkg unknown
+---@field titlebarbkg Texture
 ---@field validateArgs table
----@field validateFunc function
----@field validateTarget table
----@field validateTooltipText unknown
+---@field validateFunc umbrella.ISTextBox.ValidateFunction?
+---@field validateTarget unknown?
+---@field validateTooltipText string?
 ---@field yes ISButton
 ISTextBox = ISPanelJoypad:derive("ISTextBox")
 ISTextBox.Type = "ISTextBox"
@@ -37,21 +39,28 @@ function ISTextBox:destroy() end
 
 function ISTextBox:enableColorPicker() end
 
----@return number
+---@return integer
 function ISTextBox:getMaxLines() end
 
 function ISTextBox:initialise() end
 
+---@param button ISButton
 function ISTextBox:onClick(button) end
 
+---@param button ISButton
 function ISTextBox:onColorPicker(button) end
 
+---@param joypadData JoypadData
 function ISTextBox:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISTextBox:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISTextBox:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISTextBox:onJoypadDown(button, joypadData) end
 
 ---@param x number
@@ -74,30 +83,37 @@ function ISTextBox:onMouseUp(x, y) end
 ---@param y number
 function ISTextBox:onMouseUpOutside(x, y) end
 
+---@param color umbrella.RGB
+---@param mouseUp boolean
 function ISTextBox:onPickedColor(color, mouseUp) end
 
 function ISTextBox:prerender() end
 
 function ISTextBox:render() end
 
----@param max number
+---@param max integer
 function ISTextBox:setMaxLines(max) end
 
 ---@param multiple boolean
 function ISTextBox:setMultipleLine(multiple) end
 
----@param numLines number
+---@param numLines integer
 function ISTextBox:setNumberOfLines(numLines) end
 
 ---@param onlyNumbers boolean
 function ISTextBox:setOnlyNumbers(onlyNumbers) end
 
----@param target table
----@param func function
+---@param target unknown?
+---@param func umbrella.ISTextBox.ValidateFunction?
+---@param arg1 unknown?
+---@param arg2 unknown?
 function ISTextBox:setValidateFunction(target, func, arg1, arg2) end
 
+---@param text string?
 function ISTextBox:setValidateTooltipText(text) end
 
+---@param show boolean
+---@param errorMsg string
 function ISTextBox:showErrorMessage(show, errorMsg) end
 
 ---@return number
@@ -111,12 +127,13 @@ function ISTextBox:updateButtons() end
 ---@param height number
 ---@param text string
 ---@param defaultEntryText string
----@param target table?
----@param onclick function
----@param player number?
+---@param target unknown?
+---@param onclick umbrella.ISButton.OnClick?
+---@param player integer?
 ---@param param1 unknown?
 ---@param param2 unknown?
 ---@param param3 unknown?
+---@param param4 unknown?
 ---@return ISTextBox
 function ISTextBox:new(
 	x,
@@ -134,3 +151,10 @@ function ISTextBox:new(
 	param4
 )
 end
+
+---@class ISTextEntryBox
+---@field font UIFont
+ISTextEntryBox = {}
+
+---@return boolean
+function ISTextEntryBox:isMultipleLine() end

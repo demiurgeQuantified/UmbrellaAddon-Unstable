@@ -3,7 +3,7 @@
 ---@class MusicChoices
 MusicChoices = {
 	drama = 0,
-	last = "",
+	last = "", ---@type string
 	choices = {
 		{
 			file = "OldMusic_alone",
@@ -670,15 +670,38 @@ MusicChoices = {
 	},
 }
 
----@return boolean?
+---@param a umbrella.MusicChoices.AmbientChoice
+---@param b umbrella.MusicChoices.AmbientChoice
+---@return boolean
 function MusicChoices.compareByAmbientDrama(a, b) end
 
----@return boolean?
+---@param a umbrella.MusicChoices.Choice
+---@param b umbrella.MusicChoices.Choice
+---@return boolean
 function MusicChoices.compareByDrama(a, b) end
 
 ---@param drama number
----@return unknown
+---@return string
 function MusicChoices.get(drama) end
 
----@return unknown
+---@return string
 function MusicChoices.getAmbient(drama) end
+
+---@class umbrella.MusicChoices.Choice
+---@field file string
+---@field scores umbrella.MusicChoices.Scores
+umbrella_MusicChoices_Choice = {}
+
+---@class umbrella.MusicChoices.Scores
+---@field bias integer
+---@field drama integer
+umbrella_MusicChoices_Scores = {}
+
+---@class umbrella.MusicChoices.AmbientChoice : umbrella.MusicChoices.Choice
+---@field file string
+---@field scores umbrella.MusicChoices.AmbientScores
+umbrella_MusicChoices_AmbientChoice = {}
+
+---@class umbrella.MusicChoices.AmbientScores
+---@field drama integer
+umbrella_MusicChoices_AmbientScores = {}

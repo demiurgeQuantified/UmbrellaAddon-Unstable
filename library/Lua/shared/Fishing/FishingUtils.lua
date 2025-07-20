@@ -86,8 +86,10 @@ __fishing_Utils.fishSizeChancesBySkillLevel = {
 	},
 }
 
+---@param player IsoPlayer
 function __fishing_Utils.facePlayerToAim(player) end
 
+---@param player IsoPlayer
 ---@param x number
 ---@param y number
 function __fishing_Utils.FacePlayerToBobber(player, x, y) end
@@ -98,9 +100,10 @@ function __fishing_Utils.getAimCoords(player) end
 
 ---@param x number
 ---@param y number
----@return table
+---@return umbrella.Fishing.FishNumParams
 function __fishing_Utils.getFishNumParams(x, y) end
 
+---@param lvl integer
 ---@param isNearShore boolean
 ---@param fishNum number?
 ---@return number
@@ -108,22 +111,24 @@ function __fishing_Utils.getFishNumParams(x, y) end
 ---@return number
 function __fishing_Utils.getFishSizeChancesBySkillLevel(lvl, isNearShore, fishNum) end
 
----@return table
+---@return umbrella.Fishing.HookParams
 function __fishing_Utils.getHookParams(hookType) end
 
----@return table
+---@param player IsoPlayer
+---@return umbrella.Fishing.TemperatureParams
 function __fishing_Utils.getTemperatureParams(player) end
 
----@return table
+---@return umbrella.Fishing.TimeParams
 function __fishing_Utils.getTimeParams() end
 
----@return table
+---@return umbrella.Fishing.WeatherParams
 function __fishing_Utils.getWeatherParams() end
 
 ---@return boolean
 function __fishing_Utils.isAccessibleAimDist(player) end
 
----@return unknown?
+---@param joypad integer
+---@return boolean?
 function __fishing_Utils.isCastButtonPressed(joypad) end
 
 ---@return number
@@ -137,10 +142,12 @@ function __fishing_Utils.isGamepadReelMove(joypad, prevValue) end
 ---@return boolean
 function __fishing_Utils.isNearShore(x, y) end
 
+---@param player IsoPlayer
 ---@param autoAim boolean?
 ---@return boolean
 function __fishing_Utils.isPlayerAimOnWater(player, autoAim) end
 
+---@param joypad integer
 ---@return boolean
 function __fishing_Utils.isStopFishingButtonPressed(joypad) end
 
@@ -148,3 +155,30 @@ function __fishing_Utils.isStopFishingButtonPressed(joypad) end
 ---@param y number
 ---@return boolean
 function __fishing_Utils.isWaterCoords(x, y) end
+
+---@class umbrella.Fishing.TemperatureParams
+---@field coeff number
+---@field temperature number
+umbrella_Fishing_TemperatureParams = {}
+
+---@class umbrella.Fishing.WeatherParams
+---@field coeff number
+---@field isFog boolean
+---@field isRain boolean
+---@field isWind boolean
+umbrella_Fishing_WeatherParams = {}
+
+---@class umbrella.Fishing.TimeParams
+---@field coeff number
+---@field time integer
+umbrella_Fishing_TimeParams = {}
+
+---@class umbrella.Fishing.HookParams
+---@field coeff number
+---@field hook string
+umbrella_Fishing_HookParams = {}
+
+---@class umbrella.Fishing.FishNumParams
+---@field coeff number
+---@field value integer
+umbrella_Fishing_FishNumParams = {}

@@ -2,7 +2,7 @@
 
 ---@class ISServerSavingMessage : ISPanelJoypad
 ---@field richtext ISRichTextPanel
----@field text unknown
+---@field text string
 ISServerSavingMessage = ISPanelJoypad:derive("ISServerSavingMessage")
 ISServerSavingMessage.Type = "ISServerSavingMessage"
 
@@ -22,5 +22,6 @@ function ISServerSavingMessage:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param text string
 ---@return ISServerSavingMessage
 function ISServerSavingMessage:new(x, y, width, height, text) end

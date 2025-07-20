@@ -5,7 +5,7 @@
 ---@field advancedPanel ISPanel
 ---@field backButton ISButton
 ---@field listbox ISScrollingListBox
----@field mapGroups unknown
+---@field mapGroups MapGroups
 ---@field mapListbox ISScrollingListBox
 ---@field maxXSlider ISSliderPanel
 ---@field maxXValueLabel ISLabel
@@ -36,6 +36,9 @@ function WorldSelect:clickNext() end
 
 function WorldSelect:create() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function WorldSelect:doDrawItem(y, item, alt) end
 
@@ -50,24 +53,36 @@ function WorldSelect:initialise() end
 
 function WorldSelect:onDblClick() end
 
+---@param joypadData JoypadData
 function WorldSelect:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function WorldSelect:onJoypadBeforeDeactivate(joypadData) end
 
+---@param joypadData JoypadData
 function WorldSelect:onJoypadBeforeDeactivate_listbox(joypadData) end
 
+---@param value string
 function WorldSelect:onMaxXSliderChange(value) end
 
+---@param value string
 function WorldSelect:onMaxYSliderChange(value) end
 
+---@param value string
 function WorldSelect:onMinXSliderChange(value) end
 
+---@param value string
 function WorldSelect:onMinYSliderChange(value) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function WorldSelect:onOptionMouseDown(button, x, y) end
 
+---@param oldw number
+---@param oldh number
+---@param neww number
+---@param newh number
 function WorldSelect:onResolutionChange(oldw, oldh, neww, newh) end
 
 function WorldSelect:onSelectWorld() end

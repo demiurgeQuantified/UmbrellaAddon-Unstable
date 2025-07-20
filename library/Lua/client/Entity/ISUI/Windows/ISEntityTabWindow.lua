@@ -1,13 +1,17 @@
 ---@meta
 
 ---@class ISEntityTabWindow : ISBaseEntityWindow
----@field componentsPanel unknown?
+---@field componentsPanel ISComponentsTabPanel
 ISEntityTabWindow = ISBaseEntityWindow:derive("ISEntityTabWindow")
 ISEntityTabWindow.Type = "ISEntityTabWindow"
 
----@return (boolean | table)?
+---@param _player IsoPlayer
+---@param _entity GameEntity
+---@return boolean?
 function ISEntityTabWindow.CanOpenWindowFor(_player, _entity) end
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISEntityTabWindow:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISEntityTabWindow:close() end
@@ -16,8 +20,10 @@ function ISEntityTabWindow:createChildren() end
 
 function ISEntityTabWindow:initialise() end
 
+---@param _button ISButton
 function ISEntityTabWindow:onCraftButtonClick(_button) end
 
+---@param key integer
 function ISEntityTabWindow:onKeyRelease(key) end
 
 ---@param _width number
@@ -38,5 +44,8 @@ function ISEntityTabWindow:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param entity GameEntity
+---@param entityConfig XuiSkin.EntityUiStyle
 ---@return ISEntityTabWindow
 function ISEntityTabWindow:new(x, y, width, height, player, entity, entityConfig) end

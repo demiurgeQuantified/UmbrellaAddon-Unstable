@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class WorldMapEditorResizer : ISBaseObject
----@field editor unknown
----@field mapAPI unknown
----@field mapUI unknown
----@field originalBounds table
+---@field editor WorldMapEditor
+---@field mapAPI UIWorldMapV1
+---@field mapUI WorldMapEditor
+---@field originalBounds umbrella.WorldMapEditorResizer.Bounds
 ---@field resizing boolean
 ---@field snapMode string
 ---@field x1 number
@@ -23,6 +23,9 @@ function WorldMapEditorResizer:endResizing() end
 ---@return string?
 function WorldMapEditorResizer:hitTest(x, y) end
 
+---@param mx number
+---@param my number
+---@param hitTest string
 ---@return boolean?
 function WorldMapEditorResizer:onMouseMove(mx, my, hitTest) end
 
@@ -38,10 +41,19 @@ function WorldMapEditorResizer:render(r, g, b, a) end
 ---@param y2 number
 function WorldMapEditorResizer:setBounds(x1, y1, x2, y2) end
 
+---@param xy number
 ---@return number
 function WorldMapEditorResizer:snap(xy) end
 
 function WorldMapEditorResizer:startResizing() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorResizer
 function WorldMapEditorResizer:new(editor) end
+
+---@class umbrella.WorldMapEditorResizer.Bounds
+---@field x1 number
+---@field x2 number
+---@field y1 number
+---@field y2 number
+umbrella_WorldMapEditorResizer_Bounds = {}

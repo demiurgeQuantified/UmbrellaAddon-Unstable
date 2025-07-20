@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class CoopMapSpawnSelect : MapSpawnSelect
----@field selectedRegion unknown
+---@field selectedRegion umbrella.SpawnRegion?
 CoopMapSpawnSelect = MapSpawnSelect:derive("CoopMapSpawnSelect")
 CoopMapSpawnSelect.Type = "CoopMapSpawnSelect"
 CoopMapSpawnSelect.instance = nil ---@type CoopMapSpawnSelect?
@@ -18,7 +18,7 @@ function CoopMapSpawnSelect:clickNext() end
 
 function CoopMapSpawnSelect:fillList() end
 
----@return (boolean | table)?
+---@return boolean?
 function CoopMapSpawnSelect:hasChoices() end
 
 ---@param x number

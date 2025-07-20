@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISLightFromLiterature : ISBaseTimedAction
----@field campfire unknown
+---@field campfire SCampfireGlobalObject
 ---@field fuelAmt number
----@field item unknown?
----@field lighter unknown
----@field sound unknown
+---@field item InventoryItem
+---@field lighter InventoryItem
+---@field sound integer?
 ISLightFromLiterature = ISBaseTimedAction:derive("ISLightFromLiterature")
 ISLightFromLiterature.Type = "ISLightFromLiterature"
 
@@ -15,7 +15,7 @@ function ISLightFromLiterature:complete() end
 ---@return number
 function ISLightFromLiterature:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISLightFromLiterature:isValid() end
 
 function ISLightFromLiterature:perform() end
@@ -26,11 +26,12 @@ function ISLightFromLiterature:stop() end
 
 function ISLightFromLiterature:update() end
 
----@return unknown
+---@return boolean
 function ISLightFromLiterature:waitToStart() end
 
----@param character unknown?
----@param item unknown?
----@param fuelAmt number
+---@param character IsoPlayer
+---@param item InventoryItem
+---@param lighter InventoryItem
+---@param campfire SCampfireGlobalObject
 ---@return ISLightFromLiterature
-function ISLightFromLiterature:new(character, item, lighter, campfire, fuelAmt) end
+function ISLightFromLiterature:new(character, item, lighter, campfire) end

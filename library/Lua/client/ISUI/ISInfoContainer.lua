@@ -12,7 +12,7 @@ ISInfoContainer.instance = nil ---@type ISInfoContainer?
 function ISInfoContainer.doInfo(title, infopanel) end
 
 ---@param title string
----@return ISInfoContainer?
+---@return ISInfoContainer
 function ISInfoContainer.get(title) end
 
 function ISInfoContainer:initialise() end

@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISAnimalBehaviorDebugUI : ISCollapsableWindow
----@field animal unknown
----@field chr unknown
----@field playerNum unknown
+---@field animal IsoAnimal
+---@field chr IsoPlayer
+---@field playerNum integer
 ---@field refreshNeeded boolean
 ISAnimalBehaviorDebugUI = ISCollapsableWindow:derive("ISAnimalBehaviorDebugUI")
 ISAnimalBehaviorDebugUI.Type = "ISAnimalBehaviorDebugUI"
@@ -20,5 +20,7 @@ function ISAnimalBehaviorDebugUI:render() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param animal IsoAnimal
+---@param player IsoPlayer
 ---@return ISAnimalBehaviorDebugUI
 function ISAnimalBehaviorDebugUI:new(x, y, width, height, animal, player) end

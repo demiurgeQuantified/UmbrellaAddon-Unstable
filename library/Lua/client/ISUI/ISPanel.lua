@@ -2,8 +2,8 @@
 
 ---@class ISPanel : ISUIElement
 ---@field background boolean
----@field backgroundColor table
----@field borderColor table
+---@field backgroundColor umbrella.RGBA
+---@field borderColor umbrella.RGBA
 ---@field downX number
 ---@field downY number
 ---@field mouseOver boolean

@@ -1,26 +1,28 @@
 ---@meta
 
+---@alias umbrella.ISComboBox.OnChange fun(target: unknown, combo: ISComboBox, ...: unknown)
+
 ---@class ISComboBox : ISPanel
----@field backgroundColorMouseOver table
+---@field backgroundColorMouseOver umbrella.RGBA
 ---@field baseHeight number
 ---@field disabled boolean
 ---@field editable boolean
 ---@field editor ISComboBoxEditor
 ---@field expanded boolean
----@field fade unknown
----@field filterText unknown?
----@field font unknown
----@field image unknown
+---@field fade UITransition
+---@field filterText string?
+---@field font UIFont
+---@field image Texture
 ---@field isCombobox boolean
----@field onChange function?
----@field onChangeArgs table
----@field options table
+---@field onChange umbrella.ISComboBox.OnChange?
+---@field onChangeArgs unknown[]
+---@field options (string | umbrella.ISComboBox.Option)[]
 ---@field popup ISComboBoxPopup
 ---@field sawMouseDown boolean
----@field selected number
----@field target table?
----@field textColor table
----@field tooltip table?
+---@field selected integer
+---@field target unknown?
+---@field textColor umbrella.RGBA
+---@field tooltip table<string, string>?
 ---@field tooltipUI ISToolTip
 ISComboBox = ISPanel:derive("ISComboBox")
 ISComboBox.Type = "ISComboBox"
@@ -30,7 +32,7 @@ ISComboBox.SharedPopup = nil ---@type ISComboBoxPopup?
 function ISComboBox:addOption(option) end
 
 ---@param option string
----@param data (table | string)?
+---@param data unknown?
 function ISComboBox:addOptionWithData(option, data) end
 
 function ISComboBox:clear() end
@@ -40,32 +42,36 @@ function ISComboBox:contains(text) end
 
 function ISComboBox:createChildren() end
 
----@return number
+---@param func fun(text: string, data: unknown?, ...: unknown)
+---@param arg1 unknown?
+---@param arg2 unknown?
+---@return integer
 function ISComboBox:find(func, arg1, arg2) end
 
 function ISComboBox:forceClick() end
 
----@return unknown?
+---@return string?
 function ISComboBox:getFilterText() end
 
----@return number
+---@return integer
 function ISComboBox:getOptionCount() end
 
----@param index number
+---@param index integer
 ---@return unknown?
 function ISComboBox:getOptionData(index) end
 
----@param index number
----@return unknown?
+---@param index integer
+---@return string?
 function ISComboBox:getOptionText(index) end
 
----@return unknown?
+---@param index integer
+---@return string?
 function ISComboBox:getOptionTooltip(index) end
 
----@return number
+---@return integer
 function ISComboBox:getSelected() end
 
----@return unknown?
+---@return string?
 function ISComboBox:getSelectedText() end
 
 ---@return boolean
@@ -84,8 +90,10 @@ function ISComboBox:isEmpty() end
 ---@return boolean
 function ISComboBox:isEnabled() end
 
+---@param joypadData JoypadData
 function ISComboBox:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISComboBox:onJoypadDirUp(joypadData) end
 
 ---@param x number
@@ -116,7 +124,6 @@ function ISComboBox:prerender() end
 ---@param option string
 function ISComboBox:select(option) end
 
----@param data string
 function ISComboBox:selectData(data) end
 
 ---@param editable boolean
@@ -125,13 +132,16 @@ function ISComboBox:setEditable(editable) end
 ---@param enabled boolean
 function ISComboBox:setEnabled(enabled) end
 
+---@param text string
 function ISComboBox:setFilterText(text) end
 
 ---@param focused boolean
 function ISComboBox:setJoypadFocused(focused) end
 
+---@param value integer
 function ISComboBox:setSelected(value) end
 
+---@param tooltipmap table<string, string>
 function ISComboBox:setToolTipMap(tooltipmap) end
 
 ---@param minWidth number?
@@ -143,9 +153,10 @@ function ISComboBox:showPopup() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param target table?
----@param onChange function?
+---@param target unknown?
+---@param onChange umbrella.ISComboBox.OnChange?
 ---@param onChangeArg1 unknown?
+---@param onChangeArg2 unknown?
 ---@return ISComboBox
 function ISComboBox:new(x, y, width, height, target, onChange, onChangeArg1, onChangeArg2) end
 
@@ -154,6 +165,7 @@ function ISComboBox:new(x, y, width, height, target, onChange, onChangeArg1, onC
 ISComboBoxEditor = ISTextEntryBox:derive("ISComboBoxEditor")
 ISComboBoxEditor.Type = "ISComboBoxEditor"
 
+---@param key integer
 function ISComboBoxEditor:onOtherKey(key) end
 
 function ISComboBoxEditor:onTextChange() end
@@ -169,11 +181,14 @@ function ISComboBoxEditor:new(x, y, width, height, comboBox) end
 ---@class ISComboBoxPopup : ISScrollingListBox
 ---@field parentCombo ISComboBox?
 ---@field selected number
----@field tooWide unknown?
----@field tooWideY number
+---@field tooWide umbrella.ISScrollingListBox.Item?
+---@field tooWideY number?
 ISComboBoxPopup = ISScrollingListBox:derive("ISComboBoxPopup")
 ISComboBoxPopup.Type = "ISComboBoxPopup"
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISComboBoxPopup:doDrawItem(y, item, alt) end
 
@@ -199,5 +214,10 @@ function ISComboBoxPopup:setComboBox(comboBox) end
 ---@param height number
 ---@return ISComboBoxPopup
 function ISComboBoxPopup:new(x, y, width, height) end
+
+---@class umbrella.ISComboBox.Option
+---@field data unknown
+---@field text string
+umbrella_ISComboBox_Option = {}
 
 function testcomboBox() end

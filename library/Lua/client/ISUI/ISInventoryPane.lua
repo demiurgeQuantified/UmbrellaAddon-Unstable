@@ -1,14 +1,16 @@
 ---@meta
 
+---@alias umbrella.ISInventoryPane.ItemRecord umbrella.ContextMenuItemStack
+
 ---@class ISInventoryPane : ISPanel
 ---@field blinkAlpha number
 ---@field blinkAlphaIncrease boolean
----@field brokenItemIcon unknown
+---@field brokenItemIcon Texture
 ---@field buttonOption number
 ---@field clickedScrollBar boolean
 ---@field collapseAll ISButton
----@field collapsed table
----@field collapseicon unknown
+---@field collapsed table<string, boolean>
+---@field collapseicon Texture
 ---@field column2 number
 ---@field column3 number
 ---@field column4 number
@@ -23,68 +25,80 @@
 ---@field draggingX number
 ---@field draggingY number
 ---@field dragStarted boolean
----@field equippedInHotbar unknown
----@field equippedItemIcon unknown
+---@field equippedInHotbar Texture
+---@field equippedItemIcon Texture
 ---@field expandAll ISButton
----@field expandicon unknown
+---@field expandicon Texture
 ---@field favoriteRecipeInputStar unknown
----@field favoriteStar unknown
----@field filtericon unknown
+---@field favoriteStar Texture
+---@field filtericon Texture
 ---@field filterMenu ISButton
 ---@field firstSelect number?
----@field font unknown
----@field fontHgt unknown
----@field frozenItemIcon unknown
+---@field font UIFont
+---@field fontHgt number
+---@field frozenItemIcon Texture
 ---@field headerHgt number
 ---@field highlightItems table
----@field hotbar unknown?
----@field inventory unknown
----@field itemHgt unknown
----@field itemindex table
----@field items table
----@field itemslist table
+---@field hotbar ISHotbar?
+---@field inventory ItemContainer
+---@field itemHgt number
+---@field itemindex table<string, umbrella.ISInventoryPane.ItemRecord>
+---@field items InventoryItem[]
+---@field itemslist umbrella.ISInventoryPane.ItemRecord[]
 ---@field itemSortFunc function
 ---@field joyselection number
 ---@field mode string
 ---@field mouseOverOption number
 ---@field nameHeader ISResizableButton
----@field poisonIcon unknown
+---@field poisonIcon Texture
 ---@field previousMouseUp number?
 ---@field removeAllDialog ISModalDialog?
----@field selected table
+---@field selected table<integer, InventoryItem | umbrella.ISInventoryPane.ItemRecord>
 ---@field smoothScrollTargetY number?
 ---@field smoothScrollY number?
 ---@field texScale number
 ---@field toolRender ISToolTipInv
----@field treecolicon unknown
----@field treeexpicon unknown
+---@field treecolicon Texture
+---@field treeexpicon Texture
 ---@field typeHeader ISResizableButton
----@field zoom unknown
+---@field zoom number
 ISInventoryPane = ISPanel:derive("ISInventoryPane")
 ISInventoryPane.Type = "ISInventoryPane"
 ISInventoryPane.MAX_ITEMS_IN_STACK_TO_RENDER = 50
 ISInventoryPane.ghc = getCore():getGoodHighlitedColor()
-ISInventoryPane.highlightItem = nil
+ISInventoryPane.highlightItem = nil ---@type string?
 
----@param items table
----@return table
+---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
+---@return InventoryItem[]
 function ISInventoryPane.getActualItems(items) end
 
+---@param a umbrella.ISInventoryPane.ItemRecord
+---@param b umbrella.ISInventoryPane.ItemRecord
 ---@return boolean
 function ISInventoryPane.itemSortByCatDesc(a, b) end
 
+---@param a umbrella.ISInventoryPane.ItemRecord
+---@param b umbrella.ISInventoryPane.ItemRecord
 ---@return boolean
 function ISInventoryPane.itemSortByCatInc(a, b) end
 
+---@param a umbrella.ISInventoryPane.ItemRecord
+---@param b umbrella.ISInventoryPane.ItemRecord
 ---@return boolean
 function ISInventoryPane.itemSortByNameDesc(a, b) end
 
+---@param a umbrella.ISInventoryPane.ItemRecord
+---@param b umbrella.ISInventoryPane.ItemRecord
 ---@return boolean
 function ISInventoryPane.itemSortByNameInc(a, b) end
 
+---@param a umbrella.ISInventoryPane.ItemRecord
+---@param b umbrella.ISInventoryPane.ItemRecord
 ---@return boolean
 function ISInventoryPane.itemSortByWeightAsc(a, b) end
 
+---@param a umbrella.ISInventoryPane.ItemRecord
+---@param b umbrella.ISInventoryPane.ItemRecord
 ---@return boolean
 function ISInventoryPane.itemSortByWeightDesc(a, b) end
 
@@ -93,6 +107,7 @@ function ISInventoryPane:canPutIn() end
 
 function ISInventoryPane:clearWorldObjectHighlights() end
 
+---@param button ISButton
 function ISInventoryPane:collapseAll(button) end
 
 function ISInventoryPane:createChildren() end
@@ -102,6 +117,7 @@ function ISInventoryPane:doButtons(y) end
 
 function ISInventoryPane:doContextOnJoypadSelected() end
 
+---@param item InventoryItem
 function ISInventoryPane:doContextualDblClick(item) end
 
 function ISInventoryPane:doGrabOnJoypadSelected() end
@@ -111,6 +127,11 @@ function ISInventoryPane:doJoypadExpandCollapse() end
 ---@return boolean
 function ISInventoryPane:doWorldObjectHighlight(_item) end
 
+---@param item InventoryItem
+---@param y number
+---@param xoff number
+---@param yoff number
+---@param red boolean?
 function ISInventoryPane:drawItemDetails(item, y, xoff, yoff, red) end
 
 ---@param x number
@@ -118,16 +139,18 @@ function ISInventoryPane:drawItemDetails(item, y, xoff, yoff, red) end
 ---@param w number
 ---@param h number
 ---@param f number
----@param fg table
+---@param fg umbrella.RGBA
 function ISInventoryPane:drawProgressBar(x, y, w, h, f, fg) end
 
 ---@param text string
 ---@param fraction number
+---@param xoff number
 ---@param top number
----@param fgText table
----@param fgBar table
+---@param fgText umbrella.RGBA
+---@param fgBar umbrella.RGBA
 function ISInventoryPane:drawTextAndProgressBar(text, fraction, xoff, top, fgText, fgBar) end
 
+---@param button ISButton
 function ISInventoryPane:expandAll(button) end
 
 function ISInventoryPane:findItemForWorldObjectHighlight(_itemTest) end
@@ -145,18 +168,23 @@ function ISInventoryPane:hideButtons() end
 
 function ISInventoryPane:initialise() end
 
+---@param playerObj IsoPlayer
+---@param item InventoryItem
 ---@return boolean
 function ISInventoryPane:isLiteratureRead(playerObj, item) end
 
----@return unknown
+---@return boolean
 function ISInventoryPane:isMouseOverScrollBar() end
 
 function ISInventoryPane:lootAll() end
 
+---@param button ISButton
 function ISInventoryPane:onConfirmDelete(button) end
 
+---@param button ISButton
 function ISInventoryPane:onContext(button) end
 
+---@param button ISButton
 function ISInventoryPane:onFilterMenu(button) end
 
 function ISInventoryPane:onInventoryFontChanged() end
@@ -192,6 +220,7 @@ function ISInventoryPane:onMouseUp(x, y) end
 ---@param y number
 function ISInventoryPane:onMouseUpOutside(x, y) end
 
+---@param del number
 ---@return boolean
 function ISInventoryPane:onMouseWheel(del) end
 
@@ -209,6 +238,7 @@ function ISInventoryPane:prerender() end
 
 function ISInventoryPane:refreshContainer() end
 
+---@param player integer
 function ISInventoryPane:removeAll(player) end
 
 function ISInventoryPane:render() end
@@ -219,51 +249,60 @@ function ISInventoryPane:renderdetails(doDragged) end
 function ISInventoryPane:rendericons() end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISInventoryPane:RestoreLayout(name, layout) end
 
+---@param selected table<InventoryItem, "item" | "group">
 function ISInventoryPane:restoreSelection(selected) end
 
 ---@param x number
 ---@param y number
----@return number
+---@return integer
 function ISInventoryPane:rowAt(x, y) end
 
 ---@param name string
+---@param layout umbrella.ISLayoutManager.Layout
 function ISInventoryPane:SaveLayout(name, layout) end
 
----@param selected table
----@return table
+---@param selected table<InventoryItem, "item" | "group">
+---@return table<InventoryItem, "item" | "group">
 function ISInventoryPane:saveSelection(selected) end
 
----@param index number
+---@param index integer
 function ISInventoryPane:selectIndex(index) end
 
 ---@param mode string
 function ISInventoryPane:setMode(mode) end
 
+---@param button ISButton
 function ISInventoryPane:sortByName(button) end
 
+---@param button ISButton
 function ISInventoryPane:sortByType(button) end
 
 ---@param _isAscending boolean
 function ISInventoryPane:sortByWeight(_isAscending) end
 
+---@param items InventoryItem[]
 function ISInventoryPane:sortItemsByType(items) end
 
+---@param items InventoryItem[]
 function ISInventoryPane:sortItemsByTypeAndWeight(items) end
 
+---@param items InventoryItem[]
 function ISInventoryPane:sortItemsByWeight(items) end
 
----@return unknown
+---@return boolean
 function ISInventoryPane:toggleStove() end
 
----@param index number
+---@param index integer
 ---@return number
 function ISInventoryPane:topOfItem(index) end
 
 function ISInventoryPane:transferAll() end
 
----@param items table
+---@param items InventoryItem[]
+---@param container ItemContainer
 function ISInventoryPane:transferItemsByWeight(items, container) end
 
 function ISInventoryPane:update() end
@@ -278,23 +317,26 @@ function ISInventoryPane:updateWorldObjectHighlight() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param inventory ItemContainer
+---@param zoom number
 ---@return ISInventoryPane
 function ISInventoryPane:new(x, y, width, height, inventory, zoom) end
 
 ---@class ISInventoryPaneDraggedItems
 ---@field inventoryPane ISInventoryPane
----@field itemNotOK table
----@field items table?
----@field mouseOverContainer unknown?
+---@field itemNotOK table<InventoryItem, boolean>
+---@field items InventoryItem[]?
+---@field mouseOverContainer ItemContainer?
 ---@field mouseOverItemCount number
 ---@field mouseOverWhat string?
----@field playerNum unknown
+---@field playerNum integer
 ISInventoryPaneDraggedItems = {}
 
+---@param item InventoryItem
 ---@return boolean
 function ISInventoryPaneDraggedItems:cannotDropItem(item) end
 
----@return unknown?
+---@return ItemContainer?
 ---@return string?
 function ISInventoryPaneDraggedItems:getDropContainer() end
 

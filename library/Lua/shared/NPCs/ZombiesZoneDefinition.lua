@@ -1596,4 +1596,14 @@ ZombiesZoneDefinition.SecretLab = {
 		chance = 20,
 	},
 }
-ZombiesZoneDefinition.Default = {}
+ZombiesZoneDefinition.Default = nil ---@type umbrella.ZombiesZoneDefinition[]
+
+---@class umbrella.ZombiesZoneDefinition
+---@field beardStyles string?
+---@field chance number
+---@field gender string?
+---@field mandatory string?
+---@field name string
+---@field room string?
+---@field toSpawn number?
+umbrella_ZombiesZoneDefinition = {}

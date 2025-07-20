@@ -1,20 +1,30 @@
 ---@meta
 
+---@alias umbrella.FishingState
+---| Fishing.States.None
+---| Fishing.States.Idle
+---| Fishing.States.Cast
+---| Fishing.States.Wait
+---| Fishing.States.ReelIn
+---| Fishing.States.ReelOut
+---| Fishing.States.PickupFish
+
 ---@class Fishing
 Fishing = {}
 Fishing.FishingManager = nil ---@type Fishing.FishingManager
 
 ---@class Fishing.FishingManager
----@field fishingRod unknown?
----@field joypad unknown
+---@field fishingRod Fishing.FishingRod?
+---@field joypad integer
 ---@field onSave function
 ---@field onTickFunc function
----@field player unknown
----@field state Fishing.States.None?
----@field states table
+---@field player IsoPlayer
+---@field state umbrella.FishingState?
+---@field states umbrella.FishingManager.StatesTable
 ---@field tensionUI Fishing.ISTensionUI
 local __fishing_FishingManager = {}
 
+---@param data umbrella.FishingManager.MPUpdateData
 function __fishing_FishingManager.onFishingActionMPUpdate(data) end
 
 ---@param stateName string
@@ -38,5 +48,21 @@ function __fishing_FishingManager:updateAnim() end
 
 function __fishing_FishingManager:updateTensionUI() end
 
+---@param player IsoPlayer
+---@param joypad integer
 ---@return Fishing.FishingManager
 function __fishing_FishingManager:new(player, joypad) end
+
+---@class umbrella.FishingManager.MPUpdateData
+---@field Reject boolean
+umbrella_FishingManager_MPUpdateData = {}
+
+---@class umbrella.FishingManager.StatesTable
+---@field Cast Fishing.States.Cast
+---@field Idle Fishing.States.Idle
+---@field None Fishing.States.None
+---@field PickupFish Fishing.States.PickupFish
+---@field ReelIn Fishing.States.ReelIn
+---@field ReelOut Fishing.States.ReelOut
+---@field Wait Fishing.States.Wait
+umbrella_FishingManager_StatesTable = {}

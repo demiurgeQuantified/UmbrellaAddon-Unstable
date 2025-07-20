@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISItemSlotAddAction : ISBaseTimedAction
----@field entity unknown
----@field item unknown
----@field itemSlot unknown?
----@field resource unknown
+---@field entity IsoObject
+---@field item InventoryItem
+---@field itemSlot ISItemSlot?
+---@field resource Resource
 ISItemSlotAddAction = ISBaseTimedAction:derive("ISItemSlotAddAction")
 ISItemSlotAddAction.Type = "ISItemSlotAddAction"
 
@@ -25,5 +25,9 @@ function ISItemSlotAddAction:stop() end
 
 function ISItemSlotAddAction:update() end
 
+---@param character IsoPlayer
+---@param entity IsoObject
+---@param item InventoryItem
+---@param resource Resource
 ---@return ISItemSlotAddAction
 function ISItemSlotAddAction:new(character, entity, item, resource) end

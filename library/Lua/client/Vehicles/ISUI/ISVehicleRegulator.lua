@@ -2,18 +2,20 @@
 
 ---@class ISVehicleRegulator
 ISVehicleRegulator = {}
-ISVehicleRegulator.xPressed = {}
-ISVehicleRegulator.changedSpeed = {}
+ISVehicleRegulator.xPressed = {} ---@type table<integer, boolean>
+ISVehicleRegulator.changedSpeed = {} ---@type table<integer, boolean>
 
----@param joypadData unknown?
+---@param joypadData JoypadData
 ---@return boolean
 function ISVehicleRegulator.onJoypadPressDown(joypadData) end
 
----@param joypadData unknown?
+---@param joypadData JoypadData
 ---@return boolean
 function ISVehicleRegulator.onJoypadPressUp(joypadData) end
 
+---@param buttonPrompt ISButtonPrompt
+---@param joypadData JoypadData
 function ISVehicleRegulator.onJoypadPressX(buttonPrompt, joypadData) end
 
----@param joypadData unknown?
+---@param joypadData JoypadData
 function ISVehicleRegulator.onJoypadReleaseX(joypadData) end

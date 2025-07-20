@@ -11,6 +11,7 @@ function __UI_Window:onMouseButtonDownOutside() end
 
 function __UI_Window:renderUpdate() end
 
+---@param collapsed boolean
 function __UI_Window:setCollapsed(collapsed) end
 
 ---@class PZAPI.UI

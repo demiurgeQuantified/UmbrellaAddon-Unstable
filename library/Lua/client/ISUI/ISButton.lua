@@ -1,55 +1,61 @@
 ---@meta
 
+---@alias umbrella.ISButton.MouseCallback fun(target: unknown, button: ISButton, x: number, y: number)
+---@alias umbrella.ISButton.OnClick fun(target: unknown, button: ISButton, ...: unknown)
+---@alias umbrella.ISButton.RepeatWhilePressed fun(target: unknown, button: ISButton)
+
 ---@class ISButton : ISPanel
----@field allowMouseUpProcessing unknown
----@field backgroundColorEnabled table
----@field backgroundColorMouseOver table
+---@field allowMouseUpProcessing boolean?
+---@field backgroundColorEnabled umbrella.RGBA
+---@field backgroundColorMouseOver umbrella.RGBA
 ---@field backgroundColorPressed table
 ---@field blinkBGAlpha number
 ---@field blinkBGAlphaIncrease boolean
 ---@field blinkImageAlpha number
 ---@field blinkImageAlphaIncrease boolean
----@field borderColorEnabled table
+---@field borderColorEnabled umbrella.RGBA
 ---@field displayBackground boolean
 ---@field enable boolean
----@field fade unknown
----@field font unknown
----@field forcedHeightImage number
----@field forcedWidthImage number
+---@field fade UITransition
+---@field font UIFont
+---@field forcedHeightImage number?
+---@field forcedWidthImage number?
 ---@field iconRight unknown?
 ---@field iconRightColor table
 ---@field iconRightHeight number
 ---@field iconRightWidth number
----@field image unknown
----@field isButton boolean
+---@field image Texture?
+---@field isButton true
 ---@field isJoypad boolean
 ---@field joypadTexture unknown?
 ---@field joypadTextureWH number
----@field onclick (ISButton | function)?
----@field onClickArgs table
----@field onmousedown unknown
----@field onmouseoutfunction unknown
----@field onmouseover unknown
+---@field onclick umbrella.ISButton.OnClick?
+---@field onClickArgs unknown[]
+---@field onmousedown umbrella.ISButton.MouseCallback?
+---@field onmouseoutfunction umbrella.ISButton.MouseCallback?
+---@field onmouseover umbrella.ISButton.MouseCallback?
 ---@field originalHeight number
 ---@field originalWidth number
----@field overlayText unknown
+---@field overlayText string?
 ---@field pressed boolean
----@field pressedTime unknown?
----@field repeatWhilePressedFunc unknown
+---@field pressedTime number?
+---@field repeatWhilePressedFunc umbrella.ISButton.RepeatWhilePressed?
 ---@field repeatWhilePressedTimer number
----@field sounds table
----@field target table?
----@field textColor table
----@field textureBackground unknown?
----@field textureColor table
----@field title string?
+---@field sounds table<string, string>
+---@field target unknown?
+---@field textColor umbrella.RGBA
+---@field textureBackground Texture?
+---@field textureColor umbrella.RGBA
+---@field title string
 ---@field titleLeft boolean
----@field tooltip unknown?
+---@field tooltip string?
 ---@field tooltipUI ISToolTip
 ---@field yoffset number
 ISButton = ISPanel:derive("ISButton")
 ISButton.Type = "ISButton"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISButton:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISButton:clearJoypadButton() end
@@ -65,12 +71,12 @@ function ISButton:forceClick() end
 ---@param height number
 function ISButton:forceImageSize(width, height) end
 
----@return string?
+---@return string
 function ISButton:getTitle() end
 
 function ISButton:initialise() end
 
----@return boolean?
+---@return boolean
 function ISButton:isEnabled() end
 
 ---@param x number
@@ -120,31 +126,45 @@ function ISButton:setBackgroundRGBA(r, g, b, a) end
 ---@param a number
 function ISButton:setBorderRGBA(r, g, b, a) end
 
+---@param background boolean
 function ISButton:setDisplayBackground(background) end
 
 ---@param bEnabled boolean
 function ISButton:setEnable(bEnabled) end
 
+---@param font UIFont
 function ISButton:setFont(font) end
 
+---@param image Texture?
 function ISButton:setImage(image) end
 
+---@param texture Texture
 function ISButton:setJoypadButton(texture) end
 
 ---@param focused boolean
 function ISButton:setJoypadFocused(focused) end
 
+---@param func umbrella.ISButton.OnClick
+---@param arg1 unknown?
+---@param arg2 unknown?
+---@param arg3 unknown?
+---@param arg4 unknown?
 function ISButton:setOnClick(func, arg1, arg2, arg3, arg4) end
 
+---@param onmouseout umbrella.ISButton.MouseCallback?
 function ISButton:setOnMouseOutFunction(onmouseout) end
 
+---@param onmouseover umbrella.ISButton.MouseCallback?
 function ISButton:setOnMouseOverFunction(onmouseover) end
 
+---@param text string?
 function ISButton:setOverlayText(text) end
 
+---@param func umbrella.ISButton.RepeatWhilePressed?
 function ISButton:setRepeatWhilePressed(func) end
 
----@param soundName string
+---@param which string
+---@param soundName string?
 function ISButton:setSound(which, soundName) end
 
 ---@param r number
@@ -156,12 +176,14 @@ function ISButton:setTextureRGBA(r, g, b, a) end
 ---@param title string
 function ISButton:setTitle(title) end
 
+---@param tooltip string?
 function ISButton:setTooltip(tooltip) end
 
 ---@param minWidth number?
 ---@param isJoypad boolean?
 function ISButton:setWidthToTitle(minWidth, isJoypad) end
 
+---@param bEnabled boolean
 function ISButton:toggleAcceptCancel(bEnabled) end
 
 function ISButton:update() end
@@ -172,8 +194,10 @@ function ISButton:updateTooltip() end
 ---@param y number
 ---@param width number
 ---@param height number
----@param title string?
----@param clicktarget table?
----@param onclick (ISButton | function)?
+---@param title string
+---@param clicktarget unknown?
+---@param onclick umbrella.ISButton.OnClick?
+---@param onmousedown umbrella.ISButton.MouseCallback?
+---@param allowMouseUpProcessing boolean?
 ---@return ISButton
 function ISButton:new(x, y, width, height, title, clicktarget, onclick, onmousedown, allowMouseUpProcessing) end

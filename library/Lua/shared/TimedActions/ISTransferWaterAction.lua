@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISTransferWaterAction : ISBaseTimedAction
----@field itemFrom unknown
----@field itemFromBeginDelta unknown
+---@field itemFrom InventoryItem
+---@field itemFromBeginDelta number
 ---@field itemFromEndingDelta number
----@field itemTo unknown
+---@field itemTo InventoryItem
 ---@field itemToBeginDelta number
 ---@field itemToEndingDelta number
 ISTransferWaterAction = ISBaseTimedAction:derive("ISTransferWaterAction")
@@ -31,6 +31,9 @@ function ISTransferWaterAction:stop() end
 
 function ISTransferWaterAction:update() end
 
+---@param character IsoPlayer
+---@param itemFrom InventoryItem
+---@param itemTo InventoryItem
 ---@param itemFromEndingDelta number
 ---@param itemToEndingDelta number
 ---@return ISTransferWaterAction

@@ -2,7 +2,7 @@
 
 ---@class ISOpenCloseCurtain : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field item unknown
+---@field item IsoDoor | IsoThumpable | IsoWindow | IsoCurtain
 ---@field retriggerLastAction boolean
 ISOpenCloseCurtain = ISBaseTimedAction:derive("ISOpenCloseCurtain")
 ISOpenCloseCurtain.Type = "ISOpenCloseCurtain"
@@ -24,9 +24,10 @@ function ISOpenCloseCurtain:stop() end
 
 function ISOpenCloseCurtain:update() end
 
----@return unknown
+---@return boolean
 function ISOpenCloseCurtain:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item IsoDoor | IsoThumpable | IsoWindow | IsoCurtain
 ---@return ISOpenCloseCurtain
 function ISOpenCloseCurtain:new(character, item) end

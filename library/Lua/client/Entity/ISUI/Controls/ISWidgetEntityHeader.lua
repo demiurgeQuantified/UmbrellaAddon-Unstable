@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISWidgetEntityHeader : ISPanel
----@field buttonInfo unknown?
+---@field buttonInfo ISButton?
 ---@field enableIcon boolean
 ---@field enableInfoButton boolean
----@field entity unknown
----@field entityStyle unknown
----@field icon unknown?
+---@field entity GameEntity
+---@field entityStyle XuiSkin.EntityUiStyle?
+---@field icon ISImage?
 ---@field iconSize number
 ---@field marginBottom number
 ---@field marginLeft number
@@ -16,20 +16,23 @@
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
----@field player unknown
----@field styleButton unknown
----@field styleIcon unknown
----@field styleLabel unknown
----@field title unknown?
+---@field player IsoPlayer
+---@field styleButton string?
+---@field styleIcon string?
+---@field styleLabel string?
+---@field title ISLabel?
 ISWidgetEntityHeader = ISPanel:derive("ISWidgetEntityHeader")
 ISWidgetEntityHeader.Type = "ISWidgetEntityHeader"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISWidgetEntityHeader:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetEntityHeader:createChildren() end
 
 function ISWidgetEntityHeader:initialise() end
 
+---@param _button ISButton
 function ISWidgetEntityHeader:onButtonClick(_button) end
 
 function ISWidgetEntityHeader:onResize() end
@@ -44,6 +47,12 @@ function ISWidgetEntityHeader:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param entity GameEntity
+---@param entityStyle XuiSkin.EntityUiStyle?
+---@param _styleIcon number?
+---@param _styleLabel number?
+---@param _styleButton number?
 ---@return ISWidgetEntityHeader
 function ISWidgetEntityHeader:new(
 	x,

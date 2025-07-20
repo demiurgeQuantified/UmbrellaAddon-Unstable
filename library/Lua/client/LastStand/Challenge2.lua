@@ -3,18 +3,18 @@
 ---@class Challenge2
 Challenge2 = {}
 Challenge2.zombiesSpawned = 0
-Challenge2.startedWaveCalendar = nil
-Challenge2.prepareTimeCalendar = nil
-Challenge2.timeNeeded = nil
+Challenge2.startedWaveCalendar = nil ---@type PZCalendar?
+Challenge2.prepareTimeCalendar = nil ---@type PZCalendar?
+Challenge2.timeNeeded = nil ---@type PZCalendar?
 Challenge2.timeNeededTick = 0
 Challenge2.sdf = SimpleDateFormat.new("mm:ss")
 Challenge2.deadZombie = 0
 Challenge2.prepareTime = (2 * 60) * 1000
-Challenge2.playersMoney = {}
+Challenge2.playersMoney = {} ---@type table<integer, integer>
 Challenge2.timeNeededAlpha = 1
 Challenge2.wave = 0
-Challenge2.upgradeScreen = {}
-Challenge2.radarPanel = {}
+Challenge2.upgradeScreen = {} ---@type table<integer, ISChallenge2UpgradeTab>
+Challenge2.radarPanel = {} ---@type table<integer, RadarPanel>
 Challenge2.moneyGained = nil ---@type number?
 Challenge2.xpGained = nil ---@type number?
 Challenge2.id = "Challenge2"
@@ -55,29 +55,34 @@ Challenge2.zombieSpawnsRect = {
 
 function Challenge2.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function Challenge2.AddPlayer(playerNum, playerObj) end
 
 function Challenge2.endWave() end
 
 function Challenge2.Init() end
 
----@param playerNum number
+---@param playerNum integer
+---@param dir string
 function Challenge2.onBackButtonWheel(playerNum, dir) end
 
+---@param playerId integer
 function Challenge2.onCreatePlayer(playerId) end
 
 function Challenge2.OnInitWorld() end
 
+---@param key integer
 function Challenge2.onKeyPressed(key) end
 
 function Challenge2.onZombieDead() end
 
+---@param playerObj IsoPlayer
 function Challenge2.RemovePlayer(playerObj) end
 
 function Challenge2.Render() end
 
----@param count number
+---@param count integer
 function Challenge2.SpawnZombies(count) end
 
 function Challenge2.Tick() end

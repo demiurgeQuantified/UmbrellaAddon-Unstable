@@ -3,35 +3,43 @@
 ---@class WorldMapOptions : ISCollapsableWindowJoypad
 ---@field darkModeLabel ISLabel
 ---@field darkModeSlider ISSliderPanel
----@field doubleBoxes table
+---@field doubleBoxes table<integer, ISTextEntryBox>
 ---@field map ISWorldMap
----@field screenHeight unknown
+---@field screenHeight integer
 ---@field showAllOptions boolean
----@field tickBoxes table
+---@field tickBoxes table<integer, ISTickBox>
 WorldMapOptions = ISCollapsableWindowJoypad:derive("WorldMapOptions")
 WorldMapOptions.Type = "WorldMapOptions"
 
 function WorldMapOptions:createChildren() end
 
----@return table
+---@return ConfigOption[]
 function WorldMapOptions:getVisibleOptions() end
 
 ---@param optionName string
 ---@return boolean
 function WorldMapOptions:isMultiplayerOption(optionName) end
 
+---@param entry ISTextEntryBox
+---@param option ConfigOption
 function WorldMapOptions:onCommandEntered(entry, option) end
 
 function WorldMapOptions:onDarkModeChanged(value, slider) end
 
+---@param joypadData JoypadData
 function WorldMapOptions:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function WorldMapOptions:onJoypadDown(button, joypadData) end
 
 ---@param x number
 ---@param y number
 function WorldMapOptions:onMouseDownOutside(x, y) end
 
+---@param index integer
+---@param selected boolean
+---@param option ConfigOption
 function WorldMapOptions:onTickBox(index, selected, option) end
 
 function WorldMapOptions:synchUI() end
@@ -48,10 +56,14 @@ function WorldMapOptions:new(x, y, width, height, map) end
 ISWorldMapButtonPanel = ISPanelJoypad:derive("ISWorldMapButtonPanel")
 ISWorldMapButtonPanel.Type = "ISWorldMapButtonPanel"
 
+---@param joypadData JoypadData
 function ISWorldMapButtonPanel:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISWorldMapButtonPanel:onJoypadDown(button, joypadData) end
 
+---@param joypadData JoypadData
 function ISWorldMapButtonPanel:onLoseJoypadFocus(joypadData) end
 
 function ISWorldMapButtonPanel:render() end
@@ -66,37 +78,37 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@class ISWorldMap : ISPanelJoypad
 ---@field buttonPanel ISWorldMapButtonPanel
 ---@field centerBtn ISButton
----@field character unknown?
+---@field character IsoPlayer?
 ---@field closeBtn ISButton
----@field cross unknown
+---@field cross Texture
 ---@field dragging boolean
 ---@field dragMoved boolean
----@field dragStartCX unknown
----@field dragStartCY unknown
----@field dragStartWorldX unknown
----@field dragStartWorldY unknown
+---@field dragStartCX number
+---@field dragStartCY number
+---@field dragStartWorldX number
+---@field dragStartWorldY number
 ---@field dragStartX number
 ---@field dragStartY number
----@field dragStartZoomF unknown
+---@field dragStartZoomF number
 ---@field forgetBtn ISButton
 ---@field forgetUI ISModalRichText?
 ---@field getJoypadFocus boolean
 ---@field hideUnvisitedAreas boolean
 ---@field isometric boolean
----@field joypadPromptHgt unknown
+---@field joypadPromptHgt number
 ---@field keyUI ISWorldMapKey
 ---@field LBumperZoom number?
----@field mapAPI unknown
----@field mouseOverPrintMedia table?
+---@field mapAPI UIWorldMapV1
+---@field mouseOverPrintMedia umbrella.ISWorldMap.MouseOverPrintMedia?
 ---@field mouseOverStashMap table?
 ---@field optionBtn ISButton
 ---@field optionsUI WorldMapOptions
 ---@field perspectiveBtn ISButton
----@field playerNum number
----@field povXms unknown?
----@field povYms unknown?
----@field prevFocus unknown?
----@field printMedia unknown?
+---@field playerNum integer
+---@field povXms number?
+---@field povYms number?
+---@field prevFocus ISUIElement?
+---@field printMedia UI.PrintMedia?
 ---@field printMediaBtn ISButton
 ---@field pyramidBtn ISButton
 ---@field RBumperZoom number?
@@ -112,19 +124,20 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field stashMapUI AnnotatedMapOverlay
 ---@field symbolsBtn ISButton
 ---@field symbolsUI ISWorldMapSymbols
----@field texViewIsometric unknown
----@field texViewOrthographic unknown
----@field texViewPyramid unknown
----@field updateMS unknown
+---@field texViewIsometric Texture
+---@field texViewOrthographic Texture
+---@field texViewPyramid Texture
+---@field updateMS number
 ---@field zoomInButton ISButton
 ---@field zoomOutButton ISButton
 ISWorldMap = ISPanelJoypad:derive("ISWorldMap")
 ISWorldMap.Type = "ISWorldMap"
 
+---@param key integer
 ---@return boolean
 function ISWorldMap.checkKey(key) end
 
----@param playerNum number
+---@param playerNum integer
 function ISWorldMap.HideWorldMap(playerNum) end
 
 ---@return boolean
@@ -133,18 +146,25 @@ function ISWorldMap.IsAllowed() end
 ---@return boolean
 function ISWorldMap.NeedsLight() end
 
+---@param key integer
 function ISWorldMap.onKeyKeepPressed(key) end
 
+---@param key integer
 function ISWorldMap.onKeyReleased(key) end
 
+---@param key integer
 function ISWorldMap.onKeyStartPressed(key) end
 
+---@param playerObj IsoPlayer
 function ISWorldMap.OnPlayerDeath(playerObj) end
 
----@param playerNum number
+---@param playerNum integer
+---@param centerX number?
+---@param centerY number?
+---@param zoom number?
 function ISWorldMap.ShowWorldMap(playerNum, centerX, centerY, zoom) end
 
----@param playerNum number
+---@param playerNum integer
 function ISWorldMap.ToggleWorldMap(playerNum) end
 
 function ISWorldMap:close() end
@@ -165,23 +185,30 @@ function ISWorldMap:initDataAndStyle() end
 
 function ISWorldMap:instantiate() end
 
+---@param key integer
 ---@return boolean
 function ISWorldMap:isKeyConsumed(key) end
 
 function ISWorldMap:onCenterOnPlayer() end
 
+---@param button ISButton
 function ISWorldMap:onChangeOptions(button) end
 
 function ISWorldMap:onChangePerspective() end
 
+---@param button ISButton
 function ISWorldMap:onConfirmForget(button) end
 
 function ISWorldMap:onForget() end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISWorldMap:onJoypadDown(button, joypadData) end
 
+---@param key integer
 function ISWorldMap:onKeyPress(key) end
 
+---@param key integer
 function ISWorldMap:onKeyRelease(key) end
 
 ---@param x number
@@ -214,6 +241,7 @@ function ISWorldMap:onMouseUpPrintMedia() end
 ---@return boolean
 function ISWorldMap:onMouseUpStashMap() end
 
+---@param del number
 ---@return boolean
 function ISWorldMap:onMouseWheel(del) end
 
@@ -227,6 +255,8 @@ function ISWorldMap:onRightMouseDown(x, y) end
 ---@return boolean?
 function ISWorldMap:onRightMouseUp(x, y) end
 
+---@param worldX number
+---@param worldY number
 function ISWorldMap:onTeleport(worldX, worldY) end
 
 function ISWorldMap:onToggleLegend() end
@@ -249,6 +279,8 @@ function ISWorldMap:prerender() end
 
 function ISWorldMap:render() end
 
+---@param texture Texture
+---@param text string
 ---@param x number
 ---@param y number
 function ISWorldMap:renderJoypadPrompt(texture, text, x, y) end
@@ -321,3 +353,17 @@ function AnnotatedMapOverlay:prerender() end
 ---@param height number
 ---@return AnnotatedMapOverlay
 function AnnotatedMapOverlay:new(x, y, width, height) end
+
+---@class umbrella.ISWorldMap.MouseOverPrintMedia
+---@field location umbrella.ISWorldMap.PrintMediaLocation
+---@field mediaID string
+---@field x number
+---@field y number
+umbrella_ISWorldMap_MouseOverPrintMedia = {}
+
+---@class umbrella.ISWorldMap.PrintMediaLocation
+---@field x1 number
+---@field x2 number
+---@field y1 number
+---@field y2 number
+umbrella_ISWorldMap_PrintMediaLocation = {}

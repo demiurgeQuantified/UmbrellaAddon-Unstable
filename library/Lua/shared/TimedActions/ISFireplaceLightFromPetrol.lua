@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISFireplaceLightFromPetrol : ISBaseTimedAction
----@field fireplace unknown
----@field lighter unknown
----@field petrol unknown
----@field sound unknown
+---@field fireplace IsoFireplace
+---@field lighter InventoryItem
+---@field petrol InventoryItem
+---@field sound integer?
 ISFireplaceLightFromPetrol = ISBaseTimedAction:derive("ISFireplaceLightFromPetrol")
 ISFireplaceLightFromPetrol.Type = "ISFireplaceLightFromPetrol"
 
@@ -25,9 +25,12 @@ function ISFireplaceLightFromPetrol:stop() end
 
 function ISFireplaceLightFromPetrol:update() end
 
----@return unknown
+---@return boolean
 function ISFireplaceLightFromPetrol:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param fireplace IsoFireplace
+---@param lighter InventoryItem
+---@param petrol InventoryItem
 ---@return ISFireplaceLightFromPetrol
 function ISFireplaceLightFromPetrol:new(character, fireplace, lighter, petrol) end

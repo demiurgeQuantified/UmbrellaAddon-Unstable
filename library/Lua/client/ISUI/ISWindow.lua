@@ -13,6 +13,8 @@ ISWindow.TitleBarHeight = 19
 ISWindow.SideMargin = 12
 ISWindow.BottomMargin = 12
 
+---@param toolbar ISUIElement
+---@param height number
 function ISWindow:addToolbar(toolbar, height) end
 
 ---@return number
@@ -57,6 +59,7 @@ function ISWindow:onMouseMoveOutside(dx, dy) end
 ---@param y number
 function ISWindow:onMouseUp(x, y) end
 
+---@param toolbar ISUIElement
 function ISWindow:removeToolbar(toolbar) end
 
 function ISWindow:render() end

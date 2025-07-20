@@ -2,14 +2,14 @@
 
 ---@class ISGameStatisticPanel : ISPanel
 ---@field avgUpdatePeriod ISLabel
----@field buttonBorderColor table
----@field buttonChartDiskOperations unknown
----@field buttonChartMemory unknown
----@field buttonChartPackets unknown
----@field buttonChartUpdatePeriod unknown
----@field buttonToggleMonitor unknown
----@field colExt table
----@field colInt table
+---@field buttonBorderColor umbrella.RGBA
+---@field buttonChartDiskOperations ISButton
+---@field buttonChartMemory ISButton
+---@field buttonChartPackets ISButton
+---@field buttonChartUpdatePeriod ISButton
+---@field buttonToggleMonitor ISButton
+---@field colExt umbrella.RGB
+---@field colInt umbrella.RGB
 ---@field connection_access ISLabel
 ---@field connection_fps ISLabel
 ---@field connection_fpsAvg ISLabel
@@ -27,7 +27,7 @@
 ---@field connection_zombies_desync_max ISLabel
 ---@field connection_zombies_desync_teleport ISLabel
 ---@field connections unknown
----@field data unknown
+---@field data table
 ---@field flareCount boolean
 ---@field flareID number
 ---@field freeMemory ISLabel
@@ -45,7 +45,7 @@
 ---@field periodValue ISLabel
 ---@field saveCellToDisk ISLabel
 ---@field usedMemory ISLabel
----@field variableColor table
+---@field variableColor umbrella.RGBA
 ---@field zOffsetSmallFont number
 ISGameStatisticPanel = ISPanel:derive("ISGameStatisticPanel")
 ISGameStatisticPanel.Type = "ISGameStatisticPanel"
@@ -60,29 +60,42 @@ function ISGameStatisticPanel:close() end
 
 function ISGameStatisticPanel:createChildren() end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISGameStatisticPanel:drawIncomePacketsList(y, item, alt) end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISGameStatisticPanel:drawOutcomePacketsList(y, item, alt) end
 
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
 ---@return number
 function ISGameStatisticPanel:drawUsersList(y, item, alt) end
 
 function ISGameStatisticPanel:initialise() end
 
+---@param _button ISButton
 function ISGameStatisticPanel:onClick(_button) end
 
 function ISGameStatisticPanel:onClickClose() end
 
+---@param _combo ISComboBox
 function ISGameStatisticPanel:onCombo(_combo) end
 
+---@param item WorldFlares.Flare
 function ISGameStatisticPanel:OnFlaresListMouseDown(item) end
 
 function ISGameStatisticPanel:populateConnectionsList() end
 
 function ISGameStatisticPanel:populatePacketsList() end
 
+---@param connect table
 function ISGameStatisticPanel:populateUsersList(connect) end
 
 function ISGameStatisticPanel:prerender() end

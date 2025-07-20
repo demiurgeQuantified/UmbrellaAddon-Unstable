@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISDryMyself : ISBaseTimedAction
----@field item unknown
----@field serverStartTime unknown
+---@field item InventoryItem?
+---@field serverStartTime number
 ---@field started boolean
 ---@field tick number
 ---@field timer number
@@ -15,7 +15,7 @@ function ISDryMyself:complete() end
 ---@return number
 function ISDryMyself:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISDryMyself:isValid() end
 
 function ISDryMyself:perform() end
@@ -32,5 +32,7 @@ function ISDryMyself:syncItemUses() end
 
 function ISDryMyself:update() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISDryMyself
 function ISDryMyself:new(character, item) end

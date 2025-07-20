@@ -2,18 +2,20 @@
 
 ---@class ISFitnessAction : ISBaseTimedAction
 ---@field endMS number
----@field exeData unknown
----@field exeDataType unknown
+---@field exeData umbrella.FitnessExercises.Exercise
+---@field exeDataType string
 ---@field exercise string
----@field fitness unknown
+---@field fitness Fitness
 ---@field repnb number
----@field startMS unknown
+---@field startMS number
 ---@field switchHandUsed string
 ---@field switchTime number
----@field timeToExe number?
+---@field timeToExe number
 ISFitnessAction = ISBaseTimedAction:derive("ISFitnessAction")
 ISFitnessAction.Type = "ISFitnessAction"
 
+---@param event string
+---@param parameter string
 function ISFitnessAction:animEvent(event, parameter) end
 
 ---@return boolean
@@ -49,7 +51,10 @@ function ISFitnessAction:update() end
 ---@return boolean
 function ISFitnessAction:waitToStart() end
 
+---@param character IsoPlayer
 ---@param exercise string
----@param timeToExe number?
+---@param timeToExe number
+---@param exeData umbrella.FitnessExercises.Exercise
+---@param exeDataType string
 ---@return ISFitnessAction
 function ISFitnessAction:new(character, exercise, timeToExe, exeData, exeDataType) end

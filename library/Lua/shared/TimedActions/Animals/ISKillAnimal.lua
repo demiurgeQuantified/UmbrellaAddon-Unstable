@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISKillAnimal : ISBaseTimedAction
----@field animal unknown
+---@field animal IsoAnimal
 ISKillAnimal = ISBaseTimedAction:derive("ISKillAnimal")
 ISKillAnimal.Type = "ISKillAnimal"
 
@@ -27,8 +27,10 @@ function ISKillAnimal:stop() end
 
 function ISKillAnimal:update() end
 
----@return unknown
+---@return boolean
 function ISKillAnimal:waitToStart() end
 
+---@param character IsoPlayer
+---@param animal IsoAnimal
 ---@return ISKillAnimal
 function ISKillAnimal:new(character, animal) end

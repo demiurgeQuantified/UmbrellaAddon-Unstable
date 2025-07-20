@@ -6,35 +6,43 @@
 ---@field buttonAccept ISButton
 ---@field buttonQuit ISButton
 ---@field destroyOnClick boolean
----@field javaStateObj unknown
+---@field javaStateObj TermsOfServiceState
 ---@field name unknown?
 ---@field ok unknown?
----@field prevFocus unknown
+---@field prevFocus ISUIElement
 ---@field richText ISRichTextPanel
----@field texture unknown
+---@field texture Texture
 ---@field textureY number
 ISTermsOfServiceUI = ISPanelJoypad:derive("ISTermsOfServiceUI")
 ISTermsOfServiceUI.Type = "ISTermsOfServiceUI"
 ISTermsOfServiceUI.instance = nil ---@type ISTermsOfServiceUI?
 
+---@param javaStateObj GameState
 function ISTermsOfServiceUI.OnGameStateEnter(javaStateObj) end
 
 function ISTermsOfServiceUI:createChildren() end
 
 function ISTermsOfServiceUI:destroy() end
 
+---@param button ISButton
 function ISTermsOfServiceUI:onButton1(button) end
 
+---@param button ISButton
 function ISTermsOfServiceUI:onButton2(button) end
 
+---@param button ISButton
 function ISTermsOfServiceUI:onButtonAccept(button) end
 
+---@param button ISButton
 function ISTermsOfServiceUI:onButtonQuit(button) end
 
+---@param joypadData JoypadData
 function ISTermsOfServiceUI:onGainJoypadFocus(joypadData) end
 
+---@param button integer
 function ISTermsOfServiceUI:onJoypadDown(button) end
 
+---@param joypadData JoypadData
 function ISTermsOfServiceUI:onLoseJoypadFocus(joypadData) end
 
 ---@param x number

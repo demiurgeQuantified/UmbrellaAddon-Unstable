@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISAddSheetAction : ISBaseTimedAction
----@field item unknown
+---@field item IsoDoor | IsoWindow | IsoWindowFrame | IsoThumpable
 ISAddSheetAction = ISBaseTimedAction:derive("ISAddSheetAction")
 ISAddSheetAction.Type = "ISAddSheetAction"
 
@@ -22,9 +22,10 @@ function ISAddSheetAction:stop() end
 
 function ISAddSheetAction:update() end
 
----@return unknown
+---@return boolean
 function ISAddSheetAction:waitToStart() end
 
 ---@param character unknown?
+---@param item IsoDoor | IsoWindow | IsoWindowFrame | IsoThumpable
 ---@return ISAddSheetAction
 function ISAddSheetAction:new(character, item) end

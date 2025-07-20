@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ISClimbSheetRopeAction : ISBaseTimedAction
----@field down unknown
+---@field down boolean
 ISClimbSheetRopeAction = ISBaseTimedAction:derive("ISClimbSheetRopeAction")
 ISClimbSheetRopeAction.Type = "ISClimbSheetRopeAction"
 
----@return unknown
+---@return boolean
 function ISClimbSheetRopeAction:isValid() end
 
 function ISClimbSheetRopeAction:perform() end
@@ -16,5 +16,7 @@ function ISClimbSheetRopeAction:stop() end
 
 function ISClimbSheetRopeAction:update() end
 
+---@param character IsoPlayer
+---@param down boolean
 ---@return ISClimbSheetRopeAction
 function ISClimbSheetRopeAction:new(character, down) end

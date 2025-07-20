@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISUpgradeWeapon : ISBaseTimedAction
----@field part unknown
----@field weapon unknown
+---@field part InventoryItem
+---@field weapon HandWeapon
 ISUpgradeWeapon = ISBaseTimedAction:derive("ISUpgradeWeapon")
 ISUpgradeWeapon.Type = "ISUpgradeWeapon"
 
@@ -12,7 +12,7 @@ function ISUpgradeWeapon:complete() end
 ---@return number
 function ISUpgradeWeapon:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISUpgradeWeapon:isValid() end
 
 function ISUpgradeWeapon:perform() end
@@ -23,5 +23,8 @@ function ISUpgradeWeapon:stop() end
 
 function ISUpgradeWeapon:update() end
 
+---@param character IsoPlayer
+---@param weapon HandWeapon
+---@param part InventoryItem
 ---@return ISUpgradeWeapon
 function ISUpgradeWeapon:new(character, weapon, part) end

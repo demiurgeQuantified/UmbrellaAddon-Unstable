@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISToggleLightAction : ISBaseTimedAction
----@field object unknown
+---@field object IsoLightSwitch
 ---@field useProgressBar boolean
 ISToggleLightAction = ISBaseTimedAction:derive("ISToggleLightAction")
 ISToggleLightAction.Type = "ISToggleLightAction"
@@ -23,5 +23,7 @@ function ISToggleLightAction:stop() end
 
 function ISToggleLightAction:update() end
 
+---@param character IsoPlayer
+---@param object IsoLightSwitch
 ---@return ISToggleLightAction
 function ISToggleLightAction:new(character, object) end

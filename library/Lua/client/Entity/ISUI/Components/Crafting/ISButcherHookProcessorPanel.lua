@@ -1,33 +1,38 @@
 ---@meta
 
 ---@class ISButcherHookProcessorPanel : ISPanel
----@field component unknown
----@field craftControl unknown?
----@field craftControlDebug unknown?
----@field craftProcessor unknown
----@field craftProgress unknown?
----@field craftRecipeSelect unknown?
----@field entity unknown
----@field fluidOutputs unknown?
----@field itemInputs unknown?
----@field itemOutputs unknown?
----@field player unknown
----@field resourceContainer unknown
----@field tableLayout unknown?
+---@field component Component
+---@field craftControl ISWidgetCraftControl?
+---@field craftControlDebug ISWidgetCraftDebug?
+---@field craftProcessor Component?
+---@field craftProgress ISWidgetCraftProgress?
+---@field craftRecipeSelect ISWidgetRecipeSelect?
+---@field entity GameEntity
+---@field fluidOutputs ISFluidSlotPanel?
+---@field itemInputs ISItemSlotPanel?
+---@field itemOutputs ISItemSlotPanel?
+---@field player IsoPlayer
+---@field resourceContainer Resources?
+---@field tableLayout ISTableLayout?
 ISButcherHookProcessorPanel = ISPanel:derive("ISButcherHookProcessorPanel")
 ISButcherHookProcessorPanel.Type = "ISButcherHookProcessorPanel"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISButcherHookProcessorPanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISButcherHookProcessorPanel:createChildren() end
 
----@return unknown?
+---@param _style string
+---@return ISEnergySlotPanel
 function ISButcherHookProcessorPanel:createEnergySlotPanel(_style) end
 
----@return unknown?
+---@param _style string
+---@return ISFluidSlotPanel
 function ISButcherHookProcessorPanel:createFluidSlotPanel(_style) end
 
----@return unknown?
+---@param _style string
+---@return ISItemSlotPanel
 function ISButcherHookProcessorPanel:createItemSlotPanel(_style) end
 
 function ISButcherHookProcessorPanel:initialise() end
@@ -44,5 +49,9 @@ function ISButcherHookProcessorPanel:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param entity GameEntity
+---@param component Component
+---@param craftProcessor Component?
 ---@return ISButcherHookProcessorPanel
 function ISButcherHookProcessorPanel:new(x, y, width, height, player, entity, component, craftProcessor) end

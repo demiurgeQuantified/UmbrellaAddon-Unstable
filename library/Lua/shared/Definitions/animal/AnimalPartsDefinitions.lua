@@ -460,3 +460,33 @@ AnimalPartsDefinitions.meat = {
 		variants = AnimalPartsDefinitions.meat["Base.Venison"].variants or {},
 	},
 }
+
+---@class umbrella.AnimalMeatDefinition
+---@field variants umbrella.AnimalMeatVariants[]
+umbrella_AnimalMeatDefinition = {}
+
+---@class umbrella.AnimalMeatVariants
+---@field baseChance integer
+---@field baseName string
+---@field extraName string
+---@field hungerBoost integer
+---@field item string
+umbrella_AnimalMeatVariants = {}
+
+---@class umbrella.AnimalPartsDefinition
+---@field bones umbrella.AnimalPartsTable[]
+---@field feather string?
+---@field head string?
+---@field leather string?
+---@field noSkeleton boolean?
+---@field parts umbrella.AnimalPartsTable[]
+---@field skull string?
+---@field xpPerItem integer
+umbrella_AnimalPartsDefinition = {}
+
+---@class umbrella.AnimalPartsTable
+---@field item string
+---@field maxNb integer?
+---@field minNb integer?
+---@field nb integer?
+umbrella_AnimalPartsTable = {}

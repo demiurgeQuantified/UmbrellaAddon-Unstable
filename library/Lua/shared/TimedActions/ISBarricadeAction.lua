@@ -4,7 +4,7 @@
 ---@field isMetal boolean
 ---@field isMetalBar boolean
 ---@field isStarted boolean
----@field item unknown
+---@field item BarricadeAble
 ---@field maxTime number?
 ---@field sound unknown?
 ISBarricadeAction = ISBaseTimedAction:derive("ISBarricadeAction")
@@ -27,10 +27,11 @@ function ISBarricadeAction:stop() end
 
 function ISBarricadeAction:update() end
 
----@return unknown
+---@return boolean
 function ISBarricadeAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param item BarricadeAble
 ---@param isMetal boolean
 ---@param isMetalBar boolean
 ---@return ISBarricadeAction

@@ -2,7 +2,7 @@
 
 ---@class ISAddDesignationAnimalZoneUI : ISPanelJoypad
 ---@field buttonAdd ISButton
----@field buttonBorderColor table
+---@field buttonBorderColor umbrella.RGBA
 ---@field cancel ISButton
 ---@field drawTileMouse boolean
 ---@field endX number?
@@ -10,15 +10,15 @@
 ---@field heightCorrect boolean
 ---@field joypadWorldX number
 ---@field joypadWorldY number
----@field player unknown
----@field playerNum unknown
+---@field player IsoPlayer
+---@field playerNum integer
 ---@field startingX number?
 ---@field startingY number?
 ---@field startRenderTile boolean
 ---@field titleEntry ISLabel
 ---@field waitingConfirm boolean
 ---@field widthCorrect boolean
----@field zoneColor table
+---@field zoneColor umbrella.RGBA
 ISAddDesignationAnimalZoneUI = ISPanelJoypad:derive("ISAddDesignationAnimalZoneUI")
 ISAddDesignationAnimalZoneUI.Type = "ISAddDesignationAnimalZoneUI"
 ISAddDesignationAnimalZoneUI.instance = nil ---@type ISAddDesignationAnimalZoneUI?
@@ -33,20 +33,29 @@ function ISAddDesignationAnimalZoneUI:highlightSquareAtStartPosition() end
 
 function ISAddDesignationAnimalZoneUI:initialise() end
 
+---@param button ISButton
 function ISAddDesignationAnimalZoneUI:onClick(button) end
 
+---@param button ISButton
 function ISAddDesignationAnimalZoneUI:onCreateZone(button) end
 
+---@param joypadData JoypadData
 function ISAddDesignationAnimalZoneUI:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISAddDesignationAnimalZoneUI:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISAddDesignationAnimalZoneUI:onJoypadDirLeft(joypadData) end
 
+---@param joypadData JoypadData
 function ISAddDesignationAnimalZoneUI:onJoypadDirRight(joypadData) end
 
+---@param joypadData JoypadData
 function ISAddDesignationAnimalZoneUI:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISAddDesignationAnimalZoneUI:onJoypadDown(button, joypadData) end
 
 ---@param x number
@@ -63,10 +72,12 @@ function ISAddDesignationAnimalZoneUI:onMouseUpOutside(x, y) end
 
 function ISAddDesignationAnimalZoneUI:onZoneWithNameExists() end
 
----@return unknown
----@return unknown
----@return unknown
----@return unknown
+---@param screenX number
+---@param screenY number
+---@return IsoGridSquare
+---@return number
+---@return number
+---@return number
 function ISAddDesignationAnimalZoneUI:pickSquare(screenX, screenY) end
 
 function ISAddDesignationAnimalZoneUI:prerender() end
@@ -81,5 +92,6 @@ function ISAddDesignationAnimalZoneUI:updateButtons() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
 ---@return ISAddDesignationAnimalZoneUI
 function ISAddDesignationAnimalZoneUI:new(x, y, width, height, player) end

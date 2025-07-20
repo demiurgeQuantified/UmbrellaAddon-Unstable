@@ -189,8 +189,8 @@ Fishing.lure = Fishing.lure
 	}
 Fishing.FishConfig = nil ---@type Fishing.FishConfig
 Fishing.isSizeLimit = false
-Fishing.fishes = Fishing.fishes or {}
-Fishing.trashItems = Fishing.trashItems or {}
+Fishing.fishes = nil ---@type Fishing.FishConfig[]
+Fishing.trashItems = nil ---@type string[]
 Fishing.line = Fishing.line
 	or {
 		["Base.Twine"] = 0.3 / 15.0,
@@ -214,49 +214,58 @@ Fishing.breakRodReplacement = Fishing.breakRodReplacement
 		["Base.CraftedFishingRod"] = "Base.WoodenStick",
 		["Base.FishingRod"] = "Base.FishingRodBreak",
 	}
-Fishing.fishNet = Fishing.fishNet or {}
-Fishing.fishNetWithBait = Fishing.fishNetWithBait or {}
+Fishing.fishNet = nil ---@type string[]
+Fishing.fishNetWithBait = nil ---@type string[]
 
 function Fishing.IndexAllLures() end
 
+---@param item string
 ---@return boolean
 function Fishing.IsArtificalLure(item) end
 
+---@param item string
 ---@return boolean
 function Fishing.IsLure(item) end
 
+---@param item InventoryItem
 function Fishing.onCreateChum(item) end
 
+---@param item InventoryItem
 function Fishing.onCreateFish(item) end
 
----@return unknown?
+---@param item InventoryItem
+---@return InventoryItem?
 function Fishing.onCreateFishingRod(item) end
 
 ---@class Fishing.FishConfig
----@field fishesSizeData table
+---@field fishesSizeData umbrella.FishSizeData[]
 ---@field isHaveDifferentSizes boolean
 ---@field isLake boolean
 ---@field isPredator boolean
 ---@field isRiver boolean
 ---@field itemType string
----@field lure table
----@field maxLength unknown
----@field maxWeight number
+---@field lure table<string, number>
+---@field maxLength integer
+---@field maxWeight integer
 ---@field minLength number
 ---@field trophyLength unknown
 ---@field trophyWeight number
 local __fishing_FishConfig = {}
 
----@param itemTable table
+---@param itemTable table<string, umbrella.FishLureTable>
 ---@param chanceCoeff number
 function __fishing_FishConfig:addLures(itemTable, chanceCoeff) end
 
 function __fishing_FishConfig:clearLures() end
 
----@return unknown?
+---@param smallChance number
+---@param mediumChance number
+---@param bigChance number
+---@return number?
 function __fishing_FishConfig:getFishSizeData(smallChance, mediumChance, bigChance) end
 
----@return unknown
+---@param item string
+---@return number
 function __fishing_FishConfig:getLureChance(item) end
 
 function __fishing_FishConfig:initFishSizeData() end
@@ -265,10 +274,10 @@ function __fishing_FishConfig:initFishSizeData() end
 ---@param isLake boolean
 function __fishing_FishConfig:setLocation(isRiver, isLake) end
 
----@param length number
+---@param length integer
 function __fishing_FishConfig:setMaxLength(length) end
 
----@param weight number
+---@param weight integer
 function __fishing_FishConfig:setMaxWeight(weight) end
 
 ---@param isPredator boolean
@@ -283,3 +292,14 @@ function __fishing_FishConfig:setTrophyWeight(weight) end
 ---@param itemType string
 ---@return Fishing.FishConfig
 function __fishing_FishConfig:new(itemType) end
+
+---@class umbrella.FishSizeData
+---@field length integer
+---@field size "Small" | "Medium" | "Big"
+---@field weight integer
+umbrella_FishSizeData = {}
+
+---@class umbrella.FishLureTable
+---@field amountOfFoodHunger integer
+---@field chanceModifier number
+umbrella_FishLureTable = {}

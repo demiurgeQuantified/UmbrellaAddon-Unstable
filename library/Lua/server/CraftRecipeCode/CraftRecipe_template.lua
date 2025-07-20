@@ -2,4 +2,4 @@
 
 ---@class CraftRecipeCode
 CraftRecipeCode = {}
-CraftRecipeCode.generic = {}
+CraftRecipeCode.generic = nil ---@type CraftRecipeCode.generic

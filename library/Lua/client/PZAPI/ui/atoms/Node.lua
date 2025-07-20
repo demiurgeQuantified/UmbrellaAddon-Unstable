@@ -3,7 +3,7 @@
 ---@class UI.Node
 ---@overload fun(args: table): UI.Node
 ---@field children table<string, UI.Node>?
----@field javaObj unknown
+---@field javaObj AtomUI
 ---@field super table
 local __UI_Node = {}
 __UI_Node._ATOM_UI_CLASS = AtomUI
@@ -30,13 +30,18 @@ __UI_Node.alwaysBack = false
 __UI_Node.alwaysOnTop = false
 __UI_Node.isStencil = false
 
----@param playerNum number
+---@param playerNum integer
 function __UI_Node:centerOnScreen(playerNum) end
 
+function __UI_Node:instantiate() end
+
+---@param value boolean
 function __UI_Node:setAlwaysBack(value) end
 
+---@param value boolean
 function __UI_Node:setAlwaysOnTop(value) end
 
+---@param value number
 function __UI_Node:setAngle(value) end
 
 ---@param r number
@@ -45,28 +50,40 @@ function __UI_Node:setAngle(value) end
 ---@param a number
 function __UI_Node:setColor(r, g, b, a) end
 
+---@param value boolean
 function __UI_Node:setEnabled(value) end
 
+---@param value number
 function __UI_Node:setHeight(value) end
 
+---@param value number
 function __UI_Node:setHeightSilent(value) end
 
+---@param value number
 function __UI_Node:setPivotX(value) end
 
+---@param value number
 function __UI_Node:setPivotY(value) end
 
+---@param value number
 function __UI_Node:setScaleX(value) end
 
+---@param value number
 function __UI_Node:setScaleY(value) end
 
+---@param value boolean
 function __UI_Node:setVisible(value) end
 
+---@param value number
 function __UI_Node:setWidth(value) end
 
+---@param value number
 function __UI_Node:setWidthSilent(value) end
 
+---@param value number
 function __UI_Node:setX(value) end
 
+---@param value number
 function __UI_Node:setY(value) end
 
 ---@class PZAPI.UI

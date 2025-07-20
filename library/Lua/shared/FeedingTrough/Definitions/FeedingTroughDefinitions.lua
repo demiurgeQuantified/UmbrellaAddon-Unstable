@@ -217,3 +217,23 @@ FeedingTroughDef.simple = {
 		location_farm_accesories_01_15 = "farm_01_55",
 	},
 }
+
+---@class umbrella.FeedingTroughDefinition
+---@field maxFeed integer
+---@field maxWater integer
+---@field nails integer
+---@field planks integer
+---@field skill integer
+---@field sprite1 string
+---@field sprite1FoodOverlay1 string
+---@field sprite1FoodOverlay2 string
+---@field sprite2 string?
+---@field sprite2FoodOverlay1 string?
+---@field sprite2FoodOverlay2 string?
+---@field spriteNorth1 string
+---@field spriteNorth1FoodOverlay1 string
+---@field spriteNorth1FoodOverlay2 string
+---@field spriteNorth2 string?
+---@field spriteNorth2FoodOverlay1 string?
+---@field spriteNorth2FoodOverlay2 string?
+umbrella_FeedingTroughDefinition = {}

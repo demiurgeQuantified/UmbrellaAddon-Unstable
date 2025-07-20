@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISPickupBrokenGlass : ISBaseTimedAction
----@field glass unknown
----@field square unknown
+---@field glass IsoBrokenGlass
+---@field square IsoGridSquare
 ISPickupBrokenGlass = ISBaseTimedAction:derive("ISPickupBrokenGlass")
 ISPickupBrokenGlass.Type = "ISPickupBrokenGlass"
 
@@ -23,8 +23,10 @@ function ISPickupBrokenGlass:stop() end
 
 function ISPickupBrokenGlass:update() end
 
----@return unknown
+---@return boolean
 function ISPickupBrokenGlass:waitToStart() end
 
+---@param character IsoPlayer
+---@param glass IsoBrokenGlass
 ---@return ISPickupBrokenGlass
 function ISPickupBrokenGlass:new(character, glass) end

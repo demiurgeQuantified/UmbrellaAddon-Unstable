@@ -4,14 +4,14 @@
 ---@field charH number
 ---@field charW number
 ---@field doScroll boolean
----@field greyCol table
----@field gridColor table
+---@field greyCol umbrella.RGBA
+---@field gridColor umbrella.RGBA
 ---@field isOn boolean
----@field lcdback unknown
----@field lcdfont unknown
+---@field lcdback Texture
+---@field lcdfont Texture
 ---@field lcdwidth number
----@field ledColor table
----@field ledTextColor table
+---@field ledColor umbrella.RGBA
+---@field ledTextColor umbrella.RGBA
 ---@field pos number
 ---@field posCounter number
 ---@field text string
@@ -20,30 +20,21 @@
 ISLcdBar = ISPanel:derive("ISLcdBar")
 ISLcdBar.Type = "ISLcdBar"
 ISLcdBar.indexes = " !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_"
-ISLcdBar.unsupported = {
-	"CH",
-	"CN",
-	"JP",
-	"KO",
-	"RU",
-	"TH",
-	"UA",
-}
-ISLcdBar.special = {
-	"[",
-	"%",
-	"(",
-}
+ISLcdBar.unsupported = nil ---@type string[]
+ISLcdBar.special = nil ---@type string[]
 
 function ISLcdBar:createChildren() end
 
 function ISLcdBar:initialise() end
 
+---@param _char string
 ---@return boolean
 function ISLcdBar:isSpecial(_char) end
 
 function ISLcdBar:prerender() end
 
+---@param _pos number
+---@param _char string
 function ISLcdBar:printChar(_pos, _char) end
 
 function ISLcdBar:render() end
@@ -54,6 +45,7 @@ function ISLcdBar:render() end
 ---@param _a number
 function ISLcdBar:renderBackground(_r, _g, _b, _a) end
 
+---@param _pos number
 ---@param _index number
 ---@param _r number
 ---@param _g number

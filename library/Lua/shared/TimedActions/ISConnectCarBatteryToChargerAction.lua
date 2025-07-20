@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISConnectCarBatteryToChargerAction : ISBaseTimedAction
----@field battery unknown
----@field charger unknown
+---@field battery InventoryItem
+---@field charger IsoCarBatteryCharger
 ISConnectCarBatteryToChargerAction = ISBaseTimedAction:derive("ISConnectCarBatteryToChargerAction")
 ISConnectCarBatteryToChargerAction.Type = "ISConnectCarBatteryToChargerAction"
 
@@ -12,7 +12,7 @@ function ISConnectCarBatteryToChargerAction:complete() end
 ---@return number
 function ISConnectCarBatteryToChargerAction:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISConnectCarBatteryToChargerAction:isValid() end
 
 function ISConnectCarBatteryToChargerAction:perform() end
@@ -23,9 +23,11 @@ function ISConnectCarBatteryToChargerAction:stop() end
 
 function ISConnectCarBatteryToChargerAction:update() end
 
----@return unknown
+---@return boolean
 function ISConnectCarBatteryToChargerAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param charger IsoCarBatteryCharger
+---@param battery InventoryItem
 ---@return ISConnectCarBatteryToChargerAction
 function ISConnectCarBatteryToChargerAction:new(character, charger, battery) end

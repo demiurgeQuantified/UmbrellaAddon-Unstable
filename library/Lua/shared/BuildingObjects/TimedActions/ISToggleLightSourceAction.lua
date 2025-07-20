@@ -2,7 +2,7 @@
 
 ---@class ISToggleLightSourceAction : ISBaseTimedAction
 ---@field ignoreHandsWounds boolean
----@field lightSource unknown
+---@field lightSource IsoThumpable
 ISToggleLightSourceAction = ISBaseTimedAction:derive("ISToggleLightSourceAction")
 ISToggleLightSourceAction.Type = "ISToggleLightSourceAction"
 
@@ -12,7 +12,7 @@ function ISToggleLightSourceAction:complete() end
 ---@return number
 function ISToggleLightSourceAction:getDuration() end
 
----@return unknown
+---@return boolean
 function ISToggleLightSourceAction:isValid() end
 
 function ISToggleLightSourceAction:perform() end
@@ -23,5 +23,7 @@ function ISToggleLightSourceAction:stop() end
 
 function ISToggleLightSourceAction:update() end
 
+---@param character IsoPlayer
+---@param lightSource IsoThumpable
 ---@return ISToggleLightSourceAction
 function ISToggleLightSourceAction:new(character, lightSource) end

@@ -16,6 +16,8 @@ function ISDemoPopup:createChildren() end
 
 function ISDemoPopup:initialise() end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISDemoPopup:onJoypadDown(button, joypadData) end
 
 ---@param x number

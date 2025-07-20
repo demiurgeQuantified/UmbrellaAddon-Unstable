@@ -7,6 +7,7 @@ __modInfoPanel_Title.Type = "ModInfoPanelTitle"
 
 function __modInfoPanel_Title:createChildren() end
 
+---@param modInfo ChooseGameInfo.Mod
 function __modInfoPanel_Title:setModInfo(modInfo) end
 
 ---@param x number

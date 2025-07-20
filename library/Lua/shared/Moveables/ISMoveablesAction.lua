@@ -2,17 +2,17 @@
 
 ---@class ISMoveablesAction : ISBaseTimedAction
 ---@field cursorFacing number?
----@field direction unknown
----@field item unknown?
+---@field direction "N" | "E" | "S" | "W"
+---@field item InventoryItem?
 ---@field mode string
 ---@field moveCursor ISMoveableCursor?
 ---@field moveProps ISMoveableSpriteProps
----@field object unknown?
+---@field object IsoObject?
 ---@field origSpriteName string?
----@field playerNum unknown
----@field sound unknown?
+---@field playerNum integer
+---@field sound integer?
 ---@field spriteFrame number
----@field square unknown
+---@field square IsoGridSquare
 ISMoveablesAction = ISBaseTimedAction:derive("ISMoveablesAction")
 ISMoveablesAction.Type = "ISMoveablesAction"
 
@@ -41,13 +41,16 @@ function ISMoveablesAction:stop() end
 
 function ISMoveablesAction:update() end
 
----@return unknown
+---@return boolean
 function ISMoveablesAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param square IsoGridSquare
 ---@param mode string
 ---@param origSpriteName string?
----@param object unknown?
----@param item unknown?
+---@param object IsoObject?
+---@param direction "N" | "E" | "S" | "W"
+---@param item InventoryItem?
 ---@param moveCursor ISMoveableCursor?
 ---@return ISMoveablesAction
 function ISMoveablesAction:new(character, square, mode, origSpriteName, object, direction, item, moveCursor) end

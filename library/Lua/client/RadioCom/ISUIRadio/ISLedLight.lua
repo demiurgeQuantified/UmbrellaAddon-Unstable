@@ -2,13 +2,13 @@
 
 ---@class ISLedLight : ISPanel
 ---@field doLedBlink boolean
----@field ledBackTexture unknown
+---@field ledBackTexture Texture
 ---@field ledBlinkSpeed number
 ---@field ledCntr number
----@field ledCol table
----@field ledColOff table
+---@field ledCol umbrella.RGBA
+---@field ledColOff umbrella.RGBA
 ---@field ledIsOn boolean
----@field ledTexture unknown
+---@field ledTexture Texture
 ---@field oldState boolean
 ISLedLight = ISPanel:derive("ISLedLight")
 ISLedLight.Type = "ISLedLight"
@@ -24,6 +24,7 @@ function ISLedLight:prerender() end
 
 function ISLedLight:render() end
 
+---@param _i integer
 function ISLedLight:setBlinkingSpeed(_i) end
 
 ---@param _b boolean
@@ -41,6 +42,7 @@ function ISLedLight:setLedColor(_a, _r, _g, _b) end
 ---@param _b number
 function ISLedLight:setLedColorOff(_a, _r, _g, _b) end
 
+---@param _b boolean
 function ISLedLight:setLedIsOn(_b) end
 
 function ISLedLight:update() end

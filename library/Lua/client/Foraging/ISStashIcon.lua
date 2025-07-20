@@ -1,23 +1,23 @@
 ---@meta
 
 ---@class ISStashIcon : ISBaseIcon
----@field isForageable unknown
+---@field isForageable boolean?
 ---@field isValidSquare boolean
----@field itemObjTable unknown
+---@field itemObjTable table<InventoryItem, InventoryItem>
 ISStashIcon = ISBaseIcon:derive("ISStashIcon")
 ISStashIcon.Type = "ISStashIcon"
 
----@return unknown
+---@return boolean
 function ISStashIcon:checkIsForageable() end
 
 function ISStashIcon:findPinOffset() end
 
----@return unknown
+---@return boolean
 function ISStashIcon:isValid() end
 
 function ISStashIcon:setWorldMarkerPosition() end
 
 ---@param _manager ISSearchManager
----@param _icon table
+---@param _icon umbrella.Foraging.WorldIconData
 ---@return ISStashIcon
 function ISStashIcon:new(_manager, _icon) end

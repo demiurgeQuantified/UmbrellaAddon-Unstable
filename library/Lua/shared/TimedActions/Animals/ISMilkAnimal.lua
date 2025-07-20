@@ -1,17 +1,19 @@
 ---@meta
 
 ---@class ISMilkAnimal : ISBaseTimedAction
----@field all unknown
----@field animal unknown
----@field bucket unknown
+---@field all boolean
+---@field animal IsoAnimal
+---@field bucket InventoryItem?
 ---@field lastTimer number
 ---@field milkAnim string
----@field sound unknown
+---@field sound integer?
 ---@field timePerLiter number
 ---@field timer number
 ISMilkAnimal = ISBaseTimedAction:derive("ISMilkAnimal")
 ISMilkAnimal.Type = "ISMilkAnimal"
 
+---@param event string
+---@param parameter string
 function ISMilkAnimal:animEvent(event, parameter) end
 
 ---@return boolean
@@ -42,9 +44,13 @@ function ISMilkAnimal:stress() end
 
 function ISMilkAnimal:update() end
 
----@return unknown
+---@return boolean
 function ISMilkAnimal:waitToStart() end
 
+---@param character IsoPlayer
+---@param animal IsoAnimal
+---@param bucket InventoryItem?
 ---@param right boolean
+---@param all boolean
 ---@return ISMilkAnimal
 function ISMilkAnimal:new(character, animal, bucket, right, all) end

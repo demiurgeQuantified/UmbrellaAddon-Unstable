@@ -6,10 +6,12 @@
 ModMoreInfo = ISPanel:derive("ModMoreInfo")
 ModMoreInfo.Type = "ModMoreInfo"
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ModMoreInfo.onOptionMouseDown(button, x, y) end
 
+---@param desc string
 function ModMoreInfo:create(desc) end
 
 function ModMoreInfo:initialise() end

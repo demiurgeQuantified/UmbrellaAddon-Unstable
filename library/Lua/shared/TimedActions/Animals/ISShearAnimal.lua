@@ -1,15 +1,17 @@
 ---@meta
 
 ---@class ISShearAnimal : ISBaseTimedAction
----@field animal unknown
+---@field animal IsoAnimal
 ---@field lastTimer number
----@field shear unknown
----@field sound unknown
+---@field shear InventoryItem
+---@field sound integer?
 ---@field timePerLiter number
 ---@field timer number
 ISShearAnimal = ISBaseTimedAction:derive("ISShearAnimal")
 ISShearAnimal.Type = "ISShearAnimal"
 
+---@param event string
+---@param parameter string
 function ISShearAnimal:animEvent(event, parameter) end
 
 ---@return boolean
@@ -37,8 +39,11 @@ function ISShearAnimal:stress() end
 
 function ISShearAnimal:update() end
 
----@return unknown
+---@return boolean
 function ISShearAnimal:waitToStart() end
 
+---@param character IsoPlayer
+---@param animal IsoAnimal
+---@param shear InventoryItem
 ---@return ISShearAnimal
 function ISShearAnimal:new(character, animal, shear) end

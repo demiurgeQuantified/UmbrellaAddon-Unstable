@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISToggleStoveAction : ISBaseTimedAction
----@field object unknown
+---@field object IsoStove
 ISToggleStoveAction = ISBaseTimedAction:derive("ISToggleStoveAction")
 ISToggleStoveAction.Type = "ISToggleStoveAction"
 
@@ -22,5 +22,7 @@ function ISToggleStoveAction:stop() end
 
 function ISToggleStoveAction:update() end
 
+---@param character IsoPlayer
+---@param object IsoStove
 ---@return ISToggleStoveAction
 function ISToggleStoveAction:new(character, object) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISPlaceCarBatteryChargerAction : ISBaseTimedAction
----@field charger unknown
+---@field charger InventoryItem
 ISPlaceCarBatteryChargerAction = ISBaseTimedAction:derive("ISPlaceCarBatteryChargerAction")
 ISPlaceCarBatteryChargerAction.Type = "ISPlaceCarBatteryChargerAction"
 
@@ -11,7 +11,7 @@ function ISPlaceCarBatteryChargerAction:complete() end
 ---@return number
 function ISPlaceCarBatteryChargerAction:getDuration() end
 
----@return unknown?
+---@return boolean
 function ISPlaceCarBatteryChargerAction:isValid() end
 
 function ISPlaceCarBatteryChargerAction:perform() end
@@ -22,9 +22,10 @@ function ISPlaceCarBatteryChargerAction:stop() end
 
 function ISPlaceCarBatteryChargerAction:update() end
 
----@return unknown
+---@return boolean
 function ISPlaceCarBatteryChargerAction:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
+---@param charger InventoryItem
 ---@return ISPlaceCarBatteryChargerAction
 function ISPlaceCarBatteryChargerAction:new(character, charger) end

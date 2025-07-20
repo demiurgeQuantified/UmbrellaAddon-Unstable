@@ -6,24 +6,26 @@ TutorialTests.klight_x = 160
 TutorialTests.klight_y = 156
 TutorialTests.llight_x = 151
 TutorialTests.llight_y = 151
-TutorialTests.homing2 = nil
-TutorialTests.homing1 = nil
-TutorialTests.marker1 = nil
-TutorialTests.currentZoom = nil
+TutorialTests.homing2 = nil ---@type WorldMarkers.PlayerHomingPoint?
+TutorialTests.homing1 = nil ---@type WorldMarkers.PlayerHomingPoint?
+TutorialTests.marker1 = nil ---@type WorldMarkers.GridSquareMarker?
+TutorialTests.currentZoom = nil ---@type number?
 
+---@param sq IsoGridSquare
 ---@param yoffset number?
 ---@param xoffset number?
----@param color table?
+---@param color umbrella.RGB?
 function TutorialTests.addHoming(sq, yoffset, xoffset, color) end
 
+---@param sq IsoGridSquare
 ---@param size number
 function TutorialTests.addMarker(sq, size) end
 
 ---@return boolean
 function TutorialTests.HealthOpen() end
 
----@param obj unknown?
----@param thickness number
+---@param obj IsoObject
+---@param thickness number?
 function TutorialTests.highlight(obj, thickness) end
 
 ---@param x number
@@ -47,7 +49,7 @@ function TutorialTests.RemoveMarkers() end
 ---@return boolean
 function TutorialTests.SkillsPage() end
 
----@param obj unknown?
+---@param obj IsoObject
 function TutorialTests.stopHighlight(obj) end
 
 ---@return boolean
@@ -87,7 +89,7 @@ WalkToAdjacent.runned = false
 WalkToAdjacent.x2 = 157
 WalkToAdjacent.y2 = 153
 WalkToAdjacent.sneaked = false
-WalkToAdjacent.appleContainer = nil
+WalkToAdjacent.appleContainer = nil ---@type IsoObject?
 WalkToAdjacent.z = 0
 WalkToAdjacent.finished = nil ---@type boolean?
 
@@ -114,7 +116,7 @@ function WalkToAdjacent:new() end
 InventoryLootingStep = TutorialStep:derive("InventoryLootingStep")
 InventoryLootingStep.Type = "InventoryLootingStep"
 InventoryLootingStep.itemToEat = "DeadRat"
-InventoryLootingStep.container = nil
+InventoryLootingStep.container = nil ---@type IsoObject?
 InventoryLootingStep.finished = nil ---@type boolean?
 
 function InventoryLootingStep:begin() end
@@ -147,15 +149,15 @@ InventoryUseStep = TutorialStep:derive("InventoryUseStep")
 InventoryUseStep.Type = "InventoryUseStep"
 InventoryUseStep.sinkX = 156
 InventoryUseStep.sinkY = 154
-InventoryUseStep.sink = nil
-InventoryUseStep.lastInventory = nil
+InventoryUseStep.sink = nil ---@type IsoObject?
+InventoryUseStep.lastInventory = nil ---@type ItemContainer?
 InventoryUseStep.clickedOnInventory = false
-InventoryUseStep.panContainer = nil
+InventoryUseStep.panContainer = nil ---@type IsoObject?
 InventoryUseStep.dontTurn = nil ---@type boolean?
 InventoryUseStep.bloodMouse1 = nil ---@type boolean?
 InventoryUseStep.finished = nil ---@type boolean?
 
----@return unknown
+---@return InventoryItem
 function InventoryUseStep.spawnPan() end
 
 function InventoryUseStep:begin() end
@@ -194,23 +196,23 @@ FightStep = TutorialStep:derive("FightStep")
 FightStep.Type = "FightStep"
 FightStep.windowX = 162
 FightStep.windowY = 154
-FightStep.window = nil
+FightStep.window = nil ---@type IsoWindow?
 FightStep.climbThrough = false
 FightStep.zombieMomSpawnX = 165
 FightStep.zombieMomSpawnY = 154
-FightStep.momzombie = nil
+FightStep.momzombie = nil ---@type IsoZombie?
 FightStep.zombieSawYou = false
 FightStep.highlightFloor = nil
-FightStep.floor = nil
+FightStep.floor = nil ---@type IsoObject?
 FightStep.wasOpen = true
-FightStep.playerX = nil
-FightStep.playerY = nil
+FightStep.playerX = nil ---@type number?
+FightStep.playerY = nil ---@type number?
 FightStep.momDead = nil ---@type boolean?
 FightStep.stopHighlight = nil ---@type boolean?
 FightStep.pinInv = nil ---@type boolean?
 FightStep.finished = nil ---@type boolean?
-FightStep.floor1SQ = nil
-FightStep.floor2SQ = nil
+FightStep.floor1SQ = nil ---@type IsoGridSquare?
+FightStep.floor2SQ = nil ---@type IsoGridSquare?
 FightStep.markerDone = nil ---@type boolean?
 
 function FightStep:begin() end
@@ -253,15 +255,19 @@ SneakStep = TutorialStep:derive("SneakStep")
 SneakStep.Type = "SneakStep"
 SneakStep.zombieDadSpawnX = 166
 SneakStep.zombieDadSpawnY = 147
-SneakStep.dadzombie = nil
+SneakStep.dadzombie = nil ---@type IsoZombie?
 SneakStep.isDadDead = nil ---@type boolean?
-SneakStep.sqGate = nil
+SneakStep.sqGate = nil ---@type IsoGridSquare?
 SneakStep.wasSneaking = nil ---@type boolean?
 SneakStep.pinInv = nil ---@type boolean?
-SneakStep.bag = nil
-SneakStep.shotgun = nil
+SneakStep.bag = nil ---@type InventoryItem?
+SneakStep.shotgun = nil ---@type InventoryItem?
 SneakStep.finished = nil ---@type boolean?
 
+---@param owner IsoGameCharacter
+---@param weapon HandWeapon
+---@param zed IsoZombie
+---@param dmg number
 function SneakStep.OnSwingAtDad(owner, weapon, zed, dmg) end
 
 ---@param depth number
@@ -270,7 +276,7 @@ function SneakStep.setZoom(depth) end
 ---@return boolean
 function SneakStep.Sneak() end
 
----@return unknown
+---@return InventoryItem
 function SneakStep.spawnShotgun() end
 
 function SneakStep:begin() end
@@ -313,8 +319,8 @@ BandageStep = TutorialStep:derive("BandageStep")
 BandageStep.Type = "BandageStep"
 BandageStep.brotherX = 182
 BandageStep.brotherY = 147
-BandageStep.window = nil
-BandageStep.fences = nil ---@type table?
+BandageStep.window = nil ---@type IsoWindow?
+BandageStep.fences = nil ---@type IsoObject[]?
 BandageStep.runned = nil ---@type boolean?
 BandageStep.vaulted = nil ---@type boolean?
 BandageStep.vaultedWrong = nil ---@type boolean?
@@ -323,11 +329,11 @@ BandageStep.vaultedWindow = nil ---@type boolean?
 BandageStep.extTimer = nil ---@type number?
 BandageStep.oneDead = nil ---@type boolean?
 BandageStep.isBrothersDead = nil ---@type boolean?
-BandageStep.brother1 = nil
-BandageStep.brother2 = nil
-BandageStep.sqDoor = nil
-BandageStep.sqWindow = nil
-BandageStep.containers = nil ---@type table?
+BandageStep.brother1 = nil ---@type IsoZombie?
+BandageStep.brother2 = nil ---@type IsoZombie?
+BandageStep.sqDoor = nil ---@type IsoGridSquare?
+BandageStep.sqWindow = nil ---@type IsoGridSquare?
+BandageStep.containers = nil ---@type IsoGridSquare[]?
 BandageStep.spawnedItems = nil ---@type boolean?
 BandageStep.blink = nil ---@type boolean?
 BandageStep.finished = nil ---@type boolean?
@@ -341,7 +347,7 @@ function BandageStep.CheckWindow() end
 ---@return boolean
 function BandageStep.HealthOpen() end
 
----@return unknown
+---@return boolean
 function BandageStep.OpenCurtain() end
 
 function BandageStep.spawnBrothers() end
@@ -375,9 +381,9 @@ ShotgunStep.hassprintedTimer = 0
 ShotgunStep.soundTimer = 0
 ShotgunStep.lockedX = nil
 ShotgunStep.lockedY = nil
-ShotgunStep.squares = nil ---@type table?
-ShotgunStep.outhouseSQ = nil ---@type table?
-ShotgunStep.timeOfDeath = nil
+ShotgunStep.squares = nil ---@type IsoGridSquare[]?
+ShotgunStep.outhouseSQ = nil ---@type IsoGridSquare[]?
+ShotgunStep.timeOfDeath = nil ---@type number?
 ShotgunStep.soundDone = nil ---@type boolean?
 ShotgunStep.vaulted = nil ---@type boolean?
 ShotgunStep.forcedShoutBinding = nil ---@type boolean?
@@ -402,6 +408,7 @@ function ShotgunStep.OnSquare() end
 ---@return boolean
 function ShotgunStep.Outhouse() end
 
+---@param player IsoPlayer
 function ShotgunStep.playerUpdate(player) end
 
 ---@return boolean
@@ -412,7 +419,7 @@ function ShotgunStep.SurvivalGuideOpen() end
 
 function ShotgunStep.TheEnd() end
 
----@return unknown
+---@return boolean
 function ShotgunStep:Aiming() end
 
 function ShotgunStep:begin() end

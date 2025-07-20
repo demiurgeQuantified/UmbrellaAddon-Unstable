@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISSmashVehicleWindow : ISBaseTimedAction
----@field part unknown
----@field vehicle unknown
----@field window unknown
+---@field part VehiclePart
+---@field vehicle BaseVehicle
+---@field window VehicleWindow
 ISSmashVehicleWindow = ISBaseTimedAction:derive("ISSmashVehicleWindow")
 ISSmashVehicleWindow.Type = "ISSmashVehicleWindow"
 
@@ -13,7 +13,7 @@ function ISSmashVehicleWindow:complete() end
 ---@return number
 function ISSmashVehicleWindow:getDuration() end
 
----@return unknown
+---@return boolean
 function ISSmashVehicleWindow:isValid() end
 
 function ISSmashVehicleWindow:perform() end
@@ -24,8 +24,10 @@ function ISSmashVehicleWindow:stop() end
 
 function ISSmashVehicleWindow:update() end
 
----@return unknown
+---@return boolean
 function ISSmashVehicleWindow:waitToStart() end
 
+---@param character IsoPlayer
+---@param part VehiclePart
 ---@return ISSmashVehicleWindow
 function ISSmashVehicleWindow:new(character, part) end

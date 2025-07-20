@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISItemsListViewer : ISPanel
----@field items unknown
----@field module table
+---@field items ArrayList<Item>?
+---@field module table<string, Item[]>
 ---@field ok ISButton
 ---@field panel ISTabPanel
 ---@field playerSelect ISComboBox
@@ -19,6 +19,7 @@ function ISItemsListViewer:initialise() end
 
 function ISItemsListViewer:initList() end
 
+---@param button ISButton
 function ISItemsListViewer:onClick(button) end
 
 function ISItemsListViewer:onSelectPlayer() end

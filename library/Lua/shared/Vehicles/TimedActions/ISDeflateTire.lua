@@ -2,11 +2,11 @@
 
 ---@class ISDeflateTire : ISBaseTimedAction
 ---@field jobType string
----@field part unknown
----@field psiSent unknown
----@field psiStart unknown
+---@field part VehiclePart
+---@field psiSent number?
+---@field psiStart number
 ---@field psiTarget number
----@field vehicle unknown
+---@field vehicle BaseVehicle
 ISDeflateTire = ISBaseTimedAction:derive("ISDeflateTire")
 ISDeflateTire.Type = "ISDeflateTire"
 
@@ -29,6 +29,8 @@ function ISDeflateTire:stop() end
 
 function ISDeflateTire:update() end
 
+---@param character IsoPlayer
+---@param part VehiclePart
 ---@param psiTarget number
 ---@return ISDeflateTire
 function ISDeflateTire:new(character, part, psiTarget) end

@@ -1,5 +1,7 @@
 ---@meta
 
+---@alias umbrella.Foraging.ValidateFunction fun(square: IsoGridSquare, itemDef: umbrella.Foraging.ItemDefinition, catDef: umbrella.Foraging.CategoryDefinition): boolean
+
 ---@class forageSystem
 forageSystem = {}
 forageSystem.categoryDefinitions = {
@@ -727,3 +729,55 @@ forageSystem.categoryDefinitions = {
 		},
 	},
 }
+
+---@class forageCategories
+forageCategories = {}
+forageCategories.Tracks = nil ---@type unknown
+forageCategories.Animals = nil ---@type unknown
+forageCategories.DeadAnimals = nil ---@type unknown
+forageCategories.Berries = nil ---@type unknown
+forageCategories.Fruits = nil ---@type unknown
+forageCategories.Vegetables = nil ---@type unknown
+forageCategories.Crops = nil ---@type unknown
+forageCategories.Mushrooms = nil ---@type unknown
+forageCategories.FishBait = nil ---@type unknown
+forageCategories.ForestGoods = nil ---@type unknown
+forageCategories.ForestRarities = nil ---@type unknown
+forageCategories.Insects = nil ---@type unknown
+forageCategories.MedicinalPlants = nil ---@type unknown
+forageCategories.WildPlants = nil ---@type unknown
+forageCategories.WildHerbs = nil ---@type unknown
+forageCategories.Firewood = nil ---@type unknown
+forageCategories.Stones = nil ---@type unknown
+forageCategories.CraftingMaterials = nil ---@type unknown
+forageCategories.Bones = nil ---@type unknown
+forageCategories.Artifacts = nil ---@type unknown
+forageCategories.Junk = nil ---@type unknown
+forageCategories.JunkFood = nil ---@type unknown
+forageCategories.Clothing = nil ---@type unknown
+forageCategories.JunkWeapons = nil ---@type unknown
+forageCategories.Ammunition = nil ---@type unknown
+forageCategories.Medical = nil ---@type unknown
+forageCategories.Trash = nil ---@type unknown
+
+---@class umbrella.Foraging.CategoryDefinition
+---@field categoryHidden boolean
+---@field chance number
+---@field chanceToCreateIcon number
+---@field chanceToMoveIcon number
+---@field dayChance number
+---@field focusChanceMax number
+---@field focusChanceMin number
+---@field hasRainedChance number
+---@field identifyCategoryLevel number
+---@field identifyCategoryPerk string
+---@field name string
+---@field nightChance number
+---@field rainChance number
+---@field snowChance number
+---@field spriteAffinities table<string, string[]>
+---@field typeCategory string
+---@field validFloors string[]
+---@field validFunc umbrella.Foraging.ValidateFunction
+---@field zoneChance table<string, integer>
+umbrella_Foraging_CategoryDefinition = {}

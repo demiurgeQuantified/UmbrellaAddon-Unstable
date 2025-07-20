@@ -16,8 +16,11 @@ CraftRecipeCode.GenericEvenBetterFixing = nil ---@type CraftRecipeCode.GenericEv
 
 function CraftRecipeCode.FLAG_TEST(_craftProcessor, thing2, thing3) end
 
+---@param craftRecipeData CraftRecipeData
+---@param player IsoPlayer
 ---@param factor number
----@param skill unknown?
+---@param item InventoryItem?
+---@param skill number?
 ---@param head boolean?
 function CraftRecipeCode.GenericFixer(craftRecipeData, player, factor, item, skill, head) end
 
@@ -70,22 +73,30 @@ function __craftRecipeCode_AssembleHead.OnCreate(_craftProcessor) end
 ---@class CraftRecipeCode.CopyKey
 local __craftRecipeCode_CopyKey = {}
 
+---@param craftRecipeData CraftRecipeData
 function __craftRecipeCode_CopyKey.OnCreate(craftRecipeData) end
 
+---@param item InventoryItem
 ---@return boolean
 function __craftRecipeCode_CopyKey.OnTest(item) end
 
 ---@class CraftRecipeCode.GenericFixing
 local __craftRecipeCode_GenericFixing = {}
 
+---@param craftRecipeData CraftRecipeData
+---@param player IsoPlayer
 function __craftRecipeCode_GenericFixing.OnCreate(craftRecipeData, player) end
 
 ---@class CraftRecipeCode.GenericBetterFixing
 local __craftRecipeCode_GenericBetterFixing = {}
 
+---@param craftRecipeData CraftRecipeData
+---@param player IsoPlayer
 function __craftRecipeCode_GenericBetterFixing.OnCreate(craftRecipeData, player) end
 
 ---@class CraftRecipeCode.GenericEvenBetterFixing
 local __craftRecipeCode_GenericEvenBetterFixing = {}
 
+---@param craftRecipeData CraftRecipeData
+---@param player IsoPlayer
 function __craftRecipeCode_GenericEvenBetterFixing.OnCreate(craftRecipeData, player) end

@@ -2,15 +2,19 @@
 
 ---@class ModSelector.MapOrderListBox : ISScrollingListBox
 ---@field boxSize number
----@field dragItem unknown?
----@field dragTexture unknown
----@field mouseOverDragIcon unknown?
----@field selected number
+---@field dragItem umbrella.ModSelector.MapOrderListBoxItem?
+---@field dragTexture Texture
+---@field mouseOverDragIcon umbrella.ModSelector.MapOrderListBoxItem?
+---@field selected integer
 local __modSelector_MapOrderListBox = ISScrollingListBox:derive("MapOrderListBox")
 __modSelector_MapOrderListBox.Type = "MapOrderListBox"
 
+---@param self ISToolTip
 function __modSelector_MapOrderListBox.tooltipRender(self) end
 
+---@param y number
+---@param item umbrella.ModSelector.MapOrderListBoxItem
+---@param alt boolean
 ---@return number
 function __modSelector_MapOrderListBox:doDrawItem(y, item, alt) end
 
@@ -46,3 +50,7 @@ function __modSelector_MapOrderListBox:new(x, y, width, height) end
 ---@class ModSelector
 ModSelector = {}
 ModSelector.MapOrderListBox = nil ---@type ModSelector.MapOrderListBox
+
+---@class umbrella.ModSelector.MapOrderListBoxItem : umbrella.ISScrollingListBox.Item
+---@field color umbrella.RGB
+umbrella_ModSelector_MapOrderListBoxItem = {}

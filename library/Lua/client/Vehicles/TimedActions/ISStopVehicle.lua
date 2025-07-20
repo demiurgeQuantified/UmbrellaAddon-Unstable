@@ -15,5 +15,6 @@ function ISStopVehicle:stop() end
 
 function ISStopVehicle:update() end
 
+---@param character IsoPlayer
 ---@return ISStopVehicle
 function ISStopVehicle:new(character) end

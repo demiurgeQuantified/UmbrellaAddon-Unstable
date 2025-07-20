@@ -12,10 +12,12 @@ CraftRecipeCode.dryLeatherFur = nil ---@type CraftRecipeCode.dryLeatherFur
 ---@return unknown?
 function CraftRecipeCode.getInputLeather(_craftProcessor) end
 
+---@param tag string
 ---@return string?
 function CraftRecipeCode.getLeatherName(_craftProcessor, tag) end
 
 ---@param name string
+---@param tag string
 function CraftRecipeCode.replaceOutputLeather(_craftProcessor, name, tag) end
 
 function CraftRecipeCode.replaceOutputLeather2(_craftProcessor) end

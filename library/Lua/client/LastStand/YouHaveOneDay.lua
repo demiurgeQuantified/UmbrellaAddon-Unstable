@@ -55,7 +55,8 @@ YouHaveOneDay.hordes = {
 
 function YouHaveOneDay.Add() end
 
----@param playerNum number
+---@param playerNum integer
+---@param playerObj IsoPlayer
 function YouHaveOneDay.AddPlayer(playerNum, playerObj) end
 
 function YouHaveOneDay.EveryDays() end
@@ -70,8 +71,10 @@ function YouHaveOneDay.OnInitWorld() end
 
 function YouHaveOneDay.OnPlayerUpdate(zombie) end
 
+---@param zombie IsoZombie
 function YouHaveOneDay.OnZombieUpdate(zombie) end
 
+---@param playerObj IsoPlayer
 function YouHaveOneDay.RemovePlayer(playerObj) end
 
 function YouHaveOneDay.Render() end

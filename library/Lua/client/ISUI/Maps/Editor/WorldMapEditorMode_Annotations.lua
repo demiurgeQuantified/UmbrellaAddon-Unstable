@@ -14,12 +14,15 @@ function WorldMapEditorMode_Annotations:createChildren() end
 ---@return string
 function WorldMapEditorMode_Annotations:generateLuaScript() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Annotations:isKeyConsumed(key) end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Annotations:onKeyPress(key) end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Annotations:onKeyRelease(key) end
 
@@ -54,5 +57,6 @@ function WorldMapEditorMode_Annotations:render() end
 
 function WorldMapEditorMode_Annotations:undisplay() end
 
+---@param editor WorldMapEditor
 ---@return WorldMapEditorMode_Annotations
 function WorldMapEditorMode_Annotations:new(editor) end

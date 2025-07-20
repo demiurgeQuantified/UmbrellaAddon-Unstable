@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class ISResizeWidget : ISPanel
----@field backgroundColorMouseOver table
----@field downX unknown
----@field downY unknown
+---@field backgroundColorMouseOver umbrella.RGBA
+---@field downX number
+---@field downY number
 ---@field resizeFunction boolean
 ---@field resizing boolean
----@field target table
+---@field target ISUIElement
 ---@field yonly boolean?
 ISResizeWidget = ISPanel:derive("ISResizeWidget")
 ISResizeWidget.Type = "ISResizeWidget"
@@ -48,7 +48,7 @@ function ISResizeWidget:resize(dx, dy) end
 ---@param y number
 ---@param width number
 ---@param height number
----@param resizeTarget table
+---@param resizeTarget ISUIElement
 ---@param yonly boolean?
 ---@return ISResizeWidget
 function ISResizeWidget:new(x, y, width, height, resizeTarget, yonly) end

@@ -1,13 +1,15 @@
 ---@meta
 
 ---@class ISWeather : ISPanel
----@field images table
----@field moon unknown?
+---@field images Texture[]
+---@field moon Texture?
 ISWeather = ISPanel:derive("ISWeather")
 ISWeather.Type = "ISWeather"
 
+---@param image string
 function ISWeather:addImage(image) end
 
+---@param moonImage string
 function ISWeather:addMoon(moonImage) end
 
 function ISWeather:initialise() end

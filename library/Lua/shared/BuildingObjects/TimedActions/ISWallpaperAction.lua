@@ -2,12 +2,12 @@
 
 ---@class ISWallpaperAction : ISBaseTimedAction
 ---@field isThump boolean
----@field papering unknown
----@field sound unknown
----@field sprite unknown
----@field thumpable unknown
----@field wallpaper unknown
----@field wallType unknown
+---@field papering string
+---@field sound integer
+---@field sprite string
+---@field thumpable IsoThumpable
+---@field wallpaper InventoryItem
+---@field wallType string
 ISWallpaperAction = ISBaseTimedAction:derive("ISWallpaperAction")
 ISWallpaperAction.Type = "ISWallpaperAction"
 
@@ -30,8 +30,12 @@ function ISWallpaperAction:stop() end
 
 function ISWallpaperAction:update() end
 
----@return unknown
+---@return boolean
 function ISWallpaperAction:waitToStart() end
 
+---@param character IsoPlayer
+---@param thumpable IsoThumpable
+---@param wallpaper InventoryItem
+---@param papering string
 ---@return ISWallpaperAction
 function ISWallpaperAction:new(character, thumpable, wallpaper, papering) end

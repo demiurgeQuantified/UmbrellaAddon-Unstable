@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISDebugAnimationTextUI : ISCollapsableWindow
----@field character unknown
+---@field character IsoGameCharacter
 ---@field isHighlighted boolean
 ---@field textBox ISTextEntryBox
 ---@field title string
@@ -18,5 +18,6 @@ function ISDebugAnimationTextUI:setText() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param chr IsoGameCharacter
 ---@return ISDebugAnimationTextUI
 function ISDebugAnimationTextUI:new(x, y, width, height, chr) end

@@ -2,13 +2,13 @@
 
 ---@class ISRemoveHeadFromAnimal : ISBaseTimedAction
 ---@field animalDef unknown?
----@field body unknown?
----@field hook unknown
+---@field body IsoAnimal
+---@field hook IsoButcherHook
 ---@field luaHook ISButcherHookUI
----@field perkLevel unknown
----@field sound unknown
+---@field perkLevel integer
+---@field sound integer
 ---@field started boolean
----@field xp unknown
+---@field xp integer
 ISRemoveHeadFromAnimal = ISBaseTimedAction:derive("ISRemoveHeadFromAnimal")
 ISRemoveHeadFromAnimal.Type = "ISRemoveHeadFromAnimal"
 
@@ -40,7 +40,9 @@ function ISRemoveHeadFromAnimal:updateCorpse() end
 ---@return unknown
 function ISRemoveHeadFromAnimal:waitToStart() end
 
----@param body unknown?
----@param luaHookUI ISButcherHookUI
+---@param character IsoPlayer
+---@param body IsoAnimal
+---@param hook IsoButcherHook
+---@param luaHook ISButcherHookUI
 ---@return ISRemoveHeadFromAnimal
-function ISRemoveHeadFromAnimal:new(character, body, hook, luaHookUI) end
+function ISRemoveHeadFromAnimal:new(character, body, hook, luaHook) end

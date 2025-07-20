@@ -7,42 +7,56 @@
 ---@field pillarNorth string
 ---@field sprite2 string
 ---@field sprite3 string
----@field sq unknown
+---@field sq IsoGridSquare
 ISWoodenStairs = ISBuildingObject:derive("ISWoodenStairs")
 ISWoodenStairs.Type = "ISWoodenStairs"
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param north boolean
 ---@param sprite string
 function ISWoodenStairs:create(x, y, z, north, sprite) end
 
 ---@return number
 function ISWoodenStairs:getHealth() end
 
+---@param square IsoGridSquare
+---@param north boolean
 ---@return number
 ---@return number
----@return unknown
+---@return number
 function ISWoodenStairs:getSquare2Pos(square, north) end
 
+---@param square IsoGridSquare
+---@param north boolean
 ---@return number
 ---@return number
----@return unknown
+---@return number
 function ISWoodenStairs:getSquare3Pos(square, north) end
 
+---@param square IsoGridSquare
+---@param north boolean
 ---@return number
 ---@return number
 ---@return number
 function ISWoodenStairs:getSquareTopPos(square, north) end
 
+---@param square IsoGridSquare
 ---@return boolean
 function ISWoodenStairs:isValid(square) end
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param square IsoGridSquare
 function ISWoodenStairs:render(x, y, z, square) end
 
+---@param square IsoGridSquare
+---@param level number
+---@param north boolean
+---@param sprite string
+---@param luaobject ISWoodenStairs
 function ISWoodenStairs:setInfo(square, level, north, sprite, luaobject) end
 
 ---@param sprite string

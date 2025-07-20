@@ -1,22 +1,25 @@
 ---@meta
 
 ---@class MultiplayerZoneEditorMode : ISPanel
----@field editor unknown
----@field mapAPI unknown
----@field mapUI unknown
----@field styleAPI unknown
----@field symbolsAPI unknown
+---@field editor ISMultiplayerZoneEditor
+---@field mapAPI UIWorldMapV3
+---@field mapUI ISMultiplayerZoneEditor
+---@field styleAPI unknown?
+---@field symbolsAPI unknown?
 MultiplayerZoneEditorMode = ISPanel:derive("MultiplayerZoneEditorMode")
 MultiplayerZoneEditorMode.Type = "MultiplayerZoneEditorMode"
 
 function MultiplayerZoneEditorMode:display() end
 
+---@param key integer
 ---@return boolean
 function MultiplayerZoneEditorMode:isKeyConsumed(key) end
 
+---@param key integer
 ---@return boolean
 function MultiplayerZoneEditorMode:onKeyPress(key) end
 
+---@param key integer
 ---@return boolean
 function MultiplayerZoneEditorMode:onKeyRelease(key) end
 
@@ -35,10 +38,12 @@ function MultiplayerZoneEditorMode:onMouseMove(dx, dy) end
 ---@return boolean
 function MultiplayerZoneEditorMode:onMouseUp(x, y) end
 
+---@param del number
 ---@return boolean
 function MultiplayerZoneEditorMode:onMouseWheel(del) end
 
 function MultiplayerZoneEditorMode:undisplay() end
 
+---@param editor ISMultiplayerZoneEditor
 ---@return MultiplayerZoneEditorMode
 function MultiplayerZoneEditorMode:new(editor) end

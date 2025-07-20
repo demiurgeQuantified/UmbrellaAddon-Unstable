@@ -16,5 +16,5 @@ function DebuggerContextMenu:topmostMenuWithMouse(x, y) end
 ---@return DebuggerContextMenu
 function DebuggerContextMenu:new(x, y, width, height) end
 
----@return DebuggerContextMenu?
+---@return DebuggerContextMenu
 function getDebuggerContextMenu() end

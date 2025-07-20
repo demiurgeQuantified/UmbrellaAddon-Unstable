@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISBBQExtinguish : ISBaseTimedAction
----@field bbq unknown
+---@field bbq IsoBarbecue
 ISBBQExtinguish = ISBaseTimedAction:derive("ISBBQExtinguish")
 ISBBQExtinguish.Type = "ISBBQExtinguish"
 
@@ -22,8 +22,10 @@ function ISBBQExtinguish:stop() end
 
 function ISBBQExtinguish:update() end
 
----@return unknown
+---@return boolean
 function ISBBQExtinguish:waitToStart() end
 
+---@param character IsoPlayer
+---@param bbq IsoBarbecue
 ---@return ISBBQExtinguish
 function ISBBQExtinguish:new(character, bbq) end

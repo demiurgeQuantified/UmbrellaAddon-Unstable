@@ -2,9 +2,9 @@
 
 ---@class ISUninstallVehiclePart : ISBaseTimedAction
 ---@field jobType string
----@field part unknown
----@field vehicle unknown
----@field workTime number?
+---@field part VehiclePart
+---@field vehicle BaseVehicle
+---@field workTime number
 ISUninstallVehiclePart = ISBaseTimedAction:derive("ISUninstallVehiclePart")
 ISUninstallVehiclePart.Type = "ISUninstallVehiclePart"
 
@@ -28,6 +28,8 @@ function ISUninstallVehiclePart:update() end
 ---@return boolean
 function ISUninstallVehiclePart:waitToStart() end
 
----@param workTime number?
+---@param character IsoPlayer
+---@param part VehiclePart
+---@param workTime number
 ---@return ISUninstallVehiclePart
 function ISUninstallVehiclePart:new(character, part, workTime) end

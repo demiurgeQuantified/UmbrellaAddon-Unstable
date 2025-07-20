@@ -22,6 +22,7 @@ function ISUserPanelUI:create() end
 
 function ISUserPanelUI:initialise() end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ISUserPanelUI:onOptionMouseDown(button, x, y) end

@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISGetHutchInfo : ISBaseTimedAction
----@field animal unknown?
----@field hutch unknown
----@field playerNum unknown
+---@field animal IsoAnimal?
+---@field hutch IsoHutch
+---@field playerNum integer
 ISGetHutchInfo = ISBaseTimedAction:derive("ISGetHutchInfo")
 ISGetHutchInfo.Type = "ISGetHutchInfo"
 
@@ -18,6 +18,8 @@ function ISGetHutchInfo:stop() end
 
 function ISGetHutchInfo:update() end
 
----@param animal unknown?
+---@param character IsoPlayer
+---@param hutch IsoHutch
+---@param animal IsoAnimal?
 ---@return ISGetHutchInfo
 function ISGetHutchInfo:new(character, hutch, animal) end

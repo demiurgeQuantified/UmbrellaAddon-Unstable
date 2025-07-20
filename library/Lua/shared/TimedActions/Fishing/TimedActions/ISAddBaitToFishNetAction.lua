@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISAddBaitToFishNetAction : ISBaseTimedAction
----@field bait unknown
----@field fishNet unknown
+---@field bait InventoryItem
+---@field fishNet IsoObject
 ISAddBaitToFishNetAction = ISBaseTimedAction:derive("ISAddBaitToFishNetAction")
 ISAddBaitToFishNetAction.Type = "ISAddBaitToFishNetAction"
 
@@ -12,7 +12,7 @@ function ISAddBaitToFishNetAction:complete() end
 ---@return number
 function ISAddBaitToFishNetAction:getDuration() end
 
----@return unknown?
+---@return boolean
 function ISAddBaitToFishNetAction:isValid() end
 
 function ISAddBaitToFishNetAction:perform() end
@@ -23,5 +23,8 @@ function ISAddBaitToFishNetAction:stop() end
 
 function ISAddBaitToFishNetAction:update() end
 
+---@param character IsoPlayer
+---@param fishNet IsoObject
+---@param bait InventoryItem
 ---@return ISAddBaitToFishNetAction
 function ISAddBaitToFishNetAction:new(character, fishNet, bait) end

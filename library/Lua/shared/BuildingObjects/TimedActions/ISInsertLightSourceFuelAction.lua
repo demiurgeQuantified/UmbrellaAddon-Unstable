@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ISInsertLightSourceFuelAction : ISBaseTimedAction
----@field fuel unknown
----@field lightSource unknown
+---@field fuel InventoryItem
+---@field lightSource IsoObject
 ISInsertLightSourceFuelAction = ISBaseTimedAction:derive("ISInsertLightSourceFuelAction")
 ISInsertLightSourceFuelAction.Type = "ISInsertLightSourceFuelAction"
 
@@ -12,7 +12,7 @@ function ISInsertLightSourceFuelAction:complete() end
 ---@return number
 function ISInsertLightSourceFuelAction:getDuration() end
 
----@return unknown?
+---@return boolean
 function ISInsertLightSourceFuelAction:isValid() end
 
 ---@return boolean
@@ -26,5 +26,8 @@ function ISInsertLightSourceFuelAction:stop() end
 
 function ISInsertLightSourceFuelAction:update() end
 
+---@param character IsoPlayer
+---@param lightSource IsoObject
+---@param fuel InventoryItem
 ---@return ISInsertLightSourceFuelAction
 function ISInsertLightSourceFuelAction:new(character, lightSource, fuel) end
