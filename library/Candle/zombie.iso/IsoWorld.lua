@@ -240,7 +240,7 @@ function IsoWorld:getGameMode() end
 ---
 --- Utility method for ClimateManager.getTemperature()
 ---
---- @return number _ The current temperature.
+--- @return number # The current temperature.
 function IsoWorld:getGlobalTemperature() end
 
 --- @public

@@ -48,14 +48,14 @@ function Font:drawString(x, y, text, col, startIndex, endIndex) end
 --- get the height of the given string
 ---
 --- @param str string The string to obtain the rendered with of
---- @return integer _ The width of the given string
+--- @return integer # The width of the given string
 function Font:getHeight(str) end
 
 --- @public
 ---
 --- get the maximum height of any line drawn by this font
 ---
---- @return integer _ The maxium height of any line drawn by this font
+--- @return integer # The maxium height of any line drawn by this font
 function Font:getLineHeight() end
 
 --- @public
@@ -63,7 +63,7 @@ function Font:getLineHeight() end
 --- get the width of the given string
 ---
 --- @param str string The string to obtain the rendered with of
---- @return integer _ The width of the given string
+--- @return integer # The width of the given string
 function Font:getWidth(str) end
 
 --- @public

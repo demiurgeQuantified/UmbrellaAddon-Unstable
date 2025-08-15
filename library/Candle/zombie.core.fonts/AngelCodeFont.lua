@@ -142,7 +142,7 @@ function AngelCodeFont:drawString(x, y, scale, text, r, g, b, a, startIndex, end
 --- Description copied from interface: Font
 ---
 --- @param text string The string to obtain the rendered with of
---- @return integer _ The width of the given string
+--- @return integer # The width of the given string
 function AngelCodeFont:getHeight(text) end
 
 --- @public
@@ -150,7 +150,7 @@ function AngelCodeFont:getHeight(text) end
 --- Description copied from interface: Font
 ---
 --- @param text string The string to obtain the rendered with of
---- @return integer _ The width of the given string
+--- @return integer # The width of the given string
 function AngelCodeFont:getHeight(text) end
 
 --- @public
@@ -164,14 +164,14 @@ function AngelCodeFont:getHeight(arg0, arg1, arg2) end
 ---
 --- Description copied from interface: Font
 ---
---- @return integer _ The maxium height of any line drawn by this font
+--- @return integer # The maxium height of any line drawn by this font
 function AngelCodeFont:getLineHeight() end
 
 --- @public
 ---
 --- Description copied from interface: Font
 ---
---- @return integer _ The maxium height of any line drawn by this font
+--- @return integer # The maxium height of any line drawn by this font
 function AngelCodeFont:getLineHeight() end
 
 --- @public
@@ -179,7 +179,7 @@ function AngelCodeFont:getLineHeight() end
 --- Description copied from interface: Font
 ---
 --- @param text string The string to obtain the rendered with of
---- @return integer _ The width of the given string
+--- @return integer # The width of the given string
 function AngelCodeFont:getWidth(text) end
 
 --- @public
@@ -187,7 +187,7 @@ function AngelCodeFont:getWidth(text) end
 --- Description copied from interface: Font
 ---
 --- @param text string The string to obtain the rendered with of
---- @return integer _ The width of the given string
+--- @return integer # The width of the given string
 function AngelCodeFont:getWidth(text) end
 
 --- @public
@@ -238,7 +238,7 @@ function AngelCodeFont:getWidth(text, start, __end__, xadvance) end
 --- text.
 ---
 --- @param text string The text that is to be tested
---- @return integer _ The yoffset from the y draw location at which text will start
+--- @return integer # The yoffset from the y draw location at which text will start
 function AngelCodeFont:getYOffset(text) end
 
 --- @public

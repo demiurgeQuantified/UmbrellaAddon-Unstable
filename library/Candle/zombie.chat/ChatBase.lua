@@ -22,7 +22,7 @@ function ChatBase:close() end
 --- Message creator. Every chat know how to create its own message
 ---
 --- @param text string text of the message
---- @return ChatMessage _ corresponding object to message
+--- @return ChatMessage # corresponding object to message
 function ChatBase:createMessage(text) end
 
 --- @public

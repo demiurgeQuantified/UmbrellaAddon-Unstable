@@ -84,7 +84,7 @@ function DebugType.valueOf(arg0) end
 --- Returns an array containing the constants of this enum class, in the order they
 --- declared.
 ---
---- @return DebugType[] _ an array containing the constants of this enum class, in the order they are declared
+--- @return DebugType[] # an array containing the constants of this enum class, in the order they are declared
 function DebugType.values() end
 
 ------------------------------------

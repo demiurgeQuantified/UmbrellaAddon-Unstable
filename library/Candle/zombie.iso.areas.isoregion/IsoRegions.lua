@@ -64,7 +64,7 @@ function IsoRegions.getChunkFile(chunkX, chunkY) end
 --- @param x integer
 --- @param y integer
 --- @param z integer
---- @return IChunkRegion _ can be null.
+--- @return IChunkRegion # can be null.
 function IsoRegions.getChunkRegion(x, y, z) end
 
 --- @public
@@ -75,7 +75,7 @@ function IsoRegions.getChunkRegion(x, y, z) end
 ---
 --- @param chunkx integer
 --- @param chunky integer
---- @return DataChunk _ can be null.
+--- @return DataChunk # can be null.
 function IsoRegions.getDataChunk(chunkx, chunky) end
 
 --- @public
@@ -98,7 +98,7 @@ function IsoRegions.getHeaderFile() end
 --- @param x integer
 --- @param y integer
 --- @param z integer
---- @return IWorldRegion _ can be null.
+--- @return IWorldRegion # can be null.
 function IsoRegions.getIsoWorldRegion(x, y, z) end
 
 --- @public

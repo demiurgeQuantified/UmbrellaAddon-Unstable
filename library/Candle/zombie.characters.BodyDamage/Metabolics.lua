@@ -62,7 +62,7 @@ function Metabolics.valueOf(arg0) end
 --- Returns an array containing the constants of this enum class, in the order they
 --- declared.
 ---
---- @return Metabolics[] _ an array containing the constants of this enum class, in the order they are declared
+--- @return Metabolics[] # an array containing the constants of this enum class, in the order they are declared
 function Metabolics.values() end
 
 ------------------------------------

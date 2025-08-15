@@ -62,7 +62,7 @@ function IsoObjectType.valueOf(arg0) end
 --- Returns an array containing the constants of this enum class, in the order they
 --- declared.
 ---
---- @return IsoObjectType[] _ an array containing the constants of this enum class, in the order they are declared
+--- @return IsoObjectType[] # an array containing the constants of this enum class, in the order they are declared
 function IsoObjectType.values() end
 
 ------------------------------------

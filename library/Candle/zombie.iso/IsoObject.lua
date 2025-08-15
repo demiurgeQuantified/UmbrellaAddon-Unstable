@@ -79,12 +79,12 @@ function IsoObject.getFactoryVehicle() end
 
 --- @public
 --- @static
---- @return IsoObject _ the lastRendered
+--- @return IsoObject # the lastRendered
 function IsoObject.getLastRendered() end
 
 --- @public
 --- @static
---- @return IsoObject _ the lastRenderedRendered
+--- @return IsoObject # the lastRenderedRendered
 function IsoObject.getLastRenderedRendered() end
 
 --- @public
@@ -472,7 +472,7 @@ function IsoObject:emptyFluid() end
 function IsoObject:flagForHotSave() end
 
 --- @public
---- @return number _ the alpha
+--- @return number # the alpha
 function IsoObject:getAlpha() end
 
 --- @public
@@ -481,7 +481,7 @@ function IsoObject:getAlpha() end
 function IsoObject:getAlpha(playerIndex) end
 
 --- @public
---- @return ArrayList _ the AttachedAnimSprite
+--- @return ArrayList # the AttachedAnimSprite
 function IsoObject:getAttachedAnimSprite() end
 
 --- @public
@@ -489,11 +489,11 @@ function IsoObject:getAttachedAnimSprite() end
 function IsoObject:getAttachedAnimSpriteCount() end
 
 --- @public
---- @return IsoCell _ the cell
+--- @return IsoCell # the cell
 function IsoObject:getCell() end
 
 --- @public
---- @return ArrayList _ the AttachedAnimSprite
+--- @return ArrayList # the AttachedAnimSprite
 function IsoObject:getChildSprites() end
 
 --- @public
@@ -501,7 +501,7 @@ function IsoObject:getChildSprites() end
 function IsoObject:getChunk() end
 
 --- @public
---- @return ItemContainer _ the container
+--- @return ItemContainer # the container
 function IsoObject:getContainer() end
 
 --- @public
@@ -544,11 +544,11 @@ function IsoObject:getCurrentFrameTex() end
 function IsoObject:getCustomColor() end
 
 --- @public
---- @return short _ the Damage
+--- @return short # the Damage
 function IsoObject:getDamage() end
 
 --- @public
---- @return IsoDirections _ the dir
+--- @return IsoDirections # the dir
 function IsoObject:getDir() end
 
 --- @public
@@ -735,11 +735,11 @@ function IsoObject:getRenderSquare() end
 function IsoObject:getRenderYOffset() end
 
 --- @public
---- @return IsoObject _ the rerouteCollide
+--- @return IsoObject # the rerouteCollide
 function IsoObject:getRerouteCollide() end
 
 --- @public
---- @return IsoObject _ the rerouteMask
+--- @return IsoObject # the rerouteMask
 function IsoObject:getRerouteMask() end
 
 --- @public
@@ -755,7 +755,7 @@ function IsoObject:getScriptName() end
 function IsoObject:getSpecialObjectIndex() end
 
 --- @public
---- @return IsoSprite _ the sprite
+--- @return IsoSprite # the sprite
 function IsoObject:getSprite() end
 
 --- @public
@@ -812,11 +812,11 @@ function IsoObject:getSurfaceOffset() end
 function IsoObject:getSurfaceOffsetNoTable() end
 
 --- @public
---- @return table _ the table
+--- @return table # the table
 function IsoObject:getTable() end
 
 --- @public
---- @return number _ the targetAlpha
+--- @return number # the targetAlpha
 function IsoObject:getTargetAlpha() end
 
 --- @public
@@ -855,7 +855,7 @@ function IsoObject:getTile() end
 function IsoObject:getTileName() end
 
 --- @public
---- @return IsoObjectType _ the type
+--- @return IsoObjectType # the type
 function IsoObject:getType() end
 
 --- @public
@@ -1083,7 +1083,7 @@ function IsoObject:isMaskClicked(x, y, flip) end
 function IsoObject:isMovedThumpable() end
 
 --- @public
---- @return boolean _ the NoPicking
+--- @return boolean # the NoPicking
 function IsoObject:isNoPicking() end
 
 --- @public
@@ -1126,7 +1126,7 @@ function IsoObject:isOutlineHlBlink() end
 function IsoObject:isOutlineHlBlink(playerIndex) end
 
 --- @public
---- @return boolean _ the OutlineOnMouseover
+--- @return boolean # the OutlineOnMouseover
 function IsoObject:isOutlineOnMouseover() end
 
 --- @public

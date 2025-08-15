@@ -100,7 +100,7 @@ function IsoDirections.valueOf(arg0) end
 --- Returns an array containing the constants of this enum class, in the order they
 --- declared.
 ---
---- @return IsoDirections[] _ an array containing the constants of this enum class, in the order they are declared
+--- @return IsoDirections[] # an array containing the constants of this enum class, in the order they are declared
 function IsoDirections.values() end
 
 ------------------------------------

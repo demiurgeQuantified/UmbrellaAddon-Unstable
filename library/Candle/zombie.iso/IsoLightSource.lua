@@ -14,11 +14,11 @@ IsoLightSource = {}
 function IsoLightSource:clearInfluence() end
 
 --- @public
---- @return number _ the b
+--- @return number # the b
 function IsoLightSource:getB() end
 
 --- @public
---- @return number _ the g
+--- @return number # the g
 function IsoLightSource:getG() end
 
 --- @public
@@ -26,31 +26,31 @@ function IsoLightSource:getG() end
 function IsoLightSource:getLocalToBuilding() end
 
 --- @public
---- @return number _ the r
+--- @return number # the r
 function IsoLightSource:getR() end
 
 --- @public
---- @return integer _ the radius
+--- @return integer # the radius
 function IsoLightSource:getRadius() end
 
 --- @public
---- @return ArrayList _ the switches
+--- @return ArrayList # the switches
 function IsoLightSource:getSwitches() end
 
 --- @public
---- @return integer _ the x
+--- @return integer # the x
 function IsoLightSource:getX() end
 
 --- @public
---- @return integer _ the y
+--- @return integer # the y
 function IsoLightSource:getY() end
 
 --- @public
---- @return integer _ the z
+--- @return integer # the z
 function IsoLightSource:getZ() end
 
 --- @public
---- @return boolean _ the bActive
+--- @return boolean # the bActive
 function IsoLightSource:isActive() end
 
 --- @public
@@ -125,7 +125,7 @@ function IsoLightSource:setZ(z) end
 function IsoLightSource:update() end
 
 --- @public
---- @return boolean _ the bWasActive
+--- @return boolean # the bWasActive
 function IsoLightSource:wasActive() end
 
 ------------------------------------

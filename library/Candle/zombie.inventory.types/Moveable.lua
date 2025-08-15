@@ -59,7 +59,7 @@ function Moveable:getLightR() end
 function Moveable:getMovableFullName() end
 
 --- @public
---- @return string _ the name
+--- @return string # the name
 function Moveable:getName() end
 
 --- @public

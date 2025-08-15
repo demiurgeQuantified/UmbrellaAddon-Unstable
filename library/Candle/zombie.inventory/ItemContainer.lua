@@ -363,7 +363,7 @@ function ItemContainer:emptyIt() end
 function ItemContainer:getAcceptItemFunction() end
 
 --- @public
---- @return number _ the ageFactor
+--- @return number # the ageFactor
 function ItemContainer:getAgeFactor() end
 
 --- @public
@@ -789,7 +789,7 @@ function ItemContainer:getContainingItem() end
 function ItemContainer:getContentsWeight() end
 
 --- @public
---- @return number _ the CookingFactor
+--- @return number # the CookingFactor
 function ItemContainer:getCookingFactor() end
 
 --- @public
@@ -1114,7 +1114,7 @@ function ItemContainer:getItemWithID(id) end
 function ItemContainer:getItemWithIDRecursiv(id) end
 
 --- @public
---- @return ArrayList _ the Items
+--- @return ArrayList # the Items
 function ItemContainer:getItems() end
 
 --- @public
@@ -1195,7 +1195,7 @@ function ItemContainer:getOpenSound() end
 function ItemContainer:getOutermostContainer() end
 
 --- @public
---- @return IsoObject _ the parent
+--- @return IsoObject # the parent
 function ItemContainer:getParent() end
 
 --- @public
@@ -1465,7 +1465,7 @@ function ItemContainer:getSomeTypeRecurse(type, count) end
 function ItemContainer:getSomeTypeRecurse(type, count, result) end
 
 --- @public
---- @return IsoGridSquare _ the SourceGrid
+--- @return IsoGridSquare # the SourceGrid
 function ItemContainer:getSourceGrid() end
 
 --- @public
@@ -1491,7 +1491,7 @@ function ItemContainer:getTotalFoodScore(desc) end
 function ItemContainer:getTotalWeaponScore(desc) end
 
 --- @public
---- @return string _ the type
+--- @return string # the type
 function ItemContainer:getType() end
 
 --- @public
@@ -1552,7 +1552,7 @@ function ItemContainer:hasRoomFor(chr, item) end
 function ItemContainer:haveThisKeyId(keyId) end
 
 --- @public
---- @return boolean _ the active
+--- @return boolean # the active
 function ItemContainer:isActive() end
 
 --- @public
@@ -1560,7 +1560,7 @@ function ItemContainer:isActive() end
 function ItemContainer:isCorpse() end
 
 --- @public
---- @return boolean _ the dirty
+--- @return boolean # the dirty
 function ItemContainer:isDirty() end
 
 --- @public
@@ -1594,7 +1594,7 @@ function ItemContainer:isInCharacterInventory(chr) end
 function ItemContainer:isInside(item) end
 
 --- @public
---- @return boolean _ the IsDevice
+--- @return boolean # the IsDevice
 function ItemContainer:isIsDevice() end
 
 --- @public

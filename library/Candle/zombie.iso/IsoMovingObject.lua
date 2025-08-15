@@ -12,7 +12,7 @@ IsoMovingObject = {}
 
 --- @public
 --- @static
---- @return integer _ the IDCount
+--- @return integer # the IDCount
 function IsoMovingObject.getIDCount() end
 
 --- @public
@@ -94,7 +94,7 @@ function IsoMovingObject:MoveUnmodded(dir) end
 ---
 --- This function calculate count of attackers
 ---
---- @return integer _ 0 - no attackets, 1 - one player can attack this character, 2 - multiply players can attack this character
+--- @return integer # 0 - no attackets, 1 - one player can attack this character, 2 - multiply players can attack this character
 function IsoMovingObject:canHaveMultipleHits() end
 
 --- @public
@@ -133,7 +133,7 @@ function IsoMovingObject:getBumpedType(bumped) end
 function IsoMovingObject:getCollideType() end
 
 --- @public
---- @return IsoObject _ the CollidedObject
+--- @return IsoObject # the CollidedObject
 function IsoMovingObject:getCollidedObject() end
 
 --- @public
@@ -141,7 +141,7 @@ function IsoMovingObject:getCollidedObject() end
 function IsoMovingObject:getCurrentBuilding() end
 
 --- @public
---- @return IsoGridSquare _ the current
+--- @return IsoGridSquare # the current
 function IsoMovingObject:getCurrentSquare() end
 
 --- @public
@@ -173,7 +173,7 @@ function IsoMovingObject:getFacingPosition(pos) end
 function IsoMovingObject:getFeelerTile(dist) end
 
 --- @public
---- @return number _ the feelersize
+--- @return number # the feelersize
 function IsoMovingObject:getFeelersize() end
 
 --- @public
@@ -190,15 +190,15 @@ function IsoMovingObject:getGlobalMovementMod() end
 function IsoMovingObject:getGlobalMovementMod(bDoNoises) end
 
 --- @public
---- @return Vector2 _ the hitDir
+--- @return Vector2 # the hitDir
 function IsoMovingObject:getHitDir() end
 
 --- @public
---- @return number _ the hitForce
+--- @return number # the hitForce
 function IsoMovingObject:getHitForce() end
 
 --- @public
---- @return number _ the hitFromAngle
+--- @return number # the hitFromAngle
 function IsoMovingObject:getHitFromAngle() end
 
 --- @public
@@ -210,11 +210,11 @@ function IsoMovingObject:getID() end
 function IsoMovingObject:getID() end
 
 --- @public
---- @return number _ the impulsex
+--- @return number # the impulsex
 function IsoMovingObject:getImpulsex() end
 
 --- @public
---- @return number _ the impulsey
+--- @return number # the impulsey
 function IsoMovingObject:getImpulsey() end
 
 --- @public
@@ -222,11 +222,11 @@ function IsoMovingObject:getImpulsey() end
 function IsoMovingObject:getLastCollideTime() end
 
 --- @public
---- @return IsoGridSquare _ the last
+--- @return IsoGridSquare # the last
 function IsoMovingObject:getLastSquare() end
 
 --- @public
---- @return IsoZombie _ the lastTargettedBy
+--- @return IsoZombie # the lastTargettedBy
 function IsoMovingObject:getLastTargettedBy() end
 
 --- @public
@@ -242,11 +242,11 @@ function IsoMovingObject:getLastY() end
 function IsoMovingObject:getLastZ() end
 
 --- @public
---- @return number _ the limpulsex
+--- @return number # the limpulsex
 function IsoMovingObject:getLimpulsex() end
 
 --- @public
---- @return number _ the limpulsey
+--- @return number # the limpulsey
 function IsoMovingObject:getLimpulsey() end
 
 --- @public
@@ -254,7 +254,7 @@ function IsoMovingObject:getLimpulsey() end
 function IsoMovingObject:getMasterRegion() end
 
 --- @public
---- @return Vector2 _ the movementLastFrame
+--- @return Vector2 # the movementLastFrame
 function IsoMovingObject:getMovementLastFrame() end
 
 --- @public
@@ -266,7 +266,7 @@ function IsoMovingObject:getNextX() end
 function IsoMovingObject:getNextY() end
 
 --- @public
---- @return boolean _ whether the object should take damage or not.
+--- @return boolean # whether the object should take damage or not.
 function IsoMovingObject:getNoDamage() end
 
 --- @public
@@ -296,7 +296,7 @@ function IsoMovingObject:getPosition(arg0) end
 --- Get the object's position. Stored in the supplied parameter.
 ---
 --- @param out Vector3
---- @return Vector3 _ The out parameter.
+--- @return Vector3 # The out parameter.
 function IsoMovingObject:getPosition(out) end
 
 --- @public
@@ -308,7 +308,7 @@ function IsoMovingObject:getScreenX() end
 function IsoMovingObject:getScreenY() end
 
 --- @public
---- @return string _ the ScriptModule
+--- @return string # the ScriptModule
 function IsoMovingObject:getScriptModule() end
 
 --- @public
@@ -320,11 +320,11 @@ function IsoMovingObject:getScriptNextX() end
 function IsoMovingObject:getScriptNextY() end
 
 --- @public
---- @return number _ the scriptnx
+--- @return number # the scriptnx
 function IsoMovingObject:getScriptnx() end
 
 --- @public
---- @return number _ the scriptny
+--- @return number # the scriptny
 function IsoMovingObject:getScriptny() end
 
 --- @public
@@ -332,7 +332,7 @@ function IsoMovingObject:getScriptny() end
 function IsoMovingObject:getSquare() end
 
 --- @public
---- @return number _ the StateEventDelayTimer
+--- @return number # the StateEventDelayTimer
 function IsoMovingObject:getStateEventDelayTimer() end
 
 --- @public
@@ -344,7 +344,7 @@ function IsoMovingObject:getSurroundingThumpers() end
 function IsoMovingObject:getThumpTarget() end
 
 --- @public
---- @return integer _ the TimeSinceZombieAttack
+--- @return integer # the TimeSinceZombieAttack
 function IsoMovingObject:getTimeSinceZombieAttack() end
 
 --- @public
@@ -363,7 +363,7 @@ function IsoMovingObject:getWeight() end
 function IsoMovingObject:getWeight(x, y) end
 
 --- @public
---- @return number _ the width
+--- @return number # the width
 function IsoMovingObject:getWidth() end
 
 --- @public
@@ -387,7 +387,7 @@ function IsoMovingObject:isCharacter() end
 function IsoMovingObject:isCloseKilled() end
 
 --- @public
---- @return boolean _ the Collidable
+--- @return boolean # the Collidable
 function IsoMovingObject:isCollidable() end
 
 --- @public
@@ -395,27 +395,27 @@ function IsoMovingObject:isCollidable() end
 function IsoMovingObject:isCollided() end
 
 --- @public
---- @return boolean _ the collidedE
+--- @return boolean # the collidedE
 function IsoMovingObject:isCollidedE() end
 
 --- @public
---- @return boolean _ the collidedN
+--- @return boolean # the collidedN
 function IsoMovingObject:isCollidedN() end
 
 --- @public
---- @return boolean _ the collidedS
+--- @return boolean # the collidedS
 function IsoMovingObject:isCollidedS() end
 
 --- @public
---- @return boolean _ the collidedThisFrame
+--- @return boolean # the collidedThisFrame
 function IsoMovingObject:isCollidedThisFrame() end
 
 --- @public
---- @return boolean _ the collidedW
+--- @return boolean # the collidedW
 function IsoMovingObject:isCollidedW() end
 
 --- @public
---- @return boolean _ the CollidedWithDoor
+--- @return boolean # the CollidedWithDoor
 function IsoMovingObject:isCollidedWithDoor() end
 
 --- @public
@@ -427,7 +427,7 @@ function IsoMovingObject:isCollidedWithVehicle() end
 function IsoMovingObject:isCrawling() end
 
 --- @public
---- @return boolean _ the destroyed
+--- @return boolean # the destroyed
 function IsoMovingObject:isDestroyed() end
 
 --- @public
@@ -440,7 +440,7 @@ function IsoMovingObject:isEatingOther(other) end
 function IsoMovingObject:isExistInTheWorld() end
 
 --- @public
---- @return boolean _ the firstUpdate
+--- @return boolean # the firstUpdate
 function IsoMovingObject:isFirstUpdate() end
 
 --- @public
@@ -465,11 +465,11 @@ function IsoMovingObject:isPushableForSeparate() end
 function IsoMovingObject:isPushedByForSeparate(other) end
 
 --- @public
---- @return boolean _ the shootable
+--- @return boolean # the shootable
 function IsoMovingObject:isShootable() end
 
 --- @public
---- @return boolean _ the solid
+--- @return boolean # the solid
 function IsoMovingObject:isSolid() end
 
 --- @public
@@ -481,7 +481,7 @@ function IsoMovingObject:isSolidForSeparate() end
 function IsoMovingObject:isStanding() end
 
 --- @public
---- @return boolean _ the bAltCollide
+--- @return boolean # the bAltCollide
 function IsoMovingObject:isbAltCollide() end
 
 --- @public

@@ -144,7 +144,7 @@ function State:getStatePermissions() end
 function State:isAttacking(owner) end
 
 --- @public
---- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
+--- @return boolean # TRUE if this state handles the "Cancel Action" key or the B controller button.
 function State:isDoingActionThatCanBeCancelled() end
 
 --- @public

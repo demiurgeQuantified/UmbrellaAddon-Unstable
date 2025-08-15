@@ -24,7 +24,7 @@ function SurvivorDesc.addTrouserColor(color) end
 
 --- @public
 --- @static
---- @return integer _ the IDCount
+--- @return integer # the IDCount
 function SurvivorDesc.getIDCount() end
 
 --- @public
@@ -53,11 +53,11 @@ function SurvivorDesc:addObservation(obv) end
 function SurvivorDesc:dressInNamedOutfit(outfitName) end
 
 --- @public
---- @return number _ the aggressiveness
+--- @return number # the aggressiveness
 function SurvivorDesc:getAggressiveness() end
 
 --- @public
---- @return number _ the bravery
+--- @return number # the bravery
 function SurvivorDesc:getBravery() end
 
 --- @public
@@ -69,7 +69,7 @@ function SurvivorDesc:getCalculatedToughness() end
 function SurvivorDesc:getCommonHairColor() end
 
 --- @public
---- @return number _ the compassion
+--- @return number # the compassion
 function SurvivorDesc:getCompassion() end
 
 --- @public
@@ -82,15 +82,15 @@ function SurvivorDesc:getDescription(arg0) end
 function SurvivorDesc:getExtras() end
 
 --- @public
---- @return number _ the favourindoors
+--- @return number # the favourindoors
 function SurvivorDesc:getFavourindoors() end
 
 --- @public
---- @return string _ the forename
+--- @return string # the forename
 function SurvivorDesc:getForename() end
 
 --- @public
---- @return number _ the friendliness
+--- @return number # the friendliness
 function SurvivorDesc:getFriendliness() end
 
 --- @public
@@ -110,15 +110,15 @@ function SurvivorDesc:getHumanVisual() end
 function SurvivorDesc:getHumanVisual() end
 
 --- @public
---- @return integer _ the ID
+--- @return integer # the ID
 function SurvivorDesc:getID() end
 
 --- @public
---- @return IsoGameCharacter _ the Instance
+--- @return IsoGameCharacter # the Instance
 function SurvivorDesc:getInstance() end
 
 --- @public
---- @return string _ the InventoryScript
+--- @return string # the InventoryScript
 function SurvivorDesc:getInventoryScript() end
 
 --- @public
@@ -132,15 +132,15 @@ function SurvivorDesc:getItemVisuals(itemVisuals) end
 function SurvivorDesc:getItemVisuals(itemVisuals) end
 
 --- @public
---- @return number _ the loner
+--- @return number # the loner
 function SurvivorDesc:getLoner() end
 
 --- @public
---- @return number _ the loyalty
+--- @return number # the loyalty
 function SurvivorDesc:getLoyalty() end
 
 --- @public
---- @return HashMap _ the MetCount
+--- @return HashMap # the MetCount
 function SurvivorDesc:getMetCount() end
 
 --- @public
@@ -157,19 +157,19 @@ function SurvivorDesc:getMeta() end
 function SurvivorDesc:getObservations() end
 
 --- @public
---- @return string _ the Profession
+--- @return string # the Profession
 function SurvivorDesc:getProfession() end
 
 --- @public
---- @return string _ the surname
+--- @return string # the surname
 function SurvivorDesc:getSurname() end
 
 --- @public
---- @return number _ the temper
+--- @return number # the temper
 function SurvivorDesc:getTemper() end
 
 --- @public
---- @return string _ the torso
+--- @return string # the torso
 function SurvivorDesc:getTorso() end
 
 --- @public

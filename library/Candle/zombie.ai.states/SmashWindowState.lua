@@ -41,7 +41,7 @@ function SmashWindowState:execute(owner) end
 function SmashWindowState:exit(owner) end
 
 --- @public
---- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
+--- @return boolean # TRUE if this state handles the "Cancel Action" key or the B controller button.
 function SmashWindowState:isDoingActionThatCanBeCancelled() end
 
 --- @public

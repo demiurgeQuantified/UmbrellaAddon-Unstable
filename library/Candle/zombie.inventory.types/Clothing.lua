@@ -227,7 +227,7 @@ function Clothing:getHolesNumber() end
 function Clothing:getInsulation() end
 
 --- @public
---- @return string _ the name
+--- @return string # the name
 function Clothing:getName() end
 
 --- @public
@@ -239,7 +239,7 @@ function Clothing:getNbrOfCoveredParts() end
 function Clothing:getNeckProtectionModifier() end
 
 --- @public
---- @return string _ the palette
+--- @return string # the palette
 function Clothing:getPalette() end
 
 --- @public
@@ -264,7 +264,7 @@ function Clothing:getSaveType() end
 function Clothing:getScratchDefense() end
 
 --- @public
---- @return string _ the SpriteName
+--- @return string # the SpriteName
 function Clothing:getSpriteName() end
 
 --- @public
@@ -292,7 +292,7 @@ function Clothing:getUsedDelta() end
 function Clothing:getWaterResistance() end
 
 --- @public
---- @return number _ the Weight
+--- @return number # the Weight
 function Clothing:getWeight() end
 
 --- @public

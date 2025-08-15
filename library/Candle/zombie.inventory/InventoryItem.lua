@@ -31,7 +31,7 @@ function InventoryItem.loadItem(input, WorldVersion) end
 --- @param input ByteBuffer
 --- @param WorldVersion integer
 --- @param doSaveTypeCheck boolean
---- @return InventoryItem _ InventoryItem, or null if the item failed loading or if Creating the item failed due to being obsolete etc.
+--- @return InventoryItem # InventoryItem, or null if the item failed loading or if Creating the item failed due to being obsolete etc.
 function InventoryItem.loadItem(input, WorldVersion, doSaveTypeCheck) end
 
 --- @public
@@ -320,11 +320,11 @@ function InventoryItem:finishupdate() end
 function InventoryItem:getA() end
 
 --- @public
---- @return number _ the ActualWeight
+--- @return number # the ActualWeight
 function InventoryItem:getActualWeight() end
 
 --- @public
---- @return number _ the Age
+--- @return number # the Age
 function InventoryItem:getAge() end
 
 --- @public
@@ -409,7 +409,7 @@ function InventoryItem:getBloodLevelAdjustedLow() end
 function InventoryItem:getBodyLocation() end
 
 --- @public
---- @return number _ the boredomChange
+--- @return number # the boredomChange
 function InventoryItem:getBoredomChange() end
 
 --- @public
@@ -429,7 +429,7 @@ function InventoryItem:getBringToBearSound() end
 function InventoryItem:getBulletHitArmourSound() end
 
 --- @public
---- @return string _ the BurntString
+--- @return string # the BurntString
 function InventoryItem:getBurntString() end
 
 --- @public
@@ -437,7 +437,7 @@ function InventoryItem:getBurntString() end
 function InventoryItem:getByteData() end
 
 --- @public
---- @return ItemType _ the cat
+--- @return ItemType # the cat
 function InventoryItem:getCat() end
 
 --- @public
@@ -490,7 +490,7 @@ function InventoryItem:getColorInfo() end
 function InventoryItem:getColorRed() end
 
 --- @public
---- @return integer _ the Condition
+--- @return integer # the Condition
 function InventoryItem:getCondition() end
 
 --- @public
@@ -506,7 +506,7 @@ function InventoryItem:getConditionLowerNormal() end
 function InventoryItem:getConditionLowerOffroad() end
 
 --- @public
---- @return integer _ the ConditionMax
+--- @return integer # the ConditionMax
 function InventoryItem:getConditionMax() end
 
 --- @public
@@ -514,15 +514,15 @@ function InventoryItem:getConditionMax() end
 function InventoryItem:getConsolidateOption() end
 
 --- @public
---- @return ItemContainer _ the container
+--- @return ItemContainer # the container
 function InventoryItem:getContainer() end
 
 --- @public
---- @return integer _ the containerX
+--- @return integer # the containerX
 function InventoryItem:getContainerX() end
 
 --- @public
---- @return integer _ the containerY
+--- @return integer # the containerY
 function InventoryItem:getContainerY() end
 
 --- @public
@@ -530,11 +530,11 @@ function InventoryItem:getContainerY() end
 function InventoryItem:getContentsWeight() end
 
 --- @public
---- @return string _ the CookedString
+--- @return string # the CookedString
 function InventoryItem:getCookedString() end
 
 --- @public
---- @return number _ the CookingTime
+--- @return number # the CookingTime
 function InventoryItem:getCookingTime() end
 
 --- @public
@@ -554,7 +554,7 @@ function InventoryItem:getCurrentAmmoCount() end
 --- Return the real condition of the weapon, based on this calcul :
 --- * 100
 ---
---- @return number _ float
+--- @return number # float
 function InventoryItem:getCurrentCondition() end
 
 --- @public
@@ -578,7 +578,7 @@ function InventoryItem:getDamagedSound() end
 function InventoryItem:getDeadBodyObject() end
 
 --- @public
---- @return string _ the Description
+--- @return string # the Description
 function InventoryItem:getDescription() end
 
 --- @public
@@ -879,11 +879,11 @@ function InventoryItem:getMetalValue() end
 function InventoryItem:getMilkReplaceItem() end
 
 --- @public
---- @return number _ the MinutesToBurn
+--- @return number # the MinutesToBurn
 function InventoryItem:getMinutesToBurn() end
 
 --- @public
---- @return number _ the MinutesToCook
+--- @return number # the MinutesToCook
 function InventoryItem:getMinutesToCook() end
 
 --- @public
@@ -903,27 +903,27 @@ function InventoryItem:getModName() end
 function InventoryItem:getModelIndex() end
 
 --- @public
---- @return string _ the module
+--- @return string # the module
 function InventoryItem:getModule() end
 
 --- @public
---- @return string _ the name
+--- @return string # the name
 function InventoryItem:getName() end
 
 --- @public
---- @return IsoDirections _ the newPlaceDir
+--- @return IsoDirections # the newPlaceDir
 function InventoryItem:getNewPlaceDir() end
 
 --- @public
---- @return integer _ the OffAge
+--- @return integer # the OffAge
 function InventoryItem:getOffAge() end
 
 --- @public
---- @return integer _ the OffAgeMax
+--- @return integer # the OffAgeMax
 function InventoryItem:getOffAgeMax() end
 
 --- @public
---- @return string _ the OffString
+--- @return string # the OffString
 function InventoryItem:getOffString() end
 
 --- @public
@@ -951,7 +951,7 @@ function InventoryItem:getOutermostContainer() end
 function InventoryItem:getOwner() end
 
 --- @public
---- @return IsoDirections _ the placeDir
+--- @return IsoDirections # the placeDir
 function InventoryItem:getPlaceDir() end
 
 --- @public
@@ -975,7 +975,7 @@ function InventoryItem:getPourLiquidOnGroundSound() end
 function InventoryItem:getPourType() end
 
 --- @public
---- @return IsoGameCharacter _ the previousOwner
+--- @return IsoGameCharacter # the previousOwner
 function InventoryItem:getPreviousOwner() end
 
 --- @public
@@ -1007,7 +1007,7 @@ function InventoryItem:getRemoteControlID() end
 function InventoryItem:getRemoteRange() end
 
 --- @public
---- @return string _ the replaceOnUse
+--- @return string # the replaceOnUse
 function InventoryItem:getReplaceOnUse() end
 
 --- @public
@@ -1049,7 +1049,7 @@ function InventoryItem:getResearchableRecipes() end
 function InventoryItem:getResearchableRecipes(arg0) end
 
 --- @public
---- @return ItemContainer _ the rightClickContainer
+--- @return ItemContainer # the rightClickContainer
 function InventoryItem:getRightClickContainer() end
 
 --- @public
@@ -1062,7 +1062,7 @@ function InventoryItem:getSaveType() end
 function InventoryItem:getScore(desc) end
 
 --- @public
---- @return Item _ the ScriptItem
+--- @return Item # the ScriptItem
 function InventoryItem:getScriptItem() end
 
 --- @public
@@ -1124,7 +1124,7 @@ function InventoryItem:getStaticModelsByIndex() end
 function InventoryItem:getStrainModifier() end
 
 --- @public
---- @return number _ the stressChange
+--- @return number # the stressChange
 function InventoryItem:getStressChange() end
 
 --- @public
@@ -1140,7 +1140,7 @@ function InventoryItem:getSuspensionCompression() end
 function InventoryItem:getSuspensionDamping() end
 
 --- @public
---- @return string _ the swingAnim
+--- @return string # the swingAnim
 function InventoryItem:getSwingAnim() end
 
 --- @public
@@ -1148,7 +1148,7 @@ function InventoryItem:getSwingAnim() end
 function InventoryItem:getTags() end
 
 --- @public
---- @return ArrayList _ the Taken
+--- @return ArrayList # the Taken
 function InventoryItem:getTaken() end
 
 --- @public
@@ -1156,11 +1156,11 @@ function InventoryItem:getTaken() end
 function InventoryItem:getTex() end
 
 --- @public
---- @return Texture _ the texture
+--- @return Texture # the texture
 function InventoryItem:getTexture() end
 
 --- @public
---- @return Texture _ the textureBurnt
+--- @return Texture # the textureBurnt
 function InventoryItem:getTextureBurnt() end
 
 --- @public
@@ -1168,7 +1168,7 @@ function InventoryItem:getTextureBurnt() end
 function InventoryItem:getTextureColorMask() end
 
 --- @public
---- @return Texture _ the textureCooked
+--- @return Texture # the textureCooked
 function InventoryItem:getTextureCooked() end
 
 --- @public
@@ -1176,7 +1176,7 @@ function InventoryItem:getTextureCooked() end
 function InventoryItem:getTextureFluidMask() end
 
 --- @public
---- @return Texture _ the texturerotten
+--- @return Texture # the texturerotten
 function InventoryItem:getTexturerotten() end
 
 --- @public
@@ -1200,7 +1200,7 @@ function InventoryItem:getTorchDot() end
 function InventoryItem:getType() end
 
 --- @public
---- @return string _ the UnCookedString
+--- @return string # the UnCookedString
 function InventoryItem:getUnCookedString() end
 
 --- @public
@@ -1212,7 +1212,7 @@ function InventoryItem:getUnequipSound() end
 function InventoryItem:getUnequippedWeight() end
 
 --- @public
---- @return number _ the unhappyChange
+--- @return number # the unhappyChange
 function InventoryItem:getUnhappyChange() end
 
 --- @public
@@ -1220,7 +1220,7 @@ function InventoryItem:getUnhappyChange() end
 function InventoryItem:getUser() end
 
 --- @public
---- @return integer _ the uses
+--- @return integer # the uses
 --- @deprecated
 function InventoryItem:getUses() end
 
@@ -1241,7 +1241,7 @@ function InventoryItem:getWeaponHitArmourSound() end
 function InventoryItem:getWeaponLevel() end
 
 --- @public
---- @return number _ the Weight
+--- @return number # the Weight
 function InventoryItem:getWeight() end
 
 --- @public
@@ -1293,7 +1293,7 @@ function InventoryItem:getWorldStaticModel() end
 function InventoryItem:getWorldStaticModelsByIndex() end
 
 --- @public
---- @return string _ the WorldTexture
+--- @return string # the WorldTexture
 function InventoryItem:getWorldTexture() end
 
 --- @public
@@ -1427,7 +1427,7 @@ function InventoryItem:isActivated() end
 function InventoryItem:isAlcoholic() end
 
 --- @public
---- @return boolean _ the AlwaysWelcomeGift
+--- @return boolean # the AlwaysWelcomeGift
 function InventoryItem:isAlwaysWelcomeGift() end
 
 --- @public
@@ -1447,11 +1447,11 @@ function InventoryItem:isBloody() end
 function InventoryItem:isBroken() end
 
 --- @public
---- @return boolean _ the Burnt
+--- @return boolean # the Burnt
 function InventoryItem:isBurnt() end
 
 --- @public
---- @return boolean _ the CanBandage
+--- @return boolean # the CanBandage
 function InventoryItem:isCanBandage() end
 
 --- @public
@@ -1459,11 +1459,11 @@ function InventoryItem:isCanBandage() end
 function InventoryItem:isConditionAffectsCapacity() end
 
 --- @public
---- @return boolean _ the IsCookable
+--- @return boolean # the IsCookable
 function InventoryItem:isCookable() end
 
 --- @public
---- @return boolean _ the Cooked
+--- @return boolean # the Cooked
 function InventoryItem:isCooked() end
 
 --- @public
@@ -1483,7 +1483,7 @@ function InventoryItem:isCustomWeight() end
 function InventoryItem:isDamaged() end
 
 --- @public
---- @return boolean _ the DisappearOnUse
+--- @return boolean # the DisappearOnUse
 function InventoryItem:isDisappearOnUse() end
 
 --- @public
@@ -1569,7 +1569,7 @@ function InventoryItem:isInfected() end
 function InventoryItem:isInitialised() end
 
 --- @public
---- @return boolean _ the IsCookable
+--- @return boolean # the IsCookable
 function InventoryItem:isIsCookable() end
 
 --- @public
@@ -1634,7 +1634,7 @@ function InventoryItem:isVanilla() end
 function InventoryItem:isVisualAid() end
 
 --- @public
---- @return boolean _ the IsWaterSource
+--- @return boolean # the IsWaterSource
 function InventoryItem:isWaterSource() end
 
 --- @public

@@ -204,7 +204,7 @@ function LuaEventManager.triggerEventUnique(event, param1) end
 ---
 --- @param callFrame LuaCallFrame
 --- @param nArguments integer
---- @return integer _ N, number of return values. The top N objects on the stack are considered the return values.
+--- @return integer # N, number of return values. The top N objects on the stack are considered the return values.
 function LuaEventManager:call(callFrame, nArguments) end
 
 --- @public
@@ -213,7 +213,7 @@ function LuaEventManager:call(callFrame, nArguments) end
 ---
 --- @param callFrame LuaCallFrame
 --- @param nArguments integer
---- @return integer _ N, number of return values. The top N objects on the stack are considered the return values.
+--- @return integer # N, number of return values. The top N objects on the stack are considered the return values.
 function LuaEventManager:call(callFrame, nArguments) end
 
 ------------------------------------

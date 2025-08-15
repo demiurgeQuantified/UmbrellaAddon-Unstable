@@ -161,7 +161,7 @@ function IsoChunk:LoadOrCreate(wx, wy, fromServer) end
 --- @param zone Zone zone we're spawning on
 --- @param name string
 --- @param type VehicleType
---- @return boolean _ true if succed
+--- @return boolean # true if succed
 function IsoChunk:RandomizeModel(v, zone, name, type) end
 
 --- @public

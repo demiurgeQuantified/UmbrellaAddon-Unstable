@@ -43,7 +43,7 @@ function PZMath.acosf(arg0) end
 --- @param x number value in [0..1]
 --- @param m number
 --- @param n number
---- @return number _ value in [0..1]
+--- @return number # value in [0..1]
 function PZMath.almostIdentity(x, m, n) end
 
 --- @public
@@ -57,7 +57,7 @@ function PZMath.almostIdentity(x, m, n) end
 --- it is very fast to evaluate.
 ---
 --- @param x number value in [0..1]
---- @return number _ value in [0..1]
+--- @return number # value in [0..1]
 function PZMath.almostUnitIdentity(x) end
 
 --- @public
@@ -129,7 +129,7 @@ function PZMath.clamp(arg0, arg1, arg2) end
 --- @param val number
 --- @param min number
 --- @param max number
---- @return number _ min <= val <= max
+--- @return number # min <= val <= max
 function PZMath.clamp(val, min, max) end
 
 --- @public
@@ -140,7 +140,7 @@ function PZMath.clamp(val, min, max) end
 --- @param val integer
 --- @param min integer
 --- @param max integer
---- @return integer _ min <= val <= max
+--- @return integer # min <= val <= max
 function PZMath.clamp(val, min, max) end
 
 --- @public

@@ -33,5 +33,5 @@ function LogSeverity.valueOf(arg0) end
 --- Returns an array containing the constants of this enum class, in the order they
 --- declared.
 ---
---- @return LogSeverity[] _ an array containing the constants of this enum class, in the order they are declared
+--- @return LogSeverity[] # an array containing the constants of this enum class, in the order they are declared
 function LogSeverity.values() end

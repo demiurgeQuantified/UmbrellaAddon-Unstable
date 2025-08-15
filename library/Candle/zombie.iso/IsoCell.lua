@@ -42,7 +42,7 @@ function IsoCell.getBComponent(col) end
 
 --- @public
 --- @static
---- @return Stack _ the getBuildings
+--- @return Stack # the getBuildings
 function IsoCell.getBuildings() end
 
 --- @public
@@ -68,7 +68,7 @@ function IsoCell.getInstance() end
 
 --- @public
 --- @static
---- @return integer _ the MaxHeight
+--- @return integer # the MaxHeight
 function IsoCell.getMaxHeight() end
 
 --- @public
@@ -410,7 +410,7 @@ function IsoCell:createNewGridSquare(x, y, z, recalcAll) end
 function IsoCell:flattenAnyFoliage(arg0, arg1) end
 
 --- @public
---- @return ArrayList _ the addList
+--- @return ArrayList # the addList
 function IsoCell:getAddList() end
 
 --- @public
@@ -420,11 +420,11 @@ function IsoCell:getAddList() end
 function IsoCell:getBestBuildings(criteria, count) end
 
 --- @public
---- @return ArrayList _ the BuildingList
+--- @return ArrayList # the BuildingList
 function IsoCell:getBuildingList() end
 
 --- @public
---- @return HashMap _ the BuildingScores
+--- @return HashMap # the BuildingScores
 function IsoCell:getBuildingScores() end
 
 --- @public
@@ -452,15 +452,15 @@ function IsoCell:getChunkMap(pl) end
 function IsoCell:getClosestBuildingExcept(chr, except) end
 
 --- @public
---- @return integer _ the currentLX
+--- @return integer # the currentLX
 function IsoCell:getCurrentLightX() end
 
 --- @public
---- @return integer _ the currentLY
+--- @return integer # the currentLY
 function IsoCell:getCurrentLightY() end
 
 --- @public
---- @return integer _ the currentLZ
+--- @return integer # the currentLZ
 function IsoCell:getCurrentLightZ() end
 
 --- @public
@@ -474,7 +474,7 @@ function IsoCell:getCurrentLotHeader() end
 function IsoCell:getDangerScore(x, y) end
 
 --- @public
---- @return OnceEvery _ the dangerUpdate
+--- @return OnceEvery # the dangerUpdate
 function IsoCell:getDangerUpdate() end
 
 --- @public
@@ -536,7 +536,7 @@ function IsoCell:getHeatSourceHighestTemperature(surroundingAirTemperature, x, y
 function IsoCell:getHeatSourceTemperature(x, y, z) end
 
 --- @public
---- @return integer _ the height
+--- @return integer # the height
 function IsoCell:getHeight() end
 
 --- @public
@@ -544,11 +544,11 @@ function IsoCell:getHeight() end
 function IsoCell:getHeightInTiles() end
 
 --- @public
---- @return Stack _ the LamppostPositions
+--- @return Stack # the LamppostPositions
 function IsoCell:getLamppostPositions() end
 
 --- @public
---- @return Thread _ the LightInfoUpdate
+--- @return Thread # the LightInfoUpdate
 function IsoCell:getLightInfoUpdate() end
 
 --- @public
@@ -567,27 +567,27 @@ function IsoCell:getLuaObjectList() end
 function IsoCell:getMaxFloors() end
 
 --- @public
---- @return integer _ the maxX
+--- @return integer # the maxX
 function IsoCell:getMaxX() end
 
 --- @public
---- @return integer _ the maxY
+--- @return integer # the maxY
 function IsoCell:getMaxY() end
 
 --- @public
---- @return integer _ the maxZ
+--- @return integer # the maxZ
 function IsoCell:getMaxZ() end
 
 --- @public
---- @return integer _ the minX
+--- @return integer # the minX
 function IsoCell:getMinX() end
 
 --- @public
---- @return integer _ the minY
+--- @return integer # the minY
 function IsoCell:getMinY() end
 
 --- @public
---- @return integer _ the minZ
+--- @return integer # the minZ
 function IsoCell:getMinZ() end
 
 --- @public
@@ -601,7 +601,7 @@ function IsoCell:getNearestVisibleZombie(playerIndex) end
 function IsoCell:getNetworkPlayer(RemoteID) end
 
 --- @public
---- @return ArrayList _ the ObjectList
+--- @return ArrayList # the ObjectList
 function IsoCell:getObjectList() end
 
 --- @public
@@ -625,11 +625,11 @@ function IsoCell:getProcessIsoObjectRemove() end
 function IsoCell:getProcessIsoObjects() end
 
 --- @public
---- @return ArrayList _ the ProcessItems
+--- @return ArrayList # the ProcessItems
 function IsoCell:getProcessItems() end
 
 --- @public
---- @return ArrayList _ the ProcessItemsRemove
+--- @return ArrayList # the ProcessItemsRemove
 function IsoCell:getProcessItemsRemove() end
 
 --- @public
@@ -637,7 +637,7 @@ function IsoCell:getProcessItemsRemove() end
 function IsoCell:getProcessWorldItems() end
 
 --- @public
---- @return ArrayList _ the PushableObjectList
+--- @return ArrayList # the PushableObjectList
 function IsoCell:getPushableObjectList() end
 
 --- @public
@@ -660,11 +660,11 @@ function IsoCell:getRandomOutdoorTile() end
 function IsoCell:getRelativeGridSquare(x, y, z) end
 
 --- @public
---- @return ArrayList _ the RemoteSurvivorList
+--- @return ArrayList # the RemoteSurvivorList
 function IsoCell:getRemoteSurvivorList() end
 
 --- @public
---- @return ArrayList _ the removeList
+--- @return ArrayList # the removeList
 function IsoCell:getRemoveList() end
 
 --- @public
@@ -673,7 +673,7 @@ function IsoCell:getRemoveList() end
 function IsoCell:getRoom(ID) end
 
 --- @public
---- @return ArrayList _ the RoomList
+--- @return ArrayList # the RoomList
 function IsoCell:getRoomList() end
 
 --- @public
@@ -685,7 +685,7 @@ function IsoCell:getSnowTarget() end
 function IsoCell:getSpriteManager() end
 
 --- @public
---- @return ArrayList _ the StaticUpdaterObjectList
+--- @return ArrayList # the StaticUpdaterObjectList
 function IsoCell:getStaticUpdaterObjectList() end
 
 --- @public
@@ -701,7 +701,7 @@ function IsoCell:getVehicles() end
 function IsoCell:getWeatherFX() end
 
 --- @public
---- @return integer _ the width
+--- @return integer # the width
 function IsoCell:getWidth() end
 
 --- @public
@@ -713,15 +713,15 @@ function IsoCell:getWidthInTiles() end
 function IsoCell:getWindowList() end
 
 --- @public
---- @return integer _ the worldX
+--- @return integer # the worldX
 function IsoCell:getWorldX() end
 
 --- @public
---- @return integer _ the worldY
+--- @return integer # the worldY
 function IsoCell:getWorldY() end
 
 --- @public
---- @return ArrayList _ the ZombieList
+--- @return ArrayList # the ZombieList
 function IsoCell:getZombieList() end
 
 --- @public
@@ -754,7 +754,7 @@ function IsoCell:isInChunkMap(x, y) end
 function IsoCell:isNull(x, y, z) end
 
 --- @public
---- @return boolean _ the safeToAdd
+--- @return boolean # the safeToAdd
 function IsoCell:isSafeToAdd() end
 
 --- @public

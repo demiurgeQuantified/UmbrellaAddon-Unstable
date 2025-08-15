@@ -33,7 +33,7 @@ function PlayerEmoteState:execute(owner) end
 function PlayerEmoteState:exit(owner) end
 
 --- @public
---- @return boolean _ TRUE if this state handles the "Cancel Action" key or the B controller button.
+--- @return boolean # TRUE if this state handles the "Cancel Action" key or the B controller button.
 function PlayerEmoteState:isDoingActionThatCanBeCancelled() end
 
 --- @public

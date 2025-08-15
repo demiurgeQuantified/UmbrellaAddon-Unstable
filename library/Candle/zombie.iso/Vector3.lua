@@ -44,7 +44,7 @@ function Vector3.sub(a, b, out) end
 --- Add another vector to this one and return as a new vector
 ---
 --- @param other Vector2 The other Vector2 to add to this one
---- @return Vector2 _ The result as new Vector2
+--- @return Vector2 # The result as new Vector2
 function Vector3:add(other) end
 
 --- @public
@@ -52,7 +52,7 @@ function Vector3:add(other) end
 --- Add another vector to this one and store the result in this one
 ---
 --- @param other Vector2 The other Vector2 to add to this one
---- @return Vector3 _ This vector, with the other vector added
+--- @return Vector3 # This vector, with the other vector added
 function Vector3:addToThis(other) end
 
 --- @public
@@ -73,7 +73,7 @@ function Vector3:aimAt(other) end
 --- Calculate the angle between this point and another
 ---
 --- @param other Vector2 The second point as vector
---- @return number _ The angle between them, in radians
+--- @return number # The angle between them, in radians
 function Vector3:angleTo(other) end
 
 --- @public
@@ -95,7 +95,7 @@ function Vector3:clone() end
 --- Calculate the distance between this point and another
 ---
 --- @param other Vector2 The second point as vector
---- @return number _ The distance between them
+--- @return number # The distance between them
 function Vector3:distanceTo(other) end
 
 --- @public
@@ -130,28 +130,28 @@ function Vector3:dot3d(other) end
 --- See if this vector is equal to another
 ---
 --- @param other any A Vector2 to compare this one to
---- @return boolean _ true if other is a Vector2 equal to this one
+--- @return boolean # true if other is a Vector2 equal to this one
 function Vector3:equals(other) end
 
 --- @public
 ---
 --- get the direction in which this vector is pointing
 ---
---- @return number _ The direction in which this vector is pointing in radians
+--- @return number # The direction in which this vector is pointing in radians
 function Vector3:getDirection() end
 
 --- @public
 ---
 --- get the length of this vector
 ---
---- @return number _ The length of this vector
+--- @return number # The length of this vector
 function Vector3:getLength() end
 
 --- @public
 ---
 --- get the length squared (L^2) of this vector
 ---
---- @return number _ The length squared of this vector
+--- @return number # The length squared of this vector
 function Vector3:getLengthSq() end
 
 --- @public

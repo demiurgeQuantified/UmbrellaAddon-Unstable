@@ -35,22 +35,22 @@ function IsoCamera.getCameraCharacterZ() end
 
 --- @public
 --- @static
---- @return number _ the lastOffX
+--- @return number # the lastOffX
 function IsoCamera.getLastOffX() end
 
 --- @public
 --- @static
---- @return number _ the lastOffY
+--- @return number # the lastOffY
 function IsoCamera.getLastOffY() end
 
 --- @public
 --- @static
---- @return number _ the OffX
+--- @return number # the OffX
 function IsoCamera.getOffX() end
 
 --- @public
 --- @static
---- @return number _ the OffY
+--- @return number # the OffY
 function IsoCamera.getOffY() end
 
 --- @public
@@ -123,7 +123,7 @@ function IsoCamera.getTOffY() end
 
 --- @public
 --- @static
---- @return integer _ the TargetTileY
+--- @return integer # the TargetTileY
 function IsoCamera.getTargetTileY() end
 
 --- @public

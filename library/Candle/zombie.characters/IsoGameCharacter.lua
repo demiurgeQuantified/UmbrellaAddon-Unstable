@@ -30,22 +30,22 @@ function IsoGameCharacter.canContainerHoldCorpse(arg0) end
 
 --- @public
 --- @static
---- @return ColorInfo _ the inf
+--- @return ColorInfo # the inf
 function IsoGameCharacter.getInf() end
 
 --- @public
 --- @static
---- @return int[] _ the LevelUpLevels
+--- @return int[] # the LevelUpLevels
 function IsoGameCharacter.getLevelUpLevels() end
 
 --- @public
 --- @static
---- @return HashMap _ the SurvivorMap
+--- @return HashMap # the SurvivorMap
 function IsoGameCharacter.getSurvivorMap() end
 
 --- @public
 --- @static
---- @return Vector2 _ the tempo
+--- @return Vector2 # the tempo
 function IsoGameCharacter.getTempo() end
 
 --- @public
@@ -1771,7 +1771,7 @@ function IsoGameCharacter:getAttachedItems() end
 function IsoGameCharacter:getAttachedLocationGroup() end
 
 --- @public
---- @return IsoGridSquare _ the attackTargetSquare
+--- @return IsoGridSquare # the attackTargetSquare
 function IsoGameCharacter:getAttackTargetSquare() end
 
 --- @public
@@ -1779,7 +1779,7 @@ function IsoGameCharacter:getAttackTargetSquare() end
 function IsoGameCharacter:getAttackVars() end
 
 --- @public
---- @return IsoGameCharacter _ the AttackedBy
+--- @return IsoGameCharacter # the AttackedBy
 function IsoGameCharacter:getAttackedBy() end
 
 --- @public
@@ -1839,27 +1839,27 @@ function IsoGameCharacter:getBeenMovingFor() end
 function IsoGameCharacter:getBeenSprintingFor() end
 
 --- @public
---- @return number _ the BetaDelta
+--- @return number # the BetaDelta
 function IsoGameCharacter:getBetaDelta() end
 
 --- @public
---- @return number _ the BetaEffect
+--- @return number # the BetaEffect
 function IsoGameCharacter:getBetaEffect() end
 
 --- @public
---- @return number _ the BloodImpactX
+--- @return number # the BloodImpactX
 function IsoGameCharacter:getBloodImpactX() end
 
 --- @public
---- @return number _ the BloodImpactY
+--- @return number # the BloodImpactY
 function IsoGameCharacter:getBloodImpactY() end
 
 --- @public
---- @return number _ the BloodImpactZ
+--- @return number # the BloodImpactZ
 function IsoGameCharacter:getBloodImpactZ() end
 
 --- @public
---- @return IsoSprite _ the bloodSplat
+--- @return IsoSprite # the bloodSplat
 function IsoGameCharacter:getBloodSplat() end
 
 --- @public
@@ -1867,7 +1867,7 @@ function IsoGameCharacter:getBloodSplat() end
 function IsoGameCharacter:getBlurFactor() end
 
 --- @public
---- @return BodyDamage _ the BodyDamage
+--- @return BodyDamage # the BodyDamage
 function IsoGameCharacter:getBodyDamage() end
 
 --- @public
@@ -1898,15 +1898,15 @@ function IsoGameCharacter:getBumpType() end
 function IsoGameCharacter:getBumpedChr() end
 
 --- @public
---- @return Stack _ the CharacterActions
+--- @return Stack # the CharacterActions
 function IsoGameCharacter:getCharacterActions() end
 
 --- @public
---- @return Stack _ the CharacterActions
+--- @return Stack # the CharacterActions
 function IsoGameCharacter:getCharacterActions() end
 
 --- @public
---- @return CharacterTraits _ the CharacterTraits, a TraitCollection extended with direct links to known traits
+--- @return CharacterTraits # the CharacterTraits, a TraitCollection extended with direct links to known traits
 function IsoGameCharacter:getCharacterTraits() end
 
 --- @public
@@ -1955,23 +1955,23 @@ function IsoGameCharacter:getClothingDiscomfortModifier() end
 function IsoGameCharacter:getClothingItem_Back() end
 
 --- @public
---- @return InventoryItem _ the ClothingItem_Feet
+--- @return InventoryItem # the ClothingItem_Feet
 function IsoGameCharacter:getClothingItem_Feet() end
 
 --- @public
---- @return InventoryItem _ the ClothingItem_Hands
+--- @return InventoryItem # the ClothingItem_Hands
 function IsoGameCharacter:getClothingItem_Hands() end
 
 --- @public
---- @return InventoryItem _ the ClothingItem_Head
+--- @return InventoryItem # the ClothingItem_Head
 function IsoGameCharacter:getClothingItem_Head() end
 
 --- @public
---- @return InventoryItem _ the ClothingItem_Legs
+--- @return InventoryItem # the ClothingItem_Legs
 function IsoGameCharacter:getClothingItem_Legs() end
 
 --- @public
---- @return InventoryItem _ the ClothingItem_Torso
+--- @return InventoryItem # the ClothingItem_Torso
 function IsoGameCharacter:getClothingItem_Torso() end
 
 --- @public
@@ -2045,7 +2045,7 @@ function IsoGameCharacter:getCurrentStateName() end
 function IsoGameCharacter:getCurrentVerticalAimAngle() end
 
 --- @public
---- @return number _ the dangerLevels
+--- @return number # the dangerLevels
 function IsoGameCharacter:getDangerLevels() end
 
 --- @public
@@ -2057,7 +2057,7 @@ function IsoGameCharacter:getDebugMonitor() end
 function IsoGameCharacter:getDebugMonitor() end
 
 --- @public
---- @return State _ the defaultState
+--- @return State # the defaultState
 function IsoGameCharacter:getDefaultState() end
 
 --- @public
@@ -2079,11 +2079,11 @@ function IsoGameCharacter:getDeferredMovementFromRagdoll(arg0) end
 function IsoGameCharacter:getDeferredRotationWeight() end
 
 --- @public
---- @return number _ the DepressDelta
+--- @return number # the DepressDelta
 function IsoGameCharacter:getDepressDelta() end
 
 --- @public
---- @return number _ the DepressEffect
+--- @return number # the DepressEffect
 function IsoGameCharacter:getDepressEffect() end
 
 --- @public
@@ -2092,15 +2092,15 @@ function IsoGameCharacter:getDepressEffect() end
 function IsoGameCharacter:getDescription(arg0) end
 
 --- @public
---- @return SurvivorDesc _ the descriptor
+--- @return SurvivorDesc # the descriptor
 function IsoGameCharacter:getDescriptor() end
 
 --- @public
---- @return SurvivorDesc _ the descriptor
+--- @return SurvivorDesc # the descriptor
 function IsoGameCharacter:getDescriptor() end
 
 --- @public
---- @return integer _ the DieCount
+--- @return integer # the DieCount
 function IsoGameCharacter:getDieCount() end
 
 --- @public
@@ -2138,7 +2138,7 @@ function IsoGameCharacter:getEmitter() end
 function IsoGameCharacter:getEmitter() end
 
 --- @public
---- @return Stack _ the EnemyList
+--- @return Stack # the EnemyList
 function IsoGameCharacter:getEnemyList() end
 
 --- @public
@@ -2168,11 +2168,11 @@ function IsoGameCharacter:getFMODParameters() end
 function IsoGameCharacter:getFallSpeedSeverity() end
 
 --- @public
---- @return number _ the fallTime
+--- @return number # the fallTime
 function IsoGameCharacter:getFallTime() end
 
 --- @public
---- @return Stack _ the FamiliarBuildings
+--- @return Stack # the FamiliarBuildings
 function IsoGameCharacter:getFamiliarBuildings() end
 
 --- @public
@@ -2184,11 +2184,11 @@ function IsoGameCharacter:getFatigueMod() end
 function IsoGameCharacter:getFatiqueMultiplier() end
 
 --- @public
---- @return AStarPathFinderResult _ the finder
+--- @return AStarPathFinderResult # the finder
 function IsoGameCharacter:getFinder() end
 
 --- @public
---- @return number _ the FireKillRate
+--- @return number # the FireKillRate
 function IsoGameCharacter:getFireKillRate() end
 
 --- @public
@@ -2196,19 +2196,19 @@ function IsoGameCharacter:getFireKillRate() end
 function IsoGameCharacter:getFireMode() end
 
 --- @public
---- @return integer _ the FireSpreadProbability
+--- @return integer # the FireSpreadProbability
 function IsoGameCharacter:getFireSpreadProbability() end
 
 --- @public
---- @return IsoGameCharacter _ the FollowingTarget
+--- @return IsoGameCharacter # the FollowingTarget
 function IsoGameCharacter:getFollowingTarget() end
 
 --- @public
---- @return number _ the ForceWakeUpTime
+--- @return number # the ForceWakeUpTime
 function IsoGameCharacter:getForceWakeUpTime() end
 
 --- @public
---- @return Vector2 _ the character's forward direction vector
+--- @return Vector2 # the character's forward direction vector
 --- @deprecated
 function IsoGameCharacter:getForwardDirection() end
 
@@ -2249,11 +2249,11 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return AnimationVariableSource
+--- @return IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
---- @return IAnimationVariableSource
+--- @return AnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
@@ -2344,7 +2344,7 @@ function IsoGameCharacter:getHeadLookHorizontal() end
 function IsoGameCharacter:getHeadLookVertical() end
 
 --- @public
---- @return number _ the Health
+--- @return number # the Health
 function IsoGameCharacter:getHealth() end
 
 --- @public
@@ -2392,7 +2392,7 @@ function IsoGameCharacter:getHoursSurvived() end
 function IsoGameCharacter:getHungerMultiplier() end
 
 --- @public
---- @return string _ the hurtSound
+--- @return string # the hurtSound
 function IsoGameCharacter:getHurtSound() end
 
 --- @public
@@ -2408,11 +2408,11 @@ function IsoGameCharacter:getIdleSquareTime() end
 function IsoGameCharacter:getIgnoreMovement() end
 
 --- @public
---- @return ItemContainer _ the inventory
+--- @return ItemContainer # the inventory
 function IsoGameCharacter:getInventory() end
 
 --- @public
---- @return ItemContainer _ the inventory
+--- @return ItemContainer # the inventory
 function IsoGameCharacter:getInventory() end
 
 --- @public
@@ -2453,11 +2453,11 @@ function IsoGameCharacter:getLastBump() end
 function IsoGameCharacter:getLastChatMessage() end
 
 --- @public
---- @return number _ the lastFallSpeed
+--- @return number # the lastFallSpeed
 function IsoGameCharacter:getLastFallSpeed() end
 
 --- @public
---- @return Location _ the LastHeardSound
+--- @return Location # the LastHeardSound
 function IsoGameCharacter:getLastHeardSound() end
 
 --- @public
@@ -2473,7 +2473,7 @@ function IsoGameCharacter:getLastHitCount() end
 function IsoGameCharacter:getLastHourSleeped() end
 
 --- @public
---- @return HashMap _ the LastKnownLocation
+--- @return HashMap # the LastKnownLocation
 function IsoGameCharacter:getLastKnownLocation() end
 
 --- @public
@@ -2482,7 +2482,7 @@ function IsoGameCharacter:getLastKnownLocation() end
 function IsoGameCharacter:getLastKnownLocationOf(character) end
 
 --- @public
---- @return integer _ the LastLocalEnemies
+--- @return integer # the LastLocalEnemies
 function IsoGameCharacter:getLastLocalEnemies() end
 
 --- @public
@@ -2490,15 +2490,15 @@ function IsoGameCharacter:getLastLocalEnemies() end
 function IsoGameCharacter:getLastSpokenLine() end
 
 --- @public
---- @return integer _ the LastZombieKills
+--- @return integer # the LastZombieKills
 function IsoGameCharacter:getLastZombieKills() end
 
 --- @public
---- @return number _ the leaveBodyTimedown
+--- @return number # the leaveBodyTimedown
 function IsoGameCharacter:getLeaveBodyTimedown() end
 
 --- @public
---- @return IsoSprite _ the legsSprite
+--- @return IsoSprite # the legsSprite
 function IsoGameCharacter:getLegsSprite() end
 
 --- @public
@@ -2511,7 +2511,7 @@ function IsoGameCharacter:getLevelMaxForXp() end
 function IsoGameCharacter:getLevelUpLevels(level) end
 
 --- @public
---- @return number _ the LevelUpMultiplier
+--- @return number # the LevelUpMultiplier
 function IsoGameCharacter:getLevelUpMultiplier() end
 
 --- @public
@@ -2523,35 +2523,35 @@ function IsoGameCharacter:getLightInfo2() end
 function IsoGameCharacter:getLightfootMod() end
 
 --- @public
---- @return number _ the llx
+--- @return number # the llx
 function IsoGameCharacter:getLlx() end
 
 --- @public
---- @return number _ the lly
+--- @return number # the lly
 function IsoGameCharacter:getLly() end
 
 --- @public
---- @return number _ the llz
+--- @return number # the llz
 function IsoGameCharacter:getLlz() end
 
 --- @public
---- @return Stack _ the LocalEnemyList
+--- @return Stack # the LocalEnemyList
 function IsoGameCharacter:getLocalEnemyList() end
 
 --- @public
---- @return ArrayList _ the LocalGroupList
+--- @return ArrayList # the LocalGroupList
 function IsoGameCharacter:getLocalGroupList() end
 
 --- @public
---- @return ArrayList _ the LocalList
+--- @return ArrayList # the LocalList
 function IsoGameCharacter:getLocalList() end
 
 --- @public
---- @return ArrayList _ the LocalNeutralList
+--- @return ArrayList # the LocalNeutralList
 function IsoGameCharacter:getLocalNeutralList() end
 
 --- @public
---- @return ArrayList _ the LocalRelevantEnemyList
+--- @return ArrayList # the LocalRelevantEnemyList
 function IsoGameCharacter:getLocalRelevantEnemyList() end
 
 --- @public
@@ -2601,15 +2601,15 @@ function IsoGameCharacter:getMaxChatLines() end
 function IsoGameCharacter:getMaxTwist() end
 
 --- @public
---- @return integer _ the maxWeight
+--- @return integer # the maxWeight
 function IsoGameCharacter:getMaxWeight() end
 
 --- @public
---- @return integer _ the maxWeight
+--- @return integer # the maxWeight
 function IsoGameCharacter:getMaxWeight() end
 
 --- @public
---- @return integer _ the maxWeightBase
+--- @return integer # the maxWeightBase
 function IsoGameCharacter:getMaxWeightBase() end
 
 --- @public
@@ -2645,11 +2645,11 @@ function IsoGameCharacter:getModelInstance() end
 function IsoGameCharacter:getMomentumScalar() end
 
 --- @public
---- @return Moodles _ the Moodles
+--- @return Moodles # the Moodles
 function IsoGameCharacter:getMoodles() end
 
 --- @public
---- @return Moodles _ the Moodles
+--- @return Moodles # the Moodles
 function IsoGameCharacter:getMoodles() end
 
 --- @public
@@ -2657,7 +2657,7 @@ function IsoGameCharacter:getMoodles() end
 function IsoGameCharacter:getMoveDelta() end
 
 --- @public
---- @return Vector2 _ the moveForwardVec
+--- @return Vector2 # the moveForwardVec
 function IsoGameCharacter:getMoveForwardVec() end
 
 --- @public
@@ -2682,7 +2682,7 @@ function IsoGameCharacter:getNetworkCharacterAI() end
 function IsoGameCharacter:getNextAnimationTranslationLength() end
 
 --- @public
---- @return integer _ the NextWander
+--- @return integer # the NextWander
 function IsoGameCharacter:getNextWander() end
 
 --- @public
@@ -2690,7 +2690,7 @@ function IsoGameCharacter:getNextWander() end
 function IsoGameCharacter:getNimbleMod() end
 
 --- @public
---- @return integer _ the NumSurvivorsInVicinity
+--- @return integer # the NumSurvivorsInVicinity
 function IsoGameCharacter:getNumSurvivorsInVicinity() end
 
 --- @public
@@ -2722,11 +2722,11 @@ function IsoGameCharacter:getOwnerPlayer() end
 function IsoGameCharacter:getPacingMod() end
 
 --- @public
---- @return number _ the PainDelta
+--- @return number # the PainDelta
 function IsoGameCharacter:getPainDelta() end
 
 --- @public
---- @return number _ the PainEffect
+--- @return number # the PainEffect
 function IsoGameCharacter:getPainEffect() end
 
 --- @public
@@ -2746,31 +2746,31 @@ function IsoGameCharacter:getPathFindBehavior2() end
 function IsoGameCharacter:getPathFindBehavior2() end
 
 --- @public
---- @return integer _ the pathIndex
+--- @return integer # the pathIndex
 function IsoGameCharacter:getPathIndex() end
 
 --- @public
---- @return integer _ the PathTargetX
+--- @return integer # the PathTargetX
 function IsoGameCharacter:getPathTargetX() end
 
 --- @public
---- @return integer _ the PathTargetY
+--- @return integer # the PathTargetY
 function IsoGameCharacter:getPathTargetY() end
 
 --- @public
---- @return integer _ the PathTargetZ
+--- @return integer # the PathTargetZ
 function IsoGameCharacter:getPathTargetZ() end
 
 --- @public
---- @return integer _ the Patience
+--- @return integer # the Patience
 function IsoGameCharacter:getPatience() end
 
 --- @public
---- @return integer _ the PatienceMax
+--- @return integer # the PatienceMax
 function IsoGameCharacter:getPatienceMax() end
 
 --- @public
---- @return integer _ the PatienceMin
+--- @return integer # the PatienceMin
 function IsoGameCharacter:getPatienceMin() end
 
 --- @public
@@ -2800,7 +2800,7 @@ function IsoGameCharacter:getPerkLevel(perks) end
 function IsoGameCharacter:getPerkLevel(perks) end
 
 --- @public
---- @return ArrayList _ the PerkList
+--- @return ArrayList # the PerkList
 function IsoGameCharacter:getPerkList() end
 
 --- @public
@@ -2826,11 +2826,11 @@ function IsoGameCharacter:getPreviousActionContextStateName() end
 function IsoGameCharacter:getPreviousStateName() end
 
 --- @public
---- @return InventoryItem _ the leftHandItem
+--- @return InventoryItem # the leftHandItem
 function IsoGameCharacter:getPrimaryHandItem() end
 
 --- @public
---- @return InventoryItem _ the leftHandItem
+--- @return InventoryItem # the leftHandItem
 function IsoGameCharacter:getPrimaryHandItem() end
 
 --- @public
@@ -2866,15 +2866,15 @@ function IsoGameCharacter:getReadPrintMedia() end
 function IsoGameCharacter:getReadyModelData() end
 
 --- @public
---- @return integer _ the ReanimAnimDelay
+--- @return integer # the ReanimAnimDelay
 function IsoGameCharacter:getReanimAnimDelay() end
 
 --- @public
---- @return integer _ the ReanimAnimFrame
+--- @return integer # the ReanimAnimFrame
 function IsoGameCharacter:getReanimAnimFrame() end
 
 --- @public
---- @return number _ the ReanimateTimer
+--- @return number # the ReanimateTimer
 function IsoGameCharacter:getReanimateTimer() end
 
 --- @public
@@ -2906,7 +2906,7 @@ function IsoGameCharacter:getRecoveryMod() end
 function IsoGameCharacter:getReduceInfectionPower() end
 
 --- @public
---- @return integer _ the RemoteID
+--- @return integer # the RemoteID
 function IsoGameCharacter:getRemoteID() end
 
 --- @public
@@ -2930,11 +2930,11 @@ function IsoGameCharacter:getSayLine() end
 function IsoGameCharacter:getSayLine() end
 
 --- @public
---- @return InventoryItem _ the rightHandItem
+--- @return InventoryItem # the rightHandItem
 function IsoGameCharacter:getSecondaryHandItem() end
 
 --- @public
---- @return InventoryItem _ the rightHandItem
+--- @return InventoryItem # the rightHandItem
 function IsoGameCharacter:getSecondaryHandItem() end
 
 --- @public
@@ -2989,19 +2989,19 @@ function IsoGameCharacter:getSitOnFurnitureDirection() end
 function IsoGameCharacter:getSitOnFurnitureObject() end
 
 --- @public
---- @return number _ the SleepingTabletDelta
+--- @return number # the SleepingTabletDelta
 function IsoGameCharacter:getSleepingTabletDelta() end
 
 --- @public
---- @return number _ the SleepingTabletEffect
+--- @return number # the SleepingTabletEffect
 function IsoGameCharacter:getSleepingTabletEffect() end
 
 --- @public
---- @return number _ the slowFactor
+--- @return number # the slowFactor
 function IsoGameCharacter:getSlowFactor() end
 
 --- @public
---- @return number _ the slowTimer
+--- @return number # the slowTimer
 function IsoGameCharacter:getSlowTimer() end
 
 --- @public
@@ -3013,15 +3013,15 @@ function IsoGameCharacter:getSneakLimpSpeedScale() end
 function IsoGameCharacter:getSneakSpotMod() end
 
 --- @public
---- @return Color _ the SpeakColour
+--- @return Color # the SpeakColour
 function IsoGameCharacter:getSpeakColour() end
 
 --- @public
---- @return number _ the SpeakTime
+--- @return number # the SpeakTime
 function IsoGameCharacter:getSpeakTime() end
 
 --- @public
---- @return number _ the speedMod
+--- @return number # the speedMod
 function IsoGameCharacter:getSpeedMod() end
 
 --- @public
@@ -3041,11 +3041,11 @@ function IsoGameCharacter:getSpriteDef() end
 function IsoGameCharacter:getSquare() end
 
 --- @public
---- @return number _ the staggerTimeMod
+--- @return number # the staggerTimeMod
 function IsoGameCharacter:getStaggerTimeMod() end
 
 --- @public
---- @return StateMachine _ the stateMachine
+--- @return StateMachine # the stateMachine
 function IsoGameCharacter:getStateMachine() end
 
 --- @public
@@ -3054,11 +3054,11 @@ function IsoGameCharacter:getStateMachine() end
 function IsoGameCharacter:getStateMachineParams(state) end
 
 --- @public
---- @return Stats _ the stats
+--- @return Stats # the stats
 function IsoGameCharacter:getStats() end
 
 --- @public
---- @return Stats _ the stats
+--- @return Stats # the stats
 function IsoGameCharacter:getStats() end
 
 --- @public
@@ -3166,7 +3166,7 @@ function IsoGameCharacter:getTimeSinceLastSmoke() end
 function IsoGameCharacter:getTimeSinceLastSmoke() end
 
 --- @public
---- @return integer _ the TimeThumping
+--- @return integer # the TimeThumping
 function IsoGameCharacter:getTimeThumping() end
 
 --- @public
@@ -3182,11 +3182,11 @@ function IsoGameCharacter:getTorchStrength() end
 function IsoGameCharacter:getTotalBlood() end
 
 --- @public
---- @return TraitCollection _ the Traits
+--- @return TraitCollection # the Traits
 function IsoGameCharacter:getTraits() end
 
 --- @public
---- @return TraitCollection _ the Traits
+--- @return TraitCollection # the Traits
 function IsoGameCharacter:getTraits() end
 
 --- @public
@@ -3209,11 +3209,11 @@ function IsoGameCharacter:getUID() end
 function IsoGameCharacter:getUID() end
 
 --- @public
---- @return HandWeapon _ the useHandWeapon
+--- @return HandWeapon # the useHandWeapon
 function IsoGameCharacter:getUseHandWeapon() end
 
 --- @public
---- @return Stack _ the UsedItemsOn
+--- @return Stack # the UsedItemsOn
 function IsoGameCharacter:getUsedItemsOn() end
 
 --- @public
@@ -3237,7 +3237,7 @@ function IsoGameCharacter:getVehicle() end
 function IsoGameCharacter:getVehicle() end
 
 --- @public
---- @return ArrayList _ the VeryCloseEnemyList
+--- @return ArrayList # the VeryCloseEnemyList
 function IsoGameCharacter:getVeryCloseEnemyList() end
 
 --- @public
@@ -3317,11 +3317,11 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return BaseGrappleable
+--- @return IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
---- @return IGrappleable
+--- @return BaseGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
@@ -3333,11 +3333,11 @@ function IsoGameCharacter:getWrappedGrappleable() end
 function IsoGameCharacter:getX() end
 
 --- @public
---- @return XP _ the xp
+--- @return XP # the xp
 function IsoGameCharacter:getXp() end
 
 --- @public
---- @return XP _ the xp
+--- @return XP # the xp
 function IsoGameCharacter:getXp() end
 
 --- @public
@@ -3359,11 +3359,11 @@ function IsoGameCharacter:getY() end
 function IsoGameCharacter:getZ() end
 
 --- @public
---- @return integer _ the ZombieKills
+--- @return integer # the ZombieKills
 function IsoGameCharacter:getZombieKills() end
 
 --- @public
---- @return integer _ the ZombieKills
+--- @return integer # the ZombieKills
 function IsoGameCharacter:getZombieKills() end
 
 --- @public
@@ -3520,7 +3520,7 @@ function IsoGameCharacter:isAiming() end
 function IsoGameCharacter:isAlive() end
 
 --- @public
---- @return boolean _ the AllowConversation
+--- @return boolean # the AllowConversation
 function IsoGameCharacter:isAllowConversation() end
 
 --- @public
@@ -3552,11 +3552,11 @@ function IsoGameCharacter:isAnimationRecorderActive() end
 function IsoGameCharacter:isAnimationUpdatingThisFrame() end
 
 --- @public
---- @return boolean _ the Asleep
+--- @return boolean # the Asleep
 function IsoGameCharacter:isAsleep() end
 
 --- @public
---- @return boolean _ the Asleep
+--- @return boolean # the Asleep
 function IsoGameCharacter:isAsleep() end
 
 --- @public
@@ -3632,7 +3632,7 @@ function IsoGameCharacter:isCanShout() end
 function IsoGameCharacter:isCanUseBrushTool() end
 
 --- @public
---- @return boolean _ the bClimbing
+--- @return boolean # the bClimbing
 function IsoGameCharacter:isClimbing() end
 
 --- @public
@@ -3861,12 +3861,12 @@ function IsoGameCharacter:isHideWeaponModel() end
 function IsoGameCharacter:isHitFromBehind() end
 
 --- @public
---- @return boolean _ the IgnoreMovementForDirection
+--- @return boolean # the IgnoreMovementForDirection
 --- @deprecated
 function IsoGameCharacter:isIgnoreMovementForDirection() end
 
 --- @public
---- @return boolean _ the IgnoreStaggerBack
+--- @return boolean # the IgnoreStaggerBack
 function IsoGameCharacter:isIgnoreStaggerBack() end
 
 --- @public
@@ -3967,11 +3967,11 @@ function IsoGameCharacter:isKnownPoison(arg0) end
 function IsoGameCharacter:isKnownPoison(arg0) end
 
 --- @public
---- @return boolean _ the lastCollidedN
+--- @return boolean # the lastCollidedN
 function IsoGameCharacter:isLastCollidedN() end
 
 --- @public
---- @return boolean _ the lastCollidedW
+--- @return boolean # the lastCollidedW
 function IsoGameCharacter:isLastCollidedW() end
 
 --- @public
@@ -4052,7 +4052,7 @@ function IsoGameCharacter:isOnBed() end
 function IsoGameCharacter:isOnDeathDone() end
 
 --- @public
---- @return boolean _ the OnFire
+--- @return boolean # the OnFire
 function IsoGameCharacter:isOnFire() end
 
 --- @public
@@ -4076,7 +4076,7 @@ function IsoGameCharacter:isOutside() end
 function IsoGameCharacter:isOverEncumbered() end
 
 --- @public
---- @return boolean _ the pathing
+--- @return boolean # the pathing
 function IsoGameCharacter:isPathing() end
 
 --- @public
@@ -4187,7 +4187,7 @@ function IsoGameCharacter:isReading() end
 function IsoGameCharacter:isReading() end
 
 --- @public
---- @return boolean _ the Reanim
+--- @return boolean # the Reanim
 function IsoGameCharacter:isReanim() end
 
 --- @public
@@ -4254,7 +4254,7 @@ function IsoGameCharacter:isRunning() end
 --- Is this character currently culled from the visible scene graph.  Eg. Zombies
 --- seen by the player. Objects outside the rendered window etc.
 ---
---- @return boolean _ TRUE if this character should be drawn. FALSE otherwise.
+--- @return boolean # TRUE if this character should be drawn. FALSE otherwise.
 function IsoGameCharacter:isSceneCulled() end
 
 --- @public
@@ -4309,11 +4309,11 @@ function IsoGameCharacter:isSkipResolveCollision() end
 function IsoGameCharacter:isSneaking() end
 
 --- @public
---- @return boolean _ the Speaking
+--- @return boolean # the Speaking
 function IsoGameCharacter:isSpeaking() end
 
 --- @public
---- @return boolean _ the Speaking
+--- @return boolean # the Speaking
 function IsoGameCharacter:isSpeaking() end
 
 --- @public
@@ -4407,7 +4407,7 @@ function IsoGameCharacter:isVehicleCollision() end
 function IsoGameCharacter:isVehicleCollisionActive(testVehicle) end
 
 --- @public
---- @return boolean _ the VisibleToNPCs
+--- @return boolean # the VisibleToNPCs
 function IsoGameCharacter:isVisibleToNPCs() end
 
 --- @public
@@ -4457,20 +4457,20 @@ function IsoGameCharacter:isZombieAttacking(other) end
 function IsoGameCharacter:isZombiesDontAttack() end
 
 --- @public
---- @return boolean _ the bDoDefer
+--- @return boolean # the bDoDefer
 function IsoGameCharacter:isbDoDefer() end
 
 --- @public
---- @return boolean _ the bFalling
+--- @return boolean # the bFalling
 function IsoGameCharacter:isbFalling() end
 
 --- @public
---- @return boolean _ the bOnBed
+--- @return boolean # the bOnBed
 --- @deprecated
 function IsoGameCharacter:isbOnBed() end
 
 --- @public
---- @return boolean _ the bUseParts
+--- @return boolean # the bUseParts
 function IsoGameCharacter:isbUseParts() end
 
 --- @public

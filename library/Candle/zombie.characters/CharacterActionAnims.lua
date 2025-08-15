@@ -43,5 +43,5 @@ function CharacterActionAnims.valueOf(arg0) end
 --- Returns an array containing the constants of this enum class, in the order they
 --- declared.
 ---
---- @return CharacterActionAnims[] _ an array containing the constants of this enum class, in the order they are declared
+--- @return CharacterActionAnims[] # an array containing the constants of this enum class, in the order they are declared
 function CharacterActionAnims.values() end

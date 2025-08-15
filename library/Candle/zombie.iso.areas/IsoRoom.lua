@@ -117,7 +117,7 @@ function IsoRoom:getSquares() end
 function IsoRoom:getTileList() end
 
 --- @public
---- @return ArrayList _ the WaterSources
+--- @return ArrayList # the WaterSources
 function IsoRoom:getWaterSources() end
 
 --- @public

@@ -560,15 +560,15 @@ function UIElement:getAbsoluteY() end
 function UIElement:getClickedValue() end
 
 --- @public
---- @return ArrayList _ the Controls
+--- @return ArrayList # the Controls
 function UIElement:getControls() end
 
 --- @public
---- @return number _ the height
+--- @return number # the height
 function UIElement:getHeight() end
 
 --- @public
---- @return number _ the height
+--- @return number # the height
 function UIElement:getHeight() end
 
 --- @public
@@ -580,15 +580,15 @@ function UIElement:getMaxDrawHeight() end
 function UIElement:getMaxDrawHeight() end
 
 --- @public
---- @return UIElementInterface _ the Parent
+--- @return UIElementInterface # the Parent
 function UIElement:getParent() end
 
 --- @public
---- @return UIElement _ the Parent
+--- @return UIElement # the Parent
 function UIElement:getParent() end
 
 --- @public
---- @return UIElementInterface _ the Parent
+--- @return UIElementInterface # the Parent
 function UIElement:getParent() end
 
 --- @public
@@ -616,7 +616,7 @@ function UIElement:getScrollHeight() end
 function UIElement:getScrollWithParent() end
 
 --- @public
---- @return table _ the table
+--- @return table # the table
 function UIElement:getTable() end
 
 --- @public
@@ -624,19 +624,19 @@ function UIElement:getTable() end
 function UIElement:getUIName() end
 
 --- @public
---- @return number _ the width
+--- @return number # the width
 function UIElement:getWidth() end
 
 --- @public
---- @return number _ the width
+--- @return number # the width
 function UIElement:getWidth() end
 
 --- @public
---- @return number _ the x
+--- @return number # the x
 function UIElement:getX() end
 
 --- @public
---- @return number _ the x
+--- @return number # the x
 function UIElement:getX() end
 
 --- @public
@@ -649,11 +649,11 @@ function UIElement:getXScroll() end
 function UIElement:getXScrolled(parent) end
 
 --- @public
---- @return number _ the y
+--- @return number # the y
 function UIElement:getY() end
 
 --- @public
---- @return number _ the y
+--- @return number # the y
 function UIElement:getY() end
 
 --- @public
@@ -682,19 +682,19 @@ function UIElement:isAlwaysOnTop() end
 function UIElement:isAlwaysOnTop() end
 
 --- @public
---- @return boolean _ the anchorBottom
+--- @return boolean # the anchorBottom
 function UIElement:isAnchorBottom() end
 
 --- @public
---- @return boolean _ the anchorLeft
+--- @return boolean # the anchorLeft
 function UIElement:isAnchorLeft() end
 
 --- @public
---- @return boolean _ the anchorRight
+--- @return boolean # the anchorRight
 function UIElement:isAnchorRight() end
 
 --- @public
---- @return boolean _ the anchorTop
+--- @return boolean # the anchorTop
 function UIElement:isAnchorTop() end
 
 --- @public
@@ -706,11 +706,11 @@ function UIElement:isBackMost() end
 function UIElement:isBackMost() end
 
 --- @public
---- @return boolean _ the capture
+--- @return boolean # the capture
 function UIElement:isCapture() end
 
 --- @public
---- @return boolean _ the capture
+--- @return boolean # the capture
 function UIElement:isCapture() end
 
 --- @public
@@ -718,11 +718,11 @@ function UIElement:isCapture() end
 function UIElement:isConsumeMouseEvents() end
 
 --- @public
---- @return boolean _ the defaultDraw
+--- @return boolean # the defaultDraw
 function UIElement:isDefaultDraw() end
 
 --- @public
---- @return boolean _ the defaultDraw
+--- @return boolean # the defaultDraw
 function UIElement:isDefaultDraw() end
 
 --- @public
@@ -730,11 +730,11 @@ function UIElement:isDefaultDraw() end
 function UIElement:isEnabled() end
 
 --- @public
---- @return boolean _ the followGameWorld
+--- @return boolean # the followGameWorld
 function UIElement:isFollowGameWorld() end
 
 --- @public
---- @return boolean _ the followGameWorld
+--- @return boolean # the followGameWorld
 function UIElement:isFollowGameWorld() end
 
 --- @public
@@ -746,11 +746,11 @@ function UIElement:isForceCursorVisible() end
 function UIElement:isForceCursorVisible() end
 
 --- @public
---- @return boolean _ the IgnoreLossControl
+--- @return boolean # the IgnoreLossControl
 function UIElement:isIgnoreLossControl() end
 
 --- @public
---- @return boolean _ the IgnoreLossControl
+--- @return boolean # the IgnoreLossControl
 function UIElement:isIgnoreLossControl() end
 
 --- @public
@@ -795,11 +795,11 @@ function UIElement:isPointOver(screenX, screenY) end
 function UIElement:isReallyVisible() end
 
 --- @public
---- @return boolean _ the visible
+--- @return boolean # the visible
 function UIElement:isVisible() end
 
 --- @public
---- @return boolean _ the visible
+--- @return boolean # the visible
 function UIElement:isVisible() end
 
 --- @public

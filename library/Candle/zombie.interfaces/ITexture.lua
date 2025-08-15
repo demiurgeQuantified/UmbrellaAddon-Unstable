@@ -38,7 +38,7 @@ function ITexture:getData() end
 ---
 --- returns the height of image
 ---
---- @return integer _ the height of image
+--- @return integer # the height of image
 function ITexture:getHeight() end
 
 --- @public
@@ -52,7 +52,7 @@ function ITexture:getHeightHW() end
 ---
 --- returns the ID of image in the Vram
 ---
---- @return integer _ the ID of image in the Vram
+--- @return integer # the ID of image in the Vram
 function ITexture:getID() end
 
 --- @public
@@ -63,7 +63,7 @@ function ITexture:getMask() end
 ---
 --- returns the width of image
 ---
---- @return integer _ the width of image
+--- @return integer # the width of image
 function ITexture:getWidth() end
 
 --- @public
@@ -77,28 +77,28 @@ function ITexture:getWidthHW() end
 ---
 --- returns the end X-coordinate
 ---
---- @return number _ the end X-coordinate
+--- @return number # the end X-coordinate
 function ITexture:getXEnd() end
 
 --- @public
 ---
 --- returns the start X-coordinate
 ---
---- @return number _ the start X-coordinate
+--- @return number # the start X-coordinate
 function ITexture:getXStart() end
 
 --- @public
 ---
 --- returns the end Y-coordinate
 ---
---- @return number _ the end Y-coordinate
+--- @return number # the end Y-coordinate
 function ITexture:getYEnd() end
 
 --- @public
 ---
 --- returns the start Y-coordinate
 ---
---- @return number _ the start Y-coordinate
+--- @return number # the start Y-coordinate
 function ITexture:getYStart() end
 
 --- @public
@@ -109,7 +109,7 @@ function ITexture:isDestroyed() end
 ---
 --- indicates if the texture is solid or not.
 ---
---- @return boolean _ if the texture is solid or not.
+--- @return boolean # if the texture is solid or not.
 function ITexture:isSolid() end
 
 --- @public

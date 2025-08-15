@@ -57,7 +57,7 @@ function DrainableComboItem:getInvHeat() end
 function DrainableComboItem:getMaxUses() end
 
 --- @public
---- @return string _ the OnCooked
+--- @return string # the OnCooked
 function DrainableComboItem:getOnCooked() end
 
 --- @public
@@ -65,11 +65,11 @@ function DrainableComboItem:getOnCooked() end
 function DrainableComboItem:getOnEat() end
 
 --- @public
---- @return List _ the ReplaceOnCooked
+--- @return List # the ReplaceOnCooked
 function DrainableComboItem:getReplaceOnCooked() end
 
 --- @public
---- @return string _ the ReplaceOnDeplete
+--- @return string # the ReplaceOnDeplete
 function DrainableComboItem:getReplaceOnDeplete() end
 
 --- @public
@@ -81,19 +81,19 @@ function DrainableComboItem:getReplaceOnDepleteFullType() end
 function DrainableComboItem:getSaveType() end
 
 --- @public
---- @return number _ the ticks
+--- @return number # the ticks
 function DrainableComboItem:getTicks() end
 
 --- @public
---- @return integer _ the ticksPerEquipUse
+--- @return integer # the ticksPerEquipUse
 function DrainableComboItem:getTicksPerEquipUse() end
 
 --- @public
---- @return number _ the useDelta
+--- @return number # the useDelta
 function DrainableComboItem:getUseDelta() end
 
 --- @public
---- @return number _ the EmptyWeight
+--- @return number # the EmptyWeight
 function DrainableComboItem:getWeightEmpty() end
 
 --- @public
@@ -109,11 +109,11 @@ function DrainableComboItem:isEnergy() end
 function DrainableComboItem:isFullUses() end
 
 --- @public
---- @return boolean _ the bUseWhileEquiped
+--- @return boolean # the bUseWhileEquiped
 function DrainableComboItem:isUseWhileEquiped() end
 
 --- @public
---- @return boolean _ the bUseWhileUnequiped
+--- @return boolean # the bUseWhileUnequiped
 function DrainableComboItem:isUseWhileUnequiped() end
 
 --- @public

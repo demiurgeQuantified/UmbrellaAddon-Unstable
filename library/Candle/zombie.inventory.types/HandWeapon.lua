@@ -130,7 +130,7 @@ function HandWeapon:getActiveLight() end
 function HandWeapon:getActiveSight() end
 
 --- @public
---- @return number _ the ActualWeight
+--- @return number # the ActualWeight
 function HandWeapon:getActualWeight() end
 
 --- @public
@@ -216,7 +216,7 @@ function HandWeapon:getClickSound() end
 function HandWeapon:getClipSize() end
 
 --- @public
---- @return integer _ the ConditionLowerChance
+--- @return integer # the ConditionLowerChance
 function HandWeapon:getConditionLowerChance() end
 
 --- @public
@@ -250,15 +250,15 @@ function HandWeapon:getDamageMod(chr) end
 function HandWeapon:getDetachableWeaponParts(arg0) end
 
 --- @public
---- @return number _ the doSwingBeforeImpact
+--- @return number # the doSwingBeforeImpact
 function HandWeapon:getDoSwingBeforeImpact() end
 
 --- @public
---- @return integer _ the DoorDamage
+--- @return integer # the DoorDamage
 function HandWeapon:getDoorDamage() end
 
 --- @public
---- @return string _ the doorHitSound
+--- @return string # the doorHitSound
 function HandWeapon:getDoorHitSound() end
 
 --- @public
@@ -274,7 +274,7 @@ function HandWeapon:getEjectAmmoStartSound() end
 function HandWeapon:getEjectAmmoStopSound() end
 
 --- @public
---- @return number _ the EnduranceMod
+--- @return number # the EnduranceMod
 function HandWeapon:getEnduranceMod() end
 
 --- @public
@@ -327,7 +327,7 @@ function HandWeapon:getHitChance() end
 function HandWeapon:getHitFloorSound() end
 
 --- @public
---- @return string _ the impactSound
+--- @return string # the impactSound
 function HandWeapon:getImpactSound() end
 
 --- @public
@@ -352,7 +352,7 @@ function HandWeapon:getJamGunChance() end
 function HandWeapon:getKnockbackMod(chr) end
 
 --- @public
---- @return number _ the KnockdownMod
+--- @return number # the KnockdownMod
 function HandWeapon:getKnockdownMod() end
 
 --- @public
@@ -372,19 +372,19 @@ function HandWeapon:getLowLightBonus() end
 function HandWeapon:getMagazineType() end
 
 --- @public
---- @return number _ the maxAngle
+--- @return number # the maxAngle
 function HandWeapon:getMaxAngle() end
 
 --- @public
---- @return number _ the maxDamage
+--- @return number # the maxDamage
 function HandWeapon:getMaxDamage() end
 
 --- @public
---- @return integer _ the maxHitCount
+--- @return integer # the maxHitCount
 function HandWeapon:getMaxHitCount() end
 
 --- @public
---- @return number _ the maxRange
+--- @return number # the maxRange
 function HandWeapon:getMaxRange() end
 
 --- @public
@@ -402,15 +402,15 @@ function HandWeapon:getMaxSightRange() end
 function HandWeapon:getMaxSightRange(arg0) end
 
 --- @public
---- @return number _ the minAngle
+--- @return number # the minAngle
 function HandWeapon:getMinAngle() end
 
 --- @public
---- @return number _ the minDamage
+--- @return number # the minDamage
 function HandWeapon:getMinDamage() end
 
 --- @public
---- @return number _ the minRange
+--- @return number # the minRange
 function HandWeapon:getMinRange() end
 
 --- @public
@@ -427,7 +427,7 @@ function HandWeapon:getMinSightRange() end
 function HandWeapon:getMinSightRange(arg0) end
 
 --- @public
---- @return number _ the minimumSwingTime
+--- @return number # the minimumSwingTime
 function HandWeapon:getMinimumSwingTime() end
 
 --- @public
@@ -439,7 +439,7 @@ function HandWeapon:getModelWeaponPart() end
 function HandWeapon:getNoiseDuration() end
 
 --- @public
---- @return number _ the noiseFactor
+--- @return number # the noiseFactor
 function HandWeapon:getNoiseFactor() end
 
 --- @public
@@ -451,11 +451,11 @@ function HandWeapon:getNoiseRange() end
 function HandWeapon:getOriginalWeaponSprite() end
 
 --- @public
---- @return number _ the otherBoost
+--- @return number # the otherBoost
 function HandWeapon:getOtherBoost() end
 
 --- @public
---- @return string _ the otherHandRequire
+--- @return string # the otherHandRequire
 function HandWeapon:getOtherHandRequire() end
 
 --- @public
@@ -463,7 +463,7 @@ function HandWeapon:getOtherHandRequire() end
 function HandWeapon:getPerk() end
 
 --- @public
---- @return string _ the physicsObject
+--- @return string # the physicsObject
 function HandWeapon:getPhysicsObject() end
 
 --- @public
@@ -483,7 +483,7 @@ function HandWeapon:getProjectileSpread() end
 function HandWeapon:getProjectileWeightCenter() end
 
 --- @public
---- @return number _ the pushBackMod
+--- @return number # the pushBackMod
 function HandWeapon:getPushBackMod() end
 
 --- @public
@@ -538,11 +538,11 @@ function HandWeapon:getSmokeRange() end
 function HandWeapon:getSoundGain() end
 
 --- @public
---- @return integer _ the soundRadius
+--- @return integer # the soundRadius
 function HandWeapon:getSoundRadius() end
 
 --- @public
---- @return integer _ the soundVolume
+--- @return integer # the soundVolume
 function HandWeapon:getSoundVolume() end
 
 --- @public
@@ -555,7 +555,7 @@ function HandWeapon:getSpeedMod(chr) end
 function HandWeapon:getSpentRoundCount() end
 
 --- @public
---- @return integer _ the splatNumber
+--- @return integer # the splatNumber
 function HandWeapon:getSplatNumber() end
 
 --- @public
@@ -585,11 +585,11 @@ function HandWeapon:getStopPower() end
 function HandWeapon:getSubCategory() end
 
 --- @public
---- @return string _ the swingSound
+--- @return string # the swingSound
 function HandWeapon:getSwingSound() end
 
 --- @public
---- @return number _ the swingTime
+--- @return number # the swingTime
 function HandWeapon:getSwingTime() end
 
 --- @public
@@ -598,7 +598,7 @@ function HandWeapon:getSwingTime() end
 function HandWeapon:getToHitMod(chr) end
 
 --- @public
---- @return number _ the toHitModifier
+--- @return number # the toHitModifier
 function HandWeapon:getToHitModifier() end
 
 --- @public
@@ -643,7 +643,7 @@ function HandWeapon:getWeaponReloadType() end
 function HandWeapon:getWeaponSkill(arg0) end
 
 --- @public
---- @return string _ the weaponSprite
+--- @return string # the weaponSprite
 function HandWeapon:getWeaponSprite() end
 
 --- @public
@@ -651,7 +651,7 @@ function HandWeapon:getWeaponSprite() end
 function HandWeapon:getWeaponSpritesByIndex() end
 
 --- @public
---- @return number _ the Weight
+--- @return number # the Weight
 function HandWeapon:getWeight() end
 
 --- @public
@@ -680,11 +680,11 @@ function HandWeapon:isAimedFirearm() end
 function HandWeapon:isAimedHandWeapon() end
 
 --- @public
---- @return boolean _ the AlwaysKnockdown
+--- @return boolean # the AlwaysKnockdown
 function HandWeapon:isAlwaysKnockdown() end
 
 --- @public
---- @return boolean _ the angleFalloff
+--- @return boolean # the angleFalloff
 function HandWeapon:isAngleFalloff() end
 
 --- @public
@@ -692,11 +692,11 @@ function HandWeapon:isAngleFalloff() end
 function HandWeapon:isBareHands() end
 
 --- @public
---- @return boolean _ the bCanBarracade
+--- @return boolean # the bCanBarracade
 function HandWeapon:isCanBarracade() end
 
 --- @public
---- @return boolean _ the CantAttackWithLowestEndurance
+--- @return boolean # the CantAttackWithLowestEndurance
 function HandWeapon:isCantAttackWithLowestEndurance() end
 
 --- @public
@@ -724,7 +724,7 @@ function HandWeapon:isInstantExplosion() end
 function HandWeapon:isJammed() end
 
 --- @public
---- @return boolean _ the knockBackOnNoDeath
+--- @return boolean # the knockBackOnNoDeath
 function HandWeapon:isKnockBackOnNoDeath() end
 
 --- @public
@@ -736,11 +736,11 @@ function HandWeapon:isManuallyRemoveSpentRounds() end
 function HandWeapon:isMelee() end
 
 --- @public
---- @return boolean _ the MultipleHitConditionAffected
+--- @return boolean # the MultipleHitConditionAffected
 function HandWeapon:isMultipleHitConditionAffected() end
 
 --- @public
---- @return boolean _ the otherHandUse
+--- @return boolean # the otherHandUse
 function HandWeapon:isOtherHandUse() end
 
 --- @public
@@ -752,11 +752,11 @@ function HandWeapon:isPiercingBullets() end
 function HandWeapon:isRackAfterShoot() end
 
 --- @public
---- @return boolean _ the rangeFalloff
+--- @return boolean # the rangeFalloff
 function HandWeapon:isRangeFalloff() end
 
 --- @public
---- @return boolean _ the ranged
+--- @return boolean # the ranged
 function HandWeapon:isRanged() end
 
 --- @public
@@ -773,11 +773,11 @@ function HandWeapon:isRoundChambered() end
 function HandWeapon:isSelectFire() end
 
 --- @public
---- @return boolean _ the shareDamage
+--- @return boolean # the shareDamage
 function HandWeapon:isShareDamage() end
 
 --- @public
---- @return boolean _ the shareEndurance
+--- @return boolean # the shareEndurance
 function HandWeapon:isShareEndurance() end
 
 --- @public
@@ -785,7 +785,7 @@ function HandWeapon:isShareEndurance() end
 function HandWeapon:isSpentRoundChambered() end
 
 --- @public
---- @return boolean _ the splatBloodOnNoDeath
+--- @return boolean # the splatBloodOnNoDeath
 function HandWeapon:isSplatBloodOnNoDeath() end
 
 --- @public
@@ -793,11 +793,11 @@ function HandWeapon:isSplatBloodOnNoDeath() end
 function HandWeapon:isTorchCone() end
 
 --- @public
---- @return boolean _ the useEndurance
+--- @return boolean # the useEndurance
 function HandWeapon:isUseEndurance() end
 
 --- @public
---- @return boolean _ the useSelf
+--- @return boolean # the useSelf
 function HandWeapon:isUseSelf() end
 
 --- @public

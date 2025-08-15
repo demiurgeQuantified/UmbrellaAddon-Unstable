@@ -27,7 +27,7 @@ Stats = {}
 ------------------------------------
 
 --- @public
---- @return number _ the Anger
+--- @return number # the Anger
 function Stats:getAnger() end
 
 --- @public
@@ -35,15 +35,15 @@ function Stats:getAnger() end
 function Stats:getBasicStress() end
 
 --- @public
---- @return number _ the boredom
+--- @return number # the boredom
 function Stats:getBoredom() end
 
 --- @public
---- @return number _ the Drunkenness
+--- @return number # the Drunkenness
 function Stats:getDrunkenness() end
 
 --- @public
---- @return number _ the endurance
+--- @return number # the endurance
 function Stats:getEndurance() end
 
 --- @public
@@ -51,31 +51,31 @@ function Stats:getEndurance() end
 function Stats:getEnduranceRecharging() end
 
 --- @public
---- @return number _ the endurancedanger
+--- @return number # the endurancedanger
 function Stats:getEndurancedanger() end
 
 --- @public
---- @return number _ the endurancelast
+--- @return number # the endurancelast
 function Stats:getEndurancelast() end
 
 --- @public
---- @return number _ the endurancewarn
+--- @return number # the endurancewarn
 function Stats:getEndurancewarn() end
 
 --- @public
---- @return number _ the fatigue
+--- @return number # the fatigue
 function Stats:getFatigue() end
 
 --- @public
---- @return number _ the Fear
+--- @return number # the Fear
 function Stats:getFear() end
 
 --- @public
---- @return number _ the fitness
+--- @return number # the fitness
 function Stats:getFitness() end
 
 --- @public
---- @return number _ the hunger
+--- @return number # the hunger
 function Stats:getHunger() end
 
 --- @public
@@ -87,7 +87,7 @@ function Stats:getIdleness() end
 function Stats:getMaxStressFromCigarettes() end
 
 --- @public
---- @return number _ the morale
+--- @return number # the morale
 function Stats:getMorale() end
 
 --- @public
@@ -103,23 +103,23 @@ function Stats:getNumVeryCloseZombies() end
 function Stats:getNumVisibleZombies() end
 
 --- @public
---- @return number _ the Pain
+--- @return number # the Pain
 function Stats:getPain() end
 
 --- @public
---- @return number _ the Panic
+--- @return number # the Panic
 function Stats:getPanic() end
 
 --- @public
---- @return number _ the Sanity
+--- @return number # the Sanity
 function Stats:getSanity() end
 
 --- @public
---- @return number _ the Sickness
+--- @return number # the Sickness
 function Stats:getSickness() end
 
 --- @public
---- @return number _ the stress
+--- @return number # the stress
 function Stats:getStress() end
 
 --- @public
@@ -127,19 +127,19 @@ function Stats:getStress() end
 function Stats:getStressFromCigarettes() end
 
 --- @public
---- @return number _ the thirst
+--- @return number # the thirst
 function Stats:getThirst() end
 
 --- @public
---- @return number _ the TrippingRotAngle
+--- @return number # the TrippingRotAngle
 function Stats:getTrippingRotAngle() end
 
 --- @public
---- @return integer _ the NumVisibleZombies
+--- @return integer # the NumVisibleZombies
 function Stats:getVisibleZombies() end
 
 --- @public
---- @return boolean _ the Tripping
+--- @return boolean # the Tripping
 function Stats:isTripping() end
 
 --- @public

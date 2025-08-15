@@ -20,11 +20,11 @@ function Profession:addFreeTrait(trait) end
 function Profession:addXPBoost(perk, level) end
 
 --- @public
---- @return integer _ the cost
+--- @return integer # the cost
 function Profession:getCost() end
 
 --- @public
---- @return string _ the description
+--- @return string # the description
 function Profession:getDescription() end
 
 --- @public
@@ -32,7 +32,7 @@ function Profession:getDescription() end
 function Profession:getFreeRecipes() end
 
 --- @public
---- @return Stack _ the FreeTraitStack
+--- @return Stack # the FreeTraitStack
 function Profession:getFreeTraitStack() end
 
 --- @public
@@ -60,7 +60,7 @@ function Profession:getLeftLabel() end
 function Profession:getLeftLabel() end
 
 --- @public
---- @return string _ the name
+--- @return string # the name
 function Profession:getName() end
 
 --- @public
@@ -76,7 +76,7 @@ function Profession:getRightLabel() end
 function Profession:getTexture() end
 
 --- @public
---- @return string _ the type
+--- @return string # the type
 function Profession:getType() end
 
 --- @public

@@ -90,7 +90,7 @@ function Color.colorToABGR(r, g, b, a) end
 --- Decode a number in a string and process it as a colour  reference.
 ---
 --- @param nm string The number string to decode
---- @return Color _ The color generated from the number read
+--- @return Color # The color generated from the number read
 function Color.decode(nm) end
 
 --- @public
@@ -199,14 +199,14 @@ function Color:add(c) end
 --- Add another colour to this one
 ---
 --- @param c Color The colour to add
---- @return Color _ The copy which has had the color added to it
+--- @return Color # The copy which has had the color added to it
 function Color:addToCopy(c) end
 
 --- @public
 ---
 --- Make a brighter instance of this colour
 ---
---- @return Color _ The brighter version of this colour
+--- @return Color # The brighter version of this colour
 function Color:brighter() end
 
 --- @public
@@ -214,7 +214,7 @@ function Color:brighter() end
 --- Make a brighter instance of this colour
 ---
 --- @param scale number The scale up of RGB (i.e. if you supply 0.03 the colour will be brightened by 3%)
---- @return Color _ The brighter version of this colour
+--- @return Color # The brighter version of this colour
 function Color:brighter(scale) end
 
 --- @public
@@ -228,7 +228,7 @@ function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 ---
 --- Make a darker instance of this colour
 ---
---- @return Color _ The darker version of this colour
+--- @return Color # The darker version of this colour
 function Color:darker() end
 
 --- @public
@@ -236,7 +236,7 @@ function Color:darker() end
 --- Make a darker instance of this colour
 ---
 --- @param scale number The scale down of RGB (i.e. if you supply 0.03 the colour will be darkened by 3%)
---- @return Color _ The darker version of this colour
+--- @return Color # The darker version of this colour
 function Color:darker(scale) end
 
 --- @public
@@ -264,14 +264,14 @@ function Color:fromColor(valueABGR) end
 ---
 --- get the alpha byte component of this colour
 ---
---- @return integer _ The alpha component (range 0-255)
+--- @return integer # The alpha component (range 0-255)
 function Color:getAlpha() end
 
 --- @public
 ---
 --- get the alpha byte component of this colour
 ---
---- @return integer _ The alpha component (range 0-255)
+--- @return integer # The alpha component (range 0-255)
 function Color:getAlphaByte() end
 
 --- @public
@@ -286,14 +286,14 @@ function Color:getB() end
 ---
 --- get the blue byte component of this colour
 ---
---- @return integer _ The blue component (range 0-255)
+--- @return integer # The blue component (range 0-255)
 function Color:getBlue() end
 
 --- @public
 ---
 --- get the blue byte component of this colour
 ---
---- @return integer _ The blue component (range 0-255)
+--- @return integer # The blue component (range 0-255)
 function Color:getBlueByte() end
 
 --- @public
@@ -308,14 +308,14 @@ function Color:getG() end
 ---
 --- get the green byte component of this colour
 ---
---- @return integer _ The green component (range 0-255)
+--- @return integer # The green component (range 0-255)
 function Color:getGreen() end
 
 --- @public
 ---
 --- get the green byte component of this colour
 ---
---- @return integer _ The green component (range 0-255)
+--- @return integer # The green component (range 0-255)
 function Color:getGreenByte() end
 
 --- @public
@@ -330,14 +330,14 @@ function Color:getR() end
 ---
 --- get the red byte component of this colour
 ---
---- @return integer _ The red component (range 0-255)
+--- @return integer # The red component (range 0-255)
 function Color:getRed() end
 
 --- @public
 ---
 --- get the red byte component of this colour
 ---
---- @return integer _ The red component (range 0-255)
+--- @return integer # The red component (range 0-255)
 function Color:getRedByte() end
 
 --- @public
@@ -376,7 +376,7 @@ function Color:loadCompactNoAlpha(arg0) end
 --- Multiply this color by another
 ---
 --- @param c Color the other color
---- @return Color _ product of the two colors
+--- @return Color # product of the two colors
 function Color:multiply(c) end
 
 --- @public
@@ -407,7 +407,7 @@ function Color:scale(value) end
 --- Scale the components of the colour by the given value
 ---
 --- @param value number The value to scale by
---- @return Color _ The copy which has been scaled
+--- @return Color # The copy which has been scaled
 function Color:scaleCopy(value) end
 
 --- @public

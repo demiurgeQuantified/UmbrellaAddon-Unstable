@@ -109,7 +109,7 @@ function Food:finishupdate() end
 function Food:freeze() end
 
 --- @public
---- @return number _ the ActualWeight
+--- @return number # the ActualWeight
 function Food:getActualWeight() end
 
 --- @public
@@ -130,7 +130,7 @@ function Food:getBaseHungChange() end
 function Food:getBaseHunger() end
 
 --- @public
---- @return number _ the boredomChange
+--- @return number # the boredomChange
 function Food:getBoredomChange() end
 
 --- @public
@@ -238,7 +238,7 @@ function Food:getMilkQty() end
 function Food:getMilkType() end
 
 --- @public
---- @return string _ the name
+--- @return string # the name
 function Food:getName() end
 
 --- @public
@@ -303,7 +303,7 @@ function Food:getSpices() end
 function Food:getStaticModel() end
 
 --- @public
---- @return number _ the stressChange
+--- @return number # the stressChange
 function Food:getStressChange() end
 
 --- @public
@@ -327,7 +327,7 @@ function Food:getThirstChangeUnmodified() end
 function Food:getTimeToHatch() end
 
 --- @public
---- @return number _ the unhappyChange
+--- @return number # the unhappyChange
 function Food:getUnhappyChange() end
 
 --- @public
@@ -343,11 +343,11 @@ function Food:getUseForPoison() end
 function Food:getUseOnConsume() end
 
 --- @public
---- @return number _ the Weight
+--- @return number # the Weight
 function Food:getWeight() end
 
 --- @public
---- @return string _ the WorldTexture
+--- @return string # the WorldTexture
 function Food:getWorldTexture() end
 
 --- @public

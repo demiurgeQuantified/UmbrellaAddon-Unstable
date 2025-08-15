@@ -17,7 +17,7 @@ Vector2 = {}
 --- @param b Vector2
 --- @param scale number
 --- @param result Vector2
---- @return Vector2 _ The supplied result vector.
+--- @return Vector2 # The supplied result vector.
 function Vector2.addScaled(a, b, scale, result) end
 
 --- @public
@@ -70,7 +70,7 @@ function Vector2.scale(val, scale) end
 --- Add another vector to this one and return this
 ---
 --- @param other Vector2 The other Vector2 to add to this one
---- @return Vector2 _ this
+--- @return Vector2 # this
 function Vector2:add(other) end
 
 --- @public
@@ -86,7 +86,7 @@ function Vector2:aimAt(other) end
 --- Calculate angle between this and other vectors
 ---
 --- @param other Vector2 The other vector
---- @return number _ The angle in radians in the range [0,PI]
+--- @return number # The angle in radians in the range [0,PI]
 function Vector2:angleBetween(other) end
 
 --- @public
@@ -94,7 +94,7 @@ function Vector2:angleBetween(other) end
 --- Calculate the angle between this point and another
 ---
 --- @param other Vector2 The second point as vector
---- @return number _ The angle between them, in radians
+--- @return number # The angle between them, in radians
 function Vector2:angleTo(other) end
 
 --- @public
@@ -116,7 +116,7 @@ function Vector2:clone() end
 --- Calculate the distance between this point and another
 ---
 --- @param other Vector2 The second point as vector
---- @return number _ The distance between them
+--- @return number # The distance between them
 function Vector2:distanceTo(other) end
 
 --- @public
@@ -135,7 +135,7 @@ function Vector2:dot(arg0, arg1) end
 --- See if this vector is equal to another
 ---
 --- @param other any A Vector2 to compare this one to
---- @return boolean _ true if other is a Vector2 equal to this one
+--- @return boolean # true if other is a Vector2 equal to this one
 function Vector2:equals(other) end
 
 --- @public
@@ -154,7 +154,7 @@ function Vector2:getDirection() end
 ---
 --- get the direction in which this vector is pointing
 ---
---- @return number _ The direction in which this vector is pointing in radians
+--- @return number # The direction in which this vector is pointing in radians
 --- @deprecated
 function Vector2:getDirectionNeg() end
 
@@ -162,22 +162,22 @@ function Vector2:getDirectionNeg() end
 ---
 --- get the length of this vector
 ---
---- @return number _ The length of this vector
+--- @return number # The length of this vector
 function Vector2:getLength() end
 
 --- @public
 ---
 --- get the squared length of this vector
 ---
---- @return number _ The squared length of this vector
+--- @return number # The squared length of this vector
 function Vector2:getLengthSquared() end
 
 --- @public
---- @return number _ the x
+--- @return number # the x
 function Vector2:getX() end
 
 --- @public
---- @return number _ the y
+--- @return number # the y
 function Vector2:getY() end
 
 --- @public

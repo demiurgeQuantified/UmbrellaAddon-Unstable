@@ -87,7 +87,7 @@ function Texture.getSteamAvatar(steamID) end
 --- load it.
 ---
 --- @param name string the name of texture
---- @return Texture _ returns the texture from the given name
+--- @return Texture # returns the texture from the given name
 function Texture.getTexture(name) end
 
 --- @public
@@ -242,14 +242,14 @@ function Texture:getData() end
 ---
 --- Description copied from interface: ITexture
 ---
---- @return integer _ the height of image
+--- @return integer # the height of image
 function Texture:getHeight() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return integer _ the height of image
+--- @return integer # the height of image
 function Texture:getHeight() end
 
 --- @public
@@ -274,21 +274,21 @@ function Texture:getHeightOrig() end
 ---
 --- Description copied from interface: ITexture
 ---
---- @return integer _ the ID of image in the Vram
+--- @return integer # the ID of image in the Vram
 function Texture:getID() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return integer _ the ID of image in the Vram
+--- @return integer # the ID of image in the Vram
 function Texture:getID() end
 
 --- @public
 ---
 --- returns the mask of collisions
 ---
---- @return Mask _ mask of collisions
+--- @return Mask # mask of collisions
 function Texture:getMask() end
 
 --- @public
@@ -328,21 +328,21 @@ function Texture:getUVScale(uvScale) end
 ---
 --- indicates if the image will use the alpha channel or note
 ---
---- @return boolean _ if the image will use the alpha channel or note
+--- @return boolean # if the image will use the alpha channel or note
 function Texture:getUseAlphaChannel() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return integer _ the width of image
+--- @return integer # the width of image
 function Texture:getWidth() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return integer _ the width of image
+--- @return integer # the width of image
 function Texture:getWidth() end
 
 --- @public
@@ -371,28 +371,28 @@ function Texture:getX() end
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the end X-coordinate
+--- @return number # the end X-coordinate
 function Texture:getXEnd() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the end X-coordinate
+--- @return number # the end X-coordinate
 function Texture:getXEnd() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the start X-coordinate
+--- @return number # the start X-coordinate
 function Texture:getXStart() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the start X-coordinate
+--- @return number # the start X-coordinate
 function Texture:getXStart() end
 
 --- @public
@@ -403,28 +403,28 @@ function Texture:getY() end
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the end Y-coordinate
+--- @return number # the end Y-coordinate
 function Texture:getYEnd() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the end Y-coordinate
+--- @return number # the end Y-coordinate
 function Texture:getYEnd() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the start Y-coordinate
+--- @return number # the start Y-coordinate
 function Texture:getYStart() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return number _ the start Y-coordinate
+--- @return number # the start Y-coordinate
 function Texture:getYStart() end
 
 --- @public
@@ -458,14 +458,14 @@ function Texture:isMaskSet(arg0, arg1) end
 ---
 --- Description copied from interface: ITexture
 ---
---- @return boolean _ if the texture is solid or not.
+--- @return boolean # if the texture is solid or not.
 function Texture:isSolid() end
 
 --- @public
 ---
 --- Description copied from interface: ITexture
 ---
---- @return boolean _ if the texture is solid or not.
+--- @return boolean # if the texture is solid or not.
 function Texture:isSolid() end
 
 --- @public

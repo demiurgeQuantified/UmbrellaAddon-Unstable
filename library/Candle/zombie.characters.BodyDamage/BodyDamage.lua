@@ -513,7 +513,7 @@ function BodyDamage:getBodyPartName(BodyPartIndex) end
 function BodyDamage:getBodyPartName(BodyPart) end
 
 --- @public
---- @return ArrayList _ the BodyParts
+--- @return ArrayList # the BodyParts
 function BodyDamage:getBodyParts() end
 
 --- @public
@@ -522,7 +522,7 @@ function BodyDamage:getBodyParts() end
 function BodyDamage:getBodyPartsLastState(type) end
 
 --- @public
---- @return number _ the BoredomDecreaseFromReading
+--- @return number # the BoredomDecreaseFromReading
 function BodyDamage:getBoredomDecreaseFromReading() end
 
 --- @public
@@ -530,7 +530,7 @@ function BodyDamage:getBoredomDecreaseFromReading() end
 function BodyDamage:getBoredomLevel() end
 
 --- @public
---- @return number _ the CatchACold
+--- @return number # the CatchACold
 function BodyDamage:getCatchACold() end
 
 --- @public
@@ -538,7 +538,7 @@ function BodyDamage:getCatchACold() end
 function BodyDamage:getColdDamageStage() end
 
 --- @public
---- @return number _ the ColdProgressionRate
+--- @return number # the ColdProgressionRate
 function BodyDamage:getColdProgressionRate() end
 
 --- @public
@@ -546,11 +546,11 @@ function BodyDamage:getColdProgressionRate() end
 function BodyDamage:getColdReduction() end
 
 --- @public
---- @return integer _ the ColdSneezeTimerMax
+--- @return integer # the ColdSneezeTimerMax
 function BodyDamage:getColdSneezeTimerMax() end
 
 --- @public
---- @return integer _ the ColdSneezeTimerMin
+--- @return integer # the ColdSneezeTimerMin
 function BodyDamage:getColdSneezeTimerMin() end
 
 --- @public
@@ -558,15 +558,15 @@ function BodyDamage:getColdSneezeTimerMin() end
 function BodyDamage:getColdStrength() end
 
 --- @public
---- @return number _ the ContinualPainIncrease
+--- @return number # the ContinualPainIncrease
 function BodyDamage:getContinualPainIncrease() end
 
 --- @public
---- @return integer _ the CurrentNumZombiesVisible
+--- @return integer # the CurrentNumZombiesVisible
 function BodyDamage:getCurrentNumZombiesVisible() end
 
 --- @public
---- @return integer _ the DamageModCount
+--- @return integer # the DamageModCount
 function BodyDamage:getDamageModCount() end
 
 --- @public
@@ -574,15 +574,15 @@ function BodyDamage:getDamageModCount() end
 function BodyDamage:getDiscomfortLevel() end
 
 --- @public
---- @return number _ the DrunkIncreaseValue
+--- @return number # the DrunkIncreaseValue
 function BodyDamage:getDrunkIncreaseValue() end
 
 --- @public
---- @return number _ the DrunkReductionValue
+--- @return number # the DrunkReductionValue
 function BodyDamage:getDrunkReductionValue() end
 
 --- @public
---- @return number _ the FakeInfectionLevel
+--- @return number # the FakeInfectionLevel
 function BodyDamage:getFakeInfectionLevel() end
 
 --- @public
@@ -598,19 +598,19 @@ function BodyDamage:getGeneralWoundInfectionLevel() end
 function BodyDamage:getHealth() end
 
 --- @public
---- @return number _ the HealthFromFood
+--- @return number # the HealthFromFood
 function BodyDamage:getHealthFromFood() end
 
 --- @public
---- @return number _ the HealthFromFoodTimer
+--- @return number # the HealthFromFoodTimer
 function BodyDamage:getHealthFromFoodTimer() end
 
 --- @public
---- @return number _ the HealthReductionFromSevereBadMoodles
+--- @return number # the HealthReductionFromSevereBadMoodles
 function BodyDamage:getHealthReductionFromSevereBadMoodles() end
 
 --- @public
---- @return number _ the InfectionGrowthRate
+--- @return number # the InfectionGrowthRate
 function BodyDamage:getInfectionGrowthRate() end
 
 --- @public
@@ -626,35 +626,35 @@ function BodyDamage:getInfectionMortalityDuration() end
 function BodyDamage:getInfectionTime() end
 
 --- @public
---- @return number _ the InitialBitePain
+--- @return number # the InitialBitePain
 function BodyDamage:getInitialBitePain() end
 
 --- @public
---- @return number _ the InitialScratchPain
+--- @return number # the InitialScratchPain
 function BodyDamage:getInitialScratchPain() end
 
 --- @public
---- @return number _ the InitialThumpPain
+--- @return number # the InitialThumpPain
 function BodyDamage:getInitialThumpPain() end
 
 --- @public
---- @return number _ the InitialWoundPain
+--- @return number # the InitialWoundPain
 function BodyDamage:getInitialWoundPain() end
 
 --- @public
---- @return integer _ the MildColdSneezeTimerMax
+--- @return integer # the MildColdSneezeTimerMax
 function BodyDamage:getMildColdSneezeTimerMax() end
 
 --- @public
---- @return integer _ the MildColdSneezeTimerMin
+--- @return integer # the MildColdSneezeTimerMin
 function BodyDamage:getMildColdSneezeTimerMin() end
 
 --- @public
---- @return integer _ the NastyColdSneezeTimerMax
+--- @return integer # the NastyColdSneezeTimerMax
 function BodyDamage:getNastyColdSneezeTimerMax() end
 
 --- @public
---- @return integer _ the NastyColdSneezeTimerMin
+--- @return integer # the NastyColdSneezeTimerMin
 function BodyDamage:getNastyColdSneezeTimerMin() end
 
 --- @public
@@ -670,11 +670,11 @@ function BodyDamage:getNumPartsBleeding() end
 function BodyDamage:getNumPartsScratched() end
 
 --- @public
---- @return integer _ the OldNumZombiesVisible
+--- @return integer # the OldNumZombiesVisible
 function BodyDamage:getOldNumZombiesVisible() end
 
 --- @public
---- @return number _ the OverallBodyHealth
+--- @return number # the OverallBodyHealth
 function BodyDamage:getOverallBodyHealth() end
 
 --- @public
@@ -682,11 +682,11 @@ function BodyDamage:getOverallBodyHealth() end
 function BodyDamage:getPainReduction() end
 
 --- @public
---- @return number _ the PainReductionFromMeds
+--- @return number # the PainReductionFromMeds
 function BodyDamage:getPainReductionFromMeds() end
 
 --- @public
---- @return number _ the PanicIncreaseValue
+--- @return number # the PanicIncreaseValue
 function BodyDamage:getPanicIncreaseValue() end
 
 --- @public
@@ -694,11 +694,11 @@ function BodyDamage:getPanicIncreaseValue() end
 function BodyDamage:getPanicIncreaseValueFrame() end
 
 --- @public
---- @return number _ the PanicReductionValue
+--- @return number # the PanicReductionValue
 function BodyDamage:getPanicReductionValue() end
 
 --- @public
---- @return IsoGameCharacter _ the ParentChar
+--- @return IsoGameCharacter # the ParentChar
 function BodyDamage:getParentChar() end
 
 --- @public
@@ -706,7 +706,7 @@ function BodyDamage:getParentChar() end
 function BodyDamage:getPoisonLevel() end
 
 --- @public
---- @return number _ the ReducedHealthAddition
+--- @return number # the ReducedHealthAddition
 function BodyDamage:getReducedHealthAddition() end
 
 --- @public
@@ -714,11 +714,11 @@ function BodyDamage:getReducedHealthAddition() end
 function BodyDamage:getRemotePainLevel() end
 
 --- @public
---- @return number _ the SeverlyReducedHealthAddition
+--- @return number # the SeverlyReducedHealthAddition
 function BodyDamage:getSeverlyReducedHealthAddition() end
 
 --- @public
---- @return number _ the SleepingHealthAddition
+--- @return number # the SleepingHealthAddition
 function BodyDamage:getSleepingHealthAddition() end
 
 --- @public
@@ -730,31 +730,31 @@ function BodyDamage:getSmokerSneezeTimerMax() end
 function BodyDamage:getSmokerSneezeTimerMin() end
 
 --- @public
---- @return integer _ the SneezeCoughActive
+--- @return integer # the SneezeCoughActive
 function BodyDamage:getSneezeCoughActive() end
 
 --- @public
---- @return integer _ the SneezeCoughDelay
+--- @return integer # the SneezeCoughDelay
 function BodyDamage:getSneezeCoughDelay() end
 
 --- @public
---- @return integer _ the SneezeCoughTime
+--- @return integer # the SneezeCoughTime
 function BodyDamage:getSneezeCoughTime() end
 
 --- @public
---- @return number _ the StandardHealthAddition
+--- @return number # the StandardHealthAddition
 function BodyDamage:getStandardHealthAddition() end
 
 --- @public
---- @return integer _ the StandardHealthFromFoodTime
+--- @return integer # the StandardHealthFromFoodTime
 function BodyDamage:getStandardHealthFromFoodTime() end
 
 --- @public
---- @return number _ the StandardPainReductionWhenWell
+--- @return number # the StandardPainReductionWhenWell
 function BodyDamage:getStandardPainReductionWhenWell() end
 
 --- @public
---- @return number _ the body temperature (updated by lua)
+--- @return number # the body temperature (updated by lua)
 function BodyDamage:getTemperature() end
 
 --- @public
@@ -766,7 +766,7 @@ function BodyDamage:getTemperatureChangeTick() end
 function BodyDamage:getThermoregulator() end
 
 --- @public
---- @return number _ the TimeToSneezeOrCough
+--- @return number # the TimeToSneezeOrCough
 function BodyDamage:getTimeToSneezeOrCough() end
 
 --- @public
@@ -795,15 +795,15 @@ function BodyDamage:increaseBodyWetness(amount) end
 function BodyDamage:isBodyPartBleeding(part) end
 
 --- @public
---- @return boolean _ the BurntToDeath
+--- @return boolean # the BurntToDeath
 function BodyDamage:isBurntToDeath() end
 
 --- @public
---- @return boolean _ the HasACold
+--- @return boolean # the HasACold
 function BodyDamage:isHasACold() end
 
 --- @public
---- @return boolean _ the inf
+--- @return boolean # the inf
 --- @deprecated
 function BodyDamage:isInf() end
 
@@ -812,11 +812,11 @@ function BodyDamage:isInf() end
 function BodyDamage:isInfected() end
 
 --- @public
---- @return boolean _ the IsFakeInfected
+--- @return boolean # the IsFakeInfected
 function BodyDamage:isIsFakeInfected() end
 
 --- @public
---- @return boolean _ the IsOnFire
+--- @return boolean # the IsOnFire
 function BodyDamage:isIsOnFire() end
 
 --- @public

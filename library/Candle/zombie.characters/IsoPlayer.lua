@@ -428,7 +428,7 @@ function IsoPlayer:getAttachedAnimals() end
 function IsoPlayer:getAttackType() end
 
 --- @public
---- @return IsoCell _ the cell
+--- @return IsoCell # the cell
 function IsoPlayer:getCell() end
 
 --- @public
@@ -655,7 +655,7 @@ function IsoPlayer:getPlayerClothingInsulation() end
 ---
 --- Return the amount of temperature given by clothes wear
 ---
---- @return number _ temperature
+--- @return number # temperature
 function IsoPlayer:getPlayerClothingTemperature() end
 
 --- @public

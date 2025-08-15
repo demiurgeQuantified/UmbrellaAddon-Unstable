@@ -89,20 +89,20 @@ function GameTime:TimeLerp(startVal, endVal, startTime, endTime) end
 function GameTime:daysInMonth(year, month) end
 
 --- @public
---- @return number _ the Ambient
+--- @return number # the Ambient
 --- @deprecated
 function GameTime:getAmbient() end
 
 --- @public
---- @return number _ the AmbientMax
+--- @return number # the AmbientMax
 function GameTime:getAmbientMax() end
 
 --- @public
---- @return number _ the AmbientMin
+--- @return number # the AmbientMin
 function GameTime:getAmbientMin() end
 
 --- @public
---- @return PZCalendar _ the Calender
+--- @return PZCalendar # the Calender
 function GameTime:getCalender() end
 
 --- @public
@@ -110,7 +110,7 @@ function GameTime:getCalender() end
 function GameTime:getDawn() end
 
 --- @public
---- @return integer _ the Day
+--- @return integer # the Day
 function GameTime:getDay() end
 
 --- @public
@@ -163,7 +163,7 @@ function GameTime:getHelicopterStartHour() end
 function GameTime:getHour() end
 
 --- @public
---- @return number _ the HoursSurvived
+--- @return number # the HoursSurvived
 function GameTime:getHoursSurvived() end
 
 --- @public
@@ -171,23 +171,23 @@ function GameTime:getHoursSurvived() end
 function GameTime:getInvMultiplier() end
 
 --- @public
---- @return number _ the LastTimeOfDay
+--- @return number # the LastTimeOfDay
 function GameTime:getLastTimeOfDay() end
 
 --- @public
---- @return number _ the MaxZombieCount
+--- @return number # the MaxZombieCount
 function GameTime:getMaxZombieCount() end
 
 --- @public
---- @return number _ the MaxZombieCountStart
+--- @return number # the MaxZombieCountStart
 function GameTime:getMaxZombieCountStart() end
 
 --- @public
---- @return number _ the MinZombieCount
+--- @return number # the MinZombieCount
 function GameTime:getMinZombieCount() end
 
 --- @public
---- @return number _ the MinZombieCountStart
+--- @return number # the MinZombieCountStart
 function GameTime:getMinZombieCountStart() end
 
 --- @public
@@ -195,7 +195,7 @@ function GameTime:getMinZombieCountStart() end
 function GameTime:getMinutes() end
 
 --- @public
---- @return number _ the MinutesPerDay
+--- @return number # the MinutesPerDay
 function GameTime:getMinutesPerDay() end
 
 --- @public
@@ -207,7 +207,7 @@ function GameTime:getMinutesStamp() end
 function GameTime:getModData() end
 
 --- @public
---- @return integer _ the Month
+--- @return integer # the Month
 function GameTime:getMonth() end
 
 --- @public
@@ -215,7 +215,7 @@ function GameTime:getMonth() end
 function GameTime:getMultipliedSecondsSinceLastUpdate() end
 
 --- @public
---- @return number _ the Multiplier
+--- @return number # the Multiplier
 function GameTime:getMultiplier() end
 
 --- @public
@@ -224,7 +224,7 @@ function GameTime:getMultiplier() end
 function GameTime:getMultiplierFromTimeDelta(arg0) end
 
 --- @public
---- @return number _ the NightTint
+--- @return number # the NightTint
 function GameTime:getNight() end
 
 --- @public
@@ -236,11 +236,11 @@ function GameTime:getNightMax() end
 function GameTime:getNightMin() end
 
 --- @public
---- @return number _ the NightTint
+--- @return number # the NightTint
 function GameTime:getNightTint() end
 
 --- @public
---- @return integer _ the NightsSurvived
+--- @return integer # the NightsSurvived
 function GameTime:getNightsSurvived() end
 
 --- @public
@@ -256,19 +256,19 @@ function GameTime:getServerMultiplier() end
 function GameTime:getSkyLightLevel() end
 
 --- @public
---- @return integer _ the StartDay
+--- @return integer # the StartDay
 function GameTime:getStartDay() end
 
 --- @public
---- @return integer _ the StartMonth
+--- @return integer # the StartMonth
 function GameTime:getStartMonth() end
 
 --- @public
---- @return number _ the StartTimeOfDay
+--- @return number # the StartTimeOfDay
 function GameTime:getStartTimeOfDay() end
 
 --- @public
---- @return integer _ the StartYear
+--- @return integer # the StartYear
 function GameTime:getStartYear() end
 
 --- @public
@@ -289,7 +289,7 @@ function GameTime:getTimeDelta() end
 function GameTime:getTimeDeltaFromMultiplier(arg0) end
 
 --- @public
---- @return number _ the TimeOfDay
+--- @return number # the TimeOfDay
 function GameTime:getTimeOfDay() end
 
 --- @public
@@ -306,15 +306,15 @@ function GameTime:getTrueMultiplier() end
 function GameTime:getUnmoddedMultiplier() end
 
 --- @public
---- @return number _ the ViewDist
+--- @return number # the ViewDist
 function GameTime:getViewDist() end
 
 --- @public
---- @return number _ the ViewDistMax
+--- @return number # the ViewDistMax
 function GameTime:getViewDistMax() end
 
 --- @public
---- @return number _ the ViewDistMin
+--- @return number # the ViewDistMin
 function GameTime:getViewDistMin() end
 
 --- @public
@@ -326,7 +326,7 @@ function GameTime:getWorldAgeDaysSinceBegin() end
 function GameTime:getWorldAgeHours() end
 
 --- @public
---- @return integer _ the Year
+--- @return integer # the Year
 function GameTime:getYear() end
 
 --- @public
@@ -355,7 +355,7 @@ function GameTime:isEndlessNight() end
 function GameTime:isNight() end
 
 --- @public
---- @return boolean _ the RainingToday
+--- @return boolean # the RainingToday
 function GameTime:isRainingToday() end
 
 --- @public

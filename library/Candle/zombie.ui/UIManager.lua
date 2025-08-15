@@ -150,7 +150,7 @@ function UIManager.debugBreakpoint(filename, pc) end
 
 --- @public
 --- @static
---- @return Texture _ the black
+--- @return Texture # the black
 function UIManager.getBlack() end
 
 --- @public
@@ -161,12 +161,12 @@ function UIManager.getBlinkAlpha(arg0) end
 
 --- @public
 --- @static
---- @return Clock _ the clock
+--- @return Clock # the clock
 function UIManager.getClock() end
 
 --- @public
 --- @static
---- @return UIDebugConsole _ the DebugConsole
+--- @return UIDebugConsole # the DebugConsole
 function UIManager.getDebugConsole() end
 
 --- @public
@@ -176,7 +176,7 @@ function UIManager.getDefaultThread() end
 
 --- @public
 --- @static
---- @return ArrayList _ the DoneTutorials
+--- @return ArrayList # the DoneTutorials
 function UIManager.getDoneTutorials() end
 
 --- @public
@@ -191,7 +191,7 @@ function UIManager.getDoubleClickInterval() end
 
 --- @public
 --- @static
---- @return number _ the FadeAlpha
+--- @return number # the FadeAlpha
 function UIManager.getFadeAlpha() end
 
 --- @public
@@ -202,47 +202,47 @@ function UIManager.getFadeAlpha(playerIndex) end
 
 --- @public
 --- @static
---- @return number _ the FadeInTime
+--- @return number # the FadeInTime
 function UIManager.getFadeInTime() end
 
 --- @public
 --- @static
---- @return number _ the FadeInTimeMax
+--- @return number # the FadeInTimeMax
 function UIManager.getFadeInTimeMax() end
 
 --- @public
 --- @static
---- @return number _ the lastAlpha
+--- @return number # the lastAlpha
 function UIManager.getLastAlpha() end
 
 --- @public
 --- @static
---- @return Texture _ the lastMouseTexture
+--- @return Texture # the lastMouseTexture
 function UIManager.getLastMouseTexture() end
 
 --- @public
 --- @static
---- @return number _ the lastMouseX
+--- @return number # the lastMouseX
 function UIManager.getLastMouseX() end
 
 --- @public
 --- @static
---- @return number _ the lastMouseY
+--- @return number # the lastMouseY
 function UIManager.getLastMouseY() end
 
 --- @public
 --- @static
---- @return number _ the lastOffX
+--- @return number # the lastOffX
 function UIManager.getLastOffX() end
 
 --- @public
 --- @static
---- @return number _ the lastOffY
+--- @return number # the lastOffY
 function UIManager.getLastOffY() end
 
 --- @public
 --- @static
---- @return IsoObject _ the LastPicked
+--- @return IsoObject # the LastPicked
 function UIManager.getLastPicked() end
 
 --- @public
@@ -257,59 +257,59 @@ function UIManager.getMillisSinceLastUpdate() end
 
 --- @public
 --- @static
---- @return ModalDialog _ the Modal
+--- @return ModalDialog # the Modal
 function UIManager.getModal() end
 
 --- @public
 --- @static
 --- @param index number
---- @return MoodlesUI _ the MoodleUI
+--- @return MoodlesUI # the MoodleUI
 function UIManager.getMoodleUI(index) end
 
 --- @public
 --- @static
---- @return Texture _ the mouseArrow
+--- @return Texture # the mouseArrow
 function UIManager.getMouseArrow() end
 
 --- @public
 --- @static
---- @return Texture _ the mouseAttack
+--- @return Texture # the mouseAttack
 function UIManager.getMouseAttack() end
 
 --- @public
 --- @static
---- @return Texture _ the mouseExamine
+--- @return Texture # the mouseExamine
 function UIManager.getMouseExamine() end
 
 --- @public
 --- @static
---- @return Texture _ the mouseGrab
+--- @return Texture # the mouseGrab
 function UIManager.getMouseGrab() end
 
 --- @public
 --- @static
---- @return ClickObject _ the Picked
+--- @return ClickObject # the Picked
 function UIManager.getPicked() end
 
 --- @public
 --- @static
---- @return Vector2 _ the PickedTile
+--- @return Vector2 # the PickedTile
 function UIManager.getPickedTile() end
 
 --- @public
 --- @static
---- @return Vector2 _ the PickedTileLocal
+--- @return Vector2 # the PickedTileLocal
 function UIManager.getPickedTileLocal() end
 
 --- @public
 --- @static
 --- @param index number
---- @return ActionProgressBar _ the ProgressBar
+--- @return ActionProgressBar # the ProgressBar
 function UIManager.getProgressBar(index) end
 
 --- @public
 --- @static
---- @return IsoObject _ the RightDownObject
+--- @return IsoObject # the RightDownObject
 function UIManager.getRightDownObject() end
 
 --- @public
@@ -324,7 +324,7 @@ function UIManager.getSecondsSinceLastUpdate() end
 
 --- @public
 --- @static
---- @return SpeedControls _ the speedControls
+--- @return SpeedControls # the speedControls
 function UIManager.getSpeedControls() end
 
 --- @public
@@ -344,12 +344,12 @@ function UIManager.getTileFromMouse(mx, my, z) end
 
 --- @public
 --- @static
---- @return ObjectTooltip _ the toolTip
+--- @return ObjectTooltip # the toolTip
 function UIManager.getToolTip() end
 
 --- @public
 --- @static
---- @return ArrayList _ the UI
+--- @return ArrayList # the UI
 function UIManager.getUI() end
 
 --- @public
@@ -374,7 +374,7 @@ function UIManager.isFBOActive() end
 
 --- @public
 --- @static
---- @return boolean _ the FadingOut
+--- @return boolean # the FadingOut
 function UIManager.isFadingOut() end
 
 --- @public
@@ -409,7 +409,7 @@ function UIManager.isUpdating() end
 
 --- @public
 --- @static
---- @return boolean _ the bFadeBeforeUI
+--- @return boolean # the bFadeBeforeUI
 function UIManager.isbFadeBeforeUI() end
 
 --- @public
