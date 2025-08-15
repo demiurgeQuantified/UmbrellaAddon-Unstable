@@ -5,7 +5,7 @@
 ---@field lighter InventoryItem
 ---@field petrol InventoryItem
 ---@field sound integer?
-ISFireplaceLightFromPetrol = ISBaseTimedAction:derive("ISFireplaceLightFromPetrol")
+ISFireplaceLightFromPetrol = {}
 ISFireplaceLightFromPetrol.Type = "ISFireplaceLightFromPetrol"
 
 ---@return boolean

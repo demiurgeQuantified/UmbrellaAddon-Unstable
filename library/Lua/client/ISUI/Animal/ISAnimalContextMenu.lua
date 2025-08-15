@@ -42,6 +42,8 @@ function AnimalContextMenu.doFeedFromHandMenu(playerObj, animal, context) end
 ---@param test boolean?
 function AnimalContextMenu.doInventoryMenu(player, context, animalInv, test) end
 
+function AnimalContextMenu.doKillAnimalMenu(playerObj, animalInv, context) end
+
 ---@param player integer
 ---@param context ISContextMenu
 ---@param animal IsoAnimal
@@ -117,6 +119,8 @@ function AnimalContextMenu.onButcherAnimalFromInv(body, chr, knife) end
 ---@param zone DesignationZoneAnimal
 ---@param playerObj IsoPlayer
 function AnimalContextMenu.onCheckZone(zone, playerObj) end
+
+function AnimalContextMenu.onDebugAttackPlayer(animal, playerObj) end
 
 ---@param animal IsoAnimal
 ---@param playerObj IsoPlayer

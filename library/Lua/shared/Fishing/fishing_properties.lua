@@ -250,6 +250,7 @@ function Fishing.onCreateFishingRod(item) end
 ---@field minLength number
 ---@field trophyLength unknown
 ---@field trophyWeight number
+---@field weightFactor number
 local __fishing_FishConfig = {}
 
 ---@param itemTable table<string, umbrella.FishLureTable>
@@ -288,6 +289,9 @@ function __fishing_FishConfig:setTrophyLength(length) end
 
 ---@param weight number
 function __fishing_FishConfig:setTrophyWeight(weight) end
+
+---@param number number
+function __fishing_FishConfig:setWeightFactor(number) end
 
 ---@param itemType string
 ---@return Fishing.FishConfig

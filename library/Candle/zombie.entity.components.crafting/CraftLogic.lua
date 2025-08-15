@@ -19,11 +19,21 @@ function CraftLogic:canStart(arg0) end
 function CraftLogic:debugCanStart(arg0) end
 
 --- @public
+--- @param arg0 Layout
+--- @param arg1 Resource
+--- @return nil
+function CraftLogic:doProgressTooltip(arg0, arg1) end
+
+--- @public
+--- @return nil
+function CraftLogic:dumpContentsInSquare() end
+
+--- @public
 --- @return CraftRecipe
 function CraftLogic:getCurrentRecipe() end
 
 --- @public
---- @return integer
+--- @return number
 function CraftLogic:getElapsedTime() end
 
 --- @public
@@ -72,12 +82,21 @@ function CraftLogic:getRequestingPlayer() end
 function CraftLogic:getStartMode() end
 
 --- @public
+--- @param arg0 integer
+--- @return ArrayList
+function CraftLogic:getStatusIconsForInputItem(arg0) end
+
+--- @public
 --- @return boolean
 function CraftLogic:isDoAutomaticCraftCheck() end
 
 --- @public
 --- @return boolean
 function CraftLogic:isFinished() end
+
+--- @public
+--- @return boolean
+function CraftLogic:isNoContainerOrEmpty() end
 
 --- @public
 --- @return boolean
@@ -94,6 +113,19 @@ function CraftLogic:isStopRequested() end
 --- @public
 --- @return boolean
 function CraftLogic:isValid() end
+
+--- @public
+--- @return nil
+function CraftLogic:onStart() end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function CraftLogic:onStop(arg0) end
+
+--- @public
+--- @return nil
+function CraftLogic:onUpdate() end
 
 --- @public
 --- @param arg0 IsoPlayer

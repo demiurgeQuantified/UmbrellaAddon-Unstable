@@ -137,10 +137,6 @@ function BaseCraftingLogic:isCharacterInRangeOfWorkbench() end
 function BaseCraftingLogic:isContainersAccessible(arg0) end
 
 --- @public
---- @return boolean
-function BaseCraftingLogic:isCraftCheat() end
-
---- @public
 --- @param arg0 List
 --- @return nil
 function BaseCraftingLogic:setRecipes(arg0) end

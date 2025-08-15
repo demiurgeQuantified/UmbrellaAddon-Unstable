@@ -43,6 +43,12 @@ function GameKeyboard.isKeyDown(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 integer
+--- @return boolean
+function GameKeyboard.isKeyDownRaw(arg0) end
+
+--- @public
+--- @static
 ---
 --- Has the key been pressed. Not continuous. That is, is the key down now, but was
 --- down before.
@@ -87,6 +93,12 @@ function GameKeyboard.wasKeyDown(key) end
 --- @param arg0 string
 --- @return boolean
 function GameKeyboard.wasKeyDown(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 integer
+--- @return boolean
+function GameKeyboard.wasKeyDownRaw(arg0) end
 
 --- @public
 --- @static

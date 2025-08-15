@@ -1,22 +1,35 @@
 ---@meta
 
 ---@class WorldMapEditorMode_Annotations : WorldMapEditorMode
+---@field annotationsList ISScrollingListBox
 ---@field dragging boolean
 ---@field dragMoved boolean
 ---@field dragStartX number
 ---@field dragStartY number
+---@field filter ISTextEntryBox
+---@field listbox ISScrollingListBox
+---@field symbolCount unknown
 ---@field symbolsUI ISWorldMapSymbols
 WorldMapEditorMode_Annotations = WorldMapEditorMode:derive("WorldMapEditorMode_Annotations")
 WorldMapEditorMode_Annotations.Type = "WorldMapEditorMode_Annotations"
 
 function WorldMapEditorMode_Annotations:createChildren() end
 
+function WorldMapEditorMode_Annotations:fillAnnotationsList() end
+
 ---@return string
 function WorldMapEditorMode_Annotations:generateLuaScript() end
+
+---@return string
+function WorldMapEditorMode_Annotations:generateLuaScript2() end
 
 ---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Annotations:isKeyConsumed(key) end
+
+function WorldMapEditorMode_Annotations:onAnnotationListItemSelected(symbol) end
+
+function WorldMapEditorMode_Annotations:onFilterTextChange() end
 
 ---@param key integer
 ---@return boolean
@@ -25,6 +38,8 @@ function WorldMapEditorMode_Annotations:onKeyPress(key) end
 ---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Annotations:onKeyRelease(key) end
+
+function WorldMapEditorMode_Annotations:onLoadMap() end
 
 ---@param x number
 ---@param y number
@@ -50,6 +65,8 @@ function WorldMapEditorMode_Annotations:onMouseUpOutside(x, y) end
 ---@param y number
 ---@return boolean
 function WorldMapEditorMode_Annotations:onRightMouseDown(x, y) end
+
+function WorldMapEditorMode_Annotations:onSaveMap() end
 
 function WorldMapEditorMode_Annotations:prerender() end
 

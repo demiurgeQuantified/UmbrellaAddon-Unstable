@@ -32,6 +32,17 @@ function IsoLot.get(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
+--- @param arg0 MapFiles
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 IsoChunk
+--- @return IsoLot
+function IsoLot.get(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @static
 --- @param lot IsoLot
 --- @return nil
 function IsoLot.put(lot) end

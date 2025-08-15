@@ -2,7 +2,7 @@
 
 ---@class ISFireplaceExtinguish : ISBaseTimedAction
 ---@field fireplace IsoFireplace
-ISFireplaceExtinguish = ISBaseTimedAction:derive("ISFireplaceExtinguish")
+ISFireplaceExtinguish = {}
 ISFireplaceExtinguish.Type = "ISFireplaceExtinguish"
 
 ---@return boolean

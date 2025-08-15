@@ -3,6 +3,8 @@
 ---@class MapUtils
 MapUtils = {}
 
+function MapUtils.initDefaultAnnotations(mapUI) end
+
 ---@param mapUI umbrella.MapUI
 function MapUtils.initDefaultMapData(mapUI) end
 
@@ -14,6 +16,12 @@ function MapUtils.initDefaultStyleV1(mapUI) end
 
 ---@param mapUI ISWorldMap
 function MapUtils.initDefaultStyleV3(mapUI) end
+
+---@param mapUI ISMiniMapInner | ISWorldMap
+function MapUtils.initDefaultTextLayersV3(mapUI) end
+
+---@param directory string
+function MapUtils.initDirectoryAnnotations(mapUI, directory) end
 
 ---@param mapUI umbrella.MapUI
 ---@param directory string

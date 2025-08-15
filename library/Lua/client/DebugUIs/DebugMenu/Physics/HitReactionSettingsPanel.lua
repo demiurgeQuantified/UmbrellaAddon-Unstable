@@ -4,7 +4,7 @@
 ---@field allOptions table[]
 ---@field bools table[]
 ---@field floats table[]
-HitReactionSettingsPanel = ISDebugSubPanelBase:derive("HitReactionSettingsPanel")
+HitReactionSettingsPanel = {}
 HitReactionSettingsPanel.Type = "HitReactionSettingsPanel"
 
 ---@param _id string

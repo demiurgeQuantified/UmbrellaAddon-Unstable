@@ -34,6 +34,7 @@
 --- @field public WorldVersion_InventoryItemUsesInteger integer
 --- @field public WorldVersion_IsoCompostHealthValues integer
 --- @field public WorldVersion_ItemWorldRotationFloats integer
+--- @field public WorldVersion_MetaEntityOutsideAware integer
 --- @field public WorldVersion_ObjectID integer
 --- @field public WorldVersion_PlayerExtraInfoFlags integer
 --- @field public WorldVersion_PlayerSaveCraftingHistory integer
@@ -49,6 +50,7 @@
 --- @field public WorldVersion_TrapExplosionDuration integer
 --- @field public WorldVersion_VariableHeight integer
 --- @field public WorldVersion_VehicleAlarm integer
+--- @field public WorldVersion_VisitedFileVersion integer
 --- @field public WorldVersion_ZoneIDisUUID integer
 IsoWorld = {}
 

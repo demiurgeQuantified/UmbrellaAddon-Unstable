@@ -180,15 +180,15 @@ function HandcraftLogic:getUsingRecipeAtHandItem() end
 
 --- @public
 --- @return boolean
+function HandcraftLogic:hasRequiredWorkstation() end
+
+--- @public
+--- @return boolean
 function HandcraftLogic:isCharacterInRangeOfWorkbench() end
 
 --- @public
 --- @return boolean
 function HandcraftLogic:isCraftActionInProgress() end
-
---- @public
---- @return boolean
-function HandcraftLogic:isCraftCheat() end
 
 --- @public
 --- @param arg0 InputScript

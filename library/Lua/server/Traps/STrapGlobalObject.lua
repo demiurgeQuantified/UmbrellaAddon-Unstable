@@ -57,6 +57,8 @@ function STrapGlobalObject:checkForWallExploit(square) end
 ---@return boolean
 function STrapGlobalObject:checkTime(animal) end
 
+function STrapGlobalObject:clearAnimalAndChangeSprite() end
+
 ---@param modData table
 function STrapGlobalObject:fromModData(modData) end
 
@@ -73,6 +75,10 @@ function STrapGlobalObject:reinitModData(square) end
 
 ---@return unknown?
 function STrapGlobalObject:removeAnimal(character) end
+
+function STrapGlobalObject:removeAnimalCorpse(character, isoAnimal) end
+
+function STrapGlobalObject:removeAnimalItem(character) end
 
 ---@param character unknown?
 function STrapGlobalObject:removeBait(character) end

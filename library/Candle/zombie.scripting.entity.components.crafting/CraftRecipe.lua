@@ -127,6 +127,11 @@ function CraftRecipe:cannotBeResearched() end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @return boolean
+function CraftRecipe:characterHasRequiredSkills(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
 --- @return nil
 function CraftRecipe:checkAutoLearnAllSkills(arg0) end
 
@@ -317,6 +322,10 @@ function CraftRecipe:getOutputCount() end
 function CraftRecipe:getOutputs() end
 
 --- @public
+--- @return OverlayMapper
+function CraftRecipe:getOverlayMapper() end
+
+--- @public
 --- @return InputScript
 function CraftRecipe:getProp1() end
 
@@ -459,6 +468,10 @@ function CraftRecipe:isAnySurfaceCraft() end
 
 --- @public
 --- @return boolean
+function CraftRecipe:isBuildableRecipe() end
+
+--- @public
+--- @return boolean
 function CraftRecipe:isCanBeDoneFromFloor() end
 
 --- @public
@@ -523,6 +536,10 @@ function CraftRecipe:overrideIconTexture(arg0) end
 --- @param arg0 string
 --- @return nil
 function CraftRecipe:overrideTranslationName(arg0) end
+
+--- @public
+--- @return boolean
+function CraftRecipe:requiresSpecificWorkstation() end
 
 --- @public
 --- @param arg0 string

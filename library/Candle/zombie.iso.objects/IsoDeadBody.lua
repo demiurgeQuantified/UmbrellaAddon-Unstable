@@ -142,6 +142,10 @@ function IsoDeadBody:Say(line) end
 function IsoDeadBody:addToWorld() end
 
 --- @public
+--- @return InventoryItem
+function IsoDeadBody:becomeCorpseItem() end
+
+--- @public
 --- @return boolean
 function IsoDeadBody:canBeGrappled() end
 

@@ -4,9 +4,12 @@
 ---@field autoFillContents boolean
 ---@field buttonGrid ISButton
 ---@field buttonList ISButton
+---@field buttonViewMode unknown?
 ---@field callbackTarget unknown?
 ---@field entryBox ISTextEntryBox
 ---@field filterTypeCombo ISComboBox?
+---@field iconGrid unknown
+---@field iconList unknown
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
@@ -65,6 +68,8 @@ function ISWidgetRecipeFilterPanel:prerender() end
 function ISWidgetRecipeFilterPanel:render() end
 
 function ISWidgetRecipeFilterPanel:update() end
+
+function ISWidgetRecipeFilterPanel:updateViewModeButton() end
 
 ---@param x number
 ---@param y number

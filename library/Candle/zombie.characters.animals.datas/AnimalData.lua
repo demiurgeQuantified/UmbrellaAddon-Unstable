@@ -159,6 +159,10 @@ function AnimalData:getHealthLoss(arg0) end
 function AnimalData:getHutchPosition() end
 
 --- @public
+--- @return string
+function AnimalData:getInventoryIconTextureName() end
+
+--- @public
 --- @param arg0 PZCalendar
 --- @return integer
 function AnimalData:getLastImpregnatePeriod(arg0) end

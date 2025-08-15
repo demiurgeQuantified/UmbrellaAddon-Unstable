@@ -3,6 +3,7 @@
 --- @class SystemDisabler
 --- @field public class any
 --- @field public doCharacterStats boolean
+--- @field public doEnableDetectOpenGLErrors boolean
 --- @field public doEnableDetectOpenGLErrorsInTexture boolean
 --- @field public doOverridePOVCharacters boolean
 --- @field public doPlayerCreation boolean

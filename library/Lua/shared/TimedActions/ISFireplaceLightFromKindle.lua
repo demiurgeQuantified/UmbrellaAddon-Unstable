@@ -6,7 +6,7 @@
 ---@field item InventoryItem
 ---@field plank InventoryItem
 ---@field sound integer?
-ISFireplaceLightFromKindle = ISBaseTimedAction:derive("ISFireplaceLightFromKindle")
+ISFireplaceLightFromKindle = {}
 ISFireplaceLightFromKindle.Type = "ISFireplaceLightFromKindle"
 
 ---@param event string

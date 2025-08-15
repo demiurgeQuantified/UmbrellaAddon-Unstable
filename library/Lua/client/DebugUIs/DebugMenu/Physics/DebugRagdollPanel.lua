@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class DebugRagdollPanel : ISDebugPanelBase
-DebugRagdollPanel = ISDebugPanelBase:derive("DebugRagdollPanel")
+DebugRagdollPanel = {}
 DebugRagdollPanel.Type = "DebugRagdollPanel"
 DebugRagdollPanel.instance = nil
 

@@ -2,17 +2,13 @@
 
 --- @class GameLoadingState: GameState
 --- @field public class any
---- @field public bDone boolean
 --- @field public convertingFileCount integer
 --- @field public convertingFileMax integer
 --- @field public convertingWorld boolean
 --- @field public GameLoadingString string
 --- @field public loader Thread
 --- @field public mapDownloadFailed boolean
---- @field public newGame boolean
---- @field public playerCreated boolean
 --- @field public playerWrongIP boolean
---- @field public unexpectedError boolean
 --- @field public worldVersionError boolean
 GameLoadingState = {}
 

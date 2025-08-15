@@ -127,6 +127,11 @@ function IsoBarricade:addMetal(chr, metal) end
 function IsoBarricade:addMetalBar(chr, metalBar) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IsoBarricade:addPlank(arg0) end
+
+--- @public
 --- @param chr IsoGameCharacter
 --- @param plank InventoryItem
 --- @return nil

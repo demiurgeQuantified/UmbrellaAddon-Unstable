@@ -415,6 +415,10 @@ function IsoObject:checkHaveElectricity() end
 function IsoObject:checkLightSourceActive() end
 
 --- @public
+--- @return boolean
+function IsoObject:checkObjectPowered() end
+
+--- @public
 --- @return nil
 function IsoObject:cleanWallBlood() end
 
@@ -517,6 +521,12 @@ function IsoObject:getContainerByIndex(index) end
 function IsoObject:getContainerByType(type) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return ItemContainer
+function IsoObject:getContainerClickedOn(arg0, arg1) end
+
+--- @public
 --- @return integer
 function IsoObject:getContainerCount() end
 
@@ -578,6 +588,10 @@ function IsoObject:getFluidUiName() end
 --- @public
 --- @return IsoDirections
 function IsoObject:getForwardIsoDirection() end
+
+--- @public
+--- @return IsoDirections
+function IsoObject:getForwardMovementIsoDirection() end
 
 --- @public
 --- @return GameEntityType
@@ -898,6 +912,10 @@ function IsoObject:hasOverlaySprite() end
 
 --- @public
 --- @return boolean
+function IsoObject:hasPropaneTank() end
+
+--- @public
+--- @return boolean
 function IsoObject:hasSpriteGrid() end
 
 --- @public
@@ -997,6 +1015,10 @@ function IsoObject:isFascia() end
 
 --- @public
 --- @return boolean
+function IsoObject:isFireInteractionObject() end
+
+--- @public
+--- @return boolean
 function IsoObject:isFloor() end
 
 --- @public
@@ -1040,6 +1062,10 @@ function IsoObject:isHoppable() end
 function IsoObject:isItemAllowedInContainer(container, item) end
 
 --- @public
+--- @return boolean
+function IsoObject:isLit() end
+
+--- @public
 --- @param x integer
 --- @param y integer
 --- @return boolean
@@ -1063,6 +1089,10 @@ function IsoObject:isNoPicking() end
 --- @public
 --- @return boolean
 function IsoObject:isNorthHoppable() end
+
+--- @public
+--- @return boolean
+function IsoObject:isObjectNoContainerOrEmpty() end
 
 --- @public
 --- @return boolean
@@ -1098,6 +1128,10 @@ function IsoObject:isOutlineHlBlink(playerIndex) end
 --- @public
 --- @return boolean _ the OutlineOnMouseover
 function IsoObject:isOutlineOnMouseover() end
+
+--- @public
+--- @return boolean
+function IsoObject:isPropaneBBQ() end
 
 --- @public
 --- @param container ItemContainer
@@ -1600,6 +1634,11 @@ function IsoObject:setKeyId(keyId) end
 function IsoObject:setLightSource(arg0) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setLit(arg0) end
+
+--- @public
 --- @param arg0 table
 --- @return nil
 function IsoObject:setModData(arg0) end
@@ -1941,6 +1980,10 @@ function IsoObject:transmitUpdatedSpriteToClients(connection) end
 --- @return nil
 --- @deprecated
 function IsoObject:transmitUpdatedSpriteToServer() end
+
+--- @public
+--- @return nil
+function IsoObject:turnOn() end
 
 --- @public
 --- @return nil

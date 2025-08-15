@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class PropertyContainer
+--- @class PropertyContainer: TShortShortHashMap
 --- @field public class any
 --- @field public sorted List
 PropertyContainer = {}

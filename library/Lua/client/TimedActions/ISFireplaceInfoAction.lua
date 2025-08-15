@@ -3,7 +3,7 @@
 ---@class ISFireplaceInfoAction : ISBaseTimedAction
 ---@field fireplace IsoFireplace
 ---@field playerNum integer
-ISFireplaceInfoAction = ISBaseTimedAction:derive("ISFireplaceInfoAction")
+ISFireplaceInfoAction = {}
 ISFireplaceInfoAction.Type = "ISFireplaceInfoAction"
 
 ---@return boolean

@@ -203,6 +203,11 @@ function SandboxOptions:loadServerTextFile(serverName) end
 function SandboxOptions:loadServerZombiesFile(serverName) end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+function SandboxOptions:lootItemRemovalListContains(arg0) end
+
+--- @public
 --- @return SandboxOptions
 function SandboxOptions:newCopy() end
 
@@ -277,6 +282,11 @@ function SandboxOptions:toLua() end
 --- @public
 --- @return nil
 function SandboxOptions:updateFromLua() end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+function SandboxOptions:worldItemRemovalListContains(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

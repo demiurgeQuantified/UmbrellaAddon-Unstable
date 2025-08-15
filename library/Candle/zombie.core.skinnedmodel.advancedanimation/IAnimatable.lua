@@ -79,6 +79,11 @@ function IAnimatable:getVariable(arg0) end
 function IAnimatable:getVariableBoolean(arg0) end
 
 --- @public
+--- @param arg0 AnimationVariableHandle
+--- @return boolean
+function IAnimatable:getVariableBoolean(arg0) end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 boolean
 --- @return boolean

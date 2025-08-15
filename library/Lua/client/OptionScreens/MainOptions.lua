@@ -60,6 +60,10 @@ function MainOptions.getAvailableLanguage() end
 ---@return string[]
 function MainOptions.getGeneralTranslators(_language) end
 
+---@param bind unknown?
+---@return string
+function MainOptions.getKeyPrefix(bind) end
+
 ---@param key integer
 function MainOptions.keyPressHandler(key) end
 
@@ -85,6 +89,8 @@ function MainOptions.sortModes(a, b) end
 ---@param version integer
 ---@return integer?
 function MainOptions.upgradeKeysIni(name, key, defaultKey, version) end
+
+function MainOptions.writeKey(value, fileOutput) end
 
 function MainOptions:addAccessibilityPanel() end
 

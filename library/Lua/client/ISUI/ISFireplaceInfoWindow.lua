@@ -9,7 +9,7 @@
 ---@field panel ISToolTip
 ---@field playerNum integer
 ---@field spriteName string
-ISFireplaceInfoWindow = ISCollapsableWindow:derive("ISFireplaceInfoWindow")
+ISFireplaceInfoWindow = {}
 ISFireplaceInfoWindow.Type = "ISFireplaceInfoWindow"
 ISFireplaceInfoWindow.windows = {} ---@type table<IsoPlayer, ISFireplaceInfoWindow>
 

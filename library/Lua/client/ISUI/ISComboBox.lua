@@ -180,7 +180,6 @@ function ISComboBoxEditor:new(x, y, width, height, comboBox) end
 
 ---@class ISComboBoxPopup : ISScrollingListBox
 ---@field parentCombo ISComboBox?
----@field selected number
 ---@field tooWide umbrella.ISScrollingListBox.Item?
 ---@field tooWideY number?
 ISComboBoxPopup = ISScrollingListBox:derive("ISComboBoxPopup")

@@ -34,6 +34,11 @@ function StashUtil:addContainer(self, containerType, containerSprite, containerI
 ---@param b number
 function StashUtil:addStamp(self, symbol, text, mapX, mapY, r, g, b) end
 
+---@param r number
+---@param g number
+---@param b number
+function StashUtil:addStampV2(symbol, text, mapX, mapY, anchorX, anchorY, rotation, r, g, b) end
+
 ---@class umbrella.StashUtil.NewStash : umbrella.StashUtil.Stash
 umbrella_StashUtil_NewStash = {}
 umbrella_StashUtil_NewStash.addStamp = StashUtil.addStamp

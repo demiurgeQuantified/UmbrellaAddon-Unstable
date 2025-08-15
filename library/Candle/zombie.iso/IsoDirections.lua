@@ -74,7 +74,7 @@ function IsoDirections.fromString(arg0) end
 
 --- @public
 --- @static
---- @return nil
+--- @return IsoDirections[][]
 function IsoDirections.generateTables() end
 
 --- @public
@@ -134,6 +134,11 @@ function IsoDirections:RotRight(time) end
 function IsoDirections:ToVector() end
 
 --- @public
+--- @param arg0 Vector2
+--- @return Vector2
+function IsoDirections:ToVector(arg0) end
+
+--- @public
 --- @return integer
 function IsoDirections:dx() end
 
@@ -152,6 +157,10 @@ function IsoDirections:indexUnmodified() end
 --- @public
 --- @return number
 function IsoDirections:toAngle() end
+
+--- @public
+--- @return number
+function IsoDirections:toAngleDegrees() end
 
 --- @public
 --- @return string

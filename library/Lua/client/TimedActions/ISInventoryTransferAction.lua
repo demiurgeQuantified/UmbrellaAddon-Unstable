@@ -60,6 +60,12 @@ function ISInventoryTransferAction:getSoundName() end
 ---@return number
 function ISInventoryTransferAction:getTimeDelta() end
 
+---@return unknown?
+function ISInventoryTransferAction:getTransferCompleteSoundName() end
+
+---@return string
+function ISInventoryTransferAction:getTransferStartSoundName() end
+
 ---@param item InventoryItem
 ---@return boolean
 function ISInventoryTransferAction:isAlreadyTransferred(item) end

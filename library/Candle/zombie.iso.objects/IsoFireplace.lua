@@ -127,6 +127,10 @@ function IsoFireplace:setLit(lit) end
 
 --- @public
 --- @return nil
+function IsoFireplace:turnOn() end
+
+--- @public
+--- @return nil
 function IsoFireplace:update() end
 
 --- @public

@@ -6,6 +6,7 @@
 ---@field item InventoryItem
 ---@field itemStart number
 ---@field itemTarget number
+---@field otherItems unknown
 ---@field part VehiclePart
 ---@field sound integer?
 ---@field tankStart number
@@ -27,7 +28,12 @@ function ISTakeGasolineFromVehicle:getDuration() end
 ---@return boolean
 function ISTakeGasolineFromVehicle:isValid() end
 
+---@return unknown?
+function ISTakeGasolineFromVehicle:nextItem() end
+
 function ISTakeGasolineFromVehicle:perform() end
+
+function ISTakeGasolineFromVehicle:runAgain(intoItem) end
 
 function ISTakeGasolineFromVehicle:serverStart() end
 

@@ -217,6 +217,11 @@ function ItemContainer:addItemOnServer(item) end
 function ItemContainer:addItemsToProcessItems() end
 
 --- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function ItemContainer:canItemFit(arg0) end
+
+--- @public
 --- @return nil
 function ItemContainer:clear() end
 
@@ -613,6 +618,10 @@ function ItemContainer:getAvailableFluidContainer(arg0) end
 --- @param arg0 string
 --- @return number
 function ItemContainer:getAvailableFluidContainersCapacity(arg0) end
+
+--- @public
+--- @return number
+function ItemContainer:getAvailableWeightCapacity() end
 
 --- @public
 --- @param predicate Predicate

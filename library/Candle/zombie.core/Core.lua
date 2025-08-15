@@ -31,6 +31,7 @@
 --- @field public iPerfSkybox_High integer
 --- @field public iPerfSkybox_Medium integer
 --- @field public iPerfSkybox_Static integer
+--- @field public KEYBINDING_EMPTY KeyBinding
 --- @field public MaxJukeBoxesActive integer
 --- @field public ModelScale number
 --- @field public NumJukeBoxesActive integer
@@ -357,14 +358,12 @@ function Core:TakeScreenshot(x, y, width, height, readBuffer) end
 --- @public
 --- @param arg0 string
 --- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 boolean
+--- @param arg4 boolean
+--- @param arg5 boolean
 --- @return nil
-function Core:addAltKeyBinding(arg0, arg1) end
-
---- @public
---- @param keyName string
---- @param key integer
---- @return nil
-function Core:addKeyBinding(keyName, key) end
+function Core:addKeyBinding(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @return boolean
@@ -408,10 +407,6 @@ function Core:getAccountUsed() end
 function Core:getAltKey(arg0) end
 
 --- @public
---- @return Map
-function Core:getAltKeyMaps() end
-
---- @public
 --- @param playerIndex integer
 --- @return boolean
 function Core:getAutoZoom(playerIndex) end
@@ -419,11 +414,6 @@ function Core:getAutoZoom(playerIndex) end
 --- @public
 --- @return ColorInfo
 function Core:getBadHighlitedColor() end
-
---- @public
---- @param arg0 integer
---- @return string
-function Core:getBindForKey(arg0) end
 
 --- @public
 --- @return string
@@ -487,8 +477,14 @@ function Core:getIsoCursorVisibility() end
 function Core:getKey(keyName) end
 
 --- @public
---- @return Map
-function Core:getKeyMaps() end
+--- @param arg0 integer
+--- @return KeyBinding
+function Core:getKeyBinding(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return KeyBinding
+function Core:getKeyBinding(arg0) end
 
 --- @public
 --- @return integer
@@ -1189,6 +1185,11 @@ function Core:initPoisonousMushroom() end
 function Core:initShaders() end
 
 --- @public
+--- @param arg0 KeyBinding
+--- @return boolean
+function Core:invalidBindingShiftCtrl(arg0) end
+
+--- @public
 --- @return boolean
 function Core:isAnimPopupDone() end
 
@@ -1506,11 +1507,6 @@ function Core:setIsSelectingAll(isSelectingAll) end
 --- @param isoCursorVisibility integer
 --- @return nil
 function Core:setIsoCursorVisibility(isoCursorVisibility) end
-
---- @public
---- @param keyMaps Map
---- @return nil
-function Core:setKeyMaps(keyMaps) end
 
 --- @public
 --- @param fbo TextureFBO

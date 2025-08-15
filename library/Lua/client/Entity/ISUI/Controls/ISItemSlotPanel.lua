@@ -1,16 +1,31 @@
 ---@meta
 
 ---@class ISItemSlotPanel : ISGroupBox
+---@field allowDrop boolean
 ---@field drawProgress boolean
 ---@field entity GameEntity
+---@field functionTarget unknown?
+---@field itemSlots table
+---@field logic unknown
+---@field onItemSlotContentsChanged unknown?
+---@field onSelectInputsButtonClicked unknown?
 ---@field player IsoPlayer
+---@field renderRequiredItemCount boolean
+---@field showSelectInputsButton boolean
 ---@field styleCell string?
 ---@field tableLayout unknown?
 ISItemSlotPanel = ISGroupBox:derive("ISItemSlotPanel")
 ISItemSlotPanel.Type = "ISItemSlotPanel"
 
+function ISItemSlotPanel:addDisplayEmptySlot(_styleItemSlot) end
+
+function ISItemSlotPanel:addDisplayInventoryItem(_item, _styleItemSlot) end
+
+function ISItemSlotPanel:addDisplayItem(_item, _styleItemSlot) end
+
 ---@param _resourceItem Resource
 ---@param _styleItemSlot string?
+---@return unknown?
 function ISItemSlotPanel:addResource(_resourceItem, _styleItemSlot) end
 
 ---@param _resources ArrayList<Resource>
@@ -18,6 +33,9 @@ function ISItemSlotPanel:addResource(_resourceItem, _styleItemSlot) end
 function ISItemSlotPanel:addResources(_resources, _styleItemSlot) end
 
 function ISItemSlotPanel:createChildren() end
+
+---@return table
+function ISItemSlotPanel:getItemSlots() end
 
 function ISItemSlotPanel:initialise() end
 
@@ -36,7 +54,13 @@ function ISItemSlotPanel:onItemSlotRemoveSingleItem(_itemSlot, _item) end
 
 function ISItemSlotPanel:onResize() end
 
+function ISItemSlotPanel:onSelectInputsButton(_itemSlot) end
+
+function ISItemSlotPanel:onStoredItemChanged(_itemSlot) end
+
 function ISItemSlotPanel:prerender() end
+
+function ISItemSlotPanel:removeAllSlots() end
 
 function ISItemSlotPanel:render() end
 

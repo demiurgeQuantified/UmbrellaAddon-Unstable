@@ -2,6 +2,7 @@
 
 --- @class EntityEventType: Enum
 --- @field public class any
+--- @field public AddedToWorld EntityEventType
 EntityEventType = {}
 
 ------------------------------------

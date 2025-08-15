@@ -165,6 +165,10 @@ function ScriptManager:getAllAnimationsMeshes() end
 
 --- @public
 --- @return ArrayList
+function ScriptManager:getAllBuildableRecipes() end
+
+--- @public
+--- @return ArrayList
 function ScriptManager:getAllClockScripts() end
 
 --- @public
@@ -310,6 +314,11 @@ function ScriptManager:getAllXuiStyles() end
 --- @param name string
 --- @return AnimationsMesh
 function ScriptManager:getAnimationsMesh(name) end
+
+--- @public
+--- @param arg0 string
+--- @return CraftRecipe
+function ScriptManager:getBuildableRecipe(arg0) end
 
 --- @public
 --- @return string

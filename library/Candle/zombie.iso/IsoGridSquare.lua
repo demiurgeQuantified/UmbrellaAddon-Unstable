@@ -959,6 +959,19 @@ function IsoGridSquare:getAdjacentPathSquare(dir) end
 function IsoGridSquare:getAdjacentSquare(dir) end
 
 --- @public
+--- @param arg0 Predicate
+--- @param arg1 PZArrayList
+--- @return PZArrayList
+function IsoGridSquare:getAllContainers(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoDirections
+--- @param arg1 Predicate
+--- @param arg2 PZArrayList
+--- @return PZArrayList
+function IsoGridSquare:getAllContainersFromAdjacentSquare(arg0, arg1, arg2) end
+
+--- @public
 --- @return IsoAnimalTrack
 function IsoGridSquare:getAnimalTrack() end
 
@@ -1309,6 +1322,12 @@ function IsoGridSquare:getN() end
 function IsoGridSquare:getNextNonItemObjectIndex(arg0) end
 
 --- @public
+--- @param arg0 Predicate
+--- @param arg1 PZArrayList
+--- @return PZArrayList
+function IsoGridSquare:getObjectContainers(arg0, arg1) end
+
+--- @public
 --- @return PZArrayList _ the Objects
 function IsoGridSquare:getObjects() end
 
@@ -1480,6 +1499,10 @@ function IsoGridSquare:getStairsHeightMin() end
 function IsoGridSquare:getStaticMovingObjects() end
 
 --- @public
+--- @return IsoGridSquare[]
+function IsoGridSquare:getSurroundingSquares() end
+
+--- @public
 --- @param playerIndex integer
 --- @return number _ the targetDarkMulti
 function IsoGridSquare:getTargetDarkMulti(playerIndex) end
@@ -1541,6 +1564,17 @@ function IsoGridSquare:getTree() end
 --- @public
 --- @return BaseVehicle
 function IsoGridSquare:getVehicleContainer() end
+
+--- @public
+--- @param arg0 Predicate
+--- @return PZArrayList
+function IsoGridSquare:getVehicleItemContainers(arg0) end
+
+--- @public
+--- @param arg0 Predicate
+--- @param arg1 PZArrayList
+--- @return PZArrayList
+function IsoGridSquare:getVehicleItemContainers(arg0, arg1) end
 
 --- @public
 --- @param i integer
@@ -1722,7 +1756,7 @@ function IsoGridSquare:hasFence() end
 
 --- @public
 --- @return boolean
-function IsoGridSquare:hasFenceInVicinty() end
+function IsoGridSquare:hasFenceInVicinity() end
 
 --- @public
 --- @return boolean
@@ -1749,6 +1783,10 @@ function IsoGridSquare:hasFloor() end
 --- @param north boolean is the item we're trying to place facing north or not
 --- @return boolean
 function IsoGridSquare:hasFloor(north) end
+
+--- @public
+--- @return boolean
+function IsoGridSquare:hasFloorOverWater() end
 
 --- @public
 --- @return boolean
@@ -2352,6 +2390,12 @@ function IsoGridSquare:save(output, outputObj, IS_DEBUG_SAVE) end
 function IsoGridSquare:scoreAsWaypoint(x, y) end
 
 --- @public
+--- @param arg0 IsoDirections
+--- @param arg1 IsoGridSquare
+--- @return nil
+function IsoGridSquare:setAdjacentSquare(arg0, arg1) end
+
+--- @public
 --- @param CacheIsFree boolean the CacheIsFree to set
 --- @return nil
 function IsoGridSquare:setCacheIsFree(CacheIsFree) end
@@ -2700,6 +2744,13 @@ function IsoGridSquare:transmitRemoveItemFromSquareOnClients(arg0) end
 --- @public
 --- @return nil
 function IsoGridSquare:transmitStopFire() end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 number
+--- @return IsoDeadBody
+function IsoGridSquare:tryAddCorpseToWorld(arg0, arg1, arg2) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

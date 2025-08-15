@@ -39,6 +39,10 @@ function CraftRecipeComponentScript:getBuildCategory() end
 function CraftRecipeComponentScript:getCraftRecipe() end
 
 --- @public
+--- @return Texture
+function CraftRecipeComponentScript:getIconTexture() end
+
+--- @public
 --- @return boolean
 function CraftRecipeComponentScript:isoMasterOnly() end
 

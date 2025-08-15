@@ -5,6 +5,7 @@
 ---@field item InventoryItem?
 ---@field itemSlot ISItemSlot?
 ---@field resource Resource
+---@field targetItem unknown?
 ISItemSlotRemoveAction = ISBaseTimedAction:derive("ISItemSlotRemoveAction")
 ISItemSlotRemoveAction.Type = "ISItemSlotRemoveAction"
 

@@ -43,6 +43,10 @@ function CraftBenchScript:getFluidInputChannels() end
 function CraftBenchScript:getRecipeTagQuery() end
 
 --- @public
+--- @return List
+function CraftBenchScript:getRecipes() end
+
+--- @public
 --- @return boolean
 function CraftBenchScript:isoMasterOnly() end
 

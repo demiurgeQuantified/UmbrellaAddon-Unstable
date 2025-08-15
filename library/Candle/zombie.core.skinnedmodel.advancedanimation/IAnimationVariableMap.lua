@@ -47,6 +47,11 @@ function IAnimationVariableMap:getVariable(arg0) end
 function IAnimationVariableMap:getVariableBoolean(arg0) end
 
 --- @public
+--- @param arg0 AnimationVariableHandle
+--- @return boolean
+function IAnimationVariableMap:getVariableBoolean(arg0) end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 boolean
 --- @return boolean
@@ -100,6 +105,12 @@ function IAnimationVariableMap:setVariable(key, value) end
 --- @param value string
 --- @return IAnimationVariableSlot
 function IAnimationVariableMap:setVariable(key, value) end
+
+--- @public
+--- @param arg0 AnimationVariableHandle
+--- @param arg1 boolean
+--- @return IAnimationVariableSlot
+function IAnimationVariableMap:setVariable(arg0, arg1) end
 
 --- @public
 --- @param arg0 string

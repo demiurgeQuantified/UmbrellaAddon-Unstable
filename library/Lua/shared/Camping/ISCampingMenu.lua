@@ -6,19 +6,20 @@ ISCampingMenu = {}
 ---@param currentFuel number
 ---@param fuelInfo table
 ---@param target unknown?
----@param timedAction table
+---@param timedAction ISAddFuelAction | ISBBQAddFuel
 ---@return boolean
 function ISCampingMenu.doAddFuelOption(context, worldobjects, currentFuel, fuelInfo, target, timedAction) end
 
 ---@return boolean?
 function ISCampingMenu.doCampingMenu(player, context, worldobjects, test) end
 
+---@param worldobjects unknown?
 ---@param hasFuel boolean
 ---@param fuelInfo table
 ---@param target unknown?
----@param petrolAction table
----@param tinderAction table
----@param kindleAction table
+---@param petrolAction ISLightFromPetrol | ISBBQLightFromPetrol
+---@param tinderAction ISLightFromLiterature | ISBBQLightFromLiterature
+---@param kindleAction ISLightFromKindle | ISBBQLightFromKindle
 function ISCampingMenu.doLightFireOption(
 	playerObj,
 	context,

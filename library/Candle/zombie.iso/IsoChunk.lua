@@ -284,6 +284,10 @@ function IsoChunk:doLoadGridsquare() end
 
 --- @public
 --- @return nil
+function IsoChunk:doPathfind() end
+
+--- @public
+--- @return nil
 function IsoChunk:doReuseGridsquares() end
 
 --- @public
@@ -400,6 +404,10 @@ function IsoChunk:hasWaterSquare() end
 --- @return integer
 --- @deprecated
 function IsoChunk:hashCodeNoOverride() end
+
+--- @public
+--- @return nil
+function IsoChunk:ignorePathfind() end
 
 --- @public
 --- @param arg0 integer
@@ -626,3 +634,8 @@ function IsoChunk:updateVehicleStory() end
 --- @param cell IsoCell
 --- @return IsoChunk
 function IsoChunk.new(cell) end
+
+--- @public
+--- @param arg0 WorldReuserThread
+--- @return IsoChunk
+function IsoChunk.new(arg0) end

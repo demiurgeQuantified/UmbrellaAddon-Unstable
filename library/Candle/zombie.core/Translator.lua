@@ -106,6 +106,12 @@ function Translator.getLanguage() end
 
 --- @public
 --- @static
+--- @param arg0 string
+--- @return string
+function Translator.getMapLabelText(arg0) end
+
+--- @public
+--- @static
 --- @param name string
 --- @return string
 function Translator.getMoveableDisplayName(name) end

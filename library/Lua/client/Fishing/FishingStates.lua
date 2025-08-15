@@ -16,6 +16,8 @@ Fishing.States = {
 ---@field manager Fishing.FishingManager
 local __fishing_States_None = {}
 
+function __fishing_States_None:destroy() end
+
 function __fishing_States_None:start() end
 
 function __fishing_States_None:stop() end
@@ -29,6 +31,8 @@ function __fishing_States_None:new(manager) end
 ---@class Fishing.States.Idle
 ---@field manager Fishing.FishingManager
 local __fishing_States_Idle = {}
+
+function __fishing_States_Idle:destroy() end
 
 function __fishing_States_Idle:start() end
 
@@ -44,6 +48,8 @@ function __fishing_States_Idle:new(manager) end
 ---@field manager Fishing.FishingManager
 ---@field sound integer?
 local __fishing_States_Cast = {}
+
+function __fishing_States_Cast:destroy() end
 
 function __fishing_States_Cast:start() end
 
@@ -61,6 +67,8 @@ function __fishing_States_Cast:new(manager) end
 ---@field sound integer?
 local __fishing_States_Wait = {}
 
+function __fishing_States_Wait:destroy() end
+
 function __fishing_States_Wait:start() end
 
 function __fishing_States_Wait:stop() end
@@ -77,6 +85,8 @@ function __fishing_States_Wait:new(manager) end
 ---@field sound integer?
 local __fishing_States_ReelIn = {}
 
+function __fishing_States_ReelIn:destroy() end
+
 function __fishing_States_ReelIn:start() end
 
 function __fishing_States_ReelIn:stop() end
@@ -90,6 +100,8 @@ function __fishing_States_ReelIn:new(manager) end
 ---@class Fishing.States.ReelOut
 ---@field manager Fishing.FishingManager
 local __fishing_States_ReelOut = {}
+
+function __fishing_States_ReelOut:destroy() end
 
 function __fishing_States_ReelOut:start() end
 
@@ -105,6 +117,8 @@ function __fishing_States_ReelOut:new(manager) end
 ---@field action ISPickupFishAction
 ---@field manager Fishing.FishingManager
 local __fishing_States_PickupFish = {}
+
+function __fishing_States_PickupFish:destroy() end
 
 function __fishing_States_PickupFish:start() end
 

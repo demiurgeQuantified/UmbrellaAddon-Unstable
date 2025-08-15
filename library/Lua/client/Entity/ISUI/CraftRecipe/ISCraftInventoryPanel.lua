@@ -10,11 +10,14 @@
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
 ---@field isDirty boolean
+---@field isResourceItemSlot boolean
 ---@field itemListBox ISScrollingListBox?
+---@field itemSlot unknown
 ---@field logic HandcraftLogic
 ---@field margin number
 ---@field player IsoPlayer
 ---@field selectedItem umbrella.ISCraftInventoryPanel.ListItem
+---@field showCurrentContents boolean
 ---@field unavailablesExpanded boolean
 ISCraftInventoryPanel = ISPanel:derive("ISCraftInventoryPanel")
 ISCraftInventoryPanel.Type = "ISCraftInventoryPanel"
@@ -54,6 +57,8 @@ function ISCraftInventoryPanel:createUnavailableListItemEntry(_item, _index) end
 function ISCraftInventoryPanel:drawListItem(y, item, alt) end
 
 function ISCraftInventoryPanel:initialise() end
+
+function ISCraftInventoryPanel:onListItemClicked(_item) end
 
 ---@param _item umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:onListSelected(_item) end

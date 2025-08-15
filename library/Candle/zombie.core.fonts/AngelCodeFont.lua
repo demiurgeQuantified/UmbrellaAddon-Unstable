@@ -246,6 +246,10 @@ function AngelCodeFont:getYOffset(text) end
 function AngelCodeFont:isEmpty() end
 
 --- @public
+--- @return boolean
+function AngelCodeFont:isSdf() end
+
+--- @public
 --- @param oldState State
 --- @param newState State
 --- @param asset Asset
@@ -258,6 +262,11 @@ function AngelCodeFont:onStateChanged(oldState, newState, asset) end
 --- @param asset Asset
 --- @return nil
 function AngelCodeFont:onStateChanged(oldState, newState, asset) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function AngelCodeFont:setSdf(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

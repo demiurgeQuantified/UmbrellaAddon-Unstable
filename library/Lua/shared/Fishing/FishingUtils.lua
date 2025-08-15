@@ -14,14 +14,24 @@ __fishing_Utils.stopFishingKeysKeyboard = {
 	"Melee",
 	"CancelAction",
 }
+__fishing_Utils.hotbarKeys = {
+	"Hotbar 1",
+	"Hotbar 2",
+	"Hotbar 3",
+	"Hotbar 4",
+	"Hotbar 5",
+	"Hotbar 6",
+	"Hotbar 7",
+	"Hotbar 8",
+}
 __fishing_Utils.tempVec2 = Vector2.new()
 __fishing_Utils.skillSizeLimit = {
-	[0] = 0.5,
-	0.9,
-	1,
-	1.4,
-	1.8,
+	[0] = 1.4,
+	1.5,
+	1.9,
+	2.2,
 	2.3,
+	2.8,
 	4.5,
 	9,
 	27,
@@ -123,6 +133,8 @@ function __fishing_Utils.getTimeParams() end
 
 ---@return umbrella.Fishing.WeatherParams
 function __fishing_Utils.getWeatherParams() end
+
+function __fishing_Utils.hotbarStopper() end
 
 ---@return boolean
 function __fishing_Utils.isAccessibleAimDist(player) end

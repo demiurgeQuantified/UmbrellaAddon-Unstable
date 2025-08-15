@@ -12,6 +12,8 @@
 ---@field healthSlider ISSliderPanel
 ---@field healthSliderLabel ISLabel
 ---@field healthSliderTitle ISLabel
+---@field heightOffset ISTextEntryBox
+---@field heightOffsetLbl ISLabel
 ---@field maleOutfits ArrayList<string>
 ---@field marker WorldMarkers.GridSquareMarker?
 ---@field outfit ISComboBox
@@ -38,6 +40,9 @@ function ISSpawnHordeUI:addMarker(square, radius) end
 function ISSpawnHordeUI:close() end
 
 function ISSpawnHordeUI:createChildren() end
+
+---@return number?
+function ISSpawnHordeUI:getHeightOffset() end
 
 ---@return string?
 function ISSpawnHordeUI:getOutfit() end

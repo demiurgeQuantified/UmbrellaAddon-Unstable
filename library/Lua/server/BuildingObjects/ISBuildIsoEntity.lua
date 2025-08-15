@@ -14,6 +14,7 @@
 ---@field craftingBank string?
 ---@field craftRecipe boolean
 ---@field dontNeedFrame boolean
+---@field drawFloorGrid boolean
 ---@field face SpriteConfigManager.FaceInfo?
 ---@field hoppable boolean?
 ---@field isFloor boolean?
@@ -99,6 +100,11 @@ function ISBuildIsoEntity:isValid(square) end
 ---@return boolean
 function ISBuildIsoEntity:isValidPerSquare(square, tileInfo, _requiresFloor, _extendsN, _extendsW) end
 
+---@param x number
+---@param y number
+---@return boolean
+function ISBuildIsoEntity:onObjectLeftMouseButtonDown(object, x, y) end
+
 ---@param action ISBaseTimedAction
 function ISBuildIsoEntity:onTimedActionStart(action) end
 
@@ -111,6 +117,11 @@ function ISBuildIsoEntity:removeFromGround(square) end
 ---@param square IsoGridSquare
 function ISBuildIsoEntity:render(x, y, z, square) end
 
+---@param x number
+---@param y number
+---@param z number
+function ISBuildIsoEntity:renderFloorGrid(x, y, z) end
+
 ---@param key integer
 function ISBuildIsoEntity:rotateKey(key) end
 
@@ -119,6 +130,11 @@ function ISBuildIsoEntity:rotateKey(key) end
 ---@param sprite string
 ---@param openSprite string?
 function ISBuildIsoEntity:setInfo(square, north, sprite, openSprite) end
+
+---@param x number
+---@param y number
+---@param z number
+function ISBuildIsoEntity:tryBuild(x, y, z) end
 
 ---@param x number
 ---@param y number

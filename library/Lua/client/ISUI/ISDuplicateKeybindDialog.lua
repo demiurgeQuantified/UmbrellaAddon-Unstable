@@ -1,13 +1,16 @@
 ---@meta
 
 ---@class ISDuplicateKeybindDialog : ISPanel
+---@field alt unknown
 ---@field cancel ISButton
 ---@field clear ISButton
+---@field ctrl unknown
 ---@field keep ISButton
 ---@field key integer
 ---@field keybind2Name string?
 ---@field keybindName string
 ---@field label ISLabel
+---@field shift unknown
 ISDuplicateKeybindDialog = ISPanel:derive("ISDuplicateKeybindDialog")
 ISDuplicateKeybindDialog.Type = "ISDuplicateKeybindDialog"
 

@@ -209,6 +209,9 @@ function ISInventoryPaneContextMenu.doClothingItemExtraMenu(context, clothingIte
 ---@param context ISContextMenu
 function ISInventoryPaneContextMenu.doClothingPatchMenu(player, clothing, context) end
 
+---@return unknown?
+function ISInventoryPaneContextMenu.doContextConfigOptions(context, item, playerObj) end
+
 ---@param playerObj IsoPlayer
 ---@param fluidContainer InventoryItem
 ---@param context ISContextMenu
@@ -266,6 +269,11 @@ function ISInventoryPaneContextMenu.doMakeUpMenu(context, makeup, playerObj) end
 ---@param player integer
 ---@param context ISContextMenu
 function ISInventoryPaneContextMenu.doPlace3DItemOption(items, player, context) end
+
+---@param isLiterature boolean
+function ISInventoryPaneContextMenu.doRecipeList(context, text, recipeItem, recipes, playerObj, isLiterature) end
+
+function ISInventoryPaneContextMenu.doRecipeListForItem(context, text, recipeItem, playerObj) end
 
 ---@param playerObj IsoPlayer
 ---@param bullet InventoryItem
@@ -349,6 +357,8 @@ function ISInventoryPaneContextMenu.getItemInstance(type) end
 ---@param cookingLvl integer
 ---@return integer?
 function ISInventoryPaneContextMenu.getRealEvolvedItemUse(evoItem, evorecipe2, cookingLvl) end
+
+function ISInventoryPaneContextMenu.grabCorpseItem(playerObj, item) end
 
 ---@param playerObj IsoPlayer
 ---@return IsoObject | boolean
@@ -450,6 +460,8 @@ function ISInventoryPaneContextMenu.OnCraftComplete(
 	selectedItemContainer
 )
 end
+
+function ISInventoryPaneContextMenu.onCustomFunction(customFunction, item, playerObj, param) end
 
 ---@param item InventoryItem
 ---@param player integer
@@ -741,6 +753,8 @@ function ISInventoryPaneContextMenu.repairAllClothing(player, clothing, parts, f
 ---@param thread InventoryItem
 ---@param needle InventoryItem
 function ISInventoryPaneContextMenu.repairClothing(player, clothing, part, fabric, thread, needle) end
+
+function ISInventoryPaneContextMenu.showGrowingSeasons(playerObj) end
 
 ---@param String string
 ---@param Start string

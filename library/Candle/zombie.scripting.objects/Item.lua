@@ -712,6 +712,11 @@ function Item:getUnhappyChange() end
 function Item:getUseDelta() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return ArrayList
+function Item:getUsedInFavouriteRecipes(arg0) end
+
+--- @public
 --- @return ArrayList
 function Item:getUsedInRecipes() end
 
@@ -719,6 +724,12 @@ function Item:getUsedInRecipes() end
 --- @param arg0 IsoGameCharacter
 --- @return ArrayList
 function Item:getUsedInRecipes(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ArrayList
+--- @return ArrayList
+function Item:getUsedInRecipes(arg0, arg1) end
 
 --- @public
 --- @return ArrayList
@@ -958,6 +969,11 @@ function Item:isUseWhileUnequipped() end
 --- @public
 --- @return boolean
 function Item:isUsedInRecipes() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function Item:isUsedInRecipes(arg0) end
 
 --- @public
 --- @return boolean

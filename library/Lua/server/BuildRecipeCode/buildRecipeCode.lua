@@ -26,6 +26,9 @@ function __buildRecipeCode_barricade.OnIsValid(params) end
 ---@return boolean
 function __buildRecipeCode_barricade.OnIsValidPlanks(params) end
 
+---@return boolean
+function __buildRecipeCode_barricade.TimedActionOnIsValid(params) end
+
 ---@class BuildRecipeCode.stairs
 local __buildRecipeCode_stairs = {}
 

@@ -13,6 +13,28 @@
 ---@field tabs ISTabPanel
 ISLiteratureUI = ISCollapsableWindowJoypad:derive("ISLiteratureUI")
 ISLiteratureUI.Type = "ISLiteratureUI"
+ISLiteratureUI.miscRecipes = {
+	["Basic Mechanics"] = {
+		tooltip = "Tooltip_Recipe_Basic_Mechanics",
+		icon = "Item_Wrench",
+	},
+	["Intermediate Mechanics"] = {
+		tooltip = "Tooltip_Recipe_Intermediate_Mechanics",
+		icon = "Item_Wrench",
+	},
+	["Advanced Mechanics"] = {
+		tooltip = "Tooltip_Recipe_Advanced_Mechanics",
+		icon = "Item_Wrench",
+	},
+	Herbalist = {
+		tooltip = "Tooltip_Recipe_Herbalist",
+		icon = "media/ui/Traits/trait_herbalist.png",
+	},
+	Generator = {
+		tooltip = "Tooltip_Recipe_Generator",
+		icon = "Item_Generator",
+	},
+}
 
 ---@param fullType string
 ---@param hidden boolean
@@ -36,6 +58,8 @@ function ISLiteratureUI:onJoypadDown(button) end
 
 ---@param joypadData JoypadData
 function ISLiteratureUI:onLoseJoypadFocus(joypadData) end
+
+function ISLiteratureUI:onRecipeSelected(recipe) end
 
 function ISLiteratureUI:prerender() end
 
@@ -110,3 +134,15 @@ function ISLiteratureGrowingList:doDrawItem(y, item, alt) end
 ---@param character IsoPlayer
 ---@return ISLiteratureGrowingList
 function ISLiteratureGrowingList:new(x, y, width, height, character) end
+
+---@param recipeName string
+---@return boolean
+function doesMiscRecipeExist(recipeName) end
+
+---@param recipeName string
+---@return unknown?
+function getMiscRecipeIcon(recipeName) end
+
+---@param recipeName string
+---@return unknown?
+function getRecipeIcon(recipeName) end

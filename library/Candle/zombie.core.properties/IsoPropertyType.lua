@@ -15,13 +15,16 @@
 --- @field public ContainerTakeSound string
 --- @field public CustomName string
 --- @field public DamagedSprite string
+--- @field public doorTrans string
 --- @field public DoubleDoor string
 --- @field public Facing string
+--- @field public FootstepMaterial string
 --- @field public FuelAmount string
 --- @field public GarageDoor string
 --- @field public GlassRemovedOffset string
 --- @field public GreenLight string
 --- @field public GroupName string
+--- @field public IsFridge string
 --- @field public IsMoveAble string
 --- @field public IsoType string
 --- @field public LightRadius string
@@ -30,9 +33,20 @@
 --- @field public PropaneTank string
 --- @field public RedLight string
 --- @field public SmashedTileOffset string
+--- @field public streetlight string
 --- @field public WaterAmount string
 --- @field public WindowLocked string
 IsoPropertyType = {}
+
+------------------------------------
+---------- STATIC METHODS ----------
+------------------------------------
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return string
+function IsoPropertyType.lookup(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

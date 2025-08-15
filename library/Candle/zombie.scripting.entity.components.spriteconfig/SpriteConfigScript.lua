@@ -99,6 +99,10 @@ function SpriteConfigScript:getPreviousStages() end
 function SpriteConfigScript:getSkillBaseHealth() end
 
 --- @public
+--- @return string
+function SpriteConfigScript:getTimedActionOnIsValid() end
+
+--- @public
 --- @param arg0 IVersionHash
 --- @return nil
 function SpriteConfigScript:getVersion(arg0) end

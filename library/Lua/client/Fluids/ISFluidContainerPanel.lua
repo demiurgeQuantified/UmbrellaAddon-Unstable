@@ -76,6 +76,9 @@ function ISFluidContainerPanel:getContainer() end
 ---@return GameEntity?
 function ISFluidContainerPanel:getContainerOwner() end
 
+---@return unknown?
+function ISFluidContainerPanel:getContainerOwnerObject() end
+
 ---@return umbrella.ISFluidContainerPanel.TextureItem[]?
 function ISFluidContainerPanel:getIsoObjectTextures() end
 

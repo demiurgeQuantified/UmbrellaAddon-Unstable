@@ -31,11 +31,11 @@ function IsoThumpable.GetBreakFurnitureSound(arg0) end
 function IsoThumpable:Damage(arg0) end
 
 --- @public
---- @return IsoCurtain
+--- @return ICurtain
 function IsoThumpable:HasCurtains() end
 
 --- @public
---- @return ICurtain
+--- @return IsoCurtain
 function IsoThumpable:HasCurtains() end
 
 --- @public
@@ -113,9 +113,10 @@ function IsoThumpable:WeaponHit(owner, weapon) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 ArrayList
---- @param arg2 boolean
+--- @param arg2 CraftRecipeData
+--- @param arg3 boolean
 --- @return IsoBarricade
-function IsoThumpable:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
+function IsoThumpable:addBarricadesFromCraftRecipe(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -131,6 +132,10 @@ function IsoThumpable:addSheetRope(player, itemType) end
 --- @public
 --- @return nil
 function IsoThumpable:addToWorld() end
+
+--- @public
+--- @return nil
+function IsoThumpable:afterRotated() end
 
 --- @public
 --- @param arg0 IsoAnimal
@@ -376,6 +381,10 @@ function IsoThumpable:getOtherSideOfDoor(chr) end
 --- @public
 --- @return IsoObject
 function IsoThumpable:getRenderEffectMaster() end
+
+--- @public
+--- @return string
+function IsoThumpable:getSoundPrefix() end
 
 --- @public
 --- @param ignoreOpen boolean

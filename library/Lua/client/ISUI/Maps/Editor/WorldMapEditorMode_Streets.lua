@@ -17,7 +17,6 @@
 ---@field selectedMapDirectory number?
 ---@field selectedStreet unknown?
 ---@field streetNameEntry ISTextEntryBox
----@field streetsAPI unknown
 ---@field vector2 unknown
 ---@field widthEntry ISTextEntryBox
 WorldMapEditorMode_Streets = WorldMapEditorMode:derive("WorldMapEditorMode_Streets")

@@ -176,6 +176,10 @@ function VehiclePart:getDoor() end
 function VehiclePart:getDurability() end
 
 --- @public
+--- @return VehicleDoor
+function VehiclePart:getEnclosingDoor() end
+
+--- @public
 --- @return number
 function VehiclePart:getEngineLoudness() end
 

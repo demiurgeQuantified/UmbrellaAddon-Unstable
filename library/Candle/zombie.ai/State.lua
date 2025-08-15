@@ -56,6 +56,20 @@ function State:addAnimEventListener(arg0, arg1) end
 function State:addAnimEventListener(arg0, arg1) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerEnum
+--- @param arg2 Enum
+--- @return nil
+function State:addAnimEventListener(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrackEnum
+--- @param arg2 Enum
+--- @return nil
+function State:addAnimEventListener(arg0, arg1, arg2) end
+
+--- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 AnimLayer
 --- @param arg2 AnimationTrack

@@ -49,6 +49,10 @@ function MetaEntity:isEntityValid() end
 function MetaEntity:isMeta() end
 
 --- @public
+--- @return boolean
+function MetaEntity:isOutside() end
+
+--- @public
 --- @param arg0 IsoPlayer
 --- @return boolean
 function MetaEntity:isUsingPlayer(arg0) end

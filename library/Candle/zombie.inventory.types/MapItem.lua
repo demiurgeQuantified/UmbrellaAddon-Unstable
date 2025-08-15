@@ -44,6 +44,14 @@ function MapItem.getSingleton() end
 function MapItem:IsMap() end
 
 --- @public
+--- @return boolean
+function MapItem:checkDefaultAnnotationsLoaded() end
+
+--- @public
+--- @return nil
+function MapItem:clearDefaultAnnotations() end
+
+--- @public
 --- @return string
 function MapItem:getMapID() end
 

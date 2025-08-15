@@ -21,6 +21,13 @@ function PZArrayList.emptyList() end
 
 --- @public
 --- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @return boolean
+function PZArrayList.objectsEqual(arg0, arg1) end
+
+--- @public
+--- @static
 --- @return List
 function PZArrayList.of() end
 
@@ -135,6 +142,13 @@ function PZArrayList.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) en
 --- @return List
 function PZArrayList.of(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
+--- @public
+--- @static
+--- @param arg0 any
+--- @param arg1 any
+--- @return boolean
+function PZArrayList.referenceEqual(arg0, arg1) end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -173,6 +187,22 @@ function PZArrayList:addAll(arg0) end
 function PZArrayList:addAll(arg0, arg1) end
 
 --- @public
+--- @param arg0 any
+--- @return nil
+function PZArrayList:addUnique(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @return nil
+function PZArrayList:addUnique(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @return nil
+function PZArrayList:addUniqueReference(arg0) end
+
+--- @public
 --- @return nil
 function PZArrayList:clear() end
 
@@ -189,11 +219,22 @@ function PZArrayList:contains(o) end
 --- @param o any
 --- @return boolean
 function PZArrayList:contains(o) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @return boolean
+function PZArrayList:contains(arg0, arg1) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
 function PZArrayList:containsAll(arg0) end
+
+--- @public
+--- @param arg0 any
+--- @return boolean
+function PZArrayList:containsReference(arg0) end
 
 --- @public
 --- @param arg0 integer
@@ -232,6 +273,12 @@ function PZArrayList:indexOf(o) end
 --- @param o any
 --- @return integer
 function PZArrayList:indexOf(o) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @return integer
+function PZArrayList:indexOf(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -291,6 +338,11 @@ function PZArrayList:remove(o) end
 --- @param o any
 --- @return boolean
 function PZArrayList:remove(o) end
+
+--- @public
+--- @param arg0 Collection
+--- @return boolean
+function PZArrayList:removeAll(arg0) end
 
 --- @public
 --- @param arg0 Collection

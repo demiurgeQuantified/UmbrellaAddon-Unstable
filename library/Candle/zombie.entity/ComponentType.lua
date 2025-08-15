@@ -3,9 +3,11 @@
 --- @class ComponentType: Enum
 --- @field public class any
 --- @field public Attributes ComponentType
+--- @field public ContextMenuConfig ComponentType
 --- @field public CraftBench ComponentType
 --- @field public CraftLogic ComponentType
 --- @field public CraftRecipe ComponentType
+--- @field public DryingCraftLogic ComponentType
 --- @field public DryingLogic ComponentType
 --- @field public Durability ComponentType
 --- @field public FluidContainer ComponentType
@@ -19,6 +21,7 @@
 --- @field public Script ComponentType
 --- @field public Signals ComponentType
 --- @field public SpriteConfig ComponentType
+--- @field public SpriteOverlayConfig ComponentType
 --- @field public TestComponent ComponentType
 --- @field public UiConfig ComponentType
 --- @field public Undefined ComponentType

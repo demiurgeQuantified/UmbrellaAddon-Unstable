@@ -95,6 +95,7 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field getJoypadFocus boolean
 ---@field hideUnvisitedAreas boolean
 ---@field isometric boolean
+---@field isTerrainImage boolean
 ---@field joypadPromptHgt number
 ---@field keyUI ISWorldMapKey
 ---@field LBumperZoom number?
@@ -113,7 +114,6 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field pyramidBtn ISButton
 ---@field RBumperZoom number?
 ---@field showCellGrid boolean
----@field showImagePyramid boolean
 ---@field showPlayerNames boolean
 ---@field showPlayers boolean
 ---@field showPrintMedia boolean
@@ -124,9 +124,11 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field stashMapUI AnnotatedMapOverlay
 ---@field symbolsBtn ISButton
 ---@field symbolsUI ISWorldMapSymbols
+---@field terrainBtn ISButton
 ---@field texViewIsometric Texture
 ---@field texViewOrthographic Texture
 ---@field texViewPyramid Texture
+---@field texViewTerrainImage unknown
 ---@field updateMS number
 ---@field zoomInButton ISButton
 ---@field zoomOutButton ISButton
@@ -166,6 +168,8 @@ function ISWorldMap.ShowWorldMap(playerNum, centerX, centerY, zoom) end
 
 ---@param playerNum integer
 function ISWorldMap.ToggleWorldMap(playerNum) end
+
+function ISWorldMap:checkTerrainImage() end
 
 function ISWorldMap:close() end
 
@@ -267,6 +271,8 @@ function ISWorldMap:onTogglePyramid() end
 
 function ISWorldMap:onToggleSymbols() end
 
+function ISWorldMap:onToggleTerrainImage() end
+
 function ISWorldMap:onZoomInButton() end
 
 function ISWorldMap:onZoomOutButton() end
@@ -313,6 +319,8 @@ function ISWorldMap:setShowRemotePlayers(show) end
 
 ---@param show boolean
 function ISWorldMap:setShowTileGrid(show) end
+
+function ISWorldMap:showTerrainImage() end
 
 function ISWorldMap:updateJoypad() end
 

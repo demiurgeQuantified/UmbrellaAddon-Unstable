@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ISInventoryPage : ISPanel
+---@field addFuel ISButton
+---@field addPropaneTileTank ISButton
 ---@field backpackChoice number
 ---@field backpacks ISButton[]
 ---@field blinkAlpha number
@@ -36,6 +38,7 @@
 ---@field isCollapsed boolean
 ---@field lastDir IsoDirections
 ---@field lastSquare IsoGridSquare
+---@field lightFire ISButton
 ---@field lookDir IsoDirections
 ---@field lootAll ISButton
 ---@field mouseOverButton ISButton?
@@ -43,7 +46,10 @@
 ---@field pin boolean
 ---@field pinbutton Texture
 ---@field pinButton ISButton
+---@field propaneTileToggle ISButton
+---@field putOut ISButton
 ---@field removeAll ISButton
+---@field removePropaneTileTank ISButton
 ---@field render3DItemRot number
 ---@field render3DItemXOffset number?
 ---@field render3DItemYOffset number?
@@ -52,8 +58,11 @@
 ---@field resizeWidget ISResizeWidget
 ---@field resizeWidget2 ISResizeWidget
 ---@field selectedButton ISButton
+---@field selectedContainerForSound unknown?
 ---@field selectedSqDrop IsoGridSquare?
 ---@field statusbarbkg Texture
+---@field storeOutfit ISButton
+---@field switchOutfit ISButton
 ---@field title string?
 ---@field titlebarbkg Texture
 ---@field titleFont UIFont
@@ -64,6 +73,8 @@
 ---@field transferAll ISButton
 ---@field visibleFunction function
 ---@field visibleTarget ISInventoryPage
+---@field wearAll ISButton
+---@field wearOutfit ISButton
 ---@field zoom number
 ISInventoryPage = ISPanel:derive("ISInventoryPage")
 ISInventoryPage.Type = "ISInventoryPage"
@@ -108,6 +119,10 @@ function ISInventoryPage.toggleInventory() end
 ---@return ISButton
 function ISInventoryPage:addContainerButton(container, texture, name, tooltip) end
 
+function ISInventoryPage:addFuelOption() end
+
+function ISInventoryPage:addPropaneTileTank() end
+
 ---@return boolean
 function ISInventoryPage:canPutIn() end
 
@@ -118,6 +133,8 @@ function ISInventoryPage:checkExplored(container, playerObj) end
 function ISInventoryPage:close() end
 
 function ISInventoryPage:collapse() end
+
+function ISInventoryPage:collapseNow() end
 
 function ISInventoryPage:createChildren() end
 
@@ -162,6 +179,8 @@ function ISInventoryPage:isCycleContainerKeyDown() end
 
 ---@return boolean
 function ISInventoryPage:isRemoveButtonVisible() end
+
+function ISInventoryPage:lightFireOption() end
 
 function ISInventoryPage:lootAll() end
 
@@ -256,6 +275,15 @@ function ISInventoryPage:onRightMouseDownOutside(x, y) end
 
 function ISInventoryPage:onToggleVisible() end
 
+---@param container unknown?
+---@return boolean?
+function ISInventoryPage:playContainerCloseSound(container) end
+
+function ISInventoryPage:playContainerOpenCloseSounds(button) end
+
+---@return boolean?
+function ISInventoryPage:playContainerOpenSound(container) end
+
 function ISInventoryPage:prerender() end
 
 ---@param index integer
@@ -263,11 +291,15 @@ function ISInventoryPage:prerender() end
 ---@return integer
 function ISInventoryPage:prevUnlockedContainer(index, wrap) end
 
+function ISInventoryPage:putOut() end
+
 function ISInventoryPage:refreshBackpacks() end
 
 function ISInventoryPage:refreshWeight() end
 
 function ISInventoryPage:removeAll() end
+
+function ISInventoryPage:removePropaneTileTank() end
 
 function ISInventoryPage:render() end
 
@@ -307,10 +339,34 @@ function ISInventoryPage:setNewContainer(inventory) end
 
 function ISInventoryPage:setPinned() end
 
+function ISInventoryPage:switchOutfit() end
+
+function ISInventoryPage:syncAddFuel() end
+
+function ISInventoryPage:syncAddPropaneTileTank() end
+
+function ISInventoryPage:syncLightFire() end
+
+function ISInventoryPage:syncPropaneTileToggle() end
+
+function ISInventoryPage:syncPutOut() end
+
+function ISInventoryPage:syncRemovePropaneTileTank() end
+
+function ISInventoryPage:syncStoreOutfit() end
+
+function ISInventoryPage:syncSwitchOutfit() end
+
 function ISInventoryPage:syncToggleStove() end
+
+function ISInventoryPage:syncWearAll() end
+
+function ISInventoryPage:syncWearOutfit() end
 
 ---@return number
 function ISInventoryPage:titleBarHeight(selected) end
+
+function ISInventoryPage:togglePropaneTile() end
 
 function ISInventoryPage:toggleStove() end
 
@@ -320,7 +376,11 @@ function ISInventoryPage:update() end
 
 function ISInventoryPage:updateContainerHighlight() end
 
+function ISInventoryPage:updateContainerOpenCloseSounds() end
+
 function ISInventoryPage:updateItemCount() end
+
+function ISInventoryPage:wearAll() end
 
 ---@param x number
 ---@param y number

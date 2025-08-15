@@ -350,8 +350,9 @@ function CraftRecipeData:offerInputItem(arg0, arg1, arg2) end
 --- @param arg0 IsoGameCharacter
 --- @param arg1 List
 --- @param arg2 List
+--- @param arg3 ArrayList
 --- @return boolean
-function CraftRecipeData:perform(arg0, arg1, arg2) end
+function CraftRecipeData:perform(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 InventoryItem

@@ -199,6 +199,14 @@ function KahluaUtil.setupLibrary(arg0, arg1, arg2) end
 
 --- @public
 --- @static
+--- @param arg0 table
+--- @param arg1 KahluaThread
+--- @param arg2 File
+--- @return nil
+function KahluaUtil.setupLibraryText(arg0, arg1, arg2) end
+
+--- @public
+--- @static
 --- @param arg0 boolean
 --- @return boolean
 function KahluaUtil.toBoolean(arg0) end

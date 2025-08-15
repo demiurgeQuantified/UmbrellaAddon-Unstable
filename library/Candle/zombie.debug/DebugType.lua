@@ -25,6 +25,7 @@
 --- @field public Energy DebugType
 --- @field public Entity DebugType
 --- @field public ExitDebug DebugType
+--- @field public FallDamage DebugType
 --- @field public FileIO DebugType
 --- @field public Fireplace DebugType
 --- @field public Fluid DebugType

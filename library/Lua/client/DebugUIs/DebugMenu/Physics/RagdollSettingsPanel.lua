@@ -4,7 +4,7 @@
 ---@field allOptions table[]
 ---@field bools table[]
 ---@field floats table[]
-RagdollSettingsPanel = ISDebugSubPanelBase:derive("RagdollSettingsPanel")
+RagdollSettingsPanel = {}
 RagdollSettingsPanel.Type = "RagdollSettingsPanel"
 
 ---@param _id string

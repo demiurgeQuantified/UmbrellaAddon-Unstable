@@ -6,7 +6,7 @@
 ---@field item InventoryItem
 ---@field lighter InventoryItem
 ---@field sound integer?
-ISFireplaceLightFromLiterature = ISBaseTimedAction:derive("ISFireplaceLightFromLiterature")
+ISFireplaceLightFromLiterature = {}
 ISFireplaceLightFromLiterature.Type = "ISFireplaceLightFromLiterature"
 
 ---@return boolean

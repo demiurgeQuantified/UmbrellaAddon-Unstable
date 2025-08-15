@@ -138,6 +138,11 @@ function Resource:getItemAmount() end
 function Resource:getItemCapacity() end
 
 --- @public
+--- @param arg0 InputScript
+--- @return number
+function Resource:getItemUses(arg0) end
+
+--- @public
 --- @return number
 function Resource:getItemUsesAmount() end
 

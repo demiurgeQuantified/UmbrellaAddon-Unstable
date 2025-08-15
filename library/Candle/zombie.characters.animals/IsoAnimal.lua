@@ -40,6 +40,12 @@ function IsoAnimal.modifyMeat(arg0, arg1, arg2) end
 
 --- @public
 --- @static
+--- @param arg0 boolean
+--- @return nil
+function IsoAnimal.setExtraValues(arg0) end
+
+--- @public
+--- @static
 --- @return nil
 function IsoAnimal.toggleExtraValues() end
 
@@ -124,6 +130,10 @@ function IsoAnimal:calcDamage() end
 --- @public
 --- @return boolean
 function IsoAnimal:canBeFeedByHand() end
+
+--- @public
+--- @return boolean
+function IsoAnimal:canBeKilledWithoutWeapon() end
 
 --- @public
 --- @return boolean
@@ -370,6 +380,12 @@ function IsoAnimal:getAppearanceText(arg0) end
 function IsoAnimal:getAttachmentWorldPos(arg0) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 Position3D
+--- @return Position3D
+function IsoAnimal:getAttachmentWorldPos(arg0, arg1) end
+
+--- @public
 --- @return IsoGameCharacter
 function IsoAnimal:getAttackedBy() end
 
@@ -486,6 +502,14 @@ function IsoAnimal:getHungerBoost() end
 --- @public
 --- @return IsoHutch
 function IsoAnimal:getHutch() end
+
+--- @public
+--- @return Texture
+function IsoAnimal:getInventoryIconTexture() end
+
+--- @public
+--- @return string
+function IsoAnimal:getInventoryIconTextureName() end
 
 --- @public
 --- @return integer
@@ -906,11 +930,6 @@ function IsoAnimal:setDebugAcceptance(arg0, arg1) end
 --- @param arg0 number
 --- @return nil
 function IsoAnimal:setDebugStress(arg0) end
-
---- @public
---- @param arg0 boolean
---- @return nil
-function IsoAnimal:setExtraValues(arg0) end
 
 --- @public
 --- @param arg0 boolean

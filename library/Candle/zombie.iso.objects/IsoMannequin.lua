@@ -112,6 +112,10 @@ function IsoMannequin:getPose() end
 function IsoMannequin:getVariables(vars) end
 
 --- @public
+--- @return WornItems
+function IsoMannequin:getWornItems() end
+
+--- @public
 --- @return boolean
 function IsoMannequin:isFemale() end
 

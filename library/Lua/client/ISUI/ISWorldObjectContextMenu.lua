@@ -8,8 +8,6 @@ ISWorldObjectContextMenu.fetchVars = {}
 ISWorldObjectContextMenu.fetchSquares = {} ---@type table<IsoGridSquare, boolean>
 ISWorldObjectContextMenu.tooltipPool = nil ---@type ISToolTip[]
 ISWorldObjectContextMenu.tooltipsUsed = nil ---@type ISToolTip[]
-ISWorldObjectContextMenu.useJavaFetchLogic = true
-ISWorldObjectContextMenu.useJavaCreateMenuLogic = true
 ISWorldObjectContextMenu.Test = nil ---@type boolean?
 ISWorldObjectContextMenu.sleepDialog = nil ---@type ISModalDialog?
 ISWorldObjectContextMenu.chairCheckList = {
@@ -40,8 +38,6 @@ ISWorldObjectContextMenu.chairCheckList = {
 }
 
 function ISWorldObjectContextMenu.activateRadio(pl, obj) end
-
-function ISWorldObjectContextMenu.addFluidFromItem(test, context, pourFluidInto, worldobjects, playerObj, playerInv) end
 
 ---@deprecated
 ---@param context ISContextMenu
@@ -117,23 +113,6 @@ function ISWorldObjectContextMenu.compareClothingBlood(item1, item2) end
 ---@param test boolean?
 ---@return boolean?
 function ISWorldObjectContextMenu.createMenu(player, worldobjects, x, y, test) end
-
----@param x number
----@param y number
----@return boolean
-function ISWorldObjectContextMenu.createMenuEntries(
-	fetch,
-	context,
-	player,
-	playerObj,
-	playerInv,
-	pickedCorpse,
-	worldobjects,
-	x,
-	y,
-	test
-)
-end
 
 ---@param worldobjects IsoObject[]
 ---@param generator IsoGenerator
@@ -625,6 +604,8 @@ function ISWorldObjectContextMenu.onClimbThroughWindow(worldobjects, window, pla
 ---@param bed IsoObject
 function ISWorldObjectContextMenu.onConfirmSleep(this, button, player, bed) end
 
+function ISWorldObjectContextMenu.onCustomFunction(context, object, playerObj, customFunction, param) end
+
 ---@param worldobjects IsoObject[]
 ---@param player IsoPlayer
 ---@param sledgehammer InventoryItem
@@ -1007,6 +988,8 @@ function ISWorldObjectContextMenu.onTalkTo(worldobjects, survivor) end
 function ISWorldObjectContextMenu.onTeamUp(worldobjects, survivor) end
 
 function ISWorldObjectContextMenu.onTeleport() end
+
+function ISWorldObjectContextMenu.onTimedAction(timedAction, object, playerObj, param) end
 
 ---@param worldobjects IsoObject[]
 ---@param object IsoClothingDryer

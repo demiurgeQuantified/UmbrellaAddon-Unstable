@@ -105,3 +105,7 @@ function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGro
 ---@param recipeName string
 ---@return boolean
 function doesSeasonRecipeExist(recipeName) end
+
+---@param recipeName string
+---@return unknown?
+function getSeasonRecipeIcon(recipeName) end

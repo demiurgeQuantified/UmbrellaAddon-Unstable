@@ -8,6 +8,7 @@
 ---@class ISItemSlot : ISPanel
 ---@field actionAddColor umbrella.RGBA
 ---@field actionRemoveColor umbrella.RGBA
+---@field allowDrop boolean
 ---@field backDropTex Texture?
 ---@field backDropTexCol umbrella.RGBA
 ---@field backgroundEmpty umbrella.RGBA
@@ -20,6 +21,7 @@
 ---@field boxOccupied boolean
 ---@field character IsoPlayer?
 ---@field countColor umbrella.RGBA
+---@field countInvalidColor table
 ---@field doBackDropTex boolean
 ---@field doToolTip boolean
 ---@field drawBorderLocked boolean
@@ -27,19 +29,38 @@
 ---@field drawProgress boolean
 ---@field functionTarget unknown?
 ---@field hideItem boolean
+---@field inputScript unknown?
+---@field itemCount number
 ---@field locked boolean
+---@field maxItemCount unknown?
 ---@field mouseEnabled boolean
 ---@field mouseOverState number
 ---@field onBoxClicked umbrella.ISItemSlot.OnBoxClicked?
 ---@field onItemDropped umbrella.ISItemSlot.OnItemDropped?
 ---@field onItemRemove umbrella.ISItemSlot.OnItemRemove?
+---@field onSelectInputsButtonClicked unknown
+---@field onStoredItemChanged unknown?
 ---@field onVerifyItem umbrella.ISItemSlot.OnVerifyItem?
 ---@field progressColor umbrella.RGBA
+---@field progressDelta number
+---@field renderItemCapacity boolean
 ---@field renderItemCount boolean
+---@field renderRequiredItemCount boolean
 ---@field resource Resource?
+---@field selectInputButton unknown?
+---@field selectInputButtonBackgroundColor table
+---@field selectInputButtonBackgroundColorMouseOver table
+---@field selectInputButtonTextureColor table
+---@field selectInputButtonTextureColorMouseOver table
+---@field showPreviewItem boolean
+---@field showSelectInputsButton boolean
+---@field statusIcons table
 ---@field storedItem InventoryItem?
 ---@field storedItemTex Texture?
+---@field storedScriptItem unknown?
 ---@field storeItem boolean
+---@field textureMissingInput unknown
+---@field textureSwapInput unknown
 ---@field toolTip (ISToolTip | ISToolTipInv)?
 ---@field toolTipText string | false
 ---@field toolTipTextItem string | false
@@ -47,11 +68,15 @@
 ISItemSlot = ISPanel:derive("ISItemSlot")
 ISItemSlot.Type = "ISItemSlot"
 
+function ISItemSlot.drawTooltip(_itemSlot, _tooltip) end
+
 function ISItemSlot:activateToolTip() end
 
 ---@param _isRightClick boolean
 ---@param _isShift boolean
 function ISItemSlot:boxClicked(_isRightClick, _isShift) end
+
+function ISItemSlot:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISItemSlot:createChildren() end
 
@@ -61,6 +86,9 @@ function ISItemSlot:deactivateToolTip() end
 ---@param _item InventoryItem
 ---@return boolean
 function ISItemSlot:defaultVerifyItem(_itemSlot, _item) end
+
+---@return unknown
+function ISItemSlot:getResource() end
 
 ---@return boolean?
 function ISItemSlot:hasValidItemInDrag() end
@@ -93,6 +121,8 @@ function ISItemSlot:onMouseUp(x, y) end
 ---@param y number
 function ISItemSlot:onRightMouseUp(x, y) end
 
+function ISItemSlot:onSelectInputsButton() end
+
 function ISItemSlot:prerender() end
 
 function ISItemSlot:render() end
@@ -116,8 +146,14 @@ function ISItemSlot:setLocked(_b) end
 ---@param _resource Resource
 function ISItemSlot:setResource(_resource) end
 
+function ISItemSlot:setSelectInputsButtonActive(_active) end
+
+function ISItemSlot:setStatusIcons(_iconTextureArray) end
+
 ---@param _item InventoryItem?
 function ISItemSlot:setStoredItem(_item) end
+
+function ISItemSlot:setStoredScriptItem(_item) end
 
 ---@param _b boolean
 ---@param _text string

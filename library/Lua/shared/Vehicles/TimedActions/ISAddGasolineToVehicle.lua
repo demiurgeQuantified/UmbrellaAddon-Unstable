@@ -6,6 +6,7 @@
 ---@field item InventoryItem
 ---@field itemStart number?
 ---@field itemTarget number
+---@field otherItems unknown
 ---@field part VehiclePart
 ---@field sound integer?
 ---@field tankStart number?
@@ -27,7 +28,12 @@ function ISAddGasolineToVehicle:getDuration() end
 ---@return boolean
 function ISAddGasolineToVehicle:isValid() end
 
+---@return unknown?
+function ISAddGasolineToVehicle:nextItem() end
+
 function ISAddGasolineToVehicle:perform() end
+
+function ISAddGasolineToVehicle:runAgain(intoItem) end
 
 function ISAddGasolineToVehicle:serverStart() end
 

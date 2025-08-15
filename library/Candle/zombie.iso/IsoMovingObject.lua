@@ -590,6 +590,23 @@ function IsoMovingObject:setCollidedWithDoor(CollidedWithDoor) end
 function IsoMovingObject:setCurrent(current) end
 
 --- @public
+--- @return nil
+function IsoMovingObject:setCurrentSquareFromPosition() end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+function IsoMovingObject:setCurrentSquareFromPosition(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function IsoMovingObject:setCurrentSquareFromPosition(arg0, arg1, arg2) end
+
+--- @public
 --- @param destroyed boolean the destroyed to set
 --- @return nil
 function IsoMovingObject:setDestroyed(destroyed) end

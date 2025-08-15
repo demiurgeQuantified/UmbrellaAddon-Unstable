@@ -144,6 +144,15 @@ function ISVehicleMechanics:getConditionRGB(condition) end
 ---@return VehiclePart?
 function ISVehicleMechanics:getMouseOverPart(x, y) end
 
+---@return unknown
+function ISVehicleMechanics:getScrewdriver(player) end
+
+---@return unknown
+function ISVehicleMechanics:getTirePump(player) end
+
+---@return unknown
+function ISVehicleMechanics:getWrench(player) end
+
 function ISVehicleMechanics:initialise() end
 
 function ISVehicleMechanics:initParts() end

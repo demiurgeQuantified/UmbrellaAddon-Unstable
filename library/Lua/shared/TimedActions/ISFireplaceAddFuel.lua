@@ -5,7 +5,7 @@
 ---@field fuelAmt number
 ---@field item InventoryItem?
 ---@field sound integer?
-ISFireplaceAddFuel = ISBaseTimedAction:derive("ISFireplaceAddFuel")
+ISFireplaceAddFuel = {}
 ISFireplaceAddFuel.Type = "ISFireplaceAddFuel"
 
 ---@return boolean

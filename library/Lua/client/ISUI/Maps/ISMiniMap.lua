@@ -12,6 +12,7 @@
 ---@field button6 ISButton
 ---@field hideInventoryX unknown?
 ---@field inner ISMiniMapInner
+---@field optionsUI ISMiniMapOptionsPanel
 ---@field playerNum integer
 ---@field titleBar ISMiniMapTitleBar
 ---@field userPosition boolean
@@ -41,6 +42,8 @@ function ISMiniMapOuter:onJoypadDown(button, joypadData) end
 
 ---@param joypadData JoypadData
 function ISMiniMapOuter:onLoseJoypadFocus(joypadData) end
+
+function ISMiniMapOuter:onToggleOptionsPanel() end
 
 function ISMiniMapOuter:prerender() end
 
@@ -81,12 +84,15 @@ function ISMiniMapOuter:new(x, y, width, height, playerNum) end
 ---@field dragStartX number
 ---@field dragStartY number
 ---@field dragStartZoomF number
+---@field isTerrainImage boolean
 ---@field javaObject UIWorldMap
 ---@field mapAPI UIWorldMapV1
 ---@field playerNum integer
 ---@field rightMouseDown boolean
 ISMiniMapInner = ISUIElement:derive("ISMiniMapInner")
 ISMiniMapInner.Type = "ISMiniMapInner"
+
+function ISMiniMapInner:checkTerrainImage() end
 
 function ISMiniMapInner:instantiate() end
 
@@ -133,9 +139,13 @@ function ISMiniMapInner:onRightMouseUpOutside(x, y) end
 ---@param worldY number
 function ISMiniMapInner:onTeleport(worldX, worldY) end
 
+function ISMiniMapInner:onToggleTerrainImage() end
+
 function ISMiniMapInner:prerender() end
 
 function ISMiniMapInner:prerenderHack() end
+
+function ISMiniMapInner:showTerrainImage() end
 
 ---@param x number
 ---@param y number
@@ -188,6 +198,46 @@ function ISMiniMapTitleBar:titleBarHeight() end
 ---@param miniMap ISMiniMapOuter
 ---@return ISMiniMapTitleBar
 function ISMiniMapTitleBar:new(miniMap) end
+
+---@class ISMiniMapOptionsPanel : ISCollapsableWindowJoypad
+---@field doubleBoxes table
+---@field map ISMiniMapInner
+---@field screenHeight unknown
+---@field showAllOptions boolean
+---@field tickBoxes table
+ISMiniMapOptionsPanel = ISCollapsableWindowJoypad:derive("ISMiniMapOptionsPanel")
+ISMiniMapOptionsPanel.Type = "ISMiniMapOptionsPanel"
+
+function ISMiniMapOptionsPanel:createChildren() end
+
+---@return table
+function ISMiniMapOptionsPanel:getVisibleOptions() end
+
+---@param optionName string
+---@return boolean
+function ISMiniMapOptionsPanel:isMultiplayerOption(optionName) end
+
+function ISMiniMapOptionsPanel:onCommandEntered(entry, option) end
+
+function ISMiniMapOptionsPanel:onGainJoypadFocus(joypadData) end
+
+function ISMiniMapOptionsPanel:onJoypadDown(button, joypadData) end
+
+---@param x number
+---@param y number
+function ISMiniMapOptionsPanel:onMouseDownOutside(x, y) end
+
+function ISMiniMapOptionsPanel:onTickBox(index, selected, option) end
+
+function ISMiniMapOptionsPanel:synchUI() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param map ISMiniMapInner
+---@return ISMiniMapOptionsPanel
+function ISMiniMapOptionsPanel:new(x, y, width, height, map) end
 
 ---@class ISMiniMap
 ISMiniMap = {}

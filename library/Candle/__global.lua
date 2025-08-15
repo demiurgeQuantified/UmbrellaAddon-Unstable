@@ -321,6 +321,41 @@ function addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8
 --- @return ArrayList
 function addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
 
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 string
+--- @param arg5 integer
+--- @param arg6 boolean
+--- @param arg7 boolean
+--- @param arg8 boolean
+--- @param arg9 boolean
+--- @param arg10 boolean
+--- @param arg11 boolean
+--- @param arg12 number
+--- @param arg13 boolean
+--- @param arg14 number
+--- @return ArrayList
+function addZombiesInOutfit(
+	arg0,
+	arg1,
+	arg2,
+	arg3,
+	arg4,
+	arg5,
+	arg6,
+	arg7,
+	arg8,
+	arg9,
+	arg10,
+	arg11,
+	arg12,
+	arg13,
+	arg14
+)
+end
+
 --- @param x1 integer
 --- @param y1 integer
 --- @param x2 integer
@@ -1422,9 +1457,6 @@ function getRadioText(txt) end
 --- @return ArrayList
 function getRadioTranslators(language) end
 
---- @return RagdollSettingsManager
-function getRagdollSettingsManager() end
-
 --- @return string
 function getRandomUUID() end
 
@@ -2237,7 +2269,7 @@ function reloadEntityFromScriptDebug(arg0) end
 function reloadEntityScripts() end
 
 --- @param filename string
---- @return nil
+--- @return any
 function reloadLuaFile(filename) end
 
 --- @param meshName string
@@ -2249,7 +2281,7 @@ function reloadModelsMatching(meshName) end
 function reloadScripts(arg0) end
 
 --- @param filename string
---- @return nil
+--- @return any
 function reloadServerLuaFile(filename) end
 
 --- @return nil

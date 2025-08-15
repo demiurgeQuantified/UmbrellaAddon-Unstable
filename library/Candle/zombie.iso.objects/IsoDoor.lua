@@ -95,11 +95,11 @@ function IsoDoor.toggleGarageDoor(oneOfThree, doSync) end
 ------------------------------------
 
 --- @public
---- @return ICurtain
+--- @return IsoDoor
 function IsoDoor:HasCurtains() end
 
 --- @public
---- @return IsoDoor
+--- @return ICurtain
 function IsoDoor:HasCurtains() end
 
 --- @public
@@ -177,9 +177,10 @@ function IsoDoor:WeaponHit(owner, weapon) end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 ArrayList
---- @param arg2 boolean
+--- @param arg2 CraftRecipeData
+--- @param arg3 boolean
 --- @return IsoBarricade
-function IsoDoor:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
+function IsoDoor:addBarricadesFromCraftRecipe(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return nil
@@ -367,6 +368,10 @@ function IsoDoor:getRenderEffectObjectCount() end
 ---
 --- @return IsoGridSquare
 function IsoDoor:getSheetSquare() end
+
+--- @public
+--- @return string
+function IsoDoor:getSoundPrefix() end
 
 --- @public
 --- @param ignoreOpen boolean

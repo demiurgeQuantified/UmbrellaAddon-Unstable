@@ -125,6 +125,12 @@ function Vector2:distanceTo(other) end
 function Vector2:dot(other) end
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
+function Vector2:dot(arg0, arg1) end
+
+--- @public
 ---
 --- See if this vector is equal to another
 ---

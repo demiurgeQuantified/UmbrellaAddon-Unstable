@@ -913,8 +913,14 @@ function RandomizedWorldBase:getCarpentryToolClutterItem() end
 
 --- @public
 --- @param arg0 ArrayList
---- @return HashMap
+--- @return TIntObjectHashMap
 function RandomizedWorldBase:getClutterCopy(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @param arg1 TIntObjectHashMap
+--- @return TIntObjectHashMap
+function RandomizedWorldBase:getClutterCopy(arg0, arg1) end
 
 --- @public
 --- @return ArrayList

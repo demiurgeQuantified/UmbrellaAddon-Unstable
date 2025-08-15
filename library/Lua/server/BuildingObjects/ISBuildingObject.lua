@@ -157,6 +157,7 @@ function ISBuildingObject:setSprite(sprite) end
 ---@param x number
 ---@param y number
 ---@param z number
+---@return ISBuildAction?
 function ISBuildingObject:tryBuild(x, y, z) end
 
 function ISBuildingObject:update() end

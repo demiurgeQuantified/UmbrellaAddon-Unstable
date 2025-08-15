@@ -34,6 +34,7 @@
 ---@field requiresSurface boolean
 ---@field requiresSurfaceIcon ISImage?
 ---@field showPropertyIcons boolean
+---@field specificWorkstationLabel unknown?
 ---@field timeIcon ISImage?
 ---@field title string
 ---@field titleLabel ISLabel?

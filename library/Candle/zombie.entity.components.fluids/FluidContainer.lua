@@ -191,10 +191,6 @@ function FluidContainer:getFilledRatio() end
 function FluidContainer:getFreeCapacity() end
 
 --- @public
---- @return boolean
-function FluidContainer:getMetaIsOutside() end
-
---- @public
 --- @return PoisonEffect
 function FluidContainer:getPoisonEffect() end
 

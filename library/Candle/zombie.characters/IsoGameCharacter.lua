@@ -24,6 +24,12 @@ function IsoGameCharacter.calculateShadowParams(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
+--- @param arg0 ItemContainer
+--- @return boolean
+function IsoGameCharacter.canContainerHoldCorpse(arg0) end
+
+--- @public
+--- @static
 --- @return ColorInfo _ the inf
 function IsoGameCharacter.getInf() end
 
@@ -780,6 +786,20 @@ function IsoGameCharacter:addAnimEventListener(arg0, arg1) end
 function IsoGameCharacter:addAnimEventListener(arg0, arg1) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerEnum
+--- @param arg2 Enum
+--- @return nil
+function IsoGameCharacter:addAnimEventListener(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 IAnimEventListenerNoTrackEnum
+--- @param arg2 Enum
+--- @return nil
+function IsoGameCharacter:addAnimEventListener(arg0, arg1, arg2) end
+
+--- @public
 --- @param arg0 number
 --- @return nil
 function IsoGameCharacter:addArmMuscleStrain(arg0) end
@@ -1052,6 +1072,11 @@ function IsoGameCharacter:avoidDamage() end
 function IsoGameCharacter:becomeCorpse() end
 
 --- @public
+--- @param arg0 ItemContainer
+--- @return InventoryItem
+function IsoGameCharacter:becomeCorpseItem(arg0) end
+
+--- @public
 --- @param arg0 integer
 --- @param arg1 string
 --- @return boolean
@@ -1248,6 +1273,10 @@ function IsoGameCharacter:checkUpdateModelTextures() end
 --- @public
 --- @return nil
 function IsoGameCharacter:clearAttachedItems() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:clearFallDamage() end
 
 --- @public
 --- @return nil
@@ -1954,6 +1983,17 @@ function IsoGameCharacter:getClothingWetness() end
 function IsoGameCharacter:getContainers() end
 
 --- @public
+--- @param arg0 Predicate
+--- @return PZArrayList
+function IsoGameCharacter:getContextWorldContainers(arg0) end
+
+--- @public
+--- @param arg0 Predicate
+--- @param arg1 PZArrayList
+--- @return PZArrayList
+function IsoGameCharacter:getContextWorldContainers(arg0, arg1) end
+
+--- @public
 --- @return number
 function IsoGameCharacter:getCorpseSicknessDefense() end
 
@@ -2124,12 +2164,12 @@ function IsoGameCharacter:getFMODParameters() end
 function IsoGameCharacter:getFMODParameters() end
 
 --- @public
---- @return number _ the fallTime
-function IsoGameCharacter:getFallTime() end
+--- @return FallSeverity
+function IsoGameCharacter:getFallSpeedSeverity() end
 
 --- @public
---- @return number
-function IsoGameCharacter:getFallTimeAdjusted() end
+--- @return number _ the fallTime
+function IsoGameCharacter:getFallTime() end
 
 --- @public
 --- @return Stack _ the FamiliarBuildings
@@ -2184,6 +2224,10 @@ function IsoGameCharacter:getForwardDirectionX() end
 --- @public
 --- @return number
 function IsoGameCharacter:getForwardDirectionY() end
+
+--- @public
+--- @return IsoDirections
+function IsoGameCharacter:getForwardMovementIsoDirection() end
 
 --- @public
 --- @return string
@@ -2320,7 +2364,7 @@ function IsoGameCharacter:getHitChancesMod() end
 function IsoGameCharacter:getHitDirEnum() end
 
 --- @public
---- @return ArrayList
+--- @return PZArrayList
 function IsoGameCharacter:getHitInfoList() end
 
 --- @public
@@ -3023,6 +3067,15 @@ function IsoGameCharacter:getStats() end
 function IsoGameCharacter:getSubVariableSource(arg0) end
 
 --- @public
+--- @return PZArrayList
+function IsoGameCharacter:getSuitableContainersToDropCorpse() end
+
+--- @public
+--- @param arg0 PZArrayList
+--- @return PZArrayList
+function IsoGameCharacter:getSuitableContainersToDropCorpse(arg0) end
+
+--- @public
 --- @return integer
 function IsoGameCharacter:getSurroundingAttackingZombies() end
 
@@ -3224,6 +3277,10 @@ function IsoGameCharacter:getWeatherHearingMultiplier() end
 
 --- @public
 --- @return number
+function IsoGameCharacter:getWeightAsCorpse() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getWeightMod() end
 
 --- @public
@@ -3260,11 +3317,11 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return IGrappleable
+--- @return BaseGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
---- @return BaseGrappleable
+--- @return IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
@@ -4545,6 +4602,11 @@ function IsoGameCharacter:pathToSound(x, y, z) end
 --- @param arg0 IsoDeadBody
 --- @return nil
 function IsoGameCharacter:pickUpCorpse(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return nil
+function IsoGameCharacter:pickUpCorpseItem(arg0) end
 
 --- @public
 --- @return nil
@@ -6244,6 +6306,18 @@ function IsoGameCharacter:setVariable(key, value) end
 function IsoGameCharacter:setVariable(key, value) end
 
 --- @public
+--- @param arg0 AnimationVariableHandle
+--- @param arg1 boolean
+--- @return IAnimationVariableSlot
+function IsoGameCharacter:setVariable(arg0, arg1) end
+
+--- @public
+--- @param arg0 AnimationVariableHandle
+--- @param arg1 boolean
+--- @return IAnimationVariableSlot
+function IsoGameCharacter:setVariable(arg0, arg1) end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 CallbackGetStrongTyped
 --- @param arg2 IAnimationVariableSlotDescriptor
@@ -6252,7 +6326,7 @@ function IsoGameCharacter:setVariable(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
+--- @param arg1 PrimitiveFloatSupplier
 --- @param arg2 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2) end
@@ -6282,7 +6356,7 @@ function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
 --- @public
 --- @param arg0 string
 --- @param arg1 number
---- @param arg2 CallbackGetStrongTyped
+--- @param arg2 PrimitiveFloatSupplier
 --- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
@@ -6291,6 +6365,14 @@ function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
 --- @param arg0 string
 --- @param arg1 integer
 --- @param arg2 CallbackGetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Class
+--- @param arg2 Supplier
 --- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
@@ -6313,8 +6395,8 @@ function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
---- @param arg2 CallbackSetStrongTyped
+--- @param arg1 PrimitiveFloatSupplier
+--- @param arg2 PrimitiveFloatConsumer
 --- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3) end
@@ -6347,8 +6429,8 @@ function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @param arg0 string
 --- @param arg1 number
---- @param arg2 CallbackGetStrongTyped
---- @param arg3 CallbackSetStrongTyped
+--- @param arg2 PrimitiveFloatSupplier
+--- @param arg3 PrimitiveFloatConsumer
 --- @param arg4 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
@@ -6358,6 +6440,15 @@ function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg1 integer
 --- @param arg2 CallbackGetStrongTyped
 --- @param arg3 CallbackSetStrongTyped
+--- @param arg4 IAnimationVariableSlotDescriptor
+--- @return nil
+function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Class
+--- @param arg2 Supplier
+--- @param arg3 Consumer
 --- @param arg4 IAnimationVariableSlotDescriptor
 --- @return nil
 function IsoGameCharacter:setVariable(arg0, arg1, arg2, arg3, arg4) end
@@ -6625,6 +6716,17 @@ function IsoGameCharacter:testDefense(zomb) end
 --- @param target IsoMovingObject
 --- @return string
 function IsoGameCharacter:testDotSide(target) end
+
+--- @public
+--- @param arg0 ItemContainer
+--- @return nil
+function IsoGameCharacter:throwGrappledIntoInventory(arg0) end
+
+--- @public
+--- @param arg0 ItemContainer
+--- @param arg1 IsoDirections
+--- @return nil
+function IsoGameCharacter:throwGrappledIntoInventory(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoObject

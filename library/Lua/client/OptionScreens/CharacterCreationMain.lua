@@ -45,7 +45,9 @@
 ---@field hairTypeLbl ISLabel
 ---@field inputModal ISTextBox
 ---@field itemheightoverride table
+---@field labelRight number
 ---@field lArrow Texture
+---@field nonComboWidth number
 ---@field originalYOffset number
 ---@field outfitCombo ISComboBox?
 ---@field outfitLbl ISLabel?
@@ -86,6 +88,8 @@ function CharacterCreationMain.readSavedOutfitFile() end
 
 ---@param options table<string, string>
 function CharacterCreationMain.writeSaveFile(options) end
+
+function CharacterCreationMain:arrangeClothingRightSideElements(bodyLocation) end
 
 function CharacterCreationMain:arrangeClothingUI() end
 

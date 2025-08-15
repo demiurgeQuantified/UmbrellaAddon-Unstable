@@ -45,6 +45,11 @@ function GameEntity:getAttributes() end
 function GameEntity:getComponent(arg0) end
 
 --- @public
+--- @param arg0 ComponentType[]
+--- @return Component
+function GameEntity:getComponentAny(arg0) end
+
+--- @public
 --- @param arg0 integer
 --- @return Component
 function GameEntity:getComponentForIndex(arg0) end
@@ -69,6 +74,10 @@ function GameEntity:getEntityFullTypeDebug() end
 --- @public
 --- @return integer
 function GameEntity:getEntityNetID() end
+
+--- @public
+--- @return GameEntityScript
+function GameEntity:getEntityScript() end
 
 --- @public
 --- @return string
@@ -112,6 +121,11 @@ function GameEntity:getZ() end
 function GameEntity:hasComponent(arg0) end
 
 --- @public
+--- @param arg0 ComponentType[]
+--- @return boolean
+function GameEntity:hasComponentAny(arg0) end
+
+--- @public
 --- @return boolean
 function GameEntity:hasComponents() end
 
@@ -130,6 +144,10 @@ function GameEntity:isEntityValid() end
 --- @public
 --- @return boolean
 function GameEntity:isMeta() end
+
+--- @public
+--- @return boolean
+function GameEntity:isOutside() end
 
 --- @public
 --- @return boolean

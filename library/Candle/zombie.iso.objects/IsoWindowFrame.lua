@@ -104,9 +104,10 @@ function IsoWindowFrame:HasCurtains() end
 --- @public
 --- @param arg0 IsoGameCharacter
 --- @param arg1 ArrayList
---- @param arg2 boolean
+--- @param arg2 CraftRecipeData
+--- @param arg3 boolean
 --- @return IsoBarricade
-function IsoWindowFrame:addBarricadesFromCraftRecipe(arg0, arg1, arg2) end
+function IsoWindowFrame:addBarricadesFromCraftRecipe(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 IsoGameCharacter

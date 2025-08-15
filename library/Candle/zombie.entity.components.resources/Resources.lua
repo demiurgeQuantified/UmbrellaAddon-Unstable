@@ -38,6 +38,10 @@ function Resources:createResourceFromSerial(arg0) end
 function Resources:createResourceFromSerial(arg0, arg1) end
 
 --- @public
+--- @return nil
+function Resources:dumpContentsInSquare() end
+
+--- @public
 --- @param arg0 integer
 --- @return Resource
 function Resources:getResource(arg0) end
@@ -138,6 +142,10 @@ function Resources:getResourcesFromGroup(arg0, arg1, arg2, arg3) end
 --- @param arg3 ResourceType
 --- @return List
 function Resources:getResourcesFromGroup(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @return boolean
+function Resources:isNoContainerOrEmpty() end
 
 --- @public
 --- @return boolean

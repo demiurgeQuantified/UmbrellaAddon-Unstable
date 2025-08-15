@@ -2,6 +2,7 @@
 
 --- @class ComponentEventType: Enum
 --- @field public class any
+--- @field public OnContentsChanged ComponentEventType
 ComponentEventType = {}
 
 ------------------------------------

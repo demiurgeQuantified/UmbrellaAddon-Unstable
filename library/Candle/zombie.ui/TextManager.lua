@@ -217,6 +217,11 @@ function TextManager:WrapText(arg0, arg1, arg2) end
 function TextManager:WrapText(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
+--- @param arg0 ArrayList
+--- @return ArrayList
+function TextManager:getAllFonts(arg0) end
+
+--- @public
 --- @return UIFont
 function TextManager:getCurrentCodeFont() end
 
@@ -234,6 +239,15 @@ function TextManager:getFontHeight(fontID) end
 --- @param points integer
 --- @return AngelCodeFont
 function TextManager:getNormalFromFontSize(points) end
+
+--- @public
+--- @param arg0 UIFont
+--- @return boolean
+function TextManager:isSdf(arg0) end
+
+--- @public
+--- @return boolean
+function TextManager:isUsingNonEnglishFonts() end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

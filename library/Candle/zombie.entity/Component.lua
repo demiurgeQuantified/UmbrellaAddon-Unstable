@@ -20,6 +20,10 @@ function Component:DoTooltip(arg0) end
 function Component:DoTooltip(arg0, arg1) end
 
 --- @public
+--- @return nil
+function Component:dumpContentsInSquare() end
+
+--- @public
 --- @param arg0 ComponentType
 --- @return Component
 function Component:getComponent(arg0) end
@@ -47,6 +51,10 @@ function Component:getUsingPlayer() end
 --- @public
 --- @return boolean
 function Component:isAddedToEngine() end
+
+--- @public
+--- @return boolean
+function Component:isNoContainerOrEmpty() end
 
 --- @public
 --- @return boolean

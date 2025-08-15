@@ -70,10 +70,6 @@ function BuildLogic:getSelectedRecipeStyle() end
 function BuildLogic:isCraftActionInProgress() end
 
 --- @public
---- @return boolean
-function BuildLogic:isCraftCheat() end
-
---- @public
 --- @param arg0 InputScript
 --- @return boolean
 function BuildLogic:isInputSatisfied(arg0) end

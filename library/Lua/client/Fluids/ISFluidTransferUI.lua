@@ -13,6 +13,7 @@
 ---@field errorDefault string
 ---@field errorLabel ISLabel
 ---@field errorText string
+---@field fromPreviousOwner unknown?
 ---@field info umbrella.ISFluidTransferUI.InfoTable
 ---@field isIsoPanel boolean
 ---@field maxTransferLabel ISLabel
@@ -30,6 +31,7 @@
 ---@field source boolean
 ---@field titleLabel ISLabel
 ---@field titleText string
+---@field toPreviousOwner unknown?
 ---@field transferColor umbrella.RGBA
 ---@field transferringLabel ISLabel
 ---@field transferringText string

@@ -89,6 +89,11 @@ function ResourceItem:getItemCapacity() end
 function ResourceItem:getItemFilter() end
 
 --- @public
+--- @param arg0 InputScript
+--- @return number
+function ResourceItem:getItemUses(arg0) end
+
+--- @public
 --- @return number
 function ResourceItem:getItemUsesAmount() end
 
@@ -168,6 +173,11 @@ function ResourceItem:pollItem(arg0, arg1) end
 --- @param arg0 ArrayList
 --- @return ArrayList
 function ResourceItem:removeAllItems(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return InventoryItem
+function ResourceItem:removeItem(arg0) end
 
 --- @public
 --- @param arg0 ByteBuffer

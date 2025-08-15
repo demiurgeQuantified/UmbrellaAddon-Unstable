@@ -76,7 +76,7 @@ function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
+--- @param arg1 PrimitiveFloatSupplier
 --- @param arg2 IAnimationVariableSlotDescriptor
 --- @return nil
 function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2) end
@@ -106,7 +106,7 @@ function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
 --- @public
 --- @param arg0 string
 --- @param arg1 number
---- @param arg2 CallbackGetStrongTyped
+--- @param arg2 PrimitiveFloatSupplier
 --- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
 function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
@@ -115,6 +115,14 @@ function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
 --- @param arg0 string
 --- @param arg1 integer
 --- @param arg2 CallbackGetStrongTyped
+--- @param arg3 IAnimationVariableSlotDescriptor
+--- @return nil
+function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Class
+--- @param arg2 Supplier
 --- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
 function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
@@ -137,8 +145,8 @@ function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param arg0 string
---- @param arg1 CallbackGetStrongTyped
---- @param arg2 CallbackSetStrongTyped
+--- @param arg1 PrimitiveFloatSupplier
+--- @param arg2 PrimitiveFloatConsumer
 --- @param arg3 IAnimationVariableSlotDescriptor
 --- @return nil
 function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3) end
@@ -171,8 +179,8 @@ function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3, arg4) en
 --- @public
 --- @param arg0 string
 --- @param arg1 number
---- @param arg2 CallbackGetStrongTyped
---- @param arg3 CallbackSetStrongTyped
+--- @param arg2 PrimitiveFloatSupplier
+--- @param arg3 PrimitiveFloatConsumer
 --- @param arg4 IAnimationVariableSlotDescriptor
 --- @return nil
 function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3, arg4) end
@@ -182,6 +190,15 @@ function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3, arg4) en
 --- @param arg1 integer
 --- @param arg2 CallbackGetStrongTyped
 --- @param arg3 CallbackSetStrongTyped
+--- @param arg4 IAnimationVariableSlotDescriptor
+--- @return nil
+function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 Class
+--- @param arg2 Supplier
+--- @param arg3 Consumer
 --- @param arg4 IAnimationVariableSlotDescriptor
 --- @return nil
 function IAnimationVariableRegistry:setVariable(arg0, arg1, arg2, arg3, arg4) end

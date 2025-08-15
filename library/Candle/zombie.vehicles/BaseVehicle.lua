@@ -644,6 +644,12 @@ function BaseVehicle:damageObjects(damage) end
 function BaseVehicle:damagePlayers(damage) end
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return number
+function BaseVehicle:distanceToManhatten(arg0, arg1) end
+
+--- @public
 --- @return nil
 function BaseVehicle:doBloodOverlay() end
 

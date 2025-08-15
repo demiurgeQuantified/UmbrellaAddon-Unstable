@@ -347,9 +347,8 @@ function IsoPlayer:createPlayerStats(b, adminUsername) end
 function IsoPlayer:doBeatenVehicle(vehicleSpeed) end
 
 --- @public
---- @param dir IsoDirections
 --- @return boolean
-function IsoPlayer:doContext(dir) end
+function IsoPlayer:doContext() end
 
 --- @public
 --- @param arg0 IsoDirections

@@ -445,6 +445,122 @@ function WorldMapStyleEditor_PolygonLayerPanel:undisplay() end
 ---@return WorldMapStyleEditor_PolygonLayerPanel
 function WorldMapStyleEditor_PolygonLayerPanel:new(editorMode) end
 
+---@class WorldMapStyleEditor_PyramidPanel : WorldMapStyleEditor_TabPanel
+---@field fileEntry ISTextEntryBox
+WorldMapStyleEditor_PyramidPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_PyramidPanel")
+WorldMapStyleEditor_PyramidPanel.Type = "WorldMapStyleEditor_PyramidPanel"
+
+function WorldMapStyleEditor_PyramidPanel:createChildren() end
+
+function WorldMapStyleEditor_PyramidPanel:onFileEntered() end
+
+function WorldMapStyleEditor_PyramidPanel:populateList(layer) end
+
+---@param width number
+---@return WorldMapStyleEditor_PyramidPanel
+function WorldMapStyleEditor_PyramidPanel:new(width, editorMode) end
+
+---@class WorldMapStyleEditor_PyramidLayerPanel : WorldMapStyleEditor
+---@field fillPanel WorldMapStyleEditor_ColorStopsPanel
+---@field pyramidPanel WorldMapStyleEditor_PyramidPanel
+---@field tabs ISTabPanel
+WorldMapStyleEditor_PyramidLayerPanel = WorldMapStyleEditor:derive("WorldMapStyleEditor_PyramidLayerPanel")
+WorldMapStyleEditor_PyramidLayerPanel.Type = "WorldMapStyleEditor_PyramidLayerPanel"
+
+function WorldMapStyleEditor_PyramidLayerPanel:createChildren() end
+
+function WorldMapStyleEditor_PyramidLayerPanel:display(layer) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_PyramidLayerPanel:onMouseDownMap(x, y) end
+
+---@param dx number
+---@param dy number
+---@return unknown
+function WorldMapStyleEditor_PyramidLayerPanel:onMouseMoveMap(dx, dy) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_PyramidLayerPanel:onMouseUpMap(x, y) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_PyramidLayerPanel:onMouseUpOutsideMap(x, y) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_PyramidLayerPanel:onRightMouseDownMap(x, y) end
+
+function WorldMapStyleEditor_PyramidLayerPanel:render() end
+
+function WorldMapStyleEditor_PyramidLayerPanel:undisplay() end
+
+---@return WorldMapStyleEditor_PyramidLayerPanel
+function WorldMapStyleEditor_PyramidLayerPanel:new(editorMode) end
+
+---@class WorldMapStyleEditor_TextPanel : WorldMapStyleEditor_TabPanel
+---@field fontCombo ISComboBox
+WorldMapStyleEditor_TextPanel = WorldMapStyleEditor_TabPanel:derive("WorldMapStyleEditor_TextPanel")
+WorldMapStyleEditor_TextPanel.Type = "WorldMapStyleEditor_TextPanel"
+
+function WorldMapStyleEditor_TextPanel:createChildren() end
+
+function WorldMapStyleEditor_TextPanel:onFontSelected() end
+
+function WorldMapStyleEditor_TextPanel:populateList(layer) end
+
+---@param width number
+---@return WorldMapStyleEditor_TextPanel
+function WorldMapStyleEditor_TextPanel:new(width, editorMode) end
+
+---@class WorldMapStyleEditor_TextLayerPanel : WorldMapStyleEditor
+---@field fillPanel WorldMapStyleEditor_ColorStopsPanel
+---@field tabs ISTabPanel
+---@field textPanel WorldMapStyleEditor_TextPanel
+WorldMapStyleEditor_TextLayerPanel = WorldMapStyleEditor:derive("WorldMapStyleEditor_TextLayerPanel")
+WorldMapStyleEditor_TextLayerPanel.Type = "WorldMapStyleEditor_TextLayerPanel"
+
+function WorldMapStyleEditor_TextLayerPanel:createChildren() end
+
+function WorldMapStyleEditor_TextLayerPanel:display(layer) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_TextLayerPanel:onMouseDownMap(x, y) end
+
+---@param dx number
+---@param dy number
+---@return unknown
+function WorldMapStyleEditor_TextLayerPanel:onMouseMoveMap(dx, dy) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_TextLayerPanel:onMouseUpMap(x, y) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_TextLayerPanel:onMouseUpOutsideMap(x, y) end
+
+---@param x number
+---@param y number
+---@return unknown
+function WorldMapStyleEditor_TextLayerPanel:onRightMouseDownMap(x, y) end
+
+function WorldMapStyleEditor_TextLayerPanel:render() end
+
+function WorldMapStyleEditor_TextLayerPanel:undisplay() end
+
+---@return WorldMapStyleEditor_TextLayerPanel
+function WorldMapStyleEditor_TextLayerPanel:new(editorMode) end
+
 ---@class WorldMapStyleEditor_TextureLayerPanel : WorldMapStyleEditor
 ---@field fillPanel WorldMapStyleEditor_ColorStopsPanel
 ---@field tabs ISTabPanel

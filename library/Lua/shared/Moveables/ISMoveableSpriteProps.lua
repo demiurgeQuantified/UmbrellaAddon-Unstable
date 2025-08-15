@@ -259,6 +259,10 @@ function ISMoveableSpriteProps:findInInventoryMultiSprite(_character, _spriteNam
 ---@return IsoSpriteInstance?
 function ISMoveableSpriteProps:findOnSquare(_square, _spriteName) end
 
+---@param _gridInfo (SpriteGridCache | table)?
+---@return unknown
+function ISMoveableSpriteProps:findOriginalSquare(_gridInfo, _sprite) end
+
 ---@param _player IsoPlayer
 ---@param _mode string
 ---@return number
@@ -535,6 +539,9 @@ function ISMoveableSpriteProps:placeMoveableViaCursor(_character, _square, _orig
 ---@param _object IsoObject
 function ISMoveableSpriteProps:playBreakSound(_character, _object) end
 
+---@return table
+function ISMoveableSpriteProps:removeComponentsBeforePlacing(obj) end
+
 ---@param _character IsoPlayer
 ---@param _didRepair boolean
 function ISMoveableSpriteProps:repairHaloNoteCheck(_character, _didRepair) end
@@ -553,6 +560,8 @@ function ISMoveableSpriteProps:repairObjectInternal(_character) end
 ---@param _moveCursor ISMoveableCursor
 function ISMoveableSpriteProps:repairObjectViaCursor(_character, _square, _origSpriteName, _moveCursor) end
 
+function ISMoveableSpriteProps:restoreComponentsAfterPlacing(obj, components) end
+
 ---@param _character IsoPlayer
 ---@param _square IsoGridSquare
 ---@param _origSpriteName string
@@ -568,6 +577,8 @@ function ISMoveableSpriteProps:rotateMoveableInternal(_character, _square, _orig
 ---@param _origSpriteName string
 ---@param _moveCursor ISMoveableCursor?
 function ISMoveableSpriteProps:rotateMoveableViaCursor(_character, _square, _origSpriteName, _moveCursor) end
+
+function ISMoveableSpriteProps:saveThumpableParameters(_table, _object) end
 
 ---@param _character IsoPlayer
 ---@param _scrapDef umbrella.ISMoveableSpriteProps.CanScrapResult

@@ -30,6 +30,31 @@ function Literature:canBeWrite() end
 
 --- @public
 --- @return boolean
+function Literature:containsBuildRecipe() end
+
+--- @public
+--- @return boolean
+function Literature:containsCraftOrBuildRecipe() end
+
+--- @public
+--- @return boolean
+function Literature:containsCraftRecipe() end
+
+--- @public
+--- @return boolean
+function Literature:containsGrowingSeason() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function Literature:containsKnownRecipe(arg0) end
+
+--- @public
+--- @return boolean
+function Literature:containsMiscRecipe() end
+
+--- @public
+--- @return boolean
 function Literature:finishupdate() end
 
 --- @public
@@ -51,6 +76,16 @@ function Literature:getCategory() end
 --- @public
 --- @return HashMap
 function Literature:getCustomPages() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return List
+function Literature:getKnownMiscRecipes(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return List
+function Literature:getKnownRecipes(arg0) end
 
 --- @public
 --- @return string

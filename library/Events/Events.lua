@@ -309,7 +309,8 @@ Events.OnAmbientSound = {
 ---
 ---@alias Callback_OnAnimalTracks fun(player:IsoPlayer,tracks:ArrayList)
 
----OnAnimalTracks:
+---@deprecated
+---(Deprecated) OnAnimalTracks:
 ---<br><br>
 Events.OnAnimalTracks = {
 	---@param callback Callback_OnAnimalTracks
@@ -2551,7 +2552,8 @@ Events.OnSteamWorkshopItemUpdated = {
 ---player - The player who stopped grappling.<br>
 ---@alias Callback_OnStopGrapple fun(player:IsoPlayer)
 
----(Client) OnStopGrapple: Triggered when a local player stops grappling.
+---@deprecated
+---(Deprecated) (Client) OnStopGrapple: Triggered when a local player stops grappling.
 ---<br><br>player - The player who stopped grappling.<br>
 Events.OnStopGrapple = {
 	---@param callback Callback_OnStopGrapple

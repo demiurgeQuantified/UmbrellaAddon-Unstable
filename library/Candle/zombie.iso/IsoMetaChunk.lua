@@ -33,6 +33,14 @@ function IsoMetaChunk:clearRooms() end
 function IsoMetaChunk:clearZones() end
 
 --- @public
+--- @return nil
+function IsoMetaChunk:compactRoomDefArray() end
+
+--- @public
+--- @return nil
+function IsoMetaChunk:compactZoneArray() end
+
+--- @public
 --- @return boolean
 function IsoMetaChunk:doesHaveForaging() end
 

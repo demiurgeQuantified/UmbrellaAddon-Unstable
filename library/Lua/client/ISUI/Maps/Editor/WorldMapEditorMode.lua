@@ -4,6 +4,7 @@
 ---@field editor WorldMapEditor
 ---@field mapAPI UIWorldMapV1
 ---@field mapUI WorldMapEditor
+---@field streetsAPI unknown
 ---@field styleAPI WorldMapStyleV1
 ---@field symbolsAPI WorldMapSymbolsV1
 WorldMapEditorMode = ISPanel:derive("WorldMapEditorMode")

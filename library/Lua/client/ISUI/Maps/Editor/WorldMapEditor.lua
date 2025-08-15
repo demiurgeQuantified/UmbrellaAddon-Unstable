@@ -17,6 +17,7 @@
 ---@field mode table<string, WorldMapEditorMode>
 ---@field modeButton table<string, ISButton>
 ---@field state WorldMapEditorState
+---@field streetsAPI unknown
 ---@field styleAPI WorldMapStyleV1
 ---@field symbolsAPI WorldMapSymbolsV1
 WorldMapEditor = ISUIElement:derive("WorldMapEditor")

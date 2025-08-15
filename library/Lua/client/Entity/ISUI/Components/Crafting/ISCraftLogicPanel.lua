@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISCraftLogicPanel : ISBaseComponentPanel
+---@field _filterString unknown
 ---@field craftControl ISWidgetCraftControl?
 ---@field craftControlDebug ISWidgetCraftDebug?
 ---@field craftLogicComponent CraftLogic
@@ -10,13 +11,20 @@
 ---@field fluidInputs ISFluidSlotPanel?
 ---@field fluidOutputs ISFluidSlotPanel?
 ---@field inputsGroupName string
+---@field inventoryPanel unknown?
+---@field inventoryPanelColumn unknown
 ---@field itemInputs ISItemSlotPanel?
 ---@field itemOutputs ISItemSlotPanel?
 ---@field logic Component
 ---@field outputsGroupName string
+---@field recipeColumn unknown
 ---@field recipeIconPanel ISTiledIconPanel?
+---@field recipeListMode boolean
 ---@field recipePanel unknown?
+---@field recipePanelColumn unknown
 ---@field recipes ArrayList<CraftRecipe>
+---@field recipesPanel unknown?
+---@field resourceInventoryPanel unknown?
 ---@field resourcesComponent Resources
 ---@field tableLayout ISTableLayout?
 ---@field tooltipCounter number
@@ -45,23 +53,52 @@ function ISCraftLogicPanel:createEnergySlotPanel(_style) end
 ---@return ISFluidSlotPanel
 function ISCraftLogicPanel:createFluidSlotPanel(_style) end
 
+function ISCraftLogicPanel:createInventoryPanel() end
+
 ---@param _style string
 ---@return ISItemSlotPanel
 function ISCraftLogicPanel:createItemSlotPanel(_style) end
+
+function ISCraftLogicPanel:createLegacyRecipePanel() end
 
 function ISCraftLogicPanel:createRecipeIconPanel() end
 
 function ISCraftLogicPanel:createRecipePanel() end
 
+function ISCraftLogicPanel:createRecipesColumn() end
+
+function ISCraftLogicPanel:filterRecipeList() end
+
 function ISCraftLogicPanel:initialise() end
 
+function ISCraftLogicPanel:OnCloseWindow() end
+
+function ISCraftLogicPanel:onRecipeChanged(_recipe) end
+
 function ISCraftLogicPanel:onResize() end
+
+function ISCraftLogicPanel:onResourceSlotContentsChanged() end
+
+---@param _showManualSelectInputs boolean
+function ISCraftLogicPanel:onShowManualSelectChanged(_showManualSelectInputs) end
+
+function ISCraftLogicPanel:onUpdateRecipeList(_recipeList) end
 
 function ISCraftLogicPanel:prerender() end
 
 function ISCraftLogicPanel:render() end
 
+function ISCraftLogicPanel:setRecipeFilter(_filterString) end
+
+function ISCraftLogicPanel:setRecipeListMode(_useListMode) end
+
+function ISCraftLogicPanel:setSortMode(_sortMode) end
+
+function ISCraftLogicPanel:sortRecipeList() end
+
 function ISCraftLogicPanel:update() end
+
+function ISCraftLogicPanel:updateContainers() end
 
 ---@param x number
 ---@param y number

@@ -82,6 +82,9 @@ function ISCraftingUI.ReturnItemToOriginalContainer(playerObj, item) end
 ---@return boolean
 function ISCraftingUI.sortByName(a, b) end
 
+---@return unknown
+function ISCraftingUI.sortByTranslationName(a, b) end
+
 function ISCraftingUI.toggleCraftingUI() end
 
 ---@param button ISButton
