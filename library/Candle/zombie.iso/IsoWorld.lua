@@ -545,9 +545,9 @@ function IsoWorld:setEmitterOwner(emitter, object) end
 function IsoWorld:setGameMode(mode) end
 
 --- @public
---- @param __on__ boolean
+--- @param on boolean
 --- @return nil
-function IsoWorld:setHydroPowerOn(__on__) end
+function IsoWorld:setHydroPowerOn(on) end
 
 --- @public
 --- @param desc SurvivorDesc

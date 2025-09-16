@@ -2302,9 +2302,9 @@ function BaseVehicle:setGeneralPartCondition(baseQuality, chanceToSpawnDamaged) 
 function BaseVehicle:setGoodCar(isGoodCar) end
 
 --- @public
---- @param __on__ boolean
+--- @param on boolean
 --- @return nil
-function BaseVehicle:setHeadlightsOn(__on__) end
+function BaseVehicle:setHeadlightsOn(on) end
 
 --- @public
 --- @param hotwired boolean
@@ -2445,9 +2445,9 @@ function BaseVehicle:setSmashed(location) end
 function BaseVehicle:setSmashed(location, flipped) end
 
 --- @public
---- @param __on__ boolean
+--- @param on boolean
 --- @return nil
-function BaseVehicle:setStoplightsOn(__on__) end
+function BaseVehicle:setStoplightsOn(on) end
 
 --- @public
 --- @param wheelIndex integer
@@ -2486,9 +2486,9 @@ function BaseVehicle:setVehicleTowing(vehicleB, attachmentA, attachmentB) end
 function BaseVehicle:setVehicleType(type) end
 
 --- @public
---- @param __on__ boolean
+--- @param on boolean
 --- @return nil
-function BaseVehicle:setWindowLightsOn(__on__) end
+function BaseVehicle:setWindowLightsOn(on) end
 
 --- @public
 --- @param __in__ Transform

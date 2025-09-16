@@ -580,11 +580,11 @@ function UIElement:getMaxDrawHeight() end
 function UIElement:getMaxDrawHeight() end
 
 --- @public
---- @return UIElementInterface # the Parent
+--- @return UIElement # the Parent
 function UIElement:getParent() end
 
 --- @public
---- @return UIElement # the Parent
+--- @return UIElementInterface # the Parent
 function UIElement:getParent() end
 
 --- @public

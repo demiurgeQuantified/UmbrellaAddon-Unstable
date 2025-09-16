@@ -1,8 +1,8 @@
 --- @meta _
 
---- @class GameTime
+--- @class GameTime Tracks both in-game time and real world time. This class is very old and so has a lot of random/deprecated functionality.
 --- @field public class any
---- @field public instance GameTime
+--- @field public instance GameTime Because of how Kahlua exposes static fields, when accessed from Lua, this will return a stale GameTime object that does not hold the correct game state. Lua mods should always use getGameTime() or GameTime.getInstance() instead of this field.
 --- @field public MinutesPerHour number
 --- @field public MULTIPLIER number
 --- @field public SecondsPerHour number
@@ -63,29 +63,41 @@ function GameTime.syncServerTime(timeClientSend, timeServer, timeClientReceive) 
 ------------------------------------
 
 --- @public
---- @param start number
---- @param __end__ number
---- @param delta number
---- @return number
+---
+--- Interpolates between two values by a given amount.
+---
+--- @param start number Value to interpolation from.
+--- @param __end__ number Value to interpolate to.
+--- @param delta number 0-1 amount to interpolate between the two values.
+--- @return number # Interpolated value.
 function GameTime:Lerp(start, __end__, delta) end
 
 --- @public
---- @param i integer
+---
+--- Removes a specific number of zombies from the world.
+---
+--- @param i integer Number of zombies to remove.
 --- @return nil
 function GameTime:RemoveZombiesIndiscriminate(i) end
 
 --- @public
---- @param startVal number
---- @param endVal number
---- @param startTime number
---- @param endTime number
---- @return number
+---
+--- Interpolates between two values based on the current time of day.
+---
+--- @param startVal number Value to interpolate from.
+--- @param endVal number Value to interpoalte to.
+--- @param startTime number Time of day in hours to start interpolation. If the current time is before this, startVal is returned.
+--- @param endTime number Time of day in hours to end interpolation. If the current time is after this, endVal is returned. If this is less than startTime, it is considered a time in the next day.
+--- @return number # Interpolated value based on the current time.
 function GameTime:TimeLerp(startVal, endVal, startTime, endTime) end
 
 --- @public
---- @param year integer
---- @param month integer
---- @return integer
+---
+--- Returns the number of days in a month.
+---
+--- @param year integer Year of the month. Required to account for leap years.
+--- @param month integer 0 indexed month of the year.
+--- @return integer # Number of days in the month.
 function GameTime:daysInMonth(year, month) end
 
 --- @public
@@ -110,24 +122,42 @@ function GameTime:getCalender() end
 function GameTime:getDawn() end
 
 --- @public
---- @return integer # the Day
+---
+--- Current day of the month in the game world.
+---
+--- @return integer # 0 indexed day of the month.
 function GameTime:getDay() end
 
 --- @public
---- @return integer
+---
+--- Current day of the month in the game world, plus 1.
+---
+--- @return integer # 1 indexed day of the month.
 function GameTime:getDayPlusOne() end
 
 --- @public
---- @return integer
+---
+--- The number of full days survived by the current local player who has survived
+--- longest modulo 30.
+---
+--- @return integer # Highest number of days survived by a current local player modulo 30.
 function GameTime:getDaysSurvived() end
 
 --- @public
---- @param playerObj IsoPlayer
---- @return string
+---
+--- Returns the time survived string to show on death for a player.
+---
+--- @param playerObj IsoPlayer Player to get the string for.
+--- @return string # Time survived string.
 function GameTime:getDeathString(playerObj) end
 
 --- @public
---- @return number
+---
+--- Delta between the default and current day length (as configured in the sandbox
+--- When using a time delta, multiply by this as well to make the value increase at
+--- fixed game-time rate rather than real time.
+---
+--- @return number # The default day length is considered by this method to be 30 minutes, so a 0.33 delta is expected on default settings, not 1.
 function GameTime:getDeltaMinutesPerDay() end
 
 --- @public
@@ -135,10 +165,16 @@ function GameTime:getDeltaMinutesPerDay() end
 function GameTime:getDusk() end
 
 --- @public
---- @return string
+---
+--- Returns a string describing the current game mode.
+---
+--- @return string # String describing the current game mode.
 function GameTime:getGameModeText() end
 
 --- @public
+---
+--- Number of in-game seconds passed since the last tick.
+---
 --- @return number
 function GameTime:getGameWorldSecondsSinceLastUpdate() end
 
@@ -167,6 +203,10 @@ function GameTime:getHour() end
 function GameTime:getHoursSurvived() end
 
 --- @public
+---
+--- Return the inverse of getMultiplier() (1 / getMultiplier()). Per-tick RNG
+--- can multiply by this value to keep chances relatively stable across different
+---
 --- @return number
 function GameTime:getInvMultiplier() end
 
@@ -199,22 +239,40 @@ function GameTime:getMinutes() end
 function GameTime:getMinutesPerDay() end
 
 --- @public
---- @return integer
+---
+--- Number of minutes since the world was created. Has the same inaccuracy as
+---
+--- @return integer # Number of minutes since the world was created.
 function GameTime:getMinutesStamp() end
 
 --- @public
+---
+--- This was used to store non-object-specific mod data in the save file before
+--- mod data was added. It is generally better to use the global mod data API
+--- by ModData.
+---
 --- @return table
 function GameTime:getModData() end
 
 --- @public
---- @return integer # the Month
+---
+--- Current month of the year in the game world.
+---
+--- @return integer # 0 indexed month of the year.
 function GameTime:getMonth() end
 
 --- @public
+---
+--- Number of real world seconds since the last tick, multiplied by game speed.
+---
 --- @return number
 function GameTime:getMultipliedSecondsSinceLastUpdate() end
 
 --- @public
+---
+--- Number of real world seconds since the last tick, multiplied by game speed. Also
+--- by 48 for some reason.
+---
 --- @return number # the Multiplier
 function GameTime:getMultiplier() end
 
@@ -240,14 +298,25 @@ function GameTime:getNightMin() end
 function GameTime:getNightTint() end
 
 --- @public
---- @return integer # the NightsSurvived
+---
+--- Gets the number of nights that have passed since the save was created. 7am is
+--- the end of a night.
+---
+--- @return integer # Number of nights since game start.
 function GameTime:getNightsSurvived() end
 
 --- @public
+---
+--- Number of real seconds since the last tick.
+---
 --- @return number
 function GameTime:getRealworldSecondsSinceLastUpdate() end
 
 --- @public
+---
+--- Delta based on the target framerate rather than the actual framerate. Unclear
+--- Probably shouldn't be used.
+---
 --- @return number
 function GameTime:getServerMultiplier() end
 
@@ -256,19 +325,37 @@ function GameTime:getServerMultiplier() end
 function GameTime:getSkyLightLevel() end
 
 --- @public
---- @return integer # the StartDay
+---
+--- Day of the month the game started on as defined by sandbox options. The value
+--- change if sandbox options are changed, so getNightsSurvived() or
+--- should be used instead to determine the age of the world.
+---
+--- @return integer # 0 indexed day of the month the game started on.
 function GameTime:getStartDay() end
 
 --- @public
---- @return integer # the StartMonth
+---
+--- Month of the year the game started on as defined by sandbox options. The value
+--- change if sandbox options are changed, so getNightsSurvived() or
+--- should be used instead to determine the age of the world.
+---
+--- @return integer # 0 indexed month of the year the game started on.
 function GameTime:getStartMonth() end
 
 --- @public
---- @return number # the StartTimeOfDay
+---
+--- Time of day the game started on as defined by sandbox options. The value will
+--- if sandbox options are changed, so getNightsSurvived() or getWorldAgeHours()
+--- be used instead to determine the age of the world.
+---
+--- @return number # The time of day in hours the game started at.
 function GameTime:getStartTimeOfDay() end
 
 --- @public
---- @return integer # the StartYear
+---
+--- Year the game started on.
+---
+--- @return integer # Year the game started on.
 function GameTime:getStartYear() end
 
 --- @public
@@ -280,6 +367,9 @@ function GameTime:getThirtyFPSMultiplier() end
 function GameTime:getThunderStorm() end
 
 --- @public
+---
+--- Number of real world seconds since the last tick, multiplied by game speed.
+---
 --- @return number
 function GameTime:getTimeDelta() end
 
@@ -293,15 +383,25 @@ function GameTime:getTimeDeltaFromMultiplier(arg0) end
 function GameTime:getTimeOfDay() end
 
 --- @public
---- @param playerObj IsoPlayer
---- @return string
+---
+--- Gets a string that describes how long a player has survived for.
+---
+--- @param playerObj IsoPlayer Player to get the string for.
+--- @return string # String describing how long the player has survived.
 function GameTime:getTimeSurvived(playerObj) end
 
 --- @public
+---
+--- Returns the current game speed multiplier (from the singleplayer speed up UI or
+--- all players are sleeping).
+---
 --- @return number
 function GameTime:getTrueMultiplier() end
 
 --- @public
+---
+--- Number of real world seconds since the last tick, multiplied by game speed.
+---
 --- @return number
 function GameTime:getUnmoddedMultiplier() end
 
@@ -322,16 +422,29 @@ function GameTime:getViewDistMin() end
 function GameTime:getWorldAgeDaysSinceBegin() end
 
 --- @public
---- @return number
+---
+--- Gets the age of the world from the start of the game in hours. The value can be
+--- off from the true value depending on game settings, as it considers every 7am
+--- to be a 24 hour period, however the game does not by default start at 7am. The
+--- number of hours can be calculated by subtracting (getStartTimeOfDay() - 7).
+--- the uncorrected value is still suitable as a timestamp, as the offset is
+---
+--- @return number # Age of the world in hours.
 function GameTime:getWorldAgeHours() end
 
 --- @public
---- @return integer # the Year
+---
+--- Current year in the game world.
+---
+--- @return integer # Current year in the game world.
 function GameTime:getYear() end
 
 --- @public
---- @param playerObj IsoPlayer
---- @return string
+---
+--- Returns a string describing how many zombies a player has killed.
+---
+--- @param playerObj IsoPlayer Player to get the string for.
+--- @return string # String describing how many zombies the player has killed.
 function GameTime:getZombieKilledText(playerObj) end
 
 --- @public
@@ -434,7 +547,10 @@ function GameTime:setCalender(Calender) end
 function GameTime:setDawn(dawn) end
 
 --- @public
---- @param Day integer the Day to set
+---
+--- Current day of the month in the game world.
+---
+--- @param Day integer 0 indexed day of the month.
 --- @return nil
 function GameTime:setDay(Day) end
 
@@ -494,7 +610,10 @@ function GameTime:setMinZombieCountStart(MinZombieCountStart) end
 function GameTime:setMinutesPerDay(MinutesPerDay) end
 
 --- @public
---- @param Month integer the Month to set
+---
+--- Current month of the year in the game world.
+---
+--- @param Month integer 0 indexed month of the year.
 --- @return nil
 function GameTime:setMonth(Month) end
 
@@ -504,6 +623,10 @@ function GameTime:setMonth(Month) end
 function GameTime:setMoon(moon) end
 
 --- @public
+---
+--- The multiplier scales the game simulation speed. getTrueMultiplier() can be used
+--- retrieve this value. getMultiplier() does not return this value.
+---
 --- @param Multiplier number the Multiplier to set
 --- @return nil
 function GameTime:setMultiplier(Multiplier) end
@@ -519,27 +642,47 @@ function GameTime:setNightMax(max) end
 function GameTime:setNightMin(min) end
 
 --- @public
+---
+--- Number of nights since the game began. A night is survived when the time passes
+---
 --- @param NightsSurvived integer the NightsSurvived to set
 --- @return nil
 function GameTime:setNightsSurvived(NightsSurvived) end
 
 --- @public
---- @param StartDay integer the StartDay to set
+---
+--- Day of the month the game started on as defined by sandbox options. Changing
+--- does not affect the age of the world.
+---
+--- @param StartDay integer 0 indexed day of the month the game started on.
 --- @return nil
 function GameTime:setStartDay(StartDay) end
 
 --- @public
+---
+--- Month of the year the game started on as defined by sandbox options. Changing
+--- does not affect the age of the world.
+---
 --- @param StartMonth integer the StartMonth to set
---- @return nil
+--- @return nil # 0 indexed month of the year the game started on.
 function GameTime:setStartMonth(StartMonth) end
 
 --- @public
---- @param StartTimeOfDay number the StartTimeOfDay to set
+---
+--- Time of day the game started on as defined by sandbox options. The value will
+--- if sandbox options are changed, so getNightsSurvived() or getWorldAgeHours()
+--- be used instead to determine the age of the world. Changing this does not affect
+--- age of the world.
+---
+--- @param StartTimeOfDay number The time of day in hours the game started at.
 --- @return nil
 function GameTime:setStartTimeOfDay(StartTimeOfDay) end
 
 --- @public
---- @param StartYear integer the StartYear to set
+---
+--- Year the game started on. Changing this does not affect the age of the world.
+---
+--- @param StartYear integer Year the game started on.
 --- @return nil
 function GameTime:setStartYear(StartYear) end
 
@@ -569,7 +712,10 @@ function GameTime:setViewDistMax(ViewDistMax) end
 function GameTime:setViewDistMin(ViewDistMin) end
 
 --- @public
---- @param Year integer the Year to set
+---
+--- Current year in the game world.
+---
+--- @param Year integer Current year in the game world.
 --- @return nil
 function GameTime:setYear(Year) end
 

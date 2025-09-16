@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoCell
+--- @class IsoCell Loaded area 'reality bubble' around the player(s). Don't confuse this with map cells - the name is a relic from when it did actually represent these. Only one instance should ever exist. Instantiating this class during gameplay will likely immediately crash.
 --- @field public class any
 --- @field public CellSizeInChunks integer
 --- @field public CellSizeInSquares integer
@@ -721,7 +721,10 @@ function IsoCell:getWorldX() end
 function IsoCell:getWorldY() end
 
 --- @public
---- @return ArrayList # the ZombieList
+---
+--- List of every zombie currently in the world.
+---
+--- @return ArrayList # List of every zombie currently in the world.
 function IsoCell:getZombieList() end
 
 --- @public

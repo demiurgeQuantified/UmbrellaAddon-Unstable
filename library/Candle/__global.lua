@@ -28,12 +28,15 @@ function InvMngRemoveItem(arg0, arg1, arg2) end
 --- @return nil
 function NewMapBinaryFile(arg0) end
 
---- @param item InventoryItem
---- @param sq IsoGridSquare
---- @param xoffset number
---- @param yoffset number
---- @param zoffset number
---- @param rotation number
+---
+--- Draws an item's model in the world. Only works when certain render state is set.
+---
+--- @param item InventoryItem The item to render.
+--- @param sq IsoGridSquare The square to draw the item on.
+--- @param xoffset number Offset on the x axis to draw the model.
+--- @param yoffset number Offset on the y axis to draw the model.
+--- @param zoffset number Offset on the z axis to draw the model.
+--- @param rotation number Yaw rotation of the model in degrees.
 --- @return nil
 function Render3DItem(item, sq, xoffset, yoffset, zoffset, rotation) end
 
@@ -41,27 +44,43 @@ function Render3DItem(item, sq, xoffset, yoffset, zoffset, rotation) end
 --- @return nil
 function SendCommandToServer(command) end
 
---- @param player IsoPlayer
+---
+--- Sends an XP sync packet. Does nothing when called on the server.
+---
+--- @param player IsoPlayer The player whose XP to sync.
 --- @return nil
 function SyncXp(player) end
 
---- @param max number
---- @return number
+---
+--- Returns a pseudorandom integer between 0 and max - 1.
+---
+--- @param max number Exclusive upper bound of the integer value.
+--- @return number # The random integer.
 function ZombRand(max) end
 
---- @param min number
---- @param max number
---- @return number
+---
+--- Returns a pseudorandom integer between min and max - 1.
+---
+--- @param min number The inclusive lower bound of the random integer.
+--- @param max number The exclusive upper bound of the random integer.
+--- @return number # The random integer.
 function ZombRand(min, max) end
 
---- @param min number
---- @param max number
---- @return number
+---
+--- Returns a pseudorandom integer between min and max - 1. No difference from
+--- max).
+---
+--- @param min number The inclusive lower bound of the random integer.
+--- @param max number The exclusive upper bound of the random integer.
+--- @return number # The random integer.
 function ZombRandBetween(min, max) end
 
---- @param min number
---- @param max number
---- @return number
+---
+--- Returns a pseudorandom float between min and max.
+---
+--- @param min number The lower bound of the random float.
+--- @param max number The upper bound of the random float.
+--- @return number # The random float.
 function ZombRandFloat(min, max) end
 
 --- @param faction Faction
@@ -161,8 +180,11 @@ function addAreaHighlight(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) 
 --- @return nil
 function addAreaHighlightForPlayer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
---- @param sq IsoGridSquare
---- @param nbr integer
+---
+--- Adds bloodstains to a specific square.
+---
+--- @param sq IsoGridSquare The square.
+--- @param nbr integer Number of bloodstains to add.
 --- @return nil
 function addBloodSplat(sq, nbr) end
 
@@ -746,6 +768,10 @@ function getAccessLevel() end
 --- @return integer
 function getActionDuration(arg0) end
 
+---
+--- Gets the list of currently activated mods. Remember that in B42+, mod ids are
+--- with a \ character.
+---
 --- @return ArrayList
 function getActivatedMods() end
 
@@ -1017,26 +1043,43 @@ function getFMODSoundBank() end
 --- @return IsoGameCharacter
 function getFakeAttacker() end
 
---- @param filename string
---- @return DataInputStream
+---
+--- Gets an input stream for a file in the Lua cache.
+---
+--- @param filename string Path, relative to the Lua cache root, to write to. '..' is not allowed.
+--- @return DataInputStream # The input stream, or null if the path was not valid.
 function getFileInput(filename) end
 
---- @param filename string
---- @return DataOutputStream
+---
+--- Gets an output stream for a file in the Lua cache.
+---
+--- @param filename string Path, relative to the Lua cache root, to write to. '..' is not allowed.
+--- @return DataOutputStream # The output stream, or null if the path was not valid.
 function getFileOutput(filename) end
 
---- @param filename string
---- @param createIfNull boolean
---- @return BufferedReader
+---
+--- Gets a file reader for a file in the Lua cache.
+---
+--- @param filename string Path, relative to the Lua cache root, to read from. '..' is not allowed.
+--- @param createIfNull boolean Whether to create the file if it does not exist. The created file will be empty.
+--- @return BufferedReader # The file reader, or null if the path was not valid.
 function getFileReader(filename, createIfNull) end
 
---- @return string
+---
+--- Returns the OS-defined file separator. It is not generally needed to use this,
+--- most functions that expect a filepath string will parse them in an
+--- way.
+---
+--- @return string # The file separator.
 function getFileSeparator() end
 
---- @param filename string
---- @param createIfNull boolean
---- @param append boolean
---- @return LuaFileWriter
+---
+--- Gets a file writer for a file in the Lua cache.
+---
+--- @param filename string Path, relative to the Lua cache root, to write to. '..' is not allowed.
+--- @param createIfNull boolean Whether to create the file if it does not exist.
+--- @param append boolean Whether to open the file in append mode. If true, the writer will write after the file's current contents. If false, the current contents of the file will be erased.
+--- @return LuaFileWriter # The file writer, or null if the path was not valid.
 function getFileWriter(filename, createIfNull, append) end
 
 --- @param c LuaCallFrame
@@ -1337,17 +1380,24 @@ function getMinimumWorldLevel() end
 --- @return table
 function getModDirectoryTable() end
 
---- @param modId string
---- @param filename string
---- @param createIfNull boolean
---- @return BufferedReader
+---
+--- Gets a file reader for a file in a mod's directory.
+---
+--- @param modId string ID of the target mod. If null, the path will be relative to the local mods directory.
+--- @param filename string Path, relative to the mod's common folder, to read from. '..' is not allowed.
+--- @param createIfNull boolean Whether to create the file if it does not exist. The created file will be empty.
+--- @return BufferedReader # The file reader, or null if the path or mod was not valid.
 function getModFileReader(modId, filename, createIfNull) end
 
---- @param modId string
---- @param filename string
---- @param createIfNull boolean
---- @param append boolean
---- @return LuaFileWriter
+---
+--- Gets a file writer for a file in a mod's directory. Note: it is generally unwise
+--- write to a mod's lua or scripts directories, as this will change the checksum.
+---
+--- @param modId string ID of the target mod. If null, the path will be relative to the local mods directory.
+--- @param filename string Path, relative to the mod's common folder, to write to. '..' is not allowed.
+--- @param createIfNull boolean Whether to create the file if it does not exist. The created file will be empty.
+--- @param append boolean Whether to open the file in append mode. If true, the writer will write after the file's current contents. If false, the current contents of the file will be erased.
+--- @return LuaFileWriter # The file writer, or null if the path or mod was not valid.
 function getModFileWriter(modId, filename, createIfNull, append) end
 
 --- @param modDir string
@@ -1409,7 +1459,11 @@ function getPerformance() end
 --- @return InventoryItem
 function getPickedUpFish(arg0) end
 
---- @return IsoPlayer
+---
+--- Gets the current player. To support splitscreen, getSpecificPlayer() should be
+--- instead.
+---
+--- @return IsoPlayer # The current player.
 function getPlayer() end
 
 --- @param id integer
@@ -2527,16 +2581,24 @@ function sendAttachedItem(arg0, arg1, arg2) end
 --- @return nil
 function sendButcherAnimal(arg0, arg1) end
 
---- @param module string
---- @param command string
---- @param args table
+---
+--- Sends a command to the server, triggering the OnClientCommand event on the
+--- Does nothing if called on the server.
+---
+--- @param module string Module of the command. It is conventional to use the name of your mod as the module for all of your commands.
+--- @param command string Name of the command.
+--- @param args table Arguments to pass to the server. Non-POD elements of the table will be lost.
 --- @return nil
 function sendClientCommand(module, command, args) end
 
---- @param player IsoPlayer
---- @param module string
---- @param command string
---- @param args table
+---
+--- Sends a command to the server, triggering the OnClientCommand event on the
+--- Does nothing if called on the server.
+---
+--- @param player IsoPlayer The local player to associate the command with. If the player is not local, no command will be sent.
+--- @param module string Module of the command. It is conventional to use the name of your mod as the module for all of your commands.
+--- @param command string Name of the command.
+--- @param args table Arguments to pass to the server. Non-POD elements of the table will be lost.
 --- @return nil
 function sendClientCommand(player, module, command, args) end
 
@@ -2773,16 +2835,24 @@ function sendSafezoneClaim(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @return nil
 function sendSecretKey(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
---- @param module string
---- @param command string
---- @param args table
+---
+--- Sends a command to all clients, triggering the OnServerCommand event on every
+--- Does nothing if called on the client.
+---
+--- @param module string Module of the command. It is conventional to use the name of your mod as the module for all of your commands.
+--- @param command string Name of the command.
+--- @param args table Arguments to pass to the clients. Non-POD elements of the table will be lost.
 --- @return nil
 function sendServerCommand(module, command, args) end
 
---- @param player IsoPlayer
---- @param module string
---- @param command string
---- @param args table
+---
+--- Sends a command to a specific client, triggering the OnServerCommand event on
+--- client. Does nothing if called on the client.
+---
+--- @param player IsoPlayer The player to send the command to. Only that player's client will receive the command.
+--- @param module string Module of the command. It is conventional to use the name of your mod as the module for all of your commands.
+--- @param command string Name of the command.
+--- @param args table Arguments to pass to the client. Non-POD elements of the table will be lost.
 --- @return nil
 function sendServerCommand(player, module, command, args) end
 
