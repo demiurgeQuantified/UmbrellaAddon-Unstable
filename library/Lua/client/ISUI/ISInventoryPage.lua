@@ -1,8 +1,6 @@
 ---@meta
 
 ---@class ISInventoryPage : ISPanel
----@field addFuel ISButton
----@field addPropaneTileTank ISButton
 ---@field backpackChoice number
 ---@field backpacks ISButton[]
 ---@field blinkAlpha number
@@ -21,7 +19,9 @@
 ---@field collapseCounter number
 ---@field coloredInv ItemContainer?
 ---@field conDefault Texture
+---@field containerButtonPanel ISInventoryPageContainerButtonPanel
 ---@field containerIconMaps ContainerButtonIcons
+---@field controlsUI ISLootWindowContainerControls | ISInventoryWindowContainerControls
 ---@field disableJoypadNavigation boolean
 ---@field downX number
 ---@field downY number
@@ -37,8 +37,8 @@
 ---@field inventoryPane ISInventoryPane
 ---@field isCollapsed boolean
 ---@field lastDir IsoDirections
+---@field lastMouseWheelMS number
 ---@field lastSquare IsoGridSquare
----@field lightFire ISButton
 ---@field lookDir IsoDirections
 ---@field lootAll ISButton
 ---@field mouseOverButton ISButton?
@@ -46,10 +46,7 @@
 ---@field pin boolean
 ---@field pinbutton Texture
 ---@field pinButton ISButton
----@field propaneTileToggle ISButton
----@field putOut ISButton
 ---@field removeAll ISButton
----@field removePropaneTileTank ISButton
 ---@field render3DItemRot number
 ---@field render3DItemXOffset number?
 ---@field render3DItemYOffset number?
@@ -61,8 +58,6 @@
 ---@field selectedContainerForSound unknown?
 ---@field selectedSqDrop IsoGridSquare?
 ---@field statusbarbkg Texture
----@field storeOutfit ISButton
----@field switchOutfit ISButton
 ---@field title string?
 ---@field titlebarbkg Texture
 ---@field titleFont UIFont
@@ -73,8 +68,6 @@
 ---@field transferAll ISButton
 ---@field visibleFunction function
 ---@field visibleTarget ISInventoryPage
----@field wearAll ISButton
----@field wearOutfit ISButton
 ---@field zoom number
 ISInventoryPage = ISPanel:derive("ISInventoryPage")
 ISInventoryPage.Type = "ISInventoryPage"
@@ -110,6 +103,8 @@ function ISInventoryPage.onKeyPressed(key) end
 ---@param isHighlighted boolean
 function ISInventoryPage.OnObjectHighlighted(playerNum, object, isHighlighted) end
 
+function ISInventoryPage.onRenameContainer(container, player) end
+
 function ISInventoryPage.toggleInventory() end
 
 ---@param container ItemContainer
@@ -118,10 +113,6 @@ function ISInventoryPage.toggleInventory() end
 ---@param tooltip string?
 ---@return ISButton
 function ISInventoryPage:addContainerButton(container, texture, name, tooltip) end
-
-function ISInventoryPage:addFuelOption() end
-
-function ISInventoryPage:addPropaneTileTank() end
 
 ---@return boolean
 function ISInventoryPage:canPutIn() end
@@ -179,8 +170,6 @@ function ISInventoryPage:isCycleContainerKeyDown() end
 
 ---@return boolean
 function ISInventoryPage:isRemoveButtonVisible() end
-
-function ISInventoryPage:lightFireOption() end
 
 function ISInventoryPage:lootAll() end
 
@@ -269,6 +258,8 @@ function ISInventoryPage:onMouseUpOutside(x, y) end
 ---@return boolean
 function ISInventoryPage:onMouseWheel(del) end
 
+function ISInventoryPage:onRenameContainerClick(button, player, container) end
+
 ---@param x number
 ---@param y number
 function ISInventoryPage:onRightMouseDownOutside(x, y) end
@@ -291,15 +282,11 @@ function ISInventoryPage:prerender() end
 ---@return integer
 function ISInventoryPage:prevUnlockedContainer(index, wrap) end
 
-function ISInventoryPage:putOut() end
-
 function ISInventoryPage:refreshBackpacks() end
 
 function ISInventoryPage:refreshWeight() end
 
 function ISInventoryPage:removeAll() end
-
-function ISInventoryPage:removePropaneTileTank() end
 
 function ISInventoryPage:render() end
 
@@ -339,34 +326,16 @@ function ISInventoryPage:setNewContainer(inventory) end
 
 function ISInventoryPage:setPinned() end
 
-function ISInventoryPage:switchOutfit() end
-
 function ISInventoryPage:syncAddFuel() end
-
-function ISInventoryPage:syncAddPropaneTileTank() end
 
 function ISInventoryPage:syncLightFire() end
 
-function ISInventoryPage:syncPropaneTileToggle() end
-
 function ISInventoryPage:syncPutOut() end
-
-function ISInventoryPage:syncRemovePropaneTileTank() end
-
-function ISInventoryPage:syncStoreOutfit() end
-
-function ISInventoryPage:syncSwitchOutfit() end
 
 function ISInventoryPage:syncToggleStove() end
 
-function ISInventoryPage:syncWearAll() end
-
-function ISInventoryPage:syncWearOutfit() end
-
 ---@return number
 function ISInventoryPage:titleBarHeight(selected) end
-
-function ISInventoryPage:togglePropaneTile() end
 
 function ISInventoryPage:toggleStove() end
 
@@ -380,8 +349,6 @@ function ISInventoryPage:updateContainerOpenCloseSounds() end
 
 function ISInventoryPage:updateItemCount() end
 
-function ISInventoryPage:wearAll() end
-
 ---@param x number
 ---@param y number
 ---@param width number
@@ -391,3 +358,20 @@ function ISInventoryPage:wearAll() end
 ---@param zoom number?
 ---@return ISInventoryPage
 function ISInventoryPage:new(x, y, width, height, inventory, onCharacter, zoom) end
+
+---@class ISInventoryPageContainerButtonPanel : ISPanel
+ISInventoryPageContainerButtonPanel = ISPanel:derive("ISInventoryPageContainerButtonPanel")
+ISInventoryPageContainerButtonPanel.Type = "ISInventoryPageContainerButtonPanel"
+
+function ISInventoryPageContainerButtonPanel:keepSelectedButtonVisible() end
+
+function ISInventoryPageContainerButtonPanel:prerender() end
+
+function ISInventoryPageContainerButtonPanel:render() end
+
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+---@return ISInventoryPageContainerButtonPanel
+function ISInventoryPageContainerButtonPanel:new(x, y, w, h) end

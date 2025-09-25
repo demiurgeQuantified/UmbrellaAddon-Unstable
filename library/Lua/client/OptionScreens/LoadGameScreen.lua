@@ -94,6 +94,10 @@ function LoadGameScreen:onJoypadDown_listbox(button, joypadData) end
 ---@param joypadData JoypadData
 function LoadGameScreen:onJoypadDownSearchEntry(button, joypadData) end
 
+function LoadGameScreen:onJoypadNavigateStart_Descendant(descendant, button, joypadData) end
+
+function LoadGameScreen:onKeyRelease(key) end
+
 ---@param joypadData JoypadData
 function LoadGameScreen:onLoseJoypadFocus_child(joypadData) end
 

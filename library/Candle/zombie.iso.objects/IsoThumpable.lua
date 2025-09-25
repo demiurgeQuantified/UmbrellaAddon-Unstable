@@ -31,11 +31,11 @@ function IsoThumpable.GetBreakFurnitureSound(arg0) end
 function IsoThumpable:Damage(arg0) end
 
 --- @public
---- @return ICurtain
+--- @return IsoCurtain
 function IsoThumpable:HasCurtains() end
 
 --- @public
---- @return IsoCurtain
+--- @return ICurtain
 function IsoThumpable:HasCurtains() end
 
 --- @public

@@ -1,8 +1,10 @@
 ---@meta
 
 ---@class ISTakePillAction : ISBaseTimedAction
+---@field carLighter unknown
 ---@field isEating boolean
 ---@field item InventoryItem
+---@field openFlame boolean
 ISTakePillAction = ISBaseTimedAction:derive("ISTakePillAction")
 ISTakePillAction.Type = "ISTakePillAction"
 
@@ -11,6 +13,9 @@ function ISTakePillAction:complete() end
 
 ---@return number
 function ISTakePillAction:getDuration() end
+
+---@return unknown?
+function ISTakePillAction:getRequiredItem() end
 
 ---@return boolean
 function ISTakePillAction:isValid() end

@@ -5,6 +5,7 @@
 --- @field public Attributes ComponentType
 --- @field public ContextMenuConfig ComponentType
 --- @field public CraftBench ComponentType
+--- @field public CraftBenchSounds ComponentType
 --- @field public CraftLogic ComponentType
 --- @field public CraftRecipe ComponentType
 --- @field public DryingCraftLogic ComponentType

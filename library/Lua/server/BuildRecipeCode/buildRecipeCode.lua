@@ -14,6 +14,7 @@ BuildRecipeCode.campfire = nil ---@type BuildRecipeCode.campfire
 BuildRecipeCode.composter = nil ---@type BuildRecipeCode.composter
 BuildRecipeCode.windowGlass = nil ---@type BuildRecipeCode.windowGlass
 BuildRecipeCode.woodLampPillar = nil ---@type BuildRecipeCode.woodLampPillar
+BuildRecipeCode.barrelOven = nil ---@type BuildRecipeCode.barrelOven
 
 ---@class BuildRecipeCode.barricade
 local __buildRecipeCode_barricade = {}
@@ -109,6 +110,12 @@ local __buildRecipeCode_woodLampPillar = {}
 
 ---@param thumpable IsoThumpable
 function __buildRecipeCode_woodLampPillar.OnCreate(thumpable, craftRecipeData, character) end
+
+---@class BuildRecipeCode.barrelOven
+local __buildRecipeCode_barrelOven = {}
+
+---@return table
+function __buildRecipeCode_barrelOven.OnCreate(params) end
 
 ---@class umbrella.BuildRecipeCode.IsValidParams
 ---@field canBuildOverWater boolean

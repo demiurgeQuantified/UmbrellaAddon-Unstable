@@ -163,6 +163,11 @@ function IsoMetaChunk:getZonesSize() end
 function IsoMetaChunk:getZonesUnique(result) end
 
 --- @public
+--- @param arg0 RoomDef
+--- @return nil
+function IsoMetaChunk:removeRoom(arg0) end
+
+--- @public
 --- @param zone Zone
 --- @return nil
 function IsoMetaChunk:removeZone(zone) end

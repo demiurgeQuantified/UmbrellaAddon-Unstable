@@ -13,6 +13,7 @@ ISWalkToCursor.Type = "ISWalkToCursor"
 ---@param z number
 ---@param north boolean
 ---@param sprite string
+---@return boolean?
 function ISWalkToCursor:create(x, y, z, north, sprite) end
 
 ---@param square IsoGridSquare

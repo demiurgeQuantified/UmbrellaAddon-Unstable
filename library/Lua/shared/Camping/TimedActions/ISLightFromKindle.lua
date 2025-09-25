@@ -30,6 +30,8 @@ function ISLightFromKindle:start() end
 
 function ISLightFromKindle:stop() end
 
+function ISLightFromKindle:stopSound() end
+
 function ISLightFromKindle:update() end
 
 function ISLightFromKindle:updateKindling() end

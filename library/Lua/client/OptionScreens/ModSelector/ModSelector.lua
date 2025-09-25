@@ -5,6 +5,7 @@
 ---@field backButton ISButton
 ---@field helpButton ISButton
 ---@field joypadIndex integer?
+---@field joypadNavigate table
 ---@field mapOrderbtn ISButton
 ---@field model ModSelector.Model
 ---@field modInfoPanel ModInfoPanel
@@ -43,6 +44,14 @@ function ModSelector:onJoypadDirUp(joypadData) end
 ---@param joypadData JoypadData
 function ModSelector:onJoypadDown(button, joypadData) end
 
+function ModSelector:onJoypadNavigateStart(joypadData) end
+
+function ModSelector:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+function ModSelector:onKeyRelease(key) end
+
+function ModSelector:onLoseJoypadFocus(joypadData) end
+
 ---@param button ISButton
 ---@param x number
 ---@param y number
@@ -53,6 +62,8 @@ function ModSelector:onResolutionChange() end
 function ModSelector:prerender() end
 
 function ModSelector:reloadMods() end
+
+function ModSelector:render() end
 
 ---@param folder string
 function ModSelector:setExistingSavefile(folder) end

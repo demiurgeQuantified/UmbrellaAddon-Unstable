@@ -15,12 +15,22 @@ function CharacterCreationAvatar:createChildren() end
 ---@param combo ISComboBox
 function CharacterCreationAvatar:onAnimSelected(combo) end
 
+function CharacterCreationAvatar:onGainJoypadFocus(joyadData) end
+
+function CharacterCreationAvatar:onJoypadDirLeft(joyadData) end
+
+function CharacterCreationAvatar:onJoypadDirRight(joyadData) end
+
+function CharacterCreationAvatar:onJoypadDown(button, joyadData) end
+
 ---@param button ISButton
 ---@param x number
 ---@param y number
 function CharacterCreationAvatar:onTurnChar(button, x, y) end
 
 function CharacterCreationAvatar:prerender() end
+
+function CharacterCreationAvatar:render() end
 
 function CharacterCreationAvatar:rescaleAvatarViewer() end
 

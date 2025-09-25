@@ -93,7 +93,7 @@ function CraftLogicUILogic:getInputItemNodes() end
 function CraftLogicUILogic:getInputItemNodesForInput(arg0) end
 
 --- @public
---- @return ArrayList
+--- @return table
 function CraftLogicUILogic:getItemsInProgress() end
 
 --- @public
@@ -105,7 +105,7 @@ function CraftLogicUILogic:getManualSelectInputScriptFilter() end
 function CraftLogicUILogic:getManualSelectItemSlot() end
 
 --- @public
---- @return ArrayList
+--- @return table
 function CraftLogicUILogic:getOutputItems() end
 
 --- @public
@@ -138,9 +138,10 @@ function CraftLogicUILogic:getResourceItemNodes() end
 function CraftLogicUILogic:getSelectedRecipeStyle() end
 
 --- @public
---- @param arg0 integer
+--- @param arg0 InventoryItem
+--- @param arg1 CraftRecipeData
 --- @return ArrayList
-function CraftLogicUILogic:getStatusIconsForItemInProgress(arg0) end
+function CraftLogicUILogic:getStatusIconsForItemInProgress(arg0, arg1) end
 
 --- @public
 --- @return nil

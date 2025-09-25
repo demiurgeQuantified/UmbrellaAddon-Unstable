@@ -47,4 +47,11 @@ function ISPickUpGroundCoverItem:new(character, square, object) end
 GroundCoverItems = {}
 GroundCoverItems["4Stones"] = "Stone2"
 GroundCoverItems.LargeStoneTwigs = "LargeStone"
+GroundCoverItems.LargeStone = "LargeStone"
+GroundCoverItems.FlatStone = "FlatStone"
 GroundCoverItems.StoneTwigs = "Stone2"
+GroundCoverItems.Stone = "Stone2"
+GroundCoverItems.Log = "Log"
+GroundCoverItems.Twigs = "Twigs"
+GroundCoverItems.TreeBranch2 = "TreeBranch2"
+GroundCoverItems.Limestone = "Limestone"

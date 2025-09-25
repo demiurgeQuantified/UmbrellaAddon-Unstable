@@ -60,6 +60,10 @@ function InputScriptData:isDestroy() end
 function InputScriptData:isInputItemsSatisfied() end
 
 --- @public
+--- @return boolean
+function InputScriptData:isInputItemsSatisifiedToMaximum() end
+
+--- @public
 --- @param arg0 InventoryItem
 --- @return boolean
 function InputScriptData:removeInputItem(arg0) end

@@ -2,7 +2,6 @@
 
 --- @class IsoTree: IsoObject, IHasHealth
 --- @field public class any
---- @field public MAX_SIZE integer
 IsoTree = {}
 
 ------------------------------------

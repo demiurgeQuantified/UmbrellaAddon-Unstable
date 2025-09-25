@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class WorldMapSymbolsV1
+--- @class WorldMapSymbolsV1: WorldMapSymbolsAPI
 --- @field public class any
 WorldMapSymbolsV1 = {}
 

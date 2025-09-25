@@ -53,6 +53,8 @@ function ISCraftRecipePanel:update() end
 ---@param containers ArrayList<ItemContainer>
 function ISCraftRecipePanel:updateContainers(containers) end
 
+function ISCraftRecipePanel:updateTitleWidget() end
+
 ---@param x number
 ---@param y number
 ---@param width number

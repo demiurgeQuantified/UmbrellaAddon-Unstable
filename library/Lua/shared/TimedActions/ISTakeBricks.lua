@@ -4,7 +4,7 @@
 ---@field amount number
 ---@field item string
 ---@field pallet unknown
----@field sprite string
+---@field sprite string?
 ---@field square unknown
 ISTakeBricks = ISBaseTimedAction:derive("ISTakeBricks")
 ISTakeBricks.Type = "ISTakeBricks"
@@ -29,7 +29,7 @@ function ISTakeBricks:update() end
 ---@return unknown
 function ISTakeBricks:waitToStart() end
 
----@param sprite string
+---@param sprite string?
 ---@param item string
 ---@param amount number
 ---@return ISTakeBricks

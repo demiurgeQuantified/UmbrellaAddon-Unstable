@@ -31,6 +31,7 @@
 --- @field public iPerfSkybox_High integer
 --- @field public iPerfSkybox_Medium integer
 --- @field public iPerfSkybox_Static integer
+--- @field public IS_DEV boolean
 --- @field public KEYBINDING_EMPTY KeyBinding
 --- @field public MaxJukeBoxesActive integer
 --- @field public ModelScale number

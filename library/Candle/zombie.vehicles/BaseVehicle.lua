@@ -36,13 +36,13 @@
 --- @field public PHYSICS_PARAM_COUNT integer
 --- @field public PHYSICS_Z_SCALE number
 --- @field public PLUS_RADIUS number
+--- @field public POSITION_ORIENTATION_PACKET_SIZE integer
 --- @field public RADIUS number
 --- @field public RANDOMIZE_CONTAINER_CHANCE integer
 --- @field public RENDER_TO_TEXTURE boolean
 --- @field public TL_matrix4f_pool ThreadLocal
 --- @field public TL_quaternionf_pool ThreadLocal
 --- @field public TL_transform_pool ThreadLocal
---- @field public TL_vector2_pool ThreadLocal
 --- @field public TL_vector2f_pool ThreadLocal
 --- @field public TL_vector3_pool ThreadLocal
 --- @field public TL_vector3f_pool ThreadLocal
@@ -430,7 +430,7 @@ function BaseVehicle:breakConstraint(forgetID, remote) end
 
 --- @public
 --- @return nil
-function BaseVehicle:brekingObjects() end
+function BaseVehicle:breakingObjects() end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -484,6 +484,12 @@ function BaseVehicle:canLightSmoke(arg0) end
 --- @param chr IsoGameCharacter
 --- @return boolean
 function BaseVehicle:canLockDoor(part, chr) end
+
+--- @public
+--- @param arg0 VehiclePart
+--- @param arg1 IsoGameCharacter
+--- @return boolean
+function BaseVehicle:canOpenDoor(arg0, arg1) end
 
 --- @public
 --- @param seatFrom integer
@@ -825,6 +831,12 @@ function BaseVehicle:getAreaDist(areaId, chr) end
 function BaseVehicle:getAreaDist(arg0, arg1, arg2, arg3) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 Vector2
+--- @return Vector2
+function BaseVehicle:getAreaFacingPosition(arg0, arg1) end
+
+--- @public
 --- @param attachmentName string
 --- @param v Vector3f
 --- @return Vector3f
@@ -946,12 +958,20 @@ function BaseVehicle:getCurrentSteering() end
 function BaseVehicle:getCurrentTotalAnimalSize() end
 
 --- @public
+--- @return IsoGameCharacter
+function BaseVehicle:getDamagedBy() end
+
+--- @public
 --- @return number
 function BaseVehicle:getDebugZ() end
 
 --- @public
 --- @return IsoGameCharacter
 function BaseVehicle:getDriver() end
+
+--- @public
+--- @return IsoGameCharacter
+function BaseVehicle:getDriverRegardlessOfTow() end
 
 --- @public
 --- @return BaseSoundEmitter
@@ -991,7 +1011,7 @@ function BaseVehicle:getFMODParameters() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @param out Vector2
---- @return nil
+--- @return Vector2
 function BaseVehicle:getFacingPosition(chr, out) end
 
 --- @public
@@ -1151,6 +1171,11 @@ function BaseVehicle:getPartById(id) end
 --- @param index integer
 --- @return VehiclePart
 function BaseVehicle:getPartByIndex(index) end
+
+--- @public
+--- @param arg0 VehiclePart
+--- @return VehiclePart
+function BaseVehicle:getPartByPartId(arg0) end
 
 --- @public
 --- @return integer
@@ -1323,6 +1348,11 @@ function BaseVehicle:getSqlId() end
 function BaseVehicle:getSquare() end
 
 --- @public
+--- @param arg0 string
+--- @return IsoGridSquare
+function BaseVehicle:getSquareForArea(arg0) end
+
+--- @public
 --- @return boolean
 function BaseVehicle:getStoplightsOn() end
 
@@ -1403,12 +1433,24 @@ function BaseVehicle:getTowingLocalPos(attachmentName, v) end
 function BaseVehicle:getTowingWorldPos(attachmentName, v) end
 
 --- @public
+--- @return VehiclePart
+function BaseVehicle:getTrailerTrunkPart() end
+
+--- @public
 --- @return integer
 function BaseVehicle:getTransmissionNumber() end
 
 --- @public
 --- @return string
 function BaseVehicle:getTransmissionNumberLetter() end
+
+--- @public
+--- @return VehiclePart
+function BaseVehicle:getTrunkDoorPart() end
+
+--- @public
+--- @return VehiclePart
+function BaseVehicle:getTrunkPart() end
 
 --- @public
 --- @param out Vector3f
@@ -1433,6 +1475,19 @@ function BaseVehicle:getUseablePart(chr, checkDir) end
 --- @public
 --- @return VehicleEngineRPM
 function BaseVehicle:getVehicleEngineRPM() end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @return PZArrayList
+function BaseVehicle:getVehicleItemContainers(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 PZArrayList
+--- @return PZArrayList
+function BaseVehicle:getVehicleItemContainers(arg0, arg1, arg2) end
 
 --- @public
 --- @return BaseVehicle
@@ -2623,6 +2678,12 @@ function BaseVehicle:testCollisionWithProneCharacter(chr, angleX, angleY, doSoun
 --- @param obj BaseVehicle
 --- @return boolean
 function BaseVehicle:testCollisionWithVehicle(obj) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 RagdollController
+--- @return boolean
+function BaseVehicle:testTouchingVehicle(arg0, arg1) end
 
 --- @public
 --- @param part VehiclePart

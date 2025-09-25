@@ -921,7 +921,7 @@ farming_vegetableconf.props.Strawberryplant = {
 	growBack = 2,
 }
 farming_vegetableconf.props.SugarBeets = {
-	icon = "Item_Radish",
+	icon = "Item_SugarBeets",
 	texture = "vegetation_farming_01b_46",
 	waterLvl = 40,
 	timeToGrow = 292,

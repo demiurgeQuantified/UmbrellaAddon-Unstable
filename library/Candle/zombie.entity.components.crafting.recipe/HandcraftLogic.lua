@@ -9,29 +9,13 @@ HandcraftLogic = {}
 ------------------------------------
 
 --- @public
---- @return nil
-function HandcraftLogic:autoPopulateInputs() end
-
---- @public
---- @return boolean
-function HandcraftLogic:cachedCanPerformCurrentRecipe() end
-
---- @public
 --- @param arg0 CraftRecipe
 --- @return boolean
 function HandcraftLogic:canCharacterPerformRecipe(arg0) end
 
 --- @public
---- @return boolean
-function HandcraftLogic:canPerformCurrentRecipe() end
-
---- @public
 --- @return nil
 function HandcraftLogic:checkValidRecipeSelected() end
-
---- @public
---- @return nil
-function HandcraftLogic:clearManualInputs() end
 
 --- @public
 --- @param arg0 string
@@ -44,18 +28,6 @@ function HandcraftLogic:filterRecipeList(arg0, arg1, arg2, arg3) end
 --- @public
 --- @return ArrayList
 function HandcraftLogic:getAllItems() end
-
---- @public
---- @return List
-function HandcraftLogic:getAllViableInputInventoryItems() end
-
---- @public
---- @return List
-function HandcraftLogic:getAllViableInputResources() end
-
---- @public
---- @return ArrayList
-function HandcraftLogic:getContainers() end
 
 --- @public
 --- @return table
@@ -71,64 +43,16 @@ function HandcraftLogic:getCraftBench() end
 function HandcraftLogic:getCreatedOutputItems(arg0) end
 
 --- @public
---- @param arg0 InputScript
---- @return integer
-function HandcraftLogic:getInputCount(arg0) end
-
---- @public
---- @return ArrayList
-function HandcraftLogic:getInputItemNodes() end
-
---- @public
---- @param arg0 InputScript
---- @return ArrayList
-function HandcraftLogic:getInputItemNodesForInput(arg0) end
-
---- @public
---- @param arg0 InputScript
---- @return number
-function HandcraftLogic:getInputUses(arg0) end
-
---- @public
 --- @return IsoObject
 function HandcraftLogic:getIsoObject() end
 
 --- @public
---- @param arg0 InputScript
---- @param arg1 ArrayList
---- @return ArrayList
-function HandcraftLogic:getManualInputsFor(arg0, arg1) end
-
---- @public
---- @return InputScript
-function HandcraftLogic:getManualSelectInputScriptFilter() end
-
---- @public
---- @return ArrayList
-function HandcraftLogic:getMulticraftConsumedItems() end
-
---- @public
---- @param arg0 InputScript
---- @param arg1 ArrayList
---- @return ArrayList
-function HandcraftLogic:getMulticraftConsumedItemsFor(arg0, arg1) end
-
---- @public
---- @return ArrayList
-function HandcraftLogic:getMulticraftConsumedResources() end
+--- @return CraftRecipe
+function HandcraftLogic:getLastSelectedRecipe() end
 
 --- @public
 --- @return IsoGameCharacter
 function HandcraftLogic:getPlayer() end
-
---- @public
---- @param arg0 boolean
---- @return integer
-function HandcraftLogic:getPossibleCraftCount(arg0) end
-
---- @public
---- @return CraftRecipe
-function HandcraftLogic:getRecipe() end
 
 --- @public
 --- @return CraftRecipeData
@@ -152,21 +76,6 @@ function HandcraftLogic:getResidualFluidFromInput(arg0) end
 function HandcraftLogic:getResultTexture() end
 
 --- @public
---- @param arg0 InputScript
---- @return List
-function HandcraftLogic:getSatisfiedInputFluids(arg0) end
-
---- @public
---- @param arg0 InputScript
---- @return List
-function HandcraftLogic:getSatisfiedInputInventoryItems(arg0) end
-
---- @public
---- @param arg0 InputScript
---- @return List
-function HandcraftLogic:getSatisfiedInputItems(arg0) end
-
---- @public
 --- @return string
 function HandcraftLogic:getSelectedRecipeStyle() end
 
@@ -180,24 +89,11 @@ function HandcraftLogic:getUsingRecipeAtHandItem() end
 
 --- @public
 --- @return boolean
-function HandcraftLogic:hasRequiredWorkstation() end
-
---- @public
---- @return boolean
 function HandcraftLogic:isCharacterInRangeOfWorkbench() end
 
 --- @public
 --- @return boolean
 function HandcraftLogic:isCraftActionInProgress() end
-
---- @public
---- @param arg0 InputScript
---- @return boolean
-function HandcraftLogic:isInputSatisfied(arg0) end
-
---- @public
---- @return boolean
-function HandcraftLogic:isManualSelectInputs() end
 
 --- @public
 --- @return boolean
@@ -218,34 +114,8 @@ function HandcraftLogic:isUsingRecipeAtHandBenefit() end
 function HandcraftLogic:isValidRecipeForCharacter(arg0) end
 
 --- @public
---- @param arg0 InventoryItem
---- @return boolean
-function HandcraftLogic:offerInputItem(arg0) end
-
---- @public
 --- @return boolean
 function HandcraftLogic:performCurrentRecipe() end
-
---- @public
---- @param arg0 List
---- @param arg1 List
---- @param arg2 boolean
---- @return nil
-function HandcraftLogic:populateInputs(arg0, arg1, arg2) end
-
---- @public
---- @return nil
-function HandcraftLogic:refresh() end
-
---- @public
---- @param arg0 InventoryItem
---- @return boolean
-function HandcraftLogic:removeInputItem(arg0) end
-
---- @public
---- @param arg0 ArrayList
---- @return nil
-function HandcraftLogic:setContainers(arg0) end
 
 --- @public
 --- @param arg0 IsoObject
@@ -253,20 +123,14 @@ function HandcraftLogic:setContainers(arg0) end
 function HandcraftLogic:setIsoObject(arg0) end
 
 --- @public
---- @param arg0 InputScript
---- @param arg1 ArrayList
---- @return boolean
-function HandcraftLogic:setManualInputsFor(arg0, arg1) end
-
---- @public
---- @param arg0 InputScript
---- @return nil
-function HandcraftLogic:setManualSelectInputScriptFilter(arg0) end
-
---- @public
 --- @param arg0 boolean
 --- @return nil
-function HandcraftLogic:setManualSelectInputs(arg0) end
+function HandcraftLogic:setLastManualInputMode(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipe
+--- @return nil
+function HandcraftLogic:setLastSelectedRecipe(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
@@ -293,15 +157,6 @@ function HandcraftLogic:setRecipes(arg0) end
 --- @param arg0 string
 --- @return nil
 function HandcraftLogic:setSelectedRecipeStyle(arg0) end
-
---- @public
---- @param arg0 boolean
---- @return nil
-function HandcraftLogic:setShowManualSelectInputs(arg0) end
-
---- @public
---- @return boolean
-function HandcraftLogic:shouldShowManualSelectInputs() end
 
 --- @public
 --- @param arg0 table

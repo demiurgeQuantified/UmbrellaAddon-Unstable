@@ -22,6 +22,12 @@ function AttachmentEditorState.readScript(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 ModelScript
+--- @return nil
+function AttachmentEditorState.readScriptNew(arg0) end
+
+--- @public
+--- @static
 --- @param arg0 string
 --- @param arg1 ArrayList
 --- @param arg2 ModelScript

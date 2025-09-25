@@ -43,6 +43,8 @@ function ISCraftLogicRecipePanel:onRecipeChanged() end
 
 function ISCraftLogicRecipePanel:onResize() end
 
+function ISCraftLogicRecipePanel:onResourceSlotContentsChanged() end
+
 function ISCraftLogicRecipePanel:prerender() end
 
 function ISCraftLogicRecipePanel:render() end
@@ -50,8 +52,6 @@ function ISCraftLogicRecipePanel:render() end
 function ISCraftLogicRecipePanel:setOverlayVisible(_b) end
 
 function ISCraftLogicRecipePanel:update() end
-
-function ISCraftLogicRecipePanel:updateContainers(containers) end
 
 ---@param x number
 ---@param y number

@@ -5,6 +5,7 @@
 ---@field entity IsoObject
 ---@field funcCanStart umbrella.ISEntityUI.CraftCanStart
 ---@field funcStart umbrella.ISEntityUI.CraftStart
+---@field sound unknown
 ISGenericCraftStart = ISBaseTimedAction:derive("ISGenericCraftStart")
 ISGenericCraftStart.Type = "ISGenericCraftStart"
 
@@ -19,6 +20,8 @@ function ISGenericCraftStart:perform() end
 function ISGenericCraftStart:start() end
 
 function ISGenericCraftStart:stop() end
+
+function ISGenericCraftStart:stopSound() end
 
 function ISGenericCraftStart:update() end
 

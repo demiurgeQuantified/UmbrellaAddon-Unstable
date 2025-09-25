@@ -23,6 +23,17 @@ function RoomDef:Dispose() end
 function RoomDef:calculateMetaID(cellX, cellY) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return boolean
+function RoomDef:contains(arg0, arg1) end
+
+--- @public
+--- @param arg0 RoomDef
+--- @return nil
+function RoomDef:copyFrom(arg0) end
+
+--- @public
 --- @param consumer BiConsumer
 --- @return nil
 function RoomDef:forEachChunk(consumer) end
@@ -153,6 +164,14 @@ function RoomDef:intersects(x, y, w, h) end
 function RoomDef:isAdjacent(arg0) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return boolean
+function RoomDef:isAdjacent(arg0, arg1, arg2, arg3) end
+
+--- @public
 --- @return boolean
 function RoomDef:isEmptyOutside() end
 
@@ -186,6 +205,11 @@ function RoomDef:isShop() end
 function RoomDef:offset(arg0, arg1) end
 
 --- @public
+--- @param arg0 RoomDef
+--- @return boolean
+function RoomDef:overlaps(arg0) end
+
+--- @public
 --- @return nil
 function RoomDef:refreshSquares() end
 
@@ -200,6 +224,12 @@ function RoomDef:setBuilding(def) end
 function RoomDef:setExplored(explored) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
+function RoomDef:setInvalidateCacheForAllChunks(arg0, arg1) end
+
+--- @public
 --- @param arg0 string
 --- @return nil
 function RoomDef:setName(arg0) end
@@ -212,6 +242,10 @@ function RoomDef:setRoofFixed(b) end
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------
+
+--- @public
+--- @return RoomDef
+function RoomDef.new() end
 
 --- @public
 --- @param arg0 integer

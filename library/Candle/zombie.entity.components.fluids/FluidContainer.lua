@@ -294,6 +294,10 @@ function FluidContainer:isQualifiesForMetaStorage() end
 function FluidContainer:isTainted() end
 
 --- @public
+--- @return boolean
+function FluidContainer:isTaintedStatusKnown() end
+
+--- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 integer
 --- @return nil

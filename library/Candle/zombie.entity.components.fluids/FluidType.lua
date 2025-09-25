@@ -80,6 +80,10 @@ function FluidType.values() end
 ------------------------------------
 
 --- @public
+--- @return string
+function FluidType:getDisplayName() end
+
+--- @public
 --- @return integer
 function FluidType:getId() end
 

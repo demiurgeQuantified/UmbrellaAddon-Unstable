@@ -93,6 +93,11 @@ function Item:canSpawnAsLoot() end
 function Item:clearForageFocusCategories() end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+function Item:containsWeaponCategory(arg0) end
+
+--- @public
 --- @return string
 function Item:getAcceptItemFunction() end
 
@@ -139,10 +144,6 @@ function Item:getBulletHitArmourSound() end
 --- @public
 --- @return string
 function Item:getBulletOutSound() end
-
---- @public
---- @return ArrayList # the Categories
-function Item:getCategories() end
 
 --- @public
 --- @return integer
@@ -338,6 +339,10 @@ function Item:getHeadConditionLowerChanceMultiplier() end
 function Item:getHearingModifier() end
 
 --- @public
+--- @return string
+function Item:getHerbalistType() end
+
+--- @public
 --- @return number # the HungerChange
 function Item:getHungerChange() end
 
@@ -446,6 +451,10 @@ function Item:getMinutesToCook() end
 function Item:getModuleName() end
 
 --- @public
+--- @return ModelKey
+function Item:getMuzzleFlashModelKey() end
+
+--- @public
 --- @return number # the NPCSoundBoost
 function Item:getNPCSoundBoost() end
 
@@ -484,6 +493,10 @@ function Item:getOnBreak() end
 --- @public
 --- @return string
 function Item:getOpenSound() end
+
+--- @public
+--- @return string
+function Item:getOpeningRecipe() end
 
 --- @public
 --- @return number # the OtherCharacterVolumeBoost
@@ -744,6 +757,10 @@ function Item:getVisionModifier() end
 function Item:getWaterresist() end
 
 --- @public
+--- @return ArrayList
+function Item:getWeaponCategories() end
+
+--- @public
 --- @return string
 function Item:getWeaponHitArmourSound() end
 
@@ -802,6 +819,11 @@ function Item:hasResearchableRecipes() end
 
 --- @public
 --- @param arg0 string
+--- @return boolean
+function Item:hasTag(arg0) end
+
+--- @public
+--- @param arg0 ItemTag
 --- @return boolean
 function Item:hasTag(arg0) end
 
@@ -927,10 +949,6 @@ function Item:isRangeFalloff() end
 function Item:isRanged() end
 
 --- @public
---- @return boolean # the ShareDamage
-function Item:isShareDamage() end
-
---- @public
 --- @return boolean # the ShareEndurance
 function Item:isShareEndurance() end
 
@@ -951,6 +969,11 @@ function Item:isSurvivalGearLoot() end
 function Item:isToolLoot() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function Item:isUnwanted(arg0) end
+
+--- @public
 --- @return boolean # the UseEndurance
 function Item:isUseEndurance() end
 
@@ -965,6 +988,15 @@ function Item:isUseWhileEquipped() end
 --- @public
 --- @return boolean # the UseWhileUnequipped
 function Item:isUseWhileUnequipped() end
+
+--- @public
+--- @return boolean
+function Item:isUsedInBuildRecipes() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function Item:isUsedInBuildRecipes(arg0) end
 
 --- @public
 --- @return boolean
@@ -1064,11 +1096,6 @@ function Item:setCanSpawnAsLoot(arg0) end
 --- @param CantAttackWithLowestEndurance boolean the CantAttackWithLowestEndurance to set
 --- @return nil
 function Item:setCantAttackWithLowestEndurance(CantAttackWithLowestEndurance) end
-
---- @public
---- @param Categories ArrayList the Categories to set
---- @return nil
-function Item:setCategories(Categories) end
 
 --- @public
 --- @param asset ClothingItem
@@ -1250,6 +1277,11 @@ function Item:setNPCSoundBoost(NPCSoundBoost) end
 function Item:setName(name) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function Item:setOpeningRecipe(arg0) end
+
+--- @public
 --- @param OtherCharacterVolumeBoost number the OtherCharacterVolumeBoost to set
 --- @return nil
 function Item:setOtherCharacterVolumeBoost(OtherCharacterVolumeBoost) end
@@ -1303,11 +1335,6 @@ function Item:setReplaceOnDeplete(ReplaceOnDeplete) end
 --- @param ReplaceOnUse string the ReplaceOnUse to set
 --- @return nil
 function Item:setReplaceOnUse(ReplaceOnUse) end
-
---- @public
---- @param ShareDamage boolean the ShareDamage to set
---- @return nil
-function Item:setShareDamage(ShareDamage) end
 
 --- @public
 --- @param ShareEndurance boolean the ShareEndurance to set
@@ -1395,6 +1422,17 @@ function Item:setType(type) end
 function Item:setUnhappyChange(UnhappyChange) end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return nil
+function Item:setUnwanted(arg0) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @param arg1 boolean
+--- @return nil
+function Item:setUnwanted(arg0, arg1) end
+
+--- @public
 --- @param UseDelta number the UseDelta to set
 --- @return nil
 function Item:setUseDelta(UseDelta) end
@@ -1420,9 +1458,19 @@ function Item:setUseWhileEquipped(UseWhileEquipped) end
 function Item:setUseWhileUnequipped(UseWhileUnequipped) end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return nil
+function Item:setWanted(arg0) end
+
+--- @public
 --- @param w number
 --- @return nil
 function Item:setWaterresist(w) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return nil
+function Item:setWeaponCategories(arg0) end
 
 --- @public
 --- @param WeaponSprite string the WeaponSprite to set

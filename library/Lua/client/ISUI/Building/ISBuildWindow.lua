@@ -6,21 +6,27 @@
 ---@field enableHeader boolean
 ---@field hasClosedWindowInstance boolean
 ---@field isoObject IsoObject?
+---@field lockButton ISButton
+---@field locked boolean
+---@field lockedButtonTexture unknown
 ---@field maximumHeight number
 ---@field maximumHeightPercent number
 ---@field maximumWidth number
+---@field originalSquare unknown
 ---@field overrideBPrompt boolean
 ---@field panelCloseDistance number
 ---@field player IsoPlayer
 ---@field playerNum integer
 ---@field queryOverride string?
 ---@field title unknown?
+---@field unlockedButtonTexture unknown
 ---@field windowHeader ISBuildWindowHeader?
 ---@field xuiPreferredResizeHeight number
 ---@field xuiPreferredResizeWidth number
 ---@field xuiResizeAnchorRight boolean
 ISBuildWindow = ISCollapsableWindow:derive("ISBuildWindow")
 ISBuildWindow.Type = "ISBuildWindow"
+ISBuildWindow.autoCloseDistance = 1.5
 
 ---@param _preferredWidth number?
 ---@param _preferredHeight number?
@@ -56,6 +62,8 @@ function ISBuildWindow:prerender() end
 function ISBuildWindow:render() end
 
 function ISBuildWindow:stayOnSplitScreen() end
+
+function ISBuildWindow:toggleLock() end
 
 ---@return (boolean | IsoPlayer)?
 function ISBuildWindow:update() end

@@ -2152,6 +2152,9 @@ function istype(obj, name) end
 --- @return any
 function javaListRemoveAt(arg0, arg1) end
 
+--- @return string
+function lineSeparator() end
+
 --- @param arg0 string
 --- @param arg1 string
 --- @return ArrayList

@@ -20,6 +20,8 @@
 ---@field javaObject UIElement
 ---@field joyfocus unknown?
 ---@field joypadFocused boolean
+---@field joypadNavigatePrevRect table?
+---@field joypadNavigateTransition table?
 ---@field minimumHeight number
 ---@field minimumWidth number
 ---@field onMouseDoubleClick umbrella.ISUIElement.MouseDoubleClick
@@ -496,6 +498,12 @@ function ISUIElement:initialise() end
 
 function ISUIElement:instantiate() end
 
+---@return unknown
+function ISUIElement:isCapture() end
+
+---@return boolean
+function ISUIElement:isDescendant(ui) end
+
 ---@return boolean
 function ISUIElement:isEnabled() end
 
@@ -676,12 +684,20 @@ function ISUIElement:render() end
 ---@param h number
 function ISUIElement:renderJoypadFocus(x, y, w, h) end
 
+---@param x number
+---@param y number
+---@param w number
+---@param h number
+function ISUIElement:renderJoypadNavigateCurrent(x, y, w, h) end
+
 ---@param joypadData JoypadData
 ---@param child ISUIElement
 function ISUIElement:renderJoypadNavigateHighlight(joypadData, child) end
 
 ---@param playerNum integer
 function ISUIElement:renderJoypadNavigateOverlay(playerNum) end
+
+function ISUIElement:renderJoypadNavigateSelf() end
 
 ---@param joypadData JoypadData
 ---@param child ISUIElement

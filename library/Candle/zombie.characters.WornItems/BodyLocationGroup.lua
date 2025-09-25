@@ -33,9 +33,9 @@ function BodyLocationGroup:getLocationByIndex(index) end
 function BodyLocationGroup:getLocationNotNull(locationId) end
 
 --- @public
---- @param locationId string
+--- @param arg0 ItemBodyLocation
 --- @return BodyLocation
-function BodyLocationGroup:getOrCreateLocation(locationId) end
+function BodyLocationGroup:getOrCreateLocation(arg0) end
 
 --- @public
 --- @param locationId string

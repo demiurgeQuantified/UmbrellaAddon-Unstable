@@ -189,6 +189,8 @@ function ISInventoryPaneContextMenu.createMenuNoItems(playerNum, isLoot, x, y) e
 ---@param player integer
 function ISInventoryPaneContextMenu.doBandageMenu(context, items, player) end
 
+function ISInventoryPaneContextMenu.doBuildRecipeListForItem(context, text, recipeItem, playerObj) end
+
 ---@param playerObj IsoPlayer
 ---@param weapon HandWeapon
 ---@param context ISContextMenu
@@ -264,6 +266,8 @@ function ISInventoryPaneContextMenu.doMagazineMenu(playerObj, magazine, context)
 ---@param makeup InventoryItem
 ---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.doMakeUpMenu(context, makeup, playerObj) end
+
+function ISInventoryPaneContextMenu.doPillsMenu(context, items, player, cmd) end
 
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
 ---@param player integer
@@ -595,6 +599,8 @@ function ISInventoryPaneContextMenu.OnNewCraft(selectedItem, recipe, player, all
 ---@param logic HandcraftLogic
 function ISInventoryPaneContextMenu.OnNewCraftComplete(logic) end
 
+function ISInventoryPaneContextMenu.onNoRecipes(items, item2, boolean, player) end
+
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
 ---@param player integer
 function ISInventoryPaneContextMenu.onPillsItems(items, player) end
@@ -697,10 +703,14 @@ function ISInventoryPaneContextMenu.onUnloadBulletsFromFirearm(playerObj, weapon
 ---@param magazine InventoryItem
 function ISInventoryPaneContextMenu.onUnloadBulletsFromMagazine(playerObj, magazine) end
 
+function ISInventoryPaneContextMenu.onUnwanted(item, player) end
+
 ---@param weapon HandWeapon
 ---@param part InventoryItem
 ---@param player integer
 function ISInventoryPaneContextMenu.onUpgradeWeapon(weapon, part, player) end
+
+function ISInventoryPaneContextMenu.onWanted(item, player) end
 
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
 ---@param player integer
@@ -782,6 +792,8 @@ function ISInventoryPaneContextMenu.transferIfNeeded(playerObj, item, preventTra
 ---@param player integer
 ---@param dontWalk boolean?
 function ISInventoryPaneContextMenu.transferItems(items, playerInv, player, dontWalk) end
+
+function ISInventoryPaneContextMenu.transferItemToPlayer(item, player, dontWalk) end
 
 ---@param item InventoryItem
 ---@param player integer

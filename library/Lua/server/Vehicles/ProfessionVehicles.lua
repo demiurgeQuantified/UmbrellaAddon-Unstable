@@ -349,6 +349,17 @@ ProfessionVehicles.VanSeats_Mural = {
 		"Base.VanSeats",
 	},
 }
+ProfessionVehicles.RaceCarBurnt = {
+	General = {
+		"Base.RaceCarBurnt",
+		"Base.RaceCar12",
+		"Base.RaceCar34",
+		"Base.RaceCar58",
+	},
+	Alternate = {
+		"Base.RaceCarBurnt",
+	},
+}
 ProfessionVehicles.PickUpVanBuilder = ProfessionVehicles.VanBuilder
 ProfessionVehicles.PickUpVanLightsCarpenter = ProfessionVehicles.VanCarpenter
 ProfessionVehicles.PickUpVanMetalworker = ProfessionVehicles.VanMetalworker
@@ -370,6 +381,9 @@ ProfessionVehicles.UniqueVehicles = {
 	"Base.VanSeats_Space",
 	"Base.VanSeats_Trippy",
 	"Base.VanSeats_Valkyrie",
+	"Base.RaceCar12",
+	"Base.RaceCar34",
+	"Base.RaceCar58",
 }
 ProfessionVehicles.PickUpTruck = nil ---@type unknown
 ProfessionVehicles.PickUpVan = nil ---@type unknown

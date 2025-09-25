@@ -201,6 +201,14 @@ function AtomUI:isIgnoreLossControl() end
 
 --- @public
 --- @return boolean
+function AtomUI:isModalVisible() end
+
+--- @public
+--- @return boolean
+function AtomUI:isModalVisible() end
+
+--- @public
+--- @return boolean
 function AtomUI:isMouseOver() end
 
 --- @public

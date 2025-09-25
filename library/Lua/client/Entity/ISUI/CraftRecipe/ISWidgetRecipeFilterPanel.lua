@@ -18,12 +18,17 @@
 ---@field marginLeft number
 ---@field marginRight number
 ---@field marginTop number
+---@field needFilterCombo boolean
+---@field needSortCombo boolean
 ---@field paddingBottom number
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
 ---@field searchHackLabel ISLabel
+---@field searchInfoText unknown
+---@field showFilterByOutputItem boolean
 ---@field sortCombo unknown?
+---@field sortComboLabel unknown?
 ---@field tickbox ISTickBox?
 ISWidgetRecipeFilterPanel = ISPanelJoypad:derive("ISWidgetRecipeFilterPanel")
 ISWidgetRecipeFilterPanel.Type = "ISWidgetRecipeFilterPanel"
@@ -66,6 +71,8 @@ function ISWidgetRecipeFilterPanel:populateSortList() end
 function ISWidgetRecipeFilterPanel:prerender() end
 
 function ISWidgetRecipeFilterPanel:render() end
+
+function ISWidgetRecipeFilterPanel:setSearchInfoText(_text) end
 
 function ISWidgetRecipeFilterPanel:update() end
 

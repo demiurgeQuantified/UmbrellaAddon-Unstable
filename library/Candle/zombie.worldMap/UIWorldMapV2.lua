@@ -9,6 +9,10 @@ UIWorldMapV2 = {}
 ------------------------------------
 
 --- @public
+--- @return WorldMapSymbolsAPI
+function UIWorldMapV2:getSymbolsAPI() end
+
+--- @public
 --- @return WorldMapSymbolsV2
 function UIWorldMapV2:getSymbolsAPIv2() end
 

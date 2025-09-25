@@ -66,6 +66,10 @@ function UIElementInterface:isIgnoreLossControl() end
 
 --- @public
 --- @return boolean
+function UIElementInterface:isModalVisible() end
+
+--- @public
+--- @return boolean
 function UIElementInterface:isMouseOver() end
 
 --- @public

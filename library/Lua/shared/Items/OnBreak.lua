@@ -306,6 +306,10 @@ function OnBreak.SmithingHammer(item, player) end
 ---@param player IsoPlayer
 function OnBreak.Spade(item, player) end
 
+function OnBreak.SpearBone(item, player) end
+
+function OnBreak.SpearBoneLong(item, player) end
+
 ---@param item InventoryItem
 ---@param player IsoPlayer
 function OnBreak.SpearBreadKnife(item, player) end

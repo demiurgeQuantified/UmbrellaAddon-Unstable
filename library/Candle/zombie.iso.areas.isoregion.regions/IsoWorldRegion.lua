@@ -14,9 +14,26 @@ IsoWorldRegion = {}
 function IsoWorldRegion:addIsoChunkRegion(region) end
 
 --- @public
+--- @param arg0 ArrayList
+--- @return nil
+function IsoWorldRegion:clearBuildingDef(arg0) end
+
+--- @public
 --- @param region IsoChunkRegion
 --- @return boolean
 function IsoWorldRegion:containsIsoChunkRegion(region) end
+
+--- @public
+--- @return BuildingDef
+function IsoWorldRegion:getBuildingDef() end
+
+--- @public
+--- @return integer
+function IsoWorldRegion:getCellX() end
+
+--- @public
+--- @return integer
+function IsoWorldRegion:getCellY() end
 
 --- @public
 --- @return Color
@@ -106,6 +123,11 @@ function IsoWorldRegion:linkNeighbors() end
 --- @param other IsoWorldRegion
 --- @return nil
 function IsoWorldRegion:merge(other) end
+
+--- @public
+--- @param arg0 BuildingDef
+--- @return nil
+function IsoWorldRegion:setBuildingDef(arg0) end
 
 --- @public
 --- @return integer

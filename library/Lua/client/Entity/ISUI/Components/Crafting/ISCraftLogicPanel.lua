@@ -39,6 +39,9 @@ ISCraftLogicPanel.Type = "ISCraftLogicPanel"
 ---@return boolean?
 function ISCraftLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 
+---@param _itemList table
+function ISCraftLogicPanel.ItemSlotAddItems(_player, _entity, _itemSlot, _itemList, _component) end
+
 ---@param _preferredWidth number?
 ---@param _preferredHeight number?
 function ISCraftLogicPanel:calculateLayout(_preferredWidth, _preferredHeight) end
@@ -72,6 +75,8 @@ function ISCraftLogicPanel:filterRecipeList() end
 function ISCraftLogicPanel:initialise() end
 
 function ISCraftLogicPanel:OnCloseWindow() end
+
+function ISCraftLogicPanel:onItemSlotAddItems(_itemSlot, _itemList) end
 
 function ISCraftLogicPanel:onRecipeChanged(_recipe) end
 

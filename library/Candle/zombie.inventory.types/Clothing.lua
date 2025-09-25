@@ -231,6 +231,11 @@ function Clothing:getInsulation() end
 function Clothing:getName() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return string
+function Clothing:getName(arg0) end
+
+--- @public
 --- @return integer
 function Clothing:getNbrOfCoveredParts() end
 

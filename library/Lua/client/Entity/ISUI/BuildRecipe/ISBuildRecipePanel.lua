@@ -30,6 +30,8 @@ function ISBuildRecipePanel:getRecipe() end
 
 function ISBuildRecipePanel:initialise() end
 
+function ISBuildRecipePanel:onManualSelectChanged(_manualSelectInputs) end
+
 function ISBuildRecipePanel:onRebuildItemNodes(_inputItems) end
 
 function ISBuildRecipePanel:onRecipeChanged() end
@@ -45,7 +47,7 @@ function ISBuildRecipePanel:setOverlayVisible(_b) end
 
 function ISBuildRecipePanel:update() end
 
-function ISBuildRecipePanel:updateContainers(containers) end
+function ISBuildRecipePanel:updateTitleWidget() end
 
 ---@param x number
 ---@param y number

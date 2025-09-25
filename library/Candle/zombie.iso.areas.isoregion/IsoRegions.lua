@@ -103,6 +103,14 @@ function IsoRegions.getIsoWorldRegion(x, y, z) end
 
 --- @public
 --- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 ArrayList
+--- @return List
+function IsoRegions.getIsoWorldRegionsInCell(arg0, arg1, arg2) end
+
+--- @public
+--- @static
 --- @return IsoRegionsLogger
 function IsoRegions.getLogger() end
 

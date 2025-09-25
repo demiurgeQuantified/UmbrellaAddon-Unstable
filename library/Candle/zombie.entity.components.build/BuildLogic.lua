@@ -13,14 +13,6 @@ BuildLogic = {}
 function BuildLogic:areAllInputItemsSatisfied() end
 
 --- @public
---- @return boolean
-function BuildLogic:cachedCanPerformCurrentRecipe() end
-
---- @public
---- @return boolean
-function BuildLogic:canPerformCurrentRecipe() end
-
---- @public
 --- @return ArrayList
 function BuildLogic:getAllBuildableRecipes() end
 
@@ -29,8 +21,8 @@ function BuildLogic:getAllBuildableRecipes() end
 function BuildLogic:getAllConsumedItems() end
 
 --- @public
---- @return ArrayList
-function BuildLogic:getContainers() end
+--- @return CraftRecipe
+function BuildLogic:getLastSelectedRecipe() end
 
 --- @public
 --- @return CraftRecipe
@@ -76,20 +68,17 @@ function BuildLogic:isInputSatisfied(arg0) end
 
 --- @public
 --- @return boolean
-function BuildLogic:isManualSelectInputs() end
-
---- @public
---- @return boolean
 function BuildLogic:performCurrentRecipe() end
 
 --- @public
+--- @param arg0 boolean
 --- @return nil
-function BuildLogic:refresh() end
+function BuildLogic:setLastManualInputMode(arg0) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param arg0 CraftRecipe
 --- @return nil
-function BuildLogic:setContainers(arg0) end
+function BuildLogic:setLastSelectedRecipe(arg0) end
 
 --- @public
 --- @param arg0 CraftRecipe
@@ -105,10 +94,6 @@ function BuildLogic:setRecipeSortMode(arg0) end
 --- @param arg0 string
 --- @return nil
 function BuildLogic:setSelectedRecipeStyle(arg0) end
-
---- @public
---- @return boolean
-function BuildLogic:shouldShowManualSelectInputs() end
 
 --- @public
 --- @param arg0 table

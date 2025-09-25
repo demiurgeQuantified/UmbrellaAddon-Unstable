@@ -315,6 +315,7 @@ function TileGeometryEditor_EditMode:new(editor) end
 ---@field button5_2 ISButton
 ---@field button6 ISButton
 ---@field button7 ISButton
+---@field button8 ISButton
 ---@field cylinderPanel TileGeometryEditor_CylinderPanel
 ---@field depthTexturePanel TileGeometryEditor_DepthTexturePanel
 ---@field listBox TileGeometryEditor_GeometryListBox
@@ -375,6 +376,8 @@ function TileGeometryEditor_EditMode_Geometry:onMouseDownScene(x, y) end
 
 ---@param objectName string
 function TileGeometryEditor_EditMode_Geometry:onPolygonToPixels(objectName) end
+
+function TileGeometryEditor_EditMode_Geometry:onRecalculateShadows() end
 
 function TileGeometryEditor_EditMode_Geometry:onRemoveGeometry() end
 

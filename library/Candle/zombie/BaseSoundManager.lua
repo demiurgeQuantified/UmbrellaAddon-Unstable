@@ -251,6 +251,10 @@ function BaseSoundManager:Update() end
 function BaseSoundManager:debugScriptSounds() end
 
 --- @public
+--- @return nil
+function BaseSoundManager:dumpEventInstancesToTextFile() end
+
+--- @public
 --- @return ArrayList
 function BaseSoundManager:getAmbientPieces() end
 

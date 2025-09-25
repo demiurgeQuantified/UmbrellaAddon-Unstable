@@ -233,6 +233,10 @@ function IsoDeadBody:getCorpseItem() end
 function IsoDeadBody:getCustomName() end
 
 --- @public
+--- @return number
+function IsoDeadBody:getDeathTime() end
+
+--- @public
 --- @return string
 function IsoDeadBody:getDescription() end
 
@@ -303,6 +307,11 @@ function IsoDeadBody:getHumanVisual() end
 --- @public
 --- @return HumanVisual
 function IsoDeadBody:getHumanVisual() end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return number
+function IsoDeadBody:getInitialItemAge(arg0) end
 
 --- @public
 --- @return string
@@ -381,6 +390,10 @@ function IsoDeadBody:getSecondaryHandItem() end
 --- @public
 --- @return ShadowParams
 function IsoDeadBody:getShadowParams() end
+
+--- @public
+--- @return number
+function IsoDeadBody:getSharedGrappleAnimFraction() end
 
 --- @public
 --- @return string
@@ -706,6 +719,11 @@ function IsoDeadBody:setContainer(container) end
 function IsoDeadBody:setCrawling(crawling) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function IsoDeadBody:setDeathTime(arg0) end
+
+--- @public
 --- @param arg0 boolean
 --- @return nil
 function IsoDeadBody:setDoContinueGrapple(arg0) end
@@ -714,6 +732,11 @@ function IsoDeadBody:setDoContinueGrapple(arg0) end
 --- @param arg0 boolean
 --- @return nil
 function IsoDeadBody:setDoGrapple(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoDeadBody:setDoRender(arg0) end
 
 --- @public
 --- @param fakeDead boolean
@@ -807,6 +830,11 @@ function IsoDeadBody:setReanimateTime(hours) end
 --- @param item InventoryItem
 --- @return nil
 function IsoDeadBody:setSecondaryHandItem(item) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoDeadBody:setSharedGrappleAnimFraction(arg0) end
 
 --- @public
 --- @param arg0 string

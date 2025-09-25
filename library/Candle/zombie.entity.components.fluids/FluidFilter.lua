@@ -68,8 +68,20 @@ function FluidFilter:contains(arg0) end
 function FluidFilter:copy() end
 
 --- @public
+--- @return string
+function FluidFilter:getFilterDisplayName() end
+
+--- @public
+--- @return string
+function FluidFilter:getFilterTooltipText() end
+
+--- @public
 --- @return FilterType
 function FluidFilter:getFilterType() end
+
+--- @public
+--- @return boolean
+function FluidFilter:isSealed() end
 
 --- @public
 --- @param arg0 ByteBuffer

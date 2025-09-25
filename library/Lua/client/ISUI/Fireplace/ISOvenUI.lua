@@ -7,11 +7,13 @@
 ---@field knobTex Texture
 ---@field ok ISButton
 ---@field oven IsoStove
+---@field playerNum unknown
 ---@field tempKnob ISKnob
 ---@field tempType ISTickBox
 ---@field timerKnob ISKnob
 ISOvenUI = ISPanelJoypad:derive("ISOvenUI")
 ISOvenUI.Type = "ISOvenUI"
+ISOvenUI.instance = {}
 ISOvenUI.messages = {}
 
 function ISOvenUI:addKnobValues() end
@@ -19,6 +21,8 @@ function ISOvenUI:addKnobValues() end
 function ISOvenUI:ChangeKnob() end
 
 function ISOvenUI:changeTempType() end
+
+function ISOvenUI:close() end
 
 function ISOvenUI:initialise() end
 

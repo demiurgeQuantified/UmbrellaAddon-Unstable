@@ -80,6 +80,10 @@ function NewGameScreen:onGainJoypadFocus(joypadData) end
 ---@param joypadData JoypadData
 function NewGameScreen:onJoypadBeforeDeactivate(joypadData) end
 
+function NewGameScreen:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+function NewGameScreen:onKeyRelease(key) end
+
 ---@param joypadData JoypadData
 function NewGameScreen:onLoseJoypadFocus(joypadData) end
 

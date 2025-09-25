@@ -56,14 +56,12 @@ function ClothingPatch:save_old(output, net) end
 ------------------------------------
 
 --- @public
---- @param arg0 Clothing
 --- @return ClothingPatch
-function ClothingPatch.new(arg0) end
+function ClothingPatch.new() end
 
 --- @public
---- @param arg0 Clothing
---- @param arg1 integer
---- @param arg2 integer
---- @param arg3 boolean
+--- @param tailorLvl integer
+--- @param fabricType integer
+--- @param hasHole boolean
 --- @return ClothingPatch
-function ClothingPatch.new(arg0, arg1, arg2, arg3) end
+function ClothingPatch.new(tailorLvl, fabricType, hasHole) end

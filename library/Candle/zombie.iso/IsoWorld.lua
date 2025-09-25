@@ -16,6 +16,7 @@
 --- @field public WorldVersion_AlarmClock integer
 --- @field public WorldVersion_AlarmDecay integer
 --- @field public WorldVersion_AnimalHutch integer
+--- @field public WorldVersion_AnimalPetTime integer
 --- @field public WorldVersion_AnimalRottingTexture integer
 --- @field public WorldVersion_BodyDamageSavePoulticeValues integer
 --- @field public WorldVersion_CharacterDiscomfort integer
@@ -25,6 +26,7 @@
 --- @field public WorldVersion_ChunksAttachmentsState integer
 --- @field public WorldVersion_ChunksWorldGeneratedBoolean integer
 --- @field public WorldVersion_ChunksWorldModifiedBoolean integer
+--- @field public WorldVersion_CraftLogicParallelCrafting integer
 --- @field public WorldVersion_CraftUpdateFoundations integer
 --- @field public WorldVersion_DesignationZone integer
 --- @field public WorldVersion_EnableWorldgen integer
@@ -41,6 +43,7 @@
 --- @field public WorldVersion_PreviouslyMoved integer
 --- @field public WorldVersion_PrintMediaRottingCorpsesBodyDamage integer
 --- @field public WorldVersion_RecipesAndAmmoCheats integer
+--- @field public WorldVersion_RootLocale integer
 --- @field public WorldVersion_SafeHouseCreatedTimeAndLocation integer
 --- @field public WorldVersion_SafeHouseHitPoints integer
 --- @field public WorldVersion_SavePlayerCheats integer
@@ -48,6 +51,7 @@
 --- @field public WorldVersion_Stats_Idleness integer
 --- @field public WorldVersion_TeachedRecipes integer
 --- @field public WorldVersion_TrapExplosionDuration integer
+--- @field public WorldVersion_VariableCraftInputCounts integer
 --- @field public WorldVersion_VariableHeight integer
 --- @field public WorldVersion_VehicleAlarm integer
 --- @field public WorldVersion_VisitedFileVersion integer

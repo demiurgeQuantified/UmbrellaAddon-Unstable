@@ -120,6 +120,11 @@ function DesignationZoneAnimal.removeZone(arg0) end
 function DesignationZoneAnimal:addAnimal(arg0) end
 
 --- @public
+--- @param arg0 IsoDeadBody
+--- @return nil
+function DesignationZoneAnimal:addCorpse(arg0) end
+
+--- @public
 --- @param arg0 IsoWorldInventoryObject
 --- @return nil
 function DesignationZoneAnimal:addFoodOnGround(arg0) end
@@ -144,6 +149,14 @@ function DesignationZoneAnimal:getAnimals() end
 --- @public
 --- @return ArrayList
 function DesignationZoneAnimal:getAnimalsConnected() end
+
+--- @public
+--- @return ArrayList
+function DesignationZoneAnimal:getCorpses() end
+
+--- @public
+--- @return ArrayList
+function DesignationZoneAnimal:getCorpsesConnected() end
 
 --- @public
 --- @return ArrayList
@@ -197,6 +210,11 @@ function DesignationZoneAnimal:getTroughsConnected() end
 --- @param arg0 IsoAnimal
 --- @return nil
 function DesignationZoneAnimal:removeAnimal(arg0) end
+
+--- @public
+--- @param arg0 IsoDeadBody
+--- @return nil
+function DesignationZoneAnimal:removeCorpse(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

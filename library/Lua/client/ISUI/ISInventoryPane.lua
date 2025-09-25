@@ -46,12 +46,15 @@
 ---@field items InventoryItem[]
 ---@field itemslist umbrella.ISInventoryPane.ItemRecord[]
 ---@field itemSortFunc function
+---@field itemsToHighlight unknown?
+---@field itemsToHighlightOwner unknown?
 ---@field joyselection number
 ---@field mode string
 ---@field mouseOverOption number
 ---@field nameHeader ISResizableButton
 ---@field poisonIcon Texture
 ---@field previousMouseUp number?
+---@field refreshContainerCount number
 ---@field removeAllDialog ISModalDialog?
 ---@field selected table<integer, InventoryItem | umbrella.ISInventoryPane.ItemRecord>
 ---@field smoothScrollTargetY number?
@@ -270,6 +273,8 @@ function ISInventoryPane:saveSelection(selected) end
 
 ---@param index integer
 function ISInventoryPane:selectIndex(index) end
+
+function ISInventoryPane:setItemsToHighlight(owner, itemTable) end
 
 ---@param mode string
 function ISInventoryPane:setMode(mode) end

@@ -476,6 +476,10 @@ function VehicleScript:hasZombieType(arg0) end
 
 --- @public
 --- @return boolean
+function VehicleScript:neverSpawnKey() end
+
+--- @public
+--- @return boolean
 function VehicleScript:notKillCrops() end
 
 --- @public

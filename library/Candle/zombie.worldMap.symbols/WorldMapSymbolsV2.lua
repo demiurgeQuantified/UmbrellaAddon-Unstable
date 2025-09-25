@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class WorldMapSymbolsV2
+--- @class WorldMapSymbolsV2: WorldMapSymbolsAPI
 --- @field public class any
 WorldMapSymbolsV2 = {}
 
@@ -60,6 +60,10 @@ function WorldMapSymbolsV2:addUntranslatedText(arg0, arg1, arg2, arg3) end
 --- @public
 --- @return nil
 function WorldMapSymbolsV2:clear() end
+
+--- @public
+--- @return nil
+function WorldMapSymbolsV2:clearUserAnnotations() end
 
 --- @public
 --- @return string

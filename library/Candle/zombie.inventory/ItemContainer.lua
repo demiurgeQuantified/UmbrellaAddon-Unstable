@@ -208,13 +208,38 @@ function ItemContainer:SpawnItem(arg0, arg1) end
 function ItemContainer:addItem(item) end
 
 --- @public
+--- @param arg0 ItemKey
+--- @return InventoryItem
+function ItemContainer:addItem(arg0) end
+
+--- @public
 --- @param item InventoryItem
 --- @return nil
 function ItemContainer:addItemOnServer(item) end
 
 --- @public
+--- @param arg0 ItemKey
+--- @param arg1 integer
+--- @return List
+function ItemContainer:addItems(arg0, arg1) end
+
+--- @public
 --- @return nil
 function ItemContainer:addItemsToProcessItems() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function ItemContainer:canCharacterOpenVehicleDoor(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function ItemContainer:canCharacterUnlockVehicleDoor(arg0) end
+
+--- @public
+--- @return boolean
+function ItemContainer:canHumanCorpseFit() end
 
 --- @public
 --- @param arg0 InventoryItem
@@ -248,6 +273,19 @@ function ItemContainer:contains(type, doInv) end
 function ItemContainer:contains(itemToFind, doInv) end
 
 --- @public
+--- @param arg0 IParam2
+--- @param arg1 boolean
+--- @return boolean
+function ItemContainer:contains(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 boolean
+--- @return boolean
+function ItemContainer:contains(arg0, arg1, arg2) end
+
+--- @public
 --- @param type string
 --- @param doInv boolean
 --- @param ignoreBroken boolean
@@ -275,6 +313,10 @@ function ItemContainer:containsEvalArgRecurse(functionObj, arg) end
 --- @param functionObj function
 --- @return boolean
 function ItemContainer:containsEvalRecurse(functionObj) end
+
+--- @public
+--- @return boolean
+function ItemContainer:containsHumanCorpse() end
 
 --- @public
 --- @param id integer
@@ -350,6 +392,10 @@ function ItemContainer:containsWithModule(moduleType) end
 function ItemContainer:containsWithModule(moduleType, withDeltaLeft) end
 
 --- @public
+--- @return boolean
+function ItemContainer:doesVehicleDoorNeedOpening() end
+
+--- @public
 --- @param arg0 IsoGridSquare
 --- @return nil
 function ItemContainer:dumpContentsInSquare(arg0) end
@@ -357,6 +403,30 @@ function ItemContainer:dumpContentsInSquare(arg0) end
 --- @public
 --- @return nil
 function ItemContainer:emptyIt() end
+
+--- @public
+--- @return InventoryItem
+function ItemContainer:findHumanCorpseItem() end
+
+--- @public
+--- @param arg0 IParam2
+--- @param arg1 boolean
+--- @return InventoryItem
+function ItemContainer:findItem(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 boolean
+--- @return InventoryItem
+function ItemContainer:findItem(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @return InventoryItem
+function ItemContainer:findItem(arg0, arg1, arg2) end
 
 --- @public
 --- @return string
@@ -895,6 +965,10 @@ function ItemContainer:getCountTypeEvalRecurse(type, functionObj) end
 --- @param type string
 --- @return integer
 function ItemContainer:getCountTypeRecurse(type) end
+
+--- @public
+--- @return string
+function ItemContainer:getCustomName() end
 
 --- @public
 --- @return number
@@ -1510,8 +1584,28 @@ function ItemContainer:getUsesType(type) end
 function ItemContainer:getUsesTypeRecurse(type) end
 
 --- @public
+--- @return BaseVehicle
+function ItemContainer:getVehicle() end
+
+--- @public
+--- @return VehicleDoor
+function ItemContainer:getVehicleDoor() end
+
+--- @public
+--- @return VehiclePart
+function ItemContainer:getVehicleDoorPart() end
+
+--- @public
 --- @return VehiclePart
 function ItemContainer:getVehiclePart() end
+
+--- @public
+--- @return VehicleDoor
+function ItemContainer:getVehicleSeatDoor() end
+
+--- @public
+--- @return VehiclePart
+function ItemContainer:getVehicleSeatDoorPart() end
 
 --- @public
 --- @return integer
@@ -1520,6 +1614,11 @@ function ItemContainer:getWaterContainerCount() end
 --- @public
 --- @return integer
 function ItemContainer:getWeightReduction() end
+
+--- @public
+--- @param arg0 Vector2
+--- @return Vector2
+function ItemContainer:getWorldPosition(arg0) end
 
 --- @public
 --- @param arg0 string
@@ -1570,6 +1669,11 @@ function ItemContainer:isDrawDirty() end
 --- @public
 --- @return boolean
 function ItemContainer:isEmpty() end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function ItemContainer:isEmptyOrUnwanted(arg0) end
 
 --- @public
 --- @return boolean
@@ -1626,6 +1730,14 @@ function ItemContainer:isStove() end
 --- @public
 --- @return boolean
 function ItemContainer:isTemperatureChanging() end
+
+--- @public
+--- @return boolean
+function ItemContainer:isVehiclePart() end
+
+--- @public
+--- @return boolean
+function ItemContainer:isVehicleSeat() end
 
 --- @public
 --- @param input ByteBuffer
@@ -1714,6 +1826,11 @@ function ItemContainer:setContainerPosition(containerPosition) end
 --- @param CookingFactor number the CookingFactor to set
 --- @return nil
 function ItemContainer:setCookingFactor(CookingFactor) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function ItemContainer:setCustomName(arg0) end
 
 --- @public
 --- @param newTemp number

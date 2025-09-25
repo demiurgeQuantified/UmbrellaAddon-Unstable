@@ -17,6 +17,7 @@
 --- @field public numberZombiesBlended integer
 --- @field public PuddlesQuality integer
 --- @field public UseFBOs boolean
+--- @field public ViewConeOpacity integer
 --- @field public WaterQuality integer
 --- @field public ZombieAnimationSpeedFalloffCount integer
 --- @field public ZombieBonusFullspeedFalloff integer
@@ -71,6 +72,10 @@ function PerformanceSettings:getUIRenderFPS() end
 
 --- @public
 --- @return integer
+function PerformanceSettings:getViewConeOpacity() end
+
+--- @public
+--- @return integer
 function PerformanceSettings:getWaterQuality() end
 
 --- @public
@@ -111,6 +116,11 @@ function PerformanceSettings:setNewRoofHiding(enabled) end
 --- @param puddles integer
 --- @return nil
 function PerformanceSettings:setPuddlesQuality(puddles) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function PerformanceSettings:setViewConeOpacity(arg0) end
 
 --- @public
 --- @param water integer

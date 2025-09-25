@@ -18,6 +18,12 @@ CraftRecipeData = {}
 --- @return CraftRecipeData
 function CraftRecipeData.Alloc(arg0, arg1, arg2, arg3, arg4) end
 
+--- @public
+--- @static
+--- @param arg0 CraftRecipeData
+--- @return nil
+function CraftRecipeData.Release(arg0) end
+
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
@@ -26,6 +32,12 @@ function CraftRecipeData.Alloc(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg0 InventoryItem
 --- @return boolean
 function CraftRecipeData:OnTestItem(arg0) end
+
+--- @public
+--- @param arg0 InputScript
+--- @param arg1 HashMap
+--- @return nil
+function CraftRecipeData:addOverfilledResource(arg0, arg1) end
 
 --- @public
 --- @return boolean
@@ -89,6 +101,19 @@ function CraftRecipeData:canOfferInputItem(arg0, arg1, arg2) end
 function CraftRecipeData:canPerform(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
+--- @return nil
+function CraftRecipeData:clearManualInputs() end
+
+--- @public
+--- @param arg0 InputScriptData
+--- @return nil
+function CraftRecipeData:clearManualInputs(arg0) end
+
+--- @public
+--- @return nil
+function CraftRecipeData:clearTargetVariableInputRatio() end
+
+--- @public
 --- @param arg0 List
 --- @return boolean
 function CraftRecipeData:consumeInputs(arg0) end
@@ -124,6 +149,13 @@ function CraftRecipeData:createOutputs(arg0) end
 --- @param arg1 IsoGameCharacter
 --- @return boolean
 function CraftRecipeData:createOutputs(arg0, arg1) end
+
+--- @public
+--- @param arg0 boolean
+--- @param arg1 List
+--- @param arg2 IsoGameCharacter
+--- @return boolean
+function CraftRecipeData:createRecipeOutputs(arg0, arg1, arg2) end
 
 --- @public
 --- @return ArrayList
@@ -170,6 +202,11 @@ function CraftRecipeData:getAllInputItems() end
 function CraftRecipeData:getAllInputItemsWithFlag(arg0) end
 
 --- @public
+--- @param arg0 InputFlag
+--- @return ArrayList
+function CraftRecipeData:getAllInputItemsWithFlag(arg0) end
+
+--- @public
 --- @return ArrayList
 function CraftRecipeData:getAllKeepInputItems() end
 
@@ -196,9 +233,34 @@ function CraftRecipeData:getAllRecordedConsumedItems() end
 function CraftRecipeData:getAllRecordedConsumedItems(arg0) end
 
 --- @public
+--- @return integer
+function CraftRecipeData:getAllViableItemsCount() end
+
+--- @public
+--- @return integer
+function CraftRecipeData:getAllViableResourcesCount() end
+
+--- @public
+--- @param arg0 HashSet
+--- @return HashSet
+function CraftRecipeData:getAppliedInputItemTypes(arg0) end
+
+--- @public
+--- @return number
+function CraftRecipeData:getCalculatedVariableInputRatio() end
+
+--- @public
 --- @param arg0 InputScript
 --- @return InputScriptData
 function CraftRecipeData:getDataForInputScript(arg0) end
+
+--- @public
+--- @return integer
+function CraftRecipeData:getEatPercentage() end
+
+--- @public
+--- @return number
+function CraftRecipeData:getElapsedTime() end
 
 --- @public
 --- @return InventoryItem
@@ -210,7 +272,17 @@ function CraftRecipeData:getFirstCreatedItem() end
 function CraftRecipeData:getFirstInputFluidWithFlag(arg0) end
 
 --- @public
+--- @param arg0 InputFlag
+--- @return FluidSample
+function CraftRecipeData:getFirstInputFluidWithFlag(arg0) end
+
+--- @public
 --- @param arg0 string
+--- @return InventoryItem
+function CraftRecipeData:getFirstInputItemWithFlag(arg0) end
+
+--- @public
+--- @param arg0 InputFlag
 --- @return InventoryItem
 function CraftRecipeData:getFirstInputItemWithFlag(arg0) end
 
@@ -228,6 +300,12 @@ function CraftRecipeData:getFirstManualInputFor(arg0) end
 --- @param arg0 integer
 --- @return ArrayList
 function CraftRecipeData:getInputItems(arg0) end
+
+--- @public
+--- @param arg0 InputScript
+--- @param arg1 ArrayList
+--- @return ArrayList
+function CraftRecipeData:getManualInputsFor(arg0, arg1) end
 
 --- @public
 --- @return table
@@ -259,6 +337,10 @@ function CraftRecipeData:getRecipe() end
 function CraftRecipeData:getToOutputItems() end
 
 --- @public
+--- @return number
+function CraftRecipeData:getVariableInputRatio() end
+
+--- @public
 --- @param arg0 integer
 --- @return InventoryItem
 function CraftRecipeData:getViableItem(arg0) end
@@ -283,6 +365,14 @@ function CraftRecipeData:isAllowOutputItems() end
 --- @public
 --- @return boolean
 function CraftRecipeData:isAllowOutputResources() end
+
+--- @public
+--- @return boolean
+function CraftRecipeData:isFinished() end
+
+--- @public
+--- @return boolean
+function CraftRecipeData:isVariableAmount() end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -355,6 +445,13 @@ function CraftRecipeData:offerInputItem(arg0, arg1, arg2) end
 function CraftRecipeData:perform(arg0, arg1, arg2, arg3) end
 
 --- @public
+--- @param arg0 List
+--- @param arg1 List
+--- @param arg2 boolean
+--- @return nil
+function CraftRecipeData:populateInputs(arg0, arg1, arg2) end
+
+--- @public
 --- @param arg0 InventoryItem
 --- @return boolean
 function CraftRecipeData:removeInputItem(arg0) end
@@ -369,6 +466,27 @@ function CraftRecipeData:reset() end
 function CraftRecipeData:save(arg0) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function CraftRecipeData:setCalculatedVariableInputRatio(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function CraftRecipeData:setEatPercentage(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function CraftRecipeData:setElapsedTime(arg0) end
+
+--- @public
+--- @param arg0 InputScript
+--- @param arg1 ArrayList
+--- @return boolean
+function CraftRecipeData:setManualInputsFor(arg0, arg1) end
+
+--- @public
 --- @param arg0 CraftRecipeMonitor
 --- @return nil
 function CraftRecipeData:setMonitor(arg0) end
@@ -377,6 +495,11 @@ function CraftRecipeData:setMonitor(arg0) end
 --- @param arg0 CraftRecipe
 --- @return nil
 function CraftRecipeData:setRecipe(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function CraftRecipeData:setTargetVariableInputRatio(arg0) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

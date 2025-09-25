@@ -31,6 +31,7 @@
 ---@field hideItem boolean
 ---@field inputScript unknown?
 ---@field itemCount number
+---@field itemTypeFilter unknown?
 ---@field locked boolean
 ---@field maxItemCount unknown?
 ---@field mouseEnabled boolean
@@ -43,7 +44,6 @@
 ---@field onVerifyItem umbrella.ISItemSlot.OnVerifyItem?
 ---@field progressColor umbrella.RGBA
 ---@field progressDelta number
----@field renderItemCapacity boolean
 ---@field renderItemCount boolean
 ---@field renderRequiredItemCount boolean
 ---@field resource Resource?

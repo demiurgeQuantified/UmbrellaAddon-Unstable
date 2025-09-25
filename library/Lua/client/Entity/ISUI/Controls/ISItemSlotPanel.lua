@@ -7,6 +7,7 @@
 ---@field functionTarget unknown?
 ---@field itemSlots table
 ---@field logic unknown
+---@field maxColumns number
 ---@field onItemSlotContentsChanged unknown?
 ---@field onSelectInputsButtonClicked unknown?
 ---@field player IsoPlayer
@@ -17,11 +18,18 @@
 ISItemSlotPanel = ISGroupBox:derive("ISItemSlotPanel")
 ISItemSlotPanel.Type = "ISItemSlotPanel"
 
+---@return unknown?
 function ISItemSlotPanel:addDisplayEmptySlot(_styleItemSlot) end
 
+---@return unknown?
 function ISItemSlotPanel:addDisplayInventoryItem(_item, _styleItemSlot) end
 
+---@return unknown?
 function ISItemSlotPanel:addDisplayItem(_item, _styleItemSlot) end
+
+---@return number
+---@return unknown
+function ISItemSlotPanel:addLayoutCell() end
 
 ---@param _resourceItem Resource
 ---@param _styleItemSlot string?

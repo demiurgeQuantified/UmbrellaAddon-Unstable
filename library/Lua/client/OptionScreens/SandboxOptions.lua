@@ -8,6 +8,7 @@
 ---@field deletePresetButton ISButton
 ---@field devPresetButton ISButton
 ---@field hadJoypadFocus boolean
+---@field joypadNavigate table
 ---@field listbox ISScrollingListBox
 ---@field nonDefaultOptions SandboxOptions
 ---@field playButton ISButton
@@ -91,6 +92,10 @@ function SandboxOptionsScreen:onJoypadDirUp(joypadData) end
 ---@param button integer
 ---@param joypadData JoypadData
 function SandboxOptionsScreen:onJoypadDown(button, joypadData) end
+
+function SandboxOptionsScreen:onJoypadNavigateStart(joypadData) end
+
+function SandboxOptionsScreen:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
 ---@param joypadData JoypadData
 function SandboxOptionsScreen:onLoseJoypadFocus(joypadData) end

@@ -3,12 +3,12 @@
 ---@class ISCampingMenu
 ISCampingMenu = {}
 
+---@param worldobjects unknown?
 ---@param currentFuel number
 ---@param fuelInfo table
----@param target unknown?
----@param timedAction ISAddFuelAction | ISBBQAddFuel
+---@param timedAction ISBBQAddFuel | ISAddFuelAction
 ---@return boolean
-function ISCampingMenu.doAddFuelOption(context, worldobjects, currentFuel, fuelInfo, target, timedAction) end
+function ISCampingMenu.doAddFuelOption(context, worldobjects, currentFuel, fuelInfo, target, timedAction, playerObj) end
 
 ---@return boolean?
 function ISCampingMenu.doCampingMenu(player, context, worldobjects, test) end
@@ -16,10 +16,9 @@ function ISCampingMenu.doCampingMenu(player, context, worldobjects, test) end
 ---@param worldobjects unknown?
 ---@param hasFuel boolean
 ---@param fuelInfo table
----@param target unknown?
----@param petrolAction ISLightFromPetrol | ISBBQLightFromPetrol
----@param tinderAction ISLightFromLiterature | ISBBQLightFromLiterature
----@param kindleAction ISLightFromKindle | ISBBQLightFromKindle
+---@param petrolAction ISBBQLightFromPetrol | ISLightFromPetrol
+---@param tinderAction ISBBQLightFromLiterature | ISLightFromLiterature
+---@param kindleAction ISBBQLightFromKindle | ISLightFromKindle
 function ISCampingMenu.doLightFireOption(
 	playerObj,
 	context,
@@ -72,6 +71,7 @@ function ISCampingMenu.onAddMultipleFuel(playerObj, target, fuelType, timedActio
 
 function ISCampingMenu.onDisplayInfo(worldobjects, playerObj, isoCampfireObject, campfire) end
 
+---@param worldobjects unknown?
 function ISCampingMenu.onDropCorpse(worldobjects, playerObj, isoCampfireObject, campfire) end
 
 function ISCampingMenu.onLightFromKindle(playerObj, percedWood, stickOrBranch, target, timedAction) end

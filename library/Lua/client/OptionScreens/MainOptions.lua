@@ -300,6 +300,8 @@ function MainOptions:onKeyBindingBtnPress(button, x, y) end
 
 function MainOptions:onKeyboardLayoutChanged() end
 
+function MainOptions:onKeyRelease(key) end
+
 ---@param self ISPanelJoypad
 ---@param joypadData JoypadData
 function MainOptions:onLoseJoypadFocusCurrentTab(self, joypadData) end

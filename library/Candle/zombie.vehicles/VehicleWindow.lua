@@ -63,11 +63,6 @@ function VehicleWindow:load(input, WorldVersion) end
 function VehicleWindow:save(output) end
 
 --- @public
---- @param health integer
---- @return nil
-function VehicleWindow:setHealth(health) end
-
---- @public
 --- @param open boolean
 --- @return nil
 function VehicleWindow:setOpen(open) end
@@ -76,3 +71,12 @@ function VehicleWindow:setOpen(open) end
 --- @param delta number
 --- @return nil
 function VehicleWindow:setOpenDelta(delta) end
+
+------------------------------------
+----------- CONSTRUCTORS -----------
+------------------------------------
+
+--- @public
+--- @param arg0 VehiclePart
+--- @return VehicleWindow
+function VehicleWindow.new(arg0) end

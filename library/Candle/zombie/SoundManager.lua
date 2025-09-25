@@ -252,6 +252,10 @@ function SoundManager:Update() end
 function SoundManager:debugScriptSounds() end
 
 --- @public
+--- @return nil
+function SoundManager:dumpEventInstancesToTextFile() end
+
+--- @public
 --- @return ArrayList
 function SoundManager:getAmbientPieces() end
 

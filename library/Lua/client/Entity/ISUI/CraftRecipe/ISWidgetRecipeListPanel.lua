@@ -6,6 +6,7 @@
 ---@field expandToFitTooltip boolean
 ---@field largestTooltipWidth number
 ---@field logic BaseCraftingLogic
+---@field pendingSelectedData unknown?
 ---@field player IsoPlayer
 ---@field recipeListPanel ISScrollingListBox
 ---@field wrapTooltipText boolean

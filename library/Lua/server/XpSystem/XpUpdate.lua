@@ -30,6 +30,8 @@ function xpUpdate.getModData(playerObj) end
 ---@param addBuffer boolean
 function xpUpdate.levelPerk(owner, perk, level, addBuffer) end
 
+function xpUpdate.onLoad() end
+
 ---@param item InventoryItem
 ---@param resultItem InventoryItem
 ---@param recipe Recipe

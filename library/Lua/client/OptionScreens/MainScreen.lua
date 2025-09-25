@@ -207,6 +207,8 @@ function MainScreen:onJoypadDirUp(joypadData) end
 ---@param joypadData JoypadData
 function MainScreen:onJoypadDown(button, joypadData) end
 
+function MainScreen:onKeyRelease(key) end
+
 ---@param joypadData JoypadData
 function MainScreen:onLoseJoypadFocus(joypadData) end
 

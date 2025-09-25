@@ -223,6 +223,33 @@ function ISMapPopup:render() end
 ---@return ISMapPopup
 function ISMapPopup:new(x, y, width, height) end
 
+---@class ISMetaPopup : ISPanel
+---@field texAnimalZone unknown
+---@field texRoomEditor unknown
+ISMetaPopup = ISPanel:derive("ISMetaPopup")
+ISMetaPopup.Type = "ISMetaPopup"
+
+---@param x number
+---@param y number
+---@return boolean
+function ISMetaPopup:onMouseDown(x, y) end
+
+---@param x number
+---@param y number
+---@return boolean
+function ISMetaPopup:onMouseUp(x, y) end
+
+function ISMetaPopup:prerender() end
+
+function ISMetaPopup:render() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return ISMetaPopup
+function ISMetaPopup:new(x, y, width, height) end
+
 ---@class umbrella.ISEquippedItem.MouseOverItem
 ---@field displayString string
 ---@field object table

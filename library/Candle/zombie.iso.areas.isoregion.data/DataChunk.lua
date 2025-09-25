@@ -10,6 +10,14 @@ DataChunk = {}
 
 --- @public
 --- @return integer
+function DataChunk:getCellX() end
+
+--- @public
+--- @return integer
+function DataChunk:getCellY() end
+
+--- @public
+--- @return integer
 function DataChunk:getChunkX() end
 
 --- @public

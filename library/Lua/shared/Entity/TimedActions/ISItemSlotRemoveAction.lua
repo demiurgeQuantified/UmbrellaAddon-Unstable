@@ -5,6 +5,7 @@
 ---@field item InventoryItem?
 ---@field itemSlot ISItemSlot?
 ---@field resource Resource
+---@field sound unknown
 ---@field targetItem unknown?
 ISItemSlotRemoveAction = ISBaseTimedAction:derive("ISItemSlotRemoveAction")
 ISItemSlotRemoveAction.Type = "ISItemSlotRemoveAction"
@@ -23,6 +24,8 @@ function ISItemSlotRemoveAction:perform() end
 function ISItemSlotRemoveAction:start() end
 
 function ISItemSlotRemoveAction:stop() end
+
+function ISItemSlotRemoveAction:stopSound() end
 
 function ISItemSlotRemoveAction:update() end
 

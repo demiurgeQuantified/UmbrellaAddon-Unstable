@@ -11,22 +11,21 @@ DryingCraftLogic = {}
 --- @public
 --- @param arg0 Layout
 --- @param arg1 Resource
+--- @param arg2 CraftRecipeData
 --- @return nil
-function DryingCraftLogic:doProgressTooltip(arg0, arg1) end
+function DryingCraftLogic:doProgressTooltip(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 integer
+--- @param arg0 InventoryItem
+--- @param arg1 CraftRecipeData
 --- @return ArrayList
-function DryingCraftLogic:getStatusIconsForInputItem(arg0) end
-
---- @public
---- @return number
-function DryingCraftLogic:getTemporaryWetness() end
+function DryingCraftLogic:getStatusIconsForInputItem(arg0, arg1) end
 
 --- @public
 --- @return nil
 function DryingCraftLogic:onStart() end
 
 --- @public
+--- @param arg0 CraftRecipeData
 --- @return nil
-function DryingCraftLogic:onUpdate() end
+function DryingCraftLogic:onUpdate(arg0) end

@@ -29,5 +29,8 @@ function ISDPadWheels.onToggleLight(playerObj, item) end
 ---@param playerNum integer
 function ISDPadWheels.showAnimalZoneUI(playerNum) end
 
+---@param playerNum number
+function ISDPadWheels.showBuildingRoomsEditor(playerNum) end
+
 ---@param playerIndex integer
 function ISDPadWheels.showSurvGuide(playerIndex) end

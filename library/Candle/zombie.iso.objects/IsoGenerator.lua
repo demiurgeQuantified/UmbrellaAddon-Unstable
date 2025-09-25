@@ -54,6 +54,14 @@ function IsoGenerator:addToWorld() end
 function IsoGenerator:failToStart() end
 
 --- @public
+--- @return number
+function IsoGenerator:getBasePowerConsumption() end
+
+--- @public
+--- @return string
+function IsoGenerator:getBasePowerConsumptionString() end
+
+--- @public
 --- @return integer
 function IsoGenerator:getCondition() end
 
@@ -62,8 +70,16 @@ function IsoGenerator:getCondition() end
 function IsoGenerator:getFuel() end
 
 --- @public
+--- @return number
+function IsoGenerator:getFuelPercentage() end
+
+--- @public
 --- @return ArrayList
 function IsoGenerator:getItemsPowered() end
+
+--- @public
+--- @return number
+function IsoGenerator:getMaxFuel() end
 
 --- @public
 --- @return string
@@ -76,6 +92,10 @@ function IsoGenerator:getSoundPrefix() end
 --- @public
 --- @return number
 function IsoGenerator:getTotalPowerUsing() end
+
+--- @public
+--- @return string
+function IsoGenerator:getTotalPowerUsingString() end
 
 --- @public
 --- @return boolean

@@ -136,6 +136,8 @@ function ISBuildIsoEntity:setInfo(square, north, sprite, openSprite) end
 ---@param z number
 function ISBuildIsoEntity:tryBuild(x, y, z) end
 
+function ISBuildIsoEntity:updateManualInputs(_logic) end
+
 ---@param x number
 ---@param y number
 ---@param z number

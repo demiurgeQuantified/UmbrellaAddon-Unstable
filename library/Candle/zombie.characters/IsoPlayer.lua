@@ -88,6 +88,12 @@ function IsoPlayer.getUniqueFileName() end
 
 --- @public
 --- @static
+--- @param arg0 string
+--- @return string
+function IsoPlayer.getUnwantedModDataString(arg0) end
+
+--- @public
+--- @static
 --- @return boolean
 function IsoPlayer.hasInstance() end
 
@@ -1146,6 +1152,11 @@ function IsoPlayer:isTimedActionInstant() end
 function IsoPlayer:isTorchCone() end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+function IsoPlayer:isUnwanted(arg0) end
+
+--- @public
 --- @param testVehicle BaseVehicle
 --- @return boolean
 function IsoPlayer:isVehicleCollisionActive(testVehicle) end
@@ -1198,15 +1209,6 @@ function IsoPlayer:lureAnimal(arg0) end
 --- @public
 --- @return nil
 function IsoPlayer:nullifyAiming() end
-
---- @public
----
---- Callback from ModelManager.Add/Remove functions.
----
---- @param modelManager ModelManager Event sender.
---- @param isCulled boolean Whether or not this object is culled from the visible scene or not.
---- @return nil
-function IsoPlayer:onCullStateChanged(modelManager, isCulled) end
 
 --- @public
 --- @return nil
@@ -1304,6 +1306,12 @@ function IsoPlayer:save(fileName) end
 --- @param IS_DEBUG_SAVE boolean
 --- @return nil
 function IsoPlayer:save(output, IS_DEBUG_SAVE) end
+
+--- @public
+--- @param arg0 ModelManager
+--- @param arg1 boolean
+--- @return nil
+function IsoPlayer:setAddedToModelManager(arg0, arg1) end
 
 --- @public
 --- @param allChatMuted boolean
@@ -1717,6 +1725,12 @@ function IsoPlayer:setTimeSinceLastStab(timeSinceLastStab) end
 --- @param arg0 LuaTimedActionNew
 --- @return nil
 function IsoPlayer:setTimedActionToRetrigger(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 boolean
+--- @return nil
+function IsoPlayer:setUnwanted(arg0, arg1) end
 
 --- @public
 --- @param newUsername string

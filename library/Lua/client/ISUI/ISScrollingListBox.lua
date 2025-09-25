@@ -21,11 +21,13 @@
 ---@field onmousedown umbrella.ISScrollingListBox.MouseCallback
 ---@field selected integer?
 ---@field selectedBeforeReset number?
+---@field selectedTextColor table
 ---@field selectionColor umbrella.RGBA
 ---@field smoothScrollTargetY number?
 ---@field smoothScrollY number?
 ---@field stopPrerender boolean
 ---@field target unknown?
+---@field textColor table
 ---@field tooltipUI ISToolTip
 ---@field useStencilForChildren boolean
 ISScrollingListBox = ISPanelJoypad:derive("ISScrollingListBox")
@@ -184,6 +186,22 @@ function ISScrollingListBox:scrollToSelected() end
 ---@param padY number?
 function ISScrollingListBox:setFont(font, padY) end
 
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+function ISScrollingListBox:setItemSelectedTextColorRGBA(index, r, g, b, a) end
+
+function ISScrollingListBox:setItemSelectedTextColorToDefault(index) end
+
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+function ISScrollingListBox:setItemTextColorRGBA(index, r, g, b, a) end
+
+function ISScrollingListBox:setItemTextColorToDefault(index) end
+
 ---@param focused boolean
 ---@param joypadData JoypadData
 function ISScrollingListBox:setJoypadFocused(focused, joypadData) end
@@ -195,6 +213,18 @@ function ISScrollingListBox:setOnMouseDoubleClick(target, onmousedblclick) end
 ---@param target unknown?
 ---@param onmousedown umbrella.ISScrollingListBox.MouseCallback?
 function ISScrollingListBox:setOnMouseDownFunction(target, onmousedown) end
+
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+function ISScrollingListBox:setSelectedTextColorRGBA(r, g, b, a) end
+
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+function ISScrollingListBox:setTextColorRGBA(r, g, b, a) end
 
 ---@return integer
 function ISScrollingListBox:size() end

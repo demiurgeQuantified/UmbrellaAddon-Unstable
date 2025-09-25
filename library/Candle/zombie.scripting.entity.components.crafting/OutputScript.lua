@@ -67,6 +67,10 @@ function OutputScript:getFluidMatchMode() end
 function OutputScript:getIntAmount() end
 
 --- @public
+--- @return integer
+function OutputScript:getIntMaxAmount() end
+
+--- @public
 --- @param arg0 CraftRecipeData
 --- @return Item
 function OutputScript:getItem(arg0) end
@@ -74,6 +78,10 @@ function OutputScript:getItem(arg0) end
 --- @public
 --- @return ItemApplyMode
 function OutputScript:getItemApplyMode() end
+
+--- @public
+--- @return number
+function OutputScript:getMaxAmount() end
 
 --- @public
 --- @return string
@@ -161,3 +169,7 @@ function OutputScript:isHandcraftOnly() end
 --- @return boolean
 --- @deprecated
 function OutputScript:isReplaceInput() end
+
+--- @public
+--- @return boolean
+function OutputScript:isVariableAmount() end

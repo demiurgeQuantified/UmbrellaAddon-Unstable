@@ -60,6 +60,11 @@ function Food:copyCookedBurntFrom(arg0) end
 --- @public
 --- @param arg0 Food
 --- @return nil
+function Food:copyExtraItems(arg0) end
+
+--- @public
+--- @param arg0 Food
+--- @return nil
 function Food:copyFoodFrom(arg0) end
 
 --- @public
@@ -240,6 +245,11 @@ function Food:getMilkType() end
 --- @public
 --- @return string # the name
 function Food:getName() end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return string
+function Food:getName(arg0) end
 
 --- @public
 --- @return string

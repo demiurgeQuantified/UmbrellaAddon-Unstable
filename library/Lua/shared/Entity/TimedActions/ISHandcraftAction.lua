@@ -7,6 +7,7 @@
 ---@field containers ArrayList<ItemContainer>
 ---@field craftBench CraftBench
 ---@field craftRecipe CraftRecipe
+---@field eatPercentage number
 ---@field isoObject IsoObject
 ---@field items ArrayList<InventoryItem>?
 ---@field logic HandcraftLogic?
@@ -19,6 +20,7 @@
 ---@field onStartTarget unknown?
 ---@field recipeItem unknown
 ---@field sound integer?
+---@field variableInputRatio number
 ISHandcraftAction = ISBaseTimedAction:derive("ISHandcraftAction")
 ISHandcraftAction.Type = "ISHandcraftAction"
 

@@ -8,6 +8,8 @@ ISDropCorpseIntoContainer.Type = "ISDropCorpseIntoContainer"
 ---@return boolean
 function ISDropCorpseIntoContainer:isValid() end
 
+function ISDropCorpseIntoContainer:perform() end
+
 function ISDropCorpseIntoContainer:start() end
 
 ---@return ISDropCorpseIntoContainer

@@ -210,6 +210,14 @@ function IGrappleableWrapper:getPosition(arg0) end
 function IGrappleableWrapper:getPosition(arg0) end
 
 --- @public
+--- @return number
+function IGrappleableWrapper:getSharedGrappleAnimFraction() end
+
+--- @public
+--- @return number
+function IGrappleableWrapper:getSharedGrappleAnimFraction() end
+
+--- @public
 --- @return string
 function IGrappleableWrapper:getSharedGrappleAnimNode() end
 
@@ -504,6 +512,16 @@ function IGrappleableWrapper:setPosition(arg0) end
 --- @param arg2 number
 --- @return nil
 function IGrappleableWrapper:setPosition(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IGrappleableWrapper:setSharedGrappleAnimFraction(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IGrappleableWrapper:setSharedGrappleAnimFraction(arg0) end
 
 --- @public
 --- @param arg0 string

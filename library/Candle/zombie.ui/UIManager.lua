@@ -385,6 +385,11 @@ function UIManager.isForceCursorVisible() end
 --- @public
 --- @static
 --- @return boolean
+function UIManager.isModalVisible() end
+
+--- @public
+--- @static
+--- @return boolean
 function UIManager.isMouseOverInventory() end
 
 --- @public

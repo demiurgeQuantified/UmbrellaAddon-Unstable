@@ -56,6 +56,22 @@ function BuildingDef:getArea() end
 
 --- @public
 --- @return integer
+function BuildingDef:getCellX() end
+
+--- @public
+--- @return integer
+function BuildingDef:getCellX2() end
+
+--- @public
+--- @return integer
+function BuildingDef:getCellY() end
+
+--- @public
+--- @return integer
+function BuildingDef:getCellY2() end
+
+--- @public
+--- @return integer
 function BuildingDef:getChunkX() end
 
 --- @public
@@ -68,6 +84,10 @@ function BuildingDef:getChunkY() end
 --- @param closestXY Vector2f
 --- @return number
 function BuildingDef:getClosestPoint(x, y, closestXY) end
+
+--- @public
+--- @return ArrayList
+function BuildingDef:getEmptyOutside() end
 
 --- @public
 --- @return RoomDef
@@ -176,6 +196,15 @@ function BuildingDef:getZone() end
 --- @param arg0 integer
 --- @param arg1 integer
 --- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return boolean
+function BuildingDef:intersects(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
 --- @return nil
 function BuildingDef:invalidateOverlappedChunkLevelsAbove(arg0, arg1, arg2) end
 
@@ -183,6 +212,21 @@ function BuildingDef:invalidateOverlappedChunkLevelsAbove(arg0, arg1, arg2) end
 --- @param arg0 BuildingDef
 --- @return boolean
 function BuildingDef:isAdjacent(arg0) end
+
+--- @public
+--- @param arg0 BuildingDef
+--- @param arg1 boolean
+--- @return boolean
+function BuildingDef:isAdjacent(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @return boolean
+function BuildingDef:isAdjacent(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
 --- @return boolean
@@ -195,6 +239,10 @@ function BuildingDef:isAllExplored() end
 --- @public
 --- @return boolean
 function BuildingDef:isAnyChunkNewlyLoaded() end
+
+--- @public
+--- @return boolean
+function BuildingDef:isBasement() end
 
 --- @public
 --- @return boolean
@@ -217,6 +265,16 @@ function BuildingDef:isResidential() end
 function BuildingDef:isShop() end
 
 --- @public
+--- @return boolean
+function BuildingDef:isUserDefined() end
+
+--- @public
+--- @param arg0 BuildingDef
+--- @param arg1 boolean
+--- @return boolean
+function BuildingDef:overlaps(arg0, arg1) end
+
+--- @public
 --- @param wx integer
 --- @param wy integer
 --- @return boolean
@@ -229,6 +287,10 @@ function BuildingDef:recalculate() end
 --- @public
 --- @return nil
 function BuildingDef:refreshSquares() end
+
+--- @public
+--- @return nil
+function BuildingDef:resetMinMaxLevel() end
 
 --- @public
 --- @param alarm boolean
@@ -261,6 +323,11 @@ function BuildingDef:setKeyId(keyId) end
 --- @return nil
 function BuildingDef:setKeySpawned(keySpawned) end
 
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BuildingDef:setUserDefined(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------
@@ -268,3 +335,8 @@ function BuildingDef:setKeySpawned(keySpawned) end
 --- @public
 --- @return BuildingDef
 function BuildingDef.new() end
+
+--- @public
+--- @param arg0 boolean
+--- @return BuildingDef
+function BuildingDef.new(arg0) end

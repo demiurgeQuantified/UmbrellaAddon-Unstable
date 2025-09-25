@@ -5,8 +5,10 @@
 ---@field fade UITransition
 ---@field font UIFont
 ---@field javaObject UITextBox2
+---@field joypadFocused unknown
 ---@field keeplog boolean
 ---@field logIndex number
+---@field placeholderText string?
 ---@field title string
 ---@field tooltip unknown?
 ---@field tooltipUI ISToolTip
@@ -32,6 +34,9 @@ function ISTextEntryBox:getInternalText() end
 
 ---@return integer
 function ISTextEntryBox:getMaxLines() end
+
+---@return string?
+function ISTextEntryBox:getPlaceholderText() end
 
 ---@return string
 function ISTextEntryBox:getText() end
@@ -130,6 +135,15 @@ function ISTextEntryBox:setOnlyNumbers(onlyNumbers) end
 
 ---@param onlyText boolean
 function ISTextEntryBox:setOnlyText(onlyText) end
+
+---@param str string
+function ISTextEntryBox:setPlaceholderText(str) end
+
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+function ISTextEntryBox:setPlaceholderTextRGBA(r, g, b, a) end
 
 function ISTextEntryBox:setSelectable(enable) end
 

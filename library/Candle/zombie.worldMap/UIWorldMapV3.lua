@@ -68,10 +68,6 @@ function UIWorldMapV3:getStreetsAPI() end
 function UIWorldMapV3:getStyleAPI() end
 
 --- @public
---- @return WorldMapStyleV2
-function UIWorldMapV3:getStyleAPI() end
-
---- @public
 --- @return boolean
 function UIWorldMapV3:isDataLoaded() end
 

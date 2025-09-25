@@ -75,6 +75,15 @@ function IsoMetaCell:getAnimalZone(arg0) end
 function IsoMetaCell:getAnimalZonesSize() end
 
 --- @public
+--- @return integer
+function IsoMetaCell:getBuildingCount() end
+
+--- @public
+--- @param arg0 boolean
+--- @return integer
+function IsoMetaCell:getBuildingCount(arg0) end
+
+--- @public
 --- @param arg0 integer
 --- @param arg1 integer
 --- @param arg2 integer
@@ -93,6 +102,15 @@ function IsoMetaCell:getChunk(arg0) end
 --- @param y integer
 --- @return IsoMetaChunk
 function IsoMetaCell:getChunk(x, y) end
+
+--- @public
+--- @return integer
+function IsoMetaCell:getRoomCount() end
+
+--- @public
+--- @param arg0 boolean
+--- @return integer
+function IsoMetaCell:getRoomCount(arg0) end
 
 --- @public
 --- @param x integer
@@ -143,6 +161,22 @@ function IsoMetaCell:hasChunk(arg0, arg1) end
 --- @param arg2 integer
 --- @return nil
 function IsoMetaCell:load(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 RoomDef
+--- @return nil
+function IsoMetaCell:removeRoom(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return nil
+function IsoMetaCell:removeRooms(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @param arg1 integer
+--- @return nil
+function IsoMetaCell:removeRooms(arg0, arg1) end
 
 --- @public
 --- @param zone Zone

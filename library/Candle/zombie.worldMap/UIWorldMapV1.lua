@@ -138,7 +138,7 @@ function UIWorldMapV1:getStyle() end
 function UIWorldMapV1:getStyleAPI() end
 
 --- @public
---- @return WorldMapSymbolsV1
+--- @return WorldMapSymbolsAPI
 function UIWorldMapV1:getSymbolsAPI() end
 
 --- @public

@@ -179,6 +179,9 @@ function ISButton:setTitle(title) end
 ---@param tooltip string?
 function ISButton:setTooltip(tooltip) end
 
+---@param visible boolean
+function ISButton:setVisible(visible) end
+
 ---@param minWidth number?
 ---@param isJoypad boolean?
 function ISButton:setWidthToTitle(minWidth, isJoypad) end

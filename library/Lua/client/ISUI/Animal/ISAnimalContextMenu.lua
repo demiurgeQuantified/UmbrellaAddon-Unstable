@@ -40,6 +40,7 @@ function AnimalContextMenu.doFeedFromHandMenu(playerObj, animal, context) end
 ---@param context ISContextMenu
 ---@param animalInv AnimalInventoryItem
 ---@param test boolean?
+---@return unknown
 function AnimalContextMenu.doInventoryMenu(player, context, animalInv, test) end
 
 function AnimalContextMenu.doKillAnimalMenu(playerObj, animalInv, context) end

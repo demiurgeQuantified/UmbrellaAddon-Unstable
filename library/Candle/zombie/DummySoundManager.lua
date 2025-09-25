@@ -251,6 +251,10 @@ function DummySoundManager:Update() end
 function DummySoundManager:debugScriptSounds() end
 
 --- @public
+--- @return nil
+function DummySoundManager:dumpEventInstancesToTextFile() end
+
+--- @public
 --- @return ArrayList
 function DummySoundManager:getAmbientPieces() end
 

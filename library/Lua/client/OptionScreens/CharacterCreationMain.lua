@@ -45,6 +45,7 @@
 ---@field hairTypeLbl ISLabel
 ---@field inputModal ISTextBox
 ---@field itemheightoverride table
+---@field joypadNavigate table
 ---@field labelRight number
 ---@field lArrow Texture
 ---@field nonComboWidth number
@@ -216,6 +217,12 @@ function CharacterCreationMain:onJoypadDirRight(joypadData) end
 ---@param joypadData JoypadData
 function CharacterCreationMain:onJoypadDirUp(joypadData) end
 
+function CharacterCreationMain:onJoypadNavigateStart(joypadData) end
+
+function CharacterCreationMain:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+function CharacterCreationMain:onKeyRelease(key) end
+
 ---@param joypadData JoypadData
 function CharacterCreationMain:onLoseJoypadFocus(joypadData) end
 
@@ -259,6 +266,8 @@ function CharacterCreationMain:randomGenericOutfit() end
 function CharacterCreationMain:randomVoice() end
 
 function CharacterCreationMain:removeAllClothingWidgets() end
+
+function CharacterCreationMain:render() end
 
 ---@param panel ISUIElement
 ---@return number
@@ -318,6 +327,7 @@ function CharacterCreationMain:new(x, y, width, height) end
 ---@field comboResizeTable ISComboBox[]
 ---@field dividerResizeTable ISRect[]
 ---@field joypadButtons ISButton[]
+---@field joypadNavigate table
 ---@field prevJoypadIndexY number
 ---@field repos2Table ISLabel[]
 ---@field repos3Table ISButton[]

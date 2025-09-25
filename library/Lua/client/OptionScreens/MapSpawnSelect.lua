@@ -85,6 +85,10 @@ function MapSpawnSelect:onJoypadDirDown_textEntry(joypadData) end
 ---@param joypadData JoypadData
 function MapSpawnSelect:onJoypadDown_textEntry(button, joypadData) end
 
+function MapSpawnSelect:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+function MapSpawnSelect:onKeyRelease(key) end
+
 ---@param button ISButton
 ---@param x number
 ---@param y number
@@ -130,9 +134,14 @@ function MapSpawnSelect:new(x, y, width, height) end
 ---@field dragStartY number
 ---@field dragStartZoomF number
 ---@field hasResetView boolean
+---@field LBumperZoom number?
 ---@field mapAPI UIWorldMapV3
+---@field povXms unknown?
+---@field povYms unknown?
 ---@field pyramidFileName string?
+---@field RBumperZoom number?
 ---@field shownInitialLocation boolean
+---@field updateMS unknown
 MapSpawnSelectImage = ISUIElement:derive("MapSpawnSelectImage")
 MapSpawnSelectImage.Type = "MapSpawnSelectImage"
 
@@ -145,6 +154,8 @@ function MapSpawnSelectImage:hasSomethingToDisplay() end
 function MapSpawnSelectImage:initMapData(directory) end
 
 function MapSpawnSelectImage:instantiate() end
+
+function MapSpawnSelectImage:onJoypadDown(button, joypadData) end
 
 ---@param x number
 ---@param y number
@@ -181,8 +192,12 @@ function MapSpawnSelectImage:onMouseWheel(del) end
 
 function MapSpawnSelectImage:prerender() end
 
+function MapSpawnSelectImage:render() end
+
 ---@param fileName string
 function MapSpawnSelectImage:setImagePyramid(fileName) end
+
+function MapSpawnSelectImage:updateJoypad() end
 
 ---@param x number
 ---@param y number
@@ -234,6 +249,30 @@ function MapSpawnSelectInfoPanel:onJoypadDown(button, joypadData) end
 function MapSpawnSelectInfoPanel:prerender() end
 
 function MapSpawnSelectInfoPanel:render() end
+
+---@class MapSpawnSelectSeedPanel : ISPanelJoypad
+---@field randomButton ISButton
+---@field seedLabel ISLabel
+---@field seedTextBox ISTextEntryBox
+MapSpawnSelectSeedPanel = ISPanelJoypad:derive("MapSpawnSelectSeedPanel")
+MapSpawnSelectSeedPanel.Type = "MapSpawnSelectSeedPanel"
+
+function MapSpawnSelectSeedPanel:createChildren() end
+
+function MapSpawnSelectSeedPanel:generateNewSeed() end
+
+function MapSpawnSelectSeedPanel:onGainJoypadFocus(joypadData) end
+
+function MapSpawnSelectSeedPanel:onLoseJoypadFocus(joypadData) end
+
+function MapSpawnSelectSeedPanel:render() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return MapSpawnSelectSeedPanel
+function MapSpawnSelectSeedPanel:new(x, y, width, height) end
 
 ---@class umbrella.MapSpawnSelect.Item
 ---@field demoVideo string?

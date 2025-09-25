@@ -30,6 +30,8 @@ function ISBBQLightFromKindle:start() end
 
 function ISBBQLightFromKindle:stop() end
 
+function ISBBQLightFromKindle:stopSound() end
+
 function ISBBQLightFromKindle:update() end
 
 ---@return boolean

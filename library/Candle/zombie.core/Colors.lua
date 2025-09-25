@@ -270,6 +270,12 @@ function Colors.GetColorsCount() end
 --- @return Color
 function Colors.GetRandomColor() end
 
+--- @public
+--- @static
+--- @param arg0 Color
+--- @return string
+function Colors.getNameFromColor(arg0) end
+
 ------------------------------------
 ----------- CONSTRUCTORS -----------
 ------------------------------------

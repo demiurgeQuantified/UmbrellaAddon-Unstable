@@ -34,6 +34,8 @@ function __modSelector_ModListBox:onJoypadDown(button, joypadData) end
 ---@param y number
 function __modSelector_ModListBox:onMouseDown(x, y) end
 
+function __modSelector_ModListBox:onSelectItem(item) end
+
 function __modSelector_ModListBox:prerender() end
 
 ---@param focused boolean

@@ -856,7 +856,7 @@ VehicleZoneDistribution.airportshuttle = {
 }
 VehicleZoneDistribution.airportservice = {
 	vehicles = {
-		["Base.Base.PickUpTruckLightsAirport"] = {
+		["Base.PickUpTruckLightsAirport"] = {
 			index = -1,
 			spawnChance = 20,
 		},
@@ -1395,4 +1395,16 @@ VehicleZoneDistribution.evacuee = {
 	baseVehicleQuality = 1.1,
 	chanceToSpawnSpecial = 0,
 	chanceToSpawnNormal = 0,
+}
+VehicleZoneDistribution.racecar = {
+	vehicles = {
+		["Base.RaceCarBurnt"] = {
+			index = -1,
+			spawnChance = 100,
+		},
+	},
+	baseVehicleQuality = 1.1,
+	chanceToSpawnSpecial = 0,
+	chanceToSpawnNormal = 0,
+	chanceToSpawnKey = 100,
 }

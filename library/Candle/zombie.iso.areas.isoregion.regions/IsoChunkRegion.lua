@@ -57,6 +57,10 @@ function IsoChunkRegion:getConnectedNeighborWithLargestIsoWorldRegion() end
 function IsoChunkRegion:getConnectedNeighbors() end
 
 --- @public
+--- @return DataChunk
+function IsoChunkRegion:getDataChunk() end
+
+--- @public
 --- @return ArrayList
 function IsoChunkRegion:getDebugConnectedNeighborCopy() end
 

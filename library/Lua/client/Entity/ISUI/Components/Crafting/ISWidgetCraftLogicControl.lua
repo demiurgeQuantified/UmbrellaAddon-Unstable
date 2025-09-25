@@ -4,6 +4,7 @@
 ---@field allowBatchCraft boolean
 ---@field autoFillContents boolean
 ---@field boxHeight number
+---@field buttonCancel unknown?
 ---@field buttonCraft unknown?
 ---@field buttonLess unknown?
 ---@field buttonMax unknown?
@@ -18,7 +19,6 @@
 ---@field isAutoFillY boolean
 ---@field logic unknown
 ---@field margin number
----@field origButtonHeight unknown
 ---@field player unknown
 ---@field quantityLabel unknown?
 ISWidgetCraftLogicControl = ISPanelJoypad:derive("ISWidgetCraftLogicControl")
@@ -27,6 +27,8 @@ ISWidgetCraftLogicControl.Type = "ISWidgetCraftLogicControl"
 function ISWidgetCraftLogicControl.onTextChange(box) end
 
 function ISWidgetCraftLogicControl:calculateLayout(_preferredWidth, _preferredHeight) end
+
+function ISWidgetCraftLogicControl:cancelCraft() end
 
 function ISWidgetCraftLogicControl:createChildren() end
 

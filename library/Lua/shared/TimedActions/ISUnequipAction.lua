@@ -8,6 +8,7 @@
 ---@field ignoreHandsWounds boolean
 ---@field item InventoryItem
 ---@field sound integer?
+---@field soundNoTrigger boolean
 ---@field useProgressBar boolean
 ISUnequipAction = ISBaseTimedAction:derive("ISUnequipAction")
 ISUnequipAction.Type = "ISUnequipAction"

@@ -355,11 +355,19 @@ function VehiclePart:isInventoryItemUninstalled() end
 
 --- @public
 --- @return boolean
+function VehiclePart:isSeat() end
+
+--- @public
+--- @return boolean
 function VehiclePart:isSetAllModelsVisible() end
 
 --- @public
 --- @return boolean
 function VehiclePart:isSpecificItem() end
+
+--- @public
+--- @return boolean
+function VehiclePart:isVehicleTrunk() end
 
 --- @public
 --- @param input ByteBuffer

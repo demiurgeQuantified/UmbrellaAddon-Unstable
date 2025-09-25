@@ -10,6 +10,7 @@
 ---@field admin IsoPlayer
 ---@field buttonBorderColor umbrella.RGBA
 ---@field elems umbrella.ISItemEditPanel.Element[]
+---@field isClothing unknown
 ---@field isDrainable boolean
 ---@field isFood boolean
 ---@field isWeapon boolean
@@ -98,6 +99,9 @@ function ISItemEditPanel:registerString(_text, _funcGet, _funcSet, _canEdit) end
 function ISItemEditPanel:render() end
 
 function ISItemEditPanel:saveAll() end
+
+---@return unknown
+function ISItemEditPanel:validateClothing() end
 
 ---@return boolean
 function ISItemEditPanel:validateColor() end

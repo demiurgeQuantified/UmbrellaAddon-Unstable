@@ -107,6 +107,10 @@ function IsoAnimal:alertOtherAnimals(arg0, arg1) end
 
 --- @public
 --- @return boolean
+function IsoAnimal:allowsTwist() end
+
+--- @public
+--- @return boolean
 function IsoAnimal:animalShouldThump() end
 
 --- @public
@@ -514,6 +518,14 @@ function IsoAnimal:getInventoryIconTextureName() end
 --- @public
 --- @return integer
 function IsoAnimal:getItemID() end
+
+--- @public
+--- @return integer
+function IsoAnimal:getLastCellSavedToX() end
+
+--- @public
+--- @return integer
+function IsoAnimal:getLastCellSavedToY() end
 
 --- @public
 --- @return string
@@ -965,6 +977,12 @@ function IsoAnimal:setIsRoadKill(arg0) end
 --- @param arg0 integer
 --- @return nil
 function IsoAnimal:setItemID(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
+function IsoAnimal:setLastCellSavedTo(arg0, arg1) end
 
 --- @public
 --- @return nil

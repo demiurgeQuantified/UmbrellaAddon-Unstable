@@ -13,6 +13,8 @@
 ---@field errorDefault string
 ---@field errorLabel ISLabel
 ---@field errorText string
+---@field fluidTitleLabel ISLabel
+---@field fluidTitleText string
 ---@field fromPreviousOwner unknown?
 ---@field info umbrella.ISFluidTransferUI.InfoTable
 ---@field isIsoPanel boolean

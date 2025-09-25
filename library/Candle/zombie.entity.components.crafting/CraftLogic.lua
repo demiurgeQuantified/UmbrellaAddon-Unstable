@@ -21,20 +21,30 @@ function CraftLogic:debugCanStart(arg0) end
 --- @public
 --- @param arg0 Layout
 --- @param arg1 Resource
+--- @param arg2 CraftRecipeData
 --- @return nil
-function CraftLogic:doProgressTooltip(arg0, arg1) end
+function CraftLogic:doProgressTooltip(arg0, arg1, arg2) end
 
 --- @public
 --- @return nil
 function CraftLogic:dumpContentsInSquare() end
 
 --- @public
+--- @param arg0 CraftRecipeData
+--- @return nil
+function CraftLogic:finaliseRecipe(arg0) end
+
+--- @public
+--- @return integer
+function CraftLogic:getActiveCraftCount() end
+
+--- @public
 --- @return CraftRecipe
 function CraftLogic:getCurrentRecipe() end
 
 --- @public
---- @return number
-function CraftLogic:getElapsedTime() end
+--- @return integer
+function CraftLogic:getFreeOutputSlotCount() end
 
 --- @public
 --- @return List
@@ -57,8 +67,9 @@ function CraftLogic:getOutputsGroupName() end
 function CraftLogic:getPossibleRecipe() end
 
 --- @public
+--- @param arg0 CraftRecipeData
 --- @return number
-function CraftLogic:getProgress() end
+function CraftLogic:getProgress(arg0) end
 
 --- @public
 --- @return string
@@ -82,17 +93,14 @@ function CraftLogic:getRequestingPlayer() end
 function CraftLogic:getStartMode() end
 
 --- @public
---- @param arg0 integer
+--- @param arg0 InventoryItem
+--- @param arg1 CraftRecipeData
 --- @return ArrayList
-function CraftLogic:getStatusIconsForInputItem(arg0) end
+function CraftLogic:getStatusIconsForInputItem(arg0, arg1) end
 
 --- @public
 --- @return boolean
 function CraftLogic:isDoAutomaticCraftCheck() end
-
---- @public
---- @return boolean
-function CraftLogic:isFinished() end
 
 --- @public
 --- @return boolean
@@ -119,13 +127,20 @@ function CraftLogic:isValid() end
 function CraftLogic:onStart() end
 
 --- @public
---- @param arg0 boolean
+--- @param arg0 CraftRecipeData
+--- @param arg1 boolean
 --- @return nil
-function CraftLogic:onStop(arg0) end
+function CraftLogic:onStop(arg0, arg1) end
 
 --- @public
+--- @param arg0 CraftRecipeData
 --- @return nil
-function CraftLogic:onUpdate() end
+function CraftLogic:onUpdate(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipeData
+--- @return nil
+function CraftLogic:returnConsumedItemsToResourcesOrSquare(arg0) end
 
 --- @public
 --- @param arg0 IsoPlayer

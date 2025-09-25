@@ -44,6 +44,8 @@ function ModListPresets:onJoypadDirUp(joypadData) end
 ---@param joypadData JoypadData
 function ModListPresets:onJoypadDown(button, joypadData) end
 
+function ModListPresets:onLoseJoypadFocus(joypadData) end
+
 ---@param button ISButton
 function ModListPresets:onPresetButton(button) end
 
@@ -53,6 +55,8 @@ function ModListPresets:onSavePreset(button) end
 ---@param text string
 ---@return boolean
 function ModListPresets:onValidateSavePreset(text) end
+
+function ModListPresets:render() end
 
 function ModListPresets:updateView() end
 

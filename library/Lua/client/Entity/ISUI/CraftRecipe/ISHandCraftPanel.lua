@@ -99,6 +99,7 @@ function ISHandCraftPanel:sortRecipeList() end
 
 function ISHandCraftPanel:update() end
 
+---@return boolean
 function ISHandCraftPanel:updateContainers() end
 
 function ISHandCraftPanel:updateTooltip() end

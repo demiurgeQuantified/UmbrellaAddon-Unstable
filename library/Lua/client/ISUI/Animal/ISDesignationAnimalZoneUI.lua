@@ -11,6 +11,7 @@
 ---@field itemPadY number
 ---@field listTakesFocus boolean
 ---@field nbOfAnimals number
+---@field nbOfCorpses unknown
 ---@field ok ISButton
 ---@field player IsoPlayer
 ---@field playerNum integer

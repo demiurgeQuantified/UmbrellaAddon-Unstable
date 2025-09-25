@@ -9,6 +9,8 @@
 ---@field item InventoryItem?
 ---@field jobType string
 ---@field loopedAction boolean
+---@field loopSound unknown?
+---@field loopSoundNoTrigger boolean
 ---@field maxTime number?
 ---@field onCompleteArgs table?
 ---@field onCompleteFunc function?
@@ -60,10 +62,10 @@ function ISInventoryTransferAction:getSoundName() end
 ---@return number
 function ISInventoryTransferAction:getTimeDelta() end
 
----@return unknown?
+---@return string?
 function ISInventoryTransferAction:getTransferCompleteSoundName() end
 
----@return string
+---@return string?
 function ISInventoryTransferAction:getTransferStartSoundName() end
 
 ---@param item InventoryItem
@@ -102,6 +104,8 @@ function ISInventoryTransferAction:start() end
 function ISInventoryTransferAction:startActionAnim() end
 
 function ISInventoryTransferAction:stop() end
+
+function ISInventoryTransferAction:stopLoopingSound() end
 
 ---@param item InventoryItem
 function ISInventoryTransferAction:transferItem(item) end

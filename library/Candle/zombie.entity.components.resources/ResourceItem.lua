@@ -81,6 +81,11 @@ function ResourceItem:getFreeItemUsesCapacity() end
 function ResourceItem:getItemAmount() end
 
 --- @public
+--- @param arg0 Item
+--- @return integer
+function ResourceItem:getItemAmount(arg0) end
+
+--- @public
 --- @return integer
 function ResourceItem:getItemCapacity() end
 
@@ -106,12 +111,25 @@ function ResourceItem:getItemUsesCapacity() end
 function ResourceItem:getStoredItems() end
 
 --- @public
+--- @param arg0 Item
+--- @return ArrayList
+function ResourceItem:getStoredItemsOfType(arg0) end
+
+--- @public
+--- @return ArrayList
+function ResourceItem:getUniqueItems() end
+
+--- @public
 --- @return boolean
 function ResourceItem:isEmpty() end
 
 --- @public
 --- @return boolean
 function ResourceItem:isFull() end
+
+--- @public
+--- @return boolean
+function ResourceItem:isStackAnyItem() end
 
 --- @public
 --- @param arg0 ByteBuffer
@@ -173,6 +191,12 @@ function ResourceItem:pollItem(arg0, arg1) end
 --- @param arg0 ArrayList
 --- @return ArrayList
 function ResourceItem:removeAllItems(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @param arg1 Item
+--- @return ArrayList
+function ResourceItem:removeAllItems(arg0, arg1) end
 
 --- @public
 --- @param arg0 InventoryItem

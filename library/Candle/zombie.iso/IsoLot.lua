@@ -43,6 +43,13 @@ function IsoLot.get(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @static
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return LotHeader
+function IsoLot.getHeader(arg0, arg1) end
+
+--- @public
+--- @static
 --- @param lot IsoLot
 --- @return nil
 function IsoLot.put(lot) end

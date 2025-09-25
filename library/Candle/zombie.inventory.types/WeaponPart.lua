@@ -2,12 +2,6 @@
 
 --- @class WeaponPart: InventoryItem, IUpdater
 --- @field public class any
---- @field public TYPE_CANON string
---- @field public TYPE_CLIP string
---- @field public TYPE_RECOILPAD string
---- @field public TYPE_SCOPE string
---- @field public TYPE_SLING string
---- @field public TYPE_STOCK string
 WeaponPart = {}
 
 ------------------------------------

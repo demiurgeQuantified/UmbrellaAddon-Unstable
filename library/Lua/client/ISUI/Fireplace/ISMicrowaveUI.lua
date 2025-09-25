@@ -6,15 +6,19 @@
 ---@field joypadButtons ISButton[]
 ---@field ok ISButton
 ---@field oven IsoStove
+---@field playerNum unknown
 ---@field tempKnob ISKnob
 ---@field timerKnob ISKnob
 ISMicrowaveUI = ISPanelJoypad:derive("ISMicrowaveUI")
 ISMicrowaveUI.Type = "ISMicrowaveUI"
+ISMicrowaveUI.instance = {}
 ISMicrowaveUI.messages = {}
 
 function ISMicrowaveUI:addKnobValues() end
 
 function ISMicrowaveUI:ChangeKnob() end
+
+function ISMicrowaveUI:close() end
 
 function ISMicrowaveUI:initialise() end
 

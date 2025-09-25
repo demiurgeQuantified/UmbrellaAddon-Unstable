@@ -5,7 +5,7 @@
 ---@field colBad table
 ---@field colGood table
 ---@field colWhite table
----@field craftInProgress boolean
+---@field craftInProgress number
 ---@field craftLogicComponent unknown
 ---@field elementSpacing number
 ---@field entity unknown
@@ -39,9 +39,15 @@ function ISWidgetCraftLogicOutputProgress:createDynamicChildren() end
 
 function ISWidgetCraftLogicOutputProgress:initialise() end
 
+function ISWidgetCraftLogicOutputProgress:onItemSlotContentsChanged(_itemSlot) end
+
 function ISWidgetCraftLogicOutputProgress:onResize() end
 
+function ISWidgetCraftLogicOutputProgress:onResourceSlotContentsChanged() end
+
 function ISWidgetCraftLogicOutputProgress:prerender() end
+
+function ISWidgetCraftLogicOutputProgress:rebuildOutputSlots() end
 
 function ISWidgetCraftLogicOutputProgress:render() end
 

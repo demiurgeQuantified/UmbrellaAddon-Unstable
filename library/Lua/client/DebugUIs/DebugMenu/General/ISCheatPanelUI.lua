@@ -9,6 +9,15 @@ ISCheatPanelUI = ISPanel:derive("ISCheatPanelUI")
 ISCheatPanelUI.Type = "ISCheatPanelUI"
 ISCheatPanelUI.instance = nil ---@type ISCheatPanelUI?
 ISCheatPanelUI.cheatTooltips = {} ---@type table<string, string>
+ISCheatPanelUI.OptionList = {}
+ISCheatPanelUI.OptionById = {}
+
+---@param id string
+---@param xln string
+---@param functionGet function
+---@param functionSet function
+---@return table
+function ISCheatPanelUI.AddOption(id, xln, functionGet, functionSet) end
 
 function ISCheatPanelUI.EnableCheats() end
 
@@ -34,6 +43,8 @@ function ISCheatPanelUI:onTicked(index, selected) end
 function ISCheatPanelUI:prerender() end
 
 function ISCheatPanelUI:render() end
+
+function ISCheatPanelUI:saveOptions() end
 
 ---@param x number
 ---@param y number

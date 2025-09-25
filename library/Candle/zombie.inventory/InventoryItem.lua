@@ -16,6 +16,11 @@ function InventoryItem.RemoveFromContainer(arg0) end
 
 --- @public
 --- @static
+--- @return string
+function InventoryItem.getNoRecipesModDataString() end
+
+--- @public
+--- @static
 --- @param input ByteBuffer
 --- @param WorldVersion integer
 --- @return InventoryItem
@@ -175,6 +180,11 @@ function InventoryItem:UseItem() end
 function InventoryItem:addExtraItem(type) end
 
 --- @public
+--- @param arg0 ItemKey
+--- @return nil
+function InventoryItem:addExtraItem(arg0) end
+
+--- @public
 --- @return boolean
 function InventoryItem:allowRandomTint() end
 
@@ -310,6 +320,10 @@ function InventoryItem:doBuildingStash() end
 --- @public
 --- @return nil
 function InventoryItem:doDamagedSound() end
+
+--- @public
+--- @return InventoryItem
+function InventoryItem:emptyLiquid() end
 
 --- @public
 --- @return boolean
@@ -911,6 +925,11 @@ function InventoryItem:getModule() end
 function InventoryItem:getName() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return string
+function InventoryItem:getName(arg0) end
+
+--- @public
 --- @return IsoDirections # the newPlaceDir
 function InventoryItem:getNewPlaceDir() end
 
@@ -929,6 +948,10 @@ function InventoryItem:getOffString() end
 --- @public
 --- @return string
 function InventoryItem:getOnBreak() end
+
+--- @public
+--- @return string
+function InventoryItem:getOpeningRecipe() end
 
 --- @public
 --- @return integer
@@ -1321,6 +1344,16 @@ function InventoryItem:getY() end
 function InventoryItem:getZ() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function InventoryItem:hasBeenHeard(arg0) end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function InventoryItem:hasBeenSeen(arg0) end
+
+--- @public
 --- @return boolean
 function InventoryItem:hasBlood() end
 
@@ -1360,6 +1393,11 @@ function InventoryItem:hasResearchableRecipes() end
 --- @public
 --- @return boolean
 function InventoryItem:hasSharpness() end
+
+--- @public
+--- @param arg0 ItemTag[]
+--- @return boolean
+function InventoryItem:hasTag(arg0) end
 
 --- @public
 --- @param tag string
@@ -1405,6 +1443,11 @@ function InventoryItem:headConditionCheck(arg0, arg1, arg2) end
 function InventoryItem:headConditionCheck(arg0, arg1, arg2, arg3) end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function InventoryItem:incrementCondition(arg0) end
+
+--- @public
 --- @param arg0 InventoryItem
 --- @return nil
 function InventoryItem:inheritFoodAgeFrom(arg0) end
@@ -1419,6 +1462,11 @@ function InventoryItem:inheritOlderFoodAge(arg0) end
 function InventoryItem:initialiseItem() end
 
 --- @public
+--- @param arg0 ItemKey[]
+--- @return boolean
+function InventoryItem:is(arg0) end
+
+--- @public
 --- @return boolean
 function InventoryItem:isActivated() end
 
@@ -1429,6 +1477,10 @@ function InventoryItem:isAlcoholic() end
 --- @public
 --- @return boolean # the AlwaysWelcomeGift
 function InventoryItem:isAlwaysWelcomeGift() end
+
+--- @public
+--- @return boolean
+function InventoryItem:isAnimalCorpse() end
 
 --- @public
 --- @return boolean
@@ -1546,11 +1598,19 @@ function InventoryItem:isFood() end
 
 --- @public
 --- @return boolean
+function InventoryItem:isForceDropHeavyItem() end
+
+--- @public
+--- @return boolean
 function InventoryItem:isFullOfFluid() end
 
 --- @public
 --- @return boolean
 function InventoryItem:isHidden() end
+
+--- @public
+--- @return boolean
+function InventoryItem:isHumanCorpse() end
 
 --- @public
 --- @return boolean
@@ -1585,6 +1645,11 @@ function InventoryItem:isKeyRing() end
 function InventoryItem:isMemento() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function InventoryItem:isNoRecipes(arg0) end
+
+--- @public
 --- @return boolean
 function InventoryItem:isProtectFromRainWhileEquipped() end
 
@@ -1607,6 +1672,10 @@ function InventoryItem:isRequiresEquippedBothHands() end
 
 --- @public
 --- @return boolean
+function InventoryItem:isSealed() end
+
+--- @public
+--- @return boolean
 function InventoryItem:isSpice() end
 
 --- @public
@@ -1620,6 +1689,11 @@ function InventoryItem:isTrap() end
 --- @public
 --- @return boolean
 function InventoryItem:isTwoHandWeapon() end
+
+--- @public
+--- @param arg0 IsoPlayer
+--- @return boolean
+function InventoryItem:isUnwanted(arg0) end
 
 --- @public
 --- @return boolean
@@ -2250,6 +2324,12 @@ function InventoryItem:setName(name) end
 function InventoryItem:setNewPlaceDir(newPlaceDir) end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @param arg1 boolean
+--- @return nil
+function InventoryItem:setNoRecipes(arg0, arg1) end
+
+--- @public
 --- @param OffAge integer the OffAge to set
 --- @return nil
 function InventoryItem:setOffAge(OffAge) end
@@ -2403,6 +2483,11 @@ function InventoryItem:setStashMap(stashMap) end
 function InventoryItem:setStaticModel(arg0) end
 
 --- @public
+--- @param arg0 ModelKey
+--- @return nil
+function InventoryItem:setStaticModel(arg0) end
+
+--- @public
 --- @param arg0 ArrayList
 --- @return nil
 function InventoryItem:setStaticModelsByIndex(arg0) end
@@ -2493,6 +2578,12 @@ function InventoryItem:setUnCookedString(UnCookedString) end
 function InventoryItem:setUnhappyChange(unhappyChange) end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @param arg1 boolean
+--- @return nil
+function InventoryItem:setUnwanted(arg0, arg1) end
+
+--- @public
 --- @param uses integer the uses to set
 --- @return nil
 --- @deprecated
@@ -2550,6 +2641,11 @@ function InventoryItem:setWorldStaticItem(arg0) end
 
 --- @public
 --- @param arg0 string
+--- @return nil
+function InventoryItem:setWorldStaticModel(arg0) end
+
+--- @public
+--- @param arg0 ModelKey
 --- @return nil
 function InventoryItem:setWorldStaticModel(arg0) end
 

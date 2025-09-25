@@ -24,9 +24,17 @@ function IsoGameCharacter.calculateShadowParams(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 ItemContainer
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ItemContainer
 --- @return boolean
-function IsoGameCharacter.canContainerHoldCorpse(arg0) end
+function IsoGameCharacter.canDropCorpseInto(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 IsoGameCharacter
+--- @param arg1 ItemContainer
+--- @return boolean
+function IsoGameCharacter.canGrabCorpseFrom(arg0, arg1) end
 
 --- @public
 --- @static
@@ -52,6 +60,11 @@ function IsoGameCharacter.getTempo() end
 --- @static
 --- @return Vector2
 function IsoGameCharacter.getTempo2() end
+
+--- @public
+--- @static
+--- @return integer
+function IsoGameCharacter.getWeightAsCorpse() end
 
 ------------------------------------
 ------------- METHODS --------------
@@ -1174,6 +1187,11 @@ function IsoGameCharacter:calculateGrappleEffectivenessFromTraits() end
 function IsoGameCharacter:calculateShadowParams(arg0) end
 
 --- @public
+--- @param arg0 ItemContainer
+--- @return boolean
+function IsoGameCharacter:canAccessContainer(arg0) end
+
+--- @public
 --- @return boolean
 function IsoGameCharacter:canBeGrappled() end
 
@@ -1257,6 +1275,11 @@ function IsoGameCharacter:changeState(state) end
 --- @param state State
 --- @return nil
 function IsoGameCharacter:changeState(state) end
+
+--- @public
+--- @param arg0 ICallback
+--- @return boolean
+function IsoGameCharacter:checkCurrentAction(arg0) end
 
 --- @public
 --- @return boolean
@@ -1979,19 +2002,44 @@ function IsoGameCharacter:getClothingItem_Torso() end
 function IsoGameCharacter:getClothingWetness() end
 
 --- @public
+--- @param arg0 ItemContainer
+--- @return string
+function IsoGameCharacter:getContainerToolTip(arg0) end
+
+--- @public
 --- @return ArrayList
 function IsoGameCharacter:getContainers() end
 
 --- @public
---- @param arg0 Predicate
---- @return PZArrayList
-function IsoGameCharacter:getContextWorldContainers(arg0) end
-
---- @public
---- @param arg0 Predicate
---- @param arg1 PZArrayList
+--- @param arg0 any
+--- @param arg1 ICallback
 --- @return PZArrayList
 function IsoGameCharacter:getContextWorldContainers(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 PZArrayList
+--- @return PZArrayList
+function IsoGameCharacter:getContextWorldContainers(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 IsoObject[]
+--- @param arg1 any
+--- @param arg2 ICallback
+--- @param arg3 PZArrayList
+--- @return PZArrayList
+function IsoGameCharacter:getContextWorldContainersInObjects(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 IsoObject[]
+--- @return PZArrayList
+function IsoGameCharacter:getContextWorldContainersWithHumanCorpse(arg0) end
+
+--- @public
+--- @param arg0 IsoObject[]
+--- @return PZArrayList
+function IsoGameCharacter:getContextWorldSuitableContainersToDropCorpseInObjects(arg0) end
 
 --- @public
 --- @return number
@@ -2113,10 +2161,6 @@ function IsoGameCharacter:getDirectionAngle() end
 --- @public
 --- @return number
 function IsoGameCharacter:getDirectionAngleRadians() end
-
---- @public
---- @return boolean
-function IsoGameCharacter:getDoRender() end
 
 --- @public
 --- @param bonePos Vector3
@@ -2249,11 +2293,11 @@ function IsoGameCharacter:getGameCharacterAIBrain() end
 function IsoGameCharacter:getGameVariables() end
 
 --- @public
---- @return IAnimationVariableSource
+--- @return AnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
---- @return AnimationVariableSource
+--- @return IAnimationVariableSource
 function IsoGameCharacter:getGameVariablesInternal() end
 
 --- @public
@@ -2946,6 +2990,10 @@ function IsoGameCharacter:getSecondaryHandType() end
 function IsoGameCharacter:getSeeNearbyCharacterDistance() end
 
 --- @public
+--- @return number
+function IsoGameCharacter:getSharedGrappleAnimFraction() end
+
+--- @public
 --- @return string
 function IsoGameCharacter:getSharedGrappleAnimNode() end
 
@@ -3054,6 +3102,10 @@ function IsoGameCharacter:getStateMachine() end
 function IsoGameCharacter:getStateMachineParams(state) end
 
 --- @public
+--- @return string
+function IsoGameCharacter:getStatisticsDebug() end
+
+--- @public
 --- @return Stats # the stats
 function IsoGameCharacter:getStats() end
 
@@ -3074,6 +3126,28 @@ function IsoGameCharacter:getSuitableContainersToDropCorpse() end
 --- @param arg0 PZArrayList
 --- @return PZArrayList
 function IsoGameCharacter:getSuitableContainersToDropCorpse(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return PZArrayList
+function IsoGameCharacter:getSuitableContainersToDropCorpseInSquare(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 PZArrayList
+--- @return PZArrayList
+function IsoGameCharacter:getSuitableContainersToDropCorpseInSquare(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return PZArrayList
+function IsoGameCharacter:getSuitableContainersWithHumanCorpseInSquare(arg0) end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @param arg1 PZArrayList
+--- @return PZArrayList
+function IsoGameCharacter:getSuitableContainersWithHumanCorpseInSquare(arg0, arg1) end
 
 --- @public
 --- @return integer
@@ -3277,10 +3351,6 @@ function IsoGameCharacter:getWeatherHearingMultiplier() end
 
 --- @public
 --- @return number
-function IsoGameCharacter:getWeightAsCorpse() end
-
---- @public
---- @return number
 function IsoGameCharacter:getWeightMod() end
 
 --- @public
@@ -3317,11 +3387,11 @@ function IsoGameCharacter:getWornItemsVisionModifier() end
 function IsoGameCharacter:getWornItemsVisionMultiplier() end
 
 --- @public
---- @return IGrappleable
+--- @return BaseGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
---- @return BaseGrappleable
+--- @return IGrappleable
 function IsoGameCharacter:getWrappedGrappleable() end
 
 --- @public
@@ -3505,6 +3575,10 @@ function IsoGameCharacter:isActuallyAttackingWithMeleeWeapon() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isAddedToModelManager() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isAimAtFloor() end
 
 --- @public
@@ -3655,7 +3729,16 @@ function IsoGameCharacter:isCriticalHit() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isCurrentActionAllowedWhileDraggingCorpses() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isCurrentActionPathfinding() end
+
+--- @public
+--- @param arg0 State
+--- @return boolean
+function IsoGameCharacter:isCurrentGameClientState(arg0) end
 
 --- @public
 --- @param state State
@@ -3807,6 +3890,10 @@ function IsoGameCharacter:isGodMod() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isGodMod() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isGrappleThrowIntoContainer() end
 
 --- @public
 --- @return boolean
@@ -4021,10 +4108,6 @@ function IsoGameCharacter:isMovablesCheat() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isMoving() end
-
---- @public
---- @return boolean
-function IsoGameCharacter:isMuzzleFlash() end
 
 --- @public
 --- @return boolean
@@ -4248,14 +4331,6 @@ function IsoGameCharacter:isResting() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isRunning() end
-
---- @public
----
---- Is this character currently culled from the visible scene graph.  Eg. Zombies
---- seen by the player. Objects outside the rendered window etc.
----
---- @return boolean # TRUE if this character should be drawn. FALSE otherwise.
-function IsoGameCharacter:isSceneCulled() end
 
 --- @public
 --- @return boolean
@@ -4519,15 +4594,6 @@ function IsoGameCharacter:modifyTraitXPBoost(arg0, arg1) end
 function IsoGameCharacter:nearbyZombieClimbPenalty() end
 
 --- @public
----
---- Callback from ModelManager.Add/Remove functions.
----
---- @param modelManager ModelManager Event sender.
---- @param isCulled boolean Whether or not this object is culled from the visible scene or not.
---- @return nil
-function IsoGameCharacter:onCullStateChanged(modelManager, isCulled) end
-
---- @public
 --- @param arg0 HandWeapon
 --- @param arg1 IsoGameCharacter
 --- @param arg2 boolean
@@ -4600,8 +4666,9 @@ function IsoGameCharacter:pathToSound(x, y, z) end
 
 --- @public
 --- @param arg0 IsoDeadBody
+--- @param arg1 string
 --- @return nil
-function IsoGameCharacter:pickUpCorpse(arg0) end
+function IsoGameCharacter:pickUpCorpse(arg0, arg1) end
 
 --- @public
 --- @param arg0 InventoryItem
@@ -4860,6 +4927,12 @@ function IsoGameCharacter:save(output, IS_DEBUG_SAVE) end
 --- @param bb ByteBuffer
 --- @return nil
 function IsoGameCharacter:saveChange(change, tbl, bb) end
+
+--- @public
+--- @param arg0 ModelManager
+--- @param arg1 boolean
+--- @return nil
+function IsoGameCharacter:setAddedToModelManager(arg0, arg1) end
 
 --- @public
 --- @param age integer
@@ -5228,11 +5301,6 @@ function IsoGameCharacter:setDoGrapple(arg0) end
 --- @public
 --- @param arg0 boolean
 --- @return nil
-function IsoGameCharacter:setDoRender(arg0) end
-
---- @public
---- @param arg0 boolean
---- @return nil
 function IsoGameCharacter:setEditingRagdoll(arg0) end
 
 --- @public
@@ -5365,6 +5433,11 @@ function IsoGameCharacter:setGrappleResult(arg0) end
 --- @param arg0 number
 --- @return nil
 function IsoGameCharacter:setGrappleRotOffsetYaw(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setGrappleThrowIntoContainer(arg0) end
 
 --- @public
 --- @param arg0 boolean
@@ -5729,11 +5802,6 @@ function IsoGameCharacter:setMoving(val) end
 function IsoGameCharacter:setMusicIntensityEventModData(arg0, arg1) end
 
 --- @public
---- @param arg0 integer
---- @return nil
-function IsoGameCharacter:setMuzzleFlashDuration(arg0) end
-
---- @public
 --- @param newvalue boolean
 --- @return nil
 function IsoGameCharacter:setNPC(newvalue) end
@@ -6005,6 +6073,11 @@ function IsoGameCharacter:setSecondaryHandItem(rightHandItem) end
 --- @param rightHandItem InventoryItem the rightHandItem to set
 --- @return nil
 function IsoGameCharacter:setSecondaryHandItem(rightHandItem) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setSharedGrappleAnimFraction(arg0) end
 
 --- @public
 --- @param arg0 string
@@ -6646,10 +6719,6 @@ function IsoGameCharacter:startEvent(eventInstance, clip, parameterSet) end
 function IsoGameCharacter:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
---- @return nil
-function IsoGameCharacter:startMuzzleFlash() end
-
---- @public
 --- @return AnimationVariableSource
 function IsoGameCharacter:startPlaybackGameVariables() end
 
@@ -6721,12 +6790,6 @@ function IsoGameCharacter:testDotSide(target) end
 --- @param arg0 ItemContainer
 --- @return nil
 function IsoGameCharacter:throwGrappledIntoInventory(arg0) end
-
---- @public
---- @param arg0 ItemContainer
---- @param arg1 IsoDirections
---- @return nil
-function IsoGameCharacter:throwGrappledIntoInventory(arg0, arg1) end
 
 --- @public
 --- @param arg0 IsoObject

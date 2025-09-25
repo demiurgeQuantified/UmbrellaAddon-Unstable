@@ -176,6 +176,21 @@ ISCarMechanicsOverlay.CarList = {
 		x = 10,
 		y = 0,
 	},
+	["Base.RaceCar12"] = {
+		imgPrefix = "racecar_",
+		x = 10,
+		y = 0,
+	},
+	["Base.RaceCar34"] = {
+		imgPrefix = "racecar_",
+		x = 10,
+		y = 0,
+	},
+	["Base.RaceCar58"] = {
+		imgPrefix = "racecar_",
+		x = 10,
+		y = 0,
+	},
 	["Base.Van"] = {
 		imgPrefix = "van_",
 		x = 10,

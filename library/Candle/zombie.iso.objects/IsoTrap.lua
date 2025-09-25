@@ -54,11 +54,15 @@ function IsoTrap:getExtraDamage() end
 
 --- @public
 --- @return integer
-function IsoTrap:getFirePower() end
+function IsoTrap:getFireRange() end
 
 --- @public
 --- @return integer
-function IsoTrap:getFireRange() end
+function IsoTrap:getFireStartingChance() end
+
+--- @public
+--- @return integer
+function IsoTrap:getFireStartingEnergy() end
 
 --- @public
 --- @return HandWeapon
@@ -175,14 +179,19 @@ function IsoTrap:setExplosionSound(explosionSound) end
 function IsoTrap:setExtraDamage(extraDamage) end
 
 --- @public
---- @param firePower integer
---- @return nil
-function IsoTrap:setFirePower(firePower) end
-
---- @public
 --- @param fireRange integer
 --- @return nil
 function IsoTrap:setFireRange(fireRange) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoTrap:setFireStartingChance(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoTrap:setFireStartingEnergy(arg0) end
 
 --- @public
 --- @param arg0 boolean

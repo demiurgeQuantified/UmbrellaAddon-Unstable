@@ -2,7 +2,6 @@
 
 --- @class UITextBox2: UIElement, UITextEntryInterface
 --- @field public class any
---- @field public ConsoleHasFocus boolean
 UITextBox2 = {}
 
 ------------------------------------
@@ -85,6 +84,10 @@ function UITextBox2:getMaxLines() end
 --- @public
 --- @return integer
 function UITextBox2:getMaxTextLength() end
+
+--- @public
+--- @return string
+function UITextBox2:getPlaceholderText() end
 
 --- @public
 --- @return Color
@@ -434,6 +437,24 @@ function UITextBox2:setOnlyNumbers(onlyNumbers) end
 --- @param arg0 boolean
 --- @return nil
 function UITextBox2:setOnlyText(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function UITextBox2:setPlaceholderText(arg0) end
+
+--- @public
+--- @param arg0 ColorInfo
+--- @return nil
+function UITextBox2:setPlaceholderTextColor(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
+function UITextBox2:setPlaceholderTextRGBA(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param b boolean

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ISSitOnGround : ISBaseTimedAction
+---@field bed unknown
 ---@field useProgressBar boolean
 ISSitOnGround = ISBaseTimedAction:derive("ISSitOnGround")
 ISSitOnGround.Type = "ISSitOnGround"

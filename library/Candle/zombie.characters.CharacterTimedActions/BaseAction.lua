@@ -71,6 +71,10 @@ function BaseAction:hasStalled() end
 
 --- @public
 --- @return boolean
+function BaseAction:isAllowedWhileDraggingCorpses() end
+
+--- @public
+--- @return boolean
 function BaseAction:isForceComplete() end
 
 --- @public
@@ -110,6 +114,11 @@ function BaseAction:setActionAnim(animNode) end
 --- @param act CharacterActionAnims
 --- @return nil
 function BaseAction:setActionAnim(act) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function BaseAction:setAllowedWhileDraggingCorpses(arg0) end
 
 --- @public
 --- @param key string

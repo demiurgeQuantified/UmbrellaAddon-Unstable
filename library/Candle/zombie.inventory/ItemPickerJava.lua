@@ -129,6 +129,12 @@ function ItemPickerJava.getItemPickerContainers() end
 
 --- @public
 --- @static
+--- @param arg0 IsoObject
+--- @return string
+function ItemPickerJava.getLootDebugString(arg0) end
+
+--- @public
+--- @static
 --- @param itemname string
 --- @return number
 function ItemPickerJava.getLootModifier(itemname) end
@@ -176,6 +182,19 @@ function ItemPickerJava.getSquareZombiesType(arg0) end
 --- @param arg1 ItemContainer
 --- @return number
 function ItemPickerJava.getZombieDensityFactor(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @param arg1 string
+--- @return boolean
+function ItemPickerJava.hasDistributionForContainerInRoom(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return boolean
+function ItemPickerJava.hasDistributionForRoom(arg0) end
 
 --- @public
 --- @static

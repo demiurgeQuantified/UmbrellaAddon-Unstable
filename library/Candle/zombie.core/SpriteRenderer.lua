@@ -87,6 +87,13 @@ function SpriteRenderer:ShaderUpdate4f(shaderID, uniform, value1, value2, value3
 function SpriteRenderer:StartShader(iD, playerIndex) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 ShaderUniformSetter
+--- @return nil
+function SpriteRenderer:StartShader(arg0, arg1, arg2) end
+
+--- @public
 --- @param waitCallback BooleanSupplier
 --- @return SpriteRenderState
 function SpriteRenderer:acquireStateForRendering(waitCallback) end

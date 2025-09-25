@@ -76,8 +76,9 @@ function InputScript:doesItemPassIsOrNotEmptyAndFullTests(arg0) end
 
 --- @public
 --- @param arg0 InventoryItem
+--- @param arg1 IsoGameCharacter
 --- @return boolean
-function InputScript:doesItemPassRoutineStatusTests(arg0) end
+function InputScript:doesItemPassRoutineStatusTests(arg0, arg1) end
 
 --- @public
 --- @param arg0 InventoryItem
@@ -115,6 +116,14 @@ function InputScript:getCreateToItemScript() end
 function InputScript:getFluidMatchMode() end
 
 --- @public
+--- @return string
+function InputScript:getInputFluidFilterDisplayName() end
+
+--- @public
+--- @return string
+function InputScript:getInputFluidFilterTooltip() end
+
+--- @public
 --- @return integer
 function InputScript:getIntAmount() end
 
@@ -129,8 +138,36 @@ function InputScript:getIntAmount(arg0) end
 function InputScript:getIntAmount(arg0) end
 
 --- @public
+--- @return integer
+function InputScript:getIntMaxAmount() end
+
+--- @public
+--- @param arg0 integer
+--- @return integer
+function InputScript:getIntMaxAmount(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return integer
+function InputScript:getIntMaxAmount(arg0) end
+
+--- @public
 --- @return ItemApplyMode
 function InputScript:getItemApplyMode() end
+
+--- @public
+--- @return number
+function InputScript:getMaxAmount() end
+
+--- @public
+--- @param arg0 integer
+--- @return number
+function InputScript:getMaxAmount(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return number
+function InputScript:getMaxAmount(arg0) end
 
 --- @public
 --- @return string
@@ -367,6 +404,10 @@ function InputScript:isUsesPartialItem(arg0) end
 
 --- @public
 --- @return boolean
+function InputScript:isVariableAmount() end
+
+--- @public
+--- @return boolean
 function InputScript:isWholeFoodItem() end
 
 --- @public
@@ -416,6 +457,11 @@ function InputScript:passesFrozenTest(arg0) end
 --- @param arg0 InventoryItem
 --- @return boolean
 function InputScript:passesRottenTest(arg0) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+function InputScript:passesSealedTest(arg0) end
 
 --- @public
 --- @return boolean

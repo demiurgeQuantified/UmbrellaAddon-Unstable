@@ -760,6 +760,14 @@ function UIElement:isKeyConsumed(key) end
 
 --- @public
 --- @return boolean
+function UIElement:isModalVisible() end
+
+--- @public
+--- @return boolean
+function UIElement:isModalVisible() end
+
+--- @public
+--- @return boolean
 function UIElement:isMouseOver() end
 
 --- @public

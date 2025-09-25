@@ -6,6 +6,7 @@
 ---@field fromHotbar boolean
 ---@field item InventoryItem
 ---@field sound integer?
+---@field soundNoTrigger boolean
 ISWearClothing = ISBaseTimedAction:derive("ISWearClothing")
 ISWearClothing.Type = "ISWearClothing"
 

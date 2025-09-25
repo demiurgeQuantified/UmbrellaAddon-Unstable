@@ -98,6 +98,10 @@ function TilesetDepthTexture:mergeTileset(arg0) end
 
 --- @public
 --- @return nil
+function TilesetDepthTexture:recalculateShadowDepth() end
+
+--- @public
+--- @return nil
 function TilesetDepthTexture:reload() end
 
 --- @public

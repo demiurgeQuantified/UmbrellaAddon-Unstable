@@ -30,10 +30,10 @@ function IsoBuilding:CalculateWindows() end
 function IsoBuilding:ContainsAllItems(items) end
 
 --- @public
---- @param building BuildingDef
---- @param info LotHeader
+--- @param arg0 BuildingDef
+--- @param arg1 IsoMetaCell
 --- @return nil
-function IsoBuilding:CreateFrom(building, info) end
+function IsoBuilding:CreateFrom(arg0, arg1) end
 
 --- @public
 --- @return nil

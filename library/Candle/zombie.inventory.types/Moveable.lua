@@ -63,6 +63,11 @@ function Moveable:getMovableFullName() end
 function Moveable:getName() end
 
 --- @public
+--- @param arg0 IsoPlayer
+--- @return string
+function Moveable:getName(arg0) end
+
+--- @public
 --- @return integer
 function Moveable:getSaveType() end
 

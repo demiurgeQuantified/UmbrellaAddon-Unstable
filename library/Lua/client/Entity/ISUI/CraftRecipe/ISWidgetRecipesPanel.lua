@@ -7,6 +7,8 @@
 ---@field callbackTarget unknown?
 ---@field expandToFitTooltip boolean
 ---@field logic BaseCraftingLogic
+---@field needFilterCombo boolean
+---@field needSortCombo boolean
 ---@field player IsoPlayer
 ---@field recipeFilterPanel ISWidgetRecipeFilterPanel
 ---@field recipeFilterPanelRow ISTableLayoutRow
@@ -16,6 +18,7 @@
 ---@field recipeListPanel ISWidgetRecipeListPanel
 ---@field recipeListPanelRow ISTableLayoutRow
 ---@field recipeTable ISTableLayout
+---@field showFilterByOutputItem boolean
 ---@field starSetTexture Texture
 ---@field starUnsetTexture Texture
 ---@field tooltipCounter number

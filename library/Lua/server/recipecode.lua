@@ -8,178 +8,19 @@ Recipe.OnCreate = nil ---@type Recipe.OnCreate
 Recipe.OnGiveXP = nil ---@type Recipe.OnGiveXP
 Recipe.OnTest = nil ---@type Recipe.OnTest
 Recipe.WeaponParts = nil ---@type Recipe.WeaponParts
-Recipe.MysteryCans = {
-	"Base.CannedBologneseOpen",
-	"Base.CannedCarrotsOpen",
-	"Base.CannedChiliOpen",
-	"Base.CannedCornOpen",
-	"Base.CannedFruitCocktailOpen",
-	"Base.CannedPeachesOpen",
-	"Base.CannedPeasOpen",
-	"Base.CannedPineappleOpen",
-	"Base.CannedPotatoOpen",
-	"Base.CannedTomatoOpen",
-	"Base.DogfoodOpen",
-	"Base.OpenBeans",
-}
-Recipe.ScratchTicketWinnings = {
-	"$1",
-	"$2",
-	"$5",
-	"$10",
-	"$20",
-	"$50",
-	"$100",
-	"$500",
-	"$1000",
-	"$5000",
-	"$10000",
-}
-Recipe.LowerBodyClothing = {
-	"Underwear",
-	"UnderwearBottom",
-	"UnderwearTop",
-	"UnderwearExtra1",
-	"UnderwearExtra2",
-	"Torso1Legs1",
-	"Calf_Left_Texture",
-	"Calf_Right_Texture",
-	"Socks",
-	"Legs1",
-	"Shoes",
-	"Codpiece",
-	"ShortsShort",
-	"ShortPants",
-	"Pants",
-	"Skirt",
-	"Dress",
-	"LongSkirt",
-	"LongDress",
-	"BodyCostume",
-	"FullSuit",
-	"Boilersuit",
-	"FullSuitHead",
-	"FullSuitHeadSCBA",
-	"Knee_Left",
-	"Knee_Right",
-	"Calf_Left",
-	"Calf_Right",
-	"Thigh_Left",
-	"Thigh_Right",
-}
-Recipe.JewelTable = {
-	Necklace_GoldRuby = {
-		bonusItem = "Base.Necklace_Gold",
-	},
-	Necklace_GoldDiamond = {
-		bonusItem = "Base.Necklace_Gold",
-	},
-	Necklace_SilverSapphire = {
-		bonusItem = "Base.Necklace_Silver",
-	},
-	Necklace_SilverDiamond = {
-		bonusItem = "Base.Necklace_Silver",
-	},
-	NecklaceLong_GoldDiamond = {
-		bonusItem = "Base.NecklaceLong_Gold",
-	},
-	NecklaceLong_SilverEmerald = {
-		bonusItem = "Base.NecklaceLong_Silver",
-	},
-	NecklaceLong_SilverSapphire = {
-		bonusItem = "Base.NecklaceLong_Silver",
-	},
-	NecklaceLong_SilverDiamond = {
-		bonusItem = "Base.NecklaceLong_Silver",
-	},
-	Necklace_Choker_Sapphire = {
-		bonusItem = "Base.Necklace_Choker",
-	},
-	Necklace_Choker_Diamond = {
-		bonusItem = "Base.Necklace_Choker",
-	},
-	Earring_Stone_Sapphire = {
-		bonusGems = true,
-	},
-	Earring_Stone_Emerald = {
-		bonusGems = true,
-	},
-	Earring_Stone_Ruby = {
-		bonusGems = true,
-	},
-	Earring_Dangly_Sapphire = {
-		bonusGems = true,
-	},
-	Earring_Dangly_Emerald = {
-		bonusGems = true,
-	},
-	Earring_Dangly_Ruby = {
-		bonusGems = true,
-	},
-	Earring_Dangly_Diamond = {
-		bonusGems = true,
-	},
-	Ring_Right_MiddleFinger_SilverDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Silver",
-	},
-	Ring_Left_MiddleFinger_SilverDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Silver",
-	},
-	Ring_Right_RingFinger_SilverDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Silver",
-	},
-	Ring_Left_RingFinger_SilverDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Silver",
-	},
-	Ring_Right_MiddleFinger_GoldRuby = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Left_MiddleFinger_GoldRuby = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Right_RingFinger_GoldRuby = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Left_RingFinger_GoldRuby = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Right_MiddleFinger_GoldDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Left_MiddleFinger_GoldDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Right_RingFinger_GoldDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	Ring_Left_RingFinger_GoldDiamond = {
-		bonusItem = "Base.Ring_Left_RingFinger_Gold",
-	},
-	BellyButton_DangleGoldRuby = {
-		bonusItem = "Base.BellyButton_DangleGold",
-	},
-	BellyButton_DangleSilverDiamond = {
-		bonusItem = "Base.BellyButton_DangleSilver",
-	},
-	BellyButton_RingGoldDiamond = {
-		bonusItem = "Base.BellyButton_RingGold",
-	},
-	BellyButton_RingGoldRuby = {
-		bonusItem = "Base.BellyButton_RingGold",
-	},
-	BellyButton_SilverDiamond = {
-		bonusItem = "Base.BellyButton_RingSilver",
-	},
-	BellyButton_SilverRuby = {
-		bonusItem = "Base.BellyButton_RingSilver",
-	},
-	BellyButton_StudGoldDiamond = {
-		bonusItem = "Base.BellyButton_StudGold",
-	},
-	BellyButton_StudSilverDiamond = {
-		bonusItem = "Base.BellyButton_StudSilver",
-	},
-}
+Recipe.MysteryCans = nil ---@type unknown
+Recipe.ScratchTicketWinnings = nil ---@type unknown
+Recipe.LowerBodyClothing = nil ---@type unknown
+Recipe.JewelTable = nil ---@type unknown
+
+---@class Recipe.WeaponParts
+local __recipe_WeaponParts = {}
+
+---@param character IsoPlayer
+---@param weapon HandWeapon
+---@param weaponPart WeaponPart
+---@return boolean
+function __recipe_WeaponParts.hasScrewdriver(character, weapon, weaponPart) end
 
 ---@class Recipe.OnCreate
 local __recipe_OnCreate = {}
@@ -386,8 +227,6 @@ function __recipe_OnCreate.GetCookies(craftRecipeData, character) end
 ---@param character IsoPlayer
 function __recipe_OnCreate.GetMuffin(craftRecipeData, character) end
 
-function __recipe_OnCreate.HarvestRoe(craftRecipeData, character) end
-
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.HollowBook(craftRecipeData, character) end
@@ -424,21 +263,13 @@ function __recipe_OnCreate.Make4Bowls(craftRecipeData, character) end
 ---@param character IsoPlayer
 function __recipe_OnCreate.MakeBlunt(craftRecipeData, character) end
 
-function __recipe_OnCreate.MakeCoffee(craftRecipeData, character) end
-
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.MakeCooked(craftRecipeData, character) end
 
-function __recipe_OnCreate.MakeMilkFromPowder(craftRecipeData, character) end
-
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.MakeOatmeal(craftRecipeData, character) end
-
-function __recipe_OnCreate.MakeOmelette(craftRecipeData, character) end
-
-function __recipe_OnCreate.MakeSushi(craftRecipeData, character) end
 
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
@@ -463,6 +294,8 @@ function __recipe_OnCreate.MinorKnapping(craftRecipeData, character) end
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.MinorMasonry(craftRecipeData, character) end
+
+function __recipe_OnCreate.OpenAndEat(craftRecipeData, character) end
 
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
@@ -504,8 +337,6 @@ function __recipe_OnCreate.OpenMysteryCan(craftRecipeData, character) end
 ---@param character IsoPlayer
 function __recipe_OnCreate.OpenMysteryCanKnife(craftRecipeData, character) end
 
-function __recipe_OnCreate.OpenRoeJar(craftRecipeData, character) end
-
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.OpenSackProduce(craftRecipeData, character) end
@@ -525,8 +356,6 @@ function __recipe_OnCreate.OxygenTankAttach(craftRecipeData, character) end
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.OxygenTankRemoval(craftRecipeData, character) end
-
-function __recipe_OnCreate.PickAramidThread(craftRecipeData, character) end
 
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
@@ -579,8 +408,6 @@ function __recipe_OnCreate.RepairBladeWithGrindstone(craftRecipeData, player) en
 ---@param character IsoPlayer
 function __recipe_OnCreate.RipClothing(craftRecipeData, character) end
 
-function __recipe_OnCreate.RoeJar(craftRecipeData, character) end
-
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.Roll3d6(craftRecipeData, character) end
@@ -608,8 +435,6 @@ function __recipe_OnCreate.ScratchTicket(craftRecipeData, character) end
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.SetEcruColor(craftRecipeData, character) end
-
-function __recipe_OnCreate.SewHideJacket(craftRecipeData, character) end
 
 ---@param craftRecipeData CraftRecipeData
 function __recipe_OnCreate.SharpenBlade(craftRecipeData, player) end
@@ -660,18 +485,6 @@ function __recipe_OnCreate.SliceWatermelon(craftRecipeData, character) end
 ---@param character IsoPlayer
 function __recipe_OnCreate.SlightlyMoreDurable(craftRecipeData, character) end
 
-function __recipe_OnCreate.SmeltIronOrSteel(craftRecipeData, add) end
-
-function __recipe_OnCreate.SmeltIronOrSteelIngot(craftRecipeData) end
-
-function __recipe_OnCreate.SmeltIronOrSteelLarge(craftRecipeData) end
-
-function __recipe_OnCreate.SmeltIronOrSteelMedium(craftRecipeData) end
-
-function __recipe_OnCreate.SmeltIronOrSteelMediumPlus(craftRecipeData) end
-
-function __recipe_OnCreate.SmeltIronOrSteelSmall(craftRecipeData) end
-
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.SpikedBat(craftRecipeData, character) end
@@ -711,6 +524,13 @@ function __recipe_OnCreate.WashClothing(craftRecipeData, character) end
 ---@param craftRecipeData CraftRecipeData
 ---@param character IsoPlayer
 function __recipe_OnCreate.WornGasmaskFilterInsert(craftRecipeData, character) end
+
+---@class OnBreak
+OnBreak = {}
+
+function OnBreak.SpearBone(item, player) end
+
+function OnBreak.SpearBoneLong(item, player) end
 
 ---@class Recipe.GetItemTypes
 local __recipe_GetItemTypes = {}
@@ -819,9 +639,6 @@ function __recipe_OnTest.HotFluidContainer(item) end
 ---@return boolean
 function __recipe_OnTest.IsFull(sourceItem) end
 
----@return boolean?
-function __recipe_OnTest.MakeMilkFromPowder(sourceItem) end
-
 ---@param item InventoryItem
 ---@param result unknown?
 ---@return boolean
@@ -901,24 +718,6 @@ function __recipe_OnTest.ScratchTicket(sourceItem, result) end
 ---@param result unknown?
 ---@return boolean
 function __recipe_OnTest.SliceBreadDough(sourceItem, result) end
-
----@return boolean
-function __recipe_OnTest.SmeltIronOrSteel(craftRecipeData, add) end
-
----@return boolean
-function __recipe_OnTest.SmeltIronOrSteelIngot(craftRecipeData) end
-
----@return boolean
-function __recipe_OnTest.SmeltIronOrSteelLarge(craftRecipeData) end
-
----@return boolean
-function __recipe_OnTest.SmeltIronOrSteelMedium(craftRecipeData) end
-
----@return boolean
-function __recipe_OnTest.SmeltIronOrSteelMediumPlus(craftRecipeData) end
-
----@return boolean
-function __recipe_OnTest.SmeltIronOrSteelSmall(craftRecipeData) end
 
 ---@param item InventoryItem
 ---@return boolean
@@ -1024,15 +823,6 @@ function __recipe_OnCanPerform.SlicePizza(recipe, playerObj, item) end
 ---@param item InventoryItem
 ---@return boolean
 function __recipe_OnCanPerform.Uncooked(recipe, playerObj, item) end
-
----@class Recipe.WeaponParts
-local __recipe_WeaponParts = {}
-
----@param character IsoPlayer
----@param weapon HandWeapon
----@param weaponPart WeaponPart
----@return boolean
-function __recipe_WeaponParts.hasScrewdriver(character, weapon, weaponPart) end
 
 ---@param result unknown?
 function BSItem_OnCreate(items, result, player) end

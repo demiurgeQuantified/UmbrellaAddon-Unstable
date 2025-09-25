@@ -88,6 +88,13 @@ function IsoMetaGrid:getAssociatedBuildingAt(arg0, arg1) end
 function IsoMetaGrid:getBuildingAt(x, y) end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return BuildingDef
+function IsoMetaGrid:getBuildingAt(arg0, arg1, arg2) end
+
+--- @public
 --- @param x integer
 --- @param y integer
 --- @return BuildingDef
@@ -207,6 +214,10 @@ function IsoMetaGrid:getRandomRoomBetweenRange(x, y, min, max) end
 function IsoMetaGrid:getRandomRoomNotInRange(x, y, range) end
 
 --- @public
+--- @return ArrayList
+function IsoMetaGrid:getRemovedBuildings() end
+
+--- @public
 --- @param x integer
 --- @param y integer
 --- @param z integer
@@ -217,6 +228,11 @@ function IsoMetaGrid:getRoomAt(x, y, z) end
 --- @param arg0 integer
 --- @return IsoRoom
 function IsoMetaGrid:getRoomByID(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return RoomDef
+function IsoMetaGrid:getRoomDefByID(arg0) end
 
 --- @public
 --- @param x integer
@@ -380,6 +396,12 @@ function IsoMetaGrid:processZones() end
 function IsoMetaGrid:registerAnimalZone(arg0) end
 
 --- @public
+--- @param arg0 AnimalZone
+--- @param arg1 boolean
+--- @return Zone
+function IsoMetaGrid:registerAnimalZone(arg0, arg1) end
+
+--- @public
 --- @param arg0 string
 --- @param arg1 string
 --- @param arg2 integer
@@ -490,6 +512,21 @@ function IsoMetaGrid:registerZone(name, type, x, y, z, width, height, geometryTy
 --- @return Zone
 --- @deprecated
 function IsoMetaGrid:registerZoneNoOverlap(name, type, x, y, z, width, height) end
+
+--- @public
+--- @param arg0 BuildingDef
+--- @return nil
+function IsoMetaGrid:removeRoomsFromAdjacentCells(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 integer
+--- @param arg5 integer
+--- @return nil
+function IsoMetaGrid:removeRoomsFromAdjacentCells(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
 --- @param zone Zone

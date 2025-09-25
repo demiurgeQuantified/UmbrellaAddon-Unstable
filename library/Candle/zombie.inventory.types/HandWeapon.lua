@@ -200,10 +200,6 @@ function HandWeapon:getBloodLevel() end
 function HandWeapon:getBulletOutSound() end
 
 --- @public
---- @return ArrayList
-function HandWeapon:getCategories() end
-
---- @public
 --- @return string
 function HandWeapon:getCategory() end
 
@@ -225,11 +221,11 @@ function HandWeapon:getContentsWeight() end
 
 --- @public
 --- @return number
-function HandWeapon:getCritDmgMultiplier() end
+function HandWeapon:getCriticalChance() end
 
 --- @public
 --- @return number
-function HandWeapon:getCriticalChance() end
+function HandWeapon:getCriticalDamageMultiplier() end
 
 --- @public
 --- @return number
@@ -260,6 +256,10 @@ function HandWeapon:getDoorDamage() end
 --- @public
 --- @return string # the doorHitSound
 function HandWeapon:getDoorHitSound() end
+
+--- @public
+--- @return number
+function HandWeapon:getEffectiveWeight() end
 
 --- @public
 --- @return string
@@ -312,11 +312,15 @@ function HandWeapon:getFireModePossibilities() end
 
 --- @public
 --- @return integer
-function HandWeapon:getFirePower() end
+function HandWeapon:getFireRange() end
 
 --- @public
 --- @return integer
-function HandWeapon:getFireRange() end
+function HandWeapon:getFireStartingChance() end
+
+--- @public
+--- @return integer
+function HandWeapon:getFireStartingEnergy() end
 
 --- @public
 --- @return integer
@@ -433,6 +437,10 @@ function HandWeapon:getMinimumSwingTime() end
 --- @public
 --- @return ArrayList
 function HandWeapon:getModelWeaponPart() end
+
+--- @public
+--- @return ModelKey
+function HandWeapon:getMuzzleFlashModelKey() end
 
 --- @public
 --- @return integer
@@ -614,6 +622,10 @@ function HandWeapon:getTreeDamage() end
 function HandWeapon:getTriggerExplosionTimer() end
 
 --- @public
+--- @return ArrayList
+function HandWeapon:getWeaponCategories() end
+
+--- @public
 --- @param type string
 --- @return WeaponPart
 function HandWeapon:getWeaponPart(type) end
@@ -773,10 +785,6 @@ function HandWeapon:isRoundChambered() end
 function HandWeapon:isSelectFire() end
 
 --- @public
---- @return boolean # the shareDamage
-function HandWeapon:isShareDamage() end
-
---- @public
 --- @return boolean # the shareEndurance
 function HandWeapon:isShareEndurance() end
 
@@ -810,6 +818,10 @@ function HandWeapon:load(input, WorldVersion) end
 --- @param arg0 IsoGameCharacter
 --- @return number
 function HandWeapon:muscleStrainMod(arg0) end
+
+--- @public
+--- @return boolean
+function HandWeapon:needToBeClosedOnceReload() end
 
 --- @public
 --- @return integer
@@ -938,11 +950,6 @@ function HandWeapon:setCanBeReused(canBeReused) end
 function HandWeapon:setCantAttackWithLowestEndurance(CantAttackWithLowestEndurance) end
 
 --- @public
---- @param categories ArrayList
---- @return nil
-function HandWeapon:setCategories(categories) end
-
---- @public
 --- @param clickSound string
 --- @return nil
 function HandWeapon:setClickSound(clickSound) end
@@ -963,14 +970,14 @@ function HandWeapon:setConditionLowerChance(ConditionLowerChance) end
 function HandWeapon:setContainsClip(containsClip) end
 
 --- @public
---- @param critDmgMultiplier number
---- @return nil
-function HandWeapon:setCritDmgMultiplier(critDmgMultiplier) end
-
---- @public
 --- @param criticalChance number
 --- @return nil
 function HandWeapon:setCriticalChance(criticalChance) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function HandWeapon:setCriticalDamageMultiplier(arg0) end
 
 --- @public
 --- @param arg0 number
@@ -1043,14 +1050,19 @@ function HandWeapon:setFireMode(fireMode) end
 function HandWeapon:setFireModePossibilities(fireModePossibilities) end
 
 --- @public
---- @param firePower integer
---- @return nil
-function HandWeapon:setFirePower(firePower) end
-
---- @public
 --- @param fireRange integer
 --- @return nil
 function HandWeapon:setFireRange(fireRange) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function HandWeapon:setFireStartingChance(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function HandWeapon:setFireStartingEnergy(arg0) end
 
 --- @public
 --- @param haveChamber boolean
@@ -1168,6 +1180,11 @@ function HandWeapon:setModelWeaponPart(modelWeaponPart) end
 function HandWeapon:setMultipleHitConditionAffected(MultipleHitConditionAffected) end
 
 --- @public
+--- @param arg0 ModelKey
+--- @return nil
+function HandWeapon:setMuzzleFlashModelKey(arg0) end
+
+--- @public
 --- @param noiseFactor number the noiseFactor to set
 --- @return nil
 function HandWeapon:setNoiseFactor(noiseFactor) end
@@ -1278,11 +1295,6 @@ function HandWeapon:setScriptItem(arg0) end
 function HandWeapon:setSensorRange(sensorRange) end
 
 --- @public
---- @param shareDamage boolean the shareDamage to set
---- @return nil
-function HandWeapon:setShareDamage(shareDamage) end
-
---- @public
 --- @param shareEndurance boolean the shareEndurance to set
 --- @return nil
 function HandWeapon:setShareEndurance(shareEndurance) end
@@ -1371,6 +1383,11 @@ function HandWeapon:setUseEndurance(useEndurance) end
 --- @param useSelf boolean the useSelf to set
 --- @return nil
 function HandWeapon:setUseSelf(useSelf) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return nil
+function HandWeapon:setWeaponCategories(arg0) end
 
 --- @public
 --- @param weaponLength number

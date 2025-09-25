@@ -44,7 +44,7 @@ return {
 	MetaEvent = 2,
 	SleepingEvent = 1,
 	GeneratorSpawning = 4,
-	GeneratorFuelConsumption = 1.0,
+	GeneratorFuelConsumption = 0.1,
 	SurvivorHouseChance = 3, ---@type number
 	VehicleStoryChance = 3, ---@type number
 	ZoneStoryChance = 3,

@@ -49,11 +49,12 @@ function ResourceBlueprint.Serialize(arg0) end
 --- @param arg1 ResourceType
 --- @param arg2 ResourceIO
 --- @param arg3 number
---- @param arg4 string
---- @param arg5 ResourceChannel
---- @param arg6 EnumBitStore
+--- @param arg4 boolean
+--- @param arg5 string
+--- @param arg6 ResourceChannel
+--- @param arg7 EnumBitStore
 --- @return string
-function ResourceBlueprint.Serialize(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ResourceBlueprint.Serialize(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
 --- @static
@@ -109,3 +110,7 @@ function ResourceBlueprint:getType() end
 --- @param arg0 ResourceFlag
 --- @return boolean
 function ResourceBlueprint:hasFlag(arg0) end
+
+--- @public
+--- @return boolean
+function ResourceBlueprint:isStackAnyItem() end

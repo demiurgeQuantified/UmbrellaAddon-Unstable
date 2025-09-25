@@ -14,6 +14,7 @@
 ---@field healthSliderTitle ISLabel
 ---@field heightOffset ISTextEntryBox
 ---@field heightOffsetLbl ISLabel
+---@field isShiftDown boolean
 ---@field maleOutfits ArrayList<string>
 ---@field marker WorldMarkers.GridSquareMarker?
 ---@field outfit ISComboBox

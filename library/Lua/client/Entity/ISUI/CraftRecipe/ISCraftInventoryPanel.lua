@@ -16,8 +16,10 @@
 ---@field logic HandcraftLogic
 ---@field margin number
 ---@field player IsoPlayer
+---@field previousSelected unknown
 ---@field selectedItem umbrella.ISCraftInventoryPanel.ListItem
 ---@field showCurrentContents boolean
+---@field unavailableFluidsExpanded boolean
 ---@field unavailablesExpanded boolean
 ISCraftInventoryPanel = ISPanel:derive("ISCraftInventoryPanel")
 ISCraftInventoryPanel.Type = "ISCraftInventoryPanel"
@@ -45,6 +47,9 @@ function ISCraftInventoryPanel:createListItemEntry(_node, _inventoryItem, _index
 ---@return umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:createListItemNode(_node, _isUsedItems) end
 
+---@return table
+function ISCraftInventoryPanel:createUnavailableListFluidEntry(_fluid, _index) end
+
 ---@param _item Item
 ---@param _index integer
 ---@return umbrella.ISCraftInventoryPanel.ListItem
@@ -57,6 +62,8 @@ function ISCraftInventoryPanel:createUnavailableListItemEntry(_item, _index) end
 function ISCraftInventoryPanel:drawListItem(y, item, alt) end
 
 function ISCraftInventoryPanel:initialise() end
+
+function ISCraftInventoryPanel:onListDoubleClick(_item) end
 
 function ISCraftInventoryPanel:onListItemClicked(_item) end
 

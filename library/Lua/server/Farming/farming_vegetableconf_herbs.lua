@@ -465,12 +465,10 @@ farming_vegetableconf.props.Leek = {
 	badMonth = {
 		12,
 		1,
-		2,
 		10,
 		11,
 	},
 	sowMonth = {
-		2,
 		3,
 		4,
 		5,
@@ -507,12 +505,10 @@ farming_vegetableconf.props.LemonGrass = {
 	badMonth = {
 		12,
 		1,
-		2,
 		10,
 		11,
 	},
 	sowMonth = {
-		2,
 		3,
 		4,
 		5,
@@ -764,12 +760,10 @@ farming_vegetableconf.props.Rosemary = {
 	badMonth = {
 		12,
 		1,
-		2,
 		10,
 		11,
 	},
 	sowMonth = {
-		2,
 		3,
 		4,
 		5,

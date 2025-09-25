@@ -1,12 +1,17 @@
 ---@meta
 
 ---@class ISItemSlotAddAction : ISBaseTimedAction
+---@field canAddItem unknown?
 ---@field entity IsoObject
 ---@field item InventoryItem
 ---@field itemSlot ISItemSlot?
 ---@field resource Resource
+---@field sound unknown
 ISItemSlotAddAction = ISBaseTimedAction:derive("ISItemSlotAddAction")
 ISItemSlotAddAction.Type = "ISItemSlotAddAction"
+
+---@return boolean
+function ISItemSlotAddAction:canStart() end
 
 ---@return boolean
 function ISItemSlotAddAction:complete() end
@@ -22,6 +27,8 @@ function ISItemSlotAddAction:perform() end
 function ISItemSlotAddAction:start() end
 
 function ISItemSlotAddAction:stop() end
+
+function ISItemSlotAddAction:stopSound() end
 
 function ISItemSlotAddAction:update() end
 

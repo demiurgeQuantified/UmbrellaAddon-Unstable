@@ -7,21 +7,27 @@
 ---@field hasClosedWindowInstance boolean
 ---@field isoObject IsoObject?
 ---@field isoObjectInProximity boolean
+---@field lockButton ISButton
+---@field locked boolean
+---@field lockedButtonTexture unknown
 ---@field maximumHeight number
 ---@field maximumHeightPercent number
 ---@field maximumWidth number
+---@field originalSquare unknown
 ---@field overrideBPrompt boolean
 ---@field panelCloseDistance number
 ---@field player IsoPlayer
 ---@field playerNum integer
 ---@field queryOverride string?
 ---@field title unknown?
+---@field unlockedButtonTexture unknown
 ---@field windowHeader ISHandcraftWindowHeader?
 ---@field xuiPreferredResizeHeight number
 ---@field xuiPreferredResizeWidth number
 ---@field xuiResizeAnchorRight boolean
 ISHandcraftWindow = ISCollapsableWindow:derive("ISHandcraftWindow")
 ISHandcraftWindow.Type = "ISHandcraftWindow"
+ISHandcraftWindow.autoCloseDistance = 1.5
 
 ---@param _preferredWidth number?
 ---@param _preferredHeight number?
@@ -64,6 +70,8 @@ function ISHandcraftWindow:prerender() end
 function ISHandcraftWindow:render() end
 
 function ISHandcraftWindow:stayOnSplitScreen() end
+
+function ISHandcraftWindow:toggleLock() end
 
 ---@return (boolean | IsoPlayer)?
 function ISHandcraftWindow:update() end

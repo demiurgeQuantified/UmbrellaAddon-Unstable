@@ -361,6 +361,8 @@ function SpecialLootSpawns.OnCreateRecentNewspaper(item) end
 ---@param item InventoryItem
 function SpecialLootSpawns.OnCreateRecipeClipping(item) end
 
+function SpecialLootSpawns.OnCreateRecipeMagazine(item) end
+
 ---@param item InventoryItem
 function SpecialLootSpawns.OnCreateRelationshipBook(item) end
 

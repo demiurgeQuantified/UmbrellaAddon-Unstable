@@ -4,6 +4,7 @@
 ---@field enabledModsTickbox ISTickBox
 ---@field favoriteButton ISButton
 ---@field filterCombo ISComboBox
+---@field filterPanel ISPanelJoypad
 ---@field isFavoriteMode boolean
 ---@field joypadFocused boolean?
 ---@field joypadListFocus boolean

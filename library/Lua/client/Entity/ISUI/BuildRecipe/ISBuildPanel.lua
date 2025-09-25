@@ -2,6 +2,7 @@
 
 ---@class ISBuildPanel : ISPanel
 ---@field _categoryString string?
+---@field _filterMode unknown
 ---@field _filterString string?
 ---@field buildEntity ISBuildIsoEntity?
 ---@field categoryColumn ISTableLayoutColumn
@@ -21,6 +22,7 @@
 ---@field recipeQuery string?
 ---@field recipesPanel ISWidgetRecipesPanel
 ---@field rootTable ISTableLayout?
+---@field windowInstance unknown?
 ISBuildPanel = ISPanel:derive("ISBuildPanel")
 ISBuildPanel.Type = "ISBuildPanel"
 ISBuildPanel.drawDirty = nil ---@type boolean?
@@ -64,8 +66,12 @@ function ISBuildPanel:initialise() end
 ---@param _category string
 function ISBuildPanel:onCategoryChanged(_category) end
 
+function ISBuildPanel:OnCloseWindow() end
+
 ---@param item CraftRecipe
 function ISBuildPanel:onDoubleClick(item) end
+
+function ISBuildPanel:onManualSelectChanged(_manualSelectInputs) end
 
 ---@param _recipe CraftRecipe
 function ISBuildPanel:onRecipeChanged(_recipe) end
@@ -109,6 +115,8 @@ function ISBuildPanel:sortRecipeList() end
 function ISBuildPanel:update() end
 
 function ISBuildPanel:updateContainers() end
+
+function ISBuildPanel:updateManualInputs() end
 
 ---@param x number
 ---@param y number

@@ -1,6 +1,6 @@
 --- @meta _
 
---- @class IsoObject: GameEntity, Serializable, ILuaIsoObject, Thumpable
+--- @class IsoObject: GameEntity, Serializable, ILuaIsoObject, Thumpable, IsoRenderable
 --- @field public class any
 --- @field public bmod number
 --- @field public fireColor ColorInfo
@@ -536,6 +536,13 @@ function IsoObject:getContainerCount() end
 function IsoObject:getContainerIndex(container) end
 
 --- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 PZArrayList
+--- @return PZArrayList
+function IsoObject:getContainers(arg0, arg1, arg2) end
+
+--- @public
 --- @return Texture
 function IsoObject:getCurrentFrameTex() end
 
@@ -550,6 +557,14 @@ function IsoObject:getDamage() end
 --- @public
 --- @return IsoDirections # the dir
 function IsoObject:getDir() end
+
+--- @public
+--- @return boolean
+function IsoObject:getDoRender() end
+
+--- @public
+--- @return boolean
+function IsoObject:getDoRender() end
 
 --- @public
 --- @return integer
@@ -1145,6 +1160,14 @@ function IsoObject:isSatChair() end
 
 --- @public
 --- @return boolean
+function IsoObject:isSceneCulled() end
+
+--- @public
+--- @return boolean
+function IsoObject:isSceneCulled() end
+
+--- @public
+--- @return boolean
 function IsoObject:isSpriteInvisible() end
 
 --- @public
@@ -1158,6 +1181,10 @@ function IsoObject:isStairsObject() end
 --- @public
 --- @return boolean
 function IsoObject:isStairsWest() end
+
+--- @public
+--- @return boolean
+function IsoObject:isStump() end
 
 --- @public
 --- @return boolean
@@ -1285,6 +1312,17 @@ function IsoObject:removeRenderEffect(o) end
 --- @param player IsoPlayer
 --- @return boolean
 function IsoObject:removeSheetRope(player) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param col ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
+--- @return nil
+function IsoObject:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @param x number
@@ -1539,6 +1577,16 @@ function IsoObject:setDir(dir) end
 --- @param dir IsoDirections the dir to set
 --- @return nil
 function IsoObject:setDir(dir) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setDoRender(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setDoRender(arg0) end
 
 --- @public
 --- @param arg0 boolean
@@ -1817,6 +1865,16 @@ function IsoObject:setRerouteMask(rerouteMask) end
 --- @param arg0 boolean
 --- @return nil
 function IsoObject:setSatChair(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setSceneCulled(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setSceneCulled(arg0) end
 
 --- @public
 --- @param specialTooltip boolean

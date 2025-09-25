@@ -921,26 +921,6 @@ function IsoGridSquare:disableErosion() end
 function IsoGridSquare:discard() end
 
 --- @public
---- @param radius integer
---- @param trap IsoTrap
---- @param explosionMode ExplosionMode
---- @return nil
-function IsoGridSquare:drawCircleExplosion(radius, trap, explosionMode) end
-
---- @public
---- @return nil
-function IsoGridSquare:explode() end
-
---- @public
---- @return nil
-function IsoGridSquare:explodeTrap() end
-
---- @public
---- @param trap IsoTrap
---- @return nil
-function IsoGridSquare:explosion(trap) end
-
---- @public
 --- @return nil
 function IsoGridSquare:fixPlacedItemRenderOffsets() end
 
@@ -959,17 +939,19 @@ function IsoGridSquare:getAdjacentPathSquare(dir) end
 function IsoGridSquare:getAdjacentSquare(dir) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 PZArrayList
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 PZArrayList
 --- @return PZArrayList
-function IsoGridSquare:getAllContainers(arg0, arg1) end
+function IsoGridSquare:getAllContainers(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 IsoDirections
---- @param arg1 Predicate
---- @param arg2 PZArrayList
+--- @param arg1 any
+--- @param arg2 ICallback
+--- @param arg3 PZArrayList
 --- @return PZArrayList
-function IsoGridSquare:getAllContainersFromAdjacentSquare(arg0, arg1, arg2) end
+function IsoGridSquare:getAllContainersFromAdjacentSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @return IsoAnimalTrack
@@ -1322,10 +1304,11 @@ function IsoGridSquare:getN() end
 function IsoGridSquare:getNextNonItemObjectIndex(arg0) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 PZArrayList
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 PZArrayList
 --- @return PZArrayList
-function IsoGridSquare:getObjectContainers(arg0, arg1) end
+function IsoGridSquare:getObjectContainers(arg0, arg1, arg2) end
 
 --- @public
 --- @return PZArrayList # the Objects
@@ -1388,6 +1371,11 @@ function IsoGridSquare:getPuddlesDir() end
 --- @public
 --- @return number
 function IsoGridSquare:getPuddlesInGround() end
+
+--- @public
+--- @param arg0 integer
+--- @return List
+function IsoGridSquare:getRadius(arg0) end
 
 --- @public
 --- @return IsoRaindrop
@@ -1566,15 +1554,17 @@ function IsoGridSquare:getTree() end
 function IsoGridSquare:getVehicleContainer() end
 
 --- @public
---- @param arg0 Predicate
---- @return PZArrayList
-function IsoGridSquare:getVehicleItemContainers(arg0) end
-
---- @public
---- @param arg0 Predicate
---- @param arg1 PZArrayList
+--- @param arg0 any
+--- @param arg1 ICallback
 --- @return PZArrayList
 function IsoGridSquare:getVehicleItemContainers(arg0, arg1) end
+
+--- @public
+--- @param arg0 any
+--- @param arg1 ICallback
+--- @param arg2 PZArrayList
+--- @return PZArrayList
+function IsoGridSquare:getVehicleItemContainers(arg0, arg1, arg2) end
 
 --- @public
 --- @param i integer
@@ -2620,10 +2610,6 @@ function IsoGridSquare:shouldSave() end
 
 --- @public
 --- @return nil
-function IsoGridSquare:smoke() end
-
---- @public
---- @return nil
 function IsoGridSquare:softClear() end
 
 --- @public
@@ -2751,6 +2737,14 @@ function IsoGridSquare:transmitStopFire() end
 --- @param arg2 number
 --- @return IsoDeadBody
 function IsoGridSquare:tryAddCorpseToWorld(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 boolean
+--- @return IsoDeadBody
+function IsoGridSquare:tryAddCorpseToWorld(arg0, arg1, arg2, arg3) end
 
 ------------------------------------
 ----------- CONSTRUCTORS -----------

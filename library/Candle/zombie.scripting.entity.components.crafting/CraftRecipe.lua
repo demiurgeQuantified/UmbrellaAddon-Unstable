@@ -240,6 +240,11 @@ function CraftRecipe:getHighestRelevantSkill(arg0) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
+--- @return Perk
+function CraftRecipe:getHighestRelevantSkillFromXpAward(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
 --- @return integer
 function CraftRecipe:getHighestRelevantSkillLevel(arg0) end
 
@@ -444,6 +449,11 @@ function CraftRecipe:hasRecipeAtHand(arg0, arg1) end
 
 --- @public
 --- @param arg0 string
+--- @return boolean
+function CraftRecipe:hasTag(arg0) end
+
+--- @public
+--- @param arg0 CraftRecipeTag
 --- @return boolean
 function CraftRecipe:hasTag(arg0) end
 

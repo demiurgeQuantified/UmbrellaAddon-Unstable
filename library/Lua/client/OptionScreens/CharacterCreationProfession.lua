@@ -14,6 +14,7 @@
 ---@field infoRichText ISModalRichText?
 ---@field inputModal ISTextBox
 ---@field itemheightoverride table<string, number>
+---@field joypadNavigate table
 ---@field listboxBadTrait ISScrollingListBox
 ---@field listboxProf ISScrollingListBox
 ---@field listboxTrait ISScrollingListBox
@@ -131,6 +132,12 @@ function CharacterCreationProfession:onJoypadDirRight(joypadData) end
 
 ---@param joypadData JoypadData
 function CharacterCreationProfession:onJoypadDirUp(joypadData) end
+
+function CharacterCreationProfession:onJoypadNavigateStart(joypadData) end
+
+function CharacterCreationProfession:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+function CharacterCreationProfession:onKeyRelease(key) end
 
 ---@param joypadData JoypadData
 function CharacterCreationProfession:onLoseJoypadFocus(joypadData) end
