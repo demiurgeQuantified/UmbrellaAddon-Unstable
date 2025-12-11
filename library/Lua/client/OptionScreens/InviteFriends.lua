@@ -50,7 +50,7 @@ function InviteFriends:onGainJoypadFocus(joypadData) end
 ---@param self ISScrollingListBox
 ---@param x number
 ---@param y number
-function InviteFriends:onMouseDown_ListBox(self, x, y) end
+function InviteFriends:onMouseDown_ListBox(x, y) end
 
 ---@param button ISButton
 ---@param x number

@@ -19,10 +19,12 @@ function ISLootWindowFloorControlHandler_TakeSameType:getItemsTable(container) e
 ---@return table
 function ISLootWindowFloorControlHandler_TakeSameType:getItemsToTransfer() end
 
+---@param button ISButton
 ---@param dx number
 ---@param dy number
 function ISLootWindowFloorControlHandler_TakeSameType:onMouseOutButton(button, dx, dy) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ISLootWindowFloorControlHandler_TakeSameType:onMouseOverButton(button, x, y) end

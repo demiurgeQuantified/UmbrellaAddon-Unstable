@@ -8,10 +8,10 @@ ISBuildingRoomsEditor_ToolAddBuilding.Type = "ISBuildingRoomsEditor_ToolAddBuild
 ---@return string
 function ISBuildingRoomsEditor_ToolAddBuilding:getAPrompt() end
 
----@return unknown?
+---@return string?
 function ISBuildingRoomsEditor_ToolAddBuilding:getLBPrompt() end
 
----@return unknown?
+---@return string?
 function ISBuildingRoomsEditor_ToolAddBuilding:getRBPrompt() end
 
 ---@param editor ISBuildingRoomsEditor

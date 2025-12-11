@@ -42,7 +42,7 @@ function ISSpawnHordeUI:close() end
 
 function ISSpawnHordeUI:createChildren() end
 
----@return number?
+---@return number
 function ISSpawnHordeUI:getHeightOffset() end
 
 ---@return string?

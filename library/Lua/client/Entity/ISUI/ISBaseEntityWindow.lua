@@ -4,7 +4,7 @@
 ---@field dirtyLayout boolean
 ---@field enableHeader boolean
 ---@field entity GameEntity
----@field entityHeader unknown?
+---@field entityHeader ISWidgetEntityHeader?
 ---@field entityUiStyle XuiSkin.EntityUiStyle
 ---@field hasClosedWindowInstance boolean
 ---@field maximumHeight number

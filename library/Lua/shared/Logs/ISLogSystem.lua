@@ -10,7 +10,7 @@ ISLogSystem.steamID = nil ---@type string?
 function ISLogSystem.getGenericLogText(_character, _actionType) end
 
 ---@param _object IsoObject
----@return string?
+---@return string
 function ISLogSystem.getObjectPosition(_object) end
 
 function ISLogSystem.init() end

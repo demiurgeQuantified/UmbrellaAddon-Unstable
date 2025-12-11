@@ -339,6 +339,5 @@ function AnimationClipViewer_Timeline:new(x, y, width, height) end
 ---@field enabled boolean
 ---@field eventInstance integer?
 ---@field fraction number
-umbrella_AnimationClipViewer_Sound = {}
 
 function AnimationViewerState_InitUI() end

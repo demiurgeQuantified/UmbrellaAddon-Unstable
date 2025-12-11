@@ -17,7 +17,7 @@ function RWMPower:clear() end
 
 function RWMPower:createChildren() end
 
----@return string?
+---@return string
 function RWMPower:getAPrompt() end
 
 ---@return string?

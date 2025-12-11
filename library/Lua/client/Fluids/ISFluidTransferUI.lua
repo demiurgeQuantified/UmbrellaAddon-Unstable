@@ -15,7 +15,7 @@
 ---@field errorText string
 ---@field fluidTitleLabel ISLabel
 ---@field fluidTitleText string
----@field fromPreviousOwner unknown?
+---@field fromPreviousOwner (ItemContainer | IsoGridSquare)?
 ---@field info umbrella.ISFluidTransferUI.InfoTable
 ---@field isIsoPanel boolean
 ---@field maxTransferLabel ISLabel
@@ -33,7 +33,7 @@
 ---@field source boolean
 ---@field titleLabel ISLabel
 ---@field titleText string
----@field toPreviousOwner unknown?
+---@field toPreviousOwner (ItemContainer | IsoGridSquare)?
 ---@field transferColor umbrella.RGBA
 ---@field transferringLabel ISLabel
 ---@field transferringText string
@@ -128,10 +128,8 @@ function ISFluidTransferUI:new(x, y, width, height, _player, _container, source)
 ---@class umbrella.ISFluidTransferUI.InfoTable
 ---@field maxTransfer number
 ---@field transferring number
-umbrella_ISFluidTransferUI_InfoTable = {}
 
 ---@class umbrella.ISFluidTransferUI.PlayerTableItem
 ---@field instance ISFluidTransferUI
 ---@field x number
 ---@field y number
-umbrella_ISFluidTransferUI_PlayerTableItem = {}

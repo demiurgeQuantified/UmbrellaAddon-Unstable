@@ -57,4 +57,3 @@ function __ISMenuContextWorld.tableContains(_table, _item) end
 ---@field playerRoom IsoRoom?
 ---@field squares IsoGridSquare[]
 ---@field test boolean?
-umbrella_WorldMenuContextData = {}

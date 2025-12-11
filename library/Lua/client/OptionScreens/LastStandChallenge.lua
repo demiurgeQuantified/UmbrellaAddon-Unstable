@@ -22,12 +22,10 @@ LastStandChallenge = {}
 ---@field z integer
 ---@field zombiesMaxPerChunk integer?
 ---@field zombiesMinPerChunk integer?
-umbrella_LastStandChallenge_BaseChallenge = {}
 
 ---@class umbrella.LastStandChallenge.Challenge : umbrella.LastStandChallenge.BaseChallenge
 ---@field description string
 ---@field name string
-umbrella_LastStandChallenge_Challenge = {}
 
 ---@param challenge umbrella.LastStandChallenge.BaseChallenge
 function addChallenge(challenge) end

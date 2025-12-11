@@ -48,12 +48,12 @@ function ISCraftingCategoryUI:onFilterAll(index, selected) end
 ---@param self ISScrollingListBox
 ---@param x number
 ---@param y number
-function ISCraftingCategoryUI:onMouseDoubleClick_Recipes(self, x, y) end
+function ISCraftingCategoryUI:onMouseDoubleClick_Recipes(x, y) end
 
 ---@param self ISScrollingListBox
 ---@param x number
 ---@param y number
-function ISCraftingCategoryUI:onMouseDown_Recipes(self, x, y) end
+function ISCraftingCategoryUI:onMouseDown_Recipes(x, y) end
 
 function ISCraftingCategoryUI:prerender() end
 

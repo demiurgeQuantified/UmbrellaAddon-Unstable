@@ -124,13 +124,3 @@ forageSystem.defaultDefinitions = {
 		testFuncs = {},
 	},
 }
-
----@class forageDefaultDefs
-forageDefaultDefs = {}
-forageDefaultDefs.defaultItemDef = nil ---@type unknown
-forageDefaultDefs.defaultZoneDef = nil ---@type unknown
-forageDefaultDefs.defaultCatDef = nil ---@type unknown
-forageDefaultDefs.defaultSkillDef = nil ---@type unknown
-
----@class forageDefs
-forageDefs = {}

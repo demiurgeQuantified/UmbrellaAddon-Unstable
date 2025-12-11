@@ -18,19 +18,22 @@
 ---@field onCompleteTarget unknown?
 ---@field onStartFunc umbrella.ISHandcraftAction.OnStart?
 ---@field onStartTarget unknown?
----@field recipeItem unknown
+---@field recipeItem InventoryItem?
 ---@field sound integer?
 ---@field variableInputRatio number
 ISHandcraftAction = ISBaseTimedAction:derive("ISHandcraftAction")
 ISHandcraftAction.Type = "ISHandcraftAction"
 
 ---@param handcraftLogic HandcraftLogic
+---@param eatPercentage number?
 ---@return ISHandcraftAction
-function ISHandcraftAction.FromLogic(handcraftLogic) end
+function ISHandcraftAction.FromLogic(handcraftLogic, eatPercentage) end
 
 ---@param handcraftLogic HandcraftLogic
 ---@return ISHandcraftAction
 function ISHandcraftAction.FromLogicMultiple(handcraftLogic) end
+
+function ISHandcraftAction:animEvent(event, parameter) end
 
 ---@param bSetJobType boolean
 function ISHandcraftAction:clearItemsProgressBar(bSetJobType) end
@@ -66,6 +69,8 @@ function ISHandcraftAction:start() end
 
 function ISHandcraftAction:stop() end
 
+function ISHandcraftAction:stopSound() end
+
 function ISHandcraftAction:update() end
 
 ---@param character IsoPlayer
@@ -75,5 +80,20 @@ function ISHandcraftAction:update() end
 ---@param craftBench CraftBench
 ---@param manualInputs (table<integer, ArrayList<InventoryItem>> | false)?
 ---@param items ArrayList<InventoryItem>?
+---@param recipeItem InventoryItem?
+---@param variableInputRatio number?
+---@param eatPercentage number?
 ---@return ISHandcraftAction
-function ISHandcraftAction:new(character, craftRecipe, containers, isoObject, craftBench, manualInputs, items) end
+function ISHandcraftAction:new(
+	character,
+	craftRecipe,
+	containers,
+	isoObject,
+	craftBench,
+	manualInputs,
+	items,
+	recipeItem,
+	variableInputRatio,
+	eatPercentage
+)
+end

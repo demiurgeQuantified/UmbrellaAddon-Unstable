@@ -94,6 +94,8 @@ function __vehicles_Create.GasTank(vehicle, part) end
 ---@param part VehiclePart
 function __vehicles_Create.Headlight(vehicle, part) end
 
+function __vehicles_Create.Headlight_Racecar(vehicle, part) end
+
 ---@param vehicle BaseVehicle
 ---@param part VehiclePart
 function __vehicles_Create.Radio(vehicle, part) end
@@ -101,6 +103,10 @@ function __vehicles_Create.Radio(vehicle, part) end
 ---@param vehicle BaseVehicle
 ---@param part VehiclePart
 function __vehicles_Create.Radio_HAM(vehicle, part) end
+
+function __vehicles_Create.Radio_Racecar(vehicle, part) end
+
+function __vehicles_Create.Seat_Racecar(vehicle, part) end
 
 ---@param vehicle BaseVehicle
 ---@param part VehiclePart
@@ -379,10 +385,13 @@ function VehicleUtils.getItems(playerNum) end
 ---@return umbrella.VehicleUtils.ScriptResult
 function VehicleUtils.getItemScripts(items) end
 
+---@param perks string
 ---@param chr IsoPlayer
 ---@return table<string, integer>
 function VehicleUtils.getPerksTableForChr(perks, chr) end
 
+---@param vehicle BaseVehicle
+---@param part VehiclePart
 function VehicleUtils.initHeadlight(vehicle, part) end
 
 ---@param part VehiclePart
@@ -457,15 +466,12 @@ function VehicleUtils.UninstallPart(part, chr) end
 ---@class umbrella.VehicleUtils.Item
 ---@field tags string?
 ---@field type string
-umbrella_VehicleUtils_Item = {}
 
 ---@class umbrella.VehicleUtils.Script
 ---@field script Item?
 ---@field unknownTag string?
 ---@field unknownType string?
-umbrella_VehicleUtils_Script = {}
 
 ---@class umbrella.VehicleUtils.ScriptResult
 ---@field item umbrella.VehicleUtils.Item
 ---@field scripts umbrella.VehicleUtils.Script[]
-umbrella_VehicleUtils_ScriptResult = {}

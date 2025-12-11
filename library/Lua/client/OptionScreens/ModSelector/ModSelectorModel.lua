@@ -103,12 +103,10 @@ ModSelector.Model = nil ---@type ModSelector.Model
 ---@class umbrella.ModSelector.RequirementsTable
 ---@field dependsOn table<string, boolean>
 ---@field neededFor table<string, boolean>
-umbrella_ModSelector_RequirementsTable = {}
 
 ---@class umbrella.ModSelector.FinalizedData
 ---@field modID string
 ---@field modInfo ChooseGameInfo.Mod
-umbrella_ModSelector_FinalizedData = {}
 
 ---@class umbrella.ModSelector.ModData
 ---@field category string
@@ -118,4 +116,3 @@ umbrella_ModSelector_FinalizedData = {}
 ---@field modId string
 ---@field modInfo ChooseGameInfo.Mod
 ---@field name string
-umbrella_ModSelector_ModData = {}

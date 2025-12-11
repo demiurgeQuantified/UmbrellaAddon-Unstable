@@ -16,6 +16,7 @@
 ---@field character IsoPlayer
 ---@field currentTimestamp number
 ---@field darkVisionRadius number
+---@field distanceSnapshot number
 ---@field distanceToPlayer number
 ---@field expandView number
 ---@field expandViewStep number
@@ -55,7 +56,6 @@
 ---@field onMouseDoubleClick function
 ---@field onSquareDistance number
 ---@field perkLevel number
----@field pinAlpha number
 ---@field pinOffset number
 ---@field player integer
 ---@field posChanges number
@@ -305,7 +305,6 @@ function ISBaseIcon:new(_manager, _icon) end
 ---@field x number
 ---@field y number
 ---@field z number
-umbrella_Foraging_BaseIconData = {}
 
 ---@class umbrella.Foraging.Modifiers
 ---@field body number
@@ -320,21 +319,17 @@ umbrella_Foraging_BaseIconData = {}
 ---@field size number
 ---@field traitBonus number
 ---@field weather number
-umbrella_Foraging_Modifiers = {}
 
 ---@class umbrella.Foraging.IconData : umbrella.Foraging.BaseIconData
 ---@field itemObj InventoryItem
 ---@field zoneid string
-umbrella_Foraging_IconData = {}
 
 ---@class umbrella.Foraging.WorldIconData : umbrella.Foraging.BaseIconData
 ---@field canRollForSearchFocus boolean
 ---@field isTrack boolean
 ---@field itemObj InventoryItem
 ---@field itemObjTable table<InventoryItem, InventoryItem>
-umbrella_Foraging_WorldIconData = {}
 
 ---@class umbrella.Foraging.ZoneIconData : umbrella.Foraging.BaseIconData
 ---@field catName string
 ---@field zoneid string
-umbrella_Foraging_ZoneIconData = {}

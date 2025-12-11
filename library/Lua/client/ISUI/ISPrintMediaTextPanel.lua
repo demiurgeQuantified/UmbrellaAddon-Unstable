@@ -118,4 +118,3 @@ function ISPrintMediaMap:new(x, y, width, height) end
 ---@field w number
 ---@field x number
 ---@field y number
-umbrella_ISPrintMediaTextPanel_MapInfo = {}

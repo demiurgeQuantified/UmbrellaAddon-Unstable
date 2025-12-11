@@ -22,4 +22,3 @@ function SurvivalGuideEntries.getEntryCount() end
 ---@field moreInfo string
 ---@field text string
 ---@field title string
-umbrella_SurvivalGuide_Entry = {}

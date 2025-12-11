@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_StoveToggle.Type = "ISLootWindowObjectControlHa
 ---@return unknown
 function ISLootWindowObjectControlHandler_StoveToggle:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_StoveToggle:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_StoveToggle:perform() end

@@ -690,18 +690,14 @@ function MusicChoices.getAmbient(drama) end
 ---@class umbrella.MusicChoices.Choice
 ---@field file string
 ---@field scores umbrella.MusicChoices.Scores
-umbrella_MusicChoices_Choice = {}
 
 ---@class umbrella.MusicChoices.Scores
 ---@field bias integer
 ---@field drama integer
-umbrella_MusicChoices_Scores = {}
 
 ---@class umbrella.MusicChoices.AmbientChoice : umbrella.MusicChoices.Choice
 ---@field file string
 ---@field scores umbrella.MusicChoices.AmbientScores
-umbrella_MusicChoices_AmbientChoice = {}
 
 ---@class umbrella.MusicChoices.AmbientScores
 ---@field drama integer
-umbrella_MusicChoices_AmbientScores = {}

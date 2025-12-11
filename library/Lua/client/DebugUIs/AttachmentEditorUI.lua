@@ -486,6 +486,5 @@ function AttachmentEditorUI_EditAttachment:new(x, y, width, height, editor) end
 ---@class umbrella.AttachmentEditorUI.EditUI
 ---@field attachments AttachmentEditorUI_EditAttachment
 ---@field current AttachmentEditorUI_EditPanel?
-umbrella_AttachmentEditorUI_EditUI = {}
 
 function AttachmentEditorState_InitUI() end

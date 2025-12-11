@@ -43,6 +43,66 @@ function DebugChunkStateUI_ObjPropsHandler:startHighlightArea(userData) end
 ---@return DebugChunkStateUI_ObjPropsHandler
 function DebugChunkStateUI_ObjPropsHandler:new(x, y, width, height, gameState) end
 
+---@class DebugChunkState_ObjectProperties.OPH_render : DebugChunkStateUI_ObjPropsHandler
+---@field object IsoObject?
+local __debugChunkState_ObjectProperties_OPH_render =
+	DebugChunkStateUI_ObjPropsHandler:derive("DebugChunkStateUI_OPH_render")
+__debugChunkState_ObjectProperties_OPH_render.Type = "DebugChunkStateUI_OPH_render"
+
+function __debugChunkState_ObjectProperties_OPH_render:render1() end
+
+---@param object IsoObject
+---@return boolean
+function __debugChunkState_ObjectProperties_OPH_render:setObject(object) end
+
+---@class DebugChunkState_ObjectProperties.OPH_overlaySprite : DebugChunkStateUI_ObjPropsHandler
+---@field object IsoObject?
+local __debugChunkState_ObjectProperties_OPH_overlaySprite =
+	DebugChunkStateUI_ObjPropsHandler:derive("DebugChunkStateUI_OPH_overlaySprite")
+__debugChunkState_ObjectProperties_OPH_overlaySprite.Type = "DebugChunkStateUI_OPH_overlaySprite"
+
+function __debugChunkState_ObjectProperties_OPH_overlaySprite:render1() end
+
+---@param object IsoObject?
+---@return boolean
+function __debugChunkState_ObjectProperties_OPH_overlaySprite:setObject(object) end
+
+---@class DebugChunkState_ObjectProperties.OPH_AttachedAnimSprite : DebugChunkStateUI_ObjPropsHandler
+---@field object IsoObject?
+local __debugChunkState_ObjectProperties_OPH_AttachedAnimSprite =
+	DebugChunkStateUI_ObjPropsHandler:derive("DebugChunkStateUI_OPH_AttachedAnimSprite")
+__debugChunkState_ObjectProperties_OPH_AttachedAnimSprite.Type = "DebugChunkStateUI_OPH_AttachedAnimSprite"
+
+function __debugChunkState_ObjectProperties_OPH_AttachedAnimSprite:render1() end
+
+---@param object IsoObject?
+---@return boolean
+function __debugChunkState_ObjectProperties_OPH_AttachedAnimSprite:setObject(object) end
+
+---@class DebugChunkState_ObjectProperties.OPH_ModData : DebugChunkStateUI_ObjPropsHandler
+---@field object IsoObject?
+local __debugChunkState_ObjectProperties_OPH_ModData =
+	DebugChunkStateUI_ObjPropsHandler:derive("DebugChunkStateUI_OPH_ModData")
+__debugChunkState_ObjectProperties_OPH_ModData.Type = "DebugChunkStateUI_OPH_ModData"
+
+function __debugChunkState_ObjectProperties_OPH_ModData:render1() end
+
+---@param object IsoObject?
+---@return unknown
+function __debugChunkState_ObjectProperties_OPH_ModData:setObject(object) end
+
+---@class DebugChunkState_ObjectProperties.OPH_SpriteProperties : DebugChunkStateUI_ObjPropsHandler
+---@field object IsoObject?
+local __debugChunkState_ObjectProperties_OPH_SpriteProperties =
+	DebugChunkStateUI_ObjPropsHandler:derive("DebugChunkStateUI_OPH_SpriteProperties")
+__debugChunkState_ObjectProperties_OPH_SpriteProperties.Type = "DebugChunkStateUI_OPH_SpriteProperties"
+
+function __debugChunkState_ObjectProperties_OPH_SpriteProperties:render1() end
+
+---@param object IsoObject?
+---@return boolean
+function __debugChunkState_ObjectProperties_OPH_SpriteProperties:setObject(object) end
+
 ---@class DebugChunkStateUI_ObjPropsPanel : ISSectionedPanel
 ---@field debugChunkState DebugChunkStateUI
 ---@field object IsoObject?

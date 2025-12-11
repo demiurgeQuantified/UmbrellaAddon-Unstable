@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_AddCorpseToCampfire.Type = "ISLootWindowObjectC
 ---@return unknown
 function ISLootWindowObjectControlHandler_AddCorpseToCampfire:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_AddCorpseToCampfire:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_AddCorpseToCampfire:perform() end

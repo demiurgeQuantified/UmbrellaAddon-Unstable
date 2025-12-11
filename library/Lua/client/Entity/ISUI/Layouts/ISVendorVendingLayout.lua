@@ -1,5 +1,49 @@
 ---@meta
 
+---@class ISVendorVendingLayout.ISVendingAnim : ISPanel
+---@field angle number
+---@field angleDir number
+---@field drawH number
+---@field drawW number
+---@field drawX number
+---@field drawY number
+---@field forceItemDraw boolean
+---@field hideItemSlotItem boolean
+---@field isRunning boolean
+---@field item boolean
+---@field itemSlot boolean
+---@field itemTex boolean
+---@field maxAngle number
+---@field option boolean
+---@field running boolean
+---@field speed number
+---@field speedMax number
+---@field speedMulti number
+---@field spiralDelta number
+---@field stage number
+---@field STAGE_DROP number
+---@field STAGE_SPIRAL number
+---@field terminationY number
+local __ISVendorVendingLayout_ISVendingAnim = ISPanel:derive("ISVendingAnim")
+__ISVendorVendingLayout_ISVendingAnim.Type = "ISVendingAnim"
+
+function __ISVendorVendingLayout_ISVendingAnim:prerender() end
+
+function __ISVendorVendingLayout_ISVendingAnim:render() end
+
+---@param _vendingOption table
+function __ISVendorVendingLayout_ISVendingAnim:start(_vendingOption) end
+
+function __ISVendorVendingLayout_ISVendingAnim:stop() end
+
+---@param _x number
+---@param _y number
+---@param _w number
+---@param _h number
+---@param _terminationY number
+---@return ISVendorVendingLayout.ISVendingAnim
+function __ISVendorVendingLayout_ISVendingAnim:new(_x, _y, _w, _h, _terminationY) end
+
 ---@class ISVendorVendingLayout : ISPanel
 ---@field anim table
 ---@field arrayList unknown
@@ -29,8 +73,8 @@
 ---@field player unknown
 ---@field playerNum integer
 ---@field productColumns number
----@field resourceMoney unknown
----@field resourceOutput unknown
+---@field resourceMoney Resource
+---@field resourceOutput Resource
 ---@field resources unknown
 ---@field texGlassBorder unknown
 ---@field texGlassPane unknown

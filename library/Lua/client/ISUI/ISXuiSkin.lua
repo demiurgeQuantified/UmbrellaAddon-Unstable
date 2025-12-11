@@ -28,6 +28,7 @@ function ISXuiSkin.autoApplyTableKeys(_xuiScript, _o, _autoApplyOverride) end
 ---@param _skin XuiSkin?
 ---@param _styleName string?
 ---@param _luaClass table?
+---@param ... unknown
 ---@return ISUIElement?
 function ISXuiSkin.build(_skin, _styleName, _luaClass, ...) end
 

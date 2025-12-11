@@ -100,6 +100,7 @@ function ISBuildIsoEntity:isValid(square) end
 ---@return boolean
 function ISBuildIsoEntity:isValidPerSquare(square, tileInfo, _requiresFloor, _extendsN, _extendsW) end
 
+---@param object IsoObject
 ---@param x number
 ---@param y number
 ---@return boolean
@@ -136,6 +137,7 @@ function ISBuildIsoEntity:setInfo(square, north, sprite, openSprite) end
 ---@param z number
 function ISBuildIsoEntity:tryBuild(x, y, z) end
 
+---@param _logic BaseCraftingLogic
 function ISBuildIsoEntity:updateManualInputs(_logic) end
 
 ---@param x number
@@ -160,4 +162,3 @@ function ISBuildIsoEntity:new(character, objectInfo, nSprite, containers, logic)
 ---@field invUses number
 ---@field items InventoryItem[]
 ---@field uses number
-umbrella_ISBuildIsoEntity_ItemResult = {}

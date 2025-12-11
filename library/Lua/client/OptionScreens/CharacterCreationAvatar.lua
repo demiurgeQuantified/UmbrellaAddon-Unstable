@@ -1,13 +1,13 @@
 ---@meta
 
----@class CharacterCreationAvatar : ISPanel
+---@class CharacterCreationAvatar : ISPanelJoypad
 ---@field animCombo ISComboBox
 ---@field avatarBackgroundTexture Texture
 ---@field avatarPanel ISUI3DModel
 ---@field direction IsoDirections
 ---@field turnLeftButton ISButton
 ---@field turnRightButton ISButton
-CharacterCreationAvatar = ISPanel:derive("CharacterCreationAvatar")
+CharacterCreationAvatar = ISPanelJoypad:derive("CharacterCreationAvatar")
 CharacterCreationAvatar.Type = "CharacterCreationAvatar"
 
 function CharacterCreationAvatar:createChildren() end
@@ -15,12 +15,17 @@ function CharacterCreationAvatar:createChildren() end
 ---@param combo ISComboBox
 function CharacterCreationAvatar:onAnimSelected(combo) end
 
+---@param joyadData JoypadData
 function CharacterCreationAvatar:onGainJoypadFocus(joyadData) end
 
+---@param joyadData JoypadData
 function CharacterCreationAvatar:onJoypadDirLeft(joyadData) end
 
+---@param joyadData JoypadData
 function CharacterCreationAvatar:onJoypadDirRight(joyadData) end
 
+---@param button integer
+---@param joyadData JoypadData
 function CharacterCreationAvatar:onJoypadDown(button, joyadData) end
 
 ---@param button ISButton

@@ -4,14 +4,12 @@
 ---@field currentTime number
 ---@field discardItems boolean
 ---@field forageIcon ISForageIcon
----@field icon ISForageIcon
 ---@field iconID string
 ---@field itemCount integer
 ---@field itemDef umbrella.Foraging.ItemDefinition
 ---@field itemType string
----@field itemTypeList table
+---@field itemTypeList string[]
 ---@field manager ISSearchManager
----@field maxTime number?
 ---@field started boolean
 ---@field targetContainer ItemContainer
 ---@field zoneData umbrella.Foraging.ZoneData?
@@ -23,7 +21,7 @@ function ISForageAction:complete() end
 
 function ISForageAction:forage() end
 
----@return number?
+---@return number
 function ISForageAction:getDuration() end
 
 ---@return boolean
@@ -41,9 +39,10 @@ function ISForageAction:update() end
 function ISForageAction:waitToStart() end
 
 ---@param character IsoPlayer
----@param icon ISForageIcon
+---@param iconID string
+---@param itemTypeList string[]
 ---@param targetContainer ItemContainer
 ---@param discardItems boolean
 ---@param itemType string
 ---@return ISForageAction
-function ISForageAction:new(character, icon, targetContainer, discardItems, itemType) end
+function ISForageAction:new(character, iconID, itemTypeList, targetContainer, discardItems, itemType) end

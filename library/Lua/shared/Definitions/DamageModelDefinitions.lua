@@ -2,7 +2,7 @@
 
 ---@class DamageModelDefinitions
 DamageModelDefinitions = {}
-DamageModelDefinitions.list = nil ---@type umbrella.DamageModelDefinition[]
+DamageModelDefinitions.list = {} ---@type umbrella.DamageModelDefinition[]
 
 ---@param texture string
 ---@param bodyPart BodyPartType
@@ -31,4 +31,3 @@ function DamageModelDefinitions.OnHitZombie(zombie, wielder, bodyPart, weapon) e
 ---@field criticalHit boolean
 ---@field damageCategories string[]
 ---@field texture string
-umbrella_DamageModelDefinition = {}

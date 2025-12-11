@@ -173,18 +173,15 @@ function __ISMoveableDefinitions.resetTools() end
 ---@field sound string
 ---@field tools string[]
 ---@field tools2 string[]
-umbrella_ISMoveableDefinitions_BaseDefinition = {}
 
 ---@class umbrella.ISMoveableDefinitions.MaterialDefinition
 ---@field chancePerRoll number
 ---@field maxAmount number
 ---@field returnItem string
-umbrella_ISMoveableDefinitions_MaterialDefinition = {}
 
 ---@class umbrella.ISMoveableDefinitions.RepairDefinition : umbrella.ISMoveableDefinitions.BaseDefinition
 ---@field parts umbrella.ISMoveableDefinitions.RepairPart[]
 ---@field toolNames table<string, string>?
-umbrella_ISMoveableDefinitions_RepairDefinition = {}
 
 ---@class umbrella.ISMoveableDefinitions.RepairPart
 ---@field amount number
@@ -192,20 +189,17 @@ umbrella_ISMoveableDefinitions_RepairDefinition = {}
 ---@field displayName string
 ---@field itemType string
 ---@field required boolean
-umbrella_ISMoveableDefinitions_RepairPart = {}
 
 ---@class umbrella.ISMoveableDefinitions.ScrapDefinition : umbrella.ISMoveableDefinitions.BaseDefinition
 ---@field returnItems umbrella.ISMoveableDefinitions.ScrapReturnItem
 ---@field returnItemsStatic umbrella.ISMoveableDefinitions.ScrapReturnItem
 ---@field toolNames table<string, string>?
 ---@field unusableItem string?
-umbrella_ISMoveableDefinitions_ScrapDefinition = {}
 
 ---@class umbrella.ISMoveableDefinitions.ScrapReturnItem
 ---@field chancePerRoll number
 ---@field maxAmount number
 ---@field returnItem string
-umbrella_ISMoveableDefinitions_ScrapReturnItem = {}
 
 ---@class umbrella.ISMoveableDefinitions.ToolDefinition
 ---@field baseActionTime number
@@ -215,4 +209,3 @@ umbrella_ISMoveableDefinitions_ScrapReturnItem = {}
 ---@field perk PerkFactory.Perk
 ---@field perkName string
 ---@field sound string
-umbrella_ISMoveableDefinitions_ToolDefinition = {}

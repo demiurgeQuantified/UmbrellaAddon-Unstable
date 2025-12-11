@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_PropaneBarbecueToggle.Type = "ISLootWindowObjec
 ---@return unknown
 function ISLootWindowObjectControlHandler_PropaneBarbecueToggle:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_PropaneBarbecueToggle:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_PropaneBarbecueToggle:perform() end

@@ -34,4 +34,3 @@ function ISMedicalCheckAction:new(character, otherPlayer) end
 
 ---@class umbrella.ISMedicalCheckAction.HealthWindow : ISCollapsableWindow
 ---@field nested ISHealthPanel
-umbrella_ISMedicalCheckAction_HealthWindow = {}

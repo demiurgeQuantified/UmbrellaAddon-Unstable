@@ -1,36 +1,38 @@
 ---@meta
 
 ---@class ISWidgetCraftLogicOutputProgress : ISPanel
----@field buttonTake unknown?
----@field colBad table
----@field colGood table
----@field colWhite table
+---@field buttonTake ISButton?
+---@field colBad umbrella.RGBA
+---@field colGood umbrella.RGBA
+---@field colWhite umbrella.RGBA
 ---@field craftInProgress number
----@field craftLogicComponent unknown
+---@field craftLogicComponent CraftLogic
 ---@field elementSpacing number
----@field entity unknown
+---@field entity GameEntity
 ---@field entityIconSize number
----@field entityIconWidget unknown?
----@field entityTitle unknown?
----@field inputsGroupName unknown
----@field logic unknown
+---@field entityIconWidget ISImage?
+---@field entityTitle ISLabel?
+---@field inputsGroupName string
+---@field logic CraftLogicUILogic
 ---@field marginBottom number
 ---@field marginLeft number
 ---@field marginRight number
 ---@field marginTop number
----@field outputItems unknown?
----@field outputsGroupName unknown
+---@field outputItems ISItemSlotPanel?
+---@field outputsGroupName string
 ---@field paddingBottom number
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
----@field player unknown
----@field progressItems unknown?
----@field recipe unknown
----@field resourcesComponent unknown
+---@field player IsoPlayer
+---@field progressItems ISItemSlotPanel?
+---@field recipe CraftRecipe
+---@field resourcesComponent Resources
 ISWidgetCraftLogicOutputProgress = ISPanel:derive("ISWidgetCraftLogicOutputProgress")
 ISWidgetCraftLogicOutputProgress.Type = "ISWidgetCraftLogicOutputProgress"
 
+---@param _preferredWidth number
+---@param _preferredHeight number
 function ISWidgetCraftLogicOutputProgress:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetCraftLogicOutputProgress:createChildren() end
@@ -39,6 +41,7 @@ function ISWidgetCraftLogicOutputProgress:createDynamicChildren() end
 
 function ISWidgetCraftLogicOutputProgress:initialise() end
 
+---@param _itemSlot ISItemSlot
 function ISWidgetCraftLogicOutputProgress:onItemSlotContentsChanged(_itemSlot) end
 
 function ISWidgetCraftLogicOutputProgress:onResize() end
@@ -61,5 +64,7 @@ function ISWidgetCraftLogicOutputProgress:updateProgressItems() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param logic CraftLogicUILogic
 ---@return ISWidgetCraftLogicOutputProgress
 function ISWidgetCraftLogicOutputProgress:new(x, y, width, height, player, logic) end

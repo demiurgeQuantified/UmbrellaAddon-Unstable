@@ -34,46 +34,46 @@ function ZombiePopulationWindow:onChangeOption(option) end
 ---@param x number
 ---@param y number
 ---@return boolean
-function ZombiePopulationWindow:onMapMouseDown(self, x, y) end
+function ZombiePopulationWindow:onMapMouseDown(x, y) end
 
 ---@param self ISPanel
 ---@param dx number
 ---@param dy number
 ---@return boolean
-function ZombiePopulationWindow:onMapMouseMove(self, dx, dy) end
+function ZombiePopulationWindow:onMapMouseMove(dx, dy) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
-function ZombiePopulationWindow:onMapMouseUp(self, x, y) end
+function ZombiePopulationWindow:onMapMouseUp(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
-function ZombiePopulationWindow:onMapMouseUpOutside(self, x, y) end
-
----@param self ISPanel
----@param x number
----@param y number
----@return boolean
-function ZombiePopulationWindow:onMapRightMouseDown(self, x, y) end
+function ZombiePopulationWindow:onMapMouseUpOutside(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
 ---@return boolean
-function ZombiePopulationWindow:onMapRightMouseUp(self, x, y) end
+function ZombiePopulationWindow:onMapRightMouseDown(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
 ---@return boolean
-function ZombiePopulationWindow:onMapRightMouseUpOutside(self, x, y) end
+function ZombiePopulationWindow:onMapRightMouseUp(x, y) end
+
+---@param self ISPanel
+---@param x number
+---@param y number
+---@return boolean
+function ZombiePopulationWindow:onMapRightMouseUpOutside(x, y) end
 
 ---@param self ISPanel
 ---@param del number
 ---@return boolean
-function ZombiePopulationWindow:onRenderMouseWheel(self, del) end
+function ZombiePopulationWindow:onRenderMouseWheel(del) end
 
 ---@param worldX number
 ---@param worldY number

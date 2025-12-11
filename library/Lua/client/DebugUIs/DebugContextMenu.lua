@@ -20,17 +20,21 @@ function DebugContextMenu.addRBDebugMenu(context, building) end
 
 ---@param context ISContextMenu
 ---@param square IsoGridSquare
-function DebugContextMenu.addRVSDebugMenu(context, square) end
+---@param playerObj IsoPlayer
+function DebugContextMenu.addRVSDebugMenu(context, square, playerObj) end
 
 ---@param context ISContextMenu
 ---@param square IsoGridSquare
-function DebugContextMenu.addRZSDebugMenu(context, square) end
+---@param playerObj IsoPlayer
+function DebugContextMenu.addRZSDebugMenu(context, square, playerObj) end
 
 function DebugContextMenu.do3DItem() end
 
 ---@param context ISContextMenu
 ---@param playerObj IsoPlayer
 function DebugContextMenu.doCheatMenu(context, playerObj) end
+
+function DebugContextMenu.doCSV() end
 
 ---@param playerObj IsoPlayer
 ---@param context ISContextMenu
@@ -59,15 +63,22 @@ function DebugContextMenu.doDebugMenu(player, context, worldobjects, test) end
 ---@return boolean?
 function DebugContextMenu.doDebugObjectMenu(player, context, worldobjects, test) end
 
+---@param playerObj IsoPlayer
+---@param context ISContextMenu
+---@param worldobjects IsoObject[]
 function DebugContextMenu.doDebugPlayerMenu(playerObj, context, worldobjects) end
 
+---@param playerObj IsoPlayer
+---@param context ISContextMenu
+---@param worldobjects IsoObject[]
 function DebugContextMenu.doDebugVehicleMenu(playerObj, context, worldobjects) end
 
 ---@param player integer
 ---@param context ISContextMenu
 ---@param worldobjects IsoObject[]
 ---@param test boolean?
-function DebugContextMenu.doDebugZombieMenu(player, context, worldobjects, test) end
+---@param square IsoGridSquare
+function DebugContextMenu.doDebugZombieMenu(player, context, worldobjects, test, square) end
 
 ---@param player integer
 ---@param context ISContextMenu
@@ -103,6 +114,7 @@ function DebugContextMenu.onAddDesignationZone(playerObj) end
 ---@param playerObj IsoPlayer
 function DebugContextMenu.onAddEnclosure(playerObj) end
 
+---@param playerObj IsoPlayer
 function DebugContextMenu.onAddVehicle(playerObj) end
 
 ---@param player integer
@@ -161,6 +173,8 @@ function DebugContextMenu.OnDoorLock(worldobjects, door) end
 ---@param playerObj IsoPlayer
 function DebugContextMenu.onExtList(playerObj) end
 
+function DebugContextMenu.onFilmingToolsUI(playerObj) end
+
 ---@param obj IsoObject
 function DebugContextMenu.OnFireplaceSetFuel(obj) end
 
@@ -199,15 +213,6 @@ function DebugContextMenu.OnMannequinCreateItem(script) end
 ---@param script MannequinScript
 function DebugContextMenu.OnMannequinSetScript(obj, script) end
 
----@param obj IsoObject
-function DebugContextMenu.OnMetalDrumZeroWater(obj) end
-
----@param obj IsoObject
-function DebugContextMenu.OnRainBarrelSetWater(obj) end
-
----@param obj IsoObject
-function DebugContextMenu.OnRainBarrelZeroWater(obj) end
-
 ---@param body IsoDeadBody
 function DebugContextMenu.OnReanimateCorpse(body) end
 
@@ -217,6 +222,7 @@ function DebugContextMenu.OnRemoveAllAnimals(zombie) end
 ---@param zombie nil
 function DebugContextMenu.OnRemoveAllAnimalsClient(zombie) end
 
+---@param playerObj IsoPlayer
 function DebugContextMenu.onRemoveAllVehicles(playerObj) end
 
 ---@param zombie nil
@@ -228,6 +234,7 @@ function DebugContextMenu.OnRemoveAllZombiesClient(zombie) end
 ---@param playerObj IsoPlayer
 function DebugContextMenu.onRemoveItemTool(playerObj) end
 
+---@param playerObj IsoPlayer
 function DebugContextMenu.onRemoveVehicle(playerObj, vehicle) end
 
 ---@param zone Zone
@@ -304,6 +311,7 @@ function DebugContextMenu.onSpawnSurvivorHorde(playerObj) end
 ---@param playerObj IsoPlayer
 function DebugContextMenu.onSpawnVehicle(playerObj) end
 
+---@param playerObj IsoPlayer
 function DebugContextMenu.onTeleportPlayers(playerObj) end
 
 ---@param playerObj IsoPlayer

@@ -19,10 +19,12 @@ function ISLootWindowObjectControlHandler_TakeSameType:getItemsTable(container) 
 ---@return table
 function ISLootWindowObjectControlHandler_TakeSameType:getItemsToTransfer() end
 
+---@param button ISButton
 ---@param dx number
 ---@param dy number
 function ISLootWindowObjectControlHandler_TakeSameType:onMouseOutButton(button, dx, dy) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ISLootWindowObjectControlHandler_TakeSameType:onMouseOverButton(button, x, y) end

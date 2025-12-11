@@ -148,4 +148,3 @@ function ISGarmentUI:new(x, y, character, clothing) end
 ---@field hole Texture?
 ---@field patch Texture?
 ---@field texture Texture
-umbrella_ISGarmentUI_TextureInfo = {}

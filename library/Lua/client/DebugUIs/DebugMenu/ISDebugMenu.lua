@@ -15,7 +15,7 @@ ISDebugMenu.instance = nil ---@type ISDebugMenu?
 ISDebugMenu.forceEnable = false
 ISDebugMenu.shiftDown = 0
 ISDebugMenu.tab = "MAIN"
-ISDebugMenu.classes = nil ---@type ISUIElement[]
+ISDebugMenu.classes = {} ---@type ISUIElement[]
 
 ---@return ISDebugMenu?
 function ISDebugMenu.OnOpenPanel() end

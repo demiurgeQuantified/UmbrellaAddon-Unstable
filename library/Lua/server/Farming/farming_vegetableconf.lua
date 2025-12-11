@@ -59,7 +59,6 @@ function farming_vegetableconf.grow(planting, nextGrowing, updateNbOfGrow) end
 ---@field vegetableName string
 ---@field waterLvl integer
 ---@field waterNeeded integer
-umbrella_Farming_Props = {}
 
 ---@param nbOfSeed number
 ---@param typeOfPlant string
@@ -107,5 +106,5 @@ function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGro
 function doesSeasonRecipeExist(recipeName) end
 
 ---@param recipeName string
----@return unknown?
+---@return Texture?
 function getSeasonRecipeIcon(recipeName) end

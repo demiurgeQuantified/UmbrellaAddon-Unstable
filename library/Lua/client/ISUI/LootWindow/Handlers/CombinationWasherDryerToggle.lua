@@ -10,6 +10,7 @@ ISLootWindowObjectControlHandler_CombinationWasherDryerToggle.Type =
 ---@return unknown
 function ISLootWindowObjectControlHandler_CombinationWasherDryerToggle:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_CombinationWasherDryerToggle:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_CombinationWasherDryerToggle:perform() end

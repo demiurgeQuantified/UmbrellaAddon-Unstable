@@ -20,7 +20,6 @@ TrapAnimals = {}
 ---@field traps table<string, integer>
 ---@field type string
 ---@field zone table<string, integer>
-umbrella_TrapAnimalDefinition = {}
 
 ---@class umbrella.TrapDefinition
 ---@field closedSprite string
@@ -30,4 +29,3 @@ umbrella_TrapAnimalDefinition = {}
 ---@field sprite string
 ---@field trapStrength integer
 ---@field type string
-umbrella_TrapDefinition = {}

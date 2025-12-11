@@ -6,7 +6,7 @@
 ---@field item InventoryItem
 ---@field itemStart number?
 ---@field itemTarget number
----@field otherItems unknown
+---@field otherItems InventoryItem[]
 ---@field part VehiclePart
 ---@field sound integer?
 ---@field tankStart number?
@@ -28,11 +28,12 @@ function ISAddGasolineToVehicle:getDuration() end
 ---@return boolean
 function ISAddGasolineToVehicle:isValid() end
 
----@return unknown?
+---@return InventoryItem?
 function ISAddGasolineToVehicle:nextItem() end
 
 function ISAddGasolineToVehicle:perform() end
 
+---@param intoItem InventoryItem
 function ISAddGasolineToVehicle:runAgain(intoItem) end
 
 function ISAddGasolineToVehicle:serverStart() end
@@ -51,5 +52,6 @@ function ISAddGasolineToVehicle:waitToStart() end
 ---@param character IsoPlayer
 ---@param part VehiclePart
 ---@param item InventoryItem
+---@param otherItems InventoryItem[]
 ---@return ISAddGasolineToVehicle
-function ISAddGasolineToVehicle:new(character, part, item) end
+function ISAddGasolineToVehicle:new(character, part, item, otherItems) end

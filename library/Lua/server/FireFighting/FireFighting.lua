@@ -11,9 +11,6 @@ function FireFighting.getExtinguisher(playerObj) end
 ---@return number
 function FireFighting.getExtinguisherUses(item) end
 
----@return integer
-function FireFighting.getFluidContainerMillilitresPerUse() end
-
 ---@param square IsoGridSquare
 ---@return IsoGridSquare?
 function FireFighting.getSquareToExtinguish(square) end

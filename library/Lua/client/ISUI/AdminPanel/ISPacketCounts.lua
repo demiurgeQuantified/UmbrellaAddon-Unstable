@@ -4,7 +4,6 @@
 ---@field category ISComboBox
 ---@field clear ISButton
 ---@field close ISButton
----@field currentCounts table<string, integer>
 ---@field listbox ISPacketCountsList
 ---@field minusBtn ISButton
 ---@field ordering number
@@ -16,8 +15,7 @@
 ---@field tickBoxPriority ISTickBox
 ---@field tickBoxReliability ISTickBox
 ---@field type ISComboBox
----@field update ISButton
-ISPacketCounts = ISPanel:derive("ISPacketCounts")
+ISPacketCounts = {}
 ISPacketCounts.Type = "ISPacketCounts"
 ISPacketCounts.instance = nil ---@type ISPacketCounts?
 
@@ -39,8 +37,6 @@ function ISPacketCounts:onSelectType() end
 
 function ISPacketCounts:onTicked(index, selected) end
 
-function ISPacketCounts:onUpdate() end
-
 function ISPacketCounts:render() end
 
 ---@param x number
@@ -51,7 +47,7 @@ function ISPacketCounts:render() end
 function ISPacketCounts:new(x, y, width, height) end
 
 ---@class ISPacketCountsList : ISPanel
-ISPacketCountsList = ISPanel:derive("ISPacketCountsPanel")
+ISPacketCountsList = {}
 ISPacketCountsList.Type = "ISPacketCountsPanel"
 
 ---@param del number

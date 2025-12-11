@@ -4,7 +4,6 @@
 ---@field player IsoPlayer
 ---@field recipe CraftRecipe
 ---@field shouldShowAll boolean?
-umbrella_CraftRecipe_OnAddToMenuParams = {}
 
 ---@param param umbrella.CraftRecipe.OnAddToMenuParams?
 ---@return boolean
@@ -190,9 +189,11 @@ function composterLvl1Test(param) end
 ---@return boolean
 function composterLvl2Test(param) end
 
+---@param param umbrella.CraftRecipe.OnAddToMenuParams
 ---@return boolean
 function metalDoorLvl1Test(param) end
 
+---@param param umbrella.CraftRecipe.OnAddToMenuParams
 ---@return boolean
 function metalDoorLvl2Test(param) end
 

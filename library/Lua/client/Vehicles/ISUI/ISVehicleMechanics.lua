@@ -144,13 +144,16 @@ function ISVehicleMechanics:getConditionRGB(condition) end
 ---@return VehiclePart?
 function ISVehicleMechanics:getMouseOverPart(x, y) end
 
----@return unknown
+---@param player IsoPlayer
+---@return InventoryItem?
 function ISVehicleMechanics:getScrewdriver(player) end
 
----@return unknown
+---@param player IsoPlayer
+---@return InventoryItem?
 function ISVehicleMechanics:getTirePump(player) end
 
----@return unknown
+---@param player IsoPlayer
+---@return InventoryItem?
 function ISVehicleMechanics:getWrench(player) end
 
 function ISVehicleMechanics:initialise() end
@@ -253,9 +256,7 @@ function ISVehicleMechanics:new(x, y, character, vehicle) end
 ---@field category string
 ---@field name string
 ---@field parts umbrella.ISVehicleMechanics.PartTable[]
-umbrella_ISVehicleMechanics_CategoryTable = {}
 
 ---@class umbrella.ISVehicleMechanics.PartTable
 ---@field name string
 ---@field part VehiclePart
-umbrella_ISVehicleMechanics_PartTable = {}

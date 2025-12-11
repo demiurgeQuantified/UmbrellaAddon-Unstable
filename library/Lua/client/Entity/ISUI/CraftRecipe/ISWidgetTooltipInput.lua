@@ -84,4 +84,3 @@ function ISWidgetTooltipInput:new(x, y, width, height, player, logic, inputScrip
 ---@field label ISLabel
 ---@field outputObjects ArrayList<Item>?
 ---@field script InputScript
-umbrella_ISWidgetTooltipInput_ScriptValues = {}

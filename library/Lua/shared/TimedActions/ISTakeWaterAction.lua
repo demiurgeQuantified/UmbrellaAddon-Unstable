@@ -3,7 +3,6 @@
 ---@class ISTakeWaterAction : ISBaseTimedAction
 ---@field endUsedAmount number?
 ---@field item InventoryItem?
----@field maxTime number?
 ---@field sound integer
 ---@field startThirst number
 ---@field startUsedAmount number
@@ -12,6 +11,8 @@
 ---@field waterUnit number
 ISTakeWaterAction = ISBaseTimedAction:derive("ISTakeWaterAction")
 ISTakeWaterAction.Type = "ISTakeWaterAction"
+
+function ISTakeWaterAction:animEvent(event, parameter) end
 
 ---@return boolean
 function ISTakeWaterAction:complete() end
@@ -23,6 +24,8 @@ function ISTakeWaterAction:getDuration() end
 function ISTakeWaterAction:isValid() end
 
 function ISTakeWaterAction:perform() end
+
+function ISTakeWaterAction:serverStart() end
 
 function ISTakeWaterAction:serverStop() end
 

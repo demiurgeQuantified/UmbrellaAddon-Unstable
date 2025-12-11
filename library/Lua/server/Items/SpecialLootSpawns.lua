@@ -361,6 +361,7 @@ function SpecialLootSpawns.OnCreateRecentNewspaper(item) end
 ---@param item InventoryItem
 function SpecialLootSpawns.OnCreateRecipeClipping(item) end
 
+---@param item InventoryItem
 function SpecialLootSpawns.OnCreateRecipeMagazine(item) end
 
 ---@param item InventoryItem
@@ -416,6 +417,7 @@ function SpecialLootSpawns.OnCreateSealedParcel(item) end
 ---@param item InventoryItem
 function SpecialLootSpawns.OnCreateSelfHelpBook(item) end
 
+---@param item InventoryItem
 function SpecialLootSpawns.OnCreateSewingPattern(item) end
 
 ---@param item InventoryItem
@@ -424,6 +426,7 @@ function SpecialLootSpawns.OnCreateSexyBook(item) end
 ---@param item InventoryItem
 function SpecialLootSpawns.OnCreateSkeletonDisplay(item) end
 
+---@param item InventoryItem
 function SpecialLootSpawns.OnCreateSnowGlobe(item) end
 
 ---@param item InventoryItem

@@ -126,4 +126,3 @@ function ISFishingUI:new(x, y, width, height, player, clickedSquare) end
 ---@field alphaTimer number
 ---@field item InventoryItem
 ---@field texture Texture
-umbrella_ISFishingUI_FishItem = {}

@@ -24,9 +24,10 @@ function ISReloadWeaponAction.BeginAutomaticReload(playerObj, gun) end
 ---@return boolean
 function ISReloadWeaponAction.canRack(weapon) end
 
+---@param player IsoPlayer
 ---@param weapon HandWeapon
 ---@return boolean
-function ISReloadWeaponAction.canShoot(weapon) end
+function ISReloadWeaponAction.canShoot(player, weapon) end
 
 ---@param playerObj IsoPlayer
 ---@param weapon HandWeapon

@@ -1,6 +1,8 @@
 ---@meta
 
----@alias umbrella.MainOptions.KeyTextItem umbrella.MainOptions.KeyTextElement | umbrella.MainOptions.KeyTextSection
+---@alias umbrella.MainOptions.KeyTextItem
+---| umbrella.MainOptions.KeyTextElement
+---| umbrella.MainOptions.KeyTextSection
 
 ---@class MainOptions : ISPanelJoypad
 ---@field acceptButton ISButton
@@ -37,16 +39,16 @@
 ---@field stuffBelowControllerTickbox ISPanel
 ---@field tabs ISTabPanel
 ---@field targetColor ColorInfo
----@field worldItemHighlightColor unknown
+---@field worldItemHighlightColor ISButton
 MainOptions = ISPanelJoypad:derive("MainOptions")
 MainOptions.Type = "MainOptions"
-MainOptions.keys = nil ---@type umbrella.KeybindTable[]
-MainOptions.keyText = nil ---@type umbrella.MainOptions.KeyTextItem[]
+MainOptions.keys = {} ---@type umbrella.KeybindTable[]
+MainOptions.keyText = {} ---@type umbrella.MainOptions.KeyTextItem[]
 MainOptions.setKeybindDialog = nil ---@type ISSetKeybindDialog?
 MainOptions.keyBindingLength = 0
 MainOptions.translatorPane = nil ---@type ISRichTextPanel?
 MainOptions.KEYS_VERSION1 = 1
-MainOptions.KEYS_VERSION = MainOptions.KEYS_VERSION1
+MainOptions.KEYS_VERSION = 2
 MainOptions.instance = nil ---@type MainOptions?
 
 ---@param languages string[]
@@ -57,15 +59,19 @@ function MainOptions.doLanguageToolTip(languages) end
 ---@return integer
 function MainOptions.getAvailableLanguage() end
 
+---@param _language string?
 ---@return string[]
 function MainOptions.getGeneralTranslators(_language) end
 
----@param bind unknown?
+---@param bind umbrella.MainOptions.KeyTextElement?
 ---@return string
 function MainOptions.getKeyPrefix(bind) end
 
 ---@param key integer
-function MainOptions.keyPressHandler(key) end
+---@param shift boolean
+---@param ctrl boolean
+---@param alt boolean
+function MainOptions.keyPressHandler(key, shift, ctrl, alt) end
 
 ---@return boolean?
 function MainOptions.loadKeys() end
@@ -90,6 +96,8 @@ function MainOptions.sortModes(a, b) end
 ---@return integer?
 function MainOptions.upgradeKeysIni(name, key, defaultKey, version) end
 
+---@param value umbrella.MainOptions.KeyTextElement
+---@param fileOutput LuaFileWriter
 function MainOptions.writeKey(value, fileOutput) end
 
 function MainOptions:addAccessibilityPanel() end
@@ -270,7 +278,7 @@ function MainOptions:onGainJoypadFocus(joypadData) end
 
 ---@param self ISPanelJoypad
 ---@param joypadData JoypadData
-function MainOptions:onGainJoypadFocusCurrentTab(self, joypadData) end
+function MainOptions:onGainJoypadFocusCurrentTab(joypadData) end
 
 function MainOptions:onGameSounds() end
 
@@ -282,12 +290,12 @@ function MainOptions:onJoypadBeforeDeactivate(joypadData) end
 
 ---@param self ISPanelJoypad
 ---@param joypadData JoypadData
-function MainOptions:onJoypadBeforeDeactivateCurrentTab(self, joypadData) end
+function MainOptions:onJoypadBeforeDeactivateCurrentTab(joypadData) end
 
 ---@param self ISPanelJoypad
 ---@param button ISButton
 ---@param joypadData JoypadData
-function MainOptions:onJoypadDownCurrentTab(self, button, joypadData) end
+function MainOptions:onJoypadDownCurrentTab(button, joypadData) end
 
 ---@param name string
 ---@param key integer
@@ -300,11 +308,12 @@ function MainOptions:onKeyBindingBtnPress(button, x, y) end
 
 function MainOptions:onKeyboardLayoutChanged() end
 
+---@param key integer
 function MainOptions:onKeyRelease(key) end
 
 ---@param self ISPanelJoypad
 ---@param joypadData JoypadData
-function MainOptions:onLoseJoypadFocusCurrentTab(self, joypadData) end
+function MainOptions:onLoseJoypadFocusCurrentTab(joypadData) end
 
 ---@param button ISButton
 function MainOptions:onModColorPick(button) end
@@ -316,7 +325,7 @@ function MainOptions:onMouseWheel(del) end
 ---@param self ISPanelJoypad
 ---@param del number
 ---@return boolean
-function MainOptions:onMouseWheelCurrentTab(self, del) end
+function MainOptions:onMouseWheelCurrentTab(del) end
 
 ---@param button ISButton
 function MainOptions:onMPColor(button) end
@@ -350,6 +359,7 @@ function MainOptions:onTabsActivateView(tabs) end
 ---@param button ISButton
 function MainOptions:onTargetColor(button) end
 
+---@param button ISButton
 function MainOptions:onWorldItemHighlightColor(button) end
 
 ---@param color umbrella.RGB
@@ -380,6 +390,8 @@ function MainOptions:pickedObjHighlightColor(color, mouseUp) end
 ---@param mouseUp boolean?
 function MainOptions:pickedTargetColor(color, mouseUp) end
 
+---@param color umbrella.RGB
+---@param mouseUp boolean?
 function MainOptions:pickedWorldItemHighlightColor(color, mouseUp) end
 
 function MainOptions:prerender() end
@@ -415,19 +427,104 @@ function MainOptions:toUI() end
 ---@return MainOptions
 function MainOptions:new(x, y, width, height) end
 
+---@class MainOptions.GameOption : ISBaseObject
+---@field arg1 unknown?
+---@field arg2 unknown?
+---@field control ISUIElement?
+---@field name string
+---@field onChange function?
+---@field tableContains function?
+local __mainOptions_GameOption = ISBaseObject:derive("GameOption")
+__mainOptions_GameOption.Type = "GameOption"
+
+function __mainOptions_GameOption:apply() end
+
+---@param box ISComboBox
+function __mainOptions_GameOption:onChangeComboBox(box) end
+
+---@param value number
+---@param control ISSliderPanel
+function __mainOptions_GameOption:onChangeSlider(value, control) end
+
+---@param index integer
+---@param selected boolean
+function __mainOptions_GameOption:onChangeTickBox(index, selected) end
+
+---@param control ISVolumeControl
+---@param volume number
+function __mainOptions_GameOption:onChangeVolumeControl(control, volume) end
+
+function __mainOptions_GameOption:resetLua() end
+
+function __mainOptions_GameOption:restartRequired(oldValue, newValue) end
+
+function __mainOptions_GameOption:restoreOriginalValue() end
+
+function __mainOptions_GameOption:storeCurrentValue() end
+
+function __mainOptions_GameOption:toUI() end
+
+---@param name string
+---@param control ISUIElement?
+---@param arg1 unknown?
+---@param arg2 unknown?
+---@return MainOptions.GameOption
+function __mainOptions_GameOption:new(name, control, arg1, arg2) end
+
+---@class MainOptions.GameOptions : ISBaseObject
+---@field changed boolean
+---@field options table
+local __mainOptions_GameOptions = ISBaseObject:derive("GameOptions")
+__mainOptions_GameOptions.Type = "GameOptions"
+
+---@param option MainOptions.GameOption
+function __mainOptions_GameOptions:add(option) end
+
+function __mainOptions_GameOptions:apply() end
+
+---@param optionName string
+---@return MainOptions.GameOption?
+function __mainOptions_GameOptions:get(optionName) end
+
+---@param option MainOptions.GameOption?
+function __mainOptions_GameOptions:onChange(option) end
+
+function __mainOptions_GameOptions:restoreOriginalValues() end
+
+function __mainOptions_GameOptions:storeCurrentValues() end
+
+function __mainOptions_GameOptions:toUI() end
+
+---@return MainOptions.GameOptions
+function __mainOptions_GameOptions:new() end
+
+---@class MainOptions.HorizontalLine : ISPanel
+local __mainOptions_HorizontalLine = ISPanel:derive("HorizontalLine")
+__mainOptions_HorizontalLine.Type = "HorizontalLine"
+
+function __mainOptions_HorizontalLine:prerender() end
+
+function __mainOptions_HorizontalLine:render() end
+
+---@param x number
+---@param y number
+---@param width number
+---@return MainOptions.HorizontalLine
+function __mainOptions_HorizontalLine:new(x, y, width) end
+
 ---@class umbrella.MainOptions.KeyTextElement
 ---@field altCode integer
 ---@field btn ISButton
+---@field ctrl boolean?
 ---@field defaultKeyCode integer?
 ---@field isModBind boolean?
 ---@field keyCode integer
 ---@field left boolean
+---@field shift boolean?
 ---@field txt ISLabel
-umbrella_MainOptions_KeyTextElement = {}
 
 ---@class umbrella.MainOptions.KeyTextSection
 ---@field value string
-umbrella_MainOptions_KeyTextSection = {}
 
 ---@class umbrella.MainOptions.MonitorSettings
 ---@field borderless boolean
@@ -436,4 +533,3 @@ umbrella_MainOptions_KeyTextSection = {}
 ---@field height boolean
 ---@field vsync boolean
 ---@field width boolean
-umbrella_MainOptions_MonitorSettings = {}

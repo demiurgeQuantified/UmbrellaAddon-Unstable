@@ -2,21 +2,18 @@
 
 ---@class ISEquippedItem : ISPanel
 ---@field adminBtn ISButton
----@field adminIcon Texture
 ---@field adminIconOff unknown
 ---@field adminIconOn Texture
 ---@field buildBtn ISButton
 ---@field chr IsoPlayer
 ---@field clientBtn ISButton
----@field clientIcon Texture
 ---@field clientIconOff unknown
 ---@field clientIconOn Texture
+---@field clockTexture unknown
 ---@field craftingBtn ISButton
----@field craftingIcon Texture
 ---@field craftingIconOff unknown
 ---@field craftingIconOn Texture
 ---@field debugBtn ISButton
----@field debugIcon Texture
 ---@field debugIconOff unknown
 ---@field debugIconOn Texture
 ---@field disableTexture Texture
@@ -30,13 +27,11 @@
 ---@field healthIconOscillatorScalar number
 ---@field healthIconOscillatorStartLevel number
 ---@field healthIconOscillatorStep number
----@field heartIcon Texture
 ---@field heartIconOff unknown
 ---@field heartIconOn Texture
 ---@field infopanel unknown?
 ---@field invBtn ISButton
 ---@field inventory unknown?
----@field inventoryTexture Texture
 ---@field inventoryTextureOff unknown
 ---@field inventoryTextureOn Texture
 ---@field lockTexture Texture
@@ -48,7 +43,6 @@
 ---@field mapPopup ISMapPopup
 ---@field mouseOverList umbrella.ISEquippedItem.MouseOverItem[]
 ---@field movableBtn ISButton
----@field movableIcon Texture
 ---@field movableIconOff Texture
 ---@field movableIconOn unknown
 ---@field movableIconPickup Texture
@@ -57,13 +51,10 @@
 ---@field movableIconScrap Texture
 ---@field movablePopup ISMoveablesIconPopup
 ---@field movableTooltip ISMoveablesIconToolTip
----@field moveableIconBuild Texture
 ---@field moveableIconBuildOff unknown
 ---@field moveableIconBuildOn Texture
 ---@field moveableIconRepair Texture
 ---@field offHand ISImage
----@field offTexture Texture
----@field onTexture Texture
 ---@field playerNum integer
 ---@field previousHealth number
 ---@field radialIcon ISRadialProgressBar
@@ -72,21 +63,15 @@
 ---@field safetyOff unknown
 ---@field safetyOn unknown
 ---@field searchBtn ISButton
----@field searchIcon Texture
 ---@field searchIconOff unknown
 ---@field searchIconOn Texture
 ---@field sidebarSizeOption integer
 ---@field toolTip ISToolTip
----@field warActive Texture
 ---@field warIconOff unknown
 ---@field warIconOn unknown
----@field warInactive Texture
 ---@field warManagerBtn ISButton
----@field warManagerBtnX number
----@field warManagerBtnY number
 ---@field warSoon Texture
 ---@field zoneBtn ISButton
----@field zoneIcon Texture
 ---@field zoneIconOff unknown
 ---@field zoneIconOn Texture
 ISEquippedItem = ISPanel:derive("ISEquippedItem")
@@ -253,7 +238,6 @@ function ISMetaPopup:new(x, y, width, height) end
 ---@class umbrella.ISEquippedItem.MouseOverItem
 ---@field displayString string
 ---@field object table
-umbrella_ISEquippedItem_MouseOverItem = {}
 
 ---@param playerObj IsoPlayer
 ---@return ISEquippedItem

@@ -12,11 +12,11 @@
 ---@field isDirty boolean
 ---@field isResourceItemSlot boolean
 ---@field itemListBox ISScrollingListBox?
----@field itemSlot unknown
+---@field itemSlot ISItemSlot
 ---@field logic HandcraftLogic
 ---@field margin number
 ---@field player IsoPlayer
----@field previousSelected unknown
+---@field previousSelected number
 ---@field selectedItem umbrella.ISCraftInventoryPanel.ListItem
 ---@field showCurrentContents boolean
 ---@field unavailableFluidsExpanded boolean
@@ -35,19 +35,21 @@ function ISCraftInventoryPanel:createChildren() end
 ---@return umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:createListHeader(_text, hasExpandArrow) end
 
----@param _node HandcraftLogic.InputItemNode
+---@param _node InputItemNode
 ---@param _inventoryItem InventoryItem
 ---@param _index integer
 ---@param _isUsedItems boolean
 ---@return umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:createListItemEntry(_node, _inventoryItem, _index, _isUsedItems) end
 
----@param _node HandcraftLogic.InputItemNode
+---@param _node InputItemNode
 ---@param _isUsedItems boolean
 ---@return umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:createListItemNode(_node, _isUsedItems) end
 
----@return table
+---@param _fluid Fluid
+---@param _index integer
+---@return umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:createUnavailableListFluidEntry(_fluid, _index) end
 
 ---@param _item Item
@@ -63,6 +65,7 @@ function ISCraftInventoryPanel:drawListItem(y, item, alt) end
 
 function ISCraftInventoryPanel:initialise() end
 
+---@param _item umbrella.ISCraftInventoryPanel.ListItem
 function ISCraftInventoryPanel:onListDoubleClick(_item) end
 
 function ISCraftInventoryPanel:onListItemClicked(_item) end
@@ -97,15 +100,17 @@ function ISCraftInventoryPanel:updateContainers(_containers) end
 function ISCraftInventoryPanel:new(x, y, width, height, player, logic) end
 
 ---@class umbrella.ISCraftInventoryPanel.ListItem
+---@field fluid Fluid?
 ---@field hasExpandArrow boolean?
+---@field iconColor umbrella.RGB?
+---@field iconTexture Texture?
 ---@field index integer?
----@field inventoryItem InventoryItem
+---@field inventoryItem InventoryItem?
 ---@field isHeader boolean
 ---@field isNode boolean
 ---@field isUnavailable boolean?
 ---@field name string
----@field node HandcraftLogic.InputItemNode?
+---@field node InputItemNode?
 ---@field script Item?
 ---@field text string
 ---@field textWidth number
-umbrella_ISCraftInventoryPanel_ListItem = {}

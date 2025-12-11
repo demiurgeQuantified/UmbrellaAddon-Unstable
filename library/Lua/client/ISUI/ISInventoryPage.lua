@@ -46,7 +46,6 @@
 ---@field pin boolean
 ---@field pinbutton Texture
 ---@field pinButton ISButton
----@field removeAll ISButton
 ---@field render3DItemRot number
 ---@field render3DItemXOffset number?
 ---@field render3DItemYOffset number?
@@ -62,16 +61,14 @@
 ---@field titlebarbkg Texture
 ---@field titleFont UIFont
 ---@field titleFontHgt number
----@field toggleStove ISButton
----@field totalItems number?
+---@field totalItems number
 ---@field totalWeight number
----@field transferAll ISButton
 ---@field visibleFunction function
 ---@field visibleTarget ISInventoryPage
 ---@field zoom number
 ISInventoryPage = ISPanel:derive("ISInventoryPage")
 ISInventoryPage.Type = "ISInventoryPage"
-ISInventoryPage.bagSoundDelay = 2
+ISInventoryPage.bagSoundDelay = 0.5
 ISInventoryPage.bagSoundTime = 0
 ISInventoryPage.renderDirty = nil ---@type boolean?
 ISInventoryPage.floorContainer = nil ---@type table<integer, ItemContainer>?
@@ -258,6 +255,9 @@ function ISInventoryPage:onMouseUpOutside(x, y) end
 ---@return boolean
 function ISInventoryPage:onMouseWheel(del) end
 
+---@param button ISButton
+---@param player IsoPlayer
+---@param container ItemContainer
 function ISInventoryPage:onRenameContainerClick(button, player, container) end
 
 ---@param x number
@@ -270,6 +270,7 @@ function ISInventoryPage:onToggleVisible() end
 ---@return boolean?
 function ISInventoryPage:playContainerCloseSound(container) end
 
+---@param button ISButton
 function ISInventoryPage:playContainerOpenCloseSounds(button) end
 
 ---@return boolean?
@@ -331,8 +332,6 @@ function ISInventoryPage:syncAddFuel() end
 function ISInventoryPage:syncLightFire() end
 
 function ISInventoryPage:syncPutOut() end
-
-function ISInventoryPage:syncToggleStove() end
 
 ---@return number
 function ISInventoryPage:titleBarHeight(selected) end

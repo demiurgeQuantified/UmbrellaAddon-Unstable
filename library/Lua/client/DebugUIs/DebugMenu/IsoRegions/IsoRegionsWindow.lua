@@ -39,41 +39,41 @@ function IsoRegionsWindow:onChangeZLevelOption(option) end
 ---@param x number
 ---@param y number
 ---@return boolean
-function IsoRegionsWindow:onMapMouseDown(self, x, y) end
+function IsoRegionsWindow:onMapMouseDown(x, y) end
 
 ---@param self ISPanel
 ---@param dx number
 ---@param dy number
 ---@return boolean
-function IsoRegionsWindow:onMapMouseMove(self, dx, dy) end
+function IsoRegionsWindow:onMapMouseMove(dx, dy) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
-function IsoRegionsWindow:onMapMouseUp(self, x, y) end
+function IsoRegionsWindow:onMapMouseUp(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
-function IsoRegionsWindow:onMapMouseUpOutside(self, x, y) end
-
----@param self ISPanel
----@param x number
----@param y number
----@return boolean
-function IsoRegionsWindow:onMapRightMouseDown(self, x, y) end
+function IsoRegionsWindow:onMapMouseUpOutside(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
 ---@return boolean
-function IsoRegionsWindow:onMapRightMouseUp(self, x, y) end
+function IsoRegionsWindow:onMapRightMouseDown(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
 ---@return boolean
-function IsoRegionsWindow:onMapRightMouseUpOutside(self, x, y) end
+function IsoRegionsWindow:onMapRightMouseUp(x, y) end
+
+---@param self ISPanel
+---@param x number
+---@param y number
+---@return boolean
+function IsoRegionsWindow:onMapRightMouseUpOutside(x, y) end
 
 function IsoRegionsWindow:onOpenLogs() end
 
@@ -82,7 +82,7 @@ function IsoRegionsWindow:onRecalcChunks() end
 ---@param self ISPanel
 ---@param del number
 ---@return boolean
-function IsoRegionsWindow:onRenderMouseWheel(self, del) end
+function IsoRegionsWindow:onRenderMouseWheel(del) end
 
 ---@param worldX number
 ---@param worldY number

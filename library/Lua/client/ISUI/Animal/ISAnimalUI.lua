@@ -32,7 +32,7 @@ function ISAnimalUI:close() end
 
 function ISAnimalUI:create() end
 
----@return unknown
+---@return string
 function ISAnimalUI:getClutchSizeText() end
 
 ---@return string

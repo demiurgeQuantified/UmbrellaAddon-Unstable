@@ -1,6 +1,7 @@
 ---@meta
 
 ---@alias umbrella.ISBuildCursorMouse.OnSquareSelected fun(square: IsoGridSquare)
+
 ---@alias umbrella.ISBuildCursorMouse.ValidationFunction fun(square: IsoGridSquare): boolean
 
 ---@class ISBuildCursorMouse : ISBuildingObject

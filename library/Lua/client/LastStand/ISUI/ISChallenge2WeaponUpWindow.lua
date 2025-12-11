@@ -15,7 +15,8 @@ function ISChallenge2WeaponUpWindow:create() end
 ---@param itemType string
 ---@param cost integer
 ---@param itemType2 string?
-function ISChallenge2WeaponUpWindow:createItemButton(x, y, itemType, cost, itemType2) end
+---@param amount integer?
+function ISChallenge2WeaponUpWindow:createItemButton(x, y, itemType, cost, itemType2, amount) end
 
 function ISChallenge2WeaponUpWindow:initialise() end
 

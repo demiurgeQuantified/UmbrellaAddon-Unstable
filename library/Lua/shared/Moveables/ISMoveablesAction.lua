@@ -2,7 +2,7 @@
 
 ---@class ISMoveablesAction : ISBaseTimedAction
 ---@field cursorFacing number?
----@field deviceData unknown
+---@field deviceData DeviceData?
 ---@field direction "N" | "E" | "S" | "W"
 ---@field item InventoryItem?
 ---@field mode string

@@ -775,7 +775,6 @@ function EditVehicleState_EditPhysics_PhysicsMeshPanel:new(x, y, width, height, 
 ---@class umbrella.EditVehicleUI.ModelValues
 ---@field offset Vector3f
 ---@field rotate Vector3f
-umbrella_EditVehicleUI_ModelValues = {}
 
 ---@class umbrella.EditVehicleUI.ShapeValues
 ---@field extents Vector3f
@@ -783,6 +782,5 @@ umbrella_EditVehicleUI_ModelValues = {}
 ---@field radius number
 ---@field rotate Vector3f
 ---@field scale number
-umbrella_EditVehicleUI_ShapeValues = {}
 
 function EditVehicleState_InitUI() end

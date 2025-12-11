@@ -169,9 +169,7 @@ function ISMapWrapper:new(x, y, width, height) end
 ---@class umbrella.MapUI.WithMapItem : ISUIElement
 ---@field javaObject UIWorldMap
 ---@field mapItem MapItem
-umbrella_MapUI_WithMapItem = {}
 
 ---@class umbrella.MapUI.WithMapObj : ISUIElement
 ---@field javaObject UIWorldMap
----@field mapItem MapItem
-umbrella_MapUI_WithMapObj = {}
+---@field mapObj MapItem

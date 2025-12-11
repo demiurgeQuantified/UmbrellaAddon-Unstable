@@ -18,4 +18,3 @@ function Actions.build(character, args) end
 ---@field x number
 ---@field y number
 ---@field z number
-umbrella_Actions_BuildArgs = {}

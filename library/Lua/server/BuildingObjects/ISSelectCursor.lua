@@ -36,4 +36,3 @@ function ISSelectCursor:new(character, ui, onSquareSelected) end
 ---@class umbrella.ISSelectCursor.UI : ISUIElement
 ---@field cursor ISSelectCursor?
 ---@field onSquareSelected fun(square: IsoGridSquare)
-umbrella_ISSelectCursor_UI = {}

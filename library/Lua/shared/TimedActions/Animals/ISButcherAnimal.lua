@@ -13,6 +13,7 @@ function ISButcherAnimal:complete() end
 ---@return number
 function ISButcherAnimal:getDuration() end
 
+---@param corpse IsoDeadBody
 ---@return boolean
 function ISButcherAnimal:isLargeAnimal(corpse) end
 

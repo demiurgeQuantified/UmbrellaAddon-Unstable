@@ -42,4 +42,3 @@ function ISSLEvent:new(x, y, width, height) end
 ---@class umbrella.ISSSLEvent.EventDataTable
 ---@field dataPoints ArrayList<DataPoint>
 ---@field eventSound EventSound
-umbrella_ISSSLEvent_EventDataTable = {}

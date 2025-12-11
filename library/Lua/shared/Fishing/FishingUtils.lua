@@ -104,8 +104,9 @@ function __fishing_Utils.facePlayerToAim(player) end
 ---@param y number
 function __fishing_Utils.FacePlayerToBobber(player, x, y) end
 
----@return number?
----@return number?
+---@param player IsoPlayer
+---@return number
+---@return number
 function __fishing_Utils.getAimCoords(player) end
 
 ---@param x number
@@ -136,11 +137,12 @@ function __fishing_Utils.getWeatherParams() end
 
 function __fishing_Utils.hotbarStopper() end
 
+---@param player IsoPlayer
 ---@return boolean
 function __fishing_Utils.isAccessibleAimDist(player) end
 
 ---@param joypad integer
----@return boolean?
+---@return boolean
 function __fishing_Utils.isCastButtonPressed(joypad) end
 
 ---@return number
@@ -171,26 +173,21 @@ function __fishing_Utils.isWaterCoords(x, y) end
 ---@class umbrella.Fishing.TemperatureParams
 ---@field coeff number
 ---@field temperature number
-umbrella_Fishing_TemperatureParams = {}
 
 ---@class umbrella.Fishing.WeatherParams
 ---@field coeff number
 ---@field isFog boolean
 ---@field isRain boolean
 ---@field isWind boolean
-umbrella_Fishing_WeatherParams = {}
 
 ---@class umbrella.Fishing.TimeParams
 ---@field coeff number
 ---@field time integer
-umbrella_Fishing_TimeParams = {}
 
 ---@class umbrella.Fishing.HookParams
 ---@field coeff number
 ---@field hook string
-umbrella_Fishing_HookParams = {}
 
 ---@class umbrella.Fishing.FishNumParams
 ---@field coeff number
 ---@field value integer
-umbrella_Fishing_FishNumParams = {}

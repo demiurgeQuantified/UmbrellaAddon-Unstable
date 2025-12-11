@@ -76,4 +76,3 @@ FitnessExercises.exercisesType = {
 ---@field tooltip string
 ---@field type string
 ---@field xpMod number
-umbrella_FitnessExercises_Exercise = {}

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@alias umbrella.ISSliderPanel.CustomPaginate fun(target: unknown?)
+
 ---@alias umbrella.ISSliderPanel.OnValueChange fun(target: unknown?, value: number, panel: ISSliderPanel)
 
 ---@class ISSliderPanel : ISPanel

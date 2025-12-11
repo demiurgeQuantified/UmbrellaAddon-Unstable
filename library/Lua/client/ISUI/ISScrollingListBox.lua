@@ -26,7 +26,6 @@
 ---@field smoothScrollTargetY number?
 ---@field smoothScrollY number?
 ---@field stopPrerender boolean
----@field target unknown?
 ---@field textColor table
 ---@field tooltipUI ISToolTip
 ---@field useStencilForChildren boolean
@@ -46,12 +45,13 @@ function ISScrollingListBox:addColumn(columnName, size) end
 
 ---@param name string
 ---@param item unknown?
+---@param tooltip unknown?
 ---@return umbrella.ISScrollingListBox.Item
-function ISScrollingListBox:addItem(name, item) end
+function ISScrollingListBox:addItem(name, item, tooltip) end
 
 ---@param name string
 ---@return umbrella.ISScrollingListBox.Item?
-function ISScrollingListBox:addUniqueItem(name, item) end
+function ISScrollingListBox:addUniqueItem(name, item, tooltip) end
 
 function ISScrollingListBox:clear() end
 
@@ -95,6 +95,10 @@ function ISScrollingListBox:initialise() end
 function ISScrollingListBox:insertItem(index, name, item) end
 
 function ISScrollingListBox:instantiate() end
+
+function ISScrollingListBox:invokeOnMouseDoubleClick() end
+
+function ISScrollingListBox:invokeOnMouseDownFunction() end
 
 ---@return boolean
 function ISScrollingListBox:isMouseOverScrollBar() end
@@ -249,7 +253,6 @@ function ISScrollingListBox:new(x, y, width, height) end
 ---@class umbrella.ISScrollingListBox.Column
 ---@field name string
 ---@field size number
-umbrella_ISScrollingListBox_Column = {}
 
 ---@class umbrella.ISScrollingListBox.Item
 ---@field height number
@@ -258,4 +261,3 @@ umbrella_ISScrollingListBox_Column = {}
 ---@field itemindex integer
 ---@field text string
 ---@field tooltip string?
-umbrella_ISScrollingListBox_Item = {}

@@ -385,8 +385,6 @@ ProfessionVehicles.UniqueVehicles = {
 	"Base.RaceCar34",
 	"Base.RaceCar58",
 }
-ProfessionVehicles.PickUpTruck = nil ---@type unknown
-ProfessionVehicles.PickUpVan = nil ---@type unknown
 
 ---@param vehicle BaseVehicle
 function ProfessionVehicles.CheckSwap(vehicle) end

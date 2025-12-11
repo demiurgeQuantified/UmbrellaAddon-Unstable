@@ -5,7 +5,6 @@
 ---@field isOutdoorsMan boolean
 ---@field item InventoryItem?
 ---@field plank InventoryItem
----@field sound integer?
 ISLightFromKindle = ISBaseTimedAction:derive("ISLightFromKindle")
 ISLightFromKindle.Type = "ISLightFromKindle"
 

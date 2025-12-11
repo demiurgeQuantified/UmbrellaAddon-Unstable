@@ -30,6 +30,7 @@ function ISLootWindowContainerControls:getDisplayedContainer() end
 ---@return unknown?
 function ISLootWindowContainerControls:getDisplayedObject() end
 
+---@param context ISContextMenu
 function ISLootWindowContainerControls:handleJoypadContextMenu(context) end
 
 ---@param lootWindow ISInventoryPage

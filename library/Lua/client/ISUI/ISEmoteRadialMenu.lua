@@ -44,4 +44,3 @@ function ISEmoteRadialMenu:new(character) end
 ---@class umbrella.ISEmoteRadialMenu.MenuItem
 ---@field name string
 ---@field subMenu table<string, string>?
-umbrella_ISEmoteRadialMenu_MenuItem = {}

@@ -2,37 +2,40 @@
 
 ---@class ISCraftLogicRecipePanel : ISPanel
 ---@field autoFillContents boolean
----@field craftLogicComponent unknown
+---@field craftLogicComponent CraftLogic
 ---@field elementPadding number
 ---@field elementSpacing number
----@field entity unknown
----@field inputControlWidget unknown?
----@field inputsGroupName unknown
+---@field entity GameEntity
+---@field inputControlWidget ISWidgetCraftLogicInputControl?
+---@field inputsGroupName string
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
----@field logic unknown
+---@field logic CraftLogicUILogic
 ---@field margin number
----@field outputProgressWidget unknown?
----@field outputsGroupName unknown
+---@field outputProgressWidget ISWidgetCraftLogicOutputProgress?
+---@field outputsGroupName string
 ---@field overlayPanel ISPanel
----@field player unknown
----@field resourcesComponent unknown
----@field titleWidget unknown?
+---@field player IsoPlayer
+---@field resourcesComponent Resources
+---@field titleWidget ISWidgetCraftLogicTitle?
 ISCraftLogicRecipePanel = ISPanel:derive("ISCraftLogicRecipePanel")
 ISCraftLogicRecipePanel.Type = "ISCraftLogicRecipePanel"
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISCraftLogicRecipePanel:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISCraftLogicRecipePanel:createChildren() end
 
 function ISCraftLogicRecipePanel:createDynamicChildren() end
 
----@return unknown
+---@return CraftRecipe
 function ISCraftLogicRecipePanel:getRecipe() end
 
 function ISCraftLogicRecipePanel:initialise() end
 
+---@param joypadData JoypadData
 function ISCraftLogicRecipePanel:onGainJoypadFocus(joypadData) end
 
 function ISCraftLogicRecipePanel:onInputsChanged() end
@@ -49,6 +52,7 @@ function ISCraftLogicRecipePanel:prerender() end
 
 function ISCraftLogicRecipePanel:render() end
 
+---@param _b boolean
 function ISCraftLogicRecipePanel:setOverlayVisible(_b) end
 
 function ISCraftLogicRecipePanel:update() end
@@ -57,5 +61,7 @@ function ISCraftLogicRecipePanel:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param logic CraftLogicUILogic
 ---@return ISCraftLogicRecipePanel
 function ISCraftLogicRecipePanel:new(x, y, width, height, player, logic) end

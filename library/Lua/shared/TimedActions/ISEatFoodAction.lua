@@ -2,9 +2,10 @@
 
 ---@class ISEatFoodAction : ISBaseTimedAction
 ---@field carLighter boolean?
+---@field container unknown
 ---@field eatAudio number
 ---@field eatSound string
----@field fork unknown
+---@field fork InventoryItem?
 ---@field ignoreHandsWounds boolean
 ---@field isEating boolean
 ---@field item Food
@@ -12,7 +13,7 @@
 ---@field percentage number
 ---@field playedScrapeSound boolean
 ---@field scrapeSound integer?
----@field spoon unknown
+---@field spoon InventoryItem?
 ---@field useUtensil boolean
 ISEatFoodAction = ISBaseTimedAction:derive("ISEatFoodAction")
 ISEatFoodAction.Type = "ISEatFoodAction"
@@ -30,7 +31,7 @@ function ISEatFoodAction:getDuration() end
 ---@return InventoryItem?
 function ISEatFoodAction:getRequiredItem() end
 
----@return unknown?
+---@return InventoryItem?
 function ISEatFoodAction:getSecondItem() end
 
 ---@param item Food

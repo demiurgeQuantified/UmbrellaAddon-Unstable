@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_PropaneBarbecueAddTank.Type = "ISLootWindowObje
 ---@return unknown
 function ISLootWindowObjectControlHandler_PropaneBarbecueAddTank:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_PropaneBarbecueAddTank:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_PropaneBarbecueAddTank:perform() end

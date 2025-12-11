@@ -96,27 +96,18 @@ function ISSLFrame:new(x, y, width, height) end
 ---@field x2 number
 ---@field y number
 ---@field y2 number
-umbrella_ISSLFrame_Rect = {}
 
 ---@class umbrella.ISSLFrame.Padding
 ---@field bot number
 ---@field left number
 ---@field right number
 ---@field top number
-umbrella_ISSLFrame_Padding = {}
 
 ---@class umbrella.ISSLFrame.GridData
 ---@field color Color
 ---@field dataPoints umbrella.ISSLFrame.GridData.DataPoint[]
 ---@field name string
-umbrella_ISSLFrame_GridData = {}
 
 ---@class umbrella.ISSLFrame.GridData.DataPoint
 ---@field i number
 ---@field t number
-umbrella_ISSLFrame_GridData_DataPoint = {}
-
----@param num number
----@param idp integer
----@return number
-function round(num, idp) end

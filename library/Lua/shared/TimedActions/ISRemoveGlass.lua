@@ -7,7 +7,6 @@
 ---@field doctor IsoPlayer
 ---@field doctorLevel number
 ---@field handPain boolean
----@field maxTime number
 ---@field otherPlayer IsoPlayer
 ---@field sound integer?
 ISRemoveGlass = ISBaseTimedAction:derive("ISRemoveGlass")
@@ -38,5 +37,6 @@ function ISRemoveGlass:waitToStart() end
 ---@param character IsoPlayer
 ---@param otherPlayer IsoPlayer
 ---@param bodyPart BodyPart
+---@param handPain boolean
 ---@return ISRemoveGlass
-function ISRemoveGlass:new(character, otherPlayer, bodyPart) end
+function ISRemoveGlass:new(character, otherPlayer, bodyPart, handPain) end

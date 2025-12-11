@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_AddFuelOption.Type = "ISLootWindowObjectControl
 ---@return unknown
 function ISLootWindowObjectControlHandler_AddFuelOption:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_AddFuelOption:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_AddFuelOption:perform() end

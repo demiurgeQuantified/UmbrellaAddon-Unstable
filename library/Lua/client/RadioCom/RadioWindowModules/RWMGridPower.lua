@@ -10,7 +10,7 @@ function RWMGridPower:clear() end
 
 function RWMGridPower:createChildren() end
 
----@return string?
+---@return string
 function RWMGridPower:getAPrompt() end
 
 ---@return string?

@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISWidgetCraftLogicTitle : ISPanel
----@field colBad table
----@field colGood table
----@field colWhite table
+---@field colBad umbrella.RGBA
+---@field colGood umbrella.RGBA
+---@field colWhite umbrella.RGBA
 ---@field enableIcon boolean
----@field icon unknown?
+---@field icon ISImage?
 ---@field iconSize number
----@field iconTex unknown
----@field logic unknown
+---@field iconTex Texture
+---@field logic CraftLogic
 ---@field marginBottom number
 ---@field marginLeft number
 ---@field marginRight number
@@ -17,13 +17,15 @@
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
----@field player unknown
----@field recipe unknown
+---@field player IsoPlayer
+---@field recipe CraftRecipe
 ---@field title string
----@field titleLabel unknown?
+---@field titleLabel ISLabel?
 ISWidgetCraftLogicTitle = ISPanel:derive("ISWidgetCraftLogicTitle")
 ISWidgetCraftLogicTitle.Type = "ISWidgetCraftLogicTitle"
 
+---@param _preferredWidth number
+---@param _preferredHeight number
 function ISWidgetCraftLogicTitle:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISWidgetCraftLogicTitle:createChildren() end
@@ -42,5 +44,7 @@ function ISWidgetCraftLogicTitle:update() end
 ---@param y number
 ---@param width number
 ---@param height number
+---@param player IsoPlayer
+---@param logic CraftLogic
 ---@return ISWidgetCraftLogicTitle
 function ISWidgetCraftLogicTitle:new(x, y, width, height, player, logic) end

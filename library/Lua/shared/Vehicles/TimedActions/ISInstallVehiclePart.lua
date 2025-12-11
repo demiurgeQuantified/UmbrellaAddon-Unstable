@@ -14,7 +14,7 @@ function ISInstallVehiclePart:complete() end
 ---@return number
 function ISInstallVehiclePart:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISInstallVehiclePart:isValid() end
 
 function ISInstallVehiclePart:perform() end

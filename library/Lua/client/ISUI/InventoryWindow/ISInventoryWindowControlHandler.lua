@@ -6,6 +6,7 @@
 ISInventoryWindowControlHandler = ISBaseObject:derive("ISInventoryWindowControlHandler")
 ISInventoryWindowControlHandler.Type = "ISInventoryWindowControlHandler"
 
+---@param context ISContextMenu
 ---@return unknown
 function ISInventoryWindowControlHandler:addJoypadContextMenuOption(context, text) end
 
@@ -16,6 +17,10 @@ function ISInventoryWindowControlHandler:getButtonControl(title) end
 ---@return unknown
 function ISInventoryWindowControlHandler:getControl() end
 
+---@return unknown
+function ISInventoryWindowControlHandler:getImageButtonControl(imagePath) end
+
+---@param context ISContextMenu
 function ISInventoryWindowControlHandler:handleJoypadContextMenu(context) end
 
 function ISInventoryWindowControlHandler:perform() end

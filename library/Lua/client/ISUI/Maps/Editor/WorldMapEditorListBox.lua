@@ -14,7 +14,6 @@
 ---@field callback umbrella.WorldMapEditorListBox.Callback
 ---@field listbox ISScrollingListBox
 ---@field selectedItem number
----@field target unknown?
 WorldMapEditorListBox = ISPanel:derive("WorldMapEditorListBox")
 WorldMapEditorListBox.Type = "WorldMapEditorListBox"
 

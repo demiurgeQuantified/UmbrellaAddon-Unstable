@@ -25,6 +25,7 @@ function ISFarmingInfo.getDisease(diseaseLvl, farmingLevel, disease, info, index
 ---@return umbrella.ISFarmingInfo.DiseaseTable
 function ISFarmingInfo.getDiseaseName(info) end
 
+---@param info ISFarmingInfo
 function ISFarmingInfo.getDiseaseStats(info) end
 
 ---@param diseaseLvl number
@@ -156,9 +157,7 @@ function ISFarmingInfo:new(x, y, width, height, character, plant) end
 ---@class umbrella.ISFarmingInfo.DiseaseTable
 ---@field [integer] umbrella.ISFarmingInfo.DiseaseInfo?
 ---@field text string
-umbrella_ISFarmingInfo_DiseaseTable = {}
 
 ---@class umbrella.ISFarmingInfo.DiseaseInfo
 ---@field name string?
 ---@field value string?
-umbrella_ISFarmingInfo_DiseaseInfo = {}

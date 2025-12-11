@@ -26,7 +26,6 @@ STrapGlobalObject.Type = "STrapGlobalObject"
 function STrapGlobalObject.SpawnDestroyItems(trapType, square, object) end
 
 ---@param character IsoPlayer
----@return unknown?
 function STrapGlobalObject:addAliveAnimal(character) end
 
 ---@param bait string
@@ -73,14 +72,16 @@ function STrapGlobalObject:isWoodenTrap() end
 ---@param square IsoGridSquare
 function STrapGlobalObject:reinitModData(square) end
 
+---@param character IsoPlayer
 ---@return unknown?
 function STrapGlobalObject:removeAnimal(character) end
 
+---@param character IsoPlayer
 function STrapGlobalObject:removeAnimalCorpse(character, isoAnimal) end
 
 function STrapGlobalObject:removeAnimalItem(character) end
 
----@param character unknown?
+---@param character IsoPlayer?
 function STrapGlobalObject:removeBait(character) end
 
 ---@param soundName string

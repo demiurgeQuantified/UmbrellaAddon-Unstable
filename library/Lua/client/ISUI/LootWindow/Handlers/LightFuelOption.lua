@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_LightFireOption.Type = "ISLootWindowObjectContr
 ---@return unknown
 function ISLootWindowObjectControlHandler_LightFireOption:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_LightFireOption:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_LightFireOption:perform() end

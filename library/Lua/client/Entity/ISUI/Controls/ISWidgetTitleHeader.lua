@@ -29,12 +29,12 @@
 ---@field player IsoPlayer
 ---@field propertyIconSize number
 ---@field recipe CraftRecipe
----@field recipeBenefitLabel unknown?
+---@field recipeBenefitLabel ISLabel?
 ---@field requiredSkillList ISLabel[]
 ---@field requiresSurface boolean
 ---@field requiresSurfaceIcon ISImage?
 ---@field showPropertyIcons boolean
----@field specificWorkstationLabel unknown?
+---@field specificWorkstationLabel ISLabel?
 ---@field timeIcon ISImage?
 ---@field title string
 ---@field titleLabel ISLabel?

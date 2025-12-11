@@ -11,8 +11,6 @@ keyBinding = {}
 ---@class umbrella.KeybindElement
 ---@field key integer
 ---@field value string
-umbrella_KeybindElement = {}
 
 ---@class umbrella.KeybindSection
 ---@field value string
-umbrella_KeybindSection = {}

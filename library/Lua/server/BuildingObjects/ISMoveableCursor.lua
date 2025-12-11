@@ -179,4 +179,3 @@ function ISMoveableCursor:new(_character) end
 ---@field isWall boolean?
 ---@field moveProps ISMoveableSpriteProps
 ---@field object IsoObject
-umbrella_ISMoveableCursor_ObjectInfo = {}

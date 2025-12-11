@@ -205,7 +205,7 @@ function ISMoveableSpriteProps:canRotateDirection() end
 
 ---@param _square IsoGridSquare
 ---@param _object IsoObject?
----@param _origProps ISMoveableSpriteProps
+---@param _origProps ISMoveableSpriteProps?
 ---@return boolean
 function ISMoveableSpriteProps:canRotateMoveable(_square, _object, _origProps) end
 
@@ -259,8 +259,9 @@ function ISMoveableSpriteProps:findInInventoryMultiSprite(_character, _spriteNam
 ---@return IsoSpriteInstance?
 function ISMoveableSpriteProps:findOnSquare(_square, _spriteName) end
 
----@param _gridInfo (SpriteGridCache | table)?
----@return unknown
+---@param _gridInfo SpriteGridCache?
+---@param _sprite IsoSprite
+---@return IsoGridSquare
 function ISMoveableSpriteProps:findOriginalSquare(_gridInfo, _sprite) end
 
 ---@param _player IsoPlayer
@@ -481,10 +482,6 @@ function ISMoveableSpriteProps:isSquareAtTopOfStairs(_square) end
 ---@return boolean
 function ISMoveableSpriteProps:isWallBetweenParts(_spriteGrid, _x, _y, _z) end
 
----@param _object IsoObject
----@return boolean
-function ISMoveableSpriteProps:objectNoContainerOrEmpty(_object) end
-
 ---@param _character IsoPlayer
 ---@param _square IsoGridSquare
 ---@param _createItem boolean
@@ -520,8 +517,9 @@ function ISMoveableSpriteProps:pickUpMoveableViaCursor(_character, _square, _ori
 ---@param _character IsoPlayer
 ---@param _square IsoGridSquare
 ---@param _origSpriteName string
+---@param _forceAllow boolean
 ---@return boolean?
-function ISMoveableSpriteProps:placeMoveable(_character, _square, _origSpriteName) end
+function ISMoveableSpriteProps:placeMoveable(_character, _square, _origSpriteName, _forceAllow) end
 
 ---@param _square IsoGridSquare
 ---@param _item InventoryItem
@@ -539,7 +537,8 @@ function ISMoveableSpriteProps:placeMoveableViaCursor(_character, _square, _orig
 ---@param _object IsoObject
 function ISMoveableSpriteProps:playBreakSound(_character, _object) end
 
----@return table
+---@param obj IsoObject
+---@return FluidContainer[]
 function ISMoveableSpriteProps:removeComponentsBeforePlacing(obj) end
 
 ---@param _character IsoPlayer
@@ -560,6 +559,8 @@ function ISMoveableSpriteProps:repairObjectInternal(_character) end
 ---@param _moveCursor ISMoveableCursor
 function ISMoveableSpriteProps:repairObjectViaCursor(_character, _square, _origSpriteName, _moveCursor) end
 
+---@param obj IsoObject
+---@param components FluidContainer[]
 function ISMoveableSpriteProps:restoreComponentsAfterPlacing(obj, components) end
 
 ---@param _character IsoPlayer
@@ -578,6 +579,8 @@ function ISMoveableSpriteProps:rotateMoveableInternal(_character, _square, _orig
 ---@param _moveCursor ISMoveableCursor?
 function ISMoveableSpriteProps:rotateMoveableViaCursor(_character, _square, _origSpriteName, _moveCursor) end
 
+---@param _table table
+---@param _object IsoThumpable
 function ISMoveableSpriteProps:saveThumpableParameters(_table, _object) end
 
 ---@param _character IsoPlayer
@@ -715,25 +718,20 @@ function ISThumpableSpriteProps.new(object) end
 ---@field craftValid boolean?
 ---@field haveTool (InventoryItem | false)?
 ---@field haveTool2 (InventoryItem | false)?
-umbrella_ISMoveableSpriteProps_BaseCheckResult = {}
 
 ---@class umbrella.ISMoveableSpriteProps.CanRepairResult : umbrella.ISMoveableSpriteProps.BaseCheckResult
 ---@field canRepair boolean
 ---@field hasParts boolean?
-umbrella_ISMoveableSpriteProps_CanRepairResult = {}
 
 ---@class umbrella.ISMoveableSpriteProps.CanScrapResult : umbrella.ISMoveableSpriteProps.BaseCheckResult
 ---@field canScrap boolean
-umbrella_ISMoveableSpriteProps_CanScrapResult = {}
 
 ---@class umbrella.ISMoveableSpriteProps.InfoTableItem : umbrella.RGB
 ---@field txt string
-umbrella_ISMoveableSpriteProps_InfoTableItem = {}
 
 ---@class umbrella.ISMoveableSpriteProps.ScrapItemLists
 ---@field unusable string[]
 ---@field usable string[]
-umbrella_ISMoveableSpriteProps_ScrapItemLists = {}
 
 ---@class umbrella.SpriteGridCache.Item
 ---@field object IsoObject
@@ -742,4 +740,3 @@ umbrella_ISMoveableSpriteProps_ScrapItemLists = {}
 ---@field square IsoGridSquare
 ---@field x number
 ---@field y number
-umbrella_SpriteGridCache_Item = {}

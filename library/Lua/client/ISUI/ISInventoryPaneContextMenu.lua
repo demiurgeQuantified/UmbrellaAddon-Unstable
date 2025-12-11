@@ -2,13 +2,14 @@
 
 ---@class ISInventoryPaneContextMenu
 ISInventoryPaneContextMenu = {}
-ISInventoryPaneContextMenu.tooltipPool = nil ---@type ISToolTip[]
-ISInventoryPaneContextMenu.tooltipsUsed = nil ---@type ISToolTip[]
+ISInventoryPaneContextMenu.tooltipPool = {} ---@type ISToolTip[]
+ISInventoryPaneContextMenu.tooltipsUsed = {} ---@type ISToolTip[]
 ISInventoryPaneContextMenu.ghs = "<GHC>"
 ISInventoryPaneContextMenu.bhs = "<BHC>"
 ISInventoryPaneContextMenu.toolRender = nil ---@type ISToolTipInv?
 ISInventoryPaneContextMenu.ItemInstances = nil ---@type table<string, InventoryItem>?
 ISInventoryPaneContextMenu.placeItemCursor = nil ---@type ISPlace3DItemCursor?
+ISInventoryPaneContextMenu.debugContextNum = nil
 
 ---@param selectedItem InventoryItem
 ---@param context ISContextMenu
@@ -55,6 +56,8 @@ function ISInventoryPaneContextMenu.addFixerSubOption(
 	vehiclePart
 )
 end
+
+function ISInventoryPaneContextMenu.addFluidDebug(cont, fluid) end
 
 ---@param subMenuRecipe ISContextMenu
 ---@param baseItem InventoryItem
@@ -189,6 +192,8 @@ function ISInventoryPaneContextMenu.createMenuNoItems(playerNum, isLoot, x, y) e
 ---@param player integer
 function ISInventoryPaneContextMenu.doBandageMenu(context, items, player) end
 
+---@param context ISContextMenu
+---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.doBuildRecipeListForItem(context, text, recipeItem, playerObj) end
 
 ---@param playerObj IsoPlayer
@@ -211,8 +216,22 @@ function ISInventoryPaneContextMenu.doClothingItemExtraMenu(context, clothingIte
 ---@param context ISContextMenu
 function ISInventoryPaneContextMenu.doClothingPatchMenu(player, clothing, context) end
 
+---@param context ISContextMenu
+---@param playerObj IsoPlayer
 ---@return unknown?
 function ISInventoryPaneContextMenu.doContextConfigOptions(context, item, playerObj) end
+
+function ISInventoryPaneContextMenu.doDebugContextMenu(
+	context,
+	items,
+	editItem,
+	testItem,
+	player,
+	playerObj,
+	tests,
+	c
+)
+end
 
 ---@param playerObj IsoPlayer
 ---@param fluidContainer InventoryItem
@@ -267,6 +286,9 @@ function ISInventoryPaneContextMenu.doMagazineMenu(playerObj, magazine, context)
 ---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.doMakeUpMenu(context, makeup, playerObj) end
 
+function ISInventoryPaneContextMenu.doMoreContextMenu(context, tests, moveItems, playerObj, items, c) end
+
+---@param context ISContextMenu
 function ISInventoryPaneContextMenu.doPillsMenu(context, items, player, cmd) end
 
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
@@ -274,9 +296,13 @@ function ISInventoryPaneContextMenu.doPillsMenu(context, items, player, cmd) end
 ---@param context ISContextMenu
 function ISInventoryPaneContextMenu.doPlace3DItemOption(items, player, context) end
 
+---@param context ISContextMenu
+---@param playerObj IsoPlayer
 ---@param isLiterature boolean
 function ISInventoryPaneContextMenu.doRecipeList(context, text, recipeItem, recipes, playerObj, isLiterature) end
 
+---@param context ISContextMenu
+---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.doRecipeListForItem(context, text, recipeItem, playerObj) end
 
 ---@param playerObj IsoPlayer
@@ -326,7 +352,7 @@ function ISInventoryPaneContextMenu.dryMyself(item, player) end
 ---@param item InventoryItem
 ---@param percentage number
 ---@param player integer
-function ISInventoryPaneContextMenu.eatItem(item, percentage, player) end
+function ISInventoryPaneContextMenu.eatItem(item, percentage, player, openingRecipe, eatPercentage) end
 
 ---@param playerObj IsoPlayer
 ---@param item InventoryItem
@@ -362,6 +388,7 @@ function ISInventoryPaneContextMenu.getItemInstance(type) end
 ---@return integer?
 function ISInventoryPaneContextMenu.getRealEvolvedItemUse(evoItem, evorecipe2, cookingLvl) end
 
+---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.grabCorpseItem(playerObj, item) end
 
 ---@param playerObj IsoPlayer
@@ -465,6 +492,7 @@ function ISInventoryPaneContextMenu.OnCraftComplete(
 )
 end
 
+---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.onCustomFunction(customFunction, item, playerObj, param) end
 
 ---@param item InventoryItem
@@ -474,12 +502,12 @@ function ISInventoryPaneContextMenu.onDebugCloneItem(item, player) end
 ---@param item InventoryItem
 ---@param percent number
 ---@param playerObj IsoPlayer
-function ISInventoryPaneContextMenu.onDrinkFluid(item, percent, playerObj) end
+function ISInventoryPaneContextMenu.onDrinkFluid(item, percent, playerObj, openingRecipe) end
 
 ---@param waterContainer InventoryItem
 ---@param playerObj IsoPlayer
 ---@param percent number
-function ISInventoryPaneContextMenu.onDrinkForThirst(waterContainer, playerObj, percent) end
+function ISInventoryPaneContextMenu.onDrinkForThirst(waterContainer, playerObj, percent, openingRecipe) end
 
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
 ---@param player integer
@@ -502,7 +530,7 @@ function ISInventoryPaneContextMenu.onDyeHair(hairDye, playerObj, beard) end
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
 ---@param percentage number
 ---@param player integer
-function ISInventoryPaneContextMenu.onEatItems(items, percentage, player) end
+function ISInventoryPaneContextMenu.onEatItems(items, percentage, player, openingRecipe, eatPercentage) end
 
 ---@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
 ---@param player integer
@@ -594,7 +622,7 @@ function ISInventoryPaneContextMenu.onMoveItemsTo(items, dest, player) end
 ---@param recipe CraftRecipe
 ---@param player integer
 ---@param all boolean
-function ISInventoryPaneContextMenu.OnNewCraft(selectedItem, recipe, player, all) end
+function ISInventoryPaneContextMenu.OnNewCraft(selectedItem, recipe, player, all, eatPercentage) end
 
 ---@param logic HandcraftLogic
 function ISInventoryPaneContextMenu.OnNewCraftComplete(logic) end
@@ -764,6 +792,7 @@ function ISInventoryPaneContextMenu.repairAllClothing(player, clothing, parts, f
 ---@param needle InventoryItem
 function ISInventoryPaneContextMenu.repairClothing(player, clothing, part, fabric, thread, needle) end
 
+---@param playerObj IsoPlayer
 function ISInventoryPaneContextMenu.showGrowingSeasons(playerObj) end
 
 ---@param String string
@@ -786,12 +815,6 @@ function ISInventoryPaneContextMenu.transferBullets(playerObj, ammoType, current
 ---@param item (InventoryItem | IsoWorldInventoryObject | ArrayList<InventoryItem>)?
 ---@param preventTransferWorldObjects boolean?
 function ISInventoryPaneContextMenu.transferIfNeeded(playerObj, item, preventTransferWorldObjects) end
-
----@param items (InventoryItem | umbrella.ISInventoryPane.ItemRecord)[]
----@param playerInv ItemContainer
----@param player integer
----@param dontWalk boolean?
-function ISInventoryPaneContextMenu.transferItems(items, playerInv, player, dontWalk) end
 
 function ISInventoryPaneContextMenu.transferItemToPlayer(item, player, dontWalk) end
 
@@ -832,8 +855,8 @@ function ISInventoryPaneContextMenu:onWriteSomethingClick(button) end
 ---@field typesAvailable table<string, integer>
 ISRecipeTooltip = ISToolTip:derive("CraftTooltip")
 ISRecipeTooltip.Type = "CraftTooltip"
-ISRecipeTooltip.tooltipPool = nil ---@type ISRecipeTooltip[]
-ISRecipeTooltip.tooltipsUsed = nil ---@type ISRecipeTooltip[]
+ISRecipeTooltip.tooltipPool = {} ---@type ISRecipeTooltip[]
+ISRecipeTooltip.tooltipsUsed = {} ---@type ISRecipeTooltip[]
 
 ---@return ISRecipeTooltip
 function ISRecipeTooltip.addToolTip() end
@@ -912,4 +935,3 @@ function ISRecipeTooltip:new() end
 ---@field width number
 ---@field x number
 ---@field y number
-umbrella_ISRecipeTooltip_ContentsLine = {}

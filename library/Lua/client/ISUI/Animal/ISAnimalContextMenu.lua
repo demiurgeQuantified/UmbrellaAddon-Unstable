@@ -43,6 +43,9 @@ function AnimalContextMenu.doFeedFromHandMenu(playerObj, animal, context) end
 ---@return unknown
 function AnimalContextMenu.doInventoryMenu(player, context, animalInv, test) end
 
+---@param playerObj IsoPlayer
+---@param animalInv AnimalInventoryItem
+---@param context ISContextMenu
 function AnimalContextMenu.doKillAnimalMenu(playerObj, animalInv, context) end
 
 ---@param player integer
@@ -121,6 +124,8 @@ function AnimalContextMenu.onButcherAnimalFromInv(body, chr, knife) end
 ---@param playerObj IsoPlayer
 function AnimalContextMenu.onCheckZone(zone, playerObj) end
 
+---@param animal IsoAnimal
+---@param playerObj IsoPlayer
 function AnimalContextMenu.onDebugAttackPlayer(animal, playerObj) end
 
 ---@param animal IsoAnimal

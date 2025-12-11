@@ -1,11 +1,13 @@
 ---@meta
 
 ---@class ISItemSlotRemoveAction : ISBaseTimedAction
+---@field actionAnim string
+---@field actionAnimVariables table
 ---@field entity IsoObject
 ---@field item InventoryItem?
 ---@field itemSlot ISItemSlot?
----@field resource Resource
----@field sound unknown
+---@field resource ResourceItem
+---@field sound integer
 ---@field targetItem unknown?
 ISItemSlotRemoveAction = ISBaseTimedAction:derive("ISItemSlotRemoveAction")
 ISItemSlotRemoveAction.Type = "ISItemSlotRemoveAction"
@@ -31,6 +33,7 @@ function ISItemSlotRemoveAction:update() end
 
 ---@param character IsoPlayer
 ---@param entity IsoObject
----@param resource Resource
+---@param resource ResourceItem
+---@param item InventoryItem?
 ---@return ISItemSlotRemoveAction
-function ISItemSlotRemoveAction:new(character, entity, resource) end
+function ISItemSlotRemoveAction:new(character, entity, resource, item) end

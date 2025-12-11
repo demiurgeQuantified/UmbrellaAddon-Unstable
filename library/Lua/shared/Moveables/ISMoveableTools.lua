@@ -37,9 +37,7 @@ function ISMoveableTools.isObjectMoveable(_object) end
 
 ---@class umbrella.ISMoveableTools.MoveableListItem : umbrella.ISMoveableTools.ObjectListItem
 ---@field isOverlay boolean
-umbrella_ISMoveableTools_MoveableListItem = {}
 
 ---@class umbrella.ISMoveableTools.ObjectListItem
 ---@field moveProps ISMoveableSpriteProps
 ---@field object IsoObject
-umbrella_ISMoveableTools_ObjectListItem = {}

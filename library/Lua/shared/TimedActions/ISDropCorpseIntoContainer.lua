@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISDropCorpseIntoContainer : ISBaseTimedAction
----@field targetContainer unknown
+---@field targetContainer ItemContainer
 ISDropCorpseIntoContainer = ISBaseTimedAction:derive("ISDropCorpseIntoContainer")
 ISDropCorpseIntoContainer.Type = "ISDropCorpseIntoContainer"
 
@@ -12,5 +12,7 @@ function ISDropCorpseIntoContainer:perform() end
 
 function ISDropCorpseIntoContainer:start() end
 
+---@param character IsoPlayer
+---@param targetContainer ItemContainer
 ---@return ISDropCorpseIntoContainer
 function ISDropCorpseIntoContainer:new(character, targetContainer) end

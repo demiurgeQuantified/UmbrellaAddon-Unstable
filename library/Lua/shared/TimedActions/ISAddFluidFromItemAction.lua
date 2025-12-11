@@ -1,14 +1,16 @@
 ---@meta
 
 ---@class ISAddFluidFromItemAction : ISBaseTimedAction
----@field addUnits unknown
----@field itemFrom unknown
+---@field addUnits number
+---@field itemFrom InventoryItem
 ---@field itemFromEndingAmount number
----@field itemFromStartAmount unknown
----@field objectTo unknown
----@field sound unknown
+---@field itemFromStartAmount number
+---@field objectTo IsoObject
+---@field sound integer
 ISAddFluidFromItemAction = ISBaseTimedAction:derive("ISAddFluidFromItemAction")
 ISAddFluidFromItemAction.Type = "ISAddFluidFromItemAction"
+
+function ISAddFluidFromItemAction:animEvent(event, parameter) end
 
 ---@return boolean
 function ISAddFluidFromItemAction:complete() end
@@ -16,10 +18,12 @@ function ISAddFluidFromItemAction:complete() end
 ---@return number
 function ISAddFluidFromItemAction:getDuration() end
 
----@return boolean?
+---@return boolean
 function ISAddFluidFromItemAction:isValid() end
 
 function ISAddFluidFromItemAction:perform() end
+
+function ISAddFluidFromItemAction:serverStart() end
 
 function ISAddFluidFromItemAction:start() end
 
@@ -29,9 +33,13 @@ function ISAddFluidFromItemAction:stopSound() end
 
 function ISAddFluidFromItemAction:update() end
 
----@return unknown
+function ISAddFluidFromItemAction:updateAdd(delta) end
+
+---@return boolean
 function ISAddFluidFromItemAction:waitToStart() end
 
 ---@param character unknown?
+---@param itemFrom InventoryItem
+---@param objectTo IsoObject
 ---@return ISAddFluidFromItemAction
 function ISAddFluidFromItemAction:new(character, itemFrom, objectTo) end

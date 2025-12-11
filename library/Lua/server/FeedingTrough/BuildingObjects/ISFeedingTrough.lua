@@ -61,4 +61,3 @@ function ISFeedingTrough:new(character, def) end
 ---@class umbrella.ISFeedingTrough.TroughSprite
 ---@field backLeft string
 ---@field backRight string
-umbrella_ISFeedingTrough_TroughSprite = {}

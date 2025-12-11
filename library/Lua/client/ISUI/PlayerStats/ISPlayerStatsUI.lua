@@ -21,7 +21,6 @@
 ---@field loseLvlBtn ISButton
 ---@field mainPanel ISPanel
 ---@field manageInvBtn ISButton
----@field muteAllBtn ISButton
 ---@field perks table
 ---@field perksAddXPButtons table
 ---@field selectedPerk umbrella.ISPlayerStatsUI.PerkTable?
@@ -105,7 +104,7 @@ function ISPlayerStatsUI:onChangeProfession(button, prof) end
 function ISPlayerStatsUI:onChangeWeight(button, player) end
 
 ---@param del number
----@return boolean?
+---@return boolean
 function ISPlayerStatsUI:onMouseWheelXXX(del) end
 
 ---@param button ISButton
@@ -152,11 +151,9 @@ function ISPlayerStatsUI:new(x, y, width, height, playerChecked, admin) end
 ---@field perk PerkFactory.Perk
 ---@field xp number
 ---@field xpToLevel number
-umbrella_ISPlayerStatsUI_PerkTable = {}
 
 ---@class umbrella.ISPlayerStatsUI.Userlog
 ---@field amount integer
 ---@field issuedBy string
 ---@field text string
 ---@field type string
-umbrella_ISPlayerStatsUI_Userlog = {}

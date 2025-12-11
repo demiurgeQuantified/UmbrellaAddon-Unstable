@@ -50,4 +50,3 @@ function ISDebugPanelBase:new(x, y, width, height, title) end
 ---@field buttonTitle string
 ---@field ignoreSorting boolean?
 ---@field panelClass ISUIElement
-umbrella_ISDebugPanelBase_PanelInfo = {}

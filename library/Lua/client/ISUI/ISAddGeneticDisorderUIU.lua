@@ -10,7 +10,6 @@
 ---@field gdList string[]
 ---@field ok ISButton
 ---@field onclick umbrella.ISAddGeneticDisorderUI.OnClick?
----@field target unknown
 ---@field variableColor table
 ---@field zOffsetSmallFont number
 ISAddGeneticDisorderUI = ISPanel:derive("ISAddGeneticDisorderUI")

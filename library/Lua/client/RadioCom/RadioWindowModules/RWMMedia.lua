@@ -29,7 +29,7 @@ function RWMMedia:clear() end
 
 function RWMMedia:createChildren() end
 
----@return string?
+---@return string
 function RWMMedia:getAPrompt() end
 
 ---@return string?
@@ -80,4 +80,3 @@ function RWMMedia:new(x, y, width, height) end
 ---@class umbrella.RWMMedia.ColorContainer
 ---@field back umbrella.RGBA
 ---@field text umbrella.RGBA
-umbrella_RWMMedia_ColorContainer = {}

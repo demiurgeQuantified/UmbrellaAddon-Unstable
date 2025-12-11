@@ -1,8 +1,11 @@
 ---@meta
 
 ---@alias umbrella.ISEntityUI.CraftCanStart fun(player: IsoPlayer, entity: IsoObject, component: Component): boolean
+
 ---@alias umbrella.ISEntityUI.CraftStart fun(player: IsoPlayer, entity: IsoObject, component: Component)
+
 ---@alias umbrella.ISEntityUI.CustomCanOpenWindow fun(player: IsoPlayer, entity: GameEntity): boolean
+
 ---@alias umbrella.ISEntityUI.CustomOpenWindow fun(player: IsoPlayer, entity: GameEntity)
 
 ---@class ISEntityUI
@@ -80,9 +83,9 @@ function ISEntityUI.GetReloadTable() end
 ---@return ISUIElement?
 function ISEntityUI.GetWindowClass(_entity) end
 
----@param _playerNum number
+---@param _playerNum integer
 ---@param _windowKey string
----@return unknown?
+---@return ISUIElement?
 function ISEntityUI.GetWindowInstance(_playerNum, _windowKey) end
 
 ---@param _entity GameEntity
@@ -93,8 +96,9 @@ function ISEntityUI.GetWindowStyleName(_entity) end
 ---@param _handcraftLogic HandcraftLogic
 ---@param force boolean
 ---@param addToQueue boolean
+---@param eatPercentage number?
 ---@return ISHandcraftAction?
-function ISEntityUI.HandcraftStart(_player, _handcraftLogic, force, addToQueue) end
+function ISEntityUI.HandcraftStart(_player, _handcraftLogic, force, addToQueue, eatPercentage) end
 
 ---@param _player IsoPlayer
 ---@param _handcraftLogic HandcraftLogic
@@ -109,9 +113,9 @@ function ISEntityUI.HandcraftStartMultiple(_player, _handcraftLogic, force, qty,
 ---@return boolean
 function ISEntityUI.HasComponentPanels(_player, _entity) end
 
----@param _playerNum number
+---@param _playerNum integer
 ---@param _windowKey string
----@return unknown
+---@return unknown?
 function ISEntityUI.IsWindowOpen(_playerNum, _windowKey) end
 
 ---@param _player IsoPlayer
@@ -123,7 +127,8 @@ function ISEntityUI.ItemSlotAddItems(_player, _entity, _itemSlot, _itemList) end
 ---@param _player IsoPlayer
 ---@param _entity IsoObject
 ---@param _itemSlot ISItemSlot
-function ISEntityUI.ItemSlotRemoveItems(_player, _entity, _itemSlot) end
+---@param _items ArrayList<InventoryItem>?
+function ISEntityUI.ItemSlotRemoveItems(_player, _entity, _itemSlot, _items) end
 
 ---@param _player IsoPlayer
 ---@param _entity IsoObject
@@ -140,13 +145,17 @@ function ISEntityUI.OnSave() end
 ---@param _isoObject IsoObject?
 ---@param _queryOverride string?
 ---@param _ignoreFindSurface boolean?
-function ISEntityUI.OpenBuildWindow(_player, _isoObject, _queryOverride, _ignoreFindSurface) end
+---@param recipe CraftRecipe?
+---@param itemString string?
+function ISEntityUI.OpenBuildWindow(_player, _isoObject, _queryOverride, _ignoreFindSurface, recipe, itemString) end
 
 ---@param _player IsoPlayer
 ---@param _isoObject IsoObject?
 ---@param _queryOverride string?
 ---@param _ignoreFindSurface boolean?
-function ISEntityUI.OpenHandcraftWindow(_player, _isoObject, _queryOverride, _ignoreFindSurface) end
+---@param recipe CraftRecipe?
+---@param itemString string?
+function ISEntityUI.OpenHandcraftWindow(_player, _isoObject, _queryOverride, _ignoreFindSurface, recipe, itemString) end
 
 ---@param _player IsoPlayer
 ---@param _entity GameEntity
@@ -154,6 +163,7 @@ function ISEntityUI.OpenWindow(_player, _entity) end
 
 function ISEntityUI.ReadIni() end
 
+---@param _window ISBaseEntityWindow
 function ISEntityUI.StoreWindowPrefs(_window) end
 
 ---@param _player IsoPlayer
@@ -168,16 +178,13 @@ function ISEntityUI.WriteIni() end
 ---@field component Component
 ---@field panelClass ISUIElement
 ---@field uiStyle XuiSkin.ComponentUiStyle
-umbrella_ISEntityUI_ComponentPanelInfo = {}
 
 ---@class umbrella.ISEntityUI.PlayerTable
 ---@field windows table<string, umbrella.ISEntityUI.WindowTable>
-umbrella_ISEntityUI_PlayerTable = {}
 
 ---@class umbrella.ISEntityUI.ReloadTableItem
 ---@field entity GameEntity
 ---@field player IsoPlayer
-umbrella_ISEntityUI_ReloadTableItem = {}
 
 ---@class umbrella.ISEntityUI.WindowTable
 ---@field height number?
@@ -185,4 +192,3 @@ umbrella_ISEntityUI_ReloadTableItem = {}
 ---@field width number?
 ---@field x number?
 ---@field y number?
-umbrella_ISEntityUI_WindowTable = {}

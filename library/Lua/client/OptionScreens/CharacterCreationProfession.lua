@@ -54,8 +54,8 @@ function CharacterCreationProfession:addBadTrait() end
 
 function CharacterCreationProfession:addGoodTrait() end
 
----@param bad boolean
-function CharacterCreationProfession:addTrait(bad) end
+---@param trait TraitFactory.Trait
+function CharacterCreationProfession:addTrait(trait) end
 
 function CharacterCreationProfession:changeClothes() end
 
@@ -91,7 +91,7 @@ function CharacterCreationProfession:drawTraitMap(y, item, alt) end
 ---@return number
 function CharacterCreationProfession:drawXpBoostMap(y, item, alt) end
 
----@return unknown
+---@return ProfessionFactory.Profession
 function CharacterCreationProfession:getSelectedProf() end
 
 ---@param trait TraitFactory.Trait
@@ -133,10 +133,14 @@ function CharacterCreationProfession:onJoypadDirRight(joypadData) end
 ---@param joypadData JoypadData
 function CharacterCreationProfession:onJoypadDirUp(joypadData) end
 
+---@param joypadData JoypadData
 function CharacterCreationProfession:onJoypadNavigateStart(joypadData) end
 
+---@param descendant ISUIElement
+---@param joypadData JoypadData
 function CharacterCreationProfession:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
+---@param key integer
 function CharacterCreationProfession:onKeyRelease(key) end
 
 ---@param joypadData JoypadData
@@ -185,7 +189,8 @@ function CharacterCreationProfession:presetExists(findText) end
 
 function CharacterCreationProfession:randomizeTraits() end
 
-function CharacterCreationProfession:removeTrait() end
+---@param index number
+function CharacterCreationProfession:removeTrait(index) end
 
 function CharacterCreationProfession:render() end
 
@@ -219,6 +224,65 @@ function CharacterCreationProfession:update() end
 ---@return CharacterCreationProfession
 function CharacterCreationProfession:new(x, y, width, height) end
 
+---@class CharacterCreationProfession.CharacterCreationProfessionListBox : ISScrollingListBox
+local __characterCreationProfession_CharacterCreationProfessionListBox =
+	ISScrollingListBox:derive("CharacterCreationProfessionListBox")
+__characterCreationProfession_CharacterCreationProfessionListBox.Type = "CharacterCreationProfessionListBox"
+
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionListBox:onJoypadBeforeDeactivate(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionListBox:onJoypadDown(button, joypadData) end
+
+function __characterCreationProfession_CharacterCreationProfessionListBox:render() end
+
+---@class CharacterCreationProfession.CharacterCreationProfessionPresetPanel : ISPanelJoypad
+local __characterCreationProfession_CharacterCreationProfessionPresetPanel =
+	ISPanelJoypad:derive("CharacterCreationProfessionPresetPanel")
+__characterCreationProfession_CharacterCreationProfessionPresetPanel.Type = "CharacterCreationProfessionPresetPanel"
+
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:onGainJoypadFocus(joypadData) end
+
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:onJoypadDirLeft(joypadData) end
+
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:onJoypadDirRight(joypadData) end
+
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:onJoypadDirUp(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:onJoypadDown(button, joypadData) end
+
+---@param joypadData JoypadData
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:onLoseJoypadFocus(joypadData) end
+
+function __characterCreationProfession_CharacterCreationProfessionPresetPanel:render() end
+
+---@class CharacterCreationMain
+CharacterCreationMain = {}
+
+---@param list umbrella.ISScrollingListBox.Item[]
+function CharacterCreationMain.invertSort(list) end
+
+---@param list umbrella.ISScrollingListBox.Item[]
+function CharacterCreationMain.sort(list) end
+
+---@param a umbrella.ISScrollingListBox.Item
+---@param b umbrella.ISScrollingListBox.Item
+---@return boolean
+function CharacterCreationMain.sortByCost(a, b) end
+
+---@param a umbrella.ISScrollingListBox.Item
+---@param b umbrella.ISScrollingListBox.Item
+---@return boolean
+function CharacterCreationMain.sortByInvertCost(a, b) end
+
 ---@class BCRC
 BCRC = {}
 BCRC.savefile = "saved_builds.txt"
@@ -247,22 +311,3 @@ function BCRC.readSaveFile() end
 
 ---@param options table<string, string>
 function BCRC.writeSaveFile(options) end
-
----@class CharacterCreationMain
-CharacterCreationMain = {}
-
----@param list umbrella.ISScrollingListBox.Item[]
-function CharacterCreationMain.invertSort(list) end
-
----@param list umbrella.ISScrollingListBox.Item[]
-function CharacterCreationMain.sort(list) end
-
----@param a umbrella.ISScrollingListBox.Item
----@param b umbrella.ISScrollingListBox.Item
----@return boolean
-function CharacterCreationMain.sortByCost(a, b) end
-
----@param a umbrella.ISScrollingListBox.Item
----@param b umbrella.ISScrollingListBox.Item
----@return boolean
-function CharacterCreationMain.sortByInvertCost(a, b) end

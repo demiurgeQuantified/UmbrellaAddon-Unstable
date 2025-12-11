@@ -50,9 +50,6 @@ function ISCraftRecipePanel:setOverlayVisible(_b) end
 
 function ISCraftRecipePanel:update() end
 
----@param containers ArrayList<ItemContainer>
-function ISCraftRecipePanel:updateContainers(containers) end
-
 function ISCraftRecipePanel:updateTitleWidget() end
 
 ---@param x number

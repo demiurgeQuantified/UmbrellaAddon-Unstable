@@ -236,4 +236,3 @@ function ISButtonPrompt:new(player) end
 ---@class umbrella.ISButtonPrompt.Test
 ---@field sqs IsoGridSquare[]
 ---@field square IsoGridSquare
-umbrella_ISButtonPrompt_Test = {}

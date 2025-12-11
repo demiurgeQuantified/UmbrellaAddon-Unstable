@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_RemoveCampfire.Type = "ISLootWindowObjectContro
 ---@return unknown
 function ISLootWindowObjectControlHandler_RemoveCampfire:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_RemoveCampfire:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_RemoveCampfire:perform() end

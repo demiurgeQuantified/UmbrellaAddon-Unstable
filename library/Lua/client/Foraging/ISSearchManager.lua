@@ -6,11 +6,7 @@
 ---@field activeIcons table<string, ISBaseIcon>
 ---@field activeZoneRadius number
 ---@field activeZones table<string, umbrella.Foraging.ZoneData>
----@field affinityCooldown number
----@field affinityCooldownMax number
----@field affinityCooldownMin number
----@field affinityCooldownStep number
----@field affinityCooldownTick number
+---@field affinityAddedChunks table
 ---@field aimBonusTick number
 ---@field aimBonusTickMax number
 ---@field aimMulti number
@@ -47,9 +43,13 @@
 ---@field isSpotting boolean
 ---@field lastFoundX number
 ---@field lastFoundY number
+---@field lastSpottedX unknown
+---@field lastSpottedY unknown
 ---@field lastTimestamp number
 ---@field lastUpdateX number
 ---@field lastUpdateY number
+---@field maxDistanceBonus number
+---@field maxDistanceSinceFind number
 ---@field maxRadius number
 ---@field maxRadiusCap number
 ---@field minAlpha number
@@ -57,9 +57,11 @@
 ---@field modifiers table
 ---@field movedIcons table<string, string>
 ---@field movedIconsSquares table<IsoGridSquare, boolean>
+---@field movementDelta number
 ---@field overlayValues table<string, number>
 ---@field perkLevel number
 ---@field player integer
+---@field previousDistanceSinceFind number
 ---@field radius number
 ---@field reducedTimePerLevel number
 ---@field searchMode SearchMode
@@ -103,7 +105,6 @@ ISSearchManager.showDebugLocations = false
 ISSearchManager.showDebugExtended = false
 ISSearchManager.showDebugVision = false
 ISSearchManager.showDebugVisionRadius = false
-ISSearchManager.iconItems = {} ---@type table<string, ArrayList>
 
 ---@param _player integer
 ---@param _context ISContextMenu
@@ -351,13 +352,13 @@ function ISSearchManager:toggleSearchMode(_isSearchMode) end
 
 function ISSearchManager:update() end
 
-function ISSearchManager:updateAffinityCooldown() end
-
 function ISSearchManager:updateAlpha() end
 
 function ISSearchManager:updateCurrentZone() end
 
 function ISSearchManager:updateForceFindSystem() end
+
+function ISSearchManager:updateLocationTracking() end
 
 function ISSearchManager:updateModifiers() end
 
@@ -383,4 +384,3 @@ function ISSearchManager:new(_character) end
 ---@field breakTick boolean
 ---@field method string
 ---@field tick integer
-umbrella_Foraging_UpdateEvent = {}

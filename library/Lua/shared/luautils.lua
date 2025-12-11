@@ -42,10 +42,13 @@ function luautils.getNextTiles(cell, startingGrid, range) end
 ---@param player IsoPlayer
 ---@param item InventoryItem
 ---@param dontWalk boolean?
----@return boolean?
+---@return boolean
 function luautils.haveToBeTransfered(player, item, dontWalk) end
 
----@return boolean?
+---@param player IsoPlayer
+---@param item InventoryItem
+---@param dontWalk boolean?
+---@return boolean
 function luautils.haveToBeTransferedWhileTrading(player, item, dontWalk) end
 
 ---@param table1 string
@@ -77,7 +80,7 @@ function luautils.lerp(_sourceValue, _destinationValue, _stepRate, _finalStepRat
 ---@param _posY number?
 function luautils.okModal(_text, _centered, _width, _height, _posX, _posY) end
 
----@param stringTable table
+---@param stringTable string[]
 ---@param sep string
 ---@return string?
 function luautils.packString(stringTable, sep) end
@@ -121,8 +124,9 @@ function luautils.tableContains(table2, value) end
 ---@return string
 function luautils.trim(s) end
 
+---@param text string
 ---@param sep string
----@return unknown
+---@return ...string
 function luautils.unpackString(text, sep) end
 
 ---@param perks PerkFactory.Perk
@@ -193,5 +197,6 @@ function luautils.walkToObject(_player, _object, _cancelTA) end
 function luautils.weaponLowerCondition(_weapon, _character, _replace, _chance) end
 
 ---@param num number
----@return number
+---@param idp integer?
+---@return integer
 function round(num, idp) end

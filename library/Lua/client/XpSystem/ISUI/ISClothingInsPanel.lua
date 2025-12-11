@@ -123,7 +123,6 @@ function ISClothingInsPanel:new(player, x, y, width, height) end
 ---@field labelMid ISLabel?
 ---@field labelMin ISLabel?
 ---@field labelTitle ISLabel
-umbrella_ISClothingInsPanel_NodeDetailsTable = {}
 
 ---@class umbrella.ISClothingInsPanel.View
 ---@field functionName string
@@ -133,4 +132,3 @@ umbrella_ISClothingInsPanel_NodeDetailsTable = {}
 ---@field scheme umbrella.ISBodyPartPanel.ColorSchemeTable[]
 ---@field tex Texture
 ---@field title string
-umbrella_ISClothingInsPanel_View = {}

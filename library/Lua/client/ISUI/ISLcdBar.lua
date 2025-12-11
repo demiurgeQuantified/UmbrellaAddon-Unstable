@@ -20,8 +20,8 @@
 ISLcdBar = ISPanel:derive("ISLcdBar")
 ISLcdBar.Type = "ISLcdBar"
 ISLcdBar.indexes = " !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_"
-ISLcdBar.unsupported = nil ---@type string[]
-ISLcdBar.special = nil ---@type string[]
+ISLcdBar.unsupported = {} ---@type string[]
+ISLcdBar.special = {} ---@type string[]
 
 function ISLcdBar:createChildren() end
 

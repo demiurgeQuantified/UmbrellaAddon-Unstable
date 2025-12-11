@@ -114,4 +114,3 @@ function ISMoveableInfoWindow:new(x, y, character, drag) end
 ---@class umbrella.ISMoveableInfoWindow.TextureInfo
 ---@field offsetY number
 ---@field texture Texture
-umbrella_ISMoveableInfoWindow_TextureInfo = {}

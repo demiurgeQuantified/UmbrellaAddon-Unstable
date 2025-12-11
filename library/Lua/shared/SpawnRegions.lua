@@ -29,14 +29,11 @@ function SpawnRegionMgr.loadSpawnRegionsFile(filename, server) end
 ---@field posZ integer
 ---@field worldX integer?
 ---@field worldY integer?
-umbrella_SpawnPoint = {}
 
 ---@class umbrella.SpawnRegion
 ---@field name string
 ---@field points umbrella.SpawnPoint
-umbrella_SpawnRegion = {}
 
 ---@class umbrella.FileSpawnRegion
 ---@field file string
 ---@field name string
-umbrella_FileSpawnRegion = {}

@@ -35,4 +35,4 @@ function ISDuplicateKeybindDialog:onKeep() end
 ---@param keybindName string
 ---@param keybind2Name string
 ---@return ISDuplicateKeybindDialog
-function ISDuplicateKeybindDialog:new(key, keybindName, keybind2Name) end
+function ISDuplicateKeybindDialog:new(key, keybindName, keybind2Name, shift, ctrl, alt) end

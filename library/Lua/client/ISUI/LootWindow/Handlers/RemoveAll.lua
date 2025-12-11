@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_RemoveAll.Type = "ISLootWindowObjectControlHand
 ---@return unknown
 function ISLootWindowObjectControlHandler_RemoveAll:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_RemoveAll:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_RemoveAll:perform() end

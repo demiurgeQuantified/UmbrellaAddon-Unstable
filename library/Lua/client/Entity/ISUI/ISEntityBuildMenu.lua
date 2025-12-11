@@ -3,7 +3,7 @@
 ---@class ISEntityBuildMenu
 ISEntityBuildMenu = {}
 ISEntityBuildMenu.buildables = nil ---@type SpriteConfigManager.ObjectInfo[] | false
-ISEntityBuildMenu.items = nil ---@type umbrella.ISBuildIsoEntity.ItemResult[]
+ISEntityBuildMenu.items = {} ---@type umbrella.ISBuildIsoEntity.ItemResult[]
 
 ---@return ISToolTip
 function ISEntityBuildMenu.addToolTip() end

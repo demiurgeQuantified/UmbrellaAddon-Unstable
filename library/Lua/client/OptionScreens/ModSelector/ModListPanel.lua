@@ -35,28 +35,6 @@ function __modSelector_ModListPanel:createChildren() end
 ---@param a number
 function __modSelector_ModListPanel:drawCustomRectBorder(x, y, w, h, r, g, b, a) end
 
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onGainJoypadFocus(joypadData) end
-
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onJoypadDirDown(joypadData) end
-
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onJoypadDirUp(joypadData) end
-
----@param button integer
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onJoypadDown(button, joypadData) end
-
----@param joypadData JoypadData
-function __modSelector_ModListPanel:onLoseJoypadFocus(joypadData) end
-
 ---@param button ISButton
 ---@param x number
 ---@param y number

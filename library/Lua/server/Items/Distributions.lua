@@ -20,7 +20,6 @@ BagsAndContainers = {}
 ---@field isShop boolean?
 ---@field procedural true
 ---@field procList umbrella.Distributions.ProceduralItem[]
-umbrella_Distributions_ListContainerDistribution = {}
 
 ---@class umbrella.Distributions.ItemsContainerDistribution
 ---@field bags umbrella.ContainerDistribution?
@@ -41,7 +40,6 @@ umbrella_Distributions_ListContainerDistribution = {}
 ---@field onlyOne boolean?
 ---@field rolls integer
 ---@field stashChance integer?
-umbrella_Distributions_ItemsContainerDistribution = {}
 
 ---@class umbrella.Distributions.ProceduralItem
 ---@field forceForItems string?
@@ -52,7 +50,6 @@ umbrella_Distributions_ItemsContainerDistribution = {}
 ---@field min integer
 ---@field name string
 ---@field weightChance integer
-umbrella_Distributions_ProceduralItem = {}
 
 ---@class umbrella.RoomDistribution
 ---@field [string] umbrella.ContainerDistribution
@@ -72,4 +69,3 @@ umbrella_Distributions_ProceduralItem = {}
 ---@field vehicleChance integer?
 ---@field vehicleDistribution string?
 ---@field vehicles string?
-umbrella_RoomDistribution = {}

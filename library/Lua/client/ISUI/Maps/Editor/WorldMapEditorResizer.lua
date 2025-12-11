@@ -56,4 +56,3 @@ function WorldMapEditorResizer:new(editor) end
 ---@field x2 number
 ---@field y1 number
 ---@field y2 number
-umbrella_WorldMapEditorResizer_Bounds = {}

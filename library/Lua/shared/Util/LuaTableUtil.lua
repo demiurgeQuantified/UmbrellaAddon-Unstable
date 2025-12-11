@@ -3,6 +3,7 @@
 ---@class LuaTableUtil
 LuaTableUtil = {}
 
+---@param list table?
 ---@return boolean
 function LuaTableUtil:contains(list, element) end
 

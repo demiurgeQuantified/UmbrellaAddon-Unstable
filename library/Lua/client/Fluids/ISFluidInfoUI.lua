@@ -54,4 +54,3 @@ function ISFluidInfoUI:new(x, y, width, height, _player, _container) end
 ---@field instance ISFluidInfoUI
 ---@field x number
 ---@field y number
-umbrella_ISFluidInfoUI_PlayerTableItem = {}

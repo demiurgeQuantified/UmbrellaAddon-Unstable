@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISKillAnimalInInventory : ISBaseTimedAction
----@field animalItem unknown?
+---@field animalItem AnimalInventoryItem?
 ISKillAnimalInInventory = ISBaseTimedAction:derive("ISKillAnimalInInventory")
 ISKillAnimalInInventory.Type = "ISKillAnimalInInventory"
 
@@ -30,5 +30,7 @@ function ISKillAnimalInInventory:update() end
 ---@return boolean
 function ISKillAnimalInInventory:waitToStart() end
 
+---@param character IsoPlayer
+---@param animalItem AnimalInventoryItem
 ---@return ISKillAnimalInInventory
 function ISKillAnimalInInventory:new(character, animalItem) end

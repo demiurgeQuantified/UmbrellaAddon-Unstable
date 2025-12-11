@@ -20,10 +20,12 @@ function ISInventoryWindowControlHandler_TransferSameType:getItemsTable(containe
 ---@return table
 function ISInventoryWindowControlHandler_TransferSameType:getItemsToTransfer() end
 
+---@param button ISButton
 ---@param dx number
 ---@param dy number
 function ISInventoryWindowControlHandler_TransferSameType:onMouseOutButton(button, dx, dy) end
 
+---@param button ISButton
 ---@param x number
 ---@param y number
 function ISInventoryWindowControlHandler_TransferSameType:onMouseOverButton(button, x, y) end

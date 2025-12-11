@@ -5,7 +5,6 @@
 ---@field isMetalBar boolean
 ---@field isStarted boolean
 ---@field item BarricadeAble
----@field maxTime number?
 ---@field sound unknown?
 ISBarricadeAction = ISBaseTimedAction:derive("ISBarricadeAction")
 ISBarricadeAction.Type = "ISBarricadeAction"
@@ -13,7 +12,7 @@ ISBarricadeAction.Type = "ISBarricadeAction"
 ---@return boolean?
 function ISBarricadeAction:complete() end
 
----@return number?
+---@return number
 function ISBarricadeAction:getDuration() end
 
 ---@return boolean

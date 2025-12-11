@@ -33,5 +33,6 @@ function ISLightFromLiterature:waitToStart() end
 ---@param item InventoryItem
 ---@param lighter InventoryItem
 ---@param campfire SCampfireGlobalObject
+---@param fuelAmt number
 ---@return ISLightFromLiterature
-function ISLightFromLiterature:new(character, item, lighter, campfire) end
+function ISLightFromLiterature:new(character, item, lighter, campfire, fuelAmt) end

@@ -4,12 +4,11 @@
 ---@field allowMissingItems boolean
 ---@field destContainer ItemContainer
 ---@field destContainerOpened ItemContainer?
----@field destContainerOpenSound integer?
 ---@field dontAdd boolean
 ---@field item InventoryItem?
 ---@field jobType string
 ---@field loopedAction boolean
----@field loopSound unknown?
+---@field loopSound integer?
 ---@field loopSoundNoTrigger boolean
 ---@field maxTime number?
 ---@field onCompleteArgs table?
@@ -17,7 +16,6 @@
 ---@field queueList umbrella.ISInventoryTransferAction.QueueItem[]
 ---@field selectedContainer ItemContainer?
 ---@field sourceContainerOpened ItemContainer?
----@field sourceContainerOpenSound integer?
 ---@field srcContainer ItemContainer
 ---@field started boolean
 ---@field transactionId number
@@ -55,9 +53,6 @@ function ISInventoryTransferAction:getExtraLogData() end
 ---@param item InventoryItem
 ---@return IsoGridSquare?
 function ISInventoryTransferAction:getNotFullFloorSquare(item) end
-
----@return string
-function ISInventoryTransferAction:getSoundName() end
 
 ---@return number
 function ISInventoryTransferAction:getTimeDelta() end
@@ -120,17 +115,19 @@ function ISInventoryTransferAction:update() end
 ---@return ISInventoryTransferAction
 function ISInventoryTransferAction:new(character, item, srcContainer, destContainer, time) end
 
+---@class ISInventoryPage
+ISInventoryPage = {}
+ISInventoryPage.putSoundContainer = nil
+
 ---@class umbrella.ISInventoryTransferAction.QueueItem
 ---@field items InventoryItem[]
 ---@field time number
 ---@field type string
-umbrella_ISInventoryTransferAction_QueueItem = {}
 
 ---@class umbrella.ISInventoryTransferAction.Transaction
 ---@field [1] InventoryItem
 ---@field [2] ItemContainer
 ---@field [3] ItemContainer
-umbrella_ISInventoryTransferAction_Transaction = {}
 
 ---@param character IsoPlayer
 ---@param item InventoryItem

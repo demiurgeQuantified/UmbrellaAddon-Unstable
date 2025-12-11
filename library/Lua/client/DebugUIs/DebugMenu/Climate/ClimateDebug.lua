@@ -97,4 +97,3 @@ function ClimateDebug:new(x, y, width, height, player) end
 ---@field max integer
 ---@field min integer
 ---@field name string
-umbrella_ClimateDebug_VarInfo = {}

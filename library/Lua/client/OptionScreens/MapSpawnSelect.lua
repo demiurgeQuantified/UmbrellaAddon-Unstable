@@ -12,7 +12,6 @@
 ---@field previousScreen string?
 ---@field randomButton ISButton
 ---@field richText MapSpawnSelectInfoPanel
----@field seedLabel ISLabel
 ---@field seedPanel ISPanel
 ---@field seedTextBox ISTextEntryBox
 ---@field selectedMapIndex integer
@@ -78,15 +77,11 @@ function MapSpawnSelect:onJoypadBeforeDeactivate(joypadData) end
 ---@param joypadData JoypadData
 function MapSpawnSelect:onJoypadBeforeDeactivate_child(joypadData) end
 
+---@param descendant ISUIElement
 ---@param joypadData JoypadData
-function MapSpawnSelect:onJoypadDirDown_textEntry(joypadData) end
-
----@param button ISButton
----@param joypadData JoypadData
-function MapSpawnSelect:onJoypadDown_textEntry(button, joypadData) end
-
 function MapSpawnSelect:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
+---@param key integer
 function MapSpawnSelect:onKeyRelease(key) end
 
 ---@param button ISButton
@@ -136,12 +131,12 @@ function MapSpawnSelect:new(x, y, width, height) end
 ---@field hasResetView boolean
 ---@field LBumperZoom number?
 ---@field mapAPI UIWorldMapV3
----@field povXms unknown?
----@field povYms unknown?
+---@field povXms integer?
+---@field povYms integer?
 ---@field pyramidFileName string?
 ---@field RBumperZoom number?
 ---@field shownInitialLocation boolean
----@field updateMS unknown
+---@field updateMS integer?
 MapSpawnSelectImage = ISUIElement:derive("MapSpawnSelectImage")
 MapSpawnSelectImage.Type = "MapSpawnSelectImage"
 
@@ -155,6 +150,8 @@ function MapSpawnSelectImage:initMapData(directory) end
 
 function MapSpawnSelectImage:instantiate() end
 
+---@param button integer
+---@param joypadData JoypadData
 function MapSpawnSelectImage:onJoypadDown(button, joypadData) end
 
 ---@param x number
@@ -213,12 +210,6 @@ MapSpawnSelectListBox.Type = "MapSpawnSelectListBox"
 ---@param joypadData JoypadData
 function MapSpawnSelectListBox:onJoypadBeforeDeactivate(joypadData) end
 
----@param joypadData JoypadData
-function MapSpawnSelectListBox:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
-function MapSpawnSelectListBox:onJoypadDirUp(joypadData) end
-
 ---@param x number
 ---@param y number
 function MapSpawnSelectListBox:onMouseDown(x, y) end
@@ -235,9 +226,6 @@ function MapSpawnSelectInfoPanel:onJoypadBeforeDeactivate(joypadData) end
 
 ---@param joypadData JoypadData
 function MapSpawnSelectInfoPanel:onJoypadDirDown(joypadData) end
-
----@param joypadData JoypadData
-function MapSpawnSelectInfoPanel:onJoypadDirLeft(joypadData) end
 
 ---@param joypadData JoypadData
 function MapSpawnSelectInfoPanel:onJoypadDirUp(joypadData) end
@@ -261,8 +249,10 @@ function MapSpawnSelectSeedPanel:createChildren() end
 
 function MapSpawnSelectSeedPanel:generateNewSeed() end
 
+---@param joypadData JoypadData
 function MapSpawnSelectSeedPanel:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function MapSpawnSelectSeedPanel:onLoseJoypadFocus(joypadData) end
 
 function MapSpawnSelectSeedPanel:render() end
@@ -284,4 +274,3 @@ function MapSpawnSelectSeedPanel:new(x, y, width, height) end
 ---@field zoomS number?
 ---@field zoomX number?
 ---@field zoomY number?
-umbrella_MapSpawnSelect_Item = {}

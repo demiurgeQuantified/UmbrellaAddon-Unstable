@@ -13,7 +13,6 @@
 ---@field lineSplit number
 ---@field onSave umbrella.RWMSubEditPreset.OnSave?
 ---@field saveButton ISButton
----@field target unknown?
 RWMSubEditPreset = ISPanel:derive("RWMSubEditPreset")
 RWMSubEditPreset.Type = "RWMSubEditPreset"
 
@@ -77,4 +76,3 @@ function RWMSubEditPreset:new(x, y, width, height, target, onSave) end
 ---@field text string?
 ---@field textLen number?
 ---@field ui ISUIElement
-umbrella_RWMSubEditPreset_LinePair = {}

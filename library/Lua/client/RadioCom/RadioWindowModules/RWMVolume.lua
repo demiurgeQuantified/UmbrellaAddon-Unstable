@@ -28,7 +28,7 @@ function RWMVolume:getBPrompt() end
 ---@return string?
 function RWMVolume:getXPrompt() end
 
----@return string?
+---@return string
 function RWMVolume:getYPrompt() end
 
 function RWMVolume:initialise() end

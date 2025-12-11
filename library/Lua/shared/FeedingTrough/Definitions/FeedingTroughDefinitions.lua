@@ -224,16 +224,11 @@ FeedingTroughDef.simple = {
 ---@field nails integer
 ---@field planks integer
 ---@field skill integer
----@field sprite1 string
----@field sprite1FoodOverlay1 string
----@field sprite1FoodOverlay2 string
----@field sprite2 string?
----@field sprite2FoodOverlay1 string?
----@field sprite2FoodOverlay2 string?
+---@field spriteFoodOverlay1 table<string, string>
+---@field spriteFoodOverlay2 table<string, string>
+---@field spriteN string[]
 ---@field spriteNorth1 string
----@field spriteNorth1FoodOverlay1 string
----@field spriteNorth1FoodOverlay2 string
 ---@field spriteNorth2 string?
----@field spriteNorth2FoodOverlay1 string?
----@field spriteNorth2FoodOverlay2 string?
-umbrella_FeedingTroughDefinition = {}
+---@field spriteW string[]
+---@field spriteWaterOverlay1 table<string, string>
+---@field spriteWaterOverlay2 table<string, string>

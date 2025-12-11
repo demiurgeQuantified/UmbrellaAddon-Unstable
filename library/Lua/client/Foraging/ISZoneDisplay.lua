@@ -1,5 +1,50 @@
 ---@meta
 
+---@class ISZoneDisplay.zdImage : ISPanel
+---@field alphaStep number
+---@field alphaTarget number
+---@field texture Texture
+---@field zoneDisplay ISZoneDisplay
+local __ISZoneDisplay_zdImage = ISPanel:derive("zdImage")
+__ISZoneDisplay_zdImage.Type = "zdImage"
+
+---@return number
+function __ISZoneDisplay_zdImage:getAlpha() end
+
+---@return number
+function __ISZoneDisplay_zdImage:getAlphaTarget() end
+
+function __ISZoneDisplay_zdImage:initialise() end
+
+function __ISZoneDisplay_zdImage:prerender() end
+
+function __ISZoneDisplay_zdImage:render() end
+
+---@param _a number
+function __ISZoneDisplay_zdImage:setAlpha(_a) end
+
+---@param _a number
+function __ISZoneDisplay_zdImage:setAlphaTarget(_a) end
+
+---@param _r number
+---@param _g number
+---@param _b number
+function __ISZoneDisplay_zdImage:setColor(_r, _g, _b) end
+
+---@param _rgb number
+function __ISZoneDisplay_zdImage:setGreyscale(_rgb) end
+
+function __ISZoneDisplay_zdImage:update() end
+
+---@param zoneDisplay ISZoneDisplay
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@param texture Texture
+---@return ISZoneDisplay.zdImage
+function __ISZoneDisplay_zdImage:new(zoneDisplay, x, y, width, height, texture) end
+
 ---@class ISZoneDisplay : ISPanel
 ---@field alpha number
 ---@field blinkStep number
@@ -189,6 +234,8 @@ function ISZoneDisplay:canSeeThroughObject(_object) end
 
 function ISZoneDisplay:close() end
 
+---@param _start number
+---@param _finish number
 ---@return number
 function ISZoneDisplay:getHoursBetween(_start, _finish) end
 
@@ -228,15 +275,9 @@ function ISZoneDisplay:updateLocation() end
 
 function ISZoneDisplay:updateMoonPhase() end
 
----@param _dawn number
----@param _dusk number
----@param _timeOfDay number
-function ISZoneDisplay:updateMoonPosition(_dawn, _dusk, _timeOfDay) end
+function ISZoneDisplay:updateMoonPosition() end
 
----@param _dawn number
----@param _dusk number
----@param _timeOfDay number
-function ISZoneDisplay:updateSunPosition(_dawn, _dusk, _timeOfDay) end
+function ISZoneDisplay:updateSunPosition() end
 
 function ISZoneDisplay:updateTips() end
 
@@ -251,4 +292,3 @@ function ISZoneDisplay:new(_parent) end
 ---@field shown boolean
 ---@field text string
 ---@field title string
-umbrella_ISZoneDisplay_Tip = {}

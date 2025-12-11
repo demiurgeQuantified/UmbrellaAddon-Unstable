@@ -1565,7 +1565,6 @@ ISCarMechanicsOverlay.PartList = {
 ---@field imgPrefix string
 ---@field x integer
 ---@field y integer
-umbrella_ISCarMechanicsOverlay_CarListItem = {}
 
 ---@class umbrella.ISCarMechanicsOverlay.PartListItem
 ---@field img string | string[]
@@ -1575,11 +1574,9 @@ umbrella_ISCarMechanicsOverlay_CarListItem = {}
 ---@field x2 integer?
 ---@field y integer?
 ---@field y2 integer?
-umbrella_ISCarMechanicsOverlay_PartListItem = {}
 
 ---@class umbrella.ISCarMechanicsOverlay.PartListRegion
 ---@field x integer
 ---@field x2 integer
 ---@field y integer
 ---@field y2 integer
-umbrella_ISCarMechanicsOverlay_PartListRegion = {}

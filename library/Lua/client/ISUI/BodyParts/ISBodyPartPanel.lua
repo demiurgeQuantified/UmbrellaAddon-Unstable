@@ -160,9 +160,7 @@ function ISBodyPartPanel:new(player, x, y, target, onPartSelected) end
 ---@field value number
 ---@field width number
 ---@field z integer
-umbrella_ISBodyPartPanel_BodyPartTable = {}
 
 ---@class umbrella.ISBodyPartPanel.ColorSchemeTable
 ---@field Color Color
 ---@field val number
-umbrella_ISBodyPartPanel_ColorSchemeTable = {}

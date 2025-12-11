@@ -58,4 +58,3 @@ function ISGradientBar:new(x, y, width, height) end
 ---@field darkAlpha number
 ---@field doKnob boolean
 ---@field radius integer
-umbrella_ISGradientBar_Settings = {}

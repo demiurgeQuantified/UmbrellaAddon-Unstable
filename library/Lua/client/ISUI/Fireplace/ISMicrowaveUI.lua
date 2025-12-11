@@ -6,7 +6,7 @@
 ---@field joypadButtons ISButton[]
 ---@field ok ISButton
 ---@field oven IsoStove
----@field playerNum unknown
+---@field playerNum integer
 ---@field tempKnob ISKnob
 ---@field timerKnob ISKnob
 ISMicrowaveUI = ISPanelJoypad:derive("ISMicrowaveUI")

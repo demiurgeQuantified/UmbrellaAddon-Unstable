@@ -58,4 +58,3 @@ function WatchWindow:new(x, y, width, height) end
 ---@class umbrella.WatchWindow.DataItem
 ---@field item { key: unknown, value: unknown }
 ---@field obj table
-umbrella_WatchWindow_DataItem = {}

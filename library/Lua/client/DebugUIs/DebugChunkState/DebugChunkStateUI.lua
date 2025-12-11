@@ -7,7 +7,6 @@
 ---@field buttonPlayer1 ISButton
 ---@field buttonPlayer2 ISButton
 ---@field buttonPlayer3 ISButton
----@field comboPlayerIndex ISComboBox
 ---@field currentTool DebugChunkStateUI_Tool
 ---@field dragCameraTool DebugChunkStateUI_DragCameraTool
 ---@field gameState DebugChunkState
@@ -44,7 +43,10 @@ function DebugChunkStateUI:isMouseOverChild() end
 
 function DebugChunkStateUI:onCamera() end
 
-function DebugChunkStateUI:onChangePlayer() end
+---@param button ISButton
+---@param x number
+---@param y number
+function DebugChunkStateUI:onChangePlayer(button, x, y) end
 
 ---@param value number
 ---@param slider ISSliderPanel

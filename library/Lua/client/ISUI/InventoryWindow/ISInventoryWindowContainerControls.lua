@@ -23,6 +23,7 @@ function ISInventoryWindowContainerControls:fixMouseOverButton() end
 ---@return unknown?
 function ISInventoryWindowContainerControls:getDisplayedContainer() end
 
+---@param context ISContextMenu
 function ISInventoryWindowContainerControls:handleJoypadContextMenu(context) end
 
 ---@param inventoryWindow ISInventoryPage

@@ -45,6 +45,8 @@ function ISReadABook:isValid() end
 
 function ISReadABook:perform() end
 
+function ISReadABook:revealPrintMediaLocationsOnMap(mediaID) end
+
 function ISReadABook:serverStart() end
 
 function ISReadABook:start() end
@@ -64,4 +66,3 @@ function ISReadABook:new(character, item) end
 ---@field boredom number
 ---@field stress number
 ---@field unhappyness number
-umbrella_ISReadABook_Stats = {}

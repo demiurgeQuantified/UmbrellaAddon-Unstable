@@ -44,4 +44,3 @@ function ISVehicleRoadtripDebug:new(x, y, character) end
 ---@field condition integer
 ---@field id string
 ---@field item InventoryItem
-umbrella_ISVehicleRoadtripDebug_ConditionInfo = {}

@@ -147,4 +147,3 @@ function ISRadioButtons:new(x, y, width, height, target, changeOptionFunc, arg1,
 ---@field enabled boolean
 ---@field text string
 ---@field texture Texture?
-umbrella_ISRadioButtons_Option = {}

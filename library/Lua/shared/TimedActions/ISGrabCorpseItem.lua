@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISGrabCorpseItem : ISBaseTimedAction
----@field item unknown
+---@field item InventoryItem
 ISGrabCorpseItem = ISBaseTimedAction:derive("ISGrabCorpseItem")
 ISGrabCorpseItem.Type = "ISGrabCorpseItem"
 
@@ -11,6 +11,7 @@ function ISGrabCorpseItem:complete() end
 ---@return number
 function ISGrabCorpseItem:getDuration() end
 
+---@param item InventoryItem
 ---@return boolean
 function ISGrabCorpseItem:isAlreadyTransferred(item) end
 
@@ -25,8 +26,10 @@ function ISGrabCorpseItem:stop() end
 
 function ISGrabCorpseItem:update() end
 
----@return unknown
+---@return boolean
 function ISGrabCorpseItem:waitToStart() end
 
+---@param character IsoPlayer
+---@param item InventoryItem
 ---@return ISGrabCorpseItem
 function ISGrabCorpseItem:new(character, item) end

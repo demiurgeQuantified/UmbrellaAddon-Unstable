@@ -1,9 +1,5 @@
 ---@meta
 
----@class CraftRecipeCode
-CraftRecipeCode = {}
-CraftRecipeCode.generic = nil ---@type CraftRecipeCode.generic
-
 ---@class CraftRecipeCode.generic
 local __craftRecipeCode_generic = {}
 

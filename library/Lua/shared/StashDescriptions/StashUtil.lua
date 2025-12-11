@@ -3,8 +3,6 @@
 StashDescriptions = nil ---@type umbrella.StashUtil.NewStash[]?
 
 ---@class StashUtil
----@field annotations table
----@field containers table
 StashUtil = {}
 
 ---@param name string
@@ -22,7 +20,7 @@ function StashUtil.newStash(name, type, item, customName) end
 ---@param x number?
 ---@param y number?
 ---@param z number?
-function StashUtil:addContainer(self, containerType, containerSprite, containerItem, room, x, y, z) end
+function StashUtil:addContainer(containerType, containerSprite, containerItem, room, x, y, z) end
 
 ---@param self umbrella.StashUtil.Stash
 ---@param symbol string?
@@ -32,17 +30,25 @@ function StashUtil:addContainer(self, containerType, containerSprite, containerI
 ---@param r number
 ---@param g number
 ---@param b number
-function StashUtil:addStamp(self, symbol, text, mapX, mapY, r, g, b) end
+function StashUtil:addStamp(symbol, text, mapX, mapY, r, g, b) end
 
+---@param self umbrella.StashUtil.Stash
+---@param symbol string?
+---@param text string?
+---@param mapX number
+---@param mapY number
+---@param anchorX number
+---@param anchorY number
+---@param rotation number
 ---@param r number
 ---@param g number
 ---@param b number
 function StashUtil:addStampV2(symbol, text, mapX, mapY, anchorX, anchorY, rotation, r, g, b) end
 
 ---@class umbrella.StashUtil.NewStash : umbrella.StashUtil.Stash
-umbrella_StashUtil_NewStash = {}
-umbrella_StashUtil_NewStash.addStamp = StashUtil.addStamp
-umbrella_StashUtil_NewStash.addContainer = StashUtil.addContainer
+local __umbrella_StashUtil_NewStash = {}
+__umbrella_StashUtil_NewStash.addStamp = StashUtil.addStamp
+__umbrella_StashUtil_NewStash.addContainer = StashUtil.addContainer
 
 ---@class umbrella.StashUtil.Stash
 ---@field annotations umbrella.StashUtil.StashAnnotation[]?
@@ -59,17 +65,18 @@ umbrella_StashUtil_NewStash.addContainer = StashUtil.addContainer
 ---@field traps string?
 ---@field type string
 ---@field zombies integer?
-umbrella_StashUtil_Stash = {}
 
 ---@class umbrella.StashUtil.StashAnnotation
+---@field anchorX number?
+---@field anchorY number?
 ---@field b number
 ---@field g number
 ---@field r number
+---@field rotation number?
 ---@field symbol string?
 ---@field text string?
 ---@field x number
 ---@field y number
-umbrella_StashUtil_StashAnnotation = {}
 
 ---@class umbrella.StashUtil.StashContainer
 ---@field containerItem string?
@@ -79,4 +86,3 @@ umbrella_StashUtil_StashAnnotation = {}
 ---@field contY integer?
 ---@field contZ integer?
 ---@field room string?
-umbrella_StashUtil_StashContainer = {}

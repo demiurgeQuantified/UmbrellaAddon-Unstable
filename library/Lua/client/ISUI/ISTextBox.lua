@@ -153,7 +153,6 @@ function ISTextBox:new(
 end
 
 ---@class ISTextEntryBox
----@field font UIFont
 ISTextEntryBox = {}
 
 ---@return boolean

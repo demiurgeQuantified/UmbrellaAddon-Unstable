@@ -21,4 +21,3 @@ function PrintMediaEntries.getEntryCount() end
 ---@field info string
 ---@field title string
 ---@field type string?
-umbrella_PrintMediaEntry = {}

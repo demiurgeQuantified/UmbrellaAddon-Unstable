@@ -28,7 +28,6 @@
 ---@field inGame boolean
 ---@field inviteFriends InviteFriends
 ---@field inviteOption ISLabel
----@field joinPublicServer PublicServerList
 ---@field joypadButtons ISButton[]
 ---@field joypadIndexY integer?
 ---@field lastStandPlayerSelect LastStandPlayerSelect
@@ -43,8 +42,10 @@
 ---@field modSelect ModSelector
 ---@field modsOption ISLabel
 ---@field MouseEnterMainMenuItem integer?
----@field multiplayer MultiplayerScreen
+---@field multiplayer MultiplayerUI
+---@field onlineCoopOption ISLabel
 ---@field onlineCoopScreen CoopOptionsScreen
+---@field onlineOption ISLabel
 ---@field optionsOption ISLabel
 ---@field overBottomPanelButton ISUIElement?
 ---@field quitToDesktop ISLabel
@@ -57,7 +58,6 @@
 ---@field scoreOption ISLabel
 ---@field seedLabel ISLabel
 ---@field serverConnectPopup ServerConnectPopup
----@field serverList ServerList
 ---@field serverSettingsScreen ServerSettingsScreen
 ---@field serverWorkshopItem ServerWorkshopItemScreen
 ---@field soloScreen NewGameScreen
@@ -68,6 +68,8 @@
 ---@field time number
 ---@field tutorialButton ISButton?
 ---@field tutorialOption ISLabel
+---@field version unknown
+---@field versionBtn ISButton
 ---@field versionDetail ISButton
 ---@field versionLabel ISLabel
 ---@field warningFade number
@@ -142,6 +144,8 @@ function MainScreen.onTutorialControllerWarn() end
 
 function MainScreen.resetLuaIfNeeded() end
 
+function MainScreen.setKeyboardMouseActivated() end
+
 function MainScreen.startTutorial() end
 
 ---@param credit string
@@ -150,6 +154,8 @@ function MainScreen:addCredit(credit, number) end
 
 ---@return number
 function MainScreen:calcLogoHeight() end
+
+function MainScreen:copyRev() end
 
 function MainScreen:doArtCredits() end
 
@@ -207,6 +213,7 @@ function MainScreen:onJoypadDirUp(joypadData) end
 ---@param joypadData JoypadData
 function MainScreen:onJoypadDown(button, joypadData) end
 
+---@param key integer
 function MainScreen:onKeyRelease(key) end
 
 ---@param joypadData JoypadData
@@ -275,7 +282,8 @@ function isPlayerDoingActionThatCanBeCancelled(playerObj) end
 function stopDoingActionThatCanBeCancelled(playerObj) end
 
 ---@param playerNum integer
-function CancelAction(playerNum) end
+---@param addPreviousToRetrigger boolean
+function CancelAction(playerNum, addPreviousToRetrigger) end
 
 ---@param key integer
 function ToggleEscapeMenu(key) end

@@ -62,6 +62,7 @@ function WorldSelect:onJoypadBeforeDeactivate(joypadData) end
 ---@param joypadData JoypadData
 function WorldSelect:onJoypadBeforeDeactivate_listbox(joypadData) end
 
+---@param key integer
 function WorldSelect:onKeyRelease(key) end
 
 ---@param value string

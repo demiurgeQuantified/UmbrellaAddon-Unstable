@@ -2,7 +2,7 @@
 
 ---@class ISBuildPanel : ISPanel
 ---@field _categoryString string?
----@field _filterMode unknown
+---@field _filterMode string?
 ---@field _filterString string?
 ---@field buildEntity ISBuildIsoEntity?
 ---@field categoryColumn ISTableLayoutColumn
@@ -22,7 +22,7 @@
 ---@field recipeQuery string?
 ---@field recipesPanel ISWidgetRecipesPanel
 ---@field rootTable ISTableLayout?
----@field windowInstance unknown?
+---@field windowInstance ISUIElement?
 ISBuildPanel = ISPanel:derive("ISBuildPanel")
 ISBuildPanel.Type = "ISBuildPanel"
 ISBuildPanel.drawDirty = nil ---@type boolean?
@@ -34,8 +34,6 @@ function ISBuildPanel.SetDragItem(item, playerNum) end
 ---@param _preferredWidth number?
 ---@param _preferredHeight number?
 function ISBuildPanel:calculateLayout(_preferredWidth, _preferredHeight) end
-
-function ISBuildPanel:close() end
 
 ---@param dontSetDrag boolean
 function ISBuildPanel:createBuildIsoEntity(dontSetDrag) end
@@ -97,8 +95,9 @@ function ISBuildPanel:render() end
 ---@param _recipe CraftRecipe
 function ISBuildPanel:ReselectRecipeOrFirst(_recipe) end
 
----@param _filterString string
-function ISBuildPanel:setRecipeFilter(_filterString) end
+---@param _filterString string?
+---@param _filterMode string?
+function ISBuildPanel:setRecipeFilter(_filterString, _filterMode) end
 
 ---@param _recipeList ArrayList<CraftRecipe>
 function ISBuildPanel:setRecipeList(_recipeList) end
@@ -114,7 +113,8 @@ function ISBuildPanel:sortRecipeList() end
 
 function ISBuildPanel:update() end
 
-function ISBuildPanel:updateContainers() end
+---@param _forceRefresh boolean?
+function ISBuildPanel:updateContainers(_forceRefresh) end
 
 function ISBuildPanel:updateManualInputs() end
 

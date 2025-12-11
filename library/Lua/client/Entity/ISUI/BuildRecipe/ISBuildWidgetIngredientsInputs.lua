@@ -2,8 +2,8 @@
 
 ---@class ISBuildWidgetIngredientsInputs : ISPanelJoypad
 ---@field autoFillContents boolean
----@field autoLabel unknown?
----@field autoToggle unknown?
+---@field autoLabel ISLabel?
+---@field autoToggle ISWidgetAutoToggle?
 ---@field doToolTip boolean
 ---@field inputs ISWidgetInput[]
 ---@field inputsLabel ISLabel?
@@ -34,6 +34,7 @@ function ISBuildWidgetIngredientsInputs:createChildren() end
 
 function ISBuildWidgetIngredientsInputs:initialise() end
 
+---@param _newState boolean
 function ISBuildWidgetIngredientsInputs:onAutoToggled(_newState) end
 
 ---@param joypadData JoypadData
@@ -42,6 +43,7 @@ function ISBuildWidgetIngredientsInputs:onGainJoypadFocus(joypadData) end
 ---@param joypadData JoypadData
 function ISBuildWidgetIngredientsInputs:onLoseJoypadFocus(joypadData) end
 
+---@param _manualSelect boolean
 function ISBuildWidgetIngredientsInputs:onManualSelectChanged(_manualSelect) end
 
 function ISBuildWidgetIngredientsInputs:onRebuildItemNodes(_inputItems) end

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISPlaceCarBatteryChargerAction : ISBaseTimedAction
----@field character unknown?
+---@field character IsoPlayer?
 ---@field charger InventoryItem
 ISPlaceCarBatteryChargerAction = ISBaseTimedAction:derive("ISPlaceCarBatteryChargerAction")
 ISPlaceCarBatteryChargerAction.Type = "ISPlaceCarBatteryChargerAction"

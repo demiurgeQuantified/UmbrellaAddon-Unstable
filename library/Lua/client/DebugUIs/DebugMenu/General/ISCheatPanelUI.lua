@@ -3,20 +3,19 @@
 ---@class ISCheatPanelUI : ISPanel
 ---@field ok ISButton
 ---@field player number
----@field setFunction table<integer, function>
 ---@field tickBox ISTickBox
 ISCheatPanelUI = ISPanel:derive("ISCheatPanelUI")
 ISCheatPanelUI.Type = "ISCheatPanelUI"
 ISCheatPanelUI.instance = nil ---@type ISCheatPanelUI?
 ISCheatPanelUI.cheatTooltips = {} ---@type table<string, string>
-ISCheatPanelUI.OptionList = {}
-ISCheatPanelUI.OptionById = {}
+ISCheatPanelUI.OptionList = {} ---@type umbrella.ISCheatPanelUI.Option[]
+ISCheatPanelUI.OptionById = {} ---@type table<string, umbrella.ISCheatPanelUI.Option>
 
 ---@param id string
 ---@param xln string
----@param functionGet function
----@param functionSet function
----@return table
+---@param functionGet fun(option: umbrella.ISCheatPanelUI.Option): boolean
+---@param functionSet fun(option: umbrella.ISCheatPanelUI.Option, value: boolean)
+---@return umbrella.ISCheatPanelUI.Option
 function ISCheatPanelUI.AddOption(id, xln, functionGet, functionSet) end
 
 function ISCheatPanelUI.EnableCheats() end
@@ -25,11 +24,6 @@ function ISCheatPanelUI.EnableCheats() end
 function ISCheatPanelUI.OnOpenPanel() end
 
 function ISCheatPanelUI:addAdminPowerOptions() end
-
----@param text string
----@param selected boolean
----@param setFunction fun(self: ISCheatPanelUI, selected: boolean)
-function ISCheatPanelUI:addOption(text, selected, setFunction) end
 
 function ISCheatPanelUI:initialise() end
 
@@ -53,3 +47,10 @@ function ISCheatPanelUI:saveOptions() end
 ---@param player number
 ---@return ISCheatPanelUI
 function ISCheatPanelUI:new(x, y, width, height, player) end
+
+---@class umbrella.ISCheatPanelUI.Option
+---@field functionGet fun(option: umbrella.ISCheatPanelUI.Option): boolean
+---@field functionSet fun(option: umbrella.ISCheatPanelUI.Option, value: boolean)
+---@field id string
+---@field text string
+---@field tooltip string?

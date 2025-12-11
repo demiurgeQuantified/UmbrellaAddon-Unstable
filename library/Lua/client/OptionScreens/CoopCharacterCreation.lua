@@ -11,7 +11,7 @@
 CoopCharacterCreation = ISPanelJoypad:derive("CoopCharacterCreation")
 CoopCharacterCreation.Type = "CoopCharacterCreation"
 CoopCharacterCreation.instance = nil ---@type CoopCharacterCreation?
-CoopCharacterCreation.visibleUI = nil ---@type ISUIElement[]
+CoopCharacterCreation.visibleUI = {} ---@type ISUIElement[]
 
 ---@return JoypadData?
 function CoopCharacterCreation.getJoypad() end

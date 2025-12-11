@@ -90,6 +90,7 @@ function CharacterCreationMain.readSavedOutfitFile() end
 ---@param options table<string, string>
 function CharacterCreationMain.writeSaveFile(options) end
 
+---@param bodyLocation string
 function CharacterCreationMain:arrangeClothingRightSideElements(bodyLocation) end
 
 function CharacterCreationMain:arrangeClothingUI() end
@@ -209,18 +210,13 @@ function CharacterCreationMain:onHairColorPicked(color, mouseUp) end
 function CharacterCreationMain:onHairTypeSelected(combo) end
 
 ---@param joypadData JoypadData
-function CharacterCreationMain:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
-function CharacterCreationMain:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
-function CharacterCreationMain:onJoypadDirUp(joypadData) end
-
 function CharacterCreationMain:onJoypadNavigateStart(joypadData) end
 
+---@param descendant ISUIElement
+---@param joypadData JoypadData
 function CharacterCreationMain:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
+---@param key integer
 function CharacterCreationMain:onKeyRelease(key) end
 
 ---@param joypadData JoypadData
@@ -343,9 +339,6 @@ function CharacterCreationMainCharacterPanel:loadJoypadButtons(joypadData) end
 function CharacterCreationMainCharacterPanel:onGainJoypadFocus(joypadData) end
 
 ---@param joypadData JoypadData
-function CharacterCreationMainCharacterPanel:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
 function CharacterCreationMainCharacterPanel:onJoypadDirRight(joypadData) end
 
 ---@param button integer
@@ -379,12 +372,6 @@ CharacterCreationMainPresetPanel.Type = "CharacterCreationMainPresetPanel"
 function CharacterCreationMainPresetPanel:onGainJoypadFocus(joypadData) end
 
 ---@param joypadData JoypadData
-function CharacterCreationMainPresetPanel:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
-function CharacterCreationMainPresetPanel:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
 function CharacterCreationMainPresetPanel:onJoypadDirUp(joypadData) end
 
 ---@param button integer
@@ -395,3 +382,37 @@ function CharacterCreationMainPresetPanel:onJoypadDown(button, joypadData) end
 function CharacterCreationMainPresetPanel:onLoseJoypadFocus(joypadData) end
 
 function CharacterCreationMainPresetPanel:render() end
+
+---@class CharacterCreationMain.ClothingPanel : ISPanelJoypad
+---@field joypadButtons ISButton[]
+---@field joypadNavigate table
+---@field prevJoypadIndexY number
+local __characterCreationMain_ClothingPanel = ISPanelJoypad:derive("CharacterCreationClothingPanel")
+__characterCreationMain_ClothingPanel.Type = "CharacterCreationClothingPanel"
+
+---@param joypadData JoypadData
+function __characterCreationMain_ClothingPanel:onGainJoypadFocus(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __characterCreationMain_ClothingPanel:onJoypadDown(button, joypadData) end
+
+---@param joypadData JoypadData
+function __characterCreationMain_ClothingPanel:onLoseJoypadFocus(joypadData) end
+
+---@param del number
+function __characterCreationMain_ClothingPanel:onMouseWheel(del) end
+
+function __characterCreationMain_ClothingPanel:prerender() end
+
+function __characterCreationMain_ClothingPanel:render() end
+
+---@param child ISUIElement?
+function __characterCreationMain_ClothingPanel:tryRemoveChild(child) end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return CharacterCreationMain.ClothingPanel
+function __characterCreationMain_ClothingPanel:new(x, y, width, height) end

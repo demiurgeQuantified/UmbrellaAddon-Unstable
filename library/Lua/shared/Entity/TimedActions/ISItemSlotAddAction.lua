@@ -1,12 +1,14 @@
 ---@meta
 
 ---@class ISItemSlotAddAction : ISBaseTimedAction
----@field canAddItem unknown?
+---@field actionAnim string
+---@field actionAnimVariables table
+---@field canAddItem (fun(self: ISItemSlotAddAction): boolean)?
 ---@field entity IsoObject
 ---@field item InventoryItem
 ---@field itemSlot ISItemSlot?
 ---@field resource Resource
----@field sound unknown
+---@field sound integer
 ISItemSlotAddAction = ISBaseTimedAction:derive("ISItemSlotAddAction")
 ISItemSlotAddAction.Type = "ISItemSlotAddAction"
 

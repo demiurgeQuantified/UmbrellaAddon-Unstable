@@ -1,6 +1,7 @@
 ---@meta
 
 ---@alias umbrella.ISUIElement.MouseDoubleClick fun(target: ISUIElement, x: number, y: number)
+
 ---@alias umbrella.ISUIElement.ShrinkWrapPredicate fun(child: ISUIElement): boolean
 
 ---@class ISUIElement : ISBaseObject
@@ -101,6 +102,12 @@ function ISUIElement:drawItemIcon(item, x, y, a, w, h) end
 ---@param g number
 ---@param b number
 function ISUIElement:drawLine2(x, y, x2, y2, a, r, g, b) end
+
+---@param r number
+---@param g number
+---@param b number
+---@param a number
+function ISUIElement:drawPolygon(tex, x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a) end
 
 ---@param x number
 ---@param y number

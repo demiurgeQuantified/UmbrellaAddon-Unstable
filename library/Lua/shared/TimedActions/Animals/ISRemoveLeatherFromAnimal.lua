@@ -43,6 +43,6 @@ function ISRemoveLeatherFromAnimal:waitToStart() end
 ---@param character IsoPlayer
 ---@param body IsoAnimal
 ---@param hook IsoButcherHook
----@param luaHook ISButcherHookUI
+---@param luaHookUI ISButcherHookUI
 ---@return ISRemoveLeatherFromAnimal
-function ISRemoveLeatherFromAnimal:new(character, body, hook, luaHook) end
+function ISRemoveLeatherFromAnimal:new(character, body, hook, luaHookUI) end

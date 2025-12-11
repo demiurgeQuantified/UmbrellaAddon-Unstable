@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ObjectViewer : ISCollapsableWindow
+---@field filter ISTextEntryBox
+---@field history table
+---@field historyPrev ISButton
 ---@field obj unknown
 ---@field objectView ISScrollingListBox
 ---@field sc number
@@ -31,19 +34,29 @@ function ObjectViewer:doDrawItem(y, item, alt) end
 
 function ObjectViewer:fill() end
 
+function ObjectViewer:fillJavaList(list) end
+
+function ObjectViewer:historyPop() end
+
+function ObjectViewer:historyPush() end
+
 function ObjectViewer:initialise() end
+
+function ObjectViewer:onFilterTextChange() end
+
+function ObjectViewer:onMouseDoubleClickListItem(item) end
 
 function ObjectViewer:onMouseDoubleClickOpenObject(item) end
 
 ---@param self ISScrollingListBox
 ---@param x number
 ---@param y number
-function ObjectViewer:onRightMouseDownObject(self, x, y) end
+function ObjectViewer:onRightMouseDownObject(x, y) end
 
 ---@param self ISScrollingListBox
 ---@param del number
 ---@return boolean
-function ObjectViewer:onSourceMouseWheel(self, del) end
+function ObjectViewer:onSourceMouseWheel(del) end
 
 function ObjectViewer:prerender() end
 
@@ -61,4 +74,3 @@ function ObjectViewer:new(x, y, width, height, obj) end
 ---@class umbrella.ObjectViewer.WatchItem
 ---@field item umbrella.ISScrollingListBox.Item
 ---@field obj unknown
-umbrella_ObjectViewer_WatchItem = {}

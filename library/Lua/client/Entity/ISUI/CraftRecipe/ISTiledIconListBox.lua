@@ -1,8 +1,11 @@
 ---@meta
 
 ---@alias umbrella.ISTiledIconListBox.OnClickTile fun(target: unknown, data: unknown)
+
 ---@alias umbrella.ISTiledIconListBox.OnHoverTile fun(target: unknown, data: unknown)
+
 ---@alias umbrella.ISTiledIconListBox.OnRenderTile fun(listbox: ISTiledIconListBox, tileData: unknown, x: number, y: number, width: number, height: number, isMouseOver: boolean)
+
 ---@alias umbrella.ISTiledIconListBox.OnPageChanged fun(target: unknown, page: integer)
 
 ---@class ISTiledIconListBox : ISPanel
@@ -17,11 +20,11 @@
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
----@field lastMouseOverTile number?
+---@field lastMouseOverTile number
 ---@field margin number
 ---@field minimumColumns integer
 ---@field minimumRows integer
----@field mouseOverTile number?
+---@field mouseOverTile number
 ---@field onClickTile umbrella.ISTiledIconListBox.OnClickTile | false
 ---@field onHoverTile umbrella.ISTiledIconListBox.OnHoverTile | false
 ---@field onPageChanged umbrella.ISTiledIconListBox.OnPageChanged?
@@ -72,7 +75,7 @@ function ISTiledIconListBox:getTileForCoordinate(_x, _y) end
 
 ---@param _x number
 ---@param _y number
----@return integer?
+---@return integer
 function ISTiledIconListBox:getTileIndexForCoordinate(_x, _y) end
 
 function ISTiledIconListBox:initialise() end

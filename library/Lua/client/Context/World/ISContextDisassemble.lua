@@ -26,4 +26,3 @@ function __ISContextDisassemble.init() end
 ---@field perkName string
 ---@field resultScrap umbrella.ISMoveableSpriteProps.CanScrapResult
 ---@field square IsoGridSquare
-umbrella_ISContextDisassemble_Data = {}

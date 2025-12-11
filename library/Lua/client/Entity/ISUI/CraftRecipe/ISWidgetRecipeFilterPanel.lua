@@ -2,14 +2,12 @@
 
 ---@class ISWidgetRecipeFilterPanel : ISPanelJoypad
 ---@field autoFillContents boolean
----@field buttonGrid ISButton
----@field buttonList ISButton
----@field buttonViewMode unknown?
+---@field buttonViewMode ISButton?
 ---@field callbackTarget unknown?
 ---@field entryBox ISTextEntryBox
 ---@field filterTypeCombo ISComboBox?
----@field iconGrid unknown
----@field iconList unknown
+---@field iconGrid Texture
+---@field iconList Texture
 ---@field isAutoFill boolean
 ---@field isAutoFillX boolean
 ---@field isAutoFillY boolean
@@ -24,12 +22,15 @@
 ---@field paddingLeft number
 ---@field paddingRight number
 ---@field paddingTop number
----@field searchHackLabel ISLabel
----@field searchInfoText unknown
+---@field searchEntryBox ISTextEntryBox
+---@field searchInfoText string
+---@field showAllRecipeTickBox ISTickBox
 ---@field showFilterByOutputItem boolean
----@field sortCombo unknown?
----@field sortComboLabel unknown?
+---@field sortCombo ISComboBox?
+---@field sortComboLabel ISLabel?
 ---@field tickbox ISTickBox?
+---@field tickBoxShowAllVersion ISTickBox
+---@field viewModeButton ISButton
 ISWidgetRecipeFilterPanel = ISPanelJoypad:derive("ISWidgetRecipeFilterPanel")
 ISWidgetRecipeFilterPanel.Type = "ISWidgetRecipeFilterPanel"
 
@@ -42,14 +43,17 @@ function ISWidgetRecipeFilterPanel:calculateLayout(_preferredWidth, _preferredHe
 
 function ISWidgetRecipeFilterPanel:createChildren() end
 
+function ISWidgetRecipeFilterPanel:filter(textFilter, selectedCombo) end
+
 function ISWidgetRecipeFilterPanel:initialise() end
 
 ---@param _button ISButton
 function ISWidgetRecipeFilterPanel:onButtonClick(_button) end
 
----@param box ISTextEntryBox
+---@param box ISComboBox
 function ISWidgetRecipeFilterPanel:OnClickFilterType(box) end
 
+---@param box ISComboBox
 function ISWidgetRecipeFilterPanel:OnClickSortType(box) end
 
 ---@param joypadData JoypadData
@@ -64,6 +68,10 @@ function ISWidgetRecipeFilterPanel:onResize() end
 ---@param enabled boolean
 function ISWidgetRecipeFilterPanel:OnShowAllClick(clickedOption, enabled) end
 
+function ISWidgetRecipeFilterPanel:onShowAllRecipeClick(clickedOption, enabled) end
+
+function ISWidgetRecipeFilterPanel:onShowAllVersionClick(clickedOption, enabled) end
+
 function ISWidgetRecipeFilterPanel:populateComboList() end
 
 function ISWidgetRecipeFilterPanel:populateSortList() end
@@ -72,6 +80,7 @@ function ISWidgetRecipeFilterPanel:prerender() end
 
 function ISWidgetRecipeFilterPanel:render() end
 
+---@param _text string
 function ISWidgetRecipeFilterPanel:setSearchInfoText(_text) end
 
 function ISWidgetRecipeFilterPanel:update() end

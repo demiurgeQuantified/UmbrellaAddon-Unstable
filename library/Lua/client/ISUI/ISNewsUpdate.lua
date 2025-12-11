@@ -10,11 +10,10 @@
 ---@field param1 unknown?
 ---@field param2 unknown?
 ---@field player integer
----@field target unknown?
 ---@field versionCombo ISComboBox
 ---@field yes ISButton?
 ---@field yesno boolean
-ISNewsUpdate = ISPanelJoypad:derive("ISNewsUpdate")
+ISNewsUpdate = {}
 ISNewsUpdate.Type = "ISNewsUpdate"
 
 function ISNewsUpdate:destroy() end

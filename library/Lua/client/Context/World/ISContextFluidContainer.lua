@@ -9,6 +9,9 @@ function ISWorldMenuElements.ContextFluidContainer() end
 ---@class ISContextFluidContainer : ISMenuElement
 local __ISContextFluidContainer = {}
 
+---@param _data umbrella.WorldMenuContextData
+---@param cont FluidContainer
+---@param fluid string
 function __ISContextFluidContainer.addDebugFluid(_data, cont, fluid) end
 
 ---@param _data umbrella.WorldMenuContextData

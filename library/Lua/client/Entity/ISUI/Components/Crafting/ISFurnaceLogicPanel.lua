@@ -21,7 +21,7 @@ ISFurnaceLogicPanel.Type = "ISFurnaceLogicPanel"
 ---@param _player IsoPlayer
 ---@param _entity GameEntity
 ---@param _component Component
----@param _componentUiScript XuiSkinScript.ComponentUiScript
+---@param _componentUiScript XuiSkin.ComponentUiStyle
 ---@return boolean?
 function ISFurnaceLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 

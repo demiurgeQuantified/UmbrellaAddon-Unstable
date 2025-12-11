@@ -6,7 +6,6 @@
 ---@field fishInInv boolean
 ---@field isFish boolean
 ---@field item InventoryItem
----@field maxTime number
 ---@field rod InventoryItem
 ---@field startShowModel number
 ISPickupFishAction = ISBaseTimedAction:derive("ISPickupFishAction")

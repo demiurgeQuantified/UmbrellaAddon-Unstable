@@ -122,4 +122,3 @@ function ISTradingUI:new(x, y, width, height, player, otherPlayer) end
 ---@field add boolean?
 ---@field message string
 ---@field remove boolean?
-umbrella_ISTradingUI_HistoryMessage = {}

@@ -15,4 +15,3 @@ function TimedActionTests.stop() end
 
 ---@class umbrella.TimedActionTests.Test
 ---@field run fun(self: umbrella.TimedActionTests.Test)
-umbrella_TimedActionTests_Test = {}

@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_MannequinWearAll.Type = "ISLootWindowObjectCont
 ---@return unknown
 function ISLootWindowObjectControlHandler_MannequinWearAll:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_MannequinWearAll:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_MannequinWearAll:perform() end

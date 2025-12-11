@@ -111,7 +111,6 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field prevFocus ISUIElement?
 ---@field printMedia UI.PrintMedia?
 ---@field printMediaBtn ISButton
----@field pyramidBtn ISButton
 ---@field RBumperZoom number?
 ---@field showCellGrid boolean
 ---@field showPlayerNames boolean
@@ -127,7 +126,6 @@ function ISWorldMapButtonPanel:new(x, y, width, height) end
 ---@field terrainBtn ISButton
 ---@field texViewIsometric Texture
 ---@field texViewOrthographic Texture
----@field texViewPyramid Texture
 ---@field texViewTerrainImage unknown
 ---@field updateMS number
 ---@field zoomInButton ISButton
@@ -180,6 +178,9 @@ function ISWorldMap:closeStashMap() end
 function ISWorldMap:createChildren() end
 
 function ISWorldMap:drawMapRect(bounds) end
+
+---@return unknown
+function ISWorldMap:getPrintMediaIconSize() end
 
 ---@param stashName string
 ---@return table
@@ -266,8 +267,6 @@ function ISWorldMap:onTeleport(worldX, worldY) end
 function ISWorldMap:onToggleLegend() end
 
 function ISWorldMap:onTogglePrintMedia() end
-
-function ISWorldMap:onTogglePyramid() end
 
 function ISWorldMap:onToggleSymbols() end
 
@@ -367,11 +366,9 @@ function AnnotatedMapOverlay:new(x, y, width, height) end
 ---@field mediaID string
 ---@field x number
 ---@field y number
-umbrella_ISWorldMap_MouseOverPrintMedia = {}
 
 ---@class umbrella.ISWorldMap.PrintMediaLocation
 ---@field x1 number
 ---@field x2 number
 ---@field y1 number
 ---@field y2 number
-umbrella_ISWorldMap_PrintMediaLocation = {}

@@ -8,9 +8,10 @@ SFeedingTroughSystem.instance = nil ---@type SFeedingTroughSystem?
 ---@param grid IsoGridSquare
 ---@param def umbrella.FeedingTroughDefinition
 ---@param north boolean
----@param slave boolean
+---@param spriteGridX integer
+---@param spriteGridY integer
 ---@return SFeedingTroughGlobalObject?
-function SFeedingTroughSystem:addTrough(grid, def, north, slave) end
+function SFeedingTroughSystem:addTrough(grid, def, north, spriteGridX, spriteGridY) end
 
 function SFeedingTroughSystem:initSystem() end
 

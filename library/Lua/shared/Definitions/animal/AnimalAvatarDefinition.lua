@@ -428,4 +428,3 @@ AnimalAvatarDefinition.raccoonsow = {
 ---@field xoffset number
 ---@field yoffset number
 ---@field zoom integer
-umbrella_AnimalAvatarDefinition = {}

@@ -5,6 +5,7 @@
 ---| umbrella.ModOptions.Description
 ---| umbrella.ModOptions.Separator
 ---| umbrella.ModOptions.OptionElement
+
 ---@alias umbrella.ModOptions.OptionElement
 ---| umbrella.ModOptions.TextEntry
 ---| umbrella.ModOptions.TickBox
@@ -64,7 +65,7 @@ function __PZAPI_ModOptions_Options:addDescription(text) end
 ---Add a key bind option
 ---@param id string Unique identifier for this option
 ---@param name string Display name for this option
----@param key integer Initial key code
+---@param key integer? Initial key code
 ---@param _tooltip string? Optional tooltip text
 ---@return umbrella.ModOptions.Keybind option Object representing the key bind
 function __PZAPI_ModOptions_Options:addKeyBind(id, name, key, _tooltip) end
@@ -127,7 +128,7 @@ function __PZAPI_ModOptions_Options:new(modOptionsID, name) end
 local __PZAPI_ModOptions = {}
 
 ---List of all mod options
-__PZAPI_ModOptions.Data = nil ---@type PZAPI.ModOptions.Options[]
+__PZAPI_ModOptions.Data = {} ---@type PZAPI.ModOptions.Options[]
 
 ---Dictionary of mod options by ID
 __PZAPI_ModOptions.Dict = {} ---@type table<string, PZAPI.ModOptions.Options>
@@ -158,26 +159,23 @@ function __PZAPI_ModOptions:save() end
 ---@class umbrella.ModOptions.Title
 ---@field name string
 ---@field type "title"
-umbrella_ModOptions_Title = {}
 
 ---@class umbrella.ModOptions.Description
 ---@field text string
 ---@field type "description"
-umbrella_ModOptions_Description = {}
 
 ---@class umbrella.ModOptions.Separator
 ---@field type "separator"
-umbrella_ModOptions_Separator = {}
 
 ---@class umbrella.ModOptions.BaseOption
 ---@field element table?
 ---@field id string Unique identifier for the option
 ---@field name string Display name for the option
 ---@field tooltip string? Optional tooltip text
-umbrella_ModOptions_BaseOption = {}
+local __umbrella_ModOptions_BaseOption = {}
 
 ---@param bool string
-function umbrella_ModOptions_BaseOption:setEnabled(bool) end
+function __umbrella_ModOptions_BaseOption:setEnabled(bool) end
 
 ---@class umbrella.ModOptions.TextEntry : umbrella.ModOptions.BaseOption
 ---@field element ISTextEntryBox?
@@ -186,13 +184,13 @@ function umbrella_ModOptions_BaseOption:setEnabled(bool) end
 ---@field onChangeApply (fun(option: umbrella.ModOptions.TextEntry, text: string))?
 ---@field type "textentry"
 ---@field value string
-umbrella_ModOptions_TextEntry = {}
+local __umbrella_ModOptions_TextEntry = {}
 
 ---@return string
-function umbrella_ModOptions_TextEntry:getValue() end
+function __umbrella_ModOptions_TextEntry:getValue() end
 
 ---@param value string
-function umbrella_ModOptions_TextEntry:setValue(value) end
+function __umbrella_ModOptions_TextEntry:setValue(value) end
 
 ---@class umbrella.ModOptions.TickBox : umbrella.ModOptions.BaseOption
 ---@field element ISTickBox?
@@ -201,19 +199,18 @@ function umbrella_ModOptions_TextEntry:setValue(value) end
 ---@field onChangeApply (fun(option: umbrella.ModOptions.TickBox, selected: boolean))?
 ---@field type "tickbox"
 ---@field value boolean
-umbrella_ModOptions_TickBox = {}
+local __umbrella_ModOptions_TickBox = {}
 
 ---@return boolean
-function umbrella_ModOptions_TickBox:getValue() end
+function __umbrella_ModOptions_TickBox:getValue() end
 
 ---@param value boolean
-function umbrella_ModOptions_TickBox:setValue(value) end
+function __umbrella_ModOptions_TickBox:setValue(value) end
 
 ---@class umbrella.ModOptions.MultipleTickBox.Value
 ---@field isEnabled boolean
 ---@field name string
 ---@field value boolean
-umbrella_ModOptions_MultipleTickBox_Value = {}
 
 ---@class umbrella.ModOptions.MultipleTickBox : umbrella.ModOptions.BaseOption
 ---@field element ISTickBox?
@@ -222,23 +219,23 @@ umbrella_ModOptions_MultipleTickBox_Value = {}
 ---@field onChangeApply (fun(option: umbrella.ModOptions.MultipleTickBox, index: integer, selected: boolean))?
 ---@field type "multipletickbox"
 ---@field values umbrella.ModOptions.MultipleTickBox.Value[]
-umbrella_ModOptions_MultipleTickBox = {}
+local __umbrella_ModOptions_MultipleTickBox = {}
 
 ---@param name string
 ---@param value boolean
-function umbrella_ModOptions_MultipleTickBox:addTickBox(name, value) end
+function __umbrella_ModOptions_MultipleTickBox:addTickBox(name, value) end
 
 ---@param index integer
 ---@return boolean
-function umbrella_ModOptions_MultipleTickBox:getValue(index) end
+function __umbrella_ModOptions_MultipleTickBox:getValue(index) end
 
 ---@param optionName string
 ---@param value boolean
-function umbrella_ModOptions_MultipleTickBox:setEnabled(optionName, value) end
+function __umbrella_ModOptions_MultipleTickBox:setEnabled(optionName, value) end
 
 ---@param index integer
 ---@param value boolean
-function umbrella_ModOptions_MultipleTickBox:setValue(index, value) end
+function __umbrella_ModOptions_MultipleTickBox:setValue(index, value) end
 
 ---@class umbrella.ModOptions.ComboBox : umbrella.ModOptions.BaseOption
 ---@field element ISComboBox?
@@ -248,22 +245,21 @@ function umbrella_ModOptions_MultipleTickBox:setValue(index, value) end
 ---@field selected integer
 ---@field type "combobox"
 ---@field values string[]
-umbrella_ModOptions_ComboBox = {}
+local __umbrella_ModOptions_ComboBox = {}
 
 ---@param name string
 ---@param selected boolean?
-function umbrella_ModOptions_ComboBox:addItem(name, selected) end
+function __umbrella_ModOptions_ComboBox:addItem(name, selected) end
 
 ---@return integer
-function umbrella_ModOptions_ComboBox:getValue() end
+function __umbrella_ModOptions_ComboBox:getValue() end
 
 ---@param value integer
-function umbrella_ModOptions_ComboBox:setValue(value) end
+function __umbrella_ModOptions_ComboBox:setValue(value) end
 
 ---@class umbrella.ModOptions.ColorPicker.Element : ISButton
 ---@field colorPicker ISColorPicker
 ---@field optionID string
-umbrella_ModOptions_ColorPicker_Element = {}
 
 ---@class umbrella.ModOptions.ColorPicker : umbrella.ModOptions.BaseOption
 ---@field color umbrella.RGBA
@@ -272,31 +268,30 @@ umbrella_ModOptions_ColorPicker_Element = {}
 ---@field onChange (fun(option: umbrella.ModOptions.ColorPicker, color: umbrella.RGBA))?
 ---@field onChangeApply (fun(option: umbrella.ModOptions.ColorPicker, color: umbrella.RGBA))?
 ---@field type "colorpicker"
-umbrella_ModOptions_ColorPicker = {}
+local __umbrella_ModOptions_ColorPicker = {}
 
 ---@return umbrella.RGBA
-function umbrella_ModOptions_ColorPicker:getValue() end
+function __umbrella_ModOptions_ColorPicker:getValue() end
 
 ---@param value umbrella.RGBA
-function umbrella_ModOptions_ColorPicker:setValue(value) end
+function __umbrella_ModOptions_ColorPicker:setValue(value) end
 
 ---@class umbrella.ModOptions.Keybind.Element : umbrella.MainOptions.KeyTextElement
 ---@field defaultKeyCode integer
 ---@field isModBind true
-umbrella_ModOptions_Keybind_Element = {}
 
 ---@class umbrella.ModOptions.Keybind : umbrella.ModOptions.BaseOption
 ---@field defaultkey integer
 ---@field element umbrella.ModOptions.Keybind.Element?
 ---@field key integer
 ---@field type "keybind"
-umbrella_ModOptions_Keybind = {}
+local __umbrella_ModOptions_Keybind = {}
 
 ---@return integer
-function umbrella_ModOptions_Keybind:getValue() end
+function __umbrella_ModOptions_Keybind:getValue() end
 
 ---@param value integer
-function umbrella_ModOptions_Keybind:setValue(value) end
+function __umbrella_ModOptions_Keybind:setValue(value) end
 
 ---@class umbrella.ModOptions.Slider : umbrella.ModOptions.BaseOption
 ---@field element ISSliderPanel?
@@ -308,13 +303,13 @@ function umbrella_ModOptions_Keybind:setValue(value) end
 ---@field step number
 ---@field type "slider"
 ---@field value number
-umbrella_ModOptions_Slider = {}
+local __umbrella_ModOptions_Slider = {}
 
 ---@return number
-function umbrella_ModOptions_Slider:getValue() end
+function __umbrella_ModOptions_Slider:getValue() end
 
 ---@param value number
-function umbrella_ModOptions_Slider:setValue(value) end
+function __umbrella_ModOptions_Slider:setValue(value) end
 
 ---@class umbrella.ModOptions.Button : umbrella.ModOptions.BaseOption
 ---@field args table?
@@ -323,4 +318,3 @@ function umbrella_ModOptions_Slider:setValue(value) end
 ---@field onclick umbrella.ISButton.OnClick?
 ---@field target unknown?
 ---@field type "button"
-umbrella_ModOptions_Button = {}

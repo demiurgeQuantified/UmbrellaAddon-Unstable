@@ -18,4 +18,3 @@ ClothingRecipesDefinitions.FabricType = {
 		noSheetRope = true,
 	},
 }
-ClothingRecipesDefinitions.Sheet = nil ---@type unknown

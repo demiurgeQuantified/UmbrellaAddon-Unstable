@@ -8,7 +8,6 @@
 ---@field button2 ISButton
 ---@field button3 ISButton
 ---@field button4 ISButton
----@field button5 ISButton
 ---@field button6 ISButton
 ---@field hideInventoryX unknown?
 ---@field inner ISMiniMapInner
@@ -28,8 +27,6 @@ function ISMiniMapOuter:onButton2() end
 function ISMiniMapOuter:onButton3() end
 
 function ISMiniMapOuter:onButton4() end
-
-function ISMiniMapOuter:onButton5() end
 
 function ISMiniMapOuter:onButton6() end
 
@@ -219,8 +216,11 @@ function ISMiniMapOptionsPanel:isMultiplayerOption(optionName) end
 
 function ISMiniMapOptionsPanel:onCommandEntered(entry, option) end
 
+---@param joypadData JoypadData
 function ISMiniMapOptionsPanel:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISMiniMapOptionsPanel:onJoypadDown(button, joypadData) end
 
 ---@param x number

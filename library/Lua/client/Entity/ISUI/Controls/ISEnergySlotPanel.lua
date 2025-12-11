@@ -4,7 +4,7 @@
 ---@field entity GameEntity
 ---@field isVertical boolean
 ---@field player IsoPlayer
----@field tableLayout unknown?
+---@field tableLayout ISTableLayout?
 ISEnergySlotPanel = ISGroupBox:derive("ISEnergySlotPanel")
 ISEnergySlotPanel.Type = "ISEnergySlotPanel"
 

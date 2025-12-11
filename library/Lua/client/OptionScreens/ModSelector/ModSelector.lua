@@ -4,7 +4,6 @@
 ---@field acceptButton ISButton
 ---@field backButton ISButton
 ---@field helpButton ISButton
----@field joypadIndex integer?
 ---@field joypadNavigate table
 ---@field mapOrderbtn ISButton
 ---@field model ModSelector.Model
@@ -29,27 +28,16 @@ function ModSelector:onAccept() end
 function ModSelector:onGainJoypadFocus(joypadData) end
 
 ---@param joypadData JoypadData
-function ModSelector:onJoypadDirDown(joypadData) end
-
----@param joypadData JoypadData
-function ModSelector:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
-function ModSelector:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
-function ModSelector:onJoypadDirUp(joypadData) end
-
----@param button integer
----@param joypadData JoypadData
-function ModSelector:onJoypadDown(button, joypadData) end
-
 function ModSelector:onJoypadNavigateStart(joypadData) end
 
+---@param descendant ISUIElement
+---@param joypadData JoypadData
 function ModSelector:onJoypadNavigateStart_Descendant(descendant, joypadData) end
 
+---@param key integer
 function ModSelector:onKeyRelease(key) end
 
+---@param joypadData JoypadData
 function ModSelector:onLoseJoypadFocus(joypadData) end
 
 ---@param button ISButton

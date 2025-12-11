@@ -38,4 +38,3 @@ function ISGrabItemAction:new(character, item, time) end
 ---@field items IsoWorldInventoryObject[]
 ---@field time number
 ---@field type string
-umbrella_ISGrabItemAction_QueueItem = {}

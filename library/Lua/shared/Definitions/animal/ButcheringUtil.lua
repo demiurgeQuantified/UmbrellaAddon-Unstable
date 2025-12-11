@@ -16,9 +16,13 @@ function ButcheringUtil.addAnimalPart(part, player, carcass, fromGround) end
 ---@return string?
 function ButcheringUtil.butcherAnimalFromGround(carcass, player, keepCorpse) end
 
+---@param hook IsoButcherHook
+---@param newCorpse IsoAnimal | IsoDeadBody
 function ButcheringUtil.createAnimalForHook(hook, newCorpse) end
 
----@return unknown
+---@param item IsoAnimal | AnimalInventoryItem | IsoDeadBody
+---@param chr IsoPlayer
+---@return IsoAnimal | IsoDeadBody
 function ButcheringUtil.createCorpseFromItem(item, chr) end
 
 ---@param name string
@@ -37,7 +41,8 @@ function ButcheringUtil.getAnimalBones(carcass, player) end
 ---@return umbrella.AnimalPartsDefinition?
 function ButcheringUtil.getAnimalDef(name) end
 
----@return unknown
+---@param character IsoPlayer
+---@return ArrayList<InventoryItem>
 function ButcheringUtil.getBuckets(character) end
 
 ---@param carcass IsoDeadBody
@@ -74,6 +79,8 @@ function ButcheringUtil.getSkull(name) end
 ---@return string
 function ButcheringUtil.giveMeatModified(meatDef, nb, player, meatRatio, carcass, fromGround, rotten, deathAge) end
 
+---@param hook IsoButcherHook
+---@param character IsoPlayer
 ---@return boolean
 function ButcheringUtil.isHookUsingSameCharacter(hook, character) end
 
@@ -86,17 +93,24 @@ function ButcheringUtil.isHookUsingSameCharacter(hook, character) end
 ---@return string
 function ButcheringUtil.modifyMeat(item, size, meatRatio, hungerBoost, rotten, deathAge) end
 
+---@param hook IsoButcherHook
+---@param corpse IsoAnimal | AnimalInventoryItem | IsoDeadBody
+---@param character IsoPlayer
 ---@return unknown
 function ButcheringUtil.onAddedCorpseOnHook(hook, corpse, character) end
 
----@param animal unknown?
+---@param hook IsoButcherHook
+---@param animal IsoAnimal
 ---@return unknown
 function ButcheringUtil.onRemoveCorpseFromHook(hook, animal) end
 
----@param character unknown?
+---@param hook IsoButcherHook
+---@param character IsoPlayer?
 function ButcheringUtil.setUsingPlayerForHook(hook, character) end
 
 ---@param dataTable table | ISButcherHookUI
+---@param animal IsoAnimal
+---@param hook IsoButcherHook
 ---@return boolean
 function ButcheringUtil.updateCorpseDatas(dataTable, animal, hook) end
 

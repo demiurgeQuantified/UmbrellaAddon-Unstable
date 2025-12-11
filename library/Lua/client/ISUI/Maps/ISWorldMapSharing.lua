@@ -34,6 +34,90 @@ function ISWorldMapSharing:setCurrentSymbol(symbol) end
 ---@return ISWorldMapSharing
 function ISWorldMapSharing:new(mapUI) end
 
+---@class ISWorldMapSharing.CheckList : ISScrollingListBox
+---@field boxSize number
+---@field joypadParent ISWorldMapSharing_PanelPlayers
+---@field leftMargin number
+---@field selected number
+---@field textGap number
+---@field tickTexture unknown
+local __ISWorldMapSharing_CheckList = ISScrollingListBox:derive("ISWorldMapSharing_CheckList")
+__ISWorldMapSharing_CheckList.Type = "ISWorldMapSharing_CheckList"
+
+---@return number
+function __ISWorldMapSharing_CheckList:doDrawItem(y, item, alt) end
+
+---@return number
+function __ISWorldMapSharing_CheckList:getCheckedCount() end
+
+---@param index number
+---@return boolean
+function __ISWorldMapSharing_CheckList:isChecked(index) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __ISWorldMapSharing_CheckList:onJoypadDown(button, joypadData) end
+
+---@param x number
+---@param y number
+---@return unknown?
+function __ISWorldMapSharing_CheckList:onMouseDoubleClick(x, y) end
+
+---@param x number
+---@param y number
+function __ISWorldMapSharing_CheckList:onMouseDown(x, y) end
+
+---@param index number
+---@param checked boolean
+function __ISWorldMapSharing_CheckList:setChecked(index, checked) end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return ISWorldMapSharing.CheckList
+function __ISWorldMapSharing_CheckList:new(x, y, width, height) end
+
+---@class ISWorldMapSharing.PanelMain : ISPanelJoypad
+---@field buttonPlayers ISButton
+---@field currentSymbol unknown
+---@field labelAuthor ISLabel
+---@field radioBtns ISRadioButtons
+---@field tickBox ISTickBox
+local __ISWorldMapSharing_PanelMain = ISPanelJoypad:derive("ISWorldMapSharing_PanelMain")
+__ISWorldMapSharing_PanelMain.Type = "ISWorldMapSharing_PanelMain"
+
+---@param joypadData JoypadData
+function __ISWorldMapSharing_PanelMain:becomeCurrent(joypadData) end
+
+function __ISWorldMapSharing_PanelMain:createChildren() end
+
+function __ISWorldMapSharing_PanelMain:onButtonPlayers() end
+
+---@param joypadData JoypadData
+function __ISWorldMapSharing_PanelMain:onGainJoypadFocus(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __ISWorldMapSharing_PanelMain:onJoypadDown(button, joypadData) end
+
+---@param buttons ISRadioButtons
+---@param index number
+function __ISWorldMapSharing_PanelMain:onRadioButton(buttons, index) end
+
+function __ISWorldMapSharing_PanelMain:prerender() end
+
+function __ISWorldMapSharing_PanelMain:setCurrentSymbol(symbol) end
+
+function __ISWorldMapSharing_PanelMain:setJoypadButtons() end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return ISWorldMapSharing.PanelMain
+function __ISWorldMapSharing_PanelMain:new(x, y, width, height) end
+
 ---@class ISWorldMapSharing_PanelPlayers : ISPanelJoypad
 ---@field buttonAll ISButton
 ---@field buttonBack ISButton

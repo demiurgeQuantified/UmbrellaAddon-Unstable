@@ -11,7 +11,7 @@
 ---@field visibleOnStartup boolean
 ISCharacterInfoWindow = ISCollapsableWindow:derive("ISCharacterInfoWindow")
 ISCharacterInfoWindow.Type = "ISCharacterInfoWindow"
-ISCharacterInfoWindow.view = nil ---@type umbrella.ISTabPanel.View[]
+ISCharacterInfoWindow.view = {} ---@type umbrella.ISTabPanel.View[]
 ISCharacterInfoWindow.instance = nil ---@type ISCharacterInfoWindow?
 
 ---@param chr IsoPlayer

@@ -50,4 +50,3 @@ function ISAdmPanelWeather:new(x, y, width, height, player) end
 ---@field w number
 ---@field x number
 ---@field y number
-umbrella_ISAdmPanelWeather_Bar = {}

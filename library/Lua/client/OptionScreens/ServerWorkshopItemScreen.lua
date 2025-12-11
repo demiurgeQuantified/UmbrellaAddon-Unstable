@@ -46,3 +46,20 @@ function ServerWorkshopItemScreen:updateItemDetails(detailsList) end
 ---@param height number
 ---@return ServerWorkshopItemScreen
 function ServerWorkshopItemScreen:new(x, y, width, height) end
+
+---@class ServerWorkshopItemScreen.WorkshopItemList : ISScrollingListBox
+local __serverWorkshopItemScreen_WorkshopItemList = ISScrollingListBox:derive("WorkshopItemList")
+__serverWorkshopItemScreen_WorkshopItemList.Type = "WorkshopItemList"
+
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
+---@return number
+function __serverWorkshopItemScreen_WorkshopItemList:doDrawItem(y, item, alt) end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return ServerWorkshopItemScreen.WorkshopItemList
+function __serverWorkshopItemScreen_WorkshopItemList:new(x, y, width, height) end

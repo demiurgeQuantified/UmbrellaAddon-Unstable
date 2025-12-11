@@ -57,4 +57,3 @@ function ClimateColorsDebug:new(x, y, width, height, doStencil) end
 ---@field name string
 ---@field season number?
 ---@field temperature number?
-umbrella_ClimateColorsDebug_ColorInfo = {}

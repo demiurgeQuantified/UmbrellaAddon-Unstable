@@ -1,8 +1,5 @@
 ---@meta
 
----@class debugScenarios
-debugScenarios = {}
-
 ---@class DebugScenarios : ISPanel
 ---@field header ISLabel
 ---@field listbox ISScrollingListBox

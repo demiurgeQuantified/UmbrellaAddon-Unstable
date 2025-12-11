@@ -71,10 +71,12 @@ function ISCraftingUI.onPressKey(key) end
 ---@param items InventoryItem[]
 function ISCraftingUI.ReturnItemsToOriginalContainer(playerObj, items) end
 
+---@param playerObj IsoPlayer
 ---@param item boolean?
 ---@param cont unknown?
 function ISCraftingUI.ReturnItemToContainer(playerObj, item, cont) end
 
+---@param playerObj IsoPlayer
 function ISCraftingUI.ReturnItemToOriginalContainer(playerObj, item) end
 
 ---@param a umbrella.ISCraftingUI.RecipeItem
@@ -265,7 +267,6 @@ function ISCraftingIngredientIconPanel:new(craftingUI) end
 ---@field poison boolean
 ---@field recipe Recipe
 ---@field texture Texture
-umbrella_ISCraftingUI_IngredientItem = {}
 
 ---@class umbrella.ISCraftingUI.RecipeItem
 ---@field available boolean?
@@ -282,7 +283,6 @@ umbrella_ISCraftingUI_IngredientItem = {}
 ---@field sources { items: umbrella.ISCraftingUI.RecipeSourceItem[] }[]?
 ---@field texture Texture?
 ---@field typesAvailable table<string, integer>?
-umbrella_ISCraftingUI_RecipeItem = {}
 
 ---@class umbrella.ISCraftingUI.RecipesListIngredientItem
 ---@field available boolean
@@ -291,7 +291,6 @@ umbrella_ISCraftingUI_RecipeItem = {}
 ---@field name string
 ---@field poison boolean?
 ---@field texture Texture
-umbrella_ISCraftingUI_RecipesListIngredientItem = {}
 
 ---@class umbrella.ISCraftingUI.RecipeSourceItem
 ---@field color Color?
@@ -300,9 +299,7 @@ umbrella_ISCraftingUI_RecipesListIngredientItem = {}
 ---@field fullType string
 ---@field name string
 ---@field texture Texture
-umbrella_ISCraftingUI_RecipeSourceItem = {}
 
 ---@class umbrella.ISCraftingUI.RecipeSourceItemData : umbrella.ISCraftingUI.RecipeSourceItem
 ---@field multiple boolean
 ---@field selectedItem umbrella.ISCraftingUI.RecipeItem
-umbrella_ISCraftingUI_RecipeSourceItemData = {}

@@ -1,17 +1,16 @@
 ---@meta
 
----@class ModListPresets : ISUIElement
+---@class ModListPresets : ISPanelJoypad
 ---@field addPresetButton ISButton
 ---@field childrenIndex integer
 ---@field childrenLine table<integer, ISUIElement>
 ---@field delPresetButton ISButton
----@field joypadIndex integer?
 ---@field missedModsPanel ModSelector.MissedModsWindow
 ---@field model ModSelector.Model
 ---@field presetCombo ISComboBox
 ---@field savePresetButton ISButton
 ---@field sharePresetButton ISButton
-ModListPresets = ISUIElement:derive("ModListPresets")
+ModListPresets = ISPanelJoypad:derive("ModListPresets")
 ModListPresets.Type = "ModListPresets"
 
 ---@param child ISUIElement
@@ -28,22 +27,11 @@ function ModListPresets:createChildren() end
 ---@param joypadData JoypadData
 function ModListPresets:onGainJoypadFocus(joypadData) end
 
----@param joypadData JoypadData
-function ModListPresets:onJoypadDirDown(joypadData) end
-
----@param joypadData JoypadData
-function ModListPresets:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
-function ModListPresets:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
-function ModListPresets:onJoypadDirUp(joypadData) end
-
 ---@param button integer
 ---@param joypadData JoypadData
 function ModListPresets:onJoypadDown(button, joypadData) end
 
+---@param joypadData JoypadData
 function ModListPresets:onLoseJoypadFocus(joypadData) end
 
 ---@param button ISButton

@@ -33,7 +33,7 @@ function RWMChannelTV:getBPrompt() end
 ---@return ISUIElement?
 function RWMChannelTV:getParent() end
 
----@return string?
+---@return string
 function RWMChannelTV:getRBPrompt() end
 
 ---@return string?

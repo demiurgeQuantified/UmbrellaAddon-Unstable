@@ -1,8 +1,11 @@
 ---@meta
 
 ---@alias umbrella.ISFluidContainerPanel.RenderText fun(self: ISFluidContainerPanel, s: string, x: number, y: number, r: number, g: number, b: number, a: number, font: UIFont)
+
 ---@alias umbrella.ISFluidContainerPanel.OnContainerAdd fun(target: unknown, item: InventoryItem, panel: ISFluidContainerPanel)
+
 ---@alias umbrella.ISFluidContainerPanel.OnContainerRemove fun(target: unknown, item: InventoryItem, panel: ISFluidContainerPanel)
+
 ---@alias umbrella.ISFluidContainerPanel.OnContainerVerify fun(target: unknown, item: InventoryItem, panel: ISFluidContainerPanel): boolean
 
 ---@class ISFluidContainerPanel : ISPanel
@@ -76,7 +79,7 @@ function ISFluidContainerPanel:getContainer() end
 ---@return GameEntity?
 function ISFluidContainerPanel:getContainerOwner() end
 
----@return unknown?
+---@return (ItemContainer | IsoGridSquare)?
 function ISFluidContainerPanel:getContainerOwnerObject() end
 
 ---@return umbrella.ISFluidContainerPanel.TextureItem[]?
@@ -139,15 +142,12 @@ function ISFluidContainerPanel:new(x, y, _player, _container, _doTitle, _isLeft,
 ---@field cache number
 ---@field tag string
 ---@field value string
-umbrella_ISFluidContainerPanel_InfoTableItem = {}
 
 ---@class umbrella.ISFluidContainerPanel.InfoTable
 ---@field capacity umbrella.ISFluidContainerPanel.InfoTableItem
 ---@field free umbrella.ISFluidContainerPanel.InfoTableItem
 ---@field stored umbrella.ISFluidContainerPanel.InfoTableItem
-umbrella_ISFluidContainerPanel_InfoTable = {}
 
 ---@class umbrella.ISFluidContainerPanel.TextureItem
 ---@field offsetY number
 ---@field texture Texture
-umbrella_ISFluidContainerPanel_TextureItem = {}

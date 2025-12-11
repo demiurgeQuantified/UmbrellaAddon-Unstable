@@ -113,7 +113,7 @@ return {
 		FenceThumpersRequired = 50,
 	},
 	ZombieConfig = {
-		PopulationMultiplier = tonumber(ZombiePopulationMultiplier.Normal), ---@type (number | string)?
+		PopulationMultiplier = tonumber(ZombiePopulationMultiplier.Normal), ---@type unknown?
 		PopulationStartMultiplier = tonumber(ZombiePopulationStartMultiplier.Normal),
 		PopulationPeakMultiplier = tonumber(ZombiePopulationPeakMultiplier.High),
 		PopulationPeakDay = 28,

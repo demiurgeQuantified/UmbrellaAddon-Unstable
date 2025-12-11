@@ -13,7 +13,8 @@ function ISChallenge2VariousItemWindow:create() end
 ---@param y number
 ---@param itemType string
 ---@param cost integer
-function ISChallenge2VariousItemWindow:createItemButton(y, itemType, cost) end
+---@param amount integer?
+function ISChallenge2VariousItemWindow:createItemButton(y, itemType, cost, amount) end
 
 function ISChallenge2VariousItemWindow:initialise() end
 

@@ -522,7 +522,10 @@ function ISContextMenu:new(x, y, width, height, zoom) end
 ---@field color umbrella.RGB?
 ---@field iconTexture Texture?
 ---@field id integer
+---@field isDefaultOption boolean?
+---@field isDisabled boolean?
 ---@field name string
+---@field notAvailable boolean?
 ---@field onHighlight umbrella.ISContextMenu.OnHighlight?
 ---@field onHighlightParams table?
 ---@field onSelect (fun(target: unknown, ...: unknown))?
@@ -536,7 +539,6 @@ function ISContextMenu:new(x, y, width, height, zoom) end
 ---@field param7 unknown?
 ---@field param8 unknown?
 ---@field param9 unknown?
----@field subOption number?
+---@field subOption integer?
 ---@field target unknown?
 ---@field toolTip ISToolTip?
-umbrella_ISContextMenu_Option = {}

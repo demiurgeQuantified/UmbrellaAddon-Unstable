@@ -39,4 +39,3 @@ ModInfoPanel.InteractionParam = nil ---@type ModInfoPanel.InteractionParam
 ---@field id string
 ---@field len number
 ---@field modInfo ChooseGameInfo.Mod?
-umbrella_ModInfoPanel_InteractionParam_ModDict = {}

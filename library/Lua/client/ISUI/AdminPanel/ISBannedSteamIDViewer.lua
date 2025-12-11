@@ -27,8 +27,10 @@ function ISBannedSteamIDViewer:getBannedSteamIDs() end
 
 function ISBannedSteamIDViewer:initialise() end
 
+---@param button ISButton
 function ISBannedSteamIDViewer:onClick(button) end
 
+---@param button ISButton
 function ISBannedSteamIDViewer:onUnbanSteamID(button) end
 
 function ISBannedSteamIDViewer:populateList() end

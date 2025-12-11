@@ -16,7 +16,7 @@ ISMashingLogicPanel.Type = "ISMashingLogicPanel"
 ---@param _player IsoPlayer
 ---@param _entity GameEntity
 ---@param _component Component
----@param _componentUiScript XuiSkinScript.ComponentUiScript
+---@param _componentUiScript XuiSkin.ComponentUiStyle
 ---@return boolean?
 function ISMashingLogicPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 

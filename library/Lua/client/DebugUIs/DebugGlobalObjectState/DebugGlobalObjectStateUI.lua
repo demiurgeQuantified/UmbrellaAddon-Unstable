@@ -122,7 +122,6 @@ function DebugGlobalObjectStateUI:new(x, y, width, height, gameState) end
 ---@field x number
 ---@field y number
 ---@field z number
-umbrella_DebugGlobalObjectStateUI_Item = {}
 
 ---@param gameState DebugGlobalObjectState
 function DebugGlobalObjectState_InitUI(gameState) end

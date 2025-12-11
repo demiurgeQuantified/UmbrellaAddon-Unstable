@@ -2,8 +2,8 @@
 
 ---@class ISFluidUtil
 ISFluidUtil = {}
-ISFluidUtil.isoPanelWalkToDist = 5
-ISFluidUtil.isoMaxPanelDist = 10
+ISFluidUtil.isoPanelWalkToDist = 2
+ISFluidUtil.isoMaxPanelDist = 2
 
 ---@param _player IsoPlayer
 ---@param _container ISFluidContainer

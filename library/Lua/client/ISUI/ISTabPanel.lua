@@ -145,4 +145,3 @@ function ISTabPanel:new(x, y, width, height) end
 ---@field name string
 ---@field tabWidth number
 ---@field view ISUIElement
-umbrella_ISTabPanel_View = {}

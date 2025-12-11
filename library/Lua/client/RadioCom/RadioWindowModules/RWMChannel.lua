@@ -49,7 +49,7 @@ function RWMChannel:getBPrompt() end
 ---@return ISUIElement?
 function RWMChannel:getParent() end
 
----@return string?
+---@return string
 function RWMChannel:getRBPrompt() end
 
 ---@return string?

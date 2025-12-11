@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_ClothingDryerToggle.Type = "ISLootWindowObjectC
 ---@return unknown
 function ISLootWindowObjectControlHandler_ClothingDryerToggle:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_ClothingDryerToggle:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_ClothingDryerToggle:perform() end

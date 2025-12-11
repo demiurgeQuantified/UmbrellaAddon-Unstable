@@ -6,7 +6,7 @@
 ---@field catDef umbrella.Foraging.CategoryDefinition
 ---@field isMover boolean
 ---@field itemDef umbrella.Foraging.ItemDefinition
----@field itemType unknown?
+---@field itemType string?
 ---@field onClickContext function
 ---@field render3DTexture boolean?
 ---@field renderWorldIcon function?

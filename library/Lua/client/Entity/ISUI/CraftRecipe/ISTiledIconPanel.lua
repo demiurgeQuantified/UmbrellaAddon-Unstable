@@ -14,7 +14,6 @@
 ---@field margin number
 ---@field pagesLabel ISLabel?
 ---@field player IsoPlayer
----@field searchHackLabel ISLabel?
 ---@field searchInfoText string
 ---@field searchText string
 ---@field sourceDataList ArrayList?

@@ -6,7 +6,7 @@
 function round(num, idp) end
 
 ---@param _t ArrayList | table
----@return (fun(): integer?, unknown?)?
+---@return fun(): integer?, unknown?
 function xpairs(_t) end
 
 ---@param value number

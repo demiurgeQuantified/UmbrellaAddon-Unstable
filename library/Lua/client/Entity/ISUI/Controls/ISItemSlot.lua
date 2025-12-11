@@ -1,12 +1,18 @@
 ---@meta
 
 ---@alias umbrella.ISItemSlot.OnBoxClicked fun(target: unknown, slot: ISItemSlot, isRightClick: boolean, isShift: boolean)
+
 ---@alias umbrella.ISItemSlot.OnItemDropped fun(target: unknown, slot: ISItemSlot, items: InventoryItem[])
+
 ---@alias umbrella.ISItemSlot.OnItemRemove fun(target: unknown, slot: ISItemSlot, item: InventoryItem)
+
 ---@alias umbrella.ISItemSlot.OnVerifyItem fun(target: unknown, slot: ISItemSlot, item: InventoryItem): boolean
+
+---@alias umbrella.ISItemSlot.Callback fun(target: unknown, slot: ISItemSlot)
 
 ---@class ISItemSlot : ISPanel
 ---@field actionAddColor umbrella.RGBA
+---@field actionAnim unknown?
 ---@field actionRemoveColor umbrella.RGBA
 ---@field allowDrop boolean
 ---@field backDropTex Texture?
@@ -31,7 +37,7 @@
 ---@field hideItem boolean
 ---@field inputScript unknown?
 ---@field itemCount number
----@field itemTypeFilter unknown?
+---@field itemTypeFilter Item?
 ---@field locked boolean
 ---@field maxItemCount unknown?
 ---@field mouseEnabled boolean
@@ -39,7 +45,7 @@
 ---@field onBoxClicked umbrella.ISItemSlot.OnBoxClicked?
 ---@field onItemDropped umbrella.ISItemSlot.OnItemDropped?
 ---@field onItemRemove umbrella.ISItemSlot.OnItemRemove?
----@field onSelectInputsButtonClicked unknown
+---@field onSelectInputsButtonClicked umbrella.ISItemSlot.Callback?
 ---@field onStoredItemChanged unknown?
 ---@field onVerifyItem umbrella.ISItemSlot.OnVerifyItem?
 ---@field progressColor umbrella.RGBA
@@ -47,20 +53,20 @@
 ---@field renderItemCount boolean
 ---@field renderRequiredItemCount boolean
 ---@field resource Resource?
----@field selectInputButton unknown?
----@field selectInputButtonBackgroundColor table
----@field selectInputButtonBackgroundColorMouseOver table
----@field selectInputButtonTextureColor table
----@field selectInputButtonTextureColorMouseOver table
+---@field selectInputButton ISButton?
+---@field selectInputButtonBackgroundColor umbrella.RGBA
+---@field selectInputButtonBackgroundColorMouseOver umbrella.RGBA
+---@field selectInputButtonTextureColor umbrella.RGBA
+---@field selectInputButtonTextureColorMouseOver umbrella.RGBA
 ---@field showPreviewItem boolean
 ---@field showSelectInputsButton boolean
 ---@field statusIcons table
 ---@field storedItem InventoryItem?
 ---@field storedItemTex Texture?
----@field storedScriptItem unknown?
+---@field storedScriptItem Item?
 ---@field storeItem boolean
----@field textureMissingInput unknown
----@field textureSwapInput unknown
+---@field textureMissingInput Texture
+---@field textureSwapInput Texture
 ---@field toolTip (ISToolTip | ISToolTipInv)?
 ---@field toolTipText string | false
 ---@field toolTipTextItem string | false
@@ -76,6 +82,8 @@ function ISItemSlot:activateToolTip() end
 ---@param _isShift boolean
 function ISItemSlot:boxClicked(_isRightClick, _isShift) end
 
+---@param _preferredWidth number?
+---@param _preferredHeight number?
 function ISItemSlot:calculateLayout(_preferredWidth, _preferredHeight) end
 
 function ISItemSlot:createChildren() end
@@ -87,7 +95,7 @@ function ISItemSlot:deactivateToolTip() end
 ---@return boolean
 function ISItemSlot:defaultVerifyItem(_itemSlot, _item) end
 
----@return unknown
+---@return Resource?
 function ISItemSlot:getResource() end
 
 ---@return boolean?
@@ -125,8 +133,6 @@ function ISItemSlot:onSelectInputsButton() end
 
 function ISItemSlot:prerender() end
 
-function ISItemSlot:render() end
-
 ---@param _tex Texture
 ---@param _a number
 ---@param _r number
@@ -146,13 +152,16 @@ function ISItemSlot:setLocked(_b) end
 ---@param _resource Resource
 function ISItemSlot:setResource(_resource) end
 
+---@param _active boolean
 function ISItemSlot:setSelectInputsButtonActive(_active) end
 
+---@param _iconTextureArray ArrayList<Texture>
 function ISItemSlot:setStatusIcons(_iconTextureArray) end
 
 ---@param _item InventoryItem?
 function ISItemSlot:setStoredItem(_item) end
 
+---@param _item Item?
 function ISItemSlot:setStoredScriptItem(_item) end
 
 ---@param _b boolean
@@ -171,6 +180,7 @@ function ISItemSlot:update() end
 ---@param onItemRemove umbrella.ISItemSlot.OnItemRemove?
 ---@param onVerifyItem umbrella.ISItemSlot.OnVerifyItem?
 ---@param onBoxClicked umbrella.ISItemSlot.OnBoxClicked?
+---@param onSelectInputsButtonClicked umbrella.ISItemSlot.Callback?
 ---@return ISItemSlot
 function ISItemSlot:new(
 	x,
@@ -182,6 +192,7 @@ function ISItemSlot:new(
 	onItemDropped,
 	onItemRemove,
 	onVerifyItem,
-	onBoxClicked
+	onBoxClicked,
+	onSelectInputsButtonClicked
 )
 end

@@ -2,12 +2,12 @@
 
 ---@class ISAnimalTracksFinder
 ISAnimalTracksFinder = {}
-ISAnimalTracksFinder.tracks = nil ---@type IsoAnimalTrack[]
+ISAnimalTracksFinder.tracks = {} ---@type IsoAnimalTrack[]
 ISAnimalTracksFinder.tick = 0
 
 ---@param chr IsoPlayer
----@param tracks AnimalTracks
-function ISAnimalTracksFinder.getAnimalTracks(chr, tracks) end
+---@param track AnimalTracks
+function ISAnimalTracksFinder.getAnimalTracks(chr, track) end
 
 ---@param worldObject IsoObject
 ---@return boolean

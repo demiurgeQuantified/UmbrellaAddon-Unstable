@@ -9,7 +9,7 @@ RWMMicrophone.Type = "RWMMicrophone"
 
 function RWMMicrophone:createChildren() end
 
----@return string?
+---@return string
 function RWMMicrophone:getAPrompt() end
 
 ---@return string?

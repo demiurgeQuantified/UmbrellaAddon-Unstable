@@ -7,7 +7,6 @@
 ---@field fade UITransition
 ---@field isSlider boolean
 ---@field joypadFocused boolean
----@field target unknown?
 ---@field targetFunc umbrella.ISVolumeControl.TargetFunction?
 ---@field tooltipUI ISToolTip?
 ---@field volume number

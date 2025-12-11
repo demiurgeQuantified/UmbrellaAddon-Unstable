@@ -5,6 +5,7 @@
 ISLootWindowFloorControlHandler = ISBaseObject:derive("ISLootWindowFloorControlHandler")
 ISLootWindowFloorControlHandler.Type = "ISLootWindowFloorControlHandler"
 
+---@param context ISContextMenu
 ---@return unknown
 function ISLootWindowFloorControlHandler:addJoypadContextMenuOption(context, text) end
 
@@ -15,6 +16,10 @@ function ISLootWindowFloorControlHandler:getButtonControl(title) end
 ---@return unknown
 function ISLootWindowFloorControlHandler:getControl() end
 
+---@return unknown
+function ISLootWindowFloorControlHandler:getImageButtonControl(imagePath) end
+
+---@param context ISContextMenu
 function ISLootWindowFloorControlHandler:handleJoypadContextMenu(context) end
 
 function ISLootWindowFloorControlHandler:perform() end

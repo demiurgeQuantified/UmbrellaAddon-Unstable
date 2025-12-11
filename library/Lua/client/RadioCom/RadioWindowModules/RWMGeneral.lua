@@ -47,4 +47,3 @@ function RWMGeneral:new(x, y, width, height) end
 ---@class umbrella.RWMGeneral.InfoLine
 ---@field line string
 ---@field prefix string
-umbrella_RWMGeneral_InfoLine = {}

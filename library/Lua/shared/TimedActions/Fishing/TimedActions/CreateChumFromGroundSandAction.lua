@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class CreateChumFromGroundSandAction : ISBaseTimedAction
----@field sound unknown
+---@field sound integer
 ---@field square IsoGridSquare
 CreateChumFromGroundSandAction = ISBaseTimedAction:derive("CreateChumFromGroundSandAction")
 CreateChumFromGroundSandAction.Type = "CreateChumFromGroundSandAction"

@@ -59,4 +59,3 @@ function camping.tentAt(x, y, z) end
 ---@field backRight string
 ---@field frontLeft string
 ---@field frontRight string
-umbrella_Camping_TentSprites = {}

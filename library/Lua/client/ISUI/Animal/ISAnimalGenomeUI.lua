@@ -60,7 +60,6 @@ function ISAnimalGenomeUI:new(x, y, width, height, animal, player) end
 ---@field geneticDisorder string
 ---@field used boolean
 ---@field value integer
-umbrella_ISAnimalGenomeUI_AlleleData = {}
 
 ---@class umbrella.ISAnimalGenomeUI.GeneData
 ---@field allele1 umbrella.ISAnimalGenomeUI.AlleleData
@@ -73,4 +72,3 @@ umbrella_ISAnimalGenomeUI_AlleleData = {}
 ---@field gd2Btn ISButton
 ---@field name string
 ---@field used1Btn ISButton
-umbrella_ISAnimalGenomeUI_GeneData = {}

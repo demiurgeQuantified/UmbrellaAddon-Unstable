@@ -3,9 +3,9 @@
 ---@class ISTakeBricks : ISBaseTimedAction
 ---@field amount number
 ---@field item string
----@field pallet unknown
+---@field pallet IsoObject
 ---@field sprite string?
----@field square unknown
+---@field square IsoGridSquare
 ISTakeBricks = ISBaseTimedAction:derive("ISTakeBricks")
 ISTakeBricks.Type = "ISTakeBricks"
 
@@ -26,9 +26,12 @@ function ISTakeBricks:stop() end
 
 function ISTakeBricks:update() end
 
----@return unknown
+---@return boolean
 function ISTakeBricks:waitToStart() end
 
+---@param character IsoPlayer
+---@param pallet IsoObject
+---@param square IsoGridSquare
 ---@param sprite string?
 ---@param item string
 ---@param amount number

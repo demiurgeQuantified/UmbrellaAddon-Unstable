@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_PutOut.Type = "ISLootWindowObjectControlHandler
 ---@return unknown
 function ISLootWindowObjectControlHandler_PutOut:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_PutOut:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_PutOut:perform() end

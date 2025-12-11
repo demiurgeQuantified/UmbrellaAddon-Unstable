@@ -1,8 +1,10 @@
 ---@meta
 
 ---@class SourceWindow : ISCollapsableWindow
+---@field bottomPanel ISPanel
 ---@field filename string
 ---@field keepOnScreen boolean
+---@field lineNumberEntry ISTextEntryBox
 ---@field reloadBtn ISButton
 ---@field sourceView ISScrollingListBox
 ---@field title string
@@ -23,13 +25,15 @@ function SourceWindow:fill() end
 
 function SourceWindow:initialise() end
 
+function SourceWindow:onLineNumberEntered() end
+
 ---@param item string
 function SourceWindow:onMouseDoubleClickBreakpointToggle(item) end
 
 ---@param self ISScrollingListBox
 ---@param del number
 ---@return boolean
-function SourceWindow:onSourceMouseWheel(self, del) end
+function SourceWindow:onSourceMouseWheel(del) end
 
 function SourceWindow:prerender() end
 
@@ -37,7 +41,7 @@ function SourceWindow:prerender() end
 function SourceWindow:reloadFile() end
 
 ---@param self ISScrollingListBox
-function SourceWindow:renderSrc(self) end
+function SourceWindow:renderSrc() end
 
 ---@param line number
 function SourceWindow:scrollToLine(line) end

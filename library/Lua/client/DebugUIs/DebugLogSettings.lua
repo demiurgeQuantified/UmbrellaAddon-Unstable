@@ -29,3 +29,17 @@ function DebugLogSettings:syncCombos() end
 ---@param height number
 ---@return DebugLogSettings
 function DebugLogSettings:new(x, y, width, height) end
+
+---@class DebugLogSettings.HorizontalLine : ISPanel
+local __debugLogSettings_HorizontalLine = ISPanel:derive("HorizontalLine")
+__debugLogSettings_HorizontalLine.Type = "HorizontalLine"
+
+function __debugLogSettings_HorizontalLine:prerender() end
+
+function __debugLogSettings_HorizontalLine:render() end
+
+---@param x number
+---@param y number
+---@param width number
+---@return DebugLogSettings.HorizontalLine
+function __debugLogSettings_HorizontalLine:new(x, y, width) end

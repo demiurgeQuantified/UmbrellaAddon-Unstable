@@ -11,16 +11,15 @@
 ---@field no ISButton
 ---@field onclick unknown
 ---@field param1 unknown
----@field param2 unknown
----@field param3 unknown
----@field param4 unknown
+---@field param2 unknown?
+---@field param3 unknown?
+---@field param4 unknown?
 ---@field player unknown?
 ---@field rotation unknown
 ---@field scale number
 ---@field sliderRotation ISSliderPanel
 ---@field sliderScale ISSliderPanel
 ---@field symbolsUI unknown
----@field target ISWorldMapSymbolTool_EditAnnotation
 ---@field text string
 ---@field tickBoxPerspective ISTickBox
 ---@field yes ISButton
@@ -39,14 +38,20 @@ function ISMapSymbolDialog:isMatchPerspective() end
 
 function ISMapSymbolDialog:layoutWidgets() end
 
+---@param button ISButton
 function ISMapSymbolDialog:onClick(button) end
 
+---@param joypadData JoypadData
 function ISMapSymbolDialog:onGainJoypadFocus(joypadData) end
 
+---@param joypadData JoypadData
 function ISMapSymbolDialog:onJoypadDirDown(joypadData) end
 
+---@param joypadData JoypadData
 function ISMapSymbolDialog:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISMapSymbolDialog:onJoypadDown(button, joypadData) end
 
 function ISMapSymbolDialog:onRotationChange(value, slider) end
@@ -77,7 +82,9 @@ function ISMapSymbolDialog:updateButtons() end
 ---@param width number
 ---@param height number
 ---@param title string
----@param target ISWorldMapSymbolTool_EditAnnotation
 ---@param player unknown?
+---@param param2 unknown?
+---@param param3 unknown?
+---@param param4 unknown?
 ---@return ISMapSymbolDialog
 function ISMapSymbolDialog:new(x, y, width, height, title, target, onclick, player, param1, param2, param3, param4) end

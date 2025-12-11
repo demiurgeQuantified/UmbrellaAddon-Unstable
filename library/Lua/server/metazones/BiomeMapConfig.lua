@@ -27,6 +27,7 @@ biome_map_config = {
 	},
 	{
 		pixel = 102,
+		biome = "townhouse",
 		zone = "TrailerPark",
 	},
 	{
@@ -91,6 +92,3 @@ biome_map_config = {
 		zone = "DeepForest",
 	},
 }
-biome_map_config[18] = nil ---@type unknown
-biome_map_config[19] = nil ---@type unknown
-biome_map_config[20] = nil ---@type unknown

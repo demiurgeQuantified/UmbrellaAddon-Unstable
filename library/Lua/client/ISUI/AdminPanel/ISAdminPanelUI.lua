@@ -6,7 +6,6 @@
 ---@field cancel ISButton
 ---@field checkStatsBtn ISButton
 ---@field climateOptionsBtn ISButton
----@field dbBtn ISButton
 ---@field itemListBtn ISButton
 ---@field miniScoreboardBtn ISButton
 ---@field nonpvpzoneBtn ISButton

@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ISButcherHookCraftPanel : ISBaseComponentPanel
----@field processorPanel unknown?
+---@field processorPanel ISButcherHookProcessorPanel?
 ISButcherHookCraftPanel = ISBaseComponentPanel:derive("ISButcherHookCraftPanel")
 ISButcherHookCraftPanel.Type = "ISButcherHookCraftPanel"
 
 ---@param _player IsoPlayer
 ---@param _entity GameEntity
 ---@param _component Component
----@param _componentUiScript XuiSkinScript.ComponentUiScript
+---@param _componentUiScript XuiSkin.ComponentUiStyle
 ---@return boolean?
 function ISButcherHookCraftPanel.CanCreatePanelFor(_player, _entity, _component, _componentUiScript) end
 

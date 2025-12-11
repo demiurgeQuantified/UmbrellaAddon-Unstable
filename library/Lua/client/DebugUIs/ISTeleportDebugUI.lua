@@ -24,14 +24,14 @@ function ISTeleportDebugUI:copyCoords() end
 
 function ISTeleportDebugUI:destroy() end
 
----@return number?
----@return number?
----@return number?
+---@return integer?
+---@return integer?
+---@return integer?
 function ISTeleportDebugUI:extractClipboardCoords() end
 
----@return unknown
----@return unknown
----@return unknown
+---@return integer
+---@return integer
+---@return integer
 function ISTeleportDebugUI:getPlayerCoords() end
 
 function ISTeleportDebugUI:initialise() end
@@ -66,6 +66,7 @@ function ISTeleportDebugUI:onMouseUp(x, y) end
 ---@param y number
 function ISTeleportDebugUI:onMouseUpOutside(x, y) end
 
+---@param key integer
 function ISTeleportDebugUI:onOtherKey(key) end
 
 function ISTeleportDebugUI:pasteCoords() end

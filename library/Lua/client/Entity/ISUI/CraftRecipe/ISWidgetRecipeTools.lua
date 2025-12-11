@@ -19,7 +19,7 @@
 ---@field right umbrella.ISWidgetRecipeTools.ToolSide
 ---@field textureDrain Texture
 ---@field textureKeep Texture
----@field toolsLabel unknown?
+---@field toolsLabel ISLabel?
 ISWidgetRecipeTools = ISPanel:derive("ISWidgetRecipeTools")
 ISWidgetRecipeTools.Type = "ISWidgetRecipeTools"
 
@@ -62,4 +62,3 @@ function ISWidgetRecipeTools:new(x, y, width, height, player, logic) end
 ---@field inputScript InputScript
 ---@field inputWidget ISWidgetInput?
 ---@field label ISLabel
-umbrella_ISWidgetRecipeTools_ToolSide = {}

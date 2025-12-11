@@ -73,4 +73,3 @@ function ISSineWaveDisplay:new(x, y, width, height) end
 ---@field minLen number
 ---@field minSpeed integer
 ---@field minUpd integer
-umbrella_ISSineWaveDisplay_WaveParams = {}

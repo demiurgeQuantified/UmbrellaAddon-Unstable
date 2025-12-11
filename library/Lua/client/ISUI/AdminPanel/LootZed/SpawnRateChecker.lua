@@ -41,4 +41,3 @@ function LootZedTool.rollProceduralItem_CalcChances(proceduralItems, container, 
 ---@field forceForTiles string?
 ---@field forceForZones string?
 ---@field roomName string?
-umbrella_LootZedTool_SpawnItemChecker = {}

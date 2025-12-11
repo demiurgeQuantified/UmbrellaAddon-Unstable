@@ -70,7 +70,7 @@ function ISColorPicker:render() end
 ---@param rows number
 function ISColorPicker:setColors(colors, columns, rows) end
 
----@param initial Color
+---@param initial ColorInfo
 function ISColorPicker:setInitialColor(initial) end
 
 ---@param func umbrella.ISColorPicker.PickedFunction

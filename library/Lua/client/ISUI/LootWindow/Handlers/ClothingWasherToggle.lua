@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_ClothingWasherToggle.Type = "ISLootWindowObject
 ---@return unknown
 function ISLootWindowObjectControlHandler_ClothingWasherToggle:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_ClothingWasherToggle:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_ClothingWasherToggle:perform() end

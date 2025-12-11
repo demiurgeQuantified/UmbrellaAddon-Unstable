@@ -10,6 +10,7 @@ ISLootWindowObjectControlHandler_CombinationWasherDryerSetMode.Type =
 ---@return unknown
 function ISLootWindowObjectControlHandler_CombinationWasherDryerSetMode:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_CombinationWasherDryerSetMode:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_CombinationWasherDryerSetMode:perform() end

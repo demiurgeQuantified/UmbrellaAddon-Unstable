@@ -60,10 +60,8 @@ function ISMiniScoreboardUI:new(x, y, width, height, admin) end
 ---@field displayNames ArrayList<string>
 ---@field steamIDs ArrayList<string>
 ---@field usernames ArrayList<string>
-umbrella_ISMiniScoreboardUI_Scoreboard = {}
 
 ---@class umbrella.ISMiniScoreboardUI.Player
 ---@field displayName string
 ---@field tooltip string?
 ---@field username string
-umbrella_ISMiniScoreboardUI_Player = {}

@@ -1,7 +1,9 @@
 ---@meta
 
 ---@alias umbrella.ISItemDropBox.OnItemDropped fun(target: unknown?, items: InventoryItem[])
+
 ---@alias umbrella.ISItemDropBox.OnItemRemove fun(target: unknown?)
+
 ---@alias umbrella.ISItemDropBox.OnVerifyItem fun(target: unknown?, item: InventoryItem)
 
 ---@class ISItemDropBox : ISPanel
@@ -91,7 +93,7 @@ function ISItemDropBox:render() end
 ---@param _g number?
 ---@param _b number?
 ---@overload fun(_tex: Texture)
----@overload fun(_tex: Texture,_a: number,_r: number,_g: number,_b: number)
+---@overload fun(_tex: Texture, _a: number, _r: number, _g: number, _b: number)
 function ISItemDropBox:setBackDropTex(_tex, _a, _r, _g, _b) end
 
 ---@param _b boolean
@@ -104,7 +106,7 @@ function ISItemDropBox:setDoBackDropTex(_b) end
 ---@param _r2 number
 ---@param _g2 number
 ---@param _b2 number
----@overload fun(self: ISItemDropBox,_b: boolean)
+---@overload fun(self: ISItemDropBox, _b: boolean)
 function ISItemDropBox:setHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
 ---@param _a number
@@ -114,7 +116,7 @@ function ISItemDropBox:setHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 ---@param _r2 number
 ---@param _g2 number
 ---@param _b2 number
----@overload fun(self: ISItemDropBox,_b: boolean)
+---@overload fun(self: ISItemDropBox, _b: boolean)
 function ISItemDropBox:setInvalidHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
 ---@param _item InventoryItem?
@@ -134,7 +136,7 @@ function ISItemDropBox:setToolTip(_b, _text) end
 ---@param _r2 number
 ---@param _g2 number
 ---@param _b2 number
----@overload fun(self: ISItemDropBox,_b: boolean)
+---@overload fun(self: ISItemDropBox, _b: boolean)
 function ISItemDropBox:setValidHighlight(_b, _a, _r, _g, _b, _a2, _r2, _g2, _b2) end
 
 ---@param x number

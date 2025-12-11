@@ -2,7 +2,6 @@
 
 ---@class ISCheckFishingNetAction : ISBaseTimedAction
 ---@field hours integer
----@field maxTime number?
 ---@field trap IsoObject
 ISCheckFishingNetAction = ISBaseTimedAction:derive("ISCheckFishingNetAction")
 ISCheckFishingNetAction.Type = "ISCheckFishingNetAction"

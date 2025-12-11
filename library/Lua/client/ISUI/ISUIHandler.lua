@@ -3,7 +3,7 @@
 ---@class ISUIHandler
 ISUIHandler = {}
 ISUIHandler.allUIVisible = true
-ISUIHandler.visibleUI = nil ---@type string[]
+ISUIHandler.visibleUI = {} ---@type string[]
 
 ---@param key integer
 function ISUIHandler.onKeyPressed(key) end

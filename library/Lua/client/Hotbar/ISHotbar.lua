@@ -36,9 +36,6 @@ function ISHotbar.onKeyPressed(key) end
 ---@param key integer
 function ISHotbar.onKeyStartPressed(key) end
 
----@param player IsoPlayer
-function ISHotbar.onStopGrapple(player) end
-
 ---@param slotIndex integer
 function ISHotbar:activateSlot(slotIndex) end
 
@@ -151,4 +148,3 @@ function ISHotbar:new(character) end
 ---@field def umbrella.ISHotbar.AttachDefinition
 ---@field name string
 ---@field slotType string
-umbrella_ISHotbar_Slot = {}

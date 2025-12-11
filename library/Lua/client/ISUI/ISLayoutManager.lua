@@ -57,15 +57,12 @@ function ISLayoutManager.WriteIni() end
 ---@field width number
 ---@field x number
 ---@field y number
-umbrella_ISLayoutManager_Layout = {}
 
 ---@class umbrella.ISLayoutManager.RegisteredWindow
 ---@field funcs ISUIElement
 ---@field target ISUIElement
-umbrella_ISLayoutManager_RegisteredWindow = {}
 
 ---@class umbrella.ISLayoutManager.Resolution
 ---@field height number
 ---@field width number
 ---@field windows umbrella.ISLayoutManager.Layout[]
-umbrella_ISLayoutManager_Resolution = {}

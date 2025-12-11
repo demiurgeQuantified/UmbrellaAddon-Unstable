@@ -31,6 +31,7 @@ function WorldMapEditorMode_Streets:display() end
 
 function WorldMapEditorMode_Streets:onCreateStreet() end
 
+---@param key integer
 ---@return boolean
 function WorldMapEditorMode_Streets:onKeyPress(key) end
 
@@ -54,6 +55,7 @@ function WorldMapEditorMode_Streets:onMouseUp(x, y) end
 ---@return boolean
 function WorldMapEditorMode_Streets:onMouseUpOutside(x, y) end
 
+---@param delta number
 function WorldMapEditorMode_Streets:onMouseWheel_Width(delta) end
 
 function WorldMapEditorMode_Streets:onRemoveStreet() end

@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ISHandcraftWindowHeader : ISPanel
----@field buttonInfo unknown?
+---@field buttonInfo ISButton?
 ---@field enableIcon boolean
 ---@field enableInfoButton boolean
----@field icon unknown?
+---@field icon ISImage?
 ---@field iconSize number
 ---@field marginBottom number
 ---@field marginLeft number
@@ -18,7 +18,7 @@
 ---@field styleButton string?
 ---@field styleIcon string?
 ---@field styleLabel string?
----@field title unknown?
+---@field title ISLabel?
 ---@field titleStr boolean
 ISHandcraftWindowHeader = ISPanel:derive("ISHandcraftWindowHeader")
 ISHandcraftWindowHeader.Type = "ISHandcraftWindowHeader"

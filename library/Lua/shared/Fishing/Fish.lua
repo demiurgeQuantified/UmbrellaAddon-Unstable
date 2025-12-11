@@ -9,10 +9,11 @@ Fishing.Fish = nil ---@type Fishing.Fish
 ---@field dx number
 ---@field dy number
 ---@field fishingLvl integer
----@field fishingRod unknown
+---@field fishingRod Fishing.FishingRod
 ---@field fishItem InventoryItem?
 ---@field fishSize number
 ---@field fishSizeLen number
+---@field isReel boolean
 ---@field isRiver boolean
 ---@field isTrash boolean
 ---@field lure string
@@ -38,7 +39,8 @@ function __fishing_Fish:update(x, y) end
 
 ---@param character IsoPlayer
 ---@param lure string
+---@param fishingRod Fishing.FishingRod
 ---@param x number
 ---@param y number
 ---@return Fishing.Fish
-function __fishing_Fish:new(character, lure, x, y) end
+function __fishing_Fish:new(character, lure, fishingRod, x, y) end

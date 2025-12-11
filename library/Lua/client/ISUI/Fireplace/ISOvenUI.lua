@@ -7,7 +7,7 @@
 ---@field knobTex Texture
 ---@field ok ISButton
 ---@field oven IsoStove
----@field playerNum unknown
+---@field playerNum integer
 ---@field tempKnob ISKnob
 ---@field tempType ISTickBox
 ---@field timerKnob ISKnob

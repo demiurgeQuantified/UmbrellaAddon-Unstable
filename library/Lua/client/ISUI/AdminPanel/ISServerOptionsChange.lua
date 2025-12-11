@@ -16,7 +16,6 @@
 ---@field option ServerOptions.ServerOption
 ---@field resetBtn ISButton
 ---@field saveBtn ISButton
----@field target unknown?
 ---@field variableColor umbrella.RGBA
 ---@field zOffsetSmallFont number
 ISServerOptionsChange = ISPanel:derive("ISServerOptionsChange")

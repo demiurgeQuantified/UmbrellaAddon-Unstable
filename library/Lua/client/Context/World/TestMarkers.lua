@@ -17,4 +17,3 @@ function TestMarkers.ontick() end
 ---@class umbrella.TestMarkers.Loc
 ---@field circle WorldMarkers.GridSquareMarker
 ---@field pointer WorldMarkers.PlayerHomingPoint
-umbrella_TestMarkers_Loc = {}

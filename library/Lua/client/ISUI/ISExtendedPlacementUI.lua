@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class ISExtendedPlacementUI : ISCollapsableWindow
----@field btnmode ISButton
 ---@field character IsoPlayer
 ---@field closeBtn ISButton
 ---@field drawJoypadFocus boolean
@@ -10,10 +9,6 @@
 ---@field gizmo string
 ---@field ignoreSliderValueChange boolean
 ---@field item InventoryItem
----@field labelaxisx ISLabel
----@field labelaxisy ISLabel
----@field labelaxisz ISLabel
----@field labelmode ISLabel
 ---@field labelmov ISLabel
 ---@field labelrot ISLabel
 ---@field labelxmov ISLabel
@@ -22,7 +17,6 @@
 ---@field labelyrot ISLabel
 ---@field labelzmov ISLabel
 ---@field labelzrot ISLabel
----@field mode string
 ---@field originalMovX integer
 ---@field originalMovY integer
 ---@field originalMovZ integer
@@ -33,12 +27,6 @@
 ---@field pressedMaxTime number
 ---@field pressedTime number
 ---@field revertBtn ISButton
----@field slideraxisxmov ISSliderPanel
----@field slideraxisxrot ISSliderPanel
----@field slideraxisymov ISSliderPanel
----@field slideraxisyrot ISSliderPanel
----@field slideraxiszmov ISSliderPanel
----@field slideraxiszrot ISSliderPanel
 ---@field sliderxmov ISSliderPanel
 ---@field sliderxrot ISSliderPanel
 ---@field sliderymov ISSliderPanel
@@ -46,9 +34,6 @@
 ---@field sliderzmov ISSliderPanel
 ---@field sliderzrot ISSliderPanel
 ---@field title string
----@field txtboxaxisx ISTextEntryBox
----@field txtboxaxisy ISTextEntryBox
----@field txtboxaxisz ISTextEntryBox
 ---@field txtboxxmov ISTextEntryBox
 ---@field txtboxxrot ISTextEntryBox
 ---@field txtboxymov ISTextEntryBox
@@ -78,8 +63,6 @@ function ISExtendedPlacementUI:initialise() end
 ---@param key integer
 ---@return boolean
 function ISExtendedPlacementUI:isKeyConsumed(key) end
-
-function ISExtendedPlacementUI:modeChange() end
 
 ---@param value number
 ---@param slider ISSliderPanel

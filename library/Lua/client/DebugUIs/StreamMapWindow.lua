@@ -30,32 +30,32 @@ function StreamMapWindow:initialise() end
 ---@param x number
 ---@param y number
 ---@return boolean
-function StreamMapWindow:onMapMouseDown(self, x, y) end
+function StreamMapWindow:onMapMouseDown(x, y) end
 
 ---@param self ISPanel
 ---@param dx number
 ---@param dy number
 ---@return boolean
-function StreamMapWindow:onMapMouseMove(self, dx, dy) end
+function StreamMapWindow:onMapMouseMove(dx, dy) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
 ---@return boolean
-function StreamMapWindow:onMapRightMouseDown(self, x, y) end
+function StreamMapWindow:onMapRightMouseDown(x, y) end
 
 ---@param self ISPanel
 ---@param x number
 ---@param y number
 ---@return boolean
-function StreamMapWindow:onMapRightMouseUp(self, x, y) end
+function StreamMapWindow:onMapRightMouseUp(x, y) end
 
 function StreamMapWindow:onMouseDoubleClickOpenObject(item) end
 
 ---@param self ISPanel
 ---@param del number
 ---@return boolean
-function StreamMapWindow:onRenderMouseWheel(self, del) end
+function StreamMapWindow:onRenderMouseWheel(del) end
 
 function StreamMapWindow:prerender() end
 

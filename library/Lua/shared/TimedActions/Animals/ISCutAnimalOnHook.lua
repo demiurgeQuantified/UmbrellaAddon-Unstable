@@ -37,7 +37,7 @@ function ISCutAnimalOnHook:waitToStart() end
 
 ---@param body IsoAnimal
 ---@param hook IsoButcherHook
----@param luaHook ISButcherHookUI
+---@param luaHookUI ISButcherHookUI
 ---@param bucket InventoryItem?
 ---@return ISCutAnimalOnHook
-function ISCutAnimalOnHook:new(character, body, hook, luaHook, bucket) end
+function ISCutAnimalOnHook:new(character, body, hook, luaHookUI, bucket) end

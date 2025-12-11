@@ -148,23 +148,3 @@ forageSystem.zoneDefinitions = {
 		abundanceSetting = "NatureAbundance",
 	},
 }
-
----@class forageZones
-forageZones = {}
-forageZones.DeepForest = nil ---@type unknown
-forageZones.FarmLand = nil ---@type unknown
-forageZones.Farm = nil ---@type unknown
-forageZones.Forest = nil ---@type unknown
-forageZones.ForagingNav = nil ---@type unknown
-forageZones.Nav = nil ---@type unknown
-forageZones.TownZone = nil ---@type unknown
-forageZones.TrailerPark = nil ---@type unknown
-forageZones.Vegitation = nil ---@type unknown
-forageZones.PHForest = nil ---@type unknown
-forageZones.PHMixForest = nil ---@type unknown
-forageZones.PRForest = nil ---@type unknown
-forageZones.FarmMixForest = nil ---@type unknown
-forageZones.FarmForest = nil ---@type unknown
-forageZones.BirchForest = nil ---@type unknown
-forageZones.BirchMixForest = nil ---@type unknown
-forageZones.OrganicForest = nil ---@type unknown

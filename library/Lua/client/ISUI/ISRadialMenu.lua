@@ -80,4 +80,3 @@ function ISRadialMenu:new(x, y, innerRadius, outerRadius, playerNum) end
 ---@field command table?
 ---@field text string?
 ---@field texture Texture?
-umbrella_ISRadialMenu_Slice = {}

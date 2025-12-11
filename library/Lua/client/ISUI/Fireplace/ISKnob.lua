@@ -81,4 +81,3 @@ function ISKnob:new(x, y, tex, valuesBg, title, player) end
 ---@class umbrella.ISKnob.ValueTable
 ---@field angle number
 ---@field value number
-umbrella_ISKnob_ValueTable = {}

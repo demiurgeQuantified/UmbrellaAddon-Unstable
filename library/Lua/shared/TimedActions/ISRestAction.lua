@@ -10,6 +10,8 @@
 ISRestAction = ISBaseTimedAction:derive("ISRestAction")
 ISRestAction.Type = "ISRestAction"
 
+---@param event string
+---@param parameter string
 function ISRestAction:animEvent(event, parameter) end
 
 ---@param character IsoPlayer

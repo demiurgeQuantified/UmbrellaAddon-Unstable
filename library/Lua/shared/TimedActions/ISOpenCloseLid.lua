@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ISOpenCloseLid : ISBaseTimedAction
----@field barrel unknown
+---@field barrel IsoThumpable
 ---@field sprite string
----@field square unknown
+---@field square IsoGridSquare
 ISOpenCloseLid = ISBaseTimedAction:derive("ISOpenCloseLid")
 ISOpenCloseLid.Type = "ISOpenCloseLid"
 
@@ -24,9 +24,12 @@ function ISOpenCloseLid:stop() end
 
 function ISOpenCloseLid:update() end
 
----@return unknown
+---@return boolean
 function ISOpenCloseLid:waitToStart() end
 
+---@param character IsoPlayer
+---@param barrel IsoThumpable
+---@param square IsoGridSquare
 ---@param sprite string
 ---@return ISOpenCloseLid
 function ISOpenCloseLid:new(character, barrel, square, sprite) end

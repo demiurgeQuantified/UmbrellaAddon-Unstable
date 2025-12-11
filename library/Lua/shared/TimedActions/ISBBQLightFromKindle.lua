@@ -5,7 +5,6 @@
 ---@field isOutdoorsMan boolean
 ---@field item InventoryItem
 ---@field plank InventoryItem
----@field sound integer?
 ISBBQLightFromKindle = ISBaseTimedAction:derive("ISBBQLightFromKindle")
 ISBBQLightFromKindle.Type = "ISBBQLightFromKindle"
 
@@ -37,7 +36,7 @@ function ISBBQLightFromKindle:update() end
 ---@return boolean
 function ISBBQLightFromKindle:waitToStart() end
 
----@param character unknown?
+---@param character IsoPlayer
 ---@param plank InventoryItem
 ---@param item InventoryItem
 ---@param bbq IsoBarbecue

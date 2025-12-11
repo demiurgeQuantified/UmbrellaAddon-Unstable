@@ -22,6 +22,7 @@ function ISSpinBox:createChildren() end
 ---@param button ISButton
 function ISSpinBox:onButton(button) end
 
+---@param delta number
 function ISSpinBox:onMouseWheel(delta) end
 
 function ISSpinBox:prerender() end

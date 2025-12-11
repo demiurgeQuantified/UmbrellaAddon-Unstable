@@ -2,7 +2,7 @@
 
 ---@class ISFeedingTroughUI : ISCollapsableWindow
 ---@field chr IsoPlayer
----@field ignoreChildren unknown
+---@field ignoreChildren integer
 ---@field item IsoFeedingTrough
 ---@field labelAttachedAnimals ISLabel
 ---@field labelFeed ISLabel

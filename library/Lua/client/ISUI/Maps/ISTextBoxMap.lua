@@ -31,7 +31,6 @@
 ---@field styleAPI unknown
 ---@field symbolsAPI unknown
 ---@field symbolsUI ISWorldMapSymbols
----@field target umbrella.ISTextBoxMap.Target
 ---@field text string
 ---@field tickBox ISTickBox
 ---@field tickBoxPerspective ISTickBox
@@ -167,4 +166,3 @@ end
 ---@field colorInfo ColorInfo
 ---@field item string
 ---@field tooltip string
-umbrella_ISTextBoxMap_ColorButtonInfo = {}

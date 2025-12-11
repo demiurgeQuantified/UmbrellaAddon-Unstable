@@ -22,7 +22,7 @@ forageSystem = {
 	categoryDefinitions = {},
 	defaultDefinitions = {},
 	lootTable = {},
-	lootTableMonth = nil, ---@type integer?
+	lootTableMonth = 1, ---@type integer?
 	processedEntries = {},
 	currentMonth = 0,
 	currentTime = "isDay",
@@ -635,6 +635,11 @@ forageSystem = {
 			amount = 10,
 			chance = 75,
 		},
+		["Base.Hops"] = {
+			type = "Base.HopsSeed",
+			amount = 10,
+			chance = 75,
+		},
 		["Base.Kale"] = {
 			type = "Base.KaleSeed",
 			amount = 10,
@@ -808,10 +813,6 @@ forageSystem = {
 	},
 }
 forageSystem.itemBlacklist = nil ---@type ArrayList<string>?
-forageSystem.lootTables = {} ---@type table<string, table<integer, table<string, table<string, umbrella.Foraging.LootTable>>>>
-forageSystem.affinityCooldownMin = 5
-forageSystem.affinityCooldownMax = 15
-forageSystem.statisticsTable = nil ---@type table<"zones", table<string, table<integer, table<string, table<string, table<string, umbrella.Foraging.StatisticsTableItem>>>>>>?
 
 ---@param _catDef table
 ---@param _overwrite boolean?
@@ -855,9 +856,6 @@ function forageSystem.checkRefillZone(_zoneData) end
 function forageSystem.clearLastMonthLootEntries(_month) end
 
 function forageSystem.clearTables() end
-
----@param _doItemStats boolean?
-function forageSystem.createDebugLog(_doItemStats) end
 
 ---@param _zoneData umbrella.Foraging.ZoneData
 ---@param _recreate boolean?
@@ -1035,13 +1033,6 @@ function forageSystem.getLevelVisionBonus(_perkLevel) end
 ---@return number
 function forageSystem.getLightLevelPenalty(_character, _square, _doReduction) end
 
----@param _itemDef umbrella.Foraging.ItemDefinition
----@param _month integer
----@param _monthBonus integer
----@param _monthMalus integer
----@return number
-function forageSystem.getMonthBonus(_itemDef, _month, _monthBonus, _monthMalus) end
-
 ---@return number
 function forageSystem.getMonthMulti(_itemDef, _month) end
 
@@ -1148,6 +1139,8 @@ function forageSystem.getZoneRandomCoordNearPoint(_zoneData, _minDist, _x, _y) e
 ---@param _amount number
 function forageSystem.giveItemXP(_character, _itemDef, _amount) end
 
+function forageSystem.giveXP(_character, _itemDef, _distanceTravelled) end
+
 ---@param _character IsoPlayer
 ---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@param _zoneDef umbrella.Foraging.ZoneDefinition
@@ -1212,12 +1205,9 @@ function forageSystem.isItemTypeExist(_itemType) end
 ---@return boolean
 function forageSystem.isValidFloor(_square, _itemDef, _catDef) end
 
----@param _ unknown?
----@param _itemDef umbrella.Foraging.ItemDefinition
----@param _zoneDef umbrella.Foraging.ZoneDefinition
 ---@param _month integer
 ---@return boolean
-function forageSystem.isValidMonth(_, _itemDef, _zoneDef, _month) end
+function forageSystem.isValidMonth(_def, _month) end
 
 ---@return unknown
 function forageSystem.isValidMonthInternal(_character, _itemDef, _zoneDef, _month) end
@@ -1244,10 +1234,10 @@ function forageSystem.lootTableUpdate() end
 ---@param _itemDef table
 function forageSystem.modifyItemDef(_itemDef) end
 
----@param _lootTable umbrella.Foraging.LootTable
+---@param _zoneName string
 ---@return string?
 ---@return string?
-function forageSystem.pickRandomItemType(_lootTable) end
+function forageSystem.pickRandomItemType(_zoneName, _rolledCategory) end
 
 ---@param _catDefs umbrella.Foraging.CategoryDefinition[]?
 function forageSystem.populateCatDefs(_catDefs) end
@@ -1280,10 +1270,6 @@ function forageSystem.setOptionValues() end
 ---@param _itemDef umbrella.Foraging.ItemDefinition
 ---@param _scriptItem Item
 function forageSystem.setScriptItemFocusCategories(_itemDef, _scriptItem) end
-
----@param _createDebugLog boolean?
----@param _doItemStats boolean?
-function forageSystem.statisticsDebug(_createDebugLog, _doItemStats) end
 
 ---@param _zoneData umbrella.Foraging.ZoneData
 ---@param _number number
@@ -1347,32 +1333,27 @@ function forageSystem.zoneIntersects(_zoneData, _x, _y, _z, _w, _h) end
 ---@field type string
 ---@field xp number
 ---@field zones table<string, integer>
-umbrella_Foraging_ItemDefinition = {}
 
 ---@class umbrella.Foraging.LootTable
 ---@field categories table<string, umbrella.Foraging.LootTableCategory>
 ---@field categoriesIndexed umbrella.Foraging.LootTableIndexedCategoryEntry[]
 ---@field totalChance number
-umbrella_Foraging_LootTable = {}
 
 ---@class umbrella.Foraging.LootTableCategory
 ---@field category string
 ---@field chance number
 ---@field items umbrella.Foraging.LootTableItem[]
 ---@field totalChance number
-umbrella_Foraging_LootTableCategory = {}
 
 ---@class umbrella.Foraging.LootTableIndexedCategoryEntry
 ---@field catName string
 ---@field chance number
 ---@field items umbrella.Foraging.LootTableItem[]
 ---@field totalChance number
-umbrella_Foraging_LootTableIndexedCategoryEntry = {}
 
 ---@class umbrella.Foraging.LootTableItem
 ---@field chance number
 ---@field itemType string
-umbrella_Foraging_LootTableItem = {}
 
 ---@class umbrella.Foraging.SkillDefinition
 ---@field darknessEffect number
@@ -1382,12 +1363,10 @@ umbrella_Foraging_LootTableItem = {}
 ---@field type "occupation" | "trait"
 ---@field visionBonus number
 ---@field weatherEffect number
-umbrella_Foraging_SkillDefinition = {}
 
 ---@class umbrella.Foraging.StatisticsTableItem
 ---@field chance number
 ---@field items table<umbrella.Foraging.LootTableItem, integer>
-umbrella_Foraging_StatisticsTableItem = {}
 
 ---@class umbrella.Foraging.ZoneData
 ---@field bounds umbrella.Foraging.ZoneDataBounds
@@ -1402,14 +1381,12 @@ umbrella_Foraging_StatisticsTableItem = {}
 ---@field x number
 ---@field y number
 ---@field z number
-umbrella_Foraging_ZoneData = {}
 
 ---@class umbrella.Foraging.ZoneDataBounds
 ---@field x1 number
 ---@field x2 number
 ---@field y1 number
 ---@field y2 number
-umbrella_Foraging_ZoneDataBounds = {}
 
 ---@class umbrella.Foraging.ZoneDefinition
 ---@field abundanceSetting string
@@ -1417,4 +1394,3 @@ umbrella_Foraging_ZoneDataBounds = {}
 ---@field densityMin number
 ---@field name string
 ---@field refillPercent number
-umbrella_Foraging_ZoneDefinition = {}

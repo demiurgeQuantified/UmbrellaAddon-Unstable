@@ -57,4 +57,3 @@ function ISPlayerStatsSuspicionActivityUI:new(x, y, width, height, target, oncli
 ---@class umbrella.ISPlayerStatsSuspicionActivityUI.SuspicionActivity
 ---@field amount number
 ---@field type string
-umbrella_ISPlayerStatsSuspicionActivityUI_SuspicionActivity = {}

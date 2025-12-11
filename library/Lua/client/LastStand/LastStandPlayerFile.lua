@@ -51,4 +51,3 @@ function LastStandPlayerFile:new() end
 ---@field startingGoldLevel string?
 ---@field surname string
 ---@field traits string[]
-umbrella_LastStandPlayerFile_PlayerData = {}

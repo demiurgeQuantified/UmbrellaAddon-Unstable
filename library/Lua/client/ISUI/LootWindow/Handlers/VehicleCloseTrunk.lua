@@ -9,6 +9,7 @@ ISLootWindowObjectControlHandler_VehicleCloseTrunk.Type = "ISLootWindowObjectCon
 ---@return unknown
 function ISLootWindowObjectControlHandler_VehicleCloseTrunk:getControl() end
 
+---@param context ISContextMenu
 function ISLootWindowObjectControlHandler_VehicleCloseTrunk:handleJoypadContextMenu(context) end
 
 function ISLootWindowObjectControlHandler_VehicleCloseTrunk:perform() end

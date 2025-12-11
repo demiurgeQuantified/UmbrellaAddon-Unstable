@@ -2,7 +2,6 @@
 
 ---@class ISWashYourself : ISBaseTimedAction
 ---@field forceProgressBar boolean
----@field maxTime number
 ---@field sink IsoObject
 ---@field soaps InventoryItem[]?
 ---@field sound integer?

@@ -53,4 +53,3 @@ ModSelector.MapOrderListBox = nil ---@type ModSelector.MapOrderListBox
 
 ---@class umbrella.ModSelector.MapOrderListBoxItem : umbrella.ISScrollingListBox.Item
 ---@field color umbrella.RGB
-umbrella_ModSelector_MapOrderListBoxItem = {}

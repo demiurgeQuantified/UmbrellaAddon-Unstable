@@ -4,14 +4,13 @@
 ---@field chr IsoPlayer
 ---@field iconSize number
 ---@field isSprite boolean
----@field maxLabelWidth unknown
+---@field maxLabelWidth number
 ---@field playerNum integer
 ---@field refreshNeeded boolean
----@field textRight unknown
+---@field textRight number?
 ---@field texture Texture
 ---@field track IsoAnimalTrack | InventoryItem
 ---@field trackingLevel integer
----@field xoffset number
 ISAnimalTracksUI = ISCollapsableWindow:derive("ISAnimalTracksUI")
 ISAnimalTracksUI.Type = "ISAnimalTracksUI"
 

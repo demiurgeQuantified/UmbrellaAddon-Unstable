@@ -38,6 +38,6 @@ function ISPutAnimalOnHook:waitToStart() end
 ---@param character IsoPlayer
 ---@param body IsoDeadBody | AnimalInventoryItem
 ---@param hook IsoButcherHook
----@param luaHook ISButcherHookUI
+---@param luaHookUI ISButcherHookUI
 ---@return ISPutAnimalOnHook
-function ISPutAnimalOnHook:new(character, body, hook, luaHook) end
+function ISPutAnimalOnHook:new(character, body, hook, luaHookUI) end

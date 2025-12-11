@@ -83,4 +83,3 @@ ModSelector.ModLoadOrderPanel = nil ---@type ModSelector.ModLoadOrderPanel
 ---@field modId string
 ---@field modInfo ChooseGameInfo.Mod
 ---@field name string
-umbrella_ModSelector_ModLoadOrderData = {}

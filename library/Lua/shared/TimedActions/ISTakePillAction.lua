@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISTakePillAction : ISBaseTimedAction
----@field carLighter unknown
+---@field carLighter boolean?
 ---@field isEating boolean
 ---@field item InventoryItem
 ---@field openFlame boolean
@@ -14,7 +14,7 @@ function ISTakePillAction:complete() end
 ---@return number
 function ISTakePillAction:getDuration() end
 
----@return unknown?
+---@return InventoryItem?
 function ISTakePillAction:getRequiredItem() end
 
 ---@return boolean

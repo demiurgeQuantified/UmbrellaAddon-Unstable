@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ISSitOnGround : ISBaseTimedAction
----@field bed unknown
+---@field bed IsoObject?
 ---@field useProgressBar boolean
 ISSitOnGround = ISBaseTimedAction:derive("ISSitOnGround")
 ISSitOnGround.Type = "ISSitOnGround"
@@ -27,5 +27,6 @@ function ISSitOnGround:update() end
 function ISSitOnGround:waitToStart() end
 
 ---@param character IsoPlayer
+---@param bed IsoObject?
 ---@return ISSitOnGround
-function ISSitOnGround:new(character) end
+function ISSitOnGround:new(character, bed) end

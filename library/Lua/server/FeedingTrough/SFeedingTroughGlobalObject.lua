@@ -16,8 +16,9 @@ function SFeedingTroughGlobalObject:addFeed(type, feedAmount) end
 
 ---@param def umbrella.FeedingTroughDefinition
 ---@param north boolean
----@param slave boolean
-function SFeedingTroughGlobalObject:addObject(def, north, slave) end
+---@param spriteGridX integer
+---@param spriteGridY integer
+function SFeedingTroughGlobalObject:addObject(def, north, spriteGridX, spriteGridY) end
 
 ---@param amount number
 function SFeedingTroughGlobalObject:addWater(amount) end
@@ -26,20 +27,6 @@ function SFeedingTroughGlobalObject:emptyWater() end
 
 ---@return IsoObject
 function SFeedingTroughGlobalObject:getObject() end
-
----@param square IsoGridSquare
----@param north boolean
----@return number
----@return number
----@return number
-function SFeedingTroughGlobalObject:getSquare2Pos(square, north) end
-
----@param square IsoGridSquare
----@param north boolean
----@return number
----@return number
----@return number
-function SFeedingTroughGlobalObject:getSquare2PosReverse(square, north) end
 
 function SFeedingTroughGlobalObject:initNew() end
 

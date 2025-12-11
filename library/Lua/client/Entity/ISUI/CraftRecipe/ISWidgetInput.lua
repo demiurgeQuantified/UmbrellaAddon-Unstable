@@ -103,4 +103,3 @@ function ISWidgetInput:new(x, y, width, height, player, logic, inputScript) end
 ---@field isTool boolean
 ---@field itemNameLabel ISLabel?
 ---@field selectInputButton ISButton?
-umbrella_ISWidgetInput_ScriptValues = {}

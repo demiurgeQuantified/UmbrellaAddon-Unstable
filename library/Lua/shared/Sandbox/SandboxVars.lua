@@ -184,14 +184,12 @@ SandboxVars = {}
 
 ---@class umbrella.SandboxVars.Basement
 ---@field SpawnFrequency integer
-umbrella_SandboxVars_Basement = {}
 
 ---@class umbrella.SandboxVars.Map
 ---@field AllowMiniMap boolean
 ---@field AllowWorldMap boolean
 ---@field MapAllKnown boolean
 ---@field MapNeedsLight boolean
-umbrella_SandboxVars_Map = {}
 
 ---@class umbrella.SandboxVars.MultiplierConfig
 ---@field Aiming number
@@ -231,7 +229,6 @@ umbrella_SandboxVars_Map = {}
 ---@field Tracking number
 ---@field Trapping number
 ---@field Woodwork number
-umbrella_SandboxVars_MultiplierConfig = {}
 
 ---@class umbrella.SandboxVars.ZombieConfig
 ---@field FollowSoundDistance integer
@@ -249,7 +246,6 @@ umbrella_SandboxVars_MultiplierConfig = {}
 ---@field RespawnMultiplier number
 ---@field RespawnUnseenHours number
 ---@field ZombiesCountBeforeDelete integer
-umbrella_SandboxVars_ZombieConfig = {}
 
 ---@class umbrella.SandboxVars.ZombieLore
 ---@field ActiveOnly integer
@@ -280,4 +276,3 @@ umbrella_SandboxVars_ZombieConfig = {}
 ---@field ZombiesFallDamage number
 ---@field ZombiesFenceLunge boolean
 ---@field ZombiesMaxDefense integer
-umbrella_SandboxVars_ZombieLore = {}

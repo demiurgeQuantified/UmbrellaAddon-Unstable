@@ -80,22 +80,18 @@ function SandboxOptionsScreen:onComboBoxSelected(combo, optionName) end
 ---@param joypadData JoypadData
 function SandboxOptionsScreen:onGainJoypadFocus(joypadData) end
 
----@param joypadData JoypadData
-function SandboxOptionsScreen:onJoypadDirLeft(joypadData) end
-
----@param joypadData JoypadData
-function SandboxOptionsScreen:onJoypadDirRight(joypadData) end
-
----@param joypadData JoypadData
-function SandboxOptionsScreen:onJoypadDirUp(joypadData) end
-
 ---@param button integer
 ---@param joypadData JoypadData
 function SandboxOptionsScreen:onJoypadDown(button, joypadData) end
 
+---@param joypadData JoypadData
 function SandboxOptionsScreen:onJoypadNavigateStart(joypadData) end
 
+---@param descendant ISUIElement
+---@param joypadData JoypadData
 function SandboxOptionsScreen:onJoypadNavigateStart_Descendant(descendant, joypadData) end
+
+function SandboxOptionsScreen:onKeyRelease(key) end
 
 ---@param joypadData JoypadData
 function SandboxOptionsScreen:onLoseJoypadFocus(joypadData) end
@@ -160,13 +156,118 @@ function SandboxOptionsScreen:syncStartDay() end
 ---@return SandboxOptionsScreen
 function SandboxOptionsScreen:new(x, y, width, height) end
 
+---@class SandboxOptions.SandboxOptionsScreenListBox : ISScrollingListBox
+local __sandboxOptions_SandboxOptionsScreenListBox = ISScrollingListBox:derive("SandboxOptionsScreenListBox")
+__sandboxOptions_SandboxOptionsScreenListBox.Type = "SandboxOptionsScreenListBox"
+
+---@param y number
+---@param item umbrella.ISScrollingListBox.Item
+---@param alt boolean
+---@return number
+function __sandboxOptions_SandboxOptionsScreenListBox:doDrawItem(y, item, alt) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenListBox:onJoypadDown(button, joypadData) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenListBox:onLoseJoypadFocus(joypadData) end
+
+---@class SandboxOptions.SandboxOptionsScreenPanel : ISPanelJoypad
+---@field entryText table<string, string>
+---@field joypadButtons ISButton[]
+local __sandboxOptions_SandboxOptionsScreenPanel = ISPanelJoypad:derive("SandboxOptionsScreenPanel")
+__sandboxOptions_SandboxOptionsScreenPanel.Type = "SandboxOptionsScreenPanel"
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPanel:onGainJoypadFocus(joypadData) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPanel:onJoypadDirDown(joypadData) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPanel:onJoypadDirUp(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPanel:onJoypadDown(button, joypadData) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPanel:onLoseJoypadFocus(joypadData) end
+
+---@param del number
+---@return boolean?
+function __sandboxOptions_SandboxOptionsScreenPanel:onMouseWheel(del) end
+
+function __sandboxOptions_SandboxOptionsScreenPanel:prerender() end
+
+function __sandboxOptions_SandboxOptionsScreenPanel:render() end
+
+---@class SandboxOptions.SandboxOptionsScreenPresetPanel : ISPanelJoypad
+local __sandboxOptions_SandboxOptionsScreenPresetPanel = ISPanelJoypad:derive("SandboxOptionsScreenPresetPanel")
+__sandboxOptions_SandboxOptionsScreenPresetPanel.Type = "SandboxOptionsScreenPresetPanel"
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPresetPanel:onGainJoypadFocus(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPresetPanel:onJoypadDown(button, joypadData) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxOptionsScreenPresetPanel:onLoseJoypadFocus(joypadData) end
+
+function __sandboxOptions_SandboxOptionsScreenPresetPanel:render() end
+
+---@class SandboxOptions.SandboxAdvancedControl : ISPanel
+---@field combo ISComboBox
+---@field entry ISTextEntryBox
+---@field setting umbrella.ServerSettingsScreen.Setting
+---@field tooltip string?
+local __sandboxOptions_SandboxAdvancedControl = ISPanel:derive("SandboxAdvancedControl")
+__sandboxOptions_SandboxAdvancedControl.Type = "SandboxAdvancedControl"
+
+---@param bool boolean
+function __sandboxOptions_SandboxAdvancedControl:advancedCheckboxChanged(bool) end
+
+function __sandboxOptions_SandboxAdvancedControl:createChildren() end
+
+---@return string
+function __sandboxOptions_SandboxAdvancedControl:getText() end
+
+---@param combo ISComboBox
+---@param control SandboxAdvancedControl
+---@param setting string
+function __sandboxOptions_SandboxAdvancedControl:onComboBoxSelected(combo, control, setting) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxAdvancedControl:onJoypadDirDown(joypadData) end
+
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxAdvancedControl:onJoypadDirUp(joypadData) end
+
+---@param button integer
+---@param joypadData JoypadData
+function __sandboxOptions_SandboxAdvancedControl:onJoypadDown(button, joypadData) end
+
+---@param focused boolean
+function __sandboxOptions_SandboxAdvancedControl:setJoypadFocused(focused) end
+
+---@param value string
+function __sandboxOptions_SandboxAdvancedControl:setText(value) end
+
+---@param x number
+---@param y number
+---@param width number
+---@param height number
+---@return SandboxOptions.SandboxAdvancedControl
+function __sandboxOptions_SandboxAdvancedControl:new(x, y, width, height, setting, tooltip) end
+
 ---@class umbrella.SandboxOptionsScreen.Preset
 ---@field name string
 ---@field options SandboxOptions
 ---@field userDefined boolean?
-umbrella_SandboxOptionsScreen_Preset = {}
 
 ---@class umbrella.SandboxOptionsScreen.ListBoxItem
 ---@field page umbrella.ServerSettingsScreen.SettingsPage
 ---@field panel ISUIElement
-umbrella_SandboxOptionsScreen_ListBoxItem = {}

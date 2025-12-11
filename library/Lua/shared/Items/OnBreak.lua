@@ -29,8 +29,6 @@ function OnBreak.BaseballBat_RailSpike(item, player) end
 
 ---@param item InventoryItem
 ---@param player IsoPlayer
-function OnBreak.BaseballBat_Rakehead(item, player) end
-
 function OnBreak.BaseballBat_RakeHead(item, player) end
 
 ---@param item InventoryItem
@@ -122,6 +120,8 @@ function OnBreak.HammerStone(item, player) end
 ---@param item InventoryItem
 ---@param player IsoPlayer
 function OnBreak.HandAxe(item, player) end
+
+function OnBreak.HandAxe_Old(item, player) end
 
 ---@param item InventoryItem
 ---@param player IsoPlayer
@@ -306,8 +306,12 @@ function OnBreak.SmithingHammer(item, player) end
 ---@param player IsoPlayer
 function OnBreak.Spade(item, player) end
 
+---@param item InventoryItem
+---@param player IsoPlayer
 function OnBreak.SpearBone(item, player) end
 
+---@param item InventoryItem
+---@param player IsoPlayer
 function OnBreak.SpearBoneLong(item, player) end
 
 ---@param item InventoryItem

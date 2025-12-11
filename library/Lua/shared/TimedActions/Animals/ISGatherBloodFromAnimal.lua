@@ -16,6 +16,8 @@
 ISGatherBloodFromAnimal = ISBaseTimedAction:derive("ISGatherBloodFromAnimal")
 ISGatherBloodFromAnimal.Type = "ISGatherBloodFromAnimal"
 
+---@param event string
+---@param parameter string
 function ISGatherBloodFromAnimal:animEvent(event, parameter) end
 
 ---@return boolean
@@ -48,7 +50,7 @@ function ISGatherBloodFromAnimal:waitToStart() end
 
 ---@param character IsoPlayer
 ---@param body IsoAnimal
----@param luaHook ISButcherHookUI
+---@param luaHookUI ISButcherHookUI
 ---@param bucket InventoryItem?
 ---@return ISGatherBloodFromAnimal
-function ISGatherBloodFromAnimal:new(character, body, hook, luaHook, bucket) end
+function ISGatherBloodFromAnimal:new(character, body, hook, luaHookUI, bucket) end

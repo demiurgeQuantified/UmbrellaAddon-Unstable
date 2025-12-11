@@ -12,7 +12,7 @@
 ---@field yes ISButton?
 ISAdminMessage = ISPanel:derive("ISAdminMessage")
 ISAdminMessage.Type = "ISAdminMessage"
-ISAdminMessage.messages = nil ---@type ISAdminMessage[]
+ISAdminMessage.messages = {} ---@type ISAdminMessage[]
 
 ---@param message string
 ---@param x number

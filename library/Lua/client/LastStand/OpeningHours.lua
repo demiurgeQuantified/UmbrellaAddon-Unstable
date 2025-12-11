@@ -482,4 +482,3 @@ function OpeningHours.ResetMetalGates(area) end
 ---@field x2 integer
 ---@field y integer
 ---@field y2 integer
-umbrella_OpeningHours_Spawn = {}

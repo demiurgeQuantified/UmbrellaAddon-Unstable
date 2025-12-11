@@ -2,6 +2,7 @@
 
 ---@class BaseGameCharacterDetails
 BaseGameCharacterDetails = {}
+BaseGameCharacterDetails.professionsDone = nil ---@type boolean?
 
 ---@param s IsoSurvivor
 function BaseGameCharacterDetails.CreateCharacterInstance(s) end
@@ -36,4 +37,5 @@ function BaseGameCharacterDetails.SetTraitDescription(trait) end
 ---@param metalworker TraitFactory.Trait
 function doMetalWorkerRecipes(metalworker) end
 
+---@param tailor TraitFactory.Trait
 function doTailorRecipes(tailor) end

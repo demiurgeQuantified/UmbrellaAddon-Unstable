@@ -9,10 +9,9 @@ RecMedia = {}
 ---@field category string
 ---@field extra string?
 ---@field itemDisplayName string
----@field spawning integer?
+---@field spawning (0 | 1)?
 ---@field subtitle string?
 ---@field title string
-umbrella_RecMediaItem = {}
 
 ---@class umbrella.RecMediaLine
 ---@field b number
@@ -20,4 +19,3 @@ umbrella_RecMediaItem = {}
 ---@field g number
 ---@field r number
 ---@field text string
-umbrella_RecMediaLine = {}

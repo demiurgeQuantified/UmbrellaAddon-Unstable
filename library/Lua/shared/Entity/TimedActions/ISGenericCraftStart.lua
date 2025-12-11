@@ -5,7 +5,7 @@
 ---@field entity IsoObject
 ---@field funcCanStart umbrella.ISEntityUI.CraftCanStart
 ---@field funcStart umbrella.ISEntityUI.CraftStart
----@field sound unknown
+---@field sound integer
 ISGenericCraftStart = ISBaseTimedAction:derive("ISGenericCraftStart")
 ISGenericCraftStart.Type = "ISGenericCraftStart"
 

@@ -55,7 +55,6 @@ function __fishing_FishingManager:new(player, joypad) end
 
 ---@class umbrella.FishingManager.MPUpdateData
 ---@field Reject boolean
-umbrella_FishingManager_MPUpdateData = {}
 
 ---@class umbrella.FishingManager.StatesTable
 ---@field Cast Fishing.States.Cast
@@ -65,4 +64,3 @@ umbrella_FishingManager_MPUpdateData = {}
 ---@field ReelIn Fishing.States.ReelIn
 ---@field ReelOut Fishing.States.ReelOut
 ---@field Wait Fishing.States.Wait
-umbrella_FishingManager_StatesTable = {}

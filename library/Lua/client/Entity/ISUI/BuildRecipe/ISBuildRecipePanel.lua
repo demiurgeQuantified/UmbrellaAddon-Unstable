@@ -30,6 +30,7 @@ function ISBuildRecipePanel:getRecipe() end
 
 function ISBuildRecipePanel:initialise() end
 
+---@param _manualSelectInputs boolean
 function ISBuildRecipePanel:onManualSelectChanged(_manualSelectInputs) end
 
 function ISBuildRecipePanel:onRebuildItemNodes(_inputItems) end

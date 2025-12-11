@@ -33,4 +33,3 @@ function RecipeUtils.CreateSourceItems(recipe, options, result) end
 ---@field AvailableItemsAll ArrayList<InventoryItem>?
 ---@field MaxItemsPerSource integer?
 ---@field NoDuplicateKeep boolean?
-umbrella_RecipeUtils_Options = {}

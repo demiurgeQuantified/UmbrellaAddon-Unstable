@@ -65,10 +65,6 @@ function ISWorldMapSymbols:checkAnnotationForSharingMouse() end
 
 function ISWorldMapSymbols:checkInventory() end
 
-function ISWorldMapSymbols:checkTextForEditJoypad() end
-
-function ISWorldMapSymbols:checkTextForEditMouse() end
-
 function ISWorldMapSymbols:createChildren() end
 
 ---@return string?
@@ -304,10 +300,6 @@ function ISWorldMapSymbolTool_AddNote:deactivate() end
 function ISWorldMapSymbolTool_AddNote:getJoypadAButtonText() end
 
 ---@param button ISButton
----@param playerNum integer
-function ISWorldMapSymbolTool_AddNote:onAddNote(button, playerNum) end
-
----@param button ISButton
 ---@param joypadData JoypadData
 function ISWorldMapSymbolTool_AddNote:onJoypadDownInMap(button, joypadData) end
 
@@ -316,7 +308,8 @@ function ISWorldMapSymbolTool_AddNote:onJoypadDownInMap(button, joypadData) end
 ---@return boolean
 function ISWorldMapSymbolTool_AddNote:onMouseUp(x, y) end
 
----@param playerNum number
+---@param button ISButton
+---@param playerNum integer
 function ISWorldMapSymbolTool_AddNote:onNoteAdded(button, playerNum) end
 
 function ISWorldMapSymbolTool_AddNote:render() end
@@ -345,6 +338,8 @@ function ISWorldMapSymbolTool_EditAnnotation:editSymbol(x, y) end
 ---@return string?
 function ISWorldMapSymbolTool_EditAnnotation:getJoypadAButtonText() end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISWorldMapSymbolTool_EditAnnotation:onJoypadDownInMap(button, joypadData) end
 
 ---@param x number
@@ -357,8 +352,10 @@ function ISWorldMapSymbolTool_EditAnnotation:onMouseDown(x, y) end
 ---@return boolean
 function ISWorldMapSymbolTool_EditAnnotation:onMouseUp(x, y) end
 
+---@param button ISButton
 function ISWorldMapSymbolTool_EditAnnotation:onNoteEdited(button, symbol) end
 
+---@param button ISButton
 function ISWorldMapSymbolTool_EditAnnotation:onSymbolEdited(button, symbol) end
 
 function ISWorldMapSymbolTool_EditAnnotation:render() end
@@ -455,11 +452,15 @@ function ISWorldMapSymbolTool_RotateAnnotation:getAngleTo(mx, my) end
 ---@return string?
 function ISWorldMapSymbolTool_RotateAnnotation:getJoypadAButtonText() end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISWorldMapSymbolTool_RotateAnnotation:onJoypadDownInMap(button, joypadData) end
 
+---@param key integer
 ---@return boolean
 function ISWorldMapSymbolTool_RotateAnnotation:onKeyPress(key) end
 
+---@param key integer
 ---@return boolean
 function ISWorldMapSymbolTool_RotateAnnotation:onKeyRelease(key) end
 
@@ -504,6 +505,7 @@ function ISWorldMapSymbolTool_RemoveAnnotation:deactivate() end
 ---@return string?
 function ISWorldMapSymbolTool_RemoveAnnotation:getJoypadAButtonText() end
 
+---@param button ISButton
 function ISWorldMapSymbolTool_RemoveAnnotation:onConfirmRemoveAnnotation(button, symbolIndex) end
 
 ---@param button ISButton
@@ -577,7 +579,8 @@ function ISWorldMapSymbolsTabPanel:onJoypadDown(button, joypadData) end
 function ISWorldMapSymbolsTabPanel:render() end
 
 ---@param focused boolean
-function ISWorldMapSymbolsTabPanel:setJoypadFocused(focused) end
+---@param joypadData JoypadData
+function ISWorldMapSymbolsTabPanel:setJoypadFocused(focused, joypadData) end
 
 ---@param x number
 ---@param y number
@@ -587,45 +590,6 @@ function ISWorldMapSymbolsTabPanel:setJoypadFocused(focused) end
 ---@return ISWorldMapSymbolsTabPanel
 function ISWorldMapSymbolsTabPanel:new(x, y, width, height, symbolsUI) end
 
----@class ISWorldMapSymbolTool_EditNote : ISWorldMapSymbolTool
----@field modal ISTextBoxMap?
-ISWorldMapSymbolTool_EditNote = {}
-ISWorldMapSymbolTool_EditNote.Type = "ISWorldMapSymbolTool_EditNote"
-
-function ISWorldMapSymbolTool_EditNote:activate() end
-
-function ISWorldMapSymbolTool_EditNote:deactivate() end
-
----@param x number
----@param y number
-function ISWorldMapSymbolTool_EditNote:editNote(x, y) end
-
----@return string?
-function ISWorldMapSymbolTool_EditNote:getJoypadAButtonText() end
-
----@param button ISButton
-function ISWorldMapSymbolTool_EditNote:onEditNote(button, symbol) end
-
----@param button ISButton
----@param joypadData JoypadData
-function ISWorldMapSymbolTool_EditNote:onJoypadDownInMap(button, joypadData) end
-
----@param x number
----@param y number
----@return boolean?
-function ISWorldMapSymbolTool_EditNote:onMouseDown(x, y) end
-
----@param x number
----@param y number
----@return boolean
-function ISWorldMapSymbolTool_EditNote:onMouseUp(x, y) end
-
-function ISWorldMapSymbolTool_EditNote:render() end
-
----@param symbolsUI ISWorldMapSymbols
----@return ISWorldMapSymbolTool_EditNote
-function ISWorldMapSymbolTool_EditNote:new(symbolsUI) end
-
 ---@class umbrella.ISWorldMapSymbols.Tools
 ---@field AddNote ISWorldMapSymbolTool_AddNote
 ---@field AddSymbol ISWorldMapSymbolTool_AddSymbol
@@ -633,4 +597,3 @@ function ISWorldMapSymbolTool_EditNote:new(symbolsUI) end
 ---@field MoveAnnotation ISWorldMapSymbolTool_MoveAnnotation
 ---@field RemoveAnnotation ISWorldMapSymbolTool_RemoveAnnotation
 ---@field Sharing ISWorldMapSymbolTool_Sharing?
-umbrella_ISWorldMapSymbols_Tools = {}

@@ -11,8 +11,10 @@
 ---@field buttonBorderColor umbrella.RGBA
 ---@field elems umbrella.ISItemEditPanel.Element[]
 ---@field isClothing unknown
+---@field isContainer unknown
 ---@field isDrainable boolean
 ---@field isFood boolean
+---@field isKey unknown
 ---@field isWeapon boolean
 ---@field item InventoryItem
 ---@field usedElems umbrella.ISItemEditPanel.Element[]
@@ -103,6 +105,9 @@ function ISItemEditPanel:saveAll() end
 ---@return unknown
 function ISItemEditPanel:validateClothing() end
 
+---@return unknown
+function ISItemEditPanel:validateClothingOrContainer() end
+
 ---@return boolean
 function ISItemEditPanel:validateColor() end
 
@@ -111,6 +116,12 @@ function ISItemEditPanel:validateDrainable() end
 
 ---@return boolean
 function ISItemEditPanel:validateFood() end
+
+---@return unknown
+function ISItemEditPanel:validateHeadCondition() end
+
+---@return unknown
+function ISItemEditPanel:validateKey() end
 
 ---@return boolean
 function ISItemEditPanel:validateMinRange() end
@@ -141,15 +152,12 @@ function ISItemEditPanel:new(x, y, width, height, admin, item) end
 ---@field isAttribute boolean?
 ---@field text string
 ---@field type integer
-umbrella_ISItemEditPanel_BaseElement = {}
 
 ---@class umbrella.ISItemEditPanel.BooleanElement : umbrella.ISItemEditPanel.BaseElement
 ---@field type 4
-umbrella_ISItemEditPanel_BooleanElement = {}
 
 ---@class umbrella.ISItemEditPanel.ColorElement : umbrella.ISItemEditPanel.BaseElement
 ---@field type 3
-umbrella_ISItemEditPanel_ColorElement = {}
 
 ---@class umbrella.ISItemEditPanel.NumberElement : umbrella.ISItemEditPanel.BaseElement
 ---@field boxWidth number
@@ -159,9 +167,7 @@ umbrella_ISItemEditPanel_ColorElement = {}
 ---@field min (false | number)?
 ---@field round (false | number)?
 ---@field type 1
-umbrella_ISItemEditPanel_NumberElement = {}
 
 ---@class umbrella.ISItemEditPanel.StringElement : umbrella.ISItemEditPanel.BaseElement
 ---@field boxWidth number
 ---@field type 2
-umbrella_ISItemEditPanel_StringElement = {}

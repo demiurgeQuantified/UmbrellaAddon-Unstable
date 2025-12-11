@@ -80,22 +80,16 @@ function LoadGameScreen:onJoypadBeforeDeactivate(joypadData) end
 ---@param joypadData JoypadData
 function LoadGameScreen:onJoypadBeforeDeactivate_child(joypadData) end
 
----@param joypadData JoypadData
-function LoadGameScreen:onJoypadDirLeft_child(joypadData) end
-
----@param joypadData JoypadData
-function LoadGameScreen:onJoypadDirRight_child(joypadData) end
-
 ---@param button ISButton
 ---@param joypadData JoypadData
 function LoadGameScreen:onJoypadDown_listbox(button, joypadData) end
 
----@param button ISButton
+---@param descendant ISUIElement
+---@param button integer
 ---@param joypadData JoypadData
-function LoadGameScreen:onJoypadDownSearchEntry(button, joypadData) end
-
 function LoadGameScreen:onJoypadNavigateStart_Descendant(descendant, button, joypadData) end
 
+---@param key integer
 function LoadGameScreen:onKeyRelease(key) end
 
 ---@param joypadData JoypadData
@@ -135,6 +129,98 @@ function LoadGameScreen:showConfigPanel() end
 ---@return LoadGameScreen
 function LoadGameScreen:new(x, y, width, height) end
 
+---@class LoadGameScreen.SaveInfoPanel : ISPanelJoypad
+---@field richText ISRichTextPanel
+---@field richTextItem umbrella.ISScrollingListBox.Item
+local __loadGameScreen_SaveInfoPanel = ISPanelJoypad:derive("LoadGameScreen_InfoPanel")
+__loadGameScreen_SaveInfoPanel.Type = "LoadGameScreen_InfoPanel"
+
+function __loadGameScreen_SaveInfoPanel:createChildren() end
+
+---@param joypadData JoypadData
+function __loadGameScreen_SaveInfoPanel:onJoypadDirDown(joypadData) end
+
+---@param joypadData JoypadData
+function __loadGameScreen_SaveInfoPanel:onJoypadDirUp(joypadData) end
+
+---@param del number
+---@return boolean
+function __loadGameScreen_SaveInfoPanel:onMouseWheel(del) end
+
+function __loadGameScreen_SaveInfoPanel:prerender() end
+
+function __loadGameScreen_SaveInfoPanel:render() end
+
+function __loadGameScreen_SaveInfoPanel:setRichText() end
+
+---@class LoadGameScreen.ConfigPanel : ISPanelJoypad
+---@field buttonBrowse ISButton
+---@field buttonDeleteFiles ISButton
+---@field buttonMods ISButton
+---@field buttonNewPlayer ISButton
+---@field buttonRenameSavefile ISButton
+---@field checkExist boolean?
+---@field checkExistsName string?
+---@field comboDeleteFiles ISComboBox
+---@field comboPlayer1 ISComboBox
+---@field joypadButtons ISButton[]
+---@field renameSavefileEntry ISTextEntryBox
+---@field saveFolder string
+---@field saveInfo umbrella.LoadGameScreen.SaveInfo
+local __loadGameScreen_ConfigPanel = ISPanelJoypad:derive("LoadGameScreen_ConfigPanel")
+__loadGameScreen_ConfigPanel.Type = "LoadGameScreen_ConfigPanel"
+
+---@param x number
+---@param y number
+---@param buttonWid number
+---@param buttonHgt number
+---@param buttonText string
+---@param command umbrella.ISButton.OnClick
+---@return ISButton
+function __loadGameScreen_ConfigPanel:createButton(x, y, buttonWid, buttonHgt, buttonText, command) end
+
+function __loadGameScreen_ConfigPanel:createChildren() end
+
+---@param x number
+---@param y number
+---@param richText1 string
+---@return ISRichTextPanel
+function __loadGameScreen_ConfigPanel:createRichText(x, y, richText1) end
+
+---@param button ISButton
+function __loadGameScreen_ConfigPanel:onBrowseFiles(button) end
+
+---@param button ISButton
+function __loadGameScreen_ConfigPanel:onChooseMods(button) end
+
+---@param button ISButton
+function __loadGameScreen_ConfigPanel:onDeleteFiles(button) end
+
+---@param del number
+---@return boolean
+function __loadGameScreen_ConfigPanel:onMouseWheel(del) end
+
+---@param combo ISComboBox
+function __loadGameScreen_ConfigPanel:onNewPlayer(combo) end
+
+---@param combo ISComboBox
+function __loadGameScreen_ConfigPanel:onPlayerSelected(combo) end
+
+---@param button ISButton
+function __loadGameScreen_ConfigPanel:onRenameSavefile(button) end
+
+function __loadGameScreen_ConfigPanel:prerender() end
+
+function __loadGameScreen_ConfigPanel:render() end
+
+---@param folder string
+---@param info umbrella.LoadGameScreen.SaveInfo
+function __loadGameScreen_ConfigPanel:setSavefile(folder, info) end
+
+---@param text string
+---@return boolean
+function __loadGameScreen_ConfigPanel:validateSavefileName(text) end
+
 ---@class umbrella.LoadGameScreen.SaveInfo
 ---@field activeMods ActiveMods
 ---@field gameMode string
@@ -144,12 +230,10 @@ function LoadGameScreen:new(x, y, width, height) end
 ---@field players umbrella.LoadGameScreen.SavePlayer[]
 ---@field saveName string
 ---@field worldVersion integer | "unknown"
-umbrella_LoadGameScreen_SaveInfo = {}
 
 ---@class umbrella.LoadGameScreen.SavePlayer
 ---@field isDead boolean
 ---@field name string
 ---@field sqlID number
-umbrella_LoadGameScreen_SavePlayer = {}
 
 function LoadGameScreen_onModsModified() end

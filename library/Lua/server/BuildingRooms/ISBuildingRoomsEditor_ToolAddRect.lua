@@ -1,19 +1,19 @@
 ---@meta
 
 ---@class ISBuildingRoomsEditor_ToolAddRect : ISBuildingObject
----@field character unknown
+---@field character IsoPlayer
 ---@field choosingEndLocation boolean
 ---@field editor ISBuildingRoomsEditor
----@field javaEditor unknown
+---@field javaEditor BuildingRoomsEditor
 ---@field mode string
 ---@field noNeedHammer boolean
 ---@field player number
----@field playerNum number
+---@field playerNum integer
 ---@field skipBuildAction boolean
 ---@field skipWalk boolean
 ---@field startX number
 ---@field startY number
----@field zoneColor table
+---@field zoneColor umbrella.RGBA
 ISBuildingRoomsEditor_ToolAddRect = ISBuildingObject:derive("ISBuildingRoomsEditor_ToolAddRect")
 ISBuildingRoomsEditor_ToolAddRect.Type = "ISBuildingRoomsEditor_ToolAddRect"
 
@@ -29,10 +29,10 @@ function ISBuildingRoomsEditor_ToolAddRect:deactivate() end
 ---@return string
 function ISBuildingRoomsEditor_ToolAddRect:getAPrompt() end
 
----@return unknown?
+---@return string?
 function ISBuildingRoomsEditor_ToolAddRect:getLBPrompt() end
 
----@return unknown?
+---@return string?
 function ISBuildingRoomsEditor_ToolAddRect:getRBPrompt() end
 
 ---@param x number
@@ -43,18 +43,20 @@ function ISBuildingRoomsEditor_ToolAddRect:getRBPrompt() end
 ---@return number
 function ISBuildingRoomsEditor_ToolAddRect:getRectangle(x, y) end
 
+---@param square IsoGridSquare
 ---@return boolean
 function ISBuildingRoomsEditor_ToolAddRect:isValid(square) end
 
----@return unknown
----@return unknown
----@return unknown
----@return unknown
+---@return IsoGridSquare
+---@return integer
+---@return integer
+---@return integer
 function ISBuildingRoomsEditor_ToolAddRect:pickSquare(screenX, screenY) end
 
 ---@param x number
 ---@param y number
 ---@param z number
+---@param square IsoGridSquare
 function ISBuildingRoomsEditor_ToolAddRect:render(x, y, z, square) end
 
 function ISBuildingRoomsEditor_ToolAddRect:reset() end

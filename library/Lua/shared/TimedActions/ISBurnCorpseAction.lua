@@ -26,5 +26,7 @@ function ISBurnCorpseAction:update() end
 
 ---@param character IsoPlayer
 ---@param corpse IsoDeadBody
+---@param lighter InventoryItem
+---@param petrol InventoryItem
 ---@return ISBurnCorpseAction
-function ISBurnCorpseAction:new(character, corpse) end
+function ISBurnCorpseAction:new(character, corpse, lighter, petrol) end

@@ -1,7 +1,9 @@
 ---@meta
 
 ---@alias umbrella.ISButton.MouseCallback fun(target: unknown, button: ISButton, x: number, y: number)
+
 ---@alias umbrella.ISButton.OnClick fun(target: unknown, button: ISButton, ...: unknown)
+
 ---@alias umbrella.ISButton.RepeatWhilePressed fun(target: unknown, button: ISButton)
 
 ---@class ISButton : ISPanel

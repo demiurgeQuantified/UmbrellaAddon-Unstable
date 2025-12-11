@@ -126,6 +126,8 @@ function ISComboBox:select(option) end
 
 function ISComboBox:selectData(data) end
 
+function ISComboBox:selectOptionFromText(text) end
+
 ---@param editable boolean
 function ISComboBox:setEditable(editable) end
 
@@ -218,6 +220,5 @@ function ISComboBoxPopup:new(x, y, width, height) end
 ---@class umbrella.ISComboBox.Option
 ---@field data unknown
 ---@field text string
-umbrella_ISComboBox_Option = {}
 
 function testcomboBox() end

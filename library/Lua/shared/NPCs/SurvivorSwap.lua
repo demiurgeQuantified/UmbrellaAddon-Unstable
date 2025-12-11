@@ -33,17 +33,14 @@ function SurvivorSwap.applyVehicle(vehicle, data) end
 ---@field voicePitch integer?
 ---@field voiceType integer?
 ---@field weight integer?
-umbrella_SurvivorSwap_CharacterData = {}
 
 ---@class umbrella.SurvivorSwap.LoadoutData
 ---@field inventory string[]?
 ---@field setup (fun(player: IsoPlayer, inventory: ItemContainer))?
 ---@field worn string[]?
-umbrella_SurvivorSwap_LoadoutData = {}
 
 ---@class umbrella.SurvivorSwap.VehicleData
 ---@field color [number, number, number]
 ---@field containers table<string, fun(container: ItemContainer)>
 ---@field parts table<string, string>
 ---@field script string
-umbrella_SurvivorSwap_VehicleData = {}

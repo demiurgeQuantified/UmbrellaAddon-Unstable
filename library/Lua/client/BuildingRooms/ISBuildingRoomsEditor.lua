@@ -6,13 +6,13 @@
 ---@field buttonClose ISButton
 ---@field contents ISPanelJoypad
 ---@field currentLevel number
----@field currentTool unknown?
+---@field currentTool (ISBuildingRoomsEditor_ToolAddRect | ISBuildingRoomsEditor_ToolRemoveRect)?
 ---@field drawJoypadFocus boolean
 ---@field hasChanges boolean
----@field javaEditor unknown
+---@field javaEditor BuildingRoomsEditor
 ---@field joypadNavigate table
----@field playerNum number
----@field previousFocusTool unknown?
+---@field playerNum integer
+---@field previousFocusTool (ISBuildingRoomsEditor_ToolAddRect | ISBuildingRoomsEditor_ToolRemoveRect)?
 ---@field roomPanel ISBuildingRoomsEditor_RoomPanel
 ---@field tabPanel ISTabPanel
 ---@field title string
@@ -28,22 +28,26 @@ function ISBuildingRoomsEditor.Show() end
 
 function ISBuildingRoomsEditor:applyChanges() end
 
+---@param closeAfterApply boolean
 function ISBuildingRoomsEditor:askApplyChanges(closeAfterApply) end
 
 function ISBuildingRoomsEditor:close() end
 
+---@param button ISButton
 function ISBuildingRoomsEditor:confirmApplyChanges(button) end
 
 function ISBuildingRoomsEditor:createChildren() end
 
 function ISBuildingRoomsEditor:display() end
 
----@return unknown?
+---@return BREBuilding?
 function ISBuildingRoomsEditor:getSelectedBuilding() end
 
----@return unknown?
+---@return BRERoom?
 function ISBuildingRoomsEditor:getSelectedRoom() end
 
+---@param button ISButton
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:handleBumpers(button, joypadData) end
 
 ---@return boolean
@@ -53,27 +57,42 @@ function ISBuildingRoomsEditor:onButtonApply() end
 
 function ISBuildingRoomsEditor:onButtonClose() end
 
+---@param event string
 function ISBuildingRoomsEditor:OnEvent(event, arg1, arg2, arg3, arg4) end
 
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onGainJoypadFocus(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onJoypadButtonReleased(button, joypadData) end
 
+---@param descendant ISUIElement
+---@param button integer
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onJoypadButtonReleased_Descendant(descendant, button, joypadData) end
 
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onJoypadDirUp(joypadData) end
 
+---@param button integer
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onJoypadDown(button, joypadData) end
 
+---@param descendant ISUIElement
+---@param button integer
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onJoypadDown_Descendant(descendant, button, joypadData) end
 
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onJoypadNavigateStart(joypadData) end
 
+---@param joypadData JoypadData
 function ISBuildingRoomsEditor:onLoseJoypadFocus(joypadData) end
 
 function ISBuildingRoomsEditor:render() end
 
----@param tool unknown?
+---@param tool (ISBuildingRoomsEditor_ToolAddRect | ISBuildingRoomsEditor_ToolRemoveRect)?
 function ISBuildingRoomsEditor:setCurrentTool(tool) end
 
 function ISBuildingRoomsEditor:update() end

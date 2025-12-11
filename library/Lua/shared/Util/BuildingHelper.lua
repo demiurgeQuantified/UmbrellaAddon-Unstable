@@ -13,5 +13,5 @@ function BuildingHelper.getFreeTileFromBuilding(building) end
 function BuildingHelper.getFreeTilesFromRandomRoomInBuilding(building, count) end
 
 ---@param item InventoryItem
----@return CharacterActionAnims?
+---@return CharacterActionAnims
 function BuildingHelper.getShovelAnim(item) end
